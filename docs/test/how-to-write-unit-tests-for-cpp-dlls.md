@@ -9,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 06ad7bd437fca98c7be92a1e12ce31234d876b28
-ms.sourcegitcommit: cc8547eb211c43b67b8123d1211b80b5642e3b18
+ms.openlocfilehash: 6e8df96c6345d84531ef04eae56f7f60dcc3eefe
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100563419"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042879"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio 'da C++ dll 'Leri için birim testleri yazma
 
@@ -24,7 +24,7 @@ Test etmek istediğiniz işlevleri dışa aktarıp vermediğine bağlı olarak, 
 
 [DLL projesinden içe aktarılmış işlevlere başvurma](#projectRef)yordamına gidin.
 
-**DLL, bir. exe dosyası olarak oluşturulmuştur:** Ayrı bir test projesi ekleyin. Çıktı nesne dosyasına bağlayın.
+**DLL, bir .exe dosyası olarak oluşturulur:** Ayrı bir test projesi ekleyin. Çıktı nesne dosyasına bağlayın.
 
 [Testleri nesne veya kitaplık dosyalarına bağlamak için](#objectRef)yordama gidin.
 
@@ -58,7 +58,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
   1. Yerel birim testi projesi oluşturun.
 
-      ::: moniker range="vs-2019"
+      ::: moniker range=">=vs-2019"
 
       1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini** seçin.
 
@@ -90,7 +90,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
   1. Yerel birim testi projesi oluşturun.
 
-      ::: moniker range="vs-2019"
+      ::: moniker range=">=vs-2019"
 
       1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini** seçin.
 

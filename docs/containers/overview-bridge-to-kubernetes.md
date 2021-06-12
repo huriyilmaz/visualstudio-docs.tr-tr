@@ -3,102 +3,105 @@ title: Bridge to Kubernetes’in işleyiş biçimi
 ms.technology: vs-azure
 ms.date: 11/19/2020
 ms.topic: conceptual
-description: Geliştirme bilgisayarınızı Kubernetes kümenize bağlamak için Kubernetes 'e köprü kullanma işlemlerini açıklar
-keywords: Kubernetes, Docker, Kubernetes, Azure, kapsayıcılar için köprü oluşturma
+description: Geliştirme bilgisayarınızı Kubernetes kümenize bağlamak için Bridge to Kubernetes kullanma işlemlerini açıklar
+keywords: Bridge to Kubernetes, Docker, Kubernetes, Azure, kapsayıcılar
 monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 1709785c63bd4fbcd702fbcacfe59dddcb71d1b3
-ms.sourcegitcommit: 0135fc6ffa38995cc9e6ab05fa265758890d2e15
+ms.openlocfilehash: 838589e0dd81232de25b88989d621a07fb22f972
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107526155"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043061"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes’in işleyiş biçimi
 
-Kubernetes Köprüsü, uygulamanızın veya hizmetlerinizin geri kalanı ile Kubernetes kümenize bağlı olmaya devam ederken geliştirme bilgisayarınızda kodu çalıştırmanızı ve hata ayıklamanıza olanak tanır. Örneğin, birbirine bağlı çok sayıda hizmet ve veritabanına sahip büyük bir mikro hizmet mimariniz varsa, bu bağımlılıkların geliştirme bilgisayarınızda çoğaltılması zor olabilir. Ayrıca, iç döngü geliştirme sırasında her kod değişikliği için Kubernetes kümenize kod oluşturup dağıtmak, bir hata ayıklayıcıyla yavaş, zaman alabilir ve kullanılması zor olabilir.
+Bridge to Kubernetes, uygulama veya hizmetlerinizin geri kalanıyla Kubernetes kümenize bağlıyken geliştirme bilgisayarınızda kod çalıştırmanıza ve kodda hata ayıklamanıza olanak sağlar. Örneğin, birbirine bağımlı birçok hizmet ve veritabanına sahip büyük bir mikro hizmet mimariniz varsa, bu bağımlılıkları geliştirme bilgisayarınızda çoğaltmak zor olabilir. Ayrıca, iç döngü geliştirme sırasında her kod değişikliği için Kubernetes kümenize kod oluşturma ve dağıtma yavaş olabilir, zaman alabilir ve hata ayıklayıcıyla birlikte kullanmak zor olabilir.
 
-Kubernetes Köprüsü, doğrudan geliştirme bilgisayarınız ve kümeniz arasında bir bağlantı oluşturmak yerine kodunuzu kümenize derleyip dağıtmak zorunda kalmaktan kaçınır. Hata ayıklama sırasında geliştirme bilgisayarınızı kümenize bağlamak, herhangi bir Docker veya Kubernetes yapılandırması oluşturmadan hizmetinizi tam uygulama bağlamında hızlıca test etmenize ve geliştirmenize olanak sağlar.
+Bridge to Kubernetes, doğrudan geliştirme bilgisayarınızla kümeniz arasında bağlantı oluşturarak kodunuzu derlemek ve kümenize dağıtmak zorunda kalmamaktır. Hata ayıklama sırasında geliştirme bilgisayarınızı kümenize bağlamak, Herhangi bir Docker veya Kubernetes yapılandırması oluşturmadan hizmetinizi tam uygulama bağlamında hızlı bir şekilde test edin ve geliştirin.
 
-Kubernetes Köprüsü, bağlı Kubernetes kümeniz ile geliştirme bilgisayarınız arasında trafiği yeniden yönlendirir. Bu trafik yeniden yönlendirmesi, Kubernetes kümenizde çalışan geliştirme ve hizmetinizdeki kodların aynı Kubernetes kümesinde olduklarından farklı iletişim kurmasına olanak tanır. Kubernetes Köprüsü, geliştirme bilgisayarınızda Kubernetes kümenizde bulunan ortam değişkenlerini ve takılı birimleri de çoğaltmak için bir yol sağlar. Geliştirme bilgisayarınızda ortam değişkenlerine ve bağlı birimlere erişim sağlamak, bu bağımlılıkları el ile çoğaltmadan kodunuzda hızla çalışmanıza olanak sağlar.
+Bridge to Kubernetes, bağlı Kubernetes kümeniz ile geliştirme bilgisayarınız arasındaki trafiği yeniden yönlendirmektedir. Bu trafik yeniden yönlendirmesi, Geliştirme bilgisayarınızda ve Kubernetes kümeniz üzerinde çalışan hizmetlerin aynı Kubernetes kümesinde olduğu gibi iletişim kurmasına olanak sağlar. Bridge to Kubernetes, geliştirme bilgisayarınızda Kubernetes kümenizin podlar tarafından kullanılabilen ortam değişkenlerini ve bağlı birimleri çoğaltmak için bir yol da sağlar. Geliştirme bilgisayarınızda ortam değişkenlerine ve bağlı birimlere erişim sağlamak, bu bağımlılıkları el ile çoğaltmanıza gerek kalmadan kodunuzu hızla çalışmanıza olanak sağlar.
 
 > [!WARNING]
-> Kubernetes Köprüsü yalnızca geliştirme ve test senaryolarında kullanılmak üzere tasarlanmıştır. Üretim kümeleri veya etkin kullanımda olan canlı hizmetlerle kullanılmak üzere tasarlanmamıştır veya desteklenmez.
+> Bridge to Kubernetes geliştirme ve test senaryolarında kullanılmak üzere tasarlanmıştır. Üretim kümeleriyle veya etkin kullanımda canlı hizmetlerle kullanım için amaçlanmaz veya desteklenmemektedir.
 
-Şu anda desteklenen özelliklerle ilgili bilgiler ve Kubernetes Köprüsü için gelecekteki bir yol haritası, [Kubernetes yol haritası Ile köprü](https://github.com/microsoft/mindaro/projects/1)altında bulunabilir.
+Şu anda desteklenen özellikler ve gelecekteki bir yol haritası hakkında Bridge to Kubernetes yol haritası [Bridge to Kubernetes bulunabilir.](https://github.com/microsoft/mindaro/projects/1)
 
-## <a name="using-bridge-to-kubernetes"></a>Kubernetes için köprü kullanma
+## <a name="using-bridge-to-kubernetes"></a>Bridge to Kubernetes kullanma
 
-Visual Studio 'da Kubernetes için köprü kullanmak üzere, *ASP.net ve Web geliştirme* iş yükü yüklü ve [Kubernetes uzantısı][btk-extension] 'nın yüklü olduğu Windows 10 ' da [Visual Studio 2019][visual-studio] sürüm 16,7 Preview 4 veya daha yenisi olması gerekir. Kubernetes için köprü kullandığınızda Kubernetes kümenize bir bağlantı kurmak için kümedeki var olan Pod 'a giden ve giden tüm trafiği geliştirme bilgisayarınıza yönlendirme seçeneğiniz vardır.
-
-> [!NOTE]
-> Kubernetes için köprü kullanırken, geliştirme bilgisayarınıza yönlendirmek üzere hizmetin adı istenir. Bu seçenek, yeniden yönlendirme için bir pod belirlemek için uygun bir yoldur. Kubernetes kümeniz ile geliştirme bilgisayarınız arasındaki tüm yeniden yönlendirme bir pod içindir.
-
-Kubernetes Köprüsü, kümenize bir bağlantı kurduğunda:
-
-* Hizmeti kümenizdeki yerine, sizin kodunuzda kullanılacak geliştirme bilgisayarınızdaki bağlantı noktasını ve kodunuz için tek seferlik eylem olarak başlatma görevini yapılandırmak isteyip istemediğinizi sorar.
-* Küme üzerindeki Pod içindeki kapsayıcıyı, trafiği geliştirme bilgisayarınıza yönlendiren bir uzak Aracı kapsayıcısı ile değiştirir.
-* Geliştirme bilgisayarınızdan gelen trafiği kümenizde çalışan uzak aracıya iletmek için [kubectl bağlantı noktasını][kubectl-port-forward] geliştirme bilgisayarınızda ilet olarak çalıştırır.
-* Uzak aracıyı kullanarak kümenizdeki ortam bilgilerini toplar. Bu ortam bilgileri ortam değişkenlerini, görünür Hizmetleri, birim takmaları ve gizli takmaları içerir.
-* Geliştirme Bilgisayarınızdaki hizmetin, kümede çalışıyor gibi aynı değişkenlere erişebilmesi için Visual Studio 'da ortamı ayarlar.
-* Ana bilgisayar dosyanızı, kümenizdeki hizmetleri geliştirme bilgisayarınızda yerel IP adresleriyle eşlenecek şekilde güncelleştirir. Bu ana bilgisayar dosya girdileri, geliştirme bilgisayarınızda çalışan kodun kümenizde çalışan diğer hizmetlere istek yapmasına izin verir. Ana bilgisayar dosyanızı güncelleştirmek için, Kubernetes 'e olan köprü, kümenize bağlanırken geliştirme bilgisayarınızda yönetici erişimi ister.
-* Geliştirme bilgisayarınızda kodu çalıştırmaya ve hata ayıklamaya başlar. Gerekirse, Kubernetes 'e olan köprü, şu anda bu bağlantı noktalarını kullanan Hizmetleri veya süreçlerini durdurarak geliştirme bilgisayarınızda gerekli bağlantı noktalarını serbest bırakılır.
-
-Kümenize bir bağlantı kurduktan sonra, kodu kapsayıcı olmadan yerel olarak bilgisayarınızda çalıştırabilir ve hata ayıklama yapabilir ve kod, kümenizin geri kalanıyla doğrudan etkileşime geçebilir. Uzak aracının aldığı tüm ağ trafiği, bağlantı sırasında belirtilen yerel bağlantı noktasına yönlendirilir, böylece yerel olarak çalışan kodunuz bu trafiği kabul edebilir ve işleyebilir. Kümenizin ortam değişkenleri, birimleri ve gizli dizileri, geliştirme bilgisayarınızda çalışan kod için kullanılabilir hale getirilir. Ayrıca, Kubernetes 'e Köprüleyerek geliştirici bilgisayarınıza eklenen ana bilgisayar dosya girişleri ve bağlantı noktası iletimi nedeniyle, kodunuz kümenizdeki hizmet adlarını kullanarak kümenizde çalışan hizmetlere ağ trafiği gönderebilir ve bu trafik kümenizde çalışan hizmetlere iletilir. Geliştirme bilgisayarınız ile kümeniz arasında, bağlandığınız zaman trafik yönlendirilir.
-
-Ayrıca, Kubernetes Köprüsü, dosya aracılığıyla geliştirme bilgisayarınızda bulunan küme içindeki kümelerde bulunan ortam değişkenlerini ve bağlı dosyaları çoğaltmak için bir yol sağlar `KubernetesLocalProcessConfig.yaml` . Bu dosyayı Ayrıca yeni ortam değişkenleri ve birim bağlama oluşturmak için de kullanabilirsiniz.
+Visual Studio'da Bridge to Kubernetes'yi kullanmak için, Windows 10 ve web geliştirme iş yükünün yüklü olduğu ve Bridge to Kubernetes Uzantısı'nın yüklü olduğu Windows 10 üzerinde çalışan *ASP.NET Visual Studio* [2019][visual-studio] sürüm 16.7 Preview 4 veya [daha yenisi][btk-extension] gerekir. Kubernetes Bridge to Kubernetes bağlantı kurmak için Bridge to Kubernetes'i kullanırsanız, kümede var olan bir poddan geliştirme bilgisayarınıza tüm trafiği yeniden yönlendirme seçeneğiniz vardır.
 
 > [!NOTE]
-> Küme bağlantısı süresi (artı 15 dakika) için, Kubernetes Köprüsü, yerel bilgisayarınızda yönetici izinleriyle *Endpointmanager* adlı bir işlem çalıştırır.
+> Bu Bridge to Kubernetes, geliştirme bilgisayarınıza yeniden yönlendirmek için hizmetin adını girmeniz istenir. Bu seçenek, yeniden yönlendirme için bir pod tanımlamanın kullanışlı bir yolu olur. Kubernetes kümeniz ve geliştirme bilgisayarınız arasındaki tüm yeniden yönlendirme bir pod için kullanılır.
 
-## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig. YAML ile ek yapılandırma
+Bu Bridge to Kubernetes kümenize bir bağlantı kurduğunda:
 
-`KubernetesLocalProcessConfig.yaml`Dosya, kümedeki yığınlarınızın kullanabildiği ortam değişkenlerini ve bağlı dosyaları çoğaltmanıza olanak sağlar. Kubernetes geliştirme için Visual Studio 'Yu kullanırken, KubernetesLocalConfig. YAML dosyası, yönlendirilirken hizmetin proje dosyası ile aynı dizinde bulunmalıdır. Ek yapılandırma seçenekleri hakkında daha fazla bilgi için bkz. [Kubernetes Için köprü yapılandırma][using-config-yaml].
+* Hizmeti, kümeniz üzerinde, geliştirme bilgisayarınızda kodunuz için kullanmak üzere bağlantı noktasını ve tek kullanımlık bir eylem olarak kodunuz için başlatma görevini değiştirmek üzere yapılandırmanızı sağlar.
+* Kümede pod'daki kapsayıcıyı, trafiği geliştirme bilgisayarınıza yönlendiren bir uzak aracı kapsayıcısı ile değiştirir.
+* Geliştirme bilgisayarınızdan kümenizi çalıştıran uzak aracıya trafiği iletmesi için geliştirme bilgisayarınızda [kubectl port-forward][kubectl-port-forward] çalıştırır.
+* Uzak aracıyı kullanarak kümenizin ortam bilgilerini toplar. Bu ortam bilgileri ortam değişkenlerini, görünür hizmetleri, birim bağlamalarını ve gizli bağlamaları içerir.
+* Geliştirme bilgisayarınızda Visual Studio kümede çalışıyor gibi aynı değişkenlere erişmesi için ortamı yerel ortamda ayarlar.
+* Kümeniz üzerinde hizmetleri geliştirme bilgisayarınızda yerel IP adreslerine eşlemek için konak dosyanızı günceller. Bu konaklar dosya girişleri, geliştirme bilgisayarınızda çalışan kodun kümeniz içinde çalışan diğer hizmetlere istekte bulunarak bunları oluşturmasına olanak sağlar. Konaklar dosyanızı güncelleştirmek Bridge to Kubernetes kümenize bağlanırken geliştirme bilgisayarınızda yönetici erişimi istemeniz gerekir.
+* Geliştirme bilgisayarınızda kodunuzu çalıştırmaya ve hata ayıklamaya başlar. Gerekirse, Bridge to Kubernetes o anda bu bağlantı noktalarını kullanan hizmetleri veya işlemleri durdurarak gerekli bağlantı noktalarını geliştirme bilgisayarınızda serbest bırakabilirsiniz.
 
-## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Yalıtımda geliştirmeye yönelik yönlendirme özelliklerini kullanma
+Kümenize bağlantı kurulduktan sonra, kapsayıcıya almadan kodu yerel olarak bilgisayarınızda çalıştırabilir ve hata ayıklarsınız ve kod kümenizin geri kalanıyla doğrudan etkileşime olabilir. Uzak aracı tarafından alınan tüm ağ trafiği bağlantı sırasında belirtilen yerel bağlantı noktasına yeniden yönlendiriliyor. Bu nedenle yerel olarak çalışan kodunuz bu trafiği kabul eder ve işler. Kümenizin ortam değişkenleri, birimleri ve gizli dizileri, geliştirme bilgisayarınızda çalışan kodlar için kullanılabilir. Ayrıca, Bridge to Kubernetes tarafından geliştirici bilgisayarınıza eklenen konak dosya girişleri ve bağlantı noktası iletme nedeniyle, kodunuz kümenizin hizmet adlarını kullanarak kümeniz üzerinde çalışan hizmetlere ağ trafiği gönderebilir ve bu trafik kümeniz içinde çalışan hizmetlere iletebilirsiniz. Trafik, bağlantınız boyunca geliştirme bilgisayarınızla kümeniz arasında yönlendirildi.
 
-Varsayılan olarak, Kubernetes Köprüsü, bir hizmet için tüm trafiği geliştirme bilgisayarınıza yönlendirir. Ayrıca, istekleri yalnızca bir alt etki alanından geliştirme bilgisayarınıza gelen bir hizmete yönlendirmek için yönlendirme özelliklerini kullanma seçeneğiniz de vardır. Bu yönlendirme özellikleri, yalıtımın geliştirilmesi için Kubernetes Köprüsü kullanmanızı ve kümenizdeki diğer trafiği kesintiye uğramaktan kaçınmanızı sağlar.
+Ayrıca, Bridge to Kubernetes ortamı değişkenlerini çoğaltmak için bir yol ve geliştirme bilgisayarınızda kümenizin podlar tarafından kullanılabilen bağlı dosyaları dosya aracılığıyla `KubernetesLocalProcessConfig.yaml` sağlar. Bu dosyayı yeni ortam değişkenleri ve birim bağlamaları oluşturmak için de kullanabilirsiniz.
 
-Aşağıdaki animasyon, yalıtımda aynı kümede çalışan iki geliştirici göstermektedir:
+> [!NOTE]
+> Kümeye bağlantı süresi boyunca (ek olarak 15 dakika Bridge to Kubernetes *endpointManager* adlı bir işlemi yerel bilgisayarınızda yönetici izinleriyle çalıştırır.
 
-![Animasyonlu GIF, yalıtımı gösteren](media/bridge-to-kubernetes/btk-graphic-isolated.gif)
+> [!NOTE]
+> Birden çok hizmetle paralel olarak hata ayıkabilirsiniz, ancak hata ayıklamak istediğiniz hizmetler olarak Visual Studio sayıda örnek başlatmalısiniz. Hizmetlerinizin farklı bağlantı noktalarında yerel olarak dinley olduğundan emin olun ve ardından bunları ayrı olarak yapılandırarak hata ayıklar. Bu senaryoda yalıtım desteklenmiyor.
 
-Yalıtımda çalışmayı etkinleştirdiğinizde Kubernetes Köprüsü, Kubernetes kümenize bağlanılmasına ek olarak aşağıdakileri yapar:
+## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig.yaml ile ek yapılandırma
 
-* Kubernetes kümesinin Azure Dev Spaces etkin olmadığını doğrular.
-* Seçtiğiniz hizmetinizi aynı ad alanındaki kümede çoğaltır ve bir *Routing.VisualStudio.io/Route-from=SERVICE_NAME* etiketi ve *Routing.VisualStudio.io/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* ek açıklaması ekler.
-* , Kubernetes kümesindeki aynı ad alanında bulunan yönlendirme yöneticisini yapılandırır ve başlatır. Yönlendirme Yöneticisi, ad alanınız içinde yönlendirmeyi yapılandırırken *Routing.VisualStudio.io/Route-from=SERVICE_NAME* label ve  *Routing.VisualStudio.io/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* ek açıklamalarını aramak için bir etiket seçici kullanır.
+Dosya, `KubernetesLocalProcessConfig.yaml` kümenizin podları tarafından kullanılabilen ortam değişkenlerini ve bağlı dosyaları çoğaltmanıza olanak sağlar. Visual Studio geliştirme Bridge to Kubernetes kubernetesLocalConfig.yaml dosyasının, yeniden yönlendirilen hizmetin proje dosyasıyla aynı dizinde olması gerekir. Ek yapılandırma seçenekleri hakkında daha fazla bilgi için bkz. [Yapılandırma Bridge to Kubernetes.][using-config-yaml]
 
-Kubernetes Köprüsü, Kubernetes kümenizde Azure Dev Spaces etkinleştirildiğini algılarsa, Kubernetes için köprü kullanabilmeniz için Azure Dev Spaces önce devre dışı bırakmanız istenir.
+## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Yalıtımlı geliştirme için yönlendirme özelliklerini kullanma
 
-Yönlendirme Yöneticisi başlatıldığında şunları yapar:
+Varsayılan olarak Bridge to Kubernetes, bir hizmetin tüm trafiğini geliştirme bilgisayarınıza yeniden yönlendirmektedir. Ayrıca, istekleri yalnızca bir alt etki alanından kaynaklanan bir hizmete geliştirme bilgisayarınıza yönlendirmek için yönlendirme özelliklerini kullanabilirsiniz. Bu yönlendirme özellikleri, yalıtarak geliştirmek Bridge to Kubernetes kümenizin diğer trafiğini kesintiye neden olmaktan kaçınmak için Bridge to Kubernetes'i kullanmanızı sağlar.
 
-* Alt etki alanı için *GENERATED_NAME* kullanarak ad alanında bulunan tüm gelen parolaları (yük dengeleyici dahil) çoğaltır.
-* *GENERATED_NAME* alt etki alanı ile yinelenen giriş ile ilişkili her hizmet için bir haberci Pod oluşturur.
-* Yalıtım aşamasında çalıştığınız hizmet için ek bir haberci Pod oluşturur. Bu, alt etki alanı olan isteklerin geliştirme bilgisayarınıza yönlendirilmesine izin verir.
-* Her haberci pod için yönlendirme kurallarını, alt etki alanı ile hizmetlerin yönlendirilmesini işleyecek şekilde yapılandırır.
+Aşağıdaki animasyon aynı küme üzerinde yalıtarak çalışan iki geliştiriciyi gösterir:
 
-Aşağıdaki diyagramda, Kubernetes Köprüsü kümenize bağlanmadan önce bir Kubernetes kümesi gösterilmektedir:
+![Yalıtımın yer alan animasyonlu GIF'i](media/bridge-to-kubernetes/btk-graphic-isolated.gif)
 
-![Kubernetes Köprüsü olmadan küme diyagramı](media/bridge-to-kubernetes/kubr-cluster.svg)
+Yalıtarak çalışmayı etkinleştir Bridge to Kubernetes Kubernetes kümenize bağlanmaya ek olarak şunları da yapar:
 
-Aşağıdaki diyagramda, Kubernetes ile aynı küme, yalıtım modunda etkin olarak gösterilmiştir. Burada, yinelenen hizmeti ve yönlendirmeyi destekleyen yinelenen hizmeti ve sorguları yalıtımlara bakabilirsiniz.
+* Kubernetes kümesinde etkin bir Azure Dev Spaces doğrular.
+* Seçtiğiniz hizmeti aynı ad alanına kümede çoğaltır ve bir *routing.visualstudio.io/route-from=SERVICE_NAME* etiketi ve *routing.visualstudio.io/route-on-header=kubernetes-route-as ekler: GENERATED_NAME* ek açıklaması.
+* Yönlendirme yöneticisini yapılandırarak Kubernetes kümesinde aynı ad alanına başlatır. Yönlendirme yöneticisi, ad alanınıza *yönlendirmeyi yapılandırarak routing.visualstudio.io/route-from=SERVICE_NAME* etiketi ve  *routing.visualstudio.io/route-on-header=kubernetes-route-as: GENERATED_NAME* ek açıklamasına bakmak için bir etiket seçici kullanır.
 
-![Kubernetes ile Köprü özellikli küme diyagramı](media/bridge-to-kubernetes/kubr-cluster-devcomputer.svg)
+Kubernetes Bridge to Kubernetes kümeniz üzerinde Azure Dev Spaces'ın etkin olduğunu algılarsa, Azure Dev Spaces'yi kullanamadan önce devre dışı bırakmanız Bridge to Kubernetes.
 
-Kümede *GENERATED_NAME* alt etki alanı ile bir istek alındığında, isteğe bir *Kubernetes-Route-as = GENERATED_NAME* üst bilgisi eklenir. Haberci Pod, kümede uygun hizmete istek yapan yönlendirmeyi işler. İstek yalıtımda üzerinde çalışılan hizmete yönlendiriliyorsa, bu istek uzak aracı tarafından geliştirme bilgisayarınıza yönlendirilir.
+Yönlendirme yöneticisi başlatıldığında şunları yapar:
 
-Kümede *GENERATED_NAME* alt etki alanı olmayan bir istek alındığında, isteğe hiçbir üst bilgi eklenmez. Haberci Pod, kümede uygun hizmete istek yapan yönlendirmeyi işler. İstek değiştirilmekte olan hizmete yönlendiriliyorsa, bu istek bunun yerine uzak aracı yerine özgün hizmete yönlendirilir.
+* Ad alanı içinde bulunan tüm girişleri (yük dengeleyici girişleri dahil) alt *etki alanının GENERATED_NAME* yineler.
+* Alt etki alanıyla yinelenen girişlerle ilişkili her hizmet için bir *GENERATED_NAME* oluşturur.
+* Yalıtımlı olarak üzerinde çalıştığın hizmet için ek bir faturalama podu oluşturur. Bu, alt etki alanı olan isteklerin geliştirme bilgisayarınıza yönlendirilene izin verir.
+* Alt etki alanı olan hizmetler için yönlendirmeyi işlemek üzere her bir faturalama podu için yönlendirme kurallarını yapılandıran.
+
+Aşağıdaki diyagramda, kümenize bağlanamadan önce Bridge to Kubernetes Kubernetes kümesi gösterildi:
+
+![Küme olmadan küme Bridge to Kubernetes](media/bridge-to-kubernetes/kubr-cluster.svg)
+
+Aşağıdaki diyagramda, yalıtım modunda etkinleştirilmiş Bridge to Kubernetes kümeyi gösterir. Burada, yinelenen hizmeti ve yönlendirmeyi yalıtılmış olarak destekleyen faturalama podlarını görebilir.
+
+![Kümenin etkin olduğu Bridge to Kubernetes diyagramı](media/bridge-to-kubernetes/kubr-cluster-devcomputer.svg)
+
+*Kümede* GENERATED_NAME alt etki alanı olan bir istek geldiğinde, i isteğine *bir kubernetes-route-as=GENERATED_NAME* üst bilgisi eklenir. Envoy podları, isteği kümede uygun hizmete yönlendirmeyi ele almaktadır. İstek, yalıtımlı olarak üzerinde çalışan hizmete yönlendirilmesi, uzak aracı tarafından geliştirme bilgisayarınıza yeniden yönlendirilmesidir.
+
+Kümede bir *GENERATED_NAME* alt etki alanı alınarak istekte üst bilgi eklenmez. Envoy podları, isteği kümede uygun hizmete yönlendirmeyi ele almaktadır. İstek, değiştirilen hizmete yönlendirilen istek yerine uzak aracı yerine özgün hizmete yönlendirildi.
 
 > [!IMPORTANT]
-> Kümenizdeki her hizmet ek istekler yaparken *Kubernetes-Route-as = GENERATED_NAME* üst bilgisini iletmelidir. Örneğin, *Servicea* bir istek aldığında, yanıt döndürmeden önce *serviceb* 'ye bir istek yapar. Bu örnekte, *Servicea* 'nın isteğinde *Kubernetes-Route-as = GENERATED_NAME* üst bilgisini iletmesi *gerekir.* [ASP.net][asp-net-header]gibi bazı dillerin, üst bilgi yaymayı işleme yöntemlerine sahip olabilir.
+> Kümeniz üzerinde yer alan her hizmetin ek istekler yaparken *kubernetes-route-as=GENERATED_NAME* üst bilgilerini iletmesi gerekir. Örneğin, *serviceA bir* istek aldığında, yanıt dönmeden önce *serviceB'ye* bir istek yapar. Bu *örnekte, serviceA'nın* isteğinde *kubernetes-route-as=GENERATED_NAME* üst bilgisini *serviceB'ye iletmesi gerekir.* ASP.NET gibi bazı [dillerde][asp-net-header]üst bilgi yayma işleme yöntemleri olabilir.
 
-Kümenizin bağlantısını kestiğinizde, Kubernetes 'e olan köprü, tüm haberci Pod ve yinelenen hizmeti kaldırır.
+Kümenizin bağlantısını keserek varsayılan olarak Bridge to Kubernetes tüm faturalama podlarını ve yinelenen hizmeti kaldırır.
 
 > [!NOTE]
-> Yönlendirme Yöneticisi dağıtımı ve hizmeti, ad alanınız içinde çalışmaya devam edecektir. Dağıtımı ve hizmeti kaldırmak için, ad alanınız için aşağıdaki komutları çalıştırın.
+> Yönlendirme yöneticisi dağıtımı ve hizmeti ad alanınız içinde çalışıyor olarak kalır. Dağıtımı ve hizmeti kaldırmak için ad alanınız için aşağıdaki komutları çalıştırın.
 >
 > ```azurecli
 > kubectl delete deployment routingmanager-deployment -n NAMESPACE
@@ -107,13 +110,13 @@ Kümenizin bağlantısını kestiğinizde, Kubernetes 'e olan köprü, tüm habe
 
 ## <a name="diagnostics-and-logging"></a>Tanılama ve günlüğe kaydetme
 
-Kümenize bağlanmak için Kubernetes Köprüsü kullanılırken, kümenizdeki tanılama günlükleri, *Kubernetes klasörüne olan köprüdeki* geliştirme bilgisayarınızın *geçici* dizinine kaydedilir.
+Kümenize Bridge to Kubernetes için kümenizi kullanırken, kümenizin tanılama günlükleri Bridge to Kubernetes klasöründe geliştirme bilgisayarınızın *TEMP* *dizinine* kaydedilir.
 
 ## <a name="rbac-authorization"></a>RBAC yetkilendirmesi
 
-Kubernetes, kullanıcılar ve gruplar için izinleri yönetmek üzere rol tabanlı Access Control (RBAC) sağlar. Daha fazla bilgi için bkz. [Kubernetes belgeleri](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) , BIR YAML dosyası oluşturarak ve `kubectl` bunu kümeye uygulamak için kullanarak RBAC özellikli bir küme için izinleri ayarlamanıza olanak sağlar. 
+Kubernetes, kullanıcılar ve gruplara Access Control yönetmek için Rol tabanlı güvenlik (RBAC) sağlar. Bilgi için [bkz. Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) belgeleri YaML dosyası oluşturarak ve bunu kümeye uygulamak için kullanarak RBAC özellikli bir kümenin `kubectl` izinlerini ayarlayın. 
 
-Küme izinlerini ayarlamak için, kendi ad alanınızı ve erişmesi gereken konuları (kullanıcılar ve gruplar) kullanarak aşağıdaki gibi *Permissions. yıml* gıbı bır YAML dosyası oluşturun veya değiştirin `<namespace>` .
+Kümede izinleri ayarlamak için, ve erişim ihtiyacı olan konular (kullanıcılar ve gruplar) için kendi ad alanını kullanarak *permissions.yml* gibi bir YAML dosyası oluşturun `<namespace>` veya bu dosyayı değiştirebilirsiniz.
 
 ```yml
 kind: RoleBinding
@@ -134,7 +137,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-Şu komutu kullanarak izinleri uygulayın:
+komutunu kullanarak izinleri uygulama:
 
 ```cmd
 kubectl -n <namespace> apply -f <yaml file name>
@@ -142,20 +145,20 @@ kubectl -n <namespace> apply -f <yaml file name>
 
 ## <a name="limitations"></a>Sınırlamalar
 
-Kubernetes Köprüsü aşağıdaki sınırlamalara sahiptir:
+Bridge to Kubernetes aşağıdaki sınırlamalara sahiptir:
 
-* Pod, başarıyla bağlanmak için Kubernetes 'e Köprüsü için bu Pod 'da çalışan tek bir kapsayıcıya sahip olabilir.
-* Şu anda, Kubernetes Pod Köprüsü 'nün Linux kapsayıcıları olması gerekir. Windows kapsayıcıları desteklenmez.
-* Kubernetes köprüsünün, ana bilgisayar Dosyanızı düzenlemek için geliştirme bilgisayarınızda çalışması için yükseltilmiş izinlere sahip olması gerekir.
-* Kubernetes Köprüsü Azure Dev Spaces etkinleştirilmiş kümeler üzerinde kullanılamaz.
+* Bir pod, başarıyla bağlanması için bu podda yalnızca Bridge to Kubernetes kapsayıcıya sahip olabilir.
+* Şu anda Bridge to Kubernetes Linux kapsayıcıları olması gerekir. Windows kapsayıcıları desteklenmez.
+* Bridge to Kubernetes ana bilgisayar dosyanızı düzenlemek için geliştirme bilgisayarınızda çalıştırmak için yükseltilmiş izinlere ihtiyaç vardır.
+* Bridge to Kubernetes, kümeler etkinken Azure Dev Spaces kullanılamaz.
 
-### <a name="bridge-to-kubernetes-and-clusters-with-azure-dev-spaces-enabled"></a>Azure Dev Spaces etkinleştirilmiş Kubernetes ve kümeler için köprü oluşturma
+### <a name="bridge-to-kubernetes-and-clusters-with-azure-dev-spaces-enabled"></a>Bridge to Kubernetes etkin kümeler Azure Dev Spaces kümeler
 
-Azure Dev Spaces etkinleştirilmiş bir kümede Kubernetes için köprü kullanamazsınız. Azure Dev Spaces etkinleştirilmiş bir kümede Kubernetes için köprü kullanmak istiyorsanız, kümenize bağlanmadan önce Azure Dev Spaces devre dışı bırakmanız gerekir.
+Kümenin etkin olduğu Bridge to Kubernetes kümede kümeyi Azure Dev Spaces. kümenizin etkin olduğu bir Bridge to Kubernetes kullanmak Azure Dev Spaces, kümenize bağlanmadan önce Azure Dev Spaces devre dışı bırakmanız gerekir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yerel geliştirme bilgisayarınıza kümenize bağlanmak için Kubernetes Köprüsü kullanmaya başlamak için bkz. [Kubernetes Için köprü kullanma](bridge-to-kubernetes.md).
+Yerel geliştirme bilgisayarınıza Bridge to Kubernetes için kümenizi kullanmaya başlamanız için bkz. [Bridge to Kubernetes.](bridge-to-kubernetes.md)
 
 [asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools

@@ -7,12 +7,12 @@ ms.assetid: d2ab13ed-ef79-4ef0-8736-eccd04bc6020
 ms.date: 03/18/2021
 ms.topic: conceptual
 description: Müşterileriniz için Visual Studio bulut aboneliklerinin nasıl satın alınacağı ve yönetileceği ile ilgili bulut çözümü sağlayıcılarına yönelik bilgiler.
-ms.openlocfilehash: b905d698f3d9f1a763ae7d9e9dbc8276a5362da6
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 09c905d113920a0bb55aed8851d3fb62c92a39bf
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104673027"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042853"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>Müşterileriniz için Visual Studio bulut abonelikleri satın alın ve yönetin
 [Bulut çözümü sağlayıcısı (CSP)](https://partner.microsoft.com/cloud-solution-provider) programındaki iş ortakları, müşterileri için Visual Studio Enterprise ve Visual Studio Professional bulut abonelikleri satın alabilir.
@@ -116,4 +116,4 @@ Y: Şu anda değil. Müşterileriniz [Azure geliştirme ve test fiyatlandırmas�
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Genel faturalama sorularına yanıt vermek için [bulut faturalaması hakkında SSS](vscloud-billing-faq.md) bölümüne bakın.
+Yaygın faturalama [sorularının yanıtları için](vscloud-billing-faq.yml) bkz. bulut faturalaması hakkında SSS.

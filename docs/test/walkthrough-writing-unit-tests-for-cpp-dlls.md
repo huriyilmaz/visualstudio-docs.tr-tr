@@ -9,12 +9,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 2d145e1383e8f6c0d7c25ae72232fdbe2a8d703d
-ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+ms.openlocfilehash: cfdc580b94760cb0c5160918210ba6c3dd8fa2f6
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97727547"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042931"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Nasıl yapılır: C++ dll 'Leri için birim testleri yazma
 
@@ -86,7 +86,7 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
 ## <a name="create-a-dll-project"></a><a name="create_dll_project"></a> DLL projesi oluşturma
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Aşağıdaki adımlarda, Visual Studio 2019 ' de bir DLL projesi oluşturma gösterilmektedir.
 
@@ -215,18 +215,18 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
     > [!TIP]
     > Geçilen testleri değiştirmenizi öneririz. Bunun yerine, yeni bir test ekleyin, kodu test geçişi olacak şekilde güncelleştirin ve daha sonra başka bir test ekleyin ve bu şekilde devam edin.
     >
-    > Kullanıcılarınız gereksinimlerini değiştirmelerine göre artık doğru olmayan Testleri devre dışı bırakın. Yeni testler yazın ve aynı anda bir kez, aynı şekilde çalışır hale getirin.
+    > Kullanıcılarınız gereksinimlerini değiştirmelerine göre artık doğru olmayan Testleri devre dışı bırakın. Yeni testler yazın ve bunları aynı artımlı şekilde tek tek çalışır hale yazın.
 
-2. Çözümü oluşturun ve ardından **Test Gezgini**' nde **Tümünü Çalıştır**' ı seçin.
+2. Çözümü derleme ve Test Gezgini'nde **Hepsini** **Çalıştır'ı seçin.**
 
-     Yeni test başarısız olur.
+     Yeni test başarısız oluyor.
 
      ![RangeTest başarısız oluyor](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
-    > Her testin yazıldıktan hemen sonra başarısız olduğunu doğrulayın. Bu, hiç başarısız olmayan bir testi yazmanın kolay bir hata yaşamadan kaçınmanıza yardımcı olur.
+    > Siz yazdıktan hemen sonra her testin başarısız olduğunu doğrulayın. Bu, hiçbir zaman başarısız olmayacak bir test yazma hatalarından kaçınmanıza yardımcı olur.
 
-3. Yeni testin başarılı olması için DLL kodunuzu geliştirin:
+3. DLL kodunuzu yeni testin başarılı olacak şekilde geliştirin:
 
     ```cpp
     #include <math.h>
@@ -245,16 +245,16 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
     }
     ```
 
-4. Çözümü derleyin ve ardından **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
+4. Çözümü derleme ve Test Gezgini'nde **Hepsini** **Çalıştır'ı seçin.**
 
      Her iki test de geçer.
 
-     ![Birim test Gezgini &#45; Aralık testi geçildi](../test/media/utecpp12.png)
+     ![Birim Testi Gezgini &#45; Aralık Testi geçirildi](../test/media/utecpp12.png)
 
     > [!TIP]
-    > Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
+    > Testleri tek tek ekleyerek kod geliştirin. Tüm testlerin her yinelemeden sonra başarılı olduğundan emin olun.
 
-## <a name="debug-a-failing-test"></a><a name="debug"></a> Başarısız bir testte hata ayıkla
+## <a name="debug-a-failing-test"></a><a name="debug"></a> Başarısız olan testte hata ayıklama
 
 1. Başka bir test ekleyin:
 
@@ -289,23 +289,23 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
     }
     ```
 
-2. Çözümü derleyin ve **Tümünü Çalıştır**' ı seçin.
+2. Çözümü derleme ve Hepsini **Çalıştır'ı seçin.**
 
-3. Başarısız testi açın (veya çift tıklatın).
+3. Başarısız olan testi açın (veya çift tıklayın).
 
-     Başarısız onaylama vurgulanır. Hata iletisi, **Test Gezgini**'nin ayrıntı bölmesinde görünür.
+     Başarısız onaylama vurgulanmış. Hata iletisi Test Gezgini'nin ayrıntı bölmesinde **görünür.**
 
-     ![Negatiftiverangetests başarısız oldu](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
+     ![NegativeRangeTests başarısız oldu](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
-4. Testin neden başarısız olduğunu görmek için, işlevi adım adım inceleyin:
+4. Testin neden başarısız olduğunu görmek için işlevin üzerinden geçin:
 
-    1. SquareRoot işlevinin başlangıcında bir kesme noktası ayarlayın.
+    1. SquareRoot işlevinin başında bir kesme noktası ayarlayın.
 
-    2. Başarısız testin kısayol menüsünde, **Seçili testlerin hatalarını ayıkla**' yı seçin.
+    2. Başarısız testin kısayol menüsünde Seçili Testlerde Hata **Ayıkla'yı seçin.**
 
-         Çalıştırma kesme noktasında durdurulduğunda kodda adım adım ilerleyin.
+         Çalıştırma kesme noktası içinde durduğunda kodun üzerinden geçin.
 
-5. Geliştirdiğiniz işleve kod ekleyin:
+5. Geliştirmekte olduğunu işleve kod ekleme:
 
     ```cpp
 
@@ -321,27 +321,27 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 
     ```
 
-6. Şimdi tüm testler geçer.
+6. Tüm testler artık başarılı oldu.
 
-   ![Tüm testler geçer](../test/media/ute_ult_alltestspass.png)
+   ![Tüm testler başarılı](../test/media/ute_ult_alltestspass.png)
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Bireysel testlerin herhangi bir sırada çalıştırılmasını engelleyen bir bağımlılığı yoksa, ![ Test Gezgini araç çubuğundaki paralel test yürütme geçiş düğmesi ekran görüntüsü ile paralel test yürütmeyi açın. Bu düğme seçildiğinde, testler paralel olarak çalışır.](../test/media/ute_parallelicon-small.png) araç çubuğundaki iki durumlu düğme. Bu, tüm testleri çalıştırmak için harcanan süreyi önemli ölçüde azaltabilir.
+> Tek tek testlerin herhangi bir sırada çalışmasına engel olan bağımlılıkları yoksa, Test Gezgini araç çubuğundaki paralel test yürütme iki durumlu düğmesinin ekran görüntüsü ile paralel ![ test yürütmeyi açın. Bu düğme seçildiğinde testler paralel olarak çalıştırıldığında.](../test/media/ute_parallelicon-small.png) araç çubuğundaki iki durumlu düğmeyi seçin. Bu, tüm testleri çalıştırmak için gereken zamanı önemli ölçüde azaltabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
 > [!TIP]
-> Bireysel testlerin herhangi bir sırada çalıştırılmasını engelleyen bir bağımlılığı yoksa, araç çubuğunun ayarlar menüsünde paralel test yürütme ' yi açın. Bu, tüm testleri çalıştırmak için harcanan süreyi önemli ölçüde azaltabilir.
+> Tek tek testlerin herhangi bir sırada çalışmasına engel olan bağımlılıklar yoksa, araç çubuğunun ayarlar menüsünde paralel test yürütmeyi açın. Bu, tüm testleri çalıştırmak için gereken zamanı önemli ölçüde azaltabilirsiniz.
 
 ::: moniker-end
 
 ## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Testleri değiştirmeden kodu yeniden düzenleme
 
-1. SquareRoot işlevinde merkezi hesaplamayı kolaylaştırın:
+1. SquareRoot işlevinde merkezi hesaplamayı basitleştirin:
 
     ```cpp
     // old code:
@@ -351,22 +351,22 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 
     ```
 
-2. Bir hata sunduğunuzdan emin olmak için çözümü derleyin ve **Tümünü Çalıştır**' ı seçin.
+2. Çözümü derlemek ve **Hata oluşturmamadan** emin olmak için Hepsini Çalıştır'ı seçin.
 
     > [!TIP]
-    > Uygun bir birim testi kümesi, kodu değiştirirken hata sunmaabileceğinizden emin olmanızı sağlar.
+    > İyi bir birim testi kümesi, kodu değiştirirken hatalara neden olmadığınız için güven verir.
     >
-    > Yeniden düzenlemeyi diğer değişikliklerden ayrı tutun.
+    > Yeniden düzenlemeyi diğer değişikliklerden ayrı tutma.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- **Yalıtımı.** Çoğu dll veritabanları ve diğer dll 'Ler gibi diğer alt sistemlere bağımlıdır. Bu diğer bileşenler genellikle paralel olarak geliştirilmiştir. Diğer bileşenler henüz kullanılamadığı sürece birim testi gerçekleştirilmesine izin vermek için, sahte veya
+- **Yalıtım.** Çoğu URL, veritabanları ve diğer URL'ler gibi diğer alt sistemlere bağımlıdır. Bu diğer bileşenler genellikle paralel olarak geliştiriliyor. Diğer bileşenler henüz kullanılabilirken birim testinin gerçekleştirilmesi için sahte veya
 
-- **Derleme doğrulama testleri.** Ekip oluşturma sunucusunda, belirlenen aralıklarda testlerin gerçekleştirilmesini sağlayabilirsiniz. Bu, birkaç takım üyesinin çalışması tümleştirildiğinde hataların tanıtılmamasını sağlar.
+- **Doğrulama Testleri Oluşturma.** Testlerinizi belirli aralıklarla takımınız derleme sunucusunda gerçekleştirebilirsiniz. Bu, birkaç ekip üyesinin işi tümleştirildiklerinden hataların ortaya çıktıyla ilgili olmadığını garantiler.
 
-- **İade testleri.** Her bir takım üyesinin, kaynak denetimine kodu denetlemesi için bazı testlerin gerçekleştirilmesini zorunlu hale getirebilirsiniz. Genellikle bu, tüm yapı doğrulama testleri kümesinin bir alt kümesidir.
+- **Testleri iade edin.** Her ekip üyesi kodu kaynak denetimine denetlemeden önce bazı testlerin gerçekleştiriliyor olması zorunlu kılınabilir. Genellikle bu, derleme doğrulama testlerinin tam kümesinin bir alt kümesidir.
 
-   Ayrıca, en düşük kod kapsamı düzeyini de kullanabilirsiniz.
+   Ayrıca, en düşük kod kapsamı düzeyini zorunlu bulundurabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

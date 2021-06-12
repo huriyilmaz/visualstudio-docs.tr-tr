@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3fa99594f42e7e9c3739a8a8d57abf226bc04c
-ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
+ms.openlocfilehash: 868c02091814fe49ea0224190c7d205e8b67c42b
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103483199"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042983"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında C++ için biçim belirticileri
 
@@ -90,77 +90,78 @@ Aşağıdaki tablolarda, Visual Studio 'da kullanabileceğiniz biçim belirticil
 |**s8b**|UTF-8 dizesi (tırnak işareti yok)|\<location> "Merhaba Dünya"|Merhaba Dünya|
 |hecesi|Unicode (UTF-16 kodlama) dizesi (tırnak işaretleriyle birlikte)|\<location> L "Merhaba Dünya"|L "Merhaba Dünya"<br /><br /> u "Merhaba Dünya"|
 |alt|Unicode (UTF-16 kodlaması) dizesi (tırnak işareti yok)|\<location> L "Merhaba Dünya"|Merhaba Dünya|
-|bstr|BSTR ikili dizesi (tırnak işaretleriyle birlikte)|\<location> L "Merhaba Dünya"|L "Merhaba Dünya"|
-|env|Ortam bloğu (çift boş sonlandırılmış dize)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = C: = C: \\ \\ Windows \\ \\ system32 \\ 0allusersprofıle =...|
-|**s32**|UTF-32 dizesi (tırnak işaretleriyle birlikte)|\<location> U "Merhaba Dünya"|U "Merhaba Dünya"|
-|**s32b**|UTF-32 dizesi (tırnak işareti yok)|\<location> U "Merhaba Dünya"|Merhaba Dünya|
-|**en**|enum|Cumartesi (6)|Cumartesi|
-|**HV**|İşaretçi türü-incelenen işaretçi değerinin, bir dizinin yığın ayırma sonucunun (örneğin,) sonucu olduğunu gösterir `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
-|**yana**|Bir nesnenin bir işaretçisinin bellek adresini bastırır.|\<location>, {member = değer...}|{member = değer...}|
-|**on**|Türetilmiş sınıfları yoksayarak yalnızca temel sınıf bilgisini görüntüler|`(Shape*) square` temel sınıf ve türetilmiş sınıf bilgilerini içerir|Yalnızca temel sınıf bilgisini görüntüler|
-|sa|HRESULT veya Win32 hata kodu. Hata ayıklayıcı otomatik olarak onun kodunu çözen için bu tanımlayıcı artık HRESULTs için gerekli değildir.|S_OK|S_OK|
-|WC|Pencere sınıfı bayrağı|0x0010|WC_DEFAULTCHAR|
-|WM|Windows ileti numaraları|16|WM_CLOSE|
-|n|"Ham görünüm" öğesini gösterme|
-|nvo|Yalnızca sayısal değerler için "ham görünüm" öğesini göster|
-|!|ham biçim, herhangi bir veri türü görünüm özelleştirmelerini yok sayılıyor|\<customized representation>|4|
+|bstr|BSTR ikili dizesi (tırnak işaretleriyle)|\<location> L"hello world"|L"hello world"|
+|Env|Ortam bloğu (çift null sonlandırılan dize)|\<location>L"=::=:: \\ \\ "|L"=::=:: \\ \\ \\ 0=C:=C: \\ \\ windows \\ \\ system32 \\ 0ALLUSERSPROFILE=...|
+|**s32**|UTF-32 dizesi (tırnak işaretleriyle)|\<location> U"hello world"|U"hello world"|
+|**s32b**|UTF-32 dizesi (tırnak işareti yok)|\<location> U"hello world"|Merhaba Dünya|
+|**en**|enum|Cumartesi(6)|Cumartesi|
+|**Hv**|İşaretçi türü - denetlenen işaretçi değerinin bir dizinin yığın ayırma sonucu olduğunu gösterir, örneğin, `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
+|**Na**|Bir nesnenin işaretçisinin bellek adresini bastırıyor.|\<location>, {member=value...}|{member=value...}|
+|**Nd**|Türetilmiş sınıfları yoksayarak yalnızca temel sınıf bilgilerini görüntüler|`(Shape*) square` temel sınıf ve türetilmiş sınıf bilgilerini içerir|Yalnızca temel sınıf bilgilerini görüntüler|
+|sa|HRESULT veya Win32 hata kodu. Hata ayıklayıcısı bunları otomatik olarak çözttükleri için bu belirleyici artık HRESULTs için gerekli değildir.|S_OK|S_OK|
+|Wc|Pencere sınıfı bayrağı|0x0010|WC_DEFAULTCHAR|
+|Wm|Windows ileti numaraları|16|WM_CLOSE|
+|Nr|"Ham Görünüm" öğesini gizleme|
+|nvo|Yalnızca sayısal değerler için "Ham Görünüm" öğesini göster|
+|!|ham biçim, herhangi bir veri türü görünüm özelleştirmelerini yoksayma|\<customized representation>|4|
+|Işlemek|win32 tanıtıcısı hakkında bilgileri görüntüler|0x000000000000009c| İş parçacığı kimliği gibi tanıtıcılar hakkında yararlı bilgileri görüntüler. |
 
 ::: moniker-end
 
 ::: moniker range="vs-2017" 
 
-|Belirleyici|Biçimlendir|Özgün Izleme değeri|Değer görüntülendi|
+|Belirleyici|Biçimlendir|Özgün İzleme Değeri|Görüntülenen Değer|
 |---------------|------------|--------------------------|---------------------|
 |d|ondalık tamsayı|0x00000066|102|
-|o|işaretsiz sekizlik tamsayı|0x00000066|000000000146|
-|x<br /><br /> **h**|onaltılı tamsayı|102|0xcccccccc|
-|X<br /><br /> **Olsun**|onaltılı tamsayı|102|0xCCCCCCCC|
-|c|tek karakter|0x0065, c|101 ' e '|
-|s|const char * dizesi (tırnak işaretleriyle birlikte)|\<location> "Merhaba Dünya"|"Merhaba Dünya"|
-|**ise**|const char * dizesi (tırnak işareti yok)|\<location> "Merhaba Dünya"|Merhaba Dünya|
-|S8|UTF-8 dizesi|\<location> "Bu bir UTF-8 kahve kupa â ̃ •"|"Bu bir UTF-8 kahve kupa ☕"|
-|**s8b**|UTF-8 dizesi (tırnak işareti yok)|\<location> "Merhaba Dünya"|Merhaba Dünya|
-|hecesi|Unicode (UTF-16 kodlama) dizesi (tırnak işaretleriyle birlikte)|\<location> L "Merhaba Dünya"|L "Merhaba Dünya"<br /><br /> u "Merhaba Dünya"|
-|alt|Unicode (UTF-16 kodlaması) dizesi (tırnak işareti yok)|\<location> L "Merhaba Dünya"|Merhaba Dünya|
-|bstr|BSTR ikili dizesi (tırnak işaretleriyle birlikte)|\<location> L "Merhaba Dünya"|L "Merhaba Dünya"|
-|env|Ortam bloğu (çift boş sonlandırılmış dize)|\<location>L "=:: =:: \\ \\ "|L "=:: =:: \\ \\ \\ 0 = C: = C: \\ \\ Windows \\ \\ system32 \\ 0allusersprofıle =...|
-|**s32**|UTF-32 dizesi (tırnak işaretleriyle birlikte)|\<location> U "Merhaba Dünya"|U "Merhaba Dünya"|
-|**s32b**|UTF-32 dizesi (tırnak işareti yok)|\<location> U "Merhaba Dünya"|Merhaba Dünya|
-|**en**|enum|Cumartesi (6)|Cumartesi|
-|**HV**|İşaretçi türü-incelenen işaretçi değerinin, bir dizinin yığın ayırma sonucunun (örneğin,) sonucu olduğunu gösterir `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
-|**yana**|Bir nesnenin bir işaretçisinin bellek adresini bastırır.|\<location>, {member = değer...}|{member = değer...}|
-|**on**|Türetilmiş sınıfları yoksayarak yalnızca temel sınıf bilgisini görüntüler|`(Shape*) square` temel sınıf ve türetilmiş sınıf bilgilerini içerir|Yalnızca temel sınıf bilgisini görüntüler|
-|sa|HRESULT veya Win32 hata kodu. Hata ayıklayıcı otomatik olarak onun kodunu çözen için bu tanımlayıcı artık HRESULTs için gerekli değildir.|S_OK|S_OK|
-|WC|Pencere sınıfı bayrağı|0x0010|WC_DEFAULTCHAR|
-|WM|Windows ileti numaraları|16|WM_CLOSE|
-|!|ham biçim, herhangi bir veri türü görünüm özelleştirmelerini yok sayılıyor|\<customized representation>|4|
+|o|unsigned octal integer|0x00000066|000000000146|
+|x<br /><br /> **h**|onaltılık tamsayı|102|0xcccccccc|
+|X<br /><br /> **H**|onaltılık tamsayı|102|0xCCCCCCCC|
+|c|tek karakter|0x0065, c|101 'e'|
+|s|const char* dizesi (tırnak işaretleriyle)|\<location> "hello world"|"hello world"|
+|**Sb**|const char* dizesi (tırnak işareti yok)|\<location> "hello world"|Merhaba Dünya|
+|s8|UTF-8 dizesi|\<location> "Bu bir UTF-8 kahve fincanı ̃•"|"Bu bir UTF-8 kahve fincanı ☕"|
+|**s8b**|UTF-8 dizesi (tırnak işareti yok)|\<location> "hello world"|Merhaba Dünya|
+|su|Unicode (UTF-16 kodlama) dizesi (tırnak işaretleriyle)|\<location> L"hello world"|L"hello world"<br /><br /> u"hello world"|
+|Alt|Unicode (UTF-16 kodlama) dizesi (tırnak işareti yok)|\<location> L"hello world"|Merhaba Dünya|
+|bstr|BSTR ikili dizesi (tırnak işaretleriyle)|\<location> L"hello world"|L"hello world"|
+|Env|Ortam bloğu (çift null sonlandırılan dize)|\<location>L"=::=:: \\ \\ "|L"=::=:: \\ \\ \\ 0=C:=C: \\ \\ windows \\ \\ system32 \\ 0ALLUSERSPROFILE=...|
+|**s32**|UTF-32 dizesi (tırnak işaretleriyle)|\<location> U"hello world"|U"hello world"|
+|**s32b**|UTF-32 dizesi (tırnak işareti yok)|\<location> U"hello world"|Merhaba Dünya|
+|**en**|enum|Cumartesi(6)|Cumartesi|
+|**Hv**|İşaretçi türü - denetlenen işaretçi değerinin bir dizinin yığın ayırma sonucu olduğunu gösterir, örneğin, `new int[3]` .|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|
+|**Na**|Bir nesnenin işaretçisinin bellek adresini bastırıyor.|\<location>, {member=value...}|{member=value...}|
+|**Nd**|Türetilmiş sınıfları yoksayarak yalnızca temel sınıf bilgilerini görüntüler|`(Shape*) square` temel sınıf ve türetilmiş sınıf bilgilerini içerir|Yalnızca temel sınıf bilgilerini görüntüler|
+|sa|HRESULT veya Win32 hata kodu. Hata ayıklayıcısı bunları otomatik olarak çözttükleri için bu belirleyici artık HRESULTs için gerekli değildir.|S_OK|S_OK|
+|Wc|Pencere sınıfı bayrağı|0x0010|WC_DEFAULTCHAR|
+|Wm|Windows ileti numaraları|16|WM_CLOSE|
+|!|ham biçim, herhangi bir veri türü görünüm özelleştirmelerini yoksayma|\<customized representation>|4|
 
 ::: moniker-end
 
 > [!NOTE]
-> **HV** Biçim belirleyicisi olduğunda, hata ayıklayıcı arabelleğin uzunluğunu saptamaya çalışır ve bu sayıda öğeyi görüntüler. Hata ayıklayıcının bir dizinin tam arabellek boyutunu bulması her zaman mümkün olmadığından, mümkün olduğunda bir boyut belirleyicisi kullanmanız gerekir `(pBuffer,[bufferSize])` . Arabellek boyutu hazır olmadığında **HV** Biçim belirleyicisi yararlıdır.
+> **hv biçim belirleyicisi** mevcut olduğunda, hata ayıklayıcı arabelleğin uzunluğunu belirlemeye ve bu öğe sayısını görüntülemeye çalışır. Hata ayıklayıcının bir dizinin tam arabellek boyutunu bulması her zaman mümkün olduğundan, mümkün olduğunda bir boyut `(pBuffer,[bufferSize])` belirleyicisi kullanılmalıdır. **hv** biçim belirleyicisi, arabellek boyutu hazır değilken kullanışlıdır.
 
-### <a name="size-specifiers-for-pointers-as-arrays"></a><a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> Diziler için boyut belirticileri dizi olarak işaretçiler
+### <a name="size-specifiers-for-pointers-as-arrays"></a><a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> İşaretçiler için dizi olarak boyut belirleyicileri
 
-Bir dizi olarak görüntülemek istediğiniz bir nesne işaretçiniz varsa, dizi öğelerinin sayısını belirtmek için bir tamsayı veya bir ifade kullanabilirsiniz.
+Dizi olarak görüntülemek istediğiniz bir nesnenin işaretçisi varsa, dizi öğelerinin sayısını belirtmek için bir tamsayı veya ifade kullanabilirsiniz.
 
-|Belirleyici|Biçimlendir|Özgün Izleme değeri|Değer görüntülendi|
+|Belirleyici|Biçimlendir|Özgün İzleme Değeri|Görüntülenen Değer|
 |---------------|------------|---------------------------|---------------------|
-|n|Decimal veya **on altılı** tamsayı|pBuffer, [32]<br /><br /> pBuffer,**[0x20]**|`pBuffer`32 öğe dizisi olarak görüntüler.|
-|**exp**|Tamsayı sonucunu veren geçerli bir C++ ifadesi.|pBuffer, [bufferSize]|PBuffer öğelerini dizi olarak görüntüler `bufferSize` .|
-|**Genişlet (n)**|Tamsayı olarak değerlendirilen geçerli bir C++ ifadesi|pBuffer, Genişlet (2)|Öğesinin üçüncü öğesini görüntüler  `pBuffer`|
+|n|Ondalık **veya onaltılık tamsayı**|pBuffer,[32]<br /><br /> pBuffer,**[0x20]**|`pBuffer`32 öğeli bir dizi olarak görüntülenir.|
+|**[exp]**|Tamsayı olarak değerlendirilen geçerli bir C++ ifadesi.|pBuffer,[bufferSize]|pBuffer'ı bir öğe dizisi olarak `bufferSize` görüntüler.|
+|**expand(n)**|Tamsayı olarak değerlendirilen geçerli bir C++ ifadesi|pBuffer, expand(2)|öğesinin üçüncü öğesini görüntüler  `pBuffer`|
 
-## <a name="format-specifiers-for-interop-debugging-with-ccli"></a><a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> C++/CLı ile birlikte çalışma hata ayıklaması için biçim belirticileri
+## <a name="format-specifiers-for-interop-debugging-with-ccli"></a><a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> C++/CLI ile birlikte çalışma hata ayıklaması için biçim belirleyicileri
 
-**Kalın** olmayan tanımlayıcılar yalnızca yerel ve C++/CLI kodunda hata ayıklamak için desteklenir. Bu, [yönetilen uyumluluk modu](../debugger/general-debugging-options-dialog-box.md)kullanılarak belirtilen eski hata ayıklayıcıyı gerektirir.
+Kalın yazı **tipinde belirleyiciler** yalnızca yerel ve C++/CLI kodunda hata ayıklama için de destek sağlar. Bu, Yönetilen Uyumluluk Modu kullanılarak belirtilen eski [hata ayıklayıcısını gerektirir.](../debugger/general-debugging-options-dialog-box.md)
 
-|Belirleyici|Biçimlendir|Özgün Izleme değeri|Değer görüntülendi|
+|Belirleyici|Biçimlendir|Özgün İzleme Değeri|Görüntülenen Değer|
 |---------------|------------|--------------------------|---------------------|
-|**d**<br /><br />**i**|işaretli ondalık tamsayı|0xF000F065|-268373915|
-|**larınız**|işaretsiz ondalık tamsayı|0x0065|101|
-|o|işaretsiz sekizlik tamsayı|0xF065|0170145|
-|x<br /><br />X|Onaltılı tamsayı|61541|0x0000F065|
-|**girişindeki**<br /><br />**h**|için uzun veya kısa ön ek: d, i, u, o, x, X|00406042|0x0c22|
+|**d**<br /><br />**i**|imzalı ondalık tamsayı|0xF000F065|-268373915|
+|**U**|unsigned decimal integer|0x0065|101|
+|o|unsigned octal integer|0xF065|0170145|
+|x<br /><br />X|Onaltılık tamsayı|61541|0x0000f065|
+|**L**<br /><br />**h**|için uzun veya kısa ön ek: d, i, u, o, x, X|00406042|0x0c22|
 |**vadeli**|işaretli kayan nokta|(3./2.), f|1,500000|
 |**a**|imzalanmış bilimsel gösterim|(3.0/2.0)|1.500000 e + 000|
 |**Acil**|işaretli kayan nokta veya imzalanmış bilimsel gösterim,<br/> Hangisi daha kısadır|(3.0/2.0)|1,5|

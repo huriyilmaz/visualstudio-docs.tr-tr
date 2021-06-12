@@ -1,6 +1,6 @@
 ---
 title: C/C++ için birim testleri yazma
-description: CTest, Boost. test ve Google Test dahil çeşitli test çerçeveleri kullanarak Visual Studio 'da C++ birim testlerini yazın.
+description: CTest, Boost.Test ve Visual Studio test çerçevelerini kullanarak C++ birim testlerini Google Test.
 ms.date: 04/01/2021
 ms.topic: conceptual
 ms.author: corob
@@ -8,99 +8,99 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: d20bcdef769d8cd751230000b0e4d4319b10e46f
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 877c9163d05f458ce45a46d6b3e6d14e354df591
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217469"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042893"
 ---
-# <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio 'da C/C++ için birim testleri yazma
+# <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio'da C/C++ için birim testleri yazma
 
-**Test Gezgini** penceresini kullanarak C++ birim testlerinizi yazabilir ve çalıştırabilirsiniz. Diğer diller için olduğu gibi çalışmaktadır. **Test Gezgini**'ni kullanma hakkında daha fazla bilgi için bkz. [Test Gezgini Ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md).
+Test Gezgini penceresini kullanarak C++ birim testlerinizi yazabilir **ve çalıştırabilirsiniz.** Diğer dillerde olduğu gibi çalışır. Test Gezgini'ni kullanma hakkında **daha fazla bilgi için** [bkz. Test Gezgini ile birim testleri çalıştırma.](run-unit-tests-with-test-explorer.md)
 
 > [!NOTE]
-> Live Unit Testing, kodlanmış UI testleri ve IntelliTest gibi bazı özellikler C++ için desteklenmez.
+> Live Unit Testing, Kodlanmış UI Testleri ve IntelliTest gibi bazı özellikler C++ için desteklenmiyor.
 
-Visual Studio, ek karşıdan yüklemeler gerekmeden bu C++ test çerçevelerini içerir:
+Visual Studio indirmeye gerek yoktur ve bu C++ test çerçevelerini içerir:
 
-- C++ için Microsoft birim testi çerçevesi
+- C++ için Microsoft Birim Testi Çerçevesi
 - Google Test
-- Boost. test
+- Boost.Test
 - CTest
 
-Yüklü çerçeveleri kullanmaya birlikte, Visual Studio 'da kullanmak istediğiniz çerçeve için kendi test bağdaştırıcınızı yazabilirsiniz. Test bağdaştırıcısı, birim testlerini **Test Gezgini** penceresiyle tümleştirebilir. [Visual Studio Market](https://marketplace.visualstudio.com)birçok üçüncü taraf bağdaştırıcı mevcuttur. Daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçevelerini yüklemeyi](install-third-party-unit-test-frameworks.md).
+Yüklü çerçeveleri kullanmanın yanı sıra, kendi test bağdaştırıcınızı kendi içinde kullanmak için hangi çerçeveyi kullanmak isterseniz Visual Studio. Test bağdaştırıcısı, birim testlerini Test Gezgini **penceresiyle** tümleştirebilirsiniz. üzerinde çeşitli üçüncü taraf bağdaştırıcılar [Visual Studio Market.](https://marketplace.visualstudio.com) Daha fazla bilgi için [bkz. Üçüncü taraf birim test çerçevelerini yükleme.](install-third-party-unit-test-frameworks.md)
 
-**Visual Studio 2017 ve üzeri (Professional ve Enterprise)**
+**Visual Studio 2017 ve sonrası (Professional ve Enterprise)**
 
-C++ birim testi projeleri [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md)'i destekler.
+C++ birim testi projeleri [CodeLens'i destekler.](../ide/find-code-changes-and-other-history-with-codelens.md)
 
-**Visual Studio 2017 ve üzeri (tüm sürümler)**
+**Visual Studio 2017 ve sonraki sürümler (tüm sürümler)**
 
-- **Google test bağdaştırıcı** , C++ iş yüküne **sahip masaüstü geliştirmenin** varsayılan bir bileşeni olarak dahil edilmiştir. Bir çözüme ekleyebileceğiniz bir proje şablonu vardır. Eklemek için **Çözüm Gezgini** çözüm düğümündeki **Yeni Proje Ekle** sağ tıklama menüsünü kullanın. Ayrıca **Araçlar** seçeneklerini kullanarak yapılandırabileceğiniz seçeneklere sahiptir  >  . Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'da Google test kullanma](how-to-use-google-test-for-cpp.md).
+- **Google Test Bağdaştırıcısı,** C++ iş yüküyle **Masaüstü geliştirmenin varsayılan bileşeni olarak** dahil edilir. Bir çözüme ek olarak ekln bir proje şablonuna sahip. Yeni **Proje Ekle'yi** eklemek için yeni projedeki çözüm **düğümünde Çözüm Gezgini** tıklayın. Ayrıca Araçlar Seçenekleri aracılığıyla yapılandırabilirsiniz seçenekleri  >  **vardır.** Daha fazla bilgi için [bkz. Nasıl Google Test: Visual Studio.](how-to-use-google-test-for-cpp.md)
 
-- **Boost. test** , C++ iş yüküne **sahip masaüstü geliştirmenin** varsayılan bir bileşeni olarak dahil edilmiştir. **Test Gezgini** ile tümleşiktir, ancak şu anda bir proje şablonu yoktur. El ile yapılandırılması gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Boost. test kullanma](how-to-use-boost-test-for-cpp.md).
+- **Boost.Test,** C++ iş yüküyle **Masaüstü geliştirmenin varsayılan bir bileşeni olarak** dahil edilir. Test Gezgini ile **tümleştirilmiştir** ancak şu anda bir proje şablonuna sahip değildir. El ile yapılandırılması gerekir. Daha fazla bilgi için [bkz. How to: Use Boost.Test in Visual Studio.](how-to-use-boost-test-for-cpp.md)
 
-- **Ctest** desteği, c++ iş yükü **ile masaüstü geliştirmenin** bir parçası olan **c++ CMake araçları** bileşenine dahildir. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da CTest kullanma](how-to-use-ctest-for-cpp.md).
+- **CTest** desteği, C++ iş yüküyle Masaüstü geliştirmenin bir parçası olan **C++ CMake** **araçları bileşenine** dahildir. Daha fazla bilgi için, [bkz. How to: Use CTest in Visual Studio.](how-to-use-ctest-for-cpp.md)
 
-**Visual Studio 2015 ve öncesi**
+**Visual Studio 2015 ve önceki sürümler**
 
-Google Test bağdaştırıcısını indirebilir ve Visual Studio Market Boost. test bağdaştırıcısı uzantılarını indirebilirsiniz. Bunları, [Google test için](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.TestAdapterforGoogleTest)test ve test bağdaştırıcısı [için test bağdaştırıcısında](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.TestAdapterforBoostTest) bulabilirsiniz.
+Google Test bağdaştırıcısını ve Boost.Test Bağdaştırıcısı uzantılarını Visual Studio Market. Bunları, Google Test [için Boost.Test](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.TestAdapterforBoostTest) ve [Test bağdaştırıcısı için Test bağdaştırıcısı'nda bulabilirsiniz.](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.TestAdapterforGoogleTest)
 
 ## <a name="basic-test-workflow"></a>Temel test iş akışı
 
-Aşağıdaki bölümlerde, C++ birim testi ile çalışmaya başlamanıza yönelik temel adımlar gösterilmektedir. Temel yapılandırma hem Microsoft hem de Google Test çerçeveleri için benzerdir. Boost. test, el ile bir test projesi oluşturmanızı gerektirir.
+Aşağıdaki bölümlerde C++ birim testiyle çalışmaya başlamaya başlamanın temel adımları yer alıyor. Temel yapılandırma hem Microsoft hem de Google Test benzerdir. Boost.Test için el ile bir test projesi oluşturmanız gerekir.
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-### <a name="create-a-test-project-in-visual-studio-2019"></a>Visual Studio 2019 'de test projesi oluşturma
+### <a name="create-a-test-project-in-visual-studio-2019"></a>Visual Studio 2019'da test projesi oluşturma
 
-Testleri bir veya daha fazla test projesi içinde tanımlayıp çalıştırırsınız. Projeleri, test etmek istediğiniz kodla aynı çözümde oluşturursunuz. Varolan bir çözüme yeni bir test projesi eklemek için **Çözüm Gezgini** çözüm düğümüne sağ tıklayın. Açılır menüden   >  **Yeni proje** Ekle ' yi seçin. **Dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Aşağıdaki çizimde, **C++ Ile masaüstü geliştirme** ve **UWP geliştirme** iş yükü yüklendiğinde kullanılabilen test projeleri gösterilmektedir:
+Testleri bir veya daha fazla test projesi içinde tanımlar ve çalıştırın. Projeleri test etmek istediğiniz kodla aynı çözümde oluşturabilirsiniz. Mevcut bir çözüme yeni bir test projesi eklemek için, 'de Çözüm düğümüne **sağ Çözüm Gezgini.** Açılan menüde Yeni Proje   >  **Ekle'yi seçin.** **Dil'i** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Aşağıdaki çizimde **C++** ile Masaüstü Geliştirme ve **UWP** Geliştirme iş yükü yüklü olduğunda kullanılabilen test projeleri gösterilmiştir:
 
-![VIsual Studio 2019 ' de C++ test projeleri](media/vs-2019/cpp-new-test-project-vs2019.png)
+![VIsual Studio 2019'da C++ Test Projeleri](media/vs-2019/cpp-new-test-project-vs2019.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="create-a-test-project-in-visual-studio-2017"></a>Visual Studio 2017 'de test projesi oluşturma
+### <a name="create-a-test-project-in-visual-studio-2017"></a>Visual Studio 2017'de test projesi oluşturma
 
-Testleri bir veya daha fazla test projesi içinde tanımlayıp çalıştırırsınız. Projeleri, test etmek istediğiniz kodla aynı çözümde oluşturursunuz. Yeni bir test projesi eklemek için **Çözüm Gezgini** çözüm düğümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin. Sol bölmede **Visual C++ test**' i seçin. Ardından, orta bölmeden proje türlerinden birini seçin. Aşağıdaki çizimde, C++ iş yükü **Ile masaüstü geliştirme** iş yüküyle birlikte kullanılabilir olan test projeleri gösterilmektedir:
+Testleri bir veya daha fazla test projesi içinde tanımlar ve çalıştırın. Projeleri test etmek istediğiniz kodla aynı çözümde oluşturabilirsiniz. Yeni bir test projesi eklemek için, projedeki Çözüm düğümüne sağ **tıklayın ve Çözüm Gezgini** Proje **Ekle'yi**  >  **seçin.** Sol bölmede Test'i **Visual C++ seçin.** Ardından orta bölmeden proje türlerinden birini seçin. Aşağıdaki **çizimde, C++** ile Masaüstü Geliştirme iş yükü yüklenirken kullanılabilen test projeleri gösterilmiştir:
 
-![C++ test projeleri](media/cpp-new-test-project.png)
+![C++ Test Projeleri](media/cpp-new-test-project.png)
 
 ::: moniker-end
 
-### <a name="create-references-to-other-projects-in-the-solution"></a>Çözümdeki diğer projelere başvurular oluşturma
+### <a name="create-references-to-other-projects-in-the-solution"></a>Çözümdeki diğer projelere başvuru oluşturma
 
-Test kapsamındaki projedeki işlevlere erişimi etkinleştirmek için test projenizdeki projeye bir başvuru ekleyin. Bir açılır menü için **Çözüm Gezgini** test projesi düğümüne sağ tıklayın. Başvuru **Ekle**' yi seçin  >  . Başvuru Ekle iletişim kutusunda, test etmek istediğiniz proje (ler) i seçin.
+Test altındaki projedeki işlevlere erişimi etkinleştirmek için test projenize bir başvuru ekleyin. Açılan menü için Çözüm Gezgini **proje** düğümüne sağ tıklayın. Başvuru **Ekle'yi**  >  **seçin.** Başvuru Ekle iletişim kutusunda test etmek istediğiniz projeleri seçin.
 
 ![Başvuru ekleme](media/cpp-add-ref-test-project.png)
 
 ### <a name="link-to-object-or-library-files"></a>Nesne veya kitaplık dosyalarına bağlantı
 
-Test kodu test etmek istediğiniz işlevleri dışa aktarmazsa, output. obj veya. lib dosyalarını test projesinin bağımlılıklarına ekleyebilirsiniz. Daha fazla bilgi için, bkz. [Testleri nesne veya kitaplık dosyalarına bağlama](how-to-use-microsoft-test-framework-for-cpp.md#object_files).
+Test kodu test etmek istediğiniz işlevleri dışarı aktaramazsa, test projesinin bağımlılıklarına .obj veya .lib çıktısı dosyalarını ekleyin. Daha fazla bilgi için [bkz. Testleri nesne veya kitaplık dosyalarına bağlama.](how-to-use-microsoft-test-framework-for-cpp.md#object_files)
 
-### <a name="add-include-directives-for-header-files"></a>Üst bilgi dosyaları için #include yönergeleri ekleme
+### <a name="add-include-directives-for-header-files"></a>Üst #include için yeni yönergeler ekleme
 
-Ardından, birim testi *. cpp* dosyanızda, `#include` test etmek istediğiniz türleri ve işlevleri bildiren herhangi bir üstbilgi dosyası için bir yönerge ekleyin. `#include "`Ardından IntelliSense 'i seçmenize yardımcı olacak şekilde etkinleştireceğinize. Ek üstbilgiler için tekrarlayın.
+Ardından, birim testi *.cpp dosyanıza,* test etmek istediğiniz türleri ve işlevleri bildiren tüm üst bilgi `#include` dosyaları için bir yönerge ekleyin. Yazın, `#include "` ardından IntelliSense seçmenize yardımcı olmak için etkinleştirecek. Ek üst bilgiler için tekrarlayın.
 
-![IntelliSense ile eklenen bir #include yönergesini gösteren Çözüm Gezgini ekran görüntüsü ekleme için bir üst bilgi dosyası.](media/cpp-add-includes-test-project.png)
+![IntelliSense'in Çözüm Gezgini üst bilgi dosyasını vurgulayan bir #include yönergesi ekleniyor ifadesini gösteren ekran görüntüsü.](media/cpp-add-includes-test-project.png)
 
-Kaynak dosyadaki her bir Include deyimindeki tam yolu yazmak zorunda kalmamak için, **Proje**  >  **özellikleri**  >  **C/C++**  >  **genel**  >  **ek içerme dizinleri**' ne gerekli klasörleri ekleyebilirsiniz.
+Kaynak dosyada her include deyimine tam yol yazmamak için, **Proje** Özellikleri  >    >  **C/C++** Genel Ek Ekleme Dizinleri'ne gerekli  >    >  **klasörleri ebilirsiniz.**
 
-### <a name="write-test-methods"></a>Yazma testi yöntemleri
+### <a name="write-test-methods"></a>Test yöntemleri yazma
 
 > [!NOTE]
-> Bu bölümde, C/C++ için Microsoft birim testi çerçevesi sözdizimi gösterilmektedir. Burada belgelenmiştir: [Microsoft. VisualStudio. TestTools. CppUnitTestFramework API başvurusu](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md). Google Test belgeler için bkz. [Google test öncü](https://github.com/google/googletest/blob/master/docs/primer.md). Boost. test için bkz. [Boost test Kitaplığı: birim test çerçevesi](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html).
+> Bu bölümde C/C++ için Microsoft Birim Testi Çerçevesi'nin söz dizimi yer almaktadır. Burada belgelenmiştir: [Microsoft.VisualStudio.TestTools.CppUnitTestFramework API başvurusu.](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md) Daha Google Test için bkz. [Google Test bilgileri.](https://github.com/google/googletest/blob/master/docs/primer.md) Boost.Test için [bkz. Boost Test kitaplığı: Birim testi çerçevesi.](https://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)
 
-Test projenizdeki *. cpp* dosyasında, sizin için tanımlanan bir saplama sınıfı ve yöntemi vardır. Test kodunun nasıl yazılacağını gösteren bir örnek gösterir. İmzalar TEST_CLASS ve TEST_METHOD makrolarını kullanır, bu da yöntemleri **Test Gezgini** penceresinden bulunabilir hale getirir.
+Test *projenizin .cpp* dosyasında sizin için tanımlanmış bir saplama sınıfı ve yöntemi vardır. Test kodu yazma örneği gösterir. İmzalar, TEST_CLASS ve TEST_METHOD kullanarak yöntemleri Test Gezgini penceresinden **keşfedilebilir hale** sağlar.
 
-![TEST_CLASS ve TEST_METHOD makrolarını kullanarak bir saplama sınıfı ve yöntemi içeren UnitTest1. cpp kod dosyasını gösteren test Gezgini penceresinin ekran görüntüsü.](media/cpp-write-test-methods.png)
+![TEST_CLASS ve TEST_METHOD makrolarını kullanarak saplama sınıfı ve yöntemi içeren unittest1.cpp kod dosyasını gösteren Test Gezgini penceresinin ekran görüntüsü.](media/cpp-write-test-methods.png)
 
-TEST_CLASS ve TEST_METHOD, [Microsoft yerel test çerçevesinin](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)bir parçasıdır. **Test Gezgini** , diğer desteklenen çerçeveler içindeki test yöntemlerini benzer bir şekilde bulur.
+TEST_CLASS ve TEST_METHOD, Microsoft Yerel [Test Çerçevesi'nin bir parçası.](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md) **Test Gezgini,** desteklenen diğer çerçevelerde test yöntemlerini benzer şekilde keşfeder.
 
-TEST_METHOD void döndürür. Bir test sonucu oluşturmak için, `Assert` gerçek sonuçları beklenerek test etmek üzere sınıfındaki statik yöntemleri kullanın. Aşağıdaki örnekte, varsayımında `MyClass` bir Oluşturucu vardır `std::string` . Oluşturucunun sınıfı şu şekilde beklendiği gibi başlattığında, test edebilirsiniz:
+Bir TEST_METHOD void döndürür. Bir test sonucu üretmek için sınıfındaki statik yöntemleri kullanarak gerçek sonuçları `Assert` beklenen sonuçlarla test etmek için kullanın. Aşağıdaki örnekte, bir `MyClass` alan bir oluşturucusu olduğunu varsayalım. `std::string` Oluşturucus un sınıfı beklendiği gibi başlatarak şu şekilde test olabiliriz:
 
 ```cpp
 TEST_METHOD(TestClassInit)
@@ -111,51 +111,51 @@ TEST_METHOD(TestClassInit)
 }
 ```
 
-Önceki örnekte, `Assert::AreEqual` çağrının sonucu testin başarılı mı yoksa başarısız mı olduğunu belirler. Onaylama sınıfı, beklenen ve gerçek sonuçları karşılaştırmak için birçok farklı yöntem içerir.
+Önceki örnekte, çağrının sonucu testin `Assert::AreEqual` başarılı olup olmadığını belirler. Assert sınıfı, beklenen sonuçları ve gerçek sonuçları karşılaştırmak için birçok farklı yöntem içerir.
 
-Test sahiplerini, öncelik ve diğer bilgileri belirtmek için test yöntemlerine *nitelikler* ekleyebilirsiniz. Daha sonra bu değerleri **Test Gezgini**'nde testleri sıralamak ve gruplandırmak için kullanabilirsiniz. Daha fazla bilgi için bkz. [Test Gezgini ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md).
+Test *sahiplerini, önceliğini* ve diğer bilgileri belirtmek için test yöntemlerine nitelikler ebilirsiniz. Daha sonra Test Gezgini'nde testleri sıralamak ve grup etmek için bu **değerleri kullanabilirsiniz.** Daha fazla bilgi için [bkz. Test Gezgini ile birim testleri çalıştırma.](run-unit-tests-with-test-explorer.md)
 
 ### <a name="run-the-tests"></a>Testleri çalıştırma
 
-1. **Test** menüsünde **Windows**  >  **Test Gezgini**' ni seçin. Aşağıdaki çizimde, testleri henüz çalıştırılmayan bir test projesi gösterilmektedir.
+1. Test menüsünde **Windows** Test **Gezgini'ni**  >  **seçin.** Aşağıdaki çizimde, testleri henüz çalıştırmamış olan bir test projesi gösterilmiştir.
 
-   ![Testleri çalıştırmadan önce test Gezgini](media/cpp-test-explorer.png)
+   ![Testleri çalıştırmadan önce Test Gezgini](media/cpp-test-explorer.png)
 
    > [!NOTE]
-   > **Test Gezgini** Ile ctest tümleştirmesi henüz kullanılamıyor. CMake ana menüsünden CTest testlerini çalıştırın.
+   > Test Gezgini ile CTest **tümleştirmesi** henüz kullanılamıyor. CMake ana menüsünden CTest testleri çalıştırın.
 
-1. Tüm testleriniz pencerede görünmüyorsa, **Çözüm Gezgini** ' de düğümüne sağ tıklayıp **Derle** veya **yeniden oluştur**' u seçerek test projesi oluşturun.
+1. Tüm testlerinizi pencerede görünmüyorsa, projedeki düğümüne sağ tıklar  ve Oluştur veya Yeniden Oluştur'Çözüm Gezgini **kullanarak test projesini** **derlemeniz gerekir.**
 
-1. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin veya çalıştırmak istediğiniz belirli testleri seçin. Kesme noktaları etkinken hata ayıklama modunda çalıştırmak dahil diğer seçenekler için teste sağ tıklayın. Tüm testleri çalıştırdıktan sonra pencere hangi testlerin geçtiğini ve hangilerinin başarısız olduğunu gösterir:
+1. **Test Gezgini'nde,** **Tüm Testleri** Çalıştır'ı seçin veya çalıştırmak istediğiniz testleri seçin. Diğer seçenekler için bir teste sağ tıklayın ve kesme noktaları etkin hata ayıklama modunda çalıştırmayı da içerir. Tüm testleri çalıştırdıktan sonra, pencerede hangi testlerin başarılı olduğu ve hangilerinin başarısız olduğu gösterilir:
 
-![Testler çalıştırıldıktan sonra test Gezgini](media/cpp-test-explorer-passed.png)
+![Testler çalıştır çalıştırktan sonra Test Gezgini](media/cpp-test-explorer-passed.png)
 
-Başarısız testler için, iletinin nedenini tanılamaya yardımcı olan ayrıntılar sunulmaktadır. Bir açılır menü için başarısız teste sağ tıklayın. Hatanın oluştuğu işlevin içinde ilerlemek için **Seçili testlerin hatalarını ayıkla** ' yı seçin.
+Başarısız testler için ileti, nedeni tanılamaya yardımcı olan ayrıntılar sunar. Açılan menü için başarısız olan teste sağ tıklayın. Hatanın **meydana geldiği işlevde** adım adım ilerlerken Seçili Testlerde Hata Ayıkla'ya seçin.
 
-**Test Gezgini**'ni kullanma hakkında daha fazla bilgi için bkz. [Test Gezgini Ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md).
+Test Gezgini'ni kullanma hakkında **daha fazla bilgi için** [bkz. Test Gezgini ile birim testleri çalıştırma.](run-unit-tests-with-test-explorer.md)
 
-Birim testi ile ilgili daha fazla bilgi için bkz. [birim testi temelleri](unit-test-basics.md)
+Birim testiyle ilgili daha fazla bilgi için [bkz. Birim testi temelleri](unit-test-basics.md)
 
 ## <a name="use-codelens"></a>CodeLens kullanma
 
-**Visual Studio 2017 ve üzeri (Professional ve Enterprise sürümleri)**
+**Visual Studio 2017 ve sonraki sürümler (Professional ve Enterprise sürümleri)**
 
-[CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) , kod düzenleyicisinden çıkmadan bir birim testinin durumunu hızlıca görmenizi sağlar.
+[CodeLens,](../ide/find-code-changes-and-other-history-with-codelens.md) kod düzenleyicisinden ayrılmadan birim testinin durumunu hızlı bir şekilde görmenizi sağlar.
 
-Aşağıdaki yollarla bir C++ birim testi projesi için CodeLens 'i başlatabilirsiniz:
+C++ birim testi projesi için CodeLens'i şu yöntemlerden herhangi birini kullanarak başlatabilirsiniz:
 
-- Test projenizi veya çözümünüzü düzenleyin ve oluşturun.
-- Projenizi veya çözümünüzü yeniden derleyin.
-- Testleri **Test Gezgini** penceresinden çalıştırın.
+- Test projenizi veya çözümlerinizi düzenleyin ve derleme.
+- Projenizi veya çözümlerinizi yeniden oluşturma.
+- Test Gezgini **penceresinden testleri** çalıştırın.
 
 Başlatıldıktan sonra, her birim testinin üzerinde test durumu simgelerini görebilirsiniz.
 
-![C++ CodeLens simgeleri](media/cpp-test-codelens-icons.png)
+![C++ CodeLens Simgeleri](media/cpp-test-codelens-icons.png)
 
 Daha fazla bilgi için simgeye tıklayın veya birim testini çalıştırmak veya hata ayıklamak için:
 
-![C++ CodeLens Run ve hata ayıklama](media/cpp-test-codelens-run-debug.png)
+![C++ CodeLens Çalıştırma ve Hata Ayıklama](media/cpp-test-codelens-run-debug.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kodunuzun birim testi](unit-test-your-code.md)
+- [Kodunuzu birim testi](unit-test-your-code.md)

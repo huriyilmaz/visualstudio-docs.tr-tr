@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 5117ffb8731ef06f054b0ecbfc651aef2563078e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1981b3876d2e42e992ef261738da2443edfc114
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962632"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042918"
 ---
 # <a name="how-to-test-a-c-dll"></a>C++ DLL 'yi test etme
 
@@ -22,11 +22,11 @@ Bu konuda, C++ için Microsoft Test çerçevesi ile Evrensel Windows Platformu (
 
 Bu konu, geliştirme aşamasında ilk adım olarak birim testi kullanmayı gösterir. Bu yaklaşımda, önce test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yöntemi yazar ve ardından testi geçiren kodu yazarsınız. Aşağıdaki yordamların sırasıyla değişiklik yaparak, test etmek istediğiniz kodu yazmak ve ardından birim testlerini yazmak için bu stratejiyi ters çevirebilirsiniz.
 
-Bu konu ayrıca, tek bir Visual Studio çözümü ve test etmek istediğiniz birim testleri ve DLL için ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine da dahil edebilir veya birim testleri ve için ayrı çözümler oluşturabilirsiniz. Dosyasını. Hangi yapının kullanılacağı hakkında ipuçları için bkz. [var olan C++ uygulamalarına birim testleri ekleme](../test/how-to-use-microsoft-test-framework-for-cpp.md) .
+Bu konu ayrıca, tek bir Visual Studio çözümü ve test etmek istediğiniz birim testleri ve DLL için ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine da dahil edebilir veya birim testleri ve .DLL için ayrı çözümler oluşturabilirsiniz. Hangi yapının kullanılacağı hakkında ipuçları için bkz. [var olan C++ uygulamalarına birim testleri ekleme](../test/how-to-use-microsoft-test-framework-for-cpp.md) .
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> Çözüm ve birim testi projesi oluşturma
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni proje oluştur** iletişim kutusunda, arama kutusuna "test" yazın ve ardından **dili** C++ olarak ayarlayın. Ardından proje şablonları listesinden **birim test uygulaması (Evrensel Windows)** öğesini seçin.
 
@@ -81,7 +81,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
 ## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> Çözüme DLL projesi ekleme
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 **Çözüm Gezgini**, çözüm adını seçin. Kısayol menüsünde, **Ekle** ve ardından **Yeni proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "dll" yazın. Sonuçlar listesinden **birim testi uygulaması (Evrensel Windows-C++/CX)** öğesini seçin.
 
@@ -256,11 +256,11 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
      Her iki test de geçer.
 
 > [!TIP]
-> Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
+> Testleri tek tek ekleyerek kod geliştirin. Tüm testlerin her yinelemeden sonra başarılı olduğundan emin olun.
 
-## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a> Başarısız bir testte hata ayıkla
+## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a> Başarısız olan testte hata ayıklama
 
-1. *UnitTest1. cpp* öğesine başka bir test ekleyin:
+1. *unittest1.cpp'ye başka bir* test ekleyin:
 
    ```cpp
    // Verify that negative inputs throw an exception.
@@ -291,21 +291,21 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
    };
    ```
 
-2. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
+2. **Test Gezgini'nde,** Hepsini **Çalıştır'ı seçin.**
 
-    Test başarısız oluyor. **Test Gezgini**'nde test adını seçin. Başarısız onaylama vurgulanır. Hata iletisi, **Test Gezgini**'nin ayrıntı bölmesinde görünür.
+    Test başarısız olur. Test Gezgini'nde **test adını seçin.** Başarısız onaylama vurgulanmış. Hata iletisi Test Gezgini'nin ayrıntı bölmesinde **görünür.**
 
-    ![Negatiftiverangetests başarısız oldu](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
+    ![NegativeRangeTests başarısız oldu](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
-3. Testin neden başarısız olduğunu görmek için, işlevi adım adım inceleyin:
+3. Testin neden başarısız olduğunu görmek için işlevin üzerinden geçin:
 
-   1. İşlevin başlangıcında bir kesme noktası ayarlayın `SquareRoot` .
+   1. İşlevin başında bir kesme noktası `SquareRoot` ayarlayın.
 
-   2. Başarısız testin kısayol menüsünde, **Seçili testlerin hatalarını ayıkla**' yı seçin.
+   2. Başarısız testin kısayol menüsünde Seçili Testlerde Hata **Ayıkla'yı seçin.**
 
-        Çalıştırma kesme noktasında durdurulduğunda kodda adım adım ilerleyin.
+        Çalıştırma kesme noktası içinde durduğunda kodun üzerinden geçin.
 
-   3. Özel durumu yakalamak için *RooterLib. cpp* öğesine kod ekleyin:
+   3. Özel durumu yakalamak *için RooterLib.cpp'ye* kod ekleyin:
 
        ```cpp
        #include <stdexcept>
@@ -321,15 +321,15 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
        ```
 
-   1. **Test Gezgini**'nde, düzeltilen yöntemi sınamak Için **Tümünü Çalıştır** ' ı seçin ve bir gerileme sunmadığınızdan emin olun.
+   1. Test **Gezgini'nde** **Düzeltilen yöntemi** test etmek için Hepsini Çalıştır'ı seçin ve regresyona neden olmadığınızdan emin olun.
 
-   Şimdi tüm testler geçer.
+   Tüm testler artık başarılı oldu.
 
-   ![Tüm testler geçer](../test/media/ute_ult_alltestspass.png)
+   ![Tüm testler başarılı](../test/media/ute_ult_alltestspass.png)
 
 ## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a> Testleri değiştirmeden kodu yeniden düzenleme
 
-1. İşlevde merkezi hesaplamayı basitleştirme `SquareRoot` :
+1. işlevinde merkezi hesaplamayı `SquareRoot` basitleştirin:
 
     ```csharp
     // old code
@@ -338,9 +338,9 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
     result = (result + v/result) / 2.0;
     ```
 
-2. Yeniden düzenlenmiş yöntemini test etmek için **Tümünü Çalıştır** ' ı seçin ve bir gerileme sunmadığınızdan emin olun.
+2. Yeniden **düzenleme yöntemini** test etmek için Hepsini Çalıştır'ı seçin ve bir regresyona neden olmadığınızdan emin olun.
 
     > [!TIP]
-    > Kararlı bir iyi birim testi kümesi, kodu değiştirirken hata sunmaabileceğinizden emin olmanızı sağlar.
+    > Kararlı bir dizi iyi birim testi, kodu değiştirirken hatalara neden olmadığınız için güven verir.
     >
-    > Yeniden düzenlemeyi diğer değişikliklerden ayrı tutun.
+    > Yeniden düzenlemeyi diğer değişikliklerden ayrı tutma.

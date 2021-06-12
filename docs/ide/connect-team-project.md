@@ -1,136 +1,136 @@
 ---
 title: Ekip Gezgini'nde projelere bağlanma
-description: Projeleri geliştirmek ve yönetmek için Visual Studio 'da Takım Gezgini kullanarak takım üyeleriyle nasıl çalışacağınızı öğrenin.
+description: Proje geliştirmek ve yönetmek Takım Gezgini ekip Visual Studio çalışmak için bu web sitelerini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 03/31/2021
+ms.date: 06/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 78a71911bb4334e04a085d91ff51238d34981beb
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 4d3d2c005f32aaebacc251414218f5ae03edf546
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216611"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043022"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Ekip Gezgini'nde projelere bağlanma
 
 ::: moniker range="vs-2017"
 
-Bir proje geliştirmek ve size, takımınızı ya da projelerinize atanan işleri yönetmek için, **Takım Gezgini** araç penceresini diğer takım üyeleriyle koordine etmek için kullanın. **Takım Gezgini** , Visual Studio 'yu git ve GitHub depoları, Team Foundation sürüm denetimi (TFVC) depoları ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi [Azure DevOps Server](/azure/devops/index-all) (eski adıyla TFS) barındırılan projelere bağlar. Kaynak kodu, iş öğeleri ve yapıları yönetebilirsiniz.
+Bir **Takım Gezgini** geliştirme ve size, takımınıza veya projelerinize atanan çalışmaları yönetmek için kod çalışmalarınızı diğer ekip üyeleriyle koordine etmek için Takım Gezgini araç penceresini kullanın. **Takım Gezgini** Git Visual Studio GitHub depolarına, Team Foundation sürüm denetimi (TFVC) depolarına ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi depolarda (eski adıyla TFS) barındırılan [projeler Azure DevOps Server e bağlanır.](/azure/devops/index-all) Kaynak kodu, iş öğelerini ve derlemeleri yönetebilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Takım Gezgini, Visual Studio 'Yu Team Foundation sürüm denetimi (TFVC) depolarına ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi [Azure DevOps Server](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) barındırılan projelere (eski adıyla TFS) bağlar. Kaynak kodu, iş öğeleri ve yapıları yönetebilirsiniz.
+Takım Gezgini, Visual Studio Team Foundation sürüm denetimi (TFVC) depolarına ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi bir Azure DevOps Server [(eski](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) adıyla TFS) üzerinde barındırılan projelere bağlanır. Kaynak kodu, iş öğelerini ve derlemeleri yönetebilirsiniz.
 
 > [!IMPORTANT]
-> Visual Studio 2019 [**sürüm 16,8**](/visualstudio/releases/2019/release-notes/)' nin son sürümüyle birlikte yeni git sürüm denetimi deneyimi artık varsayılan olarak açık durumdadır. Takım Gezgini ile nasıl Karşılaştırıldığı hakkında daha fazla bilgi edinmek istiyorsanız [**Git ve Takım Gezgini sayfasının yan yana karşılaştırmasını**](git-team-explorer-feature-comparison.md) inceleyin.
+> Visual Studio 2019 [**sürüm 16.8**](/visualstudio/releases/2019/release-notes-history)sürümünde Git sürüm denetimi deneyimi varsayılan olarak açıktır. Bunun git ve Takım Gezgini karşılaştırması hakkında daha fazla bilgi edinmek için [**Bkz. Git**](../version-control/git-team-explorer-feature-comparison.md) ve Takım Gezgini karşılaştırması.
 >
-> Ancak Takım Gezgini kullanmaya devam etmeyi tercih ediyorsanız, **Araçlar** > **Seçenekler** > **ortam** > **Önizleme özellikleri** ' ne gidin ve ardından **Yeni git Kullanıcı deneyimi** onay kutusunu açın.
+> Ancak, Takım Gezgini kullanmaya devam etmek isterseniz, Araçlar  Seçenekler Ortam Önizleme Özellikleri'ne gidin ve Yeni Git kullanıcı deneyimi >  >  >  **onay** kutusunu açıp temizleyin.
 
-Bir projeye bağlanmak için Takım Gezgini kullandığınızda, kullanmakta olduğunuz Visual Studio 2019 sürümüne bağlıdır.
+Bir Takım Gezgini bağlanmak için Visual Studio 2019 sürümüne bağlıdır.
 
-## <a name="in-version-168-and-later"></a>Sürüm 16,8 ve üzeri sürümlerde
+## <a name="in-version-168-and-later"></a>Sürüm 16.8 ve sonraki sürümlerde
 
-1. Visual Studio 2019 ' i açın.
+1. 2019 Visual Studio açın.
 
-1. Başlangıç penceresinde **depoyu Kopyala**' yı seçin.
+1. Başlangıç penceresinde Depoyu **klonla'ya tıklayın.**
 
-   ![Azure DevOps için Visual Studio 2019 sürüm 16,8 ve üzeri bir depoyu Kopyala iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/clone-repository.png)
+   ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde depo kopyalama iletişim kutusunun ekran Azure DevOps](../ide/media/vs-2019/clone-repository.png)
 
-1. **Bir depoya Gözatatıon** bölümünde **Azure DevOps**' u seçin.
+1. Bir **depoya gözat bölümünde Depo'ya** **Azure DevOps.**
 
-    ![Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde ' projeye Bağlan ' iletişim kutusunun ' bir depoya Gözat ' bölümünün ekran görüntüsü](../ide/media/vs-2019/browse-repository-azure-devops.png)
+    ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde 'Projeye Bağlan' iletişim kutusunun 'Depoya gözat' bölümünün ekran görüntüsü](../ide/media/vs-2019/browse-repository-azure-devops.png)
 
-1. Oturum açma penceresi görürseniz hesabınızda oturum açın.
+1. Oturum açma penceresi görüyorsanız, hesabınızla oturum açın.
 
-1. **Bir projeye Bağlan** iletişim kutusunda, bağlanmak istediğiniz depoyu seçin ve ardından **Kopyala**' yı seçin.
+1. Bir **Projeye Bağlan iletişim kutusunda,** bağlanmak istediğiniz bir repo seçin ve ardından Kopyala'ya **tıklayın.**
 
-      ![Visual Studio 2019 sürüm 16,8 ve sonrasında oluşturulan ' projeye Bağlan ' iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/connect-project-azure-devops.png)
+      ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerden oluşturulan 'Projeye Bağlan' iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/connect-project-azure-devops.png)
 
       > [!TIP]
-      > Bağlanılacak olan depoların önceden doldurulmuş bir listesini görmüyorsanız sunucu URL 'SI girmek için **Azure DevOps Server Ekle** ' yi seçin. (Alternatif olarak, mevcut bir Azure DevOps Server ekleme veya bir Azure DevOps hesabı oluşturma bağlantıları içeren "sunucu bulunamadı" istemi görebilirsiniz.)
+      > Bağlanmak için önceden doldurulmuş bir repos listesi görmüyorsanız,  sunucu URL'si girmek için Azure DevOps Server Ekle'yi seçin. (Alternatif olarak, mevcut bir hesap eklemek veya bir Azure DevOps Server hesabı oluşturmak için bağlantılar içeren bir "Sunucu bulunamadı" Azure DevOps olabilir.)
 
-   Daha sonra Visual Studio, klasörleri ve dosyaları gösteren **Çözüm Gezgini** açar.
+   Ardından Visual Studio ve **Çözüm Gezgini** gösteren bir dosya açılır.
 
-1. Azure DevOps eylemlerini görüntülemek için **Takım Gezgini** sekmesini seçin.
+1. Takım Gezgini **eylemlerini** görüntülemek için Azure DevOps seçin.
 
-      ![Visual Studio 2019 sürüm 16,8 ve sonrasında oluşturulan ' Takım Gezgini ' iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/team-explorer-azure-devops.png)
+      ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerden oluşturulan 'Takım Gezgini' iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/team-explorer-azure-devops.png)
 
-## <a name="in-version-167-and-earlier"></a>Sürüm 16,7 ve önceki sürümlerde
+## <a name="in-version-167-and-earlier"></a>Sürüm 16.7 ve önceki sürümlerde
 
-1. Visual Studio 2019 ' i açın.
+1. 2019 Visual Studio açın.
 
-1. Başlat penceresinde, **Kopyala veya kullanıma alma kodu**' nu seçin.
+1. Başlangıç penceresinde Kopyala'ya tıklayın **veya kodu kontrol edin.**
 
-   ![Visual Studio 2019 sürüm 16,7 ve önceki sürümlerde ' yeni proje oluşturma ' penceresinin ekran görüntüsü](../get-started/media/vs-2019/clone-checkout-code-dark.png)
+   ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde 'Yeni proje oluştur' penceresinin ekran görüntüsü](../get-started/media/vs-2019/clone-checkout-code-dark.png)
 
-1. **Bir depoya Gözatatıon** bölümünde **Azure DevOps**' u seçin.
+1. Bir **depoya gözat bölümünde Depo'ya** **Azure DevOps.**
 
-   ![Visual Studio 2019 sürüm 16,7 ve önceki sürümlerde Azure DevOps 'u listeleyen ' bir depoya göz at ' bölümü ile ' kopya veya kullanıma alma ' penceresinin ekran görüntüsü](../get-started/media/vs-2019/clone-checkout-code-git-repo-dark.png)
+   ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde yer alan 'Depoya göz atma Azure DevOps' bölümünün yer Visual Studio' penceresinin ekran görüntüsü](../get-started/media/vs-2019/clone-checkout-code-git-repo-dark.png)
 
-   Oturum açma penceresi görürseniz hesabınızda oturum açın.
+   Oturum açma penceresi görüyorsanız, hesabınızla oturum açın.
 
-1. **Bir projeye Bağlan** iletişim kutusunda, bağlanmak istediğiniz depoyu seçin ve ardından **Kopyala**' yı seçin.
+1. Bir **Projeye Bağlan iletişim kutusunda,** bağlanmak istediğiniz bir repo seçin ve ardından Kopyala'ya **tıklayın.**
 
-      ![Visual Studio 2019 sürüm 16,7 ve öncesinde oluşturulan ' projeye Bağlan ' iletişim kutusunun ekran görüntüsü](../get-started/media/open-proj-azure-devops-connect-cloud-clone.png)
+      ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerden oluşturulan 'Projeye Bağlan' iletişim kutusunun ekran görüntüsü](../get-started/media/open-proj-azure-devops-connect-cloud-clone.png)
 
     > [!NOTE]
-    > Liste kutusunda gördükleriniz, erişiminiz olan Azure DevOps depolarına bağlıdır.
+    > Liste kutusunda ne gördüğünüz, erişiminiz olan Azure DevOps depolara bağlıdır.
 
-   Visual Studio **Takım Gezgini** açar ve kopya tamamlandığında bir bildirim görüntülenir.
+   Visual Studio, **Takım Gezgini** tamamlandığında bir bildirim görüntülenir.
 
-     ![Kopyalama tamamlandıktan sonra Visual Studio 2019 sürüm 16,7 ve önceki sürümlerde Takım Gezgini penceresinin ekran görüntüsü](../get-started/media/vs-2019/clone-complete-azure-devops.png)
+     ![Kopyalama tamamlandıktan sonra Takım Gezgini 2019 Visual Studio 16.7 ve önceki bir sürümde yer alan Takım Gezgini penceresinin ekran görüntüsü](../get-started/media/vs-2019/clone-complete-azure-devops.png)
 
-1. Klasörlerinizi ve dosyalarınızı görüntülemek için **klasör görünümünü göster** bağlantısını seçin.
+1. Klasörlerinizi ve dosyalarınızı görüntülemek için Klasör Görünümünü **Göster bağlantısını** seçin.
 
-     ![Kopyalama tamamlandıktan sonra Visual Studio 2019 sürüm 16,7 ve önceki sürümlerde Takım Gezgini penceresinin çözümler bölümünün ekran görüntüsü](../get-started/media/vs-2019/show-folder-view-azure-devops.png)
+     ![Takım Gezgini 2019 sürüm 16.7 ve önceki sürümlerindeki Visual Studio penceresinin Çözümler bölümünün ekran görüntüsü](../get-started/media/vs-2019/show-folder-view-azure-devops.png)
 
-     Visual Studio **Çözüm Gezgini** açar.
+     Visual Studio **,** Çözüm Gezgini.
 
-1. Açmak için bir çözüm dosyası (özellikle bir. sln dosyası) aramak üzere **çözümler ve klasörler** bağlantısını seçin.
+1. Açılacak **çözüm dosyasını** (özel olarak bir .sln dosyası) aramak için Çözümler ve Klasörler bağlantısını seçin.
 
-      ![Visual Studio 2019 sürüm 16,7 ve önceki sürümlerde Takım Gezgini ' çözümler ve klasörler ' bildiriminin ekran görüntüsü](../get-started/media/open-proj-repo-solutions-folders.png)
+      ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde Takım Gezgini 'Çözümler ve Klasörler' bildiriminin ekran görüntüsü](../get-started/media/open-proj-repo-solutions-folders.png)
 
-   Deponuzda bir çözüm dosyanız yoksa, ' hiçbir çözüm bulunamadı ' iletisi görüntülenir. Ancak, klasörü Visual Studio kod düzenleyicisinde açmak için klasör menüsünden herhangi bir dosyaya çift tıklayabilirsiniz.
+   Bir çözüm dosyanız yoksa bir 'Çözüm Bulunamadı' iletisi görüntülenir. Ancak, klasör menüsünden herhangi bir dosyaya çift tıklar ve dosyayı kod düzenleyicisinde Visual Studio açabilirsiniz.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="vs-2017&quot;
 
-![Visual Studio 'da Takım Gezgini giriş sayfası](media/team-explorer/team-explorer.png "Visual Studio 'daki Takım Gezgini giriş sayfası.")
+![Takım Gezgini Giriş sayfası Visual Studio](media/team-explorer/team-explorer.png &quot;Takım Gezgini - Giriş sayfası Visual Studio.")
 
 > [!TIP]
-> Visual Studio 'yu açıp **Takım Gezgini** görünmezse,   >  menü çubuğundan **Takım Gezgini** görüntüle ' yi seçerek veya **CTRL** + **&#92;**, **CTRL** tuşuna basarak dosyayı açın + .
+> Visual Studio ve **Takım Gezgini** görünmüyorsa, menü çubuğundan Görünüm Takım Gezgini'i seçerek veya  >   **Ctrl** +&#92;, **Ctrl** M **tuşlarına** basarak + **açın.**
 
-## <a name="connect-to-a-project-or-repository"></a>Bir projeye veya depoya bağlanma
+## <a name="connect-to-a-project-or-repository"></a>Projeye veya depoya bağlanma
 
-**Bağlan** sayfasındaki bir projeye veya depoya bağlanın.
+Bağlan sayfasında bir projeye veya **depoya** bağlanabilirsiniz.
 
-![Takım Gezgini sayfa bağlama](media/team-explorer/connect.png "Visual Studio 'da Takım Gezgini-Connect sayfası")
+![Takım Gezgini'de bağlantı sayfası](media/team-explorer/connect.png "Takım Gezgini - Bağlan sayfası Visual Studio")
 
 Bir projeye bağlanmak için:
 
-1. **Bağlantıları Yönet** simgesini seçerek **Bağlan** sayfasını açın.
+1. Bağlantıları **Yönet simgesini** seçerek **Bağlan sayfasını** açın.
 
-   ![Takım Gezgini bağlantıları yönetme düğmesi](media/team-explorer/manage-connections.png "Visual Studio 'da Takım Gezgini-bağlantıları Yönet düğmesi.")
+   ![Takım Gezgini'de Bağlantıları Yönet düğmesi](media/team-explorer/manage-connections.png "Takım Gezgini - Bağlantıları Yönet düğmesi Visual Studio.")
 
-1. **Bağlan** sayfasında **Bağlantıları Yönet** ' i seçin > **bir projeye bağlanın**.
+1. Bağlan **sayfasında,** Bağlantıları Yönet **Projeye** > **bağlan'ı seçin.**
 
-   ![Takım Gezgini bir projeye bağlanma](media/team-explorer/connect-project.png "Takım Gezgini-Visual Studio 'da bir proje seçeneğine bağlanın.")
+   ![Takım Gezgini'da bir projeye bağlanma](media/team-explorer/connect-project.png "Takım Gezgini - Bir Proje seçeneğine bağlan seçeneği Visual Studio.")
 
 > [!TIP]
-> Bir depodan bir proje açmak isterseniz, bkz. bir [depodan bir proje açma](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md). Yeni bir proje oluşturmak veya bir projeye Kullanıcı eklemek istiyorsanız, bkz. [Proje oluşturma (Azure DevOps)](/azure/devops/organizations/projects/create-project) ve [bir projeye veya takıma Kullanıcı ekleme (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project).
+> Bir repodan proje açmak için bkz. [Bir repodan proje açma.](../get-started/tutorial-open-project-from-repo-visual-studio-2017.md) Yeni bir proje oluşturmak veya bir projeye kullanıcı eklemek için bkz. Proje [oluşturma (Azure DevOps)](/azure/devops/organizations/projects/create-project) ve Bir projeye veya takıma kullanıcı ekleme [(Azure DevOps).](/azure/devops/organizations/security/add-users-team-project)
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Git ve Takım Gezgini yan yana karşılaştırın](git-team-explorer-feature-comparison.md)
-- [Visual Studio 'da yeni git deneyimi](git-with-visual-studio.md)
+- [Git ile Takım Gezgini yan yana karşılaştırma](git-team-explorer-feature-comparison.md)
+- [Visual Studio'daki yeni Git deneyimi](git-with-visual-studio.md)
 - [Takım Gezgini başvurusu](reference/team-explorer-reference.md)
-- [Bir projeye bağlanma (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
-- [Bir projeye bağlanma sorunlarını giderme](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops&preserve-view=true)
+- [Projeye bağlanma (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
+- [Projeye bağlanma sorunlarını giderme](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops&preserve-view=true)

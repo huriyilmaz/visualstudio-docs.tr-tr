@@ -1,6 +1,6 @@
 ---
-title: 'Docker öğreticisi-1. Bölüm: Yapılacaklar listesi örnek uygulamasını derleme ve çalıştırma'
-description: Node.js 'de çalışan yapılacaklar listesi örnek uygulamasına genel bakış.
+title: 'Docker öğreticisi - 1. Bölüm: Todo list örnek uygulamasını derleme ve çalıştırma'
+description: Uygulama içinde çalışan todo listesi örnek uygulamasına genel Node.js.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
@@ -9,38 +9,40 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 1b92792cf9db0090c52f583754e56c306e6d7234
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 00eb3a7cff3ffeaac783b929a000d9258fae7e63
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106082584"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042955"
 ---
-# <a name="build-and-run-the-todo-sample-app"></a>Todo örnek uygulamasını derleyin ve çalıştırın
+# <a name="build-and-run-the-todo-sample-app"></a>Todo örnek uygulamasını derleme ve çalıştırma
 
-Bu öğreticinin geri kalanında Node.js ' de çalışan basit bir yapılacaklar listesi Yöneticisi ile çalışmaya başlayacaksınız. Node.js konusunda bilgi sahibi değilseniz endişelenmeyin! Gerçek bir JavaScript deneyimi gerekmez!
+Bu öğreticinin geri kalanında, bu öğreticide çalışan basit bir todo listesi yöneticisiyle Node.js. Bu konuda bilgi sahibi Node.js endişelenmeyin! Gerçek bir JavaScript deneyimi gerekmez!
 
-Bu noktada, geliştirme ekibiniz oldukça küçüktür ve MVP 'nizi (en az uygulanabilir ürün) kanıtlamak için yalnızca bir uygulama oluşturmaktır. Nasıl çalıştığını ve büyük bir ekip, birden çok geliştirici ve benzeri için nasıl çalışacağınızı düşünmenize gerek kalmadan ne yapabileceğinize ilişkin bilgi almak istiyorsunuz.
+Bu noktada geliştirme takımınız oldukça küçüktür ve MVP'nizi (en düşük uygun ürün) kanıtlamak için bir uygulama derlersiniz. Büyük bir ekip ve birden çok geliştirici için nasıl çalışabileceklerini düşünmek zorunda kalmadan nasıl çalıştığını ve neler yapabileceğini göstermek istiyor.
 
-![Todo List Manager ekran görüntüsü](media/todo-list-sample.png)
+![Todo List Manager Ekran Görüntüsü](media/todo-list-sample.png)
 
 ## <a name="get-the-app"></a>Uygulamayı alın
 
-Uygulamayı çalıştırmadan önce, makinenizde uygulama kaynak kodunu almanız gerekir. Gerçek projeler için genellikle depoyu kopyalacaksınız. Ancak, bu öğretici için, uygulamayı içeren bir ZIP dosyası oluşturduk.
+Uygulamayı çalıştıramadan önce uygulama kaynak kodunu makinenize alasiniz. Gerçek projeler için genellikle repo klonlar. Ancak bu öğretici için uygulamayı içeren bir ZIP dosyası oluşturduk.
 
-1. Yerel makinede Docker for Windows veya Docker Community Edition 'ın yüklü olduğundan emin olun. [Docker for Windows yükleme belgelerine](https://docs.docker.com/docker-for-windows/install/)bakın. Yüklemesi işlemi, örneği içeren ZIP dosyasını localhost adresinde kullanılabilir hale getirir.
+1. Yerel makinede Docker for Windows veya Docker Community Edition yüklü olduğundan emin olun. Yükleme [Docker for Windows bkz.](https://docs.docker.com/docker-for-windows/install/). Yükleme işlemi, örneği içeren ZIP dosyasını localhost adreslerinde kullanılabilir yapar.
 
-1. [ZIP 'ı indirin](https://github.com/docker/getting-started/tree/master/app). ZIP dosyasını açın ve içeriği ayıkladığınızdan emin olun.
+1. Docker repolarından [uygulamanın kaynağını](https://github.com/docker/getting-started) indirin. Repo için ZIP dosyasını indirebilirsiniz. ZIP dosyasını indirmek için yeşil Kod düğmesini kullanın ve **ZIP'i** **İndir'i seçin.** UYGULAMA klasöründen sabit sürücüdeki bir klasöre uygulamanın kaynağını ayıklamak için ZIP dosyasını *açın* ve Hepsini Ayıkla'ya tıklayın.
 
-1. Ayıkladıktan sonra, en sevdiğiniz kod düzenleyicinizi kullanarak projeyi açın. Düzenleyicinizde ihtiyacınız varsa [Visual Studio Code](https://code.visualstudio.com/)kullanabilirsiniz. `package.json`Ve iki alt dizin görmeniz gerekir ( `src` ve `spec` ).
+   ![Yeşil Kod düğmesini ve ZIP'i İndir seçeneğini gösteren ekran görüntüsü](media/download-zip.png)
 
-    ![Yüklenen uygulama ile açılan Visual Studio Code ekran görüntüsü](media/ide-screenshot.png)
+1. Ayıklandıktan sonra projeyi açmak için sık kullanılan kod düzenleyicinizi kullanın. Bir düzenleyiciye ihtiyacınız varsa, bu düzenleyiciyi [Visual Studio Code.](https://code.visualstudio.com/) ve iki alt `package.json` dizinini ( ve ) `src` görüyor `spec` gerekir.
 
-## <a name="building-the-apps-container-image"></a>Uygulamanın kapsayıcı görüntüsünü oluşturma
+    ![Uygulama Visual Studio Code açık olan ekran görüntüsü](media/ide-screenshot.png)
 
-Uygulamayı derlemek için, kullanmanız gerekir `Dockerfile` . Dockerfile, yalnızca bir kapsayıcı görüntüsü oluşturmak için kullanılan yönergelerin metin tabanlı bir betiğinden oluşur. Daha önce Dockerfiles oluşturduysanız aşağıdaki Dockerfile dosyasında birkaç kusuru görebilirsiniz. Ancak endişelenmeyin! Bunlar üzerinden devam edeceğiz.
+## <a name="building-the-apps-container-image"></a>Uygulamanın kapsayıcı görüntüsünü bina
 
-1. `Dockerfile`Aşağıdaki içeriklerle dosyayla aynı klasörde adlı bir dosya oluşturun `package.json` .
+Uygulamayı derlemek için bir kullan `Dockerfile` gerekir. Dockerfile, kapsayıcı görüntüsü oluşturmak için kullanılan metin tabanlı bir yönergeler betiğidir. Daha önce Dockerfile'lar oluşturduysanız aşağıdaki Dockerfile dosyasında birkaç kusur görebilirsiniz. Ama endişelenmeyin! Bunları daha sonra tekrarlaacağız.
+
+1. Aşağıdaki içeriklere `Dockerfile` sahip dosyayla aynı klasörde `package.json` adlı bir dosya oluşturun.
 
     ```dockerfile
     FROM node:12-alpine
@@ -50,58 +52,58 @@ Uygulamayı derlemek için, kullanmanız gerekir `Dockerfile` . Dockerfile, yaln
     CMD ["node", "/app/src/index.js"]
     ```
 
-    Lütfen dosyanın `Dockerfile` benzer bir dosya uzantısına sahip olup olmadığını denetleyin `.txt` . Bazı düzenleyiciler bu dosya uzantısını otomatik olarak ekleyebilir ve bu, bir sonraki adımda hata oluşmasına neden olur.
+    Lütfen dosyanın gibi `Dockerfile` bir dosya uzantısına sahip olmadığını kontrol `.txt` edin. Bazı düzenleyiciler bu dosya uzantısını otomatik olarak ekler ve bu bir sonraki adımda hataya neden olur.
 
-1. Daha önce yapmadıysanız, bir Terminal açın ve `app` ile dizine gidin `Dockerfile` . Şimdi komutunu kullanarak kapsayıcı görüntüsünü oluşturun `docker build` .
+1. Henüz bunu yapmadıysanız bir terminal açın ve ile `app` dizinine `Dockerfile` gidin. Şimdi komutunu kullanarak kapsayıcı görüntüsünü `docker build` derleme.
 
     ```bash
     docker build -t getting-started .
     ```
 
-    Alternatif olarak, Dockerfile dosyasına sağ tıklayıp **resim oluştur...** öğesini seçip, ardından istemde etiketi belirtebilirsiniz.
+    Alternatif olarak Dockerfile'a sağ tıklayarak Görüntü **Derleme...** seçeneğini de seçebilir ve ardından isteminde etiketini belirtebilirsiniz.
 
-    Bu komut, yeni bir kapsayıcı görüntüsü oluşturmak için Dockerfile 'ı kullandı. Çok sayıda "katman" indirdiğini fark etmiş olabilirsiniz. Bunun nedeni, görüntüden başlamasını istediğiniz oluşturucuyu istedik `node:12-alpine` . Ancak makinenizde bu olduğundan, bu görüntünün indirilmesi gerekir.
+    Bu komut, yeni bir kapsayıcı görüntüsü oluşturmak için Dockerfile'ı kullandı. Çok sayıda "katmanın" indirilmiş olduğunu fark etmişsinizdir. Bunun nedeni oluşturucuya görüntüden başlamak istediğinin talimatını `node:12-alpine` vermişsinizdir. Ancak makinede bu görüntüye sahip olmadığınız için bu görüntünün indirilmiş olması gerekir.
 
-    Görüntü indirildikten sonra uygulamanıza kopyalanıp `yarn` uygulamanızın bağımlılıklarını yüklemek için kullanılır. `CMD`Yönerge, bu görüntüden bir kapsayıcı başlatılırken çalıştırılacak varsayılan komutu belirtir.
+    Görüntü indirildikten sonra, uygulamanıza kopyaladınız ve uygulama `yarn` bağımlılıklarınızı yüklemek için kullandınız. `CMD`yönergesi, bu görüntüden bir kapsayıcıyı başlatarak çalıştıracak varsayılan komutu belirtir.
 
-    Son olarak, `-t` bayrak resminizi etikettir. Bunu, son görüntü için yalnızca insan tarafından okunabilen bir ad olarak düşünün. Görüntüyü adlandırdığınızda `getting-started` , bir kapsayıcıyı çalıştırdığınızda söz konusu görüntüye başvurabilirsiniz.
+    Son olarak, `-t` bayrağı görüntünizi etiketler. Bunu son görüntü için okunabilir bir ad olarak düşünebilirsiniz. Görüntüyü olarak adlandırılmış `getting-started` olduğunuz için kapsayıcıyı çalıştırarak bu görüntüye başvurabilirsiniz.
 
-    `.`Komutun sonunda, `docker build` Docker 'ın geçerli dizinde ' i araması gerektiğini söyler `Dockerfile` .
+    `.`Komutun sonundaki `docker build` komutu Docker'ın geçerli dizinde `Dockerfile` için bakarak bak gerektiğini söyler.
 
-## <a name="starting-an-app-container"></a>Uygulama kapsayıcısı başlatılıyor
+## <a name="starting-an-app-container"></a>Uygulama kapsayıcısı başlatma
 
-Artık bir görüntünüz olduğuna göre uygulamayı çalıştırın! Bunu yapmak için `docker run` komutunu kullanın (daha önce bu tarihten itibaren hatırlayın).
+Artık bir görüntünüz olduğu için uygulamayı çalıştırın! Bunu yapmak için komutunu kullanın `docker run` (bunu daha önce hatırlayabilirsiniz?).
 
-1. Komutunu kullanarak kapsayıcınızı başlatın `docker run` ve yeni oluşturduğunuz görüntünün adını belirtin:
+1. komutunu kullanarak `docker run` kapsayıcınızı başlatın ve yeni oluşturduğunuz görüntünün adını belirtin:
 
     ```bash
     docker run -dp 3000:3000 getting-started
     ```
 
-    `-d`Ve bayrakları hatırlayın `-p` mı? Yeni kapsayıcıyı "ayrılmış" modda (arka planda) çalıştırıyorsunuz ve konağın bağlantı noktası 3000 ile kapsayıcının bağlantı noktası 3000 arasında bir eşleme oluşturuyorsunuz. Bağlantı noktası eşlemesi olmadan uygulamaya erişemezsiniz.
+    ve `-d` bayraklarını hatırlıyor `-p` musunuz? Yeni kapsayıcıyı "ayrılmış" modda (arka planda) çalıştırarak ana bilgisayar bağlantı noktası 3000 ile kapsayıcının 3000 bağlantı noktası arasında bir eşleme oluşturuyorsunuz. Bağlantı noktası eşlemesi olmadan uygulamaya erişesiniz.
 
-1. Birkaç saniye sonra Web tarayıcınızı ' e açın [http://localhost:3000](http://localhost:3000) .
-    Uygulamayı görmeniz gerekir!
+1. Birkaç saniye sonra web tarayıcınızı 'de [http://localhost:3000](http://localhost:3000) açın.
+    Uygulamayı görüyorsanız!
 
-    ![Boş Todo listesi](media/todo-list-empty.png)
+    ![Boş Todo Listesi](media/todo-list-empty.png)
 
-1. Devam edin ve bir öğe veya iki tane ekleyin ve beklendiği gibi çalıştığını görün. Öğeleri tamamen işaret edebilir ve öğeleri kaldırabilirsiniz. Ön uçlarınız öğeleri arka uçta başarıyla depoladığını! Oldukça hızlı ve kolay, kuh?
+1. Devam edin ve bir veya iki öğe ekleyin ve beklediğiniz gibi çalıştığını bakın. Öğeleri tamamlandı olarak işaretlerini kaldırabilir ve öğeleri kaldırabilirsiniz. Ön ucun öğeleri arka uçta başarıyla depolandı! Oldukça hızlı ve kolay, değil mi?
 
-Bu noktada, hepsi sizin tarafınızdan oluşturulmuş birkaç öğe içeren çalışan bir Todo List Manager olmalıdır! Şimdi birkaç değişiklik yapalim ve Kapsayıcılarınızı yönetme hakkında bilgi edinin.
+Bu noktada, birkaç öğeyle çalışan bir yapılacaklar listesi yöneticiniz olmalı ve hepsi sizin tarafından ekleyebilirsiniz! Şimdi birkaç değişiklik yapın ve kapsayıcılarınızı yönetme hakkında bilgi edinin.
 
-VS Code uzantıya hızlı bir görünüm alırsanız, şu anda çalışan iki kapsayıcınızı görmeniz gerekir (Bu öğretici ve daha önce oluşturduğunuz uygulama kapsayıcısı)!
+VS Code uzantısına hızlı bir şekilde göz atacak olursanız iki kapsayıcının (bu öğretici ve yeni başlatılan uygulama kapsayıcınız) çalışıyor olduğunu görüyor olun!
 
-![Eğitim ve uygulama kapsayıcıları çalıştıran Docker uzantısı](media/vs-two-containers.png)
+![Öğretici ve uygulama kapsayıcıları çalıştıran Docker Uzantısı](media/vs-two-containers.png)
 
 ## <a name="recap"></a>Özet
 
-Bu kısa bölümde bir kapsayıcı görüntüsü oluşturma ve bunu yapmak için bir Dockerfile oluşturma hakkında temel bilgileri öğrendiniz. Bir görüntü oluşturduktan sonra kapsayıcıyı başlatmış ve çalışan uygulamayı gördünüz!
+Bu kısa bölümde kapsayıcı görüntüsü oluşturmayla ilgili temel bilgileri öğrendin ve bunu yapmak için bir Dockerfile oluşturdunız. Bir görüntü 2009'da kapsayıcıyı başlattıktan sonra çalışan uygulamayı görmüş olduktan sonra!
 
-Ardından, uygulamada bir değişiklik yaparsınız ve çalışan uygulamayı yeni bir görüntüyle nasıl güncelleştireceğinizi öğreneceksiniz. Bu şekilde, diğer birkaç yararlı komut öğreneceksiniz.
+Ardından uygulamada bir değişiklik yapacak ve çalışan uygulamayı yeni bir görüntüyle güncelleştirmeyi öğreneceksiniz. Bu arada, birkaç yararlı komut daha öğrenirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Öğreticiye devam edin!
 
 > [!div class="nextstepaction"]
-> [Uygulamanızı güncelleştirme](update-your-app.md)
+> [Uygulama güncelleştirme](update-your-app.md)
