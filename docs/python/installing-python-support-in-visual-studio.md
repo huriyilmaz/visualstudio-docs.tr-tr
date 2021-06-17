@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e0c1cf29c7579978d5992de46b14c01fee0799c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 09fb452d579130cdf6597ada3af509b35f24ff43
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881652"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254816"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows üzerinde Visual Studio 'da Python desteği nasıl yüklenir
 
@@ -88,7 +88,6 @@ Yükleme adımlarını tamamladıktan sonra Python desteğini hızlıca test etm
     | **Cookiecutter şablonu desteği** | Şablonları, giriş şablonu seçeneklerini bulmaya ve proje ve dosya oluşturmaya yönelik Cookiecutter grafik kullanıcı arabirimini yükleyerek. Bkz. [Cookiecutter uzantısını kullanma](using-python-cookiecutter-templates.md). |
     | **Python web desteği** | HTML, CSS ve JavaScript Düzenle desteği dahil web geliştirme araçları 'nı, şişe, Flask ve Docgo çerçevelerini kullanan projelere yönelik şablonlarla birlikte kurar. Bkz. [Python web projesi şablonları](python-web-application-project-templates.md). |
     | **Python yerel geliştirme araçları** | Python için yerel uzantılar geliştirmek üzere C++ derleyicisini ve diğer gerekli bileşenleri yükleyerek. Bkz. [Python Için C++ uzantısı oluşturma](working-with-c-cpp-python-in-visual-studio.md). Ayrıca, tam C++ desteği için C++ iş yüküne **sahip masaüstü geliştirmeyi** de yükler. |
-    | **Azure Cloud Services çekirdek araçları** | Python 'da geliştirici Azure Cloud Services için ek destek sağlar. Bkz. [Azure bulut hizmeti projeleri](python-azure-cloud-service-project-template.md). |
     ::: moniker-end
 
 1. Yükleme sonrasında yükleyici, Visual Studio 'Yu değiştirme, başlatma, onarma veya kaldırma seçeneklerini sunar. Visual Studio güncelleştirmeleri yüklü herhangi bir bileşen için kullanılabilir olduğunda **Değiştir** düğmesi **Güncelleştir** olarak değişir. ( **Değiştir** seçeneği daha sonra açılan menüden kullanılabilir.) Ayrıca, "Visual Studio" üzerine arayarak Visual Studio ve yükleyiciyi Windows **Başlat** menüsünden de başlatabilirsiniz.

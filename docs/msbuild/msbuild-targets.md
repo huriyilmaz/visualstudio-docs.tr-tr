@@ -1,6 +1,6 @@
 ---
-title: MSBuild hedefleri | Microsoft Docs
-description: MSBuild 'in görevleri birlikte gruplamak ve derleme işleminin daha küçük birimlere yeniden hedeflemesini sağlamak için hedefleri nasıl kullandığını öğrenin.
+title: MSBuild Hedefleri | Microsoft Docs
+description: MSBuild'in görevleri birlikte grup oluşturmak ve derleme işleminin daha küçük birimlerde dikkate alınarak izin vermek için hedefleri nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: conceptual
@@ -12,20 +12,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2958b45fc64383fde7d762d4c20887b3f58669d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 294877e4884ae7b89f1e9d6f015c5c9213eba52d
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878402"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254829"
 ---
 # <a name="msbuild-targets"></a>MSBuild hedefleri
 
-Hedefleri belirli bir sırada gruplar ve derleme işleminin daha küçük birimlere ayrılabilir hale gelsin. Örneğin, bir hedef, derleme için hazırlanmak üzere çıkış dizinindeki tüm dosyaları silebilir, başka bir deyişle projenin girişlerini derler ve bunları boş dizine koyar. Görevler hakkında daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
+Grup görevlerini belirli bir sırada birlikte hedefler ve derleme işleminin daha küçük birimlere çarpanlarına iner. Örneğin, bir hedef derlemeye hazırlanmak için çıkış dizininde yer alan tüm dosyaları silebilirken, diğeri proje için girişleri derler ve boş dizine yer değiştirir. Görevler hakkında daha fazla bilgi için bkz. [Görevler.](../msbuild/msbuild-tasks.md)
 
-## <a name="declare-targets-in-the-project-file"></a>Proje dosyasında hedefleri bildirme
+## <a name="declare-targets-in-the-project-file"></a>Proje dosyasında hedefleri bildir
 
- Hedefler, [hedef](../msbuild/target-element-msbuild.md) öğesiyle bir proje dosyasında belirtilir. Örneğin, aşağıdaki XML, derleme öğesi türü ile csc görevini çağıran bir hedef adlı bir yapı oluşturur.
+ Hedefler, Target öğesiyle bir proje dosyasında [bildirildi.](../msbuild/target-element-msbuild.md) Örneğin, aşağıdaki XML Yapı adlı bir hedef oluşturur ve ardından Derleme öğesi türü ile Csc görevini çağıran.
 
 ```xml
 <Target Name="Construct">
@@ -33,7 +33,7 @@ Hedefleri belirli bir sırada gruplar ve derleme işleminin daha küçük biriml
 </Target>
 ```
 
- MSBuild özellikleri gibi hedefler yeniden tanımlanabilir. Örneğin,
+ MSBuild özellikleri gibi hedefler de yeniden tanımlandırabilirsiniz. Örneğin,
 
 ```xml
 <Target Name="AfterBuild" >
@@ -44,15 +44,25 @@ Hedefleri belirli bir sırada gruplar ve derleme işleminin daha küçük biriml
 </Target>
 ```
 
- `AfterBuild`Yürütüldüğünde, ikinci tanım birincisini gizlemediğinden yalnızca "ikinci oluşum" görüntülenir `AfterBuild` .
+`AfterBuild`yürütülürse yalnızca "İkinci oluşum" görüntülenir çünkü ikinci tanımı `AfterBuild` ilki gizler.
 
- MSBuild içeri aktarma-sipariş bağımlıdır ve bir hedefin son tanımı kullanılan tanımdır.
+MSBuild içeri aktarma sırasına bağlıdır ve hedefin son tanımı kullanılan tanımdır. Bir hedefi yeniden tanımlamayı denersiniz, yerleşik hedef daha sonra tanımlanırsa etkili olmaz. SDK kullanan projelerde, hedeflere yönelik içeri aktarmalar proje dosyanız sona erdikten sonra örtülü olarak eklenmiştir.
+
+Bu nedenle, mevcut bir hedefin davranışını genişletmek için yeni hedef oluşturun ve aşağıdaki gibi `BeforeTargets` `AfterTargets` (veya uygun şekilde) belirtin:
+
+```xml
+<Target Name="MessageBeforePublish" BeforeTargets="BeforePublish">
+  <Message Text="BeforePublish" Importance="high" />
+</Target>
+```
+
+Kodda bir işlevin adını ver istediğiniz gibi hedefinize açıklayıcı bir ad verin.
 
 ## <a name="target-build-order"></a>Hedef derleme sırası
 
- Bir hedefin girişi, başka bir hedefin çıktısına bağımlıysa, hedefler sıralanmalıdır.
+ Bir hedefe yapılan giriş başka bir hedefin çıkışına bağlı ise hedefler sıralanıyor.
  
- Hedeflerin çalıştırıldığı sırayı belirlemek için birkaç yol vardır.
+ Hedeflerin çalışma sırası belirtmenin çeşitli yolları vardır.
 
 - İlk hedefler
 
@@ -62,15 +72,15 @@ Hedefleri belirli bir sırada gruplar ve derleme işleminin daha küçük biriml
 
 - Hedef bağımlılıklar
 
-- `BeforeTargets` ve `AfterTargets` (MSBuild 4,0)
+- `BeforeTargets` ve `AfterTargets` (MSBuild 4.0)
 
-Bir hedef, derleme içindeki sonraki bir hedef buna bağımlı olsa bile tek bir yapı sırasında iki kez çalıştırılmazlar. Bir hedef çalıştıktan sonra, derleme katkısı tamamlanmıştır.
+Bir hedef, derlemede sonraki bir hedef buna bağlı olsa bile tek bir derleme sırasında hiçbir zaman iki kez çalışmaz. Hedef çalıştırlandıktan sonra derlemeye olan katkısı tamamlanır.
 
-Hedef derleme sırası hakkında ayrıntılar ve daha fazla bilgi için bkz. [hedef derleme sırası](../msbuild/target-build-order.md).
+Hedef derleme sırası hakkında ayrıntılı bilgi ve daha fazla bilgi için [bkz. Hedef derleme sırası.](../msbuild/target-build-order.md)
 
 ## <a name="target-batching"></a>Hedef toplu işleme
 
-Hedef öğe `Outputs` ,%() biçiminde meta verileri belirten bir özniteliğe sahip olabilir \<Metadata> . Bu durumda, MSBuild her benzersiz meta veri değeri için hedefi bir kez çalıştırır, bu meta veri değerine sahip öğeleri gruplandırarak veya "toplu olarak" gerçekleştirir. Örneğin,
+Hedef öğenin `Outputs` %( şeklinde meta verileri belirten bir özniteliği \<Metadata> olabilir. Öyleyse, MSBuild her benzersiz meta veri değeri için hedefi bir kez çalıştırır, bu meta veri değerine sahip öğeleri gruplama veya "toplu işleme". Örneğin,
 
 ```xml
 <ItemGroup>
@@ -91,24 +101,24 @@ Hedef öğe `Outputs` ,%() biçiminde meta verileri belirten bir özniteliğe sa
 </Target>
 ```
 
- Başvuru öğelerini RequiredTargetFramework meta verilerine göre işler. Hedefin çıkışı şöyle görünür:
+ Başvuru öğelerini RequiredTargetFramework meta verilerine göre toplu işler. Hedefin çıktısı şu şekildedir:
 
 ```
 Reference: 3.5;3.5
 Reference: 4.0
 ```
 
- Hedef toplu işleme nadiren gerçek derlemelerde kullanılır. Görev toplu işlemi daha yaygındır. Daha fazla bilgi için bkz. [toplu](../msbuild/msbuild-batching.md)işlem.
+ Hedef toplu işleme, gerçek derlemelerde nadiren kullanılır. Görev toplu işleme daha yaygındır. Daha fazla bilgi için bkz. [Toplu işleme.](../msbuild/msbuild-batching.md)
 
 ## <a name="incremental-builds"></a>Artımlı derlemeler
 
- Artımlı derlemeler, en iyi duruma getirilmiş derlemelerdir ve bunlara karşılık gelen giriş dosyalarına göre güncel çıkış dosyaları olan hedefler yürütülmez. Hedef öğe hem `Inputs` hem de `Outputs` özniteliğe, hedefin giriş olarak beklediği öğeleri ve çıktı olarak ürettiği öğeleri gösterir.
+ Artımlı derlemeler, karşılık gelen giriş dosyalarına göre güncel çıkış dosyalarına sahip hedeflerin yürütülmey için iyileştirilmiş derlemelerdir. Hedef öğenin hem hem de öznitelikleri olabilir. Bu öznitelikler, hedefin giriş olarak hangi öğeleri beklemesi gerektiğini ve çıkış `Inputs` `Outputs` olarak hangi öğeleri ürettiğini gösterir.
 
- Tüm çıkış öğeleri güncel ise, MSBuild, derleme hızını önemli ölçüde geliştiren hedefi atlar. Bu, hedefin artımlı derlemesi olarak adlandırılır. Yalnızca bazı dosyalar güncel olduğunda, MSBuild hedefi güncel öğeler olmadan yürütür. Bu, hedefin kısmi artımlı derlemesi olarak adlandırılır. Daha fazla bilgi için bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
+ Tüm çıkış öğeleri güncelse, MSBuild hedefi atlar ve bu da derleme hızını önemli ölçüde artırır. Buna hedefin artımlı derlemesi denir. Yalnızca bazı dosyalar güncelse, MSBuild güncel öğeler olmadan hedefi yürütür. Buna hedefin kısmi artımlı derlemesi denir. Daha fazla bilgi için bkz. [Artımlı derlemeler.](../msbuild/incremental-builds.md)
 
 ## <a name="default-build-targets"></a>Varsayılan derleme hedefleri
 
-Aşağıda Microsoft. Common. CurrentVersion. targets içindeki genel hedefler listelenmiştir.
+Aşağıda, Microsoft.Common.CurrentVersion.Targets'daki genel hedefler liste almaktadır.
 
 ```
 ===================================================
@@ -123,14 +133,12 @@ The main build entry point.
 
 ===================================================
 BeforeBuild
-Redefine this target in your project in order to run tasks just before Build
 ===================================================
 <Target Name="BeforeBuild"/>
 
 
 ===================================================
 AfterBuild
-Redefine this target in your project in order to run tasks just after Build
 ===================================================
 <Target Name="AfterBuild"/>
 
@@ -155,21 +163,18 @@ Delete all intermediate and final build outputs, and then build the project from
 
 ===================================================
 BeforeRebuild
-Redefine this target in your project in order to run tasks just before Rebuild
 ===================================================
 <Target Name="BeforeRebuild"/>
 
 
 ===================================================
 AfterRebuild
-Redefine this target in your project in order to run tasks just after Rebuild
 ===================================================
 <Target Name="AfterRebuild"/>
 
 
 ===================================================
 BuildGenerateSources
-Redefine this target in your project in order to run tasks for BuildGenerateSources
 Set BuildPassReferences to enable P2P builds
 ===================================================
 <Target Name="BuildGenerateSources"
@@ -178,7 +183,6 @@ Set BuildPassReferences to enable P2P builds
 
 ===================================================
 BuildCompile
-Redefine this target in your project in order to run tasks for BuildCompile
 ===================================================
 <Target Name="BuildCompile"
         DependsOnTargets="BuildCompileTraverse;$(BuildCompileAction)" />
@@ -186,7 +190,6 @@ Redefine this target in your project in order to run tasks for BuildCompile
 
 ===================================================
 BuildLink
-Redefine this target in your project in order to run tasks for BuildLink
 ===================================================
 <Target Name="BuildLink"
         DependsOnTargets="BuildLinkTraverse;$(BuildLinkAction)" />
@@ -302,14 +305,12 @@ ResolveReferences
 
 ===================================================
 BeforeResolveReferences
-Redefine this target in your project in order to run tasks just before ResolveReferences
 ===================================================
 <Target Name="BeforeResolveReferences"/>
 
 
 ===================================================
 AfterResolveReferences
-Redefine this target in your project in order to run tasks just after ResolveReferences
 ===================================================
 <Target Name="AfterResolveReferences"/>
 
@@ -570,14 +571,12 @@ Run GenerateResource on the given resx files.
 
 ===================================================
 BeforeResGen
-Redefine this target in your project in order to run tasks just before Resgen.
 ===================================================
 <Target Name="BeforeResGen"/>
 
 
 ===================================================
 AfterResGen
-Redefine this target in your project in order to run tasks just after Resgen.
 ===================================================
 <Target Name="AfterResGen"/>
 
@@ -624,14 +623,12 @@ Emit any specified code fragments into a temporary source file for the compiler.
 
 ===================================================
 BeforeCompile
-Redefine this target in your project in order to run tasks just before Compile.
 ===================================================
 <Target Name="BeforeCompile"/>
 
 
 ===================================================
 AfterCompile
-Redefine this target in your project in order to run tasks just after Compile.
 ===================================================
 <Target Name="AfterCompile"/>
 
@@ -802,14 +799,12 @@ Delete all intermediate and final build outputs.
 
 ===================================================
 BeforeClean
-Redefine this target in your project in order to run tasks just before Clean.
 ===================================================
 <Target Name="BeforeClean"/>
 
 
 ===================================================
 AfterClean
-Redefine this target in your project in order to run tasks just after Clean.
 ===================================================
 <Target Name="AfterClean"/>
 
@@ -875,14 +870,12 @@ by the BuildManager.
 
 ===================================================
 BeforePublish
-Redefine this target in your project in order to run tasks just before Publish.
 ===================================================
 <Target Name="BeforePublish"/>
 
 
 ===================================================
 AfterPublish
-Redefine this target in your project in order to run tasks just after Publish.
 ===================================================
 <Target Name="AfterPublish"/>
 
@@ -1017,4 +1010,4 @@ This target gathers the Redist folders from the SDKs which have been resolved.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)
+- [Nasıl kullanılır: Birden çok proje dosyalarında aynı hedefi kullanma](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

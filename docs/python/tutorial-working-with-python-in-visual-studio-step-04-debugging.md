@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a66268d5d6bd200eb3ef0e2c8bcf53471e3a735f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13080f69de9a8bfc6b1da35a7126f1f0c89a64c7
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839169"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254868"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>4. Adım: hata ayıklayıcıda kodu çalıştırma
 
@@ -50,6 +50,8 @@ Visual Studio, bir zengin düzenleme deneyimi ve **etkileşimli** pencere sunan 
     > Program tamamlandığında çıkış penceresini otomatik olarak kapatmak için, **Araçlar**  >  **Seçenekler** menü komutunu seçin, **Python** düğümünü genişletin, **hata ayıklama**' yi seçin ve ardından **işlem normal bir şekilde çıktığında giriş için bekle** seçeneğini temizleyin:
     >
     > ![Normal programda çıkış penceresini kapatmak için Python hata ayıklama seçeneği](media/vs-getting-started-python-22-debugging5.png)
+    >
+    > Betik ve yorumlayıcı bağımsız değişkenlerinin nasıl ayarlanacağı gibi görevler de dahil olmak üzere hata ayıklama hakkında daha fazla bilgi için bkz. [Python kodunuzda hata ayıklama](debugging-python-in-visual-studio.md).
 
 1. `for`Bu satıra göre gri kenar boşluğunda bir kez tıklayarak veya giriş işaretini bu satıra yerleştirip **hata ayıklama**  >  **kesme noktasını aç** komutunu (**F9**) kullanarak deyimde bir kesme noktası ayarlayın. Bir kırmızı nokta, kesme noktasını göstermek için gri kenar boşluğunda görünür (aşağıdaki okla belirtilen şekilde):
 

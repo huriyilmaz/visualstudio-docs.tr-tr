@@ -1,6 +1,6 @@
 ---
-title: Sınıf Tasarımcısı kullan
-description: Visual Studio 'da Sınıf Tasarımcısı ile kodunuzda sınıfları ve diğer türleri tasarlama, görselleştirme ve yeniden düzenleme hakkında bilgi edinin.
+title: Sınıf Tasarımcısı
+description: Kod içinde sınıf tasarlamayı, görselleştirmeyi ve kodundaki diğer türleri yeniden düzenlemeyi ve Sınıf Tasarımcısı Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: conceptual
@@ -19,44 +19,47 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 236efe20ee652e2690cedf36843d539bf8a9cc46
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85921343ac52c066735d607ce32635e953cf2e6a
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850301"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254789"
 ---
-# <a name="design-and-view-classes-and-types-with-class-designer"></a>Sınıf Tasarımcısı sınıfları ve türleri tasarlama ve görüntüleme
+# <a name="design-and-view-classes-and-types-with-class-designer"></a>Sınıf Tasarımcısı ile sınıfları ve türleri tasarlama ve Sınıf Tasarımcısı
 
-Visual Studio 'da **Sınıf Tasarımcısı** kodunuzda sınıfları ve diğer türleri tasarlayın, görselleştirin ve yeniden düzenleyin. C#, Visual Basic veya C++ projenizdeki sınıfları oluşturmak ve düzenlemek için sınıf diyagramlarını kullanın. Ayrıca, proje yapınızı daha iyi anlamak veya kodunuzu yeniden düzenlemek için sınıf diyagramlarını kullanabilirsiniz.
+Kod kodundaki sınıflarla sınıfları ve diğer türleri tasarla, görselleştir **ve Sınıf Tasarımcısı** ve Visual Studio. C#, Visual Basic veya C++ projesinde sınıflar oluşturmak ve düzenlemek için sınıf diyagramlarını kullanın. Proje yapınızı daha iyi anlamak veya kodunuzu yeniden düzenlemek için sınıf diyagramlarını da kullanabilirsiniz.
 
-## <a name="what-you-can-do-with-class-diagrams"></a>Sınıf diyagramlarıyla yapabilecekleriniz
+>[!NOTE]
+>Sınıf Tasarımcısı .NET Core projelerinde kullanılamaz.
 
-- **Tasarım**: sınıf diyagramını düzenleyerek projenizin kodunu düzenleyin. Yeni öğeler ekleyin ve istenmeyen olanları silin. Değişiklikleriniz kodda yansıtılır.
+## <a name="what-you-can-do-with-class-diagrams"></a>Sınıf diyagramları ile neler yapabilirsiniz?
 
-- **Görselleştirin**: projenizdeki sınıfları bir diyagram üzerinde görüntüleyerek projenizin yapısını anlayın. En çok önem verdiğiniz proje ayrıntılarına odaklanabilmeniz için diyagramınızı özelleştirin. Daha sonra tanıtım veya belgeler için kullanmak üzere diyagramınızı kaydedin.
+- **Tasarım:** Sınıf diyagramını düzenleyerek projenizin kodunu düzenleyin. Yeni öğeler ekleyin ve istenmeyen öğeleri silin. Değişiklikleriniz koda yansıtıldı.
 
-- Yeniden **Düzenle**: yöntemleri geçersiz kılın, tanımlayıcıları yeniden düzenleyin, parametreleri yeniden düzenleyin ve arabirimleri ve soyut sınıfları uygulayın.
+- **Görselleştirin:** Projenizin yapısını anlamak için projenizin sınıflarını diyagramda görüntüebilirsiniz. Diyagramınızı özelleştirin, böylece en çok önemle önem istediğiniz proje ayrıntılarına odaklanabilirsiniz. Daha sonra gösterim veya belgeler için kullanmak üzere diyagramınızı kaydedin.
+
+- **Yeniden düzenleme:** Yöntemleri geçersiz kılın, tanımlayıcıları yeniden adlandır, parametreleri yeniden düzenleme ve arabirimleri ve soyut sınıfları uygulama.
 
 ## <a name="view-types-and-relationships"></a>Türleri ve ilişkileri görüntüleme
 
-Sınıf diyagramlarında türlerin ayrıntıları, örneğin bağlı üyeleri ve aralarındaki ilişkiler gösterilmektedir. Bu varlıkların görselleştirmesi kodun içinde dinamik bir görünümdir. Bu, tasarımcıda türleri düzenleyebileceğiniz ve daha sonra düzenlerinizin varlığın kaynak kodunda yansıtıldığı anlamına gelir. Benzer şekilde, sınıf diyagramı kod dosyalarında yaptığınız değişikliklerle eşitlenmiş olarak tutulur.
+Sınıf diyagramları türlerin ayrıntılarını ( örneğin, onların kurucu üyelerini ve aralarındaki ilişkileri) gösterir. Bu varlıkların görselleştirmesi, koda dinamik bir görünüm sağlar. Bu, tasarımcıda türleri düzenleyemez ve sonra düzenlemelerinizi varlığın kaynak koduna yansıtıldı olarak göreceğiniz anlamına gelir. Benzer şekilde, sınıf diyagramı kod dosyalarında yaptığınız değişikliklerle eşit olarak tutulur.
 
 > [!NOTE]
-> Projeniz bir sınıf diyagramı içeriyorsa ve projeniz başka bir projede bulunan bir türe başvuruyorsa, bu tür için proje oluşturuluncaya kadar sınıf diyagramı başvurulan türü göstermez. Benzer şekilde, diyagram, söz konusu varlık için projeyi yeniden oluşturulana kadar dış varlığın kodundaki değişiklikleri görüntülemez.
+> Projeniz bir sınıf diyagramı içeriyorsa ve projeniz başka bir projede bulunan bir türe başvurursa, sınıf diyagramı o tür için projeyi derlemeden başvurulan türü göstermez. Benzer şekilde, siz bu varlık için projeyi yeniden oluşturmadan diyagramda dış varlığın kodunda yapılan değişiklikler görüntülenmez.
 
 ## <a name="class-diagram-workflow"></a>Sınıf diyagramı iş akışı
 
-Sınıf diyagramları, projelerin sınıf yapısını anlamanıza yardımcı olabilir. Bu projeler diğer geliştiriciler tarafından oluşturulmuş olabilir veya sizin oluşturduğunuz bir projede bir yenileyici olması yeterlidir. Proje bilgilerini başkalarıyla özelleştirmek, paylaşmak ve sunmak için sınıf diyagramlarını kullanabilirsiniz.
+Sınıf diyagramları, projelerin sınıf yapısını anlamanıza yardımcı olabilir. Bu projeler diğer geliştiriciler tarafından oluşturulmuş olabilir veya yalnızca kendi oluşturduğunuz bir projeyle ilgili bir yenilemeye ihtiyacınız olabilir. Proje bilgilerini başkalarını özelleştirmek, paylaşmak ve sunmak için sınıf diyagramlarını kullanabilirsiniz.
 
-Proje bilgilerini sunarken ilk adım, göstermek istediğiniz şeyi görüntüleyen bir sınıf diyagramı oluşturmaktır. Daha fazla bilgi için bkz. [sınıf diyagramı ekleme](how-to-add-class-diagrams-to-projects.md). Projenin ayrı bir görünümünü, projenin türlerin seçili bir alt kümesini veya türlerin üyelerinin seçili bir alt kümesini görüntülemek için kullanılabilecek bir proje için birden çok sınıf diyagramı oluşturabilirsiniz.
+Proje bilgilerini göstermenin ilk adımı, göstermek istediğiniz öğeleri görüntüleyen bir sınıf diyagramı oluşturmaktır. Daha fazla bilgi için [bkz. Sınıf diyagramı ekleme.](how-to-add-class-diagrams-to-projects.md) Projenin ayrı bir görünümünü, proje türlerinin belirli bir alt kümesini veya türlerin üyelerinin seçilen bir alt kümesini görüntülemek için kullanılmaktadır bir proje için birden çok sınıf diyagramı oluşturabilirsiniz.
 
-Her bir sınıf diyagramının ne gösterdiğini tanımlamaya ek olarak, bilgilerin sunulma şeklini de değiştirebilirsiniz; daha fazla bilgi için bkz. [nasıl yapılır: sınıf diyagramlarını özelleştirme](how-to-customize-class-diagrams.md).
+Her sınıf diyagramının ne göster gösteresini tanımlamaya ek olarak, bilgilerin nasıl sunlsa da değişmesini de sebilirsiniz; Daha fazla bilgi için [bkz. Nasıl 2. Sınıf diyagramlarını özelleştirme.](how-to-customize-class-diagrams.md)
 
-Bir veya daha fazla sınıf diyagramına ince ayar yaptıktan sonra, bunları Microsoft Office belgelerine kopyalayabilir ve yazdırabilir ya da resim dosyası olarak dışarı aktarabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: sınıf diyagramı öğelerini Microsoft Office bir belgeye kopyalama](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md), [nasıl yapılır: sınıf diyagramlarını yazdırma](how-to-print-class-diagrams.md) ve [nasıl yapılır: sınıf diyagramlarını görüntü olarak dışarı aktarma](how-to-export-class-diagrams-as-images.md).
+Bir veya daha fazla sınıf diyagramında ince ayarlamalar yaptıktan sonra, bunları Microsoft Office belgelerine kopyalayıp yazdırabilirsiniz veya görüntü dosyası olarak dışarı aktarabilirsiniz. Daha fazla bilgi için bkz. Nasıl [kullanılır:](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)Sınıf diyagramı öğelerini bir Microsoft Office belgesine kopyalama, [Nasıl kullanılır:](how-to-print-class-diagrams.md) Sınıf diyagramlarını yazdırma ve Nasıl kullanılır: Sınıf [diyagramlarını görüntü olarak dışarı aktarma.](how-to-export-class-diagrams-as-images.md)
 
 > [!NOTE]
-> Sınıf Tasarımcısı, kaynak dosyalarınızın konumunu izlememez, bu yüzden proje yapınızı değiştirmek veya projede kaynak dosyaları taşımak Sınıf Tasarımcısı, özellikle bir typedef, taban sınıf veya ilişki türlerinin kaynak türü olan türün izini kaybetmesine neden olabilir. **Sınıf Tasarımcısı, bu tür görüntülenemiyor** gibi bir hata alabilirsiniz. Bunu yaparsanız, yeniden görüntülemek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyin.
+> Sınıf Tasarımcısı kaynak dosyalarınızın konumunu izlemez, bu nedenle proje yapınızı değiştirmek veya projede kaynak dosyaları taşımak, Sınıf Tasarımcısı'nin türü, özellikle de typedef, temel sınıflar veya ilişkilendirme türlerinin kaynak türünü kaybetmelerine neden olabilir. Bu tür bir Sınıf Tasarımcısı **gibi bir hata alabilirsiniz.** Bunu yaparsanız, değiştirilmiş veya yeniden konumlu kaynak kodunu yeniden oynatmak için yeniden sınıf diyagramına sürükleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
