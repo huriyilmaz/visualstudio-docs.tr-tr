@@ -1,6 +1,6 @@
 ---
 title: IntelliTrace kullanarak SharePoint uygulamasında hata ayıklama
-description: SharePoint uygulamalarında daha kolay hata ayıklama ve hataları gidermek için IntelliTrace 'i kullanın. Bir özellik alıcısına kod oluşturun ve kodu ekleyin. Projeyi test edin. IntelliTrace verilerini toplayın.
+description: SharePoint uygulamalarında daha kolay hata ayıklamak ve düzeltmek için IntelliTrace kullanın. Özellik alıcısına kod oluşturma ve ekleme. Projeyi test etmek. IntelliTrace verilerini toplama.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,32 +18,32 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e2ce8bc2c493d59b8a06a64ff69838e828315bf2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf7fa6c7255e05c465d6c209db5e9581a49aee64
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952661"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112838"
 ---
-# <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>İzlenecek yol: IntelliTrace kullanarak bir SharePoint uygulamasında hata ayıklama
+# <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>Adım adım kılavuz: IntelliTrace kullanarak SharePoint uygulamasında hata ayıklama
 
-IntelliTrace 'i kullanarak SharePoint Çözümlerinde daha kolay hata ayıklama yapabilirsiniz. Geleneksel hata ayıklayıcıları, size geçerli anda yalnızca bir çözümün anlık görüntüsünü verir. Ancak, çözümünüzde oluşan geçmiş olayları ve bunların oluştuğu bağlamı gözden geçirmek için IntelliTrace 'i kullanabilir ve koda gidebilirsiniz.
+IntelliTrace kullanarak SharePoint çözümlerinin hata ayıklamalarını daha kolay yapabilirsiniz. Geleneksel hata ayıklayıcılar, geçerli anda yalnızca bir çözümün anlık görüntüsünü sağlar. Ancak IntelliTrace'i kullanarak çözümünüzde meydana gelen geçmiş olayları ve bunların hangi bağlamda olduğunu gözden geçirebilirsiniz ve koda gidin.
 
- Bu izlenecek yolda, dağıtılan uygulamalardan IntelliTrace verilerini toplamak için Microsoft Monitoring Agent kullanarak Visual Studio 'da SharePoint 2010 veya SharePoint 2013 projesinde hata ayıklama yapılacağını gösterilmektedir. Bu verileri çözümlemek için Visual Studio Enterprise kullanmanız gerekir. Bu proje, özellik etkinleştirildiğinde, görev listesine bir görev ve Duyurular listesine bir duyuru ekleyen bir özellik alıcısı içerir. Özellik devre dışı bırakıldığında, görev tamamlandı olarak işaretlenir ve Duyurular listesine ikinci bir duyuru eklenir. Ancak yordam, projenin düzgün çalışmasını engelleyen bir mantıksal hata içeriyor. IntelliTrace 'i kullanarak hatayı bulacak ve düzelteceksiniz.
+ Bu kılavuz, dağıtılan uygulamalardan IntelliTrace verilerini toplamak için Visual Studio kullanarak Microsoft Monitoring Agent SharePoint projesinde hata ayıklamayı gösterir. Bu verileri analiz etmek için bu verileri Visual Studio Enterprise. Bu proje, özellik etkinleştirildiğinde Görev listesine bir görev ve Duyurular listesine bir duyuru ekleyen bir özellik alıcısı içerir. Özellik devre dışı bırakıldığında görev tamamlandı olarak işaretlenir ve Duyurular listesine ikinci bir duyuru eklenir. Ancak, yordam projenin doğru şekilde çalışmasını engelleyen bir mantıksal hata içerir. IntelliTrace kullanarak hatayı bulup düzeltin.
 
- **Uygulama hedefi:** Bu konudaki bilgiler SharePoint 2010 ve Visual Studio 'da oluşturulan SharePoint 2013 çözümleri için geçerlidir.
+ **Aşağıdakiler için geçerlidir:** Bu konudaki bilgiler, Visual Studio'de oluşturulan SharePoint çözümleri için geçerlidir.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- [Özellik alıcısı oluşturma](#create-a-feature-receiver)
+- [Özellik Alıcısı Oluşturma](#create-a-feature-receiver)
 
-- [Özellik alıcısına kod ekleme](#add-code-to-the-feature-receiver)
+- [Özellik Alıcısına Kod Ekleme](#add-code-to-the-feature-receiver)
 
-- [Projeyi test etme](#test-the-project)
+- [Projeyi Test](#test-the-project)
 
-- [Microsoft Monitoring Agent kullanarak IntelliTrace verileri toplama](#collect-intellitrace-data-by-using-microsoft-monitoring-agent)
+- [IntelliTrace Verilerini Microsoft Monitoring Agent](#collect-intellitrace-data-by-using-microsoft-monitoring-agent)
 
-- [SharePoint çözümünü hata ayıklama ve çözme](#debug-and-fix-the-sharepoint-solution)
+- [SharePoint Çözümü hata ayıklama ve düzeltme](#debug-and-fix-the-sharepoint-solution)
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -57,27 +57,27 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ## <a name="create-a-feature-receiver"></a>Özellik alıcısı oluşturma
 
-İlk olarak, özellik alıcısı olan boş bir SharePoint projesi oluşturursunuz.
+İlk olarak, özellik alıcısı olan boş bir SharePoint projesi oluşturun.
 
-1. Bir SharePoint 2010 veya SharePoint 2013 çözüm projesi oluşturun ve bunu **IntelliTraceTest** olarak adlandırın.
+1. Yüklemiş olduğunu SharePoint sürümünü hedef alan bir SharePoint çözüm projesi oluşturun ve **IntelliTraceTest olarak anın.**
 
-     **SharePoint Özelleştirme Sihirbazı** görüntülenir, burada projeniz Için hem SharePoint sitesini hem de çözümün güven düzeyini belirtebilirsiniz.
+     SharePoint **Özelleştirme Sihirbazı görüntülenir;** burada hem projeniz için SharePoint sitesini hem de çözümün güven düzeyini belirtebilirsiniz.
 
-2. **Grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından **son** düğmesini seçin.
+2. Grup **çözümü olarak dağıt seçeneğini belirleyin** ve ardından Son **düğmesini** seçin.
 
-     IntelliTrace yalnızca Grup çözümlerinde çalışır.
+     IntelliTrace yalnızca grup çözümlerinde çalışır.
 
-3. **Çözüm Gezgini**, **Özellikler** düğümünün kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
+3. Bu **Çözüm Gezgini** Özellikler düğümünün kısayol menüsünü **açın ve Özellik** Ekle'yi **seçin.**
 
-     *Özellik1. feature* görüntülenir.
+     *Feature1.feature* görüntülenir.
 
-4. Özellik1. feature için kısayol menüsünü açın ve sonra özelliğe kod modülü eklemek için **olay alıcısı Ekle** ' yi seçin.
+4. Feature1.feature kısayol menüsünü açın ve ardından Olay **Alıcısı** Ekle'yi seçarak özelliğe bir kod modülü ekleyin.
 
 ## <a name="add-code-to-the-feature-receiver"></a>Özellik alıcısına kod ekleme
 
-Sonra, özellik alıcısındaki iki yönteme kod ekleyin: `FeatureActivated` ve `FeatureDeactivating` . Bu yöntemler sırasıyla SharePoint 'te her bir özellik etkinleştirildiğinde veya devre dışı bırakıldığında tetiklenir.
+Ardından, özellik alıcısı içinde iki yönteme kod ekleyin: `FeatureActivated` ve `FeatureDeactivating` . Bu yöntemler, SharePoint'te sırasıyla bir özellik etkinleştirildiğinde veya devre dışı bırakıldığında tetiklenir.
 
-1. Sınıfının üst kısmında `Feature1EventReceiver` , SharePoint sitesini ve alt siteyi belirten değişkenleri bildiren aşağıdaki kodu ekleyin:
+1. Sınıfının en üstüne, SharePoint sitesini ve alt sitesini belirten değişkenleri `Feature1EventReceiver` bildiren aşağıdaki kodu ekleyin:
 
     ```vb
     ' SharePoint site and subsite.
@@ -249,90 +249,90 @@ Sonra, özellik alıcısındaki iki yönteme kod ekleyin: `FeatureActivated` ve 
 
 ## <a name="test-the-project"></a>Projeyi test etme
 
-Artık kod, özellik alıcısına eklendiğinden ve veri toplayıcı çalıştırıldığına göre, doğru çalışıp çalışmadığını test etmek için SharePoint çözümünü dağıtıp çalıştırın.
+Artık kod özellik alıcısına eklenmiştir ve veri toplayıcı çalışır, doğru şekilde çalıştığını test etmek için SharePoint çözümünü dağıtın ve çalıştırın.
 
 > [!IMPORTANT]
-> Bu örnekte, Featureını devre dışı bırakma olay işleyicisinde bir hata oluşur. Bu izlenecek yolda, veri toplayıcısının oluşturduğu. iTrace dosyasını kullanarak bu hatayı bulabilirsiniz.
+> Bu örnekte, FeatureDeactivating olay işleyicisinde bir hata oluştu. Bu kılavuzda daha sonra, veri toplayıcının oluşturduğu .iTrace dosyasını kullanarak bu hatayı bulun.
 
-1. Çözümü SharePoint 'e dağıtın ve SharePoint sitesini bir tarayıcıda açın.
+1. Çözümü SharePoint'e dağıtın ve ardından SharePoint sitesini bir tarayıcıda açın.
 
-     Özelliği otomatik olarak etkinleştirilir ve özellik alıcısının bir duyuru ve bir görev eklemesine neden olur.
+     Özellik otomatik olarak etkin hale geliyor ve bu da özellik alıcısının bir duyuru ve görev eklemesini sağlar.
 
-2. Duyurular ve görevler listelerinin içeriğini görüntüleyin.
+2. Duyurular ve Görevler listelerinin içeriğini görüntüler.
 
-     Duyurular listesinde, **etkinleştirilen Özellik: IntelliTraceTest_Feature1** adlı yeni bir duyuru olmalıdır ve görev listesi, **devre dışı bırakma özelliği** olarak adlandırılan yeni bir görevin olması gerekir: IntelliTraceTest_Feature1. Bu öğelerden herhangi biri eksikse, özelliğin etkinleştirilip etkinleştirilmediğini doğrulayın. Etkinleştirilmemişse, etkinleştirin.
+     Duyurular listesinde Etkin özellik adlı yeni bir duyuru olması **gerekir: IntelliTraceTest_Feature1** ve Görevler listesinde Devre dışı bırakma **özelliği:** IntelliTraceTest_Feature1. Bu öğelerden biri eksikse özelliğin etkinleştirildiğinden emin olun. Etkinleştirilmezse etkinleştirin.
 
-3. Aşağıdaki adımları gerçekleştirerek özelliği devre dışı bırakın:
+3. Aşağıdaki adımları gerçekleştirerek özelliği devre dışı bırakma:
 
-   1. SharePoint 'teki **Site eylemleri** menüsünde, **site ayarları**' nı seçin.
+   1. **SharePoint'te Site** Eylemleri menüsünde Site Ayarları'ı **seçin.**
 
-   2. **Site eylemleri** altında, **site özelliklerini yönet** bağlantısını seçin.
+   2. **Site Eylemleri'nin** altında Site **özelliklerini yönet bağlantısını** seçin.
 
-   3. **IntelliTraceTest özellik1**' ın yanındaki **devre dışı bırak** düğmesini seçin.
+   3. **IntelliTraceTest Feature1'in yanındaki** Devre Dışı Bırak **düğmesini** seçin.
 
-   4. Uyarı sayfasında **Bu özelliği devre dışı bırak** bağlantısını seçin.
+   4. Uyarı sayfasında Bu özelliği devre dışı **bırak bağlantısını** seçin.
 
-      Featuredevre dışı bırakma () olay işleyicisi bir hata oluşturur.
+      FeatureDeactivating() olay işleyicisi bir hata döndürür.
 
-## <a name="collect-intellitrace-data-by-using-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent kullanarak IntelliTrace verileri toplama
+## <a name="collect-intellitrace-data-by-using-microsoft-monitoring-agent"></a>IntelliTrace verilerini Microsoft Monitoring Agent
 
-SharePoint çalıştıran sisteme Microsoft Monitoring Agent yüklerseniz, IntelliTrace 'in döndürdüğü genel bilgilerden daha belirgin olan verileri kullanarak SharePoint Çözümlerinde hata ayıklaması yapabilirsiniz. Aracı, SharePoint çözümünüz çalışırken hata ayıklama bilgilerini yakalamak için PowerShell cmdlet 'lerini kullanarak Visual Studio dışında çalışır.
+SharePoint Microsoft Monitoring Agent sisteme yüklemenizi sağlarsanız, IntelliTrace'in döndür olduğu genel bilgilerden daha özel verileri kullanarak SharePoint çözümlerinin hata ayıklamalarını sebilirsiniz. Aracı, SharePoint çözümünüz Visual Studio hata ayıklama bilgilerini yakalamak için PowerShell cmdlet'lerini kullanarak uygulamanın dışında çalışır.
 
 > [!NOTE]
-> Bu bölümdeki yapılandırma bilgileri bu örneğe özeldir. Diğer yapılandırma seçenekleri hakkında daha fazla bilgi için bkz. [IntelliTrace tek başına toplayıcıyı kullanma](../debugger/using-the-intellitrace-stand-alone-collector.md).
+> Bu bölümdeki yapılandırma bilgileri bu örnekteki özeldir. Diğer yapılandırma seçenekleri hakkında daha fazla bilgi için [bkz. IntelliTrace tek başına toplayıcıyı kullanma.](../debugger/using-the-intellitrace-stand-alone-collector.md)
 
-1. SharePoint çalıştıran bilgisayarda [Microsoft Monitoring Agent ayarlayın ve çözümünüzü izlemeye başlayın](../debugger/using-the-intellitrace-stand-alone-collector.md).
+1. SharePoint'i çalıştıran bilgisayarda, [Microsoft Monitoring Agent'ı ayarlayın ve çözümlerinizi izlemek için başlatın.](../debugger/using-the-intellitrace-stand-alone-collector.md)
 
-2. Özelliği devre dışı bırak:
+2. Özelliği devre dışı bırakma:
 
-   1. SharePoint 'teki **Site eylemleri** menüsünde, **site ayarları**' nı seçin.
+   1. **SharePoint'te Site** Eylemleri menüsünde Site Ayarları'ı **seçin.**
 
-   2. **Site eylemleri** altında, **site özelliklerini yönet** bağlantısını seçin.
+   2. **Site Eylemleri'nin** altında Site **özelliklerini yönet bağlantısını** seçin.
 
-   3. **IntelliTraceTest özellik1**' ın yanındaki **devre dışı bırak** düğmesini seçin.
+   3. **IntelliTraceTest Feature1'in yanındaki** Devre Dışı Bırak **düğmesini** seçin.
 
-   4. Uyarı sayfasında **Bu özelliği devre dışı bırak** bağlantısını seçin.
+   4. Uyarı sayfasında Bu özelliği devre dışı **bırak bağlantısını** seçin.
 
-      Bir hata oluşur (Bu durumda, Featuredevre dışı bırakma () olay işleyicisinde oluşan hata nedeniyle).
+      Bir hata oluşur (bu durumda, FeatureDeactivating() olay işleyicisinde oluşan hata nedeniyle).
 
-3. PowerShell penceresinde, [Stop-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472753(v=sc.20)) komutunu çalıştırarak. iTrace dosyasını oluşturun, izlemeyi durdurun ve SharePoint Çözümünüzü yeniden başlatın.
+3. PowerShell penceresinde [Stop-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472753(v=sc.20)) komutunu çalıştırarak .iTrace dosyasını oluşturun, izlemeyi durdurun ve SharePoint çözümlerinizi yeniden başlatın.
 
-     **Stop-WebApplicationMonitoring***" \<SharePointSite> \\<sharepointappname \> "*  
+     **Stop-WebApplicationMonitoring***"<\<SharePointSite> \\ SharePointAppName \> "*  
 
-## <a name="debug-and-fix-the-sharepoint-solution"></a>SharePoint çözümünü hata ayıklama ve çözme
+## <a name="debug-and-fix-the-sharepoint-solution"></a>SharePoint çözümü hata ayıklama ve düzeltme
 
-Artık SharePoint çözümündeki hatayı bulmak ve onarmak için IntelliTrace günlük dosyasını Visual Studio 'da görüntüleyebilirsiniz.
+Artık SharePoint çözümünde hatayı bulup düzeltmek için IntelliTrace günlük Visual Studio dosyasında görüntüebilirsiniz.
 
-1. \IntelliTraceLogs klasöründe, Visual Studio 'da. iTrace dosyasını açın.
+1. \IntelliTraceLogs klasöründeki .iTrace dosyasını Visual Studio.
 
-     **IntelliTrace Özet** sayfası görünür. Hata işlenmediğinden, **analiz** bölümünün işlenmeyen özel durum alanında bir SHAREPOINT bağıntı KIMLIĞI (GUID) görüntülenir. Hatanın gerçekleştiği çağrı yığınını görüntülemek istiyorsanız, **çağrı yığını** düğmesini seçin.
+     **IntelliTrace Özeti** sayfası görüntülenir. Hata işlendiğinden, **Analiz** bölümünün işlanmamış özel durum alanında bir SharePoint bağıntı kimliği (GUID) görüntülenir. Hatanın **meydana** geldiği çağrı yığınını görüntülemek için Çağrı Yığını düğmesini seçin.
 
-2. **Hata ayıklama özel durumu** düğmesini seçin.
+2. Hata Ayıklama **Özel Durumu düğmesini** seçin.
 
-     İstenirse, sembol dosyalarını yükleyin. **IntelliTrace** penceresinde, özel durum "oluşturuldu: önemli hata oluştu!" olarak vurgulanır.
+     İstendiğinde sembol dosyalarını yükle. **IntelliTrace penceresinde** özel durum "Oluştu: Ciddi hata oluştu!" olarak vurgulanır.
 
-     IntelliTrace penceresinde, başarısız olan kodu göstermek için özel durum ' u seçin.
+     IntelliTrace penceresinde başarısız olan kodu görüntülemek için özel durumu seçin.
 
-3. SharePoint çözümünü açıp sonra Featuredevre dışı bırakma () yordamının en üstündeki **throw** ifadesini düzenleyerek veya kaldırarak hatayı düzeltemedi.
+3. SharePoint çözümünü açarak ve ardından FeatureDeactivating() yordamının en üstünde **throw** deyimini kaldırarak hatayı düzeltin.
 
-4. Visual Studio 'da çözümü yeniden derleyin ve ardından SharePoint 'e dağıtın.
+4. Çözümü yeniden Visual Studio ve SharePoint'e yeniden paylaşın.
 
-5. Aşağıdaki adımları gerçekleştirerek özelliği devre dışı bırakın:
+5. Aşağıdaki adımları gerçekleştirerek özelliği devre dışı bırakma:
 
-    1. SharePoint 'teki **Site eylemleri** menüsünde, **site ayarları**' nı seçin.
+    1. **SharePoint'te Site** Eylemleri menüsünde Site Ayarları'ı **seçin.**
 
-    2. **Site eylemleri** altında, **site özelliklerini yönet** bağlantısını seçin.
+    2. **Site Eylemleri'nin** altında Site **özelliklerini yönet bağlantısını** seçin.
 
-    3. **IntelliTraceTest özellik1**' ın yanındaki **devre dışı bırak** düğmesini seçin.
+    3. **IntelliTraceTest Feature1'in yanındaki** Devre Dışı Bırak **düğmesini** seçin.
 
-    4. Uyarı sayfasında **Bu özelliği devre dışı bırak** bağlantısını seçin.
+    4. Uyarı sayfasında Bu özelliği devre dışı **bırak bağlantısını** seçin.
 
-6. Görev listesini açın ve devre dışı bırakma görevinin **durum** değerinin "tamamlandı" olduğunu ve **Tamamlanma yüzdesi değerinin%** 100 olduğunu doğrulayın.
+6. Görev listesini açın ve Devre dışı bırak görevinin **Durum** değerinin "Tamamlandı" ve **Tamamlanma %** değerinin %100 olduğunu doğrulayın.
 
-     Kod artık düzgün şekilde çalışır.
+     Kod artık düzgün çalışıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SharePoint kodunu doğrulama ve hata ayıklama](../sharepoint/verifying-and-debugging-sharepoint-code.md)
 - [IntelliTrace](../debugger/intellitrace.md)
-- [İzlenecek yol: birim testlerini kullanarak SharePoint kodunu doğrulama](/previous-versions/visualstudio/visual-studio-2010/gg599006\(v\=vs.100\))
+- [Adım adım kılavuz: Birim Testlerini Kullanarak SharePoint Kodunu Doğrulama](/previous-versions/visualstudio/visual-studio-2010/gg599006\(v\=vs.100\))

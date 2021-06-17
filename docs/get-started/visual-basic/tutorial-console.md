@@ -1,7 +1,7 @@
 ---
 title: 'Öğretici: Visual Basic kullanmaya başlayın'
 description: Visual Studio 'da Visual Basic konsol uygulamaları oluşturmayı öğrenin, adım adım.
-ms.custom: seodec18, get-started
+ms.custom: acquisition, seodec18, get-started
 ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 075c84433e5784106bbe1f9c6ac6f58d9613bfdb
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: cc9557c4b7558488fd8757d3c50920debe134568
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295500"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112467"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Öğretici: Visual Studio 'da Visual Basic kullanmaya başlayın
 
@@ -247,35 +247,35 @@ Sizden adınızı girmenizi isteyen bir uygulama oluşturalım ve Tarih ve saat 
 
 ::: moniker-end
 
-## <a name="quick-answers-faq"></a>Hızlı yanıtlar SSS
+## <a name="quick-answers-faq"></a>Hızlı yanıtlar hakkında SSS
 
-İşte bazı temel kavramları vurgulamak için hızlı bir SSS.
+Bazı temel kavramları vurgulamak için burada hızlı bir SSS bulabilirsiniz.
 
-### <a name="what-is-visual-basic"></a>Visual Basic nedir?
+### <a name="what-is-visual-basic"></a>Hangi Visual Basic?
 
-Visual Basic, kolayca öğrenilmesi için tasarlanan tür açısından güvenli bir programlama dilidir. TEMEL öğesinden türetilir, bu, "acemi 'ın tüm" bir sembolik yönerge kodu "anlamına gelir.
+Visual Basic kolay öğrenilen bir programlama dilidir. BASIC'den türetilen bu, "Yeni Başlayanlar için Çok Amaçlı Sembolik Yönerge Kodu" anlamına gelir.
 
-### <a name="what-is-visual-studio"></a>Visual Studio nedir?
+### <a name="what-is-visual-studio"></a>Hangi Visual Studio?
 
-Visual Studio, geliştiriciler için tümleşik bir üretkenlik araçları paketidir. Program ve uygulamalar oluşturmak için kullanabileceğiniz bir program olarak düşünün.
+Visual Studio, geliştiriciler için tümleşik bir üretkenlik araçları geliştirme paketidir. Bunu program ve uygulama oluşturmak için kullanabileceğiniz bir program olarak düşün.
 
 ### <a name="what-is-a-console-app"></a>Konsol uygulaması nedir?
 
-Konsol uygulaması giriş alır ve çıktıyı konsol olarak da bilinen bir komut satırı penceresinde görüntüler.
+Konsol uygulaması girişi alır ve çıkışı konsol olarak da bilinen bir komut satırı penceresinde görüntüler.
 
 ### <a name="what-is-net-core"></a>.NET Core nedir?
 
-.NET Core .NET Framework bir sonraki adımdır. .NET Framework, programlama dilleri arasında kod paylaşmanıza izin verdiği durumlarda .NET Core, platformlar arasında kod paylaşma özelliği ekler. Daha da iyisi açık kaynaktır. (Hem .NET Framework hem de .NET Core, önceden oluşturulmuş işlevselliğin kitaplıklarını ve kodunuzun çalıştırılacağı sanal makine görevi gören ortak dil çalışma zamanını (CLR) içerir.)
+.NET Core, bir sonraki adımdır ve .NET Framework. .NET Core.NET Framework programlama dilleri arasında kod paylaşma iznini verdi. .NET Core, farklı platformlarda kod paylaşma olanağı sunar. Daha da iyisi açık kaynaktır. (Hem .NET Framework hem de .NET Core, önceden oluşturulmuş işlevsellik kitaplıklarının yanı sıra kodunuzun çalıştırılyacağı bir sanal makine işlevi de içeren ortak dil çalışma zamanı (CLR) içerir.)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu öğreticiyi tamamlama! Daha da fazla bilgi edinmek için aşağıdaki öğreticiye bakın.
+Tebrikler, bu öğreticiyi tamamladıktan sonra! Daha da fazla bilgi edinmek için aşağıdaki öğreticiye bakın.
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da Visual Basic ve .NET Core SDK ile kitaplık oluşturma](/dotnet/core/tutorials/vb-library-with-visual-studio)
+> [.NET Core SDK'de Visual Basic ve .NET Core SDK kitaplık Visual Studio](/dotnet/core/tutorials/vb-library-with-visual-studio)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Basic dil izlenecek yolları](/dotnet/visual-basic/walkthroughs)
+* [Visual Basic dil kılavuzlar](/dotnet/visual-basic/walkthroughs)
 * [Visual Basic dili başvurusu](/dotnet/visual-basic/language-reference/index)
-* [Visual Basic kod dosyaları için IntelliSense](../../ide/visual-basic-specific-intellisense.md)
+* [Kod dosyalarını Visual Basic IntelliSense](../../ide/visual-basic-specific-intellisense.md)

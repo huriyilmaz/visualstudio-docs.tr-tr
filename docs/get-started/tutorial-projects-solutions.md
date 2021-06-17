@@ -4,6 +4,7 @@ description: Projeler ve çözümler arasındaki fark ve bunları Visual Studio 
 ms.date: 11/17/2020
 ms.technology: vs-ide-general
 ms.custom:
+- acquisition
 - get-started
 - SEO-VS-2020
 ms.topic: tutorial
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe3eaf3c5efcc8341613e9f223d22410111a548f
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 11db2d793f284557f709a4f72362cfc89a77a059
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682594"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113036"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Projelere ve çözümlere giriş
 
@@ -139,9 +140,9 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 1. **Visual C# öğelerini** genişletin ve **kod** öğesini seçin. Orta bölmede **sınıf** öğesi şablonunu seçin. Sınıf **takvimini** adlandırın ve ardından **Ekle** düğmesini seçin.
 
-   Projeye *Calendar.cs* adlı bir dosya eklenir. Uçtaki *. cs* , C# kod dosyalarına verilen dosya uzantısıdır. Dosya **Çözüm Gezgini**' deki görsel proje hiyerarşisinde görüntülenir ve içeriği düzenleyicide açılır.
+   Projeye *Calendar. cs* adlı bir dosya eklenir. Uçtaki *. cs* , C# kod dosyalarına verilen dosya uzantısıdır. Dosya **Çözüm Gezgini**' deki görsel proje hiyerarşisinde görüntülenir ve içeriği düzenleyicide açılır.
 
-1. *Calendar.cs* dosyasının içeriğini aşağıdaki kodla değiştirin:
+1. *Calendar. cs* dosyasının içeriğini aşağıdaki kodla değiştirin:
 
    ```csharp
    using System;
@@ -179,7 +180,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 2. Sol bölmede, **Visual C#** ' yi genişletin ve **Test** kategorisini seçin. Orta bölmede, **MSTest test projesi (.NET Core)** proje şablonunu seçin. Projeyi **hızlı test** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-   **Çözüm Gezgini** ikinci bir proje ve düzenleyicide *UnitTest1.cs* adlı bir dosya açılır.
+   **Çözüm Gezgini** ikinci bir proje eklenir ve düzenleyicide *UnitTest1. cs* adlı bir dosya açılır.
 
    ![İki projeyle Visual Studio Çözüm Gezgini](media/tutorial-projects-solution-explorer.png "Visual Studio 2017 ' de iki projeyle Çözüm Gezgini.")
 
@@ -198,7 +199,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 5. Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
-   **Çözüm Gezgini** ikinci bir proje ve düzenleyicide *UnitTest1.cs* adlı bir dosya açılır.
+   **Çözüm Gezgini** ikinci bir proje eklenir ve düzenleyicide *UnitTest1. cs* adlı bir dosya açılır.
 
    ![İki projeyle Visual Studio Çözüm Gezgini](media/vs-2019/tutorial-projects-solution-explorer.png "Visual Studio 'da iki projeyle Çözüm Gezgini.")
 
@@ -238,7 +239,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 ## <a name="add-test-code"></a>Test kodu ekle
 
-1. Şimdi C# test kodu dosyasına test kodu ekleyeceğiz. *UnitTest1.cs* içeriğini aşağıdaki kodla değiştirin:
+1. Şimdi C# test kodu dosyasına test kodu ekleyeceğiz. *UnitTest1. cs* içeriğini şu kodla değiştirin:
 
    ```csharp
    using System;
@@ -260,7 +261,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
    Bazı kodlar altında kırmızı renkli bir çizgi görürsünüz. Test projesini **Quickdate** projesine bir [Friend derlemesi](/dotnet/standard/assembly/friend-assemblies) yaparak bu hatayı düzeltireceğiz.
 
-1. **Quickdate** projesine geri döndüğünüzde, zaten açık değilse *Calendar.cs* dosyasını açın. Test projesindeki hatayı çözümlemek için aşağıdaki [using ifadesini](/dotnet/csharp/language-reference/keywords/using-statement) ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini dosyanın en üstüne ekleyin.
+1. **Quickdate** projesine geri döndüğünüzde, zaten açık değilse *Takvim. cs* dosyasını açın. Test projesindeki hatayı çözümlemek için aşağıdaki [using ifadesini](/dotnet/csharp/language-reference/keywords/using-statement) ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini dosyanın en üstüne ekleyin.
 
    ```csharp
    using System.Runtime.CompilerServices;
@@ -274,7 +275,7 @@ Boş bir projem var. Bir kod dosyası ekleyelim.
 
 ## <a name="project-properties"></a>Proje özellikleri
 
-Özniteliği içeren *Calendar.cs* dosyasındaki satır, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> **hızlı test** projesinin derleme adına (dosya adı) başvurur. Derleme adı, proje adı ile her zaman aynı olamaz. Projenin derleme adını bulmak için, proje özelliklerini açın.
+Özniteliği içeren *Calendar. cs* dosyasındaki satır, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> **hızlı test** projesinin derleme adına (dosya adı) başvurur. Derleme adı, proje adı ile her zaman aynı olamaz. Projenin derleme adını bulmak için, proje özelliklerini açın.
 
 1. **Çözüm Gezgini**' de **hızlı test** projesini seçin. Sağ tıklama veya bağlam menüsünde **Özellikler**' i seçin veya yalnızca **alt** + **ENTER** tuşuna basın.
 

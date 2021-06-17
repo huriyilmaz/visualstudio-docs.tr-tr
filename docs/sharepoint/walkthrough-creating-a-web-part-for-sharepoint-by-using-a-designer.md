@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 066ae0ab9c23ebb1d55f6c0480d7aeed4255fb4f
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 55f69875b06428c9bbe179e73dd6ea9b4ef40b8e
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217742"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112443"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>İzlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma
 
@@ -52,15 +52,21 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **Yönetici olarak çalıştır** seçeneğini kullanarak başlayın.
 
 2. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
-
-     **Yeni Proje** iletişim kutusu görünür.
+::: moniker range="=vs-2017"
 
 3. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** altında **Office/SharePoint**' i genişletin ve **SharePoint çözümleri** kategorisini seçin.
 
 4. Şablonlar listesinde, **SharePoint 2013-Visual Web Bölümü** şablonunu seçin ve ardından **Tamam** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir. Bu Sihirbazı kullanarak, projede hata ayıklamak için kullanacağınız siteyi ve çözümün güven düzeyini belirtebilirsiniz.
+::: moniker-end
+::: moniker range=">=vs-2019"
+3. **Yeni proje oluştur** iletişim kutusunda, yüklediğiniz belirli bir SharePoint sürümü Için *SharePoint boş proje** ' yi seçin. Örneğin, SharePoint 2019 yüklemesi varsa **sharepoint 2019-boş proje** şablonu ' nu seçin.
+    [!INCLUDE[new-project-dialog-search](../sharepoint/includes/new-project-dialog-search-md.md)]
 
+4. **Ad** kutusuna **TestProject1** girin ve ardından **Oluştur** düğmesini seçin.
+
+::: moniker-end
 5. **Bu SharePoint çözümünün güven düzeyi nedir?** bölümünde, **Grup çözümü olarak dağıt** seçenek düğmesini seçin.
 
 6. Varsayılan yerel SharePoint sitesini kabul etmek için **son** düğmesini seçin.

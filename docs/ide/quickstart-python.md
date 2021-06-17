@@ -8,16 +8,18 @@ ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
-ms.custom: SEO-VS-2020
+ms.custom:
+- acquisition
+- SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: dc47bdb2913e2d18998663967d4da3c0a7dcdd9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1cefae42025407e0252b5aedc28e979e0d86debc
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939948"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113171"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>Hızlı başlangıç: Visual Studio kullanarak ilk Python web uygulamanızı oluşturma
 
@@ -203,14 +205,14 @@ Artık en az bir Web uygulaması uygulamak için bir Python kodu eklemek için h
 Visual Studio 'da ilk Python uygulamanızı çalıştırırken Tebrikler, Visual Studio 'Yu Python IDE olarak kullanma hakkında biraz bilgi edindiniz!
 
 > [!div class="nextstepaction"]
-> [Uygulamayı Azure App Service dağıtma](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)
+> [Uygulamayı Azure App Service](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)
 
-Bu hızlı başlangıçta izlediğiniz adımlar oldukça geneldir, büyük olasılıkla otomatikleştirilmesi ve otomatik olması gerektiğini tahmin etmeniz gerekir. Bu Otomasyon, Visual Studio proje şablonlarının rolüdür. Hızlı başlangıç-Bu makalede, ancak daha az adımla bir Web uygulaması oluşturan bir örnek için [şablon kullanarak bir Python projesi oluşturun](../python/quickstart-02-python-in-visual-studio-project-from-template.md) .
+Bu Hızlı Başlangıçta takip edilen adımlar oldukça genel olduğundan, büyük olasılıkla bunların otomatikleştirilebli ve otomatik olması gerektiğini tahmin etmişsinizdir. Bu tür otomasyon, proje şablonlarının Visual Studio rol oynar. Hızlı [Başlangıç: Bu](../python/quickstart-02-python-in-visual-studio-project-from-template.md) makalede oluşturduğunuza benzer ancak daha az adım içeren bir web uygulaması oluşturan bir tanıtım için şablon kullanarak Python projesi oluşturun.
 
-Etkileşimli pencere, hata ayıklama, veri görselleştirme ve git ile çalışma dahil olmak üzere Visual Studio 'da Python hakkında daha kapsamlı bir öğreticiye devam etmek için [Öğreticiye gidin: Visual Studio 'Da Python kullanmaya başlayın](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md).
+etkileşimli pencereyi kullanma, hata ayıklama, veri görselleştirme ve Git ile çalışma da dahil olmak üzere Visual Studio'de Python ile ilgili daha ayrıntılı bir öğreticiye devam etmek için [Öğretici: Kullanmaya başlayın'de Python](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md)ile Visual Studio.
 
-Visual Studio 'Nun sunabileceği daha fazlasını araştırmak için aşağıdaki bağlantıları seçin.
+Daha fazla Visual Studio için aşağıdaki bağlantıları seçin.
 
-- [Visual Studio 'Da Python web uygulaması şablonları](../python/python-web-application-project-templates.md)hakkında bilgi edinin.
-- [Python hata ayıklama](../python/debugging-python-in-visual-studio.md) hakkında bilgi edinin
-- Genel olarak [Visual STUDIO IDE](../get-started/visual-studio-ide.md) hakkında daha fazla bilgi edinin.
+- uygulamasındaki [Python web uygulaması şablonları hakkında Visual Studio.](../python/python-web-application-project-templates.md)
+- Python hata [ayıklama hakkında bilgi](../python/debugging-python-in-visual-studio.md)
+- Genel olarak [IDE'Visual Studio hakkında daha fazla](../get-started/visual-studio-ide.md) bilgi.

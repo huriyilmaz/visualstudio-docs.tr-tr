@@ -14,17 +14,16 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 96269f67b11def6fa34ddd1fc7540f9a0462a73e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7a349cb79ca22869038e46d7ee27b2425119997
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876881"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113019"
 ---
 # <a name="create-sharepoint-solutions"></a>SharePoint çözümleri oluşturma
-  SharePoint Designer 'da oluşturmaya alternatif olarak, Visual Studio 'da SharePoint uygulamaları oluşturabilirsiniz. Visual Studio, gelişmiş hata ayıklama araçları, IntelliSense, ekstre tamamlama ve proje şablonları gibi özellikleri sağlayarak hızlı SharePoint geliştirmesini yükseltir. Visual Studio, gelişmiş .NET Framework tabanlı araç ve dillerden de yararlanır. Visual Basic veya Visual C# kullanarak SharePoint projeleri geliştirebilir ve JavaScript kullanarak SharePoint projeleri için uygulama geliştirebilirsiniz.
 
- SharePoint 2013 ve SharePoint eklentileri hakkında daha fazla bilgi için bkz. SharePoint [2013](https://www.microsoft.com/microsoft-365/previous-versions/microsoft-sharepoint-2013) ve SharePoint [için uygulama oluşturma](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
+  SharePoint Designer 'da oluşturmaya alternatif olarak, Visual Studio 'da SharePoint uygulamaları oluşturabilirsiniz. Visual Studio, gelişmiş hata ayıklama araçları, IntelliSense, ekstre tamamlama ve proje şablonları gibi özellikleri sağlayarak hızlı SharePoint geliştirmesini yükseltir. Visual Studio, gelişmiş .NET Framework tabanlı araç ve dillerden de yararlanır. Visual Basic veya Visual C# kullanarak SharePoint projeleri geliştirebilir ve JavaScript kullanarak SharePoint projeleri için uygulama geliştirebilirsiniz.
 
 > [!NOTE]
 > Yeni [SharePoint eklentisi modelinin](/sharepoint/dev/sp-add-ins/sharepoint-add-ins) , kullanıcılarınızın SharePoint deneyimini uzatmak için nasıl kullanılacağını öğrenin. Bu eklentiler, SharePoint çözümlerine kıyasla çok küçük bir baskı yazdırır ve HTML5, JavaScript, CSS3 ve XML gibi neredeyse her türlü Web programlama teknolojisini kullanarak bunları oluşturabilirsiniz.

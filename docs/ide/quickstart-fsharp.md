@@ -3,6 +3,7 @@ title: "Hızlı başlangıç: F 'de ASP.NET Core Web hizmeti oluşturma #"
 description: "F # ile Visual Studio 'da bir ASP.NET Core Web hizmeti oluşturmayı öğrenin, adım adım."
 ms.date: 08/24/2018
 ms.topic: quickstart
+ms.custom: acquisition
 author: cartermp
 ms.author: phcart
 manager: andrehal
@@ -11,12 +12,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 990106f7f3ca97ae38a20170ca6ed2e1d699d4e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cbb85c41a01a03461bc1a73bdb58620e8a0c472f
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70180317"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113207"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>Hızlı başlangıç: Visual Studio 'Yu kullanarak ilk ASP.NET Core Web hizmetinizi F 'de oluşturun\#
 
@@ -50,7 +51,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
      ![VS yükleyicisinde ASP.NET iş yükü](../ide/media/quickstart-aspnet-workload.png)
 
-**yeni ASP.NET Core Web uygulaması** iletişim kutusunu 4.ın üst açılan menüden **ASP.NET Core 2,1** ' i seçin. (Listede **ASP.NET Core 2,1** görmüyorsanız, iletişim kutusunun üst kısmına yakın bir sarı çubukta görünmesi gereken **indirme** bağlantısını izleyerek yükleyin.) **Tamam ' ı**seçin.
+**yeni ASP.NET Core Web uygulaması** iletişim kutusunu 4.ın üst açılan menüden **ASP.NET Core 2,1** ' i seçin. (Listede **ASP.NET Core 2,1** görmüyorsanız, iletişim kutusunun üst kısmına yakın bir sarı çubukta görünmesi gereken **indirme** bağlantısını izleyerek yükleyin.) **Tamam ' ı** seçin.
 
 ::: moniker-end
 
@@ -91,7 +92,7 @@ Düzenleyicide şöyle görünmelidir:
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. **Ctrl** + Uygulamayı çalıştırmak ve bir Web tarayıcısında açmak için CTRL**F5** tuşuna basın.
+1.  + Uygulamayı çalıştırmak ve bir Web tarayıcısında açmak için CTRL **F5** tuşuna basın.
 
 2. Sayfa yola gitmelidir `/api/values` , ancak yoksa `https://localhost:44396/api/values` tarayıcınıza girin.
 

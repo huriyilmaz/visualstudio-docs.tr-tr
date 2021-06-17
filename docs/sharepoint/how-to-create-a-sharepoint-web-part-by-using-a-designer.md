@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma | Microsoft Docs'
+title: 'Nasıl kullanılır: Tasarımcı | Kullanarak SharePoint Web Bölümü Oluşturma Microsoft Docs'
 titleSuffix: ''
-description: Visual Studio 'da Visual Web Developer Designer 'ı açan bir SharePoint projesine Visual Web Bölümü öğesi ekleyerek bir Web bölümü oluşturun.
+description: Bir SharePoint projesine görsel web bölümü öğesi ekleyerek bir web bölümü oluşturun. Bu öğe, Görsel Web Geliştirici tasarımcısını Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,44 +17,52 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 14f6add337ecfae3ab0dc5aa77a72962f2a0a915
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cbbb290af0029329910a23a71f68024ee0e5e5f4
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851601"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112380"
 ---
-# <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma
-  Herhangi bir SharePoint projesine bir **görsel web bölümü** öğesi ekleyerek bir Web bölümü oluşturabilirsiniz. Bu, Visual Studio 'da web bölümüne denetimler ve kod ekleyebileceğiniz Visual Web Developer Designer 'ı açar. Görsel Web bölümleri, Web bölümleri ile aynı şekilde çalışır. Tek fark, Visual Web Developer Designer 'da görsel Web bölümleri tasarlayamanızdır.
+# <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>Nasıl kullanılır: Tasarımcı kullanarak SharePoint Web Bölümü oluşturma
 
-### <a name="to-create-a-project-for-visual-web-parts"></a>Görsel Web bölümleri için bir proje oluşturmak için
+  Herhangi bir SharePoint projesine Görsel **Web Bölümü öğesi** ekleyerek bir web bölümü oluşturabilirsiniz. Bu işlem Visual Web Developer tasarımcısını Visual Studio web parçasına denetimler ve kod eklebilirsiniz. Görsel web bölümleri, web bölümleriyle aynı şekilde işlev gösterir. Tek fark, Görsel Web Geliştirici tasarımcısında görsel web bölümleri tasarlamanızdır.
 
-1. Menü çubuğunda **Dosya**  > **Yeni**  >  **Proje**' yi seçin.
+## <a name="to-create-a-project-for-visual-web-parts"></a>Görsel web bölümleri için proje oluşturmak için
 
-     **Yeni proje** iletişim kutusu açılır.
+1. Menü çubuğunda Dosya Yeni **Proje'yi**  >   >  **seçin.**
+::: moniker range="=vs-2017"
 
-2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** altında, **Office/SharePoint** düğümünü genişletin ve ardından **SharePoint çözümleri** kategorisini seçin.
+2. Yeni Proje **iletişim kutusundaki** **Visual C#** veya Visual Basic **altında** **Office/SharePoint** düğümünü genişletin ve **ardından SharePoint Çözümleri kategorisini** seçin.
 
-3. Proje şablonları listesinde **SharePoint 2013-Visual Web Bölümü**' nu seçin ve ardından **Tamam** düğmesini seçin.
+3. Proje şablonları listesinde **SharePoint 2013 - Görsel Web Bölümü'ne tıklayın** ve ardından Tamam **düğmesini** seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+2. Yeni **Proje Oluştur iletişim kutusunda,** yüklemiş olduğunu *SharePoint'in* belirli bir sürümü için SharePoint Görsel Web Bölümü *'ni seçin. Örneğin, SharePoint 2019 yüklemeniz varsa **SharePoint 2019 - Visual Web Bölümü şablonunu** seçin.
+    [!INCLUDE[new-project-dialog-search](../sharepoint/includes/new-project-dialog-search-md.md)]
 
-4. **Hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, yerel bilgisayarda bir SharePoint sitesinin URL 'sini belirtin ve ardından **son** düğmesini seçin.
+3. 5000000000000000000000000000000000000000000000000000000000 
 
-     **Çözüm Gezgini**, bir Web bölümü görüntülenir. Web bölümünü Visual Web Developer Designer 'da tasarladıktan sonra, belirttiğiniz sitede test edersiniz.
+::: moniker-end
+4. Hata **ayıklama için siteyi** ve güvenlik düzeyini belirtin sayfasında, yerel bilgisayarda bulunan bir SharePoint sitesinin URL'sini belirtin ve ardından Son **düğmesini** seçin.
 
-### <a name="to-add-a-visual-web-part-to-an-existing-sharepoint-project"></a>Mevcut bir SharePoint projesine bir görsel web bölümü eklemek için
+     Bu **Çözüm Gezgini** bir web bölümü görüntülenir. Web bölümünü Visual Web Geliştirici tasarımcısında tasarladikten sonra, belirttiğiniz sitede test edin.
 
-1. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+### <a name="to-add-a-visual-web-part-to-an-existing-sharepoint-project"></a>Mevcut bir SharePoint projesine görsel web bölümü eklemek için
 
-2. **Yeni öğe Ekle** Iletişim kutusunda **Office/SharePoint** düğümünü seçin.
+1. Menü çubuğunda Proje Yeni Öğe  >  **Ekle'yi seçin.**
 
-3. Proje şablonları listesinde, **Visual Web Bölümü**' nu seçin, adlandırın ve ardından **Ekle** düğmesini seçin.
+2. Yeni **Öğe Ekle iletişim** kutusunda **Office/SharePoint düğümünü** seçin.
 
-     **Çözüm Gezgini**, Web bölümü görüntülenir. Web bölümünü Visual Web Developer Designer 'da tasarladıktan sonra, belirttiğiniz sitede test edersiniz.
+3. Proje şablonları listesinde Görsel **Web Bölümü'leri seçin,** buna ad ve ardından Ekle **düğmesini** seçin.
+
+     Bu **Çözüm Gezgini** bölümünde web bölümünüz görünür. Web bölümünü Visual Web Geliştirici tasarımcısında tasarladikten sonra, belirttiğiniz sitede test edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [Nasıl yapılır: SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md)
-- [İzlenecek yol: SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
-- [İzlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+
+- [SharePoint için web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [Nasıl: SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md)
+- [Adım adım kılavuz: SharePoint için web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
+- [Adım adım kılavuz: Tasarımcı kullanarak SharePoint için web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

@@ -3,7 +3,7 @@ title: Visual Studio'yu yükleme
 titleSuffix: ''
 description: Visual Studio 'Yu nasıl yükleyeceğinizi adım adım öğrenin.
 ms.date: 12/13/2019
-ms.custom: contperf-fy21q1
+ms.custom: acquisition
 ms.topic: conceptual
 f1_keywords:
 - vs.about
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - set up Visual Studio
 - Visual Studio setup
 - Visual Studio installer
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 97e354dfb1208ec7306cb797049cd8ca82d0d8db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e4db39c55ff669477efc833c2d482897d529b30b
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852132"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113040"
 ---
 # <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
@@ -131,7 +131,7 @@ Visual Studio Yükleyicisi yüklemek için önyükleyici dosyasını çalıştı
 
 2. Microsoft [Lisans koşulları](https://visualstudio.microsoft.com/license-terms/) ' nı ve Microsoft [Gizlilik bildirimi](https://privacy.microsoft.com/privacystatement)' ni kabul etmeniz istenir. **Devam**'ı seçin.
 
-   ![Lisans koşulları ve gizlilik bildirimi](media/privacy-and-license-terms.png "Microsoft lisans koşulları ve gizlilik bildirimi")
+   ![Lisans koşulları ve gizlilik bildirimi](media/privacy-and-license-terms.png "Microsoft Lisans Koşulları ve Gizlilik Bildirimi")
 
 ## <a name="step-4---choose-workloads"></a>4. adım-iş yüklerini seçin
 
@@ -174,13 +174,13 @@ Visual Studio yüklemenizi özelleştirmek için Iş yükleri özelliğini kulla
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017-ayrı bileşenleri yükler](media/vs-installer-installing-components.png "Visual Studio bireysel bileşenlerini yükler")
+  ![Visual Studio 2017-ayrı bileşenleri yükler](media/vs-installer-installing-components.png "Tek Visual Studio yükleme")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019-ayrı bileşenleri yükler](media/vs-2019/vs-installer-individual-components.png "Visual Studio bireysel bileşenlerini yükler")
+  ![Visual Studio 2019-ayrı bileşenleri yükler](media/vs-2019/vs-installer-individual-components.png "Tek Visual Studio yükleme")
 
 ::: moniker-end
 
@@ -190,13 +190,13 @@ Varsayılan olarak, yükleyici programı ilk kez çalıştırıldığında işle
 
 ::: moniker range="vs-2017"
 
-  ![Visual Studio 2017-dil paketlerini yükler](media/vs-installer-installing-language-packs.png "Visual Studio dil paketlerini yükler")
+  ![Visual Studio 2017-dil paketlerini yükler](media/vs-installer-installing-language-packs.png "Dil Visual Studio yükleme")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Visual Studio 2019-dil paketlerini yükler](media/vs-2019/vs-installer-language-packs.png "Visual Studio dil paketlerini yükler")
+  ![Visual Studio 2019-dil paketlerini yükler](media/vs-2019/vs-installer-language-packs.png "Dil Visual Studio yükleme")
 
 ::: moniker-end
 
@@ -237,23 +237,23 @@ Daha fazla bilgi için bkz. [yükleme konumlarını seçme](change-installation-
 
 3. Bir proje türü seçin.
 
-   Örneğin, [bir C++ uygulaması oluşturmak](/cpp/get-started/tutorial-console-cpp)Için, **yüklü**' ı seçin, **Visual C++**' ı genişletin ve ardından derlemek istediğiniz C++ proje türünü seçin.
+   Örneğin, bir [C++](/cpp/get-started/tutorial-console-cpp)uygulaması oluşturmak için Yüklü'leri **seçin,** **Visual C++'ı** genişletin ve ardından oluşturmak istediğiniz C++ proje türünü seçin.
 
-   [C# uygulaması oluşturmak](../get-started/csharp/tutorial-console.md)Için, **yüklü**, **Visual C#**' yi ve ardından derlemek istediğiniz c# proje türünü seçin.
+   Bir [C# uygulaması oluşturmak için](../get-started/csharp/tutorial-console.md)Yüklü'leri seçin, Visual **C#**'yi genişletin ve ardından oluşturmak istediğiniz C# proje türünü seçin. 
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Visual Studio yüklemesi tamamlandıktan sonra, Visual Studio ile geliştirmeye başlamak için **Başlat** düğmesini seçin.
+1. Yükleme Visual Studio tamamlandıktan sonra başlat **düğmesini** seçerek uygulama ile geliştirmeye Visual Studio.
 
-1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-1. Arama kutusuna, kullanılabilir şablonların listesini görmek için oluşturmak istediğiniz uygulamanın türünü girin. Şablon listesi, yükleme sırasında seçtiğiniz iş yüküne bağlıdır. Farklı şablonları görmek için farklı iş yükleri seçin.
+1. Arama kutusuna, kullanılabilir şablonların listesini görmek için oluşturmak istediğiniz uygulama türünü girin. Şablon listesi, yükleme sırasında seçtiğiniz iş yüklerini bağlıdır. Farklı şablonları görmek için farklı iş yükleri seçin.
 
-   Ayrıca, **dil** açılan listesini kullanarak, aramanızı belirli bir programlama diline göre filtreleyebilirsiniz. **Platform** listesini ve **Proje türü** listesini kullanarak filtre uygulayabilirsiniz.
+   Dil açılan listesini kullanarak aramanızı belirli bir programlama dili **için de** filtreleebilirsiniz. Platform listesini ve **Proje türü** listesini kullanarak **da filtrelemeyi** seçebilirsiniz.
 
-1. Visual Studio yeni projenizi açar ve kodlamaya hazırsınız!
+1. Visual Studio projenizi açar ve koda hazır olur!
 
 ::: moniker-end
 

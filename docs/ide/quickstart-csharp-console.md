@@ -1,8 +1,8 @@
 ---
-title: İlk C# konsol uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
+title: İlk Visual Studio C# konsol uygulamanızı oluşturmak için Visual Studio'yi kullanma
 titleSuffix: ''
-description: Visual Studio 'da C# ile adım adım bir basit Merhaba Dünya konsol uygulaması oluşturmayı öğrenin.
-ms.custom: seodec18
+description: Adım adım C# Merhaba Dünya basit bir Visual Studio konsol uygulaması oluşturma hakkında bilgi edinin.
+ms.custom: acquisition, seodec18
 ms.date: 03/23/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -15,83 +15,83 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f51e3e6617578236d31090b23e8cb7c661d6043
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 31759f3ae6359c9e366157012f6321c62085f8f9
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296800"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112113216"
 ---
-# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Hızlı başlangıç: ilk C# konsol uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
+# <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Hızlı Başlangıç: İlk C# Visual Studio oluşturmak için Visual Studio'yi kullanma
 
-Visual Studio tümleşik geliştirme ortamına (IDE) bu 5-10 dakikalık bir giriş içinde, konsolunda çalışan basit bir C# uygulaması oluşturacaksınız.
+Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişte, konsolunda çalışan basit bir C# uygulaması oluşturabilirsiniz.
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-İlk olarak, bir C# uygulama projesi oluşturacaksınız. Proje türü, ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklemeden önce!
+İlk olarak bir C# uygulama projesi oluşturabilirsiniz. Proje türü, herhangi bir şey eklemeden önce ihtiyacınız olan tüm şablon dosyalarıyla birlikte gelir!
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio 2017'yi açın.
 
-2. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+2. Üst menü çubuğundan Dosya Yeni **Proje'yi** >  > **seçin.**
 
-3. Sol bölmedeki **Yeni proje** iletişim kutusunda **C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından projeyi *HelloWorld* olarak adlandırın.
+3. Sol **bölmede Yeni** Proje iletişim kutusunda **C#** öğesini genişletin ve **ardından .NET Core'ı seçin.** Orta bölmede Konsol Uygulaması **(.NET Core) 'ı seçin.** Ardından projeye *HelloWorld adını girin.*
 
-   ![Visual Studio IDE 'de yeni proje iletişim kutusundaki konsol uygulaması (.NET Core) proje şablonu](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
+   ![Visual Studio IDE'de Yeni Proje iletişim kutusundaki Konsol Uygulaması (.NET Core) proje şablonu](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
 
-     **Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısını seçin.
+     Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız Yeni Proje iletişim kutusunun sol bölmesinde **Visual Studio Yükleyicisi** Aç **bağlantısını** seçin.
 
-   ![Yeni proje iletişim kutusundan Visual Studio Yükleyicisi Aç bağlantısını seçin](../ide/media/csharp-open-visual-studio-installer-hello-world.png)
+   ![Yeni Proje Visual Studio Yükleyicisi Aç bağlantısını seçin](../ide/media/csharp-open-visual-studio-installer-hello-world.png)
 
-     Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+     Uygulama Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
-     ![Visual Studio Yükleyicisi .NET Core platformlar arası geliştirme iş yükü](../ide/media/dot-net-core-xplat-dev-workload.png)
+     ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](../ide/media/dot-net-core-xplat-dev-workload.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Visual Studio 2019 ' i açın.
+1. 2019 Visual Studio açın.
 
-1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-   ![' Yeni proje oluştur ' penceresi](../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   !['Yeni proje oluştur' penceresi](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil listesinden **C#** öğesini seçin ve ardından platform listesinden **Windows** ' u seçin. 
+1. Yeni **proje oluştur penceresinde** arama kutusuna *konsol yazın* veya yazın. Ardından Dil **listesinden C#** dilini ve ardından Platform **listesinden Windows'u** seçin. 
 
-   Dil ve platform filtrelerini uyguladıktan sonra **konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   Dil ve platform filtrelerini uyguladikten sonra Konsol Uygulaması **(.NET Core)** şablonunu ve ardından Sonraki'yi **seçin.**
 
-   ![Konsol uygulaması için C# şablonunu seçin (.NET Framework)](../get-started/csharp/media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png)
+   ![Konsol Uygulaması için C# şablonunu seçin (.NET Framework)](../get-started/csharp/media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png)
 
    > [!NOTE]
-   > **Konsol uygulaması (.NET Core)** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
+   > Konsol Uygulaması **(.NET Core)** şablonunu görmüyorsanız Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin.
    >
-   > ![' Yeni proje oluştur ' penceresindeki ' daha fazla araç ve özellik yüklemesi ' ' ne aradığınızı bulma ' iletisi bağlantısı](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
+   > !['Yeni proje oluştur' penceresindeki 'Ne arıyorsanız bu değil' iletisinden 'Daha fazla araç ve özellik yükle' bağlantısı](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > Sonra, Visual Studio Yükleyicisi **.NET Core platformlar arası geliştirme** iş yükünü seçin.
+   > Ardından, Visual Studio Yükleyicisi **.NET Core** platformlar arası geliştirme iş yükünü seçin.
    >
-   > ![Visual Studio Yükleyicisi .NET Core platformlar arası geliştirme iş yükü](./media/dot-net-core-xplat-dev-workload.png)
+   > ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](./media/dot-net-core-xplat-dev-workload.png)
    >
-   > Bundan sonra Visual Studio Yükleyicisi **Değiştir** düğmesini seçin. İşinizi kaydetmeniz istenebilir; Öyleyse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin. Ardından, bu "[Proje oluşturma](#create-a-project)" yordamında 2. adıma geri dönün.
+   > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz isteniyor olabilir; öyleyse, bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin. Ardından bu "Proje oluşturma" yordamının[2. adımına](#create-a-project)geri dön.
 
-1. **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *HelloWorld* yazın veya girin. Ardından **Oluştur**' u seçin.
+1. Yeni **projenizi yapılandır penceresinde** Proje adı kutusuna *HelloWorld* yazın **veya** girin. Ardından **Oluştur'a seçin.**
 
-   ![' yeni projenizi yapılandırın ' penceresinde, projenizi ' HelloWorld ' olarak adlandırın](../get-started/csharp/media/vs-2019/csharp-name-your-helloworld-project.png)
+   !['Yeni projenizi yapılandırma' penceresinde projenize 'HelloWorld' adını girin](../get-started/csharp/media/vs-2019/csharp-name-your-helloworld-project.png)
 
-   Visual Studio yeni projenizi açar.
+   Visual Studio projenizi açar.
    
 ::: moniker-end
 
@@ -99,61 +99,61 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker range="vs-2017"
 
-C# proje şablonunuzu seçip projenizi adlandırın, Visual Studio sizin için basit bir "Merhaba Dünya" uygulaması oluşturur.
+C# proje şablonlarınızı seçerek projenize bir ad verdikten sonra Visual Studio basit bir "Merhaba Dünya" uygulaması oluşturur.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio, projenizde varsayılan "Merhaba Dünya" kodunu içerir.
+Visual Studio projenize varsayılan "Merhaba Dünya" kodunu içerir.
 
 ::: moniker-end
 
-(Bunu yapmak için, <xref:System.Console.WriteLine%2A> "Merhaba Dünya!" değişmez dizesini göstermek için yöntemini çağırır. Konsol penceresinde.)
+(Bunu yapmak için yöntemini <xref:System.Console.WriteLine%2A> çağırarak "Merhaba Dünya!" değişmez dizesini görüntüler konsol penceresinde.)
 
    ![Şablondan varsayılan Merhaba Dünya kodunu görüntüleme](../ide/media/csharp-console-helloworld-template.png)
 
-**F5** tuşuna basarsanız, programı hata ayıklama modunda çalıştırabilirsiniz. Ancak, konsol penceresi kapanmadan önce yalnızca bir süre görünür.
+**F5 tuşuna basın,** programı Hata Ayıklama modunda çalıştırabilirsiniz. Ancak konsol penceresi kapanmadan önce yalnızca bir dakika görünür.
 
-(Bu davranış, `Main` yöntemi tek ifadesinin yürütüldükten sonra sonlandırdığı ve bu nedenle uygulama sona erdiğinde oluşur.)
+(Bu davranış, `Main` yöntemin tek deyimi yürütülürken sonlandırılır ve uygulama sona erer.)
 
 ### <a name="add-some-code"></a>Kod ekleme
 
-Uygulamayı duraklatmak için, **ENTER** tuşuna basarak konsol penceresinin kapanmaması için bazı kodlar ekleyelim.
+Enter tuşuna basana kadar konsol penceresinin kapanması için uygulamayı duraklatmak için bazı kodlar ek **o zaman.**
 
-1. Yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu ekleyin <xref:System.Console.WriteLine%2A> :
+1. yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu <xref:System.Console.WriteLine%2A> ekleyin:
 
    ```csharp
    Console.ReadLine();
    ```
 
-1. Kod düzenleyicisinde şöyle göründüğünü doğrulayın:
+1. Kod düzenleyicisinde aşağıdaki gibi göründüğünü doğrulayın:
 
-   ![Merhaba Dünya uygulamasını duraklatmak için kod ekleme](../ide/media/csharp-console-helloworld-add-code.png)
+   ![Uygulamayı duraklatmak için Merhaba Dünya ekleme](../ide/media/csharp-console-helloworld-add-code.png)
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Uygulamayı hata ayıklama modunda çalıştırmak için araç çubuğunda **HelloWorld** düğmesini seçin. (Veya **F5** tuşuna basabilirsiniz.)
+1. Uygulamayı Hata Ayıklama modunda çalıştırmak için araç çubuğunda **HelloWorld** düğmesini seçin. (Veya **F5 tuşuna basarak**.)
 
-   ![Uygulamayı araç çubuğundan çalıştırmak için Merhaba Dünya düğmesini seçin](../ide/media/csharp-console-hello-world-button.png)
+   ![Uygulamayı Merhaba Dünya araç çubuğundan çalıştırmak için Aşağıdaki düğmeyi seçin](../ide/media/csharp-console-hello-world-button.png)
 
-1. Uygulamanızı konsol penceresinde görüntüleyin.
+1. Konsol penceresinde uygulamalarınızı görüntüleme.
 
-   ![Merhaba Dünya gösteren konsol penceresi!](../ide/media/csharp-console-hello-world.png)
+   ![Konsol penceresi, Merhaba Dünya!](../ide/media/csharp-console-hello-world.png)
 
-### <a name="close-the-application"></a>Uygulamayı kapat
+### <a name="close-the-application"></a>Uygulamayı kapatma
 
 1. Konsol penceresini kapatmak için **ENTER** tuşuna basın.
 
-1. Visual Studio 'da **Çıkış** bölmesini kapatın.
+1. Bölmede **Çıkış** bölmesini Visual Studio.
 
-   ![Visual Studio 'da çıkış bölmesini kapatma](../ide/media/csharp-hello-world-close-output-pane.png)
+   ![Bölmede Çıkış bölmesini Visual Studio](../ide/media/csharp-hello-world-close-output-pane.png)
 
 1. Visual Studio’yu kapatın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu hızlı başlangıcı Tamamlanıyor! C# ve Visual Studio IDE hakkında biraz bilgi edindiniz. Daha fazla bilgi edinmek için aşağıdaki öğreticilerle devam edin.
+Tebrikler, bu Hızlı Başlangıç'a devam ediyoruz! C# ve Visual Studio IDE hakkında bilgi Visual Studio umuyoruz. Daha fazla bilgi edinmek için aşağıdaki öğreticilerle devam edin.
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da C# konsol uygulaması ile çalışmaya başlama](../get-started/csharp/tutorial-console.md)
+> [Kullanmaya başlayın C# konsol uygulamasıyla Visual Studio](../get-started/csharp/tutorial-console.md)

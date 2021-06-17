@@ -17,29 +17,30 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 109cf2fe5661f23ae7fb051829ec1c9e9a6d2329
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a710d71b80f8aa64efef52b891a8c8a760b92c10
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876634"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112879"
 ---
 # <a name="get-started-sharepoint-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da SharePoint geliştirme)
-  Bu bölüm, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ' den faydalanan SharePoint çözümleri geliştirmek için ile çalışmaya başlamanıza yardımcı olur [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .
 
- SharePoint 2013 ve SharePoint eklentileri hakkında daha fazla bilgi için bkz. [sharepoint 2013](https://www.microsoft.com/microsoft-365/previous-versions/microsoft-sharepoint-2013) ve [derleme SharePoint eklentileri](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
+  Bu bölüm, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ' den faydalanan SharePoint çözümleri geliştirmek için ile çalışmaya başlamanıza yardımcı olur [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .
+
+ SharePoint eklentileri hakkında daha fazla bilgi için bkz. [SharePoint eklentileri oluşturma](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
 
  SharePoint, Web tabanlı bir işbirliği platformu sunar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , liste tanımları, iş akışları, iş verileri bağlantı modelleri ve site tanımları dahil olmak üzere SharePoint siteleri ve içeriği oluşturmak için birçok proje şablonu sağlar. Ayrıca, ' de SharePoint projeleri ve araçları için Uzantılar oluşturabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Konu|Description|
+|Konu|Açıklama|
 |-----------|-----------------|
 |[SharePoint hataları için ek bilgiler](../sharepoint/additional-information-for-sharepoint-errors.md)|SharePoint geliştirme ve sorun giderme sırasında yardımın nerede bulunacağını açıklar.|
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-|Konu|Description|
+|Konu|Açıklama|
 |-----------|-----------------|
 |[SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)|' De SharePoint geliştirmesini açıklar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[SharePoint için genel bir geliştirme ortamı ayarlama](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|SharePoint çözümü oluşturmak için gerekli yüklemeleri açıklar|
