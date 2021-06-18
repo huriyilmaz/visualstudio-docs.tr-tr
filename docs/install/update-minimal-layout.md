@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f3bc253f0babbc404164a9e85fda1e54ba5f5297
-ms.sourcegitcommit: 0088835f22334b8fee89f8c07bb12bcdfdef1639
+ms.openlocfilehash: 1c3a6254c3205038be3d56c64de091e659d2bbd5
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110188102"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306741"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio'yu güncelleştirme
 
@@ -33,7 +33,7 @@ En düşük düzen aracı, takımınıza özel olarak uyarlanmış bir düzen ü
 > Ürün yaşam döngüsü hakkında daha Visual Studio için Ürün Yaşam [Döngüsü Visual Studio Bakım sayfasına](/visualstudio/releases/2019/servicing) bakın.
 >
 
-Bu araç, Visual Studio 2017 (15.9) ve sonrası için güncelleştirme düzenleri oluşturur. Düzen, örneklerde güncelleştirme yapmak için ağ/çevrimdışı Visual Studio dağıtılabilir. Normal [düzen oluşturma sırasında,](update-a-network-installation-of-visual-studio.md)bu sürüm için tüm paketler indirilir. Örneklerde onarım, kaldırma ve diğer standart işlemler için normal düzen Visual Studio gerekir. En düşük düzen yalnızca güncelleştirilmiş paketleri indirdiği için çevrimdışı makinelere daha küçük ve daha kolay kopyalayabilirsiniz.
+Bu araç, Visual Studio 2017 (15.9) ve sonrası için güncelleştirme düzenleri oluşturur. Düzen, örneklerde güncelleştirme yapmak için ağ/çevrimdışı Visual Studio dağıtılabilir. Normal [düzen oluşturma sırasında,](update-a-network-installation-of-visual-studio.md)bu sürüme göre tüm paketler indirilir. Örneklerde normal düzen oluşturma işlemi onarım, kaldırma ve diğer standart Visual Studio gereklidir. En düşük düzen yalnızca güncelleştirilmiş paketleri indirdiği için çevrimdışı makinelere daha küçük ve daha kolay kopyalayabilirsiniz.
 
 ### <a name="installing-the-minimal-layout-tool"></a>En düşük düzen aracını yükleme
 
@@ -43,158 +43,157 @@ Bu araç, Visual Studio 2017 (15.9) ve sonrası için güncelleştirme düzenler
 
  2. Ardından, Evet'e tıklayarak Kullanıcı Hesabı Denetimi istemini kabul **et.**
 
-     ![Kullanıcı hesabı denetimini kabul et](media/accept-user-account-control.png)
+     ![Kullanıcı hesabı denetimi kabul etme](media/accept-user-account-control.png)
 
- 3. En küçük düzen Aracı ' e yüklenir `C:\Program Files (x86)\Microsoft Visual Studio\MinimalLayout` .
+ 3. En düşük düzen aracı sürümüne `C:\Program Files (x86)\Microsoft Visual Studio\MinimalLayout` yüklenir.
 
-### <a name="how-to-use-the-minimal-layout-tool"></a>En az düzen aracını kullanma
+### <a name="how-to-use-the-minimal-layout-tool"></a>En düşük düzen aracını kullanma
 
-`MinimalLayout.exe` düzeni oluşturmak için aşağıdaki komutları ve seçenekleri kullanır. Aracı çalıştırmak için en az bir komut gereklidir. Aracı nasıl çalıştıracağınızı aşağıda bulabilirsiniz:
+`MinimalLayout.exe` düzeni oluşturmak için aşağıdaki komutları ve seçenekleri kullanır. Aracı çalıştırmak için en az bir komut gerekir. Aracı şu şekilde çalıştırabilirsiniz:
 
 ```MinimalLayout.exe [command] <options>...```
 
 #### <a name="commands"></a>Komutlar
-* **Önizleme**: kaç paketin indirileceği ve bu düzeni oluşturmak için kullanılan toplam alanın önizlemesi için bu komutu kullanın.
-* **Oluştur**: Visual Studio 'yu güncelleştirmek için en az düzeni oluşturmak için bu komutu kullanın.
-* Yeniden **Oluştur**: var olan en az düzen yanıt dosyasını kullanarak bir düzeni yeniden oluşturmak için bu komutu kullanın. En az Düzen `MinimalLayout.json` , özgün en az düzen giriş parametrelerini içeren bir yanıt dosyası üretir. En az düzeni yeniden oluşturmak için yeniden **Oluştur** komutunu ve bir `MinimalLayout.json` yanıt dosyasını kullanabilirsiniz. Bu, önceki minimum düzenin yanıt dosyasına dayanan yeni bir Visual Studio güncelleştirmesi için en az bir düzen oluşturmak istiyorsanız yararlıdır.
+
+* **Önizleme:** Kaç paketin indireceklerini ve bu düzeni oluşturmak için kullanılan toplam alanı önizlemek için bu komutu kullanın.
+* **Oluştur:** Bu komutu kullanarak verileri güncelleştirmek için en az Visual Studio.
+* **Yeniden oluştur:** Mevcut bir en düşük düzen yanıt dosyasını kullanarak bir düzeni yeniden oluşturma için bu komutu kullanın. Her minimal düzen, `MinimalLayout.json` özgün en az düzen giriş parametrelerini içeren bir yanıt dosyası üretir. En düşük düzeni **yeniden oluşturma için** Yeniden Oluştur komutunu ve yanıt dosyasını `MinimalLayout.json` kullanabilirsiniz. Bu, önceki en az düzenin yanıt dosyasına göre yeni bir Visual Studio güncelleştirmesi için en düşük düzen oluşturmak istediğinizde kullanışlıdır.
 
    Bu komut için, `MinimalLayout.json` önceden oluşturulmuş bir düzenden bir dosya yolu gereklidir.
 
-    ```cmd
-    MinimalLayout.exe regenerate --filePath C:\MinimalLayout\MinimalLayout.json
-    ```
+   ```shell
+   MinimalLayout.exe regenerate --filePath C:\MinimalLayout\MinimalLayout.json
+   ```
 
-* **Doğrula**: düzen klasörünün bozuk olup olmadığını anlamak için bu komutu kullanın.
-* **Çözüm**: eksik olan paketleri düzen klasöründen değiştirme dahil bozuk bir düzen klasörünü onarmak için bu komutu kullanın.
-
-::: moniker range="vs-2019"
+* **Doğrulama:** Düzen klasörünün bozuk olup olmadığını belirlemek için bu komutu kullanın.
+* **Düzeltme:** Düzen klasöründeki eksik paketleri değiştirmek de dahil olmak üzere bozuk bir düzen klasörünü düzeltmek için bu komutu kullanın.
 
 #### <a name="options"></a>Seçenekler
 
-|Seçenekler    |Description    |Gerekli/İsteğe Bağlı |Örnek |
-|:----------|:-----------|:------------|:--------------|
-|--targetLocation &lt; dir&gt; |En az bir çevrimdışı düzen oluşturulacağı dizini belirtir.       |Gerekli        |--targetLocation c:\VSLayout\ |
-|--baseVersion &lt; sürümü&gt;|Bu sürümle başlayarak en az çevrimdışı düzen oluşturulacaktır.   |Gerekli|--baseVersion 16.4.0 |
-|--targetVersion &lt; sürümü&gt;|Bu sürüme kadar ve bu sürüm dahil olmak üzere en düşük çevrimdışı düzen oluşturulur.|Gerekli|--targetVersion 16.4.4|
-|--languages    |En düşük çevrimdışı düzende yer alan dilleri belirtir. Boşluklarla ayırarak birden çok değer belirtilebilir.    |Gerekli    |--languages en-US fr-FR |
-|--productIds &lt; bir veya daha fazla ürün kimlikleri&gt;    |Minimum çevrimdışı düzenin oluşturulacak ürün veya ürün kimlikleri virgülle ayrılmıştır. <br> <ul><li>Microsoft.VisualStudio.Product.Enterprise</li><li>Microsoft.VisualStudio.Product.Professional</li><li>Microsoft.VisualStudio.Product.BuildTools</li><li>Microsoft.VisualStudio.Product.TestAgent</li><li>Microsoft.VisualStudio.Product.TestController</li><li>Microsoft.VisualStudio.Product.TeamExplorer</li></ul>|Gerekli|--productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional |
-|--filePath    |Önceden oluşturulmuş bir MinimalLayout.jsdosyanın dosya yolu. Bu seçenek yalnızca Yeniden Oluştur komutuyla kullanılır.     |Yeniden oluştur komutu için gerekli    |--filePath C:\VSLayout\minimalLayout.json <br><br> **Yeniden oluştur komutunun yalnızca bir seçenek olarak--filePath aldığını unutmayın.** |
-|-- &lt; bir veya daha fazla iş yükü veya Bileşen kimliği ekleyin&gt;    |Eklenecek bir veya daha fazla iş yükünü veya bileşen kimliğini belirtir. Ek bileşenler,--ıncludereyorumded ve/veya kullanılarak genel olarak eklenebilir <br> –-includeOptional. Birden çok iş yükü veya Bileşen kimliği, boşlukla ayrılmış olarak belirtilebilir.    |İsteğe Bağlı    |--Microsoft. VisualStudio. Workload. ManagedDesktop Microsoft. VisualStudio. Workload. NetWeb Component. GitHub. VisualStudio ekleyin |
-|--ıncludereyorumded    |, Yüklü olan, ancak isteğe bağlı bileşenleri olmayan tüm iş yükleri için önerilen bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br> --Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; ıncludereyorum <br><br> Tüm iş yüklerine uygulamak için:--ıncludereyorumded |
-|--IncludeOptional |, Önerilen bileşenler dahil olmak üzere yüklü olan tüm iş yükleri için isteğe bağlı bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br>--Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; IncludeOptional <br><br> Tüm iş yüklerini uygulamak için: --includeOptional |
+::: moniker range=">=vs-2019"
+
+| Seçenekler                                             | Açıklama                                                                                                                                                                                                                                                                                                                                                                                                                                 | Gerekli/İsteğe Bağlı               | Örnek                                                                                                                                                          |
+|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --targetLocation &lt; dir&gt;                        | En düşük çevrimdışı düzenin oluşturularak bir dizin belirtir.                                                                                                                                                                                                                                                                                                                                                                          | Gerekli                        | --targetLocation c:\VSLayout\                                                                                                                                    |
+| --baseVersion &lt; sürümü&gt;                       | Bu sürümden başlayarak en düşük çevrimdışı düzen oluşturulacak.                                                                                                                                                                                                                                                                                                                                                                    | Gerekli                        | --baseVersion 16.4.0                                                                                                                                             |
+| --targetVersion &lt; sürümü&gt;                     | Bu sürüme kadar ve bu sürüm dahil olmak üzere en düşük çevrimdışı düzen oluşturulur.                                                                                                                                                                                                                                                                                                                                                              | Gerekli                        | --targetVersion 16.4.4                                                                                                                                           |
+| --languages                                         | En düşük çevrimdışı düzende yer alan dilleri belirtir. Boşluklarla ayırarak birden çok değer belirtilebilir.                                                                                                                                                                                                                                                                                                                    | Gerekli                        | --languages en-US fr-FR                                                                                                                                          |
+| --productIds &lt; bir veya daha fazla ürün kimlikleri&gt;        | Minimum çevrimdışı düzenin oluşturulacak ürün veya ürün kimlikleri virgülle ayrılmıştır. <br> <ul><li>Microsoft.VisualStudio.Product.Enterprise</li><li>Microsoft.VisualStudio.Product.Professional</li><li>Microsoft.VisualStudio.Product.BuildTools</li><li>Microsoft.VisualStudio.Product.TestAgent</li><li>Microsoft.VisualStudio.Product.TestController</li><li>Microsoft.VisualStudio.Product.TeamExplorer</li></ul> | Gerekli                        | --productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional                                                               |
+| --filePath                                          | Dosyanın dosya yoluMinimalLayout.jsoluşturulmuş bir düzenden dosyada yer alan dosya yolu. Bu seçenek yalnızca Yeniden Oluştur komutuyla kullanılır.                                                                                                                                                                                                                                                                                                          | Yeniden Oluştur komutu için gereklidir | --filePath C:\VSLayout\minimalLayout.jsaç <br><br> **Yeniden Oluştur komutunun yalnızca --filePath'i bir seçenek olarak kabul gördüğünü unutmayın.**                                      |
+| --bir &lt; veya daha fazla iş yükü veya bileşen kimlikleri ekleyin&gt; | Eklenecek bir veya daha fazla iş yükünü veya bileşen kimliklerini belirtir. --includeRecommended ve/veya kullanılarak genel olarak ek bileşenler eklenebilir <br> –-includeOptional. Boşlukla ayırarak birden çok iş yükü veya bileşen kimlikleri belirtilebilir.                                                                                                                                                                                                   | İsteğe Bağlı                        | --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb Component.GitHub.VisualStudio                                        |
+| --includeRecommended                                | Yüklü olan tüm iş yükleri için önerilen bileşenleri içerir, ancak isteğe bağlı bileşenleri dahil değildir.                                                                                                                                                                                                                                                                                                                                  | İsteğe Bağlı                        | Belirli bir iş yükü için: <br> --microsoft.VisualStudio.workload ekleyin. ManagedDesktop;includeRecommended <br><br> Tüm iş yüklerini uygulamak için: --includeRecommended |
+| --includeOptional                                   | Önerilen bileşenler de dahil olmak üzere yüklü tüm iş yükleri için isteğe bağlı bileşenleri içerir.                                                                                                                                                                                                                                                                                                                                | İsteğe Bağlı                        | Belirli bir iş yükü için: <br>--microsoft.VisualStudio.workload ekleyin. ManagedDesktop;includeOptional <br><br> Tüm iş yüklerini uygulamak için: --includeOptional         |
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-#### <a name="options"></a>Seçenekler
-
-|Seçenekler    |Description    |Gerekli/İsteğe Bağlı |Örnek |
-|:----------|:-----------|:------------|:--------------|
-|--targetLocation &lt; dir&gt; |En düşük çevrimdışı düzenin oluşturularak bir dizin belirtir.       |Gerekli        |--targetLocation c:\VSLayout\ |
-|--baseVersion &lt; sürümü&gt;|Bu sürümden başlayarak en düşük çevrimdışı düzen oluşturulacak.   |Gerekli|--baseVersion 15.0.0 |
-|--targetVersion &lt; sürümü&gt;|Bu sürüme kadar ve bu sürüm dahil olmak üzere en düşük çevrimdışı düzen oluşturulur.|Gerekli|--targetVersion 15.9.31|
-|--languages    |En düşük çevrimdışı düzende yer alan dilleri belirtir. Boşluklarla ayırarak birden çok değer belirtilebilir.    |Gerekli    |--languages en-US fr-FR |
-|--productIds &lt; bir veya daha fazla ürün kimlikleri&gt;    |Minimum çevrimdışı düzenin oluşturulacak ürün veya ürün kimlikleri virgülle ayrılmıştır. <br> <ul><li>Microsoft.VisualStudio.Product.Enterprise</li><li>Microsoft.VisualStudio.Product.Professional</li><li>Microsoft.VisualStudio.Product.BuildTools</li><li>Microsoft.VisualStudio.Product.TestAgent</li><li>Microsoft. VisualStudio. Product. TestController</li><li>Microsoft. VisualStudio. Product. TeamExplorer</li></ul>|Gerekli|--ProductIDs Microsoft. VisualStudio. Product. Enterprise, Microsoft. VisualStudio. Product. Professional |
-|--filePath    |Zaten oluşturulmuş bir düzenden dosyanın MinimalLayout.jsdosya yolu. Bu seçenek yalnızca yeniden oluştur komutuyla kullanılır.     |Yeniden oluştur komutu için gerekli    |--filePath C:\VSLayout\minimalLayout.json <br><br> **Yeniden oluştur komutunun yalnızca bir seçenek olarak--filePath aldığını unutmayın.** |
-|-- &lt; bir veya daha fazla iş yükü veya Bileşen kimliği ekleyin&gt;    |Eklenecek bir veya daha fazla iş yükünü veya bileşen kimliğini belirtir. Ek bileşenler,--ıncludereyorumded ve/veya kullanılarak genel olarak eklenebilir <br> –-includeOptional. Birden çok iş yükü veya Bileşen kimliği, boşlukla ayrılmış olarak belirtilebilir.    |İsteğe Bağlı    |--Microsoft. VisualStudio. Workload. ManagedDesktop Microsoft. VisualStudio. Workload. NetWeb Component. GitHub. VisualStudio ekleyin |
-|--ıncludereyorumded    |, Yüklü olan, ancak isteğe bağlı bileşenleri olmayan tüm iş yükleri için önerilen bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br> --Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; ıncludereyorum <br><br> Tüm iş yüklerini uygulamak için: --includeRecommended |
-|--includeOptional |Önerilen bileşenler de dahil olmak üzere yüklü tüm iş yükleri için isteğe bağlı bileşenleri içerir.    |İsteğe Bağlı    |Belirli bir iş yükü için: <br>--add Microsoft.VisualStudio.Workload. ManagedDesktop;includeOptional <br><br> Tüm iş yüklerini uygulamak için: --includeOptional |
+| Seçenekler                                             | Açıklama                                                                                                                                                                                                                                                                                                                                                                                                                                 | Gerekli/İsteğe Bağlı               | Örnek                                                                                                                                                          |
+|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --targetLocation &lt; dir&gt;                        | En az bir çevrimdışı düzen oluşturulacağı dizini belirtir.                                                                                                                                                                                                                                                                                                                                                                          | Gerekli                        | --targetLocation c:\VSLayout\                                                                                                                                    |
+| --baseVersion &lt; sürümü&gt;                       | Bu sürümle başlayarak en az çevrimdışı düzen oluşturulacaktır.                                                                                                                                                                                                                                                                                                                                                                    | Gerekli                        | --baseVersion 'sının 15.0.0                                                                                                                                             |
+| --targetVersion &lt; sürümü&gt;                     | En az çevrimdışı düzen, bu sürüm dahil olmak üzere en çok ve dahil oluşturulacak.                                                                                                                                                                                                                                                                                                                                                              | Gerekli                        | --targetVersion 15.9.31                                                                                                                                          |
+| --Diller                                         | En az çevrimdışı düzene dahil edilecek dilleri belirtir. Boşluklarla ayırarak birden çok değer belirtilebilir.                                                                                                                                                                                                                                                                                                                    | Gerekli                        | --Diller en-US fr-FR                                                                                                                                          |
+| -- &lt; bir veya daha fazla ürün kimliği Ile ProductIDs&gt;        | En az çevrimdışı düzenin oluşturulacağı, virgülle ayırarak oluşturulan ürünlerin KIMLIĞI (öğeleri). <br> <ul><li>Microsoft. VisualStudio. Product. Enterprise</li><li>Microsoft. VisualStudio. Product. Professional</li><li>Microsoft. VisualStudio. Product. BuildTools</li><li>Microsoft. VisualStudio. Product. TestAgent</li><li>Microsoft. VisualStudio. Product. TestController</li><li>Microsoft. VisualStudio. Product. TeamExplorer</li></ul> | Gerekli                        | --ProductIDs Microsoft. VisualStudio. Product. Enterprise, Microsoft. VisualStudio. Product. Professional                                                               |
+| --filePath                                          | Zaten oluşturulmuş bir düzenden dosyanın MinimalLayout.jsdosya yolu. Bu seçenek yalnızca yeniden oluştur komutuyla kullanılır.                                                                                                                                                                                                                                                                                                          | Yeniden oluştur komutu için gerekli | --filePath C:\VSLayout\minimalLayout.json <br><br> **Yeniden oluştur komutunun yalnızca bir seçenek olarak--filePath aldığını unutmayın.**                                      |
+| -- &lt; bir veya daha fazla iş yükü veya Bileşen kimliği ekleyin&gt; | Eklenecek bir veya daha fazla iş yükünü veya bileşen kimliğini belirtir. Ek bileşenler,--ıncludereyorumded ve/veya kullanılarak genel olarak eklenebilir <br> –-includeOptional. Birden çok iş yükü veya Bileşen kimliği, boşlukla ayrılmış olarak belirtilebilir.                                                                                                                                                                                                   | İsteğe Bağlı                        | --Microsoft. VisualStudio. Workload. ManagedDesktop Microsoft. VisualStudio. Workload. NetWeb Component. GitHub. VisualStudio ekleyin                                        |
+| --ıncludereyorumded                                | , Yüklü olan, ancak isteğe bağlı bileşenleri olmayan tüm iş yükleri için önerilen bileşenleri içerir.                                                                                                                                                                                                                                                                                                                                  | İsteğe Bağlı                        | Belirli bir iş yükü için: <br> --Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; ıncludereyorum <br><br> Tüm iş yüklerine uygulamak için:--ıncludereyorumded |
+| --IncludeOptional                                   | , Önerilen bileşenler dahil olmak üzere yüklü olan tüm iş yükleri için isteğe bağlı bileşenleri içerir.                                                                                                                                                                                                                                                                                                                                | İsteğe Bağlı                        | Belirli bir iş yükü için: <br>--Microsoft. VisualStudio. Workload ekleyin. ManagedDesktop; IncludeOptional <br><br> Tüm iş yüklerine uygulamak için:--includeOptional         |
 
 ::: moniker-end
 
-### <a name="generating-a-minimal-layout"></a>Minimum düzen oluşturma
+### <a name="generating-a-minimal-layout"></a>En az düzen oluşturma
 
 > [!IMPORTANT]
->  Bu yönergelerde, daha önce bir ağ yükleme düzeni oluşturduğunuz varsayılanlar vardır. Bunun nasıl olduğu hakkında daha fazla bilgi için Ağ [yüklemesi oluşturma Visual Studio](create-a-network-installation-of-visual-studio.md) bakın.
+> Bu yönergelerde, daha önce bir ağ yükleme düzeni oluşturmuş olduğunuz varsayılır. Bunun nasıl yapılacağı hakkında daha fazla bilgi için [Visual Studio 'nun ağ yüklemesi oluşturma](create-a-network-installation-of-visual-studio.md) sayfasına bakın.
 
-Belirtilen sürüm aralığınız için **oluştur komutunu** kullanarak minimal bir düzen oluşturun. Ayrıca productId, languages ve gerekli olan belirli iş yüklerini de biliyor oluruz. Bu en düşük düzen, Visual Studio ve hedef sürüm dahil olmak üzere temel sürümden tüm örnek örneklerini güncelleştirecek.
+Belirtilen sürüm aralığınızı oluşturmak için **Oluştur** komutunu kullanarak en az bir düzen oluşturun. Ayrıca ProductID, Languages ve gereken belirli iş yüklerini bilmeniz gerekir. Bu en az düzen, temel sürümden hedef sürüm dahil olmak üzere tüm Visual Studio örneklerini güncelleyecek.
 
-Düzeni oluşturmadan önce, önizleme komutunu kullanarak indirmenin toplam boyutunu ve paket sayısını **bulabilirsiniz.** Bu komut, oluşturma **komutuyla** aynı seçenekleri alır ve ayrıntılar konsola yazılır.
+Düzeni oluşturmadan önce, indirmenin toplam boyutunu ve **Önizleme** komutu kullanılarak dahil edilen paket sayısını bulabilirsiniz. Bu komut, **Oluştur** komutuyla aynı seçenekleri alır ve Ayrıntılar konsola yazılır.
 
-Şimdi minimum düzende önizleme, oluşturma ve yeniden oluşturma ile ilgili birkaç örnek üzerinde durelim:
+En az bir düzeni önizleme, oluşturma ve yeniden oluşturma hakkında birkaç örnek adım adım inceleyelim:
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-- İlk olarak, yalnızca İngilizce için 16.4.0 Visual Studio Enterprise 16.4.4 sürümleri için bir düzenin önizlemesini nasıl görüntüleyebilirsiniz?
+* İlk olarak, 16.4.0 sürümleri için bir düzenin yalnızca Ingilizce için nasıl önizlemesinin Visual Studio Enterprise bir örneği aşağıda verilmiştir.
 
-    ```cmd
-    MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --languages en-US
-    ```
+  ```shell
+  MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --languages en-US
+  ```
 
-- Aynı düzeni tek bir iş yüküyle nasıl oluşturabilirsiniz?
+* Aynı düzeni bir iş yüküyle nasıl oluşturabileceğiniz aşağıda açıklanmaktadır.
 
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
-    ```
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
+  ```
 
-- Ayrıca var olan bir yanıt dosyasını kullanarak en düşük düzeyde çevrimdışı düzenin nasıl yeniden üretln?
+* İşte, var olan bir yanıt dosyasını kullanarak en az bir çevrimdışı düzeni yeniden üretme.
 
-    ```cmd
-    MinimalLayout.exe regenerate -filepath c:\VSLayout\MinimalLayout.json
-    ```
-
-generate komutunu kullanan birkaç **örnek daha:**
-
-- Ek bir iş yükü ekleme ve yalnızca önerilen paketleri ekleme.
-
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
-    ```
-
-- Birden çok ürünü destekleyen, en az bir çevrimdışı düzen de oluşturabilirsiniz.
-
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --languages en-US
-    ```
-
-- Son olarak, en az düzeninizde birden çok dili nasıl dahil edeceğiniz aşağıda bulabilirsiniz.
-
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
-    ```
-
-::: moniker-end
-
-::: moniker range="vs-2017"
-
-- İlk olarak, 'sının 15.0.0 sürümleri için bir düzenin yalnızca Ingilizce için nasıl önizlemesinin Visual Studio Enterprise bir örneği aşağıda verilmiştir.
-
-    ```cmd
-    MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
-    ```
-
-- Aynı düzeni bir iş yüküyle nasıl oluşturabileceğiniz aşağıda açıklanmaktadır.
-
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
-    ```
-
-- İşte, var olan bir yanıt dosyasını kullanarak en az bir çevrimdışı düzeni yeniden üretme.
-
-    ```cmd
-    MinimalLayout.exe regenerate -filepath c:\VSLayout\MinimalLayout.json
-    ```
+  ```shell
+  MinimalLayout.exe regenerate -filepath c:\VSLayout\MinimalLayout.json
+  ```
 
 **Generate** komutunu kullanan birkaç örnek aşağıda verilmiştir:
 
-- Ek bir iş yükü ekleme ve yalnızca önerilen paketleri ekleme.
+* Ek bir iş yükü ekleme ve yalnızca önerilen paketleri ekleme.
 
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
-    ```
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
+  ```
 
-- Birden çok ürünü destekleyen, en az bir çevrimdışı düzen de oluşturabilirsiniz.
+* Birden çok ürünü destekleyen, en az bir çevrimdışı düzen de oluşturabilirsiniz.
 
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
-    ```
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional --baseVersion 16.4.0 --targetVersion 16.4.4 --languages en-US
+  ```
 
-- Son olarak, en az düzeninizde birden çok dili nasıl dahil edeceğiniz aşağıda bulabilirsiniz.
+* Son olarak, en az düzeninizde birden çok dili nasıl dahil edeceğiniz aşağıda bulabilirsiniz.
 
-    ```cmd
-    MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
-    ```
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
+  ```
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+* İlk olarak, 'sının 15.0.0 sürümleri için bir düzenin yalnızca Ingilizce için nasıl önizlemesinin Visual Studio Enterprise bir örneği aşağıda verilmiştir.
+
+  ```shell
+  MinimalLayout.exe preview --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
+  ```
+
+* Aynı düzeni bir iş yüküyle nasıl oluşturabileceğiniz aşağıda açıklanmaktadır.
+
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US
+  ```
+
+* İşte, var olan bir yanıt dosyasını kullanarak en az bir çevrimdışı düzeni yeniden üretme.
+
+  ```shell
+  MinimalLayout.exe regenerate -filepath c:\VSLayout\MinimalLayout.json
+  ```
+
+**Generate** komutunu kullanan birkaç örnek aşağıda verilmiştir:
+
+* Ek bir iş yükü ekleme ve yalnızca önerilen paketleri ekleme.
+
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop Microsoft.VisualStudio.Workload.NetWeb;includeRecommended --languages en-US
+  ```
+
+* Birden çok ürünü destekleyen, en az bir çevrimdışı düzen de oluşturabilirsiniz.
+
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise,Microsoft.VisualStudio.Product.Professional --baseVersion 15.0.0 --targetVersion 15.9.31 --languages en-US
+  ```
+
+* Son olarak, en az düzeninizde birden çok dili nasıl dahil edeceğiniz aşağıda bulabilirsiniz.
+
+  ```shell
+  MinimalLayout.exe generate --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 15.0.0 --targetVersion 15.9.31 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeOptional --languages en-US fr-FR
+  ```
 
 ::: moniker-end
 
@@ -202,17 +201,17 @@ generate komutunu kullanan birkaç **örnek daha:**
 
 Oluşturulduktan sonra en az düzeninizi sürdürmek için **doğrulama** ve **çözme** komutlarını kullanın. **Verify** komutu, en az düzende bozuk veya eksik paketler olup olmadığını belirler. **Verify** komutunu çalıştırdıktan sonra herhangi bir sorunla karşılaşırsanız, eksik veya bozuk paketleri düzeltmek için **Düzelt** komutunu kullanın.
 
-- Bir düzenin bozuk veya eksik paketlere sahip olup olmadığını doğrulamak için şu adımları uygulayın:
+* Bir düzenin bozuk veya eksik paketlere sahip olup olmadığını doğrulamak için şu adımları uygulayın:
 
-    ```cmd
-    MinimalLayout.exe Verify --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --languages en-US
-    ```
+  ```shell
+  MinimalLayout.exe Verify --targetLocation c:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --languages en-US
+  ```
 
-- Bu düzenin nasıl düzeltileceğini aşağıda görebilirsiniz:
+* Bu düzenin nasıl düzeltileceğini aşağıda görebilirsiniz:
 
-    ```cmd
-    MinimalLayout.exe fix --targetLocation C:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --languages en-US
-    ```
+  ```shell
+  MinimalLayout.exe fix --targetLocation C:\VSLayout\ --productIds Microsoft.VisualStudio.Product.Enterprise --baseVersion 16.4.0 --targetVersion 16.4.4 --add Microsoft.VisualStudio.Workload.ManagedDesktop;includeRecommended --languages en-US
+  ```
 
 >[!NOTE]
 > Bu düzen, Visual Studio yüklemesini onarmak için kullanılamaz. Visual Studio 'nun mevcut bir örneğini onarmak için bkz. [Visual Studio 'Yu onarma](repair-visual-studio.md).
@@ -220,23 +219,25 @@ Oluşturulduktan sonra en az düzeninizi sürdürmek için **doğrulama** ve **�
 
 ### <a name="how-to-use-a-minimal-offline-layout-to-update-an-existing-installation-of-visual-studio"></a>Var olan bir Visual Studio yüklemesini güncelleştirmek için en az bir çevrimdışı düzen kullanma
 
-En az bir düzen oluşturduktan sonra, en küçük düzen klasörünün tamamını bir istemci makinesine kopyalayabilirsiniz. Bilgisayarın özgün konumdaki en düşük düzen klasörüne erişimi yoksa bu gereklidir.
+En az bir düzen oluşturduktan sonra, en küçük düzen klasörünün tamamını bir istemci makinesine kopyalayabilirsiniz. Bilgisayarın özgün konumunda en düşük düzen klasörüne erişimi yoksa bu gereklidir.
 
-klasörüne gidin ve önyükleyici uygulama adını tanımlama. Önyükleyici uygulamasının adı, minimum düzen oluşturma sırasında belirtilen ProductId değerine bağlıdır. Yaygın örnekler için aşağıdaki tabloya bakın.
+Klasöre gidin ve önyükleyici uygulama adını tespit edin. Önyükleyici uygulamasının adı, en az düzen oluşturulurken belirtilen ProductID değerine bağlıdır. Ortak örnekler için aşağıdaki tabloya bakın.
 
-|ProductId değeri    |Uygulama adı|
-|:-----------|:------------|
-|Microsoft.VisualStudio.Product.Enterprise    |vs_enterprise.exe|
-|Microsoft.VisualStudio.Product.Professional    |vs_professional.exe|
-|Microsoft.VisualStudio.Product.BuildTools    |vs_buildtools.exe|
+| ProductID değeri                             | Uygulama adı    |
+|---------------------------------------------|---------------------|
+| Microsoft. VisualStudio. Product. Enterprise   | vs_enterprise.exe   |
+| Microsoft. VisualStudio. Product. Professional | vs_professional.exe |
+| Microsoft. VisualStudio. Product. BuildTools   | vs_buildtools.exe   |
 
 Güncelleştirme, iki adımda Visual Studio örnek için uygulanır. İlk olarak, Visual Studio Yükleyicisi güncelleştirin ve Visual Studio.
+
+::: moniker range="vs-2017"
 
 1. **Güncelleştirme Visual Studio Yükleyicisi**
 
     Gerekirse doğru önyükleyici uygulama `vs_enterprise.exe`  adıyla değiştirin ve aşağıdaki komutu çalıştırın.
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --quiet --update --offline C:\VSLayout\vs_installer.opc
     ```
 
@@ -244,11 +245,57 @@ Güncelleştirme, iki adımda Visual Studio örnek için uygulanır. İlk olarak
 
     Bu Visual Studio güncelleştirmek için, güncelleştirmek istediğiniz Visual Studio örneğinin installPath'ini belirtmeniz gerekir. Birden çok örnek Visual Studio, her birinin ayrı olarak güncelleştirilmiş olması gerekir. Minimum düzende olmayan `–noWeb` bileşenlerin yüklemesini önlemek için güncelleştirme komutuyla seçeneğini belirtmenizi kesinlikle öneririz. Bu, çalışmadan Visual Studio durumda bırakmasını sağlar.
 
-    InstallPath komut satırı parametresini uygun şekilde değiştirarak aşağıdaki komutu çalıştırın. Doğru önyükleyici uygulama adını da kullandığınızdan emin olun.
+    InstallPath komut satırı parametresini uygun şekilde değiştirarak aşağıdaki komutu çalıştırın. Doğru önyükleyici uygulama adını da kullanmaya emin olun.
 
-    ```cmd
+    ```shell
     vs_enterprise.exe update --noWeb --quiet --installpath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise"
     ```
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+1. **Güncelleştirme Visual Studio Yükleyicisi**
+
+    Gerekirse doğru önyükleyici uygulama `vs_enterprise.exe`  adıyla değiştirin ve aşağıdaki komutu çalıştırın.
+
+    ```shell
+    vs_enterprise.exe --quiet --update --offline C:\VSLayout\vs_installer.opc
+    ```
+
+2. **Visual Studio güncelleştirme**
+
+    Bu Visual Studio güncelleştirmek için, güncelleştirmek istediğiniz Visual Studio örneğinin installPath'ini belirtmeniz gerekir. Birden çok örnek Visual Studio, her birinin ayrı olarak güncelleştirilmiş olması gerekir. Minimum düzende olmayan `–noWeb` bileşenlerin yüklemesini önlemek için güncelleştirme komutuyla seçeneğini belirtmenizi kesinlikle öneririz. Bu, çalışmadan Visual Studio durumda bırakmasını sağlar.
+
+    InstallPath komut satırı parametresini uygun şekilde değiştirarak aşağıdaki komutu çalıştırın. Doğru önyükleyici uygulama adını da kullanmaya emin olun.
+
+    ```shell
+    vs_enterprise.exe update --noWeb --quiet --installpath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise"
+    ```
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+1. **Güncelleştirme Visual Studio Yükleyicisi**
+
+    Gerekirse doğru önyükleyici uygulama `vs_enterprise.exe`  adıyla değiştirin ve aşağıdaki komutu çalıştırın.
+
+    ```shell
+    vs_enterprise.exe --quiet --update --offline C:\VSLayout\vs_installer.opc
+    ```
+
+2. **Visual Studio güncelleştirme**
+
+    Bu Visual Studio güncelleştirmek için, güncelleştirmek istediğiniz Visual Studio örneğinin installPath'ini belirtmeniz gerekir. Birden çok örnek Visual Studio, her birinin ayrı olarak güncelleştirilmiş olması gerekir. Minimum düzende olmayan `–noWeb` bileşenlerin yüklemesini önlemek için güncelleştirme komutuyla seçeneğini belirtmenizi kesinlikle öneririz. Bu, çalışmadan Visual Studio durumda bırakmasını sağlar.
+
+    InstallPath komut satırı parametresini uygun şekilde değiştirarak aşağıdaki komutu çalıştırın. Doğru önyükleyici uygulama adını da kullanmaya emin olun.
+
+    ```shell
+    vs_enterprise.exe update --noWeb --quiet --installpath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
+    ```
+
+::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
@@ -258,6 +305,6 @@ Güncelleştirme, iki adımda Visual Studio örnek için uygulanır. İlk olarak
 * [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)
-* [Yanıt dosyasındaki ayarları tanımlama](automated-installation-with-response-file.md)
-* [Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
-* [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
+* [Yanıt dosyasında ayarları tanımlama](automated-installation-with-response-file.md)
+* [Ağ tabanlı dağıtımlarda güncelleştirmeleri Visual Studio denetleme](controlling-updates-to-visual-studio-deployments.md)
+* [Visual Studio yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)

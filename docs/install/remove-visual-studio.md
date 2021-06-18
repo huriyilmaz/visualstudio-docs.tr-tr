@@ -15,23 +15,23 @@ f1_keywords:
 - clean up
 - clean up Visual Studio
 ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 751f87075d4e9dcbb7daa94f39a2f38c5083fb3c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5af0cf31d3a53b12910ea8108c93a99cbaf3e87f
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878454"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306962"
 ---
 # <a name="remove-visual-studio"></a>Visual Studio 'Yu kaldır
 
-Çok önemli bir hatayla karşılaşırsanız ve Visual Studio 'Yu onaramıyorsanız veya kaldıramıyorsanız, `InstallCleanup.exe` Visual studio 2017 veya Visual studio 2019 ' nin yüklü tüm örnekleri için yükleme dosyalarını ve ürün bilgilerini kaldırmak üzere aracı çalıştırabilirsiniz.
+Çok önemli bir hatayla karşılaşırsanız ve Visual Studio 'Yu onaramıyorsanız veya kaldıramıyorsanız, `InstallCleanup.exe` Visual studio 2017, Visual studio 2019 veya Visual studio 2022 'in yüklü tüm örnekleri için yükleme dosyalarını ve ürün bilgilerini kaldırmak üzere aracı çalıştırabilirsiniz.
 
 > [!WARNING]
 > Yalnızca onarma veya kaldırma başarısız olursa, ınstallcleanup aracını **yalnızca son çare olarak** kullanın. Bu araç diğer Visual Studio yüklemelerinin veya diğer ürünlerin özelliklerini kaldırabilir, bu da onarılması veya yeniden yüklenmesi gerekebilir.
@@ -40,9 +40,9 @@ ms.locfileid: "99878454"
 
 Araçla aşağıdaki komut satırı anahtarlarından birini kullanabilirsiniz `InstallCleanup.exe` :
 
-| Anahtar | Davranış |
-| ------ | -------- |
-| `-i`   | Başka bir anahtar geçirilmezse bu anahtar varsayılandır. Yalnızca ana yükleme dizinini ve ürün bilgilerini kaldırır. Aracı çalıştırdıktan sonra aynı Visual Studio sürümünü yeniden yüklemek istiyorsanız bu anahtarı kullanın `InstallCleanup.exe` . |
+| Anahtar | Davranış                                                                                                                                                                                                                                                                                                                 |
+|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-i`   | Başka bir anahtar geçirilmezse bu anahtar varsayılandır. Yalnızca ana yükleme dizinini ve ürün bilgilerini kaldırır. Aracı çalıştırdıktan sonra aynı Visual Studio sürümünü yeniden yüklemek istiyorsanız bu anahtarı kullanın `InstallCleanup.exe` .                                                              |
 | `-f`   | Bu anahtar, ana yükleme dizinini, ürün bilgilerini ve yükleme dizini dışında yüklenen diğer birçok özelliği kaldırır. Bu, diğer Visual Studio yüklemeleri veya diğer ürünlerle de paylaşılabilir. Visual Studio 'Yu daha sonra yeniden yüklemeden kaldırmak istiyorsanız bu anahtarı kullanın. |
 
 Aracın nasıl çalıştırılacağı aşağıda verilmiştir `InstallCleanup.exe` :
@@ -53,7 +53,7 @@ Aracın nasıl çalıştırılacağı aşağıda verilmiştir `InstallCleanup.ex
    * **Komut istemi**' ne sağ tıklayın ve ardından **yönetici olarak çalıştır**' ı seçin.
 1. Aracın tam yolunu girin `InstallCleanup.exe` ve tercih ettiğiniz komut satırı anahtarını ekleyin. Varsayılan olarak, aracın yolu aşağıdaki gibidir. Çift tırnak işaretleri, boşluk içeren bir komutu kapsar:
 
-   ```
+   ```shell
    "C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe"
    ```
 

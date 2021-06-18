@@ -1,6 +1,6 @@
 ---
-title: Program hatalarını giderme ve kodu geliştirme
-description: Bu makalede, Visual Studio 'Nun kodunuzda derleme hataları, kod analizi, hata ayıklama araçları ve birim testleri gibi sorunları bulmanıza ve düzeltmenize yardımcı olabilecek bazı temel yollar açıklanmaktadır.
+title: Program hatalarını düzeltme ve kodu geliştirme
+description: Bu makalede derleme hataları, kod Visual Studio, hata ayıklama araçları ve birim testleri dahil olmak üzere kodundaki sorunları bulamanıza ve düzeltmenize yardımcı olacak bazı temel yöntemler açıklanmıştır.
 ms.date: 05/02/2018
 ms.topic: conceptual
 ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
@@ -9,122 +9,122 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d6da05729be409b142f6c9cec2c543fb2b9171ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5af76de5dbcc7a70722acf0ee01cfed93dbad761
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869433"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308265"
 ---
-# <a name="make-code-work-in-visual-studio"></a>Visual Studio 'da kod çalışmasını sağlama
+# <a name="make-code-work-in-visual-studio"></a>Kodun Visual Studio
 
-Visual Studio, güçlü tümleşik bir proje derleme ve hata ayıklama araçları kümesi sağlar. Bu makalede, Visual Studio 'Nun kodunuzda derleme çıkışı, kod analizi, hata ayıklama araçları ve birim testleri kullanarak sorunları bulmanıza nasıl yardımcı olduğunu öğrenin.
+Visual Studio, güçlü bir tümleşik proje derleme ve hata ayıklama araçları kümesi sağlar. Bu makalede derleme çıkışı, Visual Studio, hata ayıklama araçları ve birim testlerini kullanarak kodundaki sorunları bulamanıza nasıl yardımcı olduğunu bulabilirsiniz.
 
-Düzenleyiciyi iletişime ve bazı kodlar oluşturdunuz. Artık kodun düzgün çalıştığından emin olmak istiyorsunuz. Visual Studio 'da, çoğu IDE 'de olduğu gibi, kod çalışması yapmak için iki aşama vardır: proje ve derleyici hatalarını yakalamak ve çözümlemek için kod oluşturma ve çalışma zamanı ve dinamik hataları bulmak için kodu çalıştırma.
+Düzenleyiciyi çözdün ve bazı kodlar oluşturdun. Şimdi kodun düzgün bir şekilde çalışır hale geldi. Bu Visual Studio çoğu IDE'de olduğu gibi kodun çalışması için iki aşama vardır: proje ve derleyici hatalarını yakalayacak ve çözümleyecek kodu derleme ve çalışma zamanı ile dinamik hataları bulmak için kodu çalıştırma.
 
 ## <a name="build-your-code"></a>Kodunuzu oluşturma
 
-İki temel tür derleme yapılandırması vardır: **hata ayıklama** ve **yayın**. **Hata ayıklama** yapılandırması, daha zengin bir etkileşimli çalışma zamanı hata ayıklama deneyimine olanak sağlayan daha yavaş ve daha büyük bir yürütülebilir dosya üretir. **Hata ayıklama** yürütülebilir dosyası asla gönderilmemelidir. **Yayın** yapılandırması, sevk etmek için uygun olan daha hızlı, iyileştirilmiş bir yürütülebilir dosya oluşturur (en azından derleyicinin perspektifinden). Varsayılan derleme yapılandırması **hata ayıklaması**.
+derleme yapılandırmasının iki temel türü vardır: **Hata Ayıklama ve** **Sürüm.** Hata **ayıklama yapılandırması,** daha zengin etkileşimli bir çalışma zamanı hata ayıklama deneyimi sağlayan daha yavaş, daha büyük bir yürütülebilir dosya üretir. Hata **ayıklama yürütülebilir** dosyası hiçbir zaman gönderilebeğil. Yayın **yapılandırması,** (en azından derleyicinin perspektifinden) daha hızlı ve iyileştirilmiş bir yürütülebilir dosya derler. Varsayılan derleme yapılandırması Hata **Ayıklama'dır.**
 
-Projenizi oluşturmanın en kolay yolu **F7** tuşuna basmanız, ancak   >  ana menüden Build **Build çözümünü** seçerek derlemeyi de başlatabilirsiniz.
+Projenizi oluşturmanın en kolay yolu **F7** tuşuna basmanızdır, ancak ana menüden Derleme Çözümü'yü seçerek  >   de derlemeyi başlatabilirsiniz.
 
-![Visual Studio derleme projesi menü seçimi](../ide/media/vs_ide_gs_debug_build_menu_item.png)
+![Visual Studio proje menüsü seçimi](../ide/media/vs_ide_gs_debug_build_menu_item.png)
 
-Visual Studio Kullanıcı arabiriminin altındaki **Çıkış** penceresinde yapı sürecini gözlemleyebilirsiniz. Hatalar, uyarılar ve derleme işlemleri burada görüntülenir. Hatalar varsa (veya yapılandırılmış bir düzeyin üzerinde uyarılarınız varsa), derlemeniz başarısız olur. Oluşan satıra gitmek için hatalara ve uyarılara tıklayabilirsiniz. Bir kez **F7** tuşuna basarak (yalnızca hataları olan dosyaları yeniden derlemek için) veya **CTRL** + **alt** + **F7** (temiz ve tamamen yeniden oluşturma için) ' ya tıklayarak projenizi yeniden derleyin.
+Derleme işlemini, kullanıcı arabiriminin **en** altındaki Çıkış penceresinde Visual Studio görebilirsiniz. Hatalar, uyarılar ve derleme işlemleri burada görüntülenir. Hatalarınız varsa (veya yapılandırılmış bir düzeyin üzerinde uyarılar varsa), derlemeniz başarısız olur. Hataların ve uyarıların bulunduğu satıra gitmek için üzerine tıklarsanız. **F7** tuşuna tekrar basarak (yalnızca hataları olan dosyaları yeniden derlemek için) **veya Ctrl** + **Alt** + **F7** tuşlarına basarak (temiz ve eksiksiz bir yeniden derleme için) projenizi yeniden derleme.
 
-Sonuç penceresinde düzenleyicinin altında iki sekmeli pencere vardır: ham derleyici çıkışını (hata iletileri dahil) içeren **Çıkış** penceresi; ve tüm hataların ve uyarıların sıralanabilir ve filtrelenebilir bir listesini sağlayan **hata listesi** pencere.
+Düzenleyicinin altındaki sonuçlar penceresinde sekmeli iki pencere  vardır: Ham derleyici çıktısını içeren Çıkış penceresi (hata iletileri dahil); ve **tüm hataların** ve uyarıların sıralanabilir ve filtrelenebilir bir listesini sağlayan Hata Listesi penceresi.
 
-Oluşturma işlemi başarılı olduğunda, **Çıkış** penceresinde şöyle bir sonuç görürsünüz:
+Derleme başarılı olduğunda Çıktı penceresinde aşağıdakine benzer **sonuçlar** görüntülenir:
 
-![Visual Studio başarılı derleme çıkışı](../ide/media/vs_ide_gs_debug_success_build.png)
+![Visual Studio derleme çıkışı oluşturma](../ide/media/vs_ide_gs_debug_success_build.png)
 
-## <a name="review-the-error-list"></a>Hata Listesi gözden geçirin
+## <a name="review-the-error-list"></a>Hata Listesini Gözden Geçirme
 
-Daha önce ve başarıyla derlediğiniz kodda herhangi bir değişiklik yapmadığınız takdirde muhtemelen bir hata oluştu. Kodlamadan yeni başladıysanız büyük olasılıkla çok sayıda ihtiyacınız vardır. Hatalar bazen basit bir sözdizimi hatası veya yanlış değişken adı gibi belirgin bir şekilde görünür ve bazen sizi rehberlik etmek için yalnızca şifreli kodla anlaşılması zordur. Sorunların temizleyici bir görünümü için, yapı **Çıkış** penceresinin alt kısmına gidin ve **hata listesi** sekmesine tıklayın. Böylece projeniz için hataların ve uyarıların daha ayrıntılı bir görünümüne gidersiniz ve bazı ek seçenekler de sunulur.
+Daha önce derledik ve başarıyla derledik kodda hiçbir değişiklik yapmadıysanız büyük olasılıkla bir hatayla karşılaştısınız. Kodlamaya yeni başladıysanız büyük olasılıkla çok sayıda kodlamaya sahipsinizdir. Basit bir söz dizimi hatası veya yanlış değişken adı gibi hatalar bazen barizdir ve size yol gösterirken yalnızca şifreli bir kodla anlamak zordur. Sorunların daha temiz bir görünümü için derleme Çıkışı penceresinin en **altına** gidin ve Hata Listesi **sekmesine** tıklayın. Bu sizi projeniz için hataların ve uyarıların daha düzenli bir görünümüne alır ve size bazı ek seçenekler de sağlar.
 
-![Visual Studio çıktısı ve Hata Listesi](../ide/media/vs_ide_gs_debug_bad_build_error_list.png)
+![Visual Studio Çıkış ve Hata Listesi](../ide/media/vs_ide_gs_debug_bad_build_error_list.png)
 
-Hatanın oluştuğu satıra gitmek için **hata listesi** penceresindeki hata satırına tıklayın. (Veya **CTRL** + tuşuna basarak satır numaralarını açın **S**, **satır numaralarını** yazın ve ardından sonuçlarda **satır numaralarını aç veya kapat** seçeneğini seçin. Bu, satır numaralarını açmak için kullanabileceğiniz **Seçenekler** iletişim kutusuna almanın en hızlı yoludur.)
+Hata Listesi penceresinde hata **satırına** tıklayıp hatanın oluştuğu satıra atlayın. (Veya **Ctrl** tuşuna basarak satır numaralarını aç + **Q**, satır **numaraları yazın** ve sonra sonuçlardan Satır numaralarını aç **veya kapat'ı** seçin. Bu, satır numaralarını açabilirsiniz Seçenekler **iletişim** kutusuna almanın en hızlı yoludur.)
 
-![Satır numaralarıyla Visual Studio Düzenleyicisi](../ide/media/vs_ide_gs_debug_line_numbers.png)
+![Visual Studio numaraları olan bir düzenleyici](../ide/media/vs_ide_gs_debug_line_numbers.png)
 
-![Visual Studio satır numaraları seçeneği](../ide/media/vs_ide_gs_debug_options_line_numbers.png)
+![Visual Studio numaralarını seç](../ide/media/vs_ide_gs_debug_options_line_numbers.png)
 
- + Hatanın oluştuğu satır numarasına hızlıca gitmek için CTRL **G** tuşuna basın.
+Hatanın meydana geldiği satır numarasına hızla atlamak için **Ctrl** + **G** tuşlarına basın.
 
-Hata kırmızı bir "dalgalı çizgi" alt çizgi ile tanımlanır. Ek ayrıntılar için üzerine gelin. Düzeltmeyi yapın ve düzeltme ile yeni bir hata ortaya çıkabilir. (Bu, "gerileme" olarak adlandırılır.)
+Hata, kırmızı bir "geçiş" alt çizgiyle tanımlanır. Ek ayrıntılar için üzerine gelin. Düzeltmeyi yapın, ancak düzeltmeyle birlikte yeni bir hatayla karşıdan çıkabilirsiniz. (Buna "regresyon" denir.)
 
-![Visual Studio hatası üzerine gelme](../ide/media/vs_ide_gs_debug_error_hover1.png)
+![Visual Studio hatanın üzerine gelin](../ide/media/vs_ide_gs_debug_error_hover1.png)
 
-Hata listesini gözden geçir ve kodunuzdaki tüm hataları çözün.
+Hata listesini adım adım takip edin ve kodundaki tüm hataları düzeltin.
 
-![Visual Studio hata ayıklama hataları penceresi](../ide/media/vs_ide_gs_debug_error_list.png)
+![Visual Studio Hata Ayıklama hataları penceresi](../ide/media/vs_ide_gs_debug_error_list.png)
 
-### <a name="review-errors-in-detail"></a>Hataları ayrıntılı olarak inceleyin
+### <a name="review-errors-in-detail"></a>Hataları ayrıntılı olarak gözden geçirme
 
-Birçok hata, derleyici koşullarında olduğu gibi phrased, size hiçbir fikir vermeyebilir. Bu gibi durumlarda ek bilgilere ihtiyacınız olacaktır. **Hata listesi** penceresinden, hata veya uyarı hakkında daha fazla bilgi Için otomatik Bing araması yapabilirsiniz. Karşılık gelen giriş satırına sağ tıklayın ve bağlam menüsünden **hata yardımını göster** ' i seçin veya **hata listesi** **kod** sütunundaki köprülü hata kodu değerine tıklayın.
+Derleyici açısından ifade edilen birçok hata sizin için anlamlı değildir. Bu gibi durumlarda ek bilgilere ihtiyacınız vardır. Hata **Listesi penceresinde,** hata veya uyarı hakkında daha fazla bilgi için otomatik bir Bing araması ekleyebilirsiniz. İlgili giriş satırına sağ tıklayın  ve bağlam menüsünden Hata Yardımlarını Göster'i seçin veya Hata Listesi'nin **Kod** sütunundaki köprü hata kodu **değerine tıklayın.**
 
-![Visual Studio hata listesi Bing arama](../ide/media/vs_ide_gs_debug_error_list_error_help.png)
+![Visual Studio listesi Bing araması](../ide/media/vs_ide_gs_debug_error_list_error_help.png)
 
-Ayarlarınıza bağlı olarak, Web tarayıcınız hata kodu ve metin için arama sonuçlarını görüntüler ya da Visual Studio içinde bir sekme açılır ve Bing aramasının sonuçlarını gösterir. Sonuçlar Internet 'teki birçok farklı kaynaktan alınır ve hepsi yararlı olmayabilir.
+Ayarlarınıza bağlı olarak, web tarayıcınız hata kodu ve metin için arama sonuçlarını görüntüler veya web tarayıcınızda Visual Studio içinde bir sekme açılır ve Bing arama sonuçlarını gösterir. Sonuçlar İnternet'in birçok farklı kaynağından gelir ve bunların hepsi yararlı olmayacaktır.
 
 ## <a name="use-code-analysis"></a>Kod analizini kullanma
 
-Kod Çözümleyicileri, kod yönetiminde çalışma zamanı hatalarına veya problemlere yol açabilecek ortak kod sorunlarına bakar.
+Kod çözümleyicileri, çalışma zamanı hatalarına veya kod yönetimi sorunlarına yol açacak yaygın kod sorunlarını ister.
 
-### <a name="c-and-visual-basic-code-analysis"></a>C# ve Visual Basic kodu Analizi
+### <a name="c-and-visual-basic-code-analysis"></a>C# ve Visual Basic analizi
 
-Visual Studio, siz yazarken C# ve Visual Basic kodunu inceleyecek yerleşik bir [.net Compiler platform Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md) kümesi içerir. Ek Çözümleyicileri bir Visual Studio uzantısı veya bir NuGet paketi olarak yükleyebilirsiniz. Kural ihlalleri bulunursa, bunlar hem Hata Listesi hem de kod düzenleyicisinde, sorunlu kodun altında bir dalgalı çizgi olarak raporlanır.
+Visual Studio C# ve kod yazma [.NET Compiler Platform](../code-quality/roslyn-analyzers-overview.md) inceleyen yerleşik Visual Basic çözümleyici kümesi içerir. Ek çözümleyicileri bir Visual Studio veya NuGet paketi olarak yükleyebilirsiniz. Kural ihlalleri bulunursa, bunlar hem Hata Listesi'nde hem de kod düzenleyicisinde soruna neden olan kodun altında bir geçiş olarak rapor olur.
 
 ### <a name="c-code-analysis"></a>C++ kod analizi
 
-C++ kodunu çözümlemek için [Statik kod analizini](/cpp/code-quality/quick-start-code-analysis-for-c-cpp)çalıştırın. Başarılı bir derlemeyi önleyen açık hataları temizledikten sonra bu uygulamayı çalıştırmanın önleminizi alarak ' ine ulaşın ve üretebilen uyarıları ele almanız biraz zaman atalım. Yolculuğuna giden bir süre sonra tasarruf edersiniz ve birkaç kod stili tekniği öğrenebilirsiniz.
+C++ kodunu analiz etmek için statik [kod analizini çalıştırın.](/cpp/code-quality/quick-start-code-analysis-for-c-cpp) Başarılı bir derlemeyi önleyen bariz hataları temizledikten sonra çalıştırmayı alışkanlık haline getirme ve ortaya çıkarması gereken uyarıları ele almak için biraz zaman gerekir. Bazı baş ağrıları kendinizden kurtarırsınız ve birkaç kod stili tekniği öğrenebilirsiniz.
 
- + Statik kod analizini başlatmak için alt **F11** tuşuna basın (veya   >  üst menüden **çözüm Çalıştır kod analizini Çözümle '** yi seçin).
+Statik **kod analizini** + başlatmak için Alt **F11** tuşuna basın (Code Analysis Çözümde Çalıştır'ı  >   çözümle'yi seçin).
 
-![Visual Studio Code analiz menü öğesi](../ide/media/vs_ide_gs_debug_run_code_analysis.png)
+![Visual Studio Code Analizi menü öğesi](../ide/media/vs_ide_gs_debug_run_code_analysis.png)
 
-Tüm yeni veya güncelleştirilmiş uyarılar, IDE 'nin altındaki **hata listesi** sekmesinde görüntülenir. Koda gitmek için uyarılara tıklayın.
+Yeni veya güncelleştirilmiş uyarılar **IDE'nin** en altındaki Hata Listesi sekmesinde görüntülenir. Uyarılara tıklayıp kodda bu uyarılara atlayın.
 
-![Uyarılarla Visual Studio Hata Listesi](../ide/media/cpp-code-analysis-warning.png)
+![Visual Studio Hata Listesi](../ide/media/cpp-code-analysis-warning.png)
 
-## <a name="use-quick-actions-to-fix-or-refactor-code"></a>Kodu onarmak veya yeniden düzenleme için hızlı eylemleri kullanma
+## <a name="use-quick-actions-to-fix-or-refactor-code"></a>Kodu düzeltmek veya yeniden düzenlemek için Hızlı Eylemler'i kullanma
 
-Ampul veya screwsürücü simgesinde bulunan [hızlı eylemler](../ide/quick-actions.md), kodu satır içi olarak yeniden oluşturmanızı sağlar. C#, C++ ve Visual Basic kodundaki yaygın uyarıları hızla ve etkili bir şekilde gidermenin kolay bir yoludur. Bunlara erişmek için, bir uyarı dalgalı çizgi ' ye sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler**' i seçin. Ya da imlecinizin renkli dalgalı çizgi üzerindeyken, **CTRL** tuşuna basın + **.** ya da kenar boşluğunda ampul, hata ampulü veya screwsürücü simgesini seçin. Bu kod satırına uygulayabileceğiniz olası düzeltmelerin veya yeniden düzenlemeler listesini görürsünüz.
+[Ampul veya](../ide/quick-actions.md)tornavida simgesinden kullanılabilen Hızlı Eylemler, kodu satır içinde yeniden düzenlemeyi sağlar. C#, C++ ve kod kodlarında yaygın uyarıları hızlı ve etkili bir şekilde düzeltmenin kolay Visual Basic yoludur. Bu uyarılara erişmek için bir uyarı ikilevına sağ tıklayın ve Hızlı Eylemler ve **yeniden düzenleme'yi seçin.** Veya imleciniz çizginin üzerinde renkli geçiş olduğunda **Ctrl** tuşuna + **basın.** veya kenar boşluğunda ampul, hata ampulü veya tornavida simgesini seçin. Bu kod satırına uygulayabilecek olası düzeltmelerin veya yeniden düzenlemelerin listesini görüntülenir.
 
-![Visual Studio ampul Önizleme](../ide/media/quick-actions-options.png)
+![Visual Studio ampul önizlemesi](../ide/media/quick-actions-options.png)
 
-Hızlı Eylemler, kod Çözümleyicileri kodunuzun düzeltilmesi, yeniden düzenlenmesi veya geliştirilmesi için bir fırsat olduğunu tespit eden her yerde kullanılabilir. Herhangi bir kod satırına tıklayın, bağlam menüsünü açmak için sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler**' ı seçin. Yeniden düzenleme veya geliştirme seçenekleri varsa, bunlar görüntülenir. Aksi takdirde, **burada hızlı eylem bulunmayan** ILETI, IDE 'nin sol alt köşesinde görüntülenir.
+Kod çözümleyicileri kodunuzu düzeltme, yeniden düzenleme veya geliştirme fırsatı bulduğunuzda Hızlı Eylemler kullanılabilir. Herhangi bir kod satırına tıklayın, bağlam menüsünü açmak için sağ tıklayın ve Hızlı Eylemler ve yeniden **düzenleme'yi seçin.** Yeniden düzenleme veya geliştirme seçenekleri varsa bunlar görüntülenir. Aksi takdirde, **IDE'nin sol** alt köşesinde Hızlı eylem yok iletisi görüntülenir.
 
-![Kullanılabilir hızlı eylem yok metin](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
+![Kullanılabilir metin hızlı eylem yok](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
 
-Deneyim ile hızlı bir şekilde ok tuşlarını ve **CTRL tuşunu** kullanabilirsiniz + **.** kolay yeniden düzenleme fırsatlarını denetlemek ve kodunuzu temizlemek için!
+Deneyimle, ok tuşlarını ve Ctrl tuşlarını hızlı **bir şekilde kullanabilirsiniz.** +  kolayca yeniden düzenleme fırsatlarını kontrol etmek ve kodunuzu temizlemek için!
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-## <a name="run-code-cleanup"></a>Kod temizlemeyi Çalıştır
+## <a name="run-code-cleanup"></a>Kod Temizlemeyi Çalıştırma
 
-Visual Studio, kod stili tercihleri de dahil olmak üzere [C# kod dosyası](code-styles-and-code-cleanup.md#apply-code-styles)için, düzenleyicinin alt kısmındaki **kod temizleme** düğmesi aracılığıyla isteğe bağlı biçimlendirme sağlar.
+Visual Studio, düzenleyicinin en altındaki Kod Temizleme düğmesi aracılığıyla kod stili tercihleri de dahil olmak üzere [C#](code-styles-and-code-cleanup.md#apply-code-styles)kod dosyanız için isteğe bağlı biçimlendirme sağlar. 
 
-![Visual Studio 2019 ' de kod temizleme düğmesi](media/execute-code-cleanup.png)
+![Visual Studio 2019'da Kod Temizleme düğmesi](media/execute-code-cleanup.png)
 
-Dosyanızı boşluk, girintiler, et cetera için biçimlendirmeye ek olarak, **kod temizleme** de tanımladığınız bir kod stili kuralları kümesi uygular. Her kod stili için tercihleriniz, proje için bir tane varsa veya **Seçenekler** iletişim kutusundaki [kod stili ayarlarından](code-styles-and-code-cleanup.md#code-styles-in-the-options-dialog-box) , [editorconfig dosyasından](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files)okunurdur.
+Kod Temizleme, dosyanızı boşluklar, girintiler ve cetera için biçimlendirmeye ek **olarak,** tanımladığınız bir dizi kod stili kuralı da uygular. Her kod stiline yönelik tercihleriniz [EditorConfig](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files)dosyasından , proje için varsa [](code-styles-and-code-cleanup.md#code-styles-in-the-options-dialog-box) veya Seçenekler iletişim kutusundaki kod stili **ayarlarından** okunur.
 
 ::: moniker-end
 
-## <a name="debug-your-running-code"></a>Çalışan kodunuzda hata ayıklayın
+## <a name="debug-your-running-code"></a>Çalışan kodunuzun hata ayıklaması
 
-Kodunuzu başarıyla oluşturduğunuza ve küçük bir temizlik gerçekleştirdiniz, **F5** tuşuna basarak veya **hata** ayıklama  >  **başlatma hata ayıklamayı** seçerek çalıştırın. Bu, uygulamanızı ayrıntılı bir şekilde gözlemleyebileceğiniz bir hata ayıklama ortamında başlatır. Visual Studio IDE, uygulamanız çalışırken değişir: **Çıkış** penceresi iki yeni durumla değiştirilir (varsayılan pencere yapılandırmasında), **oto s/Yereller/izle** sekmeli penceresi ve **çağrı yığını/kesme noktaları/özel durum ayarları/çıkış** sekmeli pencere. Bu pencerelerin, uygulamanın değişkenlerini, iş parçacıklarını, çağrı yığınlarını ve çalışırken çeşitli diğer davranışları incelemenizi ve değerlendirmenizi sağlayan birden çok sekme vardır.
+Kodunuzu başarıyla kurup biraz temizleme işlemi gerçekleştirerek **F5** tuşuna basarak veya Hata Ayıklamayı Başlat hata  >  **ayıklamayı seçerek çalıştırın.** Bu, davranışını ayrıntılı olarak gözlemlemek için uygulamanızı bir hata ayıklama ortamında başlatır. Uygulama Visual Studio çalışırken IDE'nin durumu değişir:  Çıkış penceresi iki yenisi (varsayılan pencere yapılandırmasında), **Otomatik/YerelLer/İzleme** sekmeli penceresi ve **Çağrı Yığını/Kesme Noktaları/Özel Durum Ayarları/Çıkış** sekmeli penceresiyle değiştirilir. Bu pencereler, uygulamanın değişkenlerini, iş parçacıklarını, çağrı yığınlarını ve çalışan diğer davranışları incelemenize ve değerlendirmenize olanak sağlayan birden çok sekmeye sahiptir.
 
-![Visual Studio oto ve çağrı yığını pencereleri](../ide/media/vs_ide_gs_debug_autos_and_call_stack.png)
+![Visual Studio Otomatikleri ve Çağrı Yığını Pencereleri](../ide/media/vs_ide_gs_debug_autos_and_call_stack.png)
 
-**SHIFT** + **F5** tuşuna basarak veya **Durdur** düğmesine tıklayarak uygulamanızı durdurun. Ya da yalnızca uygulamanın ana penceresini (veya komut satırı iletişim kutusunu) kapatabilirsiniz.
+**Shift** F5 tuşuna + **basarak veya** Durdur düğmesine tıklayarak **uygulamayı** durdurun. Veya yalnızca uygulamanın ana penceresini (veya komut satırı iletişim kutusunu) kapatabilirsiniz.
 
-Kodunuz mükemmel bir şekilde ve tam olarak beklendiği gibi çalışırsa, tebrikler! Ancak, yanıt vermeyi durdurursa veya kilitlenirse ya da bazı garip sonuçlar verdiyse, bu sorunların kaynağını bulmanız ve hataları çözmeniz gerekir.
+Kodunuz mükemmel ve tam olarak beklendiği gibi çalıştı, tebrikler! Ancak yanıt vermese veya kilitlenmeye devam ettiyse veya garip sonuçlar verdiyse, bu sorunların kaynağını bulmanız ve hataları düzeltmemiz gerekir.
 
-### <a name="set-simple-breakpoints"></a>Basit kesme noktaları ayarla
+### <a name="set-simple-breakpoints"></a>Basit kesme noktaları ayarlama
 
-[Kesme noktaları](../debugger/using-breakpoints.md) , güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz. Kesme noktalarını ayarlayıp kaldırdıktan sonra bir projeyi yeniden oluşturmanız gerekmez.
+[Kesme noktaları,](../debugger/using-breakpoints.md) güvenilir hata ayıklamanın en temel ve temel özelliğidir. Kesme noktası, Visual Studio değerlerine, bellek davranışına veya bir kod dalını çalıştırıp çalıştırmamaya bakabilirsiniz. Kesme noktaları ayardan ve kaldırktan sonra projeyi yeniden oluşturmanıza gerek yok.
 
 Kesmenin gerçekleşmesini istediğiniz çizginin sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın veya geçerli kod satırında bir kesme noktası ayarlamak için **F9** tuşuna basın. Kodunuzu çalıştırdığınızda, bu kod satırıyla ilgili yönergeler yürütülmeden önce duraklatılır (veya *keser*).
 

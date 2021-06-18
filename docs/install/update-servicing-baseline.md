@@ -5,24 +5,24 @@ ms.date: 07/17/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 2c8510a1ba83243d2d92b538d80876a8b0f20079
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 03a192657a46c2db15cb2d1121735905f06da478
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935668"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306676"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>Bakım temeli sırasında Visual Studio’yu güncelleştirme
 
-Visual Studio 'Yu genellikle ürün yaşam döngüsü boyunca güncelleştiririz. İki tür güncelleştirme vardır: 
+Visual Studio 'Yu genellikle ürün yaşam döngüsü boyunca güncelleştiririz. İki tür güncelleştirme vardır:
 
 * **Küçük sürüm güncelleştirmeleri** &mdash; Örneğin, &mdash; yeni özellikleri ve bileşenleri içeren 16,0 16,1 ' dir.  
 * **Bakım güncelleştirmeleri**— Örneğin, 16.0.4 to 16.0.5 — yalnızca kritik sorunlara yönelik hedeflenen düzeltmeleri içerir.
@@ -51,7 +51,7 @@ Bir ağ düzeni yüklemesi kullanan yöneticiler, `channelUri` mizanpajda dosyad
 
 Internet tabanlı yükleme için, `--channelUri` Kurulum 'u başlatmak için kullanılan komut satırına mevcut olmayan bir kanal bildirimini ekleyin. Bu, Visual Studio 'Nun bir güncelleştirme için kullanılabilir en son sürümü kullanmasını devre dışı bırakır. Aşağıda bir örnek verilmiştir:
 
-```cmd
+```shell
 vs_enterprise.exe --channelUri c:\doesnotexist.chman
 ```
 
@@ -69,15 +69,27 @@ Internet tabanlı bir yükleme için, `--channelUri` istemcideki mevcut olmayan 
 
 1. Visual Studio yükleyicisini güncelleştirin:
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --quiet --update
     ```
 
+::: moniker range="vs-2019"
+ 
 2. Visual Studio uygulamasını güncelleştirin:
-
-    ```cmd
+    ```shell
     vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
     ```
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+2. Visual Studio uygulamasını güncelleştirin:
+    ```shell
+    vs_enterprise.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
+    ```
+
+::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

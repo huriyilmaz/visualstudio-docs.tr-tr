@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 974696d1ff7f8e82dab8ef2024710ce645b56c72
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 4d3c1aac5bb06ba29b1c70c39db900e704b2f3ec
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107297138"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308330"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Visual Basic ile Visual Studio 'da Windows Forms uygulaması oluşturma
 
@@ -33,6 +33,15 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 ::: moniker range="vs-2019"
 
 Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+
+> [!NOTE]
+> Bu öğreticideki ekran görüntülerinin bazıları koyu temayı kullanır. Koyu tema kullanmıyorsanız, ancak isterseniz, nasıl yapılacağını öğrenmek için [Visual STUDIO IDE ve düzenleyici 'Yi kişiselleştirme](../ide/quickstart-personalize-the-ide.md) sayfasına bakın.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual studio 2022 Önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 > [!NOTE]
 > Bu öğreticideki ekran görüntülerinin bazıları koyu temayı kullanır. Koyu tema kullanmıyorsanız, ancak isterseniz, nasıl yapılacağını öğrenmek için [Visual STUDIO IDE ve düzenleyici 'Yi kişiselleştirme](../ide/quickstart-personalize-the-ide.md) sayfasına bakın.
@@ -57,9 +66,9 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Visual Studio 2019 ' i açın.
+1. Visual Studio'yu açın.
 
 1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 

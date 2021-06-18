@@ -15,12 +15,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 31759f3ae6359c9e366157012f6321c62085f8f9
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 21cab6f8fd8f4ff6a86a780774d031e60b03e780
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113216"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308005"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Hızlı Başlangıç: İlk C# Visual Studio oluşturmak için Visual Studio'yi kullanma
 
@@ -28,13 +28,19 @@ Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişt
 
 ::: moniker range="vs-2017"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Visual Studio 2022 Preview'Visual Studio henüz yüklememişsinizdir, ücretsiz olarak yüklemek için [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidin.
 
 ::: moniker-end
 
@@ -62,9 +68,9 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. 2019 Visual Studio açın.
+1. Visual Studio'yu açın.
 
 1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
@@ -85,7 +91,7 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
    >
    > ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](./media/dot-net-core-xplat-dev-workload.png)
    >
-   > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz isteniyor olabilir; öyleyse, bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin. Ardından bu "Proje oluşturma" yordamının[2. adımına](#create-a-project)geri dön.
+   > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz isteniyor olabilir; varsa, bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin. Ardından bu "Proje oluşturma" yordamının[2. adımına](#create-a-project)geri dön.
 
 1. Yeni **projenizi yapılandır penceresinde** Proje adı kutusuna *HelloWorld* yazın **veya** girin. Ardından **Oluştur'a seçin.**
 
@@ -103,7 +109,7 @@ C# proje şablonlarınızı seçerek projenize bir ad verdikten sonra Visual Stu
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio projenize varsayılan "Merhaba Dünya" kodunu içerir.
 
@@ -119,7 +125,7 @@ Visual Studio projenize varsayılan "Merhaba Dünya" kodunu içerir.
 
 ### <a name="add-some-code"></a>Kod ekleme
 
-Enter tuşuna basana kadar konsol penceresinin kapanması için uygulamayı duraklatmak için bazı kodlar ek **o zaman.**
+Enter tuşuna basana kadar konsol penceresinin kapanması için uygulamayı duraklatmak için biraz kod ek **o zaman.**
 
 1. yöntemine yapılan çağrıdan hemen sonra aşağıdaki kodu <xref:System.Console.WriteLine%2A> ekleyin:
 

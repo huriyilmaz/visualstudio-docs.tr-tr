@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 76edf9f1af414a67abd83cec3c2f597c6cdf8707
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 86310346566e8c937c2769a9fcc9f0d4e98b3ae2
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683455"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308447"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme
 
@@ -34,7 +34,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 ### <a name="create-the-project"></a>Proje oluşturma
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Yeni bir C# WPF uygulaması (**Dosya** > **Yeni** > **Proje**) oluşturun, "c# WPF" yazın, **WPF uygulaması** proje şablonunu seçin, projeyi **TestXaml** olarak adlandırın ve ardından **.NET Core 3,1** 'nin **hedef çerçeve** açılır penceresinde göründüğünü doğrulayın.
 
@@ -64,7 +64,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
    </Window>
    ```
 
-1. MainWindow.xaml.cs dosyasına aşağıdaki komut işleyicisini ekleyin:
+1. MainWindow. xaml. cs dosyasına aşağıdaki komut işleyicisini ekleyin:
 
    ```csharp
    int count;

@@ -1,6 +1,6 @@
 ---
 title: Visual Basic ile ilk konsol Visual Basic
-description: Visual Basic adım adım Visual Studio basit bir Merhaba Dünya konsol uygulaması oluşturma hakkında bilgi edinin.
+description: Visual Basic adım bir Merhaba Dünya kullanarak Visual Studio bir konsol uygulaması oluşturma hakkında bilgi edinin.
 ms.custom: acquisition, seodec18
 ms.date: 03/23/2019
 ms.technology: vs-ide-general
@@ -14,26 +14,32 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d963762772060296f38a9c9c1ebfce85fbf5f8e
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 7272e02ebfba084bdbe311d10b69d7b41fade0e1
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113151"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307914"
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>Hızlı Başlangıç: Visual Basic ile Visual Studio konsol Visual Basic
 
-Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişte, konsolunda çalışan basit bir Visual Basic uygulama oluşturabilirsiniz.
+Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişte, konsolunda çalışan basit Visual Basic bir Visual Basic uygulaması oluşturabilirsiniz.
 
 ::: moniker range="vs-2017"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yükleyin.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Visual Studio 2022 Preview'Visual Studio henüz yüklememişsinizdir, ücretsiz olarak yüklemek için [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidin.
 
 ::: moniker-end
 
@@ -47,7 +53,7 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
 
 2. Üst menü çubuğundan Dosya Yeni **Proje'yi** >  > **seçin.**
 
-3. Sol **bölmede Yeni** Proje iletişim kutusunda, Visual Basic genişletin **ve** **ardından .NET Core'ı seçin.** Orta bölmede Konsol Uygulaması **(.NET Core) 'ı seçin.** Ardından projeye *HelloWorld adını girin.*
+3. Sol **bölmede Yeni** Proje iletişim kutusunda, Visual Basic genişletin **ve** **.NET Core'ı seçin.** Orta bölmede Konsol Uygulaması **(.NET Core) 'ı seçin.** Ardından projeye *HelloWorld adını girin.*
 
    ![Visual Studio IDE'de Yeni Proje iletişim kutusundaki Konsol Uygulaması (.NET Core) proje şablonu](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
 
@@ -61,18 +67,18 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> Bu Hızlı Başlangıçtaki ekran görüntülerden bazıları koyu temayı kullanır. Koyu temayı kullanıyorsanız ancak bunu yapmak için [IDE](quickstart-personalize-the-ide.md) ve Düzenleyici Visual Studio kişiselleştirme sayfasına bakın.
+> Bu Hızlı Başlangıçtaki ekran görüntülerden bazıları koyu temayı kullanır. Koyu temayı kullanmadıysanız ama bunu öğrenmek için Visual Studio [IDE](quickstart-personalize-the-ide.md) ve Düzenleyici sayfasını kişiselleştirme sayfasına bakın.
 
-1. 2019 Visual Studio açın.
+1. Visual Studio'yu açın.
 
 1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
    !['Yeni proje oluştur' penceresini görüntüleme](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. Yeni **proje oluştur penceresinde,** Dil **listesinden Visual Basic'yi** seçin. Ardından, Platform **listesinden Windows'u** ve **proje** türleri listesinden Konsol'u seçin.
+1. Yeni **proje oluştur penceresinde,** Dil **listesinden Visual Basic'yi** seçin. Ardından Platform **listesinden Windows'u** ve proje **türleri** listesinden Konsol'u seçin.
 
    Dil, platform ve proje türü filtrelerini uygulayan Konsol Uygulaması şablonunu **ve** ardından Sonraki'yi **seçin.**
 
@@ -87,7 +93,7 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
    >
    > ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](../get-started/media/dot-net-core-xplat-dev-workload.png)
    >
-   > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz isteniyor olabilir; varsa, bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin. Ardından bu "Proje oluşturma" yordamının[2. adımına](#create-a-project)geri dön.
+   > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz isteniyor olabilir; öyleyse, bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin. Ardından bu "Proje oluşturma" yordamının[2. adımına](#create-a-project)geri dön.
 
 1. Yeni **projenizi yapılandır penceresinde,** Proje adı kutusuna *WhatIsYourName* **yazın veya** girin. Ardından, **Sonraki'yi seçin.**
 

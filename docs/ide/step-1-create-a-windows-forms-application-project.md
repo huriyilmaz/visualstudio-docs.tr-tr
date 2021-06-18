@@ -12,12 +12,12 @@ ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b2bfba4f3035023a93588d4bc4c6e0f378f6b4eb
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: fccce125b66101b05544cba22b3724a8a40dc0f3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296579"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307745"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1. Adım: Windows Forms Uygulaması projesi oluşturma
 
@@ -40,9 +40,9 @@ Bir resim görüntüleyici oluşturduğunuzda, ilk adım Windows Forms bir uygul
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-## <a name="open-visual-studio-2019"></a>Visual Studio 2019 'yi açın
+## <a name="open-visual-studio"></a>Visual Studio’yu açın
 
 1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - administrator guide, Visual Studio
 - installing Visual Studio, administrator guide
 ms.assetid: 4af353f5-6cfd-4ebe-bcfb-f42306e451a0
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0b86d8bc6d3533d2ed50eb4e87330a81f1028f13
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: ba41c545c2af2e0490ef0410fde7849706123940
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547420"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306718"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio yönetici kılavuzu
 
@@ -34,7 +34,7 @@ Bu Yönetici Kılavuzu, ağ ortamlarında kurumsal dağıtım için senaryo taba
 
 Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken birkaç karar vardır:
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 * Her hedef bilgisayarın [En düşük yükleme gereksinimlerini](/visualstudio/releases/2019/system-requirements/)karşıladığından emin olun.
 
@@ -60,7 +60,7 @@ Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken b
 
   İnternet 'e bağlı olmayan bilgisayarlar için, en az bir düzen oluşturmak, çevrimdışı Visual Studio örneklerinizi güncelleştirmenin en kolay ve en hızlı yoludur. Daha fazla bilgi için bkz. [Visual Studio 'yu en düşük düzeyde çevrimdışı düzen kullanarak güncelleştirme](update-minimal-layout.md).
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 * Şirketinizin ihtiyaç duyacağı [iş yüklerini ve bileşenleri](workload-and-component-ids.md?view=vs-2019&preserve-view=true) belirleyin.
 
@@ -78,7 +78,7 @@ Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken b
 
 * Grup ilkesi etkinleştirmek istediğinize ve Visual Studio 'Yu tek bilgisayarlarda müşteri geri bildirimini devre dışı bırakacak şekilde yapılandırmak istiyorsanız.
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## <a name="step-1---download-visual-studio-product-files"></a>Adım 1-Visual Studio ürün dosyalarını Indirin
 

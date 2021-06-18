@@ -5,19 +5,19 @@ ms.date: 03/30/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 837F31AA-F121-46e9-9996-F8BCE768E579
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 02496f230338e429b281f2b0d516cb9a06fe9e7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5685de34235dcd9b903cbf5be6371ebf3f1e84c3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868536"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307550"
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-installation"></a>Visual Studio yüklemesi için komut satırı parametresi örnekleri
 
@@ -37,7 +37,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Etkileşimli istemler olmadan, ancak ilerleme görüntülenirken, Visual Studio 'nun minimal bir örneğini yükler:
 
-  ```cmd
+  ```shell
    vs_enterprise.exe --installPath C:\minVS ^
    --add Microsoft.VisualStudio.Workload.CoreEditor ^
    --passive --norestart
@@ -45,7 +45,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Komut satırını kullanarak bir Visual Studio örneğini güncelleştirme etkileşimli istemler, ancak ilerleme görüntülendi:
 
-   ```cmd
+   ```shell
    vs_enterprise.exe --update --quiet --wait
    vs_enterprise.exe update --wait --passive --norestart --installPath "C:\installPathVS"
    ```
@@ -55,7 +55,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Fransızca dil paketiyle, Visual Studio 'nun bir masaüstü örneğini sessizce, yalnızca ürün yüklendiğinde geri yükleme yapın.
 
-  ```cmd
+  ```shell
    vs_enterprise.exe --installPath C:\desktopVS ^
    --addProductLang fr-FR ^
    --add Microsoft.VisualStudio.Workload.ManagedDesktop ^
@@ -66,7 +66,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Sonraki komut yürütülmeden önce Visual Studio yükleyicisi 'nin tamamlanmasını beklemek için Batch dosyalarında veya betiklerinizde kullanın. Toplu iş dosyaları için, bir `%ERRORLEVEL%` ortam değişkeni, [Visual Studio 'yu yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) sayfasına belgelendiği gibi komutun dönüş değerini içerir. Bazı komut yardımcı programları, tamamlama için beklemek ve yükleyicinin dönüş değerini almak için ek parametreler gerektirir. Aşağıda, ' Start-Process ' PowerShell betiği komutuyla kullanılan ek parametrelerin bir örneği verilmiştir:
 
-   ```cmd
+   ```shell
    start /wait vs_professional.exe --installPath "C:\VS" --passive --wait > nul
    echo %errorlevel%
    ```
@@ -94,7 +94,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Visual Studio çekirdek Düzenleyicisi 'ni (en düşük Visual Studio yapılandırması) indirin. Yalnızca Ingilizce dil paketini dahil edin:
 
-  ```cmd
+  ```shell
    vs_community.exe --layout C:\VS ^
    --lang en-US ^
    --add Microsoft.VisualStudio.Workload.CoreEditor
@@ -102,7 +102,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * .NET masaüstü ve .NET Web iş yüklerini ve tüm önerilen bileşenlerle birlikte GitHub uzantısını indirin. Yalnızca Ingilizce dil paketini dahil edin:
 
-  ```cmd
+  ```shell
    vs_community.exe --layout C:\VS ^
    --lang en-US ^
    --add Microsoft.VisualStudio.Workload.NetWeb ^
@@ -115,7 +115,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Visual Studio Enterprise sürümünde bulunan tüm iş yüklerinin ve bileşenlerin etkileşimli bir yüklemesini başlatın:
 
-   ```cmd
+   ```shell
    vs_enterprise.exe --all
    ```
 
@@ -123,7 +123,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Node.js geliştirme desteğiyle, Visual Studio Community Edition 'ın zaten yüklü olduğu bir makineye ikinci, adlandırılmış bir Visual Studio Professional örneğini yükleyin:
 
-   ```cmd
+   ```shell
    vs_professional.exe --installPath C:\VSforNode ^
    --add Microsoft.VisualStudio.Workload.Node --includeRecommended --nickname VSforNode
   ```
@@ -134,7 +134,7 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Profil Oluşturma Araçları bileşenini varsayılan yüklü Visual Studio örneğinden kaldırın:
 
-  ```cmd
+  ```shell
    vs_enterprise.exe modify ^
    --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" ^
    --remove Microsoft.VisualStudio.Component.DiagnosticTools ^
@@ -147,9 +147,22 @@ Komut satırını kullanarak yükleyebileceğiniz iş yüklerinin ve bileşenler
 
 * Profil Oluşturma Araçları bileşenini varsayılan yüklü Visual Studio örneğinden kaldırın:
 
-  ```cmd
+  ```shell
    vs_enterprise.exe modify ^
    --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" ^
+   --remove Microsoft.VisualStudio.Component.DiagnosticTools ^
+   --passive
+  ```
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+* Profil Oluşturma Araçları bileşenini varsayılan yüklü Visual Studio örneğinden kaldırın:
+
+  ```shell
+   vs_enterprise.exe modify ^
+   --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" ^
    --remove Microsoft.VisualStudio.Component.DiagnosticTools ^
    --passive
   ```
@@ -190,13 +203,13 @@ Bu komut satırı komutu **15,9 sürümünde yenidir**. BT hakkında daha fazla 
 
 * Seçimi bir yüklemeden kaydetmek için dışarı aktarmayı kullanma:
 
-  ```cmd
+  ```shell
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --installPath "C:\VS" --config "C:\.vsconfig"
   ```
 
 * Özel seçimi sıfırdan kaydetmek için dışarı aktarmayı kullanma:
 
-  ```cmd
+  ```shell
   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe" export --add Microsoft.VisualStudio.Workload.ManagedDesktop --includeRecommended --config "C:\.vsconfig"
   ```
 
@@ -210,13 +223,13 @@ Bu komut satırı parametresi **15,9 ' de yenidir**. BT hakkında daha fazla bil
 
 * Önceden kaydedilmiş bir yükleme yapılandırma dosyasından iş yüklerini ve bileşenleri yüklemek için--config kullanma:
 
-  ```cmd
+  ```shell
   vs_enterprise.exe --config "C:\.vsconfig" --installPath "C:\VS"
   ```
 
 * Var olan bir yüklemeye iş yüklerini ve bileşenleri eklemek için--config kullanma:
 
-  ```cmd
+  ```shell
   vs_enterprise.exe modify --installPath "C:\VS" --config "C:\.vsconfig"
   ```
 

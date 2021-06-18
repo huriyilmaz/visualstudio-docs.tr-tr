@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 38e5f612c6a9b39874c952560627e04c26fafc25
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 349483a672b8240f7ca622638221766d6da4864c
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897978"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308161"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio geri bildirim seçenekleri
 
@@ -28,11 +28,11 @@ Neden bize geri bildirim gönderilsin? Müşteri geri bildirimi önemli bir işl
 
 ## <a name="report-a-problem"></a>Sorun bildirin
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio ile &mdash; kilitlenmeler, yavaş performans veya beklenmedik davranış gibi sorunlarla karşılaşırsanız &mdash; **sorun bildir** aracını kullanarak bize bilgi verin. Visual Studio 'da, sağ üst köşedeki geri bildirim simgesini seçin veya   >  menü çubuğundan sorun bildir Yardım **geri bildirim gönder**' i seçin  >   .
 
-![Visual Studio 2019 IDE 'de geri bildirim gönder simgesi](./media/vs-2019/send-feedback-icon.png)
+![Visual Studio IDE 'de geri bildirim gönder simgesi](./media/vs-2019/send-feedback-icon.png)
 
 Ardından, Visual Studio, sorunu bildirmek için oturum açabileceğiniz [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) arabirimini açar. Daha fazla bilgi için bkz. [Visual Studio ile sorun bildirme](how-to-report-a-problem-with-visual-studio.md).
 
@@ -50,7 +50,7 @@ Ardından, Visual Studio, sorunu bildirmek için oturum açabileceğiniz [Geliş
 
 ## <a name="suggest-a-feature"></a>Bir özellik önerin
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio 'Yu daha iyi hale getirmek için bir fikir veya öneriniz varsa, **bir özellik öner** aracını kullanarak bize bilgi verin. Visual Studio 'da, sağ üst köşedeki geri bildirim simgesini seçin veya   >  menü çubuğunda bir özellik önermek için Yardım **geri bildirim gönder**' i seçin  >   .
 

@@ -12,12 +12,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: cbb85c41a01a03461bc1a73bdb58620e8a0c472f
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 5048a92f2a8029a4d4fc1c4c44d14f1630116e83
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112113207"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307940"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>Hızlı başlangıç: Visual Studio 'Yu kullanarak ilk ASP.NET Core Web hizmetinizi F 'de oluşturun\#
 
@@ -32,6 +32,12 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 ::: moniker range="vs-2019"
 
 Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Zaten Visual Studio 2022 Preview sürümünü yüklemediyseniz, ücretsiz olarak yüklemek için [Visual studio 2022 Preview İndirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
 
 ::: moniker-end
 

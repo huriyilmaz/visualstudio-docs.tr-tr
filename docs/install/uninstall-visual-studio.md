@@ -9,19 +9,19 @@ f1_keywords:
 - uninstall
 - uninstall Visual Studio
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7d7c4400d553d8244d3b9239f0b0a984d382c99a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d34a5be9598682982c3918aafec7725e59d6f92
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959174"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306793"
 ---
 # <a name="uninstall-visual-studio"></a>Visual Studio'yu kaldırma
 
@@ -68,7 +68,7 @@ Visual Studio 2017 ve Visual Studio Yükleyicisi tüm yüklemelerini makinenizde
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Bilgisayarınızda **Visual Studio yükleyicisi** bulun.
 
@@ -91,14 +91,14 @@ Visual Studio 2017 ve Visual Studio Yükleyicisi tüm yüklemelerini makinenizde
 
      ![Visual Studio onayını kaldır](media/vs-2019/uninstall-visualstudio-confirm.png "Visual Studio 2019 ' i kaldırmak istediğinizi onaylayın")
 
-Daha sonra fikrinizi değiştirirseniz ve Visual Studio 2019 ' i yeniden yüklemek istiyorsanız Visual Studio Yükleyicisi yeniden başlatın, **kullanılabilir** sekmesini seçin, yüklemek Istediğiniz Visual Studio sürümünü seçin ve ardından **Yükle**' yi seçin.
+Daha sonra fikrinizi değiştirirseniz ve Visual Studio 2019 veya 2022 sürümünü yeniden yüklemek istiyorsanız Visual Studio Yükleyicisi yeniden başlatın, **kullanılabilir** sekmesini seçin, yüklemek Istediğiniz Visual Studio sürümünü seçin ve ardından **Yükle**' yi seçin.
 
 ## <a name="uninstall-visual-studio-installer"></a>Visual Studio Yükleyicisi kaldır
 
-Visual Studio 2019 ve Visual Studio Yükleyicisi tüm yüklemelerini makinenizden kaldırmak için, uygulamalardan & özelliklerden kaldırın.
+Visual Studio 2019, Visual Studio 2022 ' nin tüm yüklemelerini ve Visual Studio Yükleyicisi makinenizden kaldırmak için, uygulamalardan & özelliklerden kaldırın.
 
 1. Windows 10 ' da, "aramak için buraya yazın" kutusuna **uygulamalar ve Özellikler** yazın.
-1. **Visual Studio 2019**' i bulun.
+1. **Visual studio 2019** veya **Visual Studio 2022** bulun.
 1. **Kaldır**' ı seçin.
 1. Ardından **Microsoft Visual Studio yükleyiciyi** bulun.
 1. **Kaldır**' ı seçin.

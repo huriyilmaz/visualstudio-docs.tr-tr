@@ -19,12 +19,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a90198ce4cf3dc54eedbf80bbf4ffbad634cbc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 007e82ee7c1c2839ba266794432605f1f92a1669
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836494"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307797"
 ---
 # <a name="autorecover-environment-options-dialog-box"></a>Otomatik kurtarma, ortam, Seçenekler iletişim kutusu
 
@@ -35,6 +35,12 @@ Bu iletişim kutusuna erişmek için **Araçlar**  >  **Seçenekler**  >  **orta
 :::image type="content" source="media/autorecover-options.png" alt-text="Seçenekler iletişim kutusundaki otomatik kurtarma bölümünün ekran görüntüsü":::
 
 **Otomatik Kurtarma bilgilerini her [n] dakikada bir Kaydet**
+
+::: moniker range=">=vs-2022"
+
+Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar için, Visual Studio dosyanın bir kopyasını ***%LocalAppData%\microsoft\visualstudio\backupfiles \\ [ProjectName]*** dizinine kaydeder. Dosya yeni ise ve henüz kaydetmediyseniz, Visual Studio otomatik olarak rastgele oluşturulmuş bir dosya adı kullanarak kaydeder.
+
+::: moniker-end
 
 ::: moniker range="vs-2019"
 

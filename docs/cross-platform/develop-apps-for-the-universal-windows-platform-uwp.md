@@ -1,6 +1,6 @@
 ---
 title: Evrensel Windows Platformu (UWP) için uygulama geliştirme
-description: Visual Studio ve Evrensel Windows Platformu geliştirme araçlarını kullanarak uygulama oluşturma hakkında bilgi edinin.
+description: Visual Studio ve Evrensel Windows Platformu hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 10/24/2017
 ms.technology: vs-ide-general
@@ -11,65 +11,65 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 906097e0356922cdcc5afbabb1771348962ea4ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54fdd71d848d1edad93fe38598d71c9dbbede7f
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859508"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308122"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP) için uygulama geliştirme
 
-Evrensel Windows Platformu ve tek bir Windows çekirdeğiyle aynı uygulamayı, telefonlardan masaüstü bilgisayarlardan herhangi bir Windows 10 cihazında çalıştırabilirsiniz. Bu Evrensel Windows uygulamalarını Visual Studio ve Evrensel Windows uygulama geliştirme araçları ile oluşturun.
+Evrensel Windows Platformu ve tek Windows çekirdeğimiz ile aynı uygulamayı telefonlardan masaüstüne Windows 10 herhangi bir cihazda çalıştırabilirsiniz. Visual Studio ve Evrensel Windows Uygulaması geliştirme araçlarıyla bu Evrensel Windows uygulamalarını oluşturun.
 
 ![Evrensel Windows Platformu](../cross-platform/media/uwp_coreextensions.png)
 
-Uygulamanızı bir Windows 10 Phone, Windows 10 Masaüstü veya Xbox üzerinde çalıştırın. Aynı uygulama paketidir! Windows 10 tek ve birleştirilmiş çekirdeği kullanıma sunulmasıyla birlikte, tek bir uygulama paketi tüm platformlarda çalıştırılabilir. Birkaç platformda, platforma özgü davranışlardan yararlanmak üzere uygulamanıza ekleyebileceğiniz Uzantı SDK 'Ları vardır. Örneğin, mobil için bir uzantı SDK 'Sı, bir Windows Phone 'a basıldığında geri düğmesini işler. Projenizde bir uzantı SDK 'sına başvurdıysanız, bu SDK 'nın o platformda kullanılabilir olup olmadığını test etmek için yalnızca çalışma zamanı denetimleri ekleyin. Her platform için aynı uygulama paketine sahip olabilirsiniz!
+Uygulamayı telefon, Windows 10 masaüstünde veya Xbox Windows 10 çalıştırın. Bu aynı uygulama paketidir! Tek ve birleşik Windows 10 ile tüm platformlarda tek bir uygulama paketi çalışır. Çeşitli platformlarda, platforma özgü davranışlardan yararlanmak için uygulamanıza ek olarak ekleyebilirsiniz uzantı SDK'leri vardır. Örneğin, mobil için uzantı SDK'sı, Windows phone'da basılmış olan geri düğmesini işler. Projeniz içinde bir uzantı SDK'sına başvurursanız, o SDK'nın o platformda kullanılabilir olup olduğunu test etmek için çalışma zamanı denetimleri eklemeniz gerekir. Her platform için aynı uygulama paketine sahip olmak için bu şekilde devam edin!
 
 **Windows çekirdeği nedir?**
 
-İlk kez Windows 10 ' un tüm Windows 10 platformlarındaki ortak bir çekirdeğe sahip olması yeniden düzenlenmiş. Tek bir ortak kaynak, bir ortak Windows çekirdeği, bir dosya g/ç yığını ve bir uygulama modeli vardır. Kullanıcı arabirimi için yalnızca bir XAML kullanıcı arabirimi çerçevesi ve bir HTML UI çerçevesi vardır. Uygulamanızın farklı Windows 10 cihazlarında çalışmasını kolaylaştıran harika bir uygulama oluşturmaya odaklanabilirsiniz.
+Windows ilk kez tüm platformlarda ortak bir çekirdek olacak şekilde yeniden Windows 10. Bir ortak kaynak, bir ortak Windows çekirdeği, bir dosya I/O yığını ve bir uygulama modeli vardır. Kullanıcı arabirimi için yalnızca bir XAML UI çerçevesi ve bir HTML UI çerçevesi vardır. Harika bir uygulama oluşturmaya odaklanabilirsiniz çünkü biz uygulamalarınızı farklı cihazlarda çalıştırmayı Windows 10.
 
-**Evrensel Windows Platformu tam olarak nedir?**
+**Tam olarak hangi Evrensel Windows Platformu?**
 
-Evrensel Windows Platformu yalnızca sözleşmelerin ve sürümlerin bir koleksiyonudur. Bu, uygulamanızın çalıştırılacağı yeri hedeflemesini sağlar. Artık bir işletim sistemini hedeflemiyor; Artık bir veya daha fazla cihaz ailelerini hedefleyebilirsiniz. [Evrensel Windows platformu girişi](/windows/uwp/get-started/universal-application-platform-guide)okuyarak daha fazla bilgi edinin.
+Bu Evrensel Windows Platformu, yalnızca anlaşmalardan ve sürümlerden bir koleksiyondur. Bunlar, uygulamanın nerede çalıştırılaylarını hedeflemenize olanak sağlar. Artık bir işletim sistemini hedeflemezsiniz; artık bir veya daha fazla cihaz ailelerini hedefleyebilirsiniz. [Evrensel Windows Platformu'a giriş'i okuyarak daha fazla ayrıntı Evrensel Windows Platformu.](/windows/uwp/get-started/universal-application-platform-guide)
 
 ## <a name="requirements"></a>Gereksinimler
 
-Evrensel Windows uygulama geliştirme araçları, uygulamanızın farklı cihazlarda nasıl göründüğünü görmek için kullanabileceğiniz öykünücülerle gelir. Bu öykünücüleri kullanmak istiyorsanız, bu yazılımı bir fiziksel makineye yüklemeniz gerekir. Fiziksel makinenin Windows 8.1 (x64) Professional sürümü veya üstünü çalıştırması ve Istemci Hyper-V ve Ikinci düzey adres çevirisi 'ni (SLAT) destekleyen bir işlemcisi olması gerekir. Sanal makineye Visual Studio yüklendiğinde Öykünücüler kullanılamaz.
+Evrensel Windows Uygulaması geliştirme araçları, uygulamanın farklı cihazlarda nasıl göründüğünü görmek için kullanabileceğiniz öykünücülerle birlikte gelir. Bu öykünücüleri kullanmak için bu yazılımı fiziksel bir makineye yüklemeniz gerekir. Fiziksel makinenin Windows 8.1 (x64) Professional sürümünü veya daha yüksek bir sürümünü çalıştırması ve İstemci Hyper-V ile İkinci Düzey Adres Çevirisi (SLAT) destekleyen bir işlemcisi olması gerekir. Öykünücüler, sanal Visual Studio makineye yüklenirken kullanılamaz.
 
-İhtiyacınız olan yazılımın listesi aşağıda verilmiştir:
+İşte ihtiyacınız olan yazılımların listesi:
 
 ::: moniker range="vs-2017"
 
-- [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). Visual Studio 2017, yalnızca Windows 10 ' da UWP geliştirmeyi destekler. Daha ayrıntılı bilgi için bkz. Visual Studio [Platform hedefleme](/visualstudio/productinfo/vs2017-compatibility-vs) ve [sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-vs).
+- [Windows 10.](https://support.microsoft.com/help/17777/downloads-for-windows) Visual Studio 2017, UWP geliştirmeyi yalnızca Windows 10. Diğer ayrıntılar için bkz. Visual Studio [Platform hedefleme ve](/visualstudio/productinfo/vs2017-compatibility-vs) Sistem [gereksinimleri.](/visualstudio/productinfo/vs2017-system-requirements-vs)
 
-- [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download). Ayrıca, isteğe bağlı Evrensel Windows Platformu geliştirme iş yüküne da ihtiyacınız olacaktır.
-
-     ![UWP iş yükü](media/uwp_workload.png)
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-- [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows). Visual Studio 2019, yalnızca Windows 10 ' da UWP geliştirmeyi destekler. Daha ayrıntılı bilgi için bkz. Visual Studio [Platform hedefleme](/visualstudio/releases/2019/compatibility/) ve [sistem gereksinimleri](/visualstudio/releases/2019/system-requirements/).
-
-- [Visual Studio](https://visualstudio.microsoft.com/downloads). Ayrıca, isteğe bağlı Evrensel Windows Platformu geliştirme iş yüküne da ihtiyacınız olacaktır.
+- [Visual Studio.](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) Ayrıca isteğe bağlı geliştirme Evrensel Windows Platformu gerekir.
 
      ![UWP iş yükü](media/uwp_workload.png)
 
 ::: moniker-end
 
-Bu yazılımı yükledikten sonra, Windows 10 cihazınızı geliştirme için etkinleştirmeniz gerekir. Bkz. [cihazınızı geliştirme Için etkinleştirme](/windows/uwp/get-started/enable-your-device-for-development). Her Windows 10 cihazı için artık bir geliştirici lisansına ihtiyacınız yoktur.
+::: moniker range=">=vs-2019"
+
+- [Windows 10.](https://support.microsoft.com/help/17777/downloads-for-windows) Visual Studio 2019, UWP geliştirmeyi yalnızca Windows 10. Diğer ayrıntılar için bkz. Visual Studio [Platform hedefleme ve](/visualstudio/releases/2019/compatibility/) Sistem [gereksinimleri.](/visualstudio/releases/2019/system-requirements/)
+
+- [Visual Studio.](https://visualstudio.microsoft.com/downloads) Ayrıca isteğe bağlı geliştirme Evrensel Windows Platformu gerekir.
+
+     ![UWP iş yükü](media/uwp_workload.png)
+
+::: moniker-end
+
+Bu yazılımı yükledikten sonra, geliştirme için Windows 10 etkinleştirmeniz gerekir. Bkz. [Cihazınızı geliştirme için etkinleştirme.](/windows/uwp/get-started/enable-your-device-for-development) Artık her bir cihaz için geliştirici lisansına Windows 10 gerekir.
 
 ## <a name="universal-windows-apps"></a>Evrensel Windows uygulamaları
 
-C#, Visual Basic, C++ veya JavaScript 'te tercih ettiğiniz geliştirme dilini seçerek Windows 10 cihazları için bir Evrensel Windows Platformu uygulaması oluşturun. [İlk uygulamanızı oluşturma](/windows/uwp/get-started/your-first-app) konusunu okuyun veya [Windows 10 Için Araçlar 'a genel bakış](https://channel9.msdn.com/Series/ConnectOn-Demand/229) videosunu izleyin.
+C#, Visual Basic, C++ veya JavaScript'te tercih ettiğiniz geliştirme dilini seç Evrensel Windows Platformu cihazlar için bir Windows 10 oluşturun. İlk [uygulamanızı oluşturma makalenizi okuyun](/windows/uwp/get-started/your-first-app) veya Windows 10 [Için Araçlar videosunu](https://channel9.msdn.com/Series/ConnectOn-Demand/229) izleyin.
 
-Visual Studio 2015 ile oluşturulmuş Windows Mağazası 8,1 uygulamalarınız, Windows Phone 8,1 uygulamaları veya Evrensel Windows uygulamaları varsa, en son Evrensel Windows Platformu kullanmak için bu uygulamaların bağlantı noktası oluşturmanız gerekir. Bkz. [Windows çalışma zamanı 8. x ÖĞESINDEN UWP 'e taşıma](/windows/uwp/porting/w8x-to-uwp-root).
+Mevcut Windows Mağazası 8.1 uygulamalarınız, Windows Phone 8.1 uygulamalarınız veya Visual Studio 2015 ile oluşturulmuş Evrensel Windows uygulamalarınız varsa, en son uygulamaları kullanmak için bu uygulamaları Evrensel Windows Platformu. Bkz. [Windows Çalışma Zamanı 8.x'den UWP'ye taşıma.](/windows/uwp/porting/w8x-to-uwp-root)
 
-Evrensel Windows uygulamanızı oluşturduktan sonra uygulamanızı bir Windows 10 cihazına yüklemek veya Windows Mağazası 'na göndermek için paketlemeyi yapmanız gerekir. Bkz. [paketleme uygulamaları](/windows/uwp/packaging/index).
+Evrensel Windows uygulamanızı oluşturduk sonra, bir uygulama cihazına yüklemek için Windows 10 veya Windows Mağazası'ya göndermeniz gerekir. Bkz. [Uygulamaları paketleme.](/windows/uwp/packaging/index)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da platformlar arası mobil geliştirme](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)
+- [Visual Studio'de platformlar arası mobil Visual Studio](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)

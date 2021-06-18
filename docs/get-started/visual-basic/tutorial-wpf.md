@@ -14,12 +14,12 @@ ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: f337551c16aa63b606c10492bab9956a92cbe141
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 5fc5b9308c854649a4f10482a54ff395bec5d8df
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295435"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308200"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>Öğretici: Visual Basic ile basit bir uygulama oluşturma
 
@@ -31,9 +31,15 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
 Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Zaten Visual Studio 2022 Preview sürümünü yüklemediyseniz, ücretsiz olarak yüklemek için [Visual studio 2022 Preview İndirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
 
 ::: moniker-end
 
@@ -77,9 +83,9 @@ Visual Studio HelloWPFApp projesini ve çözümünü oluşturur ve **Çözüm Ge
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Visual Studio 2019 ' i açın.
+1. Visual Studio'yu açın.
 
 2. **Yeni proje oluştur** ekranında, "WPF" araması yapın ve **WPF uygulaması (.NET Framework)** öğesini seçin ve ardından **İleri**' yi seçin.
 
@@ -190,19 +196,19 @@ Ekleyeceğiniz son UI öğesi bir [düğme](/dotnet/framework/wpf/controls/butto
 
 2. XAML görünümünde düğme denetimi için **içerik** değerini `Content="Button"` olarak değiştirin `Content="Display"` ve ardından değişiklikleri kaydedin.
 
-     Biçimlendirme aşağıdaki örneğe benzemelidir:   `<Button Content="Display" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="215,204,0,0"/>`
+     İşaretleme aşağıdaki örnekteki gibi bir işaretleme gerçekleştirebilir:   `<Button Content="Display" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="215,204,0,0"/>`
 
      Pencereniz aşağıdaki gösterime benzemelidir.
 
-     ![Denetim etiketleriyle Greetings formu](../media/exploreide-greetingswithcontrollabels.png)
+     ![Denetim etiketleri içeren Greetings formu](../media/exploreide-greetingswithcontrollabels.png)
 
 ### <a name="add-code-to-the-display-button"></a>Görüntü düğmesine kod ekleme
 
-Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings. xaml. vb* veya *Greetings. xaml. cs* içindeki olaya kod ekleyeceksiniz.
+Bu uygulama çalıştırıldığında, bir kullanıcı radyo düğmesini seçtikten sonra ve ardından Görüntüle düğmesini seçtikten sonra bir ileti **kutusu** görüntülenir. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings.xaml.vb veya Greetings.xaml.cs* içinde olayına *kod ekleyebilirsiniz.*
 
-1. Tasarım yüzeyinde **görüntüle** düğmesine çift tıklayın.
+1. Tasarım yüzeyinde Görüntüle düğmesine **çift** tıklayın.
 
-     *Greetings. xaml. vb* , olayında imleç ile açılır `Button_Click` .
+     *Greetings.xaml.vb* açılır ve olayda imleci `Button_Click` yer alır.
 
     ```vb
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
@@ -224,31 +230,31 @@ Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten son
 
 ## <a name="debug-and-test-the-application"></a>Uygulamanın hatalarını ayıklama ve test etme
 
-Sonra, hataları bulmak ve her iki ileti kutusunun doğru şekilde göründüğünü sınamak için uygulamada hata ayıklaması yapacaksınız. Aşağıdaki yönergelerde hata ayıklayıcıyı nasıl derleyip başlatacağınız, ancak daha sonra daha fazla bilgi için WPF [uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf) ve [WPF hata ayıklama](../../debugger/debugging-wpf.md) işlemlerini okuyabilirsiniz.
+Ardından, hatalara bakmak için uygulamada hata ayıklar ve her iki ileti kutusu için de doğru görüntü olduğunu test edersiniz. Aşağıdaki yönergeler hata ayıklayıcıyı derlemeyi ve başlatmayı söyler, ancak daha sonra daha fazla bilgi için WPF uygulaması [oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf) ve [WPF'de](../../debugger/debugging-wpf.md) Hata Ayıklama makalelerini okuyabilirsiniz.
 
 ### <a name="find-and-fix-errors"></a>Hataları bulma ve düzeltme
 
-Bu adımda, daha önce *MainWindow. xaml* dosyasının adını değiştirerek neden olduğumuz hatayı bulacaksınız.
+Bu adımda, *MainWindow.xaml* dosyasının adını değiştirerek daha önce neden olduğu hatayı bulabilirsiniz.
 
 #### <a name="start-debugging-and-find-the-error"></a>Hata ayıklamayı başlatma ve hatayı bulma
 
-1. **F5** tuşuna basarak veya **Hata Ayıkla**' yı seçerek hata ayıklayıcıyı başlatın ve ardından **hata ayıklamayı başlatın**.
+1. F5 tuşuna basarak veya **Hata Ayıkla'ya** ve ardından **Hata Ayıklamayı** **Başlat'ı seçerek hata ayıklayıcıyı başlatma.**
 
-   **Kesme modu** penceresi görünür ve **Çıkış** penceresi bir IOException oluştuğunu belirtir: ' MainWindow. xaml ' kaynağı bulunamıyor.
+   Kesme **Modu penceresi** görüntülenir  ve Çıkış penceresi bir IOException olduğunu gösterir: 'mainwindow.xaml' kaynağı bulunamaz.
 
-   ![IOException iletisinin ekran görüntüsü](../media/exploreide-ioexception.png)
+   ![IOException iletisi ekran görüntüsü](../media/exploreide-ioexception.png)
 
-2. Hata ayıklamayı Durdur hata ayıklamayı **Durdur seçeneğini belirleyerek** durdurun  >  .
+2. Hata Ayıklama Hata Ayıklamayı **Durdur'u**  >  **seçerek hata ayıklayıcıyı durdurun.**
 
-Bu öğreticinin başlangıcında *MainWindow. xaml* ' i *Greetings. xaml* olarak yeniden adlandırdık, ancak kod yine de uygulama için başlangıç URI 'si olarak *MainWindow. xaml* 'e başvuruyor, bu nedenle proje başlatılamıyor.
+Bu öğreticinin başında *MainWindow.xaml* adını *Greetings.xaml* olarak yeniden adlandırıldık, ancak kod yine de uygulamanın başlangıç URI'si olarak *MainWindow.xaml'i* ifade eder ve bu nedenle proje başlatılamaz.
 
-#### <a name="specify-greetingsxaml-as-the-startup-uri"></a>Başlangıç URI 'SI olarak Greetings. xaml belirtin
+#### <a name="specify-greetingsxaml-as-the-startup-uri"></a>Başlangıç URI'si olarak Greetings.xaml belirtin
 
-1. **Çözüm Gezgini**, *Application. xaml* dosyasını açın.
+1. Uygulama **Çözüm Gezgini** *Application.xaml dosyasını* açın.
 
-2. `StartupUri="MainWindow.xaml"`Olarak değiştirin `StartupUri="Greetings.xaml"` ve değişiklikleri kaydedin.
+2. olarak `StartupUri="MainWindow.xaml"` `StartupUri="Greetings.xaml"` değişiklik yapın ve ardından değişiklikleri kaydedin.
 
-Hata ayıklayıcıyı yeniden başlatın ( **F5** tuşuna basın). Uygulamanın **Greetings** penceresini görmeniz gerekir.
+Hata ayıklayıcıyı yeniden başlatma **(F5 tuşuna basın).** Uygulamanın **Greetings penceresini** görüyor gerekir.
 
 ::: moniker range="vs-2017"
 ![Çalışan uygulamanın ekran görüntüsü](media/exploreide-wpf-running-app.png)
@@ -257,63 +263,63 @@ Hata ayıklayıcıyı yeniden başlatın ( **F5** tuşuna basın). Uygulamanın 
 ![Çalışan uygulamanın ekran görüntüsü](media/vs-2019/exploreide-wpf-running-app.png)
 ::: moniker-end
 
- Hata ayıklamayı durdurmak için şimdi uygulama penceresini kapatın.
+ Şimdi hata ayıklamayı durdurmak için uygulama penceresini kapatın.
 
-### <a name="debug-with-breakpoints&quot;></a>Kesme noktalarıyla hata ayıkla
+### <a name="debug-with-breakpoints&quot;></a>Kesme noktalarıyla hata ayıklama
 
-Hata ayıklama sırasında bazı kesme noktaları ekleyerek kodu test edebilirsiniz. Kesme   >  **noktası geçiş noktasını** seçerek, kesmenin gerçekleşmesini istediğiniz kod satırının yanındaki düzenleyicinin sol kenar boşluğuna tıklayarak veya **F9** tuşuna basarak kesme noktaları ekleyebilirsiniz.
+Bazı kesme noktaları ekleyerek hata ayıklama sırasında kodu test etmek için kullanabilirsiniz. Kesme noktaları eklemek için Hata Ayıklama Kesme Noktası Geçişini Değiştir'i seçerek, kesmenin gerçekleşmesini istediğiniz kod çizgisinin yanındaki düzenleyicinin sol kenar boşluğuna tıklayarak veya  >  F9 tuşuna basarak **ebilirsiniz.**
 
 #### <a name=&quot;add-breakpoints&quot;></a>Kesme noktası ekleme
 
-1. *Greetings. xaml. vb* dosyasını açın ve aşağıdaki satırı seçin:`MessageBox.Show(&quot;Hello.")`
+1. *Greetings.xaml.vb'yi* açın ve aşağıdaki satırı seçin:`MessageBox.Show(&quot;Hello.")`
 
-2. **Hata Ayıkla**' yı ve ardından **kesme noktası**' nı seçip menüden **F9** tuşuna basarak bir kesme noktası ekleyin.
+2. F9 tuşuna basarak veya **menüden** Hata Ayıkla'ya ve ardından Kesme Noktası Aç/Aç/Aç'ı **seçerek bir kesme noktası ekleyin.**
 
    Düzenleyici penceresinin en sol kenar boşluğunda, kod satırının yanında kırmızı bir daire görünür.
 
-3. Aşağıdaki satırı seçin: `MessageBox.Show("Goodbye.")` .
+3. Şu satırı seçin: `MessageBox.Show("Goodbye.")` .
 
-4. Bir kesme noktası eklemek için **F9** tuşuna basın ve sonra hata ayıklamayı başlatmak için **F5** 'e basın.
+4. Kesme noktası **eklemek için F9** tuşuna basın ve ardından hata ayıklamayı **başlatmak için F5** tuşuna basın.
 
-5. **Tebrikler** penceresinde, **Merhaba** radyo düğmesini seçin ve ardından **görüntüle** düğmesini seçin.
+5. Selamlama **penceresinde** Hello radyo **düğmesini** ve ardından Görüntüle **düğmesini** seçin.
 
-   Çizgi `MessageBox.Show("Hello.")` sarı renkle vurgulanır. IDE 'nin en altında, oto, Yereller ve Watch pencereleri, sol tarafa birlikte yerleştirilir ve çağrı yığını, kesme noktaları, özel durum ayarları, komut, anlık ve çıkış pencereleri sağ tarafta birlikte yerleştirilir.
+   Satır `MessageBox.Show("Hello.")` sarıyla vurgulanır. IDE'nin alt kısmında, Sol tarafta Otomatikler, Yereller ve İzleme pencereleri bir araya, Çağrı Yığını, Kesme Noktaları, Özel Durum Ayarları, Komut, Anlık ve Çıkış pencereleri ise sağ tarafta birlikte yer almaktadır.
 
-   ![Hata ayıklayıcıda kesme noktası ekran görüntüsü](media/exploreide-debugbreakpoint.png)
+   ![Hata ayıklayıcısında kesme noktası ekran görüntüsü](media/exploreide-debugbreakpoint.png)
 
-6. Menü çubuğunda **Hata Ayıkla**  >  **Step Out**' ı seçin.
+6. Menü çubuğunda Hata Ayıkla **Adım At'ı**  >  **seçin.**
 
-     Uygulama yürütmeyi sürdürür ve "Hello&quot; sözcüğünü içeren bir ileti kutusu görünür.
+     Uygulama yürütmeyi sürdürür ve "Hello&quot; sözcüğüyle bir ileti kutusu görüntülenir.
 
-7. İletiyi kapatmak için ileti kutusunda **Tamam** düğmesini seçin.
+7. kapatmak **için** ileti kutusunda Tamam düğmesini seçin.
 
-8. **Tebrikler** penceresinde, **güle** radyo düğmesini seçin ve ardından **görüntüle** düğmesini seçin.
+8. Selamlama **penceresinde** Güle Güle radyo **düğmesini** ve ardından Görüntüle **düğmesini** seçin.
 
-     Çizgi `MessageBox.Show(&quot;Goodbye.")` sarı renkle vurgulanır.
+     Satır `MessageBox.Show(&quot;Goodbye.")` sarıyla vurgulanır.
 
-9. Hata ayıklamaya devam etmek için **F5** tuşunu seçin. İleti kutusu göründüğünde kapatmak için ileti kutusunda **Tamam** düğmesini seçin.
+9. Hata **ayıklamaya devam etmek** için F5 tuşuna basın. İleti kutusu görüntülendiğinde, kapatmak **için** ileti kutusunda Tamam düğmesini seçin.
 
 10. Hata ayıklamayı durdurmak için uygulama penceresini kapatın.
 
-11. Menü çubuğunda, **Hata Ayıkla**  >  **tüm kesme noktalarını devre dışı bırak**' ı seçin.
+11. Menü çubuğunda Hata Ayıkla Tüm **Kesme Noktaları'nın**  >  **Devre Dışı Bırak'ı seçin.**
 
-### <a name="view-a-representation-of-the-ui-elements"></a>UI öğelerinin gösterimini görüntüleme
+### <a name="view-a-representation-of-the-ui-elements"></a>Kullanıcı arabirimi öğelerinin bir gösterimini görüntüleme
 
-Çalışan uygulamada, pencerenizin en üstünde görüntülenen bir pencere öğesi görmeniz gerekir. Bu, bazı yararlı hata ayıklama özelliklerine hızlı erişim sağlayan bir çalışma zamanı yardımcıdır. İlk düğmesine tıklayın, **canlı görsel ağaç**' a gidin. Sayfanızın tüm görsel öğelerini içeren bir ağacı olan bir pencere görmeniz gerekir. Eklediğiniz düğmeleri bulmak için düğümleri genişletin.
+Çalışan uygulamada, pencerenizin üst kısmında görünen bir pencere öğesi görüyor olun. Bu, bazı yararlı hata ayıklama özelliklerine hızlı erişim sağlayan bir çalışma zamanı yardımcıdır. İlk düğmeye tıklayın, **Canlı Görsel Ağaç'a gidin.** Sayfanın tüm görsel öğelerini içeren bir ağaç içeren bir pencere görüyor gerekir. Eklenen düğmeleri bulmak için düğümleri genişletin.
 
-![Canlı görsel ağaç penceresinin ekran görüntüsü](media/vs-2019/exploreide-live-visual-tree.png)
+![Canlı Görsel Ağaç penceresinin ekran görüntüsü](media/vs-2019/exploreide-live-visual-tree.png)
 
 ### <a name="build-a-release-version-of-the-application"></a>Uygulamanın yayın sürümünü oluşturma
 
-Her şeyin çalıştığından emin olduğunuza göre, uygulamanın yayın derlemesini hazırlayabilirsiniz.
+Her şeyin çalıştığını doğruladıktan sonra uygulamanın yayın derlemesi hazırlanabilir.
 
-1. Ana menüde,   >  önceki derlemeler sırasında oluşturulan ara dosyaları ve çıktı dosyalarını silmek için **temiz çözüm** oluştur ' u seçin. Bu gerekli değildir, ancak hata ayıklama oluşturma çıkışlarını temizler.
+1. Ana menüde, önceki **derlemeler sırasında** oluşturulan ara dosyaları ve çıkış dosyalarını silmek için Derleme Temizleme  >   çözümü'ne tıklayın. Bu gerekli değildir, ancak hata ayıklama derleme çıkışlarını temizler.
 
-2. Araç çubuğundaki DropDown denetimini kullanarak HelloWPFApp için derleme yapılandırmasını **hata ayıklamadan** **Yayınla** değiştirin (Şu anda "hata ayıkla" ifadesini alır).
+2. Araç çubuğundaki açılır menü denetimiyle HelloWPFApp derleme yapılandırmasını Hata Ayıklama'dan Sürüm'e (şu anda "Hata Ayıkla" olarak görünür) değiştirebilirsiniz.  
 
-3. **Build**  >  **Build Solution** öğesini seçerek çözümü oluşturun.
+3. Çözümü Derleme **Çözümü'dür'dür'**  >  **seçerek çözümü derleme.**
 
-Tebrikler, bu öğreticiyi tamamlama! Çözümünüz ve proje dizininiz (*. ..\Hellowpfapp\hellowpfapp\bin\release*) altında oluşturduğunuz *. exe dosyasını* bulabilirsiniz.
+Tebrikler, bu öğreticiyi tamamladıktan sonra! Çözüm ve proje *.exe* (*...\HelloWPFApp\HelloWPFApp\bin\Release*) altında yerleşik olarak bulundurduyabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -326,7 +332,13 @@ Tebrikler, bu öğreticiyi tamamlama! Çözümünüz ve proje dizininiz (*. ..\H
 
 ::: moniker range="vs-2019"
 
-- [Visual Studio 2019 ' deki yenilikler](../../ide/whats-new-visual-studio-2019.md)
+- [Visual Studio 2019'daki yeniler](../../ide/whats-new-visual-studio-2019.md)
+- [Üretkenlik ipuçları](../../ide/productivity-features.md)
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
 - [Üretkenlik ipuçları](../../ide/productivity-features.md)
 
 ::: moniker-end

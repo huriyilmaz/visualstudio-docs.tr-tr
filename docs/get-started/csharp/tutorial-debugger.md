@@ -1,6 +1,6 @@
 ---
 title: 'Öğretici: C# kodunda hata ayıklama'
-description: Visual Studio hata ayıklayıcının özelliklerini ve hata ayıklayıcıyı başlatma, kod adım adım ve bir C# uygulamasındaki verileri İnceleme hakkında bilgi edinin.
+description: Visual Studio hata ayıklayıcısının özelliklerini ve hata ayıklayıcıyı başlatmayı, kodda adım adım incelemeyi ve bir C# uygulamasındaki verileri incelemeyi öğrenin.
 ms.custom: debug-experiment, seodec18, get-started
 ms.date: 04/23/2020
 ms.technology: vs-ide-debug
@@ -15,100 +15,106 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eac51637b3f3b732f1293337080ef851f34c459
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 2cbc35eaabec2dae8bd8b97ba22f55a50fc436c3
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682743"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308460"
 ---
-# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak C# kodunda hata ayıklamayı öğrenin
+# <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak C# kodunda hata ayıklamayı Visual Studio
 
-Bu makalede, adım adım bir yönergede Visual Studio hata ayıklayıcının özellikleri tanıtılmaktadır. Hata ayıklayıcı özelliklerinin daha üst düzey bir görünümünü istiyorsanız, bkz. [hata ayıklayıcıya ilk bakış](../../debugger/debugger-feature-tour.md). Uygulamanızda *hata ayıklarken*, genellikle uygulamanızı hata ayıklayıcı eklenmiş şekilde çalıştırdığınız anlamına gelir. Bunu yaptığınızda, hata ayıklayıcı kodun çalışırken ne yaptığını görmek için birçok yol sunar. Kodunuzda saklanan değerlere bakabilir ve değişkenlerde depolanan değerlere bakabilirsiniz, değerlerin ne zaman değişenleri görebileceğiniz, kodunuzun yürütme yolunu inceleyebileceğiniz, kodun bir dalında çalışıp çalışmadığını ve bu şekilde devam edebilirsiniz. Kodu ilk kez ayıklamaya çalıştığınızda, bu makaleye geçmeden önce [mutlak yeni başlayanlar Için hata ayıklama](../../debugger/debugging-absolute-beginners.md) işlemini okumak isteyebilirsiniz.
+Bu makalede, Visual Studio hata ayıklayıcısının özellikleri adım adım izlenecek yol açıklanmıştır. Hata ayıklayıcı özelliklerinin daha üst düzey bir görünümünü almak için [bkz. İlk olarak hata ayıklayıcıya bakın.](../../debugger/debugger-feature-tour.md) Uygulamanıza *hata ayıklarken* genellikle hata ayıklayıcı eklenmiş olarak çalıştırabilirsiniz. Bunu yaparken hata ayıklayıcı, kodunuzun çalışırken ne yaptığını görmek için birçok yol sağlar. Kodunuzu adım adım inceleyebilirsiniz ve değişkenlerde depolanan değerlere göz atabilir, değerlerin ne zaman değişip değişmeyişini görmek için değişkenler üzerinde izlemeler ayarlayın, kodunuzun yürütme yolunu inceleyebilirsiniz, bir kod dalını çalıştırıp çalıştırmama gibi. İlk kez kodda hata ayıklamayı denediyseniz, bu makaleyi okumadan önce yeni başlayanlar için [hata](../../debugger/debugging-absolute-beginners.md) ayıklama makalesine bakabilirsiniz.
 
-Tanıtım uygulaması C# olsa da özelliklerin çoğu C++, Visual Basic, F #, Python, JavaScript ve Visual Studio tarafından desteklenen diğer diller için geçerlidir (F #, Düzenle ve devam et ' i desteklemez. F # ve JavaScript, **oto** penceresini desteklemez). Ekran görüntüleri C# ' de bulunur.
+Tanıtım uygulaması C# olsa da özelliklerin çoğu C++, Visual Basic, F#, Python, JavaScript ve Visual Studio tarafından desteklenen diğer diller için geçerlidir (F# Düzenle ve devamını desteklemez). F# ve JavaScript, Otomatikler **penceresini desteklemez).** Ekran görüntüleri C# içindedir.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * Hata ayıklayıcıyı başlatın ve kesme noktalarını isabet edin.
-> * Hata Ayıklayıcıdaki kodu adım adım ilerme komutlarını öğrenin
-> * Veri ipuçlarında ve hata ayıklayıcı Windows 'da değişkenleri İnceleme
-> * Çağrı yığınını inceleyin
+> * Hata ayıklayıcıyı başlat ve kesme noktalarına isabet.
+> * Hata ayıklayıcıda kodda adım adım ilerlerken gereken komutları öğrenin
+> * Veri ipuçlarında ve hata ayıklayıcı pencerelerde değişkenleri inceleme
+> * Çağrı yığınını inceleme
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 ' nin yüklü olması ve **.NET Core platformlar arası geliştirme** iş yüküne sahip olmanız gerekir.
+2019 Visual Studio **ve .NET Core** platformlar arası geliştirme iş yükünüz olması gerekir.
 
 ::: moniker-end
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 ' nin yüklü olması ve **.NET Core platformlar arası geliştirme** iş yüküne sahip olmanız gerekir.
+2017'Visual Studio ve .NET Core platformlar arası geliştirme **iş yükünüz yüklü** olması gerekir.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz olarak yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
-İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+::: moniker range="vs-2022"
+
+Visual Studio 2022 Preview'Visual Studio henüz yüklememişsinizdir, ücretsiz olarak yüklemek için [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidin.
+
+::: moniker-end
+
+İş yükünü yüklemeniz gerekse ama zaten yüklüyse Visual Studio Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Uygulama Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-İlk olarak, bir .NET Core konsol uygulama projesi oluşturacaksınız. Proje türü, ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklemeden önce!
+İlk olarak bir .NET Core konsol uygulaması projesi oluşturabilirsiniz. Proje türü, herhangi bir şey eklemeden önce ihtiyacınız olan tüm şablon dosyalarıyla birlikte gelir!
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio 2017'yi açın.
 
-2. Üstteki menü çubuğundan **Dosya** > **Yeni** > **Proje**' yi seçin.
+2. Üst menü çubuğundan Dosya Yeni **Proje'yi** >  > **seçin.**
 
-3. Sol bölmedeki **Yeni proje** iletişim kutusunda **C#**' ı genişletin ve ardından **.NET Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından Proje *Get-Started-hata ayıklama* adını adlandırın.
+3. Sol **bölmede Yeni** Proje iletişim kutusunda **C#** öğesini genişletin ve **ardından .NET Core'ı seçin.** Orta bölmede Konsol Uygulaması **(.NET Core) 'ı seçin.** Ardından projeye *get-started-debugging adını girin.*
 
-     **Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısını seçin.
+     Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız Yeni Proje iletişim kutusunun sol bölmesinde **Visual Studio Yükleyicisi** Aç **bağlantısını** seçin.
 
-     Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+     Uygulama Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Visual Studio 2019 ' i açın.
+1. Visual Studio'yu açın.
 
-   Başlangıç penceresi açık değilse **Dosya** > **Başlangıç penceresi**' ni seçin.
+   Başlangıç penceresi açık değilse Dosya Başlangıç **Penceresi'ne** > **tıklayın.**
 
-1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-1. **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil listesinden **C#** öğesini seçin ve ardından platform listesinden **Windows** ' u seçin. 
+1. Yeni **proje oluştur penceresinde** arama kutusuna *konsol yazın* veya yazın. Ardından Dil **listesinden C#** dilini ve ardından Platform **listesinden Windows'u** seçin. 
 
-   Dil ve platform filtrelerini uyguladıktan sonra .NET Core **konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
+   Dil ve platform filtrelerini uygulayan .NET Core **için Konsol** Uygulaması şablonunu ve ardından Sonraki'yi **seçin.**
 
-   ![Konsol uygulaması için C# şablonunu seçin](../csharp/media/vs-2019/get-started-create-console-project.png)
+   ![Konsol Uygulaması için C# şablonunu seçin](../csharp/media/vs-2019/get-started-create-console-project.png)
 
    > [!NOTE]
-   > **Konsol uygulaması** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Sonra, Visual Studio Yükleyicisi **.NET Core platformlar arası geliştirme** iş yükünü seçin.
+   > Konsol Uygulaması şablonunu **görmüyorsanız,** Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin. Ardından, Visual Studio Yükleyicisi **.NET Core** platformlar arası geliştirme iş yükünü seçin.
 
-1. **Yeni projeyi yapılandırın** penceresinde, **Proje adı** kutusuna *getstarteddebugging* yazın veya girin. Ardından **İleri**' yi seçin.
+1. Yeni **projenizi yapılandır penceresine** Proje adı kutusuna *GetStartedDebugging* **yazın veya** girin. Ardından, **Sonraki'yi seçin.**
 
-1. Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
+1. Önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
 
-   Visual Studio yeni projenizi açar.
+   Visual Studio projenizi açar.
 
 ::: moniker-end
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-1. *Program.cs*' de, tüm varsayılan kodu bunun yerine aşağıdaki kodla değiştirin:
+1. *Program.cs içinde,* varsayılan kodun hepsini aşağıdaki kodla değiştirin:
 
     ```csharp
     using System;
@@ -134,11 +140,11 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
     }
     ```
 
-## <a name="start-the-debugger"></a>Hata ayıklayıcıyı başlatın!
+## <a name="start-the-debugger"></a>Hata ayıklayıcıyı başlatma!
 
-1. Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata **Ayıkla > Başlat**) ![veya hata](../../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
+1. **F5** (**Hata Ayıklama > Başlat**) veya Hata Ayıklama ![](../../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") Araç Çubuğunda Hata Ayıklamayı Başlat düğmesine basın. 
 
-     **F5** uygulama işlemine eklenen hata ayıklayıcı ile uygulamayı başlatır, ancak şimdi kodu incelemek için özel bir şey yapmadık. Bu nedenle uygulama yalnızca konsol çıkışını görür ve görürsünüz.
+     **F5,** uygulamayı uygulama sürecine eklenmiş hata ayıklayıcısıyla başlatır, ancak şu anda kodu incelemek için özel bir işlem yapmadık. Bu nedenle uygulama yüklenir ve konsol çıktısını görüntülenir.
 
     ```cmd
     Hello, f! Count to 1
@@ -153,77 +159,77 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
     Hello, fred smith! Count to 10
     ```
 
-     Bu öğreticide, hata ayıklayıcıyı kullanarak bu uygulamaya daha yakından bakacağız ve hata ayıklayıcı özelliklerine göz atalım.
+     Bu öğreticide, hata ayıklayıcıyı kullanarak bu uygulamaya daha yakından bakacak ve hata ayıklayıcı özelliklerine göz atalım.
 
-2. Kırmızı durma ![hata ayıklamayı Durdur](../../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") düğmesine (**SHIFT**  +  **F5**) basarak hata ayıklayıcıyı durdurun.
+2. Hata ayıklamayı kırmızı durdur Hata Ayıklamayı Durdur düğmesine basarak hata ![ayıklayıcıyı durdurun](../../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") (**Shift**  +  **F5**).
 
-3. Konsol penceresinde bir tuşa basarak konsol penceresini kapatın.
+3. Konsol penceresinde, konsol penceresini kapatmak için bir tuşa basın.
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Kesme noktası ayarlama ve hata ayıklayıcıyı başlatma
 
-1. `for` `Main` İşlevin döngüsünde, aşağıdaki kod satırının sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın:
+1. işlevinin `for` `Main` döngüsünde, aşağıdaki kod satırın sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın:
 
     `name += letters[i];`
 
-    Kesme noktasını ayarladığınız yerde kırmızı bir daire ![kesme noktası](../../debugger/media/dbg-breakpoint.png "Ilı") belirir.
+    Kesme noktası ![ayarda kırmızı](../../debugger/media/dbg-breakpoint.png "Ilı") bir daire Kesme Noktası görüntülenir.
 
-    Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliklerinden biridir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
+    Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliklerindendir. Kesme noktası, Visual Studio değerlerine, bellek davranışına veya bir kod dalını çalıştırıp çalıştırmamaya bakabilirsiniz.
 
-2. **F5** tuşuna basın veya hata **ayıklamayı Başlat** ![düğmesine basın](../../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat"), uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
+2. **F5 tuşuna** **basın** veya Hata Ayıklamayı Başlat düğmesine ![basın;](../../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat")uygulama başlatılır ve hata ayıklayıcı kesme noktası ayarlayıcının ayar bulunduğu kod satırına çalışır.
 
     ![Kesme noktası ayarlama ve isabet](../csharp/media/get-started-set-breakpoint.gif)
 
-    Sarı ok, hata ayıklayıcının duraklatıldığı ifadeyi temsil eder ve aynı noktada uygulama yürütmeyi de askıya alır (Bu bildirim henüz yürütülmemiştir).
+    Sarı ok, aynı noktada uygulama yürütmeyi de askıya alan (bu deyim henüz yürütülmedi) hata ayıklayıcının duraklatılmış olduğu deyimi temsil eder.
 
-     Uygulama henüz çalışmıyorsa, **F5** hata ayıklayıcıyı başlatır ve ilk kesme noktasında durmaktadır. Aksi halde, **F5** uygulamayı bir sonraki kesme noktasına çalıştırmaya devam eder.
+     Uygulama henüz çalışmıyorsa **F5** hata ayıklayıcıyı başlatır ve ilk kesme noktası üzerinde durur. Aksi **takdirde, F5** uygulamayı bir sonraki kesme noktasıyla çalıştırmaya devam eder.
 
-    Kod satırını veya kodun ayrıntılı olarak incelemek istediğiniz bölümünü bildiğiniz kesme noktaları yararlı bir özelliktir. Koşullu kesme noktaları gibi ayarlayabileceğiniz farklı kesme noktaları türleri hakkında bilgi için bkz. [kesme noktaları kullanma](../../debugger/using-breakpoints.md).
+    Kesme noktaları, kod satırı veya ayrıntılı incelemek istediğiniz kod bölümünü biliyorken yararlı bir özelliktir. Ayar yalnızca koşullu kesme noktaları gibi farklı kesme noktası türleri hakkında bilgi için [bkz. Kesme noktaları kullanma.](../../debugger/using-breakpoints.md)
 
-## <a name="navigate-code-and-inspect-data-using-data-tips"></a>Veri ipuçlarını kullanarak kodda gezinin ve verileri inceleyin
+## <a name="navigate-code-and-inspect-data-using-data-tips"></a>Veri ipuçlarını kullanarak kodda gezinme ve verileri inceleme
 
-Çoğu durumda buradaki klavye kısayollarını kullanıyoruz. Bu, uygulamanızı hata ayıklayıcıda yürütmek için iyi bir yoldur (menü komutları gibi eşdeğer komutlar parantez içinde gösterilir).
+Genellikle burada klavye kısayollarını kullanırız çünkü bu, uygulamanızı hata ayıklayıcısında yürütmeyi hızlı bir şekilde yürütmenin iyi bir yolu olduğundan (menü komutları gibi eşdeğer komutlar parantez içinde gösterilir).
 
-1. İfadede duraklalarken `name += letters[i]` , değişkenin üzerine gelin `letters` ve varsayılan değerini, dizideki ilk öğenin değerini görürsünüz `char[10]` .
+1. deyiminde duraklatılmışken değişkeninin üzerine gelin ve bunun varsayılan değeri olan dizideki ilk `name += letters[i]` `letters` öğenin değerini `char[10]` görüyorsunuz.
 
-     Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en yararlı özelliklerinden biridir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunu ayıklamaya çalıştığınızda, değişkenlerin belirli bir zamanda sahip olmalarını istediğiniz değerleri depolayıp depoladığını bulmaya çalışıyorsunuz.
+     Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en kullanışlı özelliklerindendir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunda hata ayıklamaya çalışırken değişkenlerin belirli bir zamanda sahip olmasını beklediğiniz değerleri depolayarak depolamaya çalışmaya çalıştığınız olur.
 
 1. Değişkenin `letters` içerdiği tüm öğeleri içeren özelliklerini görmek için değişkeni genişletin.
 
-     ![' Name + = harfler [I] ' ifadesiyle birlikte Visual Studio hata ayıklayıcının ekran görüntüsü ve harfler dizisindeki öğeleri gösteren açılan liste.](../csharp/media/get-started-view-data-tip.png)
+     ![Visual Studio 'name+= letters[I]' deyiminin vurgulanmış olduğu ve letters dizisinde yer alan öğeleri gösteren bir açılan liste ile Birlikte Hata Ayıklayıcısı'nın ekran görüntüsü.](../csharp/media/get-started-view-data-tip.png)
 
-1. Sonra, değişkenin üzerine gelin `name` ve geçerli değerini boş bir dize olarak görürsünüz.
+1. Ardından değişkeninin `name` üzerine gelin ve geçerli değerinin boş bir dize olduğunu görüyorsunuz.
 
-1. Yöntem çağrısına ilerlemek için **F10** tuşuna basın (veya **hata ayıklama > Adımlama**' i seçin) `SendMessage` ve ardından **F10** bir kez daha tuşuna basın.
+1. Yöntem **çağrısına ilerlemek için F10** **tuşuna basın**(veya > AdımLa) hata ayıkla'ya basın ve `SendMessage` ardından **F10'a** bir kez daha basın.
 
-     F10 hata ayıklayıcıyı, uygulama kodunuzda işlevlere veya yöntemlere adımla bir sonraki ifadeye ilerletir (kod yine de çalıştırılır). Yöntem çağrısında F10 tuşuna basarak `SendMessage` , için uygulama kodu atlandık `SendMessage` (Bu, şu anda ilgilentik olabilir).
+     F10, uygulama kodundaki işlevlere veya yöntemlere adımlamadan hata ayıklayıcıyı bir sonraki deyime ilerletmektedir (kod yürütülmektedir). Yöntem çağrısında F10'a basarak, uygulama kodunu atlamıştık (şu anda `SendMessage` `SendMessage` ilgilenmediğimiz bir şey olabilir).
 
-1. Bir  kez döngü aracılığıyla   >  birkaç kez yineleyebilir `for` , kesme noktasında tekrar duraklatarak ve `name` değerini denetlemek için her seferinde üzerine gelindiğinde, F10 tuşuna basın (veya hata ayıklama adımından).
+1. Döngüde birkaç kez tekrarlama, kesme noktası üzerinde yeniden duraklatma ve değerini kontrol etmek için her zaman değişkenin üzerine gelme için **F10'a** (veya Adım Adım Hata Ayıklama) birkaç kez  >   `for` `name` basın.
 
-     ![Visual Studio hata ayıklayıcısı 'nın, F10 tuşuna basarak "Adımlama" ve hata ayıklama sırasında bir döngüyle yineleme etkisini gösteren animasyonlu bir ekran görüntüsü.](../csharp/media/get-started-data-tip.gif)
+     ![Hata Ayıklayıcısı'Visual Studio F10'a "AdımLa" tuşuna basmanın ve hata ayıklama sırasında döngüde tekrarlamanın etkisini gösteren animasyonlu ekran görüntüsü.](../csharp/media/get-started-data-tip.gif)
 
-     Değişkenin değeri, döngü her tekrarında değişir ve `for` değerlerini, sonra, vb. gösterir `f` `fr` `fre` . Bu senaryoda hata ayıklayıcıyı daha hızlı bir şekilde ilerletmek için **F5** tuşuna basabilir (veya **Hata Ayıkla**  >  **devam et**' i seçebilirsiniz), bunun yerine bir sonraki ifade yerine kesme noktasına ilerletebilirsiniz.
+     Değişkenin değeri döngüde her yineleme ile birlikte değişir ve ardından `for` , ardından , ve gibi değerleri `f` `fr` `fre` gösterir. Bu senaryoda hata ayıklayıcısını döngüde daha hızlı ilerlemek için  **F5** tuşuna basabilirsiniz (veya Devam Et'i seçerek) bir sonraki deyim yerine kesme noktası  >  üzerinden ilerleyin.
 
-     Genellikle, hata ayıklarken, değişkenleri üzerinde özellik değerlerini denetlemeye yönelik hızlı bir yol isteyeceksiniz ve bu değerlerin depolanmasını beklediğinizi ve veri ipuçları bunu yapmanın iyi bir yoludur.
+     Hata ayıklama sırasında genellikle değişkenlerde özellik değerlerini denetlemenin, depolamasını beklediğiniz değerleri depolayarak depolamalarının gerekip gerek olmadığını ve veri ipuçlarının bunu yapmak için iyi bir yol olup olmadığını görmek için hızlı bir yol gerekir.
 
-1. Metodun döngüsünde hala duraklatıldıktan `for` `Main` sonra, yöntem çağrısında duraklamadan **F11** tuşuna basın (veya **Hata Ayıkla > adımla**' yı seçin) `SendMessage` .
+1. yönteminde döngüde duraklatılmışken, yöntem çağrısında duraklatana kadar F11 tuşuna basın (veya Hata ayıkla `for` `Main` > **Adımla)**  `SendMessage` seçin.
 
-     Şu kod satırında olmalısınız:
+     Şu kod satırına bakabilirsiniz:
 
      `SendMessage(name, a[i]);`
 
-1. Yönteme adım eklemek için bir kez daha **F11** tuşuna basın `SendMessage` .
+1. yöntemine **adımını atarak F11'e** bir kez daha `SendMessage` basın.
 
-     Sarı işaretçi `SendMessage` yöntemine ilerler.
+     Sarı işaretçi yöntemine `SendMessage` ilerler.
 
-     ![Koda geçmek için F11 kullanın](../csharp/media/get-started-f11.png "F10 adımla")
+     ![Koda Adımını At için F11 kullanma](../csharp/media/get-started-f11.png "F10 adımla")
 
-     F11, **adımla** komutuna ve aynı anda uygulama yürütmeyi tek bir ifadeye ilerletir. F11, yürütme akışını en ayrıntılı incelemek için iyi bir yoldur. Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../../debugger/just-my-code.md)).
+     F11, **Adımla komutudır** ve uygulama yürütmeyi tek tek bir deyimle ilerleter. F11, yürütme akışını en ayrıntılı şekilde incelemek için iyi bir yol sağlar. Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan kodu atlar (daha fazla ayrıntı için bkz. [Yalnızca kendi kodum).](../../debugger/just-my-code.md)
 
-     Yöntemi incelemeyi bitirdiğinizde `SendMessage` ve yönteminden yararlanmak ve hata ayıklayıcıda kalmak istediğinizi varsayalım. Bunu, **Step Out** komutunu kullanarak yapabilirsiniz.
+     Yöntemini incelemeyi tamamlayanın ve yöntemin dışında kalmak ancak hata `SendMessage` ayıklayıcısında kalmak istediğinizi diyelim. Bunu Yapmak için Dışarı **Adımla komutunu kullanın.**
 
-1. **SHIFT**  +  **F11** tuşuna basın (veya **hata ayıklama > Step Out**).
+1. Shift   +  **F11 tuşuna** basın (veya **> AdımLa) tuşlarına basın.**
 
-     Bu komut, geçerli yöntem veya işlev dönene kadar uygulama yürütmeyi sürdürür (ve hata ayıklayıcıyı ilerletir).
+     Bu komut, geçerli yöntem veya işlev döndürene kadar uygulama yürütmeyi sürdürür (ve hata ayıklayıcıyı ilerleter).
 
      Yöntem `for` çağrısında duraklamış olması için, yöntemde döngüde geri dönüş yapmanız gerekir `Main` `SendMessage` . Kodunuzda taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../../debugger/navigating-through-code-with-the-debugger.md).
 

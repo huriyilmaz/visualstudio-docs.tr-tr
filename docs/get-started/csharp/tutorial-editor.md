@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8724fcb717953f3897bab092eb3895e228e10c60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c1170f7420cc605b713357d94526c76eb5c51641
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909227"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308434"
 ---
 # <a name="learn-to-use-the-code-editor-with-c"></a>C ile kod düzenleyicisini kullanmayı öğrenin\#
 
@@ -32,8 +32,13 @@ Visual Studio 'daki kod düzenleyicisine bu 10 dakikalık bir giriş için, Visu
 
 ::: moniker range="vs-2019"
 
-> [!TIP]
-> Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Zaten Visual Studio 2022 Preview sürümünü yüklemediyseniz, ücretsiz olarak yüklemek için [Visual studio 2022 Preview İndirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
 
 ::: moniker-end
 

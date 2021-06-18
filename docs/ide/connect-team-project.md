@@ -1,30 +1,31 @@
 ---
 title: Ekip Gezgini'nde projelere bağlanma
-description: Proje geliştirmek ve yönetmek Takım Gezgini ekip Visual Studio çalışmak için bu web sitelerini nasıl kullanabileceğinizi öğrenin.
+description: Proje geliştirme ve yönetme Takım Gezgini ekip Visual Studio çalışmak için bu iş birli çalışmalarında nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 4d3d2c005f32aaebacc251414218f5ae03edf546
-ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
+monikerRange: <=vs-2019
+ms.openlocfilehash: b45399f7a4115ce5946a67caca22ca92148e7434
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2021
-ms.locfileid: "112043022"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308252"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Ekip Gezgini'nde projelere bağlanma
 
 ::: moniker range="vs-2017"
 
-Bir **Takım Gezgini** geliştirme ve size, takımınıza veya projelerinize atanan çalışmaları yönetmek için kod çalışmalarınızı diğer ekip üyeleriyle koordine etmek için Takım Gezgini araç penceresini kullanın. **Takım Gezgini** Git Visual Studio GitHub depolarına, Team Foundation sürüm denetimi (TFVC) depolarına ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi depolarda (eski adıyla TFS) barındırılan [projeler Azure DevOps Server e bağlanır.](/azure/devops/index-all) Kaynak kodu, iş öğelerini ve derlemeleri yönetebilirsiniz.
+Bir **Takım Gezgini** geliştirme ve size, takımınıza veya projelerinize atanan çalışmaları yönetmek için kod çalışmalarınızı diğer ekip üyeleriyle koordine etmek için Takım Gezgini araç penceresini kullanın. **Takım Gezgini** Git Visual Studio GitHub depolarına, Team Foundation sürüm denetimi (TFVC) depolarına ve [Azure DevOps Services'de](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi Azure DevOps Server'de (eski adıyla TFS) barındırılan [projelere](/azure/devops/index-all) bağlanır. Kaynak kodu, iş öğelerini ve derlemeleri yönetebilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Takım Gezgini, Visual Studio Team Foundation sürüm denetimi (TFVC) depolarına ve [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi bir Azure DevOps Server [(eski](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) adıyla TFS) üzerinde barındırılan projelere bağlanır. Kaynak kodu, iş öğelerini ve derlemeleri yönetebilirsiniz.
+Takım Gezgini, Visual Studio Team Foundation sürüm denetimi (TFVC) depolarına ve [Azure DevOps Services'de](/azure/devops/user-guide/what-is-azure-devops-services) veya şirket içi Azure DevOps Server 'de (eski adıyla TFS) barındırılan [projelere](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) bağlanır. Kaynak kodu, iş öğelerini ve derlemeleri yönetebilirsiniz.
 
 > [!IMPORTANT]
 > Visual Studio 2019 [**sürüm 16.8**](/visualstudio/releases/2019/release-notes-history)sürümünde Git sürüm denetimi deneyimi varsayılan olarak açıktır. Bunun git ve Takım Gezgini karşılaştırması hakkında daha fazla bilgi edinmek için [**Bkz. Git**](../version-control/git-team-explorer-feature-comparison.md) ve Takım Gezgini karşılaştırması.
@@ -64,7 +65,7 @@ Bir Takım Gezgini bağlanmak için Visual Studio 2019 sürümüne bağlıdır.
 
 1. 2019 Visual Studio açın.
 
-1. Başlangıç penceresinde Kopyala'ya tıklayın **veya kodu kontrol edin.**
+1. Başlangıç penceresinde Kopyala'ya **tıklayın veya kodu kontrol edin.**
 
    ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde 'Yeni proje oluştur' penceresinin ekran görüntüsü](../get-started/media/vs-2019/clone-checkout-code-dark.png)
 
@@ -91,7 +92,7 @@ Bir Takım Gezgini bağlanmak için Visual Studio 2019 sürümüne bağlıdır.
 
      Visual Studio **,** Çözüm Gezgini.
 
-1. Açılacak **çözüm dosyasını** (özel olarak bir .sln dosyası) aramak için Çözümler ve Klasörler bağlantısını seçin.
+1. Açılacak **bir çözüm dosyası** (özel olarak bir .sln dosyası) aramak için Çözümler ve Klasörler bağlantısını seçin.
 
       ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde Takım Gezgini 'Çözümler ve Klasörler' bildiriminin ekran görüntüsü](../get-started/media/open-proj-repo-solutions-folders.png)
 

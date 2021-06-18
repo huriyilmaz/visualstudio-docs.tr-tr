@@ -16,18 +16,18 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7554ac46d7c4171cfb71166c51689ff4ae95c0d5
-ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
+ms.openlocfilehash: fe1d1a3c5ec13995cb69fff6ba6ec74c7a6c90d9
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "110724557"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307732"
 ---
 # <a name="automate-installs-by-using-settings-in-a-response-file"></a>Yanıt dosyasındaki ayarları kullanarak yüklemeleri otomatikleştirme
 
 Dağıtım yapan Visual Studio, aşağıdaki örnekte olduğu gibi `--in` parametresini kullanarak bir yanıt dosyası belirtebilirsiniz:
 
-```cmd
+```shell
 vs_enterprise.exe --in customInstall.json
 ```
 
@@ -41,14 +41,14 @@ ile bir ağ düzeni önbelleği `--layout` oluşturduysanız, `response.json` d�
 
 Düzen oluşturan yöneticiler, kullanıcıların düzenden yükleme yaptıklarında göreceği varsayılan ayarları kontrol etmek için Visual Studio `response.json` değiştirebilir.  Örneğin, bir yönetici varsayılan olarak belirli iş yüklerinin ve bileşenlerin yüklü olması istiyorsa, bunları eklemek `response.json` için dosyayı yapılandırabilirsiniz.
 
-Visual Studio Kurulumu bir düzen klasöründen çalıştırıldığında, _otomatik olarak_ düzen klasöründeki yanıt dosyasını kullanır.  Seçeneğini kullanmak zorunda değilsiniz `--in` .
+Kurulum Visual Studio bir düzen klasöründen çalıştırılırsa, düzen _klasöründeki_ yanıt dosyasını otomatik olarak kullanır.  seçeneğini kullanmak zorunda `--in` değildir.
 
-`response.json`Bu düzenden yükleyen kullanıcılar için varsayılan ayarı tanımlamak üzere çevrimdışı bir düzen klasöründe oluşturulan dosyayı güncelleştirebilirsiniz.
+Bu düzenden yükleme yapan kullanıcılar için varsayılan ayarı tanımlamak üzere çevrimdışı düzen `response.json` klasöründe oluşturulan dosyayı güncelleştirebilirsiniz.
 
 > [!WARNING]
-> Düzen oluşturulduğunda tanımlanmış mevcut özellikleri bırakmanız önemlidir.
+> Düzen oluşturulduğunda tanımlanan mevcut özellikleri bırakmanız kritik öneme sahiptir.
 
-`response.json`Bir düzendeki temel dosya, yüklemek istediğiniz ürün ve kanal için değeri içermesi dışında aşağıdaki örneğe benzer olmalıdır:
+Bir düzende yer alan temel dosya, yüklemek istediğiniz ürün ve kanalın değerini içermesi dışında `response.json` aşağıdaki örnekteki gibi görünüyor olabilir:
 
 ::: moniker range="vs-2017"
 
@@ -64,7 +64,7 @@ Visual Studio Kurulumu bir düzen klasöründen çalıştırıldığında, _otom
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ```json
 {
@@ -78,11 +78,11 @@ Visual Studio Kurulumu bir düzen klasöründen çalıştırıldığında, _otom
 
 ::: moniker-end
 
-Bir düzen oluşturduğunuzda veya güncelleştirdiğinizde bir response.template.jsdosyası da oluşturulur.  Bu dosya, kullanılabilecek tüm iş yükü, bileşen ve dil kimliklerini içerir.  Bu dosya, tümünün özel bir yüklemeye dahil edilip edildikleriniz için bir şablon olarak sağlanır.  Yöneticiler, bu dosyayı özel bir yanıt dosyası için bir başlangıç noktası olarak kullanabilir.  Yüklemek istemediğiniz nesnelerin kimliklerini kaldırmanız ve kendi yanıt dosyanıza kaydetmeniz yeterlidir.  Dosya response.template.jsözelleştirmeyin veya Düzen her güncelleştirildiğinde değişiklikleriniz kaybedilir.
+Bir düzen oluşturulduğunda veya güncelleştiren bir response.template.jsdosyası da oluşturulur.  Bu dosya, kullanılan tüm iş yükünü, bileşeni ve dil kimliklerini içerir.  Bu dosya, özel bir yüklemeye dahil edilecek her şey için şablon olarak sağlanır.  Yöneticiler bu dosyayı özel yanıt dosyası için başlangıç noktası olarak kullanabilir.  Yüklemek istediğiniz şeyler için kimlikleri kaldırmanız ve kendi yanıt dosyanıza kaydetmeniz gerekir.  Dosya üzerinde response.template.jsözelleştirin, yoksa düzen her güncelleştirildiğinde değişiklikleriniz kaybolur.
 
 ## <a name="example-layout-response-file-content"></a>Örnek düzen yanıt dosyası içeriği
 
-Aşağıdaki örnek, Visual Studio Enterprise altı ortak iş yükü ve bileşeni ve hem Ingilizce hem de Fransızca Kullanıcı arabirimi dilleri ile yüklenmektedir. Bu örneği şablon olarak kullanabilirsiniz; yalnızca iş yüklerini ve bileşenleri yüklemek istediğiniz olanlarla değiştirin:
+Aşağıdaki örnek, Visual Studio Enterprise iş yüklerini ve bileşenlerini ve hem İngilizce hem de Fransızca kullanıcı arabirimi dillerini yüklemektedir. Bu örneği şablon olarak kullanabilirsiniz; yalnızca iş yüklerini ve bileşenleri yüklemek istediğiniz bileşenlerle değiştirmenizi sağlar:
 
 ::: moniker range="vs-2017"
 
@@ -119,7 +119,7 @@ Aşağıdaki örnek, Visual Studio Enterprise altı ortak iş yükü ve bileşen
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ```json
 {
@@ -159,4 +159,4 @@ Aşağıdaki örnek, Visual Studio Enterprise altı ortak iş yükü ve bileşen
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-* [Visual Studio 'Yu yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md)
+* [Ağ ile ilgili sorunları gidermek için ağ yükleme veya Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)

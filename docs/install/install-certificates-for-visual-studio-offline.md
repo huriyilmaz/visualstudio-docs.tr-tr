@@ -8,19 +8,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 9750A3F3-89C7-4A8F-BA75-B0B06BD772C2
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0d8441b0a4b8acba3f24f60d5ea8dc7030b79253
-ms.sourcegitcommit: 22789927ec8e877b7d2b67a555d6df97d84103e0
+ms.openlocfilehash: 6dc4137157e2fa5136a0b8c86c5cf72f284a9eb7
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105981296"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307382"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme
 
@@ -42,7 +42,7 @@ Bir [ağ düzeni](../install/create-a-network-installation-of-visual-studio.md) 
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Bir [ağ düzeni](../install/create-a-network-installation-of-visual-studio.md) veya [yerel bir çevrimdışı önbellek](../install/create-an-offline-installation-of-visual-studio.md)oluşturduğunuzda, gerekli sertifikalar Sertifikalar klasörüne indirilir. Sertifika dosyalarının her birine sağ tıklayıp sertifikayı yükler ' i seçip Sertifika Yöneticisi Sihirbazı ' na tıklayarak sertifikaları el ile yükleyebilirsiniz. Parola sorulursa boş bırakın.
 
@@ -60,7 +60,7 @@ Visual Studio 'nun bir çevrimdışı ortamda istemci iş istasyonlarına dağı
 
 2. Aşağıdaki komutlarla bir toplu işlem dosyası oluşturun:
 
-   ```cmd
+   ```shell
    certmgr.exe -add [layout path]\certificates\manifestRootCertificate.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
 
    certmgr.exe -add [layout path]\certificates\manifestCounterSignRootCertificate.cer -n "Microsoft Root Certificate Authority 2010" -s -r LocalMachine root
@@ -70,7 +70,7 @@ Visual Studio 'nun bir çevrimdışı ortamda istemci iş istasyonlarına dağı
    
    Alternatif olarak, aşağıdaki komutlarla, Windows ile birlikte gelen certutil.exe kullanan bir toplu işlem dosyası oluşturun:
    
-      ```cmd
+      ```shell
    certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestRootCertificate.cer"
 
    certutil.exe -addstore -f "Root" "[layout path]\certificates\manifestCounterSignRootCertificate.cer"

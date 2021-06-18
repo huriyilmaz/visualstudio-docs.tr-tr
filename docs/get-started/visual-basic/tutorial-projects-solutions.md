@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36aabdd07dd7fa966a31d8fc3844e68d816c59ae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f27973fcfb76d019cff31787b117f05f8266ad8
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944530"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308187"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Visual Basic kullanarak projeler ve çözümler hakkında bilgi edinin
 
@@ -36,6 +36,13 @@ Bu giriş makalesinde, Visual Studio 'da bir *çözüm* ve *Proje* oluşturmak i
 
 > [!TIP]
 > Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın.
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+> [!TIP]
+> Visual Studio Preview sürümünü henüz yüklemediyseniz, [Visual studio 2022 Önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına giderek ücretsiz olarak yükleme yapın.
 
 ::: moniker-end
 
