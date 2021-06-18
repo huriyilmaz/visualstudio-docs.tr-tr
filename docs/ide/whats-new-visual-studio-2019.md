@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f571860d08d16d85e53148bc1023cb08a1c36d2
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: d34c3a3b4d808b1f4e24051763f1c0876a175a3a
+ms.sourcegitcommit: a9526ab1556c47570286c7a7d3314af67fd1dcf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307784"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "112365475"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -29,7 +29,7 @@ ms.locfileid: "112307784"
 >[!div class="button"]
 >[Visual Studio 2019’u İndirin](https://visualstudio.microsoft.com/downloads)
 
-2019'Visual Studio ile tüm geliştirici, uygulama ve platformlar için sınıfının en iyisi araçlara ve hizmetlere sahip oluruz. İster ilk kez Visual Studio ister yıllardır kullanıyor olun, en son sürümde olduğu gibi birçok şey vardır!
+2019'Visual Studio tüm geliştirici, uygulama ve platformlar için sınıfının en iyisi araçlar ve hizmetler elde edeceksiniz. İster ilk kez Visual Studio ister yıllardır kullanıyor olun, en son sürümde olduğu gibi birçok şey vardır!
 
 İşte yeni ve her şey ile ilgili üst düzey bir özet:
 
@@ -65,7 +65,7 @@ Daha fazla bilgi için Intelligent [Visual Studio arama hizmeti](https://devblog
 
 C# içinde kodunuzu düzenlemeyi kolaylaştıran çok sayıda yeni ve son derece kullanışlı yeniden düzenleme vardır. Bunlar ampulde öneri olarak görünür ve üyeleri arabirime veya temel sınıfa taşıma, ad alanlarını klasör yapısıyla eş olacak şekilde ayarlama, foreach döngülerini Linq sorgularına dönüştürme gibi eylemleri içerir.
 
-   ![Visual Studio 2019'da yeniden düzenleme deneyiminin animasyonu](media/vs-2019/refactorings.gif "Visual Studio 2019 ' de yeniden düzenlemeler deneyimi.")
+   ![Visual Studio 2019'daki yeniden düzenleme deneyiminin animasyonu](media/vs-2019/refactorings.gif "Visual Studio 2019 ' de yeniden düzenlemeler deneyimi.")
 
 Ctrl+ tuşlarına basarak yeniden **düzenlemelerini çağırmanız gerekir.** ve yapmak istediğiniz eylemi seçin.
 
@@ -104,7 +104,7 @@ Ayrıca, düzeltici koleksiyonlarını profil olarak kaydedebilirsiniz. Örneği
 
 Farklı ekran ölçek faktörleriyle yapılandırılmış monitörler kullanıyorsanız veya ana cihazınızın farklı görüntü ölçek faktörlerine sahip bir makineye uzaktan bağlanıyorsanız, Visual Studio bulanık göründüğünü veya yanlış ölçekte işleniyor olduğunu fark edebilirsiniz.
 
-Visual Studio 2019'un sürümüyle, izleyici başına Visual Studio (PMA) bir uygulama yapıyoruz. Artık Visual Studio ölçek faktörlerine bakılmaksızın doğru şekilde işleniyor.
+Visual Studio 2019'un sürümüyle, izleyici başına Visual Studio (PMA) uygulaması yapıyoruz. Artık Visual Studio ölçek faktörlerine bakılmaksızın doğru şekilde işleniyor.
 
    ![Visual Studio 2019'da monitör başına işleme (PMA)](media/vs-2019/pma-dpi-scaling.png "Visual Studio 2019 ' de monitöre duyarlı (PMA) işleme.")
 
@@ -144,9 +144,9 @@ Daha fazla bilgi için [Koda al: Yeni kodu nasıl tasarladık? Visual Studio pen
 
 ### <a name="git-productivity"></a>Git üretkenliği
 
-**16.8 sürümündeki yeni** sürüm: Git artık 2019'da varsayılan Visual Studio denetimi deneyimidir. Özellik kümesi yerleşik olarak ve son iki sürümde geri bildiriminiz temel alarak bu kümeyi de temel aldık. Yeni deneyim artık herkes için varsayılan olarak açıktır. Yeni Git menüsünden depoları kopya açabilir, oluşturabilir veya açabilirsiniz. Tümleşik Git aracı pencerelerini kullanarak değişiklikleri kodunuza işip itme, dalları yönetme, uzak depolarınızı güncel kalma ve birleştirme çakışmalarını çözme.
+**16.8 sürümündeki yeni** sürüm: Git artık 2019'da varsayılan Visual Studio denetimi deneyimidir. Özellik kümesi yerleşik olarak ve son iki sürümde geri bildiriminiz temel alarak bu kümeyi de temel aldık. Yeni deneyim artık herkes için varsayılan olarak açıktır. Yeni Git menüsünden depoları kopya açabilir, oluşturabilir veya açabilirsiniz. Tümleşik Git aracı pencerelerini kullanarak kodunıza değişiklikleri işip itin, dalları yönetin, uzak depolarınızı güncel kalın ve birleştirme çakışmalarını giderin.
 
-Daha fazla bilgi için Visual Studio [sayfasındaki Git deneyimine](../version-control/git-with-visual-studio.md) bakın.
+Daha fazla bilgi için bkz. [Git deneyimi Visual Studio.](../version-control/git-with-visual-studio.md)
 
 ### <a name="live-share"></a>Live Share
 
@@ -232,7 +232,7 @@ Bu sırada şu anda işte geçerli olan çalışmalar şunlardır:
 
 - **Visual Studio 2022 (Önizleme) ilk genel sürümü artık kullanılabilir**
 
-    Sonraki büyük yayınımızın genel önizlemesi, [Visual Studio 2022](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/)artık kullanıma sunuldu. Yeni sürüm daha hızlıdır, daha ulaşılabilir ve daha hafif. Visual Studio ilk kez 64 bit olur. İndirme bağlantısı ve daha fazla bilgi için bkz. **[Visual Studio 2022 Preview 1](https://devblogs.microsoft.com/visualstudio/?p=232975&preview=true)** blog gönderisini indirme.
+    Sonraki büyük yayınımızın genel önizlemesi, [Visual Studio 2022](/visualstudio/releases/2022/release-notes-preview/)artık kullanıma sunuldu. Yeni sürüm daha hızlıdır, daha ulaşılabilir ve daha hafif. Visual Studio ilk kez 64 bit olur. İndirme bağlantısı ve daha fazla bilgi için bkz. **[Visual Studio 2022 Preview 1 şimdi kullanılabilir!](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/)** blog gönderisi.
 
 ## <a name="give-us-feedback"></a>Geri bildirimde bulunun
 
