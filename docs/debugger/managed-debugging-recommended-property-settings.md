@@ -1,7 +1,7 @@
 ---
-title: C#, VB için önerilen hata ayıklayıcı özellik ayarları | Microsoft Docs
-description: Tüm yönetilen hata ayıklama için aynı olması gereken derleme ve derleme özellik ayarlarına bakın. Diğer ayarlar proje türüne göre değişiklik gösterebilir.
-ms.custom: SEO-VS-2020, seodec18
+title: C#, VB için önerilen hata ayıklayıcısı özellik ayarları | Microsoft Docs
+description: Tüm yönetilen hata ayıklama için aynı olması gereken derleme ve derleme özelliği ayarlarına bakın. Diğer ayarlar proje türüne göre değişiklik gösterebilir.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,38 +18,38 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b3061823a97faa53680bb358475a583493be5b93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2262194dbb6a8f4b0a47b4fcfc7f9f696c60167
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893106"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390404"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>Yönetilen Hata Ayıklama: Önerilen Özellik Ayarları
-Tüm yönetilen hata ayıklama senaryoları için bazı özellikler aynı şekilde ayarlanmalıdır.
+Belirli özellikler tüm yönetilen hata ayıklama senaryolarında aynı şekilde ayarlayıcıdır.
 
  Aşağıdaki tablolarda önerilen özellik ayarları görüntülenir.
 
- Burada listelenmeyen ayarlar, farklı yönetilen proje türleri arasında farklılık gösterebilir. Örneğin, **başlatma eylemi** bir proje Windows Forms bir projede farklı şekilde ayarlanır [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] .
+ Burada listelenmiyor ayarlar farklı yönetilen proje türleri arasında değişiklik gösterebilir. Örneğin, **Başlangıç Eylemi** bir proje içinde bir Windows Forms projeden farklı şekilde [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ayarlanır.
 
-### <a name="configuration-properties-on-the-build-c-or-compile-visual-basic-tab"></a>Build (C#) veya Compile (Visual Basic) sekmesindeki yapılandırma özellikleri
+### <a name="configuration-properties-on-the-build-c-or-compile-visual-basic-tab"></a>Derleme (C#) veya Derleme (Visual Basic) sekmesindeki Yapılandırma Özellikleri
 
 |**Özellik Adı**|**Ayar**|
 |-----------------------|-----------------|
-|**Hata ayıklama sabiti tanımla**|C# ve F #: onay kutusunu işaretli olarak ayarlayın. Bu, uygulamanızın hata ayıklama sınıfını kullanmasını sağlar.|
-|**Izleme sabitini tanımlama**|C# ve F #: onay kutusunu işaretli olarak ayarlayın. Bu, uygulamanızın Trace sınıfını kullanmasını sağlar.|
-|**Kodu iyileştirme**|C#, F # ve Visual Basic: false olarak ayarlanır. Üretilen yönergeler doğrudan kaynak kodunuza karşılık gelmediğinden, iyileştirilmiş kodun hata ayıklama işlemi daha zordur. Programınızın yalnızca en iyi duruma getirilmiş kodda görüntülenen bir hata olduğunu fark ederseniz, bu ayarı açabilirsiniz, ancak **ayrıştırma** penceresinde gösterilen kodun, kod düzenleyicisinde görerle eşleşmeyen en iyileştirilmiş kaynaktan oluşturulduğunu unutmayın. İyileştirilmiş kodda hata ayıklamak için Yalnızca kendi kodum kapatmanız gerekir. (Bkz. [yalnızca kendi kodum adımlamayı kısıtla](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Restrict_stepping_to_Just_My_Code)).<br /><br /> Daha fazla bilgi için bkz. [bir Visual Basic hata ayıklama yapılandırması Için](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) [C# hata ayıklama yapılandırmaları veya proje ayarları için proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md) .|
-|**Çıkış yolu**|Bin\Debug olarak ayarlayın \\ .|
-|**Gelişmiş derleme seçenekleri**|Yalnızca Visual Basic. Aşağıdaki tabloda açıklanan Gelişmiş özellikleri ayarlamak için **Gelişmiş** ' e tıklayın.|
+|**DEBUG sabiti tanımlama**|C# ve F#: Onay kutusunu işaretli olarak ayarlayın. Bu, uygulamanın Hata Ayıklama sınıfını kullanmalarını sağlar.|
+|**TRACE sabiti tanımlama**|C# ve F#: Onay kutusunu işaretli olarak ayarlayın. Bu, uygulamanın Trace sınıfını kullanmalarını sağlar.|
+|**Kodu iyileştirme**|C#, F# ve Visual Basic: False olarak ayarlayın. İyileştirilmiş kodun hata ayıklaması zordur çünkü oluşturulan yönergeler doğrudan kaynak kodunuzla ilgili değildir. Programda yalnızca iyileştirilmiş kodda görünen bir hata olduğunu bulursanız, bu ayarı açabilirsiniz, ancak **Disassembly** penceresinde gösterilen kodun Kod Düzenleyicisi'nde gördüğünüzle eşleşmeyabilecek iyileştirilmiş kaynaktan oluşturulmuş olduğunu unutmayın. İyileştirilmiş kodda hata ayıklamak için, Yalnızca kendi kodum. [(Bkz. Adımlama ile Yalnızca kendi kodum).](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Restrict_stepping_to_Just_My_Code)<br /><br /> Daha fazla bilgi için [bkz. C#](../debugger/project-settings-for-csharp-debug-configurations.md) Hata Ayıklama Yapılandırmaları için Proje Ayarları veya Hata [Ayıklama Yapılandırması Visual Basic Proje Ayarları.](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)|
+|**Çıkış yolu**|bin\Debug olarak \\ ayarlayın.|
+|**Gelişmiş Derleme Seçenekleri**|Visual Basic'e göre. Aşağıdaki **tabloda** açıklanan gelişmiş özellikleri ayarlamak için Gelişmiş'e tıklayın.|
 
 ### <a name="advanced-compiler-settings-dialog-box"></a>Gelişmiş Derleyici Ayarları iletişim kutusu
 
 |**Özellik Adı**|**Ayar**|
 |-----------------------|-----------------|
-|**İyileştirmeleri etkinleştir**|Önceki tablodaki **kodu en iyileştirme** seçeneğinde belirtilen nedenler için false olarak ayarlayın.|
-|**Hata ayıklama bilgileri oluştur**|Derleme sırasında/DEBUG bayrağının ayarlanmış olmasını sağlamak için bu onay kutusunu işaretleyin ve bu, hata ayıklamayı kolaylaştırmak için gereken bilgileri oluşturur.|
-|**Hata ayıklama sabiti tanımla**|`DEBUG`Uygulamanızın sınıfını kullanmasını sağlayan sabiti tanımlamak için bu onay kutusunu seçin <xref:System.Diagnostics.Debug> .|
-|**Izleme sabitini tanımlama**|`TRACE`Uygulamanızın sınıfını kullanmasını sağlayan sabiti tanımlamak için bu onay kutusunu seçin <xref:System.Diagnostics.Trace> .|
+|**İyileştirmeleri etkinleştirme**|Yukarıdaki tabloda yer alan Kodu en iyi duruma **getirme seçeneğinde belirtilen** nedenlerle false olarak ayarlayın.|
+|**Hata ayıklama bilgileri oluşturma**|Derleme sırasında /DEBUG bayrağının ayarlanmasına neden olmak için bu onay kutusunu seçin. Bu, hata ayıklamayı kolaylaştırmak için gereken bilgileri üretir.|
+|**DEBUG sabiti tanımlama**|Sabiti tanımlamak için bu onay `DEBUG` kutusunu seçin. Bu, uygulamanın sınıfını kullanmalarını <xref:System.Diagnostics.Debug> sağlar.|
+|**TRACE sabiti tanımlama**|Sabiti tanımlamak için bu onay `TRACE` kutusunu seçin. Bu, uygulamanın sınıfını kullanmalarını <xref:System.Diagnostics.Trace> sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)

@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, connectors
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b09ec4278dd78f797067c3acdf3152736fb395c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 43f55aecf134bf8e4d043a4fc7f6ffa2201f8e95
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899852"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390821"
 ---
 # <a name="properties-of-connectors"></a>Bağlayıcıların Özellikleri
 Bağlayıcılar, oluşturulan bir tasarımcıda etki alanı ilişkilerini temsil eder.
@@ -29,8 +29,8 @@ Bağlayıcılar, oluşturulan bir tasarımcıda etki alanı ilişkilerini temsil
 |-|-|-|
 |Renk|Bu bağlayıcının rengi.|Siyahi|
 |Kesik çizgi stili|Bu bağlayıcının çizgisi için çizgi stili (düz, kesik çizgi, nokta, çizgi nokta, çizgi dotdot veya özel).|Düz|
-|Kaynak uç stili|Bu bağlayıcının kaynak uç stili (Hollowok, EmptyArrow, Filledok, Emptyelmas, FilledDiamond veya None).|Yok|
-|Hedef bitiş stili|Bu bağlayıcının hedef uç stili (Hollowok, EmptyArrow, Filledok, Emptyelmas, FilledDiamond veya None).|Yok|
+|Kaynak uç stili|Bu bağlayıcının kaynak uç stili (Hollowok, EmptyArrow, Filledok, Emptyelmas, FilledDiamond veya None).|Hiçbiri|
+|Hedef bitiş stili|Bu bağlayıcının hedef uç stili (Hollowok, EmptyArrow, Filledok, Emptyelmas, FilledDiamond veya None).|Hiçbiri|
 |Metin rengi|Bu bağlayıcı ile ilişkilendirilen metin Dekoratörleri için kullanılan renk.|Siyahi|
 |Kalınlık|Bu bağlayıcının inç cinsinden ölçülen çizgi kalınlığı.|0,03125|
 |Erişim değiştiricisi|Sınıfın erişim düzeyi ( `public` veya `internal` ).|Genel|
@@ -45,7 +45,7 @@ Bağlayıcılar, oluşturulan bir tasarımcıda etki alanı ilişkilerini temsil
 |Notlar|Bu bağlayıcı ile ilişkili resmi olmayan notlar.|\<none>|
 |Yönlendirme stili|Bağlayıcıyı yönlendirmek için kullanılan stil. `Rectilinear`Bağlayıcı, gereken şekilde doğru dönüşler yapar; bir `Straight` bağlayıcı değildir.|Rectilinear|
 |Özellik olarak sunulan renk<br /><br /> Özellik olarak açığa çıkarılan kesik çizgi stili<br /><br /> Özellik olarak sunulma kalınlığı<br /><br /> Metin rengini gösterir|Eğer `True` Kullanıcı, bir şeklin belirtilen özelliğini ayarlayabilir. Bunu ayarlamak için, şekil tanımına sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|Yanlış|
-|Description|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
+|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılır.|\<none>|
 |Görünen Ad|Bu bağlayıcı için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none>|
 |Help anahtar sözcüğü|Bu öğe için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none>|

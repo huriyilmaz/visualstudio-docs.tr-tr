@@ -1,108 +1,108 @@
 ---
-title: Uygulamanızın mimarisini modelleyin &apos;
-description: Visual Studio 'da, yazılım sisteminizin veya uygulamanızın genel yapısının ve davranışının bir parçası olarak nasıl modeller oluşturabileceğinizi öğrenin.
+title: Uygulama &apos; mimarinizi modelleme
+description: Yazılım sisteminizin veya Visual Studio genel yapısının ve davranışının açıklamasının bir parçası olarak bu modellerde nasıl model oluşturabilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, modeling architecture
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e78e88884801b7aa7fcbcfe1147afd6fad653fd8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa2be8f4da963c21d9f7f68939421dd7d2d72d0b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954377"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390118"
 ---
-# <a name="model-your-app39s-architecture"></a>Uygulamanızın mimarisini modelleme&#39;
-Yazılım sisteminizin veya uygulamanızın kullanıcılarınızın ihtiyaçlarını karşıladığından emin olmak için, yazılım sisteminizin veya uygulamanızın genel yapısı ve davranışı açıklamasının bir parçası olarak Visual Studio 'da modeller oluşturabilirsiniz. Modelleri kullanarak, tasarımın tamamında kullanılan desenleri de tanımlayabilirsiniz. Bu modeller mevcut mimariyi anlamanıza, değişiklikleri tartışmanıza ve amaclarınızı açık bir şekilde iletmanıza yardımcı olur.
+# <a name="model-your-app39s-architecture"></a>Uygulama mimarinizi&#39;modeli
+Yazılım sisteminizin veya uygulamanın kullanıcılarının ihtiyaçlarını karşılamaya yardımcı olmak için, yazılım sisteminizin veya Visual Studio genel yapısının ve davranışının açıklamasının bir parçası olarak Visual Studio'da model oluşturabilirsiniz. Modelleri kullanarak, tasarım boyunca kullanılan desenleri de açıkabilirsiniz. Bu modeller mevcut mimariyi anlamanıza, değişiklikleri tartışmanıza ve amaçlarınızı net bir şekilde ifade etmeye yardımcı olur.
 
- Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Bu özelliği destekleyen Visual Studio için bkz. Mimari ve [modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
- Bir modelin amacı, doğal dil açıklamalarında gerçekleşen belirsizlikleri azaltmaktır ve tasarımı görselleştirmenize ve alternatif tasarımları tartışmanıza yardımcı olur. Model diğer belge veya tartışmalarla birlikte kullanılmalıdır. Tek başına bir model, mimarinin tamamen bir belirtimini temsil etmez.
+ Modelin amacı, doğal dil açıklamalarında oluşan belirsizlikleri azaltmak ve siz ve iş arkadaşlarınıza tasarımı görselleştirmenize ve alternatif tasarımları tartışmanıza yardımcı olmaktır. Model, diğer belgeler veya tartışmalarla birlikte kullanılmalıdır. Model tek başına mimarinin tam belirtimlerini temsil etmemektedir.
 
 > [!NOTE]
-> Bu konuda, "sistem", geliştirmekte olduğunuz yazılımı gösterir. Birçok yazılım ve donanım bileşeni ya da tek bir uygulama ya da bir uygulamanın bir parçası olan büyük bir koleksiyon olabilir.
+> Bu konu boyunca "sistem", geliştirmekte olduğunuz yazılım anlamına gelir. Birçok yazılım ve donanım bileşeninden veya tek bir uygulamadan ya da bir uygulamanın parçasından büyük bir koleksiyon olabilir.
 
- Bir sistemin mimarisi iki alana ayrılabilir:
+ Bir sistemin mimarisi iki bölüme ayrıl olabilir:
 
-- [Üst düzey tasarım](#Structure). Bu, önemli bileşenleri ve bunların her gereksinimi karşılamak için birbirleriyle nasıl etkileşime gireceğini açıklar. Sistem büyükse, her bileşenin daha küçük bileşenlerden nasıl oluştuğunu gösteren kendi üst düzey tasarımı olabilir.
+- [Üst Düzey Tasarım](#Structure). Bu, ana bileşenleri ve her gereksinimi karşılamak için birbirleriyle nasıl etkileşim kur olduklarını açıklar. Sistem büyükse, her bileşenin nasıl daha küçük bileşenlerden oluşan bir tasarıma sahip olduğunu gösteren kendi üst düzey tasarımı olabilir.
 
-- Bileşenlerin tasarımları boyunca kullanılan [tasarım desenleri](#Patterns) ve kuralları. Bir model, programlama hedefini elde etmeye yönelik belirli bir yaklaşımı açıklar. Tasarımın tamamında aynı desenleri kullanarak ekibiniz, değişiklik yapma ve yeni yazılım geliştirme maliyetini azaltabilir.
+- [Bileşenlerin tasarımları](#Patterns) boyunca kullanılan Tasarım Desenleri ve kuralları. Desen, programlama hedefine ulaşmak için belirli bir yaklaşımı açıklar. Bir tasarım boyunca aynı desenleri kullanarak, takımınız değişiklik yapma ve yeni yazılım geliştirme maliyetini düşürerek.
 
-## <a name="high-level-design"></a><a name="Structure"></a> Üst düzey tasarım
- Üst düzey bir tasarım, sisteminizin ana bileşenlerini ve tasarımın hedeflerine ulaşmak için birbirleriyle nasıl etkileşime gireceğini açıklar. Aşağıdaki listede yer alan etkinlikler, belirli bir dizide olması gerekmese de, üst düzey tasarımı geliştirmeye dahil edilir.
+## <a name="high-level-design"></a><a name="Structure"></a> Üst Düzey Tasarım
+ Üst düzey bir tasarım, sisteminizin ana bileşenlerini ve tasarım hedeflerine ulaşmak için birbirleriyle nasıl etkileşim kuracaklarını açıklar. Aşağıdaki listede yer alan etkinlikler, belirli bir dizide olması gerekmasa da üst düzey tasarımın geliştirilmesinde yer almaktadır.
 
- Mevcut kodu güncelleştiriyorsanız, ana bileşenleri açıklayarak başlayabilirsiniz. Kullanıcı gereksinimlerinde yapılan tüm değişiklikleri anladığınızdan emin olun ve ardından bileşenler arasındaki etkileşimleri ekleyin veya değiştirin. Yeni bir sistem geliştiriyorsanız, kullanıcı gereksinimlerinin ana özelliklerini anlamak için ' ı başlatın. Daha sonra ana kullanım örnekleri için etkileşim dizilerini keşfedebilirsiniz ve sonra dizileri bir bileşen tasarımında birleştirebilirsiniz.
+ Mevcut kodu güncelleştiriyorsanız, ana bileşenleri açıkleyerek başlayabilirsiniz. Kullanıcı gereksinimlerinde yapılan değişiklikleri anla ve ardından bileşenler arasındaki etkileşimleri ekle veya değiştir. Yeni bir sistem geliştiriyorsanız, kullanıcıların ihtiyaçlarının temel özelliklerini anarak başlayabilirsiniz. Daha sonra ana kullanım örnekleri için etkileşim dizilerini keşfedebilir ve ardından dizileri bir bileşen tasarımında birleştirebilirsiniz.
 
- Her durumda, farklı etkinliklerin paralel olarak geliştirilmesi ve erken bir aşamada kod ve testler geliştirilmesi yararlı olur. Bir başkasına başlamadan önce bu yönlerden birini tamamlamaya çalışmaktan kaçının. Genellikle, hem gereksinimler hem de sistemi tasarlamak için en iyi yöntem, kodu yazarken ve test edilirken değişir. Bu nedenle, gereksinimlerin ve tasarımınızın ana özelliklerini anlamak ve kodlayarak başlamanız gerekir. Ayrıntıları projenin sonraki yinelemeleriyle doldurur.
+ Her durumda, farklı etkinlikleri paralel olarak geliştirmek ve erken bir aşamada kod ve test geliştirmek yararlı olur. Bir tane daha başlatmadan önce bu yönlerden birini tamamlamaya çalışmamak. Genellikle, kodu yazarken ve test ederken hem gereksinimler hem de sistemi tasarlamanın en iyi yolunu anlamanız değişir. Bu nedenle öncelikle gereksinimlerin ve tasarımının temel özelliklerini anlamanız ve kodlamanız gerekir. Projenin sonraki yinelemeleri için ayrıntıları doldurun.
 
-- [Gereksinimleri anlama](#Requirements). Herhangi bir tasarımın başlangıç noktası, kullanıcıların ihtiyaçlarını net bir şekilde anlayabiliyor.
+- [Gereksinimleri Anlama.](#Requirements) Herhangi bir tasarımın başlangıç noktası, kullanıcıların ihtiyaçlarını net bir şekilde anlamaktır.
 
-- [Mimari desenler](#BigDecisions). Sistemin temel teknolojileri ve mimari öğeleri hakkında yaptığınız seçimler.
+- [Mimari Desenler.](#BigDecisions) Temel teknolojiler ve sistemin mimari öğeleri hakkında yapmış olduğunuz seçimler.
 
-- Bileşenlerin ve arabirimlerin veri modeli. Bileşenler arasında geçirilen ve bileşenlerin içinde depolanan bilgileri anlatmak için sınıf diyagramları çizebilirsiniz.
+- Bileşenlerin ve Arabirimlerin Veri Modeli. Bileşenler arasında geçirilen ve bileşenlerin içinde depolanan bilgileri açıklamak için sınıf diyagramları çizebilirsiniz.
 
-## <a name="understanding-the-requirements"></a><a name="Requirements"></a> Gereksinimleri anlama
- Tam bir uygulamanın üst düzey tasarımı, bir gereksinim modeli veya kullanıcı gereksinimlerinin diğer açıklamasıyla birlikte en etkili şekilde geliştirilmiştir. Gereksinim modelleri hakkında daha fazla bilgi için bkz. [model Kullanıcı gereksinimleri](../modeling/model-user-requirements.md).
+## <a name="understanding-the-requirements"></a><a name="Requirements"></a> Gereksinimleri Anlama
+ Eksiksiz bir uygulamanın üst düzey tasarımı, bir gereksinimler modeli veya kullanıcıların gereksinimlerinin diğer açıklamasıyla birlikte en etkili şekilde geliştirilmiştir. Gereksinimler modelleri hakkında daha fazla bilgi için bkz. [Model kullanıcı gereksinimleri.](../modeling/model-user-requirements.md)
 
- Geliştirmekte olduğunuz sistem daha büyük bir sistemdeki bir bileşen ise, gereksinimlerinizin bir kısmı veya tümü programlı arabirimlerde bulunabilir.
+ Geliştirdiğiniz sistem daha büyük bir sistemde bir bileşense, gereksinimlerinizin bir bölümü veya tüm bileşenleri program arabirimleri içinde yer almaktadır.
 
- Gereksinimler modeli bu önemli bilgi parçalarını sağlar:
+ Gereksinimler modeli şu temel bilgileri sağlar:
 
-- Sunulan arabirimler. Bir belirtilen arabirim, kullanıcıların veya bileşenin kullanıcılarına sağlaması gereken hizmet veya işlemleri, insan kullanıcıları veya diğer yazılım bileşenleri olup olmadıkları şekilde listeler.
+- Sağlanan arabirimler. Sağlanan arabirim, sistem veya bileşenin kullanıcılara sağlamaları gereken hizmetleri veya işlemleri (ister insan kullanıcılar ister diğer yazılım bileşenleri olsun) listeler.
 
-- Gerekli arabirimler. Gerekli bir arabirim, sistem veya bileşenin kullanabileceği Hizmetleri veya işlemleri listeler. Bazı durumlarda, tüm bu hizmetleri kendi sisteminizin bir parçası olarak tasarlayacaksınız. Diğer durumlarda, özellikle de birçok yapılandırmada diğer bileşenlerle birleştirilebilecek bir bileşen tasarlıyorsanız, gerekli arabirim dış hususlar tarafından ayarlanır.
+- Gerekli arabirimler. Gerekli bir arabirim, sistemin veya bileşenin kullanabileceği hizmetleri veya işlemleri listeler. Bazı durumlarda, tüm bu hizmetleri kendi sisteminizin bir parçası olarak tasarabileceksiniz. Diğer durumlarda, özellikle de birçok yapılandırmada diğer bileşenlerle bir araya gelecek bir bileşen tasarlarsanız, gerekli arabirim dış konular tarafından ayarlanır.
 
-- Hizmet kalitesi gereksinimleri. Sistemin uyması gereken performans, güvenlik, sağlamlık ve diğer hedefler ve kısıtlamalar.
+- Hizmet kalitesi gereksinimleri. Sistemin karşılaması gereken performans, güvenlik, sağlamlık ve diğer hedefler ve kısıtlamalar.
 
-  Gereksinimler modeli, ister kişiler, ister diğer yazılım bileşenleri olsun, sistem kullanıcılarınızın görünüm noktasından yazılır. Bunlar, sisteminizin iç işleyişini hiç bir şey bilmez. Buna karşılık, bir mimari modelde hedefiniz iç işleyişi ve kullanıcıların ihtiyaçlarını nasıl karşıladığını gösterir.
+  Gereksinimler modeli, ister insan ister diğer yazılım bileşenleri olsun, sistem kullanıcılarının bakış açısından yazılır. Bunlar, sisteminizin iç çalışmalarının hiçbir şeyi bilmiyor. Buna karşılık, mimari modelde amacınız iç çalışmalarınızı açıklamak ve kullanıcıların ihtiyaçlarını nasıl karşıla olduklarını göstermektir.
 
-  Gereksinimler ve mimari modellerin ayrı tutulması yararlı olduğundan, gereksinimleri kullanıcılarla tartışmak daha kolay hale gelir. Ayrıca, tasarımı yeniden düzenlemenize ve gereksinimleri değişmeden tutarken alternatif mimarilere göz önünde bulundurmanıza de yardımcı olur.
+  Gereksinimleri ve mimari modelleri ayrı tutmak, gereksinimleri kullanıcılarla tartışmayı kolaylaştırma konusunda faydalıdır. Ayrıca, gereksinimleri değiştirmeden tasarımı yeniden düzenlemenizi ve alternatif mimarileri göz önünde bulundurmanıza yardımcı olur.
 
-  Bir gereksinimlere veya mimari modele yerleştirmeniz gereken ayrıntı miktarı projenin ölçeğine ve takımın boyutuna ve dağıtımına bağlıdır. Kısa bir proje üzerinde küçük bir ekip, iş kavramlarının ve bazı Tasarım desenlerinin bir sınıf diyagramına göre taslağı oluşturma özelliğinden daha fazla çalışmayabilir; birden fazla bölgeye dağıtılmış büyük bir proje, önemli ölçüde daha ayrıntılı olmalıdır.
+  Bir gereksinimlere veya mimari modele koymamız gereken ayrıntı miktarı, projenin ölçeğine ve ekibin boyutuna ve dağılımına bağlıdır. Kısa bir proje üzerinde yer alan küçük bir ekip, iş kavramlarının sınıf diyagramını ve bazı tasarım desenlerini çizmekten başka bir şey yapmak zorunda değildir; Birden fazla bölgeye dağıtılmış büyük bir projenin daha fazla ayrıntıya ihtiyacı olur.
 
 ## <a name="architectural-patterns"></a><a name="BigDecisions"></a> Mimari Desenler
- Geliştirmede erken olarak, tasarımın bağlı olduğu ana teknolojileri ve öğeleri seçmeniz gerekir. Bu seçimlerin yapılması gereken alanlara aşağıdakiler dahildir:
+ Geliştirmenin erken dönemleri için tasarımın bağlı olduğu başlıca teknolojileri ve öğeleri seçmeniz gerekir. Bu seçeneklerin hangi alanlarda olması gerektiğini şunlardır:
 
-- Bir veritabanı ve dosya sistemi arasındaki seçim ve ağa bağlı bir uygulama ile Web istemcisi arasındaki seçim gibi temel teknoloji seçimleri.
+- Veritabanı ile dosya sistemi arasındaki seçim ve ağa bağlı bir uygulama ile web istemcisi arasındaki seçim gibi temel teknoloji seçimleri.
 
-- Windows Workflow Foundation veya ADO.NET Entity Framework arasında seçim gibi çerçeveler seçimleri.
+- Çerçeveler arasında seçim gibi çerçeve seçimleri Windows Workflow Foundation ADO.NET Entity Framework.
 
-- Tümleştirme yöntemi seçimleri, örneğin bir kurumsal hizmet veri yolu veya noktadan noktaya kanal.
+- Tümleştirme yöntemi seçenekleri, örneğin bir kurumsal hizmet veri aracı veya noktadan noktaya kanal arasında.
 
-  Bu seçimler sıklıkla ölçek ve esneklik gibi hizmet gereksinimlerinin kalitesi tarafından belirlenir ve ayrıntılı gereksinimler bilinerek yapılabilir. Büyük bir sistemde, donanım ve yazılım yapılandırması kesinlikle birbirleriyle ilişkilidir.
+  Bu seçenekler genellikle ölçek ve esneklik gibi hizmet kalitesi gereksinimlerine göre belirlenir ve ayrıntılı gereksinimler bilinmeden önce bu tercihler edilebilir. Büyük bir sistemde, donanım ve yazılım yapılandırması kesinlikle birbiriyle ilişkilidir.
 
-  Yaptığınız seçimler, mimari modeli nasıl kullanacağınızı ve yorumlayacağını etkiler. Örneğin, bir veritabanı kullanan bir sistemde, bir sınıf diyagramındaki ilişkilendirmeler, veritabanındaki ilişkileri veya yabancı anahtarları temsil edebilir, ancak XML dosyalarını temel alan bir sistemde, ilişkilendirmeler XPath kullanan çapraz başvuruları belirtebilir. Dağıtılmış bir sistemde, Sıralı diyagramdaki iletiler bir hattaki iletileri temsil edebilir; kendi içinde bulunan bir uygulamada, işlev çağrılarını temsil edebilirler.
+  Sizin seçimleriniz, mimari modeli nasıl kullanabileceğinizi ve yorumlaymanizi etkiler. Örneğin, veritabanı kullanan bir sistemde, sınıf diyagramında ilişkiler veritabanındaki ilişkileri veya yabancı anahtarları temsil ederken, XML dosyalarını temel alan bir sistemde ilişkilendirmeler XPath kullanan çapraz başvuruları gösteriyor olabilir. Dağıtılmış bir sistemde, sıralı diyagramda yer alan iletiler bir kabloda iletileri temsil eder; kendi içinde bir uygulamada işlev çağrılarını temsil ediyor olabilir.
 
-## <a name="design-patterns"></a><a name="Patterns"></a> Tasarım desenleri
- Tasarım düzeni, yazılımın, özellikle de sistemin farklı bölümlerinde yinelenen belirli bir yönün nasıl tasarlanacağını gösteren bir ana hatlarıyla oluşur. Proje genelinde tek bir yaklaşımı benimseerek, tasarımın maliyetini azaltabilir, Kullanıcı arabiriminde tutarlılığı güvence altına alabilir ve kodu anlama ve değiştirme maliyetini azaltabilirsiniz.
+## <a name="design-patterns"></a><a name="Patterns"></a> Tasarım Desenleri
+ Tasarım düzeni, yazılımın belirli bir yönünün, özellikle de sistemin farklı kısımlarında tekrarlayan bir özelliğin nasıl tasarlan bir ana hatlarıdır. Proje genelinde tekdüz bir yaklaşım benimseerek tasarım maliyetini düşürebilirsiniz, kullanıcı arabiriminde tutarlılık s sağlanmasını ve kodu anlama ve değiştirme maliyetini azaltabilirsiniz.
 
- Gözlemci gibi bazı genel tasarım desenleri iyi bilinmektedir ve yaygın olarak uygulanabilir. Ayrıca, yalnızca projeniz için geçerli olan desenler vardır. Örneğin, bir web satış sisteminde, kodda bir müşterinin sırasıyla değişiklikler yapıldığı birkaç işlem olacaktır. Siparişin durumunun her aşamada doğru şekilde görüntülendiğinden emin olmak için, bu işlemlerin veritabanının güncelleştirilmesi için belirli bir protokolü izlemesi gerekir.
+ Gözlemci gibi bazı genel tasarım desenleri iyi bilinir ve yaygın olarak uygulanabilir. Ayrıca yalnızca projeniz için geçerli olan desenler de vardır. Örneğin, bir web satış sisteminde kodda müşterinin siparişte değişiklik yapılan birkaç işlem olacak. Siparişin durumunun her aşamada doğru şekilde görüntülendiğinden emin olmak için tüm bu işlemlerin veritabanını güncelleştirmek için belirli bir protokolü izlemesi gerekir.
 
- Yazılım mimarisi işinin bir parçası, tasarımın tamamında hangi desenlerin benimsenmesi gerektiğini belirlemektir. Bu genellikle devam eden bir görevdir, çünkü mevcut desenlere yönelik yeni modeller ve iyileştirmeler proje ilerledikçe keşfedilir. Geliştirme planını düzenlemek faydalı olur, böylece ilk aşamada önemli tasarım desenlerinizin her birini gerçekleştirebilirsiniz.
+ Yazılım mimarisinin çalışmalarının bir parçası, tasarım genelinde hangi desenlerin benimseneceklerini belirlemektir. Bu genellikle devam eden bir görevdir çünkü proje ilerledikçe mevcut desenlerde yeni desenler ve geliştirmeler keşfeder. Geliştirme planını düzenlemek, ana tasarım desenlerinizi erken bir aşamada alıştırmak için faydalıdır.
 
- Çoğu tasarım deseni çerçeve koduna kısmen eklenebilir. Düzenin, veritabanının doğru şekilde işlenmesini sağlayan bir veritabanı erişim katmanı gibi belirli sınıfları veya bileşenleri kullanmasını gerektirecek şekilde, düzenin bir bölümü azaltılabilir.
+ Çoğu tasarım deseni, çerçeve kodunda kısmen yer almaktadır. Desenin bir kısmı, geliştiricinin veritabanının doğru şekilde işlen bir veritabanı erişim katmanı gibi belirli sınıfları veya bileşenleri kullanmasını gerektirmeye kadar azaltabilirsiniz.
 
- Tasarım alanı bir belge içinde tanımlanır ve genellikle şu parçaları içerir:
+ Tasarım deseni bir belgede açıklanmıştır ve genellikle şu bölümleri içerir:
 
-- Ada.
+- Adı.
 
-- Geçerli olduğu bağlamın açıklaması. Bir geliştirici bu düzenin uygulanmasını ne planlıyor?
+- Geçerli olduğu bağlamın açıklaması. Bir geliştiricinin bu düzeni uygulama ölçütlerini göz önünde olması gerekir?
 
-- Çözdüğü sorunun kısa açıklaması.
+- Çözen sorunun kısa açıklaması.
 
-- Ana parçaların ve bunların ilişkilerinin modeli. Bunlar arasındaki ilişkilendirmeler ve bağımlılıklarla birlikte sınıflar veya bileşenler ve arabirimler olabilir. Öğeler genellikle iki kategoriye ayrılır:
+- Ana parçaların ve ilişkilerinin modeli. Bunlar sınıflar veya bileşenler ve arabirimler olabilir ve bunlar arasındaki ilişkilendirmeler ve bağımlılıklar olabilir. Öğeler genellikle iki kategoriye ayrılır:
 
 - Adlandırma kuralları.
 
-- Düzenin sorunu nasıl çözdüğü hakkında açıklama.
+- Desenin sorunu nasıl çözeceğinin açıklaması.
 
-- Geliştiricilerin benimseyebileceği çeşitlemelerin açıklaması.
+- Geliştiricilerin benimsemek mümkün olabileceği varyasyonların açıklaması.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

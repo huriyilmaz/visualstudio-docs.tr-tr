@@ -1,7 +1,7 @@
 ---
 title: 'Öğretici: basit bir C# konsol uygulamasını genişletme'
 description: Visual Studio 'da C# konsol uygulaması geliştirmeyi adım adım öğrenin.
-ms.custom: get-started
+ms.custom: vs-acquisition, get-started
 ms.date: 04/15/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cce069b1c4acb1784388b7afb06e810dbe826d59
-ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
+ms.openlocfilehash: c7c38ed40143064090535735b2050dd31904d608
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107584125"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390183"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Öğretici: basit bir C# konsol uygulamasını genişletme
 
@@ -511,77 +511,77 @@ Visual Studio hata ayıklayıcı, programlama sırasında hata yaptığınız ke
 
    Hata ayıklarken, değişkenlerin tutmak istediğiniz değerleri içerip içermediğini görmek için genellikle sorunları çözmek için kritik önem taşır.
 
-2. Alt bölmede **Yereller** penceresine bakın. (Kapalıysa, **Hata Ayıkla**  >  ' yı seçin. **Windows**  >  **Yerelleri açmak Için Yereller** .)
+2. Alt bölmede Yereller **penceresine** bakın. (Kapalı ise Hata Ayıkla'ya **seçin**  >  **Windows**  >  **Açmak için** yereller.)
 
-   Yereller penceresinde, şu anda kapsamda olan her bir değişkeni, değeri ve türü ile birlikte görürsünüz.
+   Yereller penceresinde, değeri ve türüyle birlikte şu anda kapsamda olan her bir değişkeni görebilirsiniz.
 
    ![Yereller penceresinin ekran görüntüsü](media/vs-2019/calculator-2-debug-locals-window.png)
 
-3. **Oto** penceresine bakın.
+3. Otomatikler **penceresine** bakın.
 
-   Bu pencere, **Yereller** penceresi ile benzerdir, ancak uygulamanızın duraklatıldığı geçerli kod satırını takip eden ve izleyen değişkenleri gösterir.
+   Otomatikler penceresi Yerel öğeler  penceresine benzer, ancak uygulamanın duraklatılmış olduğu geçerli kod satırına hemen önce ve sonra gelen değişkenleri gösterir.
 
-   Daha sonra, hata ayıklayıcı tek bir ifadede, *Adımlama* olarak adlandırılan kodu yürütecaksınız.
+   Ardından, hata ayıklayıcısında her bir deyiminde adımlama olarak adlandırılan bir kod *yürütebilirsiniz.*
 
-## <a name="debug-step-through-code"></a>Hata Ayıkla: kod içinde adımla
+## <a name="debug-step-through-code"></a>Hata ayıklama: kodda adım adım
 
-1. **F11** tuşuna basın (veya **hata ayıklama**  >  **adımı**).
+1. **F11 tuşuna** basın (veya **Hata Ayıkla**  >  **adımını içine alın).**
 
-   Step Into komutunu kullanarak, uygulama geçerli ifadeyi yürütür ve sonraki yürütülebilir ifadeye (genellikle bir sonraki kod satırına) ilerler. Sol taraftaki sarı işaretçi her zaman geçerli ifadeyi gösterir.
+   Uygulama, Adımla komutunu kullanarak geçerli deyimi yürütür ve sonraki yürütülebilir deyime (genellikle bir sonraki kod satırı) ilerler. Sol tarafta sarı işaretçi her zaman geçerli deyimi gösterir.
 
-   ![Adımın komut ekran görüntüsü](media/vs-2019/calculator-2-debug-step-into.png)
+   ![Komutun içine adımla ekran görüntüsü](media/vs-2019/calculator-2-debug-step-into.png)
 
-   Yalnızca sınıfındaki yöntemine bir adım daha gördünüz `DoOperation` `Calculator` .
+   sınıfındaki yöntemine `DoOperation` `Calculator` girdiniz.
 
-1. Program akışınız hakkında hiyerarşik bir görünüm almak için **çağrı yığını** penceresine bakın. (Kapalıysa, **Hata Ayıkla**  >  ' yı seçin. **Windows**  >  **Çağrı yığını**.)
+1. Program akışınıza hiyerarşik bir bakış elde etmek için Çağrı Yığını **penceresine** bakın. (Kapalı ise Hata Ayıkla'ya **seçin**  >  **Windows**  >  **Çağrı Yığını**.)
 
    ![Çağrı yığınının ekran görüntüsü](media/vs-2019/calculator-2-debug-call-stack.png)
 
-   Bu görünüm `Calculator.DoOperation` , sarı işaretçi tarafından gösterilen geçerli yöntemi gösterir ve ikinci satır, `Main` *program. cs* içindeki yöntemden, çağıran işlevi gösterir. Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Ayrıca, kısayol menüsünden **kaynak koda git** gibi birçok hata ayıklayıcı özelliğine erişim sağlar.
+   Bu görünüm sarı işaretçiyle gösterilen geçerli yöntemi, ikinci satır `Calculator.DoOperation` `Main` ise *Program.cs'de* yönteminden çağıran işlevi gösterir. Çağrı **Yığını** penceresi, yöntemlerin ve işlevlerin çağrıldığı sırayı gösterir. Ayrıca, kısayol menüsünden Kaynak Koduna Git gibi birçok **hata ayıklayıcısı** özelliğine erişim sağlar.
 
-1. Uygulama bildirimde duraklayana kadar, **F10** tuşuna basın (veya **hata ayıklama**  >  **adımından** fazla) `switch` .
+1. Uygulama deyimi duraklatana kadar **F10** 'a (veya Hata Ayıklama   >  Adımı) birkaç kez `switch` basın.
 
    ```csharp
    switch (op)
    {
    ```
 
-   Step Over komutu, geçerli deyimin bir işlev çağırması durumunda hata ayıklayıcının kodu çağrılan işlev içinde çalıştırmasını ve işlevin dönüşene kadar yürütmeyi askıya almamasının dışında adımla komutuna benzer. Belirli bir işlevle ilgilenmiyorsanız, yukarıdaki adımla kodda gezinmek daha hızlı bir yoldur.
+   Üzerinden Adımla komutu, Geçerli deyim bir işlev çağırsa, hata ayıklayıcının çağıran işlevde kodu çalıştırması ve işlev dönene kadar yürütmeyi askıya almama durumu dışında, Adımla komutuna benzer. Belirli bir işlevle ilgilenmezken Kodda gezinmenin daha hızlı bir yoludur.
 
-1. Uygulamanın aşağıdaki kod satırında duraklaması için bir kez **F10** tuşuna basın.
+1. Uygulamanın aşağıdaki kod satırına duraklatmak için **F10'a** bir kez daha basın.
 
    ```csharp
    if (num2 != 0)
    {
    ```
 
-   Bu kod, sıfıra bölme durumunu denetler. Uygulama devam ederse, genel bir özel durum (hata) oluşturur, ancak bunu bir hata olduğunu düşünsün ve konsolda döndürülen gerçek değeri görüntüleme gibi başka bir şey yapmak istediğinizi varsayalım. Bir seçenek, kodda değişiklik yapmak ve sonra hata ayıklamaya devam etmek için Düzenle ve devam et adlı bir hata ayıklayıcı özelliği kullanmaktır. Bununla birlikte, yürütme akışını geçici olarak değiştirmek için size farklı bir eliz gösterilecektir.
+   Bu kod, sıfıra bölme büyük/küçük harflerini denetler. Uygulama devam ederse, genel bir özel durum (hata) oluşturur, ancak bunu bir hata olarak değerlendirin ve konsolda döndürülen gerçek değeri görüntüleme gibi başka bir şey yapmak istediğiniz varsayın. Seçeneklerden biri, kodda değişiklik yapmak ve ardından hata ayıklamaya devam etmek için Düzenle ve devam adlı bir hata ayıklayıcı özelliği kullanmaktır. Ancak, yürütme akışını geçici olarak değiştirmeniz için size farklı bir püf noktası gösteriz.
 
-## <a name="debug-test-a-temporary-change"></a>Hata Ayıkla: geçici bir değişikliği test etme
+## <a name="debug-test-a-temporary-change"></a>Hata ayıklama: Geçici bir değişikliği test etmek
 
-1. Şu anda deyimde duraklatılmış olan sarı işaretçiyi seçin `if (num2 != 0)` ve aşağıdaki ifadeye sürükleyin.
+1. Deyimde duraklatılmış olan sarı `if (num2 != 0)` işaretçiyi seçin ve aşağıdaki deyime sürükleyin.
 
    ```csharp
    result = num1 / num2;
    ```
 
-   Bunu yaptığınızda, uygulama, `if` sıfıra bölme yaparken ne olacağını görmek için, ifadesini tamamen atlar.
+   Bunu yaparak uygulama deyimini tamamen `if` atlar, böylece sıfıra böldükte ne olacağını görebilir.
 
-1. Kod satırını yürütmek için **F10** tuşuna basın.
+1. Kod **satırı yürütmek için F10** tuşuna basın.
 
-1. Değişkenin üzerine gelin `result` ve bir değeri depolayıp depoladığını görürsünüz `Infinity` .
+1. değişkeninin `result` üzerine gelin ve değerini depolar. `Infinity`
 
-   C# ' de, `Infinity` sıfıra böldüğünüzde sonuç olur.
+   C# `Infinity` içinde, sıfıra bölerek elde edilen sonuç olur.
 
-1. **F5** tuşuna basın (veya hata ayıklama  >  **devam** Ayıkla).
+1. **F5 tuşuna** basın (veya Hata **Ayıklama Devam**  >  **Hata Ayıklama).**
 
-   Sonsuzluk sembolü, matematik işleminin sonucu olarak konsolunda görünür.
+   Infinity simgesi, matematik işlemi sonucunda konsolda gösterilir.
 
-1. ' N ' komutunu kullanarak uygulamayı düzgün bir şekilde kapatın.
+1. 'n' komutunu kullanarak uygulamayı düzgün bir şekilde kapatın.
 
-## <a name="code-complete"></a>Kod Tamam
+## <a name="code-complete"></a>Kod tamamlandı
 
-Tüm adımlar tamamlandıktan sonra *Hesaplamalibrary. cs* dosyasının tüm kodu aşağıda verilmiştir:
+Tüm adımlar tamamlandıktan sonra *CalculatorLibrary.cs* dosyasının tam kodu şu şekildedir:
 
 ```csharp
 using System;
@@ -660,7 +660,7 @@ namespace CalculatorLibrary
 }
 ```
 
-*Program. cs* kodu aşağıda verilmiştir: 
+Program.cs için kod *şu şekildedir:* 
 
 ```csharp
 using System;
@@ -749,15 +749,15 @@ namespace CalculatorProgram
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu öğreticiyi tamamlama! Daha da fazla bilgi edinmek için aşağıdaki öğreticilerle devam edin.
+Tebrikler, bu öğreticiyi tamamladıktan sonra! Daha da fazla bilgi edinmek için aşağıdaki öğreticilerle devam edin.
 
 > [!div class="nextstepaction"]
-> [Daha fazla C# öğreticilerine devam edin](/dotnet/csharp/tutorials/)
+> [Daha fazla C# öğreticisi ile devam edin](/dotnet/csharp/tutorials/)
 
 > [!div class="nextstepaction"]
-> [Visual Studio IDE 'ye genel bakış ile devam edin](/../visual-studio-ide.md)
+> [IDE'Visual Studio genel bakış ile devam](/../visual-studio-ide.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
-- [Visual Studio 'da C# kodunda hata ayıklamayı öğrenin](tutorial-debugger.md)
+- [Visual Studio'de C# kodunda hata ayıklamayı Visual Studio](tutorial-debugger.md)

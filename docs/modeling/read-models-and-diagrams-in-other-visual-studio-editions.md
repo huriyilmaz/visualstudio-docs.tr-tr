@@ -1,61 +1,61 @@
 ---
 title: Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma
-description: Visual Studio 'da modelleri ve diyagramları okuma ve model oluşturmayı desteklemeyen bir Visual Studio sürümü kullanılırken salt okuma davranışı hakkında bilgi edinin.
+description: Visual Studio'de modelleri ve diyagramları okumanın yanı sıra model oluşturma desteği olmayan bir Visual Studio salt okunur davranış hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - models, versions of Visual Studio
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a8049471e9e172496381df016c6155410f3bc244
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95fbf6451a3f07581ff2bdb098428f41904d4276
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882940"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389910"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma
 
-Model oluşturmayı desteklemeyen bir Visual Studio sürümünde model açtığınızda, model salt okuma modunda açılır. Bu modda, diyagramların yerleşimini değiştirebilirsiniz, ancak modeli değiştiremezsiniz.
+Modeli, model oluşturma desteği olmayan Visual Studio sürümde açtığında, model salt okunur modda açılır. Bu modda diyagramların düzenini değiştirebilirsiniz ancak modeli değiştiremezsiniz.
 
-Hangi Visual Studio sürümünün model oluşturmayı desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Model oluşturmanın hangi sürümlerini Visual Studio için [bkz. Mimari ve modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
-## <a name="obtaining-access-to-a-model-and-diagrams"></a>Model ve diyagramlara erişim sağlama
+## <a name="obtaining-access-to-a-model-and-diagrams"></a>Modele ve Diyagramlara Erişim Alma
 
-Bir bağımlılık diyagramını okumak için öncelikle Visual Studio 'Yu kullanarak modelleme projesini açın ve sonra diyagramı içinde açın.
+Bağımlılık diyagramını okumak için önce Visual Studio kullanarak modelleme projesini ve ardından içindeki diyagramı açabilirsiniz.
 
-Bu nedenle, bir bağımlılık diyagramını okumak istiyorsanız, oluşturulduğu modelleme projesine de erişiminizin olması gerekir. Bunu, projeye kaynak denetiminden erişerek ya da proje dosyalarının bir kopyasını alarak yapabilirsiniz.
+Bu nedenle, bir bağımlılık diyagramını okumak için, oluşturulduktan sonra modelleme projesine de erişiminizin olması gerekir. Bunu yapmak için kaynak denetiminden projeye erişebilirsiniz veya proje dosyalarının bir kopyasını edinebilirsiniz.
 
 > [!NOTE]
-> Bu, koddan oluşturulan kod haritaları ve .NET sınıf diyagramları için geçerlidir. Bu diyagramlar, modelleme projesinden bağımsız olarak görüntülenebilir.
+> Bu, koddan oluşturulan kod eşlemeleri ve .NET sınıf diyagramları için geçerli değildir. Bu diyagramlar bir modelleme projesine göre bağımsız olarak ılabilir.
 
-Bir bağımlılık diyagramını okumak için, ihtiyacınız olan minimum dosya kümesi aşağıdaki gibidir:
+Bağımlılık diyagramını okumak için ihtiyacınız olan minimum dosya kümesi aşağıdaki gibidir:
 
-- Okumak istediğiniz diyagram için iki Diyagram dosyası; örneğin, **MyDiagram. classdiagram ve MyDiagram. classdiagram. Layout**.
+- Okumak istediğiniz diyagram için iki diyagram dosyası; örneğin, **MyDiagram.classdiagram ve MyDiagram.classdiagram.layout**.
 
     > [!NOTE]
-    > Bağımlılık diyagramlarında, _MyDiagram_**. layerdiagram. suppressions** adlı dosyaya da sahip olmanız gerekir.
+    > Bağımlılık diyagramları için _MyDiagram_**.layerdiagram.suppressions adlı dosyaya da sahipsiniz.**
 
-- Modelleme proje dosyası (**MyModel. modelproj**)
+- Modelleme proje dosyası (**MyModel.modelproj**)
 
-- Kök model dosyası (**Modeldefinition\mymodel.exe**)
+- Kök model dosyası (**ModelDefinition\MyModel.uml**)
 
-- Diyagramda başvurulan herhangi bir paket için paket dosyaları (**Modeldefinition\mypackage.exe**)
+- Diyagramda başvurulan herhangi bir paket için paket dosyaları (**ModelDefinition\MyPackage.uml**)
 
-## <a name="changes-that-you-can-make-in-read-only-mode"></a>Read-Only modunda yapabileceğiniz değişiklikler
+## <a name="changes-that-you-can-make-in-read-only-mode"></a>Read-Only Modunda Read-Only Yapabilirsiniz
 
-Model oluşturmayı desteklemeyen bir Visual Studio sürümünde model ve diyagramlarını açarsanız modeli değiştiremezsiniz. Diğer bir deyişle, diyagramlarda veya model Gezgininde görüntülenen öğeleri ve ilişkileri değiştiremezsiniz. Ancak, diyagramların düzeninde bazı değişiklikler yapabilirsiniz:
+Modeli ve diyagramlarını model oluşturma desteği Visual Studio bir sürümde açarsanız modeli değiştiremezsiniz. Başka bir ifadeyle diyagramlarda veya model gezgininde görüntülenen öğeleri ve ilişkileri değiştiremezsiniz. Ancak diyagramların düzeninde bazı değişiklikler yapabilirsiniz:
 
-- Diyagramdaki şekilleri ve bağlayıcıları yeniden düzenleyin.
+- Diyagramda şekilleri ve bağlayıcıları yeniden düzenleme.
 
-- Şekilleri Genişlet ve daralt.
+- Şekilleri genişletme ve daraltma.
 
-Bu değişiklikleri kaydedebilirsiniz. Değişikliklerinizi diğer kullanıcılara görünür yapmak istiyorsanız, en azından güncelleştirilmiş **. Layout** dosyalarını göndermeniz gerekir.
+Bu değişiklikleri kaydedebilirsiniz. Değişikliklerinizi diğer kullanıcılara görünür yapmak için en azından güncelleştirilmiş .layout dosyalarını **göndermeniz** gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

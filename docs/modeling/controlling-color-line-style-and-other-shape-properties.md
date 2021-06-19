@@ -3,32 +3,32 @@ title: Renk, Çizgi Stili ve diğer Şekil Özelliklerini denetleme
 description: Renk ve çizgi stili gibi şekil özelliklerini denetleme hakkında bilgi sağlar.
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 68eda84ec014dec2931e2c35a04dec1ed878e6c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 836c77f3651b7686e9366fe75ea7922a248fd28f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861666"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389637"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Renk, Çizgi Stili ve Diğer Şekil Özelliklerini Denetleme
 
-Renk gibi bazı şekil özellikleri ' açığa çıkabilir ' olabilir. Diğer bir deyişle, Özellikler şeklin bir etki alanı özelliğine bağlanabilir. Diğerlerinin doğrudan denetlenmesi gerekir.
+Renk gibi bazı şekil özellikleri 'açık' olabilir. Başka bir ifadeyle, özellikler şeklin bir etki alanı özelliğine bağlanabilirsiniz. Diğerlerinin doğrudan denetlen olması gerekir.
 
-## <a name="exposing-a-property"></a>Bir özelliği gösterme
- Color gibi bazı şekil özellikleri, bir etki alanı özelliğinin değeri ile bağlantılı olabilir.
+## <a name="exposing-a-property"></a>Bir özelliği açığa çıkararak
+ Renk gibi bazı şekil özellikleri bir etki alanı özelliğinin değerine bağlı olabilir.
 
- DSL tanımında bir şekil, bağlayıcı veya Diyagram sınıfı seçin. Sağ tıklama menüsünde, **gösterilen Ekle**' yi seçin ve ardından istediğiniz özelliği (örneğin, Fill Color) seçin.
+ DSL Tanımı'da bir şekil, bağlayıcı veya diyagram sınıfı seçin. Sağ tıklama menüsünde, Açığa Çıkar **ekle'yi** ve ardından Dolgu Rengi gibi istediğiniz özelliği seçin.
 
- Artık şekil, program kodunda veya Kullanıcı olarak ayarlayabileceğiniz bir etki alanı özelliğine sahiptir.
+ Şeklin artık program kodunda veya kullanıcı olarak ayarlayabilirsiniz bir etki alanı özelliği vardır.
 
-## <a name="dynamically-updating-an-exposed-property"></a>Sunulan bir özelliği dinamik olarak güncelleştirme
- Genellikle, ortaya çıkan özelliği başka bir özelliğe bağımlı hale getirmek istersiniz. Örneğin, belirli bir etki alanı özelliği sıfırdan küçük olduğunda bir şeklin kırmızı olmasını isteyebilirsiniz. Bu bağımlılığı yapmak için bir [kural](../modeling/rules-propagate-changes-within-the-model.md)oluşturun. Örnek:
+## <a name="dynamically-updating-an-exposed-property"></a>Açığa çıkarılmıştır bir özelliği dinamik olarak güncelleştirme
+ Genellikle, açığa çıkarılacak özelliği başka bir özelle bağımlı yapmak istersiniz. Örneğin, belirli bir etki alanı özelliği sıfırdan küçük olduğunda şeklin kırmızıya dönüşecek şekilde olması iyi olabilir. Bu bağımlılığı oluşturmak için bir kural [oluşturun.](../modeling/rules-propagate-changes-within-the-model.md) Örnek:
 
 ```csharp
 using System;

@@ -1,37 +1,37 @@
 ---
 title: Kod eşlemeleri yavaş
-description: Kod Haritası performansını geliştirmeyi ve işlemeyi tamamlaması için gereken süreyi nasıl en aza indireceğinizi öğrenin.
+description: Kod eşleme performansını geliştirmeyi ve işlemeyi tamamlamak için gereken zamanı nasıl en aza indirgeyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c37f07d309551ae0f8aa0062b7847722f33671be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d5a279a04b1bd76933df335bc0b2527ab4b2418f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861692"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389650"
 ---
-# <a name="improve-performance-for-code-maps"></a>Kod haritaları için performansı iyileştirme
+# <a name="improve-performance-for-code-maps"></a>Kod eşlemeleri için performansı geliştirme
 
-İlk kez bir eşleme oluşturduğunuzda, Visual Studio bulduğu tüm bağımlılıkların dizinini oluşturur. Bu işlem, özellikle büyük çözümler için biraz zaman alabilir, ancak daha sonraki performansı geliştirir. Kodunuz değişirse, Visual Studio yalnızca güncelleştirilmiş kodun dizinini oluşturur. Haritanın işlemeyi tamamlaması için geçen süreyi en aza indirmek için aşağıdaki önerileri göz önünde bulundurun:
+İlk kez bir harita 7.000 Visual Studio, bulduğu tüm bağımlılıkları dizinler. Bu işlem özellikle büyük çözümler için biraz zaman alsa da, daha sonra performansı iyiler. Kodunuz değişirse, Visual Studio güncelleştirilmiş kodu yeniden koda yeniden kodlar. Haritanın işlemeyi bitirme süresini en aza indirmek için aşağıdaki önerileri göz önünde bulundurabilirsiniz:
 
-- Yalnızca ilgilendiğiniz bağımlılıkları eşleyin.
+- Yalnızca ilgini alan bağımlılıkları eşler.
 
-- Tüm çözüm için Haritayı oluşturmadan önce çözüm kapsamını azaltın.
+- Çözümün tamamı için haritayı oluşturmadan önce çözüm kapsamını azaltarak.
 
-- Kod Haritası araç çubuğunda **derlemeyi atla** ' yı seçerek çözüm için otomatik derlemeyi devre dışı bırakın.
+- Kod haritası araç çubuğunda Derlemeyi Atla'ya **seçerek çözüm** için otomatik derlemeyi kapatın.
 
-- Kod Haritası araç çubuğunda üst öğeleri **dahil et** ' i seçerek üst öğelerin otomatik eklenmesini devre dışı bırakın.
+- Kod haritası araç çubuğunda Üst Öğeleri Ekle'yi **seçerek üst** öğe eklemenin otomatik olarak nasıl devre dışı olduğunu kapatın.
 
-   ![Derleme ve ekleme üst öğeleri düğmelerini atla](../modeling/media/codemapsfilterskipbuildicons.png)
+   ![Derleme ve Ekleme Ebeveyn düğmelerini atla](../modeling/media/codemapsfilterskipbuildicons.png)
 
-- İhtiyacınız olmayan düğümleri ve bağlantıları kaldırmak için doğrudan kod eşleme dosyasını düzenleyin. Haritanın değiştirilmesi temeldeki kodu etkilemez. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+- Kod eşleme dosyasını doğrudan düzenarak ihtiyacınız olan düğümleri ve bağlantıları kaldırın. Haritanın değiştirilmesi, temel alınan kodu etkilemez. Bkz. [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme.](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
 
-Bir proje öğesinin **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala** olarak ayarlandığında, haritalar oluşturmak veya **Çözüm Gezgini** haritaya öğe eklemek daha fazla zaman alabilir. Performansı artırmak için, bu özelliği **daha yeni** veya olarak Kopyala olacak şekilde değiştirin `PreserveNewest` . Bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
+Bir proje öğesinin Çıkış Dizinine Kopyala özelliği Her Zaman Kopyala olarak **Çözüm Gezgini** eşleme oluşturmak veya haritaya öğe eklemek daha **uzun zaman alır.**  Performansı artırmak için bu özelliği Daha yeni veya **ise kopyala olarak** değiştirebilirsiniz. `PreserveNewest` Bkz. [Artımlı derlemeler.](../msbuild/incremental-builds.md)
 
-Tamamlanan eşleme yalnızca başarıyla oluşturulmuş kod için bağımlılıkları gösterir. Belirli bileşenler için yapı hataları oluşursa, bu hatalar haritada görüntülenir. Harita üzerinde mimari kararlar vermeden önce bir bileşenin gerçekten oluşturup bu bağımlılıkları kullandığından emin olun.
+Tamamlanan harita yalnızca başarıyla yapılan kod bağımlılıklarını gösterir. Belirli bileşenler için derleme hataları oluşursa, bu hatalar haritada görünür. Haritayı temel alan mimari kararlar almadan önce bir bileşenin gerçekten derlemesi ve bağımlılıkları olduğundan emin olun.

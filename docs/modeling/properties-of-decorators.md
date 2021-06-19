@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, decorators
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e29dcda43fdbb7b60567ff0aa0627b41ca3ca299
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f3436bb800142e7c85594f4b05cef6fb45c4489
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873794"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390808"
 ---
 # <a name="properties-of-decorators"></a>Dekoratörlerin Özellikleri
 Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebilen simgelerle, metin veya genişletme/daraltma köşeli ayraçlardır. Aşağıdaki tablolarda, üç dekoratörün çeşitinin özellikleri gösterilmektedir. Bazı özellikler yalnızca şekil dekoratlarını veya yalnızca bağlayıcı dekoratlarını üzerinde görünür.
@@ -62,10 +62,10 @@ Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebil
 |Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
 |Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
 |Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
-|OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
-|OffsetFromShape|Dekoratörün şekilden, varsayılan konumuna göre inç cinsinden değeri. (Yalnızca bağlayıcılar üzerinde.)|0|
+|OffsetFromLine|Dekoratörün çizgiden, varsayılan konumundan inç olarak uzaklığı. (Yalnızca bağlayıcılarda.)|0|
+|OffsetFromShape|Dekoratörün, varsayılan konumundaki şekliyle inç olarak uzaklığı. (Yalnızca bağlayıcılarda.)|0|
 |Konum|Dekoratörün varsayılan konumu.|TargetBottom|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))
+- [Alana Özgü Dil Araçları Sözlüğü](/previous-versions/bb126564(v=vs.100))

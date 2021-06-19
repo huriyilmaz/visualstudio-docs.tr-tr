@@ -1,7 +1,10 @@
 ---
 title: Geliştiriciler için düzenlemeye Visual Basic giriş
 description: Visual Studio'de kod düzenleyicisine 10 dakikalık bir giriş, Visual Studio kodu yazmayı, gezinmeyi ve kodu daha kolay Visual Basic gösterir.
-ms.custom: seodec18, get-started
+ms.custom:
+- vs-acquisition
+- seodec18
+- get-started
 ms.date: 11/20/2018
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -12,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 56f6570b633941c8f7102e245b7668cd31936f83
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: fe411074c95db15fde4819ffb07eca39a05e844d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308369"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390170"
 ---
 # <a name="learn-to-use-the-code-editor-with-visual-basic"></a>Kod düzenleyicisini Visual Basic
 
@@ -26,14 +29,14 @@ Visual Studio'daki kod düzenleyicisine bu 10 dakikalık girişte, Visual Studio
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
+> Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!TIP]
-> Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
+> Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
 
 ::: moniker-end
 
@@ -77,7 +80,7 @@ Yeni bir dosya oluşturarak ve buna kod ekleyerek başlayabilirsiniz.
 
 Visual Studio, yaygın *olarak kullanılan kod* bloklarını hızlı ve kolay bir şekilde oluşturmak için kullanabileceğiniz yararlı kod parçacıkları sağlar. [Kod parçacıkları Visual Basic,](../../ide/code-snippets.md) C# ve C++ gibi farklı programlama dilleri için kullanılabilir. Şimdi Visual Basic Sub kod **parçacığını** dosyamıza ekleriz.
 
-1. İmlecinizi , ve yazarak sub olan `End Class` satırın üzerine **yazın.**
+1. İmlecinizi , ve yazarak sub olan `End Class` satırın üzerine **yerleştirebilirsiniz.**
 
    anahtar sözcüğü ve Alt kod parçacığının nasıl eklendiğinden `Sub` emin olmak için bir **açılır** iletişim kutusu görüntülenir.
 
@@ -95,7 +98,7 @@ Bilgisayarda bir dosya olup olmadığını belirlemek, bir metin dosyasına yazm
 
 ## <a name="comment-out-code"></a>Kodu açıklamaya alma
 
-Araç çubuğundaki menü çubuğunun altındaki düğmelerin satırı olan araç Visual Studio kodlarken daha üretken çalışmanıza yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu açıp, satır girintisini artırabilir veya azaltabilir ya da derlemek istemeyebilirsiniz. ([IntelliSense,](../../ide/using-intellisense.md) eşleşen yöntemlerin listesini ve diğer öğeleri görüntüleyen bir kodlama yardımıdır.) Bu bölümde bazı kodlara açıklama olarak yer veserden bakabilirsiniz.
+Araç çubuğundaki menü çubuğunun altındaki düğmelerin satırı olan araç Visual Studio kodlarken daha üretken çalışmanıza yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu açıp açıp, satır girintisini artırabilir veya azaltabilir ya da derlemek istemeyebilirsiniz. ([IntelliSense,](../../ide/using-intellisense.md) eşleşen yöntemlerin listesini ve diğer öğeleri görüntüleyen bir kodlama yardımıdır.) Bu bölümde bazı kodlara açıklama olarak yer veserden bakabilirsiniz.
 
 ![Düzenleyici araç çubuğu düğmeleri](media/tutorial-editor-toolbar.png)
 
@@ -123,11 +126,11 @@ Araç çubuğundaki menü çubuğunun altındaki düğmelerin satırı olan ara�
                Select word
    ```
 
-1. dizisini kullanmaz ancak daha sonra bunu kullanarak diziyi tamamen `morewords` silmek istemeyebilirsiniz. Bunun yerine, bu satırları açıklama satırına bakalım. öğesinin kapanış küme ayracı tanımının tamamını seçin ve ardından araç çubuğunda seçili satırları `morewords` **açıklama satırı** yap düğmesini seçin. Klavyeyi kullanmayı tercih ederseniz **Ctrl** + **K**, Ctrl C  + **tuşlarına basın.**
+1. dizisini kullanmaz, ancak daha sonra bu diziyi kullanarak diziyi tamamen `morewords` silmek istemeyebilirsiniz. Bunun yerine, bu satırları açıklama satırına bakalım. öğesinin kapanış küme ayracı tanımının tamamını seçin ve ardından araç çubuğunda seçili satırları `morewords` **açıklama satırı** yap düğmesini seçin. Klavyeyi kullanmayı tercih ederseniz Ctrl K , **Ctrl** + C  + **tuşlarına basın.**
 
    ![Açıklama düğmesi](media/tutorial-comment-out.png)
 
-   Seçilen Visual Basic açıklama `'` karakteri, kodu açıklama satırı yapmak için seçilen her satırın başına eklenir.
+   Visual Basic açıklama `'` karakteri, kodu açıklama satırı yapmak için seçilen her satırın başına eklenir.
 
 ## <a name="collapse-code-blocks"></a>Kod bloklarını daralt
 

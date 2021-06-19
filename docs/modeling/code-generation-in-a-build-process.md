@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a785bf0fc337d1934efe4f47adaac7efe7f1f1b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7db1b41df5007678c84be71f34aea110c04348c1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861809"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389754"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Yapı işleminde metin dönüşümünü çağır
 
@@ -293,25 +293,25 @@ Dahil edilen bir dosyayı veya şablon tarafından okunan başka bir dosyayı g�
 
 **Metin şablonlarını dönüştürmek için diğer seçenekler nelerdir?**
 
-- [TextTransform yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md) komut betiklerine uygulanabilir. Çoğu durumda, MSBuild kullanmak daha kolay olur.
+- [TextTransform yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md) komut betiklerine uygulanabilir. Çoğu durumda MSBuild kullanmak daha kolaydır.
 
-- [Visual Studio uzantısında metin dönüştürmeyi çağırın](../modeling/invoking-text-transformation-in-a-vs-extension.md).
+- [Bir uzantıda Metin Visual Studio çağırma.](../modeling/invoking-text-transformation-in-a-vs-extension.md)
 
-- [Tasarım zamanı metin şablonları](../modeling/design-time-code-generation-by-using-t4-text-templates.md) , Visual Studio tarafından dönüştürülür.
+- [Tasarım zamanı metin şablonları,](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Visual Studio.
 
-- [Çalışma zamanı metin şablonları](../modeling/run-time-text-generation-with-t4-text-templates.md) uygulamanızdaki çalışma zamanında dönüştürülür.
+- [Çalışma zamanı metin şablonları,](../modeling/run-time-text-generation-with-t4-text-templates.md) uygulamanıza çalışma zamanında dönüştürülmektedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 ::: moniker range="vs-2017"
 
-- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
+- T4 MSbuild şablonunda iyi bir kılavuz vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
+- T4 MSbuild şablonunda iyi bir kılavuz vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

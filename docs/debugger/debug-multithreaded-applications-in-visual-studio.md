@@ -1,7 +1,7 @@
 ---
-title: Çok iş parçacıklı uygulamalarda hata ayıklama | Microsoft Docs
-description: Visual Studio 'da çok iş parçacıklı uygulamalarda hata ayıklayın. Çoklu iş parçacıklı uygulamalarda hata ayıklama hakkında araçları ve diğer makaleleri gözden geçirin.
-ms.custom: SEO-VS-2020, seodec18
+title: Çok iş parçacıklı uygulamalarda hata | Microsoft Docs
+description: Çok iş parçacıklı uygulamalarda hata ayıklama Visual Studio. Çok iş parçacıklı uygulamalarda hata ayıklama hakkında araçları ve diğer makaleleri gözden geçirme.
+ms.custom: SEO-VS-2020
 ms.date: 11/06/2018
 ms.topic: conceptual
 f1_keywords:
@@ -23,81 +23,81 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7a133b4b59b11525a7f7ba776b3b4a4a1e6a31e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5551ffd39bfe3485d0b6e31def0b3cfff9c7e3b1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873216"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389767"
 ---
-# <a name="debug-multithreaded-applications-in-visual-studio"></a>Visual Studio 'da çok iş parçacıklı uygulamalarda hata ayıklama
-İş parçacığı, işletim sisteminin işlemci zamanı verdiği bir yönergeler dizisidir. İşletim sisteminde çalışan her işlem en az bir iş parçacığından oluşur. Birden fazla iş parçacığına sahip işlemlere çok iş parçacığı denir.
+# <a name="debug-multithreaded-applications-in-visual-studio"></a>Çok iş parçacıklı uygulamalarda hata ayıklama Visual Studio
+İş parçacığı, işletim sisteminin işlemciye zaman iznini vermek için bir dizi yönergelerdir. İşletim sisteminde çalışan her işlem en az bir iş parçacığına sahiptir. Birden fazla iş parçacığına sahip işlemler çok iş parçacıklı olarak çağrılır.
 
-Birden çok işlemcili bilgisayarlar, çok çekirdekli işlemciler veya hiper iş parçacığı oluşturma işlemlerinde birkaç eşzamanlı iş parçacığı çalıştırılabilir. Birçok iş parçacığı kullanan paralel işleme, program performansını önemli ölçüde iyileştirebilir, ancak birçok iş parçacığını izlemekte olduğunuz için hata ayıklamayı daha da zor hale gelebilir.
+Birden çok işlemciye, çok çekirdekli işlemcilere veya hiper iş parçacığı işlemeye sahip bilgisayarlar birkaç eşzamanlı iş parçacığı çalıştırabilirsiniz. Birçok iş parçacığını kullanarak paralel işleme program performansını önemli ölçüde geliştirebilir, ancak birçok iş parçacığını takip ediyorsanız hata ayıklamayı da zorlaştırabilirsiniz.
 
-Çoklu iş parçacığı oluşturma, olası hataların yeni türlerini ortaya çıkarabilir. Örneğin, iki veya daha fazla iş parçacığının aynı kaynağa erişmesi gerekebilir, ancak aynı anda yalnızca bir iş parçacığı kaynağa güvenli bir şekilde erişebilir. Belirli bir zamanda kaynağa yalnızca bir iş parçacığının eriştiğinden emin olmak için bazı karşılıklı dışlama biçimi gereklidir. Karşılıklı dışlama yanlış uygulanırsa, iş parçacığı yürütülemeyecek bir *kilitlenme* koşulu oluşturabilir. Kilitlenmeler genellikle hata ayıklamada zor bir sorundur.
+Çoklu iş parçacığı, yeni türlerde olası hatalara neden olabilir. Örneğin, iki veya daha fazla iş parçacığının aynı kaynağa erişmesi gerekir, ancak aynı anda yalnızca bir iş parçacığı kaynağa güvenli bir şekilde erişebilirsiniz. Kaynağa herhangi bir anda yalnızca bir iş parçacığının erişirken emin olmak için karşılıklı dışlamanın bir biçimi gereklidir. Karşılıklı dışlama yanlış uygulanırsa, hiçbir iş *parçacığının yürütülecek* bir kilitlenme koşulu oluşturabilir. Kilitlenmeler genellikle hata ayıklamak için zor bir sorundur.
 
 ## <a name="tools-for-debugging-multithreaded-apps"></a>Çok iş parçacıklı uygulamalarda hata ayıklama araçları
 
-Visual Studio, çok iş parçacıklı uygulamalarda hata ayıklamada kullanmak için farklı araçlar sağlar.
+Visual Studio çok iş parçacıklı uygulamalarda hata ayıklamada kullanmak için farklı araçlar sağlar.
 
-- İş parçacıkları için, hata ayıklama iş parçacıklarının birincil araçları **Iş parçacıkları** penceresidir, kaynak pencerelerin iş parçacığı Işaretçileri, **Paralel Yığınlar** penceresi, **paralel Izleme** penceresi ve **hata ayıklama konumu** araç çubuğudur. **Iş parçacıkları** penceresi ve **hata ayıklama konumu** araç çubuğu hakkında bilgi edinmek Için bkz. [izlenecek yol: Iş parçacıkları penceresini kullanarak hata ayıklama](../debugger/how-to-use-the-threads-window.md) **Paralel yığınları** ve **paralel izleme** pencerelerini nasıl kullanacağınızı öğrenmek için bkz. çok [iş parçacıklı bir uygulamada hata ayıklamaya başlama](../debugger/get-started-debugging-multithreaded-apps.md). Her iki konuda de iş parçacığı işaretlerinin nasıl kullanılacağı gösterilmektedir.
+- İş parçacıklarında hata ayıklama için birincil  araçlar İş Parçacıkları penceresi, kaynak pencerelerde iş parçacığı işaretçileri, **Paralel** Yığınlar penceresi, **Paralel** İzleme penceresi ve Hata Ayıklama Konumu araç çubuğu'larıdır.  İş Parçacıkları penceresi ve **Hata Ayıklama** Konumu araç çubuğu hakkında **bilgi edinmek** için bkz. Kılavuz: İş Parçacıkları penceresini kullanarak [hata ayıklama.](../debugger/how-to-use-the-threads-window.md) Paralel Yığınlar ve Paralel İzleme  **pencerelerini** kullanmayı öğrenmek için bkz. Kullanmaya başlayın uygulamanın hata [ayıklamasını düzeltme.](../debugger/get-started-debugging-multithreaded-apps.md) Her iki konu da iş parçacığı işaretçilerini kullanmayı gösterir.
 
-- [Görev paralel kitaplığı (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) veya [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime/)kullanan kod için, hata ayıklama Için birincil Araçlar **Paralel Yığınlar** penceresi, **paralel izleme** penceresi ve ayrıca JavaScript 'i de destekleyen **Görevler** penceresidir. Başlamak için bkz. [Izlenecek yol: paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md) ve [izlenecek yol: C++ amp uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application).
+- Görev Paralel Kitaplığı [(TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) veya [Eşzamanlılık Çalışma Zamanı](/cpp/parallel/concrt/concurrency-runtime/)kullanan kodlar için, hata ayıklama  için birincil araçlar Paralel Yığınlar penceresi, **Paralel** İzleme penceresi ve JavaScript'i de destekleyen Görevler penceresidir.  Çalışmaya başlama için bkz. [Adım adım: Paralel uygulamada hata](../debugger/walkthrough-debugging-a-parallel-application.md) ayıklama ve Adım adım kılavuz: Bir uygulamanın C++ AMP [ayıklama.](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
 
-- GPU 'daki iş parçacıkları hata ayıklaması için, birincil araç **GPU Iş parçacıkları** penceresidir. Bkz. [nasıl yapılır: GPU Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-gpu-threads-window.md).
+- GPU'da iş parçacıklarında hata ayıklama için birincil araç GPU İş **Parçacıkları penceresidir.** Bkz. [Nasıl: GPU İş Parçacıkları penceresini kullanma.](../debugger/how-to-use-the-gpu-threads-window.md)
 
-- İşlemler için, birincil Araçlar **Işleme İliştir** iletişim kutusu, **Işlemler** penceresi ve **hata ayıklama konumu** araç çubuğudur.
+- İşlemler için birincil araçlar İşleme Ekle **iletişim** kutusu, **İşlemler penceresi ve** Hata Ayıklama Konumu araç **çubuğu'larıdır.**
 
-Visual Studio, çok iş parçacıklı uygulamalarda hata ayıklarken yararlı olabilecek güçlü kesme noktaları ve izleme noktaları da sağlar. Kesme noktalarını bağımsız iş parçacıklarında yerleştirmek için kesme noktası koşullarını ve filtrelerini kullanın. İzleme noktaları, kilitlenme gibi sorunları incelemek için, çalışmanız olmadan programınızın yürütülmesini izlemenizi sağlar. Daha fazla bilgi için bkz. [kesme noktası eylemleri ve izleme noktaları](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints).
+Visual Studio, çok iş parçacıklı uygulamalarda hata ayıklarken yararlı olabilir güçlü kesme noktaları ve izleme noktaları da sağlar. Kesme noktaları tek tek iş parçacıklarına yer etmek için kesme noktası koşullarını ve filtrelerini kullanın. İzleme noktaları, kilitlenmeler gibi sorunları çalışmak için programınızı kesmeden yürütmeyi izlemenizi sağlar. Daha fazla bilgi için [bkz. Kesme noktası eylemleri ve izleme noktaları.](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)
 
-Kullanıcı arabirimine sahip çok iş parçacıklı bir uygulamada hata ayıklamak özellikle zor olabilir. Uygulamayı ikinci bir bilgisayarda çalıştırmayı ve uzaktan hata ayıklamayı kullanmayı düşünebilirsiniz. Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
+Kullanıcı arabirimine sahip çok iş parçacıklı bir uygulamada hata ayıklamak özellikle zor olabilir. Uygulamayı ikinci bir bilgisayarda çalıştırmayı ve uzaktan hata ayıklamayı kullanmayı düşünebilirsiniz. Daha fazla bilgi için [bkz. Uzaktan hata ayıklama.](../debugger/remote-debugging.md)
 
 ## <a name="articles-about-debugging-multithreaded-apps"></a>Çok iş parçacıklı uygulamalarda hata ayıklama hakkında makaleler
 
- [Çok iş parçacıklı bir uygulamada hata ayıklamaya başlayın](../debugger/get-started-debugging-multithreaded-apps.md)
+ [Kullanmaya başlayın iş parçacıklı uygulamada hata ayıklama](../debugger/get-started-debugging-multithreaded-apps.md)
 
-İş parçacığı hata ayıklama özelliklerinin bir turu, **Paralel Yığınlar** penceresindeki özellikleri ve **paralel izleme** penceresini vurgularken.
+Paralel Yığınlar penceresindeki ve Paralel İzleme penceresindeki özellikleri vurgulayan iş parçacığı **hata** ayıklama **özellikleri turu.**
 
- [İş parçacıkları ve işlemlerde hata ayıklama araçları](../debugger/debug-threads-and-processes.md)
+ [İş parçacıklarında ve işlemlerde hata ayıklama araçları](../debugger/debug-threads-and-processes.md)
 
-İş parçacıkları ve süreçlerinde hata ayıklama araçlarının özelliklerini listeler.
+İş parçacıklarında ve işlemlerde hata ayıklamaya yardımcı olan araçların özelliklerini listeler.
 
  [Birden çok işlemde hata ayıklama](../debugger/debug-multiple-processes.md)
 
-Birden çok işlemde hata ayıklama işleminin nasıl yapılacağını açıklar.
+Birden çok işlemde hata ayıklamayı açıklar.
 
- [Izlenecek yol: Iş parçacıkları penceresini kullanarak hata ayıklayın](../debugger/how-to-use-the-threads-window.md).
+ [Adım adım kılavuz: İş Parçacıkları penceresini kullanarak hata ayıklama.](../debugger/how-to-use-the-threads-window.md)
 
-**Iş parçacıkları** penceresi ve **hata ayıklama konumu** araç çubuğunun nasıl kullanılacağını gösteren izlenecek yol.
+İş Parçacıkları penceresinin ve Hata Ayıklama Konumu **araç** çubuğunun **kullanımını gösteren izlenecek** yol.
 
  [İzlenecek yol: Paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)
 
-**Paralel Yığınlar** ve **Görevler** pencerelerinin nasıl kullanılacağını gösteren izlenecek yol.
+Paralel Yığınlar ve Görevler pencerelerini **kullanmayı gösteren** **izlenecek yol.**
 
  [Nasıl yapılır: Hata ayıklarken başka bir iş parçacığına geçme](../debugger/how-to-switch-to-another-thread-while-debugging.md)
 
-Hata ayıklama bağlamını başka bir iş parçacığına geçirmek için çeşitli yollar.
+Hata ayıklama bağlamını başka bir iş parçacığına değiştirmenin çeşitli yolları.
 
  [Nasıl yapılır: İş parçacıklarını bayrakla işaretleme ve işareti geri alma](../debugger/how-to-flag-and-unflag-threads.md)
 
-Hata ayıklama sırasında özel dikkat sağlamak istediğiniz iş parçacıklarını işaretleyin veya bayrak ekleyin.
+Hata ayıklama sırasında özellikle dikkat etmek istediğiniz iş parçacıklarını işaretleme veya işaretleme.
 
- [Nasıl yapılır: yüksek performanslı kümede hata ayıklama](../debugger/how-to-debug-on-a-high-performance-cluster.md)
+ [Nasıl yapılanlar: Yüksek performanslı kümede hata ayıklama](../debugger/how-to-debug-on-a-high-performance-cluster.md)
 
-Yüksek performanslı kümede çalışan bir uygulamada hata ayıklama teknikleri.
+Yüksek performanslı bir kümede çalışan bir uygulamada hata ayıklama teknikleri.
 
  [Yerel kod iş parçacıklarında hata ayıklama ipuçları](../debugger/tips-for-debugging-threads-in-native-code.md)
 
-Yerel iş parçacıkları için hata ayıklama yararlı olabilecek basit teknikler.
+Yerel iş parçacıklarında hata ayıklamak için kullanışlı olan basit teknikler.
 
- [Nasıl yapılır: yerel kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)
+ [Nasıl ayarlanır: Yerel kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)
 
-İş parçacığına, **Iş parçacıkları** penceresinde görüntülediğiniz bir ad verin.
+İş parçacığınıza İş Parçacıkları penceresinde görüntüley istediğiniz **bir ad** girin.
 
- [Nasıl yapılır: yönetilen kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)
+ [Nasıl ayarlanır: Yönetilen kodda iş parçacığı adı ayarlama](../debugger/how-to-set-a-thread-name-in-managed-code.md)
 
-İş parçacığına, **Iş parçacıkları** penceresinde görüntülediğiniz bir ad verin.
+İş parçacığınıza İş Parçacıkları penceresinde görüntüley istediğiniz **bir ad** girin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

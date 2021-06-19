@@ -1,6 +1,6 @@
 ---
 title: Geometri Şekillerinin Özellikleri
-description: Etki alanı sınıflarının örneklerinin alana özgü bir dilde nasıl görüntülendiğini belirtmek için geometri şekillerini nasıl kullanabileceğinizi öğrenin.
+description: Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl görüntülendiğinden belirtmek için geometri şekillerini nasıl kullanabileceğiniz hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,51 +8,51 @@ f1_keywords:
 - vs.dsltools.dsldesigner.geometryshape
 helpviewer_keywords:
 - Domain-Specific Language, geometry shape
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bcb7bb1bb3950fbc79d9151b8b98ba3b2032494
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94eb9ed8050b8a95fde712db4e98bd48f40a72ee
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951777"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390391"
 ---
 # <a name="properties-of-geometry-shapes"></a>Geometri Şekillerinin Özellikleri
-Etki alanı sınıflarının örneklerinin, etki alanına özgü bir dilde nasıl görüntülendiğini belirtmek için geometri şekillerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl görüntülendiğinden belirtmek için geometri şekillerini kullanabilirsiniz. Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, [bkz. Domain-Specific Dili Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
  Geometri şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
-|Dolgu Rengi|Bu şeklin dolgusu rengi.|Beyaz|
-|Doldur gradyanı modu|Bu şeklin (yatay, dikey, Ileri köşegen, geriye doğru köşegen veya yok) dolguyu gradyanı modu.|Yatay|
-|Geometri|Bu şeklin geometrisi (dikdörtgen, yuvarlatılmış dikdörtgen, elips veya daire).|Dikdörtgen|
-|Varsayılan bağlantı noktalarına sahiptir|İse `True` , şekil oluşturulan tasarımcıda üst, alt, sol ve sağ bağlantı noktalarını kullanır.|Yanlış|
-|Ana hat rengi|Bu şeklin ana hat rengi.|Siyahi|
-|Ana hat kesik çizgi stili|Bu şeklin ana hat kesik çizgi stili (düz, kesik çizgi, nokta, çizgi nokta, çizgi dotdot veya özel).|Düz|
-|Ana hat kalınlığı|Bu şeklin ana hat kalınlığı.|0,03125|
-|Metin rengi|Bu şekille ilişkilendirilen metin Dekoratörleri için kullanılan renk.|Siyahi|
-|Erişim değiştiricisi|Sınıfın erişim değiştiricisi (genel veya iç).|Genel|
-|Özel Öznitelikler|Bu şekil için oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır.|\<none>|
-|Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
-|Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
-|Devralma değiştiricisi|Şekilden oluşturulan kaynak kodu sınıfının devralım türünü tanımlar ( `none` `abstract` veya `sealed` ).|yok|
-|Taban geometri şekli|Bu şeklin temel sınıfı.|(yok)|
+|Dolgu Rengi|Bu şeklin dolgu rengi.|Beyaz|
+|Dolgu Gradyan Modu|Bu şeklin dolgu gradyan modu (Yatay, Dikey, İleri Çapraz, Ters Çapraz veya Hiçbiri).|Yatay|
+|Geometri|Bu şeklin geometrisi (Dikdörtgen, Yuvarlanmış Dikdörtgen, Üç Nokta veya Daire).|Dikdörtgen|
+|Varsayılan Bağlantı Noktalarına Sahip|ise, `True` şekil oluşturulan tasarımcıda üst, alt, sol ve sağ bağlantı noktalarını kullanır.|Yanlış|
+|Ana Hat Rengi|Bu şeklin ana hat rengi.|Siyahi|
+|Çizgi Çizgi Stili|Bu şeklin ana hat çizgi stili (Solid, Dash, Dot, DashDot, DashDotDot veya Custom).|Düz|
+|Ana Hat Kalınlığı|Bu şeklin ana hat kalınlığı.|0.03125|
+|Metin Rengi|Bu şekille ilişkili metin dekoratörleri için kullanılan renk.|Siyahi|
+|Erişim Değiştiricisi|Sınıfın erişim değiştiricisi (genel veya iç).|Genel|
+|Özel Öznitelikler|Bu şekil için oluşturulan kaynak kod sınıfına öznitelik eklemek için kullanılır.|\<none>|
+|Çift Türetilen|ise, `True` hem temel bir sınıf hem de kısmi bir sınıf (geçersiz kılmalar aracılığıyla özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için [bkz. Oluşturulan Sınıfları Geçersiz Kılma ve Genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|Yanlış|
+|Özel Oluşturucuya Sahip|ise, `True` kaynak kodunda özel bir oluşturucu sağlanır. Daha fazla bilgi için [bkz. Oluşturulan Sınıfları Geçersiz Kılma ve Genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|Yanlış|
+|Devralma Değiştiricisi|Şekil ( veya ) ile oluşturulan kaynak kod sınıfının `none` devralmanın nasıl olduğunu `abstract` `sealed` açıklar.|yok|
+|Temel Geometri Şekli|Bu şeklin temel sınıfı.|(yok)|
 |Name|Bu şeklin adı.|Geçerli ad|
-|Ad Alanı|Bu şekille ilişkili ad alanı.|Geçerli ad alanı|
-|Araç ipucu türü|Araç ipucu nasıl tanımlanır (sabit, değişken veya yok). Düzeltildiğinde, `Fixed Tooltip Text` özelliğin değeri araç ipucu olarak kullanılır; değişken ise, araç ipucu özel kodda tanımlanır.|Yok|
+|Ad Alanı|Bu şekle bağlı olan ad alanı.|Geçerli ad alanı|
+|Araç İpucu Türü|Araç ipucu nasıl tanımlanır (sabit, değişken veya hiçbiri). Sabitse, özellik değeri araç ipucu olarak kullanılır; değişken ise `Fixed Tooltip Text` araç ipucu özel kodda tanımlanır.|Hiçbiri|
 |Notlar|Bu öğeyle ilişkili resmi olmayan notlar.|\<none>|
-|Başlangıç yüksekliği|Bu şeklin inç cinsinden başlangıç yüksekliği.|1|
-|Başlangıç genişliği|Bu şeklin inç cinsinden başlangıç genişliği.|1,5|
-|Özellik olarak gösterilen Fill Color<br /><br /> Sunulma dolgusu gradyan modu<br /><br /> Özellik olarak gösterilen ana hat rengi<br /><br /> Özellik olarak sunulan ana hat kesik çizgi stili<br /><br /> Sunulan ana hat kalınlığı özellik olarak<br /><br /> Metin rengini gösterir|Eğer `True` Kullanıcı, bir şeklin belirtilen özelliğini ayarlayabilir. Bunu ayarlamak için, şekil tanımına sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|Yanlış|
-|Description|Oluşturulan tasarımcıyı belgelemek için kullanılan açıklama.|\<none>|
+|İlk Yükseklik|Bu şeklin ilk yüksekliği inç olarak.|1|
+|İlk Genişlik|Bu şeklin inç olarak ilk genişliği.|1,5|
+|Dolgu Rengini Özellik Olarak Açığa Çıkar<br /><br /> Açık Dolgu Gradyan Modu<br /><br /> Ana Hat Rengi Özelliği Olarak Açık<br /><br /> Anahat Çizgi Stilini Özellik Olarak Açığa Çıkar<br /><br /> Ana Hat Kalınlığını Özellik Olarak Açığa Çıkar<br /><br /> Metin Rengini Ortaya Çıkarır|ise, `True` kullanıcı şeklin belirtilen özelliğini ayarlayabilirsiniz. Bunu ayarlamak için şekil tanımına sağ tıklayın ve Ortaya **Çıkar'ı Ekle'ye tıklayın.**|Yanlış|
+|Açıklama|Oluşturulan tasarımcıyı belgeley etmek için kullanılan açıklama.|\<none>|
 |Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
-|Düzeltilen araç Ipucu metni|Sabit bir araç ipucu için kullanılan metin.|\<none>|
-|Help anahtar sözcüğü|Bu şekle yönelik F1 yardımını indekslemek için kullanılan anahtar sözcük.|\<none>|
+|Araç İpucu Metni Düzeltildi|Sabit bir araç ipucu için kullanılan metin.|\<none>|
+|Help Anahtar Sözcüğü|Bu şekil için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))
+- [Alana Özgü Dil Araçları Sözlüğü](/previous-versions/bb126564(v=vs.100))

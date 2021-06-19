@@ -1,7 +1,7 @@
 ---
 title: 'Öğretici: hata ayıklama Visual Basic kodu'
 description: Visual Studio hata ayıklayıcının özelliklerini ve hata ayıklayıcıyı başlatmayı, kod içinde adım adım adımları ve verileri Visual Basic bir uygulamada incelemeyi öğrenin.
-ms.custom: debug-experiment, seodec18, get-started
+ms.custom: debug-experiment, vs-acquisition, get-started
 ms.date: 02/03/2020
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 42dd3c6b7301162e239bc87764056fdda2d08413
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 48e6b383b0dfdee3a3cb0cc355ffa5900d4dc428
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308421"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390222"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak Visual Basic kodu hata ayıklamanın nasıl yapılacağını öğrenin
 
@@ -246,7 +246,7 @@ Hata ayıklayıcı, daha önce döngü içinde ayaranı kesme noktası sırasın
 
 ## <a name="inspect-variables-with-data-tips"></a>Veri ipuçlarıyla değişkenleri inceleme
 
-Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en kullanışlı özelliklerindendir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunda hata ayıklamaya çalışırken değişkenlerin belirli bir zamanda sahip olmasını beklediğiniz değerleri depolayarak depolamaya çalışmaya çalıştığınız olur.
+Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en kullanışlı özelliklerinden birisidir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunda hata ayıklamaya çalışırken değişkenlerin belirli bir zamanda sahip olmasını beklediğiniz değerleri depolayarak depolamaya çalışmaya çalıştığınız olur.
 
 1. deyiminde duraklatılmışken değişkeninin üzerine gelin ve bunun varsayılan değeri olan dizideki ilk `name += letters[i]` `letters` öğenin değerini `"f"c` görüyorsunuz.
 
@@ -256,9 +256,9 @@ Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en kul
 
      ![Veri ipucu görüntüleme](../visual-basic/media/get-started-data-tip-vb.png "Veri İpucu Görüntüleme")
 
-     Değişkenin değeri döngüde her yineleme ile birlikte değişir ve ardından `For` , ardından , ve gibi değerleri `f` `fr` `fre` gösterir.
+     Değişkenin değeri, döngüde her yineleme ile birlikte değişir ve ardından `For` , ve gibi değerleri `f` `fr` `fre` gösterir.
 
-     Hata ayıklama sırasında genellikle değişkenlerde özellik değerlerini denetlemenin, depolamasını beklediğiniz değerleri depolayarak depolamalarının gerekip gerek olmadığını ve veri ipuçlarının bunu yapmak için iyi bir yol olup olmadığını görmek için hızlı bir yol gerekir.
+     Hata ayıklama sırasında genellikle değişkenlerde özellik değerlerini denetlemenin, bunları depolamasını beklediğiniz değerleri depolayarak depolamalarını ve veri ipuçlarının bunu yapmak için iyi bir yol olup olmadığını görmek için hızlı bir yol gerekir.
 
 ## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Otomatikler ve Yereller pencereleriyle değişkenleri inceleme
 
@@ -282,7 +282,7 @@ Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en kul
 
     Kod  düzenleyicisinin alt kısmında İzleme penceresi açılır. İzleme penceresi **kullanarak** göz tutmak istediğiniz bir değişken (veya ifade) belirtebilirsiniz.
 
-    Artık değişkende bir izleme kümemiz var ve hata ayıklayıcıda ilerlerken `name` değerinin değişti olduğunu görüyorsunuz. Diğer değişken pencerelerinin aksine, **İzleme** penceresi her zaman izlediğiniz değişkenleri gösterir (kapsam dışında olduğunda bunlar gri renkte olur).
+    Artık değişkende bir izleme kümemiz var ve hata ayıklayıcıda ilerlerken `name` değerinin değişti olduğunu görüyorsunuz. Diğer değişken pencerelerinin aksine, **İzle** penceresi her zaman izlediğiniz değişkenleri gösterir (kapsam dışındayken bunlar gri renkte olur).
 
 ## <a name="examine-the-call-stack"></a>Çağrı yığınını inceleme
 

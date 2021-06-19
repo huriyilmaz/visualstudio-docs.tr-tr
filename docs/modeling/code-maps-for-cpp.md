@@ -3,18 +3,18 @@ title: C++ kaynak ve üstbilgi dosyaları arasındaki bağımlılıklara bakın
 description: C++ projeleri için kod eşlemeleri hakkında bilgi sağlar.
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 ms.custom: SEO-VS-2020
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c2aa1e49c0465fcf75917f0d9bd134962794c74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 93ac1f7364e23ef9ed2b44ecd1c536a7ab2b3d40
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861757"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389676"
 ---
 # <a name="code-maps-for-c-projects"></a>C++ projeleri için kod haritaları
 
@@ -40,7 +40,7 @@ Bu öğeler C ve C++ kodu için desteklenmez:
 
 Bu sorunlar, C ve C++ kodu için kod eşlemeleri oluşturduğunuzda oluşabilir:
 
-|**Konuda**|**Olası nedeni**|**Çözünürlük**|
+|**Sorun**|**Olası nedeni**|**Çözünürlük**|
 |-|-|-|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan yapı hatalarını giderip eşlemeyi yeniden oluşturun.|
 |**Mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda Visual Studio yanıt vermemeye çalışır.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|

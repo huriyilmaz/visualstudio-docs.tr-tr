@@ -1,32 +1,32 @@
 ---
 title: 'Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme'
-description: Kullanıcıların diğer diyagramlardan diyagramınıza öğe sürükleyebilmeleri için DSL 'ye sürükle ve bırak olayları için işleyiciler nasıl ekleyebileceğiniz hakkında bilgi edinin.
+description: Kullanıcıların öğeleri diğer diyagramlardan diyagramınıza sürüklemesini sağ olmak için DSL'nize sürükleyip bırakma olayları için nasıl işleyiciler ekleyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c9e6960cdd84e518b2d58eb77c25278bd52475d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 79b58ee6ebd4db3ee9727bf59b260f281ba00275
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941443"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390417"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme
 
-Kullanıcıların diğer diyagramlardan veya Visual Studio 'nun diğer bölümlerinden öğe diyagramınıza sürükleyebilmeleri için, DSL 'ye sürükle ve bırak olayları için işleyiciler ekleyebilirsiniz. Çift tıklama gibi olaylar için de işleyiciler ekleyebilirsiniz. Birlikte, sürükle ve bırak ve çift tıklama işleyicileri *hareket işleyicileri* olarak bilinir.
+Kullanıcıların öğeleri diğer diyagramlardan veya diğer diyagramlardan diyagramınıza sürüklemesini sağ olmak için DSL'nize sürükleyip bırakma olayları için işleyiciler Visual Studio. Çift tıklama gibi olaylar için işleyiciler de ekleyebilirsiniz. Sürükle ve bırak ve çift tıklama işleyicileri birlikte hareket *işleyicileri olarak bilinir.*
 
-Bu konu, diğer diyagramlardaki sürükle ve bırak hareketlerini ele alır. Tek bir diyagram içindeki taşıma ve kopyalama olayları için, bir alt sınıfı tanımlamanın alternatifini düşünün `ElementOperations` . Daha fazla bilgi için bkz. [kopyalama davranışını özelleştirme](../modeling/customizing-copy-behavior.md). Ayrıca DSL tanımını özelleştirebilirsiniz.
+Bu konuda, diğer diyagramlarda ortaya çıkan sürükle ve bırak hareketleri ele almaktadır. Tek bir diyagram içindeki olayları taşımak ve kopyalamak için, alt sınıf tanımlamanın alternatifi olarak `ElementOperations` değerlendirin. Daha fazla bilgi için [bkz. Kopyalama Davranışını Özelleştirme.](../modeling/customizing-copy-behavior.md) DSL tanımını da özelleştirebilirsiniz.
 
-## <a name="defining-gesture-handlers-by-overriding-shapeelement-methods"></a>ShapeElement yöntemlerini geçersiz kılarak hareket Işleyicilerini tanımlama
+## <a name="defining-gesture-handlers-by-overriding-shapeelement-methods"></a>ShapeElement Yöntemlerini Geçersiz Karak Hareket İşleyicilerini Tanımlama
 
-`OnDragDrop`, `OnDoubleClick` , `OnDragOver` ve diğer Yöntemler geçersiz kılınabilir.
+`OnDragDrop`, `OnDoubleClick` `OnDragOver` , ve diğer yöntemler geçersiz kılınabilir.
 
-DSL projenize yeni bir kod dosyası ekleyin. Bir hareket işleyicisi için genellikle en azından aşağıdaki yönergelere sahip olmanız gerekir `using` :
+DSL projenize yeni bir kod dosyası ekleyin. Bir hareket işleyicisi için genellikle en azından aşağıdaki `using` yönergelere sahip olmak gerekir:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -34,9 +34,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using System.Linq;
 ```
 
-Yeni dosyada, şekil veya Diyagram sınıfı için sürükle işlemine yanıt vermesi gereken kısmi bir sınıf tanımlayın. Aşağıdaki yöntemleri geçersiz kılın:
+Yeni dosyada, sürükleme işlemine yanıt vermesi gereken şekil veya diyagram sınıfı için kısmi bir sınıf tanımlayın. Aşağıdaki yöntemleri geçersiz kılın:
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>-Bir sürükleme işlemi sırasında fare işaretçisi şekle girdiğinde bu yöntem çağrılır. Yönteminizin, kullanıcının sürükleneceği öğeyi incelemesi gerekir ve bu şekle kullanıcının öğeyi bırakıp bırakması gerektiğini belirtmek için efekt özelliğini ayarlayın. Efekt özelliği, imlecin bu şeklin üzerindeyken görünüşünü belirler ve ayrıca `OnDragDrop()` Kullanıcı fare düğmesini bıraktığında çağranıp çağrılmayacağını belirler.
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>- Fare işaretçisi bir sürükleme işlemi sırasında şekle girdiği zaman bu yöntem çağrılır. Yönteminiz, kullanıcının sürüklenip sürüklenmemesi gereken öğeyi incelemeli ve Kullanıcının öğeyi bu şekil üzerinde bırakıp bırakam kura olmadığını belirtmek için Effect özelliğini ayarlamalı. Effect özelliği, imlecin bu şeklin üzerindeyken görünümünü belirler ve ayrıca kullanıcı fare düğmesini serbest bıraktığınızda çağrılıp `OnDragDrop()` çağrılmayacaklarını belirler.
 
     ```csharp
     partial class MyShape // MyShape generated from DSL Definition.
@@ -52,7 +52,7 @@ Yeni dosyada, şekil veya Diyagram sınıfı için sürükle işlemine yanıt ve
         }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> -Bu yöntem, `OnDragOver(DiagramDragEventArgs e)` daha önce `e.Effect` dışında bir değere ayarlandıysa fare işaretçisi bu şeklin veya diyagramın üzerine getirildiğinde Kullanıcı fare düğmesini bıraktığında çağrılır `None` .
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>- Daha önce dışında bir değere ayarlanmışsa, fare işaretçisi bu şeklin veya diyagramın üzerindeyken kullanıcı fare düğmesini serbest bıraksa bu `OnDragOver(DiagramDragEventArgs e)` `e.Effect` yöntem çağrılır. `None`
 
     ```csharp
     public override void OnDragDrop(DiagramDragEventArgs e)
@@ -68,23 +68,23 @@ Yeni dosyada, şekil veya Diyagram sınıfı için sürükle işlemine yanıt ve
     }
     ```
 
-- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -Bu yöntem, Kullanıcı şekle veya diyagrama çift tıkladığında çağrılır.
+- <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> - Kullanıcı şekle veya diyagrama çift tıkladığında bu yöntem çağrılır.
 
-     Daha fazla bilgi için bkz. [nasıl yapılır: bir şekle veya Dekorata tıklama](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
+     Daha fazla bilgi için, [bkz. How to: Intercept a Click on a Shape or Decorator](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
 
-`IsAcceptableDropItem(e)`Sürüklenen öğenin kabul edilip edilmeyeceğini belirlemek için tanımlayın ve öğe bırakıldığında modelinizi güncelleştirmek Için ProcessDragDropItem (e) seçeneğini belirleyin. Bu yöntemlerin önce öğeyi olay bağımsız değişkenlerinden ayıklamalıdır. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [sürüklenen öğeye başvuru alma](#to-send-an-object-from-a-source-dsl).
+Sürüklenen öğenin kabul edilebilir olup olmadığını belirlemek için tanımlayın ve öğe bırakılırken modelinizi güncelleştirmek için `IsAcceptableDropItem(e)` ProcessDragDropItem(e) öğesini seçin. Bu yöntemlerin önce olay bağımsız değişkenlerinden öğeyi ayıklaması gerekir. Bunun nasıl olduğu hakkında bilgi için [bkz. Sürüklenen öğeye başvuru almak.](#to-send-an-object-from-a-source-dsl)
 
-## <a name="define-gesture-handlers-by-using-mef"></a>MEF kullanarak hareket Işleyicileri tanımlama
+## <a name="define-gesture-handlers-by-using-mef"></a>MEF kullanarak Hareket İşleyicileri Tanımlama
 
-Üçüncü taraf geliştiricilerin DSL 'niz için kendi işleyicilerini tanımlayabilmesini istiyorsanız bu yöntemi kullanın. Kullanıcılar, DSL 'yi yükledikten sonra üçüncü taraf uzantıları yüklemeyi seçebilirler.
+Üçüncü taraf geliştiricilerin DSL'nize kendi işleyicilerini tanımlayabileceklerini varsa bu yöntemi kullanın. Kullanıcılar DSL'nizi yükledikten sonra üçüncü taraf uzantıları yükleyebilir.
 
-MEF (Managed Extensibility Framework), en az yapılandırmayla yüklenebilen bileşenleri tanımlamanıza olanak sağlar. Daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+MEF (Managed Extensibility Framework), en az yapılandırmayla yüklen kullanılabilir bileşenleri tanımlamanıza olanak sağlar. Daha fazla bilgi için [bkz. Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
 
-### <a name="to-define-a-mef-gesture-handler"></a>MEF hareketi işleyicisi tanımlamak için
+### <a name="to-define-a-mef-gesture-handler"></a>MEF hareket işleyicisi tanımlamak için
 
-1. **DSL** ve **DslPackage** projelerinize, [mef kullanarak DSL 'Nizi genişletme](../modeling/extend-your-dsl-by-using-mef.md)bölümünde açıklanan **MefExtension** dosyalarını ekleyin.
+1. DSL ve **DslPackage** projelerinize, MEF kullanarak DSL'nizi genişletme konusunda açıklanan **MefExtension** [dosyalarını ekleyin.](../modeling/extend-your-dsl-by-using-mef.md) 
 
-2. Artık bir MEF bileşeni olarak bir hareket işleyicisi tanımlayabilirsiniz:
+2. Artık bir hareket işleyicisini MEF bileşeni olarak tanımlayabilirsiniz:
 
     ```csharp
     // This attribute is defined in the generated file
@@ -114,29 +114,29 @@ MEF (Managed Extensibility Framework), en az yapılandırmayla yüklenebilen bil
      }
     ```
 
-     Birden çok hareket işleyicisi bileşeni oluşturabilirsiniz, örneğin, farklı tipte sürüklenen nesneler olduğunda.
+     Sürüklenen farklı nesne türlerine sahip olmak gibi birden fazla hareket işleyici bileşeni oluşturabilirsiniz.
 
-3. Hedef şekil, bağlayıcı veya Diyagram sınıfları için kısmi sınıf tanımları ekleyin ve yöntemlerini `IsAcceptableDropItem()` ve ve tanımlayın `ProcessDragDropItem()` . Bu yöntemlerin, olay bağımsız değişkenlerinden sürüklenen öğe ayıklanarak başlaması gerekir. Daha fazla bilgi için bkz. [sürüklenen öğeye başvuru alma](#to-send-an-object-from-a-source-dsl).
+3. Hedef şekil, bağlayıcı veya diyagram sınıfları için kısmi sınıf tanımları ekleyin ve ve yöntemlerini `IsAcceptableDropItem()` `ProcessDragDropItem()` tanımlayın. Bu yöntemlerin başlangıç olarak olay bağımsız değişkenlerinden sürüklenen öğeyi ayıklaması gerekir. Daha fazla bilgi için [bkz. Sürüklenen öğeye başvuru almak.](#to-send-an-object-from-a-source-dsl)
 
 ## <a name="how-to-decode-the-dragged-item"></a>Sürüklenen öğenin kodunu çözme
 
-Öğeler herhangi bir pencereden veya masaüstünden, ayrıca bir DSL 'den sürüklenip olabilir.
+Öğeler herhangi bir pencereden veya masaüstünden ve DSL'den sürüklenebilirsiniz.
 
-Kullanıcı diyagramınıza bir öğe veya diyagramınızın bir bölümünden diğerine sürüklendiğinde, sürüklediğiniz öğe hakkındaki bilgiler içinde kullanılabilir `DiagramDragEventArgs` . Sürükleme işlemi ekrandaki herhangi bir nesne üzerinde başlaabileceğinden, veriler çeşitli biçimlerde kullanılabilir. Kodunuzun, ilgilendiği biçimleri tanıması gerekir.
+Kullanıcı bir öğeyi diyagramınıza veya diyagramın bir parçasından diğerine sürüklediği zaman, sürüklenen öğeyle ilgili bilgiler içinde `DiagramDragEventArgs` kullanılabilir. Sürükleme işlemi ekran üzerinde herhangi bir nesnede başlatılabilirdi, çünkü veriler çeşitli biçimlerden herhangi birsinde kullanılabilir. Kodunuz, bu kodun işleyebilecek biçimlerini tanıması gerekir.
 
-Sürükleme kaynak bilgilerinizin kullanılabildiği biçimleri öğrenmek için kodunuzu hata ayıklama modunda çalıştırın, girişte veya olarak bir kesme noktası ayarlar `OnDragOver()` `CanDragDrop()` . Parametresinin değerlerini inceleyin `DiagramDragEventArgs` . Bilgiler iki şekilde sunulmaktadır:
+Sürükle kaynak bilginizin kullanılabilir olduğu biçimleri bulmak için kodunuzu hata ayıklama modunda çalıştırarak veya girdisinde bir kesme noktası `OnDragOver()` ayarlamanız `CanDragDrop()` gerekir. Parametrenin değerlerini `DiagramDragEventArgs` inceleme. Bilgiler iki şekilde sağlanır:
 
-- <xref:System.Windows.Forms.IDataObject>  `Data` -Bu özellik, genellikle birden çok biçimde kaynak nesnelerinin serileştirilmiş sürümlerini taşır. En faydalı işlevleri şunlardır:
+- <xref:System.Windows.Forms.IDataObject>  `Data` - Bu özellik, kaynak nesnelerin serileştirilmiş sürümlerini genellikle birden fazla biçimde taşır. En kullanışlı işlevleri:
 
-  - diagramEventArgs. Data. GetDataFormats ()-sürüklenen nesnenin kodunu çözebileceği biçimleri listeler. Örneğin, Kullanıcı masaüstünden bir dosya sürüklediğinde, kullanılabilir biçimler dosya adını (" `FileNameW` ") içerir.
+  - diagramEventArgs.Data.GetDataFormats() - Sürüklenen nesnenin kodunu çözebilirsiniz biçimleri listeler. Örneğin, kullanıcı masaüstünden bir dosya sürüklerse, kullanılabilir biçimler dosya adını (" ") `FileNameW` içerir.
 
-  - `diagramEventArgs.Data.GetData(format)` -Belirtilen biçimdeki sürüklenen nesnenin kodunu çözer. Nesneyi uygun türe atayın. Örneğin:
+  - `diagramEventArgs.Data.GetData(format)` - Sürüklenen nesneyi belirtilen biçimde kodlar. Nesneyi uygun türe atarak. Örneğin:
 
     `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
-    Ayrıca, kendi özel biçiminizdeki kaynak veri yolu başvuruları gibi nesneleri de aktarabilirsiniz. Daha fazla bilgi için bkz. [bir sürükle ve bırak Ile model veri yolu başvuruları gönderme](#to-send-an-object-from-a-source-dsl).
+    Ayrıca model veri verisi başvuruları gibi nesneleri kaynaktan kendi özel biçiminize iletebilirsiniz. Daha fazla bilgi için, [bkz. How to Send Model Bus References in a Drag and Drop](#to-send-an-object-from-a-source-dsl).
 
-- <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>`Prototype`-Kullanıcıların BIR DSL veya UML modelinden öğe sürükleyebilmesi istiyorsanız bu özelliği kullanın. Bir öğe grubu prototipi bir veya daha fazla nesne, bağlantı ve özellik değeri içerir. Yapıştırma işlemlerinde ve araç kutusundan bir öğe eklerken de kullanılır. Bir prototipde nesneler ve türleri GUID tarafından tanımlanır. Örneğin, bu kod kullanıcının UML diyagramı veya UML Model Gezgini 'nden sınıf öğelerini sürükleyesağlar:
+- <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>`Prototype`- Kullanıcıların bir DSL veya UML modelinden öğeleri sürüklemelerini istediğinizde bu özelliği kullanın. Öğe grubu prototipi bir veya daha fazla nesne, bağlantı ve özellik değerlerini içerir. Ayrıca yapıştırma işlemleri ve araç kutusundan öğe eklerken de kullanılır. Prototipte nesneler ve türleri Guid ile tanımlanır. Örneğin, bu kod kullanıcının bir UML diyagramından veya UML Model Gezgini'nde sınıf öğelerini sürüklemeye izin verir:
 
     ```csharp
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)
@@ -148,27 +148,27 @@ Sürükleme kaynak bilgilerinizin kullanılabildiği biçimleri öğrenmek için
     }
     ```
 
-     UML şekillerini kabul etmek için, deneme tarafından UML şekil sınıflarının GUID 'Lerini saptayın. Her diyagramda genellikle birden çok öğe türü olduğunu unutmayın. Ayrıca, bir DSL veya UML diyagramından sürüklenen bir nesnenin model öğesi değil, şekil olduğunu unutmayın.
+     UML şekillerini kabul etmek için, denemeye göre UML şekil sınıflarının GUID'lerini belirleme. Herhangi bir diyagramda genellikle birden fazla öğe türü olduğunu unutmayın. Dsl veya UML diyagramından sürüklenen bir nesnenin model öğesi değil şekil olduğunu da unutmayın.
 
-`DiagramDragEventArgs` Ayrıca, geçerli fare işaretçisi konumunu ve kullanıcının CTRL, ALT veya SHIFT tuşlarına basılı tutup basmadığını belirten özelliklere sahiptir.
+`DiagramDragEventArgs` ayrıca, geçerli fare işaretçisi konumunu ve kullanıcının CTRL, ALT veya SHIFT tuşlarına basıp basıp basa basıp basa olmadığını belirten özelliklere sahiptir.
 
-## <a name="how-to-get-the-original-of-a-dragged-element"></a>Sürüklenen bir öğenin orijinalini alma
+## <a name="how-to-get-the-original-of-a-dragged-element"></a>Sürüklenen öğenin özgün öğesini elde etmek için
 
-Sürüklenen öğe bir DSL öğesi ise, kaynak modeli açıp öğeye erişebilirsiniz.
+Sürüklenen öğe bir DSL öğesi ise, kaynak modeli açabilir ve öğeye erişebilirsiniz.
 
-`Data` `Prototype` Olay bağımsız değişkenlerinin ve özellikleri yalnızca sürüklenen şekle yönelik bir başvuru içerir. Genellikle, hedef DSL 'de prototipten bir şekilde türetilmiş bir nesne oluşturmak istiyorsanız, orijinale erişim edinmeniz, örneğin dosya içeriğini okumak veya bir şekille temsil edilen model öğesine gitmek gerekir. Bu konuda yardımcı olması için Visual Studio Model veri yolu ' nu kullanabilirsiniz.
+Olay `Data` bağımsız `Prototype` değişkenlerinin ve özellikleri yalnızca sürüklenen şekle bir başvuru içerir. Genellikle, bir şekilde prototipten türetilen hedef DSL'de bir nesne oluşturmak için, dosya içeriklerini okuma veya bir şekille temsil edilen model öğesine gezinme gibi özgün öğeye erişim elde etmek gerekir. Bu konuda Visual Studio model verisi kullanabilirsiniz.
 
-### <a name="to-prepare-a-dsl-project-for-model-bus"></a>Model veri yolu için DSL projesi hazırlama
+### <a name="to-prepare-a-dsl-project-for-model-bus"></a>Model Bus için DSL projesi hazırlamak için
 
-Kaynak DSL 'yi Visual Studio Model veri yolu tarafından erişilebilir yapın:
+Model Veri Visual Studio kullanarak kaynak DSL'Visual Studio olun:
 
-1. DSL Tasarımcısı ' de kaynak DSL 'nin DSL tanım dosyasını açın. Tasarım yüzeyine sağ tıklayın ve sonra **ModelBus 'ı etkinleştir**' e tıklayın. İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**'a tıklayın. DSL çözümüne yeni bir proje "ModelBus" eklenir.
+1. Kaynak DSL'nin DSL tanım dosyasını DSL Tasarımcısı. Tasarım yüzeyine sağ tıklayın ve ardından Modelbus'ı **Etkinleştir'e tıklayın.** İletişim kutusunda seçeneklerden birini veya her ikisini birden seçin.  **Tamam**'a tıklayın. DSL çözümüne yeni bir "ModelBus" projesi eklenir.
 
-2. **Tüm Şablonları Dönüştür** ' e tıklayın ve çözümü yeniden oluşturun.
+2. Tüm **Şablonları Dönüştür'e tıklayın** ve çözümü yeniden oluşturun.
 
-### <a name="to-send-an-object-from-a-source-dsl"></a>Kaynak DSL 'den bir nesne göndermek için
+### <a name="to-send-an-object-from-a-source-dsl"></a>Bir nesneyi kaynak DSL'den göndermek için
 
-1. ElementOperations alt sınıfınızın içinde, `Copy()` bir model veri yolu başvurusunu (MBR) bir IDataObject 'e kodlayan şekilde geçersiz kılın. Bu yöntem, Kullanıcı kaynak diyagramından sürüklemeye başladığında çağrılır. Kodlanmış MBR daha sonra Kullanıcı hedef diyagramı bırakıyorda, IDataObject 'de kullanılabilir olacaktır.
+1. ElementOperations alt sınıfınıza bir Model Veri Akışı Başvurusu `Copy()` (MBR) kodlayan IDataObject öğesini geçersiz kılın. Kullanıcı kaynak diyagramdan sürüklemeye başladığında bu yöntem çağrılır. Kodlanmış MBR daha sonra kullanıcı hedef diyagrama geldiğinde IDataObject içinde kullanılabilir.
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -206,15 +206,15 @@ Kaynak DSL 'yi Visual Studio Model veri yolu tarafından erişilebilir yapın:
     ...}
     ```
 
-### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>Hedef DSL veya UML projesindeki bir DSL 'den model veri yolu başvurusu almak için
+### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>Hedef DSL veya UML projesinde DSL'den Model Veri VeriSi Başvurusu almak için
 
-1. Hedef DSL projesinde, projeye başvuruları ekle:
+1. Hedef DSL projesinde, aşağıdakilere proje başvuruları ekleyin:
 
     - Kaynak Dsl projesi.
 
     - Kaynak ModelBus projesi.
 
-2. Hareket işleyici kod dosyasında aşağıdaki ad alanı başvurularını ekleyin:
+2. Hareket işleyicisi kod dosyasına aşağıdaki ad alanı başvurularını ekleyin:
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -226,7 +226,7 @@ Kaynak DSL 'yi Visual Studio Model veri yolu tarafından erişilebilir yapın:
     using SourceDslNamespace.ModelBusAdapters;
     ```
 
-3. Aşağıdaki örnek, kaynak model öğesine nasıl erişim alınacağını göstermektedir:
+3. Aşağıdaki örnek, kaynak model öğesine nasıl erişim elde etmek olduğunu gösterir:
 
     ```csharp
     partial class MyTargetShape // or diagram or connector
@@ -271,9 +271,9 @@ Kaynak DSL 'yi Visual Studio Model veri yolu tarafından erişilebilir yapın:
     }
     ```
 
-### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>UML modelden kaynakılmış bir öğeyi kabul etmek için
+### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>UML modelinden gelen bir öğeyi kabul etmek için
 
-- Aşağıdaki kod örneği, UML diyagramından bırakılan bir nesneyi kabul eder.
+- Aşağıdaki kod örneği UML diyagramından bırakılan bir nesneyi kabul eder.
 
     ```csharp
     using Microsoft.VisualStudio.ArchitectureTools.Extensibility;
@@ -320,11 +320,11 @@ Kaynak DSL 'yi Visual Studio Model veri yolu tarafından erişilebilir yapın:
     }  }  }
     ```
 
-## <a name="using-mouse-actions-dragging-compartment-items"></a>Fare eylemlerini kullanma: bölme öğelerini sürükleme
+## <a name="using-mouse-actions-dragging-compartment-items"></a>Fare Eylemlerini Kullanma: Bölme Öğelerini Sürükleme
 
-Şekil alanları üzerinde fare eylemlerini izleyen bir işleyici yazabilirsiniz. Aşağıdaki örnek, fare ile sürükleyerek bir bölmedeki öğeleri yeniden sıralamanıza imkan sağlar.
+Şeklin alanlarında fare eylemlerini kesen bir işleyici yazabilirsiniz. Aşağıdaki örnek, kullanıcının fareyle sürükleyerek bir bölmedeki öğeleri yeniden sıralamasını sağlar.
 
-Bu örneği oluşturmak için **sınıf diyagramları** çözüm şablonunu kullanarak bir çözüm oluşturun. Bir kod dosyası ekleyin ve aşağıdaki kodu ekleyin. Ad alanını kendinizinkini aynı olacak şekilde ayarlayın.
+Bu örneği oluşturmak için Sınıf Diyagramları çözüm şablonunu **kullanarak bir çözüm** oluşturun. Bir kod dosyası ekleyin ve aşağıdaki kodu ekleyin. Ad alanını kendi ad alanınız ile aynı olacak şekilde ayarlayın.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
