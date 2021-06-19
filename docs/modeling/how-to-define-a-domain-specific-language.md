@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Domain-Specific Language, external types
 - Domain-Specific Language, relationships
 - Domain-Specific Language, domain properties
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 440d2f42fb7967ebbcb97433c3faa55e2d91ca0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51717e4bdbf12478e22bb825a9c84cfc82815f98
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903928"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387365"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama
 Bir etki alanına özgü dil (DSL) tanımlamak için, bir şablondan bir Visual Studio çözümü oluşturursunuz. Çözümün anahtar bölümü DslDefinition. dsl ' de depolanan DSL tanımı diyagramıdır. DSL tanımı, DSL 'nin sınıflarını ve şekillerini tanımlar. Bu öğelere değiştirdikten ve ekledikten sonra, DSL 'yi daha ayrıntılı şekilde özelleştirmek için program kodu ekleyebilirsiniz.
@@ -306,7 +306,7 @@ Yeni bir etki alanına özgü dil oluşturmak için Domain-Specific Language pro
 
         Yeni bir simge oluşturmak için, **Çözüm Gezgini**'de Dsl\Resources dosyasını açın. Varolan öğe aracı BMP dosyalarından birini kopyalayıp yapıştırın. Yapıştırılan kopyayı yeniden adlandırın ve ardından düzenlemek için çift tıklayın.
 
-        DSL tanımı diyagramına dönün, aracı seçin ve Özellikler penceresi **araç kutusu simgesinde** **[...]** simgesine tıklayın. **Bit eşlem Seç** iletişim kutusunda, öğesini seçin. Açılan menüden BMP dosyası.
+        DSL tanımı diyagramına dönün, aracı seçin ve Özellikler penceresi **araç kutusu simgesinde** **[...]** simgesine tıklayın. **Bit eşlem Seç** iletişim kutusunda, açılır menüden .BMP dosyanızı seçin.
 
    Daha fazla bilgi için bkz. [görüntü şekillerinin](../modeling/properties-of-image-shapes.md) [geometri şekillerinin](../modeling/properties-of-geometry-shapes.md) ve özelliklerinin özellikleri.
 
@@ -384,145 +384,145 @@ Yeni bir etki alanına özgü dil oluşturmak için Domain-Specific Language pro
 
      Yeni bir simge oluşturmak için, **Çözüm Gezgini**'de Dsl\Resources dosyasını açın. Varolan öğe aracı BMP dosyalarından birini kopyalayıp yapıştırın. Yapıştırılan kopyayı yeniden adlandırın ve ardından düzenlemek için çift tıklayın.
 
-     DSL tanımı diyagramına dönün, aracı seçin ve Özellikler penceresi **araç kutusu simgesinde** **[...]** simgesine tıklayın. **Bit eşlem Seç** iletişim kutusunda, öğesini seçin. Açılan menüden BMP dosyası.
+     DSL tanımı diyagramına dönün, aracı seçin ve Özellikler penceresi **araç kutusu simgesinde** **[...]** simgesine tıklayın. **Bit eşlem Seç** iletişim kutusunda, açılır menüden .BMP dosyanızı seçin.
 
 ##### <a name="to-test-a-reference-relationship-and-connector"></a>Başvuru Ilişkisini ve bağlayıcıyı test etmek için
 
 1. DSL Tasarımcısı kodu oluşturmak için Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür ' e tıklayın** .
 
-2. **DSL derleyin ve çalıştırın.** Visual Studio 'nun yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. Visual Studio 'nun deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
+2. **DSL derleyin ve çalıştırın.** Deneysel modda yeni bir örnek çalıştırmak için F5 veya CTRL+F5 Visual Studio tuşlarına basın. Visual Studio örneğinde DSL'nizin dosya adı uzantısına sahip bir dosya açın veya oluşturun.
 
-3. **Bağlantı aracının araç kutusunda göründüğünü doğrulayın.**
+3. **Bağlantı aracının araç kutusunda görüntülendiğinden emin olun.**
 
-4. Bir araçtan model diyagramına sürükleyerek **şekiller oluşturun** .
+4. **Bir araçtan** model diyagramına sürükleyerek şekiller oluşturun.
 
-5. Şekiller arasında **bağlantı oluşturun** . Bağlayıcı aracına tıklayın, bir şekle tıklayın ve ardından başka bir şekle tıklayın.
+5. **Şekiller arasında** bağlantılar oluşturun. Bağlayıcı aracına tıklayın, bir şekle tıklayın ve ardından başka bir şekle tıklayın.
 
-6. **Uygunsuz sınıflar arasında bağlantı oluşturmediğinizi doğrulayın.** Örneğin, ilişkiniz albümler ve sanatçı arasındaysa, sanatçıların sanatçıların bağlantısını doğrulayabildiğinizi doğrulayın.
+6. **Uygunsuz sınıflar arasında bağlantı oluşturamayışınızı doğrulayın.** Örneğin, İkizler ve Ressamlar arasındaki ilişkiniz varsa, Artists'ı Artists'a bağlayamayabilirsiniz.
 
-7. **Çeşitlilimler doğru olduğundan emin olun. Örneğin, bir kişiyi birden fazla yöneticiye bağlayabildiğinizi doğrulayın.**
+7. **Çoklulıkların doğru olduğunu doğrulayın. Örneğin, bir Kişiyi birden fazla yöneticiye bağlayamayamazken doğrulayın.**
 
-8. **Her metin dekoratın göründüğünü** ve şunları doğrulayın:
+8. **Her metin dekoratörün görüntülendiğinden ve şunları** doğrulayın:
 
-   1. Etki alanı özelliğinde **Kullanıcı arabirimi salt okuma** bayrağını ayarlamadığınız takdirde düzenleyebilirsiniz.
+   1. Etki alanı özelliğinde Kullanıcı Arabirimi Salt Okunur **bayrağını ayarlamadıysanız** düzenleyebilirsiniz.
 
-   2. Özelliği Özellikler penceresi veya dekoratör içinde düzenlediğinizde, diğer görünüm güncellenir.
+   2. Özelliği Özellikler penceresi veya dekoratörde düzenlerken diğer görünüm güncelleştirilir.
 
-   Bir bağlayıcıyı ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+   Bir bağlayıcıyı ilk kez test ettikten sonra, bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek iyi olabilir. Daha fazla bilgi için, [bkz. Customizing and Extending a Domain-Specific Language](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
-## <a name="defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a> Listeler Içeren şekilleri tanımlama: bölme şekilleri
- Bir bölme şekli bir veya daha fazla öğe listesi içerir. Örneğin, bir müzik kitaplığı DSL 'de, müzik albümlerini temsil etmek için bölme şekillerini kullanabilirsiniz. Her albümdeki şarkıların bir listesi vardır.
+## <a name="defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a> Listeleri Içeren Şekilleri Tanımlama: Bölme Şekilleri
+ Bölme şekli bir veya daha fazla öğe listesi içerir. Örneğin, bir Müzik Kitaplığı DSL'sinde müzikLenas'ı temsil etmek için bölme şekillerini kullanabilirsiniz. Her Bir Müzikte Bir Şarkı Listesi Yer Alıyor.
 
- ![Bölme şekli](../modeling/media/compartmentshape.png)
+ ![Bölme Şekli](../modeling/media/compartmentshape.png)
 
- Bu etkiyi bir DSL tanımında elde etmek için en basit yöntemde, kapsayıcı için bir etki alanı sınıfı ve her bir liste için bir etki alanı sınıfı tanımlarsınız. Kapsayıcı sınıfı, bölme şekline eşlenir.
+ DSL tanımında bu etkiyi elde etmek için en basit yöntemde, kapsayıcı için bir etki alanı sınıfı ve her liste için bir etki alanı sınıfı tanımlarsiniz. Kapsayıcı sınıfı bölme şekliyle eşlenmiş.
 
  ![Şekil haritası](../modeling/media/music_mapcomp.png)
 
- Daha fazla bilgi için bkz. [bölme şekillerinin özellikleri](../modeling/properties-of-compartment-shapes.md).
+ Daha fazla bilgi için [bkz. Bölme Şekillerinin Özellikleri.](../modeling/properties-of-compartment-shapes.md)
 
-#### <a name="to-define-a-compartment-shape"></a>Bir bölme şekli tanımlamak için
+#### <a name="to-define-a-compartment-shape"></a>Bölme Şekli tanımlamak için
 
-1. **Kapsayıcı etki alanı sınıfını oluşturun**. **Ilişki ekleme** aracına tıklayın, modelin kök sınıfına tıklayın ve ardından DSL tanımı diyagramının boş bir kısmına tıklayın. Bu, örnek şekilde albüm olarak adlandırılan etki alanı sınıfını oluşturur.
+1. **Kapsayıcı etki alanı sınıfını oluşturun.** Ekleme **İlişkisi aracına** tıklayın, modelin kök sınıfına tıklayın ve ardından DSL tanım diyagramının boş bir parçasına tıklayın. Bu, örnek şekilde Yer Alan adlı etki alanı sınıfını oluşturur.
 
-     Alternatif olarak, kök sınıfına eklemek yerine kapsayıcıyı bir Kulvar ile eşlenmiş bir etki alanı sınıfına ekleyebilirsiniz.
+     Alternatif olarak, kapsayıcıyı kök sınıfa eklemek yerine kullana eşlenmiş bir etki alanı sınıfına katıştırabilirsiniz.
 
-     Sınıfa ad gibi bir etki alanı özelliği ekleyin ve Özellikler penceresi **öğe adı** bayrağını ayarlayın.
+     Sınıfa Name gibi bir etki alanı özelliği ekleyin ve sınıfa **Is Element Name** bayrağını Özellikler penceresi.
 
-2. **Liste öğesi alanı sınıfını oluşturun**. **Ilişki ekleme** aracına tıklayın, kapsayıcı sınıfına (albüm) tıklayın ve ardından diyagramın boş bir kısmına tıklayın. Bu, örnek şekilde Song adlı etki alanı sınıfını oluşturur.
+2. **Liste öğesi etki alanı sınıfını oluşturun.** Ekleme **İlişkisi aracına tıklayın,** kapsayıcı sınıfına (Katıştırma) tıklayın ve ardından diyagramın boş bir parçasına tıklayın. Bu, örnek şekilde Song adlı etki alanı sınıfını oluşturur.
 
-     Sınıfa başlık gibi bir etki alanı özelliği ekleyin ve **öğesinin öğe adı** bayrağını ayarlayın.
+     Sınıfına Title gibi bir etki alanı özelliği ekleyin ve Is **Element Name bayrağını** ayarlayın.
 
      Diğer etki alanı özelliklerini ekleyin.
 
-     Göstermek istediğiniz her bir liste için başka bir liste öğesi alan sınıfı ekleyin.
+     Görüntülemek istediğiniz her liste için başka bir liste öğesi etki alanı sınıfı ekleyin.
 
-3. **Listedeki birçok öğe türünü karıştırmak için**, liste sınıfından kalıtımla alan sınıflar oluşturun. **Devralma değiştiricisini** ayarlayarak liste sınıfını soyut hale getirin.
+3. **listesinde çeşitli öğe türlerini karıştırmak için,** liste sınıfından devralınan sınıflar oluşturun. Devralma Değiştiricisini ayarerek liste **sınıfını soyut hale ekleyin.**
 
-     Örneğin, klasik müziğin sanatçı yerine besteci olarak sıralanmasını istiyorsanız, bir şarkının iki alt sınıfı, ClassicalSong ve NonClassicalSong oluşturabilirsiniz.
+     Örneğin klasik müziklerin ressam yerine müzik oluşturucuya göre sıralandırılmalarını tercih ediyorsanız, KlasikSong ve NonClassicalSong adlı iki alt sınıf oluşturabilirsiniz.
 
-4. **Bölme şeklini oluşturun**. **Bölme şekli** aracından DSL tanımı diyagramına sürükleyin.
+4. **Bölme şeklini oluşturun.** Bölme Şekli **aracından** DSL tanım diyagramına sürükleyin.
 
      Bir metin dekoratörü ekleyin ve adını ayarlayın.
 
-     Bir bölme ekleyin ve adını ayarlayın.
+     Bölme ekleyin ve adını ayarlayın.
 
-5. Kullanıcının liste bölmeleri gizlemesini sağlamak için, bölme şekli sınıfına sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **dekoratör ' ı Genişlet/Daralt**' a tıklayın. Özellikler penceresi dekoratör konumunu ayarlayın.
+5. Kullanıcının liste bölmelerini gizlemesine izin için bölme şekil sınıfına sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından **Genişlet/Dekoratör'e tıklayın.** Bu Özellikler penceresi dekoratörün konumunu ayarlayın.
 
-6. **Diyagram öğesi eşleme** aracına tıklayın, kapsayıcı etki alanı sınıfına tıklayın ve sonra bölme şekline tıklayın.
+6. Diyagram Öğesi **Eşleme aracına** tıklayın, kapsayıcı etki alanı sınıfına tıklayın ve bölme şekline tıklayın.
 
-7. Etki alanı sınıfı ve şekil arasındaki diyagram öğe eşleme bağlantısını seçin. **DSL ayrıntıları** penceresinde:
+7. Etki alanı sınıfı ile şekil arasındaki diyagram öğesi eşleme bağlantısını seçin. DSL **Ayrıntıları penceresinde:**
 
-    1. **Dekoratörler** sekmesine tıklayın. Dekoratör adına tıklayın ve ardından **görüntü özelliği** altında uygun öğeyi seçin. Dekoratör adının yanında bir onay işaretinin göründüğünden emin olun.
+    1. **Dekoratörler sekmesine** tıklayın. Dekoratör adına tıklayın ve ardından Özelliği Görüntüle altında uygun **öğeyi seçin.** Dekoratör adının yanında bir onay işareti göründüğünden emin olun.
 
-    2. **Bölme haritaları** sekmesine tıklayın.
+    2. Bölme Haritaları **sekmesine** tıklayın.
 
-         Bölme adına tıklayın.
+         Bölmenin adına tıklayın.
 
-         **Görüntülenmiş öğeler koleksiyonu yolu**' nun altında, liste öğesi sınıfına (Song) gidin. Açılan oka tıklayarak gezgin aracını kullanın.
+         Görüntülenen **öğeler koleksiyon yolu altında** liste öğesi sınıfına (Song) gidin. Gezgin aracını kullanmak için açılan oka tıklayın.
 
-         **Görüntü özelliği** altında, listede gösterilmesi gereken özelliği seçin. Örnekte, bu başlıktır.
+         Özelliği **Görüntüle** altında, listede görüntülenecek özelliği seçin. Örnekte bu Başlık'dır.
 
 > [!NOTE]
-> Dekoratör eşleme ve bölme eşleme alanlarındaki yol alanlarını kullanarak, etki alanı sınıfları ve bölme şekli arasında daha karmaşık ilişkiler yapabilirsiniz.
+> Dekoratör Eşlemesi ve Bölme eşleme alanlarındaki Yol alanlarını kullanarak, etki alanı sınıfları ve bölme şekli arasında daha karmaşık ilişkiler kurulur.
 
 #### <a name="to-define-a-tool-for-creating-the-shape"></a>Şekli oluşturmak için bir araç tanımlamak için
 
-1. **Alan sınıfının öğelerini oluşturmak için bir araç kutusu öğesi oluşturun.**
+1. **Etki alanı sınıfının öğelerini oluşturmak için bir araç kutusu öğesi oluşturma.**
 
-2. **DSL Gezgini**' nde, **Düzenleyici** düğümünü ve tüm alt düğümlerini genişletin.
+2. **DSL Gezgini'nde** Düzenleyici **düğümünü** ve tüm alt düğümlerini genişletin.
 
-3. DSL ile aynı ada sahip **araç kutusu sekmeleri** altındaki düğüme sağ tıklayın, örneğin, MusicLibrary. **Öğe Ekle aracı**' na tıklayın.
+3. DSL'niz ile **aynı adı (örneğin** MusicLibrary) sahip Araç Kutusu Sekmeleri'nin altındaki düğüme sağ tıklayın. Öğe **Aracı Ekle'ye tıklayın.**
 
     > [!NOTE]
-    > **Araçlar** düğümüne sağ tıklarsanız, **öğe Ekle aracını** görmezsiniz. Bunun yerine, yukarıdaki düğüme tıklayın.
+    > Araçlar düğümüne sağ **tıklarsanız** Öğe Aracı **Ekle'yi görmezsiniz.** Bunun yerine, üzerindeki düğüme tıklayın.
 
-4. Yeni öğe aracı seçiliyken Özellikler penceresi, **sınıfı** en son eklediğiniz etki alanı sınıfına ayarlayın.
+4. Yeni Özellikler penceresi aracı seçiliyken, Sınıf'a **yakın** zamanda eklemiş olduğunu etki alanı sınıfı olarak ayarlayın.
 
-5. **Açıklamalı altyazı** ve **araç ipucu** ayarlayın.
+5. Resim **Yazısı ve** Araç **İpucu'nı ayarlayın.**
 
-6. **Araç kutusu simgesini** araç kutusunda görünecek bir simgeye ayarlayın. Bunu yeni bir simge veya başka bir araç için zaten kullanılan bir simge olarak ayarlayabilirsiniz.
+6. Araç **Kutusu Simgesi'ne** araç kutusunda görünecek bir simge ayarlayın. Bunu yeni bir simgeye veya başka bir araç için zaten kullanılan bir simgeye ayarlayın.
 
-     Yeni bir simge oluşturmak için, **Çözüm Gezgini**'de Dsl\Resources dosyasını açın. Varolan öğe aracından birini kopyalayıp yapıştırın. BMP dosyaları. Yapıştırılan kopyayı yeniden adlandırın ve ardından düzenlemek için çift tıklayın.
+     Yeni bir simge oluşturmak için Dsl\Resources'i **Çözüm Gezgini.** Dosyalarda mevcut öğe araçlarından birini kopyalayıp .BMP yapıştırın. Yapıştıran kopyayı yeniden adlandırın ve düzenlemek için çift tıklayın.
 
-     DSL tanımı diyagramına dönün, aracı seçin ve Özellikler penceresi **araç kutusu simgesinde** **[...]** simgesine tıklayın. **Bit eşlem Seç** iletişim kutusunda, AÇıLAN menüden BMP dosyanızı seçin.
+     DSL Tanımı diyagramına geri dönüp aracı seçin ve araç çubuğunda araç Özellikler penceresi **simgesine tıklayın .** Bit **Eşlem** Seç iletişim kutusunda, açılan menüden BMP dosyanızı seçin.
 
-#### <a name="to-test-a-compartment-shape"></a>Bir bölme şeklini test etmek için
+#### <a name="to-test-a-compartment-shape"></a>Bölme şeklini test etmek için
 
-1. DSL Tasarımcısı kodu oluşturmak için Çözüm Gezgini araç çubuğundaki **Tüm Şablonları Dönüştür ' e tıklayın** .
+1. **DSL tasarımcısı kodunu oluşturmak için** Çözüm Gezgini araç çubuğunda Tüm Şablonları Dönüştür'e tıklayın.
 
-2. **DSL derleyin ve çalıştırın.** Visual Studio 'nun yeni bir örneğini deneysel modda çalıştırmak için F5 veya CTRL + F5 tuşlarına basın. Visual Studio 'nun deneysel örneğinde, DSL 'niz dosya adı uzantısına sahip bir dosya açın veya oluşturun.
+2. **DSL'i derleme ve çalıştırma.** Deneysel modda yeni bir örnek çalıştırmak için F5 veya CTRL+F5 Visual Studio tuşlarına basın. Visual Studio örneğinde DSL'nizin dosya adı uzantısına sahip bir dosya açın veya oluşturun.
 
-3. **Aracın araç kutusunda göründüğünü doğrulayın.**
+3. **Aracın araç kutusunda görüntülendiğinden emin olmak.**
 
-4. Aracı model diyagramının üzerine sürükleyin. Bir şekil oluşturulur.
+4. Aracı model diyagramına sürükleyin. Bir şekil oluşturulur.
 
-    Öğenin adının göründüğünü ve varsayılan değere otomatik olarak ayarlandığını doğrulayın.
+    Öğenin adının görüntülendiğinden ve otomatik olarak varsayılan değere ayarlendiğinden emin olur.
 
-5. Yeni şeklin üst bilgisine sağ tıklayın ve sonra *liste öğesini* Ekle ' ye tıklayın. Örnekte, komut şarkı ekleyin.
+5. Yeni şeklin üst bilgisine sağ tıklayın ve ardından Liste Öğenizi *Ekle'ye tıklayın.* Örnekte, komutu Şarkı Ekle'dir.
 
-    Listede bir öğenin göründüğünü ve yeni bir ada sahip olduğunu doğrulayın.
+    Bir öğenin listede görüntülendiğinden ve yeni bir ada sahip olduğunu doğrulayın.
 
-6. Liste öğelerinden birine tıklayın ve ardından Özellikler penceresi inceleyin. Liste öğelerinin özelliklerini görmeniz gerekir.
+6. Liste öğelerine tıklayın ve ardından Özellikler penceresi. Liste öğelerinin özelliklerini görüyor gerekir.
 
-7. Dil Gezginini açın. İçindeki liste öğesi düğümleri ile kapsayıcı düğümlerini görebildiğinizi doğrulayın.
+7. Dil Gezgini'ni açın. İçinde liste öğesi düğümleri bulunan kapsayıcı düğümlerini gördüğünüzden emin olmak.
 
-   ![DSL Gezgini oluşturuldu](../modeling/media/music_explorer.png)
+   ![DSL'nin oluşturulan gezgini](../modeling/media/music_explorer.png)
 
-   Bir bölme şeklini ilk kez test ettikten sonra bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek isteyebilirsiniz. Daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+   Bölme şeklini ilk kez test ettikten sonra, bazı özelliklerini ayarlamak ve daha gelişmiş özellikler eklemek iyi olabilir. Daha fazla bilgi için, [bkz. Customizing and Extending a Domain-Specific Language](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
-### <a name="displaying-a-reference-link-in-a-compartment"></a>Bir bölme içinde başvuru bağlantısı görüntüleme
- Genellikle, bir bölme içinde görüntülenen bir öğe, bölme şekli tarafından temsil edilen öğenin bir alt öğesidir. Ancak bazen bir başvuru ilişkisiyle bağlantılı bir öğeyi göstermek istersiniz.
+### <a name="displaying-a-reference-link-in-a-compartment"></a>Bir Bölmede Başvuru Bağlantısını Görüntüleme
+ Genellikle bölmede görüntülene bir öğe, bölme şekliyle temsil edilen öğenin alt öğesidir. Ancak bazen buna bir başvuru ilişkisiyle bağlı olan bir öğeyi görüntülemek de istebilirsiniz.
 
- Örneğin, albümle bağlantılı sanatçıların listesini görüntüleyen albümle şekle ikinci bir bölme ekleyebiliriz.
+ Örneğin, YerŞekser'e bağlı Olan Ressamların listesini görüntüleyen ikinci bir bölme ekleyebilirsiniz.
 
- Bu durumda, Bölüm başvurulan öğesi yerine bağlantıyı görüntülemelidir. Bunun nedeni, kullanıcının bölmedeki öğeyi seçtiği ve DELETE 'e bastığı, bağlantının başvurulan öğenin değil, silinmesini istediğiniz bir öğesidir.
+ Bu durumda bölme, başvurulan öğe yerine bağlantıyı görüntülemeli. Bunun nedeni, kullanıcı bölmedeki öğeyi seçer ve DELETE tuşuna bassa, bağlantının başvurulan öğeyi değil, silinmesini istemenizdir.
 
- Bununla birlikte, başvurulan öğenin adının bölmesinde görünmesini sağlayabilirsiniz.
+ Bununla birlikte, başvurulan öğenin adının bölmede görünmesini sebilirsiniz.
 
- Aşağıdaki yordam, bu bölümün önceki kısımlarında açıklandığı gibi, etki alanı sınıfını, başvuru ilişkisini, bölme şeklini ve diyagram öğesi haritasını zaten oluşturmuş olduğunuzu varsayar.
+ Aşağıdaki yordamda, bu bölümün önceki kısımlarında açıklandığı gibi etki alanı sınıfını, başvuru ilişkisini, bölme şeklini ve diyagram öğesi haritasını önceden oluşturduğunuz varsayıldı.
 
-##### <a name="to-display-a-reference-link-in-a-compartment"></a>Bir bölmedeki başvuru bağlantısını görüntüleme
+##### <a name="to-display-a-reference-link-in-a-compartment"></a>Bir bölmede başvuru bağlantısını görüntülemek için
 
 1. **Bölme şekline bir bölme ekleyin**. DSL tanımı diyagramında bölme şekli sınıfına sağ tıklayın, **Ekle**' nin üzerine gelin ve **bölme**' ya tıklayın.
 

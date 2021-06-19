@@ -1,7 +1,7 @@
 ---
-title: Hata ayıklayıcıda ayrıştırılmış kodu görüntüle | Microsoft Docs
-description: Derleyici tarafından oluşturulan yönergelere karşılık gelen derleme kodunu göstermek için Visual Studio 'daki ayrıştırma penceresini kullanın.
-ms.custom: SEO-VS-2020, seodec18
+title: Hata ayıklayıcı dosyasındaKi Ayrık Kodu | Microsoft Docs
+description: Derleyici tarafından oluşturulan yönergelere karşılık gelen derleme kodunu göstermek için Visual Studio'daki Disassembly penceresini kullanın.
+ms.custom: SEO-VS-2020
 ms.date: 10/30/2018
 ms.topic: how-to
 f1_keywords:
@@ -23,55 +23,55 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7d772ed757b231ce68fe27b74123f7f5878d0ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c8cc67b2f8136ea426eb56c25fb3c345198701f1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99845054"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387469"
 ---
-# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında ayrıştırılmış kodu görüntüleme (C#, C++, Visual Basic, F #)
+# <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında (C#, C++, Visual Basic, F#) farklı kodu görüntüleme
 
-**Ayrıştırılmış** pencere, derleyici tarafından oluşturulan yönergelere karşılık gelen derleme kodunu gösterir. Yönetilen kodda hata ayıklaması yapıyorsanız, bu derleme yönergeleri, Visual Studio derleyicisi tarafından oluşturulan Microsoft ara dili (MSIL) değil, tam zamanında (JıT) derleyicisi tarafından oluşturulan yerel koda karşılık gelir.
-
-> [!NOTE]
-> **Ayrıştırma** penceresinin tam avantajlarından yararlanabilmek için, [Derleme dili programlama](https://wikipedia.org/wiki/Assembly_language)hakkında temel bilgileri anlayın veya öğrenin.
-
-Bu özellik yalnızca adres düzeyinde hata ayıklama etkinse kullanılabilir. Betik veya SQL hata ayıklama için kullanılamaz.
-
-Bütünleştirilmiş kod yönergelerine ek olarak, **ayrıştırılmış** bir pencere aşağıdaki isteğe bağlı bilgileri gösterebilir:
-
-- Her yönergenin bulunduğu bellek adresi. Yerel uygulamalar için gerçek bellek adresidir. Visual Basic veya C# ' de, işlevin başından itibaren bir uzaklığa sahip olur.
-
-- Derleme kodunun türetildiği kaynak kodu.
-
-- Kod baytları, diğer bir deyişle, gerçek makinenin veya MSIL yönergelerinin bayt temsilleri.
-
-- Bellek adreslerinin sembol adları.
-
-- Kaynak koda karşılık gelen satır numaraları.
-
-Derleme dili yönergeleri, yönerge adları için kısaltmalar ve değişkenler, Yazmaçları ve sabitler için *semboller* olan *anımsatıcıları* içerir. Her makine dili yönergesi, isteğe bağlı olarak bir veya daha fazla sembol tarafından bir derleme dili anımsatıcı tarafından temsil edilir.
-
-Derleme kodu, işlemci kayıtlarına veya yönetilen kod, ortak dil çalışma zamanı saklayıcıları için yoğun bir şekilde bağımlıdır. **Ayrıştırma** penceresini, kayıt içeriğini incelemenize olanak sağlayan **Yazmaçları** penceresiyle birlikte kullanabilirsiniz.
-
-Makine kodu yönergelerini, derleme dili yerine ham sayısal biçiminde görüntülemek için, **bellek** penceresini kullanın veya **ayrıştırma** penceresindeki kısayol menüsünden **kod baytları** ' ni seçin.
-
-## <a name="use-the-disassembly-window"></a>Ayrıştırma penceresini kullanma
-
-**Ayrıştırma** penceresini etkinleştirmek için, **Araçlar**  >  **Seçenekler**  >  **hata ayıklama** altında **Adres düzeyinde hata ayıklamayı etkinleştir**' i seçin.
-
-Hata ayıklama sırasında **ayrıştırma** penceresini açmak için **Windows**  >  **ayrıştırılmış derleme** ' yi seçin veya **alt** + **8**' e basın.
+**Disassembly penceresinde,** derleyici tarafından oluşturulan yönergelere karşılık gelen derleme kodu gösterilir. Yönetilen kodda hata ayıklarsanız, bu derleme yönergeleri microsoft derleyicisi tarafından oluşturulan Microsoft ara diline (MSIL) değil Tam Zamanında (JIT) derleyicisi tarafından oluşturulan yerel koda karşılık Visual Studio sağlar.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
+> **Disassembly penceresinden tam olarak yararlanmak** için, derleme dili programlamanın [temellerini anlamayı veya öğrenin.](https://wikipedia.org/wiki/Assembly_language)
 
-İsteğe bağlı bilgileri açmak veya kapatmak için, **ayrıştırma** penceresinde sağ tıklayın ve kısayol menüsünde istenen seçenekleri ayarlayın veya temizleyin.
+Bu özellik yalnızca adres düzeyinde hata ayıklama etkinleştirildiğinde kullanılabilir. Betik veya SQL hata ayıklama için kullanılamaz.
 
-Sol kenar boşluğunda sarı bir ok, geçerli yürütme noktasını işaret ediyor. Yerel kod için, yürütme noktası CPU 'nun program sayacına karşılık gelir. Bu konum, programınızda yürütülecek sonraki yönergeyi gösterir.
+Derleme yönergelerine ek olarak, **Disassembly** penceresi aşağıdaki isteğe bağlı bilgileri gösterebilir:
+
+- Her yönergenin bulunduğu bellek adresi. Yerel uygulamalar için gerçek bellek adresidir. Visual Basic veya C# için işlevin başından bir uzaklıktır.
+
+- Derleme kodunun türet olduğu kaynak kod.
+
+- Kod baytları, yani gerçek makinenin bayt gösterimleri veya MSIL yönergeleri.
+
+- Bellek adresleri için sembol adları.
+
+- Kaynak koduna karşılık gelen satır numaraları.
+
+Derleme dili yönergeleri, yönerge adlarının kısaltmaları ve değişkenler, yazmacı  ve sabitler için semboller olan *mnemonics'den* oluşur. Her makine dili yönergesi, isteğe bağlı olarak bir derleme dili mnemonik ile ve ardından bir veya daha fazla simgeyle temsil ediliyor.
+
+Derleme kodu yoğun olarak işlemci yazmalarına veya yönetilen kod için ortak dil çalışma zamanı kayıtlarına dayandır. Yazmazların **içeriğini incelemeye olanak** sağlayan Yazmacalar **penceresiyle** birlikte Deassembly penceresini kullanabilirsiniz.
+
+Makine kodu yönergelerini derleme dili yerine ham sayısal biçimlerinde görüntülemek için  Bellek penceresini kullanın veya **Disassembly** penceresindeki kısayol menüsünden Kod Baytları'ı seçin. 
+
+## <a name="use-the-disassembly-window"></a>Disassembly penceresini kullanma
+
+**Disassembly penceresini etkinleştirmek için** Araçlar Seçenekler Hata Ayıklama altında Adres düzeyinde hata   >    >   **ayıklamayı etkinleştir'i seçin.**
+
+Hata ayıklama sırasında **Deassembly penceresini** açmak için Windows Ayır'ı **seçin**  >  **veya** Alt  + **8'e basın.**
+
+> [!NOTE]
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünde **Ayarları İçeri ve Dışarı Aktar'ı** seçin.  Daha fazla bilgi için [bkz. Ayarları sıfırlama.](../ide/environment-settings.md#reset-settings)
+
+İsteğe bağlı bilgileri açmak veya kapatmak  için, Ayır penceresine sağ tıklayın ve kısayol menüsünde istenen seçenekleri ayarlayın veya silin.
+
+Sol kenar boşluğundaki sarı ok, geçerli yürütme noktasını işaretler. Yerel kod için yürütme noktası CPU'nun program sayacına karşılık gelen bir koddur. Bu konum, programda yürütülecek sonraki yönergeyi gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Belleği belleği artırma veya azaltma](../debugger/how-to-page-up-or-down-in-memory.md)
+* [Bellekte disk belleğini yukarı veya aşağı](../debugger/how-to-page-up-or-down-in-memory.md)
 * [Hata ayıklayıcıda verileri görüntüleme](../debugger/viewing-data-in-the-debugger.md)
-* [Nasıl yapılır: Yazmaçları penceresini kullanma](../debugger/how-to-use-the-registers-window.md)
+* [Nasıl: Yazmazlar penceresini kullanma](../debugger/how-to-use-the-registers-window.md)

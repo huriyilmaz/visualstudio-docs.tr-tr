@@ -6,18 +6,18 @@ ms.topic: how-to
 titleSuffix: ''
 helpviewer_keywords:
 - dependency diagrams, adding custom validation
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: bd5f17e7e8c12da1d4e01738c26650a3df4760fa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc00f86bafebd14177400ffa0ee596a733e9fb28
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919319"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384635"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel mimari doğrulaması ekleme
 
@@ -181,7 +181,7 @@ Her bir düğüm ve her bağlantı, temsil ettiği öğe veya ilişki türünü 
 
 - DSL. Layer
 
-- DSL. Reference
+- Dsl.Reference
 
 - CodeSchema_Type
 
@@ -195,39 +195,39 @@ Her bir düğüm ve her bağlantı, temsil ettiği öğe veya ilişki türünü 
 
 - CodeSchema_Property
 
-Katmanların koddaki öğelere olan bağlantıları "temsil" kategorisine sahiptir.
+Katmanlardan kodda öğelere bağlantılar "Temsil Eder" kategorisine sahiptir.
 
-## <a name="debugging-validation"></a><a name="debugging"></a> Hata ayıklama doğrulaması
+## <a name="debugging-validation"></a><a name="debugging"></a> Hata Ayıklama Doğrulaması
 
-Katman doğrulama uzantınızdaki hataları ayıklamak için CTRL + F5 tuşlarına basın. Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir katman modeli açın veya oluşturun. Bu modelin, kodla ilişkilendirilmesi ve en az bir bağımlılığı olması gerekir.
+Katman doğrulama uzantınıza hata ayıklamak için CTRL+F5 tuşlarına basın. Deneysel bir Visual Studio açılır. Bu örnekte bir katman modeli açın veya oluşturun. Bu modelin kodla ilişkilendirilmiş olması ve en az bir bağımlılığı olması gerekir.
 
-### <a name="test-with-a-solution-that-contains-dependencies"></a>Bağımlılıklar içeren bir çözümle test etme
+### <a name="test-with-a-solution-that-contains-dependencies"></a>Bağımlılıkları içeren bir Çözümle test
 
-Aşağıdaki özellikler mevcut olmadığı takdirde doğrulama yürütülmez:
+Aşağıdaki özellikler mevcut olmadığı sürece doğrulama yürütülmez:
 
 - Bağımlılık diyagramında en az bir bağımlılık bağlantısı vardır.
 
 - Modelde kod öğeleriyle ilişkili katmanlar vardır.
 
-Doğrulama uzantınızı test etmek için Visual Studio 'nun deneysel bir örneğini ilk kez başlattığınızda, bu özelliklere sahip bir çözüm açın veya oluşturun.
+Deneysel bir örneği ilk kez başlatan Visual Studio uzantınızı test etmek, bu özelliklere sahip bir çözüm açmak veya oluşturmak için kullanılır.
 
-### <a name="run-clean-solution-before-validate-architecture"></a>Mimariyi doğrulamadan önce temiz çözümü Çalıştır
+### <a name="run-clean-solution-before-validate-architecture"></a>Mimariyi Doğrulamadan Önce Temiz Çözümü Çalıştırma
 
-Doğrulama kodunuzu güncelleştirdiğinizde, Validate komutunu test etmeden önce deneysel çözümdeki **Build menüsündeki Build** ( **Çözümü Temizle** ) komutunu kullanın. Doğrulama sonuçları önbelleğe alındığından bu gereklidir. Test bağımlılığı diyagramını veya kodunu güncelleştirmediyseniz, doğrulama yöntemleri yürütülmez.
+Doğrulama kodunuzu her güncelleştirin,  Doğrulama komutunu test etmek **için** önce deneysel çözümün Derleme menüsündeki Çözümü Temizle komutunu kullanın. Doğrulama sonuçları önbelleğe alınmış olduğundan bu gereklidir. Test bağımlılığı diyagramını veya kodunu güncelleştirmemiş olursanız doğrulama yöntemleri yürütülmez.
 
-### <a name="launch-the-debugger-explicitly"></a>Hata ayıklayıcıyı açık olarak Başlat
+### <a name="launch-the-debugger-explicitly"></a>Hata Ayıklayıcıyı Açıkça Başlatma
 
-Doğrulama ayrı bir işlemde çalışır. Bu nedenle, doğrulama yönteminizin kesme noktaları tetiklenmeyecektir. Doğrulama başladığında işlem ayıklayıcıyı işleme açıkça iliştirmelidir.
+Doğrulama ayrı bir işlemde çalışır. Bu nedenle doğrulama yönteminizin kesme noktaları tetiklanmaz. Doğrulama başlatıldında hata ayıklayıcıyı işleme açıkça ekleyemedik.
 
-Hata ayıklayıcıyı doğrulama işlemine iliştirmek için, doğrulama yönteminizin başlangıcında öğesine bir çağrı ekleyin `System.Diagnostics.Debugger.Launch()` . Hata ayıklama iletişim kutusu göründüğünde, Visual Studio 'nun ana örneğini seçin.
+Hata ayıklayıcısını doğrulama sürecine eklemek için doğrulama yönteminizin `System.Diagnostics.Debugger.Launch()` başlangıcına bir çağrısı ekler. Hata ayıklama iletişim kutusu görüntülendiğinde, hata ayıklama iletişim kutusunun Visual Studio.
 
-Alternatif olarak, öğesine bir çağrı ekleyebilirsiniz `System.Windows.Forms.MessageBox.Show()` . İleti kutusu göründüğünde, Visual Studio 'nun ana örneğine gidin ve **Hata Ayıkla** menüsünde **işleme Ekle**' ye tıklayın. **Graphcmd.exe** adlı işlemi seçin.
+Alternatif olarak, için bir çağrı eklemek de `System.Windows.Forms.MessageBox.Show()` vardır. İleti kutusu görüntülendiğinde, uygulamanın ana örneğine Visual Studio **hata** ayıkla menüsünde İşleme **Ekle'ye tıklayın.** Graphcmd.exeadlı işlemi **seçin.**
 
-CTRL + F5 tuşuna basarak (**hata ayıklama olmadan Başlat**) deneysel örneği her zaman başlatın.
+Deneysel örneği her zaman CTRL+F5 tuşlarına basarak başlat (**Hata Ayıklama olmadan başlat).**
 
-### <a name="deploying-a-validation-extension"></a>Doğrulama uzantısı dağıtma
+### <a name="deploying-a-validation-extension"></a>Doğrulama Uzantısı Dağıtma
 
-Doğrulama uzantınızı, uygun bir Visual Studio sürümünün yüklü olduğu bir bilgisayara yüklemek için hedef bilgisayarda VSıX dosyasını açın.
+Doğrulama uzantınızı, uygulamanın uygun bir sürümünün Visual Studio yüklemek için hedef bilgisayarda VSIX dosyasını açın.
 
 ## <a name="example-code"></a><a name="example"></a> Örnek kod
 

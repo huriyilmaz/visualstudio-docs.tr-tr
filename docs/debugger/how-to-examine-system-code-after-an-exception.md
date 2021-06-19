@@ -1,7 +1,7 @@
 ---
-title: Bir özel durumdan sonra sistem kodunu inceleme | Microsoft Docs
-description: Özel durumun nedenini bulmak için bir sistem çağrısında kodu İnceleme hakkında bilgi edinin. Bu yordam, sistem kodu sembolleri yüklenmemiş olsa bile geçerlidir.
-ms.custom: SEO-VS-2020, seodec18
+title: Özel durum sonrasında sistem kodunu | Microsoft Docs
+description: Özel durumun nedenini bulmak için sistem çağrısındaki kodu incelemeyi öğrenin. Sistem kodu için semboller yüklenmemiş olsa bile yordam uygulanır.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,31 +18,31 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f906fd39ed9b0b0af5a9ade344ab05a33e469a9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f05ae1486089eaa63ef47a9953578db2a0b6662a
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877687"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384661"
 ---
 # <a name="how-to-examine-system-code-after-an-exception"></a>Nasıl Yapılır: Özel Durumdan Sonra Sistem Kodunu İnceleme
-Bir özel durum oluştuğunda, özel durumun nedenini öğrenmek için bir sistem çağrısının içindeki kodu incelemeniz gerekebilir. Aşağıdaki yordamda, sistem kodu için simge yüklü değilse veya Yalnızca kendi kodum etkinse bunun nasıl yapılacağı açıklanmaktadır.
+Bir özel durum oluştuğunda, özel durumun nedenini belirlemek için sistem çağrısının içindeki kodu incelemeniz gerekir. Aşağıdaki yordamda, sistem kodu için yüklenmiş sembolleriniz yoksa veya sistem kodunuz etkinse bunun Yalnızca kendi kodum açıktır.
 
-### <a name="to-examine-system-code-following-an-exception"></a>Özel durumu izleyen sistem kodunu incelemek için
+### <a name="to-examine-system-code-following-an-exception"></a>Bir özel durumu takip eden sistem kodunu incelemek için
 
-1. **Çağrı yığını** penceresinde, sağ tıklayın ve ardından **dış kodu göster**' e tıklayın.
+1. Çağrı Yığını **penceresinde sağ** tıklayın ve ardından Dış Kodu **Göster'e tıklayın.**
 
-     Yalnızca kendi kodum etkinleştirilmemişse, bu seçenek kısayol menüsünde kullanılamaz ve sistem kodu varsayılan olarak gösterilir.
+     Bu Yalnızca kendi kodum etkinleştirilmediyse, bu seçenek kısayol menüsünde kullanılamaz ve sistem kodu varsayılan olarak gösterilir.
 
-2. Şimdi **çağrı yığını** penceresinde görüntülenen dış kod çerçevelerine sağ tıklayın.
+2. Artık Çağrı Yığını penceresinde görünen dış kod **çerçevelerini sağ** tıklayın.
 
-3. **Sembolleri yükle** ' nin üzerine gelin ve ardından **Microsoft sembol sunucuları**' na tıklayın.
+3. Simgesinden **Sembolleri Yükle'nin üzerine gelin** ve ardından Microsoft Sembol **Sunucuları'nın üzerine tıklayın.**
 
-    1. Yalnızca kendi kodum etkinleştirildiyse bir iletişim kutusu görüntülenir. Yalnızca kendi kodum artık devre dışı bırakıldığını belirtir. Bu, sistem çağrılarının adımlaması için gereklidir.
+    1. Etkin Yalnızca kendi kodum bir iletişim kutusu görüntülenir. Bu, Yalnızca kendi kodum devre dışı bırakılmıştır. Bu, sistem çağrılarına adımlama için gereklidir.
 
-    2. **Ortak sembolleri indirme** iletişim kutusu görüntülenir. İndirme tamamlandığında kaybolacaktır.
+    2. Genel **sembolleri indir iletişim** kutusu görüntülenir. İndirme işlemi tamam olduğunda kaybolur.
 
-4. Artık **çağrı yığını** penceresinde ve diğer pencerelerin sistem kodunu inceleyebilirsiniz. Örneğin, bir kaynak veya **ayrıştırma** penceresinde kodu görüntülemek için bir çağrı yığını çerçevesine çift tıklayabilirsiniz.
+4. Artık Çağrı Yığını penceresinde ve diğer **pencerelerde sistem** kodunu inceebilirsiniz. Örneğin, bir kaynak veya **Disassembly** penceresinde kodu görüntülemek için bir çağrı yığını çerçevesine çift tıklarsınız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Özel Durumları Hata Ayıklayıcısı ile Yönetme](../debugger/managing-exceptions-with-the-debugger.md)

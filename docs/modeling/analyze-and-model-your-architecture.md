@@ -1,8 +1,8 @@
 ---
-title: Mimarinizi çözümleme ve mimarinizin modelini oluşturma
-description: Uygulamanızın mimari gereksinimleri karşıladığından emin olmak için uygulamanızı tasarlamak ve modellemek üzere Visual Studio mimarisi ve modelleme araçlarını nasıl kullanabileceğinizi öğrenin.
+title: Mimari analizi & modelleme araçları
+description: Uygulamanıza mimari gereksinimlerin uygun olduğundan emin olmak için uygulama tasarlama ve modelleme.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/04/2021
 ms.topic: overview
 helpviewer_keywords:
 - diagrams - modeling
@@ -14,88 +14,80 @@ helpviewer_keywords:
 - application architecture
 - architecture [Visual Studio ALM], modeling
 - application modeling
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7364da54179b742dc3cbfcd94622308f5c13b483
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 542b74e7d3bb73847303fa4215651eea7e110e91
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861926"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384882"
 ---
 # <a name="analyze-and-model-your-architecture"></a>Mimarinizi çözümleme ve mimarinizin modelini oluşturma
 
-Uygulamanızı tasarlamak ve modellemek için Visual Studio mimarisi ve modelleme araçlarını kullanarak uygulamanızın mimari gereksinimleri karşıladığından emin olun.
+Uygulamanızı tasarlamak ve modellemek için Visual Studio mimari ve modelleme araçlarını kullanarak mimari gereksinimleri karşılar.
 
-* Kodun yapısını, davranışını ve ilişkilerini görselleştirmek için Visual Studio kullanarak mevcut program kodunu daha kolay bir şekilde anlayın.
+1. Kod yapısı, davranışı ve [kod eşlemeleri ve bağımlılık](visualize-code.md) diyagramları ile ilişkileri görselleştirerek mevcut program kodunu daha iyi anlıyoruz.
+    - Kod eşlemeleri oluşturarak kodun kuruluşuna ve **ilişkilerine bakın.** 
+    - Derlemeler, ad alanları, sınıflar, yöntemler gibi bağımlılıkları görselleştirin.
+    - Kodu doğrulamak için bağımlılık diyagramları oluşturarak **kodunuzla tasarımı arasındaki** çakışmaları bulun.
+    - Koddan sınıf diyagramları oluşturarak belirli bir proje için [sınıf yapısına ve üyelerine bakın.](../ide/class-designer/designing-and-viewing-classes-and-types.md)
+    - [Metin tabanlı dosyalar oluşturmak için T4](../modeling/code-generation-and-t4-text-templates.md) şablonlarını kullanarak metin blokları ve şablonların içinde denetim mantığı kullanarak metin oluşturma. 
+    
+1. Mimari bağımlılıklara saygı duyma konusunda takımınızı eğitin.
 
-* Mimari bağımlılıklarını önceden oluşturmanız için takımınızı eğitin.
+1. Geliştirme sürecinizin bir parçası olarak uygulama yaşam döngüsü boyunca farklı ayrıntı düzeylerinde modeller oluşturun.
 
-* Geliştirme sürecinizin bir parçası olarak uygulama yaşam döngüsü boyunca farklı ayrıntı düzeylerinde modeller oluşturun.
+Bkz. [Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme.](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)
 
-Bkz. [Senaryo: görselleştirme ve modelleme kullanarak tasarımınızı değiştirme](../modeling/scenario-change-your-design-using-visualization-and-modeling.md).
+## <a name="code-maps"></a>Kod eşlemeleri
 
-## <a name="article-reference"></a>Makale başvurusu
+Kod eşlemeleri, kodunda kuruluşu ve ilişkileri görmenizi sağlar.
 
-|Senaryo|Makaleler|
-|-|-|
-|**Kodu görselleştirin**:<br /><br />-Kod haritaları oluşturarak kodun kuruluşuna ve ilişkilerine bakın. Derlemeler, ad alanları, sınıflar, yöntemler vb. arasındaki bağımlılıkları görselleştirin.<br />-Koddan sınıf diyagramları oluşturarak belirli bir proje için sınıf yapısına ve üyelere bakın.<br />-Kodu doğrulamak için bağımlılık diyagramları oluşturarak kodunuz ve tasarımı arasında çakışmalar bulun.|- [Kodu görselleştirme](../modeling/visualize-code.md)<br />- [Sınıflarla ve diğer türlerle çalışma (Sınıf Tasarımcısı)](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [Video: Visual Studio 2015 kod haritaları ile koddan tasarımı anlama](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [Video: mimari bağımlılıklarınızı gerçek zamanlı olarak doğrulama](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
-|**Mimariyi tanımlayın**:<br /><br />-Bağımlılık diyagramları oluşturarak kodunuzun bileşenleri arasındaki bağımlılıklarda kısıtlama belirleyin ve uygulayın.|- [Video: Visual Studio ile mimari bağımlılıklarını doğrulama (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Gereksinimleri ve hedeflenen tasarımı kullanarak sisteminizi doğrulayın:**<br /><br />-Hedeflenen mimariyi betimleyen ve tasarımla çakışabilecek değişiklikleri önleyen bağımlılık diyagramlarıyla kod bağımlılıklarını doğrulayın.|- [Video: Visual Studio ile mimari bağımlılıklarını doğrulama (Channel 9)](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**Modelleri ve diyagramları özelleştirme**:<br /><br />-Kendi etki alanına özgü dillerinizi oluşturun.|- [Visual Studio için modelleme SDK-Domain-Specific dilleri](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
-|**T4 şablonlarını kullanarak metin oluştur**:<br /><br />-Metin tabanlı dosyalar oluşturmak için şablonlar içindeki metin bloklarını ve denetim mantığını kullanın.<br /> -T4 şablonu Visual Studio 'Ya dahil edilen MSBuild ile derleme|- [Kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md)|
-|**Team Foundation sürüm denetimi 'ni kullanarak modelleri, diyagramları ve kod eşlemelerini paylaşma**:<br /><br />-Bunları paylaşmak için, Team Foundation sürüm denetimi altına kod haritaları, projeler ve bağımlılık diyagramları koyun.| |
+Yapısını ve bağımlılıklarını daha iyi anlamak, güncelleştirmeyi ve önerilen değişikliklerin maliyetini tahmin etmek için program kodunu incelemek için haritaları kullanın.
 
-Hangi Visual Studio sürümlerini her bir özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)
-
-## <a name="types-of-models-and-typical-uses"></a>Model türleri ve tipik kullanımlar
-
-### <a name="code-maps"></a>Kod eşlemeleri
-
-Kod haritaları kodunuzda organizasyonu ve ilişkileri görmenizi de yardımcı olur.
-
-**Tipik kullanımlar:**
-
-- Yapısını ve bağımlılıklarını daha iyi anlayabilmeniz için program kodunu inceleyin, bunu nasıl güncelleştirebileceğinizi ve önerilen değişikliklerin maliyetini tahmin edebilirsiniz.
-
-**Bakýn**
-
+Daha fazla bilgi edinin:
+- [Mimari kod araçlarını yükleme](install-architecture-tools.md)
 - [Çözümlerinizdeki bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)
 - [Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma](../modeling/use-code-maps-to-debug-your-applications.md)
 - [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
-### <a name="dependency-diagrams"></a>Bağımlılık diyagramları
+## <a name="dependency-diagrams"></a>Bağımlılık diyagramları
 
-Bağımlılık diyagramları, bir uygulamanın yapısını açık bağımlılıklara sahip bir katman veya blok kümesi olarak tanımlamanızı sağlar. Canlı doğrulama, bir bağımlılık diyagramında açıklanan koddaki ve bağımlılıklarda bağımlılıklar arasındaki çakışmaları gösterir.
+Bağımlılık diyagramları, bir uygulamanın yapısını açık bağımlılıklara sahip katmanlar veya bloklar kümesi olarak tanımlamayı sağlar. Canlı doğrulama, kodda bağımlılıklar ile bağımlılık diyagramında açıklanan bağımlılıklar arasındaki çakışmaları gösterir.
 
-**Tipik kullanımlar:**
+Bağımlılık diyagramlarını kullanarak: 
+- Yaşam süresi boyunca çok sayıda değişiklikle uygulamanın yapısını kararlı hale getirebilirsiniz.
+- Kodda yapılan değişiklikleri denetlemeden önce, gerekmeden bağımlılık çakışmalarını keşfedin.
 
-- Uygulamanın yapısını ömrü boyunca çok sayıda değişiklikle sabitleştir.
-- Koda yapılan değişiklikleri iade etmeden önce istemeden bağımlılık çakışmalarını bulun.
-
-**Bakýn**
-
+Daha fazla bilgi edinin:
+- [Mimari kod araçlarını yükleme](install-architecture-tools.md)
 - [Kodunuz aracılığıyla bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)
 - [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)
 - [Bağımlılık diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md)
 
-### <a name="domain-specific-language-dsl"></a>Etki alanına özgü dil (DSL)
+## <a name="domain-specific-language-dsl-models"></a>Etki alanına özgü dil (DSL) modelleri
 
-DSL, belirli bir amaç için tasarladığınız bir gösterimidir. Visual Studio 'da genellikle grafik olur.
+DSL, belirli bir amaca yönelik olarak tasarlasanız bir ifadedir. Bu Visual Studio genellikle grafikseldir.
 
-**Tipik kullanımlar:**
+Etki alanına özgü dili kullanarak: 
+- Uygulamanın bölümlerini oluşturma veya yapılandırma. Nota ve araçları geliştirmek için çalışma gerekir. Sonuç, UML özelleştirmesi yerine etki alanınıza daha uygun olabilir.
+- DSL geliştirme yatırımını ve araçlarının birden fazla projede kullanımıyla geri döndürül olduğu büyük projeler veya ürün hatları için.
 
-- Uygulamanın parçalarını oluşturun veya yapılandırın. Gösterimi ve araçları geliştirmek için çalışma gerekir. Sonuç, UML özelleştirmesinden daha iyi bir şekilde etki alanına uygun olabilir.
-- Büyük projeler veya DSL ve araçları geliştirmedeki yatırımın birden fazla projede kullanımı tarafından döndürüldüğünden oluşan ürün hatları için.
-
-**Bakýn**
-
+Daha fazla bilgi edinin:
 - [Visual Studio için Modelleme SDK'sı - Etki Alanına Özgü Diller](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
 
-## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 2017 ' de modellemeye yönelik yenilikler](../modeling/what-s-new-for-design-in-visual-studio.md)
-- [DevOps ve uygulama yaşam döngüsü yönetimi](/azure/devops/user-guide/devops-alm-overview)
+## <a name="edition-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport" />Mimari ve modelleme araçları için sürüm desteği
+
+Visual Studio sürümler çeşitli sürümlerde kullanılabilir. Bunların hepsi mimari ve modelleme araçları için destek sağlamamaktadır. Aşağıdaki tabloda her aracın kullanılabilirliği gösterir.
+
+|**Özellik**|**Kurumsal sürüm**|**Professional sürümü**|**Community edition**|
+|-|-|-|-|
+|**Kod eşlemeleri**|Yes|Yalnızca kod eşlemelerini okumayı, kod haritalarını filtrelemeyi, yeni genel düğümler eklemeyi ve seçimden yeni bir Yönlendirildi Graf oluşturmayı destekler.|-|
+|**Bağımlılık diyagramları**|Yes|Yalnızca bağımlılık diyagramlarını okumayı destekler.|Yalnızca bağımlılık diyagramlarını okumayı destekler.|
+|**Yönlendiren grafikler** (DGML diyagramları)|Yes|Yes|Yes|
+|**Kod kopyalama**|Yes|-|-|

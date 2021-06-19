@@ -4,17 +4,17 @@ description: Visual Studio 'da program kodu veya diğer uygulama kaynakları olu
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5418013898f24b15cf51926022d974d23f4a7215
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f043e95ef477558028e634bf6b48aded2960ec2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966363"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386663"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 Metin Şablonları Yazma Yönergeleri
 
@@ -111,7 +111,7 @@ Bunu yapmanın avantajı, IntelliSense 'in kullanılabildiği için kodun daha k
 
 `The total is: <#= ComputeTotal() #>`
 
-**MyReportText-Methods.cs** içinde:
+**MyReportText-Methods. cs** dosyasında:
 
 `private string ComputeTotal() { ... }`
 
@@ -153,7 +153,7 @@ Oluşturmak istediğiniz kod veya metnin bir örneğini yazın ve doğru olduğu
 
 Yazılan modeller kullanmayı düşünün.
 
-Modelleriniz için bir XML veya veritabanı şeması oluşturabilseniz de, etki alanına özgü dil (DSL) oluşturmak faydalı olabilir. DSL, şemadaki her düğümü temsil etmek için bir sınıf üretmesinin ve öznitelikleri temsil eden özelliklerin avantajına sahiptir. Bu, iş modeli açısından program oluşturabileceğiniz anlamına gelir. Örneğin:
+Modelleriniz için bir XML veya veritabanı şeması oluşturabilseniz de, etki alanına özgü dil (DSL) oluşturmak faydalı olabilir. DSL, şemada her düğümü temsil eden bir sınıf oluşturma avantajına ve öznitelikleri temsil eden özelliklere sahiptir. Bu, iş modeli açısından programlayabilirsiniz anlamına gelir. Örneğin:
 
 ```
 Team Members:
@@ -163,13 +163,13 @@ Team Members:
 <# } #>
 ```
 
-Modelleriniz için diyagramlar kullanmayı düşünün.
+Modelleriniz için diyagramları kullanmayı göz önünde bulundurabilirsiniz.
 
-Birçok model, özellikle de çok büyükse metin tabloları olarak sunulur ve yönetilir.
+Çoğu model, özellikle de çok büyükse, en etkili şekilde metin tabloları olarak sunulmaktadır ve yönetilir.
 
-Ancak bazı iş gereksinimleri için, karmaşık ilişki ve iş akışı kümelerini netleştirmek önemlidir ve diyagramlar en iyi uygun ortamıdır. Bir diyagramın avantajı, kullanıcılar ve diğer hissedarlarla daha kolay bir şekilde tartışmak. İş gereksinimleri düzeyindeki bir modelden kod üreterek, gereksinimler değiştiğinde kodunuzun daha esnek olmasını sağlayabilirsiniz.
+Ancak, bazı iş gereksinimleri için karmaşık ilişki ve iş akışı kümelerini netleştirmek önemlidir ve diyagramlar en uygun ortamdır. Diyagramın bir avantajı, kullanıcılarla ve diğer paydaşlarla tartışmanın kolay olmasıdır. Modelden iş gereksinimleri düzeyinde kod getirerek, gereksinimler değiştiklerinden kodunuzu daha esnek hale getirirsiniz.
 
-Ayrıca, etki alanına özgü dil (DSL) olarak kendi diyagram türünü de tasarlayabilirsiniz. Kod, hem UML hem de DSLs 'den oluşturulabilir. Daha fazla bilgi için bkz. [mimari ve modelleme mimarisi](../modeling/analyze-and-model-your-architecture.md).
+Kendi diyagram türlerinizi etki alanına özgü bir dil (DSL) olarak da tasarabilirsiniz. Kod hem UML hem de DSL'lerden oluşturulabilir. Daha fazla bilgi için [bkz. Analiz ve Modelleme Mimarisi.](../modeling/analyze-and-model-your-architecture.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

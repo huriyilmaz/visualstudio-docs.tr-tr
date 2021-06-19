@@ -1,55 +1,55 @@
 ---
 title: Modelleri paylaşma ve diyagramları dışarı aktarma
-description: Modelleri, bağımlılık diyagramlarını ve yönlendirilmiş grafikleri oluşturmak ve düzenlemek için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+description: Modelleri, bağımlılık diyagramlarını Visual Studio yönlendirilen grafikleri oluşturmak ve düzenlemek için Visual Studio'yi nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML model, sharing
 - UML diagrams, saving
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e12dcd1fcb9119aa65811fc149d86150a8b084e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef33052e8ae98e5a716265a130f8b2031bbfd340
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899786"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385662"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>Modelleri paylaşma ve diyagramları dışarı aktarma
-Visual Studio 'da, iş arkadaşlarınızla modelleri ve diyagramları çeşitli yollarla paylaşabilirsiniz.
+Bu Visual Studio, modelleri ve diyagramları iş arkadaşlarınızla çeşitli yollarla paylaşabilirsiniz.
 
- Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Bu özelliği destekleyen Visual Studio için bkz. Mimari ve [modelleme araçları için sürüm desteği.](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)
 
-## <a name="working-on-a-model-as-a-team"></a>Takım olarak bir modelde çalışma
- Visual Studio kullanıcıları modelleri, bağımlılık diyagramlarını ve yönlendirilmiş grafikleri oluşturabilir ve düzenleyebilir.
+## <a name="working-on-a-model-as-a-team"></a>Takım Olarak Model Üzerinde Çalışma
+ Veri Visual Studio modelleri, bağımlılık diyagramlarını ve yönlendiren grafikleri oluşturabilir ve düzenleyebilir.
 
- Farklı kullanıcılar bir modelde aynı anda çalışabilir, ancak farklı paketler üzerinde çalışır.
+ Farklı kullanıcılar model üzerinde aynı anda çalışsa da farklı paketlerde çalışmalı.
 
- Orta veya büyük bir projede modelleri düzenleme hakkında öneriler için bkz. [modelleme çözümünüzü yapılandırma](../modeling/structure-your-modeling-solution.md).
+ Orta veya büyük bir projede modelleri düzenleme hakkında öneriler için [bkz. Modelleme çözümlerinizi yapı.](../modeling/structure-your-modeling-solution.md)
 
-## <a name="reading-and-reviewing-models"></a>Modelleri okuma ve gözden geçirme
- Visual Studio 'nun bazı sürümlerini kullanan takım üyeleri (model oluşturamaz) modelleri, modelleme diyagramlarını ve yönlendirilmiş grafikleri okuyabilir ancak bunları düzenleyemez.  Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+## <a name="reading-and-reviewing-models"></a>Modelleri Okuma ve Gözden Geçirme
+ Visual Studio (model oluşturamaz) sürümlerini kullanan ekip üyeleri modelleri, modelleme diyagramlarını ve yönlendiren grafikleri okuyabilir, ancak düzenleyemez.  Bu özelliği destekleyen Visual Studio için bkz. Mimari ve [modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
- Bağımlılık diyagramı yalnızca oluşturulduğu model içinde açılabilir. Bir diyagrama erişim sağlamak için, bu nedenle tüm modelleme proje dosyalarına veya bunların kopyalarına erişim sağlamanız gerekir.
+ Bağımlılık diyagramı yalnızca oluşturulduktan sonra model içinde açılabilir. Bu nedenle, bir diyagrama erişim sağlamak için tüm modelleme proje dosyalarına veya bunların kopyalarına erişim sağlayabilirsiniz.
 
- Daha fazla bilgi için bkz. [diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md).
+ Daha fazla bilgi için [bkz. Diğer sürümlerde modelleri ve Visual Studio okuma.](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md)
 
-## <a name="using-diagrams-in-documents-and-presentations"></a>Belgelerde ve sunularda diyagramlar kullanma
- Diyagramların parçalarını belgelere veya sunulara kopyalayabilirsiniz. Diyagramları, örneğin XPS dosyaları gibi da yazdırabilirsiniz.
+## <a name="using-diagrams-in-documents-and-presentations"></a>Belgelerde ve Sunumlarda Diyagramları Kullanma
+ Diyagramların bölümlerini belgelere veya sunumlara kopyaabilirsiniz. Diyagramları, örneğin XPS dosyalarına da yazdırabilirsiniz.
 
- Daha fazla bilgi için bkz. [diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md).
+ Daha fazla bilgi için [bkz. Diyagramları görüntü olarak dışarı aktarma.](../modeling/export-diagrams-as-images.md)
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-|-|
-|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Büyük veya orta ölçekli bir projede model paylaşma.|
-|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|Diyagramların parçalarını PowerPoint veya Word gibi uygulamalara kopyalayabilir veya bir XPS dosyasına diyagram yazdırabilirsiniz.|
-|[Mimariyi Çözümleme ve Mimarinin Modelini Oluşturma](../modeling/analyze-and-model-your-architecture.md)|Modellere ve diyagramlarına genel bakış.|
+|[Modelleme çözümünüzün yapısını oluşturma](../modeling/structure-your-modeling-solution.md)|Modelleri büyük veya orta ölçekli bir projede paylaşma.|
+|[Diyagramları görüntü olarak dışarı aktarma](../modeling/export-diagrams-as-images.md)|Diyagramların bölümlerini PowerPoint veya Word gibi uygulamalara kopyalayıp bir xpS dosyasına diyagram yazdırabilirsiniz.|
+|[Mimariyi Çözümleme ve Mimarinin Modelini Oluşturma](../modeling/analyze-and-model-your-architecture.md)|Modellere ve diyagramlara genel bakış.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

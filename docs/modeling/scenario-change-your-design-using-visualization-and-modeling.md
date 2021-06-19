@@ -11,25 +11,25 @@ helpviewer_keywords:
 - walkthrough [Visual Studio ALM], visualizing code
 - walkthrough [Visual Studio ALM], modeling software
 - walkthroughs [Visual Studio ALM], modeling software
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 ms.custom: SEO-VS-2020
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 79f131276172a9df91dd8408149fae66a2f28ca9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 05cdd769a59c4101fbc05a7e51893752e2532f42
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938050"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385831"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
 
 Yazılım sisteminizin, Visual Studio 'da görselleştirme ve modelleme araçlarını kullanarak kullanıcıların ihtiyaçlarını karşıladığından emin olun.
 Kod haritaları, bağımlılık diyagramları ve sınıf diyagramları gibi araçları kullanarak şunları yapın:
 
-Visual Studio 'nun hangi sürümlerinin her bir aracı desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Visual Studio 'nun hangi sürümlerinin her bir aracı desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 - Kullanıcıların gereksinimlerini ve iş süreçlerini açıklığa kavuşturun.
 
@@ -112,7 +112,7 @@ Her iki ekip de, geliştirme aşamasındaki kodun tasarımla tutarlı kalmasın�
 - [Bağımlılık diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md)
 
 > [!NOTE]
-> Visual Studio 'nun bazı sürümleri, bağımlılık doğrulamayı ve görselleştirme ve modelleme için kod eşlemelerinin salt okunurdur sürümlerini destekler. Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+> Visual Studio 'nun bazı sürümleri, bağımlılık doğrulamayı ve görselleştirme ve modelleme için kod eşlemelerinin salt okunurdur sürümlerini destekler. Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 ## <a name="understand-and-communicate-information-about-the-system"></a>Sistemle ilgili bilgileri anlayın ve iletişim kurun
 
@@ -232,9 +232,9 @@ Takımlar her görevi tamamlarsa, bunların kodlarını kaynak denetimine denetl
 
 - Tasarım ile çakışmaz.
 
-Şimdi akşam yemeği, neredeyse hepsi hala uygulandığı için Lucerne 'ın yeniden kullanılabilir olduğu büyük bir otomatik test koleksiyonuna sahiptir. Lucerne ayrıca bu testleri oluşturabilir ve yeni işlevleri kapsayacak yeni işlevler ekleyebilir. Ayrıca, el ile testleri çalıştırmak için Visual Studio 'Yu da kullanabilirsiniz.
+Şimdi Akşam Yemeği'nin neredeyse hepsi geçerli olduğu için Lucerne'ın yeniden kullanacı olan çok sayıda otomatikleştirilmiş test koleksiyonu vardır. Lucerne ayrıca bu testler üzerinde derlemeler ve yeni işlevleri kapsayacak yeni testler ekleyebilir. Her ikisi de el Visual Studio testleri çalıştırmak için Visual Studio kullanır.
 
-Kodun tasarıma uyduğundan emin olmak için takımlar Azure DevOps 'daki derlemeleri bağımlılık doğrulaması içerecek şekilde yapılandırır. Herhangi bir çakışma oluşursa, ayrıntılarla birlikte bir rapor oluşturulur.
+Kodun tasarıma uygun olduğundan emin olmak için ekipler derlemelerini Azure DevOps doğrulamayı içerecek şekilde yapılandırıyor. Herhangi bir çakışma oluşursa, ayrıntılarla birlikte bir rapor oluşturulur.
 
 Bkz.
 
@@ -242,19 +242,19 @@ Bkz.
 
 - [Geliştirme sırasında sisteminizi doğrulama](../modeling/validate-your-system-during-development.md)
 
-- [Sürüm denetimini kullanma](/azure/devops/repos/tfvc/overview?view=azure-devops&preserve-view=true)
+- [Sürüm denetimi kullanma](/azure/devops/repos/tfvc/overview?view=azure-devops&preserve-view=true)
 
 - [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)
 
-## <a name="update-the-system-using-visualization-and-modeling"></a>Görselleştirme ve modelleme kullanarak sistemi güncelleştirme
+## <a name="update-the-system-using-visualization-and-modeling"></a>Görselleştirme ve Modelleme Kullanarak Sistemi Güncelleştirme
 
-Lucerne ve Dinner Now ödeme sistemlerini tümleştirmelidir. Aşağıdaki bölümlerde, Visual Studio 'daki modelleme diyagramları bu görevi gerçekleştirmelerine yardımcı olur:
+Lucerne ve Dinner Now'ın ödeme sistemlerini tümleştir olması gerekir. Aşağıdaki bölümlerde, bu görevi gerçekleştirmelerine yardımcı olmak Visual Studio modelleme diyagramları yer almaktadır:
 
-- [Mevcut kodu görselleştirin: kod haritaları](#VisualizeCode)
+- [Mevcut Kodu Görselleştirme: Kod Eşlemeleri](#VisualizeCode)
 
-- [Türler sözlüğü tanımlayın: sınıf diyagramları](#DefineClasses)
+- [Türler Sözlüğü Tanımlama: Sınıf Diyagramları](#DefineClasses)
 
-- [Mantıksal mimariyi açıkla: bağımlılık diyagramları](#DescribeLayers)
+- [Mantıksal Mimariyi Açıklama: Bağımlılık Diyagramları](#DescribeLayers)
 
 Bkz.
 
@@ -264,181 +264,181 @@ Bkz.
 
 - [Uygulama mimarinizi modelleme](../modeling/model-your-app-s-architecture.md)
 
-### <a name="visualize-existing-code-code-maps"></a><a name="VisualizeCode"></a> Mevcut kodu görselleştirin: kod haritaları
+### <a name="visualize-existing-code-code-maps"></a><a name="VisualizeCode"></a> Mevcut Kodu Görselleştirme: Kod Eşlemeleri
 
-Kod haritaları, koddaki geçerli organizasyonu ve ilişkileri gösterir. Öğeler haritadaki *düğümler* tarafından temsil edilir ve ilişkiler *bağlantılarla* temsil edilir. Kod haritaları aşağıdaki türde görevleri gerçekleştirmenize yardımcı olabilir:
+Kod eşlemeleri, kodda geçerli kuruluşu ve ilişkileri gösterir. Öğeler, *eşlemedeki düğümler* ve ilişkiler bağlantılarıyla temsil *edildi.* Kod eşlemeleri aşağıdaki tür görevleri gerçekleştirmeye yardımcı olabilir:
 
-- Bilmediğiniz kodu keşfet.
+- Yabancı kodu keşfedin.
 
-- Önerilen bir değişikliğin mevcut kodu nerede ve nasıl etkileyebileceğini anlayın.
+- Önerilen bir değişikliğin mevcut kodu nerede ve nasıl etkileyeceğini anlama.
 
-- Karmaşıklığa, doğal bağımlılıklara veya desenlere ya da geliştirmelerden faydalanabilir diğer alanlara ilişkin alan bulun.
+- Karmaşıklık alanlarını, doğal bağımlılıkları veya desenleri ya da geliştirmeden yararlanabilecek diğer alanları bulun.
 
-Örneğin, şimdi akşam yemeği PaymentProcessing bileşenini güncelleştirme maliyetini tahmin etmelidir. Bu, kısmen bu değişikliğin sistemin diğer bölümlerini ne kadar etkileyeceğini gösterir. Bunu anlamalarına yardımcı olmak için Dinner Now geliştiricilerinden biri koddan kod haritaları oluşturur ve bu değişiklik, değişikliğin etkilenmiş olabileceği alanlara odaklanarak kapsamını ayarlar.
+Örneğin, Şimdi Akşam Yemeği'nin PaymentProcessing bileşenini güncelleştirme maliyetini tahmin etmek gerekir. Bu, kısmen bu değişikliğin sistemin diğer bölümlerini ne kadar etkileyeceğini etkiler. Bunu anlamalarına yardımcı olmak için Şimdi Akşam Yemeği geliştiricileri koddan kod haritaları üretir ve kapsam odağında değişiklikten etkilenecek alanlara ayarlar.
 
-Aşağıdaki haritada, PaymentProcessing sınıfı ve seçili görünen Dinner Now sisteminin diğer kısımları arasındaki bağımlılıklar gösterilmektedir:
+Aşağıdaki harita PaymentProcessing sınıfı ile Şimdi Akşam Yemeği sisteminin seçili görünen diğer bölümleri arasındaki bağımlılıkları gösterir:
 
-![Dinner Now ödeme sistemi için bağımlılık grafiği](../modeling/media/dep_dnpayment.png)
+![Şimdi Akşam Yemeği ödeme sistemi için bağımlılık grafiği](../modeling/media/dep_dnpayment.png)
 
-**Dinner Now ödeme sistemi için kod Haritası**
+**Şimdi Akşam Yemeği ödeme sistemi için kod haritası**
 
-Geliştirici,, potansiyel olarak etkilenebilecek olan bölgeleri görmek için PaymentProcessing sınıfını genişleterek ve üyelerini seçerek Haritayı araştırır:
+Geliştirici, PaymentProcessing sınıfını genişleterek ve üyelerini seçerek etkilenen alanları görerek haritayı keşfeder:
 
-![PaymentProcessing ve Dependencies içindeki Yöntemler](../modeling/media/depgraph_expandeddn.png)
+![PaymentProcessing içindeki yöntemler ve bağımlılıklar](../modeling/media/depgraph_expandeddn.png)
 
-**PaymentProcessing sınıfının ve bağımlılıklarındaki Yöntemler**
+**PaymentProcessing sınıfının içindeki yöntemler ve bağımlılıkları**
 
-Bu kişiler, sınıflarını, yöntemlerini ve bağımlılıklarını incelemek için Lucerne ödeme sistemi için aşağıdaki eşlemeyi oluşturur. Ekip, Lucerne sisteminin şu anda akşam yemeği 'nin diğer bölümleriyle etkileşim kurması için de gerekli olabileceğini görür:
+Sınıflarını, yöntemlerini ve bağımlılıklarını incelemek için Lucerne Ödeme Sistemi için aşağıdaki haritayı üretir. Takım, Lucerne sisteminin Şimdi Akşam Yemeği'nin diğer bölümleriyle etkileşim kurmak için de çalışma gerektir olabileceğini görüyor:
 
 ![Lucerne ödeme sistemi için bağımlılık grafiği](../modeling/media/depgraph_lucernepay.png)
 
-**Lucerne ödeme sistemi için kod Haritası**
+**Lucerne Ödeme Sistemi için kod haritası**
 
-Her iki ekip de iki sistemi bütünleştirmek için gereken değişiklikleri belirlemede birlikte çalışır. Daha kolay güncelleştirilmesini sağlamak için bazı kodları yeniden düzenleme kararı verir. PaymentApprover sınıfı DinnerNow. Business ad alanına geçer ve bazı yeni yöntemler gerektirir. İşlemleri işleyen şimdi akşam yemeği sınıflarının kendi ad alanı olacaktır. Takımlar işlerini planlamak, düzenlemek ve izlemek için iş öğeleri oluşturup kullanır. İş öğelerini, yararlı olduğu yerde model öğelerine bağlar.
+İki ekip de iki sistemi tümleştirecek değişiklikleri belirlemek için birlikte çalışır. Güncelleştirmenin daha kolay olması için bazı kodu yeniden düzenlemeye karar veriyor. PaymentApprover sınıfı DinnerNow.Business ad alanına taşınacak ve bazı yeni yöntemler gerektirecektir. İşlemleri işlemek için Şimdi Akşam Yemeği sınıfları kendi ad alanına sahip olacaktır. Ekipler, çalışmalarını planlamak, düzenlemek ve izlemek için iş öğeleri oluşturabilir ve kullanabilir. İş öğelerini yararlı olduğu model öğelerine bağlar.
 
-Kodu yeniden belirledikten sonra takımlar, güncelleştirilmiş yapıyı ve ilişkileri görmek için yeni bir kod haritası oluşturur:
+Ekipler, kodu yeniden düzenledikten sonra güncelleştirilmiş yapıyı ve ilişkileri görmek için yeni bir kod haritası oluşturacak:
 
 ![Yeniden düzenlenmiş kodla bağımlılık grafiği](../modeling/media/depgraph_integrated.png)
 
-**Yeniden düzenlenmiş kodla kod Haritası**
+**Yeniden düzenlenmiş kodla kod haritası**
 
-Bu harita, PaymentApprover sınıfının artık DinnerNow. Business ad alanında olduğunu ve bazı yeni yöntemlere sahip olduğunu gösterir. Şimdi akşam yemeği işlem sınıflarının artık kendi PaymentSystem ad alanı vardır ve bu kod daha sonra bu kodla daha kolay bir şekilde uğraşmayı kolaylaştırır.
+Bu harita PaymentApprover sınıfının artık DinnerNow.Business ad alanı içinde olduğunu ve bazı yeni yöntemlere sahip olduğunu gösterir. Şimdi Akşam Yemeği işlem sınıflarının kendi PaymentSystem ad alanı vardır ve bu da bu kodla daha sonra ilgilenebilirsiniz.
 
-#### <a name="creating-a-code-map"></a>Kod Haritası oluşturma
+#### <a name="creating-a-code-map"></a>Kod Eşlemesi Oluşturma
 
-- Kaynak koda hızlı bir genel bakış için, bir kod haritası oluşturmak için aşağıdaki adımları izleyin:
+- Kaynak koduna hızlı bir genel bakış için, kod eşlemesi oluşturmak için şu adımları izleyin:
 
-     **Mimari** menüsünde **çözüm Için kod Haritası Oluştur**' a tıklayın.
+     Mimari menüsünde **Çözüm** için Kod **Eşlemesi Oluştur'a tıklayın.**
 
-     Derlenmiş koda hızlı bir genel bakış için, boş bir kod haritası oluşturun ve ardından derleme dosyalarını veya ikili dosyaları harita yüzeyine sürükleyin.
+     Derlenmiş koda hızlı bir genel bakış için boş bir kod eşlemesi oluşturun ve ardından derleme dosyalarını veya ikili dosyaları harita yüzeyine sürükleyin.
 
-- Belirli kod veya çözüm öğelerini araştırmak için, görselleştirmek istediğiniz öğeleri ve ilişkileri seçmek üzere Çözüm Gezgini kullanın. Daha sonra yeni bir eşleme oluşturabilir veya seçili öğeleri var olan bir haritaya ekleyebilirsiniz. Bkz. [çözümlerinizde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md).
+- Belirli kod veya çözüm öğelerini keşfetmek için Çözüm Gezgini istediğiniz öğeleri ve ilişkileri seçmek üzere bu öğeleri kullanın. Daha sonra yeni bir harita oluşturabilir veya seçili öğeleri mevcut bir haritaya eklemek için kullanabilirsiniz. Bkz. [Çözümleriniz genelinde bağımlılıkları eşleme.](../modeling/map-dependencies-across-your-solutions.md)
 
-- Haritayı keşfetmenize yardımcı olması için düzeni, yapmak istediğiniz görev türlerine uygun olacak şekilde yeniden düzenleyin.
+- Haritayı keşfetmeye yardımcı olmak için düzeni, gerçekleştirmek istediğiniz görev türlerine uygun şekilde yeniden düzenleyebilirsiniz.
 
-     Örneğin, koddaki katmanlamayı görselleştirmek için bir ağaç düzeni seçin. Bkz. [kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md).
+     Örneğin, kodda katmanlama görselleştirmek için bir ağaç düzeni seçin. Bkz. [Kod eşlemelerini göz atma ve yeniden düzenleme.](../modeling/browse-and-rearrange-code-maps.md)
 
-#### <a name="summary-strengths-of-code-maps"></a>Özet: kod eşlemelerinin güçleri
- Kod haritaları şunları yapmanıza yardımcı olur:
+#### <a name="summary-strengths-of-code-maps"></a>Özet: Kod Eşlemelerinin Güçlü yönleri
+ Kod haritaları size yardımcı olur:
 
-- Mevcut koddaki kuruluş ve ilişkiler hakkında bilgi edinin.
+- Mevcut kodda kuruluş ve ilişkiler hakkında bilgi alın.
 
-- Önerilen bir değişiklikten etkilenebilecek olan bölgeleri belirler.
+- Önerilen bir değişiklikten etkilenecek alanları belirleme.
 
-- Kodun bakımını, değiştirilmesini ve yeniden kullanılmasını kolaylaştırmak için iyileştirebildiğiniz karmaşıklık, desen, katman veya diğer alanların bölgelerini bulun.
+- Kodun bakımını, değiştirmesini ve yeniden kullanımı kolaylaştırmak için geliştirebilirsiniz karmaşıklık alanlarını, desenleri, katmanları veya diğer alanları bulun.
 
 #### <a name="relationship-to-other-diagrams"></a>Diğer Diyagramlarla İlişki
 
-|**Diyagram**|**Anlatır**|
+|**Diyagram**|**Açıklanır**|
 |-|-|
-|Bağımlılık diyagramı|Sistemin mantıksal mimarisi. Kodun tasarımla tutarlı kalmasını sağlamak için bağımlılık doğrulaması ' nı kullanın.<br /><br /> Mevcut bağımlılıkları veya hedeflenen bağımlılıkları belirlemenize yardımcı olmak için bir kod haritası oluşturun ve ilişkili öğeleri gruplayın. Bağımlılık diyagramı oluşturmak için, bkz:<br /><br /> - [Kodunuzda bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md)|
-|Sınıf diyagramı (kod tabanlı)|Belirli bir proje için koddaki mevcut sınıflar.<br /><br /> Koddaki mevcut bir sınıfı görselleştirmek ve değiştirmek için Sınıf Tasarımcısı kullanın.<br /><br /> Bkz. [nasıl yapılır: projelere sınıf diyagramları ekleme (sınıf Tasarımcısı)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|
+|Bağımlılık diyagramı|Sistemin mantıksal mimarisi. Kodun tasarımla tutarlı kalmasını sağlamak için bağımlılık doğrulamasını kullanın.<br /><br /> Mevcut bağımlılıkları veya hedeflenen bağımlılıkları tanımlamanıza yardımcı olmak için bir kod eşlemesi oluşturun ve ilgili öğeleri gruplayın. Bağımlılık diyagramı oluşturmak için bkz:<br /><br /> - [Kodunuzdan bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Bağımlılık Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)|
+|Sınıf diyagramı (kod tabanlı)|Belirli bir proje için kodda mevcut sınıflar.<br /><br /> Kodda var olan bir sınıfı görselleştirmek ve değiştirmek için Sınıf Tasarımcısı.<br /><br /> Bkz. [Nasıl: Projelere Sınıf Diyagramları Ekleme (Sınıf Tasarımcısı)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|
 
-### <a name="define-a-glossary-of-types-class-diagrams"></a><a name="DefineClasses"></a> Türler sözlüğü tanımlayın: sınıf diyagramları
- Sınıf diyagramları, sisteme ve bunların ilişkilerine katılan varlıkları, terimleri veya kavramları bir diğeri ile tanımlar. Örneğin, uygulama dilinden veya tarzlarından bağımsız olarak her sınıfın özniteliklerini ve işlemlerini anlatmak için bu diyagramları geliştirme sırasında kullanabilirsiniz.
+### <a name="define-a-glossary-of-types-class-diagrams"></a><a name="DefineClasses"></a> Türler Sözlüğü Tanımlama: Sınıf Diyagramları
+ Sınıf diyagramları sisteme katılan varlıkları, terimleri veya kavramları ve bunların bir diğerleriyle ilişkilerini tanımlar. Örneğin, uygulama dili veya stiline bakılmaksızın her sınıfın özniteliklerini ve işlemlerini açıklamak için geliştirme sırasında bu diyagramları kullanabilirsiniz.
 
- Lucerne 'ın Işlem ödemesi kullanım örneğine katılan varlıkları açıklaması ve tartışmalarına yardımcı olmak için aşağıdaki sınıf diyagramını çizirler:
+ Lucerne'ın İşlem Ödemesi kullanım durumuna katılan varlıkları açıklamasına ve tartışmalarına yardımcı olmak için aşağıdaki sınıf diyagramını çizmektedir:
 
- ![Sınıf diyagramında işlem ödemesi varlıkları](../modeling/media/uml_payentities.png)
+ ![Sınıf diyagramında Ödeme varlıklarını işleme](../modeling/media/uml_payentities.png)
 
- **Bir sınıf diyagramında işlem ödemesi varlıkları**
+ **Sınıf diyagramında Ödeme varlıklarını işleme**
 
- Bu diyagramda, bir müşterinin birçok siparişi ve siparişler için ödeme yapmak için farklı yolları olduğunu gösterir. BankAccount ve CreditCard her ikisi de ödemeden devralınır.
+ Bu diyagramda bir Müşterinin çok sayıda siparişi ve siparişler için ödeme yapmak için farklı yolları olabilir. BankAccount ve CreditCard ödemeden devralınabilir.
 
- Geliştirme sırasında Lucerne, her bir sınıfın ayrıntılarını açıklamak ve tartışmak için aşağıdaki sınıf diyagramını kullanır:
+ Geliştirme sırasında Lucerne, her sınıfın ayrıntılarını açıklamak ve tartışmak için aşağıdaki sınıf diyagramını kullanır:
 
- ![Bir sınıf diyagramında ödeme varlığı ayrıntılarını işleme](../modeling/media/uml_payment.png)
+ ![Sınıf diyagramında Ödeme varlığı ayrıntılarını işleme](../modeling/media/uml_payment.png)
 
- **Sınıf diyagramında işlem ödemesi ayrıntıları**
+ **Sınıf diyagramında Ödeme ayrıntılarını işleme**
 
-#### <a name="drawing-a-class-diagram"></a>Sınıf diyagramı çizme
+#### <a name="drawing-a-class-diagram"></a>Sınıf Diyagramı Çizme
 
-Bir sınıf diyagramı aşağıdaki önemli özelliklere sahiptir:
+Sınıf diyagramı aşağıdaki önemli özelliklere sahiptir:
 
-- Sınıflar, arabirimler ve numaralandırmalar gibi türler:
+- Sınıflar, arabirimler ve numaralar gibi türler:
 
-  - *Sınıf* , belirli yapısal veya davranış özelliklerini paylaşan nesnelerin tanımıdır.
+  - *Sınıf,* belirli yapısal veya davranışsal özelliklerine sahip nesnelerin tanımıdır.
 
-  - Bir *arabirim* , bir nesnenin dışarıdan görünür davranışının bir parçasını tanımlar.
+  - *Arabirim,* bir nesnenin dışarıdan görünen davranışının bir bölümünü tanımlar.
 
-  - *Sabit* listesi, değişmez değerlerin bir listesini içeren bir sınıflandırıcıdır.
+  - Sabit *listesi, değişmez* değer listesini içeren bir sınıflandırıcıdır.
 
-- *Öznitelikler* , bir *sınıflandırıcının* her örneğini tanımlayan belirli bir türün değerleridir. Sınıflandırıcı, türler, bileşenler, kullanım örnekleri ve hatta aktörler için genel bir addır.
+- *Öznitelikler,* bir sınıflandırıcının her örneğini açıklayan belirli bir *türe sahip değerlerdir.* Sınıflandırıcı türler, bileşenler, kullanım örnekleri ve hatta aktörler için genel bir addır.
 
-- *İşlemler* , bir sınıflandırıcı örneklerinin gerçekleştirebileceği Yöntemler veya işlevlerdir.
+- *İşlemler,* bir sınıflandırıcının örneklerinin gerçekleştirebilirsiniz yöntemler veya işlevlerdir.
 
-- *İlişki* , iki sınıflandırıcıda oluşan bazı ilişki türlerini gösterir.
+- *İlişki,* iki sınıflandırıcı arasında bir ilişki olduğunu gösterir.
 
-  - *Toplama* , sınıflandırıcılar arasındaki paylaşılan sahipliği gösteren bir ilişkidir.
+  - Toplama, *sınıflandırıcılar* arasında paylaşılan sahipliği gösteren bir ilişkilendirmedir.
 
-  - *Birleşim* , sınıflandırıcılar arasındaki bir bütün parçalı ilişkiyi gösteren bir ilişkidir.
+  - *Bileşim,* sınıflandırıcılar arasındaki tam parça ilişkisini gösteren bir ilişkilendirmedir.
 
-    Toplamaları veya kompozisyonları göstermek için bir ilişkilendirmede **toplama** özelliğini ayarlayın. **Paylaşılan** toplamalar ve **bileşik** , bileşimler gösterir.
+    Toplamaları veya bileşimleri göstermek için bir **ilişkilendirmede** Toplama özelliğini ayarlayın. **Paylaşılan** toplamaları, Bileşik ise **bileşimleri** gösterir.
 
-- *Bağımlılık* , bir sınıflandırıcının tanımını değiştirmenin başka bir sınıflandırıcının tanımını değiştirebileceğini gösterir.
+- *Bağımlılık,* bir sınıflandırıcının tanımının değiştirilmesinin başka bir sınıflandırıcının tanımını değiştir olabileceğini gösterir.
 
-- *Genelleştirme* , belirli bir sınıflandırıcının, genel sınıflandırıcının tanımının bir parçasını devraldığını gösterir. Bir *gerçekleştirme* , bir sınıfın bir arabirim tarafından sunulan işlemleri ve öznitelikleri uyguladığını gösterir.
+- *Genelleştirme,* belirli bir sınıflandırıcının tanımının bir kısmını genel bir sınıflandırıcıdan devralınan olduğunu gösterir. Bir *gerçekleştirme,* bir sınıfın bir arabirim tarafından sunulan işlemleri ve öznitelikleri uygulaydığını gösterir.
 
-     Bu ilişkileri oluşturmak için **Devralma** aracını kullanın. Alternatif olarak, bir gerçekleştirme *Lolipop* olarak temsil edilebilir.
+     Bu ilişkileri oluşturmak için Devralma **aracını** kullanın. Alternatif olarak, bir gerçekleştirme bir *lollipop olarak temsil olabilir.*
 
-- *Paketler* , Sınıflandırıcıların, ilişkilerin, Yaşam çizgilerinin, bileşenlerin ve diğer paketlerin gruplarıdır. *Içeri aktarma* ilişkileri bir paketin başka bir paketin tüm tanımlarını içerdiğini belirtir.
+- *Paketler* sınıflandırıcı grupları, ilişkilendirmeler, yaşam çizgileri, bileşenler ve diğer paketlerdir. *İçeri* aktarma ilişkileri, bir paketin başka bir paketin tüm tanımlarını içerir.
 
-Mevcut sınıfları araştırmak ve tartışmak için bir başlangıç noktası olarak, koddan sınıf diyagramları oluşturmak için Sınıf Tasarımcısı kullanabilirsiniz.
+Mevcut sınıfları keşfetmek ve tartışmak için başlangıç noktası olarak, Sınıf Tasarımcısı kullanarak koddan sınıf diyagramları oluşturabilirsiniz.
 
 - [Nasıl Yapılır: Projelere Sınıf Diyagramları Ekleme (Sınıf Tasarımcısı)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)
 
-#### <a name="summary-strengths-of-class-diagrams"></a>Özet: sınıf diyagramlarının güçleri
+#### <a name="summary-strengths-of-class-diagrams"></a>Özet: Sınıf Diyagramlarının Güçlü yönleri
  Sınıf diyagramları şunları tanımlamanıza yardımcı olur:
 
-- Kullanıcıların ihtiyaçlarını ve sisteme katılan varlıkları ele alırken kullanılacak koşulların ortak bir sözlüğü. Bkz. [model Kullanıcı gereksinimleri](../modeling/model-user-requirements.md).
+- Kullanıcıların ihtiyaçlarını ve sisteme katılan varlıkları tartışırken ortak bir terim sözlüğü. Bkz. [Model kullanıcı gereksinimleri.](../modeling/model-user-requirements.md)
 
-- Uygulandıkları bağımsız olarak, sistem parçaları tarafından kullanılan türler. Bkz. [uygulamanızın mimarisini modelleme](../modeling/model-your-app-s-architecture.md).
+- Uygulamalarından bağımsız olarak sistemin bileşenleri gibi bölümleri tarafından kullanılan türler. Bkz. [Uygulama mimarinizi modelleme.](../modeling/model-your-app-s-architecture.md)
 
-- Türler arasında bağımlılıklar gibi ilişkiler. Örneğin, bir türün başka bir türün birden çok örneğiyle ilişkilendirilebilen gösterebilir.
+- Bağımlılıklar gibi türler arasındaki ilişkiler. Örneğin, bir türün başka bir türün birden çok örneğiyle ilişkilendirilene kadar gösteresiniz.
 
 #### <a name="relationship-to-other-diagrams"></a>Diğer Diyagramlarla İlişki
 
 |**Diyagram**|**Açıklama**|
 |-|-|
-|Bağımlılık diyagramı|Sınıfların ilişkili olduğu şekliyle sistemin mantıksal mimarisini tanımlayın.<br /><br /> Kodun tasarımla tutarlı kalmasını sağlamak için bağımlılık doğrulaması ' nı kullanın.<br /><br /> Bkz.<br /><br /> - [Kodunuzda bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Bağımlılık diyagramları: başvuru](../modeling/layer-diagrams-reference.md)<br />- [Bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md)<br />- [Bağımlılık diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md)|
-|Kod eşlemesi|Var olan koddaki organizasyonu ve ilişkileri görselleştirin.<br /><br /> Sınıfları, ilişkilerini ve yöntemlerini tanımlamak için, bu öğeleri gösteren bir kod haritası oluşturun.<br /><br /> Bkz.<br /><br /> - [Çözümleriniz genelinde bağımlılıkları eşleyin](../modeling/map-dependencies-across-your-solutions.md)|
+|Bağımlılık diyagramı|Sistemin mantıksal mimarisini sınıflara göre tanımlayın.<br /><br /> Kodun tasarımla tutarlı kalmasını sağlamak için bağımlılık doğrulamasını kullanın.<br /><br /> Bkz.<br /><br /> - [Kodunuzdan bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)<br />- [Bağımlılık Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)<br />- [Bağımlılık diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md)|
+|Kod haritası|Mevcut kodda kuruluşu ve ilişkileri görselleştirin.<br /><br /> Sınıfları, ilişkilerini ve yöntemlerini tanımlamak için bu öğeleri gösteren bir kod haritası oluşturun.<br /><br /> Bkz.<br /><br /> - [Çözümleriniz genelinde bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)|
 
-### <a name="describe-the-logical-architecture-dependency-diagrams"></a><a name="DescribeLayers"></a> Mantıksal mimariyi açıkla: bağımlılık diyagramları
- Bağımlılık diyagramları, çözümünüzdeki yapıtları soyut gruplar veya *Katmanlar* halinde düzenleyerek sistemin mantıksal mimarisini anlatmaktadır. Yapıtlar, ad alanları, projeler, sınıflar, yöntemler vb. gibi birçok şey olabilir. Katmanlar, yapıların sistemde gerçekleştirdiği rolleri veya görevleri temsil eder ve tanımlarlar. Ayrıca, kodun tasarımıyla tutarlı kalmasını sağlamak için yapı ve iade işlemlerinizin katman doğrulamasını da dahil edebilirsiniz.
+### <a name="describe-the-logical-architecture-dependency-diagrams"></a><a name="DescribeLayers"></a> Mantıksal Mimariyi Açıklama: Bağımlılık Diyagramları
+ Bağımlılık diyagramları, çözümünüzdeki yapıtları soyut gruplar veya katmanlar halinde düzenleyerek sistemin mantıksal mimarisini *açıklar.* Yapıtlar ad alanları, projeler, sınıflar, yöntemler gibi birçok şey olabilir. Katmanlar, yapıtların sistemde gerçekleştirecekleri rolleri veya görevleri temsil edebilir ve açıklar. Kodun tasarımıyla tutarlı kalmasını sağlamak için derlemenize ve iade işlemlerinize katman doğrulaması da dahildir.
 
- Kodu tasarımla tutarlı tutmak için şimdi akşam yemeği ve Lucerne, geliştikçe kodun doğrulanması için aşağıdaki bağımlılık diyagramını kullanır:
+ Kodu tasarımla tutarlı tutmak için Şimdi Akşam Yemeği ve Lucerne aşağıdaki bağımlılık diyagramını kullanarak kodu geliştikçe doğrular:
 
  ![Tümleşik ödeme sisteminin bağımlılık diyagramı](../modeling/media/layer_integrated_dnlucerne.png)
 
- **Artık Lucerne ile tümleştirilmiş akşam yemeği için bağımlılık diyagramı**
+ **Şimdi Lucerne ile tümleştirilmiş Akşam Yemeği için bağımlılık diyagramı**
 
- Bu diyagramdaki Katmanlar ilgili akşam yemeği ve Lucerne çözüm yapıtlarına bağlanır. Örneğin, Iş katmanı, artık PaymentApprover sınıfını içeren DinnerNow. Business ad alanı ve üyelerine bağlanır. Kaynak erişim katmanı, DinnerNow. Data ad alanına bağlanır. Oklar veya *Bağımlılıklar*, yalnızca iş katmanının, kaynak erişim katmanındaki işlevselliği kullanmasını belirler. Takımlar kodlarını güncelleştirdiklerinde, çakışmalar olduğu gibi yakalamak ve ekiplerin bunları daha sonra çözmelerine yardımcı olmak için katman doğrulaması düzenli olarak gerçekleştirilir.
+ Bu diyagramda yer alan katmanlar, karşılık gelen Şimdi Akşam Yemeği ve Lucerne çözüm yapıtlarına bağlantı sağlar. Örneğin, İş katmanı Artık PaymentApprover sınıfını içeren DinnerNow.Business ad alanına ve üyelerine bağlantı verir. Kaynak Erişimi katmanı, DinnerNow.Data ad alanına bağlantı verir. Oklar veya *bağımlılıklar,* Kaynak Erişimi katmanında işlevselliği yalnızca İş katmanının kullanabileceğini belirtir. Takımlar kodunu güncelleştirdiğinde, çakışmaları ortaya çıktıklarına göre yakalamak ve ekiplerin bunları hemen çözümlemelerine yardımcı olmak için düzenli olarak katman doğrulaması gerçekleştirilir.
 
- Takımlar, iki sistemi artımlı olarak bütünleştirmek ve test etmek için birlikte çalışır. İlk olarak, PaymentApprover ve Dinner 'ın geri kalanının, PaymentProcessing ile uğraşmadan önce başarıyla bir kez daha çalışır durumda olduğundan emin olun.
+ Ekipler, iki sistemi artımlı olarak tümleştirin ve test etmek için birlikte çalışır. Önce PaymentApprover ve Akşam Yemeği'nin geri kalanının PaymentProcessing'i işlemeden önce başarıyla birlikte çalışa çalışmalarından emin olur.
 
- Aşağıdaki kod eşlemesinde Dinner Now ve PaymentApprover arasındaki yeni çağrılar gösterilmektedir:
+ Aşağıdaki kod haritası, Şimdi Akşam Yemeği ile PaymentApprover arasındaki yeni çağrıları gösterir:
 
- ![Tümleşik sistemle birlikte bağımlılık grafiği güncelleştirildi](../modeling/media/depgraph_intsystem.png)
+ ![Tümleşik sistemle güncelleştirilmiş bağımlılık grafiği](../modeling/media/depgraph_intsystem.png)
 
- **Güncelleştirilmiş yöntem çağrılarında kod Haritası**
+ **Güncelleştirilmiş yöntem çağrılarını kullanarak kod eşlemesi**
 
- Sistemin beklendiği gibi çalışmadığını doğruladıktan sonra, şimdi akşam yemeği PaymentProcessing kodunu yorumlar. Katman doğrulama raporları temiz ve sonuçta elde edilen kod haritasında başka bir PaymentProcessing bağımlılığı yok gösterilmektedir:
+ Sistemin beklendiği gibi çalıştığını onaylayan Akşam Yemeği Şimdi PaymentProcessing kodunu açıklama olarak yorumlar. Katman doğrulama raporları temizdir ve sonuçta elde edilen kod haritası artık PaymentProcessing bağımlılıkları olmadığını gösterir:
 
  ![PaymentProcessing olmadan bağımlılık grafiği](../modeling/media/depgraph_nomore.png)
 
- **PaymentProcessing olmadan kod Haritası**
+ **PaymentProcessing olmadan kod haritası**
 
-#### <a name="drawing-a-dependency-diagram"></a>Bağımlılık diyagramı çizme
+#### <a name="drawing-a-dependency-diagram"></a>Bağımlılık Diyagramı Çizme
 
 Bağımlılık diyagramı aşağıdaki önemli özelliklere sahiptir:
 
-- *Katmanlar* , yapıların mantıksal gruplarını anlatmaktadır.
+- *Katmanlar,* mantıksal yapıt gruplarını açıklar.
 
-- *Bağlantı* , bir katman ve yapıt arasındaki ilişkidir.
+- *Bağlantı,* bir katman ile yapıt arasındaki ilişkidir.
 
-     Yapıtlar arasından katmanlar oluşturmak için Çözüm Gezgini, kod haritaları, Sınıf Görünümü veya Nesne Tarayıcısı öğelerini sürükleyin. Yeni Katmanlar çizmek ve sonra yapıtları bağlamak için araç kutusunu kullanın veya katmanları oluşturmak için Diyagram yüzeyine sağ tıklayıp öğeleri bu katmanlara sürükleyin.
+     Yapıtlardan katmanlar oluşturmak için öğeleri Çözüm Gezgini, kod eşlemeleri, Sınıf Görünümü veya Object Browser'dan sürükleyin. Yeni katmanlar çizip bunları yapıtlara bağlamak için araç kutusunu kullanın veya diyagram yüzeyine sağ tıklayarak katmanları oluşturun ve öğeleri bu katmanlara sürükleyin.
 
-     Katmandaki sayı katmana bağlı yapıların sayısını gösterir. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler vb. olabilir. Bir katmandaki yapıt sayısını yorumladığınızda, aşağıdakileri unutmayın:
+     Katmanda yer alan sayı, katmana bağlı yapıt sayısını gösterir. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler gibi olabilir. Bir katmanda yapıt sayısını yorumlarken şunları unutmayın:
 
   - Bir katman diğer yapıları içeren bir yapıya bağlanırsa, ancak katman doğrudan diğer yapılara bağlanmazsa, sayı yalnızca bağlı yapıyı içerir. Bununla birlikte, diğer yapılar katman doğrulanırken analiz için alınır.
 
@@ -446,11 +446,11 @@ Bağımlılık diyagramı aşağıdaki önemli özelliklere sahiptir:
 
   - Bir katman yapılarla bağlantılı diğer katmanları içeriyorsa, kapsayıcı katman da üzerindeki sayı bu yapıları içermese bile bu yapılara bağlıdır.
 
-    Bir katmana bağlı olan yapıtları görmek için bağımlılığa sağ tıklayın ve sonra **Katman Gezgini**'ni açmak Için **bağlantıları görüntüle** ' ye tıklayın.
+    Bir katmana bağlı yapıtları görmek için, bağımlılığına sağ  tıklayın ve ardından Katman Gezgini'ni açmak için Bağlantıları **Görüntüle'ye tıklayın.**
 
-- Bir *bağımlılık* , bir katmanın işlevselliği başka bir katmanda kullanabilir ancak tersi anlamına gelir. *Çift yönlü bağımlılık* , bir katmanın başka bir katmandaki işlevleri kullanacağını ve bunun tersini gösterir.
+- Bağımlılık, *bir* katmanın işlevi başka bir katmanda kullanabileceğini ancak tam tersinin olmadığını gösterir. Çift *yönlü bağımlılık, bir* katmanın işlevi başka bir katmanda kullanabileceğini gösterir ve tam tersi de geçerlidir.
 
-     Bağımlılık diyagramında mevcut bağımlılıkları göstermek için Diyagram yüzeyine sağ tıklayın ve ardından **Bağımlılıklar Oluştur**' a tıklayın. Hedeflenen bağımlılıkları betimleyen, yenilerini çizin.
+     Bağımlılık diyagramında mevcut bağımlılıkları görüntülemek için diyagram yüzeyine sağ tıklayın ve ardından Bağımlılıkları **Oluştur'a tıklayın.** Hedeflenen bağımlılıkları açıklamak için yenilerini çizin.
 
 Bkz.
 
@@ -462,25 +462,25 @@ Bkz.
 
 - [Bağımlılık diyagramları ile kod doğrulama](../modeling/validate-code-with-layer-diagrams.md)
 
-#### <a name="summary-strengths-of-dependency-diagrams"></a>Özet: bağımlılık diyagramlarından güçlü yönler
+#### <a name="summary-strengths-of-dependency-diagrams"></a>Özet: Bağımlılık Diyagramlarının Güçlü yönleri
 
-Bağımlılık diyagramları şunları yapmanıza yardımcı olur:
+Bağımlılık diyagramları size yardımcı olur:
 
-- Yapılarının işlevselliğine göre sistemin mantıksal mimarisini açıklama.
+- Yapıtlarının işlevselliğine göre bir sistemin mantıksal mimarisini açıklama.
 
-- Geliştirme aşamasındaki kodun belirtilen tasarıma uyduğundan emin olun.
+- Geliştirme aşamasındaki kodun belirtilen tasarıma uygun olduğundan emin olun.
 
 #### <a name="relationship-to-other-diagrams"></a>Diğer Diyagramlarla İlişki
 
 |**Diyagram**|**Açıklama**|
 |-|-|
-|Kod eşlemesi|Var olan koddaki organizasyonu ve ilişkileri görselleştirin.<br /><br /> Katmanlar oluşturmak için bir kod haritası oluşturun ve ardından haritadaki öğeleri olası Katmanlar olarak gruplayın. Grupları haritadan bağımlılık diyagramına sürükleyin.<br /><br /> Bkz.<br /><br /> - [Çözümleriniz genelinde bağımlılıkları eşleyin](../modeling/map-dependencies-across-your-solutions.md)<br />- [Kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md)|
+|Kod haritası|Mevcut kodda kuruluşu ve ilişkileri görselleştirin.<br /><br /> Katman oluşturmak için bir kod haritası oluşturun ve ardından haritadaki öğeleri olası katmanlar olarak gruplayın. Grupları eşlemeden bağımlılık diyagramına sürükleyin.<br /><br /> Bkz.<br /><br /> - [Çözümleriniz genelinde bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)<br />- [Kod haritalarına göz atma ve yeniden düzenleme](../modeling/browse-and-rearrange-code-maps.md)|
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 
 |**Kategori**|**Bağlantılar**|
 |-|-|
-|**Forumlar**|- [Visual Studio görselleştirme & modelleme araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio görselleştirme & modelleme SDK (DSL araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
+|**Forumlar**|- [Visual Studio Görselleştirme & Modelleme Araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio Görselleştirme & Modelleme SDK'sı (DSL Araçları)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

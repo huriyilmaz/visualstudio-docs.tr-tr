@@ -1,24 +1,24 @@
 ---
 title: T4 Include Yönergesi
-description: "Visual Studio 'daki bir metin şablonunda, < # # > yönergesini kullanarak başka bir dosyadan metin ekleyebilirsiniz @include ."
+description: "Visual Studio'daki bir metin şablonunda, <# #> yönergesini kullanarak başka bir @include dosyadan metin eklebilirsiniz."
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ed43ff63eb6605a27885eb1030ebc8689fa37a93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7361d92b05fd6838d20b32ea9f0b3b14530266fa
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899627"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386312"
 ---
 # <a name="t4-include-directive"></a>T4 Include Yönergesi
 
-Visual Studio 'daki bir metin şablonunda, bir yönergesi kullanarak başka bir dosyadan metin ekleyebilirsiniz `<#@include#>` . `include`İlk sınıf özellik bloğundan önce metin şablonunda herhangi bir yere yönergeler yerleştirebilirsiniz `<#+ ... #>` . Dahil edilen dosyalar Ayrıca `include` yönergeleri ve diğer yönergeleri de içerebilir. Bu şablon kodunu ve demirbaş metni şablonlar arasında paylaşmanızı sağlar.
+Bir metin şablonunda Visual Studio kullanarak başka bir dosyadan metin dahil etmek için bir yönerge `<#@include#>` kullanabilirsiniz. Yönergeleri metin `include` şablonunun herhangi bir yerine birinci sınıf özellik bloğuna yer verilmiştir. `<#+ ... #>` Dahil edilen dosyalar yönergeleri `include` ve diğer yönergeleri de içerebilir. Bu şablon kodunu ve demirbaş metni şablonlar arasında paylaşmanızı sağlar.
 
 ## <a name="using-include-directives"></a>Ekleme Yönergelerini Kullanma
 
@@ -26,11 +26,11 @@ Visual Studio 'daki bir metin şablonunda, bir yönergesi kullanarak başka bir 
 <#@ include file="filePath" [once="true"] #>
 ```
 
-- `filePath` mutlak veya geçerli şablon dosyasına göreli olabilir.
+- `filePath` mutlak veya geçerli şablon dosyasıyla göreli olabilir.
 
-   Ayrıca, belirli Visual Studio uzantıları, içerme dosyalarını aramak için kendi dizinlerini belirtebilir. Örneğin görselleştirme ve modelleme SDK 'sını (DSL araçları) yüklediğinizde aşağıdaki klasör ekleme listesine eklenir: `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates` .
+   Ayrıca, belirli Visual Studio uzantılar ekleme dosyalarını aramak için kendi dizinlerini belirtebilirsiniz. Örneğin, Görselleştirme ve Modelleme SDK'sı (DSL Araçları) yüklemişken, ekleme listesine aşağıdaki klasör eklenir: `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates` .
 
-   Bu ek içerme klasörleri içeren dosyanın dosya uzantısına bağlı olabilir. Örneğin, DSL araçları içerme klasörüne yalnızca dosya uzantısına sahip dosyalar dahil olmak üzere erişilebilir `.tt`
+   Bu ek içerme klasörleri içeren dosyanın dosya uzantısına bağlı olabilir. Örneğin, DSL Araçları dahil klasörü yalnızca dosya uzantısına sahip dosyaları dahil etmek için erişilebilir `.tt`
 
 - `filePath` , "%" ile ayrılmış ortam değişkenlerini içerebilir. Örneğin:
 
@@ -38,17 +38,17 @@ Visual Studio 'daki bir metin şablonunda, bir yönergesi kullanarak başka bir 
   <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
   ```
 
-- Dahil edilen bir dosyanın adı uzantıyı kullanmak zorunda değildir `".tt"` .
+- Dahil edilen bir dosyanın adının uzantısını kullanmak zorunda `".tt"` değildir.
 
-   Dahil edilen dosyalar için gibi başka bir uzantı kullanmak isteyebilirsiniz `".t4"` . Bunun nedeni, `.tt` bir projeye bir dosya eklediğinizde, Visual Studio 'Nun **özel araç** özelliğini otomatik olarak olarak ayarlamadır `TextTemplatingFileGenerator` . Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
+   Dahil edilen dosyalar için gibi başka bir uzantı `".t4"` kullanmak istiyor olabilir. Bunun nedeni, projeye bir dosya eklerken özel `.tt` araç Visual Studio otomatik olarak **ayarlanır.** `TextTemplatingFileGenerator` Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
 
    Diğer taraftan, bazı durumlarda, dosya uzantısının ek klasörlerin hangi include dosyalarının aranacağını etkilediğinin farkında olmalısınız. Diğer dosyaları içeren eklediğiniz bir dosya varsa, bu önemli olabilir.
 
-- Eklenen içerik ekleyen metin şablonunun hemen hemen parçasıymış gibi işlenir. Ancak, `<#+...#>` `include` yönerge sıradan metin ve standart denetim blokları tarafından izlense bile bir sınıf özelliği bloğu içeren bir dosya ekleyebilirsiniz.
+- Eklenen içerik ekleyen metin şablonunun hemen hemen parçasıymış gibi işlenir. Ancak, yönergesi normal metin ve standart denetim blokları tarafından izlense bile sınıf özellik bloğu `<#+...#>` içeren bir dosya `include` dahilebilirsiniz.
 
-- Birden `once="true"` fazla başka içerme dosyasından çağrılabilir olsa da, bir şablonun yalnızca bir kez eklendiğinden emin olmak için kullanın.
+- Birden `once="true"` fazla ekleme dosyasından çağrılsa bile şablonun yalnızca bir kez dahil olduğundan emin olmak için kullanın.
 
-   Bu özellik, başka bir kod parçacığının zaten dahil edildiğini endişelenmenize gerek kalmadan, ' de ekleyebileceğiniz, yeniden kullanılabilir bir T4 parçacıkları kitaplığı oluşturmayı kolaylaştırır.  Örneğin, şablon işleme ve C# oluşturma ile ilgilenen çok hassas kod parçacıklarının bulunduğu bir kitaplığınız olduğunu varsayalım.  Bu, daha sonra uygulamaya özgü herhangi bir şablondan kullanabileceğiniz özel durumlar oluşturma gibi görevlere özgü bazı yardımcı programlar tarafından kullanılır. Bağımlılık grafiği çizerseniz, bazı iş parçacıklarının birkaç kez dahil edildiğini görürsünüz. Ancak `once` parametresi sonraki eklemeleri engeller.
+   Bu özellik, başka bir kod parçacığının bunları zaten dahil etmesinden endişe etmeden, ilerde dahil etmek için yeniden kullanılabilir T4 kod parçacıkları içeren bir kitaplık oluşturmayı kolaylaştırır.  Örneğin, şablon işleme ve C# oluşturma ile ilgili çok ince kod parçacıklarının yer alan bir kitaplığına sahip olduğunu varsayalım.  Buna karşılık, bunlar daha sonra uygulamaya özgü herhangi bir şablondan kullanabileceğiniz özel durumlar oluşturma gibi göreve özgü bazı yardımcı programlar tarafından kullanılır. Bağımlılık grafiği çizerseniz, bazı iş parçacıklarının birkaç kez dahil edildiğini görürsünüz. Ancak `once` parametresi sonraki eklemeleri önler.
 
   **MyTextTemplate.tt:**
 
@@ -63,7 +63,7 @@ Output message 5 (from top template).
 #>
 ```
 
- **TextFile1. T4:**
+ **TextFile1.t4:**
 
 ```
    Output Message 2 (from included file).
@@ -79,7 +79,7 @@ void GenerateMessage(int n)
 #>
 ```
 
- **TextFile2. T4:**
+ **TextFile2.t4:**
 
 ```
         Output Message 3 (from included file 2).
@@ -93,7 +93,7 @@ void AnotherGenerateMessage(int n)
 #>
 ```
 
- **Elde edilen oluşturulan dosya MyTextTemplate.txt:**
+ **Sonuçta elde edilen dosya, MyTextTemplate.txt:**
 
 ```
 Output message 1 (from top template).
@@ -107,10 +107,10 @@ Output message 5 (from top template).
        Output Message 7 (from AnotherGenerateMessage method).
 ```
 
-## <a name="using-project-properties-in-msbuild-and-visual-studio"></a><a name="msbuild"></a> MSBuild ve Visual Studio 'da proje özelliklerini kullanma
- Include yönergesinde $ (SolutionDir) gibi Visual Studio makrolarını de kullanabilirsiniz, ancak MSBuild 'de çalışmaz. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
+## <a name="using-project-properties-in-msbuild-and-visual-studio"></a><a name="msbuild"></a> MSBuild ve Visual Studio'de proje özelliklerini kullanma
+ $(SolutionDir) gibi Visual Studio makroları bir dahil etme yönergesinde kullanabilirsiniz ancak bunlar MSBuild'de çalışmaz. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
 
- Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek adında bir özelliği tanımlar `myIncludeFolder` :
+ Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek adlı bir özelliği `myIncludeFolder` tanımlar:
 
 ```xml
 <!-- Define a project property, myIncludeFolder: -->

@@ -1,67 +1,67 @@
 ---
 title: 'Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama'
-description: Etki alanına özgü diliniz için bir komut veya hareket işleyicisi yazdığınızda kullanıcının sağ tıkladığını nasıl belirleyebileceğinizi öğrenin.
+description: Etki alanına özgü diliniz için bir komut veya hareket işleyicisi yazarak kullanıcının sağ tıklımlı olduğu öğeyi nasıl belirleyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, accessing the current selection
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 83903c8ff911fdd1d4900714137a7f6976513dad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 28d0f99743535965b3cf203d461fac5d0193607c
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890571"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386611"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama
 
-Etki alanına özgü diliniz için bir komut veya hareket işleyicisi yazdığınızda, kullanıcının sağ tıkladığını belirleyebilirsiniz. Ayrıca, bazı şekillerin veya alanların seçilmesini engelleyebilirsiniz. Örneğin, Kullanıcı bir simge dekoratörü tıkladığı zaman, bunun yerine onu içeren şeklin seçili olduğunu düzenleyebilirsiniz. Seçimi bu şekilde kısıtlama, yazmanız gereken işleyicilerin sayısını azaltır. Ayrıca, kullanıcının dekoratmayı önlemek zorunda kalmadan şeklin içinde herhangi bir yere tıklaması için de daha kolay hale gelir.
+Etki alanına özgü diliniz için bir komut veya hareket işleyicisi yazarken, kullanıcının sağ tıklamış olduğu öğeyi anabilirsiniz. Ayrıca bazı şekillerin veya alanların seçilmesini de önleyebilirsiniz. Örneğin, kullanıcı bir simge dekoratörüne tıkladığında, bunu içeren şeklin seçili olduğunu ayarlayabilirsiniz. Seçimi bu şekilde sınırlamak, yazmanız gereken işleyici sayısını azaltır. Ayrıca, dekoratörden kaçınmak zorunda kalmadan şeklin herhangi bir yerine tıklandıran kullanıcı için de daha kolay hale getirir.
 
-## <a name="access-the-current-selection-from-a-command-handler"></a>Geçerli seçime bir komut Işleyicisinden erişin
+## <a name="access-the-current-selection-from-a-command-handler"></a>Bir Komut İşleyiciden Geçerli Seçime Erişme
 
-Bir alana özgü dilin komut kümesi sınıfı, özel komutlarınız için komut işleyicilerini içerir. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Etki alanına özgü dil için komut kümesi sınıfına türettiği sınıf, geçerli seçime erişmek için birkaç üye sağlar.
+Etki alanına özgü bir dil için komut kümesi sınıfı, özel komutlarınız için komut işleyicilerini içerir. Etki alanına özgü bir dil için komut kümesi sınıfının türetilir <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> sınıfı, geçerli seçime erişmek için birkaç üye sağlar.
 
-Komuta bağlı olarak, komut işleyicisinin model tasarımcısında, model Gezgininde veya etkin pencerede seçim yapması gerekebilir.
+Komuta bağlı olarak, komut işleyicisi model tasarımcısında, model gezgininde veya etkin pencerede seçimine ihtiyaç olabilir.
 
 ### <a name="to-access-selection-information"></a>Seçim bilgilerine erişmek için
 
-1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>Sınıfı, geçerli seçime erişmek için kullanılabilecek aşağıdaki üyeleri tanımlar.
+1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>sınıfı, geçerli seçime erişmek için kullanılan aşağıdaki üyeleri tanımlar.
 
-    |Üye|Description|
+    |Üye|Açıklama|
     |-|-|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> yöntemi|`true`Model tasarımcısında seçili öğelerden herhangi biri bir bölme şekli ise, aksi takdirde, döndürür `false` .|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> yöntemi|`true`Şema, model tasarımcısında seçiliyse döndürür; Aksi takdirde, `false` .|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> yöntemi|`true`Model tasarımcısında tam olarak bir öğe seçildiyse, aksi takdirde, döndürür `false` .|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> yöntemi|`true`Etkin pencerede tam olarak bir öğe seçildiyse, aksi takdirde, döndürür `false` .|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> özelliði|Model tasarımcısında seçilen öğelerin salt okunurdur bir koleksiyonunu alır.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> özelliði|Etkin pencerede seçili öğelerin salt okunurdur bir koleksiyonunu alır.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> özelliði|Model tasarımcısında seçimin birincil öğesini alır.|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> özelliði|Etkin pencerede Seçilenin birincil öğesini alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> yöntemi|Model `true` tasarımcısında seçilen öğelerden herhangi biri bir bölme şekliyse, aksi takdirde `false` döndürür.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> yöntemi|Diyagram `true` model tasarımcısında seçiliyse döndürür; aksi takdirde `false` döndürür.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> yöntemi|Model `true` tasarımcısında tam olarak bir öğe seçilirse döndürür; aksi takdirde `false` döndürür.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> yöntemi|Etkin `true` pencerede tam olarak bir öğe seçilirse döndürür; aksi takdirde `false` döndürür.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> Özellik|Model tasarımcısında seçilen öğelerin salt okunur koleksiyonunu alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> Özellik|Etkin pencerede seçilen öğelerin salt okunur koleksiyonunu alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> Özellik|Model tasarımcısında seçimin birincil öğesini alır.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> Özellik|Etkin pencerede seçimin birincil öğesini alır.|
 
-2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>Sınıfının özelliği, <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> Model Tasarımcısı penceresini temsil eden nesneye erişim sağlar ve model tasarımcısında seçili öğelere ek erişim sağlar.
+2. sınıfının özelliği, model tasarımcısı penceresini temsil eden nesneye erişim sağlar ve model tasarımcısında <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A> <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> seçili <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> öğelere ek erişim sağlar.
 
-3. Ayrıca, oluşturulan kod, bir gezgin araç penceresi özelliği ve etki alanına özgü dilin komut kümesi sınıfında bir gezgin seçimi özelliği tanımlar.
+3. Ayrıca, oluşturulan kod, etki alanına özgü dil için komut kümesi sınıfında bir gezgin araç penceresi özelliği ve gezgin seçim özelliği tanımlar.
 
-    - Gezgin araç penceresi özelliği, etki alanına özgü dil için Gezgin araç penceresi sınıfının bir örneğini döndürür. Gezgin araç penceresi sınıfı <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> sınıfından türetilir ve etki alanına özgü dilin model Gezginini temsil eder.
+    - Gezgin araç penceresi özelliği, etki alanına özgü dil için gezgin araç penceresi sınıfının bir örneğini döndürür. Gezgin araç penceresi sınıfı sınıfından <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> türetildi ve etki alanına özgü dil için model gezginini temsil eder.
 
-    - `ExplorerSelection`Özelliği, etki alanına özgü dil için Model Gezgini penceresinde seçili öğeyi döndürür.
+    - özelliği, `ExplorerSelection` etki alanına özgü dil için model gezgini penceresinde seçili öğeyi döndürür.
 
 ## <a name="determine-which-window-is-active"></a>Hangi pencerenin etkin olduğunu belirleme
 
-<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>Arabirim, kabukta geçerli seçim durumuna erişim sağlayan üyeleri tanımlar. <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> `MonitorSelection` Her birinin temel sınıfında tanımlanan özelliği aracılığıyla, paket sınıfından veya etki alanına özgü dilin komut kümesi sınıfından bir nesne alabilirsiniz. Paket sınıfı sınıfından türetilir <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> ve komut kümesi sınıfı <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> sınıfından türetilir.
+Arabirimi, <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> kabukta geçerli seçim durumuna erişim sağlayan üyeleri tanımlar. Paket sınıfından veya etki alanına özgü dil için komut kümesi sınıfından her biri temel sınıfında tanımlanan özelliği aracılığıyla bir <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> `MonitorSelection` nesnesi elde edersiniz. Paket sınıfı sınıfından <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> türetildi ve komut kümesi sınıfı sınıfından <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> türetildi.
 
-### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>Bir komut işleyicisinden ne tür bir pencere etkin olduğunu belirlemek için
+### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>Bir komut işleyiciden etkin olan pencere türünü belirlemek için
 
-1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>Sınıfının özelliği, <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> kabukta geçerli seçim durumuna erişim sağlayan bir nesne döndürür.
+1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>sınıfının <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> özelliği, <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> kabukta geçerli seçim durumuna erişim sağlayan bir nesnesi döndürür.
 
-2. <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A>Arabirim özelliği etkin <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> pencereden farklı olabilen etkin seçim kapsayıcısını alır.
+2. Arabirimin <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> özelliği <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> etkin seçim kapsayıcısı alır ve bu kapsayıcı etkin pencereden farklı olabilir.
 
-3. Hangi tür pencerenin etkin olduğunu belirlemek için, etki alanına özgü dil için komut kümesi sınıfına aşağıdaki özellikleri ekleyin.
+3. Hangi pencere türünün etkin olduğunu belirlemek için etki alanına özgü diliniz için komut kümesi sınıfına aşağıdaki özellikleri ekleyin.
 
     ```csharp
     // using Microsoft.VisualStudio.Modeling.Shell;
@@ -89,29 +89,29 @@ Komuta bağlı olarak, komut işleyicisinin model tasarımcısında, model Gezgi
     }
     ```
 
-## <a name="constrain-the-selection"></a>Seçimi sınırlama
+## <a name="constrain-the-selection"></a>Seçimi Kısıtla
 
-Seçim kuralları ekleyerek, Kullanıcı modelde bir öğe seçtiğinde hangi öğelerin seçili olduğunu denetleyebilirsiniz. Örneğin, kullanıcının bir dizi öğeyi tek bir birim olarak ele almasını sağlamak için bir seçim kuralı kullanabilirsiniz.
+Seçim kuralları ekleyerek, kullanıcı modeldeki bir öğeyi seçerken hangi öğelerin seçileceklerini kontrol etmek için kullanılabilirsiniz. Örneğin, kullanıcının bir dizi öğeye tek bir birim olarak davranmasına izin vermek için bir seçim kuralı kullanabilirsiniz.
 
 ### <a name="to-create-a-selection-rule"></a>Seçim kuralı oluşturmak için
 
-1. DSL projesinde özel bir kod dosyası oluşturma
+1. DSL projesinde özel kod dosyası oluşturma
 
-2. Sınıfından türetilmiş bir seçim kuralı sınıfı tanımlayın <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> .
+2. sınıfından türetilen bir seçim kuralı sınıfı <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> tanımlayın.
 
 3. Seçim <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> ölçütlerini uygulamak için seçim kuralı sınıfının yöntemini geçersiz kılın.
 
 4. Özel kod dosyanıza ClassDiagram sınıfı için kısmi bir sınıf tanımı ekleyin.
 
-     `ClassDiagram`Sınıfı sınıfından türetilir <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> ve DSL projesindeki Diagram.cs oluşturulan kod dosyasında tanımlanmıştır.
+     sınıfı `ClassDiagram` sınıfından türetildi ve DSL projesinde <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> oluşturulan diagram.cs kod dosyasında tanımlanır.
 
-5. <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> `ClassDiagram` Özel seçim kuralını döndürmek için sınıfının özelliğini geçersiz kılın.
+5. Özel <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> seçim kuralını geri `ClassDiagram` dönmek için sınıfının özelliğini geçersiz kılın.
 
-     Özelliğin varsayılan uygulanması, <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> seçimi değiştirmayan bir seçim kuralı nesnesi alır.
+     Özelliğin varsayılan <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> uygulaması, seçimi değiştirmeyen bir seçim kuralı nesnesi alır.
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki kod dosyası, seçimi başlangıçta seçili olan her bir etki alanı şekillerinin tüm örneklerini içerecek şekilde genişleten bir seçim kuralı oluşturur.
+Aşağıdaki kod dosyası, ilk seçilen etki alanı şekillerinin tüm örneklerini içerecek şekilde seçimi genişleten bir seçim kuralı oluşturur.
 
 ```csharp
 using System;

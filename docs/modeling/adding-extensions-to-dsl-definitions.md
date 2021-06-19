@@ -1,28 +1,28 @@
 ---
 title: DSL Tanımlarına Uzantılar Ekleme
-description: DSL tanımı uzantısının, etki alanına özgü dil (DSL) için Uzantı paketi oluşturmanıza nasıl olanak sağladığını öğrenin.
+description: DSL Tanımı uzantısının etki alanına özgü bir dile (DSL) yönelik bir uzantı paketi oluşturmanıza nasıl olanak tanıması olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1208c152534206a0ed2894fc0e41d844e0b77d47
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d9f1c92ebb879517d497af41fe98cec4492bd95
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861965"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384895"
 ---
 # <a name="add-extensions-to-dsl-definitions"></a>DSL Tanımlarına Uzantı Ekleme
 
-DSL tanımı uzantısı, etki alanına özgü dil (DSL) için Uzantı paketi oluşturmanıza olanak sağlar. Bir Visual Studio Tümleştirme Uzantısı 'nda (VSıX) bulunan DSL uzantısı, bir kullanıcının bilgisayarına DSL ile aynı şekilde yüklenebilir. Ek özellikler dinamik olarak etkinleştirilebilir ve çalışma zamanında devre dışı bırakılabilir. DSLs 'in uzantı için açıkça tasarlanmaları gerekmez ve uzantılar, genişletilmiş DSL 'yi değiştirmeksizin daha sonra veya üçüncü taraflarca tasarlanabilir.
+DSL Tanımı uzantısı, etki alanına özgü bir dile (DSL) yönelik bir uzantı paketi oluşturmanıza olanak sağlar. Visual Studio Tümleştirme Uzantısı'nın (VSIX) içinde yer alan DSL uzantısı, bir kullanıcının bilgisayarına DSL ile aynı şekilde yükleyebilir. Ek özellikler çalışma zamanında dinamik olarak etkinleştirilebilir ve devre dışı bırakılabilir. DSL'lerin açıkça uzantı için tasarlanması gerekmez ve uzantılar daha sonra veya üçüncü taraflar tarafından genişletilmiş DSL değiştirilmeden tasarılabilir.
 
 DSL uzantıları aşağıdaki özellikleri içerebilir:
 
-- Model ve sunum öğelerinin özellikleri
+- Model ve sunu öğelerinin özellikleri
 
 - Şekiller ve bağlayıcılar için dekoratörler
 
@@ -32,7 +32,7 @@ DSL uzantıları aşağıdaki özellikleri içerebilir:
 
 - Araç kutusu öğeleri ve sekmeleri
 
-Genişletilmiş bir DSL kullanıcısı ek özelliklerin örneklerini içeren bir model oluşturabilir ve kaydedebilir. Model, uygun uzantıyı yüklemiş olan diğer kullanıcılar tarafından okunabilir. Uzantıyı yüklememiş kullanıcılar ek özellikleri kullanamaz, ancak ek özellikleri kaybetmeden bir modeli güncelleştirebilir ve kaydedebilir.
+Genişletilmiş DSL kullanıcısı, ek özelliklerin örneklerini içeren bir model oluşturabilir ve kaydedebilir. Model, uygun uzantıyı yüklemiş olan diğer kullanıcılar tarafından okunabilir. Uzantıyı yüklememiş kullanıcılar ek özellikleri kullanamaz, ancak ek özellikleri kaybetmeden modeli güncelleştire ve kaydedebilir.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

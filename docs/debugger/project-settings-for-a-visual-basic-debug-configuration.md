@@ -1,7 +1,7 @@
 ---
 title: VB hata ayıklama yapılandırması için proje ayarları | Microsoft Docs
 description: Visual Studio 'nun Özellik sayfaları penceresinde bir Visual Basic hata ayıklama yapılandırması için proje ayarlarını değiştirmeyi öğrenin.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a1f0e7aa0e6ee7523f8ff7ae1f3c8e34745a3af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f16d0dde62a23d8272cb89aec46f2ce952f18979
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842714"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385220"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Visual Basic Hata Ayıklama Yapılandırması Proje Ayarları
 Hata [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [ayıklama ve sürüm yapılandırmalarında](../debugger/how-to-set-debug-and-release-configurations.md)açıklanan şekilde, **Özellik sayfaları** penceresinde bir hata ayıklama yapılandırması için proje ayarlarını değiştirebilirsiniz. Aşağıdaki tablolarda, **Özellik sayfaları** penceresinde hata ayıklayıcı ile ilgili ayarların nerede bulunacağı gösterilmektedir.

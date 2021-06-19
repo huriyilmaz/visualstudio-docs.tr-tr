@@ -1,7 +1,7 @@
 ---
 title: Windows hizmetlerinde hata ayıklamaya hazırlanma | Microsoft Docs
 description: Visual Studio 'da Windows 'un altında arka planda çalışan programlar olan Windows hizmetlerinde hata ayıklamayı hazırlayın.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bdf82b708440cb3201c5d05bd936c7f7d9c30729
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01448fcd477f5b17b78ad2b142b965f30798746b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872401"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387745"
 ---
 # <a name="debugging-preparation-windows-services"></a>Hata Ayıklama Hazırlığı: Windows Hizmetleri
 Windows hizmeti, Microsoft Windows altında arka planda çalışan bir programdır. Bu örnek, bilgisayarınızın görünür saatini güncelleştiren Telnet hizmetini ve Windows Saat hizmetini içerir. Bir Windows hizmeti içinden çalıştırılamaz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ; hizmet denetimi Yöneticisi 'nin bağlamı içinde çalıştırılmalıdır. Daha fazla bilgi için bkz. [Windows Hizmetleri oluşturma](/dotnet/framework/windows-services/how-to-create-windows-services), [Windows hizmet uygulamalarında hata ayıklama](/dotnet/framework/windows-services/how-to-debug-windows-service-applications)ve [Windows hizmet uygulamaları](/dotnet/framework/windows-services/index).

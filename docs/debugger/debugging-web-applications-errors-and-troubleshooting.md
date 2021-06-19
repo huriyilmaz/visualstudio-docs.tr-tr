@@ -1,7 +1,7 @@
 ---
-title: Web uygulamalarında hata ayıklama-hatalar ve sorun giderme
-description: Sorun giderme sayfası ve karşılaşabileceğiniz her hatayı tanımlayan sayfalar gibi Web uygulamalarının hatalarını ayıklamasına yardımcı olmak için başvuru sayfalarının bağlantılarını bulun.
-ms.custom: SEO-VS-2020, seodec18
+title: Web uygulamalarının hatalarını ayıklama - hatalar ve sorun giderme
+description: Sorun giderme sayfası ve karşılaşabilirsiniz her hatayı açıklayan sayfalar gibi web uygulamalarında hata ayıklamaya yardımcı olmak için başvuru sayfalarının bağlantılarını bulun.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -28,34 +28,34 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cce4bcbf946dad69fc3e11a7b54365fc549c699
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7b77afecaaadd65e203bda52dfc9cb92bef52ff
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872306"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387716"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme
 Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
 
 - [Sorun giderme](../debugger/debugging-web-applications-troubleshooting.md)
 
-- [Hata: Site IP adresi kullanıyor](../debugger/error-site-uses-ip-address.md)
+- [Hata: Site IP Adresi Kullanıyor](../debugger/error-site-uses-ip-address.md)
 
-- [Hata: IIS Yönetici hizmeti yanıt vermediğinden bir güvenlik denetimi başarısız oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
+- [Hata: IIS Yönetici Hizmeti Yanıt Vermey olduğundan Bir Güvenlik Denetimi Başarısız Oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
 
-- [Hata: ASP.NET yüklü değil](../debugger/error-aspnet-not-installed.md)
+- [Hata: ASP.NET Yüklü Değil](../debugger/error-aspnet-not-installed.md)
 
-- [Hata: tümleşik Windows kimlik doğrulaması etkinleştirilmediğinden hata ayıklama başarısız oldu](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)
+- [Hata: Hata Ayıklama Başarısız Oldu çünkü Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmedi](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)
 
 - [Hata: Web sunucusu doğru yapılandırılmamış](../debugger/error-the-web-server-is-not-configured-correctly.md)
 
-- [Hata: Web sunucusu kilitli ve hata ayıklama fiilini engelliyor](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)
+- [Hata: Web Sunucusu Kilitlendi ve DEBUG Fiilini Engelliyor](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)
 
 - [Hata: Web Hizmetlerinde Hata Ayıklarken Zaman Aşımı](../debugger/error-timeout-while-debugging-web-services.md)
 
-- [Hata: Web sunucusunda hata ayıklama başlatılamıyor](../debugger/error-unable-to-start-debugging-on-the-web-server.md)
+- [Hata: Web Sunucusunda Hata Ayıklama Başlatamıyor](../debugger/error-unable-to-start-debugging-on-the-web-server.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklayıcı Güvenliği](../debugger/debugger-security.md)
 - [Web Uygulamalarında ve Betikte Hata Ayıklama](how-to-enable-debugging-for-aspnet-applications.md)

@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b7ee201494ed849062458afdcd41c2aed1b83b42
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e1bd54850264c33c5317a4395f219689a8e8634
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935397"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385805"
 ---
 # <a name="customize-the-properties-window"></a>Özellikler penceresi özelleştirme
 
@@ -138,7 +138,7 @@ Ancak, aşağıdaki düzenleyicileri ve türleri belirtebilirsiniz:
 
 ### <a name="set-a-property-editor"></a>Özellik Düzenleyicisi ayarlama
 
-Aşağıdaki biçimde, Domain özelliğine bir CLR özniteliği ekleyin:
+Etki alanı özelliğine aşağıdaki formda bir CLR özniteliği ekleyin:
 
 ```csharp
 [System.ComponentModel.Editor (
@@ -146,17 +146,17 @@ Aşağıdaki biçimde, Domain özelliğine bir CLR özniteliği ekleyin:
    typeof(System.Drawing.Design.UITypeEditor))]
 ```
 
-Bir özellikte özniteliği, Özellikler penceresi **özel öznitelik** girişini kullanarak ayarlayabilirsiniz.
+Özel Öznitelik girdisini kullanarak bir özellikte **özniteliğini** Özellikler penceresi.
 
-Türünün `AnEditor` ikinci parametrede belirtilen türden türetilmesi gerekir. İkinci parametre ya da olmalıdır <xref:System.Drawing.Design.UITypeEditor> <xref:System.ComponentModel.ComponentEditor> . Daha fazla bilgi için bkz. <xref:System.ComponentModel.EditorAttribute>.
+türü, `AnEditor` ikinci parametrede belirtilen türden türetilmelidir. İkinci parametre veya <xref:System.Drawing.Design.UITypeEditor> <xref:System.ComponentModel.ComponentEditor> olmalıdır. Daha fazla bilgi için bkz. <xref:System.ComponentModel.EditorAttribute>.
 
-Kendi düzenleyicinizi veya ya da gibi bir .NET düzenleyicisini belirtebilirsiniz <xref:System.Windows.Forms.Design.FileNameEditor> <xref:System.Drawing.Design.ImageEditor> . Örneğin, kullanıcının bir dosya adı girebileceği bir özelliği olması için aşağıdaki yordamı kullanın.
+Kendi düzenleyicinizi veya veya gibi bir .NET düzenleyicisi <xref:System.Windows.Forms.Design.FileNameEditor> <xref:System.Drawing.Design.ImageEditor> belirtabilirsiniz. Örneğin, kullanıcının dosya adı gire bir özelliğine sahip olmak için aşağıdaki yordamı kullanın.
 
-#### <a name="define-a-file-name-domain-property"></a>Bir dosya adı etki alanı özelliği tanımlayın
+#### <a name="define-a-file-name-domain-property"></a>Dosya adı etki alanı özelliği tanımlama
 
-1. DSL tanımınızdaki bir etki alanı sınıfına bir etki alanı özelliği ekleyin.
+1. DSL Tanımında bir etki alanı sınıfına bir etki alanı özelliği ekleyin.
 
-2. Yeni özelliği seçin. Özellikler penceresi **özel öznitelik** alanına aşağıdaki özniteliği girin. Bu özniteliği girmek için, üç nokta ( **...]** simgesine tıklayın ve ardından öznitelik adını ve parametreleri ayrı olarak girin:
+2. Yeni özelliği seçin. Dosyanın **Özel** Öznitelik alanına Özellikler penceresi özniteliğini girin. Bu özniteliği girmek için üç nokta **üzerine tıklayın ve** ardından öznitelik adını ve parametreleri ayrı olarak girin:
 
     ```csharp
     [System.ComponentModel.Editor (
@@ -165,30 +165,30 @@ Kendi düzenleyicinizi veya ya da gibi bir .NET düzenleyicisini belirtebilirsin
 
     ```
 
-3. Domain özelliğinin türünü varsayılan **dize** ayarında bırakın.
+3. Etki alanı özelliğinin Türünü Varsayılan Dize ayarında **bırakın.**
 
-4. Düzenleyiciyi test etmek için, kullanıcıların etki alanı özelliğini düzenlemek üzere dosya adı düzenleyicisini açabildiğini doğrulayın.
+4. Düzenleyiciyi test etmek için, kullanıcıların etki alanı özelliğinizi düzenlemek için dosya adı düzenleyicisini açalarını doğrulayın.
 
-    1. CTRL + F5 veya F5 tuşlarına basın. Hata ayıklama çözümünde bir test dosyası açın. Etki alanı sınıfının bir öğesini oluşturun ve seçin.
+    1. CTRL+F5 veya F5 tuşlarına basın. Hata ayıklama çözümünde bir test dosyası açın. Etki alanı sınıfının bir öğesini oluşturun ve seçin.
 
-    2. Özellikler penceresi, domain özelliğini seçin. Değer alanı bir üç nokta gösterir **[...]**.
+    2. Etki Özellikler penceresi etki alanı özelliğini seçin. Değer alanında üç nokta **vardır : .**
 
-    3. Üç nokta simgesine tıklayın. Bir dosya iletişim kutusu görüntülenir. Bir dosya seçin ve iletişim kutusunu kapatın. Dosya yolu artık Domain özelliğinin değeridir.
+    3. Üç nokta'ya tıklayın. Bir dosya iletişim kutusu görüntülenir. Bir dosya seçin ve iletişim kutusunu kapatın. Dosya yolu artık etki alanı özelliğinin değeridir.
 
 ### <a name="define-your-own-property-editor"></a>Kendi özellik düzenleyicinizi tanımlama
 
-Kendi düzenleyicinizi tanımlayabilirsiniz. Bunu, kullanıcının tanımladığınız bir türü düzenlemesine veya standart bir türü özel bir şekilde düzenlemenize izin vermek için yapabilirsiniz. Örneğin, kullanıcının bir formülü temsil eden bir dize girişine izin verebilirsiniz.
+Kendi düzenleyicinizi tanımlayabilirsiniz. Bunu, kullanıcının tanımlandığı bir türü düzenlemesine veya standart bir türü özel bir şekilde düzenlemesine izin vermek için yapar. Örneğin, kullanıcının formülü temsil eden bir dizeyi girişine izin veebilirsiniz.
 
-Sınıfından türetilmiş bir sınıf yazarak bir düzenleyici tanımlarsınız <xref:System.Drawing.Design.UITypeEditor> . Sınıfınız geçersiz kılmalıdır:
+Bir düzenleyiciyi, 'den türetilen bir sınıf yazarak <xref:System.Drawing.Design.UITypeEditor> tanımlarsiniz. Sınıfını geçersiz kılmanız gerekir:
 
-- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, kullanıcıyla etkileşime geçmek ve özellik değerini güncelleştirmek için.
+- <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>, kullanıcıyla etkileşim kurmak ve özellik değerini güncelleştirmek için.
 
-- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, Düzenleyicinizde bir iletişim kutusu açıp açmayacağını veya açılan bir menü belirtin.
+- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>, düzenleyicinizin bir iletişim kutusu açıp açmaymayacaklarını veya açılan menü sağlanacaklarını belirtmek için.
 
-Özellik kılavuzunda görüntülenecek özelliğin değerinin grafik gösterimini de sağlayabilirsiniz. Bunu yapmak için `GetPaintValueSupported` , ve geçersiz kılın `PaintValue` .  Daha fazla bilgi için bkz. <xref:System.Drawing.Design.UITypeEditor>.
+Özellik kılavuzunda görüntülenecek özelliğin değerinin grafik gösterimini de sabilirsiniz. Bunu yapmak için , ve `GetPaintValueSupported` 'i geçersiz `PaintValue` kılın.  Daha fazla bilgi için bkz. <xref:System.Drawing.Design.UITypeEditor>.
 
 > [!NOTE]
-> Kodu **DSL** projesindeki ayrı bir kod dosyasına ekleyin.
+> Kodu Dsl projesine ayrı bir kod **dosyasına** ekleyin.
 
 Örneğin:
 
@@ -204,7 +204,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
 }
 ```
 
-Bu düzenleyiciyi kullanmak için, bir etki alanı özelliğinin **özel özniteliğini** şu şekilde ayarlayın:
+Bu düzenleyiciyi kullanmak için bir **etki alanı özelliğinin** Özel Özniteliğini şöyle ayarlayın:
 
 ```csharp
 [System.ComponentModel.Editor (
@@ -214,21 +214,21 @@ Bu düzenleyiciyi kullanmak için, bir etki alanı özelliğinin **özel öznite
 
 Daha fazla bilgi için bkz. <xref:System.Drawing.Design.UITypeEditor>.
 
-## <a name="provide-a-drop-down-list-of-values"></a>Aşağı açılan değerlerin bir listesini sağlayın
+## <a name="provide-a-drop-down-list-of-values"></a>Değerlerin açılan listesini sağlama
 
-Bir kullanıcının aralarından seçim yapabileceğiniz bir değer listesi sağlayabilirsiniz.
+Bir kullanıcı için seçim yapmak istediğiniz değerlerin listesini sebilirsiniz.
 
 > [!NOTE]
-> Bu teknik, çalışma zamanında değişebilir değerlerin bir listesini sağlar. Değişmez bir liste sağlamak istiyorsanız, bunun yerine, etki alanı özelliği türü olarak numaralandırılmış bir tür kullanmayı göz önünde bulundurun.
+> Bu teknik, çalışma zamanında değiştirebilirsiniz değerlerin bir listesini sağlar. Değişmemiş bir liste sağlamak için, bunun yerine etki alanı özelliğinizin türü olarak numaralandı bir tür kullanmayı göz önünde bulundurabilirsiniz.
 
-Standart değerlerin bir listesini tanımlamak için, aşağıdaki biçime sahip bir CLR özniteliği olan etki alanı özelliğine eklersiniz:
+Standart değerlerin listesini tanımlamak için etki alanı özelliğinize aşağıdaki biçime sahip bir CLR özniteliği eklersiniz:
 
 ```csharp
 [System.ComponentModel.TypeConverter
 (typeof(MyTypeConverter))]
 ```
 
-Öğesinden türetilen bir sınıf tanımlayın <xref:System.ComponentModel.TypeConverter> . Kodu **DSL** projesindeki ayrı bir dosyaya ekleyin. Örneğin:
+'den türeten bir sınıf <xref:System.ComponentModel.TypeConverter> tanımlayın. Kodu **Dsl** projesine ayrı bir dosyaya ekleyin. Örneğin:
 
 ```csharp
 /// <summary>

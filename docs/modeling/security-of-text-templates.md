@@ -1,36 +1,36 @@
 ---
 title: Metin Şablonlarının Güvenliği
-description: Rastgele kod ve kötü amaçlı yönerge işlemcileri gibi konular da dahil olmak üzere güvenlik ve metin şablonları hakkında bilgi edinin.
+description: Rastgele kod ve kötü amaçlı yönerge işlemcileri gibi konular da dahil olmak üzere güvenlik ve metin şablonları hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, security
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 11352eb33070d3401516948cc01c4b9bd7ab4f95
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a740a6f7a4c532a61a5e412c94fa4321c5da707
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893327"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385766"
 ---
 # <a name="security-of-text-templates"></a>Metin Şablonlarının Güvenliği
-Metin şablonlarında aşağıdaki güvenlik sorunları vardır:
+Metin şablonlarının güvenlikle ilgili sorunları vardır:
 
-- Metin şablonları rastgele kod ekleme işlemlerine açıktır.
+- Metin şablonları rastgele kod eklemelere karşı savunmasızdır.
 
-- Konağın bir yönerge işlemcisini bulmak için kullandığı mekanizma güvenli değilse, kötü amaçlı yönerge işlemcisi çalıştırılabilir.
+- Ana bilgisayar tarafından bir yönerge işlemcisi bulmak için kullanan mekanizma güvenli değildir, kötü amaçlı bir yönerge işlemcisi çalıştırmak olabilir.
 
-## <a name="arbitrary-code"></a>Rastgele kod
- Bir şablon yazdığınızda, etiketleri içine herhangi bir kod yerleştirebilirsiniz \<# #> . Bu, bir metin şablonu içinden rastgele kodun yürütülmesini sağlar.
+## <a name="arbitrary-code"></a>Rastgele Kod
+ Şablon yazarak etiketlerin içine herhangi bir kod \<# #> koyabilirsiniz. Bu, bir metin şablonundan rastgele kodun yürütülltülür.
 
- Güvenilen kaynaklardan şablonlar aldığınızdan emin olun. Uygulamanızın son kullanıcılarını, güvenilir kaynaklardan gelmeyen şablonları yürütmek için not aldığınızdan emin olun.
+ Güvenilir kaynaklardan şablon edin edindiğinizden emin olun. Uygulamanın son kullanıcılarını güvenilir kaynaklardan gelen şablonları yürütmeleri konusunda uyarmamaya emin olun.
 
-## <a name="malicious-directive-processor"></a>Kötü amaçlı yönerge Işlemcisi
- Metin şablonu altyapısı bir dönüştürme konağından ve şablon metnini bir çıkış dosyasına dönüştürmek için bir veya daha fazla yönerge işlemcisi ile etkileşime girer. Daha fazla bilgi için bkz. [metin şablonu dönüştürme işlemi](../modeling/the-text-template-transformation-process.md).
+## <a name="malicious-directive-processor"></a>Kötü Amaçlı Yönerge İşlemcisi
+ Metin şablonu altyapısı bir dönüştürme ana bilgisayarı ve bir veya daha fazla yönerge işlemcisi ile etkileşim kurarak şablon metnini bir çıkış dosyasına dönüştürmektedir. Daha fazla bilgi için [bkz. Metin Şablonu Dönüştürme İşlemleri.](../modeling/the-text-template-transformation-process.md)
 
- Konağın bir yönerge işlemcisini bulmak için kullandığı mekanizma güvenli değilse, kötü amaçlı yönerge işlemcisi çalıştırma riskini çalıştırır. Kötü amaçlı yönerge işlemcisi, şablon çalıştırıldığında modda çalışan bir kod sağlayabilir `FullTrust` . Özel bir metin şablonu dönüştürme Konağı oluşturursanız, yönerge işlemcileri bulmak için altyapının kayıt defteri gibi güvenli bir mekanizma kullanmanız gerekir.
+ Ana bilgisayar tarafından bir yönerge işlemcisini bulmak için kullanan mekanizma güvenli değildir, kötü amaçlı yönerge işlemcisi çalıştırma riskini çalıştırır. Kötü amaçlı yönerge işlemcisi, şablon çalıştır olduğunda `FullTrust` modunda çalıştıran kod sağlar. Özel bir metin şablonu dönüştürme ana bilgisayarı oluşturursanız, altyapının yönerge işlemcilerini bulması için kayıt defteri gibi güvenli bir mekanizma kullansanız gerekir.

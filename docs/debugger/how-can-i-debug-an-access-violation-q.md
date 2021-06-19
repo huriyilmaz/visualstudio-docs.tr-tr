@@ -1,7 +1,7 @@
 ---
 title: C++ erişim ihlalinde hata ayıklama | Microsoft Docs
 description: Birden fazla işaretçi aday olduğunda erişim ihlaline sorun giderme ipuçlarına bakın. Visual Studio 'nun son sürümleri errant işaretçisini adlandırın.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 02/05/2019
 ms.topic: how-to
 f1_keywords:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f7e33ff34357dc0aa258f179f55d379bdf05636
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3689942c9db9fde3598590cf30100fc590c50753
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904304"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387040"
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>C++ erişim Ihlalinde nasıl hata ayıklayabilirim?
 

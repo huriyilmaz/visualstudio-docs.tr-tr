@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cbf2aff512b98e7a813134c3b376b6972c8cd4f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2edfd4b9391beed5c379817c55871759ff02eec
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897740"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384934"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild ayrılmış ve tanınmış özellikleri
 
@@ -69,26 +69,29 @@ Bu bölümdeki tabloda, önceden tanımlanmış MSBuild özellikleri gösterilme
 | `MSBuildThisFileExtension` | Ayrılmıştır | Öğesinin dosya adı uzantısı kısmı `MSBuildThisFileFullPath` . | `.csproj` |
 | `MSBuildThisFileFullPath` | Ayrılmıştır | Çalıştıran hedefi içeren projenin veya hedef dosyanın mutlak yolu.<br /><br /> İpucu: asıl proje dosyasına göre değil, hedef dosya ile ilişkili olan bir hedefler dosyasında göreli bir yol belirtebilirsiniz. | `c:\Source\Repos\ConsoleApp1\ConsoleApp1\ConsoleApp1.csproj` |
 | `MSBuildThisFileName` | Ayrılmıştır | Dosya adı uzantısı olmadan öğesinin dosya adı kısmı `MSBuildThisFileFullPath` . | `ConsoleApp1` |
-| `MSBuildToolsPath` | Ayrılmıştır | Değeri ile ilişkili MSBuild sürümünün yükleme yolu `MSBuildToolsVersion` .<br /><br /> Yola son ters eğik çizgiyi eklemeyin.<br /><br /> Bu özellik geçersiz kılınamaz. | `C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin` |
-| `MSBuildToolsVersion` | Ayrılmıştır | Projeyi derlemek için kullanılan MSBuild Araç takımının sürümü.<br /><br /> Note: bir MSBuild Araç Takımı, bir uygulama oluşturmak için kullanılan görevlerden, hedeflerin ve araçlardan oluşur. Araçlar *csc.exe* ve *vbc.exe* gibi derleyiciler içerir. Daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md)ve [Standart ve özel araç takımı yapılandırması](../msbuild/standard-and-custom-toolset-configurations.md). | `Current` |
-| `MSBuildVersion` | Ayrılmıştır | Projeyi derlemek için kullanılan MSBuild sürümü. <br /><br/> Bu özellik geçersiz kılınamıyor, aksi takdirde hata iletisi `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` döndürülür. | 16.7.0 |
+| `MSBuildToolsPath` | Ayrılmıştır | değeriyle ilişkili MSBuild sürümünün yükleme `MSBuildToolsVersion` yolu.<br /><br /> Yola son ters eğik çizgiyi dahil etmek yok.<br /><br /> Bu özellik geçersiz kılınamaz. | `C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin` |
+| `MSBuildToolsVersion` | Ayrılmıştır | Projeyi derlemek için kullanılan MSBuild Araç Seti sürümü.<br /><br /> Not: MSBuild Araç Seti bir uygulama oluşturmak için kullanılan görevlerden, hedeflerden ve araçlardan oluşur. Araçlar,csc.exeve *vbc.exe.* ** Daha fazla bilgi için [bkz. Araç Kümesi (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)ve [Standart ve özel Araç Kümesi yapılandırmaları.](../msbuild/standard-and-custom-toolset-configurations.md) | `Current` |
+| `MSBuildVersion` | Ayrılmıştır | Projeyi derlemek için kullanılan MSBuild sürümü. <br /><br/> Bu özellik geçersiz kılınabilir, aksi takdirde hata `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` iletisi döndürülür. | 16.11.0 |
+| `MSBuildAssemblyVersion` | Ayrılmıştır | Projeyi derlemek için kullanılan MSBuild derlemelerinin sürümü. | 16.0 |
+| `MSBuildFileVersion` | Ayrılmıştır | Projeyi derlemek için kullanılan MSBuild derlemelerinin 4 bölüm sürümü. | 16.11.0.30701 |
+| `MSBuildSemanticVersion` | Ayrılmıştır | Projeyi derlemek için kullanılan MSBuild derlemelerinin tam semver 2.0 sürümü. | 16.11.0-preview-21302-05+5e37cc992 |
 
 ## <a name="names-that-conflict-with-msbuild-elements"></a>MSBuild öğeleriyle çakışan adlar
 
-Yukarıdaki ' a ek olarak, MSBuild dil öğelerine karşılık gelen adlar Kullanıcı tanımlı özellikler, öğeler veya öğe meta verileri için kullanılamaz:
+Yukarıdakilere ek olarak, KULLANıCı tanımlı özellikler, öğeler veya öğe meta verileri için MSBuild dil öğelerine karşılık gelen adlar kullanılamaz:
 
 * VisualStudioProject
 * Hedef
-* PropertyGroup
+* Propertygroup
 * Çıktı
-* ItemGroup
-* UsingTask
+* ıtemgroup
+* Usingtask
 * ProjectExtensions
-* OnError
+* Onerror
 * ImportGroup
 * Seçin:
 * Ne zaman
-* Güvenmiyorsanız
+* Aksi takdir -de
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

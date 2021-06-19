@@ -1,7 +1,7 @@
 ---
 title: "C 'de ASP.NET Core Web uygulaması oluşturma #"
 description: Visual Studio 'da C# ve ASP.NET Core, adım adım ile basit bir Merhaba Dünya Web uygulaması oluşturmayı öğrenin.
-ms.custom: acquisition, mvc,seodec18
+ms.custom: vs-acquisition
 ms.date: 11/06/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 61fc3f0cf1e23dcf0f9e22ed7e10050fb84c9ba6
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 65ad48bab545d635763a1cabb4e76734431c2a55
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308070"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384843"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>Hızlı başlangıç: ilk ASP.NET Core Web uygulamanızı oluşturmak için Visual Studio 'Yu kullanma
 
@@ -195,22 +195,22 @@ Tebrikler, bu hızlı başlangıcı Tamamlanıyor! C#, ASP.NET Core ve Visual St
 
    Düzenleyicide, **giriş** sayfasında görüntülenen metnin HTML kodunu görürsünüz.
 
-   ![Düzenleyicide Giriş sayfasının Index.cshtml dosyasındaki HTML Visual Studio](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
+   ![Visual Studio Düzenleyicisi 'ndeki giriş sayfası için Index. cshtml dosyasındaki HTML kodu](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
 
-1. "Hoş Geldiniz" metnini "**Merhaba Dünya!**".
+1. "Hoş geldiniz" metnini "**Merhaba Dünya!**" okumak üzere değiştirin.
 
-   ![Visual Studio düzenleyicisinde Hoş Geldiniz ifadesinin yer alan varsayılan HTML kodunu Merhaba Dünya değiştirme](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
+   ![Visual Studio Düzenleyicisi 'nde, bunun yerine Merhaba Dünya e-Welcome 'a hoş geldiniz varsayılan HTML kodunu değiştirin](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
 
-1. Uygulamayı **IIS Express** ve bir web **tarayıcısında** açmak için Ctrl + **F5** tuşuna basın veya seçin.
+1. Uygulamayı   + çalıştırmak ve bir Web tarayıcısında açmak için IIS Express seçin veya CTRL **F5** tuşuna basın.
 
-   ![Dosyanın IIS Express düğmesini Visual Studio](../ide/media/vs-2019/csharp-aspnet-generic-iisbutton.png)
+   ![Visual Studio 'da IIS Express düğmesini seçin](../ide/media/vs-2019/csharp-aspnet-generic-iisbutton.png)
 
    > [!NOTE]
-   > **'IIS Express' web** sunucusuna bağlanamıyor veya SSL sertifikasından bahseden bir hata iletisiyle ilgili bir hata iletisi alırsanız, Visual Studio. Ardından, Visual Studio **menüyü seçerek** yönetici olarak çalıştır seçeneğini kullanarak oturum açın. Ardından uygulamayı yeniden çalıştırın.
+   > **' IIS Express ' Web sunucusuna** veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio 'yu kapatın. Ardından, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio 'yu açın. Sonra, uygulamayı yeniden çalıştırın.
 
-1. Web tarayıcısında, Giriş sayfasında **güncelleştirilmiş metninizin** olduğunu doğrulayın.
+1. Web tarayıcısında, **ana** sayfanın güncelleştirilmiş metninizi içerdiğini doğrulayın.
 
-   ![Yaptığınız değişiklikleri içeren güncelleştirilmiş Giriş sayfasını görüntüleme](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
+   ![Yaptığınız değişiklikleri içeren güncelleştirilmiş giriş sayfasını görüntüleyin](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
 
 1. Web tarayıcısını kapatın.
 
@@ -221,8 +221,8 @@ Tebrikler, bu hızlı başlangıcı Tamamlanıyor! C#, ASP.NET Core ve Visual St
 Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 > [!div class="nextstepaction"]
-> [Kullanmaya başlayın C# ve ASP.NET ile Visual Studio](../get-started/csharp/tutorial-aspnet-core.md)
+> [Visual Studio 'da C# ve ASP.NET kullanmaya başlama](../get-started/csharp/tutorial-aspnet-core.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Visual Studio kullanarak web Azure App Service web Visual Studio](../deployment/quickstart-deploy-to-azure.md)
+[Web uygulamanızı Visual Studio 'Yu kullanarak Azure App Service yayımlayın](../deployment/quickstart-deploy-to-azure.md)

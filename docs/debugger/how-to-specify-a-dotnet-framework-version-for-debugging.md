@@ -1,7 +1,7 @@
 ---
-title: Hata ayıklama için bir .NET Framework sürümü belirtin | Microsoft Docs
-description: Hata ayıklama için eski bir .NET Framework sürümü belirtin. Visual Studio hata ayıklayıcı, .NET Framework eski sürümlerinin yanı sıra geçerli sürümü de hata ayıklamayı destekler.
-ms.custom: SEO-VS-2020, seodec18
+title: Hata ayıklama .NET Framework için bir sürüm | Microsoft Docs
+description: Hata ayıklama için .NET Framework eski bir sürüm belirtin. Hata Visual Studio hata ayıklayıcısı, hem eski .NET Framework hem de geçerli sürümde hata ayıklamayı destekler.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,52 +18,52 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 197cd51d31729119d48e255d038ad2e53f17a891
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 83b30067530b9a48769879f3a222fee2afa725c0
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908374"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384674"
 ---
-# <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Hata ayıklama için eski bir .NET Framework sürümü belirtin (C#, Visual Basic, F #)
+# <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Hata ayıklama için eski .NET Framework sürümü belirtme (C#, Visual Basic, F#)
 
-Visual Studio hata ayıklayıcı, Microsoft .NET Framework 'ün eski sürümlerinin yanı sıra geçerli sürümü de hata ayıklamayı destekler. Visual Studio 'dan bir uygulama başlatırsanız hata ayıklayıcı, hata ayıklaması yaptığınız uygulamanın doğru .NET Framework sürümünü her zaman tanımlayabilir. Ancak, uygulama zaten çalışıyorsa ve **iliştirme 'yi** kullanarak hata ayıklamayı başlatırsanız, hata ayıklayıcı .NET Framework eski bir sürümünü her zaman tanımlayamayabilir. Bu durumda, şöyle bir hata iletisi alırsınız.
+Hata Visual Studio ayıklayıcısı, hem Microsoft .NET Framework'un eski sürümlerinde hem de geçerli sürümde hata ayıklamayı destekler. Bir uygulamayı hata ayıklayıcısından Visual Studio, hata ayıklayıcı her zaman hata ayıklarken .NET Framework uygulamanın doğru sürümünü tanımlayabilir. Ancak, uygulama zaten çalışıyorsa ve 'a Ekle'ye kullanarak hata ayıklamaya başlıyorsanız, hata ayıklayıcı her zaman uygulamanın eski bir sürümünü .NET Framework. Bu durumda, şöyle bir hata iletisi alırsınız:
 
 ``` cmd
 The debugger has made an incorrect assumption about the .NET Framework version your application is going to use.
 ```
 
-Bu hatanın göründüğü nadir durumlarda, bir kayıt defteri anahtarını, hangi sürümün kullanılacağı hata ayıklayıcıya göstermek için ayarlayabilirsiniz.
+Bu hatanın görüntülendiğinde nadir durumlarda, hata ayıklayıcıya hangi sürümün kullanılamayacaklarını belirtmek için bir kayıt defteri anahtarı ayarlayın.
 
-### <a name="to-specify-a-net-framework-version-for-debugging"></a>Hata ayıklama için bir .NET Framework sürümünü belirtmek için
+### <a name="to-specify-a-net-framework-version-for-debugging"></a>Hata ayıklama için .NET Framework sürümü belirtmek için
 
-1. Makinenizde yüklü .NET Framework sürümlerini bulmak için Windows\Microsoft.NET\Framework dizinine bakın. Sürüm numaraları şuna benzer:
+1. Makinenize yüklenmiş olan Microsoft.NET\Framework dizinine .NET Framework dizinine bakın. Sürüm numaraları şuna benzer:
 
     `V1.1.4322`
 
-    Doğru sürüm numarasını belirleyip bunu bir yere göz önünde yapın.
+    Doğru sürüm numarasını belirleyin ve not edin.
 
-2. **Kayıt defteri Düzenleyicisi 'ni** (regedit) başlatın.
+2. Kayıt Defteri **Düzenleyicisi'ni** (regedit) başlatma.
 
-3. **Kayıt defteri düzenleyicisinde** HKEY_LOCAL_MACHINE klasörünü açın.
+3. Kayıt **Defteri Düzenleyicisi'nde** HKEY_LOCAL_MACHINE açın.
 
-4. Şuraya gidin: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\ {449Ec4cc-30D2-4032-9256-EE18EB41B62B}
+4. Şu sayfaya gidin: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\ {449EC4CC-30D2-4032-9256-EE18EB41B62B}
 
-    Anahtar yoksa, HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine öğesine sağ tıklayın ve **Yeni anahtar**' a tıklayın. Yeni anahtarı adlandırın `{449EC4CC-30D2-4032-9256-EE18EB41B62B}` .
+    Anahtar yoksa, Anahtar'a sağ tıklayın HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine Yeni **Anahtar'a tıklayın.** Yeni anahtarı olarak ad `{449EC4CC-30D2-4032-9256-EE18EB41B62B}` girin.
 
-5. {449EC4CC-30D2-4032-9256-EE18EB41B62B} sayfasına gittikten sonra **ad** sütununa bakın ve CLRVersionForDebugging anahtarını bulun.
+5. {449EC4CC-30D2-4032-9256-EE18EB41B62B} yolunun ardından **Ad** sütununa bakın ve CLRVersionForDebugging anahtarını bulun.
 
-   1. Anahtar yoksa, {449EC4CC-30D2-4032-9256-EE18EB41B62B} öğesine sağ tıklayın ve **Yeni dize değeri**' ne tıklayın. Ardından yeni dize değerine sağ tıklayın, **Yeniden Adlandır**' a tıklayın ve yazın `CLRVersionForDebugging` .
+   1. Anahtar yoksa {449EC4CC-30D2-4032-9256-EE18EB41B62B} öğesini sağ tıklatın ve Yeni Dize Değeri'ne **tıklayın.** Ardından yeni dize değerine sağ tıklayın, Yeniden **Adlandır'a tıklayın** ve `CLRVersionForDebugging` yazın.
 
-6. **CLRVersionForDebugging** öğesine çift tıklayın.
+6. **CLRVersionForDebugging'e çift tıklayın.**
 
-7. **Dize Düzenle** kutusuna **değer** kutusuna .NET Framework sürüm numarasını yazın. Örneğin: V 1.1.4322
+7. Dizeyi **Düzenle** kutusuna Değer kutusuna .NET Framework numarasını **yazın.** Örneğin: V1.1.4322
 
 8. **Tamam**'a tıklayın.
 
-9. **Kayıt defteri düzenleyicisini** kapatın.
+9. Kayıt Defteri **Düzenleyicisi'ni kapatın.**
 
-     Hata ayıklamaya başladığınızda yine de bir hata iletisi alırsanız, sürüm numarasını kayıt defterine doğru girdiğinizden emin olun. Ayrıca, Visual Studio tarafından desteklenen .NET Framework bir sürümünü kullandığınızı doğrulayın. Hata ayıklayıcı geçerli .NET Framework sürümü ve önceki sürümlerle uyumludur, ancak gelecekteki sürümlerle uyumlu olmayabilir.
+     Hata ayıklamaya başlarken hata iletisi almaya devam ediyorsanız, kayıt defterine sürüm numarasını doğru girdiğinizi doğrulayın. Ayrıca, uygulama tarafından desteklenen bir .NET Framework sürümü Visual Studio. Hata ayıklayıcısı geçerli sürüm ve .NET Framework sürümleriyle uyumludur, ancak gelecek sürümlerle uyumlu olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata Ayıklayıcı Ayarları ve Hazırlama](../debugger/debugger-settings-and-preparation.md)

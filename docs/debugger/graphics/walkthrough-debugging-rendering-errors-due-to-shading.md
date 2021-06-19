@@ -1,7 +1,7 @@
 ---
 title: 'İzlenecek yol: gölgeleme nedeniyle Işleme hatalarını ayıklama | Microsoft Docs'
 description: Gölgelendirici hatası bulan bir araştırmayı izleyin. Grafik piksel geçmişi ve HLSL hata ayıklayıcısı dahil olmak üzere Visual Studio Grafik Tanılama kullanımını gösterir.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 01875b05-cc7b-4add-afba-f2b776f86974
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 491a2c5ab0bcb923d9999bd55249150d33a650ae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 218b263d7e971a0d2bdaa72020bb7cb58c31e000
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891871"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387092"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama
 Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , gölgelendirici hatası nedeniyle yanlış renkli bir nesneyi araştırmak için grafik tanılama nasıl kullanacağınızı gösterir.
@@ -94,7 +94,7 @@ Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , 
 output.color = float3(0.0f, 0.0f, 0.0f);
 ```
 
- şöyle değiştirin:
+ kullanıcısı
 
 ```hlsl
 output.color = input.color;

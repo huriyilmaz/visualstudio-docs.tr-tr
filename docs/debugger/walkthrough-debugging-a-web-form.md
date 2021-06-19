@@ -1,7 +1,7 @@
 ---
 title: Web formunda hata ayıklama | Microsoft Docs
 description: Kesme noktalarını ayarlama ve değişkenleri inceleme dahil olmak üzere bir ASP.NET Web uygulamasında (Web formu) hata ayıklamanın nasıl yapılacağını görmek için bir yönergeyi izleyin.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 476d36a8ea303f2dd6062eaf0a597c47df580ff7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 18347b7ba9ff52778b5acef685acd8f1ee400793
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884175"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385219"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>İzlenecek yol: Web Formunda Hata Ayıklama
 Bu izlenecek yolda bulunan adımlarda [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , Web formu olarak da bilinen bir Web uygulamasının hatalarını ayıklama işlemleri gösterilir. Yürütmeyi başlatma ve durdurma, kesme noktaları ayarlama ve **izleme** penceresinde değişkenleri inceleme işlemlerinin nasıl yapılacağını gösterir.
@@ -69,7 +69,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
 11. Bıraktığınız düğme denetimine çift tıklayın.
 
-     Bu sizi kod sayfasına götürür: C# için Default.aspx.cs veya default. aspx. vb [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . İmleç işlevde olmalıdır `Button1_Click` .
+     Bu sizi kod sayfasına götürür: C# için default. aspx. cs veya için default. aspx. vb [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . İmleç işlevde olmalıdır `Button1_Click` .
 
 12. `Button1_Click`İşlevinde aşağıdaki kodu ekleyin:
 
@@ -89,7 +89,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
 ## <a name="to-debug-the-web-form"></a>Web formunda hata ayıklamak için
 
-1. Default.aspx.cs veya default. aspx. vb penceresinde, eklediğiniz metinle aynı satırdaki sol kenar boşluğuna tıklayın:
+1. Default. aspx. cs veya default. aspx. vb penceresinde, eklediğiniz metinle aynı satırdaki sol kenar boşluğuna tıklayın:
 
    ```vb
    TextBox1.Text = "Button was clicked!"
@@ -109,7 +109,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
 4. Internet Explorer 'da düğmesine tıklayın.
 
-    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' De, bu sizi sizi default.aspx.cs veya default. aspx. vb kod sayfasında kesme noktasını ayarladığınız satıra götürür. Bu satır, sarı ile vurgulanmış olmalıdır. Şimdi, uygulamanızda değişkenleri görüntüleyebilir ve yürütülmesini denetleyebilirsiniz. Uygulamanız yürütmeyi durduruyor ve bir komutun tamamlanmasını bekler.
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' De, bu sizi, varsayılan. aspx. cs veya default. aspx. vb kod sayfasında kesme noktasını ayarladığınız satıra götürür. Bu satır, sarı ile vurgulanmış olmalıdır. Şimdi, uygulamanızda değişkenleri görüntüleyebilir ve yürütülmesini denetleyebilirsiniz. Uygulamanız yürütmeyi durduruyor ve bir komutun tamamlanmasını bekler.
 
 5. **Hata Ayıkla** menüsünde **Windows**' a ve ardından **Izle**' ye ve ardından **Watch1**' e tıklayın.
 
@@ -131,7 +131,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
      Yürütme kesme noktasında yeniden durmaktadır.
 
-10. Default.aspx.cs veya default. aspx. vb penceresinde sol kenar boşluğunda kırmızı noktaya tıklayın.
+10. Default. aspx. cs veya default. aspx. vb penceresinde sol kenar boşluğunda kırmızı noktaya tıklayın.
 
      Bu, kesme noktasını kaldırır.
 
@@ -141,7 +141,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
 1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] içinde, hata ayıklayıcısını çalışan bir işleme ekleyebilirsiniz. En etkili hata ayıklama için yürütülebilir dosyayı sembol (PDB) dosyalarıyla hata ayıklama sürümü olarak derleyin.
 
-2. Default.aspx.cs veya default. aspx. vb penceresinde, eklediğiniz satırda bir kesme noktası ayarlamak için sol kenar boşluğuna tıklayın:
+2. Varsayılan. aspx. cs veya default. aspx. vb penceresinde, eklediğiniz satırda bir kesme noktası ayarlamak için sol kenar boşluğuna tıklayın:
 
    ```vb
    TextBox1.Text = "Button was clicked!"
@@ -159,7 +159,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
 5. Internet Explorer 'da formunuzdaki düğmeye tıklayın.
 
-    İçinde, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] default.aspx.cs, default. aspx. vb veya default. aspx içindeki kesme noktasına ulaşırsınız.
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' De, varsayılan. aspx. cs, default. aspx. vb veya default. aspx içindeki kesme noktasına ulaşırsınız.
 
 6. Hata ayıklamayı bitirdiğinizde hata **Ayıkla** menüsünde, **hata ayıklamayı Durdur**' a tıklayın.
 

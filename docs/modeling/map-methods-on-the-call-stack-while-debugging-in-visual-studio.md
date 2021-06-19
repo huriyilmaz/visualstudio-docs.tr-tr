@@ -25,21 +25,21 @@ helpviewer_keywords:
 - Call Stack window, show on code map
 - debugging [Visual Studio], tracing the call stack visually
 - debugging [Visual Studio], visualizing the call stack
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: faeee42f179351649ba73e06d25e5e948538392e
-ms.sourcegitcommit: 398b4d4e5ce0f978720f11990db05b209766aedc
+ms.openlocfilehash: 08fa0ff028140ebad421dd43fdfa53cc36b77804
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112016326"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387495"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio'da hata ayıklarken çağrı yığınında eşleştirme yöntemleri
 
-Hata ayıklama sırasında çağrı yığınını görsel olarak izlemesi için bir kod haritası oluşturun. Hataları bulmaya odaklanabilmeniz amacıyla kodun ne yaptığını izlemek için harita üzerine not alabilirsiniz.
+Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek için bir kod haritası oluşturun. Hataları bulmaya odaklanabilmeniz amacıyla kodun ne yaptığını izlemek için harita üzerine not alabilirsiniz.
 
  ![Kod eşlemeleri üzerinde çağrı yığınları ile hata ayıklama](../debugger/media/debuggermap_overview.png)
 
@@ -83,11 +83,11 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak izlemesi için 
 
 2. Uygulamanız kesme moduna girdikten veya bir işleve girdikten sonra Kod **Eşlemesi'ne tıklayın.** (Klavye: **Ctrl**  +  **Shift**  +  **`** ile )
 
-     ![Çağrı yığını eşlemeyi başlatmak için Kod Eşlemesi'ne tıklayın](../debugger/media/debuggermap_choosecodemap.png)
+     ![Çağrı yığını eşlemesini başlatmak için Kod Eşlemesi'ne tıklayın](../debugger/media/debuggermap_choosecodemap.png)
 
      Geçerli çağrı yığını yeni bir kod haritası üzerinde turuncu renkte görüntülenir:
 
-     ![Kod haritasında çağrı yığınına bakın](../debugger/media/debuggermap_seeundocallstack.png)
+     ![Bkz. Kod haritasında çağrı yığını](../debugger/media/debuggermap_seeundocallstack.png)
 
      Hata ayıklamaya devam ederken eşleme otomatik olarak güncelleştirmesi yapılır. Bkz. [Haritayı sonraki çağrı yığınıyla güncelleştirme.](#UpdateMap)
 
@@ -140,7 +140,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak izlemesi için 
 
  Hatayı düzeltdikten ve programı çalıştırmaya devam ettikten sonra, eşleme yeni çağrıyı 'a `undo` `Repaint` ekler:
 
- ![Kod eşlemesi üzerinde yığın çağrısı yapmak için yeni yöntem çağrısı ekleme](../debugger/media/debuggermap_addnewcallforrepaint.png)
+ ![Kod haritasında yığın çağrısı yapmak için yeni yöntem çağrısı ekleme](../debugger/media/debuggermap_addnewcallforrepaint.png)
 
 ## <a name="q--a"></a><a name="QA"></a> Soru& A
 
@@ -152,7 +152,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak izlemesi için 
 
    hata ayıklama **seçeneklerinde Yalnızca kendi kodum** etkinleştir'Visual Studio devre dışı bırakabilirsiniz:
 
-   ![Seçenekler iletişim kutusunu kullanarak dış kodu göster](../debugger/media/debuggermap_debugoptions.png)
+   ![Seçenekler iletişim kutusunu kullanarak dış kodu gösterme](../debugger/media/debuggermap_debugoptions.png)
 
 - **Haritayı değiştirmek kodu etkiler mi?**
 
@@ -178,7 +178,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak izlemesi için 
 
    ![Çağrı yığını kod haritasını başkalarla paylaşma](../debugger/media/debuggermap_sharewithothers.png)
 
-- **Nasıl yaparım? yeni çağrı yığınlarını otomatik olarak eklemesini mi durdurabilirsiniz?**
+- **Nasıl yaparım? otomatik olarak yeni çağrı yığınları eklemesini durduracak mısınız?**
 
    Harita ![ araç &#45; kod haritasında çağrı yığınını otomatik olarak ](../debugger/media/debuggermap_automaticupdateicon.gif) göster'i seçin. Geçerli çağrı yığınını el ile haritaya eklemek için **Ctrl Shift tuşlarına**  +    +  **`** basın.
 

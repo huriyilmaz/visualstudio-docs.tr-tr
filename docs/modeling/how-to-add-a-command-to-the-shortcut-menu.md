@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 063c0a5cfcf5136e53750e4405e8619bf3154ee2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4b578c949b3b5121eb90b2c034766ea15ae6d096
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963308"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386572"
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>Nasıl yapılır: kısayol menüsüne komut ekleme
 
@@ -32,7 +32,7 @@ Kullanıcılarınızın DSL 'nize özgü görevler gerçekleştirebilmesi için,
 3. Komutu görünür hale getirmek ve komutun ne yapmasını istediğinizi tanımlamak için [CommandSet sınıfına Yöntemler yazın](#CommandSet) .
 
 > [!NOTE]
-> Ayrıca, kes, Yapıştır, Tümünü Seç ve CommandSet.cs içindeki yöntemleri geçersiz kılarak Yazdır gibi bazı mevcut komutların davranışını değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+> Ayrıca, kes, Yapıştır, Tümünü Seç ve CommandSet. cs içindeki yöntemleri geçersiz kılarak Yazdır gibi bazı mevcut komutların davranışını değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
 ## <a name="define-a-command-using-mef"></a>MEF kullanarak bir komut tanımlama
 
@@ -133,7 +133,7 @@ Aşağıdaki durumlarda bu konudaki yöntemini kullanın:
 ## <a name="update-the-package-version-in-packagett"></a><a name="version"></a> Package.tt 'de paket sürümünü güncelleştirme
  Bir komut eklediğinizde veya değiştirdiğinizde, `version` <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> etki alanına özgü dilin yeni sürümünü bırakmadan önce paket sınıfına uygulanan öğesinin parametresini güncelleştirin.
 
- Paket sınıfı oluşturulmuş bir dosyada tanımlandığından, Package.cs dosyasını oluşturan metin şablonu dosyasında özniteliğini güncelleştirin.
+ Paket sınıfı oluşturulmuş bir dosyada tanımlandığından, Package. cs dosyasını üreten metin şablonu dosyasındaki özniteliğini güncelleştirin.
 
 ### <a name="to-update-the-packagett-file"></a>Package.tt dosyasını güncelleştirmek için
 
@@ -153,7 +153,7 @@ Komut kümesi sınıfı öğesinden türetilir <xref:Microsoft.VisualStudio.Mode
 
 ### <a name="extend-the-commandset-class"></a>CommandSet sınıfını genişletme
 
-1. Çözüm Gezgini, DslPackage projesinde, GeneratedCode klasörünü açın ve ardından CommandSet.tt ' ın altında, oluşturulan dosya CommandSet.cs ' nı açın. Ad alanını ve burada tanımlanan ilk sınıfın adını unutmayın. Örneğin, şu şekilde karşılaşabilirsiniz:
+1. Çözüm Gezgini, DslPackage projesinde, GeneratedCode klasörünü açın ve ardından CommandSet.tt ' ın altında yazıp oluşturulan CommandSet. cs dosyasını açın. Ad alanını ve burada tanımlanan ilk sınıfın adını unutmayın. Örneğin, şu şekilde karşılaşabilirsiniz:
 
      `namespace Company.Language1`
 
@@ -182,7 +182,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Shell;
 ```
 
-Ad alanını ve sınıf adını oluşturulan CommandSet.cs eşleşecek şekilde ayarlayın:
+Ad alanını ve sınıf adını oluşturulan CommandSet. cs ile eşleşecek şekilde ayarlayın:
 
 ```csharp
 namespace Company.Language1 /* Make sure this is correct */
@@ -285,7 +285,7 @@ private void OnMenuMyContextMenuCommand(object sender, EventArgs e)
  Bir nesneden nesne ve bağlantı oluşturma hakkında daha fazla bilgi için, bkz. [nasıl yapılır: bir standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
 ### <a name="register-the-command"></a>Komutu Kaydet
- C# ' de, CommandSet. vsct 'ın semboller bölümünde yaptığınız GUID ve KIMLIK değerlerinin bildirimlerini yineleyin:
+ CommandSet.vsct'nin Semboller bölümünde yapılan GUID ve kimlik değerlerinin bildirimlerini C# ile tekrarlayın:
 
 ```csharp
 private Guid guidCustomMenuCmdSet =
@@ -294,12 +294,12 @@ private const int grpidMyMenuGroup = 0x01001;
 private const int cmdidMyContextMenuCommand = 1;
 ```
 
- **Commands. vsct** IÇINE eklediğiniz GUID değerini kullanın.
+ **Commands.vsct** içine eklenen GUID değerini kullanın.
 
 > [!NOTE]
-> VSCT dosyasının semboller bölümünü değiştirirseniz bu bildirimleri eşleşecek şekilde de değiştirmeniz gerekir. Ayrıca, Package.tt içindeki sürüm numarasını da artırmanız gerekir
+> VSCT dosyasının Semboller bölümünü değiştirirsanız, bu bildirimleri de eşleşmesi için değiştirebilirsiniz. Ayrıca, önceki sürümlerde sürüm numarasını Package.tt
 
- Menü komutlarınızı bu komut kümesinin bir parçası olarak kaydedin. `GetMenuCommands()` Diyagram başlatıldığında bir kez çağrılır:
+ Menü komutlarınızı bu komut kümesine kaydedebilirsiniz. `GetMenuCommands()` diyagram başlatıldıktan sonra çağrılır:
 
 ```csharp
 protected override IList<MenuCommand> GetMenuCommands()
@@ -318,52 +318,52 @@ protected override IList<MenuCommand> GetMenuCommands()
 }
 ```
 
-## <a name="test-the-command"></a>Komutu test etme
- DSL 'yi Visual Studio 'nun deneysel bir örneğinde derleyin ve çalıştırın. Komutun, belirttiğiniz durumlarda kısayol menüsünde görünmesi gerekir.
+## <a name="test-the-command"></a>Komutu Test
+ DSL'i deneysel bir Visual Studio. Komutun belirttiğiniz durumlarda kısayol menüsünde görünmesi gerekir.
 
-### <a name="to-exercise-the-command"></a>Komutu uygulamak için
+### <a name="to-exercise-the-command"></a>Komutu alıştırmak için
 
-1. **Çözüm Gezgini** araç çubuğunda **Tüm Şablonları Dönüştür**' e tıklayın.
+1. Uygulama araç **Çözüm Gezgini** Tüm Şablonları **Dönüştür'e tıklayın.**
 
-2. Çözümü yeniden derlemek için **F5** tuşuna basın ve deneysel derlemede alana özgü dilde hata ayıklamaya başlayın.
+2. Çözümü **yeniden oluşturmak için F5** tuşuna basın ve deneysel derlemede etki alanına özgü dilde hata ayıklamaya başlayabilirsiniz.
 
-3. Deneysel derlemede, örnek bir diyagram açın.
+3. Deneysel derlemede bir örnek diyagram açın.
 
-4. Komutun doğru şekilde etkinleştirildiğini veya devre dışı bırakıldığını ve seçili öğeye bağlı olarak uygun şekilde görüntülendiğini veya gizlendiğini doğrulamak için diyagramdaki çeşitli öğelere sağ tıklayın.
+4. Komutun doğru şekilde etkinleştirildiğinden veya devre dışı bırakılmıştır ve seçilen öğeye bağlı olarak uygun şekilde gösterildiğini veya gizlenir olduğunu doğrulamak için diyagramdaki çeşitli öğelere sağ tıklayın.
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
 **Komut menüde görünmüyor:**
 
-- Bu komut, DSL paketini yükleyene kadar yalnızca Visual Studio 'daki hata ayıklama örneklerinde görünür. Daha fazla bilgi için bkz. [Domain-Specific dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+- Dsl paketini yükleyene kadar komut yalnızca Visual Studio hata ayıklama örneklerde görünür. Daha fazla bilgi için, [bkz. Deploying Domain-Specific Language Solutions](msi-and-vsix-deployment-of-a-dsl.md).
 
-- Deneysel örneklerinizin bu DSL için doğru dosya adı uzantısına sahip olduğundan emin olun. Dosya adı uzantısını denetlemek için, Visual Studio 'nun ana örneğinde DslDefinition. dsl dosyasını açın. Ardından DSL Gezgini ' nde düzenleyici düğümüne sağ tıklayın ve ardından Özellikler ' e tıklayın. Özellikler penceresi FileExtension özelliğini inceleyin.
+- Deneysel örneğinizin bu DSL için doğru dosya adı uzantısına sahip olduğundan emin olun. Dosya adı uzantısını denetlemek için dosyanın ana örneğinde DslDefinition.dsl Visual Studio. Ardından DSL Gezgini'nde Düzenleyici düğümüne sağ tıklayın ve ardından Özellikler'e tıklayın. Dosya Özellikler penceresi FileExtension özelliğini incele.
 
-- [Paket sürüm numarasını artırdınız](#version)mı?
+- Paket sürüm [numarasını artır mısınız?](#version)
 
-- OnStatus yönteminizin başlangıcında bir kesme noktası ayarlayın. Diyagramın herhangi bir kısmına sağ tıkladığınızda bu, kesmesi gerekir.
+- OnStatus yönteminizin başında bir kesme noktası ayarlayın. Diyagramın herhangi bir parçasına sağ tıklarken kesmesi gerekir.
 
-**OnStatus yöntemi çağrılmadı**:
+**OnStatus yöntemi olarak çağrılmaz:**
 
-- CommandSet kodunuzda GUID 'lerin ve kimliklerin Commands. vsct 'ın semboller bölümünde olanlarla eşleştiğinden emin olun.
+- CommandSet kodundaki GUID'ler ve kimliklerin Commands.vsct'nin Semboller bölümündeki guid'lerle eşle olduğundan emin olun.
 
-- Commands. vsct içinde, her üst düğümdeki GUID ve KIMLIğIN doğru üst grubu tanımladığınızdan emin olun.
+- Commands.vsct içinde, her Üst düğümdeki GUID ve kimliğin doğru üst Grubu tanımlay olduğundan emin olun.
 
-- Bir Visual Studio komut isteminde devenv/rootsuffix exp/setupyazın. Sonra Visual Studio 'nun hata ayıklama örneğini yeniden başlatın.
+- Bir Visual Studio isteminde devenv /rootsuffix exp /setup yazın. Ardından uygulamanın hata ayıklama örneğini Visual Studio.
 
-- Komutun doğrulanması için OnStatus metodunu adım adım yapın. Görünür ve komut. Etkin özelliği true olarak ayarlandı.
+- Bu komutu doğrulamak için OnStatus yönteminde adım adım inin. Visible ve komutu. Etkin true olarak ayarlanır.
 
-**Yanlış menü metni görünüyor veya komut yanlış yerde görünüyor**:
+**Yanlış menü metni görüntülenir veya komut yanlış yerde görünür:**
 
-- GUID ve ID birleşiminin bu komuta özgü olduğundan emin olun.
+- GUID ve ID birleşiminin bu komut için benzersiz olduğundan emin olun.
 
 - Paketin önceki sürümlerini kaldırdığınızdan emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki alanına özgü dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
-- [Nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
+- [Etki alanına özgü bir dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md)
+- [Nasıl yapabilirsiniz: Standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
 - [Etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md)
-- [Örnek kod: devre şemaları](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [Örnek kod: Devre diyagramları](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

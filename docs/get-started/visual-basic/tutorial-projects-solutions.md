@@ -4,6 +4,7 @@ description: Visual Studio 'da Visual Basic geliştirici olarak bir çözüm ve 
 ms.date: 12/12/2018
 ms.technology: vs-ide-general
 ms.custom:
+- vs-acquisition
 - get-started
 - SEO-VS-2020
 ms.topic: tutorial
@@ -14,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f27973fcfb76d019cff31787b117f05f8266ad8
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 813a6ce10b0c5bcc385ac72ba6fdf99495c457ee
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308187"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384739"
 ---
 # <a name="learn-about-projects-and-solutions-using-visual-basic"></a>Visual Basic kullanarak projeler ve çözümler hakkında bilgi edinin
 
@@ -191,23 +192,23 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
 
 ::: moniker-end
 
-## <a name="add-a-project-reference"></a>Proje başvurusu Ekle
+## <a name="add-a-project-reference"></a>Proje başvurusu ekleme
 
-**Hızlı Tarih** projesindeki yöntemizi test etmek için yeni birim testi projesini kullanacağız, bu nedenle bu projeye bir başvuru eklememiz gerekiyor. Bu, iki proje arasında bir *derleme bağımlılığı* oluşturur. Bu, çözümü oluşturduğunuzda hızlı **Test** öncesinde hızlı bir **Tarih** oluşturulur.
+**QuickDate** projesinde yöntemimizi test etmek için yeni birim testi projesini kullanacak, bu nedenle bu projeye bir başvuru eklememiz gerekiyor. Bu, iki *proje arasında bir* derleme bağımlılığı oluşturur, yani çözümü derlemek için **QuickDate,** QuickTest'den önce **yerleşiktir.**
 
-1. **Hızlı test** projesinde **Başvurular** düğümünü seçin ve sağ tıklama ya da bağlam menüsünden **Başvuru Ekle**' yi seçin.
+1. QuickTest **projesinde** **Başvurular düğümünü** seçin ve sağ tıklama veya bağlam menüsünden Başvuru Ekle'yi **seçin.**
 
-   ![Başvuru menüsü Ekle](media/tutorial-projects-add-reference-vb.png)
+   ![Başvuru Ekle menüsü](media/tutorial-projects-add-reference-vb.png)
 
-   **Başvuru Yöneticisi** iletişim kutusu açılır.
+   Başvuru **Yöneticisi iletişim** kutusu açılır.
 
-1. Sol bölmede, **Projeler** ' i genişletin ve **çözüm**' ü seçin. Orta bölmede, **Quickdate** seçeneğinin yanındaki onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
+1. Sol bölmede Projeler'i genişletin **ve** Çözüm'i **seçin.** Orta bölmede **QuickDate'in** yanındaki onay kutusunu ve ardından Tamam **düğmesini** seçin.
 
-   **Quickdate** projesine bir başvuru eklenir.
+   **QuickDate projesine bir** başvuru eklenir.
 
-## <a name="add-test-code"></a>Test kodu ekle
+## <a name="add-test-code"></a>Test kodu ekleme
 
-1. Şimdi Visual Basic kod dosyasına test kodu ekleyeceğiz. *UnitTest1. vb* içeriğini aşağıdaki kodla değiştirin.
+1. Şimdi test kodunu yeni kod dosyasına Visual Basic ekleyebilirsiniz. *UnitTest1.vb içeriğini* aşağıdaki kodla değiştirin.
 
    ```vb
    <TestClass()> Public Class UnitTest1
@@ -219,9 +220,9 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
    End Class
    ```
 
-   Bazı kodlar altında kırmızı renkli bir çizgi görürsünüz. Test projesini **Quickdate** projesine bir [Friend derlemesi](/dotnet/visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies) yaparak bu hatayı düzeltireceğiz.
+   Bazı kodun altında kırmızı bir geçiş olduğunu görüyorsunuz. Test projesini **QuickDate** projesine arkadaş [derlemesi yaparak bu](/dotnet/visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies) hatayı düzelteceğiz.
 
-1. **Quickdate** projesine geri döndüğünüzde, zaten açık değilse *Takvim. vb* dosyasını açın ve Test projesindeki hatayı çözümlemek için aşağıdaki [Imports ifadesini](/dotnet/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type) ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini ekleyin.
+1. **QuickDate** projesine geri dönüp *Calendar.vb* dosyasını (henüz açık değilse) açın ve test projesinde hatayı çözmek için aşağıdaki [Imports](/dotnet/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type) deyimini ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini ekleyin.
 
    ```vb
    Imports System.Runtime.CompilerServices
@@ -229,39 +230,39 @@ Birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurmas
    <Assembly: InternalsVisibleTo("QuickTest")>
    ```
 
-   Kod dosyası şuna benzemelidir:
+   Kod dosyası aşağıdaki gibi görünüyor olmalı:
 
    ![Visual Basic kodu](media/tutorial-projects-code-vb.png)
 
 ## <a name="project-properties"></a>Proje özellikleri
 
-Bu özniteliği içeren *Calendar. vb* dosyasındaki satır, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> **hızlı test** projesinin derleme adına (dosya adı) başvurur. Derleme adı, proje adı ile her zaman aynı olamaz. Projenin derleme adını bulmak için, proje özelliklerini açın.
+*Calendar.vb dosyasında özniteliğini* içeren satır, QuickTest projesinin derleme adına <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> (dosya adı) başvurur.  Derleme adı her zaman proje adıyla aynı olmayacaktır. Projenin derleme adını bulmak için proje özelliklerini açın.
 
-1. **Çözüm Gezgini**' de **hızlı test** projesini seçin. Sağ tıklama veya bağlam menüsünde **Özellikler**' i seçin veya yalnızca **alt** + **ENTER** tuşuna basın. (Ayrıca **Çözüm Gezgini**, **projem** ' de çift tıklayabilirsiniz.)
+1. Bu **Çözüm Gezgini** **QuickTest projesini** seçin. Sağ tıklama veya bağlam menüsünde Özellikler'i seçin **veya** Yalnızca Alt Enter **tuşuna** + **basın.** (Ayrıca, Çözüm Gezgini **'de** Projem'e **çift tıklar.)**
 
-   Projenin *Özellik sayfaları* **uygulama** sekmesinde açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **Hızlı test** projesinin derleme adının gerçekten "QuickTest" olduğuna dikkat edin. Bunu değiştirmek isterseniz bunu yapmanız gerekir. Ardından, test projesi oluşturduğunuzda, sonuçta elde edilen ikili dosyanın adı *QuickTest.dll* ' den seçtiğiniz şeyle değişir.
+   Projenin *özellik* sayfaları Uygulama **sekmesinde** açılır. Özellik sayfaları, proje için çeşitli ayarlar içerir. **QuickTest** projesinin derleme adının gerçekten de "QuickTest" olduğunu fark ediyorum. Bunu değiştirmek istediyysanız, bunu burada yapacak oluruz. Ardından test projesini derlemeniz sonucunda elde edilen ikili dosyanın adı,QuickTest.dll *olarak* değişir.
 
    ![Proje özellikleri](../media/tutorial-projects-properties.png)
 
-1. Projenin özellik sayfalarındaki **derleme** ve **Ayarlar** gibi diğer sekmelerin bazılarını keşfedebilir. Bu sekmeler farklı proje türleri için farklıdır.
+1. Projenin özellik sayfalarının Derleme ve Ayarlar gibi diğer **sekmelerinden bazılarını** **keşfedin.** Bu sekmeler farklı proje türleri için farklıdır.
 
-## <a name="optional-run-the-test"></a>Seçim Testi çalıştırın
+## <a name="optional-run-the-test"></a>(İsteğe bağlı) Testi çalıştırma
 
-Birim testinizin çalıştığını denetlemek isterseniz,   >    >  menü çubuğundan **tüm testleri** Çalıştır test ' i seçin. **Test Gezgini** adlı bir pencere açılır ve **TestGetCurrentDate** testin başarılı olduğunu görmeniz gerekir.
+Birim testinizin çalışa çalışa çalışa bir kontrol etmek için menü **çubuğundan Test**  >    >  **Çalıştırması Tüm Testleri'i** seçin. Test Gezgini adlı **bir pencere** açılır ve **TestGetCurrentDate testinin başarılı** olduğunu görüyor olun.
 
-![Başarılı testi gösteren Visual Studio 'da metin Gezgini](../media/tutorial-projects-test-explorer.png)
+![Visual Studio Test Visual Studio Metin Gezgini](../media/tutorial-projects-test-explorer.png)
 
 > [!TIP]
-> **Test Gezgini** otomatik olarak açılmazsa,   >    >  menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçerek açın.
+> **Test Gezgini otomatik** olarak açılmazsa, menü çubuğundan **Test**  >  **Windows**  >  **Test Gezgini'ni** seçerek açın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio 'Yu daha fazla incelemek istiyorsanız [Visual Basic öğreticilerden](index.yml)birini izleyerek bir uygulama oluşturmayı düşünün.
+Uygulama hakkında daha fazla Visual Studio, öğreticilerde yer alan öğreticilerden birini Visual Basic [göz önünde bulundurabilirsiniz.](index.yml)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje ve çözüm oluşturma](../../ide/creating-solutions-and-projects.md)
+- [Projeler ve çözümler oluşturma](../../ide/creating-solutions-and-projects.md)
 - [Proje ve çözüm özelliklerini yönetme](../../ide/managing-project-and-solution-properties.md)
 - [Bir projedeki başvuruları yönetme](../../ide/managing-references-in-a-project.md)
 - [Visual Studio’da projeler veya çözümler olmadan kod geliştirme](../../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
-- [Visual Studio IDE 'ye Genel Bakış](../../get-started/visual-studio-ide.md)
+- [Visual Studio IDE'ye genel bakış](../../get-started/visual-studio-ide.md)

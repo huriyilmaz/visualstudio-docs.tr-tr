@@ -1,7 +1,7 @@
 ---
 title: C# hata ayıklama yapılandırması için proje ayarları | Microsoft Docs
 description: Visual Studio 'da bir C# hata ayıklama yapılandırması için proje ayarlarının, proje özellik sayfalarının hata ayıkla sekmesini ve Build sekmesini kullanarak nasıl değiştirileceğini anlayın.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: reference
 dev_langs:
@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1adc574241ba34f8170f1c8b1f38c198e3b6ff58
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3377187412f95e090c7403ddd6f898a18f6cec9f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99842701"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386509"
 ---
 # <a name="project-settings-for--c-debug-configurations"></a>C# hata ayıklama yapılandırması proje ayarları
 

@@ -1,7 +1,7 @@
 ---
 title: C# dilinde bir Görselleştirici Yazma | Microsoft Docs
 description: C# dilinde basit Görselleştirici oluşturmak için bir yönergeyi izleyin. Görselleştirici öğe şablonu kullanılmadan, ve ile gereken adımları gösterir.
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: f127d178a8103cfaa01c43970848f5772827440f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86123ece79f7bbde4f4f91fac657dcc235056c0b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884071"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385003"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>İzlenecek yol: C 'de Görselleştirici Yazma\#
 
@@ -50,14 +50,14 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
    Sınıf kitaplığını oluşturduktan sonra, burada tanımlanan sınıfları kullanabilmeniz için Microsoft.VisualStudio.DebuggerVisualizers.DLL bir başvuru eklemeniz gerekir. Ancak başvuruyu eklemeden önce, bazı sınıfları anlamlı adlara sahip olacak şekilde yeniden adlandırmanız gerekir.
 
-### <a name="to-rename-class1cs-and-add-microsoftvisualstudiodebuggervisualizers"></a>Class1.cs yeniden adlandırmak ve Microsoft. VisualStudio. Debuggervisualiciler eklemek için
+### <a name="to-rename-class1cs-and-add-microsoftvisualstudiodebuggervisualizers"></a>Class1. cs 'yi yeniden adlandırmak ve Microsoft. VisualStudio. Debuggervisualiciler eklemek için
 
-1. **Çözüm Gezgini**' de, Class1.cs ' a sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır** ' ı seçin.
+1. **Çözüm Gezgini**, Class1. cs öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır** ' ı seçin.
 
-2. Adı Class1.cs, DebuggerSide.cs gibi anlamlı bir şekilde değiştirin.
+2. Adı Class1. CS iken DebuggerSide. cs gibi anlamlı bir şekilde değiştirin.
 
    > [!NOTE]
-   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DebuggerSide.cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DebuggerSide. cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
 
 3. **Çözüm Gezgini**' de, **Başvurular** ' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle** ' yi seçin.
 
@@ -67,7 +67,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 5. **Tamam**'a tıklayın.
 
-6. DebuggerSide.cs içinde aşağıdaki `using` yönergelere ekleyin:
+6. DebuggerSide. cs dosyasında aşağıdaki `using` yönergelere ekleyin:
 
    ```csharp
    using Microsoft.VisualStudio.DebuggerVisualizers;
@@ -77,7 +77,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 ### <a name="to-inherit-from-dialogdebuggervisualizer"></a>DialogDebuggerVisualizer 'dan devralması için
 
-1. DebuggerSide.cs ' de, aşağıdaki kod satırına gidin:
+1. DebuggerSide. cs dosyasında aşağıdaki kod satırına gidin:
 
    ```csharp
    public class DebuggerSide
@@ -113,7 +113,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 3. **Tamam**'a tıklayın.
 
-4. DebuggerSide.cs içinde aşağıdaki `using` yönergelere ekleyin:
+4. DebuggerSide. cs dosyasında aşağıdaki `using` yönergelere ekleyin:
 
    ```csharp
    using System.Windows.Forms;
@@ -139,7 +139,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ayıklanan için görselleştirilecek türü (nesne kaynağı) belirtirsiniz <xref:System.Diagnostics.DebuggerVisualizerAttribute> . `Target`Özelliği görselleştirilecek türü ayarlar.
 
-1. Aşağıdaki öznitelik kodunu, `using` yönergelerden sonra ancak önce DebuggerSide.cs ' e ekleyin `namespace MyFirstVisualizer` :
+1. Aşağıdaki öznitelik kodunu, yönergelerden sonra, ancak önce DebuggerSide. cs öğesine ekleyin `using` `namespace MyFirstVisualizer` :
 
    ```csharp
    [assembly:System.Diagnostics.DebuggerVisualizer(
@@ -202,79 +202,79 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 ### <a name="to-add-code-to-mytestconsole"></a>MyTestConsole 'a kod eklemek için
 
-1. **Çözüm Gezgini**' de, program.cs ' a sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır** ' ı seçin.
+1. **Çözüm Gezgini**, program. cs öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır** ' ı seçin.
 
-2. Program.cs ' dan adı, TestConsole.cs gibi daha anlamlı bir değere düzenleyin.
+2. Program. cs içindeki adı TestConsole. cs gibi daha anlamlı bir değere düzenleyin.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] TestConsole.cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
+    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] TestConsole.cs dosyasındaki sınıf bildirimini otomatik olarak yeni dosya adıyla eş olacak şekilde değiştirir.
 
-3. TestConsole.cs ' de aşağıdaki kodu `using` yönergelere ekleyin:
+3. TestConsole.cs içinde yönergelerine aşağıdaki `using` kodu ekleyin:
 
    ```csharp
    using MyFirstVisualizer;
    ```
 
-4. Yönteminde `Main` aşağıdaki kodu ekleyin:
+4. yönteminde `Main` aşağıdaki kodu ekleyin:
 
    ```csharp
    String myString = "Hello, World";
    DebuggerSide.TestShowVisualizer(myString);
    ```
 
-   Şimdi ilk Görselleştiriciyi test etmeye hazırsınız.
+   Artık ilk görselleştiricinizi test etmeye hazır oluruz.
 
 ### <a name="to-test-the-visualizer"></a>Görselleştiriciyi test etmek için
 
-1. **Çözüm Gezgini**' de, **MyTestConsole** ' a sağ tıklayın ve kısayol menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.
+1. Bu **Çözüm Gezgini,** **MyTestConsole'a** sağ tıklayın ve kısayol menüsünde Başlangıç Projesi **Olarak** Ayarla'yı seçin.
 
-2. **Hata Ayıkla** menüsünde **Başlat**' ı seçin.
+2. Hata **Ayıkla menüsünde** Başlat'ı **seçin.**
 
-    Konsol uygulaması başlar ve Görselleştirici görüntülenir ve "Hello, World" dizesini görüntüler.
+    Konsol uygulaması başlatılır ve Görselleştirici görünür ve "Hello, World" dizesini görüntüler.
 
-   Tebrikler. İlk görselleştirmeniz oluşturmuş ve test edilmiştir.
+   Tebrikler. İlk görselleştiricinizi yeni ve test ettiniz.
 
-   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Yalnızca test bandı aracılığıyla çağırmak yerine Görselleştiriciyi kullanmak istiyorsanız, onu yüklemelisiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).
+   Görselleştiricinizi yalnızca test donanımından aramak yerine içinde kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklemeniz gerekir. Daha fazla bilgi için, [bkz. How to: Install a Visualizer](../debugger/how-to-install-a-visualizer.md).
 
 ::: moniker range="vs-2017"
 
-## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Görselleştiricisi öğesi şablonunu kullanarak Görselleştirici oluşturma
+## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Görselleştirici öğe şablonunu kullanarak görselleştirici oluşturma
 
-Şimdiye kadar, Bu anlatım el ile Görselleştirici oluşturmayı göstermiştir. Bu bir öğrenme alıştırması olarak gerçekleştirildi. Basit bir Görselleştirici nasıl çalıştığını bildiğinize göre, bir tane oluşturmak için daha kolay bir yol vardır: görselleştiricisi öğesi şablonu.
+Şimdiye kadar bu kılavuzda görselleştiriciyi el ile nasıl oluşturabilirsiniz? Bu bir öğrenme alıştırması olarak yapıldı. Artık basit bir görselleştiricinin nasıl çalıştığını biliyorsunuz. Görselleştirici öğesi şablonunu kullanarak bir görselleştirici oluşturmanın daha kolay bir yolu vardır.
 
 İlk olarak, yeni bir sınıf kitaplığı projesi oluşturmanız gerekir.
 
 ### <a name="to-create-a-new-class-library"></a>Yeni bir sınıf kitaplığı oluşturmak için
 
-1. **Dosya** menüsünde **Yeni > proje**' yi seçin.
+1. Dosya menüsünde **Yeni** dosya **projesi'> seçin.**
 
-2. **Yeni proje** iletişim kutusunda, **Visual C#** altında **.NET Framework**' yi seçin.
+2. Yeni Proje **iletişim kutusundaki** **Visual C#** altında, Yeni Proje'yi **.NET Framework.**
 
-3. Orta bölmede **sınıf kitaplığı**' nı seçin.
+3. Orta bölmede Sınıf **Kitaplığı'ı seçin.**
 
-4. **Ad** kutusuna, sınıf kitaplığı Için MySecondVisualizer gibi uygun bir ad yazın.
+4. Ad **kutusuna** sınıf kitaplığı için MySecondVisualizer gibi uygun bir ad yazın.
 
 5. **Tamam**'a tıklayın.
 
-   Şimdi, buna bir Görselleştirici öğesi ekleyebilirsiniz:
+   Şimdi görselleştirici öğesini ekebilirsiniz:
 
-### <a name="to-add-a-visualizer-item"></a>Bir Görselleştirici öğesi eklemek için
+### <a name="to-add-a-visualizer-item"></a>Görselleştirici öğesi eklemek için
 
-1. **Çözüm Gezgini**, Mysecondgörselleştirici öğesine sağ tıklayın.
+1. Bu **Çözüm Gezgini,** MySecondVisualizer'a sağ tıklayın.
 
-2. Kısayol menüsünde **Ekle** ' yi ve ardından **Yeni öğe**' yi seçin.
+2. Kısayol menüsünde Ekle'yi seçin **ve** ardından Yeni **Öğe'ye tıklayın.**
 
-3. **Yeni öğe Ekle** iletişim kutusunda, **Visual C# öğeleri** altında, **hata ayıklayıcı görselleştiricisi**' ı seçin.
+3. Yeni Öğe **Ekle iletişim kutusundaki** Visual C# Öğeleri altında Hata **Ayıklayıcı** **Görselleştiricisi'ne tıklayın.**
 
-4. **Ad** kutusuna, SecondVisualizer.cs gibi uygun bir ad yazın.
+4. Ad **kutusuna** SecondVisualizer.cs gibi uygun bir ad yazın.
 
 5. **Ekle**'ye tıklayın.
 
-   Bu, hepsi bu kadar. SecondVisualizer.cs dosyasına bakın ve şablonun sizin için eklediği kodu görüntüleyin. Devam edin ve kodu deneyin. Temel bilgileri öğrenmiş olduğunuza göre, size ait daha karmaşık ve yararlı Görselleştiriciler oluşturma yönteminiz vardır.
+   Tek gereken bu. SecondVisualizer.cs dosyasına bakın ve şablon tarafından sizin için eklenen kodu görüntüleniyor. Devam edin ve kodla denemeler yapalım. Temel bilgileri artık biliyorsunuz, artık kendi karmaşık ve kullanışlı görselleştiricilerinizi oluşturma yolundadır.
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görselleştiricisi mimarisi](../debugger/visualizer-architecture.md)
-- [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)
+- [Görselleştirici Mimarisi](../debugger/visualizer-architecture.md)
+- [Nasıl kurulur: Görselleştirici Yükleme](../debugger/how-to-install-a-visualizer.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)
