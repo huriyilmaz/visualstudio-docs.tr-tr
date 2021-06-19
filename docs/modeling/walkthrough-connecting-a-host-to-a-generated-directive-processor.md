@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: a815718f099b024708b86658e10fc0e85c087b4c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed51688e5b65e34d7067963dbf7b839b1f022768
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924128"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388327"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>İzlenecek yol: Konağı Oluşturulan bir Yönerge İşlemcisine Bağlama
 
@@ -110,7 +110,7 @@ Yönerge işlemcisini oluşturduktan sonra yönerge işlemcisini ve [Izlenecek y
 
     - Microsoft. VisualStudio. Textşablon. VSHost. 11.0
 
-4. Program.cs veya Module1. vb 'nin en üstünde aşağıdaki kod satırını ekleyin:
+4. Program. cs veya Module1. vb 'nin en üstünde aşağıdaki kod satırını ekleyin:
 
     ```csharp
     using Microsoft.Win32;

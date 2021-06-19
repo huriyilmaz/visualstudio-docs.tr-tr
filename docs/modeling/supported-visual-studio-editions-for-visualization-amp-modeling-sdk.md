@@ -1,43 +1,43 @@
 ---
-title: Görselleştirme ve SDK modelleme için desteklenen Visual Studio sürümleri
-description: Yazma ve dağıtım ortamlarında DSL araçlarıyla desteklenen Visual Studio sürümleri hakkında bilgi edinin.
+title: Görselleştirme Visual Studio Modelleme SDK'sı için Desteklenen Sürümler
+description: Yazma ve Visual Studio DSL Araçları ile desteklenen en yeni sürümler hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, supported Visual Studio editions
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 14c23df472361fdee0bc657eb277d3a6bef4be73
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b8435f37ebe68e954af135be0f513247191ea8a9
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899698"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386403"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>Görselleştirme ve Modelleme SDK’sı için Desteklenen Visual Studio Sürümleri
 
-Aşağıda, [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] yazma ve dağıtım ortamlarında ile desteklenen Visual Studio sürümleri listelenmiştir. Bu sürümler hakkında daha fazla bilgi için Microsoft Visual Studio [Geliştirici Merkezi](https://visualstudio.microsoft.com/)' ne bakın.
+Aşağıdakiler, Visual Studio ve dağıtım ortamlarında desteklenen Visual Studio [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] sürümleri listesidir. Bu sürümler hakkında daha fazla bilgi için bkz. Microsoft Visual Studio [Geliştirici Merkezi.](https://visualstudio.microsoft.com/)
 
-## <a name="authoring-edition"></a>Yazma sürümü
+## <a name="authoring-edition"></a>Authoring Edition
 
-Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
+DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olması gerekir:
 
 |Ürün|İndirme bağlantısı|
 |-|-|
 |Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/)|
 |Visual Studio SDK|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true)|
-|Visual Studio görselleştirme ve modelleme SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)|
+|Visual Studio Görselleştirme ve Modelleme SDK'sı|[http://go.microsoft.com/fwlink/?LinkID=186128](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)|
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="deployment-editions"></a>Dağıtım sürümleri
+## <a name="deployment-editions"></a>Dağıtım Sürümleri
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , oluşturduğunuz alana özgü dillerin dağıtımı için aşağıdaki konfigürasyonları destekler:
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , derlemeniz gereken etki alanına özgü dilleri dağıtmak için aşağıdaki yapılandırmaları destekler:
 
 - Visual Studio Enterprise
 
@@ -48,8 +48,8 @@ Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 - Visual Studio Kabuğu (yalıtılmış mod) yeniden dağıtılabilir paket yeniden dağıtılabilir paketi
 
 > [!NOTE]
-> Bir DSL 'yi bir kabuk ürününde çalışabilecek hale getirmek için, uzantı bildiriminde **desteklenen vs Edition** alanını ayarlamanız gerekir. Daha fazla bilgi için bkz. [Domain-Specific dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+> DSL'nin bir Kabuk ürününde çalıştırılaya kadar çalışması için Uzantı **Bildirimi'nin Desteklenen VS Edition** alanını ayarlamış olması gerekir. Daha fazla bilgi için, [bkz. Deploying Domain-Specific Language Solutions](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))
+- [Alana Özgü Dil Araçları Sözlüğü](/previous-versions/bb126564(v=vs.100))

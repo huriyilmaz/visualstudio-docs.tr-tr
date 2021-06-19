@@ -1,6 +1,6 @@
 ---
-title: DebuggerTypeProxy kullanarak özel tür görüntüle | Microsoft Docs
-description: Bir tür için proxy (tek başına) belirtmek için bir DebuggerTypeProxyAttribute örneğini kullanın, türün hata ayıklayıcı penceresinde nasıl görüntüleneceğini değiştirin.
+title: DebuggerTypeProxy kullanarak özel türü | Microsoft Docs
+description: Bir tür için proxy (bekleme) belirtmek için DebuggerTypeProxyAttribute örneğini kullanarak türün hata ayıklayıcı pencerelerde nasıl görüntülendiğinden emin olmak için kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,51 +19,51 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fdd0b67075a66663146d706d8f82e8c5d9f76e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 532850f8bb4ac6198481188c2a57a8db15a13873
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940546"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389286"
 ---
-# <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Hata ayıklayıcıya DebuggerTypeProxy özniteliği kullanarak hangi türün gösterileceğini söyleyin (C#, Visual Basic, C++/CLı)
+# <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>Hata ayıklayıcısına DebuggerTypeProxy Özniteliği (C#, Visual Basic, C++/CLI) kullanarak hangi türü göster
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> bir ara sunucu veya bir tür için tek başına belirtir ve türün hata ayıklayıcı penceresinde görüntülenme şeklini değiştirir. Proxy 'si olan bir değişkeni görüntülediğinizde, proxy, **ekranda** orijinal tür için temsil eder. Hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün ortak üyelerini görüntüler. Özel Üyeler gösterilmez.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> bir tür için ara sunucu veya beklemeyi belirtir ve türün hata ayıklayıcı pencerelerde görüntülenme yolunu değiştirir. Proxy'si olan bir değişkeni görüntüleniyorsa, ara sunucu, görüntüde özgün türün içinde **yer amaktadır.** Hata ayıklayıcısı değişken penceresi yalnızca ara sunucu türünün ortak üyelerini görüntüler. Özel üyeler görüntülenmez.
 
-Bu öznitelik, öğesine uygulanabilir:
+Bu öznitelik şu özelliklere uygulanabilir:
 
 - Yapılar
 - Sınıflar
 - Bütünleştirilmiş Kodlar
 
 > [!NOTE]
-> Yerel kod için bu öznitelik yalnızca C++/CLı kodunda desteklenir.
+> Yerel kod için bu öznitelik yalnızca C++/CLI kodunda de destekler.
 
-Bir tür proxy sınıfı, proxy 'nin yerini alacak türün bağımsız değişkenini alan bir oluşturucuya sahip olmalıdır. Hata ayıklayıcı, hedef türün bir değişkenini görüntülemesi gereken her seferinde tür proxy sınıfının yeni bir örneğini oluşturur. Bu performans açısından olumsuz etkileri olabilir. Sonuç olarak, Kurucuda kesinlikle gerekli olandan daha fazla iş yapmanız gerekmez.
+Tür proxy sınıfı, proxy'nin değiştirecek türde bir bağımsız değişken alan bir oluşturucuya sahip olması gerekir. Hata ayıklayıcısı, hedef türün bir değişkenini görüntülemesi gereken her durumda proxy sınıfının yeni bir örneğini oluşturur. Bunun performans üzerinde etkileri olabilir. Sonuç olarak, oluşturucuda kesinlikle gerekli olandan daha fazla iş yapmamalıdır.
 
-Performans cezalarını en aza indirmek için, ifade değerlendirici, tür Kullanıcı tarafından genişletilmediği takdirde, hata ayıklayıcı penceresindeki + simgesine tıklanmadığı veya ' nin kullanımı dışında, bu türün görüntüleme ara sunucusu üzerindeki öznitelikleri incelemez <xref:System.Diagnostics.DebuggerBrowsableAttribute> . Bu nedenle, öznitelikleri görüntüleme türüne yerleştirmemelisiniz. Öznitelikleri, görüntüleme türünün gövdesinde kullanılmalıdır ve kullanılması gerekir.
+Performans cezalarını en aza indirmek için ifade değerlendiricisi, tür, hata ayıklayıcı penceresinde + simgesine tıklayarak veya kullanarak genişletildikçe türün görünen proxy'sinde öznitelikleri <xref:System.Diagnostics.DebuggerBrowsableAttribute> incelemez. Bu nedenle, görüntüleme türünün kendisine öznitelikler yer değil. Öznitelikler, görüntüleme türünün gövdesinde kullanılabilir ve kullanılmalıdır.
 
-Tür proxy 'sinin, özniteliğin hedeflediği sınıf içinde özel bir iç içe sınıf olması iyi bir fikirdir. Bu, iç üyelere kolayca erişmesini sağlar.
+Tür ara sunucusunun özniteliğin hedefle olduğu sınıf içinde özel bir iç içe geçmiş sınıf olması iyi bir fikirdir. Bu, dahili üyelere kolayca erişmesine olanak sağlar.
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> devralınabilir, bu nedenle bir temel sınıfta tür ara sunucusu belirtilmişse türetilmiş sınıflar kendi tür ara sunucusunu belirtmedikleri takdirde, bu türetilmiş sınıflar için de geçerlidir.
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> devralınabilir; bu nedenle, bir temel sınıfta tür proxy'si belirtilirse, türetilmiş sınıflar kendi tür proxy'lerini belirtmediği sürece türetilen sınıflar için geçerli olur.
 
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute>Derleme düzeyinde kullanılırsa `Target` parametresi, proxy 'nin yerine geçecek türü belirtir.
+eğer <xref:System.Diagnostics.DebuggerTypeProxyAttribute> derleme düzeyinde kullanılırsa, `Target` parametresi proxy'nin değiştirecek türünü belirtir.
 
-Ve ile birlikte bu özniteliğin kullanımıyla ilgili bir örnek için <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerTypeProxyAttribute> , bkz.[DebuggerDisplay özniteliğini kullanma](../debugger/using-the-debuggerdisplay-attribute.md).
+Bu özniteliği ve ile birlikte kullanma örneği için <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerTypeProxyAttribute> [bkz. Using the DebuggerDisplay Attribute](../debugger/using-the-debuggerdisplay-attribute.md).
 
-## <a name="using-generics-with-debuggertypeproxy"></a>DebuggerTypeProxy ile genel türler kullanma
+## <a name="using-generics-with-debuggertypeproxy"></a>DebuggerTypeProxy ile Genel Türleri Kullanma
 
-Genel türler için destek sınırlıdır. C# için `DebuggerTypeProxy` yalnızca açık türleri destekler. Oluşturulmamış tür olarak da bilinen açık bir tür, tür parametrelerinin bağımsız değişkenleriyle örneklenmiş genel bir tür. Oluşturulan türler de denilen kapalı türler desteklenmez.
+Genel tür desteği sınırlıdır. C# için yalnızca `DebuggerTypeProxy` açık türleri destekler. Tanınmayan tür olarak da adlandırılan açık tür, tür parametreleri için bağımsız değişkenlerle örneği olmayan genel bir tür olur. Oluşturulmuş türler olarak da adlandırılan kapalı türler desteklenmiyor.
 
-Açık bir tür için sözdizimi şöyle görünür:
+Açık bir türün söz dizimi şöyledir:
 
 `Namespace.TypeName<,>`
 
-İçinde bir hedef olarak genel bir tür kullanırsanız `DebuggerTypeProxy` , bu söz dizimini kullanmanız gerekir. `DebuggerTypeProxy`Mekanizması sizin için tür parametrelerini algılar.
+içinde hedef olarak genel bir tür `DebuggerTypeProxy` kullanıyorsanız, bu söz dizimini kullansanız gerekir. Mekanizma, `DebuggerTypeProxy` tür parametrelerini sizin için çıkartır.
 
-C# ' de açık ve kapalı türler hakkında daha fazla bilgi için bkz. [C# dil belirtimi](/dotnet/csharp/language-reference/language-specification), Bölüm 20.5.2 açık ve kapalı türler.
+C# dilinde açık ve kapalı türler hakkında daha fazla bilgi için [C# Dil](/dotnet/csharp/language-reference/language-specification)Belirtimi , bölüm 20.5.2 Açık ve kapalı türler bölümüne bakın.
 
-Visual Basic açık tür sözdizimine sahip olmadığından, Visual Basic aynı şeyi yapamayacağınız. Bunun yerine, açık tür adının bir dize gösterimini kullanmanız gerekir.
+Visual Basic açık tür söz dizimi yoksa, aynı şeyi Visual Basic. Bunun yerine, açık tür adının dize gösterimini kullan gerekir.
 
 `"Namespace.TypeName'2"`
 

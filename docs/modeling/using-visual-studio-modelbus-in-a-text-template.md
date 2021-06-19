@@ -3,17 +3,17 @@ title: Metin şablonunda ModelBus kullanma
 description: Visual Studio ModelBus başvurularını içeren bir modeli okuyan metin şablonları yazarsanız, hedef modellere erişim başvurularını çözmeyi öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f65ece27122949fec006d73858c8c89483441f1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2afe8de66b109793a4e15e8320c3f498a08b25ec
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924375"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388392"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>Metin Şablonunda Visual Studio ModelBus'ı Kullanma
 

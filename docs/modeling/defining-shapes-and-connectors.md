@@ -4,17 +4,17 @@ description: Bir diyagram üzerinde, etki alanına özgü bir dilde (DSL) bilgi 
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 898bb0f3a923cfeac863b365e4746a63ccbc4c91
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 622ff598ac2471814e51b0e268c12d40e726fb98
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935332"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385753"
 ---
 # <a name="define-shapes-and-connectors"></a>Şekilleri ve bağlayıcıları tanımlama
 
@@ -36,7 +36,7 @@ Bu desenler zorlanmaz, ancak daha güçlü bir şekilde desteklenir. Bir DSL tas
 
 Aşağıdaki şekil türleri kullanılabilir:
 
-|Şekil türü|Description|
+|Şekil türü|Açıklama|
 |-|-|
 |Geometri şekli|Genel amaçlı dikdörtgen veya elips şekil. Şeklin sınırlarına göre belirli konumlarda metin ve simge dekoratlarını gösterebilirsiniz. Ayrıca, şekilleri geometri şekillerinin içinde iç içe geçirebilirsiniz.|
 |Bölme şekli|Bir UML sınıfı gibi üst bilgi ve bölmeleri içeren dikdörtgen. Her bölme, bir metin satırları listesi içerebilir.<br /><br /> Satırlar genellikle şeklin gösterdiği öğe altında gömülü öğeleri temsil eder. Bir örnek için, sınıf diyagramları çözüm şablonundan DSL oluşturun.|

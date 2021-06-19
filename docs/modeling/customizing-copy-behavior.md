@@ -1,61 +1,61 @@
 ---
 title: Kopyalama Davranışını Özelleştirme
-description: Visual Studio görselleştirme ve modelleme SDK 'Sı ile oluşturulan bir DSL 'de, kullanıcı öğeleri kopyaladığında ve yapıştırdığında ne olacağını değiştirebilirsiniz.
+description: Visual Studio Görselleştirme ve Modelleme SDK'sı ile oluşturulan bir DSL'de, kullanıcı öğeleri kopyalayıp yapıştırıyorsa ne olacağını değiştirebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 93a32ed2bb4f375e8938c9a3b9ff34c7af47e0e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2e5ffbc7dde0bd1274756d1721088b18ea6ec34
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935605"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389416"
 ---
 # <a name="customizing-copy-behavior"></a>Kopyalama Davranışını Özelleştirme
-Visual Studio görselleştirme ve modelleme SDK 'Sı ile oluşturulan, etki alanına özgü bir dilde (DSL), kullanıcı öğeleri kopyaladığında ve yapıştırdığında ne olacağını değiştirebilirsiniz.
+Visual Studio Görselleştirme ve Modelleme SDK'sı ile oluşturulan etki alanına özgü bir dilde (DSL), kullanıcı öğeleri kopyalayıp yapıştırıyorsa ne olacağını değiştirebilirsiniz.
 
-## <a name="standard-copy-and-paste-behavior"></a>Standart kopyalama ve yapıştırma davranışı
- Kopyalamayı etkinleştirmek için, DSL Gezgini 'ndeki **Düzenleyici** düğümünün **kopyalama Yapıştır özelliğini etkinleştir** ' i ayarlayın.
+## <a name="standard-copy-and-paste-behavior"></a>Standart Kopyalama ve Yapıştırma Davranışı
+ Kopyalamayı etkinleştirmek için DSL **Gezgini'nde Düzenleyici düğümünün** **Kopyala** Yapıştır özelliğini etkinleştirin.
 
- Varsayılan olarak, kullanıcı öğeleri panoya kopyaladığında aşağıdaki öğeler de kopyalanır:
+ Varsayılan olarak, kullanıcı öğeleri panoya kopyalayarak aşağıdaki öğeler de kopyalanır:
 
-- Seçili öğelerin gömülü alt öğeleri. (Diğer bir deyişle, kopyalanmış öğelerde kaynak olan ilişkiler katıştırma hedefi olan öğeler.)
+- Seçili öğelerin katıştırılmış alt öğeleri. (Yani, kopyalanan öğelerde kaynaklanan ekleme ilişkilerinin hedefleri olan öğeler.)
 
-- Kopyalanmış öğeler arasındaki ilişki bağlantıları.
+- Kopyalanan öğeler arasındaki ilişki bağlantıları.
 
-  Bu kural, kopyalanmış öğeler ve bağlantılara yinelemeli olarak uygulanır.
+  Bu kural kopyalanan öğelere ve bağlantılara tekrar tekrar uygulanır.
 
-  ![Kopyalanmış ve yapıştırılan öğeler](../modeling/media/dslcopypastedefault.png)
+  ![Kopyalanan ve yapıştıran öğeler](../modeling/media/dslcopypastedefault.png)
 
-  Kopyalanmış öğeler ve bağlantılar, <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> Pano 'ya yerleştirilmiş bir (EGP) içinde serileştirilir ve saklanır.
+  Kopyalanan öğeler ve bağlantılar seri hale getirilecek ve panoya yerleştirilen <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> bir (EGP) içinde depolanır.
 
-  Kopyalanmış öğelerin bir görüntüsü de Pano 'ya yerleştirilir. Bu, kullanıcının Word gibi başka uygulamalara yapıştırmasına olanak tanır.
+  Kopyalanan öğelerin bir görüntüsü de panoya yerleştirilir. Bu, kullanıcının Word gibi diğer uygulamalara yapıştırmalarına olanak sağlar.
 
-  Kullanıcı, kopyalanmış öğeleri DSL tanımına göre öğeleri kabul edebilecek bir hedefe yapıştırabilir. Örneğin, bileşenler çözüm şablonundan oluşturulan bir DSL 'de, Kullanıcı, bağlantı noktalarını bileşenlere yapıştıramazsınız, ancak diyagram üzerine yapıştırabilir; ve bileşenleri diyagrama kopyalayabilir, ancak diğer bileşenlere yapıştıramazsınız.
+  Kullanıcı, kopyalanan öğeleri DSL Tanımına göre kabul eden bir hedefe yapıştırılabilir. Örneğin, bileşen çözümü şablonundan oluşturulan bir DSL'de kullanıcı bağlantı noktalarını bileşenlere yapıştırabilirsiniz ancak diyagrama yapıştırabilirsiniz; ve bileşenleri diyagrama yapıştırabilirsiniz, ancak diğer bileşenlere yapıştırabilirsiniz.
 
-## <a name="customizing-copy-and-paste-behavior"></a>Kopyalama ve yapıştırma davranışını özelleştirme
- Program kodunu kullanarak modeli özelleştirme hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
+## <a name="customizing-copy-and-paste-behavior"></a>Kopyalama ve Yapıştırma Davranışını Özelleştirme
+ Program kodunu kullanarak modeli özelleştirme hakkında daha fazla bilgi için bkz. Program Kodunda [Modelde Gezinme ve Güncelleştirme.](../modeling/navigating-and-updating-a-model-in-program-code.md)
 
- **Kopyalama, kesme ve yapıştırmayı etkinleştirin veya devre dışı bırakın.**
-DSL Gezgini ' nde **Düzenleyici** düğümünün **kopyalama Yapıştır özelliğini etkinleştir** ' i ayarlayın.
+ **Kopyalama, kesme ve yapıştırmayı etkinleştirme veya devre dışı bırakma.**
+DSL Gezgini'nde Düzenleyici **düğümünün Kopyala Yapıştır** özelliğini **etkinleştirin.**
 
- **Bağlantıları aynı hedefe kopyalayın.** Örneğin, aynı konu öğesine bağlanmış bir kopyalanmış yorum kutusu eklemek için.
-Rolü **yalnızca bağlantıya yaymak** Için rolün **yayan Copy** özelliğini ayarlayın. Daha fazla bilgi için bkz. [bağlantı kopyalama davranışını özelleştirme](#customizeLinks).
+ **Bağlantıları aynı hedefe kopyalayın.** Örneğin, kopyalanan bir açıklama kutusunun aynı konu öğesine bağlı olması.
+Rolün **Yayma Kopyalama özelliğini** Yalnızca bağlantısına kopyala olarak **ayarlayın.** Daha fazla bilgi için [bkz. Bağlantı Kopyalama Davranışını Özelleştirme.](#customizeLinks)
 
- Bağlantılı öğeleri kopyala. Örneğin, yeni bir öğesi kopyaladığınızda, bağlantılı açıklama kutularının kopyaları da yapılır.
-**Kopyayı bağlantı ve karşıt rol oyuncusuna yaymak** Için rolün **yayan Copy** özelliğini ayarlayın. Daha fazla bilgi için bkz. [bağlantı kopyalama davranışını özelleştirme](#customizeLinks).
+ Bağlantılı öğeleri kopyalayın. Örneğin, yeni bir öğeyi kopyalayıp bağlantılı açıklama kutularının kopyaları da yapılır.
+Rolün **Yayma Kopyalama özelliğini,** kopyalamayı bağlantıya yay ve karşıt rol **oynatıcısı olarak ayarlayın.** Daha fazla bilgi için [bkz. Bağlantı Kopyalama Davranışını Özelleştirme.](#customizeLinks)
 
- **Öğeleri kopyalayıp yapıştırarak hızla çoğaltın.** Normal olarak, yeni kopyaladığınız öğe hala seçilidir ve aynı öğe türünü üzerine yapıştıramazsınız.
-Etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve birleştirme Işlemini üst sınıfa ilet olarak ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
+ **Öğeleri kopyalayıp yapıştırarak hızla yineler.** Normalde, az önce kopyalanan öğe seçili durumdadır ve öğeye aynı öğe türünü yapıştıramazsiniz.
+Etki alanı sınıfına bir Öğe Birleştirme Yönergesi ekleyin ve birleştirmeleri üst sınıfa iletilecek şekilde ayarlayın. Bu, sürükleme işlemleri üzerinde de aynı etkiye sahip olur. Daha fazla bilgi için [bkz. Öğe Oluşturma ve Taşımayı Özelleştirme.](../modeling/customizing-element-creation-and-movement.md)
 
- \- veya
+ \- veya -
 
- Öğeleri geçersiz kılarak yapıştırarak önce diyagramı seçin `ClipboardCommandSet.ProcessOnPasteCommand()` . Bu kodu DslPackage projesindeki özel bir dosyaya ekleyin:
+ Öğeleri yapıştırarak, öğesini geçersiz kılmadan önce diyagramı `ClipboardCommandSet.ProcessOnPasteCommand()` seçin. DslPackage projesinde bu kodu özel bir dosyaya ekleyin:
 
 ```csharp
 namespace Company.MyDsl {
@@ -74,23 +74,23 @@ partial class MyDslClipboardCommandSet
 } }
 ```
 
- **Kullanıcı seçili bir hedefi üzerine yapıştırdığı zaman ek bağlantılar oluştur.** Örneğin, bir açıklama kutusu bir öğeye yapıştırıldığında aralarında bir bağlantı yapılır.
-Hedef etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve bağlantı ekleyerek birleştirme işlemini işleyecek şekilde ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
+ **Kullanıcı seçili bir hedefe yapıştırıyorken ek bağlantılar oluşturun.** Örneğin, bir öğeye bir açıklama kutusu yapıştırıldıkları zaman, aralarında bir bağlantı yapılır.
+Hedef etki alanı sınıfına bir Öğe Birleştirme Yönergesi ekleyin ve bağlantıları ekleyerek birleştirme işlemini işley için ayarlayın. Bu, sürükleme işlemleri üzerinde de aynı etkiye sahip olur. Daha fazla bilgi için [bkz. Öğe Oluşturma ve Taşımayı Özelleştirme.](../modeling/customizing-element-creation-and-movement.md)
 
- \- veya
+ \- veya -
 
- `ClipboardCommandSet.ProcessOnPasteCommand()`Temel yöntemi çağırdıktan sonra ek bağlantılar oluşturmak için geçersiz kılın.
+ Temel `ClipboardCommandSet.ProcessOnPasteCommand()` yöntem çağrıldikten sonra ek bağlantıları oluşturmak için geçersiz kılın.
 
- **Öğelerin dış uygulamalara kopyalanabilen biçimleri** (örneğin, bit eşlem biçimine bir kenarlık eklemek) özelleştirin.
- `ClipboardCommandSet.ProcessOnMenuCopyCommand()` DslPackage projesinde MyDSL 'yi geçersiz kılın.
+ **Öğelerin dış uygulamalara kopyalandırılma** biçimlerini özelleştirin; örneğin bit eşlem formuna kenarlık eklemek için.
+DslPackage *projesinde* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` MyDsl'i geçersiz kılın.
 
- **Öğelerin Pano 'ya kopyalama komutu tarafından nasıl kopyalanacağını özelleştirin, ancak bir sürükleme işleminde değildir.**
- `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` DslPackage projesinde MyDSL 'yi geçersiz kılın.
+ **Öğelerin kopyalama komutuyla panoya nasıl kopyalanır, ancak sürüklenme işlemi içinde nasıl kopyalanmaysa da özelleştirin.**
+DslPackage *projesinde* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` MyDsl'i geçersiz kılın.
 
- **Kopyala ve Yapıştır ile şekil yerleşimini koruyun.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)örnekle gösterilmiştir.
+ **Kopyala ve yapıştır aracılığıyla şekil düzenini koruma.**
+Kullanıcı birden çok şekil kopyalasa, yapıştırıldıklarında göreli konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: Bağlantı Hattı Diyagramları örneği' örneğinde gösterildiği gibi.](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
- Bu etkiyi elde etmek için şekilleri ve bağlayıcıları kopyalanmış ElementGroupPrototype öğesine ekleyin. Geçersiz kılınacak en kullanışlı Yöntem ElementOperations. CreateElementGroupPrototype (). Bunu yapmak için DSL projesine aşağıdaki kodu ekleyin:
+ Bu etkiyi elde etmek için kopyalanan ElementGroupPrototype öğesine şekilleri ve bağlayıcıları ekleyin. Geçersiz kılmanın en kullanışlı yöntemi ElementOperations.CreateElementGroupPrototype() yöntemidir. Bunu yapmak için Dsl projesine aşağıdaki kodu ekleyin:
 
 ```csharp
 
@@ -143,10 +143,10 @@ partial class MyDslDiagram // EDIT NAME
 }
 ```
 
- **Şekilleri seçili bir konuma (örneğin, geçerli imleç konumu) yapıştırın.**
-Kullanıcı birden çok şekli kopyalarken, bu kişilerin yapıştırıldığı zaman ilgili konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: devre şemaları örneğindeki](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)örnekle gösterilmiştir.
+ **Şekilleri, geçerli imleç konumu gibi seçili bir konuma yapıştırın.**
+Kullanıcı birden çok şekil kopyalasa, yapıştırıldıklarında göreli konumlarını koruyabilirsiniz. Bu teknik, [VMSDK: Bağlantı Hattı Diyagramları örneği' örneğinde gösterildiği gibi.](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
- Bu etkiyi elde etmek için, ' `ClipboardCommandSet.ProcessOnMenuPasteCommand()` nin konuma özgü sürümünü kullanmak üzere geçersiz kılın `ElementOperations.Merge()` . Bunu yapmak için DslPackage projesine aşağıdaki kodu ekleyin:
+ Bu etkiyi elde etmek için, `ClipboardCommandSet.ProcessOnMenuPasteCommand()` konumunun konuma özgü sürümünü kullanmak üzere geçersiz `ElementOperations.Merge()` kılın. Bunu yapmak için DslPackage projesine aşağıdaki kodu ekleyin:
 
 ```csharp
 
@@ -210,45 +210,45 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   }
 ```
 
- **Kullanıcıların öğeleri sürükleyip bırakması için izin verin.**
-Bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md).
+ **Kullanıcının öğeleri sürükleyip bırakmasına izin ver.**
+Bkz. [Nasıl: Sürükle ve Bırak İşleyicisi Ekleme.](../modeling/how-to-add-a-drag-and-drop-handler.md)
 
-## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a> Bağlantı kopyalama davranışını özelleştirme
- Kullanıcı bir öğeyi kopyaladığında, standart davranış herhangi bir katıştırılmış öğenin de kopyalanmasında olur. Standart kopyalama davranışını değiştirebilirsiniz. DSL tanımında bir ilişkinin bir tarafındaki bir rolü seçin Özellikler penceresi **yayar kopya** değerini ayarlayın.
+## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a> Bağlantı Kopyalama Davranışını Özelleştirme
+ Kullanıcı bir öğeyi kopyalasa, standart davranış tüm ekli öğelerin de kopyalanmış olmasıdır. Standart kopyalama davranışını değiştirebilirsiniz. DSL Tanımı'nda, ilişkinin bir tarafındaki rolü seçin ve Özellikler penceresi **Yay değerini** ayarlayın.
 
- ![Etki alanı rolünün Copy özelliğini yayar](../modeling/media/dslpropagatescopy.png)
+ ![Etki alanı rolünün Copy özelliğini yayın](../modeling/media/dslpropagatescopy.png)
 
  Üç değer vardır:
 
-- Kopyayı yayma
+- Kopyalamayı yayma
 
-- Kopyayı yalnızca bağlantıya yay-grup yapıştırılırken, bu bağlantının yeni kopyası bağlantının diğer ucundaki var olan öğeye başvuracaktır.
+- Kopyalamayı yalnızca bağlantıya yay - Grup yapıştırıldıksa, bu bağlantının yeni kopyası bağlantının diğer ucundaki mevcut öğeye başvurur.
 
-- Kopyayı bağlantıya ve ters rol oyununa yay-kopyalanmış Grup, bağlantının diğer ucundaki öğesinin bir kopyasını içerir.
+- Bağlantıyı kopyalamayı ve karşıt rol oynatıcısını yay - kopyalanan grup, bağlantının diğer ucunda öğenin bir kopyasını içerir.
 
   ![PropagateCopyToLinkOnly ile kopyalamanın etkisi](../modeling/media/dslpropagatecopy.png)
 
-  Yaptığınız değişiklikler hem öğeleri hem de kopyalanmış görüntüyü etkiler.
+  Yaptığınız değişiklikler hem öğeleri hem de kopyalanan görüntüyü etkiler.
 
-## <a name="programming-copy-and-paste-behavior"></a>Kopyalama ve yapıştırma davranışını programlama
- Bir DSL 'nin nesnelerin kopyalama, yapıştırma, oluşturma ve silme gibi birçok yönü, diyagrama bağlanmış bir örneği tarafından yönetilir <xref:Microsoft.VisualStudio.Modeling.ElementOperations> . Kendi sınıfınızı türeterek <xref:Microsoft.VisualStudio.Modeling.ElementOperations> ve diyagram sınıfınızın özelliğini geçersiz kılarak, DSL davranışını değiştirebilirsiniz <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> .
+## <a name="programming-copy-and-paste-behavior"></a>Programlama Kopyalama ve Yapıştırma Davranışı
+ DSL'nin nesne kopyalama, yapıştırma, oluşturma ve silme ile ilgili davranışının birçok yönü diyagramla bir bağlantısı olan örneği <xref:Microsoft.VisualStudio.Modeling.ElementOperations> tarafından yönetilir. Kendi sınıfını türeterek ve diyagram sınıfınıza ait özelliğini geçersiz karak <xref:Microsoft.VisualStudio.Modeling.ElementOperations> <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> DSL'nizin davranışını değiştirebilirsiniz.
 
 > [!TIP]
-> Program kodunu kullanarak modeli özelleştirme hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
+> Program kodunu kullanarak modeli özelleştirme hakkında daha fazla bilgi için bkz. Program Kodunda [Modelde Gezinme ve Güncelleştirme.](../modeling/navigating-and-updating-a-model-in-program-code.md)
 
- ![Kopyalama işlemi için sıralı diyagram](../modeling/media/dslcopyseqdiagram.png)
+ ![Kopyalama işlemi için sıra diyagramı](../modeling/media/dslcopyseqdiagram.png)
 
- ![Yapıştırma işleminin sıralı diyagramı](../modeling/media/dslpasteseqdiagram.png)
+ ![Yapıştırma işlemi dizisi diyagramı](../modeling/media/dslpasteseqdiagram.png)
 
-#### <a name="to-define-your-own-elementoperations"></a>Kendi ElementOperations 'ı tanımlamak için
+#### <a name="to-define-your-own-elementoperations"></a>Kendi ElementOperations'larınızı tanımlamak için
 
-1. DSL projenizdeki yeni bir dosyada, öğesinden türetilmiş bir sınıf oluşturun <xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations> .
+1. DSL projenizin yeni dosyasından türetilen bir sınıf <xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations> oluşturun.
 
-2. Diyagram sınıfınız için kısmi bir sınıf tanımı ekleyin. Bu sınıfın adı **Dsl\GeneratedCode\Diagrams.cs** içinde bulunabilir.
+2. Diyagram sınıfınız için kısmi bir sınıf tanımı ekleyin. Bu sınıfın adı **Dsl\GeneratedCode\Diagrams.cs konumunda bulunabilir.**
 
-    Diyagram sınıfında,  <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> ElementOperations alt sınıfınızın bir örneğini döndürmek için geçersiz kılın. Her çağrıda aynı örneği döndürmelidir.
+    Diyagram  <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> sınıfında, ElementOperations alt sınıfı örneğinizi geri dönmek için geçersiz kılın. Her çağrıda aynı örneği geri dönmelisiniz.
 
-   Bu kodu DslPackage projesindeki özel bir kod dosyasına ekleyin:
+   Bu kodu DslPackage projesinde özel bir kod dosyasına ekleyin:
 
 ```csharp
 
@@ -282,18 +282,18 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 ```
 
 ## <a name="receiving-items-dragged-from-other-models"></a>Diğer modellerden sürüklenen öğeleri alma
- ElementOperations, kopyalama, taşıma, silme ve sürükleme ve bırakma davranışlarını tanımlamak için de kullanılabilir. ElementOperations kullanmanın bir sunumu olarak, burada verilen örnek, özel sürükle ve bırak davranışını tanımlar. Ancak, bu amaçla, [nasıl yapılır: daha Genişletilebilir olan bir sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)bölümünde açıklanan alternatif yaklaşımı göz önünde bulundurabilir.
+ ElementOperations kopyalama, taşıma, silme ve sürükleyip bırakma davranışını tanımlamak için de kullanılabilir. ElementOperations kullanımının bir gösterimi olarak, burada verilen örnek özel sürükle ve bırak davranışını tanımlar. Ancak bu amaçla, Daha genişletilebilir olan Sürükle [ve](../modeling/how-to-add-a-drag-and-drop-handler.md)Bırak İşleyicisi Ekleme konusunda açıklanan alternatif yaklaşımı göz önünde bulunduramazsınız.
 
- ElementOperations sınıfında iki yöntem tanımlayın:
+ ElementOperations sınıfınıza iki yöntem tanımlayın:
 
-- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` Kaynak öğenin hedef şeklinin, bağlayıcının veya diyagramın üzerine sürüklenemeyeceğini belirler.
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` kaynak öğenin hedef şekle, bağlayıcıya veya diyagrama sürüklenip sürüklenemediğini belirler.
 
-- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` kaynak öğeyi hedefle birleştiren.
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` , kaynak öğeyi hedefte birleştirir.
 
-### <a name="canmerge"></a>CanMerge ()
- `CanMerge()` fare diyagramda gezindiğinde kullanıcıya verilmesi gereken geri bildirimleri belirlemekte çağrılır. Yöntemine yönelik parametreler, fare üzerine gelindiğinde bulunan öğesidir ve sürükleme işleminin gerçekleştirildiği kaynak hakkındaki verileri içerir. Kullanıcı ekran üzerinde herhangi bir yerden sürükleyebilirsiniz. Bu nedenle, kaynak nesne birçok farklı türde olabilir ve farklı biçimlerde seri hale getirilebilir. Kaynak bir DSL veya UML modelli ise, veri parametresi bir ' ın serileştirmesi olur <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> . Sürükleme, kopyalama ve araç kutusu işlemleri, model parçalarını göstermek için Elementgroupprototipleri kullanır.
+### <a name="canmerge"></a>CanMerge()
+ `CanMerge()` , kullanıcıya fare diyagramda hareket etti olarak verilmesi gereken geri bildirimi belirlemek için çağrılır. yöntemine yönelik parametreler, farenin üzerine gelinen öğe ve sürükleme işlemi gerçekleştirilen kaynakla ilgili verilerdir. Kullanıcı, ekranın herhangi bir yerinden sürükleyebilirsiniz. Bu nedenle, kaynak nesne birçok farklı türde olabilir ve farklı biçimlerde seri hale getirilebilir. Kaynak bir DSL veya UML modeli ise veri parametresi bir <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> serileştirmedir. Sürükleme, kopyalama ve araç kutusu işlemleri, model parçalarını temsil etmek için ElementGroupPrototypes kullanır.
 
- Öğe grubu prototipi, herhangi bir sayıda öğe ve bağlantı içerebilir. Öğe türleri, GUID 'Leri ile tanımlanabilir. GUID, temeldeki model öğesi değil, sürüklenen şekildir. Aşağıdaki örnekte, `CanMerge()` UML diyagramından bir sınıf şekli bu diyagrama sürüklendiğinde true değeri döndürür.
+ Bir Öğe Grubu Prototipi herhangi bir sayıda öğe ve bağlantı içerebilir. Öğe türleri GUID'leri tarafından belirlenebilirsiniz. GUID, temel alınan model öğesi değil sürüklenen şekildedir. Aşağıdaki örnekte, `CanMerge()` UML diyagramından bir sınıf şekli bu diyagrama sürüklenmişse true döndürür.
 
 ```csharp
 public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDataObject data)
@@ -310,8 +310,8 @@ public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDa
  }
 ```
 
-## <a name="mergeelementgroupprototype"></a>MergeElementGroupPrototype ()
- Bu yöntem, Kullanıcı bir öğeyi diyagrama, şekle veya bağlayıcıya düştüğünde çağrılır. Sürüklenen içeriği hedef öğe içine birleştirmelidir. Bu örnekte kod, hedef ve prototip türlerinin birleşimini tanıyıp tanımadığını belirler; Bu durumda, yöntemi sürüklenen öğeleri modele eklenmesi gereken öğelerin prototipine dönüştürür. Taban yöntemi, dönüştürülmüş veya Dönüştürülmeyen öğelerden birini birleştirmek için çağırılır.
+## <a name="mergeelementgroupprototype"></a>MergeElementGroupPrototype()
+ Kullanıcı bir öğeyi diyagrama, şekle veya bağlayıcıya düşürünca bu yöntem çağrılır. Sürüklenen içeriği hedef öğede birleştirmesi gerekir. Bu örnekte kod, hedef ve prototip türlerinin birleşimini tanıyıp tanımadığını belirler; öyleyse, yöntemi sürüklenen öğeleri modele eklenecek öğelerin bir prototipi içine dönüştürür. Temel yöntem, dönüştürülmüş veya dönüştürülemeyen öğelerden birini birleştirmeyi gerçekleştirmek için çağrılır.
 
 ```csharp
 public override void MergeElementGroupPrototype(ModelElement targetShape, ElementGroupPrototype sourcePrototype)
@@ -327,7 +327,7 @@ public override void MergeElementGroupPrototype(ModelElement targetShape, Elemen
 }
 ```
 
- Bu örnek UML sınıf öğeleriyle bir UML sınıf diyagramından sürüklenen ile ilgilidir. DSL, UML sınıflarını doğrudan depolamak için tasarlanmamıştır, ancak bunun yerine, her sürüklenen UML sınıfı için bir DSL öğesi oluşturacağız. Bu, örneğin DSL bir örnek diyagramı ise yararlı olabilir. Kullanıcı bu sınıfların örneklerini oluşturmak için sınıfları diyagram üzerine sürükleyebilir.
+ Bu örnek, UML sınıf diyagramından sürüklenen UML sınıf öğeleriyle ilgilidir. DSL, UML sınıflarını doğrudan depolamak için tasarlanmamıştır, ancak bunun yerine sürüklenen her UML sınıfı için bir DSL öğesi oluşturabilirsiniz. Bu, örneğin DSL bir örnek diyagramı ise yararlı olacaktır. Kullanıcı, bu sınıfların örneklerini oluşturmak için sınıfları diyagrama sürükleyebilirsiniz.
 
 ```csharp
 
@@ -364,12 +364,12 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 }
 ```
 
-## <a name="standard-copy-behavior"></a>Standart kopyalama davranışı
- Bu bölümdeki kodda kopyalama davranışını değiştirmek için geçersiz kılabileceğiniz Yöntemler gösterilmektedir. Kendi özelleştirmelerinizi nasıl elde etmek için bu bölümde, kopyalama işlemine dahil olan yöntemleri geçersiz kılan, ancak standart davranışı değiştirmediğinden oluşan kod gösterilmektedir.
+## <a name="standard-copy-behavior"></a>Standart Kopyalama Davranışı
+ Bu bölümdeki kod, kopyalama davranışını değiştirmek için geçersiz kılabilirsiniz yöntemleri gösterir. Kendi özelleştirmelerinizi nasıl elde etmek istediğinize yardımcı olmak için bu bölümde kopyalamayla ilgili yöntemleri geçersiz k kullanılan ancak standart davranışı değiştirmeyen kodlar yer almaktadır.
 
- Kullanıcı CTRL + C tuşlarına bastığında veya Kopyala menü komutunu kullandığında, yöntemi <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> çağrılır. Bu, **Dslpackage\generated Code\CommandSet.cs**' de nasıl ayarlandığını görebilirsiniz. Komutların nasıl ayarlandığı hakkında daha fazla bilgi için bkz. [nasıl yapılır: kısayol menüsüne komut ekleme](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
+ Kullanıcı CTRL+C tuşlarına bassa veya Kopyala menü komutunu kullandığında <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> yöntemi çağrılır. Bunun **DslPackage\Generated Code\CommandSet.cs** konumunda nasıl ayar olduğunu görüyorsunuz. Komutların nasıl ayar olduğu hakkında daha fazla bilgi için [bkz. Nasıl kullanılır: Kısayol Menüsüne Komut Ekleme.](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
 
- DslPackage projesine *MyDSL* kısmi sınıf tanımını ekleyerek Processonmenucopykomutunu geçersiz kılabilirsiniz `ClipboardCommandSet` .
+ DslPackage projesine *MyDsl'nin* kısmi sınıf tanımını ekleyerek ProcessOnMenuCopyCommand'i `ClipboardCommandSet` geçersiz kılılabilir.
 
 ```csharp
 using System.Collections.Generic;
@@ -434,7 +434,7 @@ protected override void CopyModelElementsIntoElementGroupPrototype(IDataObject d
 }
 ```
 
- Her diyagramda tek bir ElementOperations örneği bulunur. Kendi türelerinizi sağlayabilirsiniz. DSL projesine yerleştirilebilecek bu dosya, geçersiz kılacak kodla aynı şekilde davranır:
+ Her diyagramda ElementOperations'ın tek bir örneği vardır. Kendi türevini de s tedariki de SSS'ye 2019'da da 2 DSL projesine yer açılabilir bu dosya, geçersiz kılabilir kodla aynı şekilde davranır:
 
 ```csharp
 using System;
@@ -558,6 +558,6 @@ namespace Company.MyDsl
 
 - [Öğe Oluşturma ve Hareketini Özelleştirme](../modeling/customizing-element-creation-and-movement.md)
 - [Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [Örnek: VMSDK devre şemaları örneği](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [Örnek: VMSDK Bağlantı Hattı Diyagramları örneği](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

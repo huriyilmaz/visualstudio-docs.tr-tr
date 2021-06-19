@@ -1,6 +1,6 @@
 ---
 title: Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
-description: Büyük kod tabanlarında, yabancı kodlarda veya eski kodlarda kayıplardan kaçınmanıza yardımcı olmak için kod haritalarını kullanmayı öğrenin.
+description: Büyük kod tabanlarında, bilmediğiniz kodda veya eski kodda kaybolmadığınız önlemenize yardımcı olması için kod eşlemelerini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
@@ -13,136 +13,136 @@ helpviewer_keywords:
 - mapping code relationships
 - code maps
 - mapping relationships in code
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b422c6c7857ca1baaa5bd1d8a7d6955e8b6751b3
-ms.sourcegitcommit: c3713f284c4fe10b10996d5eb67077ddd8641424
+ms.openlocfilehash: 23d05240208c6160968ae0013acfdb9f2a25c973
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/19/2021
-ms.locfileid: "112375805"
+ms.locfileid: "112388561"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
 
-[Kod eşlemeleri Visual Studio](../modeling/map-dependencies-across-your-solutions.md) büyük kod tabanlarında, yabancı kodlarda veya eski kodlarda kaybedilmekten kaçınmanıza yardımcı olabilir. Örneğin, hata ayıklama sırasında birçok dosya ve proje arasında koda bakman gerekir. Kod parçaları arasında gezinmek ve aralarındaki ilişkileri anlamak için kod haritalarını kullanın. Bu şekilde, bu kodu kafanızda takip etmek veya ayrı bir diyagram çizmek zorunda değildir. Bu nedenle, çalışmanız kesintiye uğrarsa kod eşlemeleri üzerinde çalışmakta olan kodla ilgili belleğinizin yenilenmesine yardımcı olur.
+[Visual Studio 'Daki kod haritaları](../modeling/map-dependencies-across-your-solutions.md) , büyük kod tabanlarında, bilmediğiniz kodda veya eski kodda kaybolmadığınız önlemenize yardımcı olabilir. Örneğin, hata ayıklama yaparken birçok dosya ve proje arasında koda bakmanız gerekebilir. Kod parçalarının etrafında gezinmek ve aralarındaki ilişkileri anlamak için kod eşlemelerini kullanın. Bu şekilde, bu kodu başınızdan izlemenize veya ayrı bir diyagram çizmenize gerek kalmaz. Bu nedenle, çalışmanız kesintiye uğradığında, kod haritaları üzerinde çalıştığınız kodla ilgili belleğinizin yenilenmesine yardımcı olur.
 
-![Kodda &#45; eşleme ilişkileri](../modeling/media/codemapstoryboardpaint.png)
+![Koddaki eşleme ilişkilerini &#45; kod eşleme](../modeling/media/codemapstoryboardpaint.png)
 
-**İmlecinizin düzenleyicide nerede göründüğü yeşil okla gösterilir**
+**Bir yeşil ok, imlecinizin düzenleyicide nerede göründüğünü gösterir**
 
-Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin ayrıntıları için bkz. Kod [eşlemelerini göz atma ve yeniden düzenleme.](../modeling/browse-and-rearrange-code-maps.md)
+Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin ayrıntıları için bkz. [kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md).
 
-Hata Ayıklayıcı [aracıyla Visual Studio hata ayıklama hakkında daha fazla bilgi edinebilirsiniz.](../debugger/debugger-feature-tour.md)
+[Hata ayıklayıcı aracıyla Visual Studio 'da hata ayıklama](../debugger/debugger-feature-tour.md)hakkında daha fazla bilgi edinin.
 
 > [!NOTE]
-> Kod eşlemeleri oluşturmak ve düzenlemek için Visual Studio Enterprise gerekir. Visual Studio Community ve Professional sürümlerinde, Enterprise edition'da oluşturulan diyagramları açabilirsiniz, ancak bunları düzenleyemezsiniz.
+> Kod haritaları oluşturmak ve düzenlemek için Visual Studio Enterprise sürümüne ihtiyacınız vardır. Visual Studio Community ve Professional sürümlerinde, Enterprise Edition 'da oluşturulan diyagramları açabilir, ancak düzenleyemezsiniz.
 
 ## <a name="understand-the-problem"></a>Sorunu anlama
- Üzerinde çalıştığınız bir çizim programında bir hata olduğunu varsayın. Hatayı yeniden oluşturmak için çözümü Visual Studio **F5 tuşuna** basarak hata ayıklamaya başlayabilirsiniz.
+ Üzerinde çalıştığınız bir çizim programında bir hata olduğunu varsayın. Hatayı yeniden oluşturmak için Visual Studio 'da çözümü açın ve hata ayıklamayı başlatmak için **F5** 'e basın.
 
- Bir çizgi çizin ve Son vuruşumu **geri al'ı** seçerseniz, sonraki satırı çizene kadar hiçbir şey olmaz.
+ Bir çizgi çizdiğinizde ve **son vuruşumu geri al**' ı seçtiğinizde, bir sonraki satırı çizene kadar hiçbir şey olmaz.
 
- ![Yeniden &#45; hata kodu](../modeling/media/codemapstoryboardpaint0.png)
+ ![Kod Haritası &#45; yeniden üretme hatası](../modeling/media/codemapstoryboardpaint0.png)
 
- Bu nedenle yöntemini arayarak araştırmaya `Undo` başlayabilirsiniz. Bunu sınıfında `PaintCanvas` bulabilirsiniz.
+ Bu nedenle, yöntemi arayarak araştırmaya başlayabilirsiniz `Undo` . Bunu `PaintCanvas` sınıfında bulabilirsiniz.
 
- ![Kod bulma &#45; kod eşlemesi](../modeling/media/codemapstoryboardpaint1.png)
+ ![Kod eşleme &#45; kod bulma](../modeling/media/codemapstoryboardpaint1.png)
 
 ## <a name="start-mapping-the-code"></a>Kodu eşleştirmeyi başlat
- Şimdi yöntemini ve `undo` ilişkilerini eşlemeye başlayabilirsiniz. Kod düzenleyicisinden yöntemini ve `undo` yeni bir kod haritasına başvuracak alanları eklersiniz. Yeni bir eşleme oluşturduğunuzda, kodun dizinini oluşturmak biraz zaman alabilir. Bu, sonraki işlemlerin daha hızlı çalışmasını sağlar.
+ Şimdi `undo` yöntemi ve ilişkilerini eşlemeyi başlatın. Kod düzenleyicisinden, `undo` yöntemini ve başvurduğu alanları yeni bir kod haritasına eklersiniz. Yeni bir eşleme oluşturduğunuzda, kodun dizinini oluşturmak biraz zaman alabilir. Bu, sonraki işlemlerin daha hızlı çalışmasını sağlar.
 
- ![Yöntem ve &#45; alanları göstermek için kod eşlemesi](../modeling/media/codemapstoryboardpaint3.png)
+ ![Kod Haritası &#45; yöntemi ve ilgili alanları göster](../modeling/media/codemapstoryboardpaint3.png)
 
 > [!TIP]
-> Yeşil vurgu eşlemeye eklenen son öğeleri gösterir. Yeşil ok, imlecinizin kodda konumunu gösterir. Öğeler arasındaki oklar farklı ilişkileri temsil eder. Fareyle haritadaki öğeler hakkında daha fazla bilgi almak için fareyi bunların üzerine hareket ettirerek ve araç ipucuna bakın.
+> Yeşil vurgu eşlemeye eklenen son öğeleri gösterir. Yeşil ok, imlecinizin koddaki konumunu gösterir. Öğeler arasındaki oklar farklı ilişkileri temsil eder. Fareyi üzerlerine taşıyarak ve araç ipuçlarını inceleyerek haritadaki öğeler hakkında daha fazla bilgi edinebilirsiniz.
 
- ![Kod haritası &#45; Araç &#45; göster](../modeling/media/codemapstoryboardpaint4.png)
+ ![Kod Haritası &#45; araç ipuçlarını gösterme](../modeling/media/codemapstoryboardpaint4.png)
 
 ## <a name="navigate-and-examine-code-from-the-map"></a>Eşlemeden koda gitme ve kodu inceleme
- Her alanın kod tanımını görmek için harita üzerinde alana çift tıklayın veya alanı seçin ve **F12 tuşuna basın.** Yeşil ok eşlemedeki öğeler arasında hareket eder. Ayrıca kod düzenleyicisindeki imleciniz de otomatik olarak hareket eder.
+ Her bir alanın kod tanımını görmek için, haritadaki alana çift tıklayın veya alanı seçip **F12** tuşuna basın. Yeşil ok eşlemedeki öğeler arasında hareket eder. Ayrıca kod düzenleyicisindeki imleciniz de otomatik olarak hareket eder.
 
- ![Geçmiş alanı seçilmiş bir kod haritası penceresinin ve tüm geçmiş örneklerinin vurgulanmış olduğu bir kod düzenleyicisi penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint5.png)
+ ![Seçili geçmiş alanı ve tüm geçmiş örneklerinin vurgulandığı bir kod Düzenleyicisi penceresi içeren bir kod Haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint5.png)
 
- ![PaintObjects alanı seçili olan ve tüm paintObjects örneklerinin vurgulanmış olduğu bir kod düzenleyicisi penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint5a.png)
+ ![Bir kod Haritası penceresinin, Boytobjects alanı seçili ve tüm Boytobjects örneklerinin vurgulandığı bir kod Düzenleyicisi penceresi ekran görüntüsü.](../modeling/media/codemapstoryboardpaint5a.png)
 
 > [!TIP]
 > Kod düzenleyicisinde imleci hareket ettirerek yeşil oku eşlemede taşıyabilirsiniz.
 
 ## <a name="understand-relationships-between-pieces-of-code"></a>Kod parçaları arasındaki ilişkileri anlama
- Şimdi ve alanlarıyla etkileşime geçen diğer kodu bilmek `history` `paintObjects` istiyor. Bu alanlara başvuran tüm yöntemleri eşlemeye ekleyebilirsiniz. Bunu haritadan veya kod düzenleyicisinden de yapabiliriz.
+ Artık hangi diğer kodun ve alanlarıyla etkileşime gireceğini bildirmek istiyorsunuz `history` `paintObjects` . Bu alanlara başvuran tüm yöntemleri eşlemeye ekleyebilirsiniz. Bunu haritadan veya kod düzenleyicisinden yapabilirsiniz.
 
- ![Tüm başvuruları &#45; kod eşlemesi](../modeling/media/codemapstoryboardpaint6.png)
+ ![Kod Haritası &#45; tüm başvuruları bul](../modeling/media/codemapstoryboardpaint6.png)
 
- ![Kod düzenleyicisinden kod haritası açma](../modeling/media/codemapstoryboardpaint6a.png)
+ ![Kod düzenleyicisinden bir kod Haritası açın](../modeling/media/codemapstoryboardpaint6a.png)
 
 > [!NOTE]
-> Windows Phone veya Windows Mağazası gibi birden çok uygulama arasında paylaşılan bir projeden öğe eklersiniz, bu öğeler her zaman haritada o anda etkin olan uygulama projesiyle görünür. Bu nedenle bağlamı başka bir uygulama projesiyle değiştirirsanız, haritadaki bağlam paylaşılan projeden yeni eklenen öğeler için de değişir. Eşleme üzerinde bir öğeyle gerçekleştirdiğiniz işlemler, yalnızca aynı bağlamı paylaşılan öğeler için geçerlidir.
+> Birden çok uygulama genelinde paylaşılan bir projeden (Windows Phone veya Windows Mağazası gibi) öğe eklerseniz, bu öğeler her zaman haritada etkin olan uygulama projesiyle görüntülenir. Bu nedenle, bağlamı başka bir uygulama projesi olarak değiştirirseniz, haritadaki bağlam paylaşılan projeden yeni eklenen öğeler için de değişir. Eşleme üzerinde bir öğeyle gerçekleştirdiğiniz işlemler, yalnızca aynı bağlamı paylaşılan öğeler için geçerlidir.
 
  İlişkilerin akışını yeniden düzenlemek ve eşlemenin okunmasını kolaylaştırmak için düzeni değiştirin. Ayrıca, öğeleri sürükleyerek de eşleme etrafında taşıyabilirsiniz.
 
- ![Düzen menüsü açık ve Soldan Rgiht komutu seçilmiş kod haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7a.png)
+ ![Düzen menüsü açık ve soldan Rgiht komutu seçiliyken bir kod Haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7a.png)
 
 > [!TIP]
-> Varsayılan olarak, **Artımlı** Düzen açıktır. Yeni öğeler eklediğinizde, bu eşlemeyi mümkün olduğunca az yeniden düzenler. Her yeni öğe eklerken haritanın tamamını yeniden düzenlemek için Artımlı **Düzen'i kapatın.**
+> Varsayılan olarak, **artımlı düzen** açıktır. Yeni öğeler eklediğinizde, bu eşlemeyi mümkün olduğunca az yeniden düzenler. Her yeni öğe eklediğinizde eşlemenin tamamını yeniden düzenlemek için, **artımlı düzeni** kapatın.
 
- ![Alanlar arasında soldan sağa işaret alan ilişkilerhiop oklarının yer alan kod haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7.png)
+ ![Soldan sağa işaret eden alanlar arasındaki relationshiop oklarıyla bir kod Haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7.png)
 
- Bu yöntemleri inceleyelim. Haritada **PaintCanvas** yöntemine çift tıklayın veya bu yöntemi seçin ve **F12 tuşuna basın.** Bu yöntemin boş listeler olarak `history` ve `paintObjects` oluşturduğunı öğrenirsiniz.
+ Bu yöntemleri inceleyelim. Haritada **PaintCanvas yöntemine** yöntemine çift tıklayın veya bu yöntemi seçin ve **F12** tuşuna basın. Bu yöntemin boş listeler oluşturduğunu ve bu şekilde olduğunu öğrenirsiniz `history` `paintObjects` .
 
- ![PaintCanvas yönteminin seçili olduğu ve PainCanvas yöntem adının vurgulanmış olduğu kod parçacığı görüntüsünün yer alan kod haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint8.png)
+ ![PaintCanvas yöntemine yöntemi seçilen ve bir kod parçacığı görüntüsü olan bir kod eşleme penceresinin ekran görüntüsü ve Boytuval Yöntem adının vurgulandığı şekilde gösterir.](../modeling/media/codemapstoryboardpaint8.png)
 
- Şimdi yöntem tanımını incelemek için aynı adımları `clear` tekrarlayın. ve ile `clear` bazı görevler gerçekleştiriyor olduğunu `paintObjects` `history` öğrenirsiniz. Ardından yöntemini `Repaint` çağıran.
+ Şimdi yöntem tanımını incelemek için aynı adımları yineleyin `clear` . `clear`Ve ile bazı görevler gerçekleştireceğini öğrenirsiniz `paintObjects` `history` . Daha sonra yöntemini çağırır `Repaint` .
 
- ![Clear yönteminin seçili olduğu bir kod haritası penceresinin ve Clear yönteminin kodunu gösteren kod parçacığı görüntüsünün ekran görüntüsü.](../modeling/media/codemapstoryboardpaint9.png)
+ ![Clear yöntemi seçiliyken kod eşleme penceresinin ekran görüntüsü ve Clear yönteminin kodunu gösteren bir kod parçacığı görüntüsü.](../modeling/media/codemapstoryboardpaint9.png)
 
- Şimdi yöntem tanımını `addPaintObject` incele. Ayrıca ve ile bazı görevler `history` `paintObjects` gerçekleştirir. Ayrıca çağrısı da `Repaint` lar.
+ Şimdi `addPaintObject` yöntem tanımını inceleyin. Ayrıca, ve ile bazı görevler `history` gerçekleştirir `paintObjects` . Ayrıca çağırır `Repaint` .
 
- ![addPaintObject yönteminin seçili olduğu kod haritası penceresinin ve addPaintObject yönteminin kodunu gösteren kod parçacığı görüntüsünün ekran görüntüsü.](../modeling/media/codemapstoryboardpaint10.png)
+ ![Addboytobject yöntemi seçiliyken bir kod Haritası penceresinin ekran görüntüsü ve Addboytobject yöntemi için kodu gösteren bir kod parçacığı görüntüsü.](../modeling/media/codemapstoryboardpaint10.png)
 
 ## <a name="find-the-problem-by-examining-the-map"></a>Eşlemeyi inceleyerek sorunu bulma
- 'ı değiştiren ve çağıran tüm `history` yöntemler gibi `paintObjects` `Repaint` görünüyor. Ancak `undo` yöntemi, aynı alanları `Repaint` değiştirene `undo` rağmen yöntemini çağırmaz. Bu nedenle, 'den çağrısıyla bu sorunu `Repaint` `undo` düzeltebilirsiniz.
+ Bu, değiştiren ve çağıran tüm yöntemler gibi `history` görünüyor `paintObjects` `Repaint` . Yine de `undo` Yöntem `Repaint` çağrılamasa da `undo` aynı alanları değiştirir. Bu nedenle, ' den arayarak bu sorunu giderebilirsiniz `Repaint` `undo` .
 
- ![Kod eşlemesi &#45; Eksik yöntem çağrısını bulma](../modeling/media/codemapstoryboardpaint11.png)
+ ![Kod Haritası &#45; eksik yöntem çağrısını bul](../modeling/media/codemapstoryboardpaint11.png)
 
  Size bu eksik çağrıyı gösteren bir eşlemeniz yoksa, özellikle de daha karmaşık kod söz konusu olduğunda bu sorunun bulunması daha zor olabilir.
 
 ## <a name="share-your-discovery-and-next-steps"></a>Keşfinizi ve sonraki adımları paylaşma
  Siz veya başka biri bu hatayı düzeltmeden önce, eşlemenin üzerine sorunla ve bu sorunun düzeltilmesiyle ilgili notlar ekleyebilirsiniz.
 
- ![Kod eşlemesi &#45; için Açıklama ve bayrak öğeleri](../modeling/media/codemapstoryboardpaint12.png)
+ ![Kod eşlemesi &#45; açıklama ve izleme için öğeleri işaretle](../modeling/media/codemapstoryboardpaint12.png)
 
  Örneğin, eşlemeye açıklamalar ekleyebilir ve renkler kullanarak öğeleri işaretleyebilirsiniz.
 
- ![Kod eşlemesi &#45; ve işaretlenmiş öğeler](../modeling/media/codemapstoryboardpaint12a.png)
+ ![Kod eşleme &#45; açıklamalı ve bayraklı öğeler](../modeling/media/codemapstoryboardpaint12a.png)
 
  Microsoft Outlook yüklüyse, eşlemeyi başkalarına e-postayla gönderebilirsiniz. Eşlemeyi bir görüntü veya başka bir biçim olarak dışarı da aktarabilirsiniz.
 
- ![Kod eşlemesi &#45;, dışarı aktarma, posta](../modeling/media/codemapstoryboardpaint13.png)
+ ![Kod Haritası &#45; paylaşma, dışarı aktarma, posta](../modeling/media/codemapstoryboardpaint13.png)
 
 ## <a name="fix-the-problem-and-show-what-you-did"></a>Sorunu giderme ve ne yaptığınızı gösterme
- Bu hatayı düzeltmek için için çağrısı `Repaint` `undo` eklersiniz.
+ Bu hatayı onarmak için, öğesine çağrısını eklersiniz `Repaint` `undo` .
 
- ![Kod eşlemesi &#45; Eksik yöntem çağrısı ekleme](../modeling/media/codemapstoryboardpaint14.png)
+ ![Kod eşleme &#45; eksik yöntem çağrısı Ekle](../modeling/media/codemapstoryboardpaint14.png)
 
- Düzeltmenizi onaylamak için hata ayıklama oturumunu yeniden başlatır ve hatayı yeniden oluşturmaya çalışırsınız. Şimdi Son **vuruşumu geri al'ın** seçimi beklediğiniz gibi çalışıyor ve doğru düzeltmeyi yaptığınız onaylar.
+ Düzeltmenizi onaylamak için hata ayıklama oturumunu yeniden başlatır ve hatayı yeniden oluşturmaya çalışırsınız. Şimdi **son vuruşumu geri al** ' ın seçilmesi, beklediği gibi çalışarak doğru düzeltmeyi yaptığını onayladınız.
 
- ![Kod eşlemesi &#45; düzeltmeyi onaylayın](../modeling/media/codemapstoryboardpaint15.png)
+ ![Kod Haritası &#45; kodu düzeltmesini onaylayın](../modeling/media/codemapstoryboardpaint15.png)
 
  Eşlemeyi yaptığınız düzeltmeyi gösterecek şekilde güncelleştirebilirsiniz.
 
- ![Kod eşlemesi &#45; eksik yöntem çağrısıyla eşlemeyi güncelleştirme](../modeling/media/codemapstoryboardpaint16.png)
+ ![Kod eşlemesi, eksik yöntem çağrısıyla güncelleştirme haritasını &#45;](../modeling/media/codemapstoryboardpaint16.png)
 
- Haritanız artık geri alma ile Yeniden Boya **arasındaki** **bağlantıyı gösterir.**
+ Haritanız artık **geri alma** ve yeniden **çizmeyi** arasında bir bağlantı gösterir.
 
- ![Kod eşlemesi &#45; yöntem çağrısıyla güncelleştirildi](../modeling/media/codemapstoryboardpaint17.png)
+ ![Kod eşlemesi &#45; metot çağrısıyla Haritayı güncelleştirmiş](../modeling/media/codemapstoryboardpaint17.png)
 
 > [!NOTE]
 > Eşlemeyi güncelleştirdiğinizde, eşlemeyi oluşturmak için kullanılan kod dizininin güncelleştirdiğini belirten bir ileti görebilirsiniz. Bu, birisinin kodu eşlemenizin geçerli kodla eşleşmemesine neden olacak şekilde değiştirdiği anlamına gelir. Bu sizi eşlemeyi güncelleştirmekten alıkoymaz, ancak kodla eşleştiğini doğrulamak için eşlemeyi yeniden oluşturmak zorunda kalabilirsiniz.
 
- Araştırmanız bitti. Kodu eşleştirerek sorunu başarıyla buldunuz ve giderdiniz. Ayrıca kodda gezinmeye ve öğrendiklerinizi hatırlamanıza yardımcı olan ve sorunu gidermek için attığınız adımları gösteren bir eşlemeniz de vardır.
+ Artık araştırmanıza göre tamamladınız. Kodu eşleştirerek sorunu başarıyla buldunuz ve giderdiniz. Ayrıca kodda gezinmeye ve öğrendiklerinizi hatırlamanıza yardımcı olan ve sorunu gidermek için attığınız adımları gösteren bir eşlemeniz de vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
 title: T4 Metin Şablonu Yönergeleri
-description: T4 test şablonu yönergeleri ve bunların metin şablonu dönüştürme altyapısına nasıl yönergeler sağladığını öğrenin.
+description: T4 test şablonu yönergelerini ve bunların metin şablonu dönüştürme altyapısına nasıl yönergeler sağlay olduklarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - text templates, output directive
 - text templates, directives
 - text templates, template directive
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ba13cbd31d41e656533aa5b13cf2a09503e58e8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d9b7ca189ced11eea57e175a06b81161090070b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924600"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388743"
 ---
 # <a name="t4-text-template-directives"></a>T4 Metin Şablonu Yönergeleri
 
@@ -35,7 +35,7 @@ Yönergelerin sözdizimi aşağıdaki gibidir:
 
 Tüm öznitelik değerleri çift tırnak işaretleri arasına alınmalıdır. Değerin kendisi tırnak işaretleri içeriyorsa, bunlardan \ karakteriyle kaçılmalıdır.
 
-Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerdir. Bunları bir kod bloğunun içine `<#...#>` veya bir sınıf özelliği bloğundan sonra yerleştirmemelisiniz `<#+...#>` .
+Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerdir. Bunları bir kod bloğuna veya bir sınıf `<#...#>` özellik bloğuna sonra içine yerleyemebilirsiniz. `<#+...#>`
 
 [T4 Şablon Yönergesi](../modeling/t4-template-directive.md)
 
@@ -79,4 +79,4 @@ Yönergeler genellikle şablon dosyasında ya da eklenen dosyadaki ilk öğelerd
 <#@ CleanupBehavior processor="T4VSHost" CleanupAfterProcessingtemplate="true" #>
 ```
 
-Ayrıca, kendi yönergelerinizi oluşturabilirsiniz. Daha fazla bilgi için bkz. [özel T4 metin şablonu yönerge Işlemcileri oluşturma](../modeling/creating-custom-t4-text-template-directive-processors.md). Görselleştirme ve Modelleme SDK'sını etki alanına özgü dil (DSL) oluşturmak için kullanıyorsanız, bir yönerge işlemcisi, DSL'nin bir parçası olarak oluşturulur.
+Ayrıca, kendi yönergelerinizi oluşturabilirsiniz. Daha fazla bilgi için [bkz. Özel T4 Metin Şablonu Yönerge İşlemcileri Oluşturma.](../modeling/creating-custom-t4-text-template-directive-processors.md) Görselleştirme ve Modelleme SDK'sını etki alanına özgü dil (DSL) oluşturmak için kullanıyorsanız, bir yönerge işlemcisi, DSL'nin bir parçası olarak oluşturulur.
