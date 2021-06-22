@@ -227,11 +227,11 @@ manager: jmartens
 ms.workload:
 - data-storage
 ms.openlocfilehash: a61e7be94faf9a9b75349412f923157b5df47b6a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867392"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "112425666"
 ---
 # <a name="troubleshoot-data-access-errors-on-the-forums"></a>Forumlarda veri erişimi hatalarında sorun giderme
 
