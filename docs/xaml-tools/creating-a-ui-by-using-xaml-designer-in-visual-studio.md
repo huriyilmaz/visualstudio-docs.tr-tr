@@ -1,6 +1,6 @@
 ---
-title: XAML Tasarımcısı’na genel bakış
-description: XAML tabanlı uygulamalar tasarlamanıza yardımcı olacak görsel bir arabirim sağlayan Visual Studio için Blend XAML Tasarımcısı çalışma alanı kullanıcı arabirimi ve özellikleri hakkında bilgi edinin.
+title: Visual Studio XAML Tasarımcısı ile kullanıcı Visual Studio XAML Tasarımcısı
+description: XAML tabanlı uygulamalar tasarlamanıza yardımcı XAML Tasarımcısı görsel arabirim sağlayan Visual Studio için Blend çalışma alanı kullanıcı arabirimi ve özellikleri hakkında bilgi edinin.
 ms.date: 03/03/2020
 ms.topic: conceptual
 ms.custom: contperf-fy21q4, SEO-VS-2020
@@ -14,31 +14,31 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 8f022d0f27977488fb089f2cffb40aad22365b46
-ms.sourcegitcommit: 4a91c63683ba1c1832b1ba96657862a849320d81
+ms.openlocfilehash: ef7d94acbb558ef2a8a3c557051e6dea16be916c
+ms.sourcegitcommit: 809fff25b7701882c899c639eeb6da38ad4fb88a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110565238"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "112550694"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma
 
-Visual Studio ve Visual Studio için Blend XAML Tasarımcısı, WPF ve UWP gibi XAML tabanlı uygulamalar tasarlamanıza yardımcı olacak görsel bir arabirim sağlar. Araç kutusu penceresinden (Visual Studio için Blend varlıklar penceresi) denetimleri sürükleyerek ve Özellikler penceresi özellikleri ayarlayarak uygulamalarınız için Kullanıcı arabirimleri oluşturabilirsiniz. XAML 'yi doğrudan XAML görünümünde de düzenleyebilirsiniz.
+XAML Tasarımcısı ve Visual Studio Visual Studio için Blend WPF ve UWP gibi XAML tabanlı uygulamalar tasarlamanıza yardımcı olacak görsel bir arabirim sağlar. Araç Kutusu penceresinden denetimleri sürükleyerek (Visual Studio için Blend'de Varlıklar penceresi) ve Özellikler penceresi. XAML'yi doğrudan XAML görünümünde de düzenleyebilirsiniz.
 
-İleri düzey kullanıcılar için, XAML Tasarımcısı bile [özelleştirebilirsiniz](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md).
+İleri düzey kullanıcılar için, [uygulamanın XAML Tasarımcısı.](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md)
 
 > [!NOTE]
-> Xamarin. Forms bir XAML tasarımcısını desteklemez. Xamarin. Forms XAML Usıs 'nizi görüntülemek ve uygulama çalışırken bunları düzenlemek için, Xamarin. Forms için XAML etkin yeniden yükleme ' yi kullanın. Daha fazla bilgi için bkz. [Xamarin. Forms Için xaml Hot reload (Önizleme)](/xamarin/xamarin-forms/xaml/hot-reload/) sayfası.
+> Xamarin.Forms, XAML tasarımcısını desteklemez. Xamarin.Forms XAML KULLANıCıLARıNıZı görüntülemek ve uygulama çalışırken düzenlemek için Xamarin.Forms XAML Çalışırken Yeniden Yükleme kullanın. Daha fazla bilgi için [Xamarin.Forms XAML Çalışırken Yeniden Yükleme (Önizleme) sayfasına](/xamarin/xamarin-forms/xaml/hot-reload/) bakın.
 
 ## <a name="xaml-designer-workspace"></a>XAML Tasarımcısı çalışma alanı
 
-XAML Tasarımcısı çalışma alanı çeşitli görsel arabirim öğelerinden oluşur. Bunlar, *çalışma yüzeyini* (görsel tasarım yüzeyi), XAML Düzenleyicisi, belge ana hattı penceresi (Visual Studio için Blend nesneler ve zaman çizelgesi pencere) ve Özellikler penceresi içerir. XAML Tasarımcısı açmak için **Çözüm Gezgini** bir xaml dosyasına sağ tıklayın ve **Görünüm Tasarımcısı**' nı seçin.
+XAML Tasarımcısı çalışma alanı çeşitli görsel arabirim öğeleri içerir. Bunlar arasında *çalışma yüzeyi* (görsel tasarım yüzeyi), XAML düzenleyicisi, Belge Ana Hat penceresi (Nesneler ve Zaman Çizelgesi penceresinde Visual Studio için Blend) ve Özellikler penceresi. Dosyayı açmak XAML Tasarımcısı, dosyanın içinde bir XAML dosyasına **sağ tıklayın ve Çözüm Gezgini'yi** **Görünüm Tasarımcısı.**
 
-XAML Tasarımcısı, uygulamanızın işlenmiş XAML işaretlemesini bir XAML görünümü ve eşitlenmiş Tasarım görünümü sağlar. Visual Studio 'da veya Visual Studio için Blend bir XAML dosyası açıkken, **Tasarım** ve **xaml** SEKMELERINI kullanarak tasarım görünümü ve XAML görünümü arasında geçiş yapabilirsiniz.  ![ ](media/swap-panes.PNG) Üstteki hangi pencerenin çalışma yüzeyi ya da xaml Düzenleyicisi olarak görüneceğini değiştirmek için XAML Tasarımcısı ' deki bölmeleri takas et düğmesini kullanabilirsiniz.
+XAML Tasarımcısı XAML görünümü ve Tasarım görünümü işlenmiş XAML işaretlemesi için eşitlenmiş bir görünüm sağlar. Bir XAML dosyası Visual Studio Visual Studio için Blend, Tasarım ve **XAML Tasarım görünümü XAML** görünümü arasında geçiş  yapın. En üstte hangi **pencerenin** görüntülendiğinden (çalışma panosu veya XAML düzenleyicisi) geçiş yapmak XAML Tasarımcısı Bölmeleri Değiştir düğmesini kullanarak Bölmeleri Değiştir ![ ](media/swap-panes.PNG) düğmesini kullanabilirsiniz.
 
 ### <a name="design-view"></a>Tasarım görünümü
 
-Tasarım görünümü, çalışma yüzeyini içeren pencere etkin pencere olur ve bunu birincil iş yüzeyi olarak kullanabilirsiniz. Bu uygulamayı, öğeleri ekleyerek, çizerek veya değiştirerek uygulamanızdaki bir sayfayı görsel olarak tasarlamak için kullanabilirsiniz. Daha fazla bilgi için bkz. [XAML Tasarımcısı öğelerle çalışma](../xaml-tools/working-with-elements-in-xaml-designer.md). Bu çizimde, çalışma panosu Tasarım görünümü.
+Bu Tasarım görünümü çalışma yüzeyini içeren pencere etkin penceredir ve bunu birincil iş yüzeyi olarak kullanabilirsiniz. Öğeleri ekleyerek, çizerek veya değiştirerek uygulamanıza görsel olarak sayfa tasarlamak için bunu kullanabilirsiniz. Daha fazla bilgi için [bkz. XAML Tasarımcısı.](../xaml-tools/working-with-elements-in-xaml-designer.md) Bu çizimde, çalışma panosu Tasarım görünümü.
 
 ![Tasarım görünümü XAML Tasarımcısı](media/xaml-artboard.png)
 
@@ -50,7 +50,7 @@ Yaslama *çizgileri,* denetimlerin kenarlarının ne zaman hizalı olduğunu vey
 
 **Kılavuz rayları**
 
-Kılavuz rayları, kılavuz panelindeki satırları ve sütunları yönetmek [için](xref:Windows.UI.Xaml.Controls.Grid) kullanılır. Satır ve sütunları oluşturabilir ve silebilir ve bunların göreli genişliklerini ve yüksekliklerini ayarlayabilirsiniz. Çalışma şeridinin sol kısmında görünen dikey Kılavuz rayı, satırlar için, üstte görünen yatay çizgi ise sütunlar için kullanılır.
+Kılavuz rayları, kılavuz panelindeki satırları ve sütunları yönetmek [için](xref:Windows.UI.Xaml.Controls.Grid) kullanılır. Satır ve sütunları oluşturabilir, silebilir ve bunların göreli genişliklerini ve yüksekliklerini ayarlayabilirsiniz. Çalışma şeridinin sol kısmında görünen dikey Kılavuz rayı, satırlar için, üstte görünen yatay çizgi ise sütunlar için kullanılır.
 
 **Kılavuz donatıcıları**
 
@@ -62,21 +62,21 @@ Kılavuz donatıcıları, bir Kılavuzun satırlarının ve sütunlarının geni
 
 **Tanıtıcıları yeniden boyutlandırma**
 
-Seçilen denetimlerde yeniden boyutlandırma tutamaçları görünür ve denetimi yeniden boyutlandırmanıza olanak sağlar. Bir denetimi yeniden boyutlandırdığınızda, genellikle denetimi boyutlandırmanıza yardımcı olmak için Genişlik ve yükseklik değerleri görüntülenir. **Tasarım** görünümünde denetimleri düzenleme hakkında daha fazla bilgi için bkz. [XAML Tasarımcısı öğelerle çalışma](../xaml-tools/working-with-elements-in-xaml-designer.md).
+Seçilen denetimlerde yeniden boyutlandırma tutamaçları görünür ve denetimi yeniden boyutlandırmanıza olanak sağlar. Bir denetimi yeniden boyutlandırarak, genellikle denetimi boyutlandırmanıza yardımcı olacak genişlik ve yükseklik değerleri görünür. Tasarım görünümünde denetimlerin manipülesi hakkında **daha fazla bilgi** için [bkz.](../xaml-tools/working-with-elements-in-xaml-designer.md)XAML Tasarımcısı.
 
 **Kenar boşlukları**
 
-Kenar boşlukları, bir denetimin kenarı ve kapsayıcısının kenarı arasındaki sabit boşluk miktarını temsil eder. Bir denetimin kenar boşluklarını, **Özellikler** penceresinde **Düzen** altındaki [kenar boşluğu](xref:Windows.UI.Xaml.FrameworkElement.Margin) özelliklerini kullanarak ayarlayabilirsiniz.
+Kenar boşlukları, denetimin kenarı ile kapsayıcının kenarı arasındaki sabit alan miktarını temsil ediyor. Özellikler penceresindeki Düzen altındaki Kenar boşluğu özelliklerini kullanarak [denetimin](xref:Windows.UI.Xaml.FrameworkElement.Margin) **kenar** boşluklarını **ayarlayın.**
 
 **Kenar boşluğu donatıcıları**
 
-Bir öğenin kenar boşluklarını düzen kapsayıcısına göre değiştirmek için kenar boşluğu donatıcıları kullanın. Bir kenar boşluğu donatıcısı açık olduğunda, bir kenar boşluğu ayarlı değildir ve kenar boşluğu donatıcısı bozuk bir zincir görüntüler. Kenar boşluğu ayarlanmamışsa, düzen kapsayıcısı çalışma zamanında yeniden boyutlandırılırken öğeler yerinde kalır. Bir kenar boşluğu donatıcısı kapalıyken, bir kenar boşluğu donatıcısı bozuk bir zincir görüntüler ve düzen kapsayıcısı çalışma zamanında yeniden boyutlandırıldığından (kenar boşluğu sabit kalır) öğeler kenar boşluğu ile birlikte taşınır.
+Bir öğenin düzen kapsayıcısı ile ilgili kenar boşluklarını değiştirmek için kenar boşluğu donatıcılarını kullanın. Bir kenar boşluğu donatıcısı açık olduğunda, kenar boşluğu ayarlanmaz ve kenar boşluğu donatıcısı bozuk bir zincir görüntüler. Dış boşluk ayarlanmazsa, düzen kapsayıcısı çalışma zamanında yeniden boyutlandırılırken öğeler yerinde kalır. Bir kenar boşluğu donatıcı kapalıyken, kenar boşluğu donatıcısı kırılmamış bir zincir görüntüler ve düzen kapsayıcısı çalışma zamanında yeniden boyutlandırıldıklarında (kenar boşluğu sabit kalır) öğeler kenar boşluğuyla birlikte hareket eder.
 
-**Öğe tutamaçları**
+**Öğe tanıtıcıları**
 
-Bir öğeyi çevreleyen mavi kutunun köşelerinden işaretçiyi taşıdığınızda çalışma yüzeyinde görünen öğe tutamaçlarını kullanarak bir öğeyi değiştirebilirsiniz. Bu tutamaçlar, öğe için bir köşe yarıçapı döndürmenizi, yeniden boyutlandırmanızı, çevirmenizi, taşımanızı veya eklemenizi sağlar. Öğe tanıtıcısı sembolü, işaretçinin tam konumuna bağlı olarak işleve ve değişikliklere göre değişir. Öğe tutamaçlarını görmüyorsanız, öğenin seçili olduğundan emin olun.
+İşaretçiyi bir öğenin çevresini çevreleyen mavi kutunun köşelerinin üzerine taşısanız, çalışma panosunda görünen öğe tanıtıcılarını kullanarak bir öğeyi değiştirebilirsiniz. Bu tanıtıcılar öğeye köşe yarıçapı eklemenize, yeniden boyutlandırmanıza, çevirmenize, taşımanıza veya eklemenize olanak sağlar. Öğe tanıtıcısı simgesi işleve göre değişir ve işaretçinin tam konumuna bağlı olarak değişir. Öğe tanıtıcılarını görmüyorsanız öğesinin seçildiğinden emin olun.
 
-**Tasarım** görünümünde, aşağıda gösterildiği gibi pencerenin sol alt bölümünde ek çalışma yüzeyi komutları kullanılabilir:
+Tasarım **görünümünde,** pencerenin sol alt alanında burada gösterildiği gibi ek çalışma panosu komutları kullanılabilir:
 
 ![Tasarım görünümü komutları](media/xaml-design-view-controls.png)
 
@@ -84,9 +84,9 @@ Bu komutlar bu araç çubuğunda kullanılabilir:
 
 **Zoom**
 
-Yakınlaştırma, tasarım yüzeyini boyutlandırmanızı sağlar. % 12,5 ' dan %800 ' e yakınlaştırıp veya **seçimi sığdırma** ve **Tümünü sığdırma** gibi seçenekleri belirleyebilirsiniz.
+Yakınlaştırma, tasarım yüzeyini boyuta alaştırır. %12,5'den %800'e yakınlaştırabilir veya Seçimi sığdır ve **Hepsini** sığdır gibi **seçenekleri seçebilirsiniz.**
 
-**Yaslama kılavuzunu göster/gizle**
+**Yasla kılavuzu göster/gizle**
 
 Kılavuz çizgilerini gösteren yasla kılavuzu görüntüler veya gizler. Kılavuz çizgileri, kılavuz çizgilerini **yaslama veya** yaslama çizgilerini **yaslama etkinleştirerek kullanılır.**
 
@@ -104,7 +104,7 @@ Yas çizgileri denetimleri birbirine göre hizalamanıza yardımcı olur. **Yasl
 
 **Proje kodunu devre dışı bırakma**
 
-Özel [denetimler ve](debugging-or-disabling-project-code-in-xaml-designer.md)değer dönüştürücüler gibi proje kodunu devre dışı bırakarak tasarımcıyı yeniden yükser.
+Özel [denetimler ve](debugging-or-disabling-project-code-in-xaml-designer.md)değer dönüştürücüler gibi proje kodunu devre dışı bırakarak tasarımcıyı yeniden yüklür.
 
 ### <a name="xaml-view"></a>XAML görünümü
 
@@ -114,54 +114,54 @@ Yas çizgileri denetimleri birbirine göre hizalamanıza yardımcı olur. **Yasl
 
 ## <a name="document-outline-window"></a>Belge Ana Hat penceresi
 
-Visual Studio Belge Ana Hat penceresi, Nesneler ve Zaman Çizelgesi [belge Visual Studio için Blend.](creating-a-ui-by-using-blend-for-visual-studio.md#objects-and-timeline-window) Belge ana hattı bu görevleri gerçekleştirmenize yardımcı olur:
+Visual Studio Belge Ana Hat penceresi, Nesneler ve Zaman Çizelgesi [belge Visual Studio için Blend.](creating-a-ui-by-using-blend-for-visual-studio.md#objects-and-timeline-window) Belge Ana Hat şu görevleri gerçekleştirmeye yardımcı olur:
 
-- Çalışma yüzeyinde tüm öğelerin hiyerarşik yapısını görüntüleyin.
+- Çalışma panosunda tüm öğelerin hiyerarşik yapısını görüntüleme.
 
-- Öğeleri değiştirebilmeniz için öğeleri seçin. Örneğin, bunları hiyerarşide etrafında taşıyabilir veya Özellikler penceresi özelliklerini ayarlayabilirsiniz. Daha fazla bilgi için bkz. [XAML Tasarımcısı öğelerle çalışma](../xaml-tools/working-with-elements-in-xaml-designer.md).
+- Öğeleri seçerek bunları değiştirebilirsiniz. Örneğin, hiyerarşide bunları hareket ettirebilirsiniz veya bunların özelliklerini hiyerarşide Özellikler penceresi. Daha fazla bilgi için [bkz. XAML Tasarımcısı.](../xaml-tools/working-with-elements-in-xaml-designer.md)
 
-- Denetimler olan öğeler için şablonlar oluşturun ve değiştirin.
+- Denetim olan öğeler için şablon oluşturma ve değiştirme.
 
-- [Animasyonlar oluşturun](animate-objects-in-xaml-designer.md) (yalnızca Visual Studio için Blend).
+- [Animasyon oluşturma](animate-objects-in-xaml-designer.md) (yalnızca Visual Studio için Blend).
 
-Visual Studio 'da belge ana hat penceresini görüntülemek için, menü çubuğunda   >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
-Visual Studio için Blend nesneler ve zaman çizelgesi penceresini görüntülemek için, menü çubuğunda   >  **belge anahattını** görüntüle ' yi seçin.
+Belge Ana Hat penceresini Visual Studio menü çubuğunda Diğer Windows Belge Ana Hatlarını  >  **Görüntüle'yi**  >  **seçin.**
+Belge ana Nesneler ve Zaman Çizelgesi görüntülemek Visual Studio için Blend çubuğunda Belge Ana Hatlarını **Görüntüle'yi**  >  **seçin.**
 
-![Visual Studio 'da belge anahattı penceresi](media/document-outline-window.png)
+![Visual Studio'de Belge Ana Hatları penceresi](media/document-outline-window.png)
 
-Belge ana hat/Nesneler ve Zaman Çizelgesi penceresindeki ana görünüm bir belge hiyerarşisini ağaç yapısında görüntüler. Belge anahattının hiyerarşik yapısını kullanarak belgeyi farklı ayrıntı düzeylerinde inceleyebilir ve öğeleri listedir veya gruplar halinde kilitler ve gizleyebilirsiniz. Belge ana hat/Nesneler ve Zaman Çizelgesi penceresinde aşağıdaki seçenekler mevcuttur:
+Belge Ana Hat/Nesneler ve Zaman Çizelgesi penceresindeki ana görünüm, bir belgenin hiyerarşisini ağaç yapısında görüntüler. Belge ana hatlarının hiyerarşik doğasını kullanarak belgeyi farklı ayrıntı düzeylerinde inceleyip öğeleri tek tek veya gruplar halinde kilitleyip gizleyebilirsiniz. Belge Ana Hat/Ana Hat penceresinde Nesneler ve Zaman Çizelgesi kullanılabilir:
 
 **Göster/gizle**
 
-Çalışma yüzeyi öğelerini görüntüler veya gizler. Gösterildiğinde bir gözle sembol olarak görünür. Ayrıca, bir öğeyi gizlemek için **CTRL** + **h** tuşlarına basabilir ve  +  + bunu göstermek için CTRL **h** tuşlarına basabilirsiniz.
+Çalışma panosu öğelerini görüntüler veya gizler. Gösterildiğinde bir göz simgesi olarak görünür. Ctrl H tuşlarına + **basarak** bir öğeyi gizleyebilirsiniz ve **shift** + **Ctrl** + **H tuşlarına** basarak da gösterebilirsiniz.
 
 **Kilit/kilit açma**
 
-Çalışma yüzeyi öğelerini kilitler veya kilitlerini kaldırır. Kilitli öğeler değiştirilemez. Kilitlendiğinde asma kilit simgesi olarak görünür. Bir öğeyi kilitlemek **için Ctrl** L tuşlarına ve kilidini açmak için +  **Shift** + **Ctrl** + **L** tuşlarına da basebilirsiniz.
+Çalışma yüzeyi öğelerini kilitler veya kilitlerini kaldırır. Kilitli öğeler değiştirilemez. Kilitliyken bir asma kilit simgesi olarak görünür. Ayrıca,  + bir öğeyi kilitlemek için CTRL **l** tuşlarına basabilir ve  +  + kilidini açmak için CTRL **l** tuşlarına basabilirsiniz.
 
-**Kapsamı pageRoot'a iade edin**
+**Kapsam, pageRoot 'e döndürün**
 
-Yukarı ok simgesini gösteren Belge Ana Hat/Nesneler ve Zaman Çizelgesi penceresinin en üstünde yer alan seçeneği önceki kapsama taşınır. Kapsamın kapsamı yalnızca bir stil veya şablon kapsamındayken geçerlidir.
+Bir yukarı ok simgesini gösteren belge ana hattı/Nesneler ve Zaman Çizelgesi penceresinin en üstünde bulunan seçenek, önceki kapsama gider. Kapsam, yalnızca bir stil veya şablon kapsamındaysa geçerlidir.
 
 ## <a name="properties-window"></a>Özellik penceresi
 
-Özellikler **penceresi,** denetimlerde özellik değerlerini ayarlamaya olanak sağlar. Şu şekilde görünür:
+**Özellikler** penceresi denetimlerde özellik değerlerini ayarlamanıza olanak sağlar. Şu şekilde görünür:
 
 ![Özellik penceresi](media/xaml-designer-properties-window.png)
 
-Özellikler penceresinin üst kısmında çeşitli **seçenekler** vardır:
+**Özellikler** penceresinin en üstünde çeşitli seçenekler vardır:
 
-- Ad kutusunda seçili olan öğenin **adını** değiştirme.
-- Sol üst köşede seçili olan öğeyi temsil eden bir simge vardır.
-- Özellikleri kategoriye veya alfabetik olarak düzenlemek için, Sıralamaya göre **düzenle listesinde** **Kategori,** **Ad** veya **Kaynak'a** tıklayın.
-- Bir denetimin olay listesini görmek için, şimşek **simgesi** olarak görünen Olaylar düğmesine tıklayın.
-- Bir özelliği aramak için arama kutusuna özelliğin adını yazın. Özellikler **penceresi,** siz yazarak aramanıza göre özellikleri görüntüler.
+- **Ad** kutusunda şu anda seçili olan öğenin adını değiştirin.
+- Sol üst köşede, şu anda seçili olan öğeyi temsil eden bir simge vardır.
+- Özellikleri kategoriye veya alfabetik olarak düzenlemek için, **Düzenleme ölçütü** listesinde **Kategori**, **ad** veya **kaynak** ' a tıklayın.
+- Bir denetimin olay listesini görmek için, bir şimşek işareti simgesi olarak görünen **Olaylar** düğmesine tıklayın.
+- Bir özelliği aramak için, arama kutusuna özelliğin adını yazmak üzere başlatın. **Özellikler** penceresinde, yazarken aramanızla eşleşen özellikler görüntülenir.
 
-Bazı özellikler, aşağı ok düğmesini seçerek gelişmiş özellikleri ayarlamaya olanak sağlar.
+Bazı özellikler, gelişmiş özellikleri bir aşağı ok düğmesi seçerek ayarlamanıza olanak sağlar.
 
-Her özellik değerinin sağ yanında, kutu *simgesi olarak* görünen bir özellik işaretçisi yer almaktadır. Özellik işaretçisi görünümü, bir veri bağlaması veya özelliğine uygulanan bir kaynak olup olmadığını gösterir. Örneğin, beyaz kutu simgesi varsayılan değeri, siyah kutu simgesi genellikle yerel bir kaynağın uygulandığını, turuncu kutu ise genellikle bir veri bağlamanın uygulandığını gösterir. Özellik işaretçisi'ne tıklarken stilin tanımına gidip veri bağlama oluşturucusu'nu açabilir veya kaynak seçiciyi açabilirsiniz.
+Her özellik değerinin sağında, Box simgesi olarak görünen bir *özellik işaretleyicisi* bulunur. Özellik işaretinin görünümü, bir veri bağlaması veya özelliğe uygulanmış bir kaynak olup olmadığını gösterir. Örneğin, bir beyaz kutu sembolü varsayılan bir değeri gösteriyorsa, bir siyah kutu sembolü genellikle yerel bir kaynağın uygulandığını ve turuncu bir kutu genellikle bir veri bağlamasının uygulandığını gösterir. Özellik işaretine tıkladığınızda, bir stilin tanımına gidebilir, veri bağlama oluşturucuyu açabilir veya kaynak seçiciyi açabilirsiniz.
 
-Özellikleri kullanma ve olayları işleme hakkında daha fazla bilgi için [bkz. Denetimlere ve desenlere giriş.](/windows/uwp/design/controls-and-patterns/controls-and-events-intro)
+Özellikleri kullanma ve olayları işleme hakkında daha fazla bilgi için bkz. [denetimlere ve desenlere giriş](/windows/uwp/design/controls-and-patterns/controls-and-events-intro).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
