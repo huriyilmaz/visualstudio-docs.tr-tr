@@ -1,6 +1,6 @@
 ---
 title: Etki Alanına Özgü Dillerle Çalışmaya Başlama
-description: Visual Studio için modelleme SDK 'Sı ile oluşturulmuş bir etki alanına özgü dil (DSL) tanımlama ve kullanma konusunda temel kavramları öğrenin.
+description: Visual Studio için Modelleme SDK'sı ile oluşturulan etki alanına özgü dil (DSL) tanımlama ve kullanmayla ilgili temel Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,145 +9,145 @@ ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b2637703e068a98e20f209d5de51a6003a4dd7f4
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 2ae488056986afbe35763be1eebb500ff0eab9a8
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386741"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602263"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Alana Özgü Dilleri Kullanmaya Başlama
 
-Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluşturulmuş bir etki alanına özgü dili (DSL) tanımlama ve kullanma konusundaki temel kavramlar açıklanmaktadır.
+Bu konuda, Visual Studio için Modelleme SDK'sı ile oluşturulan etki alanına özgü dil (DSL) tanımlama ve kullanma ile ilgili temel Visual Studio.
 
 > [!NOTE]
-> Metin şablonu dönüştürme SDK 'Sı ve Visual Studio modelleme SDK 'Sı, Visual Studio 'nun belirli özelliklerini yüklediğinizde otomatik olarak yüklenir. Daha ayrıntılı bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)bakın.
+> Metin Şablonu Dönüştürme SDK'sı ve Visual Studio Modelleme SDK'sı, uygulamanın belirli özelliklerini Visual Studio. Diğer ayrıntılar için bu [blog gönderisi'ne bakın.](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)
 
-DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı** aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
+DSL'leri yeni başladıysanız DSL **Araçları** Laboratuvarı'nın üzerinden çalışmanız önerilir. Bu sitede bulabilirsiniz: [Görselleştirme ve Modelleme SDK'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
-## <a name="what-can-you-do-with-a-domain-specific-language"></a>Domain-Specific diliyle ne yapabilirsiniz?
+## <a name="what-can-you-do-with-a-domain-specific-language"></a>Domain-Specific Language ile ne Domain-Specific?
 
-Etki alanına özgü dil, genellikle grafik olan ve belirli bir amaç için kullanılmak üzere tasarlanan bir gösterimidir. Bunun aksine, UML gibi dillerin genel amaçlı olması gerekir. Bir DSL 'de model öğesi türlerini ve bunların ilişkilerini ve bunların ekranda nasıl sunulduğunu tanımlayabilirsiniz.
+Etki alanına özgü dil, genellikle grafiksel olan ve belirli bir amaç için kullanılacak şekilde tasarlanmış bir gösterimidir. Buna karşılık UML gibi diller genel amaçlıdır. DSL'de model öğesinin türlerini ve ilişkilerini ve ekranda nasıl sun olduklarını tanımlayabilirsiniz.
 
-Bir DSL tasarladıktan sonra, bir Visual Studio Tümleştirme Uzantısı (VSıX) paketinin parçası olarak dağıtabilirsiniz. Kullanıcılar, Visual Studio 'da DSL ile çalışır:
+DSL tasarlasanız, bunu bir Visual Studio Integration Extension (VSIX) paketinin parçası olarak dağıtabilirsiniz. Kullanıcılar dsl ile Visual Studio:
 
 ![Aile ağacı diyagramı, araç kutusu ve gezgin](../modeling/media/familyt_instance.png)
 
-Gösterim yalnızca DSL 'nin bir parçasıdır. Gösterimle birlikte, VSıX paketiniz kullanıcıların, modellerinden malzemeleri düzenlemeye ve oluşturmaya yardımcı olmak için uygulayabileceğiniz araçları içerir.
+Bu not, DSL'nin yalnızca bir bölümü. VSIX paketiniz, bu nota ek olarak kullanıcıların modellerini düzenlemelerine ve modellerinden malzeme oluşturmalarına yardımcı olmak için uygulayabilecekleri araçlar içerir.
 
-DSLs 'nin asıl uygulamalarından biri program kodu, yapılandırma dosyaları ve diğer yapıtları oluşturmak için kullanılır. Özellikle büyük projelerde ve ürün satırlarında, bir ürünün çeşitli varyantlarının oluşturulması durumunda, DSLs 'deki değişken yönlerinin birçoğu, güvenilirlikte büyük bir artış ve gereksinimler değişikliklerine çok hızlı yanıt verebilir.
+DSL'lerin temel uygulamalarından biri program kodu, yapılandırma dosyaları ve diğer yapıtlar oluşturmaktır. Özellikle bir ürünün çeşitli çeşitlemelerinin oluşturulacak olduğu büyük projelerde ve ürün hatlarında, DSL'lerden birçok değişken yönü oluşturularak güvenilirlikte büyük bir artış ve gereksinimlere çok hızlı bir yanıt oluşturulabilir.
 
-Bu genel bakışın geri kalanında, Visual Studio 'da alana özgü dil oluşturma ve kullanma ile ilgili temel işlemleri tanıtan bir anlatım sunulmaktadır.
+Bu genel bakışın geri kalanları, etki alanına özgü bir dil oluşturma ve kullanma ile ilgili temel işlemleri Visual Studio.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
+DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olması gerekir:
 
 | Bileşen | Bağlantı |
 |-|-|
-| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
-| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
-| Visual Studio için modelleme SDK 'Sı | |
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [https://go.microsoft.com/fwlink/?linkid=2166172](../extensibility/visual-studio-sdk.md) |
+| Visual Studio için Modelleme SDK'sı | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="create-a-dsl-solution"></a>DSL çözümü oluşturma
+## <a name="create-a-dsl-solution"></a>DSL Çözümü Oluşturma
 
-Yeni bir etki alanına özgü dil oluşturmak için Domain-Specific Language proje şablonunu kullanarak yeni bir Visual Studio çözümü oluşturun.
+Etki alanına özgü yeni bir dil oluşturmak için, Domain-Specific Dil proje şablonunu kullanarak yeni bir Visual Studio çözüm oluştururuz.
 
-1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
+1. Dosya menüsünde **Yeni'nin** üzerine **gelin ve** ardından Proje'ye **tıklayın.**
 
-2. **Proje türleri** altında **diğer proje türleri** düğümünü genişletin ve **genişletilebilirlik**' e tıklayın.
+2. Proje **türleri altında** Diğer Proje Türleri **düğümünü** genişletin ve Genişletilebilirlik'e **tıklayın.**
 
-3. **Alana özgü dil Tasarımcısı**' ye tıklayın.
+3. Öğesini Alana Özgü Dil Tasarımcısı.
 
-     ![DSL oluştur iletişim kutusu](../modeling/media/create_dsldialog.png)
+     ![DSL Oluştur iletişim kutusu](../modeling/media/create_dsldialog.png)
 
-4. **Ad** kutusuna **FamilyTree** yazın. **Tamam**'a tıklayın.
+4. Ad **kutusuna** **FamilyTree yazın.** **Tamam**'a tıklayın.
 
-     **Etki alanına özgü dil Sihirbazı** açılır ve şablon DSL çözümlerinin listesini görüntüler.
+     Etki **Alanına Özgü Dil Sihirbazı** açılır ve ŞABLON DSL çözümlerinin listesini görüntüler.
 
-     Açıklamaları görmek için her şablona tıklayın,
+     Açıklamayı görmek için her şablona tıklayın,
 
-     Şablonlar, yararlı başlangıç noktalarıdır. Bunların her biri, gereksinimlerinize uyacak şekilde düzenleyebileceğiniz, tamamlanmış bir çalışan DSL sağlar. Normalde, oluşturmak istediğiniz en yakın şablonu seçersiniz.
+     Şablonlar yararlı başlangıç noktalarıdır. Bunların her biri, tam bir çalışan DSL sağlar ve bunları, ihtiyaçlarınıza uyacak şekilde düzenleyebilirsiniz. Normalde, oluşturmak istediğinize en yakın şablonu seçersiniz.
 
-5. Bu izlenecek yol için **en az dil** şablonunu seçin.
+5. Bu kılavuz için En Az Dil **şablonunu** seçin.
 
-6. Uygun sihirbaz sayfasında DSL 'niz için bir dosya adı uzantısı girin. Bu, DSL 'nin örneklerini içeren dosyaların kullanacağı uzantıdır.
+6. DSL'niz için uygun sihirbaz sayfasına bir dosya adı uzantısı girin. Bu, DSL'nizin örneklerini içeren dosyaların kullanabileceği uzantıdır.
 
-    - Bilgisayarınızdaki herhangi bir uygulamayla veya DSL 'yi yüklemek istediğiniz herhangi bir bilgisayarda ilişkilendirilmemiş bir uzantı seçin. Örneğin, **docx** ve **htm** kabul edilemez dosya adı uzantıları olacaktır.
+    - Bilgisayarınızda veya DSL'yi yüklemek istediğiniz herhangi bir bilgisayarda herhangi bir uygulamayla ilişkilendirilen bir uzantı seçin. Örneğin, **docx** ve **html dosyaları** kabul edilemez dosya adı uzantıları olabilir.
 
-    - Girdiğiniz uzantı DSL olarak kullanılıyorsa, sihirbaz sizi uyarır. Farklı bir dosya adı uzantısı kullanmayı düşünün. Ayrıca, eski deneysel tasarımcıları temizlemek için Visual Studio SDK Deneysel örneğini de sıfırlayabilirsiniz. **Başlat**' a tıklayın, **tüm programlar**, **Microsoft Visual Studio 2010 SDK** ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**.
+    - Girdiğiniz uzantı DSL olarak kullanılıyorsa sihirbaz sizi uyaracak. Farklı bir dosya adı uzantısı kullanmayı göz önünde bulundurabilirsiniz. Eski deneysel tasarımcıları temizlemek Visual Studio SDK Deneysel örneğini de sıfırlayabilirsiniz. **Başlat'a** tıklayın, Tüm **Programlar'a** tıklayın, Microsoft Visual Studio  **2010 SDK,** Araçlar'a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın.**
 
-7. Diğer sayfaları inceleyin ve ardından **son**' a tıklayın.
+7. Diğer sayfaları incele ve ardından Son'a **tıklayın.**
 
-     İki proje içeren bir çözüm oluşturulur. Bunlar DSL ve DslPackage olarak adlandırılır. DslDefinition. dsl adlı bir diyagram dosyası açılır.
+     İki proje içeren bir çözüm oluşturulur. Dsl ve DslPackage olarak adlandırılmıştır. DslDefinition.dsl adlı bir diyagram dosyası açılır.
 
     > [!NOTE]
-    > İki projedeki klasörlerde görebileceğiniz kodun çoğu DslDefinition. dsl ' den oluşturulmuştur. Bu nedenle, bu dosyada DSL 'niz üzerinde yapılan çoğu değişiklik yapılır.
+    > İki projedeki klasörlerde gördüğünüz kodun çoğu DslDefinition.dsl'den oluşturulur. Bu nedenle DSL'niz üzerinde yapılan değişikliklerin çoğu bu dosyada yapılır.
 
 Kullanıcı arabirimi artık aşağıdaki resme benzer.
 
-![DSL Tasarımcısı](../modeling/media/dsl_designer.png)
+![dsl tasarımcısı](../modeling/media/dsl_designer.png)
 
-Bu çözüm, etki alanına özgü bir dili tanımlar. Daha fazla bilgi için bkz. [Domain-Specific dil Araçları Kullanıcı arabirimine genel bakış](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md).
+Bu çözüm, etki alanına özgü bir dil tanımlar. Daha fazla bilgi için [bkz. Domain-Specific Dil Araçları'Kullanıcı Arabirimi.](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)
 
 ## <a name="the-important-parts-of-the-dsl-solution"></a>DSL çözümünün önemli bölümleri
 
-Yeni çözümün aşağıdaki yönlerini görürsünüz:
+Yeni çözümün aşağıdaki yönlerine dikkat:
 
-- **Dsl\dsldefinition.exe** Bu, bir DSL çözümü oluştururken gördüğünüz dosyadır. Çözümdeki kodun neredeyse tamamı bu dosyadan oluşturulmuştur ve DSL tanımında yaptığınız değişikliklerin çoğu burada yapılır. Daha fazla bilgi için bkz. [DSL tanımı diyagramı Ile çalışma](../modeling/working-with-the-dsl-definition-diagram.md)ile çalışma.
+- **Dsl\DslDefinition.dsl** Bu, DSL çözümü oluşturmada gördüğünüz dosyadır. Çözümde yer alan kodun neredeyse hepsi bu dosyadan oluşturulur ve DSL tanımında yaptığınız değişikliklerin çoğu burada yapılır. Daha fazla bilgi için, bkz. [Working with the DSL Definition Diagram](../modeling/working-with-the-dsl-definition-diagram.md).
 
-- **DSL projesi** Bu proje, etki alanına özgü dili tanımlayan kodu içerir.
+- **Dsl projesi** Bu proje, etki alanına özgü dili tanımlayan kodu içerir.
 
-- **DslPackage projesi** Bu proje, Visual Studio 'da DSL örneklerinin açılmasına ve düzenlenmesine izin veren kodu içerir.
+- **DslPackage projesi** Bu proje, DSL örneklerinin Visual Studio'de açılmasına ve düzenlen Visual Studio.
 
-## <a name="running-the-dsl"></a><a name="Debugging"></a> DSL 'yi çalıştırma
+## <a name="running-the-dsl"></a><a name="Debugging"></a> DSL'i çalıştırma
 
-DSL çözümünü, oluşturduktan hemen sonra çalıştırabilirsiniz. Daha sonra, her değişiklikten sonra çözümü yeniden çalıştırarak DSL tanımını kademeli olarak değiştirebilirsiniz.
+DSL çözümünü oluşturduktan hemen sonra çalıştırılabilir. Daha sonra DSL tanımını kademeli olarak değiştirebilir ve her değişiklik sonrasında çözümü yeniden çalıştırabilirsiniz.
 
-### <a name="to-experiment-with-the-dsl"></a>DSL 'yi denemek için
+### <a name="to-experiment-with-the-dsl"></a>DSL ile deneme yapmak için
 
-1. **Çözüm Gezgini** araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın. Bu, kaynak kodun büyük bölümünü DslDefinition. dsl 'den yeniden oluşturur.
+1. Araç **çubuğunda Tüm Şablonları Dönüştür'e** **Çözüm Gezgini** tıklayın. Bu, DslDefinition.dsl kaynak kodunun çoğunu yeniden oluşturulur.
 
     > [!NOTE]
-    > *DslDefinition. dsl*'yi her değiştirdiğinizde, çözümü yeniden oluşturmadan önce **Tüm Şablonları Dönüştür** ' e tıklamanız gerekir. Bu adımı otomatik hale getirebilirsiniz. Daha fazla bilgi için bkz. [tüm şablonları dönüştürmeyi otomatikleştirme](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\)).
+    > *DslDefinition.dsl'yi her değiştirişinde,* çözümü **yeniden** oluşturmadan önce Tüm Şablonları Dönüştür'e tıklamalısınız. Bu adımı otomatikleştirin. Daha fazla bilgi için [bkz. How to Automate Transform All Templates](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\)).
 
-2. **F5** tuşuna basın veya **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
+2. **F5 tuşuna** basın veya Hata **Ayıklama menüsünde** Hata Ayıklamayı **Başlat'a tıklayın.**
 
-     DSL derlemeleri ve Visual Studio 'nun deneysel örneğine yüklenir.
+     DSL, Visual Studio'nin deneysel örneğinde derleme Visual Studio.
 
-     Visual Studio 'nun deneysel bir örneği başlar. Deneysel örnek, Visual Studio uzantılarının hata ayıklama amacıyla kaydedildiği, kayıt defterinin farklı bir alt ağacında bulunan ayarlarını alır. Visual Studio 'nun normal örnekleri orada kayıtlı uzantılara erişemez.
+     Deneysel bir Visual Studio başlar. Deneysel örnek, ayarlarını kayıt defterinin ayrı bir alt ağacından alır ve burada Visual Studio hata ayıklama amacıyla kaydedilir. Normal örnek Visual Studio kayıtlı uzantılara erişimi yok.
 
-3. Visual Studio 'nun deneysel örneğinde, **Çözüm Gezgini** **Test** adlı model dosyasını açın.
+3. deneysel Visual Studio test adlı model dosyasını **Çözüm Gezgini.** 
 
-     \- veya
+     \- veya -
 
-     Hata ayıklama projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **öğe**' ye tıklayın. **Öğe Ekle** iletişim kutusunda, DSL 'nizin dosya türünü seçin.
+     Hata ayıklama projesine sağ tıklayın, Ekle'nin **üzerine gelin ve** ardından Öğe'ye **tıklayın.** Öğe **Ekle iletişim** kutusunda DSL'nizin dosya türünü seçin.
 
      Model dosyası boş bir diyagram olarak açılır.
 
-     Araç kutusu açılır ve diyagram türüne uygun araçları görüntüler.
+     Araç kutusu açılır ve diyagram türüne uygun araçlar görüntülenir.
 
-4. Diyagram üzerinde şekiller ve bağlayıcılar oluşturmak için araçları kullanın.
+4. Diyagramda şekiller ve bağlayıcılar oluşturmak için araçları kullanın.
 
-    1. Şekil oluşturmak için örnek Şekil aracı diyagramda sürükleyin.
+    1. Şekil oluşturmak için Örnek veri Şekil aracı diyagrama sürükleyin.
 
-    2. İki şekli bağlamak için, örnek bağlayıcı aracına tıklayın, ilk şekle tıklayın ve ardından ikinci şekle tıklayın.
+    2. İki şekli bağlamak için Örnek Bağlayıcı aracına tıklayın, ilk şekle tıklayın ve ardından ikinci şekle tıklayın.
 
-5. Bunları değiştirmek için şekillerin etiketlerine tıklayın.
+5. Şekilleri değiştirmek için şekillerin etiketlerine tıklayın.
 
-Deneysel Visual Studio, aşağıdaki örneğe benzeyecektir:
+Deneysel Visual Studio aşağıdaki örnekteki gibi olacak:
 
-![Visual Studio 'da etki alanına özgü dil örnek ağacı](../modeling/media/dsl_min.png)
+![Visual Studio'de etki alanına özgü dil örnek Visual Studio](../modeling/media/dsl_min.png)
 
-### <a name="the-content-of-a-model"></a>Bir modelin Içeriği
+### <a name="the-content-of-a-model"></a>Modelin İçeriği
 
-Bir DSL örneği olan bir dosyanın içeriğine *model* denir. *Model* <em>öğeleri</em> ve öğeler arasındaki *bağlantıları* içerir. DSL tanımı, modelde model öğesi ve bağlantı türlerinin ne tür bir bulunabilir olduğunu belirtir. Örneğin, minimum dil şablonundan oluşturulan bir DSL 'de, bir tür model öğesi ve bir bağlantı türü vardır.
+DSL örneği olan bir dosyanın içeriğine model adı *ve denir.* Model, model *öğelerini* <em>ve</em> öğeler *arasındaki* bağlantıları içerir. DSL tanımı modelde hangi tür model öğelerinin ve bağlantıların mevcut olduğunu belirtir. Örneğin, Minimum Dil şablonundan oluşturulan bir DSL'de bir model öğesi türü ve bir bağlantı türü vardır.
 
-DSL tanımı, modelin diyagram üzerinde nasıl göründüğünü belirtebilir. Birçok şekil ve bağlayıcı stili arasından seçim yapabilirsiniz. Bazı şekillerin diğer şekillerin içinde görünmesini sağlayabilirsiniz.
+DSL tanımı, modelin diyagramda nasıl görüntülendiğinden bunu belirtebilirsiniz. Çeşitli şekil ve bağlayıcı stilleri arasında seçim yapabilirsiniz. Bazı şekillerin diğer şekillerin içinde görünmesini belirtebilirsiniz.
 
-Bir modeli düzenlediğinizde, bir modeli **Gezgin** görünümünde ağaç olarak görüntüleyebilirsiniz. Diyagrama şekil eklerken, model öğeleri de gezgin 'de görüntülenir. Diyagram olmasa bile gezgin kullanılabilir.
+Modeli düzenlerken Gezgin görünümünde bir **ağaç** olarak görüntüebilirsiniz. Diyagrama şekiller eklerken model öğeleri de gezginde görünür. Diyagram olmasa bile gezgin kullanılabilir.
 
 Visual Studio 'nun hata ayıklama örneğinde gezgin 'i göremiyorsanız, **Görünüm** menüsünde **diğer pencereler**' in üzerine gelin ve ardından gezgin ' e tıklayın *\<Your Language>* .
 

@@ -1,6 +1,6 @@
 ---
-title: DebuggerDisplay kullanarak özel bilgileri görüntüle | Microsoft Docs
-description: Bir nesne, özellik veya alanın hata ayıklayıcı değişken pencerelerinin nasıl görüntülendiğini denetlemek için DebuggerDisplayAttribute örneğini kullanın.
+title: DebuggerDisplay komutlarını kullanarak özel bilgileri | Microsoft Docs
+description: Hata ayıklayıcısı değişken pencerelerde bir nesnenin, özelliğin veya alanın nasıl görüntülendiğinden emin olmak için DebuggerDisplayAttribute örneğini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: how-to
@@ -14,68 +14,68 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: edb257f6e5e0b74ef7f60a8447b7c89053a04e24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e9579e4969cb53ed2f1bcf749e8114386af85d0
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896477"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602140"
 ---
-# <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Hata ayıklayıcıya DebuggerDisplay özniteliği kullanarak neyin gösterileceğini söyleyin (C#, Visual Basic, F #, C++/CLı)
+# <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Hata ayıklayıcısına DebuggerDisplay Özniteliğini (C#, Visual Basic, F#, C++/CLI) kullanarak ne göster göster
 
-<xref:System.Diagnostics.DebuggerDisplayAttribute>Bir nesne, özellik veya alanın hata ayıklayıcı değişkeni penceresinde nasıl görüntülendiğini denetler. Bu öznitelik türler, temsilciler, özellikler, alanlar ve derlemelere uygulanabilir. Bir temel türe uygulanmışsa öznitelik bir alt sınıf için de geçerli olur.
+Bir <xref:System.Diagnostics.DebuggerDisplayAttribute> nesnenin, özelliğin veya alanın hata ayıklayıcısı değişken pencerelerde nasıl görüntülendiğinden emin olur. Bu öznitelik türlere, temsilcilere, özelliklere, alanlara ve derlemelere uygulanabilir. Temel türe uygulanırsa, öznitelik bir alt sınıf için de geçerlidir.
 
-`DebuggerDisplay`Özniteliğin tek bir bağımsız değişkeni vardır ve bu, türü örneklerin değer sütununda görüntülenecek bir dizedir. Bu dize, küme ayraçları ( `{` ve `}` ) içerebilir. Bir küme ayraçları içindeki metin, alan, özellik veya yöntem olarak değerlendirilir.
+özniteliği, `DebuggerDisplay` tür örnekleri için değer sütununda görüntülenecek bir dize olan tek bir bağımsız değişkene sahip olur. Bu dize küme ayraçları ( ve ) `{` `}` içerebilir. Bir çift ayraç içindeki metin alan, özellik veya yöntem olarak değerlendirilir.
 
-Bir sınıfta geçersiz kılınan bir `ToString()` Yöntem varsa, hata ayıklayıcı varsayılan yerine geçersiz kılınan yöntemi kullanır `{<typeName>}` . Bu nedenle, yöntemi geçersiz kıldıysanız `ToString()` , hata ayıklayıcı varsayılan yerine geçersiz kılınan yöntemi kullanır `{<typeName>}` ve kullanmak zorunda değilsiniz `DebuggerDisplay` . Her ikisini de kullanırsanız, `DebuggerDisplay` öznitelik geçersiz kılınan yönteme göre önceliklidir `ToString()` . `DebuggerDisplay`Öznitelik, `ToString()` bir alt sınıfta geçersiz kılınan yöntemden de önceliklidir.
+Bir sınıfın geçersiz kılınan bir `ToString()` yöntemi varsa, hata ayıklayıcı varsayılan yerine geçersiz kılma yöntemini `{<typeName>}` kullanır. Bu nedenle, yöntemini geçersiz kılmanız, hata ayıklayıcı varsayılan yerine geçersiz kılma yöntemini kullanır ve `ToString()` `{<typeName>}` kullanmak zorunda `DebuggerDisplay` değildir. Her ikisini de `DebuggerDisplay` kullanırsanız, özniteliği geçersiz kılınan yöntemden `ToString()` önceliklidir. Özniteliği `DebuggerDisplay` ayrıca bir alt sınıfta geçersiz kılınan `ToString()` yöntemden önceliklidir.
 
-Hata ayıklayıcının bu örtük çağrıyı değerlendirip, `ToString()` **Araçlar/Seçenekler/hata ayıklama** iletişim kutusunda bir Kullanıcı ayarına bağlıdır.
+Hata ayıklayıcının bu örtülü çağrıyı değerlendirip değerlendirmeyip değerlendirmeyecekleri, Araçlar / Seçenekler / Hata Ayıklama iletişim kutusundaki `ToString()` **bir kullanıcı ayarına** bağlıdır.
 
 > [!IMPORTANT]
-> **Araçlar/Seçenekler/hata ayıklama** iletişim kutusunda **değişkenler penceresinde nesnelerin ham yapısını göster** onay kutusu işaretliyse `DebuggerDisplay` öznitelik yoksayılır.
+> Araçlar / Seçenekler **/** **Hata Ayıklama iletişim** kutusunda Değişkenlerin ham yapısını göster windows onay kutusu seçiliyse, öznitelik `DebuggerDisplay` yoksayılır.
 
 > [!NOTE]
-> Yerel kod için bu öznitelik yalnızca C++/CLı kodunda desteklenir.
+> Yerel kod için bu öznitelik yalnızca C++/CLI kodunda de destekler.
 
-Aşağıdaki tabloda, özniteliğin bazı olası kullanımları `DebuggerDisplay` ve örnek çıktıları gösterilmektedir.
+Aşağıdaki tabloda özniteliğin bazı olası kullanımları `DebuggerDisplay` ve örnek çıkışlar yer almaktadır.
 
 |Öznitelik|Değer sütununda görünen çıkış|
 |---------------| - |
-|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> Alanlar ve içeren bir tür üzerinde `x` kullanılır `y` .|`x = 5 y = 18`|
-|`[DebuggerDisplay("String value is {getString()}")]`Parametre sözdizimi diller arasında farklılık gösterebilir. Bu nedenle, dikkatli bir şekilde kullanın.|`String value is [5, 6, 6]`|
+|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> ve alanları ile bir tür üzerinde `x` `y` kullanılır.|`x = 5 y = 18`|
+|`[DebuggerDisplay("String value is {getString()}")]`Parametre söz dizimi diller arasında değişiklik gösterebilir. Bu nedenle, bunu özenli bir şekilde kullanın.|`String value is [5, 6, 6]`|
 
-`DebuggerDisplay` adlandırılmış parametreleri de kabul edebilir.
+`DebuggerDisplay` adlandırılmış parametreleri de kabul eder.
 
 |Parametreler|Amaç|
 |----------------|-------------|
-|`Name`, `Type`|Bu parametreler, Windows değişkeninin **ad** ve **tür** sütunlarını etkiler. (Oluşturucu ile aynı söz dizimini kullanan dizeler için de ayarlanabilir.) Bu parametrelerin aşırı kullanılması veya yanlış kullanılması, kafa karıştırıcı çıktıya neden olabilir.|
-|`Target`, `TargetTypeName`|Öznitelik, derleme düzeyinde kullanıldığında hedef türünü belirtir.|
+|`Name`, `Type`|Bu parametreler değişken **pencerelerinin Ad** **ve** Tür sütunlarını etkiler. (Bunlar, oluşturucuyla aynı söz dizimi kullanılarak dizelere ayarlanır.) Bu parametreleri aşırı kullanmak veya yanlış kullanmak, kafa karıştırıcı çıkışlara neden olabilir.|
+|`Target`, `TargetTypeName`|Öznitelik derleme düzeyinde kullanılırken hedef türü belirtir.|
 
-Autoexp.cs dosyası, derleme düzeyinde DebuggerDisplay özniteliğini kullanır. Autoexp.cs dosyası, Visual Studio 'Nun .NET nesneleri için kullandığı varsayılan genişleimleri belirler. DebuggerDisplay özniteliğini kullanma örnekleri için autoexp.cs dosyasını inceleyebilir veya varsayılan genişletmeleri değiştirmek için autoexp.cs dosyasını değiştirebilir ve derleyebilirsiniz. Autoexp.cs dosyasını değiştirmeden önce yedeklediğinizden emin olun.
+autoexp.cs dosyası, derleme düzeyinde DebuggerDisplay özniteliğini kullanır. autoexp.cs dosyası, .NET nesneleri için Visual Studio varsayılan genişletmeleri belirler. DebuggerDisplay özniteliğini kullanma örnekleri için autoexp.cs dosyasını inceler veya varsayılan genişletmeleri değiştirmek için autoexp.cs dosyasını değiştirebilir ve derebilirsiniz. Değiştirmeden önce autoexp.cs dosyasını mutlaka arkanız.
 
-Autoexp.cs oluşturmak için, VS2015 için bir Geliştirici Komut İstemi açın ve aşağıdaki komutları çalıştırın
+autoexp.cs derlemek için VS2015 Geliştirici Komut İstemi bir dosya açın ve aşağıdaki komutları çalıştırın
 
 ```cmd
 cd <directory containing autoexp.cs>
 csc /t:library autoexp.cs
 ```
 
-autoexp.dll yapılan değişiklikler bir sonraki hata ayıklama oturumunda alınacaktır.
+Hata autoexp.dll sonraki hata ayıklama oturumunda seçecek.
 
-## <a name="using-expressions-in-debuggerdisplay"></a>DebuggerDisplay içinde Ifadeleri kullanma
-DebuggerDisplay özniteliğinde küme ayraçları arasında genel bir ifade kullanabilseniz de, bu uygulama önerilmez.
+## <a name="using-expressions-in-debuggerdisplay"></a>DebuggerDisplay'de İfadeleri Kullanma
+Bir DebuggerDisplay özniteliğinde küme ayraçları arasında genel bir ifade kullanabilirsiniz, ancak bu uygulama önerilmez.
 
-DebuggerDisplay içindeki genel bir ifade, `this` yalnızca hedef türün geçerli örneği için işaretçiye örtülü erişime sahiptir. İfadenin diğer adlar, Yereller veya işaretçiler erişimi yok. İfade özelliklere başvuruyorsa, bu özelliklerdeki öznitelikler işlenmez. Örneğin, `[DebuggerDisplay("Object {count - 2}")]` alan 8 Ise C# kodu görüntülenir `Object 6` `count` .
+DebuggerDisplay'de genel bir ifadenin yalnızca hedef türün geçerli örneğinin `this` işaretçisine örtülü erişimi vardır. İfadenin diğer adlara, yerellere veya işaretçilere erişimi yoktur. İfade özelliklere başvurursa, bu özelliklerdeki öznitelikler işlenmez. Örneğin, alan 8 ise C# `[DebuggerDisplay("Object {count - 2}")]` `Object 6` kodu `count` görüntülenir.
 
-DebuggerDisplay içinde ifadelerin kullanılması aşağıdaki sorunlara yol açabilir:
+DebuggerDisplay içinde ifadelerin kullanımı aşağıdaki sorunlara yol açabilirsiniz:
 
-- İfadeleri değerlendirmek hata ayıklayıcıda en pahalı işlemdir ve ifade her görüntülendiğinde değerlendirilir. Bu, kodun üzerinden adımlarken performans sorunlarına neden olabilir. Örneğin, öğelerin sayısı büyükse, bir koleksiyondaki veya listedeki değerleri göstermek için kullanılan karmaşık bir ifade çok yavaş olabilir.
+- İfadeleri değerlendirme, hata ayıklayıcıda en pahalı işlemdir ve ifade her görüntülendiğinde değerlendirilir. Bu, kod adım adım adım performans sorunlarına neden olabilir. Örneğin, bir koleksiyon veya listede değerleri görüntülemek için kullanılan karmaşık bir ifade, öğe sayısı büyük olduğunda çok yavaş olabilir.
 
-- İfadeler, ifadenin yazıldığı dilin değerlendiricisi tarafından değil, geçerli yığın çerçevesinin dilinin ifade değerlendiricisi tarafından değerlendirilir. Bu, diller farklı olduğunda öngörülemeyen sonuçlara neden olabilir.
+- İfadeler, ifadenin yazıldığı dilin değerlendiricisi tarafından değil geçerli yığın çerçevesinin dilinin ifade değerlendiricisi tarafından değerlendirilir. Bu, diller farklı olduğunda öngörülemeyen sonuçlara neden olabilir.
 
-- Bir ifadeyi değerlendirmek uygulamanın durumunu değiştirebilir. Örneğin, bir özelliğin değerini ayarlayan bir ifade, yürütülen koddaki özellik değerini indirger.
+- Bir ifadenin değerlendirilmesi uygulamanın durumunu değiştirebilir. Örneğin, bir özelliğin değerini ayar eden bir ifade, yürütülen kodda özellik değerinin değerinin yerine yer alar.
 
-  İfade değerlendirmesinin olası sorunlarını azaltmanın bir yolu, işlemi gerçekleştiren ve bir dize döndüren özel bir özellik oluşturmaktır. DebuggerDisplay özniteliği daha sonra bu özel özelliğin değerini gösterebilir. Aşağıdaki örnek bu kalıbı uygular:
+  İfade değerlendirmesinin olası sorunlarını azaltmanın bir yolu, işlemi gerçekleştiren ve bir dize döndüren özel bir özellik oluşturmaktır. DebuggerDisplay özniteliği daha sonra bu özel özelliğin değerini görüntüler. Aşağıdaki örnek bu düzeni uygulamaya almaktadır:
 
 ```csharp
 [DebuggerDisplay("{DebuggerDisplay,nq}")]
@@ -93,15 +93,15 @@ public sealed class MyClass
 }
 ```
 
-", NQ" soneki, ifade değerlendiricisi 'nin son değeri (nq = tırnak yok) görüntülerken teklifleri kaldırmasını söyler.
+",nq" soneki, ifade değerlendiricisine son değeri (nq = tırnak yok) görüntülerken tırnaklarını kaldırmalarını söyler.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki kod örneği `DebuggerDisplay` , ve ile birlikte nasıl kullanılacağını göstermektedir `DebuggerBrowseable` `DebuggerTypeProxy` . **İzleme** penceresi gibi bir hata ayıklayıcı değişkenleri penceresinde görüntülendiğinde şuna benzer bir genişletme oluşturur:
+Aşağıdaki kod örneği, ve ile birlikte `DebuggerDisplay` kullanmayı `DebuggerBrowsable` `DebuggerTypeProxy` gösterir. İzleme penceresi gibi bir hata ayıklayıcısı  değişkenleri penceresinde görüntü olduğunda, aşağıdakine benzer bir genişletme üretir:
 
 |**Ad**|**Değer**|**Tür**|
 |--------------|---------------|--------------|
-|Anahtar|ünden|nesne {String}|
-|Değer|3|nesne {int}|
+|Anahtar|"three"|object {string}|
+|Değer|3|object {int}|
 
 ```csharp
 [DebuggerDisplay("{value}", Name = "{key}")]
