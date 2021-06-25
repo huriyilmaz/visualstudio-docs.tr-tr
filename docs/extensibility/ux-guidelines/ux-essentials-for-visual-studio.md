@@ -3,19 +3,19 @@ title: Visual Studio için UX Essentials | Microsoft Docs
 description: Visual Studio için geliştirirsiniz ve ekran çözünürlüğü hakkında bilgi de dahil olmak üzere, bu kullanıcı deneyimi için en iyi uygulamaları gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce44b9234465af6bf52ce8baa0e60e641e845d3c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 74b27e87e6f16130573ef6671286501f77e44352
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052677"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899426"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio İçin UX Temel Bileşenleri
 
@@ -156,7 +156,7 @@ Bu durumun doğru tasarımı, Internet Explorer, Office ve Visual Studio 'da ort
 
    ![Renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanılarak Visual Studio Anti-desenler bulunur.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanılarak Visual Studio Anti-desenler bulunur.
 
-**Daha iyi çözüm:** Kullanıcının bağlantıya tıklayarak istediği soruyu ortaya çıkaran. Örnek:
+**Daha iyi çözüm:** Kullanıcının bağlantıya tıklayarak istediği soruyu ortaya çıkaran. Örneğin:
 
 - Windows Azure hizmetleri nasıl çalışır?
 

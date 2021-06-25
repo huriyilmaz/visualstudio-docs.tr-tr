@@ -2,7 +2,7 @@
 description: Bu işlev, kaynak denetimi eklentisi tarafından desteklenen kaynak denetimi eklentisi API 'sinin sürüm numarasını alır.
 title: SccGetVersion Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetVersion
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42273951768591dc89f4c9e4b9a27de1d646e209
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f49d33ebe70390a364d0ae8336e7f69549b6876f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063818"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901090"
 ---
 # <a name="sccgetversion-function"></a>SccGetVersion İşlevi
 Bu işlev, kaynak denetimi eklentisi tarafından desteklenen kaynak denetimi eklentisi API 'sinin sürüm numarasını alır.
@@ -35,7 +35,7 @@ LONG SccGetVersion(void);
 ## <a name="return-value"></a>Dönüş Değeri
  `LONG`Desteklenen kaynak denetimi EKLENTISI API 'sinin sürüm numarasını içeren bir veri türü:
 
-|WORD|Description|
+|WORD|Açıklama|
 |----------|-----------------|
 |HıWORD|Ana sürüm|
 |LOWORD|İkincil sürüm|

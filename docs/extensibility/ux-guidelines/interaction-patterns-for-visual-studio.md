@@ -3,19 +3,19 @@ title: Visual Studio için etkileşim desenleri | Microsoft Docs
 description: Visual Studio için yeni özellikler oluştururken kullanabileceğiniz yaygın etkileşim desenleri Kitaplığı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 05/13/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a3643792-b0df-481c-bc35-576f948e04cf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 215fa0145a342820320980f629bb35678ce09680
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 13a2ec4332cf8010dc5d214dfd61936725ac2063
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072942"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900557"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio İçin Etkileşim Desenleri
 ## <a name="overview"></a>Genel Bakış
@@ -25,7 +25,7 @@ ms.locfileid: "105072942"
 
 ### <a name="visual-studio-client-pattern-types"></a>Visual Studio Istemci model türleri
 
-|Model türü|Description|Örnekler|
+|Model türü|Açıklama|Örnekler|
 |------------------|-----------------|--------------|
 |**Uygulama düzeyi desenleri**|Uygulamada ortak olan üst düzey desenler, uygulama bağlamını belirleme veya görüntüleme, ve bunlar içinde bileşik ve Denetim desenleri içeren|-Araç pencereleri<br />-Belge pencereleri|
 |**Bileşik desenler**|Uygulama desenleri arasında yayılabilen ortak desenler veya ayrı bir yapılandırmadaki çeşitli denetimlerden oluşan tanınan bir desen|-Geçişi görüntüle<br />-Liste oluşturucular<br />-Verileri görüntüleme<br />-Bildirimler<br />-Doğrulama<br />-Seçim modelleri|

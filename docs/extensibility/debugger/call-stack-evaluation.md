@@ -3,7 +3,7 @@ title: Çağrı yığını değerlendirmesi | Microsoft Docs
 description: EnumFrameInfo yöntemi ve kesme modunda çağrı yığınının yığın çerçevelerini görüntülemek için nasıl uygulanacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], call stack evaluation
 - call stacks, evaluation
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c7e7180301965e43e6757340019c3506fe1a5e1f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 059c42349c7f8e681709d69104cf65a6fc245206
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055095"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898545"
 ---
 # <a name="call-stack-evaluation"></a>Çağrı yığını değerlendirmesi
 Kesme modu sırasında çağrı yığınının yığın çerçevelerini görüntülemek için, [EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) yöntemini uygulamanız gerekir.

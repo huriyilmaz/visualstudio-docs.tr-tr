@@ -2,19 +2,19 @@
 title: Visual Studio için görüntüler ve simgeler | Microsoft Docs
 description: Visual Studio görüntülerini ve simgelerini oluşturmak için kullanılan tasarım kavramları hakkında bilgi edinin.
 ms.date: 04/26/2017
-ms.topic: overview
+ms.topic: reference
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 141e388e6877efe2b14c6f652b38b876bafe197f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 36b77dc79574b1741c8feaded65104810e58c2fb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069081"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898798"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio İçin Görüntüler ve Simgeler
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio 'da görüntü kullanımı
@@ -116,177 +116,177 @@ ms.locfileid: "105069081"
 
  ![Piksel çerçevesi içinde ortalanmış simge](../../extensibility/ux-guidelines/media/0404-19_iconcentered.png "0404-19_IconCentered")<br />Piksel çerçevesi içinde ortalanmış simge
 
- ![Piksel çerçevesinin sağ üst kısmına hizalanmış simge](../../extensibility/ux-guidelines/media/0404-20_icontopright.png "0404-20_IconTopRight")<br />Çerçevenin sağ üst kısmına hizalanmış simge
+ ![Piksel çerçevesinin sağ üst kısmına hizalanmış simge](../../extensibility/ux-guidelines/media/0404-20_icontopright.png "0404-20_IconTopRight")<br />Çerçevenin sağ üst köşesindeki simge
 
- ![Ortalanmış ve piksel çerçevesinin üstüne hizalanmış simge](../../extensibility/ux-guidelines/media/0404-21_icontopalign.png "0404-21_IconTopAlign")<br />Simge ortalanmış ve çerçevenin üst kısmına hizalanır
+ ![Ortalanmış ve piksel çerçevesinin üstüne hizalanmış simge](../../extensibility/ux-guidelines/media/0404-21_icontopalign.png "0404-21_IconTopAlign")<br />Ortalanmış ve çerçevenin en üstüne hizalanmış simge
 
- İdeal hizalama ve dengeyi elde etmek için simgenin temel öğesini eylem glifleri ile engellemeyi önleyin. Glifi Taban öğesinin sol üst kısmına yerleştirin. Ek bir öğe eklerken, simgenin hizalamasını ve dengesini göz önünde bulundurun.
+ İdeal hizalama ve denge elde etmek için simgenin temel öğesini eylem glifleriyle tıkamaktan kaçının. Glyph'i temel öğenin sol üst yanına yakın bir yere yer. Ek bir öğe eklerken simgenin hizalamasını ve dengelerini göz önünde bulundurabilirsiniz.
 
-|**Hizalama ve dengeyi doğru**|**Hizalama ve bakiye yanlış**|
+|**Hizalamayı ve dengeyi düzeltme**|**Yanlış hizalama ve bakiye**|
 |-|-|
-|![Simge dengesini ve hizalamayı Düzeltme](../../extensibility/ux-guidelines/media/0404-22_alignbalancecorrect.png "0404-22_AlignBalanceCorrect")|![Yanlış simge dengesi ve hizalaması](../../extensibility/ux-guidelines/media/0404-23_alignbalanceincorrect.png "0404-23_AlignBalanceIncorrect")|
+|![Doğru simge bakiyesi ve hizalaması](../../extensibility/ux-guidelines/media/0404-22_alignbalancecorrect.png "0404-22_AlignBalanceCorrect")|![Yanlış simge bakiyesi ve hizalaması](../../extensibility/ux-guidelines/media/0404-23_alignbalanceincorrect.png "0404-23_AlignBalanceIncorrect")|
 
- Öğeleri paylaşan ve kümeler halinde kullanılan simgeler için boyut eşliği sağlayın. Yanlış eşleştirmeden, dairenin ve okun büyük boyutlu olduğunu ve eşleşmediğini unutmayın.
+ Öğeleri ve kümelerde kullanılan simgelerin boyut eşlikli olduğundan emin olmak. Yanlış eşleştirmede dairenin ve okun fazla büyük olduğunu ve eşleşme olmadığını unutmayın.
 
-|**Doğru boyut eşliği**|**Yanlış boyut eşliği**|
+|**Doğru boyut eşlik**|**Yanlış boyut eşlik**|
 |-|-|
-|![Doğru simge boyutu ve eşliği](../../extensibility/ux-guidelines/media/0404-24_sizeparitycorrect.png "0404-24_SizeParityCorrect")|![Yanlış simge boyutu ve eşlik](../../extensibility/ux-guidelines/media/0404-25_sizeparityincorrect.png "0404-25_SizeParityIncorrect")|
+|![Doğru simge boyutu ve eşlik](../../extensibility/ux-guidelines/media/0404-24_sizeparitycorrect.png "0404-24_SizeParityCorrect")|![Yanlış simge boyutu ve eşlik](../../extensibility/ux-guidelines/media/0404-25_sizeparityincorrect.png "0404-25_SizeParityIncorrect")|
 
- Tutarlı çizgi ve görsel ağırlıklar kullanın. Oluşturduğunuz simgenin yan yana karşılaştırma kullanarak diğer simgelere nasıl Karşılaştırıldığı değerlendirin. Tüm 16x16 çerçevesini hiçbir şekilde kullanmayın, 15x15 veya daha küçük kullanın. Negatif-pozitif (koyu-hafif) oran 50/50 olmalıdır.
+ Tutarlı çizgi ve görsel ağırlıklar kullanın. Yan yana karşılaştırma kullanarak, bina simgenin diğer simgelerle karşılaştırılmasını değerlendirin. Hiçbir zaman 16x16 çerçevenin tamamını, 15x15 veya daha küçük bir çerçeveyi kullanmayın. Negatif-pozitif (koyu-açık) oranı 50/50 olmalıdır.
 
-|**Sıfırdan olumlu oranı doğru yapın**|**Negatif-pozitif oranına yanlış**|
+|**Negatif-pozitif oranını düzeltme**|**Hatalı negatif-pozitif oranı**|
 |-|-|
-|![Simgeler &#40;1&#41;için görsel ağırlığı düzeltin ](../../extensibility/ux-guidelines/media/0404-26_visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![Simgeler &#40;2&#41;için görsel ağırlığı düzeltin ](../../extensibility/ux-guidelines/media/0404-27_visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![Simgeler &#40;3&#41;için doğru görsel ağırlığı ](../../extensibility/ux-guidelines/media/0404-28_visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![Simgeler için yanlış görsel ağırlık](../../extensibility/ux-guidelines/media/0404-29_visualweightincorrect.png "0404-29_VisualWeightIncorrect")|
+|![Simgeler için görsel ağırlığı &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-26_visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![Simgeler için görsel ağırlığı &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-27_visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![Simgeler için görsel ağırlığı &#40;3&#41;](../../extensibility/ux-guidelines/media/0404-28_visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![Simgeler için yanlış görsel ağırlığı](../../extensibility/ux-guidelines/media/0404-29_visualweightincorrect.png "0404-29_VisualWeightIncorrect")|
 
- Öğeleri öğe bütünlüğünden ödün vermeden derlemek için basit, karşılaştırılabilir şekiller ve tamamlayıcı açıları kullanın. Mümkün olduğunda 45 ° veya 90 ° açı kullanın.
+ Öğe bütünlüğünden ödün vermeden öğelerinizi oluşturmak için basit, karşılaştırılabilir şekiller ve tamamlayıcı açılar kullanın. Mümkün olduğunca 45° veya 90° açı kullanın.
 
- ![Simge açılarla doğru](../../extensibility/ux-guidelines/media/0404-30_iconanglescorrect.png "0404-30_IconAnglesCorrect")
+ ![Simge açılarını düzeltme](../../extensibility/ux-guidelines/media/0404-30_iconanglescorrect.png "0404-30_IconAnglesCorrect")
 
 #### <a name="perspective"></a>Perspektif
- Simgenin işaretini kaldırın ve anlaşılır durumda tutun. Yalnızca gerektiğinde perspektif ve hafif kaynak kullanın. Simge öğelerinde perspektif kullanılması önlenebilir olsa da, bazı öğeler bu olmadan tanınmıyor. Bu gibi durumlarda, stilize bir perspektif öğenin netliğini iletişim kurar.
+ Simgeyi net ve anlaşılır bir şekilde tut. Perspektifi ve açık kaynağı yalnızca gerekli olduğunda kullanın. Simge öğelerinde perspektifin kullanımından kaçınılmalıdır, ancak bazı öğeler bu olmadan tanınamaz. Böyle durumlarda, stilize edilmiş bir perspektif öğenin netliğini iletir.
 
  ![3 noktalı perspektif](../../extensibility/ux-guidelines/media/0404-31_3pointperspective.png "0404-31_3PointPerspective")<br />3 noktalı perspektif
 
- ![1 noktalı perspektif](../../extensibility/ux-guidelines/media/0404-32_1pointperspective.png "0404-32_1PointPerspective")<br />1 noktalı perspektif
+ ![1 nokta perspektifi](../../extensibility/ux-guidelines/media/0404-32_1pointperspective.png "0404-32_1PointPerspective")<br />1 nokta perspektifi
 
- Çoğu öğe doğru veya sağa açılı olmalıdır:
+ Çoğu öğenin sağa dönük veya açılı olması gerekir:
 
- ![Simgeler açılı sağ](../../extensibility/ux-guidelines/media/0404-33_angledright.png "0404-33_AngledRight")
+ ![Sağa açılı simgeler](../../extensibility/ux-guidelines/media/0404-33_angledright.png "0404-33_AngledRight")
 
- Hafif kaynakları yalnızca bir nesneye gerekli açıklık eklerken kullanın.
+ Yalnızca bir nesneye gerekli netliği eklerken açık kaynakları kullanın.
 
-|**Doğru ışık kaynağı**|**Hatalı ışık kaynağı**|
+|**Doğru açık kaynak**|**Yanlış açık kaynak**|
 |-|-|
-|![Simgeler için ışık kaynaklarını düzeltin](../../extensibility/ux-guidelines/media/0404-34_lightsourcescorrect.png "0404-34_LightSourcesCorrect")|![Simgeler için hatalı açık kaynaklar](../../extensibility/ux-guidelines/media/0404-35_lightsourcesincorrect.png "0404-35_LightSourcesIncorrect")|
+|![Simgeler için açık kaynakları düzeltme](../../extensibility/ux-guidelines/media/0404-34_lightsourcescorrect.png "0404-34_LightSourcesCorrect")|![Simgeler için yanlış açık kaynaklar](../../extensibility/ux-guidelines/media/0404-35_lightsourcesincorrect.png "0404-35_LightSourcesIncorrect")|
 
- Yalnızca okunabilirliği geliştirmek veya metaphor ile daha iyi iletişim kurmak için anahatları kullanın. Negatif pozitif (koyu-hafif) bakiye 50/50 olmalıdır.
+ Ana hatları yalnızca okunaklılığı geliştirmek veya benzetmeyle daha iyi iletişim kurmak için kullanın. Negatif-pozitif (koyu-açık) bakiye 50/50 olmalıdır.
 
-|**Ana hatlarıyla doğru kullanımı**|**Anahatların yanlış kullanımı**|
+|**Ana hatların doğru kullanımı**|**Ana hatların yanlış kullanımı**|
 |-|-|
-|![Doğru anahatlar](../../extensibility/ux-guidelines/media/0404-36_outlinescorrect.png "0404-36_OutlinesCorrect")|![Yanlış anahatlar](../../extensibility/ux-guidelines/media/0404-37_outlinesincorrect.png "0404-37_OutlinesIncorrect")|
+|![Ana hatları düzeltme](../../extensibility/ux-guidelines/media/0404-36_outlinescorrect.png "0404-36_OutlinesCorrect")|![Yanlış ana hatlar](../../extensibility/ux-guidelines/media/0404-37_outlinesincorrect.png "0404-37_OutlinesIncorrect")|
 
 #### <a name="icon-types"></a>Simge türleri
- **Kabuk ve komut çubuğu** simgeleri şu öğelerden üçten fazla değil: bir temel, bir değiştirici, bir eylem veya bir durum.
+ **Kabuk ve komut çubuğu** simgeleri şu öğelerden en fazla üçten oluşur: bir temel, bir değiştirici, bir eylem veya bir durum.
 
  ![Kabuk ve komut çubuğu simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-38_shellicons.png "0404-38_ShellIcons")<br />Kabuk ve komut çubuğu simgeleri örnekleri
 
- **Araç penceresi komut çubuğu** simgeleri şu öğelerden üçten fazla değil: bir temel, bir değiştirici, bir eylem veya bir durum.
+ **Araç penceresi komut çubuğu** simgeleri şu öğelerden en fazla üçten oluşur: bir temel, bir değiştirici, bir eylem veya bir durum.
 
  ![Araç penceresi komut çubuğu simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-39_toolwindowcommandbaricons.png "0404-39_ToolWindowCommandBarIcons")<br />Araç penceresi komut çubuğu simgeleri örnekleri
 
- **Ağaç görünümü Kesinleştirme** simgeleri şu öğelerden üçten fazla değil: bir temel, bir değiştirici, bir eylem veya bir durum.
+ **Ağaç görünümü disambiguator** simgeleri şu öğelerden en fazla üçten oluşur: bir temel, bir değiştirici, bir eylem veya bir durum.
 
- ![Ağaç görünümü Kesinleştirme simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-40_treeviewicons.png "0404-40_TreeViewIcons")<br />Ağaç görünümü Kesinleştirme simgeleri örnekleri
+ ![Ağaç görünümü disambiguator simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-40_treeviewicons.png "0404-40_TreeViewIcons")<br />Ağaç görünümü disambiguator simgeleri örnekleri
 
- Şu durumlarda **durum tabanlı değer taksonomi** simgeleri var: etkin, etkin devre dışı ve etkin olmayan devre dışı.
+ **Durum tabanlı değer sınıflandırma simgeleri şu** durumlarda mevcuttur: etkin, etkin devre dışı ve devre dışı.
 
- ![Durum tabanlı değer taksonomi simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-41_statebasedtaxonomy.png "0404-41_StateBasedTaxonomy")<br />Durum tabanlı değer taksonomi simgeleri örnekleri
+ ![Durum tabanlı değer sınıflandırma simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-41_statebasedtaxonomy.png "0404-41_StateBasedTaxonomy")<br />Durum tabanlı değer sınıflandırma simgeleri örnekleri
 
- **IntelliSense** simgeleri şu öğelerden üçten fazla değil: bir temel, bir değiştirici ve bir durum.
+ **IntelliSense** simgeleri şu öğelerden en fazla üçten oluşur: bir temel, bir değiştirici ve bir durum.
 
  ![IntelliSense simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-42_intellisenseicons.png "0404-42_IntelliSenseIcons")<br />IntelliSense simgeleri örnekleri
 
- **Küçük (16x16) proje** simgelerinin ikiden fazla öğe olmaması gerekir: bir temel ve bir değiştirici.
+ **Küçük (16x16)** proje simgelerinin en fazla iki öğeye sahip olması gerekir: bir temel ve bir değiştirici.
 
- ![Küçük (16x16) proje simgeleri](../../extensibility/ux-guidelines/media/0404-43_16x16project1.png "0404-43_16x16Project1") ![16X16 proje simgesine örnek &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-44_16x16project2.png "0404-44_16x16Project2") ![16x16 proje simgesi &#40;3&#41;](../../extensibility/ux-guidelines/media/0404-45_16x16project3.png "0404-45_16x16Project3")<br />Küçük (16x16) proje simgeleri örnekleri
+ ![Küçük (16x16)](../../extensibility/ux-guidelines/media/0404-43_16x16project1.png "0404-43_16x16Project1") proje ![simgelerinin örnekleri 16x16 proje simgesi &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-44_16x16project2.png "0404-44_16x16Project2") ![16x16](../../extensibility/ux-guidelines/media/0404-45_16x16project3.png "0404-45_16x16Project3") proje simgesi &#40;3&#41;<br />Küçük (16x16) proje simgeleri örnekleri
 
- **Büyük (32x32) proje** simgeleri aşağıdaki öğelerin dörtten fazla değil: bir temel, biri iki değiştiricinin ve bir dil kaplaması.
+ **Büyük (32x32)** proje simgeleri şu öğelerden en fazla dört taneden oluşur: bir temel, bire iki değiştirici ve bir dil katman.
 
  ![Büyük (32x32) proje simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-46_32x32project.png "0404-46_32x32Project")<br />Büyük (32x32) proje simgeleri örnekleri
 
 ### <a name="production-details"></a>Üretim ayrıntıları
- Tüm yeni kullanıcı arabirimi öğeleri Windows Presentation Foundation (WPF) kullanılarak oluşturulmalıdır ve WPF için tüm yeni simgeler 32 bit PNG biçiminde olmalıdır. 24 bit PNG, saydamlığı desteklemeyen eski bir biçimdir ve bu nedenle simgeler için önerilmez.
+ Tüm yeni kullanıcı arabirimi öğeleri Windows Presentation Foundation (WPF) kullanılarak oluşturulacak ve WPF'nin tüm yeni simgeleri 32 bit PNG biçiminde olmalıdır. 24 bit PNG, saydamlığı desteklemez ve bu nedenle simgeler için önerilmez.
 
- Çözünürlüğü 96 DPI adresinden tasarruf edin.
+ Çözünürlüğü 96 DPI'ye kaydedin.
 
 #### <a name="file-types"></a>Dosya türleri
 
-- **32-BIT png:** simgeler için tercih edilen biçim. Tek bir raster (piksel) görüntüsünü depolayabilen kayıpsız bir veri sıkıştırma dosyası biçimi. 32-bit PNG dosyaları alfa kanalı saydamlığını, Gamma düzeltmesini ve taramayı destekler.
+- **32 bit PNG: Simgeler** için tercih edilen biçim. Tek bir tarama (piksel) görüntüsünü depolayabilirsiniz kayıpsız veri sıkıştırma dosyası biçimi. 32 bit PNG dosyaları alfa kanal saydamlığını, düzeltmeyi ve ara özelliği destekler.
 
-- **32-BIT BMP:** WPF olmayan denetimler için. Ayrıca, XP veya yüksek renk olarak da bilinen 32-bit BMP, alfa kanalı saydamlığı olan gerçek renkli bir resim olan bir RGB/A görüntü biçimidir. Alfa kanalı, Adobe Photoshop 'ta belirlenmiş bir saydamlık katmanıdır ve daha sonra bit eşlem içinde ek (dördüncü) renk kanalı olarak kaydedilir. Renk derinliği hakkında hızlı bir görsel ipucu sağlamak için tüm 32-bit BMP dosyalarına resim üretimi sırasında siyah bir arka plan eklenir. Bu siyah arka plan, Kullanıcı arabiriminde maskelenecek alanı temsil eder.
+- **32 bit BMP:** WPF olmayan denetimler için. XP veya yüksek renk olarak da adlandırılan 32 bit BMP, rgb/A görüntü biçimidir ve alfa kanalı saydamlığı olan gerçek renkli bir görüntüdir. Alfa kanal, Adobe Adobe'de belirlenen ve bit eşlem içinde ek (dördüncü) renk kanalı olarak kaydedilen bir saydamlık katmanıdır. Renk derinliği hakkında hızlı bir görsel ipucu sağlamak için 32 bitlik tüm BMP dosyalarına sanat çalışmaları sırasında siyah bir arka plan eklenir. Bu siyah arka plan, kullanıcı arabiriminde maskelenmiş alanı temsil eder.
 
-- **32-BIT ICO:** proje simgeleri Için ve öğe Ekle. Tüm ICO dosyaları alfa kanalı saydamlığı (RGB/A) ile 32 bitlik gerçek renktedir. ICO dosyaları birden çok boyut ve renk derinlikleri depolayabildiğinden, Vista simgeleri genellikle 16x16, 32x32, 48x48 ve 256x256 görüntü boyutlarını içeren bir ICO biçimindedir. Windows Gezgini 'nde düzgün şekilde görüntülenebilmesi için, ICO dosyalarının her görüntü boyutu için 24 bit ve 8 bit renk derinlikleri ile kaydedilmesi gerekir.
+- **32 bit ICO:** Proje simgeleri ve Öğe Ekle için. Tüm ICO dosyaları, alfa kanal saydamlığı (RGB/A) ile 32 bit gerçek renktir. ICO dosyaları birden çok boyut ve renk derinliği depolayana kadar Vista simgeleri genellikle 16x16, 32x32, 48x48 ve 256x256 görüntü boyutlarını içeren bir ICO biçimindedir. Windows Gezgini'nde düzgün bir şekilde görüntülemek için ICO dosyalarının her görüntü boyutu için 24 bit ve 8 bit renk derinliklerine indirgenmiş olması gerekir.
 
-- **XAML:** tasarım yüzeyleri ve Windows donatıcıları için. XAML simgeleri ölçekleme, döndürme, dosyalama ve saydamlığı destekleyen vektör tabanlı görüntü dosyalarıdır. Bunlar, Visual Studio 'da bugün yaygın değildir ancak esnekliği nedeniyle daha popüler hale gelmektedir.
+- **XAML:** Tasarım yüzeyleri ve Windows donatıcıları için. XAML simgeleri ölçeklendirme, döndürme, dosyalama ve saydamlığı destekleyen vektör tabanlı görüntü dosyalarıdır. Günümüzde bu Visual Studio yaygın değildir ancak esneklikleri nedeniyle daha popüler hale geliyor.
 
-- **SVG**
+- **Svg**
 
-- **24 BIT BMP:** Visual Studio komut çubuğu için. Doğru renkli bir RGB görüntü biçimi olan 24 bit BMP, bir gizleme saydamlık katmanı için bir renk tuşu olarak macenta (R = 255, G = 0, B = 255) kullanarak saydamlık katmanı oluşturan bir simge kuralıdır. 24 bit BMP 'de, tüm Macenta yüzeyler arka plan rengi kullanılarak görüntülenir.
+- **24 bit BMP:** Visual Studio çubuğu için. Gerçek renkli RGB görüntü biçimi olan 24 bit BMP, saydam saydamlık katmanı için renk anahtarı olarak magenta (R=255, G=0, B=255) kullanarak bir saydamlık katmanı oluşturan simge kuralıdır. 24 bit BMP'de tüm magenta yüzeyleri arka plan rengi kullanılarak görüntülenir.
 
-- **24 BIT GIF:** Visual Studio komut çubuğu için. Saydamlığı destekleyen gerçek renkli bir RGB resim biçimi. GIF dosyaları genellikle sihirbaz resminde ve GIF animasyonlarında kullanılır.
+- **24 bit GIF:** Visual Studio çubuğu için. Saydamlığı destekleyen bir gerçek renk RGB görüntü biçimi. GIF dosyaları genellikle Sihirbaz resmi ve GIF animasyonlarında kullanılır.
 
-### <a name="icon-construction"></a>Simge oluşturma
- Visual Studio 'da en küçük simge boyutu 16x16 'dir. Yaygın kullanımda olan en büyük değer 32x32 ' dir. Bir simge tasarlarken 16x16, 24x24 veya 32x32 çerçevesinin tamamını doldurmayacağınızı unutmayın. Okunaklı bir simge oluşturma, Kullanıcı tanıma için önemlidir. Simge oluştururken aşağıdaki noktalara uyar.
+### <a name="icon-construction"></a>Simge yapısı
+ Uygulamanın en küçük simge boyutu Visual Studio 16x16'dır. Yaygın olarak kullanılan en büyük kullanım 32x32'dir. Simge tasarlarken 16x16, 24x24 veya 32x32 çerçevenin tamamını doldurmayın. Okunaklı, tekdüze simge yapısı, kullanıcı tanıma için önemlidir. Simgeleri inşa etmek için aşağıdaki noktalara uyun.
 
 - Simgeler net, anlaşılır ve tutarlı olmalıdır.
 
-- Durum bildirim öğelerini bir simge temel öğesinin üzerine yığmak için tek simgeler olarak kullanmak daha iyidir. Bazı bağlamlarda, Kullanıcı Arabirimi durum öğesinin bir temel öğeyle eşlenmesini gerektirebilir.
+- Durum bildirimi öğelerini tek simgeler olarak kullanmak ve bunları bir simge temel öğesinin üzerine yığmama daha iyidir. Belirli bağlamlarda, kullanıcı arabirimi durum öğesinin bir temel öğe ile eşleştirilmiş olması gerektirebilir.
 
-- Proje simgeleri genellikle birkaç boyut içeren. ico dosyalarıdır. Yalnızca 16x16, 24x24 ve 32x32 simgeleri güncelleştiriliyor. Çoğu 16x16 ve 24x24 simge aynı öğeleri içerir. 32x32 simgeleri, uygunsa proje dili türü de dahil olmak üzere daha fazla ayrıntı içerir.
+- Proje simgeleri genellikle çeşitli boyutlardaki .ico dosyalarıdır. Yalnızca 16x16, 24x24 ve 32x32 simgeleri güncelleştiriliyor. Çoğu 16x16 ve 24x24 simgeleri aynı öğeleri içerir. 32x32 simgeleri, uygun olduğunda proje dil türü de dahil olmak üzere daha fazla ayrıntı içerir.
 
-- 32x32 simgeleri için, temel öğelerin genellikle 2 piksellik bir çizgi ağırlığı vardır. Ayrıntı öğeleri için 1 veya 2 piksellik çizgi kalınlığı kullanılabilir. Hangisinin daha uygun olduğunu öğrenmek için en iyi kararlarınızı kullanın.
+- 32x32 simgeleri için temel öğeler genellikle 2 piksel çizgi ağırlığına sahiptir. Ayrıntı öğeleri için 1 veya 2 piksel çizgi ağırlığı kullanılabilir. Hangisinin daha uygun olduğunu belirlemek için en iyi kararınızı kullanın.
 
-- 16x16 ve 24x24 simgelerinin öğeleri arasında en az 1 piksellik bir boşluk vardır. 32x32 simgeleri için, öğeler arasında ve değiştirici ile temel öğe arasında 2 piksellik boşluk kullanın.
+- 16x16 ve 24x24 simgeleri için öğeler arasında en az 1 piksel boşluk içerir. 32x32 simgeleri için öğeler arasında ve değiştirici ile temel öğe arasında 2 piksel boşluk kullanın.
 
-  ![Boyut 16x16, 24x24 ve 32x32 simgeleri için öğe boşluğu](../../extensibility/ux-guidelines/media/0404-47_elementspacing.png "0404-47_ElementSpacing")<br />Boyut 16x16, 24x24 ve 32x32 simgeleri için öğe boşluğu
+  ![16x16, 24x24 ve 32x32 boyutlu simgeler için öğe aralığı](../../extensibility/ux-guidelines/media/0404-47_elementspacing.png "0404-47_ElementSpacing")<br />16x16, 24x24 ve 32x32 boyutlu simgeler için öğe aralığı
 
 #### <a name="color-and-accessibility"></a>Renk ve erişilebilirlik
- Visual Studio uyumluluk yönergeleri, üründeki tüm simgelerin renk ve kontrast için erişilebilirlik gereksinimlerini geçmesini gerektirir. Bu, Icon Inversion aracılığıyla elde edilir ve tasarım yaparken, ürünün programlamayla program aracılığıyla tersine çevrilecektir.
+ Visual Studio uyumluluk yönergeleri, ürünle ilgili tüm simgelerin renk ve karşıtlık için erişilebilirlik gereksinimlerini geçmelerini gerektirir. Bu, simge ters çevirme yoluyla başarıldı ve tasarımını tamamlarken bunların üründe program aracılığıyla ters çevireceklerini fark ediyorsanız.
 
- Visual Studio simgelerinde renk kullanma hakkında daha fazla bilgi için bkz. [görüntülerde renk kullanma](../../extensibility/ux-guidelines/images-and-icons-for-visual-studio.md#BKMK_UsingColorInImages).
+ Simgelerde renk kullanma hakkında daha fazla Visual Studio için [bkz. Görüntülerde renk kullanma.](../../extensibility/ux-guidelines/images-and-icons-for-visual-studio.md#BKMK_UsingColorInImages)
 
 ## <a name="using-color-in-images"></a><a name="BKMK_UsingColorInImages"></a> Görüntülerde renk kullanma
 
 ### <a name="overview"></a>Genel Bakış
- Visual Studio 'daki simgeler temelde tek bir görseldir. Renk, belirli bilgileri iletmek ve hiçbir şekilde süslemesi için ayrılmıştır. Renk kullanılır:
+ Visual Studio simgeler öncelikli olarak monokromatiktir. Renk, belirli bilgileri iletmek için ayrılmıştır ve hiçbir zaman süsleme için ayrılmıştır. Renk kullanılır:
 
-- bir eylemi belirtmek için
+- bir eylemi göstermek için
 
-- kullanıcıyı bir durum bildirimine uyarma
+- kullanıcıya durum bildirimi uyarısı yapmak için
 
-- Dil ilişkisini belirlemek için
+- dil ilişkilerini atama
 
 - IntelliSense içindeki öğeleri ayırt etmek için
 
 ### <a name="accessibility"></a>Erişilebilirlik
- Visual Studio uyumluluk yönergeleri, ürüne işaretlenmiş tüm simgelerin renk ve kontrast için erişilebilirlik gereksinimlerini geçirmesini gerektirir. Görsel dil paletindeki renkler test edilmiştir ve bu gereksinimleri karşılar.
+ Visual Studio uyumluluk yönergeleri, ürüne iade olan tüm simgelerin renk ve karşıtlık için erişilebilirlik gereksinimlerini geçmelerini gerektirir. Görsel dil paletinde renkler test edilmiştir ve bu gereksinimleri karşılar.
 
-#### <a name="color-inversion-for-dark-themes"></a>Koyu Temalar için Color Inversion
- Simgelerin, Visual Studio koyu temasının doğru kontrast oranıyla görünmesi için bir Inversion programlı olarak uygulanır. Bu kılavuzdaki renkler, doğru şekilde ters çevirmeleri için bölümünde seçilmiştir. Renk kullanımını Bu palete sınırlayın veya Inversion uygulandığında öngörülemeyen sonuçlara sahip olursunuz.
+#### <a name="color-inversion-for-dark-themes"></a>Koyu temalar için renk ters çevirme
+ Simgelerin koyu temada doğru karşıtlık oranıyla Visual Studio için program aracılığıyla bir ters çevirme uygulanır. Bu kılavuzda yer alan renkler kısmen seçilmiştir ve doğru şekilde ters çevirilmelidir. Renk kullanımınızı bu paletle kısıtlar veya ters çevirme uygulandığında öngörülemeyen sonuçlar elde edilir.
 
- ![Renkleri tersine çevrilmiş simgelere örnek olarak](../../extensibility/ux-guidelines/media/0405-01_darkthemeinversion.png "0405-01_DarkThemeInversion")<br />Renkleri tersine çevrilmiş simgelere örnek olarak
+ ![Renkleri ters çeviren simge örnekleri](../../extensibility/ux-guidelines/media/0405-01_darkthemeinversion.png "0405-01_DarkThemeInversion")<br />Renkleri ters çeviren simge örnekleri
 
 ### <a name="base-palette"></a>Temel palet
- Tüm standart simgeler üç temel renk içerir. Simgeler, 3B araç simgeleri için bir veya iki özel durum ile degradeler veya bırakma gölgeleri içermez.
+ Tüm standart simgeler üç temel renk içerir. Simgeler, 3D araç simgeleri için bir veya iki özel durum dışında hiçbir gradyan veya bırakma gölgesi içermez.
 
-|Kullanım|Name|Değer (açık Tema)|Basılı|Örnek|
+|Kullanım|Name|Değer (Açık tema)|Swatch|Örnek|
 |-----------|----------|---------------------------|------------|-------------|
-|Arka plan/koyu|VS BG|424242/66, 66, 66|![Renk örneği 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![Temel palet örneği](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405-02_BasePaletteExample")|
-|Ön plan/açık|VS FG|F0EFF1/240.239.241|![F0EFF1 örneği](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||
-|Ana hat|KARŞı|F6F6F6/246.246.246|![F6F6F6 örneği](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||
+|Arka Plan/Koyu|VS BG|424242 / 66,66,66|![Swatch 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![Temel palet örneği](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405-02_BasePaletteExample")|
+|Ön Plan/Açık|VS FG|F0EFF1 / 240.239.241|![Swatch F0EFF1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||
+|Ana hat|VS Out|F6F6F6 / 246,246,246|![Swatch F6F6F6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||
 
- Taban renklere ek olarak, her simge genişletilmiş paletten bir ek renk içerebilir.
+ Temel renklere ek olarak, her simge genişletilmiş paletden bir tane daha renk içerebilir.
 
 ### <a name="extended-palette"></a>Genişletilmiş palet
 
 #### <a name="action-modifiers"></a>Eylem değiştiricileri
- Aşağıdaki dört renk, eylem değiştiricilerine gereken eylem türlerini gösterir:
+ Aşağıdaki dört renk, eylem değiştiricileri için gereken eylem türlerini gösterir:
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Kullanım|Name|Değer (tüm temalar)|Swatch|
 |-----------|----------|--------------------------|------------|
-|Pozitif|VS eylemi yeşil|388A34/56138, 52|![Renk örneği 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
-|Negatif|VS eylemi Red|A1260D/161, 38, 13|![A1260D örneği](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|
-|Nötr|VS eylemi mavi|00539C/0, 83156|![Renk örneği 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|
-|Oluştur/yeni|VS eylemi turuncu|C27D1A/194156, 26|![C27D1A örneği](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
+|Pozitif|VS Action Green|388A34 / 56.138.52|![Swatch 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
+|Negatif|VS Action Red|A1260D / 161,38,13|![Swatch A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|
+|Nötr|VS Action Blue|00539C / 0,83.156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|
+|Oluştur/Yeni|VS Action Orange|C27D1A / 194,156,26|![Swatch C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
 
 ##### <a name="examples"></a>Örnekler
- Yeşil, "Ekle", "Çalıştır", "Play" ve "Validate" gibi pozitif eylem değiştiricilerinde kullanılır.
+ Yeşil, "Ekle", "Çalıştır", "Oynat" ve "Doğrula" gibi pozitif eylem değiştiricileri için kullanılır.
 
-|Çalıştır|Sorguyu Yürüt|Tüm adımları Yürüt|Denetim Ekle|
+|Çalıştır|Sorguyu yürütme|Tüm adımları oynatma|Denetim Ekle|
 |-|-|-|-|
-|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Sorgu simgesini Yürüt](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")|![Tüm adımları Yürüt simgesi](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")|![Denetim simgesi ekle](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")|
+|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Sorguyu yürüt simgesi](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")|![Tüm adımları oynat simgesi](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")|![Denetim ekle simgesi](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")|
 
- Kırmızı, "Sil", "Durdur", "Iptal" ve "Kapat" gibi negatif Eylem değiştiricileri için kullanılır.
+ Kırmızı, "Sil", "Durdur", "İptal" ve "Kapat" gibi negatif eylem değiştiricileri için kullanılır.
 
 |İlişkiyi Sil|Sütunu Sil|Sorguyu durdur|Çevrimdışı bağlantı|
 |-|-|-|-|
@@ -345,37 +345,37 @@ ms.locfileid: "105069081"
 |![HTML simgesi](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![WPF simgesi](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![ASP simgesi](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS simgesi](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript simgesi](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript|
 
 #### <a name="intellisense"></a>IntelliSense
- IntelliSense simgeleri özel bir renk paleti kullanır. Bu renkler, kullanıcıların IntelliSense açılan listesinde farklı öğeler arasında hızlı bir şekilde ayrım yapmanıza yardımcı olmak için kullanılır.
+ IntelliSense simgeleri özel bir renk paleti kullanır. Bu renkler, kullanıcıların IntelliSense açılan listesinde farklı öğeler arasında hızlı bir şekilde ayrım yapmak için kullanılır.
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Kullanım|Name|Değer (tüm temalar)|Swatch|
 |-----------|----------|--------------------------|------------|
-|Sınıf, olay|VS eylemi turuncu|C27D1A/194125, 26|![C27D1A örneği](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
-|Genişletme yöntemi, yöntemi, modülü, temsilci|VS eylemi mor|652D90/101, 45144|![Renk örneği 652D90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|
-|Alan, Enum öğesi, makro, yapı, birleşim değeri türü, Işleç, arabirim|VS eylemi mavi|00539C/0, 83156|![Renk örneği 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|
-|Nesne|VS eylemi yeşil|388A34/56138, 52|![Renk örneği 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
-|Sabit, özel durum, sabit listesi öğesi, eşleme, eşleme öğesi, ad alanı, şablon, tür tanımı|Arka plan (VS BG)|424242/66, 66, 66|![Renk örneği 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|
+|Sınıf, Olay|VS Action Orange|C27D1A / 194,125,26|![Swatch C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
+|Uzantı Yöntemi, Yöntem, Modül, Temsilci|VS Action Purple|652D90 / 101,45,144|![Swatch 652D90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|
+|Alan, Enum Öğesi, Makro, Yapı, Union Değer Türü, İşleç, Arabirim|VS Action Blue|00539C / 0,83.156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|
+|Nesne|VS Action Green|388A34 / 56.138.52|![Swatch 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
+|Sabit, Özel Durum, Sabit Öğe, Eşleme, Eşleme Öğesi, Ad Alanı, Şablon, Tür Tanımı|Arka Plan (VS BG)|424242 / 66,66,66|![Swatch 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|
 
 ##### <a name="examples-of-intellisense-icons"></a>IntelliSense simgeleri örnekleri
 
-|Sınıf|Özel olay|Temsilci|Yöntem arkadaş|Alan|
+|Sınıf|Özel Olay|Temsilci|Yöntem Arkadaşı|Alan|
 |-|-|-|-|-|
 |![IntelliSense sınıf simgesi](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")|![IntelliSense özel olay simgesi](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")|![IntelliSense temsilci simgesi](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")|![IntelliSense yöntemi arkadaş simgesi](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")|![Alan simgesi](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")|
 
-|Korumalı Enum öğesi|Nesne|Şablon|Özel durum kısayolu|
+|Korumalı Enum Öğesi|Nesne|Şablon|Özel Durum Kısayolu|
 |-|-|-|-|
-|![IntelliSense korumalı Enum öğesi simgesi](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")|![IntelliSense nesne simgesi](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")|![IntelliSense şablon simgesi](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")|![IntelliSense özel durum kısayol simgesi](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")|
+|![IntelliSense korumalı enum öğesi simgesi](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")|![IntelliSense nesne simgesi](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")|![IntelliSense şablon simgesi](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")|![IntelliSense özel durum kısayol simgesi](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")|
 
 ### <a name="notifications"></a>Bildirimler
- Visual Studio 'daki bildirimler, durumu göstermek için kullanılır. Bildirim paleti aşağıdaki durum düzeylerine sahip bildirimleri tanımlamak için aşağıdaki dört rengi ve siyah ya da beyaz ön plan dolgusu seçeneklerini kullanır.
+ Bildirim Visual Studio durumu belirtmek için kullanılır. Bildirim paleti, bildirimleri aşağıdaki durum düzeyleriyle tanımlamak için siyah veya beyaz ön plan dolgu seçeneklerinin yanı sıra aşağıdaki dört rengi kullanır.
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Kullanım|Name|Değer (tüm temalar)|Swatch|
 |-----------|----------|--------------------------|------------|
-|Durum: nötr|Uyarı mavi (VS mavi)|1BA1E2/27.161.226|![Renk örneği 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|
-|Durum: pozitif|Bildirim yeşili (VS yeşil)|339933/51153, 51|![Renk örneği 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|
-|Durum: negatif|Kırmızı bildirim (-kırmızı)|E51400/229, 20, 0|![E51400 örneği](../../extensibility/ux-guidelines/media/0405_e51400.png "0405_E51400")|
-|Durum: uyarı|Bildirim sarı (VS turuncu)|FFCC00/255204, 0|![FFCC00 örneği](../../extensibility/ux-guidelines/media/0405_ffcc00.png "0405_FFCC00")|
-|Ön plan dolgusu|Siyah bildirim (siyah)|000000 yazın/0, 0, 0|![Renk &#35;000000 yazın](../../extensibility/ux-guidelines/media/0405_000000.png "0405_000000")|
-|Ön plan dolgusu|Bildirim beyaz (beyaz)|FFFFFF/255.255.255|![Renk örneği FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|
+|Durum: nötr|Bildirim Mavisi (VS Blue)|1BA1E2 / 27.161.226|![Swatch 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|
+|Durum: pozitif|Bildirim Yeşili (VS Green)|339933 / 51,153,51|![Swatch 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|
+|Durum: negatif|Bildirim Kırmızısı (VS Red)|E51400 / 229,20,0|![Swatch E51400](../../extensibility/ux-guidelines/media/0405_e51400.png "0405_E51400")|
+|Durum: uyarı|Bildirim Sarısı (VS Orange)|FFCC00 / 255.204,0|![Swatch FFCC00](../../extensibility/ux-guidelines/media/0405_ffcc00.png "0405_FFCC00")|
+|Ön plan dolgusu|Bildirim Siyah (Siyah)|000000 / 0,0,0|![Swatch &#35;000000](../../extensibility/ux-guidelines/media/0405_000000.png "0405_000000")|
+|Ön plan dolgusu|Beyaz Bildirim (Beyaz)|FFFFFF / 255.255.255|![Swatch FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|
 
 #### <a name="examples-of-notification-icons"></a>Bildirim simgeleri örnekleri
 

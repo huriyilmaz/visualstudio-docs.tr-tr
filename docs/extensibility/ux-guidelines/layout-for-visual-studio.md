@@ -3,19 +3,19 @@ title: Visual Studio için Düzen | Microsoft Docs
 description: Temalı iletişim kutuları ve temalı görünümü olan yeni iletişim kutuları dahil olmak üzere Visual Studio iletişim kutularına yönelik düzen hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c15b7458bfd18314015bbb9228c212a06fcd82f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e52b7b3fd620080b73e8d3de80672003ecb8fcf7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072981"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900544"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio İçin Düzen
 Visual Studio iletişim kutularının çoğunluğu, standart [Windows Masaüstü iletişim kutusu düzen ilkelerini](/windows/desktop/uxguide/win-dialog-box)izleyen temalı iletişim kutuları olan [araç kutusu yerleşimidir](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout). Visual Studio, Kullanıcı arabirimini yenilemeye yönelik olarak taşındıkça, daha belirgin birçok iletişim kutusu, bunları ürün tanımlama deneyimleri olarak belirleyen yeni bir tasarıma sahiptir. Bu [temalı iletişim kutusu düzeninde](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) temalı bir görünüm vardır.
@@ -152,11 +152,11 @@ Visual Studio iletişim kutularının çoğunluğu, standart [Windows Masaüstü
 
  **Şekil 08,01-j: temalı iletişim kutusu-yazı tipleri**
 
- ![Temalı iletişim kutusu renkleri](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801-k_ThemedDialogColors")
+ ![Themed dialog colors](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801-k_ThemedDialogColors")
 
- **Şekil 08,01-k: temalı iletişim kutusu-renkler**
+ **Şekil 08.01-k: Themed dialog - Colors**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio İçin Uygulama Desenleri](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)
 - [Denetimler (Windows)](/windows/desktop/uxguide/controls)
-- [İletişim kutuları (Windows)](/windows/desktop/uxguide/win-dialog-box)
+- [İletişim Kutuları (Windows)](/windows/desktop/uxguide/win-dialog-box)

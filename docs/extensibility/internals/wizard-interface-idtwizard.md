@@ -3,7 +3,7 @@ title: Sihirbaz arabirimi (IDTWizard) | Microsoft Docs
 description: IDE, sihirbazlarla iletişim kurmak için IDTWizard arabirimini kullanır. Sihirbazlar, IDE 'ye yüklenmek için bu arabirimi uygulamalıdır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IDTWizard interface
 - wizards, interface
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8dc88341bc72755ae0f5011d18182c5b78bb483
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 930996de7fa5366463ec2d60f7cf96d941f6c243
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074203"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898623"
 ---
 # <a name="wizard-interface-idtwizard"></a>Sihirbaz Arabirimi (IDTWizard)
 Tümleşik geliştirme ortamı (IDE), <xref:EnvDTE.IDTWizard> sihirbazları ile iletişim kurmak için arabirimini kullanır. Sihirbazlar IDE 'ye yüklenebilmek için bu arabirimi uygulamalıdır.

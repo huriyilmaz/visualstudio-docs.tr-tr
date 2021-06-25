@@ -1,118 +1,118 @@
 ---
-title: Visual Studio için bileşik desenler | Microsoft Docs
-description: Visual Studio 'da tutarlılık için önemli Birleşik desenler hakkında bilgi edinin. Bileşik desenler, etkileşim ve tasarım öğelerini birleştirir.
+title: Visual Studio | için Bileşik Desenler Microsoft Docs
+description: Verilerde tutarlılık için önemli bileşik desenler hakkında Visual Studio. Bileşik desenler etkileşim ve tasarım öğelerini birleştirir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c6f609842f2531fe39158e871a330e136603433
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b8b84baa7be7449b8edb6241e415fc90c9acd594
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090063"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901428"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio İçin Bileşik Desenler
-Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda birleştirir. Tutarlılığa göre Visual Studio 'daki en önemli bileşik desenlerden bazıları şunlardır:
+Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda birleştirir. Tutarlılık açısından en önemli bileşik Visual Studio bazıları şunlardır:
 
 - [Veri görselleştirme](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_DataVisualization)
 
-- [Nesne üzerinde kullanıcı arabirimi ve göz atma](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_OnObjectUI)
+- [Nesne kullanıcı arabirimi ve göz atma](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_OnObjectUI)
 
 - [Seçim modelleri](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_SelectionModels)
 
-- [Kalıcılık ve kaydetme ayarları](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_PersistenceAndSavingSettings)
+- [Kalıcılık ve ayarları kaydetme](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_PersistenceAndSavingSettings)
 
 - [Dokunma girişi](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)
 
 ## <a name="data-visualization"></a><a name="BKMK_DataVisualization"></a> Veri görselleştirme
 
 ### <a name="overview"></a>Genel Bakış
- Grafikler, karar almanın geliştirilmesine yönelik verileri toplamanın ve görselleştirmenin görsel bir yoludur. Kullanıcıların çok fazla veri ile karşılaştığı, ne kadar önemli olduğunu ve ne tür bir eyleme ihtiyaç duydularını görbilecekleri çok büyük bir anlamı olan kullanıcılar.
+ Grafikler, karar verme kararını geliştirmek için verileri toplamak ve görselleştirmek için görsel bir yol sağlar. Bu kullanıcılar çok fazla veriyle karşılaşan ancak çok az anlamı olan, dikkati çeken ve eylem gerektirenleri görmeleri için yardımcı olabilir.
 
- Aşağıdaki koşullardan herhangi biri doğru olduğunda Kullanıcı bir grafikten faydalanır:
+ Aşağıdaki koşullardan herhangi biri doğruysa kullanıcı grafikten yararlanabilir:
 
-- Grafik kullanıcıların üzerinde davranabilecekleri görevleri tanımlamasına yardımcı olur mu?
+- Grafik, kullanıcıların üzerinde eylem gerçekleştirecekleri görevleri tanımlamanıza yardımcı olacak mı?
 
-- Grafik, kullanıcıların olası değişikliklerin sonuçlarını tahmin etmek için izin veriyor mu?
+- Grafik kullanıcıların olası değişikliklerin sonuçlarını tahmin değiştirmelerine olanak sağlayacak mı?
 
-- Grafik, kullanıcıların eğilimleri bulmasına ve desenleri belirlemesine yardımcı olur mu?
+- Grafik kullanıcıların eğilimleri keşfetmelerini ve desenleri tanımlamalarını sağlar mı?
 
-- Grafik, kullanıcıların daha iyi kararlar almasına izin veriyor mu?
+- Grafik kullanıcıların daha iyi kararlar almalarına izin verecek mi?
 
-- Grafik, kullanıcıların belirli bir bağlamda sahip olabileceği belirli bir soruyu yanıtlamaya yardımcı olur mu?
+- Grafik, kullanıcıların belirli bir bağlamda sahip olduğu belirli bir soruyu yanıtlamaya yardımcı olacak mı?
 
 #### <a name="general-rules-for-charts"></a>Grafikler için genel kurallar
 
-- Verilerin net bir şekilde etiketlenmesi. Açıklama içermeyen çizimler yalnızca güzel resimler.
+- Verileri net bir şekilde etiketle. Açıklama olmayan çizimler yalnızca güzel resimlerdir.
 
-- Orantıları eğrilmemek için eksenleri sıfırdan başlatın. Satır uzunluğu ve çubuk boyutu, veri noktaları arasındaki ilişkileri anlamak için önemli görsel ipuçları.
+- Eksenleri sıfırdan başlatarak orantılardan kaçının. Çizgi uzunluğu ve çubuk boyutu, veri noktaları arasındaki ilişkileri anlamanız için önemli görsel ipuçlarıdır.
 
-- Infographics değil, grafikler oluşturun. Infographics, verilerin sanatsal temsilleridir ve birincil hedefi görsel hikaye söytir. Grafikler (ve) görsel açıdan çekici olabilir, ancak verilerin kendisi için konuşmasına izin verir.
+- Bilgi grafiği değil grafik oluşturma. Bilgi grafiği, verilerin temsili temsilleridir ve asıl hedefi görsel hikaye anlatmadır. Grafikler görsel olarak çekici olabilir (ve öyle olmalı), ancak verilerin kendisi için konuşmasına izin ver.
 
-- Çatı, resimli grafikler, karşıtlık diyez işaretleri ve diğer Infographic dokunmaktan kaçının.
+- Skeumorphism, resimsel çubuk graflar, karşıtlık diyez işaretleri ve diğer bilgi grafiği dokunmalarından kaçının.
 
-- 3B efektleri dekoratif bir öğe olarak kullanmayın. Onları yalnızca kullanıcının bilgileri anlarsınız özelliğini gerçekten integral olarak kullandıysanız kullanın.
+- 3D etkileri dekoratif bir öğe olarak kullanma. Bunları yalnızca kullanıcının bilgileri anlama becerisini gerçekten bütün olarak kullanıyorsa kullanın.
 
-- Birden çok çizgi ve dolgu kullanmaktan kaçının. bu tür bir grafik, doğru bir şekilde okunmasını ve yorumlamayı zorlaştırır.
+- İkiden fazla renk bu tür grafiklerin doğru okunması ve yorumlanmasına neden olarak birden fazla çizgi ve dolgu kullanmaktan kaçının.
 
-- Bir kavramı anlamak veya verilerle etkileşim kurmak için tek bir grafik (veya herhangi bir çizim) kullanmayın. Bu, görsel sorunları olan kullanıcılar için zorluklar sunar.
+- Bir kavramı anlamanın veya verilerle etkileşim kurmanın tek anlamı olarak grafik (veya çizim) kullanmayın. Bu, görme bozukluğu olan kullanıcılar için zorluklara neden olur.
 
-- Grafikleri bir sayfada gereksiz ve dekoratif öğeler olarak kullanmayın. Diğer bir deyişle, grafik herhangi bir değer eklemez veya kullanıcıların bir sorunu çözmesine yardımcı olduysa, bunu kullanmayın.
+- Grafikleri sayfada gratuit veya dekoratif öğeler olarak kullanma. Başka bir deyişle, grafik herhangi bir değer eklemez veya kullanıcıların bir sorunu çözmelerine yardımcı olursa bunu kullanmaz.
 
 ### <a name="chart-types"></a>Grafik türleri
- Visual Studio 'da kullanılan grafik türleri çubuk grafikleri, çizgi grafikleri, halka grafiği olarak bilinen değiştirilmiş bir pasta grafiği veya "halka grafik," zaman çizelgeleri, dağılım çizimleri ("küme grafikleri" olarak da bilinir) ve Gantt grafikleri içerir. Her bir grafik türü, farklı bir bilgi türü iletişim kurmak için yararlıdır.
+ Visual Studio grafik türleri arasında çubuk grafikler, çizgi grafikler, halka grafik veya "halka grafik" olarak bilinen değiştirilmiş pasta grafiği, zaman çizelgeleri, dağılım çizimleri ("küme grafikleri" olarak da bilinir) ve Gantt grafikleri yer almaktadır. Her grafik türü, farklı türlerde bilgilerin iletişim kurması için yararlıdır.
 
-### <a name="other-charting-considerations"></a>Diğer grafik konuları
+### <a name="other-charting-considerations"></a>Grafikte dikkat edilmesi gereken diğer noktalar
 
 #### <a name="color"></a>Renk
- Visual Studio 'da kullanılmak üzere tanımlanan belirli bir grafik renkleri paleti vardır. Palet, renk değişimlerinin ana türleri için erişilebilir ve renklerin çok dar dilimleri olarak kullanılması durumunda bile renk yapılabilir. Bu renkleri, Kullanıcı arabiriminizdeki herhangi bir grafik veya grafik türü için herhangi bir bileşimde kullanabilirsiniz. Birçok farklı renge ihtiyacınız yoksa yedi rengin hepsini kullanmanız gerekmez. Bu renkler herhangi bir ön plan öğeleriyle kullanılmak üzere tasarlanmamıştır, bu nedenle metin veya glifleri bu renklerin üzerine yerleştirmeyin. Bu kuleler, **araçlar > seçenekleri** altında (bkz. [son kullanıcılar için renkleri gösterme](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)) sabit kodlanmış ve Kullanıcı özelleştirmesine açık olmalıdır.
+ Grafik renklerinin belirli bir paleti, grafik renklerinde kullanım için Visual Studio. Ana renk körlüğü türleri için palete erişilebilir ve çok dar renk dilimleri olarak kullanıla bile renkler birbirinden ayırt edilir. Bu renkleri kullanıcı arabiriminizin herhangi bir türü için herhangi bir grafik veya grafik birleşiminde kullanabilirsiniz. Bu kadar farklı renklere ihtiyacınız yoksa yedi rengin hepsini kullanmana gerek yok. Bu renkler ön plan öğeleriyle birlikte kullanılacak şekilde tasarlanmayarak, bu renklerin üzerine metin veya yazı yazıları eklemez. Bu tonlar sabit kodlu olmalı ve Araçlar ve Seçenekler altında **kullanıcı özelleştirmesi >** açık olmalı (bkz. Son kullanıcılar [için renkleri açığa çıkarma).](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
 
-|Basılı|Onaltılık|RGB|
+|Swatch|Onaltılık|RGB|
 |------------|---------|---------|
-|![Renk örneği 71B252](../../extensibility/ux-guidelines/media/0711_71b252.png "0711_71B252")|#71B252|113178, 82|
-|![BF3F00 örneği](../../extensibility/ux-guidelines/media/0711_bf3f00.png "0711_BF3F00")|#BF3F00|191, 63, 0|
-|![FCB714 örneği](../../extensibility/ux-guidelines/media/0711_fcb714.png "0711_FCB714")|#FCB714|252183, 20|
-|![Renk örneği 903F8B](../../extensibility/ux-guidelines/media/0711_903f8b.png "0711_903F8B")|#903F8B|144, 63139|
-|![Renk örneği 117AD1](../../extensibility/ux-guidelines/media/0711_117ad1.png "0711_117AD1")|#117AD1|17.122.209|
-|![Renk örneği 79D7F2](../../extensibility/ux-guidelines/media/0711_79d7f2.png "0711_79D7F2")|#79D7F2|121.215.242|
-|![B5B5B5 örneği](../../extensibility/ux-guidelines/media/0711_b5b5b5.png "0711_B5B5B5")|#B5B5B5|181.181.181|
+|![Swatch 71B252](../../extensibility/ux-guidelines/media/0711_71b252.png "0711_71B252")|#71B252|113,178,82|
+|![Swatch BF3F00](../../extensibility/ux-guidelines/media/0711_bf3f00.png "0711_BF3F00")|#BF3F00|191,63,0|
+|![Swatch FCB714](../../extensibility/ux-guidelines/media/0711_fcb714.png "0711_FCB714")|#FCB714|252,183,20|
+|![Swatch 903F8B](../../extensibility/ux-guidelines/media/0711_903f8b.png "0711_903F8B")|#903F8B|144,63,139|
+|![Swatch 117AD1](../../extensibility/ux-guidelines/media/0711_117ad1.png "0711_117AD1")|#117AD1|17,122,209|
+|![Swatch 79D7F2](../../extensibility/ux-guidelines/media/0711_79d7f2.png "0711_79D7F2")|#79D7F2|121,215,242|
+|![Swatch B5B5B5](../../extensibility/ux-guidelines/media/0711_b5b5b5.png "0711_B5B5B5")|#B5B5B5|181,181,181|
 
-## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a> Nesne üzerinde kullanıcı arabirimi ve göz atma
- Bu bölüm, kod Özeti Görünümü olarak da bilinen, Visual Studio 'ya özgü bir nesne Kullanıcı arabirimi türü olarak göz atma bağlamı sağlar.
+## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a> Nesne kullanıcı arabirimi ve göz atma
+ Bu bölümde, koda göz atma görünümü olarak da bilinen göz atma bağlamı ve bu görünüme özel nesne kullanıcı arabirimi Visual Studio.
 
 ### <a name="overview"></a>Genel Bakış
 
-- Nesne üzerinde kullanıcı ARABIRIMI, kullanıcıya ana görevden ayıracaktır olmadan daha fazla bilgi veya etkileşim vermelidir.
+- Nesne kullanıcı arabirimi, ana görevinin dışında kalmadan kullanıcıya daha fazla bilgi veya etkileşim ver olmalıdır.
 
-- Visual Studio 'daki nesne üzerindeki kullanıcı arabiriminin ana deseninin "dikkat çekici bir noktada bilgi" adı verilir.
+- Kullanıcı arabiriminde nesne kullanıcı arabiriminin Visual Studio", "dikkat noktasındaki bilgiler" olarak bilinir.
 
-- Visual Studio 'da nesne üzerinde kullanıcı arabirimi, satır içi veya kayan ve dayanıklı ya da geçici olabilir.
+- Kullanıcı arabiriminde nesne Visual Studio satır içi veya kayan ve dayanıklı ya da geçicidir.
 
-  - Visual Studio 'da nesne üzerindeki bir kullanıcı arabirimi türü kod Özeti Görünümü satır içi ve dayanıklı.
+  - Bir nesne kullanıcı arabirimi türü olan koda göz atma görünümü Visual Studio ve dayanıklıdır.
 
-  - Visual Studio 'da nesne üzerindeki bir kullanıcı arabirimi olan CodeLens, kayan ve geçici
+  - Visual Studio nesne kullanıcı arabirimi türü olan CodeLens kayan ve geçici
 
-  Kod parçasının nasıl çalıştığını anlamak veya bu kodla ilgili ayrıntıları bulmak için, genellikle bir geliştiricinin bağlam değiştirme ve diğer içeriğe veya başka bir pencereye gitmesini gerektirir. Kullanıcılar Ana pencerenizi bırakılarsa, bu bağlam vardiyaları karışıklığa yol açabilir. Ayrıca, özellikle de değiştirme Windows 'un özgün koduna diğer kullanıcı arabirimi tarafından gizlenmesini neden olduysa, bu özgün içeriğin geri alınması zor olabilir.
+  Bir kodun nasıl çalıştığını anlamak veya bu kodla ilgili ayrıntıları bulmak için genellikle bir geliştiricinin bağlamı değiştirmesi ve başka bir içeriğe veya başka bir pencereye gitmeleri gerekir. Bu bağlam değişimleri kesintiye neden olabilir çünkü kullanıcılar ana penceresinden çıksalar özgün görevlerine odaklanamaz. Ayrıca özgün bağlamı geri almak, özellikle de pencere değiştirmenin özgün kodunun diğer kullanıcı arabirimi tarafından karartmaya neden olması durumlarında zor olabilir.
 
-  Nesne üzerinde kullanıcı arabirimi, "dikkat noktasındaki bilgiler" adlı bir model izler. Bu iletiler, açılır pencereler ve iletişim kutuları kullanıcılara ek, ana görevine odaklanmadan açıklama veya etkileşim ekleyen ilgili bilgileri sağlar. Nesne üzerine örnek UI örnekleri, bir Kullanıcı işaretçi bildirim alanındaki bir simgenin üzerine geldiğinde görünen açılır pencereleri, yanlış yazılmış bir kelime altındaki kırmızı dalgalı çizgi ve Visual Studio 2013 tanıtılan Özet görünümünü içerir.
+  Nesne kullanıcı arabirimi " dikkat noktasında bilgi" adlı bir desen izler. Bu iletiler, açılır pencereler ve iletişim kutuları, kullanıcılara ana görevlerine odaklanmadan açıklama veya etkileşim ekleyen ek, ilgili bilgiler sağlar. Nesne kullanıcı arabirimi örnekleri arasında, bir kullanıcı işaretçisini bildirim alanında bir simgenin üzerine geldiğinde görünen açılır pencereler, yanlış yazılmış bir sözcüğün altındaki kırmızı çizgi ve kullanıcı arabiriminde ortaya Visual Studio 2013.
 
 ### <a name="decision-points"></a>Karar noktaları
- Visual Studio 'da bu bilgi modelini dikkat çekici bir şekilde kullanmanın birkaç yolu vardır. Doğru mekanizmayı seçme ve bunu tutarlı, öngörülebilir bir şekilde uygulama, genel deneyim için önemlidir. Aksi takdirde, kullanıcılar içeriğin kendisinden odaklanıldığı kafa karıştırıcı veya tutarsız bir deneyim sunabilir.
+ Bu Visual Studio, dikkat noktasında bu bilgi desenini kullanmanın birkaç yolu vardır. Doğru mekanizmayı seçmek ve tutarlı ve öngörülebilir bir şekilde uygulamak, genel deneyim için çok önemlidir. Aksi takdirde kullanıcılara, odağı içeriğin kendisinden alan kafa karıştırıcı veya tutarsız bir deneyim sunabilirsiniz.
 
 #### <a name="relationships-between-master-and-detail-content"></a>Ana ve ayrıntı içeriği arasındaki ilişkiler
- İlgilenme noktasındaki bilgiler, kullanıcının odaklandığı içerik ("ana" içerik) ve ek ilgili içerik ("ayrıntı" içeriği) arasındaki ilişkiyi göstermek için kullanılır. Bu düzende, ayrıntı içeriği kullanıcının üzerinde çalıştığı içerikle ve Ana içeriğe yakın bir şekilde görüntülenebilirler. Ana içeriğin çok fazla olması gerekmeden özetlenememesi gereken ek bilgiler veya bilgiler, araç penceresi gibi başka bir Düzenle uymalıdır.
+ Dikkat noktasındaki bilgiler, kullanıcının odaklanmış olduğu içerikler ("ana" içerik) ve diğer ilgili içerikler ("ayrıntı" içeriği) arasındaki ilişkiyi görüntülemek için kullanılır. Bu desende ayrıntı içeriği, kullanıcının üzerinde çalıştığı içerikle net bir şekilde ilişkili olur ve ana içeriğin yakınında görüntülenebilir. Ana içerik yoğun olmadan özetlemesi mümkün olmayan ek bilgiler veya bilgiler, araç penceresi gibi başka bir desene uyması gerekir.
 
-- Ayrıntı içeriğini **her zaman** asıl içeriğe yakın bir yerde görüntüleyin.
+- **Ayrıntı** içeriğini her zaman ana içeriğe yakın bir şekilde görüntüleme.
 
-- **Her zaman** ayrıntı içeriğinin, kullanıcının ana içerikte odaklanmış kalmasını hala sağladığından emin olun. Genellikle, bunu başarmanın en iyi yolu, ayrıntı içeriğini mümkün olduğunca Ana içeriğe yakın bir şekilde işlemelidir. Bu, ayrıntı içeriğini ana içeriğin yanındaki bir açılan pencerede veya Ayrıntılar içeriğini ana içeriğin altında satır içi olarak işlenerek yapılabilir.
+- **Ayrıntı** içeriğinin her zaman kullanıcının ana içeriğe odaklanmaya devamını sağlar. Bunu başarmanın en iyi yolu genellikle ayrıntı içeriğini ana içeriğe mümkün olduğunca yakın bir şekilde işlemektir. Bu, ayrıntı içeriğini ana içeriğin yanındaki bir açılır pencerede işerek veya ana içeriğin altında satır içi olarak işerek yapılabilir.
 
-- Kullanıcı ana içerikten uzakta olan dikkat çekici bir noktada **hiçbir zaman** bilgi kullanmayın. Kullanıcıların ayrıntı içeriğini ayrı olarak görüntülemesi gerekiyorsa, kullanıcının bunu yapmasına olanak tanıyan açık bir eylem kullanıma sunun.
+- **Hiçbir** zaman dikkat noktasında, kullanıcının ana içerikten uzaklaşan bilgileri kullanma. Kullanıcıların ayrıntı içeriğini ayrı olarak görüntülemesi gerekirse, kullanıcının bunu yapmalarına olanak sağlayan açık bir eylemi ortaya çıkarır.
 
 #### <a name="design-details"></a>Tasarım ayrıntıları
  Nesne üzerindeki kullanıcı arabiriminin doğru seçim olduğunu belirledikten sonra, dört ana tasarıma dikkat etmeniz gerekir:
@@ -338,70 +338,70 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 |Düzenleyici odağı kaybeder|Nesne, son işlem/seçim durumu sırasında bulunan içeriği ve görünümü koruyabilse de yerinde Düzenle modunu devre dışı bırakır.|
 |Nesne seçimi|Nesnenin sınırını vurgulamak için bir kenarlık, noktalı çizgi veya diğer görsel olarak farklı bir işleme tarafından gösterilir.|
 |Seçili nesneyi yeniden boyutlandır|Seçim tutamaçlarının gösterdiği.<br /><br /> Yeniden boyutlandırılabilir bir nesnenin sekiz tutamacı vardır ve bu, yeniden boyutlandırılabileceği her yönü temsil eder. Nesne yalnızca belirli yönlere yeniden boyutlandırılabileceği takdirde daha az işleyici kullanılabilir. Kullanıcı bir nesneyi sekiz tutamacı etkileşimli olmadığı yere doğru olarak boyutlandırır dört tanıtıcı kullanılabilir. İşleme boyutları, ekran çözünürlüğüyle orantılı bir şekilde boyutlanmak için **getsystemölçümlerini** API işleviyle birlikte pencere kenarlığına ve uç ölçümlerine bağlı olmalıdır.<br /><br /> ![Yeniden boyutlandırma tutamaçları](../../extensibility/ux-guidelines/media/0713-05_resizehandles.png "0713-05_ResizeHandles")|
-|Seçilen nesneyi döndürün|![Tutamaçları döndürme](../../extensibility/ux-guidelines/media/0713-06_rotate.png "0713-06_Rotate")|
+|Seçili nesneyi döndürme|![Tutamaçları döndürme](../../extensibility/ux-guidelines/media/0713-06_rotate.png "0713-06_Rotate")|
 
 #### <a name="keyboard-interaction"></a>Klavye etkileşimi
 
 |Giriş|Sonuç|
 |-----------|------------|
-|Tab|Odak göstergesini düzenleyicideki nesnelerin mantıksal sıralaması arasında kaydırır. Bu, **TabIndex** (veya eşdeğeri) özellik değerine, nesne oluşturma sırasına ve düzenleyicinin genel amacına bağlı olarak soldan sağa veya yukarıdan aşağıya doğru olabilir. SHIFT + TAB odak göstergesinin yönünü tersine çevirir.|
-|Boşluk çubuğu|Tuş vuruşu korunurken kaydırma modunu etkinleştirir. Görünüm penceresinin konumunu kaydırmak için ek fare girişi gerekir.|
-|Ctrl+Ara Çubuğu|Tuş vuruşu korunurken yakınlaştırma modunu etkinleştirir. Yakınlaştırma faktörünü artırmak ve azaltmak için ek fare girişi gerekir.|
-|Ctrl + Alt + eksi Işareti|Yakınlaştırma faktörünü bir düzey azaltır.|
-|Ctrl + Alt + artı Işareti|Yakınlaştırma faktörünü bir düzey artırır.|
-|SHIFT veya CTRL|Nesneyi seçim grubuna ekler. CTRL, nesneleri seçim grubundan ayrı ayrı kaldırmanıza de olanak tanır.|
-|Enter|Nesne için varsayılan komutu gerçekleştirir (genellikle açık veya düzenleme).|
-|F2|Nesne için yerinde düzenlemeleri etkinleştirir.|
-|Ok tuşları|Seçilen nesneleri ok tuşunun yönünde, küçük artışlarla (örneğin, bir kerede 1 piksel) taşır|
-|CTRL + ok tuşları|Ok tuşunun yönündeki seçili nesneleri daha büyük artışlarla (örneğin, her seferinde 10 piksel) taşımalar|
-|SHIFT + ok tuşları|Seçili nesneleri, küçük artışlarla (örneğin, her seferinde 1 piksel), ilgili yönde yeniden boyutlandırır|
-|CTRL + SHIFT + ok tuşları|Seçili nesneleri, daha büyük artışlarla (örneğin, her seferinde 10 piksel), ilgili yönde yeniden boyutlandırır|
+|Tab|Odak göstergesini düzenleyicideki nesnelerin mantıksal sırası arasında taşır. Bu, **TabIndex** (veya eşdeğer) özellik değerine, nesne oluşturma sırasına ve düzenleyicinin genel amacına bağlı olarak soldan sağa veya üstten aşağıya doğru olabilir. Shift+Sekme, odak göstergesinin yönünü tersine çevirer.|
+|Boşluk çubuğu|Tuş vuruşu korunurken kaydırma modunu etkinleştirir. Görünüm açısı konumunu kaydırmak için ek fare girişi gerekir.|
+|Ctrl+Ara Çubuğu|Tuş vuruşu korunurken yakınlaştırma modunu etkinleştirir. Yakınlaştırma faktörlerini artırmak ve azaltmak için ek fare girişi gerekir.|
+|Ctrl+Alt+Eksi İşareti|Yakınlaştırma faktörlerini bir düzey azaltıyor.|
+|Ctrl+Alt+Plus İşareti|Yakınlaştırma faktörünün düzeyini artırır.|
+|Shift OR Ctrl|Nesnesini seçim grubuna ekler. Ctrl tuşunu basılı tutarak nesneleri seçim grubundan tek tek kaldırmanız da gerekir.|
+|Enter|Nesne için varsayılan komutu gerçekleştirir (genellikle Aç veya Düzenle).|
+|F2|Nesne için yerinde düzenlemeyi etkinleştirir.|
+|Ok tuşları|Seçilen nesneyi, küçük artışlarla (örneğin, bir defada 1 piksel) basılan ok tuşunun yönünde taşır|
+|Ctrl+ok tuşları|Seçilen nesnelerini, daha büyük artışlarla (örneğin, bir defada 10 piksel) basılan ok tuşunun yönünde taşır|
+|Shift+ok tuşları|Seçilen nesnelerini ilgili yönde küçük artışlarla (örneğin, bir defada 1 piksel) yeniden boyutlandırılır|
+|Ctrl+Shift+ok tuşları|Seçilen nesnelerini ilgili yönde daha büyük artışlarla (örneğin, aynı anda 10 piksel) yeniden boyutlandırır|
 
- Kullanıcılar denetimleri yerinde düzenliyorsa, nesnelerin Kullanıcı girişiyle otomatik olarak yeniden boyutlandırılması mantıklıdır. Örneğin, Kullanıcı bir etiket denetimini düzenlerse, kullanıcının yalnızca yazdığından metni görüntülemesi için etiketin büyümesi gerekir. Bu yapılmazsa, kullanıcının metni düzenledikten sonra denetimi el ile yeniden boyutlandırılması gerekir. Kullanıcının çok sayıda denetimi varsa bu, bir Rote ve üretken olmayan bir görev haline gelir.
+ Kullanıcılar denetimleri düzenlerken, nesnelerin kullanıcı girişiyle otomatik olarak yeniden boyutlandırması mantıklı olabilir. Örneğin, kullanıcı bir etiket denetimi düzenlerse, etiketin, kullanıcının yeni yazarak yazarak görüntü oluşturması gerekir. Bu yapılmazsa, kullanıcının metni düzenledikten sonra denetimi el ile yeniden boyutlandırması gerekir. Kullanıcının çok sayıda denetimi varsa bu, kötü ve verimsiz bir görev haline gelir.
 
-#### <a name="graphical-containers"></a>Grafik kapsayıcıları
- Grafik düzenleyicileri, bazı durumlarda Windows Forms panel denetimi veya HTML Tasarımcısı içindeki kılavuz düzen denetimi gibi diğer grafik nesneleri için kapsayıcılar sağlar. Düzenleyiciniz diğer grafik nesneleri için kapsayıcılar sağlıyorsa, şu seçim modelinin yalnızca kapsayıcı için kullanılması gerekir (kapsayıcıdaki nesneler, yukarıda açıklandığı gibi standart modeli izler):
+#### <a name="graphical-containers"></a>Grafik kapsayıcılar
+ Bazı durumlarda grafik düzenleyiciler, Windows Forms Panel denetimi veya HTML tasarımcısında Kılavuz Düzeni denetimi gibi diğer grafik nesneler için kapsayıcılar sağlar. Düzenleyiciniz diğer grafik nesneler için kapsayıcılar sağlarsa, aşağıdaki seçim modeli yalnızca kapsayıcı için kullanılmalıdır (kapsayıcı içindeki nesneler yukarıda açıklandığı gibi standart modeli takip eder):
 
 |Giriş|Sonuç|
 |-----------|------------|
-|Kapsayıcıya tek tıklama|Kapsanan nesnelerden hiçbirini doğrudan seçmeden kapsayıcı nesnesini seçer. Kapsayıcı, standart fare ve klavye girişi (yukarıda açıklandığı gibi) ile taşınabilir ve/veya yeniden boyutlandırılabilir. Kapsanan nesneler kapsayıcıya göre taşınır, ancak aynı zamanda doğrudan seçilmedikleri takdirde içerilen nesneler yeniden boyutlandırılmaz.|
-|Kapsayıcının sınır bölgesinin üzerine gelme|Kapsayıcının taşınabileceğini belirten, fareyi taşıma imlecine dönüştürür.|
-|Kapsayıcının sınır bölgesini sürükleyin|Fareyi taşıma imlecine dönüştürür ve kapsayıcıyı (ve kapsanan nesneleri içinde) taşır. Kapsayıcı, ilk olarak tek bir tıklama ile seçilmeden taşınamaz.|
-|Kapsayıcı içindeki bir nesneye tek tıklama|Kapsayıcının seçimini kaldırır (seçilmişse) ve yalnızca tıklanan nesneyi seçer.|
-|Kapsanan nesne ve/veya kapsayıcıya SHIFT + tıklama veya CTRL + tıklama|Tıklanan nesneyi varolan bir seçime veya seçim grubuna ekler. Tıklanan nesne zaten seçim grubunun bir üyesiyse, seçim grubundan kaldırılır.|
+|Kapsayıcıya tek tıklama|Kapsayıcı nesnesini, içerdiği nesnelerden herhangi birini doğrudan seçmeden seçer. Kapsayıcı standart fare ve klavye girişiyle (yukarıda açıklandığı gibi) taşınabilir ve/veya yeniden boyutlandırılabilir. Kapsamış nesneler kapsayıcıyla ilişkili olarak taşınır, ancak kapsamış nesneler de doğrudan seçilmedikçe yeniden boyutlandırılmaz.|
+|Kapsayıcının sınır bölgesi üzerine gelin|Fareyi taşıma imlecine dönüştürerek kapsayıcının taşına olduğunu gösterir.|
+|Kapsayıcının sınır bölgelerini sürükleyin|Fareyi taşıma imlecine değiştirir ve kapsayıcıyı (ve içindeki kap içindeki nesneleri) taşır. Kapsayıcı, tek tıklamayla seçilmeden taşınamaz.|
+|Kapsayıcı içindeki bir nesneye tek tıklama|Kapsayıcının seçimini kaldırın (seçiliyse) ve yalnızca tıklı nesneyi seçer.|
+|Veya Ctrl tuşunu basılı tutarak kapta bulunan bir nesneye ve/veya kapsayıcıya shift tuşunu basılı tutarak tıklayın|Tıkilen nesneyi var olan bir seçime veya seçim grubuna ekler. Tıkılan nesne zaten seçim grubunun bir üyesi ise, seçim grubundan kaldırılır.|
 
- Kapsanan nesneler, önceki bölümde açıklandığı gibi temel seçim modeline uymalıdır. Windows Forms tasarımcısının kullanılabilirlik testinde, kullanıcılar, adımları açmadan içerilen nesnelere sorunsuz erişim (kapsama nesnesi tarafından uygulanan) bekliyordu.
+ Bir önceki bölümde açıklandığı gibi, içerdiği nesneler temel seçim modeline bağlı kalmalı. Windows Forms tasarımcısının kullanılabilirlik testlerinden, kullanıcılar müdahale adımları (içerme nesnesi tarafından dayatılan) olmadan, içerdiği nesnelere sorunsuz erişim beklemiştir.
 
 #### <a name="disjoint-and-region-selections"></a>Ayrık ve bölge seçimleri
- Grafik nesne düzenleyicileri ayrık seçimleri desteklemelidir. Lütfen bu grafiğin, Visual Studio 'nun denetim görünümünü göstermediğini unutmayın. Ayrıntılı görsel özellikler için bkz. [grafik nesnesi seçim görünümü](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_GraphicalObjectSelectionAppearance) .
+ Grafik nesne düzenleyicileri ayrık seçimleri desteklemeli. Bu grafikte, aşağıdakiler için denetim görünümünün Visual Studio. Ayrıntılı [görsel belirtimler için bkz.](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_GraphicalObjectSelectionAppearance) Grafik nesne seçimi görünümü.
 
  ![Ayrık ve bölge seçicileri](../../extensibility/ux-guidelines/media/0713-07_disjointregionselectors.png "0713-07_DisjointRegionSelectors")
 
  **Ayrık seçim**
 
- Grafik düzenleyiciler Ayrıca, bir kayan yazı türü seçim göstergesi olan bölge seçimleri de sağlamalıdır. Grafik düzenleyici diğer nesne türlerini (örneğin, metin) destekliyorsa, diğer nesne türlerinin kısıtlamalarına bağlı olarak bölge seçimleri mümkün olmayabilir.
+ Grafik düzenleyiciler ayrıca seçim çerçevesi türünde bir seçim göstergesiyle bölge seçimleri de sağlanabilecektir. Grafik düzenleyicisi diğer nesne türlerini (metin gibi) destekliyorsa, bu diğer nesne türlerinin kısıtlamalarına bağlı olarak bölge seçimleri mümkün olmayacaktır.
 
- ![Seçim çerçevesi seçimi](../../extensibility/ux-guidelines/media/0713-08_marqueeselection.png "0713-08_MarqueeSelection")
+ ![Seçim çerçevesi](../../extensibility/ux-guidelines/media/0713-08_marqueeselection.png "0713-08_MarqueeSelection")
 
- **Seçim çerçevesi seçimi**
+ **Seçim çerçevesi**
 
 #### <a name="primary-and-secondary-selections"></a>Birincil ve ikincil seçimler
- Bazı grafik nesne düzenleyicileri, kullanıcının gruplardaki nesneleri düzenlemesine veya hizalamaya izin verir. Bu durumda, birincil ve ikincil seçimlerin kavramının tanıtılması gerekir. Birincil seçim, tüm diğer nesnelerin grup işlemleri için yanıt verdiği nesnedir. Önce kullanıcının seçtiği nesne birincil denetim olur ve sonraki seçimler ikincil seçimler haline gelir. Birincil seçimin hangi nesnenin birincil olduğunu göstermek için ikincil seçimlerden ayrı bir görsel işleme sahiptir:
+ Bazı grafik nesne düzenleyicileri, kullanıcının gruplar halinde nesneleri düzenlemesine veya hizalamasına olanak sağlar. Bu durumda, birincil ve ikincil seçimler kavramının tanıt yapılması gerekir. Birincil seçim, diğer tüm nesnelerin grup işlemleri için yanıt verme nesnesidir. Kullanıcının ilk olarak seçen nesnesi birincil denetim olur ve sonraki seçimler ikincil seçim olur. Birincil seçim, hangi nesnenin birincil olduğunu belirtmek için ikincil seçimlerden farklı bir görsele sahip olur:
 
  ![Birincil ve ikincil seçim](../../extensibility/ux-guidelines/media/0713-09_primarysecondary.png "0713-09_PrimarySecondary")
 
- **İki ikincil seçim içeren birincil seçim**
+ **İki ikincil seçimle birincil seçim**
 
-#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Grafik nesnesi seçim görünümü
- Seçim tutamaçları, nesnenin sınırlayıcı kutusunun etrafında dikdörtgen bir düzende çizilmiş kareler. Aşağıdaki grafik, bir grafik nesnesinin tanıtıcı, boyutlandırma ve yerinde düzenlenme görünümü ile sahip olduğu çeşitli durumların örneklerini gösterir. Tanıtıcıların boyutu, **getsystemölçümlerini** API kullanılarak pencere kenarlığına ve Edge ölçümlerine bağlı olmalıdır.
+#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Grafik nesne seçimi görünümü
+ Seçim tutamaçları, nesnenin sınırlayıcı kutusunun çevresinde dikdörtgen bir desende çizilen karelerdir. Aşağıdaki grafikte, bir grafik nesnesinin tanıtıcı, boyutlandırma ve yerinde düzenleme görünümüyle sahip olduğu çeşitli durumların örnekleri gösterilmiştir. **Tanıtıcıların boyutu, GetSystemMetrics** API'sini kullanarak pencere kenarlığı ve kenar ölçümlerine bağlı olması gerekir.
 
-| Durum | Görünüm | Görsel Ayrıntılar |
+| Durum | Görünüm | Görsel ayrıntılar |
 |-------------------------|---------------| - |
-| **Değilken** | Varsayılan | ![Varsayılan düğme durumu](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713-10_DefaultState") |
-| **Birincil seçim** | Boyutlandırılabilir | ![Yeniden boyutlandırma tutamaçlarıyla birincil seçim](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713-11_PrimaryResize") |
-| **Birincil seçim** | Yeniden boyutlandırılabilir | ![Yeniden boyutlandırma tutamaçları olmadan birincil seçim](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize") |
+| **Seçili** | Varsayılan | ![Varsayılan düğme durumu](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713-10_DefaultState") |
+| **Birincil seçim** | Resizable | ![Yeniden boyutlandırma tutamaçları ile birincil seçim](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713-11_PrimaryResize") |
+| **Birincil seçim** | Yeniden boyutlandırılamaz | ![Yeniden boyutlandırma tutamaçları olmadan birincil seçim](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize") |
 | **Birincil seçim** | Kilitli | ![Birincil seçim kilitli](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713-15_PrimaryLocked") |
-| **İkincil seçim** | Boyutlandırılabilir | ![Yeniden boyutlandırma tutamaçlarıyla ikincil seçim](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize") |
+| **İkincil seçim** | Resizable | ![Yeniden boyutlandırma tutamaçları ile ikincil seçim](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize") |
 | **İkincil seçim** | Yeniden boyutlandırılabilir | ![Yeniden boyutlandırma tutamaçları olmadan ikincil seçim](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713-19_SecondaryNoResize") |
 | **İkincil seçim** | Kilitli | ![İkincil seçim kilitli](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713-21_SecondaryLocked") |
 | **UI etkin** | Varsayılan | ![UI etkin durumu](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713-23_UIActive") |
