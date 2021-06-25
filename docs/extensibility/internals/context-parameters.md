@@ -1,9 +1,9 @@
 ---
-title: Bağlam parametreleri | Microsoft Docs
-description: Bir sihirbaz eklediğinizde veya uyguladığınızda projenin durumunu tanımlayan Visual Studio tümleşik geliştirme ortamında (IDE) bağlam parametreleri hakkında bilgi edinin.
+title: Bağlam Parametreleri | Microsoft Docs
+description: Sihirbaz eklerken veya Visual Studio projenin durumunu tanımlayan tümleşik geliştirme ortamında (IDE) bağlam parametreleri hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - wizards, context parameters
 - context parameters
@@ -13,57 +13,57 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14d60aa31fb586651ea6e2b00a8f8038bfaa42b9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 536e5abf92884c5c19399e73b4e1773e66919657
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057084"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898233"
 ---
 # <a name="context-parameters"></a>Bağlam parametreleri
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamında (IDE), **yeni projeye** sihirbaz ekleyebilir, **Yeni öğe ekleyebilir** veya **alt proje** iletişim kutuları ekleyebilirsiniz. Eklenen sihirbazlar **Dosya** menüsünde veya **Çözüm Gezgini** bir projeye sağ tıklanarak kullanılabilir. IDE, sihirbazın uygulamasına bağlam parametrelerini geçirir. Bağlam parametreleri, IDE Sihirbazı çağırdığında projenin durumunu tanımlar.
+Tümleşik geliştirme ortamında (IDE) Sihirbazları Yeni Proje, Yeni Öğe Ekle veya Alt Proje Ekle [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **iletişim kutularına** ebilirsiniz.   Eklenen sihirbazlar Dosya menüsünde veya **dosya** menüsündeki bir projeye sağ tık **Çözüm Gezgini.** IDE, bağlam parametrelerini sihirbazın uygulamasına iletir. Bağlam parametreleri, IDE sihirbazı çağıran projenin durumunu tanımlar.
 
- IDE, <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> IDE 'nin proje için metoduna olan bayrağını ayarlayarak sihirbazları başlatır <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> . Ayarlandığında, projenin, `IVsExtensibility::RunWizardFile` kayıtlı sihirbaz adı veya GUID 'si ve IDE 'nin kendisine geçirdiği diğer bağlam parametreleri kullanılarak, yöntemin yürütülmesine neden olması gerekir.
+ IDE, <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> IDE çağrısında bayrağını proje için yöntemine ayarerek <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> sihirbazları başlatır. Bu ayar olduğunda, proje yöntemin kayıtlı sihirbaz adı veya GUID ve IDE'nin ona aktarmış olduğu diğer bağlam parametreleri kullanılarak `IVsExtensibility::RunWizardFile` yürütülür.
 
 ## <a name="context-parameters-for-new-project"></a>Yeni proje için bağlam parametreleri
 
 | Parametre | Açıklama |
 |-------------------------| - |
-| `WizardType` | Kayıt Sihirbazı türü ( <xref:EnvDTE.Constants.vsWizardNewProject> ) veya sihirbazın türünü gösteren GUID. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]Uygulamada, sihirbazın GUID 'si {0F90E1D0-4999-11D1-B6D1-00A0C90F2744}. |
-| `ProjectName` | Benzersiz proje adı olan bir dize [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| `LocalDirectory` | Çalışma projesi dosyalarının yerel konumu. |
-| `InstallationDirectory` | Yüklemesinin dizin yolu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| `FExclusive` | Projenin açık çözümleri kapatması gerektiğini belirten Boolean bayrağı. |
-| `SolutionName` | Çözüm dosyasının dizin bölümü veya *. sln* uzantısı olmadan adı. *. Suo* dosya adı kullanılarak da oluşturulur `SolutionName` . Bu bağımsız değişken boş bir dize olmadığında, sihirbaz, <xref:EnvDTE._Solution.Create%2A> ile projeyi eklemeden önce kullanır <xref:EnvDTE._Solution.AddFromTemplate%2A> . Bu ad boş bir dize ise, öğesini <xref:EnvDTE._Solution.AddFromTemplate%2A> çağırmadan kullanın <xref:EnvDTE._Solution.Create%2A> . |
-| `Silent` | **Son** tıklandığı gibi sihirbazın sessizce çalıştırılıp çalıştırılmayacağını belirten Boole değeri ( `TRUE` ). |
+| `WizardType` | Kayıtlı sihirbaz türü <xref:EnvDTE.Constants.vsWizardNewProject> ( ) veya sihirbazın türünü belirten GUID. Uygulamada, sihirbazın GUID değeri [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] {0F90E1D0-4999-11D1-B6D1-00A0C90F2744} değeridir. |
+| `ProjectName` | Benzersiz proje adı olan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir dize. |
+| `LocalDirectory` | Çalışan proje dosyalarının yerel konumu. |
+| `InstallationDirectory` | dizininin yolu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yüklemedir. |
+| `FExclusive` | Projenin açık çözümleri kapatması gerektiğini belirten Boole bayrağı. |
+| `SolutionName` | Dizin bölümü veya *.sln* uzantısı olmadan çözüm dosyasının adı. *.suo dosya* adı kullanılarak da `SolutionName` oluşturulur. Bu bağımsız değişken boş bir dize olduğunda, sihirbaz projeyi <xref:EnvDTE._Solution.Create%2A> ile eklemeden önce <xref:EnvDTE._Solution.AddFromTemplate%2A> kullanır. Bu ad boş bir dize ise, <xref:EnvDTE._Solution.AddFromTemplate%2A> çağırmadan <xref:EnvDTE._Solution.Create%2A> kullanın. |
+| `Silent` | Sihirbazın Son'a tıklandı gibi sessizce  çalıştırıp çalıştırılamaycalığı belirten Boole ( `TRUE` ). |
 
-## <a name="context-parameters-for-add-new-item"></a>Yeni öğe Ekle için bağlam parametreleri
-
-| Parametre | Açıklama |
-|-------------------------| - |
-| `WizardType` | Kayıt Sihirbazı türü ( <xref:EnvDTE.Constants.vsWizardAddItem> ) veya sihirbazın türünü gösteren GUID. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]Uygulamada, sihirbazın GUID 'si {0F90E1D1-4999-11D1-B6D1-00A0C90F2744}. |
-| `ProjectName` | Benzersiz proje adı olan bir dize [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| `ProjectItems` | Çalışma projesi dosyalarını içeren yerel konum. |
-| `ItemName` | Eklenecek öğenin adı. Bu ad, kullanıcının **öğe Ekle** iletişim kutusundan aldığı varsayılan dosya adı veya dosya adıdır. Ad, *. vsdir* dosyasında ayarlanan bayrakları temel alır. Ad, null bir değer olabilir. |
-| `InstallationDirectory` | Yüklemesinin dizin yolu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| `Silent` | **Son** tıklandığı gibi sihirbazın sessizce çalıştırılıp çalıştırılmayacağını belirten Boole değeri ( `TRUE` ). |
-
-## <a name="context-parameters-for-add-sub-project"></a>Alt proje Ekle için bağlam parametreleri
+## <a name="context-parameters-for-add-new-item"></a>Yeni Öğe Ekle bağlam parametreleri
 
 | Parametre | Açıklama |
 |-------------------------| - |
-| `WizardType` | Kayıt Sihirbazı türü ( <xref:EnvDTE.Constants.vsWizardAddSubProject> ) veya sihirbazın türünü gösteren GUID. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]Uygulamada, sihirbazın GUID 'si {0F90E1D2-4999-11D1-B6D1-00A0C90F2744} olur. |
-| `ProjectName` | Benzersiz proje adı olan bir dize [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| `ProjectItems` | `ProjectItems`Sihirbazın üzerinde çalıştığı koleksiyonun işaretçisi. Bu işaretçi, proje hiyerarşisi seçimine göre sihirbaza geçirilir. Kullanıcı genellikle öğenin ekleneceği bir klasörü seçer ve ardından projenin **öğe Ekle** iletişim kutusunu çağırır. |
-| `LocalDirectory` | Çalışma projesi dosyalarının yerel konumu. |
-| `ItemName` | Eklenecek öğenin adı. Bu ad, kullanıcının **öğe Ekle** iletişim kutusundan aldığı varsayılan dosya adı veya dosya adıdır. Ad, *. vsdir* dosyasında ayarlanan bayrakları temel alır. Ad, null bir değer olabilir. |
-| `InstallationDirectory` | Yüklemenin dizin yolu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| `Silent` | **Son** tıklandığı gibi sihirbazın sessizce çalıştırılıp çalıştırılmayacağını belirten Boole değeri ( `TRUE` ). |
+| `WizardType` | Kayıtlı sihirbaz türü <xref:EnvDTE.Constants.vsWizardAddItem> ( ) veya sihirbazın türünü belirten GUID. Uygulamada, sihirbazın GUID değeri [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] {0F90E1D1-4999-11D1-B6D1-00A0C90F2744} değeridir. |
+| `ProjectName` | Benzersiz proje adı olan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir dize. |
+| `ProjectItems` | Çalışan proje dosyalarını içeren yerel konum. |
+| `ItemName` | Eklenecek öğenin adı. Bu ad, kullanıcının Öğe Ekle iletişim kutusundan varsayılan dosya adı veya **dosya adıdır.** Ad, *.vsdir* dosyasında ayarlanmış bayrakları temel alan bir addır. Ad null değer olabilir. |
+| `InstallationDirectory` | dizininin yolu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yüklemedir. |
+| `Silent` | Sihirbazın Son'a tıklandı gibi sessizce  çalıştırıp çalıştırılamaycalığı belirten Boole ( `TRUE` ). |
+
+## <a name="context-parameters-for-add-sub-project"></a>Alt Proje Ekle için bağlam parametreleri
+
+| Parametre | Açıklama |
+|-------------------------| - |
+| `WizardType` | Kayıtlı sihirbaz türü <xref:EnvDTE.Constants.vsWizardAddSubProject> ( ) veya sihirbazın türünü belirten GUID. Uygulamada, sihirbazın GUID değeri [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] {0F90E1D2-4999-11D1-B6D1-00A0C90F2744} değeridir. |
+| `ProjectName` | Benzersiz proje adı olan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir dize. |
+| `ProjectItems` | Sihirbazın `ProjectItems` üzerinde çalıştır olduğu koleksiyonun işaretçisi. Bu işaretçi, proje hiyerarşisi seçimine göre sihirbaza geçirildi. Kullanıcı genellikle öğeyi koyarak projenin Öğe Ekle iletişim kutusunu çağıran bir **klasör** seçer. |
+| `LocalDirectory` | Çalışan proje dosyalarının yerel konumu. |
+| `ItemName` | Eklenecek öğenin adı. Bu ad, kullanıcının Öğe Ekle iletişim kutusundan varsayılan dosya adı veya **dosya adıdır.** Ad, *.vsdir* dosyasında ayarlanmış bayrakları temel alan bir addır. Ad null değer olabilir. |
+| `InstallationDirectory` | Yüklemenin dizin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yolu. |
+| `Silent` | Sihirbazın Son'a tıklandı gibi sessizce  çalıştırıp çalıştırılamaycalığı belirten Boole ( `TRUE` ). |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2>
 - [Özel parametreler](../../extensibility/internals/custom-parameters.md)
 - [Sihirbazlar](../../extensibility/internals/wizards.md)
-- [Sihirbaz (. vsz) dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)
+- [Sihirbaz (.vsz) dosyası](../../extensibility/internals/wizard-dot-vsz-file.md)
 - [Sihirbazları başlatmak için bağlam parametreleri](/previous-versions/tz690efs(v=vs.140))

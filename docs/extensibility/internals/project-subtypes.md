@@ -3,7 +3,7 @@ title: Proje alt türleri | Microsoft Docs
 description: Proje alt türleri, Visual Studio 'nun proje sistemlerinin davranışını özelleştirmenize nasıl olanak sağladığını öğrenin. VSPackages, COM toplamasını kullanarak proje alt türlerini uygular.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], subtypes
 - project subtypes [Visual Studio SDK]
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1695bc79e38c7a9ebbda7736e57116123343f30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cd0f959d300fdc797d9e42d581a163b8b0892591
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064338"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903599"
 ---
 # <a name="project-subtypes"></a>Proje Alt Türleri
 Proje alt türleri, proje sistemlerinin davranışını özelleştirmenize ya da değiştirmenize olanak sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Özelleştirmeler, proje dosyasına ek verilerin kaydedilmesini, **Yeni öğe Ekle** iletişim kutusunda öğe ekleyerek veya filtrelemeye, derlemelerin nasıl ayıklanmadığını ve dağıtıldığını denetlemesini ve proje **Özellik sayfaları** iletişim kutusunu genişletmeyi içerir. VSPackages, COM toplamasını kullanarak proje alt türlerini uygular.

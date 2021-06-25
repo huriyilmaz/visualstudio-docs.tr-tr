@@ -3,7 +3,7 @@ title: Seçim bağlamı nesneleri | Microsoft Docs
 description: Visual Studio IDE 'nin IDE 'de gösterilmesi gerekenleri belirlemek için genel seçim bağlam nesnesi nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - selection, tracking
 - selection, context objects
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca6239264ca1fa42edb0b73e8a96f523cb450857
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b0c97108eaba426a4def4c1052d3adc7348eb88b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080846"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898493"
 ---
 # <a name="selection-context-objects"></a>Seçim Bağlamı Nesneleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), IDE 'de neyin gösterilmesi gerektiğini belirlemek için bir genel seçim bağlam nesnesi kullanır. IDE içindeki her bir pencere, genel seçim bağlamına gönderilen kendi seçim bağlamı nesnesine sahip olabilir. IDE, bir pencere odağa sahip olduğunda bir penceredeki değerlerle genel seçim bağlamını günceller. Daha fazla bilgi için bkz. [kullanıcıya geri bildirim](../../extensibility/internals/feedback-to-the-user.md).

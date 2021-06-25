@@ -3,7 +3,7 @@ title: Hata ayıklayıcı bileşenleri | Microsoft Docs
 description: Visual Studio hata ayıklayıcısı tarafından yönetilen ve VSPackage olarak uygulanan bir hata ayıklama oturumu oluşturan öğeler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Visual Studio], components
 - components [Visual Studio SDK], debugging
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7c558d20d24acd65ece4c4df43eb8f474c20447
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8c246bc00ee4f6fcead8404b3174da39f7b5ca2d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094958"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903989"
 ---
 # <a name="debugger-components"></a>Hata ayıklayıcı bileşenleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı bir VSPackage olarak uygulanır ve hata ayıklama oturumunun tamamını yönetir. Hata ayıklama oturumu aşağıdaki öğeleri içerir:

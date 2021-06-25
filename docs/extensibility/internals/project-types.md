@@ -1,9 +1,9 @@
 ---
-title: Proje türleri | Microsoft Docs
-description: Visual Studio, Visual C# ve Visual Basic gibi diller için birçok proje türü içerir. Visual Studio, kendi proje türlerinizi oluşturmanıza de olanak tanır.
+title: Proje Türleri | Microsoft Docs
+description: Visual Studio, Visual C# ve Visual Basic gibi diller için çeşitli proje türleri içerir. Visual Studio kendi proje türlerinizi oluşturmanıza da olanak sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project types, adding
 - projects [Visual Studio SDK], adding new types
@@ -13,66 +13,66 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05db128709fcd0e99b3d0a3a6b26acbc372212c7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e7ecf54a9a5aa4b19d5ecc079e0bf5a448561f98
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064285"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903573"
 ---
 # <a name="project-types"></a>Proje Türleri
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , ve gibi diller için birçok proje türü [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] içerir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ayrıca kendi proje türlerinizi oluşturmanıza imkan tanır.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve gibi diller için çeşitli proje türleri [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] içerir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayrıca kendi proje türlerinizi oluşturmanıza da olanak sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Essentials](../../extensibility/internals/project-type-essentials.md)
 
- Proje türleriyle çalışmaya başlamak için sahip olmanız gereken önemli bilgileri gösterir.
+ Proje türleriyle çalışmaya başlamak için gereken önemli bilgileri sunar.
 
 - [Proje Türleri Oluşturma](../../extensibility/internals/creating-project-types.md)
 
- Proje türlerinin tasarımını açıklar.
+ Proje türlerinin tasarımını ele alan.
 
 - [Çözüm Gezgini Araç Çubuğuna Komut Ekleme](../../extensibility/adding-a-command-to-the-solution-explorer-toolbar.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Çözüm Gezgini** araç çubuğuna bir düğme eklemek için izlemeniz gereken adımların ayrıntılarına bakın.
+ Araç çubuğuna bir düğme eklemek için izlemesi gereken [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Çözüm Gezgini** ayrıntıları.
 
 - [Proje ve Proje Öğesi Şablonları Ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md)
 
- Kullanıcıların bir modele göre yeni projeler ve proje öğeleri oluşturabilmesi için proje türlerinizi nasıl şablon ekleyebileceğiniz açıklanmaktadır.
+ Kullanıcıların bir desene göre yeni projeler ve proje öğeleri oluşturması için proje türlerinize nasıl şablon ekleyebilirsiniz?
 
 - [Proje Öğelerini Açma ve Kaydetme](../../extensibility/internals/opening-and-saving-project-items.md)
 
- Proje türü tarafından desteklenen öğelerin nasıl yönetileceği hakkında bilgi sağlar.
+ Proje türü tarafından desteklene öğeleri yönetme hakkında bilgi sağlar.
 
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)
 
- Proje türlerinizi, projelerin nasıl oluşturulduğunu, ayıklanamayacağını ve bu şekilde çalıştığını denetleyen hata ayıklama ve sürüm gibi yapılandırma seçeneklerini nasıl destekleyebileceğinizi açıklar.
+ Proje türlerinizi, projelerin nasıl yerleşik olduğunu, hata ayıklarını vb. kontrol altına alan Hata Ayıklama ve Yayın gibi yapılandırma seçeneklerini nasıl destekleyebilirsiniz?
 
 - [Kaynak Denetimini Destekleme](../../extensibility/internals/supporting-source-control.md)
 
- Proje türleriniz için kaynak denetimi sistemleri desteğinin nasıl ekleneceği hakkında bilgi sağlar.
+ Proje türlerinize kaynak denetim sistemleri desteği ekleme hakkında bilgi sağlar.
 
 - [Projeleri İç İçe Geçirme](../../extensibility/internals/nesting-projects.md)
 
- Proje türlerinizi *iç içe geçirmeyi* nasıl destekleyebileceğini açıklar, böylece projeler **Çözüm Gezgini** birlikte gruplandırılabilir.
+ Proje türlerinizi iç içe *yerleştirmeyi nasıl destekleyerek* projelerin içinde birlikte gruplamalarını **Çözüm Gezgini.**
 
 - [Projeleri Yükseltme](../../extensibility/internals/upgrading-projects.md)
 
- Proje türlerini, daha önceki bir sürümünden proje dosyalarını yükseltmek için Yükseltme Sihirbazına nasıl katılabileceğinizi açıklar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ Proje dosyalarınızı önceki bir sürümünden yükseltmek için proje türlerinizi Yükseltme Sihirbazı'na nasıl katabilirsiniz? [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]
 
 - [Mimari](../../extensibility/internals/project-types-architecture.md)
 
- Proje türleri hakkında ayrıntılı teknik bilgi sağlar.
+ Proje türleri hakkında ayrıntılı teknik bilgiler sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Hiyerarşiler ve Seçim](../../extensibility/internals/hierarchies-and-selection.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamının (IDE) bir projeyi hiyerarşi olarak nasıl görüntülediğini gösteren bir genel bakış sağlar.
+ Tümleşik geliştirme ortamının [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (IDE) bir projeyi hiyerarşi olarak görüntülemesi hakkında genel bir bakış sağlar.
 
 - [Proje Alt Türleri](../../extensibility/internals/project-subtypes.md)
 
- Project Subtype 'a bağlantılar sağlar. Proje alt türleri, kendi dahil olmak üzere çoğu proje türü uzantısını etkinleştirir.
+ Proje alt türü konularına bağlantılar sağlar. Proje alt türleri, kendi proje türleriniz de dahil olmak üzere çoğu türde uzantıyı etkinleştirir.
 
 - [Projeler](../../extensibility/internals/projects.md)
 
- Proje sisteminin nasıl genişletileceğini açıklar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ Proje sisteminin nasıl [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] genişletildiklerini açıklar.

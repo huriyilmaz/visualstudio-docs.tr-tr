@@ -1,9 +1,9 @@
 ---
-title: VSSDK yardımcı programları | Microsoft Docs
-description: Bu makalelerde, RegPkg, CreatePkgDef, CreateExpInstance, Color Tema araçları ve görüntü hizmeti araçları dahil olmak üzere VSSDK ile birlikte gelen araçlar açıklanır.
+title: VSSDK Yardımcı Programları | Microsoft Docs
+description: Bu makalelerde RegPkg, CreatePkgDef, CreateExpInstance, Color Theming Tools ve Image Service Tools da dahil olmak üzere VSSDK ile birlikte sevk araçları açıklandı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Architecture, Visual Studio Integration
 ms.assetid: a469208a-cb70-4d87-a79b-d2086fc4fae4
@@ -12,15 +12,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48aa8d692533a480d9b19d62cec058f07ff71ccc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6f841899c7bf48a36351197c33c55e148ae210e5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060620"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898854"
 ---
 # <a name="vssdk-utilities"></a>VSSDK Yardımcı Programları
-Bu bölümdeki konularda, VSSDK ile birlikte gelen araçlar açıklanır.
+Bu bölümdeki konular VSSDK ile birlikte sevk araçları açıklar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 

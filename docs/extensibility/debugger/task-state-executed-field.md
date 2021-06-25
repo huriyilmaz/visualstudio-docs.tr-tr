@@ -1,8 +1,8 @@
 ---
 description: Görev çalışıyor ancak henüz tamamlanmadı.
-title: TASK_STATE_EXECUTED alanı | Microsoft Docs
+title: TASK_STATE_EXECUTED Alanı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TASK_STATE_EXECUTED field, Task class [.NET Framework debug engines]
 ms.assetid: 75b8f9d0-b908-40d0-b109-70feaed2ab0c
@@ -11,21 +11,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f035d0a55c1884deceb1a8312ff74fe0dd615bfb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca0d2f578cc4e20b71e562d5b82245995bfd2969
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079312"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902858"
 ---
 # <a name="task_state_executed-field"></a>TASK_STATE_EXECUTED alanı
 Görev çalışıyor ancak henüz tamamlanmadı.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
+ **Derleme:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ Görev çalışıyor ancak henüz tamamlanmadı.
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- [M_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .
+ M_stateFlags [alanı](../../extensibility/debugger/m-stateflags-field.md) bu değeri içeriyorsa özelliği <xref:System.Threading.Tasks.Task.Status%2A> değerini <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

@@ -3,7 +3,7 @@ title: Web sitesi destek şablonları | Microsoft Docs
 description: Web sitesi destek şablonları hakkında bilgi edinin. Visual Studio Web sitesi projesi ve öğe şablonları, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - we site projects, templates
 ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c39e900bbdddd1d558bd0604f16924d2536cb98
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a1bd391d13a6d650cb4d23ce78789a66ef50c2e3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069108"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898906"
 ---
 # <a name="web-site-support-templates"></a>Web Sitesi Destek Şablonları
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web sitesi projesi ve öğe şablonları, yeni Web sitesi projeleri ve öğeleri sıfırdan oluşturma gereksinimini ortadan kaldırarak geliştirme sürecini hızlandıran, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar. Şablonlar hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bkz. [Proje ve öğe şablonları oluşturma](../../ide/creating-project-and-item-templates.md).

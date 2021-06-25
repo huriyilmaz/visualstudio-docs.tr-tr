@@ -1,8 +1,8 @@
 ---
-description: Bu konu, System. Runtime. CompilerServices. AsyncTaskMethodBuilder sınıfının iç üyelerini açıklar.
-title: AsyncTaskMethodBuilder &lt; TResult &gt; yapısı-iç Üyeler | Microsoft Docs
+description: Bu konuda System.Runtime.CompilerServices.AsyncTaskMethodBuilder sınıfının iç üyeleri açıklanmıştır.
+title: AsyncTaskMethodBuilder &lt; TResult &gt; Yapısı - İç Üyeler | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - AsyncTaskMethodBuilder<TResult> structure [.NET Framework debug engines]
 - debug engines, AsyncTaskMethodBuilder<TResult> structure [.NET Framework]
@@ -12,21 +12,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 253d4fa79280fbb49ff0292121c0d0a5cfe4bdb2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca9d5ccfcd5870902cc40a623aabb93a3115f469
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055524"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903807"
 ---
-# <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder &lt; TResult &gt; yapısı-iç Üyeler
-Bu konu, sınıfının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> . Bu sınıf hakkında genel bilgi için <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> başvuru konusuna bakın.
+# <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder &lt; TResult &gt; yapısı - iç üyeler
+Bu konuda sınıfının iç üyeleri <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> açıklanmıştır. Bu sınıf hakkında genel bilgi için başvuru <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> konu başlığına bakın.
 
  **Ad alanı:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
+ **Derleme:** mscorlib (mscorlib.dll)
 
- Bu iç üyelere .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyelere .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,13 +36,13 @@ Bu konu, sınıfının iç üyelerini açıklar <xref:System.Runtime.CompilerSer
        implements System.Runtime.CompilerServices.IAsyncMethodBuilder
 ```
 
-## <a name="internal-members"></a>İç Üyeler
+## <a name="internal-members"></a>Dahili üyeler
 
 |Ad|Açıklama|
 |----------|-----------------|
-|[ObjectIdForDebugger özelliği](../../extensibility/debugger/asynctaskmethodbuilder-tresult-objectidfordebugger-property.md)|Bu oluşturucuyu hata ayıklayıcıya benzersiz bir şekilde tanımlamak için kullanılabilecek bir nesne alır.|
-|[m_task alanı](../../extensibility/debugger/asynctaskmethodbuilder-tresult-m-task-field.md)|Geç tarafından başlatılan oluşturulmuş görevi temsil eder.|
+|[ObjectIdForDebugger özelliği](../../extensibility/debugger/asynctaskmethodbuilder-tresult-objectidfordebugger-property.md)|Hata ayıklayıcısına bu oluşturucusu benzersiz olarak tanımlamak için kullanılmaktadır bir nesnesi alır.|
+|[m_task alanı](../../extensibility/debugger/asynctaskmethodbuilder-tresult-m-task-field.md)|Yavaş başlatılan yerleşik görevi temsil eder.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>
-- [.NET Framework için paralel uzantı iç işlevleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı iç .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

@@ -3,7 +3,7 @@ title: Yüklü kod parçacıklarının listesini alma (eski) | Microsoft Docs
 description: Belirli bir dil GUID 'SI için tüm kod parçacıklarını nasıl alabileceğinizi öğrenin. Bu kod parçacıklarının kısayolları bir IntelliSense tamamlanma listesine eklenebilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - snippets, retrieving list
 - code snippets, retrieving list
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f94d481a2884c64cb42b170d9d1abfa25c913a9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 051f356e7b6b6f1a92ba475617f48e5c6074f402
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069146"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898880"
 ---
 # <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>İzlenecek yol: Yüklü Kod Parçacıklarının Listesini Alma (Eski Uygulama)
 Kod parçacığı, bir menü komutuyla (yüklü kod parçacıkları listesi arasında seçim yapılmasına izin veren) veya bir IntelliSense tamamlanma listesinden bir kod parçacığı kısayolu seçerek kaynak arabelleğine eklenebilen bir kod parçasıdır.

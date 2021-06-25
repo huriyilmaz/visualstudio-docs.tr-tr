@@ -2,19 +2,19 @@
 title: Visual Studio için paylaşılan renkler | Microsoft Docs
 description: Visual Studio ortamıyla tutarlı olan kendi özel kullanıcı arabiriminizi tasarlamak için ortak Visual Studio Kabuk öğelerini ve temalarını nasıl kullanacağınızı öğrenin.
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8edd16744a6c094ece00ee5e4b8239f3d4f5a92e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 262f90fb8d03a9404cdbba8b942e90f6fe6fd3aa
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054042"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903976"
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio için paylaşılan renkler
 Ortak Visual Studio Kabuk öğelerini kullanan kullanıcı arabirimini tasarlarken veya arabirim öğenizin benzer özelliklerle tutarlı olmasını istiyorsanız, renkleri seçmek ve atamak için paket tanımlama dosyalarında mevcut belirteç adlarını kullanın. Bu, UI 'nizin genel Visual Studio ortamı ile tutarlı kalmasını ve Temalar eklendiğinde veya güncelleştirildiğinde otomatik olarak güncelleştirilmesini sağlar.
@@ -46,7 +46,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 **Düğme: Standart durum**
 
-![Standart düğme](../../extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03. Button. Standard")<br />Standart düğme
+![Standart düğme](../../extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />Standart düğme
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
@@ -55,7 +55,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 **Düğme: varsayılan durum**
 
-![Varsayılan düğme](../../extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03. Button. Default")<br />Varsayılan düğme
+![Varsayılan düğme](../../extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03.Button.Default")<br />Varsayılan düğme
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
@@ -64,7 +64,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 **Düğme: devre dışı durumu**
 
-![Devre dışı düğmesi](../../extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03. Button. Disabled")<br />Devre dışı düğmesi
+![Devre dışı düğmesi](../../extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03.Button.Disabled")<br />Devre dışı düğmesi
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
@@ -73,7 +73,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 **Düğme: üzerine gelme durumu**
 
-![Üzerine gelindiğinde düğme](../../extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03. Button. vurgulu")<br />Üzerine gelindiğinde düğme
+![Üzerine gelindiğinde düğme](../../extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03.Button.hover")<br />Üzerine gelindiğinde düğme
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
@@ -82,7 +82,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 **Düğme: basılmış durumu**
 
-![Basılan düğme](../../extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03. Button. basılan")<br />Basılan düğme
+![Basılan düğme](../../extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03.Button.Pressed")<br />Basılan düğme
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
@@ -91,7 +91,7 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 
 **Düğme: odaklanmış durum**
 
-![Odaklanmış düğme](../../extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03. Button. odaklanmış")<br />Odaklanmış düğme
+![Odaklanmış düğme](../../extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03.Button.Focused")<br />Odaklanmış düğme
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
@@ -244,108 +244,108 @@ Belirteç adlarını doğru kullandığınızdan emin olun:
 | Simge | `CommonControls.ComboBoxGlyphFocused` |
 | Glif arka planı | `CommonControls.ComboBoxGlyphBackgroundFocused` |
 
-**Açılan kutular ve Birleşik giriş kutuları: metin girişi seçimi**
+**Açılan liste ve birleşik giriş kutuları: metin girişi seçimi**
 
-![Aşağı açılan/Birleşik giriş kutusu metin girişi seçimi](../../extensibility/ux-guidelines/media/0303-173_dropdowncomboboxtextinput.png "0303-173_DropDownComboBoxTextInput")<br />Aşağı açılan/Birleşik giriş kutusu metin girişi seçimi
+![Açılan liste/birleşik giriş kutusu metin girişi seçimi](../../extensibility/ux-guidelines/media/0303-173_dropdowncomboboxtextinput.png "0303-173_DropDownComboBoxTextInput")<br />Açılan liste/birleşik giriş kutusu metin girişi seçimi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Vurgula | `CommonControls.ComboBoxTextInputSelection` |
 
-### <a name="tabular-data-grid-controls"></a>Tablo verileri (kılavuz) denetimleri
-Grid denetimleri olarak da bilinen tablosal veri denetimleri, Visual Studio için ortak denetimlerdir ve çok sayıda sütunda büyük miktarlarda veri sunmak için kullanılabilir. Standart tablo veri denetimleri, Visual Studio içinde birden çok yerde bulunabilir: Hata Listesi araç penceresi, IntelliTrace raporları ve bellek yığın görünümü, diğerleri arasında. Her zaman sunulan standart tablo veri denetimlerini kullanın. Nadir bazı örneklerde standart tablo veri denetimlerine erişiminiz olmayabilir. Bu durumlarda, UI 'nizin Visual Studio 'daki diğer tablolu veri denetimleriyle tutarlı olduğundan emin olmak için aşağıdaki belirteç adlarını kullanın.
+### <a name="tabular-data-grid-controls"></a>Tablosal veri (kılavuz) denetimleri
+Kılavuz denetimleri olarak da bilinen tablosal veri denetimleri, Visual Studio büyük miktarlardaki verileri birden çok sütunda sunmak için kullanılmaktadır. Standart tablosal veri denetimleri, Visual Studio içinde birden çok yerde bulunabilir: Hata Listesi araç penceresi, IntelliTrace raporları ve bellek yığını görünümü. Her zaman sağlanan standart tablosal veri denetimlerini kullanın. Bazı nadir durumlarda standart tablosal veri denetimlerine erişiminizin olmaz. Bu gibi durumlarda, kullanıcı arabiriminizin kullanıcı arabiriminde diğer tablosal veri denetimleriyle tutarlı olduğundan emin olmak için aşağıdaki belirteç Visual Studio.
 
-![Tablo verisi/kılavuz denetimi (Redline)](../../extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />Tablo verisi/kılavuz denetimi (Redline)
+![Tablosal veri/kılavuz denetimi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />Tablosal veri/kılavuz denetimi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... tablosal veya kılavuz denetimleri için. | ... Tablo veya kılavuz denetimi olmayan herhangi bir kullanıcı arabirimi için. |
+| ... tablosal veya kılavuz denetimleri için. | ... tablosal veya kılavuz denetimi olan herhangi bir kullanıcı arabirimi için. |
 
 #### <a name="column-headers"></a>Sütun başlıkları
-Sütun üst bilgileri, bir arka plan, kenarlık, başlık metni ve genellikle bir kılavuz bu sütuna göre sıralandığında kullanılan isteğe bağlı bir glifden oluşur.
+Sütun üst bilgileri arka plan, kenarlık, başlık metni ve genellikle bir kılavuz sütuna göre sıralanmış olduğunda kullanılan isteğe bağlı bir yazıdan oluşur.
 
-**Sütun başlığı: varsayılan durum**
+**Sütun üst bilgisi: varsayılan durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Header.Default` |
-| Ön plan (metin) | `Environment.CommandBarTextActive` |
-| Ön plan (karakter) | `Header.Glyph` |
+| Ön Plan (Metin) | `Environment.CommandBarTextActive` |
+| Ön plan (Glyph) | `Header.Glyph` |
 | Kenarlık | `Header.SeparatorLine` |
 
 **Sütun üst bilgisi: üzerine gelme durumu**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Header.MouseOver` |
-| Ön plan (metin) | `Environment.CommandBarTextHover` |
-| Ön plan (karakter) | `Header.MouseOverGlyph` |
+| Ön Plan (Metin) | `Environment.CommandBarTextHover` |
+| Ön plan (Glyph) | `Header.MouseOverGlyph` |
 | Kenarlık | `Header.SeparatorLine` |
 
-**Sütun başlığı: basılan durum**
+**Sütun üst bilgisi: basılmış durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `CommonControls.CheckBoxBackgroundPressed` |
-| Ön plan (metin) | `CommonControls.CheckBoxBorderPressed` |
-| Ön plan (karakter) | `CommonControls.CheckBoxTextPressed` |
+| Ön Plan (Metin) | `CommonControls.CheckBoxBorderPressed` |
+| Ön plan (Glyph) | `CommonControls.CheckBoxTextPressed` |
 | Kenarlık | `CommonControls.CheckBoxGlyphPressed` |
 
 #### <a name="list-view-items"></a>Liste görünümü öğeleri
- Liste görünümü öğeleri bir arka plan ve içerikten oluşur. İçerik metin, simge veya her ikisi olabilir.
+ Liste görünümü öğeleri bir arka plandan ve içeriklerden oluşur. İçerik metin, simge veya her ikisi de olabilir.
 
 **Liste görünümü öğeleri: varsayılan durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Geçirgen |
-| Ön plan (metin) | `Environment.CommandBarTextActive` |
-| Kenarlık | Yok |
+| Ön Plan (Metin) | `Environment.CommandBarTextActive` |
+| Kenarlık | Hiçbiri |
 
 **Liste görünümü öğeleri: etkin durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `TreeView.SelectedItemActive` |
-| Ön plan (metin) | `TreeView.SelectedItemActiveText` |
-| Kenarlık | Yok |
+| Ön Plan (Metin) | `TreeView.SelectedItemActiveText` |
+| Kenarlık | Hiçbiri |
 
 **Liste görünümü öğeleri: etkin olmayan durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `TreeView.SelectedItemInactive` |
-| Ön plan (metin) | `TreeView.SelectedItemInactiveText` |
-| Kenarlık | Yok |
+| Ön Plan (Metin) | `TreeView.SelectedItemInactiveText` |
+| Kenarlık | Hiçbiri |
 
-### <a name="ui-text"></a>UI metni
+### <a name="ui-text"></a>KULLANıCı arabirimi metni
 
 #### <a name="instructional-text"></a>Yönerge metni
-Yönerge metni, iletişim kutusunda veya belge sayfasında ne yapacaklarınız için önemli bir açıklama sağlar.
+Yönerge metni, bir iletişim kutusunda veya belge sayfasında ne yapmak istediğinize ilişkin belirgin bir ana açıklama sağlar.
 
 ![Varsayılan yönerge metni](../../extensibility/ux-guidelines/media/0303_InstructionalText.png "0303_InstructionalText.png")<br />Varsayılan yönerge metni
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Ön plan (metin) | `Environment.ControlText` |
 
 #### <a name="secondary-instructional-text"></a>İkincil yönerge metni
-Çok sayıda metin ve denetim içeren belge sayfalarında, bazı eğitici metinler farklı bir renk değeri kullanır. Bu, hangi bilgilerin en önemli olduğunu ve Kullanıcı arabirimi öğelerinin genel yoğunluğunu korumanıza yardımcı olur. (İpucu metni üzerinde ayrıca aşağıdaki bölüme bakın.)
+Çok fazla metin ve denetime sahip belge sayfalarında bazı yönerge metinleri farklı bir renk değeri kullanır. Bu, hangi bilgilerin en önemli olduğunu iletmeye ve kullanıcı arabirimi öğelerinin genel yoğunluğunu hafifletmeye yardımcı olur. (İpucu metniyle ilgili aşağıdaki bölüme de bakın.)
 
 ![İkincil yönerge metni](../../extensibility/ux-guidelines/media/0303_SecondaryInstructionalText.png "0303_SecondaryInstructionalText.png")<br />İkincil yönerge metni
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Ön plan (metin) | `Environment.ControlEditHintText` |
 
 #### <a name="hint-text"></a>İpucu metni
-İpucu metni boş bir denetimde, denetimin altında veya boş bir belge yüzeyinde görünür ve kullanıcıyı bir sonraki adımda gösterir. İpucu metnini pencere ya da denetim arka planlarını kullanarak kullanabilirsiniz.
+İpucu metni boş bir denetimde, denetimin altında veya boş bir belge yüzeyinde görünür ve kullanıcıya bir sonraki adım için ne yapacaklarını gösterir. İpucu metnini Pencere veya Denetim arka planlarını kullanarak kullanabilirsiniz.
 
 **Varsayılan ipucu metni**
 
 ![Varsayılan ipucu metni](../../extensibility/ux-guidelines/media/0303_HintText.png "0303_HintText.png")<br />Varsayılan ipucu metni
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Ön plan (metin) | `Environment.ControlEditHintText` |
 
@@ -353,132 +353,132 @@ Yönerge metni, iletişim kutusunda veya belge sayfasında ne yapacaklarınız i
 
 ![Gerekli ipucu metni](../../extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />Gerekli ipucu metni
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Ön plan (metin) | `Environment.ControlRequiredHintText` |
 | Arka Plan | `Environment.ControlRequiredBackground` |
 
 **Arama kutusu denetim metni**
 
-> Arama denetimiyle ilgili diğer renk belirteçleri için bkz. [arama kutuları](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_SearchBoxes) .
+> Arama [denetimiyle](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_SearchBoxes) ilgili diğer renk belirteçleri için arama kutularına bakın.
 
 ![Arama kutusu denetim metni](../../extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />Arama kutusu denetim metni
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Ön plan (metin) | `SearchControl.UnfocusedWatermarkText` |
 
 ### <a name="hyperlink"></a>Köprü
-Köprü, ön plan/arka plan çiftine sahip olmayan bir denetimdir. Her durumda, koyu, gri ve beyaz arka planlar üzerinde doğru görünecek olan ön plan köprü rengini kullanın. Köprü denetimi için renk belirtecini kullanmıyorsanız, "basılmış" için varsayılan sistem rengini görürsünüz ve bu, kırmızı olarak yanıp sönecektir. Bu, denetimin doğru ortam renk belirtecini kullanmayan sinyaltir.
+Köprü, ön plan/arka plan çifti olmayan bir denetimdir. Her durumda, koyu, gri ve beyaz arka planlarda doğru görünecek ön plan köprü rengini kullanın. Köprü denetimi için renk belirteci kullanmayacaksanız, "basıldığında" için varsayılan sistem rengini ve kırmızıyı yanıp söner. Bu, denetimin doğru ortam renk belirteci kullanma olmadığının sinyalidir.
 
-![Köprü (Redline)](../../extensibility/ux-guidelines/media/0303-133_hyperlinkredline.png "0303-133_HyperlinkRedline")<br />Köprü (Redline)
+![Köprü (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-133_hyperlinkredline.png "0303-133_HyperlinkRedline")<br />Köprü (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... özel bir köprü oluşturmanız gerektiğinde. | ... Köprü olmayan her şey için. |
+| ... özel bir köprü oluşturmanız gerekir. | ... köprü olmayan her şey için. |
 
 **Köprü: varsayılan durum**
 
 ![Varsayılan köprü](../../extensibility/ux-guidelines/media/0303-134_hyperlink.png "0303-134_Hyperlink")<br />Varsayılan köprü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Ön plan (metin) | `Environment.PanelHyperlink` |
+| Ön Plan (Metin) | `Environment.PanelHyperlink` |
 
 **Köprü: üzerine gelme durumu**
 
 ![Üzerine gelindiğinde köprü](../../extensibility/ux-guidelines/media/0303-135_hyperlinkhover.png "0303-135_HyperlinkHover")<br />Üzerine gelindiğinde köprü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Ön plan (metin) | `Environment.PanelHyperlinkHover` |
+| Ön Plan (Metin) | `Environment.PanelHyperlinkHover` |
 
-**Köprü: basılan durum**
+**Köprü: basılmış durum**
 
-![Basılan köprü](../../extensibility/ux-guidelines/media/0303-136_hyperlinkpressed.png "0303-136_HyperlinkPressed")<br />Basılan köprü
+![Basılmış köprü](../../extensibility/ux-guidelines/media/0303-136_hyperlinkpressed.png "0303-136_HyperlinkPressed")<br />Basılmış köprü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Ön plan (metin) | `Environment.PanelHyperlinkPressed` |
+| Ön Plan (Metin) | `Environment.PanelHyperlinkPressed` |
 
-**Köprü: devre dışı durumu**
+**Köprü: devre dışı durum**
 
-![Devre dışı köprü](../../extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />Devre dışı köprü
+![Devre dışı bırakılmış köprü](../../extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />Devre dışı bırakılmış köprü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Ön plan (metin) | `Environment.PanelHyperlinkDisabled` |
+| Ön Plan (Metin) | `Environment.PanelHyperlinkDisabled` |
 
-### <a name="infobars"></a>Çocuk
-Popüler bir bağlam hakkında daha fazla bilgi sağlamak için ve her zaman bir belge penceresinin ya da araç penceresinin en üstünde görüntülenecek olan engelleri kullanır.
+### <a name="infobars"></a>Bilgi Çubuğu
+Bilgi çubuğu, verilen bağlam hakkında daha fazla bilgi sağlamak için kullanılır ve her zaman bir belge penceresinin veya araç penceresinin en üstünde görünür.
 
-![Bilgi çubuğu (Redline)](../../extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />Bilgi çubuğu (Redline)
+![Bilgi Çubuğu (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />Bilgi Çubuğu (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Özel Engelliler oluştururken. | ... bir bilgi çubuğu ile benzer olmayan kullanıcı arabirimi öğeleri için. |
+| ... özel bilgi çubuğu oluştururken. | ... bilgi çubuğuna benzer olmayan kullanıcı arabirimi öğeleri için. |
 
 **Bilgi çubuğu: varsayılan durum**
 
 ![Varsayılan bilgi çubuğu](../../extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />Varsayılan bilgi çubuğu
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `InfoBar.InfoBarBackground` |
-| Ön plan (metin) | `InfoBar.InfoBar` |
+| Ön Plan (Metin) | `InfoBar.InfoBar` |
 | Kenarlık | `InfoBar.InfoBarBorder` |
 
-**Bilgi çubuğu kapat ( &times; ) düğmesi: varsayılan durum**
+**Bilgi Çubuğu Kapat ( &times; ) düğmesi: varsayılan durum**
 
-![Varsayılan bilgi çubuğu kapat ( &times; ) düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />Varsayılan bilgi çubuğu kapat ( &times; ) düğmesi
+![Varsayılan bilgi çubuğu Kapat ( &times; ) düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />Varsayılan bilgi çubuğu Kapat ( &times; ) düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `InfoBar.CloseButton` |
 | Kenarlık | `InfoBar.CloseButtonBorder` |
-| Simge | `InfoBar.CloseButtonGlyph` |
+| Glif | `InfoBar.CloseButtonGlyph` |
 
-**Bilgi çubuğu kapat ( &times; ) düğmesi: üzerine gelme durumu**
+**Bilgi Çubuğu Kapat ( &times; ) düğmesi: üzerine gelme durumu**
 
-![Vurgu sayfasında bilgi çubuğu kapat ( &times; ) düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />Vurgu sayfasında bilgi çubuğu kapat ( &times; ) düğmesi
+![Üzerine gelindiğinde Bilgi &times; Çubuğu Kapat ( ) düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />Üzerine gelindiğinde Bilgi &times; Çubuğu Kapat ( ) düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `InfoBar.CloseButtonHover` |
 | Kenarlık | `InfoBar.CloseButtonHoverBorder` |
-| Simge | `InfoBar.CloseButtonHoverGlyph` |
+| Glif | `InfoBar.CloseButtonHoverGlyph` |
 
-**Bilgi çubuğu kapat ( &times; ) düğmesi: basılmış durumu**
+**Bilgi Çubuğu Kapat ( &times; ) düğmesi: basılmış durum**
 
-![Basılan bilgi çubuğu kapat ( &times; ) düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />Basılan bilgi çubuğu kapat ( &times; ) düğmesi
+![Basılmış bilgi çubuğu Kapat ( &times; ) düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />Basılmış bilgi çubuğu Kapat ( &times; ) düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `InfoBar.CloseButtonDown` |
 | Kenarlık | `InfoBar.CloseButtonDownBorder` |
-| Simge | `InfoBar.CloseButtonDownGlyph` |
+| Glif | `InfoBar.CloseButtonDownGlyph` |
 
 **Bilgi çubuğu köprü düğmesi: varsayılan durum**
 
 ![Varsayılan bilgi çubuğu köprü düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Varsayılan bilgi çubuğu köprü düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Ön plan (metin) | `InfoBar.Hyperlink` |
 
 **Bilgi çubuğu köprü düğmesi: üzerine gelme durumu**
 
-![Vurgu sayfasında bilgi çubuğu köprü düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />Vurgu sayfasında bilgi çubuğu köprü düğmesi
+![Üzerine gelindiğinde bilgi çubuğu köprü düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />Üzerine gelindiğinde bilgi çubuğu köprü düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Ön plan (metin) | `Infobar.HyperlinkMouseOver`<br />(Altı çizili) |
+| Ön plan (metin) | `Infobar.HyperlinkMouseOver`<br />(Alt çizgi ile) |
 
-**Bilgi çubuğu köprü düğmesi: basılan durum**
+**Bilgi çubuğu köprü düğmesi: basılmış durum**
 
-![Basılan bilgi çubuğu köprü düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />Basılan bilgi çubuğu köprü düğmesi
+![Basılmış bilgi çubuğu köprü düğmesi](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />Basılmış bilgi çubuğu köprü düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Ön plan (metin) | `Infobar.HyperlinkMouseDown`<br />(Altı çizili) |
 
@@ -605,92 +605,92 @@ Kaydırma çubukları, Visual Studio ortamı tarafından stillendirilerek temal�
 
 ![Üzerine gelindiğinde kaydırma çubuğu oku](../../extensibility/ux-guidelines/media/0303-144_scrollbararrowhover.png "0303-144_ScrollbarArrowHover")<br />Üzerine gelindiğinde kaydırma çubuğu oku
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.ScrollBarArrowMouseOverBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
-| Ön plan (karakter) | `Environment.ScrollBarArrowGlyphMouseOver` |
+| Arka Plan | `Environment.ScrollBarArrowMouseOverBackground`<br />(Kaydırma çubuğuyla aynı renge ayarlayın.) |
+| Ön plan (Glyph) | `Environment.ScrollBarArrowGlyphMouseOver` |
 
-**Kaydırma çubuğu oku: basılmış durumu**
+**Kaydırma çubuğu oku: basılan durum**
 
-![Basılan kaydırma çubuğu oku](../../extensibility/ux-guidelines/media/0303-146_scrollbararrowpressed.png "0303-146_ScrollbarArrowPressed")<br />Basılan kaydırma çubuğu oku
+![Basılmış kaydırma çubuğu oku](../../extensibility/ux-guidelines/media/0303-146_scrollbararrowpressed.png "0303-146_ScrollbarArrowPressed")<br />Basılmış kaydırma çubuğu oku
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.ScrollBarArrowPressedBackground`<br />(Kaydırma çubuğu ile aynı renge ayarlanır.) |
-| Ön plan (karakter) | `Environment.ScrollBarArrowGlyphPressed` |
+| Arka Plan | `Environment.ScrollBarArrowPressedBackground`<br />(Kaydırma çubuğuyla aynı renge ayarlayın.) |
+| Ön plan (Glyph) | `Environment.ScrollBarArrowGlyphPressed` |
 
 ### <a name="search-boxes"></a><a name="BKMK_SearchBoxes"></a>Arama kutuları
-Mümkün olan her durumda, Visual Studio ortamı tarafından sunulan genel arama denetimini kullanın. Arama kutusu renkleri, giriş alanı, eylem düğmesi, açılan düğme ve açılan menünün belirteç adlarını içeren **Shellcolors. pkgdef** dosyasındaki "SearchControl" kategorisinde bulunur.
+Mümkün olduğunda, ortam tarafından sağlanan ortak arama Visual Studio kullanın. Arama kutusu renkleri, Giriş alanı, eylem düğmesi, açılan düğme ve açılan menü için belirteç adlarını içeren **ShellColors.pkgdef** dosyasındaki "SearchControl" kategorisinde bulunur.
 
-Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabilir:
+Arama kutusu birkaç farklı durumlardan biri olabilir ve bazıları birbirini dışlar:
 
-- "Odaklanmış" veya "odaklanmış olmayan" imleci, imlecin metin kutusunda olup olmadığı anlamına gelir.
+- "Odaklanmış" veya "odaklanmamış", imlecin metin kutusunda olup olmadığını ifade eder.
 
-- "Etkin" veya "etkin değil", kullanıcının metin kutusunda bir arama sorgusu girmediğini belirtir.
+- "Etkin" veya "etkin değil", kullanıcının metin kutusuna bir arama sorgusu girişi olup olmadığını ifade eder.
 
-- "Üzerine gelme", kullanıcının fare ile arama kutusu üzerinde molediği anlamına gelir (Bu durum diğer tüm durumları geçersiz kılar).
+- "Üzerine Gelin", kullanıcının fareyle arama kutusunun üzerine geldiğini (bu durum diğer tüm durumları geçersiz kılar) anlamına gelir.
 
-- "Devre dışı", geçerli bağlam için arama işlevinin kapalı olduğu anlamına gelir.
+- "Devre Dışı", arama işlevinin geçerli bağlam için kapalı olduğu anlamına gelir.
 
-![Arama kutusu (Redline)](../../extensibility/ux-guidelines/media/0303-110_searchboxredline.png "0303-110_SearchBoxRedline")<br />Arama kutusu (Redline)
+![Arama kutusu (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-110_searchboxredline.png "0303-110_SearchBoxRedline")<br />Arama kutusu (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... özel bir arama kutusu tasarlıyorsunuz. | ... Arama kutusu olmayan her şey için. |
-| | ... Arama kutusu kullanıcı arabirimine her zaman eşleşmek istemediğiniz her şey için. |
+| ... özel bir arama kutusu tasarlarken. | ... arama kutusu olmayan her şey için. |
+| | ... her zaman arama kutusu kullanıcı arabirimiyle eşleşmek istemeyebilirsiniz. |
 
 **Odaklanmış arama giriş alanı**
 
 ![Odaklanmış arama giriş alanı](../../extensibility/ux-guidelines/media/0303-111_searchinputfieldfocused.png "0303-111_SearchInputFieldFocused")<br />Odaklanmış arama giriş alanı
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `SearchControl.FocusedBackground` |
-| Ön plan (metin) | `SearchControl.FocusedBackground` |
+| Ön Plan (Metin) | `SearchControl.FocusedBackground` |
 | Kenarlık | `SearchControl.FocusedBorder` |
 | Ayırıcı | `SearchControl.FocusedDropDownSeparator` |
 
-**Odaklanmış olmayan, etkin arama giriş alanı**
+**Odaksız, etkin arama giriş alanı**
 
-![Arama girişi alanı odaklanmış değil](../../extensibility/ux-guidelines/media/0303-114_searchinputfieldunfocused.png "0303-114_SearchInputFieldUnfocused")<br />Odaklanmış olmayan, etkin arama giriş alanı
+![Giriş alanını odaksız olarak arama](../../extensibility/ux-guidelines/media/0303-114_searchinputfieldunfocused.png "0303-114_SearchInputFieldUnfocused")<br />Odaksız, etkin arama giriş alanı
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `SearchControl.SearchActiveBackground` |
-| Ön plan (metin) | `SearchControl.SearchActiveBackground` |
+| Ön Plan (Metin) | `SearchControl.SearchActiveBackground` |
 | Kenarlık | `SearchControl.UnfocusedBorder` |
 | Ayırıcı | `SearchControl.DropDownSeparator` |
 
-**Odaklanmadan, etkin olmayan arama giriş alanı**
+**Odaksız, etkin olmayan arama giriş alanı**
 
-![Odaklanmadan, etkin olmayan arama giriş alanı](../../extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br />Odaklanmadan, etkin olmayan arama giriş alanı
+![Odaksız, etkin olmayan arama giriş alanı](../../extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br />Odaksız, etkin olmayan arama giriş alanı
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `SearchControl.Unfocused` |
-| Ön plan (metin) | `SearchControl.Unfocused` |
+| Ön Plan (Metin) | `SearchControl.Unfocused` |
 | Kenarlık | `SearchControl.UnfocusedBorder` |
 | Ayırıcı | `SearchControl.DropDownSeparator` |
 
-**Vurgulanan arama girişi alanı (yalnızca metin)**
+**Vurgulanan arama giriş alanı (yalnızca metin)**
 
 ![Vurgulanan arama girişi alanı](../../extensibility/ux-guidelines/media/0303-120_searchinputfieldhighlight.png "0303-120_SearchInputFieldHighlight")<br />Vurgulanan arama girişi alanı
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `SearchControl.Selection` |
-| Ön plan (metin) | `SearchControl.FocusedBackground` |
-| Kenarlık | Yok |
+| Ön Plan (Metin) | `SearchControl.FocusedBackground` |
+| Kenarlık | Hiçbiri |
 | Ayırıcı | `SearchControl.FocusedDropDownSeparator` |
 
-**Devre dışı arama girişi alanı**
+**Arama girişi alanı devre dışı bırakıldı**
 
-![Devre dışı arama girişi alanı](../../extensibility/ux-guidelines/media/0303-121_searchinputfielddisabled.png "0303-121_SearchInputFieldDisabled")<br />Devre dışı arama girişi alanı
+![Arama girişi alanı devre dışı bırakıldı](../../extensibility/ux-guidelines/media/0303-121_searchinputfielddisabled.png "0303-121_SearchInputFieldDisabled")<br />Arama girişi alanı devre dışı bırakıldı
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `SearchControl.Disabled` |
-| Ön plan (metin) | `SearchControl.Disabled` |
+| Ön Plan (Metin) | `SearchControl.Disabled` |
 | Kenarlık | `SearchControl.DisabledBorder` |
 | Ayırıcı | `SearchControl.DropDownSeparator` |
 
@@ -698,24 +698,24 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 ![Arama eylemi düğmesi odaklı](../../extensibility/ux-guidelines/media/0303-112_searchactionbuttonfocused.png "0303-112_SearchActionButtonFocused")<br />Odaklanmış arama eylemi düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | Yok |
-| Ön plan (karakter ara) | `SearchControl.SearchGlyph` |
-| Ön plan (glifi Durdur) | `SearchControl.StopGlyph` |
-| Ön plan (glifi temizle) | `SearchControl.ClearGlyph` |
+| Arka Plan | Hiçbiri |
+| Ön plan (Arama özelliği) | `SearchControl.SearchGlyph` |
+| Ön plan (Stop glyph) | `SearchControl.StopGlyph` |
+| Ön plan (Glyph'i temizle) | `SearchControl.ClearGlyph` |
 | Kenarlık | Yok |
 
-**Odaklanmış olmayan arama eylemi düğmesi**
+**Odaksız arama eylemi düğmesi**
 
-![Odaklanmış olmayan arama eylemi düğmesi](../../extensibility/ux-guidelines/media/0303-115_searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br />Odaklanmış olmayan arama eylemi düğmesi
+![Odaksız arama eylemi düğmesi](../../extensibility/ux-guidelines/media/0303-115_searchactionbuttonunfocused.png "0303-115_SearchActionButtonUnfocused")<br />Odaksız arama eylemi düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Yok |
-| Ön plan (karakter ara) | `SearchControl.SearchGlyph` |
-| Ön plan (glifi Durdur) | `SearchControl.StopGlyph` |
-| Ön plan (glifi temizle) | `SearchControl.ClearGlyph` |
+| Ön plan (Arama özelliği) | `SearchControl.SearchGlyph` |
+| Ön plan (Stop glyph) | `SearchControl.StopGlyph` |
+| Ön plan (Glyph'i temizle) | `SearchControl.ClearGlyph` |
 | Kenarlık | Yok |
 
 **Basılan arama eylemi düğmesi**
@@ -734,9 +734,9 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka Plan | Yok |
+| Arka Plan | Hiçbiri |
 | Ön plan (karakter) | `SearchControl.ActionButtonDisabledGlyph` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 **Odaklanmış arama açılan düğmesi**
 
@@ -774,9 +774,9 @@ Bir arama kutusu, bazıları birbirini dışlamalı birkaç durumdan biri olabil
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka Plan | Yok |
+| Arka Plan | Hiçbiri |
 | Ön plan (karakter) | `SearchControl.DisabledDownButtonGlyph` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 #### <a name="search-drop-down-lists"></a>Arama açılan listeleri
 Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden biraz daha karmaşık olma olasılığını içerir. "Önerilen aramalar" ve "arama seçenekleri" bölümleri, tek başına veya menüde birlikte görünebilir ve her biri ayrı olarak renklendirilir. Bir satır, birlikte görüntülendiklerinde bu iki bölümü de ayırır ve bir kenarlık, tüm açılan menüyü çevreler.
@@ -874,7 +874,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 | Arka Plan | `TreeView.Background` |
 | Ön plan (metin) | `TreeView.Background` |
 | Ön plan (karakter) | `TreeView.Glyph` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 **Ağaç görünümü öğesi: üzerine gelme durumu**
 
@@ -885,7 +885,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 | Arka Plan | `TreeView.Background` |
 | Ön plan (metin) | `TreeView.Background` |
 | Ön plan (karakter) | `TreeView.GlyphMouseOver` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 **Ağaç görünümü öğesi: durumu üzerine sürükleyin**
 
@@ -896,7 +896,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 | Arka Plan | `TreeView.DragOverItem` |
 | Ön plan (metin) | `TreeView.DragOverItem` |
 | Ön plan (karakter) | `TreeView.DragOverItemGlyph` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 **Ağaç görünümü öğesi: seçili, odaklanmış durum**
 
@@ -918,7 +918,7 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 | Arka Plan | `TreeView.SelectedItemInactive` |
 | Ön plan (metin) | `TreeView.SelectedItemInactive` |
 | Ön plan (karakter) | `TreeView.SelectedItemInactiveGlyph` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 **Ağaç Görünüm öğesi: vurgulanan, seçilen ve Odaklanmış durum**
 
@@ -938,115 +938,115 @@ Arama kutusu açılan menüsü, Visual Studio 'daki diğer açılan menülerden 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
 | Arka Plan | `TreeView.SelectedItemInactive` |
-| Ön plan (metin) | `TreeView.SelectedItemInactive` |
-| Ön plan (karakter) | `TreeView.SelectedItemActiveGlyphMouseOver` |
-| Kenarlık | Yok |
+| Ön Plan (Metin) | `TreeView.SelectedItemInactive` |
+| Ön plan (Glyph) | `TreeView.SelectedItemActiveGlyphMouseOver` |
+| Kenarlık | Hiçbiri |
 
 ## <a name="shell-appearance"></a>Kabuk görünümü
 
 ### <a name="background"></a>Arka Plan
-Ortam arka planı iki katmandan oluşur. Alt katman, tüm IDE 'yi içeren düz bir renktir. En üstteki katman, komut rafı altına ve araç penceresi arasında IDE 'nin sol ve sağ kenarlarındaki kanalları otomatik olarak gizler. Üst ve alt arka plan katmanları, açık ve koyu temalarda aynı renge ayarlanır.
+Ortam arka planı iki katmandan oluşur. Alt katman, IDE'nin tamamını kapsayan düz bir renktir. Üst katman, komut rafı altına sığar ve IDE'nin sol ve sağ kenarlarında yer alan kanalları otomatik olarak gizler. Üst ve alt arka plan katmanları Açık ve Koyu temalarda aynı renge ayarlanır.
 
-![Visual Studio Kabuğu arka planı (Redline)](../../extensibility/ux-guidelines/media/0303-187_shellbackgroundredline.png "0303-187_ShellBackgroundRedline")<br />Visual Studio Kabuğu arka planı (Redline)
+![Visual Studio kabuğu arka planı (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-187_shellbackgroundredline.png "0303-187_ShellBackgroundRedline")<br />Visual Studio kabuğu arka planı (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Visual Studio ortamının arka planıyla eşleştirmek istediğiniz konumlar için. | ... arka plan yüzeyleri olmayan yerleri için bir Fill. |
-| | ... ön plan öğelerini üzerine yerleştirmek için bir arka plan olarak. |
+| ... ortamının arka planıyla eşleşmek istediğiniz Visual Studio. | ... arka plan yüzeyi olmayan yerler için dolgu olarak. |
+| | ... ön plan öğelerinin üzerine yer alan bir arka plan olarak. |
 
 **Alt katman kabuğu görünümü**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.EnvironmentBackground` |
 
-**Üst katman kabuğu görünümü**
+**Üst katman kabuk görünümü**
 
-> Gradyan duraklarının Visual Studio 2013 ışığı ve koyu temalarda aynı renk değerine ayarlanır.
+> Gradyan, Açık ve Koyu temalarda aynı Visual Studio 2013 değerine ayarlanır.
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.EnvironmentBackgroundGradientBegin`<br />`Environment.EnvironmentBackgroundGradientEnd`<br />`Environment.EnvironmentBackgroundGradientMiddle1`<br />`Environment.EnvironmentBackgroundGradientMiddle2` |
 
 ### <a name="command-shelf"></a>Komut rafı
-Komut raf planları için iki belirteç adı kümesi kullanılır: menü çubuğunun bulunduğu bir küme ve komut çubuklarının bulunduğu konum. Tek bir komut çubuğu grubu, "komut çubuğu" bölümünde daha ayrıntılı olarak ele alınan kendi arka plan rengi değerlerine sahiptir. Menü çubuğu ve komut çubuğu metni sırasıyla menü ve komut çubuğu bölümlerinde ele alınmıştır.
+Komut rafı arka planlarında biri menü çubuğunun bulunduğu yer, biri de komut çubuklarının bulunduğu yer olmak için iki belirteç adı kümesi kullanılır. Tek bir komut çubuğu grubu, "komut çubuğu" bölümünde daha ayrıntılı olarak ele alınarak kendi arka plan renk değerlerine sahiptir. Menü çubuğu ve komut çubuğu metni sırasıyla menü ve komut çubuğu bölümlerinde ele alınmıştır.
 
-![Visual Studio komut rafı (Redline)](../../extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Visual Studio komut rafı (Redline)
+![Visual Studio komut rafı (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Visual Studio komut rafı (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Menüleri veya araç çubuklarını yerleştirdiğiniz alanlarda. | ... bir komut rafından benzer olmayan alanlarda. |
-|... doğru arka plan/ön plan belirteci adı birleşimini kullanarak. | |
+| ... menüleri veya araç çubuklarını yer alan alanlar için. | ... komut rafa benzer olmayan alanlar için. |
+|... doğru arka plan/ön plan belirteci ad bileşimiyle. | |
 
 **Komut rafı menü çubuğu**
 
-> Gradyan duraklarının Visual Studio 2013 ışığı ve koyu temalarda aynı renk değerine ayarlanır.
+> Gradyan, Açık ve Koyu temalarda aynı Visual Studio 2013 değerine ayarlanır.
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.CommandShelfHighlightGradientBegin`<br /><br />`Environment.CommandShelfHighlightGradientMiddle`<br />`Environment.CommandShelfHighlightGradientEnd` |
 
 **Komut rafı komut çubuğu**
 
-> Gradyan duraklarının Visual Studio 2013 ışığı ve koyu temalarda aynı renk değerine ayarlanır.
+> Gradyan, Açık ve Koyu temalarda aynı Visual Studio 2013 değerine ayarlanır.
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.CommandShelfBackgroundGradientBegin`<br />`Environment.CommandShelfBackgroundGradientMiddle`<br />`Environment.CommandShelfBackgroundGradientEnd` |
 
 ## <a name="manifest-designer"></a>Bildirim Tasarımcısı
-Bildirim Tasarımcısı, Windows 8 ve Windows Phone 8 projelerinde bildirim dosyasını düzenlemeyi kolaylaştırmak için bir yol olarak tasarlanmıştır. Tüketim için kullanılabilen bir paylaşılan çerçeve olmasa da, yönlendirme/gezinti sekmelerinin ve genel yapının tasarım düzen ve renklerini eşleştirmek uygun olabilir. Düzen ayrıntıları hakkında daha fazla bilgi için bkz. [Visual Studio Için düzen](../../extensibility/ux-guidelines/layout-for-visual-studio.md).
+Bildirim Tasarımcısı, Windows 8 8 projesinde bildirim dosyasını düzenlemeyi kolaylaştırmak Windows Phone tasarlanmıştır. Tüketim için kullanılabilen bir paylaşılan çerçeve mevcut değildir, ancak yönlendirme/gezinti sekmelerinin ve genel yapının tasarım düzeni ve renklerini eşleşmeniz uygun olabilir. Düzen ayrıntıları hakkında daha fazla bilgi için [bkz. Visual Studio.](../../extensibility/ux-guidelines/layout-for-visual-studio.md)
 
-![Bildirim Tasarımcısı (Redline)](../../extensibility/ux-guidelines/media/0303-175_manifestdesignerredline.png "0303-175_ManifestDesignerRedline")<br />Bildirim Tasarımcısı (Redline)
+![Bildirim Tasarımcısı (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-175_manifestdesignerredline.png "0303-175_ManifestDesignerRedline")<br />Bildirim Tasarımcısı (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Bildirim tasarımcısına benzer tasarımcılar için. | ... Altıdan fazla sekmeniz varsa. |
-| ... Belge kutusu içindeki bir düzenleyicinin en üstünde ortak sekme denetimleri kullanma yerine. | ... Bildirim Tasarımcısı gibi yapılandırılmamış herhangi bir kullanıcı arabirimi için. |
+| ... Bildirim Tasarımcısına benzer tasarımcılar için. | ... altıdan fazla sekmeniz varsa. |
+| ... yerine belge içindeki bir düzenleyicinin üst kısmında bulunan ortak sekme denetimlerini kullanın. | ... Bildirim Tasarımcısı gibi yapılandırılmış olmayan herhangi bir kullanıcı arabirimi için. |
 
-**Bildirim Tasarımcısı Seçili sekmesi: varsayılan durum**
+**Bildirim Tasarımcısı seçili sekmesi: varsayılan durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `ManifestDesigner.TabActive` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
-**Bildirim Tasarımcısı Seçili açıklama bölmesi: varsayılan durum**
+**Bildirim Tasarımcısı seçili açıklama bölmesi: varsayılan durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `ManifestDesigner.DescriptionPane` |
 
-**Bildirim Tasarımcısı Seçili içerik sayfası: varsayılan durum**
+**Bildirim Tasarımcısı seçilen içerik sayfası: varsayılan durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `ManifestDesigner.Background` |
-| İletişim kutusu Yardımcısı metni | `ManifestDesigner.WatermarkText`<br />(Bu belirteç adı işlevle eşleşmiyor.) |
+| İletişim kutusu yardımcı metni | `ManifestDesigner.WatermarkText`<br />(Bu belirteç adı işleviyle eşleşmez.) |
 
 **Bildirim Tasarımcısı sekmesi: seçilmemiş durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `ManifestDesigner.Tab.Inactive` |
 
 **Bildirim Tasarımcısı sekmesi: üzerine gelme durumu**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `ManifestDesigner.Tab.Mouseover` |
 
 ## <a name="command-structures"></a>Komut yapıları
 
-### <a name="menus"></a><a name="BKMK_CommandMenus"></a> Menülerden
-Menüler Visual Studio içinde birkaç yerde gerçekleşebilir: Ana menü çubuğu, belge veya araç pencereleri içine eklenmiş veya IDE genelinde çeşitli konumlara sağ tıklama. Diğer Kullanıcı arabirimi öğeleriyle ilişkili menülerin uygulamaları ilgili öğesi için bölümünde ele alınmıştır. Visual Studio ortamı tarafından sunulan standart menü uygulamasını her zaman kullanmanız gerekir. Ancak, nadir bazı örneklerde standart Visual Studio menülerine erişiminiz olmayabilir. Bu durumlarda, UI 'nizin Visual Studio 'daki diğer menülerle tutarlı olduğundan emin olmak için aşağıdaki belirteç adlarını kullanın.
+### <a name="menus"></a><a name="BKMK_CommandMenus"></a> Menü
+Menüler, Visual Studio içinde çeşitli yerlerde oluşabilir: belge veya araç pencerelerine eklenmiş ana menü çubuğu veya IDE'nin tamamında çeşitli konumlara sağ tıklayın. Diğer kullanıcı arabirimi öğeleriyle ilişkili menülerin uygulamaları, ilgili öğenin bölümünde ele alınmıştır. Uygulama ortamı tarafından sağlanan standart menü uygulamasını her zaman Visual Studio gerekir. Ancak, bazı nadir durumlarda standart uygulama menülerine Visual Studio. Bu gibi durumlarda, kullanıcı arabiriminizin diğer menülerle tutarlı olduğundan emin olmak için aşağıdaki belirteç adlarını Visual Studio.
 
-![Visual Studio menüsü (Redline)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303-000_MenuRedline")<br />Visual Studio menüsü (Redline)
+![Visual Studio menüsü (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303-000_MenuRedline")<br />Visual Studio menüsü (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... özel bir menü oluşturmanız gerektiğinde.| ... yalnızca arka plan rengi. Her zaman belirtilen şekilde arka plan/ön plan birleşimini kullanın. |
-| ... Visual Studio menülerini eşleştirmek istediğiniz yeni bir kullanıcı arabirimi bileşenine sahip olduğunuzda.| |
+| ... özel bir menü oluşturmanız gerekir.| ... tek başına arka plan rengi. Her zaman belirtilen arka plan/ön plan birleşimini kullanın. |
+| ... kullanıcı arabirimi menüleri ile eşleşmek istediğiniz yeni bir kullanıcı arabirimi Visual Studio.| |
 
 #### <a name="menu-titles"></a>Menü başlıkları
 Menü başlıkları bir arka plan, kenarlık ve başlık metninin yanı sıra, genellikle menü bir komut çubuğunda bulunduğunda isteğe bağlı bir glifi içerir.
@@ -1066,10 +1066,10 @@ Menü başlıkları bir arka plan, kenarlık ve başlık metninin yanı sıra, g
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka Plan | Yok |
+| Arka Plan | Hiçbiri |
 | Ön plan (metin) | `Environment.CommandBarTextActive` |
 | Ön plan (karakter) | `Environment.CommandBarMenuGlyph` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 **Menü başlığı: üzerine gelme durumu**
 
@@ -1103,10 +1103,10 @@ Menü başlıkları bir arka plan, kenarlık ve başlık metninin yanı sıra, g
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka Plan | Yok |
+| Arka Plan | Hiçbiri |
 | Ön plan (metin) | `Environment.CommandBarTextInactive` |
 | Ön plan (karakter) | `Environment.CommandBarTextInactive` |
-| Kenarlık | Yok |
+| Kenarlık | Hiçbiri |
 
 #### <a name="menu-items"></a>Menü öğeleri
 Tek bir menü öğesi menü metnini ve isteğe bağlı bir simge, onay kutusu ya da alt menü glifinden oluşur. Arka planı ve metin rengi, üzerine gidilme üzerinde değişir. Bu renk belirteci bir arka plan/ön plan çiftidir.
@@ -1408,7 +1408,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka Plan | Yok |
+| Arka Plan | Hiçbiri |
 | Ön plan (karakter) | `Environment.ComboBoxDisabledGlyph` |
 
 #### <a name="command-bar-drop-downs"></a><a name="BKMK_CommandDropDown"></a> Komut çubuğu açılır listeleri
@@ -1440,7 +1440,7 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 
 | Öğe | Belirteç adı: category. Color |
 | --- | --- |
-| Arka Plan | Yok |
+| Arka Plan | Hiçbiri |
 | Ön plan (karakter) | `Environment.DropDownGlyph` |
 
 **Komut çubuğu açılan listesi: varsayılan durum**
@@ -1495,378 +1495,378 @@ Bir komut çubuğu grubu, ilgili bir komut çubuğu denetimleri kümesinden olu�
 | Kenarlık | `Environment.DropDownMouseDownBorder` |
 | Ayırıcı | `Environment.DropDownButtonMouseDownSeparator` |
 
-**Komut çubuğu açılır düğmesi: basılı durum**
+**Komut çubuğu açılan düğmesi: basılmış durum**
 
-![Basılan komut çubuğu açılır düğmesi](../../extensibility/ux-guidelines/media/0303-050_dropdownbuttonpressed.png "0303-050_DropdownButtonPressed")<br />Basılan komut çubuğu açılır düğmesi
+![Basılmış komut çubuğu açılan düğmesi](../../extensibility/ux-guidelines/media/0303-050_dropdownbuttonpressed.png "0303-050_DropdownButtonPressed")<br />Basılmış komut çubuğu açılan düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.DropDownButtonMouseDownBackground` |
-| Ön plan (karakter) | `Environment.DropDownMouseDownGlyph` |
+| Ön plan (Glyph) | `Environment.DropDownMouseDownGlyph` |
 
-**Komut çubuğu aşağı açılan seçim alanı: devre dışı durumu**
+**Komut çubuğu açılan seçim alanı: devre dışı durum**
 
 ![Devre dışı komut çubuğu açılan seçim alanı](../../extensibility/ux-guidelines/media/0303-051_dropdownselectionfielddisabled.png "0303-051_DropdownSelectionFieldDisabled")<br />Devre dışı komut çubuğu açılan seçim alanı
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.DropDownDisabledBackground` |
-| Ön plan (metin) | `Environment.DropDownDisabledText` |
+| Ön Plan (Metin) | `Environment.DropDownDisabledText` |
 | Kenarlık | `Environment.DropDownDisabledBorder` |
 | Ayırıcı | Ayırıcı yok |
 
-**Komut çubuğu açılır düğmesi: devre dışı durumu**
+**Komut çubuğu açılan düğmesi: devre dışı durum**
 
 ![Devre dışı komut çubuğu açılan düğmesi](../../extensibility/ux-guidelines/media/0303-052_dropdownbuttondisabled.png "0303-052_DropdownButtonDisabled")<br />Devre dışı komut çubuğu açılan düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Yok |
-| Ön plan (karakter) | `Environment.DropDownDisabledGlyph` |
+| Ön plan (Glyph) | `Environment.DropDownDisabledGlyph` |
 
 #### <a name="command-bar-split-buttons"></a>Komut çubuğu bölme düğmeleri
-Bölünmüş düğmeler, birçok belirteç adını düğmeler, menüler ve komut çubuğu metni gibi diğer komut çubuğu denetimleriyle paylaşır. Gerekli tüm eylem ve açılan düğme belirteci adları kolaylık sağlaması için burada yinelenir. Bölünmüş düğme açılan listeleri [komut çubuğu menülerinin](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus)uygulamalarıdır.
+Bölme düğmeleri düğmeler, menüler ve komut çubuğu metni gibi diğer komut çubuğu denetimleriyle birçok belirteç adı paylaşır. Kolaylık olması için tüm gerekli eylem ve açılan düğme belirteci adları burada tekrarlanır. Bölme düğmesi açılan listeleri, komut çubuğu menülerinin [uygulamalarıdır.](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus)
 
-![Bölünmüş düğme Redline](../../extensibility/ux-guidelines/media/0303-053_splitbuttonredline.png "0303-053_SplitButtonRedline")<br />Komut çubuğu bölme düğmesi (Redline)
+![Bölme düğmesi kırmızı çizgisi](../../extensibility/ux-guidelines/media/0303-053_splitbuttonredline.png "0303-053_SplitButtonRedline")<br />Komut çubuğu bölme düğmesi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... özel bir bölünmüş düğme oluştururken. | ... diğer tür düğmeleri için. |
-| | ... belirtilen dışında bir arka plan/ön plan birleşimi. |
+| ... özel bölme düğmesi oluştururken. | ... diğer düğme türleri için. |
+| | ... belirtilen dışında herhangi bir arka plan/ön plan bileşiminde. |
 
 **Komut çubuğu bölme düğmesi: varsayılan durum**
 
-![Varsayılan komut çubuğu bölünmüş düğmesi](../../extensibility/ux-guidelines/media/0303-054_splitbutton.png "0303-054_SplitButton")<br />Varsayılan komut çubuğu bölünmüş düğmesi
+![Varsayılan komut çubuğu bölme düğmesi](../../extensibility/ux-guidelines/media/0303-054_splitbutton.png "0303-054_SplitButton")<br />Varsayılan komut çubuğu bölme düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | Yok |
-| Ön plan (metin) | `Environment.CommandBarTextActive` |
-| Ön plan (karakter) | `Environment.CommandBarSplitButtonGlyph` |
+| Arka Plan | Hiçbiri |
+| Ön Plan (Metin) | `Environment.CommandBarTextActive` |
+| Ön plan (Glyph) | `Environment.CommandBarSplitButtonGlyph` |
 | Kenarlık | Yok |
 | Ayırıcı | Yok |
 
 **Komut çubuğu bölme düğmesi: üzerine gelme durumu**
 
-![Üzerine gelindiğinde komut çubuğu Böl düğmesi](../../extensibility/ux-guidelines/media/0303-055_splitbuttonhover.png "0303-055_SplitButtonHover")<br />Üzerine gelindiğinde komut çubuğu Böl düğmesi
+![Üzerine gelindiğinde komut çubuğu bölme düğmesi](../../extensibility/ux-guidelines/media/0303-055_splitbuttonhover.png "0303-055_SplitButtonHover")<br />Üzerine gelindiğinde komut çubuğu bölme düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.CommandBarTextHover` |
-| Ön plan (karakter) | `Environment.CommandBarSplitButtonMouseOverGlyph` |
+| Arka Plan | `Environment.CommandBarMouseOverBackgroundBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.CommandBarTextHover` |
+| Ön plan (Glyph) | `Environment.CommandBarSplitButtonMouseOverGlyph` |
 | Kenarlık | `Environment.CommandBarBorder` |
 | Ayırıcı | `Environment.CommandBarSplitButtonSeparator` |
 
-**Komut çubuğu bölme düğmesi: basılmış durumu**
+**Komut çubuğu bölme düğmesi: basılmış durum**
 
-![Basılan komut çubuğu Böl düğmesi](../../extensibility/ux-guidelines/media/0303-056_splitbuttonpressed.png "0303-056_SplitButtonPressed")<br />Basılan komut çubuğu Böl düğmesi
+![Basılmış komut çubuğu bölme düğmesi](../../extensibility/ux-guidelines/media/0303-056_splitbuttonpressed.png "0303-056_SplitButtonPressed")<br />Basılmış komut çubuğu bölme düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.CommandBarMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.CommandBarTextMouseDown` |
-| Ön plan (karakter) | `Environment.CommandBarSplitButtonMouseDownGlyph` |
+| Arka Plan | `Environment.CommandBarMouseDownBackgroundBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.CommandBarTextMouseDown` |
+| Ön plan (Glyph) | `Environment.CommandBarSplitButtonMouseDownGlyph` |
 | Kenarlık | `Environment.CommandBarBorder` |
 | Ayırıcı | Yok |
 
-**Komut çubuğu bölme düğmesi: devre dışı durumu**
+**Komut çubuğu bölme düğmesi: devre dışı durum**
 
-![Devre dışı komut çubuğu bölünmüş düğmesi](../../extensibility/ux-guidelines/media/0303-057_splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br />Devre dışı komut çubuğu bölünmüş düğmesi
+![Devre dışı komut çubuğu bölme düğmesi](../../extensibility/ux-guidelines/media/0303-057_splitbuttondisabled.png "0303-057_SplitButtonDisabled")<br />Devre dışı komut çubuğu bölme düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Yok |
-| Ön plan (metin) | `Environment.ComboBoxItemTextInactive` |
-| Ön plan (karakter) | `Environment.CommandBarTextInactive` |
+| Ön Plan (Metin) | `Environment.ComboBoxItemTextInactive` |
+| Ön plan (Glyph) | `Environment.CommandBarTextInactive` |
 | Kenarlık | Yok |
 | Ayırıcı | Yok |
 
-#### <a name="command-bar-more-options-and-overflow-buttons"></a>Komut çubuğu ' diğer seçenekler ' ve ' overflow ' düğmeleri
-"Diğer seçenekler" düğmesi, bir komut çubuğu grubu ilgili komut çubuğu düğmeleri ekleyerek veya kaldırarak özelleştirilebilir olduğunda kullanılır. "Taşma" düğmesi, bir komut çubuğu yatay boşluk eksikliği nedeniyle kesilmediğinde ve tıklama ' de görüntülenemeyecek komut çubuğu düğmelerini içeren bir menü gösteriyorsa, "taşma" düğmesi görünür. Bu iki düğmenin renkleri aynı belirteç adları kümesiyle denetlenir.
+#### <a name="command-bar-more-options-and-overflow-buttons"></a>'Diğer seçenekler' ve 'Overflow' düğmeleri komut çubuğu
+Bir komut çubuğu grubu ilgili komut çubuğu düğmeleri ekılarak veya kaldırılarak özelleştirilebilir olduğunda "Diğer seçenekler" düğmesi kullanılır. "Taşma" düğmesi, yatay alan olmaması nedeniyle bir komut çubuğu kesıldığında görünür ve tıklamada görüntülenemiyor komut çubuğu düğmelerini içeren bir menü gösterilir. Bu iki düğmenin renkleri aynı belirteç adları kümesi tarafından denetlenr.
 
-![Komut çubuğu ' diğer seçenekler ' düğmesi (Redline)](../../extensibility/ux-guidelines/media/0303-058_moreoptionsredline.png "0303-058_MoreOptionsRedline")<br />Komut çubuğu ' diğer seçenekler ' düğmesi (Redline)
+![Komut çubuğu 'Diğer seçenekler' düğmesi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-058_moreoptionsredline.png "0303-058_MoreOptionsRedline")<br />Komut çubuğu 'Diğer seçenekler' düğmesi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Özel ' diğer seçenekler ' veya ' overflow ' düğmeleri için. | ... ' daha fazla seçenek ' veya ' taşma ' düğmesine benzer işlevlere sahip olmayan düğmeler için. |
+| ... özel 'Diğer seçenekler' veya 'Overflow' düğmeleri için. | ... bir 'Diğer seçenekler' veya 'Overflow' düğmesine benzer işlevlere sahip olan düğmeler için. |
 
-**Komut çubuğu ' diğer seçenekler ' ve ' taşma ' düğmeleri: varsayılan durum**
+**'Diğer seçenekler' ve 'Taşma' düğmeleri: varsayılan durum**
 
-![Varsayılan komut çubuğu ' diğer seçenekler ' düğmesi](../../extensibility/ux-guidelines/media/0303-059_moreoptions.png "0303-059_MoreOptions")<br />Varsayılan komut çubuğu ' diğer seçenekler ' düğmesi
+![Varsayılan komut çubuğu 'Diğer seçenekler' düğmesi](../../extensibility/ux-guidelines/media/0303-059_moreoptions.png "0303-059_MoreOptions")<br />Varsayılan komut çubuğu 'Diğer seçenekler' düğmesi
 
-![Varsayılan komut çubuğu ' overflow ' düğmesi](../../extensibility/ux-guidelines/media/0303-060_overflow.png "0303-060_Overflow")<br />Varsayılan komut çubuğu ' overflow ' düğmesi
+![Varsayılan komut çubuğu 'Overflow' düğmesi](../../extensibility/ux-guidelines/media/0303-060_overflow.png "0303-060_Overflow")<br />Varsayılan komut çubuğu 'Overflow' düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.CommandBarOptionsBackground` |
-| Ön plan (karakter) | `Environment.CommandBarOptionsGlyph` |
+| Ön plan (Glyph) | `Environment.CommandBarOptionsGlyph` |
 
-**Komut çubuğu ' diğer seçenekler ' ve ' taşma ' düğmeleri: üzerine gelme durumu**
+**'Diğer seçenekler' ve 'Taşma' düğmeleri: üzerine gelme durumu**
 
-![Vurgu üzerinde komut çubuğu ' diğer seçenekler ' düğmesi](../../extensibility/ux-guidelines/media/0303-061_moreoptionshover.png "0303-061_MoreOptionsHover")<br />Vurgu üzerinde komut çubuğu ' diğer seçenekler ' düğmesi
+![Üzerine gelindiğinde komut çubuğu 'Diğer seçenekler' düğmesi](../../extensibility/ux-guidelines/media/0303-061_moreoptionshover.png "0303-061_MoreOptionsHover")<br />Üzerine gelindiğinde komut çubuğu 'Diğer seçenekler' düğmesi
 
-![Üzerine gelindiğinde komut çubuğu ' overflow ' düğmesi](../../extensibility/ux-guidelines/media/0303-062_overflowoptions.png "0303-062_OverflowOptions")<br />Üzerine gelindiğinde komut çubuğu ' overflow ' düğmesi
+![Üzerine gelindiğinde komut çubuğu 'Overflow' düğmesi](../../extensibility/ux-guidelines/media/0303-062_overflowoptions.png "0303-062_OverflowOptions")<br />Üzerine gelindiğinde komut çubuğu 'Overflow' düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.CommandBarOptionsMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (karakter) | `Environment.CommandBarOptionsMouseDownGlyph` |
+| Arka Plan | `Environment.CommandBarOptionsMouseOverBackgroundBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön plan (Glyph) | `Environment.CommandBarOptionsMouseDownGlyph` |
 
-**Komut çubuğu ' diğer seçenekler ' ve ' taşma ' düğmeleri: basılmış durumu**
+**'Diğer seçenekler' ve 'Taşma' düğmeleri: basılmış durum**
 
-![Basılan komut çubuğu ' diğer seçenekler ' düğmesi](../../extensibility/ux-guidelines/media/0303-063_moreoptionspressed.png "0303-063_MoreOptionsPressed")<br />Basılan komut çubuğu ' diğer seçenekler ' düğmesi
+![Basılmış komut çubuğu 'Diğer seçenekler' düğmesi](../../extensibility/ux-guidelines/media/0303-063_moreoptionspressed.png "0303-063_MoreOptionsPressed")<br />Basılmış komut çubuğu 'Diğer seçenekler' düğmesi
 
-![Taşma](../../extensibility/ux-guidelines/media/0303-064_overflowpressed.png "0303-064_OverflowPressed")<br />Basılan komut çubuğu ' overflow ' düğmesi
+![Taşma basıldı](../../extensibility/ux-guidelines/media/0303-064_overflowpressed.png "0303-064_OverflowPressed")<br />Basılmış komut çubuğu 'Overflow' düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.CommandBarOptionsMouseDownBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (karakter) | `Environment.CommandBarOptionsMouseDownGlyph` |
+| Arka Plan | `Environment.CommandBarOptionsMouseDownBackgroundBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön plan (Glyph) | `Environment.CommandBarOptionsMouseDownGlyph` |
 
 ## <a name="document-windows"></a>Belge pencereleri
-Visual Studio ortamı tarafından sağlandıklarından belge pencerelerini çoğaltmaya gerek yoktur. Ancak, Kullanıcı arabirimi her zaman Visual Studio ortamının bu bölümüyle tutarlı şekilde görünmesi için belge penceresinde kullanılan renklerden yararlanmak istediğinize karar verebilirsiniz.
+Belge pencerelerini çoğaltmaya gerek yoktur çünkü bunlar Visual Studio sağlanır. Ancak, kullanıcı arabiriminizin her zaman ortam ortamının bu bölümüyle tutarlı bir şekilde Visual Studio.
 
-Belge penceresi renk belirteçleri kullanılırken, bunları yalnızca benzer öğeler için ve her zaman çiftler halinde kullanın. Bunu yapmazsanız, Kullanıcı arabiriminize beklenmedik sonuçlar elde edebilirsiniz.
+Belge penceresi renk belirteçlerini kullanırken, bunları yalnızca benzer öğeler ve her zaman çiftler halinde kullanmak için dikkatli olun. Bunu yapmasanız da kullanıcı arabiriminde beklenmeyen sonuçlarla karşılaş karşınıza çıkar.
 
 ### <a name="document-window-frames"></a>Belge penceresi çerçeveleri
-Belge pencereleri IDE 'ye yerleştirilmiş ya da ayrı bir pencere olarak kayan olabilir. Bir belge penceresi IDE dışında olduğunda, yine de bir belge kutusu içinde yer alır ve IDE 'nin bir parçası olduğu gibi arka plan, kenarlık, metin ve sekme renkleri vardır. Ancak, belge kendi arka planına, kenarlığına ve metin rengine sahip bir çerçevenin içinde yer alır. Araç pencereleri belge kutusuna yerleştirildiğinde, belge penceresi belirteç adlarından sekmelerin davranışını ve rengini alırlar.
+Belge pencereleri IDE'ye yerleştirildi veya ayrı bir pencere olarak kayan. IDE'nin dışında kayan bir belge penceresi hala bir belge kutusuna yer verir ve IDE'nin parçası olduğu zaman ile aynı arka plan, kenarlık, metin ve sekme renklerine sahiptir. Ancak belge kendi arka planı, kenarlığı ve metin renkleri olan bir çerçevenin içinde yer almaktadır. Araç pencereleri belge yuvasına yerleştirildiklerinde, belge penceresi belirteç adlarından sekmelerinin davranışını ve rengini devralabilir.
 
-![Sabitlenmiş belge penceresi (Redline)](../../extensibility/ux-guidelines/media/0303-065_dockeddocumentwindowredline.png "0303-065_DockedDocumentWindowRedline")<br />Sabitlenmiş belge penceresi (Redline)
+![Sabitlenmiş belge penceresi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-065_dockeddocumentwindowredline.png "0303-065_DockedDocumentWindowRedline")<br />Sabitlenmiş belge penceresi (kırmızı çizgi)
 
-![Kayan belge penceresi (Redline)](../../extensibility/ux-guidelines/media/0303-066_floatingdocumentwindowredline.png "0303-066_FloatingDocumentWindowRedline")<br />Kayan belge penceresi (Redline)
+![Kayan belge penceresi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-066_floatingdocumentwindowredline.png "0303-066_FloatingDocumentWindowRedline")<br />Kayan belge penceresi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Belge penceresiyle eşleştirmek istediğiniz her yerde Kullanıcı arabirimini oluşturun. | ...  herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ... belge penceresiyle eşleşmek istediğiniz kullanıcı arabirimini oluşturmak istediğiniz her yerde. | ...  kabuğun tema güncelleştirmesi varsa otomatik olarak değişmesini istemeyilen herhangi bir kullanıcı arabirimi için. |
 
-**Yerleştirilmiş veya kayan belge penceresi: varsayılan durum**
+**Yerleştirildi veya kayan belge penceresi: varsayılan durum**
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Belge türüne bağlıdır |
-| Ön plan (metin) | Belge türüne bağlıdır |
+| Ön Plan (Metin) | Belge türüne bağlıdır |
 | Kenarlık | `Environment.ToolWindowBorder` |
 
 **Odaklanmış, kayan belge pencere çerçevesi: varsayılan durum**
 
-![Varsayılan odaklanmış, kayan belge pencere çerçevesi](../../extensibility/ux-guidelines/media/0303-067_framefocused.png "0303-067_FrameFocused")<br />Varsayılan odaklanmış, kayan belge pencere çerçevesi
+![Varsayılan odaklı, kayan belge pencere çerçevesi](../../extensibility/ux-guidelines/media/0303-067_framefocused.png "0303-067_FrameFocused")<br />Varsayılan odaklı, kayan belge pencere çerçevesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowFloatingFrame` |
-| Ön plan (metin) | `Environment.ToolWindowFloatingFrame` |
-| Ön plan (karakter) | `Environment.RaftedWindowButtonActiveGlyph` |
+| Ön Plan (Metin) | `Environment.ToolWindowFloatingFrame` |
+| Ön plan (Glyph) | `Environment.RaftedWindowButtonActiveGlyph` |
 | Kenarlık | `Environment.MainWindowActiveDefaultBorder` |
-| Kenarlık (karakter) | `Environment.RaftedWindowButtonActiveBorder`<br />(Saydamlığa ayarla) |
+| Kenarlık (Glyph) | `Environment.RaftedWindowButtonActiveBorder`<br />(Saydam olarak ayarla) |
 
-**Odaklanmış olmayan, kayan belge pencere çerçevesi: varsayılan durum**
+**Odaksız, kayan belge pencere çerçevesi: varsayılan durum**
 
-![Varsayılan, odaklanmış olmayan, kayan belge pencere çerçevesi](../../extensibility/ux-guidelines/media/0303-068_frameunfocused.png "0303-068_FrameUnfocused")<br />Varsayılan, odaklanmış olmayan, kayan belge pencere çerçevesi
+![Varsayılan odaksız, kayan belge pencere çerçevesi](../../extensibility/ux-guidelines/media/0303-068_frameunfocused.png "0303-068_FrameUnfocused")<br />Varsayılan odaksız, kayan belge pencere çerçevesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowFloatingFrameInactive` |
-| Ön plan (metin) | `Environment.ToolWindowFloatingFrameInactive` |
-| Ön plan (karakter) | `Environment.RaftedWindowButtonInactiveGlyph` |
+| Ön Plan (Metin) | `Environment.ToolWindowFloatingFrameInactive` |
+| Ön plan (Glyph) | `Environment.RaftedWindowButtonInactiveGlyph` |
 | Kenarlık | `Environment.MainWindowInactiveBorder` |
-| Kenarlık (karakter) | `Environment.RaftedWindowButtonInactiveBorder`<br />(Saydamlığa ayarla) |
+| Kenarlık (Glyph) | `Environment.RaftedWindowButtonInactiveBorder`<br />(Saydam olarak ayarla) |
 
-**Odaklanmış, kayan belge penceresi çerçevesi: üzerine gelme durumu**
+**Odaklanmış, kayan belge pencere çerçevesi: üzerine gelme durumu**
 
-![Odaklanmış, kayan belge pencere çerçevesi üzerine gidilme](../../extensibility/ux-guidelines/media/0303-069_framefocusedhover.png "0303-069_FrameFocusedHover")<br />Odaklanmış, kayan belge pencere çerçevesi üzerine gidilme
+![Üzerine gelindiğinde odaklanmış, kayan belge penceresi çerçevesi](../../extensibility/ux-guidelines/media/0303-069_framefocusedhover.png "0303-069_FrameFocusedHover")<br />Üzerine gelindiğinde odaklanmış, kayan belge penceresi çerçevesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka plan (karakter) | `Environment.RaftedWindowButtonHoverActive` |
-| Ön plan (karakter) | `Environment.RaftedWindowButtonHoverActiveGlyph` |
-| Kenarlık (karakter) | `Environment.RaftedWindowButtonHoverActiveBorder` |
+| Arka Plan (Glyph) | `Environment.RaftedWindowButtonHoverActive` |
+| Ön plan (Glyph) | `Environment.RaftedWindowButtonHoverActiveGlyph` |
+| Kenarlık (Glyph) | `Environment.RaftedWindowButtonHoverActiveBorder` |
 
-**Odaklanmış olmayan, kayan belge penceresi çerçevesi: üzerine gelme durumu**
+**Odaksız, kayan belge pencere çerçevesi: üzerine gelme durumu**
 
-![Odaklanmadan, üzerine gelme üzerine kayan belge pencere çerçevesi](../../extensibility/ux-guidelines/media/0303-070_frameunfocusedhover.png "0303-070_FrameUnfocusedHover")<br />Odaklanmadan, üzerine gelme üzerine kayan belge pencere çerçevesi
+![Üzerine gelindiğinde odaklanmamış, kayan belge penceresi çerçevesi](../../extensibility/ux-guidelines/media/0303-070_frameunfocusedhover.png "0303-070_FrameUnfocusedHover")<br />Üzerine gelindiğinde odaklanmamış, kayan belge penceresi çerçevesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka plan (karakter) | `EnvironmentRaftedWindowButtonHoverInactive` |
-| Ön plan (karakter) | `Environment.RaftedWindowButtonHoverInactiveGlyph` |
-| Kenarlık (karakter) | `Environment.RaftedWindowButtonHoverInactiveBorder` |
+| Arka Plan (Glyph) | `EnvironmentRaftedWindowButtonHoverInactive` |
+| Ön plan (Glyph) | `Environment.RaftedWindowButtonHoverInactiveGlyph` |
+| Kenarlık (Glyph) | `Environment.RaftedWindowButtonHoverInactiveBorder` |
 
-**Odaklanmış, kayan belge penceresi çerçevesi: basılmış durumu**
+**Odaklanmış, kayan belge pencere çerçevesi: basılmış durum**
 
-![Odaklanmış, kayan belge penceresi kare basma](../../extensibility/ux-guidelines/media/0303-071_framefocusedpressed.png "0303-071_FrameFocusedPressed")<br />Odaklanmış, kayan belge penceresi kare basma
+![Odaklanmış, kayan belge penceresi çerçevesi](../../extensibility/ux-guidelines/media/0303-071_framefocusedpressed.png "0303-071_FrameFocusedPressed")<br />Odaklanmış, kayan belge penceresi çerçevesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka plan (karakter) | `Environment.RaftedWindowButtonDown` |
-| Ön plan (karakter) | `Environment.RaftedWindowButtonDownGlyph` |
-| Kenarlık (karakter) | `Environment.RaftedWindowButtonDownBorder` |
+| Arka Plan (Glyph) | `Environment.RaftedWindowButtonDown` |
+| Ön plan (Glyph) | `Environment.RaftedWindowButtonDownGlyph` |
+| Kenarlık (Glyph) | `Environment.RaftedWindowButtonDownBorder` |
 
 ### <a name="document-tabs"></a>Belge sekmeleri
-Belge sekmeleri, o anda hangi belgelerin açık olduğunu, hangi belgenin seçili ya da etkin belgeyi nerede açık olduğunu göstermek için sekme kanalında oturlar. Araç pencereleri, Kullanıcı oraya yerleştirse de belge sekmesi kanalına yerleştirilebilir. Bu durumda, belge pencereleri ile aynı sekme renklerini kullanırlar. Belge pencere renkleriyle (Tema güncelleştirmeleri dahil olmak üzere veya yeni temalar yüklüyse) her zaman eşleştirmek istediğiniz kullanıcı arabirimini oluşturuyorsanız, bu renk belirteçlerine başvurun.
+Belge sekmeleri, hangi belgelerin açık olduğunu göstermek için sekme kanalında bulunur ve geçerli seçilen veya etkin belgeyi gösterir. Araç pencereleri, kullanıcı tarafından belge sekme kanalına yerleştirilse de yerleştirebilirsiniz. Bu durumda, belge pencereleri ile aynı sekme renklerini kullanırlar. Her zaman belge penceresi renklerini (tema güncelleştirmeleri dahil olmak üzere veya yeni temalar yüklüyse) eşleşmek istediğiniz kullanıcı arabirimi oluşturuyorsanız, bu renk belirteçlerine bakın.
 
-![Belge sekmeleri (Redline)](../../extensibility/ux-guidelines/media/0303-072_documenttabredline.png "0303-072_DocumentTabRedline")<br />Belge sekmeleri (Redline)
+![Belge sekmeleri (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-072_documenttabredline.png "0303-072_DocumentTabRedline")<br />Belge sekmeleri (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Belge sekmelerini eşleştirmek istediğiniz her yerde Kullanıcı arabirimi oluşturun ve tema güncelleştirmelerini veya yeni tema renklerini otomatik olarak seçin. | ... kabuğun bir tema güncelleştirmesi olduğunda otomatik olarak değiştirilmesini istemediğiniz herhangi bir kullanıcı arabirimi için. |
+| ... belge sekmelerini eşleşmek istediğiniz ve tema güncelleştirmelerini veya yeni tema renklerini otomatik olarak almak istediğiniz kullanıcı arabirimini oluşturmak istediğiniz her yerde. | ... kabukta tema güncelleştirmesi olduğunda otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
-#### <a name="open-document-tabs"></a>Belge sekmelerini aç
-Her açık belge, belge sekmesi kanalında adını görüntüleyen bir sekmeye sahiptir. Belgeler, arka planda seçilebilir veya açılabilir ve sekmeleri şu durumları yansıtır:
+#### <a name="open-document-tabs"></a>Belge sekmelerini açma
+Açık olan her belge, belge sekme kanalında adını görüntüleyen bir sekmeye sahip. Belgeler arka planda seçilebilir veya açabilirsiniz ve sekmeleri şu durumları gösterir:
 
-- Seçilen sekme, şu anda belge kutusu 'nda görüntülenen belgeyi temsil eder. Seçili bir sekmede, belge alanının üst kenarına genişleyen bir belge kenarlığı bulunur.
+- Seçilen sekme, şu anda belgede görüntülenen belgeyi temsil eder. Seçili sekmede, belgenin üst kenarı boyunca genişleten bir belge kenarlığı vardır.
 
-- Arka plan sekmeleri, şu anda seçili olan sekme olmayan herhangi bir belge sekmeleridir. Tıklandıktan sonra, seçili sekme olur ve bu belirteç adlarından tüm arka plan, kenarlık ve metin renklerini elde ederler.
+- Arka plan sekmeleri, seçili durumdaki sekmeler arasında yer alan belge sekmeleridir. Tıklandıktan sonra seçili sekme olur ve bu belirteç adlarından tüm arka plan, kenarlık ve metin renklerini alır.
 
-![Belge sekmesini aç (Redline)](../../extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />Belge sekmesini aç (Redline)
+![Belge sekmesini açma (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />Belge sekmesini açma (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... özel belge sekmeleri oluştururken. | ... geçici (Önizleme) sekmeleri için. |
-| | ... herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ... özel belge sekmeleri oluştururken. | ... sağlama (önizleme) sekmeleri için. |
+| | ... kabukta tema güncelleştirmesi varsa otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
 **Seçili, odaklanmış belge sekmesi**
 
 ![Seçili, odaklanmış belge sekmesi](../../extensibility/ux-guidelines/media/0303-074_selectedtabfocused.png "0303-074_SelectedTabFocused")<br />Seçili, odaklanmış belge sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.FileTabSelectedGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.FileTabSelectedText` |
-| Kenarlık | `Environment.FileTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Arka Plan | `Environment.FileTabSelectedGradientTop`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.FileTabSelectedText` |
+| Kenarlık | `Environment.FileTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 | Belge kenarlığı | `Environment.FileTabDocumentBorderBackground` |
 
-**Seçili, odaklanmış olmayan belge sekmesi**
+**Seçili, odaklanmamış belge sekmesi**
 
-![Seçili, odaklanmış olmayan belge sekmesi](../../extensibility/ux-guidelines/media/0303-075_selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br />Seçili, odaklanmış olmayan belge sekmesi
+![Seçili, odaklanmamış belge sekmesi](../../extensibility/ux-guidelines/media/0303-075_selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br />Seçili, odaklanmamış belge sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.FileTabInactiveGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.FileTabInactiveText` |
-| Kenarlık | `Environment.FileTabInactiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Arka Plan | `Environment.FileTabInactiveGradientTop`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.FileTabInactiveText` |
+| Kenarlık | `Environment.FileTabInactiveBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 | Belge kenarlığı | `Environment.FileTabInactiveDocumentBorderBackground` |
 
-**Arka plan belgesi sekmesi: varsayılan durum**
+**Arka plan belge sekmesi: varsayılan durum**
 
-![Varsayılan arka plan belgesi sekmesi](../../extensibility/ux-guidelines/media/0303-076_backgroundtab.png "0303-076_BackgroundTab")<br />Varsayılan arka plan belgesi sekmesi
+![Varsayılan arka plan belge sekmesi](../../extensibility/ux-guidelines/media/0303-076_backgroundtab.png "0303-076_BackgroundTab")<br />Varsayılan arka plan belge sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.FileTabBackground` |
-| Ön plan (metin) | `Environment.FileTabText` |
-| Kenarlık | `Environment.FileTabBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Ön Plan (Metin) | `Environment.FileTabText` |
+| Kenarlık | `Environment.FileTabBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 
-**Arka plan belgesi sekmesi: üzerine gelme durumu**
+**Arka plan belge sekmesi: üzerine gelme durumu**
 
-![Üzerine gelme sırasında arka plan belgesi sekmesi](../../extensibility/ux-guidelines/media/0303-077_backgroundtabhover.png "0303-077_BackgroundTabHover")<br />Üzerine gelme sırasında arka plan belgesi sekmesi
+![Üzerine gelindiğinde arka plan belgesi sekmesi](../../extensibility/ux-guidelines/media/0303-077_backgroundtabhover.png "0303-077_BackgroundTabHover")<br />Üzerine gelindiğinde arka plan belgesi sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.FileTabHotGradientTop`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.FileTabHotText` |
-| Kenarlık | `Environment.FileTabHotBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Arka Plan | `Environment.FileTabHotGradientTop`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.FileTabHotText` |
+| Kenarlık | `Environment.FileTabHotBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 
 #### <a name="preview-tab"></a>Önizleme sekmesi
-"Geçici" sekme olarak da adlandırılır. Kullanıcı Çözüm Gezgini araç penceresinde bir öğeye tıkladığında, belge sekmesi kanalının sağ tarafında Önizleme sekmesi görünür. Belgenin bir önizlemesi görevi görür ve kullanıcıya belgeyi belge sekmesi kanalının sol tarafında açık tutma seçeneğini de sağlar. Tek seferde yalnızca bir Önizleme sekmesi açık olabilir. Önizleme sekmeleri, açık sekmeler gibi hem arka plan hem de seçili durumlara sahiptir ve etkin durumlarına odaklanmış veya odaklaneklenebilir.
+"Sağlama" sekmesi olarak da adlandırılan. Kullanıcı Çözüm Gezgini araç penceresinde bir öğeye tıkladığında, belge sekmesi kanalının sağ tarafında Çözüm Gezgini görünür. Belgenin önizlemesi olarak davranır ve kullanıcıya belge sekme kanalının sol tarafında belgeyi açık tutma seçeneği de verir. Aynı anda yalnızca bir önizleme sekmesi açabilirsiniz. Önizleme sekmelerinin açık sekmeler gibi hem arka plan hem de seçili durumları vardır ve etkin durumlarına odaklanıp odaklanmaları kaldırabilirsiniz.
 
-![Önizleme sekmesi (Redline)](../../extensibility/ux-guidelines/media/0303-078_previewtabredline.png "0303-078_PreviewTabRedline")<br />Önizleme sekmesi (Redline)
+![Önizleme sekmesi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-078_previewtabredline.png "0303-078_PreviewTabRedline")<br />Önizleme sekmesi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... geçici önizleme oluşturduğunuz her yerde ve bazı öğelerinin geçerli Önizleme sekmesi rengiyle eşleşmesini istiyorsunuz. | ... her türlü belge veya sekme için geçici olmayan (Önizleme). |
-| | ... herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ... herhangi bir yerde sağlama önizlemesi oluşturuyor ve bazı öğenin geçerli önizleme sekmesi rengiyle eşleşmesini istiyor. | ... sağlanmaz (önizleme) herhangi bir belge veya sekme için. |
+| | ... kabukta tema güncelleştirmesi varsa otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
-**Odaklanmış, seçili Önizleme sekmesi**
+**Odaklanmış, seçili önizleme sekmesi**
 
-![Odaklanmış, seçili Önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-079_previewtabfocused.png "0303-079_PreviewTabFocused")<br />Odaklanmış, seçili Önizleme sekmesi
+![Odaklanmış, seçili önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-079_previewtabfocused.png "0303-079_PreviewTabFocused")<br />Odaklanmış, seçili önizleme sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.FileTabProvisionalSelectedActive` |
-| Ön plan (metin) | `Environment.FileTabProvisionalSelectedActiveForeground` |
-| Kenarlık | `Environment.FileTabProvisionalSelectedActiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Ön Plan (Metin) | `Environment.FileTabProvisionalSelectedActiveForeground` |
+| Kenarlık | `Environment.FileTabProvisionalSelectedActiveBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 | Belge kenarlığı | `Environment.FileTabProvisionalSelectedActiveBorder` |
 
-**Odaklanmış olmayan, seçili Önizleme sekmesi**
+**Odaksız, seçili önizleme sekmesi**
 
-![Odaklanmış olmayan, seçili Önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />Odaklanmış olmayan, seçili Önizleme sekmesi
+![Odaksız, seçili önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />Odaksız, seçili önizleme sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.FileTabProvisionalSelectedInactive` |
-| Ön plan (metin) | `Environment.FileTabProvisionalSelectedInactiveForeground` |
+| Ön Plan (Metin) | `Environment.FileTabProvisionalSelectedInactiveForeground` |
 | Kenarlık | `Environment.FileTabProvisionalSelectedInactiveBorder` |
 | Belge kenarlığı | `Environment.FileTabProvisionalSelectedInactiveBorder` |
 
-**Arka plan Önizleme sekmesi: varsayılan durum**
+**Arka plan önizleme sekmesi: varsayılan durum**
 
-![Varsayılan arka plan Önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-081_previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br />Varsayılan arka plan Önizleme sekmesi
+![Varsayılan arka plan önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-081_previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br />Varsayılan arka plan önizleme sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.FileTabProvisionalInactive` |
-| Ön plan (metin) | `Environment.FileTabProvisionalInactiveForeground` |
-| Kenarlık | `Environment.FileTabProvisionalInactiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Ön Plan (Metin) | `Environment.FileTabProvisionalInactiveForeground` |
+| Kenarlık | `Environment.FileTabProvisionalInactiveBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 
-**Arka plan Önizleme sekmesi: üzerine gelme durumu**
+**Arka plan önizleme sekmesi: üzerine gelme durumu**
 
-![Üzerine gelme sırasında arka plan Önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-082_previewbackgroundtabhover.png "0303-082_PreviewBackgroundTabHover")<br />Üzerine gelme sırasında arka plan Önizleme sekmesi
+![Üzerine gelindiğinde arka plan önizleme sekmesi](../../extensibility/ux-guidelines/media/0303-082_previewbackgroundtabhover.png "0303-082_PreviewBackgroundTabHover")<br />Üzerine gelindiğinde arka plan önizleme sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.FileTabProvisionalHover` |
-| Ön plan (metin) | `Environment.FileTabProvisionalHoverForeground` |
-| Kenarlık | `Environment.FileTabProvisionalHoverBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Ön Plan (Metin) | `Environment.FileTabProvisionalHoverForeground` |
+| Kenarlık | `Environment.FileTabProvisionalHoverBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 
 #### <a name="document-overflow-button"></a>Belge taşması düğmesi
-Geçerli yapılandırmada tüm belge sekmelerine sığacak şekilde bir veya daha fazla belge açıksa, belge taşma düğmesi vardır. [Komut çubuğu menü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus) renkleri tarafından denetlenen belge taşması açılır menüsü, tüm açık belgelerin bir listesini, hem görünür hem de gizli ve taşma karakteri tüm açık belgelerin sekme kanalında görüntülenip görüntülenmediğini bağlı olarak değişir.
+Açık bir veya daha fazla belge varsa, geçerli yapılandırmada tüm belge sekmelerini sığdıracak dikey alan olup olmadığına bakılmaksızın belge taşması düğmesi bulunur. Komut çubuğu menü renkleri tarafından denetlenen [](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus) belge taşması açılan menüsü, hem görünür hem de gizli olan tüm açık belgelerin listesini görüntüler ve tüm açık belgelerin sekme kanalında görüntülendiğinden bağlı olarak taşma öğesi değişir.
 
-![Belge taşması düğmesi (Redline)](../../extensibility/ux-guidelines/media/0303-083_overflowredline.png "0303-083_OverflowRedline")<br />Belge taşması düğmesi (Redline)
+![Belge taşması düğmesi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-083_overflowredline.png "0303-083_OverflowRedline")<br />Belge taşması düğmesi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
 | ... özel bir belge taşması düğmesi oluştururken. | ... taşma düğmesine benzer olmayan kullanıcı arabirimi için. |
 | | ... komut çubuğu taşma düğmeleri için. |
 
-**Belge taşma düğmesi: varsayılan durum**
+**Belge taşması düğmesi: varsayılan durum**
 
 ![Varsayılan belge taşması düğmesi](../../extensibility/ux-guidelines/media/0303-084_overflow.png "0303-084_Overflow")<br />Varsayılan belge taşması düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.DocWellOverflowButtonBackground` |
-| Ön plan (karakter) | `Environment.DocWellOverflowButtonGlyph` |
+| Ön plan (Glyph) | `Environment.DocWellOverflowButtonGlyph` |
 | Kenarlık | Yok |
 
-**Belge taşma düğmesi: üzerine gelme durumu**
+**Belge taşması düğmesi: üzerine gelme durumu**
 
 ![Üzerine gelindiğinde belge taşması düğmesi](../../extensibility/ux-guidelines/media/0303-085_overflowhover.png "0303-085_OverflowHover")<br />Üzerine gelindiğinde belge taşması düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.DocWellOverflowButtonMouseOverBackground` |
-| Ön plan (karakter) | `Environment.DocWellOverflowButtonMouseOverGlyph` |
+| Ön plan (Glyph) | `Environment.DocWellOverflowButtonMouseOverGlyph` |
 | Kenarlık | `Environment.DocWellOverflowButtonMouseOverBorder` |
 
-**Belge taşma düğmesi: basılı durum**
+**Belge taşması düğmesi: basılmış durum**
 
-![Belge taşma düğmesi basılı](../../extensibility/ux-guidelines/media/0303-086_overflowpressed.png "0303-086_OverflowPressed")<br />Belge taşma düğmesi basılı
+![Tuşuna basıldığında belge taşması düğmesi](../../extensibility/ux-guidelines/media/0303-086_overflowpressed.png "0303-086_OverflowPressed")<br />Tuşuna basıldığında belge taşması düğmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.DocWellOverflowButtonMouseDownBackground` |
-| Ön plan (karakter) | `Environment.DocWellOverflowButtonMouseDownGlyph` |
+| Ön plan (Glyph) | `Environment.DocWellOverflowButtonMouseDownGlyph` |
 | Kenarlık | `Environment.DocWellOverflowButtonMouseDownBorder` |
 
 ### <a name="tagging"></a>Etiketleme
-Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükleri bildirmesine olanak sağlayan etiketlemeyi destekler. Örneğin, proje yöneticileri ve geliştiriciler iş öğelerini etiketlemek için Team Foundation Server (TFS) kullanabilir. Aşağıdaki tablolarda hem etiketin kendisi için renk adları hem de üzerine gelme ve seçili durumlarda görüntülenen "Kapat simgesi" karakteri verilmiştir.
+Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükleri bildirecek şekilde etiketlemeyi destekler. Örneğin, proje yöneticileri ve geliştiriciler iş öğelerini etiketlemek Team Foundation Server (TFS) kullanabilir. Aşağıdaki tablolarda hem etiketin kendisi hem de üzerine gelindiğinde ve seçili eyaletlerde görünen "kapat simgesi" simgesi için renk adları verilmiştir.
 
-![Visual Studio 'da etiketleme (Redline)](../../extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303-176_TaggingRedline")<br />Visual Studio 'da etiketleme (Redline)
+![Visual Studio (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303-176_TaggingRedline")<br />Visual Studio (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... etiketlemeyi destekleyen kullanıcı arabirimi için. | ... Diğer Kullanıcı arabirimi türleri için. |
+| ... etiketlemeyi destekleyen kullanıcı arabirimi için. | ... başka bir kullanıcı arabirimi türü için. |
 
 #### <a name="tags"></a>Etiketler
 
@@ -1874,121 +1874,121 @@ Visual Studio, bir kullanıcının izleme amacıyla aranabilir anahtar sözcükl
 
 ![Varsayılan etiket](../../extensibility/ux-guidelines/media/0303-177_tag.png "0303-177_Tag")<br />Varsayılan etiket
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.Background` |
-| Ön plan (metin) | `Tag.Background` |
+| Ön Plan (Metin) | `Tag.Background` |
 
 **Etiket: üzerine gelme durumu**
 
-![Üzerine gelindiğinde etiketle](../../extensibility/ux-guidelines/media/0303-178_taghover.png "0303-178_TagHover")<br />Üzerine gelindiğinde etiketle
+![Üzerine gelindiğinde etiket](../../extensibility/ux-guidelines/media/0303-178_taghover.png "0303-178_TagHover")<br />Üzerine gelindiğinde etiket
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.HoverBackground` |
-| Ön plan (metin) | `Tag.HoverBackgroundText` |
+| Ön Plan (Metin) | `Tag.HoverBackgroundText` |
 
-**Etiket: basılan durum**
+**Etiket: basılmış durum**
 
-![Basılmış etiketi](../../extensibility/ux-guidelines/media/0303-179_tagpressed.png "0303-179_TagPressed")<br />Basılmış etiketi
+![Basılmış etiket](../../extensibility/ux-guidelines/media/0303-179_tagpressed.png "0303-179_TagPressed")<br />Basılmış etiket
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.PressedBackground` |
-| Ön plan (metin) | `Tag.PressedBackgroundText` |
+| Ön Plan (Metin) | `Tag.PressedBackgroundText` |
 
-**Etiket: Seçili durum**
+**Etiket: seçili durum**
 
-![Seçili etiket](../../extensibility/ux-guidelines/media/0303-180_tagselected.png "0303-180_TagSelected")<br />Seçili etiket
+![Seçilen etiket](../../extensibility/ux-guidelines/media/0303-180_tagselected.png "0303-180_TagSelected")<br />Seçilen etiket
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.SelectedBackground` |
-| Ön plan (metin) | `Tag.SelectedBackgroundText` |
+| Ön Plan (Metin) | `Tag.SelectedBackgroundText` |
 
-#### <a name="close-times-tag-glyph"></a>Close ( &times; ) etiketi karakteri
+#### <a name="close-times-tag-glyph"></a>Kapat ( &times; ) etiket etiketi
 
-**Close ( &times; ) etiketi karakteri: varsayılan durum**
+**Kapat ( &times; ) etiket özelliği: varsayılan durum**
 
-![Varsayılan Close ( &times; ) etiketi karakteri](../../extensibility/ux-guidelines/media/0303-181_tagglyph.png "0303-181_TagGlyph")<br />Varsayılan Close ( &times; ) etiketi karakteri
+![Varsayılan Kapatma ( &times; ) etiket etiketi](../../extensibility/ux-guidelines/media/0303-181_tagglyph.png "0303-181_TagGlyph")<br />Varsayılan Kapatma ( &times; ) etiket etiketi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Yok |
-| Ön plan (karakter) | `Tag.TagHoverGlyph` |
+| Ön plan (Glyph) | `Tag.TagHoverGlyph` |
 
-**Close ( &times; ) etiketi karakteri: üzerine gelme durumu**
+**Kapat ( &times; ) etiket özelliği: üzerine gelme durumu**
 
-![&times;Üzerine gelindiğinde Close () etiketi karakteri](../../extensibility/ux-guidelines/media/0303-182_tagglyphhover.png "0303-182_TagGlyphHover")<br />&times;Üzerine gelindiğinde Close () etiketi karakteri
+![Üzerine &times; gelindiğinde kapat ( ) etiketi vurgusu](../../extensibility/ux-guidelines/media/0303-182_tagglyphhover.png "0303-182_TagGlyphHover")<br />Üzerine &times; gelindiğinde kapat ( ) etiketi vurgusu
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.TagHoverGlyphHoverBackground` |
-| Ön plan (karakter) | `Tag.TagHoverGlyphHover` |
+| Ön plan (Glyph) | `Tag.TagHoverGlyphHover` |
 | Kenarlık | `Tag.TagHoverGlyphHoverBorder` |
 
-**Close ( &times; ) etiketi karakteri: basılmış durumu**
+**Kapat ( &times; ) etiket glyph: basılmış durum**
 
-![Basılan Close ( &times; ) etiketi karakteri](../../extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303-183_TagGlyphPressed")<br />Basılan Close ( &times; ) etiketi karakteri
+![Basılmış Kapat ( &times; ) etiket etiketi](../../extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303-183_TagGlyphPressed")<br />Basılmış Kapat ( &times; ) etiket etiketi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.TagHoverGlyphPressedBackground` |
-| Ön plan (karakter) | `Tag.TagHoverGlyphPressed` |
+| Ön plan (Glyph) | `Tag.TagHoverGlyphPressed` |
 | Kenarlık | `Tag.TagHoverGlyphPressedBorder` |
 
-**Close () karakteri ile seçili etiket &times; : varsayılan durum**
+**Kapat ( &times; ) glyph değeriyle seçilen etiket: varsayılan durum**
 
-![Close () karakteri ile seçili varsayılan etiket &times;](../../extensibility/ux-guidelines/media/0303-184_tagselected.png "0303-184_TagSelected")<br />Close () karakteri ile seçili varsayılan etiket &times;
+![Kapat ( ) &times; glyph değeriyle varsayılan olarak seçilen etiket](../../extensibility/ux-guidelines/media/0303-184_tagselected.png "0303-184_TagSelected")<br />Kapat ( ) &times; glyph değeriyle varsayılan olarak seçilen etiket
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Yok |
-| Ön plan (karakter) | `Tag.TagSelectedGlyph` |
+| Ön plan (Glyph) | `Tag.TagSelectedGlyph` |
 
-**Close () karakteri ile seçili etiket &times; : üzerine gelme durumu**
+**Kapat ( &times; ) glyph: üzerine gelme durumuyla seçilen etiket**
 
-![&times;Üzerine gelme üzerinde Close () karakteri ile seçili etiket](../../extensibility/ux-guidelines/media/0303-185_tagselectedhover.png "0303-185_TagSelectedHover")<br />&times;Üzerine gelme üzerinde Close () karakteri ile seçili etiket
+![Üzerine gelindiğinde Kapat ( &times; ) glyph ile seçilen etiket](../../extensibility/ux-guidelines/media/0303-185_tagselectedhover.png "0303-185_TagSelectedHover")<br />Üzerine gelindiğinde Kapat ( &times; ) glyph ile seçilen etiket
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.TagSelectedGlyphHoverBackground` |
-| Ön plan (karakter) | `Tag.TagSelectedGlyphHover` |
+| Ön plan (Glyph) | `Tag.TagSelectedGlyphHover` |
 | Kenarlık | `Tag.TagSelectedGlyphHoverBorder` |
 
-**Close () karakteri ile seçili etiket &times; : basılan durum**
+**Kapat ( &times; ) glyph ile etiket seçildi: basılmış durum**
 
-![Selected, basılan karakter with Close ( &times; ) karakteri](../../extensibility/ux-guidelines/media/0303-186_tagselectedpressed.png "0303-186_TagSelectedPressed")<br />Selected, basılan karakter with Close ( &times; ) karakteri
+![Seçili, Basılmış etiket ve Kapat ( &times; ) glyph](../../extensibility/ux-guidelines/media/0303-186_tagselectedpressed.png "0303-186_TagSelectedPressed")<br />Seçili, Basılmış etiket ve Kapat ( &times; ) glyph
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Tag.TagSelectedGlyphPressedBackground` |
-| Ön plan (karakter) | `Tag.TagSelectedGlyphPressed` |
+| Ön Plan(Glyph) | `Tag.TagSelectedGlyphPressed` |
 | Kenarlık | `Tag.TagSelectedGlyphPressedBorder` |
 
 ## <a name="tool-windows"></a>Araç pencereleri
-Visual Studio ortamı tarafından sağlandıklarından araç pencerelerini çoğaltmanıza gerek yoktur. Ancak, Kullanıcı arabirimi her zaman Visual Studio ortamının bu bölümüyle tutarlı şekilde göründüğünden, araç pencereleri için kullanılan renklerden yararlanmak istediğinize karar verebilirsiniz.
+Araç pencerelerini çoğaltmaya gerek yoktur çünkü bunlar ortam Visual Studio sağlanır. Ancak, kullanıcı arabiriminizin her zaman kullanıcı arabirimi ortamının bu bölümüyle tutarlı olarak görünür olması için araç pencerelerde kullanılan renklerden Visual Studio karar veebilirsiniz.
 
-![Araç penceresi (Redline)](../../extensibility/ux-guidelines/media/0303-087_toolwindowredline.png "0303-087_ToolWindowRedline")<br />Araç penceresi (Redline)
+![Araç penceresi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-087_toolwindowredline.png "0303-087_ToolWindowRedline")<br />Araç penceresi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... araç pencerelerini eşleştirmek istediğiniz her yerde Kullanıcı arabirimini oluşturun. | ... herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ... araç pencerelerini eşleşmesini istediğiniz kullanıcı arabirimini oluşturmak istediğiniz her yerde. | ... kabukta tema güncelleştirmesi varsa otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
-### <a name="tool-window-frame"></a>Araç penceresi çerçevesi
-Visual Studio 'daki araç pencereleri birçok farklı görev için kullanılır ve birçok farklı durumdan birinde bulunabilir. Bir araç penceresi açıksa, belge alanının dört taraflarından herhangi birine atanabilir. Araç pencereleri Ayrıca IDE dışında kaydırılabilir, bu da kullanıcının ekranındaki herhangi bir yerde yeniden konumlandırılabilirler. Kayan pencereler her zaman IDE 'nin üstüne yaslanıp. Son olarak, araç pencereleri belge pencereleri olarak sabitlenebilir ve belge kutusunda bir sekme olarak görünebilir. Belge pencereleri olarak yerleştirilmiş olan araç pencereleri, belge penceresi belirteç adları kullanılarak kısmen renklendirilir.
+### <a name="tool-window-frame"></a>Araç pencere çerçevesi
+Visual Studio araç pencereleri birçok farklı görev için kullanılır ve birkaç farklı durumdan biri olabilir. Bir araç penceresi açıksa, belge alanı dört tarafından herhangi biri atanabilir. Araç pencereleri ayrıca IDE'nin dışında kayar ve kullanıcının ekranında herhangi bir yerde yeniden konumlandırılamalarına olanak sağlar. Kayan pencereler her zaman IDE'nin üzerine yer. Son olarak, araç pencereleri belge pencereleri olarak yerleştirildi ve belge yuvasında bir sekme olarak görünebilir. Belge pencereleri olarak yerleştirildi araç pencereleri, kısmen belge penceresi belirteç adları kullanılarak renklendirilmiştir.
 
-![Araç penceresi çerçevesi (Redline)](../../extensibility/ux-guidelines/media/0303-088_toolwindowframeredline.png "0303-088_ToolWindowFrameRedline")<br />Araç penceresi çerçevesi (Redline)
+![Araç pencere çerçevesi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-088_toolwindowframeredline.png "0303-088_ToolWindowFrameRedline")<br />Araç pencere çerçevesi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ...  araç pencerelerini eşleştirmek istediğiniz her yerde Kullanıcı arabirimini oluşturun. | ... herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ...  araç pencerelerini eşleşmesini istediğiniz kullanıcı arabirimini oluşturmak istediğiniz her yerde. | ... kabukta tema güncelleştirmesi varsa otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
-**Sabitlenmiş araç penceresi**
+**Yerleştirildi araç penceresi**
 
-![Sabitlenmiş araç penceresi](../../extensibility/ux-guidelines/media/0303-089_toolwindowdocked.png "0303-089_ToolWindowDocked")<br />Sabitlenmiş araç penceresi
+![Yerleştirildi araç penceresi](../../extensibility/ux-guidelines/media/0303-089_toolwindowdocked.png "0303-089_ToolWindowDocked")<br />Yerleştirildi araç penceresi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowBackground` |
 | Kenarlık | `Environment.ToolWindowBorder` |
@@ -1997,28 +1997,28 @@ Visual Studio 'daki araç pencereleri birçok farklı görev için kullanılır 
 
 ![Kayan, odaklanmış araç penceresi](../../extensibility/ux-guidelines/media/0303-090_toolwindowfocused.png "0303-090_ToolWindowFocused")<br />Kayan, odaklanmış araç penceresi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowBackground` |
 | Kenarlık | `Environment.MainWindowActiveDefaultBorder` |
 
-**Kayan, odaklanmış olmayan araç penceresi**
+**Kayan, odaklanmamış araç penceresi**
 
-![Kayan, odaklanmış olmayan araç penceresi](../../extensibility/ux-guidelines/media/0303-091_toolwindowunfocused.png "0303-091_ToolWindowUnfocused")<br />Kayan, odaklanmış olmayan araç penceresi
+![Kayan, odaklanmamış araç penceresi](../../extensibility/ux-guidelines/media/0303-091_toolwindowunfocused.png "0303-091_ToolWindowUnfocused")<br />Kayan, odaklanmamış araç penceresi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowBackground` |
 | Kenarlık | `Environment.MainWindowInactiveBorder` |
 
-### <a name="toolbox-like-windows"></a>Araç kutusu-benzeri pencereler
-Araç kutusu, Visual Studio 'da en sık kullanılan yaygın araç pencerelerini biridir. Bu aslında özel tema ve stil uygulanmış bir ağaç denetimidir.
+### <a name="toolbox-like-windows"></a>Araç kutusu gibi pencereler
+Araç kutusu, en sık kullanılan araç pencerelerinden Visual Studio. Bu temelde özel tema ve stil uygulanmış bir ağaç denetimidir.
 
-![Araç kutusu benzeri pencere (Redline)](../../extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303-189_ToolboxRedline")<br />Araç kutusu benzeri pencere (Redline)
+![Araç kutusu gibi pencere (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303-189_ToolboxRedline")<br />Araç kutusu gibi pencere (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... her zaman kabuk araç kutusu ile tutarlı olmasını istediğiniz bir araç penceresi tasarlıyorsunuz. | ... Araç kutusu kullanıcı arabirimine benzer olmayan veya kabuk araç kutusu renkleri değiştiğinde Kullanıcı arabiriminde sorun olup olmadığından emin değilseniz. |
+| ... her zaman kabuk araç kutusuyla tutarlı olmak istediğiniz bir araç penceresi tasarlarken. | ... araç kutusu kullanıcı arabirimine benzer olmayan herhangi bir şey için veya kabuk araç kutusu renkleri değişirse kullanıcı arabiriminizin sorun olup olmadığı konusunda emin değilseniz. |
 
 **Araç kutusu düğümleri: varsayılan durum**
 
@@ -2026,23 +2026,23 @@ Araç kutusu, Visual Studio 'da en sık kullanılan yaygın araç pencerelerini 
 
 ![Varsayılan araç kutusu alt düğümü](../../extensibility/ux-guidelines/media/0303-191_toolboxchildnode.png "0303-191_ToolboxChildNode")<br />Varsayılan araç kutusu alt düğümü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.ToolboxContent`<br />Larınızı |
-| Arka Plan | `Environment.ToolWindowBackground`<br />(Kullanılabilir denetim yoksa tek tek öğeler veya tüm pencere) |
-| Kenarlık | Yok |
-| Ön plan (karakter) | `Environment.ToolboxContent` |
-| Ön plan (metin) | `Environment.ToolboxContent` |
+| Arka Plan | `Environment.ToolboxContent`<br />(Başlıklar) |
+| Arka Plan | `Environment.ToolWindowBackground`<br />(Tek tek öğeler veya kullanılabilir denetim yoksa pencerenin tamamı) |
+| Kenarlık | Hiçbiri |
+| Ön plan (Glyph) | `Environment.ToolboxContent` |
+| Ön Plan (Metin) | `Environment.ToolboxContent` |
 
 **Araç kutusu alt düğümleri: üzerine gelme durumu**
 
-![Bağlantı kutusu üzerinde alt düğüm](../../extensibility/ux-guidelines/media/0303-192_toolboxchildnodehover.png "0303-192_ToolboxChildNodeHover")<br />Bağlantı kutusu üzerinde alt düğüm
+![Üzerine gelindiğinde araç kutusu alt düğümü](../../extensibility/ux-guidelines/media/0303-192_toolboxchildnodehover.png "0303-192_ToolboxChildNodeHover")<br />Üzerine gelindiğinde araç kutusu alt düğümü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.ToolboxContentMouseOver`<br />(Yalnızca ayrı öğeler) |
-| Kenarlık | Yok |
-| Ön plan (metin) | `Environment.ToolboxContentMouseOver`<br />(Yalnızca ayrı öğeler) |
+| Arka Plan | `Environment.ToolboxContentMouseOver`<br />(Yalnızca tek tek öğeler) |
+| Kenarlık | Hiçbiri |
+| Ön Plan (Metin) | `Environment.ToolboxContentMouseOver`<br />(Yalnızca tek tek öğeler) |
 
 **Seçili araç kutusu düğümleri: odaklanmış durum**
 
@@ -2050,196 +2050,196 @@ Araç kutusu, Visual Studio 'da en sık kullanılan yaygın araç pencerelerini 
 
 ![Odaklanmış, seçili araç kutusu alt düğümü](../../extensibility/ux-guidelines/media/0303-194_toolboxchildnodefocused.png "0303-194_ToolboxChildNodeFocused")<br />Odaklanmış, seçili araç kutusu alt düğümü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `TreeView.SelectedItemActive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
-| Kenarlık | `TreeView.FocusVisualBorder`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
-| Ön plan (karakter) | `TreeView.SelectedItemActive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
-| Ön plan (metin) | `TreeView.SelectedItemActive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
+| Arka Plan | `TreeView.SelectedItemActive`<br />Ağaç [görünümü kategorisinden](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
+| Kenarlık | `TreeView.FocusVisualBorder`<br />Ağaç [görünümü kategorisinden](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
+| Ön plan (Glyph) | `TreeView.SelectedItemActive`<br />Ağaç [görünümü kategorisinden](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
+| Ön Plan (Metin) | `TreeView.SelectedItemActive`<br />Ağaç [görünümü kategorisinden](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
 
-**Seçili araç kutusu düğümleri: odaklanmış olmayan durum**
+**Seçili araç kutusu düğümleri: odaklanmamış durum**
 
-![Seçili, odaklanmış olmayan araç kutusu üst düğümü](../../extensibility/ux-guidelines/media/0303-195_toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br />Seçili, odaklanmış olmayan araç kutusu üst düğümü
+![Seçili, odaklanmamış araç kutusu üst düğümü](../../extensibility/ux-guidelines/media/0303-195_toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br />Seçili, odaklanmamış araç kutusu üst düğümü
 
-![Seçili, odaklanmış olmayan araç kutusu alt düğümü](../../extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br />Seçili, odaklanmış olmayan araç kutusu alt düğümü
+![Seçili, odaklanmamış araç kutusu alt düğümü](../../extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br />Seçili, odaklanmamış araç kutusu alt düğümü
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `TreeView.SelectedItemInactive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
-| Kenarlık | Yok |
-| Ön plan (karakter) | `TreeView.SelectedItemInactive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
-| Ön plan (metin) | `TreeView.SelectedItemInactive`<br />[Ağaç görünümü](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) kategorisinden |
+| Arka Plan | `TreeView.SelectedItemInactive`<br />Ağaç [görünümü kategorisinden](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
+| Kenarlık | Hiçbiri |
+| Ön plan (Glyph) | `TreeView.SelectedItemInactive`<br />Ağaç [görünümü kategorisinden](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
+| Ön Plan (Metin) | `TreeView.SelectedItemInactive`<br />Ağaç [görünümü kategorisinden](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
 
 ### <a name="tool-window-title-bar"></a>Araç penceresi başlık çubuğu
-Başlık çubuğu kenarlığı gerçek bir kenarlık değildir ve başlık çubuğunun üst kısmında kalın bir çizgi olur. Bu, odaklanmış olmayan durumu için bir belirteç adına sahip değil.
+Başlık çubuğu kenarlığı gerçek bir kenarlık değildir, başlık çubuğunun üst kısmında kalın bir çizgidir. Odaklanmamış durumu için belirteç adı yok.
 
-![Araç penceresi başlık çubuğu (Redline)](../../extensibility/ux-guidelines/media/0303-092_toolwindowtitlebarredline.png "0303-092_ToolWindowTitleBarRedline")<br />Araç penceresi başlık çubuğu (Redline)
+![Araç penceresi başlık çubuğu (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-092_toolwindowtitlebarredline.png "0303-092_ToolWindowTitleBarRedline")<br />Araç penceresi başlık çubuğu (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... araç pencerelerini eşleştirmek istediğiniz her yerde Kullanıcı arabirimini oluşturun. | ... herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ... araç pencerelerini eşleşmesini istediğiniz kullanıcı arabirimini oluşturmak istediğiniz her yerde. | ... kabukta tema güncelleştirmesi varsa otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
 **Odaklanmış başlık çubuğu**
 
 ![Odaklanmış başlık çubuğu](../../extensibility/ux-guidelines/media/0303-093_titlebarfocused.png "0303-093_TitleBarFocused")<br />Odaklanmış başlık çubuğu
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.TitleBarActiveGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.TitleBarActiveText` |
-| Kenarlık | `Environment.TitleBarActiveBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
-| Sürükleme tutamacı | `Environment.TitleBarDragHandleActive` |
+| Arka Plan | `Environment.TitleBarActiveGradientBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.TitleBarActiveText` |
+| Kenarlık | `Environment.TitleBarActiveBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
+| Tutamacı sürükleme | `Environment.TitleBarDragHandleActive` |
 
-**Odaklanmış olmayan başlık çubuğu**
+**Odaklanmamış başlık çubuğu**
 
-![Başlık çubuğu odaklanmış değil](../../extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303-094_TitleBarUnfocused")<br />Odaklanmış olmayan başlık çubuğu
+![Başlık çubuğu odaksız](../../extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303-094_TitleBarUnfocused")<br />Odaklanmamış başlık çubuğu
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.TitleBarInactiveGradientBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.TitleBarInactiveText` |
+| Arka Plan | `Environment.TitleBarInactiveGradientBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.TitleBarInactiveText` |
 | Kenarlık | Yok |
-| Sürükleme tutamacı | `Environment.TitleBarDragHandle` |
+| Tutamacı sürükleme | `Environment.TitleBarDragHandle` |
 
 #### <a name="tool-window-title-bar-buttons"></a>Araç penceresi başlık çubuğu düğmeleri
-![Başlık çubuğu düğmesi (Redline)](../../extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")<br />Başlık çubuğu düğmesi (Redline)
+![Başlık çubuğu düğmesi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")<br />Başlık çubuğu düğmesi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... araç penceresi başlık çubuklarından renk belirteçleri kullanan kullanıcı arabiriminde görünen düğmeler için. | ... diğer konumlarda görünen düğmeler için. |
-| | ... belirtilen dışında bir arka plan/ön plan birleşimi. |
+| ... kullanıcı arabiriminde görünen ve araç penceresi başlık çubuklarından renk belirteçleri kullanan düğmeler için. | ... diğer konumlarda görünen düğmeler için. |
+| | ... belirtilen dışında herhangi bir arka plan/ön plan bileşiminde. |
 
 **Odaklanmış başlık çubuğu düğmeleri: varsayılan durum**
 
 ![Varsayılan, odaklanmış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-096_titlebarbuttonfocused.png "0303-096_TitleBarButtonFocused")<br />Varsayılan, odaklanmış başlık çubuğu düğmeleri
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Yok |
-| Ön plan (karakter) | `Environment.ToolWindowButtonActiveGlyph` |
+| Ön plan (Glyph) | `Environment.ToolWindowButtonActiveGlyph` |
 | Kenarlık | Yok |
 
-**Odaklanmış olmayan başlık çubuğu düğmeleri: varsayılan durum**
+**Odaklanmamış başlık çubuğu düğmeleri: varsayılan durum**
 
-![Varsayılan, odaklanmış olmayan başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br />Varsayılan, odaklanmış olmayan başlık çubuğu düğmeleri
+![Varsayılan, odaklanmamış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br />Varsayılan, odaklanmamış başlık çubuğu düğmeleri
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | Yok |
-| Ön plan (karakter) | `Environment.ToolWindowButtonInactiveGlyph` |
+| Ön plan (Glyph) | `Environment.ToolWindowButtonInactiveGlyph` |
 | Kenarlık | Yok |
 
 **Odaklanmış başlık çubuğu düğmeleri: üzerine gelme durumu**
 
-![Üzerine gelme üzerinde odaklanmış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-098_titlebarbuttonfocusedhover.png "0303-098_TitleBarButtonFocusedHover")<br />Üzerine gelme üzerinde odaklanmış başlık çubuğu düğmeleri
+![Üzerine gelindiğinde odaklanmış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-098_titlebarbuttonfocusedhover.png "0303-098_TitleBarButtonFocusedHover")<br />Üzerine gelindiğinde odaklanmış başlık çubuğu düğmeleri
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowButtonHoverActive` |
-| Ön plan (karakter) | `Environment.ToolWindowButtonHoverActiveGlyph` |
+| Ön plan (Glyph) | `Environment.ToolWindowButtonHoverActiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonHoverActiveBorder` |
 
-**Odaklanmış olmayan başlık çubuğu düğmeleri: üzerine gelme durumu**
+**Odaklanmamış başlık çubuğu düğmeleri: üzerine gelme durumu**
 
-![Üzerine gelme üzerinde odaklanmış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-099_titlebarbuttonunfocusedhover.png "0303-099_TitleBarButtonUnfocusedHover")<br />Üzerine gelme üzerinde odaklanmış başlık çubuğu düğmeleri
+![Üzerine gelindiğinde odaklanmamış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-099_titlebarbuttonunfocusedhover.png "0303-099_TitleBarButtonUnfocusedHover")<br />Üzerine gelindiğinde odaklanmamış başlık çubuğu düğmeleri
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowButtonHoverInactive` |
-| Ön plan (karakter) | `Environment.ToolWindowButtonHoverInactiveGlyph` |
+| Ön plan (Glyph) | `Environment.ToolWindowButtonHoverInactiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonHoverInactiveBorder` |
 
-**Odaklanmış başlık çubuğu düğmeleri: basılan durum**
+**Odaklanmış başlık çubuğu düğmeleri: basılmış durum**
 
-![Basılı kumandanızda odaklanmış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-100_titlebarbuttonfocusedpressed.png "0303-100_TitleBarButtonFocusedPressed")<br />Basılı kumandanızda odaklanmış başlık çubuğu düğmeleri
+![Basıldıklarda odaklanmış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-100_titlebarbuttonfocusedpressed.png "0303-100_TitleBarButtonFocusedPressed")<br />Basıldıklarda odaklanmış başlık çubuğu düğmeleri
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowButtonDown` |
-| Ön plan (karakter) | `Environment.ToolWindowButtonDownActiveGlyph` |
+| Ön plan (Glyph) | `Environment.ToolWindowButtonDownActiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonDownBorder` |
 
-**Odaklanmış olmayan başlık çubuğu düğmeleri: basılan durum**
+**Odaklanmamış başlık çubuğu düğmeleri: basılmış durum**
 
-![Basılı olmayan başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-101_titlebarbuttonunfocusedpressed.png "0303-101_TitleBarButtonUnfocusedPressed")<br />Basılı olmayan başlık çubuğu düğmeleri
+![Basıldıkta odaklanmamış başlık çubuğu düğmeleri](../../extensibility/ux-guidelines/media/0303-101_titlebarbuttonunfocusedpressed.png "0303-101_TitleBarButtonUnfocusedPressed")<br />Basıldıkta odaklanmamış başlık çubuğu düğmeleri
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowButtonDown` |
-| Ön plan (karakter) | `Environment.ToolWindowButtonDownInactiveGlyph` |
+| Ön plan (Glyph) | `Environment.ToolWindowButtonDownInactiveGlyph` |
 | Kenarlık | `Environment.ToolWindowButtonDownBorder` |
 
 ### <a name="tool-window-tabs"></a>Araç penceresi sekmeleri
-![Araç penceresi sekmesi (Redline)](../../extensibility/ux-guidelines/media/0303-102_toolwindowtabredline.png "0303-102_ToolWindowTabRedline")<br />Araç penceresi sekmesi (Redline)
+![Araç penceresi sekmesi (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-102_toolwindowtabredline.png "0303-102_ToolWindowTabRedline")<br />Araç penceresi sekmesi (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... araç pencerelerini eşleştirmek istediğiniz her yerde Kullanıcı arabirimini oluşturun. | ... herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ... araç pencerelerini eşleşmesini istediğiniz kullanıcı arabirimini oluşturmak istediğiniz her yerde. | ... kabukta tema güncelleştirmesi varsa otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
-**Seçilen, odaklanmış araç penceresi sekmesi**
+**Seçili, odaklanmış araç penceresi sekmesi**
 
-![Seçilen, odaklanmış araç penceresi sekmesi](../../extensibility/ux-guidelines/media/0303-103_toolwindowtabfocused.png "0303-103_ToolWindowTabFocused")<br />Seçilen, odaklanmış araç penceresi sekmesi
+![Seçili, odaklanmış araç penceresi sekmesi](../../extensibility/ux-guidelines/media/0303-103_toolwindowtabfocused.png "0303-103_ToolWindowTabFocused")<br />Seçili, odaklanmış araç penceresi sekmesi
 
-| Öğe | Belirteç adı: category. Color |
-| --- | --- |
-| Arka Plan | `Environment.ToolWindowTabSelectedTab` |
-| Ön plan (metin) | `Environment.ToolWindowTabSelectedActiveText` |
-| Kenarlık | `Environment.ToolWindowTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
-
-**Seçili, odaklanmış olmayan araç penceresi sekmesi**
-
-![Seçili, odaklanmış olmayan araç penceresi sekmesi](../../extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br />Seçili, odaklanmış olmayan araç penceresi sekmesi
-
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
 | Arka Plan | `Environment.ToolWindowTabSelectedTab` |
-| Ön plan (metin) | `Environment.ToolWindowTabSelectedText` |
-| Kenarlık | `Environment.ToolWindowTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Ön Plan (Metin) | `Environment.ToolWindowTabSelectedActiveText` |
+| Kenarlık | `Environment.ToolWindowTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
+
+**Seçili, odaklanmamış araç penceresi sekmesi**
+
+![Seçili, odaklanmamış araç penceresi sekmesi](../../extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br />Seçili, odaklanmamış araç penceresi sekmesi
+
+| Öğe | Belirteç adı: Category.color |
+| --- | --- |
+| Arka Plan | `Environment.ToolWindowTabSelectedTab` |
+| Ön Plan (Metin) | `Environment.ToolWindowTabSelectedText` |
+| Kenarlık | `Environment.ToolWindowTabSelectedBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 
 **Arka plan araç penceresi sekmesi: varsayılan durum**
 
 ![Varsayılan arka plan araç penceresi sekmesi](../../extensibility/ux-guidelines/media/0303-105_toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br />Varsayılan arka plan araç penceresi sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.ToolWindowTabGradientBegin`<br />`Environment.ToolWindowTabGradientEnd`<br />(Gradyan duraklar Visual Studio 2013 aynı renk değerine ayarlanır.) |
-| Ön plan (metin) | `Environment.ToolWindowTabText` |
+| Arka Plan | `Environment.ToolWindowTabGradientBegin`<br />`Environment.ToolWindowTabGradientEnd`<br />(Gradyan, kümede aynı renk değerine Visual Studio 2013.) |
+| Ön Plan (Metin) | `Environment.ToolWindowTabText` |
 | Kenarlık | `Environment.ToolWindowTabBorder` |
 
 **Arka plan araç penceresi sekmesi: üzerine gelme durumu**
 
-![Üzerine gelme sırasında arka plan araç penceresi sekmesi](../../extensibility/ux-guidelines/media/0303-106_toolwindowbackgroundtabhover.png "0303-106_ToolWindowBackgroundTabHover")<br />Üzerine gelme sırasında arka plan araç penceresi sekmesi
+![Üzerine gelindiğinde arka plan araç penceresi sekmesi](../../extensibility/ux-guidelines/media/0303-106_toolwindowbackgroundtabhover.png "0303-106_ToolWindowBackgroundTabHover")<br />Üzerine gelindiğinde arka plan araç penceresi sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.ToolWindowTabMouseOverBackgroundBegin`<br />`Environment.ToolWindowTabMouseOverBackgroundEnd`<br />(Gradyan duraklar Visual Studio 2013 aynı renk değerine ayarlanır.) |
-| Ön plan (metin) | `Environment.ToolWindowTabMouseOverText` |
-| Kenarlık | `Environment.ToolWindowTabMouseOverBorder`<br />(Arka plan ile aynı renge ayarlanır.) |
+| Arka Plan | `Environment.ToolWindowTabMouseOverBackgroundBegin`<br />`Environment.ToolWindowTabMouseOverBackgroundEnd`<br />(Gradyan, kümede aynı renk değerine Visual Studio 2013.) |
+| Ön Plan (Metin) | `Environment.ToolWindowTabMouseOverText` |
+| Kenarlık | `Environment.ToolWindowTabMouseOverBorder`<br />(Arka plan ile aynı renge ayarlayın.) |
 
-### <a name="auto-hide-tabs"></a>Sekmeleri otomatik gizle
+### <a name="auto-hide-tabs"></a>Sekmeleri otomatik gizleme
 
-![Sekmeleri otomatik gizle (Redline)](../../extensibility/ux-guidelines/media/0303-107_autohideredline.png "0303-107_AutoHideRedline") Sekmeleri otomatik gizle (Redline)
+![Sekmeleri otomatik gizleme (kırmızı çizgi)](../../extensibility/ux-guidelines/media/0303-107_autohideredline.png "0303-107_AutoHideRedline") Sekmeleri otomatik gizleme (kırmızı çizgi)
 
-| Kullan... | Kullanma... |
+| Kullanın... | ... |
 | --- | --- |
-| ... Otomatik gizli araç penceresi sekmelerini eşleştirmek istediğiniz her yerde Kullanıcı arabirimini oluşturun. | ... herhangi bir kullanıcı arabirimi için, kabuğun bir tema güncelleştirmesi varsa otomatik olarak değiştirilmesini istemezsiniz. |
+| ... otomatik olarak gizlenen araç penceresi sekmelerini eşleşmek istediğiniz kullanıcı arabirimini oluşturmak istediğiniz her yerde. | ... kabukta tema güncelleştirmesi varsa otomatik olarak değiştirmek istemeyilen herhangi bir kullanıcı arabirimi için. |
 
 **Sekmeleri otomatik gizle: varsayılan durum**
 
 ![Varsayılan otomatik gizleme sekmesi](../../extensibility/ux-guidelines/media/0303-108_autohidetab.png "0303-108_AutoHideTab")<br />Varsayılan otomatik gizleme sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.AutoHideTabBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.AutoHideTabText` |
+| Arka Plan | `Environment.AutoHideTabBackgroundBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.AutoHideTabText` |
 | Kenarlık | `Environment.AutoHideTabBorder` |
 
 **Sekmeleri otomatik gizle: üzerine gelme durumu**
 
-![Üzerine gelindiğinde sekmeyi otomatik gizle](../../extensibility/ux-guidelines/media/0303-109_autohidetabhover.png "0303-109_AutoHideTabHover")<br />Üzerine gelindiğinde sekmeyi otomatik gizle
+![Üzerine gelindiğinde otomatik gizle sekmesi](../../extensibility/ux-guidelines/media/0303-109_autohidetabhover.png "0303-109_AutoHideTabHover")<br />Üzerine gelindiğinde otomatik gizle sekmesi
 
-| Öğe | Belirteç adı: category. Color |
+| Öğe | Belirteç adı: Category.color |
 | --- | --- |
-| Arka Plan | `Environment.AutoHideTabMouseOverBackgroundBegin`<br />(Bu belirteç için gradyan duraklarının temalı Kullanıcı arabiriminde kullanılmıyor.) |
-| Ön plan (metin) | `Environment.AutoHideTabMouseOverText` |
+| Arka Plan | `Environment.AutoHideTabMouseOverBackgroundBegin`<br />(Bu belirteç için, themed ui'da kullanılmamış gradyan durur.) |
+| Ön Plan (Metin) | `Environment.AutoHideTabMouseOverText` |
 | Kenarlık | `Environment.AutoHideTabMouseOverBorder` |

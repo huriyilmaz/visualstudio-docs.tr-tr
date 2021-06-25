@@ -1,9 +1,9 @@
 ---
-title: KeyBindings öğesi | Microsoft Docs
-description: KeyBindings öğesi, anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır. Bu makale bir örnek içerir.
+title: KeyBindings Öğesi | Microsoft Docs
+description: KeyBindings öğesi, KeyBinding öğelerini ve diğer KeyBindings gruplamalarını gruplar. Bu makale bir örnek içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - KeyBindings
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a590dc8bc1313e5c32b26465ae3dd346ed0564fd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 128b28ff77515ac4b567ecdb8f536851da4d33ce
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074022"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903378"
 ---
 # <a name="keybindings-element"></a>KeyBindings öğesi
-KeyBindings öğesi, anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.
+KeyBindings öğesi, KeyBinding öğelerini ve diğer KeyBindings gruplamalarını gruplar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,14 +41,14 @@ KeyBindings öğesi, anahtar bağlama öğelerini ve diğer KeyBindings grupland
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[KeyBinding öğesi](../extensibility/keybinding-element.md)|Komutlar için klavye kısayollarını belirler.|
-|[KeyBindings](../extensibility/keybindings-element.md)|Anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.|
+|[KeyBinding öğesi](../extensibility/keybinding-element.md)|Komutlar için klavye kısayollarını belirtir.|
+|[KeyBindings](../extensibility/keybindings-element.md)|KeyBinding öğelerini ve diğer KeyBindings gruplamalarını gruplar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -69,4 +69,4 @@ KeyBindings öğesi, anahtar bağlama öğelerini ve diğer KeyBindings grupland
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [KeyBinding öğesi](../extensibility/keybinding-element.md)
-- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -3,7 +3,7 @@ title: IDE tarafından uygulanan geri çağırma Işlevleri | Microsoft Docs
 description: Eklentinin IDE 'ye bilgi geçirmek için kaynak denetim işlemi sırasında uygun zamanlarda çağırabileceği geri çağırma işlevleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, callback functions
 - callback functions, source control plug-ins
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e2e361551fbe03b7f0ef41b19c5d4136aa50472
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 78ce3a9cdd183cff0518ee3c6da9326c63297a85
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068108"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899153"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE tarafından uygulanan geri çağırma işlevleri
 Tümleşik geliştirme ortamı (IDE) ile tümleştirmeyi mümkün olduğunca sorunsuz hale getirmek ve birleştirilmiş bir son kullanıcı deneyimi sağlamak için, kaynak denetimi eklentisi IDE tarafından uygulanan geri çağırma işlevlerini kullanabilir. Eklenti, IDE 'ye bilgi geçirmek için kaynak denetim işlemi sırasında bu işlevleri uygun zamanlarda çağırabilir; IDE daha sonra bu bilgileri yerel kullanıcı arabiriminde katıştırılmış öğeler olarak görüntüleyebilir. Bu senaryoda, eklenti kendi Kullanıcı arabirimini işe alıyorsa, kullanıcının bu senaryoda daha az parçalanmış bir deneyimi vardır.

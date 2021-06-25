@@ -1,9 +1,9 @@
 ---
-title: .NET Framework için paralel uzantı Iç Işlevleri | Microsoft Docs
-description: Bu kaynaklar, .NET Framework paralel uzantıları için özel bir hata ayıklayıcı uygulamak üzere kullanılan sınıfların iç türlerini, yöntemlerini ve alanlarını anlatmaktadır.
+title: .NET Framework | için Paralel Uzantı İç .NET Framework | Microsoft Docs
+description: Bu kaynaklar, paralel uzantılar için özel bir hata ayıklayıcı uygulamak üzere kullanılan sınıfların iç türlerini, yöntemlerini ve alanlarını .NET Framework.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines, internals [.NET Framework]
 ms.assetid: 93e07cfa-91fa-464c-b866-8bf5570411df
@@ -12,31 +12,31 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9aec52f354043dabb3bf816bbd35352f0c3a28bb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 858bf85e65cd761e7f881856286578495db6143a
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067835"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903014"
 ---
-# <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework için paralel uzantı iç işlevleri
-Bu bölüm, .NET Framework paralel uzantıları için özel bir hata ayıklayıcı uygulamanıza yardımcı olan sınıfların iç türlerini, yöntemlerini ve alanlarını açıklamaktadır.
+# <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework için paralel uzantı iç .NET Framework
+Bu bölümde, paralel uzantılar için özel bir hata ayıklayıcı uygulamanıza yardımcı olan sınıfların iç türleri, yöntemleri ve alanları .NET Framework.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md) Sınıfının iç veri üyelerini açıklar <xref:System.Threading.Tasks.Task?displayProperty=fullName> .
+ [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md) sınıfının iç veri üyelerini <xref:System.Threading.Tasks.Task?displayProperty=fullName> açıklar.
 
- [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md) Sınıfının iç veri üyelerini açıklar <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> .
+ [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md) sınıfının iç veri üyelerini <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> açıklar.
 
- [Kıgentproperties sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md) Sınıfının iç veri üyelerini açıklar `System.Threading.Tasks.ContingentProperties` .
+ [ContingentProperties sınıfı](../../extensibility/debugger/contingentproperties-class-internal-members.md) sınıfının iç veri üyelerini `System.Threading.Tasks.ContingentProperties` açıklar.
 
- [AsyncTaskMethodBuilder yapısı](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md) Yapının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> .
+ [AsyncTaskMethodBuilder yapısı](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md) Yapının iç üyelerini <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> açıklar.
 
- [AsyncTaskMethodBuilder \<TResult> yapısı](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md) , yapının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> .
+ [AsyncTaskMethodBuilder \<TResult> yapısı](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md) Yapının iç üyelerini <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> açıklar.
 
- [AsyncVoidMethodBuilder yapısı](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md) Yapının iç üyelerini açıklar <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> .
+ [AsyncVoidMethodBuilder yapısı](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md) Yapının iç üyelerini <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Threading.Tasks.Task?displayProperty=fullName>
 - <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>
-- [Visual Studio hata ayıklayıcı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+- [Visual Studio ayıklayıcı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
 - [Paralel programlama](/dotnet/standard/parallel-programming/index)

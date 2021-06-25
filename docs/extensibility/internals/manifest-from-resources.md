@@ -1,24 +1,24 @@
 ---
 title: Manifest from Resources | Microsoft Docs
-description: Visual Studio Image Service ile kullanmak üzere. png veya. xaml dosyalarını. ımagemanifest dosyasına eklemek için Manifest from Resources aracını kullanmayı öğrenin.
+description: Visual Studio Image Service ile kullanmak üzere bir. ımagemanifest dosyasına .png veya. xaml dosyaları eklemek için Manifest from Resources aracını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42bd932b093ae805e8885bc9fc61324c3cadbe30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f69a46362b3076025a63625adb1ee4a478622259
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095179"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903184"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
-Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyaları) listesini alan ve bu görüntülerin Visual Studio görüntü hizmeti ile kullanılmasına izin veren bir. ımagemanifest dosyası oluşturan bir konsol uygulamasıdır. Ayrıca, bu araç var olan bir. ımagemanifest öğesine görüntü eklemek için kullanılabilir. Bu araç, Visual Studio uzantısına görüntü için yüksek DPı ve tema desteği eklemek için yararlıdır. Oluşturulan. ımagemanifest dosyası, Visual Studio uzantısının (. vsix) bir parçası olarak içine dahil edilmelidir ve dağıtılmalıdır.
+Manifest from Resources Aracı, görüntü kaynaklarının (.png veya. xaml dosyaları) listesini alan ve bu görüntülerin Visual Studio görüntü hizmeti ile kullanılmasına izin veren bir. ımagemanifest dosyası oluşturan bir konsol uygulamasıdır. Ayrıca, bu araç var olan bir. ımagemanifest öğesine görüntü eklemek için kullanılabilir. Bu araç, Visual Studio uzantısına görüntü için yüksek DPı ve tema desteği eklemek için yararlıdır. Oluşturulan. ımagemanifest dosyası, Visual Studio uzantısının (. vsix) bir parçası olarak içine dahil edilmelidir ve dağıtılmalıdır.
 
 ## <a name="how-to-use-the-tool"></a>Aracı kullanma
  **Syntax**
@@ -29,7 +29,7 @@ Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyala
 
 |**Anahtar adı**|**Notlar**|**Gerekli veya Isteğe bağlı**|
 |-|-|-|
-|/Resources|Görüntülerin veya dizinlerin noktalı virgülle ayrılmış listesi. Bu liste her zaman bildirimde olacak görüntülerin tam listesini içermelidir. Yalnızca kısmi bir liste verilirse dahil olmayan girişler kaybedilir.<br /><br /> Belirli bir kaynak dosyası bir resim şeridinde ise, araç her bir alt görüntüyü bildirime eklemeden önce onu ayrı görüntülere böler.<br /><br /> Görüntü bir. png dosyası ise, aracın doğru özniteliklerini doldurabilmesi için adı şöyle biçimlendirmeniz önerilir: \<Name> . \<Width> . \<Height> . kitaplığını.|Gerekli|
+|/Resources|Görüntülerin veya dizinlerin noktalı virgülle ayrılmış listesi. Bu liste her zaman bildirimde olacak görüntülerin tam listesini içermelidir. Yalnızca kısmi bir liste verilirse dahil olmayan girişler kaybedilir.<br /><br /> Belirli bir kaynak dosyası bir resim şeridinde ise, araç her bir alt görüntüyü bildirime eklemeden önce onu ayrı görüntülere böler.<br /><br /> Görüntü bir .png dosyası ise, aracın doğru özniteliklerini doldurabilmesi için adı şöyle biçimlendirmeniz önerilir: \<Name> . \<Width> . \<Height>.png.|Gerekli|
 |/Assembly|Yönetilen derlemenin adı (uzantıyı hariç) veya kaynakları barındıran yerel derlemenin çalışma zamanı yolu (bildirimin çalışma zamanı konumuna göre).|Gerekli|
 |/MANIFEST|Oluşturulan. ımagemanifest dosyasına verilecek ad. Bu, dosyayı farklı bir konumda oluşturmak için mutlak veya göreli bir yol da içerebilir. Varsayılan ad, derleme adıyla eşleşir.<br /><br /> Varsayılan: \<Current Directory> \\<Assembly \> . ımagemanifest|İsteğe Bağlı|
 |/Gudname|Oluşturulan Bildirimdeki tüm görüntülerin GUID simgesine verilecek ad.<br /><br /> Varsayılan: AssetsGuid|İsteğe Bağlı|
@@ -52,11 +52,11 @@ Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyala
 
 ## <a name="notes"></a>Notlar
 
-- Araç yalnızca. png ve. xaml dosyalarını destekler. Diğer herhangi bir görüntü veya dosya türü yok sayılır. Kaynakları ayrıştırırken karşılaşılan tüm desteklenmeyen türler için bir uyarı oluşturulur. Araç kaynakları ayrıştırmayı bitirdiğinde desteklenen bir görüntü bulunamazsa bir hata oluşturulur
+- Araç yalnızca .png ve. xaml dosyalarını destekler. Diğer herhangi bir görüntü veya dosya türü yok sayılır. Kaynakları ayrıştırırken karşılaşılan tüm desteklenmeyen türler için bir uyarı oluşturulur. Araç kaynakları ayrıştırmayı bitirdiğinde desteklenen bir görüntü bulunamazsa bir hata oluşturulur
 
-- Araç,. png görüntüleri için önerilen biçimi izleyerek,. png için boyut/boyut değerini görüntünün gerçek boyutundan farklı olsa bile, biçim belirtilen boyuta ayarlar.
+- Araç, .png görüntüler için önerilen biçimi izleyerek, resmin gerçek boyutundan farklı olsa da, .png için boyut/boyut değerini biçim belirtilen boyuta ayarlar.
 
-- Genişlik/yükseklik biçimi. png görüntüleri için atlanabilir, ancak araç görüntünün gerçek genişlik/yüksekliğini okur ve görüntünün boyut/boyut değeri için bunları kullanır.
+- Genişlik/yükseklik biçimi .png görüntüleri için atlanabilir, ancak araç görüntünün gerçek genişlik/yüksekliğini okur ve görüntünün boyut/boyut değeri için bunları kullanır.
 
 - Bu aracın aynı görüntüde birden çok kez çalıştırılması aynı. ımagemanifest, görüntü şeridinin tek başına görüntülere ayrılmaya ve var olan bildirime eklemesini denetiğinden yinelenen bildirim girişlerine neden olur.
 
@@ -67,7 +67,7 @@ Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyala
 ## <a name="sample-output"></a>Örnek Çıktı
  **Basit görüntü bildirimi**
 
- Bir görüntü bildirimi bu. xml dosyasına benzer olacaktır:
+ Bir görüntü bildirimi bu .xml dosyasına benzer olacaktır:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,7 +93,7 @@ Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyala
 
  **Resim şeridi için görüntü bildirimi**
 
- Bir resim şeridinin görüntü bildirimi bu. xml dosyasına benzer olacaktır:
+ Resim şeridi için bir görüntü bildirimi, bu .xml dosyasına benzer:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -130,7 +130,7 @@ Manifest from Resources Aracı, görüntü kaynakları (. png veya. xaml dosyala
 
  **Yerel derleme görüntüsü kaynakları için görüntü bildirimi**
 
- Yerel görüntüler için bir görüntü bildirimi, bu. xml dosyasına benzer olacaktır:
+ Yerel görüntüler için bir görüntü bildirimi bu .xml dosyasına benzer olacaktır:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

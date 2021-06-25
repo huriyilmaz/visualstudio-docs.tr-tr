@@ -3,7 +3,7 @@ title: Olay açıklamaları | Microsoft Docs
 description: Olay türleri ve kullanımları için nedenler hakkında bilgi edinin. Her olay türü için belirli bir amaç vardır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], events
 ms.assetid: 09f61652-7e16-4bb0-8055-f61a84bf384e
@@ -12,19 +12,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd8c6dbb4eddfcffa779b70b17819bf5e92c0c45
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ee2eedac924b3bbd58fac6980da9151a88da9196
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096973"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902650"
 ---
 # <a name="event-descriptions"></a>Olay açıklamaları
 Her olay türü için belirli bir amaç vardır.
 
 ## <a name="events-and-the-reasons-for-their-use"></a>Olaylar ve kullanımları için nedenler
 
-|Olay|Description|
+|Olay|Açıklama|
 |-----------|-----------------|
 |Belge olaylarını etkinleştir|Hata ayıklama altyapısı (DE) IDE 'nin bir belgeyi açmasını veya ön plana getirmeyi istediğinde oluşur.|
 |Kesme noktası bağlantılı veya kesme noktası hata olayları|Bir kesme noktası bağlandığında veya bir kesme noktası bağlanıdığı zaman ve bir hata döndürüldüğünde gönderilir.|

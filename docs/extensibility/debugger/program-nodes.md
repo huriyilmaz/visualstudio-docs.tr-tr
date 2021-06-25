@@ -3,7 +3,7 @@ title: Program düğümleri | Microsoft Docs
 description: Bu makalede, Visual Studio 'daki hata ayıklayıcı mimarisinde bir program düğümünün tanımı ve rolü açıklanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - program nodes, debugging context
 - debugging [Debugging SDK], program nodes
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5658026b60006a58ba168ca713028b9876a3c57d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4c26fa95a5fedf325591ce517e7c12ecebcd705c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094633"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899088"
 ---
 # <a name="program-nodes"></a>Program düğümleri
 Hata ayıklayıcı mimarisinde, bir *program düğümü*:

@@ -1,9 +1,9 @@
 ---
-title: İleti numaralandırıcısı | Microsoft Docs
-description: Bu Numaralandırıcı üyeleri, IDE 'nin SccOpenProject çağırdığında sağladığı bir geri çağırma işlevi olan TEXTOUTPROC işlevi için kullanılır.
+title: İleti Numaralayıcı | Microsoft Docs
+description: Bu numaralayıcının üyeleri, IDE'nin SccOpenProject çağrısında sağladığı bir geri çağırma işlevi olan TEXTOUTPROC işlevi için kullanılır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - message enumerator
 - source control plug-ins, message enumeration
@@ -13,17 +13,17 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 113f9fe8470b718a219e967b41bc92ecab2cf3c8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77c49f79ccdcfc4aa0325b89dfb38f3f8d4da721
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064000"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902598"
 ---
-# <a name="message-enumerator"></a>İleti numaralandırıcısı
-Aşağıdaki bayraklar, `TEXTOUTPROC` IDE 'Nin [SccOpenProject](../extensibility/sccopenproject-function.md) çağırdığında sağladığı bir geri çağırma işlevi olan işlevi için kullanılır (geri çağırma işlevi hakkında ayrıntılar Için bkz. [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) ).
+# <a name="message-enumerator"></a>İleti numaralayıcı
+Aşağıdaki bayraklar, IDE'nin SccOpenProject çağrısında sağladığı bir geri çağırma işlevi olan işlev için kullanılır (geri çağırma işleviyle ilgili ayrıntılar için `TEXTOUTPROC` [bkz. LPTEXTOUTPROC).](../extensibility/lptextoutproc.md) [](../extensibility/sccopenproject-function.md)
 
- IDE 'nin işlemi iptal etmek isteniyorsa, iptal iletilerinden birini alabilir. Bu durumda, kaynak denetimi eklentisi `SCC_MSG_STARTCANCEL` IDE 'Nin **iptal** düğmesini görüntülemesini istemek için kullanır. Bundan sonra, herhangi bir normal ileti kümesi gönderilebilir. Bunlardan herhangi biri dönerse `SCC_MSG_RTN_CANCEL` , eklenti işlemden çıkar ve döndürür. Eklenti Ayrıca, `SCC_MSG_DOCANCEL` kullanıcının işlemi iptal etmiş olup olmadığını belirlemede düzenli aralıklarla yoklar. Tüm işlemler tamamlandığında veya Kullanıcı iptal edildiyse, eklenti gönderilir `SCC_MSG_STOPCANCEL` . `SCC_MSG_INFO`, SCC_MSG_WARNING ve SCC_MSG_ERROR türleri, iletilerin kaydırılan listesinde görüntülenen iletiler için kullanılır. `SCC_MSG_STATUS` , metnin bir durum çubuğunda veya geçici görüntüleme alanında gösterilmesi gerektiğini belirten özel bir türdür. Listede kalıcı olarak kalmaz.
+ IDE'nin işlemi iptal etmesi istense, iptal iletilerinden birini alabilirsiniz. Bu durumda, kaynak denetimi eklentisi `SCC_MSG_STARTCANCEL` IDE'den İptal düğmesini görüntülemesini istemek **için kullanır.** Bundan sonra, herhangi bir normal ileti kümesi gönderebilirsiniz. Bu değerlerden herhangi biri `SCC_MSG_RTN_CANCEL` döndürürse eklenti işlemi bırakır ve döndürür. Eklenti ayrıca kullanıcının işlemi iptal `SCC_MSG_DOCANCEL` edip etmey olmadığını belirlemek için düzenli aralıklarla yoklar. Tüm işlemler tamam olduğunda veya kullanıcı iptal etti ise eklenti `SCC_MSG_STOPCANCEL` gönderir. , SCC_MSG_WARNING ve SCC_MSG_ERROR türleri, ileti kaydırma listesinde görüntülenen `SCC_MSG_INFO` iletiler için kullanılır. `SCC_MSG_STATUS` , metnin bir durum çubuğunda veya geçici görüntüleme alanında göster gerektiğini belirten özel bir tür. Listede kalıcı olarak kalmaz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ enum {
 ```
 
 ## <a name="members"></a>Üyeler
- SCC_MSG_RTN_CANCEL iptali göstermek için geri aramadan geri dönün.
+ SCC_MSG_RTN_CANCEL geri çağırmadan geri dön'e çağrıyı seçin.
 
- SCC_MSG_RTN_OK devam etmek için geri aramadan geri dönün.
+ SCC_MSG_RTN_OK geri çağırmadan geri dön'e geri dön.
 
- SCC_MSG_INFO Ileti bilgilendirme amaçlıdır.
+ SCC_MSG_INFO İleti bilgilendirmedir.
 
- SCC_MSG_WARNING Ileti bir uyarıdır.
+ SCC_MSG_WARNING bir uyarıdır.
 
- SCC_MSG_ERROR Ileti bir hatadır.
+ SCC_MSG_ERROR İleti bir hatadır.
 
- SCC_MSG_STATUS Ileti durum çubuğuna yöneliktir.
+ SCC_MSG_STATUS İleti durum çubuğu için hazır.
 
- SCC_MSG_DOCANCEL metin yok; IDE, `SCC_MSG_RTN_OK` veya döndürür `SCC_MSG_RTN_CANCEL` .
+ SCC_MSG_DOCANCEL Metin yok; IDE veya `SCC_MSG_RTN_OK` `SCC_MSG_RTN_CANCEL` döndürür.
 
  SCC_MSG_STARTCANCEL bir iptal döngüsü başlatır.
 
- SCC_MSG_STOPCANCEL iptal döngüsünü durduruyor.
+ SCC_MSG_STOPCANCEL döngüyü durdurur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)

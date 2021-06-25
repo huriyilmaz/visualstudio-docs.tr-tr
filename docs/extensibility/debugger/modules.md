@@ -1,9 +1,9 @@
 ---
 title: Modüller | Microsoft Docs
-description: Bu makalede, Visual Studio 'daki hata ayıklayıcı mimarisinde bir modülün tanımı ve rolü açıklanır.
+description: Bu makalede, modülde hata ayıklayıcı mimarisinde modülün tanımı ve rolü Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - modules
 - debugging [Debugging SDK], modules
@@ -13,22 +13,22 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f40cb7d0c65822fcb6ba4d4ca0132147f62d9286
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 03a3ad588b0a2e0f3aa6f04ddeb742ab66064bc9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054770"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902611"
 ---
 # <a name="modules"></a>Modül
-Hata ayıklayıcı mimarisi açısından bir *Modül*:
+Hata ayıklayıcısı mimarisi açısından bir *modül:*
 
-- , Yürütülebilir dosya veya DLL gibi fiziksel bir kod kapsayıcısıdır.
+- Yürütülebilir dosya veya DLL gibi fiziksel bir kod kapsayıcısıdır.
 
-- , Kendi simgelerini yeniden yükleyebilir ve kendisi tanımlayabilir. Modül açıklamaları IDE 'nin modüller penceresinde görüntülenir.
+- Sembolleri yeniden yük içerebilir ve kendisini açıklar. Modül açıklamaları IDE'nin Modüller penceresinde görüntülenir.
 
-- , Modülü anlatmak için bir hata ayıklama altyapısı tarafından oluşturulan bir [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimi tarafından temsil edilir.
+- Modülü açıklamak için bir hata ayıklama altyapısı tarafından oluşturulan [bir IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimiyle temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md)

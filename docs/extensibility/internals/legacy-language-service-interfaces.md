@@ -3,7 +3,7 @@ title: Eski dil hizmeti arabirimleri | Microsoft Docs
 description: Visual Studio SDK 'da eski dil hizmeti özellikleri sağlayan arabirimler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IVsLanguageInfo interface
 - language services, objects
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77647daeae2cf6e3bc76f9b0f2a58608b5bb28a4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 75697e1d212b24b743fed62284b384985749fe7b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074524"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898610"
 ---
 # <a name="legacy-language-service-interfaces"></a>Eski Dil Hizmeti Arabirimleri
 Belirli programlama dilleri için aynı anda bir dil hizmetinin yalnızca bir örneği olabilir. Ancak, tek bir dil hizmeti birden fazla düzenleyiciye hizmet verebilir.
@@ -43,7 +43,7 @@ Belirli programlama dilleri için aynı anda bir dil hizmetinin yalnızca bir ö
 ## <a name="additional-language-service-interfaces"></a>Ek dil hizmeti arabirimleri
  Dil hizmetinize başka arabirimler de sağlayabilirsiniz. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Metin arabelleğinin her örneği için bu arabirimlerin ayrı bir örneğini ister. Bu nedenle, bu arabirimlerin her birini kendi nesnesi üzerinde uygulamalısınız. Aşağıdaki tabloda, metin arabelleği örneği başına bir örnek gerektiren arabirimler gösterilmektedir.
 
-|Arabirim|Description|
+|Arabirim|Açıklama|
 |---------------|-----------------|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Açılan çubuk gibi kod penceresi dontiğini yönetir. Yöntemini kullanarak bu arayüzü edinebilirsiniz <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> . <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>Kod penceresi başına bir tane vardır.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>|Dil anahtar sözcüklerini ve sınırlandırıcıları renklendirir. Yöntemini kullanarak bu arayüzü edinebilirsiniz <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> . <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> , boyama sırasında çağrılır. Hesaplamanın yoğun <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> çalışmasından kaçının veya performans düşebilir.|

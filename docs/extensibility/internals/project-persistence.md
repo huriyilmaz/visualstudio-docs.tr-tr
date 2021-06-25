@@ -3,7 +3,7 @@ title: Proje kalıcılığı | Microsoft Docs
 description: Hem dosya hem de dosya tabanlı olmayan proje nesnelerini kalıcı hale getirmek için IPersistFileFormat kullanımı dahil olmak üzere, projenizin tasarımında Kalıcılık hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - persistence, projects
 - projects [Visual Studio SDK], persistance
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ffaeb6d43597e93586db79c305b654b42bf6dbb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 17b9fc40a93a926fde5edc28e93f7751b919611c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062804"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903659"
 ---
 # <a name="project-persistence"></a>Proje Kalıcılığı
 Kalıcılık, projeniz için önemli bir tasarım konusudur. Çoğu proje, dosyaları temsil eden proje öğelerini kullanır; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , verileri dosya tabanlı olmayan projeleri de destekler. Projenin ve proje dosyasının sahip olduğu dosyaların kalıcı olması gerekir. IDE, projeye kendisini veya bir proje öğesini kaydetmesini söyler.

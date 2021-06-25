@@ -3,7 +3,7 @@ title: Hata Işleme ve dönüş değerleri | Microsoft Docs
 description: Visual Studio SDK 'nın bir hata bildirimi alırken zengin hata bilgilerini kaydetmek için birlikte çalışma derlemeleri nasıl sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - errors [Visual Studio SDK], handling
 - error handling
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac9c027623b34afa532f62b4b4c9443f219343e9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ef33936e3dc36d98cc88b1285aa0b198a84cbd59
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075269"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898327"
 ---
 # <a name="error-handling-and-return-values"></a>Hata işleme ve dönüş değerleri
 VSPackages ve COM, hatalar için aynı mimariyi kullanır. `SetErrorInfo`Ve `GetErrorInfo` Işlevleri, Win32 uygulama programlama ARABIRIMININ (API) bir parçasıdır. Tümleşik geliştirme ortamındaki (IDE) herhangi bir VSPackage, hata bildirimi alırken zengin hata bilgilerini kaydetmek için bu genel Win32 API 'Lerini çağırabilir. , [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] Hata bilgilerini yönetmek için birlikte çalışma derlemeleri sağlar.

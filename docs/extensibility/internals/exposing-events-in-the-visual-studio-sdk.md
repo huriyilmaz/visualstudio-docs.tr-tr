@@ -3,7 +3,7 @@ title: Visual Studio SDK 'da olayları gösterme | Microsoft Docs
 description: Projeler ve proje öğeleri için olayları ortaya çıkaran Visual Studio SDK yöntemleri ve kayıt defteri girişleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - events [Visual Studio], exposing
 - automation [Visual Studio SDK], exposing events
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 019efb11d7a31af875425888a1f70423bca76ca9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 99298329b969df3b9d7dbb46a3f4b9e7d4ed7091
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069809"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898337"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>Visual Studio SDK 'da olayları kullanıma sunma
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Otomasyonu kullanarak olayları kaynak yapmanızı sağlar. Projeler ve proje öğeleri için olayları kaynak yapmanızı öneririz.
@@ -54,7 +54,7 @@ ms.locfileid: "105069809"
 
  **AutomationProjectItemEvents** = nesnesini döndürür `AutomationProjectItemsEvents` .
 
-|Ad|Tür|Aralık|Description|
+|Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |Varsayılan (@)|REG_SZ|Kullanılmıyor|Kullanılmıyor. Belgeler için veri alanını kullanabilirsiniz.|
 |*AutomationProjectsEvents*|REG_SZ|Olay nesnenizin adı.|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek, temel proje örneğinden gelir.|

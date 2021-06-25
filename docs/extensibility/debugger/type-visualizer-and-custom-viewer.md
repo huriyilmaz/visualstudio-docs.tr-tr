@@ -3,7 +3,7 @@ title: Tür görselleştiricisi ve özel Görüntüleyici | Microsoft Docs
 description: Belirli bir biçimde verileri görüntüleyen tür görselleştiricisi bileşenleri ve özel görüntüleyiciler hakkında bilgi edinin ve bunlar arasındaki farkları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], custom viewer
 - debugging [Debugging SDK], type visualizer
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 869f0997ee166b9b7eb29c1a313854437d670ee4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c18bb49c740362d42a4a54bf52f6998629acb0c0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057825"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904428"
 ---
 # <a name="type-visualizer-and-custom-viewer"></a>Tür görselleştiricisi ve özel Görüntüleyici
 Tür görselleştiricisi, belirli bir biçimdeki bir veri parçasını görüntüleyen bir bileşendir. Biçim tamamen Görselleştiriciyi uygulayan, son kullanıcı veya görselin Görselleştiricisinin bir tedarikçisidir.

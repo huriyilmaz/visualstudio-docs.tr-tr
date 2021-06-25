@@ -3,7 +3,7 @@ title: CreateExpInstance yardımcı programı | Microsoft Docs
 description: Visual Studio 'nun deneysel bir örneğini oluşturmanızı, sıfırlamayı veya silmenizi sağlayan CreateExpInstance yardımcı programı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - experimental builds
 - experimental hive
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0010c4a98d0ea50ec7feb2f7a379f3c84bc3d53
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cce9bc25cb2ed820d3291ab65d94a868bb401ec9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056993"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898142"
 ---
 # <a name="createexpinstance-utility"></a>CreateExpInstance yardımcı programı
 Visual Studio 'nun deneysel bir örneğini oluşturmak, sıfırlamak veya silmek için **CreateExpInstance** yardımcı programını kullanın. Temel ürünü değiştirmeden Visual Studio uzantıları hatalarını ayıklamak ve test etmek için deneysel örneği kullanabilirsiniz.

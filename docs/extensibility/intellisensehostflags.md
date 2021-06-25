@@ -3,7 +3,7 @@ title: IntelliSenseHostFlags | Microsoft Docs
 description: IntelliSenseHostFlags numaralandırması, IntelliSense ana bilgisayar bayraklarını belirtir. Bu makalede, Enum değerleri açıklanmaktadır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - IntellisenseHostFlags
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83a3911670a10710ad6ae5cd6496fb76af6c27bb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 33345f86c69d0faeaa5863534e21eca5ecc176cc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079143"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902624"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
 IntelliSense ana bilgisayar bayraklarını belirtir.
@@ -40,7 +40,7 @@ enum IntellisenseHostFlags
 
 ### <a name="parameters"></a>Parametreler
 
-|Üyeler|Description|
+|Üyeler|Açıklama|
 |-------------|-----------------|
 |`IHF_READONLYCONTEXT`|Bağlam arabelleği salt okunurdur.|
 |`IHF_NOSEPARATESUBJECT`|Konu metni yok. Bağlam arabelleği IntelliSense-target (anlamına gelir `!IHF_READONLYCONTEXT` ) içerir.|

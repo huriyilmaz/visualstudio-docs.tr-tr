@@ -1,9 +1,9 @@
 ---
-title: Combos öğesi | Microsoft Docs
-description: Combos öğesi, Birleşik giriş kutusunda görünen komutları tanımlayan Birleşik öğeleri gruplandırır. Bu makale bir örnek içerir.
+title: Combos Öğesi | Microsoft Docs
+description: Combos öğesi, birleşik giriş kutusunda görünen komutları tanımlayan Birleşik öğeleri gruplar. Bu makale bir örnek içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Combos element (VSCT XML schema)
 - VSCT XML schema elements, Combos
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: be9135e2f863f3ab277e6c7408579d7ef8242bce
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77c293fa827187461c5a6b84333c503a2f5cc231
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089725"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903924"
 ---
 # <a name="combos-element"></a>Combos öğesi
 Gruplar [Birleşik öğe](../extensibility/combo-element.md) öğeleri.
@@ -39,20 +39,20 @@ Gruplar [Birleşik öğe](../extensibility/combo-element.md) öğeleri.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Combos öğesi](../extensibility/combos-element.md)|Grupları açılan öğeleri.|
-|[Combo öğesi](../extensibility/combo-element.md)|Birleşik giriş kutusunda görünen komutları tanımlar.|
+|[Combos öğesi](../extensibility/combos-element.md)|Gruplar Birleşik öğeler.|
+|[Birleşik giriş öğesi](../extensibility/combo-element.md)|Birleşik giriş kutusunda görünen komutları tanımlar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder.|
+|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğunda komut koleksiyonunu temsil eder.|
 
 ## <a name="example"></a>Örnek
 
@@ -79,5 +79,5 @@ Gruplar [Birleşik öğe](../extensibility/combo-element.md) öğeleri.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackage'lar kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

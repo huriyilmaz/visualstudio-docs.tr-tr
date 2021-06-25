@@ -3,7 +3,7 @@ title: Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri | Microsoft 
 description: Visual Studio tümleşik geliştirme ortamına (IDE) dahil edilen araç çubuklarının ve içerdikleri grupların GUID ve KIMLIK değerlerinin listesini görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - visual studio groups
 - toolbars
@@ -18,12 +18,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ca3a2ec0b9d0eef7821641eaf05e93f83f94f40
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3d2ba6c92a2913ec63a59751a4181454aa67fa67
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082081"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898116"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri
 Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri gruplarda bulunan araç çubuklarının GUID ve KIMLIK değerlerini numaralandırır. Bu değerler, Visual Studio SDK 'nin bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -43,7 +43,7 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 |Araç Çubuğu|ID|
 |-------------|--------|
 |Standart|IDM_VS_TOOL_STANDARD|
-|Derleme|IDM_VS_TOOL_BUILD|
+|Oluşturma|IDM_VS_TOOL_BUILD|
 |Metin düzenleyici|IDM_VS_TOOL_TEXTEDITOR|
 |Hata Ayıklama|Gudvsdebuggroup: IDM_DEBUG_TOOLBAR|
 |Hata ayıklama konumu|Gudvsdebuggroup: IDM_DEBUG_CONTEXT_TOOLBAR|
@@ -107,15 +107,15 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 |Hata ayıklama konumu|IDG_DEBUG_CONTEXT_TOOLBAR|
 
 ## <a name="tool-window-toolbars"></a>Araç penceresi araç çubukları
- Araç çubukları doğrudan IDE 'de veya **Çözüm Gezgini** gibi araç pencereleri içinde görünebilir. Araç pencereleri *. vsct* dosyalarında tanımlanmadığı için araç penceresi araç çubuklarının tanımlı üst öğeleri yok. Bunun yerine, kod içine yerleştirilir. Aşağıdaki tablo, IDE 'deki araç pencereleri ve içerdikleri komut grupları üzerinde görünen araç çubuklarını gösterir.
+ Araç çubukları doğrudan IDE'de veya Çözüm Gezgini gibi **araç pencerelerde görünebilir.** Araç pencereleri *.vsct* dosyalarında tanımlanmamış olduğundan, araç penceresi araç çubuklarının tanımlı bir ailesi yok. Bunun yerine, bunlar koda yerleştirilir. Aşağıdaki tabloda, IDE'de araç pencerelerde görünen araç çubukları ve bunların içerdiği komut grupları yer alır.
 
 > [!NOTE]
-> Araç çubukları ve gruplar GUID `guidSHLMainMenu` : ID sözdizimi kullanılarak BELIRTILMEDIKÇE GUID 'yi kullanır. Bir araç çubuğu için bir GUID belirtildiğinde, bu araç çubuğundan gelen gruplar için de geçerli olur.
+> Araç çubukları ve gruplar GUID:ID söz dizimi kullanılarak aksi `guidSHLMainMenu` belirtilmedikçe GUID kullanır. Bir araç çubuğu için GUID belirtilirse, bu araç çubuğundan azalan gruplar için de geçerlidir.
 
 |Araç penceresi|Araç Çubuğu|Gruplar|
 |-----------------|-------------|------------|
-|Çözüm Gezgini|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.. e|
-|Sunucu Gezgini|guid_SE_MenuGroup: IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
+|Çözüm Gezgini|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.. 5|
+|Sunucu Gezgini|guid_SE_MenuGroup:IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
 |Özellikler|IDM_VS_TOOL_PROPERTIES|IDG_VS_PROPERTIES_SORT<br /><br /> IDG_VS_PROPERTIES_PAGES|
 |Sınıf Görünümü|IDM_VS_TOOL_CLASSVIEW|IDG_VS_CLASSVIEW_FOLDERS<br /><br /> IDG_VS_CLASSVIEW_SEARCH<br /><br /> IDG_VS_CLASSVIEW_SETTINGS|
 |Sınıf Görünümü|IDM_VS_TOOL_CLASSVIEW_GO|IDG_VS_CLASSVIEW_SEARCH2|
@@ -124,15 +124,15 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 |Çıktı|IDM_VS_TOOL_OUTPUTWINDOW|IDG_VS_OUTPUTWINDOW_SELECT<br /><br /> IDG_VS_OUTPUTWINDOW_GOTO<br /><br /> IDG_VS_OUTPUTWINDOW_NEXTPREV<br /><br /> IDG_VS_OUTPUTWINDOW_CLEAR<br /><br /> IDG_VS_OUTPUTWINDOW_WORDWRAP|
 |Bulma ve Değiştirme|IDM_VS_TOOL_UNIFIEDFIND|IDG_VS_FINDTAB<br /><br /> IDG_VS_REPLACETAB|
 |Sonuçları Bul 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
-|Sonuçları bul 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
+|Sonuçları Bul 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
 |Kod Parçacığı|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|
 |Yer işaretleri|IDM_VS_TOOL_BOOKMARKWIND|IDG_VS_BWNEWFOLDER<br /><br /> IDG_VS_BWNEXTBM<br /><br /> IDG_VS_BWNEXTBMF<br /><br /> IDG_VS_BWENABLE<br /><br /> IDG_VS_BWDELETE|
 |Görev Listesi|IDM_VS_TOOL_TASKLIST|IDG_VS_TASKLIST_PROVIDERLIST|
-|Kullanıcı görevleri|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|
+|Kullanıcı Görevleri|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|
 |Hata Listesi|IDM_VS_TOOL_ERRORLIST|IDG_VS_ERRORLIST_ERRORGROUP<br /><br /> IDG_VS_ERRORLIST_WARNINGGROUP<br /><br /> IDG_VS_ERRORLIST_MESSAGEGROUP|
-|Çağrı Tarayıcısı|IDM_VS_TOOL_CALLBROWSER1.. k|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
-|Kesme noktaları|Gudvsdebuggroup: IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
-|Ayrıştırılmış kod|Gudvsdebuggroup: IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
+|Çağrı Tarayıcısı|IDM_VS_TOOL_CALLBROWSER1.. 16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
+|Kesme noktaları|guidVSDebugGroup:IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
+|Demontaj|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
 |Bellek 1-4|Gudvsdebuggroup: IDM_MEMORY_WINDOW_TOOLBAR1... 4|IDG_MEMORY_EXPRESSION1.. 4<br /><br /> IDG_MEMORY_COLUMNS1.. 4|
 |İşlemler|Gudvsdebuggroup: IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
 

@@ -1,8 +1,8 @@
 ---
-description: Bu işlev, kaynak denetimi eklentisinin kapanmasından dolayı bir önceki SccInitialize çağrısıyla oluşturulan tüm ayırmaları veya açık bağlantıları temizler.
-title: Sccunınitialize Işlevi | Microsoft Docs
+description: Bu işlev, kaynak denetim eklentiyi kapatmaya hazırlık olarak önceki bir SccInitialize çağrısı tarafından oluşturulan ayırmaları veya açık bağlantıları temizler.
+title: SccUninitialize İşlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccUninitialize
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d387167e2032cbb253e86f8d67da38f99fc1076
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0d46aedd3e962d0684689ff29a34061b777fe08e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063779"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904080"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize İşlevi
-Bu işlev, kaynak denetimi eklentisinin kapanmasından dolayı bir önceki [SccInitialize](../extensibility/sccinitialize-function.md) çağrısıyla oluşturulan tüm ayırmaları veya açık bağlantıları temizler.
+Bu işlev, kaynak denetim eklentiyi kapatmaya hazırlık olarak [önceki bir SccInitialize](../extensibility/sccinitialize-function.md) çağrısı tarafından oluşturulan ayırmaları veya açık bağlantıları temizler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,17 +34,17 @@ SCCRTN SccUninitialize (
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-'ndaki [SccInitialize](../extensibility/sccinitialize-function.md)içinde oluşturulan kaynak denetimi eklentisi bağlam yapısına yönelik işaretçi.
+[in] [SccInitialize](../extensibility/sccinitialize-function.md)içinde oluşturulan kaynak denetimi eklentisi bağlam yapısının işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Temizleme işlemi başarıyla tamamlandı.|
+|SCC_OK|Temizleme başarıyla tamamlandı.|
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak denetimi eklentisi kapanmaya hazırlanmaktan ve eklentinin bağlam yapısına ayrılan bellek boşaltmasından sorumludur. Bu işlev, bir eklentinin verilen her örneği için bir kez çağrılır. [SccInitialize](../extensibility/sccinitialize-function.md) çağrısı bu çağrıdan önce gelir. Çağrısı sırasında hiç proje hala açık olamaz `SccUninitialize` .
+ Kaynak denetimi eklentisi, kapatmaya hazırlanma ve eklentinin bağlam yapısı için ayırmış olduğu belleği serbest bırakarak sorumludur. İşlev, bir eklentinin verilen her örneği için bir kez çağrılır. Bu çağrıdan [önce SccInitialize](../extensibility/sccinitialize-function.md) çağrısı yer almaktadır. çağrısında hiçbir proje hala açık `SccUninitialize` olmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

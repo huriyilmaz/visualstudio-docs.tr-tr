@@ -1,8 +1,8 @@
 ---
-description: Bu işlev, kaynak denetimi eklentisinin davranışını denetleyen seçenekleri ayarlar.
-title: SccSetOption Işlevi | Microsoft Docs
+description: Bu işlev, kaynak denetimi eklentisinin davranışını kontrol altına alan seçenekleri ayarlar.
+title: SccSetOption İşlev | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccSetOption
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 031de256b231bbd95e7535af80448db5140cba7e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 18e33cbb8dbee9b332456826ed33e46e4d2e76de
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090154"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904106"
 ---
 # <a name="sccsetoption-function"></a>SccSetOption İşlevi
-Bu işlev, kaynak denetimi eklentisinin davranışını denetleyen seçenekleri ayarlar.
+Bu işlev, kaynak denetimi eklentisinin davranışını kontrol altına alan seçenekleri ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,53 +36,53 @@ SCCRTN SccSetOption(
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-'ndaki Kaynak denetimi eklentisi bağlam yapısı.
+[in] Kaynak denetimi eklentisi bağlam yapısı.
 
  nOption
 
-'ndaki Ayarlanmakta olan seçenek.
+[in] Ayar olan seçenek.
 
  dwVal
 
-'ndaki Seçeneğinin ayarları.
+[in] Seçeneğin ayarları.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Seçenek başarıyla ayarlandı.|
-|SCC_I_SHARESUBPROJOK|Was ise `nOption` `SCC_OPT_SHARESUBPROJ` ve kaynak denetımı eklentisi IDE 'nin hedef klasörü ayarlamasına izin veriyorsa döndürülür.|
-|SCC_E_OPNOTSUPPORTED|Seçenek ayarlanmadı ve üzerinde güvenilmemelidir.|
+|SCC_OK|Seçenek başarıyla ayarlanmıştır.|
+|SCC_I_SHARESUBPROJOK|ise `nOption` döndürülür `SCC_OPT_SHARESUBPROJ` ve kaynak denetimi eklentisi, IDE'nin hedef klasörü ayarlamaya izin verir.|
+|SCC_E_OPNOTSUPPORTED|seçeneği ayarlanmaz ve bu ayara bağlı değildir.|
 
 ## <a name="remarks"></a>Açıklamalar
- IDE, kaynak denetimi eklentisinin davranışını denetlemek için bu işlevi çağırır. İlk parametresi, `nOption` ayarlanmakta olan değeri, ikincisi ise `dwVal` , bu değerle ne yapılacağını gösterir. Eklenti bu bilgileri bir ile ilişkili olarak depolar `pvContext``,` , böylece IDE, [SccInitialize](../extensibility/sccinitialize-function.md) çağrıldıktan sonra bu işlevi çağırmalıdır (ancak her bir [SccOpenProject](../extensibility/sccopenproject-function.md)çağrısından sonra olması gerekmez).
+ IDE, kaynak denetimi eklentisinin davranışını kontrol etmek için bu işlevi çağıran bir işlevdir. İlk parametresi, `nOption` ayarda olan değeri belirtirken, ikinci parametresi ise bu `dwVal` değerle ne yapacaklarını belirtir. Eklenti ile ilişkili bu bilgileri depolar, bu nedenle `pvContext``,` [IDE'nin SccInitialize](../extensibility/sccinitialize-function.md) çağrısında bulunduktan sonra bu işlevi çağırmış olması gerekir (ancak [SccOpenProject'e](../extensibility/sccopenproject-function.md)yapılan her çağrıdan sonra olması gerekmez).
 
- Seçeneklerin Özeti ve değerleri:
+ Seçeneklerin ve değerlerinin özeti:
 
-|`nOption`|`dwValue`|Description|
+|`nOption`|`dwValue`|Açıklama|
 |---------------|---------------|-----------------|
-|`SCC_OPT_EVENTQUEUE`|`SCC_OPT_EQ_DISABLE`<br /><br /> `SCC_OPT_EQ_ENABLE`|Arka plan olay Queuing 'i etkinleştirilir/devre dışı bırakır.|
-|`SCC_OPT_USERDATA`|Rastgele değer|[SeçenekAdı Changepfn](../extensibility/optnamechangepfn.md) callback işlevine geçirilecek bir kullanıcı değeri belirtir.|
-|`SCC_OPT_HASCANCELMODE`|`SCC_OPT_HCM_NO`<br /><br /> `SCC_OPT_HCM_YES`|IDE 'nin şu anda bir işlemi iptal etmeyi destekleyip desteklemediğini gösterir.|
-|`SCC_OPT_NAMECHANGEPFN`|[Seçeneknamechangepfn](../extensibility/optnamechangepfn.md) callback işlevine yönelik işaretçi|Ad değiştirme geri arama işlevine yönelik bir işaretçi ayarlar.|
-|`SCC_OPT_SCCCHECKOUTONLY`|`SCC_OPT_SCO_NO`<br /><br /> `SCC_OPT_SCO_YES`|IDE 'nin, dosyalarını el ile kullanıma almasına (kaynak denetimi kullanıcı arabirimi aracılığıyla) veya yalnızca kaynak denetimi eklentisi aracılığıyla kullanıma alınması gerekip gerekmediğini belirtir.|
-|`SCC_OPT_SHARESUBPROJ`|Yok|Kaynak denetimi eklentisi IDE 'nin yerel proje klasörünü belirtmesini sağlamasına izin veriyorsa eklenti döndürülür `SCC_I_SHARESUBPROJOK` .|
+|`SCC_OPT_EVENTQUEUE`|`SCC_OPT_EQ_DISABLE`<br /><br /> `SCC_OPT_EQ_ENABLE`|Arka plan olay kuyruğa alma özelliğini etkinleştirme/devre dışı bırakma.|
+|`SCC_OPT_USERDATA`|Rastgele değer|OPTNAMECHANGEPFN geri çağırma [işlevine geçirilme bir kullanıcı](../extensibility/optnamechangepfn.md) değeri belirtir.|
+|`SCC_OPT_HASCANCELMODE`|`SCC_OPT_HCM_NO`<br /><br /> `SCC_OPT_HCM_YES`|IDE'nin şu anda bir işlemi iptal etme desteği olup olmadığını gösterir.|
+|`SCC_OPT_NAMECHANGEPFN`|[OPTNAMECHANGEPFN geri çağırma işlevinin](../extensibility/optnamechangepfn.md) işaretçisi|Bir ad değişikliği geri çağırma işlevinin işaretçisini ayarlar.|
+|`SCC_OPT_SCCCHECKOUTONLY`|`SCC_OPT_SCO_NO`<br /><br /> `SCC_OPT_SCO_YES`|IDE'nin dosyaları el ile kullanıma alanın (kaynak denetimi kullanıcı arabirimi aracılığıyla) veya yalnızca kaynak denetim eklentisi aracılığıyla kullanıma alınmış olması gerekip gerek olmadığını gösterir.|
+|`SCC_OPT_SHARESUBPROJ`|Yok|Kaynak denetimi eklentisi IDE'nin yerel proje klasörünü belirtmesini sağlarsa eklenti `SCC_I_SHARESUBPROJOK` döndürür.|
 
 ## <a name="scc_opt_eventqueue"></a>SCC_OPT_EVENTQUEUE
- `nOption`İse `SCC_OPT_EVENTQUEUE` , IDE arka planda işlemeyi devre dışı bırakır (veya yeniden etkinleştirir). Örneğin, bir derleme sırasında IDE, kaynak denetimi eklentisinin herhangi bir türdeki boş işlemeyi durdurmasına izin verebilir. Derlemeden sonra, eklentinin olay kuyruğunu güncel tutmak için arka plan işlemeyi yeniden etkinleştirir. Değerine karşılık gelen,, `SCC_OPT_EVENTQUEUE` `nOption` ve için iki olası değer vardır `dwVal` `SCC_OPT_EQ_ENABLE` `SCC_OPT_EQ_DISABLE` .
+ ise, `nOption` `SCC_OPT_EVENTQUEUE` IDE arka plan işlemeyi devre dışı bırakıyor (veya yeniden etkinleştirmektedir). Örneğin, derleme sırasında IDE, kaynak denetim eklentisine herhangi bir tür boşta işlemeyi durdurma talimatı ve olabilir. Derlemeden sonra, eklentinin olay kuyruğu güncel tutmak için arka plan işlemeyi yeniden etkinleştirir. değerine karşılık gelen , ve için iki olası `SCC_OPT_EVENTQUEUE` `nOption` değer `dwVal` `SCC_OPT_EQ_ENABLE` `SCC_OPT_EQ_DISABLE` vardır.
 
 ## <a name="scc_opt_hascancelmode"></a>SCC_OPT_HASCANCELMODE
- Değeri `nOption` ise `SCC_OPT_HASCANCELMODE` , IDE kullanıcıların uzun işlemleri iptal etmesine izin verir. `dwVal` `SCC_OPT_HCM_NO` (Varsayılan) AYARı, IDE 'nin iptal moduna sahip olmadığını gösterir. Kaynak denetimi eklentisinin, kullanıcının iptal edebilmesini istiyorsa kendi Iptal düğmesini sunmalıdır. `SCC_OPT_HCM_YES` IDE 'nin bir işlemi iptal etme özelliği sağladığını gösterir, bu nedenle SCC eklentisinin kendi Iptal düğmesini görüntülemesi gerekmez. IDE `dwVal` olarak ayarlandıysa `SCC_OPT_HCM_YES` , `SCC_MSG_STATUS` `DOCANCEL` geri çağırma işlevine gönderilen iletileri ve yanıt vermeye hazırlanır `lpTextOutProc` (bkz. [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)). IDE bu değişkeni ayarlanmamışsa, eklenti bu iki iletiyi göndermemelidir.
+ değeri `nOption` `SCC_OPT_HASCANCELMODE` ise, IDE kullanıcıların uzun işlemleri iptal etmelerini sağlar. olarak `dwVal` `SCC_OPT_HCM_NO` (varsayılan) ayarı, IDE'nin iptal moduna sahip olmadığını gösterir. Kaynak denetimi eklentisinin, kullanıcının iptal etmesini istiyorsa kendi İptal düğmesini sunmalıdır. `SCC_OPT_HCM_YES` IDE'nin bir işlemi iptal etme olanağı sağladığını gösterir, bu nedenle SCC eklentisinin kendi İptal düğmesini görüntülemesi gerekmeyebilirsiniz. IDE olarak ayarlarsa, yanıt vermeye ve geri çağırma işlevine gönderilen iletilere `dwVal` `SCC_OPT_HCM_YES` `SCC_MSG_STATUS` `DOCANCEL` `lpTextOutProc` hazırlanır (bkz. [LPTEXTOUTPROC).](../extensibility/lptextoutproc.md) IDE bu değişkeni ayarlamazsa eklenti bu iki iletileri göndermez.
 
 ## <a name="scc_opt_namechangepfn"></a>SCC_OPT_NAMECHANGEPFN
- Eğer Eğer Eğer Eğer, Eğer Eğer `SCC_OPT_NAMECHANGEPFN` , ve her ikisi de kaynak denetimi eklentisi ve IDE buna izin veriyor ise, eklenti aslında kaynak denetimi işlemi sırasında bir dosyayı yeniden adlandırabilir veya taşıyabilir. , `dwVal` [SeçenekAdı](../extensibility/optnamechangepfn.md)' nın bir işlev işaretçisine ayarlanacak. Kaynak denetim işlemi sırasında eklenti, üç parametreye geçerek bu işlevi çağırabilir. Bunlar bir dosyanın eski adıdır (tam yol ile), bu dosyanın yeni adı (tam yolu ile) ve IDE ile ilgisi olan bilgiler için bir işaretçi. IDE, `SccSetOption` `nOption` `SCC_OPT_USERDATA` verileri işaret eden ile olarak ayarla ' yı çağırarak bu son işaretçiye gönderilir `dwVal` . Bu işlev için destek isteğe bağlıdır. Bu özelliği kullanan bir VSSCı eklentisi, işlev işaretçisini ve Kullanıcı veri değişkenlerini ' a başlatması gerekir `NULL` ve kendisine verilmediği takdirde yeniden adlandırma işlevini çağırmamalıdır. Ayrıca, verildiği değeri tutmaya veya yeni bir çağrısına yanıt olarak değiştirmek için hazırlanmalıdır `SccSetOption` . Bu, bir kaynak denetimi komut işleminin ortasında gerçekleşmeyecektir, ancak komutlar arasında gerçekleşmeyebilir.
+ nOption olarak ayarlanırsa ve hem kaynak denetimi eklentisi hem de IDE buna izin verdiyse, eklenti bir kaynak denetimi işlemi sırasında bir dosyayı yeniden adlandırarak veya `SCC_OPT_NAMECHANGEPFN` hareket ettirebilirsiniz. , `dwVal` [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md)türünde bir işlev işaretçisine ayarlanır. Bir kaynak denetimi işlemi sırasında eklenti bu işlevi çağırarak üç parametre iletir. Bunlar bir dosyanın eski adı (tam yol ile), bu dosyanın yeni adı (tam yol ile) ve IDE ile ilgisi olan bilgilerin işaretçisidir. IDE, veriye işaret ediyor olarak ayarlanmış `SccSetOption` çağrısıyla `nOption` bu son `SCC_OPT_USERDATA` `dwVal` işaretçiyi gönderir. Bu işlev için destek isteğe bağlıdır. Bu özelliği kullanan bir VSSCI eklentisinin işlev işaretçisini ve kullanıcı veri değişkenlerini 'de başlatması ve verilen bir yeniden adlandırma işlevini `NULL` çağırması gerekir. Ayrıca verilen değeri tutmak veya yeni bir çağrısına yanıt olarak değiştirmek için hazır olması `SccSetOption` gerekir. Bu, bir kaynak denetimi komut işlemi ortasında olmaz, ancak komutlar arasında olabilir.
 
 ## <a name="scc_opt_scccheckoutonly"></a>SCC_OPT_SCCCHECKOUTONLY
- Eğer Eğer, olarak ayarlandıysa `SCC_OPT_SCCCHECKOUTONLY` , IDE Şu anda açık olan projedeki dosyaların, kaynak denetim sisteminin kullanıcı arabiriminden hiçbir şekilde el ile denetlenmeyeceğini gösterir. Bunun yerine, dosyalar yalnızca IDE denetimi altındaki kaynak denetimi eklentisi aracılığıyla kullanıma alınmalıdır. , `dwValue` Olarak ayarlandıysa `SCC_OPT_SCO_NO` , dosyaların normalde eklenti tarafından değerlendirilmesi ve kaynak denetimi kullanıcı arabirimi aracılığıyla kullanıma alınabileceği anlamına gelir. , `dwValue` Olarak ayarlandıysa `SCC_OPT_SCO_YES` , yalnızca eklentiye dosya kullanıma izin verilir ve kaynak denetim sisteminin kullanıcı arabirimi çağrılmamalıdır. Bu, IDE 'nin yalnızca IDE aracılığıyla kullanıma hazır hale getirmek için anlamlı bir "sözde dosyalar" olabileceği durumlar içindir.
+ nOption olarak ayarlanırsa, IDE şu anda açık olan projede yer alan dosyaların hiçbir zaman kaynak denetim sisteminin kullanıcı arabirimi aracılığıyla el ile kullanıma `SCC_OPT_SCCCHECKOUTONLY` açılmaması gerektiğini belirtir. Bunun yerine, dosyalar yalnızca IDE denetimi altındaki kaynak denetimi eklentisi aracılığıyla kullanıma alınmış olması gerekir. olarak ayarlanırsa, dosyaların eklenti tarafından normal şekilde ele alınmalıdır ve kaynak denetimi kullanıcı arabirimi üzerinden `dwValue` `SCC_OPT_SCO_NO` kullanıma alınabilirsiniz. olarak ayarlanırsa, yalnızca eklentinin dosyaları denetlemesine izin verilir ve kaynak denetim sisteminin `dwValue` `SCC_OPT_SCO_YES` kullanıcı arabirimi çağrılmamalıdır. Bu, IDE'nin yalnızca IDE aracılığıyla göz atarak anlamlı olan "sözde dosyalar" olabileceği durumlar için kullanılır.
 
 ## <a name="scc_opt_sharesubproj"></a>SCC_OPT_SHARESUBPROJ
- `nOption`Olarak ayarlanırsa `SCC_OPT_SHARESUBPROJ` , IDE kaynak denetiminden dosya eklerken kaynak denetimi eklentisinin belirtilen yerel klasörü kullanıp kullanamayacağını test ediyor. `dwVal`Parametrenin değeri bu durumda değildir. Eklenti, IDE 'nin [SccAddFromScc](../extensibility/sccaddfromscc-function.md) çağrıldığında kaynak denetiminden ekleneceği yerel hedef klasörü belirtmesini sağlamasına izin veriyorsa,, işlev çağrıldığında eklentinin dönmesi gerekir `SCC_I_SHARESUBPROJOK` `SccSetOption` . Daha sonra IDE, `lplpFileNames` `SccAddFromScc` hedef klasöre geçirilecek işlevin parametresini kullanır. Eklenti, kaynak denetiminden eklenen dosyaları yerleştirmek için bu hedef klasörü kullanır. Seçenek ayarlandığında eklenti döndürülmezse `SCC_I_SHARESUBPROJOK` `SCC_OPT_SHARESUBPROJ` , IDE, eklentinin yalnızca geçerli yerel klasöre dosya ekleyebildiğinizi varsayar.
+ olarak ayarlanırsa, IDE kaynak denetiminden dosya eklerken kaynak denetimi eklentisinin belirtilen bir yerel klasörü `nOption` `SCC_OPT_SHARESUBPROJ` kullanıp kullana olmadığını test ediyor. Bu durumda `dwVal` parametrenin değeri önemli değildir. Eklenti, IDE'nin [SccAddFromScc](../extensibility/sccaddfromscc-function.md) çağrıldığda dosyaların kaynak denetiminden eklenmiştir yerel hedef klasörü belirtmeye izin verirse, işlev çağrıldığnda eklentinin dönmesi `SCC_I_SHARESUBPROJOK` `SccSetOption` gerekir. Ardından IDE, `lplpFileNames` hedef klasörü `SccAddFromScc` geçmek için işlevinin parametresini kullanır. Eklenti, kaynak denetiminden eklenen dosyaları yerk için bu hedef klasörü kullanır. Seçenek ayarlanırken eklenti geri dönmezse, IDE eklentinin yalnızca geçerli yerel klasöre dosya `SCC_I_SHARESUBPROJOK` `SCC_OPT_SHARESUBPROJ` ekleye olduğunu varsayer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

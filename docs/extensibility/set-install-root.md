@@ -3,19 +3,19 @@ title: VSIX v3 ile uzantılar klasörünü dışarıdan yükleme | Microsoft Doc
 description: Visual Studio SDK uzantı varlıklarını uzantılar klasörünün dışına ve hangi konumların geçerli olduğunu yükleme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/09/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 913c3745-8aa9-4260-886e-a05aecfb2225
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2fecad421cca4cdf4644add5e5e7c7a6af4a23c0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 24b1e1a73ff588e5531eec2025c8a3c9e94760a4
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073033"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898454"
 ---
 # <a name="install-outside-the-extensions-folder"></a>Uzantılar klasörünün dışına yükleme
 

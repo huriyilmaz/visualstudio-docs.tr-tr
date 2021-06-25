@@ -3,7 +3,7 @@ title: Proje türü temelleri | Microsoft Docs
 description: Proje türünü ne zaman oluşturmanız gerektiğini ve proje alt türlerini kullanarak var olan bir proje türünü genişletebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project types [Visual Studio SDK]
 ms.assetid: 09991589-2300-430e-b6a4-7f2b95fe676f
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86ed1c1098fe13cd19ce686782e18b190f455f8c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 051e7b76edd4559914307459fdcbdf1b7c0b600e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064299"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903565"
 ---
 # <a name="project-type-essentials"></a>Proje Türü Temel Bileşenleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , veya gibi diller için birçok proje türü [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] içerir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Ayrıca kendi proje türlerinizi oluşturmanıza imkan tanır.
@@ -34,7 +34,7 @@ ms.locfileid: "105064299"
 
   [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Aşağıdakilerden birini veya birkaçını desteklemek istiyorsanız, dışındaki bir dili temel alan projeler için yeni bir proje türü oluşturmanız gerekir:
 
-- Derleme
+- Oluşturma
 
 - Dağıtım
 
@@ -56,7 +56,7 @@ ms.locfileid: "105064299"
 
 - C++ geliştiricileri için, HierUtil kitaplığındaki sınıflar benzer bir şekilde çalışır. Daha fazla bilgi için bkz. [derlemede değil: bir proje türü uygulamak Için HierUtil7 proje sınıflarını kullanma (C++)](/previous-versions/bb166212(v=vs.100)).
 
-- Proje türleri, bir. exe veya. dll derlemesine oluşturan tipik kaynak kodu dosyalarından farklı verileri destekleyebilir. Örneğin, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] veritabanı projeleri disk üzerinde depolanan betik ve sorgu dosyalarının başvurularını içerir ve bir veritabanına karşı betikleri ve sorguları yürütmek için **Çözüm Gezgini** komutlar ekler, ancak projeler derleme davranışını desteklemez. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
+- Proje türleri, bir .exe veya .dll derlemesinde oluşturan tipik kaynak kodu dosyalarından farklı verileri destekleyebilir. Örneğin, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] veritabanı projeleri disk üzerinde depolanan betik ve sorgu dosyalarının başvurularını içerir ve bir veritabanına karşı betikleri ve sorguları yürütmek için **Çözüm Gezgini** komutlar ekler, ancak projeler derleme davranışını desteklemez. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
 
 - Proje türü, dosyaları kullanmak zorunda değildir. Örneğin, bir proje türü tüm verilerini bir veritabanında saklayabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje türlerine, projelere ve proje öğelerine yönelik verileri nasıl kalıcı hale getirebileceği üzerinde tüm denetim sağlar. Daha fazla bilgi için bkz. [Proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md).
 

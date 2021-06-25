@@ -3,7 +3,7 @@ title: Ayarlar deposunu kullanma | Microsoft Docs
 description: Salt okunurdur, Visual Studio ve VSPackage ayarları olan yapılandırma ayarı deposundan verileri nasıl okuyacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Settings Store, using
 ms.assetid: 447ec08a-eca5-40b8-89b0-f98fdf3d39a4
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a84fa551a4a3ea10b212832c0891fb0d7d19b2f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4d7fff5bc3eeeb3b4515e2e47027f5b88fb7807d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060193"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898389"
 ---
 # <a name="using-the-settings-store"></a>Ayarlar Deposu Kullanma
 İki tür ayar deposu vardır:

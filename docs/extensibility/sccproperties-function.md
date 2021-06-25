@@ -1,8 +1,8 @@
 ---
-description: Bu işlev, bir dosya veya proje için kaynak denetimi özelliklerini görüntüler.
-title: SccProperties Işlevi | Microsoft Docs
+description: Bu işlev, bir dosya veya projenin kaynak denetimi özelliklerini görüntüler.
+title: SccProperties İşlev | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccProperties
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56306bb7c248ea500e16964c0929f34a27187298
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cd50353ab29c05e5e5db2dc2b3f363af46ca8aa7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056525"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904197"
 ---
 # <a name="sccproperties-function"></a>SccProperties İşlevi
-Bu işlev, bir dosya veya proje için kaynak denetimi özelliklerini görüntüler.
+Bu işlev, bir dosya veya projenin kaynak denetimi özelliklerini görüntüler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,24 +36,24 @@ SCCRTN SccProperties (
 #### <a name="parameters"></a>Parametreler
  pvContext
 
-'ndaki Kaynak denetimi eklentisi bağlam yapısı.
+[in] Kaynak denetimi eklentisi bağlam yapısı.
 
- lendiği
+ Hwnd
 
-'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
+[in] Kaynak denetimi eklentisinin sağladığı iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi tanıtıcısı.
 
  lpFileName
 
-'ndaki Dosyanın veya projenin tam yol adı.
+[in] Dosyanın veya projenin tam yol adı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Özellikler başarıyla görüntülendi.|
-|SCC_I_RELOADFILE|Sürüm denetim sistemi dosya özelliklerini değiştirdi, bu nedenle IDE 'nin bu dosyayı yeniden yüklemesi gerekir.|
-|SCC_E_PROJNOTOPEN|Belirtilen proje kaynak denetiminde açılmadı.|
+|SCC_I_RELOADFILE|Sürüm denetimi sistemi dosya özelliklerini değiştirmektedir, bu nedenle IDE bu dosyayı yeniden yüklemelidir.|
+|SCC_E_PROJNOTOPEN|Belirtilen proje kaynak denetiminde açık değil.|
 |SCC_E_NOTAUTHORIZED|Kullanıcının bu dosyanın veya projenin özelliklerini görüntüleme yetkisi yok.|
 |SCC_E_FILENOTCONTROLLED|Belirtilen dosya veya proje kaynak denetimi altında değil.|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Bilinmeyen veya genel bir hata oluştu.|
@@ -61,7 +61,7 @@ SCCRTN SccProperties (
 ## <a name="remarks"></a>Açıklamalar
  Kaynak denetimi eklentisi, özellikleri kendi iletişim kutusunda görüntüler.
 
- Özellikler kaynak denetimi eklentisi tarafından tanımlanır ve eklentilerden farklı olabilir. Eklenti, kullanıcının bir dosyanın kaynak denetimi özelliklerini değiştirmesine izin veriyorsa, `SCC_I_RELOAD` Bu dosya veya projenin yeniden yüklenmesi gereken IDE 'yi işaret etmesi için döndürmelidir.
+ Özellikler kaynak denetimi eklentisi tarafından tanımlanır ve eklentiden eklentiye farklılık gösterebilir. Eklenti, kullanıcının bir dosyanın kaynak denetimi özelliklerini değiştirmesini sağlarsa, IDE'ye bu dosyanın veya projenin yeniden yüklenmeye ihtiyaç olduğunu işaret etmek `SCC_I_RELOAD` için geri dönmeli.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)
