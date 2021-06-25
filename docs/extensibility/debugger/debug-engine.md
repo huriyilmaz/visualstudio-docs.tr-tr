@@ -3,7 +3,7 @@ title: Hata ayıklama altyapısı | Microsoft Docs
 description: Bir hata ayıklama altyapısının, yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hizmetleri sağlamak üzere yorumlayıcı veya işletim sistemiyle nasıl çalıştığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines
 ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c13dd7165a5f85dc0122f97aaee838c528207f96
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 87c4648ed37ef4fad0d79b7048593ff0c5b7d6d0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067965"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905715"
 ---
 # <a name="debug-engine"></a>Hata ayıklama altyapısı
 Hata ayıklama altyapısı (DE), yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hata ayıklama hizmetleri sağlamak için yorumlayıcı veya işletim sistemi ile birlikte kullanılır. Aynı hata ayıklanmakta olan bir programın durumunu izlemenin DE sorumluluğundadır. Bunu gerçekleştirmek için, bu, CPU 'dan veya çalışma zamanının sağladığı API 'lerden bağımsız olarak, desteklenen çalışma zamanında bu için kullanılabilen yöntemleri kullanır.

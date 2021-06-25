@@ -1,8 +1,8 @@
 ---
-description: Bir System. Threading. Tasks. Task nesnesi için ek özellikler içerir.
-title: Kıgentproperties sınıfı-Iç Üyeler | Microsoft Docs
+description: System.Threading.Tasks.Task nesnesi için ek özellikler içerir.
+title: ContingentProperties Sınıfı - İç Üyeler | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ContingentProperties class [.NET Framework debug engines]
 - debug engines, ContingentProperties class [.NET Framework]
@@ -12,21 +12,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 295b8c3b33059811e665e362c9894103b47c422d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8fca0bf68de4493d0165f9e66e251945ba6168b2
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055004"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905689"
 ---
-# <a name="contingentproperties-class---internal-members"></a>Kıgentproperties sınıfı-iç Üyeler
-Bir nesne için ek özellikler içerir <xref:System.Threading.Tasks.Task> .
+# <a name="contingentproperties-class---internal-members"></a>ContingentProperties sınıfı - iç üyeler
+Bir nesne için ek özellikler <xref:System.Threading.Tasks.Task> içerir.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
+ **Derleme:** mscorlib (mscorlib.dll)
 
- Bu iç üyelere .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyelere .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ Bir nesne için ek özellikler içerir <xref:System.Threading.Tasks.Task> .
 
 |Ad|Açıklama|
 |----------|-----------------|
-|[m_children](../../extensibility/debugger/m-children-field.md)|Bu görevle kaydedilen alt görevlerin listesi.|
+|[m_children](../../extensibility/debugger/m-children-field.md)|Bu göreve kayıtlı alt görevlerin listesi.|
 
 ## <a name="remarks"></a>Açıklamalar
- .NET Framework, bu sınıfın alanlarını yalnızca gerektiğinde başlatır.
+ Bu .NET Framework yalnızca gerektiğinde bu sınıfın alanlarını başlatıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET Framework için paralel uzantı iç işlevleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı iç .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

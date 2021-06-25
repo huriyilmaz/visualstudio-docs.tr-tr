@@ -3,19 +3,19 @@ title: Visual Studio şablon bildirimi şema başvurusu | Microsoft Docs
 description: Bu şema başvurusu, Visual Studio projesi veya öğe şablonları için oluşturulan Visual Studio şablon bildirim dosyalarının biçimini açıklar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 033e735b93a534164d96cf47d6412c609525ad8f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 259d2dd050f4681053f331bfd4ec39dd7b214059
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062505"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905390"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio şablon bildirim Şeması Başvurusu
 Bu şema, Visual Studio projesi veya öğe şablonları için oluşturulan Visual Studio şablon bildirimi (*. vstman*) dosyalarının biçimini açıklar. Şema Ayrıca, bu şablonla ilgili konumu ve ilgili diğer bilgileri de açıklar.
@@ -51,7 +51,7 @@ Bu şema, Visual Studio projesi veya öğe şablonları için oluşturulan Visua
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-- **Relativepathondisk**: diskteki şablon dosyasının göreli yolu. Bu konum Ayrıca şablonun **Yeni proje** veya **Yeni öğe** iletişim kutusunda gösterilen şablon ağacında yerleşimini tanımlar. Dizin ve ayrı dosyalar olarak dağıtılan şablonlar için, bu yol şablon dosyalarını içeren dizine başvurur. *. Zip* dosyası olarak dağıtılan şablonlar için, bu yol *. zip* dosyasının yolu olmalıdır.
+- **Relativepathondisk**: diskteki şablon dosyasının göreli yolu. Bu konum Ayrıca şablonun **Yeni proje** veya **Yeni öğe** iletişim kutusunda gösterilen şablon ağacında yerleşimini tanımlar. Dizin ve ayrı dosyalar olarak dağıtılan şablonlar için, bu yol şablon dosyalarını içeren dizine başvurur. *.zip* dosyası olarak dağıtılan şablonlar için, bu yol *.zip* dosyasının yolu olmalıdır.
 
 - * * VSTemplateHeader: üstbilgiyi açıklayan bir [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) öğesi.
 

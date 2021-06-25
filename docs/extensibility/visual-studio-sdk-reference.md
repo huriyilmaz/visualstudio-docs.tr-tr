@@ -1,9 +1,9 @@
 ---
-title: Visual Studio SDK başvurusu | Microsoft Docs
-description: Bu makaleler, Visual Studio ad alanları, ilgili ad alanları ve Visual Studio SDK 'sını kullanan geliştiriciler için diğer ilgi alanları hakkında bilgiler içerir.
+title: Visual Studio SDK Başvuru | Microsoft Docs
+description: Bu makaleler, Visual Studio SDK'sı kullanan geliştiriciler için farklı ad alanları, ilgili ad alanları ve diğer ilgi Visual Studio içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Visual Studio SDK, reference
 - reference, Visual Studio SDK
@@ -13,20 +13,20 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d07a1148911347d4ff8bdb94e1de4625877872d3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 72ee3a1567f2f0c3de3a266af04e20d1354b96a7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062544"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905403"
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK başvurusu
 
-Bu bölüm, Visual Studio ad alanları, ilgili ad alanları ve Visual Studio SDK 'sını kullanan geliştiriciler için diğer ilgi alanları hakkında bilgiler içerir.
+Bu bölüm, Visual Studio SDK'sı kullanan geliştiriciler için ad alanları, ilgili ad alanları ve diğer ilgi Visual Studio içerir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-- <xref:Microsoft.VisualStudio.TextManager.Interop> Düzenleyici ve dil Hizmetleri için kullanılan eski birlikte çalışma arabirimleri.
+- <xref:Microsoft.VisualStudio.TextManager.Interop> Düzenleyici ve dil hizmetleri için kullanılan eski birlikte çalışma arabirimleri.
 
 - <xref:Microsoft.VisualStudio.Editor> Yeni düzenleyicide kullanılan sınıflar.
 
@@ -36,11 +36,11 @@ Bu bölüm, Visual Studio ad alanları, ilgili ad alanları ve Visual Studio SDK
 
 - <xref:Microsoft.VisualStudio.Text> Yeni düzenleyicide kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Text.Adornments> Yeni düzenleyicide donnments için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Text.Adornments> Yeni düzenleyicide donatma için kullanılan sınıflar.
 
 - <xref:Microsoft.VisualStudio.Text.Classification> Sınıflandırma için yeni düzenleyicide kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Text.Differencing> Yeni düzenleyicide, fark kayıt için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Text.Differencing> Farklar için yeni düzenleyicide kullanılan sınıflar.
 
 - <xref:Microsoft.VisualStudio.Text.Document> Belgeler için yeni düzenleyicide kullanılan sınıflar.
 
@@ -50,15 +50,15 @@ Bu bölüm, Visual Studio ad alanları, ilgili ad alanları ve Visual Studio SDK
 
 - <xref:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods> Yeni düzenleyicide kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Text.Formatting> Yeni düzenleyicide biçimlendirme için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Text.Formatting> Biçimlendirme için yeni düzenleyicide kullanılan sınıflar.
 
 - <xref:Microsoft.VisualStudio.Text.IncrementalSearch> Artımlı arama için yeni düzenleyicide kullanılan sınıflar.
 
 - <xref:Microsoft.VisualStudio.Text.Operations> Yeni düzenleyicide kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Text.Outlining> Yeni düzenleyicide ana hat oluşturma için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Text.Outlining> Yeni düzenleyicide, genel açıklama için kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Text.Projection> Yansıtma için yeni düzenleyicide kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Text.Projection> Yeni düzenleyicide projeksiyon için kullanılan sınıflar.
 
 - <xref:Microsoft.VisualStudio.Text.Tagging> Etiketleme için yeni düzenleyicide kullanılan sınıflar.
 
@@ -68,115 +68,115 @@ Bu bölüm, Visual Studio ad alanları, ilgili ad alanları ve Visual Studio SDK
 
 - <xref:Microsoft.VisualStudio.Shell.Interop>
 
-- <xref:Microsoft.VisualStudio> Visual Studio sabitleri ve yardımcıları için sınıflar.
+- <xref:Microsoft.VisualStudio> Sabitler Visual Studio yardımcıları için sınıflar.
 
-- <xref:Microsoft.VisualStudio.CommandBars> Visual Studio komut çubukları için sınıflar.
+- <xref:Microsoft.VisualStudio.CommandBars> Komut çubukları Visual Studio sınıfları.
 
-- <xref:Microsoft.VisualStudio.ComponentModelHost> Visual Studio 'da Managed Extensibility Framework (MEF) için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.ComponentModelHost> Visual Studio'de Managed Extensibility Framework (MEF) için kullanılan Visual Studio.
 
-- <xref:Microsoft.VisualStudio.Designer.Interfaces> Visual Studio tasarımcıları ile kullanılan arabirimler.
+- <xref:Microsoft.VisualStudio.Designer.Interfaces> Yeni tasarımcılarla Visual Studio arabirimler.
 
-- <xref:Microsoft.VisualStudio.ManagedInterfaces.ProjectDesigner> Visual Studio proje Tasarımcısı ile kullanılan arabirimler.
+- <xref:Microsoft.VisualStudio.ManagedInterfaces.ProjectDesigner> Visual Studio proje tasarımcısı ile kullanılan arabirimler.
 
 - <xref:Microsoft.VisualStudio.ManagedInterfaces.Publish> Uygulamaları yayımlamak için kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.OLE.Interop> OLE bileşenleri için Visual Studio 'da kullanılan birlikte çalışma arabirimleri.
+- <xref:Microsoft.VisualStudio.OLE.Interop> OLE bileşenleri için Visual Studio birlikte çalışma arabirimleri.
 
-- <xref:Microsoft.VisualStudio.Package> Visual Studio yönetilen dil Hizmetleri için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Package> Yönetilen dil hizmetleri Visual Studio kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.PlatformUI> Visual Studio Kabuğu 'nda kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.PlatformUI> Visual Studio kabuğunda kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.PlatformUI.OleComponentSupport> Yalnızca Microsoft dahili kullanımı.
+- <xref:Microsoft.VisualStudio.PlatformUI.OleComponentSupport> Yalnızca Microsoft iç kullanımı.
 
-- <xref:Microsoft.VisualStudio.ProjectAggregator> Visual Studio projeleri için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.ProjectAggregator> Farklı projelerde Visual Studio sınıflar.
 
-- <xref:Microsoft.VisualStudio.Settings> Visual Studio Kabuğu 'nda kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Settings> Visual Studio kabuğunda kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Shell> Visual Studio Kabuğu 'nda kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Shell> Visual Studio kabuğunda kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Shell.Design> Visual Studio Kabuğu 'nda kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Shell.Design> Visual Studio kabuğunda kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Shell.Design.Serialization> Visual Studio Kabuğu 'nda kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Shell.Design.Serialization> Visual Studio kabuğunda kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Shell.Design.Serialization.CodeDom> Visual Studio Kabuğu 'nda kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Shell.Design.Serialization.CodeDom> Visual Studio kabuğunda kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Shell.Flavor> Visual Studio projeleri için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Shell.Flavor> Visual Studio için kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop> Visual Studio kabuğu için kullanılan birlikte çalışma arabirimleri.
+- <xref:Microsoft.VisualStudio.Shell.Interop> Visual Studio kabuğu için kullanılan birlikte Visual Studio.
 
-- <xref:Microsoft.VisualStudio.Shell.Settings> Visual Studio Kabuğu 'nda kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.Shell.Settings> Visual Studio kabuğunda kullanılan sınıflar.
 
 - <xref:Microsoft.VisualStudio.VSHelp> Yardım için kullanılan sınıflar.
 
 - <xref:VSLangProj> Dil hizmeti projeleri için kullanılan sınıflar.
 
-- <xref:XamlGeneratedNamespace> Yalnızca Microsoft dahili kullanımı.
+- <xref:XamlGeneratedNamespace> Yalnızca Microsoft iç kullanımı.
 
-- <xref:Microsoft.VisualStudio.ManagedInterfaces9> Visual Studio için kullanılan arabirimler.
+- <xref:Microsoft.VisualStudio.ManagedInterfaces9> Arabirimler için kullanılan Visual Studio.
 
 - <xref:Microsoft.VisualStudio.WCFReference.Interop> Windows Communication Framework için kullanılan sınıflar.
 
-- Test araçları için kullanılan [Microsoft. VisualStudio. TestTools. VSIP](/previous-versions/aa993343(v=vs.120)) sınıfları.
+- [Test araçları için kullanılan Microsoft.VisualStudio.TestTools.Vsip](/previous-versions/aa993343(v=vs.120)) Sınıfları.
 
-- <xref:EnvDTE> Visual Studio otomasyonu için kullanılır.
+- <xref:EnvDTE> Otomasyon için Visual Studio kullanılır.
 
-- <xref:Extensibility> Visual Studio otomasyonu için kullanılır.
+- <xref:Extensibility> Otomasyon için Visual Studio kullanılır.
 
-- <xref:EnvDTE80> Visual Studio otomasyonu için kullanılır.
+- <xref:EnvDTE80> Otomasyon için Visual Studio kullanılır.
 
-- <xref:EnvDTE90> Visual Studio otomasyonu için kullanılır.
+- <xref:EnvDTE90> Otomasyon için Visual Studio kullanılır.
 
-- <xref:EnvDTE90a> Visual Studio otomasyonu için kullanılır.
+- <xref:EnvDTE90a> Otomasyon için Visual Studio kullanılır.
 
-- <xref:EnvDTE100> Visual Studio otomasyonu için kullanılır.
+- <xref:EnvDTE100> Otomasyon için Visual Studio kullanılır.
 
-- <xref:Microsoft.VisualStudio.VCCodeModel> Visual C++ Proje Otomasyonu için kullanılır.
+- <xref:Microsoft.VisualStudio.VCCodeModel> Proje otomasyonu Visual C++ için kullanılır.
 
-- <xref:Microsoft.VisualStudio.VCProject> Visual C++ Proje Otomasyonu için kullanılan sınıflar.
+- <xref:Microsoft.VisualStudio.VCProject> Proje otomasyonu Visual C++ kullanılan sınıflar.
 
-- <xref:Microsoft.VisualStudio.VCProjectEngine> Visual C++ Proje Otomasyonu için kullanılır.
+- <xref:Microsoft.VisualStudio.VCProjectEngine> Proje otomasyonu Visual C++ için kullanılır.
 
-- <xref:Microsoft.VisualStudio.VsWizard> Visual Studio Sihirbazı için kullanılır.
+- <xref:Microsoft.VisualStudio.VsWizard> Visual Studio için kullanılır.
 
-- <xref:VSLangProj> C# ve Visual Basic Proje Otomasyonu için kullanılır.
+- <xref:VSLangProj> C# ve Visual Basic otomasyonu için kullanılır.
 
-- <xref:VSLangProj2> C# ve Visual Basic Proje Otomasyonu için kullanılır.
+- <xref:VSLangProj2> C# ve Visual Basic otomasyonu için kullanılır.
 
-- <xref:VSLangProj80> C# ve Visual Basic Proje Otomasyonu için kullanılır.
+- <xref:VSLangProj80> C# ve Visual Basic otomasyonu için kullanılır.
 
-- <xref:VslangProj90> C# ve Visual Basic Proje Otomasyonu için kullanılır.
+- <xref:VslangProj90> C# ve Visual Basic otomasyonu için kullanılır.
 
-- <xref:VslangProj100> C# ve Visual Basic Proje Otomasyonu için kullanılır.
+- <xref:VslangProj100> C# ve Visual Basic otomasyonu için kullanılır.
 
-- <xref:VSLangProj110> C# ve Visual Basic Proje Otomasyonu için kullanılır.
+- <xref:VSLangProj110> C# ve Visual Basic otomasyonu için kullanılır.
 
-- <xref:VSLangProj140> C# ve Visual Basic Proje Otomasyonu için kullanılır.
+- <xref:VSLangProj140> C# ve Visual Basic otomasyonu için kullanılır.
 
-- <xref:Microsoft.VisualStudio.Language.CallHierarchy> C# ve Visual Basic otomasyonu için kullanılır.
+- <xref:Microsoft.VisualStudio.Language.CallHierarchy> C# ve Visual Basic kullanılır.
 
-- <xref:Microsoft.VisualStudio.Language.NavigateTo.Interfaces> C# ve Visual Basic otomasyonu için kullanılır.
+- <xref:Microsoft.VisualStudio.Language.NavigateTo.Interfaces> C# ve Visual Basic kullanılır.
 
-- <xref:Microsoft.VisualStudio.Threading> Visual Studio iş parçacığı için kullanılır.
+- <xref:Microsoft.VisualStudio.Threading> İş parçacığı Visual Studio kullanılır.
 
-- [Microsoft. VisualStudio. ConnectedServices ad alanı](/dotnet/api/microsoft.visualstudio.connectedservices) Visual Studio bağlı hizmetleri için kullanılır.
+- [Microsoft.VisualStudio.ConnectedServices Ad Alanı](/dotnet/api/microsoft.visualstudio.connectedservices) Bağlı Visual Studio için kullanılır.
 
-- [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md) numaralandırması, IntelliSense ana bilgisayar bayraklarını belirtir.
+- [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md) numaralama IntelliSense konak bayraklarını belirtir.
 
-- [VSCT XML Şeması Başvurusu](../extensibility/vsct-xml-schema-reference.md) Her biri için izin verilen alt öğe ve özniteliklere sahip Visual Studio komut tablosu şema öğelerinin bir tablosunu sağlar.
+- [VSCT XML Şema Başvurusu](../extensibility/vsct-xml-schema-reference.md) Her biri için izin Visual Studio ve öznitelikleriyle birlikte Komut Tablosu şema öğelerinin bir tabloyu sağlar.
 
-- [GUID 'ler ve sabitler](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md) SDK genelinde kullanılan GUID 'lerin bir listesini sağlar.
+- [GUID'ler ve Sabitler](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md) SDK genelinde kullanılan GUID'lerin listesini verir.
 
-- [Yönetilen koddaki com sabitleri](../extensibility/com-constants-in-managed-code.md) Ortam SDK 'Sı genelinde kullanılan Kullanıcı Arabirimi öğelerine yönelik tanımlayıcıların listesini verir.
+- [Yönetilen Kodda COM Sabitleri](../extensibility/com-constants-in-managed-code.md) Ortam SDK'sı genelinde kullanılan kullanıcı arabirimi öğelerinin tanımlayıcılarının listesini verir.
 
-- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md) Kaynak denetimi eklentisi API 'SI için konuların bağlantıları.
+- [Kaynak Denetimi Eklentileri](../extensibility/source-control-plug-ins.md) Kaynak Denetimi Eklentisi API'si ile ilgili konulara bağlantılar.
 
-- [Komut satırı anahtarları](../extensibility/command-line-switches-visual-studio-sdk.md) Geliştiricilerin komut satırından çeşitli görevleri nasıl otomatikleştirebileceğinizi tartışan konuların bağlantıları.
+- [Komut Satırı Anahtarları](../extensibility/command-line-switches-visual-studio-sdk.md) Geliştiricilerin komut satırlarından çeşitli görevleri nasıl otomatikleştirebilirlerini tartışan konulara bağlantılar.
 
-- [Hata işleme ve dönüş değerleri](../extensibility/error-handling-and-return-values.md) Diğer Windows programlamada kullanılan ile aynı olan VSPackages için hata mimarisini açıklar.
+- [Hata İşleme ve Dönüş Değerleri](../extensibility/error-handling-and-return-values.md) VSPackage'lar için, diğer Windows programlamalarında çalışanla aynı olan hata mimarisini açıklar.
 
-- [Nesneler](../extensibility/objects.md) Ortamda kullanılan nesnelerin bir listesini sağlar.
+- [Nesneler](../extensibility/objects.md) Ortamda kullanılan nesnelerin listesini verir.
 
-- [Sözlük](../extensibility/visual-studio-sdk-glossary.md) Visual Studio SDK belgelerini okurken yararlı koşulların ve kullanımları için kullanım tanımlarının bir listesini sağlar.
+- [Sözlük](../extensibility/visual-studio-sdk-glossary.md) Visual Studio SDK belgelerini okurken yararlı terimlerin ve bunların tanımlarının bir listesini sağlar.
 
 - <xref:Microsoft.Build.BuildEngine> MSBuild için kullanılır.
 
@@ -212,4 +212,4 @@ Bu bölüm, Visual Studio ad alanları, ilgili ad alanları ve Visual Studio SDK
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[Visual STUDIO SDK](../extensibility/visual-studio-sdk.md) , Visual Studio ile tümleştirilen ürünler geliştirmenize yardımcı olacak belge, örnek ve kod içerir.
+[Visual Studio SDK'sı,](../extensibility/visual-studio-sdk.md) verilerle tümleştirilen ürünler geliştirmeniz için belgeler, örnekler ve kod Visual Studio.

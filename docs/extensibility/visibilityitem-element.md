@@ -3,7 +3,7 @@ title: VisibilityItem öğesi | Microsoft Docs
 description: VisibilityItem öğesi, komutların ve araç çubuklarının statik görünürlüğünü belirler. Girdiler bir komutu veya menüyü ve ilişkili bir komut UI bağlamını belirler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VisibilityItem element (VSCT XML schema)
 - VSCT XML schema elements, VisibilityItem
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1229c5e63838a8192c7622cdddd9881799a2da11
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 025e05dd0346c7da0a70985aa579d1673f2ffcaa
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062518"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905442"
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem öğesi
 `VisibilityItem`Öğesi, komutların ve araç çubuklarının statik görünürlüğünü belirler. Her giriş bir komutu veya menüyü ve ayrıca ilişkili bir komut UI bağlamını tanımlar. Visual Studio, bunları tanımlayan VSPackages 'ları yüklemeden komutları, menüleri ve araç çubuklarını ve bunların görünürlüğünü algılar. IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> bir komut UI bağlamının etkin olup olmadığını anlamak için yöntemini kullanır.
@@ -51,7 +51,7 @@ ms.locfileid: "105062518"
 |Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
- Yok
+ Hiçbiri
 
 ### <a name="parent-elements"></a>Üst öğeler
 

@@ -2,7 +2,7 @@
 description: Bu işlev, kaynak denetimi eklentisi tarafından desteklenen ek özellikleri döndürür.
 title: Sccgebir Dedcapabilities Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetExtendedCapabilities
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca2f2f77c586c5c71658a8f0cab32385eb3f73d3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cc047fee2c92f47c181aef455b8175a4e7998176
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073007"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905598"
 ---
 # <a name="sccgetextendedcapabilities-function"></a>Sccgebir Dedcapabilities işlevi
 Bu işlev, kaynak denetimi eklentisi tarafından desteklenen ek özellikleri döndürür.

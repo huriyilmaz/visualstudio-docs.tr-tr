@@ -1,8 +1,8 @@
 ---
 description: Bu işlev, geçerli durumları için tam dizinlerin listesini inceler.
-title: SccDirQueryInfo Işlevi | Microsoft Docs
+title: SccDirQueryInfo İşlev | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccDirQueryInfo
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81087d4f4da3435fb7bc80ec4a965394c7d6c7f3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9a3e65fa03c7fc2b6a8ce83ba2bb39250547aadb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060334"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904623"
 ---
 # <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo işlevi
 Bu işlev, geçerli durumları için tam dizinlerin listesini inceler.
@@ -35,39 +35,39 @@ LPLONG  lpStatus
 ```
 
 ### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-'ndaki Kaynak denetimi eklentisi bağlam yapısı.
+[in] Kaynak denetimi eklentisi bağlam yapısı.
 
  nDirs
 
-'ndaki Sorgulanmasını seçtiğiniz dizinlerin sayısı.
+[in] Sorgu için seçilen dizin sayısı.
 
  lpDirNames
 
-'ndaki Sorgulanacak dizinlerin tam nitelikli yolları dizisi.
+[in] Sorgulanan dizinlerin tam yolları dizisi.
 
  lpStatus
 
-[in, out] Kaynak denetimi eklentisinin durum bayraklarını döndürmesi için bir dizi yapısı (Ayrıntılar için [Dizin durum koduna](../extensibility/directory-status-code-enumerator.md) bakın).
+[in, out] Durum bayraklarını iade etmek için kaynak denetimi eklentisinin dizi yapısı (ayrıntılar [için bkz. Dizin durum](../extensibility/directory-status-code-enumerator.md) kodu).
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Sorgu başarılı oldu.|
-|SCC_E_OPNOTSUPPORTED|Kaynak kodu denetim sistemi bu işlemi desteklemiyor.|
-|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Özel olmayan hata.|
+|SCC_E_OPNOTSUPPORTED|Kaynak kodu denetim sistemi bu işlemi desteklemez.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya sorun sorun nedeniyle kaynak denetim sistemine erişilirken bir sorun vardı. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Belirtilmeyen hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- İşlevi, döndürülen diziyi aileden bit bit maskesi `SCC_DIRSTATUS` (bkz. [Dizin durum kodu](../extensibility/directory-status-code-enumerator.md)), verilen her dizin için bir giriş ile doldurur. Durum dizisi, çağıran tarafından ayrılır.
+ işlevi, dönüş dizisini aileden bit maskesiyle doldurur (bkz. Dizin durum kodu), verilen her dizin `SCC_DIRSTATUS` için bir giriş. [](../extensibility/directory-status-code-enumerator.md) Durum dizisi çağıranı tarafından ayrılır.
 
- Bu işlev, bir dizin yeniden adlandırılmadan önce, kaynağın karşılık gelen bir proje olup olmadığını sorgulayarak kaynak denetimi altında olup olmadığını denetlemek için kullanılır. Dizin, kaynak denetimi altında değilse, IDE kullanıcıya uygun bir uyarı verebilir.
+ IDE, bir dizin yeniden adlandırılamadan önce bu işlevi kullanarak ilgili projeye sahip olup olmadığını sorgular ve dizinin kaynak denetimi altında olup olmadığını kontrol edin. Dizin kaynak denetimi altında yoksa, IDE kullanıcıya doğru uyarıyı sağlar.
 
 > [!NOTE]
-> Bir kaynak denetimi eklentisi bir veya daha fazla durum değeri uygulamamı seçerse, uygulanmayan bitler sıfır olarak ayarlanmalıdır.
+> Kaynak denetimi eklentisi durum değerlerinden birini veya daha fazlasını uygulamamayı seçerse, uygulanmamış bitler sıfır olarak ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
