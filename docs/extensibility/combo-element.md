@@ -3,7 +3,7 @@ title: Birleşik öğe öğesi | Microsoft Docs
 description: 'Combo öğesi, Birleşik giriş kutusunda görünen komutları tanımlar. Dört tür vardır: DropDownCombo, DynamicCombo, IndexCombo ve MRUCombo.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Combos element (VSCT XML schema)
 - VSCT XML schema elements, Combos
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e4a4895997e5c7511c694511000f7a0ac671db2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 431d68b6e545506f5fc90cc5a98a52dd4f1c33ad
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089751"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904961"
 ---
 # <a name="combo-element"></a>Combo öğesi
 Birleşik giriş kutusunda görünen komutları tanımlar. Aşağıda gösterildiği gibi dört tür Birleşik giriş kutusu vardır: DropDownCombo, DynamicCombo, IndexCombo ve MRUCombo.

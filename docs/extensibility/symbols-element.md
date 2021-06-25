@@ -3,7 +3,7 @@ title: Symbols öğesi | Microsoft Docs
 description: Symbols öğesi, diğer VSCT öğeleri tarafından kullanılan GUID 'Leri ve kimlikleri tanımlar. Bu makale bir örnek içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Symbols element (VSCT XML schema)
 - VSCT XML schema elements, Symbols
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a013bbe438d1e4dd1f6b5149dcb7da78835fd09
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b593f353714f2fbb6f5b726fa2bbc0da449043ea
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056057"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901740"
 ---
 # <a name="symbols-element"></a>Symbols Öğesi
 Diğer VSCT öğeleri tarafından kullanılan GUID 'Leri ve kimlikleri tanımlar. Yönetilmeyen kod için bu bilgiler genellikle [extern öğesi](../extensibility/extern-element.md)tarafından belirtilen başlık dosyalarından gelir. Yönetilen kod, bu bilgileri tanımlamak için semboller öğesinin alt öğelerini kullanır.

@@ -1,9 +1,9 @@
 ---
-title: Program denetimi | Microsoft Docs
-description: Visual Studio hata ayıklamada, iş parçacıklarını yürütme, Adımlama, devam ettirme ve askıya alma/sürdürme gibi program düzeyinde oluşan yordamlar hakkında bilgi edinin.
+title: Program Denetimi | Microsoft Docs
+description: İş parçacıklarını yürütme Visual Studio adımlama, devam etme ve askıya alma/devam etme gibi program düzeyinde oluşan hata ayıklama yordamları hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], control of execution
 ms.assetid: 6be80904-e66c-4cae-8891-1113b799fb01
@@ -12,41 +12,41 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2d869094eff3713a3c9e7ec63a8003bb12a018c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7b2946309c72fbdddf2794c1da1e773e9a529368
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094685"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900725"
 ---
 # <a name="program-control"></a>Program denetimi
-Visual Studio Hata ayıklamasında, aşağıdaki Adımlama ve devam etme yordamlarının hepsi program düzeyinde oluşur:
+Hata Visual Studio, aşağıdaki adımlama ve devam eden yordamların hepsi program düzeyinde gerçekleşir:
 
-- Sonraki ifadeyi ayarlama, diğer bir deyişle, bilgisayarınızı belirli bir çerçeve ortamında yürütülecek sonraki yönergeye ayarlama
+- Sonraki deyimi, yani bilgisayarınızı belirli bir çerçeve ortamında yürütülecek sonraki yönergeye ayarlama
 
-- Yürütme, diğer bir deyişle, Adımlama modundan çıkmadan devam ediyor
+- Yürütme, yani adımlama modundan çıkmak için devam ediyor
 
-- Sonraki yönergeye adımla
+- Sonraki yönergeye adımlama
 
-- Geçerli Adımlama moduna devam etme
+- Geçerli adımlama moduna devam edin
 
 - Programın içerdiği iş parçacıklarını askıya alma
 
-- Programın içerdiği iş parçacıklarını sürdürme
+- Programın içerdiği iş parçacıklarını devam ediyor
 
 > [!NOTE]
-> Çağrı yığınını görüntülemek iş parçacığı düzeyinde uygulanır. Bir iş parçacığının çağrı yığınını görüntülerken çerçeve bilgilerini numaralandırmak için, [IEnumDebugFrameInfo2](../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminin tüm yöntemlerini uygulamanız gerekir.
+> Çağrı yığınını görüntüleme iş parçacığı düzeyinde uygulanır. Bir iş parçacığı için çağrı yığınını görüntülerken çerçeve bilgilerini numaralandırarak [IEnumDebugFrameInfo2](../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminin tüm yöntemlerini uygulamalısiniz.
 
 ## <a name="methods-of-program-control"></a>Program denetimi yöntemleri
- Aşağıdaki tabloda, en düşük düzeyde işlevsel hata ayıklama altyapısı (DE) ve yürütme denetimi için uygulanması gereken [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) yöntemleri gösterilmektedir.
+ Aşağıdaki tabloda, en az işlevsel hata ayıklama altyapısı (DE) ve yürütme denetimi için uygulanması gereken [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) yöntemleri gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)|Bir programın içerdiği tüm iş parçacıklarını durdurulmuş bir durumdan çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
-|[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)|Bir programın içerdiği tüm iş parçacıklarını durdurulmuş bir durumdan çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
-|[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md)|Verilen iş parçacığında bir adım gerçekleştirir. Programın içerdiği tüm diğer iş parçacıklarını çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
+|[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)|Bir program tarafından bulunan tüm iş parçacıklarını durdurulmuş durumdan çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
+|[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)|Bir program tarafından bulunan tüm iş parçacıklarını durdurulmuş durumdan çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
+|[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md)|Verilen iş parçacığında bir adım gerçekleştirir. Programın içerdiği diğer tüm iş parçacıklarını çalıştırmaya devam eder. Yürütme denetimi için gereklidir.|
 
- Çok iş parçacıklı programlar için, [IDebugProgram2:: EnumThreads](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) yöntemini ve [IEnumDebugThreads2](../../extensibility/debugger/reference/ienumdebugthreads2.md) arabiriminin tüm yöntemlerini de uygulamalısınız.
+ Çok iş parçacıklı programlar için [IDebugProgram2::EnumThreads](../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) yöntemini ve [IEnumDebugThreads2](../../extensibility/debugger/reference/ienumdebugthreads2.md) arabiriminin tüm yöntemlerini de uygulamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yürütme denetimi ve durum değerlendirmesi](../../extensibility/debugger/execution-control-and-state-evaluation.md)

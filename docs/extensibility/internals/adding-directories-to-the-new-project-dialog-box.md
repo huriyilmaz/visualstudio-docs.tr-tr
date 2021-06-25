@@ -1,9 +1,9 @@
 ---
-title: Yeni proje Iletişim kutusuna dizin ekleme | Microsoft Docs
-description: Yeni proje türleri oluşturabilmeniz ve bunları şablon olarak kullanmak üzere görüntüleyebilmeniz için Visual Studio 'daki yeni proje iletişim kutusuna dizin eklemeyi öğrenin.
+title: Yeni Proje İletişim Kutusuna Dizin Ekleme | Microsoft Docs
+description: Yeni proje türleri oluşturmak ve bunları şablon olarak kullanmak üzere görüntülemek için Visual Studio'da Yeni Proje iletişim kutusuna dizinler ekleme hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - New Project dialog box, extending
 ms.assetid: 53b328f5-20bb-49a3-bf9e-1818f4fbdf50
@@ -12,21 +12,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed90ddec0fe8c6cf1941f7e272552882107763a7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 44554c8bd7b758f1bf191d1a4bef9ba07941191d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079117"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901844"
 ---
-# <a name="add-directories-to-the-new-project-dialog-box"></a>Yeni proje iletişim kutusuna dizin ekleme
-Yeni proje türleri oluşturduğunuzda, yeni **Proje** iletişim kutusunda şablon olarak kullanmak üzere yeni bir dizin de kaydedebilirsiniz. Aşağıdaki kod örneğinde, düğüm olarak da bilinen yeni bir dizinin nasıl kaydedileceği açıklanmaktadır. Örnekte, VSPackage, *CLSID_Package* tarafından kullanıma sunulan şablonlar kaydedilir. Sonuç olarak, **Yeni proje** iletişim kutusunun sol tarafı, eklenen düğümü *Folder_Label_ResID* kaynak tarafından belirlenen bir adla birlikte sunar. Bu kaynak VSPackage uydu DLL 'sinden yüklenir.
+# <a name="add-directories-to-the-new-project-dialog-box"></a>Yeni Proje iletişim kutusuna dizin ekleme
+Yeni proje türleri oluştururken, bunları şablon olarak kullanmak üzere görüntülemek için **Yeni** Proje iletişim kutusuna yeni bir dizin de kaydedebilirsiniz. Aşağıdaki kod örneğinde, düğüm olarak da bilinen yeni bir dizinin nasıl kayded silindiği açıklanır. Örnekte VSPackage tarafından CLSID_Package *şablonları* kaydedilir. Sonuç olarak, Yeni Proje iletişim **kutusunun sol** tarafında eklenen düğüm, kaynak tarafından belirlenen bir *adla Folder_Label_ResID* sunar. Bu kaynak VSPackage uydu DLL'lerinden yüklenir.
 
- **Klasör** değeri, *Folder_Label_ResID* düğümünün görüntülendiği bir klasörün GUID 'sini temsil eder. Örnekte GUID, **Yeni proje** Iletişim kutusunun **Proje türleri** bölmesinde **diğer projeler** klasörünü temsil eder. **Diğer projeler** değeri yoksa, etiket en üst düzeyde konumlandırılır.
+ Klasör **değeri,** Folder_Label_ResID düğümünün görüntü *Folder_Label_ResID* GUID değerini temsil eder. Örnekte GUID, Yeni Proje iletişim **kutusunun Proje** Türleri **bölmesindeki** Diğer Projeler **klasörünü temsil** eder. Diğer **Projeler değeri** yoksa etiket en üst düzeyde konumlandı.
 
- `TemplatesDir`Değer, proje şablonlarını içeren dizinin tam yolunu belirtir. Bu dosyalar, klonlanacak *. vsz* dosyası ya da tipik şablon dosyaları olabilir.
+ `TemplatesDir`değeri, proje şablonlarını içeren dizinin tam yolunu belirtir. Bu dosyalar kopyalanan *.vsz* dosyaları veya tipik şablon dosyaları olabilir.
 
- Belirtirseniz `TemplatesLocalizedSubDir` , `TemplatesDir` yerelleştirilmiş şablonları tutan öğesinin alt dizinini isimeden bir DIZENIN kaynak kimliği olmalıdır. , [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Varsa, bir uydu dll 'sinden dize kaynağını yükler, her uydu dll farklı bir alt dizin adı içerebilir. `SortPriority`Değer bir sıralama önceliği belirtir.
+ belirtirsanız, yerelleştirilmiş şablonları tutan alt dizinini ad alan `TemplatesLocalizedSubDir` bir `TemplatesDir` dizenin kaynak kimliği olmalıdır. Varsa, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir uydu DLL'den dize kaynağını yükleyemediklerinden, her uydu DLL farklı bir alt dizin adı içerebilir. değeri `SortPriority` bir sıralama önceliğini belirtir.
 
 ```
 NoRemove NewProjectTemplates
@@ -48,6 +48,6 @@ NoRemove NewProjectTemplates
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje ve öğe şablonlarını Kaydet](../../extensibility/internals/registering-project-and-item-templates.md)
-- [Yeni öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
-- [Yeni öğe Ekle iletişim kutusuna dizin ekleme](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)
+- [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
+- [Yeni Öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [Yeni Öğe Ekle iletişim kutusuna dizin ekleme](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)

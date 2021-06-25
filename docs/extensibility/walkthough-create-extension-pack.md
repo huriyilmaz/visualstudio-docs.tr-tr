@@ -1,9 +1,9 @@
 ---
 title: Uzantı Paketi Oluşturma
-description: Uzantı paketi öğe şablonuyla bir uzantı paketi oluşturmayı öğrenin
+description: Uzantı Paketi Öğe Şablonu ile Uzantı Paketi oluşturma hakkında bilgi
 ms.custom: SEO-VS-2020
 ms.date: 07/27/2018
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: 5388EEBA-211D-4114-8CD9-70C899919F7E
@@ -12,32 +12,32 @@ ms.author: lerich
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: 57b447be3ee411b737c1aea5b0a4be5ef966c8c6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 213e3e71503ebea8074594bbc88a06980e3e64b4
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062154"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905143"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>İzlenecek yol: Uzantı Paketi Oluşturma
 
-Uzantı paketi, birlikte yüklenebilen bir uzantılar kümesidir. Uzantı paketleri, sık kullandığınız uzantıları diğer kullanıcılarla kolayca paylaşmanıza veya belirli bir senaryo için bir dizi uzantıyı birlikte paketlemenize olanak tanır.
+Uzantı Paketi, birlikte yüklen kolay bir uzantı kümesidir. Uzantı Paketleri, sık kullanılan uzantılarınızı diğer kullanıcılarla kolayca paylaşmanıza veya belirli bir senaryo için bir uzantı kümesi paketlediğinize olanak sağlar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio 2015 ' den başlayarak Visual Studio SDK, Visual Studio Kurulumu 'nda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+2015 Visual Studio başlayarak, Visual Studio SDK,kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
-Uzantı paketi özelliği Visual Studio 15,8 Preview 2 ' den itibaren kullanılabilir.
+Uzantı Paketi özelliği, Visual Studio 15.8 Preview 2'den başlayarak kullanılabilir.
 
-## <a name="create-an-extension-with-an-extension-pack-item-template"></a>Uzantı paketi öğe şablonuyla uzantı oluşturma
+## <a name="create-an-extension-with-an-extension-pack-item-template"></a>Uzantı Paketi öğe şablonuyla uzantı oluşturma
 
-Uzantı paketi öğe şablonu, birlikte yüklenebilen uzantılar kümesine sahip bir uzantı paketi oluşturur.
+Uzantı Paketi öğe şablonu, birlikte yüklen bir dizi uzantıya sahip bir Uzantı Paketi oluşturur.
 
-1. **Yeni proje** iletişim kutusunda, "VSIX" araması yapın ve **VSIX projesi**' ni seçin. **Proje adı** Için "test Uzantı paketi" yazın. **Oluştur**’u seçin.
+1. Yeni Proje **iletişim kutusunda** "vsix" ifadesini arayın ve **VSIX Projesi'yi seçin.** Proje **adı için**"Test Uzantısı Paketi" yazın. **Oluştur**’u seçin.
 
-2. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Visual C# **genişletilebilirlik** düğümüne gidin ve **Uzantı paketi**' ni seçin. Varsayılan dosya adını (ExtensionPack1. cs) bırakın.
+2. Giriş **Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin.** Visual C# **Genişletilebilirlik düğümüne gidin ve** Uzantı **Paketi'ne gidin.** Varsayılan dosya adını (ExtensionPack1.cs) bırakın.
 
-3. Aşağıdaki kodu içeren ExtensionPack1. vsext dosyası eklenir
+3. Aşağıdaki kodu içeren ExtensionPack1.vsext dosyası eklendi
 
    ```json
    {
@@ -58,40 +58,40 @@ Uzantı paketi öğe şablonu, birlikte yüklenebilen uzantılar kümesine sahip
    }
    ```
 
-4. Uzantı paketine dahil edilecek uzantının valtıd 'si [Visual Studio Market](https://marketplace.visualstudio.com/)bulunabilir. Dahil etmek istediğiniz uzantıyı bulun ve **kopya kimliği**' ne tıklayın. Yukarıdaki dosyadaki var olan **Valtıd** 'yi güncelleştirebilir veya listeye başka bir uzantı ekleyebilirsiniz.
+4. Uzantı Paketi'ne dahil etmek için uzantının vsixid'leri [Visual Studio Market.](https://marketplace.visualstudio.com/) Dahil etmek istediğiniz uzantıyı bulun ve Kimliği **Kopyala'ya tıklayın.** Yukarıdaki dosyada var olan **vsixId'yi** güncelleştirebilirsiniz veya listeye başka bir uzantı ekleyebilirsiniz.
 
-    ![Marketten Valtıd kopyalama](media/vsixid-marketplace.png)
+    ![Marketten VsixId kopyalama](media/vsixid-marketplace.png)
 
-5. Projeyi derleyin ve uzantınızı Market 'e yükleyin. Bkz. [Visual Studio uzantısı yayımlama](../extensibility/walkthrough-publishing-a-visual-studio-extension.md).
+5. Projeyi derleme ve uzantınızı Market'e yükleme. Bkz. [Visual Studio yayımlama.](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)
 
 > [!NOTE]
-> Bir uzantı paketi yalnızca [Visual Studio Market](https://marketplace.visualstudio.com/) veya [özel galeride](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md)bulunan uzantıları yükleyebilir.
+> Uzantı paketi yalnızca özel galeride veya Özel galeride [Visual Studio Market](https://marketplace.visualstudio.com/) [yükleyebilir.](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md)
 
-## <a name="install-the-extension-pack-from-the-visual-studio-marketplace"></a>Visual Studio Market uzantı paketini yükler
+## <a name="install-the-extension-pack-from-the-visual-studio-marketplace"></a>Uzantı Paketini dosyadan Visual Studio Market
 
-Artık uzantı yayımlandığına göre, Visual Studio 'Ya yükleyip test edin.
+Artık uzantı yayımlanır ve uzantıyı Visual Studio ve orada test sınayın.
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio 'da, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
+1. Bu Visual Studio Araçlar menüsünde **Uzantılar** ve **Güncelleştirmeler'e tıklayın.**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Visual Studio 'da, **Uzantılar** menüsünde, **yönetilen uzantılar**' a tıklayın.
+1. Bu Visual Studio, **Uzantılar menüsünde Yönetilen** Uzantılar'a **tıklayın.**
 
 ::: moniker-end
 
-2. **Çevrimiçi** ' e tıklayın ve ardından "test Uzantı paketi" ni arayın.
+2. **Çevrimiçi'ne** tıklayın ve "Test Uzantısı Paketi" araması yapabilirsiniz.
 
-3. **İndir**’e tıklayın. Uzantı ve uzantı paketine dahil olan uzantıların listesi, daha sonra yüklenmek üzere zamanlanır.
+3. **İndir**’e tıklayın. Uzantı paketine dahil edilen uzantı ve uzantı listesi daha sonra yüklenmek üzere zamanlanmış olur.
 
-4. **Uzantıları Yönet** iletişim kutusunun örnek Uzantı paketi indirme görünümü aşağıda verilmiştir. Uzantı paketine dahil edilen uzantılardan yalnızca bazılarını yüklemeyi tercih ediyorsanız, ' ın **yüklenmek üzere zamanlanan** uzantı listesini değiştirebilirsiniz.
+4. Uzantıları Yönet iletişim kutusunun örnek bir Uzantı Paketi **indirme görünümü aşağıda verilmiştir.** Uzantı paketine dahil edilen uzantıların yalnızca bir listesini yüklemek isterseniz, Zamanlanmış Yükleme'deki uzantı **listesini değiştirebilirsiniz.**
 
-    ![Uzantı paketini Market 'ten indirin](media/vside-extensionpack.png)
+    ![Market'te Uzantı Paketi'ne indirme](media/vside-extensionpack.png)
 
-5. Yüklemeyi gerçekleştirmek için Visual Studio 'nun tüm örneklerini kapatın.
+5. Yükleme işlemini tamamlamak için tüm örnek örneklerini Visual Studio.
 
 ## <a name="remove-the-extension"></a>Uzantıyı kaldırma
 
@@ -99,16 +99,16 @@ Uzantıyı bilgisayarınızdan kaldırmak için:
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio 'da, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' e tıklayın.
+1. Bu Visual Studio Araçlar menüsünde **Uzantılar** ve **Güncelleştirmeler'e tıklayın.**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Visual Studio 'da, **Uzantılar** menüsünde, **yönetilen uzantılar**' a tıklayın.
+1. Bu Visual Studio, **Uzantılar menüsünde Yönetilen** Uzantılar'a **tıklayın.**
 
 ::: moniker-end
 
-2. **Test Uzantı paketi** ' ni seçin ve ardından **Kaldır**' a tıklayın. Uzantı paketinde bulunan uzantı ve uzantı listesi, kaldırma işlemi için zamanlanır.
+2. Uzantı **Paketini Sına'yı seçin** ve ardından Kaldır'a **tıklayın.** Uzantı ve Uzantı Paketi'ne dahil edilen uzantıların listesi daha sonra kaldırılmak üzere zamanlanmış olur.
 
-3. Kaldırma işlemini gerçekleştirmek için Visual Studio 'nun tüm örneklerini kapatın.
+3. Kaldırma işlemini tamamlamak için tüm örnek örneklerini Visual Studio.

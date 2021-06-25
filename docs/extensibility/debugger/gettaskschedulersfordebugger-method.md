@@ -1,8 +1,8 @@
 ---
-description: Şu anda etkin olan tüm System. Threading. Tasks. TaskScheduler nesnelerinin dizisini alır.
-title: GetTaskSchedulersForDebugger yöntemi | Microsoft Docs
+description: Şu anda etkin olan tüm System.Threading.Tasks.TaskScheduler nesnelerini içeren bir diziyi döndürür.
+title: GetTaskSchedulersForDebugger Metodu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - GetTaskSchedulersForDebugger method, TaskScheduler class [.NET Framework debug engines]
 ms.assetid: 58aa236a-5ab8-4695-b303-89dffdbcd946
@@ -11,21 +11,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d024e44dee8e7513d862e3d299c2ed2b9e53cd5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58cb913f5dbc729c297de8a34aa5dd4c3c99b48a
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054861"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900921"
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger Metodu
-Şu anda etkin olan tüm nesnelerin bir dizisini alır <xref:System.Threading.Tasks.TaskScheduler> .
+Şu anda etkin olan tüm <xref:System.Threading.Tasks.TaskScheduler> nesnelerin dizisini döndürür.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
+ **Derleme:** mscorlib *(mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +34,10 @@ ms.locfileid: "105054861"
 ```
 
 ## <a name="return-value"></a>Döndürülen değer
- <xref:System.Threading.Tasks.TaskScheduler>Bu, şu anda etkin olan tüm nesneler dizisi <xref:System.AppDomain> .
+ Şu anda bu <xref:System.Threading.Tasks.TaskScheduler> içinde etkin olan tüm nesnelerin <xref:System.AppDomain> dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem iş parçacığı açısından güvenli değildir ve diğer örnekleri ile aynı anda kullanmamalısınız <xref:System.Threading.Tasks.TaskScheduler> . Bu yöntemi hata ayıklayıcı 'dan yalnızca hata ayıklayıcı diğer tüm iş parçacıklarını askıya aldığı zaman çağırın.
+ Bu yöntem iş parçacığı güvenli değildir ve bunu diğer örnekleriyle eşzamanlı olarak kullanmamalı. <xref:System.Threading.Tasks.TaskScheduler> Yalnızca hata ayıklayıcı diğer tüm iş parçacıklarını askıya aldı olduğunda bir hata ayıklayıcıdan bu yöntemi çağır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md)

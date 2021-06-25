@@ -1,9 +1,9 @@
 ---
-title: Bir olaya abone olma | Microsoft Docs
-description: Visual Studio SDK 'da çalışan bir belge tablosundaki olaylara yanıt veren bir araç penceresi oluşturmayı öğrenin.
+title: Bir Olay |'a abone olmak Microsoft Docs
+description: Visual Studio SDK'sı içinde çalışan bir belge tablosunda olaylara yanıt veren bir araç penceresi Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - running document table (RDT), responding to events
 - running document table (RDT), subscribing to events
@@ -13,30 +13,30 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a887e7d50f14c76cf993eae64b0efd88dee2181
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 01271016eed9a4a157b333a2f0435589b0a028d5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056291"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899400"
 ---
 # <a name="subscribing-to-an-event"></a>Bir Olaya Abone Olma
-Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren bir araç penceresinin nasıl oluşturulacağını açıklar. Bir araç penceresi, uygulayan bir kullanıcı denetimini barındırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>Yöntemi, arabirimini olaylara bağlar.
+Bu kılavuzda, çalışan bir belge tablosunda (RDT) olaylara yanıt veren bir araç penceresi oluşturma açıklanır. Araç penceresi, uygulayan bir kullanıcı denetimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> barındırıyor. yöntemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> arabirimini olaylara bağlar.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+ 2015'Visual Studio başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Bu, kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="subscribing-to-rdt-events"></a>RDT olaylarına abone olma
+## <a name="subscribing-to-rdt-events"></a>RDT Olaylarını Abone
 
-#### <a name="to-create-an-extension-with-a-tool-window"></a>Bir araç penceresi ile uzantı oluşturmak için
+#### <a name="to-create-an-extension-with-a-tool-window"></a>Araç penceresiyle uzantı oluşturmak için
 
-1. VSıX şablonunu kullanarak **rdmpl** adlı bir proje oluşturun ve **RDTExplorerWindow** adlı özel bir araç penceresi öğesi şablonu ekleyin.
+1. VSIX şablonunu **kullanarak RDTExplorer** adlı bir proje oluşturun ve **RDTExplorerWindow** adlı özel bir araç pencere öğesi şablonu ekleyin.
 
-     Araç penceresiyle uzantı oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi Ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
+     Araç penceresiyle uzantı oluşturma hakkında daha fazla bilgi için bkz. [Araç Penceresi ile Uzantı Oluşturma.](../extensibility/creating-an-extension-with-a-tool-window.md)
 
-#### <a name="to-subscribe-to-rdt-events"></a>RDT olaylarına abone olmak için
+#### <a name="to-subscribe-to-rdt-events"></a>RDT olaylarını abone olmak için
 
-1. RDTExplorerWindowControl. xaml dosyasını açın ve adlı düğmeyi silin `button1` . Bir <xref:System.Windows.Forms.ListBox> denetim ekleyin ve varsayılan adı kabul edin. Grid öğesi şöyle görünmelidir:
+1. RDTExplorerWindowControl.xaml dosyasını açın ve adlı düğmeyi `button1` silin. Bir denetim <xref:System.Windows.Forms.ListBox> ekleyin ve varsayılan adı kabul et. Grid öğesi aşağıdaki gibi görünüyor olmalı:
 
     ```xml
     <Grid>
@@ -47,7 +47,7 @@ Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren 
     </Grid>
     ```
 
-2. Kod görünümünde RDTExplorerWindow. cs dosyasını açın. Aşağıdaki using yönergelerini dosyanın başlangıcına ekleyin.
+2. RDTExplorerWindow.cs dosyasını kod görünümünde açın. Aşağıdaki using yönergelerini dosyanın başlangıcına ekleyin.
 
     ```csharp
     using Microsoft.VisualStudio;
@@ -55,18 +55,18 @@ Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren 
     using Microsoft.VisualStudio.Shell.Interop;
     ```
 
-3. Sınıfı, `RDTExplorerWindow` sınıfından Türetmenin yanı sıra arabirimini de uyguladığı şekilde değiştirin <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> .
+3. `RDTExplorerWindow`sınıfını, sınıfından türetmenin yanı sıra <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> arabirimini uygulayan şekilde <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> değiştirir.
 
     ```csharp
     public class RDTExplorerWindow : ToolWindowPane, IVsRunningDocTableEvents
     {. . .}
     ```
 
-4. Uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> .
+4. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>uygulama.
 
-    - Arabirimini uygulayın. İmleci IVsRunningDocTableEvents adına yerleştirin. Sol kenar boşluğunda bir ampul görmeniz gerekir. Ampul sağ tarafındaki aşağı oka tıklayın ve **arabirim Uygula**' yı seçin.
+    - Arabirimini uygulama. İmleci IVsRunningDocTableEvents adına yerleştirin. Sol kenar boşluğunda bir ampul görüyor gerekir. Ampulün sağ yanındaki Aşağı oka tıklayın ve Arabirimi **uygulama'yı seçin.**
 
-5. Arabirimindeki her yöntemde `throw new NotImplementedException();` aşağıdaki satırı ile değiştirin:
+5. Arabirimde her yöntemde, satırı şu `throw new NotImplementedException();` şekilde değiştirin:
 
     ```csharp
     return VSConstants.S_OK;
@@ -78,9 +78,9 @@ Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren 
     private uint rdtCookie;
     ```
 
-     Bu, yöntemi tarafından döndürülen tanımlama bilgisini barındırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> .
+     Bu, yöntemi tarafından döndürülen tanımlama bilgisini <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> tutar.
 
-7. RDT olaylarına kaydolmak için RDTExplorerWindow 'un Initialize () yöntemini geçersiz kılın. Araç bölmesinde değil, her zaman ToolWindowPane Initialize () yönteminde Hizmetleri almalısınız.
+7. RDT olaylarına kaydolmak için RDTExplorerWindow'un Initialize() yöntemini geçersiz kılın. Hizmetleri her zaman oluşturucuda değil ToolWindowPane'ın Initialize() yönteminde almalıdır.
 
     ```csharp
     protected override void Initialize()
@@ -91,9 +91,9 @@ Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren 
     }
     ```
 
-     <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>Hizmet bir arabirim elde etmek için çağırılır <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>Yöntemi, RDT olaylarını <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> Bu durumda bir rdbir nesnesi olan bir nesneye bağlar.
+     Arabirim <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> elde etmek için hizmet <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> çağrılır. yöntemi, RDT olaylarını uygulayan bir nesneye bağlar. Bu <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> durumda RDTExplorer nesnesi.
 
-8. RDTExplorerWindow 'un Dispose () yöntemini güncelleştirin.
+8. RDTExplorerWindow'un Dispose() yöntemini güncelleştirin.
 
     ```csharp
     protected override void Dispose(bool disposing)
@@ -107,9 +107,9 @@ Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren 
     }
     ```
 
-     <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A>Yöntemi, `RDTExplorer` ve RDT olay bildirimi arasındaki bağlantıyı siler.
+     yöntemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A> ile RDT olay bildirimi `RDTExplorer` arasındaki bağlantıyı siler.
 
-9. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A>Deyimden hemen önce, işleyicinin gövdesine aşağıdaki satırı ekleyin `return` .
+9. Aşağıdaki satırı, deyiminden hemen önce <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A> işleyicinin gövdesine `return` ekleyin.
 
     ```csharp
     public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
@@ -119,7 +119,7 @@ Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren 
     }
     ```
 
-10. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A>İşleyicinin gövdesine ve liste kutusunda görmek istediğiniz diğer olaylara benzer bir satır ekleyin.
+10. İşleyicinin gövdesine ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A> liste kutusunda görmek istediğiniz diğer olaylara benzer bir satır ekleyin.
 
     ```csharp
     public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
@@ -129,12 +129,12 @@ Bu izlenecek yol, çalışan bir belge tablosundaki (RDT) olaylara yanıt veren 
     }
     ```
 
-11. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio deneysel örneği görüntülenir.
+11. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel Visual Studio örnek görüntülenir.
 
-12. **RDTExplorerWindow** (**Görünüm/diğer pencereler/RDTExplorerWindow**) öğesini açın.
+12. **RDTExplorerWindow** (**Görünüm / Diğer Windows / RDTExplorerWindow ) açın.**
 
-     **RDTExplorerWindow** penceresi boş bir olay listesi ile açılır.
+     **RDTExplorerWindow penceresi** boş bir olay listesiyle açılır.
 
 13. Bir çözüm açın veya oluşturun.
 
-     `OnBeforeLastDocument`Ve `OnAfterFirstDocument` olayları harekete geçirildiğinde, olay listesinde her bir olayın bildirimi görünür.
+     Ve `OnBeforeLastDocument` olayları `OnAfterFirstDocument` başlatıldıklarında, olay listesinde her bir olayın bildirimi görüntülenir.

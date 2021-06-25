@@ -3,7 +3,7 @@ title: Eski dil hizmetinde gizli metin desteği sağlama
 description: Düzenleyici denetimli veya istemci denetimli gizli metin bölgeleri ekleyerek eski dil hizmetinde gizli metin desteği sağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - hidden text, supporting
 - editors [Visual Studio SDK], hidden text
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bb6d9c3c4f01c0e84c6ab437e352a86bf00448f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 31c62f50cfff8662c543d24dceabdb429a9b9b05
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078740"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901792"
 ---
 # <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>Nasıl yapılır: eski dil hizmetinde gizli metin desteği sağlama
 Ana hat bölgelerine ek olarak gizli metin alanları da oluşturabilirsiniz. Gizli metin bölgeleri, istemci denetimli veya düzenleyiciden denetlenebilir ve bir metin bölgesini tamamen gizlemek için kullanılır. Düzenleyici, gizli bir bölgeyi yatay çizgiler olarak görüntüler. Bunun bir örneği, HTML düzenleyicisinde **yalnızca betik** görünümüdür.

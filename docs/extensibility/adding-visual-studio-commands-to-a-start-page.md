@@ -1,9 +1,9 @@
 ---
-title: Başlangıç sayfasına Visual Studio komutları ekleme | Microsoft Docs
-description: Visual Studio komutlarını Visual Studio 'daki özel bir başlangıç sayfasından XAML nesnelerine bağlamak için farklı yollar hakkında bilgi edinin.
+title: Başlangıç Visual Studio Komutlarını Ekleme | Microsoft Docs
+description: Visual Studio'de özel bir Başlangıç Sayfasındaki XAML nesnelerine farklı komutlar bağlamanın Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - start page commands
 - vs:VSCommands
@@ -14,35 +14,35 @@ manager: jmartens
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 4e2ec238d3cb8c2e7d843018fc45e97207c6d5f4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0bf0f9a3db21dd93b1a497731bca9142a4377acc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097532"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901519"
 ---
-# <a name="add-visual-studio-commands-to-a-start-page"></a>Başlangıç sayfasına Visual Studio komutları ekleme
+# <a name="add-visual-studio-commands-to-a-start-page"></a>Başlangıç Visual Studio komutlarını ekleme
 
-Özel bir başlangıç sayfası oluşturduğunuzda buna Visual Studio komutları ekleyebilirsiniz. Bu belgede, Visual Studio komutlarını bir başlangıç sayfasındaki XAML nesnelerine bağlamak için farklı yollar açıklanmaktadır.
+Özel bir Başlangıç Sayfası 7.000.000 Visual Studio ekleyebilirsiniz. Bu belgede, başlangıç komutlarını Bir Başlangıç Visual Studio XAML nesnelerine bağlamanın farklı yolları ele ele alır.
 
-XAML komutları hakkında daha fazla bilgi için bkz. [komut verme genel bakış](/dotnet/framework/wpf/advanced/commanding-overview)
+XAML'de komutlar hakkında daha fazla bilgi için bkz. [Komuta genel bakış](/dotnet/framework/wpf/advanced/commanding-overview)
 
-## <a name="add-commands-from-the-command-well"></a>Komut kutusu 'ndan komutlar ekleyin
+## <a name="add-commands-from-the-command-well"></a>Komut well komutundan komut ekleme
 
-[Özel başlangıç sayfası oluştur](../extensibility/creating-a-custom-start-page.md) bölümünde oluşturulan başlangıç sayfası, <xref:Microsoft.VisualStudio.PlatformUI?displayProperty=fullName> ve <xref:Microsoft.VisualStudio.Shell?displayProperty=fullName> ad alanlarını aşağıdaki şekilde ekledi.
+Özel Başlangıç Sayfası Oluşturma [içinde oluşturulan Başlangıç Sayfası,](../extensibility/creating-a-custom-start-page.md) ve ad <xref:Microsoft.VisualStudio.PlatformUI?displayProperty=fullName> alanlarını aşağıdaki gibi <xref:Microsoft.VisualStudio.Shell?displayProperty=fullName> ekledi.
 
 ```xml
 xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"
 xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
 ```
 
-Derlemeden Microsoft. VisualStudio. Shell için başka bir ad alanı ekleyin *Microsoft.VisualStudio.Shell.Immutable.11.0.dll*. (Projenizde bu derlemeye bir başvuru eklemeniz gerekebilir.)
+derlemesi'nden Microsoft.VisualStudio.Shell için başka bir ad *alanıMicrosoft.VisualStudio.Shell.Immutable.11.0.dll.* (Projenize bu derlemeye bir başvuru eklemeniz gerekir.)
 
 ```xml
 xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.Immutable.11.0"
 ```
 
-Diğer adı kullanarak, `vscom:` denetimin özelliğini olarak ayarlayarak SAYFADAKI xaml denetimlerine Visual Studio komutları bağlayabilirsiniz <xref:System.Windows.Controls.Primitives.ButtonBase.Command%2A> `vscom:VSCommands.ExecuteCommand` . Ardından, <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> Aşağıdaki örnekte gösterildiği gibi, özelliğini yürütülecek komutun adı olarak ayarlayabilirsiniz.
+Denetimin özelliğini olarak ayarerek Visual Studio XAML denetimlerine bağlamak için `vscom:` <xref:System.Windows.Controls.Primitives.ButtonBase.Command%2A> diğer adını `vscom:VSCommands.ExecuteCommand` kullanabilirsiniz. Daha sonra <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> özelliğini, aşağıdaki örnekte gösterildiği gibi yürütülecek komutun adına göre ayarlayın.
 
 ```xml
 <Button Name="btnNewProj" Content="New Project"
@@ -52,11 +52,11 @@ Diğer adı kullanarak, `vscom:` denetimin özelliğini olarak ayarlayarak SAYFA
 ```
 
 > [!NOTE]
-> `x:`Xaml şemasına başvuran diğer ad, tüm komutların başlangıcında gereklidir.
+> `x:`XAML şemasına başvuran diğer ad, tüm komutların başında gereklidir.
 
- `Command`Özelliğin değerini **komut** penceresinden erişilebilen herhangi bir komut olarak ayarlayabilirsiniz. Kullanılabilir komutların listesi için bkz. [Visual Studio komut diğer adları](../ide/reference/visual-studio-command-aliases.md).
+ özelliğinin değerini, Komut `Command` penceresinden erişilebilen herhangi bir komut olarak **ayarlayın.** Kullanılabilir komutların listesi için bkz. [Visual Studio adları.](../ide/reference/visual-studio-command-aliases.md)
 
- Eklenecek komut ek bir parametre gerektiriyorsa, özelliğin değerine ekleyebilirsiniz `CommandParameter` . Aşağıdaki örnekte gösterildiği gibi, boşluk kullanarak komutlardan parametreleri ayırın.
+ Ekleme komutu ek bir parametre gerektiriyorsa, özelliğin değerine eklemek için bunu `CommandParameter` ebilirsiniz. Aşağıdaki örnekte gösterildiği gibi parametreleri boşluk kullanarak komutlardan ayırabilirsiniz.
 
 ```xml
 <Button Content="Web Search"
@@ -64,26 +64,26 @@ Diğer adı kullanarak, `vscom:` denetimin özelliğini olarak ayarlayarak SAYFA
         CommandParameter="View.WebBrowser www.bing.com" />
 ```
 
-### <a name="call-extensions-from-the-command-well"></a>Komut kutusu 'ndan uzantıları çağırma
- Diğer Visual Studio komutlarını çağırmak için kullanılan söz dizimini kullanarak kayıtlı VSPackages 'tan komut çağırabilirsiniz. Örneğin, yüklü bir VSPackage, **Görünüm** menüsüne bir **giriş sayfası** komutu eklerse, bu komutu olarak ayarlayarak çağırabilirsiniz `CommandParameter` `View.HomePage` .
+### <a name="call-extensions-from-the-command-well"></a>Komut well'den uzantıları çağırma
+ Kayıtlı VSPackage'lardan komutları, diğer uygulama komutları için kullanılan söz dizimlerini kullanarak Visual Studio çağırabilirsiniz. Örneğin, yüklü bir VSPackage Görünüm  menüsüne bir  Giriş Sayfası komutu eklerse, komutunu olarak ayarerek bu komutu `CommandParameter` `View.HomePage` çağırabilirsiniz.
 
 > [!NOTE]
-> VSPackage ile ilişkili bir komut çağırırsanız, komut çağrıldığında paketin yüklenmesi gerekir.
+> VSPackage ile ilişkili bir komutu çağırırsanız, komut çağrıldığında paketin yüklenmiş olması gerekir.
 
-## <a name="add-commands-from-assemblies"></a>Derlemelerden komut ekleyin
- Bir derlemeden bir komut çağırmak veya bir menü komutuyla ilişkilendirilmemiş VSPackage içindeki koda erişmek için, derleme için bir diğer ad oluşturmanız ve ardından diğer adı çağırmanız gerekir.
+## <a name="add-commands-from-assemblies"></a>Derlemelerden komut ekleme
+ Bir derlemeden komut çağırma veya bir menü komutuyla ilişkilendirilen bir VSPackage'daki koda erişmek için, derleme için bir diğer ad oluşturmanız ve ardından diğer adı çağırmalısınız.
 
-### <a name="to-call-a-command-from-an-assembly"></a>Derlemeden bir komut çağırmak için
+### <a name="to-call-a-command-from-an-assembly"></a>Bir derlemeden komut çağırma
 
 1. Çözümünüzde derlemeye bir başvuru ekleyin.
 
-2. Aşağıdaki örnekte gösterildiği gibi, *StartPage. xaml* dosyasının en üstünde, derleme için bir ad alanı yönergesi ekleyin.
+2. *StartPage.xaml* dosyasının en üstüne, aşağıdaki örnekte gösterildiği gibi derleme için bir ad alanı yönergesi ekleyin.
 
     ```xml
     xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"
     ```
 
-3. `Command`Aşağıdaki örnekte gösterildiği gibi BIR xaml nesnesinin özelliğini ayarlayarak komutunu çağırın.
+3. Aşağıdaki örnekte gösterildiği gibi bir XAML nesnesinin `Command` özelliğini ayarerek komutunu çağırma.
 
      Xaml
 
@@ -92,12 +92,12 @@ Diğer adı kullanarak, `vscom:` denetimin özelliğini olarak ayarlayarak SAYFA
     ```
 
 > [!NOTE]
-> Derlemenizi kopyalamanız ve sonra * \\ içine yapıştırmanız gerekir. {Visual Studio yükleme klasörü} \Common7\IDE\PrivateAssemblies \* , çağrılmadan önce yüklendiğinden emin olmak için.
+> Derlemenizi kopyalayıp *. \\ Çağrılmadan Visual Studio emin olmak için {Visual Studio yükleme klasörü}\Common7\IDE\PrivateAssemblies. \*
 
-## <a name="add-commands-with-the-dte-object"></a>DTE nesnesi ile komutlar ekleme
- DTE nesnesine, her ikisi de biçimlendirme ve kod içinde bir başlangıç sayfasından erişebilirsiniz.
+## <a name="add-commands-with-the-dte-object"></a>DTE nesnesiyle komut ekleme
+ DTE nesnesine hem işaretleme hem de kod ile bir Başlangıç Sayfasından erişebilirsiniz.
 
- Biçimlendirme ' de, nesneyi çağırmak için [bağlama Işaretleme uzantısı](/dotnet/framework/wpf/advanced/binding-markup-extension) sözdizimini kullanarak erişebilirsiniz <xref:EnvDTE.DTE> . Bu yaklaşımı, koleksiyonları döndüren Koleksiyonlar gibi basit özelliklere bağlamak için kullanabilirsiniz, ancak yöntemlere veya hizmetlere bağlayamazsınız. Aşağıdaki örnek, özelliğine bağlanan bir <xref:System.Windows.Controls.TextBlock> denetimi <xref:EnvDTE._DTE.Name%2A> ve <xref:System.Windows.Controls.ListBox> <xref:EnvDTE.Window.Caption%2A> özelliği tarafından döndürülen koleksiyonun özelliklerini numaralandırır <xref:EnvDTE._DTE.Windows%2A> .
+ İşaretlemede, nesneyi çağıran Bağlama İşaretleme [Uzantısı](/dotnet/framework/wpf/advanced/binding-markup-extension) söz dizimi kullanarak bu söz dizimlerine <xref:EnvDTE.DTE> erişebilirsiniz. Bu yaklaşımı, koleksiyonlar gibi basit özelliklere bağlamak için kullanabilirsiniz, ancak yöntemlere veya hizmetlere bağlanamaz. Aşağıdaki örnekte özelliğine bağlanan bir denetim ve özelliği tarafından döndürülen koleksiyonun özelliklerini listeleyen <xref:System.Windows.Controls.TextBlock> <xref:EnvDTE._DTE.Name%2A> bir denetim yer <xref:System.Windows.Controls.ListBox> <xref:EnvDTE.Window.Caption%2A> <xref:EnvDTE._DTE.Windows%2A> almaktadır.
 
 ```xml
 <TextBlock Text="{Binding Path=DTE.Name}" FontSize="12" HorizontalAlignment="Center"/>
@@ -110,8 +110,8 @@ Diğer adı kullanarak, `vscom:` denetimin özelliğini olarak ayarlayarak SAYFA
 </ListBox
 ```
 
- Bir örnek için bkz. [Izlenecek yol: Kullanıcı ayarlarını bir başlangıç sayfasına kaydetme](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md).
+ Bir örnek için [bkz. Adım adım: Kullanıcı ayarlarını Başlangıç Sayfasına kaydetme.](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlangıç sayfasına kullanıcı denetimi ekleme](../extensibility/adding-user-control-to-the-start-page.md)
+- [Başlangıç Sayfasına kullanıcı denetimi ekleme](../extensibility/adding-user-control-to-the-start-page.md)

@@ -3,7 +3,7 @@ title: VSCodeWindow nesnesi | Microsoft Docs
 description: Genellikle VsTextView nesnesi olan bir veya daha fazla metin görünümü içerebilen özelleşmiş belge pencereleri olan kod pencereleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - VSCodeWindow
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77839bf80f30de3177f647795ffb89aa3e103d58
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9803132605ee81c67785c8c0154861b26730ca5f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062427"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905338"
 ---
 # <a name="vscodewindow-object"></a>VSCodeWindow nesnesi
 Kod penceresi, genellikle nesnesini içeren bir veya daha fazla metin görünümü içerebilen özelleşmiş bir belge penceresidir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> .

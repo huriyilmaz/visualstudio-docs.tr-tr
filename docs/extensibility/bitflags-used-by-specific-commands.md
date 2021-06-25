@@ -3,7 +3,7 @@ title: Belirli komutlar tarafından kullanılan bitflags | Microsoft Docs
 description: Kaynak denetimi eklentisi API 'SI tarafından kullanılan ve bunları kullanan işlev tarafından düzenlenen bitflags hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, bitflags used by specific commands
 ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41f070d61e547724b3067a9f4a1980d658fc30be
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: be5915d96b574336d7091239275a2aaef456a7f3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097298"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899374"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>Belirli komutlar tarafından kullanılan bitflags
 Kaynak denetimi eklentisi API 'sindeki bir dizi işlevin davranışı tek bir değerde bir veya daha fazla bit ayarlanarak değiştirilebilir. Bu değerler bitflags olarak bilinir. Kaynak denetimi eklentisi API 'SI tarafından kullanılan çeşitli bitflags burada, bunları kullanan işleve göre gruplanmış olarak ayrıntılıdır.

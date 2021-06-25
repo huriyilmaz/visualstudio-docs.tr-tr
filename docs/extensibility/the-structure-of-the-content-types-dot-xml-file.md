@@ -1,9 +1,9 @@
 ---
-title: '[Content_types]. xml dosyasının yapısı | Microsoft Docs'
+title: '[Content_types] .xml dosyasının yapısı | Microsoft Docs'
 description: VSıX paketindeki içerik türleri hakkında bilgi içeren içerik türleri dosyasının yapısı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - content_types
 - content types
@@ -15,18 +15,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5dea58176269536ae7f0e5857c938c60f76c5c6b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 96d4d0eeea34300894674a2105d080e8a6abb607
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055901"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900427"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml Dosyasının Yapısı
-VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paketi yüklemek için [Content_Types]. xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.
+VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paketi yüklemek için [Content_Types] .xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.
 
 > [!NOTE]
-> Bu konu yalnızca VSıX paketlerinde kullanılan [Content_Type]. xml dosyaları için geçerli olsa da, [Content_Types]. xml dosya türü *Açık paketleme kuralları (OPC)* standardının bir parçasıdır. Daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data) .
+> Bu konu yalnızca VSıX paketlerinde kullanılan [Content_Type] .xml dosya için geçerli olsa da, [Content_Types] .xml dosya türü *Açık paketleme kuralları (OPC)* standardının bir parçasıdır. Daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data) .
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
  Aşağıdaki bölümlerde kök öğe ve öznitelikleri ve alt öğeleri açıklanır.
@@ -41,7 +41,7 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Xmlns`|(Gerekli.) Bu [Content_Types]. xml dosyası için kullanılan şemanın konumu.|
+|`Xmlns`|(Gerekli.) Bu [Content_Types] .xml dosyası için kullanılan şemanın konumu.|
 
 ### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe
 
@@ -85,8 +85,8 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Description
- Şu [Content_Types]. xml dosyası tipik bir VSıX paketini açıklamaktadır.
+### <a name="description"></a>Açıklama
+ Aşağıdaki [Content_Types] .xml dosyası tipik bir VSıX paketini açıklamaktadır.
 
 ### <a name="code"></a>Kod
 

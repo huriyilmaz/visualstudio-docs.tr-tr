@@ -3,7 +3,7 @@ title: Derleme için proje yapılandırması | Microsoft Docs
 description: Belirli bir çözüme yönelik çözüm yapılandırmalarının listesinin yeni bir proje türündeki çözüm konfigürasyonları iletişim kutusu tarafından nasıl yönetildiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], configuration for building
 - project configurations, building
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b817607f765626a6b63693e681306309512fdb7d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bf98698d3527220c4bc25cdf36132f0088ae4ea7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074450"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899936"
 ---
 # <a name="project-configuration-for-building"></a>Derleme için Proje Yapılandırması
 Belirli bir çözüme yönelik çözüm yapılandırmalarının listesi, çözüm yapılandırması iletişim kutusu tarafından yönetilir.

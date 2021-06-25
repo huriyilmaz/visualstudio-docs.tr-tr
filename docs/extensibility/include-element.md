@@ -1,9 +1,9 @@
 ---
-title: Include öğesi | Microsoft Docs
-description: Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konumlanan bir dosyayı belirtir.
+title: Include Öğesi | Microsoft Docs
+description: Include öğesi, geçerli dosyaya eklemek için sağlanan ekleme yolunda buluna bir dosya belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - Include
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd64f897dc2a089a2e94f5e0c53e3ef116f7b385
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d0005626c7fbb276775661a7cfb73d17f5e20d62
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082107"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899373"
 ---
 # <a name="include-element"></a>Include öğesi
-Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konumlanan bir dosyayı belirtir.  Tanımlanan tüm semboller ve türler, derlenen sonucun bir parçası olacak.
+Include öğesi, geçerli dosyaya eklemek için sağlanan ekleme yolunda buluna bir dosya belirtir.  Tanımlanan tüm semboller ve türler, derlenmiş sonucun bir parçası olur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,8 +38,8 @@ Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konu
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|değerini|Gereklidir. Üst bilgi dosyasının yolu:<br /><br /> href = "Stdidcmd. h"|
-|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Href|Gereklidir. Üst bilgi dosyasının yolu:<br /><br /> href="stdidcmd.h"|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu Öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -51,7 +51,7 @@ Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konu
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|Bir VSPackage 'ın IDE 'ye sağladığı komutları (menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage'ın IDE'ye sağladığı komutları (menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 
@@ -60,4 +60,4 @@ Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konu
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

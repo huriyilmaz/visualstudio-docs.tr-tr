@@ -3,7 +3,7 @@ title: Seçenekler ve Seçenekler sayfası | Microsoft Docs
 description: Bir VSPackage durumunu belirleyen seçeneklerin değerlerini değiştirmenize olanak sağlayan seçenek sayfaları için destek hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], managed package framework support
 - managed package framework, Tools Options pages support
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32bcb32c4fc80a5806c9007c3119a2ba3de62427
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: ea05e894c0bfca077f1256c35e6fbe5c58bc91ea
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106214518"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899894"
 ---
 # <a name="options-and-options-pages"></a>Seçenekler ve Seçenekler Sayfaları
 **Araçlar** menüsünde **Seçenekler** ' i tıklatmak **Seçenekler** iletişim kutusunu açar. Bu iletişim kutusundaki seçenekler topluca seçenek sayfaları olarak adlandırılır. Gezinti bölmesindeki ağaç denetimi seçenek kategorilerini içerir ve her kategorinin seçenek sayfaları vardır. Bir sayfa seçtiğinizde, seçenekleri sağ bölmede görünür. Bu sayfalar, VSPackage 'un durumunu belirten seçeneklerin değerlerini değiştirmenize olanak sağlar.

@@ -3,7 +3,7 @@ title: Çözüm Kullanıcı seçenekleri (. Suo) dosyası | Microsoft Docs
 description: İkili biçimde depolanan yapılandırılmış bir depolama dosyasında Kullanıcı başına çözüm seçeneklerini içeren çözüm Kullanıcı seçenekleri (. suo) dosyası hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - .suo files, VSPackages
 - suo files, VSPackages
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92e755053d3519212c27fd2567610baf189db309
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1a38eb865cf003f7a2f9bafde7b6e527ce24f2bd
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069367"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899621"
 ---
 # <a name="solution-user-options-suo-file"></a>Çözüm Kullanıcı Seçenekleri (.Suo) Dosyası
 Çözüm Kullanıcı seçenekleri (. suo) dosyası, Kullanıcı başına çözüm seçeneklerini içerir. Bu dosya kaynak kodu denetimine iade edilmelidir.

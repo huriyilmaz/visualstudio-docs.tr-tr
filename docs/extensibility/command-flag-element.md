@@ -3,7 +3,7 @@ title: Komut bayrağı öğesi | Microsoft Docs
 description: Komut bayrağı öğesi, üst öğesini değiştirir. Üst öğelerini ve alt öğelerini gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CommandFlag element (VSCT XML schema)
 - VSCT XML schema elements, CommandFlag
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f9f9db3d7a8146bd7b44cf779fd62fd75803d86
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6356fd02c8045aee9dc48ebc9d30a346159080bb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089647"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902039"
 ---
 # <a name="command-flag-eelement"></a>Komut bayrağı Eelement
 Üst öğesini değiştirir.
@@ -61,20 +61,20 @@ ms.locfileid: "105089647"
 |Resim|Yalnızca bir araç çubuğunda simge göster, ancak menüdeki metin. Hiçbir simge belirtilmemişse, bir araç çubuğunda tıklatılabilir boş bir boşluk gösterir.<br /><br /> Geçerli: `Button`|
 |PostExec|Komutu engellenmemiş hale getirir. Geliştirme ortamı, tüm ön işleme sorguları tamamlanana kadar yürütmeyi erteler.<br /><br /> Geçerli: `Button`|
 |RouteToDocs|Komut etkin belgeye yönlendirilir.<br /><br /> Geçerli: `Button`|
-|Yatay olarak|Bu bayrak ayarlandığında, Genişlik Birleşik giriş kutusunun en düşük genişliği olur ve araç çubuğunda yer varsa, Birleşik giriş kutusu kullanılabilir alanı dolduracak şekilde uzatılır. Bu yalnızca araç çubuğu yatay olarak yuvalanmışsa ve araç çubuğunda yalnızca bir açılan kutu bayrağını kullanıyorsa oluşur (bayrak ilk Birleşik giriş kutusu hariç tüm üzerinde yok sayılır).<br /><br /> Geçerli: `Combo`|
-|TextChanges|Komut veya menü metni, genellikle yöntemi aracılığıyla çalışma zamanında değiştirilebilir `QueryStatus` .<br /><br /> Geçerli: `Button` , `Menu`|
-|TextChangesButton|Geçerli: `Button`|
-|TextIsAnchorCommand|Bir menü denetleyicisi için, menünün metni varsayılan (tutturucu) komutundan alınır. Bir tutturucu komutu seçili veya eksik olan son komuttur. Bu bayrak ayarlanmamışsa, menü denetleyicisi kendi `MenuText` alanını kullanır. Ancak, menü denetleyicisine tıkladığınızda bu denetleyicideki son seçili komut hala etkinleştirilir.<br /><br /> Bu bayrağı bayrağıyla birleştirmeniz önerilir `TextChanges` .<br /><br /> Bu bayrak yalnızca MenuController veya Menucontrollerlalenmiş menüler için geçerlidir.<br /><br /> Geçerli: `Menu`|
-|TextMenuCtrlUseMenu|`MenuText`Menü denetleyicileri üzerinde alanını kullanın. Varsayılan alan `ButtonText` .<br /><br /> Geçerli: `Button`|
-|TextMenuUseButton|`ButtonText`Menüler için alanını kullanın. Varsayılan alan `MenuText` belirtilmişse.<br /><br /> Geçerli: `Button`|
-|TextOnly|Yalnızca bir araç çubuğunda veya menüde metin göster, ancak simge belirtilmiş olsa bile simge yok.<br /><br /> Geçerli: `Button`|
+|Yatay olarak|Bu bayrak ayar olduğunda genişlik, birleşik giriş kutusu için en düşük genişlik haline gelir ve araç çubuğunda yer varsa birleşik giriş kutusu kullanılabilir alanı dolduracak şekilde esnetilebilir. Bu yalnızca araç çubuğu yatay olarak yerleştirildi ve araç çubuğundaki yalnızca bir birleşik giriş kutusu bayrağını kullanabilirse (bayrak ilk birleşik giriş kutusu dışında hepsinde yoksayılır) oluşur.<br /><br /> Şu için geçerlidir: `Combo`|
+|TextChanges|Komut veya menü metni, genellikle yöntemi aracılığıyla çalışma zamanında `QueryStatus` değiştirilebilir.<br /><br /> Şu için geçerlidir: `Button` , `Menu`|
+|TextChangesButton|Şu için geçerlidir: `Button`|
+|TextIsAnchorCommand|Menü denetleyicisi için, menenin metni varsayılan (sabit noktası) komutundan alınır. Sabit noktası komutu, seçilen veya kilitli son komut. Bu bayrak ayarlanmazsa menü denetleyicisi kendi alanını `MenuText` kullanır. Ancak, menü denetleyicisine tıklarken ilgili denetleyiciden son seçilen komut yine de kullanılabilir.<br /><br /> Bu bayrağı bayrağıyla birleştirmenizi `TextChanges` öneririz.<br /><br /> Bu bayrak yalnızca MenuController veya MenuControllerLatched türünde menüler için geçerlidir.<br /><br /> Şu için geçerlidir: `Menu`|
+|TextMenuCtrlUseMenu|Menü `MenuText` denetleyicilerinde alanını kullanın. Varsayılan alan' `ButtonText` dır.<br /><br /> Şu için geçerlidir: `Button`|
+|TextMenuUseButton|Menüler `ButtonText` için alanını kullanın. Varsayılan alan, `MenuText` belirtilmişse değeridir.<br /><br /> Şu için geçerlidir: `Button`|
+|Textonly|Bir araç çubuğunda veya menüde yalnızca metin gösterir, ancak simge belirtilmiş olsa bile simge göstermez.<br /><br /> Şu için geçerlidir: `Button`|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Düğmeler öğesi](../extensibility/buttons-element.md)|[Düğme öğesi](../extensibility/button-element.md) öğeleri için bir grup sağlar.|
-|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage 'ın uyguladığı tüm menüleri tanımlar.|
+|[Düğmeler öğesi](../extensibility/buttons-element.md)|Düğme öğesi öğeleri için [bir grup](../extensibility/button-element.md) sağlar.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uygulayan tüm menüleri tanımlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu () seçin. Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

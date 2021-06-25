@@ -1,9 +1,9 @@
 ---
-title: Breakpoint-Related yöntemleri | Microsoft Docs
-description: Visual Studio hata ayıklaması, koddaki bir konuma başarıyla bağlanacak ve henüz bağlanmamış kesme noktaları olan bağlantılı kesme noktalarını destekler.
+title: Breakpoint-Related Yöntemleri | Microsoft Docs
+description: Visual Studio hata ayıklama, kodda bir konuma başarıyla bağlı olan bağlı kesme noktaları ve henüz bağlı olan bekleyen kesme noktaları destekler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], breakpoint methods
 - breakpoints, methods
@@ -13,76 +13,76 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 06494b5ed6c1826e665f42e180ad8c71de596e30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ec218cea05dffc1c558cabdef47895da9ad7ba9c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055251"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901506"
 ---
-# <a name="breakpoint-related-methods"></a>Kesme noktası ile ilgili Yöntemler
-Bir hata ayıklama altyapısı (DE) kesme noktası ayarını desteklemelidir. Visual Studio hata ayıklaması aşağıdaki kesme noktası türlerini destekler:
+# <a name="breakpoint-related-methods"></a>Kesme noktasıyla ilgili yöntemler
+Hata ayıklama altyapısı (DE), kesme noktası ayarını desteklemeli. Visual Studio hata ayıklama aşağıdaki kesme noktası türlerini destekler:
 
 - Bound
 
-     Kullanıcı arabirimi aracılığıyla istendi ve belirtilen kod konumuna başarıyla bağlıydı
+     Kullanıcı arabirimi üzerinden istenen ve belirtilen kod konumunu başarıyla bağlı olan
 
 - Beklemede
 
-     Kullanıcı arabirimi aracılığıyla istendi, ancak henüz gerçek yönergelere bağlanmadı
+     Kullanıcı arabirimi üzerinden istenen ancak henüz gerçek yönergelere bağlı değil
 
 ## <a name="discussion"></a>Tartışma
- Örneğin, yönergeler henüz yüklenmediği sırada bekleyen bir kesme noktası oluşur. Kod yüklendiğinde, bekleyen kesme noktaları kodu önceden belirlenmiş konumda bağlamaya çalışır, diğer bir deyişle, koda kesme yönergeleri ekler. Olaylar, başarılı bağlamayı göstermek veya bağlama hataları olduğunu bildirmek için oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
+ Örneğin, yönergeler henüz yüklenmemişse bekleyen bir kesme noktası oluşur. Kod yüklendiğinde bekleyen kesme noktaları, koda kesme yönergeleri eklemek için koda önceden verilen konumda bağlamayı dener. Olaylar, bağlamanın başarılı olduğunu göstermek veya bağlama hataları olduğunu bildirmek için oturum hata ayıklama yöneticisine (SDM) gönderilir.
 
- Bekleyen bir kesme noktası Ayrıca kendi iç karşılık gelen ilişkili kesme noktaları listesini yönetir. Bir bekleyen kesme noktası, koddaki birçok kesme noktasının eklenmesine neden olabilir. Visual Studio hata ayıklama Kullanıcı arabirimi, bekleyen kesme noktalarının ve bunlara karşılık gelen ilişkili kesme noktalarının ağaç görünümünü gösterir.
+ Bekleyen bir kesme noktası, karşılık gelen bağlı kesme noktalarına ait kendi iç listesini de yönetir. Bekleyen bir kesme noktası, koda birçok kesme noktası eklemeye neden olabilir. Hata Visual Studio arabiriminde bekleyen kesme noktalarına ve buna karşılık gelen bağlı kesme noktalarına bir ağaç görünümü yer almaktadır.
 
- Bekleyen kesme noktalarının oluşturulması ve kullanılması, [IDebugEngine2:: CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) yönteminin yanı sıra aşağıdaki [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi yöntemlerini gerektirir.
-
-|Yöntem|Açıklama|
-|------------|-----------------|
-|[CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Belirtilen bir bekleyen kesme noktasının bir kod konumuna bağlanıp bağlanamayacağını belirler.|
-|[Bağladığınızda](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Belirtilen bir bekleyen kesme noktasını bir veya daha fazla kod konumuna bağlar.|
-|[GetState](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Bekleyen bir kesme noktasının durumunu alır.|
-|[GetBreakpointRequest](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Bekleyen kesme noktası oluşturmak için kullanılan kesme noktası isteğini alır.|
-|[Etkinleştirme](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Bekleyen bir kesme noktasının etkin durumunu değiştirir.|
-|[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Bekleyen bir kesme noktasından bağlantılı tüm kesme noktalarını numaralandırır.|
-|[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Bekleyen bir kesme noktasından kaynaklanan tüm hata kesme noktalarını numaralandırır.|
-|[Silme](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Bekleyen bir kesme noktasını ve bundan sonra gelen tüm kesme noktalarını siler.|
-
- Bağlantılı kesme noktalarını ve hata kesme noktalarını numaralandırmak için, tüm [IEnumDebugBoundBreakpoints2](../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) ve [IEnumDebugErrorBreakpoints2](../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)yöntemlerini uygulamanız gerekir.
-
- Bir kod konumuna bağlanan bekleyen kesme noktaları, aşağıdaki [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) yöntemlerinin uygulanmasını gerektirir.
+ Bekleyen kesme noktaları oluşturma ve kullanma, [IDebugEngine2::CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) yönteminin ve aşağıdaki [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimlerinin yöntemlerinin uygulanmasını gerektirir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)|Kesme noktası içeren bekleyen kesme noktasını alır.|
-|[GetState](../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)|Bir bağlantılı kesme noktasının durumunu alır.|
-|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)|Bir kesme noktasını açıklayan kesme noktası çözünürlüğünü alır.|
-|[Etkinleştirme](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Kesme noktasını etkinleştirilir veya devre dışı bırakır.|
-|[Silme](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Bir bağlantılı kesme noktasını siler.|
+|[CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)|Belirtilen bir bekleyen kesme noktasıyla kod konumunun bağlanıp bağlanamayacağını belirler.|
+|[Bağlamak](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)|Belirtilen bekleyen kesme noktası bir veya daha fazla kod konumunu bağlar.|
+|[GetState](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)|Bekleyen bir kesme noktası durumunu alır.|
+|[GetBreakpointRequest](../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)|Bekleyen bir kesme noktası oluşturmak için kullanılan kesme noktası isteğini alır.|
+|[Etkinleştirme](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)|Beklemedeki bir kesme noktası için etkin durumu iki durumlu olarak gösterir.|
+|[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)|Bekleyen bir kesme noktasıyla bağlı olan tüm kesme noktaları numaralarını gösterir.|
+|[EnumErrorBreakpoints](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)|Bekleyen bir kesme noktası sonucunda ortaya çıkan tüm hata kesme noktaları numaralandır.|
+|[Silme](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|Bekleyen bir kesme noktası ve buna bağlı tüm kesme noktaları silinir.|
 
- Çözüm ve istek bilgileri aşağıdaki [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) yöntemlerinin uygulanmasını gerektirir.
+ Bağlı kesme noktaları ve hata kesme noktaları için [IEnumDebugBoundBreakpoints2](../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md) ve [IEnumDebugErrorBreakpoints2'nin](../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)tüm yöntemlerini uygulamalısınız.
 
-|Yöntem|Açıklama|
-|------------|-----------------|
-|[GetBreakpointType](../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)|Bir çözüm tarafından temsil edilen kesme noktasının türünü alır.|
-|[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|Bir kesme noktasını açıklayan kesme noktası çözümleme bilgilerini alır.|
-
- Bağlama sırasında ortaya çıkabilecek hataların çözümlenmesi, aşağıdaki [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) yöntemlerinin uygulanmasını gerektirir.
+ Bir kod konuma bağlı bekleyen kesme noktaları aşağıdaki [IDebugBoundBreakpoint2 yöntemlerinin uygulanmasını](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) gerektirir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)|Hata kesme noktası içeren bekleyen kesme noktasını alır.|
-|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)|Bir hata kesme noktası tanımlayan kesme noktası hata çözümünü alır.|
+|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)|Kesme noktası içeren bekleyen kesme noktası alır.|
+|[GetState](../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)|Bağlı bir kesme noktası durumunu alır.|
+|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)|Bir kesme noktası açıklayan kesme noktası çözümlemesi alır.|
+|[Etkinleştirme](../../extensibility/debugger/reference/idebugboundbreakpoint2-enable.md)|Kesme noktası etkinleştirme veya devre dışı bırakma.|
+|[Silme](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)|Bağlı bir kesme noktası siler.|
 
- Bağlama sırasında oluşabilecek hataların çözümlenmesi, aşağıdaki [IDebugErrorBreakpointResolution2](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)yöntemlerini de gerektirir.
+ Çözüm ve istek bilgileri için aşağıdaki [IDebugBreakpointResolution2 yöntemlerinin uygulanması](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) gerekir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetBreakpointType](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)|Bir kesme noktasının türünü alır.|
-|[GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)|Bir kesme noktasının çözüm bilgilerini alır.|
+|[GetBreakpointType](../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)|Çözümlemeyle temsil edilen kesme noktası türünü alır.|
+|[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)|Bir kesme noktası açıklayan kesme noktası çözümleme bilgilerini alır.|
 
- Kaynak kodu bir kesme noktasında görüntülemek için, [IDebugStackFrame2:: GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve/veya [IDebugStackFrame2:: GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)yöntemlerini uygulamanız gerekir.
+ Bağlama sırasında ortaya çıkabilir hataların çözümü için aşağıdaki [IDebugErrorBreakpoint2 yöntemlerinin uygulanması](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) gerekir.
+
+|Yöntem|Açıklama|
+|------------|-----------------|
+|[GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)|Hata kesme noktası içeren bekleyen kesme noktası alır.|
+|[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)|Bir hata kesme noktası açıklayan kesme noktası hata çözümlemesi alır.|
+
+ Bağlama sırasında ortaya çıkabilir hataların çözümü, [aşağıdaki IDebugErrorBreakpointResolution2 yöntemlerini de gerektirir.](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)
+
+|Yöntem|Açıklama|
+|------------|-----------------|
+|[GetBreakpointType](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)|Kesme noktası türünü alır.|
+|[GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)|Bir kesme noktası çözümleme bilgilerini alır.|
+
+ Kaynak kodu bir kesme noktasıyla görüntülemek [için IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve/veya [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)yöntemlerini uygulamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yürütme denetimi ve durum değerlendirmesi](../../extensibility/debugger/execution-control-and-state-evaluation.md)

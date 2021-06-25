@@ -3,7 +3,7 @@ title: CommandTable öğesi | Microsoft Docs
 description: CommandTable, VSPackage 'ın IDE 'ye sağladığı komutların yerleşimini ve türünü tanımlayan. vsct dosyasının kök öğesidir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - CommandTable
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 507bdd20602c680f58b62e85251eaaa592982bc7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 55faf4ee8bdc7ec261508fd07f5a573e7a29560f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089530"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901857"
 ---
 # <a name="commandtable-element"></a>CommandTable öğesi
 CommandTable, *. vsct* dosyasının kök öğesidir. Bu, bir VSPackage 'ın IDE 'ye sağladığı komutların gerçek düzen ve türünü tanımlayan dosyadır. Komutlar Menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları içerebilir. Daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).

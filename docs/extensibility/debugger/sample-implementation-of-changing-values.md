@@ -3,7 +3,7 @@ title: Değişen değerlerin örnek uygulama | Microsoft Docs
 description: Yereller penceresinde görüntülenmekte olan her yerel, kendisiyle ilişkili bir IDebugProperty2 nesnesine sahiptir. Visual Studio 'Nun bellekteki yerel değerini nasıl güncelleştireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: sample
 helpviewer_keywords:
 - expression evaluation, local values
 - debugging [Debugging SDK], expression evaluation
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 06213de552685e13be5569fd631fc780598954ca
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d36cee547e455e9aeb60517b23f0026c3f38b3f3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070446"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902338"
 ---
 # <a name="sample-implementation-of-changing-values"></a>Değişen değerlerin örnek uygulama
 > [!IMPORTANT]

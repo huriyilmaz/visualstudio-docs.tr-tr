@@ -3,7 +3,7 @@ title: Web sitesi destek öznitelikleri | Microsoft Docs
 description: Web sitesi projelerini kullanarak Visual Studio 'nun işlevselliğini genişletmek için gerekli olan Web sitesi destek öznitelikleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - web site projects, registration
 ms.assetid: 46d52e2c-ca2a-4bbd-8500-5b0129768aec
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5259914b238927a58a7297a8e9c0b6fcef0f04c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 348fd16234e38cd7832ae18e7b28e6abe0bc63d9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069113"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901779"
 ---
 # <a name="web-site-support-attributes"></a>Web Sitesi Destek Öznitelikleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web sitesi projesi, Web programlama dilleri için destek sağlamak üzere genişletilebilir. Dil [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] seçildiğinde proje şablonlarının **Yeni Web sitesi** iletişim kutusunda görünebilmesi için dilin kendisini ile kaydetmesi gerekir.

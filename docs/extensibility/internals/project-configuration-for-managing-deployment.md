@@ -3,7 +3,7 @@ title: Dağıtımı yönetmeye yönelik proje yapılandırması | Microsoft Docs
 description: Hata ayıklama ve yükleme için beklenen konuma dağıtım ve Visual Studio 'Nun dağıtımı destekleyen projeleri desteklediği iki yolu hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project configurations, managing deployment
 - projects [Visual Studio SDK], configuration for managing deployment
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 589403f126a4fd614911c1deb99e9acd32d1ec7d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3c6077665ccc3bbe5f87b91a1d2fc5636e08539d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074424"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899907"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Dağıtımı Yönetmek için Proje Yapılandırması
 Dağıtım, çıkış öğelerini bir yapı işleminden fiziksel olarak hata ayıklama ve yükleme için beklenen konuma taşıma işlemidir. Örneğin, bir Web uygulaması yerel bir makinede oluşturulmuş ve sonra sunucuya yerleştirilebilir.

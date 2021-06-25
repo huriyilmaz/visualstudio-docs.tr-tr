@@ -1,9 +1,9 @@
 ---
 title: Kesme noktaları (Visual Studio SDK) | Microsoft Docs
-description: 'Üç kesme noktası türü hakkında bilgi edinin: bekleyen, bağlantılı ve hata. Bu makalede, türleri uygulamak için kullanılan arabirimler listelenmektedir.'
+description: 'Üç kesme noktası türü hakkında bilgi edinmek için: beklemede, sınırda ve hata. Bu makalede türleri uygulamak için kullanılan arabirimler listeleniyor.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - breakpoints
 ms.assetid: acfcabed-9f2f-436c-ad18-7ca2f45d631b
@@ -12,43 +12,43 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b834d9b80d8abca12ea9230d3b451fb4e251859e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1fce472faf95aa77f87ab02d78a3da640b6bd3bf
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055212"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901493"
 ---
 # <a name="breakpoints-visual-studio-sdk"></a>Kesme Noktaları (Visual Studio SDK)
-Üç kesme noktası türü vardır: bekleyen, bağlantılı ve hata.
+Üç kesme noktası türü vardır: beklemede, sınırda ve hata.
 
  **Bekleyen bir kesme noktası:**
 
-- Bir veya daha fazla programda bir veya daha fazla kod bağlamına bir kesme noktası bağlamak için gereken tüm bilgileri içeren bir soyutlamadır. Hata ayıklamakta olan bir programın kodun yüklenmesine neden olması, hata ayıklama altyapısı, bağlanıp bağlanamayacağını görmek için tüm bekleyen kesme noktalarını denetler.
+- Bir veya daha fazla programda bir veya daha fazla kod bağlamına bir kesme noktası bağlamak için gereken tüm bilgileri içeren bir soyutlamadır. Bir programda hata ayıklaması yapılan her zaman kodun yüklenmeye neden olması, hata ayıklama altyapısı bekleyen tüm kesme noktalarına bakarak bağlanabileceklerini denetler.
 
-   Bekleyen bir kesme noktasının kendisi hiçbir şekilde koda bağlanmaz, ancak bunun yerine topladığı ve oluşturduğu tüm bağlı kesme noktalarını içerdiğini söyluyor.
+   Bekleyen bir kesme noktası hiçbir zaman koda bağlamaz, bunun yerine toplar ve bu kesme noktası tarafından oluşturulan tüm sınır kesme noktaları içerdiği kabul eder.
 
-- Bir [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi tarafından temsil edilir.
+- [IDebugPendingBreakpoint2 arabirimiyle temsil](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) edildi.
 
-  **Bir bağlantılı kesme noktası:**
+  **Bağlı bir kesme noktası:**
 
-- , İle ilişkili veya tek bir kod bağlamı ile bağlantılı bir kesme noktası için soyutlamadır. Her bir bağlantılı kesme noktası, bekleyen bir kesme noktasına yanıt olarak oluşturulur. Ancak, bekleyen bir kesme noktası, birden fazla bağlantılı kesme noktası oluşturabilir.
+- Tek bir kod bağlamıyla ilişkili veya tek bir kod bağlamına bağlı olan bir kesme noktası soyutlamadır. Her bağlı kesme noktası, bekleyen bir kesme noktası yanıt olarak oluşturulur. Öte yandan bekleyen bir kesme noktası birden fazla bağlı kesme noktası oluştursa da.
 
-   Kod kaldırıldığında, bağlı bir kesme noktası ilişkisiz ve atılır.
+   Kod kaldırılmışsa, bağlı bir kesme noktası sınırsız olabilir ve atılır.
 
-- Bir [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimi tarafından temsil edilir.
+- Bir [IDebugBoundBreakpoint2 arabirimiyle temsil](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) edildi.
 
   **Hata kesme noktası:**
 
-- , Bekleyen bir kesme noktasını bir kod bağlamına bağlamaya çalışırken bir hatayı açıklamak için soyutlamadır. Hata kesme noktası, konumda veya kesme noktası ifadesinin kendisinde bir hata olduğunu açıklar. Daha fazla bilgi için bkz. [bağlama kesme noktaları](../../extensibility/debugger/binding-breakpoints.md).
+- Bekleyen bir kesme noktası kod bağlamına bağlamaya çalışırken bir hatayı açıklamaya bir soyutlamadır. Hata kesme noktası, konumdaki veya kesme noktası ifadesinin kendisinde bir hatayı açıklar. Daha fazla bilgi için [bkz. Bağlama kesme noktaları.](../../extensibility/debugger/binding-breakpoints.md)
 
-   Kesme noktası hatası bir hata ya da uyarı olabilir.
+   Kesme noktası hatası bir hata veya uyarı olabilir.
 
-- Bir [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) arabirimi tarafından temsil edilir.
+- Bir [IDebugErrorBreakpoint2 arabirimiyle temsil](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) edildi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Programlar](../../extensibility/debugger/programs.md)
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [Kod bağlamı](../../extensibility/debugger/code-context.md)
 - [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

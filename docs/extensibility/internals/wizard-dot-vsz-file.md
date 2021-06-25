@@ -3,7 +3,7 @@ title: Sihirbaz (. Vsz) dosyası | Microsoft Docs
 description: IDE 'nin sihirbazları başlatmak için kullandığı. vsz dosyaları hakkında bilgi edinin. Dosyalar, hangi sihirbazın çağrılacağını ve sihirbaza ne geçilecek hakkında bilgiler içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - .vsz files
 - vsz files
@@ -14,18 +14,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2663a6b05780b16d05b419c00aba904ded848796
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: de687dae79fa1613090fb400f73ab658ee5d66cb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074242"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900661"
 ---
 # <a name="wizard-vsz-file"></a>Sihirbaz (.Vsz) Dosyası
 
 Tümleşik geliştirme ortamı (IDE), sihirbazları başlatmak için. vsz dosyalarını kullanır. Bu. vsz dosyaları, hangi sihirbazın çağrılacağını ve sihirbaza hangi bilgilerin geçirileceğini belirlemek için IDE 'nin kullandığı bilgileri içerir.
 
-. Vsz dosyası, bölümü olmayan. ini biçimli bir metin dosyasının sürümüdür. IDE tarafından bilinen bilgiler dosyanın başında depolanır. Bu, IDE 'nin çağırdığı sihirbaz ve IDE 'ye geçirilecek. vsz dosyasındaki parametreler arasında bir bağlantı sağlar. Dosyanın geri kalanı sihirbaza özgü ve IDE tarafından toplanacak ve belirli sihirbaza geçirilecek parametreler sağlar.
+. Vsz dosyası, bölümü olmayan .ini biçimli bir metin dosyasının sürümüdür. IDE tarafından bilinen bilgiler dosyanın başında depolanır. Bu, IDE 'nin çağırdığı sihirbaz ve IDE 'ye geçirilecek. vsz dosyasındaki parametreler arasında bir bağlantı sağlar. Dosyanın geri kalanı sihirbaza özgü ve IDE tarafından toplanacak ve belirli sihirbaza geçirilecek parametreler sağlar.
 
 Aşağıdaki örnek bir. vsz dosyasının içeriğini gösterir.
 
@@ -38,7 +38,7 @@ Param="WIZARDUI = FALSE"
 
 . Vsz dosyasındaki parçalar aşağıda verilmiştir.
 
-|Bölüm|Description|
+|Bölüm|Açıklama|
 |----------|-----------------|
 |VSWizard|Dosyadaki ilk parametre, şablon dosya biçiminin sürüm numarasıdır. Bu sürüm numarası 6,0, 7,0, 7,1 veya 8,0 olmalıdır. Diğer sayılar başlatılamaz ve geçersiz biçim hatasına neden olabilir.|
 |Ekleme|Bu alan, sihirbazın OLE ProgID 'sini veya alternatif olarak IDE tarafından birlikte oluşturulan sihirbazın CLSID 'inin GUID dize gösterimini içerir.|

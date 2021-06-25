@@ -3,7 +3,7 @@ title: Ifade değerlendirmesinin örnek uygulama | Microsoft Docs
 description: Visual Studio 'Nun bir gözcü Windows ifadesi için bir IDebugExpression2 nesnesi oluşturmak üzere ParseText 'i nasıl çağırdığı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: sample
 helpviewer_keywords:
 - expression evaluators
 - debugging [Debugging SDK], expression evaluators
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60d01917bb3a21f6d8ea2644fbeef2b22064cc00
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: de0e052fd42f1603889f7521a1e45e50b0f36eea
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070459"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902312"
 ---
 # <a name="sample-implementation-of-expression-evaluation"></a>İfade değerlendirmesinin örnek uygulama
 > [!IMPORTANT]

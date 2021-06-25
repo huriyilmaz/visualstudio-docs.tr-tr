@@ -3,7 +3,7 @@ title: Komutun görünümünü değiştirme | Microsoft Docs
 description: Komutların kullanılabilir/kullanılamaz, gizli/gösterilen veya işaretli/işaretsiz gibi bir komutun görünümünü değiştirme hakkında geri bildirim sağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - commands, changing appearance
 - menu commands, changing appearance
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b6911d865b253ff82ffcc6c4911e0989f109f28
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ddeed08d7bc33b9a9ae5405876f3b28459d4eaf2
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089829"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905039"
 ---
 # <a name="change-the-appearance-of-a-command"></a>Komutun görünümünü değiştirme
 Bir komutun görünümünü değiştirerek, kullanıcıya geri bildirim sağlayabilirsiniz. Örneğin, kullanılamayan bir komutun farklı görünmesini isteyebilirsiniz. Komutları kullanılabilir veya kullanılamaz hale getirebilirsiniz, gizleyebilir veya gösterebilir veya menüdeki bu öğeleri denetleyebilir ya da işaretini kaldırabilirsiniz.

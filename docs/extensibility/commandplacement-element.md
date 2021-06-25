@@ -1,9 +1,9 @@
 ---
-title: Commandyerleştirmesini öğesi | Microsoft Docs
-description: Commandyerleştirme öğesi düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil edilmesini sağlar.
+title: CommandPlacement Öğesi | Microsoft Docs
+description: CommandPlacement öğesi, düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil ekleyebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CommandPlacements element (VSCT XML schema)
 - VSCT XML schema elements, CommandPlacements
@@ -13,17 +13,17 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73d97e32314de0b01bf26025c1fee412de7d9795
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 69be89fb2773be9de632b8059cf217303daaede7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089621"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902000"
 ---
-# <a name="commandplacement-element"></a>Commandyerleştirme öğesi
-Commandyerleştirme öğesi düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil edilmesini sağlar. Commandyerleştirme öğesini kullanarak, Kullanıcı arabiriminin görünümünü değiştirmek için bu öğeleri tamamen yeniden tanımlamanız gerekmez.
+# <a name="commandplacement-element"></a>CommandPlacement öğesi
+CommandPlacement öğesi, düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil ekleyebilirsiniz. CommandPlacement öğesini kullanarak, kullanıcı arabiriminin görünümlerini değiştirmek için bu öğeleri tamamen yeniden tanımlamaya gerek yoktur.
 
- Daha fazla bilgi için bkz. yeniden [kullanılabilir düğme grupları oluşturma](../extensibility/creating-reusable-groups-of-buttons.md).
+ Daha fazla bilgi için [bkz. Yeniden kullanılabilir düğme grupları oluşturma.](../extensibility/creating-reusable-groups-of-buttons.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,22 +40,22 @@ Commandyerleştirme öğesi düğmelerin, grupların ve menülerin birden fazla 
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|guid|Gereklidir. [Sembol öğesinde](../extensibility/symbols-element.md)tanımlandığı şekilde, komut kümesinin GUID 'si.|
-|kimlik|Gereklidir. İçinde tanımlandığı şekilde, yerleştirilecek menü, Grup veya komutun kimliği `Symbols Element` .|
-|Priority|Gereklidir. Öğenin üst öğesinde görsel konumunu belirler.|
-|Koşul|İsteğe bağlı. Bkz. [koşullu Aöznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|guid|Gereklidir. Symbols öğesinde tanımlandığı gibi, komut kümesi [guid'i.](../extensibility/symbols-element.md)|
+|kimlik|Gereklidir. içinde tanımlandığı gibi, yerleştiril olacak menü, grup veya komutun `Symbols Element` kimliği.|
+|Öncelik|Gereklidir. Öğenin üst öğesinde görsel konumunu belirler.|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu Aattributes](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Üst|Gereklidir. Yerleştirilecek öğeyi barındıran menü veya grup.|
+|Üst|Gereklidir. Yerleştiril olacak öğeyi barındıran menü veya grup.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandPlacements öğesi](../extensibility/commandplacements-element.md)|CommandPlacements ve Commandyerleştirme öğelerinin gruplarını belirtir.|
+|[CommandPlacements öğesi](../extensibility/commandplacements-element.md)|CommandPlacements ve CommandPlacement öğelerinin gruplarını belirtir.|
 
 ## <a name="example"></a>Örnek
 
@@ -70,4 +70,4 @@ Commandyerleştirme öğesi düğmelerin, grupların ve menülerin birden fazla 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [CommandPlacements öğesi](../extensibility/commandplacements-element.md)
-- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

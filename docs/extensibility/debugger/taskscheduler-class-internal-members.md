@@ -3,7 +3,7 @@ title: TaskScheduler sınıfı-Iç Üyeler | Microsoft Docs
 description: Özel bir hata ayıklayıcı uygulamanıza yardımcı olan System. Threading. Tasks. TaskScheduler sınıfının iç üyeleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TaskScheduler class [.NET Framework debug engines]
 - debug engines, TaskScheduler class [.NET Framework]
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45e2aff7d16826a631bb5126447d60b8b2468455
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58b370a6742387f7493e4c6357cffd05f2bd88a5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057877"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900154"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler sınıfı-Iç Üyeler
 Bu makale, <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> özel bir hata ayıklayıcı uygulamanıza yardımcı olan sınıfın iç üyelerini açıklar. Bu sınıf hakkında genel bilgi için <xref:System.Threading.Tasks.TaskScheduler> başvuru makalesine bakın.

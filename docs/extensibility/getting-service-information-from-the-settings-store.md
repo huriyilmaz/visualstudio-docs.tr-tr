@@ -3,19 +3,19 @@ title: Ayarlar deposundan hizmet bilgileri alınıyor | Microsoft Docs
 description: Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yüklenmediğini öğrenmek için ayarlar deposunu nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7028d440-d16d-4b08-9b94-eb8cc93b25fc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a39987e13ed3af4bc19c3a80baf0049467daf3a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cb014803945ea88cd6c2c27eee8c120059014a18
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057656"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900653"
 ---
 # <a name="get-service-information-from-the-settings-store"></a>Ayarlar deposundan hizmet bilgilerini al
 Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yüklenmediğini öğrenmek için ayarlar deposunu kullanabilirsiniz. Hizmet sınıfının türünü bilmeniz gerekir.

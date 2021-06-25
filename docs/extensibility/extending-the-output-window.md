@@ -3,7 +3,7 @@ title: Çıkış Penceresi genişletiliyor | Microsoft Docs
 description: Visual Studio SDK 'da çıkış penceresini genişletmeyi ve kendi özel bölmelerinizi oluşturma ve yönetme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Output window, about Output window
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf875d070d27d307380f23e71af2bda7c4a205b5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 402c53691525530171edafd6a0751dfc72c9798d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075048"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900235"
 ---
 # <a name="extend-the-output-window"></a>Çıkış penceresini genişletme
 **Çıkış** penceresi, okuma/yazma metin bölmeleri kümesidir. Visual Studio, bu yerleşik bölmelere sahiptir: derleme, projelerin derlemeler hakkındaki iletileri ve **genel** olarak IDE hakkındaki iletileri iletişim kurmasını sağlayan **derleme** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Projeler, arabirim yöntemleri aracılığıyla **derleme** bölmesine otomatik olarak bir başvuru alır <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ve Visual Studio, hizmet aracılığıyla **genel** bölmeye doğrudan erişim sağlar <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> . Yerleşik bölmelere ek olarak kendi özel bölmelerinizi oluşturabilir ve yönetebilirsiniz.

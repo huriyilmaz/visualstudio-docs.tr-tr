@@ -1,9 +1,9 @@
 ---
-title: VSPackages kaydetme ve kaydını silme | Microsoft Docs
-description: Kullandığınız öznitelikler ve. pkgdef dosyası dahil VSPackages 'leri kaydetme ve kaydını kaldırma hakkında bilgi edinin.
+title: VSPackage'ları Kaydetme ve Kaydını | Microsoft Docs
+description: Kullanabileceğiniz öznitelikler ve .pkgdef dosyası da dahil olmak üzere VSPackage'larınızı kaydetme ve kaydını çıkarma hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - registration, VSPackages
 - VSPackages, registering
@@ -13,20 +13,20 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5238ef7d544bcdeb3dd68a4741791262aaa77c0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 48067ed883a44870b3b753cb5e3d6943eca91ca5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056551"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900310"
 ---
-# <a name="register-and-unregister-vspackages"></a>VSPackages kaydetme ve kaydını silme
-Öznitelikleri kullanarak VSPackage kaydedebilirsiniz, ancak
+# <a name="register-and-unregister-vspackages"></a>VSPackage'ları kaydetme ve kaydını çıkarma
+VsPackage kaydetmek için öznitelikleri kullanır, ancak
 
 ## <a name="register-a-vspackage"></a>VSPackage kaydetme
- Yönetilen VSPackages kayıtlarını denetlemek için özniteliklerini kullanabilirsiniz. Tüm kayıt bilgileri bir *. pkgdef* dosyasında bulunur. Dosya tabanlı kayıt hakkında daha fazla bilgi için bkz. [CreatePkgDef Utility](../extensibility/internals/createpkgdef-utility.md).
+ Yönetilen VSPackage'ların kaydını kontrol etmek için öznitelikleri kullanabilirsiniz. Tüm kayıt bilgileri bir *.pkgdef dosyasında* yer alan. Dosya tabanlı kayıt hakkında daha fazla bilgi için bkz. [CreatePkgDef yardımcı programı.](../extensibility/internals/createpkgdef-utility.md)
 
- Aşağıdaki kod, VSPackage 'ı kaydetmek için standart kayıt özniteliklerinin nasıl kullanılacağını gösterir.
+ Aşağıdaki kod, VSPackage'nızı kaydetmek için standart kayıt özniteliklerini nasıl kullanabileceğinizi gösterir.
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -37,16 +37,16 @@ public sealed class BasicPackage : Package
 }
 ```
 
-## <a name="unregister-an-extension"></a>Bir uzantının kaydını silme
- Birçok farklı VSPackages ile denemeler yaptıysanız ve bunları deneysel örnekten kaldırmak istiyorsanız, yalnızca **Reset** komutunu çalıştırabilirsiniz. Bilgisayarınızın başlangıç sayfasındaki **Visual Studio Deneysel örneğini sıfırlayın** ' i veya komut satırından şu komutu çalıştırın:
+## <a name="unregister-an-extension"></a>Bir uzantının kaydını geri ala
+ Birçok farklı VSPackage denemesi yaptıysanız ve bunları deneysel örnekten kaldırmak için Sıfırla  komutunu çalıştırabilirsiniz. Bilgisayarınızın **başlangıç Visual Studio Deneysel** Örneği sıfırla'yı bulun veya komut satırına şu komutu çalıştırın:
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp
 ```
 
- Visual Studio 'nun geliştirme örneğinize yüklediğiniz bir uzantıyı kaldırmak istiyorsanız, **Araçlar**  >  **Uzantılar ve güncelleştirmeler**' e gidin, uzantıyı bulun ve **Kaldır**' a tıklayın.
+ Visual Studio geliştirme örneğinize yüklemiş olduğunuz bir uzantıyı kaldırmak için Araçlar Uzantıları ve Güncelleştirmeler'e gidin, uzantıyı bulun ve  >  Kaldır'a **tıklayın.**
 
- Bu yöntemlerin herhangi biri, uzantıyı kaldırmak için başarılı bir nedenden dolayı, VSPackage derlemesinin kaydını komut satırından aşağıdaki gibi silebilirsiniz:
+ Herhangi bir nedenle bu yöntemlerden hiçbiri uzantıyı kaldırmada başarılı olursa, VSPackage derlemesini komut satırına şu şekilde kaldırabilirsiniz:
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg" /unregister <pathToVSPackage assembly>
@@ -54,13 +54,13 @@ public sealed class BasicPackage : Package
 
 <a name="using-a-custom-registration-attribute-to-register-an-extension"></a>
 
-## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Bir uzantıyı kaydetmek için özel bir kayıt özniteliği kullanma
+## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>Uzantıyı kaydetmek için özel kayıt özniteliği kullanma
 
-Belirli durumlarda, uzantınızın yeni bir kayıt özniteliğini oluşturmanız gerekebilir. Kayıt özniteliklerini kullanarak yeni kayıt defteri anahtarları ekleyebilir veya varolan anahtarlara yeni değerler ekleyebilirsiniz. Yeni öznitelik öğesinden türetilmelidir <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> ve ve yöntemlerinin geçersiz kılması gerekir <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> .
+Bazı durumlarda uzantınız için yeni bir kayıt özniteliği oluşturmanız gerekir. Yeni kayıt defteri anahtarları eklemek veya mevcut anahtarlara yeni değerler eklemek için kayıt özniteliklerini kullanabilirsiniz. Yeni öznitelik, 'den türetilen <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> ve ve yöntemlerini geçersiz <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A> <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A> kılması gerekir.
 
-### <a name="create-a-custom-attribute"></a>Özel öznitelik oluştur
+### <a name="create-a-custom-attribute"></a>Özel öznitelik oluşturma
 
-Aşağıdaki kod, yeni bir kayıt özniteliğinin nasıl oluşturulacağını gösterir.
+Aşağıdaki kod, yeni bir kayıt özniteliğinin nasıl oluşturul olduğunu gösterir.
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
@@ -69,11 +69,11 @@ public class CustomRegistrationAttribute : RegistrationAttribute
 }
 ```
 
- , Özniteliğin <xref:System.AttributeUsageAttribute> ilgili olduğu program öğesini (sınıf, yöntem, vb.) belirtmek için öznitelik sınıflarında kullanılır ve bir kereden fazla kullanılıp kullanılamayacağını ve devralınıp alınmayacağını belirtir.
+ özniteliği öznitelik sınıflarında özniteliğin ait olduğu program öğesini (sınıf, yöntem vb.) belirtmek için kullanılır, birden çok kez kullanılabilir olup olmadığını ve devralınıp devralınıp devralınamayacaklarını <xref:System.AttributeUsageAttribute> belirtir.
 
 ### <a name="create-a-registry-key"></a>Kayıt defteri anahtarı oluşturma
 
-Aşağıdaki kodda, özel öznitelik, kayıtlı olan VSPackage için anahtar altında **özel** bir alt anahtar oluşturur.
+Aşağıdaki kodda, özel öznitelik, **kaydedilen** VSPackage anahtarının altında bir Özel alt anahtar oluşturur.
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)
@@ -97,9 +97,9 @@ public override void Unregister(RegistrationContext context)
 }
 ```
 
-### <a name="create-a-new-value-under-an-existing-registry-key"></a>Mevcut bir kayıt defteri anahtarı altında yeni bir değer oluştur
+### <a name="create-a-new-value-under-an-existing-registry-key"></a>Mevcut kayıt defteri anahtarı altında yeni bir değer oluşturma
 
-Varolan bir anahtara özel değerler ekleyebilirsiniz. Aşağıdaki kod, VSPackage kayıt anahtarına nasıl yeni bir değer ekleneceğini gösterir.
+Mevcut bir anahtara özel değerler eklemek için kullanabilirsiniz. Aşağıdaki kod, VSPackage kayıt anahtarına yeni bir değer ekleme işlemini gösterir.
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)

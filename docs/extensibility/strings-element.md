@@ -1,9 +1,9 @@
 ---
-title: Dizeler öğesi | Microsoft Docs
-description: Dizeler öğesi bir ButtonText alt öğesi ve diğer isteğe bağlı alt öğeleri içerir. Metin dizesindeki bir ve işareti klavye kısayolunu belirtir.
+title: Strings Öğesi | Microsoft Docs
+description: Strings öğesi bir ButtonText alt öğesi ve diğer isteğe bağlı alt öğeleri içerir. Metin dizesinde ve karakteri bir klavye kısayolu belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Strings element (VSCT XML schema)
 - VSCT XML schema elements, Strings
@@ -13,17 +13,17 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0bd9ad9b8059eb7fd566c1e0c26a938af6d18b2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 27a649c7d3a8bb808153c280921d2304de59c379
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089907"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899413"
 ---
 # <a name="strings-element"></a>Strings Öğesi
-Dizeler öğesi en az bir **ButtonText** alt öğesi içermelidir. Diğer tüm alt öğeler isteğe bağlıdır. ' & ' ve ' < ' gibi geçersiz XML karakterleri, varlıklar (' &amp; ' ve ' ' vb.) olarak kodlanmalıdır &lt; .
+Strings öğesi en az bir **ButtonText alt** öğesi içermeli. Diğer tüm alt öğeler isteğe bağlıdır. '&' ve '<' gibi geçersiz XML karakterleri varlık (' ' &amp; ve ' &lt; ' gibi) olarak kodlamalıdır.
 
- Metin dizesindeki bir ve işareti, komutun klavye kısayolunu belirtir.
+ Metin dizesinde ve karakteri, komutun klavye kısayolunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,25 +41,25 @@ Dizeler öğesi en az bir **ButtonText** alt öğesi içermelidir. Diğer tüm a
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|language|İsteğe bağlı. Dil = ".".|
+|language|İsteğe bağlı. Language=".".|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|ButtonText|Bu alan ve bir komut tanımındaki aşağıdaki beş metin alanı, çeşitli menülerde görüntülenen metni belirtmenize izin verir. Varsayılan olarak, `ButtonText` alan menü denetleyicileri ' nde görünür. `ButtonText`Diğer metin alanları boşsa, alan de varsayılan olur. `ButtonText`Diğer metin alanları belirtiseler bile alanı boş bırakılamaz.|
-|TOOLTIPTEXT|`ToolTipText`Alan, bir menü öğesi için araç ipucunda görüntülenen metni belirtir.<br /><br /> `ToolTipText`Alan boşsa, `ButtonText` alanı kullanılır.|
-|MenuText|`MenuText`Bu alan, ana menü, araç çubuğu, kısayol menüsü veya alt menüdeki bir komut için görüntülenen metni belirtir. `MenuText`Alan boşsa, tümleşik geliştirme ortamı (IDE) `ButtonText` alanını kullanır. `MenuText`Alan, yerelleştirme için de kullanılabilir.<br /><br /> Kısayol menüleri için, `MenuText` Bu alan kısayol menüleri araç çubuğunda görüntülenen, IDE 'de kısayol menülerinin özelleştirilmesine izin veren addır. Bu nedenle, kısayol menünüzün adına özel olun; Örneğin, "kısayol" yerine "pencere öğesi paketi kısayol menüsü" kullanın.<br /><br /> `MenuText`Alan belirtilmemişse, `ButtonText` alanı kullanılır.|
-|Name|`CommandName`Alan, **Özelleştir** iletişim kutusundaki **Komutlar** sekmesinde klavye kategorisinde görüntülenen metni belirtir ( **Araçlar** menüsünde **Özelleştir** ' i tıklatarak kullanılabilir).|
-|CanonicalName|Ingilizce `CanonicalName` alanı, menü öğesini yürütmek Için **komut** penceresine girilebilecek İngilizce metindeki komutun adını belirtir. IDE, harf, rakam, alt çizgi veya gömülü nokta olmayan karakterleri kaldırır. Bu metin daha sonra `ButtonText` komutu tanımlamak için alana birleştirilir. Örneğin, **Dosya** menüsündeki **Yeni proje** File. NewProject komutu olur.<br /><br /> Ingilizce `CanonicalName` alanı belirtilmemişse, IDE `ButtonText` alanı kullanır ve harfler, rakamlar, alt çizgiler ve gömülü dönemler hariç tümünü kaldırır. Örneğin, düğme metni "&komutları tanımla..." , ve işareti, boşluk ve üç noktanın kaldırıldığı DefineCommands olur.<br /><br /> `TextChanges`Bayrak belirtilmişse ve komutun metni değiştirilirse, **komut** penceresi tarafından tanınan karşılık gelen komut değişmez; orijinal `ButtonText` veya İngilizce alanlarının kurallı biçimi kalır `CanonicalName` .|
-|LocCanonicalName|`LocCanonicalName`Alan, İngilizce alanla aynı şekilde davranır, `CanonicalName` ancak yerelleştirilmiş komut metninin belirtilmesini sağlar. Her iki kurallı alan de belirtilebilir. IDE, **komut** penceresinde girilen metni ayrıştırır ve bunu bir komutla ilişkilendirir, hem İngilizce hem de İngilizce olmayan metinler aynı komutla ilişkilendirilebilir.|
+|ButtonText|Bu alan ve komut tanımında aşağıdaki beş metin alanı, çeşitli menülerde görüntülenen metni belirtmenize izin verir. Varsayılan olarak, alan `ButtonText` menü denetleyicilerinde görünür. Diğer `ButtonText` metin alanları boşsa alan da varsayılan olur. Diğer `ButtonText` metin alanları belirtilmiş olsa bile alan boş olamaz.|
+|Tooltiptext|`ToolTipText`alanı, bir menü öğesinin araç ipucunda görünen metni belirtir.<br /><br /> Alan `ToolTipText` boşsa alanı `ButtonText` kullanılır.|
+|MenuText|alanı, ana menüde, araç çubuğunda, kısayol menüsünde veya bir alt menüde yer alan komut için `MenuText` görüntülenen metni belirtir. Alan `MenuText` boşsa tümleşik geliştirme ortamı (IDE) alanını `ButtonText` kullanır. Alanı `MenuText` yerelleştirme için de kullanılabilir.<br /><br /> Kısayol menüleri için, alanı Kısayol Menüleri araç çubuğunda görüntülenen addır ve bu ad IDE'de kısayol menülerinin `MenuText` özelleştirilmesini sağlar. Bu nedenle, kısayol menüyü nasıl adla ifade ettiyebilirsiniz; Örneğin, "Kısayol" yerine "Pencere Öğesi Paketi Kısayol Menüsü" kullanın.<br /><br /> Alan `MenuText` belirtilmezse, `ButtonText` alanı kullanılır.|
+|Commandname|alanı, Özelleştir iletişim kutusundaki Komutlar sekmesindeki klavye kategorisinde görüntülenen metni belirtir (Araçlar menüsünde `CommandName` **Özelleştir'e** tıklayarak **kullanılabilir).**  |
+|CanonicalName|İngilizce alanı, menü öğesini yürütmek için Komut penceresine girilebilir İngilizce `CanonicalName` **metinde** komutun adını belirtir. IDE harf, basamak, alt çizgi veya eklenmiş nokta değil tüm karakterleri çıkartır. Bu metin daha sonra komutu tanımlamak `ButtonText` için alanıyla birtir. Örneğin, **Dosya menüsündeki** Yeni **Proje,** File.NewProject komutu olur.<br /><br /> İngilizce alanı belirtilmezse, IDE alanını kullanır ve harf, basamak, alt çizgi ve eklenmiş nokta dışındaki `CanonicalName` `ButtonText` tüm alanları çıkartır. Örneğin, Düğme Metni "&Tanımla..." ve ve, boşluk ve üç noktanın kaldırıldığı DefineCommands olur.<br /><br /> Bayrak belirtilirse ve komutun metni değiştirilirse, Komut penceresi tarafından tanınan karşılık gelen komut değişmez; özgün veya İngilizce alanların kurallı `TextChanges`  `ButtonText` biçimi `CanonicalName` kalır.|
+|LocCanonicalName|alanı `LocCanonicalName` İngilizce alanıyla aynı şekilde `CanonicalName` davranır, ancak yerelleştirilmiş komut metninin belirtilebilir. Her iki kurallı alan da belirtilebilir. IDE Yalnızca Komut penceresine girilen  metni ayrıştırarak bir komutla ilişkilendirene kadar, hem İngilizce hem de İngilizce olmayan metinler aynı komutla ilişkilendirilebilirsiniz.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Button Öğesi](../extensibility/button-element.md)|Kullanıcının etkileşime girebileceği bir öğe tanımlar.|
-|[Menu Öğesi](../extensibility/menu-element.md)|Tek bir menü öğesi tanımlar.|
+|[Button Öğesi](../extensibility/button-element.md)|Kullanıcının etkileşimde buluna bir öğeyi tanımlar.|
+|[Menu Öğesi](../extensibility/menu-element.md)|Tek bir menü öğesini tanımlar.|
 |[Combo Öğesi](../extensibility/combo-element.md)|Birleşik giriş kutusunda görünen komutları tanımlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

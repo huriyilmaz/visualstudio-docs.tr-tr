@@ -1,9 +1,9 @@
 ---
-title: Düğme öğesi | Microsoft Docs
-description: 'Button öğesi, kullanıcının etkileşime girebileceği bir öğesi tanımlar. Düğmeler farklı türlerde olabilir: Button, Menubtan ve SplitDropDown.'
+title: Düğme Öğesi | Microsoft Docs
+description: 'Button öğesi, kullanıcının etkileşimde buluna bir öğeyi tanımlar. Düğmeler farklı türlerde olabilir: Düğme, MenuButton ve SplitDropDown.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Buttons element (VSCT XML schema)
 - VSCT XML schema elements, Buttons
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec0640313195d6a15599d1a765081557c0c1a75a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 630d848c40b13a929c3dd91b47e1c35529efaa50
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068156"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901753"
 ---
-# <a name="button-element"></a>Button öğesi
-Kullanıcının etkileşime girebileceği bir öğe tanımlar. Düğmeler farklı türlerde olabilir: Button, Menubtan ve SplitDropDown.
+# <a name="button-element"></a>Düğme öğesi
+Kullanıcının etkileşimde buluna bir öğeyi tanımlar. Düğmeler farklı türlerde olabilir: Button, MenuButton ve SplitDropDown.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ Kullanıcının etkileşime girebileceği bir öğe tanımlar. Düğmeler farkl�
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|
-|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|
-|Priority|İsteğe bağlı. Önceliği belirten sayısal bir değer.|
-|tür|İsteğe bağlı. Düğme türünü belirten numaralandırılmış bir değer.<br /><br /> Verilmezse, düğme kullanır.<br /><br /> Düğme<br /> Araç çubuklarında (genellikle absolut düğmesi olarak), menülerde ve bağlam menülerinde görüntülenen standart bir komut.<br /><br /> MenuButton<br /> Bir komut yürütülemez ancak başka bir menü üreten bir menü öğesi.<br /><br /> Bölünmüş aşağı açılan<br /> Microsoft Word 'deki Standart araç çubuğunda yer alan geri al ve Yinele düğmeleri gibi denetimler.|
-|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID'si.|
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının kimliği.|
+|Öncelik|İsteğe bağlı. Önceliği belirten sayısal bir değer.|
+|tür|İsteğe bağlı. Düğmenin tür belirten numaralandı bir değer.<br /><br /> Verilmezse Düğme'i kullanır.<br /><br /> Düğme<br /> Araç çubuklarında (genellikle bir düğme olarak), menülerde ve bağlam menülerinde görünen standart bir komut.<br /><br /> MenuButton<br /> Komut yürütmeden başka bir menü üreten menü öğesi.<br /><br /> SplitDropDown<br /> Microsoft Word'de standart araç çubuğundaki Geri Al ve Tekrarla düğmeleri gibi denetimler.|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
 |[Üst öğe](../extensibility/parent-element.md)|İsteğe bağlı. Düğmenin üst öğesi.|
-|[Icon öğesi](../extensibility/icon-element.md)|İsteğe bağlı. Düğme ile ilişkili simge.|
-|[Komut bayrağı öğesi](../extensibility/command-flag-element.md)|Gereklidir. Bir düğme için geçerli CommandFlag değerleri aşağıdaki gibidir.<br /><br /> -AllowParams<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> - DontCache<br /><br /> -DynamicItemStart<br /><br /> -DynamicVisibility<br /><br /> -FixMenuController<br /><br /> -IconAndText<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -NoShowOnMenuController<br /><br /> -PICT<br /><br /> -PostExec<br /><br /> -ProfferedCmd<br /><br /> -RouteToDocs<br /><br /> -Textbasamakdeusebtn<br /><br /> -TextMenuUseButton<br /><br /> -TextChanges<br /><br /> -TextChangesButton<br /><br /> -TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> -TextMenuUseButton<br /><br /> -TextOnly|
-|[Dizeler öğesi](../extensibility/strings-element.md)|Gereklidir. Alt [ButtonText öğesi](../extensibility/buttontext-element.md) tanımlanmalıdır.|
+|[Simge öğesi](../extensibility/icon-element.md)|İsteğe bağlı. Düğmeyle ilişkili simge.|
+|[Komut bayrağı öğesi](../extensibility/command-flag-element.md)|Gereklidir. Bir Düğme için geçerli CommandFlag değerleri aşağıdaki gibidir.<br /><br /> - AllowParams<br /><br /> - CommandWellOnly<br /><br /> - DefaultDisabled<br /><br /> - DefaultInvisible<br /><br /> - DontCache<br /><br /> - DynamicItemStart<br /><br /> - DynamicVisibility<br /><br /> - FixMenuController<br /><br /> - IconAndText<br /><br /> - NoButtonCustomize<br /><br /> - NoCustomize<br /><br /> - NoKeyCustomize<br /><br /> - NoShowOnMenuController<br /><br /> - Pict<br /><br /> - PostExec<br /><br /> - ProfferedCmd<br /><br /> - RouteToDocs<br /><br /> - TextCascadeUseBtn<br /><br /> - TextMenuUseButton<br /><br /> - TextChanges<br /><br /> - TextChangesButton<br /><br /> - TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> - TextMenuUseButton<br /><br /> - TextOnly|
+|[Strings öğesi](../extensibility/strings-element.md)|Gereklidir. Alt [ButtonText öğesi](../extensibility/buttontext-element.md) tanımlanmalıdır.|
 |Ek Açıklama|İsteğe bağlı açıklama.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Düğmeler öğesi](../extensibility/buttons-element.md)|Düğme öğelerini gruplandırır.|
+|[Düğmeler öğesi](../extensibility/buttons-element.md)|Gruplar Düğmesi öğeleri.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir *. vsct* dosyasındaki bir düğmeyi tanımlar.
+ Aşağıdaki örnek bir *.vsct dosyasındaki bir düğmeyi* tanımlar.
 
  ```xml
 <Button guid="guidMenuTextCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -79,4 +79,4 @@ Kullanıcının etkileşime girebileceği bir öğe tanımlar. Düğmeler farkl�
  ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

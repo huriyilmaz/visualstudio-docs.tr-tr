@@ -1,9 +1,9 @@
 ---
-title: Gerekli bağlantı noktası sağlayıcısı arabirimleri | Microsoft Docs
-description: Bir bağlantı noktası tedarikçinin çalışması gereken arabirimler hakkında bilgi edinin. Bağlantı noktası sağlayıcısı, bağlantı noktaları sağlar ve bunları uygular.
+title: Gerekli Bağlantı Noktası Tedarikçi Arabirimleri | Microsoft Docs
+description: Bir bağlantı noktası sağlayıcının çalıştırması gereken arabirimler hakkında bilgi edinmek. Bağlantı noktası tedarikçisi bağlantı noktaları sağlar ve bunları uygulamaz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - port suppliers, required interfaces
 - debugging [Debugging SDK], port suppliers
@@ -13,40 +13,40 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f5755ce47a2b76c9a0d38b1f7eed3b38d64c876
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 96cf70302839a9de3c5fb0fec01136d9700ee17e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070615"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902377"
 ---
-# <a name="required-port-supplier-interfaces"></a>Gerekli bağlantı noktası sağlayıcısı arabirimleri
-Bir bağlantı noktası tedarikçinin [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimini uygulaması gerekir. [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)
+# <a name="required-port-supplier-interfaces"></a>Gerekli bağlantı noktası tedarikçi arabirimleri
+Bir bağlantı noktası sağlayıcının [IDebugPortSupplier2 arabirimini uygulaması](../../extensibility/debugger/reference/idebugportsupplier2.md) gerekir. [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)
 
- Bağlantı noktası sağlayıcısı, bağlantı noktaları sağlar ve bunları uygular. Bu nedenle, aşağıdaki arabirimleri çalıştırmalıdır:
+ Bağlantı noktası tedarikçisi bağlantı noktaları sağlar ve bunları uygulamaz. Bu nedenle aşağıdaki arabirimleri çalıştırması gerekir:
 
 - [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)
 
-  Bağlantı noktasını açıklar ve bağlantı noktası üzerinde çalışan tüm işlemi numaralandırır.
+  Bağlantı noktasını açıklar ve bağlantı noktası üzerinde çalışan tüm işlemleri numaralar.
 
 - [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)
 
-  Bağlantı noktasında işlem başlatma ve sonlandırma sağlar.
+  Bağlantı noktası üzerinde işlemleri başlatmayı ve sonlandırmayı sağlar.
 
 - [IDebugPortNotify2](../../extensibility/debugger/reference/idebugportnotify2.md)
 
-  Program düğümü oluşturma ve yok etme hakkında bilgilendirmek için bu bağlantı noktası bağlamında çalışan programlar için bir mekanizma sağlar. Daha fazla bilgi için bkz. [Program düğümleri](../../extensibility/debugger/program-nodes.md).
+  Bu bağlantı noktası bağlamında çalışan programlar için program düğümü oluşturma ve yok etme hakkında bildirim sağlayan bir mekanizma sağlar. Daha fazla bilgi için [bkz. Program düğümleri.](../../extensibility/debugger/program-nodes.md)
 
 - `IConnectionPointContainer`
 
-  [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md)için bir bağlantı noktası sağlar.
+  [IDebugPortEvents2 için bir bağlantı noktası sağlar.](../../extensibility/debugger/reference/idebugportevents2.md)
 
-## <a name="port-supplier-operation"></a>Bağlantı noktası sağlayıcısı işlemi
- Bir bağlantı noktasında işlem ve program oluşturulduğunda ve yok edildiğinde [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md) havuzu bildirimleri alır. Bir işlem oluşturulduğunda [IDebugProcessCreateEvent2](../../extensibility/debugger/reference/idebugprocesscreateevent2.md) göndermek için bir bağlantı noktası gerekir ve bağlantı noktasında bir işlem yok edildiğinde [IDebugProcessDestroyEvent2](../../extensibility/debugger/reference/idebugprocessdestroyevent2.md) . Ayrıca, bir program oluşturulduğunda [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) göndermek için bir bağlantı noktası ve bir program bağlantı noktasında çalışan bir işlemde yok edildiğinde [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) gerekir.
+## <a name="port-supplier-operation"></a>Bağlantı noktası sağlayıcı işlemi
+ İşlem ve programlar bir bağlantı noktası üzerinde oluşturulduğunda ve yok edilirken [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md) havuzu bildirimleri alır. Bir işlem oluşturulduğunda [IDebugProcessCreateEvent2](../../extensibility/debugger/reference/idebugprocesscreateevent2.md) ve bağlantı noktası üzerinde bir işlem yok edilirken [IDebugProcessDestroyEvent2](../../extensibility/debugger/reference/idebugprocessdestroyevent2.md) göndermek için bir bağlantı noktası gereklidir. Bir program oluşturulduğunda [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) ve bağlantı noktası üzerinde çalışan bir işlemde program yok edilirken [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) göndermek için de bir bağlantı noktası gereklidir.
 
- Bir bağlantı noktası genellikle, sırasıyla [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) ve [RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) yöntemlerine yanıt olarak program oluşturma ve yok etme olayları gönderir.
+ Bir bağlantı noktası genellikle sırasıyla [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) ve [RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) yöntemlerine yanıt olarak program oluşturma ve yok etme olaylarını gönderir.
 
- Bir bağlantı noktası hem fiziksel işlemi hem de mantıksal programları başlatıp sonlandırabildiğinden, aşağıdaki arabirimlerin de hata ayıklama altyapısı tarafından uygulanması gerekir:
+ Bir bağlantı noktası hem fiziksel işlemleri hem de mantıksal programları başlataya ve sonlandırana kadar, hata ayıklama altyapısı tarafından aşağıdaki arabirimlerin de uygulanması gerekir:
 
 - [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)
 
@@ -66,7 +66,7 @@ Bir bağlantı noktası tedarikçinin [IDebugPortSupplier2](../../extensibility/
 
 - [IDebugProcessEx2](../../extensibility/debugger/reference/idebugprocessex2.md)
 
-  SDM 'nin bir işlemden kendisini ekleyip ayırabilmek için bir yol sağlar.
+  SDM'nin kendisini bir işleme eklemesi ve işlemden ayırması için bir yol sağlar.
 
 - [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)
 
@@ -80,7 +80,7 @@ Bir bağlantı noktası tedarikçinin [IDebugPortSupplier2](../../extensibility/
 
 - [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md)
 
-  SDM 'nin bu programa eklenmesi için bir yol sağlar.
+  SDM'nin bu programa eklemesi için bir yol sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bağlantı noktası sağlayıcısı uygulama](../../extensibility/debugger/implementing-a-port-supplier.md)
+- [Bağlantı noktası sağlayıcı uygulama](../../extensibility/debugger/implementing-a-port-supplier.md)

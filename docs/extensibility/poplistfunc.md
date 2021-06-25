@@ -3,7 +3,7 @@ title: POPLISTFUNC | Microsoft Docs
 description: Dosya veya dizinlerin listesini güncelleştirmek için kaynak denetim eklentisi tarafından kullanılan POPLISTFUNC callback işlevi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - POPDIRLISTFUNC
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: aec322d73e49d4aae91956bd8df015a01c922a10
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b52ed40397793b44f8a9c7ed9c36aa5996ae0176
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090245"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900388"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 Bu geri çağırma, IDE tarafından [SccPopulateList](../extensibility/sccpopulatelist-function.md) için sağlanır ve kaynak denetim eklentisi tarafından, bir dosya veya dizinlerin listesini güncelleştirmek için kullanılır (işleve de sağlanır `SccPopulateList` ).

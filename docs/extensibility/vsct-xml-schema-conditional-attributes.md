@@ -1,9 +1,9 @@
 ---
-title: VSCT XML şeması Koşullu öznitelikleri | Microsoft Docs
-description: VSCT XML şema listelerine ve öğelerine koşullu öznitelikler uygulamayı öğrenin. Öznitelikler doğru veya yanlış olarak değerlendirilir ve sonuçta elde edilen çıktıyı kontrol edin.
+title: VSCT XML Şeması Koşullu Öznitelikleri | Microsoft Docs
+description: VSCT XML şema listelerine ve öğelerine koşullu öznitelikler uygulama hakkında bilgi. Öznitelikler, elde edilen çıkışı denetleyerek true veya false olarak değerlendirilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, conditional attributes
 - conditional attributes (VSCT XML schema)
@@ -13,21 +13,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bc1bcb9d80474b467e90de6262e797087589065
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e91207016ed6e1baab80b323680d10a40e0331d8
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062362"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905260"
 ---
-# <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML şeması Koşullu öznitelikleri
-Koşullu öznitelikleri tüm listelerine ve öğelere uygulayabilirsiniz. Mantıksal işleçler ve sembol genişletme ifadeleri true veya false olarak değerlendirilir. True ise, ilişkili liste veya öğe ortaya çıkan çıktıya dahil edilir.
+# <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML şeması koşullu öznitelikleri
+Koşullu öznitelikleri tüm listelere ve öğelere uygulayabilirsiniz. Mantıksal işleçler ve sembol genişletme ifadeleri true veya false olarak değerlendirilir. True ise, ilişkili liste veya öğe sonuçta elde edilen çıkışa dahil edilir.
 
- Belirteç genişletmeleri diğer belirteç genişletmeleri veya sabitlerine karşı test edebilirsiniz. İşlevi, `Defined()` bir değer olmasa bile belirli bir adın tanımlanıp tanımlanmadığını sınar.
+ Belirteç genişletmelerini diğer belirteç genişletmelerine veya sabitlerine karşı test etmek için kullanabilirsiniz. İşlev, `Defined()` değere sahip olsa bile belirli bir adın tanımlanmamış olup olmadığını sıyr.
 
- Bir koşul özniteliği bir listeye uygulandığında, koşul listedeki her alt öğeye uygulanır. Bir alt öğenin kendisi bir koşul özniteliği içeriyorsa, koşulu bir ve işlemi tarafından üst ifadeyle birleştirilir.
+ Bir listeye Condition özniteliği uygulandığında koşul, listede yer alan her alt öğeye uygulanır. Bir alt öğenin kendisi bir Condition özniteliği içeriyorsa, koşulu bir AND işlemi tarafından üst ifadeyle birleştirilmiş olur.
 
- 1, ' 1 ' ve ' true ' değerleri true olarak değerlendirilir ve 0, ' 0 ' ve ' false ' yanlış olarak değerlendirilir.
+ 1, '1' ve 'true' değerleri true, 0, '0' ve 'false' değerleri false olarak değerlendirilir.
 
 ## <a name="operators"></a>İşleçler
  Koşullu ifadeleri değerlendirmek için aşağıdaki işleçleri kullanın.
@@ -36,7 +36,7 @@ Koşullu öznitelikleri tüm listelerine ve öğelere uygulayabilirsiniz. Mantı
 |--------------|----------------|
 |(,)|Gruplandırma|
 |!|Mantıksal değil|
-|\<, >, \<=, >=, ==, !=|İlişkisel ve eşitlik|
+|\<, >, \<=, >=, ==, !=|İlişkisel ve Eşitlik|
 |ve|Boole|
 |veya|Boole|
 
@@ -72,4 +72,4 @@ and !Defined(DEBUG)">
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu () seçin. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

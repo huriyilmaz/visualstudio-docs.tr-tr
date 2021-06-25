@@ -3,7 +3,7 @@ title: Menü öğelerine klavye kısayollarını bağlama | Microsoft Docs
 description: Visual Studio 'da klavye kısayolunun varsayılan düzenleyici veya özel bir düzenleyici için özel düğme, menü öğesi veya araç çubuğu komutuna nasıl eşlendiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - keyboard command
 - keyboards
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88cc7d91ee8cd24daae278efdbfd35271412af40
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6a9591a7412b0bcaf506483a16a6660790df5f40
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097311"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900440"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Klavye kısayollarını menü öğelerine bağlama
 Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *. vsct* dosyasına bir giriş eklemeniz yeterlidir. Bu konu başlığı altında, klavye kısayolunun özel düğme, menü öğesi veya araç çubuğu komutuna nasıl değiştirileceği ve varsayılan düzenleyicide klavye eşlemesinin nasıl uygulanacağı veya özel bir düzenleyici ile nasıl sınırlandırılacağını açıklanmaktadır.
