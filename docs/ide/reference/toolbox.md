@@ -6,7 +6,6 @@ ms.date: 06/01/2020
 ms.topic: reference
 f1_keywords:
 - vs.toolbox.general
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [Visual Studio]
 - custom controls [Visual Studio]
@@ -15,12 +14,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a926084ccd8b1aafabb50f5a93f3f46d77bc6d4
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 0a4947562eb49501e60711111d8765716cbae5c6
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308473"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925221"
 ---
 # <a name="toolbox"></a>Araç Kutusu
 
@@ -30,12 +29,12 @@ Araç **Kutusu penceresinde,** Visual Studio projelerine ek Visual Studio görü
 
 Farklı denetimleri kullanmakta olduğu tasarımcının yüzeyine sürükleyip bırakın ve denetimleri yeniden boyutlandırın ve yerleştirin.
 
-Araç kutusu, XAML dosyasının tasarımcı görünümü veya Windows Forms App projesi gibi tasarımcı görünümleriyle birlikte görünür. **Araç kutusu** yalnızca geçerli tasarımcıda kullanılan denetimleri görüntüler. Görünen öğeleri daha **fazla filtrelemek** için Araç Kutusu içinde arama edebilirsiniz.
+Araç kutusu, XAML dosyasının tasarımcı görünümü veya Windows Forms App projesi gibi tasarımcı görünümleriyle birlikte görünür. **Araç kutusu** yalnızca geçerli tasarımcıda kullanılan denetimleri görüntüler. Görünen öğeleri daha fazla **filtrelemek** için Araç Kutusu içinde arama edebilirsiniz.
 
 > [!NOTE]
 > Bazı proje türleri için **Araç Kutusu** herhangi bir öğe gösterebildi.
 
-Projenizin hedeflediği .NET sürümü, Araç Kutusu'da görünen denetimler kümelerini de etkiler. Gerekirse projenin özellik sayfalarından hedef çerçeve sürümünü değiştirebilirsiniz. içinde proje düğümünü **Çözüm Gezgini** ve ardından menü çubuğunda Proje projeadı   >  **Özellikleri'ne tıklayın.** Uygulama **sekmesinde** Hedef çerçeve **açılan** listesinden seçim yapın.
+Projenizin hedeflediği .NET sürümü, Araç Kutusu'da görünen denetim kümelerini de etkiler. Gerekirse projenin özellik sayfalarından hedef çerçeve sürümünü değiştirebilirsiniz. içinde proje düğümünü **Çözüm Gezgini** ve ardından menü çubuğunda Proje projeadı   >  **Özellikleri'ne tıklayın.** Uygulama **sekmesinde** Hedef çerçeve **açılan** listesinden seçim yapın.
 
 ::: moniker range=">=vs-2019"
 

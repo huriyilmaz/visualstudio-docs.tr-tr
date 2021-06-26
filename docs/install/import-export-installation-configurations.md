@@ -4,8 +4,6 @@ titleSuffix: ''
 description: Yükleme yapılandırmanızı başkalarla paylaşmak için bir .vsconfig dosyasına aktarmayı ve kopyalama için bunu içeri aktarmayı öğrenin.
 ms.date: 05/18/2019
 ms.topic: how-to
-f1_keywords:
-- vs.about
 helpviewer_keywords:
 - import installation configuration
 - export installation configuration
@@ -18,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1fc4b181436b5e214300b334163b9257af0d0d35
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 33ee25da51d5243daa67be53f68c50ede76219b2
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307472"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925234"
 ---
 # <a name="import-or-export-installation-configurations"></a>Yükleme yapılandırmasını içeri veya dışarı aktarma
 

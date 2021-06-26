@@ -4,8 +4,6 @@ description: Geliştirilmiş bileşenlere başvurular eklemek ve bunları yönet
 ms.custom: SEO-VS-2020
 ms.date: 08/02/2019
 ms.topic: how-to
-f1_keywords:
-- VS.ReferenceManager
 helpviewer_keywords:
 - C# projects, references
 - references [Visual Studio], adding
@@ -23,12 +21,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 82300d90d890cf632693fe07b5873423a29da0ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 552ec8364bb58b72199bacecca99283303eb174c
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893366"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924922"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl yapılır: başvuru Yöneticisi 'ni kullanarak başvuru ekleme veya kaldırma
 
@@ -173,29 +171,29 @@ SDK 'larınızı **Uzantılar** sekmesinde görüntüleme hakkında daha fazla b
 > [!NOTE]
 > Bir proje, başka bir SDK 'ya bağlı olan bir SDK 'ya başvuruyorsa, ikinci SDK 'ya el ile bir başvuru eklemediğiniz takdirde Visual Studio ikinci SDK 'yı tüketmez. Bir Kullanıcı **Uzantılar** SEKMESINDE bir SDK seçtiğinde, başvuru Yöneticisi iletişim kutusu, Ayrıntılar bölmesindeki BAĞıMLıLıKLARı listeleyerek SDK bağımlılıklarını belirlemenize yardımcı olur.
 
-Bir proje türü uzantıları desteklemiyorsa, bu sekme başvuru Yöneticisi iletişim kutusunda görünmez.
+Proje türü uzantıları desteklemezse, Başvuru Yöneticisi iletişim kutusunda bu sekme görünmez.
 
 ## <a name="com-tab"></a>COM sekmesi
 
-**Com** sekmesi, başvuru için KULLANıLABILEN tüm com bileşenlerini listeler. Dahili bildirim içeren kayıtlı bir COM DLL öğesine başvuru eklemek isterseniz, önce DLL kaydını silin. Aksi halde, Visual Studio derleme başvurusunu yerel bir DLL yerine ActiveX denetimi olarak ekler.
+**COM sekmesi,** başvuru için kullanılabilen tüm COM bileşenlerini listeler. Dahili bildirim içeren kayıtlı bir COM DLL öğesine başvuru eklemek isterseniz, önce DLL kaydını silin. Aksi Visual Studio derleme başvurularını yerel DLL yerine ActiveX denetimi olarak ekler.
 
-Bir proje türü COM 'u desteklemiyorsa, sekme başvuru Yöneticisi iletişim kutusunda görünmez.
+Bir proje türü COM'yi desteklemezse, Başvuru Yöneticisi iletişim kutusunda sekme görünmez.
 
 ## <a name="browse"></a>Gözat
 
-Dosya sistemindeki bir bileşene gitmek için, **Araştır** düğmesini kullanabilirsiniz.
+Dosya sisteminde **bir** bileşene göz atmak için Gözat düğmesini kullanabilirsiniz.
 
-Proje, farklı bir Framework sürümünü hedefleyen bir bileşene başvurabilir. Örneğin, .NET Framework 4,7 ' i hedefleyen, ancak .NET Framework 4 ' ü hedefleyen bir bileşene başvuran bir uygulama oluşturabilirsiniz. Daha fazla bilgi için bkz. [Çerçeve hedefleme genel bakış](../ide/visual-studio-multi-targeting-overview.md).
+Proje, farklı bir çerçeve sürümünü hedef alan bir bileşene başvurur. Örneğin, 4.7'ye .NET Framework ancak 4'ü hedef alan bir bileşene .NET Framework oluşturabilirsiniz. Daha fazla bilgi için [bkz. Çerçeve hedeflemeye genel bakış.](../ide/visual-studio-multi-targeting-overview.md)
 
-Aynı çözümdeki başka bir projenin çıktılarına dosya başvuruları eklemekten kaçının, çünkü bu durum derleme hatalarına neden olabilir. Bunun yerine, projeden projeye başvurular oluşturmak için başvuru Yöneticisi iletişim kutusunun **çözüm** sekmesini kullanın. Bu, projelerinizde oluşturduğunuz sınıf kitaplıklarının daha iyi yönetimini etkinleştirerek takım geliştirmeyi kolaylaştırır. Daha fazla bilgi için bkz. [Hatalı başvuruların sorunlarını giderme](../ide/troubleshooting-broken-references.md).
+Bu taktik derleme hatalarına neden olduğundan, aynı çözümdeki başka bir projenin çıkışlarına dosya başvuruları eklemekten kaçının. Bunun yerine, **projeden** projeye başvurular oluşturmak için Başvuru Yöneticisi iletişim kutusunun Çözüm sekmesini kullanın. Bu, projeleriniz içinde oluşturdukları sınıf kitaplıklarının daha iyi yönetimini sağlayarak takım geliştirmeyi kolaylaştırır. Daha fazla bilgi için [bkz. Bozuk başvurularla ilgili sorunları giderme.](../ide/troubleshooting-broken-references.md)
 
-Bir SDK 'ya gözatamazsınız ve projenize ekleyemezsiniz. Yalnızca bir dosyaya (örneğin, bir derleme veya *. winmd*) gidebilir ve bu dosyayı projenize ekleyebilirsiniz.
+Bir SDK'ya göz atabilir ve bunu projenize ekliyebilirsiniz. Bir dosyaya (örneğin, bir derleme veya *.winmd) göz atabilir* ve bunu projenize eklersiniz.
 
-Bir WinMD 'ye dosya başvurusu yaparken, beklenen Düzen *\<FileName> . winmd*, *\<FileName> . dll* ve *\<FileName> . pri* dosyalarının tümünün birbirine yerleştirilme halidir. Aşağıdaki senaryolarda bir WinMD'ye başvuruda bulunursanız, proje çıkış dizinine eksik bir dosya kümesi kopyalanır ve sonuç olarak, derleme ve çalışma zamanı hataları meydana gelir.
+Bir WinMD'ye dosya başvurusu yaparken beklenen *\<FileName> düzen, .winmd*, *\<FileName>.dll* ve *\<FileName> .pri* dosyalarının birlikte yerleştirilmiş olmasıdır. Aşağıdaki senaryolarda bir WinMD'ye başvuruda bulunursanız, proje çıkış dizinine eksik bir dosya kümesi kopyalanır ve sonuç olarak, derleme ve çalışma zamanı hataları meydana gelir.
 
-- **Yerel bileşen**: yerel bir proje, her ayrık ad alanı kümesi ve uygulamadan oluşan bir dll Için bir WinMD oluşturur. WinMD'ler ayrı adlara sahip olur. Bu yerel bileşen dosyasına başvurulduğunda, MSBuild, benzer şekilde adlandırılmış Wınmds 'nin bir bileşen yapmasını tanımaz. Sonuç olarak, yalnızca aynı adlı *\<FileName> . dll* ve *\<FileName> . winmd* kopyalanabilir ve çalışma zamanı hataları oluşur. Bu sorunu geçici olarak çözmek için bir uzantı SDK 'Sı oluşturun. Daha fazla bilgi için bkz. [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md).
+- **Yerel bileşen:** Yerel bir proje, her ayrık ad alanı kümesi için bir WinMD ve uygulamadan oluşan bir DLL oluşturur. WinMD'ler ayrı adlara sahip olur. MsBuild, bu yerel bileşen dosyasına başvurulurken, farklı olarak adlandırılmış WinMD'ler tek bir bileşen olduğunu tanımaz. Sonuç olarak, yalnızca aynı adlı *\<FileName>.dll* *\<FileName> ve .winmd* kopyalanır ve çalışma zamanı hataları oluşur. Bu sorunu gidermek için bir uzantı SDK'sı oluşturun. Daha fazla bilgi için [bkz. Yazılım Geliştirme Seti Oluşturma.](../extensibility/creating-a-software-development-kit.md)
 
-- **Denetimleri** kullanma: en azından, XAML denetimi bir *\<FileName> . winmd*, *\<FileName> . dll*, *\<FileName> . pri*, *\<XamlName> . xaml* ve bir *\<ImageName> . jpg*' den oluşur. Proje oluşturulduğunda, dosya başvurusuyla ilişkili kaynak dosyaları projenin çıkış dizinine kopyalanmaz ve yalnızca *\<FileName> . winmd*, *\<FileName> . dll* ve *\<FileName> . pri* kopyalanır. Kullanıcıya Resources *\<XamlName> . xaml* ve *\<ImageName> . jpg* 'nin eksik olduğunu bildirmek için bir yapı hatası kaydedilir. Başarılı olması için, kullanıcının bu kaynak dosyaları oluşturma ve hata ayıklama/çalışma zamanı için proje çıkış dizinine el ile kopyalaması gerekir. Bu sorunu geçici olarak çözmek için, [yazılım geliştirme seti oluşturma](../extensibility/creating-a-software-development-kit.md) ' daki adımları izleyerek bir uzantı SDK 'sı oluşturun ya da aşağıdaki özelliği eklemek için proje dosyasını düzenleyin:
+- **Denetimleri tüketen:** XAML denetimi en azından *\<FileName> bir .winmd*, *\<FileName>.dll*, *\<FileName> .pri*, *\<XamlName> .xaml* ve bir *\<ImageName>.jpg.* Proje yerleşik olduğunda, dosya başvurusuyla ilişkili kaynak dosyaları projenin çıkış dizinine kopyalanmaz ve yalnızca *\<FileName> .winmd*, *\<FileName>.dll* *\<FileName> ve .pri* kopyalanır. Kullanıcıya *\<XamlName> .xaml* ve.jpgkaynaklarının eksik *\<ImageName> olduğunu bildirmek için bir derleme* hatası günlüğe kaydedilir. Başarılı olması için, kullanıcının bu kaynak dosyaları oluşturma ve hata ayıklama/çalışma zamanı için proje çıkış dizinine el ile kopyalaması gerekir. Bu sorunu gidermek için Yazılım Geliştirme Seti Oluşturma'daki adımları kullanarak bir uzantı SDK'sı oluşturun veya aşağıdaki özelliği eklemek için proje dosyasını düzenleyin: [](../extensibility/creating-a-software-development-kit.md)
 
     ```xml
     <PropertyGroup>
@@ -208,11 +206,11 @@ Bir WinMD 'ye dosya başvurusu yaparken, beklenen Düzen *\<FileName> . winmd*, 
 
 ## <a name="recent"></a>En Son
 
-**Derlemeler**, **com**, **Windows** **ve en son bir sekmeye** **gözatıp** , son olarak projelere eklenen bileşenlerin listesini numaralandırır.
+**Derlemeler,** **COM**, **Windows** ve  **Gözat** her biri, projelere son eklenen bileşenlerin listesini listeleen Bir Son Kullanılan sekmesini destekler.
 
 ## <a name="search"></a>Arayın
 
-Başvuru Yöneticisi iletişim kutusundaki arama çubuğu, odağa sahip olan sekmenin üzerinde çalışır. Örneğin, **çözüm** sekmesi odağa karşın bir Kullanıcı arama çubuğuna "sistem" yazdığında, çözüm "sistem" içeren bir proje adından oluşmadığı sürece arama hiçbir sonuç döndürmez.
+Başvuru Yöneticisi iletişim kutusundaki arama çubuğu, odakta olan sekme üzerinde çalışır. Örneğin, Çözüm sekmesi odaktayken bir kullanıcı arama  çubuğuna "Sistem" yazsa, çözüm "Sistem" içeren bir proje adı içerdiği sürece arama herhangi bir sonuç dönmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

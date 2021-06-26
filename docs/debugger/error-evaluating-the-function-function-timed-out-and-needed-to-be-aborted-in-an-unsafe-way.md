@@ -1,8 +1,9 @@
 ---
-title: İşlevin &apos; değerlendirilmesi zaman içinde zamanlandı ve işlevin güvenli olmayan bir şekilde &apos; iptal | Microsoft Docs
+title: İşlevin &apos; değerlendirilmesi &apos; zaman | Microsoft Docs
 description: "Tam ileti metni: 'işlev' işlevinin değerlendirilmesi zaman doldu ve güvenli olmayan bir şekilde iptal edildi."
 ms.date: 06/18/2021
 ms.topic: error-reference
+ms.custom: contperf-fy21q4
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
 author: mikejo5000
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e928bb0ebae1e644729fcaf4f47b7dd461399be6
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 94c308e9ec960f744a98f0f930999df36afff475
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386676"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925013"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Hata: İşlevin değerlendirme &#39;zaman&#39; ve güvenli olmayan bir şekilde iptal etmek gerekiyor
 
@@ -31,7 +32,7 @@ Bu sorunun çeşitli olası çözümleri için aşağıdaki bölümlere bakın.
 
 ## <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Çözüm #1: Hata ayıklayıcının getter özelliğini veya ToString yöntemini çağırması engellenebilir
 
-Hata iletisi, hata ayıklayıcının çağırmaya çalıştığı işlevin adını size söyler. Bu işlevi değiştirebilirsiniz, hata ayıklayıcının özellik getter veya ToString yöntemini çağırması önlenebilir. Aşağıdakilerden birini deneyin:
+Hata iletisi hata ayıklayıcının çağırmaya çalıştığı işlevin adını size söyler. Bu işlevi değiştirebilirsiniz, hata ayıklayıcının özellik getter veya ToString yöntemini çağırması önlenebilir. Aşağıdakilerden birini deneyin:
 
 * yöntemini özellik getter veya ToString yönteminin yanı sıra başka bir kod türüyle değiştirerek sorun gider.
   -veya-
@@ -41,7 +42,7 @@ Hata iletisi, hata ayıklayıcının çağırmaya çalıştığı işlevin adın
 
 ## <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>Çözüm #2: Hedef kodun hata ayıklayıcıdan değerlendirmeyi durdurmasını istemesini iste
 
-Hata iletisi, hata ayıklayıcının çağırmaya çalıştığı işlevin adını size söyler. Özellikle kodun kod çalıştırmak için başka bir iş parçacığına ihtiyacı olduğu durumlarda özellik getter veya ToString yöntemi bazen düzgün çalışmazsa, uygulama işlevi hata ayıklayıcıdan işlev değerlendirmesini durdurmasını istemek için [System.Diagnostics.Debugger.NotifyOfCrossThreadDependency'i](/dotnet/api/system.diagnostics.debugger.notifyofcrossthreaddependency) çağırabilir. Bu çözümle, bu işlevleri açıkça değerlendirmek hala mümkündür, ancak varsayılan davranış NotifyOfCrossThreadDependency çağrısı oluştuğunda yürütmenin durdurulmasıdır.
+Hata iletisi hata ayıklayıcının çağırmaya çalıştığı işlevin adını size söyler. Özellikle kodun kod çalıştırmak için başka bir iş parçacığına ihtiyacı olduğu durumlarda özellik getter veya ToString yöntemi bazen düzgün çalışmazsa, uygulama işlevi hata ayıklayıcıdan işlev değerlendirmesini durdurmasını istemek için [System.Diagnostics.Debugger.NotifyOfCrossThreadDependency'i](/dotnet/api/system.diagnostics.debugger.notifyofcrossthreaddependency) çağırabilir. Bu çözümle, bu işlevleri açıkça değerlendirmek hala mümkündür, ancak varsayılan davranış NotifyOfCrossThreadDependency çağrısı oluştuğunda yürütmenin durdurulmasıdır.
 
 ## <a name="solution-3-disable-all-implicit-evaluation"></a>Çözüm #3: Tüm örtülü değerlendirmeyi devre dışı bırakma
 

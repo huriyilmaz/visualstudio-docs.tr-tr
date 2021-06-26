@@ -10,12 +10,12 @@ manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 6935c2f37f75f0318ec9402c3fcd0ff763555032
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 9ac42ccff8c7bffcc22c453002aad1caf6935d28
+ms.sourcegitcommit: e4630a3bb89b4d606fe2cbd709bc773c5b538b78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296020"
+ms.lasthandoff: 06/26/2021
+ms.locfileid: "112975672"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Multi-Factor Authentication gerektiren hesaplarla Visual Studio 'Yu kullanma
 
@@ -68,11 +68,16 @@ Yeniden girmeye tıkladığınızda, **kimlik bilgileriniz** sisteminizin varsay
 
 ## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>Visual Studio 'da belirli bir Azure Active Directory kiracının kullanımını devre dışı bırakma
 
-Visual Studio 2019 sürüm 16,6, belirli kiracıların filtreleneceği esnekliği sunar. Bu, bunları Visual Studio 'dan gizler. Filtreleme, bu kiracıyla kimlik doğrulaması gereksinimini ortadan kaldırır, ancak aynı zamanda ilişkili kaynaklara erişemeyeceksiniz. 
+Visual Studio 2019 sürüm 16,6, kiracıların tek tek veya küresel olarak filtreleneceği esnekliği, Visual Studio 'dan etkili bir şekilde ele geçirmeye olanak sağlar. Filtreleme, bu kiracıyla kimlik doğrulaması gereksinimini ortadan kaldırır, ancak aynı zamanda ilişkili kaynaklara erişemeyeceksiniz.
 
 Bu işlevsellik, birden çok kiracının olması ve belirli bir alt kümeyi hedefleyerek geliştirme ortamınızı iyileştirmek istediğinizde yararlıdır. Ayrıca, soruna neden olan kiracıyı filtreleyebileceğiniz için belirli bir CA/MFA ilkesini doğrulayamıyorum, örneklerde da yardımcı olabilir. 
 
-### <a name="how-to-filter-out-a-tenant"></a>Bir kiracıyı filtreleme
+### <a name="how-to-filter-out-all-tenants"></a>Tüm kiracıların nasıl filtreleneceği
+Tüm kiracıların genel olarak filtreleneceği, hesap ayarları iletişim kutusunu **(dosya > hesap ayarları...)** açın ve **tüm Azure Active Directory 'lerde kimlik doğrula** onay kutusunun işaretini kaldırın.
+
+Bu seçeneğin seçimini kaldırmak, yalnızca hesabın varsayılan kiracısıyla kimlik doğrulaması yapabilmenizi sağlar. Ayrıca, hesabınız üzerinde Konuk olabilecek diğer kiracılar ile ilişkili herhangi bir kaynağa erişemeyeceksiniz.
+
+### <a name="how-to-filter-out-individual-tenants"></a>Tek kiracılar nasıl filtreleneceği
 Visual Studio hesabınızla ilişkili kiracılar filtrelemek için, hesap ayarları iletişim kutusunu **(dosya > hesap ayarları...)** açın ve **Filtre Uygula**' ya tıklayın. 
 </br>
 </br>

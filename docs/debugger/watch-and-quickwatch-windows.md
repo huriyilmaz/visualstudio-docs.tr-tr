@@ -4,8 +4,6 @@ description: Hata ayıklarken Watch ve QuickWatch'da değişkenlere ve ifadelere
 ms.custom: SEO-VS-2020
 ms.date: 10/11/2018
 ms.topic: how-to
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - debugging [Visual Studio], Watch window
 - expressions [debugger], evaluating
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 192a11a028c297dc2c642e65982a978f7b5596a7
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 246f82b2d55e8e15bb5a56afba846a8b5dc8f245
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385025"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924909"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>İzleme pencereleri ve QuickWatch ile değişkenleri izleme
 
@@ -90,7 +88,7 @@ int main()
 
 İzleme penceresindeki ifadeleri değerlendirme  kuralları genellikle kod dilindeki ifadeleri değerlendirme kurallarıyla aynıdır. Bir ifadede söz dizimi hatası varsa, kod düzenleyicisinde olduğu gibi aynı derleyici hatasını beklersiniz. Örneğin, önceki ifadede yer alan bir yazım hatası İzleme penceresinde şu **hatayı** üretir:
 
-![İfadeyi izleme hatası](../debugger/media/watchexpressionerror.png "İzleme ifadesi hatası")
+![İfadeyi izleme hatası](../debugger/media/watchexpressionerror.png "İfadeyi izleme hatası")
 
 İzleme penceresinde iki dalgalı çizgi simgesi olan bir **daire** görünebilir. Bu simge, hata ayıklayıcısının olası bir iş parçacığı arası bağımlılık nedeniyle ifadeyi değerlendirmey olduğu anlamına gelir. Kodun değerlendirilmesi için uygulamandaki diğer iş parçacıklarının geçici olarak çalışması gerekir, ancak kesme modunda olduğunuz için uygulamanıza gelen tüm iş parçacıkları genellikle durdurulur. Diğer iş parçacıklarının geçici olarak çalışmasına izin vermenin, uygulamanın durumu üzerinde beklenmedik etkileri olabilir ve hata ayıklayıcı bu iş parçacıklarında kesme noktaları ve özel durumlar gibi olayları yoksayabilirsiniz.
 
@@ -232,7 +230,7 @@ yönteminin adını bulmak `Person` `DoSomething()` için, İzleme penceresinde 
 1. Hata ayıklamaya devam. yürütme yönteminde `DoSomething()` duraklatılırsa, **İzleme** penceresi nesneyi `Person` görüntüler.
 
    > [!NOTE]
-   > nesnesinin gibi özelliklerini görmek için Araçlar Seçenekler Hata Ayıklama Genel Etkinleştirme özelliği değerlendirmesini ve diğer örtülü işlev çağrılarını seçerek özellik `Person.Name`   >    >    >    >  **değerlendirmesini etkinleştirmeniz gerekir.**
+   > nesnesinin gibi özelliklerini görmek için Araçlar Seçenekler Hata Ayıklama Genel Özellik değerlendirmesini etkinleştir'i ve diğer örtülü işlev çağrılarını seçerek özellik `Person.Name`   >    >    >    >  **değerlendirmesini etkinleştirmeniz gerekir.**
 
 ## <a name="dynamic-view-and-the-watch-window"></a>Dinamik Görünüm ve izleme penceresi
 
@@ -257,11 +255,11 @@ Bir nesnenin yalnızca **Dinamik Görünümünü** görüntülemek için, İzlem
 1. Dinamik Görünüm'de herhangi bir alt **aya sağ tıklayın.**
 1. İzleme **Ekle'yi seçin.** , `object.name` yeni bir İzleme penceresinde görünür ve `((dynamic) object).name` olur. 
 
-Hata ayıklayıcısı ayrıca nesnenin **Dinamik Görünüm** alt düğümünü Otomatikler **penceresine** ekler. Otomatikler penceresini **açmak için** hata ayıklama sırasında Windows Autos'da **Hata Ayıkla'ya**  >    >  **tıklayın.**
+Hata ayıklayıcısı ayrıca nesnenin **Dinamik Görünüm** alt düğümünü Otomatikler **penceresine** ekler. Otomatikler penceresini **açmak için** hata ayıklama sırasında Windows Autos'da **Hata**  >    >  **Ayıkla'ya tıklayın.**
 
-**Dinamik Görünüm,** COM nesneleri için hata ayıklamayı da iyiler. Hata ayıklayıcı, içinde sarmalanmış bir COM **nesnesine System.__ComObject,** nesne için **bir Dinamik Görünüm** düğümü ekler.
+**Dinamik Görünüm,** COM nesneleri için hata ayıklamayı da iyiler. Hata ayıklayıcısı, içinde sarmalanmış bir COM **nesnesine System.__ComObject,** nesne için **bir Dinamik Görünüm** düğümü ekler.
 
-## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>QuickWatch ile tek bir değişken veya ifade gözlemle
+## <a name="observe-a-single-variable-or-expression-with-quickwatch"></a>QuickWatch ile tek bir değişkeni veya ifadeyi gözlemle
 
 Tek bir değişkeni gözlemlemek için **QuickWatch** kullanabilirsiniz.
 
