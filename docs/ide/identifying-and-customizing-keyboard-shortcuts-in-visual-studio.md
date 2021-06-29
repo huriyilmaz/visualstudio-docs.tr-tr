@@ -18,87 +18,87 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4686a6459f62fceeebe202cf52d7c30cf99f6fc3
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: a1a3aa2ace6279211c27847b8b9cc46d71b0d9ad
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221255"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038609"
 ---
-# <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 'da klavye kısayollarını tanımla ve Özelleştir
+# <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Klavye kısayollarını tanımlama ve Visual Studio
 
 Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları özelleştirebilir ve başkalarının kullanması için dışarı aktarabilirsiniz. Birçok kısayol her zaman aynı komutları çağırır, ancak kısayolun davranışı aşağıdaki koşullara göre değişebilir:
 
-- Visual Studio 'Yu ilk kez açtığınızda &mdash; , genel geliştirme veya Visual C# için hangi varsayılan ortam ayarları seçersiniz. (Ayarlarınızı değiştirme veya sıfırlama hakkında daha fazla bilgi için bkz. [ortam ayarları](environment-settings.md).)
+- Genel Geliştirme veya Visual C# gibi bir Visual Studio ilk kez açmak &mdash; için hangi varsayılan ortam ayarlarını seçersiniz? (Ayarlarınızı değiştirme veya sıfırlama hakkında bilgi için bkz. [Ortam ayarları.)](environment-settings.md)
 
 - Kısayolun davranışını özelleştirip özelleştirmediğiniz.
 
-- Kısayolu seçtiğiniz anda içinde bulunduğunuz bağlam. Örneğin,  `Edit.EditCell` **Ayarlar tasarımcısını** kullanıyorsanız F2 kısayolu komutu çağırır ve `File.Rename` **Takım Gezgini** kullanıyorsanız komutu çağırır.
+- Kısayolu seçtiğiniz anda içinde bulunduğunuz bağlam. Örneğin, Ayarlar Tasarımcısı kullanıyorsanız **F2** kısayolu komutu çağırır ve bu kısayolu kullanıyorsanız `Edit.EditCell` komutunu  `File.Rename` **Takım Gezgini.**
 
-Ayarlar, özelleştirme ve bağlamlarından bağımsız olarak, **Seçenekler** iletişim kutusunda her zaman bir klavye kısayolunu bulabilir ve değiştirebilirsiniz. Ayrıca [popüler klavye kısayollarında](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)birkaç düzine komut için varsayılan klavye kısayollarına bakabilirsiniz. Tüm varsayılan kısayolların listesi için ( **genel geliştirme** ayarlarına bağlı olarak), [tüm klavye kısayollarına](../ide/default-keyboard-shortcuts-in-visual-studio.md)bakın.
+Ayarlar, özelleştirme ve bağlam ne olursa olsun, Seçenekler iletişim kutusunda her zaman bir klavye kısayolunu bulabilir **ve** değiştirebilirsiniz. Ayrıca Popüler klavye kısayolları içinde birkaç düzine komut için varsayılan klavye [kısayollarını da aramanız gerekir.](../ide/default-keyboard-shortcuts-in-visual-studio.md#most-popular-keyboard-shortcuts) Tüm varsayılan kısayolların tam listesi için (Genel Geliştirme **ayarlarına göre),** bkz. [Tüm klavye kısayolları.](../ide/default-keyboard-shortcuts-in-visual-studio.md)
 
-Bir kısayol *genel* bağlamdaki bir komuta atanmışsa ve başka bağlam yoksa, bu kısayol her zaman bu komutu çağırır. Ancak bir kısayol, Genel bağlamda bir komuta ve özel bağlamda farklı bir komuta atanabilir. Böyle bir komutu özel bağlamda kullanırsanız, özel bağlama ilişkin komutu çağırır (Genel bağlama ilişkin komutu çağırmaz).
+Genel bağlamdaki bir komuta bir  kısayol atanırsa ve başka bağlam atanmazsa, bu kısayol her zaman bu komutu çağırır. Ancak bir kısayol, Genel bağlamda bir komuta ve özel bağlamda farklı bir komuta atanabilir. Böyle bir komutu özel bağlamda kullanırsanız, özel bağlama ilişkin komutu çağırır (Genel bağlama ilişkin komutu çağırmaz).
 
 > [!NOTE]
-> Ayarlarınıza ve Visual Studio sürümünüze göre, menü komutlarının adları ve konumları ve iletişim kutularında görünen seçenekler değişik olabilir. Bu sayfa, **genel geliştirme** ayarları profilini temel alır.
+> Ayarlarınıza ve Visual Studio sürümünüze göre, menü komutlarının adları ve konumları ve iletişim kutularında görünen seçenekler değişik olabilir. Bu sayfa Genel Geliştirme **ayarları profilini** temel alan bir sayfadır.
 
-## <a name="identify-a-keyboard-shortcut"></a>Klavye kısayolunu tanımla
+## <a name="identify-a-keyboard-shortcut"></a>Klavye kısayolunu tanımlama
 
-1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne**  >  **tıklayın.**
 
-2. **Ortam**' ı genişletin ve ardından **klavye**' yi seçin.
+2. **Ortam'ı** genişletin ve ardından Klavye'yi **seçin.**
 
    ![Seçenekler iletişim kutusunda klavye kısayollarını görüntüleme](../ide/media/optionskeyboard.png)
 
-3. **İçerilen komutları göster** kutusunda, boşluk olmadan komutun adının tamamını veya bir kısmını girin.
+3. Komut **içeren komutları göster** kutusuna komutun adının hepsini veya bir kısmını boşluk olmadan girin.
 
-   Örneğin, için komutları bulabilirsiniz `solutionexplorer` .
+   Örneğin, için komutları `solutionexplorer` bulabilirsiniz.
 
 4. Listede doğru komutu seçin.
 
-    Örneğin, seçeneğini belirleyebilirsiniz `View.SolutionExplorer` .
+    Örneğin, `View.SolutionExplorer` seçebilirsiniz.
 
-5. Komutun klavye kısayolu varsa, **Seçilen komut listesi Için kısayollar** görüntülenir.
+5. Komutun klavye kısayolu varsa, seçili komut **listesinde Kısayollar'da** görünür.
 
-   ![Belirtilen komut için bir kısayol görüntüle](../ide/media/viewshortcut.png)
+   ![Belirtilen komut için kısayolu görüntüleme](../ide/media/viewshortcut.png)
 
 ## <a name="customize-a-keyboard-shortcut"></a>Klavye kısayolunu özelleştirme
 
-1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne**  >  **tıklayın.**
 
-2. **Ortam**' ı genişletin ve ardından **klavye**' yi seçin.
+2. **Ortam'ı** genişletin ve ardından Klavye'yi **seçin.**
 
-3. İsteğe bağlı: komutun adının tümünü veya bir kısmını, **içerilen komutları göster** kutusunu girerek komut listesini filtreleyin.
+3. İsteğe bağlı: Komut içeren komutları göster kutusuna komutun adının bir kısmını veya hepsini boşluk olmadan girerek **komut listesini filtrele.**
 
 4. Listede, klavye kısayolu atamak istediğiniz komutu seçin.
 
-   **Yeni Kısayol kullan** listesinde, kısayolu kullanmak istediğiniz özellik alanını seçin.
+   Yeni **kısayolu kullan** listesinde, kısayolu kullanmak istediğiniz özellik alanı seçin.
 
-   Örneğin, kısayolun tüm bağlamlarda çalışmasını istiyorsanız **genel** ' i seçebilirsiniz. Başka bir düzenleyicide Genel olarak eşlenmemiş herhangi bir kısayolu kullanabilirsiniz. Aksi takdirde düzenleyici kısayolu geçersiz kılar.
+   Örneğin, kısayolun **tüm bağlamlarda** çalışması için Genel'i seçebilirsiniz. Başka bir düzenleyicide Genel olarak eşlenmemiş herhangi bir kısayolu kullanabilirsiniz. Aksi takdirde düzenleyici kısayolu geçersiz kılar.
 
    > [!NOTE]
-   > Aşağıdaki anahtarları **küresel** bir klavye kısayolunun parçası olarak atayamazsınız:
+   > Genel'de bir klavye kısayolu parçası olarak aşağıdaki anahtarları **atayabilirsiniz:**
    >
-   > - ENTER, Tab, Caps Lock
-   > - PRINT SCRN/SYS RQ, Scroll Lock, Duraklat/kes
-   > - Ekle, giriş, son, sayfa yukarı, sayfa aşağı
-   > - Windows logosu tuşu, uygulama anahtarı, herhangi bir ok tuşu
-   > - Sayısal tuş takımında Lock, DELETE veya Clear NUM
-   > - CTRL + ALT + DELETE tuş bileşimi
+   > - Enter, Sekme, Caps Lock
+   > - Scrn/Sys Rq Yazdırma, Kaydırma Kilidi, Duraklatma/Kesme
+   > - Ekle, Giriş, Bitiş, Sayfa Yukarı, Sayfa Aşağı
+   > - Windows logo tuşu, Uygulama anahtarı ve Ok anahtarlarının herhangi biri
+   > - Sayısal tuş takımındaki Num Kilidi, Silme veya Temizleme
+   > - Ctrl+Alt+Delete tuş bileşimi
 
-6. **Kısayol tuşlarını bas** kutusunda, kullanmak istediğiniz kısayolu girin.
-
-    > [!NOTE]
-    > Bir harfi **alt** tuşu, **CTRL** tuşu veya her ikisiyle birleştiren bir kısayol oluşturabilirsiniz. Ayrıca, **alt** tuşu, **CTRL** tuşu veya her ikisiyle de **SHIFT** tuşunu ve bir harfi birleştiren bir kısayol da oluşturabilirsiniz.
-
-     Bir kısayol zaten başka bir komuta atanmışsa, bu, **Şu anda kullanıldığı kısayolda** görünür. Bu durumda, farklı bir tane denemeden önce bu kısayolu silmek için **geri al** tuşunu seçin.
-
-    ![Komut için farklı bir kısayol belirtin](../ide/media/reassignshortcut.png)
-
-7. **Ata** düğmesini seçin.
+6. Kısayol **tuşlarına basın kutusuna** kullanmak istediğiniz kısayolu girin.
 
     > [!NOTE]
-    > Bir komut için farklı bir kısayol belirtirseniz, **ata**' ya tıklayın ve ardından iletişim kutusunu kapatmak için **iptal** ' e tıklayın, atadığınız kısayol geri döndürülemez.
+    > Bir harfi **Alt** tuşuyla, **Ctrl** tuşuyla veya her ikisini birden birleştiren bir kısayol oluşturabilirsiniz. Shift tuşunu ve bir harfi **Alt** tuşuyla, **Ctrl** **tuşuyla** veya her ikisini birden birleştiren bir kısayol da oluşturabilirsiniz.
+
+     Başka bir komuta zaten atanmış bir kısayol varsa, kısayol şu anda tarafından kullanılan **Kısayol kutusunda** görünür. Bu durumda, farklı bir **kısayol denemeden** önce bu kısayolu silmek için Geri Al tuşuna basın.
+
+    ![Komut için farklı bir kısayol belirtme](../ide/media/reassignshortcut.png)
+
+7. Ata **düğmesini** seçin.
+
+    > [!NOTE]
+    > Bir komut için farklı bir kısayol belirtirseniz,  Ata'ya ve ardından İptal'e tıklarsanız iletişim kutusunu kapatırsanız, atadığınız kısayol geri döndürülmez.
 
 ## <a name="share-custom-keyboard-shortcuts"></a>Özel klavye kısayollarını paylaşma
 
@@ -106,48 +106,48 @@ Bir kısayol *genel* bağlamdaki bir komuta atanmışsa ve başka bağlam yoksa,
 
 ### <a name="to-export-only-keyboard-shortcuts"></a>Yalnızca klavye kısayollarını dışarı aktarmak için
 
-1. Menü çubuğunda **Araçlar**  >  **içeri aktar ve dışarı aktar ayarları**' nı seçin.
+1. Menü çubuğunda Araçlar İçeri ve Dışarı **Aktarma**  >  **Ayarları'ı seçin.**
 
-2. **Seçili ortam ayarlarını dışarı aktar**' ı seçin ve ardından **İleri**' yi seçin.
+2. Seçili **ortam ayarlarını dışarı aktar'ı** ve ardından Sonraki'yi **seçin.**
 
-3. **Hangi ayarları dışarı aktarmak istiyorsunuz?** bölümünde, **Tüm ayarlar** onay kutusunun işaretini kaldırın, **Seçenekler**' i genişletin ve ardından **ortam**' ı genişletin.
+3. Hangi **ayarları dışarı aktarabilirsiniz?** altında Tüm Ayarlar onay **kutusunun** işaretini kaldırın, Seçenekler'i **genişletin** ve ardından Ortam'ı **genişletin.**
 
-4. **Klavye** onay kutusunu seçin ve ardından **İleri**' yi seçin.
+4. Klavye onay **kutusunu** ve ardından Sonraki'yi **seçin.**
 
-   ![Yalnızca özelleştirilmiş klavye kısayollarını dışarı aktar](../ide/media/exportshortcuts.png)
+   ![Yalnızca özelleştirilmiş klavye kısayollarını dışarı aktarma](../ide/media/exportshortcuts.png)
 
-5. **Ayarlar dosyanıza ne ad vermek** istiyorsunuz ve ayarlarımı **Bu dizin kutularında depola** ' da, varsayılan değerleri bırakın veya farklı değerler belirtip **son**' u seçin.
+5. Ayarlar **dosyanıza Ne** ad ve Ayarlar dosyamı bu **dizinde** depola kutularında varsayılan değerleri bırakın veya farklı değerler belirtin ve ardından Son'a **tıklayın.**
 
 ::: moniker range="vs-2017"
 
-Varsayılan olarak, kısayollarınız *%userprofile%\, Studio 2017 \ Settings* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları verdiğiniz tarihi yansıtır ve uzantı *. vssettings* olur.
+Varsayılan olarak, kısayollarınız *%USERPROFILE%\Documents\Visual Studio 2017\Settings* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları dışarı aktardığı tarihi, uzantının *ise .vssettings olduğu tarihi belirtir.*
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Varsayılan olarak, kısayollarınız *%userprofile%\, Studio 2019 \ ayarlar* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları verdiğiniz tarihi yansıtır ve uzantı *. vssettings* olur.
+Varsayılan olarak, kısayollarınız *%USERPROFILE%\Documents\Visual Studio 2019\Settings* klasöründeki bir dosyaya kaydedilir. Dosyanın adı, ayarları dışarı aktardığı tarihi, uzantının *ise .vssettings olduğu tarihi belirtir.*
 
 ::: moniker-end
 
 ### <a name="to-import-only-keyboard-shortcuts"></a>Yalnızca klavye kısayollarını içeri aktarmak için
 
-1. Menü çubuğunda **Araçlar**  >  **içeri aktar ve dışarı aktar ayarları**' nı seçin.
+1. Menü çubuğunda Araçlar İçeri ve Dışarı **Aktarma**  >  **Ayarları'ı seçin.**
 
-2. **Seçili ortam ayarlarını Içeri aktar** seçenek düğmesini seçin ve ardından **İleri**' yi seçin.
+2. Seçili ortam **ayarlarını içeri aktar seçeneğini** belirleyin ve ardından Sonraki'yi **seçin.**
 
-3. **Hayır, yeni ayarları içeri aktar, geçerli ayarlarım üzerine yaz** seçenek düğmesini seçin ve ardından **İleri**' yi seçin.
+3. Hayır, **yeni ayarları içeri aktar, geçerli ayarlarım** seçeneğinin üzerine yaz ve ardından Sonraki'yi **seçin.**
 
-4. Ayarlarım **altında,** içeri aktarmak istediğiniz kısayolları içeren dosyayı seçin veya doğru dosyayı bulmak Için, **Gözden** geçirme düğmesini seçin.
+4. Ayarlarım **altında,** içeri aktarmasını istediğiniz kısayolları içeren dosyayı seçin veya gözat **düğmesini** seçarak doğru dosyayı bulun.
 
 5. **İleri**’yi seçin.
 
-6. **Hangi ayarları içeri aktarmak istiyorsunuz?**, **Tüm ayarlar** onay kutusunun işaretini kaldırın, **Seçenekler**' i genişletin ve ardından **ortam**' ı genişletin.
+6. Hangi **ayarları içeri aktarabilirsiniz?** altında Tüm Ayarlar onay **kutusunun** işaretini kaldırın, Seçenekler'i **genişletin** ve ardından Ortam'ı **genişletin.**
 
-7. **Klavye** onay kutusunu seçin ve ardından **son**' u seçin.
+7. Klavye onay **kutusunu** ve ardından Son'a **tıklayın.**
 
-   ![Yalnızca özelleştirilmiş klavye kısayollarını içeri aktar](../ide/media/importshortcuts.png)
+   ![Yalnızca özelleştirilmiş klavye kısayollarını içeri aktarma](../ide/media/importshortcuts.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'nun erişilebilirlik özellikleri](../ide/reference/accessibility-features-of-visual-studio.md)
+- [Visual Studio'nin erişilebilirlik özellikleri](../ide/reference/accessibility-features-of-visual-studio.md)
