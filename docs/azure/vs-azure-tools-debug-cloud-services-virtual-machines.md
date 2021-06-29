@@ -1,6 +1,6 @@
 ---
 title: Azure bulut hizmetinde veya sanal makinede hata ayıklama
-description: Visual Studio 'da bir bulut hizmetinde veya sanal makinede hata ayıklama
+description: Visual Studio'da Bulut Hizmeti veya Sanal Makinede Hata Ayıklama
 author: mikejo5000
 manager: jmartens
 ms.topic: how-to
@@ -8,125 +8,125 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 39d151528c5fda1bd4700fecd0d5c8843ced50a1
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 8669e4636be28d6462c6658a54fc818bae577905
+ms.sourcegitcommit: b770b99034e65c91b29bea87bc6f5fa02348515b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683240"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "112997676"
 ---
-# <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Visual Studio 'da bir Azure bulut hizmetinde veya sanal makinede hata ayıklama
+# <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>Azure bulut hizmetinde veya sanal makinede hata ayıklama Visual Studio
 
-Visual Studio, Azure Cloud Services ve sanal makinelerde hata ayıklama için kullanabileceğiniz farklı seçenekler sunar.
+Visual Studio Azure bulut hizmetleri ve sanal makinelerde hata ayıklamak için farklı seçenekler sunar.
 
-## <a name="debug-your-cloud-service-on-your-local-computer"></a>Yerel bilgisayarınızda bulut hizmetinizde hata ayıklayın
+## <a name="debug-your-cloud-service-on-your-local-computer"></a>Yerel bilgisayarınızda bulut hizmetinizin hata ayıklaması
 
-Azure Işlem öykünücüsü 'nü kullanarak, yerel bir makinedeki bulut hizmetinizde hata ayıklaması yapmak için zaman ve para tasarrufu yapabilirsiniz. Dağıtmadan önce bir hizmette yerel olarak hata ayıkladığında, işlem süresi için ödeme yapmadan güvenilirliği ve performansı artırabilirsiniz. Ancak bazı hatalar yalnızca Azure 'da bir bulut hizmeti çalıştırdığınızda gerçekleşebilir. Hizmetinizi yayımladığınızda uzaktan hata ayıklamayı etkinleştirirseniz ve ardından hata ayıklayıcıyı bir rol örneğine eklerseniz, bu hatalarda hata ayıklayabilirsiniz.
+Yerel makinede bulut hizmetinizin hata ayıklaması için Azure İşlem Öykünücüsü'ünü kullanarak zamandan ve paradan tasarruf edin. Hizmeti dağıtmadan önce yerel olarak hata ayıklarken, işlem süresi için ödeme yapmadan güvenilirliği ve performansı geliştirebilirsiniz. Ancak bazı hatalar yalnızca Azure'da bir bulut hizmeti çalıştırarak ortaya çıkabilir. Hizmetinizi yayımlarken uzaktan hata ayıklamayı etkinleştirir ve ardından hata ayıklayıcıyı bir rol örneğine iliştirersiniz.
 
-Öykünücü, Azure Işlem hizmetinin benzetimini yapar ve yerel ortamınızda çalışarak bulut hizmetinizi dağıtmadan önce test edebilir ve hata ayıklayabilirsiniz. Öykünücü, rol örneklerinizin yaşam döngüsünü işler ve yerel depolama gibi sanal kaynaklara erişim sağlar. Visual Studio 'dan hata ayıkladığınızda veya hizmetinizi çalıştırdığınızda, otomatik olarak öykünücü bir arka plan uygulaması olarak başlatılır ve sonra hizmetinizi öykünücüsüne dağıtır. Yerel ortamda çalıştırıldığında hizmetinizi görüntülemek için öykünücüsünü kullanabilirsiniz. Öykünücüsünün tam sürümünü veya Express sürümünü çalıştırabilirsiniz. (Azure 2,3 ' den itibaren, öykünücünün Express sürümü varsayılandır.) [Bulut hizmetini yerel olarak çalıştırmak ve hata ayıklamak Için öykünücü Express kullanma](vs-azure-tools-emulator-express-debug-run.md)konusuna bakın.
+Öykünücü, Azure İşlem hizmetinin benzetimini sağlar ve dağıtmadan önce bulut hizmetinizi test etmek ve hata ayıklamak için yerel ortamınız içinde çalışır. Öykünücü, rol örneklerinizi yaşam döngüsünü idare eder ve yerel depolama gibi sanal kaynaklara erişim sağlar. Hata ayıklar veya hizmetinizi Visual Studio, öykünücü otomatik olarak bir arka plan uygulaması olarak başlatır ve ardından hizmetinizi öykünücüye dağıtır. Hizmetinizi yerel ortamda çalıştırarak görüntülemek için öykünücüsü kullanabilirsiniz. Öykünücüsünün tam sürümünü veya hızlı sürümünü çalıştırarak. (Azure 2.3'den başlayarak öykünücüsünün hızlı sürümü varsayılandır.) Bkz. [Yerel Olarak Bulut Hizmetini Çalıştırmak ve Hata Ayıklamak için Öykünücü Express Kullanma.](vs-azure-tools-emulator-express-debug-run.md)
 
-### <a name="to-debug-your-cloud-service-on-your-local-computer"></a>Yerel bilgisayarınızda bulut hizmetinizde hata ayıklamak için
+### <a name="to-debug-your-cloud-service-on-your-local-computer"></a>Yerel bilgisayarınızda bulut hizmetinizin hata ayıklaması için
 
-1.   >  Azure bulut hizmeti Projenizi çalıştırmak için menü çubuğunda Hata **ayıklamayı Başlat** ' ı seçin. Alternatif olarak F5 tuşuna basabilirsiniz. Işlem öykünücüsünün başladığı bir ileti görürsünüz. Öykünücü başladığında, sistem tepsisi simgesi onu onaylar.
+1. Menü çubuğunda Hata Ayıklama Hata **AyıklamaYı**  >  **Başlat'ı seçerek** Azure bulut hizmeti projenizi çalıştırın. Alternatif olarak F5 tuşuna basarak da 34 saat içinde yeni bir seçenektir. İşlem Öykünücüsü'ünün başlat olduğunu bir iletiyle karşılarsınız. Öykünücü başlatıldığında sistem tepsisi simgesi bunu onaylar.
 
     ![Sistem tepsisinde Azure öykünücüsü](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC783828.png)
 
-2. Bildirim alanında Azure simgesi için kısayol menüsünü açarak ve ardından **Işlem öykünücüsü Kullanıcı arabirimini göster**' i seçerek işlem öykünücüsünün Kullanıcı arabirimini görüntüleyin.
+2. Bildirim alanında Azure simgesinin kısayol menüsünü açarak işlem öykünücüsü için kullanıcı arabirimini görüntüleme ve ardından İşlem Öykünücüsü Kullanıcı Arabirimini **Göster'i seçin.**
 
-    Kullanıcı arabiriminin sol bölmesi, şu anda işlem öykünücüsüne ve her bir hizmetin çalıştığı rol örneklerine dağıtılan Hizmetleri gösterir. Sağ bölmedeki yaşam döngüsü, günlüğe kaydetme ve tanılama bilgilerini görüntüleyecek hizmeti veya rolleri seçebilirsiniz. Odağı eklenen pencerenin üst kenar boşluğuna yerleştirirseniz, sağ bölmeyi dolduracak şekilde genişler.
+    Kullanıcı arabiriminin sol bölmesinde, şu anda işlem öykünücüsünü dağıtan hizmetler ve her hizmetin çalıştırılan rol örnekleri gösterilir. Yaşam döngüsü, günlüğe kaydetme ve tanılama bilgilerini sağ bölmede görüntülemek için hizmeti veya rolleri seçebilirsiniz. Odağı dahil edilen bir pencerenin üst kenar boşluğuna koyarak sağ bölmeyi dolduracak şekilde genişler.
 
-3. **Hata Ayıkla** menüsündeki komutları seçerek ve kodunuzda kesme noktaları ayarlayarak uygulamada ilerleyin. Hata ayıklayıcıda uygulamada ilerlerse, bölmeler uygulamanın geçerli durumuyla güncelleştirilir. Hata ayıklamayı durdurduğunuzda, uygulama dağıtımı silinir. Uygulamanız bir Web rolü içeriyorsa ve başlangıç eylemi özelliğini Web tarayıcısını başlatacak şekilde ayarladıysanız, Visual Studio Web uygulamanızı tarayıcıda başlatır. Hizmet yapılandırmasındaki bir rolün örnek sayısını değiştirirseniz, bulut hizmetinizi durdurmanız ve sonra rolün bu yeni örneklerine Hata ayıklayabilmeniz için hata ayıklamayı yeniden başlatmanız gerekir.
+3. Hata Ayıklama menüsündeki komutları seçerek ve **kodunda** kesme noktaları ayarerek uygulamada adım adım inin. Hata ayıklayıcıda uygulamada adım adım ilerlediğinde, bölmeler uygulamanın geçerli durumuyla güncelleştirilir. Hata ayıklamayı durdurarak uygulama dağıtımı silinir. Uygulamanız bir web rolü içerirse ve Başlangıç eylemi özelliğini web tarayıcısını başlatmak için Visual Studio web uygulamasını tarayıcıda başlatır. Hizmet yapılandırmasında rol örneklerinin sayısını değiştirirsanız, rolün bu yeni örneklerde hata ayıklaması için bulut hizmetinizi durdurmanız ve ardından hata ayıklamayı yeniden başlatmanız gerekir.
 
     > [!NOTE]
-    > Çalıştırmayı veya hizmetinizi hata ayıklamayı durdurduğunuzda, yerel işlem öykünücüsü ve depolama öykünücüsü durdurulmaz. Bunları bildirim alanından açıkça durdurmanız gerekir.
+    > Hizmetinizi çalıştırmayı veya hata ayıklamayı durdurarak yerel işlem öykünücüsü ve depolama öykünücüsü durdurulamaz. Bunları bildirim alanında açıkça durdurmalısınız.
 
 ## <a name="debug-a-cloud-service-in-azure"></a>Azure’daki bulut hizmetinde hata ayıklama
 
-Bir bulut hizmetinde uzak bir makineden hata ayıklamak için, bulut hizmetinizi dağıtırken, rol örneklerinizi çalıştıran sanal makinelerde gerekli hizmetlerin (msvsmon.exe, örneğin) yüklü olması için bu işlevselliği açıkça etkinleştirmeniz gerekir. Hizmeti yayımladığınızda uzaktan hata ayıklamayı etkinleştirmezseniz, uzaktan hata ayıklama etkinken hizmeti yeniden yayımlamanız gerekir.
+Uzak makineden bir bulut hizmetinin hata ayıklaması yapmak için, gerekli hizmetlerin (örneğin, msvsmon.exe) rol örneklerinizi çalıştıran sanal makinelere yüklensin diye bulut hizmetinizi dağıtırken bu işlevi açıkça etkinleştirmeniz gerekir. Hizmeti yayımlarken uzaktan hata ayıklamayı etkinleştirmediyseniz, uzaktan hata ayıklama etkinleştirildiğinde hizmeti yeniden yayımlamalısiniz.
 
-Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirseniz, performans düşebilir veya ek ücret uygulanır. Hizmeti kullanan istemciler olumsuz yönde etkilenmediğinden, bir üretim hizmetinde uzaktan hata ayıklama kullanmayın.
+Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirirsanız, performansı düşürülmüş performans sergilemez veya ek ücret uygulanmaz. Bir üretim hizmetinde uzaktan hata ayıklamayı kullanmayın çünkü hizmeti kullanan istemciler olumsuz etkilenebilir.
 
 > [!NOTE]
-> Visual Studio 'dan bir bulut hizmeti yayımladığınızda, söz konusu hizmette .NET Framework 4 ' ü veya .NET Framework 4,5 ' i hedefleyen herhangi bir rol için **IntelliTrace** 'i etkinleştirebilirsiniz. **IntelliTrace** kullanarak, geçmişte bir rol örneğinde gerçekleşen olayları inceleyebilir ve bu zamandan bağlamı yeniden oluşturabilirsiniz. Bkz. [IntelliTrace ve Visual Studio ile yayımlanmış bir bulut hizmetinde hata ayıklama](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md) ve [IntelliTrace kullanma](../debugger/intellitrace.md).
+> Visual Studio'den bir bulut hizmeti yayımlarken, bu hizmette .NET Framework 4 veya .NET Framework 4.5'i hedef alan roller için **IntelliTrace'i** etkinleştirabilirsiniz. **IntelliTrace kullanarak,** geçmişte bir rol örneğinde meydana gelen olayları inceler ve o zaman bağlamı yeniden üretin. Bkz. [IntelliTrace ve](vs-azure-tools-IntelliTrace-debug-published-cloud-services.md) Visual Studio ile yayımlanmış bir bulut hizmetinde hata [ayıklama ve IntelliTrace kullanma.](../debugger/intellitrace.md)
 
-### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Bir bulut hizmeti için uzaktan hata ayıklamayı etkinleştirmek için
+### <a name="to-enable-remote-debugging-for-a-cloud-service"></a>Bulut hizmeti için uzaktan hata ayıklamayı etkinleştirmek için
 
-1. Azure projesi için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
+1. Azure projesinin kısayol menüsünü açın ve Yayımla'yı **seçin.**
 
-2. **Hazırlama** ortamını ve **hata ayıklama** yapılandırmasını seçin.
+2. Hazırlama **ortamını ve** Hata ayıklama **yapılandırmasını** seçin.
 
-    Bu yalnızca bir kılavuz olur. Test ortamlarınızı bir üretim ortamında çalıştırmayı tercih edebilirsiniz. Ancak, üretim ortamında uzaktan hata ayıklamayı etkinleştirirseniz kullanıcıları olumsuz yönde etkileyebilirsiniz. Yayın yapılandırmasını seçebilirsiniz, ancak hata ayıklama yapılandırması hata ayıklamayı daha kolay hale getirir.
+    Bu yalnızca bir kılavuzdur. Test ortamlarınızı üretim ortamında çalıştırmayı tercih edersiniz. Ancak Üretim ortamında uzaktan hata ayıklamayı etkinleştirirken kullanıcıları olumsuz etkileyebilirsiniz. Yayın yapılandırmasını seçebilirsiniz, ancak Hata ayıklama yapılandırması hata ayıklamayı kolaylaştırır.
 
     ![Hata ayıklama yapılandırmasını seçin](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746717.gif)
 
-3. Olağan adımları izleyin, ancak **Gelişmiş ayarlar** sekmesinde **tüm roller Için uzaktan hata ayıklayıcıyı etkinleştir** onay kutusunu işaretleyin.
+3. Normal adımları izleyin, ancak Gelişmiş Ayarlar **sekmesindeki Tüm roller için Uzaktan** Hata Ayıklayıcıyı Etkinleştir onay **kutusunu** seçin.
 
-    ![Hata ayıklama yapılandırması](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746718.gif)
+    ![Hata Ayıklama Yapılandırması](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746718.gif)
 
-### <a name="to-attach-the-debugger-to-a-cloud-service-in-azure"></a>Hata ayıklayıcıyı Azure 'daki bir bulut hizmetine eklemek için
+### <a name="to-attach-the-debugger-to-a-cloud-service-in-azure"></a>Hata ayıklayıcıyı Azure'daki bir bulut hizmetine eklemek için
 
-1. Sunucu Gezgini, bulut hizmetinizin düğümünü genişletin.
+1. Bu Sunucu Gezgini, bulut hizmetinizin düğümünü genişletin.
 
-2. Eklemek istediğiniz rol veya rol örneği için kısayol menüsünü açın ve ardından **hata ayıklayıcı Ekle**' yi seçin.
+2. Eklemek istediğiniz rol veya rol örneğinin kısayol menüsünü açın ve Ardından Hata Ayıklayıcıyı **Ekle'yi seçin.**
 
-    Bir rolde hata ayıklaması yaparsanız, Visual Studio hata ayıklayıcı ilgili rolün her örneğine eklenir. Hata ayıklayıcı, bu kod satırını çalıştıran ve bu kesme noktasının tüm koşullarını karşılayan ilk rol örneği için bir kesme noktasına kesilir. Bir örnekte hata ayıklaması yaparsanız, hata ayıklayıcı yalnızca bu örneğe iliştirir ve yalnızca belirli bir örnek bu kod satırını çalıştırdığında kesme noktasının koşullarını karşıladığı zaman kesme noktasında kesilir.
+    Bir rolde hata ayıklarsanız, Visual Studio hata ayıklayıcısı bu rolün her örneğine iliştirer. Hata ayıklayıcı, bu kod satırı çalıştıran ve bu kesme noktası koşullarını karşılar ilk rol örneği için bir kesme noktası üzerinde kesme noktası olur. Bir örnekte hata ayıklarsanız, hata ayıklayıcı yalnızca bu örneği iliştirer ve kesme noktası üzerinde yalnızca ilgili örnek o kod satırı çalıştırılıyorsa ve kesme noktası koşullarını karşılarsa kesme noktası üzerinde sonlanır.
 
-    ![Hata ayıklayıcı Ekle](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746719.gif)
+    ![Hata Ayıklayıcı ekleme](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746719.gif)
 
-3. Hata ayıklayıcı bir örneğe eklendikten sonra, her zamanki gibi hata ayıklayın. Hata ayıklayıcı, rolünüz için uygun ana bilgisayar işlemine otomatik olarak eklenir. Rolün ne olduğuna bağlı olarak, hata ayıklayıcı w3wp.exe, WaWorkerHost.exe veya WaIISHost.exe iliştirir. Hata ayıklayıcının eklendiği işlemi doğrulamak için Sunucu Gezgini ' deki örnek düğümünü genişletin. Azure işlemleriyle ilgili daha fazla bilgi için bkz. [Azure rol mimarisi](/archive/blogs/kwill/windows-azure-role-architecture) .
+3. Hata ayıklayıcısı bir örneğine iliştirdikten sonra her zamanki gibi hata ayıklar. Hata ayıklayıcı, rolünüz için uygun konak işlemini otomatik olarak iliştirer. Rolün ne olduğu bağlı olarak, hata ayıklayıcı w3wp.exe, WaWorkerHost.exe veya WaIISHost.exe. Hata ayıklayıcının ekli olduğu işlemi doğrulamak için, hata ayıklayıcısında örnek Sunucu Gezgini. [Azure işlemleri hakkında daha fazla](/archive/blogs/kwill/windows-azure-role-architecture) bilgi için bkz. Azure Rol Mimarisi.
 
-    ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
+    ![Kod türü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-4. Hata ayıklayıcının eklendiği işlemi belirlemek için, menü çubuğunda Windows işlemlerini **Hata Ayıkla**' yı seçin  >    >  ve **süreçler** iletişim kutusunu açın. (Klavye: Ctrl + Alt + Z) Belirli bir işlemi ayırmak için, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin. Ya da Sunucu Gezgini ' de örnek düğümünü bulun, işlemi bulun, kısayol menüsünü açın ve ardından **Işlemi ayır**' ı seçin.
+4. Hata ayıklayıcının ekli olduğu işlemleri belirlemek için menü çubuğunda Windows İşlemlerinin HataSını Ayıkla'ya tıklayın ve  >    >   **İşlemler iletişim kutusunu** açın. (Klavye: Ctrl+Alt+Z) Belirli bir işlemi ayırmak için kısayol menüsünü açın ve İşlemleri **Ayır'ı seçin.** Veya uygulamanın içinde örnek düğümünü Sunucu Gezgini, işlemi bulun, kısayol menüsünü açın ve ardından işlemi **ayır'ı seçin.**
 
     ![Hata Ayıklama İşlemleri](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC690787.gif)
 
 > [!WARNING]
-> Uzaktan hata ayıklama sırasında kesme noktalarında uzun durakları önleyin. Azure, birkaç dakikadan uzun süre sonra durdurulan bir işlemi yanıt vermemeye ve bu örneğe trafik göndermeyi durdurmaktadır. Çok uzun süre durdurursanız msvsmon.exe işlemden ayırır.
+> Uzaktan hata ayıklama sırasında kesme noktalarında uzun duraklardan kaçının. Azure, birkaç dakikadan uzun süre durdurulan bir işlemi yanıt vermemeye alır ve bu örnek için trafik göndermeyi durdurur. Çok uzun süre durursanız msvsmon.exe ayırır.
 
-Hata ayıklayıcıyı örneğinizin veya rolünüzün tüm işlemlerinden ayırmak için, hata ayıklaması yaptığınız rol veya örnek için kısayol menüsünü açın ve ardından **hata ayıklayıcıyı ayır**' ı seçin.
+Hata ayıklayıcıyı örneğinizin veya rolünüzle ilgili tüm işlemlerden ayırmak için, hata ayıklarken rol veya örneğin kısayol menüsünü açın ve Hata Ayıklayıcıyı **Ayır'ı seçin.**
 
-## <a name="limitations-of-remote-debugging-in-azure"></a>Azure 'da uzaktan hata ayıklama sınırlamaları
+## <a name="limitations-of-remote-debugging-in-azure"></a>Azure'da uzaktan hata ayıklama sınırlamaları
 
-Azure SDK 2,3 'de, uzaktan hata ayıklama aşağıdaki sınırlamalara sahiptir:
+Azure SDK 2.3'te uzaktan hata ayıklama aşağıdaki sınırlamalara sahiptir:
 
-* Uzaktan hata ayıklama etkinken, herhangi bir rolün 25 ' ten fazla örneğe sahip olduğu bir bulut hizmeti yayımlayamazsınız.
-* Hata ayıklayıcı 30400 ile 31400 30424 arasındaki bağlantı noktalarını 31424 ve 32400 32424 kullanır. Bu bağlantı noktalarından herhangi birini kullanmaya çalışırsanız, hizmetinizi yayımlayamayacaksınız ve Azure için etkinlik günlüğünde aşağıdaki hata iletilerinden biri görüntülenir:
+* Uzaktan hata ayıklama etkinleştirildiğinde, herhangi bir rolün 25'den fazla örneğin olduğu bir bulut hizmetini yayımlayamzın.
+* Hata ayıklayıcısı 30400 ile 30424, 31400 - 31424 ve 32400 ile 32424 arasında bağlantı noktalarını kullanır. Bu bağlantı noktalarından herhangi birini kullanmayı denersanız hizmetinizi yayımamazsınız ve Azure için etkinlik günlüğünde aşağıdaki hata iletilerinden biri görüntülenir:
 
-  * . Cscfg dosyası. csdef dosyasına karşı doğrulanırken hata oluştu.
-    ' Role ' rolünün Microsoft. WindowsAzure. eklenti. RemoteDebugger. Connector için ayrılmış bağlantı noktası aralığı ' Range ', zaten tanımlı bir bağlantı noktası veya aralıkla örtüşüyor.
-  * Ayırma başarısız oldu. Lütfen daha sonra yeniden deneyin, VM boyutunu veya rol örneği sayısını azaltmayı deneyin ya da farklı bir bölgeye dağıtım yapmayı deneyin.
+  * .cscfg dosyasını .csdef dosyasıyla doğrulama hatası.
+    'role' rolünün Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector uç noktası için ayrılmış bağlantı noktası aralığı 'range' zaten tanımlanmış bir bağlantı noktası veya aralık ile çakışıyor.
+  * Ayırma başarısız oldu. Lütfen daha sonra yeniden deneyin, VM boyutunu veya rol örneği sayısını azaltmayı deneyin veya farklı bir bölgeye dağıtmayı deneyin.
 
-## <a name="debugging-azure-virtual-machines"></a>Azure sanal makinelerinde hata ayıklama
+## <a name="debugging-azure-virtual-machines"></a>Azure sanal makinelerde hata ayıklama
 
-Visual Studio 'da Sunucu Gezgini kullanarak Azure sanal makinelerinde çalışan programlarda hata ayıklaması yapabilirsiniz. Azure sanal makinesinde uzaktan hata ayıklamayı etkinleştirdiğinizde, Azure, uzaktan hata ayıklama uzantısını sanal makineye yüklenir. Daha sonra, sanal makine üzerinde işlemlere bağlanabilir ve normalde yaptığınız gibi hata ayıklayabilirsiniz.
+Azure sanal makinelerde çalıştıran programlarda hata ayıklamak için Sunucu Gezgini Visual Studio. Azure sanal makinesi üzerinde uzaktan hata ayıklamayı etkinleştirerek sanal makineye uzaktan hata ayıklama uzantısını yükleyebilirsiniz. Ardından, sanal makinede işlemlere iliştirin ve normalde olduğu gibi hata ayıklarsanız.
 
 > [!NOTE]
-> Azure Resource Manager yığını aracılığıyla oluşturulan sanal makinelerin, Visual Studio 2015 ' de Cloud Explorer kullanılarak uzaktan hata ayıklaması yapılabilir. Daha fazla bilgi için bkz. [Cloud Explorer Ile Azure kaynaklarını yönetme](vs-azure-tools-resources-managing-with-cloud-explorer.md).
+> Azure Resource Manager yığını aracılığıyla oluşturulan sanal makineler, 2015'te Cloud Explorer kullanılarak Visual Studio ayıklanır. Daha fazla bilgi için [bkz. Cloud Explorer ile Azure Kaynaklarını Yönetme.](vs-azure-tools-resources-managing-with-cloud-explorer.md)
 
-### <a name="to-debug-an-azure-virtual-machine"></a>Bir Azure sanal makinesinde hata ayıklamak için
+### <a name="to-debug-an-azure-virtual-machine"></a>Azure sanal makinede hata ayıklamak için
 
-1. Sunucu Gezgini ' de, sanal makineler düğümünü genişletin ve sanal makinenin hata ayıklamak istediğiniz düğümünü seçin.
+1. Bu Sunucu Gezgini Sanal Makineler düğümünü genişletin ve hata ayıklamak istediğiniz sanal makinenin düğümünü seçin.
 
-2. Bağlam menüsünü açın ve **hata ayıklamayı etkinleştir**' i seçin. Sanal makinede hata ayıklamayı etkinleştirmek isteyip istemediğinizden emin olup olmadığınız sorulduğunda **Evet**' i seçin.
+2. Bağlam menüsünü açın ve Hata Ayıklamayı **Etkinleştir'i seçin.** Sanal makinede hata ayıklamayı etkinleştirmek istediğinizden emin olup değilken Evet'i **seçin.**
 
-    Azure, hata ayıklamayı etkinleştirmek için sanal makinede uzaktan hata ayıklama uzantısı 'nı yüklüyor.
+    Azure, hata ayıklamayı etkinleştirmek için sanal makineye uzaktan hata ayıklama uzantısını yüklür.
 
     ![Sanal makine hata ayıklamayı etkinleştir komutu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746720.png)
 
     ![Azure etkinlik günlüğü](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-3. Uzaktan hata ayıklama uzantısı yüklemeyi tamamladıktan sonra, sanal makinenin bağlam menüsünü açın ve **hata ayıklayıcı Ekle...** seçeneğini belirleyin.
+3. Uzaktan hata ayıklama uzantısının yüklemesi tamam olduktan sonra sanal makinenin bağlam menüsünü açın ve Hata Ayıklayıcı **ekle... öğesini seçin.**
 
-    Azure, sanal makinedeki işlemlerin bir listesini alır ve bunları **Işleme İliştir** iletişim kutusunda görüntüler.
+    Azure, sanal makinede işlemlerin listesini alır ve bunları İşleme Ekle **iletişim kutusunda** gösterir.
 
-    ![Hata ayıklayıcı komutu Ekle](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
+    ![Hata ayıklayıcı ekle komutu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746722.png)
 
-4. **Işleme İliştir** iletişim kutusunda, sonuçlar listesini yalnızca hata ayıklamak istediğiniz kod türlerini gösterecek şekilde sınırlamak için **Seç** ' i seçin. 32 bit veya 64 bit yönetilen kodda, yerel kodda veya her ikisinde hata ayıklaması yapabilirsiniz.
+4. İşleme **Ekle iletişim kutusunda,** sonuçlar listesini **yalnızca hata** ayıklamak istediğiniz kod türlerini gösterecek şekilde sınırlamak için Seç'i seçin. 32 bit veya 64 bit yönetilen kodda, yerel kodda veya her ikisinde de hata ayıkabilirsiniz.
 
-    ![Kod türünü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
+    ![Kod türü seç iletişim kutusu](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-5. Sanal makinede hata ayıklamak istediğiniz işlemi seçin ve ardından **Ekle**' yi seçin. Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. Visual Studio ve [Azure rol mimarisinde](/archive/blogs/kwill/windows-azure-role-architecture) [bir veya daha fazla işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
+5. Sanal makinede hata ayıklamak istediğiniz işlemleri seçin ve ardından Ekle'yi **seçin.** Örneğin, sanal makinede bir Web uygulamasında hata ayıklamak istiyorsanız w3wp.exe işlemini seçebilirsiniz. Daha fazla bilgi için bkz. Visual Studio ve [Azure rol mimarisinde](/archive/blogs/kwill/windows-azure-role-architecture) [bir veya daha fazla işlemde hata ayıklama](../debugger/debug-multiple-processes.md) .
 
 ## <a name="create-a-web-project-and-a-virtual-machine-for-debugging"></a>Hata ayıklama için bir Web projesi ve sanal makine oluşturma
 

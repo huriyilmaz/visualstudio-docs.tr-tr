@@ -7,14 +7,28 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 532195bad81fc9162b854493d5aca9bb2fa7f600
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 08ccab99df40247390894aa53d5073a3aff0c561
+ms.sourcegitcommit: b770b99034e65c91b29bea87bc6f5fa02348515b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843949"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "112997663"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer'da Azure hizmetlerinizle ilişkilendirilmiş kaynakları yönetme
+
+::: moniker range=">=vs-2022"
+> [!Important]
+> Cloud Explorer, Visual Studio 2022 ' de kullanımdan kaldırılmıştır. Bunun yerine, aşağıdaki alternatifleri kullanabilirsiniz:
+> - [Microsoft Azure Depolama Gezgini](/azure/vs-azure-tools-storage-manage-with-storage-explorer) , Microsoft 'tan ücretsiz ve tek başına bir uygulamadır. Windows, macOS ve Linux üzerinde Azure Depolama verileriyle görsel olarak çalışmak için bu uygulamayı kullanabilirsiniz.
+> - [Kudu konsolu](https://github.com/projectkudu/kudu/wiki/Kudu-console) , App Service sunucusuna ve dosya sistemine doğrudan, yükseltilmiş komut satırı erişimi sağlar. Bu, her ikisi de değerli bir hata ayıklama aracıdır ve paketleri yükleme gibi CLı işlemlerine izin verir.
+>
+> Gerekirse, Azure portalını kullanabilir veya Visual Studio 'nun önceki sürümlerinde Sunucu Gezgini Azure düğümünü kullanmaya devam edebilirsiniz.
+>
+> Visual Studio 2022 hakkında daha fazla bilgi için [Sürüm notlarımıza](/visualstudio/releases/2022/release-notes-preview/)bakın.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 Cloud Explorer, Azure kaynaklarınızı ve Kaynak gruplarınızı görüntülemenize, özelliklerini incelemenize ve Visual Studio içinden önemli geliştirici tanılama eylemleri gerçekleştirmenize olanak sağlar.
 
@@ -104,3 +118,5 @@ Azure hesap aboneliklerinizde belirli bir ada sahip kaynakları bulmak için, **
   ![Bulut Gezgininde kaynakları bulma](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 
 **Arama** kutusuna karakterler girerken, kaynak ağacında yalnızca bu karakterlerle eşleşen kaynaklar görünür.
+
+::: moniker-end
