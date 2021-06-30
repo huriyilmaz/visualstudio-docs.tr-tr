@@ -1,31 +1,40 @@
 ---
-title: Visual Studio aracılığıyla Kubernetes Köprüsü kullanma
-titleSuffix: ''
+title: 'Öğretici: Kubernetes Köprüsü ile geliştirme makinelerini bağlama'
 ms.technology: vs-azure
 ms.date: 03/24/2021
-ms.topic: quickstart
-description: Geliştirme bilgisayarınızı bir Kubernetes kümesine bağlamak için Visual Studio ile Kubernetes için Bridge 'i nasıl kullanacağınızı öğrenin
+ms.topic: tutorial
+description: Geliştirme bilgisayarınızı, Visual Studio ile Kubernetes 'e Köprüle bir Kubernetes kümesine bağlayın.
 keywords: Kubernetes, Azure Dev Spaces, dev Spaces, Docker, Kubernetes, Azure, kapsayıcılar için köprü oluşturma
 monikerRange: '>=vs-2019'
 ms.author: ghogen
 author: ghogen
 manager: jmartens
-ms.openlocfilehash: fdcf31d062fe2be72709979f0892e6a7f535024a
-ms.sourcegitcommit: 2049ec99f1439ec91d002853226934b067b1ee70
+ms.openlocfilehash: b8d6c98d2e2146ad57871b74cd2d522ed2b04259
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105635046"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046124"
 ---
-# <a name="use-bridge-to-kubernetes"></a>Kubernetes için köprü kullanma
+# <a name="tutorial-use-bridge-to-kubernetes-to-connect-your-clusters-and-your-development-computers"></a>Öğretici: kümelerinizi ve geliştirme bilgisayarlarınızı bağlamak için Kubernetes ile Köprü kullanma
 
-Kubernetes için köprüyü, geliştirme bilgisayarınızda çalışan Kubernetes kümeniz ve kodunuz arasında yeniden yönlendirmek için kullanabilirsiniz. Bu kılavuz Ayrıca, bir Kubernetes kümesinde birden fazla mikro hizmet içeren büyük bir örnek uygulama dağıtmaya yönelik bir betik sağlar.
+Bu öğreticide, Kubernetes için Bridge kullanarak Kubernetes kümeniz ile geliştirme bilgisayarınızda çalışan kodunuz arasında trafiği yeniden yönlendirme hakkında bilgi edineceksiniz. 
 
-## <a name="before-you-begin"></a>Başlamadan önce
+Bu kılavuz Ayrıca, bir Kubernetes kümesinde birden fazla mikro hizmet içeren büyük bir örnek uygulama dağıtmaya yönelik bir betik sağlar.
 
-Bu kılavuz, geliştirme bilgisayarınızı bir Kubernetes kümesine bağlamayı göstermek için [ToDo uygulaması örnek uygulamasını][todo-app-github] kullanır. Zaten bir Kubernetes kümesinde çalışan bir uygulamanız varsa, aşağıdaki adımları izleyerek kendi hizmetlerinizin adlarını da kullanabilirsiniz.
+Kubernetes ile ilgili daha fazla bilgi için, [Kubernetes Ile köprünün nasıl çalıştığı](overview-bridge-to-kubernetes.md)hakkında daha fazla bilgi edinin.
 
-Bu örnek, Kubernetes 'in herhangi bir Kubernetes kümesinde basit bir YAPıLACAKLAR uygulamasının mikro hizmet sürümünü geliştirmek için nasıl kullanılabileceğini gösterir. Bu örnek, Visual Studio 'yu kullanarak [Todomvc](http://todomvc.com)tarafından sunulan koddan uyarlanmıştır. Bu adımlar herhangi bir Kubernetes kümesiyle birlikte çalışmalıdır.
+## <a name="prerequisites"></a>Önkoşullar
+
+- Bir Kubernetes kümesi
+- [Visual Studio 2019][visual-studio] sürüm 16,7 Preview 4 veya üzeri Windows 10 üzerinde çalışıyor.
+- [Kubernetes uzantısının yüklendiği köprü][btk-extension]
+
+## <a name="about-the-data"></a>Veriler hakkında
+
+Bu öğretici, herhangi bir Kubernetes kümesinde basit bir TODO örnek uygulamasının mikro hizmet sürümünü geliştirmek için Kubernetes için köprü kullanır. Visual Studio 'yu kullanan bu [ToDo uygulaması örnek uygulaması][todo-app-github] [todomvc](http://todomvc.com)tarafından sağlanmış koddan uyarlanmıştır. 
+
+ Bu adımlar herhangi bir Kubernetes kümesiyle birlikte çalışmalıdır. Bu nedenle, zaten bir Kubernetes kümesinde çalışan bir uygulamanız varsa, aşağıdaki adımları izleyerek kendi hizmetlerinizin adlarını kullanabilirsiniz.
 
 TODO uygulaması örneği, kalıcı depolama sağlayan bir ön uç ve arka uçta oluşur. Bu genişletilmiş örnek, bir istatistik bileşeni ekler ve uygulamayı özellikle bir dizi mikro hizmete ayırır:
 
@@ -37,15 +46,10 @@ TODO uygulaması örneği, kalıcı depolama sağlayan bir ön uç ve arka uçta
 
 Tüm bu genişletilmiş TODO uygulaması, ilişkili altı bileşenden oluşur.
 
-### <a name="prerequisites"></a>Önkoşullar
-
-- bir Kubernetes kümesi
-- [Visual Studio 2019][visual-studio] sürüm 16,7 Preview 4 veya üzeri Windows 10 üzerinde çalışıyor.
-- [Kubernetes uzantısının yüklendiği köprü][btk-extension].
 
 ## <a name="check-the-cluster"></a>Kümeyi denetleyin
 
-Bir komut istemi açın ve kubectl 'nin yüklü olduğundan ve yolun üzerine, kullanmak istediğiniz kümenin kullanılabildiğini ve hazır olduğunu ve bağlamını bu kümeye ayarlamayı denetleyin.
+Bir komut istemi açın ve `kubectl` yolun yüklenip yüklenmediğini, kullanmak istediğiniz kümenin kullanılabildiğini ve hazır olduğunu denetleyin ve bağlamı bu kümeye ayarlayın.
 
 ```cmd
 kubectl cluster-info

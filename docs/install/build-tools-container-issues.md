@@ -5,19 +5,19 @@ ms.date: 02/18/2020
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 140083f1-05bc-4014-949e-fb5802397c7a
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 338d7a19bf613ee2b2432fba6b635cf0c46eb008
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a56d820805fa97f3672480c063ebfcc0fdc96fb6
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868653"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046098"
 ---
 # <a name="known-issues-for-containers"></a>Kapsayıcılar için bilinen sorunlar
 
@@ -29,7 +29,7 @@ Windows kapsayıcısına Visual Studio Derleme Araçları yüklediğinizde aşa�
 
 ::: moniker range="vs-2017"
 
-* Visual Studio 'Yu Microsoft/windowsservercore: 10.0.14393.1593 görüntüsüne göre bir kapsayıcıya yükleyemezsiniz. 10.0.14393 önce veya sonrasında Windows sürümleriyle etiketlenen görüntülerin çalışması gerekir.
+* Visual Studio 'Yu, Image mcr.microsoft.com/windows/servercore:10.0.14393.1593 temel alınarak bir kapsayıcıya yükleyemezsiniz. 10.0.14393 önce veya sonrasında Windows sürümleriyle etiketlenen görüntülerin çalışması gerekir.
 
 * Windows SDK sürüm 10.0.14393 veya önceki bir sürümü yükleyemezsiniz. Bazı paketler yüklenemez ve bu paketlere bağlı olan iş yükleri çalışmayacak.
 
@@ -38,7 +38,7 @@ Windows kapsayıcısına Visual Studio Derleme Araçları yüklediğinizde aşa�
 * `-m 2GB`Görüntü oluştururken pass (veya daha fazla). Bazı iş yükleri, yüklendiğinde varsayılan 1 GB 'den daha fazla bellek gerektirir.
 * Docker 'ı varsayılan 20 GB 'tan daha büyük diskleri kullanacak şekilde yapılandırın.
 * `--norestart`Komut satırını geçirin. Bu yazma itibariyle, kapsayıcı içinden bir Windows kapsayıcısını yeniden başlatmaya çalışmak konağa geri dönmeye çalışıyor `ERROR_TOO_MANY_OPEN_FILES` .
-* Görüntünüzü doğrudan Microsoft/windowsservercore 'a dayandırırsanız .NET Framework düzgün şekilde yüklenemeyebilir ve hiçbir yüklemesi hatası belirtilmez. Yönetilen kod, yüklemesi tamamlandıktan sonra çalışmayabilir. Bunun yerine, görüntünüzü [Microsoft/DotNet-Framework: 4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) veya üzeri bir sürüme dayandırın. Örnek olarak, aşağıdaki gibi MSBuild ile derlerken bir hata görebilirsiniz:
+* Görüntünüzü doğrudan mcr.microsoft.com/windows/servercore üzerinde temel alırsanız .NET Framework düzgün şekilde yüklenemeyebilir ve hiçbir yüklemesi hatası belirtilmez. Yönetilen kod, yüklemesi tamamlandıktan sonra çalışmayabilir. Bunun yerine, görüntünüzü [Microsoft/DotNet-Framework: 4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) veya üzeri bir sürüme dayandırın. Örnek olarak, aşağıdaki gibi MSBuild ile derlerken bir hata görebilirsiniz:
 
   > C:\BuildTools\MSBuild\15.0\bin\Roslyn\Microsoft.CSharp.Core.targets (84, 5): hata MSB6003: belirtilen "csc.exe" görev çalıştırılabilir dosyası çalıştırılamadı. Dosya veya derleme ' System. ıO. FileSystem, Version = 4.0.1.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ' veya onun bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.
 

@@ -1,6 +1,6 @@
 ---
 title: DTE kullanarak Visual Studio’yu Başlatma
-description: Ana sürümlerin yan yana yüklemelerini desteklemek için, DTE kullanarak Visual Studio 'Yu nasıl başlatacağınızı öğrenin. Bu makale, bir kod örneği içerir.
+description: Ana sürümler Visual Studio yan yana yüklemeleri desteklemek için DTE kullanarak uygulama başlatmayı öğrenin. Bu makale bir kod örneği içerir.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 04/26/2019
@@ -10,32 +10,32 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 253c7f106f1d139f694fea3d469385f200c84029
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: b3f5aa141d73879e61a06e7a2b19f03bd53243a7
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903118"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046033"
 ---
 # <a name="launch-visual-studio-using-dte"></a>DTE kullanarak Visual Studio’yu Başlatma
 
-Visual Studio 2017 ' den itibaren, DTE 'yi kullanarak Visual Studio 'Yu başlatma mekanizması, Visual Studio 'nun önceki sürümlerini başlatmaya farklıdır. Visual Studio 2017 ve üzeri, ana sürümlerin yan yana yüklemelerini desteklediğinden bu değişiklik gereklidir (örneğin, bir önizleme ve bir sürüm sürümü yan yana yüklü olabilir).
+Visual Studio 2017'den başlayarak DTE kullanarak Visual Studio başlatma mekanizması, DTE'nin önceki sürümlerinin başlatılmasıyla Visual Studio. Visual Studio 2017 ve sonraki sürümler ana sürümlerde yan yana yüklemeleri desteklediği için bu değişiklik gereklidir (örneğin, bir önizleme ve sürüm sürümü yan yana yüklenmiş olabilir).
 
-Bu makalenin geri kalanında, Visual Studio 2019 ' i DTE kullanarak başlatmak için kullanabileceğiniz kod gösterilmektedir.
+Bu makalenin geri kalanında, DTE kullanarak 2019'Visual Studio başlatmak için kullanabileceğiniz kodlar açıklanmıştır.
 
 ## <a name="set-up-the-project"></a>Projeyi ayarlama
 
-Başlatma kodunu çalıştırmak için, aşağıdaki adımları izleyerek bir proje oluşturun.
+Başlatma kodunun nasıl olduğunu görmek için aşağıdaki adımları izleyin ve bir proje oluşturun.
 
-1. .NET Framework için yeni bir **konsol uygulaması** projesi oluşturun.
+1. Uygulama için **yeni bir Konsol** Uygulaması .NET Framework.
 
-2. [Microsoft.VisualStudio.Setup.Configurmayı yükler. Birlikte çalışabilirlik](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet paketi ve derlemeye bir başvuru ekleyin.
+2. uration [Microsoft.VisualStudio.Setup.Configyükleyin. Birlikte](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) Çalışma NuGet paketi ve derlemeye bir başvuru ekleyin.
 
-3. EnvDTE öğesine bir başvuru ekleyin.
+3. EnvDTE'ye bir başvuru ekleyin.
 
-4. Aşağıdaki [örnek kodu](#example-code) *program. cs* dosyasına yapıştırın.
+4. Aşağıdaki [örnek kodu](#example-code) *Program.cs dosyasına* yapıştırın.
 
-5. Programı çalıştırmak için **F5** tuşuna basın. Program çıkmadan önce Visual Studio 2019 açık ' i görmeniz gerekir.
+5. Programı **çalıştırmak için F5** tuşuna basın. Programdan çık Visual Studio önce 2019'un açık olduğunu görüyor gerekir.
 
 ## <a name="example-code"></a>Örnek kod
 
@@ -158,10 +158,7 @@ namespace ConsoleLauncherApp
             {
                 ISetupInstance[] setupInstances = new ISetupInstance[1];
                 enumerator.Next(1, setupInstances, out count);
-                if (count == 1 &&
-                    setupInstances != null &&
-                    setupInstances.Length == 1 &&
-                    setupInstances[0] != null)
+                if (count == 1 && setupInstances[0] != null)
                 {
                     yield return setupInstances[0];
                 }
@@ -179,9 +176,6 @@ namespace ConsoleLauncherApp
         {
             [DllImport("ole32.dll")]
             public static extern int CreateBindCtx(uint reserved, out IBindCtx ppbc);
-
-            [DllImport("ole32.dll")]
-            public static extern void GetRunningObjectTable(int reserved, out IRunningObjectTable prot);
         }
     }
 }
@@ -190,4 +184,4 @@ namespace ConsoleLauncherApp
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio’yu Bulma](locating-visual-studio.md)
-- [İzlenecek yol: bir düzenleyici uzantısından DTE nesnesine erişme](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)
+- [Adım adım kılavuz: DTE nesnesine bir düzenleyici uzantısından erişme](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)
