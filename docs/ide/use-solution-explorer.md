@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8360f553dc913164d302ef03a0a32626f83a51c2
-ms.sourcegitcommit: 7393a37ce77c5b80312ce787baa060c91d41d959
+ms.openlocfilehash: 005e6fd3e49d3a3ab739740d2aaa1dd77df5e5df
+ms.sourcegitcommit: 3d0f4930e0ccf49f89bbcfe12a949fbbf37aae07
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113114798"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113131506"
 ---
 # <a name="how-to-use-solution-explorer"></a>Çözüm Gezgini'i kullanma
 
@@ -48,7 +48,7 @@ Araç penceresi aşağıdaki kullanıcı arabirimi (kullanıcı arabirimi) öğe
 
 Devam etmek için, menü çubuğundaki Çözüm Gezgini bakalım.
 
-[Çözüm Gezgini menü çubuğundaki Visual Studio.](media/solution-explorer-menu-bar.png)
+![Çözüm Gezgini menü çubuğundaki Visual Studio.](media/solution-explorer-menu-bar.png)
 
 Menü çubuğu, soldan sağa aşağıdaki kullanıcı arabirimi öğelerini içerir:
 
