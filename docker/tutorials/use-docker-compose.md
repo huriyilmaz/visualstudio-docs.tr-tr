@@ -5,28 +5,27 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 3bcf3a69dcf8053851e3d8519a25f61fe23ae7e3
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 645d168aefe05040193d564d5c158acfb6688c11
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106082571"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222753"
 ---
 # <a name="use-docker-compose"></a>Docker Compose kullanma
 
 [Docker Compose](https://docs.docker.com/compose/) , çok Kapsayıcılı uygulamaların tanımlanması ve paylaşılması için geliştirilmiş bir araçtır. Compose ile, hizmetleri tanımlamak için bir YAML dosyası oluşturabilir ve tek bir komutla, her şeyi açabilir veya parçalara ayırın.
 
-Oluşturma kullanmanın *büyük* avantajı, uygulama yığınınızı bir dosya içinde tanımlayabilir, bunu proje deponuzu kökünde tutabilir (artık sürümdedir) ve başka birinin projenize katkıda bulunmasını kolayca sağlayabilirsiniz. Birisinin yalnızca depoyu kopyalaması ve oluşturma uygulamasını başlatması gerekir. Aslında GitHub/GitLab üzerinde tam olarak bunu yaparken çok sayıda proje görebilirsiniz.
+Oluşturma kullanmanın *büyük* avantajı, uygulama yığınınızı bir dosya içinde tanımlayabilir, bunu proje deponuzu kökünde tutabilir (artık sürümdedir) ve başka birinin projenize katkıda bulunmasını kolayca sağlayabilirsiniz. Birisinin yalnızca depoyu kopyalaması ve oluşturma uygulamasını başlatması gerekir. aslında GitHub/GitLab üzerinde yalnızca birkaç proje görebilirsiniz.
 
 Bu nedenle nasıl başladıysanız?
 
 ## <a name="install-docker-compose"></a>Docker Compose yüklensin
 
-Windows veya Mac için Docker Desktop yüklediyseniz, zaten Docker Compose! WITH Docker örneklerinin de Docker Compose zaten yüklü. Bir Linux makineniz varsa, [buradaki yönergeleri](https://docs.docker.com/compose/install/)kullanarak Docker Compose yüklemeniz gerekecektir.
+Windows veya Mac için docker Desktop yüklediyseniz, zaten Docker Compose demektir! WITH Docker örneklerinin de Docker Compose zaten yüklü. Bir Linux makineniz varsa, [buradaki yönergeleri](https://docs.docker.com/compose/install/)kullanarak Docker Compose yüklemeniz gerekecektir.
 
 Yükleme sonrasında, aşağıdakileri çalıştırıp sürüm bilgilerini görebilirsiniz.
 
@@ -56,7 +55,7 @@ docker-compose version
 
 ## <a name="define-the-app-service"></a>App Service tanımlayın
 
-Bunu anımsamak için, uygulama kapsayıcınızı tanımlamak için kullandığınız komuttur ( ` \ ` karakterleri `` ` `` Windows PowerShell 'de değiştirin).
+Bunu anımsamak için, uygulama kapsayıcınızı tanımlamak için kullandığınız komuttur ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ).
 
 ```bash
 docker run -dp 3000:3000 \
@@ -145,7 +144,7 @@ docker run -dp 3000:3000 \
 
 ### <a name="define-the-mysql-service"></a>MySQL hizmetini tanımlama
 
-Şimdi MySQL hizmetini tanımlamanız zaman. Bu kapsayıcı için kullandığınız komut aşağıda verilmiştir ( ` \ ` karakterleri `` ` `` Windows PowerShell 'de değiştirin):
+Şimdi MySQL hizmetini tanımlamanız zaman. Bu kapsayıcı için kullandığınız komut aşağıdaki gibi ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ):
 
 ```bash
 docker run -d \
@@ -243,7 +242,7 @@ Artık dosyaya sahip olduğunuza göre `docker-compose.yml` başlayabilirsiniz!
 
 1. İlk olarak, uygulamanın ve veritabanının başka bir kopyasının (ve) çalıştığından emin olun `docker ps` `docker rm -f <ids>` .
 
-1. Komutunu kullanarak uygulama yığınını başlatın `docker-compose up` . `-d`Arka planda her şeyi çalıştırmak için bayrak ekleyin. Alternatif olarak, oluştur dosyanıza sağ tıklayıp VS Code yan çubuk için **Oluştur** seçeneğini belirleyebilirsiniz. 
+1. Komutunu kullanarak uygulama yığınını başlatın `docker-compose up` . `-d`Arka planda her şeyi çalıştırmak için bayrak ekleyin. alternatif olarak, oluştur dosyanıza sağ tıklayıp VS Code yan çubuk için **oluştur** seçeneğini belirleyebilirsiniz. 
 
     ```bash
     docker-compose up -d
@@ -280,7 +279,7 @@ Artık dosyaya sahip olduğunuza göre `docker-compose.yml` başlayabilirsiniz!
 
 ## <a name="see-the-app-stack-in-the-docker-extension"></a>Docker uzantısında uygulama yığınına bakın
 
-Docker uzantısına bakarsanız, ' COG ' ve ' Group by ' kullanarak gruplandırma seçeneklerini değiştirebilirsiniz. Bu örnekte, oluşturma projesi adına göre gruplanmış kapsayıcıları görmek istersiniz:
+Docker uzantısına bakarsanız, ' COG ' ve ' Group by ' kullanarak gruplandırma seçeneklerini değiştirebilirsiniz. bu örnekte, oluşturma Project adına göre gruplanmış kapsayıcıları görmek istiyorsunuz:
 
 ![Oluşturma ile VS uzantısı](media/vs-app-project-collapsed.png)
 
@@ -290,7 +289,7 @@ Ağı görmüyorsanız, oluşturma dosyasında tanımladığınız iki kapsayıc
 
 ## <a name="tear-it-all-down"></a>Tümünü koparın
 
-Tamamen ayrılmaya hazırsanız, `docker-compose down` vs Code Docker uzantısı 'ndaki kapsayıcılar listesinden uygulamayı çalıştırın veya sağ tıklayın ve **Oluştur**' u seçin. Kapsayıcılar durdurulur ve ağ kaldırılır.
+tamamen ayrılmaya hazırsanız, `docker-compose down` VS Code docker uzantısı 'ndaki kapsayıcılar listesinden uygulamayı çalıştırın veya sağ tıklayın ve **oluştur**' u seçin. Kapsayıcılar durdurulur ve ağ kaldırılır.
 
 > [!WARNING]
 > **Birimleri kaldırma** Varsayılan olarak, oluşturma dosyanızdaki adlandırılmış birimler çalışırken kaldırılmaz `docker-compose down` . Birimleri kaldırmak istiyorsanız bayrağını eklemeniz gerekir `--volumes` .

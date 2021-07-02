@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 8ca68b2eba710037535b4bd76c744e7c029a53e9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e777d80f44c9a11e4d2a893c968d33e348ca442a
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841659"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222701"
 ---
 # <a name="whats-next"></a>Sırada ne var?
 
@@ -35,9 +34,9 @@ Bu nedenle, yatay ve buluta yerel uygulama geliştirmeye yönelik yeni bir sür�
 
 ## <a name="working-with-docker-in-vs-code"></a>VS Code Docker ile çalışma
 
-VS Code Docker uzantısını kullanma hakkında daha fazla bilgi edinin:
+VS Code docker uzantısını kullanma hakkında daha fazla bilgi edinin:
 
-- [Docker uzantısına genel bakış VS Code](https://code.visualstudio.com/docs/containers/overview)
+- [VS Code Docker uzantısına genel bakış](https://code.visualstudio.com/docs/containers/overview)
 - [Node.jskullanmaya başlayın ](https://code.visualstudio.com/docs/containers/quickstart-node)
 - [Python kullanmaya başlama](https://code.visualstudio.com/docs/containers/quickstart-python)
 - [.NET Core ile çalışmaya başlama](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)

@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: C++ kullanarak SDK oluşturma | Microsoft Docs'
-description: Yerel bir C++ matematik kitaplığı SDK 'Sı oluşturmayı, SDK 'Yı Visual Studio uzantısı olarak paketlemeyi ve sonra bu kılavuzu kullanarak bir uygulama oluşturmak için kullanmayı öğrenin.
+description: yerel bir C++ matematik kitaplığı sdk 'sı oluşturmayı, sdk 'yı Visual Studio uzantısı olarak paketlemeyi ve bu kılavuzu kullanarak bir uygulama oluşturmak için kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,30 +10,30 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 743759896bf1de104825825d450be081ab2cc666
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 6a52322e575dc201a6bf1648af93d813828e0b17
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217430"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113223013"
 ---
 # <a name="walkthrough-create-an-sdk-using-c"></a>İzlenecek yol: C++ kullanarak SDK oluşturma
-Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, SDK 'Yı Visual Studio uzantısı (VSıX) olarak paketlemeyi ve sonra bir uygulama oluşturmak için kullanmayı gösterir. İzlenecek yol aşağıdaki adımlara ayrılmıştır:
+bu izlenecek yol, yerel bir C++ matematik kitaplığı sdk 'sı oluşturmayı, SDK 'nın Visual Studio uzantısı (vsıx) olarak paketlemeyi ve sonra bir uygulama oluşturmak için nasıl kullanılacağını gösterir. İzlenecek yol aşağıdaki adımlara ayrılmıştır:
 
-- [Yerel ve Windows Çalışma Zamanı kitaplıklarını oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createClassLibrary)
+- [yerel ve Windows Çalışma Zamanı kitaplıklarını oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createClassLibrary)
 
 - [NativeMathVSIX Extension projesi oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createVSIX)
 
 - [Sınıf kitaplığını kullanan bir örnek uygulama oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createSample)
 
 ## <a name="prerequisites"></a>Önkoşullar
- Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
+ bu yönergeyi izlemek için Visual Studio SDK 'sını yüklemelisiniz. daha fazla bilgi için bkz. [SDK Visual Studio](../extensibility/visual-studio-sdk.md).
 
-## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a> Yerel ve Windows Çalışma Zamanı kitaplıklarını oluşturmak için
+## <a name="to-create-the-native-and-windows-runtime-libraries"></a><a name="createClassLibrary"></a>yerel ve Windows Çalışma Zamanı kitaplıklarını oluşturmak için
 
-1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
+1. menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
 
-2. Şablonlar listesinde,   >  **Windows Universal** Visual C++ ' ı genişletin ve ardından **dll (Windows Evrensel uygulamalar)** şablonunu seçin. **Ad** kutusunda, `NativeMath` öğesini belirtin ve sonra **Tamam** düğmesini seçin.
+2. şablonlar listesinde **Visual C++**  >  **Universal Windows**' i genişletin ve ardından **DLL (Windows Universal apps)** şablonunu seçin. **Ad** kutusunda, `NativeMath` öğesini belirtin ve sonra **Tamam** düğmesini seçin.
 
 3. *Nativemath. h* öğesini aşağıdaki kodla eşleşecek şekilde güncelleştirin.
 
@@ -43,9 +43,9 @@ Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, S
 
      :::code language="cpp" source="../snippets/cpp/VS_Snippets_VSSDK/creatingansdkusingcpp/cpp/nativemath/nativemath.cpp" id="Snippet2":::
 
-5. **Çözüm Gezgini**' de, **' nativemath ' çözümünün** kısayol menüsünü açın ve   >  **Yeni proje** Ekle ' yi seçin.
+5. **Çözüm Gezgini**' de, **' nativemath ' çözümünün** kısayol menüsünü açın ve   >  **yeni Project** ekle ' yi seçin.
 
-6. Şablonlar listesinde **Visual C++**' ı genişletin ve **Windows çalışma zamanı bileşen** şablonunu seçin. **Ad** kutusunda, `NativeMathWRT` öğesini belirtin ve sonra **Tamam** düğmesini seçin.
+6. şablonlar listesinde **Visual C++**' ı genişletin ve **Windows Çalışma Zamanı bileşen** şablonunu seçin. **Ad** kutusunda, `NativeMathWRT` öğesini belirtin ve sonra **Tamam** düğmesini seçin.
 
 7. *Class1. h* 'yi bu kodla eşleşecek şekilde güncelleştirin:
 
@@ -59,16 +59,31 @@ Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, S
 
 ## <a name="to-create-the-nativemathvsix-extension-project"></a><a name="createVSIX"></a> NativeMathVSIX Extension projesi oluşturmak için
 
-1. **Çözüm Gezgini**' de, **' nativemath ' çözümünün** kısayol menüsünü açın ve   >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm Gezgini**' de, **' nativemath ' çözümünün** kısayol menüsünü açın ve   >  **yeni Project** ekle ' yi seçin.
 
-2. Şablonlar listesinde, **Visual C#**  >  **genişletilebilirliği**' nı genişletin ve ardından **VSIX projesi**' ni seçin. **Ad** kutusunda, **NativeMathVSIX** belirtin ve sonra **Tamam** düğmesini seçin.
+2. şablonlar listesinde, **Visual C#**  >  **genişletilebilirlik**' i genişletin ve ardından **vsıx Project**' yi seçin. **Ad** kutusunda, **NativeMathVSIX** belirtin ve sonra **Tamam** düğmesini seçin.
 
 3. **Çözüm Gezgini**, **Source. Extension. valtmanifest** için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
 4. Varolan XML 'yi değiştirmek için aşağıdaki XML 'i kullanın.
 
-    :::code language="xml" source="../snippets/cpp/VS_Snippets_VSSDK/creatingansdkusingcpp/cpp/nativemathvsix/source.extension.vsixmanifest" id="Snippet6":::
-
+    ```xml
+    <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+      <Metadata>
+        <Identity Id="NativeMathVSIX..c6b3cae1-e7e2-4e71-90f6-21017ea0dff7" Version="1.0" Language="en-US" Publisher="MyName" />
+        <DisplayName>Native Math SDK</DisplayName>
+        <Description>Native Math Library w/ Windows Runtime Additions</Description>
+      </Metadata>
+      <Installation Scope="Global" AllUsers="true">
+        <InstallationTarget Id="Microsoft.ExtensionSDK" TargetPlatformIdentifier="Windows" TargetPlatformVersion="v8.0" SdkName="NativeMathSDK" SdkVersion="1.0" />
+      </Installation>
+      <Dependencies>
+      </Dependencies>
+      <Assets>
+        <Asset Type="Microsoft.ExtensionSDK" d:Source="File" Path="SDKManifest.xml" />
+      </Assets>
+    </PackageManifest>
+    ```
 
 5. **Çözüm Gezgini**' de, **NativeMathVSIX** projesi için kısayol menüsünü açın ve   >  **Yeni öğe** Ekle ' yi seçin.
 
@@ -125,7 +140,7 @@ Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, S
     </Project>
     ```
 
-12. Menü çubuğunda   >  **diğer Windows**  >  **Özellikleri penceresini** görüntüle ' yi seçin (klavye: **F4** anahtarını seçin).
+12. menü çubuğunda   >  **diğer Windows**  >  **özellikler penceresini** görüntüle ' yi seçin (klavye: **F4** anahtarını seçin).
 
 13. **Çözüm Gezgini**, **NativeMathWRT. winmd** dosyasını seçin. **Özellikler** penceresinde, **derleme eylemi** özelliğini **IÇERIK** olarak değiştirin ve ardından **VSIX özelliğindeki içerme** özelliğini **true** olarak değiştirin.
 
@@ -151,17 +166,17 @@ Bu izlenecek yol, yerel bir C++ matematik kitaplığı SDK 'sı oluşturmayı, S
 
 17. **Dosya Gezgini**'nde *$SolutionRoot $ \NativeMathVSIX\bin\Debug* klasörüne gidin ve sonra yüklemeyi başlatmak için *NativeMathVSIX. vsix* ' yi çalıştırın.
 
-18. **Yükleme düğmesini seçin** , yüklemenin bitmesini bekleyin ve sonra Visual Studio 'yu açın.
+18. **Yükleme düğmesini seçin** , yüklemenin bitmesini bekleyin ve sonra Visual Studio açın.
 
 ## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a> Sınıf kitaplığını kullanan bir örnek uygulama oluşturmak için
 
-1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
+1. menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
 
-2. Şablonlar listesinde, Windows Universal **Visual C++**' ı genişletin  >   ve **boş uygulama**' yı seçin. **Ad** kutusunda, **NativeMathSDKSample** belirtin ve sonra **Tamam** düğmesini seçin.
+2. şablonlar listesinde **Visual C++**  >  **Universal Windows** ' i genişletin ve **boş uygulama**' yı seçin. **Ad** kutusunda, **NativeMathSDKSample** belirtin ve sonra **Tamam** düğmesini seçin.
 
 3. **Çözüm Gezgini**' de, **NativeMathSDKSample** projesi için kısayol menüsünü açın ve ardından başvuru **Ekle**' yi seçin  >  .
 
-4. **Başvuru Ekle** iletişim kutusunda, başvuru türleri listesinde, **Evrensel Windows**' u genişletin ve **Uzantılar**' ı seçin. Son olarak, **Yerel matematik SDK 'sı** onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
+4. **başvuru ekle** iletişim kutusunda, başvuru türleri listesinde, **evrensel Windows**' ı genişletin ve ardından **uzantılar**' ı seçin. Son olarak, **Yerel matematik SDK 'sı** onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
 
 5. NativeMathSDKSample için proje özelliklerini görüntüleyin.
 

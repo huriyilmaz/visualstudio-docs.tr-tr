@@ -5,28 +5,27 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 6a4aa7623f69f9b02f9649a1a66ade010a823669
-ms.sourcegitcommit: 98d187abd9352d2255348b84d99d015e65caa0ea
+ms.openlocfilehash: ad3737ccfa4b0dae8ad427bd79e4adeb2756795b
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "112574119"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222766"
 ---
 # <a name="use-bind-mounts"></a>Bağlamaları kullanma
 
-Önceki bölümde, verileri veritabanınıza kalıcı yapmak için adlandırılmış **birim hakkında** bilgi öğrendiniz ve bu birimi kullandınız. Verilerin nerede depolandığı konusunda endişelenmenize gerek olmadığınız için adlandırılmış birimler yalnızca verileri *depolamak* için harikadır.
+Önceki bölümde, verileri veritabanınıza kalıcı yapmak için adlandırılmış **birim hakkında** bilgi öğrendiniz ve bu birimi kullandınız. Verilerin nerede depolandığı konusunda endişelenmenize gerek olmadığınız için, adlandırılmış birimler yalnızca verileri *depolamak* için harikadır.
 
-Bağlama **bağlamaları ile** konakta tam bağlama noktası denetiminde olur. Verileri kalıcı yapmak için bunu kullanabilirsiniz, ancak genellikle kapsayıcılara ek veri sağlamak için kullanılır. Uygulama üzerinde çalışırken bağlamayı kullanarak kaynak kodu kapsayıcıya bağarak kod değişikliklerini görebilir, yanıt ve değişiklikleri hemen görebilir.
+Bağlama **bağlamaları ile** konakta tam bağlama noktası denetiminde olur. Verileri kalıcı yapmak için bunu kullanabilirsiniz, ancak genellikle kapsayıcılara ek veri sağlamak için kullanılır. Uygulama üzerinde çalışırken bağlama kullanarak kaynak kodu kapsayıcıya bağarak kod değişikliklerini görebilir, yanıt ve değişiklikleri hemen görebilir.
 
-Düğüm tabanlı uygulamalar için [nodemon, dosya](https://npmjs.com/package/nodemon) değişikliklerini izlemek ve sonra uygulamayı yeniden başlatmak için harika bir araçtır. Diğer dillerin ve çerçevelerin çoğunda eşdeğer araçlar vardır.
+Düğüm tabanlı uygulamalar için [nodemon, dosya](https://npmjs.com/package/nodemon) değişikliklerini izlemek ve sonra uygulamayı yeniden başlatmak için harika bir araçtır. Diğer dil ve çerçevelerin çoğunda eşdeğer araçlar vardır.
 
 ## <a name="quick-volume-type-comparisons"></a>Hızlı birim türü karşılaştırmaları
 
-Bağlama bağlamaları ve adlandırılmış birimler, Docker altyapısıyla birlikte gelen iki ana birim t t'leridir. Ancak, diğer kullanım durumlarını[(SFTP](https://github.com/vieux/docker-volume-sshfs), [Ceph,](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/) [NetApp,](https://netappdvp.readthedocs.io/en/stable/) [S3](https://github.com/elementar/docker-s3-volume)ve daha fazlası) desteklemek için ek birim sürücüleri kullanılabilir.
+Bağlama bağlamaları ve adlandırılmış birimler, Docker altyapısıyla birlikte gelen iki ana birim t t'tir. Ancak, diğer kullanım durumlarını[(SFTP](https://github.com/vieux/docker-volume-sshfs), [Ceph](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/), [NetApp,](https://netappdvp.readthedocs.io/en/stable/) [S3](https://github.com/elementar/docker-s3-volume)ve daha fazlası) desteklemek için ek birim sürücüleri kullanılabilir.
 
 | Özellik | Adlandırılmış Birimler | Bağlama bağlamaları |
 | -------- | ------------- | ----------- |
@@ -55,7 +54,7 @@ Geliştirme iş akışını desteklemek için kapsayıcınızı çalıştırmak 
         sh -c "yarn install && yarn run dev"
     ```
 
-    - `-dp 3000:3000` - öncekiyle aynı. Ayrılmış (arka plan) modunda çalıştırma ve bağlantı noktası eşlemesi oluşturma
+    - `-dp 3000:3000` - öncekiyle aynı. Ayrılmış (arka plan) modunda çalıştırın ve bağlantı noktası eşlemesi oluşturun
     - `-w /app` - "çalışma dizinini" veya komutun çalıştıracak geçerli dizini ayarlar
     - `-v "%cd%:/app"` - geçerli dizini kapsayıcıda konaktan dizinine `/app` bağlama
     - `node:12-alpine` - kullanmak için görüntü. Bunun Dockerfile dosyasından uygulamanıza temel görüntü olduğunu unutmayın
@@ -74,16 +73,16 @@ Geliştirme iş akışını desteklemek için kapsayıcınızı çalıştırmak 
     Listening on port 3000
     ```
 
-    Günlükleri izlemeyi bitirerek çıkışa basarak çıkışa `Ctrl` + `C` çıkın.
+    Günlükleri izlemeyi bitirerek çıkışa `Ctrl` + `C` çıkın.
 
-1. Şimdi uygulamada bir değişiklik yapma. Dosyada `src/static/js/app.js` Öğe Ekle düğmesini Basitçe **Ekle** olarak **değiştirebilirsiniz.** Bu değişiklik 109. satırda olacak.
+1. Şimdi uygulamada bir değişiklik yapma. Dosyada `src/static/js/app.js` Öğe Ekle düğmesini Yalnızca **Ekle** olarak **değiştirebilirsiniz.** Bu değişiklik 109. satırda olacak.
 
     ```diff
     -                         {submitting ? 'Adding...' : 'Add Item'}
     +                         {submitting ? 'Adding...' : 'Add'}
     ```
 
-1. Sayfayı yenileyin (veya açın) ve değişikliğin neredeyse anında tarayıcıya yansıtıldı olduğunu görüyor olun. Node sunucusunun yeniden başlatılması birkaç saniye sürebilir, bu nedenle bir hata alırsanız birkaç saniye sonra yenilemeyi deneyin.
+1. Sayfayı yenileyin (veya açın) ve değişikliğin neredeyse anında tarayıcıya yansıtıldı olduğunu görebilirsiniz. Node sunucusunun yeniden başlatılması birkaç saniye sürebilir, bu nedenle bir hata alırsanız birkaç saniye sonra yenilemeyi deneyin.
 
     ![Ekle düğmesi için güncelleştirilmiş etiketin ekran görüntüsü](media/updated-add-button.png)
 
@@ -97,7 +96,7 @@ Bu noktada veritabanınızı kalıcı olarak bulundurarak yatırımcıların ve 
 
 **Projeniz gelecekteki geliştirme için seçildi!**
 
-Üretime hazırlanmak için veritabanınızı SQLite'da çalışırken biraz daha iyi ölçeklendirilen bir şeye geçirmeniz gerekir. Kolaylık olması için ilişkisel bir veritabanı kullanmaya devam ediyor ve mySQL'i kullanmak için uygulamanıza geçiş yapmak gerekiyor. Ancak MySQL'i nasıl çalıştırmalısınız? Kapsayıcıların birbirine nasıl konuşmasına izin vesersiniz? Bundan sonra bu konuda bilgi edinmek için bir sonraki adıma kadar devam etmeyi öğreneceğiz!
+Üretime hazırlanmak için veritabanınızı SQLite'da çalışırken biraz daha iyi ölçeklendirilen bir şeye geçirmeniz gerekir. Kolaylık olması için ilişkisel bir veritabanı kullanmaya devam ediyor ve mySQL'i kullanmak için uygulamanıza geçiş yapmak gerekiyor. Ancak MySQL'i nasıl çalıştırmalısınız? Kapsayıcıların birbirine konuşmasına nasıl izin vesersiniz? Bir sonraki adım bu olacak!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 00eb3a7cff3ffeaac783b929a000d9258fae7e63
-ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
+ms.openlocfilehash: 9229c3717b686a3f08ef49e7912ac0515864d793
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2021
-ms.locfileid: "112042955"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222818"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Todo örnek uygulamasını derleme ve çalıştırma
 
@@ -28,7 +27,7 @@ Bu noktada geliştirme takımınız oldukça küçüktür ve MVP'nizi (en düş�
 
 Uygulamayı çalıştıramadan önce uygulama kaynak kodunu makinenize alasiniz. Gerçek projeler için genellikle repo klonlar. Ancak bu öğretici için uygulamayı içeren bir ZIP dosyası oluşturduk.
 
-1. Yerel makinede Docker for Windows veya Docker Community Edition yüklü olduğundan emin olun. Yükleme [Docker for Windows bkz.](https://docs.docker.com/docker-for-windows/install/). Yükleme işlemi, örneği içeren ZIP dosyasını localhost adreslerinde kullanılabilir yapar.
+1. Yerel makinede Docker for Windows veya Docker Community Edition'ın yüklü olduğundan emin olun. Docker [for Windows belgelerine bakın.](https://docs.docker.com/docker-for-windows/install/) Yükleme işlemi, örneği içeren ZIP dosyasını localhost adreslerinde kullanılabilir yapar.
 
 1. Docker repolarından [uygulamanın kaynağını](https://github.com/docker/getting-started) indirin. Repo için ZIP dosyasını indirebilirsiniz. ZIP dosyasını indirmek için yeşil Kod düğmesini kullanın ve **ZIP'i** **İndir'i seçin.** UYGULAMA klasöründen sabit sürücüdeki bir klasöre uygulamanın kaynağını ayıklamak için ZIP dosyasını *açın* ve Hepsini Ayıkla'ya tıklayın.
 
@@ -36,7 +35,7 @@ Uygulamayı çalıştıramadan önce uygulama kaynak kodunu makinenize alasiniz.
 
 1. Ayıklandıktan sonra projeyi açmak için sık kullanılan kod düzenleyicinizi kullanın. Bir düzenleyiciye ihtiyacınız varsa, bu düzenleyiciyi [Visual Studio Code.](https://code.visualstudio.com/) ve iki alt `package.json` dizinini ( ve ) `src` görüyor `spec` gerekir.
 
-    ![Uygulama Visual Studio Code açık olan ekran görüntüsü](media/ide-screenshot.png)
+    ![Uygulama Visual Studio Code açık olan dosyanın ekran görüntüsü](media/ide-screenshot.png)
 
 ## <a name="building-the-apps-container-image"></a>Uygulamanın kapsayıcı görüntüsünü bina
 
@@ -91,7 +90,7 @@ Artık bir görüntünüz olduğu için uygulamayı çalıştırın! Bunu yapmak
 
 Bu noktada, birkaç öğeyle çalışan bir yapılacaklar listesi yöneticiniz olmalı ve hepsi sizin tarafından ekleyebilirsiniz! Şimdi birkaç değişiklik yapın ve kapsayıcılarınızı yönetme hakkında bilgi edinin.
 
-VS Code uzantısına hızlı bir şekilde göz atacak olursanız iki kapsayıcının (bu öğretici ve yeni başlatılan uygulama kapsayıcınız) çalışıyor olduğunu görüyor olun!
+VS Code uzantısına hızlıca göz atacak olursanız iki kapsayıcının (bu öğretici ve yeni başlatılan uygulama kapsayıcınız) çalışıyor olduğunu görüyor olun!
 
 ![Öğretici ve uygulama kapsayıcıları çalıştıran Docker Uzantısı](media/vs-two-containers.png)
 

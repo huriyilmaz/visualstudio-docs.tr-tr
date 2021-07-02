@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 9ee4109c888888d2dee36804a178f7db8d41753f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c9408e099caaef097be3fc4eea26cee2b1889e8e
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841776"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222909"
 ---
 # <a name="persist-your-data"></a>Verilerinizi kalıcı hale getirme
 
@@ -36,9 +35,9 @@ Bunu eylemde görmek için iki kapsayıcıyı başlatacak ve her birinde bir dos
 
     Komutu hakkında merak ediyorsanız, bash kabuğu başlatılıyor ve iki komut (bunun neden olduğu `&&` ) çağrılıyor. İlk bölüm tek bir rastgele sayı seçer ve bunu öğesine yazar `/data.txt` . İkinci komut, kapsayıcının çalışmasını sağlamak için yalnızca bir dosya izliyor.
 
-1. Bunu, kapsayıcıyı almak için kullanarak çıktıyı görebileceğiniz doğrulayın `exec` . Bunu yapmak için VS Code uzantısını açın ve **kabuk Ekle** seçeneğine tıklayın. Bu `exec` , vs Code terminali içindeki kapsayıcıda bir kabuğu açmak için kullanılır.
+1. Bunu, kapsayıcıyı almak için kullanarak çıktıyı görebileceğiniz doğrulayın `exec` . bunu yapmak için VS Code uzantısını açın ve **kabuk ekle** seçeneğine tıklayın. bu `exec` , VS Code terminali içindeki kapsayıcıda bir kabuğu açmak için kullanılır.
 
-    ![CLı 'yi Ubuntu kapsayıcısına VS Code açın](media/attach_shell.png)
+    ![clı 'yi ubuntu kapsayıcısına VS Code açın](media/attach_shell.png)
 
     Ubuntu kapsayıcısında bir kabuğu çalıştıran bir Terminal görürsünüz. Dosyanın içeriğini görmek için aşağıdaki komutu çalıştırın `/data.txt` . Bu terminali daha sonra yeniden kapatın.
 

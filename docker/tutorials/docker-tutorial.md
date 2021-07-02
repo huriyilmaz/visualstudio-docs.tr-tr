@@ -1,21 +1,20 @@
 ---
-title: Docker öğreticisi-Docker ile çalışmaya başlama
+title: 'Öğretici: Docker & ile çalışmaya başlama Visual Studio Code'
 description: Visual Studio Code ile Docker ile çalışmanın temellerini kapsayan çok adımlı bir öğretici.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
-ms.topic: conceptual
+ms.topic: tutorial
 ms.workload:
 - azure
 next_page: app.md
-ms.openlocfilehash: 554badf01122b6c41d89c00b740574d28185e35e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75a51f478e4e58700f6025dd6a87fcc38439ed87
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837976"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222662"
 ---
 # <a name="tutorial-get-started-with-docker"></a>Öğretici: Docker 'ı kullanmaya başlama
 
@@ -45,7 +44,7 @@ Kullanılan birkaç bayrak görürsünüz. Bunlar hakkında daha fazla bilgi aş
 
 ## <a name="the-vs-code-extension"></a>VS Code uzantısı
 
-Çok uzakta geçmeden önce, makinenizde çalışan kapsayıcıların hızlı bir görünümünü sağlayan Docker VS Code uzantısını vurgulamak istiyoruz. Kapsayıcı günlüklerine hızlı erişim sağlar, kapsayıcının içindeki bir kabuğu almanızı sağlar ve kapsayıcı yaşam döngüsünü (durdurma, kaldırma, vb.) kolayca yönetmenizi sağlar.
+çok uzakta geçmeden önce, makinenizde çalışan kapsayıcıların hızlı bir görünümünü sağlayan docker VS Code uzantısını vurgulamak istiyoruz. Kapsayıcı günlüklerine hızlı erişim sağlar, kapsayıcının içindeki bir kabuğu almanızı sağlar ve kapsayıcı yaşam döngüsünü (durdurma, kaldırma, vb.) kolayca yönetmenizi sağlar.
 
 Uzantıya erişmek için [buradaki](https://code.visualstudio.com/docs/containers/overview)yönergeleri izleyin. Sol taraftaki Docker simgesini kullanarak Docker görünümünü açın. Uzantıyı şimdi açarsanız, bu öğreticiyi çalıştırıyor olursunuz! Kapsayıcı adı ( `angry_taussig` aşağıdaki) rastgele oluşturulmuş bir addır. Bu nedenle muhtemelen büyük olasılıkla farklı bir ada sahip olacaksınız.
 
