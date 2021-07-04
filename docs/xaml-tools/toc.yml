@@ -22,6 +22,8 @@
       href: debugging-or-disabling-project-code-in-xaml-designer.md
     - name: XAML Tasarım Zamanı Verileri
       href: xaml-designtime-data.md
+    - name: XAML Tasarım Zamanı Örnek Verileri
+      href: xaml-design-time-sample-data.md
     - name: Visual Studio için Blend
       items:
         - name: Genel Bakış

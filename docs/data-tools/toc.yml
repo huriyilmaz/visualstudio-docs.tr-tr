@@ -209,8 +209,6 @@
           href: how-to-add-update-or-remove-a-wcf-data-service-reference.md
     - name: .mdf dosyalarını yükseltme
       href: upgrade-dot-mdf-files.md
-    - name: Veri erişimi hatalarıyla ilgili sorunları giderme
-      href: additional-resources-for-troubleshooting-data-access-errors.md
 - name: Başvuru
   items:
     - name: O/R Tasarımcısı (Linq to SQL)

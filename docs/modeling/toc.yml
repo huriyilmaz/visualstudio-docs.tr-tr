@@ -2,13 +2,15 @@
   href: analyze-and-model-your-architecture.md
 - name: Visual Studio 2017’de tasarıma yönelik yenilikler
   href: what-s-new-for-design-in-visual-studio.md
+- name: Mimari araçlarını yükleme
+  href: install-architecture-tools.md
 - name: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
   href: scenario-change-your-design-using-visualization-and-modeling.md
 - name: Kod haritaları ve bağımlılık diyagramları
   items:
     - name: Kodu görselleştirme
       href: visualize-code.md
-    - name: Bağımlılıkları eşlemek için kod haritalarını kullanma
+    - name: Bağımlılıkları kod eşlemeleriyle eşleme
       href: map-dependencies-across-your-solutions.md
     - name: Kod haritalarını paylaşma
       href: share-code-maps.md
@@ -58,8 +60,6 @@
       href: generate-and-configure-your-app-from-models.md
     - name: Modelleme çözümünüzün yapısını oluşturma
       href: structure-your-modeling-solution.md
-    - name: Visual Studio Mimari Araç Kullanımı Kılavuzu
-      href: visual-studio-architecture-tooling-guidance.md
 - name: Geliştirme sırasında sisteminizi doğrulama
   items:
     - name: Doğrulama görevleri ve kaynakları
