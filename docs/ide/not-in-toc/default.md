@@ -16,12 +16,9 @@ f1_keywords:
 - SolutionItemsProject
 - VS.SolutionExplorer
 - VS.SolutionExplorer.Selection
-- vs.addnewitem
 - vs.addnewsolutionitem
-- VS.ReferenceManager
 - vs.debug.watch
 - VS.ErrorList
-- vs.about
 - vs.unittesting.testexplorer.overview
 - vs.gotoline
 - vs.toolbox
@@ -29,12 +26,12 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 9130665e4456dfc34d91eeafc6e2b917154ceb80
-ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
+ms.openlocfilehash: 980da41ea60a4627b08488318095e46e9d5a2cbc
+ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112925182"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "113280447"
 ---
 # <a name="oops-no-f1-help-match-was-found"></a>Eyvah! Yardım `F1` eşleşmesi bulunamadı
 
@@ -42,7 +39,7 @@ ms.locfileid: "112925182"
 
 ## <a name="now-what"></a>Şimdi ne yapacağız?
 
-Üzgünüz! Görünüşe göre, aray olarak neleri arayamadım. 
+Üzgünüz! Görünüşe göre arayamadım. 
 
 **Bir `F1` pencere, anahtar sözcük veya API adı için yardım mı arıyorsunuz?**
 - Sık kullanılan arama altyapınızı **deneyin [Önerilen]**

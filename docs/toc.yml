@@ -151,32 +151,33 @@
       href: ide/quickstart-ide-orientation.md
     - name: 'C++: Konsol uygulaması oluşturma'
       href: /cpp/get-started/tutorial-console-cpp
-    - name: 'Python: Web uygulaması oluşturma'
-      href: ide/quickstart-python.md
-    - name: 'Node.js: Web uygulaması oluşturma'
-      href: ide/quickstart-nodejs.md
-    - name: 'F#: Web hizmeti oluşturma'
-      href: ide/quickstart-fsharp.md
     - name: 'C#: Web uygulaması oluşturma'
       href: ide/quickstart-aspnet-core.md
     - name: 'C#: Konsol uygulaması oluşturma'
       href: ide/quickstart-csharp-console.md
     - name: 'Visual Basic: Konsol uygulaması oluşturma'
       href: ide/quickstart-visual-basic-console.md
+    - name: 'Node.js: Web uygulaması oluşturma'
+      href: ide/quickstart-nodejs.md
+    - name: 'Python: Web uygulaması oluşturma'
+      href: ide/quickstart-python.md
+    - name: 'F#: Web hizmeti oluşturma'
+      href: ide/quickstart-fsharp.md
 - name: Öğreticiler
+  expanded: true
   items:
-    - name: C#
-      href: get-started/csharp/
-    - name: F#
-      href: /dotnet/fsharp/
-    - name: Visual Basic
-      href: get-started/visual-basic/
-    - name: C++
+    - name: C++ >>
       href: /cpp/get-started/tutorial-console-cpp
-    - name: Python
-      href: python/
-    - name: Node.js
+    - name: C#   >>
+      href: get-started/csharp/
+    - name: Visual Basic  >>
+      href: get-started/visual-basic/
+    - name: Node.js  >>
       href: javascript/
+    - name: Python  >>
+      href: python/
+    - name: 'F #   >>'
+      href: /dotnet/fsharp/
 - name: Geliştirme
   items:
     - name: Kodu organize etme ve düzenleme
@@ -193,12 +194,14 @@
           href: ide/create-new-project.md
         - name: Çözüm ve projelerle çalışma
           href: ide/creating-solutions-and-projects.md
-        - name: Visual Studio 2017 ' de bir depoyu bir projeyi açma
+        - name: Visual Studio 2017 ' de depoyu bir proje açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
-        - name: Visual Studio 2019 ' de bir depoyu bir projeyi açma
+        - name: Visual Studio 2019 ' de depoyu bir proje açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: 'Projeleri taşıma, geçirme ve yükseltme'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
+        - name: Çözüm Gezgini araç penceresini kullanın
+          href: ide/use-solution-explorer.md
         - name: Proje ve çözüm özelliklerini yönetme
           href: ide/managing-project-and-solution-properties.md
         - name: Proje başvuruları
@@ -443,6 +446,8 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Erişilemeyen kodları kaldırma
                   href: ide/reference/remove-unreachable-code.md
+                - name: Kullanılmayan başvuruları kaldırma
+                  href: ide/reference/remove-unused-references.md
                 - name: Rename
                   href: ide/reference/rename.md
                 - name: Koşullu ifadeyi basitleştirme
@@ -897,6 +902,7 @@
 - name: Hata ayıklama >>
   href: debugger/index.yml
 - name: Sürüm denetimi >>
+  displayName: 'git, github, source control, source, versioning, clone, integrate, release'
   href: version-control/index.yml
 - name: Test >>
   displayName: Unit testing
@@ -977,14 +983,9 @@
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
 - name: Başvuru
   items:
-    - name: Klavye kısayolları
-      items:
-        - name: Popüler komutlar
-          displayName: keyboard shortcuts
-          href: ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md
-        - name: Tüm komutlar
-          displayName: keyboard commands
-          href: ide/default-keyboard-shortcuts-in-visual-studio.md
+    - name: Klavye kısayolları & komutları
+      displayName: 'keyboard, shortcuts, short cuts, ctrl, short-cut'
+      href: ide/default-keyboard-shortcuts-in-visual-studio.md
     - name: Visual Studio komutları
       items:
         - name: Başvuru
@@ -1065,7 +1066,7 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
-        - name: Geliştirici Komut İstemi & geliştirici PowerShell
+        - name: Geliştirici Komut İstemi & Geliştirici PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md
@@ -1426,14 +1427,12 @@
 - name: Kaynaklar
   expanded: true
   items:
-    - name: Visual Studio 2017’deki yenilikler
+    - name: 'Visual Studio 2017: yenilikler'
       href: ide/whats-new-visual-studio-2017.md
-    - name: Visual Studio 2019’daki yenilikler
+    - name: 'Visual Studio 2019: yenilikler'
       href: ide/whats-new-visual-studio-2019.md
-    - name: Docs 'taki yenilikler
+    - name: Docs’taki Yenilikler
       href: ide/whats-new-visual-studio-docs.md
-    - name: Docs 'taki yenilikleri geçmiş
-      href: ide/whats-new-visual-studio-docs-history.md
     - name: Sürüm notları
       items:
         - name: Yayınlama sıklığı
@@ -1448,14 +1447,16 @@
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Destek yaşam döngüsü ve bakım
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Müşteri Deneyimi Geliştirme Programı
+    - name: Müşteri Deneyimini Geliştirme
       items:
-        - name: Genel Bakış
+        - name: Program hakkında
           displayName: Customer Experience Improvement Program
           href: ide/visual-studio-experience-improvement-program.md
         - name: Sistem tarafından oluşturulan günlükler
           href: ide/diagnostic-data-collection.md
-    - name: IDE hataları için sorun giderme kaynakları
+    - name: Visual Studio'de bağlantılı deneyimler
+      href: ide/reference/connected-experiences.md
+    - name: IDE hatalarını giderme
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Geri bildirim gönder
   items:
@@ -1463,7 +1464,7 @@
       href: ide/feedback-options.md
     - name: Sorun bildirin
       items:
-        - name: Sorun bildirme
+        - name: Sorun bildirin
           href: ide/how-to-report-a-problem-with-visual-studio.md
         - name: Sorun bildirme durumları ve SSS
           href: ide/report-a-problem.md

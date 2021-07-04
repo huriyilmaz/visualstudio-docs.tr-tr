@@ -2,19 +2,21 @@
   href: index.yml
 - name: Genel Bakış
   items:
-    - name: Visual Studio 'da git deneyimi
+    - name: Git deneyimi Visual Studio
       href: git-with-visual-studio.md
-    - name: Visual Studio 'Nun kaynak denetimini nasıl kolaylaştırdığını
+    - name: Git ayarları ve tercihleri
+      href: git-settings.md
+    - name: Visual Studio kaynak denetimini nasıl kolaylaştırdı
       href: git-visual-studio-source-control.md
 - name: başlarken
   items:
-    - name: Visual Studio 'da git ve GitHub ile çalışmaya başlama
+    - name: Visual Studio Git ve GitHub kullanmaya başlama
       href: /learn/modules/visual-studio-github-push/
     - name: Git ve Takım Gezgini yan yana karşılaştırın
       href: git-team-explorer-feature-comparison.md
 - name: Yenilikler
   items:
-    - name: Visual Studio 'da git ile geliştirilmiş üretkenlik (Önizleme)
+    - name: Git ile gelişmiş üretkenlik Visual Studio (önizleme)
       href: 'https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/'
     - name: Visual Studio 2019 sürüm notları
       href: /visualstudio/releases/2019/release-notes/

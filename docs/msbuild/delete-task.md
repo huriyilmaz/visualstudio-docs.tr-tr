@@ -1,6 +1,6 @@
 ---
 title: Görevi Sil | Microsoft Docs
-description: Belirtilen dosyaları silmek için MSBuild silme görevinin kullanılmasıyla ilgili parametreleri ve konuları öğrenin.
+description: belirtilen dosyaları silmek için MSBuild silme görevinin kullanılmasıyla ilgili parametreleri ve konuları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/11/2020
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b49ba26cc1e88ab3241094e1fd92be0907e8dd60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 09945306a2260bed5b264d380dcea745ff3f7c07
+ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877349"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "113280427"
 ---
 # <a name="delete-task"></a>Silme görevi
 
@@ -50,7 +50,7 @@ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralına
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, hedefi oluştururken *MyApp. pdb* dosyasını siler `DeleteDebugSymbolFile` .
+Aşağıdaki örnek, hedefi oluştururken *ConsoleApp1. pdb* dosyasını siler `DeleteDebugSymbolFile` .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

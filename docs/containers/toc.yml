@@ -26,7 +26,7 @@
           href: deploy-app-service.md
         - name: Docker Hub’a dağıtma
           href: deploy-docker-hub.md
-        - name: Başlatma profillerini yönetme (Önizleme)
+        - name: Başlatma profillerini yönetme
           href: launch-profiles.md
         - name: Kapsayıcı ve resimleri görüntüleyip tanılama
           href: view-and-diagnose-containers.md
