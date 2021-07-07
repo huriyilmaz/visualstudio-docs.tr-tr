@@ -1,8 +1,8 @@
 ---
 title: Görselleştirici yüklemesi | Microsoft Docs
-description: Visual Studio 'da hata ayıklama kullanımı için kullanılabilir olacak şekilde bir Görselleştirici yüklemeyi anlayın.
+description: Visual Studio ' de hata ayıklama kullanımı için kullanılabilir olacak şekilde bir Görselleştirici yüklemeyi anlayın.
 ms.custom: SEO-VS-2020
-ms.date: 06/10/2020
+ms.date: 07/02/2021
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2521983a797b676b9136ca14b733eb7afd054e27
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 611347acfe48e561653d644097d56d029b6a4fa6
+ms.sourcegitcommit: 4cd3eb514e9fa48e586279e38fe7c2e111ebb304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904274"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "113298263"
 ---
 # <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
 Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Görselleştirici 'yı yüklemelisiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Görselleştirici yüklenmesi basit bir işlemdir.
@@ -33,11 +33,14 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
 > UWP uygulamalarında yalnızca standart metin, HTML, XML ve JSON Görselleştiriciler desteklenir. Özel (Kullanıcı tarafından oluşturulan) Görselleştiriciler desteklenmez.
 
 ::: moniker range=">=vs-2019"
-### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>Visual Studio 2019 için bir Görselleştirici yüklemek için
+### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>Visual Studio 2019 için bir görselleştirici yüklemek için
 
 1. Oluşturduğunuz Görselleştiriciyi içeren DLL dosyasını bulun.
 
-   Genellikle, hem hata ayıklayıcı tarafında DLL hem de hata ayıklanan tarafı DLL 'SI hedef platform olarak **herhangi BIR CPU** belirtse en iyisidir. Hata ayıklayıcı-yan DLL, **herhangi BIR CPU** veya **32 bit** olmalıdır. Hata ayıklanan tarafı DLL için hedef platform, hata ayıklayıcı ayıklanan işleme karşılık gelmelidir.
+   Genellikle, hem hata ayıklayıcı tarafında DLL hem de hata ayıklanan tarafı DLL 'SI hedef platform olarak **herhangi BIR CPU** belirtse en iyisidir. Hata ayıklayıcı-yan DLL, **herhangi BIR CPU** veya **32 bit** olmalıdır. Hata ayıklanan tarafı DLL için hedef platform, hata ayıklanan işleme karşılık gelmelidir.
+
+   >[!NOTE]
+   > hata ayıklayıcı tarafı görselleştiricisi Visual Studio işleme yüklenir, bu nedenle bir .NET Framework DLL olmalıdır. hata ayıklanan tarafı, Visual Studio hata ayıklamanın ne olduğuna bağlı olarak .NET Framework ya da .NET Standard olabilir.
 
 2. [Hata ayıklayıcı yan](create-custom-visualizers-of-data.md#to-create-the-debugger-side) dll 'sini (ve bağımlı olduğu dll 'leri) aşağıdaki konumlardan birine kopyalayın:
 
@@ -63,14 +66,14 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
 4. Hata ayıklama oturumunu yeniden başlatın.
 
 > [!NOTE]
-> Yordam, Visual Studio 2017 ve üzeri sürümlerde farklıdır. Bu makalenin [önceki sürümüne](how-to-install-a-visualizer.md?view=vs-2017&preserve-view=true) bakın.
+> yordam Visual Studio 2017 ve üzeri sürümlerde farklıdır. Bu makalenin [önceki sürümüne](how-to-install-a-visualizer.md?view=vs-2017&preserve-view=true) bakın.
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-### <a name="to-install-a-visualizer-for-visual-studio-2017-and-older"></a>Visual Studio 2017 ve daha eski bir Görselleştirici yüklemek için
+### <a name="to-install-a-visualizer-for-visual-studio-2017-and-older"></a>Visual Studio 2017 ve üzeri için bir görselleştirici yüklemek için
 
 > [!IMPORTANT]
-> Yalnızca .NET Framework Görselleştiriciler Visual Studio 2017 ve üzeri sürümlerde desteklenir.
+> yalnızca .NET Framework görselleştiriciler Visual Studio 2017 ve daha eski sürümlerde desteklenir.
 
 1. Derleyecek Görselleştiriciyi içeren DLL 'i bulun.
 

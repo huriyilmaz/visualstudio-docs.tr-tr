@@ -1,8 +1,8 @@
 ---
 title: Görselleştiriciyi test etme ve hata ayıklama | Microsoft Docs
-description: Bir test sürücüsünden (Görselleştirici geliştirme ana bilgisayarı) çalıştırarak veya Visual Studio 'Ya yükleyerek ve bir hata ayıklayıcı penceresinden çağırarak Görselleştirici test edin ve hatalarını ayıklayın.
+description: bir test sürücüsünden (görselleştirici geliştirme ana bilgisayarı) çalıştırarak veya Visual Studio yükleyip hata ayıklayıcı penceresinden çağırarak bir görselleştirici test edin ve hatalarını ayıklayın.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 07/02/2021
 ms.topic: how-to
 dev_langs:
 - CSharp
@@ -19,19 +19,22 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b01c97c0ee72a3d29052d98d8a37cdc746c26d27
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa97453d08650b78a02eda873a01afe9e376caec
+ms.sourcegitcommit: 4cd3eb514e9fa48e586279e38fe7c2e111ebb304
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923286"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "113298250"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Test Etme ve Hata Ayıklama
 Görselleştirici yazdıktan sonra hata ayıklaması yapmanız ve test etmeniz gerekir.
 
-Görselleştirici test etmenin bir yolu, Visual Studio 'ya yüklenerek hata ayıklayıcı penceresinden çağırarak. (Bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).) Bunu yaparsanız, hata ayıklayıcının ilk örneğinde çalışan görselleştiricisi eklemek ve hatalarını ayıklamak için Visual Studio 'nun ikinci bir örneğini kullanmanız gerekir.
+görselleştirici test etmenin bir yolu, Visual Studio bir hata ayıklayıcı penceresinden yüklenerek bu uygulamayı test etmenin bir yoludur. (Bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).) bunu yaparsanız, hata ayıklayıcının ilk örneğinde çalışan görselleştiricisi eklemek ve hatalarını ayıklamak için Visual Studio ikinci bir örneğini kullanmanız gerekir.
 
 Görselleştirici hata ayıklamanın daha kolay bir yolu, Görselleştirici bir test sürücüsünden çalıştırılmaktır. Görselleştiricisi API 'Leri, *görselleştiricisi geliştirme Konağı* olarak adlandırılan böyle bir sürücü oluşturmayı kolaylaştırır.
+
+>[!NOTE]
+> şu anda, test sürücüsü yalnızca görselleştiricisi bir .NET Framework uygulamasından çağrılırken desteklenir.
 
 ### <a name="to-create-a-visualizer-development-host"></a>Görselleştiricisi geliştirme konağı oluşturmak için
 
