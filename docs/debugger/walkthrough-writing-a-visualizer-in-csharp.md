@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 47c7fa8eaa5a735f05b338101a1aefe0601e9915
-ms.sourcegitcommit: 4cd3eb514e9fa48e586279e38fe7c2e111ebb304
+ms.openlocfilehash: a6ce1a6d9f2f8a36d892d484cf9353e1312758b4
+ms.sourcegitcommit: 4e09130bcd55bb9cb8ad157507c23b67aa209fad
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "113298291"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113549517"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>Kılavuz: C'de Görselleştirici Yazma\#
 
@@ -180,7 +180,7 @@ Hata ayıklayıcı tarafı kodunda özniteliğini kullanarak hata ayıklayıcı 
     Dosya **Yeni**  >  **Dosya'Project.**  >   Dil açılan menüsünde **C# seçin.** Arama kutusuna konsol uygulaması **yazın ve ardından**.NET için Konsol Uygulaması **(.NET Framework)** veya **Konsol** Uygulaması'nu seçin. **İleri**’ye tıklayın. Görüntülenen iletişim kutusuna adını yazın ve `MyTestConsole` Oluştur'a **tıklayın.**
 
     > [!NOTE]
-    > Görselleştiriciyi test donanımı kullanarak kolayca test etmek için bir konsol .NET Framework oluşturun. Bunun yerine bir .NET konsol uygulaması oluşturabilirsiniz, ancak daha sonra açıklanan test yararlanıcısı henüz .NET için desteklenmiyor, bu nedenle test etmek için görselleştiriciyi yüklemeniz gerekir. Bu senaryo için, önce burada konsol uygulamasını oluşturun ve ardından Hata ayıklama tarafı veri [nesnesi ekleme konusunda açıklanan adımları izleyin.](#add-a-debuggee-side-data-object)
+    > Görselleştiriciyi test donanımı kullanarak kolayca test etmek için bir konsol .NET Framework oluşturun. Bunun yerine bir .NET konsol uygulaması oluşturabilirsiniz, ancak daha sonra açıklanan test yararlanıcısı henüz .NET için desteklenmiyor, bu nedenle test etmek için görselleştiriciyi yüklemeniz gerekir. Bir .NET konsol uygulaması için, önce burada konsol uygulamasını oluşturun, gerekli DLL ve proje başvurularını ekleyin ve ardından Hata ayıklama tarafı veri nesnesi ekleme konusunda [açıklanan adımları izleyin.](#add-a-debuggee-side-data-object)
     ::: moniker-end
     ::: moniker range="vs-2017"
     Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual C#** altında Windows **Desktop'ı** seçin ve orta bölmede Konsol Uygulaması **(.NET Framework) seçeneğini kullanın.**
@@ -247,7 +247,7 @@ Hata ayıklayıcı tarafı kodunda özniteliğini kullanarak hata ayıklayıcı 
 
 Bu bölümde, `System.String` veri nesnesinden özel bir veri nesnesine geçiş yapabilirsiniz.  
 
-1. **dosya**  >  **yeni**  >  **Project** seçin. Dil açılır penceresinde **C#**' ı seçin. arama kutusuna **sınıf kitaplığı** yazın ve ardından .NET Standard için sınıf **kitaplığı (.NET Framework)** veya **sınıf kitaplığı** ' nı seçin.
+1. Çözüm Gezgini, çözüme sağ tıklayın, **Ekle**' yi seçin ve ardından **yeni Project**' ye tıklayın. Dil açılır penceresinde **C#**' ı seçin. arama kutusuna **sınıf kitaplığı** yazın ve ardından .NET Standard için sınıf **kitaplığı (.NET Framework)** veya **sınıf kitaplığı** ' nı seçin.
 
    >[!NOTE]
    >bir .NET Framework test konsolu uygulaması kullanıyorsanız, bir .NET Framework sınıf kitaplığı projesi oluşturduğunuzdan emin olun.
@@ -255,6 +255,10 @@ Bu bölümde, `System.String` veri nesnesinden özel bir veri nesnesine geçiş 
 1. **İleri**’ye tıklayın. Görüntülenen iletişim kutusunda adı yazın `MyDataObject` ve ardından **Oluştur**' a tıklayın.
 
 1. (Yalnızca .NET Standard sınıf kitaplığı) Çözüm Gezgini, projeye sağ tıklayın ve **Project dosyayı düzenle**' yi seçin. `<TargetFramework>`Değerini olarak değiştirin `netstandard2.0` .
+
+   ```xml
+   <TargetFramework>netstandard2.0</TargetFramework>
+   ```
 
 1. `MyDataObject`Ad alanı içinde, varsayılan kodu aşağıdaki kodla değiştirin.
 
@@ -321,7 +325,7 @@ Bu bölümde, `System.String` veri nesnesinden özel bir veri nesnesine geçiş 
    }
    ```
 
-   Hata ayıklayıcının Görselleştirici için bir başvuruya ihtiyacı vardır. Başvuruyu tutmanın bir yolu, Yukarıdaki kodun yerinde tutulması.
+   Konsol uygulamasının Görselleştirici için bir çalışma zamanı başvurusu olması gerekir. Önceki kodu, açıklama eklemek yerine tutarak başvuruyu koruyabilirsiniz.
 
 1. .NET Framework konsol uygulaması için, test bandı çalıştırabilirsiniz ( **F5** tuşuna basın) veya [nasıl yapılır: görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)konusundaki yönergeleri izleyebilirsiniz.
 
