@@ -1,6 +1,6 @@
 ---
-title: '& projelerini Visual Studio için & oluşturma'
-description: Çözümlerle projeler arasındaki farkları ve bunları farklı projelerde nasıl Visual Studio.
+title: Proje ve & oluşturma
+description: Yapıtları depolamak için Visual Studio çözümleri ve projeleri oluşturma ve kullanma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020, contperf-fy21q2
 ms.date: 06/14/2021
 ms.topic: how-to
@@ -15,25 +15,25 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 713d320767bd329cc53b536bdad058a5db592b3f
-ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
+ms.openlocfilehash: a76051c2be5bf6f260c953ded3d1e10ecb676ea9
+ms.sourcegitcommit: d0061f62c8543ff0db500972d9402a7f00e017c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924935"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114201812"
 ---
 # <a name="create-work-with-and-delete-visual-studio-projects-and-solutions"></a>Projeleri ve çözümleri oluşturma, Visual Studio ve silme
 
-Bu makalede, uygulamalarınızı derlemek için ihtiyacınız olan yapıtları depolamak için Visual Studio projelerini oluşturma ve kullanma hakkında bilgi edinebilirsiniz.  Visual Studio'daki projeler hakkında bilgi sahibi değil Visual Studio Projeler ve Çözümler'e [genel bakış.](solutions-and-projects-in-visual-studio.md)  Şablondan hızla proje oluşturma hakkında bilgi edinmek için [bkz. Şablondan proje oluşturma.](create-new-project.md)
+Bu makalede, uygulamalarınızı derlemek için ihtiyacınız olan yapıtları depolamak için Visual Studio projelerini oluşturma ve kullanma hakkında bilgi edinebilirsiniz.  Visual Studio'daki projeler hakkında bilgi sahibi değil Visual Studio projelere ve çözümlere [genel bakışa bakın.](solutions-and-projects-in-visual-studio.md)  Şablondan hızla proje oluşturma hakkında bilgi edinmek için [bkz. Şablondan proje oluşturma.](create-new-project.md)
 
-*Projeler,* kaynak kod dosyaları, bit eşlemler, simgeler ve Visual Studio ve hizmet başvuruları gibi uygulamalarınızı derlemek için gereken öğeleri içerir. Yeni bir proje oluştururken, Visual Studio içeren *bir* çözüm oluşturur. Daha sonra, 2009'da 2000'den fazla yeni veya mevcut proje 5.000'e 500000000000000000 Çözümler belirli bir projeye bağlı olmayan dosyaları da içerebilir.
+*Projeler,* kaynak kod dosyaları, bit eşlemler, simgeler Visual Studio bileşen ve hizmet başvuruları gibi uygulamalarınızı derlemek için gereken öğeleri içerir. Yeni bir proje oluştururken, Visual Studio içeren *bir* çözüm oluşturur. Daha sonra, 2009'da 2000'den fazla yeni veya mevcut proje 5.000'e 500000000000000000 Boş veya boş [çözümler de oluşturabilirsiniz.](#create-empty-solutions) Çözümler belirli bir projeye bağlı olmayan dosyaları da içerebilir.
 
 ![Çözüm ve proje hiyerarşisini gösteren diyagram.](./media/vside-proj-soln.png)
 
 > [!NOTE]
-> Bu konu Windows'Visual Studio için geçerlidir. Daha Mac için Visual Studio için [bkz. Mac için Visual Studio.](/visualstudio/mac/create-new-projects)
+> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Mac için Visual Studio.](/visualstudio/mac/create-new-projects)
 
-Çözümlerinizi ve projelerinizi Çözüm Gezgini adlı bir **araç penceresinde görüntüebilirsiniz.** Aşağıdaki ekran görüntüsünde, **iki proje içeren Çözüm Gezgini** (**BikeSharing.Xamarin-UWP**) içinde örnek bir çözüm gösterir: **BikeSharing.Clients.Core** ve **BikeSharing.Clients.Windows**. Her proje birden çok dosya, klasör ve başvuru içerir. Kalın yazıyla proje adı başlangıç *projesidir;* başka bir ifadeyle, uygulamayı çalıştırarak başlayan projedir. Hangi projenin başlangıç projesi olduğunu belirterek.
+Çözümlerinizi ve projelerinizi Çözüm Gezgini adlı bir **araç penceresinde görüntüebilirsiniz.** Aşağıdaki ekran görüntüsünde, **Çözüm Gezgini** (**BikeSharing.Xamarin-UWP**) içinde **bikeSharing.Clients.Core** ve **BikeSharing.Clients.Windows**. Her proje birden çok dosya, klasör ve başvuru içerir. Kalın yazıyla proje adı başlangıç *projesidir;* başka bir ifadeyle, uygulamayı çalıştırarak başlayan projedir. Hangi projenin başlangıç projesi olduğunu belirterek.
 
 ![İki proje Çözüm Gezgini ekran görüntüsü.](./media/vside-solution-explorer-projects.png)
 
@@ -43,15 +43,15 @@ Bu nedenle, çözüm ve projelerin uygulama geliştirmek için gerekli Visual St
 
 ## <a name="create-a-project-from-a-project-template"></a>Proje şablonundan proje oluşturma
 
-Yeni proje oluşturmak için şablon seçme hakkında bilgi için bkz. Yeni proje [oluşturma Visual Studio.](create-new-project.md) Sıfırdan oluşturulan bir proje ve çözüm örneği için, adım adım yönergeler ve örnek kod ile tamamlandıktan sonra, bkz. Projelere ve [çözümlere giriş.](../get-started/tutorial-projects-solutions.md)
+Yeni proje oluşturmak için şablon seçme hakkında daha fazla bilgi için [bkz.](create-new-project.md)Visual Studio. Sıfırdan oluşturulan bir proje ve çözüm örneği için, adım adım yönergeler ve örnek kod ile tamamlandıktan sonra, bkz. Projelere ve [çözümlere giriş.](../get-started/tutorial-projects-solutions.md)
 
 ## <a name="create-a-project-from-existing-code-files"></a>Mevcut kod dosyalarından proje oluşturma
 
 Bir kod kaynak dosyaları koleksiyonunuz varsa, bunları bir projeye kolayca ekleme.
 
-1. Menüde Mevcut Koddan **Dosya**  >  **Yeni**  >  **Proje'yi seçin.**
+1. Menüde Dosya Yeni **Dosya'Project**  >    >  **Var Olan Koddan'ı seçin.**
 
-1. Mevcut **Kod Dosyalarından** Proje Oluştur sihirbazında, Ne tür bir proje oluşturmak **istersiniz?** açılan liste kutusunda istediğiniz proje türünü seçin ve ardından Sonraki **düğmesini** seçin.
+1. Mevcut **Kod Project** Oluştur sihirbazında, Ne tür bir proje oluşturmak ister **misiniz?** açılan liste kutusunda istediğiniz proje türünü seçin ve ardından Sonraki **düğmesini** seçin.
 
 1. Sihirbazda dosyaların bulunduğu konuma göz atarak Ad kutusuna yeni proje için bir **ad** girin. Bitirerek Son **düğmesini** seçin.
 
@@ -71,9 +71,9 @@ Yeni bir .NET Framework oluşturdukta, projenin .NET Framework istediğiniz beli
 
 ::: moniker range="vs-2017"
 
-Yeni bir .NET Framework belirtmek için Yeni **Proje** iletişim kutusunda Çerçeve **açılan menüsünü** seçin.
+Yeni sürüm .NET Framework belirtmek için Yeni  sürüm iletişim kutusunda Framework **açılan Project** seçin.
 
-![Yeni Proje iletişim kutusundaki Çerçeve açılan kutusunun ekran görüntüsü.](./media/vside-newproject-framework.png)
+![Yeni uygulama iletişim kutusundaki Framework açılan Project görüntüsü.](./media/vside-newproject-framework.png)
 
 > [!NOTE]
 > 4'.NET Framework önceki sürümlere erişmek için sisteminize .NET Framework 3.5 .NET Framework gerekir.
@@ -82,7 +82,7 @@ Yeni bir .NET Framework belirtmek için Yeni **Proje** iletişim kutusunda Çer�
 
 ::: moniker range=">=vs-2019"
 
-Yeni bir .NET Framework belirtmek için Yeni **proje** oluştur sayfasında Framework **açılan menüsünü** seçin.
+Yeni bir .NET Framework belirtmek için Yeni  proje oluştur sayfasında Framework **açılan menüsünü** seçin.
 
 !['Yeni projeyi yapılandır' iletişim kutusundaki Çerçeve seçicinin ekran görüntüsü.](media/vs-2019/configure-new-project-framework.png)
 
@@ -94,11 +94,11 @@ Ayrıca, projesiz boş çözümler de oluşturabilirsiniz. Çözüm ve projeleri
 
 ### <a name="to-create-an-empty-solution"></a>Boş bir çözüm oluşturmak için
 
-1. Menü çubuğunda Dosya Yeni **Proje'yi**  >    >  **seçin.**
+1. Menü çubuğunda Dosya Yeni'yi **seçin**  >  **ve**  >  **Project.**
 
 ::: moniker range="vs-2017"
 
-2. Sol bölmede (**Şablonlar**) genişletilmiş listeden **Diğer Proje** Türleri > **Visual Studio Çözümler'i** seçin.
+2. Sol bölmede (**Şablonlar**) genişletilmiş listede Diğer **Project Türleri** > **Visual Studio Çözümler'i** seçin.
 
 3. Orta bölmede Boş **Çözüm'i seçin.**
 
@@ -116,7 +116,7 @@ Ayrıca, projesiz boş çözümler de oluşturabilirsiniz. Çözüm ve projeleri
 
 ::: moniker-end
 
-Boş bir çözüm oluşturdukta, Proje menüsünde Yeni Öğe Ekle'yi veya  Var Olan Öğeyi Ekle'yi seçerek yeni veya mevcut projeleri veya **öğeleri bu çözüme ekleyebilirsiniz.** 
+Boş bir çözüm oluşturdukta, yeni veya mevcut projeleri ya  da öğeleri  eklemek için Yeni Öğe Ekle'yi veya Yeni Öğe Ekle'yi **seçerek** Project ekleyebilirsiniz.
 
 Daha önce belirtildiği gibi, bir projeye veya çözüme gerek kalmadan kod dosyalarını açabilirsiniz. Bu şekilde kod geliştirme hakkında bilgi edinmek için [bkz. Proje veya Visual Studio olmadan kod geliştirme.](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 
@@ -128,7 +128,7 @@ Daha önce belirtildiği gibi, bir projeye veya çözüme gerek kalmadan kod dos
 
 Bir sanız. Net tabanlı proje, disk konumu belirtmeden geçici bir projedir. Geçici projeler .NET projeleriyle denemeler sağlar. Geçici bir projeyle çalışırken istediğiniz zaman projeyi kaydedebilir veya atabilirsiniz.
 
-Geçici bir proje oluşturmak için önce Araçlar Seçenekler Projeleri ve Çözümler Genel'e gidin ve Yeni projeleri oluşturulduğunda  >    >    >  kaydet onay **kutusunun işaretini** kaldırın. Ardından her zamanki **gibi Yeni** Proje iletişim kutusunu açın.
+Geçici bir proje oluşturmak için önce Araçlar Seçenekler Projeleri ve Çözümler Genel'e gidin ve Yeni projeleri oluşturulduğunda  >    >    >  kaydet onay **kutusunun işaretini** kaldırın. Ardından Her **zamanki Project** Yeni Dosya iletişim kutusunu açın.
 
 ::: moniker-end
 
@@ -136,14 +136,14 @@ Geçici bir proje oluşturmak için önce Araçlar Seçenekler Projeleri ve Çö
 
 Sağ tıklama bağlam menüsünü kullanarak Visual Studio'daki çözümleri, projeleri veya öğeleri silebilir veya kaldırabilirsiniz. Ancak bu, bunları yalnızca geçerli çözümden veya projeden kaldırır.
 
-Bir çözümü veya diğer bileşenleri sisteminize kalıcı olarak silmek için **Windows'da** Dosya Gezgini kullanarak *.sln* ve *.suo* çözüm dosyalarını içeren klasörü silin. (Bir çözümü smeden önce, yeniden ihtiyacınız olursa projelerinizi ve dosyalarınızın da aynı şekilde geri yüklemesi iyi olabilir.)
+Bir çözümü veya diğer bileşenleri sisteminize kalıcı  olarak silmek için Dosya Gezgini'Windows *.sln* ve *.suo* çözüm dosyalarını içeren klasörü silmek için kullanın. (Bir çözümü smeden önce, yeniden ihtiyacınız olursa projelerinizi ve dosyalarınızın da aynı şekilde geri yüklemesi iyi olabilir.)
 
 > [!NOTE]
 > *.suo* dosyası, varsayılan dosya adı ayarları altında görüntülenmez Dosya Gezgini dosyasıdır. Gizli dosyaları göstermek için, **Dosya Gezgini'daki** Görünüm menüsünde Gizli Öğeler **onay** kutusunu seçin.
 
 ### <a name="permanently-delete-a-solution"></a>Çözümü kalıcı olarak silme
 
-Windows'da Dosya Gezgini erişmek için Çözüm Gezgini'Visual Studio. Aşağıdaki adımları uygulayın:
+Windows'Dosya Gezgini Çözüm Gezgini kullanarak Visual Studio. Aşağıdaki adımları uygulayın:
 
 1. Bu **Çözüm Gezgini,** silmek istediğiniz çözümün sağ tıklama menüsünde (bağlam menüsü) klasör **aç'ı** Dosya Gezgini.
 
@@ -156,6 +156,6 @@ Windows'da Dosya Gezgini erişmek için Çözüm Gezgini'Visual Studio. Aşağı
 - [Projelere ve çözümlere giriş](../get-started/tutorial-projects-solutions.md)
 - [Proje ve çözüm özelliklerini yönetme](managing-project-and-solution-properties.md)
 - [Verilerde filtrelenmiş Visual Studio](filtered-solutions.md)
-- [Microsoft'un GitHub'daki açık kaynak depoları](https://github.com/Microsoft)
+- [Microsoft'un açık kaynak depoları GitHub](https://github.com/Microsoft)
 - [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/)
-- [IDE hatalarını Visual Studio için kaynaklar](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)
+- [IDE hatalarını Visual Studio kaynakları](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)

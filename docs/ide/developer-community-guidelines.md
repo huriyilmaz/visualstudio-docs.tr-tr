@@ -1,6 +1,6 @@
 ---
 title: Geliştirici Topluluğu yönergeleri
-description: Visual Studio Geliştirici topluluğu ile çalışmaya yönelik yönergeleri açıklar.
+description: Visual Studio geliştirici Community ile çalışmaya yönelik yönergeleri açıklar.
 ms.date: 6/30/2020
 ms.topic: conceptual
 author: madskristensen
@@ -8,24 +8,24 @@ ms.author: madsk
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0722716b086877d5522b9ef8fae79976fbdb0805
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21cf3bd6a0c208a78cd391f93702865e905482e0
+ms.sourcegitcommit: 3c6c263a1c0b20f084290ce45295a46027da33b6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894679"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "113756881"
 ---
 # <a name="developer-community-guidelines"></a>Geliştirici Topluluğu yönergeleri
 
-Geliştirici topluluğu, Visual Studio için sorunları ve özellik önerilerini izler.
+geliştirici Community Visual Studio ilgili sorunları ve özellik önerilerini izler.
 
 ## <a name="submitting-problems-and-suggestions"></a>Sorunları ve önerileri gönderme
 
-[Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) , Visual Studio için sorunları ve özellik önerilerini izler.
+[Visual Studio geliştirici](https://aka.ms/feedback/suggest?space=8) , Visual Studio yönelik sorunları ve özellik önerilerini Community izler.
 
 ### <a name="before-submitting-an-issue"></a>Bir sorunu göndermeden önce
 
-Daha önce mevcut olmadığından emin olmak için Visual Studio Geliştirici topluluğu 'nda sorununuzu arayın. Sorununuzu zaten var buldıysanız, ilgili yorumlarınızı yapın ve oyunuzu atayın.
+Visual Studio geliştirici Community, zaten mevcut olmadığından emin olmak için sorun için arama yapın. Sorununuzu zaten var buldıysanız, ilgili yorumlarınızı yapın ve oyunuzu atayın.
 
 Sorununuz bir sorunuz ise, topluluktan _Visual-Studio_ etiketini kullanarak [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) isteyin. Müşteri desteği personeli bu etiketi izliyor ve soruları yanıtlamaya yardımcı olacak.
 
@@ -57,7 +57,7 @@ Zengin ayrıntılar içeren sorunlar da dahil olmak üzere sorunu yeniden oluşt
 
 Bir sorunu önceliklendirme, özellik ekibi içinde işbirliği yapılan çok adımlı bir işlemdir. Üçlü yaşlandırma genellikle bir hafta sürer, ancak daha uzun sürebilir. Üç aylık dönemin amacı, sorununuzun ne olduğunu net bir şekilde anlamanızı sağlar. Örneğin, önceliklendirme sonrasında sorununuzu gidermeyi planlıyoruz veya daha fazla topluluk geri bildirimi bekleyebilirsiniz.
 
-Bir sorunu bildirdikten sonra, durumlar, Gönderimlerinizin yaşam döngüsünün nerede olduğunu gösterir. Visual Studio ürün ekipleri geri bildiriminizi gözden geçirdikten sonra uygun bir durumla ayarlanırlar. Sorun [durumlarına ve SSS](./report-a-problem.md)'ye başvurarak sorun raporlarınız ilerlemesini izleyin.
+Bir sorunu bildirdikten sonra, durumlar, Gönderimlerinizin yaşam döngüsünün nerede olduğunu gösterir. Visual Studio ürün ekipleri geri bildiriminizi gözden geçirdikten sonra uygun bir durumla ayarlanırlar. Sorun [durumlarına ve SSS](./report-a-problem.yml)'ye başvurarak sorun raporlarınız ilerlemesini izleyin.
 
 ### <a name="prioritizing-which-issues-to-fix"></a>Hangi sorunların düzeltilmesine öncelik verme
 
@@ -69,12 +69,12 @@ Bir sorun için önemli bilgiler eksik olduğunda, _Ihtiyaçları daha fazla bil
 
 ### <a name="other-product"></a>Diğer ürün
 
-Bazen bir sorunu raporlarken, Visual Studio 'Nun değil başka bir ürünün neden olduğu için bu bir hata ortaya çıkar. Başka bir ilgili uygulama veya uzantı olabilir. 
+Bazen bir sorun bildirilmediğinde, başka bir ürünün neden olmadığı ve Visual Studio değil. Başka bir ilgili uygulama veya uzantı olabilir. 
 
 Bu durumda, sorunu kapatacaktır ve diğer ürünle açmanız istenir. Bu sorunları gidermek için bazı yaygın konumlar aşağıda verilmiştir:
 
 * [SQL Server](https://feedback.azure.com/forums/908035-sql-server)
-* [Visual Studio abonelik desteği](https://feedback.azure.com/forums/908035-sql-server)
+* [Visual Studio Abonelik desteği](https://feedback.azure.com/forums/908035-sql-server)
 * [Office](https://support.office.com/article/how-do-i-give-feedback-on-microsoft-office-2b102d44-b43f-4dd2-9ff4-23cf144cfb11)
 * [Windows](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)
 
@@ -99,22 +99,22 @@ Karar verme sürecimizde, özellik önerisi hakkında aşağıdaki özelliklere 
 
 Bu sorulardan herhangi birine "Evet" Yanıt vermiyoruz. Ancak genellikle öneri, daha fazla topluluk geri bildirimi toplamak için _Gözden geçirme bölümünde_ açık kalır.
 
-Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı* olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
+Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı* olarak kapalarız. örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
 
-[Öneri durumlarına ve SSS](./report-a-problem.md)'ye başvurarak Özellik önerinizin ilerlemesini izleyin.
+[Öneri durumlarına ve SSS](./report-a-problem.yml)'ye başvurarak Özellik önerinizin ilerlemesini izleyin.
 
 ## <a name="discussion-etiquette"></a>Tartışma etiği
 
 Konuşmayı açık ve şeffaf tutmak için tartışmayı Ingilizce ile sınırlayın ve sorunla ilgili şeyleri koruyun. Considerate ve her zaman korkusuz ve profesyonel olacak şekilde çalışın.
 
-Daha fazla bilgi için bkz. [Microsoft Community kullanım kuralları](https://answers.microsoft.com/en-us/page/codeofconduct).
+daha fazla bilgi için [Microsoft Community kullanım kuralları](https://answers.microsoft.com/en-us/page/codeofconduct)' na bakın.
 
 Tartışmaya yönelik herhangi bir ihlal, açıklamanın kaldırılmasına ve sonunda kullanıcıyı yönlendirebilir.
 
 ## <a name="data-privacy"></a>Veri gizliliği
 
-Açıklamalar ve yanıtlar herkese açık bir şekilde görünür, ancak ekli dosyalar yalnızca Microsoft ile özel olarak paylaşılır. Bu görünürlük, tüm topluluğun diğer kullanıcılar tarafından bulunan sorunları ve çözümleri görmesini sağladığından faydalıdır. Verilerinizin veya kimliğinizin gizliliğiyle ilgileniyorsanız, seçenekleriniz vardır. [Geliştirici topluluğu veri gizliliği](./developer-community-privacy.md)hakkında daha fazla bilgi edinin.
+Açıklamalar ve yanıtlar herkese açık bir şekilde görünür, ancak ekli dosyalar yalnızca Microsoft ile özel olarak paylaşılır. Bu görünürlük, tüm topluluğun diğer kullanıcılar tarafından bulunan sorunları ve çözümleri görmesini sağladığından faydalıdır. Verilerinizin veya kimliğinizin gizliliğiyle ilgileniyorsanız, seçenekleriniz vardır. [veri gizliliği Community geliştirici](./developer-community-privacy.md)hakkında daha fazla bilgi edinin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Sorunları bildirmek, Özellikler önermek veya mevcut biletlere gözatmak için [Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) 'na gidin. Keyfini çıkarın!
+sorunları bildirmek, özellikler önermek veya mevcut biletlere gözatmak için [Visual Studio Community geliştiricisi](https://aka.ms/feedback/suggest?space=8) üzerine gelin. Keyfini çıkarın!

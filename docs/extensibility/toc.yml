@@ -9,15 +9,15 @@
       href: starting-to-develop-visual-studio-extensions.md
     - name: 'İlk Uzantınızı Oluşturma: Merhaba Dünya'
       href: extensibility-hello-world.md
-    - name: Visual Studio 2022 (Önizleme) için uzantıları güncelleştirme
+    - name: Visual Studio 2022 uzantıları güncelleştirme (önizleme)
       items:
         - name: Uzantıyı güncelleştirme
           href: migration/update-visual-studio-extension.md
-        - name: 'Örnek: ImageOptimizer'
+        - name: 'Örnek: ımageiyileştirici'
           href: migration/samples.md
         - name: Önceki sürümleri hedefleme
           href: migration/target-previous-versions.md
-        - name: Yeni API listesi
+        - name: Son API listesi
           href: migration/breaking-api-list.md
         - name: API listesi kaldırıldı
           href: migration/removed-api-list.md
@@ -42,7 +42,7 @@
         - name: Hata ayıklayıcı COM kaydını geçirme
           href: migrate-debugger-com-registration.md
         - name: Sık Sorulan Sorular
-          href: faq-2017.md
+          href: faq-2017.yml
     - name: Genişletilebilirlik Projelerini Visual Studio 2017’ye Geçirme
       href: how-to-migrate-extensibility-projects-to-visual-studio-2017.md
     - name: Visual Studio için Gidiş Geliş Uzantıları

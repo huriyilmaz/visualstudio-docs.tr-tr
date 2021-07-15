@@ -1,0 +1,128 @@
+### YamlMime:FAQ
+metadata:
+  title: Genişletilebilirlik Hakkında Sık Sorulan Sorular
+  description: Bu makale, 2017'de genişletilebilirlik hakkında sık sorulan Visual Studio yanıt verir.
+  ms.custom: SEO-VS-2020
+  ms.date: 11/09/2016
+  ms.topic: conceptual
+  ms.assetid: 345855db-0cc3-45aa-8c57-bb18d9789772
+  author: kevinfansler
+  ms.author: madsk
+  manager: jmartens
+  monikerRange: vs-2017
+  ms.openlocfilehash: 31f536c99c0a050ebb3b315b8209a32c4a1d9130
+  ms.sourcegitcommit: 3c6c263a1c0b20f084290ce45295a46027da33b6
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 07/14/2021
+  ms.locfileid: "113757552"
+title: 2017 genişletilebilirliği hakkında SSS Visual Studio
+summary: Bunlar 2017'de genişletilebilirlik hakkında Visual Studio sorulardır.
+sections:
+- name: Yoksayıldı
+  questions:
+  - question: >
+      Uzantılar için geriye dönük uyumluluk hikayesi nedir?
+    answer: >
+      Yeni VSIX v3 biçimi VSIX v2 ile geriye dönük olarak uyumludur, bu nedenle yine de Visual Studio 2012 ve sonraki sürümü destekleyen tek bir VSIX kimliğine sahip tek bir VSIX'e sahip oluruz. Yeni VSIX v3 biçimi Visual 2010 ve önceki sürümleri desteklemez. 2010 Visual Studio için ayrı bir uzantı (ayrı vsIX kimliği ile) oluşturmanız gerekir. Visual Studio 2010 artık kullanıcı tabanının küçük bir yüzdesi olduğu için, Visual Studio 2012 veya sonraki bir sürümü destekleyen uzantı için mevcut VSIX kimliğini kullanma ve Visual Studio 2010 sürümüne yeni bir VSIX kimliği atamanız önerilir.
+  - question: >
+      Visual Studio 2017'de önkoşulları neden bildir ihtiyacım var?
+    answer: >
+      Visual Studio 2017, kullanıcıların yüklü iş yükleri ve bileşenler üzerinde daha fazla denetim Visual Studio daha hızlı ve daha hafif etkili bir yükleme sağlar. Uzantınız için gereken bileşenlerin VSIX v3 ve Visual Studio 2017 ile yüklü olduğundan emin olmak için, uzantınıza bağlı olan bileşenleri önkoşul olarak bildirebilirsiniz. Gerekli önkoşullardan herhangi biri kullanıcının makinesine kullanılamıyorsa, kullanıcı uzantıyı çalıştıramayacaktır. Ancak, Visual Studio eksik bileşenler gerektiren bir uzantıyı yükleme girişiminde olduğunu algılarsa, kullanıcıdan gerekli bileşenleri yüklemesi istenir. İsteğe bağlı bileşenleriniz varsa, çalışma zamanında uygun özellik algılamayı gerçekleştirmeniz koşuluyla bunları önkoşul olarak listeleye gerek yoktur. Tüm uzantılar, çekirdek düzenleyici bileşenini bağımlılık olarak `Microsoft.VisualStudio.Component.CoreEditor` belirterek .
+  - question: >
+      Önkoşul deyilken, hangi ayrıntı düzeyi anlamına geliyor?
+    answer: >
+      Önkoşulları bileşen düzeyinde, yani kullanıcı arabiriminde seçilecek tek tek seçenekleri bildirebilirsiniz. İş yüklerinde veya tek tek URL'lerde önkoşullar bildirlanmaz.
+  - question: >
+      Bağımlılıkları bildirem için Bileşen Kimliklerinin listesini nerede bulamıyorum?
+    answer: >
+      Bileşen kimliklerinin listesini bulmak için [2017 iş Visual Studio ve bileşen kimlikleri'ne bakın.](../install/workload-and-component-ids.md?view=vs-2019&preserve-view=true) Hangi bileşenin belirli bir ikili dosyayı içerdiğine emin değilseniz, Bileşen -> İkili [eşleme elektronik tabloyu indirebilirsiniz.](https://aka.ms/vs2017componentid-binaries) Elektronik tabloyu kullanma hakkında daha  fazla bilgi için, Nasıl genişletilebilirlik projelerini [2017'ye](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)Visual Studio bölümüne bakın.
+  - question: >
+      Uzantım 15.3 Visual Studio gerektiriyor, bu gereksinimi nasıl zorunlu yapabilirim?
+    answer: >
+      Uzantınız belirli bir Visual Studio 2017 sürümünü gerektiriyorsa, örneğin, 15.3 sürümünde yayımlanan bir özeliklere bağlı olarak VSIX InstallationTarget içinde derleme numarasını **belirtebilirsiniz.** Örneğin, 15.3 sürümü '15.0.26730.3' derleme numarasına sahip. Derleme numaralarına yayın eşlemesini [buradaabilirsiniz.](../install/visual-studio-build-numbers-and-release-dates.md) '15.3' sürüm numarasının doğru çalışmayycaz olduğunu unutmayın.
+
+
+      Uzantınız 15.3 veya daha yüksek bir sürüm gerektiriyorsa **InstallationTarget Sürümünü** [15.0.26730.3, 16.0) olarak bildirebilirsiniz:
+
+
+      ```xml
+
+      <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0.26730.3, 16.0)" />
+      </Installation>
+
+      ```
+
+
+      VSIXInstaller, uygulamanın önceki Visual Studio algılar ve kullanıcıya daha sonraki bir güncelleştirmenin gerekli olduğunu bildirecek.
+  - question: >
+      Uzantımı karşıya yüklemeye çalışmamda hata alıyorum.
+    answer: >
+      VSIX bildiriminin eski sürümünü kullanıyor olabilir. Uzantınız 2017'de Visual Studio olarak işaretlendi ancak yeni VSIX v3 bildirim biçimini kullanamasa, uzantıyı karşıya yükleyesiniz.
+  - question: >
+      Kendi yükleyicimi kullandım. Bunu yapmaya devam miyim?
+    answer: >
+      2017'Visual Studio ile en düşük Visual Studio yüklemesi önceki sürümlerden çok daha küçük olacaktır.
+
+
+      VSIX bildirim biçimini, hafif yükleme için gerekli değişiklikleri destekleyecek şekilde geliştirebilirsiniz. Uzantınızı mümkün olduğunca VSIX v3 biçiminde sağlamanızı öneririz. Bileşenleri uygulamanın dışında yüklemeniz gibi bazı senaryolar için mevcut yükleyicinizi korumanız Visual Studio.
+
+
+      Örneğin, bu MSBuild VSIX bildiriminde önkoşul olarak belirtirsiniz. VSIX'i yüklemeniz, yükleyicinin kullanılabilir MSBuild sağlar.
+
+
+      Ardından yükleyiciniz, Visual Studio 2017 bileşenlerinize sahip bir VSIX yüklemek için VSIXInstaller'ı çağırır.
+  - question: >
+      Bana daha fazla geçiş kılavuzu smusunuz?
+    answer: >
+      Genişletilebilirlik [projelerini 2017'de Visual Studio okuyabilirsiniz.](how-to-migrate-extensibility-projects-to-visual-studio-2017.md) Ayrıca, harika bir blog gönderisi vardır: [Kurulumda Visual Studio.](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
+  - question: >
+      Nasıl yaparım? kaydı nasıl yapılır?
+    answer: >
+      Paket kaydını, kayıt defteri girdileriyle geçmişte olduğu gibi yapar. Tek değişiklik, kayıt defterinin artık sapmaya neden olması ve kayıt defteri girdilerinizi *bir .pkgdef* dosyasından bildirebilirsiniz.
+
+
+      kullanırsanız `PackageRegistrationAttribute` bu otomatik olarak uzacaktır.
+  - question: >
+      Uzantımı 2017'nin Visual Studio galeri girişi gerekiyor mu?
+    answer: >
+      Hayır, değişiklikleriniz desteklenen tüm sürümlerle tamamen geriye dönük uyumlu olduğu için güncelleştirilmiş VSIX için Visual Studio Gallery'de yeni bir girişe ihtiyacınız yoktur. Uzantınız geriye dönük olarak uyumlu değilse, uzantınızı her biri kendi VSIX kimliğine ve Galeri'ye girişi olan birden çok VSIX'e (geçici olarak bile) bölmenizi öneririz.
+  - question: >
+      Şu anda 2010 ve sonraki bir sürümü destekleyen Visual Studio ne yapabilirim?
+    answer: >
+      Geçerli VSIX'e Visual Studio 2017 için destek ekleyin ve 2012 ve Visual Studio için destek sürdürün. Ayrıca, 2010'da desteklenen yeni bir VSIX (yeni GUID ve Galeri girişi ile) Visual Studio oluşturun.
+  - question: >
+      Visual Studio 2015 ile VSIX v3'ü derleye miyim?
+    answer: >
+      Evet. 2015 NuGet VSIX v3 biçim bildirimleri derlemek için gerekli araçlara ve görevlere sahip bir Visual Studio vardır. Genişletilebilirlik projenize NuGet `Microsoft.VisualStudio.Sdk.BuildTasks.14.0` paketine başvuru ekleyin. Ayrıca, proje dosyanıza `VsixType` öğesini `v3` belirterek eklemeniz gerekir:
+
+
+      ```xml
+        <VsixType>v3</VsixType>
+      ```
+  - question: >
+      VSIXInstaller'i sessiz modda çalıştırabilirsiniz.
+    answer: >
+      2017'de yüklü olabilecek birden çok örnek olduğu için VSIXInstaller'a Visual Studio gerekir.
+
+
+      ```bash
+
+      vsixinstaller.exe /q /appidinstallpath:"c:\program files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe" /appidname:"Visual Studio" /logFile:<path to log file> /skuName:Enterprise /skuVersion:15.0.25810.0 "KendoUI.Mvc.VSPackage.vsix"
+
+      ```
+  - question: >
+      VSIXInstaller neden VSIX'i yüklemeden önce işlemlerin çıkış yapmak için beklemesini bekliyor?
+    answer: >
+      VSIXInstaller artık VSIX tarafından Visual Studio önkoşulları yüklemek için Visual Studio kurulum altyapısını kullanır. Kurulum altyapısı, vs ile ilgili tüm işlemlerin yüklemesini güncelleştiremeden önce Visual Studio gerektirir.
+  - question: >
+      Artık VSIX v3 ile uzantı varlıklarımı herhangi bir konuma yükleyebilir miyim?
+    answer: >-
+      Hayır, VSIX v3 özelliği, klasör yükleme yapısının dışında `InstallRoot` Visual Studio izin vermez. Desteklenen [konumlar için Uzantılar klasörünün](set-install-root.md) dışında yükleme konu başlığına bakın.
+
+
+      2017'de Visual Studio uzantı bileşenlerinin bilgisayarda tekli olması ve tüm Visual Studio 2017 örnekleri için bir kez yüklenmiş olması olasıdır.
+
+
+      Bu senaryo için öneri, Visual Studio olmayan bileşenler için bir MSI yazma ve MSI'nin belirli bileşenleri yüklemek için VSIXInstaller'ı Visual Studio olmasıdır.

@@ -1,5 +1,5 @@
 ---
-title: F1 eşleşmeme geri dönüş yardımı
+title: F1 Yardım olmayan geri dönüş
 description: Eyvah! F1 eşleşmesi bulunamadı.
 ms.prod: visual-studio
 ms.technology: ''
@@ -26,32 +26,34 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 980da41ea60a4627b08488318095e46e9d5a2cbc
-ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
+ms.openlocfilehash: c3251b38d75545ec1ccf2843382dff17676284ee
+ms.sourcegitcommit: d0061f62c8543ff0db500972d9402a7f00e017c6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2021
-ms.locfileid: "113280447"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114201799"
 ---
-# <a name="oops-no-f1-help-match-was-found"></a>Eyvah! Yardım `F1` eşleşmesi bulunamadı
+# <a name="oops-no-f1-help-match-was-found"></a>Eyvah! Hiçbir `F1` Yardım eşleşmesi bulunamadı
 
-:::image type="content" source="../media/search-error-page-sm.png" alt-text="Ne üzgünüz eşleşme bulamıyorum" border="false":::
+:::image type="content" source="../media/search-error-page-sm.png" alt-text="Üzgünüz, bir eşleşme bulamadık" border="false":::
 
 ## <a name="now-what"></a>Şimdi ne yapacağız?
 
-Üzgünüz! Görünüşe göre arayamadım. 
+Ne yazık ki! Aradığınızı bulamadık gibi görünüyor. 
 
-**Bir `F1` pencere, anahtar sözcük veya API adı için yardım mı arıyorsunuz?**
-- Sık kullanılan arama altyapınızı **deneyin [Önerilen]**
-- Arama yapmak [docs.microsoft.com](/) araç çubuğunu kullanma 
-- [.NET API tarayıcısında arama yapın veya](/dotnet/api/) metin kodu [düzenleyicisine genel bakış sayfamızı okuyun](../../ide/writing-code-in-the-code-and-text-editor.md)
-- Sorun giderme Bilgi Bankası için Visual Studio [göz atma](/troubleshoot/visualstudio/welcome-visual-studio/)
-
-
-**Tıklamak istemediniz mi?** [Yardım anahtarını yeniden eşleme veya `F1` devre dışı bırakma](../not-in-toc/change-f1-help-key.md)
+**`F1`Bir pencere, anahtar sözcük veya API adı hakkında yardım mı arıyorsunuz?**
+- En sevdiğiniz arama altyapısını deneyin **[önerilir]**
+- Aramak için [docs.Microsoft.com](/) araç çubuğunu kullanın 
+- [.NET API tarayıcısı](/dotnet/api/) 'nda arama yapın veya [metin kodu düzenleyicimize genel bakış](../../ide/writing-code-in-the-code-and-text-editor.md) konusunu okuyun
+- [Visual Studio sorun giderme](/troubleshoot/visualstudio/welcome-visual-studio/) için bilgi bankasına bakın
 
 
-## <a name="help-us-serve-you-better"></a>Size daha iyi hizmet etmemize yardımcı olur
+**Ne tıkladım?** [Yardım anahtarını yeniden eşleyin veya devre dışı bırakın `F1`](../not-in-toc/change-f1-help-key.md)
 
-Üründe nerede olduğunu ve hangi yardıma ihtiyaç duyul gerektiğini bize söyleyin.   
-<br/>Bu `This Page` sayfanın en altındaki geri bildirim düğmesini kullanın. 
+
+## <a name="help-us-serve-you-better"></a>Size daha iyi sunmamıza yardımcı olun
+
+İhtiyacınız olan yardımı nasıl sağlayacağınız hakkında görüşlerinizi almak isteriz.
+
+> [!div class="nextstepaction"]
+> [Geri bildiriminizi paylaşma (5 dakikalık anket)](https://www.surveymonkey.com/r/F1_Help_Visual_Studio)
