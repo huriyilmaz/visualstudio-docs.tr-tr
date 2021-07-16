@@ -3,19 +3,19 @@ title: Command-Line yakalama aracı | Microsoft Docs
 description: Grafik tanılama yakalama ve kayıttan yürütme için, tüm özellik düzeylerinde Direct3D 12 aracılığıyla Direct3D 10 ' u destekleyen bir komut satırı aracı olan DXCap.exe hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ee7acfd6256affee7a8204c2e70e18210c5f3dcf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b305d2f2f84d4b3f52d9be40f18fe02c9eb93df2
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877739"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232719"
 ---
 # <a name="command-line-capture-tool"></a>Komut Satırı Yakalama Aracı
 DXCap.exe, grafik tanılama yakalama ve kayıttan yürütme için bir komut satırı aracıdır. Tüm özellik düzeylerinde Direct3D 12 aracılığıyla Direct3D 10 ' da desteklenir.
@@ -80,7 +80,7 @@ DXCap.exe -info
 ## <a name="remarks"></a>Açıklamalar
  DXCap.exe üç modda çalışır:
 
- Yakalama modu (-c) çalışan bir uygulamadan grafik bilgilerini yakalayın ve bir grafik günlük dosyasına kaydeder. Yakalama özellikleri ve dosya biçimi, Visual Studio ile aynıdır.
+ Yakalama modu (-c) çalışan bir uygulamadan grafik bilgilerini yakalayın ve bir grafik günlük dosyasına kaydeder. Yakalama özellikleri ve dosya biçimi Visual Studio benzerdir.
 
  Kayıttan yürütme modu (-p) daha önce yakalanan grafik olaylarını mevcut bir grafik günlük dosyasından oynatma. Varsayılan olarak, grafik günlük dosyası tam bir uygulamadan yakalansa bile kayıttan yürütme bir pencerede gerçekleşir. Kayıttan yürütme işlemi, yalnızca grafik günlük dosyası tam ekran uygulamadan yakalandıysa ve belirtildiğinde tam ekranda gerçekleşir `-rawmode` .
 
@@ -125,7 +125,7 @@ DXCap.exe -c "C:\Program Files\Internet Explorer\iexplorer.exe" "www.fishgl.com"
 DXCap.exe -c Microsof.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps
 ```
 
- UWP uygulamasından yakalamak için DXCap.exe kullanmak, bunu bir Windows masaüstü uygulamasından yakalamak üzere kullanmaya benzer, ancak bunun yerine bir masaüstü uygulamasını dosya adına göre tanımlayarak, bir UWP uygulamasını paket adına ve bu paketin içinde yakalamak istediğiniz yürütülebilir dosyanın adına ve KIMLIĞINE göre belirlersiniz. Makinenizde yüklü olan UWP uygulamalarının nasıl tanımlanacağına daha kolay bir şekilde emin olmak için, bu `-e` seçeneği listelemek için DXCap.exe kullanın:
+ uwp uygulamasından yakalamak için DXCap.exe kullanmak, bunu bir Windows masaüstü uygulamasından yakalamak üzere kullanmaya benzer, ancak bunun yerine bir masaüstü uygulamasını dosya adına göre tanımlayarak, bir uwp uygulamasını paket adına ve bu paketin içinde yakalamak istediğiniz yürütülebilir dosyanın adına ve kimliğine göre belirlersiniz. Makinenizde yüklü olan UWP uygulamalarının nasıl tanımlanacağına daha kolay bir şekilde emin olmak için, bu `-e` seçeneği listelemek için DXCap.exe kullanın:
 
 ```cmd
 DXCap.exe -e
@@ -139,7 +139,7 @@ DXCap.exe -e map
 
  Yukarıdaki komut, "map" ile eşleşen UWP uygulamalarını numaralandırır; çıktı şöyledir:
 
- **"Microsoft. BingMaps" paketi:** **InstallDirectory: C: \ Program Files \ WindowsApps \ Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbbu** **FullName: Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe** **Kullanıcı SID: S-1-5-21-2127521184-1604012920-1887927527-5603533** **ad: Microsoft. Bingmaps** **yayımcısı: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = Washington, C = US** **Sürüm: 2.1.2914.1734** **launchable uygulamalar:** **ID: appexmaps** **exe: C: \ Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **IWWA:** **appspec (başlatmak için): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734 _x64__8wekrivbwe,** her numaralandırılmış uygulama için çıktının son satırını, bundan sonra grafik bilgilerini yakalamak için kullanabileceğiniz komutu görüntüler.
+ **"Microsoft. bingmaps" paketi:** **ınstalldirectory: C: \ Program Files \ windowsapps \ Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbbu** **FullName: Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe** **kullanıcı sıd: S-1-5-21-2127521184-1604012920-1887927527-5603533** **ad: microsoft. bingmaps** **Publisher: CN = Microsoft corporation, O = microsoft corporation, L = Redmond, S = Washington, C = US** **sürüm: 2.1.2914.1734** **launchable uygulamalar:** **ıd: appexmaps** **Exe: C: \ Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **ıwwa:** **appspec (başlatmak için): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734 _x64__8wekrivbwe,** her numaralandırılmış uygulama için çıktının son satırını, bundan sonra grafik bilgilerini yakalamak için kullanabileceğiniz komutu görüntüler.
 
 ### <a name="capture-specific-frames-or-frames-between-specific-times"></a>Belirli saatler arasında belirli çerçeveler veya çerçeveler yakalayın.
  `-frame`Virgüller ve aralıklar kullanarak yakalamak istediğiniz çerçeveleri belirtmek için kullanın:
@@ -208,7 +208,7 @@ DXCap.exe -v regression_test_12.vsglog -examine present,draw,copy,clear
 ```
 
 ### <a name="convert-a-graphics-log-file-to-pngs"></a>Grafik günlük dosyasını png 'lere Dönüştür
- Grafikleri bir grafik günlük dosyasından görüntülemek veya analiz etmek için DXCap.exe yakalanan çerçeveleri. png (Taşınabilir Ağ Grafikleri) resim dosyaları olarak kaydedebilir. `-screenshot`Yakalanan çerçeveleri. png dosyaları olarak çıktısını almak için kayıttan yürütme modunda ' i kullanın.
+ Grafikleri bir grafik günlük dosyasından görüntülemek veya analiz etmek için DXCap.exe yakalanan çerçeveleri .png (Taşınabilir Ağ Grafikleri) görüntü dosyaları olarak kaydedebilir. `-screenshot`Yakalanan çerçeveleri .png dosya olarak çıktısını almak için kayıttan yürütme modunda ' i kullanın.
 
 ```cmd
 DXCap.exe -p BasicHLSL11.vsglog -screenshot
@@ -227,7 +227,7 @@ DXCap.exe -p BasicHLSL11.vsglog -screenshot -frame 5, 7-9
 DXCap.exe -p regression_test_12.vsglog -toXML
 ```
 
- Varsayılan olarak, XML çıktısı grafik günlüğü ile aynı ada sahip bir dosyaya yazılır, ancak buna bir. xml uzantısı verilir. Yukarıdaki örnekte, XML dosyası **regression_test_12.xml** olarak adlandırılır. XML dosyasına farklı bir ad vermek için, daha sonra belirtin `-toXML` .
+ Varsayılan olarak, XML çıktısı grafik günlüğü ile aynı ada sahip bir dosyaya yazılır, ancak buna bir .xml uzantısı verilir. Yukarıdaki örnekte, XML dosyası **regression_test_12.xml** olarak adlandırılır. XML dosyasına farklı bir ad vermek için, daha sonra belirtin `-toXML` .
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -toXML temp.xml

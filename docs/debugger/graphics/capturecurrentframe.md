@@ -3,19 +3,19 @@ title: CaptureCurrentFrame | Microsoft Docs
 description: Geçerli çerçevenin kalan kısmını grafik günlük dosyasına yakalamak için VsgDbg sınıfının CaptureCurrentFrame metodunu kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4509311d-6fe2-4b65-9b4a-ff0522585d6a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 94c55a34ee71f8002d31613d64ff978f0a546b72
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 17c917c6c23dff41a5692e95588ce757a8d08293
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874554"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232744"
 ---
 # <a name="capturecurrentframe"></a>CaptureCurrentFrame
 Geçerli çerçevenin kalan kısmını grafik günlük dosyasına yakalar.

@@ -1,51 +1,51 @@
 ---
-title: MİP eşleme oluşturma varyantı | Microsoft Docs
-description: MIP eşleme üretimi büyük performans kazançlarını gösteriyorsa, MIP haritalarını etkinleştirmeden ve doku önbelleğinden en iyi şekilde elde etmeden dokuları kullandığınızı gösterir.
+title: Mip eşlemesi Oluşturma Varyantı | Microsoft Docs
+description: Mip eşlemesi oluşturma büyük performans kazançları gösteriyorsa, mip eşlemelerini etkinleştirmeden dokuları kullanmakta ve doku önbelleğinden en iyi şekilde performans elde etmek mümkün değildir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dc2e377c0313fffda88bf14c0c7304ff084f3275
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e17981b819ccc719399a6ed14071615f2deb54a
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904438"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232446"
 ---
 # <a name="mip-map-generation-variant"></a>Mip-map Oluşturma Çeşidi
-Oluşturma hedefleri olmayan dokuların MIP haritalarını sunar.
+Hedef işleme olmayan dokularda mip eşlemelerini sağlar.
 
 ## <a name="interpretation"></a>Yorum
-MIP haritaları öncelikle dokudaki dokuların daha küçük sürümlerini önceden hesaplayarak, kele kapsamındaki dokuların diğer ad yapılarını ortadan kaldırmak için kullanılır. Bu ek dokular GPU belleğini tüketse de orijinal dokundan daha fazla yüzde 33 daha fazla olan yüzey alanı GPU dokusu önbelleğine sığdığı ve içeriği daha fazla kullanım elde ettiğinden daha verimli olur.
+Mip eşlemeleri öncelikle dokuların daha küçük sürümlerini önceden hesaplarak küçültme altındaki dokularda diğer ad yapıtlarını ortadan kaldırmak için kullanılır. Bu ek dokular özgün dokudan yaklaşık yüzde 33 daha fazla GPU belleği tüketse de, yüzey alanının çoğu GPU doku önbelleğine sığar ve içerikleri daha yüksek kullanım elde eder.
 
-3B sahneler için, her iki işleme performansı ve görüntü kalitesini arttıkları için bellek ek dokuları depolamak için kullanılabilir olduğunda MIP eşlemeleri önerilir.
+3B sahneler için, bellek ek dokuları depolamak için kullanılabilir olduğunda mip eşlemelerini öneririz çünkü bunlar hem işleme performansını hem de görüntü kalitesini artırır.
 
-Bu varyant önemli bir performans kazancı gösteriyorsa, MIP haritalarını etkinleştirmeden dokuları kullandığınızı ve bu nedenle doku önbelleğinden en iyi şekilde yer almadığını gösterir.
+Bu değişken önemli bir performans kazancı gösteriyorsa, mip eşlemelerini etkinleştirmeden dokuları kullanmakta olduğunu ve bu sayede doku önbelleğinden en iyi şekilde elde olmadığını gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
-MİP eşleme oluşturma, kaynak dokusu oluşturan her çağrıda zorlanır `ID3D11Device::CreateTexture2D` . Özellikle, geçirilen D3D11_TEXTURE2D_DESC nesne, `pDesc` değişmeyen bir gölgelendirici kaynağını açıkladığında, MIP-Map üretimi zorlanır.
+Mip eşlemesi oluşturma, kaynak doku oluşturan `ID3D11Device::CreateTexture2D` her çağrısına zorlar. Özellikle, içinde geçirilen nesne değişmeyen bir gölgelendirici D3D11_TEXTURE2D_DESC açık olduğunda mip eşlemesi oluşturma `pDesc` zorlar; yani:
 
-- BindFlags üyesi yalnızca D3D11_BIND_SHADER_RESOURCE bayrak kümesine sahiptir.
+- BindFlags üyesinin yalnızca D3D11_BIND_SHADER_RESOURCE ayarlanmıştır.
 
-- Kullanım üyesi D3D11_USAGE_DEFAULT ya da D3D11_USAGE_IMMUTABLE olarak ayarlanır.
+- Kullanım üyesi, D3D11_USAGE_DEFAULT veya D3D11_USAGE_IMMUTABLE.
 
-- CPUAccessFlags üyesi 0 olarak ayarlanır (CPU erişimi yok).
+- CPUAccessFlags üyesi 0 olarak ayarlanır (CPU erişimi yoktur).
 
-- SampleDesc üyesinin Count üyesi 1 olarak ayarlanmış (çok örnekli bir kenar yumuşatma (MSAA)).
+- SampleDesc üyesinin Sayı üyesi 1 olarak ayarlanmıştır (Çok Örnekli Anti-Aliasing (MSAA) yoktur).
 
-- MIP düzeyleri üyesi 1 olarak ayarlanır (varolan MIP-Map yok).
+- MipLevels üyesi 1 olarak ayarlanır (mevcut mip eşlemesi yoktur).
 
-  Uygulama tarafından ilk veriler sağlandığında, biçim BC1, BC2 veya BC3 olmadığı sürece doku biçimi D3D11_FORMAT_SUPPORT_MIP_AUTOGEN tarafından belirlendiği şekilde otomatik MIP eşleme üretimini desteklemelidir — Aksi takdirde doku değiştirilmez ve ilk veriler sağlandığında hiçbir MIP eşlemesi oluşturulmaz.
+  Uygulama tarafından ilk veriler sağlandıkça, biçim BC1, BC2 veya BC3 değilse doku biçiminin otomatik mip eşlemesi oluşturmasını (D3D11_FORMAT_SUPPORT_MIP_AUTOGEN tarafından belirlendiği şekilde) desteklemesi gerekir; aksi takdirde doku değiştirilmez ve ilk veriler sağlanmalıdır.
 
-  MIP haritaları bir doku için otomatik olarak oluşturulduysa, ' ye yapılan çağrılar, `ID3D11Device::CreateShaderResourceView` doku örnekleme sırasında MIP zincirini kullanmak üzere kayıttan yürütme sırasında değiştirilir.
+  Doku için mip eşlemeleri otomatik olarak oluşturulmuşsa, doku örnekleme sırasında mip zincirini kullanmak üzere kayıttan yürütme sırasında çağrıları `ID3D11Device::CreateShaderResourceView` değiştirilir.
 
 ## <a name="example"></a>Örnek
-**MİP eşleme oluşturma** değişkeni aşağıdaki gibi kod kullanılarak yeniden oluşturulabilir:
+**Mip-map Oluşturma** varyantı, aşağıdaki gibi bir kod kullanılarak yeniden üretılabilir:
 
 ```cpp
 D3D11_TEXTURE2D_DESC texture_description;
@@ -64,12 +64,12 @@ for (auto&& mip_level : initial_data)
 d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)
 ```
 
-Tam MIP zinciri içeren bir doku oluşturmak için `D3D11_TEXTURE2D_DESC::MipLevels` 0 olarak ayarlayın. Tam MIP zincirindeki MIP düzeylerinin sayısı Floor (log2 (n) + 1), burada n, dokunun en büyük boyutudur.
+Tam mip zincirine sahip bir doku oluşturmak için `D3D11_TEXTURE2D_DESC::MipLevels` 0 olarak ayarlayın. Tam mip zincirinde mip düzeylerinin sayısı floor(log2(n) + 1'tir; burada n, dokuda en büyük boyut olur.
 
-İçin ilk verileri sağladığınızda `CreateTexture2D` , her MIP düzeyi için bir D3D11_SUBRESOURCE_DATA nesnesi sağlamanız gerektiğini unutmayın.
+için ilk verileri sağlarken, her `CreateTexture2D` mip düzeyi için D3D11_SUBRESOURCE_DATA nesnesi sağlamanız gerektiğini unutmayın.
 
 > [!NOTE]
-> Otomatik olarak oluşturmak yerine kendi MIP düzeyi içeriklerinizi sağlamak istiyorsanız, MIP eşlenmiş dokuları destekleyen bir görüntü Düzenleyicisi kullanarak dokularınızı oluşturmanız ve ardından dosyayı yükleyip MIP düzeylerini uygulamasına iletmeniz gerekir `CreateTexture2D` .
+> Otomatik olarak oluşturmak yerine kendi mip düzeyi içeriğinizi sağlamak için, mip ile eşlenen dokuları destekleyen bir görüntü düzenleyicisi kullanarak dokularınızı oluşturmanız ve ardından dosyayı yükleyip mip düzeylerini 'ye geçmeniz `CreateTexture2D` gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Yarı/çeyrek doku boyutları varyantı](half-quarter-texture-dimensions-variant.md)
+[Yarı/Çeyrek Doku Boyutları Çeşidi](half-quarter-texture-dimensions-variant.md)

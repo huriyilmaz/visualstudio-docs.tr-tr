@@ -3,19 +3,19 @@ title: 16bpp Işleme hedefi biçim değişkeni | Microsoft Docs
 description: Piksel biçimini tüm işleme hedefleri ve geri arabellekler için DXGI_FORMAT_B5G6R5_UNORM olarak ayarlayarak 16 bit/piksel (BPP) işleme hedefi biçim türevini uygulayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d0f43e2b004272b6882ff4a19e62fa99c998e53
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96f202663b1b325f7a4ac86876abc94563a02fb2
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874632"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232875"
 ---
 # <a name="16-bpp-render-target-format-variant"></a>16 BPP Işleme hedefi biçim değişkeni
 Tüm işleme hedefleri ve geri arabellekler için piksel biçimini DXGI_FORMAT_B5G6R5_UNORM olarak ayarlar.

@@ -2,19 +2,19 @@
 description: Grafik tanılama 'nın uygulama içi bileşeninin programlı denetimi için bir arabirim temsil eder.
 title: VsgDbg sınıfı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6722263c-ccef-40c7-a0ae-87a863fbab00
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a4847e0d6c72d4de611edc47481477d2862a55
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2bb3a9009c38da483b0792b89c115c2e8e9908eb
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160466"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232459"
 ---
 # <a name="vsgdbg-class"></a>VsgDbg Sınıfı
 Grafik tanılama 'nın uygulama içi bileşeninin programlı denetimi için bir arabirim temsil eder.

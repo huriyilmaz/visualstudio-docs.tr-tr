@@ -1,8 +1,8 @@
 ---
-title: Visual Studio 2022 'de (Önizleme) yapılan yeniler
+title: Visual Studio 2022 ' deki yenilikler (önizleme)
 titleSuffix: ''
-description: Visual Studio 2022'nin önizleme Visual Studio öğrenin.
-ms.date: 07/14/2021
+description: Visual Studio 2022 ' nin önizleme sürümündeki yeni özellikler hakkında bilgi edinin.
+ms.date: 07/15/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -14,49 +14,49 @@ ms.technology: ''
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 613ae74a00ecfc9a8c9caf827fbdcd68ad07e3ad
-ms.sourcegitcommit: d0061f62c8543ff0db500972d9402a7f00e017c6
+ms.openlocfilehash: 7540a418bbe4e36c1fa01be715fa272282db9daa
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/15/2021
-ms.locfileid: "114205523"
+ms.locfileid: "114232901"
 ---
-# <a name="whats-new-in-visual-studio-2022-preview"></a>Visual Studio 2022 'de (Önizleme) yapılan yeniler
+# <a name="whats-new-in-visual-studio-2022-preview"></a>Visual Studio 2022 ' deki yenilikler (önizleme)
 
-**17.0 Preview 2 sürümü için güncelleştirildi.** Tüm [sürüm notlarına bakın |](/visualstudio/releases/2022/release-notes-preview/) Ürün [yol haritasını görüntüleme](/visualstudio/productinfo/vs-roadmap/)
+**17,0 Preview 2 sürümü için güncelleştirildi.** Bkz. [tam sürüm notları](/visualstudio/releases/2022/release-notes-preview/) | [Ürün yol haritasını](/visualstudio/productinfo/vs-roadmap/) görüntüle
 
 >[!div class="button"]
->[2022 Preview Visual Studio indirme](https://visualstudio.microsoft.com/vs/preview/vs2022/)
+>[Visual Studio 2022 Preview sürümünü indirin](https://visualstudio.microsoft.com/vs/preview/vs2022/)
 
-Bu Visual Studio, her zaman herhangi bir geliştirici, herhangi bir uygulama ve herhangi bir platform için kullanılabilen sınıfının en iyisi araçlara ve hizmetlere sahip olur. Yeni sürüm olan Visual Studio 2022'de önizleme sürümündeki yeni sürüm şu şekildedir!
+Visual Studio, her zaman geliştirici, herhangi bir uygulama ve herhangi bir platform için sunulan en iyi sınıf araçları ve hizmetleri elde edersiniz. Visual Studio ilk kez mi kullanıyorsunuz, yoksa yıllarca mi kullanıyorsunuz, şu anda önizleme aşamasında olan en yeni sürüm gibi bir çok şey vardır.
 
-## <a name="visual-studio-2022-is-64-bit"></a>Visual Studio 2022 64 bittir
+## <a name="visual-studio-2022-is-64-bit"></a>Visual Studio 2022, 64 bit
 
-Visual Studio 2022 Windows artık 64 bitlik bir uygulamadır. Bu, belleğin yetersiz kalmadan en büyük ve en karmaşık çözümleri bile aç, düzenle, çalıştır ve hata ayıkla. Daha fazla bilgi edinmek için Visual Studio [**2022 vision**](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/) blog gönderisi'ne bakın.
+Windows Visual Studio 2022 artık 64 bit bir uygulamadır. Bu, bellek tükenmeden en büyük ve en karmaşık çözümlerin bile açabilme, düzenleyebileceği, çalışabileceği ve hata ayıklamanıza yol açabilir. daha fazla bilgi edinmek için [**Visual Studio 2022 vision**](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/) blog gönderisine bakın.
 
-## <a name="intellicode-includes-whole-line-completion"></a>IntelliCode tam satır tamamlama içerir
+## <a name="intellicode-includes-whole-line-completion"></a>Intellicode tüm satır tamamlamayı içerir
 
-2022 Visual Studio de [IntelliCode](/visualstudio/intellicode/) özelliği artık aynı anda kodun tamamını otomatik olarak tamamlar. Daha fazla bilgi edinmek için Daha [**az tür yazın, IntelliCode tamamlamaları**](https://devblogs.microsoft.com/visualstudio/type-less-code-more-with-intellicode-completions/) ile daha fazla kod yazın blog gönderisi.
+Visual Studio 2022 ' de, [ıntellicode](/visualstudio/intellicode/) özelliği artık tek seferde tüm satıra kadar kodu otomatik olarak tamamlayabilir. Ayrıntılar için bkz. [**tür daha az, daha fazla kod, ıntellicode tamamiyle**](https://devblogs.microsoft.com/visualstudio/type-less-code-more-with-intellicode-completions/) tamamlandı blog gönderisi.
 
-## <a name="build-modern-apps-with-improved-tools"></a>Geliştirilmiş araçlarla modern uygulamalar oluşturma
+## <a name="build-modern-apps-with-improved-tools"></a>Geliştirilmiş araçlarla modern uygulamalar oluşturun
 
-Visual Studio 2022, daha iyi platformlar arası uygulama geliştirme araçları ve C++ derleme araçlarının en son sürümünü içerir. Ayrıca, uygulamanız çalışırken C++ Çalışırken Yeniden Yükleme .NET projelerini düzenleyebilirsiniz. Daha fazla bilgi için [ **bkz. Visual Studio 2022 Preview 2 çıktı!**](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-2-is-out/) blog gönderisi.
+Visual Studio 2022, daha iyi platformlar arası uygulama geliştirme araçları ve en son C++ derleme araçları sürümünü içerir. Ayrıca, uygulamanızın çalışırken C++ veya .NET projelerini düzenleyebilmeniz için, sık yeniden yükleme güncelleştiriyoruz. daha fazla bilgi için [ **Visual Studio 2022 Preview 2** ' ye bakın!](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-2-is-out/) blog gönderisi.
 
 ## <a name="whats-next"></a>Sırada ne var?
 
-2022'de planlamamız gerekenler hakkında daha Visual Studio ister misiniz? Ayrıntılar için [**Yol Haritası**](/visualstudio/productinfo/vs-roadmap/) sayfasına bakın.
+Visual Studio 2022 planlaması yaptığımız hakkında daha fazla bilgi edinmek mi istiyorsunuz? Ayrıntılar için [**yol haritası**](/visualstudio/productinfo/vs-roadmap/) sayfasına bakın.
 
 ## <a name="give-us-feedback"></a>Geri bildirimde bulunun
 
-Neden Visual Studio ekibine geri bildirim gönderebilirsiniz? Çünkü müşteri geri bildirimlerini ciddiye alıyoruz. Bu, yapacaklarının büyük bir fazlasını yapar.
+Visual Studio ekibine neden geri bildirim gönderilsin? Müşteri geri bildirimlerine önem veriyoruz. Yaptığımız kadar çok şey vardır.
 
-* Bu özelliği nasıl geliştirebiliriz konusunda bir öneride Visual Studio, Özellik Öneri aracını [kullanarak bunu yapabiliriz.](suggest-a-feature.md)
+* Visual Studio nasıl geliştirebileceğimizi gösteren bir öneride bulunmak isterseniz, [özellik öner](suggest-a-feature.md) aracını kullanarak bunu yapabilirsiniz.
 
-* Sorun bildirmenin yanıt verme Visual Studio kilitlenmesi veya başka bir performans sorunuyla karşımıza çıkarsanız Sorun Bildir aracını kullanarak yeniden verme adımlarını ve destek dosyalarını bizimle [kolayca paylaşabilirsiniz.](how-to-report-a-problem-with-visual-studio.md)
+* Visual Studio yanıt vermeyi, kilitlenmeleri veya diğer performans sorunlarını durdurduğu bir sorunla karşılaşırsanız, [sorun bildir](how-to-report-a-problem-with-visual-studio.md) aracını kullanarak yeniden üretme adımlarını ve destekleyici dosyaları bizimle paylaşabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio belge Visual Studio](whats-new-visual-studio-docs.md)
+* [Visual Studio docs 'taki yenilikler](whats-new-visual-studio-docs.md)
 * [Visual Studio 2019 sürüm notları](/visualstudio/releases/2019/release-notes/)
-* [Microsoft Build konferansı](https://www.microsoft.com/build)
+* [Microsoft derleme Konferansı](https://www.microsoft.com/build)
 * [Microsoft Ignite konferansı](https://www.microsoft.com/ignite)

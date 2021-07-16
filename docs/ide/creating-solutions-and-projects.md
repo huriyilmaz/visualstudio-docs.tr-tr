@@ -6,7 +6,6 @@ ms.date: 06/14/2021
 ms.topic: how-to
 f1_keywords:
 - vs.openprojectfromweb
-- VS.ToolsOptionsPages.Projects.General
 helpviewer_keywords:
 - solutions [Visual Studio], creating
 - projects [Visual Studio], creating
@@ -15,12 +14,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a76051c2be5bf6f260c953ded3d1e10ecb676ea9
-ms.sourcegitcommit: d0061f62c8543ff0db500972d9402a7f00e017c6
+ms.openlocfilehash: f05a940787c2ab601b0b29db8ec5004c621a16b8
+ms.sourcegitcommit: d856c46d78638be609e7045621ed1bd7521a6dcc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114201812"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "114283852"
 ---
 # <a name="create-work-with-and-delete-visual-studio-projects-and-solutions"></a>Projeleri ve çözümleri oluşturma, Visual Studio ve silme
 

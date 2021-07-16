@@ -1,35 +1,35 @@
 ---
-title: 1x1 Görünüm penceresi boyut varyantı | Microsoft Docs
-description: Tüm işleme hedeflerindeki Görünüm penceresi boyutlarını 1x1 piksele düşürmek için 1x1 Görünüm penceresi boyut türevini uygulayın.
+title: 1x1 GörünümPort Boyutu Varyantı | Microsoft Docs
+description: Tüm işleme hedeflerine yönelik görünüm açısı boyutlarını 1x1 piksele düşürmek için 1x1 görünüm açısı boyut çeşidini uygulama.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3dbc3247-00f5-4644-8ff9-72e9febcf09a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dc96decdc8e61e1d8c1f5b60195d7644222dbd51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb8d00d68a61fd2e97740ee46f92433ea34abb65
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874606"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232849"
 ---
 # <a name="1x1-viewport-size-variant"></a>1x1 Görünüm Penceresi Boyut Çeşidi
-Tüm işleme hedeflerindeki Görünüm penceresi boyutunu 1x1 piksele düşürür.
+Tüm işleme hedeflerine yönelik görünüm açısı boyutlarını 1x1 piksele azaltır.
 
 ## <a name="interpretation"></a>Yorum
- Daha küçük bir görünüm penceresi, gölgelendirmek istediğiniz piksel sayısını azaltır. Ancak, daha küçük bir görünüm penceresi, işlemek istediğiniz köşe sayısını azaltmaz. Görünüm penceresi boyutlarını 1x1 piksel olarak ayarlamak, uygulamanızdan piksel gölgelendirmesini etkin bir şekilde ortadan kaldırır.
+ Daha küçük bir görünüm açısı, gölgelendirmek zorunda olduğunuz piksel sayısını azaltır. Ancak daha küçük bir görünüm noktası, işlemesi gereken köşe sayısını azaltmaz. Görünüm açısı boyutlarının 1x1 piksel olarak değiştirilmesi, uygulamanıza piksel gölgelendirmeyi etkili bir şekilde ortadan kaldırmanızı sağlar.
 
- Bu çeşit büyük bir performans kazancı gösteriyorsa, uygulamanızın çok fazla sayıda dolgusu kullandığını gösteriyor olabilir. Ayrıca, çözümlemenizin hedef platform için çok yüksek olması veya uygulamanız daha sonra üzerine yazılmış ve *fazla çizim* olarak da bilinen önemli zaman gölgeleme piksellerini harcayabilir. Daha küçük bir çerçeve arabelleği veya fazla çizim miktarını azaltmak, uygulamanızın performansını iyileştirir.
+ Bu değişken büyük bir performans kazancı gösteriyorsa, bu durum, uygulamanın çok fazla dolgu oranı tükettiğine işaret ediyor olabilir. Buna ek olarak, çözünürlüğünü hedef platform için fazla yüksek olabilir veya uygulamanız daha sonra üzerine yazılan pikselleri gölgelendirmek için önemli ölçüde zaman harcayabilir ve bunun üzerine *yazılabilir.* Daha küçük bir çerçeve arabelleği veya fazla çizim miktarını azaltmak, uygulamanın performansını artırır.
 
 ## <a name="remarks"></a>Açıklamalar
- Görünüm penceresi boyutları, veya için her çağrıdan sonra 1x1 piksel olarak `ID3D11DeviceContext::OMSetRenderTargets` sıfırlanır `ID3D11DeviceContext::RSSetViewports` .
+ veya için yapılan her çağrıdan sonra görünüm açısı boyutları 1x1 piksele `ID3D11DeviceContext::OMSetRenderTargets` `ID3D11DeviceContext::RSSetViewports` sıfırlanır.
 
 ## <a name="example"></a>Örnek
- Bu varyant aşağıdaki kodla yeniden oluşturulabilir:
+ Bu değişken aşağıdaki kodla yeniden üretılabilir:
 
 ```cpp
 D3D11_VIEWPORT viewport;

@@ -1,24 +1,24 @@
 ---
 title: ToggleHUD | Microsoft Docs
-description: Uygulama çalıştığında grafik tanılama baş ekran (HUD) görüntülenip görüntülenmeyeceğini değiştirmek için VsgDbg öğesinin ToggleHUD () yöntemini kullanın.
+description: Uygulama çalıştırıldıken grafik tanılama baş yukarı görüntüleme (HUD) görüntülendiğinden geçiş yapmak için VsgDbg'nin ToggleHUD() yöntemini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7261e01d-3c72-46ce-9fb3-5f33b2ddb901
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cde6549551156f3655f313c23dc66659d2830cf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 809b33fe3339da56507d09fcf15ec51481b751e0
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905055"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232498"
 ---
 # <a name="togglehud"></a>ToggleHUD
-Grafik tanılama *HUD* (baş ekran görüntüsü) kaplamayı açık veya kapalı olarak değiştirir.
+Grafik tanılama *HUD'leri* (Baş Yukarı Görüntü) katmanlarını açıp kapatarak geçişler.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,6 +27,6 @@ void ToggleHUD();
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Grafik tanılama HUD, grafik tanılama altında çalışan uygulamanın sol üst köşesinde görüntülenir. Uygulama ve grafik bilgileri yakalama hakkında çalışma zamanı bilgilerini ve [AddMessage](addmessage.md) üye işlevi çağırarak eklenen iletileri görüntüler.
+ Grafik tanılama HUD'i, grafik tanılama altında çalışan uygulamanın sol üst köşesinde görüntülenir. Uygulama ve grafik bilgileri yakalama hakkında çalışma zamanı bilgilerini ve [AddMessage](addmessage.md) üye işlevi çağrılarak eklenen iletileri görüntüler.
 
- HUD 'yi değiştirmek için grafik bilgilerini etkin bir şekilde yakalamanıza gerek kalmaz; Yani, sınıfın bir örneği aracılığıyla değiştirilebilir `VsgDbg` , ancak [Init](init.md) üye işlevinin ilk çağrılması gerekmez.
+ HUD'yi iki durumlu yapmak için grafik bilgilerini etkin bir şekilde yakalamaya gerek yok; diğer bir ifade, sınıfın bir örneği aracılığıyla geçişli olabilir `VsgDbg` ancak [önce Init](init.md) üye işlevinin çağrılmak zorunda değildir.

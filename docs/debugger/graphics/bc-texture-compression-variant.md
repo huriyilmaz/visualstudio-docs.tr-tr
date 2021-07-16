@@ -3,19 +3,19 @@ title: BC doku sıkıştırma varyantı | Microsoft Docs
 description: B8G8R8X8, B8G8R8A8 veya R8G8B8A8 varyasyonuna sahip bir piksel biçimine sahip dokuların blok sıkıştırmaya (BC) izin vermek için BC doku sıkıştırma türevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 144065c5ee04c75582307440b4cee6242b48bc01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c1a8699980599a590b6f6e58e14ea504f52db609
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874619"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232758"
 ---
 # <a name="bc-texture-compression-variant"></a>BC Doku Sıkıştırma Çeşidi
 B8G8R8X8, B8G8R8A8 veya R8G8B8A8 çeşitlemesi olan bir piksel biçimi olan dokuların blok sıkıştırmasını sunar.

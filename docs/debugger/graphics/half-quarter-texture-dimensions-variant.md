@@ -3,19 +3,19 @@ title: Doku boyutları türevini Half-Quarter | Microsoft Docs
 description: Küçük dokular büyük performans kazancı gösteriyorsa, GPU doku önbelleğinin bellek bant genişliği baskısı veya verimsiz kullanımı önerilir. Doku boyutlarını daha küçük hale getirmeyi düşünün.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 282e9bbb-51aa-4cd0-8e5c-0901268c29e5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 87add3c771fdc79e4b41658a68ef7e77e2c18b21
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ddd446e588af438e1a4d950e9407392e74881f90
+ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888530"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114232407"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Yarı/Çeyrek Doku Boyutları Çeşidi
 İşleme hedefi olmayan dokuların doku boyutlarını azaltır.
