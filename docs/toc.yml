@@ -63,7 +63,7 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Bir kurumda dağıtma
           items:
-            - name: Yönetici güncelleştirmeleri uygulanıyor
+            - name: Yönetici güncelleştirmelerini uygulama
               href: install/applying-administrator-updates.md
             - name: Yönetici güncelleştirmelerini etkinleştirme
               href: install/enabling-administrator-updates.md
@@ -168,7 +168,7 @@
   items:
     - name: C++ >>
       href: /cpp/get-started/tutorial-console-cpp
-    - name: C#   >>
+    - name: C#  >>
       href: get-started/csharp/
     - name: Visual Basic  >>
       href: get-started/visual-basic/
@@ -176,7 +176,7 @@
       href: javascript/
     - name: Python  >>
       href: python/
-    - name: 'F #   >>'
+    - name: F#  >>
       href: /dotnet/fsharp/
 - name: Geliştirme
   items:
@@ -194,13 +194,13 @@
           href: ide/create-new-project.md
         - name: Çözüm ve projelerle çalışma
           href: ide/creating-solutions-and-projects.md
-        - name: Visual Studio 2017 ' de depoyu bir proje açma
+        - name: Visual Studio 2017'de bir repodan proje açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
-        - name: Visual Studio 2019 ' de depoyu bir proje açma
+        - name: Visual Studio 2019'da bir repodan proje açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: 'Projeleri taşıma, geçirme ve yükseltme'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-        - name: Çözüm Gezgini araç penceresini kullanın
+        - name: Çözüm Gezgini aracını kullanma
           href: ide/use-solution-explorer.md
         - name: Proje ve çözüm özelliklerini yönetme
           href: ide/managing-project-and-solution-properties.md
@@ -1112,8 +1112,6 @@
                   href: ide/reference/import-and-export-settings-environment-options-dialog-box.md
                 - name: Uluslararası Ayarlar
                   href: ide/reference/international-settings-environment-options-dialog-box.md
-                - name: Klavye
-                  href: ide/reference/keyboard-environment-options-dialog-box.md
                 - name: Önizleme Özellikleri
                   href: ide/reference/environment-preview-features-options.md
                 - name: Bildirimler
@@ -1449,16 +1447,16 @@
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: Destek yaşam döngüsü ve bakım
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Müşteri Deneyimini Geliştirme
+    - name: Müşteri deneyimini geliştirme
       items:
         - name: Program hakkında
           displayName: Customer Experience Improvement Program
           href: ide/visual-studio-experience-improvement-program.md
         - name: Sistem tarafından oluşturulan günlükler
           href: ide/diagnostic-data-collection.md
-    - name: Visual Studio'de bağlı deneyimler
+    - name: Visual Studio bağlı deneyimler
       href: ide/reference/connected-experiences.md
-    - name: IDE hatalarını giderme
+    - name: IDE hatalarında sorun giderme
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Geri bildirim gönder
   items:
