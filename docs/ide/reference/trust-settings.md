@@ -4,7 +4,7 @@ description: Dosyaları ve klasörleri güvenli tutmak için dosya ve klasörler
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.date: 07/22/2021
+ms.date: 07/21/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.PathTrustOptions
@@ -14,20 +14,18 @@ helpviewer_keywords:
 - mark of the web
 - trusted files
 - trusted folders
-ms.openlocfilehash: f8ac3b416e017796eced0027357cacbc6b06830c
-ms.sourcegitcommit: a07cdb3d7ec7040025d23e81b53ebe41bfafd592
+ms.openlocfilehash: 790e513216e269deca63d4cc9930b2d4cae17565
+ms.sourcegitcommit: d5c038792da2c86436750380633ee80c39e4c4ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/23/2021
-ms.locfileid: "114654127"
+ms.locfileid: "114597039"
 ---
 # <a name="configure-trust-settings-for-files-and-folders"></a>Dosya ve klasörler için güven ayarlarını yapılandırma
 
 ::: moniker range=">=vs-2022"
 
-Visual Studio 2022'de (Önizleme 2) dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilmeyen kodun IDE'de açılmasına her zaman bir uyarı göstermek için Güven Ayarlar işlevselliğini yeniden gözden geçirdik.
-
-:::image type="content" source="media/vs-2022/trusted-settings-warning-message.png" alt-text="Güven uyarı Ayarlar ekran görüntüsü":::
+Visual Studio 2022 'de (Önizleme 2) dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilmeyen kod IDE'de açılmasına yakın olduğunda bir uyarı göstermek için Güven Ayarlar işlevselliğini yeniden gözden geçirdik. Daha fazla bilgi edinmek için Visual Studio [2022 Preview](/visualstudio/releases/2022/release-notes-preview#trustedlocations-170P2)sürüm notlarının "Güvenilen Konumlar" bölümüne bakın.
 
 Özelliği güncelleştirmeye devam ettiyken buraya daha fazla bilgi ekley edeceğiz. Bizi izlemeye devam edin!
 
@@ -35,13 +33,13 @@ Visual Studio 2022'de (Önizleme 2) dosyalarda, klasörlerde, projelerde ve çö
 
 ::: moniker range="<=vs-2019"
 
-Visual Studio Web İşareti olan projeleri açmadan önce [kullanıcı onayı isteminde bulundurabilirsiniz.](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85)) Ek güvenlik için, web özniteliğinin Visual Studio veya güvenilir olarak atanmamış herhangi bir dosyayı veya klasörü açmadan önce kullanıcı onayı isteminde bulunacaktır. Dosya ve klasör denetimleri varsayılan olarak devre dışıdır.
+Visual Studio Web İşareti olan projeleri açmadan önce kullanıcı [onayı isteminde bulundurabilirsiniz.](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85)) Daha fazla güvenlik için, web Visual Studio işaretine sahip veya güvenilir olarak atanmamış herhangi bir dosyayı veya klasörü açmadan önce kullanıcı onayı isteminde *bulunacaktır.* Dosya ve klasör denetimleri varsayılan olarak devre dışıdır.
 
 > [!WARNING]
 > Yine de dosyayı, klasörü veya çözümü onaylamadan önce güvenilir bir kişi veya güvenilir bir konumdan geldiğinden emin olun.
 
 > [!NOTE]
-> Visual Studio 2022 'de (Önizleme) dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilmeyen kodun IDE'de açılmasına her zaman yönelik bir uyarı göstermek için Güven Ayarlar işlevselliğini yeniden gözden geçirdik. Daha fazla bilgi edinmek için Visual Studio [2022 Preview](/visualstudio/releases/2022/release-notes-preview#trustedlocations-170P2)sürüm notlarının "Güvenilen Konumlar" bölümüne bakın.
+> Visual Studio 2022 'de (Önizleme 2) dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilmeyen kod IDE'de açılmasına yakın olduğunda bir uyarı göstermek için Güven Ayarlar işlevselliğini yeniden gözden geçirdik. Daha fazla bilgi edinmek için Visual Studio [2022 Preview](/visualstudio/releases/2022/release-notes-preview#trustedlocations-170P2)sürüm notlarının "Güvenilen Konumlar" bölümüne bakın.
 
 ## <a name="configure-trust-settings"></a>Güven ayarlarını yapılandırma
 
@@ -49,11 +47,11 @@ Güven ayarlarını değiştirmek için şu adımları izleyin:
 
 1. Araç **Seçenekleri** Güven Ayarlar açın ve sağ bölmede >  >  **Ayarlar** Yapılandır bağlantısını seçin.
 
-2. Dosya ve klasörler için istediğiniz denetim düzeyini seçin. Her biri için farklı denetimler olabilir. Seçenekler şunlardır:
+2. Dosyalar ve klasörler için istediğiniz denetim düzeyini seçin. Her biri için farklı denetimler olabilir. Seçenekler şunlardır:
 
    * **Doğrulama yok:** Visual Studio denetim gerçekleştirmez.
 
-   * **Web özniteliğinin işaretini doğrulayın:** Dosya veya klasörde web özniteliğinin işareti varsa, Visual Studio ve açma izni ister.
+   * **Web özniteliğinin işaretini doğrulayın:** Dosya veya klasör web özniteliğinin işaretine sahipse, Visual Studio ve açma izni ister.
 
    * **Yolun güvenilir olduğunu doğrulama:** Dosya veya klasör yolu  Güvenilen Yollar listesinin parçası değilse, Visual Studio izin ister ve açma izni ister.
 
