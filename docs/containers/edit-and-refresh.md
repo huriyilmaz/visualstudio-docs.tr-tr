@@ -7,21 +7,21 @@ manager: jmartens
 ms.assetid: 480e3062-aae7-48ef-9701-e4f9ea041382
 ms.topic: how-to
 ms.workload: multiple
-ms.date: 07/25/2019
+ms.date: 03/08/2021
 ms.technology: vs-azure
-ms.openlocfilehash: 8fb821acb48dd05aa09723fe5c6c254e7d1ca648
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 2f2b5c0ff9b6a78f4917a517c06f3ce96ea7c1d7
+ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112306390"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114592042"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Yerel Docker kapsayıcısı içinde uygulamalarda hata ayıklama
 
 Visual Studio Docker kapsayıcıları geliştirmenin ve yerel olarak doğrulamanın tutarlı bir yolunu sağlar.
 Docker'ın yüklü olduğu yerel Windows masaüstünüzde çalışan Linux veya Windows kapsayıcılarında uygulamalarınızı çalıştırabilir ve hata ayıklaması yapmak için her kod değişikliğinde kapsayıcıyı yeniden başlatmanız gerekmemektedir.
 
-Bu makalede, yerel bir Docker Visual Studio uygulama başlatmak, değişiklikler yapmak ve ardından değişiklikleri görmek için tarayıcıyı yenilemek için Visual Studio'nin nasıl kullanılası açıklanmıştır. Bu makalede ayrıca kapsayıcılı uygulamalar için hata ayıklama için kesme noktaları ayarlama da açıklanmıştır. Desteklenen proje türleri, .NET Framework .NET Core web ve konsol uygulamalarını içerir. Bu makalede, ASP.NET Core web uygulamaları ve .NET Framework uygulamaları kullan kullanılarız.
+Bu makalede, yerel bir Docker kapsayıcısında Visual Studio başlatmak, değişiklikler yapmak ve ardından değişiklikleri görmek için tarayıcıyı yenilemek için Visual Studio'nin nasıl kullanabileceğiniz açıklanmıştır. Bu makalede ayrıca kapsayıcılı uygulamalar için hata ayıklama için kesme noktaları ayarlama da açıklanmıştır. Desteklenen proje türleri, .NET Framework .NET Core web ve konsol uygulamalarını içerir. Bu makalede, web uygulamalarını ASP.NET Core konsol uygulamalarını .NET Framework kullanılarız.
 
 Desteklenen türde bir projeniz zaten varsa, Visual Studio dockerfile oluşturabilir ve projenizi kapsayıcıda çalıştıracak şekilde yapılandırabilirsiniz. Bkz. [Kapsayıcı Araçları Visual Studio.](overview.md)
 
@@ -43,11 +43,11 @@ Yerel bir Docker kapsayıcısı içinde uygulamaların hatasını ayıklamak iç
 
 ::: moniker range="vs-2022"
 
-* Visual Studio Geliştirme iş yükünün yüklü olduğu [2022 Preview]() sürümü
+* [Visual Studio Geliştirme iş yükünün yüklü olduğu 2022 Preview]() sürümü
 
 ::: moniker-end
 
-Docker kapsayıcılarını yerel olarak çalıştırmak için yerel bir Docker istemciniz olması gerekir. Hyper-V [Docker for Windows](https://www.docker.com/get-docker)ve sanal işlem gerektiren Windows 10.
+Docker kapsayıcılarını yerel olarak çalıştırmak için yerel bir Docker istemciniz olması gerekir. Hyper-V kullanan ve Windows için [Docker'ı](https://www.docker.com/get-docker)Windows 10.
 
 Docker kapsayıcıları, .NET Framework .NET Core projeleri için kullanılabilir. Şimdi iki örnekle bakalım. İlk olarak bir .NET Core web uygulamasına göz atabilirsiniz. Ardından bir konsol uygulamasına .NET Framework bakabilirsiniz.
 
@@ -64,9 +64,9 @@ Bir projeniz varsa ve genel bakış bölümünde açıklandığı gibi Docker de
 
 ### <a name="edit-your-code-and-refresh"></a>Kodunuzu düzenleme ve yenileme
 
-Değişiklikleri hızla tekrar etmek için kapsayıcıda uygulama başlatabilirsiniz. Ardından değişiklik yapmaya devam edecek ve bu değişiklikleri diğer IIS Express.
+Değişiklikleri hızla tekrar etmek için kapsayıcıda uygulama başlatabilirsiniz. Ardından değişiklik yapmaya devam edecek ve bu değişiklikleri dosyalarda olduğu gibi IIS Express.
 
-1. Docker'ın, kullanmakta olduğu kapsayıcı türünü (Linux veya Windows) kullanmak üzere ayarlanmış olduğundan emin olun. Görev çubuğunda Docker simgesine sağ tıklayın ve Linux kapsayıcılara geç **veya Windows** kapsayıcılara uygun şekilde **geçiş yap'ı** seçin.
+1. Docker'ın, kullanmakta olduğu kapsayıcı türünü (Linux veya Windows) kullanmak üzere ayarlanmış olduğundan emin olun. Görev çubuğunda Docker simgesine sağ tıklayın ve Linux kapsayıcılara geç veya **Uygun** şekilde **Windows'yi** seçin.
 
 1. (Yalnızca .NET Core 3 ve sonrası) Kodunuzu düzenleme ve bu bölümde açıklandığı gibi çalışan siteyi yenileme, .NET Core'daki varsayılan şablonlarda >= 3.0'da etkinleştirilmez. Etkinleştirmek için [Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/)NuGet paketini ekleyin. *Startup.cs* içinde, yönteminde koda uzantı `IMvcBuilder.AddRazorRuntimeCompilation` yöntemine bir çağrı `ConfigureServices` ekleyin. Bunun yalnızca HATA AYıKLAMA modunda etkinleştirilmesi gerekir, bu nedenle aşağıdaki gibi kodlayın:
 
@@ -98,21 +98,21 @@ Değişiklikleri hızla tekrar etmek için kapsayıcıda uygulama başlatabilirs
     }
     ```
 
-   Daha fazla bilgi için bkz. [ASP.NET Core'da Razor dosya derlemesi.](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1&preserve-view=true)
+   Daha fazla bilgi için, [bkz. razor file compilation in ASP.NET Core](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1&preserve-view=true).
 
 1. Çözüm **Yapılandırması'nın Hata** **Ayıklama olarak ayarlayın.** Ardından **Ctrl** + **F5 tuşlarına** basarak Docker görüntülerinizi yerel olarak çalıştırın.
 
     Kapsayıcı görüntüsü bir Docker kapsayıcısında yerleşik olarak Visual Studio web uygulamasını varsayılan tarayıcınızdan başlatıyor.
 
-1. Dizin *sayfasına* gidin. Bu sayfada değişiklikler yapacak.
-1. Visual Studio *ve Index.cshtml dosyasını açın.*
+1. Dizin *sayfasına* gidin. Bu sayfada değişiklik yapacak.
+1. Visual Studio *index.cshtml dosyasını açın.*
 1. Aşağıdaki HTML içeriğini dosyanın sonuna ekleyin ve değişiklikleri kaydedin.
 
     ```html
     <h1>Hello from a Docker container!</h1>
     ```
 
-1. Çıkış penceresinde.NET derlemesi tamamlandığında ve aşağıdaki satırları gördüğünüzde tarayıcınıza geri dönüp sayfayı yenileyin:
+1. Çıkış penceresinde, .NET derlemesi tamamlandığında ve aşağıdaki satırları gördüğünüzde tarayıcınıza geri dönüp sayfayı yenileyin:
 
    ```output
    Now listening on: http://*:80
@@ -140,10 +140,10 @@ Değişiklikler genellikle daha fazla inceleme gerektirir. Bu görev için uygul
 
 ## <a name="create-a-net-framework-console-app&quot;></a>.NET Framework konsol uygulaması oluşturma
 
-Konsol uygulaması .NET Framework, düzenleme olmadan Docker desteği ekleme seçeneği desteklenmiyor. Yalnızca tek bir Docker projesi kullanıyor olsa bile aşağıdaki yordamı kullanmaya devam edin.
+Konsol uygulaması .NET Framework kullanarak Düzenleme olmadan Docker desteği ekleme seçeneği desteklenmiyor. Yalnızca tek bir Docker projesi kullanıyor olsa bile aşağıdaki yordamı kullanmaya devam edin.
 
-1. Konsol uygulaması .NET Framework yeni bir uygulama oluşturun.
-1. Bu Çözüm Gezgini proje düğümüne sağ tıklayın ve Kapsayıcı Düzenleme **Desteği**  >  **Ekle'yi seçin.**  Görüntülenen iletişim kutusunda, **Docker Compose.** Projenize bir Dockerfile eklenir ve ilişkili destek Docker Compose bir proje eklenir.
+1. Yeni bir .NET Framework Konsol uygulaması projesi oluşturun.
+1. Bu Çözüm Gezgini proje düğümüne sağ tıklayın ve Kapsayıcı Düzenleme **Desteği**  >  **Ekle'yi seçin.**  Görüntülenen iletişim kutusunda, öğesini **seçin** Docker Compose. Projenize bir Dockerfile eklenir ve ilişkili destek Docker Compose bir proje eklenir.
 
 ### <a name=&quot;debug-with-breakpoints&quot;></a>Kesme noktalarıyla hata ayıklama
 
@@ -168,15 +168,15 @@ Kapsayıcınızı el ile değiştirdikten sonra temiz bir kapsayıcı görüntü
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-[Docker geliştirmeyle ilgili Visual Studio öğrenin.](troubleshooting-docker-errors.md)
+[Docker geliştirmesi ile ilgili Visual Studio gidermeyi öğrenin.](troubleshooting-docker-errors.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kapsayıcılı uygulamalar oluşturma [hakkında daha fazla Visual Studio bilgi edinin.](container-build.md)
+Kapsayıcılı uygulamalar oluşturma [hakkında Visual Studio daha fazla bilgi edinin.](container-build.md)
 
 ## <a name="more-about-docker-with-visual-studio-windows-and-azure"></a>Visual Studio, Windows ve Azure ile Docker hakkında daha fazla bilgi
 
 * Visual Studio [ile kapsayıcı geliştirme hakkında daha fazla bilgi Visual Studio.](./index.yml)
-* Bir Docker kapsayıcısı derlemek ve dağıtmak için bkz. [Azure Pipelines.](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker).
-* Windows Server ve Nano Server makaleleri dizini için bkz. [Windows kapsayıcı bilgileri.](/virtualization/windowscontainers/)
+* Docker kapsayıcısı derlemek ve dağıtmak için bkz. [docker tümleştirmesi Azure Pipelines.](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.docker)
+* Windows Server ve Nano Sunucu makalelerinin dizini için [bkz. Windows bilgileri.](/virtualization/windowscontainers/)
 * Hakkında bilgi [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) ve Azure Kubernetes Service [gözden geçirme.](/azure/aks)

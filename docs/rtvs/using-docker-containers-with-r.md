@@ -1,7 +1,8 @@
 ---
 title: R ve Docker Kapsayıcıları
-description: Visual Studio ile R için Docker kapsayıcılarını ayarlama ve bunlara bağlanma.
+description: R için Docker kapsayıcılarını ayarlama ve Visual Studio ile bunlara bağlanma.
 ms.date: 12/04/2017
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
@@ -9,22 +10,22 @@ ms.reviewer: karthiknadig
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 3aefba3880443269dbdb1c933e2c12b2f8001469
-ms.sourcegitcommit: fc05a763b59e212c86350d117a1900a1f2686ec8
+ms.openlocfilehash: ddb09cce41bf0dcd9e8e29ec5f25d43f450a4eb8
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2021
-ms.locfileid: "111551286"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114679700"
 ---
-# <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları ile Docker Kapsayıcıları Kullanma
+# <a name="use-docker-containers-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları ile docker kapsayıcıları kullanma
 
-[Docker for Windows](https://www.docker.com/docker-windows)yüklemesiyle birlikte Visual Studio için R araçları (rtvs) sürüm 1.3 +, Docker kapsayıcılarıyla çalışmayı destekler.
+[Docker for Windows](https://www.docker.com/docker-windows)yüklemesiyle birlikte Visual Studio için R Araçları (rtvs) sürüm 1.3 +, docker kapsayıcılarıyla çalışmayı destekler.
 
 ## <a name="create-a-container"></a>Kapsayıcı oluşturma
 
-1. **Çalışma alanları** penceresinin sağ köşesindeki **kapsayıcılar** düğmesini seçin (**R araçları**  >  **Windows**  >  **çalışma alanları**). Bu pencere, Docker for Windows yüklü değilse ve indirme için bir bağlantı sağlıyorsa size bildirir. Docker 'ı yüklemek için bilgisayarın yeniden başlatılması gerekebilir.
+1. **çalışma alanları** penceresinin sağ köşesindeki **kapsayıcılar** düğmesini seçin (**R araçları**  >  **Windows**  >  **çalışma alanları**). bu pencere, Docker for Windows yüklü değilse ve indirme için bir bağlantı sağlıyorsa size bildirir. Docker 'ı yüklemek için bilgisayarın yeniden başlatılması gerekebilir.
 
-    ![Kapsayıcılar komutuyla Visual Studio için R Araçları (VS2017) içindeki çalışma alanları penceresi](media/container-workspaces-window.png)
+    ![kapsayıcılar komutuyla Visual Studio için R Araçları (VS2017) içindeki çalışma alanları penceresi](media/container-workspaces-window.png)
 
 1. **Kapsayıcılar** penceresinde **Oluştur**' u seçin.
 
@@ -34,11 +35,11 @@ ms.locfileid: "111551286"
 
     ![Kapsayıcı oluştururken kapsayıcı adı ve kimlik bilgilerini girme](media/containers-window-create-fill.png)
 
-1. RTVS 'nin görüntüyü oluşturması biraz zaman alabilir. Visual Studio 'daki **Çıkış** penceresinde ilerleme durumu gösterilir, ancak uzun görüntü İndirmeleri sırasında çok fazla gerçekleşmiyor gibi görünebilir; hasta olacak şekilde hazırlıklı olun. Görüntü oluşturulduktan sonra RTVS kapsayıcıyı başlatır ve **kapsayıcı** penceresinde görünür. Sağ taraftaki denetim kapsayıcıyı durdurur, kaldırır veya yeniden başlatır.
+1. RTVS 'nin görüntüyü oluşturması biraz zaman alabilir. Visual Studio 'daki **çıkış** penceresinde ilerleme durumu gösterilir, ancak uzun görüntü indirmeleri sırasında çok fazla gerçekleşmeyebilir; hasta olacak şekilde hazırlıklı olun. Görüntü oluşturulduktan sonra RTVS kapsayıcıyı başlatır ve **kapsayıcı** penceresinde görünür. Sağ taraftaki denetim kapsayıcıyı durdurur, kaldırır veya yeniden başlatır.
 
     ![Tamamlanmış kapsayıcıyı gösteren kapsayıcılar penceresi](media/containers-window-created.png)
 
-## <a name="connect-to-a-container"></a>Bir kapsayıcıya bağlanma
+## <a name="connect-to-a-container"></a>bir kapsayıcıya Bağlan
 
 1. **Çalışma alanları** penceresinin **yerel olarak çalışan kapsayıcılar** bölümünde, bağlantı noktası 5444 ' de rtvs Daemon çalıştıran kapsayıcılar görüntülenir. (Arka plan programının nasıl yapılandırıldığına ilişkin ayrıntılar için bkz. [uzak Linux için R Server](setting-up-remote-r-service-on-linux.md) .)
 

@@ -1,7 +1,8 @@
 ---
 title: R kodu
-description: Kter seçenekleri de dahil olmak üzere R için Visual Studio 'nun derleme desteğiyle çalışma.
+description: kter seçenekleri de dahil olmak üzere R için Visual Studio derleme desteğiyle çalışma.
 ms.date: 07/02/2018
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
 - vs.toolsoptionspages.text_editor.r.lint
@@ -10,18 +11,18 @@ ms.author: kraigb
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 1c32bffbd25a39ff2053dea22930365860ed04a7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ec955d6c105c1381d7f576a80b136eb3a54adff
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873664"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114680140"
 ---
-# <a name="lint-r-code-in-visual-studio"></a>Visual Studio 'da LINT R kodu
+# <a name="lint-r-code-in-visual-studio"></a>Visual Studio LINT R kodu
 
 Bir şifre, olası hataları, biçimlendirme sorunlarını ve sursuz boşluk gibi diğer kod gürültülerini ortaya çıkarmak için kodu analiz eder. Bir lter kullanılması, tanımlayıcıların nasıl adlandırıldığı gibi belirli kodlama kurallarının da sağlanmasına yardımcı olur. Bu tür kurallar takımlar ve diğer işbirliği durumları içinde faydalıdır.
 
-Visual Studio için R Araçları (RTVS), bu makalede açıklanan çeşitli seçeneklerle denetlenen, R için yerleşik bir yerleşik olarak sunulur. Bu seçenekler **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **R**  >  **Lint**' te bulunur.
+Visual Studio için R Araçları (rtvs), bu makalede açıklanan çeşitli seçeneklerle denetlenen, R için yerleşik bir yerleşik olarak sunulur. Bu seçenekler **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **R**  >  **Lint**' te bulunur.
 
 LINT varsayılan olarak devre dışıdır. Lint 'i etkinleştirmek için, **Tüm**  >  **Enable Lint** seçeneğini **true** olarak ayarlayın.
 
@@ -59,7 +60,7 @@ Hepsi varsayılan olarak **true** olarak ayarlanan bu seçenekler, her birinin b
 
 | Seçenek | Varsayılan değer | LINT efekti |
 | --- | --- | --- |
-| **Çoklu** | **True** | Aynı satırda birden çok deyim olduğunu tanımlar. |
+| **Birden çok** | **True** | Aynı satırda birden çok deyim olduğunu tanımlar. |
 | **Noktalı virgülle** | **True** | Noktalı virgüllerle kullanımları tanımlar. |
 
 ## <a name="text-group"></a>Metin grubu

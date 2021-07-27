@@ -1,0 +1,79 @@
+### YamlMime:FAQ
+metadata:
+  title: Sık Sorulan Sorular
+  description: Devinit aracı hakkında sık sorulan sorular.
+  ms.date: 08/28/2020
+  ms.topic: reference
+  author: andysterland
+  ms.author: andster
+  manager: jmartens
+  ms.workload:
+  - multiple
+  monikerRange: '>= vs-2019'
+  ms.prod: visual-studio-windows
+  ms.technology: devinit
+  ms.openlocfilehash: d3e662fed1f4df54498aed7ed957d070019b6fae
+  ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 07/23/2021
+  ms.locfileid: "114592779"
+title: Devinit için sık sorulan sorular
+summary: >
+  > [!IMPORTANT]
+
+  > 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+sections:
+- name: Yoksayıldı
+  questions:
+  - question: >
+      devinit yalnızca GitHub codespaces için mi?
+    answer: >
+      şimdilik, devinit yalnızca GitHub codespaces özel beta ' nın bir parçası olarak kullanılabilir. ancak, Visual Studio 2019 ' nin gelecek bir sürümünde devinit 'yi dahil etmek için planlıyoruz.
+  - question: >
+      yalnızca Windows mı?
+    answer: >
+      evet, devinit, Visual Studio kullanan geliştiriciler için çalışan geliştirici ortamları oluşturmaya odaklanmıştır, bu da Windows anlamına gelir. diğer platformları göz önünde bulunduruyoruz, ancak Visual Studio ve Windows kullanmaya başlamak istiyoruz.
+  - question: >
+      Gerekli olan bağımlılığa yönelik bir araç yok!
+    answer: >
+      Ne yazık ki! codespaces özel beta GitHub bir parçasıysa, özel beta için geri bildirim kanalı üzerinden bizimle başa dönebilirsiniz. özel beta 'nın bir parçası değilseniz, ihtiyacınız olan bilgilerle ilgili geri bildirimlerinizi hala sevtik ve ihtiyacınız olan [](https://github.com/MicrosoftDocs/visualstudio-docs/) `devinit` araç için destek istemek üzere etiketle birlikte Visual Studio belgelerimizde bir sorun da oluşturabilirsiniz.
+  - question: >
+      Bir sorun oluştu, nasıl hata ayıklaması yapabilirim?
+    answer: >
+      Devınit başarısız olursa, deneyebileceğiniz ilk şey `--verbose / -v` daha fazla bilgi almak için olan bayraktır. Devınit 'in çağrıldığı temel alınan araç bir sorunla karşılaşıyor. Ayrıntılı günlük bilgileri, ileri bakabileceğiniz bir Clue içermelidir.
+  - question: >
+      Neden yalnızca bir betik değil?
+    answer: >
+      Ortamları bir komut dosyası aracılığıyla ayarlamak bir zaman eski tekniktir ve harika bir şekilde çalışabilir. Sizin için çalışıyorsa, şunu kullanın! devinit, geliştiricilerin betikler için en iyi seçenek olmadığı durumlarda başka bir seçenektir.
+  - question: >
+      Neden bir kapsayıcı değil?
+    answer: >
+      Kapsayıcılar ve Docker, kod aracılığıyla bir ortamı dağıtmaya yönelik harika araçlardır. Kapsayıcıların sizin için doğru çözüm olmasının birkaç nedeni vardır:
+
+
+      1. Windows masaüstü tabanlı bir geliştirme ortamı kullanmak istiyorsanız.
+
+      1. Zaten bir işletim sistemi varsa ve yeni bir ortam dağıtmak yerine yalnızca ince ayar istiyorsanız.
+
+
+      bu nedenlerden dolayı devinit, şu anda sahip olduğunuz Windows ortamını özelleştirmeye yöneliktir.
+  - question: >
+      Diğer VM oluşturma araçları (örneğin, Terkform, Packer, Chef, vagrant)
+    answer: >
+      Windows görüntü oluşturmaya yönelik harika birçok araç vardır ve bunları kullanmanız gerekir! Ancak, aklımız tüm senaryoları karşıladığımız bir tane bulunamadı. devınit 'in, geliştiricilerin ortamlarını belirli bir depoya yönelik her türlü şekilde özelleştirmesini ve VM görüntülerini oluşturmaya yönelik bir araç olması yerine Visual Studio ile büyük bir tümleştirme sahibi olmasını istiyoruz.
+  - question: >
+      Winget hakkında ne var?
+    answer: >
+      devinit, Winget gibi bir paket yöneticisi değildir ve bunun olmasını istemiyorum. Devinit ile Winget kullanabilmek istiyoruz ve yalnızca bunun için bir araç üzerinde çalışıyoruz.
+  - question: >
+      Yeniden başlatmalar nasıl işlenir?
+    answer: >
+      Devinit 'nin yüklediği herhangi bir şey işletim sisteminin yeniden başlatılmasını gerektiriyorsa, konsola bir hata mesajı gönderilir. Daha sonra işletim sistemini size uygun bir zamanda yeniden başlatmanız gerekir. Yeniden başlatıldıktan sonra, tüm bağımlılıklar yüklü değilse devinit yeniden çalıştırmanız gerekebilir.
+  - question: >
+      Başkalarıyla çalışma
+    answer: >-
+      devinit, uygulamanızın sahip olabileceği bağımlılıkları dağıtmak ve yapılandırmak için bir çok geniş ekosistemin kullanımını etkinleştirmeye yönelik olarak tasarlanmıştır. Devınit 'in sunduğu özellikler hakkında bir düşünme karşın devinit, genellikle diğer araçların bildirim temelli bir JSON dosyasından yürütülmesini sağlar.
+
+
+      Bugün, devinit yalnızca Başlarken ve [araç listemiz](devinit-tool-list.md) yalnızca bir başlangıç.

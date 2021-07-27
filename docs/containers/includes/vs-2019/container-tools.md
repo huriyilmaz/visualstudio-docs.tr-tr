@@ -1,42 +1,42 @@
 ---
-title: ASP.NET ile Docker için Visual Studio Araçları
+title: ASP.NET Docker için Visual Studio Araçları
 author: ghogen
-description: Visual Studio 2019 araçları 'nı ve Docker for Windows kullanmayı öğrenin
+description: Visual Studio 2019 araçları ve Docker for Windows kullanmayı öğrenin
 ms.author: ghogen
-ms.date: 02/22/2021
+ms.date: 03/08/2021
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 35beb1bb67dbfe4d0d1707c499b605f6ff698956
-ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
+ms.openlocfilehash: 0b9a8ef2839db1d71c3cc6e395aa0d6092375c9c
+ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "112908086"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114594556"
 ---
-Visual Studio ile Kapsayıcılı .NET, ASP.NET ve ASP.NET Core uygulamalarını kolayca oluşturabilir, ayıklayabilir ve çalıştırabilir ve bunları Azure Container Registry (ACR), Docker Hub, Azure App Service veya kendi kapsayıcı kayıt defterinizde yayımlayabilirsiniz. Bu makalede, ACR 'ye bir ASP.NET Core uygulaması yayımlayacağız.
+Visual Studio, kapsayıcılı .net, ASP.NET ve ASP.NET Core uygulamalarını kolayca oluşturabilir, ayıklayabilir ve çalıştırabilir ve bunları Azure Container Registry (acr), docker Hub, Azure App Service veya kendi kapsayıcı kayıt defterinizde yayımlayabilirsiniz. bu makalede, acr 'ye bir ASP.NET Core uygulaması yayımlayacağız.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* **Web geliştirme**, **Azure Araçları** iş yükü ve/veya **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 * .NET Core ile geliştirme için [.NET Core geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/)
 * Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/free/dotnet/).
 
 ## <a name="installation-and-setup"></a>Yükleme ve kurulum
 
-Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install)'taki bilgileri gözden geçirin: yüklemeden önce bilmeniz gerekenler. Sonra [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)'ı yükler.
+docker yüklemesi için önce docker Desktop 'taki bilgileri gözden geçirin [Windows: yüklemeden önce bilmeniz gerekenler](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install). Sonra [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)'ı yükler.
 
 ## <a name="add-a-project-to-a-docker-container"></a>Docker kapsayıcısına proje ekleme
 
-1. **ASP.NET Core Web uygulaması** şablonunu kullanarak yeni bir proje oluşturun veya .NET Core yerine .NET Framework kullanmak Istiyorsanız **ASP.NET Web uygulaması (.NET Framework)** öğesini seçin.
-1. **Ek bilgi** ekranında **Docker desteğini etkinleştir** onay kutusunun seçili olduğundan emin olun.
+1. **ASP.NET Core web uygulaması** şablonunu kullanarak yeni bir proje oluşturun veya .net Core yerine .NET Framework kullanmak istiyorsanız, **ASP.NET Web uygulaması (.NET Framework)** seçeneğini belirleyin.
+1. **Yeni Web uygulaması oluştur** ekranında **Docker desteğini etkinleştir** onay kutusunun seçili olduğundan emin olun.
 
    ![Docker desteğini etkinleştir onay kutusu](../../media/container-tools/vs-2019/webapp-additional-information-31-docker.png)
 
    Ekran görüntüsünde .NET Core gösterilir; .NET Framework kullanıyorsanız, biraz farklı görünür.
 
-1. İstediğiniz kapsayıcı türünü (Windows veya Linux) seçin ve **Oluştur**' a tıklayın.
+1. istediğiniz kapsayıcı türünü (Windows veya Linux) seçin ve **oluştur**' a tıklayın.
 
 ## <a name="dockerfile-overview"></a>Dockerfile genel bakış
 
@@ -76,7 +76,7 @@ Araç çubuğundaki hata ayıklama açılır listesinden **Docker** ' ı seçin 
 **Çıkış** penceresinde **kapsayıcı araçları** seçeneği hangi eylemlerin gerçekleştireceğinizi gösterir. İlk kez, temel görüntünün indirilmesi biraz zaman alabilir, ancak sonraki çalışmalarda çok daha hızlıdır.
 
 >[!NOTE]
-> Hata ayıklama için bağlantı noktalarını değiştirmeniz gerekiyorsa, bunu dosyada *launchSettings.js* yapabilirsiniz. Bkz. [kapsayıcı başlatma ayarları](../../container-launch-settings.md).
+> Hata ayıklama için bağlantı noktalarını değiştirmeniz gerekiyorsa, bunu dosyada *launchSettings.js* yapabilirsiniz. bkz. [kapsayıcı başlatma Ayarlar](../../container-launch-settings.md).
 
 ## <a name="containers-window"></a>Kapsayıcılar penceresi
 
@@ -90,7 +90,7 @@ Pencerede, kapsayıcınızı bulun ve ortam değişkenlerini, bağlantı noktas�
 
 ![Kapsayıcılar penceresinin ekran görüntüsü](../../media/overview/vs-2019/container-tools-window.png)
 
-Daha fazla bilgi için bkz. [Visual Studio 'da kapsayıcıları ve görüntüleri görüntüleme ve tanılama](../../view-and-diagnose-containers.md).
+Daha fazla bilgi için bkz. [Visual Studio kapsayıcıları ve görüntüleri görüntüleme ve tanılama](../../view-and-diagnose-containers.md).
 
 ## <a name="publish-docker-images"></a>Docker görüntülerini yayımlama
 
@@ -112,11 +112,11 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
     | ------------ |  ------- | -------------------------------------------------- |
     | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
-    ![Visual Studio 'nun Azure Container Registry oluştur iletişim kutusu][0]
+    ![Visual Studio Azure Container Registry oluştur iletişim kutusu][0]
 
 1. **Oluştur**’a tıklayın. **Yayımla** iletişim kutusunda artık oluşturulan kayıt defteri görüntülenir.
 

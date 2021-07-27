@@ -1,9 +1,10 @@
 ---
-title: Dosyalar ve klasörler için güven ayarları
-description: Visual Studio 'Nun güvenliğini sağlamak için dosyalar ve klasörler için güven ayarlarını değiştirme hakkında bilgi edinin.
-author: 2percentsilk
-ms.author: allisb
-ms.date: 09/05/2018
+title: Dosya Ayarlar klasörler için güven dosyaları
+description: Dosyaları ve klasörleri güvenli tutmak için dosya ve klasörlerin güven ayarlarını Visual Studio öğrenin.
+author: TerryGLee
+ms.author: tglee
+manager: jmartens
+ms.date: 07/22/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.PathTrustOptions
@@ -13,59 +14,80 @@ helpviewer_keywords:
 - mark of the web
 - trusted files
 - trusted folders
-ms.openlocfilehash: 492a94962d255a9d18dcabdababf7fa6a540ada1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f8ac3b416e017796eced0027357cacbc6b06830c
+ms.sourcegitcommit: a07cdb3d7ec7040025d23e81b53ebe41bfafd592
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88197393"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114654127"
 ---
-# <a name="configure-trust-settings-for-files-and-folders"></a>Dosyalar ve klasörler için güven ayarlarını yapılandırma
+# <a name="configure-trust-settings-for-files-and-folders"></a>Dosya ve klasörler için güven ayarlarını yapılandırma
 
-Visual Studio, [Web 'e işaret](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85))eden projeleri açmadan önce Kullanıcı onayını ister. Ek güvenlik için, Visual Studio 'Yu, Web özniteliği işaretine sahip herhangi bir dosya veya klasörü açmadan önce Kullanıcı onayını isteyecek şekilde yapılandırabilir veya *güvenilir*olarak belirlenmemiştir. Dosya ve klasör denetimleri varsayılan olarak devre dışıdır.
+::: moniker range=">=vs-2022"
+
+Visual Studio 2022'de (Önizleme 2) dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilmeyen kodun IDE'de açılmasına her zaman bir uyarı göstermek için Güven Ayarlar işlevselliğini yeniden gözden geçirdik.
+
+:::image type="content" source="media/vs-2022/trusted-settings-warning-message.png" alt-text="Güven uyarı Ayarlar ekran görüntüsü":::
+
+Özelliği güncelleştirmeye devam ettiyken buraya daha fazla bilgi ekley edeceğiz. Bizi izlemeye devam edin!
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
+
+Visual Studio Web İşareti olan projeleri açmadan önce [kullanıcı onayı isteminde bulundurabilirsiniz.](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85)) Ek güvenlik için, web özniteliğinin Visual Studio veya güvenilir olarak atanmamış herhangi bir dosyayı veya klasörü açmadan önce kullanıcı onayı isteminde bulunacaktır. Dosya ve klasör denetimleri varsayılan olarak devre dışıdır.
 
 > [!WARNING]
-> Dosyayı, klasörü veya çözümü onaylamadan önce güvenilen bir kişiden veya güvenilir bir konumdan geldiğinden emin olmalısınız.
+> Yine de dosyayı, klasörü veya çözümü onaylamadan önce güvenilir bir kişi veya güvenilir bir konumdan geldiğinden emin olun.
+
+> [!NOTE]
+> Visual Studio 2022 'de (Önizleme) dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilmeyen kodun IDE'de açılmasına her zaman yönelik bir uyarı göstermek için Güven Ayarlar işlevselliğini yeniden gözden geçirdik. Daha fazla bilgi edinmek için Visual Studio [2022 Preview](/visualstudio/releases/2022/release-notes-preview#trustedlocations-170P2)sürüm notlarının "Güvenilen Konumlar" bölümüne bakın.
 
 ## <a name="configure-trust-settings"></a>Güven ayarlarını yapılandırma
 
 Güven ayarlarını değiştirmek için şu adımları izleyin:
 
-1. **Araçlar**  >  **Seçenekler**  >  **güven ayarları** ' nı açın ve sağ bölmedeki **güven ayarlarını yapılandır** bağlantısını seçin.
+1. Araç **Seçenekleri** Güven Ayarlar açın ve sağ bölmede >  >  **Ayarlar** Yapılandır bağlantısını seçin.
 
-2. Dosya ve klasörler için istediğiniz denetimlerin düzeyini seçin. Her biri için farklı denetimlerine sahip olabilirsiniz. Seçenekler şunlardır:
+2. Dosya ve klasörler için istediğiniz denetim düzeyini seçin. Her biri için farklı denetimler olabilir. Seçenekler şunlardır:
 
-   * **Doğrulama yok**: Visual Studio hiçbir denetim gerçekleştirmez.
+   * **Doğrulama yok:** Visual Studio denetim gerçekleştirmez.
 
-   * **Web özniteliğinin Işaretini doğrulayın**: dosya veya klasörün web özniteliğinin işareti varsa, Visual Studio bunları engeller ve açmak için izin ister.
+   * **Web özniteliğinin işaretini doğrulayın:** Dosya veya klasörde web özniteliğinin işareti varsa, Visual Studio ve açma izni ister.
 
-   * **Yolun güvenilir olduğunu doğrulama**: dosya veya klasör yolu **Güvenilen yollar** listesinin bir parçası değilse, Visual Studio blok ve açma izni ister.
+   * **Yolun güvenilir olduğunu doğrulama:** Dosya veya klasör yolu  Güvenilen Yollar listesinin parçası değilse, Visual Studio izin ister ve açma izni ister.
 
    ![Güven doğrulama seçenekleri](media/trust-settings.png)
 
 ## <a name="add-trusted-paths"></a>Güvenilen yollar ekleme
 
-Güvenilen yollar eklemek için aşağıdaki adımları izleyin:
+Güvenilen yollar eklemek için şu adımları izleyin:
 
-1. **Araçlar**  >  **Seçenekler**  >  **güven ayarları** ' nı açın ve sağ bölmedeki **güven ayarlarını yapılandır** bağlantısını seçin.
+1. Araç **Seçenekleri** Güven Ayarlar açın ve sağ bölmede >  >  **Ayarlar** Yapılandır bağlantısını seçin.
 
-2. **Güven ayarları** Iletişim kutusunda **Ekle** ' ye tıklayın ve ardından **Dosya** veya **klasör**' i seçin.
+2. Güven **Dosyası** iletişim kutusunda **Ekle'Ayarlar** ve ardından Dosya veya **Klasör'e** **tıklayın.**
 
-3. ' A gidin ve güvenilen listeye eklemek istediğiniz dosya veya klasörü seçin.
+3. Güvenilen listeye eklemek istediğiniz dosya veya klasörü bulun ve seçin.
 
-   Dosya veya klasör yolu, **Güvenilen yollar** listesinde görünür.
+   Dosya veya klasör yolu Güvenilen Yollar **listesinde** görünür.
 
    ![Güvenilen yollar eklendi](media/trusted-paths.png)
 
-## <a name="remove-trusted-paths"></a>Güvenilen yolları kaldır
+## <a name="remove-trusted-paths"></a>Güvenilen yolları kaldırma
 
 Güvenilen yolları kaldırmak için şu adımları izleyin:
 
-1. **Araçlar**  >  **Seçenekler**  >  **güven ayarları** ' nı açın ve sağ bölmedeki **güven ayarlarını yapılandır** bağlantısını seçin.
+1. Araç **Seçenekleri** Güven Ayarlar açın ve sağ bölmede >  >  **Ayarlar** Yapılandır bağlantısını seçin.
 
-2. **Güvenilen yollar** listesinde kaldırmak istediğiniz yolu seçin ve ardından **Kaldır**' a tıklayın.
+2. Güvenilen Yollar listesinde kaldırmak istediğiniz yolu seçin **ve kaldır'a** **tıklayın.**
 
    > [!TIP]
-   > Birden çok giriş seçmek için, yolları seçerken **Shift** tuşunu basılı tutun.
+   > Birden çok giriş seçmek için, yolları **seçerken Shift** tuşunu basılı tutun.
 
-   Seçilen yollar, **Güvenilen yollar** listesinden kaldırılır.
+   Seçilen yollar Güvenilen Yollar **listesinden** kaldırılır.
+
+::: moniker-end
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[Visual Studio'da uygulama oluşturma](../walkthrough-building-an-application.md)

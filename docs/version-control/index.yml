@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: sürüm denetimi belgelerini Visual Studio
-summary: Git ve GitHub gibi sürüm denetimi teknolojilerini kullanarak kodunuzu Visual Studio içinden paylaşabilirsiniz.
+title: Visual Studio denetimi belgeleri
+summary: Git ve Visual Studio gibi sürüm denetimi teknolojilerini kullanarak kodunuzu kendi içinde GitHub.
 metadata:
-  title: Visual Studio git ile sürüm denetimi & kaynak denetimi
-  description: Visual Studio ' de sürüm denetimi teknolojilerini kullanın. kod yayınlarınızı kod tabanınızdan çıkmadan Git & GitHub paylaşabilir, tümleştirebilirsiniz ve yönetebilirsiniz.
+  title: Sürüm denetimi & Git ile kaynak denetimi Visual Studio
+  description: Kaynaklarda sürüm/kaynak denetimi Visual Studio. Kod tabanınızı terk etmeden Git'te kod yayınlarınızı paylaşabilir, & GitHub ve yönetebilirsiniz.
   ms.topic: landing-page
   ms.date: 07/02/2021
   author: TerryGLee
@@ -11,42 +11,42 @@ metadata:
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 8143a897914a0b9c2ca3adcdc5093c89852a2f53
-  ms.sourcegitcommit: 4b19d18874a5d3c3dbea67a8e478dc7d3a813769
+  ms.openlocfilehash: 1f412499a1321cebe20955440378c2e284a2db52
+  ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/07/2021
-  ms.locfileid: "113363995"
+  ms.lasthandoff: 07/23/2021
+  ms.locfileid: "114591798"
 landingContent:
 - title: Genel Bakış
   linkLists:
   - linkListType: overview
     links:
-    - text: Git deneyimi Visual Studio
+    - text: Visual Studio'de Git deneyimi
       url: git-with-visual-studio.md
     - text: Git ayarları ve tercihleri
       url: git-settings.md
   - linkListType: concept
     links:
-    - text: Visual Studio kaynak denetimini nasıl kolaylaştırdı
+    - text: Kaynak Visual Studio denetimi nasıl kolaylaştırır?
       url: git-visual-studio-source-control.md
 - title: başlarken
   linkLists:
   - linkListType: learn
     links:
-    - text: Visual Studio Git ve GitHub kullanmaya başlama
+    - text: Kullanmaya başlayın Git ve GitHub ile Visual Studio
       url: /learn/modules/visual-studio-github-push/
   - linkListType: how-to-guide
     links:
-    - text: Git ve Takım Gezgini yan yana karşılaştırın
+    - text: Git ile Takım Gezgini yan yana karşılaştırma
       url: git-team-explorer-feature-comparison.md
 - title: Yenilikler
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Visual Studio git ile geliştirilmiş üretkenlik
+    - text: Git ile gelişmiş üretkenlik Visual Studio
       url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
-    - text: Visual Studio 2022 (önizleme) sürüm notları
+    - text: Visual Studio 2022 (Önizleme) sürüm notları
       url: /visualstudio/releases/2022/release-notes-preview/
     - text: Visual Studio 2019 sürüm notları
       url: /visualstudio/releases/2019/release-notes/

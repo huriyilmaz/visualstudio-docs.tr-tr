@@ -1,7 +1,7 @@
 ---
-title: Visual Studio adım 3, statik dosya ve sayfalarda Flask öğreticisi hakkında bilgi edinin
+title: 3. adım, statik Visual Studio sayfalarda Flask öğreticisini öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri bağlamında, özellikle statik dosyaları nasıl kullanacağınızı, uygulamaya sayfa eklemeyi ve şablon devralmayı kullanmayı gösteren Flask temelleri hakkında bir anlatım.
+description: Visual Studio projeleri bağlamında Flask'in temel bilgilerine yönelik kılavuz, özellikle statik dosyaların nasıl hizmet ve uygulama sayfaları ekli olduğunu ve şablon devralmayı nasıl kullanabileceğini gösterir
 ms.date: 01/07/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,58 +11,58 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d474236aca50a74b96689001a56e7d0701caae30
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f44f90261c975e1569d0710d74cf6c5bef19aff2
+ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942392"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114592339"
 ---
-# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-flask-app"></a>3. Adım: sabit dosyaları sunma, sayfa ekleme ve Flask uygulamasıyla şablon devralmayı kullanma
+# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-flask-app"></a>3. Adım: Flask uygulamasıyla statik dosyaları hizmet etme, sayfa ekleme ve şablon devralma kullanma
 
-**Önceki adım: [görünümler ve sayfa şablonlarıyla Flask uygulaması oluşturma](learn-flask-visual-studio-step-02-create-app.md)**
+**Önceki adım: [Görünümler ve sayfa şablonlarıyla bir Flask uygulaması oluşturma](learn-flask-visual-studio-step-02-create-app.md)**
 
-Bu öğreticinin önceki adımlarında, kendine dahil edilen HTML 'nin tek bir sayfası ile en az bir Flask uygulaması oluşturmayı öğrendiniz. Ancak modern Web Apps, genellikle birçok sayfadan oluşur ve tutarlı stil oluşturma ve davranış sağlamak için CSS ve JavaScript dosyaları gibi paylaşılan kaynakları kullanır.
+Bu öğreticinin önceki adımlarında, tek sayfalık kendi içinde HTML içeren küçük bir Flask uygulaması oluşturma hakkında bilgi edindisiniz. Ancak modern web uygulamaları genellikle birçok sayfadan oluşur ve tutarlı stil ve davranış sağlamak için CSS ve JavaScript dosyaları gibi paylaşılan kaynakları kullanır.
 
-Bu adımda şunları yapmayı öğreneceksiniz:
+Bu adımda şunların nasıl olduğunu öğreniriz:
 
 > [!div class="checklist"]
-> - Uygun ortak kod ile farklı türlerdeki yeni dosyaları hızlıca eklemek için Visual Studio öğe şablonlarını kullanın (adım 3-1)
-> - Koddan statik dosyaları sunma (adım 3-2, isteğe bağlı)
-> - Uygulamaya ek sayfalar ekleme (adım 3-3)
-> - Sayfalarda kullanılan bir başlık ve gezinme çubuğu oluşturmak için şablon devralmayı kullanın (adım 3-4)
+> - Kolay Visual Studio farklı türlerde yeni dosyaları hızla eklemek için yeni öğe şablonları kullanma (3-1. adım)
+> - Koddan statik dosyaları hizmet etme (3-2. adım, isteğe bağlı)
+> - Uygulamaya başka sayfalar ekleme (3-3. adım)
+> - Sayfalar arasında kullanılan bir üst bilgi ve gezinti çubuğu oluşturmak için şablon devralmayı kullanma (3-4. adım)
 
-## <a name="step-3-1-become-familiar-with-item-templates"></a>Adım 3-1: öğe şablonları hakkında bilgi sahibi olun
+## <a name="step-3-1-become-familiar-with-item-templates"></a>3.-1. Adım: Öğe şablonları hakkında bilgi sahibi olma
 
-Flask uygulaması geliştirirken, genellikle birçok Python, HTML, CSS ve JavaScript dosyası eklersiniz. Her dosya türü için (Ayrıca, dağıtım için ihtiyaç duyduğunuz *web.config* gibi diğer dosyalar), Visual Studio başlamanıza olanak sağlayacak uygun [öğe şablonları](python-item-templates.md) sağlar.
+Flask uygulaması geliştirirken genellikle çok daha fazla Python, HTML, CSS ve JavaScript dosyası eklersiniz. Her dosya türü (dağıtım için ihtiyaçweb.configdiğer *dosyalar)* için Visual Studio başlamanız [](python-item-templates.md) için kullanışlı öğe şablonları sağlar.
 
-Kullanılabilir şablonları görmek için **Çözüm Gezgini** gidin, öğeyi oluşturmak istediğiniz klasörü sağ tıklatın,   >  **Yeni öğe** Ekle ' yi seçin:
+Kullanılabilir şablonları görmek için **Çözüm Gezgini'a** gidin, öğeyi oluşturmak istediğiniz klasöre sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin:**
 
-![Visual Studio 'da yeni öğe Ekle iletişim kutusu](media/flask/step03-add-new-item-dialog.png)
+![Yeni öğe ekle iletişim kutusu Visual Studio](media/flask/step03-add-new-item-dialog.png)
 
-Bir şablon kullanmak için, istediğiniz şablonu seçin, dosya için bir ad belirtin ve **Tamam**' ı seçin. Bu şekilde bir öğe eklemek, dosyayı otomatik olarak Visual Studio projenize ekler ve kaynak denetimi için değişiklikleri işaretler.
+Şablon kullanmak için istenen şablonu seçin, dosya için bir ad belirtin ve Tamam'ı **seçin.** Bu şekilde bir öğe eklemek, dosyayı otomatik olarak Visual Studio projenize ekler ve değişiklikleri kaynak denetimi için işaretler.
 
-### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>Soru: Visual Studio hangi öğe şablonlarının önereceğimizi nasıl bilir?
+### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>Soru: Hangi Visual Studio şablonlarını nasıl bilebilirsiniz?
 
-Cevap: Visual Studio proje dosyası (*. pyproj*), bir Python projesi olarak işaretleyen bir proje türü tanımlayıcısı içerir. Visual Studio yalnızca proje türü için uygun olan öğe şablonlarını göstermek için bu tür tanımlayıcısını kullanır. Bu şekilde, Visual Studio her seferinde her seferinde sıralama yapmanızı istemeden birçok proje türü için zengin bir öğe şablonları kümesi sağlayabilir.
+Cevap: Visual Studio dosyası (*.pyproj*), bunu Python projesi olarak işaret alan bir proje türü tanımlayıcısı içerir. Visual Studio, yalnızca proje türüne uygun öğe şablonlarını göstermek için bu tür tanımlayıcısını kullanır. Bu şekilde Visual Studio her zaman sıralamak istemeden birçok proje türü için zengin bir öğe şablonu kümesi sebilirsiniz.
 
-## <a name="step-3-2-serve-static-files-from-your-app"></a>Adım 3-2: uygulamanızdan statik dosyaları sunma
+## <a name="step-3-2-serve-static-files-from-your-app"></a>3-2. Adım: Uygulamanıza statik dosyaları hizmet etme
 
-Python ile derlenen bir Web uygulamasında (herhangi bir Framework kullanılarak), Python dosyalarınız her zaman Web ana bilgisayarı sunucusunda çalışır ve bir kullanıcının bilgisayarına hiçbir zaman aktarılmaz. Ancak, CSS ve JavaScript gibi diğer dosyalar yalnızca tarayıcı tarafından kullanılır, bu nedenle ana bilgisayar sunucusu bu dosyaları istendiği zaman olduğu gibi teslim eder. Bu tür dosyalar "static" dosyalar olarak adlandırılır ve Flask bunları herhangi bir kod yazmaya gerek kalmadan otomatik olarak teslim edebilir. Örneğin, HTML dosyaları içinde, yalnızca projedeki göreli bir yol kullanarak statik dosyalara başvurabilirsiniz. Bu adımdaki ilk bölüm, var olan sayfa şablonunuza bir CSS dosyası ekler.
+Python ile derlen bir web uygulamasında (herhangi bir çerçeve kullanılarak), Python dosyalarınız her zaman web ana bilgisayarının sunucusunda çalıştırıldı ve hiçbir zaman kullanıcının bilgisayarına aktarıldı. Ancak CSS ve JavaScript gibi diğer dosyalar yalnızca tarayıcı tarafından kullanılır, bu nedenle ana bilgisayar sunucusu isten her durumda olduğu gibi bunları teslim ediyor. Bu tür dosyalar "statik" dosyalar olarak adlandırılır ve Flask bunları kod yazmanız gerekmeden otomatik olarak teslim eder. Örneğin, HTML dosyalarının içinde, projesinde göreli bir yol kullanarak statik dosyalara başvurabilirsiniz. Bu adımın ilk bölümü, mevcut sayfa şablonunuz için bir CSS dosyası ekler.
 
-Bir API uç noktası uygulamasıyla olduğu gibi koddan statik bir dosya teslim etmeniz gerektiğinde, Flask *statik* adlı bir klasör içinde (proje kökünde) göreli yollar kullanarak dosyalara başvurmanızı sağlayan kullanışlı bir yöntem sağlar. Bu adımdaki ikinci bölüm, bir basit statik veri dosyası kullanarak bu yöntemi gösterir.
+Bir API uç noktası uygulaması aracılığıyla koddan statik bir dosya teslim etmek için Flask, statik *adlı* bir klasördeki (proje kökünde) göreli yolları kullanarak dosyalara başvurarak kullanışlı bir yöntem sağlar. Bu adımın ikinci bölümü, basit bir statik veri dosyası kullanarak bu yöntemi gösteriyor.
 
-Her iki durumda da, istediğiniz gibi dosyaları *statik* olarak düzenleyebilirsiniz.
+Her iki durumda da dosyaları statik olarak *düzenleyebilirsiniz.*
 
 ### <a name="use-a-static-file-in-a-template"></a>Şablonda statik dosya kullanma
 
-1. **Çözüm Gezgini**, Visual Studio projesindeki **helloflask** klasörüne sağ tıklayın, yeni klasör Ekle ' yi seçin   >  ve klasörü adlandırın `static` .
+1. Bu **Çözüm Gezgini,** Visual Studio projesinde **HelloFlask** klasörüne sağ tıklayın, Yeni klasör  >  Ekle'yi **seçin** ve klasöre adını `static` girin.
 
-1. **Statik** klasöre sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. Görüntülenen iletişim kutusunda, **stil sayfası** şablonunu seçin, dosyayı adlandırın `site.css` ve **Tamam**' ı seçin. **Site. css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünmelidir:
+1. Statik klasöre sağ **tıklayın ve** Yeni öğe **Ekle'yi**  >  **seçin.** Görüntülenen iletişim kutusunda Stil Sayfası **şablonunu** seçin, dosyaya adını ve `site.css` Tamam'ı **seçin.** **Site.css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünse:
 
-    ![Çözüm Gezgini gösterildiği gibi statik dosya yapısı](media/flask/step03-static-file-structure.png)
+    ![Dosyalarda gösterildiği gibi statik Çözüm Gezgini](media/flask/step03-static-file-structure.png)
 
-1. *Site. css* içeriğini aşağıdaki kodla değiştirin ve dosyayı kaydedin:
+1. *site.css içeriğini aşağıdaki* kodla değiştirin ve dosyayı kaydedin:
 
     ```css
     .message {
@@ -71,7 +71,7 @@ Her iki durumda da, istediğiniz gibi dosyaları *statik* olarak düzenleyebilir
     }
     ```
 
-1. Uygulama *şablonlarının/index.html* dosyasının içeriğini aşağıdaki kodla değiştirin ve `<strong>` Bu, adım 2 ' de kullanılan öğenin `<span>` Stil sınıfına başvuran bir ile değiştirir `message` . Bu şekilde bir stil sınıfı kullanmak, öğe stillendirme konusunda çok daha fazla esneklik sağlar.
+1. Uygulamanın *templates/index.html* dosyasının içeriğini aşağıdaki kodla değiştirin. Bu kod, 2. adımda kullanılan öğesini stil sınıfına başvurulan bir `<strong>` `<span>` ile `message` değiştirir. Stil sınıfını bu şekilde kullanmak, öğenin stilini oluşturma konusunda çok daha fazla esneklik sağlar.
 
     ```html
     <html>
@@ -85,15 +85,15 @@ Her iki durumda da, istediğiniz gibi dosyaları *statik* olarak düzenleyebilir
     </html>
     ```
 
-1. Sonuçları gözlemlemek için projeyi çalıştırın. Bittiğinde uygulamayı durdurun ve isterseniz kaynak denetimine yaptığınız değişiklikleri kaydedin ( [Adım 2](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)' de açıklandığı gibi).
+1. Sonuçları gözlemlemek için projeyi çalıştırın. Bittiğinde uygulamayı durdurun ve 2. adımda açıklanmıştır) dısanız değişikliklerinizi kaynak [denetimine işlenin.](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)
 
-### <a name="serve-a-static-file-from-code"></a>Koddan statik bir dosya sunma
+### <a name="serve-a-static-file-from-code"></a>Koddan statik dosya hizmet etme
 
-Flask `serve_static_file` , projenin *statik* klasörü içindeki herhangi bir dosyaya başvurmak için koddan çağrılabilecek adlı bir işlev sağlar. Aşağıdaki işlem, statik bir veri dosyası döndüren basit bir API uç noktası oluşturur.
+Flask, projenin statik klasöründeki herhangi bir dosyaya başvurmak için koddan çağırabilirsiniz adlı `serve_static_file` bir *işlev* sağlar. Aşağıdaki işlem statik veri dosyası döndüren basit bir API uç noktası oluşturur.
 
-1. Daha önce yapmadıysanız, bir *statik* klasör oluşturun: **Çözüm Gezgini**, Visual Studio projesindeki **helloflask** klasörüne sağ tıklayın, yeni klasör **Ekle**' yi seçin  >  ve klasörü adlandırın `static` .
+1. Henüz bunu yapmadıysanız, statik  bir klasör oluşturun: **Çözüm Gezgini'da, Visual Studio** projesinde **HelloFlask** klasörüne sağ tıklayın, Yeni klasör Ekle'yi seçin ve klasörünü olarak  >  ad `static` girin.
 
-1. *Statik* klasörde, aşağıdaki içeriklerle *data.js* adlı statik bir JSON veri dosyası oluşturun (anlamsız örnek veriler):
+1. Statik *klasörde,* aşağıdaki içeriklerledata.jsadlı bir *statik* JSON veri dosyası oluşturun (bu, anlamsız örnek verilerdir):
 
     ```json
     {
@@ -103,7 +103,7 @@ Flask `serve_static_file` , projenin *statik* klasörü içindeki herhangi bir d
     }
     ```
 
-1. *Views.py*' de, yöntemi kullanılarak statik veri dosyasını döndüren Route/api/Data öğesine sahip bir işlev ekleyin `send_static_file` :
+1. Bu *views.py*, yöntemini kullanarak statik veri dosyasını döndüren /api/data yolu ile bir işlev `send_static_file` ekleyin:
 
     ```python
     @app.route('/api/data')
@@ -111,32 +111,32 @@ Flask `serve_static_file` , projenin *statik* klasörü içindeki herhangi bir d
       return app.send_static_file('data.json')
     ```
 
-1. Uygulamayı çalıştırın ve statik dosyanın döndürüldüğünden emin olmak için/api/Data uç noktasına gidin. İşiniz bittiğinde uygulamayı durdurun.
+1. Uygulamayı çalıştırın ve statik dosyanın döndürül olduğunu görmek için /api/data uç noktasına gidin. Bitirin ve uygulamayı durdurun.
 
-### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Soru: statik dosyaları düzenlemek için herhangi bir kural var mı?
+### <a name="question-are-there-any-conventions-for-organizing-static-files"></a>Soru: Statik dosyaları düzenlemek için herhangi bir kural var mı?
 
-Yanıt: diğer CSS, JavaScript ve HTML dosyalarını *statik* klasörünüze ekleyebilirsiniz, ancak istediğiniz gibi. Statik dosyaları düzenlemenin tipik bir yolu, *yazı tipleri*, *betikler* ve *içerik* (stil sayfaları ve diğer dosyalar için) adlı alt klasörler oluşturmaktır.
+Cevap: Statik klasörünüzdeki diğer CSS, JavaScript ve HTML dosyalarını *istediğiniz* gibi abilirsiniz. Statik dosyaları düzenlemenin tipik bir yolu yazı *tipleri,* betikler *ve* içerik *(stil* sayfaları ve diğer dosyalar için) adlı alt klasörler oluşturmaktır.
 
-### <a name="question-how-do-i-handle-url-variables-and-query-parameters-in-an-api"></a>Soru: bir API 'de URL değişkenlerini ve sorgu parametrelerini işlemek Nasıl yaparım??
+### <a name="question-how-do-i-handle-url-variables-and-query-parameters-in-an-api"></a>Soru: Nasıl yaparım? API'de URL değişkenlerini ve sorgu parametrelerini nasıl işleyebilirsiniz?
 
-Cevap: adım 1-4: soru için bkz. adım [: nasıl Flask, DEĞIŞKEN URL rotalarıyla ve sorgu parametreleriyle nasıl çalışır?](learn-flask-visual-studio-step-01-project-solution.md#qa-url-variables)
+Cevap: Soru için 1-4. adımda yanıtı [görme: Flask,](learn-flask-visual-studio-step-01-project-solution.md#qa-url-variables) değişken URL yolları ve sorgu parametreleriyle nasıl çalışır?
 
-## <a name="step-3-3-add-a-page-to-the-app"></a>Adım 3-3: uygulamaya bir sayfa ekleme
+## <a name="step-3-3-add-a-page-to-the-app"></a>3-3. Adım: Uygulamaya sayfa ekleme
 
-Uygulamaya başka bir sayfa eklemek aşağıdakiler anlamına gelir:
+Uygulamaya başka bir sayfa eklemek şu anlama gelir:
 
 - Görünümü tanımlayan bir Python işlevi ekleyin.
-- Sayfa işaretlemesi için bir şablon ekleyin.
-- Flask projesinin *URLs.py* dosyasına gerekli yönlendirmeyi ekleyin.
+- Sayfanın işaretlemesi için bir şablon ekleyin.
+- Flask projesinin urls.py *ekleyin.*
 
-Aşağıdaki adımlarda "HelloFlask" projesine bir "About" sayfası ve bu sayfanın giriş sayfasından bağlantıları verilmiştir:
+Aşağıdaki adımlar "HelloFlask" projesine bir "Hakkında" sayfası ve giriş sayfasından bu sayfaya bağlantılar ekler:
 
-1. **Çözüm Gezgini**, **Şablonlar** klasörüne sağ tıklayın, yeni öğe **Ekle**' yi seçin  >  , **HTML sayfası** öğe şablonunu seçin, dosyayı adlandırın `about.html` ve **Tamam**' ı seçin.
+1. Bu **Çözüm Gezgini** şablonlar klasörüne  sağ tıklayın, Yeni öğe Ekle'yi seçin, HTML Sayfası öğesi şablonunu seçin, dosyayı olarak adlar ve  >    `about.html` Tamam'ı **seçin.**
 
     > [!Tip]
-    > **Yeni öğe** komutu **Ekle** menüsünde görünmezse, Visual Studio 'nun hata ayıklama modundan çıkmasını sağlamak için uygulamayı durdurduğunuzdan emin olun.
+    > Ekle **menüsünde Yeni** Öğe komutu görünmüyorsa, hata ayıklama modundan çıkmak için uygulamayı Visual Studio emin olun. 
 
-1. *about.html* öğesinin içeriğini aşağıdaki biçimlendirmeyle değiştirin (adım 3-4 ' de basit bir gezinti çubuğu ile giriş sayfasına yönelik açık bağlantıyı değiştirirsiniz):
+1. *about.html'nin* içeriğini aşağıdaki işaretlemeyle değiştirin (giriş sayfasının açık bağlantısını 3-4. adımda basit bir gezinti çubuğuyla değiştirirsiniz):
 
     ```html
     <html>
@@ -151,7 +151,7 @@ Aşağıdaki adımlarda "HelloFlask" projesine bir "About" sayfası ve bu sayfan
     </html>
     ```
 
-1. Uygulamanın *views.py* dosyasını açın ve şablonu kullanan adlı bir işlev ekleyin `about` :
+1. Uygulamanın views.py *dosyasını* açın ve şablonu kullanan `about` adlı bir işlev ekleyin:
 
     ```python
     @app.route('/about')
@@ -162,37 +162,37 @@ Aşağıdaki adımlarda "HelloFlask" projesine bir "About" sayfası ve bu sayfan
             content = "Example app page for Flask.")
     ```
 
-1. *Şablonlar/index.html* dosyasını açın ve ilgili sayfanın hemen içine aşağıdaki satırı ekleyin `<body>` (Bu bağlantıyı, adım 3-4 ' deki bir gezinti çubuğu ile değiştirin):
+1. *Templates/index.html* dosyasını açın ve Hakkında sayfasına bağlantı için öğenin hemen içinde aşağıdaki satırı ekleyin (yine bu bağlantıyı 3-4. adımda bir gezinti çubuğuyla `<body>` değiştirirsiniz):
 
     ```html
     <div><a href="about">About</a></div>
     ```
 
-1. **Dosya**  >  **Tümünü Kaydet** menü komutunu kullanarak tüm dosyaları kaydedin veya **CTRL** + **+ Shift** + **S** tuşlarına basın. (Teknik olarak, Visual Studio 'da projeyi çalıştırmak için bu adım gerekli değildir. dosyaları otomatik olarak kaydeder. Bununla birlikte, bunun hakkında bilgi edinmek için iyi bir komuttur!)
+1. Dosya Tüm Dosyaları Kaydet menü **komutunu kullanarak**  >  **tüm dosyaları** kaydedin veya Ctrl Shift S  + **tuşlarına** + **basın.** (Teknik olarak, bu adım projeyi proje içinde çalıştırarak dosyaları otomatik Visual Studio gerekli değildir. Yine de bu, hakkında bilgili olmak için iyi bir komut!)
 
-1. Sonuçları gözlemlemek ve sayfalar arasında gezinmeyi denetlemek için projeyi çalıştırın. Bittiğinde uygulamayı durdurun.
+1. Sonuçları gözlemlemek ve sayfalar arasındaki gezintiyi kontrol etmek için projeyi çalıştırın. Bittiğinde uygulamayı durdurun.
 
-### <a name="question-does-the-name-of-a-page-function-matter-to-flask"></a>Soru: bir sayfa işlevinin adı Flask 'ye göre mi?
+### <a name="question-does-the-name-of-a-page-function-matter-to-flask"></a>Soru: Sayfa işlevinin adı Flask için önemli mi?
 
-Yanıt: Hayır, çünkü `@app.route` Flask 'nin bir yanıt oluşturmak için işlevi çağırdığı URL 'leri belirleyen dekoratör. Geliştiriciler genellikle yol ile eşleşen işlev adı ile eşleşir, ancak bu tür eşleştirme gerekli değildir.
+Cevap: Hayır, çünkü Flask'in yanıt oluşturmak için işlevini çağıran URL'leri belirleyen dekoratör `@app.route` olmasıdır. Geliştiriciler genellikle işlev adını yol ile eşleştirmektedir ancak bu tür eşleştirmeler gerekli değildir.
 
-## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>Adım 3-4: başlık ve gezinti çubuğu oluşturmak için şablon devralmayı kullanma
+## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>3-4. Adım: Üst bilgi ve gezinti çubuğu oluşturmak için şablon devralmayı kullanma
 
-Modern Web Apps, her sayfada açık gezinti bağlantıları sağlamak yerine genellikle bir marka üst bilgisi ve en önemli sayfa bağlantılarını, açılan menüleri vb. sağlayan bir gezinti çubuğu kullanır. Üst bilgi ve gezinti çubuğunun tüm sayfalarda aynı olduğundan emin olmak için, her sayfa şablonunda aynı kodu yinelemek istemezsiniz. Bunun yerine, tüm sayfalarınızın ortak parçalarını tek bir yerde tanımlamak isteyebilirsiniz.
+Modern web uygulamaları, her sayfada açık gezinti bağlantıları kullanmak yerine genellikle en önemli sayfa bağlantılarını, açılan menüleri ve diğer öğeleri sağlayan bir marka üst bilgisi ve gezinti çubuğu kullanır. Üst bilgi ve gezinti çubuğunun tüm sayfalarda aynı olduğundan emin olmak için, her sayfa şablonunda aynı kodu tekrarlamak istemiyorsanız. Bunun yerine tüm sayfalarınızı ortak bölümlerini tek bir yerde tanımlamak istiyor siniz.
 
-Flask 'nın şablon oluşturma sistemi (varsayılan olarak Jınja), birden çok şablon genelinde belirli öğeleri yeniden kullanmak için iki yol sağlar: dahil ve devralma.
+Flask'in şablon oluşturma sistemi (varsayılan olarak Jinja), belirli öğeleri birden çok şablonda yeniden kullanmak için iki yol sağlar: ekleme ve devralma.
 
-- , Söz dizimi kullanılarak başvuran şablonda belirli bir yere eklediğiniz diğer sayfa şablonlarıyla *dahildir* `{% include <template_path> %}` . Ayrıca, kodda dinamik olarak yolu değiştirmek istiyorsanız bir değişkeni de kullanabilirsiniz. Eklemeleri genellikle sayfanın gövdesinde, paylaşılan şablonu sayfada belirli bir konumda çekmek için kullanılır.
+- *Eklemeler,* söz dizimi kullanarak başvuran şablonda belirli bir yere ekley istediğiniz diğer sayfa `{% include <template_path> %}` şablonlarıdır. Yolu kodda dinamik olarak değiştirmek için değişken de kullanabilirsiniz. Eklemeler genellikle bir sayfanın gövdesinde, paylaşılan şablonu sayfada belirli bir konuma çekmek için kullanılır.
 
-- *Devralma* , `{% extends <template_path> %}` başvuran şablonun üzerinde derleneceği paylaşılan temel şablonu belirtmek için bir sayfa şablonunun başındaki öğesini kullanır. Devralma genellikle, bir uygulamanın sayfalarına yönelik olarak paylaşılan bir düzen, gezinme çubuğu ve diğer yapıları tanımlamak için kullanılır. bu nedenle, şablonlar yalnızca temel şablonun *bloklar* olarak adlandırılan belirli bölgelerini eklemesi veya değiştirmesi gerekir.
+- *Devralma,* başvuran şablonun daha sonra üzerinde derlemesi yapılan paylaşılan bir temel şablon belirtmek için sayfa şablonunun başında `{% extends <template_path> %}` kullanır. Devralma genellikle bir uygulamanın sayfaları için paylaşılan düzen, gezinti çubuğu ve diğer yapıları tanımlamak için kullanılır. Bu şekilde başvuran şablonların yalnızca bloklar olarak adlandırılan temel şablonun belirli alanlarını eklemesi veya değiştirmesi *gerekir.*
 
-Her iki durumda da `<template_path>` uygulamanın *Şablonlar* klasörüne görelidir ( `../` veya `./` Ayrıca izin verilir).
+Her iki durumda `<template_path>` da, uygulamanın *templates klasörüne göredir* ( `../` veya buna da izin `./` verilir).
 
-Bir temel şablon, ve etiketlerini kullanarak *blokları* ayırıcıları `{% block <block_name> %}` `{% endblock %}` . Başvurulan bir şablon daha sonra aynı blok adına sahip Etiketler kullanıyorsa, blok içeriği temel şablonun üzerine yazar.
+Temel şablon, ve etiketlerini *kullanarak blokların* `{% block <block_name> %}` çizgilerini `{% endblock %}` oluşturur. Başvuran bir şablon aynı blok adına sahip etiketleri kullanıyorsa, blok içeriği temel şablonun içeriğini geçersiz kılar.
 
-Aşağıdaki adımlarda devralma gösterilmektedir:
+Aşağıdaki adımlar devralmayı gösterir:
 
-1. Uygulamanın *Şablonlar* klasöründe,layout.html adlı yeni bir HTML dosyası oluşturun (   >  **Yeni öğe** Ekle bağlam menüsünü veya   >  **HTML sayfası** Ekle ' yi kullanarak) ve içeriğini aşağıdaki biçimlendirme ile değiştirin. Bu şablonun, başvuran sayfaların yerini almak için gereken "içerik" adlı bir blok içerdiğini görebilirsiniz:
+1. Uygulamanın *templates* klasöründe ,layout.html adlı yeni bir HTML dosyası oluşturun (Yeni öğe ekle bağlam menüsünü veya HTML Sayfası Ekle' menüsünü kullanarak) ve içeriğini aşağıdaki  >     >  işaretlemeyle değiştirin.  Bu şablonun, başvuran sayfaların değiştirmesi gereken "content" adlı bir blok içerdiğini görüyorsunuz:
 
     ```html
     <!DOCTYPE html>
@@ -222,7 +222,7 @@ Aşağıdaki adımlarda devralma gösterilmektedir:
     </html>
     ```
 
-1. Uygulamanın *static/site. css* dosyasına aşağıdaki stilleri ekleyin (Bu izlenecek yol, yanıt veren tasarımı göstermeye çalışmıyor; bu stiller yalnızca ilginç bir sonuç oluşturmak için kullanılır):
+1. Uygulamanın *static/site.css* dosyasına aşağıdaki stilleri ekleyin (bu kılavuz burada duyarlı tasarımı göstermeyi denemez; bu stiller yalnızca ilginç bir sonuç oluşturmak içindir):
 
     ```css
     .navbar {
@@ -254,7 +254,7 @@ Aşağıdaki adımlarda devralma gösterilmektedir:
     }
     ```
 
-1. *Şablonları/index.html* 'yi, temel şablona başvuracak ve içerik bloğunu geçersiz kılacak şekilde değiştirin. Devralma kullanarak bu şablonu basit hale getirebilirsiniz:
+1. Temel şablona başvurmak index.htmve içerik bloğuna geçersiz kılmak için *şablonları/şablonları index.html* olarak değiştirme. Devralmayı kullanarak bu şablonun basit hale gelir:
 
     ```html
     {% extends "layout.html" %}
@@ -263,7 +263,7 @@ Aşağıdaki adımlarda devralma gösterilmektedir:
     {% endblock %}
     ```
 
-1. *Şablonları/about.html* 'yi aynı zamanda temel şablona başvuracak ve içerik bloğunu geçersiz kılacak şekilde değiştirin:
+1. Temel şablona başvurmak about.htmve içerik bloğuna geçersiz kılmak için *şablonları/about.htm* l'sini değiştirme:
 
     ```html
     {% extends "layout.html" %}
@@ -272,20 +272,17 @@ Aşağıdaki adımlarda devralma gösterilmektedir:
     {% endblock %}
     ```
 
-1. Sonuçları gözlemlemek için sunucuyu çalıştırın. Bitince sunucuyu kapatın.
+1. Sonuçları gözlemlemek için sunucuyu çalıştırın. Bittiğinde sunucuyu kapatın.
 
-    ![Gezinti çubuğunu gösteren uygulama çalıştırılıyor](media/flask/step03-nav-bar.png)
+    ![Gezinti çubuğunu gösteren çalışan uygulama](media/flask/step03-nav-bar.png)
 
-1. Uygulamada önemli değişiklikler yapıldığından, [değişikliklerinizi kaynak denetimine kaydetmek](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)iyi bir zaman alabilir.
+1. Uygulamada önemli değişiklikler yaptığınız için, değişikliklerinizi kaynak denetimine [işlemenin zamanı geldi.](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-> [!div class="nextstepaction"]
-> [Tam Flask Web projesi şablonunu kullanın](learn-flask-visual-studio-step-04-full-flask-project-template.md)
-
-## <a name="go-deeper"></a>Daha derin git
+Şu kaynaklarla daha derin gidebilirsiniz:
 
 - [Web uygulamasını Azure App Service dağıtma](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - Denetim akışı gibi Jınja şablonlarının daha fazla özelliği için bkz. [Jınja Template Designer belgeleri](http://jinja.palletsprojects.com/en/2.10.x/templates/) (Jinja.pocoo.org)
 - Kullanımıyla ilgili ayrıntılar için `url_for` , bkz. Flask uygulama nesnesi belgeleri içindeki [url_for](https://flask.palletsprojects.com/en/1.0.x/api/#flask.url_for) (Flask.pocoo.org)
-- GitHub 'daki öğretici kaynak kodu: [Microsoft/Python-Sample-vs-Learning-Flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- GitHub eğitim kaynak kodu: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

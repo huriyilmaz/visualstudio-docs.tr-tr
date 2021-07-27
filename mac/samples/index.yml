@@ -88,11 +88,11 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: /samples/xamarin/mac-samples/hello-mac/
+          - href: /xamarin/mac/get-started/hello-mac/
             html: Mac geliştirmesine başlamak için Merhaba Dünya uygulaması.
             image:
               src: ../media/samples/hellomac.png
-              href: /samples/xamarin/mac-samples/hello-mac/
+              href: /xamarin/mac/get-started/hello-mac/
             title: 'Hello, Mac'
           - href: /samples/xamarin/mac-samples/maccontrols/
             html: Mac uygulamaları için kullanıcı arabirimi denetimi örnekleri.

@@ -9,7 +9,7 @@
     - name: devinit ve GitHub Codespaces
       href: devinit-and-codespaces.md
     - name: Sık sorulan sorular
-      href: faq.md
+      href: faq.yml
     - name: Araçlar
       items:
         - name: Araç listesi
@@ -56,7 +56,7 @@
           href: tool-require-vcpkg.md
         - name: require-vscomponent
           href: tool-require-vscomponent.md
-        - name: gerektir-Winget
+        - name: require-winget
           href: tool-require-winget.md
         - name: set-env
           href: tool-set-env.md
@@ -68,7 +68,7 @@
           href: tool-windowsfeature-enable.md
         - name: windowsfeature-list
           href: tool-windowsfeature-list.md
-        - name: Winget-Install
+        - name: winget-install
           href: tool-winget-install.md
         - name: wsl-install
           href: tool-wsl-install.md

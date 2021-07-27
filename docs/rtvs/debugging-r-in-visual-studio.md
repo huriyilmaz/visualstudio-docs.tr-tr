@@ -2,22 +2,23 @@
 title: R kodunda hata ayıklama
 description: Visual Studio, kesme noktaları, iliştirme, çağrı yığını ve değişkenleri inceleme dahil olmak üzere R için tam hata ayıklama deneyimi sağlar.
 ms.date: 01/24/2018
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: e3696cac00c726cffb76f29a1da2c503a15af2bd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2234efa7bc15381660a86d670ae07673355c4d9b
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885826"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114680021"
 ---
-# <a name="debug-r-in-visual-studio"></a>Visual Studio 'da R 'de hata ayıkla
+# <a name="debug-r-in-visual-studio"></a>Visual Studio 'de R 'de hata ayıkla
 
-Visual Studio için R Araçları (RTVS), Visual Studio 'nun tam hata ayıklama deneyimiyle tümleştirilir (bkz. [Visual Studio 'Da hata ayıklama](../debugger/debugger-feature-tour.md)). Bu destek kesme noktaları, çalışan işlemlere ekleme, değişkenleri İnceleme ve izleme ve çağrı yığınını İnceleme içerir. Daha sonra bu makale, R ve RTVS 'e özgü olan hata ayıklama yönlerini araştırır.
+Visual Studio için R Araçları (rtvs), Visual Studio tam hata ayıklama deneyimiyle tümleştirilir (bkz. [Visual Studio hata ayıklama](../debugger/debugger-feature-tour.md). Bu destek kesme noktaları, çalışan işlemlere ekleme, değişkenleri İnceleme ve izleme ve çağrı yığınını İnceleme içerir. Daha sonra bu makale, R ve RTVS 'e özgü olan hata ayıklama yönlerini araştırır.
 
 Bir r projesinde başlangıç R dosyası için hata ayıklayıcının başlatılması, diğer proje türleri için de aynıdır: **hata ayıklama**  >  **başlatma hata ayıklaması**, **F5** tuşu veya hata ayıklama araç çubuğundaki **kaynak başlangıç dosyası** .
 
@@ -25,15 +26,15 @@ Bir r projesinde başlangıç R dosyası için hata ayıklayıcının başlatıl
 
 Başlangıç dosyasını değiştirmek için Çözüm Gezgini bir dosyaya sağ tıklayın ve **Başlangıç R betiği olarak ayarla**' yı seçin.
 
-Her durumda, "kaynaklar" hata ayıklayıcısını etkileşimli pencerede başlatmak, bu da yükleme ve etkileşimli pencerenin çıktısında gösterildiği gibi bu dosyayı çalıştırmak anlamına gelir:
+Her durumda, "kaynaklar&quot; hata ayıklayıcısını etkileşimli pencerede başlatmak, bu da yükleme ve etkileşimli pencerenin çıktısında gösterildiği gibi bu dosyayı çalıştırmak anlamına gelir:
 
 ```output
-> rtvs::debug_source("c:/proj/rproject1/rproject1/script.R")
+> rtvs::debug_source(&quot;c:/proj/rproject1/rproject1/script.R")
 Sourcing: c:\proj\rproject1\rproject1\script.R
 Sourcing: c:\proj\rproject1\rproject1\Settings.R
 ```
 
-`rtvs::debug_source`İşlevin betiği kaynağında kullanıldığını unutmayın. RTVS 'nin hata ayıklama hazırlığı için kodunuzu değiştirmesi gerektiğinden, bu işlev gereklidir. Herhangi bir RTVS kaynak kullanımı komutunu kullanırken ve bir hata ayıklayıcı eklendiğinde, Visual Studio otomatik olarak kullanır `rtvs::debug_source` .
+`rtvs::debug_source`İşlevin betiği kaynağında kullanıldığını unutmayın. RTVS 'nin hata ayıklama hazırlığı için kodunuzu değiştirmesi gerektiğinden, bu işlev gereklidir. herhangi bir rtvs kaynağını kullanma komutu kullanılırken ve bir hata ayıklayıcı eklendiğinde, Visual Studio otomatik olarak kullanır `rtvs::debug_source` .
 
 Ayrıca, etkileşimli pencere araç çubuğunda **R araçları**  >  **oturumu**  >  **iliştirme hata ayıklayıcısı** komutunu, R etkileşim **Hata Ayıkla**  >   komutunu veya hata **ayıklayıcı Ekle** komutunu kullanarak doğrudan hata ayıklayıcıyı etkileşimli pencereden el ile ekleyebilirsiniz. Bunu yaptıktan sonra, hata ayıklamak istediğiniz dosyaları kaynak olarak kullanabilirsiniz. Dosyaları el ile kaynak olarak almak istiyorsanız, `rtvs::debug_source` R 'de normal komutunu kullandığınızdan emin olun `source` .
 

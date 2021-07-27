@@ -1,23 +1,24 @@
 ---
 title: R ile verileri görselleştirme
-description: Visual Studio 'da R programlarından verileri, çizim pencerelerini kullanarak çizdirme.
+description: çizim pencerelerini kullanarak Visual Studio R programlarından verileri çizdirme.
 ms.date: 06/29/2017
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 64b5ac36edf6c5f506628f9af88ba36bd62c71c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 38f3e684cf9d045baeb107b7d0ab84cddfff50be
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851835"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114679832"
 ---
 # <a name="create-visual-data-plots-with-r"></a>R ile görsel veri çizimleri oluşturma
 
-Çizim, veri bilimi 'nin iş akışının önemli bir parçasıdır. Visual Studio için R Araçları (RTVS) ' de, tüm çizim etkinlikleri, bu anahtar etkinliğiyle üretkenliğinizi artırmak için tasarlanan bir veya daha fazla çizim penceresi etrafında ortalar.
+Çizim, veri bilimi 'nin iş akışının önemli bir parçasıdır. Visual Studio için R Araçları (rtvs) ' de, tüm çizim etkinlikleri, bu anahtar etkinliğiyle üretkenliğinizi artırmak için tasarlanan bir veya daha fazla çizim penceresi etrafında ortalar.
 
 ![Hero görüntüsünü çizme](media/plotting-hero-image.png)
 
@@ -38,11 +39,11 @@ ms.locfileid: "99851835"
 
 Teknik olarak, R `plot` komutları çıktılarını bir r grafik cihazında işleyebilir; bir çizim penceresi, her çizim penceresine bir cihaz numarası verilmesinin neden olduğu bir r grafik cihazının içeriğini işler.
 
-Çizim pencereleri Visual Studio projelerinden bağımsızdır ve projeleri yüklerken ve kapatırken açık kalır.
+çizim pencereleri Visual Studio projeden bağımsızdır ve projeleri yüklerken ve kapatırken açık kalır.
 
 Bir çizim oluşturmak, yukarıdaki çizim geçmişini (bkz. [Çizim geçmişi](#plot-history)) kaydederek "etkin" çizim penceresini kullanır. Örneğin, girin `plot(100:1)` ve ilk çizim, aşağı doğru bir satırla değiştirilmiştir.
 
-Diğer tüm Visual Studio pencereleri gibi. çizim penceresi özelleştirilmiş düzenleri destekler (bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md). Çizim pencereleri, Visual Studio çerçevesindeki farklı konumlara yerleştirilebilir, bu çerçeve içinde yeniden boyutlandırılabilir veya tamamen bağımsız yeniden boyutlandırma için çerçevenin dışına çıkarılabilir.
+diğer tüm Visual Studio pencereleri gibi. çizim penceresi özelleştirilmiş düzenleri destekler (bkz. [Visual Studio pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md). çizim pencereleri, Visual Studio çerçevesi içinde farklı konumlara yerleştirilebilir, bu çerçeve içinde yeniden boyutlandırılabilir veya bağımsız yeniden boyutlandırılmaya tamamen çerçeveyi kullanıma alabilir.
 
 Bir çizim penceresinin yeniden boyutlandırılması, en iyi kalite görüntüsünü sağlamak için her zaman çizimi yeniden oluşturur. Genellikle bir çizimi bir dosyaya veya panoya vermeden önce, sonraki bölümde açıklanan komutları kullanarak yeniden boyutlandırmak istersiniz.
 
@@ -59,13 +60,13 @@ Bir çizim penceresinin yeniden boyutlandırılması, en iyi kalite görüntüs�
 | ![Görüntü olarak Kaydet düğmesi](media/plotting-toolbar-05-save-as-image.png)| Görüntü olarak kaydet | Bir dosya adı ister ve geçerli çizimi (pencere boyutundaki pencere içeriği) bir görüntü dosyasına kaydeder. Kullanılabilir biçimler `.png` ,, `.jpg` `.bmp` ve `.tif` . |
 | ![PDF olarak Kaydet düğmesi](media/plotting-toolbar-06-save-as-pdf.png)| PDF olarak kaydet | Geçerli pencere boyutunu kullanarak geçerli çizimi bir PDF dosyasına kaydeder. PDF ölçeklendirilirse çizim yeniden işlenir. |
 | ![Bit eşlem olarak Kopyala düğmesi](media/plotting-toolbar-07-copy-as-bitmap.png)| Bit eşlem olarak Kopyala | Çizimi panoya, geçerli pencere boyutunu kullanarak raster bit eşlem olarak kopyalar. |
-| ![Meta dosyası olarak Kopyala düğmesi](media/plotting-toolbar-08-copy-as-metafile.png)| Meta dosyası olarak Kopyala | Çizimi panoya [Windows meta dosyası](https://en.wikipedia.org/wiki/Windows_Metafile) (Vikipedi) olarak kopyalar. |
+| ![Meta dosyası olarak Kopyala düğmesi](media/plotting-toolbar-08-copy-as-metafile.png)| Meta dosyası olarak Kopyala | çizimi pano 'ya bir [Windows meta dosyası](https://en.wikipedia.org/wiki/Windows_Metafile) (vikipi) olarak kopyalar. |
 | ![Çizim düğmesini kaldır](media/plotting-toolbar-09-remove-plot.png)| Çizimi Kaldır | Geçerli çizimi geçmişten kaldırır. |
 | ![Tüm çizimleri temizle düğmesi](media/plotting-toolbar-10-clear-all-plots.png) | Tüm çizimleri temizle | Geçmişten tüm çizimleri kaldırır (onay ister). |
 
 ## <a name="multiple-plot-windows"></a>Birden çok çizim penceresi
 
-Veri bilimcileri birçok farklı veri kümesinden çok sayıda çizim ile çalıştığı için RTVS, çok sayıda bağımsız çizim penceresi oluşturmanızı sağlar. Daha sonra bu pencereleri, Visual Studio çerçevesinde veya bu çerçevenin dışında istediğiniz şekilde düzenleyebilirsiniz. (Windows 'u yerleştirme ve yeniden boyutlandırma hakkında genel bilgi için bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md) .)
+Veri bilimcileri birçok farklı veri kümesinden çok sayıda çizim ile çalıştığı için RTVS, çok sayıda bağımsız çizim penceresi oluşturmanızı sağlar. daha sonra bu pencereleri, Visual Studio çerçevesinde veya bu çerçevenin dışında istediğiniz şekilde düzenleyebilirsiniz. (bkz. windows 'u yerleştirme ve yeniden boyutlandırma hakkında genel bilgi için [Visual Studio pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md) .)
 
 Araç çubuğu düğmesini veya **R araçları**  >  **Çizim**  >  **penceresi ' ni** kullanarak yeni bir çizim penceresi oluşturursunuz. Yeni çizim penceresi, yeni çizilmez oluşturulan *etkin* pencere olur. Etkin pencereyi değiştirmek için, ona geçin ve **çizim penceresi** araç çubuğu düğmesini veya **R araçları**' nı Etkinleştir  >    >  **Çiz penceresini** seçin.
 
@@ -84,7 +85,7 @@ Bu geçmiş, bu pencerede görüntülenen, farklı çizim pencereleri (veya ciha
 
 İlişkili penceresinde bir çizim açmak için, bu çizimi çift tıklatın, seçin ve ardından Çizim araç çubuğunu **göster** düğmesini seçin. Alternatif olarak, çizimi sağ tıklayıp **çizimi göster**' i seçin. Ayrıca, tek bir çizim seçebilir ve bağlam ya da **düzenleme** menülerinden kopyalayabilir, kesebilir veya silebilirsiniz.
 
-Çizim geçmişinizin tüm pencereler genelinde ömrü, etkileşimli R oturumunuzun ömrüne bağlanır. R oturumunuzu sıfırlayabilir veya çıkıp Visual Studio 'Yu yeniden başlatırsanız, çizim geçmişiniz sıfırlanır.
+Çizim geçmişinizin tüm pencereler genelinde ömrü, etkileşimli R oturumunuzun ömrüne bağlanır. R oturumunuzu sıfırlarsanız veya Visual Studio çıkıp yeniden başlatırsanız, çizim geçmişinizin sıfırlanması gerekir.
 
 ## <a name="programmatically-manipulate-plot-windows"></a>Çizim pencerelerini programlı olarak değiştirme
 

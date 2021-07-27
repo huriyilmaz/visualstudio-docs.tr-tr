@@ -69,10 +69,6 @@
           href: learn-flask-visual-studio-step-02-create-app.md
         - name: 3 - Statik dosyaları işleme ve sayfa ekleme
           href: learn-flask-visual-studio-step-03-serve-static-files-add-pages.md
-        - name: 4 - Flask Web Projesi şablonunu kullanma
-          href: learn-flask-visual-studio-step-04-full-flask-project-template.md
-        - name: 4 - Flask Web Projesi şablonunu anketlerini kullanma
-          href: learn-flask-visual-studio-step-05-polls-flask-web-project-template.md
 - name: Kavramlar
   items:
     - name: Python projeleri
@@ -83,8 +79,6 @@
           href: python-web-application-project-templates.md
         - name: Django web projesi şablonu
           href: python-django-web-application-project-template.md
-        - name: Azure bulut hizmeti şablonu
-          href: python-azure-cloud-service-project-template.md
     - name: Python için Azure SDK
       href: /python/azure/?view=azure-python&preserve-view=true
 - name: Nasıl yapılır kılavuzları

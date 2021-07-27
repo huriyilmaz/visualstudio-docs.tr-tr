@@ -1,25 +1,26 @@
 ---
 title: R çalışma alanları
-description: R kodunun, Visual Studio 'da çalışma alanlarını kullanarak nerede çalıştığını denetleme.
+description: Visual Studio içindeki çalışma alanlarını kullanarak R kodunun nerede çalıştığını denetleme.
 ms.date: 01/24/2018
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 3627a8944941fc77bb9b19fe3dd0a1549f41892a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a00ff62c2bcb860b85339b8a164b28b90968c17f
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961592"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114679690"
 ---
 # <a name="control-where-r-code-runs-with-workspaces"></a>R kodunun çalışma alanlarıyla çalıştığı yeri denetleme
 
-Visual Studio için R Araçları (RTVS) içindeki bir çalışma alanı, bir R oturumunun nerede çalıştığını, hem yerel hem de uzak bilgisayarlarda meydana gelen bir şekilde yapılandırmanıza olanak tanır. Amaç, potansiyel olarak daha güçlü bulut tabanlı bilgisayarlardan yararlanmanızı sağlayan, karşılaştırılabilir bir kullanıcı deneyimiyle birlikte çalışmanıza olanak sağlamaktır.
+Visual Studio için R Araçları (rtvs) içindeki bir çalışma alanı, bir R oturumunun nerede çalıştığını, hem yerel hem de uzak bilgisayarlarda meydana gelen bir şekilde yapılandırmanıza olanak tanır. Amaç, potansiyel olarak daha güçlü bulut tabanlı bilgisayarlardan yararlanmanızı sağlayan, karşılaştırılabilir bir kullanıcı deneyimiyle birlikte çalışmanıza olanak sağlamaktır.
 
-**Çalışma alanları** penceresini açmak için **R araçları**  >  **Windows**  >  **çalışma alanları** komutunu kullanın veya **CTRL** + **9**' a basın.
+**çalışma alanları** penceresini açmak için **R araçları**  >  **Windows**  >  **çalışma alanları** komutunu kullanın veya **Ctrl** + **9**' a basın.
 
 ![Visual Studio için R Araçları çalışma alanları penceresi (VS2017)](media/workspaces-window.png)
 
@@ -35,7 +36,7 @@ Varsayılan olarak, bir projeyi kapatıp yeniden açtığınızda RTVS çalışm
 
 Yerel çalışma alanları listesinde bilgisayarınızda yüklü olan tüm R yorumlayıcıları görüntülenir.
 
-Visual Studio başlatıldığında, **HKEY_LOCAL_MACHINE\Software\R-Core\\** kayıt defteri anahtarını arayarak yüklediğiniz tüm R sürümlerini otomatik olarak algılamaya çalışır. Bu denetim yalnızca başlangıçta yapıldığından, yeni bir R yorumlayıcısı yüklüyorsanız Visual Studio 'Yu yeniden başlatmanız gerekir.
+Visual Studio başladığında, **HKEY_LOCAL_MACHINE\Software\R-Core\\** kayıt defteri anahtarına bakarak, yüklediğiniz tüm R sürümlerini otomatik olarak algılamaya çalışır. bu denetim yalnızca başlangıçta yapıldığından, yeni bir R yorumlayıcısı yüklüyorsanız Visual Studio yeniden başlatmanız gerekir.
 
 RTVS, standart olmayan bir şekilde yüklenmiş bir R yorumlayıcısı algılamayabilir (örneğin, yalnızca bir yükleyiciyi çalıştırmak yerine dosyaları bir klasöre kopyalarken). Bu durumda, el ile yeni bir yerel R çalışma alanını aşağıdaki şekilde oluşturun:
 
@@ -50,7 +51,7 @@ RTVS, standart olmayan bir şekilde yüklenmiş bir R yorumlayıcısı algılama
 
 Uzak çalışma alanları, uzak bir bilgisayardaki R oturumuna bağlanmanızı sağlar. (Bir bilgisayarın bu amaçla nasıl yapılandırılacağı hakkında [uzak çalışma alanlarını ayarlama](setting-up-remote-r-workspaces.md) bölümüne bakın.)
 
-Visual Studio, uzak çalışma alanlarını otomatik olarak algılamadığı için, önceki bölümde açıklandığı gibi, çalışma alanları penceresindeki **Ekle** düğmesini kullanarak bunları el ile eklemeniz gerekir. Bu durumda, uzak bilgisayarın URI 'sini yerel bir yol yerine girin.
+Visual Studio, uzak çalışma alanlarını otomatik olarak algılamadığı için, önceki bölümde açıklandığı gibi, çalışma alanları penceresindeki **ekle** düğmesini kullanarak bunları el ile eklemeniz gerekir. Bu durumda, uzak bilgisayarın URI 'sini yerel bir yol yerine girin.
 
 > [!Important]
 > Uzak çalışma alanları, uzak bilgisayarla iletişimin gizliliğini ve bütünlüğünü sağlamak için *https protokolünü kullanması gereken* bir URI tarafından tanımlanır. Visual Studio, HTTPS 'yi desteklemeyen bir uzak bilgisayara bağlanamaz.
@@ -83,11 +84,11 @@ Kaldırılmış olan bir yerel çalışma alanına veya devre dışı bırakılm
 
 ![RTVS 'ye hiçbir çalışma alanı bağlandığında hata](media/workspaces-disconnected-interactive-window.png)
 
-Bunu düzeltmek için, çalışma alanları penceresindeki başka bir çalışma alanına geçin. Kullanılabilir çalışma alanı yoksa bir R yorumlayıcı yüklemeniz gerekir. Visual Studio çalışırken bir yorumlayıcı yüklediyseniz Visual Studio 'Yu yeniden başlatmayı da deneyebilirsiniz.
+Bunu düzeltmek için, çalışma alanları penceresindeki başka bir çalışma alanına geçin. Kullanılabilir çalışma alanı yoksa bir R yorumlayıcı yüklemeniz gerekir. Visual Studio çalışırken yorumlayıcı yüklediyseniz Visual Studio yeniden başlatmayı da deneyebilirsiniz.
 
 ### <a name="switch-to-a-remote-workspace"></a>Uzak çalışma alanına geçiş yap
 
-RTVS, bir uzak çalışma alanına ilk kez bağlandığınızda kimlik bilgilerini ister, daha sonra bu kimlik bilgilerini (güvenli Windows kimlik bilgisi dolabı kullanarak) önbelleğe alır. Daha sonra uzak sunucuyla iletişim HTTPS üzerinden güvenli bir şekilde yapılır (gerekli olan).
+rtvs, uzak bir çalışma alanına ilk kez bağlandığınızda kimlik bilgilerini ister, daha sonra bu kimlik bilgilerini (güvenli Windows kimlik bilgisi dolabı kullanarak) önbelleğe alır. Daha sonra uzak sunucuyla iletişim HTTPS üzerinden güvenli bir şekilde yapılır (gerekli olan).
 
 Sunucunun yapılandırmasına bağlı olarak, bu okuma bağlantısı sırasında bir sertifika uyarısı görebilirsiniz, "uzak R Services tarafından sunulan güvenlik sertifikası gerçekten makineye bağlandığınızdan emin olmamıza izin vermez."
 
@@ -109,7 +110,7 @@ Ayrıca, uzak çalışma alanları ile, çalışma dizinindeki tüm dosyalar ayn
 
 ## <a name="copy-project-files-to-remote-workspaces"></a>Proje dosyalarını uzak çalışma alanlarına Kopyala
 
-Visual Studio 'da R projeleriyle çalışırken, uzak bir çalışma alanı kullanırken bile yerel bilgisayar her zaman en son proje dosyalarına sahiptir. Diğer bir deyişle, Visual Studio 'da bir projeyi açtığınızda (genellikle bu projeyi içeren bir çözümün açılması anlamına gelir), RTVS, projenin içeriğinin yerel bilgisayarda tamamen olduğunu varsayar. Uzak çalışma alanı, aslında projenin dosyaları için geçici bir ana bilgisayar ve koddan herhangi bir çıkış olur. Bu, örneğin, etkileşimli pencerede kullanarak bir dosya yüklenirken `source` , bu dosyanın zaten sağladığınız yoldaki uzak bilgisayarda olması gerektiği veya uzak R yorumlayıcısının geçerli çalışma dizininde olması gerektiği anlamına gelir ( `setwd()` işlevle ayarlanır).
+Visual Studio 'de R projeleriyle çalışırken, uzak bir çalışma alanı kullanırken bile yerel bilgisayar her zaman en son proje dosyalarına sahiptir. diğer bir deyişle, bir projeyi Visual Studio açtığınızda (genellikle bu projeyi içeren bir çözümün açılması anlamına gelir), rtvs, projenin içeriğinin yerel bilgisayarda tamamen olduğunu varsayar. Uzak çalışma alanı, aslında projenin dosyaları için geçici bir ana bilgisayar ve koddan herhangi bir çıkış olur. Bu, örneğin, etkileşimli pencerede kullanarak bir dosya yüklenirken `source` , bu dosyanın zaten sağladığınız yoldaki uzak bilgisayarda olması gerektiği veya uzak R yorumlayıcısının geçerli çalışma dizininde olması gerektiği anlamına gelir ( `setwd()` işlevle ayarlanır).
 
 Dosyalar uzak sunucuya aşağıdaki şekilde kopyalanır:
 
@@ -124,9 +125,9 @@ Dosyalar uzak sunucuya aşağıdaki şekilde kopyalanır:
 > [!Note]
 > RTVS, tüm R işlev çağrılarını güvenilir bir şekilde ele amadığından, `source()` `runApp()` etkileşimli penceredeki veya (kılı uygulamalar için) gibi işlevleri çağırmak uzak çalışma  alanına dosya kopyalamaz.
 
-[Proje özellikleri](r-projects-in-visual-studio.md#project-properties) , rtvs 'in bir proje çalıştırıldığında dosyaları kopyaladığını ve tam olarak hangi dosyaların kopyalandığını denetler. Bu sayfayı açmak için **Proje**  >  **(ad) Özellikler** menü komutunu seçin ya da Çözüm Gezgini ' de projeye sağ tıklayıp **Özellikler**' i seçin.
+[Project özellikler](r-projects-in-visual-studio.md#project-properties) , rtvs 'in bir proje çalıştırıldığında dosyaları kopyalayıp kopyalamadığını ve tam olarak hangi dosyaların kopyalandığını denetler. bu sayfayı açmak için **Project**  >  **(ad) özellikler** menü komutunu seçin ya da Çözüm Gezgini ' de projeye sağ tıklayıp **özellikler**' i seçin.
 
-![Dosya Aktarım ayarlarıyla proje özellikleri çalıştırma sekmesi](media/workspaces-remote-file-transfer-filter-settings.png)
+![dosya aktarma ayarlarıyla Project özellikleri çalıştırma sekmesi](media/workspaces-remote-file-transfer-filter-settings.png)
 
 Burada, **Run on Files** özelliği, rtvs 'nin proje dosyalarını otomatik olarak kopyaladığını belirler. **Aktarılacak dosyalar** daha sonra tam olarak hangi dosyaların aktarılacağını filtreliyor. Varsayılan değer yalnızca kopyalama amaçlıdır *. R*, *. RMD*, *. SQL*, *. MD* ve *. cpp* dosyaları. Bu davranış, büyük veri dosyalarını her çalıştırmada yanlışlıkla sunucuya kopyalamayı önler.
 

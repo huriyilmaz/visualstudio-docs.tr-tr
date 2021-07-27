@@ -2,22 +2,23 @@
 title: R için etkileşimli REPL
 description: Visual Studio için, düzenleyici pencereleri ile tümleştirilmiş etkileşimli REPL ortamını kullanma.
 ms.date: 06/28/2017
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 0355f1017bb661b4f72325fb74f60653f69cd182
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 40ecca9e6381095d292b9a5205419acc9957499c
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878194"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114679682"
 ---
 # <a name="work-with-the-r-interactive-window"></a>R etkileşimli penceresiyle çalışma
 
-Visual Studio için R Araçları (RTVS), bir **REPL** (Read-değerlendir-PRINT-Loop) penceresi olarak da bilinen, r kodunu girebileceğiniz ve sonuçları hemen görebileceğiniz r etkileşimli bir pencere sağlar. Tüm modüller, söz dizimi ve değişkenler, IntelliSense de etkileşimli pencerede kullanılabilir.
+Visual Studio için R Araçları (rtvs), bir **REPL** (Read-değerlendir-prınt-Loop) penceresi olarak da bilinen, r kodunu girebileceğiniz ve sonuçları hemen görebileceğiniz r etkileşimli bir pencere sağlar. Tüm modüller, söz dizimi ve değişkenler, IntelliSense de etkileşimli pencerede kullanılabilir.
 
 Etkileşimli pencere, normal R Düzenleyicisi pencereleri ile de tümleşiktir. Kod seçebilir ve CTRL tuşuna basabilir  + ya da sağ tıklayıp **etkileşimli olarak çalıştır**' ı seçerek kod, doğrudan yazmış gibi etkileşimli pencerede satır içine çalıştırılır. İmleç bir düzenleyici penceresinde tek satırundayken, **CTRL** + **ENTER** tuşu bu satırı etkileşimli pencereye gönderir ve ardından imleci bir sonraki satıra taşıdır. Bu şekilde, kodda ilerlemek için yalnızca **CTRL** + **tuşuna** tekrar tekrar basabilirsiniz.
 
@@ -50,19 +51,19 @@ Araç çubuğunun bulunduğu etkileşimli pencere aşağıda verilmiştir:
 
 Araç çubuğu komutları, çoğu, klavye eşdeğerleri olan ve **r** araçları  >  **oturumu** ve **r araçları**  >  **çalışma dizini** menülerinde (ya da belirtildiği gibi) kullanılabilen aşağıdaki gibidir:
 
-| Düğme | Komut | Anahtar birleşimi | Description |
+| Düğme | Komut | Anahtar birleşimi | Açıklama |
 | --- | --- | --- | --- |
 | ![Sıfırla düğmesi](media/repl-toolbar-01-reset.png) | Sıfırla | **CTRL** + **SHIFT** + **F10** | Etkileşimli pencere oturumunu sıfırlar ve tüm değişkenleri ve geçmişi temizleyerek. |
 | ![Temizle düğmesi](media/repl-toolbar-02-clear.png) | Temizle | **CTRL** + **L** | Etkileşimli pencerede gösterilen çıktıyı temizler; oturum değişkenlerini veya geçmişi etkilemez. |
 | ![Geçmiş düğmeleri](media/repl-toolbar-03-history.png) | Önceki geçmiş komutu<br/>Sonraki geçmiş komutu | **Yukarı**, **aşağı**<br/>**Alt** + **Yukarı**, **alt** + **aşağı** | Çok satırlı kod blokları için belirli davranışlar ile geçmişi kaydırır. Bkz. [Geçmiş](#history). |
 | ![Çalışma alanını Yükle düğmesi](media/repl-toolbar-04-load-workspace.png) | Çalışma alanını yükle | yok | Önceki kaydedilmiş bir çalışma alanını yükler (bkz. [çalışma alanları ve oturumlar](#workspaces-and-sessions). |
 | ![Çalışma alanını düğme olarak kaydet](media/repl-toolbar-05-save-workspace-as.png)| Çalışma alanını farklı kaydet | yok | Oturumun geçerli durumunu bir çalışma alanı olarak kaydeder (bkz. [çalışma alanları ve oturumlar](#workspaces-and-sessions). |
-| ![Kaynak R betiği düğmesi](media/repl-toolbar-06-source-r-script.png) | Kaynak R betiği | **CTRL** + **SHIFT** + **S** | `source`Visual Studio düzenleyicisinde kodu çalıştıran Şu anda etkin olan R betiğine sahip çağrılar.  Bu düğme yalnızca Visual Studio düzenleyicisinde bir R dosyası açıksa görünür. |
+| ![Kaynak R betiği düğmesi](media/repl-toolbar-06-source-r-script.png) | Kaynak R betiği | **CTRL** + **SHIFT** + **S** | `source`kodu çalıştıran Visual Studio düzenleyicisinde şu anda etkin olan R betiğine sahip çağrılar.  bu düğme yalnızca Visual Studio düzenleyicisinde bir R dosyası açıkken görünür. |
 | ![Yankı düğmesi ile kaynak R betiği](media/repl-toolbar-07-source-r-script-with-echo.png) | Echo ile kaynak R betiği | **CTRL** + **SHIFT** + Şunu **girin** | Kaynak R betiğiyle aynı ancak betiğin içeriğini etkileşimli pencerede görüntülüyor. |
 | ![Kesme R düğmesi](media/repl-toolbar-08-interrupt-r.png)| Kesme R | **Esc** | Etkileşimli pencerede, `while` Bu bölümün başlangıcında ekran görüntüsündeki döngü gibi çalışan tüm kodu sonlandırır. |
 | ![Hata ayıklayıcı Ekle düğmesi](media/repl-toolbar-09b-attach-debugger.png)| Hata ayıklayıcı Ekle | yok | Ayrıca,   >  **R etkileşim ekle** komutuyla hata ayıkla komutu kullanılarak da kullanılabilir. |
 | ![Çalışma dizinini kaynak dosya konumu olarak ayarla düğmesi](media/repl-toolbar-10-set-working-directory-source.png)| Çalışma dizinini kaynak dosya konumuna ayarla | **CTRL** + **SHIFT** + **E** | Çalışma dizinini etkileşimli pencereye yüklenmiş en son kaynak dosya olarak ayarlar (kullanarak `source` ). Bkz. [çalışma dizini](#working-directory). |
-| ![Çalışma dizinini proje konumuna ayarla düğmesi](media/repl-toolbar-11-set-working-directory-to-project.png) | Çalışma dizinini proje konumuna ayarla | **CTRL** + **SHIFT** + **P** | Çalışma dizinini, Visual Studio 'da Şu anda yüklü olan projenin köküne ayarlar. Bkz. [çalışma dizini](#working-directory). |
+| ![Çalışma dizinini proje konumuna ayarla düğmesi](media/repl-toolbar-11-set-working-directory-to-project.png) | çalışma dizinini Project konuma ayarla | **CTRL** + **SHIFT** + **P** | Çalışma dizinini, Visual Studio şu anda yüklü projenin köküne ayarlar. Bkz. [çalışma dizini](#working-directory). |
 | (Metin alanı) | Çalışma dizini seçin | yok | Çalışma dizini için doğrudan giriş alanı. Bkz. [çalışma dizini](#working-directory). |
 
 ## <a name="workspaces-and-sessions"></a>Çalışma alanları ve oturumlar

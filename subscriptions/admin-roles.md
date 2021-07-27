@@ -1,5 +1,5 @@
 ---
-title: Abonelikler için süper yönetici ve Visual Studio rolleri
+title: Abonelikler için süper yönetici Visual Studio rolleri
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,14 +7,14 @@ ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Süper yönetici ve yönetici rolleri ve yönetici atama hakkında bilgi edinin.
-ms.openlocfilehash: 1f107a5bcef9be61c4693549ee8e628a207cc789
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.openlocfilehash: c5997004f50b78ba8484be51f3e5dd5a22aa868e
+ms.sourcegitcommit: d5c038792da2c86436750380633ee80c39e4c4ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "109973540"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114597055"
 ---
-# <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Abonelik sözleşmelerini yenilemek için Visual Studio yöneticiler
+# <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Abonelik sözleşmelerini yenilemek için Visual Studio ve yöneticiler
 
 Toplu Lisanslama müşterileri için Abonelikler Visual Studio Portal'da iki farklı rol vardır. Bu roller, VLSC'de önceden mevcut olan Birincil/Bildirimler Kişi rolü ve Abonelik Yöneticisi rolüne benzer.
 
@@ -31,10 +31,10 @@ Yeni yöneticiler (yöneticiler) atamak için:
 2. Yöneticileri Yönet etiketli **sekmeye tıklayın.**
 3. **Ekle**'ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Yönetici ekleme](_img/admin-roles/add-admins.png "Yöneticileri Yönet dikey penceresine tıklayın ve sonra yeni yöneticiler atamak için Ekle ' ye tıklayın.")
+   > ![Yönetici ekleme](_img/admin-roles/add-admins.png "Yöneticileri Yönet dikey penceresine ve ardından Yeni yöneticiler atamak için Ekle'ye tıklayın.")
 4. Formu yeni yöneticinin bilgileriyle doldurun.  
    > [!div class="mx-imgBorder"]
-   > ![Yönetici formu ekleme](_img/admin-roles/add-form.png "Yeni yönetici için oturum açma bilgilerini girin ve bir süper yönetici yapıp yapmayacağını seçin.  Ardından Ekle ' ye tıklayın.")
+   > ![Yönetici formu ekleme](_img/admin-roles/add-form.png "Yeni yönetici için oturum açma bilgilerini girin ve süper yönetici olup olmadığını seçin.  Ardından Ekle'ye tıklayın.")
 
    > [!NOTE]
    > Bu yöneticinin ek yönetici atayabilecek durumda olması için Süper Yönetici kutusunu **işaretleyin.**
@@ -50,9 +50,7 @@ Yeni yöneticiler (yöneticiler) atamak için:
 - [Azure belgeleri](/azure/)
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
-
-
 ## <a name="next-steps"></a>Sonraki adımlar
-- [Aboneliklerin nasıl atanacağını](assign-license.md) öğrenin
-- [Abonelik avantajlarının](https://visualstudio.microsoft.com/vs/benefits/) tam aralığı hakkında daha fazla bilgi edinin
+- Abonelik [atamayı öğrenin](assign-license.md)
+- Abonelik avantajlarının tam aralığı hakkında daha [fazla bilgi](https://visualstudio.microsoft.com/vs/benefits/)
 - [Anlaşma tercihlerini belirleme](admin-preferences.md)

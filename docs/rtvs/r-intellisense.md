@@ -2,18 +2,19 @@
 title: R kodu için IntelliSense
 description: Visual Studio IntelliSense, R kodu yazarken işlevler, nesne üyeleri, kod parçacıkları ve tamamlamalar hakkındaki bilgileri görüntüler.
 ms.date: 01/24/2018
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: de6a8ffbaa0fb10929d013a351ebffa8e3f4b529
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 325b93ccbd420b0140fc89ed6869f6bd50064424
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939441"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114679855"
 ---
 # <a name="intellisense"></a>IntelliSense
 
@@ -59,6 +60,6 @@ IntelliSense aynı dosyadaki ve geçerli oturumdaki değişkenler için de geçe
 
 ## <a name="code-suggestions"></a>Kod önerileri
 
-Kenar boşluğunda bir ampul (akıllı etiket olarak adlandırılır) göründüğünde, Visual Studio yaygın olarak kullanılan bir eylem için kullanılabilen bir kısayol olduğunu önerir. Örneğin, `library` bir ampul görmek için düzenleyicide bir ifade içeren bir çizginin üzerine gelin. Ampul seçildiğinde kullanılabilen seçenekler görüntülenir:
+kenar boşluğunda bir ampul (akıllı etiket olarak adlandırılır) göründüğünde Visual Studio, yaygın olarak kullanılan bir eylem için kullanılabilecek bir kısayol olmasını önerir. Örneğin, `library` bir ampul görmek için düzenleyicide bir ifade içeren bir çizginin üzerine gelin. Ampul seçildiğinde kullanılabilen seçenekler görüntülenir:
 
 ![Düzenleyicide R için Akıllı Etiketler](media/intellisense-smart-tags.png)

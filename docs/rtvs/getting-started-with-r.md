@@ -1,52 +1,53 @@
 ---
 title: R öğreticisi ile çalışmaya başlama
-description: Visual Studio 'da proje oluşturma, etkileşimli pencere, kod düzenlemesi ve hata ayıklama dahil olmak üzere R kullanmaya yönelik bir anlatım.
+description: proje oluşturma, etkileşimli pencere, kod düzenlemesi ve hata ayıklama dahil Visual Studio R 'yi kullanma kılavuzu.
 ms.date: 06/29/2017
+ms.prod: visual-studio-dev15
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: jmartens
 ms.workload:
 - data-science
-ms.openlocfilehash: 80e09a9c6b86d37e3069e3694bea289ac37282af
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8091da95ae28d872ef6d3f947beb720dbb009308
+ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873703"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114679950"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları kullanmaya başlayın
 
-Visual Studio için R Araçları (RTVS) yüklendikten sonra (bkz. [yükleme](installing-r-tools-for-visual-studio.md)), bu araçların sağladığı deneyimin hızla bir listesini alabilirsiniz.
+Visual Studio için R Araçları (rtvs) yüklendikten sonra (bkz. [yükleme](installing-r-tools-for-visual-studio.md)), bu araçların sağladığı deneyimin hızla bir listesini alabilirsiniz.
 
 ## <a name="create-an-r-project"></a>R projesi oluşturma
 
 1. Visual Studio'yu açın.
-1. **Dosya**  >  **Yeni**  >  **Proje** ' yi seçin (**CTRL** + **+ Shift** + **N**)
-1. **Şablonlar** R altında "R proje" seçeneğini belirleyin  >  , projeye bir ad ve konum verin ve **Tamam**' ı seçin:
+1. **dosya**  >  **yeni**  >  **Project** seçin (**Ctrl** + **+ Shift** + **N**)
+1. **şablonlar** R altında "R Project" seçeneğini belirleyin  >  , projeye bir ad ve konum verin ve **tamam**' ı seçin:
 
-   ![Visual Studio 'da R için yeni proje iletişim kutusu (VS2017 ' de RTVS)](media/getting-started-01-new-project.png)
+   ![Visual Studio R (VS2017 ' de rtvs) için yeni Project iletişim kutusu](media/getting-started-01-new-project.png)
 
 1. Proje oluşturulduktan sonra, aşağıdaki pencereleri görürsünüz:
 
-    - Sağ tarafta, projenizi içeren bir *çözüm* Içinde gördüğünüz Visual Studio Çözüm Gezgini. (Çözümler farklı türlerde birçok proje içerebilir; Ayrıntılar için bkz. [Projeler](r-projects-in-visual-studio.md) .
-    - Sol üst tarafta, `script.R` Visual Studio 'nun tüm düzenleme özellikleriyle kaynak kodu düzenleyebileceğiniz yeni bir R dosyası () bulunur.
+    - sağ tarafta, projenizi içeren bir *çözüm* içinde gördüğünüz Visual Studio Çözüm Gezgini. (Çözümler farklı türlerde birçok proje içerebilir; Ayrıntılar için bkz. [Projeler](r-projects-in-visual-studio.md) .
+    - sol üst tarafta, `script.R` kaynak kodunu tüm Visual Studio düzenleme özellikleriyle düzenleyebileceğiniz yeni bir R dosyası ().
     - Sol alt tarafta, kodu etkileşimli olarak geliştirebileceğiniz ve test edebileceğiniz **R etkileşim** penceresidir.
 
 > [!Note]
-> **R etkileşim** penceresini herhangi bir proje açık olmadan ve farklı bir proje türü yüklendiğinde bile kullanabilirsiniz. **R araçları**  >  **Windows**  >  **R etkileşim** dilediğiniz zaman seçmeniz yeterlidir.
+> **R etkileşim** penceresini herhangi bir proje açık olmadan ve farklı bir proje türü yüklendiğinde bile kullanabilirsiniz.   >    >  her zaman **R Etkileşim** Windows R araçları ' nı seçin.
 
 ## <a name="explore-the-interactive-window-and-intellisense"></a>Etkileşimli pencereyi ve IntelliSense 'i keşfet
 
 1. Etkileşimli pencerenin çalışıp çalışmadığını test `3 + 4` edin ve sonucu görmek Için **yazın** :
 
-    ![Visual Studio 2017 R Etkileşim Window (VS2017)](media/getting-started-02-interactive1.png)
+    ![R Etkileşim pencere Visual Studio 2017 (VS2017)](media/getting-started-02-interactive1.png)
 
 1. Biraz daha karmaşık bir şey girin `ds <- c(1.5, 6.7, 8.9) * 1:12` ve `ds` sonucu görmek için yazın:
 
-    ![Visual Studio 'da R için ek etkileşimli örnek](media/getting-started-03-interactive2.png)
+    ![Visual Studio 'de R için ek etkileşimli örnek](media/getting-started-03-interactive2.png)
 
-1. Yazın `mean(ds)` `m` , ancak veya yazdığınızda `me` , Visual Studio IntelliSense otomatik tamamlama seçenekleri sağladığını unutmayın. İstediğiniz tamamlama listede seçildiğinde, eklemek için **Tab** tuşuna basın; Seçimi ok tuşları veya fare ile değiştirebilirsiniz.
+1. içine yazın `mean(ds)` ancak `m` `me` Visual Studio ıntellisense 'in otomatik tamamlama seçenekleri sağladığını unutmayın. İstediğiniz tamamlama listede seçildiğinde, eklemek için **Tab** tuşuna basın; Seçimi ok tuşları veya fare ile değiştirebilirsiniz.
 
     ![Kod girerken IntelliSense görünen](media/getting-started-04-intellisense1.png)
 
@@ -56,13 +57,13 @@ Visual Studio için R Araçları (RTVS) yüklendikten sonra (bkz. [yükleme](ins
 
 1. `mean(ds)`Sonucu () görmek için satırı doldurun ve ENTER tuşuna basın `[1] 39.51667` .
 
-1. Etkileşimli pencere, yardım 'la tümleşiktir, bu nedenle girildiğinde `?mean` Visual Studio 'daki **R yardım** penceresinde bu işlev için yardım görüntülenir. Ayrıntılar için [Visual Studio için R araçları yardımına](getting-started-help.md)bakın.
+1. Etkileşimli pencere, yardım 'la tümleşiktir, bu nedenle girildiğinde `?mean` Visual Studio **R yardım** penceresinde bu işlev için yardım görüntülenir. ayrıntılar için [Visual Studio için R Araçları yardımına](getting-started-help.md)bakın.
 
-    ![Visual Studio 'da R Yardım penceresi](media/getting-started-06-help.png)
+    ![Visual Studio R Yardım pencere](media/getting-started-06-help.png)
 
-1. Gibi bazı komutlar, `plot(1:100)` çıktı etkileşimli pencerede doğrudan görüntülenemediğinde, Visual Studio 'da yeni bir pencere açar:
+1. gibi bazı komutlar, `plot(1:100)` çıktı etkileşimli pencerede doğrudan görüntülenemediğinde Visual Studio yeni bir pencere açar:
 
-    ![Grafik işlev çizmesinin çıkışını görüntüleyen bir Visual Studio R çizim penceresinin ekran görüntüsü (1:100).](media/getting-started-07-plot-window.png)
+    ![grafik işlev çizmesinin çıkışını görüntüleyen bir Visual Studio R çizim penceresinin ekran görüntüsü (1:100).](media/getting-started-07-plot-window.png)
 
 Etkileşimli pencere Ayrıca geçmişinizi incelemenizi, çalışma alanlarını yüklemeyi ve kaydetmenizi, bir hata ayıklayıcıya iliştirmenizi ve Kopyala-Yapıştır kullanmak yerine kaynak kodu dosyalarıyla etkileşim kurmanızı sağlar. Ayrıntılar için bkz. [R etkileşim penceresiyle çalışma](interactive-repl-for-r-in-visual-studio.md) .
 
@@ -86,14 +87,14 @@ Etkileşimli pencere ile kısa bir süre çalışmak, IntelliSense gibi kod Düz
 
 1. Sonuçları hızlıca görmek için tüm kodu (**CTRL** + **A**) seçin ve ardından **CTRL** + **ENTER** tuşuna basın veya **etkileşimli olarak çalıştır**' ı seçin. Seçilen tüm kod, doğrudan yazdığınız gibi etkileşimli pencerede çalışır ve sonucu bir çizim penceresinde gösterir:
 
-    ![Bir doldurma yoğunluğu grafiğini görüntüleyen bir Visual Studio R çizim penceresinin ekran görüntüsü.](media/getting-started-08-plot1.png)
+    ![bir Visual Studio R çizim penceresinin, bir popülasyon yoğunluğu grafiğini görüntüleyen ekran görüntüsü.](media/getting-started-08-plot1.png)
 
 1. Tek bir çizgi için,  + Bu satırı etkileşimli pencerede çalıştırmak için dilediğiniz zaman CTRL **ENTER** tuşuna basmanız yeterlidir.
 
 > [!Tip]
 >  +   +   + Kodu hızlı bir şekilde çalıştırmak için düzenleme yapma ve CTRL + ENTER tuşlarına basma (ya da CTRL +**ENTER** tuşlarına basarak) stilini öğrenin. Bunun yapılması, aynı işlemler için fareyi kullanmaktan çok daha etkilidir.
 >
-> Ayrıca, çizim penceresini Visual Studio çerçevesinin dışına sürükleyip bırakabilir ve daha sonra ekranda istediğiniz zaman yerleştirebilirsiniz. Daha sonra çizim penceresini istediğiniz boyutlara yeniden boyutlandırabilir ve sonra bir görüntüye veya PDF dosyasına kaydedebilirsiniz.
+> ayrıca, çizim penceresini Visual Studio çerçevesinin dışına sürükleyip bırakabilir ve daha sonra ekranda istediğiniz zaman yerleştirebilirsiniz. Daha sonra çizim penceresini istediğiniz boyutlara yeniden boyutlandırabilir ve sonra bir görüntüye veya PDF dosyasına kaydedebilirsiniz.
 
 1. İkinci bir çizim eklemek için birkaç daha fazla kod satırı ekleyin:
 
@@ -105,7 +106,7 @@ Etkileşimli pencere ile kısa bir süre çalışmak, IntelliSense gibi kod Düz
 
 1. **CTRL** + **A** 'ya basın ve + kodu çalıştırmak için bir kez daha **yazın** ve aşağıdaki sonucu üretir:
 
-    ![Visual Studio 'da ikili çizim güncelleştirildi](media/getting-started-09-plot2.png)
+    ![Visual Studio ikili çizim güncelleştirildi](media/getting-started-09-plot2.png)
 
 1. Sorun ilk çizimin dikey ölçeklendirmeyi belirlediği, İkinci çizimin (ile `lines` ) sığmadığı bir sorundur. Bu sorunu düzeltmek için, `ylim` çağrıda parametresini ayarlamanız gerekir `plot` , ancak en fazla dikey değeri hesaplamak için kod eklememiz gerekir. Bu satırı etkileşimli pencerede yapmak, çağrılmadan önce kullanmak üzere kodu yeniden düzenlemeniz gerektiğinden kullanışlıdır `samp.means` `plot` . Ancak, bir kod dosyasında uygun düzenlemeleri kolayca yapabiliriz:
 
@@ -127,13 +128,13 @@ Etkileşimli pencere ile kısa bir süre çalışmak, IntelliSense gibi kod Düz
 
 1. **CTRL** + **A** ve **CTRL tuşuna** bir + kez daha **girerek** sonucu görebilirsiniz:
 
-    ![Visual Studio 'da doğru şekilde ölçeklendirildi, ikili çizim güncelleştirildi](media/getting-started-10-plot3.png)
+    ![Visual Studio ikili çizim güncelleştirildi, doğru ölçeklendirildi](media/getting-started-10-plot3.png)
 
 Düzenleyicide daha fazla yapabilirsiniz. Ayrıntılar için bkz. [R Code](editing-r-code-in-visual-studio.md), [IntelliSense](r-intellisense.md)ve [Code parçacıklarını](code-snippets-for-r.md)düzenleme.
 
 ## <a name="debug-your-code"></a>Kodunuzda hata ayıklama
 
-Visual Studio 'nun önemli güçlerinden biri hata ayıklama kullanıcı arabiriminden biridir. RTVS, bu Strong Foundation üzerinde yapılar ve [değişken Gezgini](variable-explorer.md)gibi yenilikçi Kullanıcı arabirimini ekler. Burada, hata ayıklamaya yalnızca bir ilk göz atalım.
+Visual Studio anahtar güçlerinden biri, hata ayıklama kullanıcı arabiriminden biridir. RTVS, bu Strong Foundation üzerinde yapılar ve [değişken Gezgini](variable-explorer.md)gibi yenilikçi Kullanıcı arabirimini ekler. Burada, hata ayıklamaya yalnızca bir ilk göz atalım.
 
 1. Başlamak için, **R araçları**  >  **oturum**  >  **sıfırlama** menü komutunu kullanarak yaptığınız her şeyi temizlemek için geçerli çalışma alanını sıfırlayın. Varsayılan olarak, etkileşimli pencerede yaptığınız her şey geçerli oturuma tahakkuk eder ve bu da hata ayıklayıcı tarafından da kullanılır. Oturumu sıfırlayarak, hata ayıklama oturumunun önceden varolan veriler olmadan başlamasını sağlar. Ancak **sıfırlama** komutu, *betiğinizi etkilemez. R* kaynak dosyası, yönetilen ve çalışma alanının dışında kaydedildiğinden.
 
@@ -145,13 +146,13 @@ Visual Studio 'nun önemli güçlerinden biri hata ayıklama kullanıcı arabiri
 
     ![Visual Studio hata ayıklayıcısında kesme noktasında durdurma](media/getting-started-12-debug2.png)
 
-1. Hata ayıklama sırasında, Visual Studio kod satırlarınızın satıra göre nasıl ilerleyebilmesini sağlar. Ayrıca işlevleri de görebilir, bunların üzerinde adımla veya onları çağıran bağlamda dışına taşıyabilirsiniz. Diğer kişilerle birlikte bu yetenekler, **hata ayıklama** menüsünde, düzenleyicide sağ tıklama bağlam menüsünde ve hata ayıklama araç çubuğunda bulunabilir:
+1. hata ayıklama sırasında, Visual Studio kod satırlarınızın satıra göre nasıl ilerleyebilmesini sağlar. Ayrıca işlevleri de görebilir, bunların üzerinde adımla veya onları çağıran bağlamda dışına taşıyabilirsiniz. Diğer kişilerle birlikte bu yetenekler, **hata ayıklama** menüsünde, düzenleyicide sağ tıklama bağlam menüsünde ve hata ayıklama araç çubuğunda bulunabilir:
 
-    ![Visual Studio 'da hata ayıklama araç çubuğu](media/getting-started-13-debug3.png)
+    ![Visual Studio hata ayıklama araç çubuğu](media/getting-started-13-debug3.png)
 
-1. Bir kesme noktasında durdurulduğunda, değişkenlerin değerlerini inceleyebilirsiniz. Visual Studio 'daki **oto** penceresini bulun ve en alttaki **Yereller** adlı üst kısımdaki sekmeyi seçin. **Yereller** penceresi, programın geçerli noktasındaki yerel değişkenleri gösterir. Daha önce ayarlanan kesme noktasında durdurulmuşsa, `pop` değişkenin henüz tanımlı olmadığını görürsünüz. Şimdi **hata ayıklama**  >  **adımı** komutunu (**F10**) kullanın ve görüntülenecek değeri görürsünüz `pop` :
+1. Bir kesme noktasında durdurulduğunda, değişkenlerin değerlerini inceleyebilirsiniz. Visual Studio içindeki **oto** penceresini bulun ve en alttaki **yereller** adlı üst kısımdaki sekmeyi seçin. **Yereller** penceresi, programın geçerli noktasındaki yerel değişkenleri gösterir. Daha önce ayarlanan kesme noktasında durdurulmuşsa, `pop` değişkenin henüz tanımlı olmadığını görürsünüz. Şimdi **hata ayıklama**  >  **adımı** komutunu (**F10**) kullanın ve görüntülenecek değeri görürsünüz `pop` :
 
-    ![Visual Studio 'da yerel öğeler penceresi](media/getting-started-14-debug4.png)
+    ![Visual Studio 'teki Yereller penceresi](media/getting-started-14-debug4.png)
 
 1. Küresel kapsam ve paket kapsamları dahil olmak üzere farklı kapsamlardaki değişkenleri incelemek için [değişken Gezgini](variable-explorer.md)kullanın. Değişken Gezgini Ayrıca, sıralanabilir sütunlar içeren bir tablo görünümüne geçiş yapma ve bir CSV dosyasına veri aktarma olanağı sağlar.
 
@@ -163,7 +164,7 @@ Daha ayrıntılı bilgi için bkz. [hata ayıklama](debugging-r-in-visual-studio
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu kılavuzda, Visual Studio 'da etkileşimli pencereyi, kod düzenlemesini ve hata ayıklamayı kullanarak R projelerinin temel bilgilerini öğrendiniz. Daha fazla yetenek araştırmaya devam etmek için, içindekiler tablosunda gösterilen aşağıdaki makalelere ve makalelere bakın:
+Bu kılavuzda, Visual Studio ' de etkileşimli pencereyi, kod düzenlemesini ve hata ayıklamayı kullanarak R projelerinin temel bilgilerini öğrendiniz. Daha fazla yetenek araştırmaya devam etmek için, içindekiler tablosunda gösterilen aşağıdaki makalelere ve makalelere bakın:
 
 - [Örnek projeler](getting-started-samples.md)
 - [Kod düzenleniyor](editing-r-code-in-visual-studio.md)

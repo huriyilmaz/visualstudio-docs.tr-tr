@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2022 Preview 'da API 'Ler kaldırıldı
-description: Uzantıları Visual Studio 2022 Preview ile çalışacak şekilde güncelleştiren uzantı yazarları için Visual Studio 2022 Preview 'da kaldırılan VS SDK API 'Leri hakkında bilgi edinin.
+title: Visual Studio 2022 Preview'da API'ler kaldırıldı
+description: Visual Studio 2022 Preview'da kaldırılan VS SDK API'leri hakkında bilgi edinin. Uzantı yazarlarının uzantılarını Visual Studio 2022 Preview sürümüyle çalışacak şekilde güncelleştirmeleri.
 ms.date: 06/08/2021
 ms.topic: reference
 author: leslierichardson95
@@ -9,92 +9,93 @@ manager: jmartens
 monikerRange: vs-2022
 ms.workload:
 - vssdk
-ms.openlocfilehash: bed8d0a261f70acb5e842ebeaf0059faae3fc478
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+feedback_system: GitHub
+ms.openlocfilehash: d6375fb428eab6647854fe165aeb208ef8121e73
+ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308785"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114592326"
 ---
-# <a name="visual-studio-2022-sdk-removed-apis"></a>Visual Studio 2022 SDK tarafından kaldırılan API 'Ler
+# <a name="visual-studio-2022-sdk-removed-apis"></a>Visual Studio 2022 SDK API'leri kaldırıldı
 
 [!INCLUDE [preview-note](../includes/preview-note.md)]
 
-Aşağıdaki API 'Ler Visual Studio SDK 'dan kaldırılmıştır ve artık kullanılamaz, kodunuzu güncelleştirme hakkında ayrıntılı bilgi edinmek için lütfen her bölüme bakın.
+Aşağıdaki API'ler Visual Studio SDK'dan kaldırılmıştır ve artık kullanılamaz. Kodunuzu güncelleştirme hakkında ayrıntılı bilgi için lütfen her bölüme bakın.
 
 * [`IVsImageService`](#ivsimageservice)
 * [`IBlockContextProvider`](#iblockcontextprovider)
 * [`IToolTipProvider`](#itooltipprovider)
-* [`IVsTextScanner` ' `IVsFullTextScanner`](#ivstextscanner-and-ivsfulltextscanner)
+* [`IVsTextScanner` Ve `IVsFullTextScanner`](#ivstextscanner-and-ivsfulltextscanner)
 * [Zaman uyumsuz çözüm yükü ve basit çözüm yükü](#asynchronous-solution-load-and-lightweight-solution-load)
 * [`IVsDummy`](#ivsdummy)
 * [`Microsoft.VisualStudio.Shell.Task`](#microsoftvisualstudioshelltask)
-* [Kaynak güvenle aç](#open-from-source-safe)
-* [.NET Framework için yeni WPF XAML Tasarımcısı](#new-wpf-xaml-designer-for-net-framework)
+* [Kaynak kasadan açma](#open-from-source-safe)
+* [Yeni XAML Tasarımcısı WPF .NET Framework](#new-wpf-xaml-designer-for-net-framework)
 
-## <a name="ivsimageservice"></a>Isıfmageservice
+## <a name="ivsimageservice"></a>IVsImageService
 
-`IVsImageService`Visual Studio 2022 ' de kaldırılıyor. Tüm kullanıcıları `IVsImageService` bunun yerine öğesine taşınmaya melidir `IVsImageService2` .
+`IVsImageService`2022'de Visual Studio kaldırılıyor. Bunun yerine tüm `IVsImageService` kullanıcıları 'a `IVsImageService2` taşınarak.
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
-Kullanırsanız `IVsImageService` , çağrıları üzerinde denk yöntemlere yapılan çağrılar ile yöntemleri ile değiştirin `IVsImageService2` :
+`IVsImageService`kullanırsanız, metotlarına yapılan çağrıları üzerinde eşdeğer yöntemlere yapılan çağrılarla `IVsImageService2` değiştirin:
 
-| **Isımageservice yöntemi** | **Denk IVsImageService2 yöntemi** |
+| **IVsImageService Yöntemi** | **Eşdeğer IVsImageService2 Yöntemi** |
 |----------------------------|----------------------------------------|
-| Ekle                        | Addcustomımage                         |
-| Al                        | GetImage                               |
+| Ekle                        | AddCustomImage                         |
+| Al                        | Getımage                               |
 | GetIconForFile             | GetImageMonikerForFile                 |
 | GetIconForFileEx           | GetImageMonikerForFile                 |
 
-`IVsImageService`öğesinin ekleme ve get yöntemleri, bilinen bir ad değil, özel görüntülere ada (bir dize) başvuruda bulunurlar.  Özel görüntülere başvurmak için kodunuzu yalnızca takma adlar kullanacak şekilde geçmeniz tercih edilir, ancak bu kanıtlar, `IVsImageService2` bir adı bilinen bir ad ile ilişkilendirmenize olanak tanıyan birkaç yöntem daha varsa:
+`IVsImageService`'nin Ad yerine ad (dize) ile özel görüntülere başvurulan Add ve Get yöntemleri.  Kodunuzu özel görüntülere başvurmak için yalnızca bilinen adlar kullanmak üzere değiştirmeniz tercih edilir, ancak bu pratik olmadığını kanıtlarsa, bir adı bilinen adla ilişkilendirmenize olanak sağlayacak birkaç yöntem `IVsImageService2` vardır:
 
 * `TryAssociateNameWithMoniker`
 * `GetImageMonikerForName`
 
-Bu iki yöntemi kullanarak, görüntülere ada göre başvurulmasına devam edebilirsiniz.
+Bu iki yöntemi kullanarak görüntülere adla başvuru yapmaya devam edersiniz.
 
-## <a name="iblockcontextprovider"></a>Iblockcontextprovider
+## <a name="iblockcontextprovider"></a>IBlockContextProvider
 
-`IBlockContextProvider`Visual Studio 2022 ' de ve ilgili türler kaldırılıyor. Tüm kullanıcıları `IBlockContextProvider` bunun yerine öğesine taşınmaya melidir `IStructureContextSourceProvider` .
-
-### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
-
-Kullanıcıları `IBlockContextProvider` `IStructureContextSourceProvider` bunun yerine kullanması gerekir ([Belgeler](/dotnet/api/microsoft.visualstudio.text.adornments.istructurecontextsourceprovider)).
-
-## <a name="itooltipprovider"></a>Itooltipprovider
-
-`IToolTipProvider`Visual Studio 2022 ' de ve ilgili türler kaldırılıyor. Tüm kullanıcıları `IToolTipProvider` bunun yerine öğesine taşınmaya melidir `IToolTipService` .
+`IBlockContextProvider`2022'de ve Visual Studio kaldırılıyor. Bunun yerine tüm `IBlockContextProvider` kullanıcıları 'a `IStructureContextSourceProvider` taşınarak.
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
-Kullanıcıları `IToolTipProvider` `IToolTipService` bunun yerine kullanması gerekir ([Belgeler](/dotnet/api/microsoft.visualstudio.text.adornments.itooltipservice)).
+kullanıcılarının `IBlockContextProvider` bunun yerine `IStructureContextSourceProvider` kullanmaları gerekir ([belgeler).](/dotnet/api/microsoft.visualstudio.text.adornments.istructurecontextsourceprovider)
 
-## <a name="ivstextscanner-and-ivsfulltextscanner"></a>Ivstestextscanner ve ıvsfulltextscanner
+## <a name="itooltipprovider"></a>IToolTipProvider
 
-`IVsTextScanner`Ve `IVsFullTextScanner` Visual Studio 2022 ' de kaldırılıyor. Ya da ' ın tüm kullanıcıları `IVsTextScanner` `IVsFullTextScanner` bunun yerine öğesine taşınmaya melidir `IVsTextLines` .
+`IToolTipProvider`2022'de ve Visual Studio kaldırılıyor. Bunun yerine tüm `IToolTipProvider` kullanıcıları 'a `IToolTipService` taşınarak.
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
-`IVsTextScanner` `IVsFullTextScanner` Bunun yerine kullanıcıları veya kullanması gerekir `IVsTextLines` ([Belgeler](/dotnet/apimicrosoft.visualstudio.textmanager.interop.ivstextlines.getlinetext)).
+kullanıcılarının `IToolTipProvider` bunun yerine `IToolTipService` kullanmaları gerekir ([belgeler).](/dotnet/api/microsoft.visualstudio.text.adornments.itooltipservice)
+
+## <a name="ivstextscanner-and-ivsfulltextscanner"></a>IVsTextScanner ve IVsFullTextScanner
+
+`IVsTextScanner` `IVsFullTextScanner` 2022'de ve Visual Studio kaldırılıyor. Tüm veya kullanıcıları `IVsTextScanner` `IVsFullTextScanner` bunun yerine 'a taşın `IVsTextLines` uygulamalı.
+
+### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
+
+veya kullanıcıları `IVsTextScanner` bunun `IVsFullTextScanner` yerine `IVsTextLines` kullanmalı ([belgeler).](/dotnet/apimicrosoft.visualstudio.textmanager.interop.ivstextlines.getlinetext)
 
 ## <a name="asynchronous-solution-load-and-lightweight-solution-load"></a>Zaman uyumsuz çözüm yükü ve basit çözüm yükü
 
-Zaman uyumsuz çözüm yükü (ASL) ve basit çözüm yükü (LSL) özellikleri, aşağıdaki yöntemler kaldırıldıkça Visual Studio 2022 ' de kaldırılıyor:
+Zaman uyumsuz çözüm yükü (ASL) ve basit çözüm yükü (LSL) özellikleri Visual Studio 2022'de kaldırılıyor, bu nedenle aşağıdaki yöntemler kaldırılıyor:
 
 ### <a name="interfaces"></a>Arabirimler
 
-* `IVsSolution4` -Yöntemler: `IsBackgroundSolutionLoadEnabled` , `EnsureProjectsAreLoaded` , `EnsureProjectIsLoaded` , `EnsureSolutionIsLoaded`
-* `IVsSolutionLoadEvents` -Yöntemler: `OnBeforeBackgroundSolutionLoadBegins` , `OnQueryBackgroundLoadProjectBatch` , `OnBeforeLoadProjectBatch` , `OnAfterLoadProjectBatch`
-* `IVsSolutionLoadManagerSupport` -Tüm arabirim
-* `IVsSolutionLoadManager` -Tüm arabirim
-* `IVsSccManager3`  -Tüm arabirim
-* `IVsAsynchronousProjectCreate` -Tüm arabirim
-* `IVsAsynchronousProjectCreateUI` -Tüm arabirim
+* `IVsSolution4` - Yöntemler: `IsBackgroundSolutionLoadEnabled` , `EnsureProjectsAreLoaded` , `EnsureProjectIsLoaded` , `EnsureSolutionIsLoaded`
+* `IVsSolutionLoadEvents` - Yöntemler: `OnBeforeBackgroundSolutionLoadBegins` , `OnQueryBackgroundLoadProjectBatch` , `OnBeforeLoadProjectBatch` , `OnAfterLoadProjectBatch`
+* `IVsSolutionLoadManagerSupport` - Tüm arabirim
+* `IVsSolutionLoadManager` - Tüm arabirim
+* `IVsSccManager3`  - Tüm arabirim
+* `IVsAsynchronousProjectCreate` - Tüm arabirim
+* `IVsAsynchronousProjectCreateUI` - Tüm arabirim
 
-### <a name="enums-properties-and-ui-contexts"></a>Numaralandırmalar, Özellikler ve UI bağlamları
+### <a name="enums-properties-and-ui-contexts"></a>Enum'lar, özellikler ve UI bağlamları
 
-* `VSHPROPID_ProjectUnloadStatus` Yardımının `UNLOADSTATUS_LoadPendingIfNeeded`
+* `VSHPROPID_ProjectUnloadStatus` - Enum: `UNLOADSTATUS_LoadPendingIfNeeded`
 * `VSHPROPID_DemandLoadDependencies`
 * `VSHPROPID_IsProjectProvisioned`
 * `VSPROPID_IsInBackgroundIdleLoadProjectBatch`
@@ -106,34 +107,34 @@ Zaman uyumsuz çözüm yükü (ASL) ve basit çözüm yükü (LSL) özellikleri,
 
 Yok.
 
-## <a name="ivsdummy"></a>Isdummy
+## <a name="ivsdummy"></a>IVsDummy
 
-, `IVsDummy` Visual Studio 2022 ' de kaldırılıyor ve değiştirilmeyecektir. 
+`IVsDummy`2022'Visual Studio kaldırılıyor ve değiştirilemez. 
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
-Yok. Ancak, API hiçbir şey olmadığı için bir etkisi olmamalıdır.
+Yok. Ancak API hiçbir şey yapmadı.
 
-## <a name="microsoftvisualstudioshelltask"></a>Microsoft. VisualStudio. Shell. Task
+## <a name="microsoftvisualstudioshelltask"></a>Microsoft.VisualStudio.Shell.Task
 
-`Microsoft.VisualStudio.Shell.Task`Sınıfı, `Microsoft.VisualStudio.Shell.TaskListItem` çok popüler sınıfla çakışmayacak şekilde olarak yeniden adlandırıldı `System.Threading.Tasks.Task` .
+sınıfı, `Microsoft.VisualStudio.Shell.Task` çok popüler `Microsoft.VisualStudio.Shell.TaskListItem` sınıfla çakışmamaları için olarak yeniden `System.Threading.Tasks.Task` adlandırıldı.
 
-## <a name="open-from-source-safe"></a>Kaynak güvenle aç
+## <a name="open-from-source-safe"></a>Kaynak kasadan açma
 
-Aşağıdaki yöntemler, olaylar ve, sabitler kaldırıldıkça, kaynak güvenle bir çözüm açmaya yönelik destek kaldırılıyor.
+Aşağıdaki yöntemler, olaylar ve sabitler kaldırıldığı için kaynak kasadan çözüm açma desteği kaldırılıyor.
 
 ## <a name="interfaces"></a>Arabirimler
 
-* `IVsSCCProvider3` -Tüm arabirim
+* `IVsSCCProvider3` - Tüm arabirim
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
 Yok.
 
-## <a name="new-wpf-xaml-designer-for-net-framework"></a>.NET Framework için yeni WPF XAML Tasarımcısı
+## <a name="new-wpf-xaml-designer-for-net-framework"></a>Yeni XAML Tasarımcısı WPF .NET Framework
 
-.NET Framework için geçerli WPF XAML Tasarımcısı kullanımdan kaldırılmıştır ve .NET için WPF XAML Tasarımcısı (.NET Core) için kullanılan mimariye göre .NET Framework için yeni bir WPF XAML Tasarımcısı ile değiştirilmelidir. Bu Ayrıca, .design.dll ve Microsoft. Windows. Design. Extensibility tabanlı WPF .NET Framework denetimi genişletilebilirlik modelinin artık desteklenmediği anlamına gelir. .NET Framework için yeni WPF XAML Tasarımcısı, .NET için WPF XAML Tasarımcısı aynı genişletilebilirlik modelini sağlayacaktır (.NET Core). .NET (.NET Core) için .designtools.dll uzantısı zaten oluşturduysanız, aynı uzantı .NET Framework için yeni WPF XAML Tasarımcısı için de çalışacaktır. WPF platformları için yeni genişletilebilirlik modeline (.NET Framework ve .NET Core) ve daha ileri hareket eden UWP platformlarına geçiş yapma hakkında daha fazla bilgi için lütfen aşağıdaki geçiş bağlantısına bakın. 
+.NET Framework için geçerli WPF XAML Tasarımcısı kullanım dışı bırakıldı ve .NET (.NET Core) için WPF XAML Tasarımcısı için kullanılan mimariye bağlı olarak, .NET Framework için yeni bir WPF XAML Tasarımcısı ile değiştirilir. Bu, WPF'nin .NET Framework Microsoft'a göre genişletilebilirlik modelini .design.dll anlamına gelir. Windows. Design.Genişletilebilirlik artık desteklenmiyor. .NET Framework için yeni WPF XAML Tasarımcısı, .NET (.NET Core) için WPF XAML Tasarımcısı aynı genişletilebilirlik modelini sağlayacaktır. .NET (.NET Core) .designtools.dll bir uzantı oluşturduysanız, bu uzantı yeni WPF XAML Tasarımcısı için .NET Framework. WPF platformları (.NET Framework ve .NET Core) ve UWP platformları için yeni genişletilebilirlik modeline geçiş hakkında daha fazla bilgi için lütfen aşağıdaki geçiş bağlantısına bakın. 
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
-Bkz. [XAML Tasarımcısı genişletilebilirlik geçişi](https://github.com/microsoft/xaml-designer-extensibility/blob/main/documents/xaml-designer-extensibility-migration.md).
+Bkz. [XAML tasarımcısı genişletilebilirlik geçişi.](https://github.com/microsoft/xaml-designer-extensibility/blob/main/documents/xaml-designer-extensibility-migration.md)

@@ -1,7 +1,5 @@
 - name: Mac için Visual Studio
   href: ./index.yml
-- name: IDE Turu
-  href: ide-tour.md
 - name: Yükleme
   href: installation.md
   items:
@@ -108,7 +106,7 @@
 - name: İş yükleri
   href: ./workloads.md
   items:
-    - name: ASP.NET Çekirdeği
+    - name: ASP.NET Core
       href: ./asp-net-core.md
       items:
         - name: Razor

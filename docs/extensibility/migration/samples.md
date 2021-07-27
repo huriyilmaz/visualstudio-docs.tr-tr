@@ -1,6 +1,6 @@
 ---
 title: Yeni uzantılarını güncelleştirmek için ImageOptimizer Visual Studio örneği
-description: Visual Studio uzantısını Visual Studio 2022 Preview ile çalışacak şekilde güncelleştirme hakkında bilgi edinmek için bir örneği izleyin.
+description: Visual Studio 2022 Preview ile çalışacak şekilde bir Visual Studio öğrenmek için bir örneği izleyin.
 ms.date: 06/08/2021
 ms.topic: sample
 author: leslierichardson95
@@ -9,18 +9,19 @@ manager: jmartens
 monikerRange: vs-2022
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12bbc159884c16ea89849e5c97a4b87292f7089d
-ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
+feedback_system: GitHub
+ms.openlocfilehash: 542c0340f9867815c21903090053d01a14b94d9c
+ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "112602226"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114592287"
 ---
-# <a name="imageoptimizer---update-a-visual-studio-extension-step-by-step"></a>ImageOptimizer - Bir Visual Studio uzantısını adım adım güncelleştirme
+# <a name="imageoptimizer---update-a-visual-studio-extension-step-by-step"></a>ImageOptimizer - Bir Visual Studio adım güncelleştirme
 
 [!INCLUDE [preview-note](../includes/preview-note.md)]
 
-Bu kılavuzda, örnek olay incelemesinde Görüntü İyileştirici uzantısını kullanarak Visual Studio 2019 Visual Studio 2022 desteği eklemek için gereken tüm adımlar açıklanacak.  
+Bu kılavuzda, örnek olay incelemesinde Görüntü İyileştirici uzantısını kullanarak 2019 Visual Studio 2022 desteği eklemek için gereken tüm adımlar ve Visual Studio 2019 desteği açıklanacak.  
 Bu, her bir adıma git işleme bağlantıları içeren kapsamlı bir kılavuz olması gerekir, ancak burada son pr'yi görmekte serbestsiniz: [https://github.com/madskristensen/ImageOptimizer/pull/46](https://github.com/madskristensen/ImageOptimizer/pull/46) .
 
 Bu [kılavuzun sonunda](#other-samples) ek örnekler de vardır.
@@ -35,7 +36,7 @@ Bkz. [Projeyi modernleştirme.](update-visual-studio-extension.md#modernize-your
 
    ![Framework sürümüne yapılan tümsekler](media/samples/framework-bump.png)
 
-Görüntü İyileştirici bazı eski özel 14.* ve 15.* paketlerine başvurmuş, bunun yerine tüm gerekli başvurularımızı birleştirici [ `Microsoft.VisualStudio.Sdk` NuGet](https://www.nuget.org/packages/microsoft.visualstudio.sdk) paketini yükleyeceğiz.
+Görüntü İyileştirici bazı eski özel 14.* ve 15.* paketlerine [ `Microsoft.VisualStudio.Sdk` ](https://www.nuget.org/packages/microsoft.visualstudio.sdk) başvurur; bunun yerine tüm gerekli başvurularımızı bir NuGet paketini yükleyeceğiz.
 
 ```Diff
 -  <ItemGroup>
@@ -62,7 +63,7 @@ Proje başarılı olur ve birkaç iş parçacığı uyarısı alırsınız. Eksi
 
 Bkz. [Paylaşılan projeler.](update-visual-studio-extension.md#use-shared-projects-for-multi-targeting)
 
-Visual Studio 2022 desteği için, uzantının kaynak kodunu içeren ve Visual Studio 2019 ile Visual Studio 2022 VSIX projeleri arasında paylaşılacak yeni bir paylaşılan proje eklemek gerekir.
+Visual Studio 2022 desteği için, Visual Studio 2019 ile Visual Studio 2022 VSIX projeleri arasında paylaşılacak uzantının kaynak kodunu içeren yeni bir paylaşılan proje eklemeniz gerekir.
 
 1. Çözümünüze yeni bir paylaşılan proje ekleme
 
@@ -76,7 +77,7 @@ Visual Studio 2022 desteği için, uzantının kaynak kodunu içeren ve Visual S
 
    :::image type="content" source="media/update-visual-studio-extension/add-shared-project-reference.png" alt-text="Paylaşılan proje başvurusu ekleme" lightbox="media/update-visual-studio-extension/add-shared-project-reference.png":::
 
-1. Kaynak kod dosyalarınızı (cs, xaml, resx) aşağıdakiler dışında yeni paylaşılan **projeye** taşıma:
+1. Kaynak kod dosyalarınızı (cs, xaml, resx) aşağıdakiler dışında yeni **paylaşılan projeye** taşıma:
     - `source.extension.vsixmanifest`
     - Uzantı meta veri dosyaları (simgeler, lisanslar, sürüm notları vb.)
     - VSCT dosyaları
@@ -95,12 +96,12 @@ Visual Studio 2022 desteği için, uzantının kaynak kodunu içeren ve Visual S
 
    1. Bu proje için uzantı simgesini, VSCT dosyasını ve dış araçları yeni klasöre taşımamız `ImageOptimizer\Resources` gerekir. Bunları paylaşılan klasöre kopyalayın ve VSIX projesinden kaldırın.
    1. Bunları bağlantılı öğeler olarak geri ekledik ve öğeler zaten bağlantılı ise olduğu gibi kalabilir (örneğin, lisans).
-   1. Her birini seçerek ve özellikler araç penceresini kontrol ederek Derleme Eylemi ve diğer özelliklerin eklenen bağlı dosyalarda doğru şekilde ayarlandıktan emin olun. Projemiz için şunları ayarlamamız gerekirdi:
+   1. Her birini seçerek ve özellikler araç penceresini kontrol ederek, Eklenen bağlı dosyalarda Derleme Eylemi ve diğer özelliklerin doğru ayarlandıktan emin olun. Projemiz için şunları ayarlamamız gerekirdi:
        - Derleme `icon.png` Eylem'i olarak ayarlayın `Content` ve VSIX'te Dahil Edin olarak işaretlendi `true`
        - Derleme `ImageOptimizer.vsct` Eylemlerini olarak ayarlayın `VSCTComplile` ve VSIX'e dahil edin `false`
        - altındaki dosyaların tüm Derleme Eylemlerini olarak ayarlayın `Resources\Tools` ve `Content` VSIX'te Dahil Edin olarak işaretlendi `true`
 
-           ![VSIX projesine bağlı dosyalar ekleme](media/samples/add-linked-files.png)
+           ![VSIX projesine bağlı dosyaları ekleme](media/samples/add-linked-files.png)
 
        - Ayrıca, `ImageOptimizer.cs` bir `ImageOptimizer.vsct` bağımlılığıdır, bunun için bu bağımlılığı csproj dosyasına el ile eklememiz gerekir:
 
@@ -133,7 +134,7 @@ Visual Studio 2022 desteği için, uzantının kaynak kodunu içeren ve Visual S
 Bkz. [Visual Studio 2022 hedefi ekleme.](update-visual-studio-extension.md#add-a-visual-studio-2022-target)
 
 1. Çözümünüze yeni bir VSIX projesi ekleyin.
-1. yeni projesinde aşağıdakiler dışında tüm ek kaynak kodunu kaldırın: `source.extension.vsixmanifest.`
+1. Aşağıdakiler dışında yeni projede yer alan ek kaynak kodunu kaldırın: `source.extension.vsixmanifest.`
 
    ![Yeni VSIX projesi oluşturma](media/samples/visual-studio-2022-vsix-initial.png)
 

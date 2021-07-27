@@ -3,9 +3,10 @@ title: F1 Yardım olmayan geri dönüş
 description: Eyvah! F1 eşleşmesi bulunamadı.
 ms.prod: visual-studio
 ms.technology: ''
-ms.date: 06/20/2021
+ms.date: 07/20/2021
 ms.topic: error-reference
 ms.custom: contperf-fy21q4
+recommendations: false
 robots: noindex,nofollow
 f1_keywords:
 - vs.ambient
@@ -26,12 +27,12 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: c3251b38d75545ec1ccf2843382dff17676284ee
-ms.sourcegitcommit: d0061f62c8543ff0db500972d9402a7f00e017c6
+ms.openlocfilehash: 225a499420f6b312a0f4777584efa324d156b2db
+ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114201799"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114592170"
 ---
 # <a name="oops-no-f1-help-match-was-found"></a>Eyvah! Hiçbir `F1` Yardım eşleşmesi bulunamadı
 

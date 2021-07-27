@@ -1,8 +1,8 @@
 ---
-title: 64 bit desteği
+title: 64-bit desteği
 description: Uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 02/21/2018
+ms.date: 07/19/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - 64-bit applications [C++]
@@ -13,16 +13,19 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 053ae10595b6bac51395b23aaef7394760b71824
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8990ea7c4a2173a0cea0f66a0edfb67ee116c259
+ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873898"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114592196"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64 bit desteği
 
-Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamanıza olanak sağlar. Visual Studio 'da 64 bit platform desteği hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](/dotnet/framework/64-bit-apps).
+Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamanıza olanak sağlar. Visual Studio 'de 64 bit platform desteği hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](/dotnet/framework/64-bit-apps).
+
+> [!NOTE]
+> Windows Visual Studio 2022 artık 64 bit bir uygulamadır. daha fazla bilgi için [**Visual Studio 2022 vision**](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/) blog gönderisine bakın.
 
 ## <a name="deploy-a-64-bit-application"></a>64 bitlik bir uygulama dağıtma
 
