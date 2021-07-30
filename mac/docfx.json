@@ -72,7 +72,7 @@
       "uhfHeaderId": "MSDocsHeader-VisualStudioMac",
       "feedback_system": "None",
       "feedback_github_repo": "",
-      "feedback_product_url": "",
+      "feedback_product_url": "https://aka.ms/feedback/report?space=41",
       "contributors_to_exclude": [
         "conceptdev",
         "meganbradley",
@@ -89,6 +89,7 @@
       "searchScope": [
         "Mac"
       ],
+      "recommendations": true,
       "disable_contribution_on_translation_quality": [
         "MT",
         "MTE75",
