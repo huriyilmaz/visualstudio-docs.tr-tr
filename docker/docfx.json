@@ -39,23 +39,22 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "bilingual_type": "hover_over",
       "feedback_system": "None",
       "feedback_github_repo": "",
       "breadcrumb_path": "/visualstudio/docker/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "ms.prod": "visual-studio-windows",
-      "manager": "jillfra",
-      "author": "jillre",
-      "ms.author": "jillfra",
-      "ms.topic": "conceptual",
+      "ms.prod": "visual-studio-family",
+      "manager": "jmartens",
+      "author": "ghogen",
+      "ms.author": "ghogen",
       "audience": "developer",
       "disable_contribution_on_translation_quality": [
         "MT",
         "MTE75",
         "MTE95",
         "Blank"
-      ]
+      ],
+      "bilingual_type": "hover_over"
     },
     "fileMetadata": {},
     "template": [],
