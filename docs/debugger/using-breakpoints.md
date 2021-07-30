@@ -2,7 +2,7 @@
 title: Hata ayıklayıcıda kesme noktaları kullan | Microsoft Docs
 description: En önemli hata ayıklama tekniklerinden biri olan kesme noktaları hakkında bilgi edinin. Makale kesme noktası eylemleri, izleme noktaları, koşullar ve çok daha fazlasını içerir.
 ms.custom: SEO-VS-2020
-ms.date: 06/30/2020
+ms.date: 12/21/2020
 ms.topic: how-to
 f1_keywords:
 - vs.debug.breakpointswin
@@ -35,16 +35,16 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0865c71d2893203ca3af925da1d76946d882c4c4
-ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+ms.openlocfilehash: 29661c633e41c0640829caff2452d65907944773
+ms.sourcegitcommit: 879ba768364f3bfdaeb9004f740478489ab15c3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108798589"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114796261"
 ---
-# <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcıda kesme noktaları kullanma
+# <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcıda kesme noktaları kullan
 
-Kesme noktaları, Geliştirici araç kutusundaki en önemli hata ayıklama tekniklerinden biridir. Hata ayıklayıcı yürütmeyi duraklatmak istediğiniz her yerde kesme noktaları ayarlarsınız. Örneğin, kod değişkenlerinin durumunu görmek veya belirli bir kesme noktasında çağrı yığınına bakmak isteyebilirsiniz.  Kesme noktaları kullanırken bir uyarı veya sorunu çözmeye çalışıyorsanız bkz. [Visual Studio hata ayıklayıcısında kesme noktaları sorunlarını giderme](../debugger/troubleshooting-breakpoints.md).
+Kesme noktaları, Geliştirici araç kutusundaki en önemli hata ayıklama tekniklerinden biridir. Hata ayıklayıcı yürütmeyi duraklatmak istediğiniz her yerde kesme noktaları ayarlarsınız. Örneğin, kod değişkenlerinin durumunu görmek veya belirli bir kesme noktasında çağrı yığınına bakmak isteyebilirsiniz.  kesme noktaları kullanırken bir uyarı veya sorunu çözmeye çalışıyorsanız, bkz. [Visual Studio hata ayıklayıcıda kesme noktaları sorunlarını giderme](../debugger/troubleshooting-breakpoints.md).
 
 > [!NOTE]
 > Çözmeye çalıştığınız görevi veya sorunu biliyorsanız ancak ne tür bir kesme noktası kullanılacağını bilmeniz gerekiyorsa, bkz. [SSS-hata ayıklama özelliğini bulma özelliği](../debugger/find-your-debugging-task.yml#pause-running-code).
@@ -59,41 +59,41 @@ C# dahil çoğu dil için kesme noktası ve geçerli yürütme satırları otoma
 
 ![Kesme noktası ayarlama](../debugger/media/basicbreakpoint.png "Temel kesme noktası")
 
-Hata ayıklama sırasında, kesme noktası üzerinde kod yürütülmeden önce yürütme duraklatılır. Kesme noktası simgesi sarı bir ok gösterir.
+Hata ayıklarken, bu satırdaki kod yürütülmeden önce yürütme kesme noktasında duraklatılır. Kesme noktası simgesi sarı bir ok gösterir.
 
-Aşağıdaki örnekteki kesme noktası hala `testInt` 1'tir. Bu nedenle, sarı renkli deyimi henüz yürütülmedi olduğundan değişken başlatıldından (1 değerine ayarlanmıştır) değeri değişmemiştir.
+Aşağıdaki örnekteki kesme noktasında, değeri `testInt` hala 1 ' dir. Bu nedenle, sarı içindeki ifade henüz yürütülmediği için, değişken başlatıldıktan sonra (1 değerine ayarlanır) değer değişmemiştir.
 
-![Kesme noktası yürütmesi durduruldu](../debugger/media/breakpointexecution.png "Kesme noktası yürütme")
+![Kesme noktası yürütmesi durdu](../debugger/media/breakpointexecution.png "Kesme noktası yürütme")
 
-Hata ayıklayıcısı kesme noktası sırasında durduğunda, değişken değerleri ve çağrı yığını da dahil olmak [üzere uygulamanın geçerli](../debugger/debugger-feature-tour.md#inspect-variables-with-data-tips) durumuna [bakabilirsiniz.](../debugger/how-to-use-the-call-stack-window.md)
+Hata ayıklayıcı kesme noktasında durdurulduğunda, [değişken değerleri](../debugger/debugger-feature-tour.md#inspect-variables-with-data-tips) ve [çağrı yığını](../debugger/how-to-use-the-call-stack-window.md)da dahil olmak üzere uygulamanın geçerli durumuna bakabilirsiniz.
 
-Kesme noktalarıyla çalışmaya ilişkin birkaç genel yönergeleri burada ves edin edin.
+Kesme noktalarıyla çalışmaya yönelik birkaç genel yönerge aşağıda verilmiştir.
 
-- Kesme noktası bir iki durumlu düğmedir. Bu düğmeye tıklar, **F9 tuşuna** basın veya Kesme Noktası Için Hata Ayıkla Seçeneğini kullanarak kesme noktası silme   >   veya yeniden ekleme seçeneğini kullanabilirsiniz.
+- Kesme noktası bir geçişli. Bu öğeyi tıklatabilir, **F9** tuşuna basabilir veya **hata ayıklama**  >  **geçiş noktasını** kullanarak silebilir veya yeniden ekleyebilirsiniz.
 
-- Kesme noktası silmeden devre dışı bırakmak için üzerine gelin veya sağ tıklayın ve Kesme noktası'ı **devre dışı bırak'ı seçin.** Devre dışı bırakılmış kesme noktaları, sol kenar boşluğunda veya Kesme Noktaları penceresinde **boş noktalar olarak** görünür. Bir kesme noktası yeniden etkinleştirmek için üzerine gelin veya sağ tıklayın ve Kesme noktası **etkinleştir'i seçin.**
+- Bir kesme noktasını silmeden devre dışı bırakmak için üzerine gelin veya sağ tıklayın ve **kesme noktasını devre dışı bırak**' ı seçin. Devre dışı bırakılan kesme noktaları, sol kenar boşluğunda veya **kesme noktaları** penceresinde boş noktalar olarak görünür. Kesme noktasını yeniden etkinleştirmek için üzerine gelin veya sağ tıklayın ve **kesme noktasını etkinleştir**' i seçin.
 
-- Koşulları ve eylemleri ayarlayın, etiket ekleyin ve düzenleyin ya da sağ tıklayarak ve uygun komutu seçerek ya da üzerine gelerek ve Ayarlar simgesini seçerek bir kesme **noktası dışarı aktarın.**
+- koşulları ve eylemleri ayarlayın, etiketler ekleyin ve düzenleyin ya da bir kesme noktasını dışarı aktarın, sağ tıklayın ve uygun komutu seçin ya da üzerine gelip **Ayarlar** simgesini seçin.
 
 ## <a name="breakpoint-actions-and-tracepoints"></a><a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a> Kesme noktası eylemleri ve izleme noktaları
 
-İzleme *noktası,* Çıkış penceresine ileti yazdıran bir kesme **noktasıdır.** İzleme noktası, programlama dilinde geçici bir izleme deyimi gibi davranabilir ve kodun yürütülmesini duraklatmaz. Kesme Noktası Ayarları penceresinde özel bir eylem ayarerek **bir izleme noktası oluşturabilirsiniz.** Ayrıntılı yönergeler için [bkz. Hata ayıklayıcısında izleme Visual Studio kullanma.](../debugger/using-tracepoints.md)
+*İzleme noktası* , **Çıkış** penceresine bir ileti yazdıran bir kesme noktasıdır. İzleme noktası, programlama dilinde geçici bir izleme deyimleri gibi davranabilir ve kodun yürütülmesini duraklamaz. **kesme noktası Ayarlar** penceresinde özel bir eylem ayarlayarak bir izleme noktası oluşturursunuz. ayrıntılı yönergeler için bkz. [Visual Studio hata ayıklayıcısında izlenenoktaları kullanma](../debugger/using-tracepoints.md).
 
 ## <a name="breakpoint-conditions"></a>Kesme noktası koşulları
 
-Koşulları ayarerek bir kesme noktası yürütülürken ne zaman ve nerede yürütüllülür? Koşul, hata ayıklayıcının tanıdığı geçerli bir ifade olabilir. Geçerli ifadeler hakkında daha fazla bilgi için bkz. [Hata Ayıklayıcıdaki İfadeler](../debugger/expressions-in-the-debugger.md).
+Koşullar ayarlayarak bir kesme noktasının ne zaman ve nerede yürütüldüğünü kontrol edebilirsiniz. Koşul, hata ayıklayıcının tanıdığı geçerli bir ifade olabilir. Geçerli ifadeler hakkında daha fazla bilgi için bkz. [Hata Ayıklayıcıdaki İfadeler](../debugger/expressions-in-the-debugger.md).
 
 **Kesme noktası koşulu ayarlamak için:**
 
-1. Kesme noktası simgesine sağ tıklayın ve **koşullar** ' ı (veya **alt**  +  **F9**, **C**) seçin. Veya kesme noktası simgesinin üzerine gelin, **Ayarlar** simgesini seçin ve ardından **kesme noktası ayarları** penceresinde **koşullar** ' ı seçin.
+1. Kesme noktası simgesine sağ tıklayın ve **koşullar** ' ı (veya **alt**  +  **F9**, **C**) seçin. veya kesme noktası simgesinin üzerine gelin, **Ayarlar** simgesini seçin ve ardından **kesme noktası Ayarlar** penceresinde **koşullar** ' ı seçin.
 
-   Ayrıca, kesme **noktaları** penceresinde, bir kesme noktasına sağ tıklayıp **Ayarlar**' ı seçip **koşullar**' ı seçerek de koşullar belirleyebilirsiniz.
+   ayrıca, kesme **noktaları** penceresinde, bir kesme noktasına sağ tıklayıp **Ayarlar**' i seçip **koşullar**' ı seçerek de koşullar belirleyebilirsiniz.
 
    ![Kesme noktası ayarları](../debugger/media/breakpointsettings.png "BreakpointSettings")
 
 2. Açılan menüde **koşullu ifade**, **Isabet sayısı** veya **filtre**' yi seçin ve değeri uygun şekilde ayarlayın.
 
-3.   + **Kesme noktası ayarları** penceresini kapatmak için Kapat ' ı seçin veya CTRL **ENTER** tuşuna basın. Ya da, **kesme noktaları** penceresinde **Tamam** ' ı seçerek iletişim kutusunu kapatın.
+3. **kapat** ' ı seçin veya **Ctrl**+ + **enter** tuşlarına basarak **kesme noktası Ayarlar** penceresini kapatın. Ya da, **kesme noktaları** penceresinde **Tamam** ' ı seçerek iletişim kutusunu kapatın.
 
 Koşul kümesi olan kesme noktaları **+** , kaynak kodunda ve **kesme noktaları** penceresinde bir sembol ile görünür.
 
@@ -110,33 +110,33 @@ Aşağıdaki örnekte, kesme noktası yalnızca değişiklik değeri olduğunda 
 
 ![Değiştirildiğinde kesme noktası](../debugger/media/breakpointwhenchanged.png "Değiştirildiğinde kesme noktası")
 
-Geçersiz sözdizimi olan bir kesme noktası koşulu ayarlarsanız, bir uyarı iletisi görüntülenir. Geçerli sözdizimi olan ancak geçersiz semantiklere sahip bir kesme noktası koşulu belirtirseniz, kesme noktası ilk kez isabet edildiğinde bir uyarı iletisi görünür. Her iki durumda da, hata ayıklayıcı geçersiz kesme noktasıyla karşılaşan hata ayıklayıcıyı kırar. Kesme noktası yalnızca koşul geçerli ise ve olarak değerlendirilirse `false` atlanır.
+Geçersiz sözdizimi olan bir kesme noktası koşulu ayarlarsanız, bir uyarı iletisi görüntülenir. Geçerli sözdizimi olan ancak geçersiz semantiklere sahip bir kesme noktası koşulu belirtirseniz, kesme noktası ilk kez isabet edildiğinde bir uyarı iletisi görünür. Her iki durumda da, hata ayıklayıcı geçersiz kesme noktasına geldiğinde kesilir. Kesme noktası yalnızca koşul geçerli ve olarak değerlendirilirse atlanır `false` .
 
 >[!NOTE]
-> Değiştirilen **zaman** alanı için hata ayıklayıcı koşulun ilk değerlendirmesini bir değişiklik olarak değerlendirmez, bu nedenle ilk değerlendirmede kesme noktası isabet etmez.
+> **Ne zaman değiştirildiği** alan için, hata ayıklayıcı koşulun ilk değerlendirmesini bir değişiklik olacak şekilde değerlendirmez, bu nedenle ilk değerlendirmede kesme noktasına ulaşmaz.
 
 <a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>
-### <a name="use-object-ids-in-conditional-expressions-c-and-f-only"></a>Koşullu ifadelerde Nesne Kimliklerini kullanma (yalnızca C# ve F#
+### <a name="use-object-ids-in-conditional-expressions-c-and-f-only"></a>Koşullu ifadelerde nesne kimliklerini kullanma (yalnızca C# ve F #)
 
- Belirli bir nesnenin davranışını gözlemlemek istediğiniz zamanlar vardır. Örneğin, bir nesnenin bir koleksiyona neden birden çok kez ekli olduğunu bulmak istiyor olabilir. C# ve F# içinde, başvuru türlerinin belirli örnekleri için nesne kimlikleri [oluşturabilir ve](/dotnet/csharp/language-reference/keywords/reference-types)bunları kesme noktası koşullarında kullanabilirsiniz. Nesne kimliği, ortak dil çalışma zamanı (CLR) hata ayıklama hizmetleri tarafından oluşturulur ve nesnesiyle ilişkilendirildi.
+ Belirli bir nesnenin davranışını gözlemlemek istediğiniz zamanlar vardır. Örneğin, bir nesnenin neden bir koleksiyona birden çok kez eklendiğini bulmak isteyebilirsiniz. C# ve F # dilinde, [başvuru türlerinin](/dotnet/csharp/language-reference/keywords/reference-types)belirli örnekleri Için nesne kimlikleri oluşturabilir ve bunları kesme noktası koşullarında kullanabilirsiniz. Nesne KIMLIĞI, ortak dil çalışma zamanı (CLR) hata ayıklama Hizmetleri ve nesnesiyle ilişkili olarak oluşturulur.
 
-**Nesne Kimliği oluşturmak için:**
+**Bir nesne KIMLIĞI oluşturmak için:**
 
-1. Nesne oluşturulduktan sonra kodda bir kesme noktası ayarlayın.
+1. Nesne oluşturulduktan sonra, kodda bir kesme noktası ayarlayın.
 
-2. Hata ayıklamayı başlat ve kesme noktası üzerinde yürütme duraklatılırken Windows YerelLerinde Hata Ayıkla'ya  >    >   tıklayın **(veya Ctrl**  +  **Alt**  +  **V**, **L** tuşlarına basarak YerelLer **penceresini** açın.
+2. hata ayıklamayı başlatın ve yürütme kesme noktasında durakladığında, yereller   >    >  penceresini açmak için **locals** Windows Debug ' ı (veya **Ctrl**  +  **Alt**  +  **V**, **L**) seçin. 
 
-   Yereller penceresinde belirli bir **nesne örneğini bulun,** sağ tıklayın ve Nesne Kimliği **Yapma'yı seçin.**
+   **Yereller** penceresinde belirli nesne örneğini bulun, sağ tıklayın ve **nesne kimliği yap**' ı seçin.
 
-   YerelLer penceresinde **$** artı bir sayı görüyor **gerekir.** Bu, nesne kimliğidir.
+   **$** **Yereller** penceresinde bir ve bir sayı görmeniz gerekir. Bu, nesne KIMLIĞIDIR.
 
-3. Araştırmak istediğiniz noktaya yeni bir kesme noktası ekleyin; Örneğin, nesnesi koleksiyona ekleniyorsa. Kesme noktası'ne sağ tıklayın ve Koşullar'ı **seçin.**
+3. Araştırmak istediğiniz noktada yeni bir kesme noktası ekleyin; Örneğin, nesne koleksiyona eklendiğinde. Kesme noktasına sağ tıklayın ve **koşullar**' ı seçin.
 
-4. Koşullu İfade alanında Nesne **Kimliğini** kullanın. Örneğin, değişken koleksiyona eklenecek nesne ise True'yi seçin ve `item` **öğe == $ \<n>** yazın; burada nesne kimliği  \<n> numarasıdır.
+4. **Koşullu ifade** ALANıNDAKI nesne kimliğini kullanın. Örneğin, değişkeni `item` koleksiyona eklenecek nesnese, **true** ' ı seçin ve **item = = $ \<n>** yazın; burada \<n> nesne kimlik numarasıdır.
 
-   Yürütme, bu nesnenin koleksiyona ekli olduğu noktada kesmeye neden olur.
+   Yürütme, nesne koleksiyona eklenecek olan noktada kesintiye uğracaktır.
 
-   Nesne Kimliğini silmek için Yereller penceresinde değişkenine sağ tıklayın ve **Nesne** Kimliğini **Sil'i seçin.**
+   Nesne KIMLIĞINI silmek için, **Yereller** penceresinde değişkenine sağ tıklayın ve **nesne kimliğini Sil**' i seçin.
 
 > [!NOTE]
 > Nesne kimlikleri zayıf başvurular oluşturur ve nesnenin atık toplanmasını engellemez. Bunlar yalnızca geçerli hata ayıklama oturumu için geçerlidir.
@@ -145,7 +145,7 @@ Geçersiz sözdizimi olan bir kesme noktası koşulu ayarlarsanız, bir uyarı i
 
 Kodunuzda bir döngünün belirli bir sayıda yinelemeden sonra yanlış davranmaya devam ettiğinden şüpheleniyorsanız, bu yinelemeye ulaşmak için **F5** 'e tekrar tekrar basma yerine, bu sayıda isabetden sonra yürütmeyi durdurmak için bir kesme noktası ayarlayabilirsiniz.
 
-**Kesme noktası ayarları** penceresindeki **koşullar** ' ın altında, **isabet sayısı**' nı seçin ve ardından yineleme sayısını belirtin. Aşağıdaki örnekte, kesme noktası diğer tüm yinelemelerde isabet olarak ayarlanır:
+**kesme noktası Ayarlar** penceresinde **koşullar** ' ın altında, **isabet sayısı**' nı seçin ve ardından yineleme sayısını belirtin. Aşağıdaki örnekte, kesme noktası diğer tüm yinelemelerde isabet olarak ayarlanır:
 
 ![Kesme noktası isabet sayısı](../debugger/media/breakpointhitcount.png "BreakpointHitCount")
 
@@ -153,7 +153,7 @@ Kodunuzda bir döngünün belirli bir sayıda yinelemeden sonra yanlış davranm
 
 Kesme noktasını yalnızca belirtilen cihazlarda veya belirtilen işlemlerde ve iş parçacıklarında tetiklemeyle kısıtlayabilirsiniz.
 
-**Kesme noktası ayarları** penceresindeki **koşullar** ' ın altında, **filtre**' yi seçin ve ardından aşağıdaki ifadelerden bir veya daha fazlasını girin:
+**kesme noktası Ayarlar** penceresinde **koşullar** ' ın altında, **filtre**' yi seçin ve ardından aşağıdaki ifadelerden bir veya daha fazlasını girin:
 
 - MachineName = "ad"
 - Işlemkimliği = değer
@@ -165,50 +165,50 @@ Dize değerlerini çift tırnak içine alın. Yan tümceleri `&` (ve), ( `||` ve
 
 ## <a name="set-function-breakpoints"></a><a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> İşlev kesme noktalarını ayarla
 
-Bir işlev çağrıldığında yürütmeyi kesebilirsiniz. Bu, örneğin, işlev adını bildiğiniz ancak konumunu not ettiğiniz durumlarda faydalıdır. Aynı adla işleve sahip olursanız ve bunların hepsini (örneğin, farklı projelerde aşırı yüklenmiş işlevler veya işlevler) bozmak istediğiniz durumlarda da yararlıdır.
+Bir işlev çağrıldığında yürütmeyi kesebilirsiniz. Bu, örneğin, işlev adını bildiğiniz ancak konumunu not ettiğiniz durumlarda faydalıdır. Aynı ada sahip işlevleriniz varsa ve bunların tümünü bölmek istiyorsanız (örneğin, aşırı yüklenmiş işlevler veya farklı projelerdeki işlevler) Bu da yararlıdır.
 
-**İşlev kesme noktası ayarlamak için:**
+**Bir işlev kesme noktası ayarlamak için:**
 
-1. Yeni **Kesme Noktası İşlev** Kesme Noktası  >  **Hata**  >  **Ayıklama'yı seçin** veya **Ctrl**  +  **K**, **B tuşlarına basın.**
+1.   >  **Yeni kesme noktası**  >  **işlev kesme noktasını** Ayıkla ' yı seçin veya **CTRL**  +  **K**, **B** tuşlarına basın.
 
-   Kesme Noktaları penceresinde **Yeni**  >  **İşlev Kesme** **Noktası'ı da seçin.**
+   Ayrıca   >  **kesme noktaları** penceresinde yeni **işlev kesme noktası** ' nı da seçebilirsiniz.
 
-1. Yeni **İşlev Kesme Noktası iletişim** kutusunda İşlev Adı kutusuna **işlev adını** girin.
+1. **Yeni Işlev kesme noktası** iletişim kutusunda, işlev **adı** kutusuna işlev adını girin.
 
-   İşlev belirtimlerini daraltmak için:
+   İşlev belirtimini daraltmak için:
 
    - Tam işlev adını kullanın.
 
-     Örnek:  `Namespace1.ClassX.MethodA()`
+     Örneğinde  `Namespace1.ClassX.MethodA()`
 
    - Aşırı yüklenmiş bir işlevin parametre türlerini ekleyin.
 
-     Örnek:  `MethodA(int, string)`
+     Örneğinde  `MethodA(int, string)`
 
-   - Modülü belirtmek için '!' sembolünü kullanın.
+   - Modülü belirtmek için '! ' sembolünü kullanın.
 
      Örnek: `App1.dll!MethodA`
 
-   - Yerel C++ içinde bağlam işleci kullanın.
+   - Yerel C++ ' ta bağlam işlecini kullanın.
 
      `{function, , [module]} [+<line offset from start of method>]`
 
      Örnek: `{MethodA, , App1.dll}+2`
 
-1. Dil **açılan** listesinde işlevin dilini seçin.
+1. **Dil** açılan menüsünde işlevin dilini seçin.
 
 1. **Tamam**’ı seçin.
 
-### <a name="set-a-function-breakpoint-using-a-memory-address-native-c-only"></a>Bellek adresi kullanarak işlev kesme noktası ayarlama (yalnızca yerel C++)
- Sınıfın belirli bir örneği tarafından çağrılır bir yöntemde işlev kesme noktası ayarlamak için bir nesnenin adresini kullanabilirsiniz.  Örneğin, türünde adreslenebilir bir nesne verilebilirse, örneğin çağıran `my_class` yönteminde bir işlev `my_method` kesme noktası ayarlayın.
+### <a name="set-a-function-breakpoint-using-a-memory-address-native-c-only"></a>Bir bellek adresi kullanarak bir işlev kesme noktası ayarlama (yalnızca yerel C++)
+ Bir sınıfın belirli bir örneği tarafından çağrılan bir yöntemde işlev kesme noktası ayarlamak için bir nesnenin adresini kullanabilirsiniz.  Örneğin, türünde adreslenebilir bir nesne verildiğinde `my_class` , `my_method` örnek çağıran yöntemde bir işlev kesme noktası ayarlayabilirsiniz.
 
-1. Sınıfın örneği örneği örneği başladıktan sonra bir kesme noktası ayarlayın.
+1. Sınıfın örneği örneklendikten sonra bir kesme noktası ayarlayın.
 
 2. Örneğin adresini bulun (örneğin, `0xcccccccc` ).
 
-3. Yeni **Kesme Noktası İşlev** Kesme Noktası  >  **Hata**  >  **Ayıklama'yı seçin** veya **Ctrl**  +  **K**, **B tuşlarına basın.**
+3.   >  **Yeni kesme noktası**  >  **işlev kesme noktasını** Ayıkla ' yı seçin veya **CTRL**  +  **K**, **B** tuşlarına basın.
 
-4. İşlev Adı kutusuna **aşağıdakini ekleyin ve** **C++ dilini** seçin.
+4. Aşağıdakini **Işlev adı** kutusuna ekleyin ve **C++** dili ' ni seçin.
 
    ```cpp
    ((my_class *) 0xcccccccc)->my_method
@@ -249,26 +249,26 @@ Belirli bir nesnenin özelliği değiştiğinde veri kesme noktaları yürütmey
 
 2. **Adres** kutusuna bir bellek adresi veya bir bellek adresi değerlendirilen bir ifade yazın. Örneğin, `&avar` değişkenin içeriği değiştiğinde kesmek için yazın `avar` .
 
-3. Bayt **Sayısı açılan listesinde,** hata ayıklayıcının izlemesi istediğiniz bayt sayısını seçin. Örneğin, **4'ü seçerse,** hata ayıklayıcısı ile başlayan dört baytı izler ve bu baytlardan herhangi biri `&avar` değerini değiştirirse kesmeyi izler.
+3. **Bayt sayısı** açılan listesinde, hata ayıklayıcının izlemesini istediğiniz bayt sayısını seçin. Örneğin, **4**' ü seçerseniz hata ayıklayıcı, `&avar` bu baytların değeri değişirken, başlangıç ve kesme olmak üzere dört baytı izleyen bir işlem görür.
 
 Veri kesme noktaları aşağıdaki koşullarda çalışmaz:
-- Hata ayıklaması yapılan bir işlem bellek konuma yazar.
+- Hata ayıklamakta olmayan bir işlem, bellek konumuna yazma işlemini içermemelidir.
 - Bellek konumu iki veya daha fazla işlem arasında paylaşılır.
-- Bellek konumu çekirdek içinde güncelleştirilir. Örneğin, bellek 32 bit Windows işlevine geçiri ise bellek çekirdek modundan güncelleştirilir, bu nedenle hata ayıklayıcı güncelleştirmede `ReadFile` kesmez.
-- Burada izleme ifadesi 32 bit donanımda 4 bayttan, 64 bit donanımda ise 8 bayttan büyüktür. Bu, x86 mimarisinin bir sınırlamasıdır.
+- Bellek konumu çekirdek içinde güncelleştirilir. örneğin, bellek 32-bit Windows `ReadFile` işlevine geçirilirse, bellek çekirdek modundan güncelleştirilir, bu nedenle hata ayıklayıcı güncelleştirmede kesintiye uğramaz.
+- İzleme ifadesinin 32 bit donanımda 4 bayttan daha büyük olduğu ve 64 bit donanımda 8 baytlık olduğu durumlar. Bu, x86 mimarisinin bir sınırlamasıdır.
 
 > [!NOTE]
-> - Veri kesme noktaları belirli bellek adreslerine bağlıdır. Bir değişkenin adresi bir hata ayıklama oturumundan sonrakine değişir, böylece her hata ayıklama oturumunun sonunda veri kesme noktaları otomatik olarak devre dışı bırakılır.
+> - Veri kesme noktaları belirli bellek adreslerine bağımlıdır. Bir değişkenin adresi bir hata ayıklama oturumundan sonrakine değiştiği için, her hata ayıklama oturumunun sonunda veri kesme noktaları otomatik olarak devre dışı bırakılır.
 >
-> - Yerel değişkende bir veri kesme noktası ayarsanız, kesme noktası işlev sona erdiğinde etkin kalır, ancak bellek adresi artık geçerli değildir, bu nedenle kesme noktası davranışı tahmin edilemez. Yerel değişkende bir veri kesme noktası ayar ediyorsanız, işlev sona ermeden önce kesme noktası silmeniz veya devre dışı bırakmanız gerekir.
+> - Yerel bir değişkende bir veri kesme noktası ayarlarsanız, işlev sona erdiğinde kesme noktası etkin kalır, ancak bellek adresi artık geçerli olmadığında kesme noktasının davranışı tahmin edilemez. Yerel bir değişkende bir veri kesme noktası ayarlarsanız, işlev bitmeden önce kesme noktasını silmeniz veya devre dışı bırakmanız gerekir.
 
-## <a name="manage-breakpoints-in-the-breakpoints-window"></a><a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> Kesme noktaları penceresinde kesme noktaları yönetme
+## <a name="manage-breakpoints-in-the-breakpoints-window"></a><a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> Kesme noktaları penceresinde kesme noktalarını yönetme
 
- Çözümünüzde **tüm kesme noktaları** görmek ve yönetmek için Kesme Noktaları penceresini kullanabilirsiniz. Bu merkezi konum özellikle büyük bir çözümde veya kesme noktaları kritik öneme sahip karmaşık hata ayıklama senaryolarında yararlıdır.
+ Çözümünüzdeki tüm kesme noktalarını görmek ve yönetmek için **kesme noktaları** penceresini kullanabilirsiniz. Bu merkezi konum özellikle büyük bir çözümde veya kesme noktalarının kritik olduğu karmaşık hata ayıklama senaryolarında yararlıdır.
 
-Kesme **noktaları penceresinde kesme** noktalarında arama, sıralama, filtreleme, etkinleştirme/devre dışı bırakma veya silme gibi özellikleri görebilirsiniz. Ayrıca koşullar ve eylemler de ayar ekleyebilir ya da yeni bir işlev ya da veri kesme noktası ekebilirsiniz.
+**Kesme noktaları** penceresinde, kesme noktalarını arayabilir, sıralayabilir, filtreleyebilir, etkinleştirebilir/devre dışı bırakabilir veya silebilirsiniz. Ayrıca, koşulları ve eylemleri ayarlayabilir veya yeni bir işlev ya da veri kesme noktası ekleyebilirsiniz.
 
-Kesme Noktaları penceresini **açmak için Windows** Kesme Noktalarında **Hata**  >    >  **Ayıkla'ya tıklayın** veya **Ctrl** Alt B + **tuşlarına** + **basın.**
+**kesme noktaları** penceresini açmak için   >  **Windows**  >  **kesme noktaları**' nı seçin veya **Ctrl** + **Alt** + **B**' ye basın.
 
 ![Kesme Noktaları penceresi](../debugger/media/breakpointswindow.png "Kesme Noktaları penceresi")
 
@@ -292,35 +292,35 @@ Kesme Noktaları penceresini **açmak için Windows** Kesme Noktalarında **Hata
 
 Ayrıca, **çağrı yığını** ve **ayrıştırma** hata ayıklayıcısı pencerelerinin kesme noktalarını da ayarlayabilirsiniz.
 
-### <a name="set-a-breakpoint-in-the-call-stack-window"></a>Çağrı Yığını penceresinde kesme noktası ayarlama
+### <a name="set-a-breakpoint-in-the-call-stack-window"></a>Çağrı yığını penceresinde bir kesme noktası ayarlayın
 
- Bir çağrı işlevinin döndür olduğu yönergeyi veya satırı kesme noktası olarak ayarlamak için Çağrı Yığını penceresinde bir **kesme noktası ayarlayın.**
+ Çağıran işlevin döndüğü yönergeyi veya satırı bölmek için **çağrı yığını** penceresinde bir kesme noktası ayarlayabilirsiniz.
 
-**Çağrı Yığını penceresinde bir kesme noktası ayarlamak için:**
+**Çağrı yığını penceresinde bir kesme noktası ayarlamak için:**
 
-1. Çağrı Yığını **penceresini açmak** için hata ayıklama sırasında duraklatılmış olması gerekir. Windows **Çağrı Yığınında**  >  **Hata**  >  **Ayıkla'yı seçin** veya **Ctrl** Alt C + **tuşlarına** + **basın.**
+1. **Çağrı yığını** penceresini açmak için hata ayıklama sırasında duraklamalısınız.   >    >  **çağrı yığınını** Windows hata ayıkla ' yı seçin veya **Ctrl** + **Alt** + **C** tuşlarına basın.
 
-2. Çağrı Yığını **penceresinde,** çağıran işleve sağ tıklayın ve Kesme Noktası Ekle **Kesme**  >  **Noktası'yı** seçin veya **F9 tuşuna basın.**
+2. **Çağrı yığını** penceresinde, çağırma işlevine sağ tıklayın ve **kesme** noktası  >  **Ekle kesme noktası**' nı seçin veya **F9** tuşuna basın.
 
-   Çağrı yığınının sol kenar boşluğunda işlev çağrısı adının yanında bir kesme noktası simgesi görünür.
+   Çağrı yığınının sol kenar boşluğunda işlev çağrısı adının yanında bir kesme noktası simgesi görüntülenir.
 
-Çağrı yığını kesme noktası  Kesme Noktaları penceresinde adres olarak, işlevde sonraki yürütülebilir yönergeye karşılık gelen bir bellek konumuyla birlikte görünür.
+Çağrı yığını kesme noktası, işlevdeki bir sonraki yürütülebilir yönergeye karşılık gelen bir bellek konumu olan bir adres olarak **kesme noktaları** penceresinde görünür.
 
-Hata ayıklayıcısı yönergede bozar.
+Hata ayıklayıcı yönergede kesilir.
 
-Çağrı yığını hakkında daha fazla bilgi için [bkz. Nasıl? Çağrı Yığını penceresini kullanma.](../debugger/how-to-use-the-call-stack-window.md)
+Çağrı yığını hakkında daha fazla bilgi için bkz. [nasıl yapılır: çağrı yığını penceresini kullanma](../debugger/how-to-use-the-call-stack-window.md).
 
-Kod yürütme sırasında kesme noktaları görsel olarak izleme için [bkz. Hata ayıklama sırasında çağrı yığınında yöntemleri eşleme.](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
+Kod yürütme sırasında kesme noktalarını görsel olarak izlemek için bkz. [hata ayıklama sırasında çağrı yığınında eşleme yöntemleri](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
 
-### <a name="set-a-breakpoint-in-the-disassembly-window"></a>Disassembly penceresinde kesme noktası ayarlama
+### <a name="set-a-breakpoint-in-the-disassembly-window"></a>Ayrıştırma penceresinde bir kesme noktası ayarlayın
 
-1. **Disassembly penceresini açmak** için hata ayıklama sırasında duraklatılmış olması gerekir.   >  **Windows'da Hata**  >  **AyıklamaKökle'yi seçin** veya **Ctrl** Alt D +  + **tuşlarına basın.**
+1. **Ayrıştırma** penceresini açmak için hata ayıklama sırasında duraklamalısınız. ayrıştırılmış **Windows hata ayıkla**  >    >  veya **Ctrl** + **Alt** + **D** tuşlarına basın.
 
-2. Ayır **penceresinde, kesme** yapmak istediğiniz yönergenin sol kenar boşluğuna tıklayın. Ayrıca bunu seçerek **F9** tuşuna basarak veya sağ tıklar ve Kesme Noktası Ekle **Kesme Noktası** seçeneğini  >  **de seçersiniz.**
+2. **Ayrıştırma** penceresinde, bölmek istediğiniz yönergenin sol kenar boşluğuna tıklayın. Ayrıca, bunu seçip **F9** tuşuna basabilir veya sağ tıklayıp **kesme** noktası Ekle kesme noktası ' nı seçebilirsiniz  >  .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata ayıklama nedir?](../debugger/what-is-debugging.md)
-- [Visual Studio kullanarak daha iyi C# Visual Studio](../debugger/write-better-code-with-visual-studio.md)
-- [Hata ayıklamaya ilk bakış](../debugger/debugger-feature-tour.md)
-- [Hata ayıklayıcısında kesme Visual Studio giderme](../debugger/troubleshooting-breakpoints.md)
+- [Visual Studio kullanarak daha iyi C# kodu yazma](../debugger/write-better-code-with-visual-studio.md)
+- [Hata ayıklama bölümüne ilk bakış](../debugger/debugger-feature-tour.md)
+- [Visual Studio hata ayıklayıcıda kesme noktaları sorunlarını giderme](../debugger/troubleshooting-breakpoints.md)

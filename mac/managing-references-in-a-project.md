@@ -1,19 +1,19 @@
 ---
-title: Projedeki başvuruları yönetme
-description: Bu makalede, Mac için Visual Studio projedeki başvuruların nasıl yönetileceği açıklanmaktadır
+title: Project başvuruları yönetme
+description: bu makalede, Mac için Visual Studio projedeki başvuruların nasıl yönetileceği açıklanmaktadır
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 11/09/2020
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
 ms.topic: overview
-ms.openlocfilehash: 41d49fe6b23818f3cb9de8dec72462d4b2029bb6
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 8a75368e746a02ae0789d9f0a90bf2f8907e0d04
+ms.sourcegitcommit: 879ba768364f3bfdaeb9004f740478489ab15c3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493523"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114796209"
 ---
-# <a name="managing-references-in-a-project"></a>Projedeki başvuruları yönetme
+# <a name="managing-references-in-a-project"></a>Project başvuruları yönetme
 
 Mac için Visual Studio projenize ek başvurular eklemenin iki yolu sağlar:
 
@@ -22,7 +22,7 @@ Mac için Visual Studio projenize ek başvurular eklemenin iki yolu sağlar:
 Bunlar:
 
 * Başvurular
-* NuGet paketleri (Paketler klasörü aracılığıyla eklenir)
+* NuGet paketleri (paketler klasörü aracılığıyla eklenir)
 
 Ayrıca, Web başvuruları ve yerel başvurular da herhangi bir projeye eklenebilir.
 
@@ -38,13 +38,13 @@ Her Xamarin çerçevesi için kullanılabilen derlemeler hakkında bilgi için [
 
 ## <a name="nuget"></a>NuGet
 
-NuGet, .NET geliştirme için en popüler paket yöneticisidir. Mac için Visual Studio NuGet desteği projenize eklenecek paketleri aramanızı sağlar.
+NuGet, .net geliştirme için en popüler paket yöneticisidir. Mac için Visual Studio NuGet desteği projenize eklenecek paketleri aramanıza olanak tanır.
 
 Bunu yapmak için, çözüm penceresinde **paket** klasörüne sağ tıklayın ve paket Ekle ' yi seçin.
 
-NuGet paketi kullanma hakkında daha fazla bilgi için, projenizin Gözden geçirmedeki [bir NuGet paketi de dahil](nuget-walkthrough.md) edilmiştir.
+NuGet paketi kullanma hakkında daha fazla bilgi Project gözden geçirmede [bir NuGet paketi dahil](nuget-walkthrough.md) edilmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başvuruları yönetme (Windows üzerinde Visual Studio)](/visualstudio/ide/managing-references-in-a-project)
-- [Bir uzantı SDK 'sına karşı başvuruları ekleme (Windows üzerinde Visual Studio)](/visualstudio/ide/adding-references-using-nuget-versus-an-extension-sdk)
+- [başvuruları yönetme (Windows Visual Studio)](/visualstudio/ide/managing-references-in-a-project)
+- [NuGet ve uzantı SDK 'sı (Windows Visual Studio) kullanarak başvuru ekleme](/visualstudio/extensibility/nuget-versus-sdk-references)

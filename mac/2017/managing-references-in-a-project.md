@@ -1,19 +1,19 @@
 ---
-title: Projedeki başvuruları yönetme
-description: Bu makalede, Mac için Visual Studio projedeki başvuruların nasıl yönetileceği açıklanmaktadır
+title: Project başvuruları yönetme
+description: bu makalede, Mac için Visual Studio projedeki başvuruların nasıl yönetileceği açıklanmaktadır
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
 ms.topic: overview
-ms.openlocfilehash: 50aa6077bafb2d4791555d449f06f6c81595a2f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3dfeea15e0d9003e3ae0e46b74c844016d298595
+ms.sourcegitcommit: 879ba768364f3bfdaeb9004f740478489ab15c3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950556"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114796196"
 ---
-# <a name="managing-references-in-a-project"></a>Projedeki başvuruları yönetme
+# <a name="managing-references-in-a-project"></a>Project başvuruları yönetme
 
 Mac için Visual Studio projenize ek başvurular eklemenin iki yolu sağlar:
 
@@ -38,13 +38,13 @@ Her Xamarin çerçevesi için kullanılabilen derlemeler hakkında bilgi için [
 
 ## <a name="nuget"></a>NuGet
 
-NuGet, .NET geliştirme için en popüler paket yöneticisidir. Mac için Visual Studio NuGet desteği projenize eklenecek paketleri aramanızı sağlar.
+NuGet, .net geliştirme için en popüler paket yöneticisidir. Mac için Visual Studio NuGet desteği projenize eklenecek paketleri aramanıza olanak tanır.
 
 Bunu yapmak için Çözüm Bölmesi **paket** klasörüne sağ tıklayın ve paket Ekle ' yi seçin.
 
-NuGet paketi kullanma hakkında daha fazla bilgi için, projenizin Gözden geçirmedeki [bir NuGet paketi de dahil](nuget-walkthrough.md) edilmiştir.
+NuGet paketi kullanma hakkında daha fazla bilgi Project gözden geçirmede [bir NuGet paketi dahil](nuget-walkthrough.md) edilmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başvuruları yönetme (Windows üzerinde Visual Studio)](/visualstudio/ide/managing-references-in-a-project)
-- [Bir uzantı SDK 'sına karşı başvuruları ekleme (Windows üzerinde Visual Studio)](/visualstudio/ide/adding-references-using-nuget-versus-an-extension-sdk)
+- [başvuruları yönetme (Windows Visual Studio)](/visualstudio/ide/managing-references-in-a-project)
+- [proje başvurusu olarak SDK ile NuGet karşılaştırması](/visualstudio/extensibility/nuget-versus-sdk-references)

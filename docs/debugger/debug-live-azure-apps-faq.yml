@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
-  title: Anlık görüntü hata ayıklaması hakkında SSS | Microsoft Docs
-  description: Visual Studio 'daki Snapshot Debugger kullanarak canlı Azure uygulamalarında hata ayıklarken oluşabilecek sık sorulan sorular (SSS) listesini gözden geçirin.
+  title: Anlık görüntü hata ayıklama hakkında SSS | Microsoft Docs
+  description: Canlı Azure uygulamalarında hata ayıklama sırasında sık sorulan soruların (SSS) listesini gözden geçirin ve Snapshot Debugger Visual Studio.
   ms.custom: SEO-VS-2020
   ms.date: 11/07/2017
   ms.topic: reference
@@ -13,29 +13,29 @@ metadata:
   manager: jmartens
   ms.workload:
   - multiple
-  ms.openlocfilehash: 8c51570ec5cd8d2c0358c863d1d1fb656c8ebfd9
-  ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+  ms.openlocfilehash: 530719aafeaf617aa92b09388768a46e2ccd5bf5
+  ms.sourcegitcommit: 879ba768364f3bfdaeb9004f740478489ab15c3a
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/06/2021
-  ms.locfileid: "108800388"
-title: Visual Studio 'da anlık görüntü hata ayıklaması için sık sorulan sorular
-summary: Snapshot Debugger kullanarak canlı Azure uygulamalarında hata ayıklarken oluşabilecek soruların bir listesi aşağıda verilmiştir.
+  ms.lasthandoff: 07/29/2021
+  ms.locfileid: "114796183"
+title: Visual Studio'de anlık görüntü hata ayıklama için sık sorulan Visual Studio
+summary: Canlı Azure uygulamalarında hata ayıklama sırasında hata ayıklamak için aşağıdaki soruların listesini Snapshot Debugger.
 sections:
 - name: Genel
   questions:
   - question: >
-      Anlık görüntü alma performans maliyeti nedir?
+      Anlık görüntü almanın performans maliyeti nedir?
     answer: >
-      Snapshot Debugger uygulamanızın bir anlık görüntüsünü yakaladığında, uygulamanın sürecini çatallandırın ve ele geçirilen kopyayı askıya alır. Bir anlık görüntüde hata ayıkladığınızda, işlemin yürütülen kopyasına göre hata ayıklaması yapılır. Bu işlem yalnızca 10-20 milisaniye sürer ancak uygulamanın tam yığınını kopyalamaz. Bunun yerine, yalnızca sayfa tablosunu kopyalar ve yazma üzerine kopyalamak için sayfaları ayarlar. Uygulamanızın yığındaki bazı nesneler değiştiğinde ilgili sayfaları kopyalanır. Bu, her anlık görüntünün küçük bir bellek içi maliyeti vardır (çoğu uygulama için yüzlerce kilobayt sırasıyla).
+      Uygulama Snapshot Debugger anlık görüntüsünü yakalarsa, uygulamanın işleminin bir kopyasını alır ve kopyanın kopyasını askıya alır. Bir anlık görüntüde hata ayıklarken, işlemde hata ayıklama işlemiyle hata ayıklarsiniz. Bu işlem yalnızca 10-20 milisaniye sürer ancak uygulamanın tam yığınını kopyalamaz. Bunun yerine, yalnızca sayfa tablosu kopyalanır ve yazmada kopyalanan sayfalar ayarlar. Yığındaki bazı uygulama nesneleri değişirse, ilgili sayfaları kopyalanır. Bu nedenle her anlık görüntü için küçük bir bellek içinde maliyet (çoğu uygulama için yüzlerce kilobayt sırasına göre) vardır.
   - question: >
-      Ölçeği genişletilmiş bir Azure App Service (uygulamamın birden çok örneği) varsa ne olur?
+      Ölçeği genişlene bir uygulamam varsa (Azure App Service birden çok örneği) ne olur?
     answer: >
-      Uygulamanızın birden çok örneğine sahip olduğunuzda, anlık görüntü noktaları her tek örneğe uygulanır. Yalnızca belirtilen koşullara uyan ilk anlık görüntü noktası bir anlık görüntü oluşturur. Birden çok anlık görüntü noktanız varsa, sonraki anlık görüntüler ilk anlık görüntüyü oluşturan örnekten gelir. Çıkış penceresine gönderilen günlüğe kaydetme noktaları 'ler yalnızca bir örnekten gelen iletileri gösterir, ancak uygulama günlüklerine gönderilen günlüğe kaydetme noktaları her örnekten ileti gönderir.
+      Uygulamanın birden çok örneğine sahip olduğunda, ek bileşen noktaları her bir örnek için uygulanır. Yalnızca belirtilen koşullarla isabet etmek için ilk ek bileşen bir anlık görüntü oluşturur. Birden çok anlık görüntü noktası varsa, sonraki anlık görüntüler ilk anlık görüntüyü oluşturan aynı örnekten gelir. Çıkış penceresine gönderilen günlük noktaları yalnızca bir örnekten iletileri gösterirken, uygulama günlüklerine gönderilen günlük noktaları her örnekten ileti gönderir.
   - question: >
-      Snapshot Debugger sembolleri nasıl yükleyebilir?
+      Veri Snapshot Debugger yükser?
     answer: >
-      Snapshot Debugger, uygulamanız için yerel ya da Azure App Service dağıtılan eşleşen simgelere sahip olmanızı gerektirir. (Embedded pdb 'leri Şu anda desteklenmiyor.) Snapshot Debugger, Azure App Service sembolleri otomatik olarak indirir. Visual Studio 2017 sürüm 15,2 ' den başlayarak, Azure App Service dağıtım, uygulamanızın sembollerini de dağıtır.
+      Bu Snapshot Debugger, uygulamanıza yönelik eşleşen sembollerin yerel olarak veya uygulamanıza dağıtılmasını Azure App Service. (Katıştırılmış PDB'ler şu anda desteklenmiyor.) Bu Snapshot Debugger, dosyadan sembolleri otomatik olarak Azure App Service. 2017 Visual Studio 15.2'den başlayarak, Azure App Service'ye dağıtım da uygulamanızın sembollerini dağıtır.
   - question: >
       Uygulamam Snapshot Debugger derlemelerine karşı çalışıyor mu?
     answer: >
@@ -54,13 +54,13 @@ sections:
       Aşağıdaki adımları Snapshot Debugger site uzantınızı App Service site uzantısını kaldırabilirsiniz:
 
 
-      1. App Service'daki Bulut Gezgini'Visual Studio veya Azure portal.
+      1. Visual Studio App Service'daki Bulut Gezgini aracılığıyla Azure portal.
 
       1. Uygulamanıza App Service kudu sitesine (yani, uygulama hizmetinize) gidin.**scm**.azurewebsites.net) ve **Site uzantıları'ne gidin.**
 
       1. Site uzantısını kaldırmak Snapshot Debugger X'e tıklayın.
   - question: >
-      Bağlantı noktaları neden bir oturum sırasında Snapshot Debugger açılabilir?
+      Bağlantı noktaları neden bir oturum Snapshot Debugger açıldı?
     answer: >
       Snapshot Debugger azure'da alınan anlık görüntülerde hata ayıklamak için bir bağlantı noktası kümesi açmanız gerektiğinde, bunlar uzaktan hata ayıklama için gereken bağlantı noktalarıyla aynıdır. [Bağlantı noktalarının listesini burada bulabilirsiniz.](../debugger/remote-debugger-port-assignments.md)
   - question: >
@@ -68,32 +68,32 @@ sections:
     answer: >
       Uygulama Hizmetleri için:
 
-      1. App Service için Azure portal uzaktan hata ayıklayıcı uzantısını devre dışı bırakın.
+      1. Uzaktan Hata Ayıklayıcı uzantısını uygulamanıza Azure portal devre dışı App Service.
 
-      2. Uygulama *ayarlarını* > uygulama hizmeti kaynak dikey penceresini > Azure Portal
+      2. Azure portal > Hizmeti kaynak dikey > *uygulama Ayarlar*
 
-      3. *Hata ayıklama* bölümüne gidin ve *Uzaktan hata ayıklama* için *kapalı* düğmesine tıklayın.
+      3. Hata Ayıklama *bölümüne gidin* ve Uzaktan hata ayıklama *için* Kapalı *düğmesine tıklayın.*
 
 
       AKS için:
 
-      1. [Docker görüntülerinde Visual Studio Snapshot Debugger](https://github.com/Microsoft/vssnapshotdebugger-docker)karşılık gelen bölümleri kaldırmak Için Dockerfile dosyanızı güncelleştirin.
+      1. Dockerfile dosyanızı güncelleştirin ve [Docker](https://github.com/Microsoft/vssnapshotdebugger-docker)görüntü Visual Studio Snapshot Debugger ilgili bölümleri kaldırın.
 
-      2. Değiştirilen Docker görüntüsünü yeniden derleyin ve yeniden dağıtın.
-
-
-      Sanal makine/sanal makine ölçek kümeleri için uzaktan hata ayıklayıcı uzantısı, sertifikalar, Anahtar kasaları ve gelen NAT havuzlarını aşağıdaki gibi kaldırın:
+      2. Değiştirilen Docker görüntüsünü yeniden oluşturma ve yeniden oluşturma.
 
 
-      1. Uzaktan hata ayıklayıcı uzantısını kaldır
+      Sanal makine/sanal makine ölçek kümeleri için Uzaktan Hata Ayıklayıcı uzantısını, Sertifikaları, KeyVaults'u ve Gelen NAT havuzlarını aşağıdaki gibi kaldırın:
 
-         Sanal makineler ve sanal makine ölçek kümeleri için uzak hata ayıklayıcıyı devre dışı bırakmak için çeşitli yollar vardır:
 
-            - Bulut Gezgini aracılığıyla uzaktan hata ayıklayıcıyı devre dışı bırakma
+      1. Uzaktan Hata Ayıklayıcı uzantısını kaldırma
 
-               - Cloud Explorer > hata ayıklamayı devre dışı bırak (bulut Gezgini 'nde sanal makine ölçek kümesi için hata ayıklamayı devre dışı bırakma yok) >.
+         Sanal makineler ve sanal makine ölçek kümeleri için Uzaktan Hata Ayıklayıcı'nın devre dışı bırakılamanın birkaç yolu vardır:
 
-            - Uzaktan hata ayıklayıcıyı PowerShell betikleri/cmdlet 'Leriyle devre dışı bırakma
+            - Uzak Hata Ayıklayıcıyı Bulut Gezgini aracılığıyla devre dışı bırakma
+
+               - Cloud Explorer> hata ayıklamayı devre > (Cloud Explorer'da sanal makine ölçek kümesi için Hata Ayıklamayı Devre Dışı Bırak) seçeneğiyle sanal makine kaynağınızı kullanabilirsiniz.
+
+            - PowerShell Betikleri/Cmdlet'leri ile Uzaktan Hata Ayıklayıcıyı Devre Dışı Bırakma
 
                Sanal makine için:
 
@@ -101,7 +101,7 @@ sections:
                Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger
                ```
 
-               Sanal Makine Ölçek Kümeleri için:
+               Sanal makine ölçek kümeleri için:
 
                ```powershell
                $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
@@ -109,12 +109,12 @@ sections:
                Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name $extension
                ```
 
-            - Azure portal aracılığıyla uzaktan hata ayıklayıcıyı devre dışı bırakın
-               - Azure portal sanal makineniz/sanal makine ölçek kümeleri kaynak dikey penceresi > uzantıları >
-               - Microsoft. VisualStudio. Azure. RemoteDebug. VSRemoteDebugger uzantısını kaldır
+            - Uzaktan Hata Ayıklayıcı'nın hata ayıklayıcısını Azure portal
+               - Azure portal > makine/sanal makine ölçek kümeleri kaynak dikey > uzantıları
+               - Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger uzantısını kaldırma
 
                > [!NOTE]
-               > Sanal Makine Ölçek Kümeleri-Portal DebuggerListener bağlantı noktalarının kaldırılmasına izin vermez. Azure PowerShell kullanmanız gerekir. Ayrıntılar için aşağıya bakın.
+               > Sanal makine ölçek kümeleri - Portal DebuggerListener bağlantı noktalarının kaldırılmasına izin vermez. Bu bilgileri Azure PowerShell. Ayrıntılar için aşağıya bakın.
 
       2. Sertifikaları ve Azure KeyVault'ı kaldırma
 
@@ -177,36 +177,36 @@ sections:
     answer: >
       Daha App Service:
 
-      1. Bu Snapshot Debugger için Azure portal aracılığıyla devre dışı App Service.
+      1. Kendi Snapshot Debugger için Azure portal aracılığıyla App Service.
 
-      2. Uygulama *ayarlarını* > uygulama hizmeti kaynak dikey penceresini > Azure Portal
+      2. Azure portal > Hizmeti kaynak dikey > *uygulama Ayarlar*
 
-      3. Azure portal aşağıdaki uygulama ayarlarını silin ve değişikliklerinizi kaydedin.
+      3. Uygulama sayfasında aşağıdaki Uygulama ayarlarını Azure portal değişikliklerinizi kaydedin.
          - INSTRUMENTATIONENGINE_EXTENSION_VERSION
          - SNAPSHOTDEBUGGER_EXTENSION_VERSION
 
          > [!WARNING]
-         > Uygulama ayarlarında yapılan değişiklikler, uygulamanın yeniden başlatılmasını başlatır. Uygulama ayarları hakkında daha fazla bilgi için, [Azure portal App Service uygulama yapılandırma](/azure/app-service/web-sites-configure)konusuna bakın.
+         > Application Ayarlar değişiklikleri uygulama yeniden başlatmayı başlatacak. Application Ayarlar hakkında daha fazla bilgi için [bkz. App Service uygulamasında bir Azure portal.](/azure/app-service/web-sites-configure)
 
       AKS için:
 
-      1. [Docker görüntülerinde Visual Studio Snapshot Debugger](https://github.com/Microsoft/vssnapshotdebugger-docker)karşılık gelen bölümleri kaldırmak Için Dockerfile dosyanızı güncelleştirin.
+      1. Dockerfile dosyanızı güncelleştirin ve [Docker](https://github.com/Microsoft/vssnapshotdebugger-docker)görüntü Visual Studio Snapshot Debugger ilgili bölümleri kaldırın.
 
-      2. Değiştirilen Docker görüntüsünü yeniden derleyin ve yeniden dağıtın.
+      2. Değiştirilen Docker görüntüsünü yeniden oluşturma ve yeniden oluşturma.
 
 
       Sanal makine/sanal makine ölçek kümeleri için:
 
 
-      Snapshot Debugger devre dışı bırakmak için birkaç yol vardır:
+      Bu özelliği devre dışı bırakmanın çeşitli yolları Snapshot Debugger:
 
-      - Bulut Gezgini > sanal makineniz/sanal makine ölçek kümesi kaynağınız > tanılamayı devre dışı bırak
-
-
-      - Azure portal > sanal makineniz/sanal makine ölçek kümesi kaynak dikey penceresi > uzantıları > Microsoft. Insights. VMDiagnosticsSettings uzantısını kaldır
+      - Cloud Explorer> makine/sanal makine ölçek kümesi kaynağınızı ve tanılamayı devre > dışı bırakma
 
 
-      - [Az PowerShell](/powershell/azure/overview) 'Den PowerShell cmdlet 'leri
+      - Azure portal > makine/sanal makine ölçek kümesi kaynak dikey > Uzantıları'> Microsoft'u kaldırın. Analizler. VMDiagnosticsSettings uzantısı
+
+
+      - [Az PowerShell'den](/powershell/azure/overview) PowerShell Cmdlet'leri
 
          Sanal makine:
 
@@ -214,10 +214,10 @@ sections:
             Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.Insights.VMDiagnosticsSettings
          ```
 
-         Sanal Makine Ölçek Kümeleri:
+         Sanal makine ölçek kümeleri:
 
          ```powershell
             $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
             Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name Microsoft.Insights.VMDiagnosticsSettings
          ```
-additionalContent: "\n## <a name=\"see-also\"></a>Ayrıca bkz.\n  - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)\n  - [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md)\n  - [Snapshot Debugger kullanarak canlı ASP.NET Azure sanal makine ölçek kümelerinde hata ayıkla](../debugger/debug-live-azure-virtual-machines.md)\n  - [Snapshot Debugger kullanarak canlı ASP.NET Azure Kubernetes hatalarını ayıklama](../debugger/debug-live-azure-kubernetes.md)\n  - [Anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md)"
+additionalContent: "\n## <a name=\"see-also\"></a>Ayrıca bkz.\n  - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)\n  - [Snapshot Debugger kullanarak ASP.NET uygulamalarda canlı Snapshot Debugger](../debugger/debug-live-azure-applications.md)\n  - [canlı ASP.NET Azure sanal makine ölçek kümeleri Snapshot Debugger kullanarak hata ayıkla](../debugger/debug-live-azure-virtual-machines.md)\n  - [Snapshot Debugger kullanarak Azure kubernetes ASP.NET hata ayıklama](../debugger/debug-live-azure-kubernetes.md)\n  - [Anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md)"

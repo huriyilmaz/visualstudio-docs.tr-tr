@@ -1,7 +1,7 @@
 ---
 title: Veri Bilimi ve Analitik Uygulamalar iş yükü
 description: Bu Visual Studio iş yükü Python, F# ve Anaconda dahil olmak üzere ilgili çalışma zamanı dağıtımlarını bir araya getirir. (R, yalnızca 2017 Visual Studio dahil edilir.)
-ms.date: 02/28/2019
+ms.date: 07/28/2021
 ms.topic: overview
 author: JoshuaPartlow
 ms.author: joshuapa
@@ -9,16 +9,16 @@ manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2c12c8a0979ab081ea2f09faeeccdb5a8a9d2175
-ms.sourcegitcommit: 398b4d4e5ce0f978720f11990db05b209766aedc
+ms.openlocfilehash: bd57dd13bdb487307c416cd5013f197172d5fc6c
+ms.sourcegitcommit: 879ba768364f3bfdaeb9004f740478489ab15c3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112016313"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114796222"
 ---
 # <a name="install-data-science-support-in-visual-studio"></a>Veri bilimi desteğini Visual Studio
 
-Veri Bilimi ve Analitik Uygulamalar iş yükü yükleyicisi aracılığıyla seçerek Visual Studio, çeşitli dilleri ve bunların ilgili çalışma zamanı dağıtımlarını bir araya getirir:
+Visual Studio yükleyicisi aracılığıyla seçerek yük devrederek veri bilimi ve analitik uygulamalar iş yükü, çeşitli dilleri ve bunların ilgili çalışma zamanı dağıtımlarını bir araya getirir:
 
 ::: moniker range="vs-2017"
 - [Python ve Anaconda](../python/overview-of-python-tools-for-visual-studio.md)
@@ -59,7 +59,7 @@ Varsayılan olarak, iş yükü yükleyicisinde iş yükünün özet bölümünde
 - F# dil desteği
 - Python:
   - Python dil desteği
-  - [Anaconda3 64 bit](https://www.continuum.io), kapsamlı veri bilimi kitaplıkları ve Python yorumlayıcı içeren bir Python distro's.
+  - [Anaconda3 64 bit](https://anaconda.com), kapsamlı veri bilimi kitaplıkları ve Python yorumlayıcı içeren bir Python distro's.
   - Python web desteği
   - Cookiecutter şablonu desteği
 - R:
@@ -82,15 +82,15 @@ Kodunuzu verilerinizin zaten bulunduğu yerde çalıştırarak aşağıdaki avan
 
 - **Veri taşımanın ortadan** kaldırılması: Verileri veritabanından uygulamanıza veya modelinize taşıma yerine veritabanında uygulamalar derlemeniz gerekir. Bu özellik, muazzam miktarlardaki verileri taşımayla ilgili güvenlik, uyumluluk, idare, bütünlük ve benzer sorunların bir çok engelini ortadan kaldırıyor. Ayrıca, istemci makinenin belleğine sığmayan veri kümelerini de tüketebilirsiniz.
 
-- **Kolay dağıtım:** Hazır bir modele sahip olduktan sonra modeli üretime dağıtmak, modeli T-SQL betiğine eklemek için basit bir işlemdir. Herhangi bir dilde yazılmış herhangi bir SQL istemci uygulaması, saklı yordam çağrısı aracılığıyla modellerden ve zekadan faydalanabilir. Belirli bir dil tümleştirmesi gerekli değildir.
+- **Kolay dağıtım:** Hazır bir modele sahip olduktan sonra modeli üretime dağıtmak, modeli T-SQL betiğine eklemektir. Herhangi SQL yazılmış herhangi bir istemci uygulaması, saklı yordam çağrısı aracılığıyla modellerden ve zekadan faydalanabilir. Belirli bir dil tümleştirmesi gerekli değildir.
 
-- **Kurumsal düzeyde performans ve ölçek:** SQL Server'nin Bellek içinde tablo ve sütun deposu dizinleri gibi gelişmiş özelliklerini RevoScale paketlerinde yüksek performanslı ölçeklenebilir API'lerle kullanabilirsiniz. Veri taşımanın ortadan kaldırılması, verileriniz büyüdükçe veya uygulamanın performansını artırmak istediğiniz için istemci belleği kısıtlamalarından kaçınmanız anlamına da gelir.
+- **Enterprise düzeyde** performans ve ölçek: SQL Server'nin Bellek içinde tablo ve sütun deposu dizinleri gibi gelişmiş özelliklerini RevoScale paketlerinde yüksek performanslı ölçeklenebilir API'lerle birlikte kullanabilirsiniz. Veri taşımanın ortadan kaldırılması, verileriniz büyüdükçe veya uygulamanın performansını artırmak istediğiniz için istemci belleği kısıtlamalarından kaçınmanız anlamına da gelir.
 
 - **Zengin genişletilebilirlik:** SQL Server'da çok büyük miktarlarda veri üzerinde derin öğrenme ve AI uygulamaları oluşturmak için SQL Server. Bir paketi SQL Server yerel makinenize yüklemek kadar kolaydır.
 
-- **Ek ücret ödemeden geniş kullanılabilirlik:** Express sürümü de dahil olmak üzere SQL Server 2017 ve sonraki sürümleri için dil tümleştirmeleri kullanılabilir.
+- **Ek ücret ödemeden geniş kullanılabilirlik:** Express sürümü dahil olmak üzere SQL Server 2017 ve sonraki sürümleriyle dil tümleştirmeleri kullanılabilir.
 
-Bu tümleştirmeden tam SQL Server yararlanmak için Visual Studio yükleyicisini kullanarak  veri depolama ve işleme iş yükünü SQL Server Veri Araçları **yükleyin.** İkinci seçenek SQL IntelliSense' i, söz dizimi vurgulamayı ve dağıtımı sağlar.
+Bu tümleştirmeden tam SQL Server yararlanmak için Visual Studio yükleyicisini kullanarak  veri depolama ve işleme iş yükünü SQL Server Veri Araçları **yükleyin.** İkinci seçenek IntelliSense SQL, söz dizimi vurgulama ve dağıtım için kullanılabilirlik sağlar.
 
 ![Veri depolama ve işleme iş yükü](media/workload/data-storage-workload.png) &nbsp;&nbsp;&nbsp;&nbsp; ![Veri depolama ve işleme iş yükü seçenekleri](media/workload/data-storage-workload-options.png)
 
@@ -106,7 +106,7 @@ Daha fazla bilgi için:
 
 Veri Bilimi ve Analiz Uygulamaları iş yükünde doğrudan nelerin olduğuna ek olarak, Azure Notebooks hizmeti ve Python için Azure SDK da veri bilimi için yararlıdır.
 
-Python için Azure SDK; Windows, Mac ve Linux Microsoft Azure uygulamalardan hizmet yönetimi ve kullanımı kolaylaştırır. Daha fazla bilgi için bkz. [Python için Azure SDK.](/azure/python/)
+Python için Azure SDK' sı, Microsoft Azure, Mac ve Linux üzerinde çalışan uygulamalardan Windows ve yönetmeyi kolaylaştırır. Daha fazla bilgi için bkz. [Python için Azure SDK.](/azure/python/)
 
 Azure Notebooks (şu anda önizlemede) bulutta çalışan Jupyter not defterlerine ücretsiz çevrimiçi erişim Microsoft Azure. Hizmeti, başlamaya başlamaya için Python, R ve F# dilinde örnek not defterleri içerir. web [sitesini notebooks.azure.com.](https://notebooks.azure.com/)
 
