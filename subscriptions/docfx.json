@@ -35,23 +35,24 @@
     "globalMetadata": {
       "feedback_system": "None",
       "feedback_github_repo": "",
-      "feedback_product_url": "",
+      "feedback_product_url": "https://developercommunity2.visualstudio.com/search?space=8",
       "breadcrumb_path": "/visualstudio/subscriptions/_breadcrumb/toc.json",
-      "bilingual_type": "hover over",
       "extendBreadcrumb": true,
       "manager": "lank",
       "ms.topic": "conceptual",
       "ms.prod": "visual-studio-family",
       "ms.technology": "vs-subscriptions",
+      "searchScope": [
+        "VS Subscriptions"
+      ],
+      "recommendations": true,
       "disable_contribution_on_translation_quality": [
         "MT",
         "MTE75",
         "MTE95",
         "Blank"
       ],
-      "searchScope": [
-        "VS Subscriptions"
-      ]
+      "bilingual_type": "hover over"
     },
     "template": [],
     "dest": "subscriptions",
