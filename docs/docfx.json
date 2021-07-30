@@ -37,12 +37,10 @@
     "globalMetadata": {
       "feedback_system": "None",
       "feedback_github_repo": "",
-      "feedback_product_url": "",
+      "feedback_product_url": "https://developercommunity2.visualstudio.com/search?space=8",
       "breadcrumb_path": "/visualstudio/_breadcrumb/toc.json",
-      "bilingual_type": "hover over",
       "extendBreadcrumb": "true",
-      "manager": "jillfra",
-      "ms.topic": "conceptual",
+      "manager": "jmartens",
       "audience": "developer",
       "defaultDevLang": "csharp",
       "ms.prod": "visual-studio-windows",
@@ -56,12 +54,14 @@
         "enable_uhf_ppe"
       ],
       "archive_url": "/previous-versions/visualstudio",
+      "recommendations": true,
       "disable_contribution_on_translation_quality": [
         "MT",
         "MTE75",
         "MTE95",
         "Blank"
-      ]
+      ],
+      "bilingual_type": "hover over"
     },
     "fileMetadata": {
       "ms.prod": {
