@@ -1,6 +1,6 @@
 ---
 title: Görevi Kopyala | Microsoft Docs
-description: Dosya sistemindeki yeni bir dosya veya klasör konumuna dosya kopyalamak için MSBuild kopyalama görevini nasıl kullanacağınızı öğrenin.
+description: dosya sistemindeki yeni bir dosya veya klasör konumuna dosya kopyalamak için MSBuild kopyalama görevini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,7 +8,6 @@ f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Copy
 - MSBuild.Copy.SourceFileNotFound
 - MSBuild.Copy.Retrying
-- MSBuild.Copy.ExceededRetries
 dev_langs:
 - VB
 - CSharp
@@ -23,12 +22,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b83541a98e995a55a38a5d736c97620f15076ead
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa1bc94663eaf06de48743e23e468b752b1d6e84
+ms.sourcegitcommit: 2694ab246eb857a1c607738a67198c46f826f106
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901498"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114995616"
 ---
 # <a name="copy-task"></a>Kopyalama görevi
 

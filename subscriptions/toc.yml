@@ -46,7 +46,7 @@
       href: manage-vs-subscriptions.md
     - name: Aboneliklerin süresi dolduğunda
       href: subscription-expiration.md
-    - name: Abonelik düzeyindeki değişiklikler
+    - name: Abonelik düzeyi değişiklikleri
       href: subscription-level-changes.md
     - name: Yöneticiler tarafından kaldırılan abonelikler
       href: subscription-removed.md
@@ -56,9 +56,9 @@
       items:
         - name: Avantajlar hakkında
           href: about-benefits.md
-        - name: Azure Geliştirme ve Test teklifleri
+        - name: Azure geliştirme ve test teklifleri
           items:
-            - name: Kişiler için (krediler)
+            - name: Bireyler için (krediler)
               items:
                 - name: Azure DevTest bireysel kredisi
                   href: vs-azure.md
@@ -214,3 +214,5 @@
       href: 'https://www.microsoft.com/licensing/product-licensing/products.aspx'
     - name: Microsoft Ürün ve Hizmet Sözleşmesi (MPSA)
       href: 'https://www.microsoft.com/licensing/mpsa/default.aspx'
+    - name: Azure Active Directory ile abonelik atamalarını otomatikleştirme
+      href: assign-azure-ad.md

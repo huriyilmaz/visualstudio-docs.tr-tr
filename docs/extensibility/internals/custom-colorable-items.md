@@ -1,6 +1,6 @@
 ---
-title: Özel Renklenebilir öğeler | Microsoft Docs
-description: Anahtar sözcükler ve açıklamalar gibi yazı tipi ve renkler iletişim kutusunda öğeleri geçersiz kılarak dil hizmetinin bir parçası olarak özel renklenebilir öğeler oluşturmayı öğrenin.
+title: Özel Renklendirmeli Öğeler | Microsoft Docs
+description: Yazı Tipleri ve Renkler iletişim kutusundaki anahtar sözcükler ve açıklamalar gibi öğeleri geçersiz karak dil hizmetinin bir parçası olarak özel renklenebilir öğeler oluşturma hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,62 +13,62 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f08c5c9e533e3a21ec4b87e7d148c3022ee0fed1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2a7fdc1223527f4dc58a49442b24fc6fc3c5c816
+ms.sourcegitcommit: 2694ab246eb857a1c607738a67198c46f826f106
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056810"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114995232"
 ---
-# <a name="custom-colorable-items"></a>Özel renklenebilir öğeler
-Dil hizmetinizin bir parçası olarak özel renklenebilir öğeler uygulayarak, anahtar sözcükler ve açıklamalar gibi renklendirime için tür listesini geçersiz kılabilirsiniz.
+# <a name="custom-colorable-items"></a>Özel renkleştirilebilir öğeler
+Dil hizmetinizin bir parçası olarak özel renklendirme öğeleri uygulayarak anahtar sözcükler ve açıklamalar gibi renklendirme türleri listesini geçersiz kılabilirsiniz.
 
-## <a name="user-settings-of-colorable-items"></a>Renklenebilir öğelerin Kullanıcı ayarları
- **Araçlar** menüsünde **Seçenekler** ' i ve ardından **ortam** altında **yazı tipi ve renkler** ' i seçerek **yazı tipi ve renkler** iletişim kutusunu görüntüleyebilirsiniz. **Metin düzenleyici** veya **komut penceresi** gibi bir görüntü seçtiğinizde, **öğeleri görüntüle** liste kutusu bu ekran için renklenebilir tüm öğeleri gösterir. Renklenebilir her öğe için yazı tipi, boyut, ön plan rengi ve arka plan rengini görüntüleyebilir ve değiştirebilirsiniz. Seçimleriniz kayıt defterindeki bir önbellekte depolanır ve renklenebilir öğe adı tarafından erişilir.
+## <a name="user-settings-of-colorable-items"></a>Renkleştirilebilir öğelerin kullanıcı ayarları
+ Araçlar menüsünde **Seçenekler'i ve** ardından  Ortam'ın  altında Yazı Tipleri ve Renkler'i seçerek Yazı Tipleri ve **Renkler iletişim kutusunu** **görüntüebilirsiniz.** Metin Düzenleyici veya Komut Penceresi gibi **bir** görüntü  **seçerek** Öğeleri görüntüle liste kutusu söz konusu görüntü için tüm renkleştirilebilir öğeleri gösterir. Renkleştirilebilir her öğe için yazı tipini, boyutu, ön plan rengini ve arka plan rengini görüntüp değiştirebilirsiniz. Seçimleriniz kayıt defterindeki bir önbellekte depolanır ve renklenebilir öğe adıyla erişilir.
 
-## <a name="presentation-of-colorable-items"></a>Renklenebilir öğelerin sunumu
- IDE, **yazı tipi ve renkler** iletişim kutusunda renklenebilir öğelerin Kullanıcı geçersiz kılmalarını işlediği için, yalnızca bir özel renklenebilir öğeyi bir adla sağlamanız gerekir. Bu ad, **görüntüleme öğeleri** listesinde görünür. Renklenebilir öğeler alfabetik sırada görünür. Dil hizmetinizin özel renklenebilir öğelerini gruplandırmak için, her bir adı dil adınızla başlatabilir, örneğin **NewLanguage-Comment** ve **NewLanguage-anahtar sözcüğü**.
+## <a name="presentation-of-colorable-items"></a>Renkleştirilebilir öğelerin sunumu
+ IDE, Yazı Tipleri ve Renkler iletişim kutusundaki  renkleştirilebilir öğelerin kullanıcı geçersiz kılmalarını işleyene kadar her özel renklenebilir öğeyi yalnızca bir adla birlikte sağlarsınız. Bu ad, Öğeleri görüntüle **listesinde görünen addır.** Renklendirmek öğeler alfabetik sırada görünür. Dil hizmetinizin özel renklendirme öğelerini gruplandırarak her bir adı kendi dil adınızla (örneğin, **NewLanguage - Comment** ve **NewLanguage - Anahtar Sözcüğü) başlatabilirsiniz.**
 
 > [!CAUTION]
-> Var olan renklenebilir öğe adlarıyla çarpışmalardan kaçınmak için renklendirilebilir öğe adına dil adını dahil etmelisiniz. Geliştirme sırasında renklenebilir öğelerinizin birinin adını değiştirirseniz, renksiz öğelerinize erişildiği sırada oluşturulan önbelleği sıfırlamanız gerekir. Deneysel önbelleği, genellikle dizininde Visual Studio SDK ile yüklenen **CreateExpInstance** aracıyla sıfırlayabilirsiniz:
+> Mevcut renklenebilir öğe adlarında çakışmaları önlemek için dil adını renklendirmeli öğe adına dahil etmek gerekir. Geliştirme sırasında renklendirmek istediğiniz öğelerden birinin adını değiştirirsanız, renkleştirilebilir öğelerinize ilk kez erişilirken oluşturulan önbelleği sıfırlamanız gerekir. Deneysel önbelleği, genellikle Visual Studio SDK'sı ile yüklenmiş **olan CreateExpInstance** aracıyla sıfırlayabilirsiniz. Bu araç genellikle Visual Studio klasörünün altındaki dizindedir:
 >
-> *C:\Program Files (x86) \Microsoft Visual Studio 14.0 \ VSSDK\VisualStudioIntegration\Tools\Bin*
+> *VSSDK\VisualStudioIntegration\Tools\Bin*
 >
-> Önbelleği sıfırlamak için **CreateExpInstance/Reset** girin. **CreateExpInstance** hakkında daha fazla bilgi için bkz. [CreateExpInstance yardımcı programı](../../extensibility/internals/createexpinstance-utility.md).
+> Önbelleği sıfırlamak için **CreateExpInstance /Reset girin.** **CreateExpInstance hakkında daha fazla bilgi için** bkz. [CreateExpInstance yardımcı programı.](../../extensibility/internals/createexpinstance-utility.md)
 
- Renklenebilir öğeler listenizdeki ilk öğeye hiçbir şekilde başvurulmuyor. İlk öğe, 0 renklenebilir bir öğe dizinine karşılık gelir ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Bu öğe için her zaman varsayılan metin renkleri ve özniteliklerini sağlar. Başvurulmayan bu öğeyle ilgilenmenin en kolay yolu, listenizde ilk öğe olarak yer tutucu renklenebilir bir öğe sağlamadır.
+ Renkleştirilebilir öğeler listenizdeki ilk öğeye hiçbir zaman başvurulamaz. İlk öğe 0 renkleştirilebilir öğe dizinine karşılık geliyor ve her zaman bu öğe için varsayılan metin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] renklerini ve özniteliklerini sağlar. Bu çıkarımsız öğeyle ilgilenmenin en kolay yolu, ilk öğe olarak listenize renklenebilir bir yer tutucu öğesi sağlamaktır.
 
-## <a name="implement-custom-colorable-items"></a>Özel renklenebilir öğeler uygulama
+## <a name="implement-custom-colorable-items"></a>Özel renkleştirilebilir öğeler uygulama
 
-1. Dilinizde renk sözcük, Işleç ve tanımlayıcı gibi renklendirilmiş olması gereken öğeleri tanımlayın.
+1. Anahtar Sözcük, İşleç ve Tanımlayıcı gibi, dilinize renklendirmesi gerekenleri tanımlayın.
 
-2. Renklenebilir bu öğelerin bir listesini oluşturun.
+2. Bu renkleştirilebilir öğelerin bir numaralamalarını oluşturun.
 
-3. Bir Ayrıştırıcıdan veya tarayıcıdan döndürülen belirteç türlerini numaralandırılmış değerlerle ilişkilendirin.
+3. Ayrıştırıcıdan veya tarayıcıdan döndürülen belirteç türlerini numaralandı değerlerle ilişkilendirme.
 
-    Örneğin, belirteç türlerini temsil eden değerler özel renklenebilir öğeler numaralandırmasında aynı değerler olabilir.
+    Örneğin, belirteç türlerini temsil eden değerler, özel renklenebilir öğe numaralamada aynı değerler olabilir.
 
-4. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A>Nesnenizin içindeki yöntemi uygulamanızda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> , öznitelikler listesini, Ayrıştırıcıdan veya tarayıcıdan döndürülen belirteç türlerine karşılık gelen özel renksiz öğelerinizdeki değerlerle birlikte doldurabilirsiniz.
+4. Nesnenize yöntemi uygulamanıza, öznitelikler listesini ayrıştırıcıdan veya tarayıcıdan döndürülen belirteç türlerine karşılık gelen özel renkleştirilebilir öğe numaralama <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> değerleriyle doldurun.
 
-5. Arabirimini uygulayan sınıfta, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> arabirimini ve iki yöntemini uygulayın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> .
+5. Arabirimini uygulayan aynı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> sınıfta, arabirimini ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> iki yöntemini (ve) <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> kullanın.
 
 6. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> arabirimini gerçekleştirin.
 
-7. 24 bit veya yüksek renk değerlerini desteklemek istiyorsanız, arabirimi de uygulayın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> .
+7. 24 bit veya yüksek renk değerlerini desteklemek için arabirimini de <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> kullanın.
 
-8. Dil hizmeti nesneniz ' nde, tek yapmanız gereken <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> , ayrıştırıcılarınızın veya tarayıcınızın tanımlayabilecek her renksiz öğe için, nesnelerinizi içeren bir liste oluşturun.
+8. Dil hizmeti nesnesinde nesnelerinizi içeren bir liste oluşturun. Ayrıştırıcınız veya tarayıcınız tarafından tanımlanılabilir her <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> öğe için bir tane.
 
-    Özel renklenebilir öğeler numaralandırmasından karşılık gelen değeri kullanarak listedeki her öğeye erişebilirsiniz. Liste içinde numaralandırma değerlerini bir dizin olarak kullanın. Her zaman kendisini işleyen varsayılan metin stiline karşılık geldiğinden, listedeki ilk öğeye hiçbir zaman erişilmez [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Listenizin başlangıcına yer tutucu renklenebilir bir öğe ekleyerek bunu dengeleyerek yapabilirsiniz.
+    Özel renklendirmeli öğeler listesinden karşılık gelen değeri kullanarak listede yer alan her öğeye erişebilirsiniz. Listede dizin olarak numaralama değerlerini kullanın. Her zaman kendisini ele alan varsayılan metin stiline karşılık gelen listede ilk öğeye [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hiçbir zaman erişilemez. Listenizin başına renklenebilir bir yer tutucu öğesi ekerek bunu telafi edilebilirsiniz.
 
-9. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A>Yöntemi uygulamanızda, özel renklenebilir öğeler listenizdeki öğelerin sayısını döndürün.
+9. yöntemi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> uygulamanıza, özel renkleştirilebilir öğeler listenizdeki öğe sayısını girin.
 
-10. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A>Yöntemi uygulamanızda, istenen renklenebilir öğeyi listenizden döndürün.
+10. yöntemi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> uygulamanıza, istenen renklendirmeli öğeyi listenizden geri girin.
 
-    Ve arabirimlerinin nasıl uygulanacağı hakkında bir örnek için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> bkz <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> ..
+    ve arabirimlerinin nasıl <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> uygulandığının bir örneği için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> bkz. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Eski dil hizmeti modeli](../../extensibility/internals/model-of-a-legacy-language-service.md)
+- [Eski dil hizmetinin modeli](../../extensibility/internals/model-of-a-legacy-language-service.md)
 - [Özel düzenleyicilerde söz dizimi renklendirmesi](../../extensibility/syntax-coloring-in-custom-editors.md)
-- [Eski dil hizmetinde söz dizimi renklendirmesi](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
-- [Sözdizimi renklendirmesini Uygula](../../extensibility/internals/implementing-syntax-coloring.md)
-- [Nasıl yapılır: yerleşik renklenebilir öğeleri kullanma](../../extensibility/internals/how-to-use-built-in-colorable-items.md)
+- [Eski dil hizmetlerinde söz dizimi renklendirme](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
+- [Söz dizimi renklendirmesi uygulama](../../extensibility/internals/implementing-syntax-coloring.md)
+- [Nasıl kullanılır: Yerleşik renklenebilir öğeleri kullanma](../../extensibility/internals/how-to-use-built-in-colorable-items.md)

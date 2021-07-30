@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Yöneticilerin Toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans Microsoft Azure Active Directory öğrenin
-ms.openlocfilehash: 98740ba82f0641b310edc46e35a2e6a57fe10ea8
-ms.sourcegitcommit: d5c038792da2c86436750380633ee80c39e4c4ba
+ms.openlocfilehash: 9cb4df67fd29ba54d2576068f8a38fc6bf081b47
+ms.sourcegitcommit: 2694ab246eb857a1c607738a67198c46f826f106
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114597086"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114995248"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler Yönetim Portalı, kullanıcıları tek tek veya büyük gruplara eklemenize olanak sağlar.  Tek tek kullanıcıları eklemek için [bkz. Tek kullanıcı ekleme.](assign-license.md)
@@ -50,7 +50,7 @@ Büyük kullanıcı grupları eklemek için toplu ekleme özelliğini kullanabil
 
 1. Visual Studio Abonelikler Yönetim portalına geri gidin. Birden çok **Upload Iletişim kutusunda Gözat'ı** **seçin.**
    > [!div class="mx-imgBorder"]
-   > ![Birden çok aboneyi karşıya yüklemek için kayıtlı şablonunuza göz atma](media/bulk-add-browse-saved-template.png "Dosya konuma göz atabilir veya sürükleyip bu iletişim kutusuna ebilirsiniz.")
+   > ![Birden çok aboneyi karşıya yüklemek için kayıtlı şablonunuza göz atma](media/bulk-add-browse-saved-template.png "Dosya konuma göz atabilir veya bu iletişim kutusuna sürükleyip bırakın.")
 
 1. Kendi Excel dosyanın üzerine gidin ve Tamam'ı **seçin.**
    > [!div class="mx-imgBorder"]
@@ -76,13 +76,13 @@ Büyük kullanıcı grupları eklemek için toplu ekleme özelliğini kullanabil
    > ![Birden çok abonenin karşıya yüklemesi başarılı olursa onay iletisi](_img/assign-license-bulk/bulk-add-upload-success.png "Karşıya yükleme işleminiz başarıyla tamamlandığında bir onay iletisi alırsınız.")
 
 ## <a name="use-azure-active-directory-groups-to-assign-subscriptions"></a>Abonelik Azure Active Directory grupları kullanma 
-Bu özelliğin kullanımı, abonelik atamalarınızı takip etmenizi kolaylaştırır. Abonelikler Azure Active Directory'nda, gruptaki tüm kişilere bir abonelik atanmalarını sağlayacak güvenlik grupları eklersiniz. Bunu kolaylaştırmak için, kişiler kuruluştan ayrılarak kuruluştan Azure Active Directory aboneliklere erişimi de kaldırılır. 
+Bu özelliğin kullanımı, abonelik atamalarınızı takip etmenizi kolaylaştırır. Abonelikler Azure Active Directory gruplarında bulunan tüm kişilere bir abonelik atanması için Abonelikler Yönetim Portalı'nda güvenlik grupları eklemeniz gerekir. Bunu kolaylaştırmak için, kişiler kuruluştan ayrılarak kuruluştan Azure Active Directory aboneliklere erişimi de kaldırılır. 
 
 
 > [!IMPORTANT]
 >
 > Abone eklemek için Azure AD gruplarının kullanımı için aşağıdaki sınırlamalar geçerlidir:
-> - Yönetici portalına ilk olarak bir grup eklerken yöneticinin AAD kiracısına üye olması gerekir.  Grup eklendikten sonra, grupların üyeliğinde yapılan değişiklikler yönetici katılımı gerektirmez. 
+> - Yönetici portalına başlangıçta bir grup eklerken yöneticinin AAD kiracısına üye olması gerekir.  Grup eklendikten sonra, grupların üyeliğinde yapılan değişiklikler yönetici katılımı gerektirmez. 
 > - Gruplar en az bir üye içermeli.  Boş gruplar desteklenmiyor.
 > - Tüm kullanıcıların grubun en üst düzeyinde olması gerekir.  İç içe gruplar desteklenmiyor.
 > - Yalnızca güvenilen sözleşmeler de destekler. (Yalnızca abonelikleri 'fazla alan' olarak kabul eden sözleşmelere güvenebilirsiniz.)
@@ -101,11 +101,11 @@ Grup özelliğini kullanarak abone ekleme hakkında daha fazla bilgi edinmek iç
 3. Ekle **sekmesini** ve ardından açılan **Azure Active Directory** Grup'a tıklayın.  
 
    > [!div class="mx-imgBorder"]
-   > ![Azure AD kullanarak toplu ekleme seçme](_img/assign-license-bulk/bulk-add-aad.png "Azure AD kullanarak toplu ekleme özelliğini seçen aboneleri Azure Active Directory çekin.")
+   > ![Azure AD kullanarak toplu ekleme seçme](_img/assign-license-bulk/bulk-add-aad.png "Azure AD'yi kullanarak toplu ekleme özelliğini seçen ve Azure Active Directory seçin.")
 
 4. Form alanına eklemek istediğiniz Azure AD grubunun adını girmeye başlama. Bu işlem, kuruluş içindeki kullanılabilir Azure AD gruplarını aratır. 
 
-5. Grubu seçerek alan otomatik olarak grup adıyla doldurmaktır. Eklemeden önce bu gruptaki kullanıcıları görüntüleme seçeneğiniz vardır. Daha sonra, grubun abonelik düzeyini, indirme haklarını ve iletişim tercihlerini seçebilirsiniz. Isterseniz başvuru alanına ayrıntılar abilirsiniz. 
+5. Grubu seçerek alan otomatik olarak grup adıyla doldurmaktır. Eklemeden önce bu gruptaki kullanıcıları görüntüleme seçeneğiniz vardır. Ardından, grubun abonelik düzeyini, indirme haklarını ve iletişim tercihlerini seçebilirsiniz. Isterseniz başvuru alanına ayrıntılar abilirsiniz. 
 
    > [!div class="mx-imgBorder"]
    > ![Azure AD grubu seçin](_img/assign-license-bulk/bulk-add-aad-details.png "Bu gruptan abone eklemek için Azure AD grubu adının adını seçin.")
@@ -123,11 +123,6 @@ Grup özelliğini kullanarak abone ekleme hakkında daha fazla bilgi edinmek iç
 
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q-can-i-choose-multiple-subscription-levels-to-be-assigned-within-an-azure-ad-group"></a>S: Bir Azure AD grubu içinde atanacak birden çok abonelik düzeyi seçebilir miyim? 
-A: Hayır -- gruptaki herkes aynı aboneliği alır. 
-
-### <a name="q-can-i-edit-subscriber-details-of-individuals-added-in-an-azure-ad-group"></a>S: Azure AD grubuna eklenen kişilerin abone ayrıntılarını düzenleyebilir miyim?  
-S: Hayır -- Tek bir abonenin bilgilerini değiştirmek için, bunları Azure AD güvenlik grubundan kaldırmanız ve onlara ayrı ayrı bir abonelik atamanız gerekir.  
 
 ### <a name="q-why-cant-i-see-the-option-to-use-azure-active-directory-groups-to-add-subscribers"></a>S: Abone eklemek için Azure Active Directory kullanma seçeneğini neden göremiyorum?
 Y: Özellik şu anda yalnızca güvenilen sözleşmelere sahip kuruluşlar tarafından kullanılabilir.  Anlaşma **bilgilerini görüntülemek** için Ayrıntılar düğmesini seçin.
@@ -135,8 +130,17 @@ Y: Özellik şu anda yalnızca güvenilen sözleşmelere sahip kuruluşlar taraf
    > [!div class="mx-imgBorder"]
    > ![Ayrıntılar düğmesine tıklayın](_img/assign-license-bulk/bulk-add-agreement.png "Ne tür bir sözleşmeye sahip olduğunu görmek için Ayrıntılar düğmesine tıklayın")
 
-### <a name="q-i-added-someone-to-my-azure-ad-security-group-but-i-dont-see-them-added-in-the-subscriptions-administration-portal-and-they-dont-have-a-subscription-why-not"></a>S: Azure AD güvenlik grubuma birini ekledim, ancak Abonelikler Yönetim Portalı'nda ekli olduğunu ve aboneliği olmadığını görüyorum. Neden olmasın?  
-Y: Kuruluşta Azure AD'nin nasıl yapılandırıldıklarına bağlı olarak, kullanıcı eklenmeden önce 24 saate kadar gecikmeler olabilir. 24 saat daha uzun bir süre oldu, lütfen yönetim ve [abonelikler Visual Studio ziyaret edin.](https://my.visualstudio.com/gethelp)  
+### <a name="q-i-added-users-to-my-azure-active-directory-group-but-they-dont-have-subscriptions-yet-why"></a>S: Kullanıcı grubuma Azure Active Directory ama henüz abonelikleri yok. Neden? 
+A: Değişiklikler doğrudan Azure Active Directory aboneliklerin çok hızlı bir şekilde atanmalı, ancak değişiklikler bir on-prem Active Directory'de yapılmışsa öncelikle abonelikleri Azure Active Directory. Değişiklikler, active directory'nizin nasıl yapılandırıldıklarına bağlı olarak 24 saate kadar sürebilir. 24 saatten uzun bir süre önce destek ekibimiz [sorunları gidermeye yardımcı olabilir.](https://aka.ms/vsadminhelp) 
+
+### <a name="q-can-i-choose-multiple-subscription-levels-to-be-assigned-within-an-azure-active-directory-group"></a>S: Bir grup içinde atanacak birden çok abonelik Azure Active Directory seçebilir miyim?
+A: Hayır -- gruptaki herkes aynı abonelik düzeyini alır.
+
+### <a name="q-can-i-edit-subscriber-details-of-individuals-added-in-an-azure-active-directory-group"></a>S: Bir grup içinde eklenen kişilerin abone ayrıntılarını Azure Active Directory miyim?
+A: Hayır -- Tek bir abonenin bilgilerini değiştirmek için, bunları güvenlik grubundan Azure Active Directory ve onlara ayrı ayrı bir abonelik atamanız gerekir.
+
+### <a name="q-can-i-add-separate-notification-email-addresses-for-members-of-an-azure-active-directory-group"></a>S: Bir grup üyesinin üyeleri için ayrı bildirim e-posta Azure Active Directory ekleyebilir miyim?
+A: Hayır – Bildirim grupları kullanılarak eklenen abonelikler için ayrı e-posta Azure Active Directory destekleniyor. Tüm e-postalar birincil e-postaya (kullanıcı asıl adı) gönderilir
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio yönetim ve abonelik desteği](https://aka.ms/vsadminhelp)
@@ -148,4 +152,4 @@ Y: Kuruluşta Azure AD'nin nasıl yapılandırıldıklarına bağlı olarak, kul
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Ek olarak yalnızca bir veya iki aboneniz mi var?  Tek kullanıcı [ekleme'ye göz at](assign-license.md)
+- Ek olarak yalnızca bir veya iki aboneniz mi var? Tek kullanıcı [ekleme'ye göz at](assign-license.md)

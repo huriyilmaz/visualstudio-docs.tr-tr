@@ -1,8 +1,8 @@
 ---
-title: Özel veri görselleştiricileri oluşturma | Microsoft Docs
-description: Visual Studio ayıklayıcı görselleştiricileri, verileri görüntü alan bileşenlerdir. Altı standart görselleştirici hakkında bilgi ve başkalarını nasıl yazabilir veya indiry bazılarınız hakkında bilgi edinin.
+title: Özel veri Görselleştiriciler oluştur | Microsoft Docs
+description: Visual Studio hata ayıklayıcı görselleştiriciler, verileri görüntüleyen bileşenlerdir. Altı standart Görselleştiriciler ve diğer kişilerin nasıl yazılacağı veya indirileceği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 07/13/2021
+ms.date: 07/29/2021
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.visualizer.troubleshoot
@@ -21,107 +21,111 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f630493e68d44ac8d02efcd23ef68eab24db4b77
-ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
+ms.openlocfilehash: a5a666dfe95d7809593f86891b0b71b12c22e287
+ms.sourcegitcommit: 2694ab246eb857a1c607738a67198c46f826f106
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114592002"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "114995681"
 ---
-# <a name="create-custom-data-visualizers"></a>Özel veri görselleştiricileri oluşturma
+# <a name="create-custom-data-visualizers"></a>Özel veri Görselleştiriciler oluşturma
 
- *Görselleştirici,* bir değişkeni veya nesneyi veri türüne uygun şekilde görüntüleyen hata [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ayıklayıcısı kullanıcı arabiriminin bir parçasıdır. Örneğin, BIR HTML görselleştiricisi bir HTML dizesini yorumlar ve sonucu tarayıcı penceresinde görünecek şekilde görüntüler. Bit eşlem görselleştiricisi bir bit eşlem yapısını yorumlar ve temsil ettiği grafiği görüntüler. Bazı görselleştiriciler verileri değiştirmenizi ve görüntülemenizi sağlar.
+ *Görselleştirici* , bir [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] değişken veya nesneyi veri türüne uygun bir şekilde görüntüleyen hata ayıklayıcı Kullanıcı arabiriminin bir parçasıdır. Örneğin, bir HTML Görselleştiricisini bir HTML dizesini yorumlar ve bir tarayıcı penceresinde görüneceği şekilde sonucu görüntüler. Bit eşlem görselleştiricisi bir bit eşlem yapısını Yorumlar ve temsil ettiği grafiği görüntüler. Bazı Görselleştiriciler, değişiklik yapmanızı ve verileri görüntülemenizi sağlar.
 
- Hata [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ayıklayıcısı altı standart görselleştirici içerir. Metin, HTML, XML ve JSON görselleştiricileri dize nesneleri üzerinde çalışır. WPF Ağacı görselleştiricisi, bir WPF nesne görsel ağacının özelliklerini görüntüler. Veri kümesi görselleştiricisi DataSet, DataView ve DataTable nesneleri için çalışır.
+ [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]Hata ayıklayıcı altı standart Görselleştiriciler içerir. Metin, HTML, XML ve JSON Görselleştiriciler dize nesnelerinde çalışır. WPF ağaç görselleştiricisi, WPF nesne görsel ağacının özelliklerini görüntüler. Veri kümesi görselleştiricisi veri kümesi, DataView ve DataTable nesneleri için geçerlidir.
 
-Daha fazla görselleştirici Microsoft, üçüncü taraflar ve topluluktan indirilebilir. Ayrıca kendi görselleştiricilerinizi yazabilir ve hata [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ayıklayıcısına yükleyebilirsiniz.
+Daha fazla Görselleştiriciler Microsoft, üçüncü taraflar ve topluluk tarafından indirilebilir. Ayrıca kendi görselleştiricilerini yazıp [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] hata ayıklayıcıya yükleyebilirsiniz.
 
-Hata ayıklayıcısında görselleştirici bir büyüteç simgesi ![VisualizerIcon ile temsil edildi.](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi") Bir **DataTip**, hata ayıklayıcı  İzleme penceresi veya **QuickWatch** iletişim kutusunda simgeyi ve ardından ilgili nesne için uygun görselleştiriciyi seçin.
+Hata ayıklayıcıda bir Görselleştirici bir büyüteç simgesi ![Visualizersimgesiyle](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi")temsil edilir. Bir **Datatıp**, Debugger **Gözcü** penceresinde veya **QuickWatch** iletişim kutusunda simgeyi seçebilir ve ardından karşılık gelen nesne için uygun görselleştiricisi seçebilirsiniz.
 
-## <a name="write-custom-visualizers"></a>Özel görselleştiriciler yazma
+## <a name="write-custom-visualizers"></a>Özel Görselleştiriciler yazma
 
  > [!NOTE]
- > Yerel kod için özel görselleştirici oluşturmak üzere [SQLite yerel Hata Ayıklayıcı Görselleştiricisi örneğine](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/SqliteVisualizer) bakın. Özel görselleştiriciler UWP ve Windows 8.x uygulamaları için desteklenmiyor.
+ > Yerel kod için özel bir Görselleştirici oluşturmak için, bkz. [SQLite yerel hata ayıklayıcı görselleştiricisi](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/SqliteVisualizer) örneği. UWP ve Windows 8. x uygulamaları için özel görselleştiriciler desteklenmez.
 
-ve dışında herhangi bir yönetilen sınıfın nesnesi için özel bir görselleştirici <xref:System.Object> <xref:System.Array> yazabilirsiniz.
+Ve hariç olmak üzere, herhangi bir yönetilen sınıfın nesnesi için özel bir Görselleştirici <xref:System.Object> yazabilirsiniz <xref:System.Array> .
 
-Hata ayıklayıcı görselleştiricisi mimarisinin iki bölümü vardır:
+Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
 
-- Hata *ayıklayıcı tarafı,* hata Visual Studio içinde çalışır ve görselleştirici kullanıcı arabirimini oluşturur ve görüntüler.
+- *hata ayıklayıcı tarafı* Visual Studio hata ayıklayıcı içinde çalışır ve görselleştirici kullanıcı arabirimini oluşturur ve görüntüler. 
 
-- Hata *ayıklayıcı tarafı,* hata ayıklarken Visual Studio işlem içinde çalışır *(hata ayıklayıcısı).* Görselleştirmek için veri nesnesi (örneğin, bir Dize nesnesi) hata ayıklama işlemi içinde mevcuttur. Hata ayıklayıcısı tarafı, nesneyi hata ayıklayıcı tarafına gönderir ve bu da nesneyi, kendi oluştur aldığınız kullanıcı arabiriminde görüntüler.
+  Visual Studio .NET Framework çalışma zamanında yürütüldüğünü göz önünde bulundurmanız önemlidir, bu nedenle bu bileşen için de yazılması gerekir. Bu nedenle, .NET Core için yazmak mümkün değildir.
 
-Hata ayıklayıcı tarafı, arabirimi uygulayan *bir nesne sağlayıcısından* veri nesnesini <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> alır. Hata ayıklayıcısı tarafı, nesnesinden *türetilen* nesne kaynağı aracılığıyla <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> gönderir.
+- hata *ayıklanan yan* Visual Studio işlem içinde çalışıyor (hata *ayıklanan*). Hata ayıklanan işlemde görselleştirilecek veri nesnesi (örneğin, bir dize nesnesi) var. Hata ayıklanan yüz, nesneyi oluşturduğunuz Kullanıcı arabiriminde görüntüleyen hata ayıklayıcı tarafına gönderir.
 
-Nesne sağlayıcısı ayrıca verileri yeniden nesne kaynağına gönderebilir ve bu sayede verileri düzenleyemezsiniz. İfade değerlendiricisi ve nesne kaynağıyla konuşmak için nesne sağlayıcısını geçersiz kılar.
+  bu bileşeni oluşturduğunuz çalışma zamanının, hata ayıklanan işlemin çalıştırılacağı, .NET Framework veya .net Core ile eşleşmesi gerektiğini göz önünde bulundurmanız önemlidir.
 
-Hata ayıklayıcı tarafı ve hata ayıklayıcı tarafı, bir veri nesnesini bir içinde seri hale getirme ve bir veri nesnesine geri seri halinde seri hale getirme yöntemleri <xref:System.IO.Stream> <xref:System.IO.Stream> aracılığıyla birbirleriyle iletişim <xref:System.IO.Stream> kurar.
+Hata ayıklayıcı tarafı, arabirimini uygulayan bir *nesne sağlayıcısından* veri nesnesini alır <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> . Hata ayıklanan yüz, nesnesini öğesinden türetilen *nesne kaynağı* üzerinden gönderir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
 
-Görselleştiriciyi yalnızca tür açık bir türse genel tür için yazabilir. Bu kısıtlama, özniteliğini kullanırken kısıtlamayla `DebuggerTypeProxy` aynıdır. Ayrıntılar için [bkz. DebuggerTypeProxy özniteliğini kullanma.](../debugger/using-debuggertypeproxy-attribute.md)
+Nesne sağlayıcısı Ayrıca verileri nesne kaynağına geri gönderebilir ve bu sayede verileri düzenleyebilen bir Görselleştirici yazmanızı sağlayabilirsiniz. İfade değerlendiricisi ve nesne kaynağıyla konuşmak için nesne sağlayıcısını geçersiz kılabilirsiniz.
 
-Özel görselleştiricilerde güvenlikle ilgili dikkat edilmesi gereken noktalar olabilir. Bkz. [Görselleştirici güvenliğiyle ilgili dikkat edilmesi gerekenler.](../debugger/visualizer-security-considerations.md)
+Hata ayıklanan yan ve hata ayıklayıcı tarafı, <xref:System.IO.Stream> bir veri nesnesini bir ' a seri hale getirmek <xref:System.IO.Stream> ve bir veri nesnesine geri serisini kaldırmak için yöntemler aracılığıyla birbirleriyle iletişim kurar <xref:System.IO.Stream> .
 
-Aşağıdaki adımlar görselleştirici oluşturma hakkında üst düzey bir genel bakış sağlar. Ayrıntılı yönergeler için [bkz. Kılavuz: C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md) ile görselleştirici yazma veya [Kılavuz: Görselleştiriciyi Visual Basic.](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)
+Yalnızca tür açık bir tür ise, genel bir tür için Görselleştirici yazabilirsiniz. Bu kısıtlama, özniteliği kullanılırken kısıtlama ile aynıdır `DebuggerTypeProxy` . Ayrıntılar için bkz. [DebuggerTypeProxy özniteliğini kullanma](../debugger/using-debuggertypeproxy-attribute.md).
 
-### <a name="to-create-the-debugger-side"></a>Hata ayıklayıcı tarafı oluşturmak için
+Özel görselleştiricilerin güvenlik konuları olabilir. Bkz. [Görselleştirici güvenlik konuları](../debugger/visualizer-security-considerations.md).
 
-Hata ayıklayıcı tarafında görselleştirici kullanıcı arabirimini oluşturmak için, 'den devralan bir sınıf oluşturun ve arabirimini <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> görüntülemek için yöntemini geçersiz <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A?displayProperty=fullName> kılın. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService>Görselleştiricide form, Windows ve denetimleri görüntülemek için kullanabilirsiniz.
+Aşağıdaki adımlarda, görselleştiricisi oluşturmaya yönelik üst düzey bir genel bakış sunulmaktadır. Ayrıntılı yönergeler için bkz. [Izlenecek yol: C#](../debugger/walkthrough-writing-a-visualizer-in-csharp.md) veya [izlenecek yol: Visual Basic bir Görselleştirici](../debugger/walkthrough-writing-a-visualizer-in-visual-basic.md)yazma.
 
-1. Hata <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> ayıklayıcı tarafında görselleştirilmiş nesneyi almak için yöntemleri kullanın.
+### <a name="to-create-the-debugger-side"></a>Hata ayıklayıcı tarafını oluşturmak için
 
-1. 'den devralan bir sınıf <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> oluşturun.
+Hata ayıklayıcı tarafında görselleştiricisi Kullanıcı arabirimini oluşturmak için, öğesinden devralan bir sınıf oluşturur <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> ve <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A?displayProperty=fullName> arabirimi göstermek için yöntemi geçersiz kılar. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService>görselleştiricinizdeki Windows formları, iletişimleri ve denetimleri göstermek için kullanabilirsiniz.
 
-1. Arabiriminizi <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A?displayProperty=fullName> görüntülemek için yöntemini geçersiz kılın. Arabirimde <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService> form, Windows ve denetimleri görüntülemek için yöntemleri kullanın.
+1. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>Hata ayıklayıcı tarafında görselleştirilen nesneyi almak için yöntemleri kullanın.
 
-1. Uygula, <xref:System.Diagnostics.DebuggerVisualizerAttribute> görüntü için görselleştiriciyi () <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> vererek.
+1. Öğesinden devralan bir sınıf oluşturun <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> .
 
-#### <a name="special-debugger-side-considerations-for-net-50"></a>.NET 5.0+ için özel hata ayıklayıcı tarafı konuları
+1. <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A?displayProperty=fullName>Arabiriminizi göstermek için yöntemini geçersiz kılın. <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService>arabiriminizdeki Windows formları, iletişimleri ve denetimleri göstermek için yöntemler kullanın.
 
-Özel Görselleştiriciler, varsayılan olarak  *sınıfını kullanarak ikili* serileştirme aracılığıyla hata ayıklayıcı ve hata ayıklayıcı <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> tarafları arasında veri aktarımı sağlar. Ancak, bu tür serileştirmeler .NET 5 ve üzerinde düzeltilemez güvenlik açıkları ile ilgili güvenlik kaygıları *nedeniyle giderildi.*
-Ayrıca, 5. ASP.NET Core tamamen kullanımdan kaldırılmış olarak işaretlenir ve kullanımı ASP.NET Core [belgelerinde açıklandığı gibi atacaktır.](/dotnet/core/compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete)
-Bu bölümde görselleştiricinizin bu senaryoda hala destek olduğundan emin olmak için atılması gereken adımlar açıklandı.
+1. <xref:System.Diagnostics.DebuggerVisualizerAttribute>Görselin () görüntülemesini sağlayan bir uygulama <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> .
 
-- Uyumluluk nedenleriyle, <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A> önceki bölümde geçersiz kılınan yöntemi yine de bir <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> alır. Yine de, aslında <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider2> türündedir.
-Bu nedenle, `objectProvider` nesneyi güncelleştirilmiş arabirime atabilirsiniz.
+#### <a name="special-debugger-side-considerations-for-net-50"></a>.NET 5.0 + için özel hata ayıklayıcı tarafı konuları
 
-- Komutlar veya veriler gibi nesneleri  hata ayıklayıcı tarafına gönderirken, bir akışa göndermek için yöntemini kullanır, hata ayıklama işleminin çalışma zamanlarına göre kullanmak üzere en iyi serileştirme biçimini `IVisualizerObjectProvider2.Serialize` belirler. 
-Ardından, akışı yöntemine `IVisualizerObjectProvider2.TransferData` iletir.
+Özel Görselleştiriciler, varsayılan olarak sınıfını kullanarak hata *ayıklanan* ve *hata ayıklayıcı* tarafları arasında verileri ikili serileştirme aracılığıyla aktarır <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> . Bununla birlikte, bu tür bir serileştirme .NET 5 ve üzeri bir *güvenlik açığına yönelik güvenlik sorunları* nedeniyle bu tür bir serileştirme.
+üstelik, ASP.NET Core 5 ' te tamamen kullanımdan kaldırılmıştır ve kullanımı [ASP.NET Core belgelerinde](/dotnet/core/compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete)açıklandığı gibi oluşturulur.
+Bu bölümde, Görselleştiricinizi Bu senaryoda hala desteklendiğinden emin olmak için gerçekleştirmeniz gereken adımlar açıklanmaktadır.
 
-- Hata *ayıklayıcı tarafı görselleştirici* bileşeninin hata ayıklayıcı tarafına herhangi bir şey geri dönmesi *gerekirse,* yöntemi tarafından <xref:System.IO.Stream> döndürülen nesnesinde <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A> bulunur. Bir `IVisualizerObjectProvider2.GetDeserializableObjectFrom` örneği almak ve <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDeserializableObject> gerektiğinde işlemek için yöntemini kullanın.
+- Uyumluluk nedenleriyle, <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A> önceki bölümde geçersiz kılınan yöntem de ' de sürer <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> . Nonetheless, aslında türüdür <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider2> .
+Bu nedenle, `objectProvider` nesneyi güncelleştirilmiş arabirime atayın.
 
-İkili Serileştirme desteklenmemektedir. Hata ayıklama tarafında hangi diğer değişikliklerin gerekli olduğunu öğrenmek için  [.NET 5.0+](#special-debuggee-side-considerations-for-net-50) için özel hata ayıklama tarafı konuları bölümüne bakın.
+- Komut veya veriler gibi nesneleri gönderirken *hata ayıklanan tarafa* `IVisualizerObjectProvider2.Serialize` bir akışa geçirmek için yöntemini kullanırken, *hata ayıklanan* işlemin çalışma zamanına göre kullanılacak en iyi serileştirme biçimini tespit eder.
+Ardından, akışı `IVisualizerObjectProvider2.TransferData` yöntemine geçirin.
+
+- *Debugayıklanan taraf* görselleştiricisi bileşeninin *hata ayıklayıcı tarafına* herhangi bir şey döndürmesi gerekiyorsa, <xref:System.IO.Stream> yöntemi tarafından döndürülen nesnede bulunur <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.TransferData%2A> . Yöntemini kullanarak `IVisualizerObjectProvider2.GetDeserializableObjectFrom` bir <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDeserializableObject> örneği alın ve gereken şekilde işleyin.
+
+Ikili serileştirme kullanılırken *hata ayıklanan tarafında* başka değişiklikler yapılması gerektiğini öğrenmek için lütfen [.NET 5.0 + bölümüne yönelik özel hata ayıklama tarafı konuları](#special-debuggee-side-considerations-for-net-50) ' na bakın.
 
 > [!NOTE]
-> Sorun hakkında daha fazla bilgi almak için [binaryFormatter güvenlik kılavuzuna bakın.](/dotnet/standard/serialization/binaryformatter-security-guide)
+> Sorun hakkında daha fazla bilgi isterseniz, [BinaryFormatter Güvenlik Kılavuzu](/dotnet/standard/serialization/binaryformatter-security-guide)' na bakın.
 
-### <a name="to-create-the-visualizer-object-source-for-the-debuggee-side"></a>Hata ayıklayıcı tarafı için görselleştirici nesnesi kaynağı oluşturmak için
+### <a name="to-create-the-visualizer-object-source-for-the-debuggee-side"></a>Hata ayıklanan kenar için Görselleştirici nesne kaynağını oluşturmak için
 
-Hata ayıklayıcı yan kodunda, görselleştirilen türü (hata ayıklayıcı tarafı nesne <xref:System.Diagnostics.DebuggerVisualizerAttribute> kaynağı) () vererek <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> düzenleyin. özelliği `Target` nesne kaynağını ayarlar. Nesne kaynağını atlarsanız görselleştirici varsayılan bir nesne kaynağı kullanır.
+Hata ayıklayıcı tarafı kodunda, <xref:System.Diagnostics.DebuggerVisualizerAttribute> öğesini, görselleştirilecek türü (hata ayıklanan-yan nesne kaynağı) () vererek düzenleyin <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> . `Target`Özelliği, nesne kaynağını ayarlar. Nesne kaynağını atlarsanız, Görselleştirici varsayılan bir nesne kaynağı kullanacaktır.
 
 ::: moniker range=">=vs-2019"
-Hata ayıklayıcısı yan kodu, görselleştirilmiş nesne kaynağını içerir. Veri nesnesi, yöntemlerini geçersiz <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> kabilirsiniz. Tek başına görselleştirici oluşturmak için hata ayıklama tarafı DLL gereklidir.
+Hata ayıklanan yüz kodu görselleştirilen nesne kaynağını içerir. Veri nesnesi yöntemlerini geçersiz kılabilir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> . Bağımsız bir Görselleştirici oluşturmak istiyorsanız, bir debugayıklanan yan DLL gereklidir.
 ::: moniker-end
 
-Hata ayıklama tarafı kodunda:
+Hata ayıklanan taraf kodunda:
 
-- Görselleştiricinin veri nesnelerini düzenlemesine izin ver için nesne kaynağının veya yöntemlerinden devralması ve <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> geçersiz k `TransferData` olması `CreateReplacementObject` gerekir.
+- Görselleştirici veri nesnelerini düzenlemesine izin vermek için, nesne kaynağı from kaynağından devralması <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> ve ya da yöntemlerini geçersiz kılmalıdır `TransferData` `CreateReplacementObject` .
 
-- Görselleştiricide çoklu hedeflemeyi desteklemeniz gerekirse, hata ayıklama tarafı proje dosyasında aşağıdaki Hedef Çerçeve Bilinen Adlarını (TFM'ler) kullanabilirsiniz.
+- Görselleştiricinizdeki çoklu hedef belirleme 'yı desteklemeniz gerekiyorsa, hata ayıklanan-tarafı proje dosyasında aşağıdaki hedef Framework takma adlarını (TFMs) kullanabilirsiniz.
 
    ```xml
    <TargetFrameworks>net20;netstandard2.0;netcoreapp2.0</TargetFrameworks>
    ```
 
-   Desteklenen tek TFM'ler bunlardır.
+   Bunlar desteklenen tek TFMs ' dir.
 
-#### <a name="special-debuggee-side-considerations-for-net-50"></a>.NET 5.0+ için özel hata ayıklama tarafı konuları
+#### <a name="special-debuggee-side-considerations-for-net-50"></a>.NET 5.0 + için özel hata ayıklama tarafı konuları
 
 > [!IMPORTANT]
-> Varsayılan olarak kullanılan temel ikili serileştirme yöntemiyle ilgili güvenlik kaygıları nedeniyle görselleştiricinin .NET 5.0'dan başlayarak çalışması için ek adımlar gerekli olabilir. Devam etmeden önce [lütfen bu](#special-debugger-side-considerations-for-net-50) bölümü okuyun.
+> Varsayılan olarak kullanılan temel ikili serileştirme yöntemiyle ilgili güvenlik sorunları nedeniyle Görselleştirici .NET 5,0 ' de çalışmaya başlaması için ek adımlar gerekebilir. Lütfen devam etmeden önce bu [bölümü](#special-debugger-side-considerations-for-net-50) okuyun.
 
-- Görselleştirici yöntemini <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A> uygulayıyorsa, en son sürümünde <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetDeserializableObject%2A> kullanılabilen yeni eklenen yöntemini `VisualizerObjectSource` kullanın. Döndüren, nesnenin serileştirme biçimini (ikili veya JSON) belirlemeye ve temel alınan nesneyi seri halinden çıkarmak ve <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDeserializableObject> kullanılmaktadır.
+- Görselleştiricisi yöntemini uygularsa <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.TransferData%2A> , <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetDeserializableObject%2A> en son sürümünde bulunan yeni eklenen yöntemi kullanın `VisualizerObjectSource` . <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDeserializableObject>Bu, nesnenin serileştirme biçimini (ikili veya JSON) belirlemesine ve temel alınan nesnenin kullanılabilir olması için serisini kaldırmanıza yardımcı olur.
 
-- Hata *ayıklayıcısı tarafı,* çağrının  bir parçası olarak hata ayıklayıcı tarafına veri döndürürse, yöntemi aracılığıyla hata ayıklayıcısının akışına yanıtı `TransferData` seri hale  <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A> getirme.
+- Hata *ayıklanan taraf* , çağrının bir parçası olarak *hata ayıklayıcı tarafına* veri döndürürse `TransferData` , yöntemi aracılığıyla *hata ayıklayıcı tarafındaki* akışa yanıtı serileştirme <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
