@@ -1,86 +1,86 @@
 ---
-title: Visual Studio IDE 'nin Visual Studio aboneliğinde avantajı | Microsoft Docs
+title: Visual Studio Visual Studio aboneliği | IDE avantajı Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 03/17/2021
+ms.date: 07/30/2021
 ms.topic: how-to
-description: Visual Studio aboneliğinize dahil edilen Visual Studio IDE 'yi indirme ve yükleme hakkında bilgi edinin
-ms.openlocfilehash: 2cff154f61d662f180fe5087a877073a9d84e27c
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+description: Visual Studio aboneliğinize dahil olan Visual Studio IDE'nin nasıl indir Visual Studio öğrenin
+ms.openlocfilehash: 6f9a420c06374f5b152dc119d2eb76af560a4b35
+ms.sourcegitcommit: 24dd8fbdf88eca005e9f01328ab57150de37d432
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672008"
+ms.lasthandoff: 08/01/2021
+ms.locfileid: "115014821"
 ---
-# <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 avantajı
+# <a name="the-visual-studio-2019-benefit"></a>2019 Visual Studio avantajı
 
-Visual Studio abonesi olarak, Visual Studio IDE 'ye erişiminiz vardır.  Belirli sürüm, aboneliğinizin düzeyine bağlı olacaktır.  Bu avantaj, abone portalının [avantajlar](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) sayfasında Araçlar kategorisinde bir kutucuk olarak görünür.
+Bir Visual Studio olarak, IDE'ye Visual Studio sahipsiniz.  Belirli bir sürüm, aboneliğinizin düzeyine bağlıdır.  Avantaj, abone portalının Avantajlar sayfasındaki Araçlar kategorisinde [bir](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) kutucuk olarak görünür.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 
-*(Visual Studio Enterprise Bu örnek için kullanılır.)*
+*(Visual Studio Enterprise örnek için kullanılır.)*
 
-IDE 'yi indirmek için:
+IDE'i indirmek için:
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
-2. Araçlar bölümünde Visual Studio IDE kutucuğunu bulun ve avantaj kutucuğunun altındaki **İndir** bağlantısına tıklayın.  [İndirme sayfasından da](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) indirebilirsiniz.
+2. Araçlar Visual Studio IDE kutucuğunu bulun ve avantaj kutucuğunun altındaki İndir bağlantısına tıklayın.   İndirmeler sayfasından da [indirebilirsiniz.](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)
    > [!div class="mx-imgBorder"]
-   > ! [Visual Studio Enterprise kutucuğu] (_img/vs-ide-Experience/vs-ide-tile.png "Visual Studio 'yu yüklemek için Visual Studio kutucuğunda" Indir "e tıklayın.")
+   > ! [Visual Studio Enterprise kutucuğu] (_img/vs-ide-experience/vs-ide-tile.png "Visual Studio kutucuğunu yüklemek için "İndir" Visual Studio.")
 
-3. Visual Studio için Indirme sonuçları sayfasına yönlendirilirsiniz. burada, IDE 'yi indirme ve uygulamayı etkinleştirmek için bir ürün anahtarı edinme fırsatınız vardır. Ayrıca, mavi **anahtar al** bağlantısına tıklayarak bir ürün anahtarı talep edebilir veya daha sonra [ürün anahtarları](https://my.visualstudio.com/productkeys) sayfasında bir anahtar talep edebilirsiniz.
-4. Sonuçları Indir sayfasının Ayrıntılar sekmesinde:
-   - İstediğiniz mimarinizi seçin (x86, x64)
+3. IDE'i indirme ve etkinleştirmeye bir ürün anahtarı alma Visual Studio için sonuçları indirme sayfasına yeniden yönlendirebilirsiniz. Ayrıca mavi Anahtar Al bağlantısına tıklayarak bir ürün anahtarı talep **edebilirsiniz** veya daha sonra Ürün anahtarları sayfasında bir [anahtar talep edebilirsiniz.](https://my.visualstudio.com/productkeys)
+4. Sonuçları İndir sayfasının Ayrıntılar sekmesinde:
+   - İstediğiniz mimariyi seçin (x86, x64)
    - Dil tercihinizi seçin.
-5. Mavi İndir düğmesine tıklayın.
+5. Mavi indirme düğmesine tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio Enterprise karşıdan yükleme ayrıntıları](_img/vs-ide-experience/vs-ide-download-details.png "İndirmeye başlamak için ' Indir ' düğmesine tıklayın.")
-6. İndirilen yükleyici paketine tıklayın.  Şimdi yüklemek isteyip istemediğiniz sorulursa **Çalıştır**' a tıklayın.
-7. Kullanıcı hesabı denetimi iletişim kutusunda **Evet**' e tıklayın.
-8. Lisans koşullarını kabul etmek için **devam** ' a tıklayın.
-9. Yükleyici başladığında, ilgili sekmelerde seçerek istediğiniz iş yüklerinizi, tek tek bileşenlerinizi ve dil paketlerini seçin.
+   > ![Visual Studio Enterprise indirme ayrıntıları](_img/vs-ide-experience/vs-ide-download-details.png "İndirmeye başlamak için 'İndir' düğmesine tıklayın.")
+6. İndirilen yükleyici paketine tıklayın.  Şimdi yüklemeniz istenirse Çalıştır'a **tıklayın.**
+7. Kullanıcı Hesabı Denetimi iletişim kutusunda Evet'e **tıklayın.**
+8. Lisans **koşullarını kabul** etmek için Devam'a tıklayın.
+9. Yükleyici başlatıldığında, istediğiniz iş yüklerini, tek tek bileşenleri ve dil paketlerini ilgili sekmelerde seçerek seçin.
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio Enterprise özelleştirme](_img/vs-ide-experience/vs-ide-customize-install-cropped.png "İş yükleri ve diğer bileşenler için seçimlerinizi yapın.")
+   > ![Özelleştirme Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-customize-install-cropped.png "İş yükleri ve diğer bileşenler için seçimlerinizi yapma.")
 
 10. **Yükle**'ye tıklayın.
 
-11. Yükleme tamamlandığında, yüklemeyi değiştirme veya Visual Studio 'Yu başlatma seçeneğine sahip olacaksınız.  Başlamak için **Başlat** ' a tıklayın.  Birden çok sürüm yüklüyse, bunlar listelenir.
+11. Yükleme tamamlandığında, yükleme işlemini değiştirme veya yükleme işlemini başlatma Visual Studio.  Başlatmak **için Başlat'a** tıklayın.  Birden çok sürümünüz yüklüyse, bunlar listelenir.
     > [!div class="mx-imgBorder"]
-    > ![Visual Studio Enterprise Başlat](_img/vs-ide-experience/vs-ide-versions.png "Visual Studio 'Yu başlatmak için ' Başlat ' seçeneğine tıklayın.")
+    > ![Başlatma Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png "Uygulamayı başlatmak için 'Başlat' Visual Studio.")
 
-12. Visual Studio aboneliğinizle ilişkili hesapla oturum açın.
+12. Visual Studio aboneliğiniz ile ilişkili hesapta oturum açın.
 
-13. Tercih ettiğiniz temayı seçin ve **Visual Studio 'Yu Başlat**' a tıklayın.
+13. Tercih ettiğiniz temayı seçin ve Başlat'a **Visual Studio.**
 
-14. Visual Studio açılır. Visual Studio kullanmaya başlamak için hazırsınız!
+14. Visual Studio açılır. Artık yeni bir uygulama kullanmaya Visual Studio!
 
     > [!div class="mx-imgBorder"]
-    > ![Visual Studio Enterprise kullanmaya başlayın](_img/vs-ide-experience/vs-ide-start-cropped.png "Visual Studio 'ya hoş geldiniz!")
+    > ![Visual Studio Enterprise'ı kullanmaya başlama](_img/vs-ide-experience/vs-ide-start-cropped.png "Visual Studio!")
 
 
-## <a name="eligibility"></a>Önceliği
+## <a name="eligibility"></a>Uygunluk
 
-| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
+| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL | Kullanılabilir       |  Yes          |
-| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Yes          |
-| GitHub Enterprise ile Visual Studio Professional aboneliği | VL   | Kullanılabilir              |  Yes          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Yes         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
+| Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes          |
+| Visual Studio Enterprise ile GitHub Enterprise   | Vl | Kullanılabilir       |  Yes          |
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, Perakende                                       | Kullanılabilir                                                            |  Yes          |
+| Visual Studio Professional ile abonelik GitHub Enterprise | Vl   | Kullanılabilir              |  Yes          |
+| Visual Studio Test Professional (Standart)                         | Tümü                                            | Kullanılamaz                                             |  Yok         |
+| MSDN Platformları (Standart)                                          | Tümü                                              | Kullanılamaz                                              |  Yok          |
 
-<sup>1</sup>  *şunları içerir: for the SATıL (NFR), NFR Basic, Visual Studio sektör ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, ımact, en DEĞERLI profesyonel (MVP), bölgesel yönetmen (RD).  Dışlar: MCT Software & Hizmetleri.*
+<sup>1</sup>*Şunları içerir: Resale (NFR), NFR Basic, Visual Studio Industry Partner (VSIP), Microsoft İş Ortağı Ağı (MPN), FTE, MCT Software & Services Developer, BizSpark, Imagine, Most Valuable Professional (MVP), Regional Director (RD).  Dışlar: MCT Yazılım & Hizmetleri.*  
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
+> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)E-posta adresinize atanan tüm abonelikleri görmek için bağlantısını yapın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio IDE ile ilgili yardıma ihtiyacınız var, şu kaynaklara göz atın:
-  - Teknik destek: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
+- IDE'Visual Studio yardım gerekiyor, şu kaynaklara göz at:
+  - Teknik Destek: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Belgeler](/visualstudio/)
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)görüşün.
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -89,7 +89,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Visual Studio 'Yu yükledikten sonra, bu diğer önemli avantajları etkinleştirmeyi unutmayın:
+Bu Visual Studio sonra, şu diğer önemli avantajları etkinleştirmeyi unutmayın:
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure DevTest bireysel kredisi](vs-azure.md)
 - [Windows Geliştirici hesabı](vs-windows-dev.md)

@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a5a666dfe95d7809593f86891b0b71b12c22e287
-ms.sourcegitcommit: 2694ab246eb857a1c607738a67198c46f826f106
+ms.openlocfilehash: d5f2beccbc4004b9b36b7ff1c39b3ad60cc39120
+ms.sourcegitcommit: 24dd8fbdf88eca005e9f01328ab57150de37d432
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "114995681"
+ms.lasthandoff: 08/01/2021
+ms.locfileid: "115014834"
 ---
 # <a name="create-custom-data-visualizers"></a>Özel veri Görselleştiriciler oluşturma
 
@@ -49,11 +49,11 @@ Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
 
 - *hata ayıklayıcı tarafı* Visual Studio hata ayıklayıcı içinde çalışır ve görselleştirici kullanıcı arabirimini oluşturur ve görüntüler. 
 
-  Visual Studio .NET Framework çalışma zamanında yürütüldüğünü göz önünde bulundurmanız önemlidir, bu nedenle bu bileşen için de yazılması gerekir. Bu nedenle, .NET Core için yazmak mümkün değildir.
+  Visual Studio, .NET Framework çalışma zamanında yürütüldüğü için, bu bileşenin .NET Framework için yazılması gerekir. Bu nedenle, .NET Core için yazmak mümkün değildir.
 
 - hata *ayıklanan yan* Visual Studio işlem içinde çalışıyor (hata *ayıklanan*). Hata ayıklanan işlemde görselleştirilecek veri nesnesi (örneğin, bir dize nesnesi) var. Hata ayıklanan yüz, nesneyi oluşturduğunuz Kullanıcı arabiriminde görüntüleyen hata ayıklayıcı tarafına gönderir.
 
-  bu bileşeni oluşturduğunuz çalışma zamanının, hata ayıklanan işlemin çalıştırılacağı, .NET Framework veya .net Core ile eşleşmesi gerektiğini göz önünde bulundurmanız önemlidir.
+  bu bileşeni oluşturduğunuz çalışma zamanının, hata ayıklanan işlemin çalışacağı, diğer bir deyişle .NET Framework veya .net Core ile eşleşmesi gerekir.
 
 Hata ayıklayıcı tarafı, arabirimini uygulayan bir *nesne sağlayıcısından* veri nesnesini alır <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> . Hata ayıklanan yüz, nesnesini öğesinden türetilen *nesne kaynağı* üzerinden gönderir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
 
@@ -85,7 +85,7 @@ Hata ayıklayıcı tarafında görselleştiricisi Kullanıcı arabirimini oluşt
 üstelik, ASP.NET Core 5 ' te tamamen kullanımdan kaldırılmıştır ve kullanımı [ASP.NET Core belgelerinde](/dotnet/core/compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete)açıklandığı gibi oluşturulur.
 Bu bölümde, Görselleştiricinizi Bu senaryoda hala desteklendiğinden emin olmak için gerçekleştirmeniz gereken adımlar açıklanmaktadır.
 
-- Uyumluluk nedenleriyle, <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A> önceki bölümde geçersiz kılınan yöntem de ' de sürer <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> . Nonetheless, aslında türüdür <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider2> .
+- Uyumluluk nedenleriyle, <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A> önceki bölümde geçersiz kılınan yöntem de ' de sürer <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider> . ancak, Visual Studio 2019 sürüm 16,10 ' den itibaren, aslında tür <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider2> .
 Bu nedenle, `objectProvider` nesneyi güncelleştirilmiş arabirime atayın.
 
 - Komut veya veriler gibi nesneleri gönderirken *hata ayıklanan tarafa* `IVisualizerObjectProvider2.Serialize` bir akışa geçirmek için yöntemini kullanırken, *hata ayıklanan* işlemin çalışma zamanına göre kullanılacak en iyi serileştirme biçimini tespit eder.
