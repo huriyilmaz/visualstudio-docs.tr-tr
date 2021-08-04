@@ -1,8 +1,8 @@
 ---
-title: Desteklenen kod değişiklikleri (C# ve Visual Basic) | Microsoft Docs
-description: Visual Studio 'da C# veya Visual Basic projesinde hata ayıklarken Düzenle ve devam et özelliğini kullanırken hangi kod değişikliklerinin desteklendiğini anlayın.
+title: Desteklenen Kod Değişiklikleri (C# ve Visual Basic) | Microsoft Docs
+description: Bir C# veya Visual Basic projesinde hata ayıklarken Düzenle ve Devam Bırak özelliğini kullanırken hangi kod Visual Studio.
 ms.custom: SEO-VS-2020
-ms.date: 10/11/2018
+ms.date: 9/03/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -18,94 +18,94 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4fc3f49038a44b2b2bd5b467d6e1874f8a9a9803
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f51cc979f968acf0cf1fb526d88c86a8fc09ad4
+ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940767"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "115094259"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Desteklenen kod değişiklikleri (C# ve Visual Basic)
-Düzenle ve devam et, yöntem gövdelerinde birçok kod değişikliği türünü işler. Ancak Yöntem gövdelerinin dışındaki değişiklikler ve Yöntem gövdelerinin içindeki birkaç değişiklik, hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için, hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.
+Düzenle ve Devam Etmek, yöntem gövdeleri içindeki çoğu kod değişikliği türlerini işlemeye devam eder. Ancak çoğu yöntem gövdeleri dışındaki değişiklikler ve yöntem gövdeleri içindeki birkaç değişiklik, hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.
 
-## <a name="supported-changes-to-code"></a>Koddaki desteklenen değişiklikler
+## <a name="supported-changes-to-code"></a>Kodda desteklenen değişiklikler
 
-Aşağıdaki tabloda, oturum yeniden başlatmadan hata ayıklama oturumu sırasında C# ve Visual Basic koduna yapılabilecek değişiklikler gösterilmektedir.
+Aşağıdaki tabloda, oturum yeniden başlatılmadan hata ayıklama oturumu sırasında C# Visual Basic kodda yapılan değişiklikler gösterilmiştir.
 
-|Dil öğesi/özelliği|Desteklenen düzenleme işlemi|Sınırlamalar|
+|Dil öğesi/özellik|Desteklenen düzenleme işlemi|Sınırlamalar|
 |-|-|-|
-|Türler|Yöntemler, alanlar, oluşturucular, et al|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Yineleyiciler|Ekleme veya değiştirme|Hayır|
-|zaman uyumsuz/await ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Dinamik nesneler|Ekleme veya değiştirme|Hayır|
+|Türler|Yöntemleri, alanları, oluşturucuları ve diğer yöntemleri ekleme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Yineleyiciler|Ekleme veya değiştirme|No|
+|async/await ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Dinamik nesneler|Ekleme veya değiştirme|No|
 |lambda ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|LINQ ifadeleri|Ekleme veya değiştirme|[Lambda ifadeleriyle aynı](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|LINQ ifadeleri|Ekleme veya değiştirme|[Lambda ifadeleri ile aynı](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 
 > [!NOTE]
-> Dize ilişkilendirme ve null koşullu işleçler gibi daha yeni dil özellikleri genellikle Düzenle ve devam et tarafından desteklenir. En güncel bilgiler için, bkz. [ENC tarafından desteklenen düzenlemeler](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md) sayfası.
+> Dize ilişkilendirme ve null koşullu işleçler gibi daha yeni dil özellikleri genellikle Düzenle ve Devam Ile de desteklene. En güncel bilgiler için [Enc Desteklenen Düzenlemeler sayfasına](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md) bakın.
 
-## <a name="unsupported-changes-to-code"></a>Koddaki desteklenmeyen değişiklikler
- Bir hata ayıklama oturumu sırasında C# ve Visual Basic koduna aşağıdaki değişiklikler uygulanamaz:
+## <a name="unsupported-changes-to-code"></a>Kodda desteklenmeyen değişiklikler
+ Hata ayıklama oturumu sırasında C# ve Visual Basic aşağıdaki değişiklikler uygulanamaz:
 
-- Geçerli ifadede veya diğer etkin deyimdeki değişiklikler.
+- Geçerli deyimde veya başka bir etkin deyimde yapılan değişiklikler.
 
-     Etkin deyimler, geçerli ifadeye ulaşmak için çağrılan çağrı yığınında işlevlerde tüm deyimleri içerir.
+     Etkin deyimler, çağrı yığınındaki işlevlerde geçerli deyime almak için çağrılan deyimleri içerir.
 
-     Geçerli ifade, kaynak pencerede sarı bir arka plan ile işaretlendi. Diğer etkin deyimler gölgeli bir arka plan ile işaretlenir ve salt okunurdur. Bu varsayılan renkler **Seçenekler** iletişim kutusunda değiştirilebilir.
+     Geçerli deyim, kaynak pencerede sarı bir arka plan ile işaretlenir. Diğer etkin deyimler gölgeli bir arka plan ile işaretlenir ve salt okunur olur. Bu varsayılan renkler Seçenekler iletişim **kutusunda değiştirilebilir.**
 
-- Aşağıdaki tabloda, dil öğesine göre koddaki desteklenmeyen değişiklikler gösterilmektedir.
+- Aşağıdaki tabloda dil öğesine göre kodda desteklenmeyen değişiklikler yer alır.
 
-|Dil öğesi/özelliği|Desteklenmeyen düzenleme işlemi|
+|Dil öğesi/özellik|Desteklenmeyen düzenleme işlemi|
 |-|-|
-|Tüm kod öğeleri|Adlandırıl|
+|Tüm kod öğeleri|Yeni -den adlandırma|
 |Ad alanları|Ekle|
-|Ad alanları, türler, Üyeler|Sil|
+|Ad alanları, türler, üyeler|Sil|
 |Genel Türler|Ekleme veya değiştirme|
 |Arabirimler|Değiştir|
-|Türler|Soyut veya sanal üye ekleyin, geçersiz kılma ekleyin ( [ayrıntılara](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)bakın)|
-|Türler|Yıkıcı Ekle|
+|Türler|Soyut veya sanal üye ekleme, geçersiz kılma ekleme [(ayrıntılara bakın)](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Türler|Yok etme ekleme|
 |Üyeler|Katıştırılmış birlikte çalışma türüne başvuran bir üyeyi değiştirme|
-|Üyeler|Kod yürütülerek bir statik üyeyi zaten erişildikten sonra değiştirme|
-|Üyeler (Visual Basic)|Bir üyeyi hata veya yeniden başlatma bildirimiyle değiştirme|
-|Üyeler (Visual Basic)|Toplama, gruplama ölçütü, basit birleştirme veya grup birleştirme LINQ sorgu yan tümcesini içeren bir üyeyi değiştirme|
+|Üyeler|Kod yürüterek statik üyeye zaten erişildikten sonra bu üyeyi değiştirme|
+|Üyeler (Visual Basic)|On Error veya Resume deyimiyle üyeyi değiştirme|
+|Üyeler (Visual Basic)|Toplama, GrupLama, Basit Birleştirme veya Grup Birleştirme LINQ sorgu yan tümcesi içeren bir üyeyi değiştirme|
 |Yöntemler|İmzaları değiştirme|
-|Yöntemler|Bir soyut yöntemin bir yöntem gövdesi ekleyerek Özet olmayan hale gelmesini sağlama|
-|Yöntemler|Yöntem gövdesini Sil|
+|Yöntemler|Bir yöntem gövdesi ekleyerek soyut yöntemi soyut olmayan bir yöntem haline|
+|Yöntemler|Delete yöntemi gövdesi|
 |Öznitelikler|Ekleme veya değiştirme|
-|Olaylar veya Özellikler|Bir tür parametresi, temel tür, temsilci türü veya dönüş türü değiştirme |
-|İşleçler veya Dizin oluşturucular|Bir tür parametresi, temel tür, temsilci türü veya dönüş türü değiştirme |
-|catch blokları|Etkin bir ekstre içerdiğinde Değiştir|
-|try-catch-finally blokları|Etkin bir ekstre içerdiğinde Değiştir|
+|Olaylar veya özellikler|Tür parametresini, temel türü, temsilci türünü veya dönüş türünü değiştirme |
+|İşleçler veya dizinciler|Tür parametresini, temel türü, temsilci türünü veya dönüş türünü değiştirme |
+|catch blokları|Etkin deyimi içerdiğinde değiştirme|
+|try-catch-finally blokları|Etkin deyimi içerdiğinde değiştirme|
 |using deyimleri|Ekle|
-|zaman uyumsuz metotlar/Lambdalar|.NET Framework 4 ve daha düşük bir projede bir zaman uyumsuz yöntem/lambda değiştirme ( [ayrıntılara](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)bakın)|
-|Yineleyiciler|.NET Framework 4 ve daha düşük bir projede bir yineleyiciyi değiştirme ( [ayrıntılara](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)bakın)|
+|zaman uyumsuz yöntemler/lambdalar|4 ve daha düşük bir projeyi hedeflemek için zaman uyumsuz .NET Framework/lambda değiştirme [(ayrıntılara bakın)](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Yineleyiciler|4 ve daha düşük bir projeyi .NET Framework bir tekrarlayıcıyı değiştirme [(ayrıntılara bakın)](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 
 ## <a name="unsafe-code"></a>Güvenli olmayan kod
- Güvenli olmayan koddaki değişiklikler, güvenli koddaki değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlamadır: Düzenle ve devam et işleci içeren bir yöntem içinde çıkış olmayan güvenli olmayan koddaki değişiklikleri desteklemez `stackalloc` .
+ Güvenli olmayan kodda yapılan değişiklikler, güvenli kodda yapılan değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlama daha vardır: Düzenle ve Devam Etmek, işleci içeren bir yöntemde çıkan güvenli olmayan kodda yapılan değişiklikleri `stackalloc` desteklemez.
 
 ## <a name="unsupported-app-scenarios"></a>Desteklenmeyen uygulama senaryoları
 
-Desteklenmeyen uygulamalar ve platformlar şunlardır ASP.NET 5, Silverlight 5 ve Windows 8.1.
+Desteklenmeyen uygulamalar ve platformlar arasında ASP.NET 5, Silverlight 5 ve Windows 8.1.
 
 > [!NOTE]
-> Desteklenen uygulamalar Windows 10 ' da UWP ve .NET Framework 4,6 masaüstü veya sonraki sürümlerini hedefleyen x86 ve x64 uygulamaları (.NET Framework yalnızca bir masaüstü sürümüdür) içerir.
+> Desteklenen uygulamalar arasında Windows 10'de UWP ve .NET Framework 4.6 masaüstü veya sonraki sürümleri (.NET Framework yalnızca masaüstü sürümüdür) hedef alan x86 ve x64 uygulamaları yer alır.
 
 ## <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar
- Düzenle ve devam et aşağıdaki hata ayıklama senaryolarında kullanılamaz:
+ Düzenle ve Devam Bırak, aşağıdaki hata ayıklama senaryolarında kullanılamaz:
 
-- Karışık mod (Yerel/yönetilen) hata ayıklama.
+- Karma mod (yerel/yönetilen) hata ayıklama.
 
-- SQL hata ayıklaması.
+- SQL hata ayıklama.
 
-- Dr. Watson dökümünü hata ayıklama.
+- Dr. Watson dökümde hata ayıklama.
 
-- Gömülü çalışma zamanı uygulamasında hata ayıklama.
+- Katıştırılmış çalışma zamanı uygulamasında hata ayıklama.
 
-- **Hata** ayıklama menüsünden **Başlat** ' a tıklayarak uygulamayı çalıştırmak yerine, Işleme iliştir (**hata ayıklama > işleme**) kullanarak bir uygulamada hata ayıklayın.
+- Hata Ayıklama menüsünden Başlat'ı seçerek **uygulamayı çalıştırma yerine işleme ekleme**(  İşleme > hata ayıklama ) kullanarak uygulamada **hata** ayıklama.
 
 - İyileştirilmiş kodda hata ayıklama.
 
-- Derleme hataları nedeniyle yeni bir sürüm derlenemedi sonra kodunuzun eski bir sürümünde hata ayıklama işlemi başarısız oldu.
+- Derleme hataları nedeniyle yeni bir sürüm derleme başarısız olduktan sonra kodunuzun eski bir sürümünde hata ayıklama.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Düzenle ve Devam Et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)

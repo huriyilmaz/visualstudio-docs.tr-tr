@@ -1,6 +1,6 @@
 ---
 title: Yükleme veya yükseltme sorunlarını giderme
-description: Bazen işler ters gidebilir. Yükleme veya Visual Studio başarısız olursa, bu sayfa yardımcı olabilir.
+description: Bazen işler ters gidebilir. Yükleme veya Visual Studio başarısız olursa bu sayfa size yardımcı olabilir.
 ms.date: 06/24/2020
 ms.custom: vs-acquisition
 ms.topic: troubleshooting
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 556EDD3F-E365-43EE-B3DD-03AA4353F75B
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 802e4cfb78a9302bd24bca55cda1bf9eab79f9ef
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 070ef1d1d990d5cc8e44c173db096d0a107bf238
+ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387833"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "115094854"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Yükleme Visual Studio yükseltme sorunlarını giderme
 
@@ -37,23 +37,23 @@ Aşağıdaki adımlar tipik bir çevrimiçi yükleme için iyileştirilmiştir. 
 
 ::: moniker range="vs-2017"
 
-Microsoft'un düzeltme üzerinde Visual Studio Yükleyicisi bazı bilinen sorunlar vardır. Soruna geçici bir çözüm olup olamay için sürüm [notlarımızın Bilinen Sorunlar bölümüne bakın.](/visualstudio/releasenotes/vs2017-relnotes#-known-issues)
+Microsoft'un düzeltme üzerinde Visual Studio Yükleyicisi bazı bilinen sorunlar vardır. Soruna geçici bir çözüm olup olamay olduğunu görmek için sürüm [notlarımızın Bilinen Sorunlar bölümüne bakın.](/visualstudio/releasenotes/vs2017-relnotes#-known-issues)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Microsoft'un düzeltme üzerinde Visual Studio Yükleyicisi bazı bilinen sorunlar vardır. Soruna geçici bir çözüm olup olamay için sürüm [notlarımızın Bilinen Sorunlar bölümüne bakın.](/visualstudio/releases/2019/release-notes#-known-issues)
+Microsoft'un düzeltme üzerinde Visual Studio Yükleyicisi bazı bilinen sorunlar vardır. Soruna geçici bir çözüm olup olamay olduğunu görmek için sürüm [notlarımızın Bilinen Sorunlar bölümüne bakın.](/visualstudio/releases/2019/release-notes#-known-issues)
 
 ::: moniker-end
 
-### <a name="step-2---try-repairing-visual-studio"></a>2. Adım: 2. Adım: Visual Studio
+### <a name="step-2---try-repairing-visual-studio"></a>2. Adım- 2. Adım: Visual Studio
 
 Onarım birçok yaygın güncelleştirme sorununa çözüm sağlar. içinde onarım işlevinin ne zaman ve nasıl kullanılası hakkında daha fazla bilgi Visual Studio bkz. [Visual Studio.](repair-visual-studio.md)
 
 ### <a name="step-3---check-with-the-developer-community"></a>3. Adım: Geliştirici topluluğuna göz at
 
-hata iletinizi arama ve [Visual Studio Geliştirici Topluluğu.](https://aka.ms/feedback/suggest?space=8) Topluluğun diğer üyeleri, soruna bir çözüm belgeletirdi.
+[Visual Studio Developer](https://aka.ms/feedback/suggest?space=8)Community. Topluluğun diğer üyeleri, soruna bir çözüm belgeletirdi.
 
 ### <a name="step-4---delete-the-visual-studio-installer-directory-to-fix-upgrade-problems"></a>4. Adım: Yükseltme Visual Studio Yükleyicisi için Visual Studio Yükleyicisi dizinini silme
 
@@ -66,7 +66,7 @@ Bu Visual Studio Yükleyicisi önyükleyicisi, uygulamanın geri kalanını yük
 
 1. Visual Studio Yükleyicisi’ni kapatın.
 2. Visual Studio Yükleyicisi silin. Genellikle dizini `C:\Program Files (x86)\Microsoft Visual Studio\Installer` olur.
-3. Önyükleyiciyi Visual Studio Yükleyicisi çalıştırın. Önyükleyiciyi İndirilenler klasörünüzde bir desenden sonra bir dosya adıyla `vs_[Visual Studio edition]__*.exe` bulabilirsiniz. Bu uygulamayı bulamazsanız önyükleyiciyi indirmek için Visual Studio indirmeler sayfasına gidip [Visual Studio.](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)  Ardından, yükleme meta verilerinizi sıfırlamak için yürütülebilir dosyayı çalıştırın.
+3. Önyükleyiciyi Visual Studio Yükleyicisi çalıştırın. Önyükleyiciyi İndirilenler klasörünüzde bir desenden sonra bir dosya adıyla `vs_[Visual Studio edition]__*.exe` bulabilirsiniz. Bu uygulamayı bulamazsanız, Visual Studio indirmeleri sayfasına gidip [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sürümünüz için İndir'e  tıklayarak önyükleyiciyi Visual Studio. Ardından, yükleme meta verilerinizi sıfırlamak için yürütülebilir dosyayı çalıştırın.
 4. Yeniden yükleme veya güncelleştirme Visual Studio deneyin. Yükleyici başarısız olursa sonraki adıma gidin.
 
 ::: moniker-end
@@ -75,12 +75,12 @@ Bu Visual Studio Yükleyicisi önyükleyicisi, uygulamanın geri kalanını yük
 
 1. Visual Studio Yükleyicisi’ni kapatın.
 2. Visual Studio Yükleyicisi silin. Genellikle dizini `C:\Program Files (x86)\Microsoft Visual Studio\Installer` olur.
-3. Önyükleyiciyi Visual Studio Yükleyicisi çalıştırın. Önyükleyiciyi İndirilenler klasörünüzde bir desenden sonra bir dosya adıyla `vs_[Visual Studio edition]__*.exe` bulabilirsiniz. Bu uygulamayı bulamazsanız önyükleyiciyi indirmek için Visual Studio indirmeler sayfasına gidip [Visual Studio.](https://visualstudio.microsoft.com/downloads)  Ardından, yükleme meta verilerinizi sıfırlamak için yürütülebilir dosyayı çalıştırın.
+3. Önyükleyiciyi Visual Studio Yükleyicisi çalıştırın. Önyükleyiciyi İndirilenler klasörünüzde bir desenden sonra bir dosya adıyla `vs_[Visual Studio edition]__*.exe` bulabilirsiniz. Bu uygulamayı bulamazsanız, Visual Studio indirmeleri sayfasına gidip [Visual Studio](https://visualstudio.microsoft.com/downloads) sürümünüz için İndir'e  tıklayarak önyükleyiciyi Visual Studio. Ardından, yükleme meta verilerinizi sıfırlamak için yürütülebilir dosyayı çalıştırın.
 4. Yeniden yükleme veya güncelleştirme Visual Studio deneyin. Yükleyici başarısız olursa sonraki adıma gidin.
 
 ::: moniker-end
 
-### <a name="step-5---report-a-problem"></a>5. Adım - Sorun bildirme
+### <a name="step-5---report-a-problem"></a>5. Adım : Sorun bildirme
 
 Bozuk dosyalarla ilgili olanlar gibi bazı durumlarda, sorunların olay temelinde de bakilmesi gerekir. Size yardımcı olmak için lütfen şunları yapın:
 
@@ -89,8 +89,8 @@ Bozuk dosyalarla ilgili olanlar gibi bazı durumlarda, sorunların olay temelind
 1. Kurulum günlüklerinizi toplayın. Ayrıntılar [için bkz. Visual Studio yükleme günlüklerini](#installation-logs) nasıl edinebilirsiniz?
 2. Visual Studio Yükleyicisi'yi açın ve sorun **bildirin'e** tıklar ve Visual Studio geri bildirim aracını açın.
 ![Geri Bildirim Sağla düğmesine tıklayarak geri bildirim aracını açabilirsiniz](media/report-a-problem.png)
-3. Sorun raporunuz için bir başlık girin ve ilgili ayrıntıları girin. Ekler **bölümüne** gitmek için **Sonraki'ne** tıklayın ve oluşturulan günlük dosyasını (genellikle dosyanın olduğu yer) iliştirin. `%TEMP%\vslogs.zip`
-4. Sorun **raporlarınızı** gözden geçirmek için Sonraki'ne ve ardından **Gönder'e tıklayın.**
+3. Sorun raporunuz için bir başlık girin ve ilgili ayrıntıları girin. Ekler **bölümüne** gitmek için **Sonraki'ye** tıklayın ve oluşturulan günlük dosyasını (genellikle dosyanın olduğu yer) iliştirin. `%TEMP%\vslogs.zip`
+4. Sorun **raporlarınızı** gözden geçirmek için Sonraki'ne ve ardından Gönder'e **tıklayın.**
 
 ::: moniker-end
 
@@ -99,8 +99,8 @@ Bozuk dosyalarla ilgili olanlar gibi bazı durumlarda, sorunların olay temelind
 1. Kurulum günlüklerinizi toplayın. Ayrıntılar [için bkz. Visual Studio yükleme günlüklerini](#installation-logs) nasıl edinebilirsiniz?
 2. Visual Studio Yükleyicisi'yi açın ve sorun **bildirin'e** tıklar ve Visual Studio geri bildirim aracını açın.
 ![Geri Bildirim Sağla düğmesine tıklayarak geri bildirim aracını açabilirsiniz](media/vs-2019/vs-installer-report-problem.png)
-3. Sorun raporunuz için bir başlık girin ve ilgili ayrıntıları girin. Ekler **bölümüne** gitmek için **Sonraki'ne** tıklayın ve oluşturulan günlük dosyasını (genellikle dosyanın olduğu yer) iliştirin. `%TEMP%\vslogs.zip`
-4. Sorun **raporlarınızı** gözden geçirmek için Sonraki'ne ve ardından **Gönder'e tıklayın.**
+3. Sorun raporunuz için bir başlık girin ve ilgili ayrıntıları girin. Ekler **bölümüne** gitmek için **Sonraki'ye** tıklayın ve oluşturulan günlük dosyasını (genellikle dosyanın olduğu yer) iliştirin. `%TEMP%\vslogs.zip`
+4. Sorun **raporlarınızı** gözden geçirmek için Sonraki'ne ve ardından Gönder'e **tıklayın.**
 
 ::: moniker-end
 
@@ -114,24 +114,24 @@ Son bir tesis olarak, tüm [yükleme Visual Studio](remove-visual-studio.md) ür
 
 ### <a name="step-7---contact-us-optional"></a>7. Adım - Bize ulaşın (isteğe bağlı)
 
-Önceki adımlardan hiçbiri başarıyla yüklemenizi veya yükseltmenizi Visual Studio, daha [](https://visualstudio.microsoft.com/vs/support/#talktous) fazla yardım için canlı sohbet destek seçeneğimizi (yalnızca İngilizce) kullanarak bizimle iletişime geçin.
+Önceki adımlardan hiçbiri başarıyla yüklemenizi veya yükseltmenizi Visual Studio, daha fazla yardım için canlı [**sohbet**](https://visualstudio.microsoft.com/vs/support/#talktous) destek seçeneğimizi (yalnızca İngilizce) kullanarak bizimle iletişime geçin.
 
 ## <a name="offline-installations"></a>Çevrimdışı yüklemeler
 
-Burada, çevrimdışı yükleme oluşturmanıza ve ardından yerel bir [](create-an-offline-installation-of-visual-studio.md) düzenden yüklemenize yardımcı olacak bilinen sorunların ve bazı geçici çözümlerin yer almaktadır.
+Burada, çevrimdışı yükleme oluşturmanıza ve ardından yerel bir [](create-an-offline-installation-of-visual-studio.md) düzenden yüklemenize yardımcı olacak bilinen sorunların ve bazı geçici çözümlerin yer alır.
 
 | Sorun       | Öğe                   | Çözüm |
 | ----------- | ---------------------- | -------- |
 | Kullanıcıların dosyalara erişimi yok. | izinler (ACL'ler) | Çevrimdışı yüklemeyi paylaşmadan önce diğer kullanıcılara Okuma erişimi vermek  için izinleri (ACL' ler) ayarlayasınız. |
-| Yeni iş yükleri, bileşenler veya diller yük devretmez.  | `--layout`  | Kısmi bir düzenden yükleniyorsa ve daha önce bu kısmi düzende indirilmiş iş yüklerini, bileşenleri veya dilleri seçerek İnternet erişiminiz olduğundan emin olun. |
+| Yeni iş yükleri, bileşenler veya diller yüklenemedi.  | `--layout`  | Kısmi bir düzenden yükleniyorsa ve daha önce bu kısmi düzende indirilemedi iş yüklerini, bileşenleri veya dilleri seçerek İnternet erişiminiz olduğundan emin olun. |
 
-Bir ağ yüklemesi ile ilgili sorunları çözme hakkında daha fazla [bilgi için,](create-a-network-installation-of-visual-studio.md)bkz. Ağ yüklemesi yükleme veya kullanma sırasında [ağ ile ilgili Visual Studio.](troubleshooting-network-related-errors-in-visual-studio.md)
+Bir ağ yüklemesi ile ilgili sorunları çözme hakkında daha fazla [bilgi için](create-a-network-installation-of-visual-studio.md)bkz. Ağ yüklemesi yükleme veya kullanma sırasında ağ ile [ilgili Visual Studio.](troubleshooting-network-related-errors-in-visual-studio.md)
 
 ## <a name="installation-logs"></a>Yükleme günlükleri
 
-Kurulum günlükleri, yükleme sorunlarının çoğunu gidermek için gereklidir. Sorun Bildir'i kullanarak bir [sorun](../ide/how-to-report-a-problem-with-visual-studio.md) gönderdiğinizde Visual Studio Yükleyicisi günlükler otomatik olarak raporunuza eklenir.
+Kurulum günlüklerinin çoğu yükleme sorunlarını gidermek için gereklidir. Sorun Bildir'i kullanarak bir [sorun](../ide/how-to-report-a-problem-with-visual-studio.md) gönderdiğinizde Visual Studio Yükleyicisi günlükler otomatik olarak raporunuza eklenir.
 
-Microsoft Desteği iletişim kurmanız halinde, günlük toplama aracını kullanarak bu kurulum [günlüklerini Microsoft Visual Studio .NET Framework gerekir.](https://www.microsoft.com/download/details.aspx?id=12493) Günlük toplama aracı, .NET Framework, Windows SDK ve Visual Studio tarafından yüklenmiş tüm bileşenlerden kurulum SQL Server. Ayrıca bilgisayar bilgilerini, bir Windows Installer envanterini ve Visual Studio Yükleyicisi, Windows Installer ve Sistem Geri Yükleme için Windows olay günlüğü bilgilerini Sistem Geri Yükleme.
+Microsoft Desteği ile iletişim kursanız, günlük toplama aracını kullanarak bu kurulum günlüklerini [Microsoft Visual Studio .NET Framework gerekir.](https://www.microsoft.com/download/details.aspx?id=12493) Günlük toplama aracı, Visual Studio, Windows SDK ve .NET Framework dahil olmak üzere SQL Server. Bu araç bilgisayar bilgilerini, Windows Installer envanterini, ayrıca Visual Studio Installer, Windows Installer ve Sistem Geri Yükleme için Windows olay günlüğü bilgilerini de toplar.
 
 Günlükleri toplamak için:
 
@@ -151,6 +151,6 @@ Bu sorun giderme kılavuzunda listelenen çözümler, bu çözümü başarıyla 
 
 * [Visual Studio’yu onarın](repair-visual-studio.md)
 * [Kaldırma Visual Studio](remove-visual-studio.md)
-* [Güvenlik duvarı veya ara sunucu Visual Studio azure hizmetlerini yükleme ve kullanma](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
+* [Güvenlik duvarı veya ara Visual Studio arkasında Azure Hizmetleri'ne ve Azure Hizmetleri'ne yükleme ve kullanma](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)
 * [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)

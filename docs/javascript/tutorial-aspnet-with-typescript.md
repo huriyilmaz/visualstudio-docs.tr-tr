@@ -11,17 +11,21 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-monikerRange: <= vs-2019
-ms.openlocfilehash: 77a6ff52546fe879db74175d100d1be42966fd42
-ms.sourcegitcommit: d5c038792da2c86436750380633ee80c39e4c4ba
+ms.openlocfilehash: 9b8bee5918a85c2a661911ee71dcfd633fce4cb2
+ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114597026"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "115094061"
 ---
-# <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: ASP.NET Core TypeScript ile bir uygulama Visual Studio
+# <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: Visual Studio'de TypeScript ASP.NET Core bir uygulama Visual Studio
 
-Visual Studio ve TypeScript ASP.NET Core için bu öğreticide basit bir web uygulaması oluşturacak, bazı TypeScript kodu ekp uygulamayı çalıştırabilirsiniz.
+Visual Studio ve TypeScript ASP.NET Core için bu öğreticide basit bir web uygulaması oluşturacak, bazı TypeScript kodu ekser ve ardından uygulamayı çalıştırabilirsiniz.
+
+::: moniker range=">=vs-2022"
+
+Visual Studio 2022'den başlayarak, ASP.NET Core ve TypeScript ile bir [ASP.NET Core](../javascript/tutorial-asp-net-core-with-angular.md) uygulaması oluşturmak için Visual Studio'da Angular ile Angular ASP.NET Core uygulaması oluşturma.
+::: moniker-end
 
 ::: moniker range="vs-2017"
 
@@ -61,7 +65,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 Visual Studio projesinde tek bir uygulamanın dosyalarını *yönetir.* Proje kaynak kodunu, kaynakları ve yapılandırma dosyalarını içerir.
 
 >[!NOTE]
-> Boş bir ASP.NET Core ve TypeScript ön ucu eklemek için [bkz. ASP.NET Core TypeScript ile](https://www.typescriptlang.org/docs/handbook/asp-net-core.html) ekleme.
+> Boş bir ASP.NET Core projesiyle başlamak ve bir TypeScript ön ucu eklemek için [bkz. ASP.NET Core TypeScript ile](https://www.typescriptlang.org/docs/handbook/asp-net-core.html) ekleme.
 
 Bu öğreticide, bir MVC uygulaması için kod içeren basit bir ASP.NET Core başlayacaktır.
 
@@ -75,13 +79,13 @@ Bu öğreticide, bir MVC uygulaması için kod içeren basit bir ASP.NET Core ba
     Önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni Çalışma Alanı iletişim kutusunun sol **Project** **Visual C#** öğesini genişletin ve **.NET Core'ı seçin.** Orta bölmede Web Uygulaması **- C# ASP.NET Core tamam'ı** **seçin.**
+    Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni Çalışma Alanı iletişim kutusunun sol **Project** **Visual C#** öğesini genişletin ve **.NET Core'ı seçin.** Orta bölmede Web Uygulaması - **C# ASP.NET Core** tamam'ı **seçin.**
 
     Görüntülenen iletişim kutusunda, iletişim kutusunda Web Uygulaması **(Model-Görünüm-Denetleyici)** seçeneğini ve ardından Oluştur **(veya** Tamam) öğesini **seçin.**
 
     ![MVC şablonunu seçme](../javascript/media/aspnet-core-ts-mvc-template.png)
     ::: moniker-end
-    ASP.NET Core **Web Uygulaması** proje şablonunu görmüyorsanız, uygulama ve web **geliştirme ASP.NET eklemeniz** gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar.](#prerequisites)
+    ASP.NET Core **Web Uygulaması** proje şablonunu görmüyorsanız, web uygulaması ve **web ASP.NET eklemeniz** gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar.](#prerequisites)
 
     Visual Studio çözümü oluşturur ve projenizi sağ bölmede açar.
 
@@ -194,7 +198,7 @@ Bu öğreticide, bir MVC uygulaması için kod içeren basit bir ASP.NET Core ba
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Uygulamayı **çalıştırmak için F5** (**Hata**  >  **AyıklamaYı Başlat**) tuşuna basın.
+1. Uygulamayı **çalıştırmak için F5** '**e**(  >  **Hata AyıklamaYı** Başlat ) basın.
 
     Uygulama bir tarayıcıda açılır.
 
@@ -236,13 +240,13 @@ Bu öğreticide, bir MVC uygulaması için kod içeren basit bir ASP.NET Core ba
 1. uygulama paketi Çözüm Gezgini npm düğümüne sağ tıklayın ve Paketleri Geri **Yükle'yi seçin.**
 
    >[!NOTE]
-   > Bazı senaryolarda, Çözüm Gezgini burada açıklanan bilinen bir sorundan dolayı *npm paketininpackage.js* ile eşitlerinin dışı olduğunu gösteriyor [olabilir.](https://github.com/aspnet/Tooling/issues/479) Örneğin, paket yüklenirken yüklenmemiş gibi görünebilir. Çoğu durumda, *Çözüm Gezgini'package.js* silerek, Visual Studio'i yeniden başlatarak ve *package.js* dosyasını bu makalenin önceki sürümlerinde açıklandığı gibi yeniden ekleyerek güncelleştirebilirsiniz.
+   > Bazı senaryolarda, Çözüm Gezgini burada açıklanan bilinen bir sorundan dolayı *npm paketininpackage.js* ile eşitlerinin dışı olduğunu gösteriyor [olabilir.](https://github.com/aspnet/Tooling/issues/479) Örneğin, paket yüklenirken yüklenmemiş gibi görünebilir. Çoğu durumda, *Çözüm Gezgini'package.js* silerek, Visual Studio'i yeniden başlatarak ve bu makalenin önceki sürümlerinde açıklandığı gibi *package.js* dosyasını yeniden ekleyerek güncelleştirme gerçekleştirebilirsiniz.
 
-1. Komut Çözüm Gezgini scripts klasörüne sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin.**
+1. Komut Çözüm Gezgini betikler klasörüne sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin.**
 
 1. **TypeScript Dosyası'ı seçin,** *library.ts yazın ve* Ekle'yi **seçin.**
 
-1. *Library. TS*' de aşağıdaki kodu ekleyin.
+1. *library.ts içinde* aşağıdaki kodu ekleyin.
 
    ```ts
    var jqtest = {
@@ -259,18 +263,18 @@ Bu öğreticide, bir MVC uygulaması için kod içeren basit bir ASP.NET Core ba
 
    Kolaylık olması için, bu kod jQuery ve uyarı kullanarak bir ileti görüntüler.
 
-   JQuery için TypeScript tür tanımları eklendiğinde, burada gösterildiği gibi jQuery nesnesini izleyen bir "." yazdığınızda jQuery nesnelerinde IntelliSense desteği alırsınız.
+   jQuery için TypeScript tür tanımları eklendiyle, burada gösterildiği gibi bir jQuery nesnesinin ardından bir "." yazarak jQuery nesnelerinde IntelliSense desteği elde edersiniz.
 
-   ![jQuery IntelliSense](../javascript/media/aspnet-core-ts-jquery-intellisense.png)
+   ![jquery IntelliSense](../javascript/media/aspnet-core-ts-jquery-intellisense.png)
 
-1. _Layout. cshtml içinde, komut dosyası başvurularını içerecek şekilde güncelleştirin `library.js` .
+1. _Layout.cshtml dosyasında betik başvurularını içerecek şekilde `library.js` güncelleştirin.
 
    ```html
    <script src="~/js/app.js"></script>
    <script src="~/js/library.js"></script>
    ```
 
-1. Index. cshtml 'de, dosyanın sonuna aşağıdaki HTML 'yi ekleyin.
+1. Index.cshtml dosyasında dosyanın sonuna aşağıdaki HTML kodunu ekleyin.
 
    ```html
    <div>
@@ -278,20 +282,20 @@ Bu öğreticide, bir MVC uygulaması için kod içeren basit bir ASP.NET Core ba
    </div>
    ```
 
-1. Uygulamayı çalıştırmak için **F5** tuşuna **basın (hata ayıklama**  >  **başlatma hata** ayıklaması).
+1. Uygulamayı **çalıştırmak için F5** '**e**(  >  **Hata AyıklamaYı** Başlat ) basın.
 
     Uygulama tarayıcıda açılır.
 
-    JQuery sürümüne güncelleştirilmiş sayfayı görmek için uyarıda **Tamam** ' a tıklayın **: 3.3.1!!**.
+    jQuery sürümüne güncelleştirilmiş sayfayı görmek için uyarıda Tamam'a **tıklayın: 3.3.1!!**. 
 
-    ![jQuery örneği](../javascript/media/aspnet-core-ts-jquery-example.png)
+    ![jquery örneği](../javascript/media/aspnet-core-ts-jquery-example.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-ASP.NET Core ile TypeScript kullanma hakkında daha fazla bilgi edinmek isteyebilirsiniz. Visual Studio sürümünde AngularJS programlama ile ilgileniyorsanız, Visual Studio için [AngularJS language service uzantısını](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) kullanabilirsiniz.
+TypeScript'i ASP.NET Core ile kullanma hakkında daha fazla bilgi ASP.NET Core. Visual Studio'de AngularJS programlamayla ilgileniyorsanız, [angularJS](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio) dil hizmeti uzantısını Visual Studio.
 
 > [!div class="nextstepaction"]
 > [ASP.NET Core ve TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)
 
 > [!div class="nextstepaction"]
-> [AngularJS Language Service uzantısı](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)
+> [AngularJS dil hizmeti uzantısı](https://devblogs.microsoft.com/visualstudio/angular-language-service-for-visual-studio)

@@ -12,12 +12,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: b63b23270c804439201bfc02b7870a1a60a854ee
-ms.sourcegitcommit: d5c038792da2c86436750380633ee80c39e4c4ba
+ms.openlocfilehash: 32ba32e58e14a26f4bd96052e844801c8fdab00c
+ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114597304"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "115094070"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-react-in-visual-studio"></a>öğretici: Visual Studio React ile ASP.NET Core uygulama oluşturma
 
@@ -28,7 +28,7 @@ bu makalede, bir apı arka ucu görevi gören bir ASP.NET Core projesi ve kullan
 Visual Studio 2022 Preview 2 ' den başlayarak, bu makalede açıklanan yöntemi kullanarak aşağıdaki ASP.NET Core tek sayfalı uygulamalar oluşturabilirsiniz:
 
 - istemci uygulamasını ASP.NET Core projeden farklı bir projeye yerleştirme
-- Bilgisayarınızda yüklü olan Framework CLI 'yı temel alan istemci projesini oluşturun
+- Bilgisayarınızda yüklü olan Framework CLı 'yı temel alan istemci projesini oluşturun
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -41,11 +41,11 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
 1. yeni Project iletişim kutusunda **yeni proje oluştur**' u seçin. 
 
-   :::image type="content" source="media/vs-2022/asp-net-core-create-new-project.png" alt-text="Yeni proje oluşturma":::
+   :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
 1. üstteki arama çubuğunda React arayın ve sonra **tek başına JavaScript React şablonu**' nu seçin. (tek başına TypeScript React şablonu bu öğreticide şu anda desteklenmiyor.)
 
-   :::image type="content" source="media/vs-2022/asp-net-core-with-react-choose-template.png" alt-text="Şablon seçme":::
+   :::image type="content" source="media/vs-2022/react-choose-template.png" alt-text="Şablon seçme":::
 
 1. Projenize ve çözümünüze bir ad verin. **ek bilgi** penceresine geldiğinizde, **boş ASP.NET Web apı 'si için tümleştirme ekle Project** seçeneğini denetlediğinizden emin olun. bu seçenek, daha sonra ASP.NET Core projesiyle kullanıma abilmesi için React şablonunuza dosya ekler.
 

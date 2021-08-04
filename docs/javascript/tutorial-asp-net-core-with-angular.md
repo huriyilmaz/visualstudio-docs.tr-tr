@@ -12,12 +12,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 380458a359b1f36bd6e70c8466d37ffa18f88b94
-ms.sourcegitcommit: d5c038792da2c86436750380633ee80c39e4c4ba
+ms.openlocfilehash: 52e3e78fbfc6a407e684c2e9eeb237a603934764
+ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114597301"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "115093984"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-angular-in-visual-studio"></a>öğretici: Visual Studio Angular ile ASP.NET Core uygulama oluşturma
 
@@ -41,11 +41,11 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
 1. yeni Project iletişim kutusunda **yeni proje oluştur**' u seçin. 
 
-   :::image type="content" source="media/vs-2022/asp-net-core-create-new-project.png" alt-text="Yeni proje oluşturma":::
+   :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
 1. üstteki arama çubuğunda Angular araması yapın ve **tek başına Angular şablonu**' nu seçin.
 
-   :::image type="content" source="media/vs-2022/asp-net-core-with-angular-choose-template.png" alt-text="Şablon seçme":::
+   :::image type="content" source="media/vs-2022/angular-choose-template.png" alt-text="Şablon seçme":::
 
 1. Projenize ve çözümünüze bir ad verin. **ek bilgi** penceresine geldiğinizde, **boş ASP.NET Web apı 'si için tümleştirme ekle Project** seçeneğini denetlediğinizden emin olun. bu seçenek, daha sonra ASP.NET Core projesiyle kullanıma abilmesi için Angular şablonunuza dosya ekler.
 
