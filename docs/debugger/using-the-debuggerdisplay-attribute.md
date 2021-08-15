@@ -12,14 +12,15 @@ ms.assetid: f4eb7c76-af4e-493b-9ab6-9cb05949d9b3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e9579e4969cb53ed2f1bcf749e8114386af85d0
-ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
+ms.openlocfilehash: 339af0d541ff4493d6066cbd15b98bf4b6725dae158212530e6cf8334c536a81
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "112602140"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121308999"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Hata ayıklayıcısına DebuggerDisplay Özniteliğini (C#, Visual Basic, F#, C++/CLI) kullanarak ne göster göster
 
@@ -27,12 +28,12 @@ Bir <xref:System.Diagnostics.DebuggerDisplayAttribute> nesnenin, özelliğin vey
 
 özniteliği, `DebuggerDisplay` tür örnekleri için değer sütununda görüntülenecek bir dize olan tek bir bağımsız değişkene sahip olur. Bu dize küme ayraçları ( ve ) `{` `}` içerebilir. Bir çift ayraç içindeki metin alan, özellik veya yöntem olarak değerlendirilir.
 
-Bir sınıfın geçersiz kılınan bir `ToString()` yöntemi varsa, hata ayıklayıcı varsayılan yerine geçersiz kılma yöntemini `{<typeName>}` kullanır. Bu nedenle, yöntemini geçersiz kılmanız, hata ayıklayıcı varsayılan yerine geçersiz kılma yöntemini kullanır ve `ToString()` `{<typeName>}` kullanmak zorunda `DebuggerDisplay` değildir. Her ikisini de `DebuggerDisplay` kullanırsanız, özniteliği geçersiz kılınan yöntemden `ToString()` önceliklidir. Özniteliği `DebuggerDisplay` ayrıca bir alt sınıfta geçersiz kılınan `ToString()` yöntemden önceliklidir.
+Bir sınıfın geçersiz kılınan bir `ToString()` yöntemi varsa, hata ayıklayıcı varsayılan yerine geçersiz kılma yöntemini `{<typeName>}` kullanır. Bu nedenle, yöntemini geçersiz kılmanız, hata ayıklayıcı varsayılan yerine geçersiz kılma yöntemini kullanır ve `ToString()` `{<typeName>}` kullanmak zorunda `DebuggerDisplay` değildir. Her ikisini de `DebuggerDisplay` kullanırsanız, özniteliği geçersiz kılınan yöntemden `ToString()` önceliklidir. Özniteliği `DebuggerDisplay` ayrıca bir alt sınıfta geçersiz kılınan `ToString()` yöntemden daha önceliklidir.
 
 Hata ayıklayıcının bu örtülü çağrıyı değerlendirip değerlendirmeyip değerlendirmeyecekleri, Araçlar / Seçenekler / Hata Ayıklama iletişim kutusundaki `ToString()` **bir kullanıcı ayarına** bağlıdır.
 
 > [!IMPORTANT]
-> Araçlar / Seçenekler **/** **Hata Ayıklama iletişim** kutusunda Değişkenlerin ham yapısını göster windows onay kutusu seçiliyse, öznitelik `DebuggerDisplay` yoksayılır.
+> Araçlar / Seçenekler **/** **Hata Ayıklama iletişim** kutusunda Değişkenlerin ham yapısını göster onay kutusu seçiliyse, öznitelik `DebuggerDisplay` yoksayılır.
 
 > [!NOTE]
 > Yerel kod için bu öznitelik yalnızca C++/CLI kodunda de destekler.
@@ -69,9 +70,9 @@ DebuggerDisplay'de genel bir ifadenin yalnızca hedef türün geçerli örneğin
 
 DebuggerDisplay içinde ifadelerin kullanımı aşağıdaki sorunlara yol açabilirsiniz:
 
-- İfadeleri değerlendirme, hata ayıklayıcıda en pahalı işlemdir ve ifade her görüntülendiğinde değerlendirilir. Bu, kod adım adım adım performans sorunlarına neden olabilir. Örneğin, bir koleksiyon veya listede değerleri görüntülemek için kullanılan karmaşık bir ifade, öğe sayısı büyük olduğunda çok yavaş olabilir.
+- İfadeleri değerlendirme, hata ayıklayıcısında en pahalı işlemdir ve ifade her görüntülendiğinde değerlendirilir. Bu, kod adım adım adım performans sorunlarına neden olabilir. Örneğin, bir koleksiyon veya listede değerleri görüntülemek için kullanılan karmaşık bir ifade, öğe sayısı büyük olduğunda çok yavaş olabilir.
 
-- İfadeler, ifadenin yazıldığı dilin değerlendiricisi tarafından değil geçerli yığın çerçevesinin dilinin ifade değerlendiricisi tarafından değerlendirilir. Bu, diller farklı olduğunda öngörülemeyen sonuçlara neden olabilir.
+- İfadeler, ifadenin yazıldığı dilin değerlendiricisi tarafından değil, geçerli yığın çerçevesinin dilinin ifade değerlendiricisi tarafından değerlendirilir. Bu, diller farklı olduğunda öngörülemeyen sonuçlara neden olabilir.
 
 - Bir ifadenin değerlendirilmesi uygulamanın durumunu değiştirebilir. Örneğin, bir özelliğin değerini ayar eden bir ifade, yürütülen kodda özellik değerinin değerinin yerine yer alar.
 
@@ -96,7 +97,7 @@ public sealed class MyClass
 ",nq" soneki, ifade değerlendiricisine son değeri (nq = tırnak yok) görüntülerken tırnaklarını kaldırmalarını söyler.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki kod örneği, ve ile birlikte `DebuggerDisplay` kullanmayı `DebuggerBrowsable` `DebuggerTypeProxy` gösterir. İzleme penceresi gibi bir hata ayıklayıcısı  değişkenleri penceresinde görüntü olduğunda, aşağıdakine benzer bir genişletme üretir:
+Aşağıdaki kod örneği, ve ile birlikte `DebuggerDisplay` kullanmayı `DebuggerBrowsable` `DebuggerTypeProxy` gösterir. İzleme penceresi gibi bir hata ayıklayıcısı değişkenleri penceresinde **görüntü** olduğunda, aşağıdakine benzer bir genişletme üretir:
 
 |**Ad**|**Değer**|**Tür**|
 |--------------|---------------|--------------|

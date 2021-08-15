@@ -1,6 +1,6 @@
 ---
 title: Azure App Service’e yayımlama
-description: Azure App Service için ASP.NET Core uygulamaları yayımlamak üzere Yayımla aracını kullanabilirsiniz.
+description: Azure App Service için ASP.NET Core uygulamaları yayımlamak üzere yayımla aracını kullanabilirsiniz.
 ms.date: 01/17/2019
 helpviewer_keywords:
 - deployment, website
@@ -13,22 +13,22 @@ ms.custom: video
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: e0fdabe38f2696540db1a3b629609dbc1c42d821
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 29118ac1526aaa7a8c3790de8b519e8ec131a7f682e46e187f303d25535e0653
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106083635"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121313672"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak Azure App Service bir Web uygulaması yayımlama
 
-Azure App Service için ASP.NET Core uygulamaları yayımlamak üzere Yayımla aracını kullanabilirsiniz.
+Azure App Service için ASP.NET Core uygulamaları yayımlamak üzere yayımla aracını kullanabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- ASP.NET Core etkinken [Mac Için Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) yüklendi.
+- ASP.NET Core etkin olarak yüklenen [Mac için Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) .
 - Bir Azure aboneliği. Henüz bir aboneliğiniz yoksa [ücretsiz kaydolun](https://azure.microsoft.com/free/dotnet/)ve 30 gün boyunca kredi olarak $200, popüler ücretsiz hizmet için 12 ay.
-- Bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md?view=vsmac-2017&preserve-view=true).
+- bir ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md?view=vsmac-2017&preserve-view=true).
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 

@@ -11,15 +11,16 @@ ms.assetid: 04294ca3-bf9c-4c76-86f1-898c2140de27
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b40620388ffb3aefcd77eeb3f60355ed293ea59d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 17726150fc1fa963e54fe16baa244c392a691093a9afc5ce578fe7eba435ceb5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970575"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121257244"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
 `CommentMarkAtProfile`Yöntemi bir zaman damgası değeri, sayısal bir işaret ve *. vsp* dosyasına bir açıklama dizesi ekler. Zaman damgası değeri, dış olayları senkronize etmek için kullanılabilir. İşaret ve Açıklama eklenecek şekilde, CommentMarkAtProfile işlevini içeren iş parçacığının profil oluşturma açık olmalıdır.
@@ -49,7 +50,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
  İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
 
-|Sının|Description|
+|Sının|Açıklama|
 |----------------|-----------------|
 |MARK_ERROR_MARKER_RESERVED|Parametre 0 ' dan küçük veya buna eşit. Bu değerler ayrılmıştır. İşaret ve açıklama kaydedilmez.|
 |MARK_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında hiçbir zaman olarak ayarlanmıştır. İşaret ve açıklama kaydedilmez.|
@@ -118,4 +119,4 @@ void ExerciseCommentMarkAtProfile(void)
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio Profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)

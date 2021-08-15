@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma'
-description: Çözümünüzdeki hizmetlerden verileri nasıl kullanabileceğinizi ve verileri bir belgede göstermek için Windows Forms denetimlerini nasıl kullanabileceğinizi öğrenin.
+description: çözümünüzdeki hizmetlerden verileri nasıl kullanabileceğinizi ve verileri bir belgede göstermek için Windows Forms denetimlerini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,22 +14,23 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 57fdbcef1aaf9c0903a21a2eeb6436ce1fce25d0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8addba363743a59279e7b99cfa2b7f088b23ba8bf15a0b2f6917ed365f54962
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918546"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121243568"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma
 
-Veri erişimi, Windows Forms projelerinde olduğu gibi Microsoft Office için belge düzeyi projelerde aynı şekilde çalışacaktır. Verileri çözümünüze getirmek için aynı araçları ve kodu kullanırsınız, hatta verileri görüntülemek için Windows Forms denetimleri de kullanabilirsiniz. Ayrıca, Microsoft Office Excel 'de yerel nesneler olan ve olaylar ve veri bağlama özelliğiyle geliştirilmiş Word Microsoft Office, ana bilgisayar denetimleri adlı denetimlerin avantajlarından yararlanabilirsiniz. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+veri erişimi, Windows Forms projelerinde olduğu gibi Microsoft Office için belge düzeyi projelerde aynı şekilde çalışacaktır. verileri çözümünüze getirmek için aynı araçları ve kodu kullanırsınız, hatta verileri görüntülemek için Windows Forms denetimleri de kullanabilirsiniz. ayrıca, Microsoft Office Excel yerel nesneler olan ve olaylar ve veri bağlama özelliğiyle geliştirilmiş Word Microsoft Office olan konak denetimleri adlı denetimlerden faydalanabilirsiniz. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-Aşağıdaki örnek, tasarım zamanında belgelere veriye dayalı denetimlerin nasıl ekleneceğini gösterir. Çalışma zamanında VSTO Eklentilerindeki veriye bağlı denetimlerin nasıl ekleneceği hakkında bir örnek için bkz. [Izlenecek yol: VSTO eklenti projesindeki bir hizmetten veriye bağlama](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md).
+Aşağıdaki örnek, tasarım zamanında belgelere veriye dayalı denetimlerin nasıl ekleneceğini gösterir. çalışma zamanında VSTO eklentilerde veriye bağlı denetimler ekleme hakkında bir örnek için, bkz. [izlenecek yol: bir hizmetten verileri bir VSTO eklenti projesinde bağlama](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md).
 
 ## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>Belge düzeyindeki bir projeyi bir Web hizmetindeki verilerle doldurmak için
 
@@ -53,7 +54,7 @@ Projeyi çalıştırdığınızda, denetimler veri kaynağındaki ilk kaydı gö
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)

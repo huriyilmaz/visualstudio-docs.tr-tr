@@ -1,6 +1,6 @@
 ---
 title: Windows formunda hata ayıklama | Microsoft Docs
-description: 'Ortak yönetilen bir uygulama olan Windows formu oluşturma ve hata ayıklama işlemlerini görmek için bir yönergeyi izleyin. C#, Visual Basic, C++ veya F # kullanabilirsiniz.'
+description: 'ortak yönetilen bir uygulama olan Windows Form oluşturma ve hata ayıklama işlemlerini öğrenmek için bir yönergeyi izleyin. C#, Visual Basic, C++ veya F # kullanabilirsiniz.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,14 +22,15 @@ ms.assetid: 529db1e2-d9ea-482a-b6a0-7c543d17f114
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 73b58326bb594f275a508e5ba7fb17071f283ac2
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: dfdc291097c0b54d82f8c78b06e73f7e7bd19b2b292b91784a8ac43ddf63e4ea
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385181"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121308908"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>İzlenecek yol: Windows Formunda hata ayıklama
 Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows formu, standart bir Windows uygulaması oluşturur. Bu adım adım işlemleri Visual Basic, C# ya da C++ kullanarak tamamlayabilirsiniz.
@@ -45,13 +46,13 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
 #### <a name="to-create-the-windows-form-for-this-walkthrough"></a>Bu anlatım için Windows formunu oluşturmak amacıyla
 
-1. **Dosya** menüsünde, **Yeni** ' yi seçin ve **Proje**' ye tıklayın.
+1. **Dosya** menüsünde, **Yeni** ' yi seçin ve **Project**' ye tıklayın.
 
      **Yeni Proje** iletişim kutusu görünür.
 
-2. Proje türleri bölmesinde **Visual Basic**, **Visual C#** veya **Visual C++** düğümünü açın, sonra
+2. Project türleri bölmesinde **Visual Basic**, **Visual C#** veya **Visual C++** düğümünü açın ve ardından
 
-    1. Visual Basic veya Visual C# için **Windows Masaüstü**  >  **Windows form uygulaması**' nı seçin.
+    1. Visual Basic veya Visual C# için **Windows masaüstü**  >  **Windows Form uygulaması**' nı seçin.
 
     2. Visual C++ için **Windows masaüstü uygulaması**' nı seçin.
 
@@ -59,7 +60,7 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
 4. **Tamam**'a tıklayın.
 
-     Visual Studio, yeni bir proje oluşturur ve Windows Forms Tasarımcısı'nda yeni bir form görüntüler. Daha fazla bilgi için bkz. [Windows Form Tasarımcısı](/previous-versions/visualstudio/visual-studio-2010/e06hs424\(v\=vs.100\)).
+     Visual Studio, yeni bir proje oluşturur ve Windows Forms Tasarımcısı'nda yeni bir form görüntüler. daha fazla bilgi için bkz. [Windows Form Tasarımcısı](/previous-versions/visualstudio/visual-studio-2010/e06hs424\(v\=vs.100\)).
 
 5. **Görünüm** menüsünde **araç kutusu**' nu seçin.
 
@@ -123,9 +124,9 @@ Bir Windows formülü en yaygın yönetilen uygulamalardan biridir. Bir Windows 
 
      Visual Studio'da bu, sizi kod satırında kesme noktası eklediğiniz satıra götürür. Bu satır, sarı ile vurgulanmış olmalıdır. Şimdi, uygulamanızda değişkenleri görüntüleyebilir ve yürütülmesini denetleyebilirsiniz. Uygulamanız artık yürütmeyi durdurmuştur ve sizden bir eylem bekliyordur.
 
-4. **Hata Ayıkla** menüsünde **Windows**' u ve ardından **Izle**' yi ve ardından **Watch1**' ı tıklatın.
+4. **hata ayıkla** menüsünde **Windows** ve ardından **izle**' yi seçin ve **Watch1**' ye tıklayın.
 
-5. **Watch1** penceresinde boş bir satıra tıklayın. **Ad** sütununda, `textBox1.Text` (Visual Basic veya Visual C# kullanıyorsanız) veya `textBox1->Text` (C++ kullanıyorsanız) yazın, ardından ENTER tuşuna basın.
+5. **Watch1** penceresinde boş bir satıra tıklayın. **ad** sütununda, `textBox1.Text` (Visual Basic veya Visual C# kullanıyorsanız) veya `textBox1->Text` (C++ kullanıyorsanız) yazın, ardından enter tuşuna basın.
 
      **Watch1** penceresi, bu değişkenin değerini tırnak işaretleri halinde şöyle gösterir:
 

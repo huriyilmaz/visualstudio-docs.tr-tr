@@ -12,14 +12,15 @@ ms.assetid: 646a07e7-9d4f-4e21-95e3-3e403cdd4843
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ac1a15528783f21169427a67f47afcb2d64a81e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 13d3ff9ac477480aeb3cc4a27a03f2a6189a7752966824a9d0f80241c2daf5a7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149132"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121326436"
 ---
 # <a name="functiontype"></a>FunctionType
 Her benzersiz işlev imzası bir sembol tarafından tanımlanır `SymTagFunctionType` . Her parametre, etiketli bir sınıf alt sembolü olarak tanımlanır `SymTagFunctionArgType` .

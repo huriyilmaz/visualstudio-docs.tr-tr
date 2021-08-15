@@ -11,14 +11,15 @@ ms.assetid: 0636d8c3-625a-49fa-94b6-516f22b7e1bc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd14e85d279bd724dcfdf2cd9b71028ac5a4fd87
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b1ecefa0e9ee6299ef1b8e09a370398e6a9c263fab901a52f8d7aec45ca45013
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092078"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238911"
 ---
 # <a name="idebugexpressionevaluator"></a>IDebugExpressionEvaluator
 > [!IMPORTANT]
@@ -50,9 +51,9 @@ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugExpressionEvaluator` 
 |[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|Kayıt defteri kökünü ayarlar. Yan yana hata ayıklama için kullanılır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Tipik bir durumda, hata ayıklama altyapısı (DE), bir [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)çağrısının sonucu olarak ifade DEĞERLENDIRICI (ee) oluşturur. Ayrıca, kullanmak istediği EE 'ın dilini ve satıcısını bildiği için, kayıt defterinden EE 'ın CLSID değerini alır ( [hata ayıklama işlevi Için SDK yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) , `GetEEMetric` Bu almaya yardımcı olur).
+tipik bir durumda, hata ayıklama altyapısı (DE), bir [parsetext](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)çağrısının sonucu olarak ifade değerlendiricisi (EE) oluşturur. , kullanmak istediği EE dilini ve satıcısını bildiği için, bu, kayıt defterinden ( [hata ayıklama işlevi için SDK yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) , `GetEEMetric` bu almaya yardımcı olur) EE clsıd 'sini de alır.
 
-EE örneği oluşturulduktan sonra, ifadeyi ayrıştırmak ve bir [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesinde saklamak Için [ayrıştırılacak](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) de çağrılır. Daha sonra, bir [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) çağrısı ifadeyi değerlendirir.
+EE örneği oluşturulduktan sonra, ifadeyi ayrıştırmak ve bir [ıdebugparsedexpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesinde saklamak için [ayrıştırılacak](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) de çağrılır. Daha sonra, bir [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) çağrısı ifadeyi değerlendirir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: ee. h

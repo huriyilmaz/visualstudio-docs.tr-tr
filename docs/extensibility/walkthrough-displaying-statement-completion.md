@@ -10,33 +10,34 @@ ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 51281c261baf5744c1d3aa0903985a173ff240f2
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 3827c173c983ba75704ac076c63c64631957a5f73d050f9114d95f2c6f347b83
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217482"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121234791"
 ---
 # <a name="walkthrough-display-statement-completion"></a>İzlenecek yol: görüntüleme ifadesinin tamamlanması
 Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ardından bir tamamlanma oturumu tetikleyerek, dil tabanlı ifade tamamlamayı uygulayabilirsiniz. Bir dil hizmeti bağlamında deyimin tamamlanmasını tanımlayabilir, kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve ardından yalnızca bu tür için tamamlamayı görüntüleyebilirsiniz. Ya da, var olan bir içerik türü için tamamlamayı (örneğin, "düz metin") tetikleyebilirsiniz. Bu izlenecek yol, metin dosyalarının içerik türü olan "düz metin" içerik türü için deyimin tamamlanmasının nasıl tetikleneceğini gösterir. "Metin" içerik türü, kod ve XML dosyaları da dahil olmak üzere diğer tüm içerik türlerinin üst öğesi.
 
- Deyimin tamamlanması genellikle belirli karakterler yazılarak tetiklenir — Örneğin, "Using" gibi bir tanımlayıcının başlangıcını yazarak tetiklenir. Bir seçimi yürütmek için **boşluk çubuğu**, **sekme** veya **ENTER** tuşuna basılarak genellikle kapatılır. Tuş vuruşları ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim) ve arabirimi uygulayan bir işleyici sağlayıcısı için bir komut işleyicisi kullanarak, bir karakter yazarken tetiklenecek IntelliSense özelliklerini uygulayabilirsiniz <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Tamamlanma aşamasında yer alan tanımlayıcıların listesi olan tamamlama kaynağını oluşturmak için, <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> arabirimi ve tamamlanma kaynak sağlayıcısını ( <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> arabirim) uygulayın. Sağlayıcılar Managed Extensibility Framework (MEF) bileşen bölümleridir. Bunlar, kaynak ve denetleyici sınıflarını dışa ve hizmet ve aracıları içeri aktarmaktan sorumludur — Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> metin arabelleğinde gezinmeyi sağlayan ve <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> tamamlanma oturumunu tetikleyen olan.
+ Deyimin tamamlanması genellikle belirli karakterler yazılarak tetiklenir — Örneğin, "Using" gibi bir tanımlayıcının başlangıcını yazarak tetiklenir. Bir seçimi yürütmek için **boşluk çubuğu**, **sekme** veya **ENTER** tuşuna basılarak genellikle kapatılır. Tuş vuruşları ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim) ve arabirimi uygulayan bir işleyici sağlayıcısı için bir komut işleyicisi kullanarak, bir karakter yazarken tetiklenecek IntelliSense özelliklerini uygulayabilirsiniz <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Tamamlanma aşamasında yer alan tanımlayıcıların listesi olan tamamlama kaynağını oluşturmak için, <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> arabirimi ve tamamlanma kaynak sağlayıcısını ( <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider> arabirim) uygulayın. sağlayıcılar Managed Extensibility Framework (MEF) bileşen bölümleridir. Bunlar, kaynak ve denetleyici sınıflarını dışa ve hizmet ve aracıları içeri aktarmaktan sorumludur — Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> metin arabelleğinde gezinmeyi sağlayan ve <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> tamamlanma oturumunu tetikleyen olan.
 
  Bu izlenecek yol, sabit kodlanmış bir tanımlayıcı kümesi için nasıl ifade tamamlanmasının uygulanacağını gösterir. Tam uygulamalarda, dil hizmeti ve dil belgeleri bu içeriği sağlamaktan sorumludur.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-mef-project"></a>MEF projesi oluşturma
+## <a name="create-a-mef-project"></a>MEF Project oluşturma
 
 #### <a name="to-create-a-mef-project"></a>MEF projesi oluşturmak için
 
-1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `CompletionTest` .
+1. C# VSıX projesi oluşturun. ( **yeni Project** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **vsıx Project**' i seçin.) Çözümü adlandırın `CompletionTest` .
 
 2. Projeye bir düzenleyici sınıflandırıcı öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
@@ -83,7 +84,7 @@ Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ard
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/testcompletionsource.cs" id="Snippet4":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/testcompletionsource.vb" id="Snippet4":::
 
-6. <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A>Bağlam içinde sağlamak istediğiniz tamamlamaların bulunduğu bir tamamlanma kümesi ekleyerek yöntemini uygulayın. Her tamamlama kümesi bir tamamlama kümesi içerir <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> ve tamamlanma penceresinin sekmesine karşılık gelir. (Visual Basic projelerinde, tamamlama pencere sekmeleri **ortak** ve **hepsi** olarak adlandırılır.) `FindTokenSpanAtPosition` Yöntemi bir sonraki adımda tanımlanmıştır.
+6. <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession%2A>Bağlam içinde sağlamak istediğiniz tamamlamaların bulunduğu bir tamamlanma kümesi ekleyerek yöntemini uygulayın. Her tamamlama kümesi bir tamamlama kümesi içerir <xref:Microsoft.VisualStudio.Language.Intellisense.Completion> ve tamamlanma penceresinin sekmesine karşılık gelir. (Visual Basic projelerinde, tamamlama pencere sekmeleri **ortak** ve **hepsi** olarak adlandırılır.) `FindTokenSpanAtPosition`Yöntemi bir sonraki adımda tanımlanmıştır.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/testcompletionsource.cs" id="Snippet5":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/testcompletionsource.vb" id="Snippet5":::
@@ -119,7 +120,7 @@ Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ard
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/testcompletionsource.vb" id="Snippet10":::
 
 ## <a name="implement-the-completion-command-handler-provider"></a>Tamamlama komut işleyicisi sağlayıcısını uygulama
- Tamamlama komut işleyicisi sağlayıcısı <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> , bir metin görünümü oluşturma olayını dinleyen ve görünümü bir ile dönüştürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> — Bu, komutun Visual Studio Kabuğu komut zinciri ' ne ' a eklenmesini sağlar <xref:Microsoft.VisualStudio.Text.Editor.ITextView> . Bu sınıf bir MEF dışarı aktarması olduğundan, komut işleyicisinin kendisi tarafından istenen Hizmetleri içeri aktarmak için de kullanabilirsiniz.
+ tamamlama komut işleyicisi sağlayıcısı <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> , bir metin görünümü oluşturma olayını dinleyen ve görünümü bir ile dönüştürür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> — bu, komutun Visual Studio kabuğun komut zincirine eklenmesine izin veren bir ' dan türetilir <xref:Microsoft.VisualStudio.Text.Editor.ITextView> . Bu sınıf bir MEF dışarı aktarması olduğundan, komut işleyicisinin kendisi tarafından istenen Hizmetleri içeri aktarmak için de kullanabilirsiniz.
 
 #### <a name="to-implement-the-completion-command-handler-provider"></a>Tamamlama komut işleyicisi sağlayıcısını uygulamak için
 
@@ -135,7 +136,7 @@ Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ard
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/testcompletioncommandhandler.cs" id="Snippet12":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/testcompletioncommandhandler.vb" id="Snippet12":::
 
-4. <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> Standart Visual Studio Hizmetleri 'ne erişim sağlayan bir, bir, ve a 'ya dönüştürmeyi sağlayan öğesini içe aktarın.
+4. <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.Text.Editor.ITextView> <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> standart Visual Studio hizmetlerine erişim sağlayan bir, bir, ve a 'ya dönüştürmeyi sağlayan öğesini içe aktarın.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/testcompletioncommandhandler.cs" id="Snippet13":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/testcompletioncommandhandler.vb" id="Snippet13":::
@@ -200,7 +201,7 @@ Tamamlanmasını sağlamak istediğiniz tanımlayıcıları tanımlayarak ve ard
 
 1. Çözümü derleyin.
 
-2. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği başlatılır.
+2. bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio ikinci bir örneği başlatılır.
 
 3. Bir metin dosyası oluşturun ve "Ekle" sözcüğünü içeren bir metin yazın.
 

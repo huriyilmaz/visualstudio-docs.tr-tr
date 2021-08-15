@@ -13,14 +13,15 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b1fe1d75673dc47f423cf398118230cd1530def0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be2657c94d49c73d245e7bf8bbb59e3b0b018ba84d942f6144b5e0360f968d5e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866235"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121327766"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir veri kümesi oluşturma
 
@@ -28,37 +29,37 @@ Bu izlenecek yolda, **veri kümesi Tasarımcısı** kullanarak bir veri kümesi 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
+bu izlenecek yol, SQL Server Express localdb ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. Visual Studio Yükleyicisi, SQL Server Express LocalDB, **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yüklenebilir.
+1. SQL Server Express localdb yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio Yükleyicisi** aracılığıyla yükleyin. Visual Studio Yükleyicisi, SQL Server Express localdb, **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yüklenebilir.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+    1. Visual Studio, **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
+    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **yürüt** düğmesini seçin.
 
        Kısa bir süre sonra sorgu yürütmeyi tamamlar ve Northwind veritabanı oluşturulur.
 
-## <a name="create-a-new-windows-forms-application-project"></a>Yeni bir Windows Forms uygulama projesi oluşturma
+## <a name="create-a-new-windows-forms-application-project"></a>yeni bir Windows Forms uygulaması oluşturun Project
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. Visual Studio, **dosya** menüsünde **yeni**  >  **Project**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
+2. sol bölmedeki **Visual C#** ' ı veya **Visual Basic** genişletin ve sonra **Windows masaüstü**' nü seçin.
 
-3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
+3. orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
 4. Projeyi **Datasetdesignerwalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-     Visual Studio, projeyi **Çözüm Gezgini** ekler ve tasarımcıda yeni bir form görüntüler.
+     Visual Studio projeyi **Çözüm Gezgini** ekler ve tasarımcıda yeni bir form görüntüler.
 
 ## <a name="add-a-new-dataset-to-the-application"></a>Uygulamaya yeni bir veri kümesi ekleme
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Project** menüsünde **yeni öğe ekle**' yi seçin.
 
      **Yeni Öğe Ekle** iletişim kutusu görünür.
 
@@ -66,7 +67,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 3. Veri kümesini **NorthwindDataSet** olarak adlandırın ve ardından **Ekle**' yi seçin.
 
-     Visual Studio, projeye **NorthwindDataSet. xsd** adlı bir dosya ekler ve **veri kümesi Tasarımcısı** açar.
+     Visual Studio, projeye **NorthwindDataset. xsd** adlı bir dosya ekler ve **Veri Kümesi Tasarımcısı** açar.
 
 ## <a name="create-a-data-connection-in-server-explorer"></a>Sunucu Gezgini bir veri bağlantısı oluşturma
 
@@ -104,7 +105,7 @@ Bu bölümde, veri kümesine nasıl tablo ekleneceği açıklanmaktadır.
 
 - Veri kümesini kaydedin.
 
-- **Veri kaynakları** penceresinde öğeleri seçin ve bunları bir form üzerine sürükleyin. Daha fazla bilgi için bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).
+- **Veri kaynakları** penceresinde öğeleri seçin ve bunları bir form üzerine sürükleyin. daha fazla bilgi için bkz. [Visual Studio verileri Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).
 
 - TableAdapters 'e daha fazla sorgu ekleyin.
 

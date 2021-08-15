@@ -1,6 +1,6 @@
 ---
-description: Parametre sayısı verilen tür parametrelerini alır.
-title: 'Idebuggenericfielddefinition:: GetFormalTypeParams | Microsoft Docs'
+description: Parametre sayısına göre tür parametrelerini alın.
+title: IDebugGenericFieldDefinition::GetFormalTypeParams | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: cadbd6a1-bc7c-4aff-8777-5396b7a23c3e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3aba284bab3299bf6ef300f9493c20e9c0d230ee
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: dcfc5d9d675363c34eeaf8554e3a04182de803b2623261ca961a5ac7ada8c9cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063454"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238859"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
-Parametre sayısı verilen tür parametrelerini alır.
+Parametre sayısına göre tür parametrelerini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +46,19 @@ int GetFormalTypeParams(
 
 ## <a name="parameters"></a>Parametreler
 `cParams`\
-'ndaki Parametre sayısı.
+[in] Parametre sayısı.
 
 `ppParams`\
-dışı Parametre türü dizisi.
+[out] Tür parametreleri dizisi.
 
 `pcParams`\
-[in, out] Dizideki parametre sayısı `ppParams` .
+[in, out] Dizide parametre `ppParams` sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Tür parametrelerini soldan sağa doğru sırayla döndürün. Örneğin, sözlük \<K,V> IDebugFormalGenericParameters {K, V} döndürür.
+ Tür parametrelerini soldan sağa doğru sırayla iade etmek. Örneğin, Sözlük \<K,V> IDebugFormalGenericParameters {K,V} döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

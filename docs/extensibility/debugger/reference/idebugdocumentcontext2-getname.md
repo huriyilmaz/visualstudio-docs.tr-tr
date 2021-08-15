@@ -11,17 +11,18 @@ ms.assetid: 546c5b2e-f166-4edb-9e61-57d797ca98a1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 96f0130b09a98c4064f53337aaa2e54ad7ed887b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9a5318276276afd9bc6939a44cbed876447fbe3de26625e252c2fdfffde42d43
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066613"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238963"
 ---
 # <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
 Bu belge bağlamını içeren belgenin görüntülenebilen adını alır.

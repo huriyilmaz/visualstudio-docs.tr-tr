@@ -1,5 +1,5 @@
 ---
-description: . Exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.
+description: .exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.
 title: 'Ialoadcallback:: NotifyDebugDir | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: bd04e2f6-0dbf-4742-a556-96f2cd99aa19
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ed83b79dea8f488be79a2161968876c9aa2a9a11
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 1d7db4245a96ac77327e8251d1c3df312819a2423b05108e66610022f2c83065
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148285"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121326020"
 ---
 # <a name="idialoadcallbacknotifydebugdir"></a>IDiaLoadCallback::NotifyDebugDir
-. Exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.
+.exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.
 
 ## <a name="syntax"></a>Sözdizimi
 

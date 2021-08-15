@@ -26,14 +26,15 @@ ms.assetid: 63f2742e-2031-48a8-9773-d9b547c62230
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b7b77afecaaadd65e203bda52dfc9cb92bef52ff
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 20cb7583aabf36ddb0db0a4dd0dcedcb886569ab3016036e7078cdd0c70f51b4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387716"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121311589"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme
 Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
@@ -42,11 +43,11 @@ Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla kar�
 
 - [Hata: Site IP Adresi Kullanıyor](../debugger/error-site-uses-ip-address.md)
 
-- [Hata: IIS Yönetici Hizmeti Yanıt Vermey olduğundan Bir Güvenlik Denetimi Başarısız Oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
+- [Hata: IIS Yönetici Hizmeti Yanıt Vermeyiş nedeniyle güvenlik denetimi başarısız oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
 
 - [Hata: ASP.NET Yüklü Değil](../debugger/error-aspnet-not-installed.md)
 
-- [Hata: Hata Ayıklama Başarısız Oldu çünkü Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmedi](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)
+- [Hata: Tümleşik Kimlik Doğrulaması Windows Hata Ayıklama Başarısız Oldu](../debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md)
 
 - [Hata: Web sunucusu doğru yapılandırılmamış](../debugger/error-the-web-server-is-not-configured-correctly.md)
 

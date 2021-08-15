@@ -6,35 +6,35 @@ manager: cabuschl
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
 ms.date: 03/21/2021
 ms.topic: how-to
-description: Yöneticilerin yönetim portalında bireysel aboneleri veya grupları nasıl bulabileceğinizi öğrenin.
-ms.openlocfilehash: df94b32dfcc5e2672282c0d18859cba42b490437
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+description: Yöneticilerin Yönetim Portalı'nde tek tek aboneleri veya grupları nasıl bularak bulunalarını öğrenin.
+ms.openlocfilehash: a720eacd3d30965d6996ff372518f9bf99af67088cb6e6593685daa96ee17849
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776694"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121241557"
 ---
-# <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde aboneleri arama ve filtreleme
-Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanızı sağlar. Abone listesini ad, e-posta adresi, abonelik düzeyi ve diğer bilgilere göre filtreleyebilirsiniz.
+# <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Aboneliklerde aboneleri arama Visual Studio filtreleme
+Abonelikler Visual Studio Portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanıza olanak sağlar. Abone listesini ad, e-posta adresi, abonelik düzeyi ve diğer bilgilere göre filtre edebilirsiniz.
 
 ## <a name="to-filter-the-subscriber-list"></a>Abone listesini filtrelemek için
-1. Belirli bir abone grubunu aramak için **filtre** sekmesini seçin.
+1. Belirli bir abone grubunu aramak için Filtre **sekmesini** seçin.
    > [!div class="mx-imgBorder"]
-   > ![Abone listesi aramak için filtre ' yi seçin](_img/search-filter/filter-list.png "Görüntülenecek abonelikleri sınırlamak için ölçüt girmek üzere filtre ' ye tıklayın.")
+   > ![Abone listesinde arama yapmak için Filtre'yi seçin](_img/search-filter/filter-list.png "Görüntülenen abonelikleri sınırlama ölçütlerini girmek için Filtre'ye tıklayın.")
 
-2. Aramanızın temeli olarak kullanmak istediğiniz ölçütleri girin ve sonra yeniden **Filtrele** ' yi seçin.
+2. Aramanıza temel olarak kullanmak istediğiniz ölçütleri girin ve filtrele'yi **yeniden** seçin.
    > [!div class="mx-imgBorder"]
-   > ![Abone verilerini filtrelemek için kullanılabilir alanları kullanın](media/filter-subscribers.png "Arama sonuçlarını sınırlandırmak için çeşitli alanlara değer girin. Örneğin, @contoso. com e-posta adreslerine sahip tüm abonelerin bir listesini döndürmek için ' @contoso. com ' araması yapabilirsiniz.")
+   > ![Abone verilerini filtrelemek için kullanılabilir alanları kullanma](media/filter-subscribers.png "Arama sonuçlarını sınırlamak için çeşitli alanlara değer girin. Örneğin, @contoso.com e-posta adreslerine sahip tüm abonelerin listesini geri almak için '@contoso.com' araması contoso.com ekleyebilirsiniz.")
 
-   Abone listeniz, seçtiğiniz ölçütlere göre eşleşir.  Her bir alan için sıralama düzenini değiştirmek üzere filtrelenmiş sonuçların başlıklarına tıklayabilirsiniz.  
+   Ardından abone listeniz seçtiğiniz ölçütle eş görünür.  Filtrelenmiş sonuçların başlıklarına tıklar ve her alanın sıralama sıralamalarını değiştirebilirsiniz.  
    > [!NOTE]
-   > **Ad** alanı adı ilk ada göre sıralanır.
+   > Ad **alanı** ada göre sıralanmış.
 
-   **Filtre simgesinin** vurgulandığını ve bir filtrenin uygulandığını unutmayın.  **Açık bir filtre** seçeneği de görüntülenir. Bu örnekte, @outlook.com e-posta adreslerine sahip olanları bulmak için abonelerin listesini filtreliyoruz. 
+   Filtre **simgesinin vurgulanmış** ve filtre uygulandığını belirten bir uyarı görüntülenir.  Filtreyi **temizle** seçeneği de görüntülenir. Bu örnekte, e-posta adresleri olan aboneleri bulmak için abone listemizi @outlook.com filtreledik. 
 
-3. Filtreyi temizlemek ve filtrelenmemiş listeyi geri yüklemek için sağ üst köşedeki **Filtreyi temizle** sekmesine tıklayın. 
+3. Filtreyi temizlemek ve filtrelenmemiş listeyi geri yüklemek için sağ **üstte yer alan Filtreyi** temizle sekmesine tıklayın. 
    > [!div class="mx-imgBorder"]
-   > ![Abone listesinden filtreyi temizle](_img/search-filter/clear-filter.png "Filtreyi kaldırmak için Filtreyi Temizle ' ye tıklayın ve tüm atanan aboneliklerinizi görüntülemeyi sürdürebilirsiniz.")
+   > ![Abone listesinden filtreyi temizleme](_img/search-filter/clear-filter.png "Filtreyi kaldırmak ve atanan aboneliklerinizi görüntülemeye devam etmek için Filtreyi Temizle'ye tıklayın.")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -43,5 +43,5 @@ Visual Studio abonelikleri yönetim portalı, çeşitli ölçütlere göre belir
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Bir abonenin nasıl bulunacağını öğrenmiş olduğunuza göre, aboneliğini nasıl [düzenleyeceğinizi](edit-license.md) öğrenin.
-- Yönetim portalını kullanma konusunda yardıma mı ihtiyacınız var?  [Visual Studio yönetim ve abonelikler desteğiyle](https://aka.ms/vsadminhelp)iletişim kurun.
+- Artık bir aboneyi nasıl bulasınız, şimdi de aboneliğini [düzenlemeyi](edit-license.md) öğrenin.
+- Yönetim Portalı'nın kullanımıyla ilgili yardıma mı ihtiyacınız var?  Yönetim [Visual Studio Abonelikler Desteği'ne başvurun.](https://aka.ms/vsadminhelp)

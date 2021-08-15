@@ -1,6 +1,6 @@
 ---
-title: Visual Studio için UX Essentials | Microsoft Docs
-description: Visual Studio için geliştirirsiniz ve ekran çözünürlüğü hakkında bilgi de dahil olmak üzere, bu kullanıcı deneyimi için en iyi uygulamaları gözden geçirin.
+title: Visual Studio için UX temelleri | Microsoft Docs
+description: ekran çözünürlüğü hakkında bilgi de dahil olmak üzere Visual Studio için geliştirdiğiniz yeni özellikler için bu kullanıcı deneyimi en iyi yöntemlerini gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: reference
@@ -8,14 +8,15 @@ ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 74b27e87e6f16130573ef6671286501f77e44352
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 569ab6c839c9944550b351152abe86c0f7a6722dab3bd3b743adbaf87139d695
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899426"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121259857"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio İçin UX Temel Bileşenleri
 
@@ -29,7 +30,7 @@ ms.locfileid: "112899426"
 
 - Varsa paylaşılan komutları ve denetimleri kullanın.
 
-- Visual Studio hiyerarşisini ve nasıl bağlam sağladığını ve Kullanıcı arabirimini nasıl yönlendiren anlayın.
+- Visual Studio hiyerarşisini anlayın ve kullanıcı arabirimini nasıl bağlam ve sürücü olarak belirler.
 
 ### <a name="2-use-the-environment-service-for-fonts-and-colors"></a>2. yazı tipi ve renkler için ortam hizmetini kullanın.
 
@@ -39,7 +40,7 @@ ms.locfileid: "112899426"
 
 ### <a name="3-make-all-imagery-consistent-with-the-new-vs-style"></a>3. tüm Imagery 'leri yeni VS stiliyle tutarlı yapın.
 
-- Simgeler, Glifler ve diğer grafikler için Visual Studio tasarım ilkelerini izleyin.
+- simgeler, glifler ve diğer grafikler için Visual Studio tasarım ilkelerini izleyin.
 
 - Metni grafik öğelerine yerleştirmeyin.
 
@@ -57,17 +58,17 @@ ms.locfileid: "112899426"
 
 ### <a name="minimum-resolution"></a>En düşük çözünürlük
 
-- Visual Studio 2015 için en düşük çözünürlük **1280x720**' dir. Bu, en iyi kullanıcı deneyimi olmasa da Visual Studio 'Nun bu çözünürlükte kullanılması *mümkün* olduğu anlamına gelir. Tüm yönlerinin 1280x720 ' den daha düşük çözünürlükte kullanılabilir olacağını garanti etmez.
+- 2015 Visual Studio için en düşük çözünürlük **1280x720**' dir. bu, en iyi kullanıcı deneyimi olmasa da Visual Studio bu çözünürlükte kullanmak *mümkün* olduğu anlamına gelir. Tüm yönlerinin 1280x720 ' den daha düşük çözünürlükte kullanılabilir olacağını garanti etmez.
 
-- Visual Studio için hedef çözümleme, **1366x768**' dir. Bu, *iyi* bir kullanıcı deneyimi taahhüdünü taahhüt eden en düşük çözünürlüğünüz.
+- Visual Studio hedef çözünürlüğü **1366x768**' dir. Bu, *iyi* bir kullanıcı deneyimi taahhüdünü taahhüt eden en düşük çözünürlüğünüz.
 
 - İlk iletişim kutusu yüksekliği **700 pikselden daha küçük** olmalıdır, bu nedenle IDE çerçevesinin en düşük çözünürlüğüne 96 DPI ile sığar.
 
 ### <a name="high-density-displays"></a>Yüksek yoğunluklu ekranlar
- Visual Studio 'daki Kullanıcı arabirimi, Windows 'un şu kutudan birini desteklediği tüm DPı ölçeklendirme faktörlerinde iyi çalışmalıdır: %150, 200% ve %250.
+ Visual Studio içindeki kullanıcı arabirimi, Windows şu kutudan birini desteklediği tüm dpı ölçeklendirme faktörlerinde iyi çalışmalıdır: %150, 200% ve %250.
 
 ## <a name="anti-patterns"></a>Desenler
- Visual Studio, kılavuzlarımızı ve en iyi uygulamalarınızı izleyen birçok kullanıcı arabirimine örnek içerir. İş açısından tutarlı olması için geliştiriciler genellikle ürün Kullanıcı arabirimi tasarım desenlerinden, oluşturma biçimlerinize benzer. Bu, Kullanıcı etkileşimi ve görsel tasarımda tutarlılık sağlamamıza yardımcı olan iyi bir yaklaşım olsa da, zamanlama kısıtlamaları veya hata önceliklendirmesi nedeniyle yönergelerimizi karşılamayan bazı ayrıntılarla birlikte bazı özellikler sunarız. Bu durumlarda, Visual Studio ortamında kötü veya tutarsız Kullanıcı arabirimine sahip olmaları nedeniyle ekiplerin bu "koruma" düzenlerini "kopyalamasını istemedik.
+ Visual Studio, kılavuzlarımızı ve en iyi uygulamalarınızı izleyen birçok kullanıcı arabirimine örnek içerir. İş açısından tutarlı olması için geliştiriciler genellikle ürün Kullanıcı arabirimi tasarım desenlerinden, oluşturma biçimlerinize benzer. Bu, Kullanıcı etkileşimi ve görsel tasarımda tutarlılık sağlamamıza yardımcı olan iyi bir yaklaşım olsa da, zamanlama kısıtlamaları veya hata önceliklendirmesi nedeniyle yönergelerimizi karşılamayan bazı ayrıntılarla birlikte bazı özellikler sunarız. bu durumlarda, Visual Studio ortamında kötü veya tutarsız kullanıcı arabirimine sahip olmaları nedeniyle ekiplerin bu "koruma" düzenlerini "kopyalamasını istemedik.
 
 ### <a name="required-fieldssettings-shown-in-error-state-by-default"></a>Varsayılan olarak hata durumunda gösterilen gerekli alanlar/ayarlar
 
@@ -85,7 +86,7 @@ ms.locfileid: "112899426"
 
  Bu durumda, uyarı için kullanılan simgenin "" simgesi içerdiği için ek bir sorun vardır &times; , bu nedenle ortak kaldırma simgesi bunun yanında kullanılamaz. Sonuç olarak, Kullanıcı arabirimi daha fazla clunky denetimi olan bir Kaldır düğmesini kullanır.
 
- ![Kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak bir Visual Studio Anti-model ' dir.](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-model")<br />Kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak bir Visual Studio Anti-model ' dir.
+ ![kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak Visual Studio bir anti-öründir.](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-model")<br />kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak Visual Studio bir anti-öründir.
 
 #### <a name="alternatives"></a>Alternatifler
 
@@ -106,13 +107,13 @@ Bu soruna yönelik daha iyi bir çözüm şunlardır:
  Ekip, VS UI içindeki çeşitli konumlara video bağlantıları ekleyerek &times; , UX tarafından belirtilen "" Kapat düğmesinin ve araç ipucu açıklamasına ilişkin ortak düzende karar vermiştir ve bunun yerine bir açılan ve "bir daha gösterme" bağlantısını uyguladık.
 
 #### <a name="example-video-links-in-team-explorer"></a>Örnek: Takım Gezgini video bağlantıları
-Yok etmeden önce kullanıcının açıklayıcı metni okumasını zorlamak, Visual Studio içindeki bir anti-model değildir. Doğru tasarlanmış, video bağlantıları, üzerine gelme hakkında ek bilgiler içeren bir araç ipucu görüntülemelidir ve " &times; " iletisinin daha fazla etkileşime gerek duymadan bu iletiyi kapatması gerekir.
+Eksik Kullanıcı ARABIRIMINDEN önce açıklayıcı metin okumaya zorlamak, Visual Studio içinde bir anti-örünmedir. Doğru tasarlanmış, video bağlantıları, üzerine gelme hakkında ek bilgiler içeren bir araç ipucu görüntülemelidir ve " &times; " iletisinin daha fazla etkileşime gerek duymadan bu iletiyi kapatması gerekir.
 
  ![Açıklayıcı metin anti&#45;deseninin yanlış &#45;](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />Hatalı video bağlantısı kalıbı
 
 Basit bir kapatma düğmesi (bir tıklama) yerine, Kullanıcı, video bağlantılarının göründüğü her yerde Kullanıcı ARABIRIMINI kapatmak için iki tıklama kullanmaya zorlanır.
 
-Bu durumun doğru tasarımı, Internet Explorer, Office ve Visual Studio 'da ortak olan kalıbı takip etmek içindir: üzerine gelindiğinde, Kullanıcı araç ipucu açıklamasını görebilir ve bir tıklama Kullanıcı ARABIRIMINI gizler.
+bu durumun doğru tasarımı, ınternet Explorer, Office ve Visual Studio yaygın olarak kullanılan kalıbı izleyebildir: üzerine gelindiğinde, kullanıcı araç ipucu açıklamasını görebilir ve bir tıklama kullanıcı arabirimini gizler.
 
  ![Açıklayıcı metin anti&#45;deseninin &#45; doğru](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-model-doğru")<br />Doğru video bağlantısı kalıbı
 
@@ -128,7 +129,7 @@ Bu durumun doğru tasarımı, Internet Explorer, Office ve Visual Studio 'da ort
 
 **Şekil C**' de gösterilen doğru yaklaşımda, ayar bir dizi komuta bağlıdır. Ayarlanmış genel ayar yoktur ve yalnızca dört komut arasında geçiş yapıyoruz. Bu, araç çubuğundaki komutların kabul edilebilir olduğu tek durumdur.
 
-![Şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-model-FigureC")<br />Şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı
+![şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-model-FigureC")<br />şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı
 
 ### <a name="control-anti-patterns"></a>Denetim önleme desenleri
  Bazı koruma desenleri, bir denetimin veya denetim grubunun yalnızca yanlış kullanımı veya sunumudur.
@@ -137,15 +138,15 @@ Bu durumun doğru tasarımı, Internet Explorer, Office ve Visual Studio 'da ort
  Metnin altını çizme yalnızca köprüler için kullanılmalıdır.
 
  **Hatalı**\
- ![Köprü olmayan altı çizili metin bir Visual Studio Anti-model değildir.](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />Köprü olmayan altı çizili metin bir Visual Studio Anti-model değildir.
+ ![köprü olmayan altı çizili metin, Visual Studio bir anti-model değildir.](../../extensibility/ux-guidelines/media/0102-g_grouplabelincorrect.png "0102-g_GroupLabelIncorrect")<br />köprü olmayan altı çizili metin, Visual Studio bir anti-model değildir.
 
  **İyi**\
  ![Doğru stillendirilmiş, köprü dışı metin, ortam yazı tipinde donatılamayan şekilde görünür.](../../extensibility/ux-guidelines/media/0102-h_grouplabelcorrect.png "0102-h_GroupLabelCorrect")<br />Doğru stillendirilmiş, köprü dışı metin, ortam yazı tipinde donatılamayan şekilde görünür.
 
 #### <a name="clicking-on-a-check-box-results-in-a-pop-up-dialog"></a>Bir onay kutusuna tıkladığınızda açılan iletişim kutusu oluşur
- "Windows Azure uygulaması yayımlama" sihirbazının "tüm roller için uzak masaüstünü etkinleştir" onay kutusunun tıklatılması, hemen bir Visual Studio Anti-of açılır iletişim kutusu görüntüler. Ayrıca, onay kutusu alanı, seçildikten sonra bir onay kutusuyla, başka bir etkileşim Anti-deseninin doldurulmaz.
+ "Azure uygulaması Windows yayımlama" sihirbazı 'ndaki "tüm roller için uzak masaüstünü etkinleştir" onay kutusunun tıklanması, hemen bir açılan iletişim kutusu olan Visual Studio bir anti-of-up açılır iletişim kutusu açar. Ayrıca, onay kutusu alanı, seçildikten sonra bir onay kutusuyla, başka bir etkileşim Anti-deseninin doldurulmaz.
 
- ![Onay kutusuna tıklandıktan sonra bir iletişim kutusunun getirilmesi bir Visual Studio Anti-model ' dir.](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />Onay kutusuna tıklandıktan sonra bir iletişim kutusunun getirilmesi bir Visual Studio Anti-model ' dir.
+ ![onay kutusuna tıklandıktan sonra bir iletişim kutusu getirmek Visual Studio bir anti-örünmedir.](../../extensibility/ux-guidelines/media/0102-i_checkboxpopup.png "0102-i_CheckboxPopup")<br />onay kutusuna tıklandıktan sonra bir iletişim kutusu getirmek Visual Studio bir anti-örünmedir.
 
 ### <a name="hyperlink-anti-patterns"></a>Köprü Netleştirme desenleri
  Aşağıdaki örnek iki tane Anti-deseni içerir:
@@ -154,13 +155,13 @@ Bu durumun doğru tasarımı, Internet Explorer, Office ve Visual Studio 'da ort
 
 2. "Daha fazla bilgi", kavramsal konunun bağlantısı için uygun metin değildir. Kullanıcının amacı daha fazla bilgi almak için tercih ettikleri sonuçları anlamaktır.
 
-   ![Renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanılarak Visual Studio Anti-desenler bulunur.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanılarak Visual Studio Anti-desenler bulunur.
+   ![renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanmak Visual Studio desenler için kullanılır.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanmak Visual Studio desenler için kullanılır.
 
-**Daha iyi çözüm:** Kullanıcının bağlantıya tıklayarak istediği soruyu ortaya çıkaran. Örneğin:
+**Daha iyi çözüm:** Kullanıcının bağlantıya tıklayarak istediği soruyu ortaya çıkaran. Örnek:
 
 - Windows Azure hizmetleri nasıl çalışır?
 
-- Bir Windows Azure Mobile Services projesi ne zaman gerekir?
+- Windows Azure Mobile Services projesi ne zaman gerekir?
 
 #### <a name="using-click-here-for-links"></a>Bağlantılar için "buraya tıklayın" kullanma
  Köprüler kendine açıklayıcı olmalıdır. "Buraya tıklayın" veya benzer çeşitçlikleri kullanmak için bir kenar modelidir.

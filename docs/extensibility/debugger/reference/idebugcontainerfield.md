@@ -11,14 +11,15 @@ ms.assetid: a8bbe061-c382-4fe9-a193-3f7d12216041
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb3a50db80dc2acb075d1c6ec1fe585000468285
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d0345582e0429af045f085833be8b41158ca7ac12e3a5b1dda1721ed5b72d270
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077908"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239054"
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
 Bu arabirim, diğer semboller veya türler için kapsayıcı olan bir simgeyi veya türü temsil eder.
@@ -29,28 +30,28 @@ Bu arabirim, diğer semboller veya türler için kapsayıcı olan bir simgeyi ve
 IDebugContainerField : IDebugField
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bir sembol sağlayıcısı, bu arabirimi [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini uygulayan aynı nesne üzerinde uygular. Bu arabirim Ayrıca kapsayıcıları temsil eden tüm arabirimler için temel sınıftır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Sembol sağlayıcısı bu arabirimi [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini uygulayan aynı nesnede kullanır. Bu arabirim ayrıca kapsayıcıları temsil eden tüm arabirimler için temel sınıftır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Birçok arabirimde birçok yöntem bu arabirimi döndürür. Bu, tüm kapsayıcılar için bir temel sınıf olduğundan, bu arabirimden [QueryInterface](/cpp/atl/queryinterface)kullanarak daha özelleştirilmiş arabirimler elde edilebilir. Bu tür arabirimler [ıdebuggarrayfield](../../../extensibility/debugger/reference/idebugarrayfield.md), [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md), [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)ve [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)içerir.
+ Birçok arabirimde birçok yöntem bu arabirimi geri döner. Bu tüm kapsayıcılar için temel bir sınıf olduğundan, QueryInterface kullanılarak bu arabirimden daha özel [arabirimler elde edilir.](/cpp/atl/queryinterface) Bu arabirimler [IDebugArrayField,](../../../extensibility/debugger/reference/idebugarrayfield.md) [IDebugClassField,](../../../extensibility/debugger/reference/idebugclassfield.md) [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)ve [IDebugPropertyField arabirimlerini içerir.](../../../extensibility/debugger/reference/idebugpropertyfield.md)
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Bu arabirim, [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimindeki yöntemlere ek olarak aşağıdaki yöntemi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ [Bu arabirim, IDebugField arabiriminde](../../../extensibility/debugger/reference/idebugfield.md) yöntemlerine ek olarak aşağıdaki yöntemi de kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)|Kapsayıcının alanları için bir Numaralandırıcı oluşturur.|
+|[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)|Kapsayıcının alanları için bir numaralayıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
- Diziler (değişkenler için kapsayıcılar), sınıflar (yöntemlere ve değişkenlere yönelik kapsayıcılar) ve yöntemleri (parametreler ve yerel değişkenler için kapsayıcılar), kapsayıcılara örnektir.
+ Diziler (değişkenler için kapsayıcılar), sınıflar (yöntemler ve değişkenler için kapsayıcılar) ve yöntemler (parametreler ve yerel değişkenler için kapsayıcılar) kapsayıcılara örnek olarak verilmiştir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst bilgi: sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

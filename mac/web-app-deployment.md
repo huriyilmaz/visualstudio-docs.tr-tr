@@ -6,12 +6,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 01/25/2019
 ms.assetid: d746292d-0570-424a-bf43-e16ab85bbf0d
-ms.openlocfilehash: 98169016921df5397fafb5a77c214357c18a0ae8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ed345d10c0888e305a9402ad4c5e2985f0f6be368abfd38a6f6fead71db422cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "70107978"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121241729"
 ---
 # <a name="aspnet-core-web-app-deployment"></a>ASP.NET Core Web uygulaması dağıtımı
 
@@ -19,8 +19,8 @@ Web uygulamaları geliştirme konusunda önemli bir adım yayımlanıyor (dağı
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
-Mac için Visual Studio kullanarak, Web uygulamanızı doğrudan Azure App Service yayınlayabilirsiniz. ASP.NET Core Web uygulamanızı yayımlamak için Azure App Service [Azure App Service Yayımla](publish-app-svc.md) makalesine başvurun.
+Mac için Visual Studio kullanarak, web uygulamanızı doğrudan Azure App Service yayınlayabilirsiniz. ASP.NET Core web uygulamanızı yayımlamak için Azure App Service [Azure App Service yayımla](publish-app-svc.md) makalesine başvurun.
 
 ## <a name="publish-to-folder"></a>Klasöre Yayımlama
 
-Ayrıca, ASP.NET Core Web uygulamalarınızı bir klasöre yayımlayabilirsiniz. Web uygulamanızı bir klasöre nasıl yayımlayacağınız hakkında daha fazla bilgi edinmek için, [klasöre yayımlama](publish-folder.md)bölümüne bakın.
+ayrıca, ASP.NET Core web uygulamalarınızı bir klasöre yayımlayabilirsiniz. Web uygulamanızı bir klasöre nasıl yayımlayacağınız hakkında daha fazla bilgi edinmek için, [klasöre yayımlama](publish-folder.md)bölümüne bakın.

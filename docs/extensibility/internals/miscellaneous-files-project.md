@@ -1,6 +1,6 @@
 ---
-title: Çeşitli dosyalar projesi | Microsoft Docs
-description: Bir Visual Studio projesindeki dosyaları açmak için kullanılabilecek iki Düzenleyici türü hakkında bilgi edinin ve hangi düzenleyiciyi kullanacağınızı belirleyen proje rolü.
+title: Çeşitli dosyalar Project | Microsoft Docs
+description: Visual Studio projesindeki dosyaları açmak için kullanılabilecek iki düzenleyici türü hakkında bilgi edinin ve hangi düzenleyiciyi kullanacağınızı belirleyen proje rolü.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,14 +13,15 @@ ms.assetid: 93a278a8-d4f4-400b-8945-4f1b0a2b5bac
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b79eaaeaf94954e2d3dc1bd855b56bee5b8bdae4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2a3c372e80b9c0843d63c1ed6e674cf9cc5c1bb6d1d68bec4f6fa1e06b4476dc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063285"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121337896"
 ---
 # <a name="miscellaneous-files-project"></a>Çeşitli Dosyalar Projesi
 Bir kullanıcı proje öğelerini açtığında, IDE çeşitli dosyalar projesine bir çözümdeki projelerin üyesi olmayan tüm öğeleri atar.
@@ -35,7 +36,7 @@ Bir kullanıcı proje öğelerini açtığında, IDE çeşitli dosyalar projesin
 
  Bu özel proje, bir dosyanın bir proje bağlamı dışında açılmasını sağlar. Yöntemin işlenmesi sırasında <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> , Miscellaneous Files projesi her zaman çok düşük bir önceliğe sahip olarak yanıt verir. Bu nedenle, çeşitli dosyalar projesi her zaman dosyaları açan daha yüksek öncelikli bir projeye üretir.
 
- Çeşitli dosyalar projesi, kullanıcının bunu **Yeni proje** iletişim kutusuyla açıkça oluşturmasını gerektirmez. Ayrıca, Miscellaneous Files projesi Proje üyelerinin bir listesini kalıcı olarak yönetmez. Her Kullanıcı için en son kullanılan dosyaların listesini kaydetmek için isteğe bağlı bir özellik kullanır.
+ çeşitli dosyalar projesi, kullanıcının **yeni Project** iletişim kutusuyla açıkça oluşturmasını gerektirmez. Ayrıca, Miscellaneous Files projesi Proje üyelerinin bir listesini kalıcı olarak yönetmez. Her Kullanıcı için en son kullanılan dosyaların listesini kaydetmek için isteğe bağlı bir özellik kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>

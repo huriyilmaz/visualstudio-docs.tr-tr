@@ -11,14 +11,15 @@ ms.assetid: edcd7891-f4e7-416d-809d-5e2eed9f17e4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8f3daf25a3ffe025bcdef65dbaa6def942d0fb4
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 260a771157b9463ad0b0484e8fc3464f1b23b84396c3a86d1cb693bf5ea22a74
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903326"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121308450"
 ---
 # <a name="bitmap-element"></a>Bit eşlem öğesi
 Bit eşlem tanımlar. Bit eşlem bir kaynaktan veya bir dosyadan yüklenir.
@@ -39,7 +40,7 @@ Bit eşlem tanımlar. Bit eşlem bir kaynaktan veya bir dosyadan yüklenir.
 |guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID'si.<br /><br /> Bit eşlem için guid özniteliği herhangi bir VSPackage veya başka bir komut grubuyla ilişkili değildir.  Bit eşlem tanımına özel olmalı ve başka bir amaç için kullanılmamalı.|
 |Resid|GUID/ID komut tanımlayıcısının kimliği. resID veya href özniteliği gereklidir.<br /><br /> resID özniteliği, komut tablosu birleştirme sırasında yüklenecek bit eşlem şeridini belirleyen bir tamsayı kaynak kimliğidir.  Komut tablosu yüklendiğinde, kaynak kimliği tarafından belirtilen bit eşlemler aynı modülün kaynağından yüklenir.|
 |usedList|resID özniteliği varsa gereklidir. Bit eşlem şeridinde kullanılabilir görüntüleri seçer.|
-|Href|Bit eşlem yolu. resID veya href özniteliği gereklidir.<br /><br /> Dahil etmek yolu, sonuçta elde edilen ikili dosyaya eklenmiş olan belirtilen görüntü dosyası için aranır.  Komut tablosu birleştirme sırasında görüntü kopyalanır ve ek kaynak araması veya yüklemesi gerekmez.  usedList özniteliği yoksa şeritte bulunan tüm görüntüler kullanılabilir. **Not:**  Görüntüler,.bmp *,*.png *ve* *.gif.*  Derleyicinin önceki sürümleri kısmi saydamlık için alfa bilgi içeren 32 bit bit eşlem görüntülerini desteklemedi. Bu sürümlerin geçici çözümü,.png *kullanmaktır.*|
+|Href|Bit eşlem yolu. resID veya href özniteliği gereklidir.<br /><br /> Dahil edilen yol, sonuçta elde edilen ikili dosyaya eklenmiş olan belirtilen görüntü dosyası için aranır.  Komut tablosu birleştirme sırasında görüntü kopyalanır ve ek kaynak araması veya yüklemesi gerekmez.  usedList özniteliği yoksa şeritte bulunan tüm görüntüler kullanılabilir. **Not:**  Görüntüler,.bmp *,*.png *ve* *.gif.*  Derleyicinin önceki sürümleri kısmi saydamlık için alfa bilgi içeren 32 bit bit eşlem görüntülerini desteklemedi. Bu sürümlerin geçici çözümü,.png *kullanmaktır.*|
 |Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri

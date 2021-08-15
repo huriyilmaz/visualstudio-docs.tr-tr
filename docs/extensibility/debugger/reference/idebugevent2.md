@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bir kesme noktasında durdurma gibi kritik hata ayıklama bilgilerini ve hata ayıklama iletisi gibi kritik olmayan bilgileri iletişim kurmak için kullanılır.
+description: Bu arabirim, kesme noktası sırasında durdurma gibi kritik hata ayıklama bilgilerini ve hata ayıklama iletisi gibi kritik olmayan bilgileri iletişim kurmak için kullanılır.
 title: IDebugEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: de3d714d-96fb-4e12-b66b-a75391472153
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5406c70703b594236dba47539e5cc76bbe67a73
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 71b36a0647baa9ff7224fde5ad65ea073153497a0eaabd83feb80b6ffc0cc397
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065768"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238924"
 ---
 # <a name="idebugevent2"></a>IDebugEvent2
-Bu arabirim, bir kesme noktasında durdurma gibi kritik hata ayıklama bilgilerini ve hata ayıklama iletisi gibi kritik olmayan bilgileri iletişim kurmak için kullanılır.
+Bu arabirim, kesme noktası sırasında durdurma gibi kritik hata ayıklama bilgilerini ve hata ayıklama iletisi gibi kritik olmayan bilgileri iletişim kurmak için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,28 +30,28 @@ Bu arabirim, bir kesme noktasında durdurma gibi kritik hata ayıklama bilgileri
 IDebugEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE) ve özel bağlantı noktası sağlayıcısı, bu arabirimi diğer tüm olay arabirimleriyle aynı nesneye uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) ve özel bağlantı noktası sağlayıcı, bu arabirimi diğer tüm olay arabirimleri ile aynı nesne üzerinde uygulama.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) veya [olaya](../../../extensibility/debugger/reference/idebugportevents2-event.md)VERILEN arabirim kimliği (IID) bağımsız değişkenini kullanarak, oturum hata ayıklama Yöneticisi (SDM), [](/cpp/atl/queryinterface) `IDebugEvent2` uygun olay arabirimini elde etmek için arabirimdeki QueryInterface 'i çağırır.
+ Olay veya Olay'a verilen arabirim [](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) kimliği (IID) bağımsız değişkenlerini [kullanarak,](../../../extensibility/debugger/reference/idebugportevents2-event.md)uygun olay arabirimini almak için oturum hata ayıklama yöneticisi (SDM) [arabiriminde QueryInterface'i](/cpp/atl/queryinterface) `IDebugEvent2` arar.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugEvent2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugEvent2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)|Bu hata ayıklama olayının özniteliklerini alır.|
+|[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)|Bu hata ayıklama olayı için öznitelikleri alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)gibi daha özel olay arabirimleri, IDebugEvent2 arabiriminden türemez, ancak bunun yerine aynı nesne üzerinde ayrı bir arabirim olarak uygulanır `IDebugEvent2` .
+ [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)gibi daha belirli olay arabirimleri IDebugEvent2 arabiriminden türetilmez, ancak bunun yerine ile aynı nesnede ayrı bir arabirim olarak `IDebugEvent2` uygulanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

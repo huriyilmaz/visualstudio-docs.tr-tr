@@ -10,14 +10,15 @@ ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ba7234ee0c5a4ab8096c020cb44345f17830540
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b070da362b84aa7e258ad6ecd628ea524e4a9b3daf7abd06118b783399c2baa9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931220"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121314257"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod Etkinlik Tasarımcısı
 

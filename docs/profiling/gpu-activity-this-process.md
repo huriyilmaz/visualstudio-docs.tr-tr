@@ -11,14 +11,15 @@ ms.assetid: 0956edbf-9bcd-4afe-9287-fda628648ca0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bdb39504cae42e943de1864d8edc308b96e0e742
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f4396b1feecfe343cf3dbdf1ad9d7aa2b749fcfb7e362fb13270563c6087e9a4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878142"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121246532"
 ---
 # <a name="gpu-activity-this-process"></a>GPU Etkinliği (Bu İşlem)
 Eşzamanlılık görselleştiricisi içindeki Iş parçacıkları görünümündeki **GPU etkinliği (Bu işlem)** KESIMLERI, GPU 'nun geçerli işlem adına istekleri işleme süresini temsil eder. Bu istekler, GPU 'ya doğrudan bellek erişimi (DMA) paketleri olarak gönderilir. Bir segmentin uzunluğu, GPU 'nun geçerli işlem adına bir DMA paketi işlediği süreyi temsil eder.

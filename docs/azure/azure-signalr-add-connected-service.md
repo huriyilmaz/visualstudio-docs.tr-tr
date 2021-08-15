@@ -1,28 +1,29 @@
 ---
 title: Bağlı hizmetleri kullanarak Azure SignalR ekleme | Microsoft Docs
-description: Bağlı hizmet eklemek için Visual Studio 'Yu kullanarak uygulamanıza Azure SignalR ekleme
+description: bağlı hizmet eklemek için Visual Studio kullanarak uygulamanıza Azure signalr ekleme
 author: AngelosP
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: a3b76115e7d5cfe484c9aea00246e4d42acf6268
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b97e97063c32e2cb97a1ef65c7d631f7a93200d774a6936f10dfdbd3627a6c96
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841175"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121312827"
 ---
-# <a name="add-azure-signalr-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure SignalR ekleme
+# <a name="add-azure-signalr-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak Azure signalr ekleme
 
-Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure SignalR hizmetine bağlayabilirsiniz:
+Visual Studio, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure signalr hizmetine bağlayabilirsiniz:
 
 - .NET Framework konsol uygulaması
 - ASP.NET MVC (.NET Framework) 
 - ASP.NET Core
-- .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
+- .net Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
 - .NET Core çalışan rolü
 - Azure İşlevleri
 - Evrensel Windows Platformu uygulaması
@@ -32,13 +33,13 @@ Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak aşağıdakiler
 Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodlarını projenize ekler ve yapılandırma dosyalarınızı uygun şekilde değiştirir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Azure iş yükü yüklü olan Visual Studio.
+- Azure iş yükü yüklü Visual Studio.
 - Desteklenen türlerden birinin projesi
 
-## <a name="connect-to-azure-signalr-using-connected-services"></a>Bağlı hizmetleri kullanarak Azure SignalR 'ye bağlanma
+## <a name="connect-to-azure-signalr-using-connected-services"></a>bağlı hizmetleri kullanarak Azure signalr 'ye Bağlan
 
 1. Projenizi Visual Studio’da açın.
 
@@ -58,7 +59,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
     Yeni bir bileşen oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde 7. adıma geçin.
 
-    ![Mevcut Azure SignalR bileşenine bağlanma](./media/azure-signalr-add-connected-service/created-signalr.png)
+    ![mevcut Azure signalr bileşenine Bağlan](./media/azure-signalr-add-connected-service/created-signalr.png)
 
 1. Bir Azure SignalR hizmeti örneği oluşturmak için:
 
@@ -86,4 +87,4 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 - [Azure SignalR ürün sayfası](https://azure.microsoft.com/services/signalr-service/)
 - [Azure SignalR Hizmeti belgeleri](/azure/azure-signalr)
-- [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)
+- [bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

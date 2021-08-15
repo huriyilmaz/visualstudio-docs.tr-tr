@@ -1,27 +1,28 @@
 ---
 title: Sorun raporları için özel veriler
-description: Geliştirici topluluğunun gözden geçirmesi için sorun raporları oluştururken, özel verilerinizi nasıl daha güvenli tutacağınızı öğrenin.
+description: geliştirici Community gözden geçirmek için sorun raporları oluştururken, özel verilerinizi nasıl daha güvenli tutacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/21/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - developer community privacy
 - privacy, developer community
-author: TerryGLee
-ms.author: tglee
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e521a8291947922d856819b637cd262db434c7eb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 10b4f861ec0dfe2cd4480a536c7b600955c8b87528b72243e4624f9102f13e13
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894692"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121259259"
 ---
 # <a name="developer-community-data-privacy"></a>Geliştirici Topluluğu veri gizliliği
 
-Varsayılan olarak, herhangi bir yorum ve yanıt dahil olmak üzere [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda sorunlu tüm bilgiler herkese açık bir şekilde görünür. Tüm topluluğun diğer kullanıcıların bulduğu sorunları, çözümleri ve geçici çözümleri görmesini sağladığından bu faydalıdır. Bununla birlikte, verilerinizin veya kimliğinizin gizliliğiyle ilgili endişeniz varsa seçenekleriniz vardır.
+varsayılan olarak, herhangi bir yorum ve yanıt dahil olmak üzere [geliştirici Community](https://aka.ms/feedback/suggest?space=8)ilgili sorun raporlarına ilişkin tüm bilgiler herkese açık bir şekilde görünür. Tüm topluluğun diğer kullanıcıların bulduğu sorunları, çözümleri ve geçici çözümleri görmesini sağladığından bu faydalıdır. Bununla birlikte, verilerinizin veya kimliğinizin gizliliğiyle ilgili endişeniz varsa seçenekleriniz vardır.
 
 ## <a name="identity-privacy"></a>Kimlik gizliliği
 
@@ -35,27 +36,27 @@ Veri gizliliğiyle ilgilenmeniz durumunda, her zaman genel olan ilk raporun baş
 
 2. Yanıt Düzenleyicisi 'nde Yanıtla ilgili hedef kitlelerinizi belirtmek için **Gönder** ve **iptal** düğmeleri altındaki denetimi kullanın. Microsoft çalışanları ve kendi kendinize yönelik görünürlüğü sınırlamak için **, moderatör ve orijinal poster** seçeneklerini belirleyin.
 
-   ![Geliştirici topluluğu 'nda gizlilik denetimi](media/developer-community-privacy-control.png)
+   ![Geliştirici Community gizlilik denetimi](media/developer-community-privacy-control.png)
 
    Yalnızca belirttiğiniz kişiler, yorumu ve içine eklediğiniz tüm görüntüleri, bağlantıları veya kodu görebilir. Yorum altındaki tüm yanıtlar özgün açıklamayla aynı görünürlüğe sahiptir. Yanıtlardaki gizlilik denetimi kısıtlanmış görünürlük durumunu doğru şekilde göstermese de bu durum geçerlidir.
 
 3. Yeniden oluşturma için gereken açıklama ve diğer bilgileri, görüntüleri ve dosya eklerini ekleyin. Bu bilgileri özel olarak göndermek için **Gönder** düğmesini seçin.
 
    > [!NOTE]
-   > Geliştirici topluluğu Web sitesinde, ekli dosyalar ve en fazla 10 dosya için 2 GB 'lik bir sınır vardır. Daha büyük bir dosyayı karşıya yüklemeniz gerekiyorsa, yeni bir sorun raporu gönderebilir veya bir Microsoft çalışanınızdan özel bir yorum için karşıya yükleme URL 'SI isteyebilirsiniz.
+   > geliştirici Community web sitesinde, ekli dosyalar üzerinde 2 GB 'lik bir sınır ve en fazla 10 dosya vardır. Daha büyük bir dosyayı karşıya yüklemeniz gerekiyorsa, yeni bir sorun raporu gönderebilir veya bir Microsoft çalışanınızdan özel bir yorum için karşıya yükleme URL 'SI isteyebilirsiniz.
    > Bir sorunu kapatdığımızda, ilişkili ekler 90 gün sonra silinir.
 
 Gizliliğinizi korumak ve hassas bilgileri genel görünümden korumak için, Microsoft ile tüm etkileşimleri, görünürlük kısıtlı bir yorum altında yanıt verecek şekilde saklayın. Diğer açıklamalara yanıt vermek, hassas bilgileri yanlışlıkla açıklayabilmeniz için yol açabilir.
 
 ## <a name="data-we-collect"></a>Topladığımız veriler
 
-Visual Studio Yükleyicisi **bir sorun bildir** , en son Kurulum günlüğünü topladık.
+Visual Studio Yükleyicisi **bir sorun bildir** , en son kurulum günlüğünü topladık.
 
-Visual Studio 'dan **bir sorun rapor** başlatılmışsa, aşağıdaki veri türlerinden bir veya daha fazlasını topladık:
+Visual Studio **bir sorun bildir** , aşağıdaki veri türlerinden bir veya daha fazlasını topladık:
 
 - Watson ve .NET girdileri olay günlüğünden
 
-- Visual Studio bellek içi etkinlik günlüğü dosyası
+- bellek içi etkinlik günlük dosyası Visual Studio
 
 - Eğer Watson koleksiyonu etkinse PerfWatson dosyaları
 
@@ -73,7 +74,7 @@ Visual Studio 'dan **bir sorun rapor** başlatılmışsa, aşağıdaki veri tür
 
 - Varsa Razor LSP düzenleyici günlükleri
 
-- Varsa Windows Forms günlükleri
+- Windows Mevcutsa form günlükleri
 
 - Bir ekran görüntüsü, eklemeyi tercih ederseniz
 
@@ -92,5 +93,5 @@ Visual Studio 'dan **bir sorun rapor** başlatılmışsa, aşağıdaki veri tür
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio ile ilgili sorun bildirme](how-to-report-a-problem-with-visual-studio.md)
+- [Visual Studio sorun bildirme](how-to-report-a-problem-with-visual-studio.md)
 - [C++ sorun raporu veri gizliliği](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset#reports-and-privacy)

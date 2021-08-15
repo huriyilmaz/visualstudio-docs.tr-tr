@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklayıcı genişletilebilirliği ile çalışmaya başlama | Microsoft Docs
-description: Visual Studio ortamının içinden programlarda hata ayıklamak için kullanılan hata ayıklayıcı bileşenlerini oluşturmaya ve özelleştirmeye başlayın.
+title: Başlarken Ayıklayıcı Genişletilebilirliği ile | Microsoft Docs
+description: Kullanmaya başlayın ortamında programlarda hata ayıklamak için kullanılan hata ayıklayıcı bileşenlerini oluşturma ve Visual Studio gerekir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,37 +12,38 @@ ms.assetid: d6ce6f43-1409-4bf7-93cd-f3464ca23504
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 20591adffbfdfd21d1ff1a77eaade39c165b9c51
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f10ea604cf4e07dbeec96c4dbbc3eadd3b3aef379a0dbbd7f11eb7f943957611
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059983"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121308213"
 ---
-# <a name="get-started-with-debugger-extensibility"></a>Hata ayıklayıcı genişletilebilirliği ile çalışmaya başlama
-, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Ortamında programların hatalarını ayıklamak için kullanılan hata ayıklayıcı bileşenlerini oluşturmak ve özelleştirmek için ihtiyacınız olan bilgileri sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+# <a name="get-started-with-debugger-extensibility"></a>Kullanmaya başlayın ayıklayıcı genişletilebilirliği ile ilgili sorun giderme
+[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], ortamdaki programlarda hata ayıklamak için kullanılan hata ayıklayıcı bileşenlerini oluşturmak ve özelleştirmek için ihtiyacınız olan bilgileri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sağlar.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama, önceki hata ayıklayıcılarda gerçekleştirilen kapsamlı kullanılabilirlik testinizden türetilmiş iyileştirmeler ekledi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Çok dilli bir uygulamada ilerlemek için hata ayıklamayı kullanabilir veya uygulamalarda ve çok dilli çözümlerde hata ayıklama sırasında değişkenlerin anında düzenlenmesinden yararlanabilirsiniz.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama, önceki hata ayıklayıcılarda gerçekleştirilen kapsamlı kullanılabilirlik testlerinden türetilen [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geliştirmeler ekledi. Hata ayıklamayı kullanarak çok dilli bir uygulamada adım adım ilerler veya uygulamalarda ve çok dilli çözümlerde hata ayıklarken değişkenlerin çalışırken [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] düzenlenmesini de gerçekleştirebilirsiniz.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama, hata ayıklamakta olan program ile işlem dışı yürütülür ve bu nedenle uygulamanın işlem alanında daha az zorlayıcıdır. Sonuç olarak, hata ayıklama programınızı etkilemeden hata ayıklayıcı ile etkileşime geçen bileşenleri yazmak daha kolay olur.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama, program hata ayıklarken işlem dışı yürütülür ve bu nedenle uygulamanın işlem alanı için daha az müdahaleci olur. Sonuç olarak, hata ayıklama programınızı etkilemeden hata ayıklayıcıyla etkileşimde bulunan bileşenleri yazmak daha kolaydır.
 
- ' Yi en iyi şekilde kullanmak için [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] aşağıdaki öğeler hakkında bilgi sahibi olmanız gerekir:
+ 'i en [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] iyi şekilde kullanmak için aşağıdaki öğelere aşina olmak gerekir:
 
-- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE)
+- Tümleşik [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geliştirme ortamı (IDE)
 
 - C++ programlama dili
 
 - ATL COM
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Hata ayıklayıcıyı genişletmek Için yol haritası](../../extensibility/debugger/roadmap-for-extending-the-debugger.md) Derleyiciye ve çıktısına bağlı olarak, ürününüzün hata ayıklamayı uygulama sürecini özetler.
+ [Hata ayıklayıcısını genişletmek için yol haritası](../../extensibility/debugger/roadmap-for-extending-the-debugger.md) Derleyicinize ve çıkışına bağlı olarak, üründe hata ayıklama uygulama sürecini özetler.
 
- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Hata ayıklama altyapısını (de), ifade değerlendiricisi (ee) ve Sembol işleyicisini (sh) içeren hata ayıklama bileşenlerine genel bakış sağlar.
+ [Hata ayıklayıcısı bileşenleri](../../extensibility/debugger/debugger-components.md) Hata ayıklama altyapısını (DE), ifade değerlendiricisini (EE) ve sembol işleyicisini (SH) içeren hata ayıklama bileşenlerine [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] genel bir bakış sağlar.
 
- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md) Ana hata ayıklama mimarisi kavramlarını açıklar.
+ [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md) Ana hata ayıklama mimari kavramlarını açıklar.
 
- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md) Hata ayıklama altyapısının (DE) kod, belge ve ifade değerlendirme bağlamlarının eşzamanlı olarak nasıl çalıştığını açıklar. Üç bağlamın her biri için, bu konuyla ilgili konum, konum veya değerlendirmeyi açıklar.
+ [Hata ayıklayıcısı bağlamları](../../extensibility/debugger/debugger-contexts.md) Hata ayıklama altyapısının (DE) kod, belge ve ifade değerlendirme bağlamları içinde aynı anda nasıl çalışı olduğunu açıklar. Üç bağlamın her biri için ilgili konum, konum veya değerlendirmeyi açıklar.
 
- [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md) Bir program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerinin bağlantılarını içerir.
+ [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md) Program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerinin bağlantılarını içerir.

@@ -17,14 +17,15 @@ ms.assetid: bd5e0612-a0dc-41cf-a7af-1e87d0d5c35f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fcae019e8854ecee9cdc553eedd3e9d2d0f28a63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cfbb3faef7fa097114f66eafe8ea224c04d431b5019516f67e03bfa3947ad5c0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948589"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419266"
 ---
 # <a name="using-the-tasks-window-c-visual-basic-c"></a>Görevler penceresini kullanma (C#, Visual Basic, C++)
 
@@ -36,7 +37,7 @@ Yerel kodda [görev grupları](/cpp/parallel/concrt/task-parallelism-concurrency
 
 JavaScript 'te, taahhüt kodu ile çalışırken görevler penceresini kullanabilirsiniz `.then` . Daha fazla bilgi için bkz. [JavaScript 'Te zaman uyumsuz programlama (UWP uygulamaları)](/previous-versions/windows/apps/hh700330(v=win.10)) .
 
-Hata ayıklayıcıya her kesme yaptığınızda **Görevler** penceresini kullanabilirsiniz. **Hata Ayıkla** menüsünde **Windows** ' a ve ardından **Görevler**' e tıklayarak erişebilirsiniz. Aşağıdaki çizimde **Görevler** penceresi varsayılan modunda gösterilmektedir.
+Hata ayıklayıcıya her kesme yaptığınızda **Görevler** penceresini kullanabilirsiniz. **hata ayıkla** menüsünde **Windows** ' a ve ardından **görevler**' e tıklayarak erişebilirsiniz. Aşağıdaki çizimde **Görevler** penceresi varsayılan modunda gösterilmektedir.
 
 ![Görevler penceresi](../debugger/media/parallel_tasks_window.png "Parallel_Tasks_Window")
 
@@ -47,7 +48,7 @@ Hata ayıklayıcıya her kesme yaptığınızda **Görevler** penceresini kullan
 
 **Görevler** penceresindeki sütunlar aşağıdaki bilgileri gösterir.
 
-|Sütun adı|Description|
+|Sütun adı|Açıklama|
 |-----------------|-----------------|
 |**Larına**|Hangi görevlerin işaretlenip işaretlenmediğini gösterir ve bir görevi işaretlemenizi veya bayrak kaldırmanızı sağlar.|
 |**Simgeler**|Sarı ok geçerli görevi gösterir. Geçerli görev, geçerli iş parçacığında en üstteki görevdir.<br /><br /> Beyaz ok, son görevi, yani hata ayıklayıcı çağrıldığında geçerli olan olanı gösterir.<br /><br /> Duraklat simgesi, Kullanıcı tarafından dondurulmuş olan bir görevi gösterir. Listede sağ tıklayarak bir görevi dondurabilir ve çöz ' ü seçebilirsiniz.|
@@ -83,22 +84,22 @@ Hata ayıklayıcıya her kesme yaptığınızda **Görevler** penceresini kullan
 ## <a name="flagging-tasks"></a>Görevleri bayrak atama
  Görev listesi öğesini seçip bağlam menüsünden **bayrak atanmış Iş parçacığı** öğesini seçerek veya ilk sütundaki bayrak simgesine tıklayarak iş parçacığına bir görevin çalıştığı görevi işaretleyebilirsiniz. Birkaç görevi işaretlemeniz halinde bayrak sütunu üzerinde sıralama yapabilirsiniz. böylece, yalnızca bunlara odaklanabilmeniz için bayraklı tüm görevleri en üste getirebilirsiniz. Yalnızca işaretlenen görevleri görüntülemek için **Paralel Yığınlar** penceresini de kullanabilirsiniz. Bu, hata ayıklama için ilgilendiğiniz görevleri filtrelemenizi sağlar. Bayraklar hata ayıklama oturumları arasında kalıcı değildir.
 
-## <a name="freezing-and-thawing-tasks"></a>Görevleri donduruyor ve Thakelebek
- Görev listesi öğesine sağ tıklayıp **atanan Iş parçacığını dondur**' a tıklayarak bir görevin çalıştığı iş parçacığını dondurabilirsiniz. (Bir görev zaten dondurulmuşsa, komut **atanan Iş parçacığını çözme** işlemi olur.) Bir iş parçacığını dondurduktan sonra, geçerli kesme noktasından sonra koddan ilerledikten sonra bu iş parçacığı yürütülmez. **Tüm Iş parçacıklarını dondur, ancak bu tek** komut, görev listesi öğesini yürüten öğe dışındaki tüm iş parçacıklarını dondurur.
+## <a name="freezing-and-thawing-tasks"></a>Donma ve Çözülen Görevler
+ Görev listesi öğesini sağ tıklar ve ardından Atanan İş Parçacığını Dondur'a tıklayarak bir görevin üzerinde çalıştırdığı **iş parçacığını dondurabilirsiniz.** (Bir görev zaten donmuşsa, komut **Thaw Atanmış İş Parçacığı'dır.)** Bir iş parçacığını dondurduktan sonra kodda adım adım ilerlerken bu iş parçacığı yürütülmez. Tüm **İş Parçacıklarını Dondur ama Bu** Bir komutu, görev listesi öğesini yürüten iş parçacığı dışındaki tüm iş parçacıklarını donduruyor.
 
- Aşağıdaki çizim her bir görev için diğer menü öğelerini gösterir.
+ Aşağıdaki çizimde her görev için diğer menü öğeleri gösterilmiştir.
 
- ![Görevler penceresinde kısayol iş parçacığı menüsü](../debugger/media/parallel_tasks_contextmenu2.png "Parallel_Tasks_ContextMenu2")
+ ![Görevler penceresindeki kısayol iş parçacığı menüsü](../debugger/media/parallel_tasks_contextmenu2.png "Parallel_Tasks_ContextMenu2")
 
-## <a name="switching-the-active-task-or-frame"></a>Etkin görevi veya çerçeveyi değiştirme
+## <a name="switching-the-active-task-or-frame"></a>Etkin Görevi veya Çerçeveyi Değiştirme
 
-**Göreve geç** komutu geçerli görevi etkin görevi yapar. **Çerçeveye geç** komutu seçili yığın çerçevesini etkin yığın çerçevesini yapar. Hata ayıklayıcı bağlamı geçerli göreve veya seçili yığın çerçevesine geçiş yapar.
+Göreve **Geç komutu** geçerli görevi etkin görev yapar. Çerçeveye **Geçiş Komutu** seçili yığın çerçevesini etkin yığın çerçevesi yapar. Hata ayıklayıcısı bağlamı geçerli göreve veya seçilen yığın çerçevesine geçişler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
-- [Paralel programlama](/dotnet/standard/parallel-programming/index)
+- [Paralel Programlama](/dotnet/standard/parallel-programming/index)
 - [Eşzamanlılık Çalışma Zamanı](/cpp/parallel/concrt/concurrency-runtime)
 - [Paralel Yığınlar Penceresini Kullanma](../debugger/using-the-parallel-stacks-window.md)
 - [İzlenecek Yol: Paralel Uygulamada Hata Ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)

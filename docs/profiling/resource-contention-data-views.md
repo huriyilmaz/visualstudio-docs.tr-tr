@@ -10,15 +10,16 @@ ms.assetid: be79ec41-f1dd-4984-993f-5c2962355a32
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 148e72cedafa075c8b03229a5f44063713d7cd23
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8664dc751b05528271877141fcda197ea89943494e9fc814e02f29fb1e89059
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952778"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121315804"
 ---
 # <a name="resource-contention-data-views"></a>Kaynak Çakışması Veri Görünümleri
 Bu bölüm, iş parçacığı çakışması profil oluşturma verileri içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.

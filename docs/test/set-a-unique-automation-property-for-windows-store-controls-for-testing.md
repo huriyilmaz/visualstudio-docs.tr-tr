@@ -6,15 +6,16 @@ ms.date: 05/31/2018
 ms.topic: how-to
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 1befcb77e0ade11a9a3be51a2750564fd316efcd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 73ccfe2ec8562e27f284082c8cd0f577427b01c937ad32b77e0c6cea16787f47
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884500"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121315102"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Test için UWP denetimleri için benzersiz bir Otomasyon özelliği ayarlama
 
@@ -56,7 +57,7 @@ Denetimin XAML içinde **AutomationProperties.Name** öğesini **buttony** olara
 
 ## <a name="assign-unique-names"></a>Benzersiz adlar ata
 
-Visual Studio için Blend ' de, denetimler, liste kutuları, Birleşik giriş kutuları ve metin kutuları gibi etkileşimli öğelere benzersiz adlar atamak için bir seçenek belirleyebilirsiniz. Bu, denetimleri **AutomationProperties.Name** için benzersiz değerler sağlar.
+Visual Studio için Blend ' de, denetimler, liste kutuları, birleşik giriş kutuları ve metin kutuları gibi etkileşimli öğelere benzersiz adlar atamak için bir seçenek belirleyebilirsiniz. bu, denetimleri **AutomationProperties.Name** için benzersiz değerler sağlar.
 
 Varolan denetimlere benzersiz adlar atamak için **Araçlar**  >  **adı etkileşimli öğeler**' i seçin.
 

@@ -1,6 +1,6 @@
 ---
 title: Menü öğelerine klavye kısayollarını bağlama | Microsoft Docs
-description: Visual Studio 'da klavye kısayolunun varsayılan düzenleyici veya özel bir düzenleyici için özel düğme, menü öğesi veya araç çubuğu komutuna nasıl eşlendiğini öğrenin.
+description: Varsayılan düzenleyici veya özel bir düzenleyici için Visual Studio klavye kısayolunu özel düğme, menü öğesi veya araç çubuğu komutuna eşlemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,22 +14,23 @@ ms.assetid: 19f483b6-4d3e-424e-9d68-dc129c788e47
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a9591a7412b0bcaf506483a16a6660790df5f40
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 2ea954c65d55a85f15681e2b4bcc8a24fc957ae25ca1db513ee6d700cb1f1d49
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900440"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121308463"
 ---
 # <a name="bind-keyboard-shortcuts-to-menu-items"></a>Klavye kısayollarını menü öğelerine bağlama
 Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *. vsct* dosyasına bir giriş eklemeniz yeterlidir. Bu konu başlığı altında, klavye kısayolunun özel düğme, menü öğesi veya araç çubuğu komutuna nasıl değiştirileceği ve varsayılan düzenleyicide klavye eşlemesinin nasıl uygulanacağı veya özel bir düzenleyici ile nasıl sınırlandırılacağını açıklanmaktadır.
 
- Mevcut Visual Studio menü öğelerine klavye kısayolları atamak için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+ mevcut Visual Studio menü öğelerine klavye kısayolları atamak için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
 ## <a name="choose-a-key-combination"></a>Bir anahtar birleşimi seçin
- Birçok klavye kısayolu, Visual Studio 'da zaten kullanılıyor. Yinelenen bağlamalar algılanabileceğinden ve ayrıca öngörülemeyen sonuçlara neden olabileceğinden, aynı kısayolu birden fazla komuta atamamalısınız. Bu nedenle, bir kısayolu atamadan önce kullanılabilirliğini doğrulamak iyi bir fikirdir.
+ Visual Studio çok sayıda klavye kısayolu zaten kullanılıyor. Yinelenen bağlamalar algılanabileceğinden ve ayrıca öngörülemeyen sonuçlara neden olabileceğinden, aynı kısayolu birden fazla komuta atamamalısınız. Bu nedenle, bir kısayolu atamadan önce kullanılabilirliğini doğrulamak iyi bir fikirdir.
 
 ### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>Klavye kısayolunun kullanılabilirliğini doğrulamak için
 
@@ -39,7 +40,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
 3. **Kısayol tuşlarını bas** kutusunda, kullanmak istediğiniz klavye kısayolunu yazın.
 
-    Kısayol zaten Visual Studio 'da kullanılıyorsa, Box **tarafından şu anda kullanılan kısayol** , kısayolun Şu anda çağırdığı komutu gösterir.
+    kısayol zaten Visual Studio kullanılıyorsa, box **tarafından şu anda kullanılan kısayol** , kısayolun şu anda çağırdığı komutu gösterir.
 
 4. Eşlenmemiş bir tane bulana kadar anahtarların farklı birleşimlerini deneyin.
 
@@ -79,7 +80,7 @@ Bir klavye kısayolunu özel bir menü komutuna bağlamak için, Package için *
 
    Sanal anahtar kodları, işlev anahtarları ve **geri al** tuşu gibi kendileriyle ilişkili bir karakter olmayan özel anahtarlara erişmenizi sağlar. Daha fazla bilgi için bkz. [sanal anahtar kodları](/windows/desktop/inputdev/virtual-key-codes).
 
-   Komutu Visual Studio düzenleyicisinde kullanılabilir hale getirmek için `editor` özniteliğini olarak ayarlayın `guidVSStd97` .
+   komutu Visual Studio düzenleyicide kullanılabilir hale getirmek için `editor` özniteliğini olarak ayarlayın `guidVSStd97` .
 
    Komutu yalnızca özel bir düzenleyicide kullanılabilir hale getirmek için, `editor` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] özel düzenleyiciyi Içeren VSPackage oluşturduğunuzda özniteliği paket şablonu tarafından oluşturulan özel düzenleyicinin adına ayarlayın. Ad değerini bulmak için, `<Symbols>` `<GuidSymbol>` `name` özniteliği "." ile biten bir düğüm için bölümüne bakın `editorfactory` . Bu, özel düzenleyicinin adıdır.
 

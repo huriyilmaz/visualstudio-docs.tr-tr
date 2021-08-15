@@ -11,17 +11,18 @@ ms.assetid: 7931f3f7-033c-4bf8-8abd-95183952ebb0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c3a5d052fcb2c40f9dad76791aa992dbfbde72b0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b70893b9fdcd3e957b8aa8bc2685e0845b49676da285c5661f477cae633311d3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058904"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239171"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
 Dizideki öğelerin sayısını alır.

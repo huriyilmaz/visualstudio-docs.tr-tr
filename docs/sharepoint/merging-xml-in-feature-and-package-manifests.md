@@ -1,6 +1,6 @@
 ---
 title: Özellik ve paket bildirimlerinde XML birleştirme | Microsoft Docs
-description: Tasarımcı tarafından oluşturulan ve SharePoint özelliğinde ve paket bildirimlerinde Kullanıcı tarafından eklenen XML kodu birleştirme. Özellik ve paket bildirim öğelerini öğrenin ve özel durumları birleştirin.
+description: SharePoint özellik ve paket bildirimlerinde tasarımcı tarafından oluşturulan ve kullanıcı tarafından eklenen XML kodu birleştirme. Özellik ve paket bildirim öğelerini öğrenin ve özel durumları birleştirin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -12,20 +12,21 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 8be6adfedeabaea236e4dcb2cd969e6023a7f3ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c4af8e25fa998804e56359faa29cd7e5651336218003100f60fac379fcc5f641
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889570"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121244322"
 ---
 # <a name="merge-xml-in-feature-and-package-manifests"></a>Özellik ve paket bildirimlerinde XML 'yi birleştirme
-  Özellikler ve paketler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim dosyaları tarafından tanımlanır. Bu paketlenmiş bildirimler, tasarımcılardan oluşturulan verilerin ve [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim şablonunda kullanıcılar tarafından girilen özel bir birleşimidir. Paketleme sırasında, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] paketlenmiş bildirim dosyasını oluşturmak için özel deyimleri tasarımcı tarafından belirtilen şekilde birleştirir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Daha sonra birleştirme özel durumları 'nda belirtilen özel durumlarla benzer öğeler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] dosyaları SharePoint 'e dağıttıktan sonra doğrulama hatalarından kaçınmak ve bildirim dosyalarını daha küçük ve daha verimli hale getirmek için birleştirilir.
+  Özellikler ve paketler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim dosyaları tarafından tanımlanır. Bu paketlenmiş bildirimler, tasarımcılardan oluşturulan verilerin ve [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim şablonunda kullanıcılar tarafından girilen özel bir birleşimidir. Paketleme sırasında, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] paketlenmiş bildirim dosyasını oluşturmak için özel deyimleri tasarımcı tarafından belirtilen şekilde birleştirir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Daha sonra birleştirme özel durumları 'nda belirtilen özel durumlarla benzer öğeler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] dosyaları SharePoint dağıttıktan sonra doğrulama hatalarından kaçınmak ve bildirim dosyalarını daha küçük ve daha verimli hale getirmek için birleştirilir.
 
 ## <a name="modify-the-manifests"></a>Bildirimleri değiştirme
- Özelliği veya paket tasarımcılarını devre dışı bırakana kadar paketlenmiş bildirim dosyalarını doğrudan değiştiremezsiniz. Ancak, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] özellik ve paket tasarımcıları ya da düzenleyici aracılığıyla bildirim şablonuna el ile özel öğeler ekleyebilirsiniz [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint özelliğini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-feature.md) ve [nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+ Özelliği veya paket tasarımcılarını devre dışı bırakana kadar paketlenmiş bildirim dosyalarını doğrudan değiştiremezsiniz. Ancak, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] özellik ve paket tasarımcıları ya da düzenleyici aracılığıyla bildirim şablonuna el ile özel öğeler ekleyebilirsiniz [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . daha fazla bilgi için bkz. [nasıl yapılır: özelleştirme SharePoint özellikleri](../sharepoint/how-to-customize-a-sharepoint-feature.md) ve [nasıl yapılır: SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
 
 ## <a name="feature-and-package-manifest-merge-process"></a>Özellik ve paket bildirimi birleştirme işlemi
  Özel öğeleri tasarımcı tarafından belirtilen öğelerle birlikte birleştirilirken [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] aşağıdaki işlemi kullanır. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Her bir öğenin benzersiz bir anahtar değeri olup olmadığını denetler. Bir öğenin benzersiz anahtar değeri yoksa, paketlenmiş bildirim dosyasına eklenir. Benzer şekilde, birden fazla anahtara sahip öğeler birleştirilemez. Bu nedenle, bildirim dosyasına eklenir.
@@ -81,5 +82,5 @@ ms.locfileid: "99889570"
  ApplicationResourceFile ve DwpFiles gibi bazı bildirim öğeleri, dosya adı içeren bir konum belirtir. Ancak, bildirim şablonuna bir dosya adı girdisi eklemek, temeldeki dosyayı pakete eklemez. Dosyayı pakete dahil etmek için projeye eklemeniz ve dağıtım türü özelliğini buna göre ayarlamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
-- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)

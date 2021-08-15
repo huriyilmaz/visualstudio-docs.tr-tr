@@ -9,14 +9,15 @@ ms.assetid: 58aa236a-5ab8-4695-b303-89dffdbcd946
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58cb913f5dbc729c297de8a34aa5dd4c3c99b48a
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 04cc9a685554971e4e4065dba95bb1ac3118f56d470c82da474fe8349769c8dd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900921"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417801"
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger Metodu
 Şu anda etkin olan tüm <xref:System.Threading.Tasks.TaskScheduler> nesnelerin dizisini döndürür.
@@ -37,7 +38,7 @@ ms.locfileid: "112900921"
  Şu anda bu <xref:System.Threading.Tasks.TaskScheduler> içinde etkin olan tüm nesnelerin <xref:System.AppDomain> dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem iş parçacığı güvenli değildir ve bunu diğer örnekleriyle eşzamanlı olarak kullanmamalı. <xref:System.Threading.Tasks.TaskScheduler> Yalnızca hata ayıklayıcı diğer tüm iş parçacıklarını askıya aldı olduğunda bir hata ayıklayıcıdan bu yöntemi çağır.
+ Bu yöntem iş parçacığı güvenli değildir ve bunu diğer örnekleriyle eşzamanlı olarak kullanmamalı. <xref:System.Threading.Tasks.TaskScheduler> Bu yöntemi yalnızca hata ayıklayıcı diğer tüm iş parçacıklarını askıya alınmış olduğunda bir hata ayıklayıcısından çağır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md)

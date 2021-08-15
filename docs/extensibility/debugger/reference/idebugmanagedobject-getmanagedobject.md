@@ -11,17 +11,18 @@ ms.assetid: 6abe1402-6aad-41e6-8ec1-ae12d5945992
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1aea4f233160f9bdcc5c18c1dda16b4e3f361540
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d4692d2f639d0f9feb0f47248ffaa3b7209594e97fc767136b32b422de5912a7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076946"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238833"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
 Yönetilen nesneyi temsil eden bir arabirim döndürür.

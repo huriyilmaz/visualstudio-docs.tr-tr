@@ -11,17 +11,18 @@ ms.assetid: 0fc3fcf5-d6a3-4a00-bf14-458b8645714e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c052e4995498c5b134126ceff39ac4ce3176311d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 306dfa4a8c4948c99b2d388120a4ac4757e83aaeb3b813df17d3bb9a0cc0ea10
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054341"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121323722"
 ---
 # <a name="idebugcoreserver3getservername"></a>IDebugCoreServer3::GetServerName
 Sunucunun adını alır.

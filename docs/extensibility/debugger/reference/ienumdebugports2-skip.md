@@ -1,6 +1,6 @@
 ---
-description: Bağlantı noktaları numaralandırmasında belirtilen sayıda öğeyi atlar.
-title: 'IEnumDebugPorts2:: Skip | Microsoft Docs'
+description: Bağlantı noktası numaralamada belirtilen sayıda öğenin üzerine atlar.
+title: IEnumDebugPorts2::| Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: a837383f-7b39-4e06-b336-f1715b073dbe
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 60ca2f50512b998683f497fa04ccca96cc746657
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ae4651b936cb61394cb5ce6b692e9c1d0461a46da09efe56d6528858c547b503
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052807"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238703"
 ---
 # <a name="ienumdebugports2skip"></a>IEnumDebugPorts2::Skip
-Belirtilen sayıda öğeyi atlar.
+Belirtilen öğe sayısını atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int Skip(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Atlanacak öğe sayısı.
+[in] Atlana öğe sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE` `celt` Kalan öğelerin sayısından büyükse döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. kalan `S_FALSE` `celt` öğe sayısından büyükse döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `celt`Kalan öğelerin sayısından daha büyük bir değer belirtiyorsa, numaralandırma sonuna ayarlanır ve `S_FALSE` döndürülür.
+ Kalan öğe sayısından büyük bir değer belirtirse, en sona ayarlanır `celt` ve `S_FALSE` döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)

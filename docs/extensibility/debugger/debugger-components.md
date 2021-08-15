@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklayıcı bileşenleri | Microsoft Docs
-description: Visual Studio hata ayıklayıcısı tarafından yönetilen ve VSPackage olarak uygulanan bir hata ayıklama oturumu oluşturan öğeler hakkında bilgi edinin.
+description: Visual Studio hata ayıklayıcı tarafından yönetilen ve vspackage olarak uygulanan bir hata ayıklama oturumu oluşturan öğeler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,14 +12,15 @@ ms.assetid: 8b8ab77f-a134-495c-be42-3bc51aa62dfb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c246bc00ee4f6fcead8404b3174da39f7b5ca2d
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: d2ebe084538388174d1c205ab101ade465c694f955c3f481598edb0b1da60827
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903989"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121324151"
 ---
 # <a name="debugger-components"></a>Hata ayıklayıcı bileşenleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı bir VSPackage olarak uygulanır ve hata ayıklama oturumunun tamamını yönetir. Hata ayıklama oturumu aşağıdaki öğeleri içerir:
@@ -36,7 +37,7 @@ ms.locfileid: "112903989"
 
 - **Sembol sağlayıcısı (SP):** Sembol işleyici olarak da bilinen, anlamlı bilgilerin sağlanması için bir programın hata ayıklama sembollerini programın çalışan bir örneğine eşler (örneğin, kaynak kodu düzeyinde hata ayıklama ve ifade değerlendirmesi). Tarafından uygulanır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (ortak dil çalışma zamanı [clr] sembolleri ve program veritabanı [pdb] sembol dosyası biçimi için) ve hata ayıklama bilgilerini depolamak için kendi özel bir yöntemine sahip üçüncü taraf satıcıları.
 
-  Aşağıdaki diyagramda, Visual Studio hata ayıklayıcının bu öğeleri arasındaki ilişki gösterilmektedir.
+  aşağıdaki diyagramda Visual Studio hata ayıklayıcının bu öğeleri arasındaki ilişki gösterilmektedir.
 
   ![Hata ayıklama bileşenlerine genel bakış](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")
 
@@ -51,7 +52,7 @@ ms.locfileid: "112903989"
 
  [İşletimsel modlar](../../extensibility/debugger/operational-modes.md) IDE 'nin çalışabileceği üç moda genel bakış sağlar: tasarım modu, çalıştırma modu ve kesme modu. Geçiş mekanizmaları de ele alınmıştır.
 
- [İfade değerlendirici](../../extensibility/debugger/expression-evaluator.md) Çalışma zamanında EE 'ın amacını açıklar.
+ [İfade değerlendirici](../../extensibility/debugger/expression-evaluator.md) çalışma zamanında EE amacını açıklar.
 
  [Sembol sağlayıcısı](../../extensibility/debugger/symbol-provider.md) Uygulamasının, sembol sağlayıcısının değişkenleri ve ifadeleri değerlendirme şeklini açıklar.
 

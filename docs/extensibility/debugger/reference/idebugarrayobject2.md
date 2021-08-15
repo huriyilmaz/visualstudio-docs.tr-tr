@@ -1,5 +1,5 @@
 ---
-description: Yönetilen bir dizi nesnesini temsil eder ve bir ifade değerlendiricisi (EE) dizi için temel dizini (alt sınır) belirlemesine izin verir.
+description: yönetilen bir dizi nesnesini temsil eder ve bir ifade değerlendiricisi (EE), dizi için temel dizini (alt sınır) belirlemesine izin verir.
 title: IDebugArrayObject2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,20 +9,21 @@ ms.assetid: be6e504d-4ab3-4141-a61b-0953ee0e038e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 169f4df61bcd4a58e74e0d83cee362b3926d2b36
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8f7509b56b577e17c3522191c1c16c3ba84f2419cda7763c0dcc8dbbd9d4ec1f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067575"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121323839"
 ---
 # <a name="idebugarrayobject2"></a>IDebugArrayObject2
 > [!IMPORTANT]
 > Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Yönetilen bir dizi nesnesini temsil eder ve bir ifade değerlendiricisi (EE) dizi için temel dizini (alt sınır) belirlemesine izin verir.
+ yönetilen bir dizi nesnesini temsil eder ve bir ifade değerlendiricisi (EE), dizi için temel dizini (alt sınır) belirlemesine izin verir.
 
 ## <a name="syntax"></a>Syntax
 

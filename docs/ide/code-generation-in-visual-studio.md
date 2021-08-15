@@ -1,24 +1,25 @@
 ---
 title: Kod oluşturma özellikleri
-description: Visual Studio 'Nun kodu oluşturma, çözme ve yeniden düzenleme konusunda nasıl yardımcı olabileceğini öğrenin.
+description: Visual Studio kodu oluşturmanıza, düzeltmenize ve yeniden oluşturmanıza nasıl yardımcı olabileceğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/11/2018
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63845d6dbfd8cffda9258690481253827b29754b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e8d82e1bab12c3393f6b5781c86219422727c0a2d163ab6aecdfdf86c6763599
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950464"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121233530"
 ---
-# <a name="code-generation-features-in-visual-studio"></a>Visual Studio 'da kod oluşturma özellikleri
+# <a name="code-generation-features-in-visual-studio"></a>Visual Studio kod oluşturma özellikleri
 
-Visual Studio 'Nun kodu oluşturma, çözme ve yeniden düzenleme konusunda size yardımcı olabilecek birçok yol vardır.
+Visual Studio kod oluşturmanıza, düzeltmenize ve yeniden oluşturmanıza yardımcı olabilecek birçok yol vardır.
 
 ## <a name="features"></a>Özellikler
 
@@ -29,7 +30,7 @@ Visual Studio 'Nun kodu oluşturma, çözme ve yeniden düzenleme konusunda size
 - Bir değişkeni yeniden adlandırmak, yöntem parametrelerini yeniden sıralamak veya bir türü dosya adı ile eşitlenmesi için birkaç kez yeniden [düzenleme](../ide/refactoring-in-visual-studio.md) yapabilirsiniz.
 
 > [!NOTE]
-> Visual Studio 'daki her dil hizmeti kendi kod oluşturma yeteneklerini sağlar, bu nedenle bazı özellikler yalnızca c# dilinde kullanılabilir ve bazıları hem C# hem de Visual Basic kullanılabilir.
+> Visual Studio her dil hizmeti kendi kod oluşturma yeteneklerini sağlar, bu nedenle bazı özellikler yalnızca c# dilinde kullanılabilir ve bazıları hem c# hem de Visual Basic kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

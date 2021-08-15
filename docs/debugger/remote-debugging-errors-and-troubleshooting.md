@@ -1,6 +1,6 @@
 ---
-title: Uzaktan hata ayıklama hataları ve sorun giderme | Microsoft Docs
-description: Visual Studio 'da ortak uzaktan hata ayıklama hatalarının bağlantılarını görüntüleyin. Uzaktan hata ayıklayıcı 'yı yönetici olarak çalıştırmayı öğrenin.
+title: Uzaktan Hata Ayıklama Hataları ve Sorun Giderme | Microsoft Docs
+description: Hata ayıklama sırasında sık karşılaşılan uzaktan hata ayıklama hatalarının bağlantılarını Visual Studio. Uzak hata ayıklayıcıyı yönetici olarak çalıştırmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,60 +20,61 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d046bfb0801229cd9f317ff2bcc8b715207ac2e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c53bcf0db2954c4edbf9ff5c8b04a62f8cbed0b883f0c0af57ddade5dfeb2916
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934591"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121310939"
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>Uzaktan Hata Ayıklama Hataları ve Sorun Giderme
 
-Uzaktan hata ayıklamaya çalışırken aşağıdaki hatalarda karşılaşabilirsiniz.
+Uzaktan hata ayıklamaya çalışırken aşağıdaki hatayla karşı karşıya gelebilirsiniz.
 
 - [Hata: Sunucunun İçine Otomatik Olarak Adımlanamıyor](../debugger/error-unable-to-automatically-step-into-the-server.md)
 
 - [Hata: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.](error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md)
 
-- [Microsoft Visual Studio bağlantı kurulamıyor Uzaktan Hata Ayıklama İzleyicisi](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
+- [Bağlan bağlantı Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
 
 - [Hata: Uzak Makine, Uzaktan Bağlantılar iletişim kutusunda görünmüyor](../debugger/error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md)
 
-## <a name="run-the-remote-debugger-as-an-administrator"></a>Uzaktan hata ayıklayıcıyı yönetici olarak çalıştır
+## <a name="run-the-remote-debugger-as-an-administrator"></a>Uzak hata ayıklayıcıyı yönetici olarak çalıştırma
 
-Uzaktan hata ayıklayıcıyı yönetici olarak çalıştırmazsanız sorunlarla karşılaşabilirsiniz. Örneğin, şu hatayı görebilirsiniz: "Visual Studio Uzaktan Hata Ayıklayıcı (MSVSMON.EXE) Bu işlemde hata ayıklamak için yeterli ayrıcalıklara sahip değil." Uzaktan hata ayıklayıcıyı bir uygulama olarak (hizmet değil) çalıştırıyorsanız, [farklı kullanıcı hesabı](error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md) hatası görebilirsiniz.
+Uzak hata ayıklayıcısını yönetici olarak çalıştırarak karşılaşabilirsiniz. Örneğin, şu hatayı alabilirsiniz: "Visual Studio Uzaktan Hata Ayıklayıcı (MSVSMON.EXE) bu işlemde hata ayıklamak için yeterli ayrıcalıklara sahip değil." Uzaktan hata ayıklayıcıyı bir uygulama olarak (hizmet olarak değil) çalıştırdısanız, farklı kullanıcı [hesabı hatasıyla karşılaşabilirsiniz.](error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md)
 
-### <a name="when-running-the-remote-debugger-as-a-service"></a>Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırırken
+### <a name="when-running-the-remote-debugger-as-a-service"></a>Uzak hata ayıklayıcısını hizmet olarak çalıştırma
 
-Uzaktan hata ayıklayıcıyı s hizmeti olarak çalıştırırken, birkaç nedenden dolayı onu yönetici olarak çalıştırmayı öneririz:
+Uzaktan hata ayıklayıcısını hizmet olarak çalıştırarak çeşitli nedenlerle yönetici olarak çalıştırmanız önerilir:
 
-- Uzaktan hata ayıklayıcı hizmeti yalnızca yöneticilerin bağlantılarına izin veriyor, bu nedenle, yönetici olarak çalıştırılarak sunulan yeni bir güvenlik riski **yoktur** .
+- Uzaktan hata ayıklayıcı hizmeti yalnızca yöneticilerden gelen  bağlantılara izin verir, bu nedenle yönetici olarak çalıştırarak yeni bir güvenlik riski yoktur.
 
-- Visual Studio kullanıcısının, uzak hata ayıklayıcı 'nın yaptığı bir işlemde hata ayıklamak için daha fazla haklara sahip olması nedeniyle oluşan hataları önleyebilir.
+- Bu, kullanıcının bir işlemde hata ayıklama Visual Studio hata ayıklamak için uzak hata ayıklayıcının sahip olduğu haklardan daha fazla olduğunda ortaya çıkan hataları önlenebilir.
 
 - Uzaktan hata ayıklayıcının kurulumunu ve yapılandırmasını basitleştirmek için.
 
-Uzaktan hata ayıklayıcı 'yı yönetici olarak çalıştırmadan hata ayıklamak mümkün olsa da, bu çalışmayı doğru şekilde yapmak için birkaç gereksinim vardır ve genellikle daha gelişmiş hizmet yapılandırma adımları gerektirir.
+Uzaktan hata ayıklayıcıyı yönetici olarak çalıştırmadan hata ayıklamak mümkün olabilir, ancak bunun doğru şekilde çalışması için çeşitli gereksinimler vardır ve bunlar genellikle daha gelişmiş hizmet yapılandırma adımları gerektirir.
 
-- Uzak makinede kullandığınız hesabın **hizmet olarak oturum açma** ayrıcalığına sahip olması gerekir. [Geri bağlama](error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md) hatası makalesinde "hizmet olarak oturum açma eklemek için" altındaki adımlara bakın.
+- Uzak makinede kullanmakta olan hesabın hizmet olarak oturum **açma ayrıcalığına sahip olması** gerekir. Geri bağlanamıyor hatası makalesinde "Hizmet olarak oturum açma eklemek için" [altındaki adımlara](error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md) bakın.
 
-- Hesap, hedef işlemde hata ayıklamak için haklara sahip olmalıdır. Bu hakları almak için, uzaktan hata ayıklayıcıyı hata ayıklamakta olan işlemle aynı hesap altında çalıştırmalısınız. (Daha kolay alternatif, hizmeti yönetici olarak çalıştırmaktır.) 
+- Hesabın hedef işlemde hata ayıklama haklarına sahip olması gerekir. Bu hakları almak için, uzaktan hata ayıklayıcıyı hata ayıklama işlemiyle aynı hesap altında çalıştırmanız gerekir. (Daha kolay bir alternatif, hizmeti yönetici olarak çalıştırmaktır.) 
 
-- Hesabın, ağ üzerinden Visual Studio bilgisayar ile (kimlik doğrulaması yapılan) geri bağlanabilmesi gerekir. Bir etki alanında, uzaktan hata ayıklayıcı yerleşik yerel sistem veya ağ hizmeti hesapları ya da bir etki alanı hesabı altında çalışıyorsa, tekrar bağlanmak daha kolay olur. Yerleşik hesaplar güvenlik riski sunan yükseltilmiş güvenlik ayrıcalıklarına sahiptir.
+- Hesabın, ağ üzerinden bir bilgisayara bağlanarak (kimlik doğrulaması Visual Studio) olması gerekir. Bir etki alanında, uzak hata ayıklayıcı yerleşik Yerel Sistem veya Ağ Hizmeti hesapları veya bir etki alanı hesabı altında çalışıyorsa, geri bağlanmak daha kolaydır. Yerleşik hesaplar, güvenlik riski sunacak yükseltilmiş güvenlik ayrıcalıklarına sahiptir.
 
-### <a name="when-running-the-remote-debugger-as-an-application-normal-mode"></a>Uzaktan hata ayıklayıcıyı bir uygulama olarak çalıştırırken (normal mod)
+### <a name="when-running-the-remote-debugger-as-an-application-normal-mode"></a>Uzak hata ayıklayıcıyı uygulama olarak (normal mod) çalıştırma
 
-Kendi yükseltilmemiş işleminizi (örneğin, normal bir uygulama) eklemeye çalışıyorsanız, uzaktan hata ayıklayıcıyı yönetici olarak çalıştırıyor olmanız da önemlidir.
+Kendi yükseltilmiş olmayan işleminize (normal bir uygulama gibi) eklemeye çalışıyorsanız, uzak hata ayıklayıcıyı yönetici olarak çalıştırmanız önemli değildir.
 
-Uzaktan hata ayıklayıcıyı birkaç senaryoda yönetici olarak çalıştırmak istiyorsunuz:
+Uzak hata ayıklayıcısını çeşitli senaryolarda yönetici olarak çalıştırmak istiyorsunuz:
 
-- Başka bir kullanıcı olarak çalışan işlemlere (örneğin, IIS hata ayıklaması sırasında) eklemek istiyorsanız veya
+- Başka bir kullanıcı olarak çalışan işlemlere (örneğin IIS'de hata ayıklarken) eklemek veya
 
-- Başka bir işlem başlatmaya çalışıyorsunuz ve başlatmak istediğiniz işlem bir yönetici.
+- Başka bir işlem başlatmaya çalışıyorsunuz ve başlatmak istediğiniz işlem bir yöneticidir.
 
-İşlemleri başlatmak istiyorsanız, yönetici olarak **çalıştırmak istemezsiniz ve** başlatmak istediğiniz işlem **yönetici olmamalıdır.**
+İşlemleri  başlatmak için yönetici olarak çalıştırmak istemiyorsunuz ve başlatmak istediğiniz işlem **yönetici** olmayacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

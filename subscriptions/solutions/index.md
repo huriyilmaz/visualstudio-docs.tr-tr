@@ -1,20 +1,20 @@
 ---
-title: Abonelikler destek çözümleri
-description: Abonelikler için INCLUDE dosyalarının listesi Visual Studio pencere öğesi içeriğini destekler
+title: Abonelik destek çözümleri
+description: Visual Studio abonelikler için dosya içerir pencere öğesi içeriğini destekler
 ms.topic: conceptual
 ms.assetid: 478648b9-f6f0-4ea3-83b4-5cffa196a496
 robots: noindex, nofollow
 author: evanwindom
 ms.author: v-evwin
 ms.date: 12/07/2020
-ms.openlocfilehash: da284ea9403e4aab929e175f95508cc16684fc60
-ms.sourcegitcommit: a740129796159a69c704d9d372edaa7a7f191d17
+ms.openlocfilehash: 85eb4222cf69c678844df34f0b2e2426151211d451ca4191aaffa647c5985e30
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111530448"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121241787"
 ---
-# <a name="visual-studio-subscriptions-support-widget-content-includes-files"></a>Visual Studio abonelikleri pencere öğesi içeriğini IÇERIR dosyaları destekler
+# <a name="visual-studio-subscriptions-support-widget-content-includes-files"></a>Visual Studio abonelikleri destek pencere öğesi içeriği dosyaları içerir
 
 ## <a name="admin-solutions"></a>Yönetici çözümleri
 
@@ -43,9 +43,9 @@ ms.locfileid: "111530448"
 
 [!INCLUDE [Unable to see Azure monthly credit in Azure portal](benefit-activation/includes/unable-to-see-azure-monthly-credit-in-azure-portal.md)]
 
-## <a name="download-activate-or-use-software"></a>Yazılımı indirme, etkinleştirme veya kullanma
+## <a name="download-activate-or-use-software"></a>Yazılım indirin, etkinleştirin veya kullanın
 
-### <a name="downloads-and-activations"></a>İndirmeler ve etkinleştirmeler
+### <a name="downloads-and-activations"></a>İndirmeler ve etkinleştirmeleri
 [!INCLUDE [Unable to download non-Visual Studio software](downloading-activating-or-using-software/downloading-activating-or-using-software/includes/unable-to-download-software-non-visualstudio.md)]
 
 [!INCLUDE [Unable to download Visual Studio Community](downloading-activating-or-using-software/downloading-activating-or-using-software/includes/unable-to-download-visual-studio-community.md)]
@@ -88,16 +88,16 @@ ms.locfileid: "111530448"
 
 [!INCLUDE [Portal outage](portal-issue/includes/portal-outage.md)]
 
-## <a name="purchase-renew-or-cancel-subscriptions"></a>Abonelik satın alma, yenileme veya iptal etme
+## <a name="purchase-renew-or-cancel-subscriptions"></a>Abonelikleri satın alma, yenileme veya iptal etme
 
-### <a name="help-with-purchases"></a>Satın almalarla ilgili yardım
+### <a name="help-with-purchases"></a>Satın alımlarla ilgili yardım
 [!INCLUDE [Help me purchase via Marketplace](renewing-purchasing-or-canceling/help-purchasing/includes/help-me-purchase-marketplace.md)]
 
 [!INCLUDE [Help me purchase via Microsoft Store](renewing-purchasing-or-canceling/help-purchasing/includes/help-me-purchase-microsoft-store.md)]
 
 [!INCLUDE [Where can I purchase](renewing-purchasing-or-canceling/help-purchasing/includes/where-can-i-purchase-from.md)]
 
-### <a name="help-with-renewals"></a>Yenilemelerle ilgili yardım
+### <a name="help-with-renewals"></a>Yenilemeler hakkında yardım
 [!INCLUDE [Help me renew via Marketplace](renewing-purchasing-or-canceling/help-renewing/includes/help-me-renew-marketplace.md)]
 
 [!INCLUDE [Help me renew via Microsoft Store](renewing-purchasing-or-canceling/help-renewing/includes/help-me-renew-microsoft-store.md)]

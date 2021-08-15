@@ -1,29 +1,30 @@
 ---
 title: Birim testi Python kodu
-description: Visual Studio 'da Python kodu için birim testi ayarlamak, test Gezgini özelliklerinden yararlanarak testleri bulmaya, çalıştırmaya ve hata ayıklamanıza yönelik tüm avantajlardan yararlanır.
+description: Visual Studio'da Python kodu için birim testi ayarlama, testleri bulmak, çalıştırmak ve hata ayıklamak için Test Gezgini özelliklerinden tam olarak faydalanabilir.
 ms.date: 09/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aec13b3b35c75ecaad938cd3200f3af2a87d2441
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5c638a099f51a3ee7ca80d1d52d2b0a8e16c77a10889a2f118f5a5930602c9e5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920653"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121245063"
 ---
 # <a name="set-up-unit-testing-for-python-code"></a>Python kodu için birim testi ayarlama
 
-Birim testleri, bir uygulamadaki diğer kod birimlerini test eden kod parçaları, genellikle yalıtılmış işlevler, sınıflar vb. Bir uygulama tüm birim testlerini geçtiğinde, en az güvenlik düzeyi işlevinin doğru olduğundan emin olabilirsiniz.
+Birim testleri, bir uygulamanın diğer kod birimlerini, genellikle yalıtılmış işlevleri, sınıfları ve diğer işlevleri test etmek için kullanılan kod parçalarıdır. Bir uygulama tüm birim testlerini geçtiğinde, en azından alt düzey işlevlerinin doğru olduğuna güvenebilirsiniz.
 
-Python, bir program tasarlarken senaryoları doğrulamak için birim testlerini kapsamlı bir şekilde kullanır. Visual Studio 'da Python desteği, testleri ayrı olarak çalıştırmaya gerek kalmadan geliştirme sürecinizin bağlamı dahilinde birim testlerini bulma, yürütme ve hata ayıklama işlemlerini içerir.
+Python, bir program tasarlarken senaryoları doğrulamak için birim testlerini yaygın olarak kullanır. Visual Studio Python desteği, testleri ayrı olarak çalıştırmaya gerek kalmadan geliştirme süreciniz bağlamında birim testlerini keşfetmeyi, yürütmeyi ve hata ayıklamayı içerir.
 
-Bu makalede, Visual Studio 'da Python ile birim testi özelliklerine ilişkin kısa bir ana hat sunulmaktadır. Genel olarak birim testi hakkında daha fazla bilgi için bkz. [birim testi kodunuz](../test/unit-test-your-code.md).
+Bu makalede, Python ile çalışma sırasındaki birim testi özelliklerine Visual Studio özetle velanmıştır. Genel olarak birim testi hakkında daha fazla bilgi için [bkz. Kodunuzu birim testi.](../test/unit-test-your-code.md)
 
 ::: moniker range="vs-2017"
 

@@ -8,14 +8,15 @@ ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 6def442b6500ac1265f83aef49db8c79c8e05ae7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d665adbf7640b0c8d5d2489ee75c22ef9e41603954dd812b9f8984ab789b55a0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971680"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121243438"
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>Nasıl Yapılır: Araç Kutusuna Etkinlik Ekleme
 
@@ -23,14 +24,14 @@ Etkinlikler çözümünüzdeki **araç kutusuna** birkaç farklı şekilde eklen
 
 ## <a name="to-add-an-activity-from-within-your-current-project"></a>Geçerli projenizin içinden etkinlik eklemek için
 
-1. Geçerli iş akışı projenize yeni bir özel etkinlik ekleyin. Projenize yeni bir özel etkinlik ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir Iş akışı projesine yeni öğe ekleme](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project.md).
+1. Geçerli iş akışı projenize yeni bir özel etkinlik ekleyin. Projenize yeni bir özel etkinlik ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir Iş akışına yeni öğe ekleme Project](../workflow-designer/how-to-add-a-new-item-to-a-workflow-project.md).
 
 2. Etkinliğinizi özel mantık ekleyin.
 
 3. Projeyi derleyin. Yapı başarılı olduysa, "" adlı **araç kutusu** içindeki ve \<*project name*> Bu kategoriye dahil olan özel etkinlik içeren yeni bir kategori görüntülenir.
 
     > [!NOTE]
-    > Araç kutusu sıfırlandığında, çözüm yeniden derlense bile özel etkinlikler kaldırılır. Araç kutusunu, sıfırlandıktan sonra özel etkinliklerle yeniden doldurmak için Visual Studio 'Yu yeniden başlatın.
+    > Araç kutusu sıfırlandığında, çözüm yeniden derlense bile özel etkinlikler kaldırılır. Araç kutusunu sıfırlandıktan sonra özel etkinliklerle yeniden doldurmak için Visual Studio yeniden başlatın.
 
     > [!NOTE]
     > Araç kutusu yalnızca belirli bir adın bir etkinliğini gösterebilir. Farklı derlemelerden iki etkinlik aynı sınıf adına sahip ise, yalnızca bir tane görüntülenir.
