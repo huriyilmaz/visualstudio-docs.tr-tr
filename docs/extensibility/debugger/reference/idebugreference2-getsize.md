@@ -11,17 +11,18 @@ ms.assetid: a404ddd9-d940-4513-97cd-f52b8ab6a560
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 061b4422efced1480a8f42cf39b7fdb648834b3b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a398902d8af9c453eb156a50a83c95cbd9f64f0ac164de602f848b3bc4849c65
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075841"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292162"
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
 Başvurunun değerinin bayt cinsinden boyutunu alır. Daha sonraki kullanımlar için ayrılmıştır.

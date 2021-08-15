@@ -1,5 +1,5 @@
 ---
-description: Belirtilen modüldeki bir belge konumunu hata ayıklama adresleri dizisine eşler.
+description: belirtilen modüldeki bir belge konumunu hata ayıklama adresleri dizisine Haritalar.
 title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -12,20 +12,21 @@ ms.assetid: f901c66e-f53c-4ea0-8004-d8fcbf46f916
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d19b54e5e2d35791d160c5deb6eb06ee0431f978
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5c4d8559b3983f991561a3c2ace6901e405967b12250cd2ba011012f7bc6a7ec
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088217"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452231"
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-Belirtilen modüldeki bir belge konumunu hata ayıklama adresleri dizisine eşler.
+belirtilen modüldeki bir belge konumunu hata ayıklama adresleri dizisine Haritalar.
 
 ## <a name="syntax"></a>Sözdizimi
 

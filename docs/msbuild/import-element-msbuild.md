@@ -1,6 +1,6 @@
 ---
 title: İçeri aktarma öğesi (MSBuild) | Microsoft Docs
-description: MSBuild 'in bir proje dosyasının içeriğini başka bir proje dosyasına aktarmak için Içeri aktarma öğesini nasıl kullandığını öğrenin.
+description: MSBuild bir proje dosyasının içeriğini başka bir proje dosyasına aktarmak için içeri aktarma öğesini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: 3bfecaf1-69fd-4008-b651-c9dafd4389d9
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c3a0d22019a0c7722b135392c53c7f9bfbcaab69
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5fdd8c896c46bb6e9a15a2efcd2fa56ed00e02bb579ab987ce12a5e429c3d9c6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914104"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270698"
 ---
 # <a name="import-element-msbuild"></a>İçeri aktarma öğesi (MSBuild)
 
@@ -55,7 +56,7 @@ Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.
 
 ### <a name="child-elements"></a>Alt öğeleri
 
- Yok
+ Hiçbiri
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -68,19 +69,19 @@ Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.
 
  `Import`Öğesini kullanarak, birçok proje dosyası için ortak olan kodu yeniden kullanabilirsiniz. Bu, paylaşılan kodda yaptığınız tüm güncelleştirmeler tarafından içeri aktarılan tüm projelere yayıldığından, kodun korunmasını kolaylaştırır.
 
- Kurala göre, paylaşılan içe aktarılan proje dosyaları *. targets* dosyaları olarak kaydedilir, ancak standart MSBuild proje dosyalarıdır. MSBuild, farklı bir dosya adı uzantısına sahip bir projeyi içeri aktarmaya engel olmaz, ancak *. targets* uzantısını tutarlılık için kullanmanızı öneririz.
+ kurala göre, paylaşılan içe aktarılan proje dosyaları *. targets* dosyaları olarak kaydedilir, ancak bunlar standart MSBuild proje dosyalarıdır. MSBuild, farklı bir dosya adı uzantısına sahip bir projeyi içeri aktarmamalarını engellemez, ancak *. targets* uzantısını tutarlılık için kullanmanızı öneririz.
 
  İçeri aktarılan projelerdeki göreli yollar, içeri aktarılan projenin dizinine göre yorumlanır. (bu paragrafın ilerleyen kısımlarında açıklanan bazı özel durumlarla birlikte). Bu nedenle, bir proje dosyası farklı konumlarda birkaç proje dosyasına aktarılmışsa, içeri aktarılan proje dosyasındaki göreli yollar, içeri aktarılan her proje için farklı şekilde yorumlanacak. İki özel durum vardır. Tek bir özel durum `Import` , öğelerinde her zaman öğesi içeren projeye göre yorumlanan yoldur `Import` . Başka bir özel durum, `UsingTask` her zaman `AssemblyFile` öğesi içeren dosyaya göreli olarak özniteliğin göreli yolunu yorumladığı durumdur `UsingTask` .
 
- İçeri aktarılan bir projede başvurulan, ve gibi proje dosyası ile ilgili tüm MSBuild ayrılmış özelliklerine, `MSBuildProjectDirectory` `MSBuildProjectFile` içeri aktarma projesi dosyasına göre değerler atanır.
+ içeri aktarılan bir projede başvurulan, ve gibi proje dosyası ile ilgili tüm MSBuild ayrılmış özelliklerine, `MSBuildProjectDirectory` `MSBuildProjectFile` içeri aktarma projesi dosyasına göre değerler atanır.
 
- İçeri aktarılan projenin bir `DefaultTargets` özniteliği yoksa, içeri aktarılan projeler içeri aktarıldıkları sırada incelenir ve ilk keşfedilen `DefaultTargets` özniteliğin değeri kullanılır. Örneğin, ProjectA, ProjectB ve ProjectC 'yi (Bu sırada) içeri aktardığında ve ProjectB, ProjectD içeri aktardığında, MSBuild öncelikle `DefaultTargets` ProjectA, sonra ProjectB, sonra ProjectD ve finally ProjectC ' de belirtilen şekilde görünür.
+ İçeri aktarılan projenin bir `DefaultTargets` özniteliği yoksa, içeri aktarılan projeler içeri aktarıldıkları sırada incelenir ve ilk keşfedilen `DefaultTargets` özniteliğin değeri kullanılır. örneğin, projecta, projectb ve projectc 'yi (bu sırada) içeri aktardığında ve projectb içeri aktardığında, MSBuild önce `DefaultTargets` projecta, sonra projectb, sonra projectd ve finally projectc ' de belirtilen şekilde görünür.
 
  İçeri aktarılan projenin şeması, standart bir proje ile aynıdır. MSBuild içeri aktarılan bir proje oluşturabiliyor olsa da, içeri aktarılan bir proje genellikle hangi özelliklerin ayarlanacağı veya hedeflerin çalıştırılacağı sıra hakkında bilgi içermediği için olası bir olasılıktır. İçeri aktarılan proje, bu bilgileri sağlamak için içeri aktarıldığı projeye bağlıdır.
 
 ## <a name="wildcards"></a>Joker karakterler
 
- .NET Framework 4 ' te, MSBuild proje özniteliğinde Joker karakterlere izin verir. Joker karakterler olduğunda, bulunan tüm eşleşmeler sıralanır (reproducibility için) ve ardından sipariş açıkça ayarlanmış gibi bu sırayla içeri aktarılır.
+ .NET Framework 4 ' te, MSBuild Project özniteliğinde joker karakterlere izin verir. Joker karakterler olduğunda, bulunan tüm eşleşmeler sıralanır (reproducibility için) ve ardından sipariş açıkça ayarlanmış gibi bu sırayla içeri aktarılır.
 
  Bu, başka birinin dosya adını içeri aktarma dosyasına açıkça eklemenize gerek kalmadan bir dosyayı içeri aktarabilmesi için bir genişletilebilirlik noktası sunmak istiyorsanız yararlıdır. Bu amaçla, *Microsoft. Common. targets* dosyanın en üstünde aşağıdaki satırı içerir.
 
@@ -117,5 +118,5 @@ Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

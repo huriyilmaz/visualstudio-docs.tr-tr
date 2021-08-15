@@ -1,6 +1,6 @@
 ---
-title: "&lt;Description &gt; öğesi (Visual Studio 'Da Office geliştirme)"
-description: Vstov4 ad alanının açıklama öğesinin, COM eklentileri iletişim kutusunda görüntülenen Office çözümünün açıklamasını depoladığını öğrenin.
+title: '&lt;description &gt; öğesi (Visual Studio Office geliştirme)'
+description: vstov4 ad alanının açıklama öğesinin, COM eklentileri iletişim kutusunda görünen Office çözümü için açıklama depoladığını öğrenin.
 titleSuffix: ''
 ms.custom: secdec18, SEO-VS-2020
 ms.date: 02/02/2017
@@ -15,17 +15,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9f065dd07e901ee0d59b39f1096cc351cd70bc02
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24377ea58285a87372a590b267ad3301e5bd4d284879cfb44337e0beaaa3cb2c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897602"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121268410"
 ---
-# <a name="ltdescriptiongt-element-office-development-in-visual-studio"></a>&lt;Description &gt; öğesi (Visual Studio 'Da Office geliştirme)
-  `description`Ad alanı öğesi, `vstov4` MICROSOFT OFFICE uygulamaların com eklentileri iletişim kutusunda görüntülenen Office çözümünün açıklamasını depolar.
+# <a name="ltdescriptiongt-element-office-development-in-visual-studio"></a>&lt;description &gt; öğesi (Visual Studio Office geliştirme)
+  `description`ad alanı öğesi, `vstov4` Microsoft Office uygulamalarının COM eklentileri iletişim kutusunda görünen Office çözümünün açıklamasını depolar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +40,10 @@ ms.locfileid: "99897602"
 
  `description`Öğesinde hiç öznitelik veya öğe yok.
 
-## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
+## <a name="vsto-add-in-example"></a>VSTO Eklenti örneği
 
-### <a name="description"></a>Description
- Aşağıdaki kod örneği, `description` kullanılarak dağıtılan bir uygulama düzeyi çözümünün öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+### <a name="description"></a>Açıklama
+ Aşağıdaki kod örneği, `description` kullanılarak dağıtılan bir uygulama düzeyi çözümünün öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . bu kod örneği, [Office çözümleri için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -57,4 +58,4 @@ ms.locfileid: "99897602"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [uygulama bildirimini ClickOnce](../deployment/clickonce-application-manifest.md)

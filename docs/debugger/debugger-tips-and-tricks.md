@@ -1,6 +1,6 @@
 ---
-title: Hata Ayıklayıcıdaki ipuçları ve püf noktaları
-description: Visual Studio hata ayıklayıcısı tarafından desteklenen daha az bilinen özelliklerden bazıları hakkında bilgi edinin
+title: hata ayıklayıcıda İpuçları ve püf noktaları
+description: Visual Studio hata ayıklayıcı tarafından desteklenen daha az bilinen özelliklerden bazıları hakkında bilgi edinin
 ms.custom: seodec18
 ms.date: 06/15/2018
 ms.topic: conceptual
@@ -12,18 +12,19 @@ ms.assetid: 5262d8b1-2648-429e-85d5-90fcaadfb362
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d5b934c0e9532bd3bc1f53d9b00d1cc8273f4120
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 342386b8e9c0ae3a25639857cf508223a3e57c73955917ff551959859caa3e7f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872995"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454620"
 ---
-# <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı için üretkenlik Ipuçları ve püf noktaları öğrenin
+# <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio hata ayıklayıcı için üretkenlik İpuçları ve püf noktaları öğrenin
 
-Visual Studio hata ayıklayıcısı için birkaç üretkenlik ipucu ve püf noktası öğrenmek için bu konuyu okuyun. Hata ayıklayıcının temel özelliklerine bakmak için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md). Bu konu başlığında, Özellik turuna dahil olmayan bazı bölümler ele alınmaktadır.
+Visual Studio hata ayıklayıcı için birkaç üretkenlik ipucu ve püf noktası öğrenmek için bu konuyu okuyun. Hata ayıklayıcının temel özelliklerine bakmak için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md). Bu konu başlığında, Özellik turuna dahil olmayan bazı bölümler ele alınmaktadır.
 
 ## <a name="pin-data-tips"></a>Veri sabitleme ipuçları
 
@@ -33,7 +34,7 @@ Hata ayıklama sırasında sıklıkla veri ipuçları üzerine geldiğinizde, h�
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c"></a>Kodunuzu düzenleyin ve hata ayıklamaya devam edin (C#, VB, C++)
 
-Visual Studio 'nun desteklediği çoğu dilde kodunuzu bir hata ayıklama oturumunun ortasında düzenleyebilir ve hata ayıklamaya devam edebilirsiniz. Bu özelliği kullanmak için, hata ayıklayıcıda duraklama, düzenleme yapın ve hata ayıklamaya devam etmek için **F5**, **F10** veya **F11** tuşuna basın.
+Visual Studio tarafından desteklenen çoğu dilde, kodunuzu hata ayıklama oturumunun ortasında düzenleyebilir ve hata ayıklamaya devam edebilirsiniz. Bu özelliği kullanmak için, hata ayıklayıcıda duraklama, düzenleme yapın ve hata ayıklamaya devam etmek için **F5**, **F10** veya **F11** tuşuna basın.
 
 ![Düzenle ve hata ayıklamayı Sürdür](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
 
@@ -51,15 +52,15 @@ Uygulamanızda belirli bir durumu yeniden oluşturmak zor veya zaman alıyorsa, 
 
 1. Kesme noktası simgesine (kırmızı top) sağ tıklayın ve **koşullar**' ı seçin.
 
-2. **Kesme noktası ayarları** penceresinde bir ifade yazın.
+2. **kesme noktası Ayarlar** penceresinde bir ifade yazın.
 
     ![Koşullu kesme noktası](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
 
-3. Başka bir tür koşulla ilgileniyorsanız, **kesme noktası ayarları** Iletişim kutusunda **koşullu ifade** yerine **filtre** ' yi seçin ve ardından filtre ipuçlarını izleyin.
+3. başka bir tür koşulla ilgileniyorsanız, **kesme noktası Ayarlar** iletişim kutusunda **koşullu ifade** yerine **filtre** ' yi seçin ve ardından filtre ipuçlarını izleyin.
 
 ## <a name="configure-the-data-to-show-in-the-debugger"></a>Hata ayıklayıcıda gösterilecek verileri yapılandırın
 
-C#, Visual Basic ve C++ için (yalnızca C++/CLı), hata ayıklayıcısına [DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md) özniteliğini kullanarak hangi bilgilerin gösterileceğini söyleyebilirsiniz. C++ kodu için, [Natvis görselleştirmelerini](create-custom-views-of-native-objects.md)kullanarak aynı yapabilirsiniz.
+C#, Visual Basic ve c++ için (yalnızca C++/clı), hata ayıklayıcısına [debuggerdisplay](../debugger/using-the-debuggerdisplay-attribute.md) özniteliğini kullanarak hangi bilgilerin gösterileceğini söyleyebilirsiniz. C++ kodu için, [Natvis görselleştirmelerini](create-custom-views-of-native-objects.md)kullanarak aynı yapabilirsiniz.
 
 ## <a name="change-the-execution-flow"></a>Yürütme akışını değiştirme
 
@@ -82,7 +83,7 @@ Yürütme akışını değiştirerek, farklı kod yürütme yollarını test etm
 
 2. Hata ayıklayıcıyı (**F5**) başlatın ve kesme noktasında durun.
 
-3. **Yereller** penceresinde değişkeni bulun (**hata ayıklama > Windows > Yereller**), değişkenine sağ tıklayın ve **nesne kimliğini yap**' ı seçin.
+3. değişkeni **yereller** penceresinde (**hata ayıkla > Windows > yereller**) bulun, değişkenine sağ tıklayın ve **nesne kimliğini yap**' ı seçin.
 
     ![Nesne KIMLIĞI oluşturma](../debugger/media/dbg-tips-watch-create-object-id.png "CreateObjectID")
 
@@ -94,11 +95,11 @@ Daha fazla bilgi için bkz. [nesne kimliği oluşturma](../debugger/watch-and-qu
 
 ## <a name="view-return-values-for-functions"></a>İşlevler için dönüş değerlerini görüntüle
 
-İşlevlerinizin dönüş değerlerini görüntülemek için, kodunuzla adımlarken, **oto** penceresinde görüntülenen işlevlere bakın. Bir işlevin dönüş değerini görmek için, ilgilendiğiniz işlevin zaten çalıştırılmış olduğundan emin olun (işlev çağrısında halen durduysanız **F10** tuşuna basın). Pencere kapalıysa, **hata ayıklama > Windows > oto** ' ı kullanarak **oto** penceresini açın.
+İşlevlerinizin dönüş değerlerini görüntülemek için, kodunuzla adımlarken, **oto** penceresinde görüntülenen işlevlere bakın. Bir işlevin dönüş değerini görmek için, ilgilendiğiniz işlevin zaten çalıştırılmış olduğundan emin olun (işlev çağrısında halen durduysanız **F10** tuşuna basın). pencere kapalıysa, **oto** **> hata ayıkla Windows >** oto penceresini açın.
 
 ![Oto penceresi](../debugger/media/dbg-tips-autos-window.png "Oto penceresi")
 
-Ayrıca, dönüş değerlerini görüntülemek için **komut** penceresine işlevler girebilirsiniz. ( **Hata ayıklama > Windows > anında** kullanarak açın.)
+Ayrıca, dönüş değerlerini görüntülemek için **komut** penceresine işlevler girebilirsiniz. ( **hemen > hata ayıklama > Windows** kullanarak açın.)
 
 ![Komut penceresi](../debugger/media/dbg-tips-immediate-window.png "ImmediateWindow")
 
@@ -118,11 +119,11 @@ Hata ayıklayıcı penceresinde görünen veri kümesi ve DataTable nesneleri gi
 
 ## <a name="break-into-code-on-handled-exceptions"></a>İşlenmiş özel durumlarla ilgili koda Böl
 
-Hata ayıklayıcı, işlenmeyen özel durumlarla kodunuzda sizi sonlandırır. Ancak, işlenen özel durumlar (bir blok içinde oluşan özel durumlar gibi `try/catch` ) bir hata kaynağı olabilir ve ne zaman meydana getirilebilecekleri araştırmak isteyebilirsiniz. Hata ayıklayıcıyı işlenmiş özel durumlar için koda bölmek ve **özel durum ayarları** iletişim kutusundaki seçenekleri yapılandırmak için yapılandırabilirsiniz. **Hata ayıkla > Windows > özel durum ayarları**' nı seçerek bu iletişim kutusunu açın.
+Hata ayıklayıcı, işlenmeyen özel durumlarla kodunuzda sizi sonlandırır. Ancak, işlenen özel durumlar (bir blok içinde oluşan özel durumlar gibi `try/catch` ) bir hata kaynağı olabilir ve ne zaman meydana getirilebilecekleri araştırmak isteyebilirsiniz. hata ayıklayıcıyı işlenmiş özel durumlar için koda bölmek ve **özel durum Ayarlar** iletişim kutusundaki seçenekleri yapılandırmak için yapılandırabilirsiniz. **hata ayıkla > Windows > özel durum Ayarlar**' i seçerek bu iletişim kutusunu açın.
 
-**Özel durum ayarları** iletişim kutusu, hata ayıklayıcıya belirli özel durumlarda koda bölünmeyle karşılaşmalarını sağlar. Aşağıdaki çizimde, hata ayıklayıcı her gerçekleştiğinde kodunuzda kesilir `System.NullReferenceException` . Daha fazla bilgi için bkz. [özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md).
+**özel durum Ayarlar** iletişim kutusu, hata ayıklayıcıya belirli özel durumlarda koda bölünmeyle karşılaşmalarını sağlar. Aşağıdaki çizimde, hata ayıklayıcı her gerçekleştiğinde kodunuzda kesilir `System.NullReferenceException` . Daha fazla bilgi için bkz. [özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md).
 
-![Özel durum ayarları Iletişim kutusu](../debugger/media/dbg-tips-exception-settings.png "ExceptionSettingsDialogBox")
+![özel durum Ayarlar iletişim kutusu](../debugger/media/dbg-tips-exception-settings.png "ExceptionSettingsDialogBox")
 
 ## <a name="debug-deadlocks-and-race-conditions"></a>Hata ayıklama kilitlenmeleri ve yarış koşulları
 
@@ -154,11 +155,11 @@ Daha fazla ayrıntı görüntülemek için Özet görünümünde bir işlem seç
 Daha fazla bilgi için bkz. [ağ kullanımı](../profiling/network-usage.md).
 ::: moniker-end
 
-## <a name="get-more-familiar-with-how-the-debugger-attaches-to-your-app-c-c-visual-basic-f"></a><a name="modules_window"></a> Hata ayıklayıcının uygulamanıza nasıl ilişi hakkında daha fazla bilgi edinin (C#, C++, Visual Basic, F #)
+## <a name="get-more-familiar-with-how-the-debugger-attaches-to-your-app-c-c-visual-basic-f"></a><a name="modules_window"></a>hata ayıklayıcının uygulamanıza nasıl ilişi hakkında daha fazla bilgi edinin (C#, C++, Visual Basic, F #)
 
-Çalışan uygulamanıza iliştirmek için hata ayıklayıcı, hata ayıklamaya çalıştığınız uygulamanın tam olarak aynı derlemesi için oluşturulan sembol (. pdb) dosyalarını yükler. Bazı senaryolarda sembol dosyalarının küçük bir bilgisi yararlı olabilir. Visual Studio 'Nun, **modüller** penceresini kullanarak sembol dosyalarını nasıl yüklediğini inceleyebilirsiniz.
+Çalışan uygulamanıza iliştirmek için hata ayıklayıcı, hata ayıklamaya çalıştığınız uygulamanın tam olarak aynı derlemesi için oluşturulan sembol (. pdb) dosyalarını yükler. Bazı senaryolarda sembol dosyalarının küçük bir bilgisi yararlı olabilir. **modüller** penceresini kullanarak Visual Studio sembol dosyalarını nasıl yüklediğini inceleyebilirsiniz.
 
-Hata ayıklama **> Windows > modülleri**'Ni seçerek **modüller** penceresini açın. **Modüller** penceresi, hata ayıklayıcının Kullanıcı kodu veya [*kodum*](../debugger/just-my-code.md)olarak hangi modülleri olduğunu ve modülün sembol yükleme durumunu söyleyebilir. Çoğu senaryoda, hata ayıklayıcı Kullanıcı kodu için sembol dosyalarını otomatik olarak bulur, ancak .NET kodu, sistem kodu veya üçüncü taraf kitaplık kodu içine (veya hata ayıklama) geçmek istiyorsanız, doğru sembol dosyalarını almak için ek adımlar gereklidir.
+hata ayıklama **> Windows > modüller**' i seçerek **modüller** penceresini açın. **Modüller** penceresi, hata ayıklayıcının Kullanıcı kodu veya [*kodum*](../debugger/just-my-code.md)olarak hangi modülleri olduğunu ve modülün sembol yükleme durumunu söyleyebilir. Çoğu senaryoda, hata ayıklayıcı Kullanıcı kodu için sembol dosyalarını otomatik olarak bulur, ancak .NET kodu, sistem kodu veya üçüncü taraf kitaplık kodu içine (veya hata ayıklama) geçmek istiyorsanız, doğru sembol dosyalarını almak için ek adımlar gereklidir.
 
 ![Modüller penceresinde sembol bilgilerini görüntüleme](../debugger/media/dbg-tips-modules-window.png "Viewsymbolınformation")
 
@@ -166,14 +167,14 @@ Sembol bilgilerini doğrudan **modüller** penceresinden, sağ tıklayıp **semb
 
 Bazen, uygulama geliştiricileri, eşleşen sembol dosyaları olmadan (parmak izini azaltmak için) uygulamaları teslim eder, ancak daha sonra yayınlanan bir sürümün hatalarını ayıklayabilmeleri için eşleşen sembol dosyalarının bir kopyasını derleme için saklayın.
 
-Hata ayıklayıcının kodu Kullanıcı kodu olarak sınıflandırdığı hakkında bilgi edinmek için bkz. [yalnızca kendi kodum](../debugger/just-my-code.md). Sembol dosyaları hakkında daha fazla bilgi edinmek için bkz. [Visual Studio hata ayıklayıcısında simge (. pdb) ve kaynak dosyaları belirtme](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+Hata ayıklayıcının kodu Kullanıcı kodu olarak sınıflandırdığı hakkında bilgi edinmek için bkz. [yalnızca kendi kodum](../debugger/just-my-code.md). sembol dosyaları hakkında daha fazla bilgi edinmek için bkz. [Visual Studio hata ayıklayıcı 'da sembol (. pdb) ve kaynak dosyaları belirtme](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 ## <a name="learn-more"></a>Daha fazla bilgi edinin
 
 Ek ipuçları ve püf noktaları ve daha ayrıntılı bilgi için şu blog gönderilerine bakın:
 
-- [7 Visual Studio 'da hata ayıklama için bilinen korsanlardan daha az](https://devblogs.microsoft.com/visualstudio/7-lesser-known-hacks-for-debugging-in-visual-studio/)
-- [Visual Studio 'da 7 gizli Gems](https://devblogs.microsoft.com/visualstudio/7-hidden-gems-in-visual-studio-2017/)
+- [7 Visual Studio hata ayıklama için bilinen korsanlardan daha az](https://devblogs.microsoft.com/visualstudio/7-lesser-known-hacks-for-debugging-in-visual-studio/)
+- [Visual Studio 'de 7 gizli Gems](https://devblogs.microsoft.com/visualstudio/7-hidden-gems-in-visual-studio-2017/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

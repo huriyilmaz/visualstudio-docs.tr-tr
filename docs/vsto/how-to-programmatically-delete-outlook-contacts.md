@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Outlook kişilerini program aracılığıyla silme'
-description: Microsoft Outlook 'ta kişileri program aracılığıyla nasıl silebileceğinizi öğrenin. Bu örnek, bir kişiyi siler.
+title: 'nasıl yapılır: program aracılığıyla Outlook kişilerini silme'
+description: Microsoft Outlook kişilerini program aracılığıyla nasıl silebileceğinizi öğrenin. Bu örnek, bir kişiyi siler.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,16 +13,17 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b02ed8108daede030d460f80d8cdd76b82112401
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 87c201f40b158fda97b8fbb8d0d0e036ee897909597224ddc47b4c150f1784c6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824776"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394452"
 ---
-# <a name="how-to-programmatically-delete-outlook-contacts"></a>Nasıl yapılır: Outlook kişilerini program aracılığıyla silme
+# <a name="how-to-programmatically-delete-outlook-contacts"></a>nasıl yapılır: program aracılığıyla Outlook kişilerini silme
   Bu örnek, bir kişiyi siler. Örnek, **kişiler** klasöründe "Armando Pinto" adlı bir kişinin bulunduğunu varsayar.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
@@ -34,4 +35,4 @@ ms.locfileid: "107824776"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
 - [Nasıl yapılır: program aracılığıyla belirli bir kişi arama](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
-- [Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [nasıl yapılır: program aracılığıyla Outlook kişilere erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)

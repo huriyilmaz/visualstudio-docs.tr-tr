@@ -11,17 +11,18 @@ ms.assetid: b70922a3-1313-409a-b3b7-50c7cd13e394
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9ddf7de557a5059a83aabdbfad7045e8dacbc71b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a6acb6dfe32adba3dccd30e38e2bb3b18d4dc5d2c190a966c05beb34df7395a3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105093840"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390001"
 ---
 # <a name="idebugengineprogram2watchforthreadstep"></a>IDebugEngineProgram2::WatchForThreadStep
 Verilen iş parçacığında yürütmeyi izler (veya yürütme için izlemeyi Durdur).

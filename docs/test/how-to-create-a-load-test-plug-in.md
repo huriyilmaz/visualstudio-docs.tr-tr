@@ -14,12 +14,13 @@ ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: f8ba810665bce520b82777512b396a693e580a0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 9bb687a250b35a9805dd62eb8008440523d3dd2957d889f0d1a303b07eba8c4a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878012"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384905"
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>Nasıl yapılır: yük testi eklentisi oluşturma
 
@@ -40,7 +41,7 @@ Yük testi çalışırken kodu farklı zamanlarda çalıştırmak için bir yük
 
      Daha fazla bilgi için bkz. [hızlı başlangıç: yük testi projesi oluşturma](../test/quickstart-create-a-load-test-project.md).
 
-3. Çözüme yeni bir **sınıf kitaplığı** projesi ekleyin. ( **Çözüm Gezgini**, çözüme sağ tıklayın ve **Ekle** ' yi seçin ve ardından **Yeni proje**' yi seçin.)
+3. Çözüme yeni bir **sınıf kitaplığı** projesi ekleyin. ( **Çözüm Gezgini**, çözüme sağ tıklayın ve **Ekle** ' yi seçin ve ardından **yeni Project**' i seçin.)
 
 4. **Çözüm Gezgini**' de, yeni sınıf kitaplığındaki **Başvurular** klasörüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
@@ -56,7 +57,7 @@ Yük testi çalışırken kodu farklı zamanlarda çalıştırmak için bir yük
 
    **Başvuru Ekle iletişim kutusu görüntülenir**.
 
-8. **Projeler** sekmesini seçin ve sınıf kitaplığı projesini seçin.
+8. **Projeler** sekmesini seçin ve sınıf kitaplığı Project seçin.
 
 9. **Tamam ' ı** seçin.
 
@@ -96,7 +97,7 @@ Yük testi çalışırken kodu farklı zamanlarda çalıştırmak için bir yük
 Aşağıdaki kod, LoadTestFinished olayı oluştuktan sonra özel kod çalıştıran bir yük testi eklentisini gösterir. Bu kod, uzak bir makinedeki bir test aracısında çalışıyorsa ve test aracısının localhost SMTP hizmeti yoksa, bir ileti kutusu açık olacağı için yük testi "devam ediyor" durumunda kalır.
 
 > [!NOTE]
-> Aşağıdaki kod, System. Windows. Forms 'a bir başvuru eklemenizi gerektirir.
+> Aşağıdaki kod, sisteme bir başvuru eklemenizi gerektirir. Windows. Formlarındaki.
 
 ```csharp
 using System;

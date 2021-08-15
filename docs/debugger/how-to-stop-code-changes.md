@@ -1,6 +1,6 @@
 ---
-title: Kod değişikliklerini durdur | Microsoft Docs
-description: Visual Studio hata ayıklama oturumu sırasında Düzenle ve devam et özelliğini kullanırken kod değişikliklerinin nasıl durdurulacağını öğrenin.
+title: Kod Değişikliklerini | Microsoft Docs
+description: Hata ayıklama oturumu sırasında Düzenle ve Devam Bırak özelliğini kullanırken kod değişikliklerini uygulamanın Visual Studio anlıyoruz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,29 +17,30 @@ ms.assetid: 9e72a50c-bb0a-4eaa-9ac1-d00930b68d38
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aebf3b4a5a7556b2e2a3f6fdff7554539812d8f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b103cd6d352c78db1db53efb3a20aafaaa64f3e85edee7d214e6ce917e5095a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896569"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453405"
 ---
 # <a name="how-to-stop-code-changes"></a>Nasıl Yapılır: Kod Değişikliklerini Durdurma
-Düzenle ve devam et, kod değişikliklerini uygulama sürecinde olduğunda, işlemi durdurabilirsiniz.
+Düzenle ve Devam Etmeyi kod değişiklikleri uygulama sürecindeyken, işlemi durdurabilirsiniz.
 
 > [!CAUTION]
-> Yönetilen koddaki kod değişikliklerinin durdurulması beklenmeyen sonuçlar verebilir. Yönetilen koda yapılan değişiklikleri uygulamak normalde hızlı bir işlemdir. bu nedenle, Yönetilen koddaki kod değişikliklerini durdurmanız nadiren gerekir.
+> Yönetilen kodda kod değişikliklerini durdurmak beklenmeyen sonuçlar üretebilir. Yönetilen koda değişiklik uygulamak normalde hızlı bir işlemdir, bu nedenle yönetilen kodda kod değişikliklerini durdurmanın nadiren bir ihtiyacı vardır.
 
 ### <a name="to-stop-applying-code-changes"></a>Kod değişikliklerini uygulamayı durdurmak için
 
-- **Hata ayıklama** menüsünden **kod değişikliklerini uygulamayı durdur** ' ı seçin.
+- Hata **Ayıklama menüsünde Kod Değişikliklerini** Uygulamayı **Durdur'u** seçin.
 
-  Bu menü öğesi yalnızca kod değişiklikleri uygulanırken görülebilir.
+  Bu menü öğesi yalnızca kod değişiklikleri uygulandığında görünür.
 
-  Bu seçeneği belirlerseniz, kod değişikliklerinden hiçbiri yürütülmedi.
+  Bu seçeneği seçerseniz kod değişikliklerinin hiçbiri iş işlemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Düzenle ve Devam Et](../debugger/edit-and-continue.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](./edit-and-continue.md)
+- [Düzenle ve Devam, Hata Ayıklama, Seçenekler İletişim Kutusu](./edit-and-continue.md)

@@ -1,6 +1,6 @@
 ---
-title: Yerel Run-Time denetimleri özelleştirmeyi | Microsoft Docs
-description: 'Çalışma zamanı denetimini özelleştirmenin yollarını öğrenin: ileti hedefi belirtme, hata raporlama işlevi yazma ve hata bilgilerini sorgulama.'
+title: Yerel Run-Time Özelleştirme Denetimlerini | Microsoft Docs
+description: 'Çalışma zamanı denetimlerini özelleştirmenin yollarını öğrenin. Örneğin: ileti hedefi belirtme, hata raporlama işlevi yazma ve hata bilgilerini sorgulama.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,41 +22,42 @@ ms.assetid: 76a365fe-6439-49db-8603-34058b78e5a8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c3da5387c67e14ced99918273800709b3b67b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 534e2d8616fb70ca0089cc2efa90c19ac97c62b7860723f64784549620111a85
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913122"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239616"
 ---
 # <a name="native-run-time-checks-customization"></a>Yerel Çalışma Zamanı Denetimlerini Özelleştirme
-**/RTC** (çalışma zamanı denetimleri) ile derlerken veya `runtime_checks` pragma kullandığınızda C çalışma zamanı kitaplığı yerel çalışma zamanı denetimleri sağlar. Bazı durumlarda, çalışma zamanı denetimini özelleştirmek isteyebilirsiniz:
+**/RTC** ile derle (çalışma zamanı denetimleri) veya pragma kullanırken, C çalışma zamanı kitaplığı yerel `runtime_checks` çalışma zamanı denetimleri sağlar. Bazı durumlarda, çalışma zamanı denetimlerini özelleştirmek istiyor olabilir:
 
-- Çalışma zamanı denetim iletilerini varsayılan dışında bir dosya veya hedefe yönlendirmek için.
+- Çalışma zamanı denetim iletilerini varsayılandan farklı bir dosyaya veya hedefe yönlendirme.
 
-- Üçüncü taraf bir hata ayıklayıcı altındaki çalışma zamanı denetimi iletileri için çıkış hedefi belirtmek için.
+- Bir üçüncü taraf hata ayıklayıcısı altında çalışma zamanı denetim iletileri için bir çıkış hedefi belirtmek için.
 
-- C çalışma zamanı kitaplığının yayın sürümü ile derlenen bir programdan çalışma zamanı denetim iletilerini raporlamak için. Kitaplığın yayın sürümleri, `_CrtDbgReportW` çalışma zamanı hatalarını raporlamak için kullanmaz. Bunun yerine, her bir çalışma zamanı hatası için bir onay **iletişim kutusu görüntüler** .
+- C çalışma zamanı kitaplığının yayın sürümüyle derlenmiş bir programdan çalışma zamanı denetim iletilerini rapor etmek için. Kitaplığın sürüm sürümleri çalışma zamanı `_CrtDbgReportW` hatalarını rapor etmek için kullanmaz. Bunun yerine, her çalışma **zamanı** hatası için bir Onay iletişim kutusu görüntüler.
 
-  Çalışma zamanı hata denetimini özelleştirmek için şunları yapabilirsiniz:
+  Çalışma zamanı hata denetimlerini özelleştirmek için şunları sebilirsiniz:
 
-- Çalışma zamanı hata raporlama işlevi yazın. Daha fazla bilgi için bkz. [nasıl yapılır: Run-Time hata raporlama Işlevi yazma](../debugger/how-to-write-a-run-time-error-reporting-function.md).
+- Çalışma zamanı hata raporlama işlevi yazın. Daha fazla bilgi için, [bkz. How to: Write a Run-Time Error Reporting Function](../debugger/how-to-write-a-run-time-error-reporting-function.md).
 
-- Hata iletisi hedefini özelleştirin.
+- Hata iletisi hedeflerini özelleştirin.
 
-- Çalışma zamanı denetimi hataları hakkında bilgi sorgula.
+- Çalışma zamanı denetim hataları hakkında bilgi için sorgu.
 
-## <a name="customize-the-error-message-destination"></a>Hata Iletisi hedefini özelleştirme
- `_CrtDbgReportW`Hataları raporlamak için kullanırsanız, `_CrtSetReportMode` hata iletilerinin hedefini belirtmek için kullanabilirsiniz.
+## <a name="customize-the-error-message-destination"></a>Hata İletisi Hedeflerini Özelleştirme
+ Hataları rapor `_CrtDbgReportW` etmek için kullanırsanız, hata `_CrtSetReportMode` iletilerinin hedeflerini belirtmek için kullanabilirsiniz.
 
- Özel bir raporlama işlevi kullanıyorsanız, bir `_RTC_SetErrorType` hatayı rapor türüyle ilişkilendirmek için kullanın.
+ Özel raporlama işlevi kullanıyorsanız, bir hatayı `_RTC_SetErrorType` bir rapor türüyle ilişkilendirmek için kullanın.
 
-## <a name="query-for-information-about-run-time-checks"></a>Run-Time denetimleri hakkında bilgi sorgula
- `_RTC_NumErrors` çalışma zamanı hata denetimleri tarafından algılanan hata türlerinin sayısını döndürür. Her bir hatanın kısa bir açıklamasını almak için, 0 ' dan dönüş değerine döngü yapabilirsiniz `_RTC_NumErrors` , yineleme değeri `_RTC_GetErrDesc` Her döngüde öğesine geçer. Daha fazla bilgi için bkz. [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) ve [_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc).
+## <a name="query-for-information-about-run-time-checks"></a>Denetimler Hakkında Bilgi Run-Time Sorgulama
+ `_RTC_NumErrors` , çalışma zamanı hata denetimleri tarafından algılanan hata türlerinin sayısını döndürür. Her hatanın kısa bir açıklamasını almak için, her döngüde yineleme değerini değerine geçerek 0'dan dönüş `_RTC_NumErrors` değerine `_RTC_GetErrDesc` döngüye geçebilirsiniz. Daha fazla bilgi için [bkz. _RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) ve [_RTC_GetErrDesc.](/cpp/c-runtime-library/reference/rtc-geterrdesc)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: yerel Run-Time denetimleri kullanma](../debugger/how-to-use-native-run-time-checks.md)
+- [Nasıllı: Yerel Denetimler Run-Time Kullanma](../debugger/how-to-use-native-run-time-checks.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)
 - [_CrtDbgReport, _CrtDbgReportW](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)

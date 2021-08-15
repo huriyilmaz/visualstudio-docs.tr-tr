@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-çalışma zamanı etkinlik tasarımcıları
-description: Çalışma zamanı etkinlik tasarımcılarını İş Akışı Tasarımcısı iş akışı etkinliklerini kalıcı hale getirmek ve sonlandırmak için nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı - Çalışma Zamanı Etkinlik Tasarımcıları
+description: Çalışma zamanı etkinlik tasarımcılarını kullanarak iş akışı etkinliklerini çalışma zamanında kalıcı olarak İş Akışı Tasarımcısı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,20 +8,21 @@ ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 24e8ef89b6373808ac7eed0c7557e25968efcf3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6d8eda440e1e4084e7dbb4b8567ca9001b323f451155cb377377f18e69116ee
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847316"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121243347"
 ---
 # <a name="runtime-activity-designers"></a>Çalışma Zamanı Etkinlik Tasarımcıları
-Çalışma zamanı etkinlik tasarımcıları iş akışı etkinliklerini kalıcı hale getirmek ve sonlandırmak için kullanılır. Bu bölümde yer alan konular İş Akışı Tasarımcısı etkinlik tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
+Çalışma zamanı etkinlik tasarımcıları iş akışı etkinliklerini kalıcı yapmak ve sonlandırmak için kullanılır. Bu bölümde yer alan konular, etkinlik tasarımcılarının nasıl İş Akışı Tasarımcısı rehberlik sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
+ [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)
 
  [Akış Çizelgesi](../workflow-designer/flowchart-activity-designers.md)
 
@@ -33,7 +34,7 @@ ms.locfileid: "99847316"
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

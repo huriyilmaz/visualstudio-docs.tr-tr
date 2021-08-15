@@ -1,6 +1,6 @@
 ---
 title: Hizmet Başvurusu Yapılandırma İletişim Kutusu
-description: Windows Communication Foundation (WCF) hizmetlerinin davranışını yapılandırmak için Visual Studio 'daki hizmet başvurusunu Yapılandır iletişim kutusunu kullanın.
+description: Windows Communication Foundation (WCF) hizmetlerinin davranışını yapılandırmak için Visual Studio içindeki hizmet başvurusunu yapılandır iletişim kutusunu kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,18 +14,19 @@ ms.assetid: 25e4c36b-2db6-4e71-9010-b7068255d09d
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9ce4057378db357345869d10e933929ae31ee573
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b40e0f5616e8d43dbdc801efaf23fa6b9961c8463984ef9503079be2a2a49771
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859222"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347798"
 ---
 # <a name="configure-service-reference-dialog-box"></a>Hizmet Başvurusu Yapılandır iletişim kutusu
 
-**Hizmet başvurusunu Yapılandır** iletişim kutusu, WINDOWS COMMUNICATION FOUNDATION (WCF) hizmetlerinin davranışını yapılandırmanızı sağlar.
+**hizmet başvurusunu yapılandır** iletişim kutusu, Windows Communication Foundation (WCF) hizmetlerinin davranışını yapılandırmanızı sağlar.
 
 **Hizmet başvurusunu Yapılandır** iletişim kutusuna erişmek için **Çözüm Gezgini** bir hizmet başvurusunu sağ tıklatın ve **hizmet başvurusunu Yapılandır**' ı seçin. İletişim kutusuna, **hizmet başvurusu Ekle Iletişim kutusunda** **Gelişmiş** düğmesine tıklayarak da erişebilirsiniz.
 

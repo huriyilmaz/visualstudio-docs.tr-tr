@@ -11,17 +11,18 @@ ms.assetid: cb8441f2-f744-4e73-acfe-ae8542df9649
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e27aa1e26c9ac80356446c59f0f7775d35328517
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 48b9a6c4b008fe44dcfcbfe0599d871bc609513c79801510369b657eaa819b9c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061491"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448552"
 ---
 # <a name="stepunit"></a>STEPUNIT
 Adımlama için adım birimini belirtir.
@@ -50,20 +51,20 @@ enum enum_STEPUNIT {
  Deyime göre adımlar.
 
  `STEP_LINE`\
- Satıra göre adımlar.
+ Satır satır adımlar.
 
  `STEP_INSTRUCTION`\
  Yönergeye göre adımlar.
 
 ## <a name="remarks"></a>Açıklamalar
- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) yöntemine bir bağımsız değişken olarak geçirilir.
+ Step yöntemine bağımsız değişken [olarak](../../../extensibility/debugger/reference/idebugprocess3-step.md) geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

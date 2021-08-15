@@ -1,6 +1,6 @@
 ---
-description: Nesnenin yüklendiği kitaplığın veya nesne dosyasının dosya adını alır.
-title: 'IDiaSymbol:: get_libraryName | Microsoft Docs'
+description: Nesnenin yükleniyor olduğu kitaplığın veya nesne dosyasının dosya adını alın.
+title: IDiaSymbol::get_libraryName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: d04ddd9a-812d-46e4-bd39-28bdf3edfb70
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e717e1794531114d7b68966ef19bdbb2158bfe60
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5255cb7aaae56b73e20536c570dab2b727e6160835af93ef83c3e1c003f03816
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161993"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454690"
 ---
 # <a name="idiasymbolget_libraryname"></a>IDiaSymbol::get_libraryName
-Nesnenin yüklendiği kitaplığın veya nesne dosyasının dosya adını alır.
+Nesnenin yükleniyor olduğu kitaplığın veya nesne dosyasının dosya adını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_libraryName (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Nesnenin yüklendiği kitaplığın veya nesne dosyasının dosya adını döndürür.
+[out] Nesnenin yükleniyor olduğu kitaplığın veya nesne dosyasının dosya adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

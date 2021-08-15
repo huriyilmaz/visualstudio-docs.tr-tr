@@ -1,6 +1,6 @@
 ---
-description: Belirtilen bir sanal adresi içeren veya en yakın olan, belirtilen bir sembol türünü alır.
-title: 'IDiaSession:: findSymbolByVA | Microsoft Docs'
+description: Belirtilen sanal adresi içeren veya buna en yakın olan belirtilen sembol türünü alın.
+title: IDiaSession::findSymbolByVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 0350df23-9a5d-4e8d-8c26-7f571d8fb1af
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b225f42d7ea8ed0d75e931b63d0ae68ce8ede897
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 14764b3836509957a4f35d42b404f6842734acf8b59dfbde8544ede7e44cfff1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158945"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380176"
 ---
 # <a name="idiasessionfindsymbolbyva"></a>IDiaSession::findSymbolByVA
-Belirtilen bir sanal adresi içeren veya en yakın olan, belirtilen bir sembol türünü alır.
+Belirtilen sanal adresi içeren veya buna en yakın olan belirtilen sembol türünü alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,18 +37,18 @@ HRESULT findSymbolByVA (
 #### <a name="parameters"></a>Parametreler
  `va`
 
-'ndaki Sanal adresi belirtir.
+[in] Sanal adresi belirtir.
 
  `symtag`
 
-'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
+[in] Buluna sembol türü. Değerler [SymTagEnum Numaralama numaralarından](../../debugger/debug-interface-access/symtagenum.md) alınır.
 
  `ppSymbol`
 
-dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+[out] Alınan sembolü [temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

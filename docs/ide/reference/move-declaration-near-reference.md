@@ -7,17 +7,18 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce731da61c0c119869c1c1b85a87ebe44fabf273
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0913faea1942454e2b26d90f62d4ce34dd8fe864fff56b0551796b8a8b4d0b6e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927931"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121289563"
 ---
 # <a name="move-declaration-near-reference-refactoring"></a>Bildirimi başvuru yeniden düzenlemesi yakınında taşı
 

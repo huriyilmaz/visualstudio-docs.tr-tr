@@ -18,18 +18,19 @@ ms.assetid: 5e32e10e-9bac-4969-9bdd-b8f6919d3516
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f3054c5c74c8844f780c3562327353fca164f1f4
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 77ef45eadadab661639b17c4e29fdf13986da9fd89bf51f7c7358252d64af932
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215649"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346667"
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>TableAdapter kullanarak verileri güncelleştirme
 
-Veri kümenizdeki veriler değiştirildikten ve doğrulandıktan sonra, `Update` bir [TableAdapter](../data-tools/create-and-configure-tableadapters.md)metodunu çağırarak güncelleştirilmiş verileri bir veritabanına geri gönderebilirsiniz. `Update`Yöntemi, tek bir veri tablosunu güncelleştirir ve tablodaki her bir veri satırının temelinde doğru komutu (INSERT, Update veya delete) çalıştırır <xref:System.Data.DataRow.RowState%2A> . Bir veri kümesinde ilgili tablolar olduğunda Visual Studio, güncelleştirmeleri yapmak için kullandığınız bir TableAdapterManager sınıfı oluşturur. TableAdapterManager sınıfı, güncelleştirmelerin veritabanında tanımlanan yabancı anahtar kısıtlamalarına göre doğru sırada yapılmasını sağlar. Veriye dayalı denetimleri kullandığınızda, veri bağlama mimarisi tableAdapterManager adlı TableAdapterManager sınıfının bir üye değişkenini oluşturur.
+Veri kümenizdeki veriler değiştirildikten ve doğrulandıktan sonra, `Update` bir [TableAdapter](../data-tools/create-and-configure-tableadapters.md)metodunu çağırarak güncelleştirilmiş verileri bir veritabanına geri gönderebilirsiniz. `Update`Yöntemi, tek bir veri tablosunu güncelleştirir ve tablodaki her bir veri satırının temelinde doğru komutu (INSERT, Update veya delete) çalıştırır <xref:System.Data.DataRow.RowState%2A> . bir veri kümesinde ilişkili tablolar olduğunda, Visual Studio güncelleştirmeleri yapmak için kullandığınız bir TableAdapterManager sınıfı oluşturur. TableAdapterManager sınıfı, güncelleştirmelerin veritabanında tanımlanan yabancı anahtar kısıtlamalarına göre doğru sırada yapılmasını sağlar. Veriye dayalı denetimleri kullandığınızda, veri bağlama mimarisi tableAdapterManager adlı TableAdapterManager sınıfının bir üye değişkenini oluşturur.
 
 > [!NOTE]
 > Bir veri kaynağını bir veri kümesinin içeriğiyle güncelleştirmeyi denediğinizde, hata alabilirsiniz. Hataları önlemek için, bağdaştırıcının yöntemini çağıran kodu `Update` bir blok içinde koymanız önerilir `try` / `catch` .

@@ -121,9 +121,9 @@
           href: troubleshooting-code-coverage.md
     - name: Geçiş
       items:
-        - name: MSTestV1'den MSTestV2'ye yükseltme
+        - name: MSTestV1 'den MSTestV2 'ye yükseltme
           href: mstest-update-to-mstestv2.md
-        - name: Testsetting'leri runsettings'e geçirme
+        - name: Testsettings 'ı runsettings 'e geçirin
           href: migrate-testsettings-to-runsettings.md
 - name: Live Unit Testing
   items:

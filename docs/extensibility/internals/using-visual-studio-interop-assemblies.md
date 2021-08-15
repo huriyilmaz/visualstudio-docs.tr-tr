@@ -1,6 +1,6 @@
 ---
 title: Visual Studio birlikte çalışma derlemelerini kullanma | Microsoft Docs
-description: Visual Studio birlikte çalışma derlemelerinin, yönetilen uygulamaların Visual Studio genişletilebilirlik sağlayan COM arabirimlerine erişmesine nasıl izin vereceğinizi öğrenin.
+description: Visual Studio birlikte çalışma derlemelerinin, yönetilen uygulamaların Visual Studio genişletilebilirlik sağlayan COM arabirimlerine erişmesine nasıl izin sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,14 +12,15 @@ ms.assetid: 1043eb95-4f0d-4861-be21-2a25395b3b3c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc5f1a01c406f2457eaaa6a58e214f06fbd31127
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 03538a95d430f14118b253bf6b9fa612e374a23c7213666bb3e7c32cbecfb0c8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106213660"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375617"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Visual Studio Birlikte Çalışma Bütünleştirilmiş Kodlarını Kullanma
 Visual Studio birlikte çalışma derlemeleri, yönetilen uygulamaların Visual Studio genişletilebilirlik sağlayan COM arabirimlerine erişmesine izin verir. Basit COM arabirimleri ve birlikte çalışma sürümleri arasında bazı farklılıklar vardır. Örneğin, HRESULTs genellikle int değerleri olarak temsil edilir ve özel durumlarla aynı şekilde işlenmelidir ve parametreler (özellikle de çıkış parametreleri) farklı şekilde değerlendirilir.

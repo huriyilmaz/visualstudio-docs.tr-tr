@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 445857200dfb269dd71f7cb3d446d025048cb3ac
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 93a64c4fe15109fbf7967d763ae5314a3b3064d4894638013a5b7cb75214159f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828442"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384372"
 ---
 # <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>Nasıl yapılır: belgelere program aracılığıyla resim ve Word art ekleme
   Belgelerinize, tasarım zamanında veya çalışma zamanında resim ve çizim nesneleri ekleyebilirsiniz. WordArt, Microsoft Office Word belgelerine dekoratif metin eklemenize olanak sağlar. Bu özel metin efektleri, özelleştirebileceğiniz ve belgenize ekleyebileceğiniz çizim nesneleridir.
@@ -72,7 +73,7 @@ ms.locfileid: "107828442"
      Metin, Seçili WordArt stili uygulanmış şekilde belgenize eklenir.
 
 ## <a name="add-wordart-at-run-time"></a>Çalışma zamanında WordArt Ekle
- Geçerli imleç konumundaki bir belgeye WordArt ekleyebilirsiniz. Yordam, belge düzeyinde özelleştirmeler ve VSTO eklentileri için farklıdır.
+ Geçerli imleç konumundaki bir belgeye WordArt ekleyebilirsiniz. yordam, belge düzeyi özelleştirmeleri ve VSTO eklentileri için farklıdır.
 
 ### <a name="to-add-wordart-at-the-cursor-location-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki imleç konumuna WordArt eklemek için
 
@@ -86,7 +87,7 @@ ms.locfileid: "107828442"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet110":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet110":::
 
-### <a name="to-add-wordart-at-the-cursor-location-in-a-vsto-add-in"></a>Bir VSTO eklentisinin imleç konumuna WordArt eklemek için
+### <a name="to-add-wordart-at-the-cursor-location-in-a-vsto-add-in"></a>VSTO eklentisinin imleç konumuna WordArt eklemek için
 
 1. Geçerli imleç konumunun sol ve üst konumunu alır.
 

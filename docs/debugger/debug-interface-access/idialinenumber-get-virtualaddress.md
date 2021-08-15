@@ -11,14 +11,15 @@ ms.assetid: 9048ef91-a59d-4ad8-90cb-4c13d0989241
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2882d24dec7f7f0cb5afcd93cf609680dc3a3a3d
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 06c946daf178348b38c577aa9d8f50480b9001f610121320df16673bb7a52640
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148278"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392163"
 ---
 # <a name="idialinenumberget_virtualaddress"></a>IDiaLineNumber::get_virtualAddress
 Bloğun sanal adresini (VA) alır.

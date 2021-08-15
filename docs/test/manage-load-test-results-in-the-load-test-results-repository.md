@@ -1,6 +1,6 @@
 ---
-title: Yük Test Sonuçları Yönet
-description: Yük Test Sonuçları Deposu SQL veritabanında depolanan bir yük testi sırasında toplanan verileri yönetmeyi öğrenin.
+title: Yük Dengelemeyi Test Sonuçları
+description: Load Test Sonuçları Repository SQL veritabanında depolanan yük testi sırasında toplanan verileri yönetmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -13,52 +13,53 @@ ms.assetid: 1cd63c4b-4f74-4133-b675-5e8fbeab25f3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 5245ccdb9130d3fac9639e7befc63ee2a5ebf70a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 7d5bf3decd66b285bbc50d5bee21b5f46fe380f77cac72b7a36273ce39378c59
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887620"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352675"
 ---
-# <a name="manage-load-test-results-in-the-load-test-results-repository"></a>Yük Test Sonuçları deposundaki yük testi sonuçlarını yönetme
+# <a name="manage-load-test-results-in-the-load-test-results-repository"></a>Load Test Sonuçları Repository'de yük testi sonuçlarını yönetme
 
-Yük testlerinizi çalıştırdığınızda, yük testi çalıştırması sırasında toplanan herhangi bir bilgi, SQL veritabanı olan *load test sonuçları deposunda* depolanabilir. Load Test Sonuçları Deposu, performans sayacı verilerini ve kayıtlı hatalar hakkındaki tüm bilgileri içerir. Sonuçlar deposu veritabanı, denetleyiciler için kurulum tarafından oluşturulur veya bir yük testinin ilk yerel çalıştırmasında otomatik olarak oluşturulur. Yerel çalıştırma için, yük testi şeması yoksa veritabanı otomatik olarak oluşturulur.
+Yük testlerinizi çalıştırarak bir yük testi çalıştırması sırasında toplanan tüm bilgiler, yük testi Test Sonuçları deposu olan Load SQL depolanmış olabilir. Load Test Sonuçları Deposu performans sayacı verilerini ve kaydedilen hatalar hakkında tüm bilgileri içerir. Sonuçlar Deposu veritabanı, denetleyiciler için kurulum tarafından veya bir yük testinin ilk yerel çalıştırması üzerinde otomatik olarak oluşturulur. Yerel çalıştırma için, yük testi şeması yoksa veritabanı otomatik olarak oluşturulur.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Denetleyicinin sonuç deposu bağlantı dizesini farklı bir sunucu kullanacak şekilde değiştirirseniz, yeni sunucunun şemayı oluşturmak için *loadtestresultsrepository. SQL* komut dosyası çalıştırması gerekir.
+Denetleyicinin sonuç deposu bağlantı dizesini farklı bir sunucu kullanmak üzere değiştirirsanız, şemayı oluşturmak için yeni sunucuda *loadtestresultsrepository.sql* betiği çalıştır olmalıdır.
 
-Visual Studio Enterprise, bir teknolojiyi temel alan ortak performans sayaçlarını toplayacak adlandırılmış sayaç kümeleri sağlar. Bu kümeler, bir IIS sunucusunu, bir ASP.NET sunucusunu veya bir SQL sunucusunu çözümlemede yararlıdır. Sayaç kümeleriyle toplanan tüm veriler Load Test Sonuçları deposunda depolanır.
+Visual Studio Enterprise, bir teknolojiye dayalı olarak ortak performans sayaçlarını toplayan adlandırılmış sayaç kümeleri sağlar. Bu kümeler bir IIS sunucusu, bir ASP.NET sunucusu veya SQL yararlıdır. Sayaç kümeleriyle toplanan tüm veriler Load Test Sonuçları Depoda depolanır.
 
 > [!IMPORTANT]
-> Sayaç kümesi ve performans sayacı verileri arasında bir farklılık vardır. Bir sayaç kümesi meta verilerdir. IIS veya SQL Server gibi belirli bir rol gerçekleştiren bir bilgisayardan toplanması gereken bir dizi performans sayacını tanımlar. Sayaç kümesi yük testi tanımının bir parçasıdır. Performans sayacı verileri sayaç kümelerine, sayaç kümesinin belirli bir bilgisayara eşlenmesinin ve örnek hızının temel alınarak toplanır.
+> Sayaç kümesi ile performans sayacı verileri arasında bir fark vardır. Sayaç kümesi meta verilerdir. IIS veya sanal ağ gibi belirli bir rolü gerçekleştiren bir bilgisayardan toplanacak performans sayaçları grubunu SQL Server. Sayaç kümesi, yük testi tanımının bir parçası. Performans sayacı verileri sayaç kümelerine, sayaç kümesi eşlemesi belirli bir bilgisayara ve örnek hızına göre toplanır.
 
 ## <a name="sql-server-versions"></a>SQL Server sürümleri
 
-Yük testlerini kullanmak için, Visual Studio ile birlikte yüklenen SQL Server Express LocalDB kullanabilirsiniz. Yükleme testleri için varsayılan veritabanı sunucusudur (Microsoft Excel tümleştirmesi dahil). SQL Server Express LocalDB, program geliştiricilerine hedeflenen SQL Server Express yürütme modudur. SQL Server Express LocalDB yüklemesi, SQL Server veritabanı altyapısını başlatmak için gereken en az bir dosya kümesini kopyalar.
+Yük testlerini kullanmak için, SQL Server Express ile birlikte yüklenmiş olan LocalDB'yi Visual Studio. Yük testleri için varsayılan veritabanı sunucusudur (Microsoft Excel dahil). SQL Server Express LocalDB, program geliştiricilerine SQL Server Express bir yürütme modudur. SQL Server Express LocalDB yüklemesi, veritabanı altyapısını başlatmak için gereken en SQL Server bir dosya kümesi kopyalar.
 
-Takımınız ağır veritabanı ihtiyaçlarına ihtiyaç duyuyor veya projeleriniz SQL Server Express LocalDB 'ye yükseldiğinde, daha fazla ölçeklendirme olasılığı sağlamak için SQL Express 'e veya tam SQL Server yükseltmeniz gerekir. SQL Server yükseltirseniz, SQL Server Express LocalDB için MDF ve LDF dosyaları Kullanıcı profili klasöründe depolanır. Bu dosyalar, SQL Server Express veya SQL Server yük testi veritabanını içeri aktarmak için kullanılabilir.
+Takımınız yoğun veritabanı ihtiyacı bekliyorsa veya projeleriniz LocalDB'de SQL Server Express büyükse, daha fazla ölçeklendirme potansiyeli sağlamak için SQL Express'e veya tam veritabanına SQL Server yükseltmeyi göz önünde bulundurabilirsiniz. Yükseltmeyi SQL Server LocalDB için MDF ve LDF SQL Server Express kullanıcı profili klasöründe depolanır. Bu dosyalar, yük testi veritabanını SQL Server Express veya SQL Server.
 
-## <a name="load-test-results-store-considerations"></a>Yük testi sonuçları deposu konuları
+## <a name="load-test-results-store-considerations"></a>Yük testi sonuçları deposuyla ilgili dikkat edilmesi gerekenler
 
-Visual Studio Enterprise yüklendiğinde, yük testi sonuçları deposu, bilgisayarda yüklü olan bir SQL Express örneğini kullanmak üzere ayarlanır. SQL Express, en fazla 4 GB disk alanı kullanımıyla sınırlıdır. Uzun bir süre boyunca çok sayıda yük testi çalıştıracağınızı düşünüyorsanız, yük testi sonuçları deposunu, varsa tam SQL Server ürünün bir örneğini kullanacak şekilde yapılandırmayı düşünmelisiniz.
+Yükleme Visual Studio Enterprise, yük testi sonuçları deposu bilgisayarda yüklü bir SQL Express örneği kullanmak üzere ayarlanır. SQL Express, en fazla 4 GB disk alanı kullanmakla sınırlıdır. Uzun bir süre boyunca çok sayıda yük testi çalıştıracaksanız, varsa yük testi sonuçları depolarını tam yük SQL Server örneğini kullanmak üzere yapılandırmayı göz önünde bulundurabilirsiniz.
 
 ## <a name="load-test-analyzer-tasks"></a>Yük Testi Çözümleyicisi görevleri
 
 |Görevler|İlişkili konular|
 |-|-----------------------|
-|**Yük testi sonuçları deposu ayarlama:** Bir SQL veritabanında yük testi sonuçları deposu ayarlayabilirsiniz. **Note:**  Bir test denetleyicisi yüklediğinizde, yük testi deposu da oluşturulabilir. Daha fazla bilgi için bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).||
-|**Bir sonuç deposunu seçme ve görüntüleme:** Belirli bir sonuç deposu seçebilirsiniz. Yerel bir sonuç deposuyla sınırlı değilsiniz. Genellikle, yük testleri, uzak bir aracı bilgisayarları kümesi üzerinde çalıştırılır. Aracılarınızdan veya yerel bilgisayarınızda test sonuçları, yük testi sonuçları deposu oluşturduğunuz herhangi bir SQL Server 'a kaydedilebilir. Her iki durumda da, **Test Denetleyicilerini Yönet** penceresini kullanarak yük testi sonuçlarınızı nerede depolayabileceğiniz belirlemeniz gerekir.|-   [Nasıl yapılır: yük testi sonuçları deposu seçme](../test/how-to-select-a-load-test-results-repository.md)<br />-   [Nasıl yapılır: analiz için yük testi sonuçlarına erişme](../test/how-to-access-load-test-results-for-analysis.md)|
-|**Depodan bir yük testi sonucunu silme:** **Yük Testi Düzenleyicisi** yük testi sonucunu, **Load Test sonuçları aç ve Yönet** iletişim kutusunu kullanarak kaldırabilirsiniz.|-   [Nasıl yapılır: bir depodan yük testi sonuçlarını silme](../test/how-to-delete-load-test-results-from-a-repository.md)|
-|**Sonuçları bir depoya içeri ve dışarı aktarma:** Yük testi sonuçlarını **Yük Testi Düzenleyicisi** içeri ve dışarı aktarabilirsiniz.|-   [Nasıl yapılır: yük testi sonuçlarını depoya aktarma](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [Nasıl yapılır: bir depodan yük testi sonuçlarını dışarı aktarma](../test/how-to-export-load-test-results-from-a-repository.md)|
+|**Yük testi sonuçları deposu ayarlayın:** Bir veritabanı üzerinde yük testi sonuçları deposu SQL. **Not:**  Bir yük testi deposu, bir test denetleyicisini yükleyemedikten sonra da oluşturulabilir. Daha fazla bilgi için [bkz. Test aracılarını yükleme ve yapılandırma.](../test/lab-management/install-configure-test-agents.md)||
+|**Sonuç deposunu seçme ve görüntüleme:** Belirli bir sonuç deposunu seçebilirsiniz. Yerel sonuçlar deposuyla sınırlı değildir. Yük testleri genellikle uzak bir Aracı bilgisayar kümesi üzerinde çalışır. Aracılar veya yerel bilgisayarınızdan alınan test sonuçları, yük testi SQL oluşturduğunuz herhangi bir sunucuya kaydedilebilir. Her iki durumda da, Test Denetleyicilerini Yönet penceresini kullanarak yük testi sonuçlarınızı **nerede depolayabilirsiniz?**|-   [Nasıl: Yük testi sonuçları deposu seçme](../test/how-to-select-a-load-test-results-repository.md)<br />-   [Nasıllı: Analiz için yük testi sonuçlarına erişme](../test/how-to-access-load-test-results-for-analysis.md)|
+|**Depodan bir yük testi sonucu silindi:** Yük testini aç ve yönet iletişim kutusunu **Yük Testi Düzenleyicisi** yük testi **sonuçlarını Test Sonuçları** kaldırabilirsiniz.|-   [Nasıl silinir: Bir depodan yük testi sonuçlarını silme](../test/how-to-delete-load-test-results-from-a-repository.md)|
+|**Sonuçları depoya içeri ve dışarı aktarma:** Yük testi sonuçlarını dosyadan içeri ve dışarı **Yük Testi Düzenleyicisi.**|-   [Nasıl olur: Yük testi sonuçlarını depoya aktarma](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [Nasıl olur: Bir depodan yük testi sonuçlarını dışarı aktarma](../test/how-to-export-load-test-results-from-a-repository.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
-[Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+[Yük testi sonuçlarını analiz etme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 
-**Yük Testi Çözümleyicisi**'ni kullanarak, çalışan bir yük testinin ve tamamlanan bir yük testinin sonuçlarını görüntüleyebilirsiniz.
+Yük Testi Çözümleyicisi'nin kullanarak hem çalışan bir yük testinin hem de tamamlanmış bir yük **testinin sonuçlarını görüntüabilirsiniz.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [Nasıl yapılır: analiz için yük testi sonuçlarına erişme](../test/how-to-access-load-test-results-for-analysis.md)
+- [Yük testi sonuçlarını analiz etme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Nasıllı: Analiz için yük testi sonuçlarına erişme](../test/how-to-access-load-test-results-for-analysis.md)

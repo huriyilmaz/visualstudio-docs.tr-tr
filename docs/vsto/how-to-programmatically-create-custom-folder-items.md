@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla özel klasör öğeleri oluşturma'
-description: Visual Studio kullanarak Microsoft Outlook 'ta program aracılığıyla özel klasör öğeleri oluşturma hakkında bilgi edinin.
+description: Visual Studio kullanarak Microsoft Outlook 'da program aracılığıyla özel klasör öğeleri oluşturma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,15 +14,15 @@ author: John-Hart
 ms.author: johnhart
 ms.workload:
 - office
-ms.openlocfilehash: ac0e3bf3268029efffdd0800cf7fe133eb1553e8
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 6bbf68656c2fbabccc2479dd87e3e0394c9ddafbc6fc12a534fa714e64673855
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825244"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440766"
 ---
 # <a name="how-to-programmatically-create-custom-folder-items"></a>Nasıl yapılır: program aracılığıyla özel klasör öğeleri oluşturma
-  Bu örnek Outlook Microsoft Office yeni bir klasör oluşturur. Oturum açan kullanıcının adı klasör adı olarak kullanılır.
+  Bu örnek Microsoft Office Outlook yeni bir klasör oluşturur. Oturum açan kullanıcının adı klasör adı olarak kullanılır.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -31,5 +31,5 @@ ms.locfileid: "107825244"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Klasörlerle çalışma](../vsto/working-with-folders.md)
-- [Nasıl yapılır: Outlook Kişilerine Program aracılığıyla giriş ekleme](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
+- [nasıl yapılır: program aracılığıyla Outlook kişilerine giriş ekleme](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
 - [Nasıl yapılır: program aracılığıyla randevu oluşturma](../vsto/how-to-programmatically-create-appointments.md)

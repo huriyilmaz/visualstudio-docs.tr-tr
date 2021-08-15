@@ -11,12 +11,13 @@ ms.assetid: ba16ed02-137e-40bf-a4cb-45d87d922d37
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: ad79be0850191cd2e7ab28aa7a30ff10d867b271
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: ee12dc8fd92767f600c33c63bac98e039b76007db3ceb9b4da27e1584ab4cef2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887880"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384995"
 ---
 # <a name="edit-load-tests"></a>Yük testlerini Düzenle
 
@@ -40,7 +41,7 @@ Daha fazla bilgi için bkz. [Yük testi senaryolarını](../test/edit-load-test-
 
 ## <a name="configure-and-manage-performance-counter-sets"></a>Performans sayacı kümelerini yapılandırma ve yönetme
 
-Yük testleri, performans sayacı verilerini çözümlediğinizde kullanışlı olan teknoloji tarafından düzenlenen adlandırılmış sayaç kümeleri sağlar. Sayaç kümeleri yük testi, IIS, ASP.NET ve SQL içerir. **Yeni Yük Testi Sihirbazı** bir yük testi oluşturduğunuzda, yük testine dahil etmek üzere belirttiğiniz bilgisayarlar için önceden tanımlanmış ve önemli sayaçların ilk kümesi yapılandırılır. Sayaçlarınızı **Yük Testi Düzenleyicisi** yönetirsiniz.
+Yük testleri, performans sayacı verilerini çözümlediğinizde kullanışlı olan teknoloji tarafından düzenlenen adlandırılmış sayaç kümeleri sağlar. sayaç kümeleri yük testi, ııs, ASP.NET ve SQL içerir. **Yeni Yük Testi Sihirbazı** bir yük testi oluşturduğunuzda, yük testine dahil etmek üzere belirttiğiniz bilgisayarlar için önceden tanımlanmış ve önemli sayaçların ilk kümesi yapılandırılır. Sayaçlarınızı **Yük Testi Düzenleyicisi** yönetirsiniz.
 
 Daha fazla bilgi için bkz. [bir yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtme](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md).
 

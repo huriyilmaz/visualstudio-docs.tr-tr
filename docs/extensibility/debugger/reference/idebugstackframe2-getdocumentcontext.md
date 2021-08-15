@@ -11,17 +11,18 @@ ms.assetid: 69e81439-1238-4f18-9028-6fd1c1ba5e4a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0b247bb7fefe518218fd7c8fc86b7be4836e1cf5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 96979c45471aab356a22f206698e50e238009bb54bea0edc02db5bacad1e6464
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053470"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448955"
 ---
 # <a name="idebugstackframe2getdocumentcontext"></a>IDebugStackFrame2::GetDocumentContext
 Bu yığın çerçevesi için belge bağlamını alır.

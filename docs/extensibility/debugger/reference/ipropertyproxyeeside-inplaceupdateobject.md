@@ -1,6 +1,6 @@
 ---
-description: Nesnenin verilerini verilen veri nesnesiyle güncelleştirir ve nesnenin yeni verilerini temsil eden yeni bir veri nesnesi döndürür.
-title: 'IPropertyProxyEESide:: InPlaceUpdateObject | Microsoft Docs'
+description: Nesnenin verilerini verilen veri nesnesiyle günceller ve nesnenin yeni verilerini temsil eden yeni bir veri nesnesi döndürür.
+title: IPropertyProxyEESide::InPlaceUpdateObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: abf89411-1853-4f23-b244-d5e0afa197b1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6fb6c098d26148db39493b25f199c6819fb81d27
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 27826db10e6ef7265416d83cf37fb38c0706c452076223e7027b0ef1a7034f58
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082419"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388961"
 ---
 # <a name="ipropertyproxyeesideinplaceupdateobject"></a>IPropertyProxyEESide::InPlaceUpdateObject
-Nesnenin verilerini verilen veri nesnesiyle güncelleştirir ve nesnenin yeni verilerini temsil eden yeni bir veri nesnesi döndürür.
+Nesnenin verilerini verilen veri nesnesiyle günceller ve nesnenin yeni verilerini temsil eden yeni bir veri nesnesi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,18 +45,18 @@ int InPlaceUpdateObject(
 
 ## <a name="parameters"></a>Parametreler
 `dataIn`\
-'ndaki Yeni verileri içeren bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi.
+[in] Yeni [verileri içeren bir IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi.
 
 `dataOut`\
-dışı `IEEDataStorage` Değiştirilmiş verileri içeren yeni bir nesne döndürür.
+[out] Değiştirilmiş verileri `IEEDataStorage` içeren yeni bir nesne döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem gerçekte nesnenin verilerini günceller. Döndürülen [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesindeki verilerin gelen nesnedeki verilerle aynı olması gerekmez `IEEDataStorage` , ancak döndürülen nesne özelliğin geçerli değerini yansıtmalıdır.
+ Bu yöntem aslında nesnenin verilerini günceller. Döndürülen [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesinde yer alan verilerin gelen nesnede yer alan veriyle aynı olması gerek yoktur, ancak döndürülen nesnenin özelliğin geçerli değerini `IEEDataStorage` yansıtması gerekir.
 
- Gelen veri nesnesi genellikle EE tarafından uygulanmaz. Ancak, bu yöntemin döndürdüğü nesne her zaman EE tarafından uygulanır. Bu, her zaman her `IEEDataStorage` türlü sınıfa arayüzün uygulanmasını sağlar.
+ Gelen veri nesnesi genellikle veri kaynağı tarafından EE. Ancak, bu yöntem tarafından döndürülen nesne her zaman EE tarafından uygulanır ve bu da EE istenen sınıfa arabirimi `IEEDataStorage` uygulamasına olanak sağlar.
 
  [CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md) yöntemi, gelen veri nesnesini temel alan bir veri nesnesi oluşturur, ancak özelliğin özgün verilerini etkilemez.
 

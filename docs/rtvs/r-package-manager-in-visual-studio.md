@@ -7,20 +7,21 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 99257cfb44fa564462cd08ec754c309a63302054
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: 3c59ce8a9bc615983eeee33f7fe7e3c7b62f25281894c55dc84637bf2df74397
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114679803"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121353255"
 ---
 # <a name="package-manager"></a>Paket yöneticisi
 
 Visual Studio için R Araçları (RTVS) paket yöneticisi, R paketlerini yönetmek için bir kullanıcı arabirimidir. Açmak için R Araçları'Windows'ni  >    >  **seçin** veya **Ctrl** + **7 tuşlarına basın.**
 
-Paket yöneticisinin üç sekmesi vardır. Her sekme sol tarafta ilgili paketlerin bir listesini ve seçilen paketin sağ tarafta paketin sürümü, açıklaması, lisansı, yükleme konumu ve diğer ilgili bilgilerin bağlantıları da dahil olmak üzere belirli ayrıntıları görüntüler. Sağ üstteki arama kutusu listeyi filtrelemenizi sağlar.
+Paket yöneticisinin üç sekmesi vardır. Her sekme sol tarafta ilgili paketlerin listesini ve seçilen paketle ilgili ayrıntıları sağ tarafta görüntüler. Paketin sürümü, açıklaması, lisansı, yükleme konumu ve diğer ilgili bilgilerin bağlantıları da buna dahil olur. Sağ üstteki arama kutusu listeyi filtrelemenizi sağlar.
 
 > [!Tip]
 > Sekmeler arasında geçiş yapın ve arama kutusunda terimin etkisi devam ediyor.
@@ -33,7 +34,7 @@ Paket yöneticisinin üç sekmesi vardır. Her sekme sol tarafta ilgili paketler
 
     ![Visual Studio için R Araçları paket yöneticisinde yüklü paketler sekmesi](media/package-manager-installed.png)
 
-- **Yüklendi,** yalnızca R oturumuna yüklenen paketleri görüntüler ve bunların hepsi yeşil noktayla görünür. Paketleri buradan da kaldırıp güncelleştirebilirsiniz.
+- **Yüklendi,** yalnızca R oturumuna yüklenen paketleri görüntüler ve bunların hepsi yeşil noktayla görünür. Paketleri buradan da kaldırabilirsiniz ve güncelleştirebilirsiniz.
 
     ![Visual Studio için R Araçları paket yöneticisinde yüklü paketler sekmesi](media/package-manager-loaded.png)
 

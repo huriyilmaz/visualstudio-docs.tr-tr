@@ -1,6 +1,6 @@
 ---
-title: Menü ve araç çubuğu komutlarını iyileştirme | Microsoft Docs
-description: Visual Studio 'Nun VSPackages ve bunlara karşılık gelen komutları ekleyerek oluşan komut karmaşıklığına nasıl en aza indireceğinizi öğrenin.
+title: Menü ve Araç Çubuğu Komutlarını | Microsoft Docs
+description: VSPackage'Visual Studio karşılık gelen komutların neden olduğu komut karışıklığını nasıl en aza indirgeyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,28 +14,29 @@ ms.assetid: 8385f1a6-1e98-4dca-83d2-fcbed7177242
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c7d289f9dadf7b3442f937c5b50cf038c802516
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a14f024e2e06f3fad2d37140a8e0010af6a95e7935b6b86f1ebbc475800cd5e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063064"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238482"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>Menü ve Araç Çubuğu Komutlarını En İyi Duruma Getirme
-VSPackages ve bunlara karşılık gelen komutları ekleme, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kalabalık bir kullanıcı arabirimine neden olabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI komut karışıklığına en aza indirmeye yardımcı olmak için yollar sağlar.
+VSPackage'ların ve bunlara karşılık gelen komutların ek [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] olması, kalabalık bir kullanıcı arabirimine neden olabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanıcı arabirimi komut karışıklığını en aza indirmeye yardımcı olmak için yollar sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Komutları Kullanılabilir Yapma](../../extensibility/internals/making-commands-available.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]VSPackages eklediğinizde UI 'nin kalabonu en aza indirmek için genel yönergeler sağlar.
+ VSPackage'lar eklerken kullanıcı arabiriminde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kitleyi en aza indirmek için genel yönergeler sağlar.
 
 - [Yerleştirme Yönergeleri](../../extensibility/internals/command-placement-guidelines.md)
 
- Komut kümesinin boyutuna göre VSPackage uygulamak için özel kurallar sağlar.
+ Komut kümesi boyutuna göre VSPackage uygulamak için belirli yönergeler sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Komutlar, Menüler ve Araç Çubukları](../../extensibility/internals/commands-menus-and-toolbars.md)
 
- Menüler, araç çubukları ve komut açılan kutuları içeren bir kullanıcı arabirimi oluşturmayı açıklar.
+ Menüleri, araç çubuklarını ve komut birleşik giriş kutularını içeren bir kullanıcı arabiriminin nasıl oluşturularak ilgili açıklamayı açıklar.

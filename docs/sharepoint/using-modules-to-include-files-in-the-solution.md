@@ -1,6 +1,6 @@
 ---
 title: Çözümdeki dosyaları dahil etmek için modülleri kullanma | Microsoft Docs
-description: Dosya türleri (örneğin, ana sayfalar) ne olursa olsun SharePoint sunucusuna dosya dağıtmak için modüller veya bir SharePoint çözümünde dosya kapsayıcıları kullanın.
+description: dosya türleri (örneğin, ana sayfalar) ne olursa olsun SharePoint sunucusuna dosya dağıtmak için bir SharePoint çözümündeki dosyalar için modüller veya kapsayıcılar kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
@@ -14,20 +14,21 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 86aea9800d0eaad4c36d5598e52dd7a35f3a7534
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9427f722354ba6ef7d1694e12bf176170cd969a346bd6b85420845a2ec0a410f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892183"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352884"
 ---
 # <a name="use-modules-to-include-files-in-the-solution"></a>Çözümdeki dosyaları dahil etmek için modülleri kullanma
-  Dosyaları, yeni ana sayfalar gibi dosya türlerine bakılmaksızın SharePoint sunucusuna dağıtmak isteyebileceğiniz zamanlar olabilir. Bunu yapmak için *modüller* ( [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] kod modülleriyle karıştırılmamalıdır) kullanabilirsiniz. Modüller bir SharePoint çözümündeki dosyalar için kapsayıcılardır. Çözüm dağıtıldığında, modüldeki dosyalar SharePoint sunucusundaki belirtilen klasörlere kopyalanır.
+  dosya türleri ne olursa olsun, yeni ana sayfalar gibi SharePoint sunucusuna dosya dağıtmak isteyebileceğiniz zamanlar olabilir. Bunu yapmak için *modüller* ( [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] kod modülleriyle karıştırılmamalıdır) kullanabilirsiniz. modüller SharePoint çözümdeki dosyalar için kapsayıcılardır. çözüm dağıtıldığında, modüldeki dosyalar SharePoint sunucusundaki belirtilen klasörlere kopyalanır.
 
 ## <a name="module-items-and-elements"></a>Modül öğeleri ve öğeleri
- Bir modül oluşturmak için bunu **Yeni öğe Ekle** iletişim kutusunda seçerek bir projeye ekleyin. Daha sonra, *Elements.xml* dosyasını, dağıtmak istediğiniz dosyaların adlarını, sistemde bulundukları ve SharePoint sunucusunda nereye kopyalanmaları içerecek şekilde değiştirin.
+ Bir modül oluşturmak için bunu **Yeni öğe Ekle** iletişim kutusunda seçerek bir projeye ekleyin. daha sonra, *Elements.xml* dosyasını, dağıtmak istediğiniz dosyaların adlarını içerecek şekilde değiştirin, burada sistemde bulunur ve SharePoint sunucusunda nereye kopyalanmaları gerekir.
 
  Modül için *Elements.xml* dosyasına bir örnek aşağıda verilmiştir:
 
@@ -50,17 +51,17 @@ ms.locfileid: "99892183"
 
  *Elements.xml* dosyası aşağıdaki öğeleri içerir:
 
-|Öğe Adı|Description|
+|Öğe Adı|Açıklama|
 |------------------|-----------------|
 |Öğeler|Modülde tanımlanan tüm öğeleri içerir.|
-|Modül|Module öğesi, ' ın ' de modül adını belirten tek bir özniteliğe ( *Name*) sahiptir `<Module Name="Module1">` .<br /><br /> Modülün adını (veya *klasör adı* özelliğini) değiştirirseniz, bu adı modül öğesinde el ile güncelleştirmeniz gerektiğini unutmayın.<br /><br /> Modül öğesinde dosya (ler) için bir alt dizin belirtirseniz, [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS) onlar için otomatik olarak eşleşen bir dizin yapısı oluşturur.|
-|Dosya|Dosya öğesinin iki parametresi, *yolu* ve *URL 'si* vardır.<br /><br /> -Path: SharePoint çözümündeki dosyanın adı ve konumu. Biçimi, `Path="Module1\Sample.txt"` .<br /><br /> -URL: dosyanın SharePoint sunucusunda dağıtılacağı konum. Biçimi, `Url="Module1/Sample.txt"` .<br /><br /> -Type: iki ayarı olan isteğe bağlı bir öznitelik: *GhostableInLibrary* ve *Ghostable*. Biçimi, `Type="GhostableInLibrary"` . *GhostableInLibrary* belirtme, dosyanın kitaplığa eklendiği sırada dosyaya eşlik eden bir liste öğesiyle birlikte SharePoint 'teki bir belge kitaplığına eklenebileceği anlamına gelir. *Ghostable* belirtme, dosyanın belge kitaplığı dışından SharePoint 'e eklenmesine neden olur.|
+|Modül|Module öğesi, ' ın ' de modül adını belirten tek bir özniteliğe ( *Name*) sahiptir `<Module Name="Module1">` .<br /><br /> Modülün adını (veya *klasör adı* özelliğini) değiştirirseniz, bu adı modül öğesinde el ile güncelleştirmeniz gerektiğini unutmayın.<br /><br /> modül öğesinde dosya (ler) için bir alt dizin belirtirseniz, [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS) bunlar için otomatik olarak eşleşen bir dizin yapısı oluşturulur.|
+|Dosya|Dosya öğesinin iki parametresi, *yolu* ve *URL 'si* vardır.<br /><br /> -Path: SharePoint çözümündeki dosyanın adı ve konumu. Biçimi, `Path="Module1\Sample.txt"` .<br /><br /> -Url: dosyanın SharePoint sunucuda dağıtılacağı konum. Biçimi, `Url="Module1/Sample.txt"` .<br /><br /> -Type: iki ayarı olan isteğe bağlı bir öznitelik: *GhostableInLibrary* ve *Ghostable*. Biçimi, `Type="GhostableInLibrary"` . *GhostableInLibrary* belirtme, dosyanın kitaplığa eklendiğinde dosyayı eşlik edecek bir liste öğesiyle birlikte SharePoint bir belge kitaplığına eklenebileceği anlamına gelir. *Ghostable* belirtme, dosyanın belge kitaplığı dışına SharePoint eklenmesine neden olur.|
 
  Dağıtmak istediğiniz her dosya `<File>` *Elements.xml* içinde ayrı bir öğe girişi gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: modül kullanarak dosyaları Içerme](../sharepoint/how-to-include-files-by-using-a-module.md)
 - [Nasıl yapılır: dosya sağlama](/previous-versions/office/developer/sharepoint-2010/ms441170(v=office.14))
-- [SharePoint çözümlerini geliştirme](../sharepoint/developing-sharepoint-solutions.md)
+- [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
 - [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

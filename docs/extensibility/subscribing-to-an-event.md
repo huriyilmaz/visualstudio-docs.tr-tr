@@ -1,5 +1,5 @@
 ---
-title: Bir Olay |'a abone olmak Microsoft Docs
+title: Bir Olay |'a abone | Microsoft Docs
 description: Visual Studio SDK'sı içinde çalışan bir belge tablosunda olaylara yanıt veren bir araç penceresi Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,14 +11,15 @@ ms.assetid: e94a4fea-94df-488e-8560-9538413422bc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 01271016eed9a4a157b333a2f0435589b0a028d5
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 349db4c14c3ca4e65a74123ab8c39da039aae3ac0bb74cfd24644689f5bd7761
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899400"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121290628"
 ---
 # <a name="subscribing-to-an-event"></a>Bir Olaya Abone Olma
 Bu kılavuzda, çalışan bir belge tablosunda (RDT) olaylara yanıt veren bir araç penceresi oluşturma açıklanır. Araç penceresi, uygulayan bir kullanıcı denetimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> barındırıyor. yöntemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> arabirimini olaylara bağlar.
@@ -55,7 +56,7 @@ Bu kılavuzda, çalışan bir belge tablosunda (RDT) olaylara yanıt veren bir a
     using Microsoft.VisualStudio.Shell.Interop;
     ```
 
-3. `RDTExplorerWindow`sınıfını, sınıfından türetmenin yanı sıra <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> arabirimini uygulayan şekilde <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> değiştirir.
+3. `RDTExplorerWindow`sınıfını, sınıfından türetmenin yanı sıra <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> arabirimini uygulayan şekilde <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> değiştirme.
 
     ```csharp
     public class RDTExplorerWindow : ToolWindowPane, IVsRunningDocTableEvents
@@ -131,7 +132,7 @@ Bu kılavuzda, çalışan bir belge tablosunda (RDT) olaylara yanıt veren bir a
 
 11. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel Visual Studio örnek görüntülenir.
 
-12. **RDTExplorerWindow** (**Görünüm / Diğer Windows / RDTExplorerWindow ) açın.**
+12. **RDTExplorerWindow** ( Görünüm / Diğer Windows **/ RDTExplorerWindow ) açın.**
 
      **RDTExplorerWindow penceresi** boş bir olay listesiyle açılır.
 

@@ -1,6 +1,6 @@
 ---
 title: Iletme Günlükçüleri oluşturma | Microsoft Docs
-description: Projeleri oluştururken izlemek istediğiniz olayları seçmenize izin vererek günlük verimliliğini artırmak için MSBuild iletme Günlükçüleri oluşturun.
+description: projeleri oluştururken izlemek istediğiniz olayları seçmenize izin vererek günlük verimliliğini artırmak için MSBuild iletme günlükçüler oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: 3aebf9c8-b62c-4cb2-b2d6-8cdfcd369a24
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ffe175d9ea73640cae1197fe91656d3565525f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e70edc25bc27b8c113b6d3bf52b6a43cf1dc0d7637a9ffc3dbfd1c4817dfd09b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901356"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370339"
 ---
 # <a name="create-forwarding-loggers"></a>İletme Günlükçüleri oluşturma
 
@@ -38,7 +39,7 @@ Günlükçüleri iletme, çok işlemcili bir sistemde proje oluştururken izleme
 
 ## <a name="specify-a-forwarding-logger"></a>Bir iletme günlükçüsü belirtin
 
- İletme günlükçüsü bir derlemeye derlendikten sonra, MSBuild sırasında bunu kullanmak için MSBuild 'e bildirmeniz gerekir. Bunu yapmak için `-FileLogger` ,, `-FileLoggerParameters` ve `-DistributedFileLogger` *MSBuild.exe* ile birlikte anahtarları kullanın. `-FileLogger`Anahtar, günlükçü 'nin doğrudan bağlı olduğunu *MSBuild.exe* söyler. `-DistributedFileLogger`Anahtar, düğüm başına bir günlük dosyası olduğu anlamına gelir. İletme günlükçü üzerindeki parametreleri ayarlamak için `-FileLoggerParameters` anahtarını kullanın. Bu ve diğer *MSBuild.exe* anahtarları hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
+ iletme günlükçüsü bir derlemeye derlendikten sonra, MSBuild derlemeler sırasında kullanmak üzere söylemeniz gerekir. Bunu yapmak için `-FileLogger` ,, `-FileLoggerParameters` ve `-DistributedFileLogger` *MSBuild.exe* ile birlikte anahtarları kullanın. `-FileLogger`Anahtar, günlükçü 'nin doğrudan bağlı olduğunu *MSBuild.exe* söyler. `-DistributedFileLogger`Anahtar, düğüm başına bir günlük dosyası olduğu anlamına gelir. İletme günlükçü üzerindeki parametreleri ayarlamak için `-FileLoggerParameters` anahtarını kullanın. Bu ve diğer *MSBuild.exe* anahtarları hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
 
 ## <a name="multi-processor-aware-loggers"></a>Çok işlemcili oturum defterleri
 

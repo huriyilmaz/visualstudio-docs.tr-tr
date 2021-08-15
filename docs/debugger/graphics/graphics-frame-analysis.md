@@ -1,6 +1,6 @@
 ---
 title: Grafik Çerçeve Çözümlemesi | Microsoft Docs
-description: Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek ve iyileştirmek için Visual Studio Grafik Çözümleyicisi Grafik Çerçeve Çözümlemesi kullanın.
+description: Direct3D oyununuzun veya uygulamanızın işleme performansını analiz etmek ve iyileştirmek için Visual Studio grafik çözümleyicisi 'nde Grafik Çerçeve Çözümlemesi kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
@@ -9,17 +9,18 @@ f1_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e97d0c840f6dfd49a0fb94f8f881ed690ef57c4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a849af128e15c4f29155a84b55082eb0762e4e79c1922ad7c1cb7b6ace905803
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841126"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121240227"
 ---
 # <a name="graphics-frame-analysis"></a>Grafik Çerçeve Analizi
-Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek ve iyileştirmek için Visual Studio Grafik Çözümleyicisi Grafik Çerçeve Çözümlemesi kullanın.
+Direct3D oyununuzun veya uygulamanızın işleme performansını analiz etmek ve iyileştirmek için Visual Studio grafik çözümleyicisi 'nde Grafik Çerçeve Çözümlemesi kullanın.
 
 ## <a name="frame-analysis"></a>Çerçeve Analizi
  Çerçeve Analizi, tanılama amaçları doğrultusunda bir grafik günlük dosyasında yakalanan bilgilerin aynısını kullanır, ancak bunun yerine işleme performansını özetlemek için kullanır. Performans bilgileri yakalama sırasında günlüğe kaydedilmez; Bunun yerine, performans bilgileri daha sonra çerçeve analizi sırasında, zamanlama olayları ve çerçeve oynatılırken istatistikler toplanarak oluşturulur. Bu yaklaşımda, yakalama sırasında performans bilgilerinin kaydedilmesinin çeşitli avantajları vardır:
@@ -34,7 +35,7 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
 
   Çerçeve Analizi öncelikle daha hızlı işleme performansı elde etmenize yardımcı olmaya yönelik olsa da, belirli bir performans hedefi için daha iyi görsel kalite elde etmenize veya GPU güç tüketimini azaltmanıza benzer bir şekilde yardımcı olabilir.
 
-  Uygulamanız için çerçeve analizinin neler yapabileceğini görmek için, Channel 9 ' da [Visual Studio grafik çerçeve çözümlemesi](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) videosunu izleyebilirsiniz.
+  uygulamanız için çerçeve analizinin neler yapabileceğini görmek için kanal 9 ' da [Visual Studio Grafik Çerçeve Çözümlemesi](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) videosunu izleyebilirsiniz.
 
 ## <a name="using-frame-analysis"></a>Çerçeve analizini kullanma
  Çerçeve analizini kullanabilmeniz için, diğer grafik Çözümleyicisi araçlarından birini kullandığınızda yaptığınız gibi, uygulamanızdaki grafik bilgilerini yakalamanız gerekir. Ardından, grafik günlüğü belgesi (. vsglog) penceresinde, **Çerçeve Analizi** sekmesini seçin.
@@ -175,7 +176,7 @@ Direct3D oyununuzun veya uygulamanızın işleme performansını çözümlemek v
 ## <a name="variants"></a><a name="Variants"></a> Değişken
  Çerçeve analizine ait her değişiklik, oynatma sırasında bir karenin işlenme şeklini *değişken* olarak bilinir. Çerçeve analizinin incelediği çeşitler, uygulamanızın işleme performansını veya görsel kalitesini geliştirmek için yapabileceğiniz yaygın, oldukça kolay değişikliklere karşılık gelir. Örneğin, dokuların boyutunu azaltarak, doku sıkıştırmayı kullanarak veya farklı türlerde kenar yumuşatma sağlayabilirsiniz. Çeşitler, uygulamanızın normal işleme bağlamını ve parametrelerini geçersiz kılar. Özet:
 
-|Değişken|Description|
+|Değişken|Açıklama|
 |-------------|-----------------|
 |**1x1 Görünüm penceresi boyutu**|Tüm işleme hedeflerindeki Görünüm penceresi boyutunu 1x1 piksele düşürür.<br /><br /> Daha fazla bilgi için bkz. [1x1 Görünüm penceresi boyut varyantı](1x1-viewport-size-variant.md)|
 |**0x MSAA**|Tüm işleme hedeflerinde çok örnekli kenar yumuşatmayı (MSAA) devre dışı bırakır.<br /><br /> Daha fazla bilgi için bkz. [0x/2x/4X MSAA çeşitleri](0x-2x-4x-msaa-variants.md)|

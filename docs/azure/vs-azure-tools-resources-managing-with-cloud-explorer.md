@@ -1,30 +1,31 @@
 ---
 title: Bulut Gezgini ile Azure kaynaklarını yönetme | Microsoft Docs
-description: Visual Studio 'da Azure kaynaklarını taramak ve yönetmek için Cloud Explorer 'ı nasıl kullanacağınızı öğrenin.
+description: Visual Studio içindeki Azure kaynaklarını taramak ve yönetmek için Cloud Explorer 'ı nasıl kullanacağınızı öğrenin.
 author: ghogen
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 775045247cda106d31cf1517e727b9dda5142c4f
-ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
+ms.openlocfilehash: 56e54aeb628ab6f80cef6400f48be40d675975df3bc8c87b78d1126a70fa5a99
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "113038622"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121363690"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer'da Azure hizmetlerinizle ilişkilendirilmiş kaynakları yönetme
 
 ::: moniker range=">=vs-2022"
 > [!Important]
-> Cloud Explorer, Visual Studio 2022 ' de kullanımdan kaldırılmıştır. Bunun yerine, aşağıdaki alternatifleri kullanabilirsiniz:
-> - [Microsoft Azure Depolama Gezgini](/azure/vs-azure-tools-storage-manage-with-storage-explorer) , Microsoft 'tan ücretsiz ve tek başına bir uygulamadır. Windows, macOS ve Linux üzerinde Azure Depolama verileriyle görsel olarak çalışmak için bu uygulamayı kullanabilirsiniz.
+> bulut gezgini Visual Studio 2022 ' de kullanımdan kaldırılmıştır. Bunun yerine, aşağıdaki alternatifleri kullanabilirsiniz:
+> - [Microsoft Azure Depolama Gezgini](/azure/vs-azure-tools-storage-manage-with-storage-explorer) , Microsoft 'tan ücretsiz ve tek başına bir uygulamadır. Windows, macos ve Linux 'ta Azure Depolama verileriyle görsel olarak çalışmak için bu uygulamayı kullanabilirsiniz.
 > - [Kudu konsolu](https://github.com/projectkudu/kudu/wiki/Kudu-console) , App Service sunucusuna ve dosya sistemine doğrudan, yükseltilmiş komut satırı erişimi sağlar. Bu, her ikisi de değerli bir hata ayıklama aracıdır ve paketleri yükleme gibi CLı işlemlerine izin verir.
 >
-> Gerekirse, Azure portalını kullanabilir veya Visual Studio 'nun önceki sürümlerinde Sunucu Gezgini Azure düğümünü kullanmaya devam edebilirsiniz.
+> Gerekirse, Azure portalını kullanabilir veya önceki Visual Studio sürümlerinde Sunucu Gezgini Azure düğümünü kullanmaya devam edebilirsiniz.
 >
-> Visual Studio 2022 hakkında daha fazla bilgi için [Sürüm notlarımıza](/visualstudio/releases/2022/release-notes-preview/)bakın.
+> Visual Studio 2022 hakkında daha fazla bilgi için [sürüm notlarımıza](/visualstudio/releases/2022/release-notes-preview/)bakın.
 
 ::: moniker-end
 
@@ -36,7 +37,7 @@ Cloud Explorer, Azure kaynaklarınızı ve Kaynak gruplarınızı görüntüleme
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio 2017 veya üzeri (bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads)) seçili **Azure iş yükü** . Visual Studio 'nun önceki bir sürümünü [.NET için Microsoft Azure SDK 2,9](https://www.microsoft.com/download/details.aspx?id=51657)ile de kullanabilirsiniz.
+* Visual Studio 2017 veya üzeri (bkz. [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads)) seçili **Azure iş yükü** . daha önceki bir Visual Studio sürümünü [.NET için Microsoft Azure SDK 2,9](https://www.microsoft.com/download/details.aspx?id=51657)ile de kullanabilirsiniz.
 * Microsoft Azure hesabı-hesabınız yoksa, [ücretsiz deneme için kaydolabilir](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) veya [Visual Studio abone avantajlarınızı etkinleştirebilirsiniz](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).
 
 > [!NOTE]

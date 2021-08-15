@@ -1,6 +1,6 @@
 ---
 title: Sınıf sekmesi, pencere özellikleri Iletişim kutusu | Microsoft Docs
-description: Visual Studio 'da Sınıf sekmesini seçin, odağı Windows Görünümü penceresine taşıyın, bir pencere düğümü seçin ve pencere özellikleri iletişim kutusunu görmek için > özellikleri görüntüle ' yi seçin.
+description: Visual Studio sınıf sekmesini seçin, odağı Windows görünümü penceresine taşıyın, bir pencere düğümü seçin ve pencere özellikleri iletişim kutusunu görmek için > özelliklerini görüntüle ' yi seçin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,21 +10,22 @@ ms.assetid: eaec9f07-d580-436d-934d-76c4e59439aa
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e1d7126fe795e269ee619e03daf2b81d6458f2e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 395dd01174a3cc94a3cb6014eb0756bdd94b82d3af4d6686f6f84af43e792036
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857821"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346056"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>Sınıf Sekmesi, Pencere Özellikleri İletişim Kutusu
-Seçili pencerenin sınıfındaki bilgileri göstermek için **sınıf** sekmesini kullanın. [Pencere özellikleri Iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek Için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
+Seçili pencerenin sınıfındaki bilgileri göstermek için **sınıf** sekmesini kullanın. [pencere özellikleri iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  Aşağıdaki ayarlar **sınıf** sekmesinde mevcuttur:
 
-|Giriş|Description|
+|Giriş|Açıklama|
 |-----------|-----------------|
 |**Sınıf adı**|Bu pencere sınıfının adı (veya sıra numarası).|
 |**Sınıf stilleri**|Sınıf stili kodlarının birleşimi.|

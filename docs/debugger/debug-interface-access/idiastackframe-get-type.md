@@ -11,14 +11,15 @@ ms.assetid: 99daa97b-5c05-455d-bd1e-800762ccf7c9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 24b05b9a651072854b3e7db91a8f27d94781f323
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: d94fb848f9401f83fccebe1abcf122da2d55e8615dce80aefa5a847ff9c788fd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147431"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454858"
 ---
 # <a name="idiastackframeget_type"></a>IDiaStackFrame::get_type
 Çerçeve türünü alır.

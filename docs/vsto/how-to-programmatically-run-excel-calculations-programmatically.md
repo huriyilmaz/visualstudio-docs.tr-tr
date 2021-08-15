@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla Excel hesaplamalarını çalıştırma'
-description: Visual Studio 'Yu kullanarak bir Microsoft Excel çalışma kitabında hesaplamaları programlı bir şekilde nasıl çalıştırabileceğinizi öğrenin.
+title: 'nasıl yapılır: program aracılığıyla Excel hesaplamaları çalıştırma'
+description: bir Microsoft Excel çalışma kitabındaki hesaplamaları programlı olarak çalıştırmak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,17 +15,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9fdc9cbc1966ac0fd862b795d66c7004f5089499
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 234457e235a78281858a45a202fdeff9ff781a849fef5a5757ad505f368cd023
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107823970"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384242"
 ---
-# <a name="how-to-programmatically-run-excel-calculations"></a>Nasıl yapılır: program aracılığıyla Excel hesaplamalarını çalıştırma
-  Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde veya yerel Excel Aralık nesnesinde hesaplamalar çalıştırmak için benzer bir işlem kullanırsınız.
+# <a name="how-to-programmatically-run-excel-calculations"></a>nasıl yapılır: program aracılığıyla Excel hesaplamaları çalıştırma
+  bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde veya yerel Excel aralığı nesnesinde hesaplamalar çalıştırmak için benzer bir işlem kullanırsınız.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -44,9 +45,9 @@ ms.locfileid: "107823970"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet76":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet76":::
 
-## <a name="run-calculations-in-a-native-excel-range"></a>Yerel bir Excel aralığında hesaplamalar çalıştırma
+## <a name="run-calculations-in-a-native-excel-range"></a>yerel Excel aralığında hesaplamalar çalıştırma
 
-### <a name="to-run-calculations-in-a-native-excel-range"></a>Yerel bir Excel aralığında hesaplamalar çalıştırmak için
+### <a name="to-run-calculations-in-a-native-excel-range"></a>yerel bir Excel aralığında hesaplamalar çalıştırmak için
 
 1. Adlandırılmış aralığı oluşturun.
 

@@ -10,30 +10,31 @@ ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6ffa2a0e646c11cb56d08ef91e3d7a4b9af7572
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: d4c8e69c261b25a4f3a425fc11eb8ccd259dbad2bf951f980e985163a23b4d0d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217508"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121374630"
 ---
 # <a name="walkthrough-display-signature-help"></a>İzlenecek yol: Imza yardımını görüntüle
 İmza yardımı ( *parametre bilgisi* olarak da bilinir), bir Kullanıcı parametre listesi başlangıç karakterini (genellikle bir açılış ayracı) yazdığında bir araç ipucunda bir yöntemin imzasını görüntüler. Bir parametre ve parametre ayırıcısı (genellikle virgül) yazıldığında araç ipucu, sonraki parametreyi kalın olarak göstermek için güncelleştirilir. Aşağıdaki yollarla Imza yardımını tanımlayabilirsiniz: bir dil hizmeti bağlamında kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve yalnızca bu tür için Imza yardımını görüntüleyebilir ya da mevcut bir içerik türü için Imza yardımını (örneğin, "metin") görüntüleyin. Bu izlenecek yol, "metin" içerik türü için Imza yardımını görüntülemeyi gösterir.
 
- İmza yardımı genellikle belirli bir karakter yazılarak tetiklenir, örneğin "(" (parantez açma) ve başka bir karakter yazılarak, örneğin ")" (kapatma parantezi). Bir karakter yazılarak tetiklenen IntelliSense özellikleri, tuş vuruşları ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim) ve arabirimi uygulayan bir işleyici sağlayıcısı için bir komut işleyicisi kullanılarak uygulanabilir <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Imza yardımına katılan imzaların listesi olan Imza yardım kaynağını oluşturmak için, arabirimi <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource> ve arabirimi çalıştıran bir kaynak sağlayıcıyı uygulayın <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider> . Sağlayıcılar Managed Extensibility Framework (MEF) bileşen bölümleridir ve kaynak ve denetleyici sınıflarını dışa aktarıp, hizmet ve aracıları içeri aktarmaktan sorumludur; Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> metin arabelleğinde gezinmenizi sağlar ve <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> imza Yardım oturumunu tetikleyen ' dir.
+ İmza yardımı genellikle belirli bir karakter yazılarak tetiklenir, örneğin "(" (parantez açma) ve başka bir karakter yazılarak, örneğin ")" (kapatma parantezi). Bir karakter yazılarak tetiklenen IntelliSense özellikleri, tuş vuruşları ( <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim) ve arabirimi uygulayan bir işleyici sağlayıcısı için bir komut işleyicisi kullanılarak uygulanabilir <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> . Imza yardımına katılan imzaların listesi olan Imza yardım kaynağını oluşturmak için, arabirimi <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource> ve arabirimi çalıştıran bir kaynak sağlayıcıyı uygulayın <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider> . sağlayıcılar Managed Extensibility Framework (MEF) bileşen bölümleridir ve kaynak ve denetleyici sınıflarını dışa aktarıp, hizmet ve aracıları içeri aktarmaktan sorumludur; örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> metin arabelleğinde gezinmenizi sağlar ve <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> imza yardım oturumunu tetikleyen ' dir.
 
  Bu izlenecek yol, sabit kodlanmış tanımlayıcı kümesi için Imza yardımını ayarlamayı gösterir. Tam uygulamalarda, bu içeriği sağlamaktan dil sorumludur.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="creating-a-mef-project"></a>MEF projesi oluşturma
 
 #### <a name="to-create-a-mef-project"></a>MEF projesi oluşturmak için
 
-1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `SignatureHelpTest` .
+1. C# VSıX projesi oluşturun. ( **yeni Project** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **vsıx Project**' i seçin.) Çözümü adlandırın `SignatureHelpTest` .
 
 2. Projeye bir düzenleyici sınıflandırıcı öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
@@ -169,7 +170,7 @@ ms.locfileid: "106217508"
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdksignaturehelptest/cs/signaturehelpsource.cs" id="Snippet21":::
 
 ## <a name="implement-the-signature-help-source-provider"></a>Imza yardım kaynak sağlayıcısını uygulama
- Imza yardım kaynak sağlayıcısı, Managed Extensibility Framework (MEF) bileşeni parçasını dışarı aktarma ve Imza yardım kaynağının örneğini oluşturma konusunda sorumludur.
+ imza yardım kaynak sağlayıcısı, Managed Extensibility Framework (MEF) bileşeni parçasını dışarı aktarma ve imza yardım kaynağının örneğini oluşturma konusunda sorumludur.
 
 #### <a name="to-implement-the-signature-help-source-provider"></a>Imza yardım kaynak sağlayıcısını uygulamak için
 
@@ -240,7 +241,7 @@ ms.locfileid: "106217508"
 
 1. Çözümü derleyin.
 
-2. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği başlatılır.
+2. bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio ikinci bir örneği başlatılır.
 
 3. Bir metin dosyası oluşturun ve "Ekle" sözcüğünün yanı sıra bir açılış ayracı içeren bir metin yazın.
 

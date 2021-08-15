@@ -8,18 +8,19 @@ ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: d42a7509ceef03d2e74f470d7d4ab0efb5913e13
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-xaml-tools
+ms.openlocfilehash: e3a08c647f115d6f01ecc8543e5b87d1d4a15a8bf0e20f9633c2999eac41d63c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900839"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121267240"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
 
 Bu makalede XAML Tasarımcısı yönelik düzen bölmeleri ve denetimleri açıklanmaktadır.
 
-Nesnelerin &mdash; görüntüler, düğmeler ve videolar gibi sayfa nesnelerinde görünmesini istediğiniz yeri düşünün. Belki de satırlarda ve sütunlarda, tek bir satırda, dikey veya yatay olarak veya sabit konumlarda görünmesini isteyebilirsiniz.
+nesnelerin &mdash; görüntüler, düğmeler ve videolar gibi sayfa nesnelerinde görünmesini istediğiniz Imagine. Belki de satırlarda ve sütunlarda, tek bir satırda, dikey veya yatay olarak veya sabit konumlarda görünmesini isteyebilirsiniz.
 
 Sayfanın nasıl görünebileceğini düşünmek için bir şans olduktan sonra bir Düzen paneli seçin. Nesnelerinizi eklediğiniz bir şeye ihtiyacınız olduğundan tüm sayfalar bir ile başlar. Varsayılan olarak bir **kılavuz** olur ancak bunu değiştirebilirsiniz.
 
@@ -29,7 +30,7 @@ Düzen panelleri bir sayfadaki nesneleri düzenlemenize yardımcı olur, ancak b
 
 Bu düzen panellerinden birini seçerek sayfanızı başlatın. Sayfanız birden fazla olabilir. Örneğin, bir **kılavuz** Düzen paneli ile başlayabilir ve ardından **kılavuzdaki** bir alana bir **StackPanel** ekleyerek, denetimleri bu öğe içinde dikey olarak düzenleyebilirsiniz.
 
-Aşağıdaki düzen panelleri en fazla popuya kullanılır, ancak diğerleri vardır. Tümünü Visual Studio 'da veya Visual Studio için Blend içindeki **varlıklar** panelinde **araç kutusu** 'nda bulabilirsiniz.
+Aşağıdaki düzen panelleri en fazla popuya kullanılır, ancak diğerleri vardır. bunların tümünü Visual Studio veya Visual Studio için Blend içindeki **varlıklar** panelinde **araç kutusu** 'nda bulabilirsiniz.
 
 ### <a name="grid"></a>Kılavuz
 
@@ -79,7 +80,7 @@ Nesneleri, panelin bir kenarına kalacak veya *sabitler* olacak şekilde düzenl
 
 Nesnelerinizi düzen denetimlerine de ekleyebilirsiniz. Bunlar Düzen paneli olarak zengin zengin değildir, ancak belirli senaryolar için yararlı olabilir.
 
-Aşağıdaki düzen denetimleri en popüler, ancak diğerleri vardır. Tümünü Visual Studio 'da veya Visual Studio için Blend içindeki **varlıklar** panelinde **araç kutusu** 'nda bulabilirsiniz.
+Aşağıdaki düzen denetimleri en popüler, ancak diğerleri vardır. bunların tümünü Visual Studio veya Visual Studio için Blend içindeki **varlıklar** panelinde **araç kutusu** 'nda bulabilirsiniz.
 
 ### <a name="border"></a>Kenarlık
 

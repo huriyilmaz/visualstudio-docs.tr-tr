@@ -1,6 +1,6 @@
 ---
 title: Varsayılan komut, Grup ve araç çubuğu yerleşimi | Microsoft Docs
-description: Visual Studio Kullanıcı arabiriminin varsayılan olarak görüntüleyeceği IDE komutları, ürün komutları ve düzenleyici komutları hakkında bilgi edinin.
+description: Visual Studio kullanıcı arabiriminin varsayılan olarak görüntüleyeceği ıde komutları, ürün komutları ve düzenleyici komutları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,14 +15,15 @@ ms.assetid: 35342110-d639-4577-8367-00b21dcc6f07
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07e93db9ffe79c3c49072b3379def14a3be2852c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 86b58d33f07eaae8ef93ddb82a77516a6eb182c467d77cc5857336bab6756844
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091012"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359617"
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>Varsayılan komut, Grup ve araç çubuğu yerleşimi
 Ürün ve kararlılık için, Kullanıcı arabirimi belirli komut gruplarını varsayılan olarak görüntüler ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Komutlar ve komut grupları için tanımlar sağlar. VSPackages, standart komutları ve komut gruplarını da kullanabilir.

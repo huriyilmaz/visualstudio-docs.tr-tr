@@ -11,14 +11,15 @@ ms.assetid: e25e7a46-6a55-4726-8def-ca316f553d6b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48067ed883a44870b3b753cb5e3d6943eca91ca5
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 0f3f0182ee7cb696fea33aa41df076f6579e7db948b7f6113fc46d419f53989f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900310"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121237858"
 ---
 # <a name="register-and-unregister-vspackages"></a>VSPackage'ları kaydetme ve kaydını çıkarma
 VsPackage kaydetmek için öznitelikleri kullanır, ancak
@@ -69,7 +70,7 @@ public class CustomRegistrationAttribute : RegistrationAttribute
 }
 ```
 
- özniteliği öznitelik sınıflarında özniteliğin ait olduğu program öğesini (sınıf, yöntem vb.) belirtmek için kullanılır, birden çok kez kullanılabilir olup olmadığını ve devralınıp devralınıp devralınamayacaklarını <xref:System.AttributeUsageAttribute> belirtir.
+ özniteliği öznitelik sınıflarında özniteliğin ait olduğu program öğesini (sınıf, yöntem vb.) belirtmek için kullanılır, birden çok kez kullanılabilir olup olmadığını ve devralınıp devralınıp devralılamayacaklarını <xref:System.AttributeUsageAttribute> belirtir.
 
 ### <a name="create-a-registry-key"></a>Kayıt defteri anahtarı oluşturma
 

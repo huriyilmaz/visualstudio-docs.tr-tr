@@ -1,5 +1,5 @@
 ---
-title: Visual Studio komut tablosu (. Vsct) dosyaları | Microsoft Docs
+title: Visual Studio Komut tablosu (. Vsct) dosyaları | Microsoft Docs
 description: VSPackage 'ın içerdiği komut kümesini tanımlayan metin dosyaları olan komut tablosu yapılandırma dosyaları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,14 +11,15 @@ ms.assetid: 1313adb4-add4-4e74-90e2-f4be522f5259
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 305bf0e5463fd4e030f2ce3e9f7fa6eca99bfe20
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e7f85d60d12fcb4cd04aacb9281e8bbb9d973e6dfe2e5732379c6387fdabf173
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085760"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375461"
 ---
 # <a name="visual-studio-command-table-vsct-files"></a>Visual Studio Komut Tablosu (.Vsct) Dosyaları
 Komut tablosu yapılandırma dosyası, VSPackage 'un içerdiği komut kümesini açıklayan bir metin dosyasıdır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Komut tablosu (vsct) derleyicisi, XML tabanlı yapılandırma dosyalarını (. vsct dosyaları) ikili komut tablosu çıktısı (. CTO) dosyalarına derler. Sonuç. CTO dosyaları,. ctc yapılandırma dosyalarını derlemek için komut tablosu (CTC) derleyicisi kullanılarak oluşturulmuş olanlarla aynıdır. Ancak, XML tabanlı. vsct dosyaları, XML Düzenleyicisi ve XML IntelliSense gibi bazı avantajlara sahiptir.

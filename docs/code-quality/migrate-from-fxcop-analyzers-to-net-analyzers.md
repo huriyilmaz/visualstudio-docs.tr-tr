@@ -1,7 +1,7 @@
 ---
 title: FxCop çözümleyicilerinden .NET çözümleyicilerine geçirme
 ms.custom: SEO-VS-2020
-description: FxCop çözümleyicileri ' nden .NET çözümleyicilerine nasıl geçiş yapılacağını öğrenin
+description: FxCop çözümleyicilerinden .NET çözümleyicilere geçiş yapmayı öğrenin
 ms.date: 03/06/2020
 ms.topic: conceptual
 f1_keywords:
@@ -13,33 +13,34 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: d6f9c36b1b64abe648c3aa9014c633e4e4949b1a
-ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+ms.technology: vs-ide-code-analysis
+ms.openlocfilehash: b900c886703aeed3edb3ae069cbdbc3e5bceea11945ef6d8ba92fc85aa3c76b2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108798264"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121363222"
 ---
 # <a name="migrate-from-fxcop-analyzers-to-net-analyzers"></a>FxCop çözümleyicilerinden .NET çözümleyicilerine geçirme
 
-.NET Compiler Platform ("Roslyn") Çözümleyicileri kaynak analizi, yönetilen kod için [eski analizler](code-analysis-for-managed-code-overview.md) yerini alır. Eski analiz (FxCop) kurallarının birçoğu kaynak Çözümleyicileri olarak zaten yeniden yazıldı.
+.NET Compiler Platform ("Roslyn") çözümleyicileri tarafından yapılan kaynak analizi, yönetilen [kod için eski](code-analysis-for-managed-code-overview.md) analizin yerini alır. Eski analiz (FxCop) kurallarının çoğu zaten kaynak çözümleyiciler olarak yeniden yazılmıştır.
 
-Visual Studio 2019 16,8 ve .NET 5,0 öncesinde, bu çözümleyiciler `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)olarak gönderilir.
+2019 Visual Studio 16.8 ve .NET 5.0'dan önce, bu çözümleyiciler NuGet `Microsoft.CodeAnalysis.FxCopAnalyzers` [olarak gönderilir.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)
 
-Visual Studio 2019 16,8 ve .NET 5,0 'den başlayarak, bu çözümleyiciler [.NET SDK 'ya dahildir](/dotnet/fundamentals/code-analysis/overview). .NET 5 + SDK ' ya geçmek istemiyorsanız veya bir NuGet paket tabanlı modeli tercih ediyorsanız, çözümleyiciler `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)de mevcuttur. İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz.
+2019 Visual Studio 16.8 ve .NET 5.0'dan başlayarak, bu çözümleyiciler [.NET SDK'sı ile birlikte gelir.](/dotnet/fundamentals/code-analysis/overview) .NET 5+ SDK'ya taşınmak istemiyorsanız veya NuGet paket tabanlı bir model tercih ediyorsanız çözümleyiciler, NuGet `Microsoft.CodeAnalysis.NetAnalyzers` [paketinde de kullanılabilir.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) isteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edersiniz.
 
 > [!NOTE]
-> Birinci taraf .NET Çözümleyicileri, hedef platform belirsiz ' dir. Diğer bir deyişle, projenizin belirli bir .NET platformunu hedeflemesi gerekmez. Çözümleyiciler, `net5.0` ve gibi önceki .NET sürümlerinin yanı sıra hedeflenen projeler için de çalışır `netcoreapp` `netstandard` `net472` .
+> Birinci taraf .NET çözümleyicileri hedef platformdan bağımsızdır. Başka bir ifadeyle, projenizin belirli bir .NET platformunu hedeflemesi gerek değildir. Çözümleyiciler, hem hem de , ve gibi önceki .NET sürümlerini `net5.0` hedef alan projeler için `netcoreapp` `netstandard` `net472` çalışır.
 
 ## <a name="migration-steps"></a>Geçiş adımları
 
-Sürümden itibaren `3.3.2` `Microsoft.CodeAnalysis.FxCopAnalyzers` NuGet paketi kullanım dışı bırakılmıştır. Projenizi veya çözümünüzü .NET çözümleyicilerine geçirmek için lütfen aşağıdaki adımları izleyin `Microsoft.CodeAnalysis.FxCopAnalyzers` :
+sürümünden `3.3.2` itibaren `Microsoft.CodeAnalysis.FxCopAnalyzers` NuGet paketi kullanım dışıdır. Projenizi veya çözümleyicilerinizi .NET çözümleyicilerinden geçirmek `Microsoft.CodeAnalysis.FxCopAnalyzers` için lütfen aşağıdaki adımları izleyin:
 
-1. `Microsoft.CodeAnalysis.FxCopAnalyzers`NuGet paketini kaldır
+1. Paket `Microsoft.CodeAnalysis.FxCopAnalyzers` NuGet kaldırma
 
-2. [.Net Çözümleyicileri etkinleştirebilir veya bunları yükler](install-net-analyzers.md). Projenizin hedef platformunu değiştirmeniz gerekmediğini unutmayın.
+2. [.NET çözümleyicilerini etkinleştirin veya yükleyin.](install-net-analyzers.md) Projenizin hedef platformunu değiştirmek zorunda olmadığını unutmayın.
 
-3. Ek kuralları etkinleştir: ile `Microsoft.CodeAnalysis.NetAnalyzers` karşılaştırıldığında çok daha fazla koruyucu `Microsoft.CodeAnalysis.FxCopAnalyzers` . Fxcopçözümleyiciler paketinin aksine, yalnızca [derleme uyarıları olarak varsayılan olarak etkinleştirilen](/dotnet/fundamentals/code-analysis/overview#enabled-rules)birkaç doğruluk kuralına sahiptir. [Analysismode](/dotnet/core/project-sdk/msbuild-props#analysismode) MSBuild özelliğini özelleştirerek [ek kurallara izin](/dotnet/fundamentals/code-analysis/overview#enable-additional-rules) verebilirsiniz. Örneğin, özelliğinin olarak ayarlanması, `AllEnabledByDefault` geçerli tüm CA kurallarının varsayılan olarak derleme uyarıları olarak etkinleştirecektir.
+3. Ek kuralları etkinleştir: `Microsoft.CodeAnalysis.NetAnalyzers` ile karşılaştırıldığında çok daha tutucudur. `Microsoft.CodeAnalysis.FxCopAnalyzers` FxCopAnalyzers paketinin aksine, derleme uyarıları olarak varsayılan olarak etkin olan yalnızca [birkaç doğruluk kuralı vardır.](/dotnet/fundamentals/code-analysis/overview#enabled-rules) [AnalysisMode](/dotnet/core/project-sdk/msbuild-props#analysismode) [MSBuild](/dotnet/fundamentals/code-analysis/overview#enable-additional-rules) özelliğini özelleştirerek ek MSBuild etkinleştirabilirsiniz. Örneğin, özelliğini olarak ayarlayan `AllEnabledByDefault` tüm ilgili CA kuralları varsayılan olarak derleme uyarıları olarak etkinleştirildi.
 
    ```xml
    <PropertyGroup>
@@ -49,7 +50,7 @@ Sürümden itibaren `3.3.2` `Microsoft.CodeAnalysis.FxCopAnalyzers` NuGet paketi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kaynak kodu analizi ve eski analiz karşılaştırması](net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
+- [Kaynak kodu analiziyle eski analiz karşılaştırması](net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 - [Eski analizden .NET çözümleyicilerine geçirme](migrate-from-legacy-analysis-to-net-analyzers.md)
 - [.NET çözümleyicilerini etkinleştirme veya yükleme](install-net-analyzers.md)
 - [.NET çözümleyicileri hakkında SSS](net-analyzers-faq.yml)

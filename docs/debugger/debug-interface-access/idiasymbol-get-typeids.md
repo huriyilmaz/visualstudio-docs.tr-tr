@@ -11,14 +11,15 @@ ms.assetid: 5166e647-fde5-4efe-92bf-77f8ae3fbc9b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 04a39af21ebb8a409656bd8b8ae0b4323da33c60
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b3e3cd29c1cb00cfa2c01f1061487ed6a75852e4c771656efa2cf3ae94d150f7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155616"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391651"
 ---
 # <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
 Bu simge için derleyiciye özgü tür tanımlayıcı değerlerinin dizisini alır.

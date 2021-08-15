@@ -10,20 +10,21 @@ ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6442a8475c862693b851be783ae85bbb0a2e90af
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bde953b023b91c3c3e3b06fb3d50770851352da9d441b6277406ed91bbc392a5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082120"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359734"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>VSPackage için yükleme dizinini seçin
 Bir VSPackage ve destekleyici dosyaları bir kullanıcının dosya sisteminde olmalıdır. Konum, VSPackage 'ın yönetilip yönetilmediğini, yan yana sürüm oluşturma şemanızın ve Kullanıcı tercihinizin olup olmamasına bağlıdır.
 
 ## <a name="unmanaged-vspackages"></a>Yönetilmeyen VSPackages
- Yönetilmeyen VSPackage, herhangi bir konuma yüklenebilen bir COM sunucusudur. Kayıt bilgileri, konumunu doğru şekilde yansıtmalıdır. Yükleyici Kullanıcı arabiriminiz (UI), Windows Installer özellik değerinin alt dizini olarak varsayılan bir konum sağlamalıdır `ProgramFilesFolder` . Örnek:
+ Yönetilmeyen VSPackage, herhangi bir konuma yüklenebilen bir COM sunucusudur. Kayıt bilgileri, konumunu doğru şekilde yansıtmalıdır. yükleyici kullanıcı arabiriminiz (uı), Windows Installer özellik değerinin alt dizini olarak varsayılan bir konum sağlamalıdır `ProgramFilesFolder` . Örnek:
 
 *&lt;ProgramFilesFolder &gt; \\ &lt; şirketim &gt; \\ &lt; myvspackageproduct &gt; \v1.0\\*
 
@@ -49,7 +50,7 @@ Bir VSPackage ve destekleyici dosyaları bir kullanıcının dosya sisteminde ol
 
  [Manage VSPackages](../../extensibility/managing-vspackages.md) makalesinde, kayıt defteri girdileri, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aslında bir VSPackage 'ın uydu dll 'inin nerede göründüğünü kontrol gösterir. Ancak, bir kültür DLL 'sini bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] LCID değeri için adlı bir alt dizine aşağıdaki sırayla yüklemeye çalışır:
 
-1. Varsayılan LCıD (Visual Studio LCıD; Örneğin, Ingilizce için *\ 1033* )
+1. varsayılan lcıd (Visual Studio lcıd; örneğin, ingilizce için *\ 1033* )
 
 2. Varsayılan alt dille varsayılan LCıD.
 

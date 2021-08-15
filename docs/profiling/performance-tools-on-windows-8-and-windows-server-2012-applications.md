@@ -1,42 +1,43 @@
 ---
-title: Windows 8 & WS 2012 uygulamalarında performans araçları
-description: Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özelliklerinin, Visual Studio performans araçları 'nın verileri toplama biçiminde önemli değişiklikler yapması hakkında bilgi edinin.
+title: WS 2012 Windows 8 & performans araçları
+description: Performans araçlarının veri toplama Windows 8 Windows Server 2012 önemli değişiklikler Visual Studio özellikleri hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 06/19/2017
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a6060b61f388b4db4e9284a96f5d924a84a76210
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f2d431889051b85b6501436ecc203fefe7741f305ef5d9cf9647caff1d33ba96
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922061"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121246077"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 ve Windows Server 2012 uygulamalarında performans araçları
 
-Windows 8 ve Windows Server 2012 ' den başlayan gelişmiş güvenlik özellikleri, Visual Studio performans araçları 'nın bu platformlarda veri toplama biçiminde önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bu konuda, Windows 8 ve Windows Server 2012 platformlarından itibaren performans araçları için değişiklikler açıklanmaktadır.
+Gelişmiş güvenlik özellikleri Windows 8 Windows Server 2012 performans araçlarının bu platformlarda veri toplama Visual Studio önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Bu konu başlığında, Windows 8 ve Windows Server 2012 açıklanmıştır.
 
 > [!NOTE]
-> Desteklenen diğer Windows sürümleri (Windows 7, Windows Server 2008 R2) için performans araçları değişmemiştir.
+> Windows'nin (Windows 7, Windows Server 2008 R2) desteklenen diğer sürümleri için performans araçları değişmemiştir.
 
-## <a name="collect-data-on-uwp-apps-from-the-visual-studio-ide"></a>Visual Studio IDE 'den UWP uygulamalarında veri toplama
+## <a name="collect-data-on-uwp-apps-from-the-visual-studio-ide"></a>IDE'den UWP uygulamaları Visual Studio toplama
 
-JavaScript ve HTML 5 ' te yazılmış bir UWP uygulamasını profilin içinde, JavaScript kodu için izleme verileri toplayabilirsiniz. Visual C++, Visual C# veya Visual Basic yazılmış bir UWP uygulamasını veya bileşenini profil oluştururken, yerel ve yönetilen kod için örnekleme verisi toplamanız gerekir. Uygulamanızı yerel olarak veya uzak bir makinede profil oluşturabilirsiniz.
+JavaScript ve HTML 5 ile yazılmış bir UWP uygulamasının profilini 0'a 0'larsanız, JavaScript kodu için ölçüm verilerini toplar. Visual C++, Visual C# veya Visual Basic yazılmış bir UWP uygulamasının veya bileşeninin profilini 0,000'den fazla yerel ve yönetilen kod için toplar. Uygulamanın profilini yerel olarak veya uzak bir makinede kullanabilirsiniz.
 
-UWP uygulamalarının profili oluşturulurken Bu profil oluşturma özellikleri ve seçenekleri desteklenmez:
+Bu profil oluşturma özellikleri ve seçenekleri, UWP uygulamalarının profilini oluşturmada desteklenmiyor:
 
-- Örnekleme yöntemi kullanılarak JavaScript uygulamalarının profilini oluşturma.
-- İzleme yöntemi kullanılarak yönetilen ve yerel kod profili oluşturuluyor.
+- Örnekleme yöntemini kullanarak JavaScript uygulamalarının profilini oluşturma.
+- Ölçümleme yöntemini kullanarak yönetilen ve yerel kodun profilini oluşturma.
 - Eşzamanlılık profili oluşturma
 - .NET bellek profili oluşturma
-- Katman etkileşimi profili oluşturma (tıp)
+- Katman etkileşim profili oluşturma (TIP)
 - Örnekleme olayı ve zamanlama aralığını ayarlama veya ek performans sayacı verileri toplama gibi örnekleme seçenekleri.
-- Performans ve Windows sayaç verilerini toplama ya da ek komut satırı seçeneklerini belirtme gibi izleme seçenekleri.
+- Performans ve Windows sayaç verilerini toplama veya ek komut satırı seçenekleri belirtme gibi ölçüm seçenekleri.
 
 UWP uygulamalarının profilini oluşturma hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
@@ -44,84 +45,84 @@ UWP uygulamalarının profilini oluşturma hakkında daha fazla bilgi için aşa
 - [Uzak makinede UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [Profil oluşturma araçlarına ilk bakış](profiling-feature-tour.md)
 - [JavaScript belleği](../profiling/javascript-memory.md)
-- [Yerel bir makinedeki UWP uygulamalarında profil Visual C++, Visual C# ve Visual Basic kodu](/previous-versions/hh696631(v=vs.140))
-- [Uzak cihazdaki UWP uygulamalarında profil Visual C++, Visual C# ve Visual Basic kodu](/previous-versions/hh972878(v=vs.140))
-- [UWP uygulamalarında Visual C++, Visual C# ve Visual Basic kodu için performans verilerini çözümleme](/previous-versions/hh780914(v=vs.140))
+- [Yerel Visual C++ UWP uygulamalarındaki Visual Basic, Visual C# ve Visual Basic kodunun profilini oluşturma](/previous-versions/hh696631(v=vs.140))
+- [Uzak Visual C++ UWP uygulamalarındaki Visual C++, Visual C# ve Visual Basic kodunun profilini oluşturma](/previous-versions/hh972878(v=vs.140))
+- [UWP uygulamalarındaki Visual C++, Visual C# ve Visual Basic için performans verilerini analiz etme](/previous-versions/hh780914(v=vs.140))
 
-## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Visual Studio IDE 'den Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalar üzerinde veri toplama
+## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>Windows 8 masaüstünde veya Windows Server 2012 IDE'den Visual Studio toplama
 
-İzleme yöntemini kullanarak profil oluşturma, Windows 8 için değişmemiştir.
+Profil oluşturma yöntemi kullanılarak profil oluşturma, Windows 8.
 
-Katman etkileşimi profili oluşturma (tıp), örnekleme yöntemi kullanılarak desteklenmez.
+Katman etkileşimi profili oluşturma (TIP), örnekleme yöntemi kullanılarak desteklenmiyor.
 
-## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a>Visual Studio IDE 'de örnekleme kullanarak Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalarda veri toplayın
+## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a>IDE'den örnekleme kullanarak Windows 8 masaüstünde veya Windows Server 2012 üzerinde çalışan Visual Studio toplama
 
-Bu profil oluşturma özellikleri ve seçenekleri, örnekleme yöntemi kullanılarak Windows 8 masaüstü uygulamalarının veya Windows Server 2012 uygulamalarının profili oluşturulurken desteklenmez:
+Bu profil oluşturma özellikleri ve seçenekleri, örnekleme yöntemini kullanarak Windows 8 uygulamaları veya Windows Server 2012 profil oluşturma özelliği için destek değildir:
 
-- Katman etkileşimi profili oluşturma (tıp). Tıp verilerinin toplanması, izleme kullanılarak desteklenir.
+- Katman etkileşimi profili oluşturma (TIP). İPUCU verilerini toplama, ölçümleme kullanılarak de desteklene.
 
 - Örnekleme olayı ve zamanlama aralığını ayarlama veya ek performans sayacı verileri toplama gibi örnekleme seçenekleri.
 
-## <a name="profile-from-the-command-line"></a>Komut satırından profil
+## <a name="profile-from-the-command-line"></a>Komut satırı profili
 
-Visual Studio yüklemesi olmayan aygıtlar da dahil olmak üzere Windows 8 ve Windows Server 2012 cihazlarında profil oluşturma verilerini toplamak için iki komut satırı aracını kullanın:
+Windows 8 ve Windows Server 2012 cihazlarda profil oluşturma verilerini toplamak için, Visual Studio yüklemesi yapmayan cihazlar da dahil olmak üzere iki komut satırı Visual Studio:
 
-|Araç adı|Description|
+|Araç adı|Açıklama|
 |---------------|-----------------|
-|[VSPerf](../profiling/vsperf.md)|UWP uygulamalarından profil oluşturma verilerini toplar ve Windows 8 Masaüstü uygulamalarından ve Windows Server 2012 uygulamalarından örnek profil oluşturma verilerini toplar.|
-|[VSPerfCmd](../profiling/vsperfcmd.md)|Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalardan izleme, eşzamanlılık ve katman etkileşimi profil oluşturma verilerini toplar. Önceki Windows sürümlerinden tüm profil oluşturma verisi türlerini toplar.|
+|[VSPerf](../profiling/vsperf.md)|UWP uygulamalarından profil oluşturma verilerini toplar ve masaüstü uygulamalarından ve Windows 8 uygulamalardan örnek profil Windows Server 2012 toplar.|
+|[VSPerfCmd](../profiling/vsperfcmd.md)|Windows 8 masaüstünde veya Windows Server 2012'da çalışan uygulamalardan araçları, eşzamanlılık ve katman etkileşim profili oluşturma verilerini Windows Server 2012. Uygulamanın önceki sürümlerinden profil oluşturma verisi Windows.|
 
-Her iki araç da yerel bilgisayarda kullanılmak üzere Visual Studio ile birlikte yüklenir.
+Her iki araç da yerel Visual Studio için bir uygulamayla birlikte yüklenir.
 
-Visual Studio yüklü olmayan cihazlarda uygulama profili eklemek için aşağıdakilerden birini yapın:
+Yüklü yüklü değil cihazlarda Visual Studio profili oluşturmak için, aşağıdakilerden birini yapın:
 
-- Araçları [MSDN Web sitesinden](https://visualstudio.microsoft.com/#downloads+d-additional-software)Visual Studio için uzak Araçlar bir parçası olarak indirin.
+- MSDN web sitesinden Visual Studio için Uzak Araçlar parçası olarak [araçları indirin.](https://visualstudio.microsoft.com/#downloads+d-additional-software)
 
-- Visual Studio bilgisayarınızdan tek başına profil oluşturucu araçları yükleme programını kopyalayın ve çalıştırın. Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). Uzak bilgisayarın işletim sistemi (x86/x64) için Kurulum programını seçin.
+- Tek başına profil oluşturma araçları yükleme programını kopyalayıp bilgisayarınızdan Visual Studio çalıştırın. Profil oluşturma araçlarının yolunu almak için [bkz. Komut satırı araçlarının yolunu belirtme.](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md) Uzak bilgisayarın işletim sistemi (x86/x64) için kurulum programını seçin.
 
 > [!NOTE]
-> Tıp profil oluşturma verilerini toplamak için, Visual Studio makinenizden tek başına profil oluşturucuyu uzak bilgisayara yüklemelisiniz.
+> İPUCU profili oluşturma verilerini toplamak için, uzak bilgisayara tek başına profil Visual Studio makinenizi yüklemeniz gerekir.
 
-Bu profil oluşturma özellikleri ve seçenekleri, Windows 8 ve Windows Server 2012 uygulamalarının komut satırından profil oluşturma sırasında desteklenmez:
+Bu profil oluşturma özellikleri ve seçenekleri, komut Windows 8 ve Windows Server 2012 profil oluşturma özelliğinde desteklanmaz:
 
-- [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md)ile örnekleme modunu kullanarak Windows 8 ve windows Server 2012 Web uygulamalarından veri toplama.
+- [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md)Windows Server 2012 Windows 8 örnekleme modunu kullanarak web uygulamalarından ve web uygulamalarından veri toplama.
 
-- VsPerfCmd.exe kullanarak örnekleme verileri toplama.
+- Veri kaynağı kullanarak örnekleme VsPerfCmd.exe.
 
 - Örnekleme olayı ve zamanlama aralığını ayarlama veya ek performans sayacı verileri toplama gibi örnekleme seçenekleri.
 
-## <a name="collect-tier-interaction-tip-data"></a>Katman etkileşimi (tıp) verilerini topla
+## <a name="collect-tier-interaction-tip-data"></a>Katman etkileşimi (TIP) verilerini toplama
 
-Katman etkileşimi profili oluşturma, ADO.NET Hizmetleri aracılığıyla veritabanlarıyla iletişim kuran çok katmanlı uygulamalar işlevlerinin yürütme zamanları hakkında ek bilgiler sağlar. Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır.
+Katman etkileşimi profili oluşturma, veritabanlarıyla iletişim kuran çok katmanlı uygulamaların işlevlerinin yürütme süreleri hakkında ek bilgi sağlar ve ADO.NET sağlar. Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır.
 
 **Visual Studio sürümleri**
 
-Katman etkileşimi profil oluşturma verileri, herhangi bir Visual Studio sürümü kullanılarak toplanabilir. Ancak, katman etkileşimi profil oluşturma verileri yalnızca Visual Studio Enterprise görüntülenebilir.
+Katman etkileşim profili oluşturma verileri, herhangi bir sürüm kullanılarak Visual Studio. Ancak, katman etkileşimi profil oluşturma verileri yalnızca Visual Studio Enterprise.
 
 **Windows 8 ve Windows Server 2012**
 
-1. Windows 8 masaüstü veya Windows Server 2012 üzerinde çalışan uygulamalardan katman etkileşim verileri toplamak için, izleme yöntemini kullanmanız gerekir.
+1. Windows 8 masaüstünde veya Windows Server 2012 çalışan uygulamalardan katman etkileşim verilerini toplamak için, ölçüm yöntemini kullansanız gerekir.
 
-2. UWP uygulamaları için katman etkileşimi verilerini toplayamazsınız.
+2. UWP uygulamaları için katman etkileşim verileri toplayabilirsiniz.
 
-3. Katman etkileşim verilerini, desteklenen diğer Windows sürümündeki tüm profil oluşturma yöntemlerine dahil edebilirsiniz.
+3. Katman etkileşim verilerini tüm profil oluşturma yöntemlerine, uygulamanın desteklenen diğer Windows.
 
 **Performans Sihirbazı ve Performans Gezgini**
 
-Katman etkileşim verileri toplama seçeneğini Performans Gezgini bir profil oluşturma çalıştırmasına eklemeniz gerekir. Ayrıca, Performans Gezgini hedef düğümüne proje, çalıştırılabilir veya Web sitesini de eklemeniz gerekir. Bkz. [Katman etkileşimi verilerini toplama](../profiling/collecting-tier-interaction-data.md).
+Katman etkileşim veri toplama seçeneğini, profil oluşturma çalıştırması için katmandan Performans Gezgini. Ayrıca projeyi, yürütülebilir dosyayı veya web sitesini de uygulamanın Hedef düğümüne Performans Gezgini. Bkz. [Katman etkileşim verilerini toplama.](../profiling/collecting-tier-interaction-data.md)
 
-**Uzak makinede Ipucu verileri toplama**
+**Uzak makinede TIP verileri toplama**
 
-Uzak bir makinedeki katman etkileşimi verilerini toplamak için, **vs \_ Profiler \_** _\<Platform>_ **\_** _\<Language>_ **. exe** dosyasını bir Visual Studio makinesinin *%VSInstallDir%\Team Tools\Performance tools\kurulumları* klasöründen uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
+Uzak bir makinede katman etkileşim verileri toplamak için, bir Visual Studio makinesinin **\_ \_** _\<Platform>_ **\_** _\<Language>_ **** *%VSInstallDir%\Team Tools\Performance Tools\Setups* klasöründen vs profiler.exedosyasını kopyalayıp uzak bilgisayara yüklemeniz gerekir. Uzaktan Hata Ayıklama indirme paketinde profil [oluşturma araçlarını kullanılamaz.](../debugger/remote-debugging.md)
 
-Profil oluşturma verilerini toplamak için [VSPerfCmd](../profiling/vsperfcmd.md) veya [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) kullanabilirsiniz.
+Profil oluşturma verilerini [toplamak için VSPerfCmd](../profiling/vsperfcmd.md) veya [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) kullanabilirsiniz.
 
-**Ipucu raporları**
+**İPUCU raporları**
 
-Katman etkileşim verileri yalnızca Visual Studio Enterprise ' de görüntülenebilir. [VSPerfReport](../profiling/vsperfreport.md) aracılığıyla dosya tabanlı katman etkileşimi raporları kullanılamaz.
+Katman etkileşim verileri yalnızca Visual Studio Enterprise. [VSPerfReport](../profiling/vsperfreport.md) aracılığıyla dosya tabanlı katman etkileşim raporları kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Performans Gezgini](../profiling/performance-explorer.md) 
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md) 
- [Komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [Komut satırı profili](../profiling/using-the-profiling-tools-from-the-command-line.md)

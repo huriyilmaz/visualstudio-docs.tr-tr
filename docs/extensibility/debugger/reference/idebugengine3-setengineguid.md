@@ -11,17 +11,18 @@ ms.assetid: 8bdfa05d-feb7-4d98-abac-77825a04c50f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 64d18b8a2cc1e1f0a6ad67418bb4abdf1e684829
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca8010c09a703ed42b84a6585800d899ad5abb64f4cabf2cfced1ce38eb01d1e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066172"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390066"
 ---
 # <a name="idebugengine3setengineguid"></a>IDebugEngine3::SetEngineGuid
 Bu yöntem, hata ayıklama altyapısının (DE) ayarlar `GUID` .

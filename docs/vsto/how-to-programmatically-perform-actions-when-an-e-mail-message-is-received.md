@@ -1,6 +1,6 @@
 ---
 title: E-posta iletisi alındığında program aracılığıyla eylem gerçekleştirme
-description: Microsoft Outlook 'ta bir e-posta alındığında, Visual Studio 'Yu programlı olarak özel eylemler gerçekleştirmek için nasıl kullanabileceğinizi öğrenin.
+description: Microsoft Outlook bir e-posta alındığında, programlı olarak özel eylemler gerçekleştirmek için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 72cedcf25e54ca10c6a4c73c7b995c234f2cd137
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 74eb8e8e210fc382ad21b3b52c02e4ef859630766648e3c6932bae90d226e743
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827253"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121285627"
 ---
 # <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>Nasıl yapılır: e-posta iletisi alındığında program aracılığıyla eylem gerçekleştirme
   Bu örnek, Kullanıcı bir e-posta iletisi aldığında özel eylemler gerçekleştirir.
@@ -35,6 +36,6 @@ ms.locfileid: "107827253"
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_RL_PerformActions/thisaddin.cs" id="Snippet1":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md)
+- [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md)
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)
-- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
+- [VSTO eklentileriyle çalışmaya başlama](../vsto/getting-started-programming-vsto-add-ins.md)

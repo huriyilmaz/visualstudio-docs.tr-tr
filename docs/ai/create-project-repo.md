@@ -1,35 +1,36 @@
 ---
 title: Depoyu kopyalama
-description: Python kodu deposunu kopyalamak ve bundan bir proje oluşturmak için Visual Studio Tools for AI kullanmayı öğrenin.
+description: bir Python kodu deposunu klonlamak ve bundan bir proje oluşturmak için aı Visual Studio Araçları nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
 manager: jmartens
+ms.technology: vs-ai-tools
 monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: cd89b0dfd2d5a9e4ea1cefde15e038e41a4b3faa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 103d71c819930514f5340a835c079030d6927b7f3589a07b927ac9d7cdc1f789
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841529"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121349071"
 ---
-# <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Visual Studio 'da Python kodu deposunu kopyalama
+# <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Visual Studio Python kodu deposunu kopyalama
 
-[Visual Studio Tools for AI](installation.md)yükledikten sonra Python kodu deposunu kolayca kopyalayabilir ve bundan bir proje oluşturabilirsiniz.
+[aı için Visual Studio Araçları](installation.md)yükledikten sonra Python kodu deposunu kolayca kopyalayabilir ve bundan bir proje oluşturabilirsiniz.
 
-1. GitHub depolarına bağlanmak için Visual Studio yükleyicisi 'ni çalıştırın, **Değiştir**' i seçin ve **ayrı bileşenler** sekmesini seçin. **Kod araçları** bölümünde aşağı kaydırın, **Visual Studio için GitHub Uzantısı**' nı seçin ve **Değiştir**' i seçin.
+1. GitHub depolarına bağlanmak için Visual Studio yükleyiciyi çalıştırın, **değiştir**' i seçin ve **ayrı bileşenler** sekmesini seçin. **kod araçları** bölümüne gidin, **Visual Studio için GitHub uzantısı**' nı seçin ve **değiştir**' i seçin.
 
-    ![Visual Studio yükleyicisi 'nde GitHub uzantısını seçme](media/create-project-repo/installation-github-extension.png)
+    ![Visual Studio yükleyicisinde GitHub uzantısı seçiliyor](media/create-project-repo/installation-github-extension.png)
 
-2. Visual Studio 'Yu başlatın.
+2. Visual Studio başlatın.
 
-3. GitHub veya Azure DevOps 'a bağlanabildiğinizi veya bir depoyu klonlayabileceğiniz **Takım Gezgini** penceresini açmak için **> Takım Gezgini görüntüle** ' yi seçin.
+3. GitHub veya Azure DevOps 'e bağlanabildiğinizi veya bir depoyu klonlayabileceğiniz **Takım Gezgini** penceresini açmak için **> görüntüle Takım Gezgini** ' yi seçin.
 
-    ![Azure DevOps, GitHub ve bir depoyu klonlama gösteren Takım Gezgini penceresi](media/create-project-repo/team-explorer-devops.png)
+    ![bir depoyu Azure DevOps, GitHub ve kopyalamayı gösteren takım gezgini penceresi](media/create-project-repo/team-explorer-devops.png)
 
 4. **Yerel Git depoları** altındaki URL alanında, `https://github.com/Microsoft/samples-for-ai` öğesini girin, kopyalanmış dosyalar için bir klasör girin ve **Kopyala**' yı seçin.
 
@@ -40,11 +41,11 @@ ms.locfileid: "99841529"
 
     ![Takım Gezgini penceresi, bir kopyadan yeni bir proje oluşturma](media/create-project-repo/team-explorer-new-project.png)
 
-6. Görüntülenen **Yeni proje** iletişim kutusunda "**var olan Python kodundan**" seçeneğini belirleyin, proje için bir ad belirleyin, **konumu** depoyla aynı klasöre ayarlayın ve **Tamam**' ı seçin. Görüntülenen sihirbazda **son**' u seçin.
+6. görüntülenen **yeni Project** iletişim kutusunda "**var olan Python kodundan**" seçeneğini belirleyin, proje için bir ad belirleyin, **konumu** depoyla aynı klasöre ayarlayın ve **tamam**' ı seçin. Görüntülenen sihirbazda **son**' u seçin.
 
 7. Menüden **Çözüm Gezgini > görüntüle** ' yi seçin.
 
-8. Çözüm Gezgini, `TensorFlow Examples> MNIST` düğümünü genişletin, sağ tıklayın `convolutional.py` ve **başlangıç dosyası olarak ayarla**' yı seçin. Bu adım, Visual Studio 'Nun projeyi çalıştırırken hangi dosyayı kullanması gerektiğini söyler.
+8. Çözüm Gezgini, `TensorFlow Examples> MNIST` düğümünü genişletin, sağ tıklayın `convolutional.py` ve **başlangıç dosyası olarak ayarla**' yı seçin. bu adım, projeyi çalıştırırken hangi dosyayı kullanması gerektiğini Visual Studio söyler.
 
 9.  + Programı çalıştırmak için CTRL **F5** tuşuna basın veya hata ayıklama **> Başlat** ' ı seçin. Bir hata görürseniz, önceki adımda çalışma dizini ayarını yeniden denetleyin.
 
@@ -57,7 +58,7 @@ ms.locfileid: "99841529"
 
 11. İlerlemeyi TensorBoard ile görselleştirebilirsiniz. Projenize sağ tıklayın ve ardından **Tensorboard Çalıştır** ' a tıklayın ve ardından çıkış tablosu günlüklerinizin dizinini seçin.
 
-   ![Visual Studio 'nun, içerik menüsünde seçili olan MNIST projesi ve TensorBoard Çalıştır seçeneği ile Çözüm Gezgini ekran görüntüsü.](media/create-project-repo/run-tensorboard.png)
+   ![bağlam menüsünde seçili olan mnist projesi ve tensorboard çalıştır seçeneği ile Visual Studio Çözüm Gezgini ekran görüntüsü.](media/create-project-repo/run-tensorboard.png)
 
 12. Fazla mesaiyi azalttığını ve bu da kaliteyi geliştirdiğine dikkat edin.
 

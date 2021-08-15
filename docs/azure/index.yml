@@ -10,12 +10,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
-  ms.openlocfilehash: 7a7740ad4fffd80bc4b96ef7096b3bdd7c7a31bd
-  ms.sourcegitcommit: 2a50f4c1705baeee5c05580f04e3f468550f44e3
+  ms.openlocfilehash: fee64028754feab5a826bafea7b0cf711a0d9941c6241df1ffab6af605a2fc94
+  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/05/2021
-  ms.locfileid: "106381587"
+  ms.lasthandoff: 08/12/2021
+  ms.locfileid: "121282715"
 landingContent:
 - title: Azure App Service'e dağıtma
   linkLists:
@@ -54,7 +54,7 @@ landingContent:
     - text: Visual Studio’da kapsayıcı araçları
       url: ../containers/overview.md
     - text: Kubernetes araçları
-      url: ../containers/bridge-to-kubernetes.md
+      url: /visualstudio/bridge/bridge-to-kubernetes
 - title: Azure hizmetlerinde hata ayıklama ve performans analizi
   linkLists:
   - linkListType: tutorial

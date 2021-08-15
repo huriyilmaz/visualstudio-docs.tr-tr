@@ -1,6 +1,6 @@
 ---
-title: Otomasyon modeline genel bakış | Microsoft Docs
-description: Bir Visual Studio eklentisi veya uzantısı yazabileceğiniz bir nesne kümesinden oluşan Visual Studio otomasyon modeli hakkında bilgi edinin.
+title: Otomasyon Modeline Genel Bakış | Microsoft Docs
+description: Bir eklenti Visual Studio uzantısını yazarak bir dizi nesneden oluşan Visual Studio otomasyon modeli hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,28 +11,29 @@ ms.assetid: 12b6d6db-0d22-4aaa-aa7d-1365f759b7b0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d763fea140ddac1b4dba955421c563700373dc22
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 24fdf3e87e4e8e58237052527e595bd60908373388d1e127f2607c88a609bfac
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086241"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121432779"
 ---
 # <a name="automation-model-overview"></a>Otomasyon modeline genel bakış
-Otomasyon modeli, Visual Studio eklentisi veya uzantısı yazabileceğiniz bir nesne kümesinden oluşur. Bir eklenti, Visual Studio ortamını işleyebilen ve ortak görevleri otomatikleştiren bir uygulamadır. Visual Studio uzantısı, özel Visual Studio bileşenleri oluşturabilir veya metin Düzenleyicisi gibi standart bileşenlerin işlevlerine ekleyebilir.
+Otomasyon modeli, eklenti veya uzantı için bir Visual Studio nesne kümesi içerir. Eklenti, uygulama ortamını yönetip ortak görevleri Visual Studio bir uygulamadır. Bir Visual Studio, özel Visual Studio bileşenleri oluşturabilir veya metin düzenleyicisi gibi standart bileşenlerin işlevselliğine ekleyebilir.
 
-## <a name="objects-in-the-automation-model"></a>Otomasyon modelindeki nesneler
- Otomasyon modeli, ortak ortamın ana modellerini denetleyen ilgili nesne gruplarından oluşur. Aşağıdaki diyagramda, otomasyon modelini oluşturan kapsamlı Visual Studio nesneleri kümesi gösterilmektedir.
+## <a name="objects-in-the-automation-model"></a>Otomasyon modelinde nesneler
+ Otomasyon modeli, ortak ortamın ana modellerini kontrol altına alan ilgili nesne gruplarından oluşur. Aşağıdaki diyagramda otomasyon modelini Visual Studio nesnelerinin kapsamlı bir kümesi yer alıyor.
 
- ![Visual Studio Otomasyon nesne grafiği](../../extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")
+ ![Visual Studio otomasyon nesne grafiği](../../extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")
 
- Daha fazla bilgi için bkz. [Visual Studio Ortamını Genişletme](/previous-versions/esk3eey8(v=vs.140)).
+ Daha fazla bilgi için [bkz. Visual Studio genişletme.](/previous-versions/esk3eey8(v=vs.140))
 
- Ortam, farklı işlevsel alanlara yönelik bir model sağlar. Örneğin, kodda bulabileceğiniz çeşitli öğeler için bir kod modeli vardır. Çeşitli belge öğeleri için bir belge modeli vardır. Tek bir alan olan proje alanı, VSPackage sağlayıcılarına özellikle ilgilenmektedir. Büyük olasılıkla yeni proje türlerinizi Otomasyon modeline aynı şekilde katkıda bulunmak [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] ve [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] Otomasyon modeliyle katkıda bulunmak isteyeceksiniz. Bu işlem, [VSPackages için Otomasyon sağlama](../../extensibility/internals/providing-automation-for-vspackages.md)bölümünde özetlenmiştir.
+ Ortam, farklı işlevsel alanlar için bir model sağlar. Örneğin, kodda bul olabileceğiniz çeşitli öğeler için bir kod modeli vardır. Çeşitli belge öğeleri için bir belge modeli vardır. Proje alanı olan bir alan, VSPackage sağlayıcıları için özellikle ilgi alanıdır. Yeni proje türlerinizi büyük olasılıkla otomasyon modeliyle aynı şekilde katkıda bulunarak otomasyon modeline [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] katkıda bulunun. Bu işlem [VSPackage'lar için otomasyon sağlama içinde açıklandı.](../../extensibility/internals/providing-automation-for-vspackages.md)
 
- Ortamın otomasyon modelini genişletmeyi düşünebileceğiniz yerleri şunlardır:
+ Ortamın otomasyon modelini genişletmeyi düşünebilecekleri yerler:
 
 - Project
 
@@ -40,9 +41,9 @@ Otomasyon modeli, Visual Studio eklentisi veya uzantısı yazabileceğiniz bir n
 
 - Kod
 
-- Derleme
+- Oluşturma
 
-Otomasyon hakkında daha fazla bilgi için bkz. [Visual Studio Için Otomasyon ve genişletilebilirlik](/previous-versions/visualstudio/visual-studio-2015/extensibility/extensibility-in-visual-studio?preserve-view=true&view=vs-2015). Bu belge ve bağlantı sağladığı belgeler, VSPackage için nasıl Otomasyon sağlayacağınızla ilgili kararlar almanıza yardımcı olur.
+Otomasyon hakkında daha fazla bilgi için bkz. Visual Studio için [otomasyon ve genişletilebilirlik.](/previous-versions/visualstudio/visual-studio-2015/extensibility/extensibility-in-visual-studio?preserve-view=true&view=vs-2015) Bu belge ve bağlantı sağladığı belgeler, VSPackage'nız için nasıl otomasyon sağlamanız gerektiğiyle ilgili kararlar a yardımcı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: eklenti oluşturma](/previous-versions/80493a3w(v=vs.140))
+- [Nasıl: Eklenti oluşturma](/previous-versions/80493a3w(v=vs.140))

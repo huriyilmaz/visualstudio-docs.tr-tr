@@ -1,23 +1,24 @@
 ---
-title: 'Docker öğreticisi - 2. Bölüm: Uygulamalarınızı güncelleştirme'
+title: 'Docker öğreticisi - 3. Bölüm: Uygulamalarınızı güncelleştirme'
 description: Docker uygulamasının nasıl güncelleştirilmelerini açıklar.
-ms.date: 08/04/2020
+ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-docker
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 43034ff2e65564cc8af2710b796b76996f21f4c8
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 4c974e865479d7b3cf5b3ff06da5a67158a57f13a26005091336880b1b78990e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222779"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121295385"
 ---
 # <a name="update-the-app"></a>Uygulamayı güncelleştirme
 
-Küçük bir özellik isteği olarak, herhangi bir todo listesi öğeniz olduğunda ürün ekibi tarafından "boş metni" değiştirmeniz istendi. Bunu aşağıdakine geçiş yapmak için:
+Küçük bir özellik isteği olarak, herhangi bir todo listesi öğeniz olmadığınız zaman ürün ekibi tarafından "boş metni" değiştirmeniz istendi. Bunu aşağıdakine geçiş yapmak için:
 
 > Henüz todo öğelerine sahip değilsiniz! Yukarıya bir tane ekleyin!
 
@@ -51,11 +52,11 @@ docker: Error response from daemon: driver failed programming external connectiv
 (bb242b2ca4d67eba76e79474fb36bb5125708ebdabd7f45c8eaf16caaabde9dd): Bind for 0.0.0.0:3000 failed: port is already allocated.
 ```
 
-Peki ne oldu? Eski kapsayıcınız hala çalışıyor olduğundan yeni kapsayıcı başlatılamadı. Bunun bir soruna neden olan nedeni, kapsayıcının ana bilgisayar bağlantı noktası 3000'i kullanması ve makinede yalnızca bir işlem (kapsayıcılar dahil) belirli bir bağlantı noktasını dinlemesidir. Bunu düzeltmek için eski kapsayıcıyı kaldırın.
+Peki ne oldu? Eski kapsayıcınız hala çalışıyor olduğundan yeni kapsayıcı başlatılamadı. Bu sorunun nedeni, kapsayıcının ana bilgisayar bağlantı noktası 3000'i kullanması ve makinede (kapsayıcılar dahil) yalnızca bir işlem tarafından belirli bir bağlantı noktasını dinlemesidir. Bunu düzeltmek için eski kapsayıcıyı kaldırın.
 
 ## <a name="replace-the-old-container"></a>Eski kapsayıcıyı değiştirme
 
-Bir kapsayıcıyı kaldırmak için önce durdurulmuş olması gerekir. Durdurulduktan sonra kaldırılabilir. Eski kapsayıcıyı kaldırmanın iki yolu vardır. En rahat yolunu seçebilirsiniz.
+Bir kapsayıcıyı kaldırmak için önce durdurulmuş olması gerekir. Durdurulduktan sonra kaldırılabilir. Eski kapsayıcıyı kaldırmanın iki yolu vardır. En rahat yolunu seçmekten rahat olun.
 
 ### <a name="remove-a-container-using-the-cli"></a>CLI kullanarak kapsayıcıyı kaldırma
 

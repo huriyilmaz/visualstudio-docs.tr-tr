@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama'
-description: Bir hücre aralığı içindeki metne renk uygulamayı öğrenin, NamedRange denetimi veya yerel Excel Range nesnesi kullanın.
+title: 'nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama'
+description: bir hücre aralığı içindeki metne renk uygulamayı öğrenin, NamedRange denetimini veya yerel Excel range nesnesini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 081985dbd4b235fe5dd8d3472d0ab574603abe1b
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 3de687879a74c92c39331ca6668e29d7a3c77014a19cd3c7138eb396f2b52c78
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828325"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384359"
 ---
-# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>Nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama
-  Bir hücre aralığı içindeki metne renk uygulamak için bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim veya yerel Excel Aralık nesnesi kullanın.
+# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama
+  bir hücre aralığı içindeki metne renk uygulamak için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim veya yerel Excel range nesnesi kullanın.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -43,9 +44,9 @@ ms.locfileid: "107828325"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet66":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet66":::
 
-## <a name="use-native-excel-ranges"></a>Yerel Excel aralıklarını kullan
+## <a name="use-native-excel-ranges"></a>yerel Excel aralıklarını kullan
 
-### <a name="to-apply-color-to-a-native-excel-range-object"></a>Yerel Excel Aralık nesnesine renk uygulamak için
+### <a name="to-apply-color-to-a-native-excel-range-object"></a>yerel Excel aralığı nesnesine renk uygulamak için
 
 1. A1 hücresinde bir Aralık oluşturun ve sonra metnin rengini ayarlayın.
 
@@ -57,5 +58,5 @@ ms.locfileid: "107828325"
 - [NamedRange denetimi](../vsto/namedrange-control.md)
 - [Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
 - [Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
-- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
+- [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

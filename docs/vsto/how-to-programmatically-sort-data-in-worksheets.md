@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfalarındaki verileri program aracılığıyla sıralama'
-description: Çalışma zamanında çalışma sayfası aralıklarında ve listelerinde bulunan verileri programlı bir şekilde sıralamak için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+description: çalışma zamanında çalışma sayfası aralıklarına ve listelerinde bulunan verileri programlı bir şekilde sıralamak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,14 +15,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 024bf53b7fc7f3a6e32e10b7107c9a62d8c40cee
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 073ad50f3bc5bc135e6fd7f22afcbaac721f8d99e08c8862816672387c111b32
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825023"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440688"
 ---
 # <a name="how-to-programmatically-sort-data-in-worksheets"></a>Nasıl yapılır: çalışma sayfalarındaki verileri program aracılığıyla sıralama
   Çalışma zamanında çalışma sayfası aralıkları ve listelerinde bulunan verileri sıralayabilirsiniz. Aşağıdaki kod, ilk sütundaki verilerin adlı çok sütunlu bir aralığı `Fruits` ve sonra ikinci sütundaki verileri sıralar.
@@ -47,18 +48,18 @@ ms.locfileid: "107825023"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet79":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet79":::
 
-## <a name="sort-data-in-a-vsto-add-in"></a>VSTO eklentideki verileri sıralama
+## <a name="sort-data-in-a-vsto-add-in"></a>VSTO eklenti içindeki verileri sıralama
 
 ### <a name="to-sort-data-in-a-native-range"></a>Yerel aralıktaki verileri sıralamak için
 
-1. <xref:Microsoft.Office.Interop.Excel.Range.Sort%2A>Yerel Excel denetiminin yöntemini çağırın <xref:Microsoft.Office.Interop.Excel.Range> . Aşağıdaki örnek, çalışma sayfasında adlı bir yerel Excel denetimi gerektirir `Fruits` .
+1. <xref:Microsoft.Office.Interop.Excel.Range.Sort%2A>yerel Excel denetiminin yöntemini çağırın <xref:Microsoft.Office.Interop.Excel.Range> . aşağıdaki örnek, bir çalışma sayfasında adlı yerel bir Excel denetimi gerektirir `Fruits` .
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet23":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet23":::
 
 ### <a name="to-sort-data-in-a-listobject-control"></a>ListObject denetimindeki verileri sıralamak için
 
-1. <xref:Microsoft.Office.Interop.Excel.Range.Sort%2A> <xref:Microsoft.Office.Tools.Excel.ListObject.Range%2A> Yerel Excel denetiminin özelliğinin yöntemini çağırın <xref:Microsoft.Office.Interop.Excel.ListObject> . Aşağıdaki örnek, <xref:Microsoft.Office.Interop.Excel.ListObject> etkin çalışma sayfasında adlı yerel bir Excel denetimine sahip olduğunuzu varsayar `fruitList` .
+1. <xref:Microsoft.Office.Interop.Excel.Range.Sort%2A> <xref:Microsoft.Office.Tools.Excel.ListObject.Range%2A> yerel Excel denetiminin özelliğinin yöntemini çağırın <xref:Microsoft.Office.Interop.Excel.ListObject> . aşağıdaki örnek, <xref:Microsoft.Office.Interop.Excel.ListObject> etkin çalışma sayfasında adlı yerel bir Excel denetimine sahip olduğunuzu varsayar `fruitList` .
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet24":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet24":::

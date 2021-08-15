@@ -1,6 +1,6 @@
 ---
 title: Yeni öğe Ekle Iletişim kutusuna katkıda bulunma | Microsoft Docs
-description: Proje kayıt defteri alt anahtarının altına öğe Ekle şablonları kaydederek Visual Studio 'daki yeni öğe Ekle iletişim kutusuna nasıl katkıda bulunabileceğinizi öğrenin.
+description: proje kayıt defteri alt anahtarı altında öğe ekle şablonları ' na kaydolarak Visual Studio yeni öğe ekle iletişim kutusuna nasıl katkıda bulunabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: b2e53175-9372-4d17-8c2b-9264c9e51e9c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8186f25f8e1631f0e13aa7a8f43620812c4c7693
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fc3f986f47d81c0425568fbd9fab1217b257687fe7b70037a50e405d3861c0b1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057058"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121305821"
 ---
 # <a name="contribute-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna katkıda bulunun
 Proje alt türü **, proje kayıt defteri alt** anahtarının altına **öğe Ekle** şablonları kaydederek **Yeni öğe Ekle** iletişim kutusu için yeni bir öğe dizini sağlayabilir.

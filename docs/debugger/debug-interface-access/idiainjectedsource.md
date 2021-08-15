@@ -11,14 +11,15 @@ ms.assetid: 75192c5c-812d-4675-9dc5-4c2cff3ba503
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ea02d5312aea0bdf5e38d5a1f54de546860edfd
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0532aa2a30c7ef70b77e4e3342d7213ec9c4bf5df68beaa39112e1ba6c92996f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148334"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455002"
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 , DIA veri kaynağında depolanan eklenmiş kaynak koduna erişir.

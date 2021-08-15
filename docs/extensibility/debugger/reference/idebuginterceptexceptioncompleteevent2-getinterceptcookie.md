@@ -12,17 +12,18 @@ ms.assetid: 07b20866-e598-4783-9ecc-6aa8625c8804
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 52c0cdf514f606287386c68713371d112cb97e79
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88b4dbaa4cd34f6a6c63294153b0a974768830a6e6f3fb58b615fe902d3c5e0e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091922"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389702"
 ---
 # <a name="idebuginterceptexceptioncompleteevent2getinterceptcookie"></a>IDebugInterceptExceptionCompleteEvent2::GetInterceptCookie
 Yakalanamayan bir özel durum işlenirken çağırılır.

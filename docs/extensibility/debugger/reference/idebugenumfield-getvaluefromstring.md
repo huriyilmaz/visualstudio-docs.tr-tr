@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bir numaralandırma sabiti adı ile ilişkili değeri döndürür.
-title: 'Ihata ayıklama Genumfield:: GetValueFromString | Microsoft Docs'
+description: Bu yöntem, bir sabit sabiti adı ile ilişkili değeri döndürür.
+title: IDebugEnumField::GetValueFromString | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 1ef8ac5e-a3e0-4078-b876-7f5615aedcbb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ec1070948685c69ce8615e2bef836c4d721e1cb0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3060fafd2c887dd79933bb1baa04644d77a1113a132c3d751b31332c7643d526
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092546"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360514"
 ---
 # <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
-Bu yöntem, bir numaralandırma sabiti adı ile ilişkili değeri döndürür.
+Bu yöntem, bir sabit sabiti adı ile ilişkili değeri döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int GetValueFromString(
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-'ndaki Değerin alınacağı adı belirten bir dize. C++ için bu, geniş bir karakter dizesidir.
+[in] Değerin elde etmek istediğiniz adı belirten bir dize. C++ için bunun geniş bir karakter dizesi olduğunu unutmayın.
 
 `pValue`\
-dışı İlişkili sayısal değeri döndürür.
+[out] İlişkili sayısal değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` ad numaralandırmanın bir parçası değilse, veya bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde, ad, numaralamanın bir parçası değilse veya bir `S_FALSE` hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, büyük/küçük harfe duyarlıdır. Büyük/küçük harf duyarsız bir arama gerekliyse (örneğin, adların büyük/küçük harfe duyarlı olmadığı Visual Basic bir dilde), [Getvaluefromstringcaseduyarsız](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)' i kullanın.
+ Bu yöntem büyük/büyük/büyük harfe duyarlıdır. Büyük/küçük harfe duyarlı olmayan bir arama gerekirse (örneğin, adların büyük/küçük harfe duyarlı Visual Basic gibi bir dilde), [GetValueFromStringCaseInsensitive kullanın.](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)
