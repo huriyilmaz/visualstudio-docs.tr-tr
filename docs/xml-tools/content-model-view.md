@@ -8,14 +8,15 @@ ms.assetid: e8db7c7d-31cf-479e-9dcc-299759891795
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 05db6f02f2d00a5c0aca1ff91e15c61cf6bf8d4f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5b275d485af04fe941b91aea3b4b31f47c26409eefe696e9a3b865863e35a5f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948602"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121351569"
 ---
 # <a name="content-model-view"></a>İçerik Modeli Görünümü
 
@@ -50,7 +51,7 @@ Tasarım yüzeyi veya **çalışma alanı** panelinde bir öğeye sağ tıkladı
 |Seçenek|Açıklama|
 |-|-----------------|
 |**XML şema Gezgini 'nde göster**|Şema Gezginine odaklankoyar ve şema kümesi düğümünü vurgular.|
-|**Grafik görünümünde göster**|Grafik görünümüne geçer.|
+|**Graph görünümünde göster**|Graph görünümüne geçer.|
 |**Örnek XML oluştur**|Yalnızca genel öğeler için kullanılabilir. Genel öğe için örnek bir XML dosyası oluşturur.|
 |**Belgeleri göster**|Ek açıklama/belge düğümü içeriğini gösterir veya gizler.|
 |**Diyagramı görüntü olarak dışarı aktar**|Tasarım yüzeyini bir XPS dosyasına kaydeder.|
@@ -62,7 +63,7 @@ Aşağıdaki tabloda, **çalışma alanı** paneli için kullanılabilen seçene
 |Seçenek|Açıklama|
 |-|-----------------|
 |**XML şema Gezgini 'nde göster**|Şema Gezginine odaklankoyar ve şema kümesi düğümünü vurgular.|
-|**Grafik görünümünde göster**|Grafik görünümüne geçer.|
+|**Graph görünümünde göster**|Graph görünümüne geçer.|
 |**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
 |**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|
@@ -73,7 +74,7 @@ Aşağıdaki tabloda, **çalışma alanı** paneli için kullanılabilen seçene
 
 ## <a name="properties-window"></a>Özellik penceresi
 
-Sağ tıklama (bağlam) menüsünü kullanarak ilk olarak **Özellikler** penceresini açın. Varsayılan olarak, **Özellikler** penceresi Visual Studio 'nun sağ alt köşesinde görüntülenir. Içerik modeli görünümünde işlenen bir düğüme tıkladığınızda, bu düğümün özellikleri **Özellikler** penceresinde görüntülenir.
+Sağ tıklama (bağlam) menüsünü kullanarak ilk olarak **Özellikler** penceresini açın. Varsayılan olarak, **Özellikler** penceresi Visual Studio sağ alt köşesinde görüntülenir. Içerik modeli görünümünde işlenen bir düğüme tıkladığınızda, bu düğümün özellikleri **Özellikler** penceresinde görüntülenir.
 
 ## <a name="xsd-designer-toolbar"></a>XSD Tasarımcı araç çubuğu
 
@@ -85,7 +86,7 @@ Içerik modeli görünümü etkinken aşağıdaki XSD Tasarımcı araç çubuğu
 |-|-----------------|
 |**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **1**.|
 |**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **2**.|
-|**Graf görünümünü göster**|[Grafik görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **3**.|
+|**Graph görünümünü göster**|[Graph görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **3**.|
 |**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
 |**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|

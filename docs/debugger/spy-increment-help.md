@@ -10,14 +10,15 @@ ms.assetid: 82155004-8d9e-4875-b7db-237a3cffb530
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b34c661e7a5bd2bd4e2bc24882bf98f00c1e4c5e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bb361ac9d6dc5134a18399cec9b8a816fdd1123249054fe3c4625ecf580e9360
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903461"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121324606"
 ---
 # <a name="spy-help"></a>Spy++ Yardımı
 Spy + + yardımcı programına yönelik belgeler, Spy + + ve Spy + + görünümlerinde kullanılan iki genel konu grubunu içerir. Bunlar, kullanılabilir her menü komutu ve iletişim kutusu hakkında daha fazla ayrıntı sağlayan Spy + + başvurusu tarafından izlenir.
@@ -34,7 +35,7 @@ Spy + + yardımcı programına yönelik belgeler, Spy + + ve Spy + + görünüml
 
  [Spy + + görünümleri Için arama araçları](../debugger/search-tools-for-spy-increment-views.md) Spy + + görünümleri penceresinde belirli bir düğümü bulmak için kullanılan iletişim kutuları.
 
- [Pencere özellikleri Iletişim kutusu](../debugger/window-properties-dialog-box.md) Windows görünümü 'nde seçilen pencerenin özelliklerini görüntülemek için kullanılır.
+ [Pencere özellikleri Iletişim kutusu](../debugger/window-properties-dialog-box.md) Windows görünümünde seçilen pencerenin özelliklerini görüntülemek için kullanılır.
 
  [Ileti seçenekleri Iletişim kutusu](../debugger/message-options-dialog-box.md) Ileti görünümünde hangi iletilerin listelendiğini seçmek için kullanılır.
 

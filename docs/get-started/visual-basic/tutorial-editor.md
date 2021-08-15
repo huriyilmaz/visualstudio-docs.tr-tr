@@ -1,6 +1,6 @@
 ---
 title: Geliştiriciler için düzenlemeye Visual Basic giriş
-description: Visual Studio'de kod düzenleyicisine 10 dakikalık bir giriş, Visual Studio kodu yazmayı, gezinmeyi ve kodu daha kolay Visual Basic gösterir.
+description: Visual Studio'da kod düzenleyicisine 10 dakikalık giriş, Visual Studio kodu yazmayı, gezinmeyi ve bu kodu daha kolay Visual Basic gösterir.
 ms.custom:
 - vs-acquisition
 - seodec18
@@ -8,23 +8,23 @@ ms.custom:
 ms.date: 11/20/2018
 ms.technology: vs-ide-general
 ms.topic: tutorial
-author: TerryGLee
-ms.author: tglee
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe411074c95db15fde4819ffb07eca39a05e844d
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 2a66cf69615640b8750f53dfd3d150708dbacb90f7c09ba43d78110ecd9e4a50
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390170"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121259714"
 ---
 # <a name="learn-to-use-the-code-editor-with-visual-basic"></a>Kod düzenleyicisini Visual Basic
 
-Visual Studio'daki kod düzenleyicisine bu 10 dakikalık girişte, Visual Studio'nin kod yazmayı, gezinmeyi ve kodu daha kolay anlamanıza nasıl Visual Basic bir dosyaya kod ekleyeceğiz.
+Visual Studio'daki kod düzenleyicisine bu 10 dakikalık girişte, Visual Studio'nin kod yazmayı, gezinmeyi ve kodu daha kolay anlamanıza nasıl Visual Basic ekleyeceğiz.
 
 ::: moniker range="vs-2017"
 
@@ -43,7 +43,7 @@ Visual Studio'daki kod düzenleyicisine bu 10 dakikalık girişte, Visual Studio
 ::: moniker range="vs-2022"
 
 > [!TIP]
-> Henüz Visual Studio Preview [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidip ücretsiz olarak yükleyin.
+> Visual Studio Preview [2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) yüklemeleri sayfasına Visual Studio ücretsiz yükleyin.
 
 ::: moniker-end
 
@@ -70,7 +70,7 @@ Yeni bir dosya oluşturarak ve buna kod ekleyerek başlayabilirsiniz.
 
 2. Menü **çubuğundaki** Dosya menüsünden Yeni **Dosya'ya tıklayın.**
 
-3. Yeni Dosya **iletişim kutusunda,** Genel kategorisi **altında** Sınıf **Visual Basic'ı ve** ardından Aç'ı **seçin.**
+3. Yeni Dosya **iletişim kutusunda,** Genel kategorisi **altında** Sınıf **Visual Basic'ı ve ardından** Aç'ı **seçin.**
 
    Düzenleyicide yeni bir dosya açılır ve bu dosya bir Visual Basic olur. (Kod düzenleyicisinin sunduğu bazı avantajlardan (söz dizimi vurgulama gibi) kazanmak için tam Visual Studio proje oluşturmanız gerek olmadığını fark etme. Tek ihtiyacınız olan bir kod dosyasıdır!)
 
@@ -94,11 +94,11 @@ Kullanılabilir kod parçacıkları farklı programlama dillerinde değişiklik 
 
 ![Visual Basic kod parçacığı listesi](media/tutorial-code-snippet-list.png)
 
-Bilgisayarda bir dosya olup olmadığını belirlemek, bir metin dosyasına yazmak, kayıt defteri değerini okumak, SQL sorgusu yürütmek, Her biri için bir oluşturmak için kod parçacıkları [vardır. Sonraki deyimi](/dotnet/visual-basic/language-reference/statements/for-each-next-statement), ve çok daha fazlası.
+Bilgisayarda bir dosya olup olmadığını belirlemek, bir metin dosyasına yazmak, kayıt defteri değerini okumak, bir kayıt defteri SQL yürütmek, her biri için bir oluşturmak için kod parçacıkları [vardır. Sonraki deyimi](/dotnet/visual-basic/language-reference/statements/for-each-next-statement), ve çok daha fazlası.
 
 ## <a name="comment-out-code"></a>Kodu açıklamaya alma
 
-Araç çubuğundaki menü çubuğunun altındaki düğmelerin satırı olan araç Visual Studio kodlarken daha üretken çalışmanıza yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu açıp açıp, satır girintisini artırabilir veya azaltabilir ya da derlemek istemeyebilirsiniz. ([IntelliSense,](../../ide/using-intellisense.md) eşleşen yöntemlerin listesini ve diğer öğeleri görüntüleyen bir kodlama yardımıdır.) Bu bölümde bazı kodlara açıklama olarak yer veserden bakabilirsiniz.
+Araç çubuğundaki menü çubuğunun altındaki düğmelerin satırı olan araç Visual Studio kodlarken daha üretken çalışmanıza yardımcı olabilir. Örneğin, IntelliSense tamamlama modunu açıp, satır girintisini artırabilir veya azaltabilir ya da derlemek istemeyebilirsiniz. ([IntelliSense,](../../ide/using-intellisense.md) eşleşen yöntemlerin listesini ve diğer öğeleri görüntüleyen bir kodlama yardımıdır.) Bu bölümde bazı kodlara açıklama olarak yer veserden bakabilirsiniz.
 
 ![Düzenleyici araç çubuğu düğmeleri](media/tutorial-editor-toolbar.png)
 
@@ -126,7 +126,7 @@ Araç çubuğundaki menü çubuğunun altındaki düğmelerin satırı olan ara�
                Select word
    ```
 
-1. dizisini kullanmaz, ancak daha sonra bu diziyi kullanarak diziyi tamamen `morewords` silmek istemeyebilirsiniz. Bunun yerine, bu satırları açıklama satırına bakalım. öğesinin kapanış küme ayracı tanımının tamamını seçin ve ardından araç çubuğunda seçili satırları `morewords` **açıklama satırı** yap düğmesini seçin. Klavyeyi kullanmayı tercih ederseniz Ctrl K , **Ctrl** + C  + **tuşlarına basın.**
+1. dizisini kullanmaz ancak daha sonra bunu kullanarak diziyi tamamen `morewords` silmek istemeyebilirsiniz. Bunun yerine, bu satırları açıklama satırına bakalım. öğesinin kapanış küme ayracı tanımının tamamını seçin ve ardından araç çubuğunda seçili satırları `morewords` **açıklama satırı** yap düğmesini seçin. Klavyeyi kullanmayı tercih ederseniz Ctrl K , **Ctrl** + C  + **tuşlarına basın.**
 
    ![Açıklama düğmesi](media/tutorial-comment-out.png)
 
@@ -138,11 +138,11 @@ Yalnızca ilgini gereken bölümlere odaklanmak için kod bölümlerini daraltab
 
 ![Daralt düğmesinin altı çizili](media/tutorial-collapse.png)
 
-Kod bloğu yalnızca ilk satıra daraltır ve ardından üç nokta `...` ( ). Kod bloğuna yeniden genişletmek için, artık artı işareti olan gri kutuya tıklayın veya **Ctrl** + **M**, **Ctrl** + **M tuşlarına tekrar** basın. Bu özellik, [Outlining olarak](../../ide/outlining.md) adlandırılan ve özellikle uzun yöntemleri veya sınıfların tamamını daraltıyorken yararlıdır.
+Kod bloğu yalnızca ilk satıra daraltır ve ardından üç nokta ( ) `...` alır. Kod bloğuna yeniden genişletmek için, artık artı işareti olan gri kutuya tıklayın veya **Ctrl** + **M**, **Ctrl** + **M tuşlarına tekrar** basın. Bu özellik, [Outlining olarak](../../ide/outlining.md) adlandırılan ve özellikle uzun yöntemleri veya sınıfların tamamını daraltıyorken yararlıdır.
 
 ## <a name="view-symbol-definitions"></a>Sembol tanımlarını görüntüleme
 
-Visual Studio düzenleyicisi, bir türün, yöntemin vb. tanımını incelemeyi kolaylaştırır. Bunun bir yolu, tanımı içeren dosyaya gitmektir;  örneğin sembole başvurulan her yerde Tanıma Git'i seçerek. Odağınızı üzerinde çalışmakta olduğunu dosyadan başka bir yere taşımanın daha da hızlı bir yolu, Peek [Definition kullanmakdır.](../../ide/go-to-and-peek-definition.md#peek-definition) Türün tanımına göz `String` atalım.
+Bu Visual Studio, bir türün, yöntemin vb. tanımını incelemeyi kolaylaştırır. Bunun bir yolu, tanımı içeren dosyaya gitmektir;  örneğin sembole başvurulan her yerde Tanıma Git'i seçerek. Odağınızı üzerinde çalışmakta olduğunu dosyadan başka bir yere taşımanın daha da hızlı bir yolu, Peek [Definition kullanmakdır.](../../ide/go-to-and-peek-definition.md#peek-definition) Türün tanımına göz `String` atalım.
 
 1. Söze sağ tıklayın ve `String` içerik **menüsünden Tanıma Göz** At'ı seçin. Alternatif **olarak, Alt** + **F12 tuşuna basın.**
 
@@ -150,11 +150,11 @@ Visual Studio düzenleyicisi, bir türün, yöntemin vb. tanımını incelemeyi 
 
    ![Tanıma göz atma penceresi](media/tutorial-peek-definition.png)
 
-1. Açılan pencerenin sağ üst kısmında "x" olan küçük kutuyu seçerek göz atmış tanım penceresini kapatın.
+1. Açılan pencerenin sağ üst kısmında "x" olan küçük kutuyu seçerek göz atarak tanım penceresini kapatın.
 
 ## <a name="use-intellisense-to-complete-words"></a>IntelliSense kullanarak sözcükleri tamamlama
 
-[IntelliSense,](../../ide/using-intellisense.md) kod yazmanız durumunda çok değerli bir kaynaktır. Bir türün kullanılabilir üyeleri hakkında bilgi veya bir yöntemin farklı aşırı yüklemeleri için parametre ayrıntılarını gösterebilir. Ayrıca IntelliSense'i kullanarak bir sözcüğün tam olarak ne olduğunu tam olarak anlayan yeterli karakter kullanabilirsiniz. Şimdi konsol penceresine sipariş edilen dizeleri yazdırmak için bir kod satırı ek o zaman programdan çıkış için standart bir yerdir.
+[IntelliSense,](../../ide/using-intellisense.md) kod yazmanız durumunda çok değerli bir kaynaktır. Bir türün kullanılabilir üyeleri hakkında bilgi veya bir yöntemin farklı aşırı yüklemeleri için parametre ayrıntılarını gösterebilir. Ayrıca IntelliSense'i kullanarak bir sözcüğün tam olarak ne olduğunu tam olarak anlayan yeterli karakter kullanabilirsiniz. Şimdi konsol penceresine sipariş edilen dizeleri yazdırmak için bir kod satırı ekliyiz. Bu, programın çıkışının standart olduğu yerdir.
 
 1. değişkeninin `query` altına aşağıdaki kodu yazmaya başlayın:
 
@@ -164,7 +164,7 @@ Visual Studio düzenleyicisi, bir türün, yöntemin vb. tanımını incelemeyi 
 
    IntelliSense'in simge hakkında **Hızlı Bilgi** göster olduğunu `query` görürsünüz.
 
-   ![Visual Studio'de IntelliSense sözcük tamamlama](media/tutorial-intellisense-completion-list.png)
+   ![Visual Studio'da IntelliSense sözcük tamamlama](media/tutorial-intellisense-completion-list.png)
 
 1. IntelliSense'in sözcük tamamlama işlevini kullanarak sözcüğün geri kalanını `query` eklemek için Tab tuşuna **basın.**
 
@@ -178,17 +178,17 @@ Visual Studio düzenleyicisi, bir türün, yöntemin vb. tanımını incelemeyi 
 
 ## <a name="refactor-a-name"></a>Bir adı yeniden düzenleme
 
-Hiç kimse kodu ilk kez doğru şekilde alamiyor ve değiştirmek zorunda olabileceğiniz şeylerden biri değişkenin veya yöntemin adıdır. Şimdi değişkeni olarak Visual Studio [yeniden düzenleme](../../ide/refactoring-in-visual-studio.md) işlevini `_words` `words` deneyelim.
+Hiç kimse kodu ilk kez doğru şekilde alamiyor ve değiştirmek zorunda olabileceğiniz şeylerden biri değişkenin veya yöntemin adıdır. Şimdi değişkeni olarak Visual Studio [yeniden düzenleme işlevini](../../ide/refactoring-in-visual-studio.md) `_words` `words` deneyelim.
 
 1. İmlecinizi değişkenin tanımının `_words` üzerine yerleştirerek sağ tıklama **veya** bağlam menüsünden Yeniden Adlandır'ı seçin.
 
    Düzenleyicinin sağ **üst kısmında** bir açılan Yeniden Adlandırma iletişim kutusu görüntülenir.
 
-1. değişkeni `_words` seçiliyken, sözcüklerin istenen adını **yazın.** Sorguda başvurusunun `words` da otomatik olarak yeniden adlandırıldıklarından emin oluruz. Enter tuşuna **basmadan** veya  **Uygula'ya** tıklamadan önce, Yeniden Adlandır açılan kutusunda **Açıklama** ekle onay kutusunu seçin.
+1. değişkeni `_words` seçiliyken, sözcüklerin istenen adını **yazın.** Sorguda başvurusunun `words` da otomatik olarak yeniden adlandırıldıklarından emin oluruz. Enter tuşuna **basmadan** veya  **Uygula'ya** tıklamadan önce, Yeniden Adlandır açılır kutusunda **Açıklama** ekle onay kutusunu seçin.
 
    ![Yeniden Adlandır iletişim kutusu](media/tutorial-rename.png)
 
-1. **Enter tuşuna** basın veya Uygula'ya **tıklayın.**
+1. **Enter tuşuna basın** veya Uygula'ya **tıklayın.**
 
    Hem `words` oluşumları yeniden adlandırılır hem de kod `words` açıklamasındaki başvurusu.
 

@@ -7,47 +7,47 @@ ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarınızı edinme ve yönetme hakkında bilgi edinin.
-ms.openlocfilehash: ad9672d089c6e50aa879b38841c468f235347963
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.openlocfilehash: c17ebc310ee904989a6e896a35dd898fbb1b55d910af51294ceb75cd5331cd67
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776772"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121265498"
 ---
-# <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını kullanma
+# <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde ürün anahtarlarını kullanma
 
-Visual Studio abonelikleri, uygulamaları tasarlamak, geliştirmek, test etmek ve gösteren çok çeşitli Microsoft ürünlerine erişim sağlar. Bu ürünlerden bazıları yükleme sırasında ürün anahtarları gerektirir ve bunlardan bazıları etkinleştirme gerektirir.
+Visual Studio abonelikler, uygulamalar tasarlamak, geliştirmek, test etmek ve bunları gösteren çok çeşitli Microsoft ürünlerine erişim sağlar. Bu ürünlerden bazıları yükleme sırasında ürün anahtarları gerektirir ve bunlardan bazıları etkinleştirme gerektirir.
 
-Visual Studio abonelikleri tipik olarak Windows ve Office ürünlerinin geçerli sürümleri için beş ürün anahtarı ve eski sürümler için üç anahtar içerir.
+Visual Studio abonelikler genellikle güncel Windows ve Office ürünlerin geçerli sürümleri için beş ürün anahtarı ve eski sürümler için üç anahtar içerir.
 
-Çoğu ürün anahtarı, her anahtar için ürünün birden çok etkinleştirmelerini de sağlar.  Birçok ürün Ayrıca, ürünü etkinleştirme olmadan 30 gün veya daha uzun bir süre için yüklemenize ve kullanmanıza imkan tanır.  Çoğu abone için bu, ihtiyaçlarını karşılamak için yeterli sayıda etkinleştirme sağlar.  Ancak, bir ürünün kullanılabilir etkinleştirmelerini tükenmiş olmanız durumunda Visual Studio [abonelikleri müşteri hizmeti](https://visualstudio.microsoft.com/subscriptions/support/)aracılığıyla ek anahtarlar için bir istek gönderebilirsiniz.
+Çoğu ürün anahtarı, her anahtar için ürünün birden çok etkinleştirmelerini de sağlar.  Birçok ürün Ayrıca, ürünü etkinleştirme olmadan 30 gün veya daha uzun bir süre için yüklemenize ve kullanmanıza imkan tanır.  Çoğu abone için bu, ihtiyaçlarını karşılamak için yeterli sayıda etkinleştirme sağlar.  ancak, bir ürünün kullanılabilir etkinleştirmelerini tüketmiş olmanız durumunda Visual Studio [abonelikleri müşteri hizmeti](https://visualstudio.microsoft.com/subscriptions/support/)aracılığıyla ek anahtarlar için bir istek gönderebilirsiniz.
 
 > [!NOTE]
 > Aboneliğiniz sizin veya okulunuz tarafından size sağlanmışsa, abonelik yöneticiniz yazılım indirmelerine erişip erişemeyeceğini denetler.  Aboneliğiniz için indirme erişimi devre dışıysa, ürün anahtarlarına erişim de devre dışı bırakılır.  İndirmelere ve/veya ürün anahtarlarına ihtiyacınız varsa [yöneticinize başvurun](contact-my-admin.md).
 
 ## <a name="activating-a-product"></a>Ürün etkinleştirme
-Belirli ürünler için etkinleştirme gereklidir.  Genellikle, Visual Studio aboneliklerinde Windows, Windows Server, Microsoft Office istemci uygulamaları ve Expression Studio ile sınırlıdır. Etkinleştirme gerektiğinde, Windows ve Office dahil olmak üzere birçok ürün, 30 gün veya daha uzun bir süre etkinleştirmeden ürünü yüklemenize ve kullanmanıza izin verir. Bilgisayarlarınızı sık sık yeniden görüntüledikten sonra (en az 30 günde bir) ürünü etkinleştirememe göz önünde bulundurun. Visual Studio aboneliğinizin bir parçası olarak sağlanan ürün anahtarları, bir ürün için sınırsız etkinleştirmeye izin vermez.
+Belirli ürünler için etkinleştirme gereklidir.  genellikle Visual Studio aboneliklerinde bu, Windows, Windows sunucu, Microsoft Office istemci uygulamaları ve Expression Studio ile sınırlıdır. etkinleştirme gerekli olduğunda, Windows ve Office dahil olmak üzere birçok ürün, 30 gün veya daha uzun bir süre etkinleştirmeden ürünü yüklemenize ve kullanmanıza izin verir. Bilgisayarlarınızı sık sık yeniden görüntüledikten sonra (en az 30 günde bir) ürünü etkinleştirememe göz önünde bulundurun. Visual Studio aboneliğinizin bir parçası olarak sağlanan ürün anahtarları, bir ürünün sınırsız etkinleştirmeleri için izin vermez.
 
-Aboneliğiniz kapsamında kullanılabilir olan tüm ürün anahtarlarını istemiş ve kullanılabilir tüm etkinleştirmeleri kullandıysanız, yerel Visual Studio aboneliğiniz [müşteri hizmetleri merkezinize](https://visualstudio.microsoft.com/subscriptions/support/)başvurarak ek anahtarlar isteyebilirsiniz. İstekler, büyük/küçük harf esasına göre değerlendirilir. Onaylanırsa, ürün anahtarlarına [indirmelerde](https://my.visualstudio.com/downloads)erişilebilecektir.
+aboneliğiniz kapsamında kullanılabilir olan tüm ürün anahtarlarını istemiş ve kullanılabilir tüm etkinleştirmeleri kullandıysanız, yerel Visual Studio abonelik [müşteri hizmetleri merkezinize](https://visualstudio.microsoft.com/subscriptions/support/)başvurarak ek anahtarlar isteyebilirsiniz. İstekler, büyük/küçük harf esasına göre değerlendirilir. Onaylanırsa, ürün anahtarlarına [indirmelerde](https://my.visualstudio.com/downloads)erişilebilecektir.
 
 ## <a name="retail-and-volume-licensing-versions-of-products"></a>Ürünlerin perakende ve toplu lisanslama sürümleri
-Visual Studio abonelikleri, Microsoft ürünlerinin perakende ve toplu lisanslama sürümlerinin bir seçimini sunmaktadır. Belirli ürünler yalnızca perakende sürümünde veya yalnızca toplu lisanslama sürümünde indirilebilir. Bazıları her iki sürümde de kullanılabilir. Genellikle, Windows, Windows Server ve Office istemci ürünleri gibi etkinleştirme gerektiren ürünler yalnızca, karşıdan yüklemeler aracılığıyla perakende sürümünde sunulur.
+Visual Studio abonelikler, Microsoft ürünlerinin perakende ve toplu lisanslama sürümlerinin bir seçimini sunmaktadır. Belirli ürünler yalnızca perakende sürümünde veya yalnızca toplu lisanslama sürümünde indirilebilir. Bazıları her iki sürümde de kullanılabilir. genellikle, Windows, Windows sunucusu ve Office istemci ürünleri gibi etkinleştirme gerektiren ürünler yalnızca, karşıdan yüklemeler aracılığıyla perakende sürümünde sunulur.
 
 Toplu lisanslama müşterileri, ürünlerin toplu lisanslama sürümlerini (ve ilgili ürün anahtarlarını) almak için Toplu Lisanslama hizmeti Merkezi 'nden (VLSC) yazılım da indirebilir.  VLSC erişimi, müşterinin kuruluşu dahilinde belirlenen yöneticiler tarafından yönetilir.
 
 ## <a name="daily-product-key-claim-limits"></a>Günlük ürün anahtarı talep limitleri
-Microsoft, Visual Studio abonelikleri programının bütünlüğünü ve yazılım değerini ve programın yasal abonelerinin yatırım için aldığı avantajları ve avantajlarının korunmasını taahhüt etmektedir. Bu taahhütte destek sayesinde Microsoft, Visual Studio abonelikleri için günlük anahtar talebi sınırlarını uygulamıştır. Günlük anahtar talebi sınırları, abonelik başına günlük talep edilebilir anahtar sayısını kısıtlar.
+Microsoft, Visual Studio abonelik programının bütünlüğünü ve yazılım değerini ve programın yasal abonelerinin yatırım için aldığı avantajları ve avantajlarının korunmasını taahhüt etmektedir. bu taahhütte destek, Microsoft Visual Studio abonelikleri için günlük anahtar talebi sınırlarını uygulamıştır. Günlük anahtar talebi sınırları, abonelik başına günlük talep edilebilir anahtar sayısını kısıtlar.
 
-Günlük anahtar talebi sınırı, MPN, BizSpark, MCT Software & Services ve MCT aracılığıyla sunulan ve günlük anahtar talebi sınırı 7 anahtar olan Visual Studio Professional (MPN) dışında tüm Visual Studio abonelikleri için 10 anahtardır.
+günlük anahtar talebi sınırı, mpn, BizSpark, mct Software & Services ve mct aracılığıyla sunulan ve 10 ' dan fazla günlük anahtar talebi sınırına sahip olan Visual Studio Professional (mpn) dışında tüm Visual Studio abonelikler için 10 anahtardır.
 
 Note: anahtar talebi limitleri değişikliğe tabidir. Lütfen en güncel sınırlara göz atın.
 
 Abonelik için kullanılabilir maksimum anahtar sayısını 24 saatlik bir süre içinde istemiş olmanız durumunda, sınırınızı belirten bir hata görürsünüz. Sınır, saat 12:01 ' dan başlayarak 24 saatte bir sıfırlanır.
 
-Araştırmamız, çoğu abonelerin aboneliklerine dahil edilen ürün anahtarı sayısına göre ele alınmıştır. Ek anahtarlara ihtiyacınız varsa, Visual Studio aboneliği [Müşteri Hizmetleri](https://visualstudio.microsoft.com/subscriptions/support/) aracılığıyla bir istek gönderebilirsiniz ve bu durum, büyük/küçük harfe göre onay için değerlendirilir.
+Araştırmamız, çoğu abonelerin aboneliklerine dahil edilen ürün anahtarı sayısına göre ele alınmıştır. ek anahtarlara ihtiyacınız varsa, Visual Studio abonelik [müşteri hizmeti](https://visualstudio.microsoft.com/subscriptions/support/) aracılığıyla bir istek gönderebilirsiniz ve bu durum, büyük/küçük harfe göre onay için değerlendirilir.
 
 ## <a name="accessing-product-keys"></a>Ürün anahtarlarına erişme
-Ürün anahtarlarınızı görüntülemek için Visual Studio aboneliğinizde oturum açmış olmanız gerekir. [Karşıdan yüklemeler](https://my.visualstudio.com/downloads) sayfasında aşağıda gösterildiği gibi, belirli bir ürün Için mavi **get anahtar** bağlantısı seçilerek tek tek ürün anahtarları bulunur.  Tek bir ürün için birden çok anahtar varsa, bu yükleme için notlar sütununda notlar görüntülenir ve bu da hangi anahtarın kullanılması gerektiğini belirlemenize yardımcı olur.
+ürün anahtarlarınızı görüntülemek için Visual Studio aboneliğinizde oturum açmış olmanız gerekir. [Karşıdan yüklemeler](https://my.visualstudio.com/downloads) sayfasında aşağıda gösterildiği gibi, belirli bir ürün Için mavi **get anahtar** bağlantısı seçilerek tek tek ürün anahtarları bulunur.  Tek bir ürün için birden çok anahtar varsa, bu yükleme için notlar sütununda notlar görüntülenir ve bu da hangi anahtarın kullanılması gerektiğini belirlemenize yardımcı olur.
 
 Bazı ürünler ürünün birden çok sürümünü tek bir indirme halinde paketler. Bu durumlarda, girilen ürün anahtarı ürünün hangi sürümünün yüklü olduğunu belirler.
 Etkinleştirme gerekli olmadığından, bazı anahtarlar, "static" anahtarları gibi otomatik olarak sağlanır. Diğer anahtarların, ürün için **anahtar al** bağlantısı seçilerek talep alınmalıdır.
@@ -80,7 +80,7 @@ Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?w
 Ürünün karşıdan yükleme sayfasından bir anahtar talep edebilir veya [ürün anahtarları](https://my.visualstudio.com/productkeys) sayfasında ihtiyacınız olan anahtarı arayabilirsiniz.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vssubscriberhelp)görüşün.
+- Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için, [Visual Studio abonelik desteğiyle](https://aka.ms/vssubscriberhelp)iletişim kurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

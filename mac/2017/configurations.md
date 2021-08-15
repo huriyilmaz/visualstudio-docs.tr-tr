@@ -1,20 +1,20 @@
 ---
 title: Yapı Yapılandırmalarını Anlama
-description: Bu makalede Mac için Visual Studio içindeki çeşitli derleme konfigürasyonları açıklanmaktadır
+description: bu makalede Mac için Visual Studio içindeki çeşitli derleme konfigürasyonları açıklanmaktadır
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: 0bd35d415a60ea64c479b19cb506c58c2c346cc0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5d3ed098f5c9283675f126260471a7d734899917fc47ae764dc30de3eb5d36fd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74983588"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121313828"
 ---
 # <a name="understanding-build-configurations"></a>Yapı yapılandırmalarını anlama
 
-## <a name="project-build-configurations"></a>Proje Derleme yapılandırması
+## <a name="project-build-configurations"></a>Project derleme yapılandırması
 
 Projeler birden fazla yapılandırmaya sahip olma eğilimindedir ve bunlar arasında geçiş yapmak, derleme zamanında farklı çıkışlar için izin verir. Örneğin, hata ayıklama yapılandırmasında hata ayıklama sembolleri çıkış yapılır ve hata ayıklayıcının, kilitlenen uygulamanın yığın izlemesinde işlev adlarını, parametreleri veya değişkenleri çözümlemesine izin verir. Bu ek bilgiler geliştirme sırasında yararlı olsa da, bir dosya boyutuna yol açar ve dağıtım için ideal değildir.
 
@@ -30,9 +30,9 @@ Yapılandırma hakkında daha fazla bilgi için, James Montemagno [Configuration
 
 ## <a name="run-configuration"></a>Yapılandırmayı Çalıştır
 
-Önceki Xamarin Studio sürümlerinde, bir projeyi, genel Run/Debug komutu kullanılırken çalıştırılan/hata ayıklanan proje olan **Başlangıç projesi**olarak ayarlama seçeneğini belirleyebilirsiniz. Bu, Proje panelindeki projenin adı için kalın yazı tipiyle belirtilmiştir.
+önceki Xamarin Studio sürümlerinde, bir projeyi, genel run/debug komutu kullanılırken çalıştırılan/hata ayıklanan proje olan **başlangıç Project** olarak ayarlama seçeneğini belirleyebilirsiniz. Bu, Proje panelindeki projenin adı için kalın yazı tipiyle belirtilmiştir.
 
-Mac için Visual Studio, bir başlangıç projesi ayarlamak yerine, _çalıştırma yapılandırması_ayarlayabilirsiniz. Çalışma yapılandırmaları, aşağıda gösterildiği gibi, derleme yapılandırma seçicisinin yanında bulunan bir açılan listede görüntülenir:
+Mac için Visual Studio, bir başlangıç projesi ayarlamak yerine, _çalıştırma yapılandırması_ ayarlayabilirsiniz. Çalışma yapılandırmaları, aşağıda gösterildiği gibi, derleme yapılandırma seçicisinin yanında bulunan bir açılan listede görüntülenir:
 
 ![Yapılandırma açılan, Çalıştır](media/projects-and-solutions-image8.png)
 
@@ -69,4 +69,4 @@ Aşağıdaki listede, çalışma yapılandırmalarına eklenebilecek bazı veri 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme yapılandırmasını anlama (Windows üzerinde Visual Studio)](/visualstudio/ide/understanding-build-configurations)
+- [derleme yapılandırmasını anlama (Windows Visual Studio)](/visualstudio/ide/understanding-build-configurations)

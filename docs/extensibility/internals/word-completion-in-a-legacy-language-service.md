@@ -12,14 +12,15 @@ ms.assetid: 0ace5ac3-f9e1-4e6d-add4-42967b1f96a6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea386aea3a17b0fb0d93ff9872f92e86a166be5c
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 60011ca0bec1b984a645960e3e55359e7dff7a00ad1956d07392c3d609b454d2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902637"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121261144"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Sözcük Tamamlama
 Sözcük tamamlama, kısmen yazılmış bir sözcükteki eksik karakterleri doldurur. Yalnızca bir olası tamamlama varsa, tamamlama karakteri girilirken sözcük tamamlanır. Kısmi sözcük birden fazla olasılıkla eşleniyorsa, olası tamamlamaların listesi görüntülenir. Tamamlama karakteri, tanımlayıcılar için kullanılmadan herhangi bir karakter olabilir.
@@ -31,18 +32,18 @@ Sözcük tamamlama, kısmen yazılmış bir sözcükteki eksik karakterleri dold
 
 ## <a name="implementation-steps"></a>Uygulama Adımları
 
-1. Kullanıcı **IntelliSense** **menüsünden** Tam Sözcük'i <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> seçerken, komut dil hizmetine gönderilir.
+1. Kullanıcı **IntelliSense** **menüsünden** Tam Sözcük'i seçerek <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> dil hizmetine gönderilir.
 
-2. sınıfı <xref:Microsoft.VisualStudio.Package.ViewFilter> komutu yakalar ve ayrıştırma nedeni ile yöntemini <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.ParseReason> çağırıyor.
+2. sınıfı <xref:Microsoft.VisualStudio.Package.ViewFilter> komutunu yakalar ve ayrıştırma nedeni ile yöntemini <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.ParseReason> çağırıyor.
 
 3. Sınıfı daha sonra olası sözcük tamamlamalarının listesini almak için yöntemini çağırarak ve ardından sınıfını kullanarak sözcükleri <xref:Microsoft.VisualStudio.Package.Source> bir araç ipucu listesinde <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> <xref:Microsoft.VisualStudio.Package.CompletionSet> görüntüler.
 
     Eşleşen tek bir sözcük varsa sınıf <xref:Microsoft.VisualStudio.Package.Source> sözcüğü tamamlar.
 
-   Alternatif olarak, bir tanımlayıcının ilk karakteri yazıldıklarında tarayıcı tetikleyici değerini döndürürse, sınıfı bunu algılar ve ayrıştırma nedeni <xref:Microsoft.VisualStudio.Package.TokenTriggers> <xref:Microsoft.VisualStudio.Package.Source> ile yöntemini <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.ParseReason> arar. Bu durumda ayrıştırıcı, üye seçimi karakterinin varlığını algılamalı ve üyelerin listesini sağlay çalışmalı.
+   Alternatif olarak, bir tanımlayıcının ilk karakteri yazıldıklarında tarayıcı tetikleyici değerini döndürürse, sınıfı bunu algılar ve ayrıştırma nedeni <xref:Microsoft.VisualStudio.Package.TokenTriggers> <xref:Microsoft.VisualStudio.Package.Source> ile yöntemini <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.ParseReason> arar. Bu durumda ayrıştırıcı bir üye seçimi karakterinin varlığını algılamalı ve üyelerin listesini sağla çalışmalı.
 
 ## <a name="enabling-support-for-the-complete-word"></a>Tam Sözcük Için Desteği Etkinleştirme
- Sözcük tamamlama desteğini etkinleştirmek için, dil `CodeSense` paketiyle ilişkili <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> kullanıcı özniteliğine geçirilen adlandırılmış parametreyi ayarlayın. Bu, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> sınıfındaki özelliğini <xref:Microsoft.VisualStudio.Package.LanguagePreferences> ayarlar.
+ Sözcük tamamlama desteğini etkinleştirmek için, dil `CodeSense` paketiyle ilişkili <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> kullanıcı özniteliğine geçirilen adlandırılmış parametreyi ayarlayın. Bu, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> sınıfındaki özelliği <xref:Microsoft.VisualStudio.Package.LanguagePreferences> ayarlar.
 
  Sözcük tamamlamanın çalışması için ayrıştırıcınız, ayrıştırma nedeni değerine yanıt <xref:Microsoft.VisualStudio.Package.ParseReason> olarak bildirimlerin bir listesini iade etmek zorunda.
 

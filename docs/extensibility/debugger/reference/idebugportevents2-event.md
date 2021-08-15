@@ -11,17 +11,18 @@ ms.assetid: 5cc813f7-04a1-4462-9ea7-fbddcf0e0143
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 314c31c426300c31f90813e2b73b150678578437
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 30731bddcde55f34cf3e568434909bcd68f728735d44b757ec0da898f31189d6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058345"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121323475"
 ---
 # <a name="idebugportevents2event"></a>IDebugPortEvents2::Event
 Bu yöntem, bir bağlantı noktasındaki işlemlerin ve programların oluşturulmasını ve yok edilmesiyle ilgili olayları gönderir.

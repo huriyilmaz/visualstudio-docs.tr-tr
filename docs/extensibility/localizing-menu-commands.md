@@ -15,14 +15,15 @@ ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 141fb0d8ba6746e7d299984461fb3ca739d931d4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 12a8801e9629de97bed6e35dbdcc3bc8d14a1653f0692aca3a46f4deddd91430
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073267"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401095"
 ---
 # <a name="localize-menu-commands"></a>Yerelleştirmek menü komutları
 
@@ -136,7 +137,7 @@ Yerelleştirilmiş kaynakları birleştirmek için *AssemblyInfo. cs* dosyasın�
     </PropertyGroup>
     ```
 
-     Bu, Windows Presentation Foundation (WPF) denetimleri için varsayılan UI kültürü olarak Ingilizce 'yi ayarlar.
+     bu, Windows Presentation Foundation (WPF) denetimleri için varsayılan uı kültürü olarak ingilizce 'yi ayarlar.
 
 6. `ItemGroup`Öğeleri içeren öğeyi bulun `EmbeddedResource` .
 

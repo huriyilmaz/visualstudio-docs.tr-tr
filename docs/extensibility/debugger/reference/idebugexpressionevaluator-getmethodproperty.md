@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bir yöntemin Yereller, bağımsız değişkenleri ve diğer özelliklerini içeren bir özellik nesnesi alır.
-title: 'Idebugexpressiondeğerlendirici:: GetMethodProperty | Microsoft Docs'
+description: Bu yöntem yerelleri, bağımsız değişkenleri ve bir yöntemin diğer özelliklerini içeren bir özellik nesnesi alır.
+title: IDebugExpressionEvaluator::GetMethodProperty | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: c394fe4d-eeb6-4feb-828c-098d84a6f1ba
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e4a82ce250b47f2f199d9e8e8fcf3a2ca7ec5777
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6a2211477015ea1613549795caa597294d2f0ec779588afae7b97f462a929e0f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092182"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307524"
 ---
 # <a name="idebugexpressionevaluatorgetmethodproperty"></a>IDebugExpressionEvaluator::GetMethodProperty
-Bu yöntem, bir yöntemin Yereller, bağımsız değişkenleri ve diğer özelliklerini içeren bir özellik nesnesi alır.
+Bu yöntem yerelleri, bağımsız değişkenleri ve bir yöntemin diğer özelliklerini içeren bir özellik nesnesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -50,25 +51,25 @@ int GetMethodProperty(
 
 ## <a name="parameters"></a>Parametreler
 `pSymbolProvider`\
-'ndaki Kullanılacak sembol sağlayıcısı bir [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) nesnesi olarak ifade edilir.
+[in] Kullanılacak sembol sağlayıcısı, [IDebugSymbolProvider nesnesi olarak ifade](../../../extensibility/debugger/reference/idebugsymbolprovider.md) edildi.
 
 `pAddress`\
-'ndaki Koddaki, en yakın içeren işleve çözülmesi gereken bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi olarak ifade edilen adres.
+[in] Kodda [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi olarak ifadelenen ve en yakın içeren işleve çözümlenen adres.
 
 `pBinder`\
-'ndaki [Idebugciltçi](../../../extensibility/debugger/reference/idebugbinder.md) nesnesi olarak ifade edilen kullanılacak bağlayıcı.
+[in] Kullanılacak bağlayıcı, [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) nesnesi olarak ifade edildi.
 
 `fIncludeHiddenLocals`\
-'ndaki Sıfır dışında ( `TRUE` ) gizli Yereller dahil edilecek anlamına gelir; sıfır ( `FALSE` ) gizli Yereller dışında tutulacak anlamına gelir
+[in] Sıfır olmayan ( `TRUE` ), gizli yerelleri dahil etmek anlamına gelir; sıfır ( `FALSE` ) gizli yerelleri dışarıda bırakmak anlamına gelir
 
 `ppProperty`\
-dışı Yöntemi temsil eden bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
+[out] yöntemini temsil [eden bir IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Gizli Yereller genellikle derleyici tarafından oluşturulan değişkenlerdir.
+ Gizli yerel ayarlar genellikle derleyici tarafından oluşturulan değişkenlerdir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

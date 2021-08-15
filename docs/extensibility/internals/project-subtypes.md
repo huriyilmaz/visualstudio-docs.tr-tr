@@ -1,6 +1,6 @@
 ---
-title: Proje alt türleri | Microsoft Docs
-description: Proje alt türleri, Visual Studio 'nun proje sistemlerinin davranışını özelleştirmenize nasıl olanak sağladığını öğrenin. VSPackages, COM toplamasını kullanarak proje alt türlerini uygular.
+title: Project Alt türler | Microsoft Docs
+description: Proje alt türleri Visual Studio proje sistemlerinin davranışını özelleştirmenize nasıl olanak sağladığını öğrenin. VSPackages, COM toplamasını kullanarak proje alt türlerini uygular.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: d235b47b-cf11-4d47-a63f-e33d9d16105d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd0f959d300fdc797d9e42d581a163b8b0892591
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: baf3502764830d088415174032a1d892632ba27d4df5f6dab793b6e4e5674ef6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903599"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238443"
 ---
 # <a name="project-subtypes"></a>Proje Alt Türleri
-Proje alt türleri, proje sistemlerinin davranışını özelleştirmenize ya da değiştirmenize olanak sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Özelleştirmeler, proje dosyasına ek verilerin kaydedilmesini, **Yeni öğe Ekle** iletişim kutusunda öğe ekleyerek veya filtrelemeye, derlemelerin nasıl ayıklanmadığını ve dağıtıldığını denetlemesini ve proje **Özellik sayfaları** iletişim kutusunu genişletmeyi içerir. VSPackages, COM toplamasını kullanarak proje alt türlerini uygular.
+Project alt türleri, proje sistemlerinin davranışını özelleştirmenize veya değiştirmenize olanak sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Özelleştirmeler, proje dosyasına ek verilerin kaydedilmesini, **Yeni öğe Ekle** iletişim kutusunda öğe ekleyerek veya filtrelemeye, derlemelerin nasıl ayıklanmadığını ve dağıtıldığını denetlemesini ve proje **Özellik sayfaları** iletişim kutusunu genişletmeyi içerir. VSPackages, COM toplamasını kullanarak proje alt türlerini uygular.
 
 > [!NOTE]
-> Visual C++ proje sistemi proje alt türlerini desteklemiyor. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , SQL Server ve akıllı cihaz projelerini uygulamak için proje alt türlerini kullanır.
+> Visual C++ proje sistemi proje alt türlerini desteklemiyor. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], SQL Server ve akıllı cihaz projelerini uygulamak için proje alt türlerini kullanır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
@@ -66,7 +67,7 @@ Proje alt türleri, proje sistemlerinin davranışını özelleştirmenize ya da
 
 - [Özellik Sayfaları Ekleme ve Kaldırma](../../extensibility/adding-and-removing-property-pages.md)
 
-  Proje tasarımcısında Özellik sayfaları ekleme ve kaldırma işlemini açıklar.
+  Project tasarımcısında özellik sayfaları ekleme ve kaldırma işlemini açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 

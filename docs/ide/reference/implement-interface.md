@@ -7,16 +7,17 @@ ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 37adee082f5356180b4e1d58007db48a7f9bb60e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f5e067021e13f0a59c3b45882b204de04167559e39977446aeb779f6b4bf7e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852498"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447719"
 ---
-# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio 'da arabirim uygulama
+# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio bir arabirim uygulama
 
 Bu kod üretimi için geçerlidir:
 
@@ -57,7 +58,7 @@ Bu kod üretimi için geçerlidir:
 
    > [!TIP]
    > - Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
-   > - Arabirimi uygulayan birden çok sınıfta doğru yöntem imzalarını oluşturmak için Önizleme penceresinin altındaki **belge**, **Proje** ve **çözüm** bağlantılarını kullanın.
+   > - arabirimi uygulayan birden çok sınıfta doğru yöntem imzalarını oluşturmak için önizleme penceresinin altındaki **belge**, **Project** ve **çözüm** bağlantılarını kullanın.
 
    Arabirimin yöntem imzaları oluşturulur ve uygulanmaya hazırlanın.
 

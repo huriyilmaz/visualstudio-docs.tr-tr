@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, C/C++, Biçimlendirme
-description: C ve C++ ' da programlama yaparken kod düzenleyicisinde biçimlendirme seçeneklerini ayarlamak için biçimlendirme seçenekleri sayfasını ve alt sayfalarını nasıl kullanacağınızı öğrenin.
+description: C ve C++ dilinde programlama yapmak için kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını ve alt sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 04/30/2018
 ms.topic: reference
@@ -18,53 +18,53 @@ ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264485fd8f20ee31046035dba7b208795d0d91b0
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: d5b342ac7533928c979b8346f4d2155b9c5de85b0509c4d86aa5261dae5bb338
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96041093"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357081"
 ---
 # <a name="options-text-editor-cc-formatting"></a>Seçenekler, Metin Düzenleyici, C/C++, Biçimlendirme
 
-C veya C++ içinde programlama yaparken, kod düzenleyicisinin varsayılan davranışını değiştirmek için bu özellik sayfalarını kullanın.
+C veya C++ dilinde programlama yapmak için kod düzenleyicisinin varsayılan davranışını değiştirmek için bu özellik sayfalarını kullanın.
 
-![C++ biçimlendirme özellik sayfaları](media/cpp-formatting.png)
+![C++ Biçimlendirme özellik sayfaları](media/cpp-formatting.png)
 
-Bu sayfaya erişmek için, **Seçenekler** iletişim kutusunda, sol bölmede, **metin düzenleyici**' yi genişletin, **C/C++**' ı genişletin ve ardından **biçimlendirme**' ye tıklayın.
+Bu sayfaya erişmek için, Seçenekler iletişim kutusundaki sol bölmede Metin Düzenleyici'yi **genişletin,** **C/C++ öğesini genişletin** ve biçimlendirme'ye **tıklayın.** 
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [bkz. IDE'Visual Studio kişiselleştirme.](../../ide/personalizing-the-visual-studio-ide.md)
 
-## <a name="general-page"></a>Genel sayfa
+## <a name="general-page"></a>Genel Sayfa
 
-Bu sayfada, bunları yazarken ifadeleri ve blokları biçimlendirme seçenekleri bulunur.
+Bu sayfada, siz yazarak deyimleri ve blokları biçimlendirme seçenekleri vardır.
 
 ::: moniker range="vs-2017"
 
-**Visual Studio 2017 sürüm 15,7 ve üzeri**:
+**Visual Studio 2017 sürüm 15.7 ve sonraki sürümler:**
 
 ::: moniker-end
 
-Bu sayfada [Clangformat](https://clang.llvm.org/docs/ClangFormat.html) sürüm 5,0 için destek yapılandırma seçenekleri de bulunur. ClangFormat, bir. Clang-format veya _clang-Format dosyasında yapılandırılabilecek bir dizi kurala göre kodunuzun stilini ve formatlanabilmesini kolaylaştıran bir yardımcı programdır.
+Sayfada [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) sürüm 5.0 için destek yapılandırma seçenekleri de vardır. ClangFormat, kodunuzu .clang biçiminde veya bir .clang biçiminde ya da farklı biçimli bir dosyada yapılandırılan bir kural kümesine göre stil ve biçim _clang kolaylaştıran bir yardımcı programdır.
 
 ### <a name="configuring-clangformat-options"></a>ClangFormat seçeneklerini yapılandırma
 
 ::: moniker range="vs-2017"
 
-**Visual Studio 2017 sürüm 15,7 ve üzeri**:
+**Visual Studio 2017 sürüm 15.7 ve sonraki sürümler:**
 
 ::: moniker-end
 
-ClangFormat desteği varsayılan olarak etkindir. Tüm projeleriniz için bu ortak biçimlendirme kurallarından hangisinin uygulanacağını seçebilirsiniz: LLVM, Google, Kmıum, Mozilla veya WebKit. Ayrıca, özel bir biçim tanımı da oluşturabilirsiniz. Clang-format veya _clang biçimli dosya. Bu tür bir dosya proje klasöründe mevcutsa, Visual Studio bu klasör ve alt klasörlerindeki tüm kaynak kodu dosyalarını biçimlendirmek için onu kullanır.
+ClangFormat desteği varsayılan olarak etkindir. Tüm projelerinize uygulanacak ortak biçimlendirme kuralları arasında hangilerini seçebilirsiniz: LLVM, Google, Chromium, Mozilla veya WebKit. Ayrıca özel bir biçim tanımı .clang-format veya _clang biçimi dosyası oluşturabilirsiniz. Böyle bir dosya bir proje klasöründe varsa, Visual Studio klasördeki ve alt klasördeki tüm kaynak kod dosyalarını biçimlendirmek için bu dosyayı kullanır.
 
-Varsayılan olarak, Visual Studio clangformat.exe arka planda çalışır ve siz yazarken biçimlendirme uygular. Ayrıca, bunu yalnızca el ile çağrılan biçimlendirme komutları **Biçim belgesi (Ctrl + k, CTRL + D)** veya **Biçim seçimi (Ctrl + k, CTRL + F)** için çalıştırmayı belirtebilirsiniz.
+Varsayılan olarak, Visual Studio arka clangformat.exe siz yazarak biçimlendirmeyi uygular. Ayrıca, yalnızca el ile çağrılan biçimlendirme komutları için çalıştırmayı belirtebilirsiniz Belgeyi **Biçimlendir (Ctrl+K, Ctrl+D)** veya Biçim Seçimi **(Ctrl + K, Ctrl + F)**.
 
-## <a name="indentation-new-lines-spacing-wrapping-pages"></a>Girintileme, yeni satırlar, Aralık kaydırma sayfaları
+## <a name="indentation-new-lines-spacing-wrapping-pages"></a>Girintileme, Yeni Satırlar, Aralık kaydırma sayfaları
 
-Bu sayfalar, çeşitli biçimlendirme özelleştirmelerini etkinleştirir ancak ClangFormat etkinse yok sayılır.
+Bu sayfalar çeşitli biçimlendirme özelleştirmelerini etkinleştirir, ancak ClangFormat etkinleştirilirse yoksayılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/general-environment-options-dialog-box.md)
-- [IntelliSense kullanma](../../ide/using-intellisense.md)
+- [IntelliSense'i kullanma](../../ide/using-intellisense.md)

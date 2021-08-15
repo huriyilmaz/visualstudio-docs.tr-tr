@@ -1,74 +1,74 @@
 ---
-title: Visual Studio kapsayıcı araçlarını yapılandırma
-description: Visual Studio 'da bulunan araçları Docker kapsayıcılarıyla çalışmak üzere yapılandırın.
+title: Visual Studio Kapsayıcı Araçlarını Yapılandırma
+description: Docker kapsayıcıları ile Visual Studio için Visual Studio araçları yapılandırma.
 author: ghogen
 ms.author: ghogen
 ms.topic: how-to
 ms.date: 03/20/2019
-ms.technology: vs-azure
-ms.openlocfilehash: d2b3e2821e7697ad53b10a7148c22140aa1a07af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.technology: vs-container-tools
+ms.openlocfilehash: bf2b29df404015cbc844b5abcdb406abe10647e51da9d1763ed50d5f9d6dbb13
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283222"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347984"
 ---
-# <a name="how-to-configure-visual-studio-container-tools"></a>Visual Studio kapsayıcı araçlarını yapılandırma
+# <a name="how-to-configure-visual-studio-container-tools"></a>Visual Studio Container Tools'ları yapılandırma
 
-Visual Studio ayarlarını kullanarak, Docker kapsayıcılarıyla çalışırken performansı ve kaynak kullanımını etkileyen ayarlar dahil olmak üzere Visual Studio 'nun Docker kapsayıcılarıyla nasıl çalıştığı hakkında bazı yönleri denetleyebilirsiniz.
+Bu Visual Studio kullanarak, Docker kapsayıcıları ile çalışırken performansı ve kaynak kullanımını etkileyen ayarlar dahil olmak üzere Visual Studio'nin Docker kapsayıcıları ile nasıl çalıştığıyla ilgili bazı özellikleri kontrol edebilirsiniz.
 
-## <a name="container-tools-settings"></a>Kapsayıcı araçları ayarları
+## <a name="container-tools-settings"></a>Kapsayıcı Araçları ayarları
 
-Ana menüden **araçlar > seçenekler**' i seçin ve **kapsayıcı araçları > ayarlar**' ı genişletin. Kapsayıcı araçları ayarları görüntülenir.
+Ana menüden Araçlar ve **Seçenekler'i > Kapsayıcı** **Araçları'> Ayarlar.** Kapsayıcı araçları ayarları görüntülenir.
 
 ::: moniker range="vs-2017"
 
-![Visual Studio kapsayıcı araçları seçenekleri, şunu gösterir: proje yükünde gerekli Docker görüntülerini otomatik olarak çekme, kapsayıcıları otomatik olarak arka planda başlatma, çözüm kapanındaki kapsayıcıları otomatik olarak sonlandırma ve SSL sertifikası için istem sorma.](./media/overview/visual-studio-docker-tools-options.png)
+![Visual Studio Kapsayıcı Araçları seçenekleri, gösterilen: Proje yükünde gerekli Docker görüntülerini otomatik olarak çekin, Kapsayıcıları arka planda otomatik olarak başlat, Çözüm kapanıyorken kapsayıcıları otomatik olarak sonla ve SSL sertifikasına güvenme isteminde değil.](./media/overview/visual-studio-docker-tools-options.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Kapsayıcı araçları **genel** ayarları:
+Kapsayıcı Araçları **Genel** ayarları:
 
-![Visual Studio kapsayıcı araçları seçenekleri, şunu gösterir: gerekirse Docker Desktop 'ı yükler ve SSL sertifikasına güven ASP.NET Core.](./media/configure-container-tools/tools-options-1.png)
+![Visual Studio Kapsayıcı Araçları seçenekleri: Gerekirse Docker Desktop'ı yükleyin ve SSL sertifikasına ASP.NET Core güvenin.](./media/configure-container-tools/tools-options-1.png)
 
-Kapsayıcı araçları **tek proje** ve **Docker Compose** ayarları:
+Kapsayıcı Araçları **Tek Project** **ve Docker Compose** ayarları:
 
-![Visual Studio kapsayıcı araçları seçenekleri, gösterme: proje kapatma üzerinde kapsayıcıları Sonlandır, proje açık ' de gerekli Docker görüntülerini çekin ve proje aç üzerinde kapsayıcıları çalıştırın.](./media/configure-container-tools/tools-options-2.png)
+![Visual Studio Kapsayıcı Araçları seçenekleri, gösterilen: Proje kapanışı üzerinde kapsayıcıları kapatın, Proje açıkken gerekli Docker görüntülerini çekin ve Proje açıkken kapsayıcıları çalıştırın.](./media/configure-container-tools/tools-options-2.png)
 ::: moniker-end
 
-Aşağıdaki tablo, bu seçeneklerin nasıl ayarlanacağına karar vermenize yardımcı olur.
+Aşağıdaki tablo, bu seçeneklerin nasıl ayarlana karar vermede size yardımcı olabilir.
 
 ::: moniker range="vs-2017"
-| Name | Varsayılan ayar | Uygulanan Öğe | Description |
+| Name | Varsayılan Ayar | Uygulanan Öğe | Açıklama |
 | -----|:---------------:|:----------:| ----------- |
-| Gerekli Docker görüntülerini proje yüküne otomatik olarak çekme | Açık | Docker Compose | Projeleri yüklerken daha yüksek performans için, Visual Studio arka planda bir Docker çekme işlemi başlatır, böylece kodunuzu çalıştırmaya hazırsanız görüntü zaten indirilmeye devam eder ve indirme sürecinde olur. Yalnızca projeler ve tarama kodu yüklüyorsanız, gerek duymadığınız kapsayıcı görüntülerini indirmeyi önlemek için bunu kapatabilirsiniz. |
-| Kapsayıcıları arka planda otomatik olarak Başlat | Açık | Docker Compose | Daha yüksek performans için, Visual Studio, kapsayıcınızı oluşturup çalıştırdığınızda, toplu takmaya hazırlama ile bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulduğunu denetlemek isterseniz, bunu kapatın. |
-| Çözüm kapatıldığında kapsayıcıları otomatik olarak Sonlandır | Açık | Docker Compose | Çözümünüzü kapattıktan veya Visual Studio 'Yu kapattıktan sonra çözümünüz için kapsayıcıların çalışmaya devam etmesini istiyorsanız bunu kapatın. |
-| Localhost SSL sertifikası için güvenme isteme | Kapalı | ASP.NET Core 2,1 projeleri | Localhost SSL sertifikası güvenilir değilse, bu onay kutusu işaretlenmediği takdirde, Visual Studio projenizi her çalıştırdığınızda sorar. |
+| Proje yükü üzerinde gerekli Docker görüntülerini otomatik olarak çekme | Açık | Docker Compose | Projeleri yüklerken daha yüksek performans için Visual Studio arka planda bir Docker çekme işlemi başlatacak ve böylece kodunuzu çalıştırmaya hazır olduğunda görüntünün indirilmiş veya indirme işlemi sırasında olduğu gibi. Yalnızca proje yükleniyor ve koda göz atıyorsanız, ihtiyacınız olan kapsayıcı görüntülerini indirmekten kaçınmak için bu özelliği kapatabilirsiniz. |
+| Kapsayıcıları arka planda otomatik olarak başlatma | Açık | Docker Compose | Daha yüksek performans için Visual Studio derleme ve çalıştırma için hazır birim bağlamaları olan bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulacaklarını kontrol etmek için bunu kapatın. |
+| Çözüm kapatılırken kapsayıcıları otomatik olarak sonla | Açık | Docker Compose | Çözümünüz için kapsayıcıların çözümü kapattıktan veya kapattıktan sonra çalışmaya devam etmek Visual Studio. |
+| localhost SSL sertifikasına güvenme isteminde değil | Kapalı | ASP.NET Core 2.1 projeleri | localhost SSL sertifikasına güvenilmiyorsa, Visual Studio bu onay kutusu işaretli olmadığı sürece projenizi her çalıştırsanız bu sertifikayı sorabilirsiniz. |
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Aşağıdaki tabloda **genel** ayarları açıklanmaktadır:
+Aşağıdaki tabloda Genel ayarlar **açık** almaktadır:
 
-| Name | Varsayılan ayar | Uygulanan Öğe | Description |
+| Name | Varsayılan Ayar | Uygulanan Öğe | Açıklama |
 | -----|:---------------:|:----------:| ----------- |
-| Gerekirse Docker Desktop 'ı yükler | Bana sor | Tek proje, Docker Compose | Docker Desktop yüklü değilse isteyip istemediğinizi seçin. |
-| SSL sertifikası ASP.NET Core güven | Bana sor | ASP.NET Core 2. x projeleri | **Bana sor**olarak ayarlandığında, localhost SSL sertifikası güvenilir değilse, projenizi her çalıştırdığınızda Visual Studio sorar. |
+| Gerekirse Docker Desktop'ı yükleme | Bana sor | Tek Project, Docker Compose | Docker Desktop'ın yüklü olup olmadığının sorulıp sorulmay olmadığını seçin. |
+| SSL ASP.NET Core güven | Bana sor | ASP.NET Core 2.x projeleri | Beni İste **olarak ayarlanırsa,** localhost SSL sertifikasına güvenilmiyorsa, Visual Studio projenizi her çalıştırsanız bunu sorabilirsiniz. |
 
-Aşağıdaki tabloda **tek proje** ve **Docker Compose** ayarları açıklanmaktadır:
+Aşağıdaki tabloda Tekli veri **Project** ve **Docker Compose** açık almaktadır:
 
-| Name | Varsayılan ayar | Uygulanan Öğe | Description |
+| Name | Varsayılan Ayar | Uygulanan Öğe | Açıklama |
 | -----|:---------------:|:----------:| ----------- |
-| Proje açıkken gerekli Docker görüntülerini çekme | Doğru | Tek proje, Docker Compose | Projeleri yüklerken daha yüksek performans için, Visual Studio arka planda bir Docker çekme işlemi başlatır, böylece kodunuzu çalıştırmaya hazırsanız görüntü zaten indirilmeye devam eder ve indirme sürecinde olur. Yalnızca projeler ve tarama kodu yüklüyorsanız, gerek duymadığınız kapsayıcı görüntülerini indirmemek için **false** olarak ayarlayabilirsiniz. |
-| Açık proje üzerinde kapsayıcıları Çalıştır | Doğru | Tek proje, Docker Compose | Daha yüksek performans için, Visual Studio, kapsayıcınızı oluşturup çalıştırdığınızda, daha önce bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulduğunu denetlemek istiyorsanız, **false**olarak ayarlayın. |
-| Proje kapatıldığında kapsayıcıları durdur | Doğru | Tek proje ve Docker Compose | Çözümünüzü kapattıktan veya Visual Studio 'Yu kapattıktan sonra çözümünüz için kapsayıcıların çalışmaya devam etmesini istiyorsanız, **false** olarak ayarlayın. |
+| Proje açıkken gerekli Docker görüntülerini çekme | Doğru | Tek Project, Docker Compose | Projeleri yüklerken daha yüksek performans için Visual Studio arka planda bir Docker çekme işlemi başlatacak ve böylece kodunuzu çalıştırmaya hazır olduğunda görüntünün indirilmiş veya indirme işlemi sırasında olduğu gibi. Yalnızca proje yükleniyor ve koda göz atıyorsanız, ihtiyacınız olan kapsayıcı görüntülerini indirmekten kaçınmak için False olarak ayarlayın.  |
+| Proje açıkken kapsayıcıları çalıştırma | Doğru | Tek Project, Docker Compose | Daha yüksek performans için Visual Studio, kapsayıcınızı derlemek ve çalıştırmak için hazır hale gelecek şekilde bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulacaklarını kontrol etmek için False olarak **ayarlayın.** |
+| Proje kapatmada kapsayıcıları durdurma | Doğru | Tek Project ve Docker Compose | Çözümünüz **için** kapsayıcıların çözümü kapattıktan veya kapattıktan sonra çalışmaya devam etmek Visual Studio. |
 
 ::: moniker-end
 > [!WARNING]
-> Localhost SSL sertifikası güvenilir değilse ve sorulmayı önlemek için kutuyu denetederseniz, HTTPS Web istekleri, uygulamanızda veya hizmetinizde çalışma zamanında başarısız olabilir. Bu **durumda, sorma onay kutusunun** işaretini kaldırın, projenizi çalıştırın ve sorulduğunda güveni belirtin.
+> localhost SSL sertifikasına güvenilmiyorsa ve istemin gizlendiği kutuyu işaret ediyorsanız, HTTPS web istekleri uygulama veya hizmetinizin çalışma zamanında başarısız olabilir. Bu durumda, İstem yapma **onay kutusunun işaretini** kaldırın, projenizi çalıştırın ve isteminde güveni belirtin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu [genel bakışta](overview.md)Visual Studio 'da kapsayıcılarla çalışma hakkında daha fazla bilgi edinin.
+Bu genel bakış içinde kapsayıcılarla çalışma hakkında Visual Studio daha fazla bilgi [edinin.](overview.md)

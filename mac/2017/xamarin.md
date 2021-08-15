@@ -1,17 +1,17 @@
 ---
 title: Xamarin
-description: "Mac için Visual Studio 'de Xamarin kullanmak iOS, Mac, Android, tvOS ve watchOS 'yi hedefleyen platformlar arası uygulamalar oluşturmanıza olanak tanır "
+description: "Xamarin'i Mac için Visual Studio iOS, Mac, Android, tvOS ve watchOS'u hedef alan platformlar arası uygulamalar oluşturmanıza olanak sağlar "
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 02/12/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
 ms.topic: overview
-ms.openlocfilehash: e5d03c27ef1e6fefc2fa29d60727851be0954d8b
-ms.sourcegitcommit: 08ee19f260164271e18bdbafe624301508f554ce
+ms.openlocfilehash: e694e4df91270f8362171c48bf093e34412753888badfdccdf48c4732a2f7544
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "104999608"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121350067"
 ---
 # <a name="xamarin-mobile-app-development"></a>Xamarin mobil uygulama geliştirme
 
@@ -19,43 +19,43 @@ ms.locfileid: "104999608"
 
 ## <a name="android"></a>Android
 
-Mac için Visual Studio kendi tümleşik Android SDK yöneticisi 'ne sahiptir ve uygulamanızın hedeflemesini istediğiniz SDK 'lara erişmenizi sağlar.
+Mac için Visual Studio, uygulamanın hedeflemesini istediğiniz ANDROID SDK'lara erişmenizi sağlayan kendi tümleşik Android SDK yöneticisine sahip olur.
 
-Android uygulamaları için Mac için Visual Studio, kendi tasarımcısını içerir ve bu, `.axml` kullanıcı arabirimlerini görsel olarak oluşturmak Için Android dosyalarıyla birlikte kullanılır. Mac için Visual Studio, aşağıdaki görüntüde gösterildiği gibi bu dosyaları Android Designer açacak:
+Android uygulamaları için Mac için Visual Studio, kullanıcı arabirimlerini görsel olarak oluşturmak için Android `.axml` dosyalarıyla çalışan kendi tasarımcısını içerir. Mac için Visual Studio, aşağıdaki görüntüde gösterildiği Android Designer bu dosyaları kendi dosyalarında açar:
 
-![Android kullanıcı arabirimi Tasarımcısı](media/intro-image31.png)
+![Android Kullanıcı Arabirimi Tasarımcısı](media/intro-image31.png)
 
-Android Designer hakkında daha fazla bilgi için bkz. [Xamarin. Android Designer genel bakış](/xamarin/android/user-interface/android-designer/index) Kılavuzu.
+Bu kılavuz hakkında daha fazla Android Designer [Xamarin.Android Designer Genel Bakış kılavuzuna](/xamarin/android/user-interface/android-designer/index) bakın.
 
 ## <a name="ios"></a>iOS
 
-İOS Tasarımcısı, Mac için Visual Studio ile tam olarak tümleşiktir ve iOS, tvOS ve WatchOS Usıs ve geçişleri oluşturmak için. XIB ve görsel taslak dosyalarının görsel düzenlemesini sağlar. Kullanıcı arabiriminin tamamı, araç kutusu ve Tasarım Yüzeyi arasında sürükle ve bırak işlevleri kullanılarak oluşturulabilir, bu da olayları işlemek için sezgisel bir yaklaşım kullanmaktır. İOS Tasarımcısı, tasarım zamanı işlemenin sağladığı avantaja sahip [özel denetimleri](/xamarin/ios/user-interface/designer/ios-designable-controls-overview) de destekler.
+iOS Tasarımcısı, iOS, tvOS ve WatchOS kullanıcı Mac için Visual Studio ve geçişler oluşturmak için .xib ve Görsel Görüntü dosyalarının görsel olarak düzenlenmesine olanak sağlar. Kullanıcı arabiriminin tamamı, olayları işlemeye sezgisel bir yaklaşım benimserken Araç Kutusu ile araç kutusu Tasarım Yüzeyi sürükleyip bırakma işlevi kullanılarak kullanılabilir. iOS Tasarımcısı, tasarım [zamanı işlemenin](/xamarin/ios/user-interface/designer/ios-designable-controls-overview) ek avantajıyla özel denetimleri de destekler.
 
-![iOS görsel taslak Tasarımcısı](media/intro-image30.png)
+![iOS Storyboard tasarımcısı](media/intro-image30.png)
 
-İOS tasarımcısını kullanma hakkında daha fazla bilgi için [Tasarımcı](/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzlarını inceleyin.
+iOS Tasarımcısı'nın kullanımı hakkında daha fazla bilgi için bkz. [Tasarımcı](/xamarin/ios/user-interface/designer/?tabs=macos) kılavuzları.
 
 ### <a name="mac"></a>Mac
 
 Xamarin, güzel Mac uygulamaları oluşturmanıza olanak sağlayan yerel Mac API bağlamaları sağlar.
 
-Mac için Visual Studio ile Mac uygulamaları yazma hakkında daha fazla bilgi için [Xamarin. Mac](/xamarin/mac/get-started/index) kılavuzlarını inceleyin.
+Mac uygulamaları yazma hakkında daha fazla bilgi Mac için Visual Studio [Xamarin.Mac kılavuzlarına](/xamarin/mac/get-started/index) bakın.
 
-## <a name="xamarin-enterprise-features"></a>Xamarin kurumsal özellikleri
+## <a name="xamarin-enterprise-features"></a>Xamarin Enterprise özellikleri
 
 > [!Note]
-> Bu ürünler yalnızca Visual Studio Enterprise abonelikle birlikte kullanılabilir.
+> Bu ürünler yalnızca bir Visual Studio Enterprise kullanılabilir.
 
 ### <a name="profiler"></a>Profil Oluşturucu
 
-Xamarin Profiler profil oluşturma için kullanılabilen üç araçlar vardır. [Xamarin Profiler kılavuza giriş](/xamarin/tools/profiler/index?tabs=macos) , bu gereçlerin ne ölçmesini ve uygulamanızı nasıl analiz edeceğinizi ve her ekranda sunulan verilerin anlamını açıklığa kavuşturduğunu gösterir.
+Profil Xamarin Profiler profil oluşturma için kullanılabilen üç araç vardır. [Xamarin Profiler'a giriş](/xamarin/tools/profiler/index?tabs=macos) kılavuzu, bu araçların ölçülerini ve uygulamanızı nasıl analiz etmelerini inceler ve her ekranda sunulan verilerin anlamını net bir şekilde gösterir.
 
 ### <a name="inspector"></a>Denetçi
 
-Xamarin Inspector, Kullanıcı araçlarıyla etkileşimli bir C# konsolu sağlar. Canlı uygulamalar, bir eğitim aracı olarak bir belge aracı veya bir deneme aracı olarak incelenirken hata ayıklama veya tanılama Yardımcısı olarak kullanılabilir.
+Bu Xamarin Inspector kullanıcı araçlarıyla etkileşimli bir C# konsolu sağlar. Canlı uygulamaları incelerken hata ayıklama veya tanılama yardımı olarak kullanılabilir. Eğitim aracı, belge aracı veya deneme aracı olarak kullanılabilir.
 
 ![Xamarin Inspector](media/intro-inspector.png)
 
-Çeşitli programlama platformlarını (Android, iOS, Mac ve Windows) hedefleyebilir ve Ides hata ayıklama iş akışınıza tümleştirerek zengin bir C# konsolu sağlayan tek başına bir uygulamadan oluşur.
+Çeşitli programlama platformlarını (Android, iOS, Mac ve Windows) hedefleyebiliyor ve IDE hata ayıklama iş akışınıza tümleştirebiliyor zengin bir C# konsolu sağlayan tek başına bir uygulamadan oluşur.
 
-Daha fazla bilgi için [Xamarin Inspector](/xamarin/tools/inspector/release-notes/1.5) kılavuzuna bakın.
+Daha fazla bilgi için [bkz. Xamarin Inspector](/xamarin/tools/inspector/release-notes/1.5) bakın.

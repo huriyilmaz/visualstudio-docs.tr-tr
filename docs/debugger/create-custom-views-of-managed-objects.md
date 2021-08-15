@@ -1,6 +1,6 @@
 ---
 title: Yönetilen nesnelerin özel görünümlerini oluşturma | Microsoft Docs
-description: Visual Studio hata ayıklayıcı, verileri değişken penceresinde görüntüler. Veri türlerinin (özel türler dahil) nasıl görüntüleneceğini özelleştirmeyi öğrenin.
+description: Visual Studio hata ayıklayıcı verileri değişken penceresinde görüntüler. Veri türlerinin (özel türler dahil) nasıl görüntüleneceğini özelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/08/2019
 ms.topic: conceptual
@@ -23,23 +23,24 @@ ms.assetid: 9969e9b2-9008-4729-8a14-0d6deaa61576
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: c054d3bcfbb06d0093f04190ab8b4825b5cbf20f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a45b905e085a703056fe88f7513a9ed299324de699a9695eaffab97e7dc586e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865806"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345848"
 ---
-# <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>Yönetilen nesnelerin özel görünümlerini oluşturma (C#, Visual Basic, F #, C++/CLı)
-Visual Studio 'Nun veri türlerini hata ayıklayıcı değişken pencerelerinin gösterdiği şekilde özelleştirebilirsiniz.
+# <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>yönetilen nesnelerin özel görünümlerini oluşturma (C#, Visual Basic, F #, C++/clı)
+Visual Studio hata ayıklayıcı değişken pencerelerinin veri türlerini görüntüleme biçimini özelleştirebilirsiniz.
 
 ## <a name="attributes"></a>Öznitelikler
 
-C#, Visual Basic, F # ve c++ (yalnızca c++/CLI) içinde,, ve kullanarak özel verilere yönelik genişletmeleri ekleyebilirsiniz <xref:System.Diagnostics.DebuggerTypeProxyAttribute> <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerBrowsableAttribute> .
+C#, Visual Basic, F # ve c++ (yalnızca c++/clı) içinde,, ve kullanarak özel verilere yönelik genişletmeleri ekleyebilirsiniz <xref:System.Diagnostics.DebuggerTypeProxyAttribute> <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerBrowsableAttribute> .
 
-.NET Framework 2,0 kodunda, Visual Basic Debuggergözatılabilir özniteliğini desteklemez. Bu sınırlama, .NET 'in daha yeni sürümlerinde kaldırılmıştır.
+.NET Framework 2,0 kodunda, Visual Basic debuggergözatılabilir özniteliğini desteklemez. Bu sınırlama, .NET 'in daha yeni sürümlerinde kaldırılmıştır.
 
 ## <a name="visualizers"></a>Görselleştiriciler
 

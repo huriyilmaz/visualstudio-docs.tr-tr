@@ -1,6 +1,6 @@
 ---
 title: Seçenek sayfaları oluşturuluyor | Microsoft Docs
-description: Yönetilen paket çerçevesinden bir DialogPage sınıfı uygulayarak Visual Studio 'daki Araçlar menüsü altında Seçenekler sayfası oluşturmayı öğrenin.
+description: yönetilen paket çerçevesinden bir dialogpage sınıfı uygulayarak Visual Studio araçlar menüsü altında seçenekler sayfası oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: 1bf11fec-dece-4943-8053-6de1483c43eb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7b1b8b92f978739bfa4e540013347e216781cd4
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 3f236d38a4bde8a13bb49e6cbc8700811fac9d846962ace7c47ef2ede4047919
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217248"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448227"
 ---
 # <a name="create-options-pages"></a>Seçenek sayfaları oluşturma
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Yönetilen paket çerçevesinde, <xref:Microsoft.VisualStudio.Shell.DialogPage> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Araçlar** menüsünün altına **Seçenekler** sayfası ekleyerek IDE 'yi genişletten türetilmiş sınıflar.
@@ -59,23 +60,23 @@ ms.locfileid: "106217248"
   Tüm bu varsayılan özellikler geçersiz kılınabilir. Örneğin, daha karmaşık bir kullanıcı arabirimi oluşturmak için yalnızca varsayılan uygulamasının geçersiz kılınması gerekir <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A> .
 
 ## <a name="example"></a>Örnek
- Aşağıda, bir Seçenekler sayfasının basit bir "Hello World" uygulamasıdır. Aşağıdaki kodu **menü komutu** seçeneği seçili olan Visual Studio paket şablonu tarafından oluşturulan varsayılan bir projeye eklemek, seçenek sayfası işlevselliğini yeterince gösterir.
+ Aşağıda, bir Seçenekler sayfasının basit bir "Hello World" uygulamasıdır. aşağıdaki kodu, Visual Studio paket şablonu tarafından oluşturulan varsayılan bir projeye ekleme **menü komutu** seçeneği işaretli olarak seçenek sayfası işlevselliğini yeterince gösterir.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki sınıf, en düşük bir "Hello World" seçenekleri sayfasını tanımlar. Açıldığında, Kullanıcı `HelloWorld` bir özellik kılavuzunda ortak özelliği ayarlayabilir.
 
 ### <a name="code"></a>Kod
 :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/class1.cs" id="Snippet11":::
 :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/class1.vb" id="Snippet11":::
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki öznitelik paket sınıfına uygulandığında, paket yüklendiğinde Seçenekler sayfası kullanılabilir hale gelir. Sayılar, kategori ve sayfa için rastgele kaynak kimliklerdir ve sonundaki Boole değeri sayfanın Otomasyonu destekleyip desteklemediğini belirtir.
 
 ### <a name="code"></a>Kod
 :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/cs/uiusersettingstoolsoptionspagespackage.cs" id="Snippet07":::
 :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/ui_usersettings_toolsoptionpages/vb/uiusersettingstoolsoptionspagespackage.vb" id="Snippet07":::
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki olay işleyicisi, Seçenekler sayfasında ayarlanmış özelliğin değerine bağlı olarak bir sonuç görüntüler. Bu yöntem, bir <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> yöntemi, sayfanın açığa çıkarılan özelliklerine erişmek için özel seçenek sayfası türüne açıkça bir atama ile kullanır.
 
  Paket şablonu tarafından oluşturulan bir proje söz konusu olduğunda, `MenuItemCallback` **araç** menüsüne eklenen varsayılan komuta eklemek için bu işlevi işlevinden çağırın.

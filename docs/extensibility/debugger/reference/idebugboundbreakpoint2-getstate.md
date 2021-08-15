@@ -12,17 +12,18 @@ ms.assetid: a40a8382-295e-4916-aae6-ffe3a9cd3f2d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 834f0b35eb902d8e5bcea7c9ac7f3c6da5c895fb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2ac9066b0b7719cf6cfe248b2faddb0d7fbc4e2d8d96d88a176729700678a916
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088866"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262418"
 ---
 # <a name="idebugboundbreakpoint2getstate"></a>IDebugBoundBreakpoint2::GetState
 Bu bağlantılı kesme noktasının durumunu alır.

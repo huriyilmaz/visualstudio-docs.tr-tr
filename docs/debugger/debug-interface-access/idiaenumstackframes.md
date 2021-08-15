@@ -11,14 +11,15 @@ ms.assetid: 3d1e8403-c9fc-42ff-ae35-0ab9a5ed2ad7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 52acd9646523f53ce4f95f8e4d312bbd70637c3b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e17f49808174b0b01b233dddfb54e079d6f0c257eefdc9bd14a2a402b4279424
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148733"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121281511"
 ---
 # <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
 Kullanılabilir çeşitli yığın çerçevelerini numaralandırır.

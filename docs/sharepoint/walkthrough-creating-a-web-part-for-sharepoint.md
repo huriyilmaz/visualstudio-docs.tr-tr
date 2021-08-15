@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: SharePoint için bir Web Bölümü oluşturma | Microsoft Docs'
+title: 'İzlenecek yol: SharePoint için Web Bölümü oluşturma | Microsoft Docs'
 description: SharePoint için bir Web bölümü oluşturun. Web bölümleri, kullanıcıların SharePoint site sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak doğrudan değiştirmesini sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -14,24 +14,25 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 3e018085bd9900a9ee04f838b7c802afd2acc4fe
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: bdf9b3ebd8512cdec8558e66401f520cab6e3d778f99ce73139aa89e7adbebfe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217716"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352831"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>İzlenecek yol: SharePoint için bir Web Bölümü oluşturma
 
-Web Bölümleri, kullanıcıların SharePoint site sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak doğrudan değiştirmesini sağlar. Bu izlenecek yol, Visual Studio 2010 ' de **Web Bölümü** öğe şablonunu kullanarak bir Web Bölümü oluşturmayı gösterir.
+kullanıcıların, SharePoint site sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak doğrudan değiştirmesine olanak Web Bölümleri. bu izlenecek yol, Visual Studio 2010 ' de **web bölümü** öğe şablonunu kullanarak bir web bölümü oluşturmayı gösterir.
 
 Web Bölümü çalışanları bir veri kılavuzunda görüntüler. Kullanıcı, çalışan verilerini içeren dosyanın konumunu belirtir. Kullanıcı, yönetici olan çalışanların yalnızca listede görünmesini sağlamak için veri kılavuzunu da filtreleyebilir.
 
 Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Visual Studio **Web Bölümü** öğe şablonunu kullanarak bir Web Bölümü oluşturma.
+- Visual Studio **web bölümü** öğe şablonunu kullanarak bir web bölümü oluşturma.
 
 - Web bölümünün kullanıcısı tarafından ayarlanabilir bir özellik oluşturma. Bu özellik, çalışan veri dosyasının konumunu belirtir.
 
@@ -39,42 +40,42 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 - İşlenmiş Web bölümünün fiiller menüsünde görünen, *fiil* olarak adlandırılan yeni bir menü öğesi oluşturma. Fiiller, kullanıcının Web bölümünde görünen verileri değiştirmesini sağlar.
 
-- SharePoint 'te Web bölümünü test etme.
+- SharePoint Web bölümünü test etme.
 
     > [!NOTE]
-    > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+    > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Desteklenen Microsoft Windows ve SharePoint sürümleri.
+- desteklenen Microsoft Windows sürümleri ve SharePoint.
 
 - Visual Studio 2017 veya Azure DevOps Services.
 
-## <a name="create-an-empty-sharepoint-project"></a>Boş bir SharePoint projesi oluşturma
+## <a name="create-an-empty-sharepoint-project"></a>boş bir SharePoint projesi oluşturma
 
-İlk olarak, boş bir SharePoint projesi oluşturun. Daha sonra, **Web Bölümü** öğe şablonunu kullanarak projeye bir Web Bölümü eklersiniz.
+ilk olarak, boş bir SharePoint projesi oluşturun. Daha sonra, **Web Bölümü** öğe şablonunu kullanarak projeye bir Web Bölümü eklersiniz.
 
 1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **Yönetici olarak çalıştır** seçeneğini kullanarak başlayın.
 
-2. Bay çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
+2. bay çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
 
-3. **Yeni proje** iletişim kutusunda, kullanmak istediğiniz dilin altındaki **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. **yeni Project** iletişim kutusunda, kullanmak istediğiniz dilin altındaki **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-4. **Şablonlar** bölmesinde **SharePoint 2010 projesi**' ni seçin ve ardından **Tamam** düğmesini seçin.
+4. **şablonlar** bölmesinde **SharePoint 2010 Project**' i seçin ve ardından **tamam** düğmesini seçin.
 
-     **SharePoint Özelleştirme Sihirbazı** görüntülenir. Bu sihirbaz, projenin hatalarını ayıklamak için kullanacağınız siteyi ve çözümün güven düzeyini seçmenizi sağlar.
+     **SharePoint özelleştirme sihirbazı** görüntülenir. Bu sihirbaz, projenin hatalarını ayıklamak için kullanacağınız siteyi ve çözümün güven düzeyini seçmenizi sağlar.
 
-5. **Grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından varsayılan yerel SharePoint sitesini kabul etmek için **son** düğmesini seçin.
+5. **grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından varsayılan yerel SharePoint sitesini kabul etmek için **son** düğmesini seçin.
 
 ## <a name="add-a-web-part-to-the-project"></a>Projeye bir Web Bölümü ekleme
 
 Projeye bir **Web Bölümü** öğesi ekleyin. **Web Bölümü** öğesi, Web bölümü kod dosyasını ekler. Daha sonra Web bölümünün içeriğini işlemek için Web bölümü kod dosyasına kod ekleyeceksiniz.
 
-1. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+1. menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
-2. **Yeni öğe Ekle** iletişim kutusunda, **yüklü şablonlar** bölmesinde, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **yeni öğe ekle** iletişim kutusunda, **yüklü şablonlar** bölmesinde **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-3. SharePoint şablonları listesinde, **Web Bölümü** şablonunu seçin ve sonra **Ekle** düğmesini seçin.
+3. SharePoint şablonları listesinde, **Web bölümü** şablonunu seçin ve sonra **ekle** düğmesini seçin.
 
      **Web Bölümü** öğesi **Çözüm Gezgini** görüntülenir.
 
@@ -104,7 +105,7 @@ Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfı
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet2":::
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet2":::
 
-4. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod, Web bölümüne adlı özel bir özellik ekler `DataFilePath` . Özel özellik, Kullanıcı tarafından SharePoint 'te ayarlanarak kullanılabilecek bir özelliktir. Bu özellik, veri kılavuzunu doldurmak için kullanılan bir XML veri dosyasının konumunu alır ve ayarlar.
+4. Aşağıdaki kodu `WebPart1` sınıfına ekleyin. Bu kod, Web bölümüne adlı özel bir özellik ekler `DataFilePath` . özel özellik, kullanıcı tarafından SharePoint ayarlanabilir bir özelliktir. Bu özellik, veri kılavuzunu doldurmak için kullanılan bir XML veri dosyasının konumunu alır ve ayarlar.
 
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs" id="Snippet3":::
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb" id="Snippet3":::
@@ -129,9 +130,9 @@ Web bölümünde görünmesini istediğiniz denetimleri, Web Bölümü sınıfı
 
 ## <a name="test-the-web-part"></a>Web bölümünü test etme
 
-Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, SharePoint 'teki Web Bölümü galerisine otomatik olarak eklenir. Web bölümünü herhangi bir Web Bölümü sayfasına ekleyebilirsiniz.
+projeyi çalıştırdığınızda SharePoint sitesi açılır. Web Bölümü, SharePoint Web Bölümü galerisine otomatik olarak eklenir. Web bölümünü herhangi bir Web Bölümü sayfasına ekleyebilirsiniz.
 
-1. Aşağıdaki XML 'i bir not defteri dosyasına yapıştırın. Bu XML dosyası, Web bölümünde görünecek örnek verileri içerir.
+1. aşağıdaki XML 'i bir Not Defteri dosyasına yapıştırın. Bu XML dosyası, Web bölümünde görünecek örnek verileri içerir.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -164,7 +165,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, S
         </employees>
     ```
 
-2. Not defteri 'nde, menü çubuğunda **Dosya**  >  **farklı kaydet**' i seçin.
+2. Not Defteri menüsünde, menü çubuğunda **dosya**  >  **farklı kaydet**' i seçin.
 
 3. **Farklı kaydet** iletişim kutusunda, **farklı kaydet türü** listesinde **tüm dosyalar**' ı seçin.
 
@@ -172,9 +173,9 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır. Web Bölümü, S
 
 5. **Klasörlere gözatamazsınız** düğmesini kullanarak herhangi bir klasör seçin ve ardından **Kaydet** düğmesini seçin.
 
-6. Visual Studio 'da **F5** tuşunu seçin.
+6. Visual Studio, **F5** tuşunu seçin.
 
-     SharePoint sitesi açılır.
+     SharePoint site açılır.
 
 7. **Site eylemleri** menüsünde **diğer seçenekler**' i seçin.
 
@@ -219,6 +220,6 @@ Web Bölümü fiiller menüsünde görünen bir öğe seçerek yönetici olmayan
 ## <a name="see-also"></a>Ayrıca bkz.
 
 SharePoint için Web [bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md) 
- [Nasıl yapılır: SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md) 
- [Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) 
- [Izlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+ [nasıl yapılır: SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part.md) 
+ [nasıl yapılır: tasarımcı kullanarak SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) 
+ [izlenecek yol: tasarımcı kullanarak SharePoint için web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

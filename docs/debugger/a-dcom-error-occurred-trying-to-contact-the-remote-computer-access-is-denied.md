@@ -1,7 +1,7 @@
 ---
 title: Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi.
 titleSuffix: ''
-description: "' Uzak bilgisayara bağlanmaya çalışırken bir DCOM hatası oluştu. Erişim engellendi. ' Bu Visual Studio uzaktan hata ayıklama hata başvurusuyla ilgili bilgileri görüntüleyin."
+description: "' Uzak bilgisayara bağlanmaya çalışırken bir DCOM hatası oluştu. Erişim engellendi. ' bu Visual Studio uzaktan hata ayıklama hata başvurusuyla ilgili bilgileri görüntüleyin."
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,14 +21,15 @@ ms.assetid: 9d7dfc1b-9fe0-4f54-9c50-9c0e0f8358c5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e4c33065feff6b4a2a0d3e292004b51fda744cf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bee6fcbe0ddb1a8d179de78c3495f1dcf1bbdad84039ecaa7b5d8f60954649d2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858039"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346407"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi.
 Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar arasında iletişim kurmak için DCOM kullanır:
@@ -37,11 +38,11 @@ Uzaktan hata ayıklama, aşağıdaki durumlarda yerel ve uzak bilgisayarlar aras
 
 - Yönetilen C++ (C++/CLı) kodunda hata ayıklaması yapıyorsanız.
 
-- Visual Studio 2013, **Yerel Düzenle ve devam et** ' i etkinleştir **araçlar > seçenekler > hata ayıklama** sayfasında işaretlenir
+- Visual Studio 2013, **yerel düzenle ve devam et** ' i etkinleştir **araçlar > seçenekler > hata ayıklama** sayfasında işaretlenir
 
 - Bazı üçüncü taraf hata ayıklama senaryoları
 
-  Bu hata, Visual Studio işleminin kimlik doğrulaması yapamadığında (veya sağlanan kimlik bilgileri yetersiz olduğu kabul edildiğinde) DCOM üzerinden uzaktan hata ayıklayıcı işlemi için oluşur. Aşağıdaki geçici çözümlerden biri veya birkaçı sorunu çözebilir:
+  bu hata, Visual Studio işlemi DCOM üzerinden uzaktan hata ayıklayıcı işlemine kendi kimliğini doğrulayamadığında (veya sağlanan kimlik bilgileri yetersiz olduğu kabul edildiğinde) oluşur. Aşağıdaki geçici çözümlerden biri veya birkaçı sorunu çözebilir:
 
 - **Yerel uyumluluk modunu** ve **yönetilen uyumluluk modunu** kapatın.
 

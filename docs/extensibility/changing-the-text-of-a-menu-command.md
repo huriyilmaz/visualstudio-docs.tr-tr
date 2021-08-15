@@ -12,14 +12,15 @@ ms.assetid: 5cb676a0-c6e2-47e5-bd2b-133dc8842e46
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 541acf1bcf448541fe6c440eb2aada687cfbe0e9
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 3c7396b54147d185b98af99c9ab8d87c464eff69eaf59a29e86b5962f8daf753
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904997"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121308317"
 ---
 # <a name="change-the-text-of-a-menu-command"></a>Menü komutunun metnini değiştirme
 Aşağıdaki adımlarda, hizmetini kullanarak bir menü komutunun metin etiketinin nasıl değiştirileceği gösterilmektedir <xref:System.ComponentModel.Design.IMenuCommandService> .
@@ -73,7 +74,7 @@ Aşağıdaki adımlarda, hizmetini kullanarak bir menü komutunun metin etiketin
     }
     ```
 
-5. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görüntülenir.
+5. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio deneysel örneği görüntülenir.
 
 6. **Araçlar** menüsünde **değiştirme ChangeMenuText** adlı bir komut görmeniz gerekir.
 

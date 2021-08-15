@@ -1,6 +1,6 @@
 ---
-title: SharePoint Araçları uzantıları ile özel verileri ilişkilendirme | Microsoft Docs
-description: SharePoint Araç Uzantıları ile özel verileri ilişkilendirin. Özel veri içerebilen nesnelerin listesini görüntüleyin. Özel veri ekleyin ve alın.
+title: Özel Verileri SharePoint Araçları Uzantıları uzantılarıyla | Microsoft Docs
+description: Özel verileri, SharePoint uzantılarıyla ilişkilendirme. Özel veri içeren nesnelerin listesine bakın. Özel veri ekleme ve alma.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,26 +17,27 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 5665fc28bacb76c6887cb7dcb1820ec9dc0d2b3a
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: dcd6e00fa9a934a159b49aec225813cec92b08ec11076d29716c30e38e76a891
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215324"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121315349"
 ---
-# <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>SharePoint Araç Uzantıları ile özel verileri ilişkilendirme
-  SharePoint araçları uzantılarında belirli nesnelere özel veriler ekleyebilirsiniz. Bu, uzantınızın bir bölümünde yer alan ve daha sonra uzantınızın diğer kodundan erişmek istediğiniz veriler olduğunda yararlıdır. Verileri depolamak ve verilere erişmek için özel bir yol uygulamak yerine, verileri uzantınızın bir nesnesiyle ilişkilendirebilir ve ardından verileri aynı nesneden daha sonra alabilirsiniz.
+# <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>Özel verileri SharePoint araçları uzantılarıyla ilişkilendirme
+  Uygulama araçları uzantılarında belirli nesnelere özel SharePoint ebilirsiniz. Uzantının bir bölümünde daha sonra uzantınıza başka bir koddan erişmek istediğiniz veriler olduğunda bu yararlı olur. Verileri depolamak ve verilere erişmek için özel bir yol uygulamak yerine, verileri uzantınız içinde bir nesnesiyle ilişkilendirilerek daha sonra aynı nesneden verileri alabilirsiniz.
 
- Nesnelere özel veri eklemek, Visual Studio 'daki belirli bir öğeyle ilgili verileri korumak istediğinizde de yararlıdır. SharePoint Araçları uzantıları Visual Studio 'Ya yalnızca bir kez yüklenir, bu nedenle uzantınızın herhangi bir zamanda çeşitli farklı öğelerle (projeler, proje öğeleri veya **Sunucu Gezgini** düğümleri gibi) çalışması gerekir. Yalnızca belirli bir öğeyle ilgili özel verileriniz varsa, verileri bu öğeyi temsil eden nesneye ekleyebilirsiniz.
+ Nesnelere özel veri eklemek, belirli bir öğeyle ilgili verileri korumak istediğiniz zaman da Visual Studio. SharePoint araçları uzantıları Visual Studio bir kez yüklendiğinden, uzantınız istediğiniz zaman birkaç farklı öğeyle (projeler, proje  öğeleri veya Sunucu Gezgini düğümleri gibi) birlikte kullanılabilir. Yalnızca belirli bir öğeyle ilgili özel verileriniz varsa, bu öğeyi temsil eden nesneye verileri ebilirsiniz.
 
- SharePoint araçları uzantılarında nesnelere özel veriler eklediğinizde veriler kalıcı olmaz. Veriler yalnızca nesnenin kullanım ömrü boyunca kullanılabilir. Nesne çöp toplama tarafından geri alındıktan sonra veriler kaybolur.
+ Uygulama araçları uzantılarında nesnelere SharePoint özel veriler eklerken, veriler kalıcı olmaz. Veriler yalnızca nesnenin ömrü boyunca kullanılabilir. Nesne atık toplama tarafından geri alındıktan sonra veriler kaybolur.
 
- SharePoint proje sisteminin uzantılarında, bir uzantı kaldırıldıktan sonra devam eden dize verilerini de kaydedebilirsiniz. Daha fazla bilgi için bkz. [SharePoint proje sisteminin uzantılarında verileri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
+ Proje sistemi SharePoint uzantılarında, uzantı kaldırıldıktan sonra devam eden dize verilerini de kaydedebilirsiniz. Daha fazla bilgi için [bkz. Verileri proje sisteminin SharePoint kaydetme.](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
 
-## <a name="objects-that-can-contain-custom-data"></a>Özel veri içerebilen nesneler
- Arabirimi uygulayan SharePoint araçları nesne modelinde herhangi bir nesneye özel veri ekleyebilirsiniz <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> . Bu arabirim, <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> özel veri nesnelerinin bir koleksiyonu olan yalnızca bir özelliğini tanımlar. Aşağıdaki türler uygular <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> :
+## <a name="objects-that-can-contain-custom-data"></a>Özel veri içeren nesneler
+ arabirimini uygulayan SharePoint araçları nesne modelinde herhangi bir nesneye özel veri <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> ebilirsiniz. Bu arabirim, özel veri nesnelerinin <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> koleksiyonu olan tek bir özelliği tanımlar. Aşağıdaki türler <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> uygulanır:
 
 - <xref:Microsoft.VisualStudio.SharePoint.IMappedFolder>
 
@@ -69,22 +70,22 @@ ms.locfileid: "106215324"
 - <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>
 
 ## <a name="add-and-retrieve-custom-data"></a>Özel veri ekleme ve alma
- Bir SharePoint araçları uzantısı içindeki bir nesneye özel veri eklemek için, <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> verileri eklemek istediğiniz nesnenin özelliğini alın ve sonra <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.Add%2A> verileri nesnesine eklemek için yöntemini kullanın.
+ SharePoint araçları uzantısında bir nesneye özel veri eklemek için, verileri eklemek istediğiniz nesnenin özelliğini edinin ve ardından yöntemini kullanarak verileri nesnesine <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.Add%2A> ekleyin.
 
- Bir SharePoint araçları uzantısı içindeki bir nesneden özel verileri almak için <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> nesnesinin özelliğini alın ve aşağıdaki yöntemlerden birini kullanın:
+ SharePoint araçları uzantısında bir nesneden özel verileri almak için nesnesinin özelliğini alın ve ardından aşağıdaki <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> yöntemlerden birini kullanın:
 
-- <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue%2A>. Bu yöntem, veri nesnesi varsa **true** , yoksa **false** döndürür. Bu yöntemi, değer türlerinin veya başvuru türlerinin örneklerini almak için kullanabilirsiniz.
+- <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.TryGetValue%2A>. Bu **yöntem,** veri nesnesi varsa true, **yoksa false** döndürür. Değer türlerinin veya başvuru türlerinin örneklerini almak için bu yöntemi kullanabilirsiniz.
 
-- <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue%2A>. Bu yöntem, çıkış durumunda veri nesnesini veya yoksa **null** değerini döndürür. Bu yöntemi yalnızca başvuru türlerinin örneklerini almak için kullanabilirsiniz.
+- <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.GetValue%2A>. Bu yöntem, çıkarsa veri nesnesini veya yoksa **null** değerini döndürür. Bu yöntemi yalnızca başvuru türlerinin örneklerini almak için kullanabilirsiniz.
 
-  Aşağıdaki kod örneği, belirli bir veri nesnesinin zaten bir proje öğesiyle ilişkili olup olmadığını belirler. Veri nesnesi zaten proje öğesiyle ilişkili değilse, kod nesneyi <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> proje öğesinin özelliğine ekler. Daha büyük bir örnek bağlamında bu örneği görmek için bkz. [nasıl yapılır: özel bir SharePoint proje öğe türüne özellik ekleme](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md).
+  Aşağıdaki kod örneği, belirli bir veri nesnesinin zaten bir proje öğesiyle ilişkilendirilmiş olup olmadığını belirler. Veri nesnesi proje öğesiyle henüz ilişkili değilse, kod nesneyi proje <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> öğesinin özelliğine ekler. Bu örneği daha büyük bir örnek bağlamında görmek için bkz. Nasıl kullanılır: Proje öğesi türüne [özel SharePoint özellik ekleme.](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)
 
   :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb" id="Snippet13":::
   :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs" id="Snippet13":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint Araçları uzantıları için programlama kavramları ve özellikleri](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)
-- [İzlenecek yol: öğe şablonu, Bölüm 1 ile özel bir eylem proje öğesi oluşturma](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
-- [İzlenecek yol: Web bölümlerini göstermek için Sunucu Gezgini genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
-- [Nasıl yapılır: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
-- [Nasıl yapılır: özel bir SharePoint proje öğe türüne özellik ekleme](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)
+- [SharePoint araçları uzantıları için programlama kavramları ve özellikleri](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)
+- [Adım adım kılavuz: Öğe şablonuyla özel eylem proje öğesi oluşturma, Bölüm 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
+- [adım adım kılavuz: Web Sunucu Gezgini görüntülenecek şekilde genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [Nasıl SharePoint: SharePoint ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
+- [Nasıl kullanılır: Özel bir proje SharePoint türüne özellik ekleme](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)

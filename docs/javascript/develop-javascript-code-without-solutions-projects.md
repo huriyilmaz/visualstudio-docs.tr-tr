@@ -1,7 +1,7 @@
 ---
-title: Visual Studio 'da çözüm veya proje olmadan JavaScript kodu yazma
+title: çözüm veya proje olmadan Visual Studio JavaScript kodu yazma
 titleSuffix: ''
-description: Visual Studio, bir proje dosyası veya çözüm dosyası üzerinde bağımlılığını olmadan kod oluşturma desteği sağlar
+description: Visual Studio bir proje dosyasında veya çözüm dosyasında bağımlılığı olmayan kod oluşturma desteği sağlar
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.topic: how-to
@@ -9,25 +9,26 @@ ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-javascript
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 9838cd39fe29f8233f82df00dda6a7392e3494cd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 42c3b9f4cc688dd5f2df1fde3f678060a7997bcfc4814760568a95f92c56b01f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955495"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121258167"
 ---
-# <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Visual Studio 'da çözüm veya proje olmadan JavaScript ve TypeScript kodu geliştirme
+# <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>çözüm veya proje olmadan Visual Studio JavaScript ve TypeScript kodu geliştirme
 
-Visual Studio 2017 ' den başlayarak, [Proje veya çözümler olmadan kod geliştirebilirsiniz](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md). Bu, kod klasörünü açmanıza ve IntelliSense, arama, yeniden düzenleme, hata ayıklama ve daha fazlası gibi zengin düzenleyici desteğiyle çalışmaya hemen başlayabilmenizi sağlar. Bu özelliklere ek olarak, Visual Studio için Node.js araçları, TypeScript dosyaları oluşturmaya, NPM paketlerini yönetmeye ve NPM betikleri çalıştırmaya yönelik destek ekler.
+Visual Studio 2017 ' den başlayarak, [proje veya çözümler olmadan kod geliştirebilirsiniz](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md). bu, bir kod klasörü açmanıza ve ıntellisense, arama, yeniden düzenleme, hata ayıklama ve daha fazlası gibi zengin düzenleyici desteğiyle çalışmaya hemen başlayabilmenizi sağlar. bu özelliklere ek olarak, Visual Studio için Node.js araçları, TypeScript dosyaları oluşturmaya, npm paketlerini yönetmeye ve npm betikleri çalıştırmaya yönelik destek ekler.
 
-Başlamak için araç çubuğundan **Dosya**  >  **Aç**  >  **klasörünü** seçin. Çözüm Gezgini klasördeki tüm dosyaları görüntüler ve düzenlemeden başlamak için herhangi bir dosyayı açabilirsiniz. Arka planda, Visual Studio, NPM, derleme ve hata ayıklama özelliklerini etkinleştirmek için dosyaları dizinliyor.
+Başlamak için araç çubuğundan **Dosya**  >  **Aç**  >  **klasörünü** seçin. Çözüm Gezgini klasördeki tüm dosyaları görüntüler ve düzenlemeden başlamak için herhangi bir dosyayı açabilirsiniz. arka planda, npm, derleme ve hata ayıklama özelliklerini etkinleştirmek için dosyaları dizine Visual Studio.
 
 > [!IMPORTANT]
-> Bu makalede açıklanan, npm tümleştirmesi dahil özelliklerinin birçoğu, Visual Studio 2017 sürüm 15,8 veya sonraki sürümleri gerektirir. Visual Studio **Node.js geliştirme** iş yükünün yüklenmesi gerekir.
+> bu makalede açıklanan, npm tümleştirmesi dahil özelliklerinin birçoğu, Visual Studio 2017 sürüm 15,8 veya sonraki sürümleri gerektirir. Visual Studio **Node.js geliştirme** iş yükünün yüklü olması gerekir.
 
 ## <a name="npm-integration"></a>npm tümleştirmesi
 
@@ -60,7 +61,7 @@ Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıkla
 > *tsconfig.js* hakkında daha fazla bilgi Için [tsconfig.jsTypeScript el kitabı sayfasında](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)hakkında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="unit-tests"></a>Birim testleri
-*Üzerindepackage.js* bir test kökü belirterek, Visual Studio 'da birim testi tümleştirmesini etkinleştirebilirsiniz:
+*üzerindepackage.js* bir test kökü belirterek Visual Studio birim testi tümleştirmesini etkinleştirebilirsiniz:
 
 ```json
 {
@@ -79,7 +80,7 @@ Desteklenen çerçevelerin hiçbiri tanınmazsa, Test Çalıştırıcısı varsa
 * Bant ([GitHub.com/substack/Tape](https://github.com/substack/tape))
 * Jest ([jestjs.io](https://jestjs.io/))
 
-Test Gezgini 'ni açtıktan sonra ( **Test**  >  **Windows**  >  **Test Gezgini**'ni seçin), Visual Studio Testleri bulur ve görüntüler.
+test gezgini 'ni açtıktan sonra ( **test**  >  **Windows**  >  **test gezginini** seçin), Visual Studio testleri bulur ve görüntüler.
 
 > [!NOTE]
 > Test Çalıştırıcısı yalnızca test kökündeki JavaScript dosyalarını numaralandıracaktır, çünkü uygulamanız TypeScript 'te yazılmışsa, önce bunları derlemeniz gerekir.

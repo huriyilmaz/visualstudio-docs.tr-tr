@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim bir makinenin veya bağlantı noktası tedarikçinin bağlantı noktalarını sıralar.
+description: Bu arabirim, bir makinenin veya bağlantı noktası sağlayıcının bağlantı noktalarını numaralar.
 title: IEnumDebugPorts2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 1754eef3-cf62-42e0-b218-1911acba77d4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66598460a48c960b78cb89315fff6bd7ac9a845e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 243fcf1476f2f278ebed550805fcdfc9cf82d03300a1df70ad2c1c833ac3cdc8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064598"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121291694"
 ---
 # <a name="ienumdebugports2"></a>IEnumDebugPorts2
-Bu arabirim bir makinenin veya bağlantı noktası tedarikçinin bağlantı noktalarını sıralar.
+Bu arabirim, bir makinenin veya bağlantı noktası sağlayıcının bağlantı noktalarını numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,34 +30,34 @@ Bu arabirim bir makinenin veya bağlantı noktası tedarikçinin bağlantı nokt
 IEnumDebugPorts2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Özel bir bağlantı noktası sağlayıcısı, tedarikçi tarafından oluşturulan bağlantı noktalarının listesini göstermek için bu arabirimi uygular. Visual Studio bu arabirimi kendi bağlantı noktası tedarikçisine yönelik desteğe uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Özel bir bağlantı noktası sağlayıcı, sağlayıcı tarafından oluşturulan bağlantı noktalarının listesini temsil etmek için bu arabirimi uygulamaya almaktadır. Visual Studio kendi bağlantı noktası tedarikçisini desteklemek için bu arabirimi uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bağlantı noktası sağlayıcısı tarafından oluşturulan bağlantı noktası listesini temsil eden bu arabirimi almak için, [TRTs](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) 'yi çağırın. Diske kaydedilen bağlantı noktalarının listesini temsil eden bu arabirimi almak için [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) çağırın.
+ Bağlantı noktası sağlayıcı tarafından oluşturulan bağlantı noktalarının listesini temsil eden bu arabirimi almak için [EnumPorts'u](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) arayın. Diske kaydedilmiş bağlantı noktalarının listesini temsil eden bu arabirimi elde etmek için [EnumPersistedPorts'u](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) arayın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IEnumDebugPorts2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IEnumDebugPorts2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Sonraki](../../../extensibility/debugger/reference/ienumdebugports2-next.md)|Bir numaralandırma dizisinde belirtilen sayıda bağlantı noktasını alır.|
-|[Atla](../../../extensibility/debugger/reference/ienumdebugports2-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda bağlantı noktasını atlar.|
-|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugports2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugports2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugports2-getcount.md)|Bir Numaralandırıcı içindeki bağlantı noktası sayısını alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugports2-next.md)|Bir numaralama dizisinde belirtilen sayıda bağlantı noktası alma.|
+|[Atla](../../../extensibility/debugger/reference/ienumdebugports2-skip.md)|Bir numaralama dizisinde belirtilen sayıda bağlantı noktasını atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugports2-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugports2-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugports2-getcount.md)|Numaralayıcıda bağlantı noktalarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, işlemlere ekleme için kullanılan bağlantı noktası listesinin doldurulmaya yardımcı olmak için bu arabirimi kullanır.
+ Visual Studio işlemlere eklemek için kullanılan bağlantı noktalarının listesini doldurmak için bu arabirimi kullanır.
 
- Bir hata ayıklama altyapısı genellikle bu arabirimi kullanmaz.
+ Hata ayıklama altyapısı genellikle bu arabirimi kullanmaz.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

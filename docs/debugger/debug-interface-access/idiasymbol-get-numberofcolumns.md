@@ -9,14 +9,15 @@ ms.assetid: 64834351-e2c9-4f1c-9dc0-2abb5478bc63
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: de5f0a17055b758da56c7af2edec6f8cb2de4157
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 74461bf97f176b6906537e01f4dd9082ea82fe81cf196b25a82a465fe7424e1c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160745"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121264155"
 ---
 # <a name="idiasymbolget_numberofcolumns"></a>IDiaSymbol::get_numberOfColumns
 Matristeki sütun sayısını alır.

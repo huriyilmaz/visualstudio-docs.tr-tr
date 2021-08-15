@@ -1,62 +1,63 @@
 ---
-title: XSLT kodunda hata ayıklamanın yolları
-description: Kod içinde ilerlemek, kesme noktaları ayarlamak ve XSLT yürütme durumlarını görüntülemek için XSLT hata ayıklayıcısını kullanarak Visual Studio 'daki XSLT kodunda hata ayıklamanın nasıl yapılacağını öğrenin.
+title: XSLT kodunda hata ayıklama yolları
+description: Kodda adım adım ilerler, kesme noktaları ayarlamak ve XSLT yürütme Visual Studio XSLT hata ayıklayıcısını kullanarak XSLT kodunda hata ayıklamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: a7d0f5a683a627999076969dbc9077ba03d65208
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8038c954ff4abe447418247c6d99485dc081bc14299ecbc2c3a5c29b93cccba9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948563"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121351116"
 ---
 # <a name="debugging-xslt"></a>XSLT Hatalarını Ayıklama
 
-Visual Studio 'da XSLT kodunda hata ayıklaması yapabilirsiniz. XSLT hata ayıklayıcısı, kesme noktaları ayarlamayı, XSLT yürütme durumlarını görüntülemeyi ve daha fazlasını destekler. XSLT hata ayıklayıcısı XSLT stil sayfaları veya XSLT uygulamalarında hata ayıklamak için kullanılabilir.
+XSLT kodunda hata ayıklamak için Visual Studio. XSLT hata ayıklayıcısı kesme noktaları ayarlamayı, XSLT yürütme durumları görüntülemeyi ve bu gibi durumları destekler. XSLT hata ayıklayıcısı, XSLT stil sayfalarında veya XSLT uygulamalarında hata ayıklamak için kullanılabilir.
 
-Kodu Adımlama, Adımlama veya dışarı atlama yoluyla tek seferde bir satırı çalıştırabilirsiniz. XSLT hata ayıklayıcısı 'nın kod Adımlama işlevini kullanma komutları, diğer Visual Studio hata ayıklayıcıları için olanlarla aynıdır.
+Kodun içine adım atarak, üzerine atarak veya koddan çıkararak kodu tek tek yürütebilirsiniz. XSLT hata ayıklayıcısının kod adımlama işlevini kullanma komutları, diğer hata ayıklayıcıları için Visual Studio aynıdır.
 
-Hata ayıklamayı başlattığınızda, XSLT hata ayıklayıcı giriş belgesini ve XSLT çıkışını göstermek için Windows 'u açar.
-
-> [!NOTE]
-> XSLT hata ayıklayıcısı yalnızca Visual Studio 'nun Professional ve Enterprise sürümlerinde kullanılabilir.
-
-## <a name="debug-from-the-xml-editor"></a>XML düzenleyicisinde hata ayıkla
-
-Bir stil sayfası veya düzenleyicide açık bir giriş XML dosyanız olduğunda hata ayıklayıcıyı başlatabilirsiniz. Bu, stil sayfasını tasarlarken hata ayıklamanıza olanak sağlar.
-
-1. Stil sayfasını veya XML dosyasını Visual Studio 'da açın.
-
-1. **XML** menüsünde **XSLT hata ayıklamayı Başlat** ' ı seçin veya **alt** + **F5** tuşuna basın.
-
-## <a name="debug-from-an-app-that-uses-xslt"></a>XSLT kullanan bir uygulamadan hata ayıklama
-
-Bir uygulamada hata ayıklarken XSLT içine adım aktarabilirsiniz. Bir çağrıda **F11** tuşuna bastığınızda <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> hata ayıklayıcı XSLT koduna ileredebilir.
+Hata ayıklamaya başladıktan sonra XSLT hata ayıklayıcısı giriş belgesini ve XSLT çıkışını göstermek için pencereleri açar.
 
 > [!NOTE]
-> Sınıfından XSLT 'ye Adımlama <xref:System.Xml.Xsl.XslTransform> desteklenmez. <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, hata ayıklama SıRASıNDA XSLT 'de adımlamayı destekleyen tek XSLT işlemcisidir.
+> XSLT hata ayıklayıcısı yalnızca Professional ve Enterprise sürümlerinde Visual Studio.
+
+## <a name="debug-from-the-xml-editor"></a>XML düzenleyicisinden hata ayıklama
+
+Düzenleyicide bir stil sayfası veya bir giriş XML dosyası açık olduğunda hata ayıklayıcıyı başlatabilirsiniz. Bu, stil sayfası tasarlarken hata ayıklamaya olanak sağlar.
+
+1. Stil sayfası veya XML dosyasını Visual Studio.
+
+1. XML **menüsünden XSLT Hata Ayıklamayı** Başlat'ı **seçin** veya Alt  + **F5 tuşuna basın.**
+
+## <a name="debug-from-an-app-that-uses-xslt"></a>XSLT kullanan bir uygulamada hata ayıklama
+
+Bir uygulamada hata ayıklarken XSLT'ye adım atabilirsiniz. Bir çağrıda **F11'e** <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> basıyorken hata ayıklayıcı XSLT koduna adım atabilir.
+
+> [!NOTE]
+> sınıfından <xref:System.Xml.Xsl.XslTransform> XSLT'ye adımlama desteklenmiyor. sınıfı, <xref:System.Xml.Xsl.XslCompiledTransform> hata ayıklama sırasında XSLT'ye adımlamayı destekleyen tek XSLT işlemcidir.
 
 ### <a name="to-start-debugging-an-xslt-application"></a>XSLT uygulamasında hata ayıklamaya başlamak için
 
-1. Nesnenin örneği oluşturulurken <xref:System.Xml.Xsl.XslCompiledTransform> , `enableDebug` parametresini kodunuzda olarak ayarlayın `true` . Bu, XSLT işlemcisinin kod derlendiğinde hata ayıklama bilgileri oluşturmasını söyler.
+1. Nesnesinin örneğini <xref:System.Xml.Xsl.XslCompiledTransform> oluştururken, `enableDebug` kodunda `true` parametresini olarak ayarlayın. Bu, XSLT işlemcisinin kod derlenmiş olduğunda hata ayıklama bilgileri oluşturmasını söyler.
 
-1. XSLT koduna geçmek için **F11** tuşuna basın.
+1. XSLT koduna adımını atarak **F11** tuşuna basın.
 
    XSLT stil sayfası yeni bir belge penceresine yüklenir ve XSLT hata ayıklayıcısı başlatılır.
 
-   Alternatif olarak, stil sayfasına bir kesme noktası ekleyebilir ve uygulamanızı çalıştırabilirsiniz.
+   Alternatif olarak stil tablosuna bir kesme noktası ekleyebilir ve uygulamalarınızı çalıştırabilirsiniz.
 
 ### <a name="example"></a>Örnek
 
-Aşağıda bir C# XSLT programı örneği verilmiştir. XSLT hata ayıklamanın nasıl etkinleştirileceğini gösterir.
+Aşağıda bir C# XSLT programı örneği yer almaktadır. XSLT hata ayıklamasını etkinleştirmeyi gösterir.
 
 ```csharp
 using System;
@@ -90,10 +91,10 @@ namespace ConsoleApplication
 
 ## <a name="xslt-profiler"></a>XSLT profil oluşturucusu
 
-[XSLT Profiler](../xml-tools/xslt-profiler.md) , ayrıntılı XSLT performans raporları oluşturarak geliştiricilerin XSLT kodundaki performansla ilgili sorunları ölçmesine, değerlendirmesine ve hedeflemesini sağlayan bir araçtır. Daha fazla bilgi için bkz. [XSLT Profiler](../xml-tools/xslt-profiler.md).
+[XSLT profilleyici,](../xml-tools/xslt-profiler.md) geliştiricilerin ayrıntılı XSLT performans raporları oluşturarak XSLT kodundaki performansla ilgili sorunları ölçmesini, değerlendirmesini ve hedeflemesini sağlayan bir araçtır. Daha fazla bilgi için [bkz. XSLT profilleyicisi.](../xml-tools/xslt-profiler.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek yol: XSLT stil sayfasında hata ayıklama](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
-- [Visual Studio hata ayıklayıcısına ilk bakış](../debugger/debugger-feature-tour.md)
-- [Hata ayıklama temelleri: kesme noktaları](../debugger/using-breakpoints.md)
+- [Hata ayıklayıcının Visual Studio bakın](../debugger/debugger-feature-tour.md)
+- [Hata ayıklamanın temelleri: Kesme noktaları](../debugger/using-breakpoints.md)

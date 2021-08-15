@@ -1,6 +1,6 @@
 ---
-description: Karma yerel ve yönetilen kodda hata ayıklamak için 2,0, 3,0, 3,5 veya 4,0 .NET Framework sürümü gerekir.
-title: Karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2,0 veya üzeri kullanılırken desteklenir | Microsoft Docs
+description: Karışık yerel ve yönetilen kodda hata ayıklamak için .NET Framework 2.0, 3.0, 3.5 veya 4.0 sürümüne sahipsiniz.
+title: Karma mod hata ayıklaması yalnızca Microsoft .NET Framework 2.0 veya daha yeni bir sürümü kullanırken | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -13,21 +13,22 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: ceb1f1a72460dd97071822b2c8358c68edba4591
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 69969fb51d3394d8e4b071190927b32c53369b431ff01104841f10babe7e477f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146840"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121263783"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>Hata: Karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2.0 veya daha yenisi kullanılırken desteklenir
-Karma yerel ve yönetilen kodda hata ayıklamak için 2,0, 3,0, 3,5 veya 4,0 .NET Framework sürümü gerekir. .NET Framework önceki sürümleriyle karışık modda hata ayıklama desteklenmez.
+Karışık yerel ve yönetilen kodda hata ayıklamak için .NET Framework 2.0, 3.0, 3.5 veya 4.0 sürümüne sahipsiniz. Uygulamanın önceki sürümleriyle karma mod .NET Framework hata ayıklaması desteklenmiyor.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- .NET Framework 2,0, 3,0, 3,5 veya 4,0 sürümüne yükseltin.
+- Yükseltme .NET Framework 2.0, 3.0, 3.5 veya 4.0 sürümüne yükseltin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

@@ -8,19 +8,20 @@ f1_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 78082e8937f497af915c23e6db75b4b9836591fc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 78f8d40d583d293529acfc8b3ff8065efd48bd2c948c55bcfd019cd8a6523fdd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960188"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121315752"
 ---
 # <a name="set-general-performance-session-options"></a>Genel performans oturumunu ayarlama seçenekleri
 
-Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında, bir Visual Studio profil oluşturma araçları performans oturumu için koleksiyon yöntemini ve profil oluşturma veri adlandırma kuralları ' nı ayarlayabilirsiniz. Bu iletişim kutusunu **Performans Gezgini** açmak için, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+performans oturumunun özellikler iletişim kutusunun **genel** sayfasında, bir Visual Studio Profil Oluşturma Araçları performans oturumu için koleksiyon yöntemini ve profil oluşturma veri adlandırma kurallarını ayarlayabilirsiniz. Bu iletişim kutusunu **Performans Gezgini** açmak için, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 ## <a name="choosing-data-collection-methods"></a>Veri toplama yöntemlerini seçme
 

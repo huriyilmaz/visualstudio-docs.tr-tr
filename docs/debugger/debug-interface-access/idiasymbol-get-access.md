@@ -11,14 +11,15 @@ ms.assetid: 908976ae-95c4-4020-89c9-de137f727f98
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 691af7faecf964bf80fc13a8b4b50f079f16f3fb
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2eab39b6b1adbf13975b647c374b6993b74ffe11011239cf1db2021325992693
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156610"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121264213"
 ---
 # <a name="idiasymbolget_access"></a>IDiaSymbol::get_access
 Bir sınıf üyesinin erişim değiştiricisini alır.

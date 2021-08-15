@@ -11,14 +11,15 @@ ms.assetid: d31a0f97-b7be-4fb5-a942-8ba4527bc068
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 884f2e7bb25eacfd3118632082d321ceb2b45da8
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 0b7101f9e23bba9b44287a4cb8e01e8c61551b01e5c3fc3a9d82811214b87b0e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904935"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275742"
 ---
 # <a name="ide-guids"></a>IDE GUID’leri
 
@@ -131,4 +132,4 @@ ms.locfileid: "112904935"
 
 - [Yönetilen koddaki COM sabitleri](../extensibility/com-constants-in-managed-code.md)
 - [IDE sabitleri](../extensibility/ide-constants.md)
-- [Project s SystemUtility 'yi genişletmek için IDE tanımlı komutlar](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [Projenin ystemlerini genişletmek için IDE tanımlı komutlar](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

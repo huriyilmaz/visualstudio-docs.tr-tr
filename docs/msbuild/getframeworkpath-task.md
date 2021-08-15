@@ -1,6 +1,6 @@
 ---
 title: GetFrameworkPath Görevi | Microsoft Docs
-description: .NET Framework derlemelerinin yolunu almak için MSBuild GetFrameworkPath görevinin nasıl kullanılacağını öğrenin.
+description: .NET Framework derlemelerinin yolunu almak için MSBuild getframeworkpath görevinin nasıl kullanılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: 5b7bcdd7-d4a0-442d-af29-8aadb3b10598
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: dea1b70335f7a1cc98bc1ee111ff58d69023c18a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 30585cba87e24449ef3e95a43dd97b9bbe9dbceca397e2238ba45883b8a1f05d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914658"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397689"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath görevi
 
@@ -47,13 +48,13 @@ Aşağıdaki tablo, görevin parametrelerini açıklar `GetFrameworkPath` .
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework birden çok sürümü yüklüyse, bu görev MSBuild 'in üzerinde çalışmak üzere tasarlandığı sürümü döndürür.
+.NET Framework birden çok sürümü yüklüyse, bu görev MSBuild üzerinde çalışmak üzere tasarlanan sürümü döndürür.
 
 Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `GetFrameworkPath` özelliğindeki .NET Framework yolu depolamak için görevini kullanır `FrameworkPath` .
+aşağıdaki örnek, `GetFrameworkPath` özelliğindeki .NET Framework yolu depolamak için görevini kullanır `FrameworkPath` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -11,17 +11,18 @@ ms.assetid: 9a57dfcd-df8e-4be5-b1fe-bd853e3c6bb2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 64303d91ff9ab4743adc980bb8ee92f9bdec9345
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 795de0521d4ea33b54cf8875e45a74a8ff61ab64a59eb664c73d96ac9e73822d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105093892"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121261768"
 ---
 # <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
 Daha önce hata ayıklama altyapısı (DE) tarafından SDM 'ye gönderilen zaman uyumlu bir hata ayıklama olayının alındığını ve işlendiğini göstermek için oturum hata ayıklama Yöneticisi (SDM) tarafından çağırılır.

@@ -14,34 +14,35 @@ ms.assetid: bb6291e1-596d-4af0-9f22-5fd713d6b84b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b5f1378f87ff8717b9bc9d9125b03c1b28c5007f
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 536a14065a86541e7748858f64229c5c5a0ab04f63c3d4f10025e68747ffec49
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389806"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346323"
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows"></a>Otomatikler ve Yereller pencerelerinde değişkenleri inceleme
 
-Otomatikler **ve** **Yereller pencereleri,** hata ayıklama sırasında değişken değerlerini gösterir. Pencereler yalnızca hata ayıklama oturumu sırasında kullanılabilir. Otomatikler **penceresinde** geçerli kesme noktası etrafında kullanılan değişkenler gösterilir. **Yereller penceresinde** yerel kapsamda tanımlanan değişkenler gösterilir ve bu genellikle geçerli işlev veya yöntemdir.
+Otomatikler **ve** **Yereller pencereleri,** hata ayıklama sırasında değişken değerlerini gösterir. Pencereler yalnızca hata ayıklama oturumu sırasında kullanılabilir. Otomatikler **penceresinde** geçerli kesme noktası etrafında kullanılan değişkenler gösterilir. Yereller **penceresinde** yerel kapsamda tanımlanan değişkenler gösterilir ve bu genellikle geçerli işlev veya yöntemdir.
 
 > [!NOTE]
 > Bu kodda ilk kez hata ayıklamayı denediyseniz, bu [](../debugger/debugging-absolute-beginners.md) makaleyi okumadan önce [](../debugger/write-better-code-with-visual-studio.md) yeni başlayanlar için Hata Ayıklama ve Hata ayıklama teknikleri ve araçları makalesine bakabilirsiniz.
 
  Otomatikler **penceresi** C#, Visual Basic, C++ ve Python kodu için kullanılabilir ancak JavaScript veya F# için kullanılamaz.
 
-Hata ayıklama sırasında **Otomatikler penceresini** açmak için Windows Otomatikleri'nde Hata Ayıkla'ya  >    >  **tıklayın** veya **Ctrl** Alt V A +  + **tuşlarına**  >  **basın.**
+Otomatikler penceresini **açmak için,** hata ayıklama sırasında Hata Ayıkla'Windows Otomatikler'i seçin veya  >    >  Ctrl Alt V A  +  + **tuşlarına**  >  **basın.**
 
-Hata ayıklama sırasında **Yereller penceresini** açmak için Windows YerelLerinde Hata Ayıkla'ya  >    >  **tıklayın** veya Alt  + **4'e basın.**
+Hata ayıklama sırasında **Yereller penceresini** açmak için Yereller'de hata  >  **ayıkla'Windows**  >  **seçin** veya Alt  + **4'e basın.**
 
 > [!NOTE]
-> Bu konu Windows'Visual Studio için geçerlidir. Daha Mac için Visual Studio için [bkz. veri görselleştirmeleri Mac için Visual Studio.](/visualstudio/mac/data-visualizations)
+> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. veri görselleştirmeleri Mac için Visual Studio.](/visualstudio/mac/data-visualizations)
 
 ## <a name="use-the-autos-and-locals-windows"></a>Otomatikler ve Yereller pencerelerini kullanma
 
-Diziler ve nesneler, **Otomatikler ve Yereller** **pencerelerinde** ağaç denetimleri olarak gösterir. Alanları ve özellikleri göstermek için görünümü genişletmek için değişken adının sol yanındaki oku seçin. Yereller penceresindeki <xref:System.IO.FileStream?displayProperty=fullName> bir nesne örneği **aşağıdaki gibidir:**
+Diziler ve nesneler, **Otomatikler ve Yereller** **pencerelerinde** ağaç denetimleri olarak gösterir. Alanları ve özellikleri göstermek için görünümü genişletmek için değişken adının sol yanındaki oku seçin. YerelLer penceresindeki <xref:System.IO.FileStream?displayProperty=fullName> bir nesne örneği **aşağıdaki gibidir:**
 
 ![Yereller penceresinin ekran görüntüsü, dosya System.IO.FileStream değerine ayarlanmış.](../debugger/media/locals-filestream.png)
 
@@ -78,7 +79,7 @@ Aramanızı daha fazla veya daha az ayrıntılı hale eklemek için  Otomatikler
 ## <a name="pin-properties-in-the-autos-or-locals-window"></a>Otomatikler veya YerelLer penceresinde özellikleri sabitleme
 
 > [!NOTE]
-> Bu özellik .NET Core 3.0 veya daha yenisi için de destekleni.
+> Bu özellik .NET Core 3.0 veya daha yenisi için de kullanılabilir.
 
 Sabitlenebilir Özellikler aracıyla Otomatikler ve Yereller pencerelerinde nesneleri özelliklerine göre **hızla inceebilirsiniz.**  Bu aracı kullanmak için bir özelliğin üzerine gelin ve görüntülenen sabitleme  simgesini seçin veya sağ tıklayın ve sonuçta elde edilen bağlam menüsünde Üyeyi Sık Kullanılan Olarak Sabitle seçeneğini belirleyin.  Bu, bu özelliği nesnenin özellik listesinin en üstüne kadar gösterir ve Özellik adı ve değeri **Değer** sütununda görüntülenir.  Bir özelliğin sabitlemesini geri eklemek için  sabitleme simgesini yeniden seçin veya bağlam menüsünde Üyeyi Sık Kullanılan olarak Kaldır seçeneğini belirleyin.
 
@@ -101,7 +102,7 @@ Bir kesme noktası ayarlayın ve hata ayıklamayı başlat. Kesme noktası isabe
 
 ![Hata Ayıklama Konumu araç çubuğu](../debugger/media/debuglocationtoolbar.png "Hata Ayıklama Konumu araç çubuğu")
 
-## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a> Otomatikler penceresindeki değişkenler (C#, C++, Visual Basic, Python)
+## <a name="variables-in-the-autos-window-c-c-visual-basic-python"></a><a name="bkmk_whatvariables"></a>Otomatikler penceresindeki değişkenler (C#, C++, Visual Basic, Python)
 
 Farklı kod dilleri, Otomatikler penceresinde farklı **değişkenleri** görüntüler.
 
@@ -118,7 +119,7 @@ Farklı kod dilleri, Otomatikler penceresinde farklı **değişkenleri** görün
        }
    ```
 
-   satırda bir kesme noktası ayarlayın `c = 3;` ve hata ayıklayıcıyı başlatma. Yürütme duraklatılırsa **Otomatikler** penceresi görüntülenir:
+   satırda bir kesme noktası ayarlayın `c = 3;` ve hata ayıklayıcıyı başlat. Yürütme duraklatılırsa **Otomatikler** penceresi görüntülenir:
 
    ![C değerinin 0 olarak ayar olduğu Otomatikler penceresinin ekran görüntüsü.](../debugger/media/autos-csharp.png)
 
@@ -175,7 +176,7 @@ Otomatikler penceresinde ve yöntem `sumVars()` `subtractVars()` çağrıların�
 
 1. Satırda bir kesme noktası `int x = sumVars(a, b) + subtractVars(c, d);` ayarlayın.
 
-1. Hata ayıklamayı başlat ve kesme noktası üzerinde yürütme duraklatılırken Adımla'ya **tıklayın veya** **F10 tuşuna basın.** Otomatikler penceresinde aşağıdaki dönüş değerlerini **görüyor gerekir:**
+1. Hata ayıklamayı başlat ve kesme noktası üzerinde yürütme duraklatılırken Adımla'ya **tıklayın veya** **F10 tuşuna basın.** Otomatikler penceresinde aşağıdaki dönüş **değerlerini görüyor gerekir:**
 
   ![Otomatikler dönüş değeri C #](../debugger/media/autosreturnvaluecsharp2.png "Otomatikler dönüş değeri C #")
 

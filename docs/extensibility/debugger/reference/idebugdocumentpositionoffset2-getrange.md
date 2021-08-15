@@ -9,17 +9,18 @@ ms.assetid: 27da7130-0932-4f97-abde-05e6fb018606
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 66184ba67dd0623a886ca37e28d311aebc6633bd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1f62d00ef9abb422132da27c0f7eb2112477d79ca8b4939c5dd10ceb6344de39
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066353"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262002"
 ---
 # <a name="idebugdocumentpositionoffset2getrange"></a>IDebugDocumentPositionOffset2::GetRange
 Geçerli belge konumunun aralığını alır.

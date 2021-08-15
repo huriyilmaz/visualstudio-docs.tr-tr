@@ -1,5 +1,5 @@
 ---
-title: TargetPlatformName öğesi (Visual Studio şablonları) | Microsoft Docs
+title: targetplatformname öğesi (Visual Studio şablonları) | Microsoft Docs
 description: TargetPlatformName öğesi ve proje şablonunun hedeflediği platformu nasıl belirttiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5045a5fc2f29d00c08996fc71acedb228e4f98ae
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0d888b393f669305b03379e0d138ecfa5e75305981a0bec03f53424b95ad6ec0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068407"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121358901"
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName Öğesi (Visual Studio Şablonları)
 Proje şablonunun hedeflediği platformu belirtir. Bu öğe, uygulama oluşturmak için bir proje şablonu kullanılacağını belirtmek için kullanılır [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] .
@@ -45,13 +45,13 @@ Proje şablonunun hedeflediği platformu belirtir. Bu öğe, uygulama oluşturma
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Metin **Windows** olmalıdır.
+ Metnin **Windows** olması gerekir.
 
 ## <a name="example"></a>Örnek
  Bu örnek, proje şablonunun hedeflediği [!INCLUDE[win8](../debugger/includes/win8_md.md)] veya daha sonraki bir sürümünü belirtir.

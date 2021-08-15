@@ -1,6 +1,6 @@
 ---
 title: Verilere Windows Forms denetimleri bağlama
-description: Uygulamanızın kullanıcılarına veri görüntüleyebilmeniz için, Visual Studio 'daki verilere Windows Forms denetimleri bağlayın.
+description: uygulamanızın kullanıcılarına veri görüntüleyebilmeniz için Windows Forms denetimleri Visual Studio veriye bağlayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/03/2017
 ms.topic: how-to
@@ -17,23 +17,24 @@ ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3da0c4e9835c9b6f6498aa28b82f2e631d1717ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d891cc83008c844ddc694b958be6314c9f2de63a7c8383a541fc3ccd265d00bc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867418"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121240646"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere Windows Forms denetimleri bağlama
 
-Verileri Windows Forms 'e bağlayarak uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. Bu veriye dayalı denetimleri oluşturmak için, öğeleri **veri kaynakları** penceresinden Visual Studio 'daki Windows Form Tasarımcısı sürükleyin.
+verileri Windows Forms 'e bağlayarak uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. bu veri bağlantılı denetimleri oluşturmak için, öğeleri **veri kaynakları** penceresinden Visual Studio Windows Form Tasarımcısı üzerine sürükleyin.
 
 ![Veri kaynağı sürükleme işlemi](../data-tools/media/raddata-data-source-drag-operation.png)
 
 > [!TIP]
-> **Veri kaynakları** penceresi görünür değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek veya **SHIFT** + **alt** + **D** tuşlarına basarak dosyayı açabilirsiniz. **Veri kaynakları** penceresini görmek Için Visual Studio 'da açık bir projeniz olmalıdır.
+> **veri kaynakları** penceresi görünür değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek veya **shıft** + **Alt** + **D** tuşlarına basarak dosyayı açabilirsiniz. **veri kaynakları** penceresini görmek için Visual Studio bir projenizin açık olması gerekir.
 
 Öğeleri sürüklemeden önce, bağlamak istediğiniz denetim türünü ayarlayabilirsiniz. Farklı değerler tablonun kendisini mi yoksa tek bir sütun mı seçtiğinize bağlı olarak görünür.  Ayrıca, özel değerler de ayarlayabilirsiniz. Bir tablo için **Ayrıntılar** , her sütunun ayrı bir denetime bağlandığı anlamına gelir.
 
@@ -51,7 +52,7 @@ Bileşen hakkında daha fazla bilgi için <xref:System.Windows.Forms.BindingSour
 
 - [BindingSource bileşeni mimarisi](/dotnet/framework/winforms/controls/bindingsource-component-architecture)
 
-[BindingNavigator denetimi](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms) bir Windows uygulaması tarafından görünen veriler arasında gezinmek için bir kullanıcı arabirimi sağlar.
+[BindingNavigator denetimi](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms) , Windows bir uygulama tarafından görünen veriler arasında gezinmek için bir kullanıcı arabirimi sağlar.
 
 ## <a name="bind-to-data-in-a-datagridview-control"></a>DataGridView Denetimindeki verilere bağlama
 
@@ -84,5 +85,5 @@ Ayrıca, her denetimin akıllı bir etiketi olduğunu unutmayın. Bu etiket yaln
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md)
+- [Visual Studio içindeki verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Windows Forms veri bağlama (.NET Framework)](/dotnet/framework/winforms/windows-forms-data-binding)

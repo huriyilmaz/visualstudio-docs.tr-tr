@@ -11,14 +11,15 @@ ms.assetid: 9c47d0a6-9eb1-464e-bd44-fa2b552d4d36
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 318644353ff3643e92b2a7186359661b403db486
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c3589ad1a0c5eab4564df0584a19d207a2fdd49d9ceff84d96667bb66d12770f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077726"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292786"
 ---
 # <a name="idebugcoreserver2"></a>IDebugCoreServer2
 Bu arabirim, ağdaki bir makinedeki bir sunucudan bilgi göstermek ve almak için kullanılır.
@@ -30,7 +31,7 @@ IDebugCoreServer2 : IUknown
 ```
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları
- Visual Studio, bir sunucuyu temsil etmek için bu arabirimi uygular. Visual Studio 'nun her örneği, bu arabirimin bir örneğini oluşturur.
+ Visual Studio, bu arabirimi bir sunucuyu temsil etmek için uygular. her Visual Studio örneği bu arabirimin bir örneğini oluşturur.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Özel bir bağlantı noktası sağlayıcısı bu arabirimi bir [olay](../../../extensibility/debugger/reference/idebugportevents2-event.md)çağrısıyla alır.
@@ -51,7 +52,7 @@ IDebugCoreServer2 : IUknown
 |[GetMachineUtilities_V7](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineutilities-v7.md)|Makine için makine yardımcı programlarını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, ağdaki makinelerde çalışan işlemlere gitmek için Visual Studio tarafından da kullanılır.
+ bu arabirim, ağdaki makinelerde çalışan işlemlere gitmek için Visual Studio tarafından da kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg. h

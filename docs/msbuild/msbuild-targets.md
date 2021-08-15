@@ -1,6 +1,6 @@
 ---
-title: MSBuild Hedefleri | Microsoft Docs
-description: MSBuild'in görevleri birlikte grup oluşturmak ve derleme işleminin daha küçük birimlerde dikkate alınarak izin vermek için hedefleri nasıl kullandığını öğrenin.
+title: MSBuild Hedefler | Microsoft Docs
+description: MSBuild görevleri birlikte gruplamak ve derleme işleminin daha küçük birimlere yeniden hedeflemesini sağlamak için hedefleri nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: conceptual
@@ -10,22 +10,23 @@ ms.assetid: 8060b4d2-e4a9-48cf-a437-852649ceb417
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 294877e4884ae7b89f1e9d6f015c5c9213eba52d
-ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
+ms.openlocfilehash: 11c5c221558dbfcd69844a2420510f3026a0450fa611103ece4ce3659349fe80
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112254829"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397533"
 ---
 # <a name="msbuild-targets"></a>MSBuild hedefleri
 
-Grup görevlerini belirli bir sırada birlikte hedefler ve derleme işleminin daha küçük birimlere çarpanlarına iner. Örneğin, bir hedef derlemeye hazırlanmak için çıkış dizininde yer alan tüm dosyaları silebilirken, diğeri proje için girişleri derler ve boş dizine yer değiştirir. Görevler hakkında daha fazla bilgi için bkz. [Görevler.](../msbuild/msbuild-tasks.md)
+Hedefleri belirli bir sırada gruplar ve derleme işleminin daha küçük birimlere ayrılabilir hale gelsin. Örneğin, bir hedef, derleme için hazırlanmak üzere çıkış dizinindeki tüm dosyaları silebilir, başka bir deyişle projenin girişlerini derler ve bunları boş dizine koyar. Görevler hakkında daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
-## <a name="declare-targets-in-the-project-file"></a>Proje dosyasında hedefleri bildir
+## <a name="declare-targets-in-the-project-file"></a>Proje dosyasında hedefleri bildirme
 
- Hedefler, Target öğesiyle bir proje dosyasında [bildirildi.](../msbuild/target-element-msbuild.md) Örneğin, aşağıdaki XML Yapı adlı bir hedef oluşturur ve ardından Derleme öğesi türü ile Csc görevini çağıran.
+ Hedefler, [hedef](../msbuild/target-element-msbuild.md) öğesiyle bir proje dosyasında belirtilir. Örneğin, aşağıdaki XML, derleme öğesi türü ile csc görevini çağıran bir hedef adlı bir yapı oluşturur.
 
 ```xml
 <Target Name="Construct">
@@ -33,7 +34,7 @@ Grup görevlerini belirli bir sırada birlikte hedefler ve derleme işleminin da
 </Target>
 ```
 
- MSBuild özellikleri gibi hedefler de yeniden tanımlandırabilirsiniz. Örneğin,
+ MSBuild özellikler gibi hedefler yeniden tanımlanabilir. Örneğin,
 
 ```xml
 <Target Name="AfterBuild" >
@@ -44,11 +45,11 @@ Grup görevlerini belirli bir sırada birlikte hedefler ve derleme işleminin da
 </Target>
 ```
 
-`AfterBuild`yürütülürse yalnızca "İkinci oluşum" görüntülenir çünkü ikinci tanımı `AfterBuild` ilki gizler.
+`AfterBuild`Yürütüldüğünde, ikinci tanım birincisini gizlemediğinden yalnızca "ikinci oluşum" görüntülenir `AfterBuild` .
 
-MSBuild içeri aktarma sırasına bağlıdır ve hedefin son tanımı kullanılan tanımdır. Bir hedefi yeniden tanımlamayı denersiniz, yerleşik hedef daha sonra tanımlanırsa etkili olmaz. SDK kullanan projelerde, hedeflere yönelik içeri aktarmalar proje dosyanız sona erdikten sonra örtülü olarak eklenmiştir.
+MSBuild içeri aktarma sırası bağımlıdır ve bir hedefin son tanımı kullanılan tanımdır. Bir hedefi yeniden tanımlamayı denerseniz, yerleşik hedef daha sonra tanımlanmışsa bu işlem etkili olmayacaktır. Bir SDK kullanan projeler söz konusu olduğunda, hedeflerin içeri aktarmaları proje dosyanızın sonundan sonra örtük olarak eklendiğinden, tanım sırası açık olmaz.
 
-Bu nedenle, mevcut bir hedefin davranışını genişletmek için yeni hedef oluşturun ve aşağıdaki gibi `BeforeTargets` `AfterTargets` (veya uygun şekilde) belirtin:
+Bu nedenle, var olan bir hedefin davranışını genişletmek için yeni hedef oluşturun ve `BeforeTargets` (veya `AfterTargets` uygun şekilde) aşağıdaki gibi belirtin:
 
 ```xml
 <Target Name="MessageBeforePublish" BeforeTargets="BeforePublish">
@@ -56,13 +57,13 @@ Bu nedenle, mevcut bir hedefin davranışını genişletmek için yeni hedef olu
 </Target>
 ```
 
-Kodda bir işlevin adını ver istediğiniz gibi hedefinize açıklayıcı bir ad verin.
+Kodunuzda bir işlev adı verdiğiniz gibi, hedefinizden açıklayıcı bir ad verin.
 
 ## <a name="target-build-order"></a>Hedef derleme sırası
 
- Bir hedefe yapılan giriş başka bir hedefin çıkışına bağlı ise hedefler sıralanıyor.
+ Bir hedefin girişi, başka bir hedefin çıktısına bağımlıysa, hedefler sıralanmalıdır.
  
- Hedeflerin çalışma sırası belirtmenin çeşitli yolları vardır.
+ Hedeflerin çalıştırıldığı sırayı belirlemek için birkaç yol vardır.
 
 - İlk hedefler
 
@@ -72,15 +73,15 @@ Kodda bir işlevin adını ver istediğiniz gibi hedefinize açıklayıcı bir a
 
 - Hedef bağımlılıklar
 
-- `BeforeTargets` ve `AfterTargets` (MSBuild 4.0)
+- `BeforeTargets`ve `AfterTargets` (MSBuild 4,0)
 
-Bir hedef, derlemede sonraki bir hedef buna bağlı olsa bile tek bir derleme sırasında hiçbir zaman iki kez çalışmaz. Hedef çalıştırlandıktan sonra derlemeye olan katkısı tamamlanır.
+Bir hedef, derleme içindeki sonraki bir hedef buna bağımlı olsa bile tek bir yapı sırasında iki kez çalıştırılmazlar. Bir hedef çalıştıktan sonra, derleme katkısı tamamlanmıştır.
 
-Hedef derleme sırası hakkında ayrıntılı bilgi ve daha fazla bilgi için [bkz. Hedef derleme sırası.](../msbuild/target-build-order.md)
+Hedef derleme sırası hakkında ayrıntılar ve daha fazla bilgi için bkz. [hedef derleme sırası](../msbuild/target-build-order.md).
 
 ## <a name="target-batching"></a>Hedef toplu işleme
 
-Hedef öğenin `Outputs` %( şeklinde meta verileri belirten bir özniteliği \<Metadata> olabilir. Öyleyse, MSBuild her benzersiz meta veri değeri için hedefi bir kez çalıştırır, bu meta veri değerine sahip öğeleri gruplama veya "toplu işleme". Örneğin,
+Hedef öğe `Outputs` ,%() biçiminde meta verileri belirten bir özniteliğe sahip olabilir \<Metadata> . bu durumda, MSBuild her benzersiz meta veri değeri için hedefi bir kez çalıştırır, bu meta veri değerine sahip öğeleri gruplandırarak veya "toplu olarak". Örneğin,
 
 ```xml
 <ItemGroup>
@@ -101,24 +102,24 @@ Hedef öğenin `Outputs` %( şeklinde meta verileri belirten bir özniteliği \<
 </Target>
 ```
 
- Başvuru öğelerini RequiredTargetFramework meta verilerine göre toplu işler. Hedefin çıktısı şu şekildedir:
+ Başvuru öğelerini RequiredTargetFramework meta verilerine göre işler. Hedefin çıkışı şöyle görünür:
 
 ```
 Reference: 3.5;3.5
 Reference: 4.0
 ```
 
- Hedef toplu işleme, gerçek derlemelerde nadiren kullanılır. Görev toplu işleme daha yaygındır. Daha fazla bilgi için bkz. [Toplu işleme.](../msbuild/msbuild-batching.md)
+ Hedef toplu işleme nadiren gerçek derlemelerde kullanılır. Görev toplu işlemi daha yaygındır. Daha fazla bilgi için bkz. [toplu](../msbuild/msbuild-batching.md)işlem.
 
 ## <a name="incremental-builds"></a>Artımlı derlemeler
 
- Artımlı derlemeler, karşılık gelen giriş dosyalarına göre güncel çıkış dosyalarına sahip hedeflerin yürütülmey için iyileştirilmiş derlemelerdir. Hedef öğenin hem hem de öznitelikleri olabilir. Bu öznitelikler, hedefin giriş olarak hangi öğeleri beklemesi gerektiğini ve çıkış `Inputs` `Outputs` olarak hangi öğeleri ürettiğini gösterir.
+ Artımlı derlemeler, en iyi duruma getirilmiş derlemelerdir ve bunlara karşılık gelen giriş dosyalarına göre güncel çıkış dosyaları olan hedefler yürütülmez. Hedef öğe hem `Inputs` hem de `Outputs` özniteliğe, hedefin giriş olarak beklediği öğeleri ve çıktı olarak ürettiği öğeleri gösterir.
 
- Tüm çıkış öğeleri güncelse, MSBuild hedefi atlar ve bu da derleme hızını önemli ölçüde artırır. Buna hedefin artımlı derlemesi denir. Yalnızca bazı dosyalar güncelse, MSBuild güncel öğeler olmadan hedefi yürütür. Buna hedefin kısmi artımlı derlemesi denir. Daha fazla bilgi için bkz. [Artımlı derlemeler.](../msbuild/incremental-builds.md)
+ tüm çıkış öğeleri güncel ise, MSBuild, derleme hızını önemli ölçüde geliştiren hedefi atlar. Bu, hedefin artımlı derlemesi olarak adlandırılır. yalnızca bazı dosyalar güncel ise, MSBuild güncel öğeler olmadan hedefi yürütür. Bu, hedefin kısmi artımlı derlemesi olarak adlandırılır. Daha fazla bilgi için bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
 
 ## <a name="default-build-targets"></a>Varsayılan derleme hedefleri
 
-Aşağıda, Microsoft.Common.CurrentVersion.Targets'daki genel hedefler liste almaktadır.
+Aşağıda Microsoft. Common. CurrentVersion. targets içindeki genel hedefler listelenmiştir.
 
 ```
 ===================================================
@@ -1010,4 +1011,4 @@ This target gathers the Redist folders from the SDKs which have been resolved.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [Nasıl kullanılır: Birden çok proje dosyalarında aynı hedefi kullanma](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)
+- [Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

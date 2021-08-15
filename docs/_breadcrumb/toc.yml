@@ -59,57 +59,57 @@
             - name: Visual Basic kullanmaya başlama
               tocHref: /visualstudio/get-started/visual-basic/
               topicHref: /visualstudio/get-started/visual-basic/
-        - name: Genişletilebilirlik
-          tocHref: /visualstudio/extensibility/
-          topicHref: /visualstudio/extensibility/index
-          items:
-            - name: Visual Studio SDK’nın İçinde
-              tocHref: /visualstudio/extensibility/internals/
-              topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
-            - name: Hata Ayıklayıcı Genişletilebilirliği
-              tocHref: /visualstudio/extensibility/debugger/
-              topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
+            - name: Genişletilebilirlik
+              tocHref: /visualstudio/extensibility/
+              topicHref: /visualstudio/extensibility/index
               items:
-                - name: Başvuru
-                  tocHref: /visualstudio/extensibility/debugger/reference/
-                  topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
-            - name: Kullanıcı Deneyimi Yönergeleri
-              tocHref: /visualstudio/extensibility/ux-guidelines/
-              topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
-        - name: Kullanmaya Başlarken (CSharp)
-          tocHref: /visualstudio/get-started/csharp/
-          topicHref: /visualstudio/get-started/csharp/index
-        - name: Kullanmaya Başlarken (Visual Basic)
-          tocHref: /visualstudio/get-started/visual-basic/
-          topicHref: /visualstudio/get-started/visual-basic/index
-        - name: Kapsayıcı Araçları
-          tocHref: /visualstudio/containers/
-          topicHref: /visualstudio/containers/index
+                - name: Visual Studio SDK’nın İçinde
+                  tocHref: /visualstudio/extensibility/internals/
+                  topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
+                - name: Hata Ayıklayıcı Genişletilebilirliği
+                  tocHref: /visualstudio/extensibility/debugger/
+                  topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
+                  items:
+                    - name: Başvuru
+                      tocHref: /visualstudio/extensibility/debugger/reference/
+                      topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
+                - name: Kullanıcı Deneyimi Yönergeleri
+                  tocHref: /visualstudio/extensibility/ux-guidelines/
+                  topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
+            - name: Kullanmaya Başlarken (CSharp)
+              tocHref: /visualstudio/get-started/csharp/
+              topicHref: /visualstudio/get-started/csharp/index
+            - name: Kullanmaya Başlarken (Visual Basic)
+              tocHref: /visualstudio/get-started/visual-basic/
+              topicHref: /visualstudio/get-started/visual-basic/index
+            - name: Kapsayıcı Araçları
+              tocHref: /visualstudio/containers/
+              topicHref: /visualstudio/containers/index
+            - name: Azure Geliştirme
+              tocHref: /visualstudio/azure
+              topicHref: /visualstudio/azure/index
+            - name: Office ve SharePoint
+              tocHref: /visualstudio/vsto/
+              topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
+              items:
+                - name: SharePoint
+                  tocHref: /visualstudio/sharepoint/
+                  topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
+                - name: VSTO
+                  tocHref: /visualstudio/vsto/
+                  topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
+            - name: JavaScript ve TypeScript
+              tocHref: /visualstudio/javascript/
+              topicHref: /visualstudio/javascript/index
+            - name: Python
+              tocHref: /visualstudio/python/
+              topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
+            - name: R
+              tocHref: /visualstudio/rtvs/
+              topicHref: /visualstudio/rtvs/index
+            - name: Sürüm Denetimi
+              tocHref: /visualstudio/version-control
+              topicHref: /visualstudio/version-control/index
         - name: MSBuild
           tocHref: /visualstudio/msbuild/
           topicHref: /visualstudio/msbuild/msbuild
-        - name: JavaScript ve TypeScript
-          tocHref: /visualstudio/javascript/
-          topicHref: /visualstudio/javascript/index
-        - name: Python
-          tocHref: /visualstudio/python/
-          topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
-        - name: R
-          tocHref: /visualstudio/rtvs/
-          topicHref: /visualstudio/rtvs/index
-        - name: Office ve SharePoint
-          tocHref: /visualstudio/vsto/
-          topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
-          items:
-            - name: SharePoint
-              tocHref: /visualstudio/sharepoint/
-              topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
-            - name: VSTO
-              tocHref: /visualstudio/vsto/
-              topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
-        - name: Sürüm Denetimi
-          tocHref: /visualstudio/version-control
-          topicHref: /visualstudio/version-control/index
-        - name: Azure Geliştirme
-          tocHref: /visualstudio/azure
-          topicHref: /visualstudio/azure/index

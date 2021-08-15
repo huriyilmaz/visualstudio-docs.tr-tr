@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama sırasında otomatik olarak eklenecek Office uygulamaları hakkında bilgi alır.
-title: Getautoınserbir yöntemi
+description: Hata ayıklama sırasında otomatik Office uygulamalar hakkında bilgi alır.
+title: GetAutoInsertExtensions yöntemi
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -9,17 +9,18 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c4a49942f50a79db604d2363cf2d85762c5ddce5
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 7bb7a75c4bc1abd5c5fb29c55a3be42e44ff2af55403c1d9ecccbf00efb5c755
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223439"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121268332"
 ---
-# <a name="getautoinsertextensions-method"></a>Getautoınserbir yöntemi
-  Hata ayıklama sırasında otomatik olarak eklenecek Office uygulamaları hakkında bilgi alır.
+# <a name="getautoinsertextensions-method"></a>GetAutoInsertExtensions yöntemi
+  Hata ayıklama sırasında otomatik Office uygulamalar hakkında bilgi alır.
 
  Bu yöntem gelecekte kullanılmak üzere ayrılmıştır.
 
@@ -35,10 +36,10 @@ HRESULT GetAutoInsertExtensions(
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|*psaExtensionNames*|Office uygulamalarının uzantı adları.|
+|*psaExtensionNames*|Uygulamalar için uzantı adları Office.|
 
 ## <a name="return-value"></a>Döndürülen değer
- Metodun başarıyla tamamlanıp tamamlanmadığını gösteren bir HRESULT değeri.
+ Yöntemin başarıyla tamamlandıktan sonra tamamlandıktan sonra bir HRESULT değeri.
 
 ## <a name="remarks"></a>Açıklamalar
- Office 'in ekleneceği her bir uygulama, **HKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer** altındaki bir değere karşılık gelen bir Office uygulaması uzantı adı olarak döndürülür. Konağın bu değerleri kayıt defterinde araması ve sonra otomatik olarak uzantıları eklemesi gerekir.
+ Eklenecek Office her uygulama, Office altındaki bir değere karşılık gelen bir uygulama uzantısı adı **olarakHKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer.** Ana bilgisayar bu değerleri kayıt defterinde bu şekilde olmalı ve ardından uzantıları otomatik olarak eklemeli.

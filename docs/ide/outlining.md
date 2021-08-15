@@ -1,6 +1,6 @@
 ---
 title: Kod bölgelerini daraltma ve genişletme
-description: Genişletme ve daraltma komutlarını kullanarak Visual Studio 'da ana hat modunda nasıl çalışacağınızı öğrenin
+description: Genişletme ve daraltma komutlarını kullanarak Visual Studio ana hat modunda nasıl çalışkullanabileceğinizi öğrenin
 ms.custom: SEO-VS-2020
 ms.date: 10/15/2020
 ms.topic: conceptual
@@ -15,21 +15,22 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 04a2156723bc33e25a658814b9348655f7ba86d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8fdd0a67bb561f3b339ad7d8f6743c51182fa74ab9fd33dbd6cb39a6bafcc4a7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909055"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412835"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
 
 Bir kod bölgesini daraltarak bir ek işareti () altında görünmesi için bazı kodu görünümden gizlemeyi seçebilirsiniz **+** . Daraltılmış bir bölgeyi, artı işaretine tıklayarak genişletebilirsiniz. Klavye kullanıcısı kullanıyorsanız,  +  + daraltmak ve genişletmek için CTRL m **m** 'yi seçebilirsiniz. Ayrıca, yalnızca kodun solunda görüntülenen ana hat kenar boşluğunda yer alan bölgedeki herhangi bir satırı çift tıklayarak bir anahat bölgesini daraltabilirsiniz. Daraltılan bölgenin üzerine geldiğinizde, Daraltılan bir bölgenin içeriğini araç ipucu olarak görebilirsiniz.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor).
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kaynak düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor).
 
 Ana hat kenar boşluğundaki bölgeler, fare ile kenar boşluğunun üzerine geldiğinizde de vurgulanır. Varsayılan vurgulama rengi bazı renk yapılandırmalarında soluk görünebilir. Bunu, **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **yazı tiplerinde ve renkler**  >  **Daraltılabilir bölgesinde** değiştirebilirsiniz.
 
@@ -53,9 +54,9 @@ Aşağıdaki komutlar, ana   >  **hat** Düzenle alt menüsünde bulunabilir.
 |Engellemeyi daralt:\<logical boundary>|C++ İşlevde ekleme noktasını içeren bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
 |İçindeki hepsini daralt: \<logical structures>|C++ İşlev içindeki tüm yapıları daraltır.|
 
-Genişletmek veya daraltmak istediğiniz metin bölgelerini tanımlamak için Visual Studio SDK 'sını de kullanabilirsiniz. Bkz. [Izlenecek yol: Ana hat](../extensibility/walkthrough-outlining.md).
+genişletmek veya daraltmak istediğiniz metin bölgelerini tanımlamak için Visual Studio SDK 'sını de kullanabilirsiniz. Bkz. [Izlenecek yol: Ana hat](../extensibility/walkthrough-outlining.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
-- [Kaynak Düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor)
+- [kaynak düzenleyicisi (Mac için Visual Studio)](/visualstudio/mac/source-editor)

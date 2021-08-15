@@ -7,23 +7,24 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2c203d9a445d9426a8079801a856e20f7be82229
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5b538fe8b9f9ab61486f49efb33fac56356ae1c2ffdd9051e39687696c392b62
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946572"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357420"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Nasıl yapılır: belge oluşturmak için XML açıklamaları ekleme
 
-Visual Studio, standart XML belgesi Açıklama yapısını otomatik olarak oluşturarak sınıflar ve yöntemler gibi kod öğelerini belgeetmenize yardımcı olabilir. Derleme zamanında belge açıklamalarını içeren bir XML dosyası oluşturabilirsiniz.
+Visual Studio, standart XML belgesi açıklama yapısını otomatik olarak oluşturarak sınıflar ve yöntemler gibi kod öğelerini belgeetmenize yardımcı olabilir. Derleme zamanında belge açıklamalarını içeren bir XML dosyası oluşturabilirsiniz.
 
 > [!TIP]
 > Oluşturulan XML dosyasının adını ve konumunu yapılandırma hakkında daha fazla bilgi için bkz. [kodunuzu XML yorumlarıyla belgeleme (C# Kılavuzu)](/dotnet/csharp/codedoc).
 
-Derleyici tarafından oluşturulan XML dosyası, Visual Studio ve diğer IDE 'Ler, türler ve Üyeler hakkında hızlı bilgi göstermek için IntelliSense kullanabilmesi için .NET derlemenizin yanı sıra dağıtılabilir. Ayrıca, XML dosyası, API başvuru Web siteleri oluşturmak için [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://www.microsoft.com/download/details.aspx?id=10526) gibi araçlar aracılığıyla çalıştırılabilir.
+derleyici tarafından oluşturulan XML dosyası, Visual Studio ve diğer ıdes 'ler, türler ve üyeler hakkında hızlı bilgileri göstermek için ıntellisense kullanabilmesi için .net derlemenizin yanı sıra dağıtılabilir. Ayrıca, XML dosyası, API başvuru Web siteleri oluşturmak için [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://www.microsoft.com/download/details.aspx?id=10526) gibi araçlar aracılığıyla çalıştırılabilir.
 
 > [!NOTE]
 > XML belgelerinin açıklamalarını otomatik olarak ekleyen **Yorum Ekle** komutu [C#](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) ve [Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)kullanılabilir. Ancak, [C++ dosyalarına XML belge açıklamalarını](/cpp/build/reference/xml-documentation-visual-cpp) el ile ekleyebilir ve derleme zamanında XML belge dosyaları oluşturabilirsiniz.

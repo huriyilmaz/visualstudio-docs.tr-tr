@@ -1,5 +1,5 @@
 ---
-description: Şablonun gerektirdiği .NET Framework en düşük sürümünü belirtir.
+description: şablonun gerektirdiği .NET Framework en düşük sürümünü belirtir.
 title: RequiredFrameworkVersion Öğesi (Visual Studio Şablonları)
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -15,19 +15,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 661e4067ac0191444be8ec7f1136f805ea8b39b5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5164202c10008112b6072b1a45aed7d52c3ddf0598c97f6b69b32ba1cb9aadf4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068459"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121305197"
 ---
-# <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion öğesi (Visual Studio şablonları)
+# <a name="requiredframeworkversion-element-visual-studio-templates"></a>requiredframeworkversion öğesi (Visual Studio şablonları)
 
-Şablonun gerektirdiği .NET Framework en düşük sürümünü belirtir. **Hedef Framework sürümü** açılan listesinin **Yeni proje** iletişim kutusunda görüntülenmesine neden olur. `RequiredFrameworkVersion`Öğe ayrıca açılan listede bulunan en düşük değeri de belirler.
+şablonun gerektirdiği .NET Framework en düşük sürümünü belirtir. **hedef Framework sürümü** açılan listesinin **yeni Project** iletişim kutusunda görüntülenmesine neden olur. `RequiredFrameworkVersion`Öğe ayrıca açılan listede bulunan en düşük değeri de belirler.
 
 > [!IMPORTANT]
-> Visual Studio 2017 sürüm 15,6 ' den başlayarak, **hedef Framework sürümü** açılan kutusu artık **Yeni proje** iletişim kutusunun **Şablonlar** bölümünde, görünen şablonlar için bir filtre değildir. Bunun yerine, açılan menü seçili şablon için bir çerçeve seçici olarak çalışır.
+> Visual Studio 2017 sürüm 15,6 ' den başlayarak, **hedef Framework sürümü** açılan menüsü artık **yeni Project** iletişim kutusunun **şablonlar** bölümünde, görünen şablonlar için bir filtre değildir. Bunun yerine, açılan menü seçili şablon için bir çerçeve seçici olarak çalışır.
 
  \<VSTemplate> \<TemplateData>
  \<RequiredFrameworkVersion>
@@ -51,16 +51,16 @@ ms.locfileid: "105068459"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin, şablon için gerekli .NET Framework en düşük sürüm numarası olmalıdır.
+ metin, şablon için gerekli .NET Framework en düşük sürüm numarası olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`RequiredFrameworkVersion` isteğe bağlı bir öğedir. Bu öğeyi yalnızca şablon, .NET Framework için belirli bir minimum sürümü (ve varsa sonraki sürümleri) destekliyorsa kullanın. `RequiredFrameworkVersion`Öğesini belirtirseniz ve şablonunuz .NET Framework en düşük sürümü desteklemiyorsa, **hedef Framework sürümü** açılan kutusu uygulanabilir olmadığında görüntülenir.
+`RequiredFrameworkVersion` isteğe bağlı bir öğedir. Bu öğeyi yalnızca şablon, .NET Framework için belirli bir minimum sürümü (ve varsa sonraki sürümleri) destekliyorsa kullanın. `RequiredFrameworkVersion`öğesini belirtirseniz ve şablonunuz .NET Framework en düşük sürümü desteklemiyorsa, **hedef Framework sürümü** açılan kutusu uygulanabilir olmadığında görüntülenir.
 
 ## <a name="example"></a>Örnek
 
@@ -84,10 +84,10 @@ Aşağıdaki örnek, standart sınıf şablonu için meta verileri gösterir [!I
 </VSTemplate>
 ```
 
-Bu örnekte, şablon için gereken .NET Framework en düşük sürümü, tarafından temsil edilir `RequiredFrameworkVersion` 3,0. Bu şablonla oluşturulan bir proje, 3,0 'den başlayarak .NET Framework sürümleri hedefleyebilir.
+bu örnekte, şablon için gereken .NET Framework en düşük sürümü, tarafından temsil edilir `RequiredFrameworkVersion` 3,0. bu şablonla oluşturulan bir proje, 3,0 'den başlayarak .NET Framework sürümleri hedefleyebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
 - [Çerçeve hedefleme genel bakış](../ide/visual-studio-multi-targeting-overview.md)

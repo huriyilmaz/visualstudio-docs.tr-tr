@@ -1,6 +1,6 @@
 ---
 title: Türleri görsel tasarımcılara sunma | Microsoft Docs
-description: Visual Studio 'Nun görsel tasarımcılar tarafından kullanılabilmesini sağlamak için, özel araçlardır dahil olmak üzere sınıf ve tür tanımlarını kullanıma sunma hakkında bilgi edinin.
+description: özel araçlardır dahil olmak üzere sınıf ve tür tanımlarını kullanıma sunma hakkında bilgi edinin. bu sayede, Visual Studio görsel tasarımcılar tarafından kullanılabilir hale getirebilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,14 +12,15 @@ ms.assetid: a7a32ad4-3a0a-4eb8-a6ac-491c42885639
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5208de3af52e4dad5fb9bb59b16f7b59efb72340
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0e3df8f3bba405c6757260c8991a4a07ca2f1059ea2d0c2a7ae297550b065b19
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069679"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448097"
 ---
 # <a name="expose-types-to-visual-designers"></a>Türleri görsel tasarımcılara sunun
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] görsel bir tasarımcıyı göstermek için tasarım zamanında sınıf ve tür tanımlarına erişimi olmalıdır. Sınıflar, geçerli projenin tüm bağımlılık kümesini (başvurular artı bunların bağımlılıkları) içeren önceden tanımlanmış bir derleme kümesinden yüklenir. Görsel tasarımcılarının özel araçlar tarafından oluşturulan dosyalarda tanımlanan sınıflara ve türlere erişmesi de gerekebilir.

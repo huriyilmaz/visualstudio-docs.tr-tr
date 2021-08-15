@@ -11,17 +11,18 @@ ms.assetid: fb100c3c-9c29-4d63-bd1f-a3e531cb395f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 057089c8c7b68fd1109c31bbfc0014f49a71368c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 23d2b0af61df6b84a9ba7b02d0bb73dcd51f8cbfc07dce816383d67eda9bf531
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076049"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292370"
 ---
 # <a name="idebugprogram2enumcodepaths"></a>IDebugProgram2::EnumCodePaths
 Kaynak dosyadaki belirli bir konum için kod yollarının listesini alır.

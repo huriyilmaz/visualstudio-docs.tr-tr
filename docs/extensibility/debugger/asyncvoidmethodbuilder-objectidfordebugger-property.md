@@ -9,14 +9,15 @@ ms.assetid: 97c48c49-3fb2-4778-accd-8585fa4feabf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 782277cec64f27419d078a8493c7eb45d43d5b0f
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: aac5f5c511b738907f5671ea70cb8d8d5285d486e5a9fdcf53dbeeecd0423175
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903703"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293423"
 ---
 # <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>AsyncVoidMethodBuilder.ObjectIdForDebugger özelliği
 Hata ayıklayıcısına bu oluşturucusu benzersiz olarak tanımlamak için kullanılmaktadır bir nesnesi alır.
@@ -25,7 +26,7 @@ Hata ayıklayıcısına bu oluşturucusu benzersiz olarak tanımlamak için kull
 
  **Derleme:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye dosyadan erişe .NET Framework ortak ara dil (CIL) içinde aşağıdaki söz dizimi sağlanır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 

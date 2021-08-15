@@ -1,6 +1,6 @@
 ---
-title: ClickOnce güven Istemi davranışını yapılandırma | Microsoft Docs
-description: Son kullanıcılara ClickOnce uygulamalarını yükleme seçeneği verilip verilmediğini denetlemek için ClickOnce güven istemi 'nin nasıl yapılandırılacağını öğrenin.
+title: ClickOnce İstemi Davranışı'| Microsoft Docs
+description: Son kullanıcılara uygulama yükleme ClickOnce olup olmadığını kontrol etmek için güvenlik güven istemini yapılandırmayı ClickOnce öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,27 +18,28 @@ ms.assetid: cc04fa75-012b-47c9-9347-f4216be23cf2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cb23eeee53990113d779e241adb8dcf1ab0cf16
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4bb20f403a41ece1096404c3eec9191bc44d461c38d824a2959204fb6fa7df6a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890312"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293879"
 ---
-# <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Nasıl yapılır: ClickOnce güven istemi davranışını yapılandırma
-ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar, konsol uygulamaları, WPF tarayıcı uygulamaları ve Office çözümleri gibi ClickOnce uygulamalarını yükleme seçeneği verilip verilmediğini denetlemek için yapılandırabilirsiniz. Her son kullanıcının bilgisayarında kayıt defteri anahtarlarını ayarlayarak güven istemi 'ni yapılandırırsınız.
+# <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>Nasıl yapılandırılır: ClickOnce istemi davranışını yapılandırma
+ClickOnce Forms uygulamaları, Windows Windows Presentation Foundation uygulamaları, konsol uygulamaları, WPF tarayıcı uygulamaları ve Office çözümleri gibi ClickOnce uygulamalarını yükleme seçeneği olup olmadığını kontrol etmek için Windows Presentation Foundation güven istemini yapılandırabilirsiniz. Güven istemini yapılandırmak için her bir son kullanıcının bilgisayarına kayıt defteri anahtarları ayarlarsınız.
 
- Aşağıdaki tabloda, beş bölgenin (Internet, UntrustedSites, Bilgisayarım, LocalIntranet ve TrustedSites) her birine uygulanabilen yapılandırma seçenekleri gösterilmektedir.
+ Aşağıdaki tabloda beş bölgenin her biri için uygulanacak yapılandırma seçenekleri (İnternet, UntrustedSites, MyComputer, LocalIntranet ve TrustedSites) gösterir.
 
-|Seçenek|Kayıt defteri ayarı değeri|Description|
+|Seçenek|Kayıt defteri ayar değeri|Açıklama|
 |------------|----------------------------|-----------------|
-|Güven istemi 'ni etkinleştirin.|`Enabled`|ClickOnce güven istemi, son kullanıcıların ClickOnce uygulamalarına güven izni verebilmesi için görüntülenir.|
-|Güven istemi 'ni kısıtlayın.|`AuthenticodeRequired`|ClickOnce güven istemi yalnızca, ClickOnce uygulamaları yayımcıyı tanımlayan bir sertifikayla imzalanmışsa görüntülenir.|
-|Güven isteğini devre dışı bırakın.|`Disabled`|ClickOnce güven istemi, açıkça güvenilen bir sertifikayla imzalanmamış herhangi bir ClickOnce uygulaması için görüntülenmez.|
+|Güven istemini etkinleştirin.|`Enabled`|Son ClickOnce uygulamalara güven izni vermek için tek bir güven ClickOnce görüntülenir.|
+|Güven istemini kısıtla.|`AuthenticodeRequired`|Bu ClickOnce istemi, yalnızca ClickOnce yayımcıyı tanımlayan bir sertifikayla imzalanmışsa görüntülenir.|
+|Güven istemini devre dışı bırakma.|`Disabled`|Açıkça ClickOnce bir sertifika ile imza ClickOnce herhangi bir uygulama için güvenlik güveni istemi görüntülenmez.|
 
- Aşağıdaki tabloda her bölge için varsayılan davranış gösterilmektedir. Uygulamalar sütunu Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar, WPF tarayıcı uygulamaları ve konsol uygulamaları anlamına gelir.
+ Aşağıdaki tabloda her bölge için varsayılan davranış gösterir. Uygulamalar sütunu Form uygulamaları, Windows uygulamaları, WPF Windows Presentation Foundation uygulamaları ve konsol uygulamalarını ifade eder.
 
 |Bölge|Uygulamalar|Office çözümleri|
 |----------|------------------|----------------------|
@@ -48,28 +49,28 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 |`Internet`|`Enabled`|`AuthenticodeRequired`|
 |`UntrustedSites`|`Disabled`|`Disabled`|
 
- ClickOnce güven istemi 'ni etkinleştirerek, kısıtlayarak veya devre dışı bırakarak bu ayarları geçersiz kılabilirsiniz.
+ Güven istemini etkinleştirerek, kısıtlayan veya devre dışı bırakarak bu ClickOnce geçersiz kılabilirsiniz.
 
-## <a name="enable-the-clickonce-trust-prompt"></a>ClickOnce güven istemi 'ni etkinleştir
- Son kullanıcılara, bu bölgeden gelen herhangi bir ClickOnce uygulamasını yükleme ve çalıştırma seçeneği ile sunulmasını istediğinizde, bir bölge için güven istemi 'ni etkinleştirin.
+## <a name="enable-the-clickonce-trust-prompt"></a>ClickOnce istemini etkinleştirme
+ Son kullanıcılara bu bölgeden gelen herhangi bir uygulama yükleme ve çalıştırma seçeneğinin ClickOnce bir bölge için güven istemini etkinleştirin.
 
-#### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini kullanarak ClickOnce güven istemi 'ni etkinleştirmek için
+#### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini ClickOnce güvenlik istemini etkinleştirmek için
 
 1. Kayıt defteri düzenleyicisini açın:
 
-    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
+    1. Başlat **'a** ve ardından **Çalıştır'a tıklayın.**
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
+    2. Aç **kutusuna yazın** ve `regedit` Tamam'a **tıklayın.**
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\\\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT. NETFramework\Security\TrustManager\PromptingLevel**
 
-     Anahtar yoksa, oluşturun.
+     Anahtar yoksa oluşturun.
 
-3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
+3. Aşağıdaki alt anahtarları, henüz **yoksa,** aşağıdaki tabloda gösterilen ilişkili değerlerle Dize Değeri olarak ekleyin.
 
-    |Dize değeri alt anahtarı|Değer|
+    |Dize Değeri alt anahtarı|Değer|
     |-------------------------|-----------|
     |`Internet`|`Enabled`|
     |`UntrustedSites`|`Disabled`|
@@ -77,13 +78,13 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
     |`LocalIntranet`|`Enabled`|
     |`TrustedSites`|`Enabled`|
 
-     Office çözümleri için `Internet` varsayılan değere sahiptir `AuthenticodeRequired` ve `UntrustedSites` değeri vardır `Disabled` . Diğerlerinin tümü için `Internet` varsayılan değer vardır `Enabled` .
+     Bu Office için `Internet` varsayılan değere sahiptir `AuthenticodeRequired` ve `UntrustedSites` değerine `Disabled` sahiptir. Diğer tüm değerler `Internet` için varsayılan değeri `Enabled` vardır.
 
-#### <a name="to-enable-the-clickonce-trust-prompt-programmatically"></a>ClickOnce güven istemini programlama yoluyla etkinleştirmek için
+#### <a name="to-enable-the-clickonce-trust-prompt-programmatically"></a>Güven istemini program ClickOnce etkinleştirmek için
 
-1. Visual Studio 'da Visual Basic veya Visual C# konsol uygulaması oluşturun.
+1. Visual Basic'da bir Visual Basic veya Visual C# konsol Visual Studio.
 
-2. Düzenlenmek üzere *program. vb* veya *program.cs* dosyasını açın ve aşağıdaki kodu ekleyin.
+2. Düzenlemek için *Program.vb* veya *Program.cs* dosyasını açın ve aşağıdaki kodu ekleyin.
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -109,26 +110,26 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 3. Uygulamayı derleyin ve çalıştırın.
 
-## <a name="restrict-the-clickonce-trust-prompt"></a>ClickOnce güven istemi 'ni kısıtla
- Güven istemi 'ni, kullanıcılardan bir güven kararı istenmeden önce bilinen kimliği olan Authenticode sertifikaları ile imzalanması gerekir.
+## <a name="restrict-the-clickonce-trust-prompt"></a>Güvenlik ClickOnce istemini kısıtlama
+ Kullanıcılardan güven kararı istenmeden önce, çözümlerin bilinen kimliğe sahip Authenticode sertifikaları ile imzalanacak şekilde güven istemini kısıtla.
 
-#### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini kullanarak ClickOnce güven istemi 'ni kısıtlamak için
+#### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri ClickOnce kullanarak güvenlik istemini kısıtlamak için
 
 1. Kayıt defteri düzenleyicisini açın:
 
-    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
+    1. Başlat **'a** ve ardından **Çalıştır'a tıklayın.**
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
+    2. Aç **kutusuna yazın** ve `regedit` Tamam'a **tıklayın.**
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\\\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT. NETFramework\Security\TrustManager\PromptingLevel**
 
-     Anahtar yoksa, oluşturun.
+     Anahtar yoksa oluşturun.
 
-3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
+3. Aşağıdaki alt anahtarları, henüz **yoksa,** aşağıdaki tabloda gösterilen ilişkili değerlerle Dize Değeri olarak ekleyin.
 
-    |Dize değeri alt anahtarı|Değer|
+    |Dize Değeri alt anahtarı|Değer|
     |-------------------------|-----------|
     |`UntrustedSites`|`Disabled`|
     |`Internet`|`AuthenticodeRequired`|
@@ -136,11 +137,11 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
     |`LocalIntranet`|`AuthenticodeRequired`|
     |`TrustedSites`|`AuthenticodeRequired`|
 
-#### <a name="to-restrict-the-clickonce-trust-prompt-programmatically"></a>ClickOnce güven istemini programlı bir şekilde kısıtlamak için
+#### <a name="to-restrict-the-clickonce-trust-prompt-programmatically"></a>Güven istemini program ClickOnce kısıtlamak için
 
-1. Visual Studio 'da Visual Basic veya Visual C# konsol uygulaması oluşturun.
+1. Visual Basic'da bir Visual Basic veya Visual C# konsol Visual Studio.
 
-2. Düzenlenmek üzere *program. vb* veya *program.cs* dosyasını açın ve aşağıdaki kodu ekleyin.
+2. Düzenlemek için *Program.vb* veya *Program.cs* dosyasını açın ve aşağıdaki kodu ekleyin.
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -166,26 +167,26 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 
 3. Uygulamayı derleyin ve çalıştırın.
 
-## <a name="disable-the-clickonce-trust-prompt"></a>ClickOnce güven istemi 'ni devre dışı bırak
- Güven istemi 'ni devre dışı bırakarak, son kullanıcılara güvenlik ilkesinde henüz güvenilmeyen çözümleri yüklemek için seçenek verilmez.
+## <a name="disable-the-clickonce-trust-prompt"></a>ClickOnce istemini devre dışı bırakma
+ Güven istemini devre dışı bırakarak son kullanıcılara güvenlik ilkelerinde henüz güvenilmiyor olan çözümleri yükleme seçeneği verilmemiş olur.
 
-#### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini kullanarak ClickOnce güven istemi 'ni devre dışı bırakmak için
+#### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>Kayıt defteri düzenleyicisini ClickOnce güvenlik istemini devre dışı bırakmak için
 
 1. Kayıt defteri düzenleyicisini açın:
 
-    1. **Başlat**' a ve ardından **Çalıştır**' a tıklayın.
+    1. Başlat **'a** ve ardından **Çalıştır'a tıklayın.**
 
-    2. **Aç** kutusuna yazın `regedit` ve ardından **Tamam**' a tıklayın.
+    2. Aç **kutusuna yazın** ve `regedit` Tamam'a **tıklayın.**
 
 2. Aşağıdaki kayıt defteri anahtarını bulun:
 
-     **\ HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\ . NETFramework\Security\TrustManager\PromptingLevel**
+     **\\\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT. NETFramework\Security\TrustManager\PromptingLevel**
 
-     Anahtar yoksa, oluşturun.
+     Anahtar yoksa oluşturun.
 
-3. Aşağıdaki tabloda gösterilen ilişkili değerlerle birlikte, zaten mevcut değilse, aşağıdaki alt anahtarları **dize değeri** olarak ekleyin.
+3. Aşağıdaki alt anahtarları, henüz **yoksa,** aşağıdaki tabloda gösterilen ilişkili değerlerle Dize Değeri olarak ekleyin.
 
-    |Dize değeri alt anahtarı|Değer|
+    |Dize Değeri alt anahtarı|Değer|
     |-------------------------|-----------|
     |`UntrustedSites`|`Disabled`|
     |`Internet`|`Disabled`|
@@ -193,11 +194,11 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
     |`LocalIntranet`|`Disabled`|
     |`TrustedSites`|`Disabled`|
 
-#### <a name="to-disable-the-clickonce-trust-prompt-programmatically"></a>ClickOnce güven istemini programlı olarak devre dışı bırakmak için
+#### <a name="to-disable-the-clickonce-trust-prompt-programmatically"></a>Güven istemini program ClickOnce devre dışı bırakmak için
 
-1. Visual Studio 'da Visual Basic veya Visual C# konsol uygulaması oluşturun.
+1. Visual Basic'da bir Visual Basic veya Visual C# konsol Visual Studio.
 
-2. Düzenlenmek üzere *program. vb* veya *program.cs* dosyasını açın ve aşağıdaki kodu ekleyin.
+2. Düzenlemek için *Program.vb* veya *Program.cs* dosyasını açın ve aşağıdaki kodu ekleyin.
 
     ```vb
     Dim key As Microsoft.Win32.RegistryKey
@@ -229,9 +230,9 @@ ClickOnce güven istemi ' ni, son kullanıcılara Windows Forms uygulamalar, Win
 - [ClickOnce uygulamaları için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md)
 - [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md)
 - [Güvenilir uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md)
-- [Nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme](../deployment/how-to-enable-clickonce-security-settings.md)
-- [Nasıl yapılır: ClickOnce uygulaması için güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
-- [Nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [Nasıl yapılır: kısıtlanmış izinlerle ClickOnce uygulamasında hata ayıklama](securing-clickonce-applications.md)
-- [Nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
-- [Nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+- [Nasıl yapabilirsiniz: ClickOnce ayarlarını etkinleştirme](../deployment/how-to-enable-clickonce-security-settings.md)
+- [Nasıl ClickOnce uygulama için güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [Nasıl ClickOnce uygulama için özel izinler ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+- [Nasıl ClickOnce: ClickOnce uygulamanın hata ayıklaması](securing-clickonce-applications.md)
+- [Nasıl kullanılır: İstemci uygulamaları için istemci bilgisayara güvenilir yayımcı ClickOnce ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
+- [Nasıl yapılanlar: Uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

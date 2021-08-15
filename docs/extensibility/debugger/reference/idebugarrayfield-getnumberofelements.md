@@ -1,6 +1,6 @@
 ---
-description: Dizideki öğelerin sayısını alır.
-title: 'Ihata ayıklama Garrayfield:: GetNumberOfElements | Microsoft Docs'
+description: Dizide öğelerin sayısını alır.
+title: IDebugArrayField::GetNumberOfElements | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: a1961ef3-d69d-4022-b8c9-b9cfb9811345
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4b5c3daee373c5803926dc259564dab18dfe5852
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 34d47e1afd980f1b274662a63d951429406e7099024b01128f8be31cbaa63939
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058956"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239184"
 ---
 # <a name="idebugarrayfieldgetnumberofelements"></a>IDebugArrayField::GetNumberOfElements
-Dizideki öğelerin sayısını alır.
+Dizide öğelerin sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetNumberOfElements(
 
 ## <a name="parameters"></a>Parametreler
 `pdwNumElements`\
-dışı Dizideki öğe sayısını döndürür.
+[out] Dizide öğelerin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Döndürülen değer, boyut sayısından bağımsız olarak dizideki toplam öğe sayısıdır.
+ Döndürülen değer, boyut sayısından bağımsız olarak dizide yer alan öğelerin toplam sayısıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

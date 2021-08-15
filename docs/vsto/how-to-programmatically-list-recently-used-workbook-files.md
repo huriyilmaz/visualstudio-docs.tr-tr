@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: son kullanılan çalışma kitabı dosyalarını program aracılığıyla listeleme'
-description: Visual Studio kullanarak, son kullanılan Microsoft Excel çalışma kitabı dosyalarını program aracılığıyla nasıl listeleyeceğinizi öğrenin.
+description: Visual Studio kullanarak son kullanılan Microsoft Excel çalışma kitabı dosyalarını program aracılığıyla nasıl listeleyeceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -16,17 +16,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ba7ca717af4330e8fb3c102b3a5fe5bf7d9162b6
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 738340efbdc7f266ae8da5ed10363858df970f7175507ddf73e4c5ec5097a4ec
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825335"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121351843"
 ---
 # <a name="how-to-programmatically-list-recently-used-workbook-files"></a>Nasıl yapılır: son kullanılan çalışma kitabı dosyalarını program aracılığıyla listeleme
-  <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A>Özelliği, son kullanılan dosyalar Microsoft Office Excel listesinde görünen tüm dosyaların adlarını içeren bir koleksiyon döndürür. Listenin uzunluğu, kullanıcının tutulması için seçtiği dosya sayısına bağlı olarak değişir. Sonuçları bir aralıkta görüntüleyebilirsiniz.
+  <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A>özelliği, son kullanılan dosyaların Microsoft Office Excel listesinde görünen tüm dosyaların adlarını içeren bir koleksiyon döndürür. Listenin uzunluğu, kullanıcının tutulması için seçtiği dosya sayısına bağlı olarak değişir. Sonuçları bir aralıkta görüntüleyebilirsiniz.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 

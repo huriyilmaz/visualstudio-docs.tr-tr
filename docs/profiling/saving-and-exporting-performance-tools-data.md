@@ -9,15 +9,16 @@ ms.assetid: 2e9b28fe-3ed2-4e1d-b9cb-0a5e384380b0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fa43d324f23958c9dc9b72447527ecd035e99c53
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02966c0a51db16e096165d4e6be5ae60b2ff857ba8a5915049e828fc4a041c6e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950110"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121315765"
 ---
 # <a name="save-and-export-performance-tools-data"></a>Performans araçları verilerini kaydetme ve dışarı aktarma
 Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı aktarılacağı açıklanır.
@@ -45,7 +46,7 @@ Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı a
 
 5. Kaydet ' e tıklayın **.**
 
-## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>Nasıl yapılır: profil araçları raporlarını bir. xml veya. csv dosyasına dışarı aktarma
+## <a name="how-to-export-profiling-tools-reports-to-an-xml-or-csv-file"></a>Nasıl yapılır: profil araçları raporlarını bir .xml veya .csv dosyasına aktarma
  ' Dan bir veya daha fazla rapor görünümü dışarı aktarabilirsiniz. *VSP* dosyası veya bir. *vsps* profil oluşturma veri dosyası virgülle ayrılmış veya bir XML dosyası olarak. Dışarı aktarmadan önce rapor görünümü penceresindeki verileri filtreleyebilir veya tüm veri dosyasının rapor görünümlerini **Performans Gezgini** penceresinden dışarı aktarabilirsiniz.
 
 > [!NOTE]
@@ -63,7 +64,7 @@ Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı a
 
 4. **Verdiğiniz rapor konumu** altında, dizini belirtin.
 
-5. **Aktarılmış rapor biçimi** altında (virgülle sınırlandırılmış) ( \* . csv \) veya XML verileri ( \* . xml) seçeneğini belirleyin \) .
+5. **Aktarılmış rapor biçimi** altında (virgülle sınırlandırılmış) ( \*.csv\) veya XML verisi (.xml) seçeneğini \* belirleyin \) .
 
 6. **Dışarı aktar**'a tıklayın.
 
@@ -83,7 +84,7 @@ Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı a
 
 6. **Verdiğiniz rapor konumu** altında, dizini belirtin.
 
-7. **Aktarılmış rapor biçimi** altında (virgülle sınırlandırılmış) ( \* . csv) veya XML verileri ( \* . xml) öğesini seçin.
+7. **Aktarılmış rapor biçimi** altında (virgülle sınırlandırılmış) ( \*.csv) veya XML verisi ( \*.xml) seçeneğini belirleyin.
 
 8. **Dışarı aktar**'a tıklayın.
 

@@ -11,17 +11,18 @@ ms.assetid: 1c2324ed-2a11-4e63-8f3a-f420c7a4018b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e326242b54702353fb47162c79ba6f59b537fbf0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8106a6572009f02eb340d7987c5b984b50e647ef8a9bb43f34cfe96351e1484a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065950"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417333"
 ---
 # <a name="idebugerrorbreakpoint2getbreakpointresolution"></a>IDebugErrorBreakpoint2::GetBreakpointResolution
 Hatayı açıklayan kesme noktası hata çözümünü alır.

@@ -6,16 +6,17 @@ ms.topic: reference
 author: m-redding
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20a3524d786b1f03fc3e221d1b257892d9439a0b
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: 951f7bebe8e63139326081c70615d91cf0b958018a964ac1928651a0cb2ac0f6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102466173"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121446959"
 ---
 # <a name="simplify-linq-expression"></a>LINQ ifadesini basitleştirme
 

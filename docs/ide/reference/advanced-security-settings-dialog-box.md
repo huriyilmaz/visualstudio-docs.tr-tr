@@ -1,6 +1,6 @@
 ---
 title: Gelişmiş Güvenlik Ayarları İletişim Kutusu
-description: Gelişmiş güvenlik ayarları iletişim kutusu, bölgede hata ayıklama ile ilgili güvenlik ayarlarını belirtmenize olanak tanır.
+description: Gelişmiş Güvenlik Ayarlar iletişim kutusu, bölgede hata ayıklamayla ilgili güvenlik ayarlarını belirtmenize olanak sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.technology: vs-ide-deployment
@@ -15,30 +15,30 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ece930da2bb133a19e443da4d37654367a1c862
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5831e95f907fce068868fa8c2da91c2ada6fbb65cb90e4603c4cc2fecf70d34
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868991"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121259051"
 ---
 # <a name="advanced-security-settings-dialog-box"></a>Gelişmiş Güvenlik Ayarları iletişim kutusu
 
-Bu iletişim kutusu, bölgede hata ayıklama ile ilgili güvenlik ayarlarını belirtmenize olanak tanır.
+Bu iletişim kutusu, bölgede hata ayıklamayla ilgili güvenlik ayarlarını belirtmenize olanak sağlar.
 
-![Visual Studio 'da gelişmiş güvenlik ayarları iletişim kutusu](../media/advanced-security-settings.png)
+![Visual Studio'Ayarlar Gelişmiş Güvenlik Visual Studio](../media/advanced-security-settings.png)
 
-Bu iletişim kutusuna erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın. **Güvenlik** sayfasında, **ClickOnce güvenlik ayarlarını etkinleştir**' i seçin, **Bu kısmi güven uygulaması**' na tıklayın ve ardından **Gelişmiş**' e tıklayın.
+Bu iletişim kutusuna erişmek için, Çözüm Gezgini'de bir proje düğümü seçin ve **ardından Project'a** **tıklayın.** Project **Tasarımcısı** göründüğünde Güvenlik **sekmesine** tıklayın. Güvenlik **sayfasında,** Güvenlik **ClickOnce'Ayarlar'yi** seçin, Bu kısmi bir güven **uygulamasıdır'a** ve ardından Gelişmiş'e **tıklayın.**
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-**Uygulamanın kaynak sitesine erişimini verme**
+**Uygulamaya kaynak sitesine erişim izni ver**
 
-Bu onay kutusunu seçerseniz, uygulama yayımlanan Web sitesine veya sunucu paylaşımında erişebilir. Varsayılan olarak, bu seçenek seçilidir.
+Bu onay kutusunu işaretle, uygulama yayımladığı web sitesine veya sunucu paylaşımına erişebilir. Varsayılan olarak, bu seçenek seçilidir.
 
-**Bu uygulamada aşağıdaki URL 'den indirilmiş gibi hata ayıkla**
+**Bu uygulamanın hata ayıklaması aşağıdaki URL'den indirilmiş gibi**
 
-Uygulamanın **Yayımla** sayfasında BELIRTTIĞINIZ **yükleme URL** 'sine karşılık gelen Web sitesine veya sunucu paylaşımının erişimine izin vermeniz gerekiyorsa buraya bu URL 'yi girin. Bu seçenek yalnızca **uygulamanın kaynak sitesine erişimi** olduğunda kullanılabilir.
+Uygulamanın Yayımla sayfasında belirttiğiniz Yükleme URL'sine  karşılık gelen web sitesine veya sunucu paylaşımına erişmesine izin vermek **zorundaysanız,** bu URL'yi buraya girin. Bu seçenek yalnızca **uygulamanın kaynak sitesine erişim izni ver seçili olduğunda** kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

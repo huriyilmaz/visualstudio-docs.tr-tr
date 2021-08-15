@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: Section5
-ms.openlocfilehash: 65efa01df9be7a3f93aa4253e00ce179a3091bee
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
-ms.translationtype: HT
+ms.openlocfilehash: 1b892ab398a101efb6cb7faef714865690426bd7d64da16231e5f710612d7e23
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "81386586"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121407509"
 ---
 # <a name="azure-monthly-credit"></a>Azure Aylık Kredisi
 

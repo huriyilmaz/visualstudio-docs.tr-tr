@@ -17,17 +17,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 1da30943eff228aad3c5413c5d8faea337634e9b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: faaeae36f5c9e4ff658e79656cff0af6823d5be81673250f1b95452fdb117687
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905259"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121286181"
 ---
 # <a name="bookmark-control"></a>Yer işareti denetimi
-  <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim, benzersiz bir ada sahip, olayları ortaya çıkaran ve verilere bağlanabilen bir yer işaretidir. Yer işareti, bir Microsoft Office Word belgesindeki bir öğeyi veya konumu işaretlemek için yer tutucu olarak kullanılabilir. <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne ve <xref:Microsoft.Office.Interop.Word.Range> nesne birleşimidir.
+  <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim, benzersiz bir ada sahip, olayları ortaya çıkaran ve verilere bağlanabilen bir yer işaretidir. yer işareti, bir Microsoft Office Word belgesindeki bir öğeyi veya konumu işaretlemek için yer tutucu olarak kullanılabilir. <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne ve <xref:Microsoft.Office.Interop.Word.Range> nesne birleşimidir.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -48,13 +49,13 @@ ms.locfileid: "99905259"
 
  <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType>Denetimin özelliği de vardır <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> . Bu özellik <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> , bir denetimin özelliği veya <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> bir <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> nesnenin özelliği üzerinde kullanılabilir olan özellikten farklıdır.
 
-|Text özelliği|Description|
+|Text özelliği|Açıklama|
 |-------------------|-----------------|
 |<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|Yer işareti içindeki metni göstermek ve yer işaretini belgede bırakmak için bu özelliği kullanın. Yer işaretine metin atama, yer işareti aralığını genişletir ve yer işaretini silmez.<br /><br /> Örneğin, `Bookmark1.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini dokunulmamış olarak bırakır.|
 |<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|Yer işareti konumundaki metni göstermek ve yer işaretini otomatik olarak silmek için bu özelliği kullanın. Örneğin, `Bookmark1.Range.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini siler.|
 
 ## <a name="rename-the-control-at-design-time"></a>Tasarım zamanında denetimi yeniden adlandırma
- Belge düzeyi projelerde, bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetimi **araç kutusundan** belgenize sürüklediğinizde, Visual Studio otomatik olarak denetim için bir ad oluşturur. Denetimin adını **Özellikler** penceresinde değiştirebilirsiniz.
+ belge düzeyi projelerinde, bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetimi **araç kutusundan** belgenize sürüklediğinizde Visual Studio otomatik olarak denetim için bir ad oluşturur. Denetimin adını **Özellikler** penceresinde değiştirebilirsiniz.
 
 ## <a name="overlapping-controls"></a>Çakışan denetimler
  Yer işareti denetimleri birbirini örtüşebilir. Aynı metin birden fazla yer işareti tarafından paylaşılabilir. Çakışan yer işaretlerinin birine yeni metin atadığınızda, bu yalnızca yeni metni içerir ve yer işaretleri artık çakışmayacaktır. Diğer yer işareti artık yalnızca özgün çakışan yer işaretleri arasında paylaşılmayan metni içerir.
@@ -116,5 +117,5 @@ Denetim için aşağıdaki olaylar mevcuttur <xref:Microsoft.Office.Tools.Word.B
 - [Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)
 - [Nasıl yapılır: Word belgelerine yer Işareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
 - [İzlenecek yol: yer işaretleri için kısayol menüleri oluşturma](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

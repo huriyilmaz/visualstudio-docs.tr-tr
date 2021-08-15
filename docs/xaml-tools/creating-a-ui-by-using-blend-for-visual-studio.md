@@ -1,5 +1,5 @@
 ---
-title: Visual Studio için Blend Özellik turu
+title: Visual Studio için Blend özellik turu
 titleSuffix: ''
 description: XAML tabanlı Windows ve Web uygulamaları tasarlamaya yönelik bir bileşen olan Visual Studio için Blend çalışma alanı kullanıcı arabirimi ve özellikleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
@@ -10,20 +10,21 @@ f1_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fdc3fc2241807cd1b36ec64d620c7b46a498918
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5981bee624b8638aa2140eeaf073a42bb7c18126b3c02da2b07ca4c2bad393d3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889271"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440351"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Visual Studio için Blend genel bakış
 
-Visual Studio için Blend XAML tabanlı Windows ve Web uygulamaları tasarlamanıza yardımcı olur. Visual Studio ile aynı temel XAML tasarım deneyimini sağlar ve animasyonlar ve davranışlar gibi gelişmiş görevler için görsel tasarımcılar ekler. Blend ve Visual Studio arasında bir karşılaştırma için bkz. [Visual Studio 'DA xaml tasarlama ve Visual Studio için Blend](../xaml-tools/designing-xaml-in-visual-studio.md).
+Visual Studio için Blend XAML tabanlı Windows ve Web uygulamaları tasarlamanıza yardımcı olur. Visual Studio ile aynı temel XAML tasarım deneyimini sağlar ve animasyonlar ve davranışlar gibi gelişmiş görevler için görsel tasarımcılar ekler. Blend ve Visual Studio arasında bir karşılaştırma için, bkz. [Visual Studio ve Visual Studio için Blend XAML tasarımı](../xaml-tools/designing-xaml-in-visual-studio.md).
 
-Visual Studio için Blend, Visual Studio 'nun bir bileşenidir. Blend 'yi yüklemek için **Visual Studio Yükleyicisi** **Evrensel Windows platformu geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin. Bu iş yüklerinin her ikisi de Visual Studio için Blend bileşeni içerir.
+Visual Studio için Blend, Visual Studio bir bileşenidir. Blend 'yi yüklemek için **Visual Studio Yükleyicisi** **Evrensel Windows Platformu geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin. bu iş yüklerinin her ikisi de Visual Studio için Blend bileşeni içerir.
 
 ![UWP iş yükü bileşenleri](media/installer-uwp.png)&nbsp;&nbsp;&nbsp;&nbsp;![.NET masaüstü geliştirme iş yükü bileşenleri](media/installer-dotnet-desktop.png)
 
@@ -31,11 +32,11 @@ Visual Studio için Blend yeni başladıysanız, çalışma alanının benzersiz
 
 ## <a name="tools-panel"></a>Araçlar paneli
 
-Uygulamanızdaki nesneleri oluşturmak ve değiştirmek için Visual Studio için Blend **Araçlar** panelini kullanabilirsiniz. **Araçlar** paneli, bir *. xaml* dosyanız açık olduğunda xaml tasarımcısının sol tarafında görünür.
+uygulamanızdaki nesneleri oluşturmak ve değiştirmek için Visual Studio için Blend **araçlar** panelini kullanabilirsiniz. **Araçlar** paneli, bir *. xaml* dosyanız açık olduğunda xaml tasarımcısının sol tarafında görünür.
 
 Nesneleri bir araç seçip çalışma yüzeyinde farenizle çizerek bir araç seçerek oluşturursunuz.
 
-![Visual Studio için Blend Araçlar paneli](media/blend-tools-panel.png)
+![Visual Studio için Blend araçlar paneli](media/blend-tools-panel.png)
 
 > [!TIP]
 > **Araçlar** panelindeki araçlardan bazılarının çeşitleri vardır. Örneğin, dikdörtgen yerine bir elips veya çizgi seçebilirsiniz. Bu farklılıklara erişmek için, araç üzerinde sağ tıklayın veya tıklayın ve basılı tutun.
@@ -64,7 +65,7 @@ Varlıklar penceresine erişin ve kütüphanedeki en son kullanılan varlığı 
 
 ## <a name="assets-window"></a>Varlıklar penceresi
 
-**Varlıklar** penceresi, tüm kullanılabilir denetimleri Içerir ve Visual Studio 'Daki **araç kutusuna** benzerdir. Denetimlere ek olarak, **varlıklar** penceresinde stiller, medya, davranışlar ve efektler dahil olmak üzere çalışma yüzeyinizi ekleyebileceğiniz her şeyi bulabilirsiniz. **Varlıklar** penceresini açmak için varlıklar penceresini **görüntüle**' yi seçin  >   veya **CTRL** + **alt** + **X** tuşuna basın.
+**Varlıklar** penceresi, tüm kullanılabilir denetimleri içerir ve Visual Studio **araç kutusuna** benzerdir. Denetimlere ek olarak, **varlıklar** penceresinde stiller, medya, davranışlar ve efektler dahil olmak üzere çalışma yüzeyinizi ekleyebileceğiniz her şeyi bulabilirsiniz. **Varlıklar** penceresini açmak için varlıklar penceresini **görüntüle**' yi seçin  >   veya **CTRL** + **alt** + **X** tuşuna basın.
 
 ![Visual Studio için Blend varlıklar penceresi](media/blend-assets-window.png)
 
@@ -73,7 +74,7 @@ Varlıklar penceresine erişin ve kütüphanedeki en son kullanılan varlığı 
 
 ## <a name="objects-and-timeline-window"></a>Nesneler ve Zaman Çizelgesi penceresi
 
-Çalışma yüzeyinizdeki nesneleri düzenlemek ve isterseniz bunlara animasyon uygulamak için bu pencereyi kullanın. **Nesneler ve zaman çizelgesi** penceresini açmak için   >  **belge anahattını** görüntüle ' yi seçin. Visual Studio 'daki [Belge Anahattı penceresinde](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) sunulan işlevlere ek olarak, Visual Studio için Blend nesneler ve zaman çizelgesi pencerenin sağ tarafta bir zaman çizelgesi bileşim alanı vardır. Animasyonları oluştururken ve düzenlediğinizde zaman çizelgesini kullanın.
+Çalışma yüzeyinizdeki nesneleri düzenlemek ve isterseniz bunlara animasyon uygulamak için bu pencereyi kullanın. **Nesneler ve zaman çizelgesi** penceresini açmak için   >  **belge anahattını** görüntüle ' yi seçin. Visual Studio 'daki [belge anahattı penceresinde](creating-a-ui-by-using-xaml-designer-in-visual-studio.md#document-outline-window) sunulan işlevlere ek olarak, Visual Studio için Blend Nesneler ve Zaman Çizelgesi penceresinin sağ tarafta bir zaman çizelgesi bileşim alanı vardır. Animasyonları oluştururken ve düzenlediğinizde zaman çizelgesini kullanın.
 
 ![Animasyon modundaki nesne ve zaman çizelgesi penceresi](media/storyboard-timeline.png)
 

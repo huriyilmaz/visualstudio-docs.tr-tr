@@ -1,6 +1,6 @@
 ---
-description: İşlevin veya etiketin hiç erişilmediğini belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_notReached | Microsoft Docs'
+description: İşleve veya etikete hiçbir zaman ulaşıla olmadığını belirten bir bayrak verir.
+title: IDiaSymbol::get_notReached | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: e44ba922-6cda-40c2-9b62-44e5a8628e63
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 63acaae080dee21516729764906e959c8dca9930
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c9775f784491c4dbbb28ec4922d6a7717ac94fc7200e74e6c44140ad1c6cde0b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147172"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121264163"
 ---
 # <a name="idiasymbolget_notreached"></a>IDiaSymbol::get_notReached
-İşlevin veya etiketin hiç erişilmediğini belirten bir bayrak alır.
+İşleve veya etikete hiçbir zaman ulaşıla olmadığını belirten bir bayrak verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ HRESULT get_notReached(
 #### <a name="parameters"></a>Parametreler
  pFlag
 
-dışı `TRUE` İşleve veya etikete hiçbir ulaşılmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] İşleve `TRUE` veya etikete hiçbir zaman ulaşılamayacaksa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

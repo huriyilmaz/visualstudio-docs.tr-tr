@@ -11,12 +11,13 @@ ms.assetid: 45a625db-b3e7-4d64-beda-b9a76248096d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: a257b5800166e840194a28cba0ca99849b05f579
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: fa7a2ef5c3f425a1b4bdd04021b07f3aea5a7739e930fb78af46b48d1d7573ad
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936203"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121268592"
 ---
 # <a name="how-to-specify-the-number-of-test-iterations-in-a-load-test-run-setting"></a>Nasıl yapılır: bir yük testi çalışma ayarında test yineleme sayısını belirtme
 
@@ -35,7 +36,7 @@ ms.locfileid: "99936203"
 
      **Yük Testi Düzenleyicisi** görüntülenir ve yük testi ağacını görüntüler.
 
-2. Yük testi ağacında, **çalışma ayarları** klasöründe bir çalıştırma ayarı seçin.
+2. yük testi ağacında, **çalıştır Ayarlar** klasöründe bir çalıştır ayarı seçin.
 
 3. **Görünüm** menüsünde **Özellikler penceresi** ' ni seçerek yük çalıştırma ayarlarının kategorilerini ve özelliklerini görüntüleyin.
 

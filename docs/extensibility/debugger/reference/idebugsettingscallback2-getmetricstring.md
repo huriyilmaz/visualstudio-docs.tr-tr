@@ -10,17 +10,18 @@ ms.assetid: ecc875a2-8ac6-444c-a839-5191a780fd6b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f166c9b3cfce60f8800ddd2bf88d5c35b8e606db
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 97e22fe5521db7bf8c0331339c253041ce2e309d37ca7503368e38df725c3ae2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071278"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306887"
 ---
 # <a name="idebugsettingscallback2getmetricstring"></a>IDebugSettingsCallback2::GetMetricString
 Ölçüsünün adı verilen değer dizesini alır.

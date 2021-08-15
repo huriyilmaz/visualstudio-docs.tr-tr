@@ -4,12 +4,12 @@ description: Mac için Visual Studio kod düzenlenirken birden fazla konuma meti
 author: cobey
 ms.author: cobey
 ms.date: 08/19/2019
-ms.openlocfilehash: a21bebda057a772017fa1481e18f9801d1fbcbdf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c04bb80ee6a0bf9e9d1699d9f1b0b85da727ad5bc8235ebafbf1d55369e82d16
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75451449"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121266343"
 ---
 # <a name="multi-caret-editing"></a>Çoklu giriş işareti düzenleme
 
@@ -42,5 +42,5 @@ Fareyi kullanarak birden çok Evcil hayvan eklemek için, ⌘ ⌥ tuşlarına ba
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı eylemler (Windows üzerinde Visual Studio)](/visualstudio/ide/quick-actions)
-- [Kodu yeniden düzenleme (Windows üzerinde Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)
+- [hızlı eylemler (Windows Visual Studio)](/visualstudio/ide/quick-actions)
+- [kodu yeniden düzenleme (Windows Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)

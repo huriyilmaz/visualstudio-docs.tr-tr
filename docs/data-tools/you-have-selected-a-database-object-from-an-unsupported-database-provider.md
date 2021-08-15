@@ -1,6 +1,6 @@
 ---
 title: Desteklenmeyen sağlayıcıdan nesne
-description: Desteklenmeyen bir veritabanı sağlayıcısından veritabanı nesnesi seçtiniz. Bu Visual Studio (O/R Designer) iletisiyle ilgili bilgileri görüntüleyin.
+description: Desteklenmeyen bir veritabanı sağlayıcısından veritabanı nesnesi seçtiniz. bu Visual Studio (O/R Designer) iletisiyle ilgili bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -8,21 +8,22 @@ ms.assetid: c0f1298e-31aa-471e-ae19-1bafffd2ae40
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c3ccd477882382962efcc2f87c5dc99f59c14be1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 33c69dca90a7fa662356ac648b6a53dfe893050a539dfdf9a4b612806022e0e2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858052"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346433"
 ---
 # <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>Desteklenmeyen bir veritabanı sağlayıcısından bir veritabanı nesnesi seçtiniz
 
-**O/R Tasarımcısı** yalnızca SQL Server () için .NET Framework veri sağlayıcısı destekler <xref:System.Data.SqlClient> . **Tamam** ' a tıklayıp desteklenmeyen veritabanı sağlayıcılarından nesnelerle çalışmaya devam edebilseniz de çalışma zamanında beklenmeyen davranışlarla karşılaşabilirsiniz.
+**O/R tasarımcısı** yalnızca SQL Server () için .NET Framework Veri Sağlayıcısı destekler <xref:System.Data.SqlClient> . **Tamam** ' a tıklayıp desteklenmeyen veritabanı sağlayıcılarından nesnelerle çalışmaya devam edebilseniz de çalışma zamanında beklenmeyen davranışlarla karşılaşabilirsiniz.
 
 > [!NOTE]
-> Yalnızca SQL Server için .NET Framework Veri Sağlayıcısı kullanan veri bağlantıları desteklenir.
+> yalnızca SQL Server için .NET Framework Veri Sağlayıcısı kullanan veri bağlantıları desteklenir.
 
 ## <a name="options"></a>Seçenekler
 
@@ -32,4 +33,4 @@ ms.locfileid: "99858052"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio araçlar LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

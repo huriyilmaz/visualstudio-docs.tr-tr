@@ -1,6 +1,6 @@
 ---
-title: Web sitesi desteği | Microsoft Docs
-description: Mevcut bir proje sistemine şablonlar ve kayıt öznitelikleri eklenerek oluşturulan Web sitesi proje sistemleri hakkında bilgi edinin.
+title: Web Sitesi Destek | Microsoft Docs
+description: Mevcut bir proje sistemine şablon ve kayıt öznitelikleri ekleyerek oluşturulan web sitesi proje sistemleri hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,21 +10,22 @@ ms.assetid: ce9f4266-bb64-4c09-be88-4bd6413f60d0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16de0fdc2c4e65dfe6c2ae2c6dc3cdc6902fa8b0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3d5a1d8291a304ca1376bd5eba1d24715f162ddb7fe4214a30e48ed663cf5417
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069120"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121305470"
 ---
 # <a name="web-site-support"></a>Web Sitesi Desteği
-Web sitesi proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri Web uygulamaları oluşturur. Bir Web sitesi projesi, ilişkili kodu olan her bir Web sayfası için bir yürütülebilir dosya oluşturur. Ek yürütülebilir dosyalar/App_Code klasöründeki kaynak kod dosyalarından oluşturulur.
+Web sitesi proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri de Web uygulamaları oluşturabilir. Web sitesi projesi, ilişkili kodu olan her Web sayfası için bir yürütülebilir dosya üretir. /App_Code klasöründeki kaynak kod dosyalarından ek yürütülebilir App_Code oluşturulur.
 
- Web sitesi proje sistemleri, var olan bir proje sistemine şablonlar ve kayıt öznitelikleri eklenerek oluşturulur. Bu özniteliklerden biri, dilin IntelliSense sağlayıcısını seçer. IntelliSense sağlayıcı uygulama, önbelleğe alınan bir akıllı Web sayfası istendiğinde, başvuruları işler ve dil derleyicisini çağırır.
+ Web sitesi proje sistemleri, mevcut bir proje sistemine şablonlar ve kayıt öznitelikleri ekleyerek oluşturulur. Bu özniteliklerden biri, dil için IntelliSense sağlayıcısını seçer. IntelliSense sağlayıcısı uygulaması başvuruları işler ve önbelleğe alınmamış bir akıllı Web sayfası isten geldiğinde dil derleyicisini arar.
 
- Web sayfalarını derlemek için kullanılan dil derleyicisinin ile kayıtlı olması gerekir [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] . Aşağıdaki örnekte olduğu gibi, derleyicisini kaydetmek için bir Web.config dosyasındaki [ \<compiler> öğesini](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element) kullanabilirsiniz:
+ Web sayfalarını derlemek için kullanılan dil derleyicisi ile kayıtlı olması [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] gerekir. Aşağıdaki örnekte olduğu [ \<compiler> gibi,](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element) Web.config kaydetmek için bir Web.config öğesi kullanabilirsiniz:
 
 ```
 <system.codedom>  <compilers>    <compiler language="py;IronPython" extension=".py"       type="IronPython.CodeDom.PythonProvider, IronPython,       Version=1.0.2391.18146, Culture=neutral,       PublicKeyToken=b03f5f7f11d50a3a" />  </compilers></system.codedom>
@@ -37,9 +38,9 @@ Web sitesi proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web pro
 
 - [Web Sitesi Destek Öznitelikleri](../../extensibility/internals/web-site-support-attributes.md)
 
- Bir Web sitesi projesini ve ' a bağlayan kayıt özniteliklerini gösterir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] .
+ Bir Web sitesi projesini ve 'ye bağlamak için kayıt özniteliklerini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] sunar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Web Projeleri](../../extensibility/internals/web-projects.md)
 
- İki tür web projesine, Web sitesi projelerine ve Web uygulaması projelerine genel bir bakış sunar.
+ Web sitesi projeleri ve Web uygulaması projeleri olmak için iki tür Web projesine genel bir bakış sunar.

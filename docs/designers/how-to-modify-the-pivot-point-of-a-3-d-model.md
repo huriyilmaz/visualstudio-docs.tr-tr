@@ -8,14 +8,15 @@ ms.assetid: c20b4ec8-29f5-4ca5-bc39-d4548ca6f573
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eaa3d671a8c9aeb3ed942e57278160af73dec19
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1ee504bfb1cc919fd721f66fd3e0141784d7cd7fe3f3d5df27d927ac71a27d98
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930843"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121308622"
 ---
 # <a name="how-to-modify-the-pivot-point-of-a-3d-model"></a>Nasıl yapılır: 3B modelin pivot noktasını değiştirme
 

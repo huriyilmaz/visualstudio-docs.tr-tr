@@ -1,6 +1,6 @@
 ---
-title: Kullanıcı ayarlarını ve seçeneklerini genişletme | Microsoft Docs
-description: Bu makaledeki kaynakları kullanarak Visual Studio SDK içindeki kullanıcı ayarlarını ve seçeneklerini genişletme hakkında bilgi edinin.
+title: kullanıcı Ayarlar ve seçeneklerini genişletme | Microsoft Docs
+description: bu makaledeki kaynakları kullanarak Visual Studio SDK 'daki kullanıcı ayarlarını ve seçenekleri genişletme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,17 +13,18 @@ ms.assetid: 5bb6277a-8c9d-48c8-9b4e-1cb3052caded
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: afc0e9eb1904515554e08ae06a70fe5af8c1dd7b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f9e5a718f9f2a45d071b5f03b6fcb5602817a2b2eadd8d33d404c7d702bbf13f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075009"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275833"
 ---
 # <a name="extend-user-settings-and-options"></a>Kullanıcı ayarlarını ve seçeneklerini genişletme
-Visual Studio 'da, Kullanıcı tercihlerini korumak için iki ana yol vardır. **Araç**  >  **seçenekleri** sayfaları, kullanıcıların, hem genel hem de dile özgü birçok farklı tür ayar için kendi değerlerini ayarlamanıza olanak sağlar. Kullanıcı ayarları, kullanıcıların genel Visual Studio yapılandırma özelliklerini belirtmesini sağlar. Seçenekler sayfaları hakkında daha fazla bilgi için bkz. [Seçenekler ve Seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md). Kullanıcı ayarları hakkında daha fazla bilgi için bkz. [Kullanıcı ayarları Için destek](../extensibility/internals/support-for-user-settings.md).
+Visual Studio, kullanıcı tercihlerini korumak için iki ana yol vardır. **Araç**  >  **seçenekleri** sayfaları, kullanıcıların, hem genel hem de dile özgü birçok farklı tür ayar için kendi değerlerini ayarlamanıza olanak sağlar. kullanıcı ayarları, kullanıcıların genel Visual Studio yapılandırma özellikleri belirtmesini sağlar. Seçenekler sayfaları hakkında daha fazla bilgi için bkz. [Seçenekler ve Seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md). Kullanıcı ayarları hakkında daha fazla bilgi için bkz. [Kullanıcı ayarları Için destek](../extensibility/internals/support-for-user-settings.md).
 
 - [Seçenekler sayfası oluşturma](../extensibility/creating-an-options-page.md) Seçenekler sayfasının nasıl oluşturulduğunu açıklar.
 

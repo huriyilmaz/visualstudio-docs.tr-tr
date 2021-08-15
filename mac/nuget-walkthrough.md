@@ -1,55 +1,55 @@
 ---
-title: Projenize bir NuGet paketi dahil etme
-description: Bu belge, Mac için Visual Studio kullanarak bir projeye NuGet paketinin nasıl ekleneceğini kapsar. Bir paketi bulmayı ve indirmeyi, Ayrıca IDE tümleştirme özelliklerini tanıtmayı da açıklar.
+title: Projenize NuGet paketi dahil
+description: Bu belge, NuGet kullanarak NuGet paketinin nasıl dahil Mac için Visual Studio. Paket bulma ve indirmenin yanı sıra IDE tümleştirme özelliklerini tanıtma konusunda size yol sunar.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 11/09/2020
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: 46ceb99617c6a0e9ba457fdb769c1162090d1d31
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 199644f6df8edf2a23681525ffd88917fe2099cd2ee1f1cd44500a574da1c76e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493497"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121439428"
 ---
-# <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Mac için Visual Studio NuGet paketlerini yükleyip yönetme
+# <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>NuGet paketleri yükleme ve Mac için Visual Studio
 
-Mac için Visual Studio 'daki NuGet Paket Yöneticisi Kullanıcı arabirimi, projelerde ve çözümlerde NuGet paketlerini kolayca yüklemenize, kaldırmanıza ve güncelleştirmenize olanak tanır. Paketleri arayıp .NET Core, ASP.NET Core ve Xamarin projelerinize ekleyebilirsiniz.
+NuGet Paket Yöneticisi kullanıcı arabirimi Mac için Visual Studio proje ve çözümlerde paketleri kolayca yüklemenizi, kaldırmanızı ve NuGet güncelleştirmenizi sağlar. .NET Core, ASP.NET Core ve Xamarin projeleriniz için arama ve paket ekleme.
 
-Bu makalede, bir projeye NuGet paketinin nasıl dahil edileceğini ve işlemin sorunsuz hale getiren araç zincirini nasıl gösterdiği açıklanmaktadır.
+Bu makalede, bir NuGet paketinin projeye nasıl dahil olduğu açıklanmıştır ve süreci sorunsuz bir şekilde sağlayan araç zinciri açıklanmıştır.
 
-Mac için Visual Studio 'de NuGet kullanma girişi için bkz [. hızlı başlangıç: Mac için Visual Studio bir paketi yüklemek ve kullanmak](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
+Mac için Visual Studio'da NuGet kullanmaya giriş için bkz. Hızlı [Başlangıç: Mac için Visual Studio'de](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac) paket yükleme ve kullanma
 
-## <a name="find-and-install-a-package"></a>Paket bulma ve yüklemeyi
+## <a name="find-and-install-a-package"></a>Paket Bulma ve Yükleme
 
-1. Mac için Visual Studio bir proje açıkken, **çözüm penceresinde** **Bağımlılıklar** klasörüne (Xamarin projesi kullanılıyorsa **paketler** klasörü) sağ tıklayın ve **NuGet Paketlerini Yönet...** seçeneğini belirleyin.
+1. Mac için Visual Studio'de bir proje açıkken, Çözüm Penceresi'nde **Bağımlılıklar** klasörüne (Xamarin projesi  kullanıyorsanız Paketler klasörü) sağ tıklayın ve Paketleri **Yönet... NuGet seçin.**
 
-    ![Yeni NuGet paketi bağlam eylemi Ekle](media/nuget-walkthrough-packages-menu.png)
+    ![Yeni paket NuGet eylemi ekleme](media/nuget-walkthrough-packages-menu.png)
 
-2. Bu, **NuGet Paketlerini Yönet** penceresi başlatılır. Merkezi NuGet paket deposunda arama yapmak için, iletişim kutusunun sol üst köşesindeki kaynak açılan penceresinde olarak ayarlandığından emin olun `nuget.org` .
+2. Bu, NuGet **Paketlerini Yönet penceresini** açar. Merkezi paket deposunda arama yapmak için iletişim kutusunun sol üst köşesindeki Kaynak açılan kutusunun olarak `nuget.org` NuGet olun.
 
-    ![NuGet paketlerini listeleme](media/nuget-walkthrough-add-packages1.png)
+    ![Paket NuGet Listele](media/nuget-walkthrough-add-packages1.png)
 
-3. Belirli bir paketi bulmak için sağ üst köşedeki arama kutusunu kullanın (örneğin,) `EntityFramework` . Kullanmak istediğiniz bir paket bulduğunuz zaman, yüklemeyi başlatmak için paketi seçin ve **paket Ekle** düğmesine tıklayın.
+3. Belirli bir paketi bulmak için sağ üst köşedeki arama kutusunu kullanın, örneğin `EntityFramework` . Kullanmak istediğiniz bir paket bulana kadar paketi seçin ve Paket Ekle **düğmesine tıklayarak** yükleme işlemini başlatın.
 
-    ![EntityFramework NuGet paketi Ekle](media/nuget-walkthrough-add-packages2.png)
+    ![EntityFramework NuGet Paketi Ekleme](media/nuget-walkthrough-add-packages2.png)
 
-4. Paket indirildikten sonra projenize eklenir. Bu çözüm, düzenlemekte olduğunuz projenin türüne bağlı olarak değişir:
+4. Paket indirildikten sonra projenize eklenir. Çözüm, düzenlemekte olduğunu projenin türüne bağlı olarak değişir:
 
-    **Xamarin projeleri**
-    * **Başvurular** düğümü, bir NuGet paketinin parçası olan tüm derlemelerin bir listesini içerir.
-    * **Paketler** düğümü, Indirdiğiniz her NuGet paketini görüntüler. Bu listeden bir paketi güncelleştirebilir veya kaldırabilirsiniz.
+    **Xamarin Projeleri**
+    * **Başvurular** düğümü, bir NuGet paketinin parçası olan tüm derlemelerin listesini içerir.
+    * Paketler **düğümü,** indirdiğiniz NuGet her bir paket paketini görüntüler. Bir paketi bu listeden güncelleştirebilirsiniz veya kaldırabilirsiniz.
     
-    **.NET Core projeleri**
+    **.NET Core Projeleri**
 
-    * **NuGet düğümü > bağımlılıklar** , Indirdiğiniz her NuGet paketini görüntüler. Bu listeden bir paketi güncelleştirebilir veya kaldırabilirsiniz.
+    * Düğümdeki **> NuGet,** indirdiğiniz NuGet paketi görüntüler. Bir paketi bu listeden güncelleştirebilirsiniz veya kaldırabilirsiniz.
 
-## <a name="using-nuget-packages"></a>NuGet paketlerini kullanma
+## <a name="using-nuget-packages"></a>NuGet Paketlerini Kullanma
 
-NuGet paketi eklendikten ve proje güncelleştirildikten sonra, herhangi bir proje başvurusunda yaptığınız gibi API 'Lerle programlama yapabilirsiniz.
+Uygulama NuGet ve proje başvuruları güncelleştirildiğinde, herhangi bir proje başvurusunda olduğu gibi API'lere göre programlandırabilirsiniz.
 
-Dosyanızın en üstüne gerekli yönergeleri eklemediğinizden emin olun `using` :
+Dosyanın en üstüne `using` gerekli yönergelerini ekleyin:
 
 ```csharp
 using Newtonsoft.Json;
@@ -57,101 +57,101 @@ using Newtonsoft.Json;
 
 <a name="Package_Updates" class="injected"></a>
 
-## <a name="updating-packages"></a>Paketler güncelleştiriliyor
+## <a name="updating-packages"></a>Paketleri Güncelleştirme
 
-Paket güncelleştirmeleri, **Bağımlılıklar** düğümüne sağ tıklanarak (Xamarin projeleri için **paketler** düğümü) veya her bir pakette ayrı ayrı tek bir şekilde yapılabilir. NuGet paketinin yeni bir sürümü kullanılabilir olduğunda, bir güncelleştirme simgesi, ![ daireyle birlikte görüntülenir ](media/nuget-walkthrough-update-icon.png) .
+Paket güncelleştirmeleri aynı anda, Bağımlılıklar düğümüne  **sağ** tıklar ( Xamarin projeleri için paketler düğümü) veya her pakette ayrı ayrı yapılabilir. Bir NuGet paketinin yeni bir sürümü kullanılabilir olduğunda, daire içeren Yukarı ![ ok simgesi ](media/nuget-walkthrough-update-icon.png) görüntülenir.
 
-Bağlam menüsüne erişmek için **Bağımlılıklar** ' a sağ tıklayın ve tüm paketleri güncelleştirmek için **Güncelleştir** ' i seçin:
+Bağlam menüsüne erişmek **için Bağımlılıklar'a** sağ tıklayın ve tüm paketleri güncelleştirmek **için** Güncelleştir'i seçin:
 
-![Güncelleştirme menüsüyle bağımlılıklar bağlam menüsü vurgulandı](media/nuget-walkthrough-packages-menu-update.png)
+![Güncelleştir menüsünün vurgulanmış olduğu Bağımlılıklar bağlam menüsü](media/nuget-walkthrough-packages-menu-update.png)
 
-* **NuGet Paketlerini Yönet** -projeye daha fazla paket eklemek için pencereyi açar.
-* **Güncelleştir** -kaynak sunucuyu her bir paket için denetler ve daha yeni sürümleri indirir.
-* **Restore** -eksik paketleri indirir (var olan paketleri yeni sürümlere güncelleştirmeden önce).
+* **Paket NuGet Yönet** - Projeye daha fazla paket eklemek için pencereyi açar.
+* **Güncelleştirme** - Her paket için kaynak sunucuyu denetler ve daha yeni sürümleri indirir.
+* **Geri** yükleme - Eksik paketleri indirir (mevcut paketleri daha yeni sürümlere güncelleştirmeden).
 
-Güncelleştirme ve geri yükleme seçenekleri de çözüm düzeyinde bulunur ve Çözümdeki tüm projeleri etkiler.
+Güncelleştirme ve Geri Yükleme seçenekleri Çözüm düzeyinde de kullanılabilir ve çözümde yer alan tüm projeleri etkiler.
 
 ### <a name="updating-to-pre-release-versions-of-packages"></a>Paketlerin yayın öncesi sürümlerine güncelleştirme
-Bir paketin daha yeni bir yayın öncesi sürümüne güncelleştirmek için **Bağımlılıklar** ' a sağ tıklayarak bağlam menüsünü açabilir ve **NuGet Paketlerini Yönet...** menüsünü seçebilirsiniz.
+Bir paketin daha yeni bir yayın öncesi sürümüne güncelleştirmek  için Bağımlılıklar'a sağ tıklar ve bağlam menüsünü açabilir ve Paketleri **Yönet... NuGet seçebilirsiniz.**
 
-![NuGet Paketlerini Yönet ile bağımlılıklar bağlam menüsü... Menü vurgulandı](media/nuget-walkthrough-packages-menu-manage-nuget-packages.png)
+![Paketleri Yönet ile bağımlılıklar NuGet menüsü... menü vurgulanmış](media/nuget-walkthrough-packages-menu-manage-nuget-packages.png)
 
-İletişim kutusunun alt kısmındaki **yayın öncesi paketleri göster** onay kutusunu işaretleyin.
+İletişim **kutusunun en altındaki Yayın** öncesi paketleri göster onay kutusunu işaretleyin.
 
-![' Yayın öncesi paketleri göster ' seçeneği işaretli olarak açılan NuGet Paketlerini Yönet iletişim kutusu](media/nuget-walkthrough-show-pre-release-packages.png)
+!['NuGet öncesi paketleri göster' seçeneği işaretli olarak açılan Paket Paketlerini Yönet iletişim kutusu](media/nuget-walkthrough-show-pre-release-packages.png)
 
-Son olarak, iletişim kutusunun **güncelleştirmeler** sekmesinde, güncelleştirmek istediğiniz paketi seçin ve **Yeni sürüm** açılan listesinden yeni yayın öncesi sürümü seçin ve **paketi Güncelleştir** ' e tıklayın.
+Son olarak, **iletişim** kutusunun Güncelleştirmeler sekmesinde güncelleştirmek istediğiniz paketi seçin ve Yeni Sürüm  açılan menüsünden yeni yayın öncesi sürümü seçin ve Paketi Güncelleştir'e **tıklayın.**
 
-![Yüklü sekmesine açılan, seçili bir paket ve yeni sürüm açılan listesi açık olan NuGet Paketlerini Yönet iletişim kutusu.](media/nuget-walkthrough-packages-nuget-dialog-update-installed-package.png)
+![Bir NuGet paketin seçili olduğu ve Yeni Sürüm açılan listesinin açık olduğu Yüklü sekmesine açılan Paketleri Yönet iletişim kutusu.](media/nuget-walkthrough-packages-nuget-dialog-update-installed-package.png)
 
-### <a name="locating-outdated-packages"></a>Güncel olmayan paketleri bulma
-Çözüm penceresinde, şu anda yüklü olan bir paketin sürümünü görüntüleyebilir ve güncelleştirilecek pakete sağ tıklamakta tıklayabilirsiniz.
+### <a name="locating-outdated-packages"></a>Yeni paketleri bulma
+Çözüm Penceresinde, bir paketin şu anda yüklü olan sürümünü görüntüp güncelleştirmek için pakete sağ tıklarsınız.
 
-![Güncelleştirme, kaldırma, yenileme seçeneklerini içeren paketler menüsü](media/nuget-walkthrough-PackageMenu.png)
+![Güncelleştirme, Kaldırma, Yenileme seçeneklerinin yer alan Paketler menüsü](media/nuget-walkthrough-PackageMenu.png)
 
-Ayrıca, paketin yeni bir sürümü kullanılabilir olduğunda paket adının yanında bir bildirim görürsünüz. bu sayede, güncelleştirmeyi güncelleştirmek isteyebilir karar verebilirsiniz.
+Bir paketin yeni bir sürümü kullanılabilir olduğunda paket adının yanında bir bildirim de göreceğiniz için, paketi güncelleştirmek istediğinize karar veabilirsiniz.
 
-![Yeni bir paket sürümü kullanılabilir olduğunda bildirim gösteriliyor](media/nuget-walkthrough-package-update-available.png)
+![Yeni bir paket sürümü kullanılabilir olduğunda gösterilen bildirim](media/nuget-walkthrough-package-update-available.png)
 
 Gösterilen menüde iki seçeneğiniz vardır:
 
-* **Güncelleştir** -kaynak sunucuyu denetler ve daha yeni bir sürümü indirir (varsa).
-* **Remove** -paketi bu projeden kaldırır ve ilgili derlemeleri projenin başvurularından kaldırır.
+* **Güncelleştirme** - Kaynak sunucuyu denetler ve daha yeni bir sürüm indirir (varsa).
+* **Kaldır** - Paketi bu projeden kaldırır ve projenin Başvurularından ilgili derlemeleri kaldırır.
 
 ## <a name="manage-packages-for-the-solution"></a>Çözüm için paketleri yönetme
 
-Bir çözüm için paketlerin yönetilmesi, birden çok projeyle aynı anda çalışması için uygun bir yoldur.
+Bir çözüm için paketleri yönetmek, birden çok projeyle aynı anda çalışmak için kullanışlı bir olanaktır.
 
-1. Çözüme sağ tıklayın ve **NuGet Paketlerini Yönet..**. öğesini seçin:
+1. Çözüme sağ tıklayın ve Paketleri **Yönet... NuGet seçin:**
 
-    ![Çözüm için NuGet Paketlerini Yönet](media/nuget-walkthrough-manage-packages-solution.png)
+    ![Çözüm NuGet paketlerini yönetme](media/nuget-walkthrough-manage-packages-solution.png)
 
-1. Çözüm için paketleri yönetirken, Kullanıcı arabirimi işlemlerden etkilenen projeleri seçmenizi sağlar:
+1. Kullanıcı arabirimi, çözümün paketlerini yöneterek işlemlerden etkilenen projeleri seçmenize olanak sağlar:
 
-    ![Çözüm için paketleri yönetirken proje Seçicisi](media/nuget-walkthrough-add-to-projects.png)
+    ![Project paketleri yönetmeye yönelik seçiciyi seçin](media/nuget-walkthrough-add-to-projects.png)
 
-### <a name="consolidate-tab"></a>Birleştirme sekmesi
+### <a name="consolidate-tab"></a>Birleştir sekmesi
 
-Birden çok projeyle bir çözümde çalışırken, her bir projede aynı NuGet paketini kullandığınızdan emin olmak için en iyi uygulama olarak kabul edilir. Ayrıca, bu paketin aynı sürüm numarasını da kullanıyorsunuz. Mac için Visual Studio, bir çözüm için paketleri yönetmeyi seçtiğinizde, Paket Yöneticisi Kullanıcı arabirimine bir **birleştirme** sekmesi sunarak bunu kolaylaştırır. Bu sekmeyi kullanarak, farklı sürüm numaralarına sahip paketlerin çözümdeki farklı projeler tarafından nasıl kullanıldığını kolayca görebilirsiniz:
+Birden çok proje içeren bir çözümde çalışırken, her projede aynı NuGet paketini her yerde aynı sürüm numarasını da kullanmaya dikkat etmek en iyi yöntem olarak kabul edilir. Mac için Visual Studio, bir çözüm için paketleri  yönetmeyi seçtiğiniz zaman Paket Yöneticisi kullanıcı arabiriminde Birleştir sekmesi sağlayarak bunu kolaylaştırmanıza yardımcı olur. Bu sekmeyi kullanarak, çözümde farklı projeler tarafından farklı sürüm numaralarına sahip paketlerin nerede kullanı olduğunu kolayca görebilirsiniz:
 
-![Paket Yöneticisi UI birleştirme sekmesi](media/nuget-walkthrough-consolidate-tab.png)
+![Paket Yöneticisi UI Birleştir sekmesi](media/nuget-walkthrough-consolidate-tab.png)
 
-Bu örnekte, NuGetDemo projesi Microsoft. EntityFrameworkCore 2,20 ' i kullanıyor, Ngetdemo. Shared, Microsoft. EntityFrameworkCore 2.2.6 kullanıyor. Paket sürümlerini birleştirmek için aşağıdakileri yapın:
+Bu örnekte NuGetDemo projesi Microsoft.EntityFrameworkCore 2.20 kullanırken NuGetDemo.Shared, Microsoft.EntityFrameworkCore 2.2.6 kullanıyor. Paket sürümlerini birleştirmek için şunları yapın:
 
-- Proje listesinde güncelleştirilecek projeleri seçin.
-- **Yeni sürüm** listesindeki tüm projelerde kullanılacak sürümü seçin; örneğin, Microsoft. EntityFrameworkCore 3.0.0.
-- **Paketi Birleştir** düğmesini seçin.
+- Proje listesinde güncelleştirilen projeleri seçin.
+- Microsoft.EntityFrameworkCore 3.0.0 gibi Yeni Sürüm listesinde tüm bu projelerde kullanmak üzere sürümü seçin. 
+- Paketi Birleştir **düğmesini** seçin.
 
-Paket Yöneticisi seçili paket sürümünü seçili tüm projelere yükleyerek, bu paket artık **birleştirme** sekmesinde görünmez.
+Bu Paket Yöneticisi, seçili paket sürümünü tüm seçili projelere yükledikten sonra Paket Birleştir sekmesinde **artık** görünür.
 
-## <a name="adding-package-sources"></a>Paket kaynakları ekleniyor
+## <a name="adding-package-sources"></a>Paket Kaynakları Ekleme
 
-Yükleme için kullanılabilen paketler başlangıçta nuget.org adresinden alınır. Bununla birlikte, Mac için Visual Studio başka paket konumları da ekleyebilirsiniz. Bu, geliştirme aşamasındaki kendi NuGet paketlerinizi test etmek veya şirketinizin veya kuruluşunuzun içinde özel bir NuGet sunucusu kullanmak için yararlı olabilir.
+Yükleme için kullanılabilir paketler başlangıçta nuget.org. Bununla birlikte, uygulamanıza başka paket Mac için Visual Studio. Bu, geliştirme aşamasındaki kendi NuGet paketlerinizi test etmek veya şirket veya NuGet içinde özel bir NuGet sunucusu kullanmak için yararlı olabilir.
 
-Mac için Visual Studio, paket kaynakları listesini görüntülemek ve düzenlemek için **Visual Studio > tercihler > NuGet > kaynakları** ' na gidin. Kaynakların uzak bir sunucu (bir URL ile belirtilir) veya yerel bir dizin olabileceğini unutmayın.
+Paket Mac için Visual Studio listesini görüntülemek **Visual Studio > ve düzenlemek > NuGet > Için** Tercihler ve Kaynaklar'a gidin. Kaynakların uzak sunucu (URL ile belirtilir) veya yerel bir dizin olduğunu unutmayın.
 
-![Paket kaynakları](media/nuget-walkthrough-PackageSource.png)
+![Paket Kaynakları](media/nuget-walkthrough-PackageSource.png)
 
-Yeni bir kaynak kurmak için **Ekle** ' ye tıklayın. Paket kaynağına kolay bir ad ve URL (ya da dosya yolu) girin. Kaynak güvenli bir Web sunucusu ise, Kullanıcı adını ve parolayı da girin, aksi takdirde bu girdileri boş bırakın:
+Yeni **bir** kaynak ayarlamak için Ekle'ye tıklayın. Paket kaynağının kolay adını ve URL'sini (veya dosya yolunu) girin. Kaynak güvenli bir web sunucusu ise kullanıcı adını ve parolayı da girin, aksi takdirde şu girişleri boş bırakın:
 
-![Ad, konum URL 'SI, Kullanıcı adı ve parola istemiyle paket kaynağı iletişim kutusu ekleyin.](media/nuget-walkthrough-PackageSource2.png)
+![Ad, konum URL'si, kullanıcı adı ve parola istemi içeren Paket Kaynağı Ekle iletişim kutusu.](media/nuget-walkthrough-PackageSource2.png)
 
-Paketler aranırken farklı kaynaklar seçilebilir:
+Daha sonra paketler aranken farklı kaynaklar seçilebilir:
 
-![Paket kaynakları listesini içeren bir açılan listeyi gösteren paket kaynağı iletişim kutusu ekleyin.](media/nuget-walkthrough-PackageSource3.png)
+![Paket kaynaklarının listesini içeren açılan listeyi gösteren Paket Kaynağı Ekle iletişim kutusu.](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>Sürüm Denetimi
 
-NuGet belgeleri, [kaynak denetimine paket Işlemeden NuGet kullanarak](/nuget/consume-packages/packages-and-source-control)açıklanır. İkili dosyaları ve kullanılmayan bilgileri kaynak denetiminde depolamamayı tercih ediyorsanız, paketleri sunucudan otomatik olarak geri yüklemek için Mac için Visual Studio yapılandırabilirsiniz. Bu, bir geliştirici projeyi kaynak denetiminden ilk kez aldığında Mac için Visual Studio gerekli paketleri otomatik olarak indirecek ve yükleymeyeceği anlamına gelir.
+Bu NuGet, paketleri kaynak [denetimine NuGet olmadan uygulamanın nasıl kullanıla bir şekilde ele alınarak açıklanmıştır.](/nuget/consume-packages/packages-and-source-control) Kaynak denetiminde ikili dosyaları ve kullanılmayan bilgileri depolamamayı tercih ederseniz, Mac için Visual Studio otomatik olarak sunucudan geri yüklemek için yapılandırmayı yapılandırabilirsiniz. Başka bir ifadeyle, bir geliştirici projeyi kaynak denetiminden ilk kez Mac için Visual Studio gerekli paketleri otomatik olarak indirecek ve yükleyecek.
 
-![Paketleri otomatik olarak geri yükle](media/nuget-walkthrough-AutoRestore.png)
+![Paketleri otomatik olarak geri yükleme](media/nuget-walkthrough-AutoRestore.png)
 
-Dizinin izlenmesini nasıl dışlayacak hakkında daha fazla bilgi için, belirli kaynak denetimi belgelerinize bakın `packages` .
+Dizini izlemenin dışında nasıl dışlayabilirsiniz? hakkında ayrıntılı bilgi için `packages` kaynak denetimi belgelerinize bakın.
 
-## <a name="related-video"></a>İlgili video
+## <a name="related-video"></a>İlgili Video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Using-NuGet/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio 'da bir paketi (Windows 'da) yükleyip kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+* [Visual Studio'de bir paket yükleme ve kullanma (Windows)](/nuget/quickstart/install-and-use-a-package-in-visual-studio)

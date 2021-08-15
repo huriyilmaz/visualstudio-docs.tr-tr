@@ -11,14 +11,15 @@ ms.assetid: fdea8262-40b8-473e-88ba-639e4c4648e6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82de88b69a3609db50d601fb4a566c510712afd8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f4616db107c42e38006d8e790b24adaf8f0e4acabef35088bcb5c28b09654509
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095257"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121261456"
 ---
 # <a name="ienumdebugpropertyinfo2"></a>IEnumDebugPropertyInfo2
 Bu arabirim [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılarını numaralandırır.
@@ -43,7 +44,7 @@ IEnumDebugPropertyInfo2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)|Sabit Listesi dizisinde belirtilen sayıda [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısını alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-skip.md)|Sabit Listesi dizisinde belirtilen sayıda [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısını atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md)|Bir Numaralandırıcı içindeki [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
