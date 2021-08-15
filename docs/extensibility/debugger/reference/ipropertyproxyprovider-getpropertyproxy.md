@@ -11,17 +11,18 @@ ms.assetid: 3ebb7515-5bfe-48f4-9b8d-721b8f664eb6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a1e18001b0db7c254f7e69bcb5adfc1a35a513b5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 13c09c3755a71342544bf18bc0b8836b19aec6acbd25917b44c4efd6d325d3a7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082367"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121321369"
 ---
 # <a name="ipropertyproxyprovidergetpropertyproxy"></a>IPropertyProxyProvider::GetPropertyProxy
 Belirtilen proxy KIMLIĞI için özellik proxy arabirimini alır.

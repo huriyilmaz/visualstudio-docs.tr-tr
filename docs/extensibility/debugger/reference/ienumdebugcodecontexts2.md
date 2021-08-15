@@ -11,14 +11,15 @@ ms.assetid: 72915146-215f-4c99-a034-131b2b474e0e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72addd1bd5a71f8d6051d1a7100d2d34dab57a24
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 490c15afea7e7034cad00398c02026ae2460d294be686f874d23e0105798091e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086579"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238807"
 ---
 # <a name="ienumdebugcodecontexts2"></a>IEnumDebugCodeContexts2
 Bu arabirim, hata ayıklama oturumuyla ilişkili kod bağlamlarını veya belirli bir program veya belgeyi sıralar.
@@ -45,11 +46,11 @@ IEnumDebugCodeContexts2 : IUnknown
 |[Sonraki](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)|Sabit Listesi dizisinde belirtilen sayıda kod bağlamı alır.|
 |[Atla](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-skip.md)|Sabit Listesi dizisinde belirtilen sayıda kod bağlamlarını atlar.|
 |[Sıfırla](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-getcount.md)|Bir Numaralandırıcı içindeki kod bağlamlarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, kullanıcının bir sonraki ifadeyi ayarlarken veya bir kaynak dosya için ayrıştırılmış kodu göstererek bir kod bağlamlarının listesini doldurmak için [Enumcodebağlamlarını](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md) çağırır. Birden çok kod bağlamı oluşabilir, örneğin, C++ stilinde bir şablonun birden çok örneği olduğunda.
+ Visual Studio, kullanıcının sonraki ifadeyi ayarlarken veya bir kaynak dosya için ayrıştırılmış kodu göstererek bir kod bağlamlarının listesini doldurmak üzere [enumcodebağlamlarını](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md) çağırır. Birden çok kod bağlamı oluşabilir, örneğin, C++ stilinde bir şablonun birden çok örneği olduğunda.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg. h

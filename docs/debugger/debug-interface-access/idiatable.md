@@ -11,14 +11,15 @@ ms.assetid: c99a2c44-7b72-4e3c-b963-25fe3df3a555
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b93dad0baef701a7d417993080d6511373454a3
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0edff7caa9d23b92dc730f24cb6c922fd7d4df89bfdb74b391101d75053b0a78
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161657"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420378"
 ---
 # <a name="idiatable"></a>IDiaTable
 Bir DIA veri kaynağı tablosunu numaralandırır.

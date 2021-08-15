@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama akışlarının sayısını alır.
-title: 'IDiaEnumDebugStreams:: get_Count | Microsoft Docs'
+description: Hata ayıklama akışlarının sayısını alın.
+title: IDiaEnumDebugStreams::get_Count | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 5c13fa9a-b35e-47b0-806f-1f53bfe1ba89
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dbf8b4b5ce26c67cc91f1d8dafe22f3a75b41c1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8dfd34859cd28113be8efcf61efe0f7769de867d4c47117888ffdef952a0e08b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149118"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121405316"
 ---
 # <a name="idiaenumdebugstreamsget_count"></a>IDiaEnumDebugStreams::get_Count
-Hata ayıklama akışlarının sayısını alır.
+Hata ayıklama akışlarının sayısını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +35,10 @@ HRESULT get_Count(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bu numaralandırıcıda kullanılabilen hata ayıklama akışlarının sayısını döndürür.
+[out] Bu numaralayıcıda kullanılabilen hata ayıklama akışlarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

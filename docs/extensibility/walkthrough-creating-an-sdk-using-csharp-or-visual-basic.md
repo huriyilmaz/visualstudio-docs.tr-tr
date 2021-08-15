@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: C# veya Visual Basic kullanarak SDK oluşturma | Microsoft Docs'
-description: Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı oluşturmayı ve ardından bu yönergeyi kullanarak SDK 'Yı Visual Studio uzantısı olarak paketlemeyi öğrenin.
+title: 'Adım adım kılavuz: C# veya Visual Basic | kullanarak SDK oluşturma Microsoft Docs'
+description: Visual C# kullanarak basit bir Matematik Kitaplığı SDK'sı oluşturma ve ardından bu izlenecek yolu kullanarak SDK'yı Visual Studio Uzantısı olarak paketleyebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,70 +8,71 @@ ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 5b44566e4a8df323af6132128a8881b54c6f493f
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: ea974e4ff65ccf027a28db9ceb35664a6d62a64559789c0bf3d865986d0831fb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217300"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121320212"
 ---
-# <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>İzlenecek yol: C# veya Visual Basic kullanarak SDK oluşturma
-Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı oluşturmayı ve sonra SDK 'Yı bir Visual Studio uzantısı (VSıX) olarak paketlemeyi öğreneceksiniz. Aşağıdaki yordamları tamamlayacaksınız:
+# <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>Adım adım kılavuz: C# veya Visual Basic
+Bu kılavuzda Visual C# kullanarak basit bir Matematik Kitaplığı SDK'sı oluşturma ve ardından SDK'yı bir Visual Studio Uzantısı (VSIX) olarak paketleyebilirsiniz. Aşağıdaki yordamları tamamlarsiniz:
 
-- [SimpleMath Windows Çalışma Zamanı bileşeni oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)
+- [SimpleMath Windows Runtime bileşenini oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createClassLibrary)
 
-- [SimpleMathVSIX Extension projesi oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createVSIX)
-- [Sınıf kitaplığını kullanan bir örnek uygulama oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createSample)
+- [SimpleMathVSIX uzantı projesini oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createVSIX)
+- [Sınıf kitaplığını kullanan örnek bir uygulama oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createSample)
 
 ## <a name="prerequisites"></a>Önkoşullar
- Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
+ Bu izlenecek yolu takip etmek için Visual Studio SDK'sı yüklemeniz gerekir. Daha fazla bilgi için [bkz. Visual Studio SDK.](../extensibility/visual-studio-sdk.md)
 
-## <a name="to-create-the-simplemath-windows-runtime-component"></a><a name="createClassLibrary"></a> SimpleMath Windows Çalışma Zamanı bileşeni oluşturmak için
+## <a name="to-create-the-simplemath-windows-runtime-component"></a><a name="createClassLibrary"></a>SimpleMath Windows Runtime bileşenini oluşturmak için
 
-1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
+1. Menü çubuğunda Dosya Yeni **Dosya'Project.**  >    >  
 
-2. Şablonlar listesinde, **Visual C#** veya **Visual Basic**' i genişletin, **Windows Mağazası** düğümünü seçin ve **Windows çalışma zamanı bileşen** şablonunu seçin.
+2. Şablon listesinde **Visual C#** veya Visual Basic'ı genişletin, **Windows Store** düğümünü seçin ve Windows **Çalışma Zamanı Bileşeni şablonunu** seçin. 
 
-3. **Ad** kutusunda, **SimpleMath**' i belirtip **Tamam** düğmesini seçin.
+3. Ad **kutusunda** **SimpleMath'i belirtin** ve ardından Tamam **düğmesini** seçin.
 
-4. **Çözüm Gezgini**, **SimpleMath** proje düğümünün kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
+4. Bu **Çözüm Gezgini** **SimpleMath** proje düğümünün kısayol menüsünü açın ve Özellikler'i **seçin.**
 
-5. **Class1. cs** öğesini **aritmetik. cs** olarak yeniden adlandırın ve aşağıdaki kodla eşleşecek şekilde güncelleştirin:
+5. **Class1.cs'yi** **Arithmetic.cs** olarak yeniden adlandırarak aşağıdaki kodla eş olacak şekilde güncelleştirin:
 
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/creatingansdkusingwinrt/cs/winrtmath/arithmetic.cs" id="Snippet3":::
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/creatingansdkusingwinrt/vb/winrtmath/arithmetic.vb" id="Snippet3":::
 
-6. **Çözüm Gezgini**' de, **Çözüm ' SimpleMath '** düğümünün kısayol menüsünü açın ve **Configuration Manager** öğesini seçin.
+6. Bu **Çözüm Gezgini** Çözüm **'SimpleMath' düğümünün kısayol menüsünü** açın ve sonra Datele'yi **Yapılandırma Yöneticisi.**
 
-    **Configuration Manager** iletişim kutusu açılır.
+    Yapılandırma Yöneticisi  iletişim kutusu açılır.
 
-7. **Etkin çözüm yapılandırması** listesinde **yayın**' ı seçin.
+7. Etkin çözüm **yapılandırma listesinde Yayın'ı** **seçin.**
 
-8. **Yapılandırma** sütununda, **SimpleMath** satırının **Release** olarak ayarlandığını doğrulayın ve ardından değişikliği kabul etmek için **Kapat** düğmesini seçin.
+8. Yapılandırma sütununda **SimpleMath** satırı'nın Sürüm olarak ayar olduğunu **doğrulayın** ve ardından **değişikliği kabul etmek** için Kapat düğmesini seçin. 
 
    > [!IMPORTANT]
-   > SimpleMath bileşeni için SDK yalnızca bir yapılandırma içerir. Bu yapılandırma yayın derlemesi olmalıdır veya bileşeni kullanan uygulamalar, için sertifika geçirmez [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] .
+   > SimpleMath bileşeninin SDK'sı yalnızca bir yapılandırma içerir. Bu yapılandırma yayın derlemesi olmalı veya bileşeni kullanan uygulamalar için sertifikayı [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] geçemektedir.
 
-9. **Çözüm Gezgini**, **SimpleMath** proje düğümünün kısayol menüsünü açın ve ardından **Oluştur**' u seçin.
+9. Bu **Çözüm Gezgini** **SimpleMath** proje düğümünün kısayol menüsünü açın ve Ardından Oluştur'a **tıklayın.**
 
-## <a name="to-create-the-simplemathvsix-extension-project"></a><a name="createVSIX"></a> SimpleMathVSIX Extension projesi oluşturmak için
+## <a name="to-create-the-simplemathvsix-extension-project"></a><a name="createVSIX"></a> SimpleMathVSIX uzantı projesini oluşturmak için
 
-1. **Çözüm ' SimpleMath '** düğümünün kısayol menüsünde   >  **Yeni proje** Ekle ' yi seçin.
+1. **Çözüm 'SimpleMath' düğümünün kısayol menüsünde** Yeni Ekle'yi **Project.**  >  
 
-2. Şablonlar listesinde, **Visual C#** veya **Visual Basic**' ı genişletin, **genişletilebilirlik** düğümünü seçin ve **VSIX proje** şablonunu seçin.
+2. Şablon listesinde **Visual C#** veya Visual Basic **genişletin,** **Genişletilebilirlik** düğümünü seçin ve ardından **VSIX** Project seçin.
 
-3. **Ad** kutusunda, **SimpleMathVSIX** belirtin ve sonra **Tamam** düğmesini seçin.
+3. Ad **kutusunda** **SimpleMathVSIX'i belirtin** ve ardından Tamam **düğmesini** seçin.
 
-4. **Çözüm Gezgini**, **Source. Extension. valtmanifest** öğesini seçin.
+4. Bu **Çözüm Gezgini** **source.extension.vsixmanifest öğesini** seçin.
 
-5. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
+5. Menü çubuğunda Kodu **Görüntüle'yi**  >  **seçin.**
 
-6. Mevcut XML 'i aşağıdaki XML ile değiştirin:
+6. Mevcut XML'i aşağıdaki XML ile değiştirin:
 
    ```xml
    <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
@@ -95,15 +96,15 @@ Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı ol
    </PackageManifest>
    ```
 
-7. **Çözüm Gezgini**, **SimpleMathVSIX** projesini seçin.
+7. Bu **Çözüm Gezgini** **SimpleMathVSIX projesini** seçin.
 
-8. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+8. Menü çubuğunda Yeni Öğe **Ekle'Project**  >  **seçin.**
 
-9. **Ortak öğeler** listesinde, **veriler**' i genişletin ve ardından **XML dosyası**' nı seçin.
+9. Ortak Öğeler listesinde **Veri'yi** **genişletin** ve **ARDıNDAN XML Dosyası'ı seçin.**
 
-10. **Ad** kutusunda, `SDKManifest.xml` öğesini belirtin ve sonra **Ekle** düğmesini seçin.
+10. Ad **kutusunda** belirtin ve `SDKManifest.xml` ardından Ekle **düğmesini** seçin.
 
-11. **Çözüm Gezgini**' de, için kısayol menüsünü açın `SDKManifest.xml` , **Özellikler**' i seçin ve ardından **VSIX özelliğindeki Ekle** değerini **doğru** olarak değiştirin.
+11. Bu **Çözüm Gezgini** için kısayol menüsünü açın, Özellikler'i seçin ve ARDıNDAN VSIX özelliğine dahil edin özelliğinin `SDKManifest.xml` değerini True olarak **değiştirin.**  
 
 12. Dosyanın içeriğini aşağıdaki XML ile değiştirin:
 
@@ -133,15 +134,15 @@ Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı ol
     </FileList>
     ```
 
-13. **Çözüm Gezgini**, **SimpleMathVSIX** projesinin kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni klasör**' i seçin.
+13. Bu **Çözüm Gezgini** **SimpleMathVSIX** projesinin kısayol menüsünü açın, Ekle'yi **ve** ardından Yeni Klasör'ü **seçin.**
 
-14. Klasörü olarak yeniden adlandırın `references` .
+14. Klasörü olarak yeniden `references` adlandırabilirsiniz.
 
-15. **Başvurular** klasörünün kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni klasör**' i seçin.
+15. Başvurular klasörünün kısayol **menüsünü açın,** Ekle'yi **ve** ardından Yeni Klasör'ü **seçin.**
 
-16. Alt klasörü olarak yeniden adlandırın `commonconfiguration` , içinde bir alt klasör oluşturun ve alt klasörü adlandırın `neutral` .
+16. Alt klasörü olarak yeniden `commonconfiguration` adlandırarak içinde bir alt klasör oluşturun ve alt klasöre adını `neutral` girin.
 
-17. Önceki dört adımı yineleyin, bu kez ilk klasörü olarak yeniden adlandırın `redist` .
+17. Önceki dört adımı yinele, bu kez ilk klasörü olarak yeniden yeniden adı. `redist`
 
      Proje artık aşağıdaki klasör yapısını içerir:
 
@@ -150,57 +151,57 @@ Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı ol
     redist\commonconfiguration\neutral
     ```
 
-18. **Çözüm Gezgini**, **SimpleMath** projesi için kısayol menüsünü açın ve **Dosya Gezgini 'nde klasörü aç**' ı seçin.
+18. Bu **Çözüm Gezgini** **SimpleMath** projesinin kısayol menüsünü açın ve ardından **Dosya Gezgini.**
 
-19. **Dosya Gezgini**'nde *bin\release* klasörüne gidin, **SimpleMath. winmd** dosyası için kısayol menüsünü açın ve **Kopyala**' yı seçin.
+19. Bu **Dosya Gezgini** *bin\Release* klasörüne gidin, **SimpleMath.winmd** dosyasının kısayol menüsünü açın ve Kopyala'yı **seçin.**
 
-20. **Çözüm Gezgini**, dosyayı **SimpleMathVSIX** projesindeki *references\commonconfiguration\neutral* klasörüne yapıştırın.
+20. Bu **Çözüm Gezgini** **simpleMathVSIX** projesinde *references\commonconfiguration\neural* klasörüne yapıştırın.
 
-21. **SimpleMath. pri** dosyasını **SimpleMathVSIX** projesindeki *redist\commonconfiguration\neutral* klasörüne yapıştırarak önceki adımı yineleyin.
+21. **SimpleMathVSIX projesinde simpleMath.pri** dosyasını *redist\commonconfiguration\neutral* **klasörüne** yapıştırarak önceki adımı tekrarlayın.
 
-22. **Çözüm Gezgini**, **SimpleMath. winmd** öğesini seçin.
+22. Bu **Çözüm Gezgini** **SimpleMath.winmd'yi seçin.**
 
-23. Menü çubuğunda özellikleri **görüntüle**' yi seçin  >   (klavye: **F4** anahtarını seçin).
+23. Menü çubuğunda Özellikleri Görüntüle **(Klavye:**  >   **F4 tuşuna basın) öğesini** seçin.
 
-24. **Özellikler** penceresinde, **derleme eylemi** özelliğini **IÇERIK** olarak değiştirin ve ardından **VSIX özelliğindeki içerme** özelliğini **true** olarak değiştirin.
+24. Özellikler **penceresinde** Derleme Eylemi özelliğini İçerik  **olarak** değiştirin ve ardından **VSIX'te Dahil Edin** özelliğini True olarak **değiştirin.**
 
-25. **Çözüm Gezgini**' de, **SimpleMath. pri** için bu işlemi tekrarlayın.
+25. Bu **Çözüm Gezgini** **SimpleMath.pri için bu işlemi tekrarlayın.**
 
-26. **Çözüm Gezgini**, **SimpleMathVSIX** projesini seçin.
+26. Bu **Çözüm Gezgini** **SimpleMathVSIX projesini** seçin.
 
-27. Menü **çubuğunda Build**  >  **Build SimpleMathVSIX** öğesini seçin.
+27. Menü çubuğunda Build   >  **Build SimpleMathVSIX öğesini seçin.**
 
-28. **Çözüm Gezgini**' de, **SimpleMathVSIX** projesi için kısayol menüsünü açın ve **Dosya Gezgini 'nde klasörü aç**' ı seçin.
+28. Bu **Çözüm Gezgini** **SimpleMathVSIX** projesinin kısayol menüsünü açın ve ardından **Dosya Gezgini.**
 
-29. **Dosya Gezgini**'nde, *\bin\Release* klasörü ' ne gidin ve ardından yüklemek için *SimpleMathVSIX. vsix* ' yi çalıştırın.
+29. Bu **Dosya Gezgini** *\bin\Release* klasörüne gidin ve *SimpleMathVSIX.vsix'i çalıştırarak* yükleyin.
 
-30. **Yükleme düğmesini seçin** , yüklemenin bitmesini bekleyin ve ardından Visual Studio 'yu yeniden başlatın.
+30. Yükle düğmesini **seçin,** yüklemenin bitip bitip yeniden başlatın ve Visual Studio.
 
-## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a> Sınıf kitaplığını kullanan bir örnek uygulama oluşturmak için
+## <a name="to-create-a-sample-app-that-uses-the-class-library"></a><a name="createSample"></a> Sınıf kitaplığını kullanan örnek bir uygulama oluşturmak için
 
-1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
+1. Menü çubuğunda Dosya Yeni **Dosya'Project.**  >    >  
 
-2. Şablonlar listesinde, **Visual C#** veya **Visual Basic** öğesini genişletin ve ardından **Windows Mağazası** düğümünü seçin.
+2. Şablon listesinde **Visual C#** veya **Visual Basic'yi** genişletin ve ardından Windows **düğümünü** seçin.
 
-3. **Boş uygulama** şablonunu seçin, projeyi **ArithmeticUI** olarak adlandırın ve **Tamam** düğmesini seçin.
+3. Boş Uygulama **şablonunu seçin,** projeye **AritmetikUI** adını ve ardından Tamam **düğmesini** seçin.
 
-4. **Çözüm Gezgini**' de, **ArithmeticUI** projesi için kısayol menüsünü açın ve ardından başvuru **Ekle**' yi seçin  >  .
+4. Bu **Çözüm Gezgini,** **AritmetikUI projesinin** kısayol menüsünü açın ve Başvuru **Ekle'yi**  >  **seçin.**
 
-5. Başvuru türleri listesinde **Windows**' u ve ardından **Uzantılar**' ı seçin.
+5. Başvuru türleri listesinde, dosya **adı'Windows** genişletin ve uzantılar'ı **seçin.**
 
-6. Ayrıntılar bölmesinde, **WinRT matematik kitaplığı** uzantısı ' nı seçin.
+6. Ayrıntılar bölmesinde WinRT Matematik Kitaplığı **uzantısını** seçin.
 
-    SDK 'niz hakkında ek bilgiler görüntülenir. Bu kılavuzda daha önce SDKManifest.xml dosyasında belirttiğiniz şekilde, **daha fazla bilgi** için Aç bağlantısını seçebilirsiniz https://msdn.microsoft.com/ .
+    SDK'nız hakkında ek bilgiler görüntülenir. Bu kılavuzda **daha önce yer** alan https://msdn.microsoft.com/ dosyada belirttiğiniz gibi, daha fazla bilgi SDKManifest.xml bağlantısını seçebilirsiniz.
 
-7. **Başvuru Yöneticisi** iletişim kutusunda, **WinRT matematik kitaplığı** onay kutusunu seçin ve **Tamam** düğmesini seçin.
+7. Başvuru **Yöneticisi iletişim** kutusunda **WinRT** Matematik Kitaplığı onay kutusunu ve ardından Tamam **düğmesini** seçin.
 
-8. Menü çubuğunda nesne tarayıcısı **görüntüle**' yi seçin  >  .
+8. Menü çubuğunda Nesne Tarayıcısını  >  **Görüntüle'yi seçin.**
 
-9. **Gözden** geçirme listesinde **basit matematik**' ı seçin.
+9. Gözat listesinde **Basit** **Matematik'i seçin.**
 
-     Artık SDK 'da neler olduğunu keşfedebilirsiniz.
+     Artık SDK'dakileri keşfedebilirsiniz.
 
-10. **Çözüm Gezgini**, **MainPage. xaml**' yi açın ve içeriğini aşağıdaki xaml ile değiştirin:
+10. Bu **Çözüm Gezgini** **MainPage.xaml'i açın** ve içeriğini aşağıdaki XAML ile değiştirin:
 
     **C#**
 
@@ -254,7 +255,7 @@ Bu kılavuzda, Visual C# kullanarak basit bir matematik kitaplığı SDK 'Sı ol
     </Page>
     ```
 
-11. **MainPage. xaml. cs** öğesini aşağıdaki kodla eşleşecek şekilde güncelleştirin:
+11. **MainPage.xaml.cs'yi aşağıdaki** kodla eş olacak şekilde güncelleştirin:
 
 ```csharp
 using System;
@@ -415,15 +416,15 @@ Public NotInheritable Class MainPage
 End Class
 ```
 
-12. Uygulamayı çalıştırmak için **F5** tuşunu seçin.
+12. Uygulamayı **çalıştırmak için F5** tuşuna basın.
 
-13. Uygulamada, iki sayı girin, bir işlem seçin ve ardından **=** düğmeyi seçin.
+13. Uygulamada iki sayı girin, bir işlem seçin ve ardından düğmeyi **=** seçin.
 
      Doğru sonuç görüntülenir.
 
-    Bir uzantı SDK 'sını başarıyla oluşturdunuz ve kullandınız.
+    Uzantı SDK'sı başarıyla oluşturuldu ve kullanıldı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: C++ kullanarak SDK oluşturma](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)
-- [İzlenecek yol: JavaScript kullanarak SDK oluşturma](../extensibility/walkthrough-creating-an-sdk-using-javascript.md)
+- [Adım adım kılavuz: C++ kullanarak SDK oluşturma](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)
+- [Adım adım kılavuz: JavaScript kullanarak SDK oluşturma](../extensibility/walkthrough-creating-an-sdk-using-javascript.md)
 - [Yazılık Geliştirme Seti Oluşturma](../extensibility/creating-a-software-development-kit.md)

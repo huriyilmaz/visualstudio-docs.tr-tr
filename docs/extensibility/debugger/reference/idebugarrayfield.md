@@ -1,6 +1,6 @@
 ---
 description: Bu arabirim bir dizi sembolünü veya türünü açıklar.
-title: Ihata ayıklama Garrayfield | Microsoft Docs
+title: IDebugArrayField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,14 +11,15 @@ ms.assetid: 9667b0a5-4295-46cc-9388-b75c1350be15
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 073438a99531b278a148b6eb19ff6e5af88004e9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f8de1ca4c8de27ab72087db7add6a75f4f7b77a940c7478c45e4647f37d74177
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058943"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239158"
 ---
 # <a name="idebugarrayfield"></a>IDebugArrayField
 Bu arabirim bir dizi sembolünü veya türünü açıklar.
@@ -29,27 +30,27 @@ Bu arabirim bir dizi sembolünü veya türünü açıklar.
 IDebugArrayField : IDebugContainerField
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Sembol sağlayıcısı, bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimini uygulayan aynı nesne üzerinde uygular. Bu arabirim, dizi nesnelerini temsil eden bir özelleşmenin bir özelleştirmesi.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Sembol sağlayıcısı bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimini uygulayan aynı nesne üzerinde kullanır. Bu arabirim, dizi nesnelerini temsil eden bir uzmanlıktır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [Getkinleştirilen d](../../../extensibility/debugger/reference/idebugfield-getkind.md) bayrağını döndürürse, bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabiriminden elde etmek için [QueryInterface](/cpp/atl/queryinterface) kullanın `FIELD_TYPE_ARRAY` .
+ [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) bayrağını döndürürse [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabiriminden bu arabirimi almak için [QueryInterface](/cpp/atl/queryinterface) `FIELD_TYPE_ARRAY` kullanın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ve [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimlerindeki yöntemlere ek olarak, bu arabirim aşağıdakileri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ [Bu arabirim, IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ve [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimleri üzerinde yöntemlere ek olarak şunları da sunar:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetNumberOfElements](../../../extensibility/debugger/reference/idebugarrayfield-getnumberofelements.md)|Dizideki öğelerin sayısını alır.|
-|[GetElementType](../../../extensibility/debugger/reference/idebugarrayfield-getelementtype.md)|Dizideki öğe türünü alır.|
+|[GetNumberOfElements](../../../extensibility/debugger/reference/idebugarrayfield-getnumberofelements.md)|Dizide öğelerin sayısını alır.|
+|[GetElementType](../../../extensibility/debugger/reference/idebugarrayfield-getelementtype.md)|Dizideki öğenin türünü alır.|
 |[GetRank](../../../extensibility/debugger/reference/idebugarrayfield-getrank.md)|Dizinin derecesini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst bilgi: sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

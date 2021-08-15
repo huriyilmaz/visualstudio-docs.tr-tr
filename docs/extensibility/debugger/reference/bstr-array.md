@@ -1,5 +1,5 @@
 ---
-description: Bir dize dizisini tanımlayan bir yapı.
+description: Dize dizisini açıklayan bir yapı.
 title: BSTR_ARRAY | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 48da37f7-a237-48a9-9ff9-389c1a00862c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5af4c0efe53625063d4bb714f3d323bef28c5954
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a84ec868a7bd2aaa6cd1326e08b0b8a869b7311672cbfeca47e584c723a95a68
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096622"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262691"
 ---
 # <a name="bstr_array"></a>BSTR_ARRAY
-Bir dize dizisini tanımlayan bir yapı.
+Dize dizisini açıklayan bir yapı.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,22 +45,22 @@ struct BSTR_ARRAY {
 
 ## <a name="members"></a>Üyeler
 `dwCount`\
-Dizideki dize sayısı `Members` .
+Dizide dize `Members` sayısı.
 
 `Members`\
-Dizeler dizisi.
+Dize dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) yönteminden döndürülür.
+Bu yapı [EnumPersistedPorts yönteminden](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) döndürülür.
 
- [Yalnızca C++] Her tek dize kullanılarak serbest bırakılmalıdır `SysFreeString` ve `Members` dizi ile serbest bırakılmalıdır `CoTaskMemFree` .
+ [yalnızca C++ ] Her bir dizenin kullanılarak serbest `SysFreeString` bırakılası `Members` ve dizisi ile serbest bırak bırak bırakıladır. `CoTaskMemFree`
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

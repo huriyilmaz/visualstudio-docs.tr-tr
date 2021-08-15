@@ -11,17 +11,18 @@ ms.assetid: 0f8a4fec-d3eb-417d-8516-4f7b51904033
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 814ca3e925a63c53b584f8c4e28d8d224adba46d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c7a621b03c235f59e8381418c8884c184808c91c1e8bdb009d6a569b90d378f6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088711"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262275"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
 Kesme noktasının bağlanmamış olma nedenini alır.

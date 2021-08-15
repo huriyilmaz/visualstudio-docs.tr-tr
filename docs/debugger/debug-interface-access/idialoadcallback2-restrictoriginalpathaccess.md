@@ -11,14 +11,15 @@ ms.assetid: 31fde3af-2824-4b0f-8d0d-cee6046596f6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7af6794b57dfe5efe8d2e85f8e74febcede5ef23
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 173f7762b212f5aaa876f87a78e72432d8829e84c63946eccea686e6abe777dc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157429"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121405149"
 ---
 # <a name="idialoadcallback2restrictoriginalpathaccess"></a>IDiaLoadCallback2::RestrictOriginalPathAccess
 Özgün hata ayıklama dizininde bir. pdb dosyası olup olmadığını belirler.

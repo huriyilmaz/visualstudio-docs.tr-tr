@@ -1,6 +1,6 @@
 ---
-title: Bağlantı | Microsoft Docs
-description: Bu makalede, hata ayıklayıcı mimarisinde bir bağlantı noktasının tanımı ve rolü Visual Studio.
+title: Bağlantı noktaları | Microsoft Docs
+description: Bu makalede, Visual Studio hata ayıklayıcı mimarisinde bir bağlantı noktasının tanımı ve rolü açıklanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,32 +11,33 @@ ms.assetid: 1d7f3aa7-7eff-4cab-bc53-0a566b1a9363
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e53b2b804433f7e9450f34dac5b21e45710cd71c
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: d8b8da73935d4d170416c2717f5d64ebfe949640d5f9d6b4b2bc4bf113438966
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900778"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262951"
 ---
 # <a name="ports"></a>Bağlantı noktaları
-Hata ayıklayıcısı mimarisinde bir bağlantı *noktası:*
+Hata ayıklayıcı mimarisinde, bir *bağlantı noktası*:
 
-- , sunucuda çalışan bir dizi işlem için kapsayıcıdır. Örneğin, bir bağlantı noktası seri kablo veya Windows CE DCOM olmayan bir makineye bağlı bir cihaza bağlantıyı temsil ediyor olabilir. Yerel bağlantı noktası olarak adlandırılan özel bağlantı noktası, yerel makinede çalışan tüm işlemleri içerir.
+- , Sunucuda çalışan bir işlem kümesi için bir kapsayıcıdır. örneğin, bir bağlantı noktası, Windows CE tabanlı bir cihaza seri kablo veya ağ bağlantılı DCOM olmayan bir makineye olan bağlantıyı temsil edebilir. Yerel makinede çalışan tüm işlemlerin bulunduğu, yerel bağlantı noktası olarak adlandırılan özel bir bağlantı noktası.
 
-- Kendisini ad veya tanımlayıcıya göre tanımlayabilir.
+- , Kendisini ada veya tanımlayıcıya göre tanımlayabilir.
 
-- Bağlantı noktası üzerinde çalışan tüm işlemleri numaralandırılır ve bu işlemleri başlatarak sonlandırılır.
+- Bağlantı noktasında çalışan tüm işlemlerin listesini oluşturabilir ve bu süreçler başlatabilir ve sonlandırabilirsiniz.
 
-- AddPort'a [bir IDebugPortRequest2](../../extensibility/debugger/reference/idebugport2.md) bağımsız değişkeni geçerek oluşturulan [bir IDebugPort2](../../extensibility/debugger/reference/idebugportrequest2.md) [arabirimiyle temsil edildi.](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)
+- , [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)'A bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) bağımsız değişkeni geçirerek oluşturulan bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilir.
 
-  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hem yerel hem de yönetilen tüm Windows tabanlı işlemleri ele alan varsayılan bir bağlantı noktası sağlar. Windows tabanlı olmayan dış cihazlarla bağlantılar için özel bir bağlantı noktası ayar gerekir. Bu tür özel bağlantı noktalarını sağlamak için özel bir bağlantı noktası sağlayıcı da ayarlayabilirsiniz.
+  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hem yerel hem de yönetilen tüm Windows tabanlı süreçler işleyen varsayılan bir bağlantı noktası sağlar. Windows tabanlı olmayan dış cihazlarla bağlantı için özel bir bağlantı noktası ayarlanmalıdır. Bu tür özel bağlantı noktalarını sağlamak için özel bir bağlantı noktası sağlayıcısı da ayarlamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sunucular](../../extensibility/debugger/servers-visual-studio-sdk.md)
 - [İşlemler](../../extensibility/debugger/processes.md)
-- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)
 - [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)
 - [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

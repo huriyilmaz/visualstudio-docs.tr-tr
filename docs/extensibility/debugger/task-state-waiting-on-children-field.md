@@ -1,6 +1,6 @@
 ---
-description: Görev, temsilcisini yürütmeyi bitirdi ve ekli alt görevlerin tamamlanmasını örtük olarak bekliyor.
-title: TASK_STATE_WAITING_ON_CHILDREN alanı | Microsoft Docs
+description: Görev, temsilcisini yürütmeyi tamamladı ve ekli alt görevlerin tamamlanması için örtülü olarak bekliyor.
+title: TASK_STATE_WAITING_ON_CHILDREN Alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,23 +9,24 @@ ms.assetid: 6f26b098-84ad-4f6e-ba27-6136581ba630
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: b795a20ba19b1309b3f3bf972beed70549d72d88
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 6e63ef2032b4d3ac2bd874276c690b84a36b4abaf598b9eb44a37fca810ad1b1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900167"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306237"
 ---
 # <a name="task_state_waiting_on_children-field"></a>TASK_STATE_WAITING_ON_CHILDREN alanı
-Görev, temsilcisini yürütmeyi bitirdi ve ekli alt görevlerin tamamlanmasını örtük olarak bekliyor.
+Görev, temsilcisini yürütmeyi tamamladı ve ekli alt görevlerin tamamlanması için örtülü olarak bekliyor.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
+ **Derleme:** mscorlib *(mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +35,7 @@ Görev, temsilcisini yürütmeyi bitirdi ve ekli alt görevlerin tamamlanmasın�
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- [M_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .
+ M_stateFlags [alanı](../../extensibility/debugger/m-stateflags-field.md) bu değeri içeriyorsa özelliği <xref:System.Threading.Tasks.Task.Status%2A> değerini <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

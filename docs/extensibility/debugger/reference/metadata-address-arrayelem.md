@@ -1,5 +1,5 @@
 ---
-description: Bu yapı, dizi içindeki bir Array öğesini temsil eder.
+description: Bu yapı, bir dizi içindeki bir dizi öğesini temsil eder.
 title: METADATA_ADDRESS_ARRAYELEM | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,21 +11,22 @@ ms.assetid: 24321be5-7c17-4038-82a1-c20a2b68ff3c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 319b10658950eb5c7e9f8972e6af8f9f5146980d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5ec0844ce76be009e0111cc5edfc71350f05037d685aaa4d793b7e9446a9b891
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091493"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401823"
 ---
 # <a name="metadata_address_arrayelem"></a>METADATA_ADDRESS_ARRAYELEM
 
-Bu yapı, dizi içindeki bir Array öğesini temsil eder.
+Bu yapı, bir dizi içindeki bir dizi öğesini temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,22 +47,22 @@ public struct METADATA_ADDRESS_ARRAYELEM {
 ## <a name="members"></a>Üyeler
 
 `tokMethod`\
-Bu öğenin bir parçası olan dizinin KIMLIĞI.
+Bu öğenin bir parçası olduğu dizinin kimliği.
 
-[C++] `_mdToken` , `typedef` 32 bitlik bir içindir `int` .
+[C++] `_mdToken` , `typedef` 32 bit için bir'dır. `int`
 
 `dwIndex`\
 Dizi içindeki bu öğenin dizini.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_ARRAYELEM` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+Bu yapı, yapının alanı [(DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) enumerasyonundan bir değer) olarak ayarlanırken ADDRESS_KIND `dwKind` parçası `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_ARRAYELEM` olur. [](../../../extensibility/debugger/reference/address-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

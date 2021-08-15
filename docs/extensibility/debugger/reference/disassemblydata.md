@@ -1,5 +1,5 @@
 ---
-description: Görüntülenecek tümleşik geliştirme ortamı (IDE) için bir ayrıştırılmış tek derleme yönergesini açıklar.
+description: Tümleşik geliştirme ortamının (IDE) görüntü için tek bir ayrı yönergeyi açıklar.
 title: DisassemblyData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 10e70aa7-9381-40d3-bdd1-d2cad78ef16c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 71d52c4f48f23368d83d81f88fba4bf0ba36f197
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e76a231891235f26ea4b4cd675f341376de4ff97ef7e6b2540a1cd1318504ce6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096128"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262561"
 ---
 # <a name="disassemblydata"></a>DisassemblyData
-Görüntülenecek tümleşik geliştirme ortamı (IDE) için bir ayrıştırılmış tek derleme yönergesini açıklar.
+Tümleşik geliştirme ortamının (IDE) görüntü için tek bir ayrı yönergeyi açıklar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,13 +67,13 @@ public struct DisassemblyData {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Hangi alanların doldurulacağını belirten [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) sabiti.
+Hangi [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) doldurulan sabiti.
 
 `bstrAddress`\
-Bir başlangıç noktasından (genellikle ilişkili işlevin başlangıcı) bir konum olarak adres.
+Bir başlangıç noktasından uzaklık olarak adres (genellikle ilişkili işlevin başlangıcı).
 
 `bstrCodeBytes`\
-Bu yönergenin kod baytları.
+Bu yönerge için kod baytları.
 
 `bstrOpcode`\
 Bu yönerge için opcode.
@@ -81,41 +82,41 @@ Bu yönerge için opcode.
 Bu yönergenin işlenenleri.
 
 `bstrSymbol`\
-Varsa, adres (genel simge, etiket, vb.) ile ilişkili simge adı.
+Varsa, adresle ilişkili sembol adı (ortak sembol, etiket vb.).
 
 `uCodeLocationId`\
-Bu ayrıştırılmış çizgi için kod konum tanımlayıcısı. Bir satırın kod bağlamı adresi diğerinin kod bağlamı adresinden büyükse, birincinin ayrıştırılmış kod konumu tanımlayıcısı ikincinin kod konumu tanımlayıcısından de daha büyük olur.
+Bu ayrık satırın kod konumu tanımlayıcısı. Bir satırın kod bağlamı adresi başka bir satırın kod bağlamı adreslerinden büyükse, ilk satırın kod bağlamı tanımlayıcısı da ikinci satırın kod konumu tanımlayıcısından büyük olur.
 
 `posBeg`\
-Ayrıştırılmış verilerin başladığı bir belgedeki konuma karşılık gelen [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) .
+TEXT_POSITION [](../../../extensibility/debugger/reference/text-position.md) verilerin başladığı belgedeki konuma karşılık gelen veri kaynağıdır.
 
 `posEnd`\
-Ayrıştırılmış verilerin bittiği bir belgedeki konuma karşılık gelen [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) .
+Veri [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) verilerin sona erdiği belgedeki konuma karşılık gelen veri kaynağı.
 
 `bstrDocumentUrl`\
-Dosya adı olarak gösterilebilen metin belgeleri için, bu alan, `bstrDocumentUrl` biçimi kullanılarak kaynağın bulunabileceği dosya adıyla doldurulur `file://file name` .
+Dosya adı olarak temsil edilen metin belgeleri için alanı, biçimi kullanılarak kaynağın buluna dosya `bstrDocumentUrl` adıyla `file://file name` doldurulur.
 
-Dosya adı olarak temsil edilemeyecek metin belgeleri için, `bstrDocumentUrl` belge için benzersiz bir tanımlayıcıdır ve hata ayıklama motorunun [GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md) yöntemini uygulaması gerekir.
+Dosya adı olarak temsil edil etmeyen metin belgeleri için, belge için benzersiz bir tanımlayıcıdır ve hata ayıklama altyapısı `bstrDocumentUrl` [GetDocument yöntemini uygulamalı.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)
 
-Bu alan Ayrıca, sağlama toplamı hakkında ek bilgiler de içerebilir. Ayrıntılar için bkz. açıklamalar.
+Bu alan sağlamaları hakkında ek bilgiler de içerebilir. Ayrıntılar için bkz. Açıklamalar.
 
 `dwByteOffset`\
-Yönergenin kod satırının başından itibaren olduğu bayt sayısı.
+Yönergenin bayt sayısı, kod çizgisinin başından itibarendir.
 
 `dwFlags`\
-Hangi bayrakların etkin olduğunu belirten [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) sabiti.
+Hangi [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) etkin olduğunu belirten bir sabittir.
 
 ## <a name="remarks"></a>Açıklamalar
-Her `DisassemblyData` Yapı, ayrıştırılmış bir tek derleme yönergesini açıklar. [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yönteminden bu yapıların bir dizisi döndürülür.
+Her `DisassemblyData` yapı, bir ayrım yönergesi açıklar. Bu yapıların dizisi [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yönteminden döndürülür.
 
-[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı yalnızca metin tabanlı belgeler için kullanılır. Bu yönergenin kaynak kodu aralığı yalnızca bir deyimden veya satırdan oluşturulan ilk yönerge için doldurulmuştur, örneğin, ne zaman `dwByteOffset == 0` .
+TEXT_POSITION [](../../../extensibility/debugger/reference/text-position.md) yapısı yalnızca metin tabanlı belgeler için kullanılır. Bu yönergenin kaynak kod aralığı yalnızca bir deyiminden veya satırdan oluşturulan ilk yönerge için (örneğin, olduğunda) `dwByteOffset == 0` doldurulur.
 
-Metinsel olmayan belgeler için, koddan bir belge bağlamı elde edilebilir ve `bstrDocumentUrl` alan null bir değer olmalıdır. Alan, `bstrDocumentUrl` `bstrDocumentUrl` önceki Array öğesindeki alanla aynı ise, öğesini `DisassemblyData` `bstrDocumentUrl` null bir değer olarak ayarlayın.
+Metinsel olmayan belgeler için, koddan belge bağlamı elde edilir ve `bstrDocumentUrl` alan null değer olmalıdır. Alan, `bstrDocumentUrl` önceki dizi `bstrDocumentUrl` öğesinde yer alanla `DisassemblyData` aynı ise değerini null `bstrDocumentUrl` değere ayarlayın.
 
-`dwFlags`Alan `DF_DOCUMENT_CHECKSUM` bayrak ayarlandıysa, ek sağlama bilgileri alanı tarafından işaret edilen dizeyi izler `bstrDocumentUrl` . Özellikle, null dize sonlandırıcısının ardından, sağlama toplamı algoritmasını tanımlayan bir GUID, ardından, sağlama toplamı içindeki bayt sayısını belirten 4 baytlık bir değer ve sırasıyla sağlama toplamı baytları tarafından izlenir. Bu alanın içindeki bu alanı kodlama ve kodunu çözme hakkında bu konudaki örneğe bakın [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] .
+Alanda `dwFlags` bayrağı `DF_DOCUMENT_CHECKSUM` ayarlanmışsa, ek sağlama kümesi bilgileri alanı tarafından işaret eden dizeyi `bstrDocumentUrl` izler. Özellikle, null dize sonlandırıcıdan sonra, sırasıyla sağlama toplam algoritmasını tanımlayan bir GUID izler ve ardından sağlama toplam değerindeki bayt sayısını belirten 4 bayt değeri gelir ve bu değerin ardından sağlama toplam baytları gelir. bu alanı içinde kodlama ve kodunu çözme hakkında bu konudaki Örnek'e [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] bakın.
 
 ## <a name="example"></a>Örnek
-`bstrDocumentUrl`Bayrak ayarlandıysa, alan bir dize dışında ek bilgiler içerebilir `DF_DOCUMENT_CHECKSUM` . Bu kodlanmış dize oluşturma ve okuma işlemi açıktır [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] . Bununla birlikte, ' de, [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] başka bir önemi vardır. Merak eden kişiler için aşağıdaki örnek, ' [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] deki kodlanmış dizenin kodunun çözülmesi için bir yol ve bir yolu gösterir [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] .
+Bayrağın `bstrDocumentUrl` ayarlanmış olduğu alan, dize dışında ek `DF_DOCUMENT_CHECKSUM` bilgiler içerebilir. Bu kodlanmış dizeyi oluşturma ve okuma işlemi içinde [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] basittir. Ancak, [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] içinde başka bir konudur. Merak edenler için aşağıdaki örnekte, kodlanmış dizeyi oluşturmanın bir yolu ve içinde kodlanmış dizenin kodunu [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] çözmenin bir yolu yer [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] alır.
 
 ```csharp
 using System;
@@ -229,7 +230,7 @@ namespace MyNamespace
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)
-- [Okuyamaz](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+- [Okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
 - [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

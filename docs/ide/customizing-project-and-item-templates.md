@@ -10,12 +10,13 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 4229b0dcaf1c1cdacd7dd5a44cbb56afdfe9707d
-ms.sourcegitcommit: 9c831a7f39e5b3e3c5db000b2545715bf12225f3
+ms.technology: vs-ide-general
+ms.openlocfilehash: 5ee439e670a99c609b2d90c9c227ba8ceba5cdd23cd21107e781cdfa3dcff41d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105933790"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121233491"
 ---
 # <a name="customize-project-and-item-templates"></a>Proje ve öğe şablonlarını özelleştirme
 
@@ -43,7 +44,7 @@ Proje ve öğe şablonları oluşturulduktan sonra bile gereksinimlerinizi karş
 - [Nasıl yapılır: şablonlarda sorun giderme](../ide/how-to-troubleshoot-templates.md)
 - [Nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
 - [Nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>
 - [Komutu kullanarak şablonları özelleştirme `dotnet new`](/dotnet/core/tools/custom-templates/)
 - [Komutu kullanarak bir .NET çözüm dosyasındaki projeleri listeleme veya değiştirme `dotnet sln`](/dotnet/core/tools/dotnet-sln/)

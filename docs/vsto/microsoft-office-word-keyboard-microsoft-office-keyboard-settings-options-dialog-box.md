@@ -1,6 +1,6 @@
 ---
-title: Office Word Klavyesi, ayarlar, Seçenekler iletişim kutusu
-description: Belge odaklanıldığında, dinamik klavye düzeni seçerek Microsoft Word 'Ün kısayol tuşu komutlarını nasıl alacağını öğrenin.
+title: Office Word Klavyesi, Ayarlar, Seçenekler iletişim kutusu
+description: Belge odakta olduğunda Microsoft Word tuş komutlarını almak için Dinamik klavye şemasını seçmeyi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,26 +17,27 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 0138fcd73ddf07202a9111ec2b3d17dcc0fb7a0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ffdd9872431e670833ce6639706f1c27ba1f69218049f2daf4d8cbb169f8298d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879429"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121331201"
 ---
-# <a name="microsoft-office-word-keyboard-settings-options-dialog-box"></a>Microsoft Office sözcük klavyesi, ayarlar, Seçenekler iletişim kutusu
-  Microsoft Office Word ve Visual Studio kısayol tuşlarını her ikisi de işler. Aynı kısayol tuşu birleşimi Word ve Visual Studio 'daki farklı komutlar için de kullanılabilir. Word, Visual Studio 'da belge düzeyindeki bir projede açıldığında, kısayol tuşu komutlarını yalnızca bir seferde tek bir uygulama alır. Varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak belge odaklanıldığında, **dinamik klavye düzeni** seçerek Word 'ün bunları almasını sağlayabilirsiniz.
+# <a name="microsoft-office-word-keyboard-settings-options-dialog-box"></a>Microsoft Office Word Klavyesi, Ayarlar, Seçenekler iletişim kutusu
+  Microsoft Office Word ve Visual Studio kısayol tuşlarını işle. Aynı kısayol tuş bileşimi Word'de ve diğer komutlarda farklı Visual Studio. Word, belge düzeyi projesinde Visual Studio anda yalnızca bir uygulama kısayol tuşu komutlarını alır. Varsayılan olarak, Visual Studio kısayol tuş komutlarını alır, ancak Dinamik klavye şeması'yı seçerek belge odağında Word'un bunları **almalarını sekleyebilirsiniz.**
 
- Şu anda kısayol tuşlarını işleyen uygulamada bir komuta atanmamış bir kısayol tuşu kullanırsanız, kısayol tuşu diğer uygulamaya geçirilir.
+ Uygulamada şu anda kısayol tuşlarını işlemektedir bir komuta atanmamış bir kısayol anahtarı kullanırsanız, kısayol tuşu diğer uygulamaya geçiri.
 
- Seçtiğiniz seçenek, siz değiştirene kadar Word projeleri için geçerli olmaya devam edecektir. Seçim Excel projelerini Microsoft Office etkilemez; Excel 'de Microsoft Office Excel klavye seçeneklerini kullanarak herhangi bir değişiklik yapmanız gerekir.
+ Siz değiştirene kadar, seçen seçenek Word projeleri için geçerli kalır. Seçim, projeleri Microsoft Office Excel etkilemez; klavye seçeneklerini kullanarak Excel değişiklik Microsoft Office Excel gerekir.
 
 ## <a name="uielement-list"></a>UIElement listesi
- **Visual Studio klavye düzeni** Word belgesi odağa sahip olsa bile, Visual Studio tüm kısayol tuşu komutlarını alır. Örneğin, belge odaklanmışken **F5** işlev tuşuna basarsanız, Visual Studio çözümünüzün hata ayıklamasını başlatır.
+ **Visual Studio düzeni,** Visual Studio Word belgesi odağında olsa bile tüm kısayol tuş komutlarını alır. Örneğin, belge odağındayken **F5** işlev tuşuna basıyorsanız Visual Studio hata ayıklamaya başlar.
 
- **Dinamik klavye düzeni** Visual Studio yalnızca odağa sahip olduğunda kısayol tuşu komutlarını alır. Word belgesi odağa sahip olduğunda, Word tüm kısayol tuşu komutlarını alır. Örneğin, Word belgesi odağa sahip iken **F5** işlev tuşuna basarsanız, sözcük **Bul ve Değiştir** iletişim kutusunu seçili **Git** sekmesi ile açar. Visual Studio odaklandığında **F5** tuşuna basarsanız, Visual Studio çözümünüzün hata ayıklamasını başlatır.
+ **Dinamik klavye düzeni** Visual Studio kısayol tuş komutlarını yalnızca odakta olduğunda alır. Word belgesi odağında, Word tüm kısayol tuş komutlarını alır. Örneğin, Word belgesi odağındayken **F5** işlev tuşuna bassanız  Word, Git sekmesinin seçili olduğu Bul ve Değiştir **iletişim** kutusunu açar. Odağınız varken **F5** tuşuna Visual Studio, Visual Studio hata ayıklamaya başlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Microsoft Office Excel klavye, Microsoft Office Klavye ayarları, Seçenekler iletişim kutusu](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
+- [Microsoft Office Excel Klavye, Microsoft Office Klavye Ayarlar, Seçenekler iletişim kutusu](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)

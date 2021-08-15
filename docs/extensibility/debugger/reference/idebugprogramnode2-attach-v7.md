@@ -1,6 +1,6 @@
 ---
 title: 'IDebugProgramNode2:: Attach_V7 | Microsoft Docs'
-description: Bu arabirim yöntemi, Visual Studio 2005 ' den önce kullanılan eski, Kullanımdan kaldırılmış bir iliştirme yöntemidir.
+description: bu arabirim yöntemi, Visual Studio 2005 ' den önce kullanılan eski, kullanımdan kaldırılmış bir iliştirme yöntemidir.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ helpviewer_keywords:
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c949bba45457917e4dd00bdc05bc300f3a38eb7e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fbad29417b7c53284c0a00281f9c702c8bb5e342e44bcd84b6106799e9d7560f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053600"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121261638"
 ---
 # <a name="idebugprogramnode2attach_v7"></a>IDebugProgramNode2::Attach_V7
 

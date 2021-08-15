@@ -11,14 +11,15 @@ ms.assetid: bb3d3322-0e5e-4dd5-b93a-24d5fbcd2ffd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f02a8dd1497680239db9363a2e0682082f0c68d8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: acf0e2d5cd5d72670b00e4cffa05a74c09f8f7e19604edeaabcc82ce834c0afe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057344"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401589"
 ---
 # <a name="how-to-use-the-activity-log"></a>Nasıl yapılır: etkinlik günlüğünü kullanma
 VSPackages, etkinlik günlüğüne ileti yazabilir. Bu özellik, perakende ortamlarda VSPackages hata ayıklaması için özellikle faydalıdır.
@@ -46,9 +47,9 @@ VSPackages, etkinlik günlüğüne ileti yazabilir. Bu özellik, perakende ortam
 
 ## <a name="to-examine-the-activity-log"></a>Etkinlik günlüğünü incelemek için
 
-1. Oturumunuz sırasında diske ActivityLog.xml yazmak için Visual Studio 'Yu [/log](../ide/reference/log-devenv-exe.md) komut satırı anahtarıyla çalıştırın.
+1. oturumunuz sırasında ActivityLog.xml diske yazmak için [/log](../ide/reference/log-devenv-exe.md) komut satırı anahtarıyla Visual Studio çalıştırın.
 
-2. Visual Studio 'Yu kapattıktan sonra, Visual Studio verileri için alt klasörde etkinlik günlüğünü bulun:
+2. Visual Studio kapatıldıktan sonra, Visual Studio verileri için alt klasörde etkinlik günlüğünü bulun:
 
    <em> *% AppData%</em>\microsoft\visualstudio \\ \<version>\ActivityLog.xml*.
 

@@ -13,15 +13,16 @@ ms.assetid: 8806954f-cf28-48d5-81b2-d722ceaf7d27
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c1074c01135677dc0c89408d979e2f2977359c64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fcc18ec69b14aef16e16d1674080bc0e06666e6505a64e34bf888abc1e4d2724
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916562"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121301284"
 ---
 # <a name="function-details-view"></a>İşlev Ayrıntıları Görünümü
 **Işlev Ayrıntıları görünümü** penceresi aşağıdaki bilgileri görüntüler:

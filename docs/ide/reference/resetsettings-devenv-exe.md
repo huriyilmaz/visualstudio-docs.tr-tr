@@ -1,6 +1,6 @@
 ---
 title: -ResetSettings (devenv.exe)
-description: Visual Studio varsayılan ayarlarını geri yüklemek ve Visual Studio IDE 'yi otomatik olarak başlatmak için ResetSettings Devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
+description: varsayılan Visual Studio ayarlarını geri yüklemek ve Visual Studio ıde 'yi otomatik olarak başlatmak için resetsettings devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -13,20 +13,21 @@ ms.assetid: 1d41021c-6f58-4bd5-b122-d1c995812192
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e523738ff23b40c80b5df21d90b582d94c59087f
-ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
+ms.openlocfilehash: b3329f4a5f42094a1ad87dd8b69ec99255d4e21cdf64575a91bf68494d7c7d30
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "110724544"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121317806"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Visual Studio varsayılan ayarlarını geri yükler ve Visual Studio IDE 'yi otomatik olarak başlatır. Bu anahtar isteğe bağlı olarak ayarları belirtilen ayarlar dosyasına () sıfırlar `*.vssettings` .
+varsayılan Visual Studio ayarlarını geri yükler ve Visual Studio ıde 'yi otomatik olarak başlatır. Bu anahtar isteğe bağlı olarak ayarları belirtilen ayarlar dosyasına () sıfırlar `*.vssettings` .
 
-Varsayılan ayarlar, Visual Studio ilk kez başlatıldığında seçili olan profilden gelir.
+varsayılan ayarlar, Visual Studio ilk kez başlatıldığında seçili olan profilden gelir.
 
 > [!TIP]
 > Tümleşik geliştirme ortamı (IDE) kullanarak ayarları sıfırlama hakkında bilgi edinmek için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
@@ -41,7 +42,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 - *SettingsFile*
 
-  İsteğe bağlı. `.vssettings`Visual Studio 'ya uygulanacak dosyanın tam yolu ve adı.
+  İsteğe bağlı. Visual Studio uygulanacak dosyanın tam yolu ve adı `.vssettings` .
 
 - *Defaultcollectionbelirleyicisi*
 
@@ -68,7 +69,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 İkinci örnek, Visual C# varsayılan profilini geri yükler.
 
-Üçüncü örnek, ayarları uyguladıktan sonra Visual Studio 'Yu da kapatacak. Ekleme yapabilirsiniz `/Command "File.Exit"` .
+üçüncü örnek, ayarları uyguladıktan sonra Visual Studio de kapatır. Ekleme yapabilirsiniz `/Command "File.Exit"` .
 
 ```shell
 devenv /ResetSettings "%USERPROFILE%\MySettings.vssettings"
@@ -81,5 +82,5 @@ devenv /NoSplash /ResetSettings General /Command Exit
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ortam ayarları](../environment-settings.md)
-- [Visual Studio IDE 'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio ıde 'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)

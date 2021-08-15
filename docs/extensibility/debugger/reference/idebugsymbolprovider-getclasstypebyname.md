@@ -11,17 +11,18 @@ ms.assetid: 2c748909-51dc-49b7-b193-19f96fca1138
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c6439200ce0865fe7e6efd2424be0c5798e02dfa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 989ca9aa034103c492a141c113282c969bcd02ba29ecd4593f2f66680403f940
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081366"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306783"
 ---
 # <a name="idebugsymbolprovidergetclasstypebyname"></a>IDebugSymbolProvider::GetClassTypeByName
 Bu yöntem, tam sınıf adını temsil eden sınıf alan türünü alır.

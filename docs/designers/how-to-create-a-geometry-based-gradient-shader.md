@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Geometri Tabanlı Gradyan Gölgelendirici Oluşturma'
-description: Gölgelendirici tasarımcısını ve yönlendirilebilir grafik gölgelendirici dilini kullanarak sabit bir RGB renk değerini ölçeklendirilen geometri tabanlı bir gradyan gölgelendiricisi oluşturma hakkında bilgi edinin.
+description: gölgelendirici tasarımcısını ve yönlendirilen Graph gölgelendirici dilini kullanarak sabit bir RGB renk değerini ölçeklendirilen geometri tabanlı bir gradyan gölgelendiricisi oluşturma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,18 +8,19 @@ ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f3814eabb38e205acedd6bd2b00fd98901568c7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4abfa5057c0b9f634f7524fd8421ae44e24fbe0896a520dd65902699881c0299
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931038"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121263328"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Nasıl yapılır: Geometri tabanlı gradyan gölgelendirici oluşturma
 
-Bu makalede, geometri tabanlı bir gradyan gölgelendirici oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş Graf gölgelendirici dilinin nasıl kullanılacağı gösterilmektedir. Bu gölgelendirici, bir sabit RGB renk değerini, dünya alanındaki bir nesne noktasının yüksekliğine göre ölçeklendirir.
+bu makalede, geometri tabanlı bir gradyan gölgelendirici oluşturmak için gölgelendirici tasarımcısının ve yönlendirilmiş Graph gölgelendirici dilinin nasıl kullanılacağı gösterilmektedir. Bu gölgelendirici, bir sabit RGB renk değerini, dünya alanındaki bir nesne noktasının yüksekliğine göre ölçeklendirir.
 
 ## <a name="create-a-geometry-based-gradient-shader"></a>Geometri tabanlı gradyan gölgelendirici oluşturma
 
@@ -43,7 +44,7 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 8. RGB renk sabitini, maskelenmiş dünya alanı konumuna göre çarpın. **Nokta rengi** düğümünün **RGB** terminalini **çarp** düğümünün **Y** terminaline taşıyın ve ardından **maske vektörü** düğümünün **Çıkış** terminalini **çarpma** düğümünün **X** terminaline taşıyın. Bu bağlantı, renk değerini, dünya alanındaki pikselin yüksekliğine ölçeklendirir.
 
-9. Ölçeklendirilmiş renk değerini son renge bağlayın. **Çarp** düğümünün **Çıkış** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
+9. ölçeklendirilmiş renk değerini son renge Bağlan. **Çarp** düğümünün **Çıkış** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
 
 Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir sphere öğesine uygulanan gölgelendirici önizlemesi gösterilmektedir.
 

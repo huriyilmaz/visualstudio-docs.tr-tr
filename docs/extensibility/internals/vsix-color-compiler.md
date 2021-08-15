@@ -1,6 +1,6 @@
 ---
 title: VSIX Renk Derleyicisi | Microsoft Docs
-description: Bir .pkgdef Visual Studio temaları içinde renkleri kapsayan bir konsol uygulaması olan Visual Studio Uzantısı Renk Derleyicisi aracı hakkında bilgi edinin.
+description: .pkgdef Visual Studio temalarında renkleri kapsayan bir konsol uygulaması olan Visual Studio Uzantısı Renk Derleyicisi aracı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,17 +8,18 @@ ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f7277299d3cedd2ea0db49a44109d8a0441ebd0
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: b30742061a9927ee8e7123c56a5d86b9cf72ff706dad04b9650a39b77a6350e0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901766"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238313"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
-Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temalarının renklerini temsil eden bir .xml dosyası alan ve bu renklerin bir .pkgdef dosyasına kapsıyor olması için bu renklerin Visual Studio. Veri kaynağı dosyaları arasındaki farkları karşılaştırmak .xml, bu araç kaynak denetiminde özel renkleri yönetmek için yararlıdır. Derlemenin çıktısı geçerli bir .pkgdef dosyası olacak şekilde derleme ortamlarına da bağlanabilir.
+Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temalarının renklerini temsil eden bir .xml dosyası alan ve bu renklerin Visual Studio'de kullanıla bir .pkgdef dosyasına kapatan bir konsol uygulamasıdır. Farklı dosyalar arasındaki farkları karşılaştırmak .xml, bu araç kaynak denetiminde özel renkleri yönetmek için yararlıdır. Derlemenin çıktısı geçerli bir .pkgdef dosyası olacak şekilde derleme ortamlarına da bağlanabilir.
 
  **Tema XML şeması**
 
@@ -44,7 +45,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
  **Tema**
 
- öğesi \<Theme> temayı tamamen tanımlar. Bir tema en az bir öğe \<Category> içermeli. Tema öğeleri şu şekilde tanımlanır:
+ öğesi \<Theme> temayı tamamen tanımlar. Tema en az bir öğe \<Category> içermeli. Tema öğeleri şu şekilde tanımlanır:
 
 ```xml
 <Theme Name="name" GUID="guid">
@@ -83,7 +84,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
  **Renk**
 
- öğesi, \<Color> bir bileşen veya kullanıcı arabiriminin durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State] olur. Yedekli olduğu için "color" sözcüğü kullanma. Renk, öğe türünü ve rengin uygulanacak olduğu durumları veya "durum"ları net bir şekilde belirtmalıdır. Renk boş olamaz ve bir ve öğesinin bir veya her ikisini de \<Background> \<Foreground> içermesi gerekir. Renk öğeleri şu şekilde tanımlanır:
+ öğesi, \<Color> bir bileşen veya kullanıcı arabiriminin durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State] olur. Yedekli olduğu için "renk" sözcüğü kullanma. Renk, öğe türünü ve rengin uygulanacak olduğu durumları veya "durum"ları net bir şekilde belirtmalıdır. Renk boş olamaz ve bir ve öğesinin bir veya her ikisini birden \<Background> \<Foreground> içermesi gerekir. Renk öğeleri şu şekilde tanımlanır:
 
 ```xml
 <Color Name="name">
@@ -98,7 +99,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
  **Arka plan ve/veya Ön Plan**
 
- ve öğeleri, bir ui öğesinin arka planı veya ön planı için bir rengin \<Background> \<Foreground> değerini ve türünü tanımlar. Bu öğelerin hiçbir yoktur.
+ ve öğeleri, bir ui öğesinin arka planı veya ön planı için bir \<Background> \<Foreground> rengin değerini ve türünü tanımlar. Bu öğelerin hiçbir yoktur.
 
 ```xml
 <Background Type="type" Source="int" />
@@ -107,10 +108,10 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
 |**Öznitelik**|**Tanım**|
 |-|-|
-|Tür|[Gerekli] Rengin türü. Şunlardan biri olabilir:<br /><br /> *CT_INVALID:* Renk geçersiz veya ayarlanmaz.<br /><br /> *CT_RAW:* Ham ARGB değeri.<br /><br /> *CT_COLORINDEX:* KULLANMAYIN.<br /><br /> *CT_SYSCOLOR:* SysColor'dan bir Windows sistem rengi.<br /><br /> *CT_VSCOLOR:* Bir Visual Studio rengi __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Otomatik renk.<br /><br /> *CT_TRACK_FOREGROUND:* KULLANMAYIN.<br /><br /> *CT_TRACK_BACKGROUND:* KULLANMAYIN.|
+|Tür|[Gerekli] Rengin türü. Şunlardan biri olabilir:<br /><br /> *CT_INVALID:* Renk geçersiz veya ayarlanmaz.<br /><br /> *CT_RAW:* Ham ARGB değeri.<br /><br /> *CT_COLORINDEX:* KULLANMAYIN.<br /><br /> *CT_SYSCOLOR:* SysColor Windows bir sistem rengi.<br /><br /> *CT_VSCOLOR:* Bir Visual Studio rengi __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Otomatik renk.<br /><br /> *CT_TRACK_FOREGROUND:* KULLANMAYIN.<br /><br /> *CT_TRACK_BACKGROUND:* KULLANMAYIN.|
 |Kaynak|[Gerekli] Onaltılık olarak temsil edilen rengin değeri|
 
- Tür enumerasyonu __VSCOLORTYPE tüm değerler, Tür özniteliğinde şema tarafından değerleni. Ancak, yalnızca bir veya daha fazla CT_RAW CT_SYSCOLOR.
+ Tür enumerasyonu __VSCOLORTYPE tüm değerler Tür özniteliğinde şema tarafından de destekler. Ancak, yalnızca bir veya daha fazla CT_RAW CT_SYSCOLOR.
 
  **Hepsi birlikte**
 

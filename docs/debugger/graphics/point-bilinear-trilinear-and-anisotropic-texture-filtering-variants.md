@@ -8,14 +8,15 @@ ms.assetid: 57d14fc9-b5f7-45ee-9717-48086886742d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d89db195b94bcf31d2ce2c7482c5b7315a979e9
-ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+ms.openlocfilehash: 34a7710de91132ae34cbb9c7532cf89c50ca21201db123af21c6dc36348862fb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114232654"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121311511"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Nokta, Çift Doğrusal, Üçlü Doğrusal ve Yön Bağımlı Doku Filtreleme Çeşitleri
 Uygun doku örnekleyicilerde filtreleme modunu geçersiz kılar.
@@ -23,7 +24,7 @@ Uygun doku örnekleyicilerde filtreleme modunu geçersiz kılar.
 ## <a name="interpretation"></a>Yorum
  Farklı doku örnekleme yöntemleri farklı performans maliyetlerine ve görüntü kalitesine sahiptir. Maliyeti ve görsel kalitesini artırmak için filtre modları şu şekildedir:
 
-1. Nokta filtreleme (en düşük maliyetli, en kötü görsel kalitesi)
+1. Nokta filtreleme (en ucuz, en kötü görsel kalitesi)
 
 2. Bilinear filtreleme
 
@@ -61,10 +62,10 @@ Uygun doku örnekleyicilerde filtreleme modunu geçersiz kılar.
   **Anisotropik Doku** Filtreleme çeşidinde, uygulama tarafından sağlanan filtre modu ile değiştirilir ve `D3D11_FILTER_ANISOTROPIC` Maksimum Anisotropi 16 olarak ayarlanır.
 
 ## <a name="restrictions-and-limitations"></a>Kısıtlamalar ve sınırlamalar
- Direct3D'de özellik düzeyi 9.1, maksimum anisotropiyi 2x olarak belirtir. **Anisotropik Doku** Filtreleme varyantı özel olarak 16x anisotropi kullanmayı denemesi nedeniyle, özellik düzeyi 9.1 cihazında kare analizi çalıştır çalıştırılana kayıttan yürütme başarısız olur. Bu sınırlamadan etkilenen cihazlar ARM tabanlı Surface RT ve Surface 2 ve tabletler arasında Windows içerir. Bazı bilgisayarlarda hala buluna eski GPU'lar da etkilenebilir, ancak yaygın olarak eski olduğu kabul edilir ve giderek daha yaygındır.
+ Direct3D'de özellik düzeyi 9.1, maksimum anisotropiyi 2x olarak belirtir. **Anisotropik Doku** Filtreleme varyantı özel olarak 16x anisotropi kullanmayı denemesi nedeniyle, özellik düzeyi 9.1 cihazında kare analizi çalıştırılana kadar kayıttan yürütme başarısız olur. Bu sınırlamadan etkilenen cihazlar ARM tabanlı Surface RT ve Surface 2 ve tabletler Windows içerir. Bazı bilgisayarlarda hala buluna eski GPU'lar da etkilenebilir, ancak yaygın olarak eski olduğu kabul edilir ve giderek daha yaygındır.
 
 ## <a name="example-1"></a>Örnek 1
- Nokta **Doku Filtreleme varyantı** aşağıdaki gibi bir kod kullanılarak yeniden üretebilirsiniz:
+ Nokta **Doku Filtreleme varyantı,** aşağıdaki gibi bir kod kullanılarak yeniden üretılabilir:
 
 ```cpp
 D3D11_SAMPLER_DESC sampler_description;
@@ -78,7 +79,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
 ## <a name="example-2"></a>Örnek 2
- **Bilinear Doku Filtreleme** varyantı aşağıdaki gibi kod kullanılarak yeniden üretebilirsiniz:
+ **Bilinear Doku Filtreleme varyantı** aşağıdaki gibi bir kod kullanılarak yeniden üretebilirsiniz:
 
 ```cpp
 D3D11_SAMPLER_DESC sampler_description;

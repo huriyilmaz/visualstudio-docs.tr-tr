@@ -1,6 +1,6 @@
 ---
-title: RemoveFromCollection &lt; T &gt; etkinlik Tasarımcısı
-description: İş Akışı Tasarımcısı, RemoveFromCollection <T> etkinlik Tasarımcısı 'nı kullanarak bir RemoveFromCollection etkinliği oluşturma ve yapılandırma hakkında bilgi edinin <T> .
+title: RemoveFromCollection &lt; T &gt; Etkinlik Tasarımcısı
+description: Bu İş Akışı Tasarımcısı Bir RemoveFromCollection etkinliği oluşturmak ve yapılandırmak için <T> RemoveFromCollection etkinlik tasarımcısını kullanmayı <T> öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,39 +10,40 @@ ms.assetid: 6617ba26-c8bc-4aed-b746-112bf490d288
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fdaf7172c00d80e5e7615bfcadcc1fb6233c257
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a859a1d927ec0ca85a5a77d06b2ec4532dfe508745fa1a3c2f5708246bf087fa
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847368"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121243373"
 ---
 # <a name="removefromcollectiont-activity-designer"></a>RemoveFromCollection\<T> Etkinlik Tasarımcısı
 
-**RemoveFromCollection \<T>** etkinlik Tasarımcısı bir etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.RemoveFromCollection%601> .
+Bir etkinlik oluşturmak ve yapılandırmak için **\<T> RemoveFromCollection** etkinlik tasarımcısı <xref:System.Activities.Statements.RemoveFromCollection%601> kullanılır.
 
-## <a name="the-removefromcollectiontactivity"></a>RemoveFromCollection \<T> etkinliği
+## <a name="the-removefromcollectiontactivity"></a>RemoveFromCollection \<T> Etkinliği
 
-<xref:System.Activities.Statements.RemoveFromCollection%601>Etkinlik belirli bir koleksiyondan belirtilen öğeyi kaldırır.
+Etkinlik <xref:System.Activities.Statements.RemoveFromCollection%601> belirli bir koleksiyondan belirtilen öğeyi kaldırır.
 
-### <a name="using-the-removefromcollectiont-activity-designer"></a>RemoveFromCollection \<T> etkinlik tasarımcısını kullanma
+### <a name="using-the-removefromcollectiont-activity-designer"></a>RemoveFromCollection Etkinlik \<T> Tasarımcısını Kullanma
 
-**Toolbox**'ın **koleksiyon** kategorisindeki **\<T> RemoveFromCollection** etkinlik tasarımcısına erişin.
-**RemoveFromCollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içindeki gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.RemoveFromCollection%601> , varsayılan bir <xref:System.Activities.Activity.DisplayName%2A> RemoveFromCollection<Int32 ile bir etkinlik oluşturur \> . <xref:System.Activities.Activity.DisplayName%2A>Değer, **RemoveFromCollection<\> T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
+Araç Kutusunun **Koleksiyon kategorisinde \<T> removeFromCollection** **etkinlik** tasarımcısına **erişin.**
+**RemoveFromCollection \<T>** etkinlik tasarımcısı **Araç** Kutusundan sürüklenip, etkinlikler genellikle yerleştirildikten sonra İş Akışı Tasarımcısı yüzeyine (örneğin bir içinde) <xref:System.Activities.Statements.Sequence> bırakılır. Bu, <xref:System.Activities.Statements.RemoveFromCollection%601> <xref:System.Activities.Activity.DisplayName%2A> Varsayılan RemoveFromCollection ve Int32<bir etkinlik \> oluşturur. Değer, <xref:System.Activities.Activity.DisplayName%2A> **\> RemoveFromCollection**<T etkinlik tasarımcısının üst bilgisinde veya özellik **kılavuzundaki DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenemez.
 
 ### <a name="the-removefromcollectiont-properties"></a>RemoveFromCollection<T \> Özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.RemoveFromCollection%601> Özellikler gösterilmektedir ve tasarımcıda nasıl kullanıldıkları açıklanmıştır:
+Aşağıdaki tablo, <xref:System.Activities.Statements.RemoveFromCollection%601> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar:
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adı <xref:System.Activities.Statements.RemoveFromCollection%601> . Varsayılan değer, varsayılan olarak RemoveFromCollection<\> .<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.RemoveFromCollection%601.Item%2A>|Doğru|**Koleksiyondan \<T>** kaldırılacak öğe. Bu öğe, *TypeArgument* türünde *T* türünde. Öğeyi belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
-|<xref:System.Activities.Statements.RemoveFromCollection%601.Collection%2A>|Doğru|Öğenin kaldırılması gereken koleksiyon. Bu koleksiyon **ıcollection<TypeArgument türünde \> .** Koleksiyonu belirtmek için, özellik kılavuzunda bir Visual Basic ifadesi yazın.|
-|*TypeArgument*|Doğru|İçinde yer alan öğelerin T türü <xref:System.Collections.Generic.ICollection%601> . Varsayılan olarak, bu *TypeArgument* türü **Int32** olarak ayarlanır. Türü değiştirmek için, özellik kılavuzundaki Birleşik giriş kutusunda *TypeArgument* değerini değiştirin.|
-|<xref:System.Activities.Activity%601.Result%2A>|Yanlış|Belirtilen öğenin koleksiyondan kaldırılıp kaldırılmadığını gösteren bir değer. Sonuca bağlanacak bir değişken belirtmek için, özellik kılavuzuna bir değişken yazın|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay <xref:System.Activities.Statements.RemoveFromCollection%601> adı. Varsayılan değer, Int32'de<RemoveFromCollection'dır. \><br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.RemoveFromCollection%601.Item%2A>|Doğru|Koleksiyonundan **kaldırıla \<T> öğe.** Bu öğe T *türündedir* ve *TypeArgument türündedir.* Öğeyi belirtmek için, özellik kılavuzunda Visual Basic bir ifade yazın.|
+|<xref:System.Activities.Statements.RemoveFromCollection%601.Collection%2A>|Doğru|Öğenin kaldırılması gereken koleksiyon. Bu koleksiyon, **TypeArgument için ICollection<\> türündedir.** Koleksiyonu belirtmek için, özellik kılavuzunda Visual Basic bir ifade yazın.|
+|*TypeArgument*|Doğru|içinde bulunan öğelerin T <xref:System.Collections.Generic.ICollection%601> türü. Varsayılan olarak, bu *TypeArgument* türü **Int32 olarak ayarlanır.** Türü değiştirmek için özellik kılavuzunda birleşik giriş kutusunda *TypeArgument* değerini değiştirebilirsiniz.|
+|<xref:System.Activities.Activity%601.Result%2A>|Yanlış|Belirtilen öğenin koleksiyondan kaldırılmış olup olmadığını belirten bir değer. Sonucu bağlamak için bir değişken belirtmek için özellik kılavuzuna bir değişken yazın|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

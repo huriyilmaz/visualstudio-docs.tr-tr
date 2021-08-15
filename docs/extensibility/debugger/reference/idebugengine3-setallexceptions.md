@@ -11,17 +11,18 @@ ms.assetid: 8f03a6ac-a854-42f7-933c-a2df1b351975
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4a6dbce81ed358ad13b49206e86c5f547a4db420
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5551d9fa9e5bb6f1510f912c131165998cbecef06da0f0f0a4e35f788ab70a69
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066210"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307797"
 ---
 # <a name="idebugengine3setallexceptions"></a>IDebugEngine3::SetAllExceptions
 Bu yöntem, tüm bekleyen özel durumların durumunu ayarlar.

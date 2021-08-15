@@ -1,6 +1,6 @@
 ---
-title: XmlPeek görevi | Microsoft Docs
-description: MSBuild 'in bir XML dosyasındaki XPath sorgusu tarafından belirtilen değerleri döndürmek için XmlPeek görevini nasıl kullandığını öğrenin.
+title: XmlPeek Görev | Microsoft Docs
+description: Xml MSBuild xml dosyasından XPath Sorgusu tarafından belirtilen değerleri geri dönmek için xmlpeek görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,38 +16,39 @@ ms.assetid: 19196031-a3bc-41b5-9c4a-f2572630e179
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d387d44ba06bb3a5a8ef5e73e2d8900b356996e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cace2a1ac5ecca3a209e242e2341bd6201f4996e785402dd6178ec14ddf90f19
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964868"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121257452"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek görevi
 
-XML dosyasından XPath sorgusuyla belirtilen değerleri döndürür.
+Xml dosyasından XPath Sorgusu tarafından belirtilen değerleri döndürür.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `XmlPeek` .
+ Aşağıdaki tabloda görevin parametreleri açık `XmlPeek` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Namespaces`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgu önekleri için ad alanlarını belirtir.|
-|`Query`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgusunu belirtir.|
-|`Result`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
-|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini bir dize olarak belirtir.|
-|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini dosya yolu olarak belirtir.|
+|`Namespaces`|İsteğe `String` bağlı parametre.<br /><br /> XPath sorgu ön ekleri için ad alanlarını belirtir.|
+|`Query`|İsteğe `String` bağlı parametre.<br /><br /> XPath sorgusunu belirtir.|
+|`Result`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
+|`XmlContent`|İsteğe `String` bağlı parametre.<br /><br /> XML girişini dize olarak belirtir.|
+|`XmlInputPath`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> bağlı parametre.<br /><br /> XML girişini bir dosya yolu olarak belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, tabloda listelenen parametrelerin yanı sıra sınıfından devralınan parametreleri de sınıfından <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="example"></a>Örnek
 
-Aşağıda, okunan örnek bir XML dosyası verilmiştir `settings.config` :
+Okunabilecek örnek bir XML `settings.config` dosyası şu şekildedir:
 
 ```xml
 <appSettings>
@@ -55,7 +56,7 @@ Aşağıda, okunan örnek bir XML dosyası verilmiştir `settings.config` :
 </appSettings>
 ```
 
-Bu örnekte, okumak istiyorsanız, `value` aşağıdaki gibi bir kod kullanın:
+Bu örnekte, okumak için aşağıdaki `value` gibi bir kod kullanın:
 
 ```xml
 <Target Name="BeforeBuild">
@@ -74,7 +75,7 @@ Bu örnekte, okumak istiyorsanız, `value` aşağıdaki gibi bir kod kullanın:
 </Target>
 ```
 
-XML ad alanları ile, `Namespaces` Aşağıdaki örnekte olduğu gibi parametresini kullanırsınız. Giriş XML dosyası ile `XMLFile1.xml` :
+XML ad alanlarıyla, aşağıdaki `Namespaces` örnekte olduğu gibi parametresini kullanırsınız. Giriş XML dosyası `XMLFile1.xml` ile:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,7 +87,7 @@ XML ad alanları ile, `Namespaces` Aşağıdaki örnekte olduğu gibi parametres
 </class>
 ```
 
-Ve aşağıdaki `Target` bir proje dosyasında tanımlanır:
+Bir proje `Target` dosyasında aşağıdakiler tanımlanmıştır:
 
 ```xml
   <Target Name="TestPeek" BeforeTargets="Build">
@@ -107,7 +108,7 @@ Ve aşağıdaki `Target` bir proje dosyasında tanımlanır:
   </Target>
 ```
 
-Çıktı, hedeften şunları içerir `TestPeek` :
+Çıkış, hedeften şunları `TestPeek` içerir:
 
 ```output
   TestPeek output:

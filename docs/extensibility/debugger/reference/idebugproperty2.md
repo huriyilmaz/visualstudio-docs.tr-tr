@@ -11,14 +11,15 @@ ms.assetid: a7d5c70f-a1a5-4120-9f70-184e01c25bff
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5d20f0bd3727860f32e111baad2d2513590e880
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7a368969251eb4f47746a1cb56491cf8f0dcf3d63664835177ea690b3ecab2b6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064806"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307004"
 ---
 # <a name="idebugproperty2"></a>IDebugProperty2
 Bu arabirim bir yığın çerçevesi özelliğini, bir program belgesi özelliğini ya da başka bir özelliği temsil eder. Özelliği genellikle bir ifade değerlendirmesinin sonucudur.

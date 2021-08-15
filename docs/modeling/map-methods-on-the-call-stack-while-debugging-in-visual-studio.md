@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklarken çağrı yığınında eşleştirme yöntemleri
-description: Hata ayıklama sırasında çağrı yığınını görsel olarak izleme amacıyla kod haritası oluşturma hakkında bilgi. Ayrıca, kodun ne yaptığını izlemek için harita üzerinde notlar da çizebilirsiniz.
+description: Hata ayıklama sırasında çağrı yığınını görsel olarak izleme amacıyla kod eşlemesi oluşturma hakkında bilgi. Ayrıca, kodun ne yaptığını izlemek için harita üzerinde notlar da çizebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -28,14 +28,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 08fa0ff028140ebad421dd43fdfa53cc36b77804
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 0850112c2e5c7e670c776920613c73916c19b2707d2840f4dc21579d03ef99f3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387495"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121257933"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio'da hata ayıklarken çağrı yığınında eşleştirme yöntemleri
 
@@ -73,7 +74,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
 - [Haritayı kullanarak hataları bulma](#FindBugs)
 
-- [Soru& A](#QA)
+- [Soru & A](#QA)
 
   Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin ayrıntıları için bkz. Kod [eşlemelerini göz atma ve yeniden düzenleme.](../modeling/browse-and-rearrange-code-maps.md)
 
@@ -134,15 +135,15 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
  Bu nedenle , ve yöntemlerinde kesme noktaları ayarlayın, hata `clear` `undo` `Repaint` ayıklamayı başlatarak aşağıdakine benzer bir haritayı derlemeniz gerekir:
 
- ![Kod eşlemeye başka bir çağrı yığını ekleme](../debugger/media/debuggermap_addpaintobjectcallstack.png)
+ ![Kod haritasına başka bir çağrı yığını ekleme](../debugger/media/debuggermap_addpaintobjectcallstack.png)
 
  Harita üzerinde yapılan tüm kullanıcı hareketlerinin dışında çağrısında olduğunu `Repaint` fark ettiysiniz. `undo` Bu, neden `undo` hemen çalışmama nedenlerini açıklayabilir.
 
  Hatayı düzeltdikten ve programı çalıştırmaya devam ettikten sonra, eşleme yeni çağrıyı 'a `undo` `Repaint` ekler:
 
- ![Kod haritasında yığın çağrısı yapmak için yeni yöntem çağrısı ekleme](../debugger/media/debuggermap_addnewcallforrepaint.png)
+ ![Kod eşlemesi üzerinde yığın çağrısı yapmak için yeni yöntem çağrısı ekleme](../debugger/media/debuggermap_addnewcallforrepaint.png)
 
-## <a name="q--a"></a><a name="QA"></a> Soru& A
+## <a name="q--a"></a><a name="QA"></a> Soru & A
 
 - **Tüm çağrılar haritada görünmez. Neden?**
 
@@ -156,7 +157,7 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
 - **Haritayı değiştirmek kodu etkiler mi?**
 
-   Haritanın değiştirilmesi, kodu herhangi bir şekilde etkilemez. Haritadaki herhangi bir şeyi rahatça yeniden adlandırabilir, taşıyabilir veya kaldırabilirsiniz.
+   Haritanın değiştirilmesi kodu herhangi bir şekilde etkilemez. Haritadaki herhangi bir şeyi rahatça yeniden adlandırabilir, taşıyabilir veya kaldırabilirsiniz.
 
 - **Bu ileti ne anlama geliyor: "Diyagram, kodun eski bir sürümünü temel alarak olabilir"?**
 
@@ -174,19 +175,19 @@ Hata ayıklama sırasında çağrı yığınını görsel olarak takip etmek iç
 
 - **Haritayı başkalarla paylaşabilir miyim?**
 
-   Haritayı dışarı aktarabilirsiniz, Microsoft Outlook'uz varsa başkalarına gönderebilir veya kaynak denetimine iade etmek için çözümünüze kaydedebilirsiniz.
+   Haritayı dışarı aktarabilirsiniz, Microsoft kaynağınız varsa Outlook başkalarına gönderebilir veya kaynak denetimine kontrol etmek için çözümünüze kaydedebilirsiniz.
 
    ![Çağrı yığını kod haritasını başkalarla paylaşma](../debugger/media/debuggermap_sharewithothers.png)
 
-- **Nasıl yaparım? otomatik olarak yeni çağrı yığınları eklemesini durduracak mısınız?**
+- **Nasıl yaparım? yeni çağrı yığınlarını otomatik olarak eklemesini durduracak mısınız?**
 
-   Harita ![ araç &#45; kod haritasında çağrı yığınını otomatik olarak ](../debugger/media/debuggermap_automaticupdateicon.gif) göster'i seçin. Geçerli çağrı yığınını el ile haritaya eklemek için **Ctrl Shift tuşlarına**  +    +  **`** basın.
+   Harita ![ araç &#45; kod haritasında çağrı yığınını otomatik olarak göster ](../debugger/media/debuggermap_automaticupdateicon.gif) düğmesi'ne tıklayın. Geçerli çağrı yığınını el ile haritaya eklemek için **Ctrl Shift tuşlarına**  +    +  **`** basın.
 
    Hata ayıklama sırasında harita üzerinde mevcut çağrı yığınlarını vurgulamaya devam eder.
 
 - **Öğe simgeleri ve okları ne anlama geliyor?**
 
-   Bir öğe hakkında daha fazla bilgi almak için fare işaretçisini üzerine hareket ettirin ve öğenin araç ipucuna bakın. Her simgenin ne anlama **geldiğini öğrenmek** için Gösterge'ye de bakabilirsiniz.
+   Bir öğe hakkında daha fazla bilgi almak için fare işaretçisini üzerine sürükleyin ve öğenin araç ipucuna bakın. Her simgenin ne anlama **geldiğini öğrenmek** için Gösterge'ye de bakabilirsiniz.
 
    ![Çağrı yığını kod haritasındaki simgeler ne anlama geliyor?](../debugger/media/debuggermap_showlegend.png)
 

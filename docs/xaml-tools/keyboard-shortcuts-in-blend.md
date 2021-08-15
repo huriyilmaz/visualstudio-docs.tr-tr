@@ -1,7 +1,7 @@
 ---
 title: Klavye kısayolları
 titleSuffix: Blend for Visual Studio
-description: Projeler, belgeler, nesneler, görünümler ve çalışma alanları ile çalışmaya yönelik komutlara erişen Visual Studio için Blend klavye kısayolları hakkında bilgi edinin.
+description: projeler, belgeler, nesneler, görünümler ve çalışma alanları ile çalışmaya yönelik komutlara erişen Visual Studio için Blend klavye kısayolları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,18 +9,19 @@ ms.assetid: 3a1b6830-30c2-4a36-bd14-6961f5edf9cb
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 92c2fd5ed260816ca9b0859d37f125b231c0906e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 55780e7f873bf8320fc01c489dcf2d1081d1c2b9dfab3743dbca44bbe913a24e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881288"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121243100"
 ---
 # <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend klavye kısayolları
 
-## <a name="project-shortcuts"></a>Proje kısayolları
+## <a name="project-shortcuts"></a>Project kısayollar
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
@@ -78,45 +79,45 @@ ms.locfileid: "99881288"
 |Seçili nesneyi öne getir|**CTRL** + **SHIFT** + **]**|
 |Öne getir|**CTRL** + **]**|
 |Seçili nesneyi geri gönder|**CTRL** + **SHIFT** + **[**|
-|Geriye gönder|**CTRL** + **[**|
-|Seçili nesnelerden (WPF) Kullanıcı denetimi yapma|**F8**|
-|Nesnelerin oranlarını kısıtlama|Nesneyi sürüklerken **SHIFT** tuşunu basılı tutun|
-|Bir nesneyi 15 derecelik artışlarla döndürme|Nesneyi döndürürken **SHIFT** tuşunu basılı tutun|
-|Kırpma yolu oluşturma|**CTRL** + **7**|
-|Kırpma yolunu serbest bırakma|**CTRL** + **SHIFT** + **7**|
-|Bileşik yol oluşturma|**CTRL** + **8**|
-|Bileşik yol serbest bırakma|**CTRL** + **SHIFT** + **8**|
-|Seçimi kilitle|**CTRL** + **L**|
-|Tüm nesnelerin kilidini aç|**CTRL** + **SHIFT** + **L**|
-|Seçimi göster|**CTRL** + **T**|
-|Seçimi Gizle|**CTRL** + **3**|
-|Tüm nesneleri Seç|**CTRL** + **Bir**|
-|Tüm nesnelerin seçimini temizle|**CTRL** + **SHIFT** + **Bir**|
+|Geriye gönder|**Ctrl tuşunu basılı tutarak** + **[**|
+|Seçili nesnelerden kullanıcı denetimi yapma (WPF)|**F8**|
+|Nesnelerin oranlarını kısıtla|Nesneyi **sürüklerken Shift** tuşunu basılı tutun|
+|Nesneyi 15 derecelik artışlarla döndürme|Nesneyi döndürme **sırasında Shift** tuşunu basılı tutun|
+|Kırpma yolu yapma|**Ctrl tuşunu basılı tutarak** + **7**|
+|Kırpma yolunu serbest bırakma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **7**|
+|Bileşik yol yapma|**Ctrl tuşunu basılı tutarak** + **8**|
+|Bileşik yol serbest bırakma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **8**|
+|Seçimi kilitle|**Ctrl tuşunu basılı tutarak** + **L**|
+|Tüm nesnelerin kilidini açma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **L**|
+|Seçimi göster|**Ctrl tuşunu basılı tutarak** + **T**|
+|Seçimi gizle|**Ctrl tuşunu basılı tutarak** + **3**|
+|Tüm nesneleri seçme|**Ctrl tuşunu basılı tutarak** + **A**|
+|Tüm nesnelerin seçimini temizleme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **A**|
 
-## <a name="view-shortcuts"></a>Kısayolları görüntüle
+## <a name="view-shortcuts"></a>Kısayolları görüntüleme
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|**Tasarım**, **kod** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
-|Çalışma yüzeyini yakınlaştırma|**CTRL** + **Eşittir işareti** ( **=** )|
-|Çalışma yüzeyinde uzaklaştır|**CTRL** + **Eksi işareti** ( **-** )|
-|Çalışma yüzeyini yakınlaştırma veya uzaklaştırma|Fare tekerleğini döndürme|
-|Çalışma yüzeyini sola veya sağa taşı|Fare tekerleğini **kaydırma** ve döndürme|
-|Çalışma yüzeyini yukarı veya aşağı taşı|**CTRL** ve fare tekerleğini döndür|
-|Seçimi ekran boyutuna sığdır|**CTRL** + **0**|
-|Çalışma yüzeyini gerçek boyutta görüntüleme|**CTRL** + **1**|
-|Tutamaçları göster veya gizle|**F9**|
-|Nesne sınırlarını göster veya gizle|**CTRL** + **SHIFT** + **H**|
-|**Tasarım**, **xaml** ve **bölünmüş** görünümler arasında geçiş yapma|**F11**|
+|Tasarım, Kod ve Bölünmüş **görünümler arasında** geçiş|**F11**|
+|Çalışma panosunda yakınlaştırma|**Ctrl tuşunu basılı tutarak** + **Eşittir İşareti** ( **=** )|
+|Çalışma panosunda yakınlaştırma|**Ctrl tuşunu basılı tutarak** + **Eksi İşareti** ( **-** )|
+|Çalışma panosunda yakınlaştırma veya uzaklaştırma|Fare tekerleğini döndürme|
+|Çalışma şeridini sola veya sağa taşıma|**Fare** tekerleğini kaydırma ve döndürme|
+|Çalışma şeridini yukarı veya aşağı taşıma|**Ctrl tuşunu** basılı tutarak fare tekerleğini döndürme|
+|Seçimi ekran boyutuna sığdırma|**Ctrl tuşunu basılı tutarak** + **0**|
+|Çalışma şeridini gerçek boyutta görüntüleme|**Ctrl tuşunu basılı tutarak** + **1**|
+|Tanıtıcıları gösterme veya gizleme|**F9**|
+|Nesne sınırlarını gösterme veya gizleme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **H**|
+|Tasarım,  **XAML ve Bölünmüş** **görünümler arasında** geçiş|**F11**|
 
 ## <a name="workspace-shortcuts"></a>Çalışma alanı kısayolları
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|**Animasyon** ve **Tasarım** çalışma alanları arasında geçiş yapma|**CTRL** + **F11**|
-|**Varlıklar** panelini göster veya gizle|**CTRL** + **Süre**|
-|**Sonuçlar** panelini göster veya gizle|**F12**|
-|Tüm panelleri göster veya gizle|**F4**|
-|Etkin çalışma alanı yerleşimini sıfırlama|**CTRL** + **SHIFT** + **R**|
-|Çalışma alanını kaydırma|**Ara çubuğu** basılı tut|
-|Geçici olarak **seçim** aracını kullanın (farklı bir araç seçili halde kalır)|**CTRL** tuşunu basılı tutun|
+|Animasyon ve **Tasarım** çalışma **alanları** arasında geçiş|**Ctrl tuşunu basılı tutarak** + **F11**|
+|Varlıklar panelini gösterme **veya** gizleme|**Ctrl tuşunu basılı tutarak** + **Dönem**|
+|Sonuçlar panelini gösterme **veya** gizleme|**F12**|
+|Tüm panelleri gösterme veya gizleme|**F4**|
+|Etkin çalışma alanı düzenini sıfırlama|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **R**|
+|Çalışma alanını kaydırma|Ara Çubuğu **basılı tutun**|
+|Seçim aracını geçici **olarak** kullanın (farklı bir araç seçili kalırken)|**Ctrl** tuşunu basılı tutun|

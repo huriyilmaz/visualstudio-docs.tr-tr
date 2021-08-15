@@ -11,15 +11,16 @@ ms.assetid: 7640520a-7d3c-456c-b184-872a5d2f82f3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 12d294202c3cea2c19f4f88ca4e7bd1dfd62df67
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6e4893d70d560d7ae6b136ccf9a7feedc12552c00d7dcf24911254212b609979
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860834"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121301154"
 ---
 # <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Nasıl yapılır: Profil oluşturma araçları çağrı izleme raporu oluşturma
 Profil Oluşturma Araçları için  *çağrı izleme raporu* , [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] her giriş için zamanlama bilgilerini ve uygulamanızın işlevlerine ve işleviniz tarafından yapılan her bir işleve yapılan her çağrıyı listeler. Çağrı izleme raporları yalnızca izleme yöntemiyle toplandıysa profil oluşturma verileri için kullanılabilir.
@@ -42,5 +43,5 @@ Profil Oluşturma Araçları için  *çağrı izleme raporu* , [!INCLUDE[vsprvs]
     |Xml|XML biçimli bir rapor oluşturur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows için olay Izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+- [nasıl yapılır: Windows (ETW) verileri için olay izlemeyi toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 - [Profil araçları API 'Leri](../profiling/profiling-tools-apis.md)

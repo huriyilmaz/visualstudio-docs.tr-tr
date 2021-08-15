@@ -1,6 +1,6 @@
 ---
-description: Adı verilen özel bir özniteliği alır.
-title: 'Idebugcustomattributequery:: GetCustomAttributeByName | Microsoft Docs'
+description: Adına göre özel bir özniteliği alan.
+title: IDebugCustomAttributeQuery::GetCustomAttributeByName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 6779727c-d10a-4abe-9acd-d0a1eb0737e7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: edfebdba8d1ad10678ec441cad7ca8b4a1440c24
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 96b5a910c7d09bec43885b57e55943376fe7b7babec13069351e10e2c57fbcab
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058670"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121323696"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
-Adı verilen özel bir özniteliği alır.
+Adına göre özel bir özniteliği alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +46,19 @@ int GetCustomAttributeByName(
 
 ## <a name="parameters"></a>Parametreler
 `pszCustomAttributeName`\
-'ndaki Özel özniteliğin adı.
+[in] Özel özniteliğin adı.
 
 `ppBlob`\
-[in, out] Özel öznitelik verilerini içeren bayt dizisi.
+[in,out] Özel öznitelik verilerini içeren bayt dizisi.
 
 `pdwLen`\
-dışı Parametrenin bayt cinsinden uzunluğu `ppBlob` .
+[out] Parametrenin bayt cinsinden `ppBlob` uzunluğu.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` . Özel öznitelik yoksa, döndürür `S_FALSE` . Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür. Özel öznitelik yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [ıdebugcustomattributequery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) arabirimini kullanıma sunan bir **Cdebugclassfieldsymbol** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) arabirimini ortaya çıkaran **bir CDebugClassFieldSymbol** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::GetCustomAttributeByName(

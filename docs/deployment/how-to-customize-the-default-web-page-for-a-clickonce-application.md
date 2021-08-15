@@ -1,6 +1,6 @@
 ---
-title: ClickOnce uygulaması için varsayılan Web sayfasını özelleştirme
-description: Web 'de uygulamanın adını ve diğer bilgileri içeren bir ClickOnce uygulaması yayımladığınızda oluşturulan Web sayfası hakkında bilgi edinin.
+title: Uygulama için varsayılan web ClickOnce özelleştirme
+description: Uygulamanın adını ve diğer bilgileri içeren ClickOnce web uygulaması yayımlarken oluşturulan Web sayfası hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,40 +17,41 @@ ms.assetid: 418de18c-bee9-4f24-9cd9-0252d175070d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 0377bdc5fa38c814bb5cd6ff02d12dcec117266d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5185d3b49d8d1accaae7055f8bd073f9a25007dc92adff8c0978de957a55c284
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900784"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403964"
 ---
-# <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için varsayılan Web sayfasını özelleştirme
-Bir ClickOnce uygulamasını Web 'de yayımlarken, bir Web sayfası otomatik olarak oluşturulur ve uygulamayla birlikte yayımlanır. Varsayılan sayfa, uygulamanın adını ve uygulamanın yükleneceği bağlantıları, önkoşulları yüklemeyi veya MSDN 'de yardım erişimini içerir.
+# <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>Nasıl kullanılır: Bir uygulama için varsayılan Web ClickOnce özelleştirme
+Bir web ClickOnce Web'de yayımlarken, bir Web sayfası otomatik olarak oluşturulur ve uygulamayla birlikte yayımlanır. Varsayılan sayfa uygulamanın adını ve uygulamayı yükleme, önkoşulları yükleme veya MSDN'de erişim yardımı bağlantılarını içerir.
 
 > [!NOTE]
-> Sayfada gördüğünüz gerçek bağlantılar, sayfanın görüntülendiği bilgisayara ve hangi önkoşulları dahil ettiğiniz üzerine bağlıdır.
+> Sayfada gördüğünüz gerçek bağlantılar, sayfanın görüntü bulunduğu bilgisayara ve hangi önkoşullara sahip olduğunuz bilgisayara bağlıdır.
 
- Web sayfası için varsayılan ad *Publish.htm*; **Proje tasarımcısında** adı değiştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması için bir yayımlama sayfası belirtme](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
+ Web sayfası için varsayılan ad *Publish.htm;* Project **Designer'da Project değiştirebilirsiniz.** Daha fazla bilgi için, [bkz. How to: Specify a publish page for a ClickOnce application](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).
 
- *Publish.htm* Web sayfası yalnızca daha yeni bir sürüm algılandığında yayımlanır.
+ Publish.htm Web sayfası yalnızca daha yeni bir sürüm algılandığında yayımlanır.
 
 > [!NOTE]
-> **Yayımlama** ayarlarınızda yaptığınız değişiklikler, tek bir özel durumla *Publish.htm* sayfasını etkilemez: başlangıçta yayımlamadan sonra önkoşulları ekler veya kaldırırsanız, önkoşul listesi artık doğru olmaz. Değişiklikleri yansıtmak için önkoşul bağlantısı metnini düzenlemeniz gerekir.
+> Yayımlama ayarlarınıza yaptığınız  değişiklikler *Publish.htm* sayfasını etkilemez; tek bir istisna vardır: önkoşulları ilk yayımlamadan sonra ekler veya kaldırırsanız, önkoşul listesi artık doğru olmaz. Değişiklikleri yansıtmak için önkoşul bağlantısının metnini düzenlemeniz gerekir.
 
-### <a name="to-customize-the-publish-web-page"></a>Web 'i Yayımla sayfasını özelleştirmek için
+### <a name="to-customize-the-publish-web-page"></a>Web'i yayımlama sayfasını özelleştirmek için
 
-1. ClickOnce uygulamanızı bir Web konumunda yayımlayın. Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
+1. Uygulama ClickOnce Web konuma yayımlayın. Daha fazla bilgi için [bkz. Yayımlama Sihirbazı'nı ClickOnce uygulama yayımlama.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 
-2. Web sunucusunda, *Publish.htm* dosyasını Visual Web Tasarımcısı veya başka bir HTML düzenleyicisinde açın.
+2. Web sunucusunda, webPublish.htm *Web* Tasarımcısı'nda veya başka bir HTML düzenleyicisinde açın.
 
 3. Sayfayı istediğiniz gibi özelleştirin ve kaydedin.
 
-4. İsteğe bağlı. Visual Studio 'Nun özelleştirilmiş yayımlama Web sayfanızın üzerine yazmasını engellemek için, **Yayımlama seçenekleri** iletişim kutusunda **her yayımladıktan sonra otomatik olarak dağıtım Web sayfası oluştur** seçeneğinin işaretini kaldırın.
+4. İsteğe bağlı. Özelleştirilmiş yayımlama Visual Studio üzerine yazmamanızı önlemek için, Yayımlama Seçenekleri iletişim kutusundaki Her yayımlamadan sonra Dağıtım **Web** sayfasını otomatik olarak oluştur **seçeneğinin işaretini** kaldırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)
-- [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
-- [Nasıl yapılır: ClickOnce uygulaması için bir yayımlama sayfası belirtme](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)
+- [Uygulama ClickOnce yayımlama](../deployment/publishing-clickonce-applications.md)
+- [Nasıl kurulur: ClickOnce uygulamasıyla önkoşulları yükleme](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
+- [Nasıl ClickOnce: Uygulama için yayımlama sayfası belirtme](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)

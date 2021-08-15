@@ -10,14 +10,15 @@ ms.assetid: 0acf9a13-caf5-4bb4-ba22-ec37d2b7267a
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 971d6bd028315ae4a8b6f3a88164c97c6f95712b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ac03ddce895b18c95d74fd41a0ab2692fe92ccd750b95611fda0caf950384b8b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961332"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408024"
 ---
 # <a name="existsincollectiont-activity-designer"></a>ExistsInCollection\<T> Etkinlik Tasarımcısı
 
@@ -40,10 +41,10 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.ExistsInCollection%601> 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.ExistsInCollection%601> . Varsayılan değer, Int32<Vartsincollection ' dur \> . <xref:System.Activities.Activity.DisplayName%2A>Değer kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.ExistsInCollection%601.Item%2A>|Doğru|Koleksiyonda aranacak öğe \<T> . Bu öğe, *TypeArgument* türünde *T* türünde. Öğeyi belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
-|<xref:System.Activities.Statements.ExistsInCollection%601.Collection%2A>|Doğru|Öğenin bulunup bulunmadığını kontrol edilecek koleksiyon. Bu koleksiyon **ıcollection<TypeArgument türünde \> .** Koleksiyonu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.ExistsInCollection%601.Item%2A>|Doğru|Koleksiyonda aranacak öğe \<T> . Bu öğe, *TypeArgument* türünde *T* türünde. öğeyi belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.ExistsInCollection%601.Collection%2A>|Doğru|Öğenin bulunup bulunmadığını kontrol edilecek koleksiyon. Bu koleksiyon **ıcollection<TypeArgument türünde \> .** koleksiyonu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
 |*TypeArgument*|Doğru|İçinde yer alan öğelerin T türü <xref:System.Collections.Generic.ICollection%601> . Varsayılan olarak, bu *TypeArgument* türü **Int32** olarak ayarlanır. Türü değiştirmek için, özellik kılavuzundaki Birleşik giriş kutusunda *TypeArgument* değerini değiştirin.|
-|<xref:System.Activities.Activity%601.Result%2A>|Yanlış|Koleksiyonda belirtilen öğenin var olup olmadığını gösteren bir değer. Sonuca bağlanacak bir değişken belirtmek için, özellik kılavuzuna bir Visual Basic değişkeni yazın.|
+|<xref:System.Activities.Activity%601.Result%2A>|Yanlış|Koleksiyonda belirtilen öğenin var olup olmadığını gösteren bir değer. sonuca bağlanacak bir değişken belirtmek için, özellik kılavuzuna bir Visual Basic değişkeni yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

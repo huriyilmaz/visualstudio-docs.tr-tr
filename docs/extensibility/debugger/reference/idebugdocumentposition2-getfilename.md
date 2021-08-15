@@ -1,6 +1,6 @@
 ---
 description: Belge konumunu içeren kaynak dosyanın dosya adını alır.
-title: 'IDebugDocumentPosition2:: GetFileName | Microsoft Docs'
+title: IDebugDocumentPosition2::GetFileName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: d713635e-088f-465b-b26d-00ac971c9e86
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 48c0500e47d938185595086ccf5fa5b22a14ab26
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 46e57b8e836e3a1f3de7bf12f6bd35a8b27084a79afdfec45a7acd4a85ad1438
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066470"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262015"
 ---
 # <a name="idebugdocumentposition2getfilename"></a>IDebugDocumentPosition2::GetFileName
 Belge konumunu içeren kaynak dosyanın dosya adını alır.
@@ -42,13 +43,13 @@ int GetFileName(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrFileName`\
-dışı Kaynak dosyanın dosya adını döndürür.
+[out] Kaynak dosyanın dosya adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak dosya her zaman bir dosya adına sahip olmayabilir (örneğin, diskte kaynak dosya bulunmayabilir).
+ Kaynak dosyanın her zaman bir dosya adı olmayabilir (örneğin, kaynak dosya diskte mevcut olmayabilir).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

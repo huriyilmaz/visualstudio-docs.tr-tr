@@ -10,17 +10,18 @@ ms.assetid: a0c85318-5686-4eed-b213-21f2b9e681e6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e5bc7af275d18626fdb86e25400e9433002be8cf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: beb8cb13f22e969c197eb59d73e317e2379d45d7f2962e82fbc0a63bc02d45cf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081314"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402213"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
 Sembol sağlayıcısının üye olduğu sembol grubu hakkındaki bilgileri alır.

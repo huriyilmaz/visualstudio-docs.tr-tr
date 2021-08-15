@@ -8,14 +8,15 @@ ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - uwp
-ms.openlocfilehash: 86310346566e8c937c2769a9fcc9f0d4e98b3ae2
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 65eb5e83221fb6e5e9e7186db720dd255eed69de860e2d3ea808bff037927971
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308447"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121314153"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme
 
@@ -26,7 +27,7 @@ Aşağıdaki yapılandırmalarda bu araçları kullanabilirsiniz:
 |Uygulama türü|İşletim sistemi ve araçlar|
 |-----------------|--------------------------------|
 |Windows Presentation Foundation (4,0 ve üzeri) uygulamalar|Windows 7 ve üzeri|
-|Evrensel Windows uygulamaları|Windows 10 ve üzeri, Windows 10 [SDK](https://dev.windows.com/downloads/windows-10-sdk) ile|
+|Evrensel Windows uygulamaları|[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk) ile Windows 10 ve üzeri|
 
 ## <a name="look-at-elements-in-the-live-visual-tree"></a>Canlı görsel ağaçtaki öğelere bakma
 
@@ -36,13 +37,13 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 ::: moniker range=">=vs-2019"
 
-1. Yeni bir C# WPF uygulaması (**Dosya** > **Yeni** > **Proje**) oluşturun, "c# WPF" yazın, **WPF uygulaması** proje şablonunu seçin, projeyi **TestXaml** olarak adlandırın ve ardından **.NET Core 3,1** 'nin **hedef çerçeve** açılır penceresinde göründüğünü doğrulayın.
+1. yeni bir C# wpf uygulaması oluşturun (**dosya** > **yeni** > **Project**, "C# WPF" yazın, **WPF uygulaması** proje şablonunu seçin, projeyi **testxaml** olarak adlandırın ve ardından **.net Core 3,1** ' in **hedef çerçeve** açılır penceresinde göründüğünü doğrulayın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-1. Yeni bir C# WPF uygulaması (**Dosya**  >  **Yeni**  >  **Proje**) oluşturun ve ardından "C# WPF" yazın ve **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml** olarak adlandırın.
+1. yeni bir C# wpf uygulaması (**dosya**  >  **yeni**  >  **Project** oluşturun, ardından "C# WPF" yazın ve **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml** olarak adlandırın.
 
 ::: moniker-end
 
@@ -100,12 +101,12 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 ### <a name="inspect-xaml-properties"></a>XAML özelliklerini inceleme
 
-1. Sonra, uygulama içi araç çubuğunun çok sol düğmesine tıklayarak (veya **> Windows > Live Visual Tree ' Hata Ayıkla**' ya giderek) **canlı görsel ağaç** penceresini açın. Açık olduktan sonra, bu pencereye ve **canlı Özellikler** penceresine yan yana bakabilmemiz için yerleştirme konumundan uzağa sürükleyin.
+1. daha sonra, uygulama içi araç çubuğunun sağ tarafındaki düğmesine tıklayarak (veya **> Windows > canlı görsel ağaç**' a giderek) **canlı görsel ağaç** penceresini açın. Açık olduktan sonra, bu pencereye ve **canlı Özellikler** penceresine yan yana bakabilmemiz için yerleştirme konumundan uzağa sürükleyin.
 
 1. **Canlı görsel ağaç** penceresinde, **ContentPresenter** düğümünü genişletin. Düğme ve liste kutusu için düğüm içermelidir. Liste kutusu öğelerini bulmak için liste kutusunu (ve ardından **ScrollContentPresenter** ve **ItemsPresenter**) genişletin.
 
    ::: moniker range=">= vs-2019"
-   **ContentPresenter** düğümünü görmüyorsanız araç çubuğunda **yalnızca XAML mi göster** simgesine geçiş yapın. Visual Studio 2019 sürüm 16,4 ' den başlayarak, XAML öğelerinin görünümü varsayılan olarak yalnızca XAML 'IM özelliği kullanılarak basitleştirilmiştir. Tüm XAML öğelerini her zaman göstermek için Seçenekler ' de [Bu ayarı devre dışı](../debugger/general-debugging-options-dialog-box.md) bırakabilirsiniz.
+   **ContentPresenter** düğümünü görmüyorsanız araç çubuğunda **yalnızca XAML mi göster** simgesine geçiş yapın. Visual Studio 2019 sürüm 16,4 ' den başlayarak, xaml öğelerinin görünümü varsayılan olarak yalnızca xaml 'im özelliği kullanılarak basitleştirilmiştir. Tüm XAML öğelerini her zaman göstermek için Seçenekler ' de [Bu ayarı devre dışı](../debugger/general-debugging-options-dialog-box.md) bırakabilirsiniz.
    ::: moniker-end
 
    Pencere şuna benzemelidir:
@@ -137,7 +138,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
    ![DisplayLayout içinde LivePropertyViewer](../debugger/media/vs-2019/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
 
-   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. **Öğe seç** ve **Önizleme seçimi**' ni seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
+   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. **Öğe seç** ve **Önizleme seçimi**' ni seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
    ::: moniker-end
 
    ::: moniker range="vs-2017"
@@ -147,7 +148,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
    ![DisplayLayout içinde LivePropertyViewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
 
-   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. Seçim ve **Önizleme seçimini** **Etkinleştir** ' i seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
+   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. Seçim ve **Önizleme seçimini** **Etkinleştir** ' i seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
    ::: moniker-end
 
 ## <a name="use-xaml-tools-with-running-applications"></a>Çalışan uygulamalarla XAML araçlarını kullanma
@@ -156,11 +157,11 @@ Kaynak kodunuz olmadığında bile bu XAML araçlarını kullanabilirsiniz. Çal
 
 1. Sürüm yapılandırmasında **TestXaml** uygulamasını başlatın. **Hata ayıklama** yapılandırmasında çalışan bir işleme iliştiremezsiniz.
 
-2. Visual Studio 'nun ikinci bir örneğini açın ve **Işleme eklemek > hata ayıkla**' ya tıklayın. Kullanılabilir süreçler listesinde **TestXaml.exe** bulun ve **Ekle**' ye tıklayın.
+2. Visual Studio ikinci bir örneğini açın ve **işleme eklemek > hata ayıkla**' ya tıklayın. Kullanılabilir süreçler listesinde **TestXaml.exe** bulun ve **Ekle**' ye tıklayın.
 
 3. Uygulama çalışmaya başlar.
 
-4. Visual Studio 'nun ikinci örneğinde, **Live Visual Tree** (**hata ayıkla > Windows > Live Visual Tree**) öğesini açın. **TestXaml** Kullanıcı arabirimi öğelerini görmeniz gerekir ve uygulamayı doğrudan hata ayıklarken yaptığınız gibi işleyebilmelisiniz.
+4. Visual Studio ikinci örneğinde **canlı görsel ağacı** açın (**hata ayıklama > Windows > canlı görsel ağaç**). **TestXaml** Kullanıcı arabirimi öğelerini görmeniz gerekir ve uygulamayı doğrudan hata ayıklarken yaptığınız gibi işleyebilmelisiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
-title: Eski kod uyarısı Iletişim kutusu | Microsoft Docs
-description: Düzenleme ve devam etme Işleminin hemen uygulanması için yerel koda değişiklikler yaptığınızda görüntülenen eski kod uyarısı iletişim kutusu hakkında bilgi edinin.
+title: Eski Kod Uyarısı İletişim Kutusu | Microsoft Docs
+description: Yerel kodda Düzenle ve Devam'ın hemen uygulanamayabilecek değişiklikler yaptığınız zaman görüntülenen Eski Kod Uyarısı iletişim kutusunu okuyun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,24 +20,25 @@ ms.assetid: 594b894c-e652-4e13-a980-9909473d5712
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f4ea2004680a60fcd2c90a57b19f719c0412ee53
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f8e65b43f0679c0a624a6c34fce0f7fc0ce19e46fb7307b4a5b497fd1e2424f4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861250"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121310952"
 ---
 # <a name="stale-code-warning-dialog-box"></a>Eski Kod Uyarısı İletişim Kutusu
 
-Bu iletişim kutusu, yerel kodda **düzenleme ve devam etme işleminin** hemen uygulanmadığından değişiklikler yaptığınızda görüntülenir. Sonuç olarak, geçerli yığın çerçevesindeki bazı yerel kodlar artık güncel değil, yani eski. Daha fazla bilgi için bkz. [Düzenle ve devam et (C++)](edit-and-continue-visual-cpp.md).
+Yerel kodda Düzenle ve Devam'ın hemen uygulanamayabilecek **değişiklikler yaptığınız zaman bu** iletişim kutusu görüntülenir. Sonuç olarak, geçerli yığın çerçevesindeki bazı yerel kodlar artık eski, yani eski. Daha fazla bilgi için [bkz. Düzenleme ve devam (C++)](edit-and-continue-visual-cpp.md).
 
 **Bu iletişim kutusunu bir daha gösterme**
 
-Bu onay kutusunu seçerseniz, Düzenle ve devam et daha sonra izin istemeden kod değişikliklerini uygular. **Seçenekler** iletişim kutusuna gidip **hata ayıklama** klasörünü açıp, **Düzenle ve devam et** sayfasına tıklayıp **eski kod hakkında uyar**' ı seçerek bu uyarıyı yeniden açabilirsiniz.
+Bu onay kutusunu işaret edersanız Düzenle ve Devam Edin, gelecekte izin istemeden kod değişikliklerini uygulayacak. Seçenekler iletişim kutusuna gidip Hata Ayıklama  Klasörünü açarak, Düzenle ve Devam  Edin sayfasına tıklar ve Eski kod hakkında uyar'ı seçerek bu uyarıyı **yeniden açabilirsiniz.** 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Desteklenen Kod Değişiklikleri (C++)](supported-code-changes-cpp.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](edit-and-continue.md)
+- [Düzenle ve Devam, Hata Ayıklama, Seçenekler İletişim Kutusu](edit-and-continue.md)

@@ -1,6 +1,6 @@
 ---
 title: CreateVisualBasicManifestResourceName görevi | Microsoft Docs
-description: Verilen bir. resx dosya adından veya başka bir kaynaktan Visual Basic stili bir bildirim adı oluşturmak için MSBuild CreateVisualBasicManifestResourceName görevini kullanın.
+description: verilen bir. resx dosya adından veya başka bir kaynaktan bir Visual Basic stili bildirim adı oluşturmak için MSBuild createvisualbasicmanifestresourcename görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,18 +16,19 @@ ms.assetid: 251c47b9-de32-414b-a138-bf45290af12e
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: b8e9f0868cb774ee82c79ba190acddebf63193cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf21c1843792cd80b029cec993816f8af0a93c1f2c55142119d2abfbcb04f7e0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901378"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121316532"
 ---
 # <a name="createvisualbasicmanifestresourcename-task"></a>CreateVisualBasicManifestResourceName görevi
 
-Verilen bir *. resx* dosya adından veya başka bir kaynaktan Visual Basic stili bir bildirim adı oluşturur.
+verilen bir *. resx* dosya adından veya başka bir kaynaktan Visual Basic stili bir bildirim adı oluşturur.
 
 ## <a name="parameters"></a>Parametreler
 

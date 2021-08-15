@@ -13,14 +13,15 @@ ms.assetid: 3786a21c-8022-4bf5-9d13-740fd354e93c
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 17939a9c800e99d8adcf1e59e32bb362cf4796ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f7b9b6f73f1cf3add4d7d11a9cbcc6c44ebb834ae82fbeca489539403164a2c0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850158"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121304781"
 ---
 # <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı türler arasında devralma oluşturma
 

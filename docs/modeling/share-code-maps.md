@@ -7,14 +7,15 @@ ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: e58e06c48ed9fa3a9d459c6c615abae4d4b4823f
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: d6efe3f860749ac24e35af944122ec8a9d121f6039270117e7eb52eb57fcf6f7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385688"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410949"
 ---
 # <a name="share-code-maps"></a>Kod haritalarını paylaşma
 
@@ -43,7 +44,7 @@ Visual Studio, haritayı diğer kullanıcı ve kullanıcı kullanıcılarını p
 
 ## <a name="export-a-code-map-as-an-image"></a>Kod haritasını görüntü olarak dışarı aktarma
 
-Kod haritasını görüntü olarak dışarı aktararak Microsoft Word veya PowerPoint gibi diğer uygulamalara kopyaabilirsiniz.
+Bir kod haritasını görüntü olarak dışarı aktararak kod eşlemesi gibi diğer uygulamalara Microsoft Word PowerPoint.
 
 1. Kod haritası araç çubuğunda E-postayı Görüntü **Olarak Paylaş** veya  >  **Görüntüyü Kopyala'ya** **tıklayın.**
 
@@ -53,7 +54,7 @@ Kod haritasını görüntü olarak dışarı aktararak Microsoft Word veya Power
 
 Bir kod haritasını XPS dosyası olarak dışarı aktararak XML veya XAML görüntüleyicilerde Internet Explorer.
 
-1. Kod haritası araç çubuğunda, E-postayı Taşınabilir XPS Olarak Paylaş veya Taşınabilir   >  **XPS** **Olarak Kaydet'i seçin.**
+1. Kod haritası araç çubuğunda, E-postayı Taşınabilir XPS Olarak Paylaş veya   >  **Taşınabilir XPS** **Olarak Kaydet'i seçin.**
 
 2. Dosyayı kaydetmek istediğiniz yere gidin.
 

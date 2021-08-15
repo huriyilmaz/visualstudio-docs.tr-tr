@@ -12,14 +12,15 @@ ms.assetid: 7cfa23e4-a05a-47a3-af6c-bd40c655014b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00f7e23b280ef92e9883f68f203bd790f5e4d815
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 651bdf8b4bc9e43b5583855e3b1301e5fe4a2141fd5abeaae1483f169fcad8ec
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077570"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262106"
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
 Bu alan için özel bir özniteliğin varlığını belirler ve varsa, öznitelik bilgilerini döndürür.

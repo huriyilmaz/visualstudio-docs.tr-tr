@@ -1,6 +1,6 @@
 ---
-title: XML şema Gezgini-şema kümesini arama
-description: XML şema Gezgini 'nde şema kümesine yönelik anahtar sözcük araması ve şemaya özel arama yapmayı öğrenin.
+title: XML Şema Gezgini - şema kümesinde arama
+description: XML Şema Gezgini'nde anahtar sözcük araması yapmayı ve şemaya özgü şema araması yapmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,18 +8,19 @@ ms.assetid: ec1395e0-d03c-4130-810d-f2db656937bd
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f924e46fa4d32fbea9071bd8a19268f2ee1652e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: db68f38fc292ba5124d2a785a53bfcbd1cdf7ccf56d9cb3858083fa19a79eac4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891884"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121313854"
 ---
 # <a name="search-the-schema-set"></a>Şema kümesini arama
 
-**XML şeması Gezgini** şema kümesini aşağıdaki yollarla aramanızı sağlar:
+**XML Şema Gezgini,** şema kümesinde aşağıdaki yollarla aramanızı sağlar:
 
 - Anahtar sözcük arama.
 
@@ -27,33 +28,33 @@ ms.locfileid: "99891884"
 
 ## <a name="keyword-search"></a>Anahtar sözcük araması
 
-**XML şeması Gezgini** araç çubuğunun **arama şeması kümesi** metin kutusuna bir alt dize girerek anahtar sözcük aramaları gerçekleştirirsiniz.
+XML Şema Gezgini araç çubuğunun Şema  Kümesi Ara metin kutusuna bir alt dize girerek anahtar **sözcük aramaları gerçekleştirebilirsiniz.**
 
-![XML şema Gezgini anahtar sözcük arama](../xml-tools/media/schemaexplorersearch.gif)
+![XML Şema Gezgini Anahtar Sözcük Arama](../xml-tools/media/schemaexplorersearch.gif)
 
-**XML şeması Gezgini** şema kümesini Aşağıdaki öznitelikler için arar:
+**XML Şema Gezgini,** şema kümesinde aşağıdaki öznitelikleri arar:
 
-- `name` `ref` Belirtilen anahtar sözcükle eşleşen any veya öznitelikler. Adına göre öğeleri, öznitelikleri, türleri ve benzerlerini bulabilirsiniz.
+- Belirtilen `name` anahtar `ref` sözcükle eşan herhangi bir veya özniteliği. Öğeleri, öznitelikleri, türleri ve diğer öğeleri adıyla bulabilirsiniz.
 
-- `schemaLocation`Include deyimlerinin öznitelikleri.
+- include `schemaLocation` deyimlerinin öznitelikleri.
 
-- `namespace`İmport deyimlerinin öznitelikleri.
+- İçeri `namespace` aktarma deyimlerinin öznitelikleri.
 
 ## <a name="schema-specific-search"></a>Şemaya özgü arama
 
-**XML şeması Gezgini** Ayrıca, **XML şema Gezgini**'nin bağlam (sağ tıklama) menüsünü kullanarak erişebileceğiniz yerleşik aramalar da içerir. Kullanılabilir bağlam menüleri hakkında daha fazla bilgi için bkz. [Bağlam menüleri](../xml-tools/context-menus-xml-schema-explorer.md). Ayrıca, başlangıç görünümünden şemaya özgü bir arama da yapabilirsiniz; daha fazla bilgi için [Başlangıç görünümü](../xml-tools/start-view.md) konusunun "şema kümesi ayrıntıları" bölümüne bakın.
+**XML Şema Gezgini,** XML Şema Gezgini'nin bağlam (sağ tıklama) menüsünü kullanarak erişebilirsiniz yerleşik **aramalar da içerir.** Kullanılabilir bağlam menüleri hakkında daha fazla bilgi için bkz. [Bağlam menüleri.](../xml-tools/context-menus-xml-schema-explorer.md) Ayrıca Başlangıç Görünümü'ne bakarak şemaya özgü bir arama da gerçekleştirabilirsiniz; Daha fazla bilgi için Başlangıç Görünümü konusunun "Şema Kümesi [Ayrıntıları" bölümüne](../xml-tools/start-view.md) bakın.
 
-## <a name="display-and-navigate-search-results"></a>Arama sonuçlarını görüntüle ve gezin
+## <a name="display-and-navigate-search-results"></a>Arama sonuçlarını görüntüleme ve gezinme
 
-Arama tamamlandıktan sonra, özet sonuçları bölmesi, arama sonuçlarıyla birlikte araç çubuğuna eklenir. Arama sonuçları ayrıca **XML şema Gezgini** 'nde vurgulanır ve dikey kaydırma çubuğundaki Tick 'ler tarafından işaretlenir. Arama sonuçlarında, **sonraki arama sonuçlarına git** ' i kullanarak ve **XML şeması Gezgini** araç çubuğunun özet sonuçları bölmesinde **önceki arama sonucu düğmesine gidebilirsiniz** ; **F3** ve **SHIFT** + **tuşlarını kullanarak** ya da kaydırma çubuğundaki onay işaretlerine tıklayarak.
+Arama tamam olduktan sonra, arama sonuçlarıyla birlikte özet sonuçları bölmesi araç çubuğuna eklenir. Arama sonuçları XML Şema Gezgini'nde de **vurgulanır** ve dikey kaydırma çubuğunda tıklar ile işaretlenir. XML Şema Gezgini araç çubuğunun özet sonuçlar  bölmesindeki Sonraki Arama Sonucuna Git ve Önceki Arama Sonucuna Git düğmelerini kullanarak arama sonuçlarında **gezinebilirsiniz;**  F3 ve Shift **F3** klavye **tuşlarını** + **kullanarak** veya kaydırma çubuğundaki onay işaretine tıklayarak.
 
-Özet sonuçlar bölmesinde, **çalışma alanına vurgulanan düğümleri Ekle** düğmesine tıklayarak arama sonuçlarını çalışma alanına ekleyebilirsiniz.
+Özet sonuçları bölmesindeki Vurgulanan düğümleri Çalışma Alanına ekle düğmesine tıklayarak **arama** sonuçlarını çalışma alanına ekleyebilirsiniz.
 
-![XML şema Gezgini arama sonucu](../xml-tools/media/schemaexplorersearchresult.gif)
+![XML Şema Gezgini Arama Sonucu](../xml-tools/media/schemaexplorersearchresult.gif)
 
-## <a name="clear-search-results"></a>Arama sonuçlarını temizle
+## <a name="clear-search-results"></a>Arama sonuçlarını temizleme
 
-Arama sonuçlarını temizlemek için, **XML şeması Gezgini** arama araç çubuğunun özet sonuçlar bölmesindeki **x** düğmesine tıklayın.
+Arama sonuçlarını temizlemek için XML Şema Gezgini Arama araç çubuğunun özet sonuçları **bölmesindeki** **x** düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

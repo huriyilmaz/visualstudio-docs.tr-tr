@@ -1,6 +1,6 @@
 ---
 title: Başlangıç Visual Studio Komutlarını Ekleme | Microsoft Docs
-description: Visual Studio'de özel bir Başlangıç Sayfasındaki XAML nesnelerine farklı komutlar bağlamanın Visual Studio.
+description: Visual Studio'de özel bir Başlangıç Sayfasındaki XAML nesnelerine komut bağlamanın farklı Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,19 +11,20 @@ ms.assetid: a8e2765c-cfb5-47b5-a414-6e48b434e0c2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 0bf0f9a3db21dd93b1a497731bca9142a4377acc
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 9ab2fc534b2ef986b15102667bd23e108ea4c69256fe64516b0df08595b1157c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901519"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403508"
 ---
 # <a name="add-visual-studio-commands-to-a-start-page"></a>Başlangıç Visual Studio komutlarını ekleme
 
-Özel bir Başlangıç Sayfası 7.000.000 Visual Studio ekleyebilirsiniz. Bu belgede, başlangıç komutlarını Bir Başlangıç Visual Studio XAML nesnelerine bağlamanın farklı yolları ele ele alır.
+Özel bir Başlangıç Sayfası oluşturdukta, bu sayfaya Visual Studio komutlarını ekleyebilirsiniz. Bu belgede, başlangıç komutlarını Bir Başlangıç Visual Studio XAML nesnelerine bağlamanın farklı yolları ele yer atır.
 
 XAML'de komutlar hakkında daha fazla bilgi için bkz. [Komuta genel bakış](/dotnet/framework/wpf/advanced/commanding-overview)
 
@@ -36,13 +37,13 @@ xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.Vis
 xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
 ```
 
-derlemesi'nden Microsoft.VisualStudio.Shell için başka bir ad *alanıMicrosoft.VisualStudio.Shell.Immutable.11.0.dll.* (Projenize bu derlemeye bir başvuru eklemeniz gerekir.)
+Derlemeden Microsoft.VisualStudio.Shell için başka bir ad alanı *Microsoft.VisualStudio.Shell.Immutable.11.0.dll.* (Projenize bu derlemeye bir başvuru eklemeniz gerekir.)
 
 ```xml
 xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.Immutable.11.0"
 ```
 
-Denetimin özelliğini olarak ayarerek Visual Studio XAML denetimlerine bağlamak için `vscom:` <xref:System.Windows.Controls.Primitives.ButtonBase.Command%2A> diğer adını `vscom:VSCommands.ExecuteCommand` kullanabilirsiniz. Daha sonra <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> özelliğini, aşağıdaki örnekte gösterildiği gibi yürütülecek komutun adına göre ayarlayın.
+Diğer adı kullanarak denetimin özelliğini Visual Studio XAML denetimlerine bağlamak için `vscom:` <xref:System.Windows.Controls.Primitives.ButtonBase.Command%2A> `vscom:VSCommands.ExecuteCommand` kullanabilirsiniz. Daha sonra <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> özelliğini, aşağıdaki örnekte gösterildiği gibi yürütülecek komutun adına göre ayarlayın.
 
 ```xml
 <Button Name="btnNewProj" Content="New Project"
@@ -54,9 +55,9 @@ Denetimin özelliğini olarak ayarerek Visual Studio XAML denetimlerine bağlama
 > [!NOTE]
 > `x:`XAML şemasına başvuran diğer ad, tüm komutların başında gereklidir.
 
- özelliğinin değerini, Komut `Command` penceresinden erişilebilen herhangi bir komut olarak **ayarlayın.** Kullanılabilir komutların listesi için bkz. [Visual Studio adları.](../ide/reference/visual-studio-command-aliases.md)
+ özelliğinin değerini Komut `Command` penceresinden erişilebilen herhangi bir komuta **göre ayarlayın.** Kullanılabilir komutların listesi için bkz. [Visual Studio adları.](../ide/reference/visual-studio-command-aliases.md)
 
- Ekleme komutu ek bir parametre gerektiriyorsa, özelliğin değerine eklemek için bunu `CommandParameter` ebilirsiniz. Aşağıdaki örnekte gösterildiği gibi parametreleri boşluk kullanarak komutlardan ayırabilirsiniz.
+ Ekleme komutu ek bir parametre gerektiriyorsa, özelliğin değerine `CommandParameter` ekebilirsiniz. Aşağıdaki örnekte gösterildiği gibi parametreleri boşluk kullanarak komutlardan ayırabilirsiniz.
 
 ```xml
 <Button Content="Web Search"
@@ -97,7 +98,7 @@ Denetimin özelliğini olarak ayarerek Visual Studio XAML denetimlerine bağlama
 ## <a name="add-commands-with-the-dte-object"></a>DTE nesnesiyle komut ekleme
  DTE nesnesine hem işaretleme hem de kod ile bir Başlangıç Sayfasından erişebilirsiniz.
 
- İşaretlemede, nesneyi çağıran Bağlama İşaretleme [Uzantısı](/dotnet/framework/wpf/advanced/binding-markup-extension) söz dizimi kullanarak bu söz dizimlerine <xref:EnvDTE.DTE> erişebilirsiniz. Bu yaklaşımı, koleksiyonlar gibi basit özelliklere bağlamak için kullanabilirsiniz, ancak yöntemlere veya hizmetlere bağlanamaz. Aşağıdaki örnekte özelliğine bağlanan bir denetim ve özelliği tarafından döndürülen koleksiyonun özelliklerini listeleyen <xref:System.Windows.Controls.TextBlock> <xref:EnvDTE._DTE.Name%2A> bir denetim yer <xref:System.Windows.Controls.ListBox> <xref:EnvDTE.Window.Caption%2A> <xref:EnvDTE._DTE.Windows%2A> almaktadır.
+ İşaretlemede, nesnesine çağrı yapmak için Bağlama [İşaretleme Uzantısı söz](/dotnet/framework/wpf/advanced/binding-markup-extension) dizimi kullanarak <xref:EnvDTE.DTE> erişebilirsiniz. Bu yaklaşımı, koleksiyonlar gibi basit özelliklere bağlamak için kullanabilirsiniz, ancak yöntemlere veya hizmetlere bağlanamazsiniz. Aşağıdaki örnekte özelliğine bağlanan bir denetim ve özelliği tarafından döndürülen koleksiyonun özelliklerini listeleyen <xref:System.Windows.Controls.TextBlock> <xref:EnvDTE._DTE.Name%2A> bir denetim yer <xref:System.Windows.Controls.ListBox> <xref:EnvDTE.Window.Caption%2A> <xref:EnvDTE._DTE.Windows%2A> almaktadır.
 
 ```xml
 <TextBlock Text="{Binding Path=DTE.Name}" FontSize="12" HorizontalAlignment="Center"/>

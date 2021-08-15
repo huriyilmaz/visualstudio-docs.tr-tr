@@ -1,6 +1,6 @@
 ---
 title: 64 bitlik bir işlem olarak birim testi çalıştırma
-description: Birim testlerini çalıştırmayı ve kod kapsamı bilgilerini 64 bitlik bir işlem olarak yakalamayı öğrenin. 64 bitlik bir bilgisayarınız olmalıdır.
+description: Birim testleri çalıştırmayı ve 64 bit işlem olarak kod kapsamı bilgilerini yakalamayı öğrenin. 64 bit bilgisayarınız olmalıdır.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: how-to
@@ -9,45 +9,46 @@ helpviewer_keywords:
 - unit tests, running
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 184ea2250732bfa37f1740fadfa85616d83a88cb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 702e83e487f6d2bbfbb85d8026476ff1c3db9cbfccbbf7f6b431f0ea93b0f1ed
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917555"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121315115"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>64 bitlik bir işlem olarak birim testi çalıştırma
 
-64 bitlik bir makineniz varsa, birim testlerini çalıştırabilir ve kod kapsamı bilgilerini bir 64 bit işlem olarak yakalayabilirsiniz.
+64 bit makine varsa birim testleri çalıştırabilir ve kod kapsamı bilgilerini 64 bit işlem olarak yakalayabilirsiniz.
 
-## <a name="to-run-a-unit-test-as-a-64-bit-process"></a>Bir birim testini 64 bitlik bir işlem olarak çalıştırmak için
+## <a name="to-run-a-unit-test-as-a-64-bit-process"></a>Birim testini 64 bit işlem olarak çalıştırmak için
 
-1. Kodunuz veya testleriniz, 32 bit/x86 olarak derlenmişse, ancak artık bunları 64 bitlik bir işlem olarak çalıştırmak istiyorsanız, bunları **herhangi BIR CPU** olarak yeniden derleyin.
+1. Kodunuz veya testlerinizi 32 bit/x86 olarak derledik ancak şimdi bunları 64 bit işlem olarak çalıştırmak istiyorsanız, bunları Herhangi bir CPU olarak **yeniden derle.**
 
    ::: moniker range="vs-2017"
-   Alternatif olarak, Visual Studio 2017 ' de projenizi **64 bit** olarak derleyebilirsiniz.
+   Alternatif olarak, Visual Studio 2017'de projenizi **64 bit olarak da derleyesiniz.**
    ::: moniker-end
 
     > [!TIP]
-    > En yüksek esneklik için, test projelerinizi **herhangi BIR CPU** yapılandırmasıyla derleyin. Ardından, 32-bit ve 64 bit aracılarında çalıştırabilirsiniz. Yalnızca 64 bit üzerinde desteklenen kodu çağırırken **64 bitlik** yapılandırma ile test projelerini derlemek avantajına sahip değildir.
+    > Maksimum esneklik için test projelerinizi Herhangi bir **CPU yapılandırmasıyla derle.** Ardından hem 32 bit hem de 64 bit aracılar üzerinde çalıştırarak. Yalnızca 64 bit üzerinde desteklenen kodu çağırmadıkça test projelerini **64 bit** yapılandırmayla derlemenin bir avantajı yoktur.
 
-2. Birim testlerini 64 bitlik bir işlem olarak çalışacak şekilde ayarlayın.
+2. Birim testlerini 64 bit işlem olarak çalıştıracak şekilde ayarlayın.
 
    ::: moniker range=">=vs-2019"
-   Visual Studio menüsünden **Test**' i ve sonra **anycpu projeleri için işlemci mimarisi**' ni seçin. Testleri 64 bitlik bir işlem olarak çalıştırmak için **x64** seçeneğini belirleyin.
+   Yeni Visual Studio Test'i ve **ardından** **AnyCPU projeleri için İşlemci Mimarisi'ne tıklayın.** Testleri **64** bit işlem olarak çalıştırmak için x64'ü seçin.
    ::: moniker-end
    ::: moniker range="vs-2017"
-   Visual Studio menüsünden **Test**' i seçin, ardından **Test ayarları**' nı seçin ve ardından **işlemci mimarisi**' ni seçin. Testleri 64 bitlik bir işlem olarak çalıştırmak için **x64** seçeneğini belirleyin.
+   İlkeler Visual Studio Test'i seçin, ardından **Test** Ayarlar ve ardından İşlemci **Mimarisi'ne tıklayın.** Testleri **64** bit işlem olarak çalıştırmak için x64'ü seçin.
    ::: moniker-end
 
-   \- veya
+   \- veya -
 
-   `<TargetPlatform>x64</TargetPlatform>`Bir *. runsettings* dosyasında belirtin. Bu yöntemin avantajı, farklı dosyalardaki ayar gruplarını belirtebileceğiniz ve farklı ayarlar arasında hızlı bir şekilde geçiş yapmak için kullanabileceğiniz bir avantajdır. Ayrıca, ayarları çözümler arasında kopyalayabilirsiniz. Daha fazla bilgi için bkz [.. runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
+   `<TargetPlatform>x64</TargetPlatform>` *.runsettings dosyasında belirtin.* Bu yöntemin bir avantajı, farklı dosyalarda ayar grupları belirterek farklı ayarlar arasında hızla geçiş yapabilirsiniz. Ayrıca, ayarları çözümler arasında kopya edebilirsiniz. Daha fazla bilgi için [bkz. Bir .runsettings dosyası kullanarak birim testlerini yapılandırma.](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md)
-- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Kodunuzu birim testi](../test/unit-test-your-code.md)

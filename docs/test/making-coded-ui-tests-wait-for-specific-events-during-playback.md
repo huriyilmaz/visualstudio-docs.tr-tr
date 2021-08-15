@@ -7,14 +7,15 @@ ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cd809736b2b76ec4f453e2f886db5885e9d9640
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8e06ad5eb97d6a4192e4f705f0a94fc67171827279df3f7402d6b3e4bd264e4f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887633"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121299350"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>Kayıttan yürütme sırasında belirli olaylar için kodlanmış UI testlerinin beklemesini sağlama
 

@@ -1,5 +1,5 @@
 ---
-description: Konum, program ve iş parçacığı dahil bir hata kesme noktası çözünürlüğünü açıklar.
+description: Konum, program ve iş parçacığı dahil olmak üzere bir hata kesme noktası çözümlemesi açıklar.
 title: BP_ERROR_RESOLUTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: a6b83242-5728-4716-80f3-840c96d59c6c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 44bf92db77bf39e7e4a214e902781e27a7a731ef
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 064091d6bfe1bd25cfccc1df486cfad83441d12a8c01c679feae925d58426f83
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085305"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262795"
 ---
 # <a name="bp_error_resolution_info"></a>BP_ERROR_RESOLUTION_INFO
-Konum, program ve iş parçacığı dahil bir hata kesme noktası çözünürlüğünü açıklar.
+Konum, program ve iş parçacığı dahil olmak üzere bir hata kesme noktası çözümlemesi açıklar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,32 +53,32 @@ public struct BP_ERROR_RESOLUTION_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Bu yapının hangi alanlarının doldurulacağını belirten [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) Numaralandırmadaki değerlerin birleşimi.
+Bu yapının hangi [alanlarının BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) belirten bir veri BPERESI_FIELDS değerleri birleşimi.
 
 `bpResLocation`\
-Kesme noktası çözümleme konumunu belirten [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) birleşimi.
+Kesme [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) konumunu belirten veri noktası birliliği.
 
 `pProgram`\
-Kesme noktası hatasının gerçekleştiği uygulamayı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
+Kesme noktası hatasının meydana geldiği uygulamayı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
 
 `pThread`\
-Kesme noktası hatasını oluşturan uygulamanın çalıştığı iş parçacığını temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+Kesme noktası hatasını oluşturan uygulamanın üzerinde çalıştır olduğu iş parçacığını temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 `bstrMessage`\
-Bu hata çözümünden kaynaklanan herhangi bir uyarı veya hata iletisi içeren bir dize.
+Bu hata çözümlemesi sonucunda ortaya çıkan herhangi bir uyarı veya hata iletisini içeren bir dize.
 
 `dwType`\
-Kesme noktası hata türünü belirten [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) numaralandırmasından bir değer.
+Kesme noktası [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) belirten bir değerdir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) yönteminden döndürülür.
+Bu yapı [GetResolutionInfo yönteminden](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

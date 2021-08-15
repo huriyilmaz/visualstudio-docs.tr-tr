@@ -1,5 +1,5 @@
 ---
-title: SupportsMasterPage öğesi (Visual Studio şablonları) | Microsoft Docs
+title: supportsmasterpage öğesi (Visual Studio şablonları) | Microsoft Docs
 description: SupportsMasterPage öğesi hakkında bilgi edinin ve yeni öğe Ekle iletişim kutusunda ana sayfa seç onay kutusunun etkin olup olmadığını belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3b779b3626c4ff47fe798fa9f4ff2e7bc9c7ac8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4138f7ffdb227c0a7bacd09fb514d2d22c63d5962ab3c9787b616dedde3d8d38
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056044"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121320990"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage Öğesi (Visual Studio Şablonları)
 **Yeni öğe Ekle** Iletişim kutusunda **Ana sayfa seç** onay kutusunun etkin olup olmadığını belirtir.
@@ -48,7 +48,7 @@ ms.locfileid: "105056044"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|şablonu kategorilere ayırır ve **yeni Project** veya **yeni öğe** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.

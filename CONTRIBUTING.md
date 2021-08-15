@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1a53d6fed4b2900aa730f4a5c2e04d528b42d1b9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b636aec6a181e7b1c6394aeb7c3d59b1704db1e3002363ed61944c540b56867a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62419849"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121241101"
 ---
 # <a name="contribute-to-visual-studio-documentation"></a>Visual Studio belgelerine katkıda bulunun
 
@@ -26,7 +26,7 @@ Hata ve öneri göndermek için lütfen herhangi bir makalenin altındaki geri b
 
 ![Geri bildirim aracı](media/feedback-tool.png)
 
-### <a name="quick-edit-in-github"></a>GitHub 'da hızlı düzenleme
+### <a name="quick-edit-in-github"></a>GitHub 'de hızlı düzenleme
 
 Katkıda bulunanlar kılavuzundaki [mevcut belgelerde hızlı düzenlemeler](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) için yönergeleri izleyin.
 
@@ -36,4 +36,4 @@ Katkıda bulunanlar kılavuzundaki [çekme istekleri](https://docs.microsoft.com
 
 **NOT**
 
-`docs/vs-2015`Ürünümüzün daha eski bir sürümü olan Visual Studio 2015 ' de olduğu gibi, klasördeki dosyalar üzerinde etkin bir şekilde çalışmadık. Bu dosyalarda önemsiz değişiklikler için çekme isteklerini kabul etmuyoruz.
+bu klasördeki dosyalar üzerinde etkin `docs/vs-2015` bir şekilde çalışmamız, ürünümüzün eski bir sürümü olan Visual Studio 2015 ' dir. Bu dosyalarda önemsiz değişiklikler için çekme isteklerini kabul etmuyoruz.

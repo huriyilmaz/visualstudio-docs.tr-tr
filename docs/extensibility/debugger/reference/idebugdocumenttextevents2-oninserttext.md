@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama paketine metin eklenmiş olduğunu bildirir.
-title: 'IDebugDocumentTextEvents2:: Onınserttext | Microsoft Docs'
+description: Metnin belgeye ekli olduğunu hata ayıklama paketine iletir.
+title: IDebugDocumentTextEvents2::onInsertText | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 6040181f-7288-4a42-953c-d23f74200431
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b98361636e75ee2338cd32cd9782c53a4fb87d98
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4b47c348411648dc1bb34cf4bcd7bc99d2c66feffa926c4fe7258e30e33034c8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066106"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121261924"
 ---
 # <a name="idebugdocumenttextevents2oninserttext"></a>IDebugDocumentTextEvents2::onInsertText
-Hata ayıklama paketine metin eklenmiş olduğunu bildirir.
+Metnin belgeye ekli olduğunu hata ayıklama paketine iletir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,13 +45,13 @@ int onInsert(
 
 ## <a name="parameters"></a>Parametreler
 `pos`\
-'ndaki Metnin nereye eklendiğini belirten [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı.
+[in] Metnin [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) gösteren bir yapıdır.
 
 `dwNumToInsert`\
-'ndaki Eklenen metnin karakter sayısını belirtir.
+[in] Eklenen metnin karakter sayısını belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)

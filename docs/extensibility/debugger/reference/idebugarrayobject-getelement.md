@@ -11,17 +11,18 @@ ms.assetid: 08b44341-7bf1-4a8c-8b79-98ae5785b195
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 43659e8dfbd86f800105cbfa35fa3b3a13c099cf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 95d910d6ab039a544715a77b68d2f09b4a1478545ef64dd962db8cd5b372f707
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094386"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121323878"
 ---
 # <a name="idebugarrayobjectgetelement"></a>IDebugArrayObject::GetElement
 Dizinin bir öğesini alır.
