@@ -11,16 +11,17 @@ ms.assetid: 445d6f3f-95b0-47ac-85e2-51b778240687
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 98cfb12649fe85ce9e5f6b6a51a8c61243b5e9da
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 37495719a5590fff6dc2ec61cb863e2163f468c7ccf15e316a034cb510c4f0a5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096765"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239340"
 ---
 # <a name="bp_location_data_string"></a>BP_LOCATION_DATA_STRING
 Kullanıcının tümleşik geliştirme ortamından (IDE) girebileceği bir dizeyi temel alan veri kesme noktaları ayarlamak için kullanılır.

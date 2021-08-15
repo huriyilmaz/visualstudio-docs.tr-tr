@@ -9,14 +9,15 @@ ms.assetid: 7c9b4cde-6e4a-4cef-929f-7d02b1da5762
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 51da481edb636450770d0cff569b9ef411e17cf6
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: e63c7fefe387c0bd7980980eb43a0f78b5c4ffb5a878af3d22b16b4f77806ba7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900960"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342745"
 ---
 # <a name="getscheduledtasksfordebugger-method"></a>GetScheduledTasksForDebugger Metodu
 Tüm zamanlanmış görevlerin bir dizisini alır.
@@ -25,7 +26,7 @@ Tüm zamanlanmış görevlerin bir dizisini alır.
 
  **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 

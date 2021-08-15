@@ -1,6 +1,6 @@
 ---
 title: Veri Kümesi Tasarımcısı bir DataTable oluşturun
-description: Bu izlenecek yolda, Veri Kümesi Tasarımcısı kullanarak bir DataTable (TableAdapter olmadan) oluşturun. Yeni bir Windows Forms uygulaması oluşturun ve buna yeni bir veri kümesi ekleyin.
+description: Bu izlenecek yolda, Veri Kümesi Tasarımcısı kullanarak bir DataTable (TableAdapter olmadan) oluşturun. yeni bir Windows Forms uygulaması oluşturun ve buna yeni bir veri kümesi ekleyin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -12,26 +12,27 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: feec31fa0a9e34ad63e0b849d09084081e5710e5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 08c5355ab65947ef41a45f5d7f66f5b5e82a6994e9f0f0190870b28d687ffa7e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858182"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346576"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>İzlenecek yol: Veri Kümesi Tasarımcısı bir DataTable oluşturun
 
 Bu izlenecek yol <xref:System.Data.DataTable> , **veri kümesi tasarımcısı** kullanarak (TableAdapter olmadan) oluşturmayı açıklar. TableAdapters içeren veri tabloları oluşturma hakkında daha fazla bilgi için bkz. [Create and configure TableAdapters](../data-tools/create-and-configure-tableadapters.md).
 
-## <a name="create-a-new-windows-forms-application"></a>Yeni bir Windows Forms uygulaması oluşturma
+## <a name="create-a-new-windows-forms-application"></a>yeni bir Windows Forms uygulaması oluşturma
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. Visual Studio, **dosya** menüsünde **yeni**  >  **Project**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
+2. sol bölmedeki **Visual C#** ' ı veya **Visual Basic** genişletin ve sonra **Windows masaüstü**' nü seçin.
 
-3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
+3. orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
 4. Projeyi **DataTableWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
@@ -39,7 +40,7 @@ Bu izlenecek yol <xref:System.Data.DataTable> , **veri kümesi tasarımcısı** 
 
 ## <a name="add-a-new-dataset-to-the-application"></a>Uygulamaya yeni bir veri kümesi ekleme
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Project** menüsünde **yeni öğe ekle**' yi seçin.
 
      **Yeni Öğe Ekle** iletişim kutusu görünür.
 
@@ -47,7 +48,7 @@ Bu izlenecek yol <xref:System.Data.DataTable> , **veri kümesi tasarımcısı** 
 
 3. **Ekle**' yi seçin.
 
-     Visual Studio **dataSet1. xsd** adlı bir dosyayı projeye ekler ve **veri kümesi Tasarımcısı** açar.
+     Visual Studio **DataSet1. xsd** adlı bir dosyayı projeye ekler ve **Veri Kümesi Tasarımcısı** açar.
 
 ## <a name="add-a-new-datatable-to-the-dataset"></a>Veri kümesine yeni bir DataTable ekleyin
 
@@ -79,7 +80,7 @@ Tüm veri tabloları birincil bir anahtara sahip olmalıdır. Birincil anahtar, 
 
 Birincil anahtarı ayarlamak için **SongID** sütununa sağ tıklayın ve ardından **birincil anahtarı ayarla**' ya tıklayın. **SongID** sütununun yanında bir anahtar simgesi görünür.
 
-## <a name="save-your-project"></a>Projenizi kaydedin
+## <a name="save-your-project"></a>Project kaydedin
 
 **DataTableWalkthrough** projesini kaydetmek Için, **Dosya** menüsünde **Tümünü Kaydet**' i seçin.
 

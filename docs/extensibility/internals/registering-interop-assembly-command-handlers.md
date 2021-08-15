@@ -11,14 +11,15 @@ ms.assetid: 303cd399-e29d-4ea1-8abe-5e0b59c12a0c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 641a21658e490f94a27cbd9120d044539a7ec284
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 65456c5d351bda47663b93e450c938b030a68bf9086e137540c632c67599ffab
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062765"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275287"
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>Birlikte Çalışma Bütünleştirilmiş Kodu Komut İşleyicilerini Kaydetme
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE) komutlarının düzgün şekilde yönlendirildiği için bir VSPackage ile kaydolmalıdır.
@@ -33,7 +34,7 @@ ms.locfileid: "105062765"
  Kullanıcı arabirimi (UI) tabanlı komutlar için işleyici olarak davranan bir VSPackage, VSPackage 'tan sonra adlı bir kayıt defteri girişi gerektirir `GUID` . Bu kayıt defteri girdisi, VSPackage 'un Kullanıcı arabirimi kaynak dosyasının ve bu dosya içindeki menü kaynağının konumunu belirtir. Kayıt defteri girişinin kendisi HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ *\<Version>* \Menus altında bulunur *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . örneğin, sürümü, 9,0.
 
 > [!NOTE]
-> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiokök yolu, \\ *\<Version>* kabuk başlatıldığında alternatif bir kökle geçersiz kılınabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kök yolu hakkında daha fazla bilgi için, [Windows Installer Ile VSPackages yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)bölümüne bakın.
+> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiokök yolu, \\ *\<Version>* kabuk başlatıldığında alternatif bir kökle geçersiz kılınabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . kök yolu hakkında daha fazla bilgi için, [Windows Installer ile vspackages yükleme](../../extensibility/internals/installing-vspackages-with-windows-installer.md)bölümüne bakın.
 
 ### <a name="the-ctmenu-resource-registry-entry"></a>CTMENU kaynak kayıt defteri girdisi
  Kayıt defteri girişinin yapısı:

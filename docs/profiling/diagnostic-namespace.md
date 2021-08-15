@@ -12,14 +12,15 @@ ms.assetid: ad786b19-7c4c-46ee-bfb6-c4752b373a09
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 22224e375c1d1f463f1c07d41ca5a03efa5cabdb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 93da07b215e9fd8e7fb3fcaf88fcc31ea123bc792efca351faf3bf40d86fa2e5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923733"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121254383"
 ---
 # <a name="diagnostic-namespace"></a>Tanılama ad alanı
 `diagnostics`Ad alanı eşzamanlılık görselleştiricisi işaretçilerini yayma işlevlerini sağlar.

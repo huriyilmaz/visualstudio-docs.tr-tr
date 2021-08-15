@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma'
-description: Bir parola ile korunan bir belge veya çalışma kitabındaki veri önbelleğine veri eklerseniz, projenizdeki iki yöntemi geçersiz kılarak önbelleğe alınmış verideki değişiklikleri kaydedebilirsiniz.
+title: 'Nasıl kullanılır: Parola korumalı bir belgede verileri önbelleğe ekleme'
+description: Parolayla korunan bir belge veya çalışma kitabındaki veri önbelleğine veri eklerseniz, projenizin iki yöntemini geçersiz karak önbelleğe alınan verilerde yapılan değişiklikleri kaydedebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,68 +14,69 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ccdb906022d4dcfc321af294eec59afa36832773
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: db686d8b31f9a47fc68dc37f4844be60c46bf7a2812024c2385c147d6f604610
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824191"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440844"
 ---
-# <a name="how-to-cache-data-in-a-password-protected-document"></a>Nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma
-  Parola ile korunan bir belge veya çalışma kitabındaki veri önbelleğine veri eklerseniz, önbelleğe alınmış verilerde yapılan değişiklikler otomatik olarak kaydedilmez. Projenizdeki iki yöntemi geçersiz kılarak önbelleğe alınmış verideki değişiklikleri kaydedebilirsiniz.
+# <a name="how-to-cache-data-in-a-password-protected-document"></a>Nasıl kullanılır: Parola korumalı bir belgede verileri önbelleğe ekleme
+  Parolayla korunan bir belge veya çalışma kitabındaki veri önbelleğine veri eklerseniz, önbelleğe alınan verilerde yapılan değişiklikler otomatik olarak kaydedlanmaz. Projenizin iki yöntemini geçersiz karak önbelleğe alınan verilerde yapılan değişiklikleri kaydedebilirsiniz.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-## <a name="caching-in-word-documents"></a>Word belgelerinde önbelleğe alma
+## <a name="caching-in-word-documents"></a>Önbelleğe Alma Word belgelerde kullanma
 
-### <a name="to-cache-data-in-a-word-document-that-is-protected-with-a-password"></a>Parolayla korunan bir Word belgesindeki verileri önbelleğe almak için
+### <a name="to-cache-data-in-a-word-document-that-is-protected-with-a-password"></a>Parolayla korunan bir Word belgesinde verileri önbelleğe alan
 
-1. `ThisDocument`Sınıfında, önbelleğe alınacak bir ortak alanı veya özelliği işaretleyin. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
+1. sınıfında, `ThisDocument` önbelleğe alınarak ortak bir alanı veya özelliği işaretle. Daha fazla bilgi için bkz. [Verileri önbelleğe alın.](../vsto/caching-data.md)
 
-2. <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A>Sınıftaki yöntemi geçersiz kılın `ThisDocument` ve belgeden korumayı kaldırın.
+2. sınıfında <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> yöntemini geçersiz kılın `ThisDocument` ve belgeden korumayı kaldırın.
 
-     Belge kaydedildiğinde, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] belgenin korumasını kaldırma fırsatı vermek için bu yöntemi çağırır. Bu, önbelleğe alınan verilerde yapılan değişikliklerin kaydedilmesini sağlar.
+     Belge kaydedilirken, size [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] belgenin korumasını geri alıma fırsatı vermek için bu yöntemi arar. Bu, önbelleğe alınan verilerde yapılan değişikliklerin kaydedilebilir.
 
-3. <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A>Sınıfında yöntemi geçersiz kılın `ThisDocument` ve korumayı belgeye yeniden uygulayın.
+3. sınıfında <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> yöntemini geçersiz kılın `ThisDocument` ve belgeye korumayı yeniden kullanın.
 
-     Belge kaydedildikten sonra, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] belgeye korumayı yeniden uygulama fırsatı vermek için bu yöntemi çağırır.
+     Belge kaydedildikten sonra, size belgeye yeniden koruma uygulama [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] fırsatı vermek için bu yöntemi arar.
 
 ### <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde, bir parola ile korunan Word belgesinde verilerin nasıl önbelleğe alınacağını gösterilmektedir. Kod, metodun korumasını kaldırmadan önce <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> , geçerli <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> değeri kaydeder, böylece aynı koruma türü yönteme yeniden uygulanabilir <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> .
+ Aşağıdaki kod örneği, parolayla korunan bir Word belgesinde verileri önbelleğe nasıl alasınız? Kod yönteminde korumayı kaldırmadan önce geçerli değeri kaydeder, böylece yöntemde aynı koruma türü <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> yeniden geçerli <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> olabilir.
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_CachedDataProtectedDocument/ThisDocument.cs" id="Snippet1":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedDocument/ThisDocument.vb" id="Snippet1":::
 
-### <a name="compile-the-code"></a>Kodu derle
- Bu kodu `ThisDocument` projenizdeki sınıfa ekleyin. Bu kod, parolanın adlı bir alanda depolandığını varsayar `securelyStoredPassword` .
+### <a name="compile-the-code"></a>Kodu derleme
+ Bu kodu projenizin `ThisDocument` sınıfına ekleyin. Bu kod, parolanın adlı bir alanda depolandığı `securelyStoredPassword` varsayıyor.
 
-## <a name="cache-in-excel-workbooks"></a>Excel çalışma kitaplarında önbelleğe alma
- Excel projelerinde, bu yordam yalnızca yöntemini kullanarak çalışma kitabının tamamını parolayla koruduğunuzda gereklidir <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> . Yöntemini kullanarak yalnızca belirli bir çalışma sayfasını parolayla koruduğunuzda, bu yordam gerekli değildir <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> .
+## <a name="cache-in-excel-workbooks"></a>Çalışma kitaplarında Excel önbelleğe alın
+ Bu Excel, bu yordam yalnızca yöntemini kullanarak çalışma kitabının tamamını parolayla korurken <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> gereklidir. yöntemini kullanarak yalnızca belirli bir çalışma sayfasını parolayla koruyorsanız bu yordam <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> gerekli değildir.
 
-### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>Parola ile korunan bir Excel çalışma kitabındaki verileri önbelleğe almak için
+### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>Parola ile korunan Excel çalışma kitabındaki verileri önbelleğe alan
 
-1. `ThisWorkbook`Sınıfında veya `Sheet` *n* sınıflarından birinde, önbelleğe alınacak bir ortak alanı veya özelliği işaretleyin. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
+1. sınıfında `ThisWorkbook` veya n sınıftan `Sheet`  biri, önbelleğe alınarak ortak bir alanı veya özelliği işaretle. Daha fazla bilgi için bkz. [Verileri önbelleğe alın.](../vsto/caching-data.md)
 
-2. <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A>Sınıftaki yöntemi geçersiz kılın `ThisWorkbook` ve çalışma kitabının korumasını kaldırın.
+2. sınıfında yöntemini <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> geçersiz kılın ve çalışma `ThisWorkbook` kitabından korumayı kaldırın.
 
-     Çalışma kitabı kaydedildiğinde, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] çalışma kitabının korumasını kaldırma fırsatı vermek için bu yöntemi çağırır. Bu, önbelleğe alınan verilerde yapılan değişikliklerin kaydedilmesini sağlar.
+     Çalışma kitabı kaydedilirken, çalışma [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kitabının korumasını kaldırma fırsatı vermek için bu yöntemi kullanır. Bu, önbelleğe alınan verilerde yapılan değişikliklerin kaydedilebilir.
 
-3. <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A>Sınıfında yöntemi geçersiz kılın `ThisWorkbook` ve korumayı belgeye yeniden uygulayın.
+3. sınıfında <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> yöntemini geçersiz kılın `ThisWorkbook` ve belgeye korumayı yeniden kullanın.
 
-     Çalışma kitabı kaydedildikten sonra, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] çalışma kitabına korumayı yeniden uygulama fırsatı vermek için bu yöntemi çağırır.
+     Çalışma kitabı kaydedildikten sonra bu yöntemi çağırarak çalışma kitabına yeniden [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] koruma uygulama fırsatı sağlar.
 
 ### <a name="example"></a>Örnek
- Aşağıdaki kod örneği, bir parola ile korunan bir Excel çalışma kitabında verilerin nasıl önbelleğe alınacağını göstermektedir. Kod, metodun korumasını kaldırmadan önce <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> , geçerli <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> ve <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> değerlerini kaydeder, böylece aynı koruma türü yönteme yeniden uygulanabilir <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> .
+ Aşağıdaki kod örneği, parolayla korunan bir Excel çalışma kitabındaki verilerin nasıl önbelleğe alınmalıdır? Kod yönteminde korumayı kaldırmadan önce, yönteminde aynı koruma türünün yeniden geçerli ve değerlerini kaydedecek şekilde <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> kaydeder.
 
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedWorkbook/ThisWorkbook.vb" id="Snippet1":::
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_CachedDataProtectedWorkbook/ThisWorkbook.cs" id="Snippet1":::
 
-### <a name="compile-the-code"></a>Kodu derle
- Bu kodu `ThisWorkbook` projenizdeki sınıfa ekleyin. Bu kod, parolanın adlı bir alanda depolandığını varsayar `securelyStoredPassword` .
+### <a name="compile-the-code"></a>Kodu derleme
+ Bu kodu projenizin `ThisWorkbook` sınıfına ekleyin. Bu kod, parolanın adlı bir alanda depolandığı `securelyStoredPassword` varsayıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Önbellek verileri](../vsto/caching-data.md)
-- [Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
-- [Nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
+- [Nasıl kullanılır: Verileri çevrimdışı veya sunucuda kullanmak üzere önbelleğe alın](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
+- [Nasıl kullanılır: Bir veri kaynağını program aracılığıyla bir veri Office önbelleğe ekleme](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)

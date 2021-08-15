@@ -1,6 +1,6 @@
 ---
-title: Property öğesi (MSBuild) | Microsoft Docs
-description: Bir PropertyGroup öğesinin alt öğesi olarak belirtilmesi gereken kullanıcı tanımlı bir özellik adı ve değeri içeren MSBuild özellik öğesi hakkında bilgi edinin.
+title: Özellik öğesi (MSBuild) | Microsoft Docs
+description: bir propertygroup öğesinin alt öğesi olarak belirtilmesi gereken kullanıcı tanımlı bir özellik adı ve değeri içeren MSBuild özellik öğesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -16,18 +16,19 @@ ms.assetid: 69ab08ab-3e76-41dd-a01b-49aa1d2e0cac
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 617a6d3712b137d76334d4063f36a1b8dde1d101
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4203d177c4d4289f26ba445538005951a11792887acc9ec16ef35e5398b6acad
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918855"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270424"
 ---
-# <a name="property-element-msbuild"></a>Property öğesi (MSBuild)
+# <a name="property-element-msbuild"></a>Özellik öğesi (MSBuild)
 
-Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde kullanılan her özellik, bir öğesinin alt öğesi olarak belirtilmelidir `PropertyGroup` .
+Kullanıcı tanımlı özellik adı ve değeri içerir. bir MSBuild projesinde kullanılan her özellik, bir öğesinin alt öğesi olarak belirtilmelidir `PropertyGroup` .
 
  \<Project> \<PropertyGroup>
 
@@ -67,7 +68,7 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde k
 
 ## <a name="remarks"></a>Açıklamalar
 
- Özellik adları yalnızca ASCII karakterleri ile sınırlıdır. Özellik değerleri, " `$(` " ve "" arasında özellik adı girilerek projede başvurulur `)` . Örneğin, `$(builddir)\classes` *build\classes* olarak çözümleniyordu `builddir` `build` . Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+ Özellik adları yalnızca ASCII karakterleri ile sınırlıdır. Özellik değerleri, " `$(` " ve "" arasında özellik adı girilerek projede başvurulur `)` . Örneğin, `$(builddir)\classes` *build\classes* olarak çözümleniyordu `builddir` `build` . özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 ## <a name="example"></a>Örnek
 
@@ -83,4 +84,4 @@ Kullanıcı tanımlı özellik adı ve değeri içerir. Bir MSBuild projesinde k
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

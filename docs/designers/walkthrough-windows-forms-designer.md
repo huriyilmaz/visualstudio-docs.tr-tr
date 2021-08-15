@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 5803530290988affd6cfbb8342f3b1d545238985
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-designers
+ms.openlocfilehash: 95c8d746e39fdf4c5536dd69028c5f246280ba5c76a51f69ee4c92eea21f52c3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947859"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452905"
 ---
-# <a name="tutorial-get-started-with-windows-forms-designer"></a>Öğretici: Windows Form Tasarımcısı kullanmaya başlayın
+# <a name="tutorial-get-started-with-windows-forms-designer"></a>öğretici: Windows Form Tasarımcısı kullanmaya başlayın
 
 Windows Form Tasarımcısı, Windows Forms uygulamalar oluşturmak için birçok araç sağlar. Bu makalede, aşağıdaki görevler de dahil olmak üzere tasarımcı tarafından sunulan çeşitli araçları kullanarak bir uygulamanın nasıl oluşturulacağı gösterilmektedir:
 
@@ -29,7 +30,7 @@ Windows Form Tasarımcısı, Windows Forms uygulamalar oluşturmak için birçok
 - Boyut ve konum bilgileri görüntüsüne sahip denetimleri konumlandırın.
 - Özellikler penceresi kullanarak özellik değerlerini ayarlayın.
 
-İşiniz bittiğinde, Windows Form Tasarımcısı kullanılabilen çeşitli düzen özellikleri kullanılarak birleştirilen özel bir denetiminiz olacaktır. Bu denetim, basit bir Hesaplayıcı için Kullanıcı arabirimini (UI) uygular. Aşağıdaki görüntüde Hesaplayıcı denetiminin genel yerleşimi gösterilmektedir:
+işiniz bittiğinde, Windows Form Tasarımcısı kullanılabilen çeşitli düzen özellikleri kullanılarak birleştirilen özel bir denetiminiz olacaktır. Bu denetim, basit bir Hesaplayıcı için Kullanıcı arabirimini (UI) uygular. Aşağıdaki görüntüde Hesaplayıcı denetiminin genel yerleşimi gösterilmektedir:
 
 ![Kılavuzlu Tur Hesaplayıcı Kullanıcı arabirimi](media/calculator-ui.gif)
 
@@ -37,23 +38,23 @@ Windows Form Tasarımcısı, Windows Forms uygulamalar oluşturmak için birçok
 
 İlk adım, Demohesaplayıcı denetim projesini oluşturmaktır.
 
-1. Visual Studio 'Yu açın ve yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Projenin **Demohesap Torlib** olarak adlandırın.
+1. Visual Studio açın ve yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Projenin **Demohesap Torlib** olarak adlandırın.
 
    ::: moniker range=">=vs-2019"
 
-   ![Visual Studio 2019 ' de denetim kitaplığı şablonu Windows Forms](media/windows-forms-control-library-template.png)
+   ![Windows Visual Studio 2019 ' de Forms denetim kitaplığı şablonu](media/windows-forms-control-library-template.png)
 
    ::: moniker-end
 
-2. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini**' de, **UserControl1. vb** veya **UserControl1.cs** öğesine sağ tıklayın, **Yeniden Adlandır**' ı seçin ve dosya adını demohesaplayıcı. vb veya DemoCalculator.cs olarak değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** ' i seçin.
+2. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini**' de, **UserControl1. vb** veya **UserControl1. cs** öğesine sağ tıklayın, **Yeniden Adlandır**' ı seçin ve dosya adını demohesaplayıcı. vb veya demohesaplayıcı. cs olarak değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** ' i seçin.
 
-Windows Form Tasarımcısı Demohesaplayıcı denetimi için tasarımcı yüzeyini gösterir. Bu görünümde, araç kutusu ' ndan denetimler ve bileşenler ' i seçip tasarımcı yüzeyine yerleştirerek denetimin görünümünü grafiksel olarak tasarlayabilirsiniz. Özel denetimler hakkında daha fazla bilgi için bkz. [Özel denetimlerin değişen özellikleri](/dotnet/framework/winforms/controls/varieties-of-custom-controls).
+Windows Form Tasarımcısı demohesaplayıcı denetimi için tasarımcı yüzeyini gösterir. Bu görünümde, araç kutusu ' ndan denetimler ve bileşenler ' i seçip tasarımcı yüzeyine yerleştirerek denetimin görünümünü grafiksel olarak tasarlayabilirsiniz. Özel denetimler hakkında daha fazla bilgi için bkz. [Özel denetimlerin değişen özellikleri](/dotnet/framework/winforms/controls/varieties-of-custom-controls).
 
 ## <a name="design-the-control-layout"></a>Denetim düzeni tasarlama
 
-Demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. Bu yordamda, Windows Form Tasarımcısı kullanarak denetimleri düzenleyebilirsiniz.
+demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. bu yordamda, Windows Form Tasarımcısı kullanarak denetimleri düzenleyebilirsiniz.
 
-1. Windows Form Tasarımcısı, sağ alt köşedeki boyutlandırma tutamacını seçerek ve sağa sürükleyerek Demohesaplayıcı denetimini daha büyük bir boyutla değiştirin. Visual Studio 'nun sağ alt köşesinde, denetimler için boyut ve konum bilgilerini bulun. Denetimi yeniden boyutlandırırken boyut bilgilerini izleyerek denetimin boyutunu Width 500 ve Height 400 olarak ayarlayın.
+1. Windows Form Tasarımcısı, sağ alt köşedeki boyutlandırma tutamacını seçerek ve sağa sürükleyerek demohesaplayıcı denetimini daha büyük bir boyutla değiştirin. Visual Studio sağ alt köşesinde, denetimler için boyut ve konum bilgilerini bulun. Denetimi yeniden boyutlandırırken boyut bilgilerini izleyerek denetimin boyutunu Width 500 ve Height 400 olarak ayarlayın.
 
 2. **Araç kutusu**'nda, açmak için **kapsayıcılar** düğümünü seçin. **SplitContainer** denetimini seçin ve tasarımcı yüzeyine sürükleyin.
 
@@ -71,7 +72,7 @@ Demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. Bu yorda
     `SplitContainer`Denetim noktaları Demohesaplayıcı denetiminin sınırlarına göre yapılır.
 
     > [!NOTE]
-    > Birçok denetim, tasarımı kolaylaştırmak için akıllı etiketler sunar. Daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms Denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](/dotnet/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls).
+    > Birçok denetim, tasarımı kolaylaştırmak için akıllı etiketler sunar. daha fazla bilgi için bkz. [izlenecek yol: Windows Forms denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](/dotnet/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls).
 
 5. Panolar arasındaki dikey kenarlığı seçin ve sağa sürükleyin, böylece alanın çoğu sol panel tarafından alınır.
 
@@ -159,7 +160,7 @@ Artık denetimin düzeni ayarlanmış olduğuna göre, Demohesaplayıcı denetim
 
 Denetiminiz veya formunuz çeşitli denetimlerle doldurulduğu zaman, belge anahattı penceresi ile mizanpajınızı gezinmeyi daha kolay bulabilirsiniz.
 
-1. Menü çubuğunda,   >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
+1. menü çubuğunda   >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
 
    Belge Anahattı penceresi, Demohesaplayıcı denetiminin ve onun bileşen denetimlerinin ağaç görünümünü gösterir. İçindeki kapsayıcı denetimleri, `SplitContainer` alt denetimlerini ağaçta alt düğümleri olarak göster. Ayrıca Belge Anahattı penceresini kullanarak yerinde denetimleri yeniden adlandırabilirsiniz.
 
@@ -275,13 +276,13 @@ Demohesaplayıcı denetimi, diğer bileşik denetimlerde veya bir formda kullan�
 
 İlk adım uygulama projesini oluşturmaktır. Bu projeyi, özel denetiminizi gösteren uygulamayı oluşturmak için kullanacaksınız.
 
-1. Yeni bir **Windows Forms uygulama** projesi oluşturun ve bunu **Demohesaplatortest** olarak adlandırın.
+1. yeni bir **Windows Forms uygulama** projesi oluşturun ve bunu **demohesaplatortest** olarak adlandırın.
 
 2. **Çözüm Gezgini**, **Demohesaplatortest** projesine sağ tıklayın ve **sonra başvuru Ekle Iletişim kutusunu** açmak için **Başvuru Ekle** ' yi seçin.
 
 3. **Projeler** sekmesine gidin ve ardından başvuruyu test projesine eklemek Için Demohesaplatorlib projesini seçin.
 
-4. **Çözüm Gezgini**, **Demohesaplatortest** öğesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
+4. **Çözüm Gezgini**, **Demohesaplatortest** öğesine sağ tıklayın ve ardından **Başlangıç Project olarak ayarla**' yı seçin.
 
 5. Windows Form Tasarımcısı, formun boyutunu **700 x 500** hakkında artırın.
 
@@ -311,10 +312,10 @@ Bir uygulamada Demohesaplayıcı denetimini kullanmak için, onu bir forma yerle
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu makalede, basit bir Hesaplayıcı için Kullanıcı arabiriminin nasıl oluşturulacağı gösterilmiştir. Devam etmek için, hesaplayıcı mantığını uygulayarak ve ardından [uygulamayı ClickOnce kullanarak yayımlayarak](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)işlevselliğini genişletebilirsiniz. Ya da [Windows Forms kullanarak bir resim görüntüleyici oluşturduğunuz](../ide/tutorial-1-create-a-picture-viewer.md)farklı bir öğreticiye devam edin.
+Bu makalede, basit bir Hesaplayıcı için Kullanıcı arabiriminin nasıl oluşturulacağı gösterilmiştir. Devam etmek için, hesaplayıcı mantığını uygulayarak ve sonra [ClickOnce kullanarak uygulamayı yayımlayabilirsiniz](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md). ya da [Windows Forms kullanarak bir resim görüntüleyici oluşturduğunuz](../ide/tutorial-1-create-a-picture-viewer.md)farklı bir öğreticiye devam edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms denetimleri](/dotnet/framework/winforms/controls/)
 - [Windows Forms denetimleri için erişilebilirlik](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
-- [ClickOnce kullanarak yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [ClickOnce kullanarak yayımlayın](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

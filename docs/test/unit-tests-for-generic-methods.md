@@ -9,15 +9,16 @@ helpviewer_keywords:
 - unit tests, and generics
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 16d1348d74bb459a73dd4a5a4f8de21e367865c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94cd2ba6ed4d234c99d47317dc01674eaab7b1ef0f4b8565268301927bd971c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962502"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384671"
 ---
 # <a name="unit-tests-for-generic-methods"></a>Genel metotlar için birim testleri
 
@@ -117,7 +118,7 @@ public void SizeOfLinkedListTest()
 ```
 
 > [!NOTE]
-> SizeOfLinkedListTest testi çalıştığında, TestHelper yöntemi iki kez çağrılır. Onaylama bildiriminin her geçmesi için, her seferinde true olarak değerlendirilmelidir. Test başarısız olursa, belirtilen çağrının `<int>` veya belirtilen çağrının başarısız olmasına neden olup olmadığı temizlenmeyebilir `<char>` . Yanıtı bulmak için çağrı yığınını inceleyebilirsiniz veya test yönteminizin kesme noktaları ayarlayabilir ve testi çalıştırırken hata ayıklayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.net çözümünde test çalıştırırken hata ayıklama](/previous-versions/ms243172(v=vs.140)).
+> SizeOfLinkedListTest testi çalıştığında, TestHelper yöntemi iki kez çağrılır. Onaylama bildiriminin her geçmesi için, her seferinde true olarak değerlendirilmelidir. Test başarısız olursa, belirtilen çağrının `<int>` veya belirtilen çağrının başarısız olmasına neden olup olmadığı temizlenmeyebilir `<char>` . Yanıtı bulmak için çağrı yığınını inceleyebilirsiniz veya test yönteminizin kesme noktaları ayarlayabilir ve testi çalıştırırken hata ayıklayabilirsiniz. daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET çözümünde test çalıştırırken hata ayıklama](/previous-versions/ms243172(v=vs.140)).
 
 ### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a> Örnek 2: tür kısıtlaması kullanma
 Bu örnek, karşılanmamış bir tür kısıtlaması kullanan genel bir yöntem için bir birim testi gösterir. İlk bölüm kodun altındaki test projesinden kodu gösterir. Tür kısıtlaması vurgulanır.

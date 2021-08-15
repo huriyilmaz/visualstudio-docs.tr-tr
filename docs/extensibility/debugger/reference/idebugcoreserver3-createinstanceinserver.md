@@ -1,6 +1,6 @@
 ---
-description: Sunucuda hata ayıklama altyapısının bir örneğini oluşturur.
-title: 'IDebugCoreServer3:: Createınstanceınserver | Microsoft Docs'
+description: Sunucuda bir hata ayıklama altyapısı örneği oluşturur.
+title: IDebugCoreServer3::CreateInstanceInServer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 76f36bae-f6ab-413c-a8a9-8808bfeba05b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3511e67300725dc46e6d0e3978b2cb034b92d84e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3708d56f9eaeaa6f11124107056f67e10c33a7135ccc3998a11095c4a53acef1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058696"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238989"
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
-Sunucuda hata ayıklama altyapısının bir örneğini oluşturur.
+Sunucuda bir hata ayıklama altyapısı örneği oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -50,22 +51,22 @@ int CreateInstanceInServer(
 
 ## <a name="parameters"></a>Parametreler
 `szDll`\
-'ndaki Parametresinde belirtilen CLSID 'yi uygulayan dll 'nin yolu `clsidObject` . Bu durumda `NULL` , com `CoCreateInstance` işlevi çağrılır.
+[in] parametresinde belirtilen CLSID'i uygulayan dll'nin `clsidObject` yolu. Bu ise `NULL` COM'un `CoCreateInstance` işlevi çağrılır.
 
 `wLangId`\
-'ndaki Hata ayıklama altyapısının yerel ayarı. [Setlocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) yönteminin çağrılmaması gerekiyorsa bu 0 olabilir.
+[in] Hata ayıklama altyapısının yerel olarak yereli. [SetLocale yöntemi çağrılmasa](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) bu 0 olabilir.
 
 `clsidObject`\
-'ndaki Oluşturulacak hata ayıklama altyapısının CLSID değeri.
+[in] Oluşturularak hata ayıklama altyapısının CLSID'i.
 
 `riid`\
-'ndaki Sınıf nesnesinden alınacak olan belirli bir arabirimin arabirim KIMLIĞI.
+[in] Sınıf nesnesinden almak için belirli arabirimin arabirim kimliği.
 
 `ppvObject`\
-[out] `IUnknown` oluşturulan nesneden arabirim. Bu nesneyi istenen arabirime atayın veya sıralayamaz.
+[out] `IUnknown` arabirimini seçin. Bu nesneyi istenen arabirime atarak veya sırala.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

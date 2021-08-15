@@ -1,29 +1,30 @@
 ---
 title: Yönetilen kod için Temel Doğruluk Kuralları kural kümesi
 ms.date: 11/04/2016
-description: Visual Studio 'da mantıksal hatalara ve ortak Framework API hatalarına odaklanan temel doğruluk kuralları kural kümesi hakkında bilgi edinin. Bkz. kural açıklamaları.
+description: Mantıksal hatalara ve yaygın çerçeve API'si hatalarına Visual Studio Temel Doğruluk Kuralları kural kümesi hakkında bilgi edinin. Kural açıklamalarını görme.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 631f0daf-1d42-4c90-a7dc-1a6a9de64c93
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491226cf9c9c708804bca1bd4e075c8e5ff160be
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e0c8d23c6370f1869c514875119ddb6504b9a9a02eca2694af6405e002a3fbcf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843715"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121456225"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>Yönetilen kod için Temel Doğruluk Kuralları kural kümesi
 
-Temel Doğruluk Kuralları kural kümesi, çerçeve API 'Leri kullanımındaki mantık hatalarına ve yaygın hatalara odaklanır. Temel doğruluk kuralları, [yönetilen önerilen kurallar](managed-recommended-rules-rule-set-for-managed-code.md) kural kümesindeki kuralları içerir.
+Temel Doğruluk Kuralları kural kümesi, çerçeve API'lerinin kullanımında mantık hatalarına ve yaygın hatalara odaklanır. Temel Doğruluk Kuralları, Yönetilen Önerilen Kurallar [kural kümesinde yer alan](managed-recommended-rules-rule-set-for-managed-code.md) kuralları içerir.
 
-Aşağıdaki tabloda, Microsoft temel doğruluk kuralları kural kümesindeki tüm kurallar açıklanmaktadır.
+Aşağıdaki tabloda Microsoft Temel Doğruluk Kuralları kural kümesinde yer alan tüm kurallar açıkılmıştır.
 
-|Kural|Description|
+|Kural|Açıklama|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
 |[CA1009](../code-quality/ca1009.md)|Olay işleyicileri doğru olarak bildirin|
@@ -65,7 +66,7 @@ Aşağıdaki tabloda, Microsoft temel doğruluk kuralları kural kümesindeki t�
 |[CA2137](../code-quality/ca2137.md)|Saydam metotlar yalnızca doğrulanabilir IL içermelidir|
 |[CA2138](../code-quality/ca2138.md)|Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır|
 |[CA2140](../code-quality/ca2140.md)|Saydam kod güvenlik kritik nesnelerine başvurmamalıdır|
-|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler bağlantı taleplerini karşılamamalıdır|
+|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'i karşılamamalı|
 |[CA2146](../code-quality/ca2146.md)|Türler en az kendi taban türleri ve arabirimleri kadar kritik olmalıdır|
 |[CA2147](../code-quality/ca2147.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149.md)|Saydam metotlar yerel kod içine çağırmamalıdır|

@@ -1,139 +1,140 @@
 ---
 title: Bir özellik önerin
-description: Geliştirici topluluğu 'nda hangi önerilerin olduğunu, bir önerinizin nasıl yapılacağını ve önerilerin Visual Studio yol haritasında Microsoft tarafından nasıl kullanıldığını açıklar.
+description: Geliştirici Hizmetleri'Community, öneride nasıl öneride bulunduruldu ve microsoft tarafından bu yol haritasında nasıl Visual Studio açıklandı.
 ms.date: 12/17/2018
 ms.topic: conceptual
 author: madskristensen
 ms.author: madsk
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 75841186ca78089cf84ca91f18445243acc42ac8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7be23b0a9bed6f7a85c57e57bd174996ad5056afa9961182aa285b40bf81ed02
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970757"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121444534"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>Visual Studio için özellik önerin
 
-[Visual Studio Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)'nda sorunları bildirme özelliği hakkında yeni bir deneyim sunduk. Bu, doğrudan Visual Studio 'nun mühendislik iş akışıyla etkileşim kurmak için kullanabileceğiniz yeni bir yoldur.
+Visual Studio Developer Community. ile ilgili sorunları bildirme becerisinin yanı sıra yeni bir özellik önerme [deneyimi Community.](https://aka.ms/feedback/suggest?space=8) Bu, bir iş akışının mühendislik iş akışıyla doğrudan etkileşime Visual Studio yeni bir yol sağlar.
 
-![Geliştirici topluluğu 'nda özellik düğmesi önerme](media/suggest-a-feature/suggest-feature-button.png)
+![Developer Community'da Özellik Önerin düğmesi](media/suggest-a-feature/suggest-feature-button.png)
 
-Ayrıca, ana Visual Studio penceresinin sağ üst köşesinde bulunan **geribildirim sağla** simgesini **seçerek doğrudan** Visual Studio 'dan bir özellik önerisi başlatabilirsiniz:
+Ayrıca, ana uygulama penceresinin sağ Visual Studio  sağ üst köşesindeki Geri Bildirim Sağla simgesinden ÖneriDenizle'Visual Studio başlatabilirsiniz: 
 
-![Visual Studio 'da öneri menüsü sağlama](media/suggest-a-feature/provide-suggestion.png)
+![Visual Studio'de Bir Öneri menüsü Visual Studio](media/suggest-a-feature/provide-suggestion.png)
 
-**Öneri sağla** ' yı seçtiğinizde, önerinizi girebileceğiniz [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8)' na gidersiniz.
+**ÖneriDele'nin** seçimi sizi [Geliştirici](https://aka.ms/feedback/suggest?space=8)Community'a alır ve burada önerinizi girsiniz.
 
 ## <a name="user-voice"></a>User Voice
 
-Artık, Visual Studio kullanıcıları Kullanıcı Sessiyle yeni özellik fikirleri önerdi. Geliştirici topluluğu 'na *bir özellik öner* işlevi ekleyerek, Visual Studio ürün ekibine yönelik tüm geri bildirimleriniz artık tek bir yerde bulunur.
+Şimdiye kadar Visual Studio kullanıcılar User Voice ile ilgili yeni özellik fikirleri önerdi. Geliştirici çalışma *Community'a* Özellik önerin işlevselliğini ekleyerek, Visual Studio ürün ekibine yönelik geri bildirimleriniz artık tek bir yerdedir.
 
-Kullanıcı ses sitesi salt okunurdur. Bağlam için gereken şekilde geri bakabilirsiniz, ancak tüm yeni özellik önerileri geliştirici topluluğu 'nda gönderilmelidir.
+User Voice sitesi salt okunur yapıldı. Bağlama ihtiyacınız olduğu gibi geriye bakabilirsiniz, ancak tüm yeni özellik önerileri Geliştirici Çalışma Community.
 
-Kullanıcı sesli forumundan geliştirici topluluğu 'na ilk fikir kümesini geçirdik. Geçiş, geri bildirimin topluluk etkilerine ve ürün yol haritası önceliklerine göre yapılır. Burada Kaçırıldığımız bir öneri görmeyi bekliyorsanız, bunu geliştirici topluluğu 'na ekleyebilirsiniz.
+User Voice forumundan Developer Community'a ilk fikir kümelerini Community. Geçiş, geri bildirimin topluluk etkisine ve ürün yol haritası önceliklerimize göre yapıldı. Burada gözden kaçırarak ilgili bir öneri görmeyi bekliyorsanız, bunu Developer Community.
 
 ## <a name="votes"></a>Oylar
 
-Geliştirici topluluğundaki oylama sistemi, Kullanıcı sesiyle farklıdır. Geliştirici topluluğu oylarının bütünlüğünü sürdürmek ve oyları eğrilkliği önlemek için, her bir özellik önerisi ' nin yanında kullanıcı sesli oylarının bir etiket olarak gösterilmesi gösterilmektedir. Geliştirilmiş geliştirici topluluğundaki önerilere oy almaya devam ederken, yeni oy sayımlarınız Kullanıcı sesli oylarından ayrı olarak gösterilir.
+Developer Community oylama sistemi User Voice'den farklıdır. Geliştiricinin ve oy Community bütünlüğünü korumak ve oyların alınmasından kaçınmak için User Voice oy sayılarını her özellik önerisinin yanında bir etiket olarak gösterebilirsiniz. Gelişmiş Geliştirici çalışmalarında önerilere oy vermeye devam Community, yeni oy sayılarınızı User Voice oy sayılarından ayrı olarak gösterir.
 
 ## <a name="suggestion-status"></a>Öneri durumu
 
-Bir özellik önerisi gönderdikten sonra durumlar, özellik gönderiminizin yaşam döngüsünün nerede olduğunu gösterir. Geribildiriminizi göz önünde bulundurarak ve iş akışı sırasında taşırken, bunu ilgili durumla etiketliyoruz. Özellik önerileri ile ilişkili çeşitli durumlar, anlamları ve renk göstergelerinin açıklamasıyla birlikte burada listelenir.
+Bir özellik önerisi gönderdikten sonra, eyaletler özellik gönderimi yaşam döngüsünde nerede olduğunu gösteriyor. Geri bildiriminizi göz önünde bulundurarak iş akışında taşımaya devam ettiyken ilgili durumla etiketlemektedir. Özellik önerileriyle ilişkilendirilmiş çeşitli eyaletler, anlam ve renk göstergelerinin açıklamasıyla birlikte burada listelenmiştir.
 
-![Geliştirici topluluğu önerileri için yeni durum](../ide/media/SuggestStates/New.jpg)
+![Geliştirici Hesabı'nın önerileri için yeni Community](../ide/media/SuggestStates/New.jpg)
 
-**Yeni** , önerinizin sizin veya başka bir kişiden yeni bildirildiği anlamına gelir. Henüz hiçbir eylemde bulunulmadı. Ön çizgi, daha fazla ilerleyebilmemiz için bazı ön denetimler yapar. Sonraki adımlarımızla yaklaşık beş iş günü içinde bize bekliyoruz.
-
-- - -
-
-![Geliştirici topluluğu önerileri için Inceleme durumu altında](../ide/media/SuggestStates/UnderReview.jpg)
-
-**Gözden geçirme bölümünde** Özellik önermesinin öncelik sırasına göre sıraya alındığı gösterilmektedir. Daha geniş geliştirici topluluğumuzu en iyi şekilde getiren ve ayrıca ürün yol haritasını göz önünde bulundurarak özellikleri önceliklendiririz.
-
-Yeni özellik önerinizi hemen takip edemediğimiz halde, 90 gün boyunca fikrinizi izlemeye devam edeceğiz, bu da topluluğun bir süre içinde olmasını sağlar ve ardından sonraki adımlarda bir karar verir.
+**Yeni,** önerinin sizin veya başka bir kişi tarafından yeni bildiriliyor olduğu anlamına gelir. Henüz herhangi bir işlem yapılmadı. Ön satır, devam etmek için bazı ön denetimler yapar. Sonraki adımlarla yaklaşık beş iş günü içinde bizimle bilgi edinebilirsiniz.
 
 - - -
 
-![Geliştirici topluluğu önerileri için yol haritası durumunda](../ide/media/SuggestStates/OnRoadmap.jpg)
+![Geliştirici hesabıyla ilgili öneriler için Durumu gözden Community](../ide/media/SuggestStates/UnderReview.jpg)
 
-**Yol haritası** , özellik önerinizin büyük bir topluluk etkisine sahip olması ve ürün deneyimini iyileştirmesine yardımcı olacaktır. Yol haritasında bu süre için zaman ayırdık. İlerleme durumunda sizi güncelleştireceğiz.
+**Gözden Geçir'in** altında özellik önerisinin öncelik belirleme için kuyruğa alınana kadar olduğu gösterir. Daha geniş geliştirici topluluğumuza en iyi değeri getirmek için özelliklere öncelik veririz ve ürün yol haritasını da dikkate alacağız.
 
-- - -
-
-![Geliştirici topluluğu önerileri için daha fazla bilgi durumu gerekiyor](../ide/media/SuggestStates/NeedMoreInfo.jpg)
-
-**Daha fazla bilgi gerekiyor** olarak işaretlenen bir özellik önerisi, önerinizi daha iyi anlayabilmemiz için daha fazla ayrıntıya ihtiyacımız olması anlamına gelir. Daha ayrıntılı bilgi edinmek için ek bilgiler isteytiğimiz açıklamaları kontrol edin.
+Yeni özellik önerinizi hemen takip emiyor olsak bile yaklaşık 90 gün boyunca fikirlerinizi izlemeye devam edeceğiz, topluluğun da buna ağırlık vermesine ve sonraki adımlarda bir karar vermesine izin vereceksiniz.
 
 - - -
 
-![Kapalı-geliştirici topluluğu önerileri için diğer ürün durumu](../ide/media/SuggestStates/ClosedOtherProduct.jpg)
+![Geliştirici Hesabı önerileri için Yol Haritası Community](../ide/media/SuggestStates/OnRoadmap.jpg)
 
-**Kapalı-diğer ürün** , bildirilen ürüne uygun olmadığından, özellik önerinizi Şu anda ele amayacağız. Bununla birlikte, ilgili ürün için yeni özellik önerinizi nerede paylaşabileceğiniz hakkında ayrıntılı bilgiler sağlıyoruz.
-
-- - -
-
-![Kapalı-geliştirici topluluğu önerileri için yinelenen durum](../ide/media/SuggestStates/ClosedDuplicate.jpg)
-
-**Kapalı-yinelenen** , başka birisinin aynı özelliği zaten önerdiğini gösterir. Mevcut Özellik önerisine yönelik bağlantıyı bulmak için açıklamaları gözden geçirin. Oylar ve açıklamalar orijinal öneriye göre birleştirildi. Özgün öneriyi izleyin.
+**Yol Haritası'nın,** özellik önerinizin geniş bir topluluk etkisine sahip olduğu ve ürün deneyimini geliştirmeye yardımcı olduğu anlamına gelir. Yol haritamızda bunun için zaman ayırdık. İlerleme durumu hakkında sizi güncelleştiriyoruz.
 
 - - -
 
-![Kapalı-geliştirici topluluğu önerileri için yeterli bilgi durumu yok](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg)
+![Geliştirici Hesabı önerileri için Daha Fazla Bilgi durumu Community](../ide/media/SuggestStates/NeedMoreInfo.jpg)
 
-**Kapalı-yeterli bilgi yok** , birkaç denemeden sonra özellik önerinizi tam olarak anlamak için yeterli bilgi almadık. Bu aşamada başka bir işlem yaptığımız için yeni özellik önerisini kapattık.
-
-Bakdığımız bilgiler bulundu mu? Ek bilgilere sahip olduğunuzda bileti yeniden etkinleştirmeyi isteyebilirsiniz.
+Daha Fazla Bilgi Gerekiyor **olarak işaretlenmiş bir özellik önerisi,** önerinizi daha iyi anlamamız için daha fazla ayrıntıya ihtiyacımız olduğu anlamına gelir. Daha derin bir anlayış elde etmek için ek bilgi talep edeceğimiz yorumları kontrol edin.
 
 - - -
 
-![Geliştirici topluluğu önerilerine yönelik öneriler için kapalı kapsam durumu](../ide/media/SuggestStates/closed-out-of-scope.png)
+![Kapalı - Geliştirici Hesabı önerileri için diğer ürün Community](../ide/media/SuggestStates/ClosedOtherProduct.jpg)
 
-**Kapalı kapsam dışı** Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı* olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
+**Kapalı - Diğer** Ürün, özellik önerinizi şu anda ele alamayamadığımız anlamına gelir çünkü bu öneri raporlandığı ürün için geçerli değildir. Ancak, uygun ürün için yeni özellik önerinizi nerede paylaşabilirsiniz hakkında ayrıntılı bilgi sağlarız.
+
+- - -
+
+![Kapalı - Geliştirici Hesabı önerileri için yinelenen Community](../ide/media/SuggestStates/ClosedDuplicate.jpg)
+
+**Kapalı - Yinelenen,** başka birinin zaten aynı özelliği önerdiğini gösterir. Mevcut özellik önerisinin bağlantısını bulmak için yorumları gözden geçirme. Oylar ve yorumlar özgün öneride birleştirilmiştir. Özgün öneriyi izleyin.
+
+- - -
+
+![Kapalı - Geliştirici Hesabı önerileri için Yeterli Bilgi Community](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg)
+
+**Kapalı - Yeterli Bilgi Yok,** birkaç denemeden sonra özellik önerinizi tam olarak anlamak için yeterli bilgi alamamıştı. Bu aşamada başka bir eylemde yer alamadığımız için yeni özellik önerisini kapatmamız gerekiyor.
+
+Şu anda aramız olan bilgileri bulduk mu? Ek bilgilere sahipken bileti yeniden etkinleştirme isteğiniz olabilir.
+
+- - -
+
+![Kapalı - Geliştirici Hesabı önerileri için Kapsam dışında Community](../ide/media/SuggestStates/closed-out-of-scope.png)
+
+**Kapalı - Kapsam Dışında** Bir öneri genel ürün yönüyle eşleşmezse kapsamı dışında olarak *kapatırız.* Örneğin, ürün ailesinin diğer üyelerine de benzer Visual Studio olabiliriz. Veya önerilen özellik yalnızca birkaç kişi için uygun olabilir ve bu da uzantıyı sağlamak için daha uygun olabilir.
 
 
 - - -
 
-![Tamamlandı-geliştirici topluluğu önerileri için Önizleme durumu](../ide/media/SuggestStates/CompletedPreview.jpg)
+![Tamamlandı - Geliştirici Hesabı önerileri için önizleme Community](../ide/media/SuggestStates/CompletedPreview.jpg)
 
-**Tamamlandı-önizleme** , önerdiğiniz özelliği uyguladığımızda olduğunu gösterir. Visual Studio 'nun, açıklamalarda belirtilen bağlantıyı kullanarak önerinizi içeren bir önizleme sürümünü indirebilirsiniz.
+**Tamamlandı - Önizleme,** önerdiğimiz özelliğin uygulandığını gösterir. Yorumlarda sağlanan bağlantıyı kullanarak Visual Studio içeren bir önizleme sürümünü indirebilirsiniz.
 
 - - -
 
-![Tamamlandı-geliştirici topluluğu önerileri için yayın durumu](../ide/media/SuggestStates/CompletedRelease.jpg)
+![Tamamlandı - Geliştirici Hesabı önerileri için yayın Community](../ide/media/SuggestStates/CompletedRelease.jpg)
 
-**Tamamlandı-sürüm** , yeni özellik önerinizin en son ürün güncelleştirmesinde yayımlanmış olduğunu gösterir. Visual Studio güncelleştirmesi, açıklamalarda belirtilen bağlantı kullanılarak indirilebilir.
+**Tamamlandı - Sürüm,** yeni özellik önerinizin en son ürün güncelleştirmesinde yayımlandı olduğunu gösterir. Bu Visual Studio, açıklamalarda sağlanan bağlantı kullanılarak indirilebilir.
 
 - - -
 
 ## <a name="faq"></a>SSS
 
-### <a name="why-cant-i-see-my-user-voice-idea-in-developer-community"></a>Geliştirici topluluğu 'nda Kullanıcı sesli fikrimi neden göremiyorum?
+### <a name="why-cant-i-see-my-user-voice-idea-in-developer-community"></a>Developer Community'da User Voice fikrimi neden göremiyorum?
 
-Eski kullanıcı sesli forumundan yeni özellik önerileri, daha geniş bir topluluk ve ürün yol haritası önceliklerimizin etkisi temelinde geliştirici topluluğu 'na geçirildi. Önerinizi geçirmeyi kaçırdık, bunu geliştirici topluluğu 'na yeni bir öneri olarak ekleyin.
+Eski User Voice forumundan gelen yeni özellik önerileri, daha geniş topluluğun ve ürün yol Community önceliklerimize bağlı olarak Geliştirici Topluluğu'nun hizmetine geçirildi. Önerinizi atladiğimi düşünüyorsanız, Önerinizi Geliştirici Geliştirme ve Geliştirme Community.
 
-### <a name="why-have-the-votes-not-been-carried-over-from-user-voice"></a>Oyları Kullanıcı sesinizden neden yürütülmedi?
+### <a name="why-have-the-votes-not-been-carried-over-from-user-voice"></a>Oylar neden User Voice'tan gerçekleştirilmmiştir?
 
-Kullanıcı sesinden oylama sistemi, geliştirici topluluğu 'nda oylama sisteminden farklı şekilde çalışır. Yeni sistemde, oy sayılarının bütünlüğünü sürdürmek ve verileri eğrilmemek istiyoruz. Kullanıcı sesinin sayısını her öneri için bir etiket (oyları yerine) olarak göstermeye karar verdik. Kullanıcılar, geliştirici topluluğu kullanarak bir özellik gönderimlerini önerirse, yeni Oylar Kullanıcı sesinden ayrı olarak görünür.
+User Voice'daki oylama sistemi, Geliştirici Sistemi'nin oylama sisteminden farklı Community. Yeni sistemde oy sayılarının bütünlüğünü korumak ve verileri takip etmek istemiyoruz. User Voice oy sayılarını her öneri için bir etiket olarak (oylar yerine) belirgin bir şekilde göstermeye karar verdik. Kullanıcılar Developer Community kullanarak bir özellik gönderimi önermek için oy verdiklerinden, yeni oylar User Voice oylarından ayrı olarak gösterilecektir.
 
-### <a name="where-can-i-see-comments-associated-with-the-suggestions-imported-from-user-voice"></a>Kullanıcı sesinizden içeri aktarılan önerilerle ilişkili açıklamaları nereden görebilirim?
+### <a name="where-can-i-see-comments-associated-with-the-suggestions-imported-from-user-voice"></a>User Voice'den içe aktarılan önerilerle ilişkili yorumları nerede görebilirim?
 
-Geliştirici topluluğu 'na geçirilmiş bir öneriyle ilgili Kullanıcı sesli açıklamalara geri dönmek için dahil ettiğimiz bağlantıyı izleyin. Bu bağlantı, daha fazla bağlam gerekirse kolay başvuru için geçiş süresi boyunca kullanılabilir olacaktır.
+Developer Community'a geçirilen bir öneriyle ilgili User Voice açıklamalarını geri dönmek için dahil Community. Bu bağlantı, daha fazla bağlama ihtiyacınız varsa kolayca başvuru için geçiş döneminde kullanılabilir.
 
-### <a name="why-can-i-see-three-vote-counts-for-a-suggestion"></a>Öneri için neden üç oy sayısı görüyorum?
+### <a name="why-can-i-see-three-vote-counts-for-a-suggestion"></a>Bir öneri için neden üç oy sayımı görebilirim?
 
-Kullanıcı sesinizden bir öneri içeri aktarıldığında, üç ayrı oy sayısı görürsünüz. Etiket olarak gösterilen iki oy sayısı, ıdeın Kullanıcı sesinden ilk alındığı oylardır. Önerinizin solunda görünen üçüncü Oy sayısı, bu öneriden kaç oyın geliştirici topluluğundan elde olduğunu görmenizi sağlar.
+User Voice'den bir öneri aktarılmışsa üç ayrı oy sayısıyla karşı karşına çıktı. Etiket olarak gösterilen iki oy sayısı, fikir başlangıçta User Voice'de alınan oy sayılarıdır. Önerinin sol tarafından görüntülenen üçüncü oy sayısı, önerinin Developer Community'dan kaç oy Community.
 
-Kullanıcı sesinden oylama sistemi, geliştirici topluluğundaki oylarından farklı şekilde çalışır. Geliştirici topluluğu oylarının bütünlüğünü sağlamak ve verileri eğrilkmemek için, her öneri için Kullanıcı sesinin sayısını bir etiket (oylar yerine) olarak göstermeye karar verdik.
+User Voice'daki oylama sistemi, Geliştirici Sistemi'nin oylarından farklı Community. Geliştiricinin oy Community bütünlüğünü korumak ve verileri takip etmekten kaçınmak için User Voice oy sayılarını her öneri için bir etiket (oylar yerine) olarak belirgin bir şekilde göstermeye karar verdik.
 
-### <a name="how-long-can-i-expect-actions-to-take"></a>Eylemlere ne kadar süre bekleyeceğim?
+### <a name="how-long-can-i-expect-actions-to-take"></a>Ne kadar süreyle eylemler gerçekleştirin?
 
-Özellik önerilerinizi dinlemek ve müşterilerimiz için değerli deneyimler sağlamak üzere eylemler gerçekleştirmek için tam olarak çalışıyoruz. Önerilerin eylemleri, daha geniş topluluğa etkiyle kıyaslandığında önceliklendirilir. Her öneri için kişisel olarak yanıt veremediğimiz halde, geri bildirimlerinizin doğru ekibe geldiğinden ve dikkatle değerlendirildiğinden emin olacaksınız.
+Özellik önerilerinizi dinlemeyi ve müşterilerimize değerli deneyimler sağlamak için eylemlerde bulunduk. Öneriler üzerindeki eylemler, daha geniş topluluk üzerindeki etkiye göre öncelik sırasına göredir. Her öneriye kişisel olarak yanıt veremediy olsak bile, geri bildiriminizin doğru takıma geldiğinden ve dikkatle değerlendirilene kadar emin olacağız.
 
-Yanıt süresi, geribildirimin bulunduğu duruma bağlıdır. Yanıt sürelerini anlamak için lütfen bu belgedeki durumların açıklamasını gözden geçirin.
+Yanıt süresi, geri bildiriminizin durumuna bağlıdır. Yanıt zamanlarını anlamak için lütfen bu belgede durumların açıklamasını gözden geçirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geliştirici topluluğu 'nda ' özellik önerme ' tanıtımı (Visual Studio blogu)](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)
+- [Geliştirici Community'da 'Özellik Önerin' tanıtımı (Visual Studio blog)](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)

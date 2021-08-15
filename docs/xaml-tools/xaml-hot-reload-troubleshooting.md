@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e13fd71c9d53ef49d7f7372986bfabc29c62747
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02090956026e6359313534666237bcddd614f4ce3addfdc600d1a7f0289ed9d6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99890454"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440186"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
 
@@ -38,20 +39,20 @@ Uygulama içi araç çubuğunu görmüyorsanız, genel **hata ayıklama**  >  **
 
 ![Visual Studio hata ayıklama seçenekleri penceresinin ekran görüntüsü. Genel hata ayıklama seçenekleri seçilidir ve XAML etkin yeniden yüklemeyi etkinleştir seçeneği işaretlenir.](../debugger/media/xaml-hot-reload-enable.png)
 
-Bu seçenekler işaretliyse, canlı görsel ağaç ' a (  >  **Windows**  >  **Live Visual Tree** Hata Ayıkla) gidin ve **çalışma zamanı araçlarını uygulama** araç çubuğunda göster düğmesinin (en solda) seçili olduğundan emin olun.
+bu seçenekler işaretliyse, canlı görsel ağaç (**hata ayıkla**  >  **Windows**  >  **canlı görsel ağaç**) öğesine gidin ve **çalışma zamanı araçlarını uygulama** araç çubuğunda göster düğmesinin (en solda) seçili olduğundan emin olun.
 
 ![Canlı görsel ağaç penceresinin en üstündeki araç çubuğunun, ' uygulama içinde çalışma zamanı araçlarını göster ' düğmesi seçili olan ekran görüntüsü.](../debugger/media/xaml-hot-reload-show-runtime-tools.png)
 
 ## <a name="verify-that-you-use-start-debugging-rather-than-attach-to-process"></a>Işleme eklemek yerine başlatma hata ayıklamayı kullandığınızı doğrulayın
 
-XAML etkin yeniden yükleme, `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` uygulamanın başladığı zaman ortam değişkeninin 1 olarak ayarlanmasını gerektirir. Visual Studio bunu **hata ayıklama**  >  **başlatma hata ayıklama** (veya **F5**) komutunun bir parçası olarak otomatik olarak ayarlar. Bunun yerine, işlemek için **Hata Ayıkla** komutuyla xaml etkin yeniden yükleme kullanmak istiyorsanız  >   , ortam değişkenini kendiniz ayarlayın.
+XAML etkin yeniden yükleme, `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` uygulamanın başladığı zaman ortam değişkeninin 1 olarak ayarlanmasını gerektirir. Visual Studio **hata ayıklama**  >  **başlatma hata ayıklama** (veya **F5**) komutunun bir parçası olarak bunu otomatik olarak ayarlar. Bunun yerine, işlemek için **Hata Ayıkla** komutuyla xaml etkin yeniden yükleme kullanmak istiyorsanız  >   , ortam değişkenini kendiniz ayarlayın.
 
 > [!NOTE]
 > Bir ortam değişkeni ayarlamak için, Başlat düğmesini kullanarak "ortam değişkeni" araması yapın ve **sistem ortam değişkenlerini Düzenle**' yi seçin. Açılan iletişim kutusunda, **ortam değişkenleri**' ni seçin, sonra bir kullanıcı değişkeni olarak ekleyin ve değerini olarak ayarlayın `1` . Temizlemek için, hata ayıklamayı bitirdiğinizde değişkeni kaldırın.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>MSBuild özelliklerinin doğru olduğundan emin olun
 
-Varsayılan olarak, kaynak bilgisi bir hata ayıklama yapılandırmasına dahildir. Proje dosyalarınızda MSBuild özellikleri (*. csproj gibi) tarafından denetlenir. WPF için, özelliği `XamlDebuggingInformation` olarak ayarlanması gerekir `True` . UWP için, özelliği `DisableXbfLineInfo` olarak ayarlanması gerekir `False` . Örneğin:
+Varsayılan olarak, kaynak bilgisi bir hata ayıklama yapılandırmasına dahildir. proje dosyalarınızda (*. csproj gibi) MSBuild özellikleriyle denetlenir. WPF için, özelliği `XamlDebuggingInformation` olarak ayarlanması gerekir `True` . UWP için, özelliği `DisableXbfLineInfo` olarak ayarlanması gerekir `False` . Örnek:
 
 WPF
 

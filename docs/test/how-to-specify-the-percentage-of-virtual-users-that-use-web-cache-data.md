@@ -10,12 +10,13 @@ ms.assetid: f66d5d43-4121-4487-b27f-d0a0baaf7601
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: bd7c23218fca3a501aa0c56684a4fea98d304252
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: bb8b418377d169de8e06c2ab9f17a8a67a90ea0d3f00067cba0fe27165c9437b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943776"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121366621"
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>Nasıl yapılır: Web önbelleği verilerini kullanan sanal kullanıcıların yüzdesini belirtme
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: kaynakları olan bir proje derleme | Microsoft Docs'
+title: 'nasıl yapılır: kaynakları olan Project oluşturma | Microsoft Docs'
 description: Kaynakları olan bir proje oluşturma ve MSBuild kullanarak kaynakları derleme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -13,14 +13,15 @@ ms.assetid: d07ac73f-2c2d-4e9a-812a-6dcb632bafe2
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 195ef17e4770d7050bc3b10f11ca5530e5ca49cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50d814890ae0cf134b88003150fd1ce25edb5c6941fbe13194d44227ed9ca647
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914487"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270737"
 ---
 # <a name="how-to-build-a-project-that-has-resources"></a>Nasıl yapılır: kaynakları olan bir proje derleme
 
@@ -30,7 +31,7 @@ Bir projenin yerelleştirilmiş sürümlerini oluşturuyorsanız, tüm Kullanıc
 
 MSBuild ile birlikte sunulan ortak görevlerin kitaplığı, `GenerateResource` *. resx* veya metin dosyalarında kaynak derlemek için kullanabileceğiniz bir görevi içerir. Bu görev, `Sources` derlenecek kaynak dosyalarını ve `OutputResources` çıkış kaynak dosyalarının adlarını belirtmek için parametresini belirten parametresini içerir. Görev hakkında daha fazla bilgi için `GenerateResource` bkz. [GenerateResource Task](../msbuild/generateresource-task.md).
 
-#### <a name="to-compile-resources-with-msbuild"></a>MSBuild ile kaynakları derlemek için
+#### <a name="to-compile-resources-with-msbuild"></a>MSBuild ile kaynak derlemek için
 
 1. Projenin kaynak dosyalarını belirleyip `GenerateResource` , öğe listeleri olarak veya dosya adları olarak görevlere geçirin.
 

@@ -1,6 +1,6 @@
 ---
-description: Bu simge için derleyiciye özgü türlerin dizisini alır.
-title: 'IDiaSymbol:: get_types | Microsoft Docs'
+description: Bu simge için derleyiciye özgü türlerden bir diziyi döndürür.
+title: IDiaSymbol::get_types | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 5f056e0c-e15b-4e00-8f78-aadc8574f7ea
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: aec5db878c87ba257f1f83458d1ae742272a9b0f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e0dacb8d9fa997c3509015d1824d88ebf152863c461fad299906a235d4541f16
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160605"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391619"
 ---
 # <a name="idiasymbolget_types"></a>IDiaSymbol::get_types
-Bu simge için derleyiciye özgü türlerin dizisini alır.
+Bu simge için derleyiciye özgü türlerden bir diziyi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,21 +37,21 @@ HRESULT get_types (
 #### <a name="parameters"></a>Parametreler
  `cTypes`
 
-'ndaki Verilerin tutulacağı arabelleğin boyutu.
+[in] Verileri tutmak için arabelleğin boyutu.
 
  `pcTypes`
 
-dışı Yazılan türlerin sayısını veya parametresi ise, `types` `NULL` kullanılabilir toplam tür sayısını döndürür.
+[out] Yazılan türlerin sayısını veya parametresi ise `types` kullanılabilir toplam tür sayısını `NULL` döndürür.
 
  `types[]`
 
-dışı Bu sembolün tüm türlerini temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.
+[out] Bu simgenin tüm türlerini temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,6 +1,6 @@
 ---
 title: 'Örnek XSD Dosyası: Satın Alma Siparişi Şeması'
-description: XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılan bir satın alma siparişi şeması için örnek XSD dosyasını görüntüleyin.
+description: XSD Şema Tasarımcısı belgelerinde çeşitli örneklerde kullanılan bir satın alma siparişi şeması için örnek XSD dosyasını görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
@@ -8,18 +8,19 @@ ms.assetid: f92b63b5-ec61-43b5-ae1e-63432a7a7e30
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 32140ce05761fa5b8a067dfde04b65efa2a91a66
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2efe7613488831b8aa765e993afe4ece9e29150f6201dc9baba38c87077622de
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951647"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121350998"
 ---
-# <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: satınalma siparişi şeması
+# <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: Satın alma siparişi şeması
 
-Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılır. Bu dosya bir satın alma Siparişi şemadır.
+Aşağıdaki XSD dosyası, XSD Şema Tasarımcısı belgelerinde çeşitli örneklerde kullanılır. Bu dosya bir satın alma siparişi şemasıdır.
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -90,4 +91,4 @@ Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli ör
 ```
 
 > [!NOTE]
-> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olay ile ilişki amaçlanmamıştır.
+> Burada gösterilen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, yerler ve olaylar kurgusaldır. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olayla ilişki amaçlanan veya düşünülen bir ilişki yoktur.

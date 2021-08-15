@@ -11,14 +11,15 @@ ms.assetid: 4e3d0a70-f22f-49dd-92d8-edf48ab62b52
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a92a3ca34e6314463bbfecbd8c4236789f213635
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a172a62e993539f990bf1281095725c8d34b2fc727e4f86fc252ebe3a5191283
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086111"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275703"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>Eski dil hizmetindeki küme ayracı eşleştirme
 Ayraç eşleştirme, geliştiricinin parantez ve küme ayraçları gibi bir arada gerçekleşmesi gereken dil öğelerini izlemesine yardımcı olur. Bir geliştirici bir kapanış ayracı girdiğinde, açma küme ayracı vurgulanır.

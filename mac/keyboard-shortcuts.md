@@ -1,89 +1,89 @@
 ---
 title: Varsayılan Klavye Kısayolları
-description: Bu makalede, Mac için Visual Studio varsayılan klavye kısayolları listelenmektedir
+description: Bu makalede, Mac için Visual Studio'daki varsayılan klavye kısayolları liste Mac için Visual Studio
 ms.date: 03/14/2019
 author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: 3a4b2a56e5ac6ed29289c3946a65fc57b54eaa21
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 3d68777530f284a544809fcffb8b6ec11cfb94ea5e619c31b22de240fdac9a26
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96188984"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121349568"
 ---
-# <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Mac için Visual Studio varsayılan klavye kısayolları
+# <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Mac için Visual Studio'de varsayılan klavye kısayolları
 
-Klavye erişilebilirliği hakkında daha fazla bilgi için bkz. [nasıl yapılır: klavye gezintisini kullanma](~/accessibility-keyboard.md).
+Klavye erişilebilirliği hakkında daha fazla bilgi [için bkz. Nasıl? Klavye Gezintisini Kullanma.](~/accessibility-keyboard.md)
 
-Uygun klavye kısayolunu kullanarak Mac için Visual Studio çeşitli komutlara erişebilirsiniz. Bu belgede **Mac için Visual Studio** anahtar bağlama düzeni için varsayılan kısayollar listelenmektedir. Anahtar bağlama düzeninin nasıl değiştirileceği hakkında daha fazla bilgi için bkz. [IDE 'Yi özelleştirme](~/customizing-the-ide.md#key-bindings). Ayrıca, **Mac için Visual Studio**  >  **tercihleri** menü öğesini kullanarak bir komutun kısayollarını özelleştirebilir ve Tercihler penceresinde **ortam**  >  **anahtarı bağlamaları** ' nı seçebilirsiniz. **Preferences**
+Uygun klavye kısayolunu kullanarak Mac için Visual Studio komutlara erişebilirsiniz. Bu belgede, temel anahtar bağlama şeması için **Mac için Visual Studio** kısayollar listelenmiş olur. Anahtar bağlama düzenini değiştirme hakkında daha fazla bilgi için [bkz. IDE'i Özelleştirme.](~/customizing-the-ide.md#key-bindings) Tercihler menü öğesini kullanarak ve Tercihler **penceresinde ortam Mac için Visual Studio'ı** seçerek komut kısayollarını  >   da   >   **özelleştirebilirsiniz.**
 
 > [!TIP]
-> Bu belgede görüntülenen klavye kısayolları ve Mac için Visual Studio içindeki anahtar bağlama tercihleri, macOS 'ta yaygın olarak kullanılan semboller kullanılarak sunulur. Bir sembolden emin değilseniz, [MacOS anahtar sembolleri loopkup tablosunu](#macos-key-symbols-lookup)gözden geçirin.
+> Bu belgede görüntülenen klavye kısayolları ve Mac için Visual Studio tuş bağlama tercihleri, macOS'ta yaygın olarak kullanılan semboller kullanılarak gösterilir. Bir simgeden emin değilseniz macOS anahtar sembolleri döngü [tablosuna bakın.](#macos-key-symbols-lookup)
 
-## <a name="downloadable-quick-ref-pdfs"></a>İndirilebilir hızlı başvuru PDF 'leri
+## <a name="downloadable-quick-ref-pdfs"></a>İndirilebilir hızlı başvuru pdf'leri
 
-En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PDF dosyası olarak derledik. Mac için Visual Studio kısayollarını gösteren ve Windows kullanırken Visual Studio ile önceki deneyimi olan kullanıcılar için Visual Studio kısaltlarını gösteren bir sürüm olan iki sürümdür.
+En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir pdf dosyasına derledik. Biri Mac için Visual Studio kısayollarını gösteren iki sürüme ve Mac için Visual Studio kullanırken Visual Studio deneyimine sahip kullanıcılar için Visual Studio kısaları yan yana gösteren Windows.
 
-- [Mac için Visual Studio klavye kısayol hızlı başvurusu](https://aka.ms/vsm-keys)
-- [Visual Studio & Mac için Visual Studio klavye kısayol hızlı başvurusu](https://aka.ms/vsm-vs-keys)
+- [Mac için Visual Studio kısayolu hızlı başvuru](https://aka.ms/vsm-keys)
+- [Visual Studio & Mac için Visual Studio kısayolu hızlı başvuru](https://aka.ms/vsm-vs-keys)
 
 ## <a name="code-navigation"></a>Kod Gezintisi
 
 |Komutlar|Klavye kısayolları|
 |-|-|
-|Başvuruları bul|**⇧ ⌘ R**, **F12**|
-|Bildirime git|**⌘ D**, **F12**|
-|Sonraki hata|**⌥ ⇧ ⇟**, **⇧ ⌘ F12**|
-|Dosyadaki bir sonraki sorun|**⌥⇟**|
-|Önceki hata|**⌥⇧⇞**|
-|Dosyadaki önceki sorun|**⌥⇞**|
+|Başvuruları Bul|**⇧⌘R**, **F12**|
+|Bildirime Git|**⌘D**, **F12**|
+|Sonraki Hata|**⌥⇧⇟**, **⇧⌘F12**|
+|Dosyada Sonraki Sorun|**⌥⇟**|
+|Önceki Hata|**⌥⇧⇞**|
+|Dosyada Önceki Sorun|**⌥⇞**|
 
-## <a name="debug"></a>Hata ayıklama
+## <a name="debug"></a>Hata Ayıklama
 
 |Komutlar|Klavye kısayolları|
 |-|-|
-|Kesme noktasını etkinleştir veya devre dışı bırak|**⌥ ⌘/**, **⌘ F9**|
-|Duraklat|**⌥ ⌘ P**, **⌥ ⌘ L5**|
-|Tüm kesme noktalarını kaldır|**⇧ ⌘ F9**|
-|Imlece kadar Çalıştır|**⌘ F10**|
-|Sonraki Deyimi Belirle|**⇧ ⌘ F10**|
-|Sonraki Ifadeyi göster|**⌥ \** _|
-|Adımla|_ * ⇧ ⌘ I * *, **⌘ F11**|
-|Dışarı adımla|**⇧ ⌘ U**, **⇧ ⌘ F11**|
-|Adımla|**⇧ ⌘ O**, **F10**|
-|Kesme noktasını aç|**⌘ \\**, **F9**|
-|Kesme noktalarını görüntüle|**⌥ ⌘ B**|
+|Kesme Noktası Etkinleştirme veya Devre Dışı Bırakma|**⌥⌘/**, **⌘F9**|
+|Duraklat|**⌥⌘P**, **⌥⌘L5**|
+|Tüm Kesme Noktaları Kaldır|**⇧⌘F9**|
+|İmleçe Çalıştır|**⌘F10**|
+|Sonraki Deyimi Belirle|**⇧⌘F10**|
+|Sonraki Deyimi Göster|**⌥\***|
+|Adımla|**⇧⌘I**, **⌘F11**|
+|Dışarı Adımla|**⇧⌘U**, **⇧⌘F11**|
+|Adım At|**⇧⌘O**, **F10**|
+|Kesme Noktası'nın Geçişini Değiştir|⌘ , **F9** **\\**|
+|Kesme Noktaları Görüntüleme|**⌥⌘B**|
 
 ## <a name="designer"></a>Tasarımcı
 
 |Komutlar|Klavye kısayolları|
 |-|-|
-|İlgili dosyalar arasında geçiş yap|**⌃ ⌘ ↑**|
+|İlgili dosyalar arasında geçiş|**⌃⌘↑**|
 
 ## <a name="edit"></a>Düzenle
 
 |Komutlar|Klavye kısayolları|
 |-|-|
-|Kısıtlama düzenlemesi modu|**⌘ E**|
-|Kopyala|**⌘ C**|
-|Kes|**⌘ X**|
-|Sil|**⌘ ⌫**|
-|Belgeyi Biçimlendir|**⌃ I**|
-|Seçimi Girintile|**⌘**|
-|Yapıştır|**⌘ V**|
+|Kısıtlama Düzenleme Modu|**⌘E**|
+|Kopyala|**⌘C**|
+|Kes|**⌘X**|
+|Sil|**⌘⌫**|
+|Belgeyi Biçimlendir|**⌃I**|
+|Seçimi Girintileme|**⌘]**|
+|Yapıştır|**⌘V**|
 |Tercihler|**⌘**|
-|Yinele|**⇧ ⌘ Z**|
-|Rename|**⌘ R**, **F2**|
-|Tümünü Seç|**⌘ A**|
-|Kod oluşturmayı göster|**⌘ I**|
-|Tüm katlara geç|**⌥ ⇧ ⌘ ↑**|
-|Tanımları değiştirme|**⌥ ⇧ ⌘ ↓**|
-|Katlamayı aç|**⌥ ⇧ ⌘ ←**|
-|Satır açıklamalarını aç|**⌘**|
-|Geri Al|**⌘ Z**|
-|Seçimin girintisini kaldır|**⌘**|
-|Kısıtlamalardan çerçeve güncelleştirme|**⇧ ⌘ R**|
+|Yinele|**⇧⌘Z**|
+|Rename|**⌘R**, **F2**|
+|Tümünü Seç|**⌘A**|
+|Kod Üretmeyi Göster|**⌘I**|
+|Tüm Katları Değiştir|**⌥⇧⌘↑**|
+|Tanımları Değiştir|**⌥⇧⌘↓**|
+|Katla'ya Geçiş|**⌥⇧⌘←**|
+|Satır Açıklamalarını Değiştir|**⌘/**|
+|Geri Al|**⌘Z**|
+|Seçimin Doğrulanmamışı|**⌘[**|
+|Kısıtlamalardan Çerçeveyi Güncelleştirme|**⇧ ⌘ R**|
 
 ## <a name="f-integration"></a>F # tümleştirmesi
 
@@ -112,7 +112,7 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Kaydet|**⌘ S**|
 |Tümünü Kaydet|**⇧ ⌘ S**|
 
-## <a name="help"></a>Yardım
+## <a name="help"></a>Help
 
 |Komutlar|Klavye kısayolları|
 |-|-|
@@ -216,7 +216,7 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |Karakterleri değiştir|**⌃ T**|
 |Div ile sarın &lt;&gt;|**⌥ ⇧ W**|
 
-## <a name="view"></a>Görüntüle
+## <a name="view"></a>Görünüm
 
 |Komutlar|Klavye kısayolları|
 |-|-|
@@ -249,7 +249,7 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |8 ' i etkinleştir|**⌘ 8**|
 |9 etkinleştirin|**⌘ 9**|
 |Diğerlerini gizle|**⌥ ⌘ H**|
-|Visual Studio 'Yu gizle|**⌘ H**|
+|Visual Studio gizle|**⌘ H**|
 |Simge durumuna küçült|**⌘**|
 |Sonraki belge|**⌘}**, **⌘ F6**|
 |Önceki belge|**⌘ {**, **⇧ ⌘ F6**|
@@ -275,8 +275,8 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir PD
 |↖|**Giriş Ekranı**|
 |↘|**End**|
 |␣|**Boşluk çubuğu**|
-|⇥|**Sekmesinde**|
+|⇥|**Sekme**|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da klavye kısayolları (Windows üzerinde)](/visualstudio/ide/tips-and-tricks-for-visual-studio)
+- [Visual Studio klavye kısayolları (Windows)](/visualstudio/ide/tips-and-tricks-for-visual-studio)

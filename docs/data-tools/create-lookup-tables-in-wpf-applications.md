@@ -1,6 +1,6 @@
 ---
 title: WPF uygulamalarında arama tabloları oluşturma
-description: WPF uygulamalarında arama tabloları oluşturma. Arama tablosu, bir veri tablosundan, diğer bir tablodaki yabancı anahtar alan değerine göre bilgi gösteren bir denetimdir.
+description: WPF uygulamaları içinde arama tabloları oluşturun. Arama tablosu, başka bir tablodaki yabancı anahtar alan değerini temel alan bir veri tablosundan bilgileri gösteren bir denetimdir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,50 +16,51 @@ ms.assetid: 56a1fbff-c7e8-4187-a1c1-ffd17024bc1b
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: cc390642155d33f75bf5c4a69236945658845639
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b5c1ee368bca523be99074cd3df2ad20dadc99877ea6673fd4bba45ec961f99f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867106"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347421"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF uygulamalarında arama tabloları oluşturma
 
-Terim *arama tablosu* (bazen *arama bağlaması* denir), bir veri tablosundan, başka bir tablodaki yabancı anahtar alanının değerine göre bilgi görüntüleyen bir denetimi açıklar. Bir üst tablonun veya nesnenin ana **düğümünü, ilgili** alt tablodaki bir sütuna veya özelliğe zaten bağımlı olan bir denetimin üzerine sürükleyerek bir arama tablosu oluşturabilirsiniz.
+Arama tablosu *terimi* (bazen arama bağlaması olarak da *adlandırılan),* başka bir tablodaki yabancı anahtar alanı değerine göre bir veri tablosundan bilgileri görüntüleyen bir denetimi açıklar. Veri Kaynakları penceresindeki bir üst tablonun veya nesnenin ana  düğümünü ilgili alt tablodaki bir sütuna veya özelle bağlantılı bir denetime sürükleyerek arama tablosu oluşturabilirsiniz.
 
-Örneğin, `Orders` bir satış veritabanındaki tablosunu düşünün. Tablodaki her kayıt `Orders` `CustomerID` , siparişi hangi müşterinin yaptığını belirten bir içerir. , `CustomerID` Tablodaki bir müşteri kaydına işaret eden bir yabancı anahtardır `Customers` . Tablodan siparişlerin bir listesini görüntülediğinizde, `Orders` yerine gerçek müşteri adını göstermek isteyebilirsiniz `CustomerID` . Müşteri adı `Customers` tabloda olduğundan, müşteri adını göstermek için bir arama tablosu oluşturmanız gerekir. Arama tablosu, `CustomerID` `Orders` ilişkide gezinmek için kayıttaki değeri kullanır ve müşteri adını döndürür.
+Örneğin, satış veritabanındaki `Orders` bir tablosu düşünün. Tablodaki her `Orders` kayıt, siparişi `CustomerID` hangi müşterinin yerleştiren bir içerir. `CustomerID`, tablodaki bir müşteri kaydına bakan yabancı bir `Customers` anahtardır. Tablodan bir sipariş listesi `Orders` görüntüleniyorsa, yerine gerçek müşteri adını görüntülemek istiyor `CustomerID` olabilir. Müşteri adı tabloda `Customers` olduğundan, müşteri adını görüntülemek için bir arama tablosu oluşturmanız gerekir. Arama tablosu, `CustomerID` ilişkide `Orders` gezinmek ve müşteri adını iade etmek için kayıtta yer alan değeri kullanır.
 
 ## <a name="to-create-a-lookup-table"></a>Arama tablosu oluşturmak için
 
-1. Projenize ilgili verileri içeren aşağıdaki veri kaynağı türlerinden birini ekleyin:
+1. Aşağıdaki veri kaynağı türlerinden birini projenize ilgili verilerle ekleyin:
 
     - Veri kümesi veya Varlık Veri Modeli.
 
-    - WCF veri hizmeti, WCF hizmeti veya Web hizmeti. Daha fazla bilgi için bkz. [nasıl yapılır: bir hizmette verilere bağlanma](../data-tools/how-to-connect-to-data-in-a-service.md).
+    - WCF Veri Hizmeti, WCF hizmeti veya web hizmeti. Daha fazla bilgi için, [bkz. How to: Bağlan to Data in a Service](../data-tools/how-to-connect-to-data-in-a-service.md).
 
-    - Nesneyi. Daha fazla bilgi için bkz. [Visual Studio 'da nesnelere bağlama](bind-objects-in-visual-studio.md).
-
-    > [!NOTE]
-    > Bir arama tablosu oluşturabilmeniz için önce iki ilişkili tablo veya nesne, proje için bir veri kaynağı olarak bulunmalıdır.
-
-2. **WPF tasarımcısını** açın ve tasarımcı 'Nın **veri kaynakları** penceresindeki öğeler için geçerli bir bırakma hedefi olan bir kapsayıcı içerdiğinden emin olun.
-
-     Geçerli bırakma hedefleri hakkında daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
-
-3. Veri **kaynakları** penceresini açmak için **veri** menüsünde **veri kaynaklarını göster** ' e tıklayın.
-
-4. Üst tabloyu veya nesneyi ve ilgili alt tabloyu veya nesneyi görene kadar **veri kaynakları** penceresinde düğümleri genişletin.
+    - Nesne. Daha fazla bilgi için [bkz. Visual Studio.](bind-objects-in-visual-studio.md)
 
     > [!NOTE]
-    > İlişkili alt tablo veya nesne, üst tablo veya nesne altında genişletilebilen bir alt düğüm olarak görünen düğümdür.
+    > Arama tablosu oluşturamadan önce, proje için bir veri kaynağı olarak iki ilişkili tablo veya nesne mevcut olması gerekir.
 
-5. Alt düğümün açılan menüsüne tıklayın ve **Ayrıntılar**' ı seçin.
+2. **WPF Tasarımcısını açın** ve tasarımcının Veri Kaynakları penceresinde öğeler için geçerli bir bırakma hedefi olan bir kapsayıcı **içerdiğini emin** olun.
+
+     Geçerli bırakma hedefleri hakkında daha fazla bilgi için [bkz. WPF denetimlerini](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)Visual Studio.
+
+3. Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın** ve Veri **Kaynakları penceresini** açın.
+
+4. Üst tabloyu veya nesneyi **ve** ilgili alt tabloyu veya nesneyi görene kadar Veri Kaynakları penceresindeki düğümleri genişletin.
+
+    > [!NOTE]
+    > İlgili alt tablo veya nesne, üst tablo veya nesne altında genişletilebilir bir alt düğüm olarak görünen düğüm olur.
+
+5. Alt düğümün açılan menüsüne tıklayın ve Ayrıntılar'ı **seçin.**
 
 6. Alt düğümü genişletin.
 
-7. Alt düğüm altında, alt ve üst verileri ilişkilendiren öğenin açılan menüsüne tıklayın. (Önceki örnekte, bu **CustomerID** düğümüdür.) Arama bağlamasını destekleyen aşağıdaki denetim türlerinden birini seçin:
+7. Alt düğümün altında, alt ve üst verileri ilişkili öğenin açılan menüsüne tıklayın. (Önceki örnekte **customerID düğümü bu** şekildedir.) Arama bağlamayı destekleyen aşağıdaki denetim türlerinden birini seçin:
 
     - **ComboBox**
 
@@ -68,30 +69,30 @@ Terim *arama tablosu* (bazen *arama bağlaması* denir), bir veri tablosundan, b
     - **ListView**
 
         > [!NOTE]
-        > **ListBox** veya **ListView** denetimi listede görünmezse, bu denetimleri listeye ekleyebilirsiniz. Bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+        > **ListBox veya** **ListView** denetimi listede görünmüyorsa, bu denetimleri listeye ekleyebilirsiniz. Bilgi için [bkz. Veri Kaynakları penceresinden sürüklenrken oluşturulacak denetimi ayarlama.](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
 
-    - Öğesinden türetilen herhangi bir özel denetim <xref:System.Windows.Controls.Primitives.Selector> .
+    - 'den türeten herhangi bir özel <xref:System.Windows.Controls.Primitives.Selector> denetim.
 
         > [!NOTE]
-        > **Veri kaynakları** penceresinde öğeler için seçebileceğiniz denetim listesine özel denetimler ekleme hakkında bilgi için, bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+        > Veri Kaynakları penceresinde öğeler için seçebilirsiniz denetim listesine özel denetimler ekleme hakkında bilgi için bkz. Veri Kaynakları  [penceresine özel denetimler ekleme.](../data-tools/add-custom-controls-to-the-data-sources-window.md)
 
-8. Alt düğümü **veri kaynakları** penceresinden WPF Tasarımcısı 'ndaki bir kapsayıcıya sürükleyin. (Önceki örnekte, alt düğüm **Orders** düğümüdür.)
+8. Alt düğümü Veri Kaynakları **penceresinden** WPF tasarımcısında bir kapsayıcıya sürükleyin. (Önceki örnekte, alt düğüm Orders **düğümü** olur.)
 
-     Visual Studio, sürüklediğiniz öğelerin her biri için yeni veri bağlantılı denetimler oluşturan XAML oluşturur. XAML ayrıca <xref:System.Windows.Data.CollectionViewSource> bırakma hedefinin kaynaklarına alt tablo veya nesne için yeni bir ekler. Visual Studio, bazı veri kaynaklarında verileri tabloya veya nesneye yüklemek için de kod üretir. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
+     Visual Studio sürükleyip her bir öğe için yeni veriye bağlı denetimler oluşturan XAML oluşturur. XAML ayrıca bırakma <xref:System.Windows.Data.CollectionViewSource> hedefinin kaynaklarına alt tablo veya nesne için yeni bir ekler. Bazı veri kaynakları için Visual Studio tabloya veya nesneye veri yüklemek için kod da oluşturur. Daha fazla bilgi için [bkz. WPF denetimlerini Visual Studio.](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 
-9. **Veri kaynakları** penceresinden üst düğümü daha önce oluşturduğunuz arama bağlama denetiminin üzerine sürükleyin. (Önceki örnekte, ana düğüm **müşteriler** düğümüdür).
+9. Veri Kaynakları penceresinden üst **düğümü daha** önce oluşturduğunuz arama bağlama denetimine sürükleyin. (Önceki örnekte, üst düğüm Müşteriler **düğümü** olur).
 
-     Visual Studio, arama bağlamasını yapılandırmak için denetimdeki bazı özellikleri ayarlar. Aşağıdaki tabloda, Visual Studio 'Nun değiştirdiği özellikler listelenmiştir. Gerekirse, bu özellikleri XAML 'de veya **Özellikler** penceresinde değiştirebilirsiniz.
+     Visual Studio bağlamayı yapılandırmak için denetimde bazı özellikleri ayarlar. Aşağıdaki tabloda, değişiklik yapılan Visual Studio listele. Gerekirse, bu özellikleri XAML'de veya Özellikler penceresinde **değiştirebilirsiniz.**
 
     |Özellik|Ayarın açıklaması|
     |--------------| - |
-    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Bu özellik, denetimde görüntülenen verileri almak için kullanılan koleksiyonu veya bağlamayı belirtir. Visual Studio, bu özelliği <xref:System.Windows.Data.CollectionViewSource> denetime sürüklediğiniz ana veriler için olarak ayarlar.|
-    |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|Bu özellik, denetimde görüntülenen veri öğesinin yolunu belirtir. Visual Studio bu özelliği, bir dize veri türüne sahip olan birincil anahtardan sonra ana verilerdeki ilk sütuna veya özelliğe ayarlar.<br /><br /> Üst verilerde farklı bir sütun veya özellik göstermek istiyorsanız, bu özelliği farklı bir özelliğin yolu olarak değiştirin.|
-    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio bu özelliği, tasarımcıya sürüklediğiniz alt verilerin sütununa veya özelliğine bağlar. Bu, üst verilerin yabancı anahtarıdır.|
-    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Visual Studio bu özelliği, ana verilere yabancı anahtar olan alt verilerin sütununun veya özelliğinin yoluna ayarlar.|
+    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Bu özellik, denetimde görüntülenen verileri almak için kullanılan koleksiyonu veya bağlamayı belirtir. Visual Studio denetimine <xref:System.Windows.Data.CollectionViewSource> sürüklemiş üst veriler için bu özelliği olarak ayarlar.|
+    |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|Bu özellik, denetimde görüntülenen veri öğesinin yolunu belirtir. Visual Studio, bu özelliği birincil anahtardan sonra dize veri türüne sahip ilk sütun veya özellik olarak ayarlar.<br /><br /> Üst verilerde farklı bir sütun veya özellik görüntülemek için bu özelliği farklı bir özelliğin yoluna göre değiştirebilirsiniz.|
+    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio, bu özelliği tasarımcıya sürüklenen alt verilerin sütununa veya özelliğine bağlar. Bu, üst verilerin yabancı anahtarıdır.|
+    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Visual Studio, bu özelliği üst verilerin yabancı anahtarı olan alt verilerin sütun veya özelliğinin yoluna ayarlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio'da verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [WPF uygulamalarındaki ilgili verileri görüntüleme](../data-tools/display-related-data-in-wpf-applications.md)
-- [İzlenecek yol: bir WPF uygulamasında ilgili verileri görüntüleme](../data-tools/display-related-data-in-wpf-applications.md)
+- [Adım adım kılavuz: WPF uygulamasında ilgili verileri görüntüleme](../data-tools/display-related-data-in-wpf-applications.md)

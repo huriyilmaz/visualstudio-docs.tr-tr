@@ -12,17 +12,18 @@ ms.assetid: 22f94f81-f8d9-46de-96e9-fae6f3c24903
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 15b053515268c16bfacdeee08e40390950542e38
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 333db1b0e278e1b174ee407333e7a609677fe95aeb9b1734066c94c057985136
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095842"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262444"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
 Belirtilen bağlantılı kesme noktasının oluşturulduğu bekleyen kesme noktasını alır.

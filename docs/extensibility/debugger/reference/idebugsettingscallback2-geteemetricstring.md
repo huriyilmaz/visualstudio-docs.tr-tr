@@ -9,17 +9,18 @@ ms.assetid: 85e3c093-6a91-4101-ab32-d8ac6eed4918
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 306bc2c054f5c1d772694d058cc2a6206afed7ec
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: db9e1f81b97fb748ed8c8a35a1558d39a15db0b3a61f5c3b101135f956d62782
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071356"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389546"
 ---
 # <a name="idebugsettingscallback2geteemetricstring"></a>IDebugSettingsCallback2::GetEEMetricString
 Adı verilen bir ifade değerlendirici ölçüsünün değer dizesini alır.

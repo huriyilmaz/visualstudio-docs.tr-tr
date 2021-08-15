@@ -19,14 +19,15 @@ ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 93a221640ff7383b39bfdec73cbaa9659156e33f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 89107e238382820f5bec4136215cc6cc7d6f7b9e0665229a33144627aa853e4c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858078"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346446"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda veri kümeleriyle çalışma
 
@@ -34,7 +35,7 @@ ms.locfileid: "99858078"
 
 Türü belirtilmiş veri kümeleri, TableAdapters ve DataSet sınıflarının ayrı projelerde üretilebilmesi için geliştirilmiştir. Bu, uygulama katmanlarını hızlı bir şekilde ayırma ve n katmanlı veri uygulamaları oluşturma olanağı sağlar.
 
-Türü belirtilmiş veri kümelerinde n katmanlı destek, uygulama mimarisinin n katmanlı bir tasarıma yinelemeli olarak geliştirilmesini sağlar. Ayrıca, kodu birden fazla projeye el ile ayıran gereksinimi ortadan kaldırır. **Veri kümesi Tasarımcısı** kullanarak veri katmanını tasarlamayı başlatın. Uygulama mimarisini n katmanlı bir tasarıma geçmeye hazırsanız, veri kümesi sınıfını ayrı bir projede oluşturmak için veri kümesi **Proje** özelliğini ayarlayın.
+Türü belirtilmiş veri kümelerinde n katmanlı destek, uygulama mimarisinin n katmanlı bir tasarıma yinelemeli olarak geliştirilmesini sağlar. Ayrıca, kodu birden fazla projeye el ile ayıran gereksinimi ortadan kaldırır. **Veri kümesi Tasarımcısı** kullanarak veri katmanını tasarlamayı başlatın. uygulama mimarisini n katmanlı bir tasarıma geçmeye hazırsanız, veri kümesi sınıfını ayrı bir projede oluşturmak için dataset **Project** özelliğini ayarlayın.
 
 ## <a name="reference"></a>Başvuru
 

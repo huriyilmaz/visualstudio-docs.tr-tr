@@ -22,19 +22,20 @@ ms.assetid: f2085314-a3a8-4caf-a5a4-2af9ad5aad05
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0356f05c3f0dac636813d1632f628dd02dd28923
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c3479483b5baf1bef9d6001ff5a8bffca53a675bd9d50d916d7241c8e67ee96c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893132"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453126"
 ---
 # <a name="macros-for-reporting"></a>Raporlama Makroları
 Hata ayıklama için, CRTDBG içinde tanımlanan **_RPTn** ve **_RPTFn** makrolarını kullanabilirsiniz. H, deyimlerin kullanımını değiştirmek için `printf` . **_DEBUG** tanımlanmadığında yayın derlemeniz otomatik olarak kaybolduğu için **#ifdef** s 'de bunları almanız gerekmez.
 
-|Makroya|Description|
+|Makroya|Açıklama|
 |-----------|-----------------|
 |**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|İleti dizesi ve sıfırdan dört bağımsız değişken verir. **_RPT4** üzerinden **_RPT1** için, ileti dizesi bağımsız değişkenler için bir printf stili biçimlendirme dizesi işlevi görür.|
 |**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF3**, **_RPTF4**|**_RPTn** ile aynıdır, ancak bu makrolar, makronun bulunduğu dosya adı ve satır numarasını da çıktı olarak alır.|

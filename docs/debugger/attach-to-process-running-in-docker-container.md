@@ -1,6 +1,6 @@
 ---
-title: Docker kapsayıcısında çalışan bir işleme iliştirme
-description: Visual Studio kullanarak Docker kapsayıcısı çalıştıran bir uygulamada hata ayıklamayı öğrenin
+title: Docker kapsayıcısı üzerinde çalışan bir işleme ekleme
+description: Visual Studio kullanarak Docker kapsayıcısı çalıştıran bir uygulamada hata ayıklamayı Visual Studio
 ms.date: 11/11/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,90 +9,91 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f39d4ecd69b726c1d549d723fadd324b1edd722
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bf895fefa858c8445d7a625c946821afa9ce3ab8b609d66059ad52149c97dda3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857935"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346186"
 ---
-# <a name="attach-to-a-process-running-on-a-docker-container"></a>Docker kapsayıcısında çalışan bir işleme iliştirme 
+# <a name="attach-to-a-process-running-on-a-docker-container"></a>Docker kapsayıcısı üzerinde çalışan bir işleme ekleme 
 
-Visual Studio 'Yu kullanarak bir Windows Docker kapsayıcısında veya Linux .NET Core Docker kapsayıcısında çalışan uygulamalarda hata ayıklaması yapabilirsiniz.
+Visual Studio kullanarak Windows Docker Kapsayıcısı veya Linux .NET Core Docker kapsayıcısı içinde çalışan uygulamaların Visual Studio.
 
-## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a>Linux Docker kapsayıcısında çalışan bir işleme iliştirme
+## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a>Linux Docker kapsayıcısı üzerinde çalışan bir işleme ekleme
 
-Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kullanarak yerel veya uzak makinenizde Linux .NET Core Docker kapsayıcısında çalışan bir işleme ekleyebilirsiniz.
+İşleme Ekle iletişim kutusunu Visual Studio yerel veya uzak makinenizin Linux .NET Core Docker kapsayıcısı içinde çalışan bir işleme hata **ayıklayıcısını** iliştirebilirsiniz.
 
 > [!IMPORTANT]
-> Bu özelliği kullanmak için .NET Core platformlar arası geliştirme iş yükünü yüklemeli ve kaynak koda yerel erişim sahibi olmanız gerekir.
+> Bu özelliği kullanmak için .NET Core Platformlar Arası Geliştirme iş yükünü yüklemeniz ve kaynak koda yerel erişiminizin olması gerekir.
 
-**Linux Docker kapsayıcısında çalışan bir işleme iliştirmek için:**
+**Linux Docker kapsayıcısı içinde çalışan bir işleme eklemek için:**
 
-1. Visual Studio 'da, işleme **Ekle** iletişim kutusunu açmak Için **Hata Ayıkla > Işleme Ekle (Ctrl + Alt + P)** öğesini seçin.
+1. Bu Visual Studio, İşleme **> Ekle (CTRL+ALT+P)** öğesini seçerek İşleme Ekle **iletişim** kutusunu açın.
 
-![Visual Studio 'da Işleme Iliştir iletişim kutusunun ekran görüntüsü (Linux kapsayıcısı) bir bağlantı türünü gösterir.](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
+![Docker (Linux Kapsayıcısı) bağlantı türünü gösteren Visual Studio İşleme Ekle iletişim kutusunun ekran görüntüsü.](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
 
-2. **Bağlantı türünü** **Docker (Linux kapsayıcısı)** olarak ayarlayın.
-3. **Docker kapsayıcısını Seç** iletişim kutusunu kullanarak **bağlantı hedefini** ayarlamak için **bul...** seçeneğini belirleyin.
+2. Bağlantı türü **olarak** **Docker (Linux Kapsayıcısı) olarak ayarlayın.**
+3. Bul... **öğesini** seçerek Docker **Kapsayıcısı** Seç **iletişim kutusu aracılığıyla Bağlantı hedefini** ayarlayın.
 
-    Bir Docker kapsayıcı işleminde yerel olarak veya uzaktan hata ayıklaması yapabilirsiniz.
+    Docker kapsayıcısı işleminin hatasını yerel olarak veya uzaktan ayıkabilirsiniz.
 
-    **Bir Docker kapsayıcı işleminde yerel olarak hata ayıklamak için:**
-    1. **Docker CLI ana bilgisayarını** **yerel makineye** ayarlayın.
-    1. Listeden eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a** basın.
+    **Docker kapsayıcısı işleminin hatasını yerel olarak ayıklamak için:**
+    1. **Docker CLI ana bilgisayar'ı** Yerel **Makine olarak ayarlayın.**
+    1. Listeden eklemek istediğiniz çalışan bir kapsayıcı seçin ve Tamam'a **tıklayın.**
 
-    ![Docker kapsayıcı menüsünü seçin](../debugger/media/select-docker-container.png "Select_Docker_Container_Menu")
+    ![Docker Kapsayıcı Menüsü'ne tıklayın](../debugger/media/select-docker-container.png "Select_Docker_Container_Menu")
 
-    **Kenarı. Bir Docker kapsayıcı işleminde uzaktan hata ayıklamak için:**
+    **B. Docker kapsayıcı işleminin hatasını uzaktan ayıklamak için:**
 
     > [!NOTE]
-    > Bir Docker kapsayıcısında çalışan bir işleme uzaktan bağlanmak için iki seçenek vardır. SSH 'yi kullanmak için ilk seçenek, yerel makinenizde Docker Araçları yüklü değilse idealdir.  Yerel olarak Docker Araçları yüklüyse ve uzak istekleri kabul edecek şekilde yapılandırılmış bir Docker Daemon varsa, bir Docker Daemon kullanarak ikinci seçeneği deneyin.
+    > Docker kapsayıcısı içinde çalışan bir işleme uzaktan bağlanmak için iki seçenek vardır. SSH kullanmak için ilk seçenek, yerel makinenize Docker araçları yüklü değilseniz idealdir.  Yerel olarak docker araçları yüklüyse ve uzak istekleri kabul etmek üzere yapılandırılmış bir Docker daemon'uz varsa, Docker daemon'larını kullanarak ikinci seçeneği deneyin.
 
-    1. ***SSH aracılığıyla uzak makineye bağlanmak için:***
+    1. ***SSH aracılığıyla uzak bir makineye bağlanmak için:***
         1. Uzak bir sisteme bağlanmak için **Ekle...** öğesini seçin.<br/>
-        ![Uzak bir sisteme bağlanma](../debugger/media/connect-remote-system.png "Uzak bir sisteme bağlanma")
-        1. SSH veya Daemon 'e başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a** basın.
+        ![Bağlan Sisteme Yükleme](../debugger/media/connect-remote-system.png "Bağlan Sisteme Yükleme")
+        1. SSH veya daemon'a başarıyla bağlanın ve Tamam'a bağlanın. 
 
-    1. ***Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için***
-        1. **Docker Konağı (Isteğe bağlı)** altında, Daemon ADRESINI (TCP, IP vb.) belirtin ve Yenile bağlantısına tıklayın.
-        1. Daemon 'a başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a** basın.
+    1. ***Hedefi [Docker daemon'ı](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla işlem çalıştıran uzak kapsayıcıya ayarlamak için***
+        1. Docker ana bilgisayarı (İsteğe **bağlı)** altında daemon adresini (TCP, IP vb.) belirtin ve yenileme bağlantısına tıklayın.
+        1. Daemon'a başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve Tamam'a **tıklayın.**
 
-4. **Kullanılabilir işlemler** listesinden karşılık gelen kapsayıcı işlemini seçin ve Visual Studio 'Da C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin!
+4. Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini  **seçin ve** Ekle'yi seçerek C# kapsayıcı işleminizin hata ayıklamasını Visual Studio!
 
-    ![Visual Studio 'da Işleme Iliştir iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Linux kapsayıcısı) olarak ayarlanır ve DotNet işlemi seçilidir.](../debugger/media/docker-attach-complete.png "Tamamlanmış Linux Docker Iliştirme menüsü")
+    ![Visual Studio'daki İşleme Ekle iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Linux Kapsayıcısı) olarak ayarlanır ve dotnet işlemi seçilir.](../debugger/media/docker-attach-complete.png "Tamamlandı Linux Docker Ekleme Menüsü")
 
-## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a>Windows Docker kapsayıcısında çalışan bir işleme iliştirme
+## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a>Windows Docker kapsayıcısı üzerinde çalışan bir işleme ekleme
 
-Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kullanarak yerel makinenizde bir Windows Docker kapsayıcısında çalışan bir işleme ekleyebilirsiniz.
+İşleme Ekle iletişim kutusunu Visual Studio yerel makinenizin Windows Docker kapsayıcısı içinde çalışan bir işleme hata **ayıklayıcısını** iliştirebilirsiniz.
 
 > [!IMPORTANT]
-> Bu özelliği bir .NET Core işlemiyle birlikte kullanmak için .NET Core platformlar arası geliştirme iş yükünü yüklemeli ve kaynak koda yerel erişim sahibi olmanız gerekir.
+> Bu özelliği bir .NET Core işlemiyle kullanmak için .NET Core Platformlar Arası Geliştirme iş yükünü yüklemeniz ve kaynak koda yerel erişiminizin olması gerekir.
 
-**Bir Windows Docker kapsayıcısında çalışan bir işleme iliştirmek için:**
+**Windows Docker kapsayıcısı içinde çalışan bir işleme eklemek için:**
 
-1. Visual Studio 'da, işleme **Ekle** iletişim kutusunu açmak Için **Hata Ayıkla > işleme Ekle** (veya **Ctrl + Alt + P**) öğesini seçin.
+1. bu Visual Studio, İşleme **>** Ekle (veya **CTRL+ALT+P**) seçeneğini kullanarak İşleme Ekle iletişim **kutusunu** açın.
 
-   ![Visual Studio 'da Işleme Iliştir iletişim kutusunun ekran görüntüsü (Windows kapsayıcısı) bir bağlantı türünü gösterir.](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
+   ![Docker Bağlantı türünü (Visual Studio Kapsayıcı) gösteren İşleme Ekle iletişim Windows kutusunun ekran görüntüsü.](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
 
-2. **Bağlantı türünü** **Docker (Windows container)** olarak ayarlayın.
-3. **Docker kapsayıcısını Seç** iletişim kutusunu kullanarak **bağlantı hedefini** ayarlamak için **bul...** seçeneğini belirleyin.
+2. Bağlantı türü **olarak** **Docker (Windows Container) olarak ayarlayın.**
+3. Docker Kapsayıcısı Seç iletişim **kutusunu kullanarak** Bağlantı **hedefini ayarlamak için** **Bul...** öğesini seçin.
 
     > [!IMPORTANT]
-    > Hedef işlem, üzerinde çalıştığı Docker Windows kapsayıcısı ile aynı işlemci mimarisine sahip olmalıdır.
+    > Hedef işlem, üzerinde çalıştır konusu olan Docker Windows işlemci mimarisine sahip olması gerekir.
 
-   Hedefin SSH aracılığıyla uzak bir kapsayıcıya ayarlanması şu anda kullanılamıyor ve yalnızca bir Docker Daemon kullanılarak yapılabilir.
+   Hedefi SSH aracılığıyla uzak kapsayıcıya ayarlama şu anda kullanılamıyor ve yalnızca Docker daemon'ı kullanılarak yapılabilir.
 
-    ***Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için***
-    1. **Docker Konağı (Isteğe bağlı)** altında, Daemon ADRESINI (TCP, IP vb.) belirtin ve Yenile bağlantısına tıklayın.
+    ***Hedefi [Docker daemon'ı](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla işlem çalıştıran uzak kapsayıcıya ayarlamak için***
+    1. Docker ana bilgisayarı (İsteğe **bağlı)** altında daemon adresini (TCP, IP vb.) belirtin ve yenileme bağlantısına tıklayın.
 
-    1. Daemon 'a başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve Tamam ' ı seçin.
+    1. Daemon'a başarıyla bağlandıktan sonra iliştirmek için çalışan bir kapsayıcı seçin ve Tamam'ı seçin.
 
-4. **Kullanılabilir işlemler** listesinden karşılık gelen kapsayıcı işlemini seçin ve C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin.
+4. Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini **seçin ve C#** kapsayıcı **işleminizin** hata ayıklamasını başlatmak için Ekle'yi seçin.
 
-    ![Visual Studio 'da Işleme Iliştir iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Windows container) olarak ayarlanır ve dotnet.exe işlem seçilidir.](../debugger/media/docker-attach-complete-windows.png "Windows Docker Iliştirme menüsü tamamlandı")
+    ![Visual Studio'daki İşleme Ekle iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Windows Container) olarak ayarlanır ve dotnet.exe işlemi seçilir.](../debugger/media/docker-attach-complete-windows.png "Docker Windows Menüsü Tamamlandı")
 
-5. Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini seçin ve C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin.
+5. Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini  seçin ve C# kapsayıcı işleminizin hata ayıklamasını başlatmak için Ekle'yi seçin.

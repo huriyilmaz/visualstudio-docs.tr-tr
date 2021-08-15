@@ -11,17 +11,18 @@ ms.assetid: bce35af0-722d-46d4-afa6-eaae598c51ff
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 893cc51767be8977c6c298b56ffffee60c93bbbc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9b83ca25a3bd2d9f97f5646e98189f4400885be622859ea1594889f260b8b49f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070914"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448539"
 ---
 # <a name="symbol_search_info_fields"></a>SYMBOL_SEARCH_INFO_FIELDS
 Alınacak sembol bilgisinin türünü belirtir.

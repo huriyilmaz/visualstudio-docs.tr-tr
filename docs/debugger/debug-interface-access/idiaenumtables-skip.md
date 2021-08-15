@@ -11,14 +11,15 @@ ms.assetid: 5c9db956-0654-4f1a-8775-530aa980d8ec
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 98cec85c0b36051cb3fc173794188dbf7d58fcee
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 54cddc5df34b4aa80dfba71326f61e85a7fab4fa194d7c1fe0a2dee0e93b79f3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157856"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345079"
 ---
 # <a name="idiaenumtablesskip"></a>IDiaEnumTables::Skip
 Sabit Listesi dizisinde belirtilen sayıda tabloyu atlar.

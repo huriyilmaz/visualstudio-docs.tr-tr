@@ -7,15 +7,16 @@ ms.assetid: 1971868e-89fa-4452-8ee7-76e4daf31b66
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aeffc3be3fee5d3460ddea340d8c4a216829e08
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1244a3fc5ff93ea1e576bc61e592c716548c976a93cfcbb2900fad2e5c8a8b8c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963165"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270204"
 ---
 # <a name="timer"></a>Zamanlayıcı
 *VSPerfCmd.exe* **Zamanlayıcı** seçeneği, işlemci saati döngüleri olarak örneklenen profil oluşturma olayını ayarlar ve isteğe bağlı olarak bir örnekleme aralığındaki döngü sayısını varsayılan 10.000.000 ' dan değiştirir. 1GH (bir gigahertz) işlemcisinde 10.000.000 saat döngüsü yaklaşık 100 örnek/saniye. Belirtime için en az döngü sayısı 50.000 ' dir.
@@ -64,5 +65,5 @@ VSPerfCmd.exe /Launch:TestApp.exe /Timer:1000000
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

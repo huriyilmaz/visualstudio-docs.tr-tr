@@ -1,6 +1,6 @@
 ---
 title: RegPkg paket kaydı sorunlarını giderme | Microsoft Docs
-description: Visual Studio 'da RegPkg paket kaydı sorunlarını gidermek için bu bilgileri kullanın. Paketinize uygun olan RegPkg sürümünü kullanın.
+description: Visual Studio 'de RegPkg paket kaydı sorunlarını gidermek için bu bilgileri kullanın. Paketinize uygun olan RegPkg sürümünü kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -10,18 +10,19 @@ ms.assetid: f33f822f-697a-4bad-9c10-554b4c8f6246
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48e3699b095ed7b9d0e72cf7b09ad02e26ac5a51
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fbefcdd5bbb0193339fab1b91335e16fcc0e820afd97ad35a7d39ee71582ff06
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090765"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431766"
 ---
 # <a name="troubleshooting-regpkg-package-registration"></a>RegPkg Paket Kaydı Sorunlarını Giderme
 > [!NOTE]
-> Visual Studio 'da paketleri kaydetmek için tercih edilen yol. pkgdef dosyalarını kullanmaktır. Bu, sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına izin verir. Pkgdef dosyaları [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md)kullanılarak oluşturulur.
+> Visual Studio paketleri kaydetmek için tercih edilen yol. pkgdef dosyalarını kullanmaktır. Bu, sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına izin verir. Pkgdef dosyaları [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md)kullanılarak oluşturulur.
 
  İçinde RegPkg kullanarak bir paketi kaydetmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , paketinize uygun olan RegPkg sürümünü kullanmanız gerekir.
 

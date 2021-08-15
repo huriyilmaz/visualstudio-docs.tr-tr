@@ -1,6 +1,6 @@
 ---
 title: 'Hata ayıklama F # | Microsoft Docs'
-description: "Visual Studio 'da diğer yönetilen dillerde hata ayıklama ile karşılaştırıldığında F # hatası ayıklama arasındaki farkların listesini gözden geçirin."
+description: 'Visual Studio, diğer yönetilen dillerin hatalarını ayıklama ile karşılaştırıldığında, F # hatası ayıklama arasındaki farkların listesini gözden geçirin.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,14 +16,15 @@ ms.assetid: 20bcd51c-2d06-4281-9a1e-ef2b91d1a779
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d2fed2765d04fa55c790afb7251a24b98a4d74f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01a46af13fc9b537c6e5255889d77add6d605a23d46d754667de78c08f9017bf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872631"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454451"
 ---
 # <a name="debugging-f"></a>Hata ayıklama F\#
 F # hatası ayıklamak, birkaç özel durum dışında yönetilen herhangi bir dilde hata ayıklamaya benzer:

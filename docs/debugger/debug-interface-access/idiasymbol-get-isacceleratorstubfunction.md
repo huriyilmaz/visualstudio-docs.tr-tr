@@ -9,14 +9,15 @@ ms.assetid: cc4ea375-76f6-4ba8-baed-c5fa82108137
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 710622fdb8fb10d0357c060097f13bab3be7d05f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4c5d32ec66b596510696bf81aa3bfc506047b54e64519304ca570a9ea88d39ca
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156218"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121240507"
 ---
 # <a name="idiasymbolget_isacceleratorstubfunction"></a>IDiaSymbol::get_isAcceleratorStubFunction
 Simgenin bir çağrıya karşılık gelen hızlandırıcı için derlenen bir gölgelendirici için üst düzey işlev simgesine karşılık geldiğini gösterir `parallel_for_each` .

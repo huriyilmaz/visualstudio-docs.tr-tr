@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 'da SharePoint araçları için hata ayıklama uzantıları | Microsoft Docs
-description: Visual Studio 'da SharePoint araçları için hata ayıklama uzantıları. Deneysel örnekteki SharePoint araçları uzantılarında hata ayıklayın veya normal ile VS örneği
+title: Visual Studio |'de SharePoint Araçları için Uzantılarda Hata Ayıklama Microsoft Docs
+description: SharePoint'daki SharePoint uzantılarında hata Visual Studio. Deneysel SharePoint veya VS'nin normal örneğinde hata ayıklama araçları uzantıları.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -13,124 +13,125 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 2b098ac007825745e13481592760be9d2badeb55
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 11cfbc1386ccd7994e2594f8ddde4a1add3613d27c0fcf1782a3d9dd2a1ed13a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948914"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121353052"
 ---
-# <a name="debug-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio 'da SharePoint araçları için hata ayıklama uzantıları
-  Visual Studio 'nun deneysel örneğinde veya normal örneğinde SharePoint araçları uzantılarında hata ayıklaması yapabilirsiniz. Bir uzantının davranışında sorun gidermeniz gerekiyorsa, ek hata bilgilerini göstermek ve Visual Studio 'Nun SharePoint komutlarını nasıl yürüttüğünü yapılandırmak için kayıt defteri değerlerini de değiştirebilirsiniz.
+# <a name="debug-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio'de SharePoint için uzantılarda hata Visual Studio
+  Deneysel örnekte veya SharePoint örneğinde araç uzantılarının hata ayıklaması Visual Studio. Bir uzantının davranışını gidermeniz gerekirse, kayıt defteri değerlerini ek hata bilgileri görüntülecek şekilde değiştirebilir ve bir uzantının Visual Studio yürütme SharePoint yapılandırabilirsiniz.
 
-## <a name="debug-extensions-in-the-experimental-instance-of-visual-studio"></a>Visual Studio 'nun deneysel örneğinde hata ayıklama uzantıları
- Visual Studio geliştirme ortamınızı test edilmemiş uzantılar tarafından yanlışlıkla bozulmalardan korumak için, Visual Studio SDK, uzantıları yüklemek ve test etmek için kullanabileceğiniz *deneysel örnek* olarak adlandırılan alternatif bir Visual Studio örneği sağlar. Visual Studio 'nun normal örneğini kullanarak yeni uzantılar geliştirirsiniz, ancak hata ayıklayın ve deneysel örnekte çalıştırın. Daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md).
+## <a name="debug-extensions-in-the-experimental-instance-of-visual-studio"></a>Deneysel Visual Studio örneğinde uzantılarda hata ayıklama
+ Visual Studio SDK' sı, Visual Studio geliştirme ortamınızı test edilmemiş uzantılar tarafından yanlışlıkla bozulmaya karşı korumak için, uzantıları yüklemek ve test etmek için kullanabileceğiniz deneysel örnek *adlı* alternatif bir Visual Studio örneği sağlar. Yeni uzantılar geliştirmek için normal Visual Studio kullanır, ancak deneysel örnekte hata ayıklar ve bunları çalıştırın. Daha fazla bilgi için [bkz. Deneysel Örnek](../extensibility/the-experimental-instance.md).
 
- Uzantınızı dağıtmak için VSıX projesi kullanıyorsanız ve VSıX projesi çözümünüzdeki başlangıç projem ise, çözümünüzde hata ayıklarken Visual Studio uzantıyı deneysel örneğe otomatik olarak yükleyip çalıştırır. Başlangıç projesi, birden fazla proje içeren bir çözümde hata ayıkladığınızda başlayan projem. Uzantınızı dağıtmak için VSıX projesi kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Uzantınızı dağıtmak için bir VSIX projesi kullanıyorsanız ve VSIX projesi çözümünüzde başlangıç projesiyse, Visual Studio hata ayıklaması sırasında uzantıyı deneysel örnekte otomatik olarak yük devreder ve çalıştırır. Başlangıç projesi, birden çok proje içeren bir çözümde hata ayıklama işlemi sırasında başlayan projedir. Uzantınızı dağıtmak için VSIX projesi kullanma hakkında daha fazla bilgi için bkz. [SharePoint'de](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)Visual Studio.
 
- Visual Studio 'nun deneysel örneğinde çeşitli uzantı türlerinin nasıl ayıklanmasını gösteren örnekler için aşağıdaki izlenecek yollara bakın:
+ Deneysel örneklerde çeşitli uzantı türlerinde hata ayıklamayı gösteren örnekler Visual Studio aşağıdaki adım adım kılavuzlara bakın:
 
-- [İzlenecek yol: bir SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)
+- [Adım adım kılavuz: SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)
 
-- [İzlenecek yol: öğe şablonu, Bölüm 1 ile özel eylem proje öğesi oluşturma](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
+- [Adım adım kılavuz: Öğe şablonuyla özel eylem proje öğesi oluşturma, Bölüm 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)
 
-- [İzlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)
+- [Adım adım kılavuz: Proje oluşturmak için özel SharePoint oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)
 
-- [İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [Adım adım kılavuz: Web Sunucu Gezgini görüntülemek için uygulamanın süresini genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
 
-- [İzlenecek yol: Sunucu Gezgini uzantısında SharePoint istemci nesne modelini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
+- [Adım adım kılavuz: SharePoint uzantısında istemci nesne modeline Sunucu Gezgini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
 
-## <a name="debug-extensions-in-the-regular-instance-of-visual-studio"></a>Visual Studio 'nun normal örneğinde hata ayıklama uzantıları
- Visual Studio 'nun normal örneğinde uzantı projenizde hata ayıklamak istiyorsanız, önce uzantıyı normal örneğe yüklemeniz gerekir. Sonra, hata ayıklayıcıyı ikinci bir Visual Studio işlemine iliştirin. İşiniz bittiğinde, uzantıyı artık geliştirme bilgisayarına yüklemediğinden kaldırabilirsiniz.
+## <a name="debug-extensions-in-the-regular-instance-of-visual-studio"></a>Uygulamanın normal örneğinde uzantılarda hata Visual Studio
+ Uzantı projenizin hata ayıklaması için normal Visual Studio, önce uzantıyı normal örnekte yükleyin. Ardından, hata ayıklayıcıyı ikinci bir Visual Studio iliştirin. Bitirdikten sonra, artık geliştirme bilgisayarına yüklemesi için uzantıyı kaldırabilirsiniz.
 
 #### <a name="to-install-the-extension"></a>Uzantıyı yüklemek için
 
-1. Visual Studio 'nun tüm örneklerini kapatın.
+1. Tüm örnek örneklerini Visual Studio.
 
-2. Uzantı projesinin yapı çıkış klasöründe, *. vsix* dosyasını çift tıklayarak veya kısayol menüsünü açıp **Aç**' ı seçerek açın:
+2. Uzantı projesinin derleme çıkış klasöründe, *.vsix* dosyasını çift tıklayarak veya kısayol menüsünü açıp Aç'ı seçerek **açın:**
 
-3. **Visual Studio Uzantı Yükleyicisi** iletişim kutusunda, uzantıyı yüklemek Istediğiniz Visual Studio sürümünü seçin ve ardından **yükleme** düğmesini seçin.
+3. Uzantı **Visual Studio iletişim kutusunda,** uzantıyı yüklemek istediğiniz Visual Studio sürümünü seçin ve ardından Yükle **düğmesini** seçin.
 
-     Visual Studio, uzantı dosyalarını%userprofile%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions \\ *Yazar adı* \\ *uzantı adı* \\ *sürümüne* yüklenir. Bu yoldaki son üç klasör `Author` , `Name` `Version` uzantısı için *uzantı. valtmanifest* dosyasındaki, ve öğelerinden oluşturulur.
+     Visual Studio uzantı dosyalarını %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions yazar adı \\  \\ *uzantısı adı sürümüne* \\ *yüklür.* Bu yolda yer alan son üç klasör, uzantının `Author` `Name` `Version` *extension.vsixmanifest* dosyasındaki , ve öğelerinden oluşturulur.
 
-4. Visual Studio uzantıyı yükledikten sonra **Kapat** düğmesini seçin.
+4. Uzantıyı Visual Studio sonra Kapat **düğmesini** seçin.
 
-#### <a name="to-debug-the-extension"></a>Uzantının hatalarını ayıklamak için
+#### <a name="to-debug-the-extension"></a>Uzantıda hata ayıklamak için
 
-1. Visual Studio 'Yu yönetici ayrıcalıklarıyla açın ve uzantı projesini açın. Aşağıdaki adımlar, *ilk örnek* olarak Visual Studio 'nun bu örneğine başvurur.
+1. Yönetici Visual Studio ve uzantı projesini açın. Aşağıdaki adımlarda bu örnek, Visual Studio örneği *olarak ifade etmektedir.*
 
-2. Yönetici ayrıcalıklarıyla Visual Studio 'nun başka bir örneğini başlatın. Aşağıdaki adımlar, *ikinci örnek* olarak Visual Studio 'nun bu örneğine başvurur.
+2. Yönetici ayrıcalıklarıyla başka Visual Studio örnek başlatma. Aşağıdaki adımlar, bu örnek için Visual Studio örneği *olarak ifade etmektedir.*
 
-3. Visual Studio 'nun ilk örneğine geçin.
+3. Uygulamanın ilk örneğine Visual Studio.
 
-4. Menü çubuğunda **Hata Ayıkla**, **İşleme İliştir**' i seçin.
+4. Menü çubuğunda Hata Ayıkla, İşleme **Ekle'yi seçin.** 
 
-5. **Kullanılabilir süreçler** listesinde *devenv.exe*' yi seçin. Bu giriş, Visual Studio 'nun ikinci örneğini ifade eder; Bu, içindeki proje uzantınızın hatalarını ayıklamak istediğiniz örneğidir.
+5. Kullanılabilir **İşlemler listesinde,** *devenv.exe.* Bu giriş, uygulamanın ikinci örneğine Visual Studio; Bu, içinde proje uzantınıza hata ayıklamak istediğiniz örnektir.
 
-6. **Ekle** düğmesini seçin.
+6. Ekle **düğmesini** seçin.
 
-     Visual Studio, uzantı projesini hata ayıklama modunda çalıştırır.
+     Visual Studio projesini hata ayıklama modunda çalıştırır.
 
-7. Visual Studio 'nun ikinci örneğine geçin.
+7. Uygulamanın ikinci örneğine Visual Studio.
 
-8. Uzantınızı yükleyen yeni bir SharePoint projesi oluşturun. Örneğin, liste tanımı proje öğeleri için bir uzantının hatalarını ayıklıyorsanız, bir **liste tanımı** projesi oluşturun.
+8. Uzantınızı yük SharePoint yeni bir proje oluşturun. Örneğin, liste tanımı proje öğeleri için bir uzantıda hata ayıklarsanız bir Liste Tanımı **projesi** oluşturun.
 
-9. Uzantı kodunuzu test etmek için gerekli adımları gerçekleştirin.
+9. Uzantı kodunuzu test etmek için gereken adımları gerçekleştirin.
 
-10. Uzantının hata ayıklamasını bitirdiğinizde, Visual Studio 'nun ikinci örneğini kapatın.
+10. Uzantıda hata ayıklamayı tamamlarken, uzantının ikinci örneğini Visual Studio.
 
 #### <a name="to-remove-the-extension"></a>Uzantıyı kaldırmak için
 
-1. Visual Studio 'da, menü çubuğunda **Araçlar**, **Uzantılar ve güncelleştirmeler**' i seçin.
+1. Bu Visual Studio menü çubuğunda Araçlar, Uzantılar **ve** **Güncelleştirmeler'i seçin.**
 
-     **Uzantılar ve güncelleştirmeler** iletişim kutusu açılır.
+     Uzantılar **ve Güncelleştirmeler** iletişim kutusu açılır.
 
-2. Uzantı listesinden uzantının adını seçin ve ardından **Kaldır** düğmesini seçin.
+2. Uzantı listesinde uzantının adını ve ardından Kaldır **düğmesini** seçin.
 
-3. Görüntülenen iletişim kutusunda, uzantıyı kaldırmak istediğinizi onaylamak için **Evet** düğmesini seçin.
+3. Görüntülenen iletişim kutusunda, uzantıyı **kaldırmak istediğinizden** emin olmak için Evet düğmesini seçin.
 
-4. Kaldırma işlemini gerçekleştirmek için **Şimdi yeniden Başlat** düğmesini seçin.
+4. Kaldırma işlemini **tamamlamak için** Şimdi Yeniden Başlat düğmesini seçin.
 
-## <a name="debug-sharepoint-commands"></a>SharePoint komutlarında hata ayıkla
- SharePoint Araçları uzantısının parçası olan bir SharePoint komutunda hata ayıklamak istiyorsanız, hata ayıklayıcıyı *vssphost4.exe* işlemine bağlamanız gerekir. Bu, SharePoint komutlarını yürüten 64 bitlik ana bilgisayar işlemidir. SharePoint komutları ve *vssphost4.exe* hakkında daha fazla bilgi için bkz. [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md).
+## <a name="debug-sharepoint-commands"></a>Hata ayıklama SharePoint ayıklama
+ SharePoint araçları uzantısının parçası olan bir SharePoint komutunda hata ayıklamak için hata ayıklayıcıyıvssphost4.exe *gerekir.* Bu, komutlarını yürüten 64 bit SharePoint işlemidir. komutlarını ve SharePoint hakkında daha *fazlavssphost4.exe* için [bkz. SharePoint nesne modellerine çağırma.](../sharepoint/calling-into-the-sharepoint-object-models.md)
 
-#### <a name="to-attach-the-debugger-to-the-vssphost4exe-process"></a>Hata ayıklayıcıyı vssphost4.exe işlemine iliştirmek için
+#### <a name="to-attach-the-debugger-to-the-vssphost4exe-process"></a>Hata ayıklayıcıyı vssphost4.exe eklemek için
 
-1. Yukarıdaki yönergeleri izleyerek uzantınızın, Visual Studio 'nun deneysel örneğinde veya normal Visual Studio örneğinde hata ayıklamaya başlayın.
+1. Yukarıdaki yönergeleri izleyerek uzantının deneysel Visual Studio veya normal Visual Studio hata ayıklamaya başlayabilirsiniz.
 
-2. Hata ayıklayıcıyı çalıştırdığınız Visual Studio örneğinde, menü çubuğunda **Hata Ayıkla**, **İşleme İliştir**' i seçin.
+2. Hata ayıklayıcısını Visual Studio hata ayıklayıcısı örneğinde, menü çubuğunda Hata Ayıkla, İşleme **Ekle'yi seçin.**
 
-3. **Kullanılabilir süreçler** listesinde *vssphost.exe*' yi seçin.
+3. Kullanılabilir **İşlemler listesinde,** *vssphost.exe.*
 
     > [!NOTE]
-    > vssphost.exe listede görünmezse, uzantıyı çalıştırdığınız Visual Studio örneğinde *vssphost4.exe* işlemini başlatmanız gerekir... Genellikle bunu, Visual Studio 'Nun geliştirme bilgisayarındaki SharePoint sitesine bağlanmasına neden olan bir eylem gerçekleştirerek yapabilirsiniz. Örneğin, bir site bağlantı düğümünü (bir site URL 'SI görüntüleyen bir düğüm) **Sunucu Gezgini** penceresindeki **SharePoint bağlantıları** düğümü altında veya **liste örneği** veya **olay alıcı** öğeleri gibi belirli SharePoint proje öğelerini bir SharePoint projesine eklediğinizde, Visual Studio *vssphost4.exe* başlar.
+    > vssphost.exe listede görünmüyorsa, uzantıyıvssphost4.exeörneğinde  Visual Studio işlemini başlatmanız gerekir. Genellikle bunu, geliştirme bilgisayarına Visual Studio sitenin bağlanmasına neden SharePoint bir eylem gerçekleştirerek gerçekleştirebilirsiniz. Örneğin, Visual Studio *penceresindekivssphost4.exeSharePoint* Bağlantılar düğümü altında bir site bağlantı düğümünü (site  URL'sini görüntüleyen bir düğüm) genişletken veya Sunucu Gezgini **bir SharePoint** projesine Liste  Örneği  veya Olay Alıcısı gibi belirli SharePoint proje öğelerini ekleyebilirsiniz.
 
-4. **Ekle** düğmesini seçin.
+4. Ekle **düğmesini** seçin.
 
-5. Hata ayıklanan Visual Studio örneğinde, komutunuz yürütmek için gerekli adımları gerçekleştirin.
+5. Hata ayık Visual Studio örneğinde, komutunu yürütmek için gereken adımları gerçekleştirin.
 
-## <a name="modify-registry-values-to-help-debug-sharepoint-tools-extensions"></a>SharePoint araçları uzantılarında hata ayıklamasına yardımcı olmak için kayıt defteri değerlerini değiştirme
- Visual Studio 'da SharePoint araçlarının bir uzantısında hata ayıkladığınızda, uzantının sorunlarını gidermenize yardımcı olması için kayıt defterindeki değerleri değiştirebilirsiniz. Değerler **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools** anahtarının altında bulunur. Bu değerler varsayılan olarak bulunmaz.
+## <a name="modify-registry-values-to-help-debug-sharepoint-tools-extensions"></a>Araç uzantılarında hata ayıklamaya yardımcı olmak SharePoint değerlerini değiştirme
+ Visual Studio'da SharePoint uzantısının hata ayıklaması Visual Studio, uzantı sorunlarını gidermenize yardımcı olmak için kayıt defterindeki değerleri değiştirebilirsiniz. Değerler,HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools **vardır.** Bu değerler varsayılan olarak mevcut değildir.
 
- SharePoint araçlarının herhangi bir uzantısında sorun gidermeye yardımcı olmak için EnableDiagnostics değerini oluşturup ayarlayabilirsiniz. Aşağıdaki tabloda bu değer açıklanmaktadır.
-
-|Değer|Açıklama|
-|-----------|-----------------|
-|EnableDiagnostics|Tanılama iletilerinin **Çıkış** penceresinde görüntülenip görüntülenmeyeceğini belirten REG_DWORD.<br /><br /> Tanılama iletilerini göstermek için bu değeri 1 olarak ayarlayın. İletileri görüntülemeyi durdurmak için bu değeri 0 olarak ayarlayın veya bu değeri silin.<br /><br /> Bir SharePoint Araçları uzantısından **Çıkış** penceresine iletiler yazmak için SharePoint proje hizmetini kullanın. Daha fazla bilgi için bkz. [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md).|
-
- Uzantınız bir SharePoint komutu içeriyorsa, komutun sorunlarını gidermeye yardımcı olmak için ek değerler oluşturabilir ve ayarlayabilirsiniz. Aşağıdaki tabloda bu değerler açıklanmaktadır.
+ SharePoint araçlarının herhangi bir uzantısında sorun gidermeye yardımcı olmak için EnableDiagnostics değerini oluşturabilir ve ayarlayabilirsiniz. Aşağıdaki tabloda bu değer açık almaktadır.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|AttachDebuggerToHostProcess|Bir iletişim kutusunun görüntülenip görüntülenmeyeceğini belirten REG_DWORD, hata ayıklayıcıyı başladıktan hemen sonra *vssphost4.exe* iliştirmenizi sağlar. Hata ayıklamak istediğiniz komut başladıktan hemen sonra vssphost.exe yürütülürse ve komut yürütülmeden önce hata ayıklayıcıyı el ile iliştirmek için yeterli zaman yoksa, bu yararlı olur. İletişim kutusunu göstermek için *vssphost4.exe* <xref:System.Diagnostics.Debugger.Break%2A> yöntemi başladığında çağırır.<br /><br /> Bu davranışı etkinleştirmek için, bu değeri 1 olarak ayarlayın. Bu davranışı kapatmak için, bu değeri 0 olarak ayarlayın veya bu değeri silin.<br /><br /> Bu değeri 1 olarak ayarlarsanız, Visual Studio 'Nun başarıyla başlatıldığını sinyalin *vssphost4.exe* beklemesi için, hata ayıklayıcısını eklemek üzere bir kez daha tanımak Için HostProcessStartupTimeout değerini de artırmak isteyebilirsiniz.|
-|ChannelOperationTimeout|Visual Studio 'Nun bir SharePoint komutunun yürütülmesi için beklediği süreyi saniye cinsinden belirten REG_DWORD. Komut zamanında yürütülemez, bir oluşturulur <xref:Microsoft.VisualStudio.SharePoint.SharePointConnectionException> .<br /><br /> Varsayılan değer 120 saniyedir.|
-|HostProcessStartupTimeout|Visual Studio 'Nun *vssphost4.exe* başarıyla başlatıldığını işaret etmek için bekleyeceği süreyi saniye cinsinden belirten REG_DWORD. *vssphost4.exe* , zaman içinde başarılı bir başlangıç sinyalini işaret etmez, bir oluşturulur <xref:Microsoft.VisualStudio.SharePoint.SharePointConnectionException> .<br /><br /> Varsayılan değer 60 saniyedir.|
-|Değerini|REG_DWORD, Visual Studio ile *vssphost4.exe* arasında geçirilen WCF iletilerinin izin verilen en büyük boyutunu bayt cinsinden belirtir.<br /><br /> Varsayılan değer 1.048.576 bayttır (1 MB).|
-|MaxStringContentLength|REG_DWORD, Visual Studio ile *vssphost4.exe* arasında geçirilen dizelerin bayt olarak izin verilen en büyük boyutunu belirtir.<br /><br /> Varsayılan değer 1.048.576 bayttır (1 MB).|
+|EnableDiagnostics|REG_DWORD penceresinde tanılama iletilerinin görüntülenmiyor olup olmadığını **belirten bir komut.**<br /><br /> Tanılama iletilerini görüntülemek için bu değeri 1 olarak ayarlayın. İletileri görüntülemeyi durdurmak için bu değeri 0 olarak ayarlayın veya bu değeri silin.<br /><br /> SharePoint **araçları** uzantısından Çıkış penceresine ileti yazmak için SharePoint proje hizmeti. Daha fazla bilgi için [bkz. SharePoint proje hizmeti.](../sharepoint/using-the-sharepoint-project-service.md)|
+
+ Uzantınız bir SharePoint komutu içerirse, komutun sorunlarını gidermeye yardımcı olmak için ek değerler oluşturabilir ve bu değerleri ayarlayın. Aşağıdaki tabloda bu değerler açık almaktadır.
+
+|Değer|Açıklama|
+|-----------|-----------------|
+|AttachDebuggerToHostProcess|REG_DWORD hata ayıklayıcıyı en kısa sürede hata ayıklayıcıya eklemenizi sağlayan *bir iletişim kutusuvssphost4.exe* olup olmadığını belirten bir komut dosyası. Hata ayıklamak istediğiniz komut başlatıldıktan hemen sonra vssphost.exe tarafından yürütülürse ve komut yürütülmeden önce hata ayıklayıcıyı el ile eklemek için yeterli zaman yoksa bu yararlı olur. İletişim kutusunu görüntülemek için *vssphost4.exe* yöntemini <xref:System.Diagnostics.Debugger.Break%2A> çağırabilirsiniz.<br /><br /> Bu davranışı etkinleştirmek için bu değeri 1 olarak ayarlayın. Bu davranışı kapatmak için bu değeri 0 olarak ayarlayın veya bu değeri silin.<br /><br /> Bu değeri 1 olarak ayarlayacak olursanız, Visual Studio'nin başarıyla başlatılamayacak şekilde başlamasını beklemeden önce kendinize hata ayıklayıcıyı eklemek için yeterli zaman vermekvssphost4.exeHostProcessStartupTimeout *değerini* artırmak da iyi olabilir.|
+|ChannelOperationTimeout|REG_DWORD saniye olarak belirten bir Visual Studio komutunun yürütül SharePoint bekler. Komut zamanında yürütülmezse, <xref:Microsoft.VisualStudio.SharePoint.SharePointConnectionException> bir olur.<br /><br /> Varsayılan değer 120 saniyedir.|
+|HostProcessStartupTimeout|REG_DWORD saniyeler içinde, Visual Studio başarıyla başlatvssphost4.exeiçin beklemesi gereken zamanı belirtir.  Bu *vssphost4.exe* başarılı bir başlangıç olduğunu sinyallemiyorsa, <xref:Microsoft.VisualStudio.SharePoint.SharePointConnectionException> bir olur.<br /><br /> Varsayılan değer 60 saniyedir.|
+|MaxReceivedMessageSize|REG_DWORD ile arasında geçirilen WCF iletilerinin bayt cinsinden izin verilen en büyük boyutunu belirten Visual Studio *vssphost4.exe.*<br /><br /> Varsayılan değer 1.048.576 bayttır (1 MB).|
+|MaxStringContentLength|REG_DWORD arasında geçirilen dizelerin bayt cinsinden izin verilen en büyük boyutunu belirten Visual Studio *vssphost4.exe.*<br /><br /> Varsayılan değer 1.048.576 bayttır (1 MB).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SharePoint araçlarını Visual Studio 'da genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
-- [Visual Studio 'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Visual Studio'SharePoint araçları genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [Visual Studio'de SharePoint araçları için uzantıları Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

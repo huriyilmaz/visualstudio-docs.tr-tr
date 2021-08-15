@@ -10,16 +10,17 @@ ms.assetid: fc12e472-ac6a-4e77-8e22-a769e13a03b8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2e762b28cfaf239e5edb38b1be3981496e56d72d
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ee02da8dac8ffdd2f6900f6530f39e256448fafd9d6229a0946034d39ed3dca1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102154996"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453825"
 ---
-# <a name="how-to-debug-net-framework-source"></a>Nasıl yapılır: .NET Framework kaynağında hata ayıklama
+# <a name="how-to-debug-net-framework-source"></a>nasıl yapılır: .NET Framework kaynağında hata ayıklama
 
 .NET Framework kaynakta hata ayıklamak için şunları yapmanız gerekir:
 
@@ -31,7 +32,7 @@ ms.locfileid: "102154996"
 
 ### <a name="to-enable-stepping-into-net-framework-source"></a>.NET Framework kaynağa adımlamayı etkinleştirmek için
 
-1. **Araçlar** (veya **hata ayıklama** **>)** altında  >  **hata ayıklama**  >  **genel**' i seçin **.NET Framework kaynak adımlamayı etkinleştir** seçeneğini belirleyin.
+1. **araçlar** (veya **hata ayıklama** **>)** altında  >  **hata ayıklama**  >  **genel**' i seçin **.NET Framework kaynak adımlamayı etkinleştir** seçeneğini belirleyin.
 
    - Yalnızca kendi kodum etkinleştirdiyseniz, bir uyarı iletişim kutusu size Yalnızca kendi kodum artık devre dışı bırakıldığını söyler. **Tamam**’ı seçin.
 
@@ -55,7 +56,7 @@ ms.locfileid: "102154996"
 
 ### <a name="to-load-symbols-from-the-modules-or-call-stack-windows"></a>Modüller veya çağrı yığını pencerelerini sembolleri yüklemek için
 
-1. Hata ayıklama sırasında, Windows modüllerini **Hata Ayıkla**  >    >   (veya **Ctrl + Alt + U** tuşlarına basın) veya Windows çağrı **yığını hata ayıkla**  >    >   (**Ctrl + Alt + C**) seçeneğini belirleyerek pencereyi açın.
+1. hata ayıklama sırasında **, hata ayıklama** Windows modüller ' i seçerek pencereyi açın  >    >   (veya **ctrl + alt + U** tuşlarına basın) veya   >  **Windows**  >  **çağrı yığınında** hata ayıklayın (**ctrl + alt + C**).
 
 1. Sembolleri yüklenmeyen bir modüle sağ tıklayın. **Modüller** penceresinde sembol yükleme durumu, **semboller durum** sütununda bulunur. **Çağrı yığını** penceresinde, durum **çerçeve durumu** sütununda, çerçeve ise gri renkte olur.
 
@@ -63,7 +64,7 @@ ms.locfileid: "102154996"
 
    - Hata ayıklayıcının semboller için aradığı konumları göstermek için **sembol yükleme bilgileri** ' ni seçin.
 
-   - **Semboller** sayfasını açmak Için **sembol ayarları** ' nı seçin. **Simgeler** sayfasında, **sembol dosyası (. pdb) konumları** altında, genel Microsoft sembol sunucularından simgelere erişmek için **Microsoft sembol sunucuları** ' nı seçin. Diğer sembol konumlarını eklemek ve yükleme sırasını değiştirmek için araç çubuğu düğmelerini seçin. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
+   - **semboller** sayfasını açmak için **sembol Ayarlar** seçin. **Simgeler** sayfasında, **sembol dosyası (. pdb) konumları** altında, genel Microsoft sembol sunucularından simgelere erişmek için **Microsoft sembol sunucuları** ' nı seçin. Diğer sembol konumlarını eklemek ve yükleme sırasını değiştirmek için araç çubuğu düğmelerini seçin. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
 ### <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)

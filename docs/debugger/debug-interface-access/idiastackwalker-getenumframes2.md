@@ -11,14 +11,15 @@ ms.assetid: 73196d3f-112c-4b3a-997b-7c6b815d4afc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 71af6f8c78f6f4ac0f6008db8a9ecd4ba72df07e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 06c5017323b1ad9d139d8a0b2fd4296a2def356cee983216006471c071956b50
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147347"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454857"
 ---
 # <a name="idiastackwalkergetenumframes2"></a>IDiaStackWalker::getEnumFrames2
 Belirli bir platform türü için yığın çerçeve numaralandırıcısı alır.

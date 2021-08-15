@@ -1,6 +1,6 @@
 ---
-description: Vstav3 ad alanının entryPoints öğesi, bir Office çözümüyle ilişkili tüm entryPoint öğelerini içerir.
-title: "&lt;entryPoints &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+description: vstav3 ad alanının entryPoints öğesi, bir çözümle ilişkili tüm entryPoint öğelerini Office içerir.
+title: '&lt;entryPoints &gt; öğesi (Office geliştirme Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 481c67302c84ce08f60c571eb17084b96c0322bd
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: f41608335ecefa59ae78f04339cbb1f47d5e6a0f996b3052be6162206cc333b2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223179"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424365"
 ---
-# <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints &gt; öğesi (Visual Studio 'Da Office geliştirme)
-  `entryPoints`Ad alanı öğesi, `vstav3` `entryPoint` bir Office çözümüyle ilişkili tüm öğeleri içerir.
+# <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints &gt; öğesi (Office geliştirme Visual Studio)
+  Ad `entryPoints` alanının `vstav3` öğesi, bir çözümle `entryPoint` ilişkili tüm öğeleri Office içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,23 +40,23 @@ ms.locfileid: "102223179"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `entryPoints`Öğesi gereklidir ve `vstav3` ad alanında bulunur. `entryPoints`Her bir Office çözümü için uygulama bildiriminde tanımlı bir öğe vardır. Örneğin, çok projeli bir dağıtımda üç Office çözümü dağıtırsanız, `entryPoints` uygulama bildiriminde üç öğe vardır.
+ öğesi `entryPoints` gereklidir ve ad alanı `vstav3` içindedir. Her bir uygulama `entryPoints` çözümü için uygulama bildiriminde tanımlanan Office vardır. Örneğin, çok projeli bir dağıtımda Office çözüm dağıtırsanız, uygulama bildiriminde `entryPoints` üç öğe vardır.
 
- `entryPoints`Öğesi aşağıdaki özniteliğe sahiptir.
+ öğesi `entryPoints` aşağıdaki özniteliğine sahip.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|kimlik|Çoklu proje dağıtımı için gereklidir. Office çözümünün adı. Kimlik, eşittir (=) sembolünü içeremez.|
+|kimlik|Çok projeli dağıtım için gereklidir. Office çözümü adı. Kimlik, eşittir (=) sembolünü içerebamaz.|
 
- `entryPoints` Aşağıdaki öğelere sahiptir.
+ `entryPoints` aşağıdaki öğelere sahiptir.
 
-### <a name="entrypoint"></a>Noktası
- Gereklidir. `entryPoint`Ad alanındaki öğesinin rolü, `vstav3` [Visual&#41;Studio 'da Office geliştirme &#40;&#60;EntryPoint&#62; öğesi ](../vsto/entrypoint-element-office-development-in-visual-studio.md)içinde tanımlanmıştır.
+### <a name="entrypoint"></a>entryPoint
+ Gereklidir. ad alanı içinde `entryPoint` öğenin rolü, Visual Studio&#41;`vstav3` geliştirme&#60;[entryPoint&#62; &#40;Office öğesinde tanımlanır. ](../vsto/entrypoint-element-office-development-in-visual-studio.md)
 
-## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
+## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirme örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, `entryPoints` kullanılarak dağıtılan bir belge düzeyi çözümü için uygulama bildiriminde bulunan öğeyi gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneği, kullanılarak `entryPoints` dağıtılan belge düzeyi bir çözüm için uygulama bildiriminde öğesini [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -96,10 +97,10 @@ ms.locfileid: "102223179"
 </vstav3:entryPoints>
 ```
 
-## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
+## <a name="vsto-add-in-example"></a>VSTO Eklenti örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, `entryPoints` kullanılarak dağıtılan uygulama düzeyi çözüm için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneği, kullanılarak `entryPoints` dağıtılan bir uygulama düzeyi çözümü için uygulama bildiriminde bir öğeyi [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -116,10 +117,10 @@ ms.locfileid: "102223179"
 </vstav3:entryPoints>
 ```
 
-## <a name="multi-project-deployment-example"></a>Çoklu proje dağıtım örneği
+## <a name="multi-project-deployment-example"></a>Çok projeli dağıtım örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, `entryPoints` Çoklu proje dağıtımı için bir uygulama bildiriminde öğesini gösterir. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneği, çok `entryPoints` projeli bir dağıtım için uygulama bildiriminde öğesini gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -174,6 +175,6 @@ ms.locfileid: "102223179"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
-- [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
+- [Uygulama çözümleri için Office bildirimleri](../vsto/application-manifests-for-office-solutions.md)
+- [Dağıtım çözümleri için Office bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
 - [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

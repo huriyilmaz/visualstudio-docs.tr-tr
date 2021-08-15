@@ -1,6 +1,6 @@
 ---
-title: Yürütme süresi (Iş parçacıkları görünümü) | Microsoft Docs
-description: Eşzamanlılık görselleştiricisi Iş parçacıkları görünümündeki yürütme süresini gözden geçirin. Yürütme süresi, bir iş parçacığının mantıksal bir çekirdek üzerinde etkin bir şekilde çalışıp çalışmadığını gösteren kesimlerle temsil edilir.
+title: Yürütme Süresi (İş Parçacıkları Görünümü) | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisinin İş Parçacıkları Görünümünde yürütme zamanlarını gözden geçirme. Yürütme süresi, bir iş parçacığının mantıksal çekirdek üzerinde etkin olarak ne zaman çalıştığını gösteren kesimler tarafından temsil edilen.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,23 +12,24 @@ ms.assetid: 80c100f8-2502-4613-bfef-4f4f2e09cc8d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c62c57e3037b38c2729917d2b882550b9c2d126
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 871f3ce7b2be50ddaff7c3723469ea34921855cfacb649416fe3bcb63d69e06e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861614"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121355288"
 ---
-# <a name="execution-time-threads-view"></a>Yürütme süresi (Iş parçacıkları görünümü)
-İş parçacığı görünümü zaman çizelgesi içindeki bu segmentler, iş parçacığının sistemdeki bir mantıksal çekirdek üzerinde etkin bir şekilde iş yaptığı durumlarda yürütme süresini temsil eder.
+# <a name="execution-time-threads-view"></a>Yürütme süresi (İş Parçacıkları Görünümü)
+İş Parçacıkları Görünümü zaman çizelgesinde yer alan bu segmentler, iş parçacığı sistemde bir mantıksal çekirdek üzerinde etkin bir şekilde iş yaparken yürütme zamanlarını temsil eder.
 
- İş parçacığı durumundaki değişiklikler çekirdek bağlam anahtarı olayları aracılığıyla algılanır. Windows için olay Izleme (ETW), her milisaniyelik örnek yığınları yakalar. Çok kısa bir yeşil kesimde, hiçbir örnek alınmadığından mümkündür. Bu nedenle, bazı kısa yürütme kesimleri hiçbir çağrı yığını göstermez.
+ İş parçacığı durumundaki değişiklikler çekirdek bağlam anahtarı olayları aracılığıyla algılanır. Windows için Olay İzleme (ETW), her milisaniyede örnek yığınları yakalar. Çok kısa bir yeşil segmentte örnek alınmaz. Bu nedenle, bazı kısa yürütme segmentleri çağrı yığını göstermeyebilirsiniz.
 
- Bir yürütme segmentine tıkladığınızda, eşzamanlılık görselleştiricisi tıklama konumuna en yakın örnek yığını görüntüler. Bu örnek yığının konumu, zaman çizelgesinin üstünde bir siyah ok veya şapka işareti ile gösterilir ve örnek yığın **geçerli** sekmede görüntülenir.
+ Bir yürütme segmentine tıklarken Eşzamanlılık Görselleştiricisi, tıklamanın bulunduğu konuma en yakın örnek yığını görüntüler. Bu örnek yığının konumu, zaman çizelgesinin üzerinde siyah bir ok veya giriş işaretiyle gösterilir ve örnek yığın Geçerli **sekmesinde** görünür.
 
- Geçerli görünümdeki tüm yürütme kesimleri için geleneksel bir örnekleme profilini görmek için, görünür zaman çizelgesi profilinde **yürütme** ' ye tıklayın.
+ Geçerli görünümde tüm yürütme segmentleri için geleneksel örnekleme profilini görmek için, Görünür **Zaman** Çizelgesi Profili'nde Yürütme'ye tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yürütme Profil Raporu](../profiling/execution-profile-report.md)

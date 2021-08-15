@@ -1,6 +1,6 @@
 ---
-title: ExtensionDataItem öğesi | Microsoft Docs
-description: SharePoint proje öğesi şemasındaki bir öğe olan ExtensionDataItem öğesi hakkında başvuru bilgilerini görüntüleyin.
+title: ExtensionDataItem Öğesi | Microsoft Docs
+description: Yeni proje öğesi şemasında bir öğe olan ExtensionDataItem öğesi SharePoint bilgilerini görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -12,17 +12,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: add1a119283635f9cfd9bebddfe18228f1976703
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4fb899400ebae03d92d473e94012341f89acff197d53f76b710052801f2432a4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876829"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352961"
 ---
 # <a name="extensiondataitem-element"></a>ExtensionDataItem öğesi
-  Anahtar/değer biçiminde SharePoint proje öğesiyle ilişkili özel bir veri öğesi. Anahtar ve değer dizeler olmalıdır.
+  Anahtar/değer biçiminde bir proje SharePoint ilişkili özel veri öğesi. Hem anahtar hem de değer dizeler olmalı.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,8 +39,8 @@ ms.locfileid: "99876829"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Key**|Gerekli **xs: String** özniteliği.<br /><br /> Veri öğesini depolamak ve almak için kullanılan anahtar.|
-|**Değer**|Gerekli **xs: String** özniteliği.<br /><br /> Veri öğesinin değeri.|
+|**Key**|Gerekli **xs: dize** özniteliği.<br /><br /> Veri öğesini depolamak ve almak için kullanılan anahtar.|
+|**Değer**|Gerekli **xs:string** özniteliği.<br /><br /> Veri öğesinin değeri.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -48,19 +49,19 @@ ms.locfileid: "99876829"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ExtensionData](../sharepoint/extensiondata-element.md)|SharePoint proje öğesiyle ilişkili özel veri öğelerinin koleksiyonunu temsil eder.|
+|[ExtensionData](../sharepoint/extensiondata-element.md)|Proje öğesiyle ilişkili özel veri öğeleri koleksiyonunu SharePoint temsil eder.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir nesnenin özelliğini kullanarak özel verileri bir SharePoint proje öğesiyle ilişkilendirdiğinizde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> , Visual Studio verileri proje öğesi için dosyadaki yeni bir **ExtensionDataItem** öğesine kaydeder `.spdata` . Daha fazla bilgi için bkz. [SharePoint proje sisteminin uzantılarında verileri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
+ Bir nesnenin özelliğini kullanarak SharePoint özel verileri bir SharePoint proje öğesiyle ilişkilendirmek, Visual Studio proje öğesi için dosyada yeni <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> bir **ExtensionDataItem** öğesine `.spdata` kaydeder. Daha fazla bilgi için [bkz. Verileri proje sisteminin SharePoint kaydetme.](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
 
 ## <a name="element-information"></a>Öğe bilgileri
 
 |Özellik|Değer|
 |-|-|
-|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
-|**Şema adı**|SharePoint proje öğesi şeması|
-|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Ad Alanı**|http: \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Şema adı**|SharePoint Project Öğesi Şeması|
+|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
 |**Boş olabilir**|Hayır|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
+- [SharePoint öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

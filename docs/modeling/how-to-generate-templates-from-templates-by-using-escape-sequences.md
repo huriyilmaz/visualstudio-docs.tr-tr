@@ -8,15 +8,16 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 9347e32a72e7f590f8f513c4b47a4b7aae699f27
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: c0dbad0b68e0245073124254940f17e1cdb5147b0550846871fe40db546eb091
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387183"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121288639"
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>Nasıl yapılır: Çıkış Sıraları Kullanarak Şablonlardan Şablon Oluşturma
 Oluşturulan metin çıkışı olarak başka bir metin şablonu oluşturan bir metin şablonu oluşturabilirsiniz. Bunu yapmak için kaçış dizilerini kullanarak metin şablonu etiketlerini çizin. Kaçış dizileri kullanmayacaksanız, oluşturulan metin şablonunuz önceden tanımlanmış bir anlama sahip olur. Metin şablonlarında kaçış dizilerini kullanma hakkında daha fazla bilgi için [bkz. Metin Şablonlarında Kaçış Dizilerini Kullanma.](../modeling/using-escape-sequences-in-text-templates.md)
