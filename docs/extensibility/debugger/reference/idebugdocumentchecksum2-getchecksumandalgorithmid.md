@@ -1,6 +1,6 @@
 ---
-description: Belge sağlama toplamını ve algoritma tanımlayıcısını, en fazla kullanılacak bayt sayısını alır.
-title: 'IDebugDocumentChecksum2:: GetChecksumAndAlgorithmId | Microsoft Docs'
+description: En fazla bayt sayısına sahip olan belge sağlama toplam ve algoritma tanımlayıcısını alın.
+title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 25efef99-0ef3-4332-a752-607605fc6e67
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: af1d3718fd4976ea2c26d284f9257b52cc233e67
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 409a99d8e2fbc8e62a272b5406785b7b1ba4ed87b4538a2888bcb26460ebbb71
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066782"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433989"
 ---
 # <a name="idebugdocumentchecksum2getchecksumandalgorithmid"></a>IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
-Belge sağlama toplamını ve algoritma tanımlayıcısını, en fazla kullanılacak bayt sayısını alır.
+En fazla bayt sayısına sahip olan belge sağlama toplam ve algoritma tanımlayıcısını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +48,22 @@ public int GetChecksumAndAlgorithmId(
 
 ## <a name="parameters"></a>Parametreler
 `pRetVal`\
-dışı Sağlama algoritması için benzersiz tanımlayıcı.
+[out] Sağlama grubu algoritması için benzersiz tanımlayıcı.
 
 `cMaxBytes`\
-'ndaki Sağlama toplamı için kullanılacak en fazla bayt sayısı.
+[in] Sağlama toplam için kullanılacak maksimum bayt sayısı.
 
 `pChecksum`\
-dışı Sağlama toplamı değeri.
+[out] Sağlama değerinin değeri.
 
 `pcNumBytes`\
-dışı Sağlama toplamı için kullanılan gerçek bayt sayısı.
+[out] Sağlama toplam için kullanılan gerçek bayt sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bir belge için sağlama toplamı ve algoritmayı almak üzere bu yöntemi kullanır.
+Aşağıdaki örnek, bir belgenin sağlamasını ve algoritmasını almak için bu yöntemi kullanır.
 
 ```cpp
 HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorithm, BYTE **ppChecksum, ULONG *pcNumBytes)

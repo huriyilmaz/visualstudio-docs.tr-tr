@@ -1,7 +1,7 @@
 ---
 title: Doğrudan Seçim aracı değiştirici tuşları
 titleSuffix: Blend for Visual Studio
-description: Mevcut bir yolun şeklini değiştirmek için kullanabileceğiniz Visual Studio için Blend Doğrudan Seçim aracında klavye kısayolları hakkında bilgi edinin.
+description: mevcut bir yolun şeklini değiştirmek için kullanabileceğiniz Visual Studio için Blend Doğrudan Seçim aracında klavye kısayolları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,14 +9,15 @@ ms.assetid: 21f9b951-dc2b-4d09-bd70-75caed8fb964
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 08d26dc394e859862b85f5009a9427f34576fd5e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dfacfe090293592531f4007759750c42a3e79cd730a7ada445b0422a4342e4a2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920239"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121243230"
 ---
 # <a name="direct-selection-tool-modifier-keys-in-blend-for-visual-studio"></a>Visual Studio için Blend Doğrudan Seçim aracı değiştirici tuşları
 

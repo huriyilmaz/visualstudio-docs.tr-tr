@@ -7,17 +7,18 @@ ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-javascript
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 32ba32e58e14a26f4bd96052e844801c8fdab00c
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: bac3f9a3ec1a6f6a27127e6dce5b69d6401a38670481b14a9669f329f23a408d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115094070"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121444193"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-react-in-visual-studio"></a>öğretici: Visual Studio React ile ASP.NET Core uygulama oluşturma
 
@@ -34,6 +35,8 @@ Visual Studio 2022 Preview 2 ' den başlayarak, bu makalede açıklanan yöntemi
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
+- **ASP.NET ve web geliştirme** iş yükü yüklü Visual Studio 2022 Preview 2 veya üzeri. ücretsiz olarak yüklemek için [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
+  iş yükünü yüklemeniz gerekiyorsa ve Visual Studio zaten varsa, **araçlar**  >  **ve özellikler al.**.. ' a giderek Visual Studio Yükleyicisi açan araçlar ' a gidin. **ASP.NET ve web geliştirme** iş yükünü seçin ve ardından **değiştir**' i seçin.
 - NPM ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
 - NPX ( [https://www.npmjs.com/package/npx](https://www.npmjs.com/package/npx) )
 

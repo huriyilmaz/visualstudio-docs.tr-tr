@@ -1,6 +1,6 @@
 ---
 title: Bir araç çubuğuna menü denetleyicisi ekleme | Microsoft Docs
-description: Bir menü denetleyicisi oluşturmayı ve Visual Studio 'da bir araç penceresi araç çubuğuna eklemeyi öğrenin, ardından menü denetleyicisi komutlarını uygulayın ve test edin.
+description: bir menü denetleyicisi oluşturmayı ve Visual Studio bir araç penceresi araç çubuğuna eklemeyi öğrenin, ardından menü denetleyicisi komutlarını uygulayıp test edin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,14 +12,15 @@ ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 304f4ea11abc332c01603f96b6b67c0bd22e38c6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3028024f6c13c8d722a565a73d64d6ec8b3de16fae2dde227efc0114f403fedd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060074"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239431"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>Araç çubuğuna menü denetleyicisi ekleme
 Bu izlenecek yol, araç [çubuğunda araç çubuğu ekleme](../extensibility/adding-a-toolbar-to-a-tool-window.md) izlenecek yol ve araç penceresi araç çubuğuna nasıl menü denetleyicisi ekleneceğini gösterir. Burada gösterilen adımlar [araç çubuğu ekle](../extensibility/adding-a-toolbar.md) gözden geçirmede oluşturulan araç çubuğuna da uygulanabilir.
@@ -29,7 +30,7 @@ Bir menü denetleyicisi bölünmüş bir denetimdir. Menü denetleyicisinin sol 
 Menü denetleyicileri menülerde görünebilir, ancak en sık araç çubuklarında kullanılır.
 
 ## <a name="prerequisites"></a>Önkoşullar
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-menu-controller"></a>Menü denetleyicisi oluşturma
 
@@ -102,7 +103,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 6. Bu noktada, menü denetleyicisine bakabilirsiniz. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örneği görmeniz gerekir.
 
-   1. **Görünüm/diğer pencereler** menüsünde **Test ToolWindow** öğesini açın.
+   1. **görünüm/diğer Windows** menüsünde **Test ToolWindow** öğesini açın.
 
    2. Menü denetleyicisi araç penceresindeki araç çubuğunda görüntülenir.
 
@@ -214,7 +215,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örneği görmeniz gerekir.
 
-2. **Görünüm/diğer pencereler** menüsünde **Test ToolWindow** açın.
+2. **görünüm/diğer Windows** menüsünde **Test ToolWindow** açın.
 
     Menü denetleyicisi araç penceresinde araç çubuğunda görünür ve **mc öğesi 1**' i görüntüler.
 

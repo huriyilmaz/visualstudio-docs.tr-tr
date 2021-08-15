@@ -1,30 +1,31 @@
 ---
-title: Mimari kod araçlarını yükleme
-description: Kod Eşlemesi ve Canlı Bağımlılık Doğrulama'sını yükleyin.
+title: Mimari kod araçları 'nı yükler
+description: Kod haritasını ve canlı bağımlılık doğrulamasını yükler.
 ms.date: 05/16/2021
 ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
-ms.openlocfilehash: 44aed0bd5235d3110fa6ba753e5316960722e5b8
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 16bd5c9bf77b3ec6aa91912e416434d730f5fd6cd3dc2fa2a3f0dd79a31a3a91
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390450"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121271296"
 ---
-# <a name="install-code-map-and-live-dependency-validation"></a>Kod Eşlemesi ve Canlı Bağımlılık Doğrulamasını Yükleme
+# <a name="install-code-map-and-live-dependency-validation"></a>Kod haritasını ve canlı bağımlılık doğrulamasını yükler
 
-Kod Eşlemesi'Visual Studio için önce Kod Eşlemesi **ve Canlı** Bağımlılık Doğrulama **bileşenlerini** yükleyin:
+Visual Studio bir kod haritası oluşturmak için önce **kod haritasını** ve **canlı bağımlılık doğrulama** bileşenlerini yüklemeniz gerekir:
 
-1. **Visual Studio Yükleyicisi.** Windows gezgininden veya Başlat menüsü Araçları ve Özellikleri **Visual Studio'ı**  >  **seçerek açabilirsiniz.**
+1. **Visual Studio Yükleyicisi** açın. **araç**  >  **ve özellikleri al**' ı seçerek Windows Başlat menüsü veya Visual Studio içinden açabilirsiniz.
 
-1. Bağımsız bileşenler **sekmesini** seçin.
+1. **Ayrı bileşenler** sekmesini seçin.
 
-1. Ekranı aşağı kaydırarak **Kod araçları bölümüne** gidin ve Kod **Eşlemesi ve Canlı** Bağımlılık **Doğrulama'ya tıklayın.**
+1. **Kod araçları** bölümüne gidin ve **kod Haritası** ve **canlı bağımlılık doğrulaması**' nı seçin.
 
-   ![Kod Eşlemesi ve Canlı Bağımlılık Doğrulama bileşenleri Visual Studio Yükleyicisi](media/modeling-components.png)
+   ![Visual Studio Yükleyicisi 'de kod haritası ve canlı bağımlılık doğrulama bileşenleri](media/modeling-components.png)
 
-1. **Değiştir'i seçin.**
+1. **Değiştir**'i seçin.
 
-   Kod **Eşlemesi** ve **Canlı Bağımlılık Doğrulama bileşenleri** yüklemeye başlar. Bunu kapatmanız isten Visual Studio.
+   **Kod Haritası** ve **canlı bağımlılık doğrulama** bileşenleri yüklemeye başlar. Visual Studio kapatmanız istenebilir.

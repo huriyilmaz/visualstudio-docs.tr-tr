@@ -9,17 +9,18 @@ ms.assetid: 8e4317b8-8255-486c-a896-a68ed94f8aa1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 399b0b603bc104d9d0869f7a26e0b5f60565c93a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 29330e94d57d81f9ddc2903b390006a022780e907441887612ee8629c1691784
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088347"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262210"
 ---
 # <a name="idebugcodecontext3getmodule"></a>IDebugCodeContext3::GetModule
 Hata ayıklama modülünün arabirimine bir başvuru alır.

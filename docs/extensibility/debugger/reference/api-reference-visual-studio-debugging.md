@@ -1,6 +1,6 @@
 ---
 description: Başvuru bölümü, API 'ye kavramsal genel bakış, tüm API öğelerinin sözdizimini ve kullanımını gösteren bir kılavuz ve kod örnekleri örneği içerir.
-title: API başvurusu (Visual Studio hata ayıklama) | Microsoft Docs
+title: apı başvurusu (Visual Studio hata ayıklama) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,14 +9,15 @@ ms.assetid: e4e429da-3667-41f7-9158-a8207d13e91a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8a43e4bae5afce98e07b196f5a01c33d44c72ca
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 244af855dd63942fd2df586a128a1b53c71649e1a518ac516e43dc2afe9cddd5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085552"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239366"
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API Başvurusu (Visual Studio Hata Ayıklama)
 Başvuru bölümü, API 'ye kavramsal genel bakış, tüm API öğelerinin sözdizimini ve kullanımını gösteren bir kılavuz ve kod örnekleri örneği içerir. Tüm başvurular kategoriye göre alfabetik olarak listelenir.

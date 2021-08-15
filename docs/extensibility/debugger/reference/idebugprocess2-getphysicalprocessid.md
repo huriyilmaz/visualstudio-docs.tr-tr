@@ -11,17 +11,18 @@ ms.assetid: 77da6e10-75af-4308-97dd-c44416ca52d7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4ec1f2340b744efe5620bd2876c5dbe8539e786f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ba1dc2044a255dda19d169be0569a9e417f60d15f2159d23b251b3b0cc544982
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081821"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121339014"
 ---
 # <a name="idebugprocess2getphysicalprocessid"></a>IDebugProcess2::GetPhysicalProcessId
 Sistem işlem tanımlayıcısını alır.

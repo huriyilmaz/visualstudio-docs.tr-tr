@@ -1,6 +1,6 @@
 ---
 title: XSLT performansı
-description: XSLT kodunuzun performansını en iyileştirmenize yardımcı olmak üzere ayrıntılı XSLT performans raporları oluşturan Visual Studio 'daki XSLT Profiler hakkında bilgi edinin.
+description: xslt kodunuzun performansını en üst düzeye getirmenize yardımcı olmak üzere ayrıntılı xslt performans raporları oluşturan Visual Studio xslt Profiler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/11/2020
 ms.topic: conceptual
@@ -8,26 +8,27 @@ ms.assetid: 87387c9a-2e89-4801-ad51-83740cd6ea25
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 9dc37ceddd87fa0b6c8029c0acb8ea195f9ce10b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 18c491f6ee0269e9bee7c111b4e09f1afd74f1fad8343e5667a3299e4b2a511f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900811"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121224938"
 ---
 # <a name="the-xslt-profiler"></a>XSLT Profiler
 
 XSLT Profiler, XSLT kodundaki performansla ilgili sorunları ölçmenize, değerlendirmenize ve hedefleyecek ayrıntılı XSLT performans raporları oluşturur. XSLT Profiler, XSL ve XSLT stil sayfası iyileştirmeleri için yararlı ipuçları içerir. En yüksek performansı talep eden XSLT uygulamaları için bu araç gerekli olabilir.
 
-XSLT Profiler, Visual Studio 'nun bir parçasıdır ve **XML** menüsünde kullanılabilir.
+XSLT Profiler, Visual Studio bir parçasıdır ve **XML** menüsünde kullanılabilir.
 
-![XSLT Profiler](../xml-tools/media/profile-xslt-menu.png "Visual Studio 2017 ' de XML menü öğelerinin ekran görüntüsü")
+![XSLT Profiler](../xml-tools/media/profile-xslt-menu.png "Visual Studio 2017 ' deki XML menü öğelerinin ekran görüntüsü")
 
 > [!NOTE]
-> XSLT Profiler yalnızca Visual Studio 2017 Enterprise sürümünde kullanılabilir.
+> XSLT Profiler yalnızca Visual Studio 2017 'ın Enterprise sürümünde kullanılabilir.
 
 ## <a name="create-a-performance-report"></a>Performans raporu oluşturma
 

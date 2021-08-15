@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: İş Akışı Tasarımcısında Aramayı kullanma'
-description: Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için, öğeleri anahtar sözcüğe göre bulmak için İş Akışı Tasarımcısı içinde arama yapmayı öğrenin.
+description: Daha büyük, daha karmaşık iş akışları İş Akışı Tasarımcısı öğeleri anahtar sözcükle bulmak için anahtar sözcük içinde arama yapmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,24 +8,25 @@ ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fb30d4846c24638f87989d2a7a716df06b0523b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 32cb7752ec79545055d6305ff4016613251730a21e255da6633cb1cc8ad4b882
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894120"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121314309"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında Aramayı kullanma
 
-Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için, öğeleri anahtar sözcüğe göre bulmak için İş Akışı Tasarımcısı içinde arama yapabilirsiniz. Tasarımcının değiştirme 'yi desteklemediğine unutmayın.
+Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için anahtar sözcüğüne göre öğeleri bulmak İş Akışı Tasarımcısı içinde arama edebilirsiniz. Tasarımcının Değiştir'i desteklemez.
 
 ## <a name="quick-find"></a>Hızlı Bul
 
-Hızlı bul, tasarımcıda aşağıdakileri bulur:
+Hızlı bul, tasarımcıda aşağıdakini bulur:
 
-- <xref:System.Activities.Activity>Nesnelerin, <xref:System.Activities.Statements.FlowNode> nesnelerin, <xref:System.Activities.Statements.State> nesnelerin, geçişlerin ve diğer özel akış denetimi öğelerinin özellikleri.
+- Nesnelerin, <xref:System.Activities.Activity> nesnelerin, <xref:System.Activities.Statements.FlowNode> <xref:System.Activities.Statements.State> nesnelerin, geçişlerin ve diğer özel akış denetimi öğelerinin özellikleri.
 
 - Değişkenler
 
@@ -33,24 +34,24 @@ Hızlı bul, tasarımcıda aşağıdakileri bulur:
 
 - İfadeler
 
-### <a name="use-quick-find"></a>Hızlı bul kullanma
+### <a name="use-quick-find"></a>Hızlı Bul'ı kullanma
 
-1. İş akışı Tasarımcısı açıkken, **CTRL + F** tuşlarına basın veya **Düzenle**  >  **Bul ve Değiştir '** i seçerek  >  **hızlı bul**' u seçin.
+1. İş akışı tasarımcısı açıkken **Ctrl+F tuşlarına basın** veya Bul'ı **Düzenle** ve  >  **Hızlı Bul'ı**  >  **Değiştir'i seçin.**
 
-2. **Aranan metin kutusuna** arama terimini girin ve **Sonrakini Bul**' a tıklayın.
+2. Arama terimini Bul metin **kutusuna girin** ve Sonrakini Bul'a **tıklayın.**
 
-3. Arama terimi geçerli iş akışında bulunur. Aşağıdaki görüntüde, tasarımcıda bulunan bir etkinlik görünen adı gösterilmektedir:
+3. Arama terimi geçerli iş akışında bulunur. Aşağıdaki görüntüde tasarımcıda bulunan etkinlik görünen adı gösterilir:
 
-   ![İş Akışı Tasarımcısı arama sonucu](../workflow-designer/media/designersearch.png)
+   ![Arama sonucunda İş Akışı Tasarımcısı](../workflow-designer/media/designersearch.png)
 
-## <a name="find-in-files"></a>Dosyalarda bul
+## <a name="find-in-files"></a>Dosyalarda bulma
 
-Dosyalarda bul, XAML dosyaları da dahil olmak üzere iş akışı dosyalarındaki dizeleri bulur.
+Dosyalarda Bul, XAML dosyaları dahil olmak üzere iş akışı dosyalarında dizeleri bulur.
 
-### <a name="use-find-in-files"></a>Dosyalarda bul kullanma
+### <a name="use-find-in-files"></a>Dosyalarda Bul'ı kullanma
 
-1. Visual Studio 'da **CTRL** + **SHIFT** + **F** tuşlarına basın veya **Düzenle** bul ' u  >  **ve**  >  **dosyalardaki bul** Değiştir ' i seçin.
+1. Bu Visual Studio **Ctrl Shift** F tuşlarına basın veya Dosyalarda Bul ve +  +    >  **Bul'ı**  >  **Değiştir'i seçin.**
 
-2. **Aranan metin kutusuna** arama öğesini girin ve **Tümünü Bul**' a tıklayın.
+2. Arama öğesini Bul metin kutusuna **girin ve** Hepsini Bul'a **tıklayın.**
 
-3. Bulma sonucu **bul sonucu** görünümünde gösterilir. Bir sonuç öğesine çift tıklamak, iş akışı tasarımcısında eşleşmeyi içeren etkinliğe gider.
+3. Sonuç Bul görünümünde **bulma sonucu** gösterilir. Bir sonuç öğesine çift tıklarsanız iş akışı tasarımcısında eşleşmeyi içeren etkinlikte gezinebilirsiniz.

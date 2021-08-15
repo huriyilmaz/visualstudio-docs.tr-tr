@@ -1,5 +1,5 @@
 ---
-description: Bu kayıtlı arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) IDebugProgramPublisher2 arabirimi aracılığıyla yayımlanmış programlar hakkında bilgi almasına izin verir.
+description: Bu kayıtlı arabirim, oturum hata ayıklama yöneticisinin (SDM) IDebugProgramPublisher2 arabirimi aracılığıyla yayımlanan programlar hakkında bilgi edinmasına olanak sağlar.
 title: IDebugProgramProvider2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: a9ec7b3e-a59c-4069-b2ee-6f45916eeb78
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bead60e23c708d8a23fcd382b4db0f3f9f7e4c1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c487ef6550f5d790a3b4d81852adf22976f77827e092c2b62ed9262f3d2e329c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065248"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307043"
 ---
 # <a name="idebugprogramprovider2"></a>IDebugProgramProvider2
-Bu kayıtlı arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md) arabirimi aracılığıyla "yayınlanan" programlar hakkında bilgi almasına izin verir.
+Bu kayıtlı arabirim, oturum hata ayıklama yöneticisinin (SDM) [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md) arabirimi aracılığıyla "yayımlanmış" programlar hakkında bilgi edinmasına olanak sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,30 +30,30 @@ Bu kayıtlı arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) [IDebugProgr
 IDebugProgramProvider2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
-Hata ayıklama altyapısı (DE), bu arabirimi hata ayıklanan programlar hakkında bilgi sağlamak için uygular. Bu arabirim, `metricProgramProvider` [hata ayıklama Için SDK yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)bölümünde açıklandığı gibi ölçüm KULLANıLARAK kayıt defterinin de kayıt defterine kaydedilir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+Hata ayıklama altyapısı (DE), hata ayıklama yapılan programlar hakkında bilgi sağlamak için bu arabirimi uygulamaya almaktadır. Bu arabirim, Hata Ayıklama için SDK Yardımcıları bölümünde açıklandığı gibi ölçümü kullanılarak kayıt defterinin DE `metricProgramProvider` [bölümüne kaydedilir.](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-`CoCreateInstance` `CLSID` Kayıt defterinden alınan program sağlayıcısı ile com işlevini çağırın. Örneğe bakın.
+KAYıT defterinden alınan program sağlayıcısının ile COM `CoCreateInstance` `CLSID` işlevini çağırma. Bkz. Örnek.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)|Çalıştıran programlar hakkında çeşitli yollarla filtrelenmiş bilgiler edinir.|
-|[GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)|Belirli bir işlem KIMLIĞI verilen bir program düğümünü alır.|
-|[WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)|Belirli işlem türleriyle ilişkili sağlayıcı olaylarını izlemek için bir geri çağırma oluşturur.|
-|[SetLocale](../../../extensibility/debugger/reference/idebugprogramprovider2-setlocale.md)|DE için gereken dile özgü kaynaklar için bir yerel ayar oluşturur.|
+|[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)|Çalışan programlar hakkında çeşitli yollarla filtrelenmiş bilgiler elde edilir.|
+|[GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)|Belirli bir işlem kimliği verilen bir program düğümünü alır.|
+|[WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)|Belirli işlem türleriyle ilişkili sağlayıcı olaylarını izlemek için bir geri arama sağlar.|
+|[SetLocale](../../../extensibility/debugger/reference/idebugprogramprovider2-setlocale.md)|DE tarafından gereken dile özgü kaynaklar için yerel bir yerel seçim sağlar.|
 
 ## <a name="remarks"></a>Açıklamalar
-Normalde bir işlem, bu işlemde çalışan programlar hakkında bilgi edinmek için bu arabirimi kullanır.
+Normalde bir işlem, bu işlemde çalışan programları bulmak için bu arabirimi kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>Örnek
 

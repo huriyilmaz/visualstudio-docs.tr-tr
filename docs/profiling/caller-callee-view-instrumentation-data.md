@@ -10,15 +10,16 @@ ms.assetid: 0908d354-aa5c-4518-8631-e25b8e7649e5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 06de8e10c57bdf6278310467d3cf0505b9c8ce4f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9abef15506a3d44dad2ff44b4ac6f425dc02f6fd35c2babe4b27ff964b783733
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939495"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427190"
 ---
 # <a name="callercallee-view---instrumentation-data"></a>Arayan/çağrılan görünümü-izleme verileri
 Arayan/çağrılan görünümü seçili bir işlevle ilgili profil oluşturma bilgilerini ve çağrı ağacındaki üst ve alt işlevlerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.
@@ -77,23 +78,23 @@ Arayan/çağrılan görünümü seçili bir işlevle ilgili profil oluşturma bi
 |------------|-----------------|
 |**Uygulama kapsamlı süresi**|-Geçerli işlev için, işlevinde harcanan zaman ve alt işlevleri. Değer, işletim sistemine yapılan çağrılarında, bağlam anahtarları ve giriş/çıkış işlemleri gibi harcanan süreyi dışlar.<br />-Çağıran işlevi için, bu çağıran işlevden çağrılar tarafından oluşturulan geçerli işlevin uygulama kapsamlı süresi miktarı.<br />-Aranan bir işlev için, bu işlevin geçerli işlevden çağrılar tarafından oluşturulan örneklerinde harcanan zaman. Değer, çağrılan işlevin alt işlevlerinde harcanan zamanı içerir, ancak bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içermez.|
 |**Uygulama kapsamlı süresi%**|Bu bağlamda bu işlevin toplam uygulama kapsamlı süresi içinde harcanan, profil oluşturma çalıştırmasının toplam geçen iç süresinin yüzdesi.|
-|**Ortalama uygulama kapsamlı süresi**|Bu bağlamda bu işleve yapılan çağrının ortalama uygulama kapsamlı süresi.|
-|**En fazla uygulama kapsamlı süresi**|Bu bağlamda bu işleve yapılan çağrının en büyük uygulama kapsamlı süresi.|
-|**En az uygulama kapsamlı süre**|Bu bağlamda bu işleve yapılan çağrının en düşük uygulama kapsamlı süresi.|
+|**Ortalama uygulama kapsamlı süresi**|Bu bağlamda bu işleve yapılan çağrının ortalama uygulama dahil süresi.|
+|**En Fazla Uygulama Dahil Süresi**|Bu bağlamda bu işleve yapılan bir çağrının en uzun uygulama dahil süresi.|
+|**En Az Uygulama Dahil Süresi**|Bu bağlamda bu işleve yapılan bir çağrının en düşük uygulama dahil süresi.|
 
-## <a name="application-exclusive-values"></a>Uygulamanın dışlamalı değerleri
- Uygulamanın dışlamalı değeri, işlevde harcanan süreyi belirtir. Bu, alt işlevlerde harcanan süreyi dışlar ve ayrıca, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine çağrıları dışlar.
+## <a name="application-exclusive-values"></a>Uygulamaya özel değerler
+ Uygulamaya özel değerler, işlevde harcanan zamanı gösterir. Bu, alt işlevlerde harcanan zamanı dışlar ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları da dışlar.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Dışlamalı uygulama süresi**|-Geçerli işlev için, işlevin doğrudan yürütülmesi için harcanan zaman. Değer, alt işlevlerde harcanan zamanı içermez ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine çağrıları dahil eder.<br />-Bir çağıran işlevi için, bu çağıran işlevden çağrılar tarafından oluşturulan geçerli işlevin uygulama dışlamalı zaman miktarı.<br />-Aranan bir işlev için, bu işlevin geçerli işlevden çağrılar tarafından oluşturulan örneklerinde harcanan zaman. Değer, çağrılan işlevin alt işlevlerinde harcanan zamanı içermez ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine çağrı dahil eder.|
-|**Uygulama dışlamalı süresi%**|Bu bağlamda bu işlevin toplam uygulama dışlamalı saatinde harcanan, profil oluşturma çalıştırmasının toplam geçen dışlamalı sürenin yüzdesi.|
-|**Ortalama uygulama dışlamalı süresi**|Bu bağlamda bu işleve yapılan çağrının ortalama uygulama dışlamalı süresi.|
-|**Maksimum uygulama dışlamalı süresi**|Bu bağlamda bu işleve yapılan çağrının en büyük uygulama dışlamalı süresi.|
-|**En az uygulama dışlamalı süresi**|Bu bağlamda bu işleve yapılan çağrının en düşük uygulama dışlamalı süresi.|
+|**Uygulamaya Özel Zaman**|- Geçerli işlev için, işlevin doğrudan yürütülmesinde harcanan süre. Değer, alt işlevlerde harcanan zamanı veya bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları içermez.<br />- Bir çağıranın işlevi için, bu çağıranın işlevinden yapılan çağrılar tarafından oluşturulan geçerli işlevin uygulamanın özel süresi.<br />- Bir çağrılı işlev için, geçerli işlevden yapılan çağrılar tarafından oluşturulan bu işlevin örneklerde harcanan süre. Değer, çağrıyı çağıran işlevinin alt işlevlerine harcanan zamanı veya bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları içermez.|
+|**Uygulamaya Özel Saat %**|Bu bağlamda, bu işlevin toplam uygulama özel süresinde harcanan profil oluşturma çalıştırması için geçen toplam özel sürenin yüzdesi.|
+|**Ortalama Uygulama Özel Süresi**|Bu bağlamda bu işleve yapılan bir çağrının ortalama uygulama özel süresi.|
+|**En Fazla Uygulama Özel Süresi**|Bu bağlamda bu işleve yapılan bir çağrının en uzun uygulama özel süresi.|
+|**En Az Uygulama Için Özel Süre**|Bu bağlamda bu işleve yapılan bir çağrının en düşük uygulama özel süresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
-- [Çağıran/çağrılan görünümü-örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)
-- [Arayan/Aranan görünümü-.NET Bellek Örnekleme verileri](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)
-- [Arayan/Aranan görünümü-.NET bellek izleme verileri](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
+- [Nasıl ekleyebilirsiniz: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Arayan/Çağrılı görünümü - örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)
+- [Arayan/Çağrılı görünümü - .NET bellek örnekleme verileri](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)
+- [Arayan/Çağrılı görünümü - .NET bellek ölçüm verileri](../profiling/caller-callee-view-net-memory-instrumentation-data.md)

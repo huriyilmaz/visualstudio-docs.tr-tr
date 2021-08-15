@@ -1,6 +1,6 @@
 ---
-description: Web uygulamasına veya XML Web hizmetine adımlamak, IIS Kilitleme Aracı çalıştırıldığı ve URLScan yüklenmiş ve etkinleştirilmiş olduğundan başarısız oldu.
-title: Web sunucusu kilitlenmiş ve hata ayıklama fiilini engelliyor | Microsoft Docs
+description: IIS kilitleme aracı çalıştırıldı ve URLScan yükleyip etkinleştirildiğinden bir Web uygulamasına veya XML Web hizmetine adımlama başarısız oldu.
+title: Web Sunucusu Kilitlendi ve DEBUG FiiliNi Engelliyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -15,39 +15,40 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: def2ecc4e0ae5285976f8d6cd8b98a2446a8881c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f450eba39da9ff864003042027bf240e3d05d6f96c8377fc4e691138b9deb4c4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146541"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419968"
 ---
 # <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>Hata: Web Sunucusu Kilitli ve DEBUG Fiilini Engelliyor
-Web uygulamasına veya XML Web hizmetine adımlamak, IIS Kilitleme Aracı çalıştırıldığı ve URLScan yüklenmiş ve etkinleştirilmiş olduğundan başarısız oldu. Bu koşul, IIS 'nin hata ayıklama fiilini almasını engeller.
+IIS kilitleme aracı çalıştırıldı ve URLScan yükleyip etkinleştirildiğinden bir Web uygulamasına veya XML Web hizmetine adımlama başarısız oldu. Bu koşul, IIS'nin DEBUG fiilini almalarını engeller.
 
- URLScan, IIS Web sitesi yöneticilerine gereksiz özellikleri kapatma ve sunucunun işleyeceğini HTTP isteklerinin türünü kısıtlama yeteneği sağlamak için IIS kilitleme aracı ile birlikte çalışan bir güvenlik aracıdır. URLScan güvenlik aracı, belirli HTTP isteklerini engelleyerek, zararlı olabilecek isteklerin sunucuya ulaşmasını ve hasar vermesine neden olur.
+ URLScan, IIS Web sitesi yöneticilerine gereksiz özellikleri kapatma ve sunucunun işleyiştirecek HTTP isteklerinin türünü kısıtlama yeteneği vermek için IIS Kilitleme Aracı ile birlikte çalışan bir güvenlik aracıdır. URLScan güvenlik aracı, belirli HTTP isteklerini engelleyerek zararlı olabilecek isteklerin sunucuya ulaşmasını ve zarara neden olma ihtimalini önler.
 
- Uygulamanız Windows Server 2003 üzerinde IIS 6,0 üzerinde çalışıyorsa, IIS 6,0 aynı işlevselliği sağladığından IIS Kilitleme Aracı 'nı çalıştırmanız gerekir.
+ Uygulamanız Windows Server 2003'te IIS 6.0 üzerinde çalışıyorsa, IIS 6.0 aynı işlevselliği sağladığı için IIS Kilitleme aracını çalıştırmanız gerekir.
 
 ### <a name="to-enable-debugging-on-a-web-server-with-urlscan-installed"></a>URLScan yüklü bir Web sunucusunda hata ayıklamayı etkinleştirmek için
 
-1. Urlscan.ini dosyasını bulun. Normalde, bunu şuna benzer bir dizinde bulacaksınız:
+1. Urlscan.ini bulun. Normalde, bunu şu şekilde görünen bir dizinde bulabilirsiniz:
 
      C:\WINNT\System32\Inetsrv\urlscan
 
-2. Dosyanın bir kopyasını oluşturun ve bunu **URLScan. old** olarak adlandırın.
+2. Dosyanın bir kopyasını oluşturun ve **Urlscan.old olarak ad girin.**
 
-3. Urlscan.ini dosyanın özgün kopyasını Not defteri veya istediğiniz metin düzenleyicisini kullanarak açın.
+3. Dosyanın özgün kopyasını Urlscan.ini veya Not Defteri düzenleyiciyi kullanarak açın.
 
-4. Urlscan.ini ' de [AllowVerbs] bölümünü bulun. [AllowVerbs] bölümüne hata ayıklama ekleyin. [AllowVerbs] bölümünde EBUG;D görürseniz, fiilin açıklama eklemek için noktalı virgülü kaldırın.
+4. Bu Urlscan.ini [AllowVerbs] bölümünü bulun. [AllowVerbs] bölümüne DEBUG ekleyin. [AllowVerbs] bölümünde ;D EBUG ifadesini görüyorsanız, fiilin yorumlarını kaldırmak için noktalı virgülü kaldırın.
 
-5. [DenyVerbs] bölümünü bulun. [DenyVerbs] bölümünde hata ayıklama görüntülenirse, kaldırın.
+5. [DenyVerbs] bölümünü bulun. [DenyVerbs] bölümünde DEBUG görünüyorsa kaldırın.
 
 6. Dosyayı kaydedin.
 
-7. Sunucuyu yeniden başlatın veya IIS 'yi yeniden başlatın.
+7. Sunucuyu yeniden başlatın veya IIS'yi yeniden başlatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

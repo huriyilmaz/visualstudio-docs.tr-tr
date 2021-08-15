@@ -11,17 +11,18 @@ ms.assetid: 2d4b2890-4c9d-47e1-83c0-df9c6436427f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3b3e061fa0a9d6eb508e3085832007712cb6e434
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ed9e2e393a1cf1a35290529244ce9e1b8c96dd10410f18f41e7285fddd16c358
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096518"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239301"
 ---
 # <a name="code_path"></a>CODE_PATH
 Bir yöntem veya işlev çağrısını açıklar.

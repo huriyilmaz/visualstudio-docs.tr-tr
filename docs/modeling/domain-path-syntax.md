@@ -1,6 +1,6 @@
 ---
 title: Etki Alanı Yolu Sözdizimi
-description: Etki Alanı Yolu Söz Dizimi ve DSL Tanımları'nın modelde belirli öğeleri bulmak için XPath'e benzer bir söz dizimi kullanma hakkında bilgi edinmek.
+description: Etki alanı yolu söz dizimi ve DSL tanımlarının bir modeldeki belirli öğeleri bulmak için XPath benzeri bir sözdizimi nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,33 +9,34 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 69dfd02dca5ead65d4f36303e547aaeba04cde98
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: a5e3a80c09456cf50a021410a2df6ecc1ae65cc97e9897eb1682c054840df9e7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389104"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121316818"
 ---
 # <a name="domain-path-syntax"></a>Etki Alanı Yolu Sözdizimi
-DSL Tanımları, modelde belirli öğeleri bulmak için XPath'e benzer bir söz dizimi kullanır.
+DSL tanımları bir modeldeki belirli öğeleri bulmak için XPath benzeri bir sözdizimi kullanır.
 
- Normalde bu söz dizimi ile doğrudan çalışmak zorunda olmazsiniz. DSL Ayrıntıları'nde veya Özellikler penceresi, aşağı oka tıklar ve yol düzenleyicisini kullanabilirsiniz. Ancak, düzenleyiciyi kullandıktan sonra yol bu formda alanında görünür.
+ Normalde bu söz dizimi ile doğrudan çalışmanız gerekmez. DSL ayrıntılarında veya Özellikler penceresi göründüğü yerde, aşağı oka tıklayıp yol düzenleyicisini kullanabilirsiniz. Ancak, düzenleyici kullanıldıktan sonra bu formda bu formda yol görüntülenir.
 
- Etki alanı yolu aşağıdaki formu alır:
+ Bir etki alanı yolu aşağıdaki biçimi alır:
 
- *RelationshipName.PropertyName/! Rolü*
+ *RelationshipName. PropertyName/! Rolü*
 
- ![CommentReferencesSubjects başvuru ilişkisi](../modeling/media/dsl_reference.png)
+ ![Commentreferenceskonularla başvuru ilişkisi](../modeling/media/dsl_reference.png)
 
- Söz dizimi, modelin ağacından çapraz geçiştir. Örneğin, yukarıdaki çizimde **commentReferencesSubjects** etki alanı ilişkisi bir **Subjects rolüne** sahip. Yol segmenti **/! Subjectt,** yolun **Subjects** rolü aracılığıyla erişilen öğelerde tamam olduğunu belirtir.
+ Sözdizimi, modelin ağacını gezdiğinde. Örneğin, yukarıdaki çizimde yer alan ilişki **Referenceskonularla** ilgili etki alanı Ilişkisi bir **konular** rolüne sahiptir. Yol kesimi **/! Subjectt** , bir yolun **konular** rolüyle erişilen öğelerde bitdiğini belirtir.
 
- Her segment bir etki alanı ilişkisinin adıyla başlar. Geçiş bir öğeden bir ilişkiye ise yol kesimi *Relationship.PropertyName olarak görünür.* Atlama bir öğenin bağlantısından geliyorsa yol segmenti *İlişki/! olarak görünür. RoleName*.
+ Her segment, bir etki alanı ilişkisinin adıyla başlar. Çapraz geçiş bir öğeden bir ilişkiye ise yol segmenti *Relationship. PropertyName* olarak görünür. Atlama bir öğeye ait bir bağlantıdır, yol kesimi *ilişki/! olarak görünür. RoleName*.
 
- Eğik çizgi, bir yolun söz dizimlerini birbirinden ayrıdır. Her yol kesimi, bir öğeden bir bağlantıya (bir ilişkinin örneği) veya bir öğenin bağlantısından atlar. Yol kesimleri sıklıkla çiftler halinde görüntülenir. Bir yol segmenti bir öğeden bir bağlantıya atlayı, sonraki segment ise diğer uçta öğeye bağlantıdan bir atlamayı temsil eder. (Herhangi bir bağlantı, bir ilişkinin kaynağı veya hedefi de olabilir).
+ Eğik çizgi, bir yolun söz dizimini ayırır. Her yol segmenti, bir öğeden bir bağlantı (bir ilişkinin örneği) veya bir öğe bağlantısı olan bir atlama olur. Yol kesimleri genellikle çiftler halinde görünür. Bir yol kesimi bir öğeden bir bağlantıyı bir atlama temsil eder ve sonraki kesim, diğer uçtaki öğesine olan bağlantılardan bir atlama temsil eder. (Herhangi bir bağlantı, bir ilişkinin kendisinin kaynağı veya hedefi de olabilir).
 
- Öğeden bağlantıya atlama için kullanabileceğiniz ad, rolün `Property Name` değeridir. Öğeye bağlantı atlaması için kullanabileceğiniz ad, hedef rol adıdır.
+ Öğe-bağlantı atlama için kullandığınız ad, rolün değeridir `Property Name` . Öğe bağlantısı atlaması için kullandığınız ad, hedef rol adıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,48 +1,49 @@
 ---
-title: Anonim türü kayıt tipine Dönüştür
-description: Anonim bir türü Visual Studio 'da bir tanımlama grubu 'na dönüştürmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+title: Anonim Türü Tuple'a Dönüştürme
+description: Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanarak anonim bir türü veri türüne dönüştürme hakkında bilgi Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6486b771207722c64993d5a880894fe07beb99c9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 099d6c99806e75b8348e13156eeba652021fd86a8d7e95eaa3a09df3f91fed66
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907668"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430504"
 ---
 # <a name="convert-anonymous-type-to-tuple"></a>Anonim türü tanımlama grubuna dönüştürme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Anonim bir türü kayıt türüne dönüştürün.
+**Ne:** Anonim türü tuple'a dönüştür.
 
-**Ne zaman:** Kayıt düzeni olarak niteleyen anonim bir türü vardır.
+**Ne zaman:** Bir grup olarak niteleyici anonim bir türünüz var.
 
-**Neden:** [tanımlama](/dotnet/csharp/tuples) bilgileri, sözdiziminizi hafif tutmak için faydalıdır. Bu hızlı eylem, bu C# özelliğinden faydalanmasını kolaylaştırır.
+ [Neden:Uples,](/dotnet/csharp/tuples) söz dizimlerinizi basit tutmaya yardımcı olur. Bu hızlı eylem, bu C# özelliğine sahip olunma adımlarını kolaylaştırır.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
 1. İmlecinizi anonim bir türe yerleştirin.
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
 
-   ![Anonim türü kayıt tipine Dönüştür](media/convert-anon-to-tuple.png)
+   ![Anonim Türü Tuple'a Dönüştürme](media/convert-anon-to-tuple.png)
 
-2. Yeniden düzenlemeyi kabul etmek için **ENTER** tuşuna basın.
+2. Yeniden **düzenlemeyi** kabul etmek için Enter tuşuna basın.
 
-   ![Anonim türü kabul edilen kayıt türüne Dönüştür](media/convert-anon-to-tuple-complete.png)
+   ![Anonim Türü Kabul Edilen Tuple'a Dönüştürme](media/convert-anon-to-tuple-complete.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

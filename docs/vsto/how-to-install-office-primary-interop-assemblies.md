@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yüklemek'
-description: Office 'i yüklerken Microsoft Office birincil birlikte çalışma derlemelerini (PIA) yüklemeyi öğrenin.
+title: 'Nasıl kurulur: Birincil birlikte Office derlemelerini yükleme'
+description: Microsoft Office'Microsoft Office birlikte çalışma derlemelerini (PIA) yükleme hakkında Office.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
@@ -13,33 +13,34 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 432b2a74eb7ea4753cd110956c9dc9313e1a5d6e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 503a4430c144f97de1865a3d89975a7478567a36666085794c4acdd712cc05c5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934825"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440831"
 ---
-# <a name="how-to-install-office-primary-interop-assemblies"></a>Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yüklemek
-  Office 'i yüklerken Microsoft Office birincil birlikte çalışma derlemelerini (PIA) yükleyebilirsiniz.
+# <a name="how-to-install-office-primary-interop-assemblies"></a>Nasıl kurulur: Birincil birlikte Office derlemelerini yükleme
+  Yükleme Microsoft Office birlikte çalışma derlemelerini (PIA) Office.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="to-install-the-pias-when-you-install-office"></a>Office 'i yüklerken PIA 'Ları yüklemek için
+## <a name="to-install-the-pias-when-you-install-office"></a>PiA'ları yüklemek için Office
 
-1. 2,0 'den eski olmayan .NET Framework sürümüne sahip olduğunuzdan emin olun.
+1. 2.0'dan eski .NET Framework sürümüne sahip olduğundan emin olun.
 
-2. Microsoft Office yükleyip genişletmek istediğiniz uygulamalar için **.NET programlama desteği** özelliğinin seçildiğinden emin olun (Bu özellik varsayılan yüklemeye dahildir).
+2. Yükleme Microsoft Office ve genişletmek istediğiniz uygulamalar için **.NET Programlanabilirlik** Desteği özelliğinin seçildiğinden emin olun (bu özellik varsayılan yüklemede yer alır).
 
     > [!WARNING]
-    > Varsayılan olarak, PIA 'ler, derleme sırasında çözümünüze katıştırılır ve bu sayede, bir kullanıcı için bir önkoşul olarak, VSTO eklenti veya özelleştirme kullanmak zorunda kalmazsınız.
+    > Varsayılan olarak, pia'lar, derlemek için çözümünüze ekli olarak, eklenti eklentinizi veya özelleştirmenizi kullanmak için önkoşul olarak kullanıcılara PIA'VSTO zorunda değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md)
-- [Nasıl yapılır: birincil birlikte çalışma Derlemeleriyle Office uygulamalarını hedefleme](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
-- [Nasıl yapılır: Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)
-- [Nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yüklemesi](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
-- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
-- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Office birlikte çalışma derlemelerini birleştirme](../vsto/office-primary-interop-assemblies.md)
+- [Nasıl kullanılır: Birincil Office derlemeleri aracılığıyla uygulamaları hedefle](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
+- [Nasıl yapılandırılır: Bir bilgisayarı bir bilgisayarla ilgili Office yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)
+- [Nasıl kurulur: Office için Visual Studio Araçları çalışma zamanı yeniden dağıtılabilir yükleme](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
+- [Office çözümlerine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Kullanmaya başlayın &#40;Office geliştirme Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)

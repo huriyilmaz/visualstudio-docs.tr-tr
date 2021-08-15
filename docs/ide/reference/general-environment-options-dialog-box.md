@@ -20,14 +20,15 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: b58cf19406d49c175a07ab5e3dad60fd0354c656
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bc28e51942e8a1f52dbf573bdc477d081c74efb6aa714c07fc8eff351824fc1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969704"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121304235"
 ---
 # <a name="options-dialog-box-environment--general"></a>Seçenekler iletişim kutusu: ortam \> genel
 
@@ -39,7 +40,7 @@ Bu sayfayı, tümleşik geliştirme ortamı (IDE) için diğer seçenekler aras�
 
 IDE için **mavi**, **hafif**, **koyu** veya **mavi (ekstra kontrast)** renk temasını seçin.
 
-[Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) **Visual Studio Color teması düzenleyicisini** indirip yükleyerek, önceden tanımlanmış ek temalar yükleyebilir ve özel temalar oluşturabilirsiniz. Bu aracı yükledikten sonra, **renk teması** liste kutusunda ek renk temaları görüntülenir.
+[Visual Studio market](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)'ten **Visual Studio Color Theme düzenleyicisini** indirip yükleyerek, önceden tanımlanmış ek temalar yükleyebilir ve özel temalar oluşturabilirsiniz. Bu aracı yükledikten sonra, **renk teması** liste kutusunda ek renk temaları görüntülenir.
 
 **Menü çubuğuna başlık durumu Stili Uygula**
 
@@ -49,28 +50,28 @@ Menüler, varsayılan olarak başlık durumu stili kullanır. Bunun yerine tüm 
 
 **Farklı pikseller içeren ekranlar için işlemeyi iyileştirin (yeniden başlatma gerektirir)**
 
-Bu seçenek, inç başına nokta (DPI) tanıma (veya *PMA*) için bir veya devre dışı bırakır. PMA etkinleştirildiğinde, Visual Studio Kullanıcı arabirimi, birden çok monitöre dahil olmak üzere herhangi bir izleyici görüntü ölçek faktörü ve DPı yapılandırmasında net görünür. PMA 'yı etkinleştirmek için Windows 10 Nisan 2018 güncelleştirmesi veya üzeri ve .NET Framework 4,8 veya üzeri bir sürüme sahip olmanız gerekir. (Bu iki önkoşul karşılanmazsa Bu seçenek gri renkte görünür.)
+Bu seçenek, inç başına nokta (DPI) tanıma (veya *PMA*) için bir veya devre dışı bırakır. pma etkinleştirildiğinde, Visual Studio kullanıcı arabirimi, birden çok monitörde de olmak üzere herhangi bir izleyici görüntü ölçek faktörü ve dpı yapılandırmasında net görünür. pma 'yı etkinleştirmek için, Windows 10 nisan 2018 güncelleştirmesi veya üzeri ve .NET Framework 4,8 ya da sonraki bir sürümü gerekir. (Bu iki önkoşul karşılanmazsa Bu seçenek gri renkte görünür.)
 
 > [!TIP]
-> - Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini** belirten bir ayarı vardır. **Farklı piksel denikler seçeneği işaretli ekranlarda en iyileştirme için Işlemeyi en uygun hale getirmeniz** durumunda, bu Windows ayarı **Açık** bir etkiye sahip olur.
-> - Windows 10 ' da bir **Program uyumluluğu sorun giderici** de bulunur. Bu sorun gidericiyi kullanarak Visual Studio 'nun görünümünü gidermeye çalışmamız önerilmez.
+> - Windows 10, **uygulamaların bulanık olmaması için Windows uygulamayı düzeltmesine izin** veren bir ayara sahiptir. bu Windows ayarının **açık** olması, **farklı piksel denikler seçeneği işaretli ekranlarda en iyileştirme için işlemeyi en uygun hale getirir** .
+> - Windows 10 ayrıca bir **Program uyumluluğu sorun gidericisini** içerir. bu sorun gidericiyi kullanarak Visual Studio görünümünü gidermeye çalışmamız önerilmez.
 
 ::: moniker-end
 
 **İstemci performansına göre görsel deneyimi otomatik olarak ayarla**
 
-Visual Studio 'Nun ayarlamayı otomatik olarak ayarlama veya ayarlamayı açık olarak ayarlama gibi belirtir. Bu ayarlama, renklerin degradeden düz renklere görüntüsünü değiştirebilir veya menülerde veya açılan pencerelerin animasyonların kullanımını kısıtlayabilir.
+Visual Studio ayarlamayı otomatik olarak ayarlayıp ayarlamadığını belirtir veya ayarlamayı açıkça ayarlayın. Bu ayarlama, renklerin degradeden düz renklere görüntüsünü değiştirebilir veya menülerde veya açılan pencerelerin animasyonların kullanımını kısıtlayabilir.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10 ' **un, bulanık olmadıkları Için Windows 'un uygulamaları düzeltmesine Izin verdiğini** belirten bir ayarı vardır. Visual Studio, monitörünüzde bulanık **görünürse, bu ayarın etkinleştirilmesi** önerilir. [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' a yükseltmeyi göz önünde bulundurun. Bu, büyük ölçüde geliştirilmiş görüntüleme netliği olan, her/inç bir uygulama için ekran başına nokta olarak geliştirilmiştir.
+> Windows 10, **uygulamaların bulanık olmaması için Windows uygulamayı düzeltmesine izin** veren bir ayara sahiptir. Visual Studio monitörünüzde bulanık **görünürse, bu ayarı açmak** önerilir. büyük ölçüde geliştirilmiş görüntüleme netliği olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' a yükselterek, her bir for-of-of-aware uygulaması
 
 ::: moniker-end
 
 **Zengin istemci deneyimini etkinleştir**
 
-Degradeler ve animasyonlar dahil olmak üzere Visual Studio 'nun tam görsel deneyimini sunar. Uzak Masaüstü bağlantıları veya daha eski grafik bağdaştırıcılar kullanılırken bu seçeneği temizleyin çünkü bu özellikler bu durumlarda düşük performansa sahip olabilir. Bu seçenek yalnızca, **istemci seçeneğine göre görsel deneyimi otomatik olarak ayarla** seçeneğini belirlediğinizde kullanılabilir.
+degradeler ve animasyonlar dahil olmak üzere Visual Studio tam görsel deneyimini mümkün bir şekilde sunar. Uzak Masaüstü bağlantıları veya daha eski grafik bağdaştırıcılar kullanılırken bu seçeneği temizleyin çünkü bu özellikler bu durumlarda düşük performansa sahip olabilir. Bu seçenek yalnızca, **istemci seçeneğine göre görsel deneyimi otomatik olarak ayarla** seçeneğini belirlediğinizde kullanılabilir.
 
 **Kullanılabiliyorsa, donanım grafik hızlandırmasını kullanın**
 
@@ -80,7 +81,7 @@ Yazılım hızlandırma yerine, varsa, donanım grafik hızlandırmasını kulla
 
 **Pencere menüsünde gösterilecek Öğeler**
 
-**Pencere** menüsünün Windows listesinde görüntülenen pencerelerin sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur.
+**pencere** menüsünün Windows listesinde görünen pencere sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur.
 
 **Son kullanılan listelerde gösterilen öğeler**
 

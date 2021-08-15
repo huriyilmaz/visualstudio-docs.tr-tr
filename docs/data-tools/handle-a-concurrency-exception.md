@@ -18,22 +18,23 @@ ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f84fbaae3273b8830cce1c39cc3e42b62e487d3e
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 6195fa7e27c6c6f72166dfc00ba888f3644cfe23cb6b38570f4ba6502f458054
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216247"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347187"
 ---
 # <a name="handle-a-concurrency-exception"></a>Bir eşzamanlılık özel durumunu işleme
 
-Eşzamanlılık özel durumları ( <xref:System.Data.DBConcurrencyException?displayProperty=fullName> ), iki kullanıcı aynı anda bir veritabanında aynı verileri değiştirme girişiminde bulunduğunda tetiklenir. Bu kılavuzda, bir, nasıl yakalayacağınızı gösteren bir Windows uygulaması oluşturacaksınız <xref:System.Data.DBConcurrencyException> , hataya neden olan satırı nasıl bulabileceğinizi ve nasıl işleyeceğinizi gösteren bir strateji öğreneceksiniz.
+Eşzamanlılık özel durumları ( <xref:System.Data.DBConcurrencyException?displayProperty=fullName> ), iki kullanıcı aynı anda bir veritabanında aynı verileri değiştirme girişiminde bulunduğunda tetiklenir. bu kılavuzda, bir ' ın nasıl yakalandığı <xref:System.Data.DBConcurrencyException> , hataya neden olan satırı nasıl bulacağınızı gösteren bir Windows uygulaması oluşturur ve bunu nasıl işleyeceğinizi gösteren bir strateji öğreneceksiniz.
 
 Bu izlenecek yol, aşağıdaki işlem boyunca size kılavuzluk eden bir işlemdir:
 
-1. Yeni bir **Windows Forms uygulama** projesi oluşturun.
+1. yeni bir **Windows Forms uygulama** projesi oluşturun.
 
 2. Northwind Customers tablosunu temel alan yeni bir veri kümesi oluşturun.
 
@@ -49,31 +50,31 @@ Bu izlenecek yol, aşağıdaki işlem boyunca size kılavuzluk eden bir işlemdi
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
+bu izlenecek yol, SQL Server Express localdb ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express localdb yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio Yükleyicisi** aracılığıyla yükleyin. **Visual Studio Yükleyicisi**, SQL Server Express localdb 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+    1. Visual Studio, **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
+    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **yürüt** düğmesini seçin.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-Yeni bir Windows Forms uygulaması oluşturarak başlayın:
+yeni bir Windows Forms uygulaması oluşturarak başlayın:
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. Visual Studio, **dosya** menüsünde **yeni**  >  **Project**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
+2. sol bölmedeki **Visual C#** ' ı veya **Visual Basic** genişletin ve sonra **Windows masaüstü**' nü seçin.
 
-3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
+3. orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
 4. Projeyi **ConcurrencyWalkthrough** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
@@ -89,7 +90,7 @@ Sonra, **NorthwindDataSet** adlı bir veri kümesi oluşturun:
 
 2. **Veri kaynağı türü seçin** ekranında **veritabanı**' nı seçin.
 
-   ![Visual Studio 'da veri kaynağı Yapılandırma Sihirbazı](media/data-source-configuration-wizard.png)
+   ![Visual Studio veri kaynağı Yapılandırma Sihirbazı](media/data-source-configuration-wizard.png)
 
 3. Kullanılabilir bağlantılar listesinden Northwind örnek veritabanına bir bağlantı seçin. Bağlantı listesinde bağlantı yoksa, **Yeni bağlantı**' yı seçin.
 
@@ -104,7 +105,7 @@ Sonra, **NorthwindDataSet** adlı bir veri kümesi oluşturun:
 
 ## <a name="create-a-data-bound-datagridview-control"></a>Veri bağlantılı DataGridView denetimi oluşturma
 
-Bu bölümde, <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> **müşteriler** öğesini **veri kaynakları** penceresinden Windows formunuzun üzerine sürükleyerek bir oluşturun.
+bu bölümde, <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> **müşteriler** öğesini **veri kaynakları** penceresinden Windows formunuz üzerine sürükleyerek bir oluşturun.
 
 1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' i seçin.
 
@@ -191,7 +192,7 @@ Artık, beklenen şekilde davrandığından emin olmak için formu test edebilir
 
 1. Uygulamayı çalıştırmak için **F5** ' i seçin.
 
-2. Form görüntülendikten sonra çalışır durumda bırakın ve Visual Studio IDE 'ye geçin.
+2. form görüntülendikten sonra çalışır durumda bırakın ve Visual Studio ıde 'ye geçin.
 
 3. **Görünüm** menüsünde **Sunucu Gezgini**' yi seçin.
 
@@ -199,20 +200,20 @@ Artık, beklenen şekilde davrandığından emin olmak için formu test edebilir
 
 5. **Müşteriler** tablosuna sağ tıklayın ve ardından **tablo verilerini göster**' i seçin.
 
-6. İlk kayıtta (**alfki**) **ContactName** öğesini **Maria Anders2** olarak değiştirin.
+6. İlk kayıtta (**ALFKI),** **ContactName'i** **Maria Anders2 olarak değiştirir.**
 
     > [!NOTE]
-    > Değişikliği uygulamak için farklı bir satıra gidin.
+    > Değişikliği işlemek için farklı bir satıra gidin.
 
-7. ConcurrencyWalkthrough 'in çalışan formuna geçiş yapın.
+7. ConcurrencyWalkthrough'un çalışan formuna geçiş.
 
-8. Formdaki (**alfki**) ilk kayıtta, **ContactName** öğesini **Maria Anders1** olarak değiştirin.
+8. Formda ilk kayıtta (**ALFKI),** **ContactName'i** **Maria Anders1 olarak değiştirir.**
 
 9. **Kaydet** düğmesini seçin.
 
-     Eşzamanlılık hatası oluşur ve ileti kutusu görüntülenir.
+     Eşzamanlılık hatası oluştu ve ileti kutusu görüntülenir.
 
-   **Hayır** seçilirse güncelleştirme iptal edilir ve veri kümesini veritabanında Şu anda olan değerlerle günceller. **Evet** seçildiğinde önerilen değer veritabanına yazılır.
+   **Hayır'ı** seçmek güncelleştirmeyi iptal eder ve veri kümesi şu anda veritabanında olan değerlerle güncelleştirmeyi sağlar. **Evet'i** seçmek önerilen değeri veritabanına yazar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

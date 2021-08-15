@@ -1,5 +1,5 @@
 ---
-description: İşlemdeki tüm programları ayırarak hata ayıklayıcıyı bu işlemden ayırır.
+description: süreçteki tüm programları ayırarak hata ayıklayıcıyı bu işlemden ayırır.
 title: IDebugProcess2::D etach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: ee2b9084-2db1-4e49-a1d9-387284b7c3f8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b4d75f9dd58e2a26f6d465fc93988fa3d3785a0d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 957579bb2a19bffb0774ecd400218e5f8105127734969c26c43772dbea743bdc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071668"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276873"
 ---
 # <a name="idebugprocess2detach"></a>IDebugProcess2::Detach
-İşlemdeki tüm programları ayırarak hata ayıklayıcıyı bu işlemden ayırır.
+süreçteki tüm programları ayırarak hata ayıklayıcıyı bu işlemden ayırır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +40,10 @@ int Detach();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Tüm Programlar ve işlemler çalışmaya devam eder, ancak artık hata ayıklama oturumunun bir parçası değildir. Ayırma işlemi tamamlandıktan sonra, bu işlem (ve programları) için daha fazla hata ayıklama olayı gönderilmez.
+ Tüm programlar ve işlem çalışmaya devam eder, ancak artık hata ayıklama oturumunun bir parçası değil. Ayırma işlemi tamamlandıktan sonra, bu işlem (ve programları) için artık hata ayıklama olayları gönderilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

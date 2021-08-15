@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-bağıntıyı Başlat Iletişim kutusu
-description: Initialbir Ilişki etkinliğinin CorrelationData özelliğini düzenlemek için İş Akışı Tasarımcısı bağıntıyı Başlat iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı - Bağıntı Başlat İletişim Kutusu
+description: InitializeCorrelation etkinliğinin CorrelationData özelliğini düzenlemek için İş Akışı Tasarımcısı Başlat iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,29 +10,30 @@ ms.assetid: 2a0a1cd3-7b9e-493e-9264-fcf85289ffcf
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: a41511f9bfb381eeb422cc9cf7ec015d55ceff70
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 123fa7a3b9a9cbc65ed458ab5b412268f00dd15001148db26915c4ddf882845a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931519"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121267058"
 ---
 # <a name="initialize-correlation-dialog-box"></a>Bağıntıyı Başlat İletişim Kutusu
 
-Bir etkinliğin özelliğini düzenlemek için İş Akışı Tasarımcısı **bağıntı Başlat** iletişim kutusu kullanılır <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> <xref:System.ServiceModel.Activities.InitializeCorrelation> . Daha fazla bilgi için bkz. [ınitialkaydedilmiş ilişki](../workflow-designer/initializecorrelation-activity-designer.md).
+**Bağıntıyı** Başlat iletişim kutusu İş Akışı Tasarımcısı özelliğini düzenlemek <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> için bu iletişim kutusunda <xref:System.ServiceModel.Activities.InitializeCorrelation> kullanılır. Daha fazla bilgi için [bkz. InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md).
 
-Aşağıdaki tabloda **bağıntı Başlat** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır:
+Aşağıdaki tabloda Bağıntı Başlat iletişim kutusunun kullanıcı arabirimi (UI) **öğeleri** açık almaktadır:
 
-|Arabirim Öğesi|Description|
+|Arabirim Öğesi|Açıklama|
 |-|-----------------|
-|**Correlation (Bağıntı)** |<xref:System.ServiceModel.Activities.CorrelationHandle>Başlatılacak bağıntı.|
-|**Başlatma tarihi**|Başlatılacak verileri içeren bir anahtar/değer çifti. Bu değer özelliğine karşılık gelir <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> . Geçerli bir anahtar/değer çifti örneği, OrderID adlı bir değişkenle eşleştirilmiş "OrderID" adlı bir anahtardır.|
+|**Correlation (Bağıntı)** |Başlatılmayacak <xref:System.ServiceModel.Activities.CorrelationHandle> bağıntının .|
+|**Başlatma Başlangıcı**|Başlatılmayacak verileri içeren bir anahtar/değer çifti. Bu değer özelliğine <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> karşılık gelen değerdir. Geçerli anahtar/değer çiftinin bir örneği, OrderID adlı bir değişkenle eşleştirilmiş "OrderID" adlı anahtardır.|
 
-## <a name="to-launch-the-initialize-correlation-dialog-box"></a>Bağıntıyı Başlat iletişim kutusunu başlatmak için
+## <a name="to-launch-the-initialize-correlation-dialog-box"></a>Bağıntı Başlat iletişim kutusunu başlatmak için
 
-**Initialkaydedilmiş ilişki** Etkinlik tasarımcısında **görüntüle** ' ye tıklayın veya iş akışı Tasarımcısı bir <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinlik seçin. Sonra özellik kılavuzundaki özelliğin yanındaki üç nokta düğmesine tıklayın <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> .
+**InitializeCorrelation etkinlik tasarımcısında Görünüm'e** tıklayın veya bir etkinlik seçin  <xref:System.ServiceModel.Activities.InitializeCorrelation> İş Akışı Tasarımcısı. Ardından özellik kılavuzunda özelliğin yanındaki <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> üç nokta düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

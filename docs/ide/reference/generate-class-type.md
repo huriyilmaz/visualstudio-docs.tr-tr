@@ -7,6 +7,7 @@ ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 f1_keywords:
 - vsl.GenerateFromUsage
 dev_langs:
@@ -14,14 +15,14 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 094dac3cea088bcede1ae251eec73c9741f6de6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bdc33159915f4079c12cf0f282c4b1154cd9ec070acb56948870bb2497c7d276
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897985"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121318440"
 ---
-# <a name="generate-a-class-or-type-in-visual-studio"></a>Visual Studio 'da bir sınıf veya tür oluşturma
+# <a name="generate-a-class-or-type-in-visual-studio"></a>Visual Studio bir sınıf veya tür oluşturma
 
 Bu kod üretimi için geçerlidir:
 

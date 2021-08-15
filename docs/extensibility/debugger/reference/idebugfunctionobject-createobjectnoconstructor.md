@@ -11,17 +11,18 @@ ms.assetid: 4e2bd6d5-f4bd-4c10-a998-3db451c9a0c8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2a35cab590ab763a3598f45ebe79543e66c2fa4d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 498d0e629d16e3d606db67b25e7f53cb1472e187604c225372163667a7af093d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073527"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121238872"
 ---
 # <a name="idebugfunctionobjectcreateobjectnoconstructor"></a>IDebugFunctionObject::CreateObjectNoConstructor
 Oluşturucusu olmayan bir nesne oluşturur.

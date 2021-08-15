@@ -10,14 +10,15 @@ ms.assetid: f9fce48e-7d4e-4627-a0fb-77b75428146a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7793dddb1a6bdd448b2b5a912f59b625bdca733e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: eedd180f00844c6f38dd57b1c106d51a77b8ad1557bbcff21ddf15bb9be597c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054757"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342719"
 ---
 # <a name="notify-the-port"></a>Bağlantı noktasına bildir
 Bir program başlatıldıktan sonra, bağlantı noktasına aşağıdaki şekilde bildirilmesi gerekir:

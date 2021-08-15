@@ -1,6 +1,6 @@
 ---
-title: CvWriteFlag Işlevi | Microsoft Docs
-description: Eşzamanlılık Görselleştiricisi SDK işlevi CvWriteFlag (C Kitaplığı) için başvuru bilgilerine bakın.
+title: CvWriteFlag İşlev | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK'sı işlevi CvWriteFlag (C kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,17 +18,18 @@ ms.assetid: ee9da1e2-7b34-4cba-81e2-215d25d32e4d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e24782f38ec3512349efa123f5aed5a068c6b59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bfc1d43526eddfc20e0ec639559be9bc75370e19692fde8496a227ac3c9b4538
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948172"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121301557"
 ---
 # <a name="cvwriteflag-function"></a>CvWriteFlag işlevi
-Eşzamanlılık görselleştiricisi izleme dosyasına bir bayrak yazar.
+Eşzamanlılık Görselleştiricisi izleme dosyasına bir bayrak yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -67,23 +68,23 @@ HRESULT CvWriteFlagExVA(
 #### <a name="parameters"></a>Parametreler
  `argList` Bağımsız değişkenlerin listesi.
 
- `category` Alan.
+ `category` Kategori.
 
  `level` Önem düzeyi.
 
- `pMarkerSeries` Geçerli işaretleyici serisi bağlamı. NULL olamaz.
+ `pMarkerSeries` Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
  `pMessage` İleti biçimi dizesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
+ S_OK başarıyla yazıldığı zaman iletiyi görüntüler. Hata varsa hata kodu. Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvişaretleyiciler. h*
+ **Üst bilgi:** *cvmarkers.h*
 
  **Unicode:** CvWriteFlagExW, CvWriteFlagExVW
 
  <strong>ANSI:</strong> CvWriteFlagExA, CvWriteFlagExVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

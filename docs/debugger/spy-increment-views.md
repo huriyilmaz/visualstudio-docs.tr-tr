@@ -11,14 +11,15 @@ ms.assetid: c60867af-f814-4fac-8f06-3c39cbefc7ea
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 77de42a0b10643396bbc0360cf66b00866057ebd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d3fea25adc17013510130ccacf565c39546ec264641c5966cc137938dd63871
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903417"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121324515"
 ---
 # <a name="spy-views"></a>Spy++ Görünümleri
 Spy + + makinenizde bulunan pencerelerin, iletilerin, işlemlerin ve iş parçacıklarının ağaç görünümlerini görüntüler.

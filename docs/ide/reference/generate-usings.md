@@ -1,12 +1,13 @@
 ---
 title: Using deyimleri oluşturma
-description: Hızlı Eylemler ve yeniden düzenlemeler menüsünü kullanarak, gerekli içeri aktarmaları hemen ekleme veya kopya ve yapıştırılan kod için yönergeleri kullanma hakkında bilgi edinin.
+description: Kopyalayıp yapıştıran kod için gerekli içeri aktarmaları veya kullanma yönergelerini hemen eklemek için Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
@@ -14,41 +15,41 @@ ms.workload:
 - dotnet
 helpviewer_keywords:
 - add missing usings
-ms.openlocfilehash: 0f73b50dc34e95161c4c85cd559abcf5c9bac60b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b8be08a3d8440cec741ad9cf2e6dcaa10ccbad2d1dc230eeeda9b35a185c911a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968001"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121303975"
 ---
-# <a name="add-missing-usings-in-visual-studio"></a>Visual Studio 'da eksik using 'leri ekleme
+# <a name="add-missing-usings-in-visual-studio"></a>Visual Studio'de eksik kullanmalar ekleme
 
-Bu kod üretimi için geçerlidir:
+Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** , Kopya ve yapıştırılan kod için gerekli içeri aktarmaları veya [kullanım yönergelerini](/dotnet/csharp/language-reference/keywords/using-directive) hemen eklemenizi sağlar.
+**Ne:** Kopyalayıp yapıştıran kod için gerekli içeri [aktarmaları](/dotnet/csharp/language-reference/keywords/using-directive) veya kullanma yönergelerini hemen eklemenize olanak sağlar.
 
-**Ne zaman:** Projenizde veya diğer kaynaklardaki farklı yerlerden kod kopyalamak ve yeni koda yapıştırmak yaygın bir uygulamadır. Bu hızlı eylem, kopya ve yapıştırılan kod için eksik içeri aktarmalar yönergelerini bulur ve sonra bunları eklemenizi ister. Bu kod düzeltilme Ayrıca projeden projeye başvurular da eklenebilir.
+**Ne zaman:** Projenizin veya diğer kaynakların farklı yerlerinden kod kopyalayıp yeni koda yapıştırmak yaygın bir uygulamadır. Bu Hızlı Eylem, kopyalayıp yapıştıran kod için eksik içeri aktarma yönergelerini bulur ve ardından bunları eklemenizi istenir. Bu kod düzeltmesi, projeden projeye başvurular da ekleyebilir.
 
-**Neden:** Hızlı eylem gerekli içeri aktarmaları otomatik olarak eklediğinden, `using` kodunuzun ihtiyaç duyduğu yönergeleri el ile kopyalamanız gerekmez.
+**Neden:** Hızlı Eylem gerekli içeri aktarmaları otomatik olarak ekley gerektiğinden, kodunuzun ihtiyacı olan `using` yönergeleri el ile kopyalamanız gerekmez.
 
-## <a name="add-missing-usings-refactoring"></a>Eksik using 'leri yeniden düzenleme Ekle
+## <a name="add-missing-usings-refactoring"></a>Eksik usings yeniden düzenlemesi ekleme
 
-1. Kodu bir dosyadan kopyalayın ve gerekli yönergeleri eklemeden yeni bir dosyaya yapıştırın `using` . Ortaya çıkan hata, eksik yönergeleri ekleyen bir kod düzeltmesine eşlik eder `using` .
+1. Bir dosyadan kod kopyalayın ve gerekli yönergeleri dahil etmeden yenisine `using` yapıştırın. Sonuçta ortaya çıkan hataya eksik yönergeleri ekleyen bir kod `using` düzeltmesi eşlik ediyor.
 
     > [!NOTE]
-    > Bu öneriyi, **araçlar > seçenekler > metin düzenleyicisi > yönergeleri kullanarak C# > gelişmiş >** etkinleştirmeniz gerekir.
+    > Bu öneriyi Araçlar > Seçenekler > C# > > Using Yönergeleri > **etkinleştirmeniz gerekir.**
 
-2. CTRL + seçeneğini belirleyin. **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü açmak için.
+2. Ctrl+'yi seçin. hızlı eylemler **ve yeniden düzenleme menüsünü** açın.
 
     ![Using deyimleri oluşturma](media/generate-using-codefix.png)
 
-3. Eksik **başvuruyu \<your reference\> eklemek için using** öğesini seçin.
+3. Eksik başvuru eklemek için **\<your reference\> kullanarak öğesini** seçin.
 
-    ![Kullanımlar sonucu oluştur](media/generate-using-result.png)
+    ![Usings sonucu oluşturma](media/generate-using-result.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

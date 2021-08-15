@@ -1,6 +1,6 @@
 ---
 title: WPF & Entity Framework WCF veri hizmeti oluşturma
-description: WPF ve bir ASP.NET Web uygulamasında barındırılan Entity Framework bir WCF veri hizmeti oluşturun ve sonra buna bir Windows Forms uygulamasından erişin.
+description: WPF ve ASP.NET web uygulamasında barındırılan Entity Framework bir WCF veri hizmeti oluşturun ve ardından bu uygulamaya Windows Forms uygulamasından erişin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,17 +16,18 @@ ms.assetid: da66ad1b-a25d-485c-af13-2d18f0422e3d
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f519d8e3bfe01fc3e4a1e4cfe82f4f8502c84821
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: d0609d4ee5bf4ceae69d2be57778cc80edb309e54e2e53fcf423127967a8b210
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215701"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346562"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek Yol: WPF ve Entity Framework ile WCF Veri Hizmeti Oluşturma
-Bu izlenecek yol [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , bir Web uygulamasında barındırılan basit bir oluşturma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve ardından bu uygulamaya Windows Forms bir uygulamadan erişme işlemlerinin nasıl yapılacağını gösterir.
+bu izlenecek yol [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , bir web uygulamasında barındırılan basit bir oluşturma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve ardından bu uygulamaya Windows Forms bir uygulamadan erişme işlemlerinin nasıl yapılacağını gösterir.
 
 Bu kılavuzda şunları yapabilirsiniz:
 
@@ -43,19 +44,19 @@ Bu kılavuzda şunları yapabilirsiniz:
 - İsteğe bağlı olarak, uygulamaya filtreleme yetenekleri ekleyin.
 
 ## <a name="prerequisites"></a>Önkoşullar
-Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
+bu izlenecek yol, SQL Server Express localdb ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. **Visual Studio yükleyicisi**, SQL Server Express LocalDB 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
+1. SQL Server Express localdb yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio Yükleyicisi** aracılığıyla yükleyin. **Visual Studio Yükleyicisi**, SQL Server Express localdb 'yi **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yükleyebilirsiniz.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (**SQL Server Nesne Gezgini** , Visual Studio yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+    1. Visual Studio, **SQL Server Nesne Gezgini** penceresini açın. (**SQL Server Nesne Gezgini** , Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
+    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **yürüt** düğmesini seçin.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
@@ -68,21 +69,21 @@ Oluşturmak için [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_serv
 
 ### <a name="to-create-the-web-project"></a>Web projesi oluşturmak için
 
-1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
+1. menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda **Visual Basic** veya **Visual C#** ve **Web** düğümlerini genişletin ve **ASP.NET Web uygulaması** şablonunu seçin.
+2. **yeni Project** iletişim kutusunda, **Visual Basic** veya **Visual C#** ve **web** düğümlerini genişletin ve **ASP.NET web uygulaması** şablonunu seçin.
 
 3. **Ad** metin kutusuna **NorthwindWeb** yazın ve sonra **Tamam** düğmesini seçin.
 
-4. **Yeni ASP.NET projesi** iletişim kutusunda, **bir şablon seçin** listesinde **boş**' ı seçin ve ardından **Tamam** düğmesini seçin.
+4. **yeni ASP.NET Project** iletişim kutusunda, **bir şablon seçin** listesinde **boş**' ı seçin ve ardından **tamam** düğmesini seçin.
 
 Sonraki adımda, [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Northwind veritabanındaki tabloyu temsil eden bir oluşturursunuz `Customers` .
 
 ### <a name="to-create-the-entity-data-model"></a>Varlık Veri Modeli'ni oluşturmak için
 
-1. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+1. menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
-2. **Yeni öğe Ekle** iletişim kutusunda, **veri** düğümünü seçin ve ardından **ADO.net varlık veri modeli** öğesini seçin.
+2. **yeni öğe ekle** iletişim kutusunda **veri** düğümünü ve ardından **ADO.NET Varlık Veri Modeli** öğesini seçin.
 
 3. **Ad** metin kutusuna girin `NorthwindModel` ve sonra **Ekle** düğmesini seçin.
 
@@ -106,7 +107,7 @@ Sonraki adımda, [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]
 7. **Sürümünüzü seçin** sayfasında **Entity Framework 5,0** seçenek düğmesini ve ardından **İleri** düğmesini seçin.
 
     > [!NOTE]
-    > Entity Framework 6 ' nın en son sürümünü WCF hizmetleriyle kullanabilmek için, WCF Veri Hizmetleri Entity Framework sağlayıcısı NuGet paketini yüklemeniz gerekir. Bkz. [Entity Framework 6 + ile WCF veri Hizmetleri 5.6.0 kullanma](https://devblogs.microsoft.com/odata/using-wcf-data-services-5-6-0-with-entity-framework-6/).
+    > Entity Framework 6 ' nın en son sürümünü WCF hizmetleriyle kullanabilmek için, WCF Veri Hizmetleri Entity Framework sağlayıcısı NuGet paketini yüklemeniz gerekir. bkz. [Entity Framework 6 + ile WCF Veri Hizmetleri 5.6.0 kullanma](https://devblogs.microsoft.com/odata/using-wcf-data-services-5-6-0-with-entity-framework-6/).
 
 8. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin, **müşteriler** onay kutusunu seçin ve ardından **son** düğmesini seçin.
 
@@ -116,7 +117,7 @@ Sonraki adımda, veri hizmetini oluşturup test edersiniz.
 
 ### <a name="to-create-the-data-service"></a>Veri hizmetini oluşturmak için
 
-1. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+1. menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Web** düğümünü seçin ve ardından **WCF veri hizmeti 5,6** öğesini seçin.
 
@@ -146,30 +147,30 @@ Sonraki adımda, veri hizmetini oluşturup test edersiniz.
 
 8. Tarayıcı penceresini kapatın.
 
-Sonraki adımlarda, hizmeti kullanmak için bir Windows Forms istemci uygulaması oluşturacaksınız.
+sonraki adımlarda, hizmeti kullanmak için bir Windows Forms istemci uygulaması oluşturacaksınız.
 
 ## <a name="creating-the-client-application"></a>İstemci Uygulamasını Oluşturma
 İstemci uygulamasını oluşturmak için ikinci bir proje ekleyin, projeye bir hizmet başvurusu ekleyin, bir veri kaynağı yapılandırın ve hizmetten verileri göstermek için bir kullanıcı arabirimi oluşturun.
 
-İlk adımda, çözüme bir Windows Forms projesi ekler ve bunu başlangıç projesi olarak ayarlarsınız.
+ilk adımda, çözüme bir Windows Forms projesi ekler ve bunu başlangıç projesi olarak ayarlarsınız.
 
 ### <a name="to-create-the-client-application"></a>İstemci uygulamasını oluşturmak için
 
-1. Menü çubuğunda dosya,   >  **Yeni proje** Ekle öğesini seçin.
+1. menü çubuğunda dosya,   >  **yeni Project** ekle ' yi seçin.
 
-2. **Yeni proje** iletişim kutusunda, **Visual Basic** veya **Visual C#** düğümünü genişletin, **Windows** düğümünü seçin ve sonra **Windows Forms uygulama**' yı seçin.
+2. **yeni Project** iletişim kutusunda, **Visual Basic** veya **Visual C#** düğümünü genişletin, **Windows** düğümünü seçin ve sonra **Windows Forms uygulama**' yı seçin.
 
 3. **Ad** metin kutusuna girin `NorthwindClient` ve sonra **Tamam** düğmesini seçin.
 
 4. **Çözüm Gezgini**, **NorthwindClient** proje düğümünü seçin.
 
-5. Menü çubuğunda **Proje**, **Başlangıç projesi olarak ayarla**' yı seçin.
+5. menü çubuğunda **Project**, **başlangıç Project olarak ayarla**' yı seçin.
 
 Bir sonraki adımda, Web projesindeki öğesine bir hizmet başvurusu eklersiniz [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] .
 
 ### <a name="to-add-a-service-reference"></a>Hizmet başvurusu eklemek için
 
-1. Menü çubuğunda, **Proje**  >  **hizmet başvurusu Ekle**' yi seçin.
+1. menü çubuğunda **Project**  >  **Hizmet Başvurusu Ekle**' ni seçin.
 
 2. **Hizmet başvurusu Ekle** Iletişim kutusunda **bul** düğmesini seçin.
 
@@ -181,7 +182,7 @@ Bir sonraki adımda, hizmete veri bağlamayı etkinleştirmek için bir veri kay
 
 ### <a name="to-enable-data-binding-to-the-service"></a>Hizmete veri bağlamayı etkinleştirmek için
 
-1. Menü çubuğunda   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
+1. menü çubuğunda   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçin.
 
    **Veri kaynakları** penceresi açılır.
 

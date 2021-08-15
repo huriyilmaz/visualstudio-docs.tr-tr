@@ -1,6 +1,6 @@
 ---
 title: Örnekleme veri değerlerini anlama | Microsoft Docs
-description: Visual Profil Oluşturma Araçları Studio 'nun örnekleme profili oluşturma yönteminin, küme aralıklarında bilgisayar işlemcisini nasıl kestireceğinizi ve işlev çağrı yığınını topladığını öğrenin.
+description: Profil Oluşturma Araçları Visual Studio örnekleme profili oluşturma yönteminin, bilgisayar işlemcisini küme aralıklarında nasıl kestireceğinizi ve işlev çağrı yığınını topladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,19 +9,20 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 40902746e1dd1a4c68c9e1aa54ed4e72030a8fff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d81bffb39ba420f5d9dc26df33c6ad7634c2d7a4782ee5cd5a5a3b857112182
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886034"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270165"
 ---
 # <a name="understand-sampling-data-values"></a>Örnekleme veri değerlerini anlama
 
-Visual Profil Oluşturma Araçları Studio 'nun *örnekleme* profili oluşturma yöntemi, bilgisayar işlemcisini ayarlanan aralıklarla keser ve işlev çağrı yığınını toplar. *Çağrı yığını* , işlemcide yürütülen işlevlerle ilgili bilgileri depolayan dinamik bir yapıdır.
+Profil Oluşturma Araçları Visual Studio *örnekleme* profili oluşturma yöntemi, bilgisayar işlemcisini ayarlanan aralıklarla keser ve işlev çağrı yığınını toplar. *Çağrı yığını* , işlemcide yürütülen işlevlerle ilgili bilgileri depolayan dinamik bir yapıdır.
 
 Profil Oluşturucu analizi, işlemcinin hedef işlemde kod yürütmediğini belirler. İşlemci hedef işlemde kod yürütülemiyor, örnek atılır.
 

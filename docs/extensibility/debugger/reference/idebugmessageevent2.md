@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, hata ayıklama altyapısı (DE) tarafından kullanıcıdan yanıt gerektiren bir Visual Studio 'ya ileti göndermek için kullanılır.
+description: Bu arabirim, hata ayıklama altyapısı (DE) tarafından kullanıcıdan yanıt Visual Studio bir ileti göndermek için kullanılır.
 title: IDebugMessageEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: a9ff3d00-e9ac-4cd6-bda9-584a4815aff8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5593e822b974ddb7c666f622192e3e4630b7222
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 21bd32714b9f10174a1ebd3c2ad82dda16db715f9600318bd391f0c99e036463
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058436"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307329"
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
-Bu arabirim, hata ayıklama altyapısı (DE) tarafından kullanıcıdan yanıt gerektiren bir Visual Studio 'ya ileti göndermek için kullanılır.
+Bu arabirim, hata ayıklama altyapısı (DE) tarafından kullanıcıdan yanıt Visual Studio bir ileti göndermek için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,16 +30,16 @@ Bu arabirim, hata ayıklama altyapısı (DE) tarafından kullanıcıdan yanıt g
 IDebugMessageEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirimi, bir kullanıcı yanıtı gerektiren Visual Studio 'ya bir ileti göndermek için DE uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` .
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, kullanıcı yanıtı gerektiren bir ileti göndermek Visual Studio arabirimini uygulamaya alır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
 
- Bu arabirimin uygulanması, Visual Studio 'nun DE [Setresponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) çağrısını iletişim kurması gerekir. Örneğin, bu, bunun ileti işleme iş parçacığına postalanan bir ileti ile yapılabilir veya bu arabirimi uygulayan nesne DE DE bir başvuru tutabilir ve buna geçilen Yanıt ile geri çağrı yapabilir `IDebugMessageEvent2::SetResponse` .
+ Bu arabirimin uygulanması, Visual Studio De'ye [SetResponse çağrısıyla](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) iletişim kurması gerekir. Örneğin, bu işlem DE'nin ileti işleme iş parçacığına gönderilen bir iletiyle yapılabilir veya bu arabirimi uygulayan nesne DE'ye bir başvuru tutabilir ve içine geçirilen yanıtla DE'ye geri `IDebugMessageEvent2::SetResponse` çağırabilirsiniz.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE, bir yanıt gerektiren kullanıcıya bir ileti göstermek için bu olay nesnesini oluşturur ve gönderir. Olay, ayıklanmakta olan programa eklendiği zaman SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE, kullanıcıya yanıt gerektiren bir ileti görüntülemek için bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklama yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugMessageEvent2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugMessageEvent2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -46,18 +47,18 @@ IDebugMessageEvent2 : IUnknown
 |[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|İleti kutusundan yanıtı (varsa) ayarlar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Ayrıca, kullanıcıdan belirli bir ileti için belirli bir yanıt gerekiyorsa bu arabirimi kullanır. Örneğin, bir programa uzaktan iliştirme denemesinden sonra da "erişim reddedildi" iletisi alırsa, bu özel iletiyi ileti kutusu stiliyle bir olayda Visual Studio 'ya gönderir `IDebugMessageEvent2` `MB_RETRYCANCEL` . Bu, kullanıcının iliştirme işlemini yeniden denemesini veya iptal etmesine olanak tanır.
+ DE, belirli bir ileti için kullanıcıdan belirli bir yanıt gerektiriyorsa bu arabirimi kullanır. Örneğin, DE bir programa uzaktan ekleme girişiminden sonra bir "Erişim Reddedildi" iletisi alıyorsa, DE bu iletiyi ileti kutusu stiline sahip bir olayda Visual Studio'ye `IDebugMessageEvent2` `MB_RETRYCANCEL` gönderir. Bu, kullanıcının ekleme işlemini yeniden denemesini veya iptalini sağlar.
 
- Ayrıca, bu iletinin Win32 işlevinin kurallarını izleyerek nasıl işleneceğini belirtir `MessageBox` (Ayrıntılar için bkz. [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) ).
+ DE, bu iletinin Win32 işlevinin kurallarına uygun olarak nasıl `MessageBox` işlen olacağını belirtir (ayrıntılar için bkz. [AfxMessageBox).](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)
 
- Visual Studio 'ya kullanıcıdan yanıt gerektirmeyen iletiler göndermek için [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) arabirimini kullanın.
+ [Kullanıcıdan yanıt gerektirmeyen IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) arabirimini Visual Studio ileti göndermek için kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

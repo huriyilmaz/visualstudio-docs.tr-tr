@@ -1,6 +1,6 @@
 ---
 title: Eski dil hizmetlerindeki özel belge özellikleri
-description: Eski dil hizmetinin bir parçası olarak Visual Studio Özellikler penceresi görüntülenen özel belge özellikleri oluşturmayı öğrenin.
+description: eski dil hizmetinin bir parçası olarak Visual Studio Özellikler penceresi görüntülenen özel belge özellikleri oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,14 +12,15 @@ ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e154ba5e6ce4c85f597957b1d6704ca341b3c4d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b7cea1368c90bcc747c84d80db1816da4ee1adfc4fe16a2c72cf32a61653649a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091155"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275547"
 ---
 # <a name="custom-document-properties-in-a-legacy-language-service"></a>Eski dil hizmetindeki özel belge özellikleri
 Belge özellikleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Özellikler** penceresinde gösterilebilir. Programlama dillerinin genellikle ayrı kaynak dosyalarla ilişkili özellikleri yoktur. Ancak, XML kodlama, şema ve stil sayfasını etkileyen belge özelliklerini destekler.

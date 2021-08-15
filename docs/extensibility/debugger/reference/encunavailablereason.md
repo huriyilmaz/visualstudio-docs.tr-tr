@@ -11,17 +11,18 @@ ms.assetid: c10aa4c0-d7e0-4de1-b8ff-7e050985eb12
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e63ad7994d485bb39f8ec789d8906cd7d5946840
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5a47c29f07a590667a22ed123ba660202b4de9c449e606a8d921dd02eb0b7f52
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095998"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121434405"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
 `This is for internal use only!`**Düzenle ve devam et** 'in kullanılamayan nedenleri temsil eder.
@@ -61,7 +62,7 @@ Düzenleme ve devam etme işleminin neden kullanılamadığı belirli bir neden 
 Birlikte çalışma çağrısı sırasında Düzenle ve devam et kullanılamaz.
 
 `ENCUN_SQLCLR`\
-Düzenle ve devam et, ortak dil çalışma zamanını (CLR) kullanan bir SQL yordam çağrısı sırasında kullanılamaz.
+düzenle ve devam et, ortak dil çalışma zamanını (CLR) kullanan bir SQL yordam çağrısı sırasında kullanılamaz.
 
 `ENCUN_MINIDUMP`\
 Bir mini döküm işlenirken Düzenle ve devam et kullanılamaz.
@@ -73,7 +74,7 @@ Katıştırılmış kodu işlerken Düzenle ve devam et kullanılamaz.
 Oturum, hata ayıklayıcı tarafından başlatılmamış olarak eklendiği için Düzenle ve devam et kullanılamıyor.
 
 `ENCUN_WIN64`\
-64 bit Windows kodu işlenirken Düzenle ve devam et kullanılamaz.
+64 bit Windows kodu işlenirken düzenle ve devam et kullanılamaz.
 
 ## <a name="remarks"></a>Açıklamalar
 Bu numaralandırma yalnızca tarafından iç kullanım içindir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] . Özel bir bağlantı noktası sağlayıcısı tarafından uygulanan [Getencavailablestate](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) ve [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) yöntemleri her zaman döndürmelidir `E_NOTIMPL` .

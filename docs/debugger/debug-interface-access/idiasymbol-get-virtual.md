@@ -11,14 +11,15 @@ ms.assetid: 97e3ad51-8ef3-4446-ab33-3cb34a21b7a0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ec8576691b1ff5898ae40f421c60839880fc1d70
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: dfcae599ad96b5110b059046b04001c41aad29765007daef2573da5e85ded000
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161776"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121325632"
 ---
 # <a name="idiasymbolget_virtual"></a>IDiaSymbol::get_virtual
 İşlevin sanal olup olmadığını belirten bir bayrak alır.

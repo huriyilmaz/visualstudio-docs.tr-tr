@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: b086f21b466863c3498ce15c15f7077b358c6d39
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: f267afa77bf5d1dfbe7414d2c0cf394d91360cfc8318dbbbd9d1aae50cd1e4c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388626"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121444015"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
 Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla birlikte DSL Tanım dosyası tarafından tanımlanır. DSL çözümünde program kodunun çoğu bu dosyadan oluşturulur.
@@ -24,7 +25,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
  Bu konuda DSL tanımının merkezi özellikleri açıklanmıştır.
 
 ## <a name="the-dsl-definition"></a>DSL Tanımı
- 'i `Dsl\DslDefinition.dsl` Visual Studio pencereniz aşağıdaki resme benzer.
+ 'i `Dsl\DslDefinition.dsl` açtınız Visual Studio pencereniz aşağıdaki resme benzer.
 
  ![dsl tasarımcısı](../modeling/media/dsl_designer.png)
 
@@ -44,7 +45,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 ## <a name="domain-classes-define-model-elements"></a>Etki Alanı Sınıfları Model Öğelerini Tanımlar
  Etki alanı sınıfları etki alanındaki çeşitli öğeleri oluşturmak için kullanılır ve etki alanı ilişkileri, öğeler arasındaki bağlantılardır. Bunlar, modellerini oluşturduklarında tasarıma özgü dilin kullanıcıları tarafından örneği oluşturulacak öğelerin ve bağlantıların tasarım zamanı gösterimidir.
 
- Bu çizimde, DSL müzik kitaplığının kullanıcısı tarafından oluşturulmuş bir model gösterilmiştir. Müzik müzikleri, şarkı listelerini içeren kutularla temsil edildi. Ressamlar, yuvarlak köşeli kutularla temsil edilmiştir ve katkıda bulunmak için katkıda bulundukları köşeli kutulara bağlanır.
+ Bu çizimde, DSL müzik kitaplığının kullanıcısı tarafından oluşturulmuş bir model gösterilmiştir. Müzik müzikleri, şarkı listelerini içeren kutularla temsil edildi. Ressamlar, yuvarlak köşeli kutularla temsil edilmiştir ve katkıda bulunmak için katkıda bulundukları kutulara bağlanır.
 
  ![Oluşturulan DSL'nin örnek modeli](../modeling/media/music_instance.png)
 
@@ -56,7 +57,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 
  Çizimde dört etki alanı sınıfı gösterilmiştir: Music, Artist ve Song. Etki alanı sınıfları Ad, Başlık gibi etki alanı özelliklerini tanımlar. Örnek modelinde bu özelliklerden bazılarının değerleri diyagramda görüntülenir.
 
- Sınıflar arasında etki alanı ilişkileri vardır: MusicHasAlbums, MusicHasArtists, ArtistbHasSongs ve ArtistAppearedOnAlbums. İlişkilerin 1...1, 0..* gibi çoklulıkları vardır. Örneğin, her Şarkı, TamamHasSongs ilişkisi aracılığıyla tam olarak tek bir Müzikle ilgili olması gerekir. Her Every Every'da herhangi bir sayıda Şarkı olabilir.
+ Sınıflar arasında etki alanı ilişkileri vardır: MusicHasAlbums, MusicHasArtists, ArtistbHasSongs ve ArtistAppearedOnAlbums. İlişkilerin 1...1, 0..* gibi çoklulıkları vardır. Örneğin, her Şarkı, YerkizHasSongs ilişkisi aracılığıyla tam olarak tek bir Müzikle ilgili olması gerekir. Her Every Every'da herhangi bir sayıda Şarkı olabilir.
 
 ### <a name="rearranging-the-dsl-definition-diagram"></a>DSL Tanım Diyagramını Yeniden Düzenleme
  Bu resimde olduğu gibi, dsl tanımı diyagramında bir etki alanı sınıfının birkaç kez görünebilirsiniz. Her zaman bir ana görünüm vardır ve bazı başvuru *görünümleri* olabilir.
@@ -74,7 +75,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 ## <a name="inheritance"></a>Devralma
  Etki alanı sınıfları devralma kullanılarak tanımlanabilir. Devralma türetme oluşturmak için Devralma aracına tıklayın, türetilmiş sınıfa tıklayın ve ardından temel sınıfa tıklayın. Model öğesi, temel sınıftan devralınan tüm özelliklerle birlikte kendi etki alanı sınıfında tanımlanan tüm özelliklere sahiptir. Ayrıca ilişkilerdeki rollerini devralıyor.
 
- Devralma İlişkiler, Şekiller ve Bağlayıcılar arasında da kullanılabilir. Devralma aynı grupta kalıtımda kalıtımda kalıtım gerekir. Şekil bir etki alanı sınıfından devralamaz.
+ Devralma İlişkiler, Şekiller ve Bağlayıcılar arasında da kullanılabilir. Devralma aynı grup içinde kalarak devam etmek gerekir. Şekil bir etki alanı sınıfından devralamaz.
 
 ## <a name="domain-relationships"></a>Etki Alanı İlişkileri
  Model öğeleri ilişkilerle bağlantılı olabilir. Bağlantılar her zaman ikilidir; tam olarak iki öğeye bağlantı sağlar. Ancak, herhangi bir öğenin diğer nesnelere birçok bağlantısı olabilir ve aynı öğe çifti arasında birden fazla bağlantı bile olabilir.
@@ -84,9 +85,9 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
  İki tür etki alanı ilişkisi vardır: ekleme ilişkileri ve başvuru ilişkileri. DSL Tanımı diyagramında ekleme ilişkilerinin her rolde düz çizgileri, başvuru ilişkilerinin ise kesikli çizgileri vardır.
 
 ### <a name="embedding-relationships"></a>ekleme ilişkileri
- Bir modeldeki kökü dışında her öğe, bir ekleme bağlantısının hedefidir. Bu nedenle modelin tamamı, ekleme bağlantılarının tek bir ağacını oluşturur. Ekleme ilişkisi, içeriği veya sahipliği temsil eder. Bu şekilde ilişkili iki model öğesi üst ve alt öğe olarak da bilinir. Alt öğenin üst öğeye ekli olduğu ifade edildi.
+ Bir modeldeki kökü dışında her öğe, bir ekleme bağlantısının hedefidir. Bu nedenle, modelin tamamı ekleme bağlantılarının tek bir ağacını oluşturur. Ekleme ilişkisi, içeriği veya sahipliği temsil eder. Bu şekilde ilişkili iki model öğesi üst ve alt öğe olarak da bilinir. Alt öğenin üst öğeye ekli olduğu ifade edildi.
 
- Ekleme bağlantıları genellikle diyagramda bağlayıcılar olarak açıkça gösterilmez. Bunun yerine, bunlar genellikle bir karşıtlık ile temsil edilenlerdir. Modelin kökü diyagram tarafından temsil edilen ve içine eklenmiş öğeler diyagramda şekil olarak görüntülenir.
+ Ekleme bağlantıları genellikle diyagramda bağlayıcılar olarak açıkça gösterilmez. Bunun yerine, bunlar genellikle bir karşıtlık ile temsil edilenlerdir. Modelin kökü diyagram tarafından temsil edildi ve içine eklenmiş öğeler diyagramda şekil olarak görüntülenir.
 
  Örnekte, Music kök sınıfının MusicHasAlbums ile MusicHasAlbums to Music ekleme ilişkisi vardır. Bu, MusicHasSongs to Song eklemeye sahip. Şarkı, her BirIns'in içindeki bir listede öğeler olarak görüntülenir. Music ayrıca örnekleri diyagramda şekil olarak görünen MusicHasArtists'ı Artist sınıfına da ekleyştiren bir sınıfa sahiptir.
 
@@ -109,7 +110,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 
  Gezgin, modelde herhangi bir şekil tanımlanmamış olanlar bile tüm öğeleri gösterir. Öğeleri ve ekleme ilişkilerini gösterir, ancak başvuru ilişkilerini gösterir.
 
- Kullanıcı, bir öğenin etki alanı özelliklerinin değerlerini görmek için model diyagramında veya model gezgininde bir öğe seçer ve bir öğeyi Özellikler penceresi. Diyagramda görüntülenmeenler de dahil olmak üzere tüm etki alanı özelliklerini görüntüler. Örnekte her şarkının hem Title hem de Genre değerleri vardır ancak diyagramda yalnızca Title değeri gösterilir.
+ Kullanıcı, bir öğenin etki alanı özelliklerinin değerlerini görmek için model diyagramında veya model gezgininde bir öğe seçer ve bir öğeyi Özellikler penceresi. Diyagramda görüntülenmeenler de dahil olmak üzere tüm etki alanı özelliklerini görüntüler. Örnekte her Şarkının hem Title hem de Genre değerleri vardır ancak diyagramda yalnızca Title değeri gösterilir.
 
 ## <a name="reference-relationships"></a>Başvuru İlişkileri
  Başvuru ilişkisi, eklemeyen her tür ilişkiyi temsil eder.
@@ -121,16 +122,16 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 ## <a name="roles"></a>Roller
  Her etki alanı ilişkisinin iki rolü vardır: kaynak rol ve hedef rol.
 
- Aşağıdaki resimde, Yayımcı etki alanı sınıfı ile **PublisherCatalog** etki alanı ilişkisi arasındaki satır kaynak rol olur.  Etki alanı ilişkisi ile Etki Alanı etki **alanı sınıfı** arasındaki çizgi hedef roldür.
+ Aşağıdaki resimde, etki alanı sınıfı **Publisher** **PublisherCatalog** etki alanı ilişkisi arasındaki satır kaynak rol olur. Etki alanı ilişkisi ile Etki Alanı etki **alanı sınıfı** arasındaki çizgi hedef roldür.
 
  ![Roller ve özellikler.](../modeling/media/propertycode.png)
 
- Bir ilişkiyle ilişkili adlar özellikle modelden geçen program kodu yazmanız açısından önemlidir. Örneğin DSL çözümünü derlemek için oluşturulan Publisher sınıfının Bir Koleksiyon olan Bir Özellik Kataloğu vardır. Sınıf, Publisher sınıfının tek bir örneği olan Publisher özelliğine sahip.
+ Bir ilişkiyle ilişkili adlar özellikle modelden geçen program kodu yazmanız açısından önemlidir. Örneğin DSL çözümünü derlemek için oluşturulan sınıf Publisher Koleksiyon olan bir Katalog özelliğine sahiptir. Class Class, sınıf Publisher tek bir örneği olan bir özel Publisher.
 
  DSL Tanımında ilişki sanız, özellik ve ilişki adlara varsayılan değerler verilir. Ancak bunları değiştirebilirsiniz.
 
 ## <a name="multiplicities"></a>Çoklulıklar
- Çoklulıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, Katalog rolünde sıfır-çok (0.. ) çokluğu ayarı, Yayımcı etki alanı sınıfının herhangi bir örneğine vermek istediğiniz sayıda \* **PublisherCatalog**  ilişkisi bağlantısına sahip olduğunu belirtir. 
+ Çoklulıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, Katalog rolünde sıfır-çok (0.. ) çokluğu ayarı, Publisher etki alanı sınıfının herhangi bir örneğinin vermek istediğiniz sayıda \* **PublisherCatalog**  ilişkisi bağlantısına sahip olduğunu belirtir. 
 
  Diyagrama yazarak veya Özellikler penceresinde özelliğini değiştirerek rolün `Multiplicity` çokluğu **yapılandırabilirsiniz.** Aşağıdaki tabloda bu özelliğin ayarları açıkmektedir.
 
@@ -144,7 +145,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 ## <a name="domain-relationships-as-classes"></a>Sınıf olarak Etki Alanı İlişkileri
  Store'da bir bağlantı, ModelElement'in türetilmiş bir sınıfı olan LinkElement örneği olarak temsil edildi. Bu özellikleri etki alanı ilişkileriyle ilgili etki alanı modeli diyagramında tanımlayabilirsiniz.
 
- Bir ilişkiyi diğer ilişkilerin kaynağı veya hedefi de hale de siniz. Etki alanı modeli diyagramında etki alanı ilişkisine sağ tıklayın ve ardından Sınıf Olarak **Göster'e tıklayın.** Ek bir sınıf kutusu görüntülenir. Daha sonra ilişkileri buna bağlanarak bu bağlantılara bağlanarak bu bağlantılara bağlanarak bağlantı kur
+ Bir ilişkiyi diğer ilişkilerin kaynağı veya hedefi de hale de siniz. Etki alanı modeli diyagramında etki alanı ilişkisine sağ tıklayın ve ardından Sınıf Olarak **Göster'e tıklayın.** Ek bir sınıf kutusu görüntülenir. Ardından bu ilişkiyle ilişkilere bağlanarak bağlantı kurarak bağlantı kurarak ilişki kurarak bağlantı
 
  Etki alanı sınıflarında olduğu gibi bir ilişkiyi devralmaya göre kısmen tanımlayabilirsiniz. Türetilmiş ilişkiyi seçin ve veri **kümesinde** Temel İlişki Özellikler penceresi.
 

@@ -10,14 +10,15 @@ ms.assetid: 21cb3e63-f25c-404b-bc1d-a32ad0fdd4d5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 57d5337ae088560bb94a6af39902e90b6af02686
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6d81843ebe6782f1f65acb64c0816f94e958ae82343f3d55efb4dbd8094e9625
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060971"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275365"
 ---
 # <a name="providing-automation-for-code"></a>Kod için Otomasyon Sağlama
 Kodunuz için bir otomasyon modeli oluşturmak gerekli değildir. Ortam SDK 'Sı bu işlemi gerçekleştirmek için bir örnek sağlamaz. Kod modellerine ilişkin Öngörüler için, nesnesine bakın <xref:EnvDTE.CodeModel> .

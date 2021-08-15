@@ -8,17 +8,18 @@ ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: b21a7515f7ad4bad74088b6b580a4a3122a2e12a
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 106339c932b0339542fd184675448b8ec8354bf0618fbddc7e351ab11763a289
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216988"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121234765"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>İzlenecek yol: kod parçacıklarını uygulama
 Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekleyerek uzantı kullanıcılarının bunları kendi koduna ekleyebilmesini sağlayabilirsiniz.
@@ -38,7 +39,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
    Bu izlenecek yol, [Izlenecek yol: görüntüleme ifadesinin tamamlanmasını](../extensibility/walkthrough-displaying-statement-completion.md)temel alır.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-and-register-code-snippets"></a>Kod parçacıkları oluşturma ve kaydetme
  Genellikle, kod parçacıkları kayıtlı bir dil hizmeti ile ilişkilendirilir. Ancak, <xref:Microsoft.VisualStudio.Package.LanguageService> kod parçacıklarını kaydetmek için bir uygulamanız gerekmez. Bunun yerine, kod parçacığı dizin dosyasında bir GUID belirtmeniz ve ardından projenize eklediğiniz GUID 'yi kullanmanız yeterlidir <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> .
@@ -49,9 +50,9 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 
     **%InstallDir%\TestSnippets\Snippets\1033\\**
 
-    Burada *% InstallDir%* , Visual Studio yükleme klasörüdür. (Bu yol genellikle kod parçacıklarını yüklemek için kullanılsa da, herhangi bir yol belirtebilirsiniz.)
+    burada *% ınstalldir%* Visual Studio yükleme klasörüdür. (Bu yol genellikle kod parçacıklarını yüklemek için kullanılsa da, herhangi bir yol belirtebilirsiniz.)
 
-2. \ 1033 \ klasöründe bir *. xml* dosyası oluşturun ve **TestSnippets.xml** adlandırın. (Bu ad genellikle bir kod parçacığı Dizin dosyası için kullanılsa da, bir *. xml* dosya adı uzantısına sahip olduğu sürece herhangi bir ad belirtebilirsiniz.) Aşağıdaki metni ekleyin ve ardından yer tutucu GUID 'INI silin ve kendinizinkini ekleyin.
+2. \ 1033 \ klasöründe bir *.xml* dosyası oluşturun ve **TestSnippets.xml** adlandırın. (Bu ad genellikle bir kod parçacığı Dizin dosyası için kullanılsa da, *.xml* dosya adı uzantısına sahip olduğu sürece herhangi bir ad belirtebilirsiniz.) Aşağıdaki metni ekleyin ve ardından yer tutucu GUID 'INI silin ve kendinizinkini ekleyin.
 
    ```xml
    <?xml version="1.0" encoding="utf-8" ?>
@@ -126,7 +127,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 
 3. Projesinde, **kaynak. Extension. valtmanifest** dosyasını açın.
 
-4. **Varlıklar** sekmesinin **VSPackage** içerik türünü içerdiğinden ve bu **projenin** projenin adına ayarlandığından emin olun.
+4. **varlıklar** sekmesinin **vspackage** içerik türünü içerdiğinden ve **Project** projenin adına ayarlandığından emin olun.
 
 5. CompletionTest projesini seçin Özellikler penceresi set **Generate pkgdef dosyasını** **true** olarak ayarlayın. Projeyi kaydedin.
 
@@ -145,7 +146,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs" id="Snippet24":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb" id="Snippet24":::
 
-9. Projeyi derleyin ve çalıştırın. Projeyi çalıştırdığınızda, Visual Studio 'nun deneysel örneğinde, yeni kaydettiğiniz kod parçacığı, **Test parçacıkları** dili altındaki **kod parçacıkları yöneticisinde** görüntülenmelidir.
+9. Projeyi derleyin ve çalıştırın. proje çalıştırıldığında başlayan Visual Studio deneysel örneğinde, az önce kaydettiğiniz kod parçacığı, **test parçacıkları** dili altındaki **kod parçacıkları yöneticisinde** görüntülenmelidir.
 
 ## <a name="add-the-insert-snippet-command-to-the-shortcut-menu"></a>Kısayol menüsüne kod parçacığı Ekle komutunu ekleyin
  **Kod parçacığı Ekle** komutu, bir metin dosyasının kısayol menüsüne dahil değildir. Bu nedenle, komutunu etkinleştirmeniz gerekir.
@@ -228,7 +229,7 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 ## <a name="build-and-test-code-snippet-expansion"></a>Kod parçacığı genişletmeyi derleme ve test etme
  Kod parçacığının genişletmesinin projenizde çalışıp çalışmadığını test edebilirsiniz.
 
-1. Çözümü derleyin. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği başlatılır.
+1. Çözümü derleyin. bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio ikinci bir örneği başlatılır.
 
 2. Bir metin dosyası açın ve metin yazın.
 

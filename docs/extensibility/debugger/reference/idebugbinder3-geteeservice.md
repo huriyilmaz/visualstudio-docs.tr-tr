@@ -11,17 +11,18 @@ ms.assetid: eb07aa40-8cd9-4a52-a4c7-4affd2307a01
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ccc4d28a06d87d7c17d16470e10f259657083cc9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 241c47d6bf76324d762bb96e5ba7e154b6216fb71c16e1547037dca12b362be6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094308"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342615"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
 Bu yöntem istenen hizmeti döndürür.

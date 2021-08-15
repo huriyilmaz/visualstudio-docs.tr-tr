@@ -1,6 +1,6 @@
 ---
-description: Genel kapsama bir başvuru alır.
-title: 'IDiaSession:: get_globalScope | Microsoft Docs'
+description: Genel kapsam için bir başvuru verir.
+title: IDiaSession::get_globalScope | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 75d128a8-3dce-40ed-b392-de3fdda041b7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ce8c0c68242aef2e06a071686c57d1f5ebec2976
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b05934222ac3fc8d7e0d18cf83eaf2e43424147e101b5658019f849518ca5a4c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157058"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344775"
 ---
 # <a name="idiasessionget_globalscope"></a>IDiaSession::get_globalScope
-Genel kapsama bir başvuru alır.
+Genel kapsam için bir başvuru verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +35,10 @@ HRESULT get_globalScope (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Genel kapsamı temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+[out] Genel kapsamı [temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Exe](../../debugger/debug-interface-access/exe.md)

@@ -9,14 +9,15 @@ f1_keywords:
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 6ec955d6c105c1381d7f576a80b136eb3a54adff
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: 1314bc4c77de95c4ed24debf3b17c80d186dd405ab222cadb32f7fb91fde6238
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114680140"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121441675"
 ---
 # <a name="lint-r-code-in-visual-studio"></a>Visual Studio LINT R kodu
 

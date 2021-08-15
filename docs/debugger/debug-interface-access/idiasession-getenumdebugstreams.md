@@ -11,14 +11,15 @@ ms.assetid: d294954b-80e9-476c-b9f0-5ca6fd575f68
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d9711399529fa1afc0eaca70e28a5bae5f2035ba
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: eb86b4de271f460d7793d8974e01bc2848f3baea7f6ccea79435a23245b27579
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157030"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344735"
 ---
 # <a name="idiasessiongetenumdebugstreams"></a>IDiaSession::getEnumDebugStreams
 Hata ayıklama veri akışlarının numaralandırılmış bir dizisini alır.

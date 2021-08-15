@@ -1,6 +1,6 @@
 ---
-description: İşaret edilen değeri ardışık baytların bir serisinden belirler.
-title: 'Ihata ayıklama Gpoınterobject:: SetBytes | Microsoft Docs'
+description: Ardışık bayt dizilerinden işaret eden değeri ayarlar.
+title: IDebugPointerObject::SetBytes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 8c578b38-38d7-46f3-bb2e-8a730fccd334
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 015a7782fae01f06a9d1cc4a5e64090303d2f2e0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 61152240fe28fbf2b5329bfc5aebd1fbf06dca4a235c3595379b3604621b8bc5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087593"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121277198"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
-İşaret edilen değeri ardışık baytların bir serisinden belirler.
+Ardışık bayt dizilerinden işaret eden değeri ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,22 +49,22 @@ int SetBytes(
 
 ## <a name="parameters"></a>Parametreler
 `dwStart`\
-'ndaki İşaret edilen nesnenin başından itibaren bayt cinsinden bir konum.
+[in] Nesnenin başlangıcına işaret eden bayt cinsinden uzaklık.
 
 `dwCount`\
-'ndaki Ayarlanacak bayt sayısı.
+[in] Ayar için bayt sayısı.
 
 `pBytes`\
-'ndaki Yeni değeri temsil eden bir bayt dizisi. Bu değer, belirtilen kaydırmadan başlayarak nesnesine depolanır.
+[in] Yeni değeri temsil eden bayt dizisi. Bu değer, verilen uzaklık ile başlayarak nesnede depolanır.
 
 `pdwBytes`\
-dışı Gerçekten ayarlanan bayt sayısını döndürür.
+[out] Gerçekte ayarlanmış bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bu [Ihata ayıklama Gpoınterobject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen işaretçi temel bir türe veya basit türlerin basit bir dizisine (yani basit bir bayt dizisiyle temsil edilebilir bir dizi) işaret ediyorsa kullanılır. Bu `IDebugPointerObject` nesne null bir başvuru olamaz (bellekte bir adrese işaret etmelidir).
+ Bu yöntem, [işaretçi bu IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen ilkel bir türü veya basit bir ilkel tür dizisini (basit bir bayt dizisiyle temsil edilen bir dizi) işaret ediyorsa kullanılır. Bu `IDebugPointerObject` nesne null başvuru olamaz (bellekte bir adrese işaret ediyor olmalıdır).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)

@@ -1,6 +1,6 @@
 ---
 title: SharePoint uygulamalarının performansının profilini oluşturma | Microsoft Docs
-description: Yavaş veya yeterince uygun çalışıyorsa SharePoint uygulamalarının performansını profil halinde yapın. Sorunlu kodu bulmak için Visual Studio profil oluşturma özelliklerini kullanın.
+description: yavaş veya yeterli düzeyde çalışıyorsa SharePoint uygulamaların performansını profil halinde yapın. sorunlu kodu bulmak için Visual Studio profil oluşturma özelliklerini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,24 +18,25 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: d59f5b472f791f9774515cdb3e92cc4cf7f9f55b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fc01ef43e750ccbff5b85b85b550c1254447f44828e1e18edfc4a169b1682d5a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860743"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121244296"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>SharePoint uygulamalarının performansını profil halinde
 
-SharePoint uygulamalarınız yavaş veya yeterince uygun bir şekilde yapılıyorsa, sorunlu kodu ve diğer öğeleri belirlemek için Visual Studio 'daki profil oluşturma özelliklerini kullanabilirsiniz. Yük testi özelliğini kullanarak, çok sayıda kullanıcının uygulamaya aynı anda erişmesi gibi bir SharePoint uygulamasının stres altında nasıl gerçekleştiğini belirleyebilirsiniz. Web performans testlerini çalıştırarak, uygulamanın Web üzerinde nasıl gerçekleştiğini ölçebilir. Kodlanmış UI testlerini kullanarak, Kullanıcı arabirimi de dahil olmak üzere tüm SharePoint uygulamasının düzgün çalışıp çalışmadığını doğrulayabilirsiniz. Bu testleri birlikte kullandığınızda, uygulamanızı dağıtmadan önce performans sorunlarını belirlemenize yardımcı olabilirler.
+SharePoint uygulamalarınız yavaş veya yeterince uygun değilse, sorunlu kodu ve diğer öğeleri belirlemek için Visual Studio profil oluşturma özelliklerini kullanabilirsiniz. yük testi özelliğini kullanarak, çok sayıda kullanıcının uygulamaya aynı anda erişmesi gibi SharePoint bir uygulamanın stres altında nasıl gerçekleştiğini belirleyebilirsiniz. Web performans testlerini çalıştırarak, uygulamanın Web üzerinde nasıl gerçekleştiğini ölçebilir. kodlanmış uı testlerini kullanarak, kullanıcı arabirimi de dahil olmak üzere tüm SharePoint uygulamasının düzgün çalışıp çalışmadığını doğrulayabilirsiniz. Bu testleri birlikte kullandığınızda, uygulamanızı dağıtmadan önce performans sorunlarını belirlemenize yardımcı olabilirler.
 
 ## <a name="profile-tools-overview"></a>Profil araçlarına genel bakış
 
 Profil oluşturma, uygulama çalışırken uygulamanızın performans davranışını gözlemleme ve kaydetme sürecini ifade eder. Uygulamanızın profilini oluşturarak performans sorunlarını, verimsiz kodu ve bellek ayırma sorunlarını, uygulamaların yavaş çalışmasına veya çok fazla bellek kullanmasına neden olan sorunları ortaya çıkarabilir. Örneğin, kodunuzun içindeki etkin noktaları belirlemek için profil oluşturmayı kullanabilirsiniz. Bu, sık çağrılan kod kesimleri olan ve uygulamanızın genel performansını yavaşlatabilecek bir kod kesimi olabilir. Etkin noktaları tanımladıktan sonra, bunları genellikle iyileştirebilirsiniz veya ortadan kaldırabilirsiniz.
 
-Bu tür performans sorunlarını belirlemek ve bulmak için tümleşik geliştirme ortamında (IDE) birkaç profil oluşturma aracı kullanabilirsiniz. Bu araçlar, diğer Visual Studio projelerinde olduğu gibi SharePoint projeleri için de aynı şekilde çalışır. Profil Oluşturma Araçları Performans Sihirbazı, belirttiğiniz testleri kullanan bir performans oturumu oluşturma konusunda size yol gösterir. Bir performans oturumu, bir veya daha fazla profil oluşturma çalıştırmalarının sonuçlarıyla birlikte, bir uygulamadan performans bilgilerini toplamak için kullanılan yapılandırma verileri kümesidir. Performans oturumları proje klasörünüzde depolanır ve bunları **Performans Gezgini** görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [performans toplama yöntemlerini anlama](../profiling/understanding-performance-collection-methods.md).
+Bu tür performans sorunlarını belirlemek ve bulmak için tümleşik geliştirme ortamında (IDE) birkaç profil oluşturma aracı kullanabilirsiniz. bu araçlar, diğer Visual Studio projeleri için yaptıkları gibi SharePoint projeleri için de aynı şekilde çalışır. Profil Oluşturma Araçları Performans Sihirbazı, belirttiğiniz testleri kullanan bir performans oturumu oluşturma konusunda size yol gösterir. Bir performans oturumu, bir veya daha fazla profil oluşturma çalıştırmalarının sonuçlarıyla birlikte, bir uygulamadan performans bilgilerini toplamak için kullanılan yapılandırma verileri kümesidir. Performans oturumları proje klasörünüzde depolanır ve bunları **Performans Gezgini** görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [performans toplama yöntemlerini anlama](../profiling/understanding-performance-collection-methods.md).
 
 Uygulamanızda bir profil analizi oluşturup çalıştırdıktan sonra, bir rapor, performansına ilişkin ayrıntıları sağlar. Bu rapor, zaman içinde CPU kullanımının bir grafiği, hiyerarşik bir işlev çağrı yığını veya bir çağrı ağacı gibi öğeleri içerebilir. Raporun tam içerikleri, çalıştırdığınız test türüne bağlı olarak (örnekleme veya izleme gibi) farklılık gösterebilir. Daha fazla bilgi için bkz. [profil oluşturma araçları rapora genel bakış](../profiling/performance-report-overview.md).
 
@@ -47,28 +48,28 @@ Bir performans oturumu ayarladıktan sonra oturum yapılandırması kaydedilir, 
 
 ## <a name="stress-test"></a>Stres testi
 
-Visual Studio 'da yük testleri ve Web performans testleri oluşturarak uygulamalarınızın stres performansını çözümleyebilirsiniz. Visual Studio 'da bir yük testi oluşturduğunuzda, uygulamanızı test etmek için senaryo olarak adlandırılan faktörlerin bir bileşimini belirtirsiniz. Bu faktörlere yük modeli, test karışımı modeli, test karışımı, ağ karışımı ve Web tarayıcısı karışımı dahildir. Yük testi senaryoları, hem birim testlerini hem de Web performans testlerini içerebilir.
+Visual Studio ' de yük testleri ve Web performans testleri oluşturarak uygulamalarınızın stres performansını çözümleyebilirsiniz. Visual Studio ' de bir yük testi oluşturduğunuzda, uygulamanızı test etmek için senaryo olarak adlandırılan faktörlerin bir bileşimini belirtirsiniz. Bu faktörlere yük modeli, test karışımı modeli, test karışımı, ağ karışımı ve Web tarayıcısı karışımı dahildir. Yük testi senaryoları, hem birim testlerini hem de Web performans testlerini içerebilir.
 
 Şekil 1: yük testi sonuçları örneği
 
 ![Yük testi grafik görünümünü çalıştırma](../sharepoint/media/load-webgraphs.png "Yük testi grafik görünümünü çalıştırma")
 
-Web performans testleri, son kullanıcının bir SharePoint uygulamasıyla nasıl etkileşime girebileceğini taklit eder. HTTP isteklerini bir tarayıcı oturumunda kaydederek veya **Web performans testi Kaydedicisi**' ni kullanarak Web performans testleri oluşturabilirsiniz. Web istekleri, tarayıcı oturumu bittikten sonra **Web Performans Testi Düzenleyicisi** görüntülenir. Daha sonra **Web performans test sonuçları görüntüleyicisindeki** sonuçlarda hata ayıklaması yapabilirsiniz. Ayrıca, **Web Performans Testi Düzenleyicisi** kullanarak Web performans testlerini el ile oluşturabilirsiniz.
+Web performans testleri, son kullanıcının SharePoint uygulamayla nasıl etkileşime girebileceğini taklit eder. HTTP isteklerini bir tarayıcı oturumunda kaydederek veya **Web performans testi Kaydedicisi**' ni kullanarak Web performans testleri oluşturabilirsiniz. Web istekleri, tarayıcı oturumu bittikten sonra **Web Performans Testi Düzenleyicisi** görüntülenir. Daha sonra **Web performans test sonuçları görüntüleyicisindeki** sonuçlarda hata ayıklaması yapabilirsiniz. Ayrıca, **Web Performans Testi Düzenleyicisi** kullanarak Web performans testlerini el ile oluşturabilirsiniz.
 
 ## <a name="test-user-interfaces"></a>Test Kullanıcı arabirimleri
 
-Kodlanmış UI testleri, SharePoint uygulamanızı Kullanıcı arabirimi (UI) üzerinden otomatik olarak ister. Bu sınamalar, doğru şekilde çalıştıklarından emin olmak için düğme ve menü gibi UI denetimlerini kapsar. Bu tür bir test, Kullanıcı arabiriminde (örneğin, bir Web sayfasında) doğrulama veya başka bir mantık gerçekleştirildiğinde özellikle yararlıdır. Ayrıca, el ile testleri otomatikleştirmek için kodlanmış UI testleri de kullanabilirsiniz. SharePoint uygulamalarınız için kodlanmış UI testleri, diğer uygulama türleri için testler oluştururken aynı şekilde oluşturulur. Daha fazla bilgi için bkz. [KODLANMıŞ UI Testleriyle SharePoint 2010 uygulamalarını test etme](/previous-versions/visualstudio/visual-studio-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests?preserve-view=true&view=vs-2015).
+kodlanmış uı testleri, kullanıcı arabirimi (uı) aracılığıyla SharePoint uygulamanızı otomatik olarak ister. Bu sınamalar, doğru şekilde çalıştıklarından emin olmak için düğme ve menü gibi UI denetimlerini kapsar. Bu tür bir test, Kullanıcı arabiriminde (örneğin, bir Web sayfasında) doğrulama veya başka bir mantık gerçekleştirildiğinde özellikle yararlıdır. Ayrıca, el ile testleri otomatikleştirmek için kodlanmış UI testleri de kullanabilirsiniz. SharePoint uygulamalarınız için kodlanmış uı testleri, diğer uygulama türleri için testler oluştururken aynı şekilde oluşturulur. daha fazla bilgi için bkz. [kodlanmış uı testleriyle SharePoint 2010 uygulamalarını test etme](/previous-versions/visualstudio/visual-studio-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests?preserve-view=true&view=vs-2015).
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[İzlenecek yol: SharePoint uygulaması profili oluşturma](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|Bir SharePoint uygulamasında örnekleme profili analizinin nasıl gerçekleştirileceğini gösterir.|
-|[Uygulamadan önce uygulamanızı performans testi](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts&preserve-view=true)|Test SharePoint uygulamalarını vurgulamada yardımcı olan yük testlerinin nasıl oluşturulduğunu açıklar.|
+|[izlenecek yol: SharePoint bir uygulama profili oluşturma](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|SharePoint uygulamasında örnekleme profili analizinin nasıl gerçekleştirileceğini gösterir.|
+|[Uygulamadan önce uygulamanızı performans testi](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts&preserve-view=true)|test SharePoint uygulamalarını vurgulamada yardımcı olan yük testlerinin nasıl oluşturulduğunu açıklar.|
 |[Kodunuza Birim Testi Uygulama](../test/unit-test-your-code.md)|Birim testlerini kullanarak kodunuzda mantık hatalarının nasıl bulunacağını açıklar.|
-|[Kodlanmış UI Testleriyle SharePoint 2010 Uygulamalarını Test Etme](/previous-versions/visualstudio/visual-studio-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests?preserve-view=true&view=vs-2015)|SharePoint uygulamalarınızın Kullanıcı arabiriminin nasıl test edileceğini açıklar.|
+|[Kodlanmış UI Testleriyle SharePoint 2010 Uygulamalarını Test Etme](/previous-versions/visualstudio/visual-studio-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests?preserve-view=true&view=vs-2015)|SharePoint uygulamalarınızın kullanıcı arabiriminin nasıl test edileceğini açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)
 - [Kod Kalitesini Geliştirme](../test/improve-code-quality.md)

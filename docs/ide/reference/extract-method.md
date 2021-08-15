@@ -6,6 +6,7 @@ ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 f1_keywords:
 - vs.csharp.refactoring.extractmethod
 dev_langs:
@@ -13,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6ee11ec012ae0f104f5fefff7302d3982e43721a
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 10f8b09defe7c4e156b015f590f1b494ba2704a164f0ce67625d1cac5b93e653
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106083661"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121304378"
 ---
 # <a name="extract-a-method-refactoring"></a>Bir yöntemi yeniden düzenlemeyi Ayıkla
 
@@ -44,7 +45,7 @@ Bu yeniden düzenleme için geçerlidir:
 
    - Visual Basic:
 
-       ![Ana Sub için Visual Basic kodu gösteren ekran görüntüsü. Bu alt öğesinde, bir kod satırı vurgulanır.](media/extractmethod-highlight-vb.png)
+       ![ana Sub için Visual Basic kodu gösteren ekran görüntüsü. Bu alt öğesinde, bir kod satırı vurgulanır.](media/extractmethod-highlight-vb.png)
 
 2. Sonra, aşağıdakilerden birini yapın:
 
@@ -67,7 +68,7 @@ Bu yeniden düzenleme için geçerlidir:
 
    - Visual Basic:
 
-      ![Ana Sub için Visual Basic kodu gösteren ekran görüntüsü. Bir yöntem adı vurgulanır ve açılan pencereyi yeniden adlandır penceresi açıktır.](media/extractmethod-rename-vb.png)
+      ![ana Sub için Visual Basic kodu gösteren ekran görüntüsü. Bir yöntem adı vurgulanır ve açılan pencereyi yeniden adlandır penceresi açıktır.](media/extractmethod-rename-vb.png)
 
 3. Değişikliğin ne kadar memnunsanız **Uygula** düğmesini seçin veya **ENTER** tuşuna basın ve değişiklikler uygulanır.
 

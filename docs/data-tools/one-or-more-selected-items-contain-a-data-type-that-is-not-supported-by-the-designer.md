@@ -1,6 +1,6 @@
 ---
 title: Desteklenmeyen veri türü
-description: Seçilen bir veya daha fazla öğe, tasarımcı tarafından desteklenmeyen bir veri türü içeriyor. Bu Visual Studio O/R Designer iletisi hakkındaki bilgileri görüntüleyin.
+description: Seçilen bir veya daha fazla öğe, tasarımcı tarafından desteklenmeyen bir veri türü içeriyor. bu Visual Studio O/R Designer iletisi hakkındaki bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -8,14 +8,15 @@ ms.assetid: 71dcd4f9-2946-42c5-9ce4-99c819ea2785
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c50d47363217a87147275a406d5370cc8736c10b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 638a6daa512983b4ea701a6c8a1b4abee565dc368c2e0208634f1635f3019572
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866651"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121328221"
 ---
 # <a name="one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer"></a>Seçilen bir veya birden çok öğe, tasarımcı tarafından desteklenmeyen bir veri türü içeriyor
 
@@ -29,4 +30,4 @@ ms.locfileid: "99866651"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio araçlar LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

@@ -1,6 +1,6 @@
 ---
-description: Yığın çerçevesiyle ilişkili fiziksel adres aralığının makineye bağlı temsilini alır.
-title: 'IDebugStackFrame2:: GetPhysicalStackRange | Microsoft Docs'
+description: Bir yığın çerçevesiyle ilişkili fiziksel adres aralığının makineye bağımlı bir gösterimini alır.
+title: IDebugStackFrame2::GetPhysicalStackRange | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 2f6992e2-ac1c-433f-83b7-a7f83a4ce63d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7612267a428986ac67a02934f8cbdec38dcb736a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 75bba9bd57f544b82dd459ca7e001de8657cbd79a05c3bdc01a6a5d1d72705bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053340"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121321603"
 ---
 # <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
-Yığın çerçevesiyle ilişkili fiziksel adres aralığının makineye bağlı temsilini alır.
+Bir yığın çerçevesiyle ilişkili fiziksel adres aralığının makineye bağımlı bir gösterimini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,18 +45,18 @@ int GetPhysicalStackRange (
 
 ## <a name="parameters"></a>Parametreler
 `paddrMin`\
-dışı Bu yığın çerçevesiyle ilişkili en düşük fiziksel adresi döndürür.
+[out] Bu yığın çerçevesiyle ilişkili en düşük fiziksel adresi döndürür.
 
 `paddrMax`\
-dışı Bu yığın çerçevesiyle ilişkili en yüksek fiziksel adresi döndürür.
+[out] Bu yığın çerçevesiyle ilişkili en yüksek fiziksel adresi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemin döndürdüğü bilgiler, yığın çerçevelerini sıralamak için oturum hata ayıklama Yöneticisi (SDM) tarafından kullanılır.
+ Bu yöntem tarafından döndürülen bilgiler, yığın çerçevelerini sıralamak için oturum hata ayıklama yöneticisi (SDM) tarafından kullanılır.
 
- Çağrı yığınının arttığına, yani yeni yığın çerçevelerinin artan bellek adreslerinde daha düşük bir şekilde ekleneceğini kabul edilir. Çalışma zamanı mimarisi, bu varsayım ile eşleşen fiziksel yığın aralıkları sağlamalıdır.
+ Çağrı yığınının aşağı doğru artarak yeni yığın çerçevelerinin giderek daha düşük bellek adreslerinde ekli olduğu varsayılır. Bir çalışma zamanı mimarisi, bu varsayımla eşan fiziksel yığın aralıkları sağlamaktadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

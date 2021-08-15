@@ -1,6 +1,6 @@
 ---
-description: Derleyicinin arka uç alt sürüm numarasını alır.
-title: 'IDiaSymbol:: get_backEndMinor | Microsoft Docs'
+description: Derleyicinin arka uç ikincil sürüm numarasını alın.
+title: IDiaSymbol::get_backEndMinor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 37f38d19-6685-440d-a477-7127c4f8699e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e9506e142728235ad58560ab787c881c47b729a4
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b48c3a2e5042137ceed4c8655ec2d080c597f99d2c060b3b19a7130f31372564
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156477"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121312055"
 ---
 # <a name="idiasymbolget_backendminor"></a>IDiaSymbol::get_backEndMinor
-Derleyicinin arka uç alt sürüm numarasını alır.
+Derleyicinin arka uç ikincil sürüm numarasını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,25 +35,25 @@ HRESULT get_backEndMinor (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Arka uç alt sürüm numarasını döndürür. Bkz. açıklamalar.
+[out] Arka uç ikincil sürüm numarasını döndürür. Bkz. Açıklamalar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Derleyici genellikle iki birincil öğeden oluşur: kaynak kodu bir ara forma ayrıştırmayı işleyen ön uç (Ayrıştırıcı) ve ara formu derlemeye dönüştüren bir arka uç (kod Oluşturucu). Ön uç için arka uçtan farklı bir sürüme sahip olması seyrek değildir.
+ Derleyici genellikle iki birincil öğeden oluşur: kaynak kodu bir ara forma ayrıştırmayı ele alan ön uç (ayrıştırıcı) ve ara formu derlemeye dönüştüren bir arka uç (kod oluşturucu). Ön uçta arka uçtan farklı bir sürüme sahip olmak yaygın bir durum değildir.
 
- Ön uç veya arka uç sürüm numarası üç bölümden oluşur: \<major> . \<minor> . \<build> , burada \<major> ana sürüm numarasıdır, \<minor> ikincil sürüm numarasıdır ve \<build> yapı numarasıdır. Örneğin, 13.10.3077.
+ Ön uç veya arka uç sürüm numarası üç parçadan oluşur: . . , burada ana sürüm numarasıdır, ikincil sürüm numarasıdır ve \<major> \<minor> derleme \<build> \<major> \<minor> \<build> numarasıdır. Örneğin, 13.10.3077.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 7.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

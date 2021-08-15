@@ -11,14 +11,15 @@ ms.assetid: 7bd6b952-cf34-4e66-b8f6-d472dac3748f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d08169b196e01b5e2a7effdfe54829d17a970ef3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 16292416d3d915bb5093de292a491ba91a172d42522fdd78a02f9377182480b9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076517"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338949"
 ---
 # <a name="idebugprocess3"></a>IDebugProcess3
 Bu arabirim çalışan bir işlemi ve programlarını temsil eder. Bu arabirim, [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimindeki çeşitli yöntemlerin yerini alacak şekilde bulunur. İşlemdeki tüm programlar üzerinde denetim sağlar.

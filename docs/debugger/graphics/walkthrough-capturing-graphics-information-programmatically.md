@@ -1,52 +1,53 @@
 ---
-title: Grafik bilgilerini programlı olarak yakala
-description: Bkz. Visual Studio Grafik Tanılama kullanarak Direct3D uygulamasındaki grafik bilgilerini programlama yoluyla yakalama.
+title: Grafik bilgilerini program aracılığıyla yakalama
+description: Direct3D uygulamasından Visual Studio Grafik Tanılama bilgilerini program aracılığıyla yakalamak için nasıl kullanabileceğiniz hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bc65fe3b0052dfbf133b861a933dcbcc33e3a371
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2c251ee95d86431a64f3c5e7c1f103b98fba3abc632de3b0db2f00d0e95a7549
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861388"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239876"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek yol: Grafik Bilgilerini Program Aracılığıyla Yakalama
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Direct3D uygulamasından grafik bilgilerini programlı bir şekilde yakalamak için grafik tanılama kullanabilirsiniz.
+Direct3D Grafik Tanılama grafik bilgilerini program [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aracılığıyla yakalamak için Grafik Tanılama'yi kullanabilirsiniz.
 
-Programlı yakalama, gibi senaryolarda faydalıdır:
+Programlı yakalama, şu senaryolarda yararlıdır:
 
-- Grafik uygulamanız, bir dokusunu oluştururken olduğu gibi swapzincirini kullanmazsa programlı olarak yakalamayı başlatın.
+- Grafik uygulamanız dokuya işlemesi gibi swapchain'i kullanmazsa program aracılığıyla yakalamaya başlayabilirsiniz.
 
-- Uygulamanız, hesaplamalar gerçekleştirmek için DirectCompute kullandığında olduğu gibi, uygulama hiç işlenmezse, programlı olarak yakalamayı başlatın.
+- Örneğin, hesaplamaları gerçekleştirmek için DirectCompute'ı kullandığında, uygulama hiç iş işlemezse, yakalamayı program aracılığıyla başlatabilirsiniz.
 
-- `CaptureCurrentFrame`Bir işleme sorunu, el ile test sırasında tahmin etmek ve yakalamak zor olduğunda, ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak programlı bir şekilde tahmin edilebilir.
+- El ile test için tahmin etmek ve yakalamak zor ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak program aracılığıyla tahmin edilebilen bir işleme `CaptureCurrentFrame` sorunu olduğunda çağrısı.
 
-## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a> Windows 10 ' da programlı yakalama
-Bu izlenecek yolda, güçlü yakalama yöntemini kullanan Windows 10 ' da DirectX 11,2 API kullanan uygulamalarda Programlı yakalama gösterilmektedir.
+## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a>Windows 10'de programlı yakalama
+Bu adım adım kılavuzda, sağlam yakalama yöntemini kullanan directX 11.2 API'sini Windows 10 uygulamalarda programlı yakalamayı gösterir.
 
-Bu bölümde bu görevlerin nasıl yapılacağı gösterilmektedir:
+Bu bölümde, bu görevlerin nasıl gerçekleştirllleri gösterir:
 
-- Uygulamanızı programlı yakalama kullanacak şekilde hazırlama
+- Programlı yakalama kullanmak için uygulama hazırlama
 
 - IDXGraphicsAnalysis arabirimini alma
 
 - Graf bilgilerini yakalama
 
 > [!NOTE]
-> Programlı yakalama 'nın önceki uygulamaları, Yakalama işlevselliği sağlamak için Visual Studio için Uzak Araçlar güvendi.
+> Programlı yakalamanın önceki uygulamaları, yakalama işlevi Visual Studio için Uzak Araçlar özelliklerine dayanıyordu.
 
-### <a name="preparing-your-app-to-use-programmatic-capture"></a>Uygulamanızı programlı yakalama kullanacak şekilde hazırlama
-Uygulamanızda Programlı yakalama 'yı kullanmak için gereken üst bilgileri içermesi gerekir. Bu üstbilgiler Windows 10 SDK 'sının bir parçasıdır.
+### <a name="preparing-your-app-to-use-programmatic-capture"></a>Programlı yakalama kullanmak için uygulama hazırlama
+Uygulamanıza programlı yakalama kullanmak için gerekli üst bilgileri içermesi gerekir. Bu üst bilgiler, Windows 10 SDK'sı kapsamındadır.
 
-##### <a name="to-include-programmatic-capture-headers"></a>Programlı yakalama üstbilgilerini dahil etmek için
+##### <a name="to-include-programmatic-capture-headers"></a>Programlı yakalama üst bilgilerini dahil etmek için
 
-- Bu üst bilgileri IDXGraphicsAnalysis arabirimini tanımlayabileceğiniz kaynak dosyasına ekleyin:
+- IDXGraphicsAnalysis arabirimini tanımladığınız kaynak dosyaya şu üst bilgileri girin:
 
     ```cpp
     #include <DXGItype.h>
@@ -56,27 +57,27 @@ Uygulamanızda Programlı yakalama 'yı kullanmak için gereken üst bilgileri i
     ```
 
     > [!IMPORTANT]
-    > Windows 10 uygulamalarınızda Programlı yakalama gerçekleştirmek için Windows 8,0 ve önceki sürümlerde Programlı yakalamayı destekleyen vsgcapture. h başlık dosyasını eklemeyin. Bu üstbilgi DirectX 11,2 ile uyumsuzdur. D3d11_2. h üst bilgisi eklendikten sonra bu dosya varsa, derleyici bir uyarı verir. Vsgcapture. h, d3d11_2. h öncesinde varsa, uygulama başlatılmaz.
+    > Windows 8.0 ve önceki sürümlerde programlı yakalamayı destekleyen vsgcapture.h üst bilgi dosyasını, Windows 10 uygulamalarınıza dahil edin. Bu üst bilgi DirectX 11.2 ile uyumsuz. D3d11_2.h üst bilgisi dahil edildikten sonra bu dosya dahil edilirse, derleyici bir uyarı gösterir. vsgcapture.h, d3d11_2.h'den önce dahil edilirse uygulama başlamaz.
 
     > [!NOTE]
-    > Makinenizde Haziran 2010 DirectX SDK 'Sı yüklüyse ve projenizin içerme yolu içeriyorsa `%DXSDK_DIR%includex86` , bunu ekleme yolunun sonuna taşıyın. Kitaplık yolunuzda aynısını yapın.
+    > Makinenize Haziran 2010 DirectX SDK'sı yüklüyse ve projenizin dahil etme yolu içeriyorsa, bunu dahil etme `%DXSDK_DIR%includex86` yolunun sonuna taşımanız gerekir. Kitaplık yolunuz için de aynısını kullanın.
 
 ### <a name="getting-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimini alma
-DirectX 11,2 ' den grafik bilgilerini yakalamadan önce DXGI hata ayıklama arabirimini almanız gerekir.
+DirectX 11.2'den grafik bilgilerini yakalamadan önce DXGI hata ayıklama arabirimini alasiniz.
 
 > [!IMPORTANT]
-> Programlı yakalama kullanırken, uygulamanızı hala grafik tanılama (alt + F5 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ) altında veya [komut satırı yakalama aracı](command-line-capture-tool.md)altında çalıştırmanız gerekir.
+> Programlı yakalama kullanırken, uygulamalarınızı grafik tanılamaları altında ('da Alt+F5) veya Komut Satırı Yakalama Aracı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [altında çalıştırmanız gerekir.](command-line-capture-tool.md)
 
 ##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimini almak için
 
-- DXGI hata ayıklama arabirimine IDXGraphicsAnalysis arabirimini bağlamak için aşağıdaki kodu kullanın.
+- IDXGraphicsAnalysis arabirimini DXGI hata ayıklama arabirimine bağlayan aşağıdaki kodu kullanın.
 
   ```cpp
   IDXGraphicsAnalysis* pGraphicsAnalysis;
   HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));
   ```
 
-  `HRESULT`Kullanmadan önce geçerli bir arabirim aldığınızdan emin olmak Için [DXGIGetDebugInterface1](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1) tarafından döndürülen ' i kontrol ettiğinizden emin olun:
+  `HRESULT` [DXGIGetDebugInterface1](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1) tarafından döndürülenleri kontrol edin ve bunu kullanmadan önce geçerli bir arabirim elde edin:
 
   ```cpp
   if (FAILED(getAnalysis))
@@ -86,14 +87,14 @@ DirectX 11,2 ' den grafik bilgilerini yakalamadan önce DXGI hata ayıklama arab
   ```
 
   > [!NOTE]
-  > `DXGIGetDebugInterface1` `E_NOINTERFACE` () Döndürürse `error: E_NOINTERFACE No such interface supported` , uygulamanın grafik tanılama (alt + F5) altında çalıştığından emin olun [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+  > döndürürse `DXGIGetDebugInterface1` `E_NOINTERFACE` ( ), `error: E_NOINTERFACE No such interface supported` uygulamanın grafik tanılaması altında ('da Alt+F5) çalıştırıldıklerinden emin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] olun.
 
 ### <a name="capturing-graphics-information"></a>Graf bilgilerini yakalama
-Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, `BeginCapture` `EndCapture` grafik bilgilerini yakalamak için ve kullanabilirsiniz.
+Geçerli bir arabirime sahip `IDXGraphicsAnalysis` olduğunuza göre, grafik bilgilerini yakalamak `BeginCapture` için ve `EndCapture` kullanabilirsiniz.
 
 ##### <a name="to-capture-graphics-information"></a>Grafik bilgilerini yakalamak için
 
-- Grafik bilgilerini yakalamaya başlamak için şunu kullanın `BeginCapture` :
+- Grafik bilgilerini yakalamaya başlamak için `BeginCapture` kullanın:
 
     ```cpp
     ...
@@ -101,7 +102,7 @@ Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, `BeginCa
     ...
     ```
 
-    Yakalama çağrıldığında hemen başlar `BeginCapture` ; sonraki çerçevenin başlamasını beklemez. Yakalama, geçerli çerçeve sunulduktan sonra ya da çağırdığınızda `EndCapture` :
+    Yakalama, `BeginCapture` çağrıldıktan hemen sonra başlar; sonraki karenin başlamayı beklemez. Yakalama, geçerli çerçeve sunlarda veya çağrısında durduğunda `EndCapture` durur:
 
     ```cpp
     ...
@@ -109,12 +110,12 @@ Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, `BeginCa
     ...
     ```
 
-- Çağrısından sonra `EndCapture` grafik nesnesini serbest bırakın.
+- çağrısının ardından `EndCapture` grafik nesnesini serbest bırakın.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
-Bu kılavuzda grafik bilgilerinin programlı bir şekilde nasıl yakalanacağı gösterilmiştir. Sonraki adım olarak bu seçeneği göz önünde bulundurun:
+Bu kılavuzda grafik bilgilerini program aracılığıyla nasıl yakalayabilirsiniz? Bir sonraki adım olarak şu seçeneği göz önünde önünde belirtin:
 
-- Grafik Tanılama araçlarını kullanarak yakalanan grafik bilgilerini çözümlemeyi öğrenin. Bkz. [genel bakış](overview-of-visual-studio-graphics-diagnostics.md).
+- Yakalanan grafik bilgilerini analiz etmek için Grafik Tanılama öğrenin. Bkz. [Genel Bakış.](overview-of-visual-studio-graphics-diagnostics.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: Grafik Bilgilerini Yakalama](walkthrough-capturing-graphics-information.md)
