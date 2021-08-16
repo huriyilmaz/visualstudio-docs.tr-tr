@@ -1,6 +1,6 @@
 ---
 title: EnableLocationBrowseButton Öğesi (Visual Studio Şablonları)
-description: EnableLocationBrowseButton öğesi hakkında bilgi edinin ve yeni proje iletişim kutusunda, gezinme düğmesinin kullanılabilir olup olmadığını nasıl belirtir.
+description: EnableLocationBrowseButton öğesini ve Yeni Giriş iletişim kutusunda Gözat düğmesinin kullanılabilir olup olmadığını nasıl Project öğrenin.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -16,15 +16,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bf5ec98fc71158d9ebe3b95ec9e3d49526cb491
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b6f25154015790919577d7fc32daffe21c0e69d90c10675c98dd2ad5d1314eed
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061400"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388727"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton öğesi (Visual Studio şablonları)
-Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca değiştirebilmeleri için **Yeni proje** iletişim kutusunda, **tarayıcı** düğmesinin kullanılabilir olup olmadığını belirtir.
+Kullanıcıların yeni projenin **kayded** olduğu varsayılan dizini **kolayca değiştire** Project için Gözat düğmesinin Yeni Dizin iletişim kutusunda kullanılabilir olup olmadığını belirtir.
 
  \<VSTemplate> \<TemplateData>
  \<EnableLocationBrowseButton>
@@ -48,20 +48,20 @@ Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca de�
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırarak Yeni Öğe Ekle iletişim kutusunda **Project** **şekilde** tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin `true` veya `false` **Yeni proje** iletişim kutusunda **tarama** düğmesinin görüntülenip görüntülenmeyeceğini belirten bir ya da olmalıdır.
+ Metin, Yeni Giriş `true` iletişim `false` kutusunda Gözat düğmesinin  görüntüleniyor olup olmadığını belirten **veya Project** gerekir.
 
 ## <a name="remarks"></a>Açıklamalar
- `EnableLocationBrowseButton` isteğe bağlı bir öğedir. Varsayılan değer `true` , **Yeni proje** iletişim kutusundaki **tarayıcı** düğmesini görüntüleyen ' dir.
+ `EnableLocationBrowseButton` isteğe bağlı bir öğedir. Varsayılan değer, `true` Yeni Giriş iletişim **kutusunda** Gözat düğmesini **Project** değeridir.
 
- **Yeni proje** Iletişim kutusunda **konum** metin kutusu yeni projenin kaydedildiği dizini belirtir. Git **düğmesi,** bilgisayarınızda bulunan farklı bir dizine kolayca gidebilmenizi sağlayan **Proje konumu** iletişim kutusunu görüntüleyerek bu dizini değiştirmenize yardımcı olur ve sonra bunu yeni projenin kaydedildiği dizin olarak seçebilirsiniz.
+ Yeni **Project** iletişim kutusunda, **Konum** metin kutusu yeni projenin kayded olduğu dizini belirtir. Gözat **düğmesi,** **Project Konumu** iletişim kutusunu görüntüleyerek bu dizini değiştirmenize yardımcı olur. Bu iletişim kutusu bilgisayarınızdan kullanılabilen farklı bir dizine kolayca gidin ve yeni projenin kayded olduğu dizin olarak seçin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir Windows uygulaması için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+ Aşağıdaki örnek, bir uygulamanın meta [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] verilerini Windows göstermektedir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -89,5 +89,5 @@ Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca de�
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablonu şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

@@ -1,6 +1,6 @@
 ---
-description: Visual Studio 2019 sürüm 16,8 ' den başlayarak, Visual Studio 'dan ClickOnce kullanarak .NET Core 3,1 veya daha yeni, Windows Masaüstü uygulamaları yayımlamak için Yayımla aracını kullanabilirsiniz.
-title: ClickOnce kullanarak .NET Windows masaüstü uygulaması dağıtma
+description: Visual Studio 2019 sürüm 16,8 ' den başlayarak, Visual Studio ClickOnce kullanarak .net Core 3,1 veya daha yeni Windows masaüstü uygulamaları yayımlamak için yayımla aracını kullanabilirsiniz.
+title: ClickOnce kullanarak bir .net Windows masaüstü uygulaması dağıtma
 ms.date: 10/15/2020
 ms.topic: quickstart
 helpviewer_keywords:
@@ -9,22 +9,23 @@ ms.assetid: adb461c4-812a-4b8c-b2ab-96002379f6a9
 author: john-hart
 ms.author: JohnHart
 manager: jmartens
+ms.technology: vs-ide-deployment
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: d3977408f191aabc734226fd6b637fcfaaf5e9de
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2df9e608b7583e4185a0a9589a363e07e9d249f5be7cba64a8e9db3789f3019d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102165715"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121435415"
 ---
-# <a name="deploy-a-net-windows-desktop-application-using-clickonce"></a>ClickOnce kullanarak .NET Windows masaüstü uygulaması dağıtma
+# <a name="deploy-a-net-windows-desktop-application-using-clickonce"></a>ClickOnce kullanarak bir .net Windows masaüstü uygulaması dağıtma
 
-Visual Studio 2019 sürüm 16,8 ' den başlayarak, Visual Studio 'dan ClickOnce kullanarak .NET Core 3,1 veya daha yeni, Windows Masaüstü uygulamaları yayımlamak için **Yayımla** aracını kullanabilirsiniz.
+Visual Studio 2019 sürüm 16,8 ' den başlayarak, Visual Studio ClickOnce kullanarak .net Core 3,1 veya daha yeni Windows masaüstü uygulamaları yayımlamak için **yayımla** aracını kullanabilirsiniz.
 
 > [!NOTE]
-> .NET Framework bir Windows uygulaması yayımlamanız gerekiyorsa bkz. [ClickOnce kullanarak masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# veya Visual Basic).
+> bir .NET Framework Windows uygulaması yayımlamanız gerekiyorsa bkz. [ClickOnce kullanarak bir masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# veya Visual Basic).
 
 ## <a name="publishing-with-clickonce"></a>ClickOnce ile yayımlama
 
@@ -38,9 +39,9 @@ Visual Studio 2019 sürüm 16,8 ' den başlayarak, Visual Studio 'dan ClickOnce 
 
     ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-clickonce-publish-folder-category.png "Klasör Seç")
 
-1. **Belirli hedef** sayfasında, **ClickOnce**' ı seçin.
+1. **Belirli hedef** sayfasında **ClickOnce**' yi seçin.
 
-    ![Belirli hedef olarak ClickOnce seçin](../deployment/media/quickstart-clickonce-publish-folder-target.png "ClickOnce seçin")
+    ![belirli hedef olarak ClickOnce seçin](../deployment/media/quickstart-clickonce-publish-folder-target.png "ClickOnce seçin")
 
 1. Yayımlama konumunu seçmek için bir yol girin veya **bul** ' u seçin.
 
@@ -50,9 +51,9 @@ Visual Studio 2019 sürüm 16,8 ' den başlayarak, Visual Studio 'dan ClickOnce 
 
     ![Klasörün yolunu belirtin](../deployment/media/quickstart-clickonce-install-location.png "Yüklemesi konumunu seçin")
 
-1. **Ayarlar** sayfasında, ClickOnce için gerekli ayarları sağlayabilirsiniz.
+1. **Ayarlar** sayfasında, ClickOnce için gereken ayarları sağlayabilirsiniz.
 
-1. Bir UNC yolundan veya Web sitesinden yüklemeyi seçtiyseniz, Bu sayfa uygulamanın çevrimdışı kullanılabilir olup olmadığını belirtmenizi sağlar. Seçildiğinde, bu seçenek uygulamayı kullanıcılar başlangıç menüsünde listeler ve yeni bir sürüm yayımlandığında uygulamanın otomatik olarak güncelleştirilmesini sağlar. Varsayılan olarak, güncelleştirmeleri, yüklemenin konumundan bulabilirsiniz.  Güncelleştirmeler için farklı bir konuma sahip olmak istiyorsanız, bu ayarı Güncelleştir bağlantısını kullanarak belirtebilirsiniz. Uygulamanın çevrimdışı kullanılabilir olmasını istemiyorsanız, bu, yüklemenin konumundan çalıştırılır.
+1. Bir UNC yolundan veya Web sitesinden yüklemeyi seçtiyseniz, Bu sayfa uygulamanın çevrimdışı kullanılabilir olup olmadığını belirtmenizi sağlar. Seçildiğinde, bu seçenek uygulamayı kullanıcılar başlangıç menüsünde listeler ve yeni bir sürüm yayımlandığında uygulamanın otomatik olarak güncelleştirilmesini sağlar. Varsayılan olarak, güncelleştirmeleri, yüklemenin konumundan bulabilirsiniz.  güncelleştirmeler için farklı bir konuma sahip olmak istiyorsanız, güncelleştirme Ayarlar bağlantısını kullanarak belirtebilirsiniz. Uygulamanın çevrimdışı kullanılabilir olmasını istemiyorsanız, bu, yüklemenin konumundan çalıştırılır.
 
     ![Yayımlama ayarlarını belirtin](../deployment/media/quickstart-clickonce-unc-settings.png "Yayımlama ayarlarını seçin")
 
@@ -65,7 +66,7 @@ Bu sayfada yer alan, kuruluma hangi **uygulama dosyalarının** ekleneceğini, h
 Ayrıca, bu sayfada yayımla sürümünü ve sürüm her bir yayınla otomatik olarak arttırılacağını da ayarlayabilirsiniz.
 
 > [!NOTE]
-> Yayımlama sürümü numarası her ClickOnce profili için benzersizdir. Daha sonra bir profile sahip olmayı planlıyorsanız bunu aklınızda tutmanız gerekir.
+> yayımlama sürümü numarası her bir ClickOnce profili için benzersizdir. Daha sonra bir profile sahip olmayı planlıyorsanız bunu aklınızda tutmanız gerekir.
 
 10. **Bildirimleri imzala** sayfasında, bildirimlerin imzalanmasını ve kullanılacak sertifikayı belirtebilirsiniz.
 
@@ -81,9 +82,9 @@ Ayrıca, bu sayfada yayımla sürümünü ve sürüm her bir yayınla otomatik o
     - [Hedef çalışma zamanı tanımlayıcıları (taşınabilir RID, et)](/dotnet/core/rid-catalog)
     - [Hata ayıklama ve sürüm yapılandırması](../ide/understanding-build-configurations.md)
 
-1. Yeni ClickOnce yayımlama profilini kaydetmek için **son** ' u seçin.
+1. yeni ClickOnce yayımlama profilini kaydetmek için **son** ' u seçin.
 
-1. **Özet** sayfasında **Yayımla** ' yı seçin ve Visual Studio projeyi oluşturur ve belirtilen Yayımla klasörüne yayımlar. Bu sayfada Ayrıca bir profil özeti gösterilir.
+1. **özet** sayfasında **yayımla** ' yı seçin ve projeyi derleme Visual Studio, belirtilen yayımla klasörüne yayımlar. Bu sayfada Ayrıca bir profil özeti gösterilir.
 
     ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-clickonce-summary.png)
 
@@ -94,4 +95,4 @@ Ayrıca, bu sayfada yayımla sürümünü ve sürüm her bir yayınla otomatik o
 .NET uygulamaları için:
 
 - [.NET Framework ve uygulamaları dağıtma](/dotnet/framework/deployment/)
-- [ClickOnce Başvurusu](clickonce-reference.md)
+- [ClickOnce başvurusu](clickonce-reference.md)

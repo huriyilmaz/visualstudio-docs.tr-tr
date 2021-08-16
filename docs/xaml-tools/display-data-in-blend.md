@@ -1,7 +1,7 @@
 ---
 title: XAML Kullanıcı arabirimindeki örnek verileri görselleştirme
 titleSuffix: Blend for Visual Studio
-description: Sıfırdan veya Visual Studio için Blend var olan bir sınıftan örnek veri oluşturmayı öğrenin.
+description: sıfırdan veya Visual Studio için Blend var olan bir sınıftan örnek veri oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/06/2018
 ms.topic: conceptual
@@ -9,14 +9,15 @@ ms.assetid: 87d31b6c-4607-4121-bb7d-cfc80390ab93
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b8025f7212d28d2cfce482f67ef672a472993bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86b22e15cc486ee6ee3362f9588b1047dff6ff3865eb1e098a8848ee93dd0c43
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920117"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365615"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Visual Studio için Blend verileri görüntüleme
 

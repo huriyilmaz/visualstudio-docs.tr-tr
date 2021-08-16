@@ -1,5 +1,5 @@
 ---
-title: MSBuild 16.0 |'daki | Microsoft Docs
+title: 16.0 MSBuild'daki | Microsoft Docs
 description: MSBuild 16.0 için değiştirilen ve güncelleştirilmiş özellikler hakkında bilgi alın ve sürüm notlarına bağlantı ekleyin.
 ms.custom: SEO-VS-2020
 ms.date: 03/11/2019
@@ -7,27 +7,28 @@ ms.topic: conceptual
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: cdfb552c53a40b6ad2f2349556396475926900be
-ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
+ms.openlocfilehash: 8cd358fddcc5f7ff0b6fbc27c5b046c2e2ee6ccad2a1c5b5deb693a5e1414066
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109848259"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397104"
 ---
 # <a name="whats-new-in-msbuild-160"></a>MSBuild 16.0 sürümündeki yenilikler
 
-Bu makalede MSBuild 16.0'daki güncelleştirilmiş özellikler ve özellikler açıklanmıştır. Ayrıntılı sürüm notları için bkz. [ MSBuild 16.0](https://github.com/microsoft/msbuild/releases/tag/v16.0.461.62831).
+Bu makalede, MSBuild 16.0'daki güncelleştirilmiş özellikler ve özellikler açıklanmıştır. Ayrıntılı sürüm notları için bkz. [MSBuild 16.0](https://github.com/microsoft/msbuild/releases/tag/v16.0.461.62831).
 
 ## <a name="changed-path"></a>Değiştirilen yol
 
- MSBuild, her bir Visual Studio sürümü altındaki *\Current* klasörüne yüklenir ve yürütülebilir dosyalar *\Bin alt* klasöründe bulunur. Örneğin, *MSBuild.exe* 2019 Community ile yüklenmiş Visual Studio yolu *C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe* MSBuild: [vssetup.powershell'i](https://github.com/Microsoft/vssetup.powershell)bulmak için aşağıdaki PowerShell modülünü de kullanabilirsiniz.
+ MSBuild her sürümü altındaki *\Current* klasörüne yüklenir Visual Studio yürütülebilir dosyalar *\Bin alt* klasöründedir. Örneğin, *MSBuild.exe* 2019 Visual Studio Community ile yüklenmiş Community'nin yolu *C:\Program Files (x86)\Microsoft Visual* Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe'dır. MSBuild: [vssetup.powershell'i](https://github.com/Microsoft/vssetup.powershell)bulmak için aşağıdaki PowerShell modülünü de kullanabilirsiniz.
 
 ## <a name="changed-properties"></a>Değiştirilen özellikler
 
- Aşağıdaki MSBuild özellikleri yeni sürüm numarası nedeniyle güncelleştirildi.
+ Aşağıdaki MSBuild sürüm numarası nedeniyle güncelleştirilmiştir.
 
 - `MSBuildToolsVersion` araçların bu sürümü için "Geçerli" şeklindedir. Derleme sürümü, 15.1.0.0 olan Visual Studio 2017 ile aynıdır.
 
@@ -35,7 +36,7 @@ Bu makalede MSBuild 16.0'daki güncelleştirilmiş özellikler ve özellikler a�
 
 ## <a name="change-waves"></a>Dalgaları değiştirme
 
-MSBuild 16.8'den başlayarak, MSBuild'de bazı olası kesintiye neden olabilecek değişiklikleri geri almayı seçerek seçebilirsiniz. Bkz. [Dalgaları değiştirme.](change-waves.md)
+16.8 MSBuild başlayarak, 16.8'de olası kesintiye neden olabilecek bazı değişiklikleri geri MSBuild. Bkz. [Dalgaları değiştirme.](change-waves.md)
 
 ## <a name="updates"></a>Güncelleştirmeler
 

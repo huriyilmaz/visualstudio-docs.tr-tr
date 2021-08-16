@@ -11,17 +11,18 @@ ms.assetid: dcda4972-c32e-4693-a0e1-25d5c58b9782
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ec947a97506283b6d26f0e4cb26b06afb183dd57
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5e32147a03f80a00e7c87091d09cbfd447ee71edd8af9ef60ae0a5a863e4d214
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087892"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390052"
 ---
 # <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
 Bu yöntem, ölçüm olarak bilinen bir kayıt defteri değerini ayarlar.

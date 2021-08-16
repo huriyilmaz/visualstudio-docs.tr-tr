@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda satır numarasını alır.
-title: 'IDiaEnumLineNumbers:: Next | Microsoft Docs'
+description: Numaralama dizisinde belirtilen sayıda satır numarası verir.
+title: IDiaEnumLineNumbers::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 363d5b40-1316-4ab8-836f-63637f619e0a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9301c10634919774b8253eea77dba6acdd3c324a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ea14a255458aa0f43cc5236bff7d26ea5f14917c0b17434fa9b1755ce6b48e52
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157968"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380473"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
-Sabit Listesi dizisinde belirtilen sayıda satır numarasını alır.
+Numaralama dizisinde belirtilen sayıda satır numarası verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Numaralandırıcıda alınacak olan satır numaralarının sayısı.
+[in] Alınan numaralayıcıda satır numaralarının sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen satır numaralarını temsil eden [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnelerinin bir dizisini döndürür.
+[out] İstenen satır numaralarını [temsil eden bir IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesneleri dizisi döndürür.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki satır numaralarının sayısını döndürür.
+[out] Getirili numaralayıcıda satır numaralarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla satır numarası yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` satır numarası yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

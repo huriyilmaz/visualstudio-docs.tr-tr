@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: belirli bir klasör içinde program aracılığıyla arama'
-description: Visual Studio 'Yu, belirli bir Microsoft Outlook klasörü içinde programlı bir şekilde arama yapmak için nasıl kullanabileceğinizi öğrenin.
+description: belirli bir Microsoft Outlook klasörü içinde programlı bir şekilde arama yapmak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -13,14 +13,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b25880420e23b82f6f63ab28ef5f1f93429bdd8c
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: dd14e88b64eff4c4273282bcc743b3acbb2ca6fa51ffff90b93db1bd8ffd0416
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824763"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394257"
 ---
 # <a name="how-to-programmatically-search-within-a-specific-folder"></a>Nasıl yapılır: belirli bir klasör içinde program aracılığıyla arama
   Bu kod örneği, `Find` `FindNext` **gelen kutusundaki** e-posta iletilerinin konu alanında metin aramak için ve yöntemlerini kullanır. Bu yöntem, metnin başlangıç harfi olarak T harfini denetlemek için bir dize filtresi kullanır `Subject` .

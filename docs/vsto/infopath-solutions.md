@@ -1,6 +1,6 @@
 ---
 title: InfoPath çözümleri
-description: Visual Studio 'Yu kullanarak Microsoft InfoPath 2013 ve InfoPath 2010 için VSTO eklentileri oluşturma hakkında bilgi edinin.
+description: Microsoft InfoPath 2013 Visual Studio InfoPath 2010 için VSTO eklentileri oluşturmak üzere Visual Studio'yi nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -18,53 +18,54 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b3feab4a4b66ed2d6cf96fbccc8aaf1fb7de3bb6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aafd260434a80d84c192c4c84b5435de4f847310a1e87cddf90f20359e8b4b93
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962372"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394152"
 ---
 # <a name="infopath-solutions"></a>InfoPath çözümleri
-  Visual Studio, Microsoft Office InfoPath 2013 ve InfoPath 2010 için VSTO eklentileri oluşturmak üzere kullanabileceğiniz proje şablonları sağlar. InfoPath, Office 2016 ' de kullanılamaz.
+  Visual Studio InfoPath 2013 VSTO InfoPath 2010 için Microsoft Office oluşturmak üzere kullanabileceğiniz proje şablonları sağlar. InfoPath, 2016'Office kullanılamaz.
 
 > [!NOTE]
-> Office 2016 ' i yüklemiş olsanız bile InfoPath için VSTO eklentisi oluşturmaya devam edebilirsiniz. InfoPath 2013 veya Office 2013 ' i Office 2016 ile yan yana yüklemelisiniz.
+> 2016'VSTO yüklemiş olsa bile InfoPath için bir Office oluşturabilirsiniz. InfoPath 2013'ü veya Office 2013'ü Office 2016'ya yükleyin.
 
  [!INCLUDE[appliesto_infoallapp](../vsto/includes/appliesto-infoallapp-md.md)]
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
- InfoPath için VSTO eklentileri diğer Microsoft Office uygulamaları için VSTO eklentilerine benzerdir. Bu tür çözümler, uygulama tarafından yüklenen bir derlemeden oluşur. Son kullanıcılar, hangi form veya form şablonunun açık olduğuna bakılmaksızın bu derlemenin işlevselliğine erişebilir. VSTO eklentileri hakkında daha fazla bilgi için bkz. VSTO eklentileri ve VSTO eklentilerinin [mimarisi](../vsto/architecture-of-vsto-add-ins.md) [programlamasına](../vsto/getting-started-programming-vsto-add-ins.md) başlama.
+ VSTO InfoPath eklentileri, diğer VSTO uygulamaları için ek eklentilere Microsoft Office benzer. Bu tür çözümler, uygulama tarafından yüklenen bir derlemeden oluşur. Hangi form veya form şablonunun açık olduğu fark etmez, son kullanıcılar bu derlemenin işlevselliğine erişime sahip olabilir. Eklentilerin nasıl VSTO daha fazla bilgi için [bkz. Kullanmaya başlayın](../vsto/getting-started-programming-vsto-add-ins.md) programlama VSTO Eklentileri ve [VSTO Mimarisi.](../vsto/architecture-of-vsto-add-ins.md)
 
 > [!NOTE]
-> Visual Studio 2015, Visual Studio 'nun önceki sürümlerinde sağlanmış olan InfoPath form şablonu projelerini içermez. Visual Studio 2015 ' i Visual Studio 'nun önceki bir sürümünde oluşturulmuş bir InfoPath form şablonu projesi açmak veya düzenlemek için de kullanamazsınız. Ancak, Uygulamalar için Visual Studio Araçları kullanarak bir InfoPath form şablonu projesi açabilir ve düzenleyebilirsiniz. Daha fazla bilgi için bkz [. ınfopath 2010 ' de VSTO 2008 projeleriyle çalışma.](/archive/blogs/infopath/working-with-vsto-2008-projects-in-infopath-2010)
+> Visual Studio 2015, önceki sürümlerde sağlanan InfoPath form şablonu projelerini Visual Studio. Ayrıca, Visual Studio 2015'i, önceki bir sürümde oluşturulmuş bir InfoPath form şablonu projesini açmak veya düzenlemek için Visual Studio. Ancak, bir InfoPath form şablonu projesini açmak ve düzenlemek için Uygulamalar için Visual Studio Araçları. Daha fazla bilgi için [bkz. InfoPath 2010'da VSTO 2008 projeleriyle çalışma.](/archive/blogs/infopath/working-with-vsto-2008-projects-in-infopath-2010).
 
-## <a name="automate-infopath-by-using-an-add-in"></a>Eklentiyi kullanarak InfoPath 'i otomatikleştirme
- Visual Studio 'da Office geliştirme araçları kullanılarak oluşturulan Office VSTO eklentilerden InfoPath nesne modeline erişmek için, `Application` `ThisAddIn` projenizdeki sınıfının alanını kullanın. `Application`Alan, <xref:Microsoft.Office.Interop.InfoPath.Application> InfoPath 'in geçerli örneğini temsil eden bir nesne döndürür. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+## <a name="automate-infopath-by-using-an-add-in"></a>Eklenti kullanarak InfoPath'i otomatikleştirme
+ Visual Studio'de Office geliştirme araçları kullanılarak oluşturulan bir Office VSTO Eklentiden InfoPath nesne modeline erişmek için projenizin sınıfının `Application` `ThisAddIn` alanını kullanın. alanı, `Application` <xref:Microsoft.Office.Interop.InfoPath.Application> geçerli InfoPath örneğini temsil eden bir nesnesi döndürür. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md)
 
- Bir VSTO eklentisinin InfoPath nesne modelini çağırdığınızda, InfoPath için birincil birlikte çalışma derlemesinde sunulan türleri kullanırsınız. Birincil birlikte çalışma derlemesi, VSTO eklentisi ve InfoPath 'teki COM nesne modelinde yönetilen kod arasında bir köprü görevi görür. InfoPath birincil birlikte çalışma derlemesindeki tüm türler <xref:Microsoft.Office.Interop.InfoPath> ad alanında tanımlanmıştır. InfoPath birincil birlikte çalışma derlemesi hakkında daha fazla bilgi için bkz. [Microsoft Office InfoPath Primary Interop Assembly](/office/client-developer/infopath/external-automation/about-the-microsoft-office-infopath-primary-interop-assembly). Birincil birlikte çalışma derlemeleri hakkında genel bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) ve [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md).
+ Bir eklentiden InfoPath nesne modeline VSTO, InfoPath için birincil birlikte çalışma derlemesinde sağlanan türleri kullanırız. Birincil birlikte çalışma derlemesi, VSTO Eklentisinde yönetilen kod ile InfoPath'te COM nesne modeli arasında bir köprü olarak hareket eder. InfoPath birincil birlikte çalışma derlemesi içindeki tüm türler ad alanında <xref:Microsoft.Office.Interop.InfoPath> tanımlanır. InfoPath birincil birlikte çalışma derlemesi hakkında daha fazla bilgi için [bkz. Microsoft Office InfoPath birincil birlikte çalışma derlemesi hakkında.](/office/client-developer/infopath/external-automation/about-the-microsoft-office-infopath-primary-interop-assembly) Genel olarak birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için [bkz. Office](../vsto/office-solutions-development-overview-vsto.md) çözüm geliştirmeye genel bakış &#40;VSTO&#41;[ve Office derlemeleri.](../vsto/office-primary-interop-assemblies.md)
 
-## <a name="customize-the-user-interface-of-infopath-by-using-an-add-in"></a>InfoPath 'in Kullanıcı arabirimini eklenti kullanarak özelleştirme
- InfoPath için VSTO eklentisi oluşturduğunuzda, birkaç farklı kullanıcı arabirimi özelleştirme seçeneğiniz vardır. Aşağıdaki tabloda bu seçeneklerin bazıları listelenmektedir.
+## <a name="customize-the-user-interface-of-infopath-by-using-an-add-in"></a>Eklenti kullanarak InfoPath kullanıcı arabirimini özelleştirme
+ InfoPath için VSTO bir eklenti oluşturma, birkaç farklı kullanıcı arabirimi özelleştirme seçeneğine sahip olur. Aşağıdaki tabloda bu seçeneklerden bazıları liste bulunmaktadır.
 
 |Görev|Daha fazla bilgi edinmek için|
 |----------|--------------------------|
 |Özel bir görev bölmesi oluşturun.|[Özel görev bölmeleri](../vsto/custom-task-panes.md)|
-|InfoPath 'teki Şerite özel sekmeler ekleyin.|[InfoPath için bir şeridi özelleştirme](../vsto/customizing-a-ribbon-for-infopath.md)|
+|InfoPath'te Şerit'e özel sekmeler ekleyin.|[InfoPath için Şerit Özelleştirme](../vsto/customizing-a-ribbon-for-infopath.md)|
 
- InfoPath ve diğer Microsoft Office uygulamalarının Kullanıcı arabirimini özelleştirme hakkında daha fazla bilgi için bkz. [OFFICE UI özelleştirmesi](../vsto/office-ui-customization.md).
+ InfoPath ve diğer uygulama kullanıcı arabirimini özelleştirme hakkında daha fazla bilgi Microsoft Office bkz. [Office kullanıcı arabirimi özelleştirmesi.](../vsto/office-ui-customization.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Microsoft Office InfoPath birincil birlikte çalışma derlemesi hakkında](/office/client-developer/infopath/external-automation/about-the-microsoft-office-infopath-primary-interop-assembly)
-- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
-- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [InfoPath Microsoft Office derlemesi hakkında](/office/client-developer/infopath/external-automation/about-the-microsoft-office-infopath-primary-interop-assembly)
+- [Kullanmaya başlayın programlama VSTO Eklentileri](../vsto/getting-started-programming-vsto-add-ins.md)
+- [Office çözümlerine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)
-- [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
-- [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md)
-- [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md)
-- [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
-- [Office geliştirmede InfoPath 2010](/previous-versions/office/developer/office-2010/ff604966(v=office.14))
+- [Nasıl Office: Office projelerini Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Program VSTO Eklentileri](../vsto/programming-vsto-add-ins.md)
+- [Kod yazma Office yazma](../vsto/writing-code-in-office-solutions.md)
+- [Office birlikte çalışma derlemelerini birleştirme](../vsto/office-primary-interop-assemblies.md)
+- [Office Kullanıcı arabirimi özelleştirmesi](../vsto/office-ui-customization.md)
+- [Geliştirme aşamasında InfoPath 2010 Office geliştirme](/previous-versions/office/developer/office-2010/ff604966(v=office.14))

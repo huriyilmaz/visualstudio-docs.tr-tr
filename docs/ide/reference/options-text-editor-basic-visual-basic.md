@@ -18,16 +18,17 @@ ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
 author: akhera99
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 517745fd302bcc19e46a8a0e7b8e4ed629950062
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9e8d395a421cbd02b620bc3b873575cdda3ed09ae330356230f2995c776cf35
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959382"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372236"
 ---
-# <a name="options-text-editor-basic-visual-basic-advanced"></a>Seçenekler, metin düzenleyici, temel (Visual Basic), gelişmiş
+# <a name="options-text-editor-basic-visual-basic-advanced"></a>seçenekler, metin düzenleyici, temel (Visual Basic), gelişmiş
 **Seçenekler** (**Araçlar** menüsü) iletişim kutusunun **metin düzenleyici** klasörünün **temel** klasöründe **vb 'ye özgü** Özellik sayfası aşağıdaki özellikleri içerir:
 
 ## <a name="analysis"></a>Analiz
@@ -49,9 +50,9 @@ ms.locfileid: "99959382"
 - Başvuru derlemelerindeki türler için kullanımlar önerin
 - NuGet paketlerindeki türler için kullanımlar önerin
 
-   Bu seçenekler belirlendiğinde, bir NuGet paketini yüklemek ve başvurulmayan türler için bir yönerge eklemek için [hızlı bir eylem](../quick-actions.md) kullanılabilir `using` .
+   bu seçenekler belirlendiğinde, bir NuGet paketini yüklemek ve başvurulmayan türler için bir yönerge eklemek üzere [hızlı bir eylem](../quick-actions.md) mevcuttur `using` .
 
-   ![Visual Studio 'da NuGet paketini yüklemeye yönelik hızlı eylem](media/nuget-lightbulb.png)
+   ![Visual Studio NuGet paketi yüklemek için hızlı eylem](media/nuget-lightbulb.png)
 
 ## <a name="highlighting"></a>Vurgulama
 

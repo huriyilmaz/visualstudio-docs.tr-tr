@@ -11,14 +11,15 @@ ms.assetid: 9fece9c7-064a-4d6b-9cef-fc387f322205
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f914002206f4b5ae5593fe3d4bd82c6a957ce1b4
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4383f8879b1746062f9b9d26c2f169d90037d93102eef5e1c8a33028db6d33e0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159043"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392027"
 ---
 # <a name="idiasegmentget_frame"></a>IDiaSegment::get_frame
 Segment numarasını alır.

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: yerleşik bir sekmeyi özelleştirme'
-description: Yerleşik bir sekmeye grupları ve denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir.
+description: Yerleşik bir sekmeye grupları ve denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin. yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 94cf4d256cafa03ee4604138f7233ff9fd3cf6c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b51c89095bd4b99fdd815198d1b6ced3b599d8e29d35c5ad2892f21c8990c8ea
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954000"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424125"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>Nasıl yapılır: yerleşik bir sekmeyi özelleştirme
-  Yerleşik bir sekmeye grup ve denetim ekleyebilirsiniz. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel 'deki yerleşik bir sekmedir. Özel bir grup oluşturduğunuzda, bu sekme en son sekmede görünür, ancak grubunuzu sekme üzerinde herhangi bir yere taşıyabilirsiniz.
+  Yerleşik bir sekmeye grup ve denetim ekleyebilirsiniz. yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel yerleşik bir sekmedir. Özel bir grup oluşturduğunuzda, bu sekme en son sekmede görünür, ancak grubunuzu sekme üzerinde herhangi bir yere taşıyabilirsiniz.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -39,15 +40,15 @@ ms.locfileid: "99954000"
 
 2. Şerit Tasarımcısı ' nda herhangi bir sekmeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-3. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve **ControlIdType** özelliğini **Office** olarak ayarlayın.
+3. **Özellikler** penceresinde **ControlID** özelliğini genişletin ve sonra **controlıdtype** özelliğini **Office** olarak ayarlayın.
 
 4. **OfficeId** özelliğini, özelleştirmek istediğiniz yerleşik SEKMENIN *denetim kimliği* olarak ayarlayın.
 
-     Denetim KIMLIĞI, Microsoft Office uygulamalarda yerleşik olarak bulunan sekmeleri, grupları ve denetimleri benzersiz bir şekilde tanımlayan addır.
+     denetim kimliği, Microsoft Office uygulamalarda yerleşik olarak bulunan sekmeleri, grupları ve denetimleri benzersiz bir şekilde tanımlayan addır.
 
-     Denetim kimliklerinin bir listesi için bkz. [office 2010 Yardım dosyaları: ofis akıcı Kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
+     denetim kimliklerinin bir listesi için bkz. [Office 2010 yardım dosyaları: Office floent kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
 
-5. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden grupları sekmeye sürükleyin.
+5. **araç kutusunun** **Office şerit denetimleri** sekmesinden grupları sekmeye sürükleyin.
 
     > [!NOTE]
     > Yerleşik gruplar tasarımcıda görünmez. Bu nedenle, yerleşik bir sekme ile çalışıp çalışmadığını belirlemenin tek yolu, sekmenin **ControlID** özelliğini incelemektir.
@@ -66,7 +67,7 @@ ms.locfileid: "99954000"
 
 4. **OfficeId** özelliğini yerleşik bir grubun denetim kimliği olarak ayarlayın.
 
-     Denetim kimliklerinin bir listesi için bkz. [office 2010 Yardım dosyaları: ofis akıcı Kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
+     denetim kimliklerinin bir listesi için bkz. [Office 2010 yardım dosyaları: Office floent kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Şerite genel bakış](../vsto/ribbon-overview.md)

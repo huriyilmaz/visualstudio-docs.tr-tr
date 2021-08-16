@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-FinalState etkinlik Tasarımcısı
-description: Bir durum makine örneğini sonlandıran bir durum oluşturmak için FinalState tasarımcısını nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı - FinalState Etkinlik Tasarımcısı
+description: Bir durum makinesi örneğini sonlandıran bir Durum oluşturmak için FinalState tasarımcısını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,31 +8,32 @@ ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a6ec51d17453a13f8c3ab1adffc5447afb5db7e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e51fd5a806a9ede74d824c94d3eda84dc0541e9ebe235cb76242c6a783d02c9a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894185"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423715"
 ---
 # <a name="finalstate-activity-designer"></a>FinalState Etkinlik Tasarımcısı
 
-Tasarımcı, bir <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State> durum makine örneğini sonlandıran bir oluşturmak için kullanılır.
+Tasarımcı, <xref:System.Activities.Core.Presentation.FinalState> bir durum makinesi örneğini <xref:System.Activities.Statements.State> sonlandıran bir oluşturmak için kullanılır.
 
-## <a name="using-the-finalstate-activity-designer"></a>FinalState etkinlik tasarımcısını kullanma
+## <a name="using-the-finalstate-activity-designer"></a>FinalState Etkinlik Tasarımcısını Kullanma
 
-**Sonlandırıcı durumu** Tasarımcısı, <xref:System.Activities.Statements.State> bir durum makinesinde sonlandırma durumu olarak önceden yapılandırılmış bir oluşturmak için kullanılır. <xref:System.Activities.Statements.State>Etkinlik Tasarımcısı kullanılarak oluşturulan bir <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State.IsFinal%2A> , özelliği **true** olarak ayarlanmış, hiçbir etkinlik içermez <xref:System.Activities.Statements.State.Exit%2A> ve bundan kaynaklı hiçbir geçiş yoktur. <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State> Bir durum makinesinde sonlandırma durumu olarak önceden yapılandırılmış bir etkinlik eklemek için etkinlik tasarımcısını kullanmak Için, **Sonlandırıcı durumu** etkinlik tasarımcısını **araç kutusunun** **durum makinesi** bölümünden sürükleyin ve iş akışı Tasarımcısı üzerine bırakın. <xref:System.Activities.Core.Presentation.FinalState>Etkinlik Tasarımcısı bir <xref:System.Activities.Statements.StateMachine> ve daha sonra eklenen geçişler üzerinde bırakılabilir veya <xref:System.Activities.Core.Presentation.FinalState> etkinlik Tasarımcısı bırakılmadığı için bir geçiş oluşturulabilir. Geçiş oluşturma hakkında daha fazla bilgi için bkz. [geçiş](../workflow-designer/transition-activity-designer.md).
+**FinalState** tasarımcısı, bir durum makinesinde sonlandırıcı durum olarak <xref:System.Activities.Statements.State> önceden yapılandırılmış bir oluşturmak için kullanılır. Etkinlik tasarımcısı kullanılarak oluşturulan bir özelliği true olarak ayarlanmıştır, etkinliği yoktur ve bu <xref:System.Activities.Statements.State> <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State.IsFinal%2A>  <xref:System.Activities.Statements.State.Exit%2A> özellikten kaynaklanan hiçbir geçiş yoktur. Etkinlik tasarımcısını kullanarak bir durum makinesine sonlandırıcı durum olarak önceden yapılandırılmış bir etkinlik eklemek için, Araç Kutusunun State Machine bölümünden FinalState etkinlik tasarımcısını sürükleyin ve iş akışı tasarımcısına <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State> bırakın.    Etkinlik tasarımcısı bir ve geçişlerine daha sonra eklenebilir veya etkinlik tasarımcısı <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.StateMachine> bırakılırken <xref:System.Activities.Core.Presentation.FinalState> bir geçiş oluşturulabilir. Geçiş oluşturma hakkında daha fazla bilgi için bkz. [Geçiş.](../workflow-designer/transition-activity-designer.md)
 
-### <a name="state-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı durum etkinliği özellikleri
+### <a name="state-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı'da Durum Etkinliği Özellikleri
 
-Aşağıdaki tabloda tasarımcı kullanılarak ayarlanmakta olabilecek özellikler gösterilmektedir <xref:System.Activities.Core.Presentation.FinalState> ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özelliklerden bazıları özellik kılavuzunda düzenlenebilir ve bazıları tasarımcı yüzeyinde düzenlenebilirler.
+Aşağıdaki tabloda, tasarımcı kullanılarak ayarlanacak özellikler <xref:System.Activities.Core.Presentation.FinalState> ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır. Bu özelliklerden bazıları özellik kılavuzunda, bazıları ise tasarımcı yüzeyinde düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Statements.State.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.State> . Varsayılan değer **durumdur**. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. , <xref:System.Activities.Statements.State.DisplayName%2A> İş akışı tasarımcısının üst kısmında görüntülenen içerik haritası gezintisinde kullanılır.<br /><br /> <xref:System.Activities.Statements.State.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.State.Entry%2A>|Yanlış|Bu durum öğesine geçiş yapıldığında oluşan eylemi belirtir. Bu değer, **araç kutusundan** bir etkinlik sürüklenerek ve <xref:System.Activities.Statements.State.Entry%2A> durumunun bölümüne bırakılarak ayarlanabilir.|
+|<xref:System.Activities.Statements.State.DisplayName%2A>|Yanlış|Üst bilgide etkinlik <xref:System.Activities.Statements.State> tasarımcısının kolay adını belirtir. Varsayılan değer State **değeridir.** Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. <xref:System.Activities.Statements.State.DisplayName%2A>, iş akışı tasarımcısının üst kısmında görüntülenen içerik harita gezintisinde kullanılır.<br /><br /> kesinlikle <xref:System.Activities.Statements.State.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.State.Entry%2A>|Yanlış|Bu durum'a geçiş olduğunda oluşan eylemi belirtir. Bu değer, Araç Kutusundan bir etkinliği **sürükleyip** durum bölümüne <xref:System.Activities.Statements.State.Entry%2A> bırakarak ayarlanır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

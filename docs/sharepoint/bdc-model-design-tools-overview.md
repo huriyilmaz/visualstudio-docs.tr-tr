@@ -23,14 +23,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: b398d9c00caf3a4fa2ca58bafa3273673a305859
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7e09344c0a95586f63bf3eca45582b0836b576030b21199341367ca59fe738cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851692"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425721"
 ---
 # <a name="bdc-model-design-tools-overview"></a>IVB modeli tasarım araçlarına genel bakış
   IVB tasarımcısını, **IVB yöntemi ayrıntıları** penceresini ve **BDC Gezginini** kullanarak bir Iş verileri bağlantısı (BDC) modeli tasarlayabilirsiniz.
@@ -51,16 +52,16 @@ ms.locfileid: "99851692"
 ## <a name="bdc-method-details-window"></a>IVB yöntemi ayrıntıları penceresi
  Bir metodun parametrelerini, örneklerini ve filtre tanımlayıcılarını tanımlamak için **BDC Yöntem ayrıntıları** penceresini kullanın.
 
- **BDC Yöntem ayrıntıları** penceresinde bulucu, belirli bulucu, Oluşturucu, Güncelleştirici ve deleter yöntemlerini hızlıca oluşturabilirsiniz. Bu yöntemleri oluştururken, Visual Studio metoduna parametreler, örnekler ve tür tanımlayıcıları gibi meta veriler ekler. Bu meta verileri, belirli senaryonuzu karşılayacak şekilde değiştirebilirsiniz.
+ **BDC Yöntem ayrıntıları** penceresinde bulucu, belirli bulucu, Oluşturucu, Güncelleştirici ve deleter yöntemlerini hızlıca oluşturabilirsiniz. bu yöntemleri oluştururken, Visual Studio parametreler, örnekler ve tür tanımlayıcıları gibi meta verileri yöntemine ekler. Bu meta verileri, belirli senaryonuzu karşılayacak şekilde değiştirebilirsiniz.
 
- **İVB yöntemi ayrıntıları** penceresini açmak için, menü çubuğunda   >  **diğer Windows**  >  **BDC Yöntem ayrıntılarını** görüntüle ' yi seçin.
+ **ivb yöntemi ayrıntıları** penceresini açmak için, menü çubuğunda   >  **diğer Windows**  >  **BDC yöntem ayrıntılarını** görüntüle ' yi seçin.
 
  **IVB yöntemi ayrıntıları** penceresindeki yöntemleri görüntülemek Için bdc Tasarımcısı 'nda varlığı seçin. Seçilen varlığın yöntemleri **BDC Yöntem ayrıntıları** penceresinde görünür. IVB tasarımcısında bir varlık görmüyorsanız, **IVB yöntemi ayrıntıları** penceresi hiçbir bilgi görüntüler.
 
  Parametreleri, örnekleri ve filtre tanımlayıcılarını tanımlamak için **BDC Yöntem ayrıntıları** penceresindeki düğümleri genişletin veya daraltın. Tür tanımlayıcılarını tanımlamak için **BDC Gezginini** kullanın.
 
 ## <a name="bdc-explorer"></a>BDC Gezgini
- **IVB Gezgini** , modeli oluşturan öğeleri görüntüler. **İVB Gezginini** açmak için, menü çubuğunda   >  **diğer Windows**  >  **BDC Gezginini** görüntüle ' yi seçin. Modele gözatabileceğiniz **BDC Gezgini**'ndeki düğümler ' i genişletin. Her düğüm, model dosyasının XML dosyasındaki bir öğeyi temsil eder.
+ **IVB Gezgini** , modeli oluşturan öğeleri görüntüler. **ivb gezginini** açmak için, menü çubuğunda   >  **diğer Windows**  >  **BDC gezginini** görüntüle ' yi seçin. Modele gözatabileceğiniz **BDC Gezgini**'ndeki düğümler ' i genişletin. Her düğüm, model dosyasının XML dosyasındaki bir öğeyi temsil eder.
 
  **IVB Gezgininde** düğümleri seçerken, seçtiğiniz her bir düğümün özellikleri **Özellikler** penceresinde görünür. Bu özelliklerin birçoğu model dosyasındaki özniteliklere karşılık gelir. **IVB Gezgini**'nin en üstündeki arama kutusunu kullanarak modelde arama yapabilirsiniz.
 
@@ -84,7 +85,7 @@ ms.locfileid: "99851692"
 - [Nasıl yapılır: bir silici yöntemi ekleme](../sharepoint/how-to-add-a-deleter-method.md)
 - [Nasıl yapılır: Güncelleştirici yöntemi ekleme](../sharepoint/how-to-add-an-updater-method.md)
 - [Varlıklar arasında ilişkilendirme oluşturma](../sharepoint/creating-an-association-between-entities.md)
-- [İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)
+- [izlenecek yol: iş verilerini kullanarak SharePoint bir dış liste oluşturma](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)
 - [İş verilerini SharePoint ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md)
 - [İş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)

@@ -20,14 +20,15 @@ ms.assetid: 6b54ef59-ffed-4f62-a645-1279ede97ebf
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ba1f6f0de7e7b716853ec58aa27a34fe11010da4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f949bd6f126cd544c7266bf4e554d1da142ecf728c25b70ab6931ba5c95eb15e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969600"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372042"
 ---
 # <a name="projectconfig-devenvexe"></a>/ProjectConfig (devenv.exe)
 

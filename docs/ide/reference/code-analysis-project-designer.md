@@ -1,6 +1,6 @@
 ---
 title: Kod Çözümlemesi, Proje Tasarımcısı
-description: Kod Analizi, proje Tasarımcısı ve kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını nasıl içerdiği hakkında bilgi edinin.
+description: Code Analysis, Project tasarımcı ve kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını nasıl içerdiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,15 @@ ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 475e220a4c2dfc739c3055eb541ef89a6966cabb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa7305a34426faae6aa7f65c6860ab1e2cda57b196ace5ad1d287d6bfcfe382b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963282"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430843"
 ---
 # <a name="code-analysis-project-designer"></a>Kod Çözümlemesi, Proje Tasarımcısı
 
@@ -28,7 +29,7 @@ Kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını içerir. Ara
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-Kod analizini etkinleştir \
+Code Analysis \ ' i etkinleştir
 Projeniz için kod analizini etkinleştirilir veya devre dışı bırakır.
 
 Tasarım kuralları \
@@ -66,6 +67,6 @@ Kullanım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen kod uyarıları için kod analizi](/dotnet/fundamentals/code-analysis/quality-rules/index)
+- [yönetilen kod uyarıları için Code Analysis](/dotnet/fundamentals/code-analysis/quality-rules/index)
 - [Yönetilen Kod için Kod Çözümlemesine Genel Bakış](../../code-quality/code-analysis-for-managed-code-overview.md)
 - [İzlenecek yol: Kod Kusurları için Yönetilen Kodu Analiz Etme](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

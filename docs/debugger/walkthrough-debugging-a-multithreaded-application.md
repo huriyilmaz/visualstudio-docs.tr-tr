@@ -23,16 +23,17 @@ ms.assetid: 590ffd57-0556-43d8-8962-ee27e5b2b7d7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cd11e722886b77e9faaace768cc30a74c759903f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c96b892bac229ad783205bebf9208bbf8af0ce883992192d5835b1a77e8c16ef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884214"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121418551"
 ---
-# <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>Iş parçacıkları penceresini kullanarak Visual Studio hata ayıklayıcısındaki iş parçacıklarını görüntüleme (C#, Visual Basic, C++)
+# <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>iş parçacıkları penceresini kullanarak Visual Studio hata ayıklayıcıdaki iş parçacıklarını görüntüleme (C#, Visual Basic, C++)
 **Iş parçacıkları** penceresinde, hata ayıklaması yaptığınız uygulamadaki iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. **Iş parçacıkları** penceresini kullanma hakkında adım adım yönergeler için bkz. [Izlenecek yol: iş parçacıkları penceresini kullanarak hata ayıklama](../debugger/how-to-use-the-threads-window.md).
 
 ## <a name="use-the-threads-window"></a>İş Parçacıkları penceresini kullanma
@@ -66,7 +67,7 @@ ms.locfileid: "99884214"
 
 ### <a name="to-display-the-threads-window-in-break-mode-or-run-mode"></a>Çalışma parçacıkları penceresini kesme modunda veya çalıştırma modunda görüntüleme
 
-- Visual Studio hata ayıklama modundayken **hata ayıklama** menüsünü seçin, **Windows**' un üzerine gelin ve **iş parçacıkları**' nı seçin.
+- Visual Studio hata ayıklama modundayken, **hata ayıklama** menüsünü seçin, **Windows** üzerine gelin ve **iş parçacıkları**' nı seçin.
 
 ### <a name="to-display-or-hide-a-column"></a>Bir sütunu göstermek veya gizlemek için
 
@@ -82,7 +83,7 @@ ms.locfileid: "99884214"
 ## <a name="freeze-and-thaw-threads"></a>İş parçacıklarını dondurma ve çözme
  Bir iş parçacığını dondurursanız, kaynaklar kullanılabilir olsa bile, sistem iş parçacığının yürütülmesini başlatılmaz.
 
- Yerel kodda, Windows işlevlerini ve çağırarak iş parçacıklarını askıya alabilir veya sürdürebilirsiniz `SuspendThread` `ResumeThread` . Ya da, [CWinThread:: SuspendThread](/cpp/mfc/reference/CWinThread-class#suspendthread) ve [CWinThread:: ResumeThread](/cpp/mfc/reference/CWinThread-class#resumethread)MFC işlevlerini çağırın. `SuspendThread`Veya `ResumeThread` öğesini çağırırsanız, **iş parçacıkları** penceresinde gösterilen *askıya alınan sayım* değiştirilir. Yerel bir iş parçacığını dondurursanız veya kaldırırsanız, askıda olan sayı değişmez. Bir iş parçacığı, thaçar ve askıya alınmış sıfır sayısına sahip olmadığı müddetçe yerel kodda yürütülemez.
+ yerel kodda, Windows işlevlerini ve yöntemini çağırarak iş parçacıklarını askıya alabilir veya sürdürebilirsiniz `SuspendThread` `ResumeThread` . Ya da, [CWinThread:: SuspendThread](/cpp/mfc/reference/CWinThread-class#suspendthread) ve [CWinThread:: ResumeThread](/cpp/mfc/reference/CWinThread-class#resumethread)MFC işlevlerini çağırın. `SuspendThread`Veya `ResumeThread` öğesini çağırırsanız, **iş parçacıkları** penceresinde gösterilen *askıya alınan sayım* değiştirilir. Yerel bir iş parçacığını dondurursanız veya kaldırırsanız, askıda olan sayı değişmez. Bir iş parçacığı, thaçar ve askıya alınmış sıfır sayısına sahip olmadığı müddetçe yerel kodda yürütülemez.
 
  Yönetilen kodda, bir iş parçacığını dondurma veya çözme sırasında askıda bekleyen sayı değişir. Yönetilen koddaki bir iş parçacığını dondurursanız, askıya alınma sayısı 1 ' dir. Yerel koddaki bir iş parçacığını dondurursanız, çağrıyı kullanmadığınız takdirde, askıya alınma sayısı 0 olur `SuspendThread` .
 
@@ -157,17 +158,17 @@ Sarı ok geçerli iş parçacığını (ve yürütme işaretçisinin konumunu) g
 Çok iş parçacıklı bir programda, her iş parçacığının kendi çağrı yığını vardır. **Iş parçacıkları** penceresi, bu yığınları görüntülemek için kullanışlı bir yol sağlar.
 
 > [!TIP]
-> Her iş parçacığının çağrı yığınının görsel temsili için [Paralel Yığınlar](../debugger/get-started-debugging-multithreaded-apps.md) penceresini kullanın.
+> Her iş parçacığı için çağrı yığınının görsel bir gösterimi için Paralel [Yığınlar penceresini](../debugger/get-started-debugging-multithreaded-apps.md) kullanın.
 
 ### <a name="to-view-the-call-stack-of-a-thread"></a>Bir iş parçacığının çağrı yığınını görüntülemek için
 
-- **Konum** sütununda, iş parçacığı konumunun yanındaki ters üçgeni seçin.
+- Konum **sütununda** iş parçacığı konumunun yanındaki ters üçgeni seçin.
 
-     Konum, iş parçacığının çağrı yığınını gösterecek şekilde genişler.
+     Konum, iş parçacığı için çağrı yığınını gösterecek şekilde genişletildi.
 
-### <a name="to-view-or-collapse-the-call-stacks-of-all-threads"></a>Tüm iş parçacıklarının çağrı yığınlarını görüntülemek veya daraltmak için
+### <a name="to-view-or-collapse-the-call-stacks-of-all-threads"></a>Tüm iş parçacıklarının çağrı yığınlarını görüntülemek veya daraltabilirsiniz
 
-- **Iş parçacıkları** penceresinin en üstündeki araç çubuğunda, **çağrı yığınlarını Genişlet** veya **çağrı yığınlarını Daralt**' ı seçin.
+- İş Parçacıkları penceresinin üst kısmında yer alan araç **çubuğunda** Çağrı Yığınlarını **Genişlet veya Çağrı Yığınlarını** **Daralt'ı seçin.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çok iş parçacıklı uygulamaların hatalarını ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)

@@ -17,14 +17,15 @@ ms.assetid: f50efb78-5206-4803-bb42-426ef8133f2f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b92f4e2faf2043c26c7119b6f9754edd3bdc990
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1fd19de0c9673835a0a00bf5453a15fad16f9c3d32c1b2dd2b9d8e019ef5e9d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884396"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361734"
 ---
 # <a name="view-threads-and-tasks-in-the-parallel-stacks-window-c-visual-basic-c"></a>Paralel Yığınlar penceresinde iş parçacıklarını ve görevleri görüntüleme (C#, Visual Basic, C++)
 
@@ -40,7 +41,7 @@ ms.locfileid: "99884396"
 
 ## <a name="use-the-parallel-stacks-window"></a>Paralel Yığınlar penceresini kullanma
 
-**Paralel Yığınlar** penceresini açmak için bir hata ayıklama oturumunda olması gerekir.   >  **Windows**  >  **paralel yığınları** Hata Ayıkla ' yı seçin.
+**Paralel Yığınlar** penceresini açmak için bir hata ayıklama oturumunda olması gerekir.   >    >  **paralel yığınlar** Windows hata ayıkla ' yı seçin.
 
 ### <a name="toolbar-controls"></a>Araç çubuğu denetimleri
 
@@ -48,7 +49,7 @@ ms.locfileid: "99884396"
 
 ![Paralel Yığınlar penceresinde araç çubuğu](../debugger/media/parallel_stackstoolbar.png "Paralel Yığınlar araç çubuğu")
 
-|Simge|Denetim|Description|
+|Simge|Denetim|Açıklama|
 |-|-|-|
 |![İş parçacıkları/görevler açılan kutusu](media/parallel_toolbar1.png "İş parçacıkları/görevler açılan kutusu")|**Iş parçacıkları** / **Görevler** açılan kutusu|Görünümü iş parçacıklarının çağrı yığınları ve görev yığınları arasında geçirir. Daha fazla bilgi için bkz. [Görevler Görünümü](#tasks-view) ve [iş parçacıkları görünümü](#threads-view).|
 |![Yalnızca bayraklı simgeyi göster](media/parallel_toolbar2.png "Yalnızca bayraklı simgeyi göster")|Yalnızca bayraklı göster|Yalnızca **GPU Iş parçacıkları** penceresi ve **paralel izleme** penceresi gibi diğer hata ayıklayıcı pencerelerinin bayrak eklenmiş iş parçacıkları için çağrı yığınlarını gösterir.|
@@ -59,7 +60,7 @@ ms.locfileid: "99884396"
 ### <a name="stack-frame-icons"></a>Yığın çerçevesi simgeleri
 Aşağıdaki simgeler, tüm görünümlerde etkin ve geçerli yığın çerçeveleri hakkında bilgi sağlar:
 
-|Simge|Description|
+|Simge|Açıklama|
 |-|-|
 |![Sarı ok](media/icon_parallelyellowarrow.gif)|Geçerli iş parçacığının geçerli konumunu (etkin yığın çerçevesi) gösterir.|
 |![İş parçacıkları simgesi](media/icon_parallelthreads.gif)|Geçerli olmayan bir iş parçacığının geçerli konumunu (etkin yığın çerçevesi) gösterir.|
@@ -70,7 +71,7 @@ Aşağıdaki kısayol menü öğeleri, **Iş parçacıkları** görünümü veya
 
 ![Paralel Yığınlar penceresinde kısayol menüsü](../debugger/media/parallel_contmenu.png "Paralel Yığınlar penceresinde kısayol menüsü")
 
-|Menü öğesi|Description|
+|Menü öğesi|Açıklama|
 |-|-|
 |**Bayrak**|Seçili öğeyi bayraklar.|
 |**İşaretsiz**|Seçili öğenin bayraklarını kaldır.|
@@ -84,7 +85,7 @@ Aşağıdaki kısayol menü öğeleri, **Iş parçacıkları** görünümü veya
 |**Onaltılı ekran**|Ondalık ve onaltılık görüntü arasında geçiş yapar.|
 |**Kaynakta Iş parçacıklarını göster**|Kaynak kodu penceresinde iş parçacığının konumunu bayraklar. |
 |**Sembol Yükleme Bilgisi**|**Sembol yükleme bilgileri** iletişim kutusunu açar.|
-|**Sembol ayarları**|**Sembol ayarları** iletişim kutusunu açar. |
+|**sembol Ayarlar**|**sembol Ayarlar** iletişim kutusunu açar. |
 
 ## <a name="threads-view"></a>İş parçacıkları görünümü
 
@@ -104,7 +105,7 @@ Aşağıdaki tabloda, **Iş parçacıkları** görünümünün ana özellikleri 
 |-|-|-|
 |1|Çağrı yığını segmenti veya düğümü|Bir veya daha fazla iş parçacığı için bir dizi yöntem içerir. Çerçevede bağlantılı ok çizgileri yoksa çerçeve iş parçacıklarının tüm çağrı yolunu gösterir.|
 |2|Mavi vurgu|Geçerli iş parçacığının çağrı yolunu gösterir.|
-|3|Ok çizgileri|İş parçacığı (ler) için tüm çağrı yolunu oluşturmak üzere düğümleri bağlayın.|
+|3|Ok çizgileri|iş parçacığı (ler) için tüm çağrı yolunu oluşturmak üzere düğümleri Bağlan.|
 |4|Düğüm üstbilgisi|Düğüm için işlem ve iş parçacığı sayısını gösterir.|
 |5|Yöntem|Aynı yöntemde bir veya daha fazla yığın çerçevesini temsil eder.|
 |6|Metodun araç ipucu|Bir yöntemin üzerine geldiğinizde görünür. **Iş parçacıkları** görünümünde, araç ipucu tüm iş parçacıklarını, **iş parçacıkları** penceresine benzer bir tabloda gösterir. |

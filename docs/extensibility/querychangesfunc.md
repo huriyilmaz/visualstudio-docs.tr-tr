@@ -1,6 +1,6 @@
 ---
 title: QUERYCHANGESFUNC | Microsoft Docs
-description: QUERYCHANGESFUNC geri çağırma işlevi, bir dosya adı koleksiyonunun numaralarını belirlemek ve her bir dosyanın durumunu belirlemek için kullanılır.
+description: QUERYCHANGESFUNC geri çağırma işlevi, bir dosya adı koleksiyonunu listelemek ve her bir dosyanın durumunu öğrenmek için kullanılır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,19 +13,20 @@ ms.assetid: 9d383e2c-eee1-4996-973a-0652d4c5951c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b061fbfb6644f77348574020c0a5cb614691ae6b
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: e9a28e4f75187cce110280d471f0a6f830d52e96706654c91929b324da70f57d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899140"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375175"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
-Bu, [SccQueryChanges](../extensibility/sccquerychanges-function.md) işlemi tarafından bir dosya adı koleksiyonunun numaralarını belirlemek ve her bir dosyanın durumunu belirlemek için kullanılan bir geri çağırma işlevidir.
+Bu, bir dosya adı koleksiyonunu numaralandırmak ve her bir dosyanın durumunu belirleyebilmek için [SccQueryChanges](../extensibility/sccquerychanges-function.md) işlemi tarafından kullanılan bir geri çağırma işlevidir.
 
- İşleve `SccQueryChanges` dosya listesi ve geri çağırma `QUERYCHANGESFUNC` işaretçisi verilir. Kaynak denetimi eklentisi, verilen listede numaralar ve listede yer alan her dosya için durum (bu geri çağırma yoluyla) sağlar.
+ `SccQueryChanges`İşleve bir dosya listesi ve `QUERYCHANGESFUNC` geri çağırma işaretçisi verilmiştir. Kaynak denetimi eklentisi verilen listeyi numaralandırır ve listedeki her dosya için durum (Bu geri çağırma aracılığıyla) sağlar.
 
 ## <a name="signature"></a>İmza
 
@@ -39,23 +40,23 @@ typedef BOOL (*QUERYCHANGESFUNC)(
 ## <a name="parameters"></a>Parametreler
  pvCallerData
 
-[in] Çağıran `pvCallerData` (IDE) tarafından [SccQueryChanges'e geçirilen parametre.](../extensibility/sccquerychanges-function.md) Kaynak denetimi eklentisi, bu değerin içeriğiyle ilgili varsayımda bulunamaz.
+'ndaki `pvCallerData` Çağıran tarafından geçirilen parametre (IDE) tarafından [sorgu değişiklikleri](../extensibility/sccquerychanges-function.md)için. Kaynak denetimi eklentisinin bu değerin içeriğiyle ilgili bir varsayımsız olmaması gerekir.
 
  pChangesData
 
-[in] Bir [dosyada yapılan değişiklikleri açıklayan QUERYCHANGESDATA](#LinkQUERYCHANGESDATA) Yapısı yapısına işaretçi.
+'ndaki Dosyadaki değişiklikleri açıklayan bir [QUERYCHANGESDATA yapısı](#LinkQUERYCHANGESDATA) yapısına yönelik işaretçi.
 
 ## <a name="return-value"></a>Döndürülen değer
- IDE uygun bir hata kodu döndürür:
+ IDE, uygun bir hata kodu döndürür:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|İşlemeye devam.|
-|SCC_I_OPERATIONCANCELED|İşlemeyi durdurun.|
-|SCC_E_xxx|Uygun SCC hatalarını işlemeyi durdurmanız gerekir.|
+|SCC_OK|İşleme devam edin.|
+|SCC_I_OPERATIONCANCELED|İşlemeyi durdur.|
+|SCC_E_xxx|Uygun bir SCC hatası işlemeyi durdurmalıdır.|
 
-## <a name="querychangesdata-structure"></a><a name="LinkQUERYCHANGESDATA"></a> QUERYCHANGESDATA Yapısı
- Her dosya için geçirilen yapı aşağıdaki gibi olur:
+## <a name="querychangesdata-structure"></a><a name="LinkQUERYCHANGESDATA"></a> QUERYCHANGESDATA yapısı
+ Her dosya için geçirilen yapı aşağıdaki gibi görünür:
 
 ```cpp
 struct QUERYCHANGESDATA_A
@@ -77,26 +78,26 @@ struct QUERYCHANGESDATA_W
 };
 ```
 
- Bu yapının dwSize Boyutu (bayt cinsinden).
+ Bu yapının dwSize boyutu (bayt).
 
- lpFileName Bu öğenin özgün dosya adı.
+ lpFileName bu öğe için özgün dosya adı.
 
- Dosyanın durumunu gösteren dwChangeType Kodu:
+ dosyanın durumunu gösteren dwChangeType kodu:
 
 |Kod|Açıklama|
 |----------|-----------------|
-|`SCC_CHANGE_UNKNOWN`|Nelerin değiştiğini söylemek olamaz.|
+|`SCC_CHANGE_UNKNOWN`|Nelerin değiştiğini söylemez.|
 |`SCC_CHANGE_UNCHANGED`|Bu dosya için ad değişikliği yok.|
-|`SCC_CHANGE_DIFFERENT`|Farklı bir kimliğe sahip dosya, ancak veritabanında aynı ad var.|
-|`SCC_CHANGE_NONEXISTENT`|Dosya veritabanında veya yerel olarak yok.|
-|`SCC_CHANGE_DATABASE_DELETED`|Veritabanında silinen dosya.|
-|`SCC_CHANGE_LOCAL_DELETED`|Dosya yerel olarak silindi ama dosya veritabanında hala var. Bu belirlene belirlenirse, `SCC_CHANGE_DATABASE_ADDED` dönüş.|
-|`SCC_CHANGE_DATABASE_ADDED`|Veritabanına eklenen ancak yerel olarak mevcut olmayan dosya.|
+|`SCC_CHANGE_DIFFERENT`|Dosya farklı bir kimliğe sahip, ancak veritabanında aynı ad var.|
+|`SCC_CHANGE_NONEXISTENT`|Dosya, veritabanında ya da yerel olarak mevcut değil.|
+|`SCC_CHANGE_DATABASE_DELETED`|Dosya veritabanında silindi.|
+|`SCC_CHANGE_LOCAL_DELETED`|Dosya yerel olarak silindi, ancak dosya veritabanında hala var. Bu saptanamıyor, döndürün `SCC_CHANGE_DATABASE_ADDED` .|
+|`SCC_CHANGE_DATABASE_ADDED`|Dosya veritabanına eklendi, ancak yerel olarak mevcut değil.|
 |`SCC_CHANGE_LOCAL_ADDED`|Dosya veritabanında yok ve yeni bir yerel dosya.|
-|`SCC_CHANGE_RENAMED_TO`|Dosya yeniden adlandırıldı veya veritabanına olarak `lpLatestName` taşındı.|
-|`SCC_CHANGE_RENAMED_FROM`|Dosya yeniden adlandırıldı veya veritabanından taşındı; bu izlemesi çok pahalı `lpLatestName` olursa, gibi farklı bir bayrak geri `SCC_CHANGE_DATABASE_ADDED` döner.|
+|`SCC_CHANGE_RENAMED_TO`|Dosya yeniden adlandırıldı veya veritabanına olarak taşındı `lpLatestName` .|
+|`SCC_CHANGE_RENAMED_FROM`|Dosya yeniden adlandırıldı veya veritabanına taşındı `lpLatestName` ; Bu, izlemeye çok pahalıdır, gibi farklı bir bayrak döndürün `SCC_CHANGE_DATABASE_ADDED` .|
 
- lpLatestName Bu öğenin geçerli dosya adı.
+ lpLatestName bu öğe için geçerli dosya adını.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDE tarafından uygulanan geri çağırma işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)

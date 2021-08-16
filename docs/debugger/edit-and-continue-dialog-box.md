@@ -17,14 +17,15 @@ ms.assetid: 4390c09c-fc73-4cc3-ab8e-6f07a7d70be2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 44855237adb4eb9edfb7d4ee383ff5777cf4b6b6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ea9626e14f0a8fb84c95afe6d6cb311d520f69d1772cf00bd0b5e789909dfa83
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872020"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420241"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Düzenle ve Devam Et İletişim Kutusu
 (Yalnızca yerel) Bu iletişim kutusu hata ayıklama sırasında kodu düzenlediyseniz ve **Düzenle ve devam et** işlevinin kod değişikliklerini uygulayabileceğini algıladığında görüntülenir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).

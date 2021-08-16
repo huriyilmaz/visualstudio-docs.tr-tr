@@ -1,6 +1,6 @@
 ---
-description: 'IDiaFrameData:: get_maxStack çerçevedeki yığına gönderilen en fazla bayt sayısını alır.'
-title: 'IDiaFrameData:: get_maxStack | Microsoft Docs'
+description: IDiaFrameData::get_maxStack, çerçevede yığına gönderilen en fazla bayt sayısını almaktadır.
+title: IDiaFrameData::get_maxStack | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 2585e13c-c0f3-49fe-9a84-08adb0dbeaa4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e9918cf908256d886547c57dae84da27b567cbd8
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 463925b552d9b8942a51d581bfe6ad31828ca89ebaf97f3993a63c739bca2d21
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148558"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392323"
 ---
 # <a name="idiaframedataget_maxstack"></a>IDiaFrameData::get_maxStack
-Çerçevedeki yığına gönderilen en fazla bayt sayısını alır.
+Çerçevede yığına gönderilen en fazla bayt sayısını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_maxStack (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Yığına gönderilen en fazla bayt sayısını döndürür.
+[out] Yığına gönderilen en fazla bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemin döndürdüğü değer genellikle program dizesinin yorumu içinde kullanılır (program dizesinin tanımı için [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) metoduna bakın).
+ Bu yöntem tarafından döndürülen değer genellikle bir program dizesinin yorumlanmasında kullanılır (program dizesinin tanımı için [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemine bakın).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

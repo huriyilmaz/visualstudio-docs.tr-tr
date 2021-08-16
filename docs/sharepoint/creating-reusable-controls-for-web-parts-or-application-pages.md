@@ -1,7 +1,7 @@
 ---
-title: Web Bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma | Microsoft Docs
+title: Web Bölümleri Veya Application Pages | için Yeniden Kullanılabilir Denetimler Oluşturma Microsoft Docs
 titleSuffix: ''
-description: Visual Studio 'da, SharePoint 'te çalışan uygulama sayfaları ve Web bölümleri tarafından tüketilen özel, yeniden kullanılabilir denetimler (Kullanıcı denetimleri) oluşturun.
+description: Uygulama sayfalarında ve web bölümleri tarafından Visual Studio özel, yeniden kullanılabilir denetimler (kullanıcı denetimleri) SharePoint.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
@@ -14,53 +14,54 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: b61474f4290771fb139d511296580ec1ef0f8820
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 263396167ea99aab30c965ee5c5bee571ceccbd4dae09979e156374c3be554c0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106213920"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425563"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma
-  Visual Studio 'da, uygulama sayfaları ve SharePoint 'te çalışan Web Bölümleri tarafından tüketilen özel, yeniden kullanılabilir denetimler oluşturabilirsiniz. Bu denetimlere Kullanıcı denetimleri denir. Kullanıcı denetimi, bir ASP.NET Web sayfasına çok benzeyen bir bileşik denetim türüdür. var olan Web sunucusu denetimlerini ve işaretlemesini bir kullanıcı denetimine ekleyebilir ve denetimin özelliklerini ve yöntemlerini tanımlayabilirsiniz. Daha sonra bunları birim olarak davranan ASP.NET Web sayfalarına ekleyebilirsiniz.
+  Bu Visual Studio, uygulama sayfaları tarafından tüketilen özel, yeniden kullanılabilir denetimler ve Web Bölümleri çalıştırılabilir denetimler SharePoint. Bu denetimler kullanıcı denetimleri olarak adlandırılan bir denetimdir. Kullanıcı denetimi, ASP.NET Web sayfasına çok benzer şekilde çalışan bir bileşik denetim t'tir. Bir kullanıcı denetimine mevcut Web sunucusu denetimlerini ve işaretlemesini ekleyebilir ve denetim için özellikler ve yöntemler tanımlayabilirsiniz. Daha sonra bunları bir ASP.NET gibi davranacakları web sayfalarına katıştırabilirsiniz.
 
 ## <a name="create-a-user-control"></a>Kullanıcı denetimi oluşturma
- Bir kullanıcı denetimi oluşturmak için, **boş bir SharePoint projesine** **Kullanıcı denetimi** ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md).
+ Kullanıcı denetimi oluşturmak için Boş bir kullanıcı **denetimine** Kullanıcı **Denetimi SharePoint Project.** Daha fazla bilgi için, [bkz. How to: Create a user control for a SharePoint application page or web part](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md).
 
- Bir **Kullanıcı denetim** öğesi eklediğinizde, Visual Studio projenizde bir klasör oluşturur ve sonra klasöre birkaç dosya ekler. Aşağıdaki tabloda her bir dosya açıklanmaktadır.
+ Kullanıcı Denetimi öğesi **eklerken,** Visual Studio projeniz içinde bir klasör oluşturur ve ardından klasöre birkaç dosya ekler. Aşağıdaki tabloda her dosya açık almaktadır.
 
-|Dosya|Description|
+|Dosya|Açıklama|
 |----------|-----------------|
-|Kullanıcı denetimi dosyası|Kullanıcı denetimini tanımlar. Bu dosyaya denetimler ve biçimlendirme ekleyerek kullanıcı denetimini tasarlayın.|
-|Kod dosyası|Kullanıcı denetiminin arkasındaki kodu içerir. Bu dosyaya olayları işlemek için kod ekleyin.|
-|Tasarımcı kod dosyası|Tasarımcı tarafından oluşturulan ve doğrudan düzenlenmemelidir bir kod içerir.|
+|Kullanıcı denetim dosyası|Kullanıcı denetimi tanımlar. Bu dosyaya denetimler ve işaretleme ekleyerek kullanıcı denetimi tasarlar.|
+|Kod dosyası|Kullanıcı denetimi arkasında kod içerir. Bu dosyaya olayları işlemek için kod ekleyin.|
+|Tasarımcı kod dosyası|Tasarımcı tarafından oluşturulan kodu içerir ve doğrudan düzenlenemez.|
 
-## <a name="design-the-user-control"></a>Kullanıcı denetimini tasarlama
- Visual Studio 'da Visual Web Developer Designer kullanarak Kullanıcı denetimini tasarlayın. Bu tasarımcı, projenizde kullanıcı denetim dosyasını açıp **Tasarım** sekmesini seçtiğinizde görünür.
+## <a name="design-the-user-control"></a>Kullanıcı denetimi tasarlama
+ Görsel Web Geliştirici tasarımcısını kullanarak kullanıcı denetimi tasarımını Visual Studio. Bu tasarımcı, projenizin kullanıcı denetim dosyasını açıp Tasarım sekmesini seçtiğiniz **zaman** görünür.
 
-## <a name="consume-the-user-control"></a>Kullanıcı denetimini kullanma
- Kullanıcı denetimleri, bir uygulama sayfasına veya bir Web bölümüne dahil edilene kadar SharePoint 'te görünmez.
+## <a name="consume-the-user-control"></a>Kullanıcı denetimi tüketme
+ Kullanıcı denetimleri bir uygulama SharePoint Web Bölümü'ne dahil inceye kadar bu denetimlerde görünmez.
 
- Bir uygulama sayfasına kullanıcı denetimi eklemek için, ASP.NET Kullanıcı denetimini eklemek istediğiniz Web sayfasını açın. Tasarım görünümü geçin, sonra Çözüm Gezgini içindeki özel kullanıcı denetimi dosyanızı seçin ve sayfaya sürükleyin. ASP.NET Kullanıcı denetimi sayfaya eklenir ve tasarımcı, sayfanın Kullanıcı denetimini tanıması için gerekli olan @ Register yönergesini oluşturur. Artık denetimin ortak özellikleri ve yöntemleriyle birlikte çalışabilirsiniz.
+ Bir uygulama sayfasına kullanıcı denetimi eklemek için, uygulama kullanıcı denetimi eklemek istediğiniz Web ASP.NET açın. Tasarım görünümü'a geçiş yapmak için özel kullanıcı denetimi dosyanızı Çözüm Gezgini seçin ve sayfaya sürükleyin. Kullanıcı ASP.NET denetimi sayfaya eklenir ve tasarımcı, sayfanın kullanıcı denetimi tanıması için gereken @ Register yönergesini oluşturur. Artık denetimin genel özellikleri ve yöntemleriyle çalışabilirsiniz.
 
- Bir Web bölümüne Kullanıcı denetimi eklemek için Kullanıcı denetimini Web Bölümü <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> kod dosyasında Web Bölümü koleksiyonuna ekleyin. Aşağıdaki örnek bir Web Bölümü koleksiyonuna bir kullanıcı denetimi ekler <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> .
+ Bir Web Parçasına kullanıcı denetimi eklemek için, kullanıcı denetimlerini Web Bölümü <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> kod dosyasındaki Web Bölümü koleksiyonuna ekleyin. Aşağıdaki örnek, bir Web Bölümü <xref:System.Web.UI.WebControls.WebParts.Part.Controls%2A> koleksiyonuna bir kullanıcı denetimi ekler.
 
  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_visualwebpart.vb/visualwebpart1/visualwebpart1.vb" id="Snippet5":::
  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sp_visualwebpart.cs/visualwebpart1/visualwebpart1.cs" id="Snippet5":::
 
-## <a name="debug-a-user-control"></a>Kullanıcı denetiminde hata ayıklama
- Bir kullanıcı denetiminde hata ayıklamak için, Kullanıcı denetiminin SharePoint projenizdeki bir uygulama sayfasına veya Web bölümüne eklendiğinden emin olun. Daha sonra, herhangi bir Visual Studio projesindeki kodda hata ayıklama yaptığınız gibi, Kullanıcı denetimindeki kodda hata ayıklayabilirsiniz.
+## <a name="debug-a-user-control"></a>Kullanıcı denetimi hata ayıklama
+ Bir kullanıcı denetiminde hata ayıklamak için, kullanıcı denetiminizin bir uygulama sayfasına veya Web Bölümü'ne dahil olduğundan emin SharePoint edin. Daha sonra, kullanıcı denetiminde herhangi bir kaynakta kodda hata ayıklaması Visual Studio Project.
 
- Visual Studio hata ayıklayıcısını başlattığınızda, Visual Studio SharePoint sitesini açar.
+ Hata ayıklayıcısını Visual Studio, Visual Studio siteyi SharePoint açar.
 
- SharePoint 'te, Kullanıcı denetimini içeren uygulama sayfasını açın. Kullanıcı denetimi bir Web bölümüne dahil ise, Web bölümünü SharePoint 'teki bir Web Bölümü sayfasına ekleyin.
+ Bu SharePoint, kullanıcı denetimi içeren uygulama sayfasını açın. Kullanıcı denetimi bir Web Parçasına dahil edildiyse, Web Bölümünü bir Web Bölümü sayfasındaki SharePoint.
 
- SharePoint projelerinde hata ayıklama hakkında daha fazla bilgi için bkz. [SharePoint Çözümlerinde Sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md).
+ Projelerde hata ayıklama hakkında daha fazla SharePoint için [bkz. SharePoint giderme.](../sharepoint/troubleshooting-sharepoint-solutions.md)
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Nasıl yapılır: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|SharePoint 'te çalışan uygulama sayfaları ve Web Bölümleri tarafından tüketilen özel, yeniden kullanılabilir denetimler oluşturmayı gösterir.|
+|[Nasıl SharePoint uygulama sayfası veya web bölümü için kullanıcı denetimi oluşturma](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|Uygulama sayfaları ve uygulama sayfalarında çalıştırılabilir özel, yeniden kullanılabilir denetimler Web Bölümleri nasıl SharePoint.|

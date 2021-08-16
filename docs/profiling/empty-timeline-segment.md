@@ -1,6 +1,6 @@
 ---
-title: Boş zaman çizelgesi segmenti | Microsoft Docs
-description: Visual Studio eşzamanlılık görselleştiricisi içindeki bir kanal türü için bir zaman çizelgesinin bölümünün neden boş (beyaz bir arka plana sahip) olabileceğini anlayın.
+title: Boş Zaman Çizelgesi Segmenti | Microsoft Docs
+description: Eşzamanlılık Visual Studio'nde, zaman çizelgesinin bir bölümünün bir tür kanal için boş (beyaz bir arka plana sahip) neden boş olduğunu anlıyoruz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,26 +12,27 @@ ms.assetid: f37b301f-3edc-4e56-8084-feec2dc5a9b1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a4a3265c3b31653d94a686fa8fda12f7699596e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2bf348388f6668f2c3df5e439b28a5de58d5777df7e40e5b957ec824106af15f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955274"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427047"
 ---
-# <a name="empty-timeline-segment"></a>Boş zaman çizelgesi segmenti
-Eşzamanlılık görselleştiricisi içinde, zaman çizelgesinin bir bölümünün boş olması neden olur (beyaz bir arka plana sahiptir) Kanal türüne bağlıdır.
+# <a name="empty-timeline-segment"></a>Boş zaman çizelgesi kesimi
+Eşzamanlılık Görselleştiricisi'nde zaman çizelgesinin bir bölümünün boş (beyaz bir arka plana sahip) neden olduğu kanal türüne bağlıdır.
 
-- Bir CPU iş parçacığı kanalı için, iş parçacığının bu bölümü zaman çizelgesinin bu kısmı sırasında olmadığı anlamına gelir. İş parçacığı ile ilgileniyorsanız, Yakınlaştırma denetimini kullanarak veya yatay olarak kaydırma yaparak yürütülmekte olan bölümünü bulabilirsiniz.
+- CPU iş parçacığı kanalı için iş parçacığının zaman çizelgesinin bu bölümünde var olmadığını gösterir. İş parçacığıyla ilgileniyorsanız, yakınlaştırma denetimi kullanarak veya yatay olarak kaydırarak yürütme bölümünü bulabilirsiniz.
 
-- G/ç kanalı için, bu noktada hedef işlem adına disk erişimi gerçekleşmediği anlamına gelir.
+- Bir I/O kanalı için, o zaman noktasında hedef işlem adına hiçbir disk erişimi meydana geldiği anlamına gelir.
 
-- DirectX kanalı için, zaman çizelgesinin bu bölümü sırasında hedef işlem adına hiçbir GPU işi gerçekleştirilmediği anlamına gelir.
+- DirectX kanalı için, zaman çizelgesinin bu bölümünde hedef işlem adına GPU işi gerçekleştirilene anlamına gelir.
 
-- İşaretleyici kanal için, hiçbir işaretleyici üretilmediği anlamına gelir.
+- İşaretçi kanalı için, hiçbir işaretçi oluşturulmadı anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)
-- [Yakınlaştırma denetimi (Iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)
+- [Yakınlaştırma denetimi (İş Parçacıkları Görünümü)](../profiling/zoom-control-threads-view.md)

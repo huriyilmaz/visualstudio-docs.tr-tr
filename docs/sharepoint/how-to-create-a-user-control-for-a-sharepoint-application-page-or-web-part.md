@@ -1,7 +1,7 @@
 ---
-title: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma
+title: Uygulama sayfası veya web SharePoint için kullanıcı denetimi oluşturma
 titleSuffix: ''
-description: SharePoint çözümünüz için özel işlevler sağlayan özel kullanıcı denetimleri oluşturun ve bu işlevselliği bir Web Bölümü veya uygulama sayfası içinde yeniden kullanın.
+description: SharePoint çözümünüz için özel işlevsellik sağlayan özel kullanıcı denetimleri oluşturun ve bu işlevselliği bir web bölümü veya uygulama sayfasında yeniden kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,48 +14,49 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 43386f3ba450058d6aaf8ab180e331d2f303a235
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d3b9ae0fe4379f0573a6ef7e7a31b3fabed4f07b8dd569c3a6d196223ac1e93f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925583"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121385217"
 ---
-# <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Nasıl yapılır: SharePoint uygulama sayfası veya Web bölümü için Kullanıcı denetimi oluşturma
-  SharePoint çözümünüz için özel işlevler sağlayan özel kullanıcı denetimleri oluşturabilir ve bu işlevselliği projenizde yeniden kullanabilirsiniz. Kullanıcı denetimlerini bir Web Bölümü veya uygulama sayfasına dahil edebilir, diğer ASP.NET denetimlerini ve SharePoint denetimlerini ekleyebilir ve denetimin özelliklerini ve yöntemlerini tanımlayabilirsiniz. Kullanıcı denetimleri hakkında daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) ve [SharePoint 'te Kullanıcı denetimleri ve sunucu denetimleri](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/)oluşturma.
+# <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Nasıl SharePoint uygulama sayfası veya web bölümü için kullanıcı denetimi oluşturma
+  SharePoint çözümünüz için özel işlevsellik sağlayan özel kullanıcı denetimleri oluşturabilir ve bu işlevi projeniz içinde yeniden kullanabilirsiniz. Kullanıcı denetimlerini bir web parçasına veya uygulama sayfasına ekleyebilir, diğer ASP.NET denetimlerini ve SharePoint denetim özelliklerini ve yöntemlerini tanımlayabilirsiniz. Kullanıcı denetimleri hakkında daha fazla bilgi için [bkz. Web](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma ve [SharePoint.](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/)
 
-### <a name="to-create-a-user-control-for-sharepoint"></a>SharePoint için Kullanıcı denetimi oluşturmak için
+### <a name="to-create-a-user-control-for-sharepoint"></a>SharePoint için kullanıcı denetimi oluşturmak için
 
-1. Visual Studio 'da bir SharePoint projesi açın veya oluşturun.
+1. Bu Visual Studio bir proje açın veya SharePoint oluşturun.
 
-     Bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
+     Bkz. [SharePoint proje ve proje öğesi şablonları.](../sharepoint/sharepoint-project-and-project-item-templates.md)
 
-2. **Çözüm Gezgini**, proje düğümünü seçin.
+2. Bu **Çözüm Gezgini** proje düğümünü seçin.
 
-3. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+3. Menü çubuğunda Yeni Öğe **Ekle'Project**  >  **seçin.**
 
-     **Yeni öğe Ekle** iletişim kutusu açılır.
+     Yeni **Öğe Ekle iletişim** kutusu açılır.
 
-4. **Yüklü** bölmesinde **Office/SharePoint** düğümünü seçin.
+4. Yüklü **bölmesinde,** **Office/SharePoint** seçin.
 
-5. SharePoint şablonları listesinde, Kullanıcı denetimi ' ni **(yalnızca Grup çözümü)** seçin.
+5. Uygulama şablonları listesinde SharePoint Denetimi (Yalnızca Grup **Çözümü) 'yi seçin.**
 
     > [!NOTE]
-    > Kullanıcı denetimleri yalnızca Grup çözümlerinde çalışır.
+    > Kullanıcı denetimleri yalnızca grup çözümlerinde çalışır.
 
-6. **Ad** kutusunda, Kullanıcı denetimi için bir ad belirtin ve ardından **Ekle** düğmesini seçin.
+6. Ad **kutusunda,** kullanıcı denetimi için bir ad belirtin ve ardından Ekle **düğmesini** seçin.
 
-     Visual Studio, projenize birkaç klasör ve dosya ekler. Bu dosyalar hakkında daha fazla bilgi için bkz. [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
+     Visual Studio projenize birkaç klasör ve dosya ekler. Bu dosyalar hakkında daha fazla bilgi için [bkz. Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma.](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
 
-     Varsayılan olarak, Kullanıcı denetimi dosyası, Visual Web Developer Designer 'ın **kaynak** görünümünde görüntülenir. Bu görünümde, denetimin XML işaretlemesini düzenleyebilirsiniz. Denetimleri **araç kutusundan** sürükleyerek görsel olarak tasarlamak istiyorsanız **Tasarım** görünümüne geçebilirsiniz. Bkz. [Tasarım görünümü, Web sayfası tasarımcısı](/previous-versions/aspnet/ms178149\(v\=vs.100\)).
+     Varsayılan olarak, kullanıcı denetim dosyası Visual Web **Geliştirici tasarımcısının** Kaynak görünümünde görünür. Bu görünümde denetimin XML işaretlemesini düzenleyebilirsiniz. Denetimi Araç **Kutusundan** sürükleyerek görsel olarak tasarlamak için Tasarım görünümüne **geçebilirsiniz.** Bkz. [Tasarım Görünümü, Web Sayfası Tasarımcısı.](/previous-versions/aspnet/ms178149\(v\=vs.100\))
 
-7. Denetimde oluşan olayları işlemek istiyorsanız, Kullanıcı denetiminin kod dosyasına kod ekleyin.
+7. Denetimde oluşan olayları işlemek için kullanıcı denetimi kod dosyasına kod ekleyin.
 
-     Bu dosya, Kullanıcı denetimi dosyası altında **Çözüm Gezgini** görüntülenir ve projenin diline bağlı olarak *. cs* veya *. vb* uzantısına sahiptir.
+     Bu dosya, **Çözüm Gezgini** denetimi dosyası altında görünür ve projenin diline bağlı olarak *.cs* veya *.vb* uzantısına sahip olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
 - [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md)
-- [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [SharePoint için web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)

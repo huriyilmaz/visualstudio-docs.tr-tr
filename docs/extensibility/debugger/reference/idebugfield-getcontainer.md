@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem bir alanın kapsayıcısını alır.
-title: 'IDebugField:: GetContainer | Microsoft Docs'
+description: Bu yöntem bir alanın kapsayıcısı alır.
+title: IDebugField::GetContainer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 6d6c8213-6181-4adf-9584-3e4cac163dd8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c5e5f474a55291245cc1811e8f063f80e651b3a5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e87248314a97301fb49a8f4c4fef7db1a44f3e9d4eca7a84b58ea139ef12d188
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077089"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389884"
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
-Bu yöntem bir alanın kapsayıcısını alır.
+Bu yöntem bir alanın kapsayıcısı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetContainer(
 
 ## <a name="parameters"></a>Parametreler
 `ppContainerField`\
-dışı [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimi tarafından temsil edilen kapsayıcıyı döndürür.
+[out] [Kapsayıcıyı IDebugContainerField arabirimiyle temsil edilen şekilde](../../../extensibility/debugger/reference/idebugcontainerfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu alanda bir kapsayıcı yoksa, döndürülen `ppContainerField` değer null olur.
+ Bu alanda bir kapsayıcı yoksa döndürülen değer `ppContainerField` null değer olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

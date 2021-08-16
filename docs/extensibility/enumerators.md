@@ -10,14 +10,15 @@ ms.assetid: a60030c5-e1d1-47e1-84bb-cbfe838ab479
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0bdc42901cbdad3b30bb6739ec93b8979b0d56ad
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 13442c34536382708de5531533afbd795a52b243ac3b5a264d7270e9ca0ccf2b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075282"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376865"
 ---
 # <a name="enumerators"></a>Numaralandırıcılar
 Bu bölüm, kaynak denetimi eklentisinin hakkında bilgi sahibi olması gereken kaynak denetimi eklentisi API 'sindeki Numaralandırıcı veri türlerini listeler.

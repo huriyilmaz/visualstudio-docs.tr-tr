@@ -1,6 +1,6 @@
 ---
 title: -DebugExe (devenv.exe)
-description: Hata ayıklama için belirtilen yürütülebilir dosyayı açmak üzere DebugExe Devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
+description: Hata ayıklamak üzere belirtilen yürütülebilir dosyayı açmak için DebugExe devenv komut satırı anahtarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -13,18 +13,19 @@ ms.assetid: cd700006-1648-418f-924b-4b1e5c1412ab
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cdf770446b78b1a1bb4b55d61f4c3e9f50c4035
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a8ce446e110c8eebec6b9d10a91d6e7becb45a89e9912bfd98307d92ddb4459
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894614"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121429478"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
-Ayıklanmakta olan belirtilen yürütülebilir dosyayı açar.
+Hata ayıklamak için belirtilen yürütülebilir dosyayı açar.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -34,17 +35,17 @@ devenv /DebugExe ExecutableFile
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 
-- *ExecutableFile*
+- *Yürütülebilir Dosya*
 
-  Gereklidir. Bir dosyanın yolu ve dosya adı `.exe` . `.exe`Dosya bulunamazsa veya yoksa, uyarı veya hata gösterilmez ve Visual Studio normal olarak başlatılır.
+  Gereklidir. Bir dosyanın yolu ve dosya `.exe` adı. Dosya bulunamıyorsa veya yoksa uyarı veya hata görüntülenmez ve `.exe` Visual Studio başlar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-*ExecutableFile* parametresini izleyen dizeler, bu dosyaya bağımsız değişken olarak geçirilir.
+*ExecutableFile* parametresini takip eden tüm dizeler bu dosyaya bağımsız değişken olarak geçirilsin.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `MyApplication.exe` hata ayıklama için dosyasını açar.
+Aşağıdaki örnek, hata ayıklama için `MyApplication.exe` dosyasını açar.
 
 ```shell
 devenv /debugexe MyApplication.exe

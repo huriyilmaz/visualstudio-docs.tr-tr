@@ -1,6 +1,6 @@
 ---
-title: Kaynak denetimi tümleştirme temelleri | Microsoft Docs
-description: "Visual Studio 'nun desteklediği iki kaynak denetimi tümleştirmesi türü hakkında bilgi edinin: kaynak denetimi eklentisi ve VSPackage tabanlı kaynak denetimi çözümü."
+title: Kaynak Denetimi Tümleştirme temel | Microsoft Docs
+description: Kaynak denetimi eklentisi ve VSPackage tabanlı Visual Studio çözümü olmak üzere iki tür kaynak denetimi tümleştirmesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,45 +12,46 @@ ms.assetid: 442057cb-fd54-4283-96f8-2f6dc8bf2de7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 155e662eae0dda6689a233e31fd62bb72259ae8b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 00015c08a95e0fea62911942f996817d115ceaeedc04a677dfc2cc36597d78db
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069341"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401173"
 ---
 # <a name="source-control-integration-essentials"></a>Kaynak Denetimini Tümleştirme Temel Bileşenleri
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] iki tür kaynak denetimi tümleştirmesini destekler: temel işlevselliği sağlayan ve kaynak denetim eklentisi API 'SI (eski adıyla MSSCCı API) kullanılarak oluşturulan ve daha sağlam işlevsellik sağlayan VSPackage tabanlı bir kaynak denetimi tümleştirme çözümü.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] iki tür kaynak denetimi tümleştirmesini destekler: temel işlevsellik sağlayan ve Kaynak Denetimi Eklentisi API'si (eski adıyla MSSCCI API'si) kullanılarak inşa edilen bir kaynak denetimi eklentisi ve daha sağlam işlevsellik sağlayan VSPackage tabanlı bir kaynak denetimi tümleştirme çözümü.
 
-## <a name="source-control-plug-in"></a>Kaynak denetimi eklentisi
- Kaynak denetimi eklentisi, kaynak denetimi eklentisi API 'sini uygulayan DLL olarak yazılır. Kayıt ve kaynak denetimi tümleştirme işlevselliği API aracılığıyla sağlanır. Bu yaklaşım, bir kaynak denetimi VSPackage uygulaması daha kolaydır ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetimi işlemleri için Kullanıcı arabirimini (UI) kullanır.
+## <a name="source-control-plug-in"></a>Kaynak Denetimi Eklentisi
+ Kaynak Denetimi Eklentisi, Kaynak Denetimi Eklentisi API'sini uygulayan bir DLL olarak yazılır. Kayıt ve kaynak denetimi tümleştirme işlevselliği API aracılığıyla sağlanır. Bu yaklaşımın uygulanması, VSPackage kaynak denetiminden daha kolaydır ve çoğu kaynak denetimi işlemleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] için kullanıcı arabirimini (UI) kullanır.
 
- Kaynak denetimi eklentisi API 'sini kullanarak bir kaynak denetimi eklentisi uygulamak için aşağıdaki adımları izleyin:
+ Kaynak Denetimi Eklentisi API'sini kullanarak bir kaynak denetimi eklentisi uygulamak için şu adımları izleyin:
 
-1. [Kaynak denetimi eklentilerinde](../../extensibility/source-control-plug-ins.md)belirtilen işlevleri uygulayan bir DLL oluşturun.
+1. Kaynak Denetimi Eklentileri'ne belirtilen işlevleri [uygulayan bir](../../extensibility/source-control-plug-ins.md)DLL oluşturun.
 
-2. DLL 'yi, [nasıl yapılır: kaynak denetimi eklentisi yüklemesi](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)bölümünde açıklandığı gibi uygun kayıt defteri girdilerini yaparak kaydettirin.
+2. Nasıl: Kaynak Denetimi Eklentisi Yükleme konusunda açıklandığı gibi, uygun kayıt defteri [girdilerini yaparak DLL'i kaydetme.](../../extensibility/internals/how-to-install-a-source-control-plug-in.md)
 
-3. Bir yardımcı Kullanıcı arabirimi oluşturun ve kaynak denetim bağdaştırıcısı paketi (kaynak denetimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] eklentileri aracılığıyla kaynak denetimi işlevini işleyen bileşen) tarafından istendiğinde görüntüleyin.
+3. Bir yardımcı kullanıcı arabirimi oluşturun ve Kaynak Denetim Bağdaştırıcısı Paketi (kaynak denetimi eklentileri aracılığıyla kaynak denetimi işlevselliğini ele alan bileşen) istendiğinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bunu görüntüler.
 
-   Daha fazla bilgi için bkz. [kaynak denetim eklentisi oluşturma](../../extensibility/internals/creating-a-source-control-plug-in.md).
+   Daha fazla bilgi için [bkz. Kaynak Denetimi Eklentisi Oluşturma.](../../extensibility/internals/creating-a-source-control-plug-in.md)
 
-## <a name="source-control-vspackage"></a>Kaynak denetimi VSPackage
- Kaynak denetimi VSPackage uygulamasının, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetimi kullanıcı arabirimi için özelleştirilmiş bir değiştirme geliştirmenize olanak sağlar. Bu yaklaşım, kaynak denetimi tümleştirmesi üzerinde tam denetim sağlar, ancak kullanıcı arabirimi öğelerini sağlamanızı ve başka türlü eklenti yaklaşımı altında sağlanacak kaynak denetimi arabirimlerini uygulamanızı gerektirir.
+## <a name="source-control-vspackage"></a>Kaynak Denetimi VSPackage
+ Kaynak denetimi VSPackage uygulaması, kaynak denetimi kullanıcı arabirimi için özelleştirilmiş bir değiştirme [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geliştirmenize olanak sağlar. Bu yaklaşım, kaynak denetimi tümleştirmesi üzerinde tam denetim sağlar, ancak ui öğelerini sağlamanız ve aksi takdirde eklenti yaklaşımı altında sağlanacak kaynak denetim arabirimlerini uygulamanız gerekir.
 
- Bir kaynak denetimi VSPackage uygulamak için şunları yapmanız gerekir:
+ VSPackage kaynak denetimi uygulamak için şunları gerçekleştirin:
 
-1. [Kayıt ve seçim](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)bölümünde açıklandığı gibi kendi kaynak denetimi VSPackage 'ı oluşturun ve kaydedin.
+1. Kayıt ve Seçim içinde açıklandığı gibi kendi kaynak denetimi VSPackage'nizi [oluşturun ve kaydettirin.](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)
 
-2. Varsayılan kaynak denetimi kullanıcı arabirimini Özel UI 'iyle değiştirin. Bkz. [Özel Kullanıcı arabirimi](../../extensibility/internals/custom-user-interface-source-control-vspackage.md).
+2. Varsayılan kaynak denetimi kullanıcı arabirimini özel kullanıcı arabiriminiz ile değiştirin. Bkz. [Özel Kullanıcı Arabirimi.](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)
 
-3. Kullanılacak glifleri belirtin ve **Çözüm Gezgini** glif olaylarını işleyin. Bkz. [glif denetimi](../../extensibility/internals/glyph-control-source-control-vspackage.md).
+3. Kullanılacak glyph'leri belirtin ve **Çözüm Gezgini** işlemek. Bkz. [Glyph Denetimi.](../../extensibility/internals/glyph-control-source-control-vspackage.md)
 
-4. Sorgu [düzenleme sorgu kaydetme](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)bölümünde gösterildiği gibi, sorgu düzenleme ve sorgu kaydetme olaylarını işle.
+4. Sorgu Düzenleme SorguSunu Kaydet'te gösterildiği gibi Sorgu Düzenleme ve [Sorgu Kaydetme olaylarını işle.](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)
 
-   Daha fazla bilgi için bkz. [kaynak denetimi VSPackage oluşturma](../../extensibility/internals/creating-a-source-control-vspackage.md).
+   Daha fazla bilgi için [bkz. Kaynak Denetimi VSPackage Oluşturma.](../../extensibility/internals/creating-a-source-control-vspackage.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Genel Bakış](../../extensibility/internals/source-control-integration-overview.md)

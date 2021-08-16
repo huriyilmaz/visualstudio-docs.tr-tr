@@ -1,6 +1,6 @@
 ---
 title: C++ için Microsoft Birim Testi Çerçevesini Kullanma
-description: C++ kodunuz için birim testleri oluşturmak üzere C++ için Microsoft birim testi çerçevesini kullanın.
+description: C++ kodunuz için birim testleri oluşturmak üzere C++ için Microsoft Birim Testi Çerçevesini kullanın.
 ms.date: 02/16/2021
 ms.topic: how-to
 ms.author: corob
@@ -8,91 +8,91 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: a76c6ac83956cd1e6514ff958278d0b4cbcf0d2f
-ms.sourcegitcommit: cc8547eb211c43b67b8123d1211b80b5642e3b18
+ms.openlocfilehash: f1df2935fba013a9eaafab17d9fc66fa650e2ca7242e79fbd75c598220aac358
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100563441"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121395188"
 ---
-# <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Visual Studio 'da C++ için Microsoft birim testi çerçevesini kullanma
+# <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Visual Studio'de C++ için Microsoft Birim Testi Çerçevesi'Visual Studio
 
-C++ için Microsoft birim testi çerçevesi, C++ iş yüküne **sahip masaüstü geliştirmeye** varsayılan olarak dahildir.
+C++ için Microsoft Birim Testi Çerçevesi, C++ ile Masaüstü Geliştirme iş **yüküne varsayılan olarak** dahil edilir.
 
-## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a> Birim testlerini ayrı bir projede yazmak için
+## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a> Ayrı bir projede birim testleri yazmak için
 
-Genellikle, test kodunuzu test etmek istediğiniz kodla aynı çözümde kendi projesinde çalıştırırsınız. Yeni bir test projesi ayarlamak ve yapılandırmak için bkz. [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md).
+Genellikle test kodunuzu test etmek istediğiniz kodla aynı çözümde kendi projesinde çalıştırabilirsiniz. Yeni bir test projesi ayarlamak ve yapılandırmak için [bkz. C/C++ için birim testleri yazma.](writing-unit-tests-for-c-cpp.md)
 
-## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a> Aynı projedeki birim testlerini yazmak için
+## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a> Aynı projede birim testleri yazmak için
 
-Bazı durumlarda, örneğin, bir DLL 'de verilemeyen işlevleri test ederken, test etmekte olduğunuz programla aynı projede testleri oluşturmanız gerekebilir. Aynı projedeki birim testlerini yazmak için:
+Bazı durumlarda, örneğin bir DLL'de dışarı aktarilmeyen işlevleri test ederken testleri test etmekte olduğu programla aynı projede oluşturmanız gerekir. Aynı projede birim testleri yazmak için:
 
-1. Proje özelliklerini, birim testi için gereken üst bilgileri ve kitaplık dosyalarını içerecek şekilde değiştirin.
+1. Birim testi için gereken üst bilgileri ve kitaplık dosyalarını içerecek şekilde proje özelliklerini değiştirin.
 
-   1. Çözüm Gezgini, test ettiğiniz projenin kısayol menüsünde **Özellikler**' i seçin. Proje Özellikleri penceresi açılır.
+   1. Bu Çözüm Gezgini, test etmekte olduğunu projenin kısayol menüsünde Özellikler'i **seçin.** Proje özellikleri penceresi açılır.
 
-   1. Özellik sayfaları iletişim kutusunda, **yapılandırma özellikleri**  >  **VC + + dizinleri**' ni seçin.
+   1. Özellik Sayfaları iletişim kutusunda Yapılandırma Özellikleri  >  **VC++ Dizinleri'ne tıklayın.**
 
-   1. Aşağıdaki satırlarda aşağı oku seçin ve öğesini seçin **\<Edit>** . Şu yolları ekleyin:
+   1. Aşağıdaki satırlarda aşağı oku seçin ve öğesini **\<Edit>** seçin. Şu yolları ekleyin:
 
       | Dizin | Özellik |
       |-| - |
-      | **Dizinleri dahil et** | **$ (VCInstallDir) Auxiliary\VS\UnitTest\include** |
-      | **Kitaplık dizinleri** | **$ (VCInstallDir) Auxiliary\VS\UnitTest\lib** |
+      | **Dizinleri Dahil Etmek** | **$(VCInstallDir)Auxiliary\VS\UnitTest\include** |
+      | **Kitaplık Dizinleri** | **$(VCInstallDir)Auxiliary\VS\UnitTest\lib** |
 
-1. C++ birim testi dosyası Ekle:
+1. C++ Birim Testi dosyası ekleyin:
 
-   1. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin.
+   1. Proje düğümüne sağ tıklayın ve **Çözüm Gezgini** **Ekle'yi**  >  **seçin.**
 
-   1. **Yeni öğe Ekle** iletişim kutusunda, **C++ dosyası (. cpp)** öğesini seçin, uygun bir ad verin ve ardından **Ekle**' yi seçin.
+   1. Yeni Öğe **Ekle iletişim kutusunda** C++ Dosyası **(.cpp)** öğesini seçin, uygun bir ad girin ve ekle'yi **seçin.**
 
-## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a> Testleri nesne veya kitaplık dosyalarına bağlamak için
+## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a> Testleri nesne veya kitaplık dosyalarına bağlama
 
-Test edilen kod test etmek istediğiniz işlevleri dışa aktarmazsa, Output *. obj* veya *. lib* dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz. Test projesinin özelliklerini, birim testi için gereken üst bilgileri ve kitaplığı ya da nesne dosyalarını içerecek şekilde değiştirin.
+Test altındaki kod, test etmek istediğiniz işlevleri dışarı aktaramazsa, *.obj* veya *.lib* çıktısını test projesinin bağımlılıklarına ekleyin. Birim testi için gereken üst bilgileri ve kitaplığı veya nesne dosyalarını içerecek şekilde test projesinin özelliklerini değiştirin.
 
-1. Çözüm Gezgini, test projesinin kısayol menüsünde **Özellikler**' i seçin. Proje Özellikleri penceresi açılır.
+1. Bu Çözüm Gezgini test projesinin kısayol menüsünde Özellikler'i **seçin.** Proje özellikleri penceresi açılır.
 
-1. **Yapılandırma özellikleri**  >  **bağlayıcı**  >  **giriş** sayfasını seçin ve ardından **ek bağımlılıklar**' ı seçin.
+1. Yapılandırma Özellikleri  >  **Linker Girişi sayfasını**  >  **ve** ardından Ek **Bağımlılıklar'ı seçin.**
 
-   **Düzenle**' yi seçin ve *. obj* veya *. lib* dosyalarının adlarını ekleyin. Tam yol adlarını kullanmayın.
+   **Düzenle'yi** seçin ve *.obj veya* *.lib dosyalarının adlarını* ekleyin. Tam yol adlarını kullanma.
 
-1. **Yapılandırma özellikleri**  >  **bağlayıcı**  >  **genel** sayfasını seçin ve ardından **Ek kitaplık dizinleri**' ni seçin.
+1. Yapılandırma Özellikleri  >  **Linker Genel sayfasını**  >  **ve** ardından Ek Kitaplık **Dizinleri'ne tıklayın.**
 
-   **Düzenle**' yi seçin ve *. obj* veya *. lib* dosyalarının dizin yolunu ekleyin. Yol, genellikle test kapsamındaki projenin Build klasöründedir.
+   **Düzenle'yi** seçin ve *.obj* veya *.lib* dosyalarının dizin yolunu ekleyin. Yol genellikle test altındaki projenin derleme klasöründe bulunur.
 
-1. **Yapılandırma özellikleri**  >  **VC + + dizinler** sayfasını seçin ve ardından **dizinleri dahil et**' i seçin.
+1. Yapılandırma **Özellikleri**  >  **VC++ Dizinleri sayfasını ve** ardından Dizinleri Dahil **Edin'i seçin.**
 
-   **Düzenle**' yi seçin ve ardından test altında projenin üstbilgi dizinini ekleyin.
+   **Düzenle'yi** seçin ve ardından projenin üst bilgi dizinini test altına ekleyin.
 
 ## <a name="write-the-tests"></a>Testleri yazma
 
-Test sınıflarıyla olan herhangi bir *. cpp* dosyası "CppUnitTest. h" içermelidir ve için bir using ifadesine sahip olmalıdır `using namespace Microsoft::VisualStudio::CppUnitTestFramework` . Test projesi sizin için zaten yapılandırılmış. Ayrıca, bir ad alanı tanımı ve başlamanızı sağlamak için TEST_METHOD bir TEST_CLASS içerir. Ad alanı adını ve adları, sınıf ve Yöntem makrolarında parantez içinde değiştirebilirsiniz.
+Test sınıflarını içeren herhangi bir *.cpp* dosyası "CppUnitTest.h" içermeli ve için bir using deyimine sahip `using namespace Microsoft::VisualStudio::CppUnitTestFramework` olmalı. Test projesi sizin için zaten yapılandırılmıştır. Ayrıca bir ad alanı tanımı ve başlamanız TEST_CLASS için TEST_METHOD bir ad alanı içerir. Sınıf ve yöntem makrolarında ad alanı adını ve adları parantez içinde değiştirebilirsiniz.
 
-Test çerçevesi, test modüllerini, sınıfları ve yöntemleri başlatmak ve testlerin tamamlandıktan sonra kaynakların temizlenmesi için özel makrolar tanımlar. Bu makrolar bir sınıf veya yönteme ilk kez erişildikten sonra ve son test çalıştıktan sonra yürütülecek kodu oluşturur. Daha fazla bilgi için bkz. [başlatma ve Temizleme](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#Initialize_and_cleanup).
+Test çerçevesi, test modüllerini, sınıflarını ve yöntemlerini başlatmaya ve testler tamamlandıktan sonra kaynakların temizlenmesine özel makrolar tanımlar. Bu makrolar, bir sınıf veya yönteme ilk erişilmeden önce ve son test çalıştırildikten sonra yürütülecek kodu üretir. Daha fazla bilgi için bkz. [Başlatma ve temizleme.](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#Initialize_and_cleanup)
 
-Test koşullarını tanımlamak için [onaylama](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#general_asserts) sınıfındaki statik yöntemleri kullanın. **Çıkış penceresi** ileti yazmak için [günlükçü](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#logger) sınıfını kullanın. Test yöntemlerine öznitelik ekleme
+Test koşullarını tanımlamak için [Assert sınıfındaki](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#general_asserts) statik yöntemleri kullanın. Çıkış Penceresi'a ileti yazmak için [Logger](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md#logger) **sınıfını kullanın.** Test yöntemlerine öznitelik ekleme
 
 ## <a name="run-the-tests"></a>Testleri çalıştırma
 
-1. **Test** menüsünde **Windows**  >  **Test Gezgini**' ni seçin.
+1. Test menüsünde **Test** **Gezgini'Windows**  >  **seçin.**
 
-1. Tüm testleriniz pencerede görünmüyorsa, **Çözüm Gezgini** ' de düğümüne sağ tıklayıp **Derle** veya **yeniden oluştur**' u seçerek test projesi oluşturun.
+1. Tüm testlerinizi pencerede görünmüyorsa, projedeki düğümüne sağ tıklar ve Derleme veya Yeniden Derleme'yi **Çözüm Gezgini** **projesini** **derleme.**
 
-1. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin veya çalıştırmak istediğiniz belirli testleri seçin. Kesme noktaları etkinken hata ayıklama modunda çalıştırmak dahil diğer seçenekler için teste sağ tıklayın.
+1. **Test Gezgini'nde,** **Tüm Testleri** Çalıştır'ı seçin veya çalıştırmak istediğiniz testleri seçin. Diğer seçenekler için bir teste sağ tıklayın ve kesme noktaları etkin hata ayıklama modunda çalıştırmayı da içerir.
 
-1. **Çıkış penceresi** , sınıf tarafından yazılmış iletileri görüntülemek için açılan kutuda **testler** ' i seçin `Logger` :
+1. Aşağıdaki **Çıkış Penceresi** **sınıf tarafından** yazılan iletileri görüntülemek için açılan listelerden Testler'i `Logger` seçin:
 
-   ![Test iletilerini gösteren C++ Çıkış Penceresi](media/cpp-test-output-window.png)
+   ![Test iletilerini Çıkış Penceresi C++ kitaplığı](media/cpp-test-output-window.png)
 
-## <a name="define-traits-to-enable-grouping"></a>Gruplamayı etkinleştirmek için nitelikleri tanımlama
+## <a name="define-traits-to-enable-grouping"></a>Gruplamayı etkinleştirmek için nitelikler tanımlama
 
-Test **Gezgini**'nde testleri kategorilere ayırmanıza ve gruplandırmalarına olanak tanıyan test yöntemlerinde nitelikler tanımlayabilirsiniz. Bir nitelik tanımlamak için, makrosunu kullanın `TEST_METHOD_ATTRIBUTE` . Örneğin, adlı bir nitelik tanımlamak için `TEST_MY_TRAIT` :
+Testleri Test Gezgini'nde kategorilere ayırmanız ve gruplandırmanız için test yöntemlerinde **nitelikler tanımlayabilirsiniz.** Bir nitelik tanımlamak için makroyu `TEST_METHOD_ATTRIBUTE` kullanın. Örneğin, adlı bir nitelik tanımlamak `TEST_MY_TRAIT` için:
 
 ```cpp
 #define TEST_MY_TRAIT(traitValue) TEST_METHOD_ATTRIBUTE(L"MyTrait", traitValue)
 ```
 
-Birim testlerinizde tanımlı nitelik kullanmak için:
+Birim testlerinde tanımlanan özelliği kullanmak için:
 
 ```cpp
 BEGIN_TEST_METHOD_ATTRIBUTE(Method1)
@@ -108,16 +108,16 @@ TEST_METHOD(Method1)
 }
 ```
 
-### <a name="c-trait-attribute-macros"></a>C++ nitelik öznitelik makroları
+### <a name="c-trait-attribute-macros"></a>C++ nitelik özniteliği makroları
 
-Aşağıdaki önceden tanımlanmış nitelikler içinde bulunur *`CppUnitTest.h`* . Daha fazla bilgi için bkz. [C++ API başvurusu Için Microsoft birim testi çerçevesi](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md).
+Aşağıdaki önceden tanımlanmış nitelikler içinde *`CppUnitTest.h`* bulunur. Daha fazla bilgi için [bkz. C++ API başvurusu için Microsoft Birim Testi Çerçevesi.](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)
 
-|Makroya|Açıklama|
+|Makro|Açıklama|
 |-|-----------------|
-|`TEST_METHOD_ATTRIBUTE(attributeName, attributeValue)`|Bir nitelik tanımlamak için TEST_METHOD_ATTRIBUTE makrosunu kullanın.|
-|`TEST_OWNER(ownerAlias)`|Test yönteminin sahibini belirtmek için önceden tanımlanmış Owner nitelik kullanın.|
-|`TEST_PRIORITY(priority)`|Test yöntemlerinize göreli öncelikler atamak için önceden tanımlanmış Priority nitelik kullanın.|
+|`TEST_METHOD_ATTRIBUTE(attributeName, attributeValue)`|Nitelik tanımlamak TEST_METHOD_ATTRIBUTE makrosu kullanın.|
+|`TEST_OWNER(ownerAlias)`|Test yönteminin sahibini belirtmek için önceden tanımlanmış Sahip özelliklerini kullanın.|
+|`TEST_PRIORITY(priority)`|Test yöntemlerinize göreli öncelik atamak için önceden tanımlanmış Öncelik niteliklerini kullanın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı başlangıç: Test Gezgini ile test temelli geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)
+- [Hızlı Başlangıç: Test Gezgini ile test güdümlü geliştirme](../test/quick-start-test-driven-development-with-test-explorer.md)

@@ -1,6 +1,6 @@
 ---
 title: Kanallar (Iş parçacıkları görünümü) | Microsoft Docs
-description: Visual Studio eşzamanlılık görselleştiricisi içinde kanalları kullanırken Iş parçacıkları görünümü hakkında bilgi edinin. İş parçacığı kanallarını, disk kanallarını, işaretleyici kanalları ve GPU kanallarını görüntüleyin.
+description: Visual Studio eşzamanlılık görselleştiricisi içinde kanalları kullanırken iş parçacıkları görünümü hakkında bilgi edinin. İş parçacığı kanallarını, disk kanallarını, işaretleyici kanalları ve GPU kanallarını görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,14 +12,15 @@ ms.assetid: 2f798c17-2363-42a4-be94-a5751d208eac
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 135796b09689915d81132abb4f8f36888b64f393
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d5459909e99da3ecd6627d14ae464b651b7c535a4226cbf89f6a9985288987ae
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960304"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397000"
 ---
 # <a name="channels-threads-view"></a>Kanallar (iş parçacıkları görünümü)
 Eşzamanlılık görselleştiricisi dört tür kanal gösterir: iş parçacığı kanalları, disk kanalları, işaret kanalları ve GPU kanalları.
@@ -27,12 +28,12 @@ Eşzamanlılık görselleştiricisi dört tür kanal gösterir: iş parçacığ�
 ## <a name="thread-channels"></a>İş parçacığı kanalları
  İş parçacığı kanalı, yalnızca bir iş parçacığı için iş parçacığı durumunu renge göre gösterir. Kanal adında durakladığınızda, verilen iş parçacığı için Başlat işlevi görüntülenir. Eşzamanlılık görselleştiricisi çeşitli iş parçacığı türlerini algılar. En yaygın türleri aşağıdaki tabloda gösterilmiştir.
 
-|İş Parçacığı|Description|
+|İş Parçacığı|Açıklama|
 |-|-|
 |Ana iş parçacığı|Uygulamayı başlatan iş parçacığı.|
 |Çalışan iş parçacığı|Uygulama ana iş parçacığı tarafından oluşturulan bir iş parçacığı.|
 |CLR Worker Iş parçacığı|Ortak dil çalışma zamanı (CLR) tarafından oluşturulan bir çalışan iş parçacığı.|
-|Hata ayıklayıcı Yardımcısı|Visual Studio hata ayıklayıcısı tarafından oluşturulan bir çalışan iş parçacığı.|
+|Hata ayıklayıcı Yardımcısı|Visual Studio hata ayıklayıcı tarafından oluşturulan bir çalışan iş parçacığı.|
 |ConcRT Iş parçacığı|Microsoft Eşzamanlılık Çalışma Zamanı tarafından oluşturulan bir iş parçacığı.|
 |GDI Iş parçacığı|GDIPlus tarafından oluşturulan bir iş parçacığı.|
 |OLE/RPC Iş parçacığı|RPC çalışan Iş parçacığı olarak oluşturulan bir iş parçacığı.|
@@ -44,7 +45,7 @@ Eşzamanlılık görselleştiricisi dört tür kanal gösterir: iş parçacığ�
  Disk kanalları bilgisayardaki fiziksel sürücülere karşılık gelir. Sistemdeki her fiziksel sürücü için okuma ve yazma işlemleri için ayrı kanallar bulunduğundan, her sürücüde iki kanal bulunur. Disk numaraları çekirdek cihaz adlarına karşılık gelir. Disk kanalı yalnızca diskte etkinlik varsa gösterilir.
 
 ## <a name="marker-channels"></a>İşaret kanalları
- İşaretleyici kanalları, uygulama tarafından oluşturulan olaylara ve kullandığı kitaplıklara karşılık gelir. Örneğin, görev paralel kitaplığı, paralel Desenler kitaplığı ve C++ AMP işaretleyiciler olarak görüntülenen olaylar oluşturur. Her işaretleyici kanalı, kanalın açıklamasının yanında görünen bir iş parçacığı KIMLIĞI ile ilişkilendirilir. KIMLIĞI, olayı oluşturan iş parçacığını tanımlar. Kanalın açıklaması, olayları oluşturan Windows için olay Izleme (ETW) sağlayıcısının adını içerir. Kanal [Eşzamanlılık Görselleştiricisi SDK 'sının](../profiling/concurrency-visualizer-sdk.md)olaylarını görüntülüyorsa, seri adı da görüntülenir.
+ İşaretleyici kanalları, uygulama tarafından oluşturulan olaylara ve kullandığı kitaplıklara karşılık gelir. örneğin, görev paralel kitaplığı, paralel desenler kitaplığı ve C++ AMP işaretleyiciler olarak görüntülenen olaylar oluşturur. Her işaretleyici kanalı, kanalın açıklamasının yanında görünen bir iş parçacığı KIMLIĞI ile ilişkilendirilir. KIMLIĞI, olayı oluşturan iş parçacığını tanımlar. kanalın açıklaması, olayları oluşturan Windows (ETW) sağlayıcısı için olay izleme adını içerir. Kanal [Eşzamanlılık Görselleştiricisi SDK 'sının](../profiling/concurrency-visualizer-sdk.md)olaylarını görüntülüyorsa, seri adı da görüntülenir.
 
 ## <a name="gpu-channels"></a>GPU kanalları
  GPU kanalları sistemde DirectX 11 etkinliği hakkındaki bilgileri görüntüler.  Grafik kartıyla ilişkili her DirectX altyapısının ayrı bir kanalı vardır.  Tek tek segmentler, bir DMA paketini işlemek için harcanan süreyi temsil eder.

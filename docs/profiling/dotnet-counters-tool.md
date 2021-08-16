@@ -1,6 +1,6 @@
 ---
 title: DotNet sayaçlarını görselleştirin | Microsoft Docs
-description: Visual Studio performans profil oluşturucusu 'nda .NET sayaçları aracını kullanmayı öğrenin.
+description: Visual Studio performans profilcisi ' nde .net sayaçları aracını kullanmayı öğrenin.
 ms.date: 12/7/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,25 +10,25 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a09cc073b2886ab0d374bccaf8b85f3bb729dd7
-ms.sourcegitcommit: 620d30c60da8f9805fce524fe4951cf40f28297d
+ms.openlocfilehash: 1eb8ce22a6271c10f7a5b0375958788a5f862bdbe51f2bc2759c67ea58399197
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97905042"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368688"
 ---
-# <a name="visualize-dotnet-counters-from-the-visual-studio-profiler"></a>Visual Studio Profiler 'dan DotNet sayaçlarını görselleştirin
+# <a name="visualize-dotnet-counters-from-the-visual-studio-profiler"></a>Visual Studio profiler 'dan dotnet sayaçlarını görselleştirin
 
 
-.NET sayaçları Aracı, Visual Studio Profiler 'ın içinden zaman içinde [DotNet sayaçlarını](/dotnet/core/diagnostics/dotnet-counters) görselleştirmenize olanak tanır.
+.net sayaçları aracı, Visual Studio profiler 'ın içinden zaman içinde [dotnet sayaçlarını](/dotnet/core/diagnostics/dotnet-counters) görselleştirmenize olanak tanır.
 
 
 > [!NOTE]
-> .NET sayaçları Aracı, Visual Studio 2019 sürüm 16,7 veya üzerini gerektirir ve .NET Core 3.0 + ' u hedefler.
+> .net sayaçları aracı Visual Studio 2019 sürüm 16,7 veya üzerini gerektirir ve .net Core 3.0 + ' u hedefler.
 
 ## <a name="setup"></a>Kurulum
 
-1. Performans profil oluşturucuyu (**alt + f2** veya **Debug-> Performance Profiler**) Visual Studio 'da açın.
+1. Performans profil oluşturucuyu (**alt + f2** veya **Debug-> Performance Profiler**) Visual Studio ' de açın.
 
 2. **.Net sayaçları** onay kutusunu seçin.
 

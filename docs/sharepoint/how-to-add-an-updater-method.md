@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: bir Güncelleştirici yöntemi ekleme | Microsoft Docs'
-description: Bir Güncelleştirici yöntemi ekleyerek kullanıcıların bir SharePoint dış listesindeki iş verilerini güncelleştirmesini nasıl sağlayacağınızı öğrenin.
+description: bir güncelleştirici yöntemi ekleyerek kullanıcıların SharePoint dış listedeki iş verilerini güncelleştirmesini nasıl sağlayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,23 +17,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: d6337ac237c2a030593b90b29af5e8474052de99
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 2a72c5f14beb74658fd06c10728083c9eccba8adbd62c0a77db1aaf1bd32f092
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216741"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425316"
 ---
 # <a name="how-to-add-an-updater-method"></a>Nasıl yapılır: Güncelleştirici yöntemi ekleme
-  Bir *Güncelleştirici* yöntemi oluşturarak kullanıcıların bir SharePoint dış listesindeki iş verilerini güncelleştirmesine olanak sağlayabilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+  bir *güncelleştirici* yöntemi oluşturarak kullanıcıların SharePoint dış listedeki iş verilerini güncelleştirmesine olanak sağlayabilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-an-updater-method"></a>Bir Güncelleştirici yöntemi oluşturmak için
 
 1. IVB tasarımcısında bir varlık seçin.
 
-2. Menü çubuğunda,   >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. menü çubuğunda   >  **diğer Windows**  >  **BDC yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     IVB yöntemi ayrıntıları penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -45,7 +46,7 @@ ms.locfileid: "106216741"
 
    - Yöntemi için bir giriş parametresi.
 
-   - Parametre için tür tanımlayıcısı. Varsayılan olarak, Visual Studio, Finder yöntemi için tanımladığınız varlık türü tanımlayıcısını kullanır (örneğin, Iletişim).
+   - Parametre için tür tanımlayıcısı. varsayılan olarak, Visual Studio, bulucu yöntemi için tanımladığınız varlık türü tanımlayıcısını kullanır (örneğin, iletişim).
 
    - Yöntemi için bir yöntem örneği.
 

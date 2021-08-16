@@ -6,22 +6,22 @@ ms.author: jomatthi
 ms.date: 11/09/2020
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.openlocfilehash: 838762435268ea06c09392475f294dbb22c3038d
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: d21b35d3c212a6cbf1982251cc2a5f33881b9f849d919b328fa7948b6393e24c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493250"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365263"
 ---
 # <a name="data-visualizations"></a>Veri görselleştirmeleri
 
-Mac için Visual Studio hata ayıklayıcı için Kullanıcı arabirimi desteği içerir ve hata ayıklama sırasında değişken, alan veya özellik değerlerinin görselleştirmelerini sağlar. Bu veri Görselleştiriciler, verilerin genişletilmiş bir sürümünü gösterir ve geliştiricilerin bilinen yapıları inceleyerek, örneğin bir Color yapısının rengini gösterir.
+Mac için Visual Studio hata ayıklayıcı için kullanıcı arabirimi desteği içerir ve hata ayıklama sırasında değişken, alan veya özellik değerlerinin görselleştirmelerini sağlar. Bu veri Görselleştiriciler, verilerin genişletilmiş bir sürümünü gösterir ve geliştiricilerin bilinen yapıları inceleyerek, örneğin bir Color yapısının rengini gösterir.
 
 Hata Ayıkla  **Yereller** penceresindeki Görselleştiriciler, Kullanıcı satırın üzerine geldiğinde değerin sağında görüntülenen Önizleme simgesine tıklanarak görüntülenebilir:
 
 ![Yereller penceresi](media/data-visualizations-image9.png)
 
-Aşağıdaki liste, Mac için Visual Studio hata ayıklamada bulunan yeni görselleştirmelerin çoğuna bakar.
+aşağıdaki liste, Mac için Visual Studio hata ayıklamada bulunan yeni görselleştirmelerin çoğuna bakar.
 
 ## <a name="point"></a>Seçeneğinin
 İOS ve Mac 'teki bir Point/PointF ya da CGPoint, hata ayıklama pencerelerinin X ve Y değerlerini gösteren bir kayıt düzeni olarak işlenir:
@@ -103,5 +103,5 @@ Kendi satır içi görselleştiricilerini de içeren bazı diğer türler aşağ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Oto ve Yereller pencerelerinde değişkenleri İnceleme (Windows üzerinde Visual Studio)](/visualstudio/debugger/autos-and-locals-windows)
-- [Bir Görselleştirici içindeki dizeleri görüntüleme (Windows üzerinde Visual Studio)](/visualstudio/debugger/string-visualizer-dialog-box)
+- [oto ve yereller pencerelerinde değişkenleri inceleme (Windows Visual Studio)](/visualstudio/debugger/autos-and-locals-windows)
+- [bir görselleştirici içindeki dizeleri görüntüleme (Windows Visual Studio)](/visualstudio/debugger/string-visualizer-dialog-box)

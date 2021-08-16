@@ -1,5 +1,5 @@
 ---
-description: Belirtilen Boole parametresine bağlı olarak grafik bilgilerini varsayılan olarak etkin bir şekilde yakalamak ve kaydetmek için grafik tanılamanın uygulama içinde bileşenini hazırlayan veya hazırlamadan VsgDbg sınıfının bir örneğini oluşturun.
+description: Belirtilen Boole parametresine göre grafik bilgilerini varsayılan olarak etkin bir şekilde yakalamak ve kaydetmek için grafik tanılamanın uygulama içinde bileşenini hazırlamadan veya ile VsgDbg sınıfının bir örneğini oluşturun.
 title: VsgDbg::VsgDbg (Oluşturucu) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,14 +7,15 @@ ms.assetid: 670651e6-5e79-4845-b0c2-671beb7055a8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e3693301aef27e01f2d12fa954f94fcc55fb8dea
-ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+ms.openlocfilehash: d0c1061b329e4688a106402cde0eb879ca6eacf5cff0aeb8e6d9de3cc3da0343
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114232433"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419162"
 ---
 # <a name="vsgdbgvsgdbg-constructor"></a>VsgDbg::VsgDbg (Oluşturucu)
 Belirtilen Boole parametresine göre grafik bilgilerini varsayılan olarak etkin bir şekilde yakalamak ve kaydetmek için grafik tanılamanın uygulama içinde bileşenini hazırlamadan veya ile sınıfının `VsgDbg` bir örneğini oluşturun.

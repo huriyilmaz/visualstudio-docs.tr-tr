@@ -9,14 +9,15 @@ ms.assetid: a82ab896-0185-46a4-b4d5-babfcc660fe1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f60952220f22bcf7b67534905f8bd56da520d99
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: cf8079880ee889a949595b9e7f325bce30ab0a03ca1bdc33b630e1638b8ba8de
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155756"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420545"
 ---
 # <a name="idiasymbolget_sizeinudt"></a>IDiaSymbol::get_sizeInUdt
 Kullanıcı tanımlı bir türün bir üyesinin boyutunu alır.

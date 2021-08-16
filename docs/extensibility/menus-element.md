@@ -11,14 +11,15 @@ ms.assetid: d825a99b-e05c-4dd9-8933-a180216d667a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59c8cb242322cbb52aa90b821e14698ace6d0534
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: f13623fbd4d8116c86a71e22cd184749f25786e2b39b0f71af8f47c9716e1a75
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905585"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400952"
 ---
 # <a name="menus-element"></a>Menüler öğesi
 VSPackage 'ın uyguladığı tüm menüleri ve araç çubuklarını tanımlar.

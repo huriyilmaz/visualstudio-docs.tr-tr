@@ -1,6 +1,6 @@
 ---
-description: Geçerli hata kesme noktası numaralandırmasının bir kopyasını ayrı bir nesne olarak döndürür.
-title: 'IEnumDebugErrorBreakpoints2:: Clone | Microsoft Docs'
+description: Geçerli hata kesme noktası numaralamalarının bir kopyasını ayrı bir nesne olarak döndürür.
+title: IEnumDebugErrorBreakpoints2::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: f6fb4985-8dd6-4a9b-98e0-15dbc64cc9ec
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 40b4a19dd9a4ec5afcaeb04c26d92c161398b4cc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2c17406c74fc6f3516fea14f3f8ecccc26be9795ba1d6289f0bcda59c8640d57
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081054"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415552"
 ---
 # <a name="ienumdebugerrorbreakpoints2clone"></a>IEnumDebugErrorBreakpoints2::Clone
-Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
+Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
+[out] Bu numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın kopyası, bu yöntemin çağrılışında orijinal ile aynı duruma sahiptir. Bununla birlikte, kopyanın ve özgün durumlarının durumları ayrıdır ve tek tek değiştirilebilir.
+ Numaralamanın kopyası, bu yöntemin çağrıldı olduğu sırada özgün ile aynı durumla aynıdır. Ancak kopyaların ve özgünlerin durumları ayrıdır ve tek tek değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)

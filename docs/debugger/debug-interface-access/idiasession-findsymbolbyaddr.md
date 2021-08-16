@@ -1,6 +1,6 @@
 ---
-description: Belirtilen bir adrese sahip veya en yakın olan, belirtilen bir sembol türünü alır.
-title: 'IDiaSession:: findSymbolByAddr | Microsoft Docs'
+description: Belirtilen bir adresi içeren veya en yakın olan belirtilen sembol türünü alın.
+title: IDiaSession::findSymbolByAddr | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: c130abc5-4d0a-4d2d-8286-94fde36ddd4a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 42108d680f7303e9868065f15d320826baae7fdb
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b24fe03c52107525437ecd96525e1f4d8925e58d197d07e9d2761247b5c989c0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147711"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380177"
 ---
 # <a name="idiasessionfindsymbolbyaddr"></a>IDiaSession::findSymbolByAddr
-Belirtilen bir adrese sahip veya en yakın olan, belirtilen bir sembol türünü alır.
+Belirtilen bir adresi içeren veya en yakın olan belirtilen sembol türünü alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,22 +38,22 @@ HRESULT findSymbolByAddr (
 #### <a name="parameters"></a>Parametreler
  `isect`
 
-'ndaki Adresin bölüm bileşenini belirtir.
+[in] Adresin bölüm bileşenini belirtir.
 
  `offset`
 
-'ndaki Adresin konum bileşenini belirtir.
+[in] Adresin kaydırma bileşenini belirtir.
 
  `symtag`
 
-'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
+[in] Buluna sembol türü. Değerler [SymTagEnum Numaralama numaralarından](../../debugger/debug-interface-access/symtagenum.md) alınır.
 
  `ppSymbol`
 
-dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+[out] Alınan sembolü [temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

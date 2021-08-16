@@ -1,6 +1,6 @@
 ---
-description: Bu işaretçinin kısıtlı olarak işaretlenip işaretlenmediğini belirtir.
-title: 'IDiaSymbol:: get_restrictedType | Microsoft Docs'
+description: Bu işaretçinin kısıtlanmış olarak işaretlenmiş olup olmadığını belirtir.
+title: IDiaSymbol::get_restrictedType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -9,17 +9,18 @@ ms.assetid: c48b00a6-26b0-47b0-b824-fe44dedbc756
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c75e11b4b16f2a8123c833999d7bb793915e2dad
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7b03696ccfc9c158cea1b626e40c62cb96e831edf278c9569699e70d26b7bc0e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161867"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420569"
 ---
 # <a name="idiasymbolget_restrictedtype"></a>IDiaSymbol::get_restrictedType
-`this`İşaretçinin kısıtlı olarak işaretlenip işaretlenmediğini belirtir.
+İşaretçinin `this` kısıtlanmış olarak işaretlenmiş olup olmadığını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,10 +32,10 @@ HRESULT get_restrictedType(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `BOOL` `this` İşaretçisinin kısıtlı olarak işaretlenip işaretlenmeyeceğini belirten bir işaretçisi.
+[out] İşaretçinin `BOOL` kısıtlanmış olarak `this` işaretlenmiş olup olmadığını belirten bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

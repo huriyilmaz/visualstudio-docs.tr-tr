@@ -1,6 +1,6 @@
 ---
 title: WPF hatalarını ayıklama | Microsoft Docs
-description: Visual Studio 'da hata ayıklama Windows Presentation Foundation (WPF) uygulamalarını daha kolay hale getirmek için ek özellikleri açıklayan makalelerin listesini görüntüleyin.
+description: Visual Studio hata ayıklama Windows Presentation Foundation (WPF) uygulamalarını daha kolay hale getirmek için ek özellikleri açıklayan makalelerin listesini görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 10/22/2019
 ms.topic: conceptual
@@ -16,14 +16,15 @@ ms.assetid: 7948e8a6-40b2-4ebb-8461-e220a9e78cd7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: dae3cddf96c9f679a6c5ff03466ee05ead306e56
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f6ec7a99c8f60509abd62958cdd952473dbb25feed152938991d9bcc8eb128c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872150"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391542"
 ---
 # <a name="debugging-wpf"></a>WPF'de Hata Ayıklama
 

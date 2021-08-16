@@ -1,6 +1,6 @@
 ---
 title: Dalgaları değiştirme
-description: MSBuild 'de, potansiyel olarak kesintiye uğratan özellikleri etkinleştirmeyi veya devre dışı bırakmayı öğrenin.
+description: büyük olasılıkla kesintiye uğramayan MSBuild özellikleri etkinleştirmeyi veya devre dışı bırakmayı öğrenin.
 ms.date: 11/10/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,25 +9,26 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 monikerRange: '>=vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 77f93b4741ee987bac871e619ccbe58e2d4d4000
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d11869435f968f861cc390b89ed3781e2d4b391de76903ca02c7ad53b98fc9f0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939532"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121428594"
 ---
 # <a name="change-waves"></a>Dalgaları değiştirme
 
-*Değişiklik dalgası* , bir ortam değişkeni olarak belirli bir bayrağı belirterek, geri çevirmek Için, MSBuild 'teki bir davranış değişikliği kümesidir. Bunun amacı, bu değişiklikleri standart işlevselliğe dönüşecek şekilde uyarlamak için büyük olasılıkla kesintiye uğratan değişiklikler konusunda sizi uyarır. Belirli bir değişiklik dalgasının tüm özellikleri tek tek değil, birlikte etkinleştirilebilir veya devre dışı bırakılabilir.
+*değişiklik dalgası* , bir ortam değişkeni olarak belirli bir bayrağı belirterek MSBuild ' deki bir davranış değişikliği kümesidir. Bunun amacı, bu değişiklikleri standart işlevselliğe dönüşecek şekilde uyarlamak için büyük olasılıkla kesintiye uğratan değişiklikler konusunda sizi uyarır. Belirli bir değişiklik dalgasının tüm özellikleri tek tek değil, birlikte etkinleştirilebilir veya devre dışı bırakılabilir.
 
-MSBuild 'in yeni bir sürümüne yükselttiğinizde, büyük olasılıkla kırılmaya neden olan değişiklikler varsayılan olarak etkindir, ancak bir özellik derlemenizi olumsuz yönde etkiliyorsa, bu değişiklik dalgasını kolayca devre dışı bırakabilirsiniz. Her bir değişiklik dalgası bir MSBuild sürüm numarasıyla tanımlanır (örneğin, 16,8), ancak değişiklik dalgasının ayarlanması, bu MSBuild sürümündeki tüm değişiklikleri değil, derleme işlemini etkileyebilecek belirli özellikleri denetler. [Bu makalenin ilerleyen bölümlerinde](#change-waves-and-associated-features)her değişiklik dalgasının özelliklerinin bir listesi görüntülenir. Değişiklik dalgasının devre dışı bırakılması, daha yüksek sürümlerin değişiklik dalgalarını devre dışı bırakır
+yeni bir MSBuild sürümüne yükselttiğinizde, büyük olasılıkla kırılmaya neden olan değişiklikler varsayılan olarak etkindir, ancak bir özellik derlemenizi olumsuz yönde etkiliyorsa, bu değişiklik dalgasını kolayca devre dışı bırakabilirsiniz. her bir değişiklik dalga MSBuild bir sürüm numarasıyla tanımlanır (örneğin, 16,8), ancak değişiklik dalgasının ayarlanması, bu MSBuild sürümündeki tüm değişiklikleri değil, derleme işlemini etkileyebilecek belirli özellikleri denetler. [Bu makalenin ilerleyen bölümlerinde](#change-waves-and-associated-features)her değişiklik dalgasının özelliklerinin bir listesi görüntülenir. Değişiklik dalgasının devre dışı bırakılması, daha yüksek sürümlerin değişiklik dalgalarını devre dışı bırakır
 
 ## <a name="opt-out-of-change-wave-features"></a>Değişiklik dalga özelliklerini devre dışı
 
-Değişiklik dalgasının özelliklerini devre dışı bırakmak için, ortam değişkenini `MSBuildDisableFeaturesFromVersion` **devre dışı** bırakmak istediğiniz özelliği içeren dalga (veya MSBuild sürümü) olarak ayarlayın. Bu, özelliklerin geliştirildiği MSBuild sürümüdür. Değişiklik dalgalarını aşağıdaki özelliklerle eşleştirmeye bakın.
+değişiklik dalgasının özelliklerini devre dışı bırakmak için ortam değişkenini, `MSBuildDisableFeaturesFromVersion` **devre dışı** bırakmak istediğiniz özelliği içeren dalga (veya MSBuild sürüm) olarak ayarlayın. bu, özelliklerinin geliştirildiği MSBuild sürümüdür. Değişiklik dalgalarını aşağıdaki özelliklerle eşleştirmeye bakın.
 
 ### <a name="msbuilddisablefeaturesfromversion-values"></a>MSBuildDisableFeaturesFromVersion değerleri
 
@@ -43,7 +44,7 @@ Geçerli bir değişiklik dalgasına ayarlamazsanız, belirli bir dalgaya uyarı
 
 ## <a name="change-waves-and-associated-features"></a>Dalgaları ve ilişkili özellikleri değiştirme
 
-Aşağıdaki listedeki bağlantılar, özelliği için GitHub PR 'ye gider.
+aşağıdaki listedeki bağlantılar, özelliği için GitHub PR 'ye gider.
 
 ### <a name="168"></a>16,8
 

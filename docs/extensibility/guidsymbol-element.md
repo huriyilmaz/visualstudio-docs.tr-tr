@@ -11,14 +11,15 @@ ms.assetid: 11fb3545-8974-4776-9a54-6b6e7739ae31
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c30c7a48b03b5deed3267e106e926d3cb5114c1
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 712cdad6ae3e7cdd360b53b67ace9ee804509129fb3edfa5da96fac517a2ec9e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902767"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376501"
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol öğesi
 öğesi `GuidSymbol` bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin GUID'lerini içerir. Kimlik, öğesinde `IDSymbol` bir öğesinden `GuidSymbol` gelir. öğesi, `GuidSymbol` `name` özniteliğinde yer alan GUID için kolay bir ad sağlayan bir `value` özniteliğine sahip.

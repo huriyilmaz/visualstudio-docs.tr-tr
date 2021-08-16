@@ -1,6 +1,6 @@
 ---
-title: Dil hizmeti ve Düzenleyici uzantıları ile çalışmaya başlama
-description: Her türlü içerik türüne dil hizmeti özellikleri eklemeyi ve Visual Studio düzenleyicisinin görünümünü ve davranışını özelleştirmeyi öğrenin.
+title: Kullanmaya başlayın hizmeti ve düzenleyici uzantılarıyla birlikte
+description: Herhangi bir içerik türüne dil hizmeti özellikleri ekleme ve uygulama düzenleyicisinin görünümünü ve davranışını Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,92 +10,93 @@ ms.assetid: 6b151891-c06d-40b1-9867-42298caa8492
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1afec04882d5d52bffac509dd1d1202ccf9ea449
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b9518179b0096dcb7527ea5e9eba4e72cbc70727c7d6f73af4b59f6cb22d08cc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057617"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359981"
 ---
-# <a name="get-started-with-language-service-and-editor-extensions"></a>Dil hizmeti ve Düzenleyici uzantıları ile çalışmaya başlama
+# <a name="get-started-with-language-service-and-editor-extensions"></a>Kullanmaya başlayın hizmeti ve düzenleyici uzantılarıyla birlikte
 
-Ana hat, küme ayracı eşleştirme, IntelliSense ve hafif bulbs gibi dil hizmeti özelliklerini kendi programlama dilinize veya herhangi bir içerik türüne eklemek için düzenleyici uzantılarını kullanabilirsiniz. Visual Studio düzenleyicisinin görünümünü ve davranışını, örneğin metin renklendirme, kenar boşlukları, donnments ve diğer görsel öğeleri de özelleştirebilirsiniz. Ayrıca kendi içerik türünü tanımlayabilir ve içeriğinizin göründüğü metin görünümlerinin görünümünü ve davranışını belirtebilirsiniz.
+Kendi programlama dilinize veya herhangi bir içerik türüne açıklama, ayraç eşleştirme, IntelliSense ve ampuller gibi dil hizmeti özellikleri eklemek için düzenleyici uzantılarını kullanabilirsiniz. Ayrıca, metin renklendirme, kenar boşlukları, donatma Visual Studio diğer görsel öğeler gibi bir düzenleyicinin görünümünü ve davranışını özelleştirebilirsiniz. Ayrıca kendi içerik türlerinizi tanımlayabilir ve içeriğinizin göründüğü metin görünümlerinin görünümünü ve davranışını belirtebilirsiniz.
 
- Düzenleyici uzantıları yazmaya başlamak için, Visual Studio SDK 'nin bir parçası olarak yüklenen düzenleyici proje şablonlarını kullanın. Visual Studio SDK, VSPackages kullanarak ya da Managed Extensibility Framework (MEF) kullanarak Visual Studio uzantıları geliştirmeyi kolaylaştıran indirilebilir bir araç kümesidir.
-
-> [!NOTE]
-> Visual Studio SDK hakkında daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
-
- Kendi düzenleyici uzantılarınızı yazmadan önce aşağıdaki kavramlar ve teknolojiler hakkında bilgi edinmenizi öneririz.
-
-## <a name="the-windows-presentation-foundation-wpf-and-editor-extensions"></a>Windows Presentation Foundation (WPF) ve Düzenleyici uzantıları
-
- Visual Studio Düzenleyicisi Kullanıcı arabirimi (UI) Windows Presentation Foundation (WPF) kullanılarak uygulanır. WPF, iş mantığındaki kodun görsel yönlerini ayıran zengin bir görsel deneyim ve tutarlı bir programlama modeli sağlar. Düzenleyici uzantıları oluştururken birçok WPF öğesi ve özelliği kullanabilirsiniz. Daha fazla bilgi için bkz. [Windows Presentation Foundation](/dotnet/framework/wpf/index).
-
-## <a name="the-managed-extensibility-framework-mef-and-editor-extensions"></a>Managed Extensibility Framework (MEF) ve Düzenleyici uzantıları
-
- Visual Studio Düzenleyicisi, bileşenlerini ve uzantılarını yönetmek için Managed Extensibility Framework (MEF) kullanır. MEF, geliştiricilerin Visual Studio gibi bir ana bilgisayar uygulaması için daha kolay uzantı oluşturmasını da sağlar. Bu çerçevede bir MEF sözleşmesine göre uzantı tanımlar ve bir MEF bileşeni parçası olarak dışarı aktarabilirsiniz. Konak uygulaması, bileşen parçalarını onları bularak, kaydederek ve doğru bağlama uygulandığından emin olarak yönetir.
+ Düzenleyici uzantıları yazmaya başlamanız için, Visual Studio SDK'sı kapsamında yüklü olan düzenleyici proje şablonlarını kullanın. Visual Studio SDK, VSPackage'ları kullanarak veya Managed Extensibility Framework (MEF) kullanarak Visual Studio uzantıları geliştirmeyi kolaylaştıran indirilebilir Managed Extensibility Framework kümesidir.
 
 > [!NOTE]
-> Düzenleyicide MEF hakkında daha fazla bilgi için, bkz. [düzenleyicide Managed Extensibility Framework](../extensibility/managed-extensibility-framework-in-the-editor.md).
+> Visual Studio SDK hakkında daha fazla bilgi için [bkz. Visual Studio SDK.](../extensibility/visual-studio-sdk.md)
 
-## <a name="visual-studio-editor-extension-points-and-extensions"></a>Visual Studio Düzenleyicisi uzantı noktaları ve uzantıları
+ Kendi düzenleyici uzantılarınızı yazmadan önce aşağıdaki kavramlar ve teknolojiler hakkında bilgi öğrenmenizi öneririz.
 
- Düzenleyici uzantı noktaları, özelleştirebileceğiniz ve genişletebilen MEF bileşen bölümleridir. Bazı durumlarda, bir arabirim uygulayarak ve doğru meta verilerle birlikte dışarı aktararak uzantı noktasını genişletebilirsiniz. Diğer durumlarda, yalnızca bir uzantı bildirip belirli bir tür olarak dışarı aktardınız.
+## <a name="the-windows-presentation-foundation-wpf-and-editor-extensions"></a>Windows Presentation Foundation (WPF) ve düzenleyici uzantıları
 
- Aşağıdaki temel tür Düzenleyici genişletmeler şunlardır:
+ Visual Studio düzenleyicisi kullanıcı arabirimi (UI), Windows Presentation Foundation (WPF) kullanılarak uygulanır. WPF, zengin bir görsel deneyim ve kodun görsel yönlerini iş mantığından ayıran tutarlı bir programlama modeli sağlar. Düzenleyici uzantıları oluşturmada birçok WPF öğe ve özelliği kullanabilirsiniz. Daha fazla bilgi için [bkz. Windows Presentation Foundation.](/dotnet/framework/wpf/index)
 
-- Kenar boşlukları ve kaydırma çubukları
+## <a name="the-managed-extensibility-framework-mef-and-editor-extensions"></a>Managed Extensibility Framework (MEF) ve düzenleyici uzantıları
+
+ Uygulama Visual Studio, bileşenlerini ve Managed Extensibility Framework yönetmek için Managed Extensibility Framework (MEF) kullanır. MEF ayrıca geliştiricilerin bir konak uygulaması için uzantılar oluşturmalarını daha kolay bir şekilde Visual Studio. Bu çerçevede, bir MEF sözleşmesine göre bir uzantı tanımlar ve bir MEF bileşeni olarak dışarı aktarabilirsiniz. Konak uygulama bileşen parçalarını bularak, kaydederek ve doğru bağlama uygulandığından emin olarak yönetir.
+
+> [!NOTE]
+> Düzenleyicide MEF hakkında daha fazla bilgi için [düzenleyicide Managed Extensibility Framework bkz.](../extensibility/managed-extensibility-framework-in-the-editor.md).
+
+## <a name="visual-studio-editor-extension-points-and-extensions"></a>Visual Studio düzenleyicisi uzantı noktaları ve uzantıları
+
+ Düzenleyici uzantısı noktaları, özelleştirebileceğiniz ve genişletebileceğiniz MEF bileşen parçalarıdır. Bazı durumlarda, bir arabirim uygulayarak ve doğru meta verilerle birlikte dışarı aktararak uzantı noktasını genişletebilirsiniz. Diğer durumlarda yalnızca bir uzantıyı bildirer ve belirli bir tür olarak dışarı aktarın.
+
+ Aşağıda, temel türlerde düzenleyici uzantılarının bazıları ve aşağıda ve ardından ve hatta daha fazla düzenleyici uzantısı ve daha sonra yer almaktadır:
+
+- Kenar boşlukları ve kaydırma çubuğu
 
 - Etiketler
 
-- Satırdaki kenarlıkları
+- Süsleme -leri
 
 - Seçenekler
 
 - IntelliSense
 
-  Düzenleyici uzantı noktaları hakkında daha fazla bilgi için bkz. [dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md).
+  Düzenleyici uzantı noktaları hakkında daha fazla bilgi için [bkz. Dil hizmeti ve düzenleyici uzantısı noktaları.](../extensibility/language-service-and-editor-extension-points.md)
 
 ## <a name="deploying-editor-extensions"></a>Düzenleyici uzantılarını dağıtma
 
- Visual Studio 'da, çözüme *kaynak. Extension. valtmanifest* adlı bir meta veri dosyası ekleyerek, çözümü oluşturarak ve ardından ikili dosyaların ve bildirimin bir kopyasını Visual Studio 'nun bilinen bir klasöre ekleyerek Düzenleyici uzantıları dağıtırsınız. Bildirim dosyası, uzantıyla ilgili temel gerçekleri tanımlar (örneğin, ad, yazar, sürüm ve içerik türü). VSıX bildirim dosyası ve uzantıların nasıl dağıtılacağı hakkında daha fazla bilgi için bkz. [Visual Studio uzantılarını](../extensibility/shipping-visual-studio-extensions.md)gönderme.
+ Visual Studio'de, *çözüme source.extension.vsixmanifest* adlı bir meta veri dosyası ekleyerek, çözümü oluşturarak ve ardından ikili dosyaların ve bildirimin bir kopyasını çözüm tarafından bilinen bir klasöre ekleyerek düzenleyici uzantılarını Visual Studio. Bildirim dosyası uzantıyla ilgili temel olguları tanımlar (örneğin, ad, yazar, sürüm ve içerik türü). VSIX bildirim dosyası ve uzantıları dağıtma hakkında daha fazla bilgi için bkz. [Visual Studio uzantıları gönder.](../extensibility/shipping-visual-studio-extensions.md)
 
- Bir bilgisayara uzantı yüklediğinizde, ikili dosyaları ve bildirimi Visual Studio 'nun bilinen klasörünün bir alt klasörüne ekleyin.
+ Bir bilgisayara uzantıyı yükleyiciyi, ikili dosyaları ve bildirimi, dosyaları ve bildirimi bilinen bir klasörün alt klasörüne Visual Studio.
 
 > [!WARNING]
-> Visual Studio 'da bulunan düzenleyici genişletilebilirlik şablonlarından birini kullanıyorsanız, bildirimlerin ve dağıtım konumlarının ayrıntıları konusunda endişelenmeniz gerekmez. Şablonlar, bir uzantıyı kaydetmek ve dağıtmak için gereken her şeyi içerir.
+> Düzenleyicide bulunan düzenleyici genişletilebilirlik şablonlarından birini kullanıyorsanız bildirimlerin ve dağıtım konumlarının ayrıntıları konusunda endişelenmeniz Visual Studio. Şablonlar, bir uzantıyı kaydetmek ve dağıtmak için gereken her şeyi içerir.
 
 ## <a name="run-extensions-in-the-experimental-instance"></a>Deneysel örnekte uzantıları çalıştırma
 
- Visual Studio 'nun çalışma sürümünüzü yalıtarak, bir uzantıyı aşağıdaki deneysel klasöre dağıtarak (Windows Vista ve Windows 7 ' de) kullanabilirsiniz:
+ Uzantıyı aşağıdaki deneysel klasöre dağıtarak (Visual Studio Vista ve Windows 7 üzerinde) uzantıyı geliştirirken çalışma sürümü Windows bağımsız Windows edinebilirsiniz:
 
- *{% LOCALAPPDATA%} \VisualStudio\10.0Exp\Extensions \\ {Company} \\ {extensionID}*
+ *{%LOCALAPPDATA%}\VisualStudio\10.0Exp\Extensions \\ {Company} \\ {ExtensionID}*
 
- *% LocalAppData%* , oturum açmış kullanıcının adı, *Şirket* ise uzantının sahibi olan şirketin adı ve *extensionID* uzantısının kimliğidir.
+ Burada *%LOCALAPPDATA%* oturum açan kullanıcının *adı,* Şirket uzantının sahibi olan şirketin adı ve *ExtensionID* ise uzantının kimliğidir.
 
- Deneysel konuma bir uzantı dağıttığınızda, hata ayıklama modunda çalışır. Visual Studio 'nun ikinci bir örneği başlatılır ve **Microsoft Visual Studio deneysel örnek** olarak adlandırılır.
+ Deneysel konuma bir uzantı dağıtsanız, uzantı hata ayıklama modunda çalışır. İkinci bir Visual Studio örneği başlatıldı ve Microsoft Visual Studio **- Deneysel Örneği olarak adlandırılmış.**
 
 ## <a name="manage-extensions"></a>Uzantıları yönetme
 
- Uzantılar **ve güncelleştirmeler** bölümünde Visual Studio uzantıları listelenmiştir ( **Araçlar** menüsünde). Deneysel örnekteki bir uzantıyı test ediyorsanız, deneysel örnekteki **Uzantılar ve güncelleştirmeler** bölümünde listelenir, ancak geliştirme örneğinde listelenmez.
+ Bu Visual Studio Uzantılar ve **Güncelleştirmeler 'de** (Araçlar **menüsünde)** listelenir. Deneysel örnekte bir uzantıyı test ediyorsanız,  uzantı deneysel örnekteki Uzantılar ve Güncelleştirmeler'de listelenir, ancak geliştirme örneğinde listelenmiyor.
 
- Daha fazla bilgi için bkz. [Visual Studio uzantılarını bulma ve kullanma](../ide/finding-and-using-visual-studio-extensions.md).
+ Daha fazla bilgi için [bkz. Uzantılarını bulma Visual Studio kullanın.](../ide/finding-and-using-visual-studio-extensions.md)
 
 ## <a name="use-templates-to-create-editor-extensions"></a>Düzenleyici uzantıları oluşturmak için şablonları kullanma
 
- Sınıflandırıcı, donmanlar ve kenar boşluklarını özelleştiren MEF uzantıları oluşturmak için düzenleyici şablonlarını kullanabilirsiniz. Hem C# hem de Visual Basic projelerine yönelik şablonlar vardır. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
+ Sınıflandırıcıları, donatmaları ve kenar boşluklarını özelleştiren MEF uzantıları oluşturmak için düzenleyici şablonlarını kullanabilirsiniz. Hem C# hem de Visual Basic vardır. Daha fazla bilgi için [bkz. Düzenleyici öğesi şablonuyla uzantı oluşturma.](../extensibility/creating-an-extension-with-an-editor-item-template.md)
 
- Uzantı oluşturmak için VSıX proje şablonunu da kullanabilirsiniz. Bu şablon yalnızca herhangi bir tür uzantıyı dağıtmak için gereken öğeleri sağlar ve *Source. Extension. valtmanifest* dosyasını, gerekli derleme başvurularını ve uzantıyı dağıtmanıza izin veren yapı görevlerini içeren bir proje dosyası içerir. Daha fazla bilgi için bkz. [VSIX proje şablonu](../extensibility/vsix-project-template.md).
+ Uzantı oluşturmak için VSIX Project şablonunu da kullanabilirsiniz. Bu şablon yalnızca herhangi bir uzantıyı dağıtmak için gereken öğeleri sağlar ve *source.extension.vsixmanifest* dosyasını, gerekli derleme başvurularını ve uzantıyı dağıtmaya olanak sağlayan derleme görevlerini içeren bir proje dosyasını içerir. Daha fazla bilgi için bkz. [VSIX proje şablonu.](../extensibility/vsix-project-template.md)
 
- Ayrıca, Visual Studio paket uzantısından düzenleyici MEF bileşenleri de oluşturabilirsiniz. Ayrıntılar için aşağıdaki izlenecek yollara bakın:
+ Ayrıca, bir paket uzantısından düzenleyici MEF Visual Studio oluşturabilirsiniz. Ayrıntılar için aşağıdaki izlenecek yollara bakın:
 
-- [İzlenecek yol: bir düzenleyici uzantısıyla kabuk komutu kullanma](../extensibility/walkthrough-using-a-shell-command-with-an-editor-extension.md)
+- [Adım adım kılavuz: Düzenleyici uzantısıyla kabuk komutu kullanma](../extensibility/walkthrough-using-a-shell-command-with-an-editor-extension.md)
 
-- [İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)
+- [Adım adım kılavuz: Düzenleyici uzantısıyla kısayol tuşu kullanma](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil hizmeti ve Düzenleyici uzantı noktaları](../extensibility/language-service-and-editor-extension-points.md)
+- [Dil hizmeti ve düzenleyici uzantısı noktaları](../extensibility/language-service-and-editor-extension-points.md)

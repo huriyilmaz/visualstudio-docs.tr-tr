@@ -46,13 +46,3 @@
           href: docker-compose-properties.md
         - name: Başlatma ayarları
           href: container-launch-settings.md
-- name: Kubernetes ile geliştirme
-  items:
-    - name: Bridge to Kubernetes
-      href: bridge-to-kubernetes.md
-    - name: Bridge to Kubernetes’in işleyiş biçimi
-      href: overview-bridge-to-kubernetes.md
-    - name: Bridge to Kubernetes’i yapılandırma
-      href: configure-bridge-to-kubernetes.md
-    - name: Azure AD yönetilen kimliklerini Bridge to Kubernetes
-      href: managed-identity.md

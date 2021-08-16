@@ -8,14 +8,15 @@ ms.assetid: 60126510-b7dd-4cb4-92d3-9883590b92f2
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 9dbfd5459ae750236afde63574959fd6b7c7b37c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d778df3c4979accbdab2ad48096ecf5d599ce8acd2f92c81fe779f1e6e458562
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956574"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423624"
 ---
 # <a name="sample-xsd-file-relationships"></a>Örnek XSD dosyası: Ilişkiler
 

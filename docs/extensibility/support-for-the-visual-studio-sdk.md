@@ -1,6 +1,6 @@
 ---
-title: Visual Studio SDK desteği | Microsoft Docs
-description: Visual Studio IDE 'nin nasıl genişletileceği hakkında müşteriler için kullanılabilen destek seçenekleri hakkında bilgi edinin.
+title: Visual Studio SDK 'sı için destek | Microsoft Docs
+description: Visual Studio ıde 'nin nasıl genişletileceği hakkında müşteriler için kullanılabilen destek seçenekleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,37 +14,38 @@ ms.assetid: d9011f5a-cb53-418f-9d8f-74b15b9fc5f5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c0fdcd91766bbf9f181a8d4a14f90fa646a8f46c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cba61b086a52de4211333d5e2963b30ae02fe6800b55fb3931446b5c029a7d6f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056278"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388220"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Visual Studio SDK Desteği
-Visual Studio tümleşik geliştirme ortamının (IDE) nasıl genişletileceği hakkında sorularınız olan müşteriler için çeşitli destek seçenekleri mevcuttur.
+Visual Studio tümleşik geliştirme ortamının (ıde) nasıl genişletileceği hakkında sorularınız olan müşteriler için çeşitli destek seçenekleri mevcuttur.
 
 ## <a name="free-support"></a>Ücretsiz destek
 
 ### <a name="microsoft-newsgroups"></a>Microsoft haber grupları
- Visual Studio geliştirme ekibinin ve Visual Studio 'Yu genişleten diğer geliştiricilerin üyeleri genellikle Microsoft. public. vstudio. Extensibility haber grubuna katılıyorsa. Bu haber grubu, yönetilen bir haber grubundayken. MSDN Universal abonesi değilseniz Microsoft 'un yanıt vermesini sağlamak için istenmeyen posta olmayan bir diğer ad kaydettiğinizden emin olun.
+ Visual Studio geliştirme ekibinin ve Visual Studio genişleten diğer geliştiricilerin üyeleri genellikle microsoft. public. vstudio. extensibility haber grubuna katılıyorsa. Bu haber grubu, yönetilen bir haber grubundayken. MSDN Universal abonesi değilseniz Microsoft 'un yanıt vermesini sağlamak için istenmeyen posta olmayan bir diğer ad kaydettiğinizden emin olun.
 
 ### <a name="msdn-forums"></a>MSDN Forumları
- [MSDN forumları](https://social.msdn.microsoft.com/Forums/en-US/home) , eşler ve uzmanlar ile sohbet etmek için başka bir yol sağlar. Forumlardan oluşan grafik kullanıcı arabirimi (UI), haber gruplarından daha kolay kullanılmasını sağlamak için tasarlanmıştır. [Visual Studio genişletilebilirlik Forumu](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true) , genişletilebilirlik sorularına yanıt aramaya başlamak için iyi bir yerdir. Bir soru sormadan önce her zaman, başka biri de zaten bir soru sorabileceğinden arama yapın.
+ [MSDN forumları](https://social.msdn.microsoft.com/Forums/en-US/home) , eşler ve uzmanlar ile sohbet etmek için başka bir yol sağlar. Forumlardan oluşan grafik kullanıcı arabirimi (UI), haber gruplarından daha kolay kullanılmasını sağlamak için tasarlanmıştır. [Visual Studio genişletilebilirlik forumu](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true) , genişletilebilirlik sorularına yanıt aramaya başlamak için iyi bir yerdir. Bir soru sormadan önce her zaman, başka biri de zaten bir soru sorabileceğinden arama yapın.
 
-### <a name="visual-studio-gallery"></a>Visual Studio Galerisi
- [Visual Studio Market](https://marketplace.visualstudio.com/) , uzantıların ve örnek kodun yer aldığı yerdir. Visual Studio ile üretkenliğinizi ve Kullanıcı deneyiminizi geliştiren araçları, VSPackages ve Managed Extensibility Framework (MEF) ve diğer örnek türlerini nasıl kullanacağınızı gösteren örnek uygulamalar bulabilirsiniz.
+### <a name="visual-studio-gallery"></a>Visual Studio 'Ndeki
+ [Visual Studio marketi](https://marketplace.visualstudio.com/) , uzantıların ve örnek kodun yer aldığı yerdir. Visual Studio ile üretkenliğinizi ve kullanıcı deneyiminizi geliştiren araçları, vspackages ve Managed Extensibility Framework (MEF) ve diğer örnek türlerini nasıl kullanacağınızı gösteren örnek uygulamalar bulabilirsiniz.
 
 ### <a name="visual-studio-sdk-samples"></a>Visual Studio SDK örnekleri
 
-[Visual Studio örneklerinde](https://github.com/Microsoft/VSSDK-Extensibility-Samples)GITHUB 'DA vs SDK uzantılarının açık kaynak örneklerini bulabilirsiniz. Bu GitHub deposu, Visual Studio 'daki çeşitli Genişletilebilir özellikleri gösteren örnekler içerir.
+GitHub vs SDK uzantılarının açık kaynak örneklerini [Visual Studio](https://github.com/Microsoft/VSSDK-Extensibility-Samples)örneklerde bulabilirsiniz. bu GitHub deposu, Visual Studio çeşitli genişletilebilir özellikleri gösteren örnekler içerir.
 
 ## <a name="included-support"></a>Dahil edilen destek
 
-### <a name="visual-studio-product-support"></a>Visual Studio ürün desteği
- Ürünlerin satın alınması için bazı destek dahildir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Daha fazla bilgi için bkz. [Visual Studio desteği](https://msdn.microsoft.com/vstudio/cc136615.aspx). Microsoft, genişletilebilirlik hakkında soruları yanıtlamak için adanmış bir destek ekibi sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+### <a name="visual-studio-product-support"></a>Visual Studio Ürün desteği
+ Ürünlerin satın alınması için bazı destek dahildir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . daha fazla bilgi için bkz. [Visual Studio desteği](https://msdn.microsoft.com/vstudio/cc136615.aspx). Microsoft, genişletilebilirlik hakkında soruları yanıtlamak için adanmış bir destek ekibi sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 ### <a name="msdn-subscription-support"></a>MSDN abonelik desteği
  MSDN abonelik paketleri de bazı destek içerebilir. Daha fazla bilgi için bkz. [MSDN abone desteği](https://msdn.microsoft.com/subscriptions/aa718661.aspx).

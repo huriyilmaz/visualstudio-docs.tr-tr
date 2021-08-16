@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 8990ea7c4a2173a0cea0f66a0edfb67ee116c259
-ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
+ms.openlocfilehash: 386333000a10e9a66d5789e1ceaa89e8d0af0320103969f9433d0015d0c3ba9e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114592196"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121399036"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64 bit desteği
 

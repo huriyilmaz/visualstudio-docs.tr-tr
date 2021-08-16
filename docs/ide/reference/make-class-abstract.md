@@ -6,17 +6,18 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac3d6b9cef8d20d85049da830dfb830321faab75
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 9cd956bf312b356b98cdefdf30a98f4b77be796ec66b0a3862d480f5727fb045
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106214544"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372405"
 ---
 # <a name="make-class-abstract"></a>Sınıfı soyut yapma
 

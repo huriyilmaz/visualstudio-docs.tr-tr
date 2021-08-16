@@ -1,6 +1,6 @@
 ---
-title: Get metodunu özelliğe veya bir özelliğe dönüştürme
-description: GET yöntemini (ve isteğe bağlı olarak set yönteminizi) bir özelliğe dönüştürmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+title: Get yöntemini özelliğine veya özelliğinden dönüştürme
+description: Bir Get yöntemini (ve isteğe bağlı olarak Set yönteminizi) bir özeleğe dönüştürmek için Hızlı Eylemler ve Yeniden Düzenlemeler menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
@@ -8,6 +8,7 @@ ms.devlang: csharp
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 f1_keywords:
 - vs.csharp.refactoring.convertmethodtoproperty
 dev_langs:
@@ -15,16 +16,16 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: d86a9c42fbd1c54e7bef409cc6d61d9aca751436
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 151f7c8e8ca99a5de00fc6c0c8d5771585133b503955bba45357dcc338cd45ba
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919655"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430037"
 ---
-# <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Get metodunu Property/Convert metodunu Get yöntemine Dönüştür yeniden düzenlemeler
+# <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Get yöntemini özelliğine dönüştürme / Metodu yeniden düzenlemelerini alma özelliğine dönüştürme
 
-Bu yeniden düzenlemeler için geçerlidir:
+Bu yeniden düzenlemelerde şular geçerlidir:
 
 - C#
 
@@ -32,24 +33,24 @@ Bu yeniden düzenlemeler için geçerlidir:
 
 ## <a name="convert-get-method-to-property"></a>Get metodunu özelliğe dönüştürme
 
-**Ne:** GET yöntemini bir özelliğe (ve isteğe bağlı olarak ayarlama yöntemine) dönüştürmenize olanak sağlar.
+**Ne:** Get yöntemini bir özeleğe (ve isteğe bağlı olarak Set yönteminize) dönüştürmenize olanak sağlar.
 
-**Ne zaman:** Herhangi bir mantık içermeyen bir get yönteminiz vardır.
+**Ne zaman:** Herhangi bir mantık içeren bir Get yönteminiz var.
 
 ### <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi get yöntemi adına yerleştirin.
+1. İmlecinizi Get yöntemi adınıza yerleştirin.
 
-1. Sonra, aşağıdakilerden birini yapın:
+1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için Önizleme penceresi açılır penceresinde **yöntemi özelliği ile Değiştir** ' i seçin.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler ve **Yeniden Düzenleme menüsünü tetiklemek için** Önizleme penceresi açılır penceresinde **Yöntemi** özelliğiyle değiştir'i seçin.
    - **Fare**
-      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve Önizleme penceresi açılır penceresinde **yöntemi özelliği ile Değiştir** ' i seçin.
+      - Koda sağ tıklayın, Hızlı **Eylemler ve Yeniden** Düzenlemeler menüsünü seçin ve Önizleme penceresi açılır penceresinde **Yöntemi** özelliğiyle değiştir'i seçin.
 
-1. Seçim Bir set yönteminiz varsa, **Get metodunu değiştir ve yöntemi ayarla özelliğini** seçerek de set yönteminizi Şu anda dönüştürebilirsiniz.
+1. (İsteğe bağlı) Bir Set yönteminiz varsa, şu anda Get yöntemini değiştir'i ve özelliğiyle yöntemi ayarla'yi **seçerek Set yönteminizi de dönüştürebilirsiniz.**
 
-1. Kod önizlemesindeki değişikliğin kutlu olsun, **ENTER** tuşuna basın veya menüdeki değişikliğe tıklayın ve değişiklikler uygulanır.
+1. Kod önizlemesinde yapılan değişiklikten memnunsanız **Enter** tuşuna basın veya menüden düzeltmeye tıklayın; değişiklikler işlendi.
 
 Örnek:
 
@@ -71,24 +72,24 @@ public int MyValue
 }
 ```
 
-## <a name="convert-property-to-get-method"></a>Özelliği Get yöntemine Dönüştür
+## <a name="convert-property-to-get-method"></a>Özelliği Get yöntemine dönüştürme
 
-**Ne:** Bir özelliği Get yöntemine dönüştürmenize olanak sağlar
+**Ne:** Bir özelliği Get yöntemine dönüştürmenizi sağlar
 
-**Ne zaman:** Hemen daha fazla ayarı ve değer almayı içeren bir özelliğe sahipsiniz
+**Ne zaman:** Hemen ayarlama ve değer alma adımlarını içeren bir özelliğiniz var
 
 ### <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi get yöntemi adına yerleştirin.
+1. İmlecinizi Get yöntemi adınıza yerleştirin.
 
-1. Sonra, aşağıdakilerden birini yapın:
+1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL** tuşuna basın + **.** **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü tetiklemek ve özelliği önizleme penceresi açılan penceresinde **yöntemlerle Değiştir** ' i seçmek için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler ve **Yeniden Düzenleme menüsünü tetiklemek için** Önizleme penceresi açılır **penceresinden** Özelliği yöntemlerle değiştir'i seçin.
    - **Fare**
-      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve özelliği önizleme penceresi açılan penceresinde **yöntemlerle Değiştir** ' i seçin.
+      - Koda sağ tıklayın, Hızlı Eylemler ve **Yeniden** Düzenlemeler menüsünü seçin ve Önizleme penceresi açılır **penceresinden Özelliği** yöntemlerle değiştir'i seçin.
 
-1. Kod önizlemesindeki değişikliğin kutlu olsun, **ENTER** tuşuna basın veya menüdeki değişikliğe tıklayın ve değişiklikler uygulanır.
+1. Kod önizlemesinde yapılan değişiklikten memnunsanız **Enter** tuşuna basın veya menüden düzeltmeye tıklayın; değişiklikler işlendi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

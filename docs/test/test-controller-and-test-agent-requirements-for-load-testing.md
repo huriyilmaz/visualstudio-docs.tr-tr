@@ -11,16 +11,17 @@ ms.assetid: 372d97ce-12e4-46a9-9863-da508adba68f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: a123a147d038a41f799c2fdf9d4fb26eaa4f3490
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: dfdc7e48c5d2b1c3064192340cf7729c4e9d728563296aeed03b0e9569595450
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894497"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424820"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>Yük testi için test denetleyicisi ve test aracısı gereksinimleri
 
-Birim, Web performansı, yük ve el ile testler dahil olmak üzere çeşitli test türleri, Visual Studio ile tümleşiktir. Visual Studio, Visual Studio uygulama yaşam döngüsü yönetimi kullanıcılarının bir test denetleyicisi ve bir veya daha fazla aracı kullanarak uzak bilgisayarlarda testler çalıştırmasına olanak sağlar. Bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).
+Birim, Web performansı, yük ve el ile testler de dahil olmak üzere çeşitli test türleri Visual Studio tümleşiktir. Visual Studio, Visual Studio uygulama yaşam döngüsü yönetimi kullanıcılarının bir test denetleyicisi ve bir veya daha fazla aracı kullanarak uzak bilgisayarlarda testler çalıştırmasına olanak sağlar. Bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -55,11 +56,11 @@ Burada önerilen donanıma ek olarak, yedekli güç kaynakları ve gereksiz fanl
 
 ### <a name="language-requirements"></a>Dil gereksinimleri
 
-Karışıklıkları önlemek ve işlemi basitleştirmek için, bir test denetleyicisi ve test aracısının bilgisayarın işletim sistemiyle aynı dili kullanacak şekilde yapılandırılması gerekir ve bu Team Foundation Server. Test Aracısı ve test denetleyicisi farklı bilgisayarlara yüklenirse, aynı dili kullanacak şekilde yapılandırılması gerekir. Ancak, bu dil Team Foundation Server dağıtımının eşleştiği sürece, Ingilizce işletim sistemine Visual Studio 'nun başka bir dil sürümünü de yükleyebilirsiniz.
+Karışıklıkları önlemek ve işlemi basitleştirmek için, bir test denetleyicisi ve test aracısının bilgisayarın işletim sistemiyle aynı dili kullanacak şekilde yapılandırılması gerekir ve bu Team Foundation Server. Test Aracısı ve test denetleyicisi farklı bilgisayarlara yüklenirse, aynı dili kullanacak şekilde yapılandırılması gerekir. ancak, bu dilin Team Foundation Server dağıtımının eşleştiği sürece, ingilizce bir işletim sistemine Visual Studio başka bir dil sürümünü de yükleyebilirsiniz.
 
 ## <a name="monitor-agent-resources"></a>Aracı kaynaklarını izleme
 
-Testler sırasında yürütülen ve ölçeklendirilen *QTAgent \* . exe* süreçlerini gözlemleyerek, kaynak ihtiyaçlarını tespit ederek, aracı makinelerini izleyebilirsiniz. *QTAgent \* . exe* işlemlerinde en YAYGıN performans sorunu CPU kullanımdır. CPU kullanımı sürekli olarak yüksek bir şekilde yüksekse, aracının yoğun olarak yüklenmekte olduğunun bir göstergesidir. Sonraki yaygın performans sorunu, bellek kullanımından kaynaklanıyor. Yoğun sınamalar için, bu kaynakları izlemek makineler kaynaklarını artırmanız veya testlerinizi farklı şekilde dağıtmanız gerekip gerekmediğini belirlemenize yardımcı olabilir.
+Testler sırasında yürütülen ve ölçeklendirilen *QTAgent \*.exe* süreçlerini gözlemleyerek, kaynak ihtiyaçlarını tespit etmek için aracı makinelerini izleyebilirsiniz. *QTAgent \*.exe* işlemlerinde en YAYGıN performans sorunu CPU kullanımdır. CPU kullanımı sürekli olarak yüksek bir şekilde yüksekse, aracının yoğun olarak yüklenmekte olduğunun bir göstergesidir. Sonraki yaygın performans sorunu, bellek kullanımından kaynaklanıyor. Yoğun sınamalar için, bu kaynakları izlemek makineler kaynaklarını artırmanız veya testlerinizi farklı şekilde dağıtmanız gerekip gerekmediğini belirlemenize yardımcı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

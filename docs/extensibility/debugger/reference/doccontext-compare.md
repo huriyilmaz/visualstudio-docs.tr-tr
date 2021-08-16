@@ -11,17 +11,18 @@ ms.assetid: ed947c34-b07e-4b69-8381-b6e7cb842862
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6eeee3e31c898660930b676df716fe25769bbb8b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3329c805ab1e5f6f45f82a2789fdec242c83931f18e525a50fd883f3601c63da
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096011"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360826"
 ---
 # <a name="doccontext_compare"></a>DOCCONTEXT_COMPARE
 İki belge içeriğini karşılaştırma ölçütlerini belirtir.

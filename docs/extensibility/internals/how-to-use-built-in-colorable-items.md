@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Built-In Renklenebilir öğeleri kullanma | Microsoft Docs'
-description: Dil hizmetiniz için Visual Studio tümleşik geliştirme ortamında (IDE) yerleşik renklenebilir öğeleri nasıl kullanacağınızı öğrenin.
+description: dil hizmetiniz için Visual Studio tümleşik geliştirme ortamında (ıde) yerleşik renklenebilir öğeleri nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,14 +11,15 @@ ms.assetid: 5e5f3436-6bad-4fd2-8823-6a30353ba648
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 253c108fe83eaf44f945f546bd64dd6529de1dd6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ea6982d854380b8722e395db11f2ac5099a9bc26dd972ea0730cfbfeef586303
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086085"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388675"
 ---
 # <a name="how-to-use-built-in-colorable-items"></a>Nasıl yapılır: yerleşik renklenebilir öğeleri kullanma
 Yerleşik renklenebilir öğeleri kullanmadan önce, kendi özel renksiz öğelerinizi sağlamaktan önce tümleşik geliştirme ortamına (IDE) işaret etmeniz gerekir ve bu durumda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> nesneler olur. Bu, dil hizmeti için bir kayıt defteri girişi ayarlayarak yapabilirsiniz.

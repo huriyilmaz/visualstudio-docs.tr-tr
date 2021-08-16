@@ -1,6 +1,6 @@
 ---
-description: Geçerli modüller numaralandırmasının bir kopyasını ayrı bir nesne olarak döndürür.
-title: 'IEnumDebugModules2:: Clone | Microsoft Docs'
+description: Geçerli modüller numaralamalarının bir kopyasını ayrı bir nesne olarak döndürür.
+title: IEnumDebugModules2::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: fd6d3abc-20d9-4f6f-9c8e-5bd29f68d47d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 803f6df911aeb3ea68a152524faf5a2e5ad9c9c5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7ad2c824122db30d12bb6226ca8dc2589ae8710c4b6920a840f95802e95bf22b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091662"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389156"
 ---
 # <a name="ienumdebugmodules2clone"></a>IEnumDebugModules2::Clone
-Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
+Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
+[out] Bu numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın kopyası, bu yöntemin çağrılışında orijinal ile aynı duruma sahiptir. Bununla birlikte, kopyanın ve özgün durumlarının durumları ayrıdır ve tek tek değiştirilebilir.
+ Numaralamanın kopyası, bu yöntemin çağrıldı olduğu sırada özgün ile aynı durumla aynıdır. Ancak kopyaların ve özgünlerin durumları ayrıdır ve tek tek değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

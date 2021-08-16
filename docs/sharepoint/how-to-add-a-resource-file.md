@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: kaynak dosyası ekleme | Microsoft Docs'
-description: Çözüm düğümünün kısayol menüsündeki komutları ve Çözüm Gezgini içindeki Özellik düğümlerini kullanarak Visual Studio 'da bir kaynak dosyası ekleyin.
+description: çözüm düğümünün kısayol menüsündeki komutları ve Çözüm Gezgini özellik düğümlerini kullanarak Visual Studio bir kaynak dosyası ekleyin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,28 +13,29 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 22b5638f7251b34c74da348e55e755cd27132aff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1769e9efdbd2856a5086e7d0be41e3a8ef3a19a0031b5e9096fe02e2954afaf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934851"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425355"
 ---
 # <a name="how-to-add-a-resource-file"></a>Nasıl yapılır: kaynak dosyası ekleme
-  Kaynak dosyalarını ekleme komutları, Çözüm Gezgini çözüm düğümünün kısayol menüsünde ve özellik düğümlerinin ' de yer alır. Daha fazla bilgi için bkz. [SharePoint çözümlerini yerelleştirme](../sharepoint/localizing-sharepoint-solutions.md).
+  Kaynak dosyalarını ekleme komutları, Çözüm Gezgini çözüm düğümünün kısayol menüsünde ve özellik düğümlerinin ' de yer alır. daha fazla bilgi için bkz. [SharePoint çözümlerini yerelleştirme](../sharepoint/localizing-sharepoint-solutions.md).
 
-### <a name="to-add-a-global-resource-file-to-a-sharepoint-solution"></a>Bir SharePoint çözümüne genel kaynak dosyası eklemek için
+### <a name="to-add-a-global-resource-file-to-a-sharepoint-solution"></a>SharePoint çözümüne genel kaynak dosyası eklemek için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir SharePoint çözümünü açın.
+1. içinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir SharePoint çözümü açın.
 
-2. **Çözüm Gezgini**, bir SharePoint proje düğümü seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
+2. **Çözüm Gezgini**, bir SharePoint projesi düğümü seçin ve ardından menü çubuğunda   >  **yeni öğe ekle** Project ' yi seçin.
 
 3. **Yeni öğe Ekle** Iletişim kutusunda **Genel kaynaklar dosya** şablonunu seçin ve sonra **Ekle** düğmesini seçin.
 
    > [!NOTE]
-   > Genel kaynak dosyası proje öğesi şablonu yalnızca bir SharePoint proje öğesi seçildiğinde görüntülenir.
+   > genel kaynak dosyası proje öğesi şablonu yalnızca bir SharePoint projesi öğesi seçildiğinde görüntülenir.
 
 4. **Kaynak Ekle** iletişim kutusunda, kaynak dosyası için ingilizce (Birleşik Devletler) gibi bir kültür seçin.
 
@@ -42,7 +43,7 @@ ms.locfileid: "99934851"
 
 5. **Kaynak Düzenleyicisi** içinde açıldığında [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaynakları kaynak dosyasına ekleyin.
 
-### <a name="to-add-a-feature-resource-file-to-a-sharepoint-feature"></a>Bir SharePoint özelliğine Özellik kaynak dosyası eklemek için
+### <a name="to-add-a-feature-resource-file-to-a-sharepoint-feature"></a>SharePoint özelliğine bir özellik kaynak dosyası eklemek için
 
 1. SharePoint çözümü içinde zaten açık değilse [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , çözümü açın.
 

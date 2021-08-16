@@ -13,22 +13,23 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 93fea67056c73a6e9b0b265253479fbecee63767
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2549aae94aa6fd303679f900d2e642c1ffeba40e2a20908b91ba0db5ecf98af0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956158"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430791"
 ---
 # <a name="code-snippet-picker"></a>Kod Parçacığı Seçici
 
-Visual Studio Code Düzenleyicisi, birkaç fare tıklamasına izin veren bir **kod parçacığı seçici** sağlar ve bu sayede, etkin belgeye kullanıma hazırlanmış kod blokları ekleyebilirsiniz.
+Visual Studio Code düzenleyicisi, birkaç fare tıklamasına izin veren bir **kod parçacığı seçici** sağlar ve bu sayede, etkin belgeye kullanıma hazırlanmış kod blokları ekleyebilirsiniz.
 
 **Kod parçacığı seçiciyi** görüntüleme yordamı, kullanmakta olduğunuz dile göre değişir.
 
-- Visual Basic, kısayol menüsünü göstermek için kod düzenleyicisinde istenen konuma sağ tıklayın ve kod **parçacığı Ekle**' yi seçin.
+- Visual Basic, kısayol menüsünü göstermek için kod düzenleyicisinde istenen konuma sağ tıklayın ve kod **parçacığı ekle**' yi seçin.
 
 - C#: kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve **parçacık Ekle** veya şununla **Çevrele**' ye tıklayın.
 
@@ -42,9 +43,9 @@ Visual Studio Code Düzenleyicisi, birkaç fare tıklamasına izin veren bir **k
 
 - HTML: kısayol menüsünü göstermek için, kod düzenleyicisinde istenen konuma sağ tıklayın ve **parçacık Ekle** veya şununla **Çevrele**' ye tıklayın.
 
-- SQL-kod düzenleyicisinde istenen konuma sağ tıklayıp kısayol menüsünü görüntüleyin ve **kod parçacığı Ekle**' ye tıklayın.
+- SQL, kısayol menüsünü göstermek için kod düzenleyicisinde istenen konuma sağ tıklayın ve kod **parçacığı ekle**' ye tıklayın.
 
-Çoğu Visual Studio geliştirme dilinde, kod **parçacığı seçicisinin** XML kod parçacığı dosyalarını taradığı klasör listesine klasörler eklemek Için **kod parçacıkları Yöneticisi** ' ni kullanabilirsiniz. Ayrıca, listeye eklemek için kendi kod parçacıklarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: kod parçacığı oluşturma](../../ide/walkthrough-creating-a-code-snippet.md).
+çoğu Visual Studio geliştirme dilinde, kod **parçacığı seçicisinin** XML kod parçacığı dosyalarını taradığı klasör listesine klasörler eklemek için **kod parçacıkları yöneticisi** ' ni kullanabilirsiniz. Ayrıca, listeye eklemek için kendi kod parçacıklarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: kod parçacığı oluşturma](../../ide/walkthrough-creating-a-code-snippet.md).
 
 ## <a name="uielement-list"></a>UIElement Listesi
 

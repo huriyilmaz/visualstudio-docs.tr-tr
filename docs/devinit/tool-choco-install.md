@@ -1,6 +1,6 @@
 ---
 title: choco-install
-description: Chocolatey paketlerini yüklemek için devinit aracı Choco-Install.
+description: Chocolatey paketlerini yüklemek için devinit aracı choco-install.
 ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
@@ -11,19 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: c1f5b1c587ea8d1d6335e19b2e7303cc12ad9783
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 075d085e12926f30ea9e71512decb2fb77b7456cdfb3502295e7a40b6dff39b9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104671660"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390714"
 ---
 # <a name="choco-install"></a>choco-install
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
 
-`choco-install`Araç, [Chocolatey](https://chocolatey.org/) paketlerini yüklemek ve güncelleştirmek için kullanılabilir.
+Araç, `choco-install` çikolata paketlerini yüklemek ve güncelleştirmek [için](https://chocolatey.org/) kullanılabilir.
 
 ## <a name="usage"></a>Kullanım
 
@@ -31,39 +31,39 @@ Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa araç
 
 | Ad                                             | Tür   | Gerekli  | Değer                                                                                                          |
 |--------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------|
-| **açıklamaları**                                     | dize | No        | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                                          |
-| [**girişinin**](#input)                              | string | Yes       | Yüklenecek paket. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                 |
-| [**additionalOptions**](#additional-options)     | dize | No        | Araca geçirilecek ek seçenekler. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.       |
+| **yorumlar**                                     | dize | No        | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                                                          |
+| [**Giriş**](#input)                              | string | Yes       | Yüklenilen paket. Ayrıntılar [için](#input) aşağıdaki Giriş'e bakın.                                                 |
+| [**additionalOptions**](#additional-options)     | dize | No        | Aracı geçmek için ek seçenekler. Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.       |
 
 ### <a name="input"></a>Giriş
 
-`input`Özelliği, Yüklenecek paketin adını (örneğin ' MongoDB ') veya aşağıdaki biçimlerdeki bir yapılandırma dosyasının yolunu belirtmek için kullanılır _packages.config_, _. nuspec_ ve _. nupkg_. Değeri, `input` öğesine `choco install` `choco install mongodb` özgü bağımsız değişkenlerle birlikte (örneğin,) [`additionalOptions`](#additional-options) ve yerleşik `choco` seçeneklere ( [aşağıda](#built-in-options)tanımlanmıştır) eklenir. Paketler [Chocolatey paket galerisinde](https://chocolatey.org/packages)bulunur. Bir yapılandırma dosyası kullanırken, bu dosyanın yolunu, `input` Örneğin, özelliğinde geçirebilirsiniz `"input":"packages.config"` .
+özelliği, yüklemek için paketin adını (örneğin,'mongodb') veya aşağıdaki biçimlerde bir yapılandırma dosyasının yolunu belirtmek için kullanılır `input` _packages.config_, _.nuspec_ ve _.nupkg._ değeri, komutuna (örneğin ) ve yerleşik seçeneklerine (aşağıda tanımlanmıştır) özgü bağımsız `input` `choco install` `choco install mongodb` [`additionalOptions`](#additional-options) `choco` değişkenlerle birlikte [eklenir.](#built-in-options) Paketler [Chocolatey paket galerisinde bulunur.](https://chocolatey.org/packages) Bir yapılandırma dosyası kullanırken, özelliğinde bu dosyanın yolunu `input` (örneğin, ) `"input":"packages.config"` geçebilirsiniz.
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `additionalOptions` . Bu bağımsız değişkenler tarafından kullanılan bağımsız değişkenlere doğrudan geçiş yapılır [`choco install`](https://chocolatey.org/docs/commands-install) ve Chocolatey belgelerinde tanımlanmıştır.
+Ek yapılandırma seçenekleri değeri olarak `additionalOptions` geçirebilirsiniz. Bu bağımsız değişkenler tarafından kullanılan bağımsız değişkenlere doğrudan geçiştir [`choco install`](https://chocolatey.org/docs/commands-install) ve çikolatalı belgelerde tanımlanmıştır.
 
-#### <a name="adding-new-feeds-to-chocolatey"></a>Chocolatey 'e yeni akışlar ekleme
-Bir komuta benzer şekilde Chocolatey 'e yeni bir akış eklemek istiyorsanız `choco source add` , `additionalOptions` bunu yapmak için uygulamasına geçiş yapabilirsiniz. Yeni bir akış ekleme örneği [örnek kullanımdır](#example-usage). Özel bir akış eklemek istiyorsanız, bu aracı komut isteminde, kimlik bilgileri gerektirdiğinden çalıştırmayı öneririz. Örneğin,,,,,,,, `devinit run -t choco-install -i {package} -s "{feed link}" -u {user} -p {password}` `{package}` `{feed link}` `{user}` ve `{password}` özel paketinizi, akış bağlantısını, Kullanıcı adınızı ve parolanızı ifade eder. Daha fazla bilgi, yukarıda başvurulan Chocolatey belgelerinde bulunur. 
+#### <a name="adding-new-feeds-to-chocolatey"></a>Chocolatey'ye yeni akışlar ekleme
+Chocolatey'ye komutuna benzer şekilde yeni bir akış eklemek `choco source add` için komutuna `additionalOptions` geçebilirsiniz. Yeni akış eklemeye örnek olarak Örnek [kullanım'dır.](#example-usage) Özel akış eklemek isterseniz, kimlik bilgileri gerektirdiği için aracı komut isteminde çalıştırmanız önerilir. Örneğin, `devinit run -t choco-install -i {package} -s "{feed link}" -u {user} -p {password}` burada `{package}` , `{feed link}` , ve belirli bir paketinize, akış `{user}` bağlantınıza, kullanıcı `{password}` adınıza ve parolanıza bakın. Yukarıda başvurulan Chocolatey belgelerinde daha fazla bilgi bulabilirsiniz. 
 
-### <a name="built-in-options"></a>Yerleşik Seçenekler
+### <a name="built-in-options"></a>Yerleşik seçenekler
 
-`choco-install`Araç, gözetimsiz bir şekilde `choco` çalışmasını sağlamak için bir dizi komut satırı bağımsız değişkeni ayarlar `choco` . Bu bağımsız değişkenler aşağıda listelenmiştir ve bunlarla ilgili belgeler [Chocolatey belgelerinde](https://chocolatey.org/docs/)bulunabilir.
+Araç, `choco-install` başsız `choco` çalıştırılana kadar bir dizi komut satırı `choco` bağımsız değişkeni ayarlar. Bu bağımsız değişkenler aşağıda listelenmiştir ve bu bağımsız değişkenlerle ilgili belgeler [chocolatey belgelerinde bulunabilir.](https://chocolatey.org/docs/)
 
 | Ad                  | Açıklama                                                                                        |
 |-----------------------|----------------------------------------------------------------------------------------------------|
-| **--Evet**             | Tüm istemleri Onayla-istem yerine onaylama yanıtını seçer. Gibi `--accept-license.` |
-| **--devam ediyor**     | İlerleme durumunu gösterme-Ilerleme yüzdeleri gösterilmez.                                         |
-| **--Skip-PowerShell** | PowerShell 'i atla-chocolateyInstall.ps1 çalıştırılmayacaktır.                                              |
+| **--yes**             | Tüm istemleri onaylayın - Sorularak değil, olumlu yanıtı seçer. Ima `--accept-license.` |
+| **--no-progress**     | İlerlemeyi gösterme - İlerleme yüzdeleri gösterilmez.                                         |
+| **--skip-powershell** | PowerShell'chocolateyInstall.ps1 atla - bu komutlar hiçbir zaman açık olmayacak.                                              |
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-`choco-install`Özelliğin gerekli olduğu şekilde aracın varsayılan davranışı hata olur `input` .
+Özelliğin gerekli olması `choco-install` nedeniyle aracın varsayılan davranışı `input` hatadır.
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `choco-install` `.devinit.json` .
+Aşağıda, kullanarak çalıştırma örnekleri `choco-install` `.devinit.json` verilmiştir.
 
-#### <a name="devinitjson-that-will-install-packages-listed-in-packagesconfig"></a>.devinit.js, packages.config listelenen paketleri yükleyecek:
+#### <a name="devinitjson-that-will-install-packages-listed-in-packagesconfig"></a>.devinit.js, aşağıdakiler altında listelenen paketleri packages.config:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -76,7 +76,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-will-install-mongodb"></a>MongoDB yükleyecek .devinit.js:
+#### <a name="devinitjson-that-will-install-mongodb"></a>.devinit.jsMongoDB'yi yükley on:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -89,7 +89,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-will-install-a-specific-version-of-mongodb"></a>.devinit.js, MongoDB 'nin belirli bir sürümünü yükleyecek:
+#### <a name="devinitjson-that-will-install-a-specific-version-of-mongodb"></a>.devinit.jsMongoDB'nin belirli bir sürümünü yükecek olan bir dosya vardır:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -103,7 +103,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-adds-a-new-feed-to-chocolatey"></a>Chocolatey 'e yeni bir akış ekleyen .devinit.js:
+#### <a name="devinitjson-that-adds-a-new-feed-to-chocolatey"></a>.devinit.jsChocolatey'ye yeni bir akış ekleyeceksiniz:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

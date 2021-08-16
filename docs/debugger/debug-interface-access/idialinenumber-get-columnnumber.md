@@ -11,14 +11,15 @@ ms.assetid: e317f29a-6525-46a7-8421-33985392f8fd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 06d2dc2f703f74d5a3964ee3eb1a1fff948a50ad
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 1cad0c103b61c8b50e5b10f7a63c13f6bda015ade0cb11903c0e730db9ca2e5a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148306"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392195"
 ---
 # <a name="idialinenumberget_columnnumber"></a>IDiaLineNumber::get_columnNumber
 İfadenin veya deyimin başladığı sütun numarasını alır.

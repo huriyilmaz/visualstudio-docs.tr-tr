@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme'
-description: Visual Studio 'da çalışma sayfası açıkken bir XML şemasını Microsoft Office Excel çalışma sayfasına nasıl eşleyeceğinizi öğrenin.
+description: çalışma sayfası Visual Studio açıkken bir XML şemasını Microsoft Office Excel çalışma sayfasına nasıl eşleyeceğinizi öğrenin.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
@@ -16,26 +16,27 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 0e6d868655e3f697a7f659064026929568f2e400
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9fb7a8a2a3ae7a8b0f7f3898fdf5b13b105f58886f1d5586f98ad625cbaa5d0a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900855"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424131"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme
-  Çalışma sayfası Visual Studio 'da açıkken bir XML şemasını çalışma sayfasıyla eşleyebilirsiniz. Çalışma kitabı Visual Studio dışında açıldığında kullandığınız Microsoft Office Excel araçlarını kullanırsınız. Office projesi, Excel çözümünüzü oluşturmadan önce veya sonra, şemayı çalışma sayfasıyla eşleştirdiğinizde aynı nesneleri oluşturur.
+  Çalışma sayfası Visual Studio açıkken bir XML şemasını çalışma sayfasıyla eşleyebilirsiniz. çalışma kitabı Visual Studio dışında açtığınızda kullandığınız Microsoft Office Excel araçlarını kullanırsınız. Office projesi, şemayı, Excel çözümünüzü oluşturmadan önce veya sonra çalışma sayfasıyla eşleştirdiğinizde aynı nesneleri oluşturur.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
 > [!NOTE]
 > Excel çözümlerinde çok parçalı XML şemaları kullanamazsınız.
 
-## <a name="to-map-an-xml-schema-to-an-excel-worksheet-in-visual-studio"></a>Visual Studio 'da bir Excel çalışma sayfasıyla bir XML şemasını eşlemek için
+## <a name="to-map-an-xml-schema-to-an-excel-worksheet-in-visual-studio"></a>bir XML şemasını bir Excel çalışma sayfasıyla eşlemek için Visual Studio
 
-1. Visual Studio içinde Excel çalışma kitabı veya şablon projesini açın.
+1. Excel çalışma kitabını veya şablon projesini Visual Studio içinde açın.
 
 2. Odağı tasarımcıya taşımak için çalışma sayfasına tıklayın.
 
@@ -48,11 +49,11 @@ ms.locfileid: "99900855"
 
      **XML kaynağı** penceresi açılır.
 
-5. **XML kaynağı** penceresinde, **XML eşlemeleri**' ne tıklayın.
+5. **xml kaynağı** penceresinde, **xml Haritalar**' ye tıklayın.
 
-     **XML eşlemeleri** iletişim kutusu açılır.
+     **XML Haritalar** iletişim kutusu açılır.
 
-6. **XML eşlemeleri** Iletişim kutusunda **Ekle**' ye tıklayın.
+6. **XML Haritalar** iletişim kutusunda **ekle**' ye tıklayın.
 
 7. Şema dosyanıza gidin, dosyayı seçin ve ardından **Aç**' a tıklayın.
 
@@ -62,10 +63,10 @@ ms.locfileid: "99900855"
 
 9. Öğeleri **XML kaynak** penceresinden çalışma sayfanızda, ilgili denetimlerin oluşturulmasını istediğiniz yerlere sürükleyin.
 
-     Tekrarlamayan bir şema öğesini sürüklerseniz Office projesi <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> , otomatik olarak öğesine bağlanan bir denetim oluşturur <xref:System.Windows.Forms.BindingSource> .
+     tekrarlamayan bir şema öğesini sürüklerseniz Office projesi <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> , otomatik olarak öğesine bağlanan bir denetim oluşturur <xref:System.Windows.Forms.BindingSource> .
 
-     Yinelenen bir şema öğesini sürüklerseniz, Office projesi <xref:Microsoft.Office.Tools.Excel.ListObject> bir veri kaynağına otomatik olarak bağlanmamış bir denetim oluşturur. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde XML şemaları ve verileri](../vsto/xml-schemas-and-data-in-document-level-customizations.md).
+     yinelenen bir şema öğesini sürüklerseniz, Office projesi <xref:Microsoft.Office.Tools.Excel.ListObject> bir veri kaynağına otomatik olarak bağlanmamış bir denetim oluşturur. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde XML şemaları ve verileri](../vsto/xml-schemas-and-data-in-document-level-customizations.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: şemaları Visual Studio içindeki Word belgeleriyle eşleme](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
+- [Nasıl yapılır: Visual Studio içindeki Word belgeleriyle şemaları eşleme](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
 - [Belge düzeyi özelleştirmelerde XML şemaları ve verileri](../vsto/xml-schemas-and-data-in-document-level-customizations.md)

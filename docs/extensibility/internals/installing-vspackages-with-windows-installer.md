@@ -1,6 +1,6 @@
 ---
-title: Windows Installer Ile VSPackages yükleme | Microsoft Docs
-description: Bir VSPackage ve bağımlı dosyalarını yüklemek ve bunları Visual Studio 'ya kaydettirmek ve bütünleştirmek için Microsoft Windows Installer nasıl kullanacağınızı öğrenin.
+title: Windows Installer ile vspackages yükleme | Microsoft Docs
+description: bir vspackage ve bağımlı dosyalarını yüklemek için Microsoft Windows Installer kullanmayı ve bunları Visual Studio olarak kaydedip tümleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,19 +11,20 @@ ms.assetid: 41d2c72c-0a97-4fcd-b3aa-33a8d3aa962a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1638f6d041dda28ca79492ba2c8e6ef772ce8bc7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 63a0b57479ab8355031c9cf70df6caa1d19f2272865b380b431895dc856a4499
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074674"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375968"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Windows Installer ile VSPackage Yükleme
 VSPackage ile tümleştirme, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dosyaları yalnızca bir kullanıcının bilgisayarına kopyalamaktan daha fazlasını gerektirir. VSPackage yükleyicinizin VSPackage ve bağımlı dosyalarını yüklemesi ve bunları kaydedip tümleştirmeleri gerekir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . VSPackage, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Giriş ekranında ve hakkında iletişim kutusunda bir simge görüntüleme gibi tümleştirme özelliklerinden yararlanabilir.
 
- Microsoft Windows Installer dosyalar, VSPackages 'leri dağıtmak için önerilen yoldur. Kullanımı kolay Windows Installer paketleri tarafından desteklenen herhangi bir Windows işletim sisteminde çalışabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Daha fazla bilgi için bkz. [Windows Installer](/previous-versions/2kt85ked(v=vs.120)).
+ Microsoft Windows Installer dosyalar, vspackages 'leri dağıtmak için önerilen yoldur. kullanımı kolay Windows Installer paketleri, tarafından desteklenen tüm Windows işletim sistemlerinde çalışabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . daha fazla bilgi için bkz. [Windows Installer](/previous-versions/2kt85ked(v=vs.120)).
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Temel Windows Installer Bilgileri](../../extensibility/internals/windows-installer-basics.md)

@@ -1,6 +1,6 @@
 ---
-title: WPF MSBuild başvurusu | Microsoft Docs
-description: Windows Presentation Foundation (WPF) ek derleme desteğiyle MSBuild derleme altyapısını nasıl genişlettiğini öğrenin.
+title: WPF MSBuild Başvurusu | Microsoft Docs
+description: Windows Presentation Foundation (WPF) ile MSBuild derleme altyapısını genişletmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,26 +16,27 @@ ms.assetid: 94b12890-365d-479a-b239-71109fbcb462
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 01058c1ac565d7f54a99329c008b411fac1e69f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: da5b4c98758afcc1019f0b32290173ebbf35674bef2801bb0636fa888ba05787
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933784"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397091"
 ---
 # <a name="wpf-msbuild-reference"></a>WPF MSBuild başvurusu
 
-Windows Presentation Foundation (WPF), bu bölümde belgelenen ek derleme desteğiyle Microsoft Build Engine 'i (MSBuild) genişletir.
+Windows Presentation Foundation (WPF), Microsoft derleme altyapısını (MSBuild) bu bölümde belgelenmiş ek derleme desteğiyle genişlettir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 [WPF .targets dosyaları](../msbuild/wpf-dot-targets-files.md)
 
-WPF. targets dosyalarını açıklar.
+WPF .targets dosyalarını açıklar.
 
-[WPF MSBuild görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)
+[WPF MSBuild başvurusu](../msbuild/wpf-msbuild-task-reference.md)
 
 Kullanılabilir WPF derleme görevlerini listeler.
 
@@ -45,7 +46,7 @@ Derleme görevi derlemesi.
 
 <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper>
 
-Derleme görev dağıtımı önyükleyici derlemesi.
+Derleme görevi dağıtımı önyükleyici derlemesi.
 
 <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities>
 
@@ -53,11 +54,11 @@ Derleme görevi dağıtım bildirimi yardımcı programı derlemesi.
 
 <xref:Microsoft.Build.Tasks.Hosting>
 
-Derleme görevi barındırma derlemesi.
+Derlemeyi barındıran derleme görevi.
 
 <xref:Microsoft.Build.Tasks.Windows>
 
-Derleme görevi Windows derlemesi.
+Derleme görevi windows derlemesi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

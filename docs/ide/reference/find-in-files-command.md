@@ -13,14 +13,15 @@ ms.assetid: 2fc78bfe-b339-4599-97f9-4cafd8a194d9
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fc824a7166e3bbaba84bd49e89f1fdf30b65761
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4886cd6d62fc35cccb9a7a7df1b70c1006e135a678abe1f25bf7dfda5bbc948f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908957"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121429452"
 ---
 # <a name="find-in-files-command"></a>Dosyalarda Bul Komutu
 **Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arayın.
@@ -80,7 +81,7 @@ aramakonumu `searchpath`\
 İsteğe bağlı. Yalnızca tam sözcükleri arar.
 
 ## <a name="example"></a>Örnek
-Bu örnek, "My Visual Studio Projects" klasöründe bulunan tüm. CLS dosyalarında btnCancel arar ve sonuçları bul 2 penceresinde eşleşme bilgilerini görüntüler.
+bu örnek, "Visual Studio projelerim" klasöründe bulunan tüm. cls dosyalarında btncancel 'yi arar ve sonuçları bul 2 penceresinde eşleşme bilgilerini görüntüler.
 
 ```cmd
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
@@ -91,5 +92,5 @@ Bu örnek, "My Visual Studio Projects" klasöründe bulunan tüm. CLS dosyaları
 - [Dosyalarda Bul](../../ide/find-in-files.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Bul/komut kutusu](../../ide/find-command-box.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

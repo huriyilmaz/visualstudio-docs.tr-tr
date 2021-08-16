@@ -1,6 +1,6 @@
 ---
-description: System. Threading. Tasks. Task nesnesinin ek özelliklerini depolar.
-title: m_contingentProperties alanı | Microsoft Docs
+description: System.Threading.Tasks.Task nesnesinin ek özelliklerini depolar.
+title: m_contingentProperties Alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,23 +9,24 @@ ms.assetid: 49e8cb36-db39-440b-acda-a325651f1165
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1ed8da2df71a71ce75b7a59d7aa287e24bda98bd
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: af6773dab502c1e75a274915154008cf9f947bcf1d0192d5fb4ad438d59333c7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901402"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361047"
 ---
 # <a name="m_contingentproperties-field"></a>m_contingentProperties alanı
-Nesnenin ek özelliklerini depolar <xref:System.Threading.Tasks.Task> .
+Nesnenin ek özelliklerini <xref:System.Threading.Tasks.Task> depolar.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
+ **Derleme:** mscorlib *(mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 

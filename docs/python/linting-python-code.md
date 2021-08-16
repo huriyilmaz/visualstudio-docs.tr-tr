@@ -1,60 +1,61 @@
 ---
 title: Python kodu için PyLint kullanma
-description: Python kodundaki sorunları denetlemek için komut satırı seçenekleri de dahil olmak üzere Visual Studio 'da Pylınt komutunu çalıştırın.
+description: Lint'i özelleştirmek Visual Studio komut satırı seçenekleri de dahil olmak üzere Python kodundaki sorunları kontrol etmek için Visual Studio'de PyLint'i çalıştırın.
 ms.date: 03/13/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 97336bf028a02c6c1f90262754dc0c89aa81e1cf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b391a522e9cd1f19e98aa73370d6849977d2142da43a277ae49fa8a7a3235d0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882810"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121367790"
 ---
-# <a name="use-pylint-to-check-python-code"></a>Python kodunu denetlemek için PyLint kullanın
+# <a name="use-pylint-to-check-python-code"></a>Python kodunu kontrol etmek için PyLint kullanma
 
-[Pylint](https://www.pylint.org/), Python kodundaki hataları denetleyen ve iyi Python kodlama düzenlerini etkileyen yaygın olarak kullanılan bir araçtır. Bu, Python projeleri Için Visual Studio ile tümleşiktir.
+Python kodundaki hataları kontrol eden ve iyi Python kodlama desenlerini teşvik eden yaygın olarak kullanılan [pyLint](https://www.pylint.org/)aracı, Python projeleri için Visual Studio tümleşiktir.
 
-## <a name="run-pylint"></a>PyLint Çalıştır
+## <a name="run-pylint"></a>PyLint'i çalıştırma
 
-**Çözüm Gezgini** bir Python projesine sağ tıkladıktan sonra **Python**  >  **Run pylint**' i seçmeniz yeterlidir:
+Python'daki bir Python projesine sağ **tık Çözüm Gezgini** **Python Run**  >  **PyLint seçeneğini seçmeniz gerekir:**
 
-![Python projeleri için bağlam menüsünde Pylınt komutu](media/code-pylint-command.png)
+![Python projeleri için bağlam menüsünde PyLint komutu](media/code-pylint-command.png)
 
-Bu komutun kullanılması, zaten mevcut değilse, etkin ortamınıza PyLint 'i yüklemenizi ister.
+Bu komutu kullanmak, etkin ortamınız yoksa PyLint'i yüklemenizi istenir.
 
-Pylınt uyarıları ve hataları **hata listesi** penceresinde görüntülenir:
+PyLint uyarıları ve hataları Hata **Listesi penceresinde** görüntülenir:
 
-![Pylınt hata listesi](media/code-pylint-error-list.png)
+![PyLint hata listesi](media/code-pylint-error-list.png)
 
-Bir hataya çift tıklamak sizi sorunu oluşturan kaynak koda doğrudan götürür.
+Bir hataya çift tıklarsanız doğrudan sorunu oluşturan kaynak koda ulaşabilirsiniz.
 
 > [!Tip]
-> Tüm Pylınt çıkış iletilerinin ayrıntılı bir listesi için bkz. [pylınt Özellikler başvurusu](https://pylint.readthedocs.io/en/latest/technical_reference/features.html) .
+> Tüm [PyLint çıkış iletilerinin](https://pylint.readthedocs.io/en/latest/technical_reference/features.html) ayrıntılı listesi için bkz. PyLint özellikleri başvurusu.
 
-## <a name="set-pylint-command-line-options"></a>Pylınt komut satırı seçeneklerini ayarla
+## <a name="set-pylint-command-line-options"></a>PyLint komut satırı seçeneklerini ayarlama
 
-Pylınt belgelerinin [komut satırı seçenekleri](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) bölümü, bir *. pylintrc* yapılandırma dosyası aracılığıyla pylınt 'nin davranışının nasıl kontrol edileceğini açıklar. Bu tür bir dosya, Visual Studio 'daki bir Python projesinin köküne yerleştirilebilir ve bu ayarların ne kadar büyük bir yere uygulanacağını (Ayrıntılar için bkz. [komut satırı seçeneklerine](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) bakın).
+PyLint [belgelerinin](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) komut satırı seçenekleri *bölümünde,pylintrc* yapılandırma dosyası aracılığıyla PyLint'in davranışını denetleme açıklanmıştır. Bu tür bir dosya, bu ayarların ne kadar geniş bir şekilde uygulanmasını istediğinize bağlı olarak Visual Studio'de veya başka bir yerde Python projesinin köküne yer değiştirebilir (ayrıntılar için komut satırı [seçeneklerine](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) bakın).
 
-Örneğin, bir projede *. pylintrc* dosyası ile önceki görüntüde gösterilen "docstring" uyarılarını gizlemek için şu adımları uygulayın:
+Örneğin, bir projede *.pylintrc* dosyasıyla önceki görüntüde gösterilen "eksik docstring" uyarılarını göstermeden önce adımları uygulayın:
 
-1. Komut satırında, proje köküne gidin ( *. pyproj* dosyanız) ve açıklamalı bir yapılandırma dosyası oluşturmak için aşağıdaki komutu çalıştırın:
+1. Komut satırına proje kökünü *(.pyproj* dosyanızı içerir) gidin ve açıklama satırı yapılan bir yapılandırma dosyası oluşturmak için aşağıdaki komutu çalıştırın:
 
    ```command
    pylint --generate-rcfile > .pylintrc
    ```
 
-1. Visual Studio Çözüm Gezgini, projenize sağ tıklayın,   >  **var olan öğe** Ekle ' yi seçin, yeni *. pylintrc* dosyasına gidin, seçin ve **Ekle**' yi seçin.
+1. Bu Visual Studio Çözüm Gezgini projenize sağ tıklayın, Var Olan Öğeyi Ekle'yi seçin, yeni  >   *.pylintrc* dosyasına gidin, seçin ve Ekle'yi **seçin.**
 
-1. Üzerinde çalıştığınız çeşitli ayarlara sahip olan dosyayı düzenlenmek üzere açın. Bir uyarıyı devre dışı bırakmak için `[MESSAGES CONTROL]` bölümünü bulun, ardından `disable` Bu bölümdeki ayarı bulun. İstediğiniz uyarıları ekleyebileceğiniz belirli iletiler için uzun bir dize vardır. Buradaki örnekte, Append `,missing-docstring` (virgülle ayırıcı dahil).
+1. Üzerinde çalışabilirsiniz çeşitli ayarları olan dosyayı düzenlemek için açın. Bir uyarıyı devre dışı bırakmak `[MESSAGES CONTROL]` için bölümünü bulun ve ilgili `disable` bölümdeki ayarı bulun. Uzun bir belirli ileti dizesi içerir ve bu dizeye istediğiniz uyarıları eklersiniz. Buradaki örnekte ekleme `,missing-docstring` (satır içi virgül dahil).
 
-1. *. Pylintrc* dosyasını kaydedin ve uyarıların artık bastırıldığına bakmak Için PyLint ' i yeniden çalıştırın.
+1. Uyarıların artık gizlenmelerini görmek için *.pylintrc* dosyasını kaydedin ve PyLint'i yeniden çalıştırın.
 
 > [!Tip]
-> Bir ağ paylaşımından *. pylintrc* dosyasını kullanmak IÇIN, `PYLINTRC` UNC yolu veya eşleştirilmiş bir sürücü harfi kullanarak ağ paylaşımındaki dosya adının değeriyle adlı bir ortam değişkeni oluşturun. Örneğin, `PYLINTRC=\\myshare\python\.pylintrc`.
+> Bir ağ *paylaşımından .pylintrc* dosyası kullanmak için, UNC yolu veya eşlenmiş bir sürücü harfi kullanarak ağ paylaşımında dosya adı değeriyle adlı bir `PYLINTRC` ortam değişkeni oluşturun. Örneğin, `PYLINTRC=\\myshare\python\.pylintrc`.

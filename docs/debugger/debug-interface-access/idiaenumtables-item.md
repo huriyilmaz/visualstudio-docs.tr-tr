@@ -1,6 +1,6 @@
 ---
-description: Bir tabloyu bir dizin veya ada göre alır.
-title: 'IDiaEnumTables:: Item | Microsoft Docs'
+description: Bir tabloyu dizin veya ad ile alır.
+title: IDiaEnumTables::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: d65ab262-10c6-48ce-95a3-b5e4cb2c85af
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: dc222672b0ba52f19f153a8e0c9e97137a069607
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: bddd0b00b5ad962424002f63302759349874de22e44db516ba244d523d16984f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148579"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392347"
 ---
 # <a name="idiaenumtablesitem"></a>IDiaEnumTables::Item
-Bir tabloyu bir dizin veya ada göre alır.
+Bir tabloyu dizin veya ad ile alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,17 +36,17 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  `index`
 
-'ndaki Alınacak [IDiaTable](../../debugger/debug-interface-access/idiatable.md) 'ın dizini veya adı. Bir tamsayı değişkeni kullanılırsa, bu, `count` `count` [IDiaEnumTables:: get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md) yöntemi tarafından döndürülen 0 ile-1 aralığında olmalıdır.
+[in] Alınarak [IDiaTable'ın](../../debugger/debug-interface-access/idiatable.md) dizini veya adı. Bir tamsayı varyantı kullanılırsa, 0 ile `count` -1 aralığında olmalıdır; burada `count` [IDiaEnumTables::get_Count yöntemi tarafından döndürülen](../../debugger/debug-interface-access/idiaenumtables-get-count.md) değerdir.
 
  `table`
 
-dışı İstenen tabloyu temsil eden bir [IDiaTable](../../debugger/debug-interface-access/idiatable.md) nesnesi döndürür.
+[out] İstenen [tabloyu temsil eden bir IDiaTable](../../debugger/debug-interface-access/idiatable.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir dize değişkeni belirtilmişse, dize belirli bir tabloyu adlandırır. Ad, [sabitler (hata ayıklama arabirimi erişim SDK 'sı)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)olarak tanımlanan tablo adlarından biri olmalıdır.
+ Bir dize varyantı belirtilirse, dize belirli bir tabloyu olarak adlar. Ad, Sabitler (Arabirim Erişimi SDK'sı Hata Ayıklama) [içinde tanımlanan tablo adlarından biri olabilir.](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
 ## <a name="example"></a>Örnek
 

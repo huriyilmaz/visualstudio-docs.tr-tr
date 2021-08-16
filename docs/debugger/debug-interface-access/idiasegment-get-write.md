@@ -11,14 +11,15 @@ ms.assetid: 5fcda988-6be1-4b2f-8660-b59aa78fc35d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 82403209712c9238febf9a32e6b82d2bda7e0d56
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 130cbfbd889cc8ee9420271867f1d9582250ce6251cbd335203f3ec935f2bcf4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147886"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391971"
 ---
 # <a name="idiasegmentget_write"></a>IDiaSegment::get_write
 Segmentin değiştirilip değiştirilemeyeceğini belirten bir bayrak alır.

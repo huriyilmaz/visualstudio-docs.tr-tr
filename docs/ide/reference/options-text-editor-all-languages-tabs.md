@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
-description: Visual Studio 'daki kod Düzenleyicisi sekmelerinin varsayılan davranışını değiştirmek için tüm diller bölümündeki sekmeler sayfasını nasıl kullanacağınızı öğrenin.
+description: Tüm Diller bölümündeki Sekmeler sayfasını kullanarak kod düzenleyicisi sekmelerinin varsayılan davranışını değiştirme hakkında bilgi Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -41,57 +41,58 @@ ms.assetid: 7e208e1d-5e3a-4bf7-a27b-4417e3e049c7
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c429b8e6dbf6931ebf68717b6d43fcf746cf13ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3d984fe1c20ae5eb036a60e6e2b2e6db23890a72a633d33946463f0bcd61034
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905561"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372341"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
 
-Bu iletişim kutusu, kod düzenleyicisinin varsayılan davranışını değiştirmenize izin verir. Bu ayarlar ayrıca, HTML tasarımcısının kaynak görünümü gibi kod düzenleyicisine dayalı diğer düzenleyiciler için de geçerlidir. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin. **Metin Düzenleyicisi** klasörü Içinde **tüm diller** alt klasörünü genişletin ve ardından **Sekmeler**' i seçin.
+Bu iletişim kutusu, Kod Düzenleyicisi'nin varsayılan davranışını değiştirmenizi sağlar. Bu ayarlar, HTML Tasarımcısı'nın Kaynak görünümü gibi Kod Düzenleyicisi'ni temel alan diğer düzenleyiciler için de geçerlidir. Bu seçenekleri görüntülemek için Araçlar **menüsünden** **Seçenekler'i** seçin. Metin Düzenleyici **klasöründe Tüm** Diller alt **klasörünü genişletin** ve sekmeler'i **seçin.**
 
 > [!CAUTION]
-> Bu sayfa tüm geliştirme dillerinin varsayılan seçeneklerini ayarlar. Bu iletişim kutusunda bir seçeneğin sıfırlanması, burada seçili olan seçimler için tüm dillerdeki sekmeler seçeneklerini sıfırlayacaktır. Yalnızca bir dile ait metin düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörünü genişletin ve seçenek sayfalarını seçin.
+> Bu sayfa, tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Sekme seçeneklerini burada seçilen seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
 
-Belirli programlama dilleri için sekmeler seçenekler sayfalarında farklı ayarlar seçilirse, "tekil metin biçimleri için girinti ayarları birbirleriyle çakışıyor" iletisi, farklı **girintileme** seçenekleri için görüntülenir; ve "tekil metin biçimleri için sekme ayarları birbirleriyle çakışıyor" iletisi, farklı **sekme** seçenekleri için görüntülenir. Örneğin, **akıllı girintileme** seçeneği Visual Basic için seçilmişse bu anımsatıcı görüntülenir, ancak Visual C++ için **blok girintileme** seçilidir.
+Belirli programlama dillerinin Sekme seçenekleri sayfalarında farklı ayarlar seçilirse, farklı Girintileme seçenekleri için "Tek tek metin biçimleri için girintileme ayarları çakışıyor" iletisi **görüntülenir.** ve "Tek tek metin biçimleri için sekme ayarları çakışıyor" iletisi, farklı Sekme seçenekleri **için** görüntülenir. Örneğin, bu anımsatıcı,  Visual Basic için Akıllı girintileme seçeneği Visual C++. 
 
 ## <a name="indenting"></a>Girintileme
 
-Yok
+Hiçbiri
 
-Seçildiğinde, yeni satırlar girintili değildir. Ekleme noktası yeni bir satırın ilk sütununa yerleştirilir.
+Seçildiğinde, yeni satırlar girintilemez. Ekleme noktası yeni bir satırın ilk sütununa yerleştirilir.
 
 Blok
 
-Seçildiğinde, yeni satırlar otomatik olarak girintilenir. Ekleme noktası, önceki satır ile aynı başlangıç noktasına yerleştirilir.
+Seçildiğinde, yeni satırlar otomatik olarak girintilenir. Ekleme noktası, önceki satırla aynı başlangıç noktasına yerleştirilir.
 
-Lý
+Akıllı
 
-Seçildiğinde, yeni satırlar kod bağlamına sığacak şekilde konumlandırılır, diğer kod biçimlendirme ayarları ve geliştirme diliniz için IntelliSense kuralları kullanılır. Bu seçenek tüm geliştirme dilleri için kullanılamaz.
+Seçildiğinde, yeni satırlar kod bağlamına uyacak şekilde, diğer kod biçimlendirme ayarlarına ve geliştirme diliniz için IntelliSense kurallarına göre konumlandırıldı. Bu seçenek tüm geliştirme dillerinde kullanılamaz.
 
-Örneğin, bir açma küme ayracı ({) ve bir kapanış ayracı (}) arasına alınmış satırlar otomatik olarak hizalı küme ayraçlarının konumundan fazladan bir sekme durağı girintili olabilir.
+Örneğin, bir açma ayracı ( { ) ve kapanış ayracı ( } ) arasına alınmış satırlar, hizalanmış ayraçların konumundan ek bir sekme durdurması otomatik olarak girintilenir.
 
 ## <a name="tabs"></a>Sekmeler
 
 Sekme boyutu
 
-Sekme duraklarının boşluk cinsinden uzaklığını ayarlar. Varsayılan değer dört boşluklardan oluşamaz.
+Sekme durakları arasındaki mesafeyi boşluk olarak ayarlar. Varsayılan değer dört alandır.
 
-Boyut Girintile
+Girinti boyutu
 
-Boyutu otomatik girintide boşluk olarak ayarlar. Varsayılan değer dört boşluklardan oluşamaz. Belirtilen boyutu dolduracak şekilde sekme karakterleri, boşluk karakterleri veya her ikisi de eklenir.
+Boyutu otomatik girinti boşluklarında ayarlar. Varsayılan değer dört alandır. Belirtilen boyutu doldurmak için sekme karakterleri, boşluk karakterleri veya her ikisi de eklenir.
 
-Boşluk Ekle
+Boşluk ekleme
 
-Seçildiğinde, girinti işlemleri sekme karakterleri değil yalnızca boşluk karakterleri ekler. Örneğin, **girinti boyutu** 5 olarak AYARLANDıYSA, sekme tuşuna veya **biçimlendirme** araç çubuğundaki **Girintiyi Artır** düğmesine her bastığınızda beş boşluk karakteri eklenir.
+Seçildiğinde, girintileme işlemleri SEKME karakterleri değil yalnızca boşluk karakterleri ekler. Girinti **boyutu örneğin** 5 olarak ayarlanırsa, SEKME tuşuna veya Biçimlendirme araç çubuğundaki Girintiyi Artır düğmesine her bastığınızda beş boşluk **karakteri** eklenir. 
 
 Sekmeleri izleyin
 
-Seçildiğinde, Girintile işlemleri mümkün olduğunca çok sekme karakteri ekler. Her sekme karakteri, **sekme boyutunda** belirtilen boşluk sayısını doldurur. **Girinti boyutu** **sekme boyutunun** Çift katı değilse, farkı dolduracak şekilde boşluk karakterleri eklenir.
+Seçildiğinde, girintileme işlemleri mümkün olduğunca çok SEKME karakteri ekler. Her SEKME karakteri, Sekme boyutu'da belirtilen boşluk **sayısını doldurur.** Girinti **boyutu Sekme** boyutunun katları arasında **yer alamasa,** aradaki farkı doldurmak için boşluk karakterleri eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

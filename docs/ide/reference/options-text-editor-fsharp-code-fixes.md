@@ -1,6 +1,6 @@
 ---
-title: 'Seçenekler, metin düzenleyici, F #, kod düzeltmeleri'
-description: 'Kod hatalarını belirlemenize ve çözümleri sunmaya yardımcı olabilecek ayarları belirtmek için F # bölümündeki kod düzeltmeleri sayfasını nasıl kullanacağınızı öğrenin.'
+title: Seçenekler, Metin Düzenleyici, F#, Kod Düzeltmeleri
+description: Kod hatalarını tanımlamanıza ve çözüm sunmanıza yardımcı olacak ayarları belirtmek için F# bölümündeki Kod Düzeltmeleri sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
@@ -9,36 +9,37 @@ f1_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: ca1b3816786ab611af8acb1cb99eea406ca6ad45
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 004a3600066faa10758eccfaa718c72916aaf0c4c115d0466f1178d08c38e6a2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943958"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121387258"
 ---
-# <a name="options-text-editor--f--code-fixes"></a>Seçenekler: metin Düzenleyicisi > F # > kod düzeltmeleri
+# <a name="options-text-editor--f--code-fixes"></a>Seçenekler: F# > Metin Düzenleyici > Kod Düzeltmeleri
 
-Kod hatalarını ve teklif çözümlerini belirlemenize yardımcı olabilecek ayarları belirtmek için kod düzeltmeleri seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler**' i ve ardından **metin düzenleyici**  >  **F #**  >  **kod düzeltmeleri**' ni seçin.
+Kod hatalarını tanımlamanıza ve çözüm sunmanıza yardımcı olacak ayarları belirtmek için Kod Düzeltmeleri seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için Araçlar **Seçenekleri'ni**  >  **ve** ardından Metin Düzenleyici   >  **F# Kod**  >  **Düzeltmeleri'ni seçin.**
 
 ## <a name="code-fixes"></a>Kod Düzeltmeleri
 
-- **Adları basitleştirme (gereksiz niteleyicileri Kaldır)**
+- **Adları basitleştirme (gereksiz niteleyicileri kaldırma)**
 
-  Bu onay kutusu işaretliyse, nitelikler gerekli olmadığında (sık kullanılan ad alanının bir üyesi gibi) tam nitelikli adlar basitleştirilir.
+  Bu onay kutusu seçilirse, nitelikler gerekli olmadığı durumlarda (örneğin, sık kullanılan ad alanının bir üyesi için) tam adlar basitleştirilir.
 
-- **Açık deyimleri her zaman en üst düzeyde yerleştir**
+- **Açık deyimleri her zaman en üst düzeye yer açın**
 
-  Bu onay kutusu işaretliyse ve `open` koda bir ifade yazarsanız, en üst düzeye konur.
+  Bu onay kutusu seçiliyse ve koda bir deyim yazarak `open` en üst düzeye konabilir.
 
-- **Kullanılmayan açık deyimleri kaldır**
+- **Kullanılmayan açık deyimlerini kaldırma**
 
-  Bu onay kutusu işaretliyse, belgeler kullanılmamış deyimler için analiz edilir `open` ve tüm kullanılmayan deyimleri kaldırma eylemi Içeren [hızlı bir eylem](../quick-actions.md) ampul görüntülenir `open` .
+  Bu onay kutusu seçiliyse, belgeler kullanılmayan deyimler için analiz edilir ve kullanılmayan tüm deyimleri kaldırma eylemiyle birlikte Hızlı Eylem `open` [](../quick-actions.md) `open` ampulü görüntülenir.
 
-- **Kullanılmayan değerler için düzeltmeleri çözümle ve önerme**
+- **Kullanılmayan değerler için düzeltmeler analiz etme ve önerme**
 
-  Bu onay kutusu işaretliyse araç, kodda kullanılmayan bir değeri tanır. Daha sonra, kullanılmayan değerin üzerine geldiğinizde, bu değeri kullanabilmeniz için gereken yolları önerir.
+  Bu onay kutusu seçiliyse, araç kodda kullanılmayacak bir değeri tanır. Ardından, kullanılmayan değerin üzerine gelmeniz, değeri kullanabileceğiniz yolların önerilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

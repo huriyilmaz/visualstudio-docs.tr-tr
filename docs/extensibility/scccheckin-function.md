@@ -1,6 +1,6 @@
 ---
-description: Bu işlev daha önce kullanıma alınmış dosyaları kaynak denetim sistemine denetler, değişiklikleri depolar ve yeni bir sürüm oluşturulur.
-title: SccCheckin İşlev | Microsoft Docs
+description: Bu işlev, önceden kullanıma alınmış dosyaları kaynak denetim sistemine iade eder, değişiklikleri depolayarak ve yeni bir sürüm oluşturuyor.
+title: SccCheckin Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d324c03096df5178decd6f6954928df3f2c6b9aa
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: e97fb25d9d0d3f91914d3e8d965796877b77a8dfc41a0812b1b6cc0a93aba794
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904753"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400887"
 ---
 # <a name="scccheckin-function"></a>SccCheckin işlevi
-Bu işlev daha önce kullanıma alınmış dosyaları kaynak denetim sistemine denetler, değişiklikleri depolar ve yeni bir sürüm oluşturulur. Bu işlev, iade etmek için bir sayı ve bir dizi ad ile çağrılır.
+Bu işlev, önceden kullanıma alınmış dosyaları kaynak denetim sistemine iade eder, değişiklikleri depolayarak ve yeni bir sürüm oluşturuyor. Bu işlev bir sayı ve iade edilecek dosyaların bir adı dizisiyle çağrılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,54 +41,54 @@ SCCRTN SccCheckin (
 ### <a name="parameters"></a>Parametreler
  pvContext
 
-[in] Kaynak denetimi eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
- Hwnd
+ lendiği
 
-[in] SCC eklentisinin sağladığı iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi tanıtıcısı.
+'ndaki SCC eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
- nFiles
+ Nkarşıya
 
-[in] Iade etmek için seçilen dosya sayısı.
+'ndaki İade edilecek seçili dosya sayısı.
 
- lpFileNames
+ lpDosyaAdı
 
-[in] Denetlenecek dosyaların tam yerel yol adları dizisi.
+'ndaki İade edilecek dosyaların tam nitelikli yerel yol adları dizisi.
 
- lpComment
+ lpComment açıklaması
 
-[in] Denetlenen seçili dosyaların her biri için uygulanacak açıklama. Bu `NULL` parametre, kaynak denetimi eklentisinin bir açıklama sormalıdır.
+'ndaki İşaretlenmiş seçili dosyaların her birine uygulanacak yorum. Bu parametre, `NULL` kaynak denetimi eklentisinin bir yorum sorması durumunda olur.
 
  fOptions
 
-[in] Komut bayrakları ( 0 veya `SCC_KEEP_CHECKEDOUT` ).
+'ndaki Komut bayrakları, 0 ya da `SCC_KEEP_CHECKEDOUT` .
 
  pvOptions
 
-[in] SCC eklentisine özgü seçenekler.
+'ndaki SCC eklentisine özgü seçenekler.
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Dosya başarıyla iade edildi.|
-|SCC_E_FILENOTCONTROLLED|Seçilen dosya kaynak kodu denetimi altında değildir.|
-|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya sorun sorun nedeniyle kaynak denetim sistemine erişilirken bir sorun vardı. Yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR|Belirtilmeyen hata. Dosya iade edildi.|
-|SCC_E_NOTCHECKEDOUT|Kullanıcı dosyayı kullanıma alamadı, bu nedenle dosyayı iade amaz.|
-|SCC_E_CHECKINCONFLICT|Aşağıdakiler nedeniyle iade gerçekleştiriledi:<br /><br /> - Başka bir kullanıcı daha önce giriş yaptı ve `bAutoReconcile` yanlıştı.<br /><br /> -veya-<br /><br /> - Otomatik birleştirme işlemi (örneğin dosyalar ikili olduğunda) olamaz.|
-|SCC_E_VERIFYMERGE|Dosya otomatik olarak birleştirildi ama bekleyen kullanıcı doğrulamasında iade edildi.|
-|SCC_E_FIXMERGE|Dosya otomatik olarak birleştirildi ancak el ile çözülmesi gereken birleştirme çakışması nedeniyle iade edildi.|
-|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmez.|
+|SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak kodu denetimi altında değil.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata. Dosya iade edilmedi.|
+|SCC_E_NOTCHECKEDOUT|Kullanıcı dosyayı kullanıma almadı, bu nedenle iade edilemiyor.|
+|SCC_E_CHECKINCONFLICT|İade etme gerçekleştirilemedi çünkü:<br /><br /> -Başka bir kullanıcı iade etti ve `bAutoReconcile` yanlış.<br /><br /> -veya-<br /><br /> -Otomatik birleştirme yapılamaz (örneğin, dosyalar ikili olduğunda).|
+|SCC_E_VERIFYMERGE|Dosya otomatik olarak birleştirildi, ancak bekleyen Kullanıcı doğrulamasında iade edilmedi.|
+|SCC_E_FIXMERGE|Dosya otomatik olarak birleştirildi, ancak el ile çözümlenmesi gereken bir birleştirme çakışması nedeniyle iade edilmedi.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
 |SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|
-|SCC_I_RELOADFILE|Bir dosyanın veya projenin yeniden yüklenmiş olması gerekir.|
+|SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|
 |SCC_E_FILENOTEXIST|Yerel dosya bulunamadı.|
 
 ## <a name="remarks"></a>Açıklamalar
- Açıklama, iade ediliyor olan tüm dosyalar için geçerlidir. Açıklama bağımsız değişkeni bir dize olabilir; bu durumda kaynak denetimi eklentisi kullanıcıdan her dosya `null` için bir açıklama dizesi istendiğinde.
+ Yorum, denetlenen tüm dosyalar için geçerlidir. Yorum bağımsız değişkeni bir dize olabilir `null` , bu durumda kaynak denetimi eklentisi kullanıcıdan her dosya için bir açıklama dizesi isteyebilir.
 
- Bağımsız değişkene, kullanıcının dosyayı iade etmek ve yeniden iade etmek için amacını `fOptions` `SCC_KEEP_CHECKEDOUT` belirtmek için bayrağının bir değeri verilmiştir.
+ `fOptions`Bağımsız değişkenine `SCC_KEEP_CHECKEDOUT` kullanıcının içinde dosyayı denetleme amacını belirten bir bayrak değeri verilebilir ve yeniden kullanıma alabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)

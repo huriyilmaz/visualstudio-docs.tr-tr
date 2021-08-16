@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 'da DirectX 12 desteği | Microsoft Docs
-description: DirectX 12 kullanıcılarının tam bir grafik hata ayıklama deneyimi için Windows 'da PıX kullanılması önerilir
+title: Visual Studio |'de DirectX 12 desteği Microsoft Docs
+description: Tam grafik hata ayıklama deneyimi için DirectX 12 kullanıcılarının Windows PIX kullanmaları önerilir
 ms.date: 09/29/2020
 ms.topic: conceptual
 author: davidcongruili
@@ -8,34 +8,34 @@ ms.author: davidli1
 manager: mluparu
 ms.workload:
 - multiple
-ms.openlocfilehash: 9dbc52a0233abe467da4d41af0134663bc7cd9df
-ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
+ms.openlocfilehash: 7a3ba160023f1bc3b3fe6c2e78ef548c4495d47bc6e102a462950223a7caa52f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671399"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419799"
 ---
-# <a name="directx-12-support-in-visual-studio"></a>Visual Studio 'da DirectX 12 desteği
+# <a name="directx-12-support-in-visual-studio"></a>Visual Studio'de DirectX 12 Desteği
 
-## <a name="directx-12-support"></a>DirectX 12 desteği
+## <a name="directx-12-support"></a>DirectX 12 Desteği
 
-Visual Studio Grafik Tanılama DirectX 12 oyunları desteklemez. Tam DirectX 12 desteğiyle grafik hata ayıklaması için, Visual Studio *Windows üzerinde PIX*önerir. 
+Visual Studio Grafik Tanılama DirectX 12 oyunlarını desteklemez. Tam DirectX 12 desteğiyle grafik hata ayıklaması için Visual Studio üzerinde *PIX Windows.* 
 
-Windows üzerinde PıX, uzak yeteneklere sahip bir performans ayarlama ve hata ayıklama aracıdır. Windows üzerinde PıX, grafik hata ayıklama ihtiyaçlarınıza uyan yedi ana özellik sunar. GPU yakalamalarında Direct3D 12 grafik işlemenin performansını hata ayıklayın ve çözümleyin. Zamanlama yakalamaları sayesinde oyununuzu tarafından gerçekleştirilen tüm CPU ve GPU çalışmalarını performansını ve iş parçacığı oluşturmayı anlayın. Başlığınızın disk GÇ desenlerinde ve dosya GÇ yakalamaları ile paket düzeninde verimsizlikleri ' i belirler.
+Windows PIX, uzak özelliklere sahip bir performans ayarlama ve hata ayıklama aracıdır. Windows PIX, grafik hata ayıklama ihtiyaçlarınıza uygun yedi ana özellik sunar. GPU yakalamaları ile Direct3D 12 grafik işleme performansının hata ayıklaması ve analiz etme. Zamanlama yakalamaları ile oyun tarafından gerçekleştirilen tüm CPU ve GPU çalışmalarının performansını ve iş parçacığını anlama. Dosya IO yakalamaları ile başlığınıza ilişkin disk IO düzenleri ve paket düzenindeki verimleri belirleme.
 
-[**Windows üzerinde PIX**](https://aka.ms/PIXonWindows)ile grafik hata ayıklama yolculuğuna basın.
+üzerinde PIX ile grafik hata ayıklama [**yolculuğunuza Windows.**](https://aka.ms/PIXonWindows)
 
-[**Windows ÜZERINDE PIX indirin**](https://aka.ms/downloadPIX) veya [ **belgeleri görüntüleyin**.](https://devblogs.microsoft.com/pix/documentation/)
+[**PIX'i Windows**](https://aka.ms/downloadPIX) veya [ **Belgeleri'ne bakın.**](https://devblogs.microsoft.com/pix/documentation/)
 
-## <a name="pix-on-windows"></a>Windows üzerinde PıX
+## <a name="pix-on-windows"></a>Windows üzerinde PIX
 
-Windows üzerinde PıX Özellikler yedi temel işlem modu:
-1. **GPU** , hata ayıklama ve Direct3D 12 grafik işleme performansını analiz etmek için yakalar.
-2. **Zamanlama** , oyununuza göre GERÇEKLEŞTIRILEN tüm CPU ve GPU işleri için performans ve iş parçacığı OLUŞTURMAYı ve GPU bellek kullanımını izlemek için yakalar.
-3. **Işlev Özeti** , her bir işlevin ne kadar süreyle çalıştığı ve ne sıklıkta çağrıldığı hakkında bilgi birikmesini yakalar.
-4. **Callgraph** , tek bir işlevin yürütülmesini izlemeyi yakalar.
-5. **Bellek ayırma yakalamaları** , oyununuzun yaptığı bellek ayırmaları hakkında öngörüler sağlar.
-6. **Dosya GÇ yakalamaları** , başlığınızın disk GÇ desenleri ve paket düzeninde verimsizlikleri belirlemenize yardımcı olur.
-7. Bir oyun çalışırken **Sistem İzleyicisi** gerçek zamanlı sayaç verilerini görüntüler.
+Windows PIX yedi ana işlem modu sunar:
+1. **Direct3D** 12 grafik işleme performansının hata ayıklaması ve analizi için GPU yakalamaları.
+2. **Oyun tarafından gerçekleştirilen** tüm CPU ve GPU çalışmalarının performansını ve iş parçacığını anlamak ve GPU bellek kullanımını izlemek için zamanlama yakalamaları.
+3. **İşlev Özeti, her** bir işlevin ne kadar süreyle çalıştırı ve her biri çağrılma sıklı hakkında bilgi toplar.
+4. **Çağrıgraf yakalamaları** tek bir işlevin yürütülmesini izler.
+5. **Bellek Ayırma yakalamaları,** oyun tarafından yapılan bellek ayırmaları hakkında içgörü sağlar.
+6. **Dosya IO yakalamaları,** başlığınıza ilişkin disk IO düzenleri ve paket düzenindeki verimleri tanımlamanıza yardımcı olur.
+7. **Sistem İzleyicisi,** oyun çalışırken gerçek zamanlı sayaç verilerini görüntüler.
 
-Windows üzerinde PıX 'e giriş hakkında ayrıntılı bir video, [ **burada** bulunabilir](https://www.youtube.com/playlist?list=PLeHvwXyqearWuPPxh6T03iwX-McPG5LkB)
+Windows'da PIX'Windows ayrıntılı bir video tanıtımı burada [ **mevcuttur**](https://www.youtube.com/playlist?list=PLeHvwXyqearWuPPxh6T03iwX-McPG5LkB)

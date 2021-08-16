@@ -1,28 +1,29 @@
 ---
 title: Karışık mod Python/C++ hata ayıklama sembolleri
-description: Visual Studio 'Nun tam karışık mod C++ ve Python hata ayıklama için sembolleri yükleme yeteneği sağlar.
+description: Visual Studio, tam karışık mod C++ ve Python hata ayıklama için sembolleri yükleme yeteneği sağlar.
 ms.date: 11/12/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d6820b9d94e8b4849c646c16075614aed17a4dd3
-ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
+ms.openlocfilehash: 7f32649f66c50f8fa485f2292a2db4237643326b1cc3ee487dcbe47e815a1282
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104884141"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425896"
 ---
 # <a name="install-debugging-symbols-for-python-interpreters"></a>Python yorumlayıcıları için hata ayıklama sembolleri yükler
 
-Tam bir hata ayıklama deneyimi sağlamak için, Visual Studio 'daki [karma mod Python hata ayıklayıcısı](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) , çok sayıda iç veri yapısını ayrıştırmak Için kullanılan Python yorumlayıcısı için hata ayıklama sembollerine ihtiyaç duyuyor. Örneğin, *python27.dll* için, karşılık gelen sembol dosyası *python27. pdb*; *python36.dll* için, sembol dosyası *python36. pdb*' dir. Yorumlayıcı 'nın her sürümü, çeşitli modüller için sembol dosyaları da sağlar.
+tam bir hata ayıklama deneyimi sağlamak için Visual Studio içindeki [karma mod Python hata ayıklayıcısı](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) , çok sayıda iç veri yapısını ayrıştırmak için kullanılan Python yorumlayıcısı için hata ayıklama sembollerine ihtiyaç duyuyor. Örneğin, *python27.dll* için, karşılık gelen sembol dosyası *python27. pdb*; *python36.dll* için, sembol dosyası *python36. pdb*' dir. Yorumlayıcı 'nın her sürümü, çeşitli modüller için sembol dosyaları da sağlar.
 
-Visual Studio 2017 ve üzeri ile Python 3 ve Anaconda 3 yorumlayıcıları ilgili sembolleri otomatik olarak yükler ve Visual Studio bu sembolleri otomatik olarak bulur. Visual Studio 2015 ve önceki sürümlerde veya diğer yorumlayıcıları kullanırken, sembolleri ayrı olarak indirmeniz ve sonra   >  **hata ayıklama** sembolleri sekmesindeki Araçlar **seçenekleri** iletişim kutusunda Visual Studio 'ya işaret etmeniz gerekir  >   . Bu adımlar aşağıdaki bölümlerde ayrıntılı olarak verilmiştir.
+Visual Studio 2017 ve sonrasında Python 3 ve anaconda 3 yorumlayıcıları ilgili sembolleri otomatik olarak yükler ve Visual Studio bu sembolleri otomatik olarak bulur. Visual Studio 2015 ve önceki sürümlerde veya diğer yorumlayıcıları kullanırken, sembolleri ayrı olarak indirmeniz ve sonra   >  **hata ayıklama** sembolleri sekmesindeki araçlar **seçenekleri** iletişim kutusunda Visual Studio işaret etmeniz gerekir  >   . Bu adımlar aşağıdaki bölümlerde ayrıntılı olarak verilmiştir.
 
-Visual Studio, genellikle karışık modda hata ayıklama oturumu başlatırken semboller gerektiğinde size sorabilir. Bu durumda, iki seçenekten oluşan bir iletişim kutusu görüntülenir:
+Visual Studio, genellikle karışık modda bir hata ayıklama oturumu başlatırken semboller gerektiğinde size sorabilir. Bu durumda, iki seçenekten oluşan bir iletişim kutusu görüntülenir:
 
 - **Sembol ayarlarını Aç iletişim kutusu** ,  **hata ayıklama**  >  **sembolleri** sekmesindeki Seçenekler iletişim kutusunu açar.
 - **Yorumlayıcı için sembolleri indir** bu mevcut belge sayfasını açar, bu durumda **Araçlar**  >  **Seçenekler** ' i seçin ve devam etmek için **hata ayıklama**  >  **sembolleri** sekmesine gidin.
@@ -35,18 +36,18 @@ Visual Studio, genellikle karışık modda hata ayıklama oturumu başlatırken 
 
     ![Hata ayıklama sembolleri dahil Python 3. x yükleyicisi](media/mixed-mode-debugging-symbols-installer35.png)
 
-    Sembol dosyaları (*. pdb*) daha sonra kök yükleme klasöründe bulunur (ayrı modüller için sembol dosyaları da *DLL* klasöründedir). Bu nedenle, Visual Studio bunları otomatik olarak bulur ve başka bir adım gerekmez.
+    Sembol dosyaları (*. pdb*) daha sonra kök yükleme klasöründe bulunur (ayrı modüller için sembol dosyaları da *DLL* klasöründedir). bu nedenle, Visual Studio onları otomatik olarak bulur ve başka bir adım gerekmez.
 
-- Python 3.4. x ve önceki sürümler: semboller, [resmi dağıtımlarından](#official-distributions) ve [Canopy](#enthought-canopy)'den indirilebilir *. zip* dosyaları olarak kullanılabilir. İndirdikten sonra, Python klasörü içindeki *semboller* klasörü gibi devam etmek için dosyaları yerel bir klasöre ayıklayın.
+- Python 3.4. x ve önceki sürümler: semboller, [resmi dağıtımlarından](#official-distributions) indirilebilir *.zip* dosyaları olarak kullanılabilir ve [Canopy olarak düşünülebilir](#enthought-canopy). İndirdikten sonra, Python klasörü içindeki *semboller* klasörü gibi devam etmek için dosyaları yerel bir klasöre ayıklayın.
 
     > [!Important]
     > Semboller, Python 'un küçük derlemeleri ve 32-bit ve 64 bit derlemeler arasında farklılık gösterir, bu nedenle sürümleri tam olarak eşleştirmek istersiniz. Kullanılan yorumlayıcı 'yı denetlemek için **Çözüm Gezgini** ' de projenizin altındaki **Python ortamları** *düğümünü* genişletin ve ortam adını aklınızda yapın. Daha sonra **Python ortamları** *penceresine* geçin ve yüklemenin konumunu aklınızda yapın. Ardından, bu konumda bir komut penceresi açın ve *python.exe* başlatın, bu sürüm tam sürümü ve 32 bit mi yoksa 64 bit mi olduğunu gösterir.
 
 - ActiveState Python gibi diğer üçüncü taraf Python dağıtımı için: Bu dağıtımın yazarlarıyla iletişim kurun ve size sembolleri sağlamak üzere isteyin. WinPython, bölümü için standart Python yorumlayıcı 'yı değişiklik yapmadan birleştirir, bu nedenle söz konusu sürüm numarası için resmi dağılıcınızdan sembolleri kullanın.
 
-## <a name="point-visual-studio-to-the-symbols"></a>Visual Studio 'Yu simgelere işaret edin
+## <a name="point-visual-studio-to-the-symbols"></a>simgelere Visual Studio nokta
 
-Sembolleri ayrı olarak indirdiyseniz, Visual Studio 'nun bunlardan haberdar olması için aşağıdaki adımları izleyin. Sembolleri Python 3,5 veya sonraki bir yükleyici aracılığıyla yüklediyseniz, Visual Studio bunları otomatik olarak bulur.
+sembolleri ayrı olarak indirdiyseniz, Visual Studio farkında olmak için aşağıdaki adımları izleyin. sembolleri Python 3,5 veya sonraki bir yükleyici aracılığıyla yüklediyseniz Visual Studio onları otomatik olarak bulur.
 
 1. **Araç**  >  **seçenekleri** menüsünü seçin ve **hata ayıklama**  >  **sembolleri**' ne gidin.
 
@@ -54,10 +55,10 @@ Sembolleri ayrı olarak indirdiyseniz, Visual Studio 'nun bunlardan haberdar olm
 
     ![Karışık mod hata ayıklayıcısı sembolleri seçenekleri](media/mixed-mode-debugging-symbols.png)
 
-1. Bir hata ayıklama oturumu sırasında, Visual Studio, Python yorumlayıcı için bir kaynak dosyasının konumunu da isteyebilir. Kaynak dosyaları (örneğin, [Python.org/downloads/](https://www.python.org/downloads/)adresinden) indirdiyseniz kurs da bunlara işaret edebilir.
+1. bir hata ayıklama oturumu sırasında, Visual Studio Python yorumlayıcı için bir kaynak dosyasının konumunu da isteyebilir. Kaynak dosyaları (örneğin, [Python.org/downloads/](https://www.python.org/downloads/)adresinden) indirdiyseniz kurs da bunlara işaret edebilir.
 
 > [!Note]
-> İletişim kutusunda gösterilen sembol önbelleğe alma özellikleri, çevrimiçi bir kaynaktan alınan bir sembol yerel önbelleği oluşturmak için kullanılır. Semboller zaten yerel olarak mevcut olduğundan, bu özellikler Python yorumlayıcı sembollerinde gerekli değildir. Herhangi bir durumda, Ayrıntılar için [Visual Studio hata ayıklayıcısında sembolleri ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) bölümüne bakın.
+> İletişim kutusunda gösterilen sembol önbelleğe alma özellikleri, çevrimiçi bir kaynaktan alınan bir sembol yerel önbelleği oluşturmak için kullanılır. Semboller zaten yerel olarak mevcut olduğundan, bu özellikler Python yorumlayıcı sembollerinde gerekli değildir. herhangi bir durumda, ayrıntılar için [Visual Studio hata ayıklayıcısında sembolleri ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) bölümüne bakın.
 
 ## <a name="official-distributions"></a>Resmi dağıtımlar
 

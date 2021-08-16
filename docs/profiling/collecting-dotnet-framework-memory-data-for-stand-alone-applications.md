@@ -8,17 +8,18 @@ ms.assetid: 7bce69e2-407c-4342-8516-641586968928
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 328a75b6502cd0e825b6d954a88ef97c8ef48ff1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9141950953e385ad39aa94ca0fdcd61b8f677459671e8f58f85f7e9784217bbe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960305"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368987"
 ---
-# <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak .NET Framework bellek verileri toplama
+# <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>profil oluşturucu komut satırını kullanarak .NET Framework bellek verileri toplama
 
 Bu bölümde, komut satırından örnekleme yöntemi kullanılarak .NET istemcisi (tek başına) uygulaması için bellek ayırma ve nesne yaşam süresi verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
 
@@ -26,9 +27,9 @@ Bu bölümde, komut satırından örnekleme yöntemi kullanılarak .NET istemcis
 
 |Görev|İlgili içerik|
 |----------|---------------------|
-|**Uygulama başlatma ve .NET belleği profili oluşturma**|-   [Nasıl yapılır: bellek verileri toplamak için Profil Oluşturucu ile .NET Framework uygulaması başlatma](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|
-|**Profil oluşturucuyu bir .NET uygulamasına iliştirme**|-   [Nasıl yapılır: bellek verileri toplamak için profil oluşturucuyu bir .NET Framework uygulamasına Iliştirme](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)|
-|**.NET bellek verileri toplamak için bir uygulamayı işaretleme**|-   [Nasıl yapılır: tek başına .NET Framework bileşeni izleme ve Profil Oluşturucu ile bellek verileri toplama](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)|
+|**Uygulama başlatma ve .NET belleği profili oluşturma**|-   [nasıl yapılır: bellek verileri toplamak için profil oluşturucu ile .NET Framework uygulaması başlatma](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|
+|**Profil oluşturucuyu bir .NET uygulamasına iliştirme**|-   [nasıl yapılır: bellek verileri toplamak için profil oluşturucuyu bir .NET Framework uygulamasına iliştirme](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)|
+|**.NET bellek verileri toplamak için bir uygulamayı işaretleme**|-   [nasıl yapılır: tek başına .NET Framework bileşeni izleme ve profil oluşturucu ile bellek verileri toplama](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
@@ -45,7 +46,7 @@ Bu bölümde, komut satırından örnekleme yöntemi kullanılarak .NET istemcis
 
 |Görev|İlgili içerik|
 |----------|---------------------|
-|**Profil ASP.NET uygulamaları**|-   [Bellek verileri toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
+|**ASP.NET uygulamalar profili**|-   [Bellek verileri toplama](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|
 |**Profil hizmetleri**|-   [.NET bellek verileri toplama](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|
 
 ### <a name="analyze-net-memory-data-views-and-reports"></a>.NET bellek verileri görünümlerini ve raporlarını çözümleyin

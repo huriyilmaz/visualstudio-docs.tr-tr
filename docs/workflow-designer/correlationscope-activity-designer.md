@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-CorrelationScope etkinlik Tasarımcısı
-description: CorrelationScope etkinliği oluşturmak ve yapılandırmak için CorrelationScope etkinlik Tasarımcısı 'nı nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı - CorrelationScope Etkinlik Tasarımcısı
+description: CorrelationScope etkinlik tasarımcısını kullanarak correlationScope etkinliği oluşturma ve yapılandırma hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,41 +10,42 @@ ms.assetid: 75f20664-9042-464d-8e2b-148d365a2286
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: e9edd755465cf812c1572c62f1c6335fc5295281
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b958aa6568461ac9e753bfa8a0e304b3cabaf4e3687e648a9fc9853d113fe51a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955533"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121383917"
 ---
 # <a name="correlationscope-activity-designer"></a>CorrelationScope Etkinlik Tasarımcısı
 
-**CorrelationScope** etkinlik Tasarımcısı, <xref:System.ServiceModel.Activities.CorrelationScope> bir nesne kullanarak alt mesajlaşma etkinliklerinin örtük yönetimi sağlayan bir etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.ServiceModel.Activities.CorrelationHandle> .
+**CorrelationScope** etkinlik tasarımcısı, bir nesnesi kullanarak alt mesajlaşma etkinliklerinin örtülü yönetimini sağlayan bir etkinlik <xref:System.ServiceModel.Activities.CorrelationScope> oluşturmak ve yapılandırmak için <xref:System.ServiceModel.Activities.CorrelationHandle> kullanılır.
 
 ## <a name="the-correlationscope-activity"></a>CorrelationScope etkinliği
 
-<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>Özelliği, <xref:System.ServiceModel.Activities.CorrelationHandle> alt ileti etkinliklerini yönetmek için kullanılan öğesini belirtir. <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.Receive> İçinde bulunan ve etkinlikleri, <xref:System.ServiceModel.Activities.CorrelationScope.Body%2A> <xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A> bağıntı gerçekleştirmek için kapsayan etkinliğin özelliğini kullanmak üzere yapılandırılmıştır <xref:System.ServiceModel.Activities.CorrelationScope> .
+<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>özelliği, alt mesajlaşma <xref:System.ServiceModel.Activities.CorrelationHandle> etkinliklerini yönetmek için kullanılanı belirtir. içinde <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.Receive> yer alan ve <xref:System.ServiceModel.Activities.CorrelationScope.Body%2A> etkinlikleri, bağıntı gerçekleştirmek için <xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A> içeren etkinliğin <xref:System.ServiceModel.Activities.CorrelationScope> özelliğini kullanmak üzere yapılandırılır.
 
-### <a name="use-the-correlationscope-activity-designer"></a>CorrelationScope etkinlik tasarımcısını kullanma
+### <a name="use-the-correlationscope-activity-designer"></a>CorrelationScope Etkinlik Tasarımcısını Kullanma
 
-**CorrelationScope** etkinlik tasarımcısı, iş akışı Tasarımcısı sol tarafındaki **araç kutusu** sekmesine tıklanarak erişilen **araç kutusunun** **mesajlaşma** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
+**CorrelationScope** etkinlik tasarımcısı, araç kutusunun sol tarafındaki Araç Kutusu sekmesine tıklayarak  erişilen Mesajlaşma kategorisinde İş Akışı Tasarımcısı.  Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
-**CorrelationScope** etkinlik Tasarımcısı **araç kutusundan** sürüklenip iş akışı Tasarımcısı yüzeyine bırakılabilir. Bu <xref:System.ServiceModel.Activities.CorrelationScope> , varsayılan olarak bir CorrelationScope **DisplayName** 'i olan bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **CorrelationScope** etkinlik tasarımcısının üst bilgisinde veya **Özellikler** penceresinin **DisplayName** kutusunda düzenlenebilir.
+**CorrelationScope** etkinlik tasarımcısı Araç Kutusundan **sürüklenip** İş Akışı Tasarımcısı bırakılır. Bu, varsayılan <xref:System.ServiceModel.Activities.CorrelationScope> CorrelationScope **DisplayName değerine sahip** bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **CorrelationScope** etkinlik tasarımcısının üst bilgisinde veya Özellikler penceresinin **DisplayName** kutusunda **düzenlenebilir.**
 
-<xref:System.ServiceModel.Activities.CorrelationHandle>Alt mesajlaşma etkinlikleri tarafından kullanılan öğesini belirtmek için, **Özellikler** penceresinde **CorrelatesWith** alanının yanındaki üç nokta düğmesini seçerek **ifade Düzenleyicisi** iletişim kutusunu görüntüleyin. Bu özellik, etkinlik Tasarımcısı yüzeyi üzerinde de ayarlanabilir.
+Alt mesajlaşma etkinlikleri tarafından kullanılan öğesini belirtmek <xref:System.ServiceModel.Activities.CorrelationHandle> için Özellikler **penceresindeki CorrelatesWith**  alanı yanındaki üç nokta düğmesini seçerek İfade Düzenleyicisi **iletişim** kutusunu açın. Bu özellik etkinlik tasarımcısı yüzeyinde de ayarlandırabilirsiniz.
 
-Bağıntı dahilinde olan etkinlikler, kendi tasarımcıların, **CorrelationScope** Designer içindeki **gövde** kutusu içine bırakılarak belirlenir.
+Bağıntı kapsamındaki etkinlikler, **correlationScope** tasarımcısı içindeki **Gövde** kutusuna tasarımcıları bırakarak belirtilir.
 
 ### <a name="the-correlationscope-properties"></a>CorrelationScope özellikleri
 
-Aşağıdaki tabloda <xref:System.ServiceModel.Activities.CorrelationScope> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, **Özellikler** penceresinde veya iş akışı Tasarımcısı yüzeyinde ve genellikle her ikisinde düzenlenebilir.
+Aşağıdaki tablo, <xref:System.ServiceModel.Activities.CorrelationScope> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler Özellikler penceresinde veya **İş Akışı Tasarımcısı** hem de her ikisinde de düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adı <xref:System.ServiceModel.Activities.InitializeCorrelation> .|
-|<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|Yanlış|<xref:System.ServiceModel.Activities.CorrelationHandle>Alt ileti etkinliklerini yönetmek için kullanılan öğesini belirtir. Bu özelliği ayarlanmamışsa, <xref:System.ServiceModel.Activities.CorrelationScope> <xref:System.ServiceModel.Activities.CorrelationHandle> otomatik olarak örtülü olarak oluşturulur.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay <xref:System.ServiceModel.Activities.InitializeCorrelation> adı.|
+|<xref:System.ServiceModel.Activities.CorrelationScope.CorrelatesWith%2A>|Yanlış|Alt mesajlaşma <xref:System.ServiceModel.Activities.CorrelationHandle> etkinliklerini yönetmek için kullanılanı belirtir. Bu özelliği ayarlasanız otomatik <xref:System.ServiceModel.Activities.CorrelationScope> olarak bir örtülü <xref:System.ServiceModel.Activities.CorrelationHandle> oluşturur.|
 |<xref:System.ServiceModel.Activities.CorrelationScope.Body%2A>|Yanlış|Bağıntı kapsamındaki etkinlikleri belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

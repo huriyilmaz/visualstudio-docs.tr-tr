@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: kitaplıkta sembolleri belirleme | Microsoft Docs'
-description: Sembol kitaplığından Visual Studio nesne Yöneticisi 'ne gezinti bilgilerini geçiren yöntemler uygulayarak kitaplıktaki sembolleri nasıl tanımlayacağınızı öğrenin.
+title: 'Nasıl: Kitaplık Kitaplığında Sembolleri | Microsoft Docs'
+description: Sembol kitaplığından nesne yöneticisine gezinti bilgilerini geçiren yöntemler kullanarak bir kitaplıkta sembolleri Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,19 +11,20 @@ ms.assetid: 8fb0de61-71e7-42d1-8b41-2ad915474384
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6c897801b98857f4a310323d4e00583c98245d5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d2b4d306203d90e7891aea4cfe97a034caa39dfbd279e8b93d65c2e8b39b5a62
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078883"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376202"
 ---
-# <a name="how-to-identify-symbols-in-a-library"></a>Nasıl yapılır: kitaplıkta sembolleri belirleme
-Sembol tarama araçları, simgelerin hiyerarşik görünümlerini görüntüler. Semboller ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve diğer dil öğelerini temsil eder.
+# <a name="how-to-identify-symbols-in-a-library"></a>Nasıllı: Kitaplıkta sembolleri tanımlama
+Sembol tarama araçları sembollerin hiyerarşik görünümlerini görüntüler. Semboller ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve diğer dil öğelerini temsil eder.
 
- Hiyerarşideki her bir sembol, aşağıdaki arabirimler aracılığıyla sembol kitaplığı tarafından nesne yöneticisine geçirilen gezinti bilgileriyle tanımlanabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] :
+ Hiyerarşide her simge, sembol kitaplığı tarafından nesne yöneticisine aşağıdaki arabirimler aracılığıyla [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geçirilen gezinti bilgileriyle belirlenebilirsiniz:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo>
 
@@ -31,11 +32,11 @@ Sembol tarama araçları, simgelerin hiyerarşik görünümlerini görüntüler.
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes>.
 
- Hiyerarşide sembolün konumu bir sembolü ayırır. Sembol tarama araçlarının belirli bir simgeye gitmesini sağlar. Simgenin benzersiz ve tam yolu, konumu belirler. Yoldaki her öğe bir düğümdür. Yol, en üst düzey düğümle başlar ve belirli bir simgeyle biter. Örneğin, M1 yöntemi C1 sınıfının bir üyesi ise ve C1 N1 ad alanında ise, M1 yönteminin tam yolu N1 ' dir. =. M1. Bu yol üç düğüm içerir: N1, C1 ve M1.
+ Hiyerarşide sembolün konumu bir simgeyi ayırt eder. Sembol tarama araçlarının belirli bir sembole gezinmesi için izin verir. Simgenin benzersiz, tam yolu konumu belirler. Yoldeki her öğe bir düğüm olur. Yol üst düzey düğümle başlar ve belirli bir simgeyle biter. Örneğin, M1 yöntemi C1 sınıfının bir üyesi ise ve C1 N1 ad alanı ise, M1 yönteminin tam yolu N1'tir. C1. M1. Bu yol üç düğüm içerir: N1, C1 ve M1.
 
- Gezinti bilgileri, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesne yöneticisinin hiyerarşide sembolleri bulmasını, seçmesini ve seçili halde tutmayı sağlar. Bir gözatma aracından diğerine gezinmeye izin verir. Bir projedeki simgelere gözatabilmeniz için **nesne tarayıcısı** kullanırken, yöntemi bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] çağrı grafiğinde göstermek için bir yönteme sağ tıklayıp **çağrı tarayıcısı** aracını başlatabilirsiniz.
+ Gezinti bilgileri, nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisinin hiyerarşide sembolleri bulmasını, seçmesini ve seçmesini sağlar. Bir gözatma aracından diğerine gezinmeye olanak sağlar. Bir proje **içinde sembollere** göz atmak için Object Browser'ı kullanırken, bir yönteme sağ tıklayabilirsiniz ve Çağrı Tarayıcısı aracını başlatarak [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] yöntemi bir çağrı grafiğinde  görüntüleyebilirsiniz.
 
- Sembol konumunu iki form tanımlıyor. Kurallı form, simgenin tam yolunu temel alır. Hiyerarşide sembolün benzersiz bir konumunu temsil eder. Sembol tarama aracından bağımsızdır. Kurallı form bilgilerini elde etmek için, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesne Yöneticisi yöntemini çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> . Sunum Formu, belirli bir sembol tarama aracı içindeki simgenin konumunu açıklar. Simgenin konumu, hiyerarşideki diğer sembollerin konumuna göre değişir. Verilen sembolün çeşitli sunum yolları olabilir, ancak yalnızca bir kurallı yol olabilir. Örneğin, C1 sınıfı C2 sınıfından devralınmışsa ve her iki sınıf de N1 ad alanında yer alıyorsa, **nesne tarayıcısı** aşağıdaki hiyerarşik ağacı görüntüler:
+ İki form sembol konumunu açıklar. Kurallı form, sembolün tam yolunu temel alan bir formdur. Hiyerarşide sembolün benzersiz konumunu temsil eder. Sembol tarama aracında bağımsızdır. Kurallı form bilgilerini almak için nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisi yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> arar. Sunu formu, sembolün belirli bir sembol tarama aracı içindeki konumunu açıklar. Sembolün konumu, hiyerarşide diğer sembollerin konumuyla görelidir. Verilen bir simgenin birden fazla sunu yolu olabilir, ancak yalnızca bir kurallı yol vardır. Örneğin, C1 sınıfı C2 sınıfından devralınır ve her iki sınıf da N1 ad alanına sahipse **Object Browser** aşağıdaki hiyerarşik ağacı görüntüler:
 
 ```
 N1
@@ -48,15 +49,15 @@ N1
 
 ```
 
- Bu örnekte, C2 sınıfının kurallı yolu N1 + C2 ' dir. C2 sunum yolu C1 ve "temeller ve arabirimler" düğümleri içerir: N1 + C1 + "temeller ve arabirimler" + C2.
+ Bu örnekte C2 sınıfının kurallı yolu N1 + C2'dir. C2'nin sunu yolu C1 ve "Temeller ve Arabirimler" düğümlerini içerir: N1 + C1 + "Temeller ve Arabirimler" + C2.
 
- Sunum formu bilgilerini almak için, nesne Yöneticisi <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> yöntemini çağırır.
+ Sunu formu bilgilerini almak için nesne yöneticisi yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> çağırtır.
 
-## <a name="to-obtain-canonical-and-presentation-forms-information"></a>Kurallı ve sunum formları bilgilerini elde etmek için
+## <a name="to-obtain-canonical-and-presentation-forms-information"></a>Kurallı ve sunum formları bilgilerini almak için
 
-1. Yöntemini uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> .
+1. yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> uygulama.
 
-     Nesne Yöneticisi, simgenin kurallı yolunda yer alan düğümlerin listesini almak için bu yöntemi çağırır.
+     Nesne yöneticisi, sembolün kurallı yolunda bulunan düğümlerin listesini almak için bu yöntemi arar.
 
     ```vb
     Public Function EnumCanonicalNodes(ByRef ppEnum As Microsoft.VisualStudio.Shell.Interop.IVsEnumNavInfoNodes) As Integer
@@ -77,11 +78,11 @@ N1
 
     ```
 
-2. Yöntemini uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> .
+2. yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumPresentationNodes%2A> uygulama.
 
-     Nesne Yöneticisi, simgenin sunum yolunda yer alan düğümlerin listesini almak için bu yöntemi çağırır.
+     Nesne yöneticisi, sembolün sunu yolunda yer alan düğümlerin listesini almak için bu yöntemi arar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Destek sembolü-tarama araçları](../../extensibility/internals/supporting-symbol-browsing-tools.md)
-- [Nasıl yapılır: bir kitaplığı nesne yöneticisiyle kaydetme](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
-- [Nasıl yapılır: kitaplık tarafından nesne yöneticisine sunulan simgelerin listesini kullanıma sunma](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+- [Sembol tarama araçlarını destekleme](../../extensibility/internals/supporting-symbol-browsing-tools.md)
+- [Nasıl kullanılır: Nesne yöneticisine kitaplık kaydetme](../../extensibility/internals/how-to-register-a-library-with-the-object-manager.md)
+- [Nasıl kullanılır: Kitaplık tarafından sağlanan sembollerin listelerini nesne yöneticisine açığa çıkarma](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

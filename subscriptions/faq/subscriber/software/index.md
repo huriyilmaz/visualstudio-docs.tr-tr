@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: Section2
-ms.openlocfilehash: 5d5d6c94c03f6ee2146548f43252bf2485cbbf92
-ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
+ms.openlocfilehash: c00c3ad39730099dec6851212ac12400a6883e1e9ed072b7a2d240313de9d8d4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99105370"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381285"
 ---
 # <a name="downloading-and-activating-software"></a>Yazılımı indirme ve etkinleştirme
 

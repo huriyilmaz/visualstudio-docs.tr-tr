@@ -11,17 +11,18 @@ ms.assetid: e3d11aab-de0d-4109-b5dc-11e07e64382d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 71867a6a2cbaaf87b5b0a66eab5f53826fe47fdf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c80fb176dd0545b0f0e2da46864d25ada995ea8cc63ac71fa3576e12d37e9b13
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096440"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360878"
 ---
 # <a name="debug_address_union"></a>DEBUG_ADDRESS_UNION
 Farklı adres türlerini açıklar.

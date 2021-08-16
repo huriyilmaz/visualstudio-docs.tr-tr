@@ -1,6 +1,6 @@
 ---
-title: DA0001-birleştirmeleri için StringBuilder kullan | Microsoft Docs
-description: System. String. Concat çağrısı, profil oluşturma verilerinin önemli bir orandır. Birden çok kesimden dizeler oluşturmak için System. Text. StringBuilder sınıfını kullanmayı düşünün.
+title: DA0001 - DizeBuilder'ı kullanarak | Microsoft Docs
+description: System.String.Concat çağrısı, profil oluşturma verilerinin önemli bir oranıdır. Birden çok segmentten dizeler oluşturmak için System.Text.StringBuilder sınıfını kullanmayı göz önünde bulundurabilirsiniz.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,35 +12,36 @@ ms.assetid: a7cc7613-ad5f-48c8-bd2b-56372cc12dfc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 11ec65fc4131b4ad4d33fa25c616ecacc6a2fc79
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: a2c142579e8006064767a4a95a3c8abc93b8860fddfc583d262a5d6547459a99
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102470033"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368831"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: Birleştirmeler için StringBuilder kullanma
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0001|
-|Kategori|.NET Framework kullanımı|
+|Kural Kimliği|DA0001|
+|Kategori|.NET Framework Kullanım|
 |Profil oluşturma yöntemleri|Örnekleme<br /><br /> İzleme|
-|İleti|Dize birleştirmeleri için StringBuilder kullanmayı düşünün|
+|İleti|Dize concatenations için StringBuilder kullanmayı göz önünde bulundurarak|
 |Mesaj türü|Uyarı|
 
 ## <a name="cause"></a>Nedeni
- System. String. Concat çağrısı, profil oluşturma verilerinin önemli bir orandır. <xref:System.Text.StringBuilder>Birden çok kesimden dizeler oluşturmak için sınıfını kullanmayı düşünün.
+ System.String.Concat çağrısı, profil oluşturma verilerinin önemli bir oranıdır. Birden çok <xref:System.Text.StringBuilder> segmentten dizeler oluşturmak için sınıfını kullanmayı göz önünde bulundurabilirsiniz.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Bir <xref:System.String> nesne sabittir. Bu nedenle, dizedeki tüm değişiklikler yeni bir dize nesnesi ve özgün bir çöp toplama oluşturur. Bu davranış, String. Concat öğesini açık bir şekilde çağırıp veya + ya da + = gibi dize birleştirme işleçlerini kullanın. Bu yöntemler sık sık çağrılırsa (örneğin, sıkı bir döngüde bir dizeye karakterler eklendiğinde) program performansı azalabilir.
+ <xref:System.String>Bir nesne sabittir. Bu nedenle, dizede yapılan tüm değişiklikler yeni bir dize nesnesi ve özgün dizenin çöp toplaması oluşturur. String.Concat'ı açıkça çağırmanız veya + veya +=.gibi dize concatenation işleçlerini kullanmanız da aynı davranıştır. Bu yöntemler sık çağrılsa(örneğin, dizeye sıkı bir döngüde karakterler ekleniyorsa) program performansı düşebilir.
 
- StringBuilder sınıfı kesilebilir bir nesnedir ve System. String 'ten farklı olarak, bu sınıfın bir örneğini değiştiren StringBuilder üzerindeki yöntemlerin çoğu aynı örneğe bir başvuru döndürür. Bir StringBuilder örneğine karakter ekleyebilir veya metin ekleyebilir ve yeni bir örnek ayırma ve özgün örneği silme gereksinimi olmadan örnekteki karakterleri kaldırabilir veya değiştirebilirsiniz.
+ StringBuilder sınıfı tarifeli bir nesnedir ve System.String'den farklı olarak, bu sınıfın bir örneğini değiştiren StringBuilder yöntemlerinin çoğu aynı örnek için bir başvuru döndürür. Bir StringBuilder örneğine karakter ekleme veya metin ekleme ve yeni bir örnek ekleme ve özgün örneği silme gerekmeden örnekteki karakterleri kaldırabilir veya değiştirebilirsiniz.
 
-## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Örnekleme profili verilerinin [Işlev ayrıntıları görünümüne](../profiling/function-details-view.md) gitmek için **hata listesi** penceresindeki iletiye çift tıklayın. Dize bitişinin en sık kullanımını yapan programın bölümlerini bulun. Sık kullanılan dize birleştirme işlemleri dahil olmak üzere karmaşık dize düzenlemeleri için StringBuilder sınıfını kullanın.
+## <a name="how-to-investigate-a-warning"></a>Uyarıyı araştırma
+ Örnekleme profili verilerine ilişkin İşlev **Ayrıntıları** Görünümüne gitmek için Hata Listesi [penceresindeki](../profiling/function-details-view.md) iletiye çift tıklayın. Programın dize birlemleme en sık kullanılan bölümlerini bulun. Sık sık dize concatenation işlemleri de dahil olmak üzere karmaşık dize işlemeleri için StringBuilder sınıfını kullanın.
 
- Dizeler ile çalışma hakkında daha fazla bilgi için, Microsoft desenleri ve uygulamalar kitaplığındaki [yönetilen kod performansını artırma başlıklı Bölüm 5](/previous-versions/msp-n-p/ff647790(v=pandp.10)) ' ın [dize işlemleri](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations) bölümü.
+ Dizelerle çalışma hakkında daha fazla [](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations) bilgi için Microsoft Patterns and Practices kitaplığındaki [Bölüm 5 - Yönetilen](/previous-versions/msp-n-p/ff647790(v=pandp.10)) Kod Performansını Geliştirme bölümünün Dize İşlemleri bölümü.

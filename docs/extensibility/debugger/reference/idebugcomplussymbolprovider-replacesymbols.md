@@ -10,17 +10,18 @@ ms.assetid: 82fbc8db-c4b1-432f-bec9-1a9dc09570be
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 164f5a780ae2c4306d4e8f424ac2bfa82408a6f7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b9ac9c1101d162456fa66773076eda49172cec7263a5ff28e3223b95efb04566
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095426"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390261"
 ---
 # <a name="idebugcomplussymbolproviderreplacesymbols"></a>IDebugComPlusSymbolProvider::ReplaceSymbols
 Geçerli hata ayıklama sembollerini, belirtilen veri akışındaki verilerle değiştirir.

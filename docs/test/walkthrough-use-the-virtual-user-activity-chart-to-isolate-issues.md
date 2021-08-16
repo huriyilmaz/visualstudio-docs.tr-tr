@@ -11,12 +11,13 @@ ms.assetid: d1c10fb9-cfeb-4e7f-9991-2d1e1103699e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: afe692a8333ff93f764a308bae2c1366e353b4a8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 393c06f5526a0167661d6a181b81fee681a75969cb64ff3e7339f0ec2524234c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967936"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384580"
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>İzlenecek yol: sorunları yalıtmak için Sanal Kullanıcı etkinliği grafiğini kullanma
 
@@ -95,7 +96,7 @@ Yük testinizi çalıştırdıktan ve Sanal Kullanıcı etkinliği verilerini to
 
     - **Süre**
 
-    - **Aracısı**
+    - **Aracı**
 
     - **Test günlüğü**
 

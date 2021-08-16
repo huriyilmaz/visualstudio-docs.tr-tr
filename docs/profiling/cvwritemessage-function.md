@@ -26,14 +26,15 @@ ms.assetid: e20ae7be-bfa7-437a-b8c1-fa0f1baa7f83
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e6b3724f3633ce03474ee9915b8d1a4b43a3d46
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 59a5343ca9221990ce7661b843dfb221c602c32126e9d81940213b640de2c6fa
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948133"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121396740"
 ---
 # <a name="cvwritemessage-function"></a>CvWriteMessage işlevi
 Eşzamanlılık görselleştiricisi izleme dosyasına bir ileti yazar.

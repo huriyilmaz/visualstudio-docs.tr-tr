@@ -6,12 +6,12 @@ manager: shve
 ms.date: 07/22/2021
 ms.topic: how-to
 description: yöneticilerin Azure Active Directory gruplarını kullanarak nasıl atayabileceği ve aboneliklerine nasıl abone olabileceğini öğrenin
-ms.openlocfilehash: de485170185049270d4819a418ea7d027b1a9d4b
-ms.sourcegitcommit: 2694ab246eb857a1c607738a67198c46f826f106
+ms.openlocfilehash: b4044d52d87126307e4ca34c50c80c45aa2165580a1f43b18f8fdb3a5bf2c7b5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "114995415"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121364578"
 ---
 # <a name="how-to-automate-your-visual-studio-subscriptions-using-azure-active-directory-groups"></a>Azure Active Directory grupları kullanarak Visual Studio aboneliklerinizi otomatikleştirme
 

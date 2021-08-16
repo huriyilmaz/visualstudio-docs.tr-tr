@@ -12,18 +12,19 @@ ms.assetid: 2ae38b2a-29d2-461c-a67d-29dad274bf45
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f27f2fb082c478aecff3d64f418ed0e864e15df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c51e4ba5e75df5107ed7edd0324e581e0fc7cb6165a35eb0cf5fbb6f87f17bd2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964985"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372016"
 ---
 # <a name="toolbox-data-tab"></a>Araç kutusu, veri sekmesi
 
-Formlara ve bileşenlere ekleyebileceğiniz veri nesnelerini görüntüler. **Araç kutusunun** **veri** sekmesi, ilişkili tasarlayıcı içeren bir proje oluşturduğunuzda görüntülenir. **Araç kutusu** , Visual Studio tümleşik geliştirme ortamında varsayılan olarak görünür; **araç kutusunu** görüntülemeniz gerekiyorsa, **Görünüm** menüsünden **araç kutusu** ' nu seçin.
+Formlara ve bileşenlere ekleyebileceğiniz veri nesnelerini görüntüler. **Araç kutusunun** **veri** sekmesi, ilişkili tasarlayıcı içeren bir proje oluşturduğunuzda görüntülenir. **araç kutusu** , Visual Studio tümleşik geliştirme ortamında varsayılan olarak görüntülenir; **araç kutusunu** görüntülemeniz gerekiyorsa, **Görünüm** menüsünden **araç kutusu** ' nu seçin.
 
 > [!TIP]
 > Veri kaynağı Yapılandırma Sihirbazı 'Nı çalıştırmak, çoğu veri öğesini otomatik olarak oluşturur ve yapılandırır. Daha fazla bilgi için bkz. [Yeni veri kaynakları ekleme](../../data-tools/add-new-data-sources.md).
@@ -41,7 +42,7 @@ Bir bileşen için doğrudan .NET başvuru sayfasına gitmek için, **araç kutu
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da verilere erişme](../../data-tools/accessing-data-in-visual-studio.md)
+- [Visual Studio verilere erişme](../../data-tools/accessing-data-in-visual-studio.md)
 - [.NET için Visual Studio veri araçları](../../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [Visual Studio'daki veri kümesi araçları](../../data-tools/dataset-tools-in-visual-studio.md)
 - [Visual Studio'da verilere denetimler bağlama](../../data-tools/bind-controls-to-data-in-visual-studio.md)

@@ -11,14 +11,15 @@ ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 633e8909febd758df455a9375f735a93e3407c77
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 5d0602bd3b16b519b8fa6d0a6d42d0f882a3796a3f381007c835738846952504
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902533"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400835"
 ---
 # <a name="sccinitialize-function"></a>SccInitialize İşlevi
 Bu işlev, kaynak denetimi eklentisini başlatır ve tümleşik geliştirme ortamı (IDE) için özellik ve sınırlar sağlar.
@@ -88,7 +89,7 @@ dışı Diğer açıklamalar için izin verilen en fazla uzunluğu döndürür.
 
  `lpCallerName`Ve `lpSccName` PARAMETRELERI, IDE ve kaynak denetimi eklentisini Exchange adları olarak etkinleştirir. Bu adlar yalnızca birden çok örnek arasında ayrım yapmak için veya menüler veya iletişim kutularında görünebilirler.
 
- `lpAuxPathLabel`Parametresi, çözüm dosyasında depolanan ve [SccOpenProject](../extensibility/sccopenproject-function.md)çağrısı içindeki kaynak denetimi eklentisine geçirilen yardımcı proje yolunu tanımlamak için açıklama olarak kullanılan bir dizedir. [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] "SourceSafe projesi:" dizesini kullanır. diğer kaynak denetimi eklentileri bu belirli dizeyi kullanmaktan kaçınmalıdır.
+ `lpAuxPathLabel`Parametresi, çözüm dosyasında depolanan ve [SccOpenProject](../extensibility/sccopenproject-function.md)çağrısı içindeki kaynak denetimi eklentisine geçirilen yardımcı proje yolunu tanımlamak için açıklama olarak kullanılan bir dizedir. [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)]"SourceSafe Project:" dizesini kullanır. diğer kaynak denetimi eklentileri bu belirli dizeyi kullanmaktan kaçınmalıdır.
 
  `lpSccCaps`Parametresi, eklentinin yeteneklerini belirten bitflags depolamak için kaynak denetimi eklentisine sahip bir yer sağlar. (Capability bitflags tam listesi için bkz. [yetenek bayrakları](../extensibility/capability-flags.md)). Örneğin, eklenti çağrı tarafından sağlanmış bir geri çağırma işlevine sonuçları yazacaksa, eklenti, yetenek bit SCC_CAP_TEXTOUT ayarlar. Bu, IDE 'nin sürüm denetimi sonuçları için bir pencere oluşturmasını işaret edecektir.
 

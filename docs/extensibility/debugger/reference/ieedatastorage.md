@@ -11,14 +11,15 @@ ms.assetid: 704e932d-2325-410e-89c4-ce88c6ec19da
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f24921ec169c458a1b0b5ab1638c1379efd09da1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a975190aebbb26ac77614e1fc0e0d7a358bda3440da0b5f8bcdb7562390902e2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083368"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415695"
 ---
 # <a name="ieedatastorage"></a>IEEDataStorage
 Bu arabirim bir bayt dizisini temsil eder.
@@ -29,31 +30,31 @@ Bu arabirim bir bayt dizisini temsil eder.
 IEEDataStorage : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- İfade değerlendirici (EE), bu arabirimi bir bayt dizisini temsil etmek için uygular (verileri [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi aracılığıyla almak ve değiştirmek için tür Görselleştiriciler tarafından kullanılır). EE genellikle bu arabirimi, dış tür görselleştiricilerini desteklemek için uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ İfade değerlendiricisi (EE), bir bayt dizisini temsil etmek için bu arabirimi [(IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi aracılığıyla verileri almak ve değiştirmek için tür görselleştiriciler tarafından kullanılır) uygulamaya alır. Bu EE genellikle dış tür görselleştiricileri desteklemek için bu arabirimi uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- `IPropertyProxyEESide`Arabirimindeki Yöntemler bu arabirimi döndürür. [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimini almak Için [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) çağrısı yapın. [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimini almak Için bir [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) 'i çağırın.
+ Arabirimde yöntemlerin `IPropertyProxyEESide` hepsi bu arabirimi geri döner. [IPropertyProxyESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimini almak için [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) çağrısı. [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimini almak için [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) çağrısı.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- `IEEDataStorage`Arabirimi aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Arabirimi `IEEDataStorage` aşağıdaki yöntemleri kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Veri Al](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)|Belirtilen arabellek için belirtilen sayıda veri baytı alır.|
-|[GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)|Kullanılabilir veri baytlarının sayısını alır.|
+|[Veri Al](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)|Sağlanan bir arabelleğe belirtilen sayıda veri baytı kaldırır.|
+|[GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)|Kullanılabilir veri bayt sayısını alan.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, belirli bir nesne tarafından tutulan verilere erişmek için bir tür görselleştiricisi tarafından kullanılır. Veriler bir bayt dizisi olarak değerlendirilir ve bu, tür görselleştiricinin onu kullanıcıya sunmak için gereken herhangi bir şekilde işlemesini sağlar.
+ Bu arabirim, belirli bir nesne tarafından düzenlenen verilere erişmek için tür görselleştiricisi tarafından kullanılır. Veriler bir bayt dizisi olarak kabul edilir ve tür görselleştiricinin bunu kullanıcıya sunmak için gereken her şekilde işlemesini sağlar.
 
- Özel bir görüntüleyici, istenirse bu arabirimi de kullanabilir, ancak genellikle özel bir Görüntüleyici özel bir arabirim, [Getmemorybytes](../../../extensibility/debugger/reference/idebugproperty2-getmemorybytes.md) veya [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md) (dize yönelimli veriler için) kullanır.
+ Özel görüntüleyici, istenirse bu arabirimi de kullanabilir, ancak genellikle özel görüntüleyici [getMemoryBytes](../../../extensibility/debugger/reference/idebugproperty2-getmemorybytes.md) veya [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md) (dize odaklı veriler için) özel bir arabirim kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

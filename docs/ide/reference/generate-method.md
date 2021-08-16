@@ -1,74 +1,75 @@
 ---
 title: Yöntem oluşturma
-description: Bir sınıfa hemen bir yöntemi eklemek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+description: Bir sınıfa hemen yöntem eklemek için Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: c6f4a25e3cda10e74c344cb7eef879b78f60a1de
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7f00aebf3f079138abb9b6705c714313c712415ba3661e641be71dbc5382f8a8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903909"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372561"
 ---
-# <a name="generate-a-method-in-visual-studio"></a>Visual Studio 'da bir yöntem oluşturma
+# <a name="generate-a-method-in-visual-studio"></a>Visual Studio'de yöntem oluşturma
 
-Bu kod üretimi için geçerlidir:
+Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Bir sınıfa hemen bir yöntem eklemenizi sağlar.
+**Ne:** Hemen bir sınıfa yöntem eklemenize olanak sağlar.
 
-**Ne zaman:** Yeni bir yöntem ortaya çıkarabilir ve bunu otomatik olarak doğru bir şekilde bildirmek istiyorsunuz.
+**Ne zaman:** Yeni bir yöntem tanıtmış ve bunu otomatik olarak düzgün bir şekilde bildirmiş oluruz.
 
-**Neden:** Yöntemi ve parametreleri kullanmadan önce bildirebilirsiniz, ancak bu özellik bildirimi otomatik olarak oluşturacaktır.
+**Neden:** Yöntemi ve parametreleri kullanmadan önce bildirebilirsiniz, ancak bu özellik bildirimi otomatik olarak üretir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi kırmızı dalgalı çizgi olan çizgiye yerleştirin. Kırmızı dalgalı çizgi henüz mevcut olmayan bir yöntemi gösterir.
+1. İmlecinizi kırmızı bir geçişin bulunduğu satıra yerleştirebilirsiniz. Kırmızı geçiş, henüz mevcut olmayan bir yöntemi gösterir.
 
    - C#:
 
-       ![Vurgulanmış kod C #](media/method-highlight-cs.png)
+       ![Vurgulanan kod C #](media/method-highlight-cs.png)
 
    - Visual Basic:
 
        ![Vurgulanan kod VB](media/method-highlight-vb.png)
 
-2. Sonra, aşağıdakilerden birini yapın:
+2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
-      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
-      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
-      - Sağ üst köşedeki ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
+      - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
+      - Kırmızı çizginin üzerine gelin ve ![hata ampulü](media/error-bulb.png) simgesi görüntülenir.
+      - Sağ üst köşedeki ![hata ampulü](media/error-bulb.png) simgesi, metin imleci kırmızı çizgiyle çizgi üzerinde zaten varsa sol kenar boşluğunda görünür.
 
-      ![Yöntem önizlemesi oluştur](media/method-preview-cs.png)
+      ![Yöntem önizlemesi oluşturma](media/method-preview-cs.png)
 
-3. Açılan menüden **oluşturma yöntemi** ' ni seçin.
+3. Açılan **menüden** Yöntemi oluştur'a tıklayın.
 
    > [!TIP]
-   > Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
+   > Seçiminizi **yapmadan** önce yapılacak tüm değişiklikleri görmek için önizleme penceresinin [altındaki](../../ide/preview-changes.md) Değişiklikleri önizle bağlantısını kullanın.
 
-   Yöntemi, kullanımından çıkarılan herhangi bir parametreyle oluşturulur.
+   yöntemi, kullanımından alınan parametrelerle oluşturulur.
 
    - C#:
 
-       ![Yöntem sonuç C oluştur #](media/method-result-cs.png)
+       ![Yöntem sonucu oluşturma C #](media/method-result-cs.png)
 
    - Visual Basic:
 
-       ![Yöntem sonucu oluştur VB](media/method-result-vb.png)
+       ![Yöntem sonucu oluşturma VB](media/method-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod oluşturma](../code-generation-in-visual-studio.md)
+- [Kod Oluşturma](../code-generation-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

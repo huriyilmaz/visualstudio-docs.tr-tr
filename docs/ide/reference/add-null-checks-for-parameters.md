@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5828a2bb28f7b3085cd5d43c452c520a730b8175
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 21891c299b6c9573af4d9e2012bfbae5c474de727d42e0f949690230d74f02c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95870969"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430989"
 ---
 # <a name="add-null-checks-for-all-parameters"></a>Tüm parametreler için null denetimleri ekleme 
 

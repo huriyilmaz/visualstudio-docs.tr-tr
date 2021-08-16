@@ -1,6 +1,6 @@
 ---
-title: İzleme kullanarak ASP.NET için zamanlama verileri toplama
-description: VSPerfCmd kullanarak bir ASP.NET Web uygulaması için ayrıntılı performans verileri nasıl toplayacağınızı öğrenin. Profil Oluşturma Araçları işlevlere tamamen erişim sağlar.
+title: izleme kullanarak ASP.NET için zamanlama verileri toplama
+description: vsperfcmd kullanarak bir ASP.NET Web uygulaması için ayrıntılı performans verileri nasıl toplayacağınızı öğrenin. Profil Oluşturma Araçları işlevlere tamamen erişim sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,32 +11,33 @@ ms.assetid: 29f2fc55-aaf7-4e18-a672-8815455fba73
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: c0eca3aa29795da4a2d1233f0cba1774641fc364
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95065c3de317afca162064f063330d19804f98573a7cafd61123652801ea08b6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868328"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369052"
 ---
-# <a name="collect-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>Komut satırından profil oluşturucu izleme yöntemini kullanarak bir ASP.NET Web uygulaması için ayrıntılı zamanlama verileri toplama
+# <a name="collect-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line"></a>komut satırından profil oluşturucu izleme yöntemini kullanarak bir ASP.NET web uygulaması için ayrıntılı zamanlama verileri toplama
 Bu bölümde, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] **VSPerfCmd** komut satırı aracını ve izleme yöntemini kullanarak bir Web uygulaması için ayrıntılı performans verileri toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
 
 > [!NOTE]
-> **VSPerfCmd** Aracı, profil oluşturmayı duraklatma ve sürdürme ve Işlemci ve Windows performans sayaçlarından ek veri toplama dahil olmak üzere profil oluşturma araçları işlevselliğine yönelik tüm erişimi sağlar. Bu işlevselliğe ihtiyacınız olmadığında  **VSPerfASPNETCmd** komut satırı aracını da kullanabilirsiniz. [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracına kıyasla, hiçbir ortam değişkeni ayarlanamaz ve bilgisayarın yeniden başlatılması gerekmez. Daha fazla bilgi için bkz. [VSPerfASPNETCmd Ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).
+> **vsperfcmd** aracı, profil oluşturmayı duraklatma ve sürdürme ve işlemci ve Windows performans sayaçlarından ek veri toplama dahil Profil Oluşturma Araçları işlevlere yönelik tüm erişimleri sağlar. Bu işlevselliğe ihtiyacınız olmadığında  **VSPerfASPNETCmd** komut satırı aracını da kullanabilirsiniz. [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracına kıyasla, hiçbir ortam değişkeni ayarlanamaz ve bilgisayarın yeniden başlatılması gerekmez. Daha fazla bilgi için bkz. [VSPerfASPNETCmd Ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).
 
 ## <a name="common-tasks"></a>Genel görevler
 
 |Görev|İlgili İçerik|
 |----------|---------------------|
-|**Statik olarak derlenen ikili dosyalar profili**|-   [Nasıl yapılır: statik olarak derlenen bir ASP.NET uygulamasını Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)|
-|**Dinamik olarak derlenen ikili dosyalar profili**|-   [Nasıl yapılır: dinamik olarak derlenen bir ASP.NET uygulamasını Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)|
+|**Statik olarak derlenen ikili dosyalar profili**|-   [nasıl yapılır: statik olarak derlenen ASP.NET bir uygulamayı izleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)|
+|**Dinamik olarak derlenen ikili dosyalar profili**|-   [nasıl yapılır: dinamik olarak derlenen ASP.NET bir uygulamayı izleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
-### <a name="profile-aspnet-web-applications"></a>ASP.NET Web uygulamaları profili
+### <a name="profile-aspnet-web-applications"></a>web uygulamalarının profilini ASP.NET
 
 |Görev|İlgili İçerik|
 |----------|---------------------|

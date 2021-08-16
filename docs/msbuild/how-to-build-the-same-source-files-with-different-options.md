@@ -1,6 +1,6 @@
 ---
 title: Aynı kaynak dosyalarını farklı seçeneklerle derleme
-description: Farklı seçeneklerle aynı kaynak dosyaları oluşturmak için farklı MSBuild yapı yapılandırmalarının nasıl oluşturulacağını öğrenin.
+description: farklı seçeneklerle aynı kaynak dosyaları oluşturmak için farklı MSBuild yapı yapılandırmalarının nasıl oluşturulacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,22 +13,23 @@ ms.assetid: d14f1212-ddd9-434f-b138-f840011b0fb2
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: bd9d77e32f9c287ac2dfcf3905fe9335e119a3a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cd2a701d8e5be3084466617e966f0475807e74db4645ffe6c1754a0cf0bafdaf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914497"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427866"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>Nasıl yapılır: farklı seçeneklerle aynı kaynak dosyaları derleme
 
-Proje oluştururken, aynı bileşenleri farklı derleme seçenekleriyle sık sık derleyebilirsiniz. Örneğin, simge bilgileriyle bir hata ayıklama derlemesi veya sembol bilgisi olmadan bir yayın derlemesi oluşturabilirsiniz, ancak iyileştirmeler etkin hale getirebilirsiniz. Ya da bir projeyi x86 veya x64 gibi belirli bir platformda çalıştırmak için oluşturabilirsiniz. Tüm bu durumlarda, çoğu yapı seçeneği aynı kalır; yapı yapılandırmasını denetlemek için yalnızca birkaç seçenek değiştirilmiştir. MSBuild ile, farklı yapı yapılandırmalarının oluşturulması için özellikleri ve koşulları kullanırsınız.
+Proje oluştururken, aynı bileşenleri farklı derleme seçenekleriyle sık sık derleyebilirsiniz. Örneğin, simge bilgileriyle bir hata ayıklama derlemesi veya sembol bilgisi olmadan bir yayın derlemesi oluşturabilirsiniz, ancak iyileştirmeler etkin hale getirebilirsiniz. Ya da bir projeyi x86 veya x64 gibi belirli bir platformda çalıştırmak için oluşturabilirsiniz. Tüm bu durumlarda, çoğu yapı seçeneği aynı kalır; yapı yapılandırmasını denetlemek için yalnızca birkaç seçenek değiştirilmiştir. MSBuild, özellikleri ve koşulları farklı derleme yapılandırması oluşturmak için kullanırsınız.
 
 ## <a name="use-properties-to-control-build-settings"></a>Yapı ayarlarını denetlemek için özellikleri kullanma
 
-Öğesi, bir `Property` Proje dosyasında, geçici bir dizinin konumu gibi birkaç kez başvurulan bir değişkeni tanımlar veya hata ayıklama derlemesi ve bir yayın derlemesi gibi çeşitli yapılandırmalarda kullanılan özelliklerin değerlerini ayarlar. Özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+Öğesi, bir `Property` Proje dosyasında, geçici bir dizinin konumu gibi birkaç kez başvurulan bir değişkeni tanımlar veya hata ayıklama derlemesi ve bir yayın derlemesi gibi çeşitli yapılandırmalarda kullanılan özelliklerin değerlerini ayarlar. özellikler hakkında daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 Proje dosyasını değiştirmek zorunda kalmadan, yapınızı yapılandırmayı değiştirmek için özellikleri kullanabilirsiniz. `Condition` `Property` Öğesi ve öğesi özniteliği, `PropertyGroup` özelliklerinin değerini değiştirmenize izin verir. MSBuild koşulları hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).
 
@@ -53,11 +54,11 @@ Proje dosyasını değiştirmek zorunda kalmadan, yapınızı yapılandırmayı 
 
 ## <a name="specify-properties-on-the-command-line"></a>Komut satırında özellikleri belirtin
 
-Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan sonra, projenizi her oluşturduğunuzda bu konfigürasyonları değiştirme olanağına sahip olmanız gerekir. MSBuild, **-Property** veya **-p** anahtarı kullanılarak komut satırında özelliklerin belirtilmesini sağlayarak bu yeteneği sağlar.
+Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan sonra, projenizi her oluşturduğunuzda bu konfigürasyonları değiştirme olanağına sahip olmanız gerekir. MSBuild, **-property** veya **-p** anahtarı kullanılarak komut satırında özelliklerin belirtilmesine izin vererek bu yeteneği sağlar.
 
 ### <a name="to-set-a-project-property-at-the-command-line"></a>Komut satırında bir proje özelliği ayarlamak için
 
-- Özellik ve özellik değeri ile **-Property** anahtarını kullanın. Örneğin:
+- Özellik ve özellik değeri ile **-Property** anahtarını kullanın. Örnek:
 
   ```cmd
   msbuild file.proj -property:Flavor=Debug
@@ -71,7 +72,7 @@ Proje dosyanız birden çok yapılandırmayı kabul etmek üzere yazıldıktan s
 
 ### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>Komut satırında birden fazla proje özelliği belirtmek için
 
-- Özellik ve özellik değerleriyle birden çok kez **-Property** veya **-p** anahtarı kullanın ya da bir **-Property** veya **-p** anahtarı kullanın ve birden çok özelliği noktalı virgülle ayırın (;). Örneğin:
+- Özellik ve özellik değerleriyle birden çok kez **-Property** veya **-p** anahtarı kullanın ya da bir **-Property** veya **-p** anahtarı kullanın ve birden çok özelliği noktalı virgülle ayırın (;). Örnek:
 
   ```cmd
   msbuild file.proj -p:Flavor=Debug;Platform=x86
@@ -194,4 +195,4 @@ ToolsVersion="4.0" TreatAsLocalProperty="Color">
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
-- [Proje öğesi (MSBuild)](../msbuild/project-element-msbuild.md)
+- [Project öğesi (MSBuild)](../msbuild/project-element-msbuild.md)

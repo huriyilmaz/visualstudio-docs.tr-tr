@@ -1,6 +1,6 @@
 ---
-description: Bu kesme noktası isteğini açıklayan kesme noktası istek bilgilerini alır.
-title: 'IDebugBreakpointRequest2:: GetRequestInfo | Microsoft Docs'
+description: Bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.
+title: IDebugBreakpointRequest2::GetRequestInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 5defd8d7-6daa-479b-8909-fcc4ae0b357a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 69fac031f12e27916bb945aa2dde88fee29939f2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2afe24d879b0bfa27f3397d08bfd5f3d85c3ae29734038181ba1dc7d1c67e51b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054471"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360605"
 ---
 # <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
-Bu kesme noktası isteğini açıklayan kesme noktası istek bilgilerini alır.
+Bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int GetRequestInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-'ndaki [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Numaralandırmadaki, parametresindeki hangi alanların doldurulacağını belirleyen bayrakların birleşimi `pBPRequestInfo` .
+[in] Parametrede hangi alanların [doldurulması BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) bir numaralandırılan `pBPRequestInfo` bayrakların birleşimi.
 
 `pBPRequestInfo`\
-dışı Kesme noktası isteğinin açıklamasıyla birlikte doldurulacak [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) yapısını belirtir.
+[out] Kesme [noktası BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) açıklamasıyla doldurulacak uygulama yapısını belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `CDebugBreakpointRequest` [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+ Aşağıdaki örnek, `CDebugBreakpointRequest` [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```
 HRESULT CDebugBreakpointRequest::GetRequestInfo(

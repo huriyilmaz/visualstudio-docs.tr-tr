@@ -1,6 +1,6 @@
 ---
-title: DA0007-denetim akışı için özel durumlar kullanmaktan kaçının | Microsoft Docs
-description: Profil oluşturma verilerinde yüksek oranda .NET Framework özel durum işleyicileri çağrıldı.
+title: DA0007 - Denetim akışı özel durumlarını | Microsoft Docs
+description: Profil oluşturma veri .NET Framework yüksek oranda özel durum işleyicileri çağrıldı.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,37 +12,38 @@ ms.assetid: ee8ba8b5-2313-46c9-b129-3f3a2a232898
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2648e287ea37e1ae78b14a65c02521f72a3491d0
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: 1b6dcf3fe5246a3a0281868f4b7ddf753fcd9511afc48028b4a2a69129892c13
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102466134"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121396753"
 ---
 # <a name="da0007-avoid-using-exceptions-for-control-flow"></a>DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0007|
-|Kategori|.NET Framework kullanımı|
+|Kural Kimliği|DA0007|
+|Kategori|.NET Framework Kullanım|
 |Profil oluşturma yöntemleri|Tümü|
-|İleti|Yüksek sayıda özel durum sürekli olarak oluşturulur. Program mantığındaki özel durumların kullanımını azaltmayı göz önünde bulundurun.|
+|İleti|Sürekli olarak çok sayıda özel durum sızıyor. Program mantığında özel durum kullanımını azaltmayı göz önünde bulundurabilirsiniz.|
 |Mesaj türü|Uyarı|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 25 örnek toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak musiki yöntemlerini kullanarak profil 25 örnek toplayan bu kuralı tetiklemeniz gerekir.
 
 ## <a name="cause"></a>Nedeni
- Profil oluşturma verilerinde yüksek oranda .NET Framework özel durum işleyicileri çağrıldı. Oluşturulan özel durumların sayısını azaltmak için diğer denetim akışı mantığını kullanmayı göz önünde bulundurun.
+ Profil oluşturma veri .NET Framework yüksek oranda özel durum işleyicileri çağrıldı. Diğer denetim akışı mantığını kullanarak, atılan özel durumların sayısını azaltmayı göz önünde bulundurarak.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Hataları ve program yürütmesini kesintiye uğratan diğer olayları yakalamak için özel durum işleyicilerinin kullanılması iyi bir uygulamadır, ancak özel durum işleyicisinin normal program yürütme mantığının bir parçası olarak kullanılması pahalı olabilir ve kaçınılmalıdır. Çoğu durumda, özel durumlar yalnızca seyrek oluşan ve beklenmediği durumlar için kullanılmalıdır. Özel durumlar, normal program akışının bir parçası olarak değer döndürmek için kullanılmamalıdır. Birçok durumda, değerleri doğrulayarak ve soruna neden olan deyimlerin yürütülmesini durdurmak için koşullu mantığı kullanarak özel durumlar oluşturmaktan kaçınabilirsiniz.
+ Özel durum işleyicilerinin program yürütmeyi kesintiye neden olan hataları ve diğer olayları yakalamak için kullanımı iyi bir uygulamadır, ancak normal program yürütme mantığının bir parçası olarak özel durum işleyicisi kullanımı pahalı olabilir ve kaçınılması gerekir. Çoğu durumda, özel durumlar yalnızca seyrek oluşan ve beklenmiyor olan durumlar için kullanılmalıdır. Özel durumlar, normal program akışının bir parçası olarak değer dönmek için kullanılmamalı. Çoğu durumda, değerleri doğrular ve soruna neden olan deyimlerin yürütülmesini durdurmak için koşullu mantık kullanarak özel durumların önüne geçebilirsiniz.
 
- Daha fazla bilgi için, MSDN 'deki **Microsoft desenleri ve uygulamalar** kitaplığı 'Nın **.NET uygulama performansını ve ölçeklenebilirlik birimini geliştirme** bölümünde **yönetilen kod performansını artırma başlıklı Bölüm 5** ' in [özel durum yönetimi](/previous-versions/msp-n-p/ff647790(v=pandp.10)#exception-management) bölümüne bakın.
+ Daha fazla bilgi [](/previous-versions/msp-n-p/ff647790(v=pandp.10)#exception-management) için MSDN'de **Microsoft Patterns and Practices** kitaplığının .NET Uygulama Performansını ve **Ölçeklenebilirlik** hacmini geliştirme bölümündeki **Bölüm 5 -** Yönetilen Kod Performansını Geliştirme bölümünün Özel Durum Yönetimi bölümüne bakın.
 
-## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Işaretler görünümüne gitmek için Hata Listesi penceresindeki iletiye çift tıklayın. **.NET CLR özel durumlarını () içeren sütunu bul @ProcessInstance \\ oluşturulan/sn** ölçü birimi sayısı. Özel durum işlemenin diğerlerinden daha sık olduğu belirli program yürütme aşamaları olup olmadığını belirleme. Bir örnekleme profili kullanarak, throw deyimlerini tanımlamayı ve sık karşılaşılan özel durumlar oluşturan try/catch bloklarını kullanmayı deneyin. Gerekirse, en sık hangi özel durumların işlendiğini anlamanıza yardımcı olması için catch bloklarına mantık ekleyin. Mümkün olduğunda, sık yürütülen throw deyimlerini veya catch bloklarını basit akış denetim mantığı veya doğrulama kodu ile değiştirin.
+## <a name="how-to-investigate-a-warning"></a>Uyarıyı araştırma
+ İşaretler görünümüne gitmek için Hata Listesi penceresinde iletiye çift tıklayın. **.NET CLR Exceptions( @ProcessInstance ) # \\ of Excel Thrown / sec ölçümlerini içeren** sütunu bulun. Özel durum işlemenin diğerlerine göre daha sık olduğu belirli program yürütme aşamaları olup olmadığını belirler. Örnekleme profili kullanarak, sık sık özel durumlar oluşturan throw deyimlerini ve try/catch bloklarını belirlemeyi deneyin. Gerekirse, hangi özel durumların en sık işlen olduğunu anlamanıza yardımcı olmak için blokları yakalamak için mantık ekleyin. Mümkün olduğunca, sık yürütülen throw deyimlerini veya yakalama bloklarını basit akış denetim mantığı veya doğrulama koduyla değiştirin.
 
- Örneğin, uygulamanızın sık karşılaşılan Dividebysıfırlaması özel durum özel durumlarını işleme olduğunu fark ediyorsanız, sıfır değerli bir değer içeren paydaları denetlemek için programınıza mantık eklemek, uygulamanın performansını geliştirir.
+ Örneğin, uygulamanın sık sık DivideByZeroException özel durumlarını işleyeni olduğunu bulursanız, programınıza sıfır değere sahip paydaları denetleme mantığı eklemek uygulamanın performansını artırır.

@@ -1,6 +1,6 @@
 ---
-title: Azure bulut hizmetlerinde hata ayıklama seçenekleri | Microsoft Docs
-description: Azure bulut hizmetlerinde hata ayıklama
+title: Azure Bulut Hizmetleri hizmet hizmetlerde hata ayıklama | Microsoft Docs
+description: Azure bulut hizmetlerde hata ayıklama
 author: mikejo5000
 manager: jmartens
 ms.topic: conceptual
@@ -8,24 +8,24 @@ ms.workload: azure-vs
 ms.date: 03/18/2017
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 12b327c65b83acde09eeac748d614ca560f3e012
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 417718e519686039ef7f027a4e2d76e7a74065dc2d177236dc2a9a74ecf191cc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683087"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121363940"
 ---
 # <a name="learn-the-various-ways-to-debug-an-azure-cloud-service"></a>Azure bulut hizmetinde hata ayıklamanın çeşitli yöntemlerini öğrenme
-Bu makale, bir Azure bulut hizmetinde hata ayıklamanın çeşitli yollarına bağlantılar sağlar.
+Bu makalede, Azure bulut hizmetlerinde hata ayıklamak için çeşitli yöntemlere bağlantılar yer alır.
 
-## <a name="debugging-an-azure-cloud-service-in-visual-studio"></a>Visual Studio 'da bir Azure bulut hizmetinde hata ayıklama
-Azure Işlem öykünücüsü 'nü kullanarak, yerel bir makinedeki bulut hizmetinizde hata ayıklaması yapmak için zaman ve para tasarrufu yapabilirsiniz. Dağıtmadan önce bir hizmette yerel olarak hata ayıkladığında, işlem süresi için ödeme yapmadan güvenilirliği ve performansı artırabilirsiniz. Ancak bazı hatalar yalnızca Azure 'da bir bulut hizmeti çalıştırdığınızda gerçekleşebilir. Yalnızca Azure 'da bir bulut hizmeti çalıştırdığınızda oluşan hatalar, hizmetinizi yayımladığınızda uzaktan hata ayıklamayı etkinleştirerek ve ardından hata ayıklayıcıyı bir rol örneğine iliştirerek hata ayıklanabilir. Daha fazla bilgi için bkz. [yerel bilgisayarınızda bulut hizmetinizde hata ayıklama](vs-azure-tools-debug-cloud-services-virtual-machines.md#debug-your-cloud-service-on-your-local-computer).
+## <a name="debugging-an-azure-cloud-service-in-visual-studio"></a>Azure bulut hizmetinde hata ayıklama Visual Studio
+Yerel makinede bulut hizmetinizin hata ayıklaması için Azure İşlem Emulator kullanarak zamandan ve paradan tasarruf edin. Hizmeti dağıtmadan önce yerel olarak hata ayıklarken, işlem süresi için ödeme yapmadan güvenilirliği ve performansı geliştirebilirsiniz. Ancak bazı hatalar yalnızca Azure'da bir bulut hizmeti çalıştırarak ortaya çıkabilir. Yalnızca Azure'da bir bulut hizmetini çalıştırmanız sırasında oluşan hatalar, hizmetinizi yayımlarken uzaktan hata ayıklama etkinleştirerek ve ardından hata ayıklayıcıyı bir rol örneğine iliştirerek hata ayıklaması olabilir. Daha fazla bilgi için [bkz. Yerel bilgisayarınızda bulut hizmetinizin hata ayıklaması.](vs-azure-tools-debug-cloud-services-virtual-machines.md#debug-your-cloud-service-on-your-local-computer)
 
 ## <a name="using-intellitrace"></a>IntelliTrace’i kullanma
-.NET Framework 4,5 hedeflenen rolleri yazmak için Visual Studio Enterprise kullanıyorsanız, Visual Studio 'dan bir Azure bulut hizmeti dağıtırken IntelliTrace 'i etkinleştirebilirsiniz. IntelliTrace, uygulamanızın Azure 'da çalışıyor gibi hatalarını ayıklamak için Visual Studio ile birlikte kullanabileceğiniz bir günlük sağlar. Daha fazla bilgi için bkz. [IntelliTrace ve Visual Studio ile yayımlanan bulut hizmetinde hata ayıklama](vs-azure-tools-intellitrace-debug-published-cloud-services.md).
+.NET Framework 4.5'i hedef alan roller yazmak için Visual Studio Enterprise kullanıyorsanız, Azure bulut hizmetini Visual Studio'dan dağıtabilirsiniz. IntelliTrace, uygulama hata ayıklamak için Visual Studio Azure'da çalışıyor gibi kullanabileceğiniz bir günlük sağlar. Daha fazla bilgi için bkz. [IntelliTrace ve Visual Studio ile yayımlanmış bir bulut hizmetinde hata ayıklama.](vs-azure-tools-intellitrace-debug-published-cloud-services.md)
 
 ## <a name="remote-debugging"></a>Uzaktan hata ayıklama
-Bulut hizmetini Visual Studio 'dan dağıtırken, bulut hizmetlerinize uzaktan hata ayıklamayı etkinleştirebilirsiniz. Bir dağıtım için uzaktan hata ayıklamayı etkinleştirmeyi seçerseniz, uzaktan hata ayıklama Hizmetleri her bir rol örneğini çalıştıran sanal makinelere yüklenir. Bu hizmetler-gibi `msvsmon.exe` -performansı etkilemez veya ek maliyetlerle sonuçlanır. Daha fazla bilgi için bkz. [Azure 'da bulut hizmetinde hata ayıklama](vs-azure-tools-debug-cloud-services-virtual-machines.md#debug-a-cloud-service-in-azure).
+Bulut hizmetini buluttan dağıtırken bulut hizmetleriniz üzerinde uzaktan hata ayıklamayı Visual Studio. Bir dağıtım için uzaktan hata ayıklamayı etkinleştirmeyi seçerseniz, her rol örneğini çalıştıran sanal makinelere uzaktan hata ayıklama hizmetleri yüklenir. Bu hizmetler ( `msvsmon.exe` gibi) performansı etkilemez veya ek maliyetlere neden olmaz. Daha fazla bilgi için [bkz. Azure'da bir bulut hizmetinin hata ayıklaması.](vs-azure-tools-debug-cloud-services-virtual-machines.md#debug-a-cloud-service-in-azure)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- [Visual Studio 'da bir Azure bulut hizmetinde veya VM 'de hata ayıklama](./vs-azure-tools-debug-cloud-services-virtual-machines.md) -Azure Cloud Services 'in nasıl ayıklanmasına ilişkin ayrıntıları öğrenin.
+- [Visual Studio'da Bir Azure](./vs-azure-tools-debug-cloud-services-virtual-machines.md) bulut hizmetinde veya VM'de hata ayıklama - Azure bulut hizmetlerde hata ayıklama hakkında ayrıntılı bilgi edinin.

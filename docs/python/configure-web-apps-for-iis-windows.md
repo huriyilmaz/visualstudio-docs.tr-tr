@@ -1,33 +1,34 @@
 ---
 title: IIS için Python Web Apps 'i yapılandırma
-description: Python web uygulamalarını bir Windows sanal makinesinden Internet Information Services çalışacak şekilde yapılandırma.
+description: Python web uygulamalarını Windows bir sanal makineden Internet Information Services çalışacak şekilde yapılandırma.
 ms.date: 12/06/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 40411f47e7deda48b04ac4efb9bb9bc18688989a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 92f44305d22790efbcb76d7c5559bde1a8b2166a9a12d03f7d462cf7e04644cc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839116"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425916"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>IIS için Python Web Apps 'i yapılandırma
 
-Windows bilgisayarda Internet Information Services (IIS) Web sunucusu olarak kullanırken ( [Azure 'Daki Windows sanal makineler](/azure/architecture/reference-architectures/n-tier/windows-vm)dahil), Python uygulamaları IIS 'nin Python kodunu düzgün bir şekilde işleyebilmesi için *web.config* dosyalarında belirli ayarları içermesi gerekir. Bilgisayarın kendisi de, Web uygulamasının gerektirdiği tüm paketlerle birlikte Python 'un yüklü olması gerekir.
+Windows [Windows](/azure/architecture/reference-architectures/n-tier/windows-vm)bilgisayarda bir web sunucusu olarak Internet Information Services (ııs) kullanırken, python uygulamaları ııs 'nin Python kodunu düzgün bir şekilde işleyebilmesi için *web.config* dosyalarına belirli ayarları dahil etmelidir. Bilgisayarın kendisi de, Web uygulamasının gerektirdiği tüm paketlerle birlikte Python 'un yüklü olması gerekir.
 
 > [!Note]
-> Bu makale daha önce Windows üzerinde Azure App Service Python yapılandırma kılavuzunu içeriyordu. Bu senaryoda kullanılan Python uzantıları ve Windows Konakları, Linux üzerinde Azure App Service kullanım dışı bırakılmıştır. Daha fazla bilgi için bkz. [Python uygulamalarını Azure App Service (Linux) Ile yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md). Ancak önceki makale, [Python uzantılarıyla Windows üzerinde App Service yönetirken](managing-python-on-azure-app-service.md)hala kullanılabilir.
+> Bu makale daha önce Windows Azure App Service üzerinde Python yapılandırma kılavuzunu içeriyordu. bu senaryoda kullanılan Python uzantıları ve Windows konakları Linux üzerinde Azure App Service kullanım dışı bırakılmıştır. Daha fazla bilgi için bkz. [Python uygulamalarını Azure App Service (Linux) Ile yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md). ancak önceki makale, [Python uzantılarıyla Windows App Service yönetilmeye](managing-python-on-azure-app-service.md)devam etmektedir.
 
 ## <a name="install-python-on-windows"></a>Windows üzerinde Python’ı yükleme
 
-Bir Web uygulamasını çalıştırmak için, Python [yorumlayıcıları](installing-python-interpreters.md)'nı oluşturma bölümünde açıklandığı gibi, önce gerekli Python sürümünüzü doğrudan Windows ana makinesine yüklemeniz gerekir.
+bir web uygulamasını çalıştırmak için, python [yorumlayıcıları](installing-python-interpreters.md)'nı oluşturma konusunda açıklandığı gibi, önce gerekli python sürümünüzü doğrudan Windows ana makinesine yüklemeniz gerekir.
 
 `python.exe`Sonraki adımlar için yorumlayıcı konumunu kaydedin. Kolaylık olması için, bu konumu PATH ortam değişkeniniz için ekleyebilirsiniz.
 
@@ -37,7 +38,7 @@ Adanmış bir konak kullanırken, uygulamanızı sanal bir ortam yerine çalış
 
 ## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>web.config Python yorumlayıcıya işaret etmek için ayarla
 
-Uygulamanızın *web.config* dosyası, Windows ÜZERINDE çalışan IIS (7 +) Web sunucusuna httpplatform (önerilen) veya FastCGI aracılığıyla Python isteklerini nasıl işleyeceğinizi bildirir. Visual Studio sürümleri 2015 ve öncesi, bu değişiklikleri otomatik olarak yapar. Visual Studio 2017 ve üstünü kullanırken *web.config* el ile değiştirmeniz gerekir.
+uygulamanızın *web.config* dosyası, ııs (7 +) web sunucusuna, bir httpplatform (önerilen) veya fastcgı aracılığıyla Python isteklerini nasıl işleyeceği hakkında Windows ister. Visual Studio sürümleri 2015 ve önceki sürümlerde bu değişiklikler otomatik olarak yapılır. Visual Studio 2017 ve üstünü kullanırken *web.config* el ile değiştirmeniz gerekir.
 
 ### <a name="configure-the-httpplatform-handler"></a>HttpPlatform işleyicisini yapılandırma
 
@@ -143,6 +144,6 @@ Daha sonra, *python.exe* ve *wfastcgi.py* için tam yolları içerecek şekilde 
 
     Dizi boş olduğunda, Docgo 'nun otomatik olarak ' localhost ' ve ' 127.0.0.1 ' olarak izin verdiğini, ancak üretim URL 'nizi eklemenin bu özellikleri kaldırdığına bakın. Bu nedenle, *Settings.py*'in ayrı geliştirme ve üretim kopyalarını sürdürmek veya çalışma süresi değerlerini denetlemek için ortam değişkenlerini kullanmak isteyebilirsiniz.
 
-## <a name="deploy-to-iis-or-a-windows-vm"></a>IIS 'ye veya Windows VM 'ye dağıtma
+## <a name="deploy-to-iis-or-a-windows-vm"></a>ııs 'ye veya Windows VM 'ye dağıtma
 
-Projenizdeki doğru *web.config* dosyası ile, **Çözüm Gezgini**, projenin bağlam menüsündeki **Yayımla** komutunu kullanarak ve IIS **, FTP, vb.** seçeneklerini belirleyerek IIS çalıştıran bilgisayara yayımlayabilirsiniz. Bu durumda, Visual Studio yalnızca proje dosyalarını sunucuya kopyalar; Tüm sunucu tarafı yapılandırmadan sorumlu olursunuz.
+Projenizdeki doğru *web.config* dosyası ile, **Çözüm Gezgini**, projenin bağlam menüsündeki **Yayımla** komutunu kullanarak ve IIS **, FTP, vb.** seçeneklerini belirleyerek IIS çalıştıran bilgisayara yayımlayabilirsiniz. bu durumda Visual Studio, yalnızca proje dosyalarını sunucuya kopyalar; Tüm sunucu tarafı yapılandırmadan sorumlu olursunuz.
