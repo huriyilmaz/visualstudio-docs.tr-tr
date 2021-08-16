@@ -1,5 +1,5 @@
 ---
-description: Bu yapı bir PDB sembolünden alınan alan türü hakkında bilgi belirtir.
+description: Bu yapı, PDB simgesinden alınan alan türüyle ilgili bilgileri belirtir.
 title: PDB_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,21 +11,22 @@ ms.assetid: 1c1bb772-77d6-4870-90b2-fd9247d0004e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9b9b27024979faaebbacdfdde93e26ffddb6f312
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3b2a812fa59c8017b6a4296d0172fc2225d099470685450c50e2c618b6bd66f4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082237"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415175"
 ---
 # <a name="pdb_type"></a>PDB_TYPE
 
-Bu yapı bir PDB sembolünden alınan alan türü hakkında bilgi belirtir.
+Bu yapı, PDB simgesinden alınan alan türüyle ilgili bilgileri belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,25 +49,25 @@ public struct PDB_TYPE {
 ## <a name="members"></a>Üyeler
 
 `ulAppDomainID`\
-Simgenin geldiği uygulamanın KIMLIĞI. Bu, uygulamanın bir örneğini benzersiz bir şekilde tanımlamak için kullanılır.
+Sembolün geldiği uygulamanın kimliği. Bu, uygulamanın bir örneğini benzersiz olarak tanımlamak için kullanılır.
 
 `guidModule`\
-Bu alanı içeren modülün GUID 'ı.
+Bu alanı içeren modülün GUID'si.
 
 `symid`\
-Bu alana karşılık gelen simgenin KIMLIĞI.
+Bu alana karşılık gelen sembolün kimliği.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, [](../../../extensibility/debugger/reference/type-info.md) `dwKind` `TYPE_INFO` yapı alanı `TYPE_KIND_PDB` ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından bir değer) olarak ayarlandığında TYPE_INFO yapısındaki birleşimin bir parçası olarak görüntülenir.
+Bu yapı, yapının alanı olarak [(TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) enumerasyonundan bir değer) ayarlanırken dwTYPE_KIND `dwKind` olarak `TYPE_INFO` `TYPE_KIND_PDB` görünür. [](../../../extensibility/debugger/reference/dwtype-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

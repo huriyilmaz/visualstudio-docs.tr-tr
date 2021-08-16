@@ -11,14 +11,15 @@ ms.assetid: 4b28d78a-1974-4d8a-8bb7-781bf630f2f4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: de9b0fa692ff44096e962bc952b91c3f2fd314f2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 28c8cc04bd3b6869bfde35ae5dcb7bc0a88f3ce5c7d5a3d9ab4c7d01268ea82f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160612"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404685"
 ---
 # <a name="idiasymbolget_thunkordinal"></a>IDiaSymbol::get_thunkOrdinal
 Bir işlevin dönüştürücü türünü alır.

@@ -11,14 +11,15 @@ ms.assetid: 2e40174a-2a61-4e5f-bb32-9e0ceec2178a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 680ddd3dd90538e3e37991e890b61bc74220c8a3
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a04829912fc4aef2e4ff23e4e1f586f29d3b262923faaa0ba156d541884c6914
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161790"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404653"
 ---
 # <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
 Bir sabitin değerini alır.

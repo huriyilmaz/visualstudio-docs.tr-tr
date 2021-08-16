@@ -11,14 +11,15 @@ ms.assetid: 588163f7-958e-4072-bf66-db5c5f07d3cb
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 63260280f4730c2a0ee32324e49205650cd6c204
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 80392102edaa243e7a9a42fb5dbca4dca1c171de71cce73db91dcf63e6ec4c0f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161853"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404725"
 ---
 # <a name="idiasymbolget_scoped"></a>IDiaSymbol::get_scoped
 Kullanıcı tanımlı veri türünün genel olmayan bir sözlü kapsamda görünüp başlatılmayacağını belirten bir bayrak alır.

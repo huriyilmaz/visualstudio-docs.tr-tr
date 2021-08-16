@@ -1,6 +1,6 @@
 ---
-description: 'IDiaSymbol:: findInlineFramesByRVA, bir istemcinin belirtilen göreli sanal adreste (RVA) tüm satır içi çerçeveler üzerinde yineleme yapmasına izin veren bir sabit listesi alır.'
-title: 'IDiaSymbol:: findInlineFramesByRVA | Microsoft Docs'
+description: IDiaSymbol::findInlineFramesByRVA, bir istemcinin belirtilen göreli sanal adresteki (RVA) tüm satır içi çerçeveler arasında yeniden işlemde bulunarak bir sabit adı alır.
+title: IDiaSymbol::findInlineFramesByRVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -9,17 +9,18 @@ ms.assetid: e7a6d9cb-2726-4ac7-9f38-415ad215bf9c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 22ecafb604f31c23f503bbfcbedcd13ee2a42e95
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 532de406a97bffd9f48671a585971e4fccb6d028648d053a1de4c823c33bfbfa
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156666"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404885"
 ---
 # <a name="idiasymbolfindinlineframesbyrva"></a>IDiaSymbol::findInlineFramesByRVA
-Bir istemcinin belirtilen göreli sanal adreste (RVA) bulunan tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
+Bir istemcinin belirtilen bir göreli sanal adresteki (RVA) tüm satır içi çerçeveler üzerinde devamsını sağlayan bir sabit değer alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,14 +33,14 @@ HRESULT findInlineFramesByRVA (    DWORD             rva,
 #### <a name="parameters"></a>Parametreler
  `rva`
 
-'ndaki Adresi RVA olarak belirtir.
+[in] Adresi RVA olarak belirtir.
 
  `ppResult`
 
-dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
+[out] Alınan `IDiaEnumSymbols` çerçevelerin listesini içeren bir nesneyi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme'
-description: Outlook Kişilerine Program aracılığıyla nasıl erişebileceğinizi öğrenin. Bu örnek, son adları belirtilen arama dizesini içeren tüm kişileri bulur.
+title: 'Nasıl Outlook: Program aracılığıyla Outlook erişme'
+description: Kişilerinizi program aracılığıyla nasıl erişebilirsiniz Outlook öğrenin. Bu örnek, adı belirtilen bir arama dizesi içeren tüm kişileri bulur.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -12,17 +12,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 08e9d9ea69985a26a9688152f5c3b028caf75300
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: fd0ad5305b973943949115b621ef6d9c55dc95ad4b0573e37b4becb21fb55534
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828910"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408792"
 ---
-# <a name="how-to-programmatically-access-outlook-contacts"></a>Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme
-  Bu örnek, son adları belirtilen arama dizesini içeren tüm kişileri bulur.
+# <a name="how-to-programmatically-access-outlook-contacts"></a>Nasıl Outlook: Program aracılığıyla Outlook erişme
+  Bu örnek, adı belirtilen bir arama dizesi içeren tüm kişileri bulur.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -31,14 +32,14 @@ ms.locfileid: "107828910"
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_OL_AccessContacts/thisaddin.vb" id="Snippet1":::
 
 
-## <a name="compile-the-code"></a>Kodu derle
+## <a name="compile-the-code"></a>Kodu derleme
  Bu örnek şunları gerektirir:
 
-- Son adları **kişiler** klasöründeki "**na"** dizesini (örneğin, Tzipi Butnaru) içeren kişiler.
+- Son adları Contacts klasöründeki "**Na"** dizesini (örneğin, Tzipi Butnaru) **içeren** kişiler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
-- [Nasıl yapılır: Outlook Kişilerine Program aracılığıyla giriş ekleme](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
-- [Nasıl yapılır: program aracılığıyla belirli bir kişi arama](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
-- [Nasıl yapılır: kişilerde program aracılığıyla e-posta adresi arama](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)
-- [Nasıl yapılır: Outlook kişilerini program aracılığıyla silme](../vsto/how-to-programmatically-delete-outlook-contacts.md)
+- [Nasıl Outlook: Program aracılığıyla kişi Outlook ekleme](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
+- [Nasıl yapılanlar: Program aracılığıyla belirli bir kişi için arama](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
+- [Nasıl olur: Kişilerde program aracılığıyla e-posta adresi arama](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)
+- [Nasıl Outlook: Kişilerini program aracılığıyla silme](../vsto/how-to-programmatically-delete-outlook-contacts.md)

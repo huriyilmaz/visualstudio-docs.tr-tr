@@ -1,6 +1,6 @@
 ---
 title: XAML hataları ve uyarıları
-description: Visual Studio 'da hataların nasıl sınıflandırıldığından, hata bilgilerinin nasıl alınacağı ve bunları düzeltme seçeneklerinin nasıl bulunacağı dahil olmak üzere Visual Studio 'da XAML hataları ve uyarıları hakkında bilgi edinin.
+description: hataların nasıl sınıflandırıldığından, hata bilgilerinin nasıl alınacağı ve bunları düzeltme seçeneklerinin nasıl bulunacağı dahil olmak üzere Visual Studio XAML hataları ve uyarıları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/06/2018
 ms.topic: error-reference
@@ -8,24 +8,25 @@ ms.assetid: 34eac8a0-7ec5-4c40-b97a-0126ed367931
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: e33cdc11eb5531fd2325bd90912dc22a105711c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01dd2befec3f531609206bbd848e534ade251597041bef1ab755a618cc72f1b0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903643"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365098"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML hataları ve uyarıları
 
-XAML yazarken, Visual Studio kodu yazarken analiz eder. Bir hata algılandığında kod satırında dalgalı bir çizgi görünür. Dalgalı çizgi üzerine gelindiğinde, hata veya uyarı hakkında daha fazla bilgi verilmektedir. Bazı hatalar ve uyarılar için hızlı bir eylem ampul görüntülenir ve **CTRL tuşunu** kullanarak + **.** klavye kısayolu, sorunu gidermeye yönelik seçenekleri görüntüler.
+XAML yazarken Visual Studio kodu siz yazarken analiz eder. Bir hata algılandığında kod satırında dalgalı bir çizgi görünür. Dalgalı çizgi üzerine gelindiğinde, hata veya uyarı hakkında daha fazla bilgi verilmektedir. Bazı hatalar ve uyarılar için hızlı bir eylem ampul görüntülenir ve **CTRL tuşunu** kullanarak + **.** klavye kısayolu, sorunu gidermeye yönelik seçenekleri görüntüler.
 
 ## <a name="error-types"></a>Hata türleri
 
 Arka planda, birden çok araç XAML 'yi paralel olarak analiz eder. XAML hataları, hatayı algılayan araca bağlı olarak aşağıdaki üç türden birine kategorize edilir:
 
-|**Hata algılanan**|**Hata kodu biçimi**|**Visual Studio sürümü**|
+|**Hata algılanan**|**Hata kodu biçimi**|**Visual Studio Sürüm**|
 | - |-----------------| - |
 |XAML dil hizmeti (XAML Düzenleyicisi)|XLSxxxx| Tüm sürümler |
 |XAML Tasarımcısı|XDGxxxx| Tüm sürümler | 

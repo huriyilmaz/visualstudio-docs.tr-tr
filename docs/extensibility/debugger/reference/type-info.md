@@ -11,17 +11,18 @@ ms.assetid: d725cb68-a565-49d1-a16f-ff0445c587a0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b83c4a829a050b9e78b65a9a68be96d2397ea8c6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7be107aa82ba513d20463d3db2686d0661021cdd71eee30f2ebd8de8bd57c174
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070745"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414991"
 ---
 # <a name="type_info"></a>TYPE_INFO
 Bu yapı, bir alanın türü hakkında çeşitli bilgi türlerini belirtir.

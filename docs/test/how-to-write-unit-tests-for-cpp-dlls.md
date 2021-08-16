@@ -9,14 +9,14 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 6e8df96c6345d84531ef04eae56f7f60dcc3eefe
-ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
+ms.openlocfilehash: 9918342069b6e60ca4f91df87e7e18e1b405f9870968a2a8f63c5bb580a35199
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2021
-ms.locfileid: "112042879"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121409013"
 ---
-# <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio 'da C++ dll 'Leri için birim testleri yazma
+# <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio C++ dll 'Leri için birim testleri yazma
 
 Test etmek istediğiniz işlevleri dışa aktarıp vermediğine bağlı olarak, DLL kodunu test etmenin birkaç yolu vardır. Aşağıdaki yollarla birini seçin:
 
@@ -56,17 +56,17 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 - DLL projesi test etmek istediğiniz işlevleri dışa aktardığında, test projesinden kod projesine bir başvuru ekleyebilirsiniz.
 
-  1. Yerel birim testi projesi oluşturun.
+  1. Yerel birim testi Project oluşturun.
 
       ::: moniker range=">=vs-2019"
 
-      1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini** seçin.
+      1. **dosya** menüsünde **yeni**  >  **Project**' yi seçin. **yeni Project ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim testi Project** seçin.
 
       ::: moniker-end
 
       ::: moniker range="vs-2017"
 
-      1. **Dosya** menüsünde, **Yeni** > **Proje** > **Visual C++** > **Test** > **C++ birim testi projesi**' ni seçin.
+      1. **dosya** menüsünde, **yeni** > **Project** > **Visual C++** >  > **C++ birim testi Project**' nı seçin.
 
       ::: moniker-end
 
@@ -88,17 +88,17 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 - DLL, test etmek istediğiniz işlevleri dışa aktarmazsa, Output *. obj* veya *. lib* dosyasını test projesinin bağımlılıklarına ekleyebilirsiniz.
 
-  1. Yerel birim testi projesi oluşturun.
+  1. Yerel birim testi Project oluşturun.
 
       ::: moniker range=">=vs-2019"
 
-      1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. **Yeni Proje Ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim test projesini** seçin.
+      1. **dosya** menüsünde **yeni**  >  **Project**' yi seçin. **yeni Project ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın. Ardından **yerel birim testi Project** seçin.
 
       ::: moniker-end
 
       ::: moniker range="vs-2017"
 
-      1. **Dosya** menüsünde, **Yeni** > **Proje** > **Visual C++** > **Test** > **C++ birim testi projesi**' ni seçin.
+      1. **dosya** menüsünde, **yeni** > **Project** > **Visual C++** >  > **C++ birim testi Project**' nı seçin.
 
       ::: moniker-end
 
@@ -145,7 +145,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 1. Her birim test kodu dosyasında, `#include` test edilen projenin üst bilgileri için bir ifade ekleyin.
 
-1. Birim test kodu dosyalarına test sınıfları ve yöntemleri ekleyin. Örneğin:
+1. Birim test kodu dosyalarına test sınıfları ve yöntemleri ekleyin. Örnek:
 
     ```cpp
     #include "stdafx.h"
@@ -167,7 +167,7 @@ Bu yaklaşım, testlerin dışarıya aktarılmamış üyeleri kullanmasına izin
 
 ## <a name="run-the-tests"></a>Testleri çalıştırma
 
-1. **Test** menüsünde **Windows**  >  **Test Gezgini**' ni seçin.
+1. **test** menüsünde **Windows**  >  **test gezgini**' ni seçin.
 
 1. Tüm testleriniz pencerede görünmüyorsa, test projesini oluşturun: **Çözüm Gezgini** ' de düğümüne sağ tıklayıp **Oluştur** veya **yeniden oluştur**' u seçin.
 

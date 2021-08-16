@@ -1,6 +1,6 @@
 ---
 title: Yazmaçları penceresi hakkında | Microsoft Docs
-description: Yalnızca Seçenekler iletişim kutusunda, hata ayıklama düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir olan Visual Studio 'daki kayıt penceresi hakkında bilgi edinin.
+description: yalnızca seçenekler iletişim kutusunda, hata ayıklama düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir olan Visual Studio kayıtları penceresi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,16 +17,17 @@ ms.assetid: ab354047-053e-4f94-8ac1-26e761442b6f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 495468003de9ab848ce3d3ffad134108ea1781b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0dadd3882513ac0bdf824ab984aaca532f3bac9101ec6c81671e9c5638777586
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872774"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404531"
 ---
-# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'da Yazmaçları penceresi hakkında (C#, C++, Visual Basic, F #)
+# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio kayıtları penceresi hakkında (C#, C++, Visual Basic, F #)
 
 **Yazmaçları** penceresi yalnızca, **Seçenekler** Iletişim kutusunda, **hata ayıklama** düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir.
 
@@ -38,7 +39,7 @@ ms.locfileid: "99872774"
 
  İşlemcinin genellikle, kayan nokta işlemleri için en iyi duruma getirilmiş ve tamsayı işlemleri için bir tane olmak üzere iki genel amaçlı kayıt kümesi vardır. Bunlara göre değil, bunlar kayan nokta ve tamsayı Yazmaçları olarak adlandırılır.
 
- Yönetilen kod, çalışma zamanında mikro işlemcinin fiziksel kayıtlarına erişen yerel koda derlenir. **Kayıt** penceresi, ortak dil çalışma zamanı veya yerel kod için bu fiziksel kayıtları görüntüler. Betik ve SQL, kayıt kavramını desteklemeyen diller olduğundan, **Yazmaçları** penceresi BETIK veya SQL uygulaması için kayıt bilgilerini görüntülemez.
+ Yönetilen kod, çalışma zamanında mikro işlemcinin fiziksel kayıtlarına erişen yerel koda derlenir. **Kayıt** penceresi, ortak dil çalışma zamanı veya yerel kod için bu fiziksel kayıtları görüntüler. betik ve SQL, kayıt kavramını desteklemeyen diller olduğundan, **yazmaçları** penceresi betik veya SQL uygulaması için kayıt bilgilerini görüntülemez.
 
  **Yazmaçları** penceresini görüntüleme hakkında daha fazla bilgi için, bkz. [Yazmaçları penceresini kullanma](../debugger/how-to-use-the-registers-window.md).
 

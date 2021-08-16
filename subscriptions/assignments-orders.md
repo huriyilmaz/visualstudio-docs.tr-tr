@@ -1,5 +1,5 @@
 ---
-title: Visual Studio aboneliklerinde atamaları ve işlem emirlerini izleme | Visual Studio Market
+title: Visual Studio aboneliklerinde atamaları ve işlem siparişlerini izleme | Visual Studio 'Nde
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,35 +7,35 @@ ms.assetid: 83a9162a-b9e7-43a4-b07f-6c1fd8580f78
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: Kullanıcı atamalarını ve işlem emirlerini izlemek için yöneticilerin sorumluluğunu öğrenin.
-ms.openlocfilehash: 9ba54d13f4481f68d13e43a2e21f62036d23cab3
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.openlocfilehash: 53f41819640cc94ac3b781cef9a1542448c19933a4fad97164b47027fd7af504
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776993"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121364539"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>Kullanıcı atamasını ve işlem emirlerini izleme
-Visual Studio abonelikleri yöneticisinin, toplu lisanslama sözleşmenizde veya Microsoft ürün ve hizmet anlaşmasındaki zamanlamaya göre kullanımda olan tüm artışlar için Visual Studio kullanımı ve işlem siparişlerinin izlenmesi beklenmektedir. Yeni Visual Studio abonelikleri yönetim portalı, kullanılabilir ve kullanılan lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale geçti.
+Visual Studio abonelik yöneticisi, toplu lisanslama sözleşmenizde veya Microsoft ürün ve hizmet anlaşmasındaki zamanlamada kullanımlarda yapılan tüm artışlar için Visual Studio kullanımını ve işlem emirlerini izlemek üzere beklenmektedir. yeni Visual Studio abonelikleri yönetim portalı, kullanılabilir ve kullanılan lisanslarınızı gösteren yararlı bir izleyici ile bu basit hale geçti.
 
 ## <a name="maximum-usage"></a>En fazla kullanım
-**Şirketinizin Visual Studio abonelikleri satın alma yükümlülüğü, şu durumlarda hemen yürürlüğe girer:**
+**şirketinizin Visual Studio abonelikler satın alma yükümlülüğü, şu durumlarda hemen etkili olur:**
 - Bir kullanıcıya bir lisans atanır **veya**
-- Bir Kullanıcı Visual Studio yazılımıyla etkileşime girer.
+- kullanıcı Visual Studio yazılımla etkileşime girer.
 
-Satın alma yükümlülüğünüz, kullanıcılara atadığınız maksimum abonelik sayısına göre belirlenir. Bu abonelik atama düzeyi, günlük Kullanıcı atamaları veya Visual Studio yazılımını kullanan bireyler, hangisi daha yüksektir.
+Satın alma yükümlülüğünüz, kullanıcılara atadığınız maksimum abonelik sayısına göre belirlenir. bu abonelik atama düzeyi, günlük kullanıcı atamaları veya Visual Studio yazılım kullanan bireyler, ne kadar yüksek olduğuna göre yüksek noktasıdır.
 
-- Daha fazla kullanıcıya Visual Studio abonelikleri atamak, en yüksek kullanım düzeyini yükseltir.  
-- Visual Studio abonelikleri yöneticileri, bir atamada bir azalma ve diğeri de artış sağlayan bireysel için atanan abonelik düzeyini değiştirebilir. Bir abonenin atanmış abonelik düzeyini azalttıktan sonra, tek başına yalnızca daha yüksek düzeydeki abonelikte olan her şeyi kullanarak ve kaldırmayı hemen durdurmanız gerekir. 
-- Özgün atamanın zamanından bu yana 90 gün geçtikten sonra Visual Studio abonelikleri yöneticileri bir aboneden diğerine abonelikleri yeniden atayabilir. 
+- Visual Studio aboneliklerini daha fazla kullanıcıya atamak, en yüksek kullanım düzeyini yükseltir.  
+- Visual Studio abonelikler yöneticileri, bir atamada bir azalma ve diğeri de artış sağlayan bireysel için atanan abonelik düzeyini değiştirebilir. Bir abonenin atanmış abonelik düzeyini azalttıktan sonra, tek başına yalnızca daha yüksek düzeydeki abonelikte olan her şeyi kullanarak ve kaldırmayı hemen durdurmanız gerekir. 
+- Visual Studio abonelik yöneticileri, özgün atamanın zamanından bu yana 90 gün geçtikten sonra abonelikleri bir aboneden diğerine yeniden atayabilir. 
     > [!NOTE]
     > En yüksek kullanım düzeyini yapay önlemek için, önce mevcut aboneliği kaldırarak ve sonra yenisini ekleyerek bunu her zaman yapın. 
-- Kuruluşunuzun en yüksek kullanım kullanımını izlemenize yardımcı olması için, Visual Studio [abonelikleri yönetim portalında](https://manage.visualstudio.com)bir [en büyük kullanım](maximum-usage.md) raporu bulunur. 
+- kuruluşunuzun en yüksek kullanım kullanımını izlemenize yardımcı olması için Visual Studio [abonelikleri yönetim portalındaki](https://manage.visualstudio.com) [en büyük kullanım](maximum-usage.md) raporu bulunur. 
 
 ## <a name="monthly-subscriptions-open-license-or-open-value"></a>Aylık abonelikler, açık lisans veya açık değer
-Açık Lisans ve açık değer gibi programlar aracılığıyla veya aylık olarak Visual Studio Market, abonelik ataması yapabilirsiniz. Bu durumda, kullanıcıların (çalışanlar veya harici yükleniciler) Visual Studio lisanslı yazılımlarla etkileşime başlayacağı ay boyunca daha fazla kullanıcı için siparişinizi işlemelidir.
+açık lisans ve açık değer gibi programlar aracılığıyla veya aylık olarak Visual Studio market aracılığıyla abonelik ataması yapabilirsiniz. bu durumda, kullanıcıların (çalışanlar veya harici yükleniciler) Visual Studio lisanslı yazılımlarla etkileşime başlayacağı ay boyunca daha fazla kullanıcı için siparişinizi işlemelidir.
 
-## <a name="enterprise-mpsa-and-select-agreements"></a>Enterprise, MPSA ve Select anlaşmaları
-Microsoft Kurumsal anlaşmalar (EA), MPSA ve Select Plus sözleşmeleri, Visual Studio yazılımlarını zaman içinde nasıl kullanacağınızı ve lisanslayabilmeniz için size esneklik sağlar. Visual Studio yöneticileri, yazılım lisanslarını sözleşme dönemi boyunca belirlenen en yüksek kullanıma kadar getirecek bir yıllık True-Up sırası vermelidir.
+## <a name="enterprise-mpsa-and-select-agreements"></a>Enterprise, mpsa ve seçme anlaşmaları
+Microsoft Enterprise anlaşmaları (EA), mpsa ve Select Plus anlaşmaları, zaman içinde Visual Studio yazılımı kullanma ve lisans verme konusunda size esneklik sağlar. Visual Studio yöneticileri, yazılım lisanslarını sözleşme dönemi boyunca belirlenen maksimum kullanım sayısına getirmek için yıllık bir True-Up sırası almalıdır.
 
 ## <a name="resources"></a>Kaynaklar
 - Yardıma mı ihtiyacınız var?  [Abonelik desteğiyle](https://aka.ms/vsadminhelp)iletişim kurun.

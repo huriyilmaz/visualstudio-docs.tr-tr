@@ -11,17 +11,18 @@ ms.assetid: fafe826f-4ebf-4572-b2a3-d5dd2916c12f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4d0d61565d57b7e025d67689420dcbf82c93707a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e2db37f558aaa39444deef994a885fc424cede528588e376d1382231a7d3a13f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083121"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415448"
 ---
 # <a name="ienumdebugcustomattributesgetcount"></a>IEnumDebugCustomAttributes::GetCount
 Bir Numaralandırıcı içindeki özel özniteliklerin sayısını alır.

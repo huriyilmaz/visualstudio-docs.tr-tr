@@ -7,26 +7,27 @@ ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 88298cf9fecdb6ce3862ee289d63c4f31b748449
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4da4dd43094b5e16f5ebdbee54771296ceb15ad69d5fca5e356f86e682a4042d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955807"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121366504"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Test denetleyicilerini ve test aracılarını yönetme
 
-Testleri uzaktan çalıştırmak, testleri birden çok makineye dağıtmak veya yük testleri çalıştırmak için Visual Studio 'Yu kullanmak istiyorsanız bir test denetleyicisi, test aracıları ve test ayarları dosyası yapılandırmanız gerekir. Bu konu, ilk kez yüklenip yapılandırıldıktan sonra test denetleyicilerinin ve test aracılarının nasıl yönetileceğini açıklar.
+testleri uzaktan çalıştırmak, testleri birden çok makineye dağıtmak veya yük testleri çalıştırmak için Visual Studio kullanmak istiyorsanız, bir test denetleyicisi, test aracıları ve test ayarları dosyası yapılandırmanız gerekir. Bu konu, ilk kez yüklenip yapılandırıldıktan sonra test denetleyicilerinin ve test aracılarının nasıl yönetileceğini açıklar.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ::: moniker range="vs-2017"
-Laboratuvar ortamlarında testleri çalıştırmak için Microsoft Test Yöneticisi kullanıyorsanız, Microsoft Test Yöneticisi için **Laboratuvar merkezindeki** **Test denetleyicisi Yöneticisi** ' ni kullanarak test denetleyicilerini ve aracılarını yönetirsiniz. Bu konu yalnızca, testleri çalıştırmak için Visual Studio kullanıyorsanız geçerlidir.
+Laboratuvar ortamlarında testleri çalıştırmak için Microsoft Test Yöneticisi kullanıyorsanız, Microsoft Test Yöneticisi için **Laboratuvar merkezindeki** **Test denetleyicisi Yöneticisi** ' ni kullanarak test denetleyicilerini ve aracılarını yönetirsiniz. bu konu yalnızca, testleri çalıştırmak için Visual Studio kullanıyorsanız geçerlidir.
 ::: moniker-end
 
-Visual Studio 'da testleri çalıştırmak için test aracıları ve test denetleyicilerinin nasıl yükleneceği ve yapılandırılacağı hakkında bilgi için bkz. [test aracılarını ve denetleyicilerini yapılandırma](../test/configure-test-agents-and-controllers-for-load-tests.md).
+test aracılarını ve test denetleyicilerini Visual Studio testleri çalıştırmak üzere yüklemek ve yapılandırmak hakkında daha fazla bilgi için bkz. [test aracılarını ve denetleyicilerini yapılandırma](../test/configure-test-agents-and-controllers-for-load-tests.md).
 
 Test denetleyicisini ve tüm kayıtlı aracıları yapılandırmak ve izlemek için, test projenizde çalıştırmak istediğiniz testleri içeren bir test ayarları dosyası olması gerekir. Test ayarları dosyasını açın, **rol** ' i seçin ve **Denetleyici** alanı Için açılan listeden **Test Denetleyicilerini Yönet** ' i seçin.
 
@@ -85,7 +86,7 @@ Farklı bir test denetleyicisine test aracısı eklemek isteyebilirsiniz veya ye
     > [!NOTE]
     > Varsayılan bağlantı noktası numarası 6901 ' dir.
 
-4. Değişikliklerinizi kaydetmek için **Ayarları Uygula**' yı seçin. **Yapılandırma Özeti** iletişim kutusunu kapatın ve ardından **Test Aracısı yapılandırma aracını** kapatın.
+4. değişikliklerinizi kaydetmek için **Ayarlar uygula**' yı seçin. **Yapılandırma Özeti** iletişim kutusunu kapatın ve ardından **Test Aracısı yapılandırma aracını** kapatın.
 
 > [!WARNING]
 > Aracı şu anda başka bir test denetleyicisinde çalışacak şekilde yapılandırıldıysa, test aracısını o denetleyiciden kaldırmanız gerekir.
@@ -110,7 +111,7 @@ Visual Studio 2019 ' de, test denetleyicisi bir proje ile kayıtlıysa test arac
 ::: moniker-end
 Test denetleyicisi bir projeye kayıtlı değilse, bu adımları izleyin.
 
-1. Visual Studio 'da test projenizin test ayarları dosyasını açın, **rol** ' i seçin ve **Denetleyici** alanı Için açılan listeden **Test Denetleyicilerini Yönet** ' i seçin.
+1. Visual Studio test projeniz için test ayarları dosyasını açın, **rol** ' i seçin ve **denetleyici** alanı için açılan listeden **test denetleyicilerini yönet** ' i seçin.
 
    **Test denetleyicisini Yönet** iletişim kutusu görüntülenir.
 
@@ -145,7 +146,7 @@ Aşağıdaki yordamları kullanarak bir test aracısının durumunu ve diğer ay
 > Test Aracısı bir proje ile kayıtlı bir test denetleyicisine kayıtlıysa, Microsoft Test Yöneticisi ayarları değiştirin.
 ::: moniker-end
 
-1. Test denetleyicisini ve bir yük testi için kayıtlı aracıları yapılandırmak ve izlemek için, Visual Studio 'da **Yük testi** menüsünü ve ardından **Test Denetleyicilerini Yönet**' i seçin. Diğer herhangi bir test için, Visual Studio 'da test projenizin test ayarları dosyasını açın, **rol** ' i seçin ve **Denetleyici** alanı Için açılan listeden **Test Denetleyicilerini Yönet** ' i seçin.
+1. test denetleyicisini ve bir yük testi için kayıtlı aracıları yapılandırmak ve izlemek için, Visual Studio ' de **yük testi** menüsünü seçin ve ardından **test denetleyicilerini yönet**' i seçin. diğer herhangi bir test için, Visual Studio ' de test projeniz için test ayarları dosyasını açın, **rol** ' i seçin ve **denetleyici** alanı için açılan listeden **test denetleyicilerini yönet** ' i seçin.
 
    **Test denetleyicisini Yönet** iletişim kutusu açılır.
 
@@ -157,11 +158,11 @@ Aşağıdaki yordamları kullanarak bir test aracısının durumunu ve diğer ay
 
 1. Aşağıdaki test Aracısı özelliklerini gerekli şekilde değiştirin:
 
-|Test Aracısı özelliği|Description|
+|Test Aracısı özelliği|Açıklama|
 |-|-----------------|
 |**Ağırlıklı**|Farklı performans düzeyleriyle test aracıları kullandığınızda yükü dağıtmak için kullanılır. Örneğin, 100 ağırlığı olan bir test aracısı, yük, 50 ağırlığa sahip bir test aracısı olarak iki kat alır.|
-|**IP değiştirme**|IP geçişini yapılandırmak için kullanılır. IP anahtarlama, bir test aracısının bir IP adresi aralığı kullanarak istekleri sunucuya göndermesini sağlar. Bu, farklı istemci bilgisayarlardan gelen çağrıların benzetimini yapar.<br /><br /> Yük testiniz bir Web grubuna erişiyorsa, IP geçişi önemlidir. Çoğu yük dengeleyiciler, istemcinin IP adresini kullanarak bir istemciyle belirli bir Web sunucusu arasında benzeşim kurar. Tüm istekler tek bir istemciden geliyor gibi görünüyorsa, yük dengeleyici yükü dengeetmez. Web grubunda iyi yük dengelemesi elde etmek için isteklerin bir IP adresi aralığından geldiğinden emin olun. **Note:**  Bir ağ bağdaştırıcısı belirtebilir veya şu anda kullanılmayan birini otomatik olarak seçmek için **(Tümü Atanmamış)** seçeneğini kullanabilirsiniz. <br /><br /> IP anahtarlama özelliğini kullanmak için, Visual Studio Test Aracısı hizmetinin bu aracı bilgisayar için Yöneticiler grubunda bir kullanıcı olarak çalışıyor olması gerekir. Bu Kullanıcı, aracı kurulumu sırasında seçilir, ancak hizmetin özellikleri değiştirilerek yeniden başlatılarak değiştirilebilir.<br /><br /> IP geçişinin düzgün çalıştığını doğrulamak için Web sunucusunda IIS günlüğü 'nü etkinleştirin, isteklerin yapılandırdığınız IP adreslerinden geldiğini doğrulamak için IIS günlük oluşturma işlevini kullanın.|
-|**Öznitelikler**|Test Aracısı seçiminde kullanılabilecek ad/değer çiftleri kümesi. Örneğin, bir test belirli bir işletim sistemi gerektirebilir. Öznitelikleri, test ayarları dosyanızın **Roller** sekmesine ekleyebilirsiniz ve eşleşen özniteliklere sahip bir test aracısı seçmek için kullanılabilirler. Birden çok makine üzerinde bir test çalıştırmak istiyorsanız, testlerinizi çalıştırmak için yapılandırılan test ayarları rolünde bir öznitelik oluşturun ve ardından bu rolde kullanmak istediğiniz her test aracısında eşleşen bir öznitelik yapılandırın. **Note:**  Bu ayar yalnızca, bir projeye kayıtlı olmayan bir test denetleyicisiyle kayıtlı test aracılarında kullanılabilir, çünkü bu öznitelikler yalnızca Visual Studio için test ayarları 'nda kullanılır.|
+|**IP değiştirme**|IP geçişini yapılandırmak için kullanılır. IP anahtarlama, bir test aracısının bir IP adresi aralığı kullanarak istekleri sunucuya göndermesini sağlar. Bu, farklı istemci bilgisayarlardan gelen çağrıların benzetimini yapar.<br /><br /> Yük testiniz bir Web grubuna erişiyorsa, IP geçişi önemlidir. Çoğu yük dengeleyiciler, istemcinin IP adresini kullanarak bir istemciyle belirli bir Web sunucusu arasında benzeşim kurar. Tüm istekler tek bir istemciden geliyor gibi görünüyorsa, yük dengeleyici yükü dengeetmez. Web grubunda iyi yük dengelemesi elde etmek için isteklerin bir IP adresi aralığından geldiğinden emin olun. **Note:**  Bir ağ bağdaştırıcısı belirtebilir veya şu anda kullanılmayan birini otomatik olarak seçmek için **(Tümü Atanmamış)** seçeneğini kullanabilirsiniz. <br /><br /> ıp anahtarlama özelliğini kullanmak için, Visual Studio Test aracısı hizmeti, aracı bilgisayar için yöneticiler grubunda bir kullanıcı olarak çalışıyor olmalıdır. Bu Kullanıcı, aracı kurulumu sırasında seçilir, ancak hizmetin özellikleri değiştirilerek yeniden başlatılarak değiştirilebilir.<br /><br /> IP geçişinin düzgün çalıştığını doğrulamak için Web sunucusunda IIS günlüğü 'nü etkinleştirin, isteklerin yapılandırdığınız IP adreslerinden geldiğini doğrulamak için IIS günlük oluşturma işlevini kullanın.|
+|**Öznitelikler**|Test Aracısı seçiminde kullanılabilecek ad/değer çiftleri kümesi. Örneğin, bir test belirli bir işletim sistemi gerektirebilir. Öznitelikleri, test ayarları dosyanızın **Roller** sekmesine ekleyebilirsiniz ve eşleşen özniteliklere sahip bir test aracısı seçmek için kullanılabilirler. Birden çok makine üzerinde bir test çalıştırmak istiyorsanız, testlerinizi çalıştırmak için yapılandırılan test ayarları rolünde bir öznitelik oluşturun ve ardından bu rolde kullanmak istediğiniz her test aracısında eşleşen bir öznitelik yapılandırın. **Note:**  Bu ayar yalnızca, bir projeye kayıtlı olmayan bir test denetleyicisiyle kayıtlı test aracılarında kullanılabilir, çünkü bu öznitelikler yalnızca Visual Studio için test ayarlarında kullanılır.|
 
 Test Aracısı ağırlığı ve test aracısı öznitelik değişiklikleri hemen yürürlüğe girer, ancak çalıştıran testleri etkilemez. IP adresi aralığı, test denetleyicisi yeniden başlatıldıktan sonra devreye girer.
 
@@ -174,7 +175,7 @@ Seçim Bir test aracısının durumunu değiştirmek için, listeden aracıyı s
 
 Bir test denetleyicisi yapılandırmak için, **takım test denetleyicisi yapılandırma aracını** kullanmanız gerekir. Test denetleyicinizi yapılandırırken, test denetleyicinizi farklı bir proje koleksiyonu ile kaydedebilir veya test denetleyicinizin kaydını bir proje koleksiyonundan silebilirsiniz.
 
-Test denetleyicinizi Team Foundation Server projesi koleksiyonunuza kaydetmek istiyorsanız, test denetleyicisi hizmeti için kullandığınız hesabın proje koleksiyonu için proje koleksiyonu test hizmeti hesapları grubunun bir üyesi olması veya test denetleyicisi yapılandırma aracını çalıştırmak için kullandığınız hesabın bir proje koleksiyonu Yöneticisi olması gerekir.
+test denetleyicinizi Team Foundation Server projesi koleksiyonunuza kaydetmek istiyorsanız, test denetleyicisi hizmeti için kullandığınız hesabın, Project koleksiyonu için Project koleksiyon test hizmeti hesapları grubunun bir üyesi olması veya test denetleyicisi yapılandırma aracını çalıştırmak için kullandığınız hesabın bir Project koleksiyon yöneticisi olması gerekir.
 
 > [!NOTE]
 > Bir test denetleyicisinin bir proje koleksiyonunda mevcut ortamları bulunan bir proje koleksiyonundan kaydını kaldırırsanız, bu proje koleksiyonunu taşıdıysanız ve test denetleyicisini taşınan proje koleksiyonuna yeniden kaydettiğinizde, ortamlar hala sürdürülür.
@@ -190,9 +191,9 @@ Test denetleyicinizi Team Foundation Server projesi koleksiyonunuza kaydetmek is
     > [!NOTE]
     > Kullanıcı hesaplarında null parolalar desteklenmez.
 
-4. Seçim Test denetleyicinizi laboratuvar ortamıyla kullanmak istemiyorsanız, ancak yalnızca Visual Studio 'dan testleri çalıştırmak istiyorsanız, **Test denetleyicisini takım projesi koleksiyonuyla kaydet**' i temizleyin.
+4. Seçim test denetleyicinizi laboratuvar ortamıyla kullanmak istemiyorsanız, ancak yalnızca Visual Studio testleri çalıştırmak için, **test denetleyicisini takım Project koleksiyonuyla kaydet**' i temizleyin.
 
-5. Seçim Test denetleyicinizi yük testi için yapılandırmak için **Test denetleyicisini yük testi Için Yapılandır**' ı seçin. **Aşağıdaki SQL Server örneğinde yük testi sonuçları veritabanı oluştur** altında SQL Server örneğini girin.
+5. Seçim Test denetleyicinizi yük testi için yapılandırmak için **Test denetleyicisini yük testi Için Yapılandır**' ı seçin. **aşağıdaki SQL Server örneğinde yük testi sonuçları veritabanı oluştur** altında SQL Server örneğini girin.
 
 > [!NOTE]
 > Test denetleyicileri hakkında daha fazla sorun giderme için bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).

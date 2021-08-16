@@ -14,14 +14,15 @@ ms.assetid: 1e925025-3d21-4cdb-a917-78db7bb78fe9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2dc718f766c9369ae24fd7ff7acfef1f5d9b25e5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 72c8c3c91d9b06681c05cc834db60cc89b7692788f3f0a08e246c9658cb8fea0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075152"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414915"
 ---
 # <a name="extend-properties-and-the-property-window"></a>Özellikleri ve özellik penceresini genişletme
 **Özellikler** penceresi, seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve düzenlemek için kullanılır.

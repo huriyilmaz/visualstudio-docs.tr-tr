@@ -1,6 +1,6 @@
 ---
-description: Numaralandırmayı ilk FRAMEıNFO öğesine sıfırlar.
-title: 'IEnumDebugFrameInfo2:: Reset | Microsoft Docs'
+description: Numaralama öğesini ilk FRAMEINFO öğesine sıfırlar.
+title: IEnumDebugFrameInfo2::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: e149b559-f072-480b-9552-a452b147f3a8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2bccd2b0e106f1db6e9d013bb8d76cabb6970515
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f831ec32a51115dd1a7527e4b1a9ee3a41b93ea30549aba91a86f4113d54983b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091688"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415227"
 ---
 # <a name="ienumdebugframeinfo2reset"></a>IEnumDebugFrameInfo2::Reset
-Numaralandırmayı ilk öğeye sıfırlar.
+Numaralama öğesini ilk öğeye sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +40,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra Next yöntemine yapılan [sonraki](../../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md) çağrı, numaralamanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

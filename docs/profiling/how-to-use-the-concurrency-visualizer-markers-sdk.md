@@ -1,36 +1,37 @@
 ---
-title: Eşzamanlılık görselleştiricisi Işaretleyicileri SDK 'sını kullanma | Microsoft Docs
-description: Yayılma ve yazma bayrakları, iletiler ve uyarılar oluşturmak için Visual Studio 'da eşzamanlılık görselleştiricisi işaretleyicileri SDK 'sını nasıl kullanacağınızı öğrenin.
+title: Eşzamanlılık Görselleştiricisi İşaretçileri SDK'sı | Microsoft Docs
+description: Yayma ve yazma bayrakları, iletiler ve uyarılar oluşturmak Visual Studio eşzamanlılık Görselleştiricisi işaretçileri SDK'sı kullanmayı öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 19a45032-f8a7-4137-890e-2ceeec938b8d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fab15ce9d3782b2ef7e38d5cca0e2b71d77fbc46
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 203200b2b5326faa9c140f4a1bb414c0b8edbd1ae27eec5dfdb5247f205075db
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920763"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368350"
 ---
-# <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Nasıl yapılır: eşzamanlılık görselleştiricisi işaretçileri SDK 'sını kullanma
-Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarılar oluşturmak için Eşzamanlılık Görselleştiricisi SDK 'sının nasıl kullanılacağı gösterilmektedir.
+# <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Nasıl: Eşzamanlılık Görselleştiricisi işaretçileri SDK'sı kullanma
+Bu konu başlığında, eşzamanlılık GörselleştiriciSI SDK'sı kullanarak yayma ve bayrak, ileti ve uyarı oluşturma hakkında bilgi ve bilgiler ve bilgiler yer almaktadır.
 
 ### <a name="to-use-c"></a>C++ kullanmak için
 
-1. Uygulamanıza Eşzamanlılık Görselleştiricisi SDK 'Sı desteği ekleyin. Daha fazla bilgi için bkz. [eşzamanlılık GÖRSELLEŞTIRICISI SDK](../profiling/concurrency-visualizer-sdk.md).
+1. Uygulamanıza Eşzamanlılık GörselleştiriciSI SDK'sı desteği ekleyin. Daha fazla bilgi için [bkz. Eşzamanlılık Görselleştirici SDK'sı.](../profiling/concurrency-visualizer-sdk.md)
 
-2. `include`SDK için bir ifade ve bir `using` ifade ekleyin.
+2. SDK için `include` bir deyimi ve deyimi `using` ekleyin.
 
     ```cpp
     #include <cvmarkersobj.h>
     using namespace Concurrency::diagnostic;
     ```
 
-3. Varsayılan işaretleyici serisinde üç yayılma alanı oluşturmak için kod ekleyin ve her bir yayılma alanına bir bayrak, ileti ve uyarı yazın. Bayrakları, iletileri ve uyarıları yazma yöntemleri [marker_series](../profiling/marker-series-class.md) sınıfının üyeleridir. [Span](../profiling/span-class.md) sınıfı için Oluşturucu bir `marker_series` nesne gerektirir, böylece her yayılma belirli bir işaretleyici serisiyle ilişkilendirilir. `span`Silinen bir sona erer.
+3. Varsayılan işaretçi serisinde üç yayma alanı oluşturmak ve her bir yayılmaya bir bayrak, ileti ve uyarı yazmak için kod ekleyin. Bayrak, ileti ve uyarı yazma yöntemleri, marker_series [üyesidir.](../profiling/marker-series-class.md) Span sınıfının [oluşturucusu,](../profiling/span-class.md) her bir `marker_series` aralığın belirli bir işaretçi serisiyle ilişkilendirilen bir nesnesi gerektirir. Silindiğinde `span` sona erer.
 
     ```cpp
     marker_series series;
@@ -47,11 +48,11 @@ Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarıl
     delete alertSpan;
     ```
 
-4. Uygulamayı çalıştırmak için menü çubuğunda **Çözümle**, **Eşzamanlılık görselleştiricisi**, **geçerli projeden başla** ' yı seçin ve eşzamanlılık görselleştiricisi ' ı görüntüleyin. Aşağıdaki çizimde eşzamanlılık görselleştiricisi içindeki üç yayılma ve üç işaret gösterilmektedir.
+4. Uygulamayı çalıştırmak ve Eşzamanlılık Görselleştirici'yi görüntülemek için menü **çubuğunda** Analiz **,** Eşzamanlılık Görselleştiricisi, Geçerli Project Ile Başla'ya tıklayın. Aşağıdaki çizimde Eşzamanlılık Görselleştiricisi'nde üç yayma ve üç işaretçi gösterilmiştir.
 
-     ![3 işaretçileri ve uyarılarla eşzamanlılık görselleştiricisi](../profiling/media/cvmarkersnative.png "CvMarkersNative")
+     ![3 işaretçi ve uyarı ile Eşzamanlılık Görselleştiricisi](../profiling/media/cvmarkersnative.png "CvMarkersNative")
 
-5. `marker_series`İşaretleyici serisi için bir dize adı alan oluşturucuyu çağırarak ek, özel işaret serisi oluşturmak için kod ekleyin.
+5. için işaretçi serisi için bir dize adı alan oluşturucu çağırarak ek, özel işaretçi `marker_series` serisi oluşturmak için kod ekleyin.
 
     ```cpp
     marker_series flagSeries(_T("flag series"));
@@ -69,15 +70,15 @@ Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarıl
     delete messageSeriesSpan;
     ```
 
-6. Eşzamanlılık Görselleştiricisini göstermek için geçerli projeyi başlatın. İki işaretleyici serisi, Iş parçacıkları görünümündeki kendi kulvarları içinde görüntülenir. Aşağıdaki çizimde, iki yeni yayılma gösterilmektedir.
+6. Eşzamanlılık Görselleştiricisini görüntülemek için geçerli projeyi başlatma. İki işaretçi serisi, İş Parçacıkları Görünümünde kendi kulvarlarında görünür. Aşağıdaki çizimde iki yeni aralık gösterilmiştir.
 
-     ![Eşzamanlılık görselleştiricisi içindeki Iş parçacığı görünümünün ekran görüntüsü; bir işaret, bayrak ve ileti serisini, bayrak yayılım ve ileti yayılımı ile gösterir.](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
+     ![Eşzamanlılık Görselleştiricisi'nde bayrak aralığı ve ileti aralığı ile bir işaretçi, bayrak ve ileti serisi gösteren İş Parçacıkları görünümünün ekran görüntüsü.](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
 
-### <a name="to-use-visual-basic-or-c"></a>Visual Basic veya C 'yi kullanmak için\#
+### <a name="to-use-visual-basic-or-c"></a>Visual Basic veya C kullanmak için\#
 
-1. Uygulamanıza Eşzamanlılık Görselleştiricisi SDK 'Sı desteği ekleyin. Daha fazla bilgi için bkz. [eşzamanlılık GÖRSELLEŞTIRICISI SDK](../profiling/concurrency-visualizer-sdk.md).
+1. Uygulamanıza Eşzamanlılık GörselleştiriciSI SDK'sı desteği ekleyin. Daha fazla bilgi için [bkz. Eşzamanlılık Görselleştirici SDK'sı.](../profiling/concurrency-visualizer-sdk.md)
 
-2. `using` `Imports` SDK için bir veya ifadesini ekleyin.
+2. SDK için `using` bir `Imports` veya deyimi ekleyin.
 
     ```vb
     Imports Microsoft.ConcurrencyVisualizer.Instrumentation
@@ -87,7 +88,7 @@ Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarıl
     using Microsoft.ConcurrencyVisualizer.Instrumentation;
     ```
 
-3. Varsayılan işaretleyici serisinde üç yayılma alanı oluşturmak için kod ekleyin ve her bir yayılma için bir bayrak, ileti ve uyarı yazın. Statik yöntemi çağırarak bir [span](/previous-versions/hh694189(v=vs.140)) nesnesi oluşturun `EnterSpan` . Varsayılan seriye yazmak için, [işaretleyiciler](/previous-versions/hh694099(v=vs.140)) sınıfının statik yazma yöntemlerini kullanırsınız.
+3. Varsayılan işaretçi serisinde üç yayma alanı oluşturmak için kod ekleyin ve her bir yayılmaya bir bayrak, ileti ve uyarı yazın. Statik yöntemi [çağırarak bir Span](/previous-versions/hh694189(v=vs.140)) nesnesi `EnterSpan` oluştururuz. Varsayılan seriye yazmak için [Markers](/previous-versions/hh694099(v=vs.140)) sınıfının statik yazma yöntemlerini kullanırsiniz.
 
     ```vb
     Dim flagSpan As Span = Markers.EnterSpan("flag span")
@@ -125,11 +126,11 @@ Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarıl
     alertSpan.Leave();
     ```
 
-4. Uygulamayı çalıştırmak için menü çubuğunda **Çözümle**, **Eşzamanlılık görselleştiricisi**, **geçerli projeden başla** ' yı seçin ve eşzamanlılık görselleştiricisi ' ı görüntüleyin. Aşağıdaki çizimde eşzamanlılık görselleştiricinin Iş parçacığı görünümündeki üç yayılma ve üç işaret gösterilmektedir.
+4. Uygulamayı çalıştırmak ve Eşzamanlılık Görselleştirici'yi görüntülemek için menü **çubuğunda** Analiz **,** Eşzamanlılık Görselleştiricisi, Geçerli Project Ile Başla'ya tıklayın. Aşağıdaki çizimde Eşzamanlılık Görselleştiricisi'nin İş Parçacıkları Görünümü'nde üç yayma ve üç işaretçi gösterilir.
 
-     ![İşaretleyiciler ve uyarılarla eşzamanlılık görselleştiricisi](../profiling/media/cvmarkersmanaged.png "Cvmarkersyönetiliyor")
+     ![İşaretçiler ve uyarılar ile Eşzamanlılık Görselleştiricisi](../profiling/media/cvmarkersmanaged.png "CvMarkersManaged")
 
-5. Statik [CreateMarkerSeries](/previous-versions/hh694171(v=vs.140)) yöntemini kullanarak müşteri işaretleyici serisi oluşturmak için kod ekleyin. [MarkerSeries](/previous-versions/hh694127(v=vs.140)) sınıfı, yayılma ve yazma bayrakları, iletiler ve uyarılar oluşturmak için yöntemler içerir.
+5. Statik [CreateMarkerSeries](/previous-versions/hh694171(v=vs.140)) yöntemini kullanarak müşteri işaretçi serisi oluşturmak için kod ekleyin. [MarkerSeries sınıfı,](/previous-versions/hh694127(v=vs.140)) yayma ve bayrak, ileti ve uyarı oluşturma yöntemlerini içerir.
 
     ```VB
 
@@ -163,9 +164,9 @@ Bu konu başlığı altında, yayılma ve yazma bayrakları, iletiler ve uyarıl
     messageSeriesSpan.Leave();
     ```
 
-6. Eşzamanlılık Görselleştiricisini göstermek için geçerli projeyi başlatın. Üç markör serisi, Iş parçacıkları görünümündeki kendi kulvarları içinde görüntülenir. Aşağıdaki çizimde üç yeni yayılma gösterilmektedir.
+6. Eşzamanlılık Görselleştiricisini görüntülemek için geçerli projeyi başlatma. Üç işaretçi serisi, İş Parçacıkları Görünümünde kendi kulvarlarında görünür. Aşağıdaki çizimde üç yeni aralık gösterilmiştir.
 
-     ![Eşzamanlılık görselleştiricisi içindeki Iş parçacıkları görünümünün, bir ileti, uyarı ve bayrak yayılma ile bir işaret, bayrak ve ileti serisi gösteren ekran görüntüsü.](../profiling/media/cvmarkerseriesmanaged.png "Cvmarkerseriesyönetiliyor")
+     ![Eşzamanlılık Görselleştiricisi'nde ileti, uyarı ve bayrak aralığı ile bir işaretçi, bayrak ve ileti serisini gösteren İş Parçacıkları görünümünün ekran görüntüsü.](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık Görselleştiricisi SDK](../profiling/concurrency-visualizer-sdk.md)

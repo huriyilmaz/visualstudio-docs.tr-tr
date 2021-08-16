@@ -1,6 +1,6 @@
 ---
 title: Şekiller ve yollar çizin
-description: Yollar ve şekiller çizmek, bunları değiştirmek ve bunları birleştirmek için Visual Studio için Blend XAML Tasarımcısı özelliklerini kullanın.
+description: yollar ve şekiller çizmek, bunları değiştirmek ve bunları birleştirmek için Visual Studio için Blend XAML Tasarımcısı özelliklerini kullanın.
 ms.custom: SEO-VS-2020
 titleSuffix: Blend for Visual Studio
 ms.date: 09/22/2020
@@ -9,14 +9,15 @@ ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e815b3e4959727dab282fcbe0fcd1f82890bf8b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5557413cfed7512d6a429d65beae3771a0f0667c4f9c7b85af05795f1d87fe47
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847355"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365516"
 ---
 # <a name="draw-shapes-and-paths"></a>Şekiller ve yollar çizin
 

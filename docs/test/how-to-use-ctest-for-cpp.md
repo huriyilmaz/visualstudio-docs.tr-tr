@@ -1,40 +1,41 @@
 ---
 title: C++ için CTest kullanma
-description: Varsayılan olarak Visual Studio IDE ile tümleştirilmiş olan CTest ile test oluşturmayı ve çalıştırmayı öğrenin.
+description: Varsayılan olarak Visual Studio IDE ile tümleştirilmiş CTest ile test oluşturma ve çalıştırma hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 01/23/2020
 ms.topic: how-to
 ms.author: corob
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 23d235d4b18c9909868cf890e31d835b3f7ea948
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 44c2d2bc225369af7293de2fe4fef5bafa95db6f5fe58d400727119065df35fe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969288"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121409051"
 ---
-# <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>Visual Studio 2017 ve üzeri sürümlerde C++ için CTest kullanma
+# <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>Visual Studio 2017 ve sonrasında C++ için CTest kullanma
 
-CMake (CTest içeren), C++ iş yükünde **Masaüstü geliştirmenin** bir bileşeni olarak varsayılan olarak VISUAL Studio IDE ile tümleşiktir. Makinenize yüklemeniz gerekiyorsa Visual Studio Yükleyicisi programını açın, **C++ Ile masaüstü geliştirme** düğmesine tıklayın ve ardından **Değiştir**' e tıklayın. İş yükü bileşenleri listesi altında **Windows için C++ CMake Araçları ' nı** seçin.
+CMake (CTest içerir), **C++** ile Masaüstü Visual Studio'nin bir bileşeni olarak varsayılan olarak Visual Studio IDE ile tümleştirilmiştir. Makinenize yüklemeniz gerekirse, Visual Studio Yükleyicisi programını açın, **C++** ile Masaüstü Geliştirme düğmesine ve ardından Değiştir'e **tıklayın.** İş **yükü bileşenleri listesinin altında C++ Windows C++ CMake** araçlarını seçin.
 
 ## <a name="to-write-tests"></a>Testleri yazmak için
 
-Visual Studio 'da CMake desteği, Visual Studio proje sistemini kapsamaz. Bu nedenle, CTest testlerini tıpkı herhangi bir CMake ortamında olduğu gibi yazar ve yapılandırırsınız. `enable_testing()`Testi etkinleştirmek için komutunu ve `add_test()` `gtest_discover_tests()` Yeni bir test eklemek için veya komutunu kullanın. CTest hakkında daha fazla bilgi için bkz. [CMake belgeleri](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest). 
+Visual Studio CMake desteği, proje sisteminin Visual Studio dahil değil. Bu nedenle, CTest testlerini her CMake ortamında olduğu gibi yazıp yapılandırabilirsiniz. Testi `enable_testing()` etkinleştirmek için komutunu ve yeni `add_test()` bir test eklemek için veya komutunu `gtest_discover_tests()` kullanın. CTest hakkında daha fazla bilgi edinmek için [CMake belgelerine bakın.](https://gitlab.kitware.com/cmake/community/wikis/doc/ctest/Testing-With-CTest) 
 
-Visual Studio 'da CMake 'i kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'Da CMake projeleri](/cpp/build/cmake-projects-in-visual-studio).
+CMake'i uygulama içinde kullanma hakkında daha fazla Visual Studio için bkz. [Visual Studio.](/cpp/build/cmake-projects-in-visual-studio)
 
 ## <a name="to-run-tests"></a>Testleri çalıştırmak için
 
-CTest, **Test Gezgini** ile tamamen tümleşiktir ve hem Google hem de Boost birim testi çerçevelerini destekler. Bu çerçeveler, varsayılan olarak C++ iş yükünde **masaüstü geliştirme** içindeki bileşenler olarak dahil edilmiştir. Ancak, bir projeyi Visual Studio 'nun eski bir sürümünden yükseltiyorsanız, Visual Studio Yükleyicisi programını kullanarak bu çerçeveleri yüklemeniz gerekebilir.
+CTest, Test Gezgini ile tamamen **tümleşiktir ve** aynı zamanda hem Google hem de Boost birim testi çerçevelerini destekler. Bu çerçeveler varsayılan olarak C++ ile Masaüstü Geliştirme **iş yüküne bileşenler olarak** dahil edilir. Ancak, bir projeyi eski bir Visual Studio sürümünden yükseltıyorsanız, Visual Studio Yükleyicisi programını kullanarak bu çerçeveleri yüklemeniz gerekir.
 
-Aşağıdaki çizimde Google Test Framework kullanarak bir CTest çalıştırmasının sonuçları gösterilmektedir:
+Aşağıdaki çizimde, Google Test framework kullanılarak CTest çalıştırması sonuçları gösterilmiştir:
 
-![Visual Studio 'da Google Test Framework ile CTest](media/ctest-test-explorer.png)
+![Visual Studio'de Google Test Framework ile CTest](media/ctest-test-explorer.png)
 
-CTest kullanıyorsanız, Google veya Boost bağdaştırıcılarını kullandıysanız, sonuçları bireysel test yöntemi düzeyi yerine CTest düzeyinde görürsünüz. Hata ayıklamanıza ve yalnızca CTest yürütülebilir dosyalarında hata verebilir, ancak tek testlerin yığın izlemeleri desteklenmez.
+CTest kullanıyorsanız ancak Google veya Boost bağdaştırıcılarını değil, sonuçları tek tek test yöntemi düzeyi yerine CTest düzeyinde görüntülersiniz. Yalnızca CTest yürütülebilir dosyalarında hata ayıklama ve adım adım yol kullanabilirsiniz, ancak tek tek testlerde yığın izlemeleri desteklenmiyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

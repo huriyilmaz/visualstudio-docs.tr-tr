@@ -10,17 +10,18 @@ ms.assetid: b6abf3a4-ce60-4e66-9637-82ce911148de
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c57dabdc1be4253d0a9c68f394d21dc54387bb02
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f7a72c24e777480b1b533f54a418da49bfcfdc89a1e2a003f74b86d8bdbfa6f1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054393"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403006"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolswithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule
 **ICorDebugModule** nesnesi verilen hata ayıklama sembollerini yükler.

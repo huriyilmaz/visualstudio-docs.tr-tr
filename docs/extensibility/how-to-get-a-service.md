@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: hizmet alma | Microsoft Docs'
-description: Farklı özelliklere erişmek için Visual Studio hizmetlerini nasıl alabileceğinizi öğrenin. Bir VSPackage kullanarak çoğu hizmeti alabilirsiniz.
+description: farklı özelliklere erişmek için Visual Studio hizmetlerini nasıl alabileceğinizi öğrenin. Bir VSPackage kullanarak çoğu hizmeti alabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -10,18 +10,19 @@ ms.assetid: 1f000020-8fb7-4e39-8e1e-2e38c7fec3d4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9096250f72e6bf64b2c6b76eeaa313ee7769dd51
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 37a11d34b8691627c3050bed24b34082f9bb3c15be78ab8136fa98de0b3d2e55
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070095"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414733"
 ---
 # <a name="how-to-get-a-service"></a>Nasıl yapılır: hizmet alma
 
-Farklı özelliklere erişmek için genellikle Visual Studio Hizmetleri 'ni almanız gerekir. Genel olarak, bir Visual Studio hizmeti kullanabileceğiniz bir veya daha fazla arabirim sağlar. Bir VSPackage 'tan birçok hizmeti alabilirsiniz.
+farklı özelliklere erişmek için genellikle Visual Studio hizmetleri almanız gerekir. genel olarak, Visual Studio bir hizmet kullanabileceğiniz bir veya daha fazla arabirim sağlar. Bir VSPackage 'tan birçok hizmeti alabilirsiniz.
 
 ' Den türetilen ve doğru şekilde oluşturulmuş herhangi bir VSPackage, <xref:Microsoft.VisualStudio.Shell.Package> herhangi bir genel hizmeti isteyebilir. `Package`Sınıfı uyguladığı için <xref:System.IServiceProvider> , öğesinden türetilen herhangi bir VSPackage `Package` da bir hizmet sağlayıcıdır.
 
@@ -29,7 +30,7 @@ Visual Studio bir yüklediğinde <xref:Microsoft.VisualStudio.Shell.Package> , <
 
 ## <a name="getting-a-service-from-an-initialized-vspackage"></a>Başlatılmış bir VSPackage hizmetinden hizmet alma
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `GetServiceExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. her Visual Studio uzantısı, uzantı varlıklarını içeren bir vsıx dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `GetServiceExtension` . vsıx proje şablonunu, **yeni Project** iletişim kutusunda "vsıx" arayarak bulabilirsiniz.
 
 2. Şimdi **GetServiceCommand** adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *GetServiceCommand. cs* olarak değiştirin. Özel bir komut oluşturma hakkında daha fazla bilgi için, [bir menü komutuyla bir uzantı oluşturun](../extensibility/creating-an-extension-with-a-menu-command.md)
 

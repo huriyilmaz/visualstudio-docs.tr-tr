@@ -1,21 +1,22 @@
 ---
 title: Yönetilen kod için Genişletilmiş Tasarım Yönerge Kuralları kural kümesi
 ms.date: 11/04/2016
-description: Kullanılabilirlik ve bakım açısından yoğunlaşan Visual Studio 'da ayarlanan genişletilmiş tasarım yönergeleri kuralları kuralı hakkında bilgi edinin. Bkz. kural açıklamaları.
+description: Visual Studio, kullanılabilirlik ve bakım açısından odaklanan genişletilmiş tasarım yönergeleri kuralları kuralı hakkında bilgi edinin. Bkz. kural açıklamaları.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: a338caf2-b75d-4f23-a0f9-3024fa0bceac
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3555014113f84a5e21f21d1ab7d9a658e2c9aa6c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7a52421f9d2b98af34a67b796f95fa6babf00901eb56862f747019e9b0cd702f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860340"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121405402"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>Yönetilen kod için Genişletilmiş Tasarım Yönerge Kuralları kural kümesi
 
@@ -25,7 +26,7 @@ Genişletilmiş tasarım kılavuzu kuralları, [yönetilen önerilen kurallar](.
 
 Aşağıdaki tabloda, Microsoft genişletilmiş tasarım kılavuzu kuralları kural kümesindeki tüm kurallar açıklanmaktadır.
 
-|Kural|Description|
+|Kural|Açıklama|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
 |[CA1009](../code-quality/ca1009.md)|Olay işleyicileri doğru olarak bildirin|

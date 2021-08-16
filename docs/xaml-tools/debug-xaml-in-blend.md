@@ -1,6 +1,6 @@
 ---
 title: Blend 'de XAML hatalarını ayıklama | Microsoft Docs
-description: Uygulamanızdaki XAML hatalarını algılamak, hatalarını ayıklamak ve çözümlemek için Visual Studio için Blend araçlarını kullanmayı öğrenin.
+description: uygulamanızdaki XAML hatalarını algılamak, hatalarını ayıklamak ve çözümlemek için Visual Studio için Blend araçlarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,18 +8,19 @@ ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - uwp
-ms.openlocfilehash: e4ba5678d91779f0955147dbc87fd3b57cbe387c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3764a71b63968c879e3347f0a5c130c2d95ba3d22e7dd8bd5cc8914ccfa50669
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876412"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365697"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 
-Uygulamanızdaki XAML hatalarını ayıklamak için Visual Studio için Blend içindeki araçları kullanabilirsiniz. Bir proje oluşturduğunuzda, tüm hatalar **sonuçlar** panelinde görüntülenir. Hatayla ilgili işaretlemeyi bulmak için bir hataya çift tıklayın. Çalışmak için daha fazla yer gerekiyorsa, **F12** tuşuna basarak **sonuçlar** panelini gizleyebilirsiniz.
+uygulamanızdaki XAML hatalarını ayıklamak için Visual Studio için Blend içindeki araçları kullanabilirsiniz. Bir proje oluşturduğunuzda, tüm hatalar **sonuçlar** panelinde görüntülenir. Hatayla ilgili işaretlemeyi bulmak için bir hataya çift tıklayın. Çalışmak için daha fazla yer gerekiyorsa, **F12** tuşuna basarak **sonuçlar** panelini gizleyebilirsiniz.
 
 ## <a name="syntax-errors"></a>Sözdizimi hataları
 
@@ -40,7 +41,7 @@ XAML sözdizimi hatalarının bazı yaygın nedenleri şunlardır:
 
 Ortak XAML sözdizimi hakkında daha fazla bilgi için bkz. [temel xaml sözdizimi Kılavuzu](/windows/uwp/xaml-platform/xaml-syntax-guide).
 
-Ayrıca Blend 'de basit kod hataları, derleme hataları ve çalışma zamanı hataları tanımlayabilir ve bunları çözebilirsiniz. Ancak, Visual Studio 'da kodun arkasındaki hataların tanımlanması ve çözümlenmesi daha kolay olabilir.
+Ayrıca Blend 'de basit kod hataları, derleme hataları ve çalışma zamanı hataları tanımlayabilir ve bunları çözebilirsiniz. Ancak, arka plan kod hataları Visual Studio içinde tanımlanması ve çözümlenmesi daha kolay olabilir.
 
 ### <a name="debugging-sample-xaml-code"></a>Örnek XAML kodunda hata ayıklama
 
@@ -48,13 +49,13 @@ Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol
 
 #### <a name="to-create-a-project"></a>Bir proje oluşturmak için
 
-1. Blend 'de **Dosya** menüsünü açın ve ardından **Yeni proje**' ye tıklayın.
+1. Blend 'de **Dosya** menüsünü açın ve ardından **yeni Project**' ye tıklayın.
 
-    **Yeni proje** iletişim kutusunda, sol tarafta proje türlerinin bir listesi görüntülenir. Bir proje türüne tıkladığınızda, onunla ilişkili proje şablonları sağ tarafta görüntülenir.
+    **yeni Project** iletişim kutusunda, sol tarafta proje türlerinin bir listesi görüntülenir. Bir proje türüne tıkladığınızda, onunla ilişkili proje şablonları sağ tarafta görüntülenir.
 
-2. Proje türleri listesinde **Windows Evrensel**' e tıklayın.
+2. proje türleri listesinde, **evrensel Windows**' ye tıklayın.
 
-3. Proje şablonları listesinde **boş uygulama (Evrensel Windows)** seçeneğine tıklayın.
+3. Proje şablonları listesinde **boş uygulama (evrensel Windows)** seçeneğine tıklayın.
 
 4. **Ad** metin kutusuna yazın `DebuggingSample` .
 
@@ -118,9 +119,9 @@ XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçiml
 
 ## <a name="debug-in-visual-studio"></a>Visual Studio'da hata ayıklama
 
-Uygulamanızda kodda daha kolay hata ayıklaması yapmak için, Visual Studio 'da Blend projelerini açabilirsiniz. Visual Studio 'da bir Blend projesi açmak için **Projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio 'da Düzenle**' ye tıklayın. Visual Studio 'da hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için CTRL + SHIFT + S tuşlarına basın ve ardından Blend 'e geri dönün. Projeyi yeniden yüklemeniz istenecektir. Blend 'de çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.
+uygulamanızdaki kodda hata ayıklamanın daha kolay olması için Visual Studio Blend projelerini açabilirsiniz. Visual Studio bir Blend projesi açmak için **projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio düzenle**' ye tıklayın. Visual Studio hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için Ctrl + shıft + S tuşlarına basın ve ardından Blend 'e geri dönün. Projeyi yeniden yüklemeniz istenecektir. Blend 'de çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.
 
-Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'DA UWP uygulamalarında hata ayıklama](../debugger/debugging-windows-store-and-windows-universal-apps.md).
+Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [VISUAL STUDIO UWP uygulamalarının hatalarını ayıklama](../debugger/debugging-windows-store-and-windows-universal-apps.md).
 
 ## <a name="get-help"></a>Yardım alın
 

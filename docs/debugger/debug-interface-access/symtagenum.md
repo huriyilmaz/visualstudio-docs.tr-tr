@@ -11,14 +11,15 @@ ms.assetid: 528a50cf-e13d-46ec-a98c-323d5d047de9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 72d07b0609fd9d66507c898854810043f2911e0c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e054a1fbea6e8517798ee2e18322d60591d4f3b17214c2c918efe867606500e0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161608"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404669"
 ---
 # <a name="symtagenum"></a>SymTagEnum
 Simgenin türünü belirtir.
@@ -70,7 +71,7 @@ enum SymTagEnum {
 ## <a name="elements"></a>Öğeler
 `SymTagNull` Simgenin tür içermediğini belirtir.
 
-`SymTagExe` Simgenin bir. exe dosyası olduğunu gösterir. `SymTagExe`Sembol deposu başına yalnızca bir sembol vardır. Genel kapsam olarak işlev görür ve bir üst öğeye sahip değildir.
+`SymTagExe` Simgenin bir .exe dosyası olduğunu gösterir. `SymTagExe`Sembol deposu başına yalnızca bir sembol vardır. Genel kapsam olarak işlev görür ve bir üst öğeye sahip değildir.
 
 `SymTagCompiland` Sembol deposunun her compiland bileşeni için compiland sembolünü gösterir. Yerel uygulamalar için, `SymTagCompiland` semboller görüntüye bağlı nesne dosyalarına karşılık gelir. Bazı Microsoft ara dil (MSIL) görüntüleri için, sınıf başına bir compiland vardır.
 

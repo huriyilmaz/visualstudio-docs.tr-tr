@@ -11,17 +11,18 @@ ms.assetid: b8333701-2718-4983-8513-0875fb7cb730
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9958c1c2b93d6547f1f3453bafc9e331f9061844
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 99d015fa327992f22fbab95513102ed9e376a96a29a6ae037ac8f33acb2ea30b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089062"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403019"
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
 Bu yöntem, ad verilen bir diğer ad bulur. Bu, programdaki tüm diğer adları arar.

@@ -11,17 +11,18 @@ ms.assetid: e0db6518-5a71-4adb-a407-4d2ac7a3e369
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b48e541f1f75f3ce7f0ef69e1e838cd54ffa19fa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6bf9e2d4562fe3c0245997f861dff2ed7ad319f4f4a6bdbe778d8d0def3e5f76
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080131"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415461"
 ---
 # <a name="ienumdebugcustomattributesreset"></a>IEnumDebugCustomAttributes::Reset
 Numaralandırma dizisini başlangıca sıfırlar.

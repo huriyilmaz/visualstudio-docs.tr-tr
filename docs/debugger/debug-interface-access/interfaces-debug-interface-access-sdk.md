@@ -12,14 +12,15 @@ ms.assetid: 62aee7c3-d314-4272-a32b-b2818f32fab8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d827e688e7618ebf66842eb4e633acdb483aa4f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c9b22e36d70f85ffbc4f28aea0925f681fa22703f92e578bc0e41d1a67cbabf9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155427"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404645"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasındaki arabirim sayfasında alfabetik olarak listelenir.
@@ -124,7 +125,7 @@ Bir bölüm katkısını açıklayan verileri alır, diğer bir deyişle, bir co
 
 [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)
 
-Bölüm numarasından verileri adres alanının kesimlerine eşler.
+bölüm numarasından adres alanının segmentlerine veri Haritalar.
 
 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 

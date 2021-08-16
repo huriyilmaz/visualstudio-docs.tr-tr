@@ -11,16 +11,17 @@ ms.assetid: 37412896-021a-4f73-9bb7-4125502c2e18
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: a792f19162cdcf41f86d52782dad31c21062cd55
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 83d816d540ead51260f731a044eb6d764eafb79d3816aa48ba454512ba4e9e27
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078220"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403290"
 ---
 # <a name="bp_location_code_context"></a>BP_LOCATION_CODE_CONTEXT
 Hata ayıklanan programdaki bir adrese doğrudan bağlanan bir kesme noktasının konumunu açıklar.

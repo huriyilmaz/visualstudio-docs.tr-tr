@@ -1,6 +1,6 @@
 ---
-title: Eski dil hizmetinde söz dizimi renklendirme | Microsoft Docs
-description: Sözcük temelli öğelerin veya belirteçlerin türlerini belirleyebilen bir Ayrıştırıcı veya tarayıcı sağlayarak eski dil hizmetinde söz dizimi renklendirmesi desteği sağlamayı öğrenin.
+title: Eski Dil Hizmeti HizmetLerinde Söz Dizimi Renklendirmesi | Microsoft Docs
+description: Eski dil hizmetlerinde söz dizimi renklendirmeyi desteklemek için sözcük öğelerinin veya belirteçlerin türlerini belirleyen bir ayrıştırıcı veya tarayıcıyı nasıl destekleyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,46 +13,47 @@ ms.assetid: 1ca1736a-f554-42e4-a9c7-fe8c3c1717df
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 627c0b5184588f77188928b6355a9034a3a3465e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1f6e9a5b1ee616157e0a79c41335640da0a3434d1115848b754c3c2a3e4c7e8f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080550"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414174"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Söz Dizimi Renklendirmesi
-Sözdizimi renklendirme, farklı renklerde ve stillerde bir programlama dilinin farklı öğelerinin bir kaynak dosyada görüntülenmesine neden olan bir özelliktir. Bu özelliği desteklemek için, dosyadaki sözcük öğelerinin veya belirteçlerin türlerini belirleyebilen bir Ayrıştırıcı veya tarayıcı sağlamanız gerekir. Birçok dil, anahtar sözcükleri, sınırlayıcıları (parantezler veya küme ayraçları gibi) ve açıklamaları farklı yollarla renklendirileyerek yorumlar.
+Söz dizimi renklendirme, bir programlama dilinin farklı öğelerinin bir kaynak dosyada farklı renkler ve stiller olarak görüntülenebilir. Bu özelliği desteklemek için, dosyada sözcük sözcük öğelerinin veya belirteçlerin türlerini belirleyen bir ayrıştırıcı veya tarayıcı belirtebilirsiniz. Birçok dil anahtar sözcükleri, sınırlayıcıları (parantezler veya ayraçlar gibi) ve yorumları farklı şekillerde renklendirmek için ayırt ediyor.
 
- Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Daha fazla bilgi edinmek için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../../extensibility/extending-the-editor-and-language-services.md).
+ Eski dil hizmetleri VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın daha yeni yolu MEF uzantılarını kullanmaktır. Daha fazla bilgi için [bkz. Düzenleyiciyi ve Dil Hizmetlerini Genişletme.](../../extensibility/extending-the-editor-and-language-services.md)
 
 > [!NOTE]
-> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni düzenleyici API'sini mümkün olan en kısa sürede kullanmaya başlamayı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
 ## <a name="implementation"></a>Uygulama
- Renklendirme desteği için, yönetilen paket çerçevesi (MPF), <xref:Microsoft.VisualStudio.Package.Colorizer> arabirimini uygulayan sınıfını içerir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> . Bu sınıf <xref:Microsoft.VisualStudio.Package.IScanner> , belirteç ve renklerin belirlenmesi için ile etkileşime girer. Tarayıcılar hakkında daha fazla bilgi için bkz. [eski dil hizmeti ayrıştırıcısı ve tarayıcısı](../../extensibility/internals/legacy-language-service-parser-and-scanner.md). <xref:Microsoft.VisualStudio.Package.Colorizer>Bu sınıf, belirtecin her karakterini renk bilgileriyle işaretler ve kaynak dosyayı görüntüleyen düzenleyiciye bu bilgileri döndürür.
+ Renklendirmeyi desteklemek için yönetilen paket çerçevesi (MPF), <xref:Microsoft.VisualStudio.Package.Colorizer> arabirimini uygulayan sınıfını <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> içerir. Bu sınıf, belirteci ve <xref:Microsoft.VisualStudio.Package.IScanner> renkleri belirlemek için ile etkileşime alır. Tarayıcılar hakkında daha fazla bilgi için [bkz. Eski Dil Hizmeti Ayrıştırıcısı ve Tarayıcı.](../../extensibility/internals/legacy-language-service-parser-and-scanner.md) Ardından sınıfı, belirteci her bir karakteri renk bilgileriyle işaretler ve bu bilgileri kaynak <xref:Microsoft.VisualStudio.Package.Colorizer> dosyayı görüntüleyen düzenleyiciye döndürür.
 
- Düzenleyiciye döndürülen renk bilgileri, renklenebilir öğeler listesinin bir dizinidir. Renklenebilir her öğe, bir renk değeri ve kalın veya üstü çizili gibi bir yazı tipi öznitelikleri kümesi belirtir. Düzenleyici, dil hizmetinizin kullanabileceği bir varsayılan renklenebilir öğeler kümesi sağlar. Yapmanız gereken tek şey, her belirteç türü için uygun renk dizinini belirtmektir. Ancak, özel renklenebilir öğeler ve belirteçler için sağladığınız dizinler kümesi sağlayabilir ve varsayılan liste yerine kendi renklenebilir öğeler listesine başvurabilirsiniz. Ayrıca, `RequestStockColors` özel renkleri desteklemek için kayıt defteri girişini 0 olarak ayarlamanız gerekir (veya herhangi bir girişi belirtmeniz gerekmez `RequestStockColors` ). Bu kayıt defteri girişini, Kullanıcı tanımlı özniteliğe adlandırılmış bir parametre ile ayarlayabilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> . Bir dil hizmetini kaydetme ve seçeneklerini ayarlama hakkında daha fazla bilgi için bkz. [eski dil hizmetini kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md).
+ Düzenleyiciye döndürülen renk bilgileri, renkleştirilebilir öğeler listesinde yer alan bir dizindir. Renkleştirilebilir her öğe bir renk değeri ve kalın veya üzerinde çizili gibi bir dizi yazı tipi özniteliği belirtir. Düzenleyici, dil hizmetinizin kullanabileceği bir dizi varsayılan renkleştirilebilir öğe sağlar. Tek ihtiyacınız olan her belirteç türü için uygun renk dizinini belirtmektir. Ancak, belirteçler için temin edersiniz ve varsayılan liste yerine kendi renklenebilir öğeler listeniz başvuru özel renklenebilir öğeler ve dizinler kümesi silebilir. Ayrıca, özel renkleri desteklemek `RequestStockColors` için kayıt defteri girişini 0 olarak ayarlay(veya hiç `RequestStockColors` belirtmezseniz) gerekir. Bu kayıt defteri girdisini adlandırılmış bir parametreyle kullanıcı tanımlı <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> öznitelik olarak ayarlayın. Dil hizmetini kaydetme ve seçeneklerini ayarlama hakkında daha fazla bilgi için bkz. [Eski Dil Hizmeti Kaydetme.](../../extensibility/internals/registering-a-legacy-language-service1.md)
 
 ## <a name="custom-colorable-items"></a>Özel Renklendirilebilir Öğeler
- Kendi özel renksiz öğelerinizi sağlamak için <xref:Microsoft.VisualStudio.Package.LanguageService.GetItemCount%2A> sınıfında ve metodunu geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorableItem%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> . İlk yöntem, dil hizmetinizin desteklediği özel renklenebilir öğelerin sayısını döndürür ve ikincisi dizine göre özel renklenebilir öğeyi alır. Özel renklenebilir öğelerin varsayılan listesini oluşturabilirsiniz. Dil hizmetinizin oluşturucusunda, tek yapmanız gereken, renklenebilir her öğe için bir ad sağlar. Visual Studio, kullanıcının farklı renklenebilir bir öğe kümesi seçtiği durumu otomatik olarak işler. Bu ad, **Seçenekler** iletişim kutusundaki (Visual Studio **Araçlar** menüsünden kullanılabilir) **yazı tipi ve renkler** Özellik sayfasında görünür ve bu ad, kullanıcının hangi renge geçersiz kılındığını belirler. Kullanıcının seçimleri, kayıt defterindeki bir önbellekte depolanır ve renk adından erişilir. **Yazı tipleri ve renkler** Özellik sayfası tüm renk adlarını alfabetik sırada listeler, böylece özel renklerinizi her renk adından önce dil adınızla gruplandırabilirsiniz; Örneğin, "**TestLanguage-Comment**" ve "**TestLanguage-anahtar sözcüğü**". Ya da renklenebilir öğelerinizi "**Comment (TestLanguage)**" ve "**anahtar sözcüğü (TestLanguage)**" türüne göre gruplandırabilirsiniz. Dil adına göre gruplandırma tercih edilir.
+ Kendi özel renkleştirilebilir öğelerinizi sağlamak için sınıfında ve yöntemini <xref:Microsoft.VisualStudio.Package.LanguageService.GetItemCount%2A> <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorableItem%2A> geçersiz kılmanız <xref:Microsoft.VisualStudio.Package.LanguageService> gerekir. İlk yöntem, dil hizmetinizin desteklediği özel renklenebilir öğe sayısını döndürür ve ikinci yöntem dizine göre özel renklenebilir öğeyi alır. Özel renklenebilir öğelerin varsayılan listesini oluşturun. Dil hizmetinizin oluşturucusnda tek gereken renklendirilebilir her öğeyi bir adla sağlamaktır. Visual Studio, kullanıcının farklı bir renklenebilir öğe kümesi seçmesi durumunda otomatik olarak işlemesi gerekir. Bu ad, Seçenekler iletişim kutusundaki Yazı Tipleri  ve Renkler özellik sayfasında görünen  addır (Visual Studio Araçları menüsünden kullanılabilir) ve bu ad kullanıcının hangi rengi geçersiz k olduğunu belirler.  Kullanıcının seçimleri kayıt defterindeki bir önbellekte depolanır ve renk adıyla erişilir. Yazı **Tipleri ve Renkler** özellik sayfasında tüm renk adları alfabetik sırada listelemektedir; bu nedenle her renk adının öncesini dil adınızla yazarak özel renklerinizi gruplayabilirsiniz; örneğin, "**TestLanguage- Comment**" ve "**TestLanguage- Keyword**". Veya renkleştirilebilir öğelerinizi " Açıklama **(TestLanguage)**" ve " Anahtar Sözcük **(TestLanguage) " türüne göre gruplandırabilirsiniz.** Dil adına göre gruplama tercih edilir.
 
 > [!CAUTION]
-> Var olan renklenebilir öğe adlarıyla çarpışmalardan kaçınmak için, dil adını renklendirilebilir öğe adına eklemeniz önemle tavsiye edilir.
+> Mevcut renkleştirilebilir öğe adlarında çakışmaları önlemek için dil adını renklendirmeli öğe adına dahil etmek kesinlikle önerilir.
 
 > [!NOTE]
-> Geliştirme sırasında renklerinizin birinin adını değiştirirseniz, renklerinizin ilk kez eriştiği Visual Studio 'nun oluşturduğu önbelleği sıfırlamanız gerekir. Bunu, Visual Studio SDK program menüsünden **deneysel Hive komutunu sıfırlayın** komutunu çalıştırarak yapabilirsiniz.
+> Geliştirme sırasında renklerinden birinin adını değiştirirsanız, renklerinize ilk erişil Visual Studio oluşturulan önbelleği sıfırlamanız gerekir. Bunu yapmak için Visual Studio SDK programı menüsünden **Deneysel Hive'Visual Studio** sıfırla komutunu çalıştırabilirsiniz.
 
- Renklenebilir öğeler listenizdeki ilk öğenin hiçbir şekilde başvurulmadığını unutmayın. Visual Studio her zaman bu öğe için varsayılan metin renklerini ve özniteliklerini sağlar. Bunu yapmanın en kolay yolu, ilk öğe olarak yer tutucu renklenebilir bir öğe sağlamadır.
+ Renkleştirilebilir öğeler listenizdeki ilk öğeye hiçbir zaman başvurulmay olduğunu unutmayın. Visual Studio her zaman bu öğe için varsayılan metin renklerini ve özniteliklerini sağlar. Bunu yapmanın en kolay yolu, ilk öğe olarak renklenebilir bir yer tutucu sağlamaktır.
 
-### <a name="high-color-colorable-items"></a>Yüksek renk Renklenebilir öğeler
- Renklenebilir öğeler, arabirim aracılığıyla 24 bit veya yüksek renk değerlerini de destekleyebilir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> . MPF <xref:Microsoft.VisualStudio.Package.ColorableItem> sınıfı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> arabirimini destekler ve 24 bit renkler, Oluşturucu içinde normal renklerle birlikte belirtilir. <xref:Microsoft.VisualStudio.Package.ColorableItem>Daha fazla ayrıntı için sınıfına bakın. Aşağıdaki örnekte, anahtar sözcükler ve açıklamalar için 24 bit renklerin nasıl ayarlanacağı gösterilmektedir. 24 bit renkler, kullanıcının masaüstünde 24 bit renk desteklenmiş olduğunda kullanılır; Aksi takdirde, normal metin renkleri kullanılır.
+### <a name="high-color-colorable-items"></a>Yüksek Renk Renklendirmeli Öğeler
+ Renkleştirilebilir öğeler, arabirim aracılığıyla 24 bit veya yüksek renk değerlerini de <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> desteklenebilir. MPF sınıfı arabirimini destekler ve oluşturucuda normal renklerle birlikte <xref:Microsoft.VisualStudio.Package.ColorableItem> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> 24 bit renkleri belirtilir. Daha fazla <xref:Microsoft.VisualStudio.Package.ColorableItem> ayrıntı için sınıfına bakın. Aşağıdaki örnekte anahtar sözcükler ve açıklamalar için 24 bit renklerin nasıl ayarlandır olduğu gösterilmiştir. 24 bit renkler, kullanıcının masaüstünde 24 bit renk destekleninken kullanılır; aksi takdirde, normal metin renkleri kullanılır.
 
- Bunların diliniz için varsayılan renkler olduğunu unutmayın; Kullanıcı bu renkleri istedikleri şeyle değiştirebilir.
+ Bunların diliniz için varsayılan renkler olduğunu unutmayın; kullanıcı bu renkleri istediğiniz gibi değiştirebilir.
 
 ### <a name="example"></a>Örnek
- Bu örnek, sınıfını kullanarak özel renklenebilir öğelerin dizisini bildirmek ve doldurmak için bir yol gösterir <xref:Microsoft.VisualStudio.Package.ColorableItem> . Bu örnekte, anahtar sözcüğü ve açıklama renkleri 24 bit renkler kullanılarak ayarlanır.
+ Bu örnek, sınıfını kullanarak bir dizi özel renklendirmeyi ve doldurmak için bir yol <xref:Microsoft.VisualStudio.Package.ColorableItem> gösterir. Bu örnek, 24 bit renkleri kullanarak anahtar sözcüğü ve açıklama renklerini ayarlar.
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -96,17 +97,17 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="the-colorizer-class-and-the-scanner"></a>Colorizer sınıfı ve tarayıcı
- Temel <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfın, <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorizer%2A> sınıfı instantiantes bir yöntemi vardır <xref:Microsoft.VisualStudio.Package.Colorizer> . Yönteminden döndürülen tarayıcı <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> <xref:Microsoft.VisualStudio.Package.Colorizer> sınıf oluşturucusuna geçirilir.
+## <a name="the-colorizer-class-and-the-scanner"></a>Colorizer sınıfı ve Tarayıcı
+ Temel <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfın, <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorizer%2A> sınıfını örnek alan bir yöntemi <xref:Microsoft.VisualStudio.Package.Colorizer> vardır. yönteminden döndürülen tarayıcı <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> sınıf oluşturucuya <xref:Microsoft.VisualStudio.Package.Colorizer> geçir edilir.
 
- <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>Yöntemi sınıfının kendi sürümüne uygulamanız gerekir <xref:Microsoft.VisualStudio.Package.LanguageService> . <xref:Microsoft.VisualStudio.Package.Colorizer>Sınıfı, tüm belirteç renk bilgilerini almak için tarayıcıyı kullanır.
+ yöntemini sınıfının <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> kendi sürümüne uygulamanız <xref:Microsoft.VisualStudio.Package.LanguageService> gerekir. sınıfı, <xref:Microsoft.VisualStudio.Package.Colorizer> tüm belirteç renk bilgilerini almak için tarayıcıyı kullanır.
 
- Tarayıcının <xref:Microsoft.VisualStudio.Package.TokenInfo> bulduğu her belirteç için bir yapıyı doldurması gerekir. Bu yapı, belirtecin kapladığı yayılma, kullanılacak renk dizini, hangi tür belirteci ve belirteç Tetikleyicileri gibi bilgiler içerir (bkz <xref:Microsoft.VisualStudio.Package.TokenTriggers> .). Sınıf tarafından renklendirme için yalnızca span ve Color dizini gereklidir <xref:Microsoft.VisualStudio.Package.Colorizer> .
+ Tarayıcının bulduğu her belirteç <xref:Microsoft.VisualStudio.Package.TokenInfo> için bir yapıyı doldurmak gerekir. Bu yapı, belirteci kapladığı süre, kullanmak için renk dizini, belirteç türü ve belirteç tetikleyicileri gibi bilgileri içerir (bkz. <xref:Microsoft.VisualStudio.Package.TokenTriggers> ). Sınıf tarafından renklendirme için yalnızca yayılma ve renk dizini <xref:Microsoft.VisualStudio.Package.Colorizer> gereklidir.
 
- Yapıda depolanan renk dizini <xref:Microsoft.VisualStudio.Package.TokenInfo> genellikle <xref:Microsoft.VisualStudio.Package.TokenColor> Numaralandırmadaki bir değerdir ve bu, anahtar sözcükler ve işleçler gibi çeşitli dil öğelerine karşılık gelen bir dizi adlandırılmış dizin sağlar. Özel renklenebilir öğeler listeniz, numaralandırmada sunulan öğelerle eşleşiyorsa <xref:Microsoft.VisualStudio.Package.TokenColor> , numaralandırmayı her belirtecin rengi olarak kullanabilirsiniz. Ancak, daha fazla renklenebilir öğeleriniz varsa veya var olan değerleri bu sırada kullanmak istemiyorsanız, özel renklenebilir öğeler listenizi gereksinimlerinize uyacak şekilde düzenleyebilir ve ilgili dizini bu listeye döndürebilirsiniz. <xref:Microsoft.VisualStudio.Package.TokenColor>Yalnızca dizini yapıda depolarken dizini bir öğesine atamalısınız <xref:Microsoft.VisualStudio.Package.TokenInfo> [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] .
+ Yapıda depolanan renk dizini genellikle anahtar sözcükler ve işleçler gibi çeşitli dil öğelerine karşılık gelen bir dizi adlandırılmış dizin sağlayan sabit verilerden bir <xref:Microsoft.VisualStudio.Package.TokenInfo> <xref:Microsoft.VisualStudio.Package.TokenColor> değerdir. Özel renklendirmeli öğeler listeniz, numaralamada sunulan öğelerle eşleştirilebilirse, her belirteci renk olarak yalnızca <xref:Microsoft.VisualStudio.Package.TokenColor> numaralama kullanabilirsiniz. Ancak, ek renklenebilir öğeleriniz varsa veya mevcut değerleri bu sırada kullanmak istemiyorsanız, özel renkleştirilebilir öğeler listenizi ihtiyaçlarınıza uyacak şekilde ayarlayabilir ve uygun dizini bu listeye geri getirebilirsiniz. Yalnızca dizinin yapısının içinde depolanması için dizinin bir dizinine at olduğundan <xref:Microsoft.VisualStudio.Package.TokenColor> <xref:Microsoft.VisualStudio.Package.TokenInfo> emin [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] olun.
 
 ### <a name="example"></a>Örnek
- Aşağıdaki örnek, tarayıcının üç belirteç türünü nasıl tanımlayabileceğini gösterir: sayılar, noktalama işaretleri ve tanımlayıcılar (sayı veya noktalama olmayan herhangi bir şey). Bu örnek yalnızca tanım amaçlıdır ve kapsamlı bir Ayrıştırıcı ve tarayıcı uygulamasını temsil etmez. Bir `Lexer` dize döndüren bir yöntem içeren bir sınıf olduğunu varsayar `GetNextToken()` .
+ Aşağıdaki örnekte, tarayıcının üç belirteç türü nasıl tanımlay olabileceği gösterir: sayılar, noktalama işaretleri ve tanımlayıcılar (sayı veya noktalama işareti değil her şey). Bu örnek yalnızca açıklayıcı amaçlara yöneliktir ve kapsamlı bir ayrıştırıcı ve tarayıcı uygulamasını temsil etmemektedir. Bir dize döndüren `Lexer` yöntemine sahip bir `GetNextToken()` sınıf olduğunu varsayıyor.
 
 ```csharp
 using Microsoft.VisualStudio.Package;

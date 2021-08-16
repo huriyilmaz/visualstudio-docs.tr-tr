@@ -11,17 +11,18 @@ ms.assetid: 941e4be7-858d-433a-9259-18d0d017be9e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 570fbcb49e4e96fce558c5981eb590ae33e0f0a6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 35fb7c1a383d879197b87da7201b10d9d07ddebae2503bc0372a372438ff371a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083186"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415508"
 ---
 # <a name="ienumdebugaddressesnext"></a>IEnumDebugAddresses::Next
 Bu yöntem, Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.

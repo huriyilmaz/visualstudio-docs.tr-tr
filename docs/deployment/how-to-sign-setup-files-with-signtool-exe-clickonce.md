@@ -1,6 +1,6 @@
 ---
 title: Kurulum dosyalarını SignTool.exe ile imzalama (ClickOnce)
-description: SignTool.exe kullanarak, değiştirilen dosyaların yüklenmemesini sağlamaya yardımcı olan ClickOnce uygulamalarına yönelik bir kurulum programını nasıl imzalayacağınızı öğrenin.
+description: ClickOnce uygulamaları için bir Kurulum programı imzalamak üzere SignTool.exe kullanmayı öğrenin. Bu, üzerinde oynanmış dosyaların yüklenmemelerini sağlamaya yardımcı olur.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,53 +18,54 @@ ms.assetid: 545a4005-d283-4110-9821-c78a9833c250
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: fdfdabf66c48a875f3b4316ac22e1911c141275c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7ac7b07a7c01a38221a1420383942b98cd772faac516c3a81cb673075d9cd045
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940533"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403867"
 ---
-# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Nasıl yapılır: kurulum dosyalarını SignTool.exe ile Imzalama (ClickOnce)
-Bir kurulum programını imzalamak için *SignTool.exe* kullanabilirsiniz (*setup.exe*). Bu işlem, değiştirilen dosyaların son kullanıcı bilgisayarlarında yüklü olmamasını sağlamaya yardımcı olur.
+# <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>Nasıl kullanılır: Kurulum dosyalarını SignTool.exe (ClickOnce)
+Bir Kurulum *SignTool.exe* (setup.exe)*imzalamak içinsetup.exe.* Bu işlem, üzerinde oynanmış dosyaların son kullanıcı bilgisayarlarına yüklenmemelerini sağlamaya yardımcı olur.
 
- Varsayılan olarak, ClickOnce imzalı bildirimlere ve imzalı bir kurulum programına sahiptir. Ancak, Kurulum programının parametrelerini daha sonra değiştirmek istiyorsanız Kurulum programını daha sonra imzalamanız gerekir. Kurulum programı imzalandıktan sonra parametreleri değiştirirseniz, imza bozulur.
+ Varsayılan olarak, ClickOnce ve imzalı bir Kurulum programı vardır. Ancak, Kurulum programının parametrelerini daha sonra değiştirmek için Kurulum programını daha sonra imzalamanız gerekir. Kurulum programı imzalandıktan sonra parametreleri değiştirirsiniz, imza bozulur.
 
- Aşağıdaki yordam imzasız bildirimler ve imzasız bir kurulum programı oluşturur. Ardından, imzalı bildirimler oluşturmak için Visual Studio 'da ClickOnce imzalama etkinleştirilir. Müşterinin yürütülebilir dosyayı kendi sertifikasıyla imzalayabilmesi için Kurulum programı imzasız olarak kalır.
+ Aşağıdaki yordam imzasız bildirimleri ve imzasız bir Kurulum programı üretir. Ardından, ClickOnce bildirimleri oluşturmak için Visual Studio oturum açma özelliği etkindir. Müşterinin yürütülebilir dosyayı kendi sertifikasıyla imzalaması için Kurulum programı imzalanmamış olarak bırakıldı.
 
-### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>İmzasız bir kurulum programı oluşturmak ve daha sonra imzalamak için
+### <a name="to-generate-an-unsigned-setup-program-and-sign-later"></a>İmzasız kurulum programı oluşturmak ve daha sonra imzalamak için
 
-1. Geliştirme bilgisayarında, bildirimleri imzalamak istediğiniz sertifikayı yükleyebilirsiniz.
+1. Geliştirme bilgisayarına, bildirimleri imzalamak istediğiniz sertifikayı yükleyin.
 
-2. **Çözüm Gezgini** içinde projeyi seçin.
+2. içinde projeyi **Çözüm Gezgini.**
 
-3. **Proje** menüsünde, *ProjectName* **özellikleri**' ne tıklayın.
+3. Proje Adı **Project** ProjeAdı *Özellikleri'ne* **tıklayın.**
 
-4. **İmzalama** sayfasında, **ClickOnce bildirimlerinin** işaretini kaldırın.
+4. İmzalama **sayfasında,** Oturum **açma bildirimlerinin ClickOnce temizleyebilirsiniz.**
 
-5. **Yayımla** sayfasında, **Önkoşullar**' ı tıklatın.
+5. Yayımla sayfasında Önkoşullar'a **tıklayın.** 
 
-6. Tüm önkoşulların seçili olduğunu doğrulayın ve ardından **Tamam**' a tıklayın.
+6. Tüm önkoşulların seçili olduğunu doğrulayın ve ardından Tamam'a **tıklayın.**
 
-7. **Yayımla** sayfasında, yayımlama ayarlarını doğrulayın ve **Şimdi Yayımla**' ya tıklayın.
+7. Yayımla **sayfasında** yayımlama ayarlarını doğrulayın ve Şimdi Yayımla'ya **tıklayın.**
 
-     Çözüm, imzasız uygulama bildirimini, imzasız dağıtım bildirimini, sürüme özgü dosyaları ve imzasız Kurulum programını yayımlama klasörü konumuna yayımlar.
+     Çözüm imzasız uygulama bildirimini, imzasız dağıtım bildirimini, sürüme özgü dosyaları ve imzasız Kurulum programını yayımlama klasörü konumunu yayımlar.
 
-8. **Yayımla** sayfasında, **Önkoşullar**' ı tıklatın.
+8. Yayımla sayfasında Önkoşullar'a **tıklayın.** 
 
-9. Önkoşul iletişim **kutusunda,** **Önkoşul bileşenlerini yüklemek Için Kurulum programı oluştur** seçimini kaldırın.
+9. **Önkoşullar iletişim** kutusunda Önkoşul bileşenlerini **yüklemek için Kurulum programı oluştur'u temizleyin.**
 
-10. **Yayımla** sayfasında, yayımlama ayarlarını doğrulayın ve **Şimdi Yayımla**' ya tıklayın.
+10. Yayımla **sayfasında** yayımlama ayarlarını doğrulayın ve Şimdi Yayımla'ya **tıklayın.**
 
-     Çözüm, imzalı uygulama bildirimini, imzalı dağıtım bildirimini ve sürüme özgü dosyaları yayımlama klasörü konumuna yayımlar. İmzasız Kurulum programı, yayımlama işlemi tarafından üzerine yazılmaz.
+     Çözüm, imzalı uygulama bildirimini, imzalı dağıtım bildirimini ve sürüme özgü dosyaları yayımlama klasörü konumunu yayımlar. Yayımlama işlemi imzasız Kurulum programının üzerine yazılmaz.
 
 11. Müşteri sitesinde bir komut istemi açın.
 
-12. *. Exe* dosyasını içeren dizine geçin.
+12. .exedosyasını *içeren.exe.*
 
-13. *. Exe* dosyasını aşağıdaki komutla imzalayın:
+13. .exe *dosyasını* aşağıdaki komutla imzalar:
 
     ```cmd
     signtool sign /sha1 CertificateHash Setup.exe
@@ -79,4 +80,4 @@ Bir kurulum programını imzalamak için *SignTool.exe* kullanabilirsiniz (*setu
     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+- [Nasıl yapılanlar: Uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

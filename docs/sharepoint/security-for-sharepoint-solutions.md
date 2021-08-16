@@ -1,6 +1,6 @@
 ---
-title: SharePoint çözümleri için güvenlik | Microsoft Docs
-description: SharePoint uygulamalarının güvenliğinin artırılmasına yardımcı olmak için Visual Studio 'Nun hangi özellikleri eklediğini öğrenin.
+title: SharePoint Solutions için güvenlik | Microsoft Docs
+description: Uygulama uygulamalarının Visual Studio yardımcı olmak için hangi özelliklerin SharePoint keşfedin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,76 +15,77 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 588b2af3672851bf7f452287d8383aa2d319347d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c46356124b7ed957d3ff61d4118ade2638538d242686875f4a69972b254a3a16
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881587"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121367459"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint çözümleri için güvenlik
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint uygulamalarının güvenliğinin artırılmasına yardımcı olmak için aşağıdaki özellikleri içerir.
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]uygulamaların güvenliğini artırmaya yardımcı olmak için aşağıdaki SharePoint içerir.
 
-## <a name="safe-control-entries"></a>Güvenli denetim girdileri
- İçinde oluşturulan her SharePoint proje öğesi [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] , güvenli denetimler koleksiyonunu temsil eden bir **Güvenli denetim girişleri** özelliğine sahiptir. **Güvenli** alt özelliği, güvenli hale getirmek istediğiniz denetimleri belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [Güvenli Web bölümleri belirtme](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts).
+## <a name="safe-control-entries"></a>Kasa girişlerini denetleme
+ içinde SharePoint her proje [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] öğesi, güvenli **denetim Kasa temsil eden** bir Denetim Girdileri özelliğine sahiptir. Bu **Kasa** özelliği, güvenli olarak değerlendirilen denetimleri belirtmenize olanak sağlar. Daha fazla bilgi için [bkz. Proje öğelerinde paket ve dağıtım bilgilerini sağlama ve](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) Uygulama [Kasa Web Bölümleri.](/previous-versions/office/developer/sharepoint2003/dd583154(v=office.11)#specifying-safe-web-parts)
 
-## <a name="allowpartiallytrustedcallers-attribute"></a>Allowpartiallytrustedçağıranlar özniteliği
- Varsayılan olarak, yalnızca çalışma zamanı kodu erişim güvenliği (CAS) sistemi tarafından tam olarak güvenilen uygulamalar paylaşılan bir yönetilen kod derlemesine erişebilir. Tam güvenilir bir derlemeyi Allowpartiallytrustedçağıranlar özniteliğiyle işaretlemek, kısmen güvenilen derlemelerin buna erişmesini sağlar.
+## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers özniteliği
+ Varsayılan olarak, yalnızca çalışma zamanı kod erişim güvenliği (CAS) sistemi tarafından tam olarak güvenilen uygulamalar paylaşılan yönetilen kod derlemelerine erişebilirsiniz. AllowPartiallyTrustedCallers özniteliğiyle tam olarak güvenilen bir derlemeyi işaretlemek, kısmen güvenilen derlemelerin bu derlemeye erişmesine olanak sağlar.
 
- Allowpartiallytrustedçağıranlar özniteliği, sistem genel derleme önbelleğine () dağıtılmayan herhangi bir SharePoint çözümüne eklenir [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)] . Bu, korumalı çözümleri veya SharePoint uygulama sepeti dizinine dağıtılan çözümleri içerir. Daha fazla bilgi için bkz. [Microsoft .NET Framework Için sürüm 1 güvenlik değişiklikleri](/previous-versions/msp-n-p/ff921345(v=pandp.10)) ve [SharePoint Foundation 'da Web bölümleri dağıtma](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
+ AllowPartiallyTrustedCallers özniteliği, sistem genel derleme önbelleğine SharePoint herhangi bir çözüme eklenir ( [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)] ). Bu, SharePoint uygulama Bin dizinine dağıtılan korumalı SharePoint çözümleri içerir. Daha fazla bilgi için bkz. Microsoft .NET Framework için Sürüm [1](/previous-versions/msp-n-p/ff921345(v=pandp.10)) Güvenlik Değişiklikleri ve [Web Bölümleri SharePoint Foundation.](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14))
 
-## <a name="safe-against-script-property"></a>Betik özelliğine karşı güvenli
- *Betiği ekleme* , olası kötü amaçlı kodun denetimlere veya Web sayfalarına eklenmesidir. SharePoint 2010 sitelerini betik eklenmesine karşı korumaya yardımcı olmak için, katkıda bulunanlar, varsayılan olarak Web bölümlerini veya özelliklerini görüntüleyemez veya düzenleyemez. Bu davranış, SafeAgainstScript adlı bir SafeControl özniteliğiyle denetlenir. ' De [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir proje öğesinin **Güvenli denetim girdileri** alt özelliğindeki bu özniteliği **betikle güvende** olarak ayarlayın. Daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) ve [nasıl yapılır: denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md).
+## <a name="safe-against-script-property"></a>Kasa betik özelliğine karşı güvenlik
+ *Betik ekleme,* kötü amaçlı olabilecek kodun denetimlere veya Web sayfalarına yerleştirilmesidir. 2010 SharePoint betik eklemeye karşı korumaya yardımcı olmak için katkıda bulunanlar Web bölümlerini veya özelliklerini varsayılan olarak görüntüleyemez veya düzenleyemez. Bu davranış SafeAgainstScript adlı bir SafeControl özniteliği tarafından denetlenmektedir. içinde, bu özniteliği bir proje öğesinin Komut Kasa Denetimi Girdileri altöz [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] **Kasa ayarlayın.**  Daha fazla bilgi için [bkz. Proje öğelerinde paket ve](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) dağıtım bilgilerini sağlama ve [Nasıl kullanılır: Denetimleri güvenli denetimler olarak işaretleme.](../sharepoint/how-to-mark-controls-as-safe-controls.md)
 
-## <a name="vista-and-windows-7-user-account-control"></a>Vista ve Windows 7 Kullanıcı hesabı denetimi
- [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] ve [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] Kullanıcı hesabı denetimi (UAC) olarak bilinen bir güvenlik özelliği ekleyebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Üzerinde ve sistemlerinde SharePoint çözümleri geliştirmek [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] IÇIN [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] , UAC [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir sistem yöneticisi olarak çalıştırmanızı gerektirir. **Başlat** menüsünde, için kısayol menüsünü açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından **yönetici olarak çalıştır**' ı seçin.
+## <a name="vista-and-windows-7-user-account-control"></a>Vista ve Windows 7 Kullanıcı Hesabı Denetimi
+ [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] ve [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] Kullanıcı Hesabı Denetimi (UAC) olarak bilinen bir güvenlik özelliğine sahiptir. ve sistemlerinde SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözümleri geliştirmek için [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] UAC, sistem yöneticisi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] olarak çalıştırmanız gerekir. Başlat **menüsünden** kısayol menüsünü açın ve ardından Yönetici [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] olarak **çalıştır'ı seçin.**
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Her zaman yönetici olarak çalıştır kısayolunu yapılandırmak için, kısayol menüsünü açın, **Özellikler**' i seçin, **Özellikler** iletişim kutusunda **Gelişmiş** düğmesini seçin ve ardından **yönetici olarak çalıştır** onay kutusunu seçin.
+ Kısayolu her zaman yönetici olarak çalıştıracak şekilde yapılandırmak için kısayol menüsünü açın, Özellikler'i seçin, Özellikler iletişim kutusunda Gelişmiş düğmesini seçin ve ardından Yönetici olarak çalıştır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **onay** kutusunu seçin.   
 
- Daha fazla bilgi için bkz. [Windows Vista 'Da Kullanıcı hesabı denetimini anlama ve yapılandırma](/previous-versions/windows/it-pro/windows-vista/cc709628(v=ws.10)). ve [Windows 7 Kullanıcı hesabı denetimi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731416(v=ws.10)).
+ Daha fazla bilgi için, [bkz. Understanding and Configuring User Account Control in Windows Vista](/previous-versions/windows/it-pro/windows-vista/cc709628(v=ws.10)). ve [Windows 7 Kullanıcı Hesabı Denetimi.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731416(v=ws.10))
 
-## <a name="sharepoint-permissions-considerations"></a>SharePoint izinleri konuları
- SharePoint çözümleri geliştirmek için, SharePoint çözümlerini çalıştırmak ve hatalarını ayıklamak için yeterli izinlere sahip olmanız gerekir. Bir SharePoint çözümünü test etmeden önce, gerekli izinlere sahip olduğunuzdan emin olmak için aşağıdaki adımları uygulayın:
+## <a name="sharepoint-permissions-considerations"></a>SharePoint izinler hakkında dikkat edilmesi gerekenler
+ Farklı SharePoint geliştirmek için, bu çözümleri çalıştırmak ve hata ayıklamak için yeterli SharePoint gerekir. Bir çözümde test SharePoint önce, gerekli izinlere sahip olduğundan emin olmak için aşağıdaki adımları uygulayın:
 
-1. Kullanıcı hesabınızı sisteme yönetici olarak ekleyin.
+1. Kullanıcı hesabını sistemde Yönetici olarak ekleyin.
 
-2. Kullanıcı hesabınızı SharePoint sunucusu için bir grup yöneticisi olarak ekleyin.
+2. SharePoint sunucusu için kullanıcı hesabını Grup Yöneticisi SharePoint ekleyin.
 
-    1. SharePoint 2010 Merkezi Yönetimi 'nde **Grup yöneticileri grubunu yönet** bağlantısını seçin.
+    1. 2010 SharePoint Yönetim'de Grup yöneticilerini **yönet grup bağlantısını** seçin.
 
-    2. **Grup yöneticileri** sayfasında, **Yeni** menü seçeneğini belirleyin.
+    2. Grup **Yöneticileri sayfasında** Yeni menü **seçeneğini** belirleyin
 
-3. Kullanıcı hesabınızı WSS_ADMIN_WPG grubuna ekleyin.
+3. Kullanıcı hesabınıza kullanıcı WSS_ADMIN_WPG ekleyin.
 
 ## <a name="additional-security-resources"></a>Ek güvenlik seçenekleri
- Güvenlik sorunları hakkında daha fazla bilgi için aşağıdaki konulara bakın.
+ Güvenlik sorunları hakkında daha fazla bilgi için aşağıdakilere bakın.
 
 ### <a name="visual-studio-security"></a>Visual Studio güvenliği
 
-- [Güvenlik ve Kullanıcı Izinleri](/previous-versions/visualstudio/visual-studio-2010/ms165099(v=vs.100))
+- [Güvenlik ve Kullanıcı İzinleri](/previous-versions/visualstudio/visual-studio-2010/ms165099(v=vs.100))
 
-- [Yerel ve .NET Framework kodundaki güvenlik](/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Yerel kodda ve .NET Framework güvenlik](/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 
 - [.NET Framework'te Güvenlik](/previous-versions/dotnet/netframework-4.0/fkytk30f(v=vs.100))
 
-### <a name="sharepoint-security"></a>SharePoint güvenliği
+### <a name="sharepoint-security"></a>SharePoint güvenlik
 
-- [SharePoint Foundation yönetimi ve güvenliği](/previous-versions/office/developer/sharepoint-2010/ee537811(v=office.14))
+- [SharePoint Temel Yönetim ve Güvenlik](/previous-versions/office/developer/sharepoint-2010/ee537811(v=office.14))
 
-- [SharePoint güvenliği Kaynak Merkezi](/sharepoint/dev/)
+- [SharePoint Güvenlik Kaynak Merkezi](/sharepoint/dev/)
 
-- [SharePoint Foundation 'da Web Bölümleri güvenliğini sağlama](/previous-versions/office/developer/sharepoint-2010/cc768613(v=office.14))
+- [SharePoint Foundation Web Bölümleri da SharePoint güvenliğini sağlama](/previous-versions/office/developer/sharepoint-2010/cc768613(v=office.14))
 
-- [Web uygulaması güvenliğini artırma: tehditler ve onay ölçüleri](/previous-versions/msp-n-p/ff649874(v=pandp.10))
+- [Web Uygulaması Güvenliğini Geliştirme: Tehditler ve Karşı önlemler](/previous-versions/msp-n-p/ff649874(v=pandp.10))
 
 ### <a name="general-security"></a>Genel güvenlik
 
-- [MSDN güvenlik geliştirme yaşam döngüsü](https://www.microsoft.com/msrc?rtc=1)
+- [MSDN Güvenlik Geliştirme Yaşam Döngüsü](https://www.microsoft.com/msrc?rtc=1)
 
-- [Güvenli ASP.NET uygulamaları oluşturma: kimlik doğrulama, yetkilendirme ve güvenli Iletişim](/previous-versions/msp-n-p/ff649100(v=pandp.10))
+- [Güvenli ASP.NET Uygulamaları: Kimlik Doğrulaması, Yetkilendirme ve Güvenli İletişim](/previous-versions/msp-n-p/ff649100(v=pandp.10))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
+- [Yeni SharePoint geliştirme](../sharepoint/developing-sharepoint-solutions.md)

@@ -1,6 +1,6 @@
 ---
-title: Windows sayaç verilerini toplama | Microsoft Docs
-description: Windows sayaçları, izleme profili oluşturma bölümünde kullanılır. Windows sayaç verilerini nasıl toplayacağınızı ve analizin tek bir koleksiyon aralığıyla nasıl kısıtlanacağını öğrenin.
+title: Sayaç Windows Verilerini Toplama | Microsoft Docs
+description: Windows sayaçları, ölçüm ölçüm profili oluşturmada kullanılır. Sayaç verilerini Windows ve analizi tek bir toplama aralığıyla kısıtlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,40 +14,41 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f1e8f38ee9cb63dfe5a79f0b410e957b4cefaf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 965068fd07bd43029c9f6c1e9e74ac5c97f2259bdac59a1496b24527da9b2f04
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886216"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368402"
 ---
-# <a name="how-to-collect-windows-counter-data"></a>Nasıl yapılır: Windows sayaç verileri toplama
+# <a name="how-to-collect-windows-counter-data"></a>Nasıl kullanılır: Windows sayaç verileri toplama
 
-Windows sayaçları, profil oluşturma sırasında ayarlanan aralıklarda toplanabilecek sistem performans sayaçlarıdır. Profil Oluşturma Araçları raporun Işaretler görünümünde, bir satır her koleksiyon aralığı için **otomatik işaret** olarak etiketlenir. Satırda, bu aralıkta performans sayacı değerlerini tanımlayan sütunlar bulunur. Çözümlemeyi iki belirli işaret arasındaki bir zaman dilimi ile sınırlamak için, işaretleri seçin, sağ tıklayın ve ardından   >  kısayol menüsünde **işaretlere** göre filtrele ' yi seçin.
+Windows Sayaçlar, profil oluşturma sırasında belirli aralıklarla toplanabilir sistem performans sayaçlarıdır. Rapor raporunun İşaretler Profil Oluşturma Araçları, her koleksiyon aralığı için bir satır **AutoMark** olarak etiketlenmiş. Satır, bu aralıkta performans sayacı değerlerini açıklayan sütunlar içerir. Analizi belirli iki işaret arasındaki bir süreyle kısıtlamak için işaretleri seçin, sağ tıklayın ve kısayol menüsünden İşaretlere Göre  >   Filtrele'yi seçin.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Windows 8 ve Windows Server 2012 profil oluşturma Visual Studio bu platformlarda veri toplama şeklinde önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Uygulama [ve uygulama Windows 8 performans Windows Server 2012 bakın.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
 
-## <a name="to-collect-windows-counter-data"></a>Windows sayaç verilerini toplamak için
+## <a name="to-collect-windows-counter-data"></a>Sayaç verilerini Windows için
 
-1. Performans Gezgini, Windows sayaçlarını yapılandırmak istediğiniz oturuma sağ tıklayın ve **Özellikler**' i seçin.
+1. Bu Performans Gezgini, sayaçları yapılandırmak istediğiniz oturuma sağ Windows özellikler'i **seçin.**
 
-2. **Özellik sayfalarında** **Windows sayaçları**' na tıklayın.
+2. Özellik **Sayfaları'Windows** **tıklayın.**
 
-3. **Windows sayaçlarını topla** onay kutusunu seçin.
+3. Veri **Sayaçlarını Windows onay** kutusunu seçin.
 
-4. **Koleksiyon aralığı (msecs)** metin kutusuna bir zaman aralığı yazın.
+4. Koleksiyon **aralığı (msecs)** metin kutusuna bir zaman aralığı yazın.
 
-5. **Sayaç kategorisi** açılan listesinden bir kategori seçin.
+5. Sayaç Kategorisi açılan **listesinden** bir kategori seçin.
 
-6. **Örnek** açılır listesinden bir örnek seçin.
+6. Örnek açılan **listesinden** bir örnek seçin.
 
-7. Uygulamanızı profillerinizi oluştururken kullanmak istediğiniz sayaçları seçin.
+7. Uygulamanın profilini oluşturmak için kullanmak istediğiniz sayaçları seçin.
 
-8. Uygula ' ya tıklayın **.**
+8. **Uygula'ya tıklayın.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

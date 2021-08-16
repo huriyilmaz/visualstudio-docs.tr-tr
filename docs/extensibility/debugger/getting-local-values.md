@@ -1,6 +1,6 @@
 ---
 title: Yerel değerler alınıyor | Microsoft Docs
-description: Yönetilen ve yönetilmeyen kod için GetPropertyInfo kullanarak, Visual Studio 'nun yerel bir değişkenin değerini nasıl aldığından öğrenin.
+description: yönetilen ve yönetilmeyen kod için getpropertyınfo kullanarak, Visual Studio yerel bir değişkenin değerini alma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,20 +12,21 @@ ms.assetid: a10b0764-65ac-476f-bf42-b4a9c38e20de
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7be71aaa6e1ea8afee37b9abb9ea76d0347e5c12
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 51024791acba3a234b796702aac97427dab469a9d2b9f374c02b5cdfe5ae02d6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059970"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403292"
 ---
 # <a name="get-local-values"></a>Yerel değerleri Al
 > [!IMPORTANT]
 > Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Bir yerel değerin değerini almak için, Visual Studio bu yerel için [GetPropertyInfo 'yu](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) çağırır. Bu uygulamada, sınıfı `CFieldProperty` her yerel Için IDebugProperty2 arabirimini uygular.
+bir yerel değerin değerini almak için, Visual Studio bu yerel için [getpropertyınfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) çağırır. Bu uygulamada, sınıfı `CFieldProperty` her yerel Için IDebugProperty2 arabirimini uygular.
 
 Bu uygulama `IDebugProperty2::GetPropertyInfo` aşağıdaki görevleri gerçekleştirir:
 

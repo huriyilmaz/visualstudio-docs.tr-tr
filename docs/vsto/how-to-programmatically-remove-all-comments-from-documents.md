@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: belgelerden tüm açıklamaları program aracılığıyla kaldırma'
-description: Visual Studio 'Yu kullanarak bir Microsoft Word belgesinden tüm açıklamaları programlı bir şekilde nasıl kaldırabileceğinizi öğrenin.
+description: bir Microsoft Word belgesinden tüm açıklamaları programlı bir şekilde kaldırmak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -14,14 +14,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5d51f44537c4e9564162d458c564dd428e57d154
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 3ba39c17b5c00ec78af0b4ba89aedb528cb6a322ca22aaa8b44bab2d21f732ef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827051"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121366205"
 ---
 # <a name="how-to-programmatically-remove-all-comments-from-documents"></a>Nasıl yapılır: belgelerden tüm açıklamaları program aracılığıyla kaldırma
   `DeleteAllComments`Microsoft Office Word belgesinden tüm açıklamaları kaldırmak için yöntemini kullanın.
@@ -35,7 +36,7 @@ ms.locfileid: "107827051"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet119":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet119":::
 
-## <a name="to-remove-all-comments-from-a-document-by-using-a-vsto-add-in"></a>Bir belge içindeki tüm açıklamaları VSTO eklentisini kullanarak kaldırmak için
+## <a name="to-remove-all-comments-from-a-document-by-using-a-vsto-add-in"></a>bir VSTO eklentisi kullanarak belgedeki tüm açıklamaları kaldırmak için
 
 1. <xref:Microsoft.Office.Interop.Word._Document.DeleteAllComments%2A>Açıklamalarını kaldırmak istediğiniz öğesinin yöntemini çağırın <xref:Microsoft.Office.Interop.Word.Document> .
 

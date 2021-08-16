@@ -1,6 +1,6 @@
 ---
-title: Icon Öğesi | Microsoft Docs
-description: Kullanılan bit eşlem için öznitelikleri ve bit eşlem şeridi Visual Studio nde yuvayı içeren IDE uzantılarında kullanılan simgeleri temsil eden Icon öğesini öğrenin.
+title: Icon öğesi | Microsoft Docs
+description: kullanılan bit eşlem ve bit eşlem şeridindeki yuva özniteliklerini içeren Visual Studio ıde uzantılarında kullanılan simgeleri temsil eden ıcon öğesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 73c58fe3-d53c-4f4e-b025-29567c6cbb7c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ad5bfdf000232ef92a9e9a27b12152df36a4335
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 861bca1bc4a0f43f8e5165ae4fdf172fc858dfaf575683a921f52f3428e9c0d0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900830"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414681"
 ---
-# <a name="icon-element"></a>Simge öğesi
-Icon etiketinin guid özniteliği, tanımlı bir bit eşlem guid değeridir. özniteliği `id` bit eşlem şeridinde yuvayı seçer. Bu öğe isteğe bağlıdır. Bu öğe dahil yoksa **guidOfficeIcon:msotcidNoIcon** değeri örtüşecek.
+# <a name="icon-element"></a>Icon öğesi
+Simge etiketinin GUID özniteliği, tanımlı bir bit eşlemin GUID 'sidir. `id`Özniteliği, bit eşlem şeridinde yuva seçer. Bu öğe isteğe bağlıdır. Bu öğe GuidOfficeIcon değerini içeriyorsa, **Msotcıdnoıcon** dahil edilir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,8 +37,8 @@ Icon etiketinin guid özniteliği, tanımlı bir bit eşlem guid değeridir. öz
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|guid|Gereklidir. Tanımlı bir bit eşlem guid'i.|
-|kimlik|Gereklidir. Bit eşlem şeridinde yuvayı seçer.|
+|guid|Gereklidir. Tanımlı bir bit eşlemin GUID 'si.|
+|kimlik|Gereklidir. Bit eşlem şeridinde yuva seçer.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -52,4 +53,4 @@ Icon etiketinin guid özniteliği, tanımlı bir bit eşlem guid değeridir. öz
 |[Düğmeler öğesi](../extensibility/buttons-element.md)||
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

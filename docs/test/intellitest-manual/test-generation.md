@@ -8,15 +8,16 @@ helpviewer_keywords:
 - IntelliTest, Test generation
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 92071a3bdaf32f06a77f8502b251f1f3af019203
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ccd684d00f16f81a071e3e83b87c1ed82cb62fbcd622a28435d52e53c9f992d0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899526"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408961"
 ---
 # <a name="test-generation"></a>Test oluşturma
 
@@ -135,7 +136,7 @@ Doğrulayıcılar şunlardır:
 <a name="internal-types"></a>
 ## <a name="testing-internal-types"></a>İç türleri test etme
 
-IntelliTest, onları görebileceğiniz sürece "test" iç türlerini "test edebilir". Türü görmek için IntelliTest için aşağıdaki öznitelik, Visual Studio IntelliTest sihirbazları tarafından ürün veya test projenize eklenir:
+IntelliTest, onları görebileceğiniz sürece "test" iç türlerini "test edebilir". türü görmek için ıntellitest için aşağıdaki öznitelik, Visual Studio ıntellitest sihirbazları tarafından ürün veya test projenize eklenir:
 
 ```csharp
 [assembly: InternalsVisibleTo("Microsoft.Pex, PublicKey=002400000480000094000000060200000024000052534131000400000100010007d1fa57c4aed9f0a32e84aa0faefd0de9e8fd6aec8f87fb03766c834c99921eb23be79ad9d5dcc1dd9ad236132102900b723cf980957fc4e177108fc607774f29e8320e92ea05ece4e821c0a5efe8f1645c4c0c93c1ab99285d622caa652c1dfad63d745d6f2de5f17e5eaf0fc4963d261c8a12436518206dc093344d5ad293")]

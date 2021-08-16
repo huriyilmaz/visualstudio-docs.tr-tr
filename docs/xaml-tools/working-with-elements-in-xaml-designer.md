@@ -8,16 +8,17 @@ ms.assetid: a29690bf-f212-4ac6-a77a-adc53d14102e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: ef09f181176bbab961b0caa97ccfb9910c5a281d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-xaml-tools
+ms.openlocfilehash: 3af78174e4735a7e38ee6e13c429e6d30685faec1e36102ddfd5c3ae5c5c4f7c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961254"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365373"
 ---
 # <a name="work-with-elements-in-xaml-designer"></a>XAML Tasarımcısı’nda öğelerle çalışma
 
-Uygulamanıza XAML 'de, kod içinde veya XAML Tasarımcısı kullanarak öğe (denetimler, düzenler ve şekiller) ekleyebilirsiniz. Bu konu başlığı altında, Visual Studio veya Visual Studio için Blend XAML Tasarımcısı öğeleri ile nasıl çalışılacağı açıklanmaktadır.
+Uygulamanıza XAML 'de, kod içinde veya XAML Tasarımcısı kullanarak öğe (denetimler, düzenler ve şekiller) ekleyebilirsiniz. bu konu, Visual Studio veya Visual Studio için Blend XAML Tasarımcısı öğelerle nasıl çalışabileceğinizi açıklamaktadır.
 
 ## <a name="add-an-element-to-a-layout"></a>Düzene öğe ekleme
 

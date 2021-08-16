@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-While etkinlik Tasarımcısı
-description: Belirtilen koşul doğru olarak değerlendirirken while etkinliğinin gövdesinde içerilen etkinliği nasıl yürüttüğünü öğrenin.
+title: İş Akışı Tasarımcısı - While Etkinlik Tasarımcısı
+description: While etkinliğinin, belirtilen Koşul true olarak değerlendirilirken Gövdesinde yer alan etkinliği nasıl yürütür?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,30 +10,31 @@ ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 9447d32f17283e7123e2f99490acc49c1613360d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f55218e75f887d8fa3d16213fd3cbc9adbb09b43a5404826bc7c2d6d055e9ab7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838002"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365841"
 ---
 # <a name="while-activity-designer"></a>While Etkinlik Tasarımcısı
 
-<xref:System.Activities.Statements.While>Etkinlik, içinde bulunan etkinliği <xref:System.Activities.Statements.While.Body%2A> belirtilen sırada yürütür <xref:System.Activities.Statements.While.Condition%2A> .  İçerilen etkinlik hiçbir şekilde yürütülemeyebilir. İçerilen etkinliğin en az bir kez yürütülmesini istiyorsanız <xref:System.Activities.Statements.DoWhile> bunun yerine etkinliğini kullanın.
+Etkinlik içinde yer alan etkinliği yürütürken belirtilen true <xref:System.Activities.Statements.While> olarak <xref:System.Activities.Statements.While.Body%2A> <xref:System.Activities.Statements.While.Condition%2A> **değerlendirilir.** Söz edilen etkinlik hiçbir zaman yürütülmez. Içerdiği etkinliğin en az bir kez yürütültülürse, bunun yerine <xref:System.Activities.Statements.DoWhile> etkinliğini kullanın.
 
-## <a name="while-properties-in-workflow-designer"></a>İş Akışı Tasarımcısı Özellikler
+## <a name="while-properties-in-workflow-designer"></a>Özellikler İş Akışı Tasarımcısı
 
-Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.While> etkinlik özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
+Aşağıdaki tabloda en kullanışlı etkinlik <xref:System.Activities.Statements.While> özellikleri ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.While> . Varsayılan değer while değeridir. Değer, **Özellikler** penceresinde veya doğrudan etkinlik Tasarımcısı üst bilgisinde düzenlenebilir.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.While.Body%2A>|Yanlış|<xref:System.Activities.Statements.While.Condition%2A> **Doğru** olarak değerlendirilirken yürütülecek etkinliği içerir.|
-|<xref:System.Activities.Statements.While.Condition%2A>|Doğru|İçindeki etkinliğin yürütülüp yürütülmeyeceğini belirlemekte değerlendirilen Visual Basic ifadesini içerir <xref:System.Activities.Statements.While.Body%2A> .|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Üst bilgide etkinlik <xref:System.Activities.Statements.While> tasarımcısının kolay adını belirtir. Varsayılan değer While'dır. Değer, Özellikler penceresinde veya **doğrudan** etkinlik tasarımcısı üst bilgisinde düzenlenebilir.<br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.While.Body%2A>|Yanlış|true olarak değerlendirilirken <xref:System.Activities.Statements.While.Condition%2A> yürütülecek etkinliği **içerir.**|
+|<xref:System.Activities.Statements.While.Condition%2A>|Doğru|içinde Visual Basic yürütülecek olup olmadığını belirlemek için değerlendirilen bir <xref:System.Activities.Statements.While.Body%2A> Visual Basic ifadesini içerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
-- [DoWhile](../workflow-designer/dowhile-activity-designer.md)
+- [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)
+- [Dowhile](../workflow-designer/dowhile-activity-designer.md)

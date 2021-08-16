@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Ön Çarpımlı Alfa kullanan Doku Dışa Aktarma'
-description: Görüntü Içeriği ardışık düzeninin, kullanımı daha basit ve daha sağlam olabilecek bir kaynak görüntüden ön çarpılmış Alfa dokuları oluşturma hakkında bilgi edinin.
+description: Görüntü İçeriği İşlem Hattı'nın kaynak görüntüden kullanımı daha basit ve daha sağlam olan önceden oluşturulmuş alfa dokular oluşturma hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,44 +8,45 @@ ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 56e8d198e55b521b761f8f3a7b54f6c2c0ee2c33
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0143a0a69ed1a1d54873c24426c840999191545750fd5618592a37c3f9090b5f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930946"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403600"
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Nasıl yapılır: Ön çarpımlı alfa kullanan dokuyu dışarı aktarma
 
-Görüntü Içeriği ardışık düzeni, kaynak görüntüden ön çarpılmış Alfa dokuları oluşturabilir. Bu, kullanımı daha kolay ve ön çarpılmış Alfa içermeyen dokulardan daha sağlam olabilir.
+Görüntü İçeriği İşlem Hattı, kaynak görüntüden önceden oluşturulmuş alfa dokular oluşturabilirsiniz. Bunların kullanımı daha basit olabilir ve önceden sonuç alfa içermesi gereken dokulardan daha sağlam olabilir.
 
-Bu belge Şu etkinlikleri gösterir:
+Bu belge şu etkinlikleri gösterir:
 
-- Görüntü Içeriği ardışık düzeni tarafından işlenecek kaynak görüntüyü yapılandırma.
+- Görüntü İçeriği İşlem Hattı tarafından işlenecek kaynak görüntüyü yapılandırma.
 
-- Ön çarpılmış alfa oluşturmak için görüntü Içeriği ardışık düzeni yapılandırma.
+- Görüntü İçeriği İşlem Hattını önceden oluşturulmuş alfa oluşturmak için yapılandırma.
 
-## <a name="premultiplied-alpha"></a>Ön çarpılmış Alfa
-Önceden çarpılan Alfa geleneksel, ön ödeme olmayan Alpha üzerinden çeşitli avantajlar sunar, çünkü Texel 'nin renk katılımına sahip olan (sahneye eklediği renk), bir fiziksel malzemelerle gerçek dünya etkileşimini daha iyi temsil eder. Önceden çarpılan Alfa kullanmanın avantajlarından bazıları şunlardır:
+## <a name="premultiplied-alpha"></a>Önceden sonuçlandırmış alfa
+Premultiplied alfa geleneksel, önsal olmayan alfaya göre çeşitli avantajlar sunar çünkü teselin renk katkısını (sahneye ekleyen renk) saydamlıktan (izin veren temel alınan renk miktarı) ayırarak ışığın fiziksel malzemelerle gerçek dünya etkileşimini daha iyi temsil eder. Önceden sonuçlandırmış alfa kullanmanın avantajlarından bazıları:
 
-- Ön çarpılmış alfa ile karıştırma, ilişkilendirilebilir bir işlemdir; birden çok yarı saydam dokuların karıştırılmasını elde etmek, dokuların karıştıralındığı sıra ne olursa olsun aynıdır.
+- Önceden sonuçlanmış alfa ile karıştırma, bir iosalama işlemidir; Birden çok yarı saydam dokuyu karıştırmanın sonucu, dokuların karıştırıldık düzenine bakılmaksızın aynıdır.
 
-- Ön çarpılmış alfa ile birlikte karışmanın ilişkilendirilebilir doğası nedeniyle, yarı saydam nesnelerin çoklu geçişli işlemesi basitleştirilmiştir.
+- Önceden sonuçlanmış alfa ile karıştırmanın ilgili yapısı nedeniyle, saydam nesnelerin çoklu geçişli işlemesi basitleştirilir.
 
-- Ön çarpılmış alfa kullanarak hem saf ekleme karışımı (alfa ile sıfıra ayarlanarak) hem de doğrusal olarak enterpolasyonlu karıştırma aynı anda elde edilebilir. Örneğin, bir parçacık sisteminde, ek olarak karıştırılan bir ateş partilü, doğrusal ilişkilendirme kullanılarak karıştırılan bir yarı saydam duman parçacığı haline gelebilir. Ön çarpılmış alfa olmadan, ateş parçacıkların duman parçacıkların ayrı olarak çizilmesi ve çizim çağrıları arasındaki işleme durumunu değiştirmeniz gerekir.
+- Önceden işlenmiş alfa kullanılarak, hem saf ek karıştırma (alfa değeri sıfır olarak ayarlanır) hem de doğrusal olarak irdelenmiş karıştırma eşzamanlı olarak elde edilebilir. Örneğin, bir parçacık sisteminde, eklenebilir olarak karıştırıldı bir yangın parçacığı doğrusal ilişkilendirme kullanılarak karıştırıldı yarı saydam bir duman parçacığı olabilir. Önceden iş parçacıklı alfa olmadan, yangın parçacıklarını duman parçacıklarından ayrı olarak çizmeli ve çekme çağrıları arasında işleme durumunu değiştirmeniz gerekirdi.
 
-- Ön çarpılmış Alfa sıkıştır kullanan dokular, olmadıklarından daha yüksek kaliteden daha yüksek kalitede ve veya "Halo etkisi" gibi, ön çarpılmış Alfa kullanmayan dokuları karıştırabildiklerinde ortaya kalmazlar.
+- Önişlek alfa sıkıştırması kullanan dokular, daha yüksek kalitelidir ve renksiz kenarları (veya "halo etkisi") göstermez. Bu, önceden işlenen alfa kullanmayan dokuları karıştırırken ortaya çıkar.
 
-#### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Ön çarpılmış alfa kullanan bir doku oluşturmak için
+#### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Önceden sonuçlandırmış alfa kullanan bir doku oluşturmak için
 
-1. Temel bir dokuyla başlayın. Varolan bir resim dosyasını yükleyin veya [nasıl yapılır: temel doku oluşturma](../designers/how-to-create-a-basic-texture.md)bölümünde açıklandığı gibi bir tane oluşturun.
+1. Temel bir dokuyla başlama. Var olan bir görüntü dosyasını yükleme veya Oluşturma: Temel doku oluşturma [konusunda açıklandığı gibi bir tane oluşturun.](../designers/how-to-create-a-basic-texture.md)
 
-2. Doku dosyasını görüntü Içeriği ardışık düzeni tarafından işlenecek şekilde yapılandırın. **Çözüm Gezgini**, doku dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin. **Yapılandırma özellikleri**  >  **genel** sayfasında, **öğe türü** özelliğini **görüntü içeriği ardışık düzeni** olarak ayarlayın. **İçerik** özelliğinin **Evet** olarak ayarlandığından ve **derlemeden hariç tut** ' un **Hayır** olarak ayarlandığından emin olun ve ardından **Uygula** düğmesini seçin. **Görüntü Içeriği ardışık düzen** yapılandırma özelliği sayfası görüntülenir.
+2. Doku dosyasını Görüntü İçeriği İşlem Hattı tarafından işlenecek şekilde yapılandırma. Bu **Çözüm Gezgini** doku dosyasının kısayol menüsünü açın ve Özellikler'i **seçin.** Yapılandırma Özellikleri **Genel**  >  **sayfasında** Öğe Türü özelliğini **Görüntü İçeriği İşlem** Hattı **olarak ayarlayın.** İçerik özelliğinin **Evet,** Derlemeden  Hariç Tut özelliğinin Hayır olarak ayarlanmış olduğundan **emin olun** ve uygula **düğmesini** seçin.  Görüntü **İçeriği İşlem Hattı** yapılandırma özelliği sayfası görüntülenir.
 
-3. Ön çarpılmış alfa oluşturmak için görüntü Içeriği ardışık düzenini yapılandırın. **Yapılandırma özellikleri**  >  **görüntüsü içerik ardışık düzeni**  >  **genel** sayfasında, **önceden çarpılan Alfa biçimi** özelliğini **Evet (/generatepremultipliedalpha)** olarak ayarlayın.
+3. Önceden oluşturulmuş alfa oluşturmak için Görüntü İçeriği İşlem Hattını yapılandırma. Yapılandırma Özellikleri **Görüntü İçeriği** İşlem Hattı Genel sayfasında Convert to  >    >   **pre-multiplied alpha format** özelliğini **Evet (/generatepremultipliedalpha) olarak ayarlayın.**
 
-4. **Tamam** düğmesini seçin.
+4. Tamam **düğmesini** seçin.
 
-   Projeyi oluşturduğunuzda, görüntü Içeriği ardışık düzeni kaynak görüntüyü çalışma biçiminden belirlediğiniz çıkış biçimine dönüştürür — bu, görüntünün ön çarpılmış Alfa biçimine dönüştürülmesini içerir ve sonuç projenin çıkış dizinine kopyalanır.
+   Projeyi derlemek için Görüntü İçeriği İşlem Hattı kaynak görüntüyü çalışma biçiminden belirttiğiniz çıkış biçimine dönüştürür. Bu, görüntünün önceden sonuçlanmış alfa biçimine dönüştürülmesi içerir ve sonuç projenin çıkış dizinine kopyalanır.

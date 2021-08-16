@@ -1,31 +1,32 @@
 ---
 title: Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi
 ms.date: 11/04/2016
-description: Visual Studio 'da, COM birlikte çalışabilirlik ve mobil uygulamalar için yararlı olan genişletilmiş doğruluk kuralları kural kümesi hakkında bilgi edinin. Bkz. kural açıklamaları.
+description: Com ile birlikte çalışabilirlik ve mobil uygulamalar için Visual Studio genişletilmiş doğruluk kuralları kural kümesi hakkında bilgi edinebilirsiniz. Kural açıklamalarını görme.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 5b181f5b-6c7a-4e46-a783-360e1da427a0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: a70a0315d596e4490d40db1846d7be0b6f3bf448
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d8600b06e7450148fffe2d2fc0dbb5f957a1edc855e466d105814528adf0d5d7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860379"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121405415"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi
 
-Microsoft genişletilmiş doğruluk kuralları kural kümesi, kod analizi tarafından bildirilen mantık ve çerçeve kullanım hatalarını en üst düzeye çıkarır. Ek vurgu, COM birlikte çalışabilirlik ve mobil uygulamalar gibi belirli senaryolara yerleştirilir. Bu senaryolardan biri projeniz için geçerliyse veya projenizde ek sorunlar bulmak için bu kural kümesini dahil etmeyi göz önünde bulundurmanız gerekir.
+Microsoft Genişletilmiş Doğruluk Kuralları kural kümesi, kod analizi tarafından bildirilen mantık ve çerçeve kullanım hatalarını en üst düzeye çıkartır. COM birlikte çalışabilirliği ve mobil uygulamalar gibi belirli senaryolara ek olarak vurgulanır. Bu senaryolardan biri projeniz için geçerli ise veya projenize ek sorunlar bulmak için bu kural kümesi dahil etmek düşün gerekir.
 
-Microsoft genişletilmiş doğruluk kuralları kural kümesi, [yönetilen önerilen kurallar](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md) kural kümesindeki kuralları Içeren [temel doğruluk kuralları](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md) kural kümesindeki kuralları içerir.
+Microsoft Genişletilmiş Doğruluk Kuralları kural kümesi, Yönetilen [](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md) Önerilen Kurallar kural kümesinde yer alan kuralları içeren Temel Doğruluk Kuralları kural [kümesinde yer](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md) alan kuralları içerir.
 
-Aşağıdaki tabloda, Microsoft genişletilmiş doğruluk kuralları kural kümesindeki tüm kurallar açıklanmaktadır.
+Aşağıdaki tabloda Microsoft Genişletilmiş Doğruluk Kuralları kural kümesinde yer alan tüm kurallar açıkılmıştır.
 
-|Kural|Description|
+|Kural|Açıklama|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
 |[CA1009](../code-quality/ca1009.md)|Olay işleyicileri doğru olarak bildirin|
@@ -67,7 +68,7 @@ Aşağıdaki tabloda, Microsoft genişletilmiş doğruluk kuralları kural küme
 |[CA2137](../code-quality/ca2137.md)|Saydam metotlar yalnızca doğrulanabilir IL içermelidir|
 |[CA2138](../code-quality/ca2138.md)|Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır|
 |[CA2140](../code-quality/ca2140.md)|Saydam kod güvenlik kritik nesnelerine başvurmamalıdır|
-|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler bağlantı taleplerini karşılamamalıdır|
+|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'i karşılamamalı|
 |[CA2146](../code-quality/ca2146.md)|Türler en az kendi taban türleri ve arabirimleri kadar kritik olmalıdır|
 |[CA2147](../code-quality/ca2147.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149.md)|Saydam metotlar yerel kod içine çağırmamalıdır|

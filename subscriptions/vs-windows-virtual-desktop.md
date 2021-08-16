@@ -1,74 +1,74 @@
 ---
-title: Visual Studio aboneliklerinde Microsoft Windows sanal masaüstü | Microsoft Docs
+title: Visual Studio aboneliklerde Microsoft Windows Sanal Masaüstü | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 03/17/2021
 ms.topic: conceptual
-description: Visual Studio aboneliğiniz aracılığıyla Microsoft Windows sanal masaüstü 'nden nasıl yararlanabileceğinizi öğrenin
-ms.openlocfilehash: 2e7aad5d3f8214d39e5671e4bf5c4d5d357cd930
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+description: Microsoft Windows Sanal Masaüstü'nden Visual Studio öğrenin
+ms.openlocfilehash: aa5a9a251e7f70900e49be75ce785a5c6f318c42d5330a9bc4e7f91078e91310
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104671745"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121364206"
 ---
-# <a name="access-windows-virtual-desktop-in-subscriptions"></a>Aboneliklerde Windows sanal masaüstüne erişme 
-Visual Studio aboneleri artık Microsoft Windows Sanal Masaüstü Hizmetleri için Azure geliştirme ve test kredilerini kullanabiliyor.  
-Windows sanal masaüstü, bulutta çalışan kapsamlı bir masaüstü ve uygulama sanallaştırma hizmetidir. Basitleştirilmiş Yönetim, çoklu oturum Windows 10, kurumsal Microsoft 365 uygulamalar için iyileştirmeler ve Uzak Masaüstü Hizmetleri (RDS) ortamları için destek sunan tek sanal masaüstü altyapısı (VDı). Windows Masaüstü ve uygulamalarınızı Azure 'da dakikalar içinde dağıtın ve ölçeklendirin, yerleşik güvenlik ve uyumluluk özellikleri alın.
-Azure 'da Windows sanal masaüstü 'Nü çalıştırdığınızda şunları yapabilirsiniz:
-- Ölçeklenebilirlik ile tam bir Windows 10 sunan çoklu oturum Windows 10 dağıtımı ayarlama
-- Microsoft 365 uygulamalarını kuruluşa sanallaştırın ve bunu çok kullanıcılı sanal senaryolarda çalışacak şekilde iyileştirin
-- Ücretsiz genişletilmiş güvenlik güncelleştirmeleri ile Windows 7 sanal masaüstlerini sağlama
-- Mevcut Uzak Masaüstü Hizmetleri (RDS) ve Windows Server Masaüstlerinizi ve uygulamalarınızı herhangi bir bilgisayara getirme
-- Masaüstlerini ve uygulamaları sanallaştırın
-- Windows 10, Windows Server ve Windows 7 Masaüstü ve uygulamalarını birleştirilmiş bir yönetim deneyimiyle yönetme Windows sanal masaüstü ile yapabilecekleriniz hakkında daha fazla bilgi Için [tanıtım videosunu](/azure/virtual-desktop/overview)izleyin.
+# <a name="access-windows-virtual-desktop-in-subscriptions"></a>Aboneliklerde Windows Masaüstü'ne erişme 
+Visual Studio aboneler artık Microsoft Sanal Masaüstü hizmetleri için Azure geliştirme ve test bireysel Windows kullanabilir.  
+Windows Sanal Masaüstü, bulutta çalışan kapsamlı bir masaüstü ve uygulama sanallaştırma hizmetidir. Basitleştirilmiş yönetim, çoklu oturum Windows 10, Kurumlar için Microsoft 365 Uygulamaları için iyileştirmeler ve Uzak Masaüstü Hizmetleri (RDS) ortamları için destek sunan tek sanal masaüstü altyapısıdır (VDI). Azure'da Windows ve uygulamalarınızı dakikalar içinde dağıtın ve ölçeklendirin ve yerleşik güvenlik ve uyumluluk özellikleri edinin.
+Azure'da Sanal Masaüstü'Windows şu şekilde çalıştırabilirsiniz:
+- Ölçeklenebilirlik ile tam bir Windows 10 çoklu oturum Windows 10 dağıtım ayarlama
+- Sanal Kurumlar için Microsoft 365 Uygulamaları ve çok kullanıcılı sanal senaryolarda çalıştıracak şekilde iyileştirme
+- Ücretsiz Windows 7 sanal masaüstleri sağlama
+- Var olan Uzak Masaüstü Hizmetleri (RDS) ve Windows Server masaüstlerini ve uygulamalarını herhangi bir bilgisayara getirme
+- Hem masaüstlerini hem de uygulamaları sanallaştırma
+- Windows 10, Windows Server ve Windows 7 masaüstü ve uygulamalarınızı birleşik bir yönetim deneyimiyle yönetme Windows Sanal Masaüstü ile neler gerçekleştirebilirsiniz hakkında daha fazla bilgi için giriş [videosunu izleyin.](/azure/virtual-desktop/overview)
 
-## <a name="use-windows-virtual-desktop-with-azure"></a>Azure ile Windows sanal masaüstü 'Nü kullanma 
-Visual Studio aboneleri artık Windows Sanal Masaüstü Hizmetleri için ödeme yapmak üzere Azure aboneliklerini kullanmanın birkaç yolu vardır:
-- [Azure DevTest bireysel kredileri](vs-azure.md).  Aboneliklerinin bir parçası olarak Azure DevTest bireysel kredileri alan aboneler, bu kredileri Windows Sanal Masaüstü Hizmetleri için ödeme yapmak üzere kullanabilir.  Aylık kredi miktarı abonelik düzeyine bağlıdır.
-- [Azure DevTest Kullandıkça Öde abonelikleri](vs-azure-payg.md).  Windows sanal masaüstü kullanımınız için sorunsuz bir yola sahip olmak üzere Azure abonelikleri oluşturabilir ve bir ödeme aracı ekleyebilirsiniz. 
-- [Azure Kurumsal Anlaşma DevTest teklifi](azure-ea-devtest.md).  Bu teklifle, kurumsal sözleşmeleri olan aboneler Azure ile indirimli fiyatlandırmayla Windows sanal masaüstü için ödeme yapabilir. 
+## <a name="use-windows-virtual-desktop-with-azure"></a>Azure Windows Sanal Masaüstü'leri kullanma 
+Visual Studio aboneler artık Sanal Masaüstü hizmetleri için ödeme yapmak üzere Azure aboneliklerini Windows yollara sahip:
+- [Azure DevTest bireysel kredileri.](vs-azure.md)  Aboneliklerinin bir parçası olarak Azure DevTest bireysel kredileri alan aboneler bu kredileri kullanarak Sanal Masaüstü Windows için ödemelerini kullanabilir.  Aylık kredi tutarı, abonelik düzeyine bağlıdır.
+- [Azure DevTest Go Olarak Öde abonelikleri.](vs-azure-payg.md)  Azure abonelikleri oluşturabilir ve sanal sanal masaüstü kullanımınız için ödeme yapmak için sorunsuz bir Windows aracı iliştirebilirsiniz. 
+- [Azure Kurumsal Anlaşma DevTest teklifi.](azure-ea-devtest.md)  Bu teklifle, Enterprise Sözleşmelerine sahip aboneler, Azure ile Windows Desktop için indirimli fiyatlandırma üzerinden ödemelerini kullanabilir. 
 
 ## <a name="requirements"></a>Gereksinimler
-Windows sanal masaüstü, VM 'Lerin katılacağını Azure Active Directory (Azure AD) gerektirir.  Kullanıcılar bu Azure AD 'nin üyesi olmalıdır.  Azure AD 'yi uygulamak için iki seçenek vardır:
-- Azure AD Dizin Hizmetleri.  Çoğu kullanıcı için bu, uygulamak daha kolay bir seçenektir.
-- Bir etki alanı denetleyicisi promosyon çalıştıran bir sanal makine.  Bu seçenek, daha fazla iş ayarlanmasını gerektirir, ancak çoğu kullanıcıya daha düşük bir işletim maliyeti sunar.
-Windows sanal masaüstü kullanımıyla ilgili önkoşulların tam listesini görmek için lütfen Windows sanal masaüstü [genel bakış sayfasını](/azure/virtual-desktop/overview#requirements)ziyaret edin. 
+Windows Sanal Masaüstü, Azure Active Directory bir sanal makine (Azure AD) gerektirir.  Kullanıcıların bu Azure AD'ye üye olması gerekir.  Azure AD'nin uygulanması için iki seçenek vardır:
+- Azure AD Dizin Hizmetleri.  Çoğu kullanıcı için bu, uygulanması daha kolay bir seçenektir.
+- Etki Alanı Denetleyicisi promosyonu çalıştıran bir sanal makine.  Bu seçenek, ayarlamak için daha fazla çalışma gerektirir, ancak çoğu kullanıcıya daha düşük bir işletim maliyeti sunar.
+Sanal Masaüstü'leri kullanmaya ilişkin önkoşulların tam Windows için lütfen sanal Windows genel [bakış sayfasını ziyaret edin.](/azure/virtual-desktop/overview#requirements) 
 
 ## <a name="get-started"></a>başlarken 
-Tüm ön koşullar gerçekleşirken, uygulamanızı yerine getirmek için birkaç eylemi tamamlamayı tercih edersiniz.  Başlamak için şu öğreticilere göz atın:
-- [Windows sanal masaüstü kiracısı oluşturma](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
-- Azure portal kullanarak [bir konak havuzu oluşturma](/azure/virtual-desktop/create-host-pools-azure-marketplace)
-- Windows sanal masaüstü için [uygulama gruplarını yönetme](/azure/virtual-desktop/manage-app-groups)
+Tüm önkoşullar karşılandıktan sonra, uygulamanıza devam etmek için çeşitli eylemleri tamamlamak gerekir.  Çalışmaya başlamaya için şu öğreticilere göz at:
+- [Windows Sanal Masaüstü kiracısı oluşturma](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
+- [Konak havuzunu kullanarak](/azure/virtual-desktop/create-host-pools-azure-marketplace) konak havuzu Azure portal
+- [Windows](/azure/virtual-desktop/manage-app-groups) Sanal Masaüstü için uygulama gruplarını yönetme
 
-## <a name="eligibility"></a>Önceliği
-| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
+## <a name="eligibility"></a>Uygunluk
+| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | Kullanılabilir|  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği  | VL | Kullanılabilir|  Yes          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                             |  Yes             |
-| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                       | Kullanılabilir                                        |  Yes           |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir|  Yes          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                         |  Yes          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, | Kullanılabilir|  Yes          |
+| Visual Studio Enterprise ile abonelik GitHub Enterprise  | Vl | Kullanılabilir|  Yes          |
+| Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | Kullanılabilir                                                             |  Yes             |
+| Visual Studio Professional aboneliği GitHub Enterprise | Vl                                       | Kullanılabilir                                        |  Yes           |
+| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılabilir|  Yes          |
+| MSDN Platformları (Standart)                                          | VL, Perakende                                              | Kullanılabilir                                         |  Yes          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
-<sup>1</sup>  *şunları içerir: SATıL (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, ıMAGINE, NFR Basic*
+<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Microsoft İş Ortağı Ağı (MPN), Visual Studio Endüstri İş Ortağı (VSIP), Microsoft Sertifikalı Eğitimci, BizSpark, Imagine, NFR Basic* için Değil  
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
+> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)E-posta adresinize atanan tüm abonelikleri görmek için bağlantısını yapın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Azure belgeleri](/azure/)
 - [Windows Sanal Masaüstü belgeleri](/azure/virtual-desktop/)
-- [Visual Studio abonelikleri desteği](https://my.visualstudio.com/gethelp)
+- [Visual Studio abonelik desteği](https://my.visualstudio.com/gethelp)
 
 ## <a name="next-steps"></a>Sonraki adımlar
--   Visual Studio abonelikleri satın almanız gerekiyorsa, kullanıma alın:
-     - Microsoft Store aracılığıyla [perakende satın alımları Için fiyatlandırma](https://visualstudio.microsoft.com/vs/pricing/)
+-   Abonelik satın almak Visual Studio göz atabilirsiniz:
+     - [Microsoft Store aracılığıyla perakende](https://visualstudio.microsoft.com/vs/pricing/) alışverişleri için fiyatlandırma
      - [Toplu Lisanslama programları](https://www.microsoft.com/licensing/default)
--   [Windows sanal masaüstü](/azure/virtual-desktop/overview) hakkında bilgi edinin
+-   Windows [Sanal Masaüstü hakkında bilgi](/azure/virtual-desktop/overview)

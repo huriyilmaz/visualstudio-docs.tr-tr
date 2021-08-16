@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla e-posta gönderme'
-description: Microsoft Outlook 'tan programlı bir şekilde e-posta göndermek için Visual Studio 'Yu kullanın. Bu örnek, example.com etki alanı adına sahip kişilere bir e-posta iletisi gönderir.
+description: Microsoft Outlook 'den programlı bir e-posta göndermek için Visual Studio kullanın. Bu örnek, example.com etki alanı adına sahip kişilere bir e-posta iletisi gönderir.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: how-to
@@ -15,14 +15,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: fa6a45a199d4edce924f0e36a971026726d96eca
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: f2a46c68ff957451715c426d1b1effd3f16bfda9cb1d32347c56c44d769ac3fb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824802"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121366218"
 ---
 # <a name="how-to-programmatically-send-email"></a>Nasıl yapılır: program aracılığıyla e-posta gönderme
   Bu örnek, e-posta adreslerinde **example.com** etki alanı adına sahip kişilere bir e-posta iletisi gönderir.
@@ -45,5 +46,5 @@ ms.locfileid: "107824802"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)
 - [Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma](../vsto/how-to-programmatically-create-an-e-mail-item.md)
-- [Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [nasıl yapılır: program aracılığıyla Outlook kişilere erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
 - [Nasıl yapılır: e-posta iletisi alındığında program aracılığıyla eylem gerçekleştirme](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)

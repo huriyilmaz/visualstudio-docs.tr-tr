@@ -10,14 +10,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a297abe6326af6f04058e6095f59f880f526adb
-ms.sourcegitcommit: 30c404655fb83ea28f96ab1edb1c09b4d8d7eec4
+ms.openlocfilehash: be3833af7ea6dc26e51ef24077f762b3c2a001bc74459820b56f73e868849099
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "108217249"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404718"
 ---
 # <a name="idiasymbolget_isrtcs"></a>IDiaSymbol:: get_isRTCs
 
@@ -46,7 +47,7 @@ dışı İşlevin yığın çerçevesi çalışma zamanı hata denetimi ile derl
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yöntem, Visual Studio 2019 sürüm 16,10 Preview 2 ' den itibaren desteklenir.
+bu yöntem, Visual Studio 2019 sürüm 16,10 Preview 2 ' den itibaren desteklenir.
 
 ## <a name="requirements"></a>Gereksinimler
 

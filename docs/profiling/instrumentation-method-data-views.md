@@ -10,15 +10,16 @@ ms.assetid: 481f7579-f784-49ef-bb6c-2944e9d6ab42
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a8842e4c9ec2a8513b42a34cb4c4a5c18ffedf31
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 92d73f446b3c74d491ca375d10d0ef701a104e530e9bbcd7cd7159322e9dbc42
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906729"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368259"
 ---
 # <a name="instrumentation-method-data-views"></a>İzleme yöntemi veri görünümleri
 Bu bölüm, izleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.

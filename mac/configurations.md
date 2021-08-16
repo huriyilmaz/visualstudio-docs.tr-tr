@@ -1,77 +1,77 @@
 ---
 title: Yapı Yapılandırmalarını Anlama
-description: Bu makalede Mac için Visual Studio içindeki çeşitli derleme konfigürasyonları açıklanmaktadır
+description: Bu makalede, Mac için Visual Studio'daki çeşitli derleme yapılandırmaları açık Mac için Visual Studio
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: 911d8d3a65c414bc3c98494bda75c46b778e5b2b
-ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
+ms.openlocfilehash: 9b04c709f5bfe40e1906aaebb501ac427631119165486c3ac4d63d0ff7cdae7f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91584028"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121364930"
 ---
 # <a name="understanding-build-configurations"></a>Yapı yapılandırmalarını anlama
 
-Geliştirme süreci sırasında farklı türlerde derlemelerde kullanmak üzere çözüm ve proje özelliklerinin farklı yapılandırmalarının depolanmasını sağlayabilirsiniz. Bir şablon kullanarak Mac için Visual Studio tarafından oluşturulan projeler genellikle, bir uygulamanın hata ayıklamasını ve uygulama dağıtımını destekleyen hata ayıklama ve sürüm yapılandırmalarının dahil edilir. 
+Geliştirme işlemi sırasında farklı türlerde derlemelerde kullanmak üzere çözüm ve proje özelliklerinin farklı yapılandırmalarını depolayın. Şablon kullanılarak Mac için Visual Studio projeler genellikle bir uygulamanın hata ayıklamasını ve bir uygulamanın dağıtımını destekleyen Hata Ayıklama ve Sürüm yapılandırmalarını içerir. 
 
-Özel yapılandırma oluşturmak isterseniz, bkz. [yapı yapılandırması oluşturma ve bunları Düzenle](./create-and-edit-configurations.md).
+Özel yapılandırmalar oluşturmak için bkz. Derleme [yapılandırmalarını oluşturma ve düzenleme.](./create-and-edit-configurations.md)
 
 >[!NOTE]
->Bu konu Mac için Visual Studio için geçerlidir. Windows üzerinde Visual Studio için bkz. [derleme yapılandırmasını anlama](/visualstudio/ide/understanding-build-configurations).
+>Bu konu, Mac için Visual Studio. Daha Visual Studio için Windows [yapılandırmalarını anlama.](/visualstudio/ide/understanding-build-configurations)
 
-## <a name="solution-configurations"></a>Çözüm yapılandırması
+## <a name="solution-configurations"></a>Çözüm yapılandırmaları
 
-Çözüm konfigürasyonları, bir Çözümdeki tüm projelere yönelik konfigürasyonları belirtmek için kullanılır. **Yapı > yapılandırmaları** öğesi altındaki **yapılandırma eşlemeleri** sekmesini kullanarak, açılan çözümdeki her öğe için bir hedef yapılandırma atayabilirsiniz. Bu, aşağıdaki görüntüde gösterilmiştir:
+Çözüm yapılandırmaları, bir çözümde yer alan tüm projelerin yapılandırmalarını belirtmek için kullanılır. Derleme **Yapılandırmaları öğesi altındaki** Yapılandırma Eşlemeleri **>** kullanarak, açılan çözümde her öğe için bir hedef yapılandırma atabilirsiniz. Bu, aşağıdaki görüntüde gösterildi:
 
-![Yapılandırma eşleme seçenekleri](media/projects-and-solutions-image3.png)
+![Yapılandırma Eşleme Seçenekleri](media/projects-and-solutions-image3.png)
 
-Yapılandırma hakkında daha fazla bilgi için, James Montemagno [Configuration Manager](https://www.youtube.com/watch?v=tjSdkqYh5Vg) videosunu inceleyin.
+Yapılandırmalar hakkında daha fazla bilgi için James Montemagno [Yapılandırma Yöneticisi](https://www.youtube.com/watch?v=tjSdkqYh5Vg) videosunu izleyin.
 
-## <a name="project-build-configurations"></a>Proje Derleme yapılandırması
+## <a name="project-build-configurations"></a>Project yapılandırmaları oluşturma
 
-Projeler birden fazla yapılandırmaya sahip olmaya eğilimlidir. Yapılandırma ve platform bir proje hedefleri, derlendiklerinde kullanılacak özellikleri belirtmek için birlikte kullanılır. Yapılandırma arasında geçiş yapmak, derleme zamanında farklı çıkışlar yapılmasına izin verir. Örneğin, hata ayıklama yapılandırmasında hata ayıklama sembolleri çıkış yapılır ve hata ayıklayıcının, kilitlenen uygulamanın yığın izlemesinde işlev adlarını, parametreleri veya değişkenleri çözümlemesine izin verir. Bu ek bilgiler geliştirme sırasında yararlı olsa da, bir dosya boyutuna yol açar ve dağıtım için ideal değildir.
+Projelerin birden çok yapılandırması vardır. Proje hedeflerini yapılandırma ve platform birlikte kullanarak, proje yapılandırmasını yapılandırmasını yapmak için kullanılacak özellikleri belirtir. Yapılandırmalar arasında geçiş yapmak, derleme zamanında farklı çıkışlara olanak sağlar. Örneğin, hata ayıklama yapılandırması hata ayıklama sembolleri çıkışı vererek hata ayıklayıcının, kilitlenmeye neden olan bir uygulamanın yığın izlemesi işlev adlarını, parametrelerini veya değişkenlerini çözümlemesini sağlar. Bu ek bilgiler geliştirme sırasında yararlı olur ancak şişirilmiş bir dosya boyutuna yol açsa da dağıtım için ideal değildir.
 
-Her platformun derlemesi için belirli bir yapılandırması vardır. Projeler için derleme yapılandırma sayfalarına, **Proje seçenekleri** Iletişim kutusunda **derleme** bölümüne gidilerek erişilebilir. Projeye sağ tıklayıp **Seçenekler** ' i seçerek veya Çözüm Gezgini ' nde projeye çift tıklayarak bu iletişim kutusunu açın.
+Her platformun derlemesi için belirli yapılandırmalar vardır. Projelerin derleme yapılandırma sayfalarına, Proje Seçenekleri iletişim kutusundaki **Derleme** bölümüne **Project erişilebilir.** Projeye sağ tıklar ve Seçenekler'i  seçerek veya çözüm gezgininde projeye çift tıklayarak bu iletişim kutusunu açın.
 
-## <a name="run-configuration"></a>Yapılandırmayı Çalıştır
+## <a name="run-configuration"></a>Yapılandırmayı çalıştırma
 
-Mac için Visual Studio, _çalıştırma yapılandırması_ayarlamanıza olanak sağlar. Çalışma yapılandırmaları, aşağıda gösterildiği gibi, derleme yapılandırma seçicisinin yanında bulunan bir açılan listede görüntülenir:
+Mac için Visual Studio bir çalıştırma yapılandırması _ayarlamaya olanak sağlar._ Çalıştırma yapılandırmaları aşağıda gösterildiği gibi, araç çubuğunda, derleme yapılandırma seçicinin yanında bir açılan listede görüntülenir:
 
-![Yapılandırma açılan, Çalıştır](media/projects-and-solutions-image8.png)
+![Yapılandırmayı Çalıştır açılan listesinde](media/projects-and-solutions-image8.png)
 
-Çalıştırma yapılandırması, farklı amaçlar için bir projede tanımlanan bir ad ve birkaç yapılandırmaya sahip bir yürütme seçenekleri kümesidir. Çalışma yapılandırmalarının proje düzeyinde tanımlanması ve her yürütülebilir proje için varsayılan olarak otomatik olarak oluşturulması gerekir, ancak gereken sayıda ekleme yapılabilir. Belirli proje türleri otomatik olarak ek çalışma yapılandırması oluşturur. Örneğin, watchOS projeleri bir  _bakışta ve bildirim yapılandırması oluşturabilir._
+Çalıştırma yapılandırması, bir ad ve farklı amaçlar için projede tanımlanan çeşitli yapılandırmalara sahip bir yürütme seçenekleri kümesidir. Çalıştırma yapılandırmaları proje düzeyinde tanımlanır ve her yürütülebilir proje için otomatik olarak bir varsayılan oluşturulur, ancak gereken sayıda ekleme mümkündür. Belirli proje türleri otomatik olarak ek çalıştırma yapılandırmaları üretir. Örneğin, watchOS projeleri Glance ve  _Notification yapılandırmaları oluşturabiliyor._
 
-Yapılandırma diğer geliştiricilerle paylaşılabilir (Bu durumda, yapılandırmaların. csproj dosyasında depolanması) veya yerel olarak saklanır (Bu durumda, bir. User dosyasında depolanacak).
+Yapılandırmalar diğer geliştiricilerle paylaşılabilir (bu durumda yapılandırmalar .csproj dosyasında depolanır) veya yerel olarak tutulabilir (bu durumda bir .user dosyasında depolanır).
 
-### <a name="android-run-configurations"></a>Android çalıştırma yapılandırması
+### <a name="android-run-configurations"></a>Android çalıştırma yapılandırmaları
 
-Android projeleri için yapılandırma çalıştırma belirli bir etkinlik, hizmet veya yayın alıcısının, projeyi çalıştırırken veya hata ayıklarken başlatılacak şekilde belirtilmesine izin verir. Farklı başlatma koşullarında bileşenlerinizi test etmek için amaç ek verileri geçirebilir ve amaç bayrakları ayarlayabilirsiniz.
+Android projeleri için çalıştırma yapılandırmaları, belirli bir etkinliğin, hizmetin veya yayın alıcısının belirtimlerinin projeyi çalıştırma veya hata ayıklama sırasında başlatılmasına olanak sağlar. Amaç ek verileri iletir ve bileşenlerinizi farklı başlatma koşulları altında test etmek için amaç bayrakları ayarlayın.
 
-' Den farklı etkinliklerin, `MainLauncher` `Exported=true` fiziksel bir cihazda hata ayıklama için etkinlik özniteliğine eklenmesi veya tanımlanmış amaç filtreleri olması gerekir.
+dışında etkinliklerin fiziksel bir cihazda hata ayıklama için Etkinlik özniteliğine eklenmiş veya Amaç filtreleri `MainLauncher` `Exported=true` tanımlanmıştır.
 
-## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>Çalışma yapılandırmalarına dahil olabilecek verilerin örnekleri
+## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>Çalıştırma yapılandırmalarında yer alan veri örnekleri
 
-Aşağıdaki listede, çalışma yapılandırmalarına eklenebilecek bazı veri örnekleri verilmiştir:
+Aşağıdaki listede, çalıştırma yapılandırmalarında yer alan bazı veri örnekleri verilmiştir:
 
 * Normal .NET projesi
   * Alternatif başlangıç uygulaması
-  * Başlangıç bağımsız değişkenleri
+  * Bağımsız değişkenleri başlatma
   * Çalışma dizini
   * Ortam değişkenleri
-  * Mono çalışma zamanı seçenekleri (yalnızca mono üzerinde çalışırken kullanılmak üzere)
+  * Mono çalışma zamanı seçenekleri (yalnızca Mono üzerinde çalıştır kullanılır)
 * Android projesi
   * Giriş noktası (etkinlik, hizmet, alıcı)
   * Amaç bağımsız değişkenleri ve verileri
 * iOS projesi
-  * Mod (normal, arka plan getirme)
-* iOS uzantı projesi
+  * Mod (Normal, Arka Plan Getirme)
+* iOS uzantısı projesi
   * Başlangıç uygulaması: varsayılan veya özel
 * WatchKit projesi
-  * Mod (bakış, bildirim)
+  * Mod (Glance, Notification)
   * Bildirim yükü
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme yapılandırmasını anlama (Windows üzerinde Visual Studio)](/visualstudio/ide/understanding-build-configurations)
+- [Derleme yapılandırmalarını anlama (Visual Studio Windows)](/visualstudio/ide/understanding-build-configurations)

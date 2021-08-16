@@ -9,14 +9,15 @@ ms.assetid: 166a1a3a-2e10-4baa-ace1-9104b56185ce
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3491b80436a09692ee4db65fd84806f4bb0ccf89
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: da57c81881da82c03bfef6ea34369ff9848405772bea0baa486e4ee08e204de3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160626"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362932"
 ---
 # <a name="idiasymbolget_textureslot"></a>IDiaSymbol::get_textureSlot
 Doku yuvasını alır.

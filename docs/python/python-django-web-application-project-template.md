@@ -1,72 +1,73 @@
 ---
-title: Python için docgo Web projesi şablonu
-description: Visual Studio, Python ile Docgo Web uygulamalarının hızlı bir şekilde oluşturulmasına yönelik kapsamlı bir şablon sağlar.
+title: Python için Django web projesi şablonu
+description: Visual Studio Python ile Django web uygulamalarının hızlı bir şekilde oluşturulması için kapsamlı bir şablon sağlar.
 ms.date: 11/12/2018
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 462c66229b6f28d281bf03650e4d22d0d1dab64f
-ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
+ms.openlocfilehash: d9525cbf383c684326cda142c2117889ee9d911a63007308c635980110c31b45
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104806049"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368084"
 ---
 # <a name="django-web-project-template"></a>Django web projesi şablonu
 ::: moniker range="vs-2017"
-[Docgo](https://www.djangoproject.com/) , hızlı, güvenli ve ölçeklenebilir Web geliştirme için tasarlanan üst düzey bir Python çerçevesidir. Visual Studio 'da Python desteği, bir Docgo tabanlı Web uygulamasının yapısını ayarlamak için çeşitli proje şablonları sağlar. Visual Studio 'da bir şablon kullanmak için **Dosya**  >  **Yeni**  >  **Proje**' yi seçin, "docgo" araması yapın ve **boş docgo Web projesinden**, **docgo** Web projesinden seçim yapın ve **docgo Web projesi şablonlarını yoklar** . Tüm şablonlar hakkında bir anlatım için bkz. [Docgo öğreticisi](learn-django-in-visual-studio-step-01-project-and-solution.md) .
+[Django](https://www.djangoproject.com/) hızlı, güvenli ve ölçeklenebilir web geliştirme için tasarlanmış üst düzey bir Python çerçevesidir. Visual Studio'de Python desteği, Django tabanlı bir web uygulamasının yapısını ayarlamak için çeşitli proje şablonları sağlar. Visual Studio'de şablon kullanmak için Dosya Yeni  >    >  **Project'yi** seçin, "Django" araması yazın ve **Boş Django Web Project**, **Django Web Project** ve **Polls Django Web** Project şablonlarını seçin. Tüm [şablonların izlenecek yolu](learn-django-in-visual-studio-step-01-project-and-solution.md) için Bkz. Learn Django öğreticisi.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-[Docgo](https://www.djangoproject.com/) , hızlı, güvenli ve ölçeklenebilir Web geliştirme için tasarlanan üst düzey bir Python çerçevesidir. Visual Studio 'da Python desteği, bir Docgo tabanlı Web uygulamasının yapısını ayarlamak için çeşitli proje şablonları sağlar. Visual Studio 'da bir şablon kullanmak için **Dosya**  >  **Yeni**  >  **Proje**' yi seçin, "docgo" araması yapın ve **boş docgo Web projesi** ve **docgo Web projesi** şablonlarından öğesini seçin. Tüm şablonlar hakkında bir anlatım için bkz. [Docgo öğreticisi](learn-django-in-visual-studio-step-01-project-and-solution.md) .
+[Django](https://www.djangoproject.com/) hızlı, güvenli ve ölçeklenebilir web geliştirme için tasarlanmış üst düzey bir Python çerçevesidir. Visual Studio'de Python desteği, Django tabanlı bir web uygulamasının yapısını ayarlamak için çeşitli proje şablonları sağlar. Visual Studio'de şablon kullanmak için Dosya Yeni  >    >  **Project'yi** seçin, "Django" araması yazın ve **Boş Django Web** Project ve **Django Web** Project şablonlarını seçin. Tüm [şablonların izlenecek yolu](learn-django-in-visual-studio-step-01-project-and-solution.md) için Bkz. Learn Django öğreticisi.
 ::: moniker-end
-Visual Studio, Docgo projeleri için tam IntelliSense sağlar:
+Visual Studio Django projeleri için tam IntelliSense sağlar:
 
 - Şablona geçirilen bağlam değişkenleri:
 
     ![Bağlam değişkenleri için IntelliSense](media/template-django-intellisense.png)
 
-- Hem yerleşik hem de Kullanıcı tanımlı için etiketleme ve filtreleme:
+- Hem yerleşik hem de kullanıcı tanımlı için etiketleme ve filtreleme:
 
     ![Etiketler ve filtreler için IntelliSense](media/template-django-intellisense-filter.png)
 
-- Katıştırılmış CSS ve JavaScript için sözdizimi renklendirme:
+- Ekli CSS ve JavaScript için söz dizimi renklendirmesi:
 
     ![CSS IntelliSense](media/template-django-intellisense-css.png)
 
     ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
 
-Visual Studio, Docgo projeleri için tam [hata ayıklama desteği](debugging-python-in-visual-studio.md) de sağlar:
+Visual Studio Django [projeleri için tam hata](debugging-python-in-visual-studio.md) ayıklama desteği de sağlar:
 
 ![Kesme noktaları](media/template-django-debugging.png)
 
-Docgo projelerinin, Visual Studio 'nun izlediği bir varsayım olan *Manage.py* dosyası aracılığıyla yönetilmesi normaldir. Bu dosyayı giriş noktası olarak kullanmayı durdurursanız, aslında proje dosyasını kesebilirsiniz. Bu durumda, projeyi bir Docgo projesi olarak işaretlemeden [mevcut dosyalardan yeniden oluşturmanız](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) gerekir.
+Django projeleri tipik olarak manage.py dosyası  aracılığıyla yönetilir. Bu, Visual Studio varsayımdır. Bu dosyayı giriş noktası olarak kullanmayı durdurursanız, temelde proje dosyasını bozabilirsiniz. Bu durumda projeyi Django [projesi olarak işaretlemeden](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) mevcut dosyalardan yeniden oluşturmanız gerekir.
 
-## <a name="django-management-console"></a>Docgo Yönetim Konsolu
+## <a name="django-management-console"></a>Django yönetim konsolu
 
-Docgo yönetim konsoluna, **Proje** menüsündeki çeşitli komutlar aracılığıyla veya **Çözüm Gezgini**' de projeye sağ tıklanarak erişilir.
+Django yönetim konsoluna, Project menüsündeki çeşitli komutlar aracılığıyla veya **Çözüm Gezgini.** 
 
-- **Docgo kabuğunu aç**: uygulama içeriklerinizde, modellerinizi yönetmenize olanak tanıyan bir kabuk açar:
+- **Django Shell'i** açın: Uygulama bağlamında modellerinizi işlemenizi sağlayan bir kabuk açar:
 
-    ![Open Docgo kabuğu komutunun sonuçları](media/template-django-console-shell.png)
+    ![Open Django Shell komutunun sonuçları](media/template-django-console-shell.png)
 
-- **Docgo EŞITLEME DB**: `manage.py syncdb` **etkileşimli** bir pencerede yürütülür:
+- **Django Sync DB:** Etkileşimli `manage.py syncdb` pencerede **yürütülür:**
 
-    ![Docgo Sync DB komutunun sonucu](media/template-django-console-sync-db.png)
+    ![Django Sync DB komutunun sonucu](media/template-django-console-sync-db.png)
 
-- **Statik topla**: `manage.py collectstatic --noinput` tüm statik dosyaları `STATIC_ROOT` *Settings.py* içinde belirtilen yola kopyalamak için yürütülür.
+- **Statik Toplama:** tüm statik dosyaları dosyanız içinde tarafından belirtilen `manage.py collectstatic --noinput` yola kopyalamak için `STATIC_ROOT` settings.py. 
 
-    ![Statik toplama komutunun sonucu](media/template-django-console-collect-static.png)
+    ![Statik Topla komutunun sonucu](media/template-django-console-collect-static.png)
 
-- **Validate**: `manage.py validate` , `INSTALLED_APPS` *Settings.py* içinde tarafından belirtilen yüklü modellerdeki doğrulama hatalarını raporlayan yürütülür:
+- **Doğrulama:**, tarafından belirtilen yüklü modellerde doğrulama hatalarını `manage.py validate` raporlayan yürütülür ve `INSTALLED_APPS` settings.py:
 
-    ![Validate komutunun sonucu](media/template-django-console-validate.png)
+    ![Doğrula komutunun sonucu](media/template-django-console-validate.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Docgo öğreticisini öğrenin](learn-django-in-visual-studio-step-01-project-and-solution.md)
+- [Django öğreticisi hakkında bilgi edin](learn-django-in-visual-studio-step-01-project-and-solution.md)
 - [Azure App Service’e yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md)

@@ -1,6 +1,6 @@
 ---
-title: .NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini Güncelleştir
-description: Bir form bölgesi olan bir Outlook VSTO eklentisi projesinin hedef çatısı .NET Framework 4 ' e veya sonraki bir sürüme değiştirilmişse kodunuzu değiştirmeniz gerekir.
+title: .NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini güncelleştir
+description: bir form bölgesi olan bir Outlook VSTO eklentisi projesinin hedef çatısı .NET Framework 4 veya sonraki bir sürüme değiştirilmişse, kodunuzu değiştirmeniz gerekir.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -13,31 +13,32 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 15b212a8b7dde85e66b18b78d356bdb31c62836a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1cc53e619c9607a77847c1e0dba8ba19f97e2d1d02c0afa7f77d9fcab774471
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921895"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121365880"
 ---
-# <a name="update-outlook-form-regions-when-migrated-to-net-framework-45"></a>.NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini Güncelleştir
+# <a name="update-outlook-form-regions-when-migrated-to-net-framework-45"></a>.NET Framework 4,5 ' e geçirildiğinde Outlook form bölgelerini güncelleştir
 
-  Bir form bölgesi olan bir Outlook VSTO eklentisi projesinin hedef çatısı [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha sonraki bir sürümüne değiştiyse, oluşturulan form bölgesi kodunda ve çalışma zamanında belirli form bölgesi sınıflarını Başlatan tüm kodlar üzerinde bazı değişiklikler yapmanız gerekir.
+  bir form bölgesi olan bir Outlook VSTO eklentisi projesi hedef çatısı [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha sonraki bir sürüme değiştirilmişse, oluşturulan form bölgesi kodunda ve çalışma zamanında belirli form bölgesi sınıflarını başlatan tüm kodlar üzerinde bazı değişiklikler yapmanız gerekir.
 
 ## <a name="update-the-generated-form-region-code"></a>Oluşturulan form bölgesi kodunu Güncelleştir
- Projenin hedef çerçevesi [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha sonraki bir sürümüne değiştirildiyse, oluşturulan form bölgesi kodunu değiştirmeniz gerekir. Yaptığınız değişiklikler, Visual Studio 'da tasarladığınız form bölgeleri ve Outlook 'tan içeri aktardığınız form bölgeleri için farklıdır. Bu form bölgesi türleri arasındaki farklar hakkında daha fazla bilgi için bkz. [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md).
+ Projenin hedef çerçevesi [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha sonraki bir sürümüne değiştirildiyse, oluşturulan form bölgesi kodunu değiştirmeniz gerekir. yaptığınız değişiklikler Visual Studio ve Outlook aldığınız form bölgelerinde tasarladığınız form bölgeleri için farklıdır. bu form bölgesi türleri arasındaki farklar hakkında daha fazla bilgi için bkz. [Create Outlook form region](../vsto/creating-outlook-form-regions.md).
 
-### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>Visual Studio 'da tasarladığınız bir form bölgesinin oluşturulan kodunu güncelleştirmek için
+### <a name="to-update-the-generated-code-for-a-form-region-that-you-designed-in-visual-studio"></a>Visual Studio içinde tasarladığınız bir form bölgesinin oluşturulan kodunu güncelleştirmek için
 
-1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion* olarak adlandırılır. Designer.cs veya *YourFormRegion*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
+1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion* olarak adlandırılır. Tasarımcı. cs veya *YourFormRegion*. Designer. vb. bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
 
 2. Form bölgesi sınıfının bildirimini yerine öğesinden türeten önce değiştirin <xref:Microsoft.Office.Tools.Outlook.FormRegionBase> `Microsoft.Office.Tools.Outlook.FormRegionControl` .
 
 3. Form bölgesi sınıfının yapıcısını aşağıdaki kod örneklerinde gösterildiği gibi değiştirin.
 
-     Aşağıdaki kod örneği, .NET Framework 3,5 ' i hedefleyen bir projede form bölgesi sınıfının yapıcısını gösterir.
+     aşağıdaki kod örneği, .NET Framework 3,5 ' i hedefleyen bir projede form bölgesi sınıfının yapıcısını gösterir.
 
     ```vb
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)
@@ -73,7 +74,7 @@ ms.locfileid: "99921895"
 
 4. `InitializeManifest`Metodun imzasını aşağıda gösterildiği gibi değiştirin. Yönteminde kodu değiştirdiğinizden emin olun; Bu kod, tasarımcıda uyguladığınız form bölge ayarlarını temsil eder. Visual C# projelerinde, `Form Region Designer generated code` Bu yöntemi görmek için adlı bölgeyi genişletmeniz gerekir.
 
-     Aşağıdaki kod örneği, `InitializeManifest` .NET Framework 3,5 ' i hedefleyen bir projedeki yönteminin imzasını gösterir.
+     aşağıdaki kod örneği, `InitializeManifest` .NET Framework 3,5 ' i hedefleyen bir projedeki yönteminin imzasını gösterir.
 
     ```vb
     Private Shared Sub InitializeManifest(ByVal manifest As Microsoft.Office.Tools.Outlook.FormRegionManifest)
@@ -107,7 +108,7 @@ ms.locfileid: "99921895"
     }
     ```
 
-5. Projenize yeni bir Outlook form bölgesi öğesi ekleyin. Yeni form bölgesi için arka plan kod dosyasını açın, dosyadaki *YourNewFormRegion* `Factory` ve `WindowFormRegionCollection` sınıflarını bulun ve bu sınıfları panoya kopyalayın.
+5. projenize yeni bir Outlook Form bölgesi öğesi ekleyin. Yeni form bölgesi için arka plan kod dosyasını açın, dosyadaki *YourNewFormRegion* `Factory` ve `WindowFormRegionCollection` sınıflarını bulun ve bu sınıfları panoya kopyalayın.
 
 6. Projenize eklediğiniz yeni form bölgesini silin.
 
@@ -115,15 +116,15 @@ ms.locfileid: "99921895"
 
 8. *YourNewFormRegion* `Factory` ve `WindowFormRegionCollection` sınıflarında, *YourNewFormRegion* sınıfına yapılan tüm başvuruları arayın ve bunun yerine her bir başvuruyu *YourOriginalFormRegion* sınıfına değiştirin. Örneğin, güncelleştirdiğiniz form bölgesi adlandırılmış ise `SalesDataFormRegion` ve 5. adımda oluşturduğunuz yeni form bölgesi olarak adlandırılmışsa `FormRegion1` , tüm başvurularını `FormRegion1` öğesine değiştirin `SalesDataFormRegion` .
 
-#### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>Outlook 'tan içeri aktardığınız bir form bölgesinin oluşturulan kodunu güncelleştirmek için
+#### <a name="to-update-the-generated-code-for-a-form-region-that-you-imported-from-outlook"></a>Outlook aldığınız form bölgesi için oluşturulan kodu güncelleştirmek için
 
-1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion* olarak adlandırılır. Designer.cs veya *YourFormRegion*. Designer. vb. Bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
+1. Kod düzenleyicisinde form bölgesi arka plan kod dosyasını açın. Bu dosya *YourFormRegion* olarak adlandırılır. Tasarımcı. cs veya *YourFormRegion*. Designer. vb. bu dosyayı Visual Basic projelerinde görmek için, **Çözüm Gezgini** **tüm dosyaları göster** düğmesine tıklayın.
 
 2. Form bölgesi sınıfının bildirimini yerine öğesinden türeten önce değiştirin <xref:Microsoft.Office.Tools.Outlook.ImportedFormRegionBase> `Microsoft.Office.Tools.Outlook.ImportedFormRegion` .
 
 3. Form bölgesi sınıfının yapıcısını aşağıdaki kod örneklerinde gösterildiği gibi değiştirin.
 
-     Aşağıdaki kod örneği, .NET Framework 3,5 ' i hedefleyen bir projede form bölgesi sınıfının yapıcısını gösterir.
+     aşağıdaki kod örneği, .NET Framework 3,5 ' i hedefleyen bir projede form bölgesi sınıfının yapıcısını gösterir.
 
     ```vb
     Public Sub New(ByVal formRegion As Microsoft.Office.Interop.Outlook.FormRegion)
@@ -159,7 +160,7 @@ ms.locfileid: "99921895"
 
 4. `InitializeControls`Form bölgesi sınıfında bir denetimi Başlatan yöntemdeki her kod satırı için, kodu aşağıda gösterildiği gibi değiştirin.
 
-     Aşağıdaki kod örneği, .NET Framework 3,5 ' i hedefleyen bir projede bir denetimin nasıl başlatılacağını göstermektedir. Bu kodda, `GetFormRegionControl` yöntemi döndürülen denetimin türünü belirten bir tür parametresine sahiptir.
+     aşağıdaki kod örneği, .NET Framework 3,5 ' i hedefleyen bir projede bir denetimin nasıl başlatılacağını göstermektedir. Bu kodda, `GetFormRegionControl` yöntemi döndürülen denetimin türünü belirten bir tür parametresine sahiptir.
 
     ```vb
     Me.olkTextBox1 = Me.GetFormRegionControl(Of Microsoft.Office.Interop.Outlook.OlkTextBox)("OlkTextBox1")
@@ -179,7 +180,7 @@ ms.locfileid: "99921895"
     this.olkTextBox1 = (Microsoft.Office.Interop.Outlook.OlkTextBox)GetFormRegionControl("OlkTextBox1");
     ```
 
-5. Projenize yeni bir Outlook form bölgesi öğesi ekleyin. Yeni form bölgesi için arka plan kod dosyasını açın, dosyadaki *YourNewFormRegion* `Factory` ve `WindowFormRegionCollection` sınıflarını bulun ve bu sınıfları panoya kopyalayın.
+5. projenize yeni bir Outlook Form bölgesi öğesi ekleyin. Yeni form bölgesi için arka plan kod dosyasını açın, dosyadaki *YourNewFormRegion* `Factory` ve `WindowFormRegionCollection` sınıflarını bulun ve bu sınıfları panoya kopyalayın.
 
 6. Projenize eklediğiniz yeni form bölgesini silin.
 
@@ -190,7 +191,7 @@ ms.locfileid: "99921895"
 ## <a name="instantiate-form-region-classes"></a>Form bölgesi sınıflarını oluştur
  Belirli form bölgesi sınıflarını dinamik olarak örnekleyen herhangi bir kodu değiştirmeniz gerekir. .NET Framework 3,5 ' i hedefleyen projelerde, doğrudan gibi form bölgesi sınıflarının örneğini oluşturabilirsiniz `Microsoft.Office.Tools.Outlook.FormRegionManifest` . [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]Veya daha sonra hedeflenen projelerde, bu sınıflar doğrudan örnek oluşturabileceksiniz arayüzlerdir.
 
- Projenizin hedef çatısı [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki bir sürümüne değiştirilirse, özelliği tarafından sunulan yöntemleri kullanarak arabirimleri örneklemelisiniz `Globals.Factory` . Özelliği hakkında daha fazla bilgi için `Globals.Factory` bkz. [Office Projelerindeki Nesnelere Genel erişim](../vsto/global-access-to-objects-in-office-projects.md).
+ Projenizin hedef çatısı [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki bir sürümüne değiştirilirse, özelliği tarafından sunulan yöntemleri kullanarak arabirimleri örneklemelisiniz `Globals.Factory` . özelliği hakkında daha fazla bilgi için `Globals.Factory` bkz. [Office projelerindeki nesnelere genel erişim](../vsto/global-access-to-objects-in-office-projects.md).
 
  Aşağıdaki tabloda, veya daha sonra hedeflenen projelerdeki türlerin örneğini oluşturmak için kullanılacak olan form bölgesi türleri ve yöntemi listelenmektedir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
 

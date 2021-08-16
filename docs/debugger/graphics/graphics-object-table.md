@@ -1,6 +1,6 @@
 ---
 title: Grafik nesne tablosu | Microsoft Docs
-description: Visual Studio grafik analizinde bir oyun veya uygulamanın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olan grafik nesne tablosu hakkında bilgi edinin.
+description: grafik analizi Visual Studio, bir oyun veya uygulamanın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olan grafik nesne tablosu hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,17 +12,18 @@ ms.assetid: f48f62d9-16ff-4a2e-8c01-5cbe99513788
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 095828e711f860662432edd767b19493b73c56c0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e584c1e187c95ab44c8c16e021176ab46f7fd43ad6487c76167e8414d60fdb18
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887581"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404460"
 ---
 # <a name="graphics-object-table"></a>Grafik Nesnesi Tablosu
-Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulamanızın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olur.
+grafik analizi Visual Studio grafik nesne tablosu, oyununuzun veya uygulamanızın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olur.
 
  Bu, nesne tablosudur:
 
@@ -31,7 +32,7 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
 ## <a name="understanding-the-graphics-object-table"></a>Grafik nesne tablosunu anlama
  Nesne tablosunu kullanarak, belirli bir çerçeveyi işlemeyi destekleyen Direct3D nesnelerini çözümleyebilirsiniz. Bir işleme sorununu, özelliklerini ve verilerini inceleyerek belirli bir nesneye (tanılamada daha önce diğer Grafik Tanılama araçları kullanarak, beklediğiniz gibi olmayan nesnelerin listesini daraltabilirsiniz.) Sorunlu nesneyi bulduğunuz zaman, incelemek için türüne özgü bir görselleştirmeyi kullanabilirsiniz. Örneğin, doku içeriğini görüntülemek için görüntü düzenleyiciyi veya *arabellek görselleştirmesini* görüntülemek Için görüntü düzenleyicisini kullanabilirsiniz.
 
- Nesne tablosu kopyalamayı ve yapıştırmayı destekler, böylece başka bir araç (örneğin, Microsoft Excel) kullanarak içeriğini inceleyebilirsiniz.
+ nesne tablosu kopyalama ve yapıştırmayı destekler, böylece başka bir araç (örneğin, Microsoft Excel) kullanarak içeriğini inceleyebilirsiniz.
 
  Ayrıca, sol üst köşedeki **tür** açılan listesini kullanarak, tür **arabelleklerinin**, **gölgelendiricilerin** veya **dokuların** veya bu öğelerin tümünün aynı anda görüntülenmesini sağlayabilirsiniz.  Ayrıca, gösterilen tüm veriler genelinde belirli satırları bulmak için sağ üst köşedeki arama kutusunu da kullanabilirsiniz.  Örneğin, listedeki bu biçimdeki tüm nesne örneklerini bulmak için *D32_FLOAT* araması yapabilirsiniz.
 
@@ -76,11 +77,11 @@ Visual Studio grafik analizinde grafik nesne tablosu, oyununuzun veya uygulaman�
  Direct3D 11 ve Direct3D 10 ' da, cihaz bağlamı (**d3d11 cihaz bağlamı** veya **D3D10 cihazı**) nesnesi özellikle önemlidir çünkü en önemli durum bilgilerini barındırır ve şu anda ayarlanmış olan diğer durum nesnelerine bağlantı sağlar. Cihaz bağlamı ayrıntıları yeni bir belge penceresinde görüntülenir ve her bilgi kategorisi kendi sekmesinde sunulur. Geçerli cihaz durumunu yansıtmak için yeni bir olay seçildiğinde cihaz bağlamı değişir.
 
 ### <a name="buffer-object"></a>Buffer nesnesi
- Arabellek nesnesi ayrıntıları (D3D11 buffer veya D3D10 buffer), bir tablodaki arabellek içeriğini gösteren yeni bir belge penceresinde görüntülenir ve arabellek içeriklerinin nasıl görüntülendiğini değiştirmek için bir arabirim sağlar. **Arabellek verileri** tablosu, içeriğini incelemek için başka bir araç (örneğin, Microsoft Excel) kullanabilmeniz için kopyalama ve yapıştırmayı destekler. Arabelleğin içeriği, **arabellek veri** tablosunun üstünde bulunan **Biçim** Birleşik giriş kutusunun değerine göre yorumlanır. Kutusunda, aşağıdaki tabloda listelenen veri türlerinden oluşan bir bileşik veri biçimi girebilirsiniz. Örneğin, "float int", 32 bitlik kayan noktalı bir değer ve ardından 32 bit işaretli bir tamsayı değeri içeren yapıların listesini görüntüler. Belirttiğiniz bileşik veri biçimleri, daha sonra kullanılmak üzere Birleşik giriş kutusuna eklenir.
+ Arabellek nesnesi ayrıntıları (D3D11 buffer veya D3D10 buffer), bir tablodaki arabellek içeriğini gösteren yeni bir belge penceresinde görüntülenir ve arabellek içeriklerinin nasıl görüntülendiğini değiştirmek için bir arabirim sağlar. **arabellek verileri** tablosu, farklı bir araç (örneğin, Microsoft Excel) kullanabilmeniz için kopyalamayı ve yapıştırmayı destekler, böylece içeriğini inceleyebilirsiniz. Arabelleğin içeriği, **arabellek veri** tablosunun üstünde bulunan **Biçim** Birleşik giriş kutusunun değerine göre yorumlanır. Kutusunda, aşağıdaki tabloda listelenen veri türlerinden oluşan bir bileşik veri biçimi girebilirsiniz. Örneğin, "float int", 32 bitlik kayan noktalı bir değer ve ardından 32 bit işaretli bir tamsayı değeri içeren yapıların listesini görüntüler. Belirttiğiniz bileşik veri biçimleri, daha sonra kullanılmak üzere Birleşik giriş kutusuna eklenir.
 
  Ayrıca, arabellekteki her bir öğenin sapmasını gizlemek veya görüntülemek için de kaydırmayı **göster** onay kutusunu işaretleyebilirsiniz.
 
-|Tür|Description|
+|Tür|Açıklama|
 |----------|-----------------|
 |**float**|32 bitlik kayan nokta değeri.|
 |**float2**|2 32 bitlik kayan nokta değerlerini içeren bir vektör.|

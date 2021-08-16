@@ -11,14 +11,15 @@ ms.assetid: 95382395-da41-4aa8-87f1-5b03da128565
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d72ce83ada785cc598df123929b54a3cc8b6d7b2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0a7e27b26f8e5f022f5145cffe51126c6614a8c3f67000fb56432e8c2c5d7fc6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155672"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362956"
 ---
 # <a name="idiasymbolget_targetsection"></a>IDiaSymbol::get_targetSection
 Bir dönüştürücü hedefinin adres bölümünü alır.

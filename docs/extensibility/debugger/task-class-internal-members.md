@@ -11,14 +11,15 @@ ms.assetid: 28e47c3b-9323-424a-80ac-6cc3bf19e09b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37691714d0168594b61a1a3849f7b65264e9999e
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: a8c6a40cb19315c6b754ef8e81208f78f1e1996837d6ee352d84a6df25041dc4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902897"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414967"
 ---
 # <a name="task-class---internal-members"></a>Görev sınıfı - iç üyeler
 Bu makalede, özel bir hata ayıklayıcı <xref:System.Threading.Tasks.Task?displayProperty=fullName> uygulamanıza yardımcı olan sınıfının iç üyeleri açıklanmıştır. Bu sınıf hakkında genel bilgi için başvuru <xref:System.Threading.Tasks.Task> makalesine bakın.
@@ -46,7 +47,7 @@ Bu makalede, özel bir hata ayıklayıcı <xref:System.Threading.Tasks.Task?disp
 
 |Ad|Açıklama|
 |----------|-----------------|
-|[SetNotificationForWaitCompletion Metodu](../../extensibility/debugger/setnotificationforwaitcompletion-method.md)|Durum biti kümelerini TASK_STATE_WAIT_COMPLETION_NOTIFICATION veya temizler.|
+|[SetNotificationForWaitCompletion Metodu](../../extensibility/debugger/setnotificationforwaitcompletion-method.md)|Durum biti için TASK_STATE_WAIT_COMPLETION_NOTIFICATION veya temizler.|
 |[NotifyDebuggerOfWaitCompletion Metodu](../../extensibility/debugger/notifydebuggerofwaitcompletion-method.md)|Hata ayıklayıcı tarafından kesme noktası hedefi olarak kullanılan yer tutucu yöntemi.|
 
 ### <a name="fields"></a>Alanlar
@@ -64,7 +65,7 @@ Bu makalede, özel bir hata ayıklayıcı <xref:System.Threading.Tasks.Task?disp
 |[TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)|Görevin çalışıyor olduğunu gösterir.|
 |[TASK_STATE_FAULTED](../../extensibility/debugger/task-state-faulted-field.md)|İşlenemeyen bir özel durum nedeniyle görevin tamamlandıktan sonra olduğunu gösterir.|
 |[TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)|Görevin yürütmeyi başarıyla tamamlamış olduğunu gösterir.|
-|[TASK_STATE_WAITING_ON_CHILDREN](../../extensibility/debugger/task-state-waiting-on-children-field.md)|Görevin temsilcisini yürütmeyi tamam harcadığını ve ekli alt görevlerin bitip bitip bitenin örtülü olarak beklediğini gösterir.|
+|[TASK_STATE_WAITING_ON_CHILDREN](../../extensibility/debugger/task-state-waiting-on-children-field.md)|Görevin temsilcisini yürütmeyi tamam harcadığını ve ekli alt görevlerin bitip bit beklediğini gösterir.|
 
 ## <a name="remarks"></a>Açıklamalar
  Aşağıdaki iç yöntemler, kod yürütme girişine işaret eden bir hata ayıklayıcı altyapısı <xref:System.Threading.Tasks.Task> için yararlıdır:

@@ -1,19 +1,20 @@
 ---
 title: Test Gezgini ile birim testlerinde hata ayıklama
-description: Visual Studio 'da test Gezgini ile birim testlerinde hata ayıklamayı nasıl ayıklayacağınızı öğrenin.
+description: Visual Studio 'de test Gezgini ile birim testlerinde hata ayıklamayı nasıl ayıklayacağınızı öğrenin.
 ms.date: 07/14/2020
 ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 09889839c9e2873810c78a5f0c3425820170b68d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 94a4f38b1cf719057557f711befce0fc8fcb3f1b78973badd838c1825fa11d1d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964387"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121366775"
 ---
 # <a name="debug-and-analyze-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testlerini hata ayıklama ve çözümleme
 
@@ -33,7 +34,7 @@ Testleriniz için bir hata ayıklama oturumu başlatmak üzere test Gezgini ' ni
    ![Test yürütme ayrıntıları](../test/media/vs-2019/test-explorer-debug.png)
 ::: moniker-end
 
-   Hata ayıklayıcı hakkında daha fazla bilgi için bkz. [Visual Studio 'Da hata ayıklama](../debugger/debugger-feature-tour.md).
+   Hata ayıklayıcı hakkında daha fazla bilgi için bkz. [Visual Studio 'de hata ayıklama](../debugger/debugger-feature-tour.md).
 
 ## <a name="diagnose-test-method-performance-issues"></a>Test yöntemi performans sorunlarını tanılama
 

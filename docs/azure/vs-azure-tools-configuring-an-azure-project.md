@@ -1,46 +1,47 @@
 ---
 title: Azure bulut hizmeti projesi yapılandırma
-description: Bu projenin gereksinimlerine bağlı olarak, Visual Studio 'da bir Azure bulut hizmeti projesi yapılandırmayı öğrenin.
+description: Bu proje için gereksinimlerinize bağlı olarak azure Visual Studio azure bulut hizmeti projesini yapılandırmayı öğrenin.
 author: ghogen
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/06/2017
 ms.author: ghogen
-ms.openlocfilehash: ad011e740d7bffeddf7f92bd3735fbeedc1f4020
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 72a4f1db0fcd3564dda3b90fe957675e9ed60e099c7ecd56b06b6c07d928e6c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844261"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121363965"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti projesini yapılandırma
-Bu projenin gereksinimlerine bağlı olarak bir Azure bulut hizmeti projesi yapılandırabilirsiniz. Projenin özelliklerini aşağıdaki kategoriler için ayarlayabilirsiniz:
+Bir Azure bulut hizmeti projesini, bu proje için gereksinimlerinize bağlı olarak yapılandırabilirsiniz. Projenin özelliklerini aşağıdaki kategoriler için ayarlayabilirsiniz:
 
-- **Azure 'da bir bulut hizmeti yayımlayın** -Azure 'a dağıtılan mevcut bir bulut hizmetinin yanlışlıkla silinmediğinden emin olmak için bir özellik ayarlayabilirsiniz.
-- **Yerel bilgisayarda bir bulut hizmeti çalıştırın veya hata ayıklayın** . kullanılacak bir hizmet yapılandırması seçebilir ve Azure Storage öykünücüsü 'nü başlatmak isteyip istemediğinizi belirtebilirsiniz.
-- **Bir bulut hizmeti paketini doğrulama sırasında doğrulama** -bulut hizmeti paketinin herhangi bir sorun olmadan dağıtımını sağlamak için herhangi bir uyarıyı hata olarak değerlendirmeye karar verebilirsiniz.
+- **Azure'da bulut hizmeti yayımlama** - Azure'a dağıtılan mevcut bir bulut hizmetinin yanlışlıkla silinmey olduğundan emin olmak için bir özellik oluşturabilirsiniz.
+- **Yerel bilgisayarda bir bulut hizmetini çalıştırma** veya hata ayıklama - Kullanmak üzere bir hizmet yapılandırması seçin ve Azure hizmet hizmetini başlatmak isteyip Depolama Emulator.
+- **Bir bulut hizmeti paketini oluşturulduğunda doğrulama** - Bulut hizmeti paketinin herhangi bir sorun olmadan dağıtılablandırılaması için uyarıları hata olarak ele aabilirsiniz.
 
 ## <a name="steps-to-configure-an-azure-cloud-service-project"></a>Azure bulut hizmeti projesini yapılandırma adımları
-1. Visual Studio 'da bir bulut hizmeti projesi açın veya oluşturun
+1. Visual Studio'de bulut hizmeti projesini açma veya oluşturma
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. Bu **Çözüm Gezgini** projesine sağ tıklayın ve bağlam menüsünden Özellikler'i **seçin.**
 
-1. Projenin Özellikler sayfasında **geliştirme** sekmesini seçin.
+1. Projenin özellikler sayfasında Geliştirme **sekmesini** seçin.
 
-    ![Proje özellikleri menüsü](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
+    ![Project özellikleri menüsü](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
 
-1.  **Mevcut bir dağıtımı doğru bir şekilde silmeden önce sor** ' a ayarlayın. Bu ayar, Azure 'da var olan bir dağıtımı yanlışlıkla silmemenizi sağlamaya yardımcı olur
+1. Mevcut **bir dağıtımı silmeden önce İstem'i** True olarak **ayarlayın.** Bu ayar, Azure'daki mevcut bir dağıtımı yanlışlıkla silmemenizi sağlar
 
-1. Bulut hizmetinizi yerel olarak çalıştırdığınızda veya hata ayıkladığınızda hangi hizmet yapılandırmasını kullanmak istediğinizi belirtmek için istenen **hizmet yapılandırmasını** seçin. Bir rol için bir hizmet yapılandırmasını değiştirme hakkında daha fazla bilgi için bkz. [Visual Studio Ile Azure bulut hizmeti için rolleri yapılandırma](./vs-azure-tools-configure-roles-for-cloud-service.md).
+1. Bulut hizmetinizi **yerel olarak** çalıştırarak veya hata ayıklarken kullanmak istediğiniz hizmet yapılandırmasını belirtmek için istediğiniz Hizmet yapılandırmasını seçin. Bir rol için hizmet yapılandırmasını değiştirme hakkında daha fazla bilgi için bkz. [Azure](./vs-azure-tools-configure-roles-for-cloud-service.md)bulut hizmetinin rollerini Visual Studio.
 
-1. Bulut hizmetinizi yerel olarak çalıştırdığınızda veya hata ayıkladığınızda Azure Storage öykünücüsü 'nü başlatmak için **Azure depolama öykünücüsünü** **doğru** olarak ayarlayın.
+1. Bulut **hizmetinizi yerel olarak Depolama Emulator** veya **hata** ayıklaması Depolama Emulator Azure hizmetini başlatmak için Azure Depolama Emulator'i True olarak ayarlayın.
 
-1. Paket doğrulama hataları varsa **yayımlanmayadığınızdan emin olmak için uyarıları hata olarak değerlendir** ' i **doğru** olarak ayarlayın.
+1. Paket **doğrulama hataları varsa yayımlanamadık** emin olmak için Uyarıları hata olarak kabul edin'i **True** olarak ayarlayın.
 
-1. Web rolünüzün IIS Express yerel olarak başlatıldığı her seferinde aynı bağlantı noktasını kullandığından emin olmak için **Web projesi bağlantı noktalarını** **doğru** olarak kullan ' a ayarlayın.
+1. Web **rolünüz her yerel olarak** yerel **olarak** başlatıldığında aynı bağlantı noktasını kullandığından emin olmak için Web projesi bağlantı noktalarını kullan'IIS Express.
 
-1. Visual Studio araç çubuğundan **Kaydet**' i seçin.
+1. Araç çubuğundan Visual Studio'yi **seçin.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- [Birden çok hizmet yapılandırması kullanarak bir Azure projesi yapılandırma](vs-azure-tools-multiple-services-project-configurations.md)
+- [Birden çok hizmet yapılandırması kullanarak Bir Azure projesini yapılandırma](vs-azure-tools-multiple-services-project-configurations.md)

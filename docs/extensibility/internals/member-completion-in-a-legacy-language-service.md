@@ -12,14 +12,15 @@ ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5279b3a96cb9658b968a5d51bbd8b1c2a41862b6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: beb0dc40253ddf4280a3cd4854c53151369098a0ef03c1c275769c498570966a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095140"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414655"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Üye Tamamlama
 
@@ -40,7 +41,7 @@ Aşağıda, MPF sınıfları kullanılarak üye listesinin gösterildiği iki yo
 
 - <xref:Microsoft.VisualStudio.Package.IScanner>Tarayıcı, bir üye tamamlanma karakteri algılar ve [TokenTriggers. MemberSelect](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>) belirtecinin belirteç tetikleyicisini belirler.
 
-Bir üye tamamlama karakteri, bir sınıf, yapı veya numaralandırma üyesinin takip edilmesinin gerektiğini gösterir. Örneğin, C# veya Visual Basic üye tamamlama karakteri bir, `.` C++ ' da karakter a `.` veya a olur `->` . Tetikleyici değeri, üye seçme karakteri tarandığında ayarlanır.
+Bir üye tamamlama karakteri, bir sınıf, yapı veya numaralandırma üyesinin takip edilmesinin gerektiğini gösterir. örneğin, C# veya Visual Basic üye tamamlama karakteri bir, `.` C++ ' da karakter a `.` veya a olur `->` . Tetikleyici değeri, üye seçme karakteri tarandığında ayarlanır.
 
 ### <a name="the-intellisense-member-list-command"></a>IntelliSense üye listesi komutu
 

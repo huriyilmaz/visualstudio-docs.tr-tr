@@ -10,14 +10,15 @@ ms.assetid: 306ea0b4-6d9e-4871-8d8d-a4032d422940
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 227d863df1e3318d2df6be6a24aaf05b5033e92d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: eb5d382d54d8263cfe0e72f2c828453b8c29aba097973e7c32f1640cc1d2d4a2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070407"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414954"
 ---
 # <a name="send-startup-events-after-a-launch"></a>Başlatma sonrasında başlangıç olaylarını gönder
 Hata ayıklama altyapısı (DE) programa eklendikten sonra, hata ayıklama oturumuna geri bir dizi başlangıç olayı gönderir.

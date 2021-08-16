@@ -11,12 +11,13 @@ ms.assetid: 175d1d58-f09a-4449-b132-a29a394a7c8e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 872799a01e13ca94108f9acac655ee6541779c44
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 9cb3cb2fce990eabfd68bd3683418241be3020107de98c6aa55eca8e61011047
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971849"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121366608"
 ---
 # <a name="how-to-select-a-load-test-run-setting-to-use-from-the-command-line"></a>Nasıl yapılır: komut satırından kullanmak için bir yük testi çalıştırma ayarı seçme
 

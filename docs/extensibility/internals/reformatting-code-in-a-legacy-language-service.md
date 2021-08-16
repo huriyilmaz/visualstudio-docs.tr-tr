@@ -1,6 +1,6 @@
 ---
-title: Eski dil hizmetinde kodu yeniden biçimlendirme | Microsoft Docs
-description: Visual Studio eski dil hizmeti için kaynak kodu yeniden biçimlendirme desteğini etkinleştirme hakkında bilgi edinin.
+title: Eski Dil Hizmeti Hizmet HizmetLerinde Kodu Yeniden | Microsoft Docs
+description: Eski dil hizmeti için kaynak kodu yeniden Visual Studio etkinleştirme hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,37 +11,38 @@ ms.assetid: 08bb3375-8fef-4f4e-9efa-0d7333bab0eb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8dc10e4def3e4725bb4f64041cdb17146b9d84d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0af9dc7bf25e448a1e5a128276f55016a1049db49f55e14689fce9a6e8376972
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060867"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414499"
 ---
 # <a name="reformatting-code-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Kodu Yeniden Biçimlendirme
 
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kaynak kodunda, girintili ve boşluk kullanımı normalleştirilerek yeniden biçimlendirilmesi yapılabilir. Bu, her satırın başlangıcında boşluk veya sekme ekleme veya kaldırma, satırlar arasına yeni satır ekleme veya boşluk içeren sekmeler veya sekmeler ile boşluk değiştirme içerebilir.
+Kaynak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kodunda girintiler ve boşluk kullanımını normalleştirerek yeniden biçimlendirebilirsiniz. Buna her satırın başına boşluk veya sekme ekleme veya kaldırma, satırlar arasına yeni satırlar ekleme veya boşlukları sekmeler veya sekmelerle boşluklarla değiştirme dahildir.
 
 > [!NOTE]
-> Yeni satır karakterlerini ekleme veya silme kesme noktaları ve yer işaretleri gibi işaretçileri etkileyebilir, ancak boşluk veya sekme ekleme veya kaldırma işaretçileri etkilemez.
+> Yeni satır karakterleri eklemek veya silmek, kesme noktaları ve yer işaretleri gibi işaretçileri etkileyebilir, ancak boşluk veya sekme ekleme veya kaldırma, işaretçileri etkilemez.
 
-Kullanıcılar **düzenleme** menüsündeki **Gelişmiş** menüsünden **seçimi Biçimlendir** veya **belgeyi Biçimlendir** ' i seçerek yeniden biçimlendirme işlemi başlatabilir. Bir kod parçacığı veya belirli bir karakter eklendiğinde yeniden biçimlendirme işlemi de tetiklenebilir. Örneğin, C# ' de bir kapanış küme ayracı yazdığınızda, eşleşen açma ayracı ve kapatma küme ayracı arasındaki her şey otomatik olarak uygun düzeye girintilenir.
+Kullanıcılar, Düzenle menüsündeki Gelişmiş menüden Seçimi **Biçimlendir** veya **Belgeyi** Biçimlendir'i **seçerek** yeniden biçimlendirme **işlemi** başlatabilirsiniz. Bir kod parçacığı veya belirli bir karakter eklendiğinde yeniden düzenleme işlemi de tetiklenir. Örneğin, C# içinde bir kapanış ayracı yazarak eşleşen açık küme ayracı ile kapatma ayracı arasındaki her şey otomatik olarak uygun düzeyde girintilenir.
 
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Biçim Seçimi** veya biçim **belgesi** komutunu dil hizmetine gönderdiğinde, <xref:Microsoft.VisualStudio.Package.ViewFilter> sınıfı <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> sınıfındaki yöntemini çağırır <xref:Microsoft.VisualStudio.Package.Source> . Biçimlendirmeyi desteklemek için yöntemini geçersiz kılmanız <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> ve kendi biçimlendirme kodunuzu sağlamanız gerekir.
+Dil [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **hizmetine Biçim** Seçimi **veya** Belgeyi Biçimlendir komutunu gönderdiğinde, sınıfı sınıfında <xref:Microsoft.VisualStudio.Package.ViewFilter> yöntemini <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> <xref:Microsoft.VisualStudio.Package.Source> çağıran. Biçimlendirmeyi desteklemek için yöntemini geçersiz <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> kılmanız ve kendi biçimlendirme kodunuzu sağlamak gerekir.
 
-## <a name="enabling-support-for-reformatting"></a>Yeniden biçimlendirme desteğini etkinleştirme
+## <a name="enabling-support-for-reformatting"></a>Yeniden Düzenleme desteğini etkinleştirme
 
-Biçimlendirmeyi desteklemek için, `EnableFormatSelection` <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> VSPackage 'u kaydettiğinizde parametresinin parametresi olarak ayarlanması gerekir `true` . Bu, <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableFormatSelection%2A> özelliğini olarak ayarlar `true` . <xref:Microsoft.VisualStudio.Package.ViewFilter.CanReformat%2A>Yöntemi bu özelliğin değerini döndürür. True döndürürse, <xref:Microsoft.VisualStudio.Package.ViewFilter> sınıfı öğesini çağırır <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> .
+Biçimlendirmeyi desteklemek `EnableFormatSelection` <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> `true` için, VSPackage'nızı kaydedirken parametresi olarak ayar olmalıdır. Bu, özelliğini <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableFormatSelection%2A> olarak `true` ayarlar. yöntemi <xref:Microsoft.VisualStudio.Package.ViewFilter.CanReformat%2A> bu özelliğin değerini döndürür. True döndürürse, <xref:Microsoft.VisualStudio.Package.ViewFilter> sınıfı çağrılır. <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A>
 
-## <a name="implementing-reformatting"></a>Yeniden biçimlendirme uygulama
+## <a name="implementing-reformatting"></a>Yeniden Düzenlemeyi Uygulama
 
-Yeniden biçimlendirme uygulamak için, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.Source> ve yöntemi geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> . <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan>Nesnesi biçimlendirilecek yayılımı açıklar ve <xref:Microsoft.VisualStudio.Package.EditArray> nesne, yayılma üzerinde yapılan düzenlemeleri içerir. Bu yayılımın tüm belge olabileceğini unutmayın. Ancak, yayılmak için birden fazla değişiklik yapılması olası olduğundan, tüm değişiklikler tek bir eylemde geri alınamaz. Bunu yapmak için, bir nesnedeki tüm değişiklikleri sarmalayın <xref:Microsoft.VisualStudio.Package.CompoundAction> (Bu konunun "Compoundavction sınıfını kullanma" bölümüne bakın).
+Yeniden düzenlemeyi uygulamak için sınıfından bir sınıf türetmeniz ve <xref:Microsoft.VisualStudio.Package.Source> yöntemini geçersiz kılmaniz <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> gerekir. nesnesi <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> biçimlendirilen aralığı açıklar ve nesne, zaman aralığı <xref:Microsoft.VisualStudio.Package.EditArray> üzerinde yapılan düzenlemeleri tutar. Bu aralığın belgenin tamamı olduğunu unutmayın. Ancak, süre içinde büyük olasılıkla birden çok değişiklik yapılmış olabilir, tüm değişiklikler tek bir eylemde geri alınamaz. Bunu yapmak için nesnesinde yapılan tüm değişiklikleri <xref:Microsoft.VisualStudio.Package.CompoundAction> sarmala (bu konudaki "CompoundAction Sınıfını Kullanma" bölümüne bakın).
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki örnek, virgülden sonra bir sekme izlenmediği veya satırın sonunda olmadığından, seçimdeki her virgülden sonra tek bir boşluk olmasını sağlar. Satırdaki son virgülden sonra sondaki boşluklar silinir. Bu yöntemin yöntemden nasıl çağrıldığını görmek için, bu konunun "Compoundadction sınıfını kullanma" bölümüne bakın <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> .
+Aşağıdaki örnek, virgülden sonra bir sekme veya satırın sonunda yer almadıkça, seçimde her virgülden sonra tek bir boşluk olduğunu sağlar. Satırda son virgülden sonra gelen boşluklar silinir. Bu yöntemin yönteminden nasıl çağrıldılarını görmek için bu konudaki "CompoundAction Sınıfını Kullanma" bölümüne <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> bakın.
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -155,13 +156,13 @@ namespace MyLanguagePackage
 }
 ```
 
-## <a name="using-the-compoundaction-class"></a>Compoundadction sınıfını kullanma
+## <a name="using-the-compoundaction-class"></a>CompoundAction Sınıfını Kullanma
 
-Kodun bir bölümünde yapılan yeniden biçimlendirme işlemi, tek bir eylemde geri alınamaz. Bu, bir sınıf kullanılarak gerçekleştirilebilir <xref:Microsoft.VisualStudio.Package.CompoundAction> . Bu sınıf, metin arabelleğindeki bir düzenleme işlemleri kümesini tek bir düzenleme işleminde kaydırır.
+Kodun bir bölümünde yapılan tüm yeniden düzenleme işlemi tek bir eylemde geri alınamaz. Bu bir sınıf kullanılarak gerçek <xref:Microsoft.VisualStudio.Package.CompoundAction> olabilir. Bu sınıf, metin arabelleği üzerinde bir dizi düzenleme işlemi tek bir düzenleme işlemi içine sarmalar.
 
 ### <a name="example"></a>Örnek
 
-Sınıfının nasıl kullanılacağına ilişkin bir örnek aşağıda verilmiştir <xref:Microsoft.VisualStudio.Package.CompoundAction> . Yöntemine bir örnek için, bu konunun "biçimlendirme için destek uygulama" bölümündeki örneğe bakın `DoFormatting` .
+Sınıfı nasıl kullanabileceğiniz hakkında bir örnek burada <xref:Microsoft.VisualStudio.Package.CompoundAction> vetir. Yönteminin bir örneği için bu konudaki "Biçimlendirme için Destek Uygulama" bölümündeki örneğine `DoFormatting` bakın.
 
 ```csharp
 using Microsoft.VisualStudio.Package;

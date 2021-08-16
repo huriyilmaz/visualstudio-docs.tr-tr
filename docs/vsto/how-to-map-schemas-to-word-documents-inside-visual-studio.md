@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: şemaları Visual Studio içindeki Word belgeleriyle eşleme'
-description: Visual Studio 'da belge açıkken bir XML şemasını Microsoft Office Word belgesiyle nasıl eşleyeceğinizi öğrenin.
+title: 'Nasıl yapılır: Visual Studio içindeki Word belgeleriyle şemaları eşleme'
+description: belge Visual Studio açıkken bir XML şemasını Microsoft Office Word belgesiyle nasıl eşleyeceğinizi öğrenin.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
@@ -15,23 +15,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 082d5fe4fbcc7f66709770c16d3c9a1a2811e60d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 46948fe54142dcffb1b90290c01feefd770b4ae89648e98157694ccf18c3760a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900926"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408818"
 ---
-# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Nasıl yapılır: şemaları Visual Studio içindeki Word belgeleriyle eşleme
-  **Önemli** Microsoft Word ile ilgili bu konu başlığı altında verilen bilgiler, Microsoft Word 'deki özel XML ile ilgili belirli bir işlevselliğin uygulanmasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan veya Microsoft tarafından Microsoft tarafından lisanslanan Microsoft Word ürünleri, Microsoft 'un Microsoft Word ile ilgili belirli işlevlerin bir uygulamasını kaldırdığınızda Microsoft 'un 2010 Ocak 'tan önce lisanslı olduğu kişiler ve kuruluşların avantajı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da Microsoft tarafından, 10 Ocak 2010 ' den sonra Microsoft tarafından lisanslanan Microsoft Word ürünlerini kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
+# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Nasıl yapılır: Visual Studio içindeki Word belgeleriyle şemaları eşleme
+  **Önemli** bu konu başlığı altında Microsoft Word, microsoft, Microsoft Word 'den özel XML ile ilgili belirli işlevlerin bir uygulamasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan Microsoft Word veya 2010 microsoft tarafından lisanslanan ürünlerin ve kuruluşların kullanımı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da şirket içinde çalışan veya Microsoft tarafından lisanslanan Microsoft Word, 10 ocak 2010 ' den sonra lisanslı ürünleri kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Visual Studio 'da belge açıkken bir XML şemasını belgeyle eşleyebilirsiniz. Belge Visual Studio dışında açıldığında kullandığınız Microsoft Office Word araçlarını kullanırsınız. Office projesi, Word çözümünüzü oluşturmadan önce veya sonra şemayı belgeyle eşleştirdiğinizde aynı nesneleri oluşturur.
+ Belge Visual Studio açıkken bir XML şemasını belgeyle eşleyebilirsiniz. belge Visual Studio dışında açıldığında kullandığınız Microsoft Office Word araçlarını kullanırsınız. Office projesi, Word çözümünüzü oluşturmadan önce veya sonra şemayı belgeyle eşleştirdiğinizde aynı nesneleri oluşturur.
 
-## <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>Visual Studio 'da bir Word belgesi ile bir XML şemasını eşlemek için
+## <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>Bir XML şemasını Visual Studio bir Word belgesiyle eşlemek için
 
 1. Visual Studio içinde Word belgesi veya şablon projesini açın.
 
@@ -54,7 +55,7 @@ ms.locfileid: "99900926"
 
 7. Şema dosyanıza gidin, dosyayı seçin ve ardından **Aç**' a tıklayın.
 
-     **Şema ayarları** iletişim kutusu açılır.
+     **şema Ayarlar** iletişim kutusu açılır.
 
 8. Bir diğer ad atayın veya şemayı bir diğer ad olmadan eklemek için **Tamam 'a** tıklayın.
 

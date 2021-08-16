@@ -1,6 +1,6 @@
 ---
-description: Programlar numaralandırmasındaki sonraki öğe kümesini döndürür.
-title: 'IEnumDebugPrograms2:: Next | Microsoft Docs'
+description: Program enumerasyonundan sonraki öğe kümesi döndürür.
+title: IEnumDebugPrograms2::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 9120e263-e97c-4a40-ab2c-e9264ce3d6c4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 347b779a4b8fea4737cc17a16f513e70a5661fff
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 74d604df42779755093518472b0d70d0983c0da9c39ad2e559eeac5cc087f324
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080037"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415253"
 ---
 # <a name="ienumdebugprograms2next"></a>IEnumDebugPrograms2::Next
-Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
+Numaralamadan sonraki öğe kümesi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
+[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
 
 `rgelt`\
-[in, out] Doldurulacak [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) öğelerinin dizisi.
+[in, out] Doldurulması [gereken IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) öğelerinin dizisi.
 
 `pceltFetched`\
-dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
+[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür, aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

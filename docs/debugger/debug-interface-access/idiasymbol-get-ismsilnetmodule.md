@@ -11,14 +11,15 @@ ms.assetid: 593827f3-8437-4a12-ada4-ff715ec95fb2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 27d1294e5cbced8cd2f521a25858a37efe9f5b8c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4e55a1f6ab92d5d410438e7e8a1823bad85be8e8d0b905c26670619ea54b7b19
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160766"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121404797"
 ---
 # <a name="idiasymbolget_ismsilnetmodule"></a>IDiaSymbol::get_isMSILNetmodule
 Modülün bir. netmodule olup olmadığını belirten bir bayrak alır (yalnızca meta veri içeren ve yerel semboller içermeyen bir Microsoft ara dili (MSIL) modülü).

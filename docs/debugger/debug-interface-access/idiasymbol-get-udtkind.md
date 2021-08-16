@@ -1,6 +1,6 @@
 ---
-description: Kullanıcı tanımlı bir tür (UDT) alır.
-title: 'IDiaSymbol:: get_udtKind | Microsoft Docs'
+description: Kullanıcı tanımlı türün (UDT) çeşitliliğini alır.
+title: IDiaSymbol::get_udtKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 4002f887-aea6-4475-b302-67c57079fe0a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c49fc5b27a9af2a986b0cde1dc41b3a07df7150
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e8e734163d5bbfcb3e43d477b8b8b260a76ebbeef996963f2896f6f8fcfd5791
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155581"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362892"
 ---
 # <a name="idiasymbolget_udtkind"></a>IDiaSymbol::get_udtKind
-Kullanıcı tanımlı bir tür (UDT) alır.
+Kullanıcı tanımlı türün (UDT) çeşitliliğini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_udtKind (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bir UDT türünü belirten [UdtKind numaralandırma](../../debugger/debug-interface-access/udtkind.md) numaralandırmasından bir değer döndürür: Structure, Class veya Union.
+[out] [UdtKind Enumeration enumeration'dan](../../debugger/debug-interface-access/udtkind.md) bir UDT'nin tür belirten bir değer döndürür: yapı, sınıf veya union.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

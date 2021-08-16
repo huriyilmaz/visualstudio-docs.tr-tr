@@ -11,17 +11,18 @@ ms.assetid: fd522b9c-52e2-42fa-939d-343347d5c3b1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2476b819d940b5fb6014d00e1bdf920f02a46696
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cfeba85222748642edf2125db51aff6812bd8e4874aaacc5ccde6bbce86b3b21
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085214"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403227"
 ---
 # <a name="field_kind"></a>FIELD_KIND
 Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türünü belirtir.

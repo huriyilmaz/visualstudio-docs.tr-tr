@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: belgelerde aralıkları program aracılığıyla genişletme'
-description: Belge düzeyinde veya uygulama düzeyinde bir Microsoft Word belgesindeki başlangıç ve bitiş noktası aralıklarını programlı bir şekilde nasıl genişletebileceğinizi öğrenin.
+title: 'Nasıl kullanılır: Belgelerde aralıkları program aracılığıyla genişletme'
+description: Belge düzeyinde veya uygulama düzeyinde bir belgede başlangıç ve Microsoft Word aralıklarını program aracılığıyla genişletmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 7a539bbbc4ad8d73477e660ef9903ac51dce712f
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 2098265ec257ae11353577ea7145bbe85d52d374501220f0f8c79ceb7bf04eb6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826531"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408727"
 ---
-# <a name="how-to-programmatically-extend-ranges-in-documents"></a>Nasıl yapılır: belgelerde aralıkları program aracılığıyla genişletme
-  Bir <xref:Microsoft.Office.Interop.Word.Range> Microsoft Office Word belgesinde bir nesne tanımladıktan sonra, ve yöntemlerini kullanarak başlangıç ve bitiş noktalarını değiştirirsiniz <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> . <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A>Ve <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> yöntemleri aynı iki bağımsız değişkeni, *birimi* ve *sayıyı* alır. *Count* bağımsız değişkeni, taşınacak birim sayısı ve *birim* bağımsız değişkeni aşağıdaki değerlerden biri olabilir <xref:Microsoft.Office.Interop.Word.WdUnits> :
+# <a name="how-to-programmatically-extend-ranges-in-documents"></a>Nasıl kullanılır: Belgelerde aralıkları Program Aracılığıyla Genişletme
+  bir Word belgesinde bir Microsoft Office tanımlayarak, ve yöntemlerini kullanarak nesnenin <xref:Microsoft.Office.Interop.Word.Range> başlangıç ve bitiş noktalarını <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> değiştirirsiniz. ve <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> yöntemleri aynı iki bağımsız değişkeni <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> alır: *Unit* ve *Count*. Count *bağımsız* değişkeni taşınan birim sayısıdır ve *Unit* bağımsız değişkeni aşağıdaki değerlerden biri <xref:Microsoft.Office.Interop.Word.WdUnits> olabilir:
 
 - <xref:Microsoft.Office.Interop.Word.WdUnits.wdCharacter>
 
@@ -47,53 +48,53 @@ ms.locfileid: "107826531"
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-  Aşağıdaki örnek yedi karakterlik bir aralığı tanımlar. Daha sonra aralığın başlangıç konumunu orijinal başlangıç konumundan sonra yedi karakter olarak kaydırır. Aralığın bitiş konumu başlangıç konumundan sonra da yedi karakter olduğundan, sonuç sıfır karakterden oluşan bir aralıktır. Daha sonra kod, son konumu geçerli bitiş konumundan sonra yedi karakteri taşımaktır.
+  Aşağıdaki örnek yedi karakterli bir aralık tanımlar. Ardından, aralığın başlangıç konumunu özgün başlangıç konumundan sonra yedi karakterden sonra taşır. Aralığın bitiş konumu da başlangıç konumundan yedi karakter sonra olduğundan, sonuç sıfır karakterden oluşan bir aralıktır. Kod daha sonra bitiş konumunu geçerli bitiş konumundan yedi karakter sonra taşır.
 
 ## <a name="to-extend-a-range"></a>Bir aralığı genişletmek için
 
-1. Bir karakter aralığı tanımlayın. Daha fazla bilgi için bkz. [nasıl yapılır: program aracılığıyla aralıkları tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md).
+1. Bir karakter aralığı tanımlayın. Daha fazla bilgi için [bkz. Nasıl kullanılır: Belgelerde aralıkları program aracılığıyla tanımlama ve seçme.](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
 
-     Aşağıdaki kod örneği, belge düzeyi özelleştirmesinde kullanılabilir.
+     Aşağıdaki kod örneği, belge düzeyinde özelleştirmede kullanılabilir.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet39":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet39":::
 
-     Aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır.
+     Aşağıdaki kod örneği bir VSTO kullanılabilir. Bu örnek etkin belgeyi kullanır.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet39":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet39":::
 
-2. <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range> Aralığın başlangıç konumunu taşımak için nesnesinin yöntemini kullanın.
+2. Aralığın <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> başlangıç <xref:Microsoft.Office.Interop.Word.Range> konumunu taşımak için nesnesinin yöntemini kullanın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet40":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet40":::
 
-3. <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> <xref:Microsoft.Office.Interop.Word.Range> Aralığın bitiş konumunu taşımak için nesnesinin yöntemini kullanın.
+3. Aralığın <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> bitiş <xref:Microsoft.Office.Interop.Word.Range> konumunu taşımak için nesnesinin yöntemini kullanın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet41":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet41":::
 
 ## <a name="document-level-customization-code"></a>Belge düzeyi özelleştirme kodu
 
-### <a name="to-extend-a-range-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki bir aralığı genişletmek için
+### <a name="to-extend-a-range-in-a-document-level-customization"></a>Belge düzeyinde özelleştirmede aralığı genişletmek için
 
-1. Aşağıdaki örnek, belge düzeyi özelleştirmesi için tam kodu gösterir. Bu kodu kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın.
+1. Aşağıdaki örnekte, belge düzeyinde özelleştirmenin tam kodu gösterir. Bu kodu kullanmak için projenizin `ThisDocument` sınıfından çalıştırın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet38":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet38":::
 
-## <a name="vsto-add-in-code"></a>VSTO eklenti kodu
+## <a name="vsto-add-in-code"></a>VSTO Eklenti Kodu
 
-### <a name="to-extend-a-range-in-an-application-level-vsto-add-in"></a>Uygulama düzeyi VSTO eklentideki bir aralığı genişletmek için
+### <a name="to-extend-a-range-in-an-application-level-vsto-add-in"></a>Uygulama düzeyinde bir aralığı genişletmek için VSTO ekleme
 
-1. Aşağıdaki örnek, bir VSTO eklentisi için tam kodu gösterir. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
+1. Aşağıdaki örnek, bir eklentinin VSTO gösterir. Bu kodu kullanmak için projenizin `ThisAddIn` sınıfından çalıştırın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet38":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet38":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Word belgelerinde aralıkları program aracılığıyla sıfırlama](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
-- [Nasıl yapılır: belgelerde aralıkları veya seçimleri program aracılığıyla daraltma](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
-- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [Nasıl yapılır: aralıklarda program aracılığıyla başlangıç ve bitiş karakterlerini alma](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
-- [Nasıl yapılır: Aralık oluştururken program aracılığıyla paragraf işaretlerini hariç tutma](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)
+- [Nasıl kullanılır: Word belgelerde aralıkları program aracılığıyla sıfırlama](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
+- [Nasıl kullanılır: Belgelerde aralıkları veya seçimleri program aracılığıyla daralt](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
+- [Nasıl kullanılır: Belgelerde aralıkları program aracılığıyla tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Nasıl olur: Aralıklarda başlangıç ve bitiş karakterlerini program aracılığıyla alma](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [Nasıl edilir: Aralık oluştururken program aracılığıyla paragraf işaretlerini dışlama](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)

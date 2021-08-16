@@ -11,16 +11,17 @@ ms.assetid: ab38f7ca-fa01-4cf3-a06c-56cbb7207617
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 8e193171a82f21c92871cd226db09c3dc2713585
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d30e83f11ea9227eb598efc27ae4852fcbf521e562873acff9f52eecd53b7eca
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096791"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403291"
 ---
 # <a name="bp_location_code_func_offset"></a>BP_LOCATION_CODE_FUNC_OFFSET
 Koddaki bir işlevdeki bir kesme noktasının konum konumunu açıklar.

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma'
-description: Bu örneği, Kişisel takvim adlı yeni bir takvim klasörü kullanarak programlı bir şekilde oluşturun ve ardından yeni bir randevu öğesi oluşturup Takvim klasörüne ekleyin.
+title: 'Nasıl yapılanlar: Program aracılığıyla özel takvim oluşturma'
+description: Program aracılığıyla PersonalCalendar adlı yeni bir Takvim klasörü oluşturmak ve ardından yeni bir Randevu öğesi oluşturmak ve Bunu Takvim klasörüne eklemek için bu örneği kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 7a21f51c42f1f55423019361d1b1535482f4e4b1
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 9ff88bcc982eb70994844559836295f441f59ce707bf1a125e378b2ae1e780db
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828013"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408766"
 ---
-# <a name="how-to-programmatically-create-a-custom-calendar"></a>Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma
-  Bu örnek, **Kişisel takvim** adlı yeni bir takvim klasörü oluşturur ve yeni bir randevu öğesi oluşturur ve bunu Takvim klasörüne ekler. Kod daha sonra Takvim klasörünü görüntüler.
+# <a name="how-to-programmatically-create-a-custom-calendar"></a>Nasıl yapılanlar: Program aracılığıyla özel takvim oluşturma
+  Bu örnek **PersonalCalendar** adlı yeni bir Takvim klasörü oluşturur ve ardından yeni bir Randevu öğesi oluşturur ve bunu Takvim klasörüne ekler. Kod daha sonra Calendar klasörünü görüntüler.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -33,5 +34,5 @@ ms.locfileid: "107828013"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Takvim öğeleriyle çalışma](../vsto/working-with-calendar-items.md)
-- [Nasıl yapılır: program aracılığıyla randevu oluşturma](../vsto/how-to-programmatically-create-appointments.md)
-- [Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)
+- [Nasıl olur: Program aracılığıyla randevular oluşturma](../vsto/how-to-programmatically-create-appointments.md)
+- [Nasıl kurulur: Program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)

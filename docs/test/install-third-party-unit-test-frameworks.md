@@ -1,60 +1,61 @@
 ---
 title: 'Nasıl yapılır: Üçüncü taraf birim test çerçevelerini yükleme'
-description: Visual Studio Test Gezgini, bir bağdaştırıcı arabirimi geliştirmiş olan herhangi bir birim test çerçevesinden testleri çalıştırabilir.
+description: Visual Studio Test Gezgini, bunun için bir bağdaştırıcı arabirimi geliştiren herhangi bir birim testi çerçevesinden testleri çalıştırabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 07/09/2020
 ms.topic: how-to
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c59a9d9055dd6a5788eec4d4904d9ec41262dae2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5374712be1fb25e91e573651869315ab830612bc6f0da1203a814573df7be429
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879507"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408999"
 ---
-# <a name="install-unit-test-frameworks"></a>Birim testi çerçeveleri 'ni yükler
+# <a name="install-unit-test-frameworks"></a>Birim testi çerçevelerini yükleme
 
-Visual Studio Test Gezgini, bir bağdaştırıcı arabirimi geliştirmiş olan herhangi bir birim test çerçevesinden testleri çalıştırabilir. Framework 'ü yüklemek, ikilileri kopyalar ve desteklediği diller için Visual Studio proje şablonları ekler. Şablonuyla bir proje oluşturduğunuzda, çerçeve test Gezgini ile kaydedilir.
+Visual Studio Test Gezgini, bunun için bir bağdaştırıcı arabirimi geliştiren herhangi bir birim testi çerçevesinden testleri çalıştırabilirsiniz. Çerçeveyi yüklemek ikilileri kopyalar ve Visual Studio dillere proje şablonları ekler. Şablonla bir proje ekleyebilirsiniz, çerçeve Test Gezgini'ne kaydedilir.
 
-Visual Studio çözümü, farklı çerçeveleri kullanan ve farklı dillerde hedeflenen birim testi projeleri içerebilir.
+Bir Visual Studio, farklı çerçeveler kullanan ve farklı dilleri hedef alan birim testi projeleri içerebilir.
 
 ::: moniker range=">=vs-2019"
-.NET, [MSTest, NUnit ve xUnit](getting-started-with-unit-testing.md) için varsayılan olarak yüklenen Visual Studio tarafından sunulan test çerçeveleri vardır. C++ için, CTest gibi farklı bir test çerçeveleri kümesi sağlanır.
+.NET için [MSTest, NUnit ve xUnit,](getting-started-with-unit-testing.md) varsayılan olarak Visual Studio tarafından sağlanan test çerçeveleridir. C++ için CTest gibi farklı bir test çerçevesi kümesi sağlanır.
 ::: moniker-end
 ::: moniker range="vs-2017"
-[MSTest](getting-started-with-unit-testing.md) , Visual Studio tarafından sunulan ve varsayılan olarak yüklenen test çerçevesidir.
+[MSTest,](getting-started-with-unit-testing.md) Visual Studio tarafından sağlanan test çerçevesidir ve varsayılan olarak yüklenir.
 ::: moniker-end
 
-## <a name="acquire-frameworks"></a>Çerçeveleri al
+## <a name="acquire-frameworks"></a>Çerçeveleri edinme
 
-**NuGet Paket Yöneticisi 'ni** kullanarak üçüncü taraf birim testi çerçeveleri ' ni yükler.
+NuGet Paket Yöneticisi kullanarak üçüncü taraf birim **testi çerçevelerini yükleyin.**
 
-1. Test kodunuzu içerecek projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
+1. Test kodunuzu içeren projeye sağ tıklayın ve Paketleri **Yönet'i NuGet seçin.**
 
-2. **NuGet Paket Yöneticisi**' nde, yüklemek istediğiniz test çerçevesini arayın ve ardından **yükler**' i tıklatın.
+2. Bu **NuGet Paket Yöneticisi** yüklemek istediğiniz test çerçevesini arayın ve yükle'ye **tıklayın.**
 
-   ![Visual Studio 'da NuGet Paket Yöneticisi](media/vs-2019/nuget-package-manager.png)
+   ![NuGet Paket Yöneticisi Visual Studio](media/vs-2019/nuget-package-manager.png)
 
-## <a name="update-to-the-latest-test-adapters"></a>En son test bağdaştırıcılarına Güncelleştir
+## <a name="update-to-the-latest-test-adapters"></a>En son test bağdaştırıcılarını güncelleştirme
 
-Daha iyi test bulma ve yürütme deneyimi sağlamak için en son kararlı test bağdaştırıcısına güncelleştirin. MSTest, NUnit ve xUnit test bağdaştırıcılarındaki güncelleştirmeler hakkında daha fazla bilgi için bkz. [Visual Studio blogu](https://devblogs.microsoft.com/visualstudio/test-experience-improvements/).
+Daha iyi test bulma ve yürütme deneyimi için en son kararlı test bağdaştırıcısına güncelleştirin. MSTest, NUnit ve xUnit test bağdaştırıcıları güncelleştirmeleri hakkında daha fazla bilgi için Visual Studio [bakın.](https://devblogs.microsoft.com/visualstudio/test-experience-improvements/)
 
 ### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>En son kararlı test bağdaştırıcısı sürümüne güncelleştirmek için
 
-1. **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet**' e giderek çözümünüz için NuGet Paket Yöneticisi 'ni açın.
+1. Araçlar NuGet Paket Yöneticisi Yönet'e giderek çözümünüz için NuGet Paket Yöneticisi  >    >  **NuGet paketlerini açın.**
 
-2. **Güncelleştirmeler** sekmesine tıklayın ve yüklü MSTest, NUnit veya xUnit test bağdaştırıcıları için arama yapın.
+2. Güncelleştirmeler **sekmesine** tıklayın ve yüklü MSTest, NUnit veya xUnit test bağdaştırıcıları için arama yapın.
 
 3. Her test bağdaştırıcısını seçin ve ardından açılan menüden en son kararlı sürümü seçin.
 
-4. **Install** düğmesini seçin.
+4. Yükle **düğmesini** seçin.
 
-   ![Test bağdaştırıcısını yükselt](media/install-adapter-upgrade.png)
+   ![Test Bağdaştırıcısını Yükseltme](media/install-adapter-upgrade.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Kodunuzu birim testi](../test/unit-test-your-code.md)

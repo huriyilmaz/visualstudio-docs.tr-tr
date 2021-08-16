@@ -1,6 +1,6 @@
 ---
-description: Bu sembolün türünü temsil eden simgeyi alır.
-title: 'IDiaSymbol:: get_type | Microsoft Docs'
+description: Bu simgenin türünü temsil eden simgeyi alın.
+title: IDiaSymbol::get_type | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 1c6a4176-dd4e-4c22-8b8f-0e559fc078ba
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f0f6e86eaa78fd57d3cb62b1602111df1406f1bf
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 831841ef34b19f659ba4e21e52f3c07476381643018cb4bf19a461b4ca3dd85b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155630"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362909"
 ---
 # <a name="idiasymbolget_type"></a>IDiaSymbol::get_type
-Bu sembolün türünü temsil eden simgeyi alır.
+Bu simgenin türünü temsil eden simgeyi alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,16 +35,16 @@ HRESULT get_type (
 #### <a name="parameters"></a>Parametreler
 `pRetVal`
 
-dışı Bu sembolün türünü temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+[out] Bu [sembolün türünü temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bir sembolün türünü öğrenmek için, bu yöntemi çağırmanız ve elde edilen [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesini incelemeniz gerekir. Bir simgenin bir türe sahip olmadığı için mümkün olduğunu unutmayın. Örneğin, bir yapının adında hiçbir tür yoktur, ancak alt sembolleri olabilir (Bu alt öğeleri incelemek için [IDiaSymbol:: findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md) metodunu kullanın).
+Bir sembolün sahip olduğu türü belirlemek için bu yöntemi çağırmalı ve sonuçta elde edilen [IDiaSymbol nesnesini incelemeniz](../../debugger/debug-interface-access/idiasymbol.md) gerekir. Bir sembolün türüne sahip olmadığını unutmayın. Örneğin, bir yapının adı türe sahip değildir, ancak bunun altında semboller olabilir (bu çocukların incelenmesi için [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md) yöntemini kullanın).
 
 ## <a name="example"></a>Örnek
 

@@ -1,6 +1,6 @@
 ---
 title: Web sitesi destek şablonları | Microsoft Docs
-description: Web sitesi destek şablonları hakkında bilgi edinin. Visual Studio Web sitesi projesi ve öğe şablonları, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar.
+description: Web sitesi destek şablonları hakkında bilgi edinin. Visual Studio web sitesi projesi ve öğe şablonları, yeniden kullanılabilir ve özelleştirilebilir web sitesi projesi ve öğe saplamalarını sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,29 +10,30 @@ ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a1bd391d13a6d650cb4d23ce78789a66ef50c2e3
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 6480b21cc4907e45b174b69418f1d10177f36440597949fd8a1806246016dc27
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898906"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414161"
 ---
 # <a name="web-site-support-templates"></a>Web Sitesi Destek Şablonları
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web sitesi projesi ve öğe şablonları, yeni Web sitesi projeleri ve öğeleri sıfırdan oluşturma gereksinimini ortadan kaldırarak geliştirme sürecini hızlandıran, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar. Şablonlar hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bkz. [Proje ve öğe şablonları oluşturma](../../ide/creating-project-and-item-templates.md).
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web sitesi projesi ve öğe şablonları, yeni Web sitesi projeleri ve öğeleri sıfırdan oluşturma gereksinimini ortadan kaldırarak geliştirme sürecini hızlandıran, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar. şablonlar hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bkz. [Project ve öğe şablonları oluşturma](../../ide/creating-project-and-item-templates.md).
 
-## <a name="project-template-folder"></a>Proje şablonu klasörü
- Web projesi şablonları genellikle, Web programlama dilinden sonra adlandırılmış bir alt klasörde bulunan [*Visual Studio yükleme yolu*] \Common7\IDE\ProjectTemplates\Web üzerine yüklenir \\ .
+## <a name="project-template-folder"></a>Project Şablon klasörü
+ web projesi şablonları genellikle, web programlama dilinden sonra adlandırılmış bir alt klasörde bulunan [*Visual Studio yükleme yolu*] \Common7\IDE\ProjectTemplates\Web üzerine yüklenir \\ .
 
 ## <a name="project-file"></a>Proje Dosyası
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), bir şablonu doğru proje türüyle eşlemek için bir proje dosyası uzantısı gerektirir. Web projelerinin bir proje dosyası olmadığından, şablonu proje türüyle eşlemek için. webproj sözde proje dosyası uzantısı kaydedilir.
 
- İsteğe bağlı olarak, Web projesi sisteminin şablona dayalı öğeler için **Yeni öğe Ekle** iletişim kutusunda varsayılan dil ayarlaması için bir dil adı dizesi şablona eklenebilir. Dize dosyanın ilk satırı olmalıdır. IntelliSense altyapısı kaydında AddItemLanguageName altında kayıtlı adla ve proje alt türü (VsTemplate) altında kayıtlı ad ile eşleşmelidir. Daha fazla bilgi için bkz. [Web sitesi destek öznitelikleri](../../extensibility/internals/web-site-support-attributes.md).
+ İsteğe bağlı olarak, Web projesi sisteminin şablona dayalı öğeler için **Yeni öğe Ekle** iletişim kutusunda varsayılan dil ayarlaması için bir dil adı dizesi şablona eklenebilir. Dize dosyanın ilk satırı olmalıdır. ıntellisense altyapısı kaydında AddItemLanguageName altında kayıtlı ad ve Project alt türü (vstemplate) altında kayıtlı ad ile eşleşmelidir. Daha fazla bilgi için bkz. [Web sitesi destek öznitelikleri](../../extensibility/internals/web-site-support-attributes.md).
 
- Dize yoksa, Web proje sistemi, proje şablonu tarafından web projesine eklenen sayfaların dil özniteliği ve dosya uzantılarına göre varsayılan dili saptamaya çalışır.
+ dize yoksa, web proje sistemi, Project şablonu tarafından web projesine eklenen sayfaların dil özniteliği ve dosya uzantılarına göre varsayılan dili saptamaya çalışır.
 
-## <a name="project-templates"></a>Proje şablonları
+## <a name="project-templates"></a>Project Şablondan
  Web sitesi proje şablonları, **Dosya** menüsündeki **Yeni Web sitesi** komutuna yanıt olarak yeni Web siteleri oluşturmak için kullanılır. Üç Web sitesi proje türü şu anda destekleniyor:
 
 - Boş Web sitesi projeleri
@@ -53,7 +54,7 @@ ms.locfileid: "112898906"
      Bu dosya, proje şablonu sisteminin yapıtıdır. EmptyWeb. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.
 
 ### <a name="web-site-projects"></a>Web sitesi projeleri
- Bu dosyalar, **Dosya** yeni Web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET Web sitesi** komutuna yanıt olarak yeni bir Web sitesi oluşturur  >  :
+ bu dosyalar, **dosya** yeni web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET web sitesi** komutuna yanıt olarak yeni bir web sitesi oluşturur  >  :
 
 - Default.aspx
 
@@ -76,7 +77,7 @@ ms.locfileid: "112898906"
      Bu dosya, proje şablonu sisteminin yapıtıdır. WebApplication. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.
 
 ### <a name="web-service-projects"></a>Web hizmeti projeleri
- Bu dosyalar, **Dosya** yeni Web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET Web hizmeti** komutuna yanıt olarak yeni bir Web sitesi oluşturur  >  :
+ bu dosyalar, **dosya** yeni web sitesi ' ni seçtikten sonra kullanılabilir olan **ASP.NET web hizmeti** komutuna yanıt olarak yeni bir web sitesi oluşturur  >  :
 
 - Service. asmx
 
@@ -98,10 +99,10 @@ ms.locfileid: "112898906"
 
      Bu dosya, proje şablonu sisteminin yapıtıdır. WebService. vstemplate dosyasındaki proje dosyası başvurusunu karşılar.
 
-## <a name="project-item-template-folder"></a>Proje öğesi şablon klasörü
- Web projesi-öğe şablonları genellikle, Web programlama dilinden sonra adlandırılmış bir alt klasörde bulunan [*Visual Studio yükleme yolu*] \Common7\IDE\ItemTemplates\Web \\ ' ye yüklenir.
+## <a name="project-item-template-folder"></a>Project Öğe şablonu klasörü
+ web projesi-öğe şablonları genellikle, web programlama dilinden sonra adlandırılmış bir alt klasörde bulunan [*Visual Studio yükleme yolu*] \Common7\IDE\ItemTemplates\Web \\ ' a yüklenir.
 
-## <a name="project-item-templates"></a>Proje öğesi şablonları
+## <a name="project-item-templates"></a>Project Öğe şablonları
  Web sitesi proje öğesi şablonları, **var olan öğe Ekle** komutuna yanıt olarak bir Web sitesine yeni Web sayfaları eklemek için kullanılır. Şu anda bu tür web sayfaları desteklenmektedir:
 
 - Yeni sınıf
