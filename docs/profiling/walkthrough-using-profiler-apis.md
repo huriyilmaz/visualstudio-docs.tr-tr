@@ -10,15 +10,16 @@ ms.assetid: c2ae0b3e-a0ca-4967-b4df-e319008f520e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e1405169ae7f4734463428405cf90cce631fba3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ac6bb36fd6b29ce94c79e9e173c00257473c6ab2449592ae658eda47153d256c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915956"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121354051"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>İzlenecek yol: Profil Oluşturucu API’lerini kullanma
 
@@ -30,13 +31,13 @@ ms.locfileid: "99915956"
 
  Ancak, daha fazla ayrıntı düzeyi daha fazla verinin toplandığı anlamına gelir. İzleme profili oluşturmanın büyük veri dosyaları oluşturduğunu fark edebilirsiniz. Ayrıca, izleme, uygulamanın performansını etkilemenin daha olasıdır. Daha fazla bilgi için bkz. [izleme verileri değerlerini anlama](../profiling/understanding-instrumentation-data-values.md) ve [örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)
 
- Visual Studio Profiler, veri toplamayı sınırlandırmanıza olanak sağlar. Bu izlenecek yol, profil oluşturucu API 'Leri kullanılarak veri koleksiyonunun nasıl sınırlandıralınacağını gösteren bir örnek sunmaktadır. Visual Studio Profiler, bir uygulamanın içinden veri toplamayı denetlemek için bir API sağlar.
+ Visual Studio profiler, veri toplamayı sınırlandırmanıza olanak sağlar. Bu izlenecek yol, profil oluşturucu API 'Leri kullanılarak veri koleksiyonunun nasıl sınırlandıralınacağını gösteren bir örnek sunmaktadır. Visual Studio profiler, bir uygulamanın içinden veri toplamayı denetlemek için bir apı sağlar.
 
  ::: moniker range="vs-2017"
- Yerel kod için, Visual Studio Profiler API 'Leri *VSPerf.dll*. *VSPerf. h* ve içeri aktarma kitaplığı olan *VSPerf. lib* üstbilgi dosyası *Microsoft Visual Studio\2017\team Tools\Performance Tools\PerfSDK* dizininde bulunur.  64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\2017\Team Tools\Performance Tools\x64\PerfSDK*
+ yerel kod için Visual Studio profiler apı 'leri *VSPerf.dll*. *vsperf. h* ve içeri aktarma kitaplığı olan *vsperf. lib* üstbilgi dosyası, *Microsoft Visual Studio \2017\team tools\performance tools\perfsdk* dizininde bulunur.  64 bitlik uygulamalar için, klasör *Microsoft Visual Studio \2017\team tools\performance tools\x64\perfsdk* şeklindedir
  ::: moniker-end
 
- Yönetilen kod için, profil oluşturucu API 'Leri *Microsoft.VisualStudio.Profiler.dll*. Bu DLL *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* dizininde bulunur. 64 bitlik uygulamalar için, klasör *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64*' dir. Daha fazla bilgi için bkz. [Profil Oluşturucu](/previous-versions/ms242704(v=vs.140)).
+ Yönetilen kod için, profil oluşturucu API 'Leri *Microsoft.VisualStudio.Profiler.dll*. bu DLL, *Microsoft Visual Studio \shared\common\vsperfcollectiontools* dizininde bulunur. 64 bitlik uygulamalar için, klasör *Microsoft Visual Studio \shared\common\vsperfcollectiontools\x64* şeklindedir. Daha fazla bilgi için bkz. [Profil Oluşturucu](/previous-versions/ms242704(v=vs.140)).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yol, geliştirme ortamınızın tercih ettiğiniz hata ayıklama ve örnekleme işlemini destekleyecek şekilde yapılandırıldığını varsayar. Aşağıdaki konular, bu önkoşullara genel bir bakış sağlar:
@@ -59,10 +60,10 @@ DataCollection.CurrentId);
 
 #### <a name="to-create-the-code-to-profile"></a>Profili oluşturulacak kodu oluşturmak için
 
-1. Visual Studio 'da yeni bir C# projesi oluşturun veya tercihlerinize bağlı olarak bir komut satırı oluşturma kullanın.
+1. Visual Studio yeni bir C# projesi oluşturun veya tercihlerinize bağlı olarak bir komut satırı derlemesi kullanın.
 
     > [!NOTE]
-    > Derlemenize *Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools* dizininde bulunan *Microsoft.VisualStudio.Profiler.dll* kitaplığına başvurulmalıdır.
+    > derlemeniz, *Microsoft Visual Studio \shared\common\vsperfcollectiontools* dizininde bulunan *Microsoft.VisualStudio.Profiler.dll* kitaplığına başvurmalıdır.
 
 2. Aşağıdaki kodu kopyalayıp projenize yapıştırın:
 
@@ -123,7 +124,7 @@ DataCollection.CurrentId);
     }
     ```
 
-#### <a name="to-collect-and-view-data-in-the-visual-studio-ide"></a>Visual Studio IDE 'de verileri toplamak ve görüntülemek için
+#### <a name="to-collect-and-view-data-in-the-visual-studio-ide"></a>Visual Studio ıde 'de verileri toplamak ve görüntülemek için
 
 1. IDE 'yi açın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . **Çözümle** menüsünde, **Profil Oluşturucu**' nın üzerine gelin ve ardından **yeni performans oturumu**' nu seçin.
 
@@ -153,7 +154,7 @@ DataCollection.CurrentId);
 
      **VsPerfCLREnv/TRACEON**
 
-3. Şu komutu yazın: **vsinstr \<filename> . exe**
+3. Şu komutu yazın: **vsinstr \<filename>.exe**
 
 4. Şu komutu yazın: **VSPerfCmd/start: Trace/output: \<filename> . vsp**
 
@@ -170,6 +171,6 @@ DataCollection.CurrentId);
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Profil Oluşturucu](/previous-versions/ms242704(v=vs.140))
-- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profil oluşturucu apı başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
 - [Başlarken](../profiling/getting-started-with-performance-tools.md)
 - [Komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)

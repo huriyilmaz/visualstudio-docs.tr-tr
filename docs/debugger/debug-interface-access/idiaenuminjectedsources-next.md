@@ -11,14 +11,15 @@ ms.assetid: 38af80fc-748f-4b15-bff1-823db21dd4d0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bdc57bd1b15150b93e8c42537e5a4abed8dfae57
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ee8e2a2f7b595bdc3484af78542dcd7d45ce1244fee9ea588ba5c1e1cff11a61
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158003"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455162"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
 Sabit Listesi dizisinde belirtilen sayıda eklenen kaynağı alır.

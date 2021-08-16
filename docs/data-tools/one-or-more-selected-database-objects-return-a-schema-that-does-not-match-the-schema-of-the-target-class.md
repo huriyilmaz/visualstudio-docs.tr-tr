@@ -8,14 +8,15 @@ ms.assetid: 3794e88b-4d3d-4e7a-ade6-8208eabe3eae
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f16d4bc03d2f2562321caa0e57e61dd0b597cfdb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0f8be1ffcfa63d2b4b5ac8dfe9f8b7d4e793a00a6d5dfa0d3f68d4a4c3a58596
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858598"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347057"
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>Seçili veritabanı nesnelerinin biri veya daha fazlası, hedef sınıfın şemasıyla eşleşmeyen bir şema döndürüyor
 
@@ -31,4 +32,4 @@ Veritabanı nesnelerini var olan varlık sınıflarına sürüklediğinizde, ver
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio araçlar LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

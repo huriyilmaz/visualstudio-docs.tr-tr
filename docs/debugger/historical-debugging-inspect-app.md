@@ -1,6 +1,6 @@
 ---
-title: Geçmiş hata ayıklama ile uygulamanızı inceleyin | Microsoft Docs
-description: Bir C# konsol uygulamasında bir hatayı izlemek için IntelliTrace geçmiş hata ayıklama kullanan bir araştırmayı izleyin.
+title: Geçmiş hata ayıklama bilgileriyle | Microsoft Docs
+description: Bir C# konsol uygulamasındaki bir hatayı izlemek için IntelliTrace geçmiş hata ayıklamasını kullanan bir araştırmayı izleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,24 +8,25 @@ ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 87987beed3750d8eda5d680b561a46b0866473b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f11fbc23244e70c5332ddef41804ff65a6c219636a09f556a0cfa7fb759edc26
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908416"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454028"
 ---
-# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Visual Studio 'da IntelliTrace geçmiş hata ayıklama ile uygulamanızı İnceleme (C#, Visual Basic, C++)
+# <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>Visual Studio'de (C#, Visual Basic, C++) IntelliTrace geçmiş hata ayıklaması ile uygulamanızı inceleme
 
-[Geçmiş hata ayıklamayı](../debugger/historical-debugging.md) , geri gitmek ve uygulamanızın yürütülmesi boyunca İleri doğru taşımak ve durumunu incelemek için kullanabilirsiniz.
+Geçmiş hata [ayıklamayı kullanarak,](../debugger/historical-debugging.md) uygulamanın yürütülmesiyle geriye ve ileriye doğru hareket edebilir ve durumunu inceebilirsiniz.
 
-IntelliTrace 'i Visual Studio Enterprise sürümünde kullanabilir, ancak Professional veya Community sürümlerinde kullanamazsınız.
+IntelliTrace'i Visual Studio Enterprise veya Professional Community kullanabilirsiniz.
 
-## <a name="navigate-your-code-with-historical-debugging"></a>Geçmiş hata ayıklama ile kodunuzda gezinin
+## <a name="navigate-your-code-with-historical-debugging"></a>Geçmiş hata ayıklama ile kodunuzda gezinme
 
-Hata içeren basit bir programla başlayalım. Bir C# konsol uygulamasında aşağıdaki kodu ekleyin:
+Hataya sahip basit bir programla başlayalım. Bir C# konsol uygulamasında aşağıdaki kodu ekleyin:
 
 ```csharp
 static void Main(string[] args)
@@ -53,33 +54,33 @@ private static int AddInt(int add)
 }
 ```
 
-Çağırma sonrasında beklenen değerin 20 olduğunu varsayacağız `resultInt` `AddAll()` (20 kat arttırılmasının sonucu `testInt` ). (Ayrıca, içinde hatayı göremedik `AddInt()` ). Ancak sonuç aslında 44 ' dir. Hatayı 10 kez adımla nasıl bulabiliriz `AddAll()` ? Hatayı daha hızlı ve daha kolay bulmak için geçmiş hata ayıklamayı kullanabiliriz. Aşağıdaki adımları uygulayın:
+Çağrısı sonrasında beklenen değerinin `resultInt` `AddAll()` 20 olduğunu varsayacağız `testInt` (20 kez artırmanın sonucu). (Ayrıca hatanın içinde görene olmadığınız da `AddInt()` varsayacağız). Ancak sonuç aslında 44'tir. Hatayı 10 kez adımlamadan `AddAll()` nasıl bulamıyorum? Hatayı daha hızlı ve daha kolay bulmak için geçmiş hata ayıklamayı kullanabiliriz. Aşağıdaki adımları uygulayın:
 
-1. **Araçlar > seçenekler > ıntellitrace > Genel**, IntelliTrace 'in etkinleştirildiğinden emin olun ve **IntelliTrace olayları ve çağrı bilgileri**' ni seçin. Bu seçeneği seçmezseniz, gezinti Cilt payının (aşağıda açıklandığı gibi) görümeyeceksiniz.
+1. Araçlar **> Seçenekler > IntelliTrace > Genel** altında IntelliTrace'in etkinleştirildiğinden emin olun ve IntelliTrace olayları ve çağrı **bilgileri'ne tıklayın.** Bu seçeneği kullanmayacaksanız gezinti bölmesini (aşağıda açıklanmıştır) göreyebilirsiniz.
 
-2. Satırda bir kesme noktası ayarlayın `Console.WriteLine(resultInt);` .
+2. Satırda bir kesme noktası `Console.WriteLine(resultInt);` ayarlayın.
 
-3. Hata ayıklamayı başlatın. Kod kesme noktasına yürütülür. **Yereller** penceresinde, değerinin 44 olduğunu görebilirsiniz `resultInt` .
+3. Hata ayıklamayı başlatın. Kod kesme noktası üzerinde yürütülür. Yereller **penceresinde** değerinin `resultInt` 44 olduğunu görebilirsiniz.
 
-4. **Tanılama araçları** penceresini açın (**hata ayıkla > tanılama araçları göster**). Kod penceresi şöyle görünmelidir:
+4. Tanılama Araçları penceresini **açın** (**Hata ayıklama > Show Tanılama Araçları**). Kod penceresi şu şekilde görünür:
 
-    ![Kesme noktasında kod penceresi](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")
+    ![Kesme noktasındaki kod penceresi](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")
 
-5. Sol kenar boşluğunun yanında, kesme noktasının hemen üzerinde bir çift ok görmeniz gerekir. Bu alana gezinti cilt payı denir ve geçmiş hata ayıklama için kullanılır. Oka tıklayın.
+5. Sol kenar boşluğunda, kesme noktası üzerinde çift ok görüyor gerekir. Bu alan gezinti bölmesi olarak adlandırılan ve geçmiş hata ayıklama için kullanılır. Oka tıklayın.
 
-    Kod penceresinde, yukarıdaki kod satırının ( `int resultInt = AddIterative(testInt);` ) pembe renkte olduğunu görmeniz gerekir. Pencerenin üstünde, şimdi geçmiş hata ayıklamada olduğunuz bir ileti görmeniz gerekir.
+    Kod penceresinde, önceki kod satırı ( ) pembe `int resultInt = AddIterative(testInt);` renklendirilmiştir. Pencerenin üzerinde, artık geçmiş hata ayıklamada olduğunuz bir ileti görüyorsanız.
 
-    Kod penceresi şimdi şöyle görünür:
+    Kod penceresi şu şekilde görünür:
 
-    ![geçmiş hata ayıklama modundaki kod penceresi](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")
+    ![geçmiş hata ayıklama modunda kod penceresi](../debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")
 
-6. Şimdi, `AddAll()` Gezinti cilt payındaki yönteme (**F11** veya **Step into** düğmesine) erişebilirsiniz. İleri (**F10**) veya gezinti cilt payındaki **sonraki çağrıya git** . Pembe çizgi artık `j = AddInt(j);` satır üzerinde. Bu durumda **F10** , sonraki kod satırına ilerlemez. Bunun yerine, sonraki işlev çağrısının adımları vardır. Geçmiş hata ayıklama çağrıdan çağrıya gider ve bir işlev çağrısı içermeyen kod satırlarını atlar.
+6. Artık yöntemine `AddAll()` (**F11**) veya  gezinti bölmesindeki Adımla düğmesine girebilirsiniz. İleriye (**F10**) veya **gezinti bölmesinde sonraki çağrıya** gidin. Pembe çizgi artık `j = AddInt(j);` çizginin üzerindedir. **Bu durumda F10,** bir sonraki kod satırına adımlanmaz. Bunun yerine, sonraki işlev çağrısına adımlar. Geçmiş hata ayıklama çağrısından çağrısına gider ve işlev çağrısı içermeden kod satırlarını atlar.
 
-7. Şimdi yöntemine adımlayın `AddInt()` . Hatayı Bu kodda hemen görmeniz gerekir.
+7. Şimdi yöntemine `AddInt()` adım at. Hatayı bu kodda hemen görüyor olun.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu yordam, geçmiş hata ayıklaması ile yapabileceklerinize ilişkin yüzeyi ortaya ayıklamış.
+Bu yordam, geçmiş hata ayıklama ile neler yapalarının yüzeyini karaladı.
 
-- Hata ayıklama sırasında anlık görüntüleri görüntülemek için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md).
-- Farklı ayarlar hakkında daha fazla bilgi edinmek ve gezinti cilt payı içindeki farklı düğmelerin etkileri hakkında daha fazla bilgi edinmek için bkz. [IntelliTrace Özellikleri](../debugger/intellitrace-features.md).
+- Hata ayıklama sırasında anlık görüntüleri görüntülemek için [bkz. IntelliTrace kullanarak önceki uygulama eyaletlerini inceleme.](../debugger/view-historical-application-state.md)
+- Farklı ayarlar ve gezinti bölmesindeki farklı düğmelerin etkileri hakkında daha fazla bilgi için bkz. [IntelliTrace Özellikleri](../debugger/intellitrace-features.md).

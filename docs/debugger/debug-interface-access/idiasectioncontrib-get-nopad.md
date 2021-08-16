@@ -11,14 +11,15 @@ ms.assetid: f5c08603-0b3e-4e81-acf1-1b95a6a83bed
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 48bbfdbd14cd7f2d00a9c0ba4530c78fed62141d
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fd371a69f493e68be60f10a5cb997786db6103b29cb440d40a9b2807cb87c9c4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157212"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454946"
 ---
 # <a name="idiasectioncontribget_nopad"></a>IDiaSectionContrib::get_nopad
 Bölümün bir sonraki bellek sınırına geçirilip geçirilmeyeceğini belirten bir bayrak alır.

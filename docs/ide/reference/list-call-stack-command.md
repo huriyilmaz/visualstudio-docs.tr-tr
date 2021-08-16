@@ -13,14 +13,15 @@ ms.assetid: a8b20bf2-81d2-4069-aea8-23e6b15b4347
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ccb55b1c00621f6e97c8f1297e2cedf2abebe73b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 523ba80842c915fa5535ebc9d9b41d569f2ffa17134626c9cafcedf04563ce6c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852108"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357199"
 ---
 # <a name="list-call-stack-command"></a>Çağrı Yığınını Listele Komutu
 Geçerli çağrı yığınını görüntüler.
@@ -114,7 +115,7 @@ geçerli yığın çerçevesini ikinci çerçeveye ayarlamak için.
 
 - [Ayrıştırılmış kodu Listele komutu](../../ide/reference/list-disassembly-command.md)
 - [Iş parçacıklarını Listele komutu](../../ide/reference/list-threads-command.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

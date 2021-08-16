@@ -1,6 +1,6 @@
 ---
 title: Formlar arasında veri geçirme
-description: Bu Windows Forms denetimleri denetler, verileri bir formdan diğerine geçirmek için adım adım yönergeler alın.
+description: bu Windows Forms denetimleri denetler, verileri bir formdan diğerine geçirmek için adım adım yönergeler alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,14 +17,15 @@ ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b22c555b961809d84778df5996455f186efc01f1
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 6e6fff43784338d52abecf29e889aafdc095c80771683656a11670f37ed6fa28
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216221"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347018"
 ---
 # <a name="pass-data-between-forms"></a>Formlar arasında veri geçirme
 
@@ -35,7 +36,7 @@ Bu izlenecek yol, verileri bir formdan diğerine geçirmek için adım adım yö
 
 Bu izlenecek yolda gösterilen görevler şunlardır:
 
-- Yeni bir **Windows Forms uygulama** projesi oluşturuluyor.
+- yeni bir **Windows Forms uygulama** projesi oluşturuluyor.
 
 - [Veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png)ile bir veri kümesi oluşturma ve yapılandırma.
 
@@ -51,29 +52,29 @@ Bu izlenecek yolda gösterilen görevler şunlardır:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
+bu izlenecek yol, SQL Server Express localdb ve Northwind örnek veritabanını kullanır.
 
-1. SQL Server Express LocalDB yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio yükleyicisi** aracılığıyla yükleyin. Visual Studio Yükleyicisi, SQL Server Express LocalDB, **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yüklenebilir.
+1. SQL Server Express localdb yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)veya **Visual Studio Yükleyicisi** aracılığıyla yükleyin. Visual Studio Yükleyicisi, SQL Server Express localdb, **veri depolama ve işleme** iş yükünün parçası olarak veya ayrı bir bileşen olarak yüklenebilir.
 
 2. Aşağıdaki adımları izleyerek Northwind örnek veritabanını yüklersiniz:
 
-    1. Visual Studio 'da **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
+    1. Visual Studio, **SQL Server Nesne Gezgini** penceresini açın. (SQL Server Nesne Gezgini, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir.) **SQL Server** düğümünü genişletin. LocalDB örneğinize sağ tıklayıp **Yeni sorgu**' yı seçin.
 
        Sorgu Düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
+    2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **yürüt** düğmesini seçin.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
 ## <a name="create-the-windows-forms-app-project"></a>Windows Forms uygulama projesi oluşturma
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. Visual Studio, **dosya** menüsünde **yeni**  >  **Project**' yi seçin.
 
-2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
+2. sol bölmedeki **Visual C#** ' ı veya **Visual Basic** genişletin ve sonra **Windows masaüstü**' nü seçin.
 
-3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
+3. orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
 4. Projeyi **PassingDataBetweenForms** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
@@ -119,7 +120,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 Verileri iletmek için ikinci bir form oluşturun.
 
-1. **Proje** menüsünden **Windows formu Ekle**' yi seçin.
+1. **Project** menüsünde **Windows Form ekle**' yi seçin.
 
 2. Varsayılan **Form2** adını bırakın ve **Ekle**' ye tıklayın.
 
@@ -139,7 +140,7 @@ Form2 'e bir TableAdapter sorgusu ekleyerek Form1 üzerinde seçilen müşteriye
 
 2. **OrdersTableAdapter** öğesine sağ tıklayın ve **Sorgu Ekle**' yi seçin.
 
-3. **SQL deyimlerini kullan** varsayılan seçeneğini bırakın ve ardından **İleri**' ye tıklayın.
+3. **SQL deyimlerini kullan** varsayılan seçeneğini bırakın ve ardından **ileri**' ye tıklayın.
 
 4. **Satırları döndüren Seç** varsayılan seçeneğini bırakın ve ardından **İleri**' ye tıklayın.
 

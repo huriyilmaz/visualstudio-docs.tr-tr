@@ -9,17 +9,18 @@ ms.assetid: 8e0bdb26-1247-44d9-8d80-ec6e35187fb4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 210a66db89998cff2cde043ceb1c1cf21f23d8ee
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5296d1c8a726903bdc35b4fd510e7821b0e51d3faaa86c4ddf788e22ae357eef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073488"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360306"
 ---
 # <a name="idebuggenericparamfieldgetindex"></a>IDebugGenericParamField::GetIndex
 Bu genel parametrenin dizinini alır.

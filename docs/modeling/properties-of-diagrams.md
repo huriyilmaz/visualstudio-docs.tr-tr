@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a060c79866d1746135f8a29aef15ca96dd51f63
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 55479e0882532249b89b36920023c83634ac7c21122078fbe6063fcb32dc2c58
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390678"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121288561"
 ---
 # <a name="properties-of-diagrams"></a>Diyagramların özellikleri
 Diyagramların oluşturulan tasarımcıda nasıl görüneceklerini belirten özellikler belirtebilirsiniz. Örneğin, diyagramda metin için varsayılan bir renk belirtebilirsiniz.
@@ -45,7 +46,7 @@ Diyagramların oluşturulan tasarımcıda nasıl görüneceklerini belirten öze
 |Metin Rengini Farklı Görüntüler Özelliği|ise, `True` kullanıcı, oluşturulan tasarımcıda diyagramın metin rengini ayarlayın. Bu özelliği ayarlamak için diyagram şekline sağ tıklayın ve Maruz **Ekle'ye tıklayın.**|Yanlış|
 |Açıklama|Oluşturulan tasarımcıyı belgeley etmek için kullanılan açıklama.|\<none>|
 |Görünen Ad|Bu diyagram için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
-|Help Anahtar Sözcüğü|Bu diyagram için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
+|Yardım Anahtar Sözcüğü|Bu diyagram için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,14 +14,15 @@ ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8d728df5f8af5dff5a7ea2456e1d40d47ddc7f76
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ffe1d6cea14568f9d8859e005ee56bf45910348488864fe65f24c8b0512890de
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866898"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347212"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
 
@@ -29,7 +30,7 @@ ms.locfileid: "99866898"
 Bir *hizmet başvurusu* , projenin bir veya daha fazla erişmesini sağlar [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] . Yerel ağda veya Internet 'te geçerli çözümde arama yapmak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] .
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmenizi sağlayan **Microsoft WCF Web Service Reference Provider** erişmek Için **Çözüm Gezgini** **bağlı hizmetler** düğümünü kullanabilirsiniz.
+Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmenizi sağlayan **Microsoft WCF Web Service Reference Provider** erişmek için **Çözüm Gezgini** **bağlı hizmetler** düğümünü kullanabilirsiniz.
 ::: moniker-end
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
@@ -68,7 +69,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 1. **Microsoft WCF Web Service Reference Provider** seçin.
 
-   **WCF Web hizmeti başvurusunu Yapılandır** iletişim kutusu görüntülenir.
+   **WCF Web Service Reference yapılandır** iletişim kutusu görüntülenir.
 
    ![WCF Web hizmeti sağlayıcısı iletişim kutusunun ekran görüntüsü](media/vs-2019/configure-wcf-web-service-reference-dialog.png)
 
@@ -119,7 +120,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 1. **Microsoft WCF Web Service Reference Provider** seçin.
 
-   **WCF Web hizmeti başvurusunu Yapılandır** iletişim kutusu görüntülenir.
+   **WCF Web Service Reference yapılandır** iletişim kutusu görüntülenir.
 
 1. **Bul**'a tıklayın.
 
@@ -160,4 +161,4 @@ Bir hizmet başvurusu artık kullanılmıyorsa, çözümünüzü çözümden kal
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [Windows Visual Studio 'de Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

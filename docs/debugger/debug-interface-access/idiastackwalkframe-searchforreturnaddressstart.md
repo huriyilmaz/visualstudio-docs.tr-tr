@@ -11,14 +11,15 @@ ms.assetid: 47660b9b-6e4f-4dfa-88ab-63dce28f7412
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 49beac1d7f7c998b5ad3a73222903830a934bc9c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8bbb837fe55405b9f66dd55913a8773b5b82ad7a50f132710e2398c60776a5a9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158910"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454842"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
 Belirtilen adreste veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.

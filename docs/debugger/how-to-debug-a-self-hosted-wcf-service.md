@@ -1,6 +1,6 @@
 ---
 title: Self-Hosted WCF hizmetinde hata ayıklama | Microsoft Docs
-description: Şirket içinde barındırılan bir WCF hizmetinde hata ayıklamayı öğrenin. En kolay yol (ancak her zaman mümkün değildir), Visual Studio 'Yu hem istemci hem de sunucu başlatılacak şekilde yapılandırmaktır.
+description: Şirket içinde barındırılan bir WCF hizmetinde hata ayıklamayı öğrenin. en kolay yol (ancak her zaman mümkün değildir), Visual Studio hem istemci hem de sunucu başlatmak üzere yapılandırılır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,14 +17,15 @@ ms.assetid: 288922be-ba3f-411e-af50-bba39c9529cc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cd11966347cd90576eb78a59f6c7eb96cc697ef
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6bf365ca3a52365e7f831f184341e67714bf2c5cdf7d50b44dd2df66c4c516b3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155087"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453859"
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>Nasıl Yapılır: Kendini Barındıran WCF Hizmetinde Hata Ayıklama
 *Şirket içinde barındırılan bir hizmet* , IIS 'de, WCF hizmeti ana bilgisayarında veya geliştirme sunucusunda ÇALıŞTıRMAYAN bir WCF hizmetidir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Şirket içinde barındırılan bir WCF 'yi hata ayıklamanın en kolay yolu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **hata** ayıklama menüsünde **hata ayıklamayı Başlat** ' ı seçtiğinizde hem istemciyi hem de sunucuyu başlatacak şekilde yapılandırmaktır.
@@ -37,7 +38,7 @@ ms.locfileid: "102155087"
 
 - İstemcide hata ayıklamayı başlatın ve ardından hizmete bir çağrı yapın. Bu, app.config dosyasında hata ayıklamayı etkinleştirmenizi gerektirir. Daha fazla bilgi için [WCF hata ayıklama sınırlamaları](../debugger/limitations-on-wcf-debugging.md).
 
-### <a name="to-start-both-client-and-host-from-visual-studio"></a>Hem istemciyi hem de Konağı Visual Studio 'dan başlatmak için
+### <a name="to-start-both-client-and-host-from-visual-studio"></a>Visual Studio hem istemci hem de ana bilgisayarı başlatmak için
 
 1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hem istemci hem de sunucu projelerini içeren bir çözüm oluşturun.
 

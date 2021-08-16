@@ -11,14 +11,15 @@ ms.assetid: f7dab1c6-112b-4966-baa5-afc976949c76
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d9f12777b41cca5e4bf654318b72bc98e52ccede
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 64c160d0275c2027ec5d2e128b8319bde20d965c19a00f370c317c27726d50f8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102162161"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454784"
 ---
 # <a name="idiasymbolget_frontendbuild"></a>IDiaSymbol::get_frontEndBuild
 Ön uç derleme numarasını alır.

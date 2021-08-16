@@ -1,6 +1,6 @@
 ---
-description: 'IDebugPortEx2:: TerminateProcess bir işlemi sonlandırır.'
-title: 'IDebugPortEx2:: TerminateProcess | Microsoft Docs'
+description: IDebugPortEx2::TerminateProcess bir işlemi sonlandırılır.
+title: IDebugPortEx2::TerminateProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: bf8fa94c-6d9d-4e4f-ac08-3b44ba5ace68
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fb783615ae50f8a3bb346e7d6aa281124104253e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d2e08ece86df7f9ab03b71bb8410a5873de406066f68fe1f13923e55f06fac1a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072474"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276925"
 ---
 # <a name="idebugportex2terminateprocess"></a>IDebugPortEx2::TerminateProcess
-Bir işlemi sonlandırır.
+Bir işlemi sonlandırılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,10 +43,10 @@ int TerminateProcess(
 
 ## <a name="parameters"></a>Parametreler
 `pPortProcess`\
-'ndaki Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
+[in] Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

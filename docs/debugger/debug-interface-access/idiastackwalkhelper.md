@@ -11,14 +11,15 @@ ms.assetid: d66e5c84-565d-494e-8486-f91db9a34548
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fb014ebf703a0775e4f18208bc17d74a3fa29f12
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b3f7e042c0e1642da0af4c969b748e8464c2a27e141c689a41a6840ecd58d34d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156744"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454826"
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
 Program hata ayıklama veritabanı (. pdb) dosyasını kullanarak yığını yürüme işlemini kolaylaştırır.

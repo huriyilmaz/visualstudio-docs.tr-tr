@@ -11,14 +11,15 @@ ms.assetid: b696f350-fc08-4352-9287-a15e87512c1e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c8cee712f393c3b006484eeda4a0ec1033c1f26b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4d2a74f6cc8ffa1c79938ab061d59ed2273a3a9220864632a0e37f1d482e8e13
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157618"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455018"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
 Modülün veya görüntünün temel konumunun ve bellek uzaklarının ayrıntılarını gösterir.

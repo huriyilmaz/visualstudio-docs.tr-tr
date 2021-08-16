@@ -1,6 +1,6 @@
 ---
 title: Başlangıç, Ortam, Seçenekler İletişim Kutusu
-description: Visual Studio açıldığında farklı bir varsayılan eylem ayarlamak için ortam bölümündeki başlangıç sayfasını nasıl kullanacağınızı öğrenin.
+description: Ortam bölümünde başlangıç sayfası açıldığında farklı bir varsayılan eylem ayarlamak için Başlangıç sayfasını Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/28/2019
 ms.topic: reference
@@ -10,25 +10,26 @@ ms.assetid: 9d517203-3c62-4660-b7b4-ea7d032dcb1e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 62057dcc4b7410e31f5f27dc31976b49ee25a132
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 253284ad97e5f77eb39c416bb22d78066ebb008b84ea2c2e4d40f4bd0f9ddce2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967221"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121356848"
 ---
-# <a name="options-dialog-box-environment--startup"></a>Seçenekler iletişim kutusu: ortam \> başlatma
+# <a name="options-dialog-box-environment--startup"></a>Seçenekler iletişim kutusu: Ortam \> Başlatma
 
 ::: moniker range="vs-2017"
 
-Visual Studio başlangıç sayfasını özelleştirmek veya Visual Studio başlatıldığında farklı bir varsayılan eylem ayarlamak için bu sayfayı kullanın. Daha fazla bilgi için bkz. [özelleştirmeyi başlatma](../../ide/customizing-the-start-page-for-visual-studio.md).
+Başlangıç sayfasını özelleştirmek veya Visual Studio farklı bir varsayılan eylem ayarlamak için Visual Studio kullanın. Daha fazla bilgi için bkz. [Başlatmayı özelleştirme.](../../ide/customizing-the-start-page-for-visual-studio.md)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio başlatıldığında farklı bir varsayılan eylem ayarlamak için bu sayfayı kullanın. **Başlangıçta,** listede, **Başlangıç penceresi** ' nden (yeni veya var olan bir proje açmanıza olanak tanır), **en son çözüm** veya **boş ortam**' ı seçin.
+Uygulama başlatıldığında farklı bir varsayılan eylem ayarlamak Visual Studio kullanın. Başlangıçta, **aç listesinde Başlangıç** penceresi **(yeni** veya var olan bir projeyi açmana olanak **sağlar),** En son çözüm veya Boş ortam'ı **seçin.**
 
 ::: moniker-end

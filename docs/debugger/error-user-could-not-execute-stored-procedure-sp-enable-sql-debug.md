@@ -1,6 +1,6 @@
 ---
-description: Saklı yordam sp_enable_sql_debug sunucuda yürütülemedi.
-title: Kullanıcı, saklı yordamı çalıştıramadı sp_enable_sql_debug | Microsoft Docs
+description: Saklı Yordam sp_enable_sql_debug sunucuda yürütülemdi.
+title: Kullanıcı Saklı Yordam Yürüte sp_enable_sql_debug | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 dev_langs:
@@ -11,26 +11,27 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c7597acb201aa810d34fe0df0f0aebbbd2f70fe
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 43a16ade834255622466ef3ba35359bcf465c8647a5f4a65a2b4498dc6545d1e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146294"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454321"
 ---
 # <a name="error-user-could-not-execute-stored-procedure-sp_enable_sql_debug"></a>Hata: Kullanıcı sp_enable_sql_debug Saklı Yordamını Yürütemedi
 
-Saklı yordam sp_enable_sql_debug sunucuda yürütülemedi. Bunun nedeni şunlar olabilir:
+Saklı Yordam sp_enable_sql_debug sunucuda yürütülemdi. Bunun nedeni:
 
-- Bir bağlantı sorunu. Sunucuyla kararlı bir bağlantınız olması gerekir.
+- Bağlantı sorunu. Sunucuyla kararlı bir bağlantınız olması gerekir.
 
-- Sunucuda gerekli izinlerin bulunmaması. SQL Server 2005 ' de hata ayıklamak için, hem Visual Studio çalıştıran hesap hem de SQL Server bağlanmak için kullanılan hesap sysadmin rolünün üyeleri olmalıdır. SQL Server bağlanmak için kullanılan hesap, Windows kullanıcı hesabıdır (Windows kimlik doğrulaması kullanıyorsanız) veya Kullanıcı KIMLIĞI ve parolası olan bir hesap (SQL kimlik doğrulaması kullanıyorsanız).
+- Sunucuda gerekli izinlerin olmaması. SQL Server 2005'te hata ayıklamak için hem Visual Studio çalıştıran hesabın hem de SQL Server'a bağlanmak için kullanılan hesabın sysadmin rolünün üyesi olması gerekir. SQL Server'a bağlanmak için kullanılan hesap, Windows kullanıcı hesabınız (Windows kimlik doğrulaması kullanıyorsanız) veya kullanıcı kimliği ve parolası olan bir hesaptır (SQL kullanıyorsanız).
 
-Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama için SQL Server Izinleri ayarlama](/previous-versions/w1bhybwz(v=vs.100)).
+Daha fazla bilgi için, [bkz. How to: Set SQL Server Permissions for Debugging](/previous-versions/w1bhybwz(v=vs.100)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: hata ayıklama için SQL Server Izinleri ayarlama](/previous-versions/w1bhybwz(v=vs.100))
-- [SQL hata ayıklamayı ayarlama](/previous-versions/visualstudio/visual-studio-2010/s4sszxst\(v\=vs.100\))
+- [Nasıllı: Hata Ayıklama SQL Server İzinlerini Ayarlama](/previous-versions/w1bhybwz(v=vs.100))
+- [Hata Ayıklama SQL Ayarlama](/previous-versions/visualstudio/visual-studio-2010/s4sszxst\(v\=vs.100\))

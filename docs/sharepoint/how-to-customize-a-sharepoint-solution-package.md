@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: bir SharePoint çözüm paketini özelleştirme | Microsoft Docs'
-description: Bir SharePoint çözüm paketi (. wsp) oluşturmak ve özelleştirmek için paket tasarımcısını kullanın. Paketlenmiş bildirim dosyasını görüntüleyin veya üzerine yazın. Bildirim şablonunu değiştirin.
+title: 'nasıl yapılır: SharePoint çözüm paketini özelleştirme | Microsoft Docs'
+description: bir SharePoint çözüm paketi (. wsp) yapmak ve özelleştirmek için paket tasarımcısını kullanın. Paketlenmiş bildirim dosyasını görüntüleyin veya üzerine yazın. Bildirim şablonunu değiştirin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,17 +17,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 149e99a3ba86f1eec22d90618abfd8972ed68e97
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 909bb9952ce788418a5372955e1df56ec719ce633685728fc7951188dac6ba87
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959902"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352935"
 ---
-# <a name="how-to-customize-a-sharepoint-solution-package"></a>Nasıl yapılır: bir SharePoint çözüm paketini özelleştirme
-  Paket Tasarımcısını bir paket (*. wsp*) oluşturmak ve özelleştirmek için kullanabilirsiniz. Örneğin, SharePoint proje öğeleri ve özellikleri ekleyebilir, çözüm dağıtıldığında Web sunucusunun sıfırlanıp sıfırlanmadığını belirtebilir ve dağıtım sunucusu türünü ayarlayabilirsiniz.
+# <a name="how-to-customize-a-sharepoint-solution-package"></a>nasıl yapılır: SharePoint çözüm paketini özelleştirme
+  Paket Tasarımcısını bir paket (*. wsp*) oluşturmak ve özelleştirmek için kullanabilirsiniz. örneğin, SharePoint proje öğeleri ve özellikler ekleyebilir, çözüm dağıtıldığında Web sunucusunun sıfırlanıp sıfırlanmadığını belirtebilir ve dağıtım sunucusu türünü ayarlayabilirsiniz.
 
 ## <a name="open-the-package-designer"></a>Paket tasarımcısını açın
 
@@ -36,7 +37,7 @@ ms.locfileid: "99959902"
 - **Çözüm Gezgini**' de **paket**' e çift tıklayın veya **paket** için kısayol menüsünde **Tasarımcı görünüm** ' ü seçin.
 
 ## <a name="view-the-packaged-manifestffile"></a>Paketlenmiş manifestfFile dosyasını görüntüleme
- Paketlenmiş bildirim dosyasını değiştirmek ve oluşturmak için paket tasarımcısını kullanabilirsiniz. Daha sonra, bu dosyanın XML kodunu Visual Studio 'da görüntüleyebilirsiniz.
+ Paketlenmiş bildirim dosyasını değiştirmek ve oluşturmak için paket tasarımcısını kullanabilirsiniz. Ardından, bu dosya için XML kodunu Visual Studio görüntüleyebilirsiniz.
 
 #### <a name="to-view-the-xml-source-file"></a>XML kaynak dosyasını görüntülemek için
 
@@ -52,7 +53,7 @@ ms.locfileid: "99959902"
     > Paket şablonu için bildirim XML dosyasını açtığınızda, dosyalar otomatik olarak onaylanır ve Hata Listesi penceresinde görüntülenen uyarıları yoksayabilirsiniz.
 
 ## <a name="change-the-manifest-template"></a>Bildirim şablonunu değiştirme
- Paketlenmiş bildirim dosyasının XML kodunu Visual Studio XML düzenleyicisinde veya bildirim şablonu bölmesinde değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler, paketin paketlenmiş bildirim dosyası ile birleştirilir.
+ paketlenmiş bildirim dosyasının xml kodunu Visual Studio xml düzenleyicisinde veya bildirim şablonu bölmesinde değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler, paketin paketlenmiş bildirim dosyası ile birleştirilir.
 
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML düzenleyicisini kullanarak bildirim şablonunu değiştirme
 
@@ -70,7 +71,7 @@ ms.locfileid: "99959902"
  Paket Tasarımcısını devre dışı bırakabilir ve *manifest.xml* dosyasını el ile oluşturabilirsiniz. Bu yordamı ilk gerçekleştirişinizde, paket Tasarımcısı 'ndaki geçerli ayarlar paket şablonu XML dosyasına kaydedilir. Ardından, XML kodunu değiştirebilir veya üzerine yazabilirsiniz.
 
 > [!NOTE]
-> Paket Tasarımcısı devre dışı bırakıldığında XML dosyasına SharePoint proje öğeleri ve özellikleri ekler veya kaldırırsanız, bu proje öğeleri ve Özellikler paketlenmez.
+> paket tasarımcısı devre dışı bırakıldığında XML dosyasında SharePoint proje öğeleri ve özellikleri ekler veya kaldırırsanız, bu proje öğeleri ve özellikler paketlenmez.
 
 #### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Tasarımcıyı devre dışı bırakarak paketlenmiş bildirim dosyasının üzerine yazmak için
 
@@ -90,4 +91,4 @@ ms.locfileid: "99959902"
      Şablon orijinal metinle yenilenir ve XML üzerinde yapılan değişiklikler kaybedilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

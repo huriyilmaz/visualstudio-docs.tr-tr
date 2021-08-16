@@ -1,6 +1,6 @@
 ---
 title: Kaynak dosyaları/çözüm özelliği sayfalarında hata ayıkla
-description: Çözüm Gezgini ' de çözümünüze sağ tıklayıp Özellikler > ortak Özellikler ' i seçerek Visual Studio 'daki kaynak dosyalarını hata ayıkla Özellik sayfasına erişin.
+description: Çözüm Gezgini ' de çözümünüze sağ tıklayıp özellikler > ortak özellikler ' i seçerek Visual Studio hata ayıkla kaynak dosyaları özellik sayfasına erişin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,14 +22,15 @@ ms.assetid: 0af11464-eeb1-4d0b-87a6-0cc96779afb1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 10818f473dec392364832cdc2f5215197ef4627f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4c645186735ef8f5131b779f07647c09b457b8bcd4b13fa69ff08b25f291c43f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873177"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121280492"
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>Kaynak Dosyalarda Hata Ayıklama, Ortak Özellikler, Çözüm Özellik Sayfaları İletişim Kutusu
 Bu özellik sayfası, çözüm hata ayıkladığında hata ayıklayıcının kaynak dosyaları arayacağı yeri belirtir.
@@ -43,4 +44,4 @@ Bu özellik sayfası, çözüm hata ayıkladığında hata ayıklayıcının kay
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [hata ayıklayıcı Ayarlar ve hazırlığı](../debugger/debugger-settings-and-preparation.md)

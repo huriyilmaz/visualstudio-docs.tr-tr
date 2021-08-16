@@ -1,6 +1,6 @@
 ---
 title: Çalışma zamanı hata raporlama işlevi yazma | Microsoft Docs
-description: Visual Studio 'da özel çalışma zamanı hata raporlama işlevi yazma örneklerine bakın. _CrtDbgReportW aynı bildirime sahip olmalıdır ve 1 değerini döndürür.
+description: Visual Studio özel bir çalışma zamanı hata raporlama işlevi yazma örneklerine bakın. _CrtDbgReportW aynı bildirime sahip olmalıdır ve 1 değerini döndürür.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,14 +17,15 @@ ms.assetid: 989bf312-5038-44f3-805f-39a34d18760e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ff82afdfda8af746533f07f21d330c359a1618c
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: f36610508439dc42588923ee7824d4d9bf04e1a40c58edf769e7308d6d886d6b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385154"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453225"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Nasıl yapılır: Run-Time hata raporlama Işlevi yazma (C++)
 Çalışma zamanı hataları için özel bir raporlama işlevi, ile aynı bildirime sahip olmalıdır `_CrtDbgReportW` . Hata ayıklayıcıya 1 değerini döndürmelidir.

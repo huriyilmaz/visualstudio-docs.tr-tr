@@ -11,14 +11,15 @@ ms.assetid: de137bee-132f-4aae-a067-9578b7a3e6d4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 048d78185450cb06be7265f4db0cf34cf1a2d5d2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: cabe35e5fb210209b614d0fd87dc2a3a8ca8972558421705a6f8248fe51b3f67
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157653"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455066"
 ---
 # <a name="idiaframedataget_virtualaddress"></a>IDiaFrameData::get_virtualAddress
 Çerçeve için kodun sanal adresini (VA) alır.

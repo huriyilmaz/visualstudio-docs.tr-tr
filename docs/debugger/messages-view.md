@@ -12,14 +12,15 @@ ms.assetid: 14c2a786-c23a-4b2d-acad-8c32a856c70d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e20d3f83d6e68211d1b48f63747bea80ee6b25d9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 064ddc1bf410f6b64025c9d2045ca6cd86f05282b5d94a52fefbcabeb5399549
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876335"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453150"
 ---
 # <a name="messages-view"></a>İletiler Görünümü
 Her pencerede ilişkili bir ileti akışı vardır. Bir Iletiler görünümü penceresi bu ileti akışını görüntüler. Pencere tanıtıcısı, ileti kodu ve ileti gösterilir. Bir iş parçacığı veya işlem için de bir Ileti görünümü oluşturabilirsiniz. Bu, belirli bir işlem veya iş parçacığı tarafından sahip olunan tüm pencereler için gönderilen iletileri görüntülemenize olanak sağlar. Bu, özellikle pencere başlatma iletilerini yakalamaya yarar.
@@ -32,7 +33,7 @@ Her pencerede ilişkili bir ileti akışı vardır. Bir Iletiler görünümü pe
 
 #### <a name="to-open-a-messages-view-for-a-window-process-or-thread"></a>Bir pencere, işlem veya iş parçacığı için bir Ileti görünümü açmak için
 
-1. Odağı bir [Windows görünümü](../debugger/windows-view.md), [süreçler görünümü](../debugger/processes-view.md)veya [iş parçacığı görünümü](../debugger/threads-view.md) penceresine taşıyın.
+1. odağı [Windows görünüm](../debugger/windows-view.md), [süreçler görünümü](../debugger/processes-view.md)veya [iş parçacıkları görünümü](../debugger/threads-view.md) penceresine taşıyın.
 
 2. İletilerini incelemek istediğiniz öğenin düğümünü bulun ve seçin.
 

@@ -12,14 +12,15 @@ ms.assetid: abfb4e9e-1622-47c9-afda-b6b71a9d88e4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fb0a0f4a1610eb23d68b6965e3f45a661ba25366
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a6728cbc375918d4fcc2b4aa4f22baea2cd2c6a490ae1088d624fa59e7bb90c2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940598"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453069"
 ---
 # <a name="threads-view"></a>İş Parçacıkları Görünümü
 Iş parçacıkları görünümü, sisteminizdeki Windows ile ilişkili tüm iş parçacıklarının düz bir listesidir. Her iş parçacığının Iş parçacığı KIMLIĞI ve modül adı gösterilir. İşlemler dahil değildir, ancak seçili bir iş parçacığına sahip olan işlemi kolayca bulabilirsiniz.

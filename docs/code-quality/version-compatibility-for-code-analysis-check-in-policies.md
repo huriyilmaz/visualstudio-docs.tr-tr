@@ -1,7 +1,7 @@
 ---
 title: Kod Analizi İade İlkeleri için Sürüm Uyumluluğu
 ms.date: 11/04/2016
-description: Team System 2008 Team Foundation Server ve Team Foundation Server 2010 ' nin Visual Studio iade ilkelerini farklı şekilde nasıl değerlendirçalıştığını öğrenin.
+description: Team System 2008 2008 Team Foundation Server ve Team Foundation Server 2010'Visual Studio iade ilkelerini farklı şekilde nasıl değerlendireceklerini öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,35 +11,36 @@ ms.assetid: 1af376e3-3be7-4445-803b-76a858567a5b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a97e9175e75d8018aff269066f13a796e1cf64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1ab46216ac2955e6629d5a577659f938e9aa741659309a12c2ee98b527d5915
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867678"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121348513"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>Kod Analizi İade İlkeleri için Sürüm Uyumluluğu
 
-Farklı sürümlerini kullanarak kod analizi iade ilkelerini değerlendirmeli ve yazarsa [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] , iade ilkelerinin nasıl ve nasıl değerlendirileceği hakkında farkları bilmeniz gerekir [!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)] [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] .
+farklı sürümlerini kullanarak kod analizi iade ilkelerini değerlendirmeli ve yazmalısanız, iade ilkelerinin nasıl ve nasıl değerlendirilecekleri [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] [!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)] arasındaki [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] farkları bilmelisiniz.
 
-## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Check-In Ilkelerini değerlendirmek için sürüm uyumluluğu
+## <a name="version-compatibility-for-evaluating-check-in-policies"></a>Check-In İlkelerini Değerlendirmek için Sürüm Uyumluluğu
 
-- İçinde kod analizi iade etme ilkeleri değerlendirildiğinde [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] , içinde var olan ancak bulunmayan tüm kurallar yok [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] sayılır.
+- Kod analizi iade ilkeleri'de değerlendiriliyorsa, içinde mevcut olan [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] ancak içinde mevcut olmayan tüm kurallar [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] yoksayılır.
 
-- Kod Analizi iade ilkeleri ' de değerlendirildiğinde [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] , için özel olan tüm yeni kurallar [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] yok sayılır.
+- Kod analizi iade ilkeleri içinde değerlendirilene, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] için özel olan tüm yeni kurallar [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] yoksayılır.
 
-- Kod Analizi iade etme ilkesi, kural derlemelerini belirtiyorsa, [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] tanımadığı derlemeler tarafından belirtilen tüm kuralları yoksayar.
+- Kod analizi iade ilkesi kural derlemelerini belirtirse, tanımaz derlemeler tarafından [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] belirtilen tüm kuralları yoksayar.
 
-- Kod Analizi iade etme ilkesi, tanımadığı kural derlemelerini belirtiyorsa [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] bir ileti görüntülenir.
+- Kod analizi iade ilkesi tanımaz kural derlemelerini [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] belirtirse, bir ileti görüntülenir.
 
-## <a name="version-compatibility-for-authoring-check-in-policies"></a>Check-In Ilkeleri yazma için sürüm uyumluluğu
+## <a name="version-compatibility-for-authoring-check-in-policies"></a>Yazma Ve İlkeleri için Check-In Uyumluluğu
 
-- Sürümünü kullanarak bir kod analizi iade etme ilkesi oluşturduysanız [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] , [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] bunu değiştirmek için sürümünü kullanamazsınız. Ayrıca, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ilke değerlendirilemiyor.
+- sürümünü kullanarak bir kod analizi iade ilkesi oluşturduysanız, bu [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] ilkeyi değiştirmek [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] için sürümünü [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] kullanılamaz. Ayrıca, [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ilkeyi değerlendire değildir.
 
-- ' De kullanarak bir kod analizi iade etme ilkesi oluşturduysanız, [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] bunu değiştirmek için ' de kullanabilirsiniz ve ilke tarafından da değerlendirilebilirler [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] . ' De kullanarak ilkeyi değiştirdikten sonra [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] , ' [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] de kullanarak ilkeyi düzenleyemezsiniz [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] . [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] , eşleşmeyen kesin adlarla sorunları olmadan ilkeleri değerlendirebilir.
+- içinde kullanarak bir kod analizi iade ilkesi oluşturduysanız, ilkeyi değiştirmek için içinde kullanabilirsiniz ve [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ilke tarafından da [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] değerlendirebilirsiniz. içinde kullanarak ilkeyi değiştirdikten [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] sonra, artık içinde kullanarak ilkeyi [!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)] düzenleyemezsiniz. [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] , eşleşmeyen güçlü adlarla sorun olmadan ilkeleri değerlendiriyor.
 
-- Ve için uygulanan kural ayarlarıyla bir kod analizi iade etme ilkesi oluşturmak için, ilkeyi ' [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] de oluşturmanız [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] , gereken tüm değişiklikleri yapmanız ve ilkeyi kaydetmeniz gerekir. Kurallarda yapılan değişiklikler yalnızca içinde mevcutsa [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] , ilkeyi ' de değiştirin ve kaydedin [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] .
+- hem hem de için geçerli olan kural ayarlarıyla bir kod analizi iade ilkesi oluşturmak için, içinde ilkeyi oluşturmanız, gerekli tüm değişiklikleri yapın ve [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] ilkeyi kaydetmeniz gerekir. Kurallarda yapılan değişiklikler yalnızca içinde [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] mevcutsa, ilkeyi değiştirir ve içinde kaydedebilirsiniz. [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)]
 
-   İlkeyi ' de kaydettikten sonra [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] , yalnızca içindeki kuralların ayarlarını değiştiremezsiniz [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] .
+   İlkeyi 'ye [!INCLUDE[vstsTfsOrcasShort](../code-quality/includes/vststfsorcasshort_md.md)] kaydeddikten sonra, artık yalnızca içinde mevcut olan kuralların ayarlarını [!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)] değiştiremezsiniz.

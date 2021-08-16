@@ -1,6 +1,6 @@
 ---
-description: Bir veri sembolünün değişken sınıflandırmasını alır.
-title: 'IDiaSymbol:: get_dataKind | Microsoft Docs'
+description: Bir veri simgesinin değişken sınıflandırmasını alan.
+title: IDiaSymbol::get_dataKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 45005ad0-8b29-4cde-9d33-6bef72f6e463
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 833ff0fb6602d7f33aabbb9aa1a442bda07a379b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 71d5c5b1ea4388417fcec6c6961f7dffc6a9fe47751b673c41bbe1d64653d325
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161011"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454794"
 ---
 # <a name="idiasymbolget_datakind"></a>IDiaSymbol::get_dataKind
-Bir veri sembolünün değişken sınıflandırmasını alır.
+Bir veri simgesinin değişken sınıflandırmasını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ HRESULT get_dataKind (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Örneğin, genel, statik veya sabit gibi veri türünü belirten [DataKind sabit](../../debugger/debug-interface-access/datakind.md) listesi numaralandırmasından bir değer döndürür.
+[out] Örneğin, genel, statik veya sabit gibi veri türlerini belirten [DataKind](../../debugger/debug-interface-access/datakind.md) Sabit Adı sabit sabit değerinden bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 7.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

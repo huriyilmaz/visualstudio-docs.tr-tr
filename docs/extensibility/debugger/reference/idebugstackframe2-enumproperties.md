@@ -11,17 +11,18 @@ ms.assetid: 334bb95e-c7e0-4008-9f06-8c3999e47ee8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bd9494434a8dc3fa2cff9eb28ddea8fb48302ca6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a59cd03281fb5e802a1c93cba65115bbb9b09ee5f57c5c15d01b100b90cbf78d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071161"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292123"
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
 Yerel değişkenler gibi yığın çerçevesiyle ilişkili özellikler için bir Numaralandırıcı oluşturur.

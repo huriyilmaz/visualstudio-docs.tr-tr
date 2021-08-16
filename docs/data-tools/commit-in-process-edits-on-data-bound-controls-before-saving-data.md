@@ -1,6 +1,6 @@
 ---
 title: Kaydedilmemiş düzenlemeler
-description: Veri kaydedilmeden önce veriye bağlı Windows Forms Denetimlerinde işlem içi düzenlemeleri yürütün. Form üzerindeki tüm BindingSource bileşenleri için EndEdit 'u çağırın.
+description: veri kaydedilmeden önce veriye bağlı Windows Forms denetimlerinde işlem içi düzenlemeleri yürütün. Form üzerindeki tüm BindingSource bileşenleri için EndEdit 'u çağırın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,14 +18,15 @@ ms.assetid: 61af4798-eef7-468c-b229-5e1497febb2f
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 53101505230a51f109ace904c2f8322659733b4b
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 1cee28208d40de90039306acff40ffdd650cd236aa6935e473e8389efa232302
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216325"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347811"
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>Verileri kaydetmeden önce verilere bağlı denetimler üzerinde işlem içi düzenlemeler yürütme
 

@@ -1,24 +1,24 @@
 ---
-title: Azure App Service ASP.NET Core kapsayıcısını dağıtma
-description: Bir Docker kapsayıcısında ASP.NET Core Web uygulamasını dağıtmak için Visual Studio kapsayıcı araçları 'nı kullanmayı öğrenin Azure App Service
+title: Kapsayıcıya ASP.NET Core kapsayıcı Azure App Service
+description: Visual Studio Kapsayıcı Araçları'ASP.NET Core docker kapsayıcısı içinde bir web uygulaması dağıtmak için Azure App Service
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jmartens
-ms.technology: vs-azure
+ms.technology: vs-container-tools
 ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 02/21/2021
 ms.author: ghogen
-ms.openlocfilehash: f9a4f26227d2cd3bd065fab88ba294f7341ea4ed
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 8609c0888662a5fb0609da641e1dfb86510b8797deeeb1a79709cd36174d0936
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101684317"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121348276"
 ---
-# <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>Visual Studio kullanarak Azure App Service ASP.NET Core kapsayıcısını dağıtma
+# <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>ASP.NET Core kullanarak Azure App Service kapsayıcı Visual Studio
 
-Bu öğretici, Kapsayıcılı ASP.NET Core Web uygulamanızı bir [Azure App Service](/azure/app-service)yayımlamak Için Visual Studio 'yu kullanma konusunda size kılavuzluk eder. Azure App Service, Azure 'da barındırılan tek kapsayıcılı bir Web uygulaması için uygun bir hizmettir.
+Bu öğretici, kapsayıcılı web Visual Studio yayımlamak için ASP.NET Core bir web uygulamasına yayımlamak için [Azure App Service.](/azure/app-service) Azure App Service, Azure'da barındırılan tek kapsayıcılı bir web uygulaması için uygun bir hizmettir.
 
 Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs) oluşturun.
 
@@ -27,122 +27,122 @@ Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.
 Bu öğreticiyi tamamlamak için:
 
 ::: moniker range="vs-2017"
-- "ASP.NET and Web Development" iş yüküne sahip [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ' in en son sürümünü yükler
+- "ASP.NET ve web geliştirme" [iş yüküyle Visual Studio 2017'nin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) en son sürümünü yükleyin
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-- *ASP.net ve Web geliştirme* iş yüküyle [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) .
+- Visual Studio ve web geliştirme iş yükü ASP.NET [2019'un](https://visualstudio.microsoft.com/downloads) *ilk günü.*
 ::: moniker-end
-- [Docker Desktop](https://docs.docker.com/docker-for-windows/install/) 'ı yükler
+- [Docker Desktop'ı yükleme](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="create-an-aspnet-core-web-app"></a>ASP.NET Core web uygulaması oluşturma
 
-Aşağıdaki adımlar, bu öğreticide kullanılacak temel bir ASP.NET Core uygulaması oluştururken size rehberlik eder.
+Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama oluşturma konusunda size yol sağlar.
 
 ::: moniker range="vs-2017"
-1. Visual Studio menüsünden **dosya > yeni > proje**' yi seçin.
-2. **Yeni proje** Iletişim kutusunun **Şablonlar** bölümünde, **Visual C# > Web**' i seçin.
-3. **ASP.NET Core Web uygulaması**' nı seçin.
-4. Yeni uygulamanıza bir ad verin (veya varsayılanı alın) ve **Tamam**' ı seçin.
-5. **Web uygulaması**' nı seçin.
-6. **Docker desteğini etkinleştir** onay kutusunu işaretleyin.
-7. **Linux** kapsayıcı türünü seçin ve **Tamam**' a tıklayın. Windows kapsayıcıları bir kapsayıcı olarak Azure App Service dağıtmak için desteklenmez.
+1. Yeni Visual Studio Yeni **dosya'>'ı > Project.**
+2. Yeni Uygulama **iletişim kutusunun** Şablonlar bölümünde **Visual C# Project** Web'i > **seçin.**
+3. Web **ASP.NET Core'ı seçin.**
+4. Yeni uygulamanıza bir ad girin (veya varsayılan değeri alır) ve Tamam'ı **seçin.**
+5. **Web Uygulaması'ı seçin.**
+6. **Docker Desteğini Etkinleştir onay** kutusunu işaretleyin.
+7. Linux kapsayıcı **türünü seçin** ve Tamam'a **tıklayın.** Windows kapsayıcıların kapsayıcı olarak Azure App Service dağıtımı desteklenmiyor.
 ::: moniker-end
 ::: moniker range=">= vs-2019"
-1. Visual Studio başlangıç penceresinde **Yeni proje oluştur**' u seçin.
-1. **ASP.NET Core Web uygulaması**' nı seçin ve **İleri**' yi seçin.
-1. Yeni uygulamanıza bir ad verin (veya varsayılanı alın) ve **İleri ' yi** seçin.
-1. Hedeflemek istediğiniz .NET sürümünü seçin. Emin değilseniz, uzun süreli destek (LTS) sürümünü seçin.
-1. SSL desteğini **https Için Yapılandır** onay kutusunu kullanarak isteyip istemediğinizi seçin.
-1. **Docker desteğini etkinleştir** onay kutusunu işaretleyin.
-1. Kapsayıcı türünü seçin ve **Oluştur**' a tıklayın.
+1. Yeni Visual Studio **oluştur'a tıklayın.**
+1. Web **ASP.NET Core'ı ve** ardından Sonraki'yi **seçin.**
+1. Yeni uygulamanıza bir ad girin (veya varsayılan değeri alır) ve Ardından'ı **seçin.**
+1. Hedeflemek istediğiniz .NET sürümünü seçin. Emin değilsanız uzun süreli destek (LTS) sürümünü seçin.
+1. HTTPS için yapılandır onay kutusunu kullanarak SSL desteği isteyip **istemeycenizi** seçin.
+1. **Docker Desteğini Etkinleştir onay** kutusunu işaretleyin.
+1. Kapsayıcı türünü seçin ve Oluştur'a **tıklayın.**
 ::: moniker-end
 
-## <a name="deploy-the-container-to-azure"></a>Kapsayıcıyı Azure 'a dağıtma
+## <a name="deploy-the-container-to-azure"></a>Kapsayıcıyı Azure'a dağıtma
 
 ::: moniker range="vs-2017"
 
-1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
-1. Hedef Yayımla iletişim kutusunda **App Service Linux** veya **App Service** öğesini seçin. Bu, Web sunucusunu barındıracak olan işletim sistemidir.
-1. Yalnızca App Service yayımlayabilirsiniz veya App Service ve Azure Container Registry (ACR) ' de yayımlayabilirsiniz. Kapsayıcıyı bir Azure Container Registry (ACR) içinde yayımlamak için, **kapsayıcılar için yeni App Service oluştur**' u seçin ve **Yayımla**' ya tıklayın.
+1. Içinde projenize sağ tıklayın ve **Çözüm Gezgini'yi** **seçin.**
+1. Yayımlama hedefi iletişim kutusunda Linux veya **App Service seçeneğini** **App Service.** Bu, web sunucusunu barındıracak işletim sistemidir.
+1. Yalnızca App Service veya hem App Service hem de Azure Container Registry (ACR) yayımlarsınız. Kapsayıcıyı bir kapsayıcıda (ACR Azure Container Registry yayımlamak için Kapsayıcılar için **yeni App Service oluştur'u** seçin ve Yayımla'ya **tıklayın.**
 
    ![Yayımla iletişim kutusunun ekran görüntüsü](media/deploy-app-service/publish-app-service-linux-1.png)
 
-   Yalnızca Azure Container Registry kullanmadan Azure App Service yayımlamak için **Yeni oluştur**' u seçin ve **Yayımla**' ya tıklayın.
+   Yeni oluştur'u Azure App Service bir Azure Container Registry yayımlamak için **Yayımla'ya** **tıklayın.**
 
-1. Azure aboneliğinizle ilişkili hesapla oturum açtığınızdan emin olun ve benzersiz bir ad, abonelik, kaynak grubu, barındırma planı ve kapsayıcı kayıt defteri (varsa) seçin veya Varsayılanları kabul edin.
+1. Azure aboneliğiniz ile ilişkili hesapta oturum açın ve benzersiz bir ad, abonelik, kaynak grubu, barındırma planı ve kapsayıcı kayıt defteri (varsa) seçin veya varsayılan değerleri kabul edin.
 
    ![Yayımlama ayarlarının ekran görüntüsü](media/deploy-app-service/publish-app-service-linux-2.png)
 
-1. **Oluştur**' a tıklayın. Kapsayıcınız, seçtiğiniz kaynak grubu ve kapsayıcı kayıt defterinde Azure 'a dağıtılır. Bu işlem biraz zaman alır. Tamamlandığında, **Yayımla** sekmesi, SITE URL 'si dahil olmak üzere yayımlandıklarınız hakkındaki bilgileri gösterir.
+1. **Oluştur'a seçin.** Kapsayıcınız, seçtiğiniz kaynak grubunda ve kapsayıcı kayıt defterinde Azure'a dağıtılır. Bu işlem biraz zaman alır. Tamamlandığında Yayımla sekmesi,  site URL'si dahil olmak üzere nelerin yayımladığı hakkında bilgi gösterir.
 
    ![Yayımla sekmesinin ekran görüntüsü](media/deploy-app-service/publish-succeeded.PNG)
 
-1. Uygulamanızın Azure 'da beklendiği gibi çalıştığını doğrulamak için site bağlantısına tıklayın.
+1. Uygulamanın Azure'da beklendiği gibi çalıştığını doğrulamak için site bağlantısına tıklayın.
 
    ![Web uygulamasının ekran görüntüsü](media/deploy-app-service/web-application-running.png)
 
-1. Yayımlama profili, kaynak grubu ve kapsayıcı kayıt defteri gibi, seçtiğiniz tüm ayrıntılarla birlikte kaydedilir.
+1. Yayımlama profili, kaynak grubu ve kapsayıcı kayıt defteri gibi seçtiğiniz tüm ayrıntılarla birlikte kaydedilir.
 
-1. Aynı yayımlama profiliyle yeniden dağıtmak için **Yayımla** düğmesini, **Web yayımlama etkinliği** penceresinde **Yayımla** düğmesini veya **Çözüm Gezgini** ' de projeye sağ tıklayıp içerik menüsünde **Yayımla** öğesini seçin.
+1. Aynı yayımlama profiliyle yeniden dağıtmak  için Yayımla  düğmesini, **Web** Yayımlama Etkinliği penceresindeki Yayımla düğmesini kullanın veya **Çözüm Gezgini'de** projeye sağ tıklayın ve bağlam menüsünde Yayımla öğesini seçin. 
 :::moniker-end
 :::moniker range=">=vs-2019"
-1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
-1. **Yayımla** Iletişim kutusunda **Azure** hedefini seçin.
+1. Içinde projenize sağ tıklayın ve **Çözüm Gezgini'yi** **seçin.**
+1. Yayımla **iletişim** kutusunda **Azure hedefini** seçin.
 
-   ![Yayımlama sihirbazının ekran görüntüsü](media/deploy-app-service/publish-choices.png)
+   ![Yayımla sihirbazının ekran görüntüsü](media/deploy-app-service/publish-choices.png)
 
-1. **Belirli hedef** sekmesinde, kapsayıcı türüne göre **App Service (Windows)** veya **App Service (Linux)** gibi uygun dağıtım hedefini seçin.
+1. Belirli **hedef sekmesinde,** kapsayıcı türünüze bağlı olarak **App Service (Windows)** veya **App Service (Linux)** gibi uygun dağıtım hedefini seçin.
 
-   ![Yayımlama sihirbazının belirli hedef sekmesinin ekran görüntüsü](media/deploy-app-service/publish-app-service-windows.png)
+   ![Yayımla sihirbazının Belirli hedef sekmesinin ekran görüntüsü](media/deploy-app-service/publish-app-service-windows.png)
 
-1. Kullanmak istediğiniz abonelikle doğru Azure hesabında oturum açmadıysanız, **Yayımla** penceresinin sol üst kısmındaki düğmeyi kullanarak oturum açın.
+1. Kullanmak istediğiniz abonelikle doğru Azure hesabında oturum açmadıysanız Yayımla penceresinin sol üst kısmında yer alan düğmeyi **kullanarak oturum** açın.
 
-1. **Yeni Azure App Service oluştur** bağlantısına tıklayarak mevcut bir App Service 'i kullanabilir veya yeni bir tane oluşturabilirsiniz. Kaynak grubunu genişleterek mevcut App Service 'i TreeView 'da bulun ya da türe göre sıralamak için **Görünüm** ayarını **kaynak türü** olarak değiştirin.
+1. Mevcut bir uygulama hizmetini kullanabilir veya Yeni uygulama oluştur bağlantısına tıklayarak **yeni bir uygulama Azure App Service** oluşturabilirsiniz. Kaynak grubunu genişleterek mevcut uygulama hizmetinizi ağaç görünümünde  bulun veya Türe göre sıralamak için Görünüm ayarını **Kaynak** türü olarak değiştirebilirsiniz.
 
-   ![App Service seçmeyi gösteren ekran görüntüsü](media/deploy-app-service/publish-app-service-windows2.png)
+   ![Örnek seçmeyi gösteren ekran App Service](media/deploy-app-service/publish-app-service-windows2.png)
 
-1. Yeni bir tane oluşturursanız, Azure 'da bir kaynak grubu ve App Service oluşturulur. İsterseniz, benzersiz oldukları sürece adları değiştirebilirsiniz.
+1. Yeni bir tane oluşturmanız, Azure'da bir kaynak grubu ve uygulama hizmeti oluşturulur. İsterseniz adları benzersiz olduğu sürece değiştirebilirsiniz.
 
-   ![App Service oluşturmayı gösteren ekran görüntüsü](media/deploy-app-service/publish-app-service-windows3.png)
+   ![Örnek oluşturmayı gösteren ekran App Service](media/deploy-app-service/publish-app-service-windows3.png)
 
-1. Varsayılan barındırma planını kabul edebilir veya barındırma planını şimdi veya Azure portal daha sonra değiştirebilirsiniz. Varsayılan değer, `S1` desteklenen bölgelerden birinde (küçük). Barındırma planı oluşturmak için **barındırma planı** açılan listesinin yanındaki **Yeni** ' yi seçin. **Barındırma planı** penceresi görüntülenir.
+1. Varsayılan barındırma planını kabul etmek veya barındırma planını şimdi veya daha sonraki bir süre içinde Azure portal. Desteklenen `S1` bölgelerden biri için varsayılan değer (küçük) değeridir. Barındırma planı oluşturmak için Barındırma **Planı açılan** listesinden **Yeni'yi** seçin. Barındırma **Planı penceresi** görüntülenir.
 
    ![Barındırma planı seçeneklerini gösteren ekran görüntüsü](media/deploy-app-service/hosting-plan.png)
 
-   Bu seçeneklerle ilgili ayrıntıları [Azure App Service plana genel bakış](/azure/app-service/overview-hosting-plans)' da görüntüleyebilirsiniz.
+   Bu seçeneklerle ilgili ayrıntıları planına genel bakış [Azure App Service görüntüebilirsiniz.](/azure/app-service/overview-hosting-plans)
 
-1. Bu kaynakları seçmeyi veya oluşturmayı tamamladıktan sonra **son**' u seçin. Kapsayıcınız, seçtiğiniz kaynak grubu ve App Service 'te Azure 'a dağıtılır. Bu işlem biraz zaman alır. Tamamlandığında, **Yayımla** sekmesi, SITE URL 'si dahil olmak üzere yayımlandıklarınız hakkındaki bilgileri gösterir.
+1. Bu kaynakları seçmeyi veya oluşturmayı bitirip Bitir'i **seçin.** Kapsayıcınız, seçtiğiniz kaynak grubunda ve uygulama hizmette Azure'a dağıtılır. Bu işlem biraz zaman alır. Tamamlandığında Yayımla sekmesi,  site URL'si dahil olmak üzere nelerin yayımladığı hakkında bilgi gösterir.
 
    ![Yayımla sekmesinin ekran görüntüsü](media/deploy-app-service/publish-succeeded-windows.png)
 
-1. Uygulamanızın Azure 'da beklendiği gibi çalıştığını doğrulamak için site bağlantısına tıklayın.
+1. Uygulamanın Azure'da beklendiği gibi çalıştığını doğrulamak için site bağlantısına tıklayın.
 
    ![Web uygulamasının ekran görüntüsü](media/deploy-app-service/web-application-running2.png)
 
-1. Yayımlama profili, seçtiğiniz tüm ayrıntılarla (örneğin, kaynak grubu ve App Service) kaydedilir.
+1. Yayımlama profili, kaynak grubu ve uygulama hizmeti gibi seçtiğiniz tüm ayrıntılarla birlikte kaydedilir.
 
-1. Aynı yayımlama profiliyle yeniden dağıtmak için **Yayımla** düğmesini, **Web yayımlama etkinliği** penceresinde **Yayımla** düğmesini veya **Çözüm Gezgini** ' de projeye sağ tıklayıp içerik menüsünde **Yayımla** öğesini seçin.
+1. Aynı yayımlama profiliyle yeniden dağıtmak  için Yayımla  düğmesini, **Web** Yayımlama Etkinliği penceresindeki Yayımla düğmesini kullanın veya **Çözüm Gezgini'de** projeye sağ tıklayın ve bağlam menüsünde Yayımla öğesini seçin. 
 :::moniker-end
 
-## <a name="view-container-settings"></a>Kapsayıcı ayarlarını görüntüle
+## <a name="view-container-settings"></a>Kapsayıcı ayarlarını görüntüleme
 
-[Azure Portal](https://portal.azure.com), dağıtılan App Service açabilirsiniz.
+uygulama [Azure portal,](https://portal.azure.com)dağıtılan kaynaklarınızı App Service.
 
-Dağıtılan App Service ayarlarını, **kapsayıcı ayarları** menüsünü açarak görüntüleyebilirsiniz (Visual Studio 2019 sürüm 16,4 veya üstünü kullanırken).
+Kapsayıcı ayarları menüsünü açarak (App Service 2019 sürüm 16.4 veya sonraki bir sürümü Visual Studio) dağıtılan uygulamanıza yönelik ayarları görüntüebilirsiniz. 
 
-![Azure portal kapsayıcı Ayarları menüsünün ekran görüntüsü](media/deploy-app-service/container-settings-menu.png)
+![Uygulamanın kapsayıcı Ayarlar menüsünün ekran Azure portal](media/deploy-app-service/container-settings-menu.png)
 
-Buradan, kapsayıcı bilgilerini görüntüleyebilir, günlükleri görüntüleyebilir veya indirebilir veya sürekli dağıtımı ayarlayabilirsiniz. Bkz. [Azure App Service sürekli DAĞıTıM CI/CD](/azure/app-service/containers/app-service-linux-ci-cd).
+Buradan kapsayıcı bilgilerini görüntüleyebilirsiniz, günlükleri indirebilirsiniz veya sürekli dağıtım kurabilirsiniz. Bkz. [Azure App Service Sürekli Dağıtım CI/CD](/azure/app-service/containers/app-service-linux-ci-cd).
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Bu öğreticiyle ilişkili tüm Azure kaynaklarını kaldırmak için [Azure Portal](https://portal.azure.com)kullanarak kaynak grubunu silin. Yayımlanmış bir Web uygulamasıyla ilişkili kaynak grubunu bulmak için,   >  **diğer Windows**  >  **Web yayımlama etkinliğini** görüntüle ' yi seçin ve ardından dişli simgesini seçin. Kaynak grubunu içeren **Yayımla** sekmesi açılır.
+Bu öğreticiyle ilişkili tüm Azure kaynaklarını kaldırmak için kaynak grubunu silmek için [Azure portal.](https://portal.azure.com) Yayımlanmış bir web uygulamasıyla ilişkilendirilmiş kaynak grubunu bulmak için Web Yayımlama Etkinliği'Windows DiğerNini  >    >  Görüntüle'yi **seçin** ve ardından dişli simgesini seçin. Kaynak **grubunu** içeren Yayımla sekmesi açılır.
 
-Azure portal, **kaynak grupları**' nı seçin, Ayrıntılar sayfasını açmak için kaynak grubunu seçin. Bunun doğru kaynak grubu olduğunu doğrulayıp **kaynak grubunu Kaldır**' ı seçin, adı yazın ve **Sil**' i seçin.
+Kaynak **Azure portal'ı seçin,** kaynak grubunu seçerek ayrıntılar sayfasını açın. Bunun doğru kaynak grubu olduğunu doğrulayın, sonra Kaynak grubunu **kaldır'ı seçin,** adı yazın ve Sil'i **seçin.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Azure App Service](/azure/app-service/overview)hakkında daha fazla bilgi edinin.
+hakkında daha fazla bilgi [Azure App Service.](/azure/app-service/overview)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

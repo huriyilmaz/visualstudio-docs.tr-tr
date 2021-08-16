@@ -11,27 +11,28 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: d874b2831d906a42856e71d42dac6df1a1fe8d6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b2557242579a5307dc87cead8e348cfafb358f67b534cb5d6616341b8de027c5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906375"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453212"
 ---
-# <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio 'da JavaScript konsol komutları
+# <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio JavaScript konsol komutları
 
-Komutları kullanarak, Visual Studio 'nun JavaScript Konsol penceresinde ileti gönderebilir ve diğer görevleri gerçekleştirebilirsiniz. Bu pencerenin nasıl kullanılacağını gösteren örnekler için bkz. [hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true). Bu konudaki bilgiler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan Node.js App, UWP uygulamaları ve uygulamalar için geçerlidir.
+Visual Studio JavaScript Konsol penceresinde ileti göndermek ve diğer görevleri gerçekleştirmek için komutları kullanabilirsiniz. Bu pencerenin nasıl kullanılacağını gösteren örnekler için bkz. [hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true). bu konudaki bilgiler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan Node.js app, UWP uygulamaları ve uygulamalar için geçerlidir.
 
-JavaScript Konsolu penceresi kapalıysa, Visual Studio 'da hata ayıklama sırasında   >  **Windows**  >  **JavaScript Konsolu** Hata Ayıkla ' yı seçerek açabilirsiniz.
+javascript konsolu penceresi kapalıysa, **hata** ayıklama  >  **Windows**  >  **javascript konsolunu** seçerek Visual Studio hata ayıklaması yaparken açabilirsiniz.
 
 > [!NOTE]
 > Pencere hata ayıklama oturumu sırasında kullanılamıyorsa, hata ayıklayıcı türünün projenin hata ayıklama özelliklerinde **betik** olarak ayarlandığından emin olun.
 
-Konsolunu Microsoft Edge geliştirici araçları 'nda kullanma hakkında bilgi için [Bu konuya](/microsoft-edge/devtools-guide)bakın.
+konsolunu Microsoft Edge geliştirici araçları ' nda kullanma hakkında bilgi için [bu konuya](/microsoft-edge/devtools-guide)bakın.
 
 ## <a name="console-object-commands"></a>Konsol nesnesi komutları
 
@@ -40,7 +41,7 @@ Bu tabloda `console` JavaScript Konsol penceresinde kullanabileceğiniz nesne ko
 `window.console.[command]`Konsol adlı yerel nesnelerle ilgili olası karışıklık oluşmasını önlemek istiyorsanız, daha uzun bir komut formunu kullanabilirsiniz.
 
 > [!TIP]
-> Visual Studio 'nun eski sürümleri, tüm komut kümesini desteklemez. Desteklenen komutlar hakkında hızlı bilgi almak için konsol nesnesinde IntelliSense kullanın.
+> Visual Studio eski sürümleri, tüm komut kümesini desteklemez. Desteklenen komutlar hakkında hızlı bilgi almak için konsol nesnesinde IntelliSense kullanın.
 
 |Komut|Açıklama|Örnek|
 |-------------|-----------------|-------------|

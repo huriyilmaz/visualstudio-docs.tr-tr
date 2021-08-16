@@ -1,6 +1,6 @@
 ---
 title: ASP.NET Core Kullanmaya Başlama
-description: Bu makalede, yükleme ve yeni bir proje oluşturma dahil olmak üzere Mac için Visual Studio ' de ASP.NET ile çalışmaya başlama açıklanmaktadır.
+description: bu makalede, yükleme ve yeni bir proje oluşturma dahil olmak üzere Mac için Visual Studio ASP.NET kullanmaya nasıl başlacağınız açıklanır.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 11/06/2020
@@ -10,28 +10,28 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: a2f45069967df412f9245f8044c53ef425a00fdf
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 9d376e40b01f072eeed3a09950c1aa8729bd5b918b3c3cd96cbd33ab314524c4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493367"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121350190"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core Kullanmaya Başlama
 
- Mac için Visual Studio, en son ASP.NET Core Web geliştirme platformuna yönelik desteğiyle uygulamanızın hizmetini geliştirmeyi kolaylaştırır. ASP.NET Core, .NET Framework ve çalışma zamanının en son gelişiminde .NET Core üzerinde çalışır. Bu, hızlı performans, küçük bir yüklemede ve Linux ve macOS 'ta ve Windows 'un yanı sıra Windows üzerinde çalışmaya yönelik olarak ayarlanmıştır.
+ Mac için Visual Studio, en son ASP.NET Core Web geliştirme platformuna yönelik desteğiyle uygulamanızın hizmetini geliştirmeyi kolaylaştırır. ASP.NET Core, .NET Framework ve çalışma zamanının en son gelişiminde .net Core üzerinde çalışır. Bu, hızlı performans, küçük yüklemeleri ve Linux ve macOS 'ta çalışmaya yönelik olarak, ayrıca Windows ve Linux 'ta çalışmaya yönelik olarak ayarlanmıştır.
 
 ## <a name="installing-net-core"></a>.NET Core yükleniyor
 
-.NET Core 3,1, Mac için Visual Studio yüklediğinizde otomatik olarak yüklenir. Mac için Visual Studio sürümünde desteklenen .NET Core sürümleri hakkında daha fazla bilgi için bkz. [.NET Core desteği](./net-core-support.md).
+.net Core 3,1, Mac için Visual Studio yüklediğinizde otomatik olarak yüklenir. Mac için Visual Studio sürümünde desteklenen .net core sürümleri hakkında daha fazla bilgi için bkz. [.net core desteği](./net-core-support.md).
 
 ## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>Mac için Visual Studio ASP.NET Core uygulama oluşturma
 
-Mac için Visual Studio açın. Başlangıç ekranında **Yeni proje...** öğesini seçin.
+Mac için Visual Studio açın. Başlangıç ekranında **yeni Project...** seçeneğini belirleyin.
 
 ![Yeni Proje İletişim Kutusu](media/asp-net-core-2019-new-asp-core.png)
 
-Bu işlem, yeni proje iletişim kutusunu görüntüleyecektir ve uygulamanızı oluşturmak için bir şablon seçmenizi sağlar.
+bu işlem, yeni Project iletişim kutusunu görüntüleyecektir ve uygulamanızı oluşturmak için bir şablon seçmenizi sağlar.
 
 ASP.NET Core uygulamanızı oluşturmaya başlamak için size önceden oluşturulmuş bir şablon sağlayacak bir dizi proje vardır. Bunlar:
 
@@ -42,19 +42,19 @@ ASP.NET Core uygulamanızı oluşturmaya başlamak için size önceden oluşturu
 - **.NET Core > Blazor Server uygulaması**
 - **.NET Core > Blazor WebAssembly uygulaması**
 
-![ASP.NET proje seçenekleri](media/asp-net-core-2019-new-asp-core.png)
+![ASP.NET Project seçenekleri](media/asp-net-core-2019-new-asp-core.png)
 
-**Boş ASP.NET Core Web uygulaması** ' nı seçin ve **İleri** ' ye basın. Projeye bir ad verin ve **Oluştur** ' a basın. Bu, yeni bir ASP.NET Core uygulaması oluşturur. Çözüm penceresinin sol bölmesinde, ikinci oku genişletin ve ardından **Startup.cs** ' ı seçin. Aşağıdaki görüntüye benzer görünmelidir:
+**boş ASP.NET Core Web uygulaması** ' nı seçin ve **ileri**' ye basın. Project bir ad verin ve **oluştur**' a basın. bu, yeni bir ASP.NET Core uygulaması oluşturur. Çözüm penceresinin sol bölmesinde, ikinci oku genişletin ve sonra **Başlangıç. cs**' yi seçin. Aşağıdaki görüntüye benzer görünmelidir:
 
-![Yeni ASP.NET Core boş proje görünümü](media/asp-net-core-2019-empty-project.png)
+![yeni ASP.NET Core boş Project görünümü](media/asp-net-core-2019-empty-project.png)
 
-ASP.NET Core boş şablon, aşağıda açıklanan iki varsayılan dosya içeren bir Web uygulaması oluşturur: **program.cs** ve **Startup.cs**. Ayrıca, projenin ASP.NET Core, .NET Core Framework ve projeyi oluşturan MSBuild hedefleri gibi NuGet paket bağımlılıklarını içeren bir bağımlılıklar klasörü de oluşturur:
+boş ASP.NET Core şablon, aşağıda açıklanan iki varsayılan dosya içeren bir web uygulaması oluşturur: **Program. cs** ve **Startup. cs**. ayrıca, projenin ASP.NET Core, .net Core framework ve projeyi oluşturan MSBuild hedefleri gibi NuGet paket bağımlılıklarını içeren bir bağımlılıklar klasörü de oluşturur:
 
 ![Bağımlılıkları görüntüleyen çözüm penceresi](media/asp-net-core-2019-solution-dependencies.png)
 
 ### <a name="programcs"></a>Program.cs
 
-**Program.cs** dosyasını projenizde açın ve inceleyin. Yöntemde birkaç şeyin gerçekleşdiğine dikkat edin `Main` : uygulamanıza giriş:
+Projenizdeki **program. cs** dosyasını açın ve inceleyin. Yöntemde birkaç şeyin gerçekleşdiğine dikkat edin `Main` : uygulamanıza giriş:
 
 ```csharp
     public class Program
@@ -70,7 +70,7 @@ ASP.NET Core boş şablon, aşağıda açıklanan iki varsayılan dosya içeren 
     }
 ```
 
-Bir ASP.NET Core uygulaması, bir örneği aracılığıyla ana bilgisayar yapılandırıp başlatarak ana yönteminde bir Web sunucusu oluşturur [`WebHostBuilder`](/aspnet/core/fundamentals/hosting) . Bu Oluşturucu konağın yapılandırılmasına izin vermek için yöntemler sağlar. Şablon uygulamasında aşağıdaki yapılandırma kullanılır:
+bir ASP.NET Core uygulaması, bir örneği aracılığıyla ana bilgisayar yapılandırıp başlatarak ana yönteminde bir web sunucusu oluşturur [`WebHostBuilder`](/aspnet/core/fundamentals/hosting) . Bu Oluşturucu konağın yapılandırılmasına izin vermek için yöntemler sağlar. Şablon uygulamasında aşağıdaki yapılandırma kullanılır:
 
 * `.UseStartup<Startup>()`: Başlangıç sınıfını belirtir.
 
@@ -78,13 +78,13 @@ Ancak, gibi ek konfigürasyonlar da ekleyebilirsiniz:
 
 * `UseKestrel`: Uygulama tarafından kullanılacak Kestrel sunucusunu belirtir
 * `UseContentRoot(Directory.GetCurrentDirectory())`: Uygulama bu klasörden başlatıldığında, uygulamanın içerik kökü olarak Web projesinin kök klasörünü kullanır
-* `.UseIISIntegration()`: Uygulamanın IIS ile çalışması gerektiğini belirtir. IIS 'yi ASP.NET Core birlikte kullanmak `UseKestrel` ve `UseIISIntegration` belirtilmesi gerekir.
+* `.UseIISIntegration()`: Uygulamanın IIS ile çalışması gerektiğini belirtir. ııs 'yi ASP.NET Core birlikte kullanmak `UseKestrel` ve `UseIISIntegration` belirtilmesi gerekir.
 
 ### <a name="startupcs"></a>Startup.cs
 
 Uygulamanızın başlangıç sınıfı `UseStartup()` , üzerindeki yönteminde belirtilir `CreateWebHostBuilder` . Bu sınıf, istek işleme işlem hattını belirtmenizi ve herhangi bir hizmeti yapılandırdığınız yerdir.
 
-Projenizdeki **Startup.cs** dosyasını açın ve inceleyin:
+Projenizdeki **Startup. cs** dosyasını açın ve inceleyin:
 
 ```csharp
     public class Startup
@@ -118,7 +118,7 @@ Bu başlangıç sınıfının her zaman aşağıdaki kurallara uyması gerekir:
 
 `ConfigureServices`Yöntemi, uygulamanız tarafından kullanılacak hizmetleri tanımlar.
 
-, `Configure` [Ara yazılımı](/aspnet/core/fundamentals/middleware)kullanarak istek işlem hattınızı oluşturmanıza olanak sağlar. Bunlar, istekleri ve yanıtları işlemek için bir ASP.NET uygulama işlem hattı içinde kullanılan bileşenlerdir. HTTP işlem hattı, sırayla çağrılan bir dizi istek temsilcisinden oluşur. Her temsilci, isteğin kendisini işlemeye veya bir sonraki temsilciye geçirmeye seçim yapabilir.
+, `Configure` [Ara yazılımı](/aspnet/core/fundamentals/middleware)kullanarak istek işlem hattınızı oluşturmanıza olanak sağlar. bunlar, istekleri ve yanıtları işlemek için bir ASP.NET uygulama işlem hattı içinde kullanılan bileşenlerdir. HTTP işlem hattı, sırayla çağrılan bir dizi istek temsilcisinden oluşur. Her temsilci, isteğin kendisini işlemeye veya bir sonraki temsilciye geçirmeye seçim yapabilir.
 
 ,, Ve yöntemlerini kullanarak temsilcileri yapılandırabilirsiniz `Run` `Map` `Use` `IApplicationBuilder` , ancak `Run` Yöntem bir sonraki temsilciyi asla çağırmaz ve her zaman ardışık düzenin sonunda kullanılmalıdır.
 
@@ -128,27 +128,27 @@ Bu basit Merhaba, Dünya Projesi artık ek kod eklenmeksizin çalıştırılabil
 
 ![Tarayıcı çalıştırması](media/asp-net-web-picker.png)
 
-Mac için Visual Studio, Web projenizi başlatmak için rastgele bir bağlantı noktası kullanır. Bu bağlantı noktasını öğrenmek için, **diğer Windows > görüntüle** menüsünden listelenen uygulama çıktısını açın. Aşağıdakine benzer bir çıktıyı aşağıda gösterildiği gibi bulmalısınız:
+Mac için Visual Studio, web projenizi başlatmak için rastgele bir bağlantı noktası kullanır. bu bağlantı noktasını öğrenmek için, **görünüm > diğer Windows** menüsünden listelenen uygulama çıktısını açın. Aşağıdakine benzer bir çıktıyı aşağıda gösterildiği gibi bulmalısınız:
 
 ![Dinleme bağlantı noktasını görüntüleyen uygulama çıkışı](media/asp-net-core-image6.png)
 
-Proje çalışmaya başladıktan sonra varsayılan Web tarayıcınız, uygulama çıkışında listelenen URL 'yi başlatıp bağlantı etmelidir. Alternatif olarak, istediğiniz herhangi bir tarayıcıyı açabilir ve `http://localhost:5000/` öğesini, `5000` uygulama çıkışında Visual Studio çıktısı olan bağlantı noktasıyla değiştirerek yazabilirsiniz. Şu metni görmeniz gerekir `Hello World!` :
+Proje çalışmaya başladıktan sonra varsayılan Web tarayıcınız, uygulama çıkışında listelenen URL 'yi başlatıp bağlantı etmelidir. alternatif olarak, istediğiniz herhangi bir tarayıcıyı açabilir ve `http://localhost:5000/` öğesini, `5000` uygulama çıkışında çıktı Visual Studio bağlantı noktası ile değiştirerek yazabilirsiniz. Şu metni görmeniz gerekir `Hello World!` :
 
 ![metin gösteren tarayıcı](media/asp-net-core-image7.png)
 
 ## <a name="adding-a-controller"></a>Denetleyici Ekleme
 
-ASP.NET Core uygulamalar, uygulamanın her bir bölümü için bir sorumluluk için bir mantık ayrımı sağlamak üzere Model-View-Controller (MVC) tasarım modelini kullanır. MVC tasarım stili aşağıdaki kavramlardan oluşur:
+ASP.NET Core Uygulamalar, uygulamanın her bir bölümü için bir sorumluluk için bir mantık ayrımı sağlamak üzere Model-View-Controller (MVC) tasarım modelini kullanır. MVC tasarım stili aşağıdaki kavramlardan oluşur:
 
-- **Model** : uygulamanın verilerini temsil eden bir sınıf.
-- **Görünüm** : uygulamanın kullanıcı arabirimini (genellikle model verileri) görüntüler.
-- **Denetleyici** : Tarayıcı isteklerini işleyen, kullanıcı girişine ve etkileşime yanıt veren bir sınıf.
+- **Model**: uygulamanın verilerini temsil eden bir sınıf.
+- **Görünüm**: uygulamanın kullanıcı arabirimini (genellikle model verileri) görüntüler.
+- **Denetleyici**: Tarayıcı isteklerini işleyen, kullanıcı girişine ve etkileşime yanıt veren bir sınıf.
 
-MVC kullanma hakkında daha fazla bilgi için [ASP.NET Core MVC kılavuzuna genel bakış](/aspnet/core/mvc/overview) bölümüne bakın.
+mvc kullanma hakkında daha fazla bilgi için [ASP.NET Core MVC kılavuzuna genel bakış](/aspnet/core/mvc/overview) bölümüne bakın.
 
 Bir denetleyici eklemek için aşağıdakileri yapın:
 
-1. Proje adına sağ tıklayın ve **> yeni dosya Ekle** ' yi seçin. **Genel > boş sınıfı** ' nı seçin ve bir denetleyici adı girin:
+1. Project adına sağ tıklayın ve **> yeni dosya ekle**' yi seçin. **Genel > boş sınıfı**' nı seçin ve bir denetleyici adı girin:
 
     ![Yeni dosya iletişim kutusu](media/asp-net-core-image8.png)
 
@@ -175,9 +175,9 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
     }
     ```
 
-3. Bağımlılık `Microsoft.AspNetCore.Mvc` klasörüne sağ tıklayıp **paket Ekle...** seçeneğini belirleyerek **Dependency** bağımlılığı projeye ekleyin.
+3. Bağımlılık `Microsoft.AspNetCore.Mvc` klasörüne sağ tıklayıp **paket Ekle...** seçeneğini belirleyerek  bağımlılığı projeye ekleyin.
 
-4. İçin NuGet kitaplığına gitmek için arama kutusunu kullanın `Microsoft.AspNetCore.Mvc` ve **paket Ekle** ' yi seçin. Bu işlem birkaç dakika sürebilir ve gerekli bağımlılıklar için çeşitli lisanslar kabul etmeniz istenebilir:
+4. için NuGet kitaplığına gitmek için arama kutusunu kullanın `Microsoft.AspNetCore.Mvc` ve **paket ekle**' yi seçin. Bu işlem birkaç dakika sürebilir ve gerekli bağımlılıklar için çeşitli lisanslar kabul etmeniz istenebilir:
 
     ![NuGet Ekle](media/asp-net-core-image9.png)
 
@@ -232,20 +232,20 @@ Bir denetleyici eklemek için aşağıdakileri yapın:
 
 MacOS 10,12 (Sierra) ve üzeri sürümlerde .NET Core 'u el ile yüklemeniz gerekiyorsa şunları yapın:
 
-1. .NET Core 'u yüklemeye başlamadan önce, tüm işletim sistemi güncelleştirmelerini en son kararlı sürüme güncelleştirdiğinizden emin olun. Bunu, App Store uygulamasına gidip Güncelleştirmeler sekmesini seçerek kontrol edebilirsiniz.
+1. .NET Core'u yüklemeye başlamadan önce tüm işletim sistemi güncelleştirmelerini en son kararlı sürüme güncelleştirilmiş olduğundan emin olun. Güncelleştirmeler sekmesini seçerek App Store bu denetimi sebilirsiniz.
 
-2. [.NET Core sitesinde](https://www.microsoft.com/net/core#macos)listelenen adımları izleyin.
+2. .NET Core sitesinde [listelenen adımları izleyin.](https://www.microsoft.com/net/core#macos)
 
-.NET Core 'un başarıyla yüklendiğinden emin olmak için tüm adımları başarıyla tamamladığınızdan emin olun.
+.NET Core'ın başarıyla yüklü olduğundan emin olmak için tüm adımları başarıyla tamamlayın.
 
 ## <a name="summary"></a>Özet
 
-Bu kılavuz ASP.NET Core bir giriş verdi. Ne olduğunu, ne zaman kullanılacağını ve Mac için Visual Studio ' de kullanma hakkında bilgi sağlandığını açıklar.
-Buradaki sonraki adımlar hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
-- Belgeleri [ASP.NET Core](/aspnet/core/) .
-- [Yerel mobil uygulamalar Için arka uç hizmetleri oluşturma](/aspnet/core/mobile/native-mobile-backend), bir Xamarin. Forms uygulaması için ASP.NET Core kullanarak REST hizmeti oluşturmayı gösterir.
-- [Uygulamalı laboratuvar ASP.NET Core](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
+Bu kılavuzda, ASP.NET Core. Bu, ne olduğunu, ne zaman kullanıcalarını açıklar ve veri kaynaklarında kullanma hakkında Mac için Visual Studio.
+Sonraki adımlar hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
+- [ASP.NET Core](/aspnet/core/) belgeleri.
+- [Yerel Mobil Uygulamalar için Arka](/aspnet/core/mobile/native-mobile-backend)Uç Hizmetleri oluşturma. Bu, Xamarin.Forms uygulaması için ASP.NET Core rest hizmeti oluşturmayı gösterir.
+- [ASP.NET Core bir laboratuvar.](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)
 
-## <a name="related-video"></a>İlgili video
+## <a name="related-video"></a>İlgili Video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Build-Your-First-App/player]

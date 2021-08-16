@@ -1,22 +1,23 @@
 ---
-title: Visual Studio 'da XAML Tasarımcısı tasarım zamanı örnek verilerini kullanma
+title: Visual Studio XAML Tasarımcısı tasarım zamanı örnek verilerini kullanın
 description: XAML 'de tasarım zamanı örnek verilerini nasıl kullanacağınızı öğrenin.
 ms.date: 06/01/2021
 ms.topic: conceptual
 author: alihamie
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 66418d351280a0c067327716766725d22488131b
-ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
+ms.openlocfilehash: e129875a4ac4c5d66e72e7180c58131c48cd486ddc24e24923556d2261dc094e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760919"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121296313"
 ---
-# <a name="use-design-time-sample-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio 'da XAML Tasarımcısı tasarım zamanı örnek verilerini kullanma
+# <a name="use-design-time-sample-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio XAML Tasarımcısı tasarım zamanı örnek verilerini kullanın
 
-ListView, ListBox veya DataGrid gibi bazı veri bağımlı denetimlerin veri olmadan görselleştirilmesi zor. Bu belgede, bu denetimlerde örnek verileri etkinleştirmek için **WPF .NET Core** projelerinde veya **WPF .NET Framework** projeler üzerinde çalışan geliştiricilerin yeni tasarımcı ile çalışmasına imkan tanıyan yeni bir yaklaşımı gözden geçireceğiz. 
+ListView, ListBox veya DataGrid gibi bazı veri bağımlı denetimlerin veri olmadan görselleştirilmesi zor. bu belgede, bu denetimlerde örnek verileri etkinleştirmek için **wpf .net Core** projelerinde veya **wpf .NET Framework** projeler üzerinde çalışan geliştiricilerin yeni tasarımcı ile çalışmasına imkan tanıyan yeni bir yaklaşımı gözden geçireceğiz. 
 
 ## <a name="sample-data-feature-basics"></a>Örnek veri özelliği temelleri
 
@@ -31,7 +32,7 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-Ad alanlarını ekledikten sonra, `d:ItemsSource="{d:SampleData}"` ListView, ListBox veya DataGrid uygulamanızda örnek verileri etkinleştirmek için kullanabilirsiniz. Örneğin:
+Ad alanlarını ekledikten sonra, `d:ItemsSource="{d:SampleData}"` ListView, ListBox veya DataGrid uygulamanızda örnek verileri etkinleştirmek için kullanabilirsiniz. Örnek:
 
 ```xml
 <DataGrid d:ItemsSource="{d:SampleData}"/>
@@ -46,7 +47,7 @@ Varsayılan olarak, 5 öğe gösterilir. Ancak, **ItemCount** özelliğini kulla
 ## <a name="sample-data-works-with-datatemplates"></a>Örnek veriler, veri şablonları ile birlikte kullanılabilir
 
 Veri şablonlarını kullandığınızda, örnek veriler ListBox, ListView veya DataGrid denetimleri için geçerlidir. Örnek veri özelliği, DataTemplate 'i analiz eder ve uygun verileri oluşturmaya çalışır. Örnek veriler yalnızca bağlamaları kullanan veri şablonlarındaki öğeler için oluşturulur. Bağlamaların henüz bir kaynağı olmasa bile örnek veriler oluşturulacaktır.
-Örneğin:
+Örnek:
 
 ```xml
 <ListView d:ItemsSource="{d:SampleData ItemCount=3}">
@@ -68,7 +69,7 @@ Veri şablonlarını kullandığınızda, örnek veriler ListBox, ListView veya 
 
 ## <a name="enable-sample-data-with-suggested-actions"></a>Önerilen eylemlerle örnek verileri etkinleştir
 
-Tasarımcıdan bir denetim için örnek verileri kolayca etkinleştirmek veya devre dışı bırakmak için Önerilen Eylemler özelliğini kullanabilirsiniz. Önerilen Eylemler, tasarımcı üzerinde bir denetim seçtiğinizde en sağ üst kısımdaki bir ampul olduğunu gösterir. Denetiminizi seçerek ve ardından açık ampul ' e tıklayıp açık ' a tıklayarak örnek verileri etkinleştirebilirsiniz `Show Sample Data` . Örneğin:
+Tasarımcıdan bir denetim için örnek verileri kolayca etkinleştirmek veya devre dışı bırakmak için Önerilen Eylemler özelliğini kullanabilirsiniz. Önerilen Eylemler, tasarımcı üzerinde bir denetim seçtiğinizde en sağ üst kısımdaki bir ampul olduğunu gösterir. Denetiminizi seçerek ve ardından açık ampul ' e tıklayıp açık ' a tıklayarak örnek verileri etkinleştirebilirsiniz `Show Sample Data` . Örnek:
 
 [![Örnek verileri Önerilen Eylemler](media\xaml-sample-data-suggested-actions.png "Önerilen eylemlerle örnek verileri etkinleştir")](media\xaml-sample-data-suggested-actions.png#lightbox)
 
@@ -87,9 +88,9 @@ Bu bölümde listelenmeyen bir sorunla karşılaşırsanız veya sayfa yenilener
 
 ### <a name="requirements"></a>Gereksinimler
 
-- Örnek veriler, Visual Studio 2019 sürüm [16,10](/visualstudio/releases/2019/release-notes-v16.10) veya üstünü gerektirir.
+- örnek veriler Visual Studio 2019 sürüm [16,10](/visualstudio/releases/2019/release-notes-v16.10) veya üstünü gerektirir.
 
-- .NET Core için Windows Presentation Foundation (WPF) veya yeni tasarımcı kullanılırken .NET Framework hedeflenen Windows Masaüstü projelerini destekler. .NET Framework için yeni tasarımcı 'yı etkinleştirmek üzere araçlar > seçenekler > ortam > Önizleme özellikleri ' ne gidin, XAML Tasarımcısı için yeni WPF .NET Framework ' i seçin ve ardından Visual Studio 'Yu yeniden başlatın.
+- , .net Core için Windows Presentation Foundation (WPF) veya yeni tasarımcı kullanılırken .NET Framework hedefleyen Windows masaüstü projelerini destekler. .NET Framework için yeni tasarımcı 'yı etkinleştirmek üzere araçlar > seçenekler > ortam > önizleme özellikleri ' ne gidin, XAML Tasarımcısı için yeni WPF .NET Framework ' i seçin ve ardından Visual Studio yeniden başlatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
-title: XML Düzenleyicisi ve şema Tasarımcısı
-description: XML Düzenleyicisi, XML şema Tasarımcısı ve XSLT hata ayıklayıcısı dahil XML, XSLT ve XML şemalarıyla çalışma için Visual Studio Araçları hakkında bilgi edinin.
+title: XML düzenleyicisi ve şema tasarımcısı
+description: XML düzenleyicisi, XML Şema Tasarımcısı Visual Studio XSLT hata ayıklayıcısı gibi XML, XSLT ve XML şemaları ile çalışmaya Visual Studio'daki araçlar hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
@@ -32,47 +32,48 @@ ms.assetid: 1fd5de47-2d61-4180-9539-c2c4bf9ab768
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: c3e376980fb7c1e7f2378f23ae8230e6e45264ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed82ee7f73f9d5dd871e333275c8564d849db5b737e795faa431eece12388e54
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874775"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121350985"
 ---
-# <a name="overview-of-xml-tools-in-visual-studio"></a>Visual Studio 'da XML araçlarına genel bakış
+# <a name="overview-of-xml-tools-in-visual-studio"></a>Visual Studio'daki XML araçlarına genel bakış
 
-*Genişletilebilir Biçimlendirme Dili (XML)* , verileri tanımlamaya yönelik biçim sağlayan bir biçimlendirme dilidir. XML, Genişletilebilir Stil sayfası dili (XSL) ve geçişli stil sayfaları (CSS) gibi ilişkili stil sayfalarını kullanarak verileri ve sunumunu ayırır. Visual Studio, XML, XSLT ve XML şemaları ile çalışmayı kolaylaştıran araçlar ve özellikler içerir.
+*genişletilebilir biçimlendirme dili (XML),* verileri açıklamaya olanak sağlayan bir biçimlendirme dilidir. XML, Genişletilebilir Stil Sayfası Dili (XSL) ve basamaklı stil sayfaları (CSS) gibi ilişkili stil sayfalarını kullanarak verileri ve sunumunu birbirinden ayırıyor. Visual Studio XML, XSLT ve XML şemaları ile çalışmayı kolaylaştıran araçlar ve özellikler içerir.
 
 ## <a name="xml-editor"></a>XML düzenleyicisi
 
-XML [Düzenleyicisi](xml-editor.md) , XML belgelerini düzenlemek için kullanılır. Siz yazarken, renk kodlarken ve IntelliSense 'de tam XML sözdizimi denetimi, şema doğrulaması sağlar. Bir şema veya belge türü tanımı sağlanmışsa, IntelliSense tarafından izin verilen öğeleri ve öznitelikleri listelemek için kullanılır.
+[XML düzenleyicisi XML](xml-editor.md) belgelerini düzenlemek için kullanılır. Siz yazma, renk kodlama ve IntelliSense sırasında tam XML söz dizimi denetimi, şema doğrulaması sağlar. Bir şema veya belge türü tanımı sağlanırsa, IntelliSense tarafından izin verilen öğeleri ve öznitelikleri listele için kullanılır.
 
 Ek özellikler şunlardır:
 
-- Şema tarafından oluşturulan kod parçacıkları dahil olmak üzere XML kod parçacığı desteği
+- Şema tarafından oluşturulan kod parçacıkları da dahil olmak üzere XML kod parçacığı desteği
 
-- Öğelerin genişletilmesini ve daraltılabilmesini sağlamak için belge ana hattı oluşturma
+- Öğelerin genişletilecek ve daraltılacak şekilde belge altı çizili
 
-- XSLT dönüşümlerini yürütme ve sonuçları metin, XML veya HTML olarak görüntüleme özelliği
+- XSLT dönüştürmelerini yürütme ve sonuçları metin, XML veya HTML olarak görüntüleme özelliği
 
-- XML örnek belgesinden XML şeması tanım dili (XSD) şemaları oluşturma yeteneği
+- XML örneği belgesinde XML Şema tanımlama dili (XSD) şemaları oluşturma özelliği
 
-- IntelliSense desteği dahil XSLT stil sayfalarını düzenlemeyle ilgili destek
+- IntelliSense desteği de dahil olmak üzere XSLT stil sayfalarını düzenleme desteği
 
 - XML Şema Gezgini
 
 ## <a name="xml-schema-designer"></a>XML Şema Tasarımcısı
 
-XML [şema Tasarımcısı](xml-schema-designer.md) , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak Için Visual STUDIO ve XML Düzenleyicisi ile tümleşiktir.
+[XML Şema Tasarımcısı,](xml-schema-designer.md) XML şema Visual Studio dil (XSD) şemaları ile çalışmana olanak sağlamak için xml düzenleyicisi ile tümleşiktir.
 
 ## <a name="xslt-debugging"></a>XSLT hata ayıklama
 
-Visual Studio [XSLT stil sayfalarında hata ayıklamayı](../xml-tools/debugging-xslt.md)destekler. Hata ayıklayıcıyı kullanarak, bir XSLT stil sayfasında kesme noktaları ayarlayabilir, koddan XSLT stil sayfasına adım ekleyebilirsiniz ve bu şekilde devam edebilirsiniz.
+Visual Studio [XSLT stil sayfalarında hata ayıklamayı destekler.](../xml-tools/debugging-xslt.md) Hata ayıklayıcıyı kullanarak bir XSLT stil sayfası içinde kesme noktaları ayarlayın, koddan XSLT stil sayfası içine adım atabilirsiniz ve bu şekilde devam edin.
 
 > [!NOTE]
-> XSLT hata ayıklayıcısı yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
+> XSLT hata ayıklayıcısı yalnızca Enterprise'nin Visual Studio.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
-description: Bölüm için yeniden konumlandırma bilgilerinin Döngüsel artıklık denetimini (CRC) alır.
-title: 'IDiaSectionContrib:: get_relocationsCrc | Microsoft Docs'
+description: bölümü için yeniden konumlandırma bilgilerini döngüsel yedeklilik denetimi (CRC) alınır.
+title: IDiaSectionContrib::get_relocationsCrc | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 8c29c91a-062d-4566-a9b7-49251036a15a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 353344b93806bdf4cb000ed5b2307969f7e74bb6
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 85c392576f8b0283817bb437d9f9f1cfee1d7cadfb40cfc7261b71ab4e5a2f39
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148005"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121281120"
 ---
 # <a name="idiasectioncontribget_relocationscrc"></a>IDiaSectionContrib::get_relocationsCrc
-Bölüm için yeniden konumlandırma bilgilerinin Döngüsel artıklık denetimini (CRC) alır.
+bölümü için yeniden konumlandırma bilgilerini döngüsel yedeklilik denetimi (CRC) alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +35,10 @@ HRESULT get_relocationsCrc (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bölüm için yeniden konumlandırma bilgilerinin CRC 'sini döndürür.
+[out] Bölüm için yeniden konumlandırma bilgisinin CRC'lerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

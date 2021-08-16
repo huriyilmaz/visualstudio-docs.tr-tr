@@ -1,24 +1,25 @@
 ---
 title: XML düzenleyicisi
-description: Visual Studio 'da metin düzenleyiciyi temel alan XML Düzenleyicisi hakkında bilgi edinin ve XML dilleri için ek destek içerir.
+description: metin düzenleyiciyi temel alan Visual Studio xml düzenleyicisi hakkında bilgi edinin ve xml dilleri için ek destek içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: de79063eeef5056bd850d8fa1fe76d6698c7e082
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c796cedd457db405fe3d12a9ed0881881ddfee6b8f333adc1f9379d962650e24
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874859"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121350972"
 ---
 # <a name="xml-editor"></a>XML düzenleyicisi
 
-Visual Studio 'daki XML Düzenleyicisi, metin düzenleyicisine dayalıdır ve XML dilleri için ek destek içerir. Visual Studio 'da bir XML dosyası açtığınızda, XML düzenleyicisinde açılır.
+Visual Studio içindeki xml düzenleyicisi, metin düzenleyicisine dayalıdır ve xml dilleri için ek destek içerir. bir xml dosyasını Visual Studio açtığınızda, xml düzenleyicisinde açılır.
 
 XML Düzenleyicisi aşağıdaki özellikleri içerir:
 
@@ -42,7 +43,7 @@ XML Düzenleyicisi aşağıdaki özellikleri içerir:
 
 - [XML şema Gezgini](../xml-tools/xml-schema-explorer.md)ile tümleştirme. Bu, XML şemaları için hiyerarşik bir görünüm sağlar.
 
-XML Düzenleyicisi, *. xml*, *. xsd*, *. xsl* ve *. config* gibi iyi bilinen dosya uzantıları için çağrılır. Ayrıca dosya XML içeriyorsa, herhangi bir bilinmeyen dosya uzantısında da çağrılır.
+XML Düzenleyicisi, *.xml*, *. xsd*, *. xsl* ve *.config* gibi iyi bilinen dosya uzantıları için çağrılır. Ayrıca dosya XML içeriyorsa, herhangi bir bilinmeyen dosya uzantısında da çağrılır.
 
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense
 

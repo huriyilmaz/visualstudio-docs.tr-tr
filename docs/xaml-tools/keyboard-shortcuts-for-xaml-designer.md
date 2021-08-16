@@ -8,12 +8,13 @@ ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 0e0bdc7b10eb20b149493c8d9e05a6711eb71bb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-xaml-tools
+ms.openlocfilehash: 7aa7895288273d43c72eaabd8304a8b35b9d0b8777c0e5ab7c58e8707d491d7b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881340"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121351505"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>XAML Tasarımcısı için klavye kısayolları
 

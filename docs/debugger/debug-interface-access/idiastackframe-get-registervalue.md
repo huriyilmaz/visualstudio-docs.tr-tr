@@ -11,14 +11,15 @@ ms.assetid: cbe3d8ac-319a-40ac-bc3e-4eb81b2d7807
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 92ada384d6e231a33dc2b1bbccfafa1e790f1c9c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5c5d23e1702ed9fa928ad0459255639c454af2da15e9ce169211c607757e487a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147438"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454882"
 ---
 # <a name="idiastackframeget_registervalue"></a>IDiaStackFrame::get_registerValue
 Belirtilen kaydın değerini yığın çerçevesinde saklanan şekilde alır.
