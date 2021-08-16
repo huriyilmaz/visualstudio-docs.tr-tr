@@ -1,6 +1,6 @@
 ---
-title: Span sınıfı | Microsoft Docs
-description: Span sınıfı ve uygulamanın bir aşamasını nasıl tanımladığını öğrenin. Ayrıca, span class public oluşturucular ve devralma hiyerarşisi hakkında bilgi edinin.
+title: span Sınıfı | Microsoft Docs
+description: Span sınıfı ve uygulamanın aşamasını nasıl tanımladığı hakkında bilgi edinmek. Ayrıca, span sınıfı genel oluşturucuları ve devralma hiyerarşisi hakkında bilgi edinmek.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,14 +11,15 @@ ms.assetid: 527826a8-2590-43ad-b907-7bc0b7288e92
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fff7f91326cac47100f5b2b1b42e22b9c0fc1d9b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a1cc9c68785914f23fbb75391b2d7f6b9b9fafcf4c1da9bba4b2b38d1ac305f1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949967"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410274"
 ---
 # <a name="span-class"></a>span sınıfı
 Uygulamanın aşamasını tanımlar.
@@ -31,20 +32,20 @@ class span;
 
 ## <a name="members"></a>Üyeler
 
-### <a name="public-constructors"></a>Ortak oluşturucular
+### <a name="public-constructors"></a>Genel oluşturucular
 
 |Ad|Açıklama|
 |----------|-----------------|
 |[span::span Oluşturucusu](../profiling/span-span-constructor.md)|`span` sınıfının yeni bir örneğini başlatır.|
-|[span::~span Yok Edicisi](../profiling/span-tilde-span-destructor.md)|Nesneyi yok eder `span` ve kaynaklarını serbest bırakır.|
+|[span::~span Yok Edicisi](../profiling/span-tilde-span-destructor.md)|Nesneyi yok `span` eder ve kaynaklarını serbest bırakarak.|
 
 ## <a name="inheritance-hierarchy"></a>Devralma Hiyerarşisi
  `span`
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvmarkersobj. h*
+ **Üst bilgi:** *cvmarkersobj.h*
 
- **Ad alanı:** Eşzamanlılık::d ıagstik
+ **Ad alanı:** Concurrency::d iagnostic
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Tanılama ad alanı](../profiling/diagnostic-namespace.md)
+- [tanılama ad alanı](../profiling/diagnostic-namespace.md)

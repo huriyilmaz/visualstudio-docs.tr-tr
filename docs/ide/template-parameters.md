@@ -1,5 +1,5 @@
 ---
-title: Proje ve öğe şablonu parametreleri
+title: Project ve öğe şablonu parametreleri
 description: Şablon örneği oluşturulurken şablonlarınızın değerlerini değiştirmek için şablon parametrelerini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
@@ -12,12 +12,13 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 133fbec68ff0e6b04793c2e168c730ee37024ad4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-general
+ms.openlocfilehash: 55f8d161eff6b1df3395a8819bba4064c5a7c4af3172e77c7669a3d3b2b340f8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970663"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411821"
 ---
 # <a name="template-parameters"></a>Şablon parametreleri
 
@@ -25,7 +26,7 @@ ms.locfileid: "99970663"
 
 ## <a name="declare-and-enable-template-parameters"></a>Şablon parametrelerini bildir ve Etkinleştir
 
-Şablon parametreleri $*Parameter*$ biçiminde bildirilmiştir. Örneğin:
+Şablon parametreleri $*Parameter*$ biçiminde bildirilmiştir. Örnek:
 
 - $safeprojectname $
 
@@ -57,7 +58,7 @@ Aşağıdaki tabloda, herhangi bir şablon tarafından kullanılabilecek ayrılm
 |ItemName|Parametrenin kullanıldığı dosyanın adı.|
 |adý|Geçerli bilgisayar adı (örneğin, COMPUTER01).|
 |ProjectName|Proje oluşturulduğunda Kullanıcı tarafından girilen ad.|
-|RegisteredOrganization|HKLM\Software\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization. 'dan kayıt defteri anahtarı değeri|
+|RegisteredOrganization|hklm\software\microsoft\ Windows NT \CurrentVersion\RegisteredOrganization. kayıt defteri anahtarı değeri|
 |RootNamespace|Geçerli projenin kök ad alanı. Bu parametre yalnızca öğe şablonları için geçerlidir.|
 |safeitemname|Bununla aynı `itemname` ancak tüm güvenli olmayan karakterler ve boşluklar alt çizgi karakterleriyle değiştirilirler.|
 |safeitemrootname|Aynı `safeitemname` .|
@@ -74,7 +75,7 @@ Aşağıdaki tabloda, herhangi bir şablon tarafından kullanılabilecek ayrılm
 
 ## <a name="custom-template-parameters"></a>Özel şablon parametreleri
 
-Parametre değiştirme sırasında kullanılan varsayılan ayrılmış şablon parametrelerine ek olarak kendi şablon parametrelerinizi ve değerlerini belirtebilirsiniz. Daha fazla bilgi için bkz. [CustomParameters öğesi (Visual Studio şablonları)](../extensibility/customparameters-element-visual-studio-templates.md).
+Parametre değiştirme sırasında kullanılan varsayılan ayrılmış şablon parametrelerine ek olarak kendi şablon parametrelerinizi ve değerlerini belirtebilirsiniz. daha fazla bilgi için bkz. [customparameters öğesi (Visual Studio şablonları)](../extensibility/customparameters-element-visual-studio-templates.md).
 
 ## <a name="example-use-the-project-name-for-a-file-name"></a>Örnek: bir dosya adı için proje adını kullanın
 

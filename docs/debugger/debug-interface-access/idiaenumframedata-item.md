@@ -11,14 +11,15 @@ ms.assetid: 2761a72d-1868-4f5b-a32e-c2a1d9358c91
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c22983881c6f4e7d1bbb8e25ec6030d85411145c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 73817c23ae8c5dc36c5d0e818bcf0af310a63e3ba9b0435ad1e253954ccd70fe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149055"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380513"
 ---
 # <a name="idiaenumframedataitem"></a>IDiaEnumFrameData::Item
 Bir kare veri öğesini bir dizin aracılığıyla alır.

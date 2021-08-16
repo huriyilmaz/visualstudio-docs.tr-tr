@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Gri Tonlamalı Doku Gölgelendiricisi Oluşturma'
-description: Doku örneğinin RGB renk değerini değiştiren bir gri tonlamalı doku gölgelendiricisi oluşturmak için gölgelendirici tasarımcısını ve yönlendirilmiş grafik gölgelendirici dilini nasıl kullanacağınızı öğrenin.
+description: gölgelendirici tasarımcısını ve yönlendirilmiş Graph gölgelendirici dilini kullanarak doku örneğinin RGB renk değerini değiştiren bir gri tonlamalı doku gölgelendiricisi oluşturma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,18 +8,19 @@ ms.assetid: 79181d81-44af-445e-9a18-03483dd70260
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: f4cde65d4540840470baad332b8092b5a410e14b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6effe4d7cd54c89dc95999b0e8ac61a52d9010586606cc61c399275029fac989
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930999"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361306"
 ---
 # <a name="how-to-create-a-grayscale-texture-shader"></a>Nasıl yapılır: gri tonlamalı doku gölgelendiricisi oluşturma
 
-Bu makalede, bir gri tonlamalı doku gölgelendiricisi oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş Graf gölgelendirici dilinin (DGSL) nasıl kullanılacağı gösterilmektedir. Bu gölgelendirici, doku örneğinin RGB renk değerini değiştirir ve ardından son rengi ayarlamak için onu değiştirilmemiş Alfa değeriyle birlikte kullanır.
+bu makalede, bir gri tonlamalı doku gölgelendiricisi oluşturmak için gölgelendirici tasarımcısının ve yönlendirilmiş Graph gölgelendirici dilinin (dgsl) nasıl kullanılacağı gösterilmektedir. Bu gölgelendirici, doku örneğinin RGB renk değerini değiştirir ve ardından son rengi ayarlamak için onu değiştirilmemiş Alfa değeriyle birlikte kullanır.
 
 ## <a name="create-a-grayscale-texture-shader"></a>Gri tonlamalı doku gölgelendiricisi oluşturma
 
@@ -38,7 +39,7 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
     > [!NOTE]
     > Varsayılan olarak **, doygunluğu Azalt düğümü,** giriş rengini tamamen kaldırır ve gri tona dönüştürme dönüştürmesi için standart ışıklılık ağırlıklarını kullanır. **Işıklılık** özelliğinin değerini değiştirerek veya giriş renginin yalnızca kısmen doygunluğu yaparak **, doygunluğu kaplama düğümünün nasıl** davranacağını değiştirebilirsiniz. Giriş renginin kısmen borçlandırçıkarılması için, [0, 1) aralığında **, doygunluğu Azalt düğümünün** **yüzde** terminaline bir skaler değer sağlayın.
 
-5. Gri tonlamalı renk değerini son renge bağlayın. **Yarım gri** düğümün **Çıkış** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
+5. gri tonlamalı renk değerini son renge Bağlan. **Yarım gri** düğümün **Çıkış** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
 
 Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir küpe uygulanan gölgelendirici önizlemesi gösterilmektedir.
 

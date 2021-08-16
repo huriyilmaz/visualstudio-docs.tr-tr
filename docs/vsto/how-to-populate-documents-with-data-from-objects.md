@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: belgeleri nesnelerden verilerle doldurma'
-description: Çözümünüzdeki bir nesneden verileri nasıl kullanabileceğinizi öğrenin ve verileri bir belge içinde göstermek için Windows Forms denetimleri kullanabilirsiniz.
+description: çözümünüzdeki bir nesneden verileri nasıl kullanabileceğinizi öğrenin ve verileri bir belge içinde göstermek için Windows Forms denetimleri kullanabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,18 +13,19 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5bebc21fb02f6b5441c597fcfd25364991829e71
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bbb1a0b342b706b64ace7034d72b87be878ff7b279fadde6af1b62cbbedf6511
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918576"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384411"
 ---
 # <a name="how-to-populate-documents-with-data-from-objects"></a>Nasıl yapılır: belgeleri nesnelerden verilerle doldurma
 
-Veri nesnesindeki verileri erişen, Windows Forms projelerinde yaptığı gibi Microsoft Office Word için belge düzeyi projelerde aynı şekilde çalışmaktadır. Aynı araçları ve kodu kullanarak verileri bir nesneden çözümünüze taşıyın ve verileri görüntülemek için Windows Forms denetimleri kullanabilirsiniz. Bunlara ek olarak, konak denetimlerini kullanarak verileri görüntüleyebilirsiniz. Konak denetimleri, Microsoft Office Word 'de olaylar ve veri bağlama özelliğiyle geliştirilmiş yerel nesnelerdir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+veri nesnesindeki verileri erişen, Windows Forms projelerinde yaptığı gibi Microsoft Office Word için belge düzeyi projelerde aynı şekilde çalışmaktadır. aynı araçları ve kodu kullanarak verileri bir nesneden çözümünüze taşıyın ve verileri görüntülemek için Windows Forms denetimleri kullanabilirsiniz. Bunlara ek olarak, konak denetimlerini kullanarak verileri görüntüleyebilirsiniz. konak denetimleri, Microsoft Office Word 'de olaylar ve veri bağlama özelliğiyle geliştirilmiş yerel nesnelerdir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
@@ -34,13 +35,13 @@ Belgeyi bir nesneden alınan verilerle doldurmak için üç temel adımı tamaml
 
 - Belgeye bir veri nesnesi ekleyin.
 
-- Veri nesnesini BindingSource 'a bağlayın.
+- veri nesnesini BindingSource 'a Bağlan.
 
 ## <a name="to-add-a-data-object"></a>Veri nesnesi eklemek için
 
 Veri nesnesi eklemek için **veri kaynakları** penceresini açın ve nesnesinden bir veri kaynağı oluşturun. Daha fazla bilgi için bkz. [Yeni veri kaynakları ekleme](../data-tools/add-new-data-sources.md).
 
-## <a name="connect-the-data-object-to-the-bindingsource"></a>Veri nesnesini BindingSource 'a bağlama
+## <a name="connect-the-data-object-to-the-bindingsource"></a>veri nesnesini BindingSource 'a Bağlan
 
 Belge düzeyi projelerinde, belgenize denetimler ekler ve bunları tasarım zamanında verilere bağlarsınız.
 

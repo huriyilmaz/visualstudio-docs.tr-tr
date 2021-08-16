@@ -12,12 +12,13 @@ ms.assetid: bbf075a5-96d5-48ed-a03c-330f0fc04748
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 888bf1f699027ab883a01ba74d8efc5703c91c9a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 764ec7f9f0a1e0b4edb0ed08f35761be18daaa5fe7784c162b353c02766a3e97
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968976"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384606"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>İzlenecek yol: birim testlerini içeren bir yük testi oluşturma ve çalıştırma
 
@@ -47,11 +48,11 @@ Bu kılavuzda, aşağıdaki görevleri tamamlayacaksınız:
 
 1. [Izlenecek yol: yönetilen kod için birim testleri oluşturma ve çalıştırma](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)bölümünde oluşturduğunuz banka çözümünü açın.
 
-1. **Çözüm Gezgini**' de, banka çözümü düğümünün kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni proje**' yi seçin.
+1. **Çözüm Gezgini**' de, banka çözümü düğümünün kısayol menüsünü açın, **Ekle**' yi ve ardından **yeni Project**' ı seçin.
 
-     **Yeni Proje Ekle** iletişim kutusu görüntülenir.
+     **yeni Project ekle** iletişim kutusu görüntülenir.
 
-1. **Yeni Proje Ekle** iletişim kutusunda, **Visual C#** ' yi genişletin ve **Test**' i seçin. Şablonlar listesinden **Web performansı ve yük testi projesi** ' ni seçin ve **ad** alanına yazın `BankLoadTest` . **Tamam ' ı** seçin.
+1. **yeni Project ekle** iletişim kutusunda, **Visual C#** ' yi genişletin ve **Test**' i seçin. şablonlar listesinden **Web performansı ve yük testi Project** seçin ve **ad** alanına yazın `BankLoadTest` . **Tamam ' ı** seçin.
 
      BankLoadTest web performans ve yük testi projesi çözüme eklenir.
 

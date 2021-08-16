@@ -11,14 +11,15 @@ ms.assetid: 151003a9-2e4d-4acf-9f4d-365dfa6b9596
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e52ae6477b49325d4b8a4d81192fe2ecf736163
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: abf87936b1dd439b5f0c143e7e920c3556cd9f79db540b4600ca5cf3077b55fe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092663"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360527"
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
 Bu arabirim çok iş parçacıklı hata ayıklama desteği sağlar.
@@ -45,7 +46,7 @@ IDebugEngineProgram2 : IUnknown
 |[WatchForExpressionEvaluationOnThread](../../../extensibility/debugger/reference/idebugengineprogram2-watchforexpressionevaluationonthread.md)|Program durdurulmuş olsa bile, belirtilen iş parçacığında ifade değerlendirmesinin yapılmasına izin verir (veya izin vermez).|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, bir [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olayına yanıt olarak bu arabirimi çağırır ve programın "Iş parçacığı adımını izle" ve "Iş parçacığında Ifade değerlendirmesini izle" durumlarını ayarlamak için. [Durdur](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md) , program her durdurulduğunda çağrılır; Bu yöntem programa tüm iş parçacıklarını sonlandırma şansı verir.
+ Visual Studio, bu arabirimi bir [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olayına yanıt olarak çağırır ve programın "iş parçacığı adımını izle" ve "iş parçacığında ifade değerlendirmesini izle" durumlarını ayarlamak için. [Durdur](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md) , program her durdurulduğunda çağrılır; Bu yöntem programa tüm iş parçacıklarını sonlandırma şansı verir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg. h

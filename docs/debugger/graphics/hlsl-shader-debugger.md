@@ -9,17 +9,18 @@ ms.assetid: 4ccec541-3c49-42bd-972a-686eb3a88fbc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d9a51df36a21d0f5234f78f6ac23ebf65f0c414
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a8b1f8b38d980186d72064b42fc28ade3576670f1925328a61c247d6dabf96b1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889245"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362671"
 ---
 # <a name="hlsl-shader-debugger"></a>HLSL Gölgelendirici Hata Ayıklayıcısı
-Visual Studio Grafik Çözümleyicisi içindeki HLSL hata ayıklayıcı, HLSL gölgelendirici kodunuzun uygulamanızın gerçek koşullarında nasıl çalıştığını anlamanıza yardımcı olur.
+Visual Studio Graphics Analyzer 'daki hlsl hata ayıklayıcı, hlsl gölgelendirici kodunuzun uygulamanızın gerçek koşullarında nasıl çalıştığını anlamanıza yardımcı olur.
 
  HLSL hata ayıklayıcısı şudur:
 

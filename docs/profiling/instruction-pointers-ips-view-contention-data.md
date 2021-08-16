@@ -9,15 +9,16 @@ ms.assetid: f5e49c24-d4cf-4f87-977d-37e3223d1196
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 17bbf70f4216186dbb1605bd48e7f3a29817a0ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3423233fbbf61a99f47dfe05b400f601e24c4f988c78891f8500ec91e245b504
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906847"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410651"
 ---
 # <a name="instruction-pointers-ips-view---contention-data"></a>Yönerge Işaretçileri (IP) görünümü-çekişme verileri
 Çekişme verilerinin IP görünümü, profil oluşturma çalıştırmasında yürütülmesi engellenen derleme yönergelerinin verilerini listeler.

@@ -1,6 +1,6 @@
 ---
-title: Angular uygulaması oluşturma
-description: bu öğreticide, Visual Studio Angular basit bir uygulama oluşturmayı öğrenin.
+title: Angular oluşturma
+description: Bu öğreticide, bu öğreticide basit bir Angular uygulama Visual Studio.
 ms.date: 07/30/2021
 ms.custom: vs-acquisition
 ms.topic: tutorial
@@ -8,63 +8,65 @@ ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-javascript
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 1f9078360987a531be544eb15460d4eb760a1677
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: d431c750e807d1aa7fe43d9b8d2c556c96678cbdcb50c166425a377228dc9172
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115095080"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411448"
 ---
-# <a name="create-an-angular-app"></a>Angular uygulaması oluşturma
+# <a name="create-an-angular-app"></a>Angular oluşturma
 
-bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (ıde) giriş sırasında basit bir Angular ön uç web uygulaması oluşturup çalıştırırsınız.
+Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişte, basit bir ön uç web uygulaması Angular ve çalıştırabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
-- NPM ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
-- Angular CLı ( [https://angular.io/cli](https://angular.io/cli) ) Bu, tercih ettiğiniz sürümü olabilir
+- Visual Studio 2022 Preview 2 veya sonraki bir sürümü. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
+- npm ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
+- Angular CLI ( [https://angular.io/cli](https://angular.io/cli) ) Bu, tercihe bağlı bir sürüm olabilir
 
-## <a name="create-your-app"></a>Uygulamanızı oluşturun
+## <a name="create-your-app"></a>Uygulama oluşturma
 
-1. yeni Project iletişim kutusunda **yeni proje oluştur**' u seçin.
+1. Yeni Proje Oluştur Project Yeni proje **oluştur'a seçin.**
 
    :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
-1. üstteki arama çubuğunda Angular araması yapın ve **tek başına Angular şablonu**' nu seçin.
+1. En üst Angular arama çubuğundan Tek Başına uygulama şablonu'Angular **seçin.**
 
    :::image type="content" source="media/vs-2022/angular-choose-template.png" alt-text="Şablon seçme":::
 
-1. Projenize ve çözümünüze bir ad verin. 
+1. Projenize ve çözümünüze bir ad girin. 
 
-   ek bilgi penceresine geldiğinizde, **boş ASP.NET Web apı 'si için tümleştirme ekle Project** seçeneğini denetlediğinizden emin olun. bu seçenek, bir ASP.NET Core projesi eklenirse ASP.NET Core projesiyle kullanıma abilmesi için Angular şablonunuza dosya ekler.
+   Ek bilgiler penceresine bakarak Boş web **API'si** ASP.NET tümleştirmesi ekle seçeneğini Project olun. Bu seçenek, Angular bir proje eklenirse ASP.NET Core projeyle bağlanacak şekilde ASP.NET Core ekler.
 
    :::image type="content" source="media/vs-2022/angular-additional-info.png" alt-text="Ek bilgi":::
 
 ## <a name="set-the-project-properties"></a>Proje özelliklerini ayarlama
 
-1. Çözüm Gezgini, Angular projesine sağ tıklayın, **özellikler**' i seçin ve ardından **hata ayıklama** bölümüne gidin.
+1. Bu Çözüm Gezgini, Angular projesine sağ tıklayın, Özellikler'i **seçin** ve hata ayıklama **bölümüne** gidin.
 
-1. Hata ayıklayıcıyı başlatmak için **launch.js** seçeneğini değiştirin.
+1. Hata Ayıklayıcısı'nın başlat seçeneğini **launch.js** olarak değiştirme.
  
    :::image type="content" source="media/vs-2022/angular-choose-debugger.png" alt-text="Hata ayıklayıcıyı seçin (launch.js)":::
 
-## <a name="build-your-project"></a>Project oluşturun
+## <a name="build-your-project"></a>Derleme Project
 
-  >  Projeyi derlemek için derleme **Yapı çözümünü** seçin.
+Projeyi   >  **derlemek için Derleme** Çözümü'ne seçin.
 
-ilk derleme biraz zaman alabilir, bu Angular clı npm install komutunu çalıştırır.
+Angular CLI'sı npm install komutunu çalıştıracak olduğu için ilk derlemenin biraz zaman alsa da olduğunu unutmayın.
 
-## <a name="start-your-project"></a>Project başlatın
+## <a name="start-your-project"></a>Çalışma Project
 
-**F5** tuşuna basın veya pencerenin üst kısmındaki **Başlat** düğmesini seçin. Bir komut istemi görüntülenir:
+**F5 tuşuna** basın **veya** pencerenin üst kısmından Başlat düğmesini seçin. Bir komut istemi görüntülenir:
 
-- ng start komutunu çalıştıran Angular clı
+- ng start Angular çalıştıran Angular CLI
 
-sonra, temel Angular uygulamanın göründüğünü görmeniz gerekir!
+Ardından, temel uygulamanın Angular görün!

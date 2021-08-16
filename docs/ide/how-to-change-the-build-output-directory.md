@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 792175d7d2c168f75d20bce86675a1fcd8c47899
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b68fa95d069ab55de1d81caa27697930a8f715f254a226db55a9a32ea74c2d31
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875542"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121413159"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>Nasıl yapılır: derleme çıkış dizinini değiştirme
 
@@ -31,7 +31,7 @@ Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ay�
 2. Proje türüne göre uygun sekmeyi seçin:
 
    - C# için **derleme** sekmesini seçin.
-   - Visual Basic için **Derle** sekmesini seçin.
+   - Visual Basic için **derle** sekmesini seçin.
    - C++ veya JavaScript için **genel** sekmesini seçin.
 
 3. Üstteki yapılandırma açılır penceresinde çıkış dosyası konumunu değiştirmek istediğiniz yapılandırmayı (**hata ayıklama**, **yayın** veya **tüm yapılandırmalar**) seçin.
@@ -47,7 +47,7 @@ Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ay�
    ![Visual Studio C# projesi için çıkış yolu özelliği](media/output-path.png)
    
    > [!NOTE]
-   > Bazı projeler varsayılan olarak yapı yolundaki Framework ve Runtime içerir. Bunu değiştirmek için **Çözüm Gezgini**' de proje düğümüne sağ tıklayın, **Proje dosyasını Düzenle**' yi seçin ve aşağıdakileri ekleyin:
+   > Bazı projeler varsayılan olarak yapı yolundaki Framework ve Runtime içerir. bunu değiştirmek için **Çözüm Gezgini**' de proje düğümüne sağ tıklayın, **Project dosyayı düzenle**' yi seçin ve aşağıdakileri ekleyin:
    > ```xml
    > <PropertyGroup>
    >   <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -58,10 +58,10 @@ Projeniz tarafından oluşturulan çıktının yapılandırma bazında (hata ay�
 > [!TIP]
 > Çıktı belirttiğiniz konuma oluşturulmadığından, Visual Studio menü çubuğunda ilgili yapılandırmayı (örneğin, **hata ayıklama** veya **Sürüm**) oluştururken emin olun.
 >
-> ![Visual Studio 2019 ' de derleme yapılandırma Seçicisi](media/build-configuration-chooser.png)
+> ![Visual Studio 2019 ' de derleme yapılandırma seçicisi](media/build-configuration-chooser.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md)
+- [yapı sayfası, Project tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md)
 - [Genel özellik sayfası (proje)](/cpp/build/reference/general-property-page-project)
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

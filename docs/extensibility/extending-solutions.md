@@ -1,6 +1,6 @@
 ---
-title: Çözümleri genişletme | Microsoft Docs
-description: Çözümleri genişletme hakkında bilgi edinin. Bir çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır.
+title: Çözümleri Genişletme | Microsoft Docs
+description: Çözümleri genişletme hakkında bilgi edinmek. Çözüm, uygulama oluşturmak için birlikte çalışan bir veya daha fazla projeden gruplamadır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,21 +8,22 @@ ms.assetid: 5cb60183-2a87-4551-a19f-c7c4e65d60c0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fea1d805e1e3ce9c3f1af7cb25d798e9d8d1725d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5e8e886c2209ff08fe9fec5e8a06fe40f17d887552ff6f1ac8bf249b424beb59
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075113"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360033"
 ---
 # <a name="extend-solutions"></a>Çözümleri genişletme
-Bir çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır.
+Çözüm, uygulama oluşturmak için birlikte çalışan bir veya daha fazla projeden gruplamadır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- Aşağıdaki izlenecek yollarda, çözümlerini genişletebilmeniz için bazı yollar gösterilmektedir.
+ Aşağıdaki izlenecek yollarda, çözümleri genişletebilirsiniz.
 
-1. [Çözüm Gezgini filtresini genişletmek](../extensibility/extending-the-solution-explorer-filter.md) Çözüm Gezgini ne şekilde filtreleneceğini açıklar.
+1. [Filtreyi Çözüm Gezgini, filtrenin](../extensibility/extending-the-solution-explorer-filter.md) nasıl görüntü Çözüm Gezgini açıklar.
 
-2. [Bir çözümde proje yüklemeyi yönetme](../extensibility/managing-project-loading-in-a-solution.md) Kullanıcı bir çözüm yüklediğinde performansı artırmak için proje yükleme 'nin nasıl yönetileceğini açıklar.
+2. [Bir çözümde proje yüklemesini yönetme,](../extensibility/managing-project-loading-in-a-solution.md) kullanıcı bir çözüm yükleyene kadar performansı artırmak için proje yüklemesini yönetmeyi açıklar.

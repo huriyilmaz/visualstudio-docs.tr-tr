@@ -1,18 +1,18 @@
 ---
 title: Derleme yapılandırması oluşturma ve bunları Düzenle
-description: Bu makalede Mac için Visual Studio yapı yapılandırmalarının oluşturulması açıklanmaktadır
+description: bu makalede Mac için Visual Studio yapı yapılandırmalarının oluşturulması açıklanmaktadır
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 5fafb47be3c3a5b99a2ae7d07277d0977db93fa0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fa1e677442b0822096febc3da51a5875e8e664cd18582fe440c01b16eb7c8d5b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950084"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121383473"
 ---
 # <a name="creating-and-editing-build-configurations"></a>Derleme yapılandırması oluşturma ve bunları Düzenle
 
@@ -26,13 +26,13 @@ Proje yapı yapılandırması oluşturmak için aşağıdaki adımları uygulay�
 
 1. Proje düğümüne sağ tıklayın ve **Seçenekler**' i seçin.
 
-2. Proje seçenekleri iletişim kutusunda **> yapılandırma oluştur**' u seçin:
+2. Project seçenekleri iletişim kutusunda **derleme > yapılandırma**' yı seçin:
 
     ![Proje seçeneklerinde Yapılandırma Yöneticisi](media/create-and-edit-configurations-image2.png)
 
 3. Yeni bir yapılandırma oluşturmak için **Ekle**' yi seçin. Alternatif olarak, var olan yapılandırmalardan birini kopyalayabilirsiniz.
 
-Yapılandırma oluşturulduktan sonra, yapılandırmanıza uygun özellikleri uyarlamak için proje seçeneklerinde **Build** bölümünü kullanabilirsiniz:
+yapılandırma oluşturulduktan sonra, yapılandırmanıza uygun özellikleri uyarlamak için Project seçeneklerinde **Build** bölümünü kullanabilirsiniz:
 
 ![Derleme seçeneklerini yapılandırma](media/create-and-edit-configurations-image3.png)
 
@@ -54,7 +54,7 @@ Yapılandırma oluşturulduktan sonra, yapılandırmanıza uygun özellikleri uy
 
 ## <a name="editing-a-build-configuration"></a>Yapı yapılandırmasını düzenle
 
-Bir yapılandırmayı yeniden adlandırmak için proje veya çözüm seçeneklerinde yapılandırma listesinden seçin:
+bir yapılandırmayı yeniden adlandırmak için Project veya çözüm seçeneklerinde yapılandırma listesinden seçin:
 
 ![yapılandırma listesi](media/create-and-edit-configurations-image4.png)
 
@@ -68,4 +68,4 @@ Bir yapılandırmayı yeniden adlandırmak için proje veya çözüm seçenekler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme yapılandırması oluşturma ve düzenleme (Windows üzerinde Visual Studio)](/visualstudio/ide/how-to-create-and-edit-configurations)
+- [derleme yapılandırması oluşturma ve düzenleme (Windows Visual Studio)](/visualstudio/ide/how-to-create-and-edit-configurations)

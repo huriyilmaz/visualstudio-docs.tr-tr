@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 27b2c5765f041252e62defd15a3c7b6d7b460b43
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9bced8357242ebcfd3156234d9a9e163ec3608b738a1bf2cb95673a82a10f9e3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932468"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412211"
 ---
 # <a name="options-dialog-box-text-editor--javascript--formatting"></a>Seçenekler iletişim kutusu: metin düzenleyici \> JavaScript \> biçimlendirmesi
 

@@ -11,14 +11,15 @@ ms.assetid: 6305874f-a2c4-4432-834c-07530ea84bff
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ab7b0ba5e51ba8ea47b473934e825b82dec320c
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 17f846e9dcb70300b27aa7248c4c4c2783b02887f6ba9d6071f636cbf48b78b0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903300"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361112"
 ---
 # <a name="implement-getmethodproperty"></a>GetMethodProperty uygulama
 > [!IMPORTANT]

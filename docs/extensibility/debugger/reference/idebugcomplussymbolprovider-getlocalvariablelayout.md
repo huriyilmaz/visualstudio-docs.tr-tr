@@ -10,17 +10,18 @@ ms.assetid: b7328d85-e5e9-4d9f-bcd1-e7711fd33878
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e78556b7187072f72930767c6b718a87998f5995
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8ad54f769814fd94085a22bd91737b7219bbd1ce7b00e1d94e54776a0b4ec8e5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095725"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360553"
 ---
 # <a name="idebugcomplussymbolprovidergetlocalvariablelayout"></a>IDebugComPlusSymbolProvider::GetLocalVariablelayout
 Bir dizi yöntem için yerel değişkenlerin yerleşimini alır.

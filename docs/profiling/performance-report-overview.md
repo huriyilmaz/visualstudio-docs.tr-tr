@@ -1,6 +1,6 @@
 ---
 title: Performans raporuna genel bakış | Microsoft Docs
-description: Profil oluşturma verilerini, Visual Studio Team System Development Edition tümleşik geliştirme ortamının performans raporu penceresinde görüntüleyin.
+description: Visual Studio Team System development Edition tümleşik geliştirme ortamının performans raporu penceresinde profil oluşturma verilerini görüntüleyin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,19 @@ ms.assetid: 7324c24c-fd09-479b-b2ad-e0c3b613e040
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e775c91759326407918befba3dd4bb52e19dd0e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 360055d8ee6b1c373313ed674f241f4c3262ddeddecc2a9ba823dae873487baf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922287"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410443"
 ---
 # <a name="performance-report-overview"></a>Performans raporuna genel bakış
-Bir performans oturumunun profil oluşturma verilerini, Visual Studio Team System Development Edition tümleşik geliştirme ortamının (IDE) **Performans raporu** penceresinde görüntüleyebilirsiniz. Profil oluşturma verileri. vsp ve. vsps dosyalarına kaydedilir. Rapor görünümü pencereleri, uygulama performansı sorunlarını görüntülemenizi ve analiz etmenize olanak tanır.
+Visual Studio Team System development Edition tümleşik geliştirme ortamının (ıde) **performans raporu** penceresinde bir performans oturumunun profil oluşturma verilerini görüntüleyebilirsiniz. Profil oluşturma verileri. vsp ve. vsps dosyalarına kaydedilir. Rapor görünümü pencereleri, uygulama performansı sorunlarını görüntülemenizi ve analiz etmenize olanak tanır.
 
 > [!CAUTION]
 > Profil oluşturma veri dosyası, bilgisayar adı, işletim sistemi sürümü, dosya yolları, bellek bilgileri ve diğer bilgisayar kurulum bilgileri gibi hassas bilgileri içerir. Verilerin dağıtılması üzerinde, hem yerel hem de tam denetim korumanız gerekir. *VSP* biçimi ve öğesine aktarıldığında. *CSV* veya. *XML* dosyası.
@@ -93,7 +94,7 @@ Bir performans oturumunun profil oluşturma verilerini, Visual Studio Team Syste
 
 - **Çözümlenme** -raporu, geçerli analiziyle birlikte. vsps dosyası olarak kaydeder.
 
-- **Dışarı aktar** -geçerli raporu ' de kaydeder. CVS-biçimli veya. Farklı görünümleri kaydetme seçenekleriyle, XML biçimli dosya.
+- **Dışarı aktar** -geçerli raporu ' de kaydeder. Farklı görünümleri kaydetme seçenekleriyle, CVS biçimli veya .XML biçimli dosya.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans araçları verilerini analiz etme](../profiling/analyzing-performance-tools-data.md)

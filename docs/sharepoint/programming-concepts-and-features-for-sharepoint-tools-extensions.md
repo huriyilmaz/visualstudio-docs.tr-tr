@@ -1,7 +1,7 @@
 ---
-title: SharePoint Araç uzantıları için programlama kavramları & özellikleri
+title: SharePoint araç uzantıları için programlama kavramları & özellikleri
 titleSuffix: ''
-description: SharePoint araçları uzantılarında önemli bir rol oynayabileceği, Visual Studio 'da SharePoint araçlarıyla ilgili önemli programlama kavramlarını ve özelliklerini gözden geçirin.
+description: SharePoint araçları uzantılarında önemli bir rol oynayabileceği Visual Studio SharePoint araçlarıyla ilgili önemli programlama kavramlarını ve özelliklerini gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,34 +13,35 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: f8a85c87b14057372254f755e4c414aa089e5a55
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0fefdd5397fa2204fb82d92a7c312a86a7cf6f004a1a3aa138415117e4fe255d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955248"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121409546"
 ---
-# <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>SharePoint Araçları uzantıları için programlama kavramları ve özellikleri
-  Visual Studio 'daki SharePoint araçlarıyla ilgili birçok önemli programlama kavramı ve özelliği vardır. Bu kavramlar ve özellikler birçok SharePoint araçları uzantısı için önemli bir rol oynar.
+# <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>SharePoint araçları uzantıları için programlama kavramları ve özellikleri
+  Visual Studio SharePoint araçlarıyla ilgili birçok önemli programlama kavramı ve özelliği vardır. bu kavramlar ve özellikler çoğu SharePoint araçları uzantısı 'nda önemli bir rol oynar.
 
 ## <a name="in-this-section"></a>Bu bölümde
  [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md)
 
- SharePoint araçları uzantılarındaki SharePoint istemcisi ve SharePoint Server nesne modellerini kullanarak karşılaştırılır ve SharePoint Server nesne modeline çağrı yapmak için nasıl *SharePoint komutları* oluşturabileceğiniz hakkında bilgi sağlar.
+ SharePoint araçları uzantılarından SharePoint istemci ve SharePoint server nesne modellerini kullanarak karşılaştırır ve SharePoint server nesne modelini çağırmak için nasıl *SharePoint komutları* oluşturabileceğiniz hakkında bilgi sağlar.
 
- [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md)
+ [SharePoint kullanın proje hizmeti](../sharepoint/using-the-sharepoint-project-service.md)
 
- SharePoint proje hizmetinin SharePoint araçları uzantılarına sağladığı özellikleri açıklar ve hizmeti farklı türlerdeki uzantılara almak için yönergeler sağlar.
+ SharePoint proje hizmeti SharePoint araçlar uzantılarına sağladığı özellikleri açıklar ve hizmeti farklı türlerdeki uzantılara almak için yönergeler sağlar.
 
- [SharePoint Araç Uzantıları ile özel verileri ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
+ [özel verileri SharePoint araçları uzantılarıyla ilişkilendir](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
 
- Özel verilerin SharePoint araçları uzantılarında belirli nesne türleriyle nasıl ilişkilendirileceğini açıklar.
+ özel verilerin SharePoint araçları uzantılarında belirli nesne türleriyle nasıl ilişkilendirileceğini açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint araçlarını Visual Studio 'da genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [Visual Studio SharePoint araçlarını genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
 - [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)
 - [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [Visual Studio 'da SharePoint araçları için hata ayıklama uzantıları](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
-- [Visual Studio 'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Visual Studio SharePoint araçları için hata ayıklama uzantıları](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Visual Studio SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

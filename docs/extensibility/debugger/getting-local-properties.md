@@ -1,6 +1,6 @@
 ---
 title: Yerel özellikleri alma | Microsoft Docs
-description: Visual Studio 'Nun, yönetilen ve yönetilmeyen koda yönelik bu örneklerle yerel özellikler almak için EnumChildren 'ı nasıl kullandığını öğrenin.
+description: Visual Studio, yönetilen ve yönetilmeyen koda yönelik bu örneklerle yerel özellikleri almak için enumchildren 'ı nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,20 +12,21 @@ ms.assetid: 6c3a79e8-1ba1-4863-97c3-0216c3d9f092
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: c45933c6340836fac889f1309c14a71feed31791
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 85f23994292ad7089dbf3215e602347ad7891ddf35ddf933ce13989253150c2d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900739"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361242"
 ---
 # <a name="get-local-properties"></a>Yerel özellikleri al
 > [!IMPORTANT]
 > Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Visual Studio, **Yereller** penceresinde görüntülenecek tüm Yereller için erişim sağlayan bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi elde etmek için [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 'ı çağırır. Ardından Visual Studio, her yerel için görüntülenecek bilgileri almak için [İleri](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) ' yi çağırır. Bu örnekte, sınıfı `CEnumPropertyInfo` `IEnumDebugPropertyInfo2` arabirimini uygular.
+Visual Studio, **yereller** penceresinde görüntülenecek tüm yereller için erişim sağlayan bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi almak üzere [enumchildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 'ı çağırır. Visual Studio, her bir yerel için görüntülenecek bilgileri almak için [ileri](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) ' yi çağırır. Bu örnekte, sınıfı `CEnumPropertyInfo` `IEnumDebugPropertyInfo2` arabirimini uygular.
 
 Bu uygulama `IEnumDebugPropertyInfo2::Next` aşağıdaki görevleri gerçekleştirir:
 

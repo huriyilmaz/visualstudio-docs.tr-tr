@@ -1,6 +1,6 @@
 ---
 title: Kaynak denetimi VSPackages ile çalışmaya başlama | Microsoft Docs
-description: Visual Studio 'da kaynak denetimi VSPackages ve kaynak denetimi eklentilerinin daha gelişmiş bir alternatifi hakkında bilgi edinin.
+description: Visual Studio ' deki kaynak denetimi vspackages ve kaynak denetimi eklentilerinin daha gelişmiş bir alternatifi olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: 049c68f4-a041-4f24-8575-4837e7f5cf3f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 163152e614cccfb2f2d46fdf68e0f4b9001b173c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4850badc4fc36ac5f64572c675eac34cf59680ab85b913121c700e2d3306d06b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061270"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359552"
 ---
 # <a name="get-started-with-source-control-vspackages"></a>Kaynak denetimi VSPackages ile çalışmaya başlama
 

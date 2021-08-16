@@ -1,5 +1,5 @@
 ---
-title: Visual Studio dışında uygulama çalıştırırken erişim ihlallerinde hata ayıkla
+title: Uygulama Visual Studio dışında çalıştırırken erişim ihlallerinde hata ayıkla
 titleSuffix: ''
 description: Visual Studio ortamının dışında oluşan bir erişim ihlaline hata ayıklaması yapmak için tam zamanında hata ayıklayıcıyı kullanın.
 ms.custom: SEO-VS-2020
@@ -19,19 +19,20 @@ ms.assetid: 780a298a-132e-4245-8370-8c82ca27c6c1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4709807b176806d8a7ca56de4adda8cdfe13ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 357a49d5b5fee87fa74f99ee7d111f5fa92af18281772e915ed41e33fe5d13a4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904327"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362453"
 ---
 # <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>Kendi Programımı Hata Ayıklayıcı Dışında Çalıştırırken Erişim İhlallerinde Nasıl Hata Ayıklayabilirim?
 
 ## <a name="problem-description"></a>Sorun Açıklaması
- Programımı Visual Studio ortamında sorunsuz çalışıyor, ancak Windows işletim sistemiyle tek başına çalıştırıldığında bir erişim ihlali oluşturur. Bu sorunu nasıl ayıklayabilirim?
+ programımı Visual Studio ortamda ince çalışır, ancak Windows işletim sistemiyle tek başına çalıştırıldığımda, bir erişim ihlali üretir. Bu sorunu nasıl ayıklayabilirim?
 
 ## <a name="solution"></a>Çözüm
  [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md) seçeneğini ayarlayın ve erişim ihlali gerçekleşene kadar programınızı tek başına çalıştırın. Ardından, **erişim ihlali** iletişim kutusunda, hata ayıklayıcıyı başlatmak için **iptal** ' e tıklayabilirsiniz.

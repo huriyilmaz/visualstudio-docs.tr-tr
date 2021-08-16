@@ -1,6 +1,6 @@
 ---
-title: Kişilerde program aracılığıyla e-posta adresi bulma
-description: Microsoft Outlook kişilerinizde bir e-posta adresini programlı bir şekilde bulmak için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+title: Program aracılığıyla kişilerde e-posta adresi bulma
+description: Microsoft uygulama kişilerinizi kullanarak Visual Studio e-posta adresini program aracılığıyla bulmak için Outlook öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,30 +14,31 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: cd977840cd75081d87011540ca00675fb84cee36
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: afd35041cc035bf5a03db0966cb30bafbcadfbd69fdc09f8f5a4c9219cdf8b89
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828949"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384190"
 ---
-# <a name="how-to-programmatically-search-for-an-email-address-in-contacts"></a>Nasıl yapılır: kişilerde program aracılığıyla e-posta adresi arama
-  Bu örnek, e-posta adreslerinde **example.com** etki alanı adına sahip kişiler için bir iletişim klasörü arar.
+# <a name="how-to-programmatically-search-for-an-email-address-in-contacts"></a>Nasıl olur: Kişilerde program aracılığıyla e-posta adresi arama
+  Bu örnek, e-posta adreslerinde etki alanı adına sahip **kişiler example.com** kişi klasöründe arama sağlar.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Örnek
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_SearchEmail/thisaddin.cs" id="Snippet1":::
 
-## <a name="compile-the-code"></a>Kodu derle
+## <a name="compile-the-code"></a>Kodu derleme
  Bu örnek şunları gerektirir:
 
-- **Example.com** etki alanı adına sahip kişiler, e-posta adreslerinde (örneğin, `somebody@example.com` ) ve ad ve soyadlarına sahiptir.
+- Etki alanı adına sahip **kişiler example.com** e-posta adreslerinde (örneğin, ) ve `somebody@example.com` adlarıyla soyadına sahip kişilerdir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
-- [Nasıl yapılır: program aracılığıyla e-posta gönderme](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
-- [Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
-- [Nasıl yapılır: Outlook Kişilerine Program aracılığıyla giriş ekleme](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)
+- [Nasıl gönderilir: Program aracılığıyla e-posta gönderme](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
+- [Nasıl Outlook: Program aracılığıyla Outlook erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [Nasıl yapılanlar: Kişi eklemeye program aracılığıyla Outlook ekleme](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)

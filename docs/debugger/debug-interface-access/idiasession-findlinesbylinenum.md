@@ -11,14 +11,15 @@ ms.assetid: 76d5622d-9a91-4c2a-a98f-263af5d1daef
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 924b3aada49fca11056a1cf7f1b577bab505b3ce
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0d82e56f608573c316789210cd04502e57220440941082b98f07bce7395a59bf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147739"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380265"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
 Kaynak dosyadaki belirtilen satır numarasının içinde veya yakınında bulunduğu compiland 'ın satır numaralarını belirler.

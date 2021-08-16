@@ -11,14 +11,15 @@ ms.assetid: 67140b4c-7125-4895-932d-42412326da29
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e2fe993c524a846545a13ab14787c9c6fd5c92e0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 97e179b781ea430ab30d3d93ff52cd65b66e013ad3163b7ab54095f23e0c205c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158031"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380497"
 ---
 # <a name="idiaenumframedataskip"></a>IDiaEnumFrameData::Skip
 Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.

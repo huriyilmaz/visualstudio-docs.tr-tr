@@ -10,14 +10,15 @@ ms.assetid: 8b72b071-691b-48b7-8852-f748c20fc787
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4100d4c737f22fd91702546040b29363bed68e07
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ca7eeac459aebff1a2f5f6dc23ae8553fcf4989cae41246f817733c7457d3fea
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899264"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362048"
 ---
 # <a name="how-to-display-message-properties"></a>Nasıl yapılır: İleti Özelliklerini Görüntüleme
 [Iletiler görünümünde](../debugger/messages-view.md)listelenen bir ileti hakkında daha fazla bilgi edinmek Için [Ileti özellikleri iletişim kutusunu](../debugger/message-properties-dialog-box.md)kullanın.

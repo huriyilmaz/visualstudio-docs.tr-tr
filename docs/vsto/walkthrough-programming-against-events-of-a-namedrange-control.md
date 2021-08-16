@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: NamedRange denetimi olaylarına karşı programlama'
-description: Visual Studio 'da Office geliştirme araçları 'nı kullanarak Microsoft Excel çalışma sayfasına ve programına yönelik olarak bir NamedRange denetimini nasıl ekleyebileceğiniz hakkında bilgi edinin.
+description: Visual Studio ' de Office geliştirme araçları 'nı kullanarak Microsoft Excel çalışma sayfasına ve programa göre bir NamedRange denetimini nasıl ekleyebileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,17 +17,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ec1c670867fae277a3c3c8290cd34d0d4be7ddf3
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 8dcea6c0a963acfec784af11ca19e1623cdecce84ca88d1a6d8d318aa31a3fa3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824971"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121383956"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>İzlenecek yol: NamedRange denetimi olaylarına karşı programlama
-  Bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio 'Da Office geliştirme araçları 'nı kullanarak Microsoft Office Excel çalışma sayfasına ve programına yönelik bir denetimin nasıl ekleneceğini gösterir.
+  bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio Office geliştirme araçlarını kullanarak Microsoft Office Excel çalışma sayfasına ve programa yönelik bir denetimin nasıl ekleneceğini gösterir.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
@@ -40,7 +41,7 @@ ms.locfileid: "107824971"
 - Projenizi test edin.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -50,24 +51,24 @@ ms.locfileid: "107824971"
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
 ## <a name="create-the-project"></a>Proje oluşturma
- Bu adımda, Visual Studio kullanarak bir Excel çalışma kitabı projesi oluşturacaksınız.
+ bu adımda, Visual Studio kullanarak bir Excel çalışma kitabı projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Adlandırılmış Aralık olaylarım** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **adlandırılmış aralık olaylarım** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** **Adlandırılmış Aralık olayları** projesini ekler.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** **adlı adlandırılmış aralık olayları** projesini ekler.
 
 ## <a name="add-text-and-named-ranges-to-the-worksheet"></a>Çalışma sayfasına metin ve adlandırılmış aralıklar ekleme
- Konak denetimleri genişletilmiş Office nesneleri olduğundan, bunları belgenize yerel nesneyi ekleyeceğiniz şekilde ekleyebilirsiniz. Örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange> **Ekle** menüsünü açıp **ad**' ın üzerine gelip **Tanımla**' yı seçerek bir çalışma sayfasına Excel denetimi ekleyebilirsiniz. Ayrıca, <xref:Microsoft.Office.Tools.Excel.NamedRange> **araç kutusundan** çalışma sayfasına sürükleyerek bir denetim ekleyebilirsiniz.
+ konak denetimleri nesneleri Office genişlettiğinden, yerel nesneyi ekleyeceğiniz şekilde belgenize ekleyebilirsiniz. örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange> **ekle** menüsünü açıp **ad**' ın üzerine gelip **tanımla**' yı seçerek bir çalışma sayfasına Excel denetimi ekleyebilirsiniz. Ayrıca, <xref:Microsoft.Office.Tools.Excel.NamedRange> **araç kutusundan** çalışma sayfasına sürükleyerek bir denetim ekleyebilirsiniz.
 
  Bu adımda, **araç kutusunu** kullanarak çalışma sayfasına iki adlandırılmış aralık denetimi ekleyecek ve ardından çalışma sayfasına metin ekleyeceksiniz.
 
 ### <a name="to-add-a-range-to-your-worksheet"></a>Çalışma sayfanıza bir Aralık eklemek için
 
-1. *Adlandırılmış aralık Events.xlsx* çalışma kitabının, Visual Studio tasarımcısında görüntülenmiş olarak açık olduğunu doğrulayın `Sheet1` .
+1. *adlandırılmış aralık Events.xlsx* çalışma kitabının, Visual Studio tasarımcısında görüntülenir ve açık olduğunu doğrulayın `Sheet1` .
 
-2. Araç kutusunun **Excel denetimleri** sekmesinden, <xref:Microsoft.Office.Tools.Excel.NamedRange> içindeki **a1** hücresine bir denetim sürükleyin `Sheet1` .
+2. araç kutusunun **Excel denetimleri** sekmesinden, <xref:Microsoft.Office.Tools.Excel.NamedRange> içindeki **A1** hücresine bir denetim sürükleyin `Sheet1` .
 
      **NamedRange denetimi Ekle** iletişim kutusu görünür.
 
@@ -108,7 +109,7 @@ ms.locfileid: "107824971"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet24":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet24":::
 
-3. C# ' de, aşağıdaki olayda gösterildiği gibi, adlandırılmış aralığa yönelik olay işleyicileri eklemeniz gerekir <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> . Olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+3. C# ' de, aşağıdaki olayda gösterildiği gibi, adlandırılmış aralığa yönelik olay işleyicileri eklemeniz gerekir <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> . olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet25":::
 
@@ -122,7 +123,7 @@ ms.locfileid: "107824971"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet26":::
 
     > [!NOTE]
-    > Excel aralığındaki bir hücreye çift tıklamak düzenleme moduna girdiğinde, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> metinde değişiklik yapılmasa bile seçim aralığın dışına taşındığında bir olay oluşur.
+    > Excel aralıktaki bir hücreye çift tıklamak düzenleme moduna girdiğinde, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> metinde değişiklik yapılmasa bile seçim aralığın dışına taşındığında bir olay oluşur.
 
 ## <a name="add-code-to-respond-to-the-selectionchange-event"></a>SelectionChange olayına yanıt vermek için kod ekleme
 
@@ -134,7 +135,7 @@ ms.locfileid: "107824971"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet27":::
 
     > [!NOTE]
-    > Excel aralığındaki bir hücreye çift tıklamak seçimin aralığa taşınmasına neden olduğundan, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> olay gerçekleşmeden önce bir olay oluşur <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> .
+    > Excel aralıktaki bir hücreye çift tıklamak seçimin aralığa geçmesine neden olduğundan, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> olay gerçekleşmeden önce bir olay oluşur <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> .
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
  Artık, bir denetimin olaylarını açıklayan metnin, <xref:Microsoft.Office.Tools.Excel.NamedRange> Olaylar oluşturulduğunda başka bir adlandırılmış aralığa eklendiğini doğrulamak için çalışma kitabınızı test edebilirsiniz.
@@ -156,13 +157,13 @@ ms.locfileid: "107824971"
 ## <a name="next-steps"></a>Sonraki adımlar
  Bu izlenecek yol, bir denetimin olaylarına karşı programlama temellerini gösterir <xref:Microsoft.Office.Tools.Excel.NamedRange> . Daha sonra gelebilecek bir görev aşağıda verilmiştir:
 
-- Projeyi dağıtma. Daha fazla bilgi için bkz. [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
+- Projeyi dağıtma. daha fazla bilgi için bkz. [Office çözüm dağıtma](../vsto/deploying-an-office-solution.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
+- [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
 - [Nasıl yapılır: NamedRange denetimlerinin boyutunu değiştirme](../vsto/how-to-resize-namedrange-controls.md)
 - [Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [Nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md)
+- [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md)

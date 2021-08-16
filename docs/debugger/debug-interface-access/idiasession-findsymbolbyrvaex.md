@@ -11,14 +11,15 @@ ms.assetid: 61344966-fed4-4c02-9e27-20356ec2ef7c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fd63e97a27b122a15e6edd8054f76edf34c4779
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 829886c196e9d727250e9e1f7773c5cb93008cdc059799bfaa6c3feff0fa8784
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147627"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380153"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
 Belirtilen bir göreli sanal adres (RVA) ve sapmayı içeren veya en yakın olan belirtilen bir sembol türünü alır.

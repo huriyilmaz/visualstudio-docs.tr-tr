@@ -9,17 +9,18 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 004c9929b33878359fa23735189d60939953755a
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: fa76c545019dd1b2faca45d25ba7dfdafc267fc74dcee0f7e3ba826b6ebab5e1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390912"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410976"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Etki Alanına Özgü Dil Araçlarına Genel Bakış
-Domain-Specific'da barındırılan Domain-Specific Dil Araçları (DSL Araçları), Visual Studio etki alanına özgü bir dil tasarlamanızı ve ardından kullanıcıların dile dayalı modeller oluşturmak için sahip olması gereken her şeyi oluşturmanızı sağlar.
+Domain-Specific'da barındırılan Visual Studio Dil Araçları (DSL Araçları), etki alanına özgü bir dil tasarlamanızı ve ardından kullanıcıların dile dayalı modeller oluşturmak için sahip olması gereken her şeyi oluşturmanızı sağlar.
 
  DSL Araçları'nın içinde aşağıdaki araçlar yer almaktadır:
 
@@ -34,7 +35,7 @@ Domain-Specific'da barındırılan Domain-Specific Dil Araçları (DSL Araçlar�
 ## <a name="the-dsl-tools-solution"></a>DSL Araçları Çözümü
  Domain-Specific Tasarımcısı Sihirbazı aşağıdaki çözüm şablonlarını sağlar:
 
-- Görev Akışı
+- Görev Flow
 
 - Sınıf Diyagramları
 
@@ -44,7 +45,7 @@ Domain-Specific'da barındırılan Domain-Specific Dil Araçları (DSL Araçlar�
 
 - Minimum WPF
 
-- En Az Windows.Forms
+- Minimum Windows. Forms
 
 - DSL Kitaplığı
 
@@ -61,12 +62,12 @@ Domain-Specific'da barındırılan Domain-Specific Dil Araçları (DSL Araçlar�
    DslPackage projesi, dil araçlarının Visual Studio.
 
 ## <a name="the-dsl-tools-graphical-interface"></a>DSL Araçları Grafik Arabirimi
- DSL Araçları grafik arabirimini kullanarak etki alanına özgü dilinize öğeler ve ilişkiler ebilirsiniz. Öğeleri ekledikten sonra şekillere eşledikten, renkleri özelleştirerek ve dekoratör ekleyerek bunların görünümünü tanımlayabilirsiniz. Öğeleri araç kutusuna da ebilirsiniz.
+ DSL Araçları grafik arabirimini kullanarak etki alanına özgü dilinize öğeler ve ilişkiler ebilirsiniz. Öğeleri ekledikten sonra şekillere eşledikten, renkleri özelleştirerek ve dekoratör ekleyerek bunların görünümünü tanımlayabilirsiniz. Öğeleri araç kutusuna da ekebilirsiniz.
 
 ## <a name="validation-in-dsl-tools"></a>DSL Araçlarında Doğrulama
  Dsl, etki alanı modelinin kod oluşturma için temel gereksinimleri karşılamasını sağlayan tek bir doğrulama düzeyi sağlar. Genellikle, etki alanına özgü kendi dilinizi ekleyebilirsiniz, iş mantığı kurallarınızı ifade etmek için kendi doğrulamanızı eklersiniz. Özel doğrulama hakkında daha fazla bilgi için, [bkz. Validation in a Domain-Specific Language](../modeling/validation-in-a-domain-specific-language.md).
 
- Tasarlarken etki alanına özgü dilinizi sıklıkla doğrulamanızı öneririz. Etki alanına özgü diliniz doğrulama hataları içeriyorsa kaynak kodu oluşturamazsiniz. Şablonlardan kaynak kodu oluşturma işlemi, kaynak kodunun araç çubuğundaki Tüm **Şablonları** Dönüştür'e tık Çözüm Gezgini. Dil tanımını her değiştirerek Tüm Şablonları **Dönüştür'e de sahip olun.** Daha fazla bilgi için, [bkz. How to: Create a Domain-Specific Language Solution](../modeling/how-to-create-a-domain-specific-language-solution.md).
+ Tasarlarken etki alanına özgü dilinizi sıklıkla doğrulamanızı öneririz. Etki alanına özgü diliniz doğrulama hataları içeriyorsa kaynak kodu oluşturamazsiniz. Şablonlardan kaynak kodu oluşturma işlemi, kaynak  kodunun araç çubuğundaki Tüm Şablonları Dönüştür'e tık Çözüm Gezgini. Dil tanımını her değiştirerek Tüm Şablonları **Dönüştür'e de sahip olun.** Daha fazla bilgi için, [bkz. How to: Create a Domain-Specific Language Solution](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
 ## <a name="customization-of-dsl-tools"></a>DSL Araçlarını Özelleştirme
  Modelin davranışını geliştirmek ve dilinize göre kısıtlamalar tanımlamak için ek kod sebilirsiniz. Gerekirse, metin şablonlarını değiştirerek önemli değişiklikler yapabilirsiniz.
@@ -74,7 +75,7 @@ Domain-Specific'da barındırılan Domain-Specific Dil Araçları (DSL Araçlar�
 ## <a name="distributing-your-dsl-solution"></a>DSL Çözümlerinizi Dağıtma
  DSL Araçları, içinde barındırılan bir paket Visual Studio. Paket, kullanıcıların etki alanına özgü dilinizi kullanarak model oluşturmasına olanak sağlarken bir araç kutusu, DSL gezgini ve diğer kullanıcı arabirimi öğelerini görüntüler.
 
- Visual Studio'da DSL Araçları çözümünü derlemek ve çalıştırmak için Visual Studio örneği, etki alanına özgü dilinizin dilin kullanıcıya nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladikten sonra DslPackage projesinin derleme klasöründe bulursanız dosyayı `.vsix` dağıtabilirsiniz. Bu dosya DSL'i diğer bilgisayarlara bir Visual Studio olarak yüklemek için kullanılabilir.  Daha fazla bilgi için, [bkz. Deploying Domain-Specific Language Solutions](msi-and-vsix-deployment-of-a-dsl.md).
+ Visual Studio'da DSL Araçları çözümünü derlemek ve çalıştırmak için Visual Studio'nin ikinci bir örneği, etki alanına özgü dilinizin dilin kullanıcıya nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladikten sonra DslPackage projesinin derleme klasöründe bulursanız dosyayı `.vsix` dağıtabilirsiniz. Bu dosya DSL'i diğer bilgisayarlara bir Visual Studio olarak yüklemek için kullanılabilir.  Daha fazla bilgi için, [bkz. Deploying Domain-Specific Language Solutions](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
 title: Dosyaya git, simgeye git, satıra git
-description: Visual Studio 'da komutlara gitme ve kodunuzda odaklanmış aramalar gerçekleştirmek için bunları nasıl kullanabileceğiniz hakkında bilgi edinin.
+description: Visual Studio komutlara git ve kodunuzda odaklanmış aramalar gerçekleştirmek için bunları nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2018
 ms.topic: conceptual
@@ -12,18 +12,19 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 257db632c095027d9fa4be667a30e809ecb2fff4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b27e8ead53f79af584a289161236d88c35e832c7422d5b645d39731fb5060c7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946624"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121413483"
 ---
 # <a name="find-code-using-go-to-commands"></a>Git komutlarını kullanarak kod bulma
 
-Visual Studio 'nun komutlara **Git** , belirtilen öğeleri hızlı bir şekilde bulmanıza yardımcı olmak için kodunuzda odaklanmış bir arama gerçekleştirir. Basit ve Birleşik bir arabirimden belirli bir satıra, türe, simgeye, dosyaya ve üyeye gidebilirsiniz.
+Visual Studio, belirtilen öğeleri hızlı bir şekilde bulmanıza yardımcı olması için kodunuzda odaklanmış bir arama gerçekleştirmek için komutlara **gidin** . Basit ve Birleşik bir arabirimden belirli bir satıra, türe, simgeye, dosyaya ve üyeye gidebilirsiniz.
 
 ## <a name="how-to-use-it"></a>Nasıl kullanılır?
 
@@ -54,7 +55,7 @@ Varsayılan olarak, belirtilen öğe tüm çözüm öğelerinde aranır. Ancak, 
 
 Aramanızı belirli bir kod öğesi türüne daraltmak için, arama kutusunda bir ön ek belirtebilir veya beş filtre simgelerinden birini seçebilirsiniz:
 
-Ön ek | Simge | Kısayol | Description
+Ön ek | Simge | Kısayol | Açıklama
 :-: | - | - | -
 :| ![Çizgi simgesi](media/gotoall-line-icon.png) | **CTRL** + **G** | Belirtilen satır numarasına git
 f| ![Dosyalar simgesi](media/gotoall-files-icon.png) | **CTRL** + **1**, **CTRL** + **F** | Belirtilen dosyaya git
@@ -67,7 +68,7 @@ m| ![Üyeler simgesi](media/gotoall-members-icon.png) | **CTRL** + **1**, **CTRL
 
 Aramanızı belirli bir konuma daraltmak için, iki belge simgesinin birini seçin:
 
-Simge | Description
+Simge | Açıklama
 ---- | ---
 ![Geçerli belge](media/gotoall_currentdocument.png) | Yalnızca geçerli belgeyi ara
 ![Dış belgeler](media/gotoall_external.png) | Dış belgeleri projede/çözümde bulunanlara ek olarak ara

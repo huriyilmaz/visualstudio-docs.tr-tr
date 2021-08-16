@@ -1,6 +1,6 @@
 ---
-title: Kaynak denetimi eklentisi sözlüğü | Microsoft Docs
-description: Bu makale, kaynak denetimi eklentisi SDK belgeleriyle ilgili yararlı hüküm ve tanımları içerir.
+title: Kaynak Denetimi Eklentisi Sözlüğü | Microsoft Docs
+description: Bu makale, Kaynak Denetimi Eklentisi SDK'sı belgeleriyle ilgili yararlı terimler ve tanımlar içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,46 +11,47 @@ ms.assetid: f224bbc9-38fc-4c80-ab09-51dcc8969f8e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05b215de4191362a539d3b03ac858da6bb7ee292
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 45d4c946e78a611d7e4837366fbbf618f317c775d7d362f2807ccd40d084b1c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899530"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121358954"
 ---
 # <a name="source-control-plug-in-glossary"></a>Kaynak Denetimi Eklentisi Sözlüğü
-Aşağıdaki faydalı hüküm ve tanımlar, kaynak denetimi eklentisi SDK belgeleriyle ilgilidir.
+Aşağıdaki yararlı terimler ve tanımlar Kaynak Denetimi Eklentisi SDK belgeleriyle ilgilidir.
 
 ## <a name="definitions"></a>Tanımlar
- İade etme Kullanıcı çalışma kopyasında değişiklik yaptığında, kullanıcının değişiklikleri çalışma kopyasından merkezi kaynak denetimi deposuna gönderebilmesi gerekir. Bu, dosyanın diğer kullanıcılar tarafından kullanılabilen yeni bir düzeltmesini oluşturur. Bu işleme iade adı verilir.
+ Kullanıcı çalışan bir kopyada değişiklik yaparsa, kullanıcının değişiklikleri çalışan kopyadan merkezi kaynak denetim deposuna göndermesi gerekir. Bu, dosyanın diğer kullanıcılar tarafından kullanılabilen yeni bir düzeltmesi oluşturur. Bu işleme iade adı verilen bir işlemdir.
 
- Depodan bir çalışma kopyası isteme işlemini kullanıma alın ve bu depoyu, onu değiştirme amacınızı bildirerek bilgilendirin. Çalışma kopyası, projenin durumunu kullanıma alındığı andan itibaren yansıtır.
+ Depodan çalışan bir kopya isteği oluşturma ve depoyu değiştirme amacınızı bildirme eylemini kontrol edin. Çalışma kopyası, kullanıma alınmış olan andan itibaren projenin durumunu yansıtıyor.
 
- İstemci, kaynak kodu denetim sistemini kullanan bir program. Bu belgelerin amacına yönelik olarak, Visual Studio IDE 'dir.
+ İstemci Kaynak kodu denetim sistemini kullanan bir program. Bu belgelerin amacı, IDE'Visual Studio belgedir.
 
- Bir kaynak denetim işlemi gerçekleştirildiğinde bir kullanıcının düzeltmeye iliştireme yaptığı değişiklikleri açıklayan bir ileti ekleyin.
+ Açıklama: Kaynak denetimi işlemi gerçekleştirilecek bir kullanıcının düzeltmeye ek olarak ekley yaptığı değişiklikleri açıklayan bir ileti.
 
- İki kullanıcı aynı dosyanın aynı bölgesindeki değişiklikleri iade etmek için bir durum çakışması. Genellikle, bir birleştirme gerçekleştirilmelidir.
+ Çakışma İki kullanıcı aynı dosyanın aynı bölgesinde yapılan değişiklikleri iade etmeye çalışma durumu. Genellikle bir birleştirme gerçekleştirin.
 
- Dizin bir istemci tarafı yerel klasörü, dizin olarak adlandırılır. Bu, kullanıcının aslında değişiklik yaptığı kopyasıdır. Belirli bir projenin birçok çalışma kopyası olabilir; genellikle her geliştiricinin kendi kopyası vardır.
+ Dizin İstemci tarafı yerel klasörü, dizin olarak adlandırılır. Bu, kullanıcının gerçekten değişiklik yaptığınız kopyadır. Bir projenin çok sayıda çalışan kopyası olabilir; genellikle her geliştiricinin kendi kopyası vardır.
 
- Get işlemi, kullanıcının çalışma kopyasını depo kopyasıyla güncel hale getirir. Bir kullanıma almanın aksine, Kullanıcı yalnızca en son kopyaya ihtiyaç duymadığında ancak hiçbir değişiklik yapmadan bir alma işlemi gerçekleştirilir.
+ Get A get işlemi, kullanıcının çalışma kopyasını depo kopyasıyla güncel olarak getirir. Kullanımdan farklı olarak, kullanıcı yalnızca en son kopyaya ihtiyaç olduğunda ancak değişiklik yapma amacında olduğunda bir alma işlemi gerçekleştirilir.
 
- Geçmiş genellikle kaynak denetim deposunda yapılan tüm kullanıma alma işlemleri, iadeler, güncelleştirmeler, Etiketler ve sürümlerin bir özetidir.
+ Geçmiş Genellikle kaynak denetim deposunda yapılan tüm iadelerin, iadelerin, güncelleştirmelerin, etiketlerin ve yayınların özetidir.
 
- IDE genellikle Visual Studio tümleşik geliştirme ortamına başvurur. Ancak, kaynak denetimi eklentisi API 'sini tanıyan diğer istemci ortamlarına de başvurabilir.
+ IDE Genel olarak tümleşik Visual Studio ortamını ifade eder. Ancak, Kaynak Denetimi Eklentisi API'sini tanıyan diğer istemci ortamlarını da ifade eder.
 
- Önceki dosyalardaki tüm özellikleri ekleyen yeni bir dosya oluşturmak için iki veya daha fazla kaynak kodu dosyasının birleştirileceği işlemi birleştirin. Bu kavram, iki veya daha fazla geliştiricinin dosyalarda eşzamanlı olarak çalıştığı sürüm denetiminde hayati öneme sahiptir.
+ Birleştirme Önceki dosyalardan tüm özellikleri içeren yeni bir dosya oluşturmak için iki veya daha fazla kaynak kod dosyasının birleştirildi olduğu işlem. Bu kavram, iki veya daha fazla geliştiricinin dosyalar üzerinde eşzamanlı olarak çalışa bir sürüm denetiminde yaşamsal önem taşır.
 
- Proje kaynak denetim klasörü genellikle proje olarak adlandırılır. Bu, Visual Studio 'daki proje veya çözümlerle hiçbir ilişkiye sahip değildir.
+ Project Kaynak denetim klasörü genellikle proje olarak adlandırılır. Bunun projelerle veya çözümlerle herhangi bir ilişkisi Visual Studio.
 
- Kaynak denetimi eklentisi API 'sini uygulayarak kaynak denetimi işlevselliği sağlayan bir DLL eklentisi.
+ Eklenti Kaynak Denetimi Eklentisi API'sini kullanarak kaynak denetimi işlevselliği sağlayan bir DLL.
 
- Kaynak denetim sisteminin bir projenin tam değişiklik geçmişini sakladığı ana kopyayı depoya koyun. Her projenin tam olarak bir deposu vardır.
+ Depo Kaynak denetim sisteminin projenin tam düzeltme geçmişini depolayıp depolaması gereken ana kopya. Her projenin tam olarak bir deposu var.
 
- Bir dosyanın veya dosya kümesinin geçmişinde yürütülen değişikliği düzeltme. Bir düzeltme, sürekli değişen bir projede bir anlık görüntüdür.
+ Düzeltme Bir dosya veya dosya kümesi geçmişinde kaydedilmiş bir değişiklik. Düzeltme, sürekli değişen bir projede yer alan anlık görüntülerdendir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri](../extensibility/source-control-plug-ins.md)

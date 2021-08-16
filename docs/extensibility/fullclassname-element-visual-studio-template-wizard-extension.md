@@ -15,14 +15,14 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75be4f32abd5ab0bdf945ad250b73a6f060cae25
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 27b719e153d3545dca0c0c113c173a238bd5901e0a72b94e7740e1c7aed5bac0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074970"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360007"
 ---
-# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName Öğesi (Visual Studio Şablon Sihirbazı uzantısı)
+# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>fullclassname öğesi (Visual Studio şablon sihirbazı uzantısı)
 Arabirimi uygulayan sınıfın tam adı `IWizard` .
 
  \<VSTemplate> \<WizardExtension>
@@ -58,7 +58,7 @@ Arabirimi uygulayan sınıfın tam adı `IWizard` .
  `FullClassName` , öğesinin gerekli bir alt öğesidir `WizardExtension` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir Windows uygulaması için Standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+ aşağıdaki örnek, bir Windows uygulaması için standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"
@@ -89,6 +89,6 @@ Arabirimi uygulayan sınıfın tam adı `IWizard` .
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
 - [Nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)

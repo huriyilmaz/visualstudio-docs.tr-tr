@@ -1,28 +1,29 @@
 ---
 title: T4 Metin Şablonları Yazma Yönergeleri
-description: Visual Studio 'da program kodu veya diğer uygulama kaynakları oluştururken yararlı olan genel yönergeleri öğrenin.
+description: Visual Studio ' de program kodu veya diğer uygulama kaynakları oluşturuyorsanız yararlı olan genel yönergeleri öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f043e95ef477558028e634bf6b48aded2960ec2
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 6a3a7722792c652eb03e607c39e3f70d618b25be9dd63667bff2f3ed559d4b94
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386663"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411041"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 Metin Şablonları Yazma Yönergeleri
 
-Bu genel yönergeler, Visual Studio 'da program kodu veya diğer uygulama kaynakları oluşturuyorsanız yararlı olabilir. Bunlar sabit kurallar değildir.
+Visual Studio içinde program kodu veya diğer uygulama kaynakları oluşturuyorsanız bu genel yönergeler yararlı olabilir. Bunlar sabit kurallar değildir.
 
 ## <a name="guidelines-for-design-time-t4-templates"></a>T4 şablonları Design-Time yönergeleri
 
-Tasarım zamanı T4 şablonları, Visual Studio projenizde tasarım zamanında kod üreten şablonlardır. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
+tasarım zamanı T4 şablonları, tasarım zamanında Visual Studio projenizde kod üreten şablonlardır. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
 Uygulamanın değişken yönlerini oluşturun.
 
@@ -30,7 +31,7 @@ Kod üretimi, uygulamanın proje sırasında değişebilir ya da uygulamanın fa
 
 Değişken yönlerini bir veya daha fazla kaynak modelinde kodlayın.
 
-Model, oluşturulacak kodun değişken bölümlerinin belirli değerlerini almak için her şablonun okuduğu bir dosya veya veritabanıdır. Modeller veritabanları, kendi tasarımınızın, diyagramlarınızın veya etki alanına özgü dillerinizin XML dosyaları olabilir. Genellikle, bir model Visual Studio projesinde birçok dosya oluşturmak için kullanılır. Her dosya ayrı bir şablondan oluşturulur.
+Model, oluşturulacak kodun değişken bölümlerinin belirli değerlerini almak için her şablonun okuduğu bir dosya veya veritabanıdır. Modeller veritabanları, kendi tasarımınızın, diyagramlarınızın veya etki alanına özgü dillerinizin XML dosyaları olabilir. genellikle, bir Visual Studio projesinde birçok dosya oluşturmak için bir model kullanılır. Her dosya ayrı bir şablondan oluşturulur.
 
 Bir projede birden fazla model kullanabilirsiniz. Örneğin, Web sayfaları arasında gezinti için bir model ve sayfaların düzeni için ayrı bir model tanımlayabilirsiniz.
 
@@ -48,7 +49,7 @@ Bazı durumlarda, Genel testler doğrudan modelde gerçekleştirilebilir. Örne�
 
 Özel koda izin ver: kısmi sınıflar oluşturun.
 
-Oluşturulan koda ek olarak el ile yazdığınız koda izin verin. Kod oluşturma şemasının ortaya çıkabilecek tüm olası Çeşitlemeler için hesap yapabilmesi olağan dışı bir durum olabilir. Bu nedenle, oluşturulan kodların bazılarını eklemek veya geçersiz kılmak için beklemeniz gerekir. Oluşturulan malzemenin C# veya Visual Basic gibi bir .NET dilinde olması halinde, iki strateji özellikle yararlı olur:
+Oluşturulan koda ek olarak el ile yazdığınız koda izin verin. Kod oluşturma şemasının ortaya çıkabilecek tüm olası Çeşitlemeler için hesap yapabilmesi olağan dışı bir durum olabilir. Bu nedenle, oluşturulan kodların bazılarını eklemek veya geçersiz kılmak için beklemeniz gerekir. oluşturulan malzemenin C# veya Visual Basic gibi bir .net dilinde olması halinde, iki strateji özellikle yararlı olur:
 
 - Oluşturulan sınıflar kısmi olmalıdır. Bu, oluşturulan koda içerik eklemenize olanak sağlar.
 
@@ -145,7 +146,7 @@ Hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonu
 
 `.tt`İçerme dosyaları için kullanmayın.
 
-İçerme dosyaları için gibi farklı bir dosya adı uzantısı kullanın `.ttinclude` . `.tt`Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak işlenmesini istediğiniz dosyalar için kullanın. Bazı durumlarda, Visual Studio dosyaları tanır `.tt` ve işlemek için özelliklerini otomatik olarak ayarlar.
+İçerme dosyaları için gibi farklı bir dosya adı uzantısı kullanın `.ttinclude` . `.tt`Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak işlenmesini istediğiniz dosyalar için kullanın. bazı durumlarda, Visual Studio dosyaları tanır `.tt` ve işlemek için özelliklerini otomatik olarak ayarlar.
 
 Her şablonu sabit bir prototip olarak başlatın.
 
@@ -153,7 +154,7 @@ Oluşturmak istediğiniz kod veya metnin bir örneğini yazın ve doğru olduğu
 
 Yazılan modeller kullanmayı düşünün.
 
-Modelleriniz için bir XML veya veritabanı şeması oluşturabilseniz de, etki alanına özgü dil (DSL) oluşturmak faydalı olabilir. DSL, şemada her düğümü temsil eden bir sınıf oluşturma avantajına ve öznitelikleri temsil eden özelliklere sahiptir. Bu, iş modeli açısından programlayabilirsiniz anlamına gelir. Örneğin:
+Modelleriniz için bir XML veya veritabanı şeması oluşturabilseniz de, etki alanına özgü dil (DSL) oluşturmak faydalı olabilir. DSL, şemada her düğümü temsil eden bir sınıf oluşturma avantajına ve öznitelikleri temsil eden özelliklere sahiptir. Bu, iş modeli açısından programlayabilirsiniz anlamına gelir. Örnek:
 
 ```
 Team Members:

@@ -1,6 +1,6 @@
 ---
-description: System.Threading.Tasks.Task nesnesinin geçerli durumuyla ilgili bilgileri depolar.
-title: m_stateFlags Alanı | Microsoft Docs
+description: System. Threading. Tasks. Task nesnesinin geçerli durumuyla ilgili bilgileri depolar.
+title: m_stateFlags alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,23 +9,24 @@ ms.assetid: 82b20efc-08f2-4cd2-91f6-4e01e3da906b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0bf584511bc2f0ee43429abe83dea3d7a45259d9
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: d974e114d9c1b1ee7680e02db8de5d23649f251266f76d86086acf2c0beb51fe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898919"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361034"
 ---
 # <a name="m_stateflags-field"></a>m_stateFlags alanı
-Nesnenin geçerli durumuyla ilgili bilgileri <xref:System.Threading.Tasks.Task> depolar.
+Nesnenin geçerli durumu hakkında bilgi depolar <xref:System.Threading.Tasks.Task> .
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Derleme:** mscorlib *(mscorlib.dll*)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,9 +35,9 @@ Nesnenin geçerli durumuyla ilgili bilgileri <xref:System.Threading.Tasks.Task> 
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değere erişmek <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName> için genellikle özelliğini kullanırsiniz.
+ <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName>Bu değere erişmek için genellikle özelliğini kullanın.
 
- Bu üye aşağıdaki değerlerin herhangi bir birleşimi olabilir:
+ Bu üye aşağıdaki değerlerden herhangi bir bileşim olabilir:
 
 - [TASK_STATE_EXECUTED](../../extensibility/debugger/task-state-executed-field.md)
 

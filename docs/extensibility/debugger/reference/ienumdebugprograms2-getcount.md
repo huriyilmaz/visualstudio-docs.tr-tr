@@ -1,6 +1,6 @@
 ---
-description: Programlar numaralandırmasındaki öğe sayısını döndürür.
-title: 'IEnumDebugPrograms2:: GetCount | Microsoft Docs'
+description: Program numaralama öğeleri sayısını döndürür.
+title: IEnumDebugPrograms2::GetCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 84832982-fa68-4090-a5b7-b233817876b7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2bfa24e963b826ad843c6e3f53cd125a9dea21ad
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: affb506f81acc20aec2bac35940fa572be7fd4be52d376d6e0b9037c4a98a059
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064520"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360072"
 ---
 # <a name="ienumdebugprograms2getcount"></a>IEnumDebugPrograms2::GetCount
-Numaralandırmadaki öğe sayısını döndürür.
+Numaralamada öğe sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-dışı Numaralandırmadaki öğe sayısını döndürür.
+[out] Numaralamada öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, yalnızca,, `Next` `Clone` `Skip` ve `Reset` yöntemlerinin uygulanması gerektiğini belirten normal com numaralandırma arabiriminin bir parçası değildir.
+ Bu yöntem, yalnızca , , ve yöntemlerinin uygulanmasının gerekli olduğunu belirten özel COM numaralama `Next` `Clone` `Skip` `Reset` arabiriminin bir parçası değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

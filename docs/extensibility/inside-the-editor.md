@@ -10,14 +10,15 @@ ms.assetid: 822cbb8d-7ab4-40ee-bd12-44016ebcce81
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0bd45bb0a47de7283d75c083edc46b6fc38fe7d3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4b7fbf671b20cd923e8adc181179ce3d042ed9326f69638eaee3d5e57d7c1ffa
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079208"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359799"
 ---
 # <a name="inside-the-editor"></a>Düzenleyicinin içinde
 
@@ -61,11 +62,11 @@ Metin modeli alt sistemi, metni temsil eden ve işlemesini etkinleştirmeye soru
 
 Metin modeli alt sistemi, Kullanıcı arabirimi (UI) kavramlarından muaf değildir. Örneğin, metin biçimlendirme veya metin düzeninden sorumlu değildir ve metinle ilişkili olabilecek görsel donatılarla ilgili bir bilgi içermez.
 
-Metin modeli alt sisteminin ortak türleri *Microsoft.VisualStudio.Text.Data.dll* ve *Microsoft.VisualStudio.CoreUtility.dll* bulunur ve yalnızca .NET Framework temel sınıf KITAPLıĞıNA ve Managed Extensibility Framework (MEF) bağımlıdır.
+metin modeli alt sisteminin ortak türleri *Microsoft.VisualStudio.Text.Data.dll* ve *Microsoft.VisualStudio.CoreUtility.dll* bulunur ve yalnızca .NET Framework temel sınıf kitaplığına ve Managed Extensibility Framework (MEF) bağımlıdır.
 
 ### <a name="text-view-subsystem"></a>Metin görünümü alt sistemi
 
-Metin görünümü alt sistemi, metin biçimlendirme ve görüntüleme sorumludur. Bu alt sistemdeki türler, türlerin Windows Presentation Foundation (WPF) bağımlı olmasına bağlı olarak iki katmana bölünür. En önemli türler, <xref:Microsoft.VisualStudio.Text.Editor.ITextView> <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> görüntülenecek metin satırları kümesini ve ayrıca giriş işaretini, SEÇIMI ve WPF Kullanıcı arabirimi öğelerini kullanarak metni donatma özelliklerini denetleyen ve ' dir. Bu alt sistem ayrıca metin görüntüleme alanı etrafında kenar boşlukları sağlar. Bu kenar boşlukları genişletilebilir ve farklı türde içerik ve görsel etkiler içerebilir. Kenar boşluklarının örnekleri satır numarası ekranları ve kaydırma çubuklardır.
+Metin görünümü alt sistemi, metin biçimlendirme ve görüntüleme sorumludur. bu alt sistemdeki türler, türlerin Windows Presentation Foundation (WPF) bağımlı olmasına bağlı olarak iki katmana bölünür. En önemli türler, <xref:Microsoft.VisualStudio.Text.Editor.ITextView> <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> görüntülenecek metin satırları kümesini ve ayrıca giriş işaretini, SEÇIMI ve WPF Kullanıcı arabirimi öğelerini kullanarak metni donatma özelliklerini denetleyen ve ' dir. Bu alt sistem ayrıca metin görüntüleme alanı etrafında kenar boşlukları sağlar. Bu kenar boşlukları genişletilebilir ve farklı türde içerik ve görsel etkiler içerebilir. Kenar boşluklarının örnekleri satır numarası ekranları ve kaydırma çubuklardır.
 
 Metin görünümü alt sisteminin ortak türleri *Microsoft.VisualStudio.Text.UI.dll* ve *Microsoft.VisualStudio.Text.UI.Wpf.dll* içindedir. İlk derleme, platformdan bağımsız öğeleri içerir ve ikincisi WPF 'e özgü öğeleri içerir.
 
@@ -77,7 +78,7 @@ Sınıflandırma alt sisteminin ortak türleri Microsoft.VisualStudio.Text.Logic
 
 ### <a name="operations-subsystem"></a>İşlemler alt sistemi
 
-İşlemler alt sistemi düzenleyici davranışını tanımlar. Visual Studio Düzenleyicisi komutları ve geri alma sistemi için uygulama sağlar.
+İşlemler alt sistemi düzenleyici davranışını tanımlar. Visual Studio düzenleyicisi komutları ve geri alma sistemi için uygulama sağlar.
 
 ## <a name="a-closer-look-at-the-text-model-and-the-text-view"></a>Metin modeline ve metin görünümüne daha yakından bakış
 
@@ -100,7 +101,7 @@ Bir metin arabelleği, ömrü boyunca pek çok sürümü geçebilir. Arabellek h
 Metin anlık görüntüsünün içeriğini bir karakter dizisi veya satır dizisi olarak görüntüleyebilirsiniz. Hem karakterler hem de satırlar sıfırdan başlayarak dizinlenir. Boş bir metin anlık görüntüsü sıfır karakter ve bir boş satır içerir. Bir çizgi, geçerli bir Unicode satır sonu karakter dizisiyle veya arabelleğin başına ya da sonuna göre sınırlandırılır. Satır sonu karakterleri metin anlık görüntüsünde açıkça temsil edilir ve bir metin anlık görüntüsüne ait satır sonlarının hepsi aynı olmamalıdır.
 
 > [!NOTE]
-> Visual Studio Düzenleyicisi 'ndeki satır sonu karakterleri hakkında daha fazla bilgi için bkz. [kodlamalar ve satır sonları](../ide/encodings-and-line-breaks.md).
+> Visual Studio düzenleyicisinde satır sonu karakterleri hakkında daha fazla bilgi için bkz. [kodlamalar ve satır sonları](../ide/encodings-and-line-breaks.md).
 
 Bir metin satırı <xref:Microsoft.VisualStudio.Text.ITextSnapshotLine> , belirli bir satır numarası veya belirli bir karakter konumu için bir metin anlık görüntüsünden elde edilebilir bir nesne tarafından temsil edilir.
 
@@ -134,79 +135,79 @@ abcdefghij
 abXefYj
 ```
 
-İkinci düzenlemenin koordinatları, ilk düzenleme uygulanmadan önce, işlemin başındaki arabelleğin içeriğine göre hesaplanır.
+İkinci düzenlemenin koordinatları, ilk düzenleme uygulanmadan önce, işlem başındaki arabellek içeriğine göre hesaplandı.
 
-Arabellekte yapılan değişiklikler nesne yöntemi çağırarak işlem tamamlandığında etkili olur <xref:Microsoft.VisualStudio.Text.ITextEdit> `Apply()` . Boş olmayan en az bir düzenleme varsa, yeni bir <xref:Microsoft.VisualStudio.Text.ITextVersion> oluşturulur, yeni bir oluşturulur <xref:Microsoft.VisualStudio.Text.ITextSnapshot> ve bir `Changed` olay tetiklenir. Her metin sürümünün farklı bir metin anlık görüntüsü vardır. Bir metin anlık görüntüsü, bir düzenleme işleminden sonra metin arabelleğinin bütün durumunu temsil eder, ancak bir metin sürümü yalnızca bir anlık görüntüden diğerine yapılan değişiklikleri açıklar. Genel olarak, metin anlık görüntülerinin bir kez kullanılması ve sonra atılması ve metin sürümlerinin bir süre etkin kalması gerekir.
+Arabelleğe yapılan değişiklikler, nesnesi yöntemi <xref:Microsoft.VisualStudio.Text.ITextEdit> çağrılarak işlendiklerine göre `Apply()` etkili olur. En az bir boş olmayan düzenleme varsa, yeni <xref:Microsoft.VisualStudio.Text.ITextVersion> bir oluşturulur, yeni <xref:Microsoft.VisualStudio.Text.ITextSnapshot> bir oluşturulur ve bir olay `Changed` oluşturulur. Her metin sürümü farklı bir metin anlık görüntüsüne sahip. Metin anlık görüntüsü, düzenleme işlemi sonrasında metin arabelleğinin tam durumunu temsil eder, ancak metin sürümü yalnızca bir anlık görüntüden bir sonrakine yapılan değişiklikleri açıklar. Genel olarak, metin anlık görüntülerinin bir kez kullanılmaya ve sonra atılırken, metin sürümlerinin bir süre canlı kalması gerekir.
 
-Metin sürümü bir içerir <xref:Microsoft.VisualStudio.Text.INormalizedTextChangeCollection> . Bu koleksiyonda, anlık görüntüye uygulandığında sonraki anlık görüntüyü üreten değişiklikler açıklanmaktadır. <xref:Microsoft.VisualStudio.Text.ITextChange>Koleksiyonda her değişiklik, değişikliğin karakter konumunu, değiştirilen dizeyi ve değiştirme dizesini içerir. Değiştirilen dize temel bir ekleme için boş ve bir temel silme için değiştirme dizesi boş. Normalleştirilmiş koleksiyon, her zaman `null` Metin arabelleğinin en son sürümü içindir.
+Metin sürümü bir <xref:Microsoft.VisualStudio.Text.INormalizedTextChangeCollection> içerir. Bu koleksiyon, anlık görüntüye uygulandığında sonraki anlık görüntüyü üreten değişiklikleri açıklar. Koleksiyonda her değişiklik karakter konumunu, değiştirilen <xref:Microsoft.VisualStudio.Text.ITextChange> dizeyi ve değiştirme dizesini içerir. Değiştirilen dize, temel ekleme için boştur ve değiştirme dizesi de temel silme işlemi için boştur. Normalleştirilmiş koleksiyon her zaman `null` metin arabelleğinin en son sürümüne göredir.
 
-Herhangi bir <xref:Microsoft.VisualStudio.Text.ITextEdit> anda bir metin arabelleği için yalnızca bir nesne oluşturulabilir ve metin arabelleğinin sahip olduğu iş parçacığında tüm metin düzenlemeleri gerçekleştirilmelidir (sahiplik istenirse). Bir metin düzenlemesi, `Cancel` yöntemi veya metodu çağırarak bırakılmış olabilir `Dispose` .
+Herhangi bir zamanda bir metin arabelleği için yalnızca bir nesne örneği gerçekleştirilir ve metin arabelleğinin sahibi olan iş parçacığında tüm metin düzenlemeleri yapılmalıdır (sahiplik talep <xref:Microsoft.VisualStudio.Text.ITextEdit> edildi ise). Metin düzenlemesi, yöntemi veya yöntemi `Cancel` çağrılarak terk `Dispose` edilir.
 
-<xref:Microsoft.VisualStudio.Text.ITextBuffer> Ayrıca `Insert()` ,, `Delete()` ve `Replace()` arayüzde bulunan yöntemlere benzeyen yöntemler de sağlar <xref:Microsoft.VisualStudio.Text.ITextEdit> . Bunların çağrılması <xref:Microsoft.VisualStudio.Text.ITextEdit> , nesne oluşturma, benzer çağrıyı yapma ve ardından düzenleme uygulama ile aynı etkiye sahiptir.
+<xref:Microsoft.VisualStudio.Text.ITextBuffer> ayrıca, `Insert()` `Delete()` `Replace()` arabirimde bulunanlara benzer , ve yöntemleri <xref:Microsoft.VisualStudio.Text.ITextEdit> sağlar. Bunları çağırma, nesne oluşturma, benzer çağrı yapma ve <xref:Microsoft.VisualStudio.Text.ITextEdit> sonra düzenlemeyi uygulama ile aynı etkiye sahiptir.
 
-#### <a name="tracking-points-and-tracking-spans"></a>İzleme noktaları ve izleme yayılmaları
+#### <a name="tracking-points-and-tracking-spans"></a>İzleme noktaları ve izleme aralıkları
 
-Bir <xref:Microsoft.VisualStudio.Text.ITrackingPoint> metin arabelleğindeki bir karakter konumunu temsil eder. Arabellek, karakterin konumunun kaydırmaya neden olacak şekilde düzenlenirse, izleme noktası onunla kaydırılır. Örneğin, bir izleme noktası bir arabellekte konum 10 ' a başvuruyorsa ve arabelleğin başına beş karakter eklenirse, izleme noktası daha sonra 15 konumuna başvurur. Bir ekleme işlemi, izleme noktası tarafından belirtilen konumda tam olarak gerçekleşiyorsa, davranışı tarafından belirlenir <xref:Microsoft.VisualStudio.Text.PointTrackingMode> , ya da olabilir `Positive` `Negative` . İzleme modu pozitifse, izleme noktası artık ekleme işlemi sonunda olan aynı karaktere başvurur. İzleme modu negatifse, izleme noktası orijinal konumdaki ilk ekli karakteri ifade eder. Bir izleme noktası tarafından temsil edilen konumdaki karakter silinirse, izleme noktası silinen aralığı izleyen ilk karaktere kayar. Örneğin, bir izleme noktası 5 konumundaki karakteri ifade eder ve konum 3 ile 6 arasındaki karakterler silinirse, izleme noktası 3 konumundaki karakteri gösterir.
+, <xref:Microsoft.VisualStudio.Text.ITrackingPoint> metin arabelleğinde bir karakter konumunu temsil eder. Arabellek, karakterin konumunun kaymasını neden olacak şekilde düzenlenmişse, izleme noktası da bu karakterle birlikte kaydırıldı. Örneğin, bir izleme noktası bir arabellekte 10 konumunu ifade eder ve arabelleğin başına beş karakter eklenirse, izleme noktası 15 konumunu ifade eder. Ekleme izleme noktası tarafından tam olarak ifade edilen konumda gerçekleşirse, davranışı veya olabilir , tarafından <xref:Microsoft.VisualStudio.Text.PointTrackingMode> `Positive` `Negative` belirlenir. İzleme modu pozitifse, izleme noktası eklemenin sonunda olan aynı karaktere başvurur. İzleme modu negatifse, izleme noktası özgün konumdaki ilk eklenen karaktere başvurur. İzleme noktası tarafından temsil edilen konumdaki karakter silinirse, izleme noktası silinen aralığı izleyen ilk karaktere kaydırr. Örneğin, bir izleme noktası 5 konumundaki karaktere başvurursa ve 3 ile 6 arasında konumlarda yer alan karakterler silinirse, izleme noktası 3 konumundaki karaktere başvurur.
 
-<xref:Microsoft.VisualStudio.Text.ITrackingSpan>Yalnızca tek bir konum yerine bir karakter aralığını temsil eder. Davranışı, tarafından belirlenir <xref:Microsoft.VisualStudio.Text.SpanTrackingMode> . Span Tracking modu [SpanTrackingMode. Edgein](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgeInclusive)ise, izleme yayılımı, kenarlarındaki metni eklemek için artar. Span Tracking modu [SpanTrackingMode. EdgeExclusive](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgeExclusive)ise, izleme yayılım, kenarlarına yerleştirilmiş metni içermez. Ancak, yayma izleme modu [SpanTrackingMode. Edgepozitif](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgePositive)ise, bir ekleme geçerli konumu başlatmaya doğru bir şekilde gönderir ve yayılma Izleme modu [SpanTrackingMode. EdgeNegative](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgeNegative)ise, bir ekleme geçerli konumu sonuna doğru bir yere iter.
+, <xref:Microsoft.VisualStudio.Text.ITrackingSpan> yalnızca bir konum yerine bir karakter aralığını temsil eder. Davranışı, tarafından <xref:Microsoft.VisualStudio.Text.SpanTrackingMode> belirlenir. Yayma izleme modu [SpanTrackingMode.EdgeInclusive](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgeInclusive)ise izleme aralığı, kenarlarına eklenen metinleri birleştirmek için büyür. Yayma izleme modu [SpanTrackingMode.EdgeExclusive](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgeExclusive)ise, izleme aralığı kenarlarına eklenen metinleri eklemez. Ancak, span izleme modu [SpanTrackingMode.EdgePositive](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgePositive)ise, ekleme geçerli konumu başlanıcıya iter ve span izleme modu [SpanTrackingMode.EdgeNegative](xref:Microsoft.VisualStudio.Text.SpanTrackingMode.EdgeNegative)ise ekleme geçerli konumu sona doğru iletir.
 
-Bir izleme noktasının, ait oldukları metin arabelleğinin herhangi bir anlık görüntüsü için bir izleme yayılımının konumunu alabilirsiniz. İzleme noktaları ve izleme yayılmaları, herhangi bir iş parçacığından güvenle başvurulabilir.
+Ait olduğu metin arabelleğinin herhangi bir anlık görüntüsü için bir izleme noktasının konumunu veya izleme aralığına ait olan aralığı eldeebilirsiniz. İzleme noktalarına ve izleme aralıklara herhangi bir iş parçacığından güvenli bir şekilde başvurul olabilir.
 
 #### <a name="content-types"></a>İçerik türleri
 
-İçerik türleri, farklı türde içerik tanımlamaya yönelik bir mekanizmadır. İçerik türü "Text", "Code" veya "binary" gibi bir dosya türü veya "xml", "vb" veya "c#" gibi bir teknoloji türü olabilir. Örneğin, "Using" sözcüğü hem C# hem de Visual Basic, diğer programlama dillerinde olmayan bir anahtar sözcüktür. Bu nedenle, bu anahtar sözcüğünün tanımı "c#" ve "vb" içerik türleriyle sınırlı olacaktır.
+İçerik türleri, farklı içerik türlerini tanımlamak için bir mekanizmadır. İçerik türü "text", "code" veya "binary" gibi bir dosya türü ya da "xml", "vb" veya "c#" gibi bir teknoloji türü olabilir. Örneğin, "using" sözcüğü hem C# hem de Visual Basic anahtar sözcük olur, ancak diğer programlama dillerinde değildir. Bu nedenle, bu anahtar sözcüğün tanımı "c#" ve "vb" içerik türleriyle sınırlı olacaktır.
 
-İçerik türleri, donmanlar ve düzenleyicinin diğer öğeleri için bir filtre olarak kullanılır. Birçok Düzenleyici özelliği ve uzantı noktası, içerik türü başına tanımlanır. Örneğin, metin renklendirme düz metin dosyaları, XML dosyaları ve Visual Basic kaynak kodu dosyaları için farklıdır. Metin arabelleklerine genellikle, oluşturulduklarında bir içerik türü atanır ve bir metin arabelleğinin içerik türü değiştirilebilir.
+İçerik türleri, düzenleyicinin diğer öğeleri ve donatma için bir filtre olarak kullanılır. Birçok düzenleyici özelliği ve uzantı noktası içerik türüne göre tanımlanır. Örneğin, metin renklendirme düz metin dosyaları, XML dosyaları ve kaynak kod Visual Basic için farklıdır. Metin arabellekleri oluşturulduğunda genellikle bir içerik türü atanır ve metin arabelleğinin içerik türü değiştirilebilir.
 
-İçerik türleri, diğer içerik türlerinden birden çok devralınabilir. , <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> Belirli bir içerik türünün üst öğeleri olarak birden çok temel tür belirtmenizi sağlar.
+İçerik türleri diğer içerik türlerinden birden çok devralabilir. , <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> belirli bir içerik türünün alt verileri olarak birden çok temel tür belirtmenize olanak sağlar.
 
-Geliştiriciler kendi içerik türlerini tanımlayabilir ve kullanarak bunları kaydedebilir <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> . Birçok Düzenleyici özelliği, kullanarak belirli bir içerik türüne göre tanımlanabilir <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> . Örneğin, Düzenleyici kenar boşlukları, donnlar ve fare işleyicileri yalnızca belirli içerik türlerini görüntüleyen düzenleyicilerle uygulanabilmeleri için tanımlanabilir.
+Geliştiriciler kendi içerik türlerini tanımlayabilir ve kullanarak bunları <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> kaydedebilirsiniz. Birçok düzenleyici özelliği, kullanılarak belirli bir içerik türüne göre <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> tanımlanabilir. Örneğin, düzenleyici kenar boşlukları, donatma ve fare işleyicileri yalnızca belirli içerik türlerini görüntüleyen düzenleyiciler için geçerli olacak şekilde tanımlanabilir.
 
 ### <a name="the-text-view"></a>Metin görünümü
 
-Model Görünüm denetleyicisi (MVC) deseninin görünüm kısmı metin görünümünü, görünümün biçimlendirmesini, kaydırma çubuğu gibi grafik öğelerini ve giriş işaretini tanımlar. Visual Studio düzenleyicisinin tüm sunum öğeleri WPF tabanlıdır.
+Model görünümü denetleyicisi (MVC) deseninin görünüm bölümü metin görünümünü, görünümün biçimlendirmesini, kaydırma çubuğu gibi grafik öğelerini ve caret'i tanımlar. Bu düzenleyicinin tüm Visual Studio WPF'ye dayalıdır.
 
 #### <a name="text-views"></a>Metin görünümleri
 
-<xref:Microsoft.VisualStudio.Text.Editor.ITextView>Arabirim, metin görünümünün platformdan bağımsız bir gösterimidir. Genellikle metin belgelerini bir pencerede göstermek için kullanılır, ancak örneğin bir araç ipucunda başka amaçlar için de kullanılabilir.
+Arabirim, <xref:Microsoft.VisualStudio.Text.Editor.ITextView> metin görünümünün platformdan bağımsız bir gösterimidir. Öncelikle metin belgelerini bir pencerede görüntülemek için kullanılır, ancak bir araç ipucu gibi başka amaçlarla da kullanılabilir.
 
-Metin görünümü farklı türlerde metin arabelleklerine başvurur. <xref:Microsoft.VisualStudio.Text.Editor.ITextView.TextViewModel%2A>Özelliği, <xref:Microsoft.VisualStudio.Text.Editor.ITextViewModel> Bu üç farklı metin arabelleğini işaret eden bir nesneyi ifade eder: en üst veri düzeyi arabelleği, düzenleme arabelleği ve metin görünümünde görüntülenen arabellek olan görsel arabellek olan veri arabelleği.
+Metin görünümü, farklı türlerde metin arabelleklerine başvurur. özelliği, şu üç farklı metin arabelleğine sahip bir nesneye başvurur: veri arabelleği, en üst veri düzeyi arabelleği, düzenlemenin oluştuğu düzenleme arabelleği ve metin görünümünde görüntülenen arabellek olan görsel <xref:Microsoft.VisualStudio.Text.Editor.ITextView.TextViewModel%2A> <xref:Microsoft.VisualStudio.Text.Editor.ITextViewModel> arabellek.
 
-Metin, temel alınan metin arabelleğine eklenen sınıflandırıcılarına göre biçimlendirilir ve metin görünümüne eklenmiş olan kenarlığı sağlayıcıları kullanılarak donılır.
+Metin, temel alınan metin arabelleğine eklenen sınıflandırıcılara göre biçimlendirildi ve metin görünümüne eklenen donatma sağlayıcıları kullanılarak donatıldı.
 
 #### <a name="the-text-view-coordinate-system"></a>Metin görünümü koordinat sistemi
 
-Metin görünümü koordinat sistemi, metin görünümündeki konumları belirtir. Bu koordinat sisteminde x değeri 0,0, görüntülenmekte olan metnin sol kenarına karşılık gelir ve 0,0 y değeri, görüntülenmekte olan metnin üst kenarına karşılık gelir. X koordinatı soldan sağa artar ve y koordinatı üstten alta kadar artar.
+Metin görünümü koordinat sistemi, metin görünümündeki konumlarını belirtir. Bu koordinat sisteminde, 0,0 x değeri görüntülenen metnin sol kenarına karşılık, y değeri 0,0 ise görüntülenen metnin üst kenarına karşılık gelen değerdir. x koordinatı soldan sağa, y koordinatı ise üstten aşağıya doğru artar.
 
-Bir görünüm penceresi (metnin metin penceresinde görünür olması) dikey kaydırıldığında yatay olarak aynı şekilde kaydırılamıyor. Bir görünüm penceresi, çizim yüzeyine göre taşınabilmesi için Sol koordinatı değiştirilerek yatay olarak kaydırıldı. Ancak, bir görünüm penceresi, yalnızca işlenen metnin değiştirilerek, bir olayın oluşturulmasına neden olacak şekilde dikey olarak kaydırılabilirler <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> .
+Görünüm penceresi (metin penceresinde görünen metnin parçası) dikey olarak kaydırıldıklarında olduğu gibi yatay olarak kaydıramaz. Görünüm çubuğu, çizim yüzeyine göre hareket edecek şekilde sol koordinatı değiştirerek yatay olarak kaydırıldı. Ancak, bir görünüm kutusu yalnızca işlenmiş metin değiştirerek dikey olarak kaydırılabilir ve bu da bir olayın ortaya <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> çıkarılana neden olur.
 
-Koordinat sistemindeki uzaklıklar mantıksal piksellere karşılık gelir. Metin işleme yüzeyi ölçeklendirme dönüştürmesi olmadan görüntüleniyorsa, metin işleme koordinat sistemindeki bir birim, ekranda bir piksele karşılık gelir.
+Koordinat sistemi uzaklıkları mantıksal piksellere karşılık geliyor. Metin işleme yüzeyi ölçeklendirme dönüşümü olmadan görüntülenirse, metin işleme koordinat sistemi içinde bir birim, ekranda bir piksele karşılık geliyor olur.
 
 #### <a name="margins"></a>Kenar boşlukları
 
-<xref:Microsoft.VisualStudio.Text.Editor.ITextViewMargin>Arabirim bir kenar boşluğunu temsil eder ve kenar boşluğunun görünürlüğünü ve boyutunu denetim altına sunar. "Top", "left", "Right" ve "bottom" adlı dört önceden tanımlı kenar boşluğu vardır ve bir görünümün üst, alt, sol veya sağ kenarına iliştirilir. Bu kenar boşlukları, diğer kenar boşluklarının yerleştirilebileceği kapsayıcılardır. Arabirim, kenar boşluğunun boyutunu ve bir kenar boşluğunun görünürlüğünü döndüren yöntemleri tanımlar. Kenar boşlukları, eklendiği metin görünümü hakkında ek bilgiler sağlayan görsel öğelerdir. Örneğin, satır numarası kenar boşluğu metin görünümü için satır numaralarını görüntüler. Glif kenar boşluğu Kullanıcı arabirimi öğelerini görüntüler.
+Arabirim <xref:Microsoft.VisualStudio.Text.Editor.ITextViewMargin> bir dış boşluğu temsil eder ve kenar boşluğu ile boyutunun görünürlüğünün denetimine olanak sağlar. "Üst", "Sol", "Sağ" ve "Alt" olarak adlandırılmış ve bir görünümün üst, alt, sol veya sağ kenarına eklenmiş dört önceden tanımlanmış kenar boşluğu vardır. Bu dış boşluklar, diğer dış boşlukların yerleştiril olduğu kapsayıcılardır. arabirimi, dış boşluğun boyutunu ve bir dış boşluğun görünürlüğünü sağlayan yöntemleri tanımlar. Kenar boşlukları, ekli olduğu metin görünümü hakkında ek bilgi sağlayan görsel öğelerdir. Örneğin, satır-sayı kenar boşluğu metin görünümü için satır numaralarını görüntüler. Glyph kenar boşluğunda kullanıcı arabirimi öğeleri görüntülenir.
 
-<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewMarginProvider>Arabirim, kenar boşluklarının oluşturulmasını ve yerleşimini işler. Kenar boşlukları, diğer kenar boşluklarına göre sıralanır. Daha yüksek öncelikli kenar boşlukları metin görünümüne daha yakın bulunur. Örneğin, iki sol kenar boşluğu, kenar boşluğu A ve kenar boşluğu b ve kenar boşluğu B 'nin kenar boşluğu A 'dan daha düşük bir önceliği varsa, sol kenar boşluğunun sol tarafında B kenar boşluğu belirir.
+Arabirim, <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewMarginProvider> kenar boşluklarının oluşturulmasını ve yerleştirilmesini sağlar. Kenar boşlukları diğer kenar boşluklarına göre sıra edilebilir. Daha yüksek öncelikli kenar boşlukları metin görünümüne daha yakın bulunur. Örneğin, A kenar boşluğu ve B kenar boşluğu olmak için iki sol kenar boşluğu varsa ve B kenar boşluğu A kenar boşluğundan daha düşük önceliğe sahipse, A kenar boşluğunda sol kenar boşluğu B görünür.
 
-#### <a name="the-text-view-host"></a>Metin görünümü Konağı
+#### <a name="the-text-view-host"></a>Metin görünümü ana bilgisayarı
 
-<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>Arabirim, metin görünümünü ve görünüme eşlik eden, örneğin, kaydırma çubuklarını içerir. Metin görünümü Konağı, görünümün bir kenarlığına eklenen kenar boşlukları da içerir.
+Arabirim, metin görünümünü ve görünüme eşlik eden kaydırma çubuklarını <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> içerir. Metin görünümü ana bilgisayarı, görünümün bir kenarlığına eklenmiş kenar boşluklarını da içerir.
 
-#### <a name="formatted-text"></a>Biçimli metin
+#### <a name="formatted-text"></a>Biçimlendirilmiş metin
 
-Metin görünümünde görüntülenen metin <xref:Microsoft.VisualStudio.Text.Formatting.ITextViewLine> nesnelerden oluşur. Her metin görünümü satırı metin görünümündeki bir satırlık metne karşılık gelir. Temel alınan metin arabelleğindeki uzun çizgiler kısmen görünmeyebilir (sözcük kaydırma etkinleştirilmemişse) veya birden çok metin görünümü satıra ayrılabilir. <xref:Microsoft.VisualStudio.Text.Formatting.ITextViewLine>Arabirim, koordinatlar ve karakterler arasında eşleme için yöntemler ve özellikler içerir ve satırla ilişkilendirilebilen donnments için.
+Metin görünümünde görüntülenen metin nesnelerden <xref:Microsoft.VisualStudio.Text.Formatting.ITextViewLine> oluşur. Her metin görünümü satırı, metin görünümündeki bir metin satırına karşılık gelen bir satırdır. Temel alınan metin arabelleğinde uzun satırlar kısmen belirsiz olabilir (sözcük kaydırma etkinleştirilmediyse) veya birden çok metin görünümü satırına ayrılarak. Arabirimi, koordinatlar ve karakterler arasında eşleme için yöntemler ve özellikler ve satırla ilişkilendirilen <xref:Microsoft.VisualStudio.Text.Formatting.ITextViewLine> donatma için içerir.
 
-<xref:Microsoft.VisualStudio.Text.Formatting.ITextViewLine> nesneler bir arabirim kullanılarak oluşturulur <xref:Microsoft.VisualStudio.Text.Formatting.IFormattedLineSource> . Şu anda görünümde görüntülenen metinle ilgili endişeleriniz varsa, biçimlendirme kaynağını yoksayabilirsiniz. Görünümde görüntülenmeyen metin biçimi ile ilgileniyorsanız (örneğin, zengin metin kesme ve yapıştırmayı desteklemek için), metin <xref:Microsoft.VisualStudio.Text.Formatting.IFormattedLineSource> arabelleğindeki metni biçimlendirmek için seçeneğini kullanabilirsiniz.
+<xref:Microsoft.VisualStudio.Text.Formatting.ITextViewLine> nesneleri bir arabirim kullanılarak <xref:Microsoft.VisualStudio.Text.Formatting.IFormattedLineSource> oluşturulur. Yalnızca görünümde görüntülenen metinle ilgili endişeleriz varsa biçimlendirme kaynağını yoksayabilirsiniz. Görünümde görüntülenmeen metnin biçimiyle ilgileniyorsanız (örneğin, zengin metin kesme ve yapıştırmayı desteklemek için), metin arabelleğinde metin biçimlendirmek için <xref:Microsoft.VisualStudio.Text.Formatting.IFormattedLineSource> kullanabilirsiniz.
 
-Metin görünümü tek seferde bir biçimlendirir <xref:Microsoft.VisualStudio.Text.ITextSnapshotLine> .
+Metin görünümü tek tek <xref:Microsoft.VisualStudio.Text.ITextSnapshotLine> biçimlendirmeler.
 
 ## <a name="editor-features"></a>Düzenleyici özellikleri
 
-Düzenleyicinin özellikleri, özelliğin tanımının uygulamadan ayrı olması için tasarlanmıştır. Düzenleyici şu özellikleri içerir:
+Düzenleyicinin özellikleri, özelliğin tanımının uygulamasından ayrı olacak şekilde tasarlanmıştır. Düzenleyici şu özellikleri içerir:
 
 - Etiketler ve sınıflandırıcılar
 
-- Satırdaki kenarlıkları
+- Süsleme -leri
 
 - Projeksiyon
 
@@ -214,111 +215,111 @@ Düzenleyicinin özellikleri, özelliğin tanımının uygulamadan ayrı olması
 
 - Fare ve tuş bağlamaları
 
-- İşlemler ve temel elemanlar
+- İşlemler ve temel öğeler
 
 - IntelliSense
 
 ### <a name="tags-and-classifiers"></a>Etiketler ve sınıflandırıcılar
 
-Etiketler, metnin bir yayılımı ile ilişkili işaretçiler. Bunlar, örneğin metin renklendirme, alt çizgiler, grafikler veya açılır pencereler kullanılarak farklı yollarla sunulabilir. Sınıflandırıcılar tek bir etiket türüdür.
+Etiketler, bir metin aralığıyla ilişkili işaretçilerdir. Bunlar, örneğin metin renklendirme, alt çizgiler, grafikler veya açılır pencere kullanılarak farklı şekillerde sunabilirsiniz. Sınıflandırıcılar bir tür etikettir.
 
-Diğer etiket türleri <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> metin vurgulaması, ana <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag> hat ve <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag> derleme hataları içindir.
+Diğer etiket türleri metin <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> vurgulama, açıklama <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag> ve derleme hataları <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag> için kullanılır.
 
 #### <a name="classification-types"></a>Sınıflandırma türleri
 
-Bir <xref:Microsoft.VisualStudio.Text.Classification.IClassificationType> arabirim, soyut bir metin kategorisi olan bir denklik sınıfını temsil eder. Sınıflandırma türleri, diğer sınıflandırma türlerinden birden çok devralma yapılabilir. Örneğin, programlama dili sınıflandırmaları, hepsi "Code" kaynağından devraldığı "anahtar sözcüğü", "Açıklama" ve "tanımlayıcı" içerebilir. Doğal dil sınıflandırması türleri "ad", "fiil" ve "sıfatıcı" içerebilir ve bunların hepsi "doğal dil" den devralınır.
+Arabirim, <xref:Microsoft.VisualStudio.Text.Classification.IClassificationType> soyut metin kategorisi olan bir denklik sınıfını temsil eder. Sınıflandırma türleri diğer sınıflandırma türlerinden birden çok devralabilir. Örneğin, programlama dili sınıflandırmaları "anahtar sözcük", "açıklama" ve "tanımlayıcı" içerebilir ve bunların hepsi "koddan" devralabilir. Doğal dil sınıflandırma türleri "ad", "fiil" ve "sıfat" içerebilir ve bunların hepsi "doğal dilden" devralınabilir.
 
 #### <a name="classifications"></a>Sınıflandırmalar
 
-Sınıflandırma, genellikle metin yayılımı üzerinde belirli bir sınıflandırma türünün bir örneğidir. Bir <xref:Microsoft.VisualStudio.Text.Classification.ClassificationSpan> Sınıflandırmayı temsil etmek için kullanılır. Bir sınıflandırma yayılımı, belirli bir metin yayılımını kapsayan bir etiket olarak düşünülebilir ve sisteme bu metin yayılma alanının belirli bir sınıflandırma türünde olduğunu söyler.
+Sınıflandırma, genellikle bir metin aralığı üzerinden belirli bir sınıflandırma türünün örneğidir. Bir <xref:Microsoft.VisualStudio.Text.Classification.ClassificationSpan> sınıflandırmayı temsil etmek için kullanılır. Sınıflandırma aralığı, belirli bir metin aralığı kapsayan ve sisteme bu metin aralığına belirli bir sınıflandırma türü olduğunu söyleyen bir etiket olarak düşünebilirsiniz.
 
-#### <a name="classifiers"></a>Sınıflandırıcılar
+#### <a name="classifiers"></a>Sınıflandırıcı
 
-<xref:Microsoft.VisualStudio.Text.Classification.IClassifier>, Metni bir sınıflandırma kümesine kesen bir mekanizmadır. Sınıflandırıcılar belirli içerik türleri için tanımlanmalıdır ve belirli metin arabellekleri için oluşturulur. İstemcilerin <xref:Microsoft.VisualStudio.Text.Classification.IClassifier> metin sınıflandırmasına katılmak için uygulaması gerekir.
+, <xref:Microsoft.VisualStudio.Text.Classification.IClassifier> metni bir sınıflandırma kümesine dönüştüren bir mekanizmadır. Sınıflandırıcılar belirli içerik türleri için tanımlanmalıdır ve belirli metin arabellekleri için örneklenmiş olmalıdır. İstemcilerin metin <xref:Microsoft.VisualStudio.Text.Classification.IClassifier> sınıflandırmaya katılmak için uygulaması gerekir.
 
-#### <a name="classifier-aggregators"></a>Sınıflandırıcı toplayıcısını değiştirme
+#### <a name="classifier-aggregators"></a>Sınıflandırıcı toplamaları
 
-Sınıflandırıcı toplayıcısı, bir metin arabelleğinin tüm sınıflandırmalarını yalnızca bir sınıflandırma kümesiyle birleştiren bir mekanizmadır. Örneğin, hem C# sınıflandırıcı hem de Ingilizce dil Sınıflandırıcısı, C# dosyasındaki bir yorum üzerinde sınıflandırmalar oluşturabilir. Şu yorumu göz önünde bulundurun:
+Sınıflandırıcı toplayıcısı, bir metin arabelleği için tüm sınıflandırıcıları tek bir sınıflandırma kümesi içinde birleştiren bir mekanizmadır. Örneğin, hem C# sınıflandırıcısı hem de İngilizce dil sınıflandırıcısı, C# dosyasındaki bir açıklama üzerinde sınıflandırmalar oluşturabilir. Şu açıklamayı göz önünde bulundurarak:
 
 ```
 // This method produces a classifier
 ```
 
-Bir C# Sınıflandırıcısı, tüm yayılımı bir açıklama olarak etiketleyebilir ve Ingilizce dil Sınıflandırıcısı "fiil" ve "Yöntem" olarak "ad" olarak sınıflandırır. Toplayıcı çakışmayan sınıflandırmalar kümesi oluşturur ve küme türü tüm katkılara göre belirlenir.
+C# sınıflandırıcısı, aralığın tamamını açıklama olarak etiketleyebildi ve İngilizce dil sınıflandırıcısı "üretir"i "fiil" ve "yöntem" olarak "isim" olarak sınıflandır olabilir. Toplayıcı, çakışmayan bir sınıflandırma kümesi üretir ve kümenin türü tüm katkıları temel almaktadır.
 
-Sınıflandırıcının bir sınıflandırıcıda metin kestiğinden bir sınıflandırıcı toplayıcısı da sınıflandırıcıdır. Sınıflandırıcı toplayıcısı, çakışan sınıflandırmalar olmamasını ve sınıflandırmaların sıralanacağını de sağlar. Tek tek sınıflandırıcılar, herhangi bir sırada herhangi bir sınıflandırmadan ve herhangi bir şekilde çakışarak herhangi bir sınıflandırma kümesini döndürmek için ücretsizdir.
+Sınıflandırıcı toplayıcısı aynı zamanda bir sınıflandırıcıdır çünkü metni bir sınıflandırma kümesine parçalar. Sınıflandırıcı toplayıcısı, çakışan sınıflandırmalar olmadığını ve sınıflandırmaların sıralanmış olduğunu da sağlar. Tek tek sınıflandırıcılar herhangi bir sınıflandırma kümesi, herhangi bir sırayla ve herhangi bir şekilde örtüşürken ücretsizdir.
 
-#### <a name="classification-formatting-and-text-coloring"></a>Sınıflandırma biçimlendirme ve metin renklendirme
+#### <a name="classification-formatting-and-text-coloring"></a>Sınıflandırma biçimlendirmesi ve metin renklendirme
 
-Metin biçimlendirme, metin sınıflandırması üzerinde oluşturulmuş bir özelliğin örneğidir. Bir uygulamadaki metnin görüntülenmesini sağlamak için metin görünümü katmanı tarafından kullanılır. Metin biçimlendirme alanı WPF 'e bağlıdır, ancak sınıflandırmaların mantıksal tanımı değildir.
+Metin biçimlendirme, metin sınıflandırması üzerine kurulu bir özelliğin örneğidir. Metin görünümü katmanı tarafından bir uygulamada metnin görünümünü belirlemek için kullanılır. Metin biçimlendirme alanı WPF'ye bağlıdır, ancak sınıflandırmaların mantıksal tanımına bağlı değildir.
 
-Sınıflandırma biçimi, belirli bir sınıflandırma türü için biçimlendirme özellikleri kümesidir. Bu biçimler, Sınıflandırma türünün üst öğesinin biçiminden devralınır.
+Sınıflandırma biçimi, belirli bir sınıflandırma türü için biçimlendirme özellikleri kümesidir. Bu biçimler sınıflandırma türünün üst öğesinden devralır.
 
-<xref:Microsoft.VisualStudio.Text.Classification.IClassificationFormatMap>, Bir sınıflandırma türünden metin biçimlendirme özellikleri kümesine yapılan bir haritadır. Düzenleyicide biçim eşlemesinin uygulanması, sınıflandırma biçimlerinin tüm dışarı aktarmaları işler.
+<xref:Microsoft.VisualStudio.Text.Classification.IClassificationFormatMap>, sınıflandırma türünden metin biçimlendirme özellikleri kümesine bir eşlemedir. Düzenleyicide biçim haritasının uygulanması, sınıflandırma biçimlerinin tüm dışarı aktarmalarını işlemektedir.
 
-### <a name="adornments"></a>Satırdaki kenarlıkları
+### <a name="adornments"></a>Süsleme -leri
 
-Donnments, metin görünümündeki karakterlerin yazı tipiyle ve renkleriyle doğrudan ilgili olmayan grafik efektleridir. Örneğin, çok sayıda programlama dilinde derleme olmayan kodu işaretlemek için kullanılan kırmızı dalgalı çizgi alt çizgisi gömülü bir kenarlığı ve araç ipuçları açılır pencereler olur. Donmanlar, öğesinden türetilir <xref:System.Windows.UIElement> ve uygular <xref:Microsoft.VisualStudio.Text.Tagging.ITag> . İki özel kenarlığı etiketi türü, <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag> bir görünümdeki metinle aynı boşluğu kaplayan donmanlar için ve <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag> dalgalı çizgi altı çizili için.
+Donatma, metin görünümündeki karakterlerin yazı tipi ve rengiyle doğrudan ilgili olan grafik etkileridir. Örneğin, birçok programlama dilinde kod derlemeyenleri işaretlemek için kullanılan kırmızı iki durumlu çizgi ekli bir donatmadır ve araç ipucu açılır donatmadır. Donatma türetilen <xref:System.Windows.UIElement> ve <xref:Microsoft.VisualStudio.Text.Tagging.ITag> uygulanır. İki özel donatma etiketi türü, görünümde metinle aynı alanı kaplayacak olan donatma için ve alt çizgiye göre , <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag> <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag> vardır.
 
-Gömülü donnlar, biçimli metin görünümünün bir parçasını oluşturan grafiklerdir. Bunlar farklı Z düzeni katmanlarında düzenlenirler. Aşağıdaki gibi üç yerleşik katman vardır: metin, giriş işareti ve seçim. Ancak, geliştiriciler daha fazla katman tanımlayabilir ve bunları bir diğerine göre sıraya alabilir. Üç tür katıştırılmış donatımı (metin taşındığında taşınır ve metin silindiğinde silinir), görünüm göreli donnments (görünümün metin olmayan bölümleri ile ilgili olması gerekir) ve sahip denetimli Donatılar (geliştiricinin yerleştirmesini yönetmesi gerekir). (geliştiricinin yerleşimini yönetmesi gerekir).
+Ekli donatma, biçimlendirilmiş metin görünümünün bir parçası olan grafiklerdir. Farklı Z düzeni katmanlarında düzenlenmiştir. Aşağıdaki gibi üç yerleşik katman vardır: metin, caret ve seçim. Ancak geliştiriciler daha fazla katman tanımlayarak bunları bir diğerine göre sıralayarak tanımlayabilir. Üç ekli donatma türü, metin göreli donatma (metin hareket ettiğinde hareket eder ve metin silindiğinde silinir), görünüm göreli donatmaları (görünümün metin olmayan bölümleriyle ilgili olması gerekir) ve sahip denetimli donatmalardır (geliştiricinin yerleştirmesini yönetmesi gerekir).
 
-Açılır donatılanlar, metin görünümünün üzerinde küçük bir pencerede görünen grafiklerdir, örneğin araç ipuçları.
+Açılır pencere donatma, metin görünümünün üzerindeki küçük bir pencerede görünen grafiklerdir, örneğin araç ipucu.
 
-### <a name="projection"></a><a name="projection"></a> Yansıtma
+### <a name="projection"></a><a name="projection"></a> Projeksiyon
 
-Projeksiyon, aslında metin depolayamayan farklı bir tür metin arabelleği oluşturmak için kullanılan bir tekniktir, bunun yerine metni diğer metin arabelleğinden birleştirir. Örneğin, bir yansıtma arabelleği iki diğer arabellekten metin birleştirmek ve sonucu yalnızca bir arabellekte olduğu gibi sunmak ya da bir arabellekteki metnin parçalarını gizlemek için kullanılabilir. Projeksiyon arabelleği, başka bir yansıtma arabelleğine kaynak arabelleği olarak davranabilir. Projeksiyon ile ilişkili bir arabellek kümesi, metni birçok farklı şekilde yeniden düzenlemek için oluşturulabilir. (Böyle bir küme, *arabellek grafiği* olarak da bilinir.) Visual Studio metin anahat oluşturma özelliği, daraltılmış metni gizlemek için bir yansıtma arabelleği kullanılarak uygulanır ve ASP.NET Pages için Visual Studio Düzenleyicisi, Visual Basic ve C# gibi gömülü dilleri desteklemek için projeksiyonu kullanır.
+Projeksiyon, aslında metin depolamadan diğer metin arabelleklerinden metinleri birleştiren farklı bir tür metin arabelleği oluşturmak için kullanılan bir tekniktir. Örneğin, bir projeksiyon arabelleği diğer iki arabellekten metni biriktir ve sonucu yalnızca bir arabellekte gibi sunmak veya metnin bir arabellekte bölümlerini gizlemek için kullanılabilir. Projeksiyon arabelleği, başka bir projeksiyon arabelleği için kaynak arabellek görevi görür. Projeksiyonla ilgili bir dizi arabellek, metni birçok farklı şekilde yeniden düzenlemek için oluşturulmuş olabilir. (Bu tür bir küme, arabellek grafı *olarak da bilinir.)* Visual Studio metin açıklama özelliği daraltılmış metni gizlemek için bir projeksiyon arabelleği kullanılarak uygulanır ve ASP.NET sayfaları için Visual Studio düzenleyicisi, Visual Basic ve C# gibi ekli dilleri desteklemek için projeksiyon kullanır.
 
-<xref:Microsoft.VisualStudio.Text.Projection.IProjectionBuffer>Kullanılarak oluşturulur <xref:Microsoft.VisualStudio.Text.Projection.IProjectionBufferFactoryService> . Projeksiyon arabelleği, <xref:Microsoft.VisualStudio.Text.ITrackingSpan> *kaynak yayılmaları* olarak bilinen sıralı nesne dizisiyle temsil edilir. Bu yayılmalar içeriği bir dizi karakter olarak sunulur. Kaynak yayılma alanlarının çizildiği metin arabelleklerinin adı *kaynak arabelleklerdir*. Bir yansıtma arabelleğinin istemcilerinin, sıradan bir metin arabelleğinden farklı olduğunu farkında olması gerekmez.
+kullanılarak <xref:Microsoft.VisualStudio.Text.Projection.IProjectionBuffer> <xref:Microsoft.VisualStudio.Text.Projection.IProjectionBufferFactoryService> oluşturulur. Projeksiyon arabelleği, kaynak yayma olarak bilinen <xref:Microsoft.VisualStudio.Text.ITrackingSpan> sıralı bir nesne *dizisiyle temsil eder.* Bu aralıkların içeriği bir karakter dizisi olarak sunulmuştur. Kaynak aralıklarının çekilecek metin arabellekleri kaynak *arabellekleri olarak adlandırılmıştır.* Projeksiyon arabelleğinin istemcileri bunun sıradan bir metin arabelleğinden farklı olduğunu fark etmek zorunda değildir.
 
-Projeksiyon arabelleği, kaynak arabelleklerindeki metin değiştirme olaylarını dinler. Bir kaynak yayılma alanındaki metin değiştiğinde, projeksiyon arabelleği değiştirilen metin koordinatlarını kendi koordinatlarına eşler ve uygun metin değişikliği olaylarını yükseltir. Örneğin, şu içeriğe sahip olan A ve B kaynak arabelleklerini göz önünde bulundurun:
+Projeksiyon arabelleği, kaynak arabelleklerde metin değiştirme olaylarını dinler. Bir kaynak yayma süresinde metin değişse projeksiyon arabelleği, değiştirilen metin koordinatlarını kendi koordinatlarıyla eşler ve uygun metin değişikliği olaylarını ortaya kaldırır. Örneğin, şu içeriklere sahip A ve B kaynak arabelleklerini göz önünde bulundurabilirsiniz:
 
 ```
 A: ABCDE
 B: vwxyz
 ```
 
-Yansıtma arabelleği P, bir diğeri tüm arabelleği olan ve diğeri de B arabelleği olan iki metin yayılma alanından biçimlendirilmişse, P aşağıdaki içeriğe sahiptir:
+Projeksiyon arabelleği P, biri A arabelleğinin tamama ve diğeri de tüm arabelleğe sahip olan iki metinden oluşuyorsa P aşağıdaki içeriğe sahip olur:
 
 ```
 P: ABCDEvwxyz
 ```
 
-Alt dize, `xy` B arabelleğinden silinirse, buffer P, 7 ve 8 konumlarındaki karakterlerin silindiğini belirten bir olay oluşturur.
+Alt dize B arabellekten silinirse, arabellek P 7 ve 8 konumlarında karakterlerin silindi olduğunu belirten `xy` bir olay gösterir.
 
-Projeksiyon arabelleği de doğrudan düzenlenebilir. Düzenlemeleri uygun kaynak arabelleklerine yayar. Örneğin, bir dize, 6 konumuna ("v" karakterinin özgün konumu) göre buffer P 'ye eklenirse, ekleme 1 konumundaki arabellek B 'ye yayılır.
+Projeksiyon arabelleği doğrudan da düzenlenebilir. Düzenlemeleri uygun kaynak arabelleklere yalıtır. Örneğin, 6 konumundaki P arabelleğine bir dize eklenirse ("v" karakterinin özgün konumu), ekleme işlemi 1 konumundaki B arabelleğine yalıtır.
 
-Yansıtma arabelleğine katkıda bulunan kaynak yayılmalar üzerinde kısıtlamalar vardır. Kaynak yayılmaları çakışmayabilir; projeksiyon arabelleğindeki bir konum herhangi bir kaynak arabellekte birden fazla konuma eşlenemez ve Kaynak arabellekteki bir konum bir yansıtma arabelleğinde birden fazla konuma eşlenemez. Kaynak arabellek ilişkisinde hiçbir döngüye karşı izin verilmez.
+Kaynak aralıklarda projeksiyon arabelleğine katkıda bulunan kısıtlamalar vardır. Kaynak aralıklar çakışmaz; Projeksiyon arabelleğinde bir konum, herhangi bir kaynak arabellekte birden fazla konuma eş olamaz ve kaynak arabellekte bir konum projeksiyon arabelleğinde birden fazla konuma eş olamaz. Kaynak arabellek ilişkisinde döngüselliklere izin verilmez.
 
-Bir projeksiyon arabelleğinin kaynak arabelleklerinin kümesi değiştiğinde ve kaynak kümesi değiştiğinde olaylar tetiklenir.
-Bir uyum arabelleği, özel bir yansıtma arabelleği türüdür. Ana hat ve metin bloklarını genişlettikten ve daraltma işlemlerinde öncelikli olarak kullanılır. Bir arabellek, tek bir kaynak arabelleğini temel alır ve tam arabellekteki yayılmalar, kaynak arabellekte sıralandığı gibi sıralanmalıdır.
+Olaylar, projeksiyon arabelleği için kaynak arabellek kümesi değişirken ve kaynak kümesi değişikliklere yayma zamanlarında ortaya çıkar.
+Elision arabelleği, özel bir projeksiyon arabelleği t'dır. Öncelikle ana satıra yönelik ve metin bloklarını genişleten ve daraltan işlemler için kullanılır. Bir elision arabelleği yalnızca bir kaynak arabelleğine dayalıdır ve elision arabelleğinde yer alan aralıklar, kaynak arabellekte sıra edilenle aynı şekilde sıralamalıdır.
 
-#### <a name="the-buffer-graph"></a>Arabellek grafı
+#### <a name="the-buffer-graph"></a>Arabellek grafiği
 
-<xref:Microsoft.VisualStudio.Text.Projection.IBufferGraph>Arabirim, projeksiyon arabelleklerinin bir grafiğinde eşlemeyi mümkün. Tüm metin arabellekleri ve İzdüşüm arabellekleri, bir dil derleyicisi tarafından üretilen soyut sözdizimi ağacına benzer şekilde, yönlendirilmiş bir Çevrimsiz grafiğinde toplanır. Grafik, herhangi bir metin arabelleği olabilen üst arabellek tarafından tanımlanır. Arabellek grafı, en üst arabellekteki bir noktadan kaynak arabellekteki bir noktaya veya en üstteki arabellekteki bir yayılma alanından bir kaynak arabelleğindeki bir dizi yayılmasına eşlenir. Benzer şekilde, bir kaynak arabelleğinden bir noktayı veya yayılımı, en üst arabellekteki bir noktaya eşleyebilir. Arabellek grafikleri kullanılarak oluşturulur <xref:Microsoft.VisualStudio.Text.Projection.IBufferGraphFactoryService> .
+Arabirimi, <xref:Microsoft.VisualStudio.Text.Projection.IBufferGraph> projeksiyon arabelleklerinin grafı üzerinde eşlemeyi sağlar. Tüm metin arabellekleri ve projeksiyon arabellekleri, bir dil derleyicisi tarafından üretilen soyut söz dizimi ağacına benzer şekilde, yönlendiren bir zamansız grafikte toplanır. Grafik, herhangi bir metin arabelleği olan üst arabellek tarafından tanımlanır. Arabellek grafiği, en üst arabellekte yer alan bir noktadan kaynak arabellekte bir noktaya veya üst arabellekte yer alan bir aralıktan kaynak arabellekte bir dizi yayılma kümesine eş olabilir. Benzer şekilde, bir nokta eşler veya bir kaynak arabelleğinden üst arabellekte bir noktaya yayma. Arabellek grafikleri kullanılarak <xref:Microsoft.VisualStudio.Text.Projection.IBufferGraphFactoryService> oluşturulur.
 
 #### <a name="events-and-projection-buffers"></a>Olaylar ve projeksiyon arabellekleri
 
-Projeksiyon arabelleği değiştirildiğinde, değişiklikler yansıtma arabelleğinden buna bağlı olan arabelleklere gönderilir. Tüm arabellekler değiştirildikten sonra, arabellek değişiklik olayları, en derin arabellekten başlayarak oluşturulur.
+Bir projeksiyon arabelleği değiştirildiğinde, değişiklikler yansıtma arabelleğinden buna bağımlı arabelleklere gönderilir. Tüm arabellekler değiştirildikten sonra, en derin arabellekle başlayarak arabellek değişikliği olayları ortaya çıkar.
 
 ### <a name="outlining"></a>Anahat Oluşturma
 
-Ana hat oluşturma, metin görünümündeki farklı metin bloklarını genişletme veya daraltma olanağıdır. Ana hat, bir türü olarak tanımlanır <xref:Microsoft.VisualStudio.Text.Tagging.ITag> , donnments ile aynı şekilde tanımlanır. <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>, Genişletilebilen veya daraltılabilen bir metin bölgesini tanımlayan bir etikettir. Ana hattı kullanmak için, almak için öğesini içeri aktarmanız gerekir <xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService> <xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManager> . Ana hat Yöneticisi, nesneler olarak temsil edilen farklı blokları numaralandırır, daraltır ve genişletir <xref:Microsoft.VisualStudio.Text.Outlining.ICollapsible> ve olayları uygun şekilde yükseltir.
+Açıklama, metin görünümündeki farklı metin bloklarını genişletme veya daraltma özelliğidir. Outlining, donatma tanımlandığı <xref:Microsoft.VisualStudio.Text.Tagging.ITag> şekilde bir tür olarak tanımlanır. , <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag> genişletilebilir veya daraltılmış bir metin bölgesi tanımlayan bir etikettir. Bir almak için, outlining kullanmak için <xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService> içeri aktarma <xref:Microsoft.VisualStudio.Text.Outlining.IOutliningManager> gerekir. İlke yöneticisi nesne olarak temsil edilen farklı blokları numaralandırarak daraltıyor ve genişleterek olayları buna <xref:Microsoft.VisualStudio.Text.Outlining.ICollapsible> göre oluşturur.
 
 ### <a name="mouse-bindings"></a>Fare bağlamaları
 
-Fare bağlamaları farklı komutlara fare hareketlerini bağlar. Fare bağlamaları bir kullanılarak tanımlanır <xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessorProvider> ve anahtar bağlamaları bir kullanılarak tanımlanır <xref:Microsoft.VisualStudio.Text.Editor.IKeyProcessorProvider> . , <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> Tüm bağlamaları otomatik olarak başlatır ve görünümdeki fare olaylarına bağlar.
+Fare bağlamaları, fare hareketlerini farklı komutlara bağlar. Fare bağlamaları bir kullanılarak tanımlanır <xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessorProvider> ve anahtar bağlamaları bir kullanılarak <xref:Microsoft.VisualStudio.Text.Editor.IKeyProcessorProvider> tanımlanır. , <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost> tüm bağlamaların otomatik olarak örneğini sağlar ve bunları görünümde fare olaylarına bağlar.
 
-<xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessor>Arabirim, farklı fare olayları için işlem öncesi ve işlem sonrası olay işleyicilerini içerir. Olaylardan birini işlemek için içindeki yöntemlerin bazılarını geçersiz kılabilirsiniz <xref:Microsoft.VisualStudio.Text.Editor.MouseProcessorBase> .
+Arabirimi, <xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessor> farklı fare olayları için ön işlem ve işlem sonrası olay işleyicileri içerir. Olaylardan birini işlemek için, 'de bazı yöntemleri geçersiz <xref:Microsoft.VisualStudio.Text.Editor.MouseProcessorBase> kılebilirsiniz.
 
 ### <a name="editor-operations"></a>Düzenleyici işlemleri
 
-Düzenleyici işlemleri, komut dosyası veya başka amaçlar için düzenleyiciyle etkileşimi otomatikleştirmek üzere kullanılabilir. <xref:Microsoft.VisualStudio.Text.Operations.IEditorOperationsFactoryService>Belirli bir üzerinde erişim işlemlerine aktarabilirsiniz <xref:Microsoft.VisualStudio.Text.Editor.ITextView> . Daha sonra bu nesneleri kullanarak seçimi değiştirebilir, görünümü kaydıradırabilir veya giriş işaretini görünümün farklı bölümlerine taşıyabilirsiniz.
+Düzenleyici işlemleri, betik veya başka amaçlarla düzenleyiciyle etkileşimi otomatikleştirmek için kullanılabilir. Verilen bir üzerinde <xref:Microsoft.VisualStudio.Text.Operations.IEditorOperationsFactoryService> erişim işlemlerine erişmek için 'i içeri aktarın. <xref:Microsoft.VisualStudio.Text.Editor.ITextView> Daha sonra seçimi değiştirmek, görünümü kaydırmak veya caret'i görünümün farklı bölümlerine taşımak için bu nesneleri kullanabilirsiniz.
 
 ### <a name="intellisense"></a>IntelliSense
 
-IntelliSense, deyimin tamamlanmasını, imza yardımını (parametre bilgisi olarak da bilinir), hızlı bilgi ve hafif bulbs 'leri destekler.
+IntelliSense deyim tamamlama, imza yardımı (parametre bilgisi olarak da bilinir), Hızlı Bilgi ve ampulleri destekler.
 
-Deyimin tamamlanması, yöntem adları, XML öğeleri ve diğer kodlama veya biçimlendirme öğeleri için olası tamamların açılır listesini sağlar. Genel olarak, bir kullanıcı hareketi bir tamamlanma oturumu çağırır. Oturum, olası tamamlamaların listesini görüntüler ve Kullanıcı bir listeden seçim yapabilir veya kapatabilir. , Öğesini <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> oluşturmaktan ve tetiklemeden sorumludur <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession> . , <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> <xref:Microsoft.VisualStudio.Language.Intellisense.CompletionSet> Oturum için tamamlanma öğelerinin sayısını hesaplar.
+Deyim tamamlama yöntem adları, XML öğeleri ve diğer kodlama veya işaretleme öğeleri için olası tamamlamaların açılır listelerini sağlar. Genel olarak, bir kullanıcı hareketi bir tamamlama oturumu çağırır. Oturum olası tamamlamaların listesini görüntüler ve kullanıcı bir tane seçerek listeyi sildi. , Öğesini <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker> oluşturmaktan ve tetiklemeden sorumludur <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession> . , <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource> <xref:Microsoft.VisualStudio.Language.Intellisense.CompletionSet> Oturum için tamamlanma öğelerinin sayısını hesaplar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
 title: Klasöre yayımlama
-description: Mac için Visual Studio kullanarak bir Web uygulamasını bir klasöre yayımlama.
+description: Mac için Visual Studio kullanarak bir web uygulamasını bir klasöre yayımlama.
 ms.date: 11/09/2020
 helpviewer_keywords:
 - deployment, website, console, publish
@@ -10,25 +10,25 @@ ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.topic: how-to
-ms.openlocfilehash: 99127416b6a488cd7e795b3c4a1888ff103c8029
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.openlocfilehash: 2944fa88297cbf7b0d3fe7149b4b690f5a7f1012cebdcd25daeb9c85e68461fc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607398"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381711"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak bir klasöre yayımlama
 
-.NET Core konsolunu veya ASP.NET Core uygulamalarını bir klasöre yayımlamak için Yayımla aracını kullanabilirsiniz.
+.net Core konsolunu veya ASP.NET Core uygulamalarını bir klasöre yayımlamak için yayımla aracını kullanabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- .NET Core etkinken [Mac Için Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) yüklendi.
-- Bir .NET Core konsolu veya ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md).
+- .net Core ile yüklenen [Mac için Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) .
+- bir .net Core konsolu veya ASP.NET Core projesi. Zaten bir projeniz yoksa [Yeni bir tane oluşturabilirsiniz](./create-new-projects.md).
 
 ## <a name="publish-to-folder"></a>Klasöre Yayımlama
 
-Mac için Visual Studio kullanarak .NET Core projelerinizi Yayımla aracını kullanarak bir klasöre yayımlayabilirsiniz. Bir klasöre yayımladıktan sonra, dosyaları farklı bir ortama aktarabilirsiniz. Bir klasöre yayımlamak için aşağıdaki adımları izleyin.
+Mac için Visual Studio kullanarak .net Core projelerinizi yayımla aracını kullanarak bir klasöre yayımlayabilirsiniz. Bir klasöre yayımladıktan sonra, dosyaları farklı bir ortama aktarabilirsiniz. Bir klasöre yayımlamak için aşağıdaki adımları izleyin.
 
  1. Çözüm penceresinde projeye sağ tıklayın ve **Yayımla**' yı seçin.
 
@@ -42,7 +42,7 @@ Mac için Visual Studio kullanarak .NET Core projelerinizi Yayımla aracını ku
 
  4. **Klasöre Yayımla** iletişim kutusu görüntülenir. Bu iletişim kutusunda projenin yayımlanacağı klasörü özelleştirebilirsiniz. Bunu yapmak için, **Araştır** düğmesini veya bir yolu yapıştırmak için kullanabilirsiniz.
 
- 5. **Yayımla** ' ya tıkladıktan sonra birkaç şey meydana gelir. İlk olarak bir yayımlama profili oluşturulur. Yayımlama profili, yayımlama işlemi sırasında projeye içeri aktarılan bir MSBuild dosyasıdır. Yayımlama işlemi sırasında kullanılan özellikleri içerir. Bu dosyalar içinde depolanır `Properties/PublishProfiles` ve uzantısına sahiptir `.pubxml` . Sonra yayımlama işlemi başlatılır. Mac için Visual Studio ' de durum çubuğunu izleyerek ilerlemeyi izleyebilirsiniz.
+ 5. **Yayımla** ' ya tıkladıktan sonra birkaç şey meydana gelir. İlk olarak bir yayımlama profili oluşturulur. yayımlama profili, yayımlama işlemi sırasında projeye içeri aktarılan bir MSBuild dosyasıdır. Yayımlama işlemi sırasında kullanılan özellikleri içerir. Bu dosyalar içinde depolanır `Properties/PublishProfiles` ve uzantısına sahiptir `.pubxml` . Sonra yayımlama işlemi başlatılır. Mac için Visual Studio ' de durum çubuğunu izleyerek ilerlemeyi izleyebilirsiniz.
 
     ![Yayımlama durumuyla IDE durum çubuğu](media/publish-to-folder-status-bar.png)
 
@@ -62,4 +62,4 @@ Kullanılan yapı yapılandırmasını değiştirmek için `LastUsedBuildConfigu
 
 ## <a name="see-also"></a>Ayrıca bkz.
  - [dotnet publish](https://docs.microsoft.com/dotnet/core/tools/dotnet-publish)
- - [Web uygulamasını Visual Studio kullanarak Web sitesinde yayımlama ](https://docs.microsoft.com/visualstudio/deployment/quickstart-deploy-to-a-web-site?view=vs-2019)
+ - [Bir Web uygulamasını Visual Studio kullanarak Web sitesinde yayımlama](https://docs.microsoft.com/visualstudio/deployment/quickstart-deploy-to-a-web-site?view=vs-2019)

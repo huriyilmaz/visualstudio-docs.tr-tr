@@ -1,6 +1,6 @@
 ---
-title: Modüller görünümü-.NET bellek Izleme verileri | Microsoft Docs
-description: İzleme yöntemi kullanılarak toplanan .NET bellek ayırma verilerinin modüller görünümünün, bellek ve zamanlama verilerini modüle göre gruplayarak bilgi edinin.
+title: Modüller Görünümü - .NET Bellek Araçları Veri | Microsoft Docs
+description: Ölçüm yöntemi kullanılarak toplanan .NET bellek ayırma verileri modüller görünümünün bellek ve zamanlama verilerini modüle göre gruplamasını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,73 +9,74 @@ ms.assetid: 26516139-0981-41de-917d-ad5769391b8d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ffa80d938556c33dc8eafec3068aef257219071
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4f76990695b2ebbfb53bf6afda69870cd39e69f0b51681847424be3174672245
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879819"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410456"
 ---
-# <a name="modules-view---net-memory-instrumentation-data"></a>Modüller görünümü-.NET bellek izleme verileri
-İzleme yöntemi kullanılarak toplanan .NET bellek ayırma verilerinin Modüller görünümü, profil oluşturma çalıştırmasında yürütülen modüller tarafından bellek ve zamanlama verilerini gruplandırır. Modülün işlevleri için profil oluşturma verileri modül düğümünün altında listelenmiştir.
+# <a name="modules-view---net-memory-instrumentation-data"></a>Modüller Görünümü - .NET bellek ölçüm verileri
+Ölçüm yöntemi kullanılarak toplanan .NET bellek ayırma verileri Modüller görünümü, profil oluşturma çalıştırması içinde yürütülen modüller tarafından bellek ve zamanlama verilerini gruplar. Modülün işlevleri için profil oluşturma verileri modül düğümünün altında listelenir.
 
 ## <a name="general"></a>Genel
 
 |Sütun|Açıklama|
 |------------|-----------------|
 |**Ad**|İşlevin veya modülün adı.|
-|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Çağrı Sayısı**|Bu işlev veya modüle yapılan toplam çağrı sayısı.|
+|**İşlev Satır Numarası**|Kaynak dosyada bu işlevin başlangıcının satır numarası.|
+|**Çağrı Sayısı**|Bu işleve veya modüle yapılan çağrıların toplam sayısı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
-|**Modül adı**|İşlevi içeren modülün adı.|
-|**Modül yolu**|İşlevi içeren modülün yolu.|
-|**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
-|**İşlem adı**|Modülün veya işlevin yürütüldüğü işlemin adı.|
-|**Zaman Dışlamalı Araştırma ek yükü**|Bu işlev veya modül için izleme nedeniyle zaman yükü.|
-|**Zaman kapsamlı araştırma ek yükü**|Bu işlev veya modülle ilgili zaman yükü ve izleme nedeniyle alt işlevleri.|
+|**Modül Adı**|İşlevi içeren modülün adı.|
+|**Modül Yolu**|İşlevi içeren modülün yolu.|
+|**İşlem Kimliği**|Profil oluşturma çalıştırmanın işlem kimliği (PID).|
+|**İşlem Adı**|Modülün veya işlevin yürütülmektedir işleminin adı.|
+|**Zaman Özel Yoklama Ek Yükü**|Ölçümleme nedeniyle bu işlev veya modülün zaman yükü.|
+|**Zaman Dahil Yoklama Ek Yükü**|Bu işlev veya modülün ve alt işlevlerinin zaman yükü, ölçümleme nedeniyle.|
 
 ## <a name="net-memory-values"></a>.NET bellek değerleri
- Bir işlevin kapsamlı .NET bellek değerleri, işlev ve alt işlevleri tarafından oluşturulan nesnelerin sayısını (ayırmaları) ve boyutunu (bayt) gösterir.
+ Bir işlevin kapsayıcı .NET bellek değerleri, işlev ve onun alt işlevleri tarafından oluşturulan nesnelerin sayısını (ayırmaları) ve boyutunu (bayt) belirtir.
 
- Dışlamalı bellek değerleri, işlev tarafından oluşturulan ve alt işlevlerine göre değil, nesne sayısını ve boyutunu belirtir.
+ Özel bellek değerleri, alt işlevleri tarafından değil işlev tarafından oluşturulan nesnelerin sayısını ve boyutunu gösterir.
 
- Modülün dahil ve dışlamalı bellek değerleri, modüldeki işlevlerin dahil ve dışlamalı bellek değerlerinin toplamıdır.
-
-|Sütun|Açıklama|
-|------------|-----------------|
-|**Kapsamlı ayırmalar**|-Bir işlev için, işlev tarafından oluşturulan toplam nesne sayısı. Bu sayı, işlev tarafından çağrılan işlevler tarafından oluşturulan nesneleri içerir.<br />-Bir modül için, modülden en az bir işlev yürütüldüğü zaman ayrılan bir profil oluşturma çalıştırmasında nesne sayısı. Bu sayı, modül işlevlerinden çağrılar tarafından oluşturulan işlevlerde ayrılan nesneleri içerir.|
-|**Kapsamlı ayırmalar%**|Profil oluşturma çalıştırmasında ayrılan, modülün veya işlevin kapsamlı ayırmaları olan tüm nesnelerin yüzdesi.|
-|**Dışlamalı ayırmalar**|-Bir işlev için, işlev gövdesinde kod yürütürken oluşturulan nesne sayısı (işlev, çağrı yığınının en üstünde olduğunda). Bu sayı, işlev tarafından çağrılan işlevlerde oluşturulmuş nesneleri içermez.<br />-Bir modül için, modüldeki işlevlerin dışlamalı ayırmaların toplamı.|
-|**Dışlamalı ayırmalar%**|Profil oluşturma çalıştırmasında ayrılan ve modülün veya işlevin özel ayırmaları olan tüm nesnelerin yüzdesi.|
-|**Dışlamalı baytlar**|-Bir işlev için, işlev gövdesinde kod yürütürken ayrılan belleğin toplam bayt sayısı (yani, işlev çağrı yığınının en üstünde olduğunda). Bu sayı, işlev tarafından çağrılan işlevlerde ayrılan baytları içermez.<br />-Bir modül için, modüldeki işlevlerle ayrılan özel baytlar toplamı.|
-|**Dışlamalı bayt yüzdesi**|Profil oluşturma çalıştırmasında ayrılan ve modülün, işlevin, çizginin veya yönergenin özel baytları olan tüm baytların yüzdesi.|
-|**Kapsamlı baytlar**|-Bir işlev için, işlev tarafından ayrılan bayt sayısı. Bu sayı, işlev tarafından çağrılan işlevlerde ayrılan baytları içerir.<br />-Bir modül için, modülden en az bir işlev yürütüldüğü zaman ayrılan bir profil oluşturma çalıştırmasında ayrılan bayt sayısı. Bu sayı, modül işlevleri tarafından çağrılan tüm işlevlerde oluşturulan nesneleri içerir.|
-|**Dahil edilen baytlar%**|Profil oluşturma çalıştırmasında ayrılan ve modülün veya işlevin kapsamlı baytları olan tüm baytların yüzdesi.|
-
-## <a name="elapsed-inclusive-values"></a>Geçen kapsamlı değerler
- Geçen kapsamlı değerler, bir işlevin çağrı yığınında olduğu süreyi belirtir. Süre, alt işlevlerde harcanan zamanı ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları içerir.
+ Bir modülün kapsayıcı ve dış bellek değerleri, modülde yer alan işlevlerin kapsayıcı ve özel bellek değerlerinin toplamıdır.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Geçen kapsamlı süre**|-Bir işlev için, işlevde harcanan zaman. Bu, alt işlevlerde harcanan zamanı ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları içerir.<br />-Bir modül için, modüldeki en az bir işlevin çağrı yığınında olduğu zaman dilimi.|
-|**Geçen kapsamlı süre yüzdesi**|Bu modülün veya işlevin toplam geçen kapsamlı süresi içinde harcanan, profil oluşturma çalıştırmasının toplam geçen iç süresinin yüzdesi.|
-|**Ortalama geçen kapsamlı süre**|-Bir işlev için, bu işleve yapılan çağrının geçen ortalama kapsamlı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların geçen ortalama kapsamlı süresi.|
-|**Geçen maksimum kapsamlı süre**|-Bir işlev için, bu işleve yapılan çağrının geçen en uzun kapsamlı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların geçen maksimum kapsamlı süresi.|
-|**Geçen minimum kapsamlı süre**|-Bir işlev için, bu modül veya işlev çağrısının geçen en düşük kapsamlı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların geçen minimum kapsamlı süresi.|
+|**Kapsayıcı Ayırmalar**|- Bir işlev için, işlev tarafından oluşturulan nesnelerin toplam sayısı. Bu sayı, işlev tarafından çağrılan işlevler tarafından oluşturulan nesneleri içerir.<br />- Bir modül için, bir profil oluşturma çalıştırması içinde modülden en az bir işlev yürütücü olduğunda ayrılan nesne sayısı. Bu sayı, modül işlevlerinden gelen çağrılar tarafından oluşturulan işlevlerde ayrılan nesneleri içerir.|
+|**Kapsayıcı Ayırma %**|Profil oluşturma çalıştırması içinde ayrılan ve modülün veya işlevin kapsayıcı ayırmaları olan tüm nesnelerin yüzdesi.|
+|**Özel Ayırmalar**|- Bir işlev için, işlev işlev gövdesinde kod yürütürken oluşturulan nesnelerin sayısı (yani işlev çağrı yığınının en üstündeyken). Bu sayı, işlev tarafından çağrılan işlevlerde oluşturulan nesneleri içermez.<br />- Bir modül için, modülde işlevlerin özel ayırmalarının toplamı.|
+|**Özel Ayırma %**|Profil oluşturma çalıştırması içinde ayrılan ve modülün veya işlevin özel ayırmaları olan tüm nesnelerin yüzdesi.|
+|**Özel Bayt Sayısı**|- Bir işlev için, işlev işlev gövdesinde kodu yürütürken ayrılan toplam bellek bayt sayısıdır (yani işlev çağrı yığınının en üstündeyken). Bu sayı, işlev tarafından çağrılan işlevlerde ayrılan baytları içermez.<br />- Bir modül için, modülde işlevler tarafından ayrılan özel baytların toplamı.|
+|**Özel Bayt %**|Profil oluşturma çalıştırması içinde ayrılan ve modülün, işlevin, satırın veya yönergenin özel baytları olan tüm baytların yüzdesi.|
+|**Kapsayıcı Bayt Sayısı**|- Bir işlev için, işlev tarafından ayrılan bayt sayısı. Bu sayı, işlev tarafından çağrılan işlevlerde ayrılan baytları içerir.<br />- Bir modül için, modülden en az bir işlev yürüt edilirken ayrılan profil oluşturma çalıştırması içinde ayrılan bayt sayısı. Bu sayı, modül işlevleri tarafından çağrılan tüm işlevlerde oluşturulan nesneleri içerir.|
+|**Kapsayıcı Bayt %**|Profil oluşturma çalıştırması içinde ayrılan ve modülün veya işlevin kapsayıcı baytları olan tüm baytların yüzdesi.|
 
-## <a name="elapsed-exclusive-values"></a>Geçen dışlamalı değerler
- Geçen dışlamalı değerler, bir işlevin çağrı yığınının en üstünde doğrudan yürütüldüğü süreyi belirtir. Bu süre; bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıların süresini içerir, ancak alt işlevlerde harcanan zamanı içermez.
+## <a name="elapsed-inclusive-values"></a>Geçen kapsayıcı değerler
+ Geçen kapsayıcı değerler, bir işlevin çağrı yığınında olduğu zamanı gösterir. Bu süre, alt işlevlerde ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içerir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Geçen dışlamalı süre**|-Bir işlev için, modülde veya işlevinde harcanan zaman. Bu, işletim sistemine çağrı içerir (bağlam anahtarları ve giriş/çıkış işlemleri gibi), ancak alt işlevlerde harcanan süreyi dışlar.<br />-Bir modül için, modüldeki işlevlerin geçen dışlamalı saatlerin toplamı.|
-|**Geçen dışlamalı süre yüzdesi**|Bu modülün veya işlevin toplam geçen dışlamalı süre içinde harcanan, profil oluşturma çalıştırmasının toplam geçen dışlamalı sürenin yüzdesi.|
-|**Geçen ortalama dışlamalı süre**|-Bir işlev için, bu işleve yapılan çağrının ortalama hariç geçen süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların ortalama hariç geçen süresi.|
-|**Geçen maksimum dışlamalı süre**|-Bir işlev için, bu işleve yapılan çağrının geçen en büyük dışlamalı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrılar için geçen maksimum dışlamalı süre.|
-|**Geçen en düşük dışlamalı süre**|-Bir işlev için, bu modül veya işlev çağrısının en az bir özel süresi geçti.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların en düşük özel süresi geçti.|
+|**Geçen Kapsayıcı Süre**|- Bir işlev için işlevde harcanan süre. Bu, alt işlevlerde ve bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içerir.<br />- Bir modül için, modülde en az bir işlevin çağrı yığınında olduğu süre.|
+|**Geçen Kapsayıcı Saat %**|Bu modülün veya işlevin geçen toplam kapsayıcı süresinde harcanan profil oluşturma çalıştırması için geçen toplam kapsayıcı sürenin yüzdesi.|
+|**Ortalama Geçen Kapsayıcı Süre**|- Bir işlev için bu işleve yapılan çağrının ortalama kapsayıcı süresi.<br />- Bir modül için modülde tüm işlevlere yapılan çağrıların ortalama kapsayıcı süresi.|
+|**En Fazla Geçen Kapsayıcı Süre**|- Bir işlev için, bu işleve yapılan bir çağrının geçen en uzun kapsayıcı süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en uzun geçen kapsayıcı süresi.|
+|**En Az Geçen Kapsayıcı Süre**|- Bir işlev için bu modüle veya işleve yapılan çağrının en az geçen kapsayıcı süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en az geçen kapsayıcı süresi.|
+
+## <a name="elapsed-exclusive-values"></a>Geçen özel değerler
+ Geçen özel değerler, bir işlevin çağrı yığınının en üstünde doğrudan yürütülmektedir zamanı gösterir. Bu süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda zaman içerir, ancak alt işlevlerde harcanan zamanı dahil değildir.
+
+|Sütun|Açıklama|
+|------------|-----------------|
+|**Geçen Özel Süre**|- Bir işlev için modülde veya işlevde harcanan süre. Buna bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılar dahildir, ancak alt işlevlerde harcanan süre dışlar.<br />- Bir modül için, modülde işlevlerin geçen özel zamanlarının toplamı.|
+|**Geçen Özel Saat %**|Bu modülün veya işlevin geçen toplam özel süresinde harcanan profil oluşturma çalıştırması için geçen toplam özel sürenin yüzdesi.|
+|**Ortalama Geçen Özel Süre**|- Bir işlev için bu işleve yapılan çağrının ortalama özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların ortalama özel süresi.|
+|**En Fazla Geçen Özel Süre**|- Bir işlev için, bu işleve yapılan bir çağrının geçen en uzun özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en uzun geçen süresi.|
+|**En Az Geçen Özel Süre**|- Bir işlev için, bu modüle veya işleve yapılan bir çağrının en az geçen özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en az geçen süresi.|
 
 ## <a name="application-inclusive-values"></a>Uygulama kapsamlı değerler
  Uygulama kapsamlı değerleri bir işlevin çağrı yığınında olduğu süreyi belirtir. Bu süre, işletim sistemine yapılan çağrılarında bağlam anahtarları ve giriş/çıkış işlemleri gibi harcanan zamanı içermez, ancak alt işlevlerde harcanan zamanı içerir.

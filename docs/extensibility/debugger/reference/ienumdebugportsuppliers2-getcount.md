@@ -1,6 +1,6 @@
 ---
-description: Bağlantı noktası sağlayıcılar numaralandırmasındaki öğe sayısını döndürür.
-title: 'IEnumDebugPortSuppliers2:: GetCount | Microsoft Docs'
+description: Bağlantı noktası sağlayıcıları numaralama öğeleri sayısını döndürür.
+title: IEnumDebugPortSuppliers2::GetCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 004f78dd-87d0-41a8-bcaa-f7fadbfeb8fc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 037c293a5efef1757a641aada01f729e848c1d18
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 105c783c9f0c0be616a905172113bb7a32e16644682f1218f2ff852ada0e8581
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061673"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360163"
 ---
 # <a name="ienumdebugportsuppliers2getcount"></a>IEnumDebugPortSuppliers2::GetCount
-Numaralandırmadaki öğe sayısını döndürür.
+Numaralamada öğe sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-dışı Numaralandırmadaki öğe sayısını döndürür.
+[out] Numaralamada öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, yalnızca,, `Next` `Clone` `Skip` ve `Reset` yöntemlerinin uygulanması gerektiğini belirten normal com numaralandırma arabiriminin bir parçası değildir.
+ Bu yöntem, yalnızca , , ve yöntemlerinin uygulanmasının gerekli olduğunu belirten özel COM numaralama `Next` `Clone` `Skip` `Reset` arabiriminin bir parçası değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

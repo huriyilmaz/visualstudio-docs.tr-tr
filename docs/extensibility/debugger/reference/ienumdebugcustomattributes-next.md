@@ -1,6 +1,6 @@
 ---
-description: Bir numaralandırma dizisinde belirtilen sayıda özel öznitelik alır.
-title: 'IEnumDebugCustomAttributes:: Next | Microsoft Docs'
+description: Bir numaralama dizisinde belirtilen sayıda özel özniteliği alan.
+title: IEnumDebugCustomAttributes::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: e36f856b-2619-42d1-b73e-4f2390fc22bd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8b1e65f993d91bedde8fb02631a0e2c369d43522
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e6dfd5f316f6cf5d1db9cc923fbdddc38328e539d3c330a7b1f47c80fefb418b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083095"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360267"
 ---
 # <a name="ienumdebugcustomattributesnext"></a>IEnumDebugCustomAttributes::Next
-Bir numaralandırma dizisinde belirtilen sayıda özel öznitelik alır.
+Bir numaralama dizisinde belirtilen sayıda özel özniteliği alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
+[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
 
 `rgelt`\
-dışı Doldurulacak bir [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md) nesneleri dizisi.
+[out] Doldurulması [gereken IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md) nesneleri dizisi.
 
 `pceltFetched`\
-dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
+[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür, aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

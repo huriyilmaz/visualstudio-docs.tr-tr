@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla belirli bir kişi arama'
-description: Visual Studio 'Yu kullanarak Microsoft Outlook 'ta belirli bir kişiyi programlı bir şekilde nasıl araykullanabileceğinizi öğrenin.
+title: 'Nasıl yapılanlar: Program aracılığıyla belirli bir kişi için arama'
+description: Microsoft Visual Studio'de program aracılığıyla belirli bir kişi aramak için Outlook.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e163bd172b16841103641befa7e08a87d5bd0cde
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 0753fd56dd4d8f720f3f8b3c34fe34778a94e13b8c3ed21b068963ddf76cb932
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828975"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384230"
 ---
-# <a name="how-to-programmatically-search-for-a-specific-contact"></a>Nasıl yapılır: program aracılığıyla belirli bir kişi arama
-  Bu örnek, belirli bir kişi için bir Outlook kişileri klasörünü adı ve soyadı olarak arar. Örnek, Kişiler klasöründe **John Evans** adlı bir kişinin bulunduğunu varsayar.
+# <a name="how-to-programmatically-search-for-a-specific-contact"></a>Nasıl yapılanlar: Program aracılığıyla belirli bir kişi için arama
+  Bu örnek, Outlook adı ve soyadına göre belirli bir kişi için bir kişi klasörü arar. Örnekte, John Evans adlı bir kişinin **contacts** klasöründe olduğu varsaydır.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -33,4 +34,4 @@ ms.locfileid: "107828975"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
-- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
+- [Kullanmaya başlayın programlama VSTO Eklentileri](../vsto/getting-started-programming-vsto-add-ins.md)

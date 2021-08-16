@@ -12,17 +12,18 @@ ms.assetid: 4479ac61-18a9-4a30-b213-9921c5af9a26
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 60dfff7884f30090f1eb2feaeaea8bec7dc8753e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 624a62d1fd582f10ba674ef8a3a03151e487a33960959c68c2abccd2c87e0b5f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088906"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360709"
 ---
 # <a name="idebugboundbreakpoint2getbreakpointresolution"></a>IDebugBoundBreakpoint2::GetBreakpointResolution
 Bu kesme noktasını açıklayan kesme noktası çözünürlüğünü alır.

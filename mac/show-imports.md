@@ -1,39 +1,39 @@
 ---
-title: İçeri aktarma öğelerini göster
-description: Mac için Visual Studio içinde IntelliSense 'i genişletmek için Içeri aktarma öğelerini göster ' i kullanın.
+title: İçeri aktarma öğelerini gösterme
+description: İçe Aktarma Öğelerini Göster'i kullanarak IntelliSense'i Mac için Visual Studio.
 author: cobey
 ms.author: cobey
 ms.date: 03/29/2019
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
-ms.openlocfilehash: 964fbbf2f46e2495184b01c47cba888a93f24ea8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3159eba2984049783207bcb550e08cdd277cc1c272ae0cd4814c3a87a0d3c4a5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75451512"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381919"
 ---
-# <a name="show-import-items"></a>İçeri aktarma öğelerini göster
+# <a name="show-import-items"></a>İçeri aktarma öğelerini gösterme
 
-Mac için Visual Studio, IntelliSense tamamlanma listenizde projenize aktarılmasa bile, tüm kullanılabilir türleri gösterebilir. İçeri aktarılmamış bir öğe seçerek, `using` kaynak dosyanıza doğru ifade eklenecektir.
+Mac için Visual Studio, projenize aktarılmış olsalar bile tüm kullanılabilir türleri IntelliSense tamamlama listeniz içinde gösterebilirsiniz. İçe aktarılmış olmayan bir öğe seçerek, kaynak `using` dosyanıza doğru deyim eklenir.
 
-![İçeri aktarma öğelerine genel bakış](media/importitems-overview.gif)
+![içeri aktarma öğelerini göstermeye genel bakış](media/importitems-overview.gif)
 
-## <a name="how-to-enable"></a>Nasıl etkinleştirilir
+## <a name="how-to-enable"></a>Etkinleştirme
 
-Bu özelliği etkinleştirmek için, **Visual Studio**tercihleri aracılığıyla **tercihleri** açın  >  **Preferences** ve **metin düzenleyici**  >  **IntelliSense**' e gidin. IntelliSense 'de ek öğeleri etkinleştirmek için **içeri aktarma öğelerini göster** kutusunu işaretleyin.
+Bu özelliği etkinleştirmek için Tercihler'i  **Visual Studio'i** açın ve Metin Düzenleyici  >     >  **IntelliSense'e gidin.** **IntelliSense'te ek öğeleri etkinleştirmek** için İçeri aktarma öğelerini göster kutusunu işaretleyin.
 
-![öğeleri içeri aktarma seçeneğini göster](media/show-import-items.png)
+![öğeleri içeri aktarmayı göster seçeneği](media/show-import-items.png)
 
 ## <a name="usage"></a>Kullanım
 
-**İçeri aktarma öğelerini göster**' i etkinleştirdikten sonra, bir öğeyi içeri aktarmak için özelliğini kullanma işlemi IntelliSense içindeki normal eylemlere benzerdir. Kod yazdığınızda geçerli olan öğeler tamamlanma listesini dolduracaktır. Bu, henüz içeri aktarılmayan öğeleri içerir. İçe aktarılmayan öğeler öğenin sağında tam ad alanını gösterir. bu sayede, projenizde hangi içeri aktarma yaptığınız içeri aktarmaları görebilirsiniz.
+İçeri aktarma öğelerini **göster'i** etkinleştir ardından, bir öğeyi içeri aktarma özelliğini kullanma işlemi, IntelliSense'in içindeki normal eylemlere benzer. Siz kod yazarak geçerli olan öğeler tamamlanma listesini doldurmak için kullanılır. Bu, henüz içe aktarılmış olan öğeleri içerir. İçeri aktarılmış olmayan öğeler, öğenin sağında tam ad alanını gösterir ve projenize hangi içeri aktarmaları çekmekte olduğunu görmenizi sağlar.
 
-![İçeri aktarma öğeleri listesini göster](media/show-import-items-list.png)
+![içeri aktarma öğeleri listesini göster](media/show-import-items-list.png)
 
-IntelliSense listesinde, ad alanları bir bildirimde Şu anda başvurulmayan üyelerin yanında gösterilir `using` . Listeden bu öğelerden birini seçerseniz, bu üye kodunuza eklenir _ve_ `using` bildirim dosyanın en üstüne eklenir. Kodlanmış olarak zaten başvurulan türlerin üyeleri IntelliSense 'de ad alanını göstermez.
+IntelliSense listesinde, şu anda bir deyimi tarafından başvurulmay olan üyelerin yanında ad alanları `using` gösterilir. Listeden bu öğelerden birini seçerseniz, üye kodunuza eklenir  ve `using` deyimi dosyanın en üstüne eklenir. Kodlu içinde başvurulan türlerden üyeler ad alanlarını IntelliSense'te göstermez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı eylemler (Windows üzerinde Visual Studio)](/visualstudio/ide/quick-actions)
-- [Kodu yeniden düzenleme (Windows üzerinde Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)
+- [Hızlı Eylemler (Visual Studio Windows)](/visualstudio/ide/quick-actions)
+- [Kodu yeniden düzenleme (Visual Studio üzerinde Windows)](/visualstudio/ide/refactoring-in-visual-studio)

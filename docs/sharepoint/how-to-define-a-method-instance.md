@@ -15,19 +15,20 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 055193123f99825027238166d762ce54b288d716
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c75c41a68c4c6ba2cebf0b7d16bbf5b5ff064aee8f25d4c2962c9574b5c78ef1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885670"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121409624"
 ---
 # <a name="how-to-define-a-method-instance"></a>Nasıl yapılır: Yöntem örneği tanımlama
   Modelinizdeki her yöntem için en az bir yöntem örneği tanımlamanız gerekir.
 
- **IVB yöntemi ayrıntıları** penceresini kullanarak bir yöntem örneği ekleyin. Yöntem örneğini eklediğinizde, Visual Studio `<MethodInstance>` projenize model dosyasının XML öğesine bir öğesi ekler. Bir öğenin öznitelikleri hakkında daha fazla bilgi için `<MethodInstance>` bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
+ **IVB yöntemi ayrıntıları** penceresini kullanarak bir yöntem örneği ekleyin. yöntem örneğini eklediğinizde Visual Studio `<MethodInstance>` projenizdeki model dosyasının XML dosyasına bir öğe ekler. Bir öğenin öznitelikleri hakkında daha fazla bilgi için `<MethodInstance>` bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
 ### <a name="to-define-a-method-instance"></a>Bir yöntem örneği tanımlamak için
 

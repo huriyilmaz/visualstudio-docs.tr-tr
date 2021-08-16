@@ -7,14 +7,15 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2166f7876909f62d9d16a2a6d5ec126d4544193e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6525da8cd530d6e0b0ab14655e26ddd42c5813977efd0c42a222bc5fea1dcef6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956730"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412353"
 ---
 # <a name="add-debuggerdisplay-attribute"></a>DebuggerDisplay özniteliği Ekle
 

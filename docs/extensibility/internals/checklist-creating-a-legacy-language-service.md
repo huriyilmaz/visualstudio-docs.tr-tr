@@ -1,6 +1,6 @@
 ---
 title: 'Denetim listesi: eski dil hizmeti oluşturma | Microsoft Docs'
-description: Visual Studio çekirdek Düzenleyicisi için eski dil hizmeti oluşturmak için gerçekleştirmeniz gereken temel adımları öğrenin.
+description: Visual Studio çekirdek düzenleyicisi için eski dil hizmeti oluşturmak için gerçekleştirmeniz gereken temel adımları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,17 +11,18 @@ ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 111e72714f4afd56b7b53e9cc48329ba6ce68162
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 87ebb7ebbacbf03dcbf3275fc809ec26bffbada80c2786df10260aa1eab4a075
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074801"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359773"
 ---
 # <a name="checklist-create-a-legacy-language-service"></a>Denetim listesi: eski dil hizmeti oluşturma
-Aşağıdaki denetim listesi, çekirdek Düzenleyici için bir dil hizmeti oluşturmak üzere uygulamanız gereken temel adımları özetler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Dil hizmetinizi ile tümleştirmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir hata ayıklama ifade değerlendiricisi oluşturmanız gerekir. Daha fazla bilgi için bkz. [Visual Studio hata ayıklayıcısı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)IÇINDE [bir clr ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) .
+Aşağıdaki denetim listesi, çekirdek Düzenleyici için bir dil hizmeti oluşturmak üzere uygulamanız gereken temel adımları özetler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Dil hizmetinizi ile tümleştirmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir hata ayıklama ifade değerlendiricisi oluşturmanız gerekir. daha fazla bilgi için bkz. [Visual Studio hata ayıklayıcı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)içinde [bir CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) .
 
 ## <a name="steps-to-create-a-language-service"></a>Dil hizmeti oluşturma adımları
 

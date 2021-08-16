@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Genel
-description: Genel sayfasını kullanarak Visual Studio Code ve metin düzenleyicisinin genel ayarlarını değiştirme hakkında bilgi edinin.
+description: Visual Studio kodu ve metin düzenleyicisi için genel ayarları değiştirmek üzere genel sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/18/2019
 ms.topic: reference
@@ -34,18 +34,19 @@ ms.assetid: 4ac21e48-3243-4141-9058-7eaf12b3cde7
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e39febb27a74b0a2cef54098542bba087e2e0180
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b4e511c2f729c4df447f08c29e2942c1f661daf7e6437d8c60dd38175433bbd5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943880"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412275"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: metin düzenleyici \> genel
 
-Bu iletişim kutusu, Visual Studio kodu ve metin Düzenleyicisi için genel ayarları değiştirmenize olanak sağlar. Bu iletişim kutusunu göstermek için, **Araçlar** menüsünde **Seçenekler** ' i seçin, **metin düzenleyici** klasörünü genişletin ve ardından **genel**' i seçin.
+bu iletişim kutusu, Visual Studio kodu ve metin düzenleyicisi için genel ayarları değiştirmenize olanak sağlar. Bu iletişim kutusunu göstermek için, **Araçlar** menüsünde **Seçenekler** ' i seçin, **metin düzenleyici** klasörünü genişletin ve ardından **genel**' i seçin.
 
 ## <a name="settings"></a>Ayarlar
 

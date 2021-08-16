@@ -13,14 +13,15 @@ ms.assetid: cf5fe926-e784-4098-bc01-cac49c7c55c6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9803132605ee81c67785c8c0154861b26730ca5f
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 7225345da6cda366a41e39be98209c1fdf12569751400a587d58bd1fc6e632e0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905338"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121413511"
 ---
 # <a name="vscodewindow-object"></a>VSCodeWindow nesnesi
 Kod penceresi, genellikle nesnesini içeren bir veya daha fazla metin görünümü içerebilen özelleşmiş bir belge penceresidir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> .

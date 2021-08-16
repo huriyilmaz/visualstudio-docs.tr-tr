@@ -1,5 +1,5 @@
 ---
-title: Proje Dosyalarına Veri | Microsoft Docs
+title: Project Dosyalarına Veri | Microsoft Docs
 description: Proje dosyasında alt türe özgü verileri kaydetmek ve almak için Yönetilen Paket Çerçevesi'nin sağladığı arabirimler hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -12,23 +12,24 @@ ms.assetid: a3d4b15b-a91e-41ba-b235-e62632d11bc5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5859fc9286a3e584c04ccacc1d8b8a35d98dea89
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 4c0e96007303ee3bdd95f11ae6be784bd95804022fa1e1fb06458ba64ba42184
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905000"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359032"
 ---
 # <a name="save-data-in-project-files"></a>Proje dosyalarına veri kaydetme
 Proje alt türü, proje dosyasına alt türe özgü verileri kaydedip alabilir. Yönetilen Paket Çerçevesi (MPF), bu görevi gerçekleştirmek için iki arabirim sağlar:
 
-- arabirimi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> proje dosyasının MSBuild bölümünden **özellik değerlerine** erişmeye olanak sağlar. tarafından sağlanan yöntemler, kullanıcının derlemeyle ilgili verileri yüklemesi veya kaydetmesi gereken <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> her durumda herhangi bir kullanıcı tarafından çağrılabilirsiniz.
+- arabirimi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> proje dosyasının MSBuild  değerlerine erişmeye olanak sağlar. tarafından sağlanan yöntemler, kullanıcının derlemeyle ilgili verileri yüklemesi veya kaydetmesi gereken <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> her durumda herhangi bir kullanıcı tarafından çağrılabilirsiniz.
 
 - , <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> derleme dışı ilgili verileri serbest biçimli XML'de kalıcı yapmak için kullanılır. tarafından sağlanan yöntemler, <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> proje dosyasında derleme dışı ilgili verilerin kalıcı olması gereken her zaman tarafından [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çağrılır.
 
-  Derleme ve derleme dışı ilgili verilerin kalıcı hale nasıl ekli olduğu hakkında daha fazla bilgi için bkz. [MSBuild proje dosyasındaki verileri kalıcı hale toplama.](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
+  Derleme ve derleme dışı ilgili verilerin kalıcı hale nasıl tutularak ilgili daha fazla bilgi için, bkz. [MSBuild proje dosyasında kalıcı hale.](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
 
 ## <a name="save-and-retrieve-build-related-data"></a>Derlemeyle ilgili verileri kaydetme ve alma
 
@@ -211,4 +212,4 @@ Proje alt türü, proje dosyasına alt türe özgü verileri kaydedip alabilir. 
 > Bu konuda sağlanan tüm kod örnekleri, [VSSDK](https://github.com/Microsoft/VSSDK-Extensibility-Samples)örneklerinde daha büyük bir örneğin parçalarıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [MSBuild proje dosyasında verileri kalıcı olarak koruma](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
+- [Verileri proje MSBuild kalıcı olarak kalıcı olarak kaydedin](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)

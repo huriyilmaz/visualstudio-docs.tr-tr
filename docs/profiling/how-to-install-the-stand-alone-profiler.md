@@ -1,6 +1,6 @@
 ---
 title: Stand-Alone profil oluşturucuyu yüklemeyi | Microsoft Docs
-description: Visual Studio yüklü olmadan çalışabilen tek başına profil oluşturucuyu yüklemeyi öğrenin. Visual Studio 'Nun yüklenmemediği durumlar vardır.
+description: Visual Studio yüklü olmadan çalışabilen tek başına profil oluşturucuyu yüklemeyi öğrenin. Visual Studio yüklenmemelidir durumlar vardır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,25 +11,26 @@ ms.assetid: cae81c95-83cd-4ab6-8a98-84ef977a2f6d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c9ff3fccecb785feb222eeadf653d8fd9d8c17df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4aa55e3a5137122fd73f11ed5a2acb422e6c4b128926f40d8e1dfbb9817f6935
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897685"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410729"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>Nasıl yapılır: Bağımsız profil oluşturucuyu yükleme
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 'yi yüklemeden çalıştırılabilen bir komut satırı tabanlı tek başına profil oluşturucu sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bu durum, bir bilgisayar bir geliştirme ortamının yüklü olmadığı veya içermediği durumlarda oluşur. Örneğin, bir üretim Web sunucusuna bir geliştirme ortamı yüklememelisiniz.
 
 > [!NOTE]
-> Bir ASP.NET Web sitesi için performans verilerini toplamak üzere tek başına profil oluşturucu kullandığınızda, [VSPerfASPNETCmd](../profiling/vsperfaspnetcmd.md) satırı aracı [VSPerfCmd](../profiling/vsperfcmd.md) aracı üzerinde önerilir.
+> bir ASP.NET web sitesi için performans verilerini toplamak üzere tek başına profil oluşturucu kullandığınızda, [vsperfaspnetcmd](../profiling/vsperfaspnetcmd.md) satırı aracı [vsperfcmd](../profiling/vsperfcmd.md) aracı üzerinde önerilir.
 
 ### <a name="to-install-the-stand-alone-profiler"></a>Tek başına profil oluşturucuyu yüklemek için
 
-1. [Visual Studio Için performans araçları](https://visualstudio.microsoft.com/downloads/?q=performance+tools#performance-tools-for-visual-studio)'nı indirin.
+1. [Visual Studio Için performans araçlarını](https://visualstudio.microsoft.com/downloads/?q=performance+tools#performance-tools-for-visual-studio)indirin.
 
 1. Performans araçlarını indirdiğiniz ve çalıştıran tek başına profil yükleyicisini (*vs_standaloneprofiler.exe*) bulun.
 
@@ -50,7 +51,7 @@ ms.locfileid: "99897685"
     **başlatma% COMSPEC%**
 
    > [!NOTE]
-   > Sembol sunucusu paketini ayarlama hakkında ayrıntılı yönergeler için bkz. [nasıl yapılır: başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md).
+   > sembol sunucusu paketini ayarlama hakkında ayrıntılı yönergeler için bkz. [nasıl yapılır: başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md).
 
 6. Sembollerinizi profil oluşturma verileri (. vsp) dosyasına seri hale getirmek için [VSPerfReport](../profiling/vsperfreport.md) aracını kullanın. **VSPerfReport/summary: all/packsymbols** anahtarlarını kullanın. Veri dosyanıza eklenen semboller yoksa _NT_SYMBOL_PATH ortam değişkeni ayarlanmış olduğundan emin olun.
 

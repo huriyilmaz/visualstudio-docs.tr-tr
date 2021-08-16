@@ -15,14 +15,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 9dac5aa82b03887a11ba9ed3c76fe03fd85174cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3ad8bec797873fdc5dd4eede5a8862d5b4458f87c47b050360d7e1cffbaf9ad2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913712"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121409585"
 ---
 # <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>Nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama
   Bir tür tanımlayıcısı, bir parametrenin veri türünü tanımlayan özellikler içerir. Bir tür tanımlayıcısı bir alanı, varlığı veya bir varlık koleksiyonunu tanımlayabilir. Daha fazla bilgi için bkz. [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\)).
@@ -51,7 +52,7 @@ ms.locfileid: "99913712"
 
 2. **TypeName** özelliğini, varlığı temsil eden türün tam nitelikli adı olarak ayarlayın. Bu tür, projenizdeki bir sınıf, çözümünüzde başvurduğunuz bir derlemede tanımlanan bir tür veya IVB nesne modelinde tanımlı bir tür olabilir.
 
-    - Projenizdeki bir sınıf için **TypeName** özelliğinin yanındaki aşağı oku seçin, görüntülenen Iletişim kutusunda **geçerli proje** sekmesini seçin ve ardından projenizdeki sınıfı seçin.
+    - projenizdeki bir sınıf için **TypeName** özelliğinin yanındaki aşağı oku seçin, görüntülenen iletişim kutusunda **geçerli Project** sekmesini seçin ve ardından projenizdeki sınıfı seçin.
 
          Tam nitelikli ad, sınıfın ad alanını ve adını ve ardından LOB sisteminin adını içerir. Aşağıdaki örnek, **TypeName** özelliğinin değerini projenizdeki bir sınıfa ayarlar.
 
@@ -91,7 +92,7 @@ ms.locfileid: "99913712"
 
 5. **TypeName** özelliğini, arabirime yönelik bir başvuru <xref:System.Collections.Generic.IEnumerable%601> ve varlığı temsil eden türün tam adını içeren bir dizeye ayarlayın. Bu tür, projenizdeki bir sınıf, çözümünüzde başvurduğunuz bir derlemede tanımlanan bir tür veya IVB nesne modelinde tanımlı bir tür olabilir.
 
-   - Projenizdeki bir sınıf için **TypeName** özelliğinin yanındaki aşağı oku seçin, görüntülenen Iletişim kutusunda **geçerli proje** sekmesini seçin ve ardından projenizdeki sınıfı seçin.
+   - projenizdeki bir sınıf için **TypeName** özelliğinin yanındaki aşağı oku seçin, görüntülenen iletişim kutusunda **geçerli Project** sekmesini seçin ve ardından projenizdeki sınıfı seçin.
 
       Tam nitelikli ad, sınıfın ad alanını ve adını ve ardından LOB sisteminin adını içerir.
 

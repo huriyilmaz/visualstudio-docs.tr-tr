@@ -12,18 +12,19 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 98198b1197de6f5fda6a05a5bae58378a323f718
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 60061af52e6344cc500d2c00dbeb11b350f3fc8c35560b26ef7bc524e1198a13
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390561"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410963"
 ---
 # <a name="properties-of-image-shapes"></a>Görüntü Şekillerinin Özellikleri
 
-Etki alanı sınıflarını oluşturulan tasarımcıda nasıl görüneceklerini belirtmek için görüntü şekillerini kullanabilirsiniz. sınıfının özelliğini önceden tanımlanmış bir `Image` görüntü dosyası olarak ayarlayarak bir görüntü şekli tanımlayın. Aşağıdaki biçimler de desteklemektedir:
+Etki alanı sınıflarını oluşturulan tasarımcıda nasıl görüneceklerini belirtmek için görüntü şekillerini kullanabilirsiniz. Sınıfının özelliğini önceden tanımlanmış bir `Image` görüntü dosyası olarak ayarlayarak bir görüntü şekli tanımlayın. Aşağıdaki biçimler de desteklemektedir:
 
 - .gif
 
@@ -41,7 +42,7 @@ Etki alanı sınıflarını oluşturulan tasarımcıda nasıl görüneceklerini 
 
 Varsayılan olarak, görüntü dosyaları gibi tasarımcı kaynak dosyaları Dsl **projesinin Kaynaklar** **klasöründe** bulunur.
 
-Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, [bkz. Domain-Specific Dili Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
+Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, bkz. Domain-Specific Dili [Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
 Görüntü şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 
@@ -67,10 +68,10 @@ Görüntü şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 |İlk Yükseklik|Bu şeklin ilk yüksekliği inç olarak.|1|
 |İlk Genişlik|Bu şeklin inç olarak ilk genişliği.|1,5|
 |Dolgu Rengini Özellik Olarak Açığa Çıkar<br /><br /> Açık Dolgu Gradyan Modu<br /><br /> Ana Hat Rengi Özelliği Olarak Açık<br /><br /> Anahat Çizgi Stilini Özellik Olarak Açığa Çıkar<br /><br /> Ana Hat Kalınlığını Özellik Olarak Açığa Çıkar<br /><br /> Metin Rengini Ortaya Çıkarır|ise, `True` kullanıcı şeklin belirtilen özelliğini ayarlayabilirsiniz. Bunu ayarlamak için şekil tanımına sağ tıklayın ve Ortaya **Çıkar'ı Ekle'ye tıklayın.**|Yanlış|
-|Açıklama|Oluşturulan tasarımcıyı belgeley etmek için kullanılır.|\<none>|
+|Açıklama|Oluşturulan tasarımcıyı belge oluşturmak için kullanılır.|\<none>|
 |Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Araç İpucu Metni Düzeltildi|Sabit bir araç ipucu için kullanılan metin.|\<none>|
-|Help Anahtar Sözcüğü|Bu öğe için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
+|Yardım Anahtar Sözcüğü|Bu öğe için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 |Görüntü|Bu şekil için kullanılan görüntü dosyasının yolu.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.

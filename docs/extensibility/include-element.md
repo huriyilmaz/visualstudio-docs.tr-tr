@@ -1,6 +1,6 @@
 ---
-title: Include Öğesi | Microsoft Docs
-description: Include öğesi, geçerli dosyaya eklemek için sağlanan ekleme yolunda buluna bir dosya belirtir.
+title: Include öğesi | Microsoft Docs
+description: Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konumlanan bir dosyayı belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,17 +13,18 @@ ms.assetid: c923dfe6-084a-4105-aec1-f0a3f8399c54
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0005626c7fbb276775661a7cfb73d17f5e20d62
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: d6e8579bbe71e1229f553a4618eae30588b1e15e7d8182716b25c0011fe17845
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899373"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359838"
 ---
 # <a name="include-element"></a>Include öğesi
-Include öğesi, geçerli dosyaya eklemek için sağlanan ekleme yolunda buluna bir dosya belirtir.  Tanımlanan tüm semboller ve türler, derlenmiş sonucun bir parçası olur.
+Include öğesi, geçerli dosyaya eklenmek üzere sağlanan içerme yolunda konumlanan bir dosyayı belirtir.  Tanımlanan tüm semboller ve türler, derlenen sonucun bir parçası olacak.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,8 +39,8 @@ Include öğesi, geçerli dosyaya eklemek için sağlanan ekleme yolunda buluna 
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Href|Gereklidir. Üst bilgi dosyasının yolu:<br /><br /> href="stdidcmd.h"|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu Öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|değerini|Gereklidir. Üst bilgi dosyasının yolu:<br /><br /> href = "Stdidcmd. h"|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -51,7 +52,7 @@ Include öğesi, geçerli dosyaya eklemek için sağlanan ekleme yolunda buluna 
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage'ın IDE'ye sağladığı komutları (menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|Bir VSPackage 'ın IDE 'ye sağladığı komutları (menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 
@@ -60,4 +61,4 @@ Include öğesi, geçerli dosyaya eklemek için sağlanan ekleme yolunda buluna 
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

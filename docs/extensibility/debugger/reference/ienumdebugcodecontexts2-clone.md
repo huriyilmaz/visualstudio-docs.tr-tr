@@ -11,17 +11,18 @@ ms.assetid: 22c98975-4294-4fbd-a345-16f65fe1200d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d26f6b96d4ea73fecd7446625a049b5ac7755f97
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2f6fb5f50ecdf3c8f3b7af1d5b7e8e9615024365a31217949c052e974fb3a596
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080157"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360293"
 ---
 # <a name="ienumdebugcodecontexts2clone"></a>IEnumDebugCodeContexts2::Clone
 Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.

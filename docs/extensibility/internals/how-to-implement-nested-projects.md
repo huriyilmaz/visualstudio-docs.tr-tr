@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Iç Içe Projeler uygulama | Microsoft Docs'
-description: Bir proje hiyerarşisi oluşturmak için çözüm ve üst projelerdeki olayları yükselterek, Visual Studio 'da iç içe projeler uygulamayı nasıl uygulayacağınızı öğrenin.
+description: bir proje hiyerarşisi oluşturmak için çözüm ve üst projelerden olayları yükselterek Visual Studio iç içe projeler uygulamayı nasıl uygulayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,14 +11,15 @@ ms.assetid: d20b8d6a-f0e0-4115-b3a3-edda893ae678
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49f2e3b971c16b63f900424aa99649e424490d30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: de258e2b1ca7f57573a1e79d33c6a80960325d3662c8af9ce9e8111a330b6f12
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078870"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359318"
 ---
 # <a name="how-to-implement-nested-projects"></a>Nasıl yapılır: iç içe Projeler uygulama
 

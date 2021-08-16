@@ -1,6 +1,6 @@
 ---
 title: OnStart yönteminde hata ayıkla | Microsoft Docs
-description: Visual Studio 'da bir Windows hizmetinin OnStart yönteminde hata ayıklamanın, yöntemin içinden hata ayıklayıcıyı başlatarak nasıl yapılacağını öğrenin.
+description: hata ayıklayıcıyı yöntemin içinden başlatarak Visual Studio bir Windows hizmetinin OnStart yönteminde hata ayıklamanın nasıl yapılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,17 +19,18 @@ ms.assetid: b06b5d65-424b-490f-bf58-97583cd7006a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 51096d7a47de80be7434659936165ba0a29f7c67
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: de3f60072ed476bf0fb9336bea741f8e6d647f0c877664c808a7adabf69f39e9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899293"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362151"
 ---
 # <a name="how-to-debug-the-onstart-method"></a>Nasıl Yapılır: OnStart Yönteminde Hata Ayıklama
-Hizmeti başlatarak ve hata ayıklayıcıyı hizmet sürecine ekleyerek bir Windows hizmetinde hata ayıklaması yapabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). Ancak, <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> bir Windows hizmeti yönteminde hata ayıklamak için, hata ayıklayıcıyı yöntemin içinden başlatmanız gerekir.
+hizmeti başlatarak ve hata ayıklayıcıyı hizmet sürecine ekleyerek bir Windows hizmetinde hata ayıklaması yapabilirsiniz. daha fazla bilgi için bkz. [nasıl yapılır: Windows hizmeti uygulamalarında hata ayıklama](/dotnet/framework/windows-services/how-to-debug-windows-service-applications). ancak, <xref:System.ServiceProcess.ServiceBase.OnStart%2A?displayProperty=fullName> bir Windows hizmeti yönteminde hata ayıklamak için, hata ayıklayıcıyı yöntemin içinden başlatmanız gerekir.
 
 1. Yönteminin başına öğesine bir çağrı ekleyin <xref:System.Diagnostics.Debugger.Launch%2A> `OnStart()` .
 
@@ -44,15 +45,15 @@ Hizmeti başlatarak ve hata ayıklayıcıyı hizmet sürecine ekleyerek bir Wind
 
     Aşağıdakine benzer bir iletişim kutusu görmeniz gerekir:
 
-    ![Bir Visual Studio tam zamanında hata ayıklayıcı iletişim kutusunun, WindowsService-Asis.exe içinde işlenmemiş bir .NET Framework özel durumu gösteren ekran görüntüsü.](../debugger/media/onstartdebug.png)
+    ![WindowsService-Asis.exe içinde işlenmemiş bir .NET Framework özel durumu gösteren Visual Studio tam zamanında hata ayıklayıcı iletişim kutusunun ekran görüntüsü.](../debugger/media/onstartdebug.png)
 
 3. **Evet, hata ayıkla ' yı seçin \<service name> .**
 
-4. Tam zamanında hata ayıklayıcı penceresinde, hata ayıklama için kullanmak istediğiniz Visual Studio sürümünü seçin.
+4. tam zamanında hata ayıklayıcı penceresinde, hata ayıklama için kullanmak istediğiniz Visual Studio sürümünü seçin.
 
-    ![Olası hata ayıklayıcılar listesinde ' Microsoft Visual Studio 2015 ' yeni örneğini içeren bir Visual Studio tam zamanında hata ayıklayıcı penceresinin ekran görüntüsü.](../debugger/media/justintimedebugger.png)
+    ![olası hata ayıklayıcılar listesinde ' yeni Microsoft Visual Studio 2015 ' örneğiyle Visual Studio tam zamanında hata ayıklayıcı penceresinin ekran görüntüsü.](../debugger/media/justintimedebugger.png)
 
-5. Visual Studio 'nun yeni bir örneği başlar ve yöntem sırasında yürütme durdurulur `Debugger.Launch()` .
+5. Visual Studio yeni bir örneğini başlatır ve yürütme `Debugger.Launch()` yöntemde durdurulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)

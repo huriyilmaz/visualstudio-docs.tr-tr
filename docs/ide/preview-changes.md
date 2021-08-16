@@ -7,20 +7,21 @@ ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 f1_keywords:
 - vs.codefix.previewchanges
 ms.workload:
 - multiple
-ms.openlocfilehash: 55a53e60ffa05892531257871ede89381e7fd4e2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 52a87c3131e5d10863d9f6391c2d015fefc27efff903ff42ce80d5aabddbc336
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909004"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412795"
 ---
 # <a name="preview-changes-window"></a>Değişiklikleri Önizle penceresi
 
-Visual Studio 'da çeşitli *hızlı eylemler* veya yeniden *düzenleme* araçları kullanırken, projeniz kabul edilmeden önce projenize yapılacak değişikliklerin önizlemesini yapmak genellikle mümkündür. **Değişiklikleri Önizle** penceresi bu şekilde yapılır.  Örneğin, bir C# projesinde yeniden adlandırma yeniden düzenleme sırasında nelerin değiştirildiğini gösteren **Önizleme değişiklikleri** penceresi aşağıda verilmiştir:
+Visual Studio ' de çeşitli *hızlı eylemler* veya yeniden *düzenleme* araçları kullanırken, projeniz kabul edilmeden önce yaptığınız değişiklikleri önizlemek genellikle mümkündür. **Değişiklikleri Önizle** penceresi bu şekilde yapılır.  Örneğin, bir C# projesinde yeniden adlandırma yeniden düzenleme sırasında nelerin değiştirildiğini gösteren **Önizleme değişiklikleri** penceresi aşağıda verilmiştir:
 
 ![Değişiklikleri Önizleme](media/previewchanges.png)
 

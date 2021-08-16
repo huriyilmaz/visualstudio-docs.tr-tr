@@ -11,14 +11,15 @@ ms.assetid: 4b8dec05-e76c-4cc4-9644-2369d583849f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a11d249722f192232a80a8951e18e927f27e9a41
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0f007c502606a0afb0f061feb37ad2b2630eed73083ab8f869be1e94451b56a2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159441"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380587"
 ---
 # <a name="idiaenumframedataframebyrva"></a>IDiaEnumFrameData::frameByRVA
 Göreli sanal adres (RVA) ile bir çerçeve döndürür.

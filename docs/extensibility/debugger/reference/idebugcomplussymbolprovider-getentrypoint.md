@@ -1,6 +1,6 @@
 ---
-description: Uygulama giriş noktasını alır.
-title: 'IDebugComPlusSymbolProvider:: GetEntryPoint | Microsoft Docs'
+description: Uygulama giriş noktasını alın.
+title: IDebugComPlusSymbolProvider::GetEntryPoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 9640e121-1da1-41f9-8e66-76efca36baf2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 60c05683bae7845c852b954ed330b26557504fd6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 531ee2b4eff2e6e182cbd54178330357cd0ce0cd466371c8d2cdfb50e66375c0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058852"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360579"
 ---
 # <a name="idebugcomplussymbolprovidergetentrypoint"></a>IDebugComPlusSymbolProvider::GetEntryPoint
-Uygulama giriş noktasını alır.
+Uygulama giriş noktasını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +46,19 @@ int GetEntryPoint(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-'ndaki Uygulama etki alanı için tanımlayıcı.
+[in] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-'ndaki Modül için benzersiz tanımlayıcı.
+[in] Modülün benzersiz tanımlayıcısı.
 
 `ppAddress`\
-dışı Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen giriş noktasını döndürür.
+[out] [IDebugAddress arabirimiyle temsil edilen giriş noktasını](../../../extensibility/debugger/reference/idebugaddress.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetEntryPoint(

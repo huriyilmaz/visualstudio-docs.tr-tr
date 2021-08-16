@@ -11,14 +11,15 @@ ms.assetid: 11c685f6-cda2-4474-a432-214ecaae4ffa
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 578745bae879609bd734a209c959cacf50639848
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7e304824beb91605ff95262db3c0f6ab29cf71a553e148c7ff2636165175919f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147613"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380144"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
 Belirtilen bir sanal adresi (VA) ve sapmayı içeren veya en yakın olan belirtilen bir sembol türünü alır.

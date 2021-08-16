@@ -11,14 +11,15 @@ ms.assetid: db0c32cf-8e50-4e1b-9a9f-4c07fd6a2163
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bc31ede05e623970c0cbc3f9dd118ed03f212d65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ecf5a59411062acef3eb269cca84b8e10fa7bc57e36fb9c0eba70ef68168d4a2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895173"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361814"
 ---
 # <a name="search-tools-for-spy-views"></a>Spy++ Görünümleri için Arama Araçları
 Spy + + görünümleri penceresinin görüntüleyeceği verileri belirtmek için bu iletişim kutularını kullanın:

@@ -11,14 +11,15 @@ ms.assetid: dbb55936-b754-4a27-8b82-9537a7adb664
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 33b87762d1112d1f84e3e49bdbc1d2d555d723fd
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: cc56a003fb0c4658b757652006c6f0154f9d1272f639736a49f2435c9de65a1f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148978"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380489"
 ---
 # <a name="idiaenumlinenumbersget_count"></a>IDiaEnumLineNumbers::get_Count
 Satır numarası sayısını alır.

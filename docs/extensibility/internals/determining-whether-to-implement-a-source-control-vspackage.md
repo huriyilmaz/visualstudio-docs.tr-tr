@@ -1,6 +1,6 @@
 ---
 title: Kaynak denetimi VSPackage ne zaman uygulanır?
-description: Visual Studio kaynak denetimi çözümlerini genişletmek için kullanılabilen kaynak denetimi eklentilerinin ve kaynak denetimi VSPackages seçeneklerinin seçimleri hakkında bilgi edinin.
+description: Visual Studio kaynak denetimi çözümlerini genişletmek için kullanılabilen kaynak denetimi eklentilerinin ve kaynak denetimi vspackages seçeneklerinin seçimleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: 60b3326e-e7e2-4729-95fc-b682e7ad5c99
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89e2ea0db7f162c70261ab2ba9aab187f9c11bd0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3a833abb38b42ff136532159996b438bf7466a4d6fb3eec10dcdab14eda3e8c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090895"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359550"
 ---
 # <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Kaynak denetimi VSPackage uygulanıp uygulanacağını belirleme
 

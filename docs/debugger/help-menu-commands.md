@@ -10,14 +10,15 @@ ms.assetid: a842caf3-d635-4620-bc81-1d4a6ea06ed6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d1339e99e4efb66410bf9d240fcee75abc085d0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d8cf422c699874c67df347d789315e05cd51e94a19be7f4e4963b8c3ff51cbf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908432"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362503"
 ---
 # <a name="help-menu-commands"></a>Yardım Menü Komutları
 **Yardım** menüsü yardım dosyalarını açmak için komutlar sağlar.

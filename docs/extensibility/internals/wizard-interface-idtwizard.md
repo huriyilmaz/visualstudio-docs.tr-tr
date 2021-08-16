@@ -11,14 +11,15 @@ ms.assetid: 09618d9d-d115-45b6-bccc-de328994b39c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 930996de7fa5366463ec2d60f7cf96d941f6c243
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 08a1ec6e79624d3f1eb74f9b5251a73523a998c739c7ea215e3622643c5b9926
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898623"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359155"
 ---
 # <a name="wizard-interface-idtwizard"></a>Sihirbaz Arabirimi (IDTWizard)
 Tümleşik geliştirme ortamı (IDE), <xref:EnvDTE.IDTWizard> sihirbazları ile iletişim kurmak için arabirimini kullanır. Sihirbazlar IDE 'ye yüklenebilmek için bu arabirimi uygulamalıdır.
@@ -36,7 +37,7 @@ STDMETHOD(Execute)(THIS_
    );
 ```
 
- Başlangıç mekanizması her iki **Yeni proje** için benzerdir ve **Yeni öğe sihirbazları ekler** . Her birini başlatmak için, <xref:EnvDTE.IDTWizard> Dteınternal. h içinde tanımlanan arabirimi çağırın. Tek fark, arabirim çağrıldığında arabirime geçirilen bağlam ve özel parametrelerin kümesidir.
+ başlangıç mekanizması her iki **yeni Project** için benzerdir ve **yeni öğe sihirbazları ekler** . Her birini başlatmak için, <xref:EnvDTE.IDTWizard> Dteınternal. h içinde tanımlanan arabirimi çağırın. Tek fark, arabirim çağrıldığında arabirime geçirilen bağlam ve özel parametrelerin kümesidir.
 
  Aşağıdaki bilgiler, <xref:EnvDTE.IDTWizard> sihirbazların IDE 'de çalışmak için uygulaması gereken arabirimi açıklar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . IDE, <xref:EnvDTE.IDTWizard.Execute%2A> sihirbazdaki yöntemi çağırarak, aşağıdakileri geçirerek:
 

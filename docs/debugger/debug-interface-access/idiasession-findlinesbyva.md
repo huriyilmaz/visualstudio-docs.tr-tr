@@ -11,14 +11,15 @@ ms.assetid: f647eee9-a73c-483b-9fe9-21f42e560a7b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 41d901f6110320c1fbc6f93d2b2131c189d44d30
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: cd4d27c96a6a08c6fc63d38d9845d30366be760c7db9e5fd34dfac55fc9ae497
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147732"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380145"
 ---
 # <a name="idiasessionfindlinesbyva"></a>IDiaSession::findLinesByVA
 Belirtilen sanal adres (VA) aralığında yer alan satırlar için satır numarası bilgilerini alır.

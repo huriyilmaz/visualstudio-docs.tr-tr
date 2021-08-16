@@ -1,6 +1,6 @@
 ---
-description: 'IDiaSession:: findInlineFramesByVA, bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.'
-title: 'IDiaSession:: findInlineFramesByVA | Microsoft Docs'
+description: IDiaSession::findInlineFramesByVA, bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler arasında devamını sağlayan bir sabit adı alır.
+title: IDiaSession::findInlineFramesByVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -9,17 +9,18 @@ ms.assetid: df9e68f6-e0a4-4cf6-b11d-61c40351e0cd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c87af04b166448baeda14b276f0bf0b8ab8d6f10
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ea39013ba5825f3607c743c48c04b35a66547dceb1210106ba2244f99e646b8d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158966"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380313"
 ---
 # <a name="idiasessionfindinlineframesbyva"></a>IDiaSession::findInlineFramesByVA
-Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
+Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler üzerinde devamını sağlayan bir sabit adı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,18 +34,18 @@ HRESULT findInlineFramesByVA (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol` Üst öğeyi temsil eden nesne.
+[in] Üst `IDiaSymbol` öğeyi temsil eden nesne.
 
  `va`
 
-'ndaki Adresi bir VA olarak belirtir.
+[in] Adresi VA olarak belirtir.
 
  `ppResult`
 
-dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
+[out] Alınan `IDiaEnumSymbols` çerçevelerin listesini içeren bir nesneyi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

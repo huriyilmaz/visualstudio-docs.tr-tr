@@ -1,6 +1,6 @@
 ---
 title: Visual Basic deyimlerini durdur | Microsoft Docs
-description: Visual Studio 'da bir kesme noktası ayarlamaya yönelik programsal bir alternatif sağlayan Visual Basic stop ifadesini inceleyin.
+description: Visual Studio bir kesme noktası ayarlamaya yönelik programsal bir alternatif sağlayan Visual Basic Stop ifadesini inceleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,24 +17,25 @@ ms.assetid: 4ad3fe5c-3dfb-4913-b2eb-a0b635751c18
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a17aafd508acd9272e8058ea7ca3ff585a8c0c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f572626fd64359dd16e95fefc1d282af9e81a5e183e3e85c62ac41a62510fd0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904932"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361762"
 ---
 # <a name="stop-statements-in-visual-basic"></a>Visual Basic'de durdur deyimleri
 
-Visual Basic stop deyimleri, kesme noktası ayarlamaya yönelik bir alternatif sağlar. Hata ayıklayıcı bir stop ifadesiyle karşılaştığında, programın yürütülmesini keser (kesme moduna girer). C# programcıları, öğesine yapılan bir çağrı kullanarak aynı etkiyi elde edebilir <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .
+Visual Basic Stop deyimleri, kesme noktası ayarlamaya yönelik bir alternatif sağlar. Hata ayıklayıcı bir stop ifadesiyle karşılaştığında, programın yürütülmesini keser (kesme moduna girer). C# programcıları, öğesine yapılan bir çağrı kullanarak aynı etkiyi elde edebilir <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .
 
 Bir stop ifadesini, kaynak kodunuzu düzenleyerek ayarlayabilir veya kaldırabilirsiniz. Bir kesme noktası gibi hata ayıklayıcı komutlarını kullanarak stop deyimlerini ayarlayamazsınız veya temizleyemezsiniz.
 
 End ifadesinin aksine, stop deyimleri değişkenleri sıfırlamaz veya size tasarım moduna geri döndürmez. Uygulamayı çalıştırmaya devam etmek için hata ayıklama menüsünden devam ' ı seçebilirsiniz.
 
-Hata ayıklayıcı dışında bir Visual Basic uygulaması çalıştırdığınızda, Just-In-Time hata ayıklaması etkinse stop deyimleri hata ayıklayıcıyı başlatır. Just-In-Time hata ayıklaması etkinleştirilmemişse, stop deyimleri bir End deyimmiş gibi davranır ve yürütmeyi sonlandırır. QueryUnload veya Unload olayı gerçekleşmez, bu nedenle tüm stop deyimlerini Visual Basic uygulamanızın yayın sürümünden kaldırmanız gerekir. Daha fazla bilgi için bkz. [tam zamanında hata ayıklama](just-in-time-debugging-in-visual-studio.md).
+hata ayıklayıcı dışında bir Visual Basic uygulaması çalıştırdığınızda, Just-ın-Time hata ayıklaması etkinse Stop deyimleri hata ayıklayıcıyı başlatır. Just-In-Time hata ayıklaması etkinleştirilmemişse, stop deyimleri bir End deyimmiş gibi davranır ve yürütmeyi sonlandırır. queryunload veya Unload olayı gerçekleşmez, bu nedenle tüm Stop deyimlerini Visual Basic uygulamanızın yayın sürümünden kaldırmanız gerekir. Daha fazla bilgi için bkz. [tam zamanında hata ayıklama](just-in-time-debugging-in-visual-studio.md).
 
  Stop deyimlerini kaldırma zorunludur kaçınmak için, koşullu derleme kullanabilirsiniz:
 

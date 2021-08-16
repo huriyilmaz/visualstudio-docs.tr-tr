@@ -12,17 +12,18 @@ ms.assetid: 5d366876-efed-43d0-8ea1-dfdb009cbfac
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 792c0464b6c1beced9903e3dc21783d1841ab455
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5491dd67851c645762512736eac3ed6b1db820f53b2eb1299d7c1199d9ae29bf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088880"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360644"
 ---
 # <a name="idebugboundbreakpoint2setcondition"></a>IDebugBoundBreakpoint2::SetCondition
 Bu ilişkili kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.

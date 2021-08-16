@@ -1,73 +1,73 @@
 ---
-title: Visual Studio aboneliklerinde ürün anahtarlarını bulma ve oluşturma | Microsoft Docs
+title: Aboneliklerde ürün anahtarlarını bulma Visual Studio talep | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: cabuschl
 ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 03/21/2021
 ms.topic: conceptual
-description: Visual Studio aboneliklerinde ürün anahtarlarını bulma, talep etme ve dışa aktarma hakkında bilgi edinin
-ms.openlocfilehash: 2e74269c3e5e49e776b00484de790472030dc1c1
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+description: Aboneliklerde ürün anahtarlarını bulma, talep ve dışarı aktarma Visual Studio öğrenin
+ms.openlocfilehash: 02850ca8fb3135617bf40dc5f7c5ff8ed923efc3f3c802c16c74ab0734fcf04a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776577"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381128"
 ---
-# <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını bulma ve oluşturma
-Bu makalede ürün anahtarlarının ' den nasıl bulunduğu, talep verilmesi ve dışarı aktarılacağı açıklanmaktadır https://my.visualstudio.com/productkeys .  Bir ürünü anahtar, perakende ve toplu lisans sürümleriyle ve günlük ürün anahtarı talep limitlerine göre etkinleştirme hakkında daha fazla bilgi için [ürün anahtarlarına genel bakış](product-keys.md)' ı ziyaret edin.
+# <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Aboneliklerde ürün anahtarlarını bulma Visual Studio talep ediyor
+Bu makalede, ürününden ürün anahtarlarını bulma, talep ve dışarı aktarma https://my.visualstudio.com/productkeys açıklanmıştır.  Anahtarı olan bir ürünü etkinleştirme, anahtarların perakende ve toplu lisans sürümleri ve günlük ürün anahtarı talep sınırları hakkında daha fazla bilgi için ürün anahtar genel [bakışını ziyaret edin.](product-keys.md)
 
-## <a name="locating-and-claiming-product-keys"></a>Ürün anahtarlarını bulma ve oluşturma
-Ürün anahtarlarınızı görüntülemek için Visual Studio aboneliğinizde oturum açmış olmanız gerekir. [Karşıdan yüklemeler](https://my.visualstudio.com/downloads) sayfasında aşağıda gösterildiği gibi, belirli bir ürün Için mavi **get anahtar** bağlantısı seçilerek tek tek ürün anahtarları bulunur.  Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) sayfasında toplu olarak da kullanılabilir. Tek bir ürün için birden çok anahtar varsa, bu yükleme için notlar sütununda notlar görüntülenir ve bu da hangi anahtarın kullanılması gerektiğini belirlemenize yardımcı olur.
+## <a name="locating-and-claiming-product-keys"></a>Ürün anahtarlarını bulma ve talepte bulma
+Ürün anahtarlarınızı görüntülemek için Visual Studio aboneliğinde oturum amışsınız. Tek tek ürün anahtarları, aşağıda gösterildiği **gibi** İndirmeler sayfasında belirli bir ürün için mavi Anahtar Al [bağlantısı](https://my.visualstudio.com/downloads) seçerek bulunur.  Tüm anahtarlar, Ürün Anahtarları sayfasında toplu [olarak da](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) kullanılabilir. Tek bir ürün için birden çok anahtar olduğunda, hangi anahtarın kullan gerektiğini tanımlamaya yardımcı olmak için indirme için Notlar sütununda notlar görüntülenir.
 > [!div class="mx-imgBorder"]
-> ![Indirmeler sayfasından anahtar al](_img/product-keys/download-get-key.png "Bu ürün için bir anahtar almak üzere herhangi bir indirmenin bilgi sayfasında anahtar al ' ı seçin.")
+> ![İndirmeler Sayfasından Anahtar Al](_img/product-keys/download-get-key.png "herhangi bir indirme için bilgi sayfasında Anahtarı al'ı seçerek ilgili ürüne ilişkin bir anahtar edinebilirsiniz.")
 
-Bazı ürünler ürünün birden çok sürümünü tek bir indirme halinde paketler. Bu durumlarda, girilen ürün anahtarı ürünün hangi sürümünün yüklü olduğunu belirler.
-Etkinleştirme gerekli olmadığından, bazı anahtarlar, "static" anahtarları gibi otomatik olarak sağlanır. Diğer anahtarların, ürün için **anahtar al** bağlantısı seçilerek talep alınmalıdır.
+Bazı ürünler, ürünün birden çok sürümünü tek bir indirmede paketler. Bu durumlarda, girilen ürün anahtarı ürünün hangi sürümünün yüklü olduğunu belirler.
+Bazı anahtarlar otomatik olarak sağlanır( örneğin, "statik" anahtarlar) ve etkinleştirme gerekli değildir. Ürün için Anahtar Al bağlantısı seçerek **diğer anahtarların** talep eduşuna basın.
 
-Ürüne bağlı olarak çeşitli anahtar türleri mevcuttur.
+Ürüne bağlı olarak çeşitli anahtar türleri kullanılabilir.
 
 ### <a name="product-key-types"></a>Ürün anahtarı türleri
 
-|    Anahtar türü           |    Açıklama                                                                                                                                                                                                           |
+|    Anahtar Türü           |    Açıklama                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Geçerli değil                    |    Bu ürünü yüklemek için gereken anahtar yok.                                                       |
-|    Retail                     |    Perakende tuşları çoklu etkinleştirmeleri sağlar ve ürünün perakende yapıları için kullanılır. Çoğu durumda, her anahtar için 10 etkinleştirmeye izin verilir, ancak aynı makinede genellikle daha fazlasına izin verilir.                                                       |
-|    Çoklu etkinleştirme        |    Çoklu etkinleştirme anahtarı (MAK), aynı anahtarla bir ürünün birden çok yüklemesini etkinleştirmenizi sağlar. Mak 'leri, ürünlerin toplu lisanslama sürümleriyle kullanılır. Genellikle, abonelik başına yalnızca bir MAK anahtarı sağlanır.    |
-|    Statik etkinleştirme anahtarı    |    Statik etkinleştirme anahtarları, etkinleştirme gerektirmeyen ürünler için sağlanır. Bunlar, herhangi bir sayıda yükleme için kullanılabilir.                                                                                                                  |
-|    Özel anahtar                 |    Özel anahtarlar, ürünü etkinleştirmek veya yüklemek için özel eylemler veya bilgiler sağlar.                                                                                                                                                                |
-|    VA 1,0                     |    MAK 'a benzeyen birden çok etkinleştirme anahtarı.                                                                                                                                                                                                 |
-|    OEM anahtarı                    |    Birden çok etkinleştirmeye izin veren özgün ekipman üreticisi anahtarları.                                                                                                                                                                       |
-|    DreamSpark perakende anahtarı    |    DreamSpark için perakende anahtarlar tek bir etkinleştirmeye izin verir. DreamSpark perakende anahtarları toplu olarak verilir ve öncelikle öğrenci tüketimine yöneliktir.                                                                                     |
-|    DreamSpark Lab anahtarı         |    Laboratuvar, birden çok etkinleştirmeye izin veren DreamSpark programları için anahtarlar kullanır. DreamSpark laboratuvar anahtarları, University bilgisayar laboratuvarı senaryolarında kullanılmak üzere tasarlanmıştır.                                                                                       |
-|    DreamSpark MAK anahtarı         |    DreamSpark program müşterileri için MAK anahtarları.                                                                                                                                                                                                  |
+|    Geçerli değil                    |    Bu ürünü yüklemek için anahtar gerekmez.                                                       |
+|    Retail                     |    Perakende anahtarları birden çok etkinleştirmeye olanak sağlar ve ürünün perakende derlemeleri için kullanılır. Çoğu durumda anahtar başına 10 etkinleştirmeye izin verilir, ancak genellikle aynı makinede daha fazla etkinleştirmeye izin verilir.                                                       |
+|    Çoklu Etkinleştirme        |    Çoklu Etkinleştirme Anahtarı (MAK), bir ürünün aynı anahtara sahip birden çok yüklemesini etkinleştirmenizi sağlar. MAK'ler, ürünlerin Toplu Lisanslama sürümleriyle birlikte kullanılır. Genellikle abonelik başına yalnızca bir MAK anahtarı sağlanır.    |
+|    Statik Etkinleştirme Anahtarı    |    Statik etkinleştirme anahtarları, etkinleştirme gerektirmeyen ürünler için sağlanır. Bunlar, herhangi bir sayıda yükleme için kullanılabilir.                                                                                                                  |
+|    Özel Anahtar                 |    Özel anahtarlar, ürünü etkinleştirmek veya yüklemek için özel eylemler veya bilgiler sağlar.                                                                                                                                                                |
+|    VA 1.0                     |    Mak'e benzer şekilde birden çok etkinleştirme anahtarı.                                                                                                                                                                                                 |
+|    OEM Anahtarı                    |    Birden çok etkinleştirmeye izin verecek orijinal Ekipman Üreticisi anahtarları.                                                                                                                                                                       |
+|    DreamSpark Perakende Anahtarı    |    DreamSpark perakende anahtarları tek bir etkinleştirmeye olanak sağlar. DreamSpark Perakende anahtarları toplu olarak ve öncelikli olarak öğrenci tüketimine yöneliktir.                                                                                     |
+|    DreamSpark Laboratuvar Anahtarı         |    Birden çok etkinleştirmeye olanak sağlayan DreamSpark programları için laboratuvar kullanım anahtarları. DreamSpark Laboratuvar Anahtarları, üniversite bilgisayar laboratuvarı senaryolarında kullanılmak üzere tasarlanmıştır.                                                                                       |
+|    DreamSpark MAK Anahtarı         |    DreamSpark programı müşterileri için MAK anahtarları.                                                                                                                                                                                                  |
 |
 
-Ürünün karşıdan yükleme sayfasından bir anahtar talep edebilir veya [ürün anahtarları](https://my.visualstudio.com/productkeys) sayfasında ihtiyacınız olan anahtarı arayabilirsiniz.
+Ürünün indirme sayfasından bir anahtar talep edebilirsiniz veya ihtiyacınız olan anahtarı Ürün Anahtarları sayfasında [arayabilirsiniz.](https://my.visualstudio.com/productkeys)
 
-### <a name="claiming-product-keys"></a>Ürün anahtarları talep ediliyor
-Yalnızca etkin abonelikleri olan aboneler ürünleri indirebilir ve ürün anahtarlarını talep edebilir.  Aboneliğiniz etkinken, [ürün anahtarları](https://my.visualstudio.com/productkeys) sayfasından talep ettiğiniz anahtarları dışarı aktarabilirsiniz.
+### <a name="claiming-product-keys"></a>Ürün anahtarlarını talep
+Yalnızca etkin abonelikleri olan aboneler ürünleri indirebilir ve ürün anahtarlarını talep eder.  Aboneliğiniz etkinken ürün anahtarları [sayfasından talepte bulunarak](https://my.visualstudio.com/productkeys) anahtarlarınızı dışarı aktarabilirsiniz.
 
 Bir ürün anahtarı talep etmek için:
-1. Visual Studio aboneliğinizde oturum açın.  Ürünleri indirmek veya ürün anahtarlarını talep etmek için oturum açmış olmanız gerekir.
-2. [Ürün anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) sekmesini seçin.
-3. Ürün anahtarları ürün adına göre alfabetik olarak listelenir.  İstediğiniz ürünün adına aşağı doğru kaydırabilir ya da sayfanın en üstündeki arama çubuğunu kullanarak arama yapabilirsiniz.
+1. Visual Studio oturum açma.  Ürünleri indirmek veya ürün anahtarlarını talep etmek için oturum açık olması gerekir.
+2. Ürün Anahtarları [sekmesini](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) seçin.
+3. Ürün anahtarları, ürün adına göre alfabetik olarak listelenir.  İstediğiniz ürünün adını aşağı kaydırarak veya sayfanın üst kısmında yer alan arama çubuğunu kullanarak bu ürünü arayabilirsiniz.
 > [!div class="mx-imgBorder"]
-> ![Ürün anahtarı ara](_img/product-keys/search-keys.png "İstediğiniz ürüne kaydırın veya herhangi bir ürünü hızlı bir şekilde bulmak için arama kutusunu kullanın.")
+> ![Ürün Anahtarı ara](_img/product-keys/search-keys.png "İstediğiniz ürüne kaydırın veya herhangi bir ürünü hızla bulmak için arama kutusunu kullanın.")
    
-Bu örnekte, Visual Studio Enterprise 2019 için bir ürün anahtarı bulmak için arama çubuğunu kullandık.
-Gördüğünüz gibi, çeşitli sürümler listelenir.  Tek bir anahtar, 16,0 ve 16,1 Visual Studio Enterprise 2019 sürümleri için zaten talep edildi.  Farklı türlerde ek anahtarlar, her iki sürüm için de kullanılabilir. **Notlar** sütununda, istenen anahtarlar hakkında kısa bir not kaydedebileceğinizi unutmayın.  Bunu, talep ettiğiniz anahtarların izini tutmak için, **istenen** sütundaki tarihle birlikte kullanabilirsiniz.  Örneğin, anahtarı kullanarak ürünün yüklemesini etkinleştirdiğinizde Not alabilirsiniz.
+Bu örnekte, Visual Studio Enterprise 2019 için bir ürün anahtarını bulmak için arama çubuğunu kullandık.
+Gördüğünüz gibi, listelenen birkaç sürüm vardır.  2019 sürüm 16.0 Visual Studio Enterprise ve 16.1 için her biri için zaten bir anahtar talep edildi.  Her iki sürüm için de farklı türlerde ek anahtarlar kullanılabilir. Notlar sütunundaki talep eden anahtarlar hakkında kısa bir not **kaydedebilirsiniz.**  Bunu Talep Edildi sütunundaki **tarihle birlikte** kullanarak talepte bulundurarak anahtarlara göz edebilirsiniz.  Örneğin, anahtarını kullanarak ürünün yüklemesini etkinleştiren notlar ekleyebilirsiniz.
 
-### <a name="exporting-your-claimed-keys"></a>Talep edilen anahtarlarınız dışarı aktarılıyor
-İstemiş olduğunuz anahtarların bir listesini dışarı aktarabilirsiniz.  Bu, sizin için otomatik olarak "talep edilen" olarak işaretlenen, büyük bir statik ve diğer anahtar seçimini içerir.
+### <a name="exporting-your-claimed-keys"></a>Talep eden anahtarlarınızı dışarı aktarma
+Talepte bulundurarak anahtarların listesini dışarı aktarabilirsiniz.  Buna, sizin için otomatik olarak "talep edildi" olarak işaretlenen büyük bir statik anahtar seçimi ve diğer anahtarlar dahildir.
 
 > [!IMPORTANT]
-> Aboneliğinizin süresi dolarsa, artık yeni anahtarları talep edemeyeceksiniz veya talep ettiğiniz anahtarları dışarı aktarabilirsiniz.
+> Aboneliğinizin süresi dolsa, artık yeni anahtar talep edemeyecek veya talepte bulundurarak anahtarlarınızı dışarı aktaramazsınız.
 
-Anahtarlarınızı dışarı aktarmak için, ürün anahtarları sayfasının en sağındaki **tüm anahtarları dışarı aktar** bağlantısını seçin.  KeysExport.xml adlı bir. xml dosyası oluşturulur ve dosyayı açmayı veya kaydetmeyi seçebilirsiniz.  Bu dosyayı .xml dosyalarını işleyebilen bir uygulamayla açmanız gerekir.  Örneğin dosyayı Excel’de salt okunur bir çalışma kitabı olarak açabilirsiniz.
+Anahtarlarınızı dışarı aktarma için Ürün Anahtarları **sayfasının** sağ en sağ tarafından Tüm anahtarları dışarı aktar bağlantısını seçin.  .xml adlı bir KeysExport.xml dosyası oluşturulur ve dosyayı açmayı veya kaydetmeyi seçebilirsiniz.  Bu dosyayı .xml dosyalarını işleyebilen bir uygulamayla açmanız gerekir.  Örneğin dosyayı Excel’de salt okunur bir çalışma kitabı olarak açabilirsiniz.
 
 ## <a name="resources"></a>Kaynaklar
-- [Visual Studio abonelikleri desteği](https://aka.ms/vssubscriberhelp)
+- [Visual Studio abonelik desteği](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -76,4 +76,4 @@ Anahtarlarınızı dışarı aktarmak için, ürün anahtarları sayfasının en
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Yazılım indirmeye ve anahtarları kullanmaya hazırsanız, adresini ziyaret edin https://my.visualstudio.com/downloads .  Yazılım indirme hakkında daha fazla bilgi için bkz. [indirmeye genel bakış](download-software.md).
+Yazılım indirmeye ve anahtarları kullanmaya hazır olduğunda, ziyaret https://my.visualstudio.com/downloads edin.  Yazılım indirme hakkında daha fazla bilgi için bkz. [indirmeye genel bakış.](download-software.md)

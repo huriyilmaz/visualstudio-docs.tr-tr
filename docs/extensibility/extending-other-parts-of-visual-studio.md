@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 'nun diğer kısımlarını genişletme | Microsoft Docs
-description: Visual Studio Kullanıcı arabiriminin genişletebileceğinizi parçalar hakkında bilgi edinin. Bir VSPackage oluşturabilir, etkinlik günlüğüne yazabilir ve araç kutusunu ve durum çubuğunu genişletebilirsiniz.
+title: Visual Studio |'nin Diğer Bölümlerini Genişletme Microsoft Docs
+description: Kullanıcı arabiriminin genişlet Visual Studio bölümleri hakkında bilgi öğrenin. VSPackage oluşturabilir, Etkinlik günlüğüne yazabilir ve Araç Kutusu ile durum çubuğunu genişletebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,43 +10,44 @@ ms.assetid: 27d2f1e1-2503-4aca-9cfc-707abd07ccf0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 193fb335ffd2d57eab1aebedc5ea0114738f72eb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b0b3e649bba1687d89fbb3d9d5688649be143463a62525149b3148724331942b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075243"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360020"
 ---
-# <a name="extend-other-parts-of-visual-studio"></a>Visual Studio 'nun diğer kısımlarını genişletme
+# <a name="extend-other-parts-of-visual-studio"></a>Diğer bölümleri Visual Studio
 
-Visual Studio Kullanıcı arabiriminin genişletebilmeniz için daha birçok bölümü vardır. Burada yalnızca birkaç tane gösterilmektedir.
+Kullanıcı arabiriminin genişletebilir Visual Studio daha birçok parçası vardır. Burada size yalnızca birkaç tane gösteriyoruz.
 
 ## <a name="create-a-vspackage"></a>VSPackage oluşturma
 
-Visual Studio genişletilebilirliğine yönelik temel yapı taşları VSPackages 'dir.  VSPackage ekleme hakkında bilgi edinin: [VSPackage ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md)
+Genişletilebilirlik için Visual Studio yapı taşları VSPackage'lardır.  VSPackage ekleme hakkında bilgi edinmek [için: VSPackage ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md)
 
-## <a name="extend-the-toolbox"></a>Araç kutusunu genişletme
+## <a name="extend-the-toolbox"></a>Araç Kutusunu Genişletme
 
-Araç kutusuna yeni denetimler ve diğer öğeler eklemeyi ve araç kutusu işlevselliğinin nasıl kullanılacağını öğrenin:
+Araç Kutusuna yeni denetimler ve diğer öğeler ekleme ve Araç Kutusu işlevselliğini kullanma hakkında bilgi edinebilirsiniz:
 
-- [WPF araç kutusu denetimi oluşturma](../extensibility/creating-a-wpf-toolbox-control.md)
+- [WPF Araç Kutusu Denetimi Oluşturma](../extensibility/creating-a-wpf-toolbox-control.md)
 
-- [Windows Forms araç kutusu denetimi oluşturma](../extensibility/creating-a-windows-forms-toolbox-control.md)
+- [Windows Forms Araç Kutusu Denetimi Oluşturma](../extensibility/creating-a-windows-forms-toolbox-control.md)
 
 ## <a name="extend-the-status-bar"></a>Durum çubuğunu genişletme
 
-Durum çubuğunu ve ilerleme çubuğunu okumayı ve yazmayı, animasyonları ve diğer Kullanıcı arabirimini nasıl sağlayacağınızı öğrenin: [durum çubuğunu genişletme](../extensibility/extending-the-status-bar.md).
+Durum çubuğuna ve ilerleme çubuğuna okuma ve yazmanın ve animasyonların ve diğer kullanıcı arabiriminin nasıl sağlanmış olduğunu [öğrenin: Durum çubuğunu genişletme.](../extensibility/extending-the-status-bar.md)
 
 ::: moniker range="vs-2017"
 
-## <a name="create-custom-start-pages"></a>Özel başlangıç sayfaları oluşturma
+## <a name="create-custom-start-pages"></a>Özel Başlangıç Sayfaları oluşturma
 
-Kendi başlangıç sayfanızı sıfırdan veya indirilebilir bir başlangıç sayfasından nasıl yapacağınızı öğrenin örnek: [özel başlangıç sayfası oluşturma](../extensibility/creating-a-custom-start-page.md).
+Sıfırdan veya indirilebilir bir başlangıç sayfası örneğinden kendi başlangıç sayfanızı yapmayı öğrenin: [Özel bir Başlangıç Sayfası oluşturun.](../extensibility/creating-a-custom-start-page.md)
 
 ::: moniker-end
 
-## <a name="write-to-the-activity-log"></a>Etkinlik günlüğüne yaz
+## <a name="write-to-the-activity-log"></a>Etkinlik günlüğüne yazma
 
-Etkinlik günlüğüne yazmayı öğrenin: [nasıl yapılır: etkinlik günlüğünü kullanma](../extensibility/how-to-use-the-activity-log.md).
+Etkinlik Günlüğüne yazmayı öğrenin: [Nasıl yazılır: Etkinlik günlüğünü kullanma.](../extensibility/how-to-use-the-activity-log.md)

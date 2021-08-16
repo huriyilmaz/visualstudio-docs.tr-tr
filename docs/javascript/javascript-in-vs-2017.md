@@ -1,6 +1,6 @@
 ---
 title: JavaScript
-description: IDE'de JavaScript kodu yazmak için standart düzenleme yardımlarının (kod parçacıkları, IntelliSense gibi) çoğunu veya hepsini kullanabileceğinizi Visual Studio öğrenin.
+description: Visual Studio IDE'de JavaScript kodu yazmak için standart düzenleme yardımlarının (kod parçacıkları, IntelliSense ve diğer) çoğunu veya hepsini kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/15/2019
 ms.technology: vs-javascript
@@ -14,16 +14,16 @@ caps.latest.revision: 1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 79c7c13ea80e32e80d32c04052269cb814072aeb
-ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+ms.openlocfilehash: e29924e87f26e2a7f36ad7deba82438fe898c4cbce52fc30e7c62b6343c37a6a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114232914"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411612"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017’de JavaScript
 
-JavaScript, Visual Studio. Visual Studio IDE'de JavaScript kodu yazarken standart düzenleme yardımlarının (kod parçacıkları, IntelliSense, vb.) çoğunu veya tümünü kullanabilirsiniz. Birçok uygulama türü ve hizmeti için JavaScript kodu yazabilirsiniz.
+JavaScript, uygulama dilinde birinci sınıf bir Visual Studio. Visual Studio IDE'de JavaScript kodu yazarken standart düzenleme yardımlarının (kod parçacıkları, IntelliSense, vb.) çoğunu veya tümünü kullanabilirsiniz. Birçok uygulama türü ve hizmeti için JavaScript kodu yazabilirsiniz.
 
 > [!NOTE]
 > Microsoft'un JavaScript docs.microsoft.com API başvurusu olan tüm (500'den fazla sayfa) [MDN web](https://developer.mozilla.org/en-US/) belgelerini MDN web belgelerinden MDN'lerine ve MDN'lerine yönlendirerek topluluk genelindeki çabalara katıldık. Ayrıntılar için bu duyuruya [bakın.](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)
@@ -34,33 +34,33 @@ Visual Studio artık ECMAScript 2015/2016 gibi ECMAScript dil güncelleştirmele
 
 ### <a name="what-is-ecmascript-2015"></a>ECMAScript 2015 nedir?
 
-JavaScript hala bir programlama dili olarak gelişmektedir ve [güncelleştirmelerden TC39](https://www.ecma-international.org/memento/tc39-m.htm) sorumlu komitesidir.
+JavaScript hala bir programlama dili olarak gelişmektedir ve [güncelleştirmeleri yapmakla](https://www.ecma-international.org/memento/tc39-m.htm) sorumlu olan komite TC39'tur.
 ECMAScript 2015, Yararlı yeni söz dizimi ve işlevsellik getiren bir JavaScript dili güncelleştirmesidir. ES6 özelliklerine derinlemesine bir göz at için bu [başvuru sitesine](http://es6-features.org/#Constants) göz atabilirsiniz.
 
-VISUAL STUDIO, ECMAScript 2015 desteğine ek olarak ECMAScript 2016'yı da destekler ve yayınlandırıldıklarında ECMAScript'in gelecek sürümleri için de destek içerir. TC39'a ve ECMAScript'te yapılan en son değişikliklere devam etmek için, [GitHub.](https://github.com/tc39)
+VISUAL STUDIO, ECMAScript 2015 desteğine ek olarak ECMAScript 2016'yı da destekler ve yayımlansalar ecMAScript'in gelecek sürümleri için destek de sağlar. TC39'a ve ECMAScript'te yapılan en son değişikliklere devam etmek için, [GitHub.](https://github.com/tc39)
 
 ### <a name="transpile-javascript"></a>Transpile JavaScript
 
 JavaScript ile ilgili yaygın bir sorun, en son ES6+ dil özelliklerini kullanmak istemenizdir çünkü bunlar daha üretken çalışmanıza yardımcı olur, ancak çalışma zamanı ortamlarınızı (genellikle tarayıcılar) henüz bu yeni özellikleri desteklemez. Bu, hangi tarayıcıların hangi özellikleri (sıkıcı olabilir) desteklemektedir veya ES6+ kodunuzu hedef çalışma zamanlarınızı anlayacaktır (genellikle ES5) bir sürüme dönüştürmek için bir yol gerekir. Kodunuzu çalışma zamanının an anlayacağı bir sürüme dönüştürmek genellikle "dönüştürme" olarak adlandırılır.
 
-TypeScript'in önemli özelliklerinden biri, ES6+ kodunu ES5 veya ES3'e çevirip en üretken hale getirirken kodunuzu herhangi bir platformda çalıştırmaya devam etmektir. içinde JavaScript, TypeScript ile aynı dil hizmetini kullandığı [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] için, ES6+ ile ES5 arasında geçişe kadar da faydalanabilirsiniz.
+TypeScript'in temel özelliklerinden biri, ES6+ kodunu ES5 veya ES3'e çevirip en üretken hale getirirken kodunuzu herhangi bir platformda çalıştırmanızı sağlar. içinde JavaScript, TypeScript ile aynı dil hizmetini kullandığı [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] için, ES6+ ile ES5 arasında geçişe kadar da faydalanabilirsiniz.
 
 Geçişin ayarlanmadan önce yapılandırma seçeneklerinin anlaşılması gerekir.
 TypeScript bir dosya aracılığıyla `tsconfig.json` yapılandırılır.
 Böyle bir dosyanın olmaması, bazı varsayılan değerler kullanılır.
 Uyumluluk nedeniyle, bu varsayılanlar yalnızca JavaScript dosyalarının (ve isteğe bağlı olarak dosyaların) bulunduğu `.d.ts` bir bağlamda farklıdır.
-JavaScript dosyalarını derlemek `tsconfig.json` için bir dosya eklenmeli ve bu seçeneklerden bazıları açıkça ayar gerektir.
+JavaScript dosyalarını derlemek `tsconfig.json` için bir dosya eklenmeli ve bu seçeneklerden bazılarının açıkça ayarlanmış olması gerekir.
 
 tsconfig dosyası için gerekli ayarlar aşağıdaki gibidir:
 
-- `allowJs`: JavaScript dosyalarının `true` tanınması için bu değerin olarak ayarlanmış olması gerekir. TypeScript JavaScript'e derleyene ve derleyici az önce derlenmiş dosyaları içermesi gerekmay olduğundan varsayılan `false` değer değeridir.
+- `allowJs`: JavaScript dosyalarının `true` tanınması için bu değerin olarak ayarlanmış olması gerekir. TypeScript JavaScript'e derleyene ve derleyici az önce derlediği dosyaları içermesi gerekmay olduğundan varsayılan `false` değer değeridir.
 - `outDir`: Bu değer, yayılan JavaScript dosyalarının algılanmayacak ve sonra projeye dahil edilmayacak şekilde projeye dahil edilmayacak bir konuma ayarlandırılması gerekir (bkz. `exclude` ).
-- `module`: Modül kullanıyorsanız, bu ayar derleyiciye, yayılan kodun hangi modül biçimini (node veya Browserify gibi paketleyiciler) `commonjs` kullanması gerektiğini söyler.
+- `module`: Modüller kullanıyorsanız, bu ayar derleyiciye, yayılan kodun hangi modül biçimini (node veya Browserify gibi paketleyiciler) `commonjs` kullanması gerektiğini söyler.
 - `exclude`: Bu ayar hangi klasörlerin projeye dahil olmadığını ifade ediyor.
 Çıkış konumu ve veya gibi proje dışı klasörler `node_modules` `temp` bu ayara eklenmiştir.
 - `enableAutoDiscovery`: Bu ayar, önceden özetlenen tanım dosyalarının otomatik olarak algılanmasına ve indir indirebilirsiniz.
-- `compileOnSave`: Bu ayar, bir kaynak dosya her kaydedilse yeniden derlemesi gerektirse de derleyiciye Visual Studio.
-- `typeAcquisition`: Bu ayar kümesi, otomatik tür alımının davranışını denetleme (bu bölümde daha [fazla açıklayacak)](../ide/javascript-intellisense.md#Auto)
+- `compileOnSave`: Bu ayar, bir kaynak dosya her kaydedilsin yeniden derlemesi gerektirse de derleyiciye Visual Studio.
+- `typeAcquisition`: Bu ayar kümesi, otomatik tür alımının davranışını kontrol altına almaktadır (bu bölümde daha [fazla bilgi ve açıklama bulabilirsiniz)](../ide/javascript-intellisense.md#Auto)
 
 JavaScript dosyalarını CommonJS modüllerine dönüştürmek ve bir klasöre `./out` yer etmek için aşağıdaki dosyayı `tsconfig.json` kullanabilirsiniz:
 
@@ -98,7 +98,7 @@ export let sqr = x => x * x;  //ES6 export, let, and arrow function
 export default Subscription;  //ES6 default export
 ```
 
-Ardından, aşağıdakine benzer bir şekilde `./out/app.js` görünen ECMAScript 5'i (varsayılan) hedeflemek için bir dosya yayımlar:
+Ardından, aşağıdakine benzer bir şekilde `./out/app.js` görünen ECMAScript 5'i (varsayılan) hedeflemek için bir dosya yayılır:
 
 ```js
 "use strict";
@@ -124,13 +124,13 @@ içinde JavaScript IntelliSense [!include[vs_dev15](../../docs/misc/includes/vs_
 
 içinde [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] JavaScript, JSX söz dizimi için zengin destek içerir. JSX, JavaScript dosyalarında HTML etiketlerine izin veren bir söz dizimi kümesidir.
 
-Aşağıdaki çizimde, TypeScript React tanımlanan bir bileşen ve ardından dosyadan kullanılan bu bileşen, JSX ifadeleri içindeki tamamlamalar ve belgeler için `comps.tsx` `app.jsx` IntelliSense ile tamamlanmıştır.
+Aşağıdaki çizimde, TypeScript React tanımlanan bir bileşen ve ardından JSX ifadeleri içindeki tamamlamalar ve belgeler için IntelliSense ile birlikte dosyadan kullanılan bu bileşen `comps.tsx` `app.jsx` gösterilmiştir.
 Burada TypeScript'e ihtiyacınız yok, bu özel örnekte yalnızca bazı TypeScript kodu da vardır.
 
 ![JSX söz dizimi](../javascript/media/js-react.png)
 
 > [!NOTE]
-> JSX söz dizimlerini çağrılara React için, `"jsx": "react"` ayar dosyasında `compilerOptions` dosyasına `tsconfig.json` eklenmiştir.
+> JSX söz dizimlerini çağrılara React için, `"jsx": "react"` ayar dosyasına `compilerOptions` `tsconfig.json` eklenmiştir.
 
 Derleme sırasında './out/app.js' üzerinde oluşturulan JavaScript dosyası şu kodu içerebilir:
 
@@ -229,10 +229,10 @@ Projenizi iyileştirmenin basit bir yolu, dil hizmetine hangi dosyaların yoksay
 }
 ```
 
-Uygun gördüğünüz şekilde daha fazla dizin ekleyin. Diğer örneklerden bazıları "vendor" veya "wwwroot/lib" dizinleridir.
+Uygun gördüğünüz şekilde daha fazla dizin ekleyin. Diğer örneklerden bazıları "satıcı" veya "wwwroot/lib" dizinleridir.
 
 > [!NOTE]
-> Derleyici özelliği, `disableSizeLimit` 20 MB denetim sınırını devre dışı bırakmak için de kullanılabilir. Sınırın devre dışı bırakılması dil hizmetinin kilitlenmesine neden olabileceği için bu özelliği kullanırken özel önlemler alın.
+> Derleyici özelliği, 20 MB denetim sınırını devre dışı `disableSizeLimit` bırakmak için de kullanılabilir. Sınırın devre dışı bırakılması dil hizmetinin kilitlenmesine neden olabileceği için bu özelliği kullanırken özel önlemler alın.
 
 ## <a name="notable-changes-from-visual-studio-2015"></a>Visual Studio 2015'te Önemli Değişiklikler
 
@@ -241,14 +241,14 @@ En önemli değişiklikler VSDoc'nin JSDoc ile değiştirilmesi, özel uzantıla
 
 ### <a name="no-more-references-or-_referencesjs"></a>Artık yok `///<references/>` veya `_references.js`
 
-Daha önce, IntelliSense kapsamındaki dosyaların hangi anda olduğunu anlamak oldukça karmaşıktı. Bazı durumlarda tüm dosyalarınızın kapsamda ve diğer zamanlarda olması tercih edilirdi ve bu da el ile başvuru yönetimi içeren karmaşık yapılandırmalara yol açtı. Bundan sonra artık başvuru yönetimini düşünmezsiniz ve bu nedenle üç eğik çizgi başvuru açıklamasına veya dosyalarına ihtiyacınız `_references.js` yoktur.
+Daha önce IntelliSense kapsamındaki dosyaları anlamak oldukça karmaşıktı. Bazen tüm dosyalarınızın kapsamda ve diğer zamanlarda olması tercih edilirdi ve bu da el ile başvuru yönetimi içeren karmaşık yapılandırmalara yol açtı. Bundan sonra artık başvuru yönetimini düşünmezsiniz ve bu nedenle üç eğik çizgi başvurusu açıklamasına veya dosyalarına ihtiyacınız `_references.js` yoktur.
 
 [IntelliSense'in nasıl çalıştığını görmek için JavaScript IntelliSense](../ide/javascript-intellisense.md) sayfasına bakın.
 
 ### <a name="vsdoc"></a>VSDoc
 
-Bazen VSDocs olarak da adlandırılan XML belge yorumları, daha önce kaynak kodunuzu IntelliSense sonuçlarının havalarını almak için kullanılacak ek verilerle dekore etmek için kullanılabilirdi.
-VSDoc artık [JSDoc'nin](https://jsdoc.app/about-getting-started.html) kullanımı kolay ve JavaScript için kabul edilen standart olan JSDoc desteğine sahip değil.
+Bazen VSDocs olarak da adlandırılan XML belge yorumları, daha önce kaynak kodunuzu IntelliSense sonuçlarının buff'ını almak için kullanılacak ek verilerle dekore etmek için kullanılabilirdi.
+VSDoc artık daha kolay yazılması gereken [JSDoc](https://jsdoc.app/about-getting-started.html) ve JavaScript için kabul edilen standart desteğine sahip değil.
 
 ### <a name="intellisensejs-extensions"></a>`.intellisense.js` Uzantı -ları
 
@@ -259,9 +259,9 @@ Bildirim ( ) dosyası yazma hakkında `.d.ts` daha fazla bilgi için buraya [bak
 
 ### <a name="unsupported-patterns"></a>Desteklenmeyen desenler
 
-Yeni dil hizmeti bir yürütme altyapısı yerine statik analizle destekleneneden (farklar hakkında bilgi için bu sorunu okuyun), artık algılanamadı birkaç JavaScript deseni vardır. [](https://github.com/Microsoft/TypeScript/issues/4789)
+Yeni dil hizmeti yürütme altyapısı yerine statik analizle [](https://github.com/Microsoft/TypeScript/issues/4789) destekleneneden (farklar hakkında bilgi için bu sorunu okuyun), artık algılanamadı birkaç JavaScript deseni vardır.
 En yaygın desen "expando" desenidir.
-Şu anda dil hizmeti, bildirimden sonra üzerine ekli özelliklere sahip nesneler üzerinde IntelliSense sağamaz.
+Şu anda dil hizmeti, bildirimden sonra üzerine ekli özelliklere sahip nesneler üzerinde IntelliSense sağlayamaz.
 Örnek:
 
 ```js
@@ -281,7 +281,7 @@ var obj = {
 obj. // IntelliSense shows properties a and b
 ```
 
-Ayrıca aşağıdaki gibi bir JSDoc açıklaması da ebilirsiniz:
+Aşağıdaki gibi bir JSDoc açıklaması da ekebilirsiniz:
 
 ```js
 /**

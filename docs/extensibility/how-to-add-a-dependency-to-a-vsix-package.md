@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: VSıX paketine bağımlılık ekleme | Microsoft Docs'
-description: Hedef bilgisayarda zaten mevcut olmayan bağımlılıkları yükleyen bir VSıX paketi dağıtımını ayarlamayı öğrenin.
+title: 'Nasıl: VSIX PaketiNe Bağımlılık Ekleme | Microsoft Docs'
+description: Hedef bilgisayarda zaten mevcut olan bağımlılıkları yüken bir VSIX paket dağıtımı ayarlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,32 +13,33 @@ ms.assetid: 8f20177b-dab9-43a3-b959-81a591b451d6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 48c6ac0abd5ffb6c36dc894829e29c9304563a5e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58453344957b5264e9f3061878953c2007d56c238f71b4200c6d518df6d7af1c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057409"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121359929"
 ---
-# <a name="how-to-add-a-dependency-to-a-vsix-package"></a>Nasıl yapılır: VSıX paketine bağımlılık ekleme
+# <a name="how-to-add-a-dependency-to-a-vsix-package"></a>Nasıl: VSIX paketine bağımlılık ekleme
 
-Hedef bilgisayarda zaten mevcut olmayan bağımlılıkları yükleyen bir VSıX paketi dağıtımı ayarlayabilirsiniz. Bunu gerçekleştirmek için, *kaynak. Extension. valtmanifest* dosyasına VSIX bağımlılıklarını ekleyin.
+Hedef bilgisayarda zaten mevcut olan bağımlılıkları yüken bir VSIX paket dağıtımı kurabilirsiniz. Bunu gerçekleştirmek için, VSIX bağımlılıklarını *source.extension.vsixmanifest dosyasına* dahil edin.
 
-## <a name="to-add-a-dependency"></a>Bir bağımlılık eklemek için
+## <a name="to-add-a-dependency"></a>Bağımlılık eklemek için
 
-1. **Design** görünümünde *Source. Extension. valtmanifest* dosyasını açın. **Bağımlılıklar** sekmesine gidin ve **Yeni**' ye tıklayın.
+1. Tasarım *görünümünde source.extension.vsixmanifest* **dosyasını** açın. Bağımlılıklar **sekmesine gidin** ve Yeni'ye **tıklayın.**
 
-2. Yüklü bir uzantı eklemek için: **Yeni bağımlılık Ekle** iletişim kutusunda, **yüklü uzantı** ' ı seçin ve ardından **ad** için listeden bir uzantı seçin.
+2. Yüklü bir uzantı eklemek için: Yeni Bağımlılık Ekle  iletişim kutusunda Yüklü uzantı'ya tıklayın ve ardından Ad **için** listeden bir uzantı seçin. 
 
-3. Yüklü olmayan başka bir VSıX eklemek için: **Yeni bağımlılık Ekle** iletişim kutusunda **dosya sistemindeki dosya** ' yı seçin ve ardından VSIX ' i seçmek için, **tarayıcı** düğmesini kullanın.
+3. Yüklenmemiş başka bir VSIX eklemek için: Yeni Bağımlılık Ekle  iletişim kutusunda Dosya sisteminde  Dosya'ya tıklayın ve ardından Gözat düğmesini kullanarak VSIX'i seçin. 
 
-## <a name="require-a-specific-visual-studio-release"></a>Belirli bir Visual Studio sürümü gerektir
+## <a name="require-a-specific-visual-studio-release"></a>Belirli bir Visual Studio gerektirme
 
-Uzantınız Visual Studio 2017 ' nin belirli bir sürümünü gerektiriyorsa, örneğin, 15,3 ' de yayınlanan bir özelliğe bağlı olarak, VSıX **ınstalyüklemi Hedefinizdeki** derleme numarasını belirtebilirsiniz. Örneğin, Release 15,3 ' 15.0.26730.3 ' derleme numarasına sahiptir. Sürüm numaralarını [burada](../install/visual-studio-build-numbers-and-release-dates.md)oluşturmak için bu sürümlerin eşlemesini görebilirsiniz. ' 15,3 ' yayın numarasını kullanmanın doğru şekilde çalışmadığına unutmayın.
+Uzantınız belirli bir Visual Studio 2017 sürümünü gerektiriyorsa, örneğin, 15.3 sürümünde yayımlanan bir özeliklere bağlı olarak VSIX InstallationTarget içinde derleme numarasını **belirtebilirsiniz.** Örneğin, 15.3 sürümü '15.0.26730.3' derleme numarasına sahip. Derleme numaralarına yayın eşlemesini [buradaabilirsiniz.](../install/visual-studio-build-numbers-and-release-dates.md) '15.3' yayın numarasının doğru çalışmaycagunu unutmayın.
 
-Uzantınız 15,3 veya daha yüksek bir sürüm gerektiriyorsa, **ınstalyüklemehedef sürümünü** [15.0.26730.3, 16,0) olarak bildirebilirsiniz:
+Uzantınız 15.3 veya daha yüksek bir sürüm gerektiriyorsa **InstallationTarget Sürümünü** [15.0.26730.3, 16.0) olarak bildirebilirsiniz:
 
 ```xml
 <Installation>
@@ -46,10 +47,10 @@ Uzantınız 15,3 veya daha yüksek bir sürüm gerektiriyorsa, **ınstalyükleme
 </Installation>
 ```
 
-Valtıyükleyicisi, Visual Studio 'nun önceki sürümlerini algılayacak ve kullanıcıyı daha sonra bir güncelleştirmenin gerekli olduğunu bilgilendirdirecektir.
+VSIXInstaller, uygulamanın önceki Visual Studio algılar ve kullanıcıya daha sonraki bir güncelleştirmenin gerekli olduğunu bildirecek.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [VSıX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110))
-- [VSıX paketinin anatomumu](../extensibility/anatomy-of-a-vsix-package.md)
-- [Windows Installer dağıtımı için uzantıları hazırlama](../extensibility/preparing-extensions-for-windows-installer-deployment.md)
+- [VSIX uzantı şeması 1.0 başvurusu](/previous-versions/dd393700(v=vs.110))
+- [VSIX paketinin anatomisi](../extensibility/anatomy-of-a-vsix-package.md)
+- [Windows Yükleyicisi dağıtımı için uzantıları hazırlama](../extensibility/preparing-extensions-for-windows-installer-deployment.md)

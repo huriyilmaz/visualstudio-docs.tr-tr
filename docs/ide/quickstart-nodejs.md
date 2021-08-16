@@ -3,7 +3,7 @@ title: İlk Node.js oluşturma
 ms.custom:
 - vs-acquisition
 - SEO-VS-2020
-description: Bu hızlı başlangıçta, Node.js'de bir Visual Studio
+description: Bu hızlı başlangıçta, Visual Studio'de Node.js uygulama Visual Studio
 ms.date: 03/25/2021
 ms.technology: vs-javascript
 ms.topic: quickstart
@@ -16,12 +16,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0c44bfcfe1e7f07f83ca2b7dbb8b0604f5efe5f1
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 0b9203d9e6f785bd652ccbb60fcecd45c030fdbdd84b05c835cc601d85c92fe2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386169"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412575"
 ---
 # <a name="quickstart-create-your-first-nodejs-app-with-visual-studio"></a>Hızlı Başlangıç: Node.js ile ilk Visual Studio
 
@@ -54,11 +54,11 @@ Visual Studio, geliştirme aşamasında yaygın olarak kullanılan araçları y�
 
     Node.js 32 bit ve 64 bit mimariler için tasarlanmıştır ancak Node.js yükleyicisi aynı anda yalnızca bir sürümün yüklü olduğunu destekler.
 
-1. Bu Visual Studio çalışma zamanını algılamazsanız (genellikle algılar), projenizi yüklü çalışma zamanının başvurusu olacak şekilde yapılandırın:
+1. Bu Visual Studio çalışma zamanlarınızı algılamazsanız (genellikle algılar), projenizi yüklü çalışma zamanının başvurusu olacak şekilde yapılandırın:
 
    1. Projenizi [oluşturduk sonra](#create-your-app-project)proje düğümüne sağ tıklayın.
 
-   1. **Özellikler'i** seçin ve **Node.exe ayarlayın.** Bir uygulamanın genel yüklemesini Node.js veya her bir yerel yorumlayıcının yolunu belirterek Node.js belirtebilirsiniz.
+   1. **Özellikler'i** seçin ve **Node.exe ayarlayın.** Bir yerel yorumlayıcının Node.js yüklemesini kullanabilir veya her bir yerel yorumlayıcının yolunu Node.js belirtebilirsiniz.
 
 ## <a name="create-your-app-project"></a>Uygulama projenizi oluşturma
 
@@ -79,17 +79,17 @@ Visual Studio, geliştirme aşamasında yaygın olarak kullanılan araçları y�
     ::: moniker-end
 
     ::: moniker range="vs-2017"
-    1. Üst menü çubuğundan Dosya Yeni **Proje'yi** >  > **seçin.**
+    1. Üst menü çubuğundan Dosya Yeni **Dosya'Project.** >  > 
 
-    1. Yeni Proje iletişim kutusunun sol **bölmesinde** **JavaScript'i genişletin ve** yeni birNode.js. ****
+    1. Yeni Uygulama iletişim kutusunun sol **bölmesinde JavaScript Project** genişletin ve yeni **bir** Node.js. 
 
     1. Orta bölmede Boş Web **uygulaması'Node.js ve Tamam'ı** **seçin.**
 
     ::: moniker-end
     
-    Blank **Node.js Web** uygulaması proje şablonunu görmüyorsanız, uygulama geliştirme işNode.js **eklemeniz** gerekir. Ayrıntılı yönergeler için önkoşullara [bakın.](#prerequisites)
+    Blank **Node.js Web uygulaması** proje şablonunu görmüyorsanız, uygulama geliştirme iş yükünüNode.js **gerekir.** Ayrıntılı yönergeler için önkoşullara [bakın.](#prerequisites)
 
-    Visual Studio projeyi oluşturur ve açar. Projeninserver.js dosyası, sol tarafta düzenleyicide açılır.
+    Visual Studio projeyi oluşturur ve açar. Projeninserver.js *dosyası,* sol tarafta düzenleyicide açılır.
 
 ## <a name="explore-the-ide"></a>IDE'ye keşfetme
 
@@ -99,7 +99,7 @@ Visual Studio, geliştirme aşamasında yaygın olarak kullanılan araçları y�
 
    - Kalın yazıyla vurgulanan projeniz, projeyi ayarlayan ad kullanılarak sağlanır. Diskte, bu proje proje klasörünüzdeki *bir .njsproj* dosyasıyla temsil edildi.
 
-   - En üst düzeyde, varsayılan olarak projenizin adıyla aynı adı alan bir çözümdür. Diskte bir *.sln dosyasıyla temsil* edilen çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
+   - En üst düzeyde, varsayılan olarak projeniz ile aynı adı alan bir çözümdür. Diskte bir *.sln dosyasıyla temsil* edilen çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
 
    - **npm düğümü** yüklü npm paketlerini gösterir. npm düğümünü sağ tıklar ve bir iletişim kutusu kullanarak npm paketlerini arayabilir ve yükleyebilirsiniz.
 
@@ -139,7 +139,7 @@ Tebrikler! Visual Studio ile Node.js basit bir Visual Studio. Daha fazla bilgi i
 > [Uygulamayı Linux App Service](../javascript/publish-nodejs-app-azure.md)
 
 > [!div class="nextstepaction"]
-> [Node.js ve Express öğreticisi](../javascript/tutorial-nodejs.md)
+> [Node.js express öğreticisi](../javascript/tutorial-nodejs.md)
 
 > [!div class="nextstepaction"]
-> [Node.js ve React öğreticisi](../javascript/tutorial-nodejs-with-react-and-jsx.md)
+> [Öğretici: Node.js ve React](../javascript/tutorial-nodejs-with-react-and-jsx.md)

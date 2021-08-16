@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: belgelere program aracılığıyla üstbilgiler ve altbilgiler ekleme'
-description: Bölümünün üstbilgiler özelliği ve altbilgileri özelliğini kullanarak belgenizdeki üstbilgilere ve altbilgilere nasıl metin ekleyebileceğiniz hakkında bilgi edinin.
+title: 'Nasıl kullanılır: Belgelere program aracılığıyla üst bilgiler ve alt bilgiler ekleme'
+description: Bölümü'nin Headers özelliğini ve Footers özelliğini kullanarak belgenizin üst bilgilerine ve alt bilgilerine metin ekleme hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -16,17 +16,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 73844d19ef6bb85c623706ab0d359836e42a3b14
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 5ae22cd1f04e49dd697bd9a791973b0038a54710bc505746d49f813cf280d7bb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828754"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384398"
 ---
-# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Nasıl yapılır: belgelere program aracılığıyla üstbilgiler ve altbilgiler ekleme
-  Özelliği ve özelliğini kullanarak belgenizdeki üstbilgilere ve altbilgilere metin ekleyebilirsiniz <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> <xref:Microsoft.Office.Interop.Word.Section> . Bir belgenin her bölümü üç üst bilgi ve alt bilgi içerir:
+# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Nasıl kullanılır: Belgelere program aracılığıyla üst bilgiler ve alt bilgiler ekleme
+  özelliğini ve özelliğini kullanarak belgenizin üst bilgilerine ve alt <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> bilgilerine <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> metin <xref:Microsoft.Office.Interop.Word.Section> ekleyebilirsiniz. Belgenin her bölümü üç üst bilgi ve alt bilgi içerir:
 
 - <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary>
 
@@ -34,45 +35,45 @@ ms.locfileid: "107828754"
 
 - <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterFirstPage>
 
-  Yordamlar belge düzeyinde özelleştirmeler ve VSTO eklentileri için farklıdır.
+  Yordamlar, belge düzeyi özelleştirmeler ve VSTO için farklıdır.
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
 ## <a name="document-level-customizations"></a>Belge düzeyinde özelleştirmeler
- Aşağıdaki kod örneklerini kullanmak için, bunları `ThisDocument` projenizdeki sınıfından çalıştırın.
+ Aşağıdaki kod örneklerini kullanmak için projenizin `ThisDocument` sınıfından çalıştırın.
 
-### <a name="to-add-text-to-footers-in-the-document"></a>Belgedeki altbilgilere metin eklemek için
+### <a name="to-add-text-to-footers-in-the-document"></a>Belgede alt bilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, belgenin her bölümünün birincil altbilgisine eklenecek metnin yazı tipini ayarlar ve altbilgiye metin ekler.
+1. Aşağıdaki kod örneği belgenin her bölümünün birincil alt bilgisine eklenecek metnin yazı tipini ayarlar ve ardından alt bilgiye metin ekler.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet114":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet114":::
 
-### <a name="to-add-text-to-headers-in-the-document"></a>Belgedeki üstbilgilere metin eklemek için
+### <a name="to-add-text-to-headers-in-the-document"></a>Belgede üst bilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, belgedeki her bir başlıktaki sayfa numarasını göstermek için bir alan ekler ve sonra metnin üstbilginin sağına hizalanmasını sağlayacak şekilde paragraf hizalamasını ayarlar.
+1. Aşağıdaki kod örneği, belgenin her üst bilgisinde sayfa numarasını göstermek için bir alan ekler ve sonra metnin üst bilginin sağ tarafından hizalanması için paragraf hizalamasını ayarlar.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet116":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet116":::
 
-## <a name="vsto-add-ins"></a>VSTO eklentileri
- Aşağıdaki kod örneklerini kullanmak için, bunları `ThisAddIn` projenizdeki sınıfından çalıştırın.
+## <a name="vsto-add-ins"></a>VSTO Eklentiler
+ Aşağıdaki kod örneklerini kullanmak için projenizin `ThisAddIn` sınıfından çalıştırın.
 
-### <a name="to-add-text-to-footers-in-a-document"></a>Belgedeki altbilgilere metin eklemek için
+### <a name="to-add-text-to-footers-in-a-document"></a>Belgede alt bilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, belgenin her bölümünün birincil altbilgisine eklenecek metnin yazı tipini ayarlar ve altbilgiye metin ekler. Bu kod örneği etkin belgeyi kullanır.
+1. Aşağıdaki kod örneği belgenin her bölümünün birincil alt bilgisine eklenecek metnin yazı tipini ayarlar ve ardından alt bilgiye metin ekler. Bu kod örneği etkin belgeyi kullanır.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet114":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet114":::
 
-### <a name="to-add-text-to-headers-in-the-document"></a>Belgedeki üstbilgilere metin eklemek için
+### <a name="to-add-text-to-headers-in-the-document"></a>Belgede üst bilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, belgedeki her bir başlıktaki sayfa numarasını göstermek için bir alan ekler ve sonra metnin üstbilginin sağına hizalanmasını sağlayacak şekilde paragraf hizalamasını ayarlar. Bu kod örneği etkin belgeyi kullanır.
+1. Aşağıdaki kod örneği, belgenin her üst bilgisinde sayfa numarasını göstermek için bir alan ekler ve sonra metnin üst bilginin sağ tarafından hizalanması için paragraf hizalamasını ayarlar. Bu kod örneği etkin belgeyi kullanır.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet116":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet116":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: program aracılığıyla yeni belgeler oluşturma](../vsto/how-to-programmatically-create-new-documents.md)
-- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla genişletme](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [Nasıl yapılır: belgelerdeki bulunan öğeler aracılığıyla program aracılığıyla döngü yapma](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
+- [Nasıl kullanılır: Program aracılığıyla yeni belgeler oluşturma](../vsto/how-to-programmatically-create-new-documents.md)
+- [Nasıl kullanılır: Belgelerde aralıkları program aracılığıyla genişletme](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [Nasıl kullanılır: Belgelerde bulunan öğelerde program aracılığıyla döngü](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)

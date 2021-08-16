@@ -10,17 +10,18 @@ ms.assetid: f8988a9e-9d18-42af-84a7-55f41e9adf63
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5a9c595d2a3a4551920e17a9ad8d8a13b5ae4ab0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 34a432be96d0511128a5466c2fd771f0682129bb3ddf4087a129831ace8be491
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092013"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360436"
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
 Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alır.

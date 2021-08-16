@@ -1,6 +1,6 @@
 ---
 title: Bir işlem kurtarılamaz bir hatayla karşılaştı
-description: Visual Studio 'nun normal işlemleri sırasında kurtarılamaz hatalarla karşılaşılabilecek işlemler hakkında bilgi edinin.
+description: Visual Studio normal işlemleri sırasında kurtarılamaz hatalarla karşılaşılabilecek işlemler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 09/10/2020
 ms.topic: troubleshooting
@@ -10,28 +10,29 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e2ff53ecf1e3f3b377180fe85f972dca665b81f5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 47191298721ad8b5354b370a3e6b5392ce00c011457767fb86cdda7e6c092271
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909153"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412913"
 ---
-# <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio kurtarılamaz işlem hatası
+# <a name="visual-studio-unrecoverable-process-error"></a>kurtarılamaz işlem hatası Visual Studio
 
-Visual Studio, canlı birim testi, kod Çözümleyicileri ve daha fazlası gibi gerekli arka plan görevlerini çalıştırmak için birkaç işlem dışı işlem kullanır. Bu işlemler, Visual Studio 'nun uzun, yoğun kaynak kullanan işleri çalıştırırken daha hızlı yanıt vermesini sağlayan, Visual Studio performans avantajları sağlamak için işlem dışı çalıştırıllardır. Ayrıca, Visual Studio 32 bitlik bir işlem olduğu için işlem dışı işlemler, yoğun bir şekilde çalışmak için daha büyük bir bellek alanı sağlar.
+Visual Studio, canlı birim testi, kod çözümleyicileri ve daha fazlası gibi gerekli arka plan görevlerini çalıştırmak için birkaç işlem dışı işlem kullanır. bu işlemler, uzun kaynak yoğunluklu işleri çalıştırırken Visual Studio daha hızlı yanıt vermesini sağlamak gibi Visual Studio performans avantajları sağlamak için işlem dışı çalıştırıllardır. ayrıca, Visual Studio 32 bitlik bir işlem olduğu için işlem dışı işlemler, yoğun bir şekilde çalışmak için daha büyük bir bellek alanı sağlar.
 
 *ServiceHub.RoslynCodeAnalysisService.exe* veya *ServiceHub.RoslynCodeAnalysisService32.exe* işlemi herhangi bir nedenle sona erdiğinde, aşağıdaki iletiyle birlikte bir açılan bilgi çubuğu görünür:
 
-**"Ne yazık ki, Visual Studio tarafından kullanılan bir işlem kurtarılamaz bir hatayla karşılaştı. İşinizi kaydetmenizi ve sonra Visual Studio 'Yu kapatıp yeniden başlatmanızı öneririz. "**
+**"ne yazık ki Visual Studio tarafından kullanılan bir işlem kurtarılamaz bir hatayla karşılaştı. Çalışmanızı kaydetmenizi ve sonra Visual Studio kapatıp yeniden başlatmanızı öneririz. "**
 
-Bu iletiyi görürseniz, çalışmanızı kaydetmeli ve sonra Visual Studio 'Yu kapatıp yeniden başlatmalısınız.
+Bu iletiyi görürseniz, çalışmanızı kaydedip Visual Studio kapatıp yeniden başlatmanız gerekir.
 
 ## <a name="list-of-processes"></a>İşlem listesi
 
-Aşağıda, Visual Studio tarafından kullanılan işlem dışı işlemlerin bir listesi verilmiştir. Bu liste, belirli iş akışlarında veya senaryolarda başlatılan işlemlerin yanı sıra, çoğu durumda hepsi aynı anda çalışmıyor.
+Visual Studio tarafından kullanılan işlem dışı işlemlerin bir listesi aşağıda verilmiştir. Bu liste, belirli iş akışlarında veya senaryolarda başlatılan işlemlerin yanı sıra, çoğu durumda hepsi aynı anda çalışmıyor.
 
 - Microsoft.Alm.Shared.Remoting.RemoteContainer.dll
 - Microsoft. CodeAnalysis. LiveUnitTesting. EntryPoint
@@ -52,7 +53,7 @@ Aşağıda, Visual Studio tarafından kullanılan işlem dışı işlemlerin bir
 - WindowsAzureGuestAgent.exe
 - WindowsAzureTelemetryService.exe
 
-Bu işlemlerden herhangi biri beklenmedik bir şekilde sonlandırılırsa, Visual Studio içindeki bazı işlevler çalışmayı durdurur. Bazı süreçler için işlevsellik kaybı önemli olabilir. Diğerleri için, Visual Studio 'nun kararlılığı etkilendi ve bir hata iletisi görüntülenir.
+bu işlemlerden herhangi biri beklenmedik bir şekilde sonlandırılırsa Visual Studio içindeki bazı işlevler çalışmayı durdurur. Bazı süreçler için işlevsellik kaybı önemli olabilir. başkaları için Visual Studio kararlılığı etkilenir ve bir hata iletisi görüntülenir.
 
 > [!NOTE]
-> Bu sayfada başvurulmayan bir sorunla karşılaşırsanız, lütfen Visual Studio Yükleyicisi ve Visual Studio IDE içinde görüntülenen [sorun bildir](../../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanarak bize bildirin.
+> bu sayfada başvurulmayan bir sorunla karşılaşırsanız, lütfen Visual Studio Yükleyicisi ve Visual Studio ıde 'de görüntülenen [sorun bildir](../../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanarak bize bildirin.

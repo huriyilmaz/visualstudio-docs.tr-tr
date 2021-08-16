@@ -13,18 +13,19 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 804c49c079f619a774cb1f99d54b2b2af5a3929d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a0cd8fe13af8f60d90b8c4b0e29a442d5e70a498f55368d4f87cfb8d8e47caca
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869368"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121413233"
 ---
 # <a name="view-type-and-member-definitions"></a>Görünüm türü ve üye tanımları
 
-Geliştiricilerin genellikle kendi kodlarında kullandıkları türler veya sınıf üyeleri için kaynak kodu tanımlarını görüntülemesi gerekir. Visual Studio 'da, tanım ve Özet **tanım** özelliklerine **Git** özelliği, bir tür veya üyenin tanımını kolayca görüntülemenizi sağlar. Kaynak kodu yoksa, bunun yerine meta veriler görüntülenir.
+Geliştiricilerin genellikle kendi kodlarında kullandıkları türler veya sınıf üyeleri için kaynak kodu tanımlarını görüntülemesi gerekir. Visual Studio, tanım ve özet **tanım** özelliklerine **git** özelliği, bir tür veya üyenin tanımını kolayca görüntülemenizi sağlar. Kaynak kodu yoksa, bunun yerine meta veriler görüntülenir.
 
 ## <a name="go-to-definition"></a>Tanıma Git
 
@@ -67,7 +68,7 @@ Kaynak kodu kullanılamayan bir öğe için **Tanıma Git** veya **Açıklama Ö
 ![Kaynak olarak Meta Veriler](../ide/media/metadatasource.png)
 
 > [!NOTE]
-> İç olarak işaretlenmiş türler veya Üyeler için **Tanıma Git** veya **Açıklama Özeti** komutunu çalıştırmayı denediğinizde, başvuran derlemenin arkadaş olup olmamasına bakılmaksızın Visual Studio meta verilerini kaynak kodu olarak görüntülemez.
+> iç olarak işaretlenen türler veya üyeler için **tanıma git** veya **göz atma** komutunu çalıştırmayı denediğinizde, başvuran derlemenin arkadaş olup olmamasına bakılmaksızın meta verilerini kaynak kodu olarak görüntülemez Visual Studio.
 
 ### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>Meta veriler yerine ayrıştırılmış kaynak tanımlarını görüntüleme (C#)
 
@@ -76,7 +77,7 @@ Kaynak kodu kullanılamayan bir C# türünün veya üyenin tanımını görünt�
 ![Ayrıştırılmış bir tanımı görüntüleme](media/go-to-definition-decompiled-sources.png)
 
 > [!NOTE]
-> Visual Studio ılspy dederlemesini kullanarak Yöntem gövdelerini yeniden oluşturur. Bu özelliğe ilk kez eriştiğinizde, yazılım lisanslama ve telif hakkı ve ticari marka yasaları ile ilgili yasal bir vazgeçme belgesi kabul etmeniz gerekir.
+> Visual Studio ılspy dederlemesini kullanarak yöntem gövdelerini yeniden oluşturur. Bu özelliğe ilk kez eriştiğinizde, yazılım lisanslama ve telif hakkı ve ticari marka yasaları ile ilgili yasal bir vazgeçme belgesi kabul etmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

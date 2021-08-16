@@ -8,14 +8,15 @@ ms.assetid: 773dd34e-67d3-4997-8df9-b71e7f880d88
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 74b4cfebc7a6160577f1e817c9171f2eae69533c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21e9204765e9bb467f483fabf58ebd12d67e71862377d3038e47047a0a874919
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99874762"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121383488"
 ---
 # <a name="xslt-default-templates"></a>XSLT varsayılan şablonları
 

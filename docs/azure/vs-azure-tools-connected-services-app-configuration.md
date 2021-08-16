@@ -1,6 +1,6 @@
 ---
 title: Bağlı hizmetleri kullanarak Azure Uygulama yapılandırması ekleme | Microsoft Docs
-description: Visual Studio bağlı hizmetlerini kullanarak uygulamanıza bir Azure yapılandırma hizmeti bağımlılığı ekleyin
+description: Visual Studio bağlı hizmetleri kullanarak uygulamanıza bir Azure yapılandırma hizmeti bağımlılığı ekleyin
 author: ghogen
 manager: ''
 ms.custom: vs-azure
@@ -9,28 +9,28 @@ ms.topic: how-to
 ms.date: 12/11/2020
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 250b89c983da039717982b31873a470172bde0f5
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: d19d65943745aabd078173d6362ba186fa312959eeaca22b974d98b6718ee09c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683301"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381019"
 ---
-# <a name="adding-azure-app-configuration-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure Uygulama yapılandırması ekleme
+# <a name="adding-azure-app-configuration-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak Azure uygulama yapılandırması ekleme
 
-Bu öğreticide, Visual Studio 'da Web projelerine yönelik yapılandırma ve özellik bayraklarını yönetmek üzere Azure Uygulama yapılandırması 'nı kullanmaya başlamak için gereken her şeyi kolayca eklemeyi öğreneceksiniz. Visual Studio 'daki bağlı hizmetler özelliğini kullanarak, Visual Studio 'Nun Azure 'daki uygulama yapılandırma kaynağına bağlanmak için gereken tüm kod, NuGet paketleri ve yapılandırma ayarlarını otomatik olarak eklemesini sağlayabilirsiniz. Bu özelliği kullanmak için Visual Studio 2019 sürüm 16,9 veya sonraki bir sürümünü kullanmanız gerekir.
+Bu öğreticide, Visual Studio ' deki Web projelerine yönelik yapılandırma ve özellik bayraklarını yönetmek üzere Azure Uygulama yapılandırması 'nı kullanmaya başlamak için gereken her şeyi kolayca eklemeyi öğreneceksiniz. Visual Studio bağlı hizmetler özelliğini kullanarak, Azure 'daki uygulama yapılandırma kaynağına bağlanmak için gereken tüm kodu, NuGet paketleri ve yapılandırma ayarlarını otomatik olarak Visual Studio ekleyebilirsiniz. bu özelliği kullanmak için Visual Studio 2019 sürüm 16,9 veya sonraki bir sürümünü kullanmanız gerekir.
 
-Uygulama yapılandırması bağlı hizmetleri özelliğini ASP.NET Core, .NET Core konsolu ve .NET Framework projeleri ' nde kullanabilirsiniz.
+uygulama yapılandırması bağlı hizmetleri özelliğini ASP.NET Core, .net Core konsolu ve .NET Framework projeleri ' nde kullanabilirsiniz.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Azure iş yükü yüklü olan Visual Studio.
+- Azure iş yükü yüklü Visual Studio.
 - Desteklenen türlerden birinin projesi
 
-## <a name="connect-to-azure-app-configuration-using-connected-services"></a>Bağlı hizmetleri kullanarak Azure Uygulama yapılandırmasına bağlanma
+## <a name="connect-to-azure-app-configuration-using-connected-services"></a>bağlı hizmetleri kullanarak Azure uygulama yapılandırmasına Bağlan
 
 1. Projenizi Visual Studio’da açın.
 
@@ -81,4 +81,4 @@ Azure uygulama yapılandırma [belgelerindeki](/azure/azure-app-configuration/ov
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ASP.NET Core uygulamasına bağlı bir uygulama yapılandırmasında dinamik yapılandırma kullanma öğreticisi](/azure/azure-app-configuration/enable-dynamic-configuration-aspnet-core)
-- [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)
+- [bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

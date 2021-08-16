@@ -1,6 +1,6 @@
 ---
-description: Görüntünün dayanmanız gereken bellek konumunu alır.
-title: 'IDiaImageData:: get_imageBase | Microsoft Docs'
+description: Görüntünün temel alınarak bellek konumunu alınır.
+title: IDiaImageData::get_imageBase | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 4ba3d9e4-b205-4ee6-a41d-6996972f1f85
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 82f80f95689a176118d5be6dcc5cfe4fdb903e0f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0fd938ff87b7060287e03a7facb6bf3582c20d9fb77ffad1a7a3606308e6f420
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148453"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380311"
 ---
 # <a name="idiaimagedataget_imagebase"></a>IDiaImageData::get_imageBase
-Görüntünün dayanmanız gereken bellek konumunu alır.
+Görüntünün temel alınarak bellek konumunu alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_imageBase (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Önerilen görüntü taban değerini döndürür.
+[out] Önerilen görüntü temel değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Görüntü tabanı çakışmaları nedeniyle, bir görüntü yüklendiğinde kullanılmayan bellek konumuna otomatik olarak yeniden dayalı olabilir. Bu yöntem, derleme zamanında modülünde depolanan temel ipucunu (önerilen bellek konumu) döndürür.
+ Görüntü tabanı çakışmaları nedeniyle, bir görüntü yüklendiğinde otomatik olarak kullanılmayan bir bellek konuma yeniden temel olabilir. Bu yöntem, derleme zamanında modülde depolanan temel ipucunu (önerilen bellek konumu) döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

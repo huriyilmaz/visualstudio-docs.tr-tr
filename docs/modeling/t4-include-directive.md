@@ -1,20 +1,21 @@
 ---
 title: T4 Include Yönergesi
-description: "Visual Studio'daki bir metin şablonunda, <# #> yönergesini kullanarak başka bir @include dosyadan metin eklebilirsiniz."
+description: 'Visual Studio# #> < yönergesini kullanarak başka bir dosyadan metin ek < @include öğrenin.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 7361d92b05fd6838d20b32ea9f0b3b14530266fa
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 8b17b39492c0558bae68aacdd653a2413b16af2c3f134e1680fe72b63e6d0a9f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386312"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410911"
 ---
 # <a name="t4-include-directive"></a>T4 Include Yönergesi
 
@@ -32,7 +33,7 @@ Bir metin şablonunda Visual Studio kullanarak başka bir dosyadan metin dahil e
 
    Bu ek içerme klasörleri içeren dosyanın dosya uzantısına bağlı olabilir. Örneğin, DSL Araçları dahil klasörü yalnızca dosya uzantısına sahip dosyaları dahil etmek için erişilebilir `.tt`
 
-- `filePath` , "%" ile ayrılmış ortam değişkenlerini içerebilir. Örneğin:
+- `filePath` , "%" ile ayrılmış ortam değişkenlerini içerebilir. Örnek:
 
   ```
   <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
@@ -40,7 +41,7 @@ Bir metin şablonunda Visual Studio kullanarak başka bir dosyadan metin dahil e
 
 - Dahil edilen bir dosyanın adının uzantısını kullanmak zorunda `".tt"` değildir.
 
-   Dahil edilen dosyalar için gibi başka bir uzantı `".t4"` kullanmak istiyor olabilir. Bunun nedeni, projeye bir dosya eklerken özel `.tt` araç Visual Studio otomatik olarak **ayarlanır.** `TextTemplatingFileGenerator` Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
+   Dahil edilen dosyalar için gibi başka bir uzantı `".t4"` kullanmak istiyor olabilir. Bunun nedeni, projeye bir dosya eklerken özel araç Visual Studio otomatik olarak `.tt` **ayarlanır.** `TextTemplatingFileGenerator` Tek tek dönüştürülecek dosyaları genellikle eklemek istemezsiniz.
 
    Diğer taraftan, bazı durumlarda, dosya uzantısının ek klasörlerin hangi include dosyalarının aranacağını etkilediğinin farkında olmalısınız. Diğer dosyaları içeren eklediğiniz bir dosya varsa, bu önemli olabilir.
 
@@ -107,8 +108,8 @@ Output message 5 (from top template).
        Output Message 7 (from AnotherGenerateMessage method).
 ```
 
-## <a name="using-project-properties-in-msbuild-and-visual-studio"></a><a name="msbuild"></a> MSBuild ve Visual Studio'de proje özelliklerini kullanma
- $(SolutionDir) gibi Visual Studio makroları bir dahil etme yönergesinde kullanabilirsiniz ancak bunlar MSBuild'de çalışmaz. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
+## <a name="using-project-properties-in-msbuild-and-visual-studio"></a><a name="msbuild"></a>Proje özelliklerini MSBuild ve Visual Studio
+ $(SolutionDir) gibi Visual Studio makroları bir dahil etme yönergesinde kullanabilirsiniz ancak bu makrolar MSBuild. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
 
  Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek adlı bir özelliği `myIncludeFolder` tanımlar:
 

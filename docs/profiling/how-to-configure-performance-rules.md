@@ -1,6 +1,6 @@
 ---
 title: Performans kurallarını yapılandırma | Microsoft Docs
-description: Visual Studio Profil Oluşturma Araçları uyarılara dikkat edin. Bu, size daha iyi koleksiyon yöntemlerine yol açabilir. Bunları Hata Listesi penceresinde bulabilirsiniz.
+description: Visual Studio Profil Oluşturma Araçları uyarılara dikkat edin; bu kişiler size daha iyi koleksiyon yöntemleri sunabilmesine neden olabilir. Bunları Hata Listesi penceresinde bulabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,15 +10,16 @@ ms.assetid: a148b468-b849-4858-880a-808a6b47e596
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a9e28b0e1c3e82cb9416a376603e8f4a560f02c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 810b3c02e0fa248b760da5c5684eabd4fce5d73123d4262bd58bbd71d048b701
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948146"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410755"
 ---
 # <a name="how-to-configure-performance-rules"></a>Nasıl yapılır: Performans kurallarını yapılandırma
 Visual Studio Profil Oluşturma Araçları performans uyarıları, programın yürütülmesini yavaşlatabilecek, profili oluşturulmuş bir uygulamadaki sorunları gösterir. Uyarılar Ayrıca, daha yararlı veriler toplamak için koleksiyon yöntemlerini değiştirmeniz gerekebilecek anlamına da gelebilir. Performans uyarıları bir profil oluşturma oturumunda otomatik olarak oluşturulur ve ' de bir profil oluşturma veri dosyası açıldığında **hata listesi** penceresinde görüntülenir [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] . Belirli uyarılar ilgilendiğiniz senaryolar için uygulanmayabilir ve bazı uyarılar doğru şekilde oluşturulabilir. Belirli uyarıları göstermek veya gizlemek için performans uyarılarını yapılandırabilirsiniz.

@@ -5,31 +5,31 @@ ms.custom: SEO-VS-2020
 ms.date: 10/16/2019
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 ms.topic: tutorial
-ms.technology: vs-ide-general
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: af9e8e71a7188e8ee2c8f0a7809830f82fb8f15a
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 93a47f483a830c2ba6d83c45a0f2179537fb87ea0fe09254a7b2499487cc65b4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296657"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411847"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>Öğretici 3: eşleşen oyun oluşturma
 
 Bu öğreticide, oyuncunun gizli simge çiftlerini eşleştirmesi gereken bir eşleştirme oyunu oluşturuyorsunuz.
 
 > [!NOTE]
-> Bu öğretici hem C# hem de Visual Basic, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanırsınız.
+> bu öğretici hem C# hem de Visual Basic, bu nedenle kullandığınız programlama diline özgü bilgilere odaklanırsınız.
 
 Bu öğretici aşağıdaki görevlerde size kılavuzluk eder:
 
 - Simgeler gibi nesneleri bir <xref:System.Collections.Generic.List%601> nesnede depolayın.
 
-- `foreach` `For Each` Bir listedeki öğeler arasında yinelemek Için C# veya Visual Basic döngüsünde bir döngü kullanın.
+- `foreach` `For Each` bir listedeki öğeler arasında yinelemek için C# veya Visual Basic döngüsünde bir döngü kullanın.
 
 - Başvuru değişkenlerini kullanarak bir formun durumunu takip edin.
 
@@ -55,7 +55,7 @@ Bitirdiğinizde, uygulamanız aşağıdaki görüntüye benzer görünmelidir:
 |[8. Adım: Oyuncunun kazanıp kazanmadığını doğrulamak için yöntem ekleme](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)|`CheckForWinner()`Oyuncunun kazanıp kazanılmadığını doğrulamak için bir yöntem ekleyin.|
 |[9. Adım: Diğer özellikleri deneme](../ide/step-9-try-other-features.md)|Simgeleri ve renkleri değiştirme, kılavuz ekleme ve ses ekleme gibi diğer özellikleri deneyin. Tahtayı büyütmeyi ve zamanlayıcıyı ayarlamayı deneyin.|
 
-Ayrıca harika, ücretsiz video öğrenimi kaynakları da mevcuttur. C# dilinde programlama hakkında daha fazla bilgi edinmek için bkz. [C# temelleri: mutlak yeni başlayanlar Için geliştirme](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners). Visual Basic 'da programlama hakkında daha fazla bilgi için bkz. [Visual Basic temelleri: mutlak yeni başlayanlar Için geliştirme](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners).
+Ayrıca harika, ücretsiz video öğrenimi kaynakları da mevcuttur. C# dilinde programlama hakkında daha fazla bilgi edinmek için bkz. [C# temelleri: mutlak yeni başlayanlar Için geliştirme](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners). Visual Basic 'da programlama hakkında daha fazla bilgi için bkz. [Visual Basic temelleri: mutlak yeni başlayanlar için geliştirme](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

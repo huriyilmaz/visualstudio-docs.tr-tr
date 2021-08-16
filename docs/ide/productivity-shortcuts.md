@@ -1,86 +1,87 @@
 ---
 title: Klavye ve fare kısayolları
-description: Bu makale, Visual Studio 'da daha üretken olmanıza yardımcı olabilecek klavye ve fare kısayolları için ipuçları içerir.
+description: Bu makale, daha üretken çalışmanıza yardımcı olacak Visual Studio klavye ve fare kısayollarına ipuçları içerir.
 ms.date: 11/02/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: cd11a05ed6b19fe5d6236bec2c6b4926bbcdefd3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4fa67ee2296b6a35081ccef389ccc6062096f08da39b71368f637a81e0f4a606
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951114"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121412588"
 ---
 # <a name="shortcut-tips-for-visual-studio"></a>Visual Studio için kısayol ipuçları
 
-Bu makaledeki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsiniz. Bu kısayollar, bir görevin daha kolay bir şekilde gerçekleştirilmesi için girebileceğiniz metin ve klavye ve fare kısayollarını ve metni içerir.
+Bu makaledeki kısayolları Visual Studio daha kolay bir şekilde gezinti yapabilirsiniz. Bu kısayollar klavye ve fare kısayollarının yanı sıra bir görevi daha kolay gerçekleştirmeye yardımcı olmak için girebilirsiniz metni içerir.
 
-Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Komut kısayollarının tam listesi için bkz. [Varsayılan klavye kısayolları.](../ide/default-keyboard-shortcuts-in-visual-studio.md)
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için, bkz. [Mac için Visual Studio genel klavye kısayolları](/visualstudio/mac/keyboard-shortcuts).
+> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Mac için Visual Studio.](/visualstudio/mac/keyboard-shortcuts)
 
 ## <a name="window-management"></a>Pencere yönetimi
 
 |Görev|Kısayol|
 |-|-|
-|Kayan pencereyi büyüt|Başlık çubuğuna **çift tıklayın**|
-|Pencereleri en üst düzeye çıkarın/küçültün|**Win** + **Yukarı ok**  /  **Win** + **Aşağı ok**|
-|Kayan pencereyi yeniden yerleştir|**CTRL** + başlık çubuğuna **çift tıklayın**|
-|Kayan pencereleri taşı/yerleştir|**Win** + **Sol ok**  /  **Win** + **Sağ ok**|
-|Etkin belgeyi kapat|**CTRL** + **F4**|
-|Açık dosya listesini göster|**CTRL** + **Alt** + **Aşağı ok**|
-|Tüm kayan pencereleri göster|**CTRL** + **SHIFT** + **A**|
-|Sıçrama listesini göster|**Win** + **Alt** + **N**|
-|Yeni örnek Başlat|**Win** + **SHIFT** + **N**|
-|Pencereler arasında geçiş yap|**Win** + **N**|
+|Kayan pencereyi ekranı kapla|**Başlık çubuğuna** çift tıklayın|
+|Pencereleri ekranı kapla/simge durumuna küçült|**Win (Kazan)** + **Yukarı ok**  /  **Win (Kazan)** + **Aşağı ok**|
+|Kayan pencereyi yeniden çıkarma|**Ctrl tuşunu basılı tutarak** + **başlık çubuğuna** çift tıklayın|
+|Kayan pencereleri taşıma/yerleştirme|**Win (Kazan)** + **Sol ok**  /  **Win (Kazan)** + **Sağ ok**|
+|Etkin belgeyi kapatma|**Ctrl tuşunu basılı tutarak** + **F4**|
+|Açık dosya listesini göster|**Ctrl tuşunu basılı tutarak** + **Alt** + **Aşağı ok**|
+|Tüm kayan pencereleri göster|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **M**|
+|Atlama listesini göster|**Win (Kazan)** + **Alt** + **N**|
+|Yeni örnek başlatma|**Win (Kazan)** + **Shift ile kaydırma** + **N**|
+|Pencereler arasında geçiş|**Win (Kazan)** + **N**|
 
 ## <a name="search"></a>Arayın
 
 |Görev|Kısayol|
 |-|-|
-|Çözüm Gezgini arama|**CTRL** + **;**|
-|Odağı herhangi bir araç penceresinde (düzenleyici dışında) arama kutusuna yerleştir| + Alt **`** araç penceresi odağa sahip olduğunda|
-|Visual Studio 'Da ara|**CTRL** + **Soru-cevap**|
-|Arama kutusu sonuçları filtresi|@opt -Seçenekler<br />@cmd -Komutlar<br />@mru -En son kullanılan<br />@doc -Açık belgeler|
-|Araç seçeneklerinde ara|**CTRL** + **E**|
+|Çözüm Gezgini arama|**Ctrl tuşunu basılı tutarak** + **;**|
+|Odağı herhangi bir araç penceresine (düzenleyici dışında) arama kutusuna yer| + Alt **`** araç penceresinin odağı olduğunda|
+|Arama Visual Studio|**Ctrl tuşunu basılı tutarak** + **Q**|
+|Arama kutusu sonuçları filtresi|@opt - Seçenekler<br />@cmd - Komutlar<br />@mru - En son kullanılan<br />@doc - Belgeleri açma|
+|Araçlar Seçeneklerinde Ara|**Ctrl tuşunu basılı tutarak** + **E**|
 
-## <a name="find-in-the-editor"></a>Düzenleyicide bul
+## <a name="find-in-the-editor"></a>Düzenleyicide bulma
 
 |Görev|Kısayol|
 |-|-|
-|Hızlı Bul|**CTRL** + **F**|
-|Sonraki sonucu hızlı bul|**Enter**|
-|Önceki sonuca hızlı bul|**SHIFT** + Şunu **girin**|
-|Hızlı bul Genişlet açılan liste|**Alt** + **Aşağı ok**|
-|Bulmayı kapat|**Esc**|
-|Hızlı Değiştir|**CTRL** + **H**|
-|Hızlı değiştirme-sonrakini Değiştir|**Alt** + **R**|
-|Hızlı Değiştir-tümünü değiştir|**Alt** + **Bir**|
-|Dosyalarda Bul|**CTRL** + **SHIFT** + **F**|
-|Dosyalarda Değiştir|**CTRL** + **SHIFT** + **H**|
+|Hızlı Bul|**Ctrl tuşunu basılı tutarak** + **F**|
+|Sonraki Sonucu Hızlı Bul|**Enter**|
+|Önceki Sonucu Hızlı Bul|**Shift ile kaydırma** + **Enter tarak**|
+|Hızlı Bul Genişletme Açılan Liste|**Alt** + **Aşağı ok**|
+|Bul'ı çıkar|**Esc**|
+|Hızlı Değiştirme|**Ctrl tuşunu basılı tutarak** + **H**|
+|Hızlı Değiştirme - Sonrakini Değiştir|**Alt** + **R**|
+|Hızlı Değiştirme - Hepsini Değiştir|**Alt** + **A**|
+|Dosyalarda Bul|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **F**|
+|Dosyalarda Değiştir|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **H**|
 
 ## <a name="code-editor"></a>Kod düzenleyicisi
 
 |Görev|Kısayol|
 |-|-|
-|Tümüne git|**CTRL** + **T**|
-|Son dosyalar 'a git|**CTRL** + **T**,**R**|
-|Çoklu giriş işareti çoklu ekleme noktaları|**CTRL** + **Alt** + **tıklama**|
-|Çoklu giriş işareti eşleştirme seçimi Ekle|**SHIFT** + **Alt** + **INS**|
-|Belgeyi Biçimlendir|**CTRL** + **K**,**D**|
-|IntelliSense öneri modu|**CTRL** + **Alt** + **Boşluk** (geçiş)|
-|IntelliSense göstermeyi zorla|**CTRL** + **J**|
-|Hızlı Eylemler|**CTRL** + **.**|
-|Kod parçacığı seçici|**CTRL** + **K**,**X** veya **?**,**sekme** (Visual Basic)|
-|Şununla Çevrele|**CTRL** + **K**,**S**|
-|Hızlı bilgileri göster|**CTRL** + **K**,**ı**|
-|Şuraya gidin|**CTRL** + **,**|
-|Vurgulanan başvurularda gezin|**CTRL** + **SHIFT** + **Yukarı** (önceki)<br />**CTRL** + **SHIFT** + **Aşağı** (ileri)|
+|Tamam'a git|**Ctrl tuşunu basılı tutarak** + **T**|
+|Son dosyalara gitme|**Ctrl tuşunu basılı tutarak** + **T,****R**|
+|Çoklu giriş karakteri birden çok ekleme noktası|**Ctrl tuşunu basılı tutarak** + **Alt** + **tıklayın**|
+|Çoklu caret add matching selection|**Shift ile kaydırma** + **Alt** + **Ins (Ins)**|
+|Belgeyi Biçimlendir|**Ctrl tuşunu basılı tutarak** + **K,****D**|
+|IntelliSense öneri modu|**Ctrl tuşunu basılı tutarak** + **Alt** + **Boşluk** (Geçiş)|
+|IntelliSense'i zorla gösterme|**Ctrl tuşunu basılı tutarak** + **J**|
+|Hızlı Eylemler|**Ctrl tuşunu basılı tutarak** + **.**|
+|Kod parçacığı seçici|**Ctrl tuşunu basılı tutarak** + **K**,**X** veya **?**,**Tab** (Visual Basic)|
+|Çevrele|**Ctrl tuşunu basılı tutarak** + **K,****S**|
+|Hızlı Bilgileri Göster|**Ctrl tuşunu basılı tutarak** + **K,****I**|
+|Şu sayfaya gidin:|**Ctrl tuşunu basılı tutarak** + **,**|
+|Vurgulanan başvurularda gezinme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **Yukarı** (Önceki)<br />**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **Aşağı** (Sonraki)|
 |Düzenleyici Yakınlaştırma|**CTRL** +  + SHIFT **>** 'Ndaki<br />**CTRL** +  + SHIFT **<** Dışı|
 |Seçimi engelle|**Alt** tuşunu basılı tutun ve fareyi sürükleyin<br />**SHIFT** + **Alt** + **Ok tuşları**|
 |Üstteki/alttaki satırı taşı|**Alt** + **Yukarı ok**  /  **Alt** + **Aşağı ok**|
@@ -130,6 +131,6 @@ Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayollar�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md)
-- [Visual Studio 'da üretkenlik özellikleri](productivity-features.md)
+- [Visual Studio üretkenlik özellikleri](productivity-features.md)
 - [Varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md)
 - [Mac için Visual Studio ortak klavye kısayolları](/visualstudio/mac/keyboard-shortcuts)

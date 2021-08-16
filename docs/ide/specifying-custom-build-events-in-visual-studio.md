@@ -1,6 +1,6 @@
 ---
 title: Özel derleme olayları belirtme
-description: Visual Studio 'da bir yapı başlamadan veya bittikten sonra komutları otomatik olarak nasıl çalıştırabileceğinizi öğrenin.
+description: bir yapı başlamadan veya bittikten sonra Visual Studio komutları otomatik olarak nasıl çalıştırabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -13,16 +13,16 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d0728154e21893ac45fc0e17cc3d0407551dbb3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 19b974d9e67cb2713299928f3a7e945e9208dcd8cf8c56978a019ed98f88aea7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951036"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411964"
 ---
-# <a name="specify-custom-build-events-in-visual-studio"></a>Visual Studio 'da özel derleme olayları belirtme
+# <a name="specify-custom-build-events-in-visual-studio"></a>Visual Studio özel derleme olayları belirtme
 
-Özel bir yapı olayı belirterek, bir yapı başlamadan veya tamamlanmadan önce komutları otomatik olarak çalıştırabilirsiniz. Örneğin, bir yapı başlamadan önce bir *. bat* dosyası çalıştırabilir veya derleme tamamlandıktan sonra yeni dosyaları bir klasöre kopyalayabilirler. Yapı olayları yalnızca derleme yapı işlemindeki bu noktalara başarıyla ulaşırsa çalışır.
+Özel bir yapı olayı belirterek, bir yapı başlamadan veya tamamlanmadan önce komutları otomatik olarak çalıştırabilirsiniz. Örneğin, bir yapı başlamadan önce bir *.bat* dosyası çalıştırabilir veya derleme tamamlandıktan sonra yeni dosyaları bir klasöre kopyalayabilirler. Yapı olayları yalnızca derleme yapı işlemindeki bu noktalara başarıyla ulaşırsa çalışır.
 
 Kullanmakta olduğunuz programlama diliyle ilgili belirli bilgiler için aşağıdaki konulara bakın:
 
@@ -38,7 +38,7 @@ Derleme olayları, DOS komutlarıyla aynı sözdizimini izler, ancak daha kolay 
 
 En iyi sonuçlar için şu biçimlendirme ipuçlarına uyun:
 
-- `call` *. Bat* dosyalarını çalıştıran tüm derleme olaylarından önce bir ifade ekleyin.
+- `call` *.bat* dosyalarını çalıştıran tüm derleme olaylarından önce bir ifade ekleyin.
 
    Örnek: `call C:\MyFile.bat`
 
@@ -46,7 +46,7 @@ En iyi sonuçlar için şu biçimlendirme ipuçlarına uyun:
 
 - Dosya yollarını tırnak işaretleri içine alın.
 
-   Örnek (için [!INCLUDE[win8](../debugger/includes/win8_md.md)] ): "% ProgramFiles (x86)% \ Microsoft SDKs\Windows\v8.0A\Bin\NETFX 4,0 Tools\gacutil.exe"-If "$ (TargetPath)"
+   örnek (için [!INCLUDE[win8](../debugger/includes/win8_md.md)] ): "% ProgramFiles (x86)% \ Microsoft sdk \ Windows \v8.0a\bin\netfx 4,0 Tools\gacutil.exe"-ıf "$ (TargetPath)"
 
 - Satır sonlarını kullanarak birden çok komutu ayırın.
 

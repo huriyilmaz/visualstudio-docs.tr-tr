@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, varsa bir nesneyle ilişkili özel durumu alır.
-title: 'IDebugBinder3:: GetExceptionObjectAndType | Microsoft Docs'
+description: Bu yöntem, varsa bir nesnesiyle ilişkili özel durumu alır.
+title: IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 2a313fe1-4ee1-4f01-af86-382d6c661a8f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 67f6c146182546f83782a0299c0ea3e29f94a3b2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4fb8f3653a40078b3018487b7c06e6247daa9402746a7af824d76af460a3aa86
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094256"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360761"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
-Bu yöntem, varsa bir nesneyle ilişkili özel durumu alır.
+Bu yöntem, varsa bir nesnesiyle ilişkili özel durumu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int GetExceptionObjectAndType(
 
 ## <a name="parameters"></a>Parametreler
 `ppException`\
-dışı Özel durumu temsil eden nesneyi döndürür.
+[out] Özel durumu temsil eden nesneyi döndürür.
 
 `ppField`\
-dışı Özel duruma neden olmuş olabilecek belirli bir alanı temsil eden nesneyi döndürür (Bu bir null değer olabilir).
+[out] Özel durumuna neden olan belirli bir alanı temsil eden nesneyi döndürür (bu bir null değer olabilir).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 > [!NOTE]
-> Bir özel durum olup olmadığını doğrulamak için, tarafından döndürülen değeri denetleyin `ppException` : null bir değer ise, bu nesneyle ilişkili bir özel durum yoktur.
+> Bir özel durum olup olmadığını doğrulamak için tarafından döndürülen değeri kontrol `ppException` edin: null değerse, bu nesneyle ilişkilendirilmiş bir özel durum yoktur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

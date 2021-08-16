@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklayıcıda sembol (. pdb) ve kaynak dosyaları ayarlama
-description: Visual Studio 'da sembol ve kaynak dosyalarını yapılandırma ve yönetme hakkında bilgi edinin
+description: Visual Studio sembol ve kaynak dosyalarını yapılandırma ve yönetme hakkında bilgi edinin
 ms.custom: ''
 ms.date: 3/31/2021
 ms.topic: conceptual
@@ -27,24 +27,25 @@ ms.assetid: 1105e169-5272-4e7c-b3e7-cda1b7798a6b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ad72d2aa659f3d43bfca99c359d5db94e2d1045
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 76e12b710a72c5ccf97776bf5b7fb4964ba56c1faa1b4b094231244f2ddb431c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106083697"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121361912"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında simge (. pdb) ve kaynak dosyaları belirtme (C#, C++, Visual Basic, F #)
 
 Sembol dosyaları olarak da bilinen program veritabanı (*. pdb*) dosyaları, projenizin kaynak kodundaki derleme tanımlayıcıları ve deyimleri, derlenmiş uygulamalardaki karşılık gelen tanımlayıcılarla ve yönergeleriyle eşleştirin. Bu eşleme dosyaları hata ayıklayıcıyı kaynak kodunuza bağlar ve bu da hata ayıklamayı sağlar.
 
-Standart hata ayıklama oluşturma yapılandırması ile Visual Studio IDE 'den bir proje oluşturduğunuzda, derleyici uygun sembol dosyalarını oluşturur. Bu makalede, IDE 'de sembol dosyalarının nasıl yönetileceği, örneğin [hata ayıklayıcı seçeneklerinde simgelerin konumunu belirtme](#BKMK_Specify_symbol_locations_and_loading_behavior), hata ayıklama sırasında [sembol yükleme durumunun nasıl denetleneceği](#work-with-symbols-in-the-modules-window) ve [koddaki sembol seçeneklerinin nasıl ayarlanacağı](#compiler-symbol-options)açıklanır.
+standart hata ayıklama yapı yapılandırmasıyla Visual Studio ıde 'den bir proje oluşturduğunuzda, derleyici uygun sembol dosyalarını oluşturur. Bu makalede, IDE 'de sembol dosyalarının nasıl yönetileceği, örneğin [hata ayıklayıcı seçeneklerinde simgelerin konumunu belirtme](#BKMK_Specify_symbol_locations_and_loading_behavior), hata ayıklama sırasında [sembol yükleme durumunun nasıl denetleneceği](#work-with-symbols-in-the-modules-window) ve [koddaki sembol seçeneklerinin nasıl ayarlanacağı](#compiler-symbol-options)açıklanır.
 
 Sembol dosyalarının ayrıntılı bir açıklaması için aşağıdakilere bakın:
 
-- [Sembol dosyalarını ve Visual Studio sembol ayarlarını anlama](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
+- [sembol dosyalarını ve Visual Studio sembol ayarlarını anlama](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
 - [Visual Studio neden hata ayıklayıcı sembol dosyalarının, derlendikleri ikili dosyalarla tam olarak eşleşmesi gerekir?](/archive/blogs/jimgries/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with)
 
@@ -52,7 +53,7 @@ Sembol dosyalarının ayrıntılı bir açıklaması için aşağıdakilere bak�
 
 *. Pdb* dosyası, hata ayıklamayı ve uygulamanızın hata ayıklama yapılandırmasının artımlı bağlamasını sağlayan proje durum bilgilerini barındırır. Visual Studio hata ayıklayıcı, hata ayıklama sırasında iki temel bilgi parçasını belirlemede *. pdb* dosyalarını kullanır:
 
-* Visual Studio IDE 'de görüntülenecek kaynak dosya adı ve satır numarası.
+* Visual Studio ıde 'de görüntülenecek kaynak dosya adı ve satır numarası.
 * Uygulamanın kesme noktası için durdurulması gereken yer.
 
 Sembol dosyaları aynı zamanda kaynak dosyaların konumunu ve isteğe bağlı olarak, üzerinden alınacak sunucuyu da gösterir.
@@ -60,36 +61,36 @@ Sembol dosyaları aynı zamanda kaynak dosyaların konumunu ve isteğe bağlı o
 Hata ayıklayıcı yalnızca bir uygulama oluşturulduğunda oluşturulan *. pdb dosyalarıyla* tam olarak eşleşen *.* pdb dosyalarını yükler (yani, özgün *. pdb* dosyaları veya kopyalardır). Bu [tam yineleme](/archive/blogs/jimgries/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with) gereklidir çünkü bu, kodun kendisi değişmemiş olsa bile uygulamaların düzeni değişebilir.
 
 > [!TIP]
-> Proje kaynak kodunuzun dışındaki kodun hatalarını ayıklamak için (örneğin, Windows kodu veya proje aramalarınızın üçüncü taraf kodu), dış kodun *. pdb* dosyalarının (ve isteğe bağlı olarak, kaynak dosyaların) konumunu, uygulamanızdaki Derlemeleriyle tam olarak eşleşmesi gereken şekilde belirtmeniz gerekir.
+> proje kaynak kodunuzun dışındaki kodun hatalarını ayıklamak için, Windows kodu veya projenizin çağrı kodu gibi, uygulamanızdaki derlemeleriyle tam olarak eşleşmesi gereken dış kodun *. pdb* dosyalarının (ve isteğe bağlı olarak kaynak dosyalarının) konumunu belirtmeniz gerekir.
 
 ## <a name="symbol-file-locations-and-loading-behavior"></a>Sembol dosya konumları ve yükleme davranışı
 
-Visual Studio IDE 'de bir projede hata ayıklarken, hata ayıklayıcı proje klasöründe bulunan sembol dosyalarını otomatik olarak yükler.
+Visual Studio ıde 'de bir projede hata ayıklarken, hata ayıklayıcı proje klasöründe bulunan sembol dosyalarını otomatik olarak yükler.
 
 > [!NOTE]
 > Uzak bir cihazda yönetilen kodda hata ayıklarken, tüm sembol dosyaları yerel makinede ya da [hata ayıklayıcı seçeneklerinde belirtilen](#BKMK_Specify_symbol_locations_and_loading_behavior)bir konumda bulunmalıdır.
 
 Hata ayıklayıcı Ayrıca sembol dosyalarını aşağıdaki konumlarda arar:
 
-1. DLL veya yürütülebilir (*. exe*) dosyası içinde belirtilen konum.
+1. DLL veya çalıştırılabilir (*.exe*) dosyası içinde belirtilen konum.
 
-   Varsayılan olarak, bilgisayarınızda bir DLL veya *. exe* dosyası oluşturduysanız BAĞLAYıCı, dll veya *. exe* dosyasına ilişkili *. pdb* dosyasının tam yolunu ve dosya adını koyar. Hata ayıklayıcı, sembol dosyasının bu konumda bulunup bulunmadığını denetler.
+   Varsayılan olarak, bilgisayarınızda bir DLL veya *.exe* dosyası oluşturduysanız BAĞLAYıCı, dll veya *.exe* dosyasına ilişkili *. pdb* dosyasının tam yolunu ve dosya adını koyar. Hata ayıklayıcı, sembol dosyasının bu konumda bulunup bulunmadığını denetler.
 
-2. DLL veya *. exe* dosyası ile aynı klasör.
+2. DLL veya *.exe* dosyası ile aynı klasör.
 
 3. Sembol dosyaları için hata ayıklayıcı seçeneklerinde belirtilen konumlar. Sembol konumları eklemek ve etkinleştirmek için bkz. [simge konumlarını yapılandırma ve seçenekleri yükleme](#BKMK_Specify_symbol_locations_and_loading_behavior).
 
    - Herhangi bir yerel sembol önbellek klasörü.
 
-   - Belirtilen ağ, internet veya yerel sembol sunucuları ve konumları (seçilmişse, Microsoft sembol sunucuları gibi). [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , protokolü uygulayan sembol sunucularından hata ayıklama sembol dosyalarını indirebilir `symsrv` . [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) ve [Windows Için hata ayıklama araçları](/windows-hardware/drivers/debugger/index) , sembol sunucularını kullanan iki araç.
+   - Belirtilen ağ, internet veya yerel sembol sunucuları ve konumları (seçilmişse, Microsoft sembol sunucuları gibi). [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , protokolü uygulayan sembol sunucularından hata ayıklama sembol dosyalarını indirebilir `symsrv` . Windows için [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) ve [hata ayıklama araçları](/windows-hardware/drivers/debugger/index) , sembol sunucularını kullanan iki araç olabilir.
 
      Kullanabileceğiniz sembol sunucuları şunlardır:
 
-     **Genel Microsoft sembol sunucuları**: sistem dll 'sine veya üçüncü taraf kitaplığına yapılan bir çağrı sırasında oluşan kilitlenmeyle ilgili hata ayıklamak için, genellikle System *. pdb* dosyalarına ihtiyacınız vardır. System *. pdb* dosyaları, Windows dll 'leri, *. exe* dosyaları ve cihaz sürücüleri için semboller içerir. Genel Microsoft sembol sunucularından Windows işletim sistemleri, MDAC, IIS, ISA ve .NET için semboller edinebilirsiniz.
+     **Genel Microsoft sembol sunucuları**: sistem dll 'sine veya üçüncü taraf kitaplığına yapılan bir çağrı sırasında oluşan kilitlenmeyle ilgili hata ayıklamak için, genellikle System *. pdb* dosyalarına ihtiyacınız vardır. System *. pdb* dosyaları Windows dll 'ler, *.exe* dosyaları ve cihaz sürücüleri için semboller içerir. ortak Microsoft sembol sunucularından Windows işletim sistemleri, MDAC, ııs, ısa ve .net için semboller edinebilirsiniz.
 
      **Bir iç ağdaki veya yerel makinenizdeki sembol sunucuları**: ekibiniz veya şirketiniz, kendi ürünleriniz için sembol sunucuları ve dış kaynaklardan semboller için önbellek olarak oluşturabilir. Kendi makineniz üzerinde bir sembol sunucusu olabilir.
 
-     **Üçüncü taraf sembol sunucuları**: üçüncü taraf Windows Uygulamaları ve kitaplıklarının sağlayıcıları Internet 'teki sembol sunucusuna erişim sağlayabilir.
+     **üçüncü taraf sembol sunucuları**: Windows uygulamaların ve kitaplıkların üçüncü taraf sağlayıcıları, ınternet 'teki sembol sunucusuna erişim sağlayabilir.
 
      > [!WARNING]
      > Ortak Microsoft sembol sunucularından farklı bir sembol sunucusu kullanıyorsanız, sembol sunucusunun ve yolunun güvenilir olduğundan emin olun. Sembol dosyaları rastgele yürütülebilir kod içerebildiğinden, güvenlik tehditlerine maruz olabilirsiniz.
@@ -105,10 +106,10 @@ Hata ayıklayıcı Ayrıca sembol dosyalarını aşağıdaki konumlarda arar:
 
 **Sembol konumlarını ve yükleme seçeneklerini belirtmek için:**
 
-1. Visual Studio 'da, **araç**  >  **seçenekleri**  >  **hata ayıklama**  >  **simgeleri** (veya **hata ayıklama**  >  **seçenekleri**  >  **sembolleri**) öğesini açın.
+1. Visual Studio, **araçlar**  >  **seçeneklerini**  >  **hata ayıklama**  >  **sembolleri** (veya **hata ayıklama**  >  **seçenekleri**  >  **sembolleri**) açın.
 
 2. **Sembol dosyası (. pdb) konumları** altında,
-   - **Microsoft symbol Servers** veya **NuGet.org symbol Server**'ı kullanmak için onay kutusunu seçin.
+   - **Microsoft Symbol sunucularını** veya **NuGet. org sembol sunucusunu** kullanmak için onay kutusunu seçin.
 
    - Yeni bir sembol sunucusu konumu eklemek için
      1. **+** Araç çubuğundan sembolünü seçin.
@@ -130,7 +131,7 @@ Hata ayıklayıcı Ayrıca sembol dosyalarını aşağıdaki konumlarda arar:
 3. Seçim Sembol yükleme performansını artırmak için, **Bu dizindeki önbellek sembolleri** altında, sembol sunucularının sembolleri kopyalayabilecek bir yerel klasör yolu yazın.
 
    > [!NOTE]
-   > Yerel sembol önbelleğini C:\Windows veya alt klasör gibi korumalı bir klasöre yerleştirmeyin. Bunun yerine okuma-yazma klasörü kullanın.
+   > yerel sembol önbelleğini c:\ Windows veya alt klasör gibi korumalı bir klasöre yerleştirmeyin. Bunun yerine okuma-yazma klasörü kullanın.
 
    > [!NOTE]
    > C++ projeleri için, `_NT_SYMBOL_PATH` ortam değişkeni ayarlandıysa, **Bu dizindeki önbellek sembolleri** altında ayarlanan değeri geçersiz kılar.
@@ -174,7 +175,7 @@ Hata ayıklayıcı Ayrıca sembol dosyalarını aşağıdaki konumlarda arar:
 
 ## <a name="compiler-symbol-options"></a>Derleyici sembol seçenekleri
 
-Standart **hata ayıklama** oluşturma yapılandırması Ile VISUAL Studio IDE 'den bir proje oluşturduğunuzda, C++ ve yönetilen derleyiciler kodunuz için uygun sembol dosyalarını oluşturur. Ayrıca, koddaki derleyici seçeneklerini de ayarlayabilirsiniz.
+standart **hata ayıklama** yapı yapılandırmasıyla Visual Studio ıde 'den bir proje oluşturduğunuzda, C++ ve yönetilen derleyiciler kodunuz için uygun sembol dosyalarını oluşturur. Ayrıca, koddaki derleyici seçeneklerini de ayarlayabilirsiniz.
 
 ### <a name="net-options"></a>.NET seçenekleri
 
@@ -194,19 +195,19 @@ Bir *. pdb* dosyası oluşturmak için **/Debug** ile derleyin. **/Debug: Full**
 
   - *\<project>. pdb*
 
-    *\<project> . Pdb* dosyası, projenin *. exe* dosyası için tüm hata ayıklama bilgilerini depolar ve *ta \debug* alt dizininde bulunur. *\<project> . Pdb* dosyası, yalnızca *VC \<x> . pdb*'de bulunan tür bilgilerini değil, işlev prototipleri dahil olmak üzere tam hata ayıklama bilgileri içerir.
+    *\<project> . Pdb* dosyası, projenin *.exe* dosyası için tüm hata ayıklama bilgilerini depolar ve *ta \debug* alt dizininde bulunur. *\<project> . Pdb* dosyası, yalnızca *VC \<x> . pdb*'de bulunan tür bilgilerini değil, işlev prototipleri dahil olmak üzere tam hata ayıklama bilgileri içerir.
 
-  Hem *VC \<x> . pdb* hem de *\<project> . pdb* dosyaları artımlı güncelleştirmelere izin verir. Bağlayıcı Ayrıca *. pdb* dosyalarının yolunu, oluşturduğu *. exe* veya *. dll* dosyasına katıştırır.
+  Hem *VC \<x> . pdb* hem de *\<project> . pdb* dosyaları artımlı güncelleştirmelere izin verir. Bağlayıcı Ayrıca *. pdb* dosyalarının yolunu oluşturduğu *.exe* veya *.dll* dosyasına katıştırır.
 
 - <a name="use-dumpbin-exports"></a>DLL dışarı aktarma tabloları
 
-  `dumpbin /exports`DLL 'nin dışarı aktarma tablosunda kullanılabilen sembolleri görmek için kullanın. DLL dışarı aktarma tablolarından sembolik bilgiler, Windows iletileri, Windows yordamları (WindowProcs), COM nesneleri, sıralama veya sembolünüz olmayan herhangi bir DLL ile çalışmak için yararlı olabilir. Semboller tüm 32-bit sistem DLL için kullanılabilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir.
+  `dumpbin /exports`DLL 'nin dışarı aktarma tablosunda kullanılabilen sembolleri görmek için kullanın. DLL dışarı aktarma tablolarından sembolik bilgiler, Windows iletilerle, Windows yordamlarla (windowprocs), COM nesneleriyle, sıralamaya veya sembollerine sahip olmadığınız herhangi bir DLL ile çalışmak için yararlı olabilir. Semboller tüm 32-bit sistem DLL için kullanılabilir. Aramalar geçerli işlev en üstte (en yoğun şekilde iç içe geçmiş) olacak şekilde arama sırasıyla listelenir.
 
   Çıktıyı okuyarak, `dumpbin /exports` alfasayısal olmayan karakterler de dahil olmak üzere tam işlev adlarını görebilirsiniz. İşlev adlarının hata ayıklayıcıdaki başka bir yerde kesilebilir olduğu için işlev adlarının tam olarak ayarlanması, bir işlevde kesme noktası ayarlamak için yararlıdır. Daha fazla bilgi için bkz. [dumpbin/dışarı aktarmalar](/cpp/build/reference/dash-exports).
 
 ### <a name="web-applications"></a>Web uygulamaları
 
-ASP.NET uygulamanızın *web.config* dosyasını hata ayıklama moduna ayarlayın. Hata ayıklama modu ASP.NET'in dinamik olarak oluşturulan dosyalar için sembol oluşturmasına neden olur ve hata ayıklayıcının ASP.NET uygulamasına eklemesine olanak tanır. Projenizi web projeleri şablonundan oluşturduysanız, Visual Studio bunu hata ayıklamaya başladığınızda otomatik olarak ayarlar.
+ASP.NET uygulamanızın *web.config* dosyasını hata ayıklama moduna ayarlayın. Hata ayıklama modu ASP.NET'in dinamik olarak oluşturulan dosyalar için sembol oluşturmasına neden olur ve hata ayıklayıcının ASP.NET uygulamasına eklemesine olanak tanır. Visual Studio, projenizi web projeleri şablonundan oluşturduysanız, hata ayıklamaya başladığınızda bu otomatik olarak ayarlar.
 
 ## <a name="manage-symbols-while-debugging"></a>Hata ayıklama sırasında sembolleri yönetme
 
@@ -218,7 +219,7 @@ Hata ayıklama sırasında **modüller** penceresi, hata ayıklayıcının Kulla
 
 **Hata ayıklarken sembol konumlarını veya seçeneklerini izlemek veya değiştirmek için:**
 
-1. **Modüller** penceresini açmak için hata ayıklama sırasında Windows modüllerini **Hata Ayıkla**  >    >   (veya **CTRL**  +  **alt**  +  **U** tuşlarına basın) seçeneğini belirleyin.
+1. **modüller** penceresini açmak için **hata ayıklama sırasında**  >  **Windows**  >  **modüller** ' i (veya **Ctrl**  +  **Alt**  +  **U** tuşlarına basın) seçin.
 1. **Modüller** penceresinde, **sembol durumu** veya **sembol dosyası** üst bilgilerine veya herhangi bir modüle sağ tıklayın.
 1. Bağlam menüsünde, aşağıdaki seçeneklerden birini seçin:
 
@@ -226,7 +227,7 @@ Hata ayıklama sırasında **modüller** penceresi, hata ayıklayıcının Kulla
 |------------|-----------------|
 |**Sembolleri yükle**|Atlanan, bulunmayan veya yüklü sembolleri olmayan modüller için görüntülenir. **Seçenekler**  >  **hata ayıklama**  >  **sembolleri** sayfasında belirtilen konumlardan sembolleri yüklemeye çalışır. Sembol dosyası bulunamazsa veya yüklü değilse, arama için yeni bir konum belirleyebilmeniz için **dosya gezginini** başlatır.|
 |**Sembol Yükleme Bilgisi**|Yüklü bir sembol dosyasının konumunu veya hata ayıklayıcı dosyayı bulamazsa aranan konumları gösterir.|
-|**Sembol ayarları**|  >    >  Sembol konumlarını düzenleyebileceğiniz ve ekleyebileceğiniz seçenekler hata ayıklama **sembolleri** sayfasını açar.|
+|**sembol Ayarlar**|  >    >  Sembol konumlarını düzenleyebileceğiniz ve ekleyebileceğiniz seçenekler hata ayıklama **sembolleri** sayfasını açar.|
 |**Her zaman otomatik olarak yükle**|Seçilen sembol dosyasını, hata ayıklayıcı tarafından otomatik olarak yüklenen dosyalar listesine ekler.|
 
 ### <a name="use-the-no-symbols-loadedno-source-loaded-pages"></a>Yüklü simge yok/kaynak yüklenmedi sayfası kullan
@@ -246,7 +247,7 @@ Bu durumda, hata ayıklayıcı **yüklü sembol yok** veya gerekli sembolleri ve
 
 - Arama yolunu değiştirmek için, seçilmemiş bir yolu seçin veya **yeni yol** veya **Yeni VSTS yolu** ' nu seçin ve yeni bir yol girin veya seçin. Yolları tekrar aramak ve bulunursa sembol dosyasını yüklemek için **Yükle** ' yi seçin.
 - Herhangi bir sembol seçeneklerini geçersiz kılmak ve arama yollarını yeniden denemek için, **Araştır ve \<executable-name> bul**' u seçin. Sembol dosyası bulunursa yüklenir veya sembol dosyasını el ile seçebilmeniz için **Dosya Gezgini** açılır.
-- Davranışı yapılandırmak üzere sembol ayarları sayfasını açmak için **sembol ayarlarını değiştir** ' i seçin (veya **seçenekleri**  >  **hata ayıklama**  >  **sembolleri** seçin).
+- davranışı yapılandırmak üzere sembol ayarları sayfasını açmak için **sembol Ayarlar değiştir** ' i seçin (veya **seçenekleri**  >  **hata ayıklama**  >  **sembolleri** seçin).
 - Ileri Ayrıştırılmış derlemeyi bir kez yeni bir pencerede göstermek için, ayrıştırılmış **derlemeyi görüntüle**' yi seçin veya kaynak veya sembol dosyaları bulunamadığında her zaman ayrıştırılmış derlemeyi göster seçeneğini ayarlamak için **Seçenekler iletişim kutusunu** seçin. Daha fazla bilgi için bkz. [ayrıştırma kodunu görüntüleme](../debugger/how-to-use-the-disassembly-window.md).
 - Aranan konumları ve sonucu göstermek için **sembol yükleme bilgileri**' ni genişletin.
 - C# kodu için, kaynak kodu **yüklü olmayan** veya **kaynak yüklenmemiş** sayfalardan [derlemeyi kaldırma](../debugger/decompilation.md) seçeneğini de belirleyebilirsiniz.
@@ -273,6 +274,6 @@ Hata ayıklayıcının kaynak dosyalarını arayacağı konumları belirtebilir 
 1. **Tamam ' ı** veya **Uygula**' yı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sembol dosyalarını ve Visual Studio sembol ayarlarını anlama](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
+- [sembol dosyalarını ve Visual Studio sembol ayarlarını anlama](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
-- [Visual Studio 2012 ve 2013 ' de .NET uzak sembol yükleme değişiklikleri](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)
+- [.net uzak sembol Visual Studio 2012 ve 2013 değişikliklerini yükleme](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)

@@ -11,14 +11,15 @@ ms.assetid: 97ea62ed-bdf8-4df2-b178-b17b9df20adc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b462ffbdb0d85e7ad1680076d5fdd70734cc97f3
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4c8e60e311da78dcc74d00332cadb336771a39e090af1985ccfd3888847625d8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159316"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380328"
 ---
 # <a name="idiaenumsectioncontribsreset"></a>IDiaEnumSectionContribs::Reset
 Bir numaralandırma dizisini başlangıca sıfırlar.

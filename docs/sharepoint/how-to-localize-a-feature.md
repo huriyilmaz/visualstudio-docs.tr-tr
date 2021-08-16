@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: bir özelliği yerelleştirme | Microsoft Docs'
-description: Sabit kodlanmış dize değerlerini yerelleştirilmiş kaynaklara başvuran ifadelerle değiştirerek SharePoint 'teki Özellik başlıklarını ve açıklamalarını yerelleştirmeye öğrenin.
+title: 'Nasıl |: Bir Özellik | Microsoft Docs'
+description: Sabit kodlu dize değerlerini yerelleştirilmiş SharePoint ifadelerle değiştirerek özellik başlıklarını ve açıklamalarını yerelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,54 +13,55 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 4a3c427f207f6aac9f6a827eb6c24b799d635b46
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71bf8d8c9d211fea35ee4f9d603c439ebaf911ed89da292d2ef40a7b83b7ac7f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913595"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121385230"
 ---
-# <a name="how-to-localize-a-feature"></a>Nasıl yapılır: bir özelliği yerelleştirme
-  Varsayılan olarak, özellik başlıkları ve açıklamaları sabit kodlanmış dize değerlerini kullanır. Özellik başlığını ve açıklamasını yerelleştirmek için, dizeleri yerelleştirilmiş kaynaklara başvuran ifadelerle değiştirin.
+# <a name="how-to-localize-a-feature"></a>Nasıl: Bir özelliği yerelleştirme
+  Varsayılan olarak, özellik başlıkları ve açıklamalar sabit kodlu dize değerleri kullanır. Özellik başlığını ve açıklamasını yerelleştirmek için dizeleri yerelleştirilmiş kaynaklara başvurulan ifadelerle değiştirin.
 
-## <a name="localize-a-feature"></a>Bir özelliği yerelleştirin
+## <a name="localize-a-feature"></a>Özelliği yerelleştirme
 
 #### <a name="to-localize-a-feature"></a>Bir özelliği yerelleştirmek için
 
-1. **Çözüm Gezgini**' de, **özellik1** düğümünün kısayol menüsünü açın ve **Özellik kaynağı Ekle**' yi seçin.
+1. Bu **Çözüm Gezgini,** **Feature1** düğümünün kısayol menüsünü açın ve Özellik Kaynağı **Ekle'yi seçin.**
 
-2. **Kaynak Ekle** iletişim kutusunda, varsayılan dil özelliği kaynak dosyası için kültür olarak listeden **sabit dil** ' i seçin.
+2. Kaynak **Ekle iletişim** kutusunda, varsayılan dil **özelliği kaynak** dosyası için kültür olarak listeden Sabit Dil'i seçin.
 
-3. Yerelleştirilmiş özellik kaynak dosyaları için tercih ettiğiniz dilleri seçerek, yerelleştirilmiş her dil için önceki adımı yineleyin.
+3. Yerelleştirilmiş her dil için önceki adımı yineler ve yerelleştirilmiş özellik kaynak dosyaları için seçtiğiniz dilleri seçin.
 
-     Ayrı özellik kaynak dosyaları oluşturulur: biri varsayılan dil için ve, desteklemek istediğiniz her yerelleştirilmiş dil için bir tane.
+     Ayrı özellik kaynak dosyaları oluşturulur: varsayılan dil için bir tane ve desteklemek istediğiniz her yerelleştirilmiş dil için bir tane.
 
-4. Kaynak düzenleyicisinde her bir kaynak dosyasını açın ve ardından tüm dize kimliklerini ve değerlerini girin.
+4. Kaynak Düzenleyicisi'nde her bir kaynak dosyasını açın ve ardından tüm dize kimliklerini ve değerlerini girin.
 
-     Örneğin, varsayılan özellik kaynak dosyasında, **özellik unvanım** değeri olan BIR **başlık** kimliği ve **özellik açıklamamın** **değeri ile ikinci** bir dize kimliği girin. Her yerelleştirilmiş kaynak dosyası için, varsayılan özellik kaynağında kullanılan dize kimliklerini kullanın, ancak değerler için yerelleştirilmiş dizeler girin.
+     Örneğin, varsayılan özellik kaynak dosyasında, Özellik Başlığım değerine sahip başlık dize kimliğini ve  Özelliğim Açıklaması değerini içeren Açıklama ikinci bir dize **kimliği girin.**  Yerelleştirilmiş her kaynak dosyası için, varsayılan özellik kaynağında kullanılan dize kimliklerini kullanın, ancak değerler için yerelleştirilmiş dizeler girin.
 
-5. Tüm kaynak değerlerini girdikten sonra, özelliğin kısayol menüsünü açın (örneğin, *özellik1. feature*) ve sonra özellik tasarımcısında özelliği açmak Için **tasarımcıyı görüntüle** ' yi seçin.
+5. Tüm kaynak değerlerini girdikten sonra, özelliğin kısayol menüsünü açın (örneğin, *Feature1.feature*) ve Görünüm Tasarımcısı'ı seçen özellik Tasarımcısı'nda açın. 
 
-6. Özelliğindeki **başlık** ve **Açıklama** alanlarını yerelleştirmek için, kutularına değer girmek üzere aşağıdaki biçimi kullanın:
+6. Özellikte Başlık **ve Açıklama** **alanlarını** yerelleştirmek için, kutularına değer girmek için aşağıdaki biçimi kullanın:
 
-     `$Resources:`*DIZE kimliği*
+     `$Resources:`*Dize Kimliği*
 
-     Örneğin, **özellik başlık** kutusuna $Resources:**title** yazın ve **Özellik Açıklama** kutusunda $Resources:**açıklamasını** girin.
+     Örneğin, $Resources:**Özellik** **Başlığı** kutusuna Başlık girin ve $Resources: **Açıklama'ya** tıklayın.
 
-     Dize kimlikleri, kaynak dosyalarında kullanılanlarla aynı olmalıdır.
+     Dize kimlikleri, kaynak dosyalarında kullanılan kimliklerle eşleşmeli.
 
-7. Uygulamayı derlemek ve çalıştırmak için **F5** tuşunu seçin.
+7. Uygulamayı **derlemek ve** çalıştırmak için F5 anahtarını seçin.
 
-8. SharePoint 'te **Site eylemleri** menüsünü açın, **site ayarları**' nı seçin ve ardından **Site eylemleri** bölümünde **site özelliklerini yönet** bağlantısını seçin.
+8. Bu SharePoint **Site Eylemleri** menüsünü açın, **Site** Ayarlar'ı seçin ve **ardından Site Eylemleri** bölümünde Site Özelliklerini Yönet **bağlantısını** seçin.
 
-9. SharePoint 'te varsayılan değer olan görüntüleme dilini değiştirin.
+9. Bu SharePoint varsayılandan görüntüleme dilini değiştirebilirsiniz.
 
-     Yerelleştirilmiş özellik başlığı ve açıklaması uygulamada görüntülenir. Yerelleştirilmiş kaynakları göstermek için SharePoint sunucusunda, kaynak dosyasının kültürüyle eşleşen bir dil paketi yüklü olmalıdır.
+     Yerelleştirilmiş özellik başlığı ve açıklaması uygulamada görünür. Yerelleştirilmiş kaynakları görüntülemek için SharePoint sunucusunda kaynak dosyasının kültürüyle eşleşen bir dil paketi yüklü olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerini yerelleştirin](../sharepoint/localizing-sharepoint-solutions.md)
-- [Nasıl yapılır: kaynak dosyası ekleme](../sharepoint/how-to-add-a-resource-file.md)
-- [Nasıl yapılır: ASPX işaretlemesini yerelleştirme](../sharepoint/how-to-localize-aspx-markup.md)
-- [Nasıl yapılır: kod yerelleştirme](../sharepoint/how-to-localize-code.md)
+- [Yerelleştirme SharePoint çözümleri](../sharepoint/localizing-sharepoint-solutions.md)
+- [Nasıl: Kaynak dosyası ekleme](../sharepoint/how-to-add-a-resource-file.md)
+- [Nasıl yapabilirsiniz: ASPX işaretlemeyi yerelleştirme](../sharepoint/how-to-localize-aspx-markup.md)
+- [Nasıl olur: Kodu yerelleştirme](../sharepoint/how-to-localize-code.md)

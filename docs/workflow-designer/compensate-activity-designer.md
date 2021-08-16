@@ -10,14 +10,15 @@ ms.assetid: 7347c947-bfff-4bad-becd-5cd23e7b24cd
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 36ab20854adb952d098f71904cdd3cb092e27ac9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf967b079fbd499a3e3cf244c5c6dd692aa01e363b7e69db10f7299ca3422448
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955690"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121383943"
 ---
 # <a name="compensate-activity-designer"></a>Compensate Etkinlik Tasarımcısı
 

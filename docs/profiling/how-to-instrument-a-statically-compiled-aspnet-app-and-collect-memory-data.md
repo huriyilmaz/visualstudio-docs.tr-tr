@@ -1,6 +1,6 @@
 ---
-title: Profil oluşturucu komut satırı-Instrument static ASP.NET App, bellek verileri al
-description: Önceden derlenmiş bir ASP.NET Web bileşeni veya Web sitesi için bellek ve zamanlama verilerini toplamak üzere Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını öğrenin.
+title: profil oluşturucu komut satırı-araç statik ASP.NET uygulaması, bellek verileri al
+description: önceden derlenmiş bir ASP.NET web bileşeni veya web sitesi için bellek ve zamanlama verilerini toplamak üzere Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,17 +8,18 @@ ms.assetid: ea1dcb7c-1dc3-49ff-9418-8795b5b3d3bc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d067e929fe36036457bef59b6ff477180b51c6dd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: feae93bd802dc40640494a5725d0c9f6f0ce8d0c036b8c12daa2c14c039064e0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99928972"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410690"
 ---
-# <a name="how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>Nasıl yapılır: profil oluşturucu komut satırını kullanarak statik olarak derlenen bir ASP.NET Web uygulamasını izleme ve bellek verileri toplama
+# <a name="how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>nasıl yapılır: profil oluşturucu komut satırını kullanarak statik olarak derlenen bir ASP.NET web uygulamasını izleme ve bellek verileri toplama
 Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , önceden derlenmiş bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web bileşenini veya Web sitesini işaretlemek ve .net bellek ayırmayı, nesne ömrünü ve ayrıntılı zamanlama verilerini toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
 
 > [!NOTE]
@@ -32,9 +33,9 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , önceden
 
 ## <a name="start-to-profile"></a>Profile başla
 
-#### <a name="to-instrument-an-aspnet-web-component-and-start-profiling"></a>Bir ASP.NET Web bileşenini işaretlemek ve profil oluşturmayı başlatmak için
+#### <a name="to-instrument-an-aspnet-web-component-and-start-profiling"></a>bir ASP.NET Web bileşenini işaretlemek ve profil oluşturmaya başlamak için
 
-1. Hedef uygulamanın belgelenmiş bir sürümünü oluşturmak için **vsinstr** aracını kullanın. Gerekirse, ASP.NET ana bilgisayarındaki uygulama ikililerini belgelenmiş ikili dosyalarla değiştirin.
+1. Hedef uygulamanın belgelenmiş bir sürümünü oluşturmak için **vsinstr** aracını kullanın. gerekirse, ASP.NET ana bilgisayar bilgisayarındaki uygulama ikililerini belgelenmiş ikili dosyalarla değiştirin.
 
 2. Bir komut istemi penceresi açın
 
@@ -65,15 +66,15 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , önceden
      Aşağıdaki seçeneklerden herhangi birini, **/Start: Trace** seçeneği ile kullanabilirsiniz.
 
    > [!NOTE]
-   > **/User** ve **/CrossSession** seçenekleri genellikle ASP.NET uygulamaları için gereklidir.
+   > **/user** ve **/crosssession** seçenekleri genellikle ASP.NET uygulamalar için gereklidir.
 
    | Seçenek | Açıklama |
    | - | - |
-   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | ASP.NET çalışan işleminin sahibi olan hesabın isteğe bağlı etki alanını ve Kullanıcı adını belirtir. İşlem, oturum açan kullanıcıdan farklı bir kullanıcı olarak çalışıyorsa, bu seçenek gereklidir. Ad, Windows Görev Yöneticisi 'nin **süreçler** sekmesinde **Kullanıcı adı** sütununda listelenir. |
-   | [/CrossSession](../profiling/crosssession.md) | Diğer oturumlardaki işlemlerin profilini oluşturmaya izin vermez. Uygulama farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. Oturum KIMLIĞI, Windows Görev Yöneticisi 'nin **süreçler** SEKMESINDEKI oturum kimliği sütununda listelenir. **/CS** , **/CrossSession** için bir kısaltma olarak belirtilebilir. |
-   | [/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath` | Profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
+   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | ASP.NET çalışan işlemine sahip olan hesabın isteğe bağlı etki alanını ve kullanıcı adını belirtir. İşlem, oturum açan kullanıcıdan farklı bir kullanıcı olarak çalışıyorsa, bu seçenek gereklidir. ad, Windows görev yöneticisi 'nin **süreçler** sekmesinde **kullanıcı adı** sütununda listelenir. |
+   | [/CrossSession](../profiling/crosssession.md) | Diğer oturumlardaki işlemlerin profilini oluşturmaya izin vermez. Uygulama farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. oturum kimliği, Windows görev yöneticisi 'nin **süreçler** sekmesindeki oturum kimliği sütununda listelenir. **/CS** , **/CrossSession** için bir kısaltma olarak belirtilebilir. |
+   | [/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath` | profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
    | [/AutoMark](../profiling/automark.md) **:**`Interval` | Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir. |
-   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | Profil oluşturma sırasında toplanacak bir Windows için olay Izleme (ETW) olayı belirtir. ETW olayları ayrı bir (. etl) dosyasında toplanır. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir olay izleme olayı belirtir. ETW olayları ayrı bir (. etl) dosyasında toplanır. |
    | [/globaloff](../profiling/globalon-and-globaloff.md) | Veri toplama duraklatılmış şekilde profil oluşturucuyu başlatmak için, **/Start** komut satırına **/globaloff** seçeneğini ekleyin. Profil oluşturmayı sürdürmeye yönelik **/GlobalOn** kullanın. |
 
 7. Belgelenmiş bileşeni içeren Web sitesini açın.
@@ -92,7 +93,7 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , önceden
     |[/ThreadOn](../profiling/threadon-and-threadoff.md) **:** `TID` [/ThreadOff](../profiling/threadon-and-threadoff.md) **:**`TID`|İş parçacığı KIMLIĞI () tarafından belirtilen iş parçacığı için (**/ThreadOn**) veya Durdur (**/ThreadOff**) veri toplamayı başlatır `TID` .|
 
 ## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu Sonlandır
- Bir profil oluşturma oturumunu sonlandırmak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web uygulamasını kapatın ve ardından Internet Information Services (IIS) **IISReset** komutunu kullanarak [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemini kapatın. Profiler 'ı devre dışı bırakmak ve profil oluşturma veri dosyasını kapatmak için **VSPerfCmd** [/Shutdown](../profiling/shutdown.md) seçeneğini çağırın. **VSPerfCLREnv/globaloff** komutu profil oluşturma ortam değişkenlerini temizler. Yeni ortam ayarlarının uygulanması için bilgisayarı yeniden başlatmanız gerekir.
+ bir profil oluşturma oturumunu sonlandırmak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web uygulamasını kapatın ve ardından Internet Information Services (ııs) **ıısreset** komutunu kullanarak [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemini kapatın. Profiler 'ı devre dışı bırakmak ve profil oluşturma veri dosyasını kapatmak için **VSPerfCmd** [/Shutdown](../profiling/shutdown.md) seçeneğini çağırın. **VSPerfCLREnv/globaloff** komutu profil oluşturma ortam değişkenlerini temizler. Yeni ortam ayarlarının uygulanması için bilgisayarı yeniden başlatmanız gerekir.
 
 #### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sonlandırmak için
 
@@ -115,5 +116,5 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , önceden
     **IISReset/Start**
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)

@@ -11,14 +11,15 @@ ms.assetid: 20830fdc-c0e9-4a5f-bf60-33f28874442f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4a608b3556040033d9f51535ad29d0abf5d4e35
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: c3555d53ccd845d878fe91f8802e4f8b02f3087475dbd8cb85800aee5b23d961
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904132"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121413940"
 ---
 # <a name="sccremove-function"></a>SccRemove İşlevi
 Bu işlev, kaynak denetim sisteminden dosyaları siler.

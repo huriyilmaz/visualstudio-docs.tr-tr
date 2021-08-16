@@ -1,6 +1,6 @@
 ---
-title: Özet görünümü-kaynak çakışması görünümü | Microsoft Docs
-description: Özet görünümü, uygulamanızda bir iş parçacığı veya işlemin askıya alındığı, bir kaynağa erişmeyi beklerken, uygulamanızdaki olaylar hakkındaki bilgileri görüntüler.
+title: Özet Görünümü - Kaynak İçeriği Görünümü | Microsoft Docs
+description: Özet görünümü, uygulamanıza bir iş parçacığının veya sürecin bir kaynağa erişim için beklerken askıya alınarak askıya alınmış olaylarla ilgili bilgileri görüntüler.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,41 +9,42 @@ ms.assetid: 6da57b83-7b42-4d7c-9aea-8e0a830faf6b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e6f0b629aa14cf465dcaa8abec48e3eea110c4b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad4fe35610aa7204d21d70a2454a3a6a5a52e3391a16f6f8cfd4fc0fe516ce97
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960006"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121410235"
 ---
 # <a name="summary-view---resource-contention-view"></a>Özet Görünümü - Kaynak Çakışması Görünümü
-Özet görünümü, uygulamanızda bir iş parçacığı veya işlemin askıya alındığı, bir kaynağa erişmeyi beklerken, uygulamanızdaki olaylar hakkındaki bilgileri görüntüler.
+Özet görünümü, uygulamanıza bir iş parçacığının veya sürecin bir kaynağa erişim için beklerken askıya alınarak askıya alınmış olaylarla ilgili bilgileri görüntüler.
 
- Bildirim bağlantılarının ve rapor listelerinin açıklaması dahil daha fazla bilgi için bkz. [Özet görünümü](../profiling/summary-view.md).
+ Bildirim Bağlantıları ve Rapor listelerinin açıklaması da dahil olmak üzere daha fazla bilgi için bkz. [Özet Görünümü.](../profiling/summary-view.md)
 
-## <a name="timeline-graph"></a>Zaman çizelgesi grafiği
- Özet görünümündeki zaman çizelgesi grafiği, profil oluşturma işleminin gerçekleştiği zaman içindeki profili oluşturulan uygulamanın çekişme olaylarının sayısını gösterir. Görünümü seçili bir zaman aralığına filtrelemek için zaman çizelgesi grafiğini kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: rapor görünümlerini Özet zaman çizelgesinden filtreleme](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).
+## <a name="timeline-graph"></a>Zaman çizelgesi Graph
+ Özet görünümündeki zaman çizelgesi grafiği, profil oluşturmanın meydana geldiği zaman içinde profili yapılan uygulamanın olaylarının sayısını gösterir. Zaman çizelgesi grafiğini kullanarak görünümü seçilen bir zaman aralığına göre filtre görebilirsiniz. Daha fazla bilgi için, [bkz. How to: Filter Report Views from the Summary Timeline](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).
 
-## <a name="most-contended-resources"></a>En fazla Contenbitmiş kaynaklar
- **En fazla çekişme kaynağı** , uygulamadaki en fazla çekişme olayına neden olan kaynakları listeler. Çekişmeler görünümünü görüntülemek için bir kaynak adına tıklayabilirsiniz. Çekişmeler görünümü iş parçacığına göre kaynak çekişmelerinin ayrıntılı bir zaman çizelgesini sağlar.
+## <a name="most-contended-resources"></a>En Çok Mücadele Edilen Kaynaklar
+ **En Çok Yarışan** Kaynaklar, uygulama içinde en fazla soruna neden olan kaynakları listeler. Bir kaynak adına tıklar ve İçerikler görünümünü görüntüebilirsiniz. İçerikler görünümü, iş parçacığına göre kaynak içeriklerinin ayrıntılı bir zaman çizelgesini sağlar.
 
- **En çok kullanılan kaynaklar** , her kaynak için aşağıdaki verileri içerir.
+ **En Çok Kullanılan Kaynaklar** her kaynak için aşağıdaki verileri içerir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
 |**Ad**|Kaynağın adı.|
-|**Çekişme**|Bu kaynak üzerinde çekişmeler olan profil oluşturma verilerinde bulunan tüm çekişme olaylarının yüzdesi.|
+|**İçerik %**|Profil oluşturma verisi içinde yer alan ve bu kaynak üzerinde yapılan tüm itiraz olaylarının yüzdesi.|
 
-## <a name="most-contended-thread"></a>En fazla Contensonlandırılan Iş parçacığı
- **En fazla Contensonlanma Iş parçacıkları** uygulamadaki en fazla çekişme olay sayısına sahip iş parçacıklarını listeler. İş parçacığının kaynak çekişmelerinin ayrıntılı bir zaman çizelgesini sağlayan çekişmeler görünümünü görüntülemek için bir iş parçacığı adına tıklayabilirsiniz.
+## <a name="most-contended-thread"></a>En Çok Mücadele Edilen İş Parçacığı
+ **En Çok Yarışan** İş Parçacıkları, uygulama içinde en fazla sayıdaki musiki olaylarına sahip olan iş parçacıklarını listeler. İş parçacığına göre kaynak içeriklerinin ayrıntılı zaman çizelgesini sağlayan İçerikler görünümünü görüntülemek için bir iş parçacığı adına tıkabilirsiniz.
 
- **En çok Iş parçacığı sayısı** , her iş parçacığı için aşağıdaki verileri içerir.
+ **En Çok Yarışan İş** Parçacıkları, her iş parçacığı için aşağıdaki verileri içerir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
 |**ID**|İş parçacığı tanımlayıcısı.|
-|**Ad**|İş parçacığına sahip olan işlemin adı.|
-|**Çekişme**|Bu kaynak üzerinde çekişmeler olan profil oluşturma verilerinde bulunan tüm çekişme olaylarının yüzdesi.|
+|**Ad**|İş parçacığına sahip olan sürecin adı.|
+|**İçerik %**|Profil oluşturma verisi içinde yer alan ve bu kaynak üzerinde yapılan tüm itiraz olaylarının yüzdesi.|

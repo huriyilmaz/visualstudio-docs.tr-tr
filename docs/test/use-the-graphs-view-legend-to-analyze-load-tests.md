@@ -11,12 +11,13 @@ ms.assetid: 0f6ba8e4-1343-419c-8a9f-240cf50efed7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 485b5dc319a0e78f91f68f9c82b65ee5aa62b9d5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 9875a8a95f0fb32a26e70cacb8a43eede05321631698906c5d6dd07e9645a585
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962515"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384709"
 ---
 # <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>Yük testlerini çözümlemek için grafik görünümü göstergesini kullanın
 
@@ -57,7 +58,7 @@ Göstergedeki bir öğenin seçilmesi şunları yapar:
 - Sayacın **Çizim seçenekleri** iletişim kutusuna erişmenizi sağlar.
 
 > [!TIP]
-> **Yük Testi Çözümleyicisi** araç çubuğunda **grafik seçenekleri açılan** düğmesini kullanabilir ve grafik görünümüyle ilişkili **gösterge** panelini göstermek veya gizlemek için **Göstergeyi Göster** ' i seçebilirsiniz.
+> **yük testi çözümleyicisi** araç çubuğunda **Graph seçenekleri açılır** düğmesini kullanabilir ve grafik görünümüyle ilişkili **gösterge** panelini göstermek veya gizlemek için **göstergeyi göster** ' i seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
 title: 'Öğretici: C# ve C++ kodunda hata ayıklama (karma mod)'
-description: Karma modda hata ayıklama kullanarak bir .NET Core veya .NET Framework uygulamasından yerel DLL hatalarını ayıklamayı öğrenin
+description: Karma mod hata ayıklama kullanarak bir .NET Core veya .NET Framework dll'de hata ayıklamayı öğrenin
 ms.custom: seodec18
 ms.date: 11/02/2018
 ms.topic: tutorial
@@ -12,78 +12,79 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 4d001e89993b90f6e8b7b33f43a5c06a1ffd7cd1
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 3cc80af05e180992d5905a8b6202d7c7a219365bbfae1ab4e62ee22a02db3f39
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683319"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121362210"
 ---
-# <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Öğretici: aynı hata ayıklama oturumunda C# ve C++ hatalarını ayıklama
+# <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Öğretici: Aynı hata ayıklama oturumunda C# ve C++ hata ayıklaması
 
-Visual Studio, karışık modda hata ayıklama olarak adlandırılan bir hata ayıklama oturumunda birden fazla hata ayıklayıcı türünü etkinleştirmenizi sağlar. Bu öğreticide, tek bir hata ayıklama oturumunda hem yönetilen hem de yerel kodda hata ayıklamayı öğreneceksiniz.
+Visual Studio, karma mod hata ayıklama olarak adlandırılan bir hata ayıklama oturumunda birden fazla hata ayıklayıcı türünü etkinleştirmenizi sağlar. Bu öğreticide, tek bir hata ayıklama oturumunda hem yönetilen hem de yerel kodda hata ayıklamayı öğrenirsiniz.
 
-Bu öğreticide, yönetilen bir uygulamadaki yerel kodun hatalarını ayıklamanın nasıl yapılacağı gösterilir, ancak [yönetilen kodda yerel bir uygulamadan da hata ayıklaması](../debugger/how-to-debug-in-mixed-mode.md)yapabilirsiniz. Hata ayıklayıcı, [Python ve yerel kodun](../python/debugging-mixed-mode-c-cpp-python-in-visual-studio.md)hatalarını ayıklama gibi diğer karışık mod hata ayıklama türlerini de destekler ve ASP.NET gibi uygulama türlerinde betik hata ayıklayıcısını kullanma.
+Bu öğretici, yönetilen bir uygulamanın yerel kodunda hata ayıklamayı gösterir, ancak yerel bir uygulamanın [yönetilen kodunda da hata ayıkabilirsiniz.](../debugger/how-to-debug-in-mixed-mode.md) Hata ayıklayıcısı ayrıca [Python'da](../python/debugging-mixed-mode-c-cpp-python-in-visual-studio.md)ve yerel kodda hata ayıklama ve betik hata ayıklayıcısını uygulama türleri gibi uygulama türlerinde kullanma gibi diğer karma mod hata ayıklama ASP.NET.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
 > * Basit bir yerel DLL oluşturma
-> * DLL 'yi çağırmak için basit bir .NET Core veya .NET Framework uygulaması oluşturma
-> * Karışık modda hata ayıklamayı yapılandırma
-> * Hata ayıklayıcıyı Başlat
-> * Yönetilen uygulamadaki bir kesme noktasına isabet edin
+> * DLL'i çağıran basit .NET Framework bir .NET Core veya uygulama oluşturma
+> * Karma mod hata ayıklamayı yapılandırma
+> * Hata ayıklayıcıyı başlatma
+> * Yönetilen uygulamada kesme noktası isabeti
 > * Yerel koda adımla
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Aşağıdaki iş yükleriyle Visual Studio yüklü olmalıdır:
+Aşağıdaki iş Visual Studio yüklü olması gerekir:
 - **C++ ile masaüstü geliştirme**
-- Oluşturmak istediğiniz uygulama türüne bağlı olarak **.net masaüstü geliştirme** veya **.NET Core platformlar arası geliştirme**.
+- Oluşturmak **istediğiniz uygulama türüne** **bağlı olarak .NET masaüstü** geliştirme veya .NET Core platformlar arası geliştirme.
 
-Visual Studio yoksa, ücretsiz olarak yüklemek için [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
+Uygulamanız yoksa, Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
 
-Visual Studio yüklü, ancak ihtiyacınız olan iş yüklerine sahip değilseniz, Visual Studio **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** ' ı seçin. Visual Studio Yükleyicisi, ihtiyacınız olan iş yüklerini seçin ve ardından **Değiştir**' i seçin.
+Yüklü Visual Studio ancak ihtiyacınız olan iş yükleri yoksa, yeni Project  iletişim kutusunun sol bölmesindeki Visual Studio Visual Studio Yükleyicisi **Aç'ı** seçin. Aşağıdaki Visual Studio Yükleyicisi iş yüklerini seçin ve ardından Değiştir'i **seçin.**
 
 ## <a name="create-a-simple-native-dll"></a>Basit bir yerel DLL oluşturma
 
-**DLL projesi dosyalarını oluşturmak için:**
+**DLL projesinin dosyalarını oluşturmak için:**
 
-1. Visual Studio 'Yu açın ve bir proje oluşturun.
+1. Visual Studio açın ve proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **boş proje** yazın, **Şablonlar**' ı seçin ve ardından C++ için **boş proje** ' yi seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin. Ardından, **Mixed_Mode_Debugging** gibi bir ad yazın ve **Oluştur**' a tıklayın.
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama **kutusunu açmak için Ctrl + Q** tuşlarına basın, Boş **Project** yazın, Şablonlar'ı **seçin** ve ardından C++ için **boş Project'ı** seçin. Görüntülenen iletişim kutusunda Oluştur'a **tıklayın.** Ardından, Mixed_Mode_Debugging **gibi bir ad yazın ve** Oluştur'a **tıklayın.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C++** altında **diğer**' i seçin ve ardından Ortadaki bölmede **boş proje**' yi seçin. Ardından, **Mixed_Mode_Debugging** gibi bir ad yazın ve **Tamam**' a tıklayın.
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni proje iletişim **kutusunun sol** bölmesinde, Visual C++ **altında** Diğer'i seçin ve ardından orta bölmede Boş  **proje'yi Project.** Ardından, Mixed_Mode_Debugging **gibi bir ad yazın** ve Tamam'a **tıklayın.**
     ::: moniker-end
 
-    **Boş proje** projesi şablonunu görmüyorsanız, **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. Visual Studio Yükleyicisi başlatılır. C++ iş yükü **Ile masaüstü geliştirmeyi** seçin ve ardından **Değiştir**' i seçin.
+    Boş Proje Şablonu'Project  görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Uygulama Visual Studio Yükleyicisi başlatıyor. **C++ ile masaüstü geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
     Visual Studio projeyi oluşturur.
 
-1. **Çözüm Gezgini**, **kaynak dosyalar**' ı seçin ve ardından **Proje**  >  **Yeni öğe Ekle**' yi seçin. Ya da, **kaynak dosyalar** ' a sağ tıklayıp   >  **Yeni öğe** Ekle ' yi seçin.
+1. Bu **Çözüm Gezgini** Kaynak **Dosyalar'ı seçin ve** ardından Yeni Öğe   >  **Project'ı seçin.** Veya Kaynak Dosyalar'a **sağ tıklar ve Yeni** Öğe **Ekle'yi**  >  **seçin.**
 
-1. **Yeni öğe** iletişim kutusunda **C++ dosyası (. cpp)** öğesini seçin. **Ad** alanına **Mixed_Mode. cpp** yazın ve ardından **Ekle**' yi seçin.
+1. Yeni Öğe **iletişim kutusunda** C++ dosyası **(.cpp) öğesini seçin.** Ad **alanına Mixed_Mode.cpp** **yazın** ve Ekle'yi **seçin.**
 
-    Visual Studio **Çözüm Gezgini** yeni C++ dosyasını ekler.
+    Visual Studio yeni C++ dosyasını dosyasına **Çözüm Gezgini.**
 
-1. Aşağıdaki kodu *Mixed_Mode. cpp*' ye kopyalayın:
+1. Aşağıdaki kodu *Mixed_Mode.cpp içine kopyalayın:*
 
     ```cpp
     #include "Mixed_Mode.h"
     ```
 
-1. **Çözüm Gezgini**, **üst bilgi dosyaları**' nı ve ardından **Proje**  >  **Ekle yeni öğe**' yi seçin. Ya da **üstbilgi dosyaları** ' na sağ tıklayıp   >  **Yeni öğe** Ekle ' yi seçin.
+1. Yeni **Çözüm Gezgini** Üst Bilgi **Dosyaları'Project**   >  **seçin.** Veya Üst Bilgi Dosyaları'a **sağ tıklar ve** Yeni Öğe **Ekle'yi**  >  **seçin.**
 
-1. **Yeni öğe** Iletişim kutusunda **üst bilgi dosyası (. h)** seçeneğini belirleyin. **Ad** alanına **Mixed_Mode. h** yazın ve ardından **Ekle**' yi seçin.
+1. Yeni Öğe **iletişim kutusunda** Üst bilgi dosyası **(.h) öğesini seçin.** Ad **alanına Mixed_Mode.h** **yazın** ve Ekle'yi **seçin.**
 
-   Visual Studio **Çözüm Gezgini** yeni başlık dosyasını ekler.
+   Visual Studio yeni üst bilgi dosyasını dosyasına **Çözüm Gezgini.**
 
-1. Aşağıdaki kodu *Mixed_Mode. h* içine kopyalayın:
+1. Aşağıdaki kodu *Mixed_Mode.h içine kopyalayın:*
 
     ```cpp
     #ifndef MIXED_MODE_MULTIPLY_HPP
@@ -98,54 +99,54 @@ Visual Studio yüklü, ancak ihtiyacınız olan iş yüklerine sahip değilseniz
     #endif
     ```
 
-1. **Dosya**  >  **Tümünü Kaydet** ' i seçin veya +  +  dosyaları kaydetmek için CTRL SHIFT 'e basın.
+1. Dosyaları **kaydetmek için** Dosya  >  **Tamamını** Kaydet'i seçin veya **Ctrl** + **Shift** + **S** tuşlarına basın.
 
 **DLL projesini yapılandırmak ve derlemek için:**
 
-1. Visual Studio araç çubuğunda **Hata Ayıkla** yapılandırma ve **x86** veya **x64** platform ' u seçin. Çağıran uygulamanız .NET Core olacaktır, her zaman 64 bit modunda çalışır, platform olarak **x64** ' u seçin.
+1. Uygulama araç Visual Studio hata ayıkla **ve** **x86 veya** **x64 platform'u** seçin. Çağıran uygulamanız her zaman 64 bit modunda çalışan .NET Core olacaksa platform olarak **x64'ü** seçin.
 
-1. **Çözüm Gezgini**, **Mixed_Mode_Debugging** projesi düğümünü seçin ve **Özellikler** simgesini seçin ya da proje düğümüne sağ tıklayıp **Özellikler**' i seçin.
+1. Bu **Çözüm Gezgini** proje **düğümünü Mixed_Mode_Debugging** Özellikler simgesini seçin  veya proje düğümüne sağ tıklar ve Özellikler'i **seçin.**
 
-1. **Özellikler** bölmesinin üst kısmında, **yapılandırmanın** **etkin (hata ayıklama)** olarak ayarlandığından ve **platformun** araç çubuğunda ayarlandıklarla aynı olduğundan emin olun: **x64** veya x86 platformu için **Win32** .
+1. Özellikler bölmesinin  üst kısmında Yapılandırma'nın Etkin **(Hata Ayıklama)** olarak ve **Platform'un** da araç çubuğunda ayarla aynı olduğundan emin olun: **x64** veya x86 platformu **için Win32.** 
 
    > [!IMPORTANT]
-   > Platformu **x86** 'dan **x64** 'e veya bunun tersini yaparsanız, yeni platformun özelliklerini yeniden yapılandırmanız gerekir.
+   > Platformu **x86'dan** **x64'e** veya tam tersi bir şekilde değiştirecek olursanız, yeni platformun özelliklerini yeniden yapılandırmanız gerekir.
 
-1. Sol bölmedeki **yapılandırma özellikleri** altında **bağlayıcı**  >  **Gelişmiş**' i seçin ve **giriş noktası yok ' un** yanındaki açılan listede **Hayır**' ı seçin. **Hayır** olarak değiştirmeniz gerekiyorsa, **Uygula**' yı seçin.
+1. Sol **bölmede Yapılandırma** Özellikleri'nin altında, **Bağlantı Noktası** Gelişmiş'i seçin ve Giriş Noktası Yok seçeneğinin  >  yanındaki açılan **listeden** Hayır'ı **seçin.** Hayır olarak değiştirmek **zorundaysanız Uygula'ya** **seçin.**
 
-1. **Yapılandırma özellikleri**' nin altında **genel**' i seçin ve **yapılandırma türü**' nün yanındaki açılan listede **dinamik kitaplık (. dll)** öğesini seçin. **Uygula**’yı ve sonra **Tamam**’ı seçin.
+1. Yapılandırma **Özellikleri'nin** altında **Genel'i** seçin ve Yapılandırma Türü'nin yanındaki açılan **listeden** Dinamik Kitaplık **(.dll) öğesini seçin.** **Uygula**’yı ve sonra **Tamam**’ı seçin.
 
-   ![Yerel DLL 'ye geç](../debugger/media/mixed-mode-set-as-native-dll.png)
+   ![Yerel DLL'ye geçiş](../debugger/media/mixed-mode-set-as-native-dll.png)
 
-1. **Çözüm Gezgini** ' de projeyi seçin ve ardından yapı   >  **oluşturma çözümü** oluştur ' u seçin, **F7** tuşuna basın veya projeye sağ tıklayıp **Oluştur**' u seçin.
+1. projesinde projeyi seçin **Çözüm Gezgini** Çözümü Derleme'yi seçin, F7 tuşuna basın veya projeye sağ  >  tıklar ve Derleme'yi **seçin.** 
 
    Projenin hatasız oluşturması gerekir.
 
-## <a name="create-a-simple-managed-app-to-call-the-dll"></a>DLL 'yi çağırmak için basit bir yönetilen uygulama oluşturma
+## <a name="create-a-simple-managed-app-to-call-the-dll"></a>DLL'i çağıran basit bir yönetilen uygulama oluşturma
 
-1. Visual Studio 'Yu açın ve yeni bir proje oluşturun.
+1. Yeni Visual Studio ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **konsolu** yazın, **Şablonlar**' ı seçin ve ardından C# için .net Core veya **konsol uygulaması (.NET Framework)** **konsol uygulaması** ' nı seçin. Görüntülenen iletişim kutusunda **İleri**' yi seçin.
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. **Arama kutusunu açmak için Ctrl + Q** yazın, konsol **yazın,** Şablonlar'ı seçin ve ardından C# için .NET Core için Konsol Uygulaması veya Konsol Uygulaması **(.NET Framework)** seçin.  Görüntülenen iletişim kutusunda, Sonraki'yi **seçin.**
 
-    Ardından, **Mixed_Mode_Calling_App** gibi bir ad yazın ve **İleri** veya **Oluştur**' a tıklayın, hangisi kullanılabilir seçeneği vardır.
+    Ardından, Mixed_Mode_Calling_App **gibi bir** ad yazın ve Ardından **veya** **Oluştur**'a tıklayın. (Varsa bu seçenek hangisidir?).
 
-    .NET Core için, önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
+    .NET Core için önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında **Windows Masaüstü**' nün ardından orta bölmedeki **konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.NET Core)** seçeneğini belirleyin.
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual C#** altında **Windows Desktop'ı** seçin ve orta bölmede Konsol Uygulaması **(.NET Framework)** veya Konsol Uygulaması **(.NET Core)** seçeneğini seçin.
 
-    Ardından, **Mixed_Mode_Calling_App** gibi bir ad yazın ve **Tamam**' a tıklayın.
+    Ardından, Mixed_Mode_Calling_App **gibi bir ad yazın** ve Tamam'a **tıklayın.**
     ::: moniker-end
 
-    Doğru proje şablonunu görmüyorsanız **Araçlar**  >  **ve Özellikler al..**. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. Hedef çerçevesine bağlı olarak **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    Doğru proje şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Hedef **çerçevenize bağlı olarak .NET Core platformlar** arası geliştirme veya **.NET masaüstü** geliştirme iş yükünü seçin ve ardından Değiştir'i **seçin.**
 
     > [!NOTE]
-    > Ayrıca, yeni yönetilen projeyi mevcut C++ çözümünüze ekleyebilirsiniz. Karışık modda hata ayıklama görevinin daha zor olması için projeyi yeni bir çözümde oluşturacağız.
+    > Ayrıca yeni yönetilen projeyi mevcut C++ çözümünüze de eklemek mümkündür. Karma mod hata ayıklama görevini daha zor hale etmek için projeyi yeni bir çözümde oluşturuyoruz.
 
-   Visual Studio boş projeyi oluşturur ve **Çözüm Gezgini** görüntüler.
+   Visual Studio boş projeyi oluşturur ve projesinde **Çözüm Gezgini.**
 
-1. *Program.cs* içindeki tüm kodu aşağıdaki kodla değiştirin:
+1. *Program.cs'de yer alan tüm kodu* aşağıdaki kodla değiştirin:
 
     ```csharp
     using System;
@@ -173,47 +174,47 @@ Visual Studio yüklü, ancak ihtiyacınız olan iş yüklerine sahip değilseniz
     }
     ```
 
-1. Yeni kodda, içindeki dosya yolunu `[DllImport]` Dosya yolunuzla yeni oluşturduğunuz *Mixed_Mode_Debugging.dll* değiştirin. İpuçları için kod yorumu bölümüne bakın. *Kullanıcı adı* yer tutucusunu değiştirdiğinizden emin olun.
+1. Yeni kodda, dosyasındaki dosya yolunu, yeni oluşturduğunuz dosya `[DllImport]` *Mixed_Mode_Debugging.dll* yoluyla değiştirin. İpuçları için kod açıklamasına bakın. Kullanıcı adı yer tutucusunu değiştir *mutlaka* değiştirin.
 
-1. Dosya   >  **Kaydet program.cs** seçin veya  + dosyayı kaydetmek için CTRL **S** tuşuna basın.
+1. Dosyayı **kaydetmek için** Dosya Kaydet  >  **Program.cs'yi** seçin veya **Ctrl** + **S** tuşlarına basın.
 
-## <a name="configure-mixed-mode-debugging"></a>Karışık modda hata ayıklamayı yapılandırma
+## <a name="configure-mixed-mode-debugging"></a>Karma mod hata ayıklamayı yapılandırma
 
-1. **Çözüm Gezgini**, **Mixed_Mode_Calling_App** projesi düğümünü seçin ve **Özellikler** simgesini seçin ya da proje düğümüne sağ tıklayıp **Özellikler**' i seçin.
+1. Bu **Çözüm Gezgini** proje **düğümünü Mixed_Mode_Calling_App** Özellikler simgesini seçin  veya proje düğümüne sağ tıklar ve Özellikler'i **seçin.**
 
-1. Sol bölmedeki **Hata Ayıkla** ' yı seçin, **yerel kod hata ayıklamayı etkinleştir** onay kutusunu seçin ve ardından değişiklikleri kaydetmek için Özellikler sayfasını kapatın.
+1. Sol **bölmede** Hata Ayıkla'ya tıklayın, Yerel kodda hata ayıklamayı etkinleştir onay kutusunu seçin ve ardından değişiklikleri kaydetmek için özellikler sayfasını kapatın. 
 
-    ![Karışık modda hata ayıklamayı etkinleştir](../debugger/media/mixed-mode-enable-native-code-debugging.png)
+    ![Karma mod hata ayıklamayı etkinleştirme](../debugger/media/mixed-mode-enable-native-code-debugging.png)
 
 ## <a name="set-a-breakpoint-and-start-debugging"></a>Kesme noktası ayarlama ve hata ayıklamayı başlatma
 
-1. C# projesinde *program.cs* öğesini açın. En soldaki kenar boşluğuna tıklayarak, satırı seçip **F9** tuşuna basarak ya da satıra sağ **tıklayıp kesme noktası**  >  **Ekle kesme noktası**' nı seçerek aşağıdaki kod satırında bir kesme noktası ayarlayın.
+1. C# projesinde *Program.cs'yi açın.* En sol kenar boşluğuna tıklayarak, satırı seçerek ve **F9** tuşuna basarak veya satıra sağ tıklar ve Kesme Noktası Ekle Kesme Noktası seçeneğini kullanarak aşağıdaki kod satırına bir  >  **kesme noktası ayarlayın.**
 
     ```csharp
     int result = Multiply(7, 7);
     ```
 
-    Sol kenar boşluğunda, kesme noktasını ayarladığınız kırmızı bir daire görünür.
+    Kesme noktası ayar olarak sol kenar boşluğunda kırmızı bir daire görünür.
 
-1. **F5** tuşuna basın, Visual Studio araç çubuğunda yeşil oku seçin veya hata ayıklamayı başlatmak   >  için hata **ayıklamayı Başlat** ' ı seçin.
+1. **F5 tuşuna** basın, araç çubuğundaki yeşil Visual Studio seçin veya Hata Ayıklamayı Başlat'ı  >   seçerek hata ayıklamayı başlatın.
 
-   Hata ayıklayıcı, ayarladığınız kesme noktasında duraklatılır. Sarı bir ok, hata ayıklayıcının Şu anda duraklatıldığını gösterir.
+   Hata ayıklayıcısı, ayar istediğiniz kesme noktası üzerinde duraklatılır. Sarı ok, hata ayıklayıcının şu anda nerede duraklatılmış olduğunu gösterir.
 
-## <a name="step-in-and-out-of-native-code"></a>Yerel kod içine ve dışına adımla
+## <a name="step-in-and-out-of-native-code"></a>Yerel kodun içinde ve dışında adım adım
 
-1. Yönetilen uygulamada hata ayıklama duraklatıldığında, **F11** tuşuna basın veya **hata ayıklama**  >  **adımı**' nı seçin.
+1. Hata ayıklama yönetilen uygulamada duraklatılırken **F11** tuşuna basın veya Hata Ayıkla **adımını**  >  **seçin.**
 
-   *Mixed_Mode. h* yerel üstbilgi dosyası açılır ve hata ayıklayıcının duraklatıldığı sarı oku görürsünüz.
+   *Mixed_Mode.h* yerel üst bilgi dosyası açılır ve hata ayıklayıcının duraklatılmış olduğu sarı oku görüyorsunuz.
 
    ![Yerel koda adımla](../debugger/media/mixed-mode-step-into-native-code.png)
 
-1. Şimdi, kesme noktaları ayarlayıp, yerel veya Yönetilen koddaki değişkenleri inceleyebilirsiniz.
+1. Artık kesme noktaları ayarp isabet ediyor ve yerel veya yönetilen kodda değişkenleri inceleyebilirsiniz.
 
    - Değerlerini görmek için kaynak kodundaki değişkenlerin üzerine gelin.
 
-   - **Oto** ve **Yereller** pencerelerinde değişkene ve bunların değerlerine bakın.
+   - Otomatikler ve Yereller pencerelerinde **değişkene ve** **değerlerine** bakın.
 
-   - Hata ayıklayıcıda duraklalarken, **Gözcü** pencereleri ve **çağrı yığını** penceresini de kullanabilirsiniz.
+   - Hata ayıklayıcıda duraklatılmışken, İzleme pencerelerini ve **Çağrı** Yığını penceresini **de kullanabilirsiniz.**
 
 1. Hata ayıklayıcıyı bir satır ilerlemek için **F11** tuşuna basın.
 

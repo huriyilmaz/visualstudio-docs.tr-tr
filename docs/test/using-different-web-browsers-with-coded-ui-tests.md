@@ -6,15 +6,16 @@ ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 199b8a3852850e1bb3239ad3b70ee5a438d4bcbe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22821e8dacca86a659d412ae85a04afd3f8b32911dfea59ef2b67ec66da0f264
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850054"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384684"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle farklı Web tarayıcıları kullanma
 
@@ -92,7 +93,7 @@ Web uygulamanızda hata ayıklamayı etkinleştirmek için aşağıdaki yapılan
 
     2. **Ortak dil çalışma zamanı özel durumları** Için, **Kullanıcı tarafından işlenmeyen** onay işaretini kaldırın.
 
-`BrowserWindow.CurrentBrowser`KODLANMıŞ UI testinde değiştirme seçeneğini görmüyorsanız, Visual Studio 'nun çeşitli web tarayıcıları kullanılarak KODLANMıŞ UI testlerini desteklemeyen bir sürümünü kullanıyor olabilirsiniz. Bu tür kodlanmış UI testlerini kullanmak için Visual Studio Enterprise sürümünü kullanmanız gerekir.
+`BrowserWindow.CurrentBrowser`kodlanmış uı testinde değiştirme seçeneğini görmüyorsanız, çeşitli web tarayıcıları kullanarak kodlanmış uı testlerini desteklemeyen Visual Studio bir sürümünü kullanıyor olabilirsiniz. bu tür kodlanmış uı testlerini kullanmak için Visual Studio Enterprise sürümünü kullanmanız gerekir.
 
 Bilmeniz gereken bazı şeyler aşağıda verilmiştir:
 
@@ -108,7 +109,7 @@ Bilmeniz gereken bazı şeyler aşağıda verilmiştir:
 
 Çıktı kodlanmış UI günlüklerinde ekran görüntüleri dahil etmek için yapılandırabilirsiniz. Bunu yapmak için *QTAgent32.exe.config* dosyasında bazı yapılandırma ayarları ayarlamanız gerekir. Varsayılan olarak, bu dosya aşağıdaki konuma yüklenir:
 
-*% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE*
+*% ProgramFiles (x86)% \ Microsoft Visual Studio \ 2017 \ Enterprise \Common7\IDE*
 
 Aşağıdaki değerleri ayarlayın:
 

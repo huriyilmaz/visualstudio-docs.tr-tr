@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: NamedRange denetimlerinin boyutunu değiştirme'
-description: Visual Studio 'Yu kullanarak bir Microsoft Excel çalışma kitabındaki NamedRange denetimlerini programlı olarak yeniden boyutlandırma hakkında bilgi edinin.
+description: bir Microsoft Excel çalışma kitabındaki NamedRange denetimlerini programlı olarak yeniden boyutlandırmak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,21 +14,22 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 3b70b34de222c35903a4f08b95d9efe8d8f896d9
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 33f07b0dd91654216e1465223a04bc5e1ab21300e1fdd6a2f3f70a0fde6bc218
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826466"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121384164"
 ---
 # <a name="how-to-resize-namedrange-controls"></a>Nasıl yapılır: NamedRange denetimlerinin boyutunu değiştirme
-  Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimin boyutunu Microsoft Office Excel belgesine eklediğinizde ayarlayabilirsiniz; ancak, daha sonra yeniden boyutlandırmak isteyebilirsiniz.
+  bir denetimin boyutunu bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Microsoft Office Excel belgesine eklediğinizde ayarlayabilirsiniz; ancak, daha sonra yeniden boyutlandırmak isteyebilirsiniz.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Belge düzeyi projelerinde, tasarım zamanında veya çalışma zamanında adlandırılmış bir aralığı yeniden boyutlandırabilirsiniz. Ayrıca, uygulama düzeyi VSTO Eklentilerindeki çalışma zamanında adlandırılmış aralıkları yeniden boyutlandırabilirsiniz.
+ Belge düzeyi projelerinde, tasarım zamanında veya çalışma zamanında adlandırılmış bir aralığı yeniden boyutlandırabilirsiniz. ayrıca, uygulama düzeyinde VSTO eklentilerinde adlandırılmış aralıkları çalışma zamanında yeniden boyutlandırabilirsiniz.
 
  Bu konuda aşağıdaki görevler açıklanmaktadır:
 
@@ -36,7 +37,7 @@ ms.locfileid: "107826466"
 
 - [Belge düzeyindeki bir projede, çalışma zamanında NamedRange denetimlerini yeniden boyutlandırma](#runtimedoclevel)
 
-- [VSTO eklenti projesindeki NamedRange denetimlerini çalışma zamanında yeniden boyutlandırma](#runtimeaddin)
+- [VSTO eklentisi projesindeki NamedRange denetimlerini çalışma zamanında yeniden boyutlandır](#runtimeaddin)
 
 ## <a name="resize-namedrange-controls-at-design-time"></a><a name="designtime"></a> Tasarım zamanında NamedRange denetimlerini yeniden boyutlandır
  **Adı tanımla** iletişim kutusunda boyutunu tekrar tanımlayarak adlandırılmış bir aralığı yeniden boyutlandırabilirsiniz.
@@ -75,8 +76,8 @@ ms.locfileid: "107826466"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet5":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet5":::
 
-## <a name="resize-namedrange-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> VSTO eklenti projesindeki NamedRange denetimlerini çalışma zamanında yeniden boyutlandırma
- <xref:Microsoft.Office.Tools.Excel.NamedRange>Çalışma zamanında herhangi bir açık çalışma sayfasında bir denetimi yeniden boyutlandırabilirsiniz. <xref:Microsoft.Office.Tools.Excel.NamedRange>VSTO eklentisini kullanarak çalışma sayfasına denetim ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: NamedRange denetimleri çalışma sayfalarına ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md).
+## <a name="resize-namedrange-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>VSTO eklentisi projesindeki NamedRange denetimlerini çalışma zamanında yeniden boyutlandır
+ <xref:Microsoft.Office.Tools.Excel.NamedRange>Çalışma zamanında herhangi bir açık çalışma sayfasında bir denetimi yeniden boyutlandırabilirsiniz. <xref:Microsoft.Office.Tools.Excel.NamedRange>VSTO eklentisi kullanarak çalışma sayfasına denetim ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: NamedRange denetimleri çalışma sayfalarına ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md).
 
 ### <a name="to-resize-a-named-range-programmatically"></a>Adlandırılmış bir aralığı programlı olarak yeniden boyutlandırmak için
 
@@ -91,11 +92,11 @@ ms.locfileid: "107826466"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb" id="Snippet11":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
-- [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)
+- [Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında VSTO eklentilerde genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Office belgelerdeki denetimler](../vsto/controls-on-office-documents.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
+- [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
 - [Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
 - [Nasıl yapılır: yer Işareti denetimlerini yeniden boyutlandırma](../vsto/how-to-resize-bookmark-controls.md)

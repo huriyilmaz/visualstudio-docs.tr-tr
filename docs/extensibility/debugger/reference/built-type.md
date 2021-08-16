@@ -1,5 +1,5 @@
 ---
-description: BUILT_TYPE yapısı, meta verilerden alınan bir alan türü hakkında bilgi belirtir.
+description: Bu BUILT_TYPE, meta verilerden alınan alan türüyle ilgili bilgileri belirtir.
 title: BUILT_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: cc02c32c-0f65-4210-ad25-a9b1899066e8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 00a031d02bba7ffcc1dca6f2cf73cfceeed04838
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 81b18a6e238b71a7c91445b551beb34dd081e53c24b5301cd58c495a04e1e733
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096583"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121360969"
 ---
 # <a name="built_type"></a>BUILT_TYPE
-Bu yapı, meta verilerden alınan bir alan türü hakkında bilgi belirtir.
+Bu yapı, meta verilerden alınan alan türüyle ilgili bilgileri belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,23 +47,23 @@ public struct BUILT_TYPE {
 
 ## <a name="members"></a>Üyeler
 `ulAppDomainID`\
-Simgenin geldiği uygulamanın KIMLIĞI. Bu, uygulamanın bir örneğini benzersiz bir şekilde tanımlamak için kullanılır.
+Sembolün geldiği uygulamanın kimliği. Bu, uygulamanın bir örneğini benzersiz olarak tanımlamak için kullanılır.
 
 `guidModule`\
-Bu alanı içeren modülün GUID 'ı.
+Bu alanı içeren modülün GUID'si.
 
 `pUnderlyingField`\
-Bu yerleşik alanla ilişkili temel alanı tanımlayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi.
+Bu yerleşik alanla ilişkili temel alanı tanımlayan [bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, [](../../../extensibility/debugger/reference/type-info.md) `dwKind` `TYPE_INFO` yapı alanı `TYPE_KIND_BUILT` ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından bir değer) olarak ayarlandığında TYPE_INFO yapısındaki birleşimin bir parçası olarak görüntülenir.
+Bu yapı, yapının alanı olarak [(TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) enumerasyonundan bir değer) ayarlanırken dwTYPE_KIND `dwKind` olarak `TYPE_INFO` `TYPE_KIND_BUILT` görünür. [](../../../extensibility/debugger/reference/dwtype-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

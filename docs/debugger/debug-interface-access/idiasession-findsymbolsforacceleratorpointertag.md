@@ -1,6 +1,6 @@
 ---
-description: Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık geldiği değişken için bir sembol numaralandırması döndürür.
-title: 'IDiaSession:: Findsymbolsforivatorpointertag | Microsoft Docs'
+description: Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık gelen değişkeni için simgelerin bir sabit değerini döndürür.
+title: IDiaSession::findSymbolsForAcceleratorPointerTag | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -9,17 +9,18 @@ ms.assetid: 95fd5e7a-c637-437e-b369-c864eef733c2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d1a177cd1c36a2e51f846bf60edfbef875a51df
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9fc8d82f914b77799dc4fa2c3b744b654b0e34cf117580526fe8effc318a71d5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158931"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380121"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
-Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık geldiği değişken için bir sembol numaralandırması döndürür.
+Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık gelen değişkeni için simgelerin bir sabit değerini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,18 +35,18 @@ HRESULT findSymbolsForAcceleratorPointerTag (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki Aranmak üzere Hızlandırıcı saplama işlevine karşılık gelen bir IDiaSymbol.
+[in] Aranacak Hızlandırıcı saplama işlevine karşılık gelen bir IDiaSymbol.
 
  `tagValue`
 
-'ndaki İşaretçi etiketi değeri.
+[in] İşaretçi etiketi değeri.
 
  `ppResult`
 
-dışı `IDiaEnumSymbols` Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.
+[out] Sonuçla başlatılan `IDiaEnumSymbols` bir arabirim işaretçisinin işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
