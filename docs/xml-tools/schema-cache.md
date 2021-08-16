@@ -8,14 +8,15 @@ ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 3562b7238f9721c4153af02cce594bfb9e134b0c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b3969647782a1257e19f0288718e7c6ca969970a6815c76cf677e7fb317ea091
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841905"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121266850"
 ---
 # <a name="schema-cache"></a>Şema önbelleği
 
@@ -25,11 +26,11 @@ XML Düzenleyicisi çözümde bulunan şemaları, belge **özellikleri** pencere
 
 Aşağıdaki tablo, XML Düzenleyicisi ile yüklenen şemaları açıklar.
 
-| Kısaltın | Description |
+| Kısaltın | Açıklama |
 |-| - |
 | *Catalog. xsd* | XML Düzenleyicisi şema kataloğu dosyaları için şema. Şema katalogları hakkında daha fazla bilgi için aşağıya bakın. |
 | *DotNetConfig. xsd* | Web.Config dosyaları için şema `http://schemas.microsoft.com/.NETConfiguration/v2.0` . |
-| *MSBuild. xsd* | MSBuild Make dosyaları için şema `http://schemas.microsoft.com/developer/msbuild/2003` . |
+| *MSBuild. xsd* | MSBuild dosya oluştur şeması `http://schemas.microsoft.com/developer/msbuild/2003` . |
 | *msdata. xsd* | <xref:System.Data.DataSet>"Urn: schemas-microsoft-com: XML-msdata" sınıfı tarafından eklenen xsd ek açıklamaların şeması. |
 | *msxsl. xsd* | Microsoft XSLT betik bloğu uzantıları, urn: schemas-microsoft-com: XSLT şeması. |
 | *SnippetFormat. xsd* | Kod parçacığı XML dosyaları için şema. Örnekler için bkz. *%VSInstallDir%\VC # \Expansions*. |
@@ -50,7 +51,7 @@ Aşağıdaki tablo, XML Düzenleyicisi ile yüklenen şemaları açıklar.
 Düzenleyici, XML Düzenleyicisi paketi yüklendiğinde şema önbellek dizinini yükler ve çalışırken herhangi bir değişikliği izler. Bir şema eklendiyse, bu, bilinen şemaların bellek içi dizinine otomatik olarak yüklenir. Bir şema kaldırılmışsa, bellek içi dizinden otomatik olarak kaldırılır. Bir şema güncellendiyse, bu şemanın bellek içi önbelleğini otomatik olarak geçersiz kılar.
 
 > [!NOTE]
-> Şema önbellek dizini bilgisayarınız için genel olduğundan, burada yalnızca standart olan ve bilgisayarınızda oluşturulabilen tüm Visual Studio projelerine yararlı olan şemaları eklemeniz gerekir.
+> şema önbellek dizini bilgisayarınıza global olduğundan, burada yalnızca standart olan ve bilgisayarınızda oluşturulabilen tüm Visual Studio projelerine yararlı olan şemaları eklemeniz gerekir.
 
 XML Düzenleyicisi, şema önbellek dizinindeki herhangi bir sayıda şema kataloğu dosyasını da destekler. Şema katalogları, her zaman düzenleyicinin bilmesini istediğiniz şemalar için diğer konumlara işaret edebilir. *Catalog. xsd* dosyası, katalog dosyasının biçimini tanımlar ve şema önbellek dizinine dahildir. *catalog.xml* dosyası varsayılan katalogdur ve *% VSInstallDir%* içindeki diğer şemaların bağlantılarını içerir. *catalog.xml* dosyasının örneklemesi aşağıda verilmiştir:
 
@@ -108,7 +109,7 @@ Aşağıdaki örnekte `Schema` yerelleştirilmiş şemayı işaret etmek için% 
 Şema önbelleğinin konumunu, **çeşitli** Seçenekler sayfasını kullanarak özelleştirebilirsiniz. Sık kullanılan şemalardan oluşan bir dizininiz varsa, düzenleyici bunun yerine bu şemaları kullanacak şekilde yapılandırılabilir.
 
 > [!NOTE]
-> Bu değişiklik yalnızca geçerli Visual Studio kullanıcısını etkiler.
+> bu değişiklik yalnızca geçerli Visual Studio kullanıcısını etkiler.
 
 ### <a name="to-change-the-schema-cache-location"></a>Şema önbellek konumunu değiştirmek için
 

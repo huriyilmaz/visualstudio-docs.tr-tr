@@ -1,6 +1,6 @@
 ---
-description: Yerel makinedeki, Visual Studio 'Yu çalıştırdığınız makine olan Internet bağlantısı güvenlik duvarı, uzaktan hata ayıklamaya izin verecek şekilde ayarlanmadı.
-title: Yerel makinede güvenlik duvarı | Microsoft Docs
+description: Yerel makinede İnternet Bağlantısı Güvenlik Duvarı'Visual Studio makine uzaktan hata ayıklamaya izin verecek şekilde ayarlanmaz.
+title: Yerel Makine güvenlik duvarında | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -13,16 +13,17 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bad1dcbfa2dd80ade46bd0e848e3c1f186f3c903
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2a63e4e22f44778850aae56c44fa6f20446af7708b54fb79507fd456a2afefec
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146971"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379417"
 ---
 # <a name="error-firewall-on-local-machine"></a>Hata: Güvenlik Duvarı Yerel Makinede
-Yerel makinedeki, Visual Studio 'Yu çalıştırdığınız makine olan Internet bağlantısı güvenlik duvarı, uzaktan hata ayıklamaya izin verecek şekilde ayarlanmadı. Varsayılan aktarımlarla yönetilen veya yerel uzaktan hata ayıklama için, DCOM trafiği için TCP 135 bağlantı noktasının açılması gerekir. Dosya ve yazıcı paylaşımının açılması gerekir ve devenv.exe özel durumlar listesine eklenmelidir. Bazı ıPSEC bağlantı noktalarının açılması de gerekebilir.
+Yerel makinede İnternet Bağlantısı Güvenlik Duvarı'Visual Studio makine uzaktan hata ayıklamaya izin verecek şekilde ayarlanmaz. Varsayılan taşıma ile yönetilen veya yerel uzaktan hata ayıklama için TCP 135 bağlantı noktasının DCOM trafiği için açılması gerekir. Dosya ve yazıcı paylaşımının açılması ve devenv.exe özel durumlar listesine eklenmeleri gerekir. Bazı IPSEC bağlantı noktalarının açılması da gerekebilir.
 
- Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
+ Daha fazla bilgi için [bkz. Uzaktan Hata Ayıklama.](../debugger/remote-debugging.md)

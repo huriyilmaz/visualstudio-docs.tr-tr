@@ -1,6 +1,6 @@
 ---
 title: .NET tanılama Çözümleyicileri ile yönetilen bellek dökümünden hata ayıklama | Microsoft Docs
-description: Yönetilen bellek dökümünü çözümlemek için Visual Studio 'nun .NET tanılama Çözümleyicileri 'ni nasıl kullanacağınızı öğrenin
+description: Visual Studio .net tanılama çözümleyicileri 'ni kullanarak yönetilen bellek dökümünü nasıl analiz edeceğinizi öğrenin
 ms.custom: SEO-VS-2021
 ms.date: 04/21/2021
 ms.topic: how-to
@@ -18,12 +18,12 @@ manager: andster
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 083095ad534aa6b9131ba103178313cb1cdc4b7c
-ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
+ms.openlocfilehash: a0931f6f8aba8dfbef705542cad889edc1441a327945d5640459e7cac4d0a2d5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107952917"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379374"
 ---
 # <a name="how-to-debug-a-managed-memory-dump-with-net-diagnostic-analyzers"></a>.NET tanılama Çözümleyicileri ile yönetilen bellek dökümünde hata ayıklama
 
@@ -41,9 +41,9 @@ Bu öğreticide şunları yapacaksınız:
 Bu makalede açıklanan örnekte, uygulamanız isteklerin zamanında yanıt vermemesine neden olabilir. 
 
 
-## <a name="opening-a-memory-dump-in-visual-studio"></a>Visual Studio 'da bir bellek dökümü açma
+## <a name="opening-a-memory-dump-in-visual-studio"></a>Visual Studio bir bellek dökümü açılıyor
 
-1. Dosyayı kullanarak Visual Studio 'da bellek dökümünü açın **> Dosya menüsü komutunu > açın** ve bellek dökümünü seçin.
+1. **dosya > > dosya** menüsü komutunu açıp bellek dökümünü seçin Visual Studio bellek dökümünü açın.
 
 1. Bellek dökümü Özeti sayfasında, **Tanılama analizini Çalıştır** adlı yeni bir **eylem** olduğuna dikkat edin.
 
@@ -77,13 +77,13 @@ Bu belirtileri araştırmak için en iyi seçenek, bu örnekteki sorunla en iyi 
 
 Sonraki işim sorunlu kodu bulmaktan sonra.
 
-1. **Çağrı yığınını göster** bağlantısına tıkladığınızda, Visual Studio bu davranışı gösteren iş parçacıklarına hemen geçer.
+1. **çağrı yığınını göster** bağlantısına tıklanınca Visual Studio, bu davranışı gösteren iş parçacıklarına hemen geçer.
 
 1. **Çağrı yığını** penceresinde, kod (SyncOverAsyncExmple.*) ile çerçeve kodundan (System.*) arasında hızlı bir şekilde ayırt edilebilen yöntemler gösterilir.
 
    ![Tanılama belirteçleri, çağrı yığınına bağlanır](../debugger/media/diagnostic-analyzer-call-stack.png)
 
-1. Her çağrı yığını çerçevesi bir yönteme karşılık gelir ve yığın çerçevelerini çift tıklayarak, Visual Studio bu iş parçacığında doğrudan bu senaryoya işaret eden koda gider.
+1. her çağrı yığını çerçevesi bir yönteme karşılık gelir ve yığın çerçevelerine çift tıklanarak Visual Studio bu iş parçacığında doğrudan bu senaryoya işaret eden koda gidecektir.
 
 1. Bu örnekte, bir sembol veya kod yoktur, ancak, **simge yüklü değil** sayfasında, **[kaynak kodunu derlemeyi kaldırma](../debugger/decompilation.md)** seçeneğini belirleyebilirsiniz.
 

@@ -1,6 +1,6 @@
 ---
 title: Tablolarla çalışma
-description: Office projelerinde tablolarla çalışmak üzere Microsoft Word 'ün nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
+description: Microsoft Word projelerinde tablolarla çalışmak için uygulamanın nesne modelini kullanmaya yönelik adım adım yordamlar ve kod Office öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,25 +15,26 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 143b537c0d921d70206ce6f9128338e30351d080
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5385eb2813262d766e87063b7f7ddb961a06c7c0dbb043c028c91883d45cf4eb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847459"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408018"
 ---
 # <a name="work-with-tables"></a>Tablolarla çalışma
-  Bu bölümdeki konularda, Office projelerinde tablolarla çalışmak üzere Microsoft Office Word nesne modelini kullanmak için adım adım yordamlar ve kod örnekleri sağlanmaktadır. Bazı durumlarda, bu görevleri VSTO eklentilerinde gerçekleştirdiğiniz yollar, belge düzeyi özelleştirmelerde gerçekleştirdiğiniz yöntemlerle farklıdır.
+  Bu bölümdeki konular, Microsoft Office Word'in nesne modelini kullanarak Office projelerinde tablolarla çalışmaya yönelik adım adım yordamlar ve kod örnekleri sağlar. Bazı durumlarda, eklentilerde bu görevleri VSTO yöntemler, bunları belge düzeyi özelleştirmelerde gerçekleştirme yollarından farklıdır.
 
 |Görev|Yordam|
 |----------|---------------|
-|Tablo oluşturun, bir stil uygulayın ve koddaki tabloya erişin.|[Nasıl yapılır: program aracılığıyla Word tabloları oluşturma](../vsto/how-to-programmatically-create-word-tables.md)|
-|Bir tablo oluşturun, biçimlendirin ve hücrelere veri ekleyin.|[Nasıl yapılır: program aracılığıyla Word tablolarını belge özellikleriyle doldurma](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)|
-|Tabloya bir satır veya sütun ekleyin.|[Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)|
-|Bir hücreye metin ekleyin ve biçimlendirin.|[Nasıl yapılır: Word tablolarında hücrelere program aracılığıyla metin ve biçimlendirme ekleme](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)|
+|Tablo oluşturma, stil uygulama ve tabloya kodda erişme.|[Nasıl yapılanlar: Program aracılığıyla Word tabloları oluşturma](../vsto/how-to-programmatically-create-word-tables.md)|
+|Bir tablo oluşturun, biçimlendirin ve hücrelere veri ekler.|[Nasıl kullanılır: Word tablolarını belge özellikleriyle program aracılığıyla doldurmak](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)|
+|Tabloya satır veya sütun ekleme.|[Nasıl kullanılır: Word tablolarına program aracılığıyla satır ve sütun ekleme](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)|
+|Bir hücreye metin ekleyin ve biçimlendirin.|[Nasıl yapılanlar: Word tablolarında hücrelere program aracılığıyla metin ve biçimlendirme ekleme](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)
-- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Office çözümlerine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)

@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 6e2e3dcb6978225b5af493f3649e4b2fac47f3c2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 585d78cb5fb4a70e55ac8188a0fe26c9107ef3086f7789020b3df38b6daa3422
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847511"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408090"
 ---
 # <a name="work-with-folders"></a>Klasörlerle çalışma
   <xref:Microsoft.Office.Interop.Outlook.MAPIFolder>Sınıfı, klasörlere erişmek, oluşturmak ve özelleştirmek için kullandığınız yöntemleri ve özellikleri içerir.
@@ -32,11 +33,11 @@ ms.locfileid: "99847511"
 |----------|---------------|
 |**Gelen kutusundaki** iletilerin konu alanında dizeler için arama yapın.|[Nasıl yapılır: belirli bir klasör içinde program aracılığıyla arama](../vsto/how-to-programmatically-search-within-a-specific-folder.md)|
 |Bir klasöre başvuru alın ve içerikleri görüntüleyin.|[Nasıl yapılır: program aracılığıyla bir klasörü ada göre alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)|
-|Önizleme bölmesinde bir Web sayfası görüntüleyen bir klasör oluşturun.|[Nasıl yapılır: program aracılığıyla bir Web sayfasını Outlook klasörüyle ilişkilendirme](../vsto/how-to-programmatically-associate-a-web-page-with-an-outlook-folder.md)|
+|Önizleme bölmesinde bir Web sayfası görüntüleyen bir klasör oluşturun.|[nasıl yapılır: program aracılığıyla bir web sayfasını bir Outlook klasörüyle ilişkilendirme](../vsto/how-to-programmatically-associate-a-web-page-with-an-outlook-folder.md)|
 |Bir ad için geçerli kullanıcı KIMLIĞINE sahip bir klasör oluşturun.|[Nasıl yapılır: program aracılığıyla özel klasör öğeleri oluşturma](../vsto/how-to-programmatically-create-custom-folder-items.md)|
-|Belirli ölçütlerle eşleşen iletileri belirtilen klasöre taşıyın.|[Nasıl yapılır: Outlook 'ta program aracılığıyla öğeleri taşıma](../vsto/how-to-programmatically-move-items-in-outlook.md)|
+|Belirli ölçütlerle eşleşen iletileri belirtilen klasöre taşıyın.|[Nasıl yapılır: Outlook program aracılığıyla öğeleri taşıma](../vsto/how-to-programmatically-move-items-in-outlook.md)|
 
- Outlook görevleri ve Outlook nesne modeli hakkında daha fazla bilgi için bkz. [Outlook nesne modeline genel bakış](../vsto/outlook-object-model-overview.md).
+ Outlook görevler ve Outlook nesne modeli hakkında daha fazla bilgi için bkz. [Outlook nesne modeline genel bakış](../vsto/outlook-object-model-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)

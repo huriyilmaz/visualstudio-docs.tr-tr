@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklama hataları ve uyarı Iletişim kutuları | Microsoft Docs
-description: Visual Studio 'da uygulamanızda hata ayıklarken karşılaşabileceğiniz hata ve uyarı iletişim kutularının listesini görüntüleyin.
+description: Visual Studio uygulamanızda hata ayıklarken karşılaşabileceğiniz hata ve uyarı iletişim kutularının listesini görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,14 +21,15 @@ ms.assetid: 73baaf39-3026-48c9-be48-8b9ba0063cde
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 837facbc35a9fbb6e7c40ff39d8a4300c8120b6d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5b6dcd27953ea30a22f6864d58f72b85ee001683851f8c8814b7c4386734ddd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872696"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121240357"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Hataları Ayıklama ve Uyarı İletişim Kutuları
 Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı iletişim kutuları aşağıda verilmiştir.
@@ -46,7 +47,7 @@ Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı ileti
 
  [Kod değişiklikleri uygulanamadı Iletişim kutusu](../debugger/edit-and-continue-dialog-box-cpp.md)
 
- [Microsoft Visual Studio hata ayıklayıcı (özel durum oluştu) Iletişim kutusu](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)
+ [Microsoft Visual Studio Hata ayıklayıcı (özel durum oluştu) Iletişim kutusu](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)
 
  [Geçerli konum Iletişim kutusu için kullanılabilir kaynak kodu yok](../debugger/no-source-available.md)
 
@@ -56,7 +57,7 @@ Uygulamanızda hata ayıklarken karşılaşabileceğiniz hatalar ve uyarı ileti
 
  [Eski kod uyarısı Iletişim kutusu](../debugger/stale-code-warning-dialog-box.md)
 
- [Makineye bağlanılamıyor](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
+ [makineye Bağlan](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
 
  [Hata: sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden hata ayıklama mümkün değil](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
 

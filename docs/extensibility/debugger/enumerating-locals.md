@@ -1,6 +1,6 @@
 ---
 title: Yereller numaralandırılıyor | Microsoft Docs
-description: "Visual Studio 'nun Yereller penceresini doldurmak için IDebugProperty2:: EnumChildren kullanma hakkındaki ayrıntılar hakkında bilgi edinin."
+description: 'Visual Studio IDebugProperty2:: enumchildren kullanarak yereller penceresini nasıl doldururun ayrıntıları hakkında bilgi edinin.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,20 +11,21 @@ ms.assetid: 254a88e7-d3a7-447a-bd0c-8985e73d85cf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0acacea8ec19319b7c07ff9d9a549410c57862e0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 01392932831ab7ba5fec867a427b4a2c8868070abdda93de53593e9c3f27beb2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097054"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378226"
 ---
 # <a name="enumerate-locals"></a>Yerelleri listeleme
 > [!IMPORTANT]
 > Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
-Visual Studio **Yereller** penceresini doldurmak için hazırsanız, [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) 'Den döndürülen [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesinde [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 'ı çağırır (bkz. [GetMethodProperty uygulama](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndürür.
+**yereller** penceresini doldurmak için Visual Studio, [getmethodproperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) 'den döndürülen [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesinde [enumchildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 'ı çağırır (bkz. [getmethodproperty uygulama](../../extensibility/debugger/implementing-getmethodproperty.md)). `IDebugProperty2::EnumChildren` bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndürür.
 
 Uygulama `IDebugProperty2::EnumChildren` aşağıdaki görevleri gerçekleştirir:
 

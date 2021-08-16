@@ -11,17 +11,18 @@ ms.assetid: ad2ee898-8648-4671-9078-d32873862346
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: db5d6697f222015cc4f6dbedbc6258e00c9b285f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 790dbcf8988af2751a8ce2eafda854797c89538ff3ca425b1bc11b9e53c9c795
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096258"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378048"
 ---
 # <a name="debug_reason"></a>DEBUG_REASON
 İşlemin neden hata ayıklama için başlatıldığına ilişkin belirtir.

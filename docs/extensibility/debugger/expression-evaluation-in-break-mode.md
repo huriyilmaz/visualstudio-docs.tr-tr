@@ -12,14 +12,15 @@ ms.assetid: 34fe5b58-15d5-4387-a266-72120f90a4b6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 932bebecf4eea73cfae579bbea58e024b4388ffb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c0b1264063553b13d3401f770dbd08ef2a51417df2314c30e895987a969851e3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067874"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378126"
 ---
 # <a name="expression-evaluation-in-break-mode"></a>Kesme modunda ifade değerlendirmesi
 Aşağıdaki bölümde, hata ayıklayıcı kesme modundayken ve ifade değerlendirmesi yapmak gerektiğinde oluşan işlem açıklanmaktadır.

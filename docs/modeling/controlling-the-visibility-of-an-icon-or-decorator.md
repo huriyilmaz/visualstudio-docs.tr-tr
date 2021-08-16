@@ -7,14 +7,15 @@ ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c60d66188364ddd18be1d60a92b51ee5d7a9fc8
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: af06b402fd9da418c20fb87a573c7a885b04871f7ce661b394d284491acd5e96
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389624"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121288704"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
 *Dekoratör* , etki alanına özgü DILDE (DSL) bir şekil üzerinde görüntülenen bir simge veya metin satırıdır. Modelin özelliklerinin durumuna bağlı olarak dekoratörün görünmesini ve kaybolmasını sağlayabilirsiniz. Örneğin, bir kişiyi temsil eden bir şekil üzerinde, kişinin cinsiyetine, alt öğe sayısına ve buna bağlı olarak görünen farklı simgelere sahip olabilirsiniz.
@@ -34,7 +35,7 @@ ms.locfileid: "112389624"
 
 2. DSL tanımı diyagramındaki şekil sınıfı ve alan sınıfı arasındaki gri çizgi olan diyagram öğesi haritasını seçin.
 
-3. DSL ayrıntıları penceresindeki **dekoratör haritaları** sekmesinde bir dekoratör seçin. Örneğin, MaleDecorator.
+3. DSL ayrıntıları penceresindeki **dekoratör Haritalar** sekmesinde bir dekoratör seçin. Örneğin, MaleDecorator.
 
 4. **Görünürlük filtre** kutusunu işaretleyin.
 
@@ -68,7 +69,7 @@ ms.locfileid: "112389624"
 
      **Türüyle** = `Boolean`
 
-     Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
+     daha fazla bilgi için bkz. [hesaplanan ve özel Depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
 
 2. Yeni Özellik denetimini dekoratör görünürlüğünü yapın.
 
@@ -90,7 +91,7 @@ ms.locfileid: "112389624"
 
 6. Eksik olan ad alanı, sınıf ve yöntemi unutmayın.  Örneğin, Company. FamilyTree. Person. Getdekoratorcontrolvalue ().
 
-7. Ayrı bir kod dosyasında, eksik yöntemi içeren kısmi bir sınıf tanımı yazın. Örneğin:
+7. Ayrı bir kod dosyasında, eksik yöntemi içeren kısmi bir sınıf tanımı yazın. Örnek:
 
     ```
     namespace Company.FamilyTree

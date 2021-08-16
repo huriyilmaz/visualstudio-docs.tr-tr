@@ -1,6 +1,6 @@
 ---
-description: FRAMEıNFO numaralandırmasındaki sonraki öğe kümesini döndürür.
-title: 'IEnumDebugFrameInfo2:: Next | Microsoft Docs'
+description: FRAMEINFO enumerasyonundan sonraki öğe kümesi döndürür.
+title: IEnumDebugFrameInfo2::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 64a64eeb-5dea-4119-8a22-03771015d1e5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7013d014710423e77e128264b99340cb5b516420
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 42964fde86e4ef68371da014f97be67a2c1b39328bb9dcd5ab94235198aaca6c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075464"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377527"
 ---
 # <a name="ienumdebugframeinfo2next"></a>IEnumDebugFrameInfo2::Next
-Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
+Numaralamadan sonraki öğe kümesi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
+[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
 
 `rgelt`\
-[in, out] Doldurulacak [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) öğelerinin dizisi.
+[in, out] Doldurulması [gereken FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) öğeleri dizisi.
 
 `pceltFetched`\
-dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
+[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

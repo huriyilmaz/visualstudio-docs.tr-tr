@@ -13,14 +13,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 294ff749f338df12cc2ca9edeab28d07786c7018
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b29fddd4b13df242740fa98922ee9fe762209f3a343c26dd8ef7cceb5293153d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920170"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121407973"
 ---
 # <a name="work-with-worksheets"></a>Çalışma sayfalarıyla çalışma
   <xref:Microsoft.Office.Tools.Excel.Worksheet>Ve <xref:Microsoft.Office.Interop.Excel.Worksheet> sınıfları, çalışma sayfalarıyla görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerir.
@@ -45,12 +46,12 @@ ms.locfileid: "99920170"
 |Çalışma sayfalarında yazım denetimi yapın.|[Nasıl yapılır: çalışma sayfalarında program aracılığıyla yazımı denetleme](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)|
 |Adlandırılmış aralıklarda ve liste nesnelerinde verileri sıralayın.|[Nasıl yapılır: çalışma sayfalarındaki verileri program aracılığıyla sıralama](../vsto/how-to-programmatically-sort-data-in-worksheets.md)|
 
- Excel görevleri ve Excel nesne modeli hakkında daha fazla bilgi için bkz. [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md).
+ Excel görevler ve Excel nesne modeli hakkında daha fazla bilgi için bkz. [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md).
 
- Bazı durumlarda, bu görevleri VSTO eklentilerinde gerçekleştirdiğiniz yollar, belge düzeyi özelleştirmelerde gerçekleştirdiğiniz yöntemlerle farklıdır.
+ bazı durumlarda, VSTO eklentilerde bu görevleri gerçekleştirdiğiniz yollar, bunları belge düzeyi özelleştirmelerde gerçekleştirmenizin yollarından farklıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
+- [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md)
 - [Çalışma kitaplarında çalışma](../vsto/working-with-workbooks.md)
 - [Aralıklar ile çalışma](../vsto/working-with-ranges.md)
 - [Excel çalışma sayfalarında Windows Forms denetimleri kullanma](../vsto/using-windows-forms-controls-on-excel-worksheets.md)

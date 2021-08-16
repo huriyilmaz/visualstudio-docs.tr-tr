@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklayıcı ayarlarını belirtin | Microsoft Docs
-description: Visual Studio 'da değişkenlerin nasıl görüntüleneceği, hangi uyarıların sunulduğu ve kesme noktalarının nasıl ayarlanacağı gibi çeşitli hata ayıklayıcı davranışı için çeşitli ayarları belirtin.
+title: Hata Ayıklayıcı Ayarlar | Microsoft Docs
+description: Hata ayıklayıcısı davranışı için değişkenlerin Visual Studio, hangi uyarıların verildiği ve kesme noktası ayarlama gibi çeşitli ayarları belirtin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,32 +19,33 @@ ms.assetid: ea172841-7fef-47bf-bd02-e7da4c3c7109
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ee1970e46b9789b814029ef0fa7efe9bfbacc3a4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d914b2a257d1b3996866d481ac999244a59af3c31859c0dd791d9c3e85d3ee7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896688"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378911"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Nasıl Yapılır: Hata Ayıklama Ayarlarını Belirtme
-İçinde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , değişkenlerin nasıl görüntülendiğini, belirli uyarıların sunulduğunu, kesme noktalarının nasıl ayarlandığını ve çalışan programları nasıl etkilediğini de içeren hata ayıklayıcı davranışı için çeşitli ayarlar belirtebilirsiniz. **Seçenekler** iletişim kutusunda hata ayıklayıcı ayarlarını belirtirsiniz.
+'de, değişkenlerin nasıl görüntülendiğinden, belirli uyarıların sunup görüntülenmeyeceğini, kesme noktaların nasıl ayarlayıcısının ve hata ayıklamanın çalışan programları nasıl etkilediği gibi çeşitli hata ayıklayıcı davranışı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayarlarını belirtebilirsiniz. Seçenekler iletişim kutusunda hata ayıklayıcı **ayarlarını** belirtirsiniz.
 
 ### <a name="to-set-debugger-options"></a>Hata ayıklayıcı seçeneklerini ayarlamak için
 
 1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. **Seçenekler** iletişim kutusunda, **hata ayıklama** klasörünü açın.
+2. Seçenekler **iletişim** kutusunda Hata Ayıklama **klasörünü** açın.
 
-3. **Hata ayıklama** klasöründe, istediğiniz seçenek kategorisini seçin.
+3. Hata **ayıklama klasöründe** istediğiniz seçeneklerin kategorisini seçin.
 
-     En yaygın seçenekler **genel** kategoride bulunur. Daha fazla bilgi için bkz. [Genel, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/general-debugging-options-dialog-box.md).
+     En yaygın seçenekler Genel kategorisinde **bulunur.** Daha fazla bilgi için [bkz. Genel, Hata Ayıklama, Seçenekler İletişim Kutusu.](../debugger/general-debugging-options-dialog-box.md)
 
-4. İstediğiniz seçeneği veya seçenekleri seçin veya temizleyin. Seçenekler hakkında yardım almak için F1 tuşuna basın.
+4. İstediğiniz seçeneği veya seçenekleri seçin veya seçimi silin. Seçenekler hakkında Yardım almak için F1 tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Genel, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/general-debugging-options-dialog-box.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](./edit-and-continue.md)
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
-- [Derleme komutları ve özellikleri için ortak makrolar](/cpp/build/reference/common-macros-for-build-commands-and-properties)
+- [Genel, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/general-debugging-options-dialog-box.md)
+- [Düzenle ve Devam, Hata Ayıklama, Seçenekler İletişim Kutusu](./edit-and-continue.md)
+- [Hata ayıklayıcısı Ayarlar hazırlama](../debugger/debugger-settings-and-preparation.md)
+- [Derleme Komutları ve Özellikleri için Ortak Makrolar](/cpp/build/reference/common-macros-for-build-commands-and-properties)

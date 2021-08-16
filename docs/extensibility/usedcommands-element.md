@@ -13,14 +13,15 @@ ms.assetid: 5e000ee0-a919-46e9-9277-2a0659f1eb78
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21233527c9fcfb97fd45a8eeed60c04927df8ba1
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: be720228c3ea53e9bfc5f5b5f2da44e919d94199120a3fbafeb3a575e8d56266
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903040"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121358824"
 ---
 # <a name="usedcommands-element"></a>UsedCommands Öğesi
 UsedCommands öğesi, UsedCommand öğelerini ve diğer UsedCommands gruplandırmaları gruplandırır.

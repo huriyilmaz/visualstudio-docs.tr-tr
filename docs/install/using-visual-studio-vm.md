@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 16cbe08f48d5d64d1213fb0422d2482f192309e8
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: 3184688b9a06b1b01765cbb9e9b013bcdeeef6cd5c10fe8e64d230d22eb6005b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115094547"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121288925"
 ---
 # <a name="visual-studio-images-on-azure"></a>Azure 'da görüntüleri Visual Studio
 

@@ -1,6 +1,6 @@
 ---
 description: Kesme noktası türünü alır.
-title: 'IDebugErrorBreakpointResolution2:: GetBreakpointType | Microsoft Docs'
+title: IDebugErrorBreakpointResolution2::GetBreakpointType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: 0bdb1152-4752-4464-ae7c-6d666dc293b7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f66b98ad47fdfca953a5cf2f2c14e483e450dae8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5907e77a95f6d3d91f9b8898197d7364e70a815451bd3e62a36bd10175bcc47e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092494"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377801"
 ---
 # <a name="idebugerrorbreakpointresolution2getbreakpointtype"></a>IDebugErrorBreakpointResolution2::GetBreakpointType
 Kesme noktası türünü alır.
@@ -42,16 +43,16 @@ int GetBreakpointType(
 
 ## <a name="parameters"></a>Parametreler
 `pBPType`\
-dışı [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) numaralandırmasından kesme noktası türünü açıklayan bir değer döndürür.
+[out] Kesme noktası türünü [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntem, bağlanamayacak başarısız olan kesme noktasının türünü döndürür ve bu nedenle hata kesme noktası olayı gerektirir.
+Bu yöntem, bağlanamayan kesme noktası türünü döndürür ve bu nedenle bir hata kesme noktası olayı gerekir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CDebugErrorBreakpointResolution` [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CDebugErrorBreakpointResolution` [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```
 HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)

@@ -11,17 +11,18 @@ ms.assetid: 957cead8-0a9c-4403-b190-b9fbadc49d42
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 381be32c6c13b995096374ea75b9603768bf1344
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 33360dfb411945063b9066180ffdab9ea146faf662890ea02b715293be0e9062
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052859"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276379"
 ---
 # <a name="ienumdebugobjectsskip"></a>IEnumDebugObjects::Skip
 Bu yöntem, belirtilen sayıda öğeyi atlar.

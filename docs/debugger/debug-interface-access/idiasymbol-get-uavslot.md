@@ -9,14 +9,15 @@ ms.assetid: a70648f2-3b25-439f-8099-239ac602515a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ad1d526952f7f09ebc1d186f8833f1d0b07ae678
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a9f44c2301c10b01461dafc654d26be087e989d0fc924224558748330dec1ae3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155609"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379714"
 ---
 # <a name="idiasymbolget_uavslot"></a>IDiaSymbol::get_uavSlot
 Uıav yuvasını alır.

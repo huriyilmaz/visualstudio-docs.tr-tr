@@ -1,5 +1,5 @@
 ---
-description: İlgilendiğiniz programları tanımlayan bir nesne dizisi içerir.
+description: İlgi programlarını açıklayan bir nesne dizisi içerir.
 title: PROGRAM_NODE_ARRAY | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 8eeea600-eda5-4b7c-868a-0b86d177b0a5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5b1397737003216b843d893af696a5ad14607a19
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e5902212cdfc879b32c4e547e1505b9c7fc95904a8c56c70711a8110a7ddee91
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079533"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377229"
 ---
 # <a name="program_node_array"></a>PROGRAM_NODE_ARRAY
-İlgilendiğiniz programları tanımlayan bir nesne dizisi içerir.
+İlgi programlarını açıklayan bir nesne dizisi içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +45,20 @@ public struct tagPROGRAM_NODE_ARRAY {
 
 ## <a name="members"></a>Üyeler
  `dwCount`\
- Dizideki nesne sayısı `Members` .
+ Dizideki nesne `Members` sayısı.
 
  `Members`\
- İstenen programları açıklayan bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesneleri dizisi.
+ İstenen programları [açıklayan IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesneleri dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, bir [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) metoduna yapılan bir çağrı tarafından doldurulduğu [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısının bir parçasıdır.
+ Bu yapı, [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) [yöntemine](../../../extensibility/debugger/reference/provider-process-data.md) yapılan bir çağrıyla doldurulan PROVIDER_PROCESS_DATA yapısının bir parçasıdır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

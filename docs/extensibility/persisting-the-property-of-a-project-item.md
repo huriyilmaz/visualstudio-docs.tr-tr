@@ -1,5 +1,5 @@
 ---
-title: Proje öğesinin özelliğini kalıcı hale getirme | Microsoft Docs
+title: Project öğenin özelliğini kalıcı hale getirme | Microsoft Docs
 description: Özelliği Genişletilmiş proje dosyanızdaki proje dosyasında depolayarak proje öğesine eklediğiniz bir özelliği kalıcı hale getirme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
@@ -11,14 +11,15 @@ ms.assetid: d7a0f2b0-d427-4d49-9536-54edfb37c0f3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58c46da9023cc64246f1ea9ee4bde1ec866c545d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e201b60ea4634c6960d6e98c64214deadd62a6b7608cb73d15b71bf2a497254f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090362"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121305288"
 ---
 # <a name="persist-the-property-of-a-project-item"></a>Proje öğesinin özelliğini kalıcı hale getirme
 Bir kaynak dosyanın yazarı gibi bir proje öğesine eklediğiniz bir özelliği kalıcı hale getirmek isteyebilirsiniz. Bunu, özelliği proje dosyasında depolayarak yapabilirsiniz.
@@ -126,7 +127,7 @@ Bir kaynak dosyanın yazarı gibi bir proje öğesine eklediğiniz bir özelliğ
    > [!NOTE]
    > UI bağlamında bir VSPackage 'ı tekrar yükleyebilirsiniz <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid> . Daha fazla bilgi için bkz. [VSPackages yükleme](../extensibility/loading-vspackages.md).
 
-4. Kapatın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve ardından proje dosyasını Not defteri 'nde açın. \<Author>Aşağıdaki gibi, Tom değeri ile etiketini görmeniz gerekir:
+4. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Not Defteri ' de proje dosyasını kapatın ve sonra açın. \<Author>Aşağıdaki gibi, Tom değeri ile etiketini görmeniz gerekir:
 
    ```xml
    <Compile Include="VsPkg.cs">

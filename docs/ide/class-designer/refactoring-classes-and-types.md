@@ -19,14 +19,15 @@ ms.assetid: dcf07bb4-fa3b-4224-9dec-566fd924a8ce
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f7941b3a2c9c3fe71119e3a4413ad97f56b6290
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1917e9e3bf45f678ef898af6781c7eff019bea18986650045df86ce152815805
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969860"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121358356"
 ---
 # <a name="refactor-classes-and-types-in-class-designer"></a>Sınıf Tasarımcısı sınıfları ve türleri yeniden düzenleme
 

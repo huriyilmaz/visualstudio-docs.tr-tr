@@ -9,14 +9,15 @@ ms.assetid: 4662058b-c505-4ccf-ae03-739a62c814ca
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3850c4b3342d69d214ac9922717e339e8da530e2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 21f36f294a0503f0d9dce85e352c49af197257be1112e012c766eb1c7a945f94
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160822"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379857"
 ---
 # <a name="idiasymbolget_ishlsldata"></a>IDiaSymbol::get_isHLSLData
 Bu sembolün yüksek düzey gölgelendirici dili (HLSL) verilerini temsil edip etmediğini belirtir.

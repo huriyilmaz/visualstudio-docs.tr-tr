@@ -10,15 +10,16 @@ ms.assetid: a18a1b1b-9b39-43c7-b1f3-708fd20376f6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f783a543bb0139213bb75d7af2d7bb1e516ca65
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5bc30fb2c842623441b219d0670d0dcb9f664e766f509c193ee05fb514f5419c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923859"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121302311"
 ---
 # <a name="callercallee-view----contention-data"></a>Arayan/çağrılan görünümü-çekişme verileri
 Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için çekişme bilgilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.

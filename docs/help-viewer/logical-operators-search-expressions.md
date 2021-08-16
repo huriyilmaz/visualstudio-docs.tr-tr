@@ -11,14 +11,15 @@ ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 37e2652d04df154a45ae5f87fd62c8f8dc2e0b3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5302c5a59595b98c601f98b1fbe6ca1168106f52aceb12081a4cf37875cf258e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944088"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121358408"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>Arama ifadelerinde mantıksal ve gelişmiş işleçler
 
@@ -31,7 +32,7 @@ Mantıksal işleçler, birden çok arama terimlerinin bir arama sorgusunda nası
 |Arama yapmak için|Kullanın|Örnek|Sonuç|
 |-------------------|---------|-------------|------------|
 |Aynı makalede her iki terim|AND|DIB ve palet|Hem "DIB" hem de "palet" içeren konular.|
-|Bir makalede her iki terim|VEYA|Raster veya vektör|"Tarama" ya da "vektör" içeren konular.|
+|Bir makalede her iki terim|OR|Raster veya vektör|"Tarama" ya da "vektör" içeren konular.|
 |Aynı makalede ikinci terim olmadan ilk terim|NOT|"işletim sistemi" DOS DEĞIL|"İşletim sistemi" ("DOS" değil) içeren konular.|
 |Her iki terim de bir makalede birlikte yakın|KALEMIN|çekirdeğin YAKıNıNDA Kullanıcı|"Kernel" öğesinin yakın yakınına "user" içeren konular.|
 
@@ -46,7 +47,7 @@ Gelişmiş Arama işleçleri, arama terimini nerede araytığın bir makalesinde
 |-------------------|---------|-------------|------------|
 |Makalenin başlığındaki bir terim|`title:`|`title:binaryreader`|Başlıklarında "BinaryReader" içeren konular.|
 |Kod örneğinde bir terim|`code:`|`code:readdouble`|Kod örneğinde "readDouble" içeren konular.|
-|Belirli bir programlama diline örnek olarak bir terim|`code:vb:`|`code:vb:string`|Visual Basic bir kod örneğinde "String" içeren konular.|
+|Belirli bir programlama diline örnek olarak bir terim|`code:vb:`|`code:vb:string`|Visual Basic bir kod örneğinde "string" içeren konular.|
 |Belirli bir dizin anahtar sözcüğüyle ilişkili bir makale|`keyword:`|`keyword:readbyte`|"ReadByte" Dizin anahtar sözcüğüyle ilişkili konular.|
 
 > [!IMPORTANT]

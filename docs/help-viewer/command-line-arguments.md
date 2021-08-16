@@ -1,30 +1,31 @@
 ---
-title: Yardım Içeriği Yöneticisi için komut satırı bağımsız değişkenleri
-description: Yardım Içeriği Yöneticisi için komut satırı bağımsız değişkenlerini kullanın (HlpCtntMgr.exe) ve yerel yardım içeriğinin nasıl dağıtılacağını ve yönetileceğini belirtin.
+title: Yardım İçerik Yöneticisi için komut satırı bağımsız değişkenleri
+description: Yerel Yardım içeriğini dağıtmayı ve yönetmeyi belirtmek için Yardım İçerik Yöneticisi (HlpCtntMgr.exe) için komut satırı bağımsız değişkenlerini kullanın.
 ms.date: 11/01/2017
 ms.topic: reference
 ms.assetid: 3aa9890a-1147-42ba-adea-17935d184038
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 905284d69d23971771eecd9da6cef5c5051f36ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 879ea5283ad429678a91b159691d3fed5d353e732dddd7119e20c214637cff1b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944283"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121358681"
 ---
-# <a name="command-line-arguments-for-the-help-content-manager"></a>Yardım Içeriği Yöneticisi için komut satırı bağımsız değişkenleri
+# <a name="command-line-arguments-for-the-help-content-manager"></a>Yardım İçerik Yöneticisi için komut satırı bağımsız değişkenleri
 
-Yardım Içeriği Yöneticisi için komut satırı bağımsız değişkenlerini kullanarak yerel yardım içeriğini dağıtmayı ve yönetmeyi belirtebilirsiniz (*HlpCtntMgr.exe*). Bu komut satırı aracı için komut dosyalarını yönetici izinleriyle çalıştırmanız gerekir ve bu komut dosyalarını bir hizmet olarak çalıştıramazsınız. Bu aracı kullanarak aşağıdaki görevleri gerçekleştirebilirsiniz:
+Yardım İçerik Yöneticisi (HlpCtntMgr.exe) için komut satırı bağımsız değişkenlerini kullanarak yerel Yardım içeriğini *dağıtmayı ve yönetmeyi belirtebilirsiniz.* Bu komut satırı aracı için betikleri yönetici izinleriyle çalıştırmanız gerekir ve bu betikleri hizmet olarak çalıştıramazsınız. Bu aracı kullanarak aşağıdaki görevleri gerçekleştirebilirsiniz:
 
-- Bir diskten veya buluttan yerel yardım içeriği ekleyin veya güncelleştirin.
+- Bir diskten veya buluttan yerel Yardım içeriği ekleyin veya güncelleştirin.
 
 - Yerel Yardım içeriğini kaldırın.
 
-- Yerel yardım içerik deposunu taşıyın.
+- Yerel Yardım içerik depolarını taşıma.
 
 - Yerel Yardım içeriğini sessizce ekleyin, güncelleştirin, kaldırın veya taşıyın.
 
@@ -34,40 +35,40 @@ Söz dizimi:
 HlpCtntmgr.exe /operation Value /catalogname CatalogName /locale Locale /sourceuri InstallationPoint
 ```
 
-Örneğin:
+Örnek:
 
 ```cmd
 hlpctntmgr.exe /operation install /catalogname VisualStudio15 /locale en-us /sourceuri d:\productDocumentation\HelpContentSetup.msha
 ```
 
 >[!NOTE]
-> Katalog adı hem Visual Studio 2017 hem de Visual Studio 2019 için VisualStudio15. Bu beklenmeyen bir durum olabilir, ancak Visual Studio sürümleri için aynı Yardım görüntüleyicisinin kullanılması buna yöneliktir.
+> Katalog adı hem Visual Studio 2017 hem de 2019 için VisualStudio15 Visual Studio adıdır. Bu beklenmeyen bir durum olabilir, ancak bunun nedeni her iki sürümde de aynı Yardım Görüntüleyicisi'nin Visual Studio olmasıdır.
 
 ## <a name="switches-and-arguments"></a>Anahtarlar ve bağımsız değişkenler
 
-Aşağıdaki tabloda yardım Içerik Yöneticisi için komut satırı aracı için kullanabileceğiniz anahtarlar ve bağımsız değişkenler tanımlanmaktadır:
+Aşağıdaki tabloda, Yardım İçerik Yöneticisi için komut satırı aracı için kullanabileceğiniz anahtarlar ve bağımsız değişkenler tanımlanır:
 
 |Anahtar|Gerekli mi?|Bağımsız değişkenler|
 |------------|---------------|---------------|
-|/işlem|Yes|-   **Yükleme**--belirtilen yükleme kaynağından yerel içerik deposuna kitap ekler.<br />     Bu anahtar,/booklist bağımsız değişkeni,/sourceURI bağımsız değişkeni veya her ikisini de gerektirir. /SourceURI bağımsız değişkenini belirtmezseniz, yükleme kaynağı olarak varsayılan Visual Studio URI 'SI kullanılır. /Booklist bağımsız değişkenini belirtmezseniz,/sourceUri üzerindeki tüm kitaplar yüklenir.<br />-   **Kaldır**--yerel içerik deposundan belirttiğiniz kitapları kaldırır.<br />     Bu anahtar,/booklist bağımsız değişkeni veya/sourceURI bağımsız değişkenini gerektirir.  /SourceURI bağımsız değişkenini belirtirseniz, tüm kitaplar kaldırılır ve/booklist bağımsız değişkeni yok sayılır.<br />-   **Taşı**--yerel depoyu belirttiğiniz yola taşır. Varsayılan yerel depo yolu, *% ProgramData%* altında bir dizin olarak ayarlanır.<br />     Bu anahtar,/locationPath ve/katalogadı bağımsız değişkenlerini gerektirir. Geçerli olmayan bir yol belirtirseniz veya sürücüde içeriği tutmak için yeterli boş alan yoksa hata iletileri olay günlüğüne yazılır.<br />-   **Yenile**--yüklendikleri veya en son güncelleştirildiği zamandan bu yana değiştirilen konuları güncelleştirir.<br />     Bu anahtar,/sourceURI bağımsız değişkenini gerektirir.|
-|/catalogName|Yes|İçerik kataloğunun adını belirtir. Visual Studio 2017 ve Visual Studio 2019 için bu VisualStudio15.|
-|/locale|Hayır|Yardım Görüntüleyicisi 'nin geçerli örneğinin içeriğini görüntülemek ve yönetmek için kullanılan ürün yerel ayarını belirtir. Örneğin, `EN-US` English-United durumları için belirtirsiniz.<br /><br /> Bir yerel ayar belirtmezseniz, işletim sisteminin yerel ayarı kullanılır. Bu yerel ayar belirlenemiyorsa, `EN-US` kullanılır.<br /><br /> Geçerli olmayan bir yerel ayar belirtirseniz, olay günlüğüne bir hata iletisi kaydedilir.|
-|/e|Hayır|Geçerli kullanıcının yönetici kimlik bilgileri varsa yardım Içerik yöneticisini yönetim ayrıcalıklarına yükseltir.|
-|/sourceURI|Hayır|İçeriğin yüklendiği URL 'YI (hizmet API 'SI) veya içerik yükleme dosyasının (*. msha*) yolunu belirtir. URL, Visual Studio 2010 Style uç noktasındaki ürün grubunu (üst düzey düğüm) veya ürün defterlerini (yaprak düzeyindeki düğüm) işaret edebilir. URL 'nin sonuna eğik çizgi (/) eklemeniz gerekmez. Eğik çizgi eklerseniz, uygun şekilde işlenir.<br /><br /> Bulunmayan, geçerli olmayan veya erişilemeyen bir dosya belirtirseniz ya da içerik yönetilirken internet bağlantısı yoksa veya kesintiye uğrarsa bir hata iletisi olay günlüğüne kaydedilir.|
-|/Vendor|Hayır|Kaldırılacak ürün içeriği için satıcıyı belirtir (örneğin, `Microsoft` ). Bu anahtar için varsayılan bağımsız değişken Microsoft.|
-|/productName|Hayır|Kaldırılacak olan kitapların ürün adını belirtir. Ürün adı, içerikle birlikte gelen *HelpContentSetup. msha* veya *books.html* dosyalarında tanımlanır. Kitapları tek seferde yalnızca bir üründen kaldırabilirsiniz. Birden çok üründen kitap kaldırmak için birden çok yükleme gerçekleştirmeniz gerekir.|
-|/Booklist|Hayır|Yönetilecek kitapların adlarını boşluklarla ayırarak belirtir. Değerler, yükleme medyasında listelenen defterleriyle aynı olmalıdır.<br /><br /> Bu bağımsız değişkeni belirtmezseniz,/sourceURI içinde belirtilen ürün için önerilen tüm kitaplar yüklenir.<br /><br /> Bir kitabın adı bir veya daha fazla boşluk içeriyorsa, listenin uygun şekilde sınırlandırıldığından, çift tırnak (") ile çevreleyin.<br /><br /> Geçerli olmayan veya ulaşılabilir olmayan bir/sourceURI belirtirseniz, hata iletileri günlüğe kaydedilir.|
-|/skuId|Hayır|Yükleme kaynağından ürünün stok tutma birimini (SKU) belirtir ve/SourceURI anahtarının tanımladığı kitapçıkları filtreler.|
-|/Membership|Hayır|-   **Minimum**--/skuId anahtarını kullanarak belirttiğiniz SKU 'ya bağlı olarak en az bir yardım içeriği kümesi yükleme. SKU ve içerik kümesi arasındaki eşleme, hizmet API 'sinde kullanıma sunulur.<br />-   **Önerilen**—/skuId bağımsız değişkenini kullanarak belirttiğiniz SKU için önerilen kitaplar kümesini kurar. Yükleme kaynağı, hizmet API 'sidir veya *. MSHA*.<br />-   **Full**--/skuId bağımsız değişkenini kullanarak belirttiğiniz SKU için tüm kitap kümesini yükleme. Yükleme kaynağı, hizmet API 'sidir veya *. MSHA*.|
-|/locationPath|Hayır|Yerel Yardım içeriği için varsayılan klasörü belirtir. Bu anahtarı yalnızca içerik yüklemek veya taşımak için kullanmalısınız. Bu anahtarı belirtirseniz,/Silent anahtarını da belirtmeniz gerekir.|
-|/silent|Hayır|Durum bildirim alanındaki simge dahil olmak üzere kullanıcıya sormadan veya herhangi bir kullanıcı arabirimini görüntülemeden Yardım içeriğini kaldırır veya kaldırır. Çıkış, *% Temp%* dizinindeki bir dosyaya kaydedilir. **Önemli:**  İçeriği sessizce yüklemek için *. mshc* dosyalarını değil, dijital olarak imzalanmış *. cab* dosyalarını kullanmanız gerekir.|
-|/launchingApp|Hayır|Yardım Görüntüleyicisi ana uygulama olmadan başlatıldığında uygulama ve Katalog bağlamını tanımlar. Bu anahtar için bağımsız değişkenler *CompanyName*, *ProductName* ve *SürümNumarası* ' dir (örneğin, `/launchingApp Microsoft,VisualStudio,16.0` ).<br /><br /> Bu,/Silent parametresiyle içerik yüklemek için gereklidir.|
-|/wait *saniye*|Hayır|Yükleme, kaldırma ve yenileme işlemlerini duraklatır. Katalog için bir işlem zaten devam ediyorsa, işlem devam etmek için verilen saniye sayısına kadar bekler. Süresiz olarak beklemek için 0 kullanın.|
-|/?|Hayır|Yardım Içeriği Yöneticisi için komut satırı aracının anahtarlarını ve açıklamalarını listeler.|
+|/operation|Yes|-   **Install**--Adds books from the specified installation source to the local content store.<br />     Bu anahtar için /booklist bağımsız değişkeni, /sourceURI bağımsız değişkeni veya her ikisi de gerekir. /sourceURI bağımsız değişkenlerini belirtmezseniz, yükleme kaynağı Visual Studio URI'sini kullanırsınız. /booklist bağımsız değişkenlerini belirtmezseniz,/sourceUri'si üzerinde yer alan tüm kitaplar yüklenir.<br />-   **kaldır**--Belirttiğiniz kitapları yerel içerik mağazasından kaldırır.<br />     Bu anahtar için /booklist bağımsız değişkeni veya /sourceURI bağımsız değişkeni gerekir.  /sourceURI bağımsız değişkenlerini belirtirsiniz, tüm kitaplar kaldırılır ve /booklist bağımsız değişkeni yoksayılır.<br />-   **Move**--Yerel depo, belirttiğiniz yola taşınır. Varsayılan yerel depo yolu *%ProgramData%* altında bir dizin olarak ayarlanır<br />     Bu anahtar , /locationPath ve /catalogName bağımsız değişkenlerini gerektirir. Geçerli olmayan bir yol belirtirsiniz veya sürücüde içeriği tutmak için yeterli boş alan yoksa hata iletileri olay günlüğüne kaydedilir.<br />-   **Yenile**--Yüklendikten veya en son güncelleştirildiğinde değişen güncelleştirmeler konuları.<br />     Bu anahtar / sourceURI bağımsız değişken gerektirir.|
+|/catalogName|Yes|İçerik kataloğu adını belirtir. 2017 Visual Studio 2019 Visual Studio için bu VisualStudio15'tir.|
+|/locale|Hayır|Yardım görüntüleyicinin geçerli örneğinin içeriğini görüntülemek ve yönetmek için kullanılan ürün yerel ayarı belirtir. Örneğin, Eyaletler `EN-US` için English-United belirtirsiniz.<br /><br /> Yerel bir yerellik belirtmezseniz, işletim sisteminin yereli kullanılır. Bu yerel seçim belirlene belirlenene kadar `EN-US` kullanılır.<br /><br /> Geçerli olmayan bir yerel değer belirtirsiniz, olay günlüğüne bir hata iletisi kaydedilir.|
+|/e|Hayır|Geçerli kullanıcının yönetici kimlik bilgileri varsa Yardım İçeriği Yöneticisi'ni Yönetim ayrıcalıklarına yükselter.|
+|/sourceURI|Hayır|İçeriğin yük olduğu URL'yi (Hizmet API'si) veya içerik yükleme dosyasının yolunu (*.msha*) belirtir. URL, 2010 stilinde bir uç noktada Ürün Grubuna (üst düzey düğüm) veya Ürün Kitapları'Visual Studio işaret ediyor olabilir. URL'nin sonuna eğik çizgi (/) eklemek zorunda değilsiniz. Sonda bir eğik çizgi dahil ediyorsanız, bu uygun şekilde iş olur.<br /><br /> Bulunamıyor, geçerli olmayan veya erişilebilir olmayan bir dosya belirtirsiniz ya da İnternet bağlantısı kullanılamıyorsa veya içerik yönetilirken kesintiye uğrarsa olay günlüğüne bir hata iletisi kaydedilir.|
+|/vendor|Hayır|Kaldırılacak ürün içeriği için satıcıyı belirtir (örneğin, `Microsoft` ). Bu anahtar için varsayılan bağımsız değişken Microsoft'tır.|
+|/productName|Hayır|Kaldırılacak kitapların ürün adını belirtir. Ürün adı *helpcontentsetup.msha* veya *books.html* dosyalarında tanımlanır. Aynı anda yalnızca bir üründen kitapları kaldırabilirsiniz. Birden çok üründen kitapları kaldırmak için birden çok yükleme gerçekleştirmeniz gerekir.|
+|/booklist|Hayır|Yönetilecek kitapların adlarını boşluklarla ayırarak belirtir. Değerler, yükleme medyasında listelenen kitap adlarından eşleşmeli.<br /><br /> Bu bağımsız değişkeni belirtmezseniz, /sourceURI'de belirtilen ürün için önerilen tüm kitaplar yüklenir.<br /><br /> Bir kitabın adı bir veya daha fazla boşluk içeriyorsa, listenin uygun şekilde sınırlandırılmış olması için çift tırnak içine alın (") .<br /><br /> Geçerli olmayan veya ulaşılamaz bir /sourceURI belirtirsiniz hata iletileri günlüğe kaydedilir.|
+|/skuId|Hayır|Ürünün yükleme kaynağından stok tutma birimini (SKU) belirtir ve /SourceURI anahtarının tanımları olan kitapları filtreler.|
+|/membership|Hayır|-   **Minimum**-- /skuId anahtarını kullanarak belirttiğiniz SKU'ya göre en düşük Yardım içeriği kümesi yüklenir. SKU ile içerik kümesi arasındaki eşleme, Hizmet API'sinde ortaya çıkar.<br />-   **Önerilen**—/skuId bağımsız değişkenlerini kullanarak belirttiğiniz SKU için bir dizi önerilen kitap yüklenir. Yükleme kaynağı hizmet API'si veya *'tir. MSHA*.<br />-   **Tam**-- /skuId bağımsız değişkenlerini kullanarak belirttiğiniz SKU için tüm kitap kümelerini yüklenir. Yükleme kaynağı hizmet API'si veya *'tir. MSHA*.|
+|/locationpath|Hayır|Yerel Yardım içeriği için varsayılan klasörü belirtir. Bu anahtarı yalnızca içeriği yüklemek veya taşımak için kullanabilirsiniz. Bu anahtarı belirtirsiniz, /silent anahtarını da belirtmeniz gerekir.|
+|/silent|Hayır|Kullanıcıya sorulmadan veya durum bildirim alanında simge de dahil olmak üzere herhangi bir kullanıcı arabirimini görüntülemeden Yardım içeriğini yükleyerek veya kaldırır. Çıkış *%Temp%* dizininde bir dosyaya kaydedilir. **Önemli:**  İçeriği sessiz bir şekilde yüklemek için *.mshc* dosyalarını *değil.cab* olarak imzalanan dosya dosyalarını kullanabilirsiniz.|
+|/launchingApp|Hayır|Yardım görüntüleyicisi üst uygulama olmadan başlatıldıkları zaman uygulama ve katalog bağlamını tanımlar. Bu anahtarın bağımsız değişkenleri *CompanyName,* *ProductName* ve *VersionNumber 'dır* (örneğin, `/launchingApp Microsoft,VisualStudio,16.0` ).<br /><br /> Bu, /silent parametresiyle içerik yüklemek için gereklidir.|
+|/wait *Saniye*|Hayır|Yükleme, kaldırma ve yenileme işlemlerini duraklatıyor. Katalog için devam eden bir işlem varsa, işlem devam etmek için verilen saniye sayısına kadar bekler. Süresiz olarak beklemek için 0 kullanın.|
+|/?|Hayır|Yardım İçeriği Yöneticisi için komut satırı aracına ilişkin anahtarları ve açıklamalarını listeler.|
 
 ### <a name="exit-codes"></a>Çıkış kodları
 
-Yardım Içeriği Yöneticisi için komut satırı aracını sessiz modda çalıştırdığınızda, şu çıkış kodlarını döndürür:
+Yardım İçeriği Yöneticisi için komut satırı aracını sessiz modda çalıştırarak aşağıdaki çıkış kodlarını döndürür:
 
 ```
 Success = 0,
@@ -93,6 +94,6 @@ UpdateAlreadyRunning = 1300 - (Signals that the update didn't run because anothe
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yardım Görüntüleyicisi Yönetici Kılavuzu](../help-viewer/administrator-guide.md)
-- [Yardım Içerik Yöneticisi geçersiz kılmaları](../help-viewer/behavior-overrides.md)
+- [Yardım Görüntüleyicisi yönetici kılavuzu](../help-viewer/administrator-guide.md)
+- [Help Content Manager geçersiz kılmaları](../help-viewer/behavior-overrides.md)
 - [Microsoft Yardım Görüntüleyicisi](../help-viewer/overview.md)

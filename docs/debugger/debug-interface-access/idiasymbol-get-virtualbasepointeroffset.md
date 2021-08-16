@@ -11,14 +11,15 @@ ms.assetid: a4f2649c-6702-491c-90a1-d6d669258c51
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e44c1249ce2c13236dcdf4b95b7daa1c8896c13
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c1fc4c90b232575bdb37b4e06db2b173591363ef38d9d3bfd53a88e66ced484a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161734"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379668"
 ---
 # <a name="idiasymbolget_virtualbasepointeroffset"></a>IDiaSymbol::get_virtualBasePointerOffset
 Sanal Taban işaretçisinin konumunu alır.

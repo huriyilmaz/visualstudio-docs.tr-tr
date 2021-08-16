@@ -11,14 +11,15 @@ ms.assetid: a21114a6-56a3-4e8a-a65f-58ec2a0a8908
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f7b89c89bb2555edcfd70ac78dbe6a31a6af7fd8
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f2572c6011113c9c23bfd18b6ccbcce13f8dd7c64d6e068dab27b25a8410aa5d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160976"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379977"
 ---
 # <a name="idiasymbolget_hascastoperator"></a>IDiaSymbol::get_hasCastOperator
 Kullanıcı tanımlı veri türünün tanımlanmış herhangi bir atama işleci olup olmadığını belirten bir bayrak alır.

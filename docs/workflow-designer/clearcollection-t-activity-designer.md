@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-ClearCollection &lt; T &gt; etkinlik Tasarımcısı
-description: ClearCollection etkinlik Tasarımcısı 'nı kullanarak <T> ClearCollection etkinliği oluşturma ve yapılandırma hakkında bilgi edinin <T> .
+title: İş Akışı Tasarımcısı - ClearCollection &lt; T &gt; Etkinlik Tasarımcısı
+description: ClearCollection etkinliği oluşturmak ve yapılandırmak için ClearCollection <T> etkinlik tasarımcısını kullanmayı <T> öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,38 +10,39 @@ ms.assetid: db0e5da2-7b5a-4f1a-864c-f3aeeeeb51a7
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 31d576712804a75fdca57374ce82a53ff0d1ce84
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 14c1468c9bc9221cad6885508c73bd0a5a5b3cd2b1bdbcfaa37f432ecd7e9605
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942093"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408046"
 ---
 # <a name="clearcollectiont-activity-designer"></a>ClearCollection\<T> Etkinlik Tasarımcısı
 
-**ClearCollection \<T>** etkinlik Tasarımcısı bir etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.ClearCollection%601> .
+Etkinliği oluşturmak ve yapılandırmak için **ClearCollection \<T>** etkinlik tasarımcısı <xref:System.Activities.Statements.ClearCollection%601> kullanılır.
 
-## <a name="the-clearcollectiont-activity"></a>ClearCollection \<T> etkinliği
+## <a name="the-clearcollectiont-activity"></a>ClearCollection \<T> Etkinliği
 
-<xref:System.Activities.Statements.ClearCollection%601>Etkinlik, tüm öğelerin belirtilen koleksiyonunu temizler.
+Etkinlik, <xref:System.Activities.Statements.ClearCollection%601> tüm öğelerin belirtilen bir koleksiyonunu temizler.
 
-### <a name="using-the-clearcollectiont-activity-designer"></a>ClearCollection \<T> etkinlik tasarımcısını kullanma
+### <a name="using-the-clearcollectiont-activity-designer"></a>ClearCollection Etkinlik \<T> Tasarımcısını Kullanma
 
-**ClearCollection \<T>** etkinlik Tasarımcısı, iş akışı Tasarımcısı araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu** **koleksiyon** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
+**ClearCollection \<T>** etkinlik tasarımcısı, araç  kutusunun Araç Kutusu sekmesine tıklayarak erişilen Araç **Kutusu'İş Akışı Tasarımcısı.** Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
-**ClearCollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içindeki gibi etkinliklerin yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.ClearCollection%601> varsayılan <xref:System.Activities.Activity.DisplayName%2A> clearcollection<Int32 ile bir etkinlik oluşturur \> . (Varsayılan olarak, *TypeArgument* **Int32**' dir. TypeArgument özellik kılavuzunda değiştirilebilir.) <xref:System.Activities.Activity.DisplayName%2A>Değer, **clearcollection \><T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
+**ClearCollection \<T>** etkinlik tasarımcısı **Araç** Kutusundan sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra bu alan yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısını bırakarak, <xref:System.Activities.Statements.ClearCollection%601> <xref:System.Activities.Activity.DisplayName%2A> Varsayılan ClearCollection ve Int32<bir etkinlik \> oluşturur. *(TypeArgument* varsayılan olarak **Int32'dir.** TypeArgument, özellik kılavuzunda değiştirilebilir.) Değer, <xref:System.Activities.Activity.DisplayName%2A> **ClearCollection \>**<T etkinlik tasarımcısının üst bilgisinde veya özellik **kılavuzundaki DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenemez.
 
 ### <a name="the-clearcollectiont-properties"></a>ClearCollection \<T> Özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.ClearCollection%601> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
+Aşağıdaki tablo, <xref:System.Activities.Statements.ClearCollection%601> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını belirtir <xref:System.Activities.Statements.ClearCollection%601> . Varsayılan değer ClearCollection<Int32 'dir \> . <xref:System.Activities.Activity.DisplayName%2A>Değer kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.ClearCollection%601.Collection%2A>|Doğru|Öğelerin temizlenme koleksiyonunu belirtir. Bu koleksiyon **ICollection türünde \<TypeArgument> .** Koleksiyonu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
-|*TypeArgument*|Doğru|İçinde yer alan öğelerin T türünü belirtir <xref:System.Collections.Generic.ICollection%601> . Varsayılan olarak, bu *TypeArgument* türü **Int32** olarak ayarlanır. Türü değiştirmek için, özellik kılavuzundaki Birleşik giriş kutusunda *TypeArgument* değerini değiştirin.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını <xref:System.Activities.Statements.ClearCollection%601> belirtir. Varsayılan değer ClearCollection ve Int32<'dır. \> Değer <xref:System.Activities.Activity.DisplayName%2A> kesinlikle gerekli değildir ancak bir değer kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.ClearCollection%601.Collection%2A>|Doğru|Öğelerden silinen koleksiyonu belirtir. Bu koleksiyon **ICollection \<TypeArgument> türündedir.** Koleksiyonu belirtmek için özellik kılavuzuna Visual Basic bir ifade yazın.|
+|*TypeArgument*|Doğru|içinde yer alan öğelerin T türünü <xref:System.Collections.Generic.ICollection%601> belirtir. Varsayılan olarak, bu *TypeArgument* türü **Int32 olarak ayarlanır.** Türü değiştirmek için özellik kılavuzunda birleşik giriş kutusunda *TypeArgument* değerini değiştirebilirsiniz.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

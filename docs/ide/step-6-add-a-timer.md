@@ -4,8 +4,6 @@ description: <xref:System.Windows.Forms.Timer>Eşleşen oyuna nasıl denetim ekl
 ms.custom: SEO-VS-2020
 ms.date: 03/31/2020
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
@@ -13,21 +11,22 @@ ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b983108793b07e1752b88afed90346cd5ff017f
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 2367536dd520876d753bce3c3ffa46e4c9853208e9ddf53385c1c84374f160bf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107297112"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121289185"
 ---
 # <a name="step-6-add-a-timer"></a>6. Adım: Süreölçer ekleme
 Ardından, <xref:System.Windows.Forms.Timer> eşleşen oyuna bir denetim eklersiniz. Bir Zamanlayıcı belirtilen sayıda milisaniye bekler ve sonra *değer* olarak adlandırılan bir olayı tetikler. Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.
 
 ## <a name="to-add-a-timer"></a>Zamanlayıcı eklemek için
 
-1. **Windows Form Tasarımcısı** içindeki Araç kutusundan **Zamanlayıcı** ' yı seçin ( **Bileşenler** kategorisinde) ve ardından **ENTER** tuşunu seçin veya bir zamanlayıcı denetimi eklemek için zamanlayıcıyı çift tıklayın. Aşağıdaki görüntüde gösterildiği gibi, **Süreölçer1** adlı zamanlayıcının simgesinin, formun altındaki bir alanda görünmesi gerekir.
+1. **Windows Form Tasarımcısı** içindeki araç kutusundan **zamanlayıcı** ' yı seçin ( **bileşenler** kategorisinde) ve ardından **enter** tuşunu seçin veya bir zamanlayıcı denetimi eklemek için zamanlayıcıyı çift tıklayın. Aşağıdaki görüntüde gösterildiği gibi, **Süreölçer1** adlı zamanlayıcının simgesinin, formun altındaki bir alanda görünmesi gerekir.
 
      ![Zamanlayıcı](../ide/media/express_timer.png)<br/>
 ***Zamanlayıcı***
@@ -37,7 +36,7 @@ Ardından, <xref:System.Windows.Forms.Timer> eşleşen oyuna bir denetim eklersi
 
 2. Zamanlayıcıyı seçmek için **Süreölçer1** simgesini seçin. **Özellikler** penceresinde olayları görüntüleme, özellikleri görüntüleme ' ye geçin. Sonra, zamanlayıcının **Interval** özelliğini **750** olarak ayarlayın, ancak **Enabled** özelliğini **false** olarak ayarlayın. **Interval** özelliği, zamanlayıcının, zaman *işaretleri* arasında ne kadar bekleyeceğini ya da olayını ne zaman tetikleyeceğini söyler <xref:System.Windows.Forms.Timer.Tick> . 750 değeri zamanlayıcıya, Tick olayını tetiklemeden önce saniyenin dörtte üçü kadar (750 milisaniye) beklemesini bildirir. <xref:System.Windows.Forms.Timer.Start>Zamanlayıcıyı yalnızca Player ikinci etiketi seçtikten sonra başlatmak için yöntemini çağıracaksınız.
 
-3. **Windows Form Tasarımcısı** 'de süreölçer denetimi simgesini seçin ve ardından **ENTER** tuşuna basın veya boş bir Tick olayı işleyicisi eklemek için zamanlayıcıyı çift tıklayın. Kodu aşağıdaki kodla değiştirin ya da aşağıdaki kodu olay işleyicisine el ile girin.
+3. **Windows Form Tasarımcısı** 'de süreölçer denetimi simgesini seçin ve ardından **enter** tuşuna basın veya boş bir Tick olayı işleyicisi eklemek için zamanlayıcıyı çift tıklayın. Kodu aşağıdaki kodla değiştirin ya da aşağıdaki kodu olay işleyicisine el ile girin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step6/cs/form1.cs" id="Snippet7":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step6/vb/form1.vb" id="Snippet7":::

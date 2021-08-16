@@ -5,19 +5,18 @@ ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: ea98c55e-6213-4893-ba7b-f19d7f119527
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 66a6663cfbbcc212f05f75a8bc87bf30a3e4f880
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 8f3282e019c1818c782a578a248a93871ec3926d295f1779f432c6bafecc8545
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107297073"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121289159"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>7. Adım: Formunuza iletişim kutusu bileşenleri ekleme
 
@@ -32,11 +31,11 @@ Bir bileşen, bazı yollarla denetim gibidir. Formunuza bir bileşen eklemek iç
     > [!NOTE]
     > **Araç kutusundaki** **iletişim** kutusu grubunda, sizin için birçok yararlı iletişim kutusu açan bileşenler bulunur. Bu, dosyaları açmak ve kaydetmek, klasörlere gözatmak ve yazı tipi ve renkler seçmek için kullanılabilir. Bu projede iki iletişim kutusu bileşeni kullanıyorsunuz: OpenFileDialog ve ColorDialog.
 
-1. Formunuza **OpenFileDialog1** adlı bir bileşen eklemek Için, **OpenFileDialog** öğesine çift tıklayın. Formunuza **colorDialog1** adlı bir bileşen eklemek Için **araç kutusunda** **ColorDialog** ' a çift tıklayın. (Bunu bir sonraki öğretici adımında kullanırsınız.) Aşağıdaki görüntüde gösterildiği gibi, eklediğiniz iki iletişim kutusu bileşeninin bir simgesine sahip **Windows Form Tasarımcısı** ( **Resim Görüntüleyicisi** formunun altında) altında bir alan görmeniz gerekir.
+1. Formunuza **OpenFileDialog1** adlı bir bileşen eklemek Için, **OpenFileDialog** öğesine çift tıklayın. Formunuza **colorDialog1** adlı bir bileşen eklemek Için **araç kutusunda** **ColorDialog** ' a çift tıklayın. (Bunu bir sonraki öğretici adımında kullanırsınız.) aşağıdaki görüntüde gösterildiği gibi, eklediğiniz iki iletişim kutusu bileşeninin bir simgesine sahip **Windows Form Tasarımcısı** ( **resim görüntüleyicisi** formunun altında) altında bir alan görmeniz gerekir.
 
      ![İletişim kutusu bileşenleri](../ide/media/express_dialogsadded.png)<br>***Iletişim kutusu** _ _components *
 
-1. **Windows Form Tasarımcısı** altındaki alanda bulunan **OpenFileDialog1** simgesini seçin. İki özellik ayarlayın:
+1. **Windows Form Tasarımcısı** altındaki alanda bulunan **openFileDialog1** simgesini seçin. İki özellik ayarlayın:
 
     - **Filter** özelliğini aşağıdaki gibi ayarlayın (kopyalayabilir ve yapıştırabilirsiniz):
 
@@ -49,7 +48,7 @@ Bir bileşen, bazı yollarla denetim gibidir. Formunuza bir bileşen eklemek iç
          **Filtre** özelliği ayarları, **resim dosyası seç** iletişim kutusunda görünecek dosya türü türlerini belirtir.
 
     > [!TIP]
-    > Farklı bir uygulamadaki **Dosya Aç** iletişim kutusunun bir örneğini görmek için, **Not defteri** veya **Paint**' i açın ve menü çubuğunda **Dosya**  >  **Aç**' ı seçin. Dosya adı ' nın yanında dosya türünü seçmenizi sağlayan bir açılan listenin yanında yer alan bir açılır liste olduğunu unutmayın. <br/><br/>Uygulamanızı ayarlamak için **OpenFileDialog** bileşenindeki **Filter** özelliğini kullandınız. Ayrıca, **başlık** ve **filtre** özelliklerinin **Özellikler** penceresinde nasıl kalın olduğuna dikkat edin. IDE, varsayılan değerlerinden değiştirilmiş olan özellikleri göstermek için bunu yapar.
+    > farklı bir uygulamadaki **dosya aç** iletişim kutusunun bir örneğini görmek için **Not Defteri** veya **Paint** açın ve menü çubuğunda **dosya**  >  **aç**' ı seçin. Dosya adı ' nın yanında dosya türünü seçmenizi sağlayan bir açılan listenin yanında yer alan bir açılır liste olduğunu unutmayın. <br/><br/>Uygulamanızı ayarlamak için **OpenFileDialog** bileşenindeki **Filter** özelliğini kullandınız. Ayrıca, **başlık** ve **filtre** özelliklerinin **Özellikler** penceresinde nasıl kalın olduğuna dikkat edin. IDE, varsayılan değerlerinden değiştirilmiş olan özellikleri göstermek için bunu yapar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

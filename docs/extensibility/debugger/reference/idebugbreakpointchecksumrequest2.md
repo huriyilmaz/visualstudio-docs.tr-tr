@@ -9,14 +9,15 @@ ms.assetid: 9cfdbca5-052c-48e9-8411-e2e9e4065d00
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78361429e371bf19ee1fea27c090af80c2b79b73
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9562b5d89b0602140a84620b97e4ec43b9cab7b292c8698d229c8f5b604197a8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078090"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378022"
 ---
 # <a name="idebugbreakpointchecksumrequest2"></a>IDebugBreakpointChecksumRequest2
 Kesme noktası isteği için bir belge sağlama toplamını temsil eder.

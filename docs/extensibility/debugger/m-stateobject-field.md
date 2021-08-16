@@ -9,14 +9,15 @@ ms.assetid: 68c54b22-3e1c-4031-b9c7-b972c519d8a0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: df510fafbfe3ed6e71e9b5290fb1df0b02ae1d39
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 0268f5a76d73f6546d2b916c9dd7e542109338d24a8ed6e5dbe0372391721ce1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903963"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378087"
 ---
 # <a name="m_stateobject-field"></a>m_stateObject alanı
 Eylemin kullanacağı verileri temsil eden nesne.
@@ -25,7 +26,7 @@ Eylemin kullanacağı verileri temsil eden nesne.
 
  **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 

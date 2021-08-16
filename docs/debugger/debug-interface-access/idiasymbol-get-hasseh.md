@@ -1,6 +1,6 @@
 ---
-description: İşlevin yapılandırılmış özel durum Işleme (C/C++)) içerip içermediğini belirten bir bayrak alır (örneğin, _try/__except blokları).
-title: 'IDiaSymbol:: get_hasSEH | Microsoft Docs'
+description: İşlevin herhangi bir Yapılandırılmış Özel Durum İşleme (C/C++)) içerdiğini belirten bir bayrak alır (örneğin, _try/__except blokları).
+title: IDiaSymbol::get_hasSEH | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 1a709ded-22c8-464c-97be-eba5e464210c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a802a14c1c4e9b9c3b080c751d8cd512c3adf75d
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fda21a6bf167434c5dfd674f8a6be1d1b1efc531da5930a6077ca6c2539a53d7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156268"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379953"
 ---
 # <a name="idiasymbolget_hasseh"></a>IDiaSymbol::get_hasSEH
-İşlevin [yapılandırılmış özel durum işleme (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) içerip içermediğini belirten bir bayrak alır (örneğin, __try/ \_ _Except blokları).
+İşlevin herhangi bir Yapılandırılmış Özel Durum İşleme [(C/C++) içerdiğini belirten](/cpp/cpp/structured-exception-handling-c-cpp) bir bayrak alır (örneğin, __try/ \_ _except bloklar).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ HRESULT get_hasSEH(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` İşlevin yapılandırılmış özel durum işleme blokları varsa döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] İşlevin `TRUE` yapılandırılmış özel durum işleme blokları varsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

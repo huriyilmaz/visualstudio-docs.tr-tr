@@ -1,6 +1,6 @@
 ---
-description: Her dönüştürücü bir Symtagdönüştürücü etiketiyle tanımlanır.
-title: Dönüştürücü | Microsoft Docs
+description: Her thunk bir SymTagThunk etiketiyle tanımlanır.
+title: Thunk | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,52 +12,53 @@ ms.assetid: 01abb95f-d89a-465c-a4eb-8e8509598c95
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dc512192299c165ec837ac26eaf27787bdf6a08
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 09cde94f6a38eba9264d42e588cc334536f5757f294bbfb369253e976435bfb5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161587"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379636"
 ---
 # <a name="thunk"></a>Dönüştürücü
-Her biri `thunk` bir etiketi tarafından tanımlanır `SymTagThunk` .
+Her `thunk` biri bir etiketle `SymTagThunk` tanımlanır.
 
 ## <a name="properties"></a>Özellikler
- Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.
+ Aşağıdaki tabloda bu sembol türü için geçerli olan özellikler gösterilir.
 
 |Özellik|Veri türü|Açıklama|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|[CV_access_e numaralandırma](../../debugger/debug-interface-access/cv-access-e.md) değerlerinden biri olan (yalnızca DIA SDK v 8.0 veya üzeri) bir değiştirici özniteliğine erişin.|
-|[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Konumun konum parçası; Ayrıntılar için bkz. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md).|
-|[IDiaSegment::get_addressSection](../../debugger/debug-interface-access/idiasegment-get-addresssection.md)|`DWORD`|Konumun bölüm bölümü; Ayrıntılar için bkz. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md).|
-|[IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)|`IDiaSymbol*`|Eğer varsa, sınıf üst öğesi (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)|`DWORD`|Kapsayan sınıf üst sembolünün KIMLIĞI (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_constType](../../debugger/debug-interface-access/idiasymbol-get-consttype.md)|`BOOL`|Dönüştürücü sabit olarak işaretlenmişse (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde) TRUE.|
-|[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|`BOOL`|Dönüştürücü bir sanal işleve giriş ise (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde) doğru|
-|[IDiaSymbol::get_isStatic](../../debugger/debug-interface-access/idiasymbol-get-isstatic.md)|`BOOL`|Dönüştürücü statik kabul edildiğinde TRUE (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)|`ULONGLONG`|Dönüştürücü içindeki kodun bayt sayısı.|
-|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Kapsayan compiland, Block veya Function için simge.|
-|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözlü üst simgenin KIMLIĞI.|
-|[IDiaSymbol::get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)|`DWORD`|Bitiş noktalarında statik konum vardır; Ayrıntılar için bkz. [sembol konumları](../../debugger/debug-interface-access/symbol-locations.md) numaralandırması.|
-|[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Dönüştürücü adı.|
-|[IDiaSymbol::get_pure](../../debugger/debug-interface-access/idiasymbol-get-pure.md)|`BOOL`|Dönüştürücü yalnızca sanal ise (yalnızca DIA SDK V 8.0 veya üzeri) geçerlıdır.|
-|[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|`DWORD`|Bu dönüştürücü modülünün modülü içinde göreli konumu.|
-|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagThunk` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
-|[IDiaSymbol::get_targetOffset](../../debugger/debug-interface-access/idiasymbol-get-targetoffset.md)|`DWORD`|Dönüştürücü hedefinin konumunun bir parçasını kaydırın.|
-|[IDiaSymbol::get_targetRelativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetrelativevirtualaddress.md)|`DWORD`|Kapsayan bloğunda dönüştürücü hedefinin göreli sanal adresi.|
-|[IDiaSymbol::get_targetSection](../../debugger/debug-interface-access/idiasymbol-get-targetsection.md)|`DWORD`|Dönüştürücü hedefinin bölüm bölümü.|
-|[IDiaSymbol::get_targetVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetvirtualaddress.md)|`ULONGLONG`|Yürütülebilir görüntüdeki dönüştürücü hedefinin konumu.|
-|[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|`DWORD`|[THUNK_ORDINAL numaralandırması](../../debugger/debug-interface-access/thunk-ordinal.md)tarafından tanımlanan dönüştürücü türü.|
-|[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|Bu dönüştürücü türü (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|Tür sembolünün KIMLIĞI (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE` dönüştürücü hizalanmazsa (yalnızca DIA SDK V 8.0 veya üzeri),|
-|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE` dönüştürücü sanal ise (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
-|[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Bu dönüştürücü için yürütülebilir görüntü içinde konum.|
-|[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|Sanal tablodaki Bu dönüştürücü için fark (yalnızca DIA SDK V 8.0 veya üzeri).|
-|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` dönüştürücü geçici olarak işaretlenmişse (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|
+|[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|Enumeration değerlerinden biri [olan erişim değiştiricisi](../../debugger/debug-interface-access/cv-access-e.md) CV_access_e (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Konumun kaydırma bölümü; Ayrıntılar için bkz. [LocationType Numaralama.](../../debugger/debug-interface-access/locationtype.md)|
+|[IDiaSegment::get_addressSection](../../debugger/debug-interface-access/idiasegment-get-addresssection.md)|`DWORD`|Konumun bölüm bölümü; Ayrıntılar için bkz. [LocationType Numaralama.](../../debugger/debug-interface-access/locationtype.md)|
+|[IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)|`IDiaSymbol*`|Varsa sınıf üst öğesi kapsayan (yalnızca V8.0 DIA SDK altında).|
+|[IDiaSymbol::get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)|`DWORD`|Kapsayan sınıf üst simgesinin kimliği (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_constType](../../debugger/debug-interface-access/idiasymbol-get-consttype.md)|`BOOL`|Thunk sabit olarak işaretlenmişse TRUE (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|`BOOL`|Thunk bir sanal işleve girişse TRUE (yalnızca V8.0 veya DIA SDK içinde)|
+|[IDiaSymbol::get_isStatic](../../debugger/debug-interface-access/idiasymbol-get-isstatic.md)|`BOOL`|Thunk statik olarak kabul edilirse TRUE (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)|`ULONGLONG`|Thunk'ta kod bayt sayısı.|
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Kapsayan derleme, blok veya işlevin simgesi.|
+|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözcük üst simgesinin kimliği.|
+|[IDiaSymbol::get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md)|`DWORD`|Uç noktaların statik konumu vardır; Ayrıntılar için [bkz. Sembol](../../debugger/debug-interface-access/symbol-locations.md) Konumları numaralama.|
+|[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Thunk'un adı.|
+|[IDiaSymbol::get_pure](../../debugger/debug-interface-access/idiasymbol-get-pure.md)|`BOOL`|Thunk tamamen sanalsa TRUE (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|`DWORD`|Bu thunk'un modülü içindeki göreli konumu.|
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Sembolün dizin kimliği.|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagThunk` [(SymTagEnum Numaralama değerlerinden](../../debugger/debug-interface-access/symtagenum.md) biri).|
+|[IDiaSymbol::get_targetOffset](../../debugger/debug-interface-access/idiasymbol-get-targetoffset.md)|`DWORD`|Thunk hedefinin konumunun bir kısmını kaydırma.|
+|[IDiaSymbol::get_targetRelativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetrelativevirtualaddress.md)|`DWORD`|Kapsayan bloğunda thunk hedefinin göreli sanal adresi.|
+|[IDiaSymbol::get_targetSection](../../debugger/debug-interface-access/idiasymbol-get-targetsection.md)|`DWORD`|Thunk hedefinin bölüm bölümü.|
+|[IDiaSymbol::get_targetVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetvirtualaddress.md)|`ULONGLONG`|Yürütülebilir görüntüde thunk hedefinin konumu.|
+|[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|`DWORD`|Thunk türü, [enumeration THUNK_ORDINAL olarak tanımlanır.](../../debugger/debug-interface-access/thunk-ordinal.md)|
+|[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|Bu thunk türü (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|Tür simgesinin kimliği (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE` thunk hizalanmamışsa (yalnızca V8.0 veya DIA SDK içinde)|
+|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE` thunk sanal ise (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Bu thunk'un yürütülebilir görüntü içindeki konumu.|
+|[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|Sanal tablodaki uzaklığı bu thunk ile (yalnızca V8.0 veya DIA SDK içinde).|
+|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` thunk geçici olarak işaretlenirse (yalnızca V8.0 DIA SDK sonraki bir içinde).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Simge Türlerinin Sözcük Hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

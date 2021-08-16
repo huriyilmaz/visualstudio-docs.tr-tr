@@ -11,14 +11,15 @@ ms.assetid: cc2c4a0b-ab9f-4b79-a8ff-a3badb0405d6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: aa52f28bf31a8bd13d9f45ce8554696c91961340
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 245325d736cfb051fff4e4b3046ba84c79b48279b04b5291b8d6e379186cb181
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102162063"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379831"
 ---
 # <a name="idiasymbolget_isstripped"></a>IDiaSymbol::get_isStripped
 Özel simgelerin sembol dosyasından bırakılıp nakledilmediğini belirten bayrak alır.

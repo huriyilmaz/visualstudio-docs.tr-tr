@@ -1,5 +1,5 @@
 ---
-title: Visual Studio aboneliklerinde CODE Magazine avantajı | Microsoft Docs
+title: Visual Studio aboneliklerinde kod Magazine avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,22 +7,22 @@ ms.assetid: e5768153-2758-46d3-a323-3272def213ee
 ms.date: 03/18/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen kod Magazine avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 831885a89b67bc5d9ab50f49c59eb91bc5717262
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 1c9a8374e7c3e56ede2c3e7d017dc50b9366ee61ba0553fb61660c59c67a5025
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672047"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121406859"
 ---
-# <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerine kod Dergisi dahildir
+# <a name="code-magazine-included-in-visual-studio-subscriptions"></a>kod Magazine Visual Studio aboneliklerine dahildir
 
-CODE Magazine, Tüm platformlardaki geliştirme teknolojilerini kapsayan, önde gelen bağımsız bir yazılım geliştirici Dergisi.  Seçili Visual Studio abonelikleri, Magazine 'in yazdırılmış veya dijital sürümlerine bir yıllık abonelik almaya uygun.
+CODE Magazine, Tüm platformlardaki geliştirme teknolojilerini kapsayan, önde gelen bağımsız bir yazılım geliştirici Dergisi.  seçili Visual Studio abonelikler, magazine 'in yazdırılmış veya dijital sürümlerine tek yıllık bir abonelik almaya uygundur.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 CODE Magazine aboneliğinizi ayarlama işlemi basittir.  Şu adımları izlemeniz yeterlidir:
 
 1. Ederken [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-2. Portalınızın profesyonel geliştirme veya eğitim bölümünde CODE Magazine kutucuğunu bulun ve **kodu al**' ı tıklatın.
+2. portalınızın Professional geliştirme veya eğitim bölümünde code Magazine kutucuğunu bulun ve **kodu al**' ı tıklatın.
    > [!div class="mx-imgBorder"]
    > ![KOD Magazine kutucuğu](_img/vs-code-magazine/vs-code-magazine-tile.png "KOD Magazine kutucuğu")
 3. Kodunuzun alındığını belirten bir ileti görürsünüz.  Devam etmek için **Etkinleştir** 'e tıklayın.  (Etkinleştirmeye hazırsanız, bu sorun devam etmez.  Etkinleştirmek için her zaman kutucuğa geri dönebilirsiniz.  Kodunuzu aldıktan sonra "kodu al" bağlantısı "etkinleştir" bağlantısını okur.)
@@ -49,21 +49,21 @@ Abonelik siparişinizi tamamladıktan sonra, aldığınız sorunları görmek i�
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  No          |
-| GitHub Enterprise ile Visual Studio Enterprise aboneliği   | VL| Kullanılabilir       |  No          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  No          |
-| GitHub Enterprise ile Visual Studio Professional aboneliği | VL                                      | Kullanılabilir                                                            |  No          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir                                             |  No          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  No          |
+| Visual Studio Enterprise (standart)   | VL, Azure, perakende| Kullanılabilir       |  Hayır          |
+| GitHub Enterprise aboneliği Visual Studio Enterprise   | VL| Kullanılabilir       |  Hayır          |
+| Visual Studio Professional (standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Hayır          |
+| GitHub Enterprise aboneliği Visual Studio Professional | VL                                      | Kullanılabilir                                                            |  Hayır          |
+| Visual Studio Test Professional (standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Hayır          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Hayır          |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 | Visual Studio Enterprise NFR<sup>1</sup> | NFR | Kullanılamaz | Yok |
 
-<sup>1</sup>  * şunları içerir: for satıl (NFR), Visual Studio sektör ortağı (VSIP), FTE, BizSpark, Imagine, Imagine Premium, Microsoft iş ortağı ağı (MPN), en değerli profesyonel (MVP), bölgesel yönetmen (RD), mct Software & Services Geliştirici, mct Software & Services.  
+<sup>1</sup> * şunları içerir: for satıl (nfr), Visual Studio sektör ortağı (vsıp), fte, BizSpark, Imagine, Imagine Premium, Microsoft İş Ortağı Ağı (mpn), en değerli Professional (MVP), bölgesel yönetmen (RD), mct software & services geliştirici, mct software & services.  
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)E-posta adresinize atanan tüm abonelikleri görmek için bağlantısını yapın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)e-posta adresinize atanan tüm abonelikleri görmek için Bağlan. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="q-if-the-subscription-is-free-why-am-i-being-asked-for-a-credit-card"></a>S: abonelik ücretsizdir, neden kredi kartı soruluyor?  
@@ -74,8 +74,8 @@ Y: kod Dergisi, aboneliğin bir yazdırma veya dijital abonelik için, aboneliğ
 
 ## <a name="support-resources"></a>Destek kaynakları
 - CODE Magazine aboneliğiniz hakkında sorularınız mı var?  E-posta veya telefon aracılığıyla [kod Magazine](https://www.codemag.com/contact) ile iletişim kurun veya çevrimiçi bir destek isteği gönderin.
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)görüşün.
-- Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
+- Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için, [Visual Studio abonelik desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
+- Visual Studio ıde, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

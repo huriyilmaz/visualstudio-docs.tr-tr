@@ -1,6 +1,6 @@
 ---
-title: Azure VM ve ASP.NET kümelerde canlı hata ayıklama
-description: Azure VM'leri Snapshot Debugger ölçek Visual Studio ASP.NET canlı uygulamalarda hata ayıklarken anlık görüntü almak için Snapshot Debugger'ni nasıl kullanabileceğinizi öğrenin.
+title: Azure VM'ASP.NET ölçek kümelerini kullanarak canlı hata ayıklama
+description: Anlık görüntü noktaları ayarlamak Snapshot Debugger anlık Visual Studio almak için Azure VM'leri ve ölçek kümelerini kullanarak canlı ASP.NET hata ayıklaması yapmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/06/2019
 ms.topic: how-to
@@ -13,18 +13,18 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: bdab6b3f559628506dd301d6ced449f1e69152a6
-ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
+ms.openlocfilehash: 18fe53bcf1344fc8a8ab9cba0d604b79096c8179fb5e6ec399940dd89acd10c9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "108798498"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379619"
 ---
 # <a name="debug-live-aspnet-apps-on-azure-virtual-machines-and-azure-virtual-machine-scale-sets-using-the-snapshot-debugger"></a>Azure sanal ASP.NET ve Azure sanal makine ölçek kümelerini kullanarak canlı uygulama hata ayıklaması Snapshot Debugger
 
-Bu Snapshot Debugger, ilgilendiğiniz kod yürütülürken üretim uygulamalarınıza bir anlık görüntü alır. Hata ayıklayıcıya anlık görüntü alma talimatı almak için kodunda anlık görüntü noktaları ve günlük noktaları ayarlayın. Hata ayıklayıcısı, üretim uygulama trafiğinizi etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Bu Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için gereken zamanı önemli ölçüde azaltmanıza yardımcı olabilir.
+Bu Snapshot Debugger, ilgilendiğiniz kod yürütülürken üretim uygulamalarınıza bir anlık görüntü alır. Hata ayıklayıcıya anlık görüntü alma talimatı için kodunda anlık görüntü noktaları ve günlük noktaları ayarlayın. Hata ayıklayıcısı, üretim uygulama trafiğinizi etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Bu Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için gereken zamanı önemli ölçüde azaltmanıza yardımcı olabilir.
 
-Anlık bileşen ve günlük noktaları kesme noktalarına benzer, ancak kesme noktanın aksine, anlık ek nokta isabetli olduğunda uygulamayı durdurmaz. Genellikle anlık görüntüyü bir anlık görüntüde yakalama 10-20 milisaniye sürer.
+Anlık ek nokta ve günlük noktaları kesme noktalarına benzer, ancak kesme noktanın aksine, anlık ek nokta isabetli olduğunda uygulamayı durdurmaz. Genellikle anlık görüntüyü bir anlık görüntüde yakalama 10-20 milisaniye sürer.
 
 Bu öğreticide şunları yapacaksınız:
 
@@ -35,51 +35,51 @@ Bu öğreticide şunları yapacaksınız:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Snapshot Debugger Sanal Makineler (VM) ve Azure Sanal Makine Ölçek Kümeleri için azure geliştirme iş yükü ile yalnızca Visual Studio 2019 Enterprise veya daha yeni bir şirket **için kullanılabilir.** (Bağımsız **bileşenler sekmesinde** Hata ayıklama ve test altında **bulabilirsiniz**  >  **Snapshot debugger**.)
+* Snapshot Debugger Sanal Makineler (VM) ve Azure Sanal Makine Ölçek Kümeleri için azure geliştirme iş yükü ile Visual Studio 2019 Enterprise için **kullanılabilir.** (Bağımsız **bileşenler sekmesinde** Hata ayıklama ve test altında **bulabilirsiniz**  >  **Snapshot debugger**.)
 
-    Henüz yüklü değilse, [2019 Enterprise Visual Studio yükleyin.](https://visualstudio.microsoft.com/vs/)
+    Henüz yüklü değilse, [2019 Visual Studio'i Enterprise.](https://visualstudio.microsoft.com/vs/)
 
 * Anlık görüntü koleksiyonu aşağıdaki Azure Sanal Makineler\Sanal Makine Ölçek Kümeleri web uygulamaları için kullanılabilir:
-  * ASP.NET 4.6.1 veya .NET Framework üzerinde çalışan uygulamalar.
-  * ASP.NET.NET Core 2.0 veya sonraki bir sürümü üzerinde çalışan ASP.NET Core uygulamaları.
+  * ASP.NET 4.6.1 veya sonraki bir .NET Framework üzerinde çalışan uygulamalar.
+  * ASP.NET Core .NET Core 2.0 veya sonraki bir üzerinde çalışan uygulamaları Windows.
 
   > [!NOTE]
-  >  Visual Studio Enterprise 32 bit Windows üzerinde çalışan sanal makinelerde anlık görüntüleri görüntüleyemzin.
+  >  Visual Studio Enterprise 32 bit Windows çalıştıran sanal makinelerde anlık görüntüleri görüntüleyemzin.
 
 ## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Projenizi açın ve Snapshot Debugger
 
-1. Anlık görüntü hata ayıklaması yapmak istediğiniz projeyi açın.
+1. Hata ayıklamanın anlık görüntüsünü açmak için projeyi açın.
 
     > [!IMPORTANT]
-    > Hata ayıklamanın anlık görüntüsünü almak için Azure sanal makine ölçek kümesi hizmetinizde yayınlanan *kaynak kodu sürümünü* açmanız gerekir.
+    > Hata ayıklamanın anlık görüntüsünü oluşturmak  için Azure Sanal Makine\Sanal Makine Ölçek Kümesi hizmetinize yayımlanan kaynak kodun aynı sürümünü açabilirsiniz.
 
-1. **Hata ayıkla > Snapshot Debugger Ekle...** seçeneğini belirleyin. Web uygulamanızın dağıtıldığı Azure sanal makinesanal makine ölçek kümesini ve bir Azure Depolama hesabını seçin ve ardından **Ekle**' ye tıklayın. Snapshot Debugger Ayrıca [Azure Kubernetes hizmetini](debug-live-azure-kubernetes.md) ve [Azure App Service](debug-live-azure-applications.md)destekler.
+1. Hata **Ayıkla ve > Ekle... Snapshot Debugger seçin.** Web uygulamasının dağıtılacağı Azure Sanal Makine\Sanal Makine Ölçek Kümesi ve bir Azure depolama hesabı seçin ve ardından Ekle'ye **tıklayın.** Snapshot Debugger, aynı zamanda [Azure Kubernetes Service](debug-live-azure-kubernetes.md) [ve](debug-live-azure-applications.md)Azure App Service.
 
-    ![Hata ayıklama menüsünden Snapshot Debugger 'ı başlatın](../debugger/media/snapshot-debug-menu-attach.png)
+    ![Hata Ayıklama menüsünden anlık görüntü hata ayıklayıcısını başlatma](../debugger/media/snapshot-debug-menu-attach.png)
 
-    ![Azure kaynağı seçin](../debugger/media/snapshot-select-azure-resource-vm.png)
+    ![Azure Kaynağı'ı seçin](../debugger/media/snapshot-select-azure-resource-vm.png)
 
     > [!IMPORTANT]
-    > VM 'niz için **Snapshot Debugger** ilk defa seçtiğinizde IIS otomatik olarak yeniden başlatılır.
-    > Sanal makine ölçek kümeleriniz için Snapshot Debugger ilk kez **Ekle** ' yi seçtiğinizde, sanal makine ölçek kümelerinin her bir örneğinin el ile yükseltilmesi gerekir.
+    > VM'niz için **Bir Snapshot Debugger'ı** ilk kez seçerek IIS otomatik olarak yeniden başlatılır.
+    > Sanal Makine Ölçek **Kümeleriniz için Snapshot Debugger** Ekle'yi ilk kez seçerek Sanal Makine Ölçek Kümeleri'nin her örneğinin el ile yükseltilebilir.
 
     > [!NOTE]
-    > (Visual Studio 2019 sürüm 16,2 ve üstü) Snapshot Debugger Azure bulut desteğini etkinleştirdi. Seçtiğiniz Azure kaynağının ve Azure depolama hesabının aynı buluttan olduğundan emin olun. Kuruluşunuzun [Azure uyumluluk](https://azure.microsoft.com/overview/trusted-cloud/) yapılandırmalarına ilişkin sorularınız varsa lütfen Azure yöneticinize başvurun.
+    > (Visual Studio 2019 sürüm 16.2 ve üzeri) Snapshot Debugger Azure bulut desteğini etkinleştirdi. Hem Azure kaynağının hem de Azure Depolama hesabının aynı bulutta olduğundan emin olun. Kuruma ilişkin Azure uyumluluk yapılandırmaları hakkında sorularınız varsa lütfen [Azure yöneticinize](https://azure.microsoft.com/overview/trusted-cloud/) başvurun.
 
-    **Modüller** için meta veriler başlangıçta etkinleştirilmeyecektir, Web uygulamasına gidin ve **koleksiyonu Başlat** düğmesi etkin olur. Visual Studio artık Snapshot hata ayıklama modunda.
+    Modüller için **meta** veriler başlangıçta etkinleştirilmez, web uygulamasına gidin ve Koleksiyonu Başlat **düğmesi** etkin hale gelir. Visual Studio artık anlık görüntü hata ayıklama modunda.
 
     ![Anlık görüntü hata ayıklama modu](../debugger/media/snapshot-message.png)
 
     > [!NOTE]
-    > VMSS için, ilk kez Snapshot Debugger iliştirdikten sonra kullanıcının sanal makine ölçek kümelerinde örnekleri el ile yükseltmesi gerekir.
+    > VMSS için kullanıcının sanal makineyi ilk kez ekledikten sonra Sanal Makine Ölçek Kümeleri'Snapshot Debugger el ile yükseltmesi gerekir.
 
-    **Modüller** penceresi, tüm modüllerin Azure sanal Makinesanal makine ölçek kümesi için ne zaman yüklendiğini gösterir (Bu pencereyi açmak için **Windows > modüllerini hata ayıkla >** seçin).
+    Modüller **penceresi,** Azure Sanal Makine\Sanal Makine Ölçek Kümesi için tüm modüller yüklendiğinde size gösterilir (bu pencereyi açmak için Modüllerde **hata > Windows >'yi** seçin).
 
-    ![Modüller penceresini denetleyin](../debugger/media/snapshot-modules.png)
+    ![Modüller penceresini denetleme](../debugger/media/snapshot-modules.png)
 
-## <a name="set-a-snappoint"></a>Anlık görüntü noktası ayarla
+## <a name="set-a-snappoint"></a>Ek bileşen ayarlama
 
-1. Kod Düzenleyicisi 'nde, bir anlık görüntü noktası ayarlamak için ilgilendiğiniz kod satırının yanındaki sol cilt payı tıklatın. Uygulamasının çalıştırabildiğinizi bildiğiniz kodun olduğundan emin olun.
+1. Kod düzenleyicisinde, bir ek bileşen ayarlamak için ilgilendiğimiz bir kod çizgisinin yanındaki sol olukluna tıklayın. Yürütülecek kodun bu olduğundan emin olun.
 
     ![Ek bileşen ayarlama](../debugger/media/snapshot-set-snappoint.png)
 
@@ -92,11 +92,11 @@ Bu öğreticide şunları yapacaksınız:
 
 ## <a name="take-a-snapshot"></a>Anlık görüntü alma
 
-Bir ek bileşen ayarlandıktan sonra, web sitenizin tarayıcı görünümüne gidip işaretlenmiş kod satırı çalıştırarak el ile anlık görüntü oluşturabilir veya kullanıcılarının site kullanımlarından bir anlık görüntü oluşturmasını bekleyebilirsiniz.
+Bir ek bileşen ayarlandıktan sonra, web sitenizin tarayıcı görünümüne gidip işaretlenmiş kod satırı çalıştırarak el ile bir anlık görüntü oluşturabilir veya kullanıcılarının site kullanımlarından bir anlık görüntü oluşturmasını bekleyebilirsiniz.
 
 ## <a name="inspect-snapshot-data"></a>Anlık görüntü verilerini inceleme
 
-1. Anlık görüntü, anlık görüntüye isabet Tanılama Araçları görüntülenir. Bu pencereyi açmak için Windows **> Show > hata ayıkla'Tanılama Araçları.**
+1. Anlık görüntü, anlık görüntüye isabet Tanılama Araçları görüntülenir. Bu pencereyi açmak için Hata **ayıkla'> Windows > Show Tanılama Araçları**.
 
     ![Ek bileşen noktası açma](../debugger/media/snapshot-diagsession-window.png)
 
@@ -114,39 +114,39 @@ Ayrıca, uygulamanıza daha fazla ek bileşen ekleyebilir ve Koleksiyonu Güncel
 
 ## <a name="set-a-conditional-snappoint"></a>Koşullu ek bileşen ayarlama
 
-Uygulamanızda belirli bir durumu yeniden oluşturmayı zorlaştırıyorsa, koşullu bir anlık görüntü noktası kullanmayı düşünün. Koşullu anlık görüntü noktaları, bir değişken, incelemek istediğiniz belirli bir değeri içerdiğinde olduğu gibi, bir anlık görüntünün ne zaman ele alıp denetistemediğinizi denetlemenize yardımcı olur. İfadeleri ifade, filtre veya isabet sayısı kullanarak ayarlayabilirsiniz.
+Uygulamanıza belirli bir durumu yeniden oluşturmak zorsa koşullu ek bileşen kullanmayı göz önünde bulundurabilirsiniz. Koşullu ek bileşen, bir değişkenin incelemek istediğiniz belirli bir değeri içerdiği durumlarda anlık görüntü alma zamanlarını denetlemeye yardımcı olur. İfadeleri, filtreleri veya isabet sayılarını kullanarak koşulları ayarlayabilirsiniz.
 
-#### <a name="to-create-a-conditional-snappoint"></a>Koşullu bir anlık görüntü noktası oluşturmak için
+#### <a name="to-create-a-conditional-snappoint"></a>Koşullu ek bileşen oluşturmak için
 
-1. Bir anlık görüntü noktası simgesine (boş top) sağ tıklayın ve **Ayarlar**' ı seçin.
+1. Bir anlık görüntü simgesine (boş top) sağ tıklayın ve **Ayarlar.**
 
    ![Ayarlar'ı seçme](../debugger/media/snapshot-snappoint-settings.png)
 
-1. Anlık görüntü noktası ayarları penceresinde bir ifade yazın.
+1. Ek bileşen ayarları penceresinde bir ifade yazın.
 
-   ![Bir ifade yazın](../debugger/media/snapshot-snappoint-conditions.png)
+   ![İfade yazma](../debugger/media/snapshot-snappoint-conditions.png)
 
-   Önceki çizimde, anlık görüntü yalnızca ne zaman anlık görüntü noktası için alınır `visitor.FirstName == "Dan"` .
+   Yukarıdaki çizimde anlık görüntü yalnızca anlık görüntü için olduğunda `visitor.FirstName == "Dan"` alınır.
 
-## <a name="set-a-logpoint"></a>Günlüğe kaydetme noktası ayarlama
+## <a name="set-a-logpoint"></a>Günlük noktası ayarlama
 
-Anlık görüntü noktası isabet edildiğinde bir anlık görüntü almaya ek olarak, bir anlık görüntü noktasını bir iletiyi günlüğe kaydetmek için de yapılandırabilirsiniz (yani, bir logpoint oluşturun). Uygulamanızı yeniden dağıtmak zorunda kalmadan günlüğe kaydetme noktaları ayarlayabilirsiniz. Günlüğe kaydetme noktaları neredeyse yürütülür ve çalışan uygulamanız üzerinde hiçbir etkisi veya yan etkiye neden olmaz.
+Bir anlık görüntüye isabet olduğunda anlık görüntü almaya ek olarak, bir ileti günlüğe (yani, bir günlük noktası oluşturmak) için bir anlık görüntü de yapılandırabilirsiniz. Oturum açma noktaları, uygulamanın yeniden bir şekilde yenidend bayılamanıza gerek kalmadan ayarlandırabilirsiniz. Günlük noktaları sanal olarak yürütülür ve çalışan uygulamanıza hiçbir etkisi veya yan etkisi olmaz.
 
-#### <a name="to-create-a-logpoint"></a>Günlüğe kaydetme noktası oluşturmak için
+#### <a name="to-create-a-logpoint"></a>Günlük noktası oluşturmak için
 
-1. Bir anlık görüntü noktası simgesine (mavi altıon) sağ tıklayın ve **Ayarlar**' ı seçin.
+1. Bir ek bileşen simgesine (mavi altıgen) sağ tıklayın ve **Ayarlar.**
 
-1. Anlık görüntü noktası ayarları penceresinde **Eylemler**' i seçin.
+1. Ek bileşen ayarları penceresinde Eylemler'i **seçin.**
 
-    ![Günlüğe kaydetme noktası oluşturma](../debugger/media/snapshot-logpoint.png)
+    ![Günlük noktası oluşturma](../debugger/media/snapshot-logpoint.png)
 
-1. **İleti** alanına, günlüğe kaydetmek istediğiniz yeni günlük iletisini girebilirsiniz. Ayrıca, günlük iletinizde değişkenleri küme ayraçları içine yerleştirerek değerlendirebilirsiniz.
+1. İleti **alanına,** günlüğe almak istediğiniz yeni günlük iletiyi girebilirsiniz. Ayrıca günlük iletinizin değişkenlerini küme ayraçlarına yerleştirerek de değerlendirebilirsiniz.
 
-    **Çıkış penceresi gönder**' i seçerseniz, günlüğe kaydetme noktası isabet edildiğinde ileti, tanılama araçları penceresinde görünür.
+    **Çıkış Penceresi'a** gönder'i seçerseniz, günlüğe kaydedilirse, ileti Tanılama Araçları görüntülenir.
 
-    ![Tanılama Araçları penceresindeki logpoint verileri](../debugger/media/snapshot-logpoint-output.png)
+    ![Tanılama Araçları penceresinde verileri günlüğe Tanılama Araçları noktası](../debugger/media/snapshot-logpoint-output.png)
 
-    Uygulama günlüğüne **gönder'i** seçerseniz, günlüğe kaydedilirse, ileti App Insights gibi `System.Diagnostics.Trace` (veya `ILogger` .NET Core'da) iletileri gördüğünüz her yerde [görüntülenir.](/azure/application-insights/app-insights-asp-net-trace-logs)
+    Uygulama günlüğüne **gönder'i** seçerseniz, günlüğe kaydedilirse, ileti App Analizler gibi üzerinden `System.Diagnostics.Trace` (veya `ILogger` .NET Core'da) iletileri gördüğünüz her [yerde görüntülenir.](/azure/application-insights/app-insights-asp-net-trace-logs)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

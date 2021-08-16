@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, işlemin üzerinde çalıştığı sunucu hakkındaki bilgilere erişim sağlar.
+description: Bu arabirim, işlemi çalıştıran sunucu hakkında bilgilere erişim sağlar.
 title: IDebugCoreServer3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 51f5f41b-a5a4-4df0-a703-41f3d1811d7f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab605db6a49b8b7cc9893692ff1bb9e6da15171f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7ab3323f7377f31e187dbb2642781ca54584b762d8c616ea9cba3eb37f50c3c5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088152"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377796"
 ---
 # <a name="idebugcoreserver3"></a>IDebugCoreServer3
-Bu arabirim, işlemin üzerinde çalıştığı sunucu hakkındaki bilgilere erişim sağlar.
+Bu arabirim, işlemi çalıştıran sunucu hakkında bilgilere erişim sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,35 +30,35 @@ Bu arabirim, işlemin üzerinde çalıştığı sunucu hakkındaki bilgilere eri
 IDebugCoreServer3 : IDebugCoreServer2
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Visual Studio bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Visual Studio arabirimini uygulayan bir uygulamadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirimi bir [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) arabiriminden almak için [QueryInterface](/cpp/atl/queryinterface) kullanın. [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) çağrısı da bu arabirimi döndürebilir. Bu arabirim, genellikle bir sunucu üzerinde programları (yerel veya uzak) başlatmak için özel bir bağlantı noktası sağlayıcısı tarafından en sık kullanılır.
+ Bu arabirimi [bir IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) arabiriminden almak için [QueryInterface](/cpp/atl/queryinterface) kullanın. [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) çağrısı bu arabirimi de geri getirebilirsiniz. Bu arabirim genellikle özel bağlantı noktası sağlayıcıları tarafından programları bir sunucuda (yerel veya uzak) başlatmak için kullanılır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ [Bu arabirim, IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) arabiriminde yöntemlere ek olarak aşağıdaki yöntemleri de kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md)|Sunucunun adını alır.|
-|[GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)|Sunucu adının kolay bir sürümünü alır|
-|[EnableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-enableautoattach.md)|Belirli hata ayıklama altyapılarının, bu süreçler başlatıldığında otomatik olarak işlemlere eklemesini söyler.|
-|[DiagnoseWebDebuggingError](../../../extensibility/debugger/reference/idebugcoreserver3-diagnosewebdebuggingerror.md)|Otomatik iliştirme başarısız olduğunda belirli bir hata kodunu alır.|
-|[CreateInstanceInServer](../../../extensibility/debugger/reference/idebugcoreserver3-createinstanceinserver.md)|Sunucuda hata ayıklama altyapısının bir örneğini oluşturur.|
-|[QueryIsLocal](../../../extensibility/debugger/reference/idebugcoreserver3-queryislocal.md)|Sunucunun çağıranın aynı makinede olup olmadığını belirten bir bayrak alır.|
-|[GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)|Sunucusuyla iletişim kurmak için kullanılan protokolü gösteren bir değer alır.|
-|[DisableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-disableautoattach.md)|Bu sunucunun bildiği tüm hata ayıklama motorları için otomatik iliştirme ayarlarını devre dışı bırakır.|
+|[GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md)|Sunucunun adını verir.|
+|[GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)|Sunucu adının kolay bir sürümünü alma|
+|[EnableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-enableautoattach.md)|Belirli hata ayıklama altyapılarının, bu işlemler başlatılırken işlemlere otomatik olarak iliştirmelerini söyler.|
+|[DiagnoseWebDebuggingError](../../../extensibility/debugger/reference/idebugcoreserver3-diagnosewebdebuggingerror.md)|Otomatik ekleme başarısız olduğunda belirli bir hata kodunu alır.|
+|[CreateInstanceInServer](../../../extensibility/debugger/reference/idebugcoreserver3-createinstanceinserver.md)|Sunucuda bir hata ayıklama altyapısı örneği oluşturur.|
+|[QueryIsLocal](../../../extensibility/debugger/reference/idebugcoreserver3-queryislocal.md)|Sunucunun çağıranla aynı makinede olup olmadığını belirten bir bayrak verir.|
+|[GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)|Sunucuyla iletişim kurmak için kullanılan protokolü belirten bir değer verir.|
+|[DisableAutoAttach](../../../extensibility/debugger/reference/idebugcoreserver3-disableautoattach.md)|Bu sunucunun bildiği tüm hata ayıklama altyapıları için tüm otomatik ekleme ayarlarını devre dışı verir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Özel bir bağlantı noktası sağlayıcısı, bir [olay](../../../extensibility/debugger/reference/idebugportevents2-event.md)çağrısında [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) arabirimini alır. `IDebugCoreServer3`Arabirim, bu arabirimden elde edilebilir.
+ Özel bir bağlantı noktası sağlayıcı, [Event çağrısında IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) arabirimini [alır.](../../../extensibility/debugger/reference/idebugportevents2-event.md) Arabirim `IDebugCoreServer3` bu arabirimden edinebilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-denetim akışı etkinlik tasarımcıları
-description: Bir iş akışı içinde akışı denetlemek için kullanılan sistem tarafından belirtilen etkinlikler olan denetim akışı etkinlik tasarımcıları hakkında bilgi edinin.
+title: İş Akışı Tasarımcısı - Denetim Flow Etkinlik Tasarımcıları
+description: Bir iş akışı Flow için sistem tarafından sağlanan etkinlikler olan Denetim Ve Etkinlik Tasarımcıları hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,18 +8,19 @@ ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 844d80c8619abe972ef47e36587514db7251b8df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3ebf1ee129c047b020028bc08de591e2e0b4dcc0343debf2d841c7bed0cabc94
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955638"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408025"
 ---
 # <a name="control-flow-activity-designers"></a>Akış Etkinliği Tasarımcılarını denetleme
 
-İş Akışı Tasarımcısı, iş akışlarınızı oluştururken kullanabileceğiniz, sistem tarafından sağlanmış bir dizi etkinliği içerir. Bu bölüm, bir iş akışı içindeki akışı denetlemek için kullanılan sistem tarafından sağlanmış etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri anlatmaktadır ve bunların nasıl kullanılacağına ilişkin yönergeler sağlar.
+İş Akışı Tasarımcısı, iş akışlarınızı oluşturmak için kullanabileceğiniz bir dizi sistem tarafından sağlanan etkinlik içerir. Bu bölüm, bir iş akışı içindeki akışı kontrol etmek için kullanılan sistem tarafından sağlanan etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri açıklar ve bunların nasıl kullanımına ilişkin rehberlik sağlar.
 
 ## <a name="reference"></a>Başvuru
 
@@ -63,7 +64,7 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 

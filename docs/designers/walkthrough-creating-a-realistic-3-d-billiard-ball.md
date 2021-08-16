@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: gerçekçi bir 3B bilardo topu oluşturma'
-description: Gölgelendirici tekniklerini doku kaynaklarıyla birleştirerek, Visual Studio 'da gölgelendirici tasarımcısını ve görüntü düzenleyicisini kullanarak 3B mildo topu oluşturmayı öğrenin.
+title: 'adım adım kılavuz: Gerçekçi bir 3D Spor Top Oluşturma'
+description: Gölgelendirici tekniklerini doku kaynaklarıyla birleştirerek gölgelendirici Tasarımcısı ve Görüntü Düzenleyicisi'ni kullanarak Visual Studio topu nasıl oluşturabilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,210 +8,211 @@ ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: e5469825b8d81a210fdb699dc9afeb7c6689953b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 556684893a3e909b2fc252bffc702bfc2de39a3608f811db6df98a413814ca9c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896457"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121239772"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>İzlenecek yol: Gerçekçi bir 3B bilardo topu oluşturma
 
-Bu izlenecek yol, Visual Studio 'daki gölgelendirici tasarımcısını ve görüntü düzenleyicisini kullanarak gerçekçi bir 3B mildo topu oluşturmayı gösterir. Milbdo topu 3B görünümü, çeşitli gölgelendirici tekniklerini uygun doku kaynaklarıyla birleştirerek elde edilir.
+Bu kılavuzda, gölgelendirici Tasarımcısı ve Görüntü Düzenleyicisi'ni kullanarak gerçek bir 3D güneş topu oluşturma Visual Studio. Çeşitli gölgelendirici teknikleri uygun doku kaynaklarıyla birleştirerek, oyun toplarının 3B görünümü elde edilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu yönergeyi tamamlamak için aşağıdaki bileşenler ve beceriler gereklidir:
+Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ve becerilere ihtiyacınız vardır:
 
-- Haziran 2010 DirectX SDK 'sına dahil edilen DirectX doku aracı gibi dokuları bir küp haritasına dönüştürmek için bir araç.
+- Haziran 2010 DirectX SDK'sine dahil edilen DirectX Doku Aracı gibi dokuları bir küp haritasına birleştirmeye yönelik bir araç.
 
-- Visual Studio 'da görüntü Düzenleyicisi ile benzerlik.
+- Visual Studio'da Görüntü Düzenleyicisi hakkında Visual Studio.
 
-- Visual Studio 'da gölgelendirici tasarlayıcısıyla benzerlik.
+- Visual Studio'da Gölgelendirici Tasarımcısı hakkında Visual Studio.
 
 ## <a name="create-the-basic-appearance-with-shape-and-texture"></a>Şekil ve doku ile temel görünümü oluşturma
 
-BİLGİSAYAR grafiklerde, en temel görünüm öğeleri şekil ve renklerdir. Bir bilgisayar simülasyonu içinde, gerçek dünyadaki bir nesnenin şeklini temsil eden bir 3B model kullanılması yaygındır. Renk ayrıntısı daha sonra doku eşlemesi kullanılarak modelin yüzeyine uygulanır.
+Bilgisayar grafiklerde görünümün en temel öğeleri şekil ve renktir. Bilgisayar benzetimsinde, gerçek dünya nesnesinin şeklini temsil etmek için 3D model kullanmak yaygındır. Daha sonra renk ayrıntısı, doku haritası kullanılarak modelin yüzeyine uygulanır.
 
-Genellikle, bir sanatçının kullanabileceğiniz bir 3B model oluşturmasını isteyebilirsiniz, ancak milbdo topu ortak bir şekil (Sphere) olduğundan, gölgelendirici tasarımcısının zaten yerleşik olarak bulunan uygun bir modeli vardır.
+Genellikle, bir ressamdan kullanabileceğiniz bir 3D model oluşturması gerekir, ancak bir topun ortak bir şekil (bir küre) olması nedeniyle Gölgelendirici Tasarımcısı'nın zaten yerleşik olarak uygun bir modeli vardır.
 
-Sphere, gölgelendirici tasarımcısında varsayılan önizleme şekilsidir; Gölgelendiricinizi önizlemek için şu anda farklı bir şekil kullanıyorsanız sphere öğesine geri dönün.
+Sphere, Gölgelendirici Tasarımcısı'nda varsayılan önizleme şeklidir; Şu anda gölgelendiricinizin önizlemesini görmek için farklı bir şekil kullanıyorsanız, küreye geri dön.
 
-### <a name="to-preview-the-shader-by-using-a-sphere"></a>Sphere kullanarak gölgelendiriciyi önizlemek için
+### <a name="to-preview-the-shader-by-using-a-sphere"></a>Bir küre kullanarak gölgelendiricinin önizlemesini görmek için
 
-- Gölgelendirici Tasarımcısı araç çubuğunda **Sphere Ile Önizleme** ' yi seçin.
+- Gölgelendirici Tasarımcısı araç çubuğunda Sphere ile **önizleme'yi seçin.**
 
-Sonraki adımda, modele doku uygulayan bir gölgelendirici programı oluşturacaksınız, ancak öncelikle kullanabileceğiniz bir doku oluşturmanız gerekir. Bu izlenecek yol, Visual Studio 'nun bir parçası olan görüntü düzenleyicisini kullanarak dokuyu oluşturmayı gösterir, ancak dokuyu uygun bir biçimde kaydedebilen herhangi bir görüntü düzenleyicisini kullanabilirsiniz.
+Sonraki adımda modele doku uygulanan bir gölgelendirici programı oluşturacağız ancak önce kullanabileceğiniz bir doku oluşturmanız gerekir. Bu kılavuzda, Visual Studio'nin bir parçası olan Görüntü Düzenleyicisi'ni kullanarak doku oluşturma adımlarını gösterir, ancak dokuyu uygun bir biçimde kaydeden herhangi bir görüntü düzenleyicisini kullanabilirsiniz.
 
-**Özellikler** penceresinin ve **araç kutusunun** görüntülendiğinden emin olun.
+Özellikler penceresinin **ve Araç** Kutusunun **görüntülendiğinden** emin olun.
 
-### <a name="to-create-a-billiard-ball-texture-by-using-the-image-editor"></a>Görüntü düzenleyicisini kullanarak milsedo topu dokusu oluşturmak için
+### <a name="to-create-a-billiard-ball-texture-by-using-the-image-editor"></a>Görüntü Düzenleyicisi'ni kullanarak bir yumuşak top dokusu oluşturmak için
 
-1. Birlikte çalışmak için bir doku oluşturun. Projenize doku ekleme hakkında daha fazla bilgi için bkz. [Görüntü Düzenleyicisi](../designers/image-editor.md)'ndeki Başlarken bölümü.
+1. Çalışmak için bir doku oluşturun. Projenize doku ekleme hakkında bilgi için Görüntü Düzenleyicisi'nde Başlarken bölümüne [bakın.](../designers/image-editor.md)
 
-2. Genişliği yüksekliğinin iki katı olacak şekilde görüntü boyutunu ayarlayın; Bu, bir dokunun mildo topu küresel yüzeyiyle eşlenme yöntemi nedeniyle gereklidir. Görüntüyü yeniden boyutlandırmak için, **Özellikler** penceresinde **Genişlik** ve **Yükseklik** özellikleri için yeni değerler belirtin. Örneğin, genişliği 512 ve yüksekliği 256 olarak ayarlayın.
+2. Görüntü boyutunu genişliği iki kat yüksek olacak şekilde ayarlayın; Bu, bir dokuyu topun küresel yüzeyine eşlenmiş olduğu için gereklidir. Görüntüyü yeniden boyutlandırmak için Özellikler **penceresinde** Genişlik ve Yükseklik özellikleri için **yeni** **değerler** belirtin. Örneğin, genişliği 512 ve yüksekliği 256 olarak ayarlayın.
 
-3. Milbdo topu için bir doku çizin ve bir dokunun Sphere üzerinde nasıl eşlendiğine dikkat edin.
+3. Bir dokuyu bir küreye nasıl eşlen olduğunu göz bulundurarak, oyun topu için bir doku çizin.
 
-    Doku şuna benzer görünmelidir:
+    Doku şuna benzer şekilde görünüyor olmalı:
 
-    ![Milbdo topu dokusu](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png)
+    ![Topun dokusu](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png)
 
-4. İsteğe bağlı olarak, bu dokunun depolama gereksinimlerini azaltmak isteyebilirsiniz. Bunu, yüksekliğinin eşleşmesi için dokunun genişliğini azaltarak yapabilirsiniz. Bu, dokuyu genişliğine göre sıkıştırır, ancak dokunun Sphere ile eşlenme yöntemi nedeniyle mildo topu işlendiğinde genişletilir. Yeniden boyutlandırdıktan sonra doku şuna benzer görünmelidir:
+4. İsteğe bağlı olarak, bu doku için depolama gereksinimlerini azaltmak istiyor olabilir. Bunu yapmak için doku genişliğini yüksekliğiyle eş olacak şekilde azaltarak silebilirsiniz. Bu, dokuyu genişliği boyunca sıkıştırır, ancak doku, küreye eşlenmiş olması nedeniyle, topun işlenmiş olduğu zaman genişletilir. Yeniden boyutlandırma sonrasında doku şuna benzer şekilde görünüyor:
 
-    ![Bir karede sıkıştırılan Milard dokusu](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png)
+    ![Kareye sıkıştırılmış dokuyu sıkıştırma](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png)
 
-   Şimdi bu dokuyu modele uygulayan bir gölgelendirici oluşturabilirsiniz.
+   Şimdi bu dokuyu modele uygulanan bir gölgelendirici oluşturabilirsiniz.
 
 ### <a name="to-create-a-basic-texture-shader"></a>Temel doku gölgelendiricisi oluşturmak için
 
-1. Çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
+1. Birlikte çalışacak bir DGSL gölgelendiricisi oluşturun. Projenize DGSL gölgelendiricisi ekleme hakkında bilgi için Gölgelendirici Tasarımcısı'Başlarken bölümüne [bakın.](../designers/shader-designer.md)
 
-    Varsayılan olarak, bir gölgelendirici grafiği şöyle görünür:
+    Varsayılan olarak gölgelendirici grafiği aşağıdaki gibi görünür:
 
-    ![Varsayılan Gölgelendirici Grafiği](../designers/media/gfx_shader_demo_billiard_step_0.png)
+    ![Varsayılan gölgelendirici grafiği](../designers/media/gfx_shader_demo_billiard_step_0.png)
 
-2. Varsayılan gölgelendiriciyi, bir doku örneğinin değerini geçerli piksele uygulanacak şekilde değiştirin. Gölgelendirici Grafiği şöyle görünmelidir:
+2. Doku örneğinin değerini geçerli piksele uygulaması için varsayılan gölgelendiriciyi değiştirme. Gölgelendirici grafiği aşağıdaki gibi görünür:
 
-    ![Bir nesneye doku uygulayan Gölgelendirici Grafiği](../designers/media/gfx_shader_demo_billiard_step_1.png)
+    ![Nesneye doku uygulanan gölgelendirici grafı](../designers/media/gfx_shader_demo_billiard_step_1.png)
 
-3. Doku özelliklerini yapılandırarak önceki yordamda oluşturduğunuz dokuyu uygulayın. **Doku örneği** düğümünün **doku** özelliğinin değerini **Doku1** olarak ayarlayın ve ardından aynı özellik penceresinde **Doku1** Property grubunun **filename** özelliğini kullanarak doku dosyasını belirtin.
+3. Doku özelliklerini yapılandırarak önceki yordamda oluşturduğunuz dokuyu uygulama. Doku Örneği düğümünün **Texture**  özelliğinin değerini **Texture1** olarak ayarlayın ve ardından aynı özellik penceresinde texture1 özellik grubunun **Filename** özelliğini kullanarak doku dosyasını belirtin. 
 
-   Gölgelendiricinize doku uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: temel doku gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-texture-shader.md).
+   Gölgelendiricinize doku uygulama hakkında daha fazla bilgi için bkz. Nasıl yapılır: Temel doku [gölgelendiricisi oluşturma.](../designers/how-to-create-a-basic-texture-shader.md)
 
-   Milbdo topu artık şuna benzer görünmelidir:
+   Artık topun şuna benzer olması gerekir:
 
-   ![Dokulu mildo topu 'nın bir kapatması](../designers/media/gfx_shader_demo_.png)
+   ![Doku topa yakın bir şekilde](../designers/media/gfx_shader_demo_.png)
 
 ## <a name="create-depth-with-the-lambert-lighting-model"></a>Lambert aydınlatma modeliyle derinlik oluşturma
 
-Şimdiye kadar, kolayca tanınabilir bir milbdo topu oluşturdunuz. Bununla birlikte, düz ve ilginç olmayan bir şekilde görünür. bir milde, bir milde bir çoğaltmayla bir Biard topu resmine benzer. Bilardo topu yüzeyindeki her bir pikselin aynı ışık miktarını alıp aldığına benzer şekilde davranan, düz görünüm, uyarlaması gölgelendiriciden elde olur.
+Şimdiye kadar kolayca tanınabilir bir at topu oluşturdunız. Ancak düz ve ilginci olmayan bir şekilde görünür. Daha çok, ikna edici bir çoğaltmadan çok bir atlı top resmi gibi görünür. Düz görünüm, basit gölgelendiriciden elde eder ve bu da topun yüzeyindeki her pikselin aynı miktarda ışığı alır gibi davranmasıdır.
 
-Gerçek dünyada, ışık doğrudan bir açık kaynak sunan yüzeyler üzerinde en parlak test ve ışık kaynağına eğik açılı olan yüzeyler üzerinde daha az parlak bir şekilde görünür. Bunun nedeni, açık ışındaki enerji, yüzey doğrudan ışık kaynağına doğru yüzlü en küçük yüzey alanına dağıtılır. Yüzey, ışık kaynağından uzakta olduğu için, aynı enerji miktarı giderek daha büyük bir yüzey alanı üzerinden dağıtılır. Bir ışık kaynağından uzaklaşan bir yüzey hiç hafif bir enerji almaz ve tamamen koyu bir görünüme neden olur. Bir nesnenin yüzeyi genelinde parlaklığın varyansı, bir nesnenin şeklini göstermeye yardımcı olan önemli bir görsel destesi; Bu olmadan, nesne düz görünür.
+Gerçek dünyada ışık, doğrudan bir ışık kaynağıyla yüz yüze olan yüzeylerde en parlak görünür ve ışık kaynağına belirsiz bir açıda olan yüzeylerde daha az parlak görünür. Bunun nedeni, yüzey doğrudan ışık kaynağıyla yüzıldığında ışık ışığının enerjinin en küçük yüzey alanına dağıtılmasıdır. Yüzey ışık kaynağından uzaklaşıyorsa, aynı enerji miktarı giderek daha büyük bir yüzey alanına dağıtılır. Bir ışık kaynağından uzakta yüzleri olan bir yüzey hiç ışık enerjisi alamadan tamamen koyu bir görünüm elde eder. Bir nesnenin yüzeyindeki parlaklığa sahip olan bu varyans, bir nesnenin şeklinin belirt 300 abdlik olduğunu gösteren önemli bir görsel ipucu oluşturur. bu olmadan nesne düz görünür.
 
-BİLGİSAYAR grafiklerde, *aydınlatma modelleri*— karmaşık, gerçek dünya aydınlatma etkileşimlerinin basitleştirilmesi, gerçek dünya ışıksının görünümünü çoğaltmak için kullanılır. Lambert aydınlatma modeli, önceki paragrafta açıklandığı gibi, bir nesnenin yüzeyi genelinde dağıtılmış olan ışık miktarını değiştirir. Milbdo topu daha ikna edici bir 3B görünümü sağlamak için gölgelendiricinize Lambert aydınlatma modeli ekleyebilirsiniz.
+Bilgisayar grafiklerinde, *gerçek* dünya aydınlatması görünümünü çoğaltmak için karmaşık, gerçek dünya aydınlatma etkileşimlerinin basitleştirilmiş yaklaşıkları olan aydınlatma modelleri kullanılır. Lambert aydınlatma modeli, önceki paragrafta açıklandığı gibi bir nesnenin yüzeyine yansıyan ışığın miktarını değişkenlik gösterir. Lambert aydınlatma modelini gölgelendiricinize ek olarak topun daha iyi bir 3D görünümüne sahip olduğunu gösterirsiniz.
 
-### <a name="to-add-lambert-lighting-to-your-shader"></a>Gölgelendiricinize Lambert aydınlatma eklemek için
+### <a name="to-add-lambert-lighting-to-your-shader"></a>Gölgelendiricinize Lambert aydınlatması eklemek için
 
-- Gölgelendiricinizi, Lambert aydınlatma değeri ile doku örneğinin değerini modüle olacak şekilde değiştirin. Gölgelendirici grafiğiniz şuna benzemelidir:
+- Lambert aydınlatma değeriyle doku örneğinin değerini değiştirmek için gölgelendiricinizi değiştirme. Gölgelendirici grafın aşağıdaki gibi olması gerekir:
 
-   ![Lambert aydınlatma eklenmiş Gölgelendirici Grafiği](../designers/media/gfx_shader_demo_billiard_step_2.png)
+   ![Lambert aydınlatması eklenmiş gölgelendirici grafiği](../designers/media/gfx_shader_demo_billiard_step_2.png)
 
-- İsteğe bağlı olarak, gölgelendirici grafiğinin **Materialdağıt** özelliğini yapılandırarak aydınlatmanın nasıl davranacağını ayarlayabilirsiniz. Gölgelendirici grafiğinin özelliklerine erişmek için tasarım yüzeyinde boş bir alan seçin ve ardından **Özellikler** penceresinde erişmek istediğiniz özelliği bulun.
+- İsteğe bağlı olarak gölgelendirici grafiğinin **MaterialDiffuse** özelliğini yapılandırarak aydınlatmanın nasıl davranacağını ayarlayabilirsiniz. Gölgelendirici grafiğinin özelliklerine erişmek için tasarım yüzeyinin boş bir alanı seçin ve ardından Özellikler penceresinde erişmek istediğiniz **özelliği** bulun.
 
-Gölgelendiricinize Lambert aydınlatmanın nasıl uygulanacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: temel Lambert gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-lambert-shader.md).
+Gölgelendiricinize Lambert aydınlatması uygulama hakkında daha fazla bilgi için bkz. Nasıl [yapılır: Temel Lambert gölgelendiricisi oluşturma.](../designers/how-to-create-a-basic-lambert-shader.md)
 
-Lambert aydınlatma uygulanmış olarak, milbdo topu şuna benzer görünmelidir:
+Lambert aydınlatması uygulandığında, topun şuna benzer olması gerekir:
 
-![Dokulu ve aydınlatmalı bilardo topu](../designers/media/gfx_shader_demo_billiard_ball_2.png)
+![Doyma ve ışıklı masa toplarının yakın yakınlıkları](../designers/media/gfx_shader_demo_billiard_ball_2.png)
 
-## <a name="enhance-the-basic-appearance-with-specular-highlights"></a>Yansımalı vurgularla temel görünümü geliştirin
+## <a name="enhance-the-basic-appearance-with-specular-highlights"></a>Speculer vurgularla temel görünümü geliştirme
 
-Lambert aydınlatma modeli, yalnızca doku gölgelendiricide bulunmayan şekil ve boyutun anlamlı olmasını sağlar. Ancak, milbdo topunun hala biraz görünümü vardır.
+Lambert aydınlatma modeli, yalnızca doku gölgelendiricisinde olmayan şekil ve boyut anlayışını sağlar. Öte yandan top topu hala biraz daha güzel bir görünüme sahiptir.
 
-Gerçek bir mildo topu genellikle ışığın bir kısmını yansıtan parlak bir sontır. Bu yansıtılan ışığın bazıları, bir yüzeyin yansıtma özelliklerinin benzetimini yaparak yansımalı vurgularda sonuçlanır. Son özelliklere bağlı olarak, vurgular yerelleştirilmiş veya geniş, yoğun veya hafif olabilir. Bu yansımalı yansımalar, bir ışık kaynağı, yüzey yönü ve kamera konumu arasındaki ilişki kullanılarak modellenir; Yani, yüzey yönü doğrudan kameraya yansıtıldığınızda vurgu en yoğun olur ve yansıma daha az doğrudan olduğunda daha az yoğun olur.
+Gerçek bir topun genellikle üzerine düşen ışığın bir kısmını yansıtan bir sözlük bitişi vardır. Bu yansıyan ışığın bazıları, yüzeyin yansıtıcı özelliklerinin benzetimini yapılan speculer vurgularla sonuçlanır. Bitişin özelliklerine bağlı olarak vurgular yerelleştirilmiş veya geniş, yoğun veya ince olabilir. Bu specular yansımalar bir ışık kaynağı, yüzeyin yönü ve kamera konumu arasındaki ilişki kullanılarak modellendi. Diğer bir ifadeyle vurgu, yüzeyin yönü ışık kaynağını doğrudan kameraya yansıtıyorsa vurgu en yoğundur ve yansıma daha az doğrudan olduğunda daha az yoğundur.
 
-Phong aydınlatma modeli, önceki paragrafta açıklandığı gibi yansımalı vurguları dahil etmek için Lambert aydınlatma modeli üzerinde oluşturulur. Milbdo topu, daha ilgi çekici bir görünüm elde eden bir sanal bitiş sağlamak için, gölgelendirici için Phong aydınlatma modelini ekleyebilirsiniz.
+Piser aydınlatma modeli, lambert aydınlatma modelini, önceki paragrafta açıklandığı gibi specular vurgular içerecek şekilde inşa edilir. Piser aydınlatma modelini gölgelendiricinize ek olarak, daha ilgi çekici bir görünüm elde etmek için topun simülasyonunu bitirin.
 
-### <a name="to-add-specular-highlights-to-your-shader"></a>Gölgelendiricinize yansımalı vurgular eklemek için
+### <a name="to-add-specular-highlights-to-your-shader"></a>Gölgelendiricinize specular vurgular eklemek için
 
-1. Gölgelendiricinizi, ek karıştırma kullanarak yansımalı katkı içerecek şekilde değiştirin. Gölgelendirici grafiğiniz şuna benzemelidir:
+1. Ek karıştırma kullanarak gölgelendiricinizi specular katkıyı içerecek şekilde değiştirme. Gölgelendirici grafın aşağıdaki gibi olması gerekir:
 
-    ![Yansımalı aydınlatma eklenen Gölgelendirici Grafiği](../designers/media/gfx_shader_demo_billiard_step_3.png)
+    ![Özel aydınlatma eklenmiş gölgelendirici grafiği](../designers/media/gfx_shader_demo_billiard_step_3.png)
 
-2. İsteğe bağlı olarak, gölgelendirici grafiğinin yansımalı özelliklerini (**materialspecsel** ve **MaterialSpecularPower**) yapılandırarak, yansımalı vurgulamanın nasıl davranacağını ayarlayabilirsiniz. Gölgelendirici grafiğinin özelliklerine erişmek için tasarım yüzeyinde boş bir alan seçin ve **Özellikler** penceresinde erişmek istediğiniz özelliği bulun.
+2. İsteğe bağlı olarak, gölgelendirici grafiğinin specular özelliklerini (**MaterialSpecular** ve **MaterialSpecularPower**) yapılandırarak, specular vurgulamanın davranışlarını ayarlayabilirsiniz. Gölgelendirici grafiğinin özelliklerine erişmek için tasarım yüzeyinin boş bir alanı seçin ve özellikler **penceresinde** erişmek istediğiniz özelliği bulun.
 
-   Gölgelendiricinize yansımalı vurguların nasıl uygulanacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: temel bir Phong gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-phong-shader.md).
+   Gölgelendiricinize specular vurgulamaları uygulama hakkında daha fazla bilgi için [bkz. Nasıl yapılır: Temel P shader oluşturma.](../designers/how-to-create-a-basic-phong-shader.md)
 
-   Yansımalı vurgulamanın uygulanmış olması, milbdo topu şuna benzer görünmelidir:
+   Speculer vurgulama uygulandığında, topun şuna benzer olması gerekir:
 
-   ![Bilardo topu, yansımalı olarak eklendi](../designers/media/gfx_shader_demo_billiard_ball_3.png)
+   ![Specular eklenmiş olarak at top yakını](../designers/media/gfx_shader_demo_billiard_ball_3.png)
 
-## <a name="create-a-sense-of-space-by-reflecting-the-environment"></a>Ortamı yansıtarak alan hissi oluşturma
+## <a name="create-a-sense-of-space-by-reflecting-the-environment"></a>Ortamı yansıtarak alan algısı oluşturma
 
-Lekelsel açıktonlar uygulandıktan sonra, milbdo topu oldukça ikna edici görünüyor. Doğru şekil, doğru boyama işi ve sağ bitiş. Ancak, milbdo topunun, ortamının bir parçası gibi daha fazla görünmesini sağlayacak bir teknik de daha vardır.
+Specular vurgular uygulandığında, topun oldukça ikna edici görünüyor. Doğru şekle, doğru boyaya ve doğru bitişe sahip. Öte yandan yine de topun ortamının bir parçası gibi bir görünüme sahip olacak bir teknik daha vardır.
 
-Gerçek bir milyardo topu yakından incelerseniz parlak yüzeyinin yalnızca yansımalı vurgular sergilemediğini, ancak dünyanın her yerindeki dünyanın bir görüntüsünü daha da yansıttığını görebilirsiniz. Bu yansımanın benzetimini, bir doku olarak ortamın bir görüntüsünü kullanarak ve her pikselin son rengini belirleyebilmek için modelin kendi dokusuyla birleştirerek benzeleyebilirsiniz. İstediğiniz bitiş türüne bağlı olarak, yansıma dokusunun daha fazlasını veya daha azını, gölgelendirici geri kalanı ile birlikte birleştirebilirsiniz. Örneğin, bir yansıtma gibi yüksek oranda yansıtmalı bir yüzeyi taklit eden bir gölgelendirici yalnızca yansıma dokusunu kullanabilir, ancak bir milde bulunan bir bilardo topu gibi daha hafif bir yansımaya benzetim yapan bir gölgelendirici, yalnızca yansıma dokusunun değerinin küçük bir kısmını, gölgelendirici hesaplamasının geri kalanı ile birleştirebilirler.
+Gerçek bir oyun topuna yakından bakarsanız, bunun sözlük yüzeyinin yalnızca speculer vurgular sergileyemese de çevresindeki dünyanın bir görüntüsünü de yansıtdığını fark edersiniz. Ortamın bir görüntüsünü doku olarak kullanarak ve modelin kendi dokusuyla birleştirerek her pikselin son rengini belirleyerek bu yansımanın benzetimini sebilirsiniz. Ne tür bir bitiş istediğinize bağlı olarak, yansıma dokusunda daha fazla veya daha azı ile gölgelendiricinin geri kalanını birleştirin. Örneğin, yansıtma gibi yüksek oranda yansıtıcı bir yüzeyin benzetimini yapılan gölgelendirici yalnızca yansıma dokusunu kullanabilir, ancak bir gölgelendirici topunda bulunan gibi daha hafif bir yansımayı simüle etmek, yansıma dokusu değerinin yalnızca küçük bir kısmını gölgelendirici hesaplamanın geri kalanıyla bir araya toplar.
 
-Tabii ki, yansıtılan görüntüyü modelin doku haritasını uyguladığınız şekilde modele uygulamanız yeterlidir. Bunu yaptıysanız, dünyanın yansıması, yansıma kendisine tutkallanır gibi mildo topu ile hareket edecektir. Bir yansıma herhangi bir yönden gelebileceğinden, herhangi bir açıda yansıma eşleme değeri sağlamak için bir yol ve yansıma haritasını dünyaya göre yönlendirmeye tutmanın bir yolu vardır. Bu gereksinimleri karşılamak için, küpün yüzlerini oluşturmak üzere düzenlenmiş altı doku sağlayan, *küp Haritası* adı verilen özel bir doku eşlemi türü kullanabilirsiniz. Bu küpün içinden bir doku değeri bulmak için herhangi bir yöne işaret edebilirsiniz. Küpün her tarafındaki dokular ortamın görüntülerini içeriyorsa, küpün yüzeyinde doğru konumu örnekleyerek herhangi bir yansımanın benzetimini yapabilirsiniz. Kübü dünyaya hizalı tutarak ortamın doğru bir yansımasını alırsınız. Küpün örneklendiği yeri tespit etmek için, film yüzeyinin yüzeyini yalnızca nesnenin yüzeyi dışına hesaplayıp 3B doku koordinatları olarak kullanırsınız. Küp haritalarını bu şekilde kullanmak, *ortam eşleme* olarak bilinen yaygın bir tekniktir.
+Elbette, modelin doku haritasını uygulamakla aynı şekilde modele yansıtilen görüntüyü uygulayanın bir yolu değildir. Böyle bir şey yaptıysanız, dünyanın yansımaları, yansıma ona yapıştırılmış gibi hareket eder. Yansıma herhangi bir yönden geleyeli, herhangi bir açı için yansıma haritası değeri sağlamanın bir yolunu ve yansıma haritasını dünyaya göre yönlendiren bir yol gerekir. Bu gereksinimleri karşılamak için küpün kenarlarını oluşturmak üzere düzenlenmiş altı doku sağlayan, küp haritası adı verilen özel bir doku eşlemesi kullanabilirsiniz. Bu küpün içinden herhangi bir yöne işaret ediyor ve bir doku değeri bulabilirsiniz. Küpün her tarafındaki dokular ortamın görüntülerini içeriyorsa, küpün yüzeyinde doğru konumu örneklemek için herhangi bir yansımanın benzetimini sebilirsiniz. Küpü dünyayla uyumlu tutarak ortamın doğru bir yansımasını elde edersiniz. Küpün örneklemenin nerede olacağını belirlemek için kamera vektörün nesnenin yüzeyinden yansımasını hesaplamalı ve ardından 3B doku koordinatları olarak kullanabilirsiniz. Küp eşlemelerini bu şekilde kullanmak, ortam eşlemesi olarak bilinen yaygın bir *tekniktir.*
 
-Ortam eşleme, önceki paragraflarda açıklandığı şekilde gerçek yansıma malzemelerde etkili bir şekilde bir yaklaşık bakış sağlar. Milbdo topu sahneye daha fazla topraklanmış olmasını sağlayan sanal bir son ek sağlamak için ortam eşlemeli yansımaları gölgelendiricinize karıştırabilirsiniz.
+Ortam eşlemesi, önceki paragraflarda açıklandığı gibi gerçek yansımaların verimli bir yaklaşık olarak tahmin edilir. Ortamla eşlenmiş yansımaları gölgelendiricinize karıştırarak siyah topun benzetimi yapılan bir sondur ve bu da topun sahnenin daha topraklanmış gibi görünmesini sağlar.
 
-İlk adım, küp harita dokusunu oluşturmaktır. Birçok uygulama türünde küp eşlemesinin içeriği, özellikle de yansıma ince veya ekranda belirgin bir alan kaplayacağından etkili olması gerekmez. Örneğin, birçok oyun, ortam eşleme için önceden hesaplanmış küp haritaları kullanır ve bu, yansımanın doğru olmadığı anlamına gelse de her bir yansıtıcı nesne için en yakın olanı kullanır. Bu, genellikle ikna edici bir etkisi için yeterince iyi bir seçimdir.
+İlk adım bir küp eşleme dokusu oluşturmaktır. Birçok uygulama türünde, özellikle yansıma hafif olduğunda veya ekranda belirgin bir alan kaplarken küp haritasının içeriğinin etkili olması için mükemmel olması gerek değildir. Örneğin, birçok oyun ortam eşlemesi için önceden hesaplanan küp eşlemeleri kullanır ve yansımanın doğru olmadığını gösterir ancak yalnızca her yansıtıcı nesneye en yakın olanı kullanır. Kaba bir tahmin bile genellikle ikna edici bir etki için yeterince iyidir.
 
-### <a name="to-create-textures-for-an-environment-map-by-using-the-image-editor"></a>Görüntü düzenleyicisini kullanarak bir ortam haritası için dokular oluşturmak için
+### <a name="to-create-textures-for-an-environment-map-by-using-the-image-editor"></a>Görüntü Düzenleyicisi'ni kullanarak ortam haritası için dokular oluşturmak için
 
-1. Birlikte çalışmak için bir doku oluşturun. Projenize doku ekleme hakkında daha fazla bilgi için bkz. [Görüntü Düzenleyicisi](../designers/image-editor.md)'ndeki Başlarken bölümü.
+1. Çalışmak için bir doku oluşturun. Projenize doku ekleme hakkında bilgi için Görüntü Düzenleyicisi'nde Başlarken bölümüne [bakın.](../designers/image-editor.md)
 
-2. Görüntü boyutunu genişliği yüksekliğine eşit olacak şekilde ayarlayın ve iki boyutlu bir üssü; Bu, küp eşlemesinin dizin oluşturma yöntemi nedeniyle gereklidir. Görüntüyü yeniden boyutlandırmak için, **Özellikler** penceresinde **Genişlik** ve **Yükseklik** özellikleri için yeni değerler belirtin. Örneğin, **Width** ve **Height** özelliklerinin değerini 256 olarak ayarlayın.
+2. Görüntü boyutunu, genişliğinin yüksekliğine eşit ve iki boyutlu bir güç olacak şekilde ayarlayın; Bu, bir küp eşlemesi dizinleme şeklinden dolayı gereklidir. Görüntüyü yeniden boyutlandırmak için Özellikler **penceresinde** Genişlik ve Yükseklik özellikleri için **yeni** **değerler** belirtin. Örneğin Genişlik ve Yükseklik özelliklerinin  **değerini** 256 olarak ayarlayın.
 
-3. Dokuyu dolduracak düz bir renk kullanın. Bu doku, milbiard tablosunun yüzeyine karşılık gelen küp eşlemesinin en altında yer alacak. Sonraki doku için kullandığınız rengi göz önünde bulundurun.
+3. Dokuyu doldurmak için düz bir renk kullanın. Bu doku, küp haritasının alt kısmında yer alır ve bu, tablodaki tablo yüzeyine karşılık gelecektir. Bir sonraki doku için kullanılan rengi unutmayın.
 
-4. İlk ile aynı boyutta olan ikinci bir doku oluşturun. Bu doku, bir Milard tablosunun yüzeyine ve taraflarına ve Milard tablo çevresindeki alana karşılık gelen küp eşleminin dört tarafında yinelenir. Alt dokudaki aynı rengi kullanarak bu dokuda Milard tablosunun yüzeyini çizdiğinizden emin olun. Doku şuna benzer görünmelidir:
+4. Birinciyle aynı boyutta ikinci bir doku oluşturun. Bu doku küp haritasının dört tarafında yinelenir. Bu, bir tablodaki yüzey ve kenarlara ve sonra da tablo çevresindeki alana karşılık gelecektir. Alt dokudakiyle aynı rengi kullanarak bu dokudaki tabloyu çizin. Doku şuna benzer şekilde görünüyor olmalı:
 
-    ![Küp harita 'in tarafları için doku](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png)
+    ![Küp haritasının kenarları için doku](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png)
 
-    Yansıma haritasının etkili olması için photogerçekçi olması gerektiğini unutmayın; Örneğin, bu makaledeki görüntüleri oluşturmak için kullanılan küp eşlemesi altı yerine yalnızca dört cep içerir.
+    Yansıma haritasının etkili olması için fotoğraf gerçekcül olması gerek olmadığını unutmayın; Örneğin, bu makaledeki görüntüleri oluşturmak için kullanılan küp haritası altı yerine yalnızca dört tane kullanılmıştır.
 
-5. Diğer kişilerle aynı boyutta olan üçüncü bir doku oluşturun. Bu doku, Milard tablosunun üzerindeki üst sınıra karşılık gelen küp eşlemesinin en üstü olacaktır. Yansımanın bu bölümünü daha ilginç hale getirmek için, önceki yordamda gölgelendiriciye eklediğiniz yansımalı vurguları daha fazla zorlamak üzere bir ek yük çizebilirsiniz. Doku şuna benzer görünmelidir:
+5. Diğer dokuyla aynı boyutta üçüncü bir doku oluşturun. Bu doku, küp haritasının üst kısmında yer alır ve bu da tablodaki tavana karşılık gelecektir. Yansımanın bu kısmını daha ilginç hale getirirken, önceki yordamda gölgelendiriciye ekleyştirilen specular vurguları pekiştiren bir ek yük ışığı çizin. Doku şuna benzer şekilde görünüyor olmalı:
 
-    ![Küp harita 'in üst öğesinin dokusu](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png)
+    ![Küp haritasının en üstünde yer alan doku](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png)
 
-   Küp eşlemesinin tarafları için bireysel dokular oluşturduğunuza göre, bunları tek bir *. DDS* dokusundaki depolanabilecek bir küp eşlemesinde birleştirmek için bir araç kullanabilirsiniz. Küp haritasını. DDS doku biçiminde kaydedebir sürece, küp haritasını oluşturmak istediğiniz herhangi bir programı kullanabilirsiniz. Bu izlenecek yol, Haziran, 2010 DirectX SDK 'sının bir parçası olan DirectX doku Aracı kullanılarak nasıl doku oluşturulacağını göstermektedir.
+   Artık küp haritasının kenarları için tek tek dokular oluşturduğunuza göre, bunları tek *bir .dds* dokusunda depolanmış bir küp haritasında bir araya yapmak için bir araç kullanabilirsiniz. Küp haritasını .dds doku biçiminde kaydedeb olduğu sürece, küp eşlemesi oluşturmak istediğiniz herhangi bir programı kullanabilirsiniz. Bu kılavuz, Haziran 2010 DirectX SDK'sı kapsamındaki DirectX Doku Aracı'nı kullanarak doku oluşturma adımlarını açıklar.
 
-### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>DirectX doku aracını kullanarak bir küp haritasını birleştirmek için
+### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>DirectX Doku Aracı'nı kullanarak küp eşlemesi oluşturmak için
 
-1. DirectX doku aracında, ana menüden **Dosya**  >  **yeni doku**' ı seçin. **Yeni doku** iletişim kutusu görüntülenir.
+1. DirectX Doku Aracı'nın ana menüsünde Dosya Yeni **Doku'ya**  >  **tıklayın.** Yeni **Doku iletişim** kutusu görüntülenir.
 
-2. **Doku türü** grubunda, **cubemap dokusunu** seçin.
+2. Doku Türü **grubunda Küp** Haritası **Doku'su seçin.**
 
-3. **Boyutlar** grubunda **Genişlik** ve **Yükseklik** için doğru değeri girip **Tamam**' ı seçin. Yeni bir doku belgesi görüntülenir. Varsayılan olarak, doku belgesinde ilk olarak gösterilen doku **pozitif X** küp yüzüne karşılık gelir.
+3. Boyutlar **grubunda Genişlik** ve Yükseklik için doğru değeri **girin ve** **tamam'ı** **seçin.** Yeni bir doku belgesi görüntülenir. Varsayılan olarak, ilk olarak doku belgesinde gösterilen doku Pozitif X küp **yüzüne** karşılık gelecektir.
 
-4. Doku küpünün yan tarafında oluşturduğunuz dokuyu küp yüzüne yükleyin. Ana menüde,   >  **Bu cubemap** üzerinde dosya Aç ' ı seçin, küpün yan tarafında oluşturduğunuz dokuyu seçin ve sonra **Aç**' ı seçin.
+4. Doku küpün tarafı için oluşturduğunuz dokuyu küp yüzüne yükleme. Ana menüde Dosya Bu **Küp** Haritası Yüzü üzerinde Aç'ı seçin, küpün tarafı için oluşturduğunuz dokuyu seçin ve ardından  >   **Aç'ı seçin.**
 
-5. **Negatif X**, **pozitif Z** ve **negatif z** küp yüzleri için 4. adımı yineleyin. Bunu yapmak için, yüklemek istediğiniz yüzü görüntülemeniz gerekir. Farklı bir küp Haritası yüzünü görüntülemek için, ana menüden,   >  **küp haritasını görüntüle yüzeyini** seçin ve ardından görüntülemek istediğiniz yüzü seçin.
+5. Negatif **X,** Pozitif Z ve Negatif Z küp **yüzleri** için 4. adımı yineler.  Bunu yapmak için, yüklemek istediğiniz yüzü görüntülemelisiniz. Farklı bir küp eşlemesi yüzü görüntülemek için ana menüde Küp **EşlemeSi** Yüzü Görüntüle'yi ve ardından görüntülemek  >  istediğiniz yüzü seçin.
 
-6. **Pozitif Y** küp yüzü için, doku küpünün üst kısmında oluşturduğunuz dokuyu yükleyin.
+6. Pozitif **Y küpü** yüzü için doku küpün üst kısmında oluşturduğunuz dokuyu yükleme.
 
-7. **Negatif Y** küp yüzü için, doku küpünün altı için oluşturduğunuz dokuyu yükleyin.
+7. Negatif **Y küpü** yüzü için doku küpün alt kısmında oluşturduğunuz dokuyu yükleme.
 
 8. Dokuyu kaydedin.
 
-   Küp haritasının yerleşimini şöyle görebilirsiniz:
+   Küp haritasının düzenini şöyle düşünebilirsiniz:
 
-   ![Ortam küpü eşlemesinin düzeni](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png)
+   ![Ortam küp eşlemesi düzeni](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png)
 
-   Üstteki görüntü pozitif Y (+ Y) küp yüzüdür; Ortadaki, soldan sağa,-X, + Z, + X ve-Z küp yüzleri; En altta-Y küp yüzüdür.
+   En üstte pozitif Y (+Y) küp yüzü yer alan görüntü; ortadaki soldan sağa doğru -X, +Z, +X ve -Z küp yüzleri; en altta -Y küpü yüzü yer aldı.
 
-   Şimdi, gölgelendirici geri kalanında küp eşleme örneğini karıştırmak için gölgelendiriciyi değiştirebilirsiniz.
+   Artık gölgelendiriciyi, küp eşleme örneğini gölgelendiricinin geri kalanına karıştıracak şekilde değiştirebilirsiniz.
 
 ### <a name="to-add-environment-mapping-to-your-shader"></a>Gölgelendiricinize ortam eşlemesi eklemek için
 
-1. Gölgelendiricinizi, ek karıştırma kullanarak ortam eşleme katkısı içerecek şekilde değiştirin. Gölgelendirici grafiğiniz şuna benzemelidir:
+1. Ek karıştırma kullanarak ortam eşleme katkısını dahil etmek için gölgelendiricinizi değiştirme. Gölgelendirici grafın aşağıdaki gibi olması gerekir:
 
-    ![Her iki tür yansıtıcı gölgelendirici düğümünün bir kapatması](../designers/media/gfx_shader_demo_billiard_step_4b.png)
+    ![Her iki yansıtıcı gölgelendirici düğümü türüne yakınlık](../designers/media/gfx_shader_demo_billiard_step_4b.png)
 
-    Gölgelendirici grafiğini basitleştirmek için **çarpma-ekleme** düğümü kullanabileceğinizi unutmayın.
+    Gölgelendirici grafı **basitleştirmek için** Çarpın-Ekle düğümünü kullanabileceğinizi unutmayın.
 
-    Ortam eşlemeyi uygulayan gölgelendirici düğümlerinin daha ayrıntılı bir görünümü aşağıda verilmiştir:
+    Ortam eşlemesi uygulayan gölgelendirici düğümlerinin daha ayrıntılı bir görünümü şu şekildedir:
 
-    ![Ortam eşlemesi eklenmiş Gölgelendirici Grafiği](../designers/media/gfx_shader_demo_billiard_step_4a.png)
+    ![Ortam eşlemesi eklenmiş gölgelendirici grafiği](../designers/media/gfx_shader_demo_billiard_step_4a.png)
 
-2. Küp eşlemesinin doku özelliklerini yapılandırarak önceki yordamda oluşturduğunuz dokuyu uygulayın. **Cubemap örnek** düğümünün **Texture** özelliğinin değerini **Texture2** olarak ayarlayın ve ardından **Texture2** Özellik grubunun **filename** özelliğini kullanarak doku dosyasını belirtin.
+2. Küp eşlemesi doku özelliklerini yapılandırarak önceki yordamda oluşturduğunuz dokuyu uygulama. Cubemap Sample düğümünün **Texture** **özelliğinin** değerini Texture2 olarak ayarlayın ve ardından **Texture2** özellik grubunun **Filename** özelliğini kullanarak **doku** dosyasını belirtin.
 
-3. İsteğe bağlı olarak, **sabit** düğümün **Çıkış** özelliğini yapılandırarak mildo topu reflectivity ayarlayabilirsiniz. Düğümün özelliklerine erişmek için, seçin ve ardından **Özellikler** penceresinde erişmek istediğiniz özelliği bulun.
+3. İsteğe bağlı olarak, Sabit düğümün **Output** özelliğini yapılandırarak spor topun yansıtmasını **ayarlayabilirsiniz.** Düğümün özelliklerine erişmek için düğümü seçin ve özellikler **penceresinde** erişmek istediğiniz özelliği bulun.
 
-   Ortam eşleme uygulandığında, milbdo topu şuna benzer görünmelidir:
+   Ortam eşlemesi uygulandığında, topun şuna benzer olması gerekir:
 
-   ![Ortam eşlenmiş milbdo topu](../designers/media/gfx_shader_demo_billiard_ball_4.png)
+   ![Ortamın yakından eşlenen topu](../designers/media/gfx_shader_demo_billiard_ball_4.png)
 
-   Bu nihai görüntüde, eklediğiniz etkilerin çok ikna edici bir top oluşturmak için bir araya geldiği hakkında dikkat edin. Şekil, doku ve aydınlatma bir 3B nesnenin temel görünümünü oluşturur ve yansımalı önemli noktalar ve yansıtılamalar, Bilardo topunu daha ilgi çekici hale getirir ve ortamının bir parçası gibi görünür.
+   Bu son görüntüde, çok ikna edici bir top oluşturmak için eklenen etkilerin nasıl bir araya geldi? Şekil, doku ve aydınlatma, 3B nesnenin temel görünümünü oluşturur ve specular vurgular ve yansımalar, topu daha ilginç hale ve ortamının bir parçası gibi gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)
+- [Nasıl: Gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)
 - [Nasıl yapılır. 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)
 - [Görüntü Düzenleyicisi](../designers/image-editor.md)

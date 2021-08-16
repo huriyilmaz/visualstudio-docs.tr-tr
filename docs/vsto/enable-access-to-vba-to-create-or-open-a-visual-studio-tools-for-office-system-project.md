@@ -1,7 +1,7 @@
 ---
 title: VSTO sistem projesi oluşturmak/açmak için VBA erişimi
 titleSuffix: ''
-description: Office sistemi projesi için bir Visual Studio Araçları oluşturmadan veya açmadan önce Office VBA proje sistemine erişimi açıkça etkinleştirmeniz gerektiğini öğrenin.
+description: Office için Visual Studio Araçları bir sistem projesi oluşturmadan veya açmadan önce Office VBA proje sistemine erişimi açıkça etkinleştirmeniz gerektiğini öğrenin.
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -17,31 +17,32 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ef68ffccd7a048cd0591ee0bf1aa511fe0489c92
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e76aa3b3035a3c713c07ef56f67de393b6411cbac7d69bced415581eb0e2bd3d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910519"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121314738"
 ---
 # <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>Microsoft Office sistemi projesi için Visual Studio Araçları oluşturmak veya açmak üzere VBA 'a erişimi etkinleştir
 
 Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmadan veya açmadan önce Microsoft Office Visual Basic for Applications (VBA) proje sistemine erişimi açıkça etkinleştirmeniz gerekir.
 
- Microsoft Office geliştirme projeleri, Microsoft Office Word ve Microsoft Office Excel 'de Visual Basic for Applications (VBA) proje sistemine, projeler Visual Basic for Applications kullanmasa bile erişimi gerektirir. Hem Visual Basic hem de C# projelerindeki denetimlerin tasarım zamanı desteği, Visual Basic for Applications proje sistemine bağlıdır.
+ Microsoft Office geliştirme projeleri, projeler Excel kullanmasa bile Microsoft Office Word ve Microsoft Office Visual Basic for Applications Visual Basic for Applications (VBA) proje sistemine erişim gerektirir. hem Visual Basic hem de C# projelerindeki denetimlerin tasarım zamanı desteği, Visual Basic for Applications proje sistemine bağlıdır.
 
- Bazı Microsoft Office makro virüsleri, kendilerini yaymaya yönelik bir yol olarak Visual Basic for Applications proje sistemini otomatikleştirmeye çalışır. Visual Basic for Applications proje sistemine erişimi etkinleştirerek, makro virüslerinin yayılmasının önlenmesine yardımcı olan bir korumayı kaldırırsınız. Ancak, normal makro güvenliği yerinde kalır, bu nedenle, makro güvenlik düzeyi ve Office uygulamalarınız için tuttuğunuz güvenilen yayımcılar listesi bilgisayarınızda herhangi bir makronun çalışıp çalışmadığını tespit eder.
+ bazı Microsoft Office makro virüsleri, kendilerini yaymaya yönelik bir yol olarak Visual Basic for Applications proje sistemini otomatikleştirmeye çalışır. Visual Basic for Applications proje sistemine erişimi etkinleştirerek, makro virüslerinin yayılmasının önlenmesine yardımcı olan bir korumayı kaldırırsınız. ancak, normal makro güvenliği yerinde kalır, bu nedenle makro güvenlik düzeyi ve Office uygulamalarınız için tuttuğunuz güvenilen yayımcıların listesi bilgisayarınızda herhangi bir makronun çalışıp çalışmadığını tespit eder.
 
 > [!NOTE]
-> Bu yalnızca geliştirme bilgisayarı için geçerlidir. Son kullanıcı bilgisayarlarında Office çözümlerini çalıştırmak için bu seçeneğin etkinleştirilmesi gerekmez.
+> Bu yalnızca geliştirme bilgisayarı için geçerlidir. son kullanıcı bilgisayarlarında, Office çözümleri çalıştırmak için bu seçeneğin etkinleştirilmesi gerekmez.
 
  Visual Basic for Applications proje sistemine erişimi devre dışı bırakmak, virüslerden korunmanıza yardımcı olmak önemlidir, ancak bilgisayarınız bir makro virüsü ile bulaşmışsa, bazı virüslerin diğer belgelere yayılmasını durdurmaya yardımcı olur. Bu seçenek, bilgisayarınız için ek bir koruma katmanı olarak varsayılan olarak devre dışıdır, ancak en iyi güvenlik yöntemlerini takip ediyorsanız bilgisayarınızı virüslere açık hale getirir.
 
- Office makro virüslerine karşı en iyi koruma, Office 'i yüksek veya çok yüksek güvenlik düzeyinde çalıştırmak, yalnızca doğrulanmış, bilinen kaynaklardaki makrolara güvenmek ve güvenlik düzeltme ekleri ve virüs tarayıcıları ile güncel kalmak için.
+ Office makro virüslerine karşı en iyi koruma, yalnızca doğrulanmış, bilinen kaynaklardaki makrolara güvenmek ve güvenlik düzeltme ekleri ve virüs tarayıcıları ile güncel kalmak için Office yüksek veya çok yüksek güvenlik düzeyinde çalıştırılır.
 
- **Visual Basic projesine erişimi** el ile etkinleştirebilir veya devre dışı bırakabilirsiniz.
+ **Visual Basic Project için güven erişimi** seçeneğini el ile etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
  VBA veya COM hataları görürseniz Office yüklemenizi onarabilirsiniz.
 
@@ -53,9 +54,9 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 2. **Seçenekler**’e tıklayın.
 
-3. **Güven Merkezi**' ne ve ardından **Güven Merkezi ayarları**' na tıklayın.
+3. **güven merkezi**' ne ve ardından **güven merkezi Ayarlar**' ne tıklayın.
 
-4. **Güven Merkezi**'Nde **makro ayarları**' na tıklayın.
+4. **güven merkezi**'nde **makro Ayarlar**' ye tıklayın.
 
 5. Visual Basic projelerine erişimi etkinleştirmek veya devre dışı bırakmak için **VBA proje nesne modeline güven erişimini** işaretleyin veya işaretini kaldırın.
 
@@ -63,41 +64,41 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 ### <a name="to-enable-or-disable-access-to-visual-basic-projects-with-the-2007-microsoft-office-system"></a>2007 Microsoft Office sistemiyle Visual Basic projelerine erişimi etkinleştirmek veya devre dışı bırakmak için
 
-1. Word veya Excel 'deki **Araçlar** menüsünde **makro**' nın üzerine gelin ve ardından **güvenlik**' e tıklayın.
+1. Word veya Excel **araçlar** menüsünde, **makro**' ın üzerine gelin ve ardından **güvenlik**' e tıklayın.
 
 2. **Güvenlik** iletişim kutusunda, **Güvenilen Yayımcılar** sekmesine tıklayın.
 
-3. **Visual Basic projesine erişimi** devre dışı bırakmak veya kaldırmak için seçin.
+3. **Visual Basic Project erişimi** devre dışı bırakmak için seçin veya temizleyin.
 
 4. **Tamam**'a tıklayın.
 
-## <a name="to-set-your-office-macro-security-level"></a>Office makro güvenlik düzeyinizi ayarlamak için
+## <a name="to-set-your-office-macro-security-level"></a>Office makro güvenlik düzeyini ayarlamak için
 
 1. **Dosya** sekmesine tıklayın.
 
 2. **Seçenekler**’e tıklayın.
 
-3. **Güven Merkezi**' ne ve ardından **Güven Merkezi ayarları**' na tıklayın.
+3. **güven merkezi**' ne ve ardından **güven merkezi Ayarlar**' ne tıklayın.
 
-4. **Güven Merkezi**'Nde **makro ayarları**' na tıklayın.
+4. **güven merkezi**'nde **makro Ayarlar**' ye tıklayın.
 
-5. **Makro ayarları** bölümünde, istenen ayarı seçin.
+5. **makro Ayarlar** bölümünde istenen ayarı seçin.
 
 6. **Tamam**'a tıklayın.
 
-### <a name="to-set-your-office-macro-security-level-with-the-2007-microsoft-office-system"></a>Office makro güvenlik düzeyinizi 2007 Microsoft Office sistemiyle ayarlamak için
+### <a name="to-set-your-office-macro-security-level-with-the-2007-microsoft-office-system"></a>Office makro güvenlik düzeyini 2007 Microsoft Office sistemiyle ayarlamak için
 
-1. Word veya Excel 'deki **Araçlar** menüsünde **makro**' nın üzerine gelin ve ardından **güvenlik**' e tıklayın.
+1. Word veya Excel **araçlar** menüsünde, **makro**' ın üzerine gelin ve ardından **güvenlik**' e tıklayın.
 
 2. **Güvenlik düzeyi** sekmesinde, istenen ayarı seçin.
 
-    **Güvenlik düzeyi** sekmesi her bir düzey hakkındaki ayrıntıları içerir. Daha fazla bilgi için Office Yardımı 'nda "makro güvenlik düzeyleri" konusuna bakın.
+    **Güvenlik düzeyi** sekmesi her bir düzey hakkındaki ayrıntıları içerir. daha fazla bilgi için Office yardımında "makro güvenlik düzeyleri" konusuna bakın.
 
-### <a name="to-install-vba-with-the-2007-microsoft-office-system"></a>VBA 'Yı 2007 Microsoft Office sistemine yüklemek için
+### <a name="to-install-vba-with-the-2007-microsoft-office-system"></a>VBA 'yı 2007 Microsoft Office sistemine yüklemek için
 
 1. Denetim Masası 'nda **Program Ekle/** Kaldır veya **Programlar ve Özellikler**' i çalıştırın.
 
-2. **Yüklü olan programlar** listesinden Office ' i seçin.
+2. **yüklü olan programlar** listesinde Office seçin.
 
 3. **Değiştir**’e tıklayın.
 
@@ -105,9 +106,9 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 5. **Uygulamaların gelişmiş özelleştirmesini Seç**' i seçin ve ardından **İleri**' ye tıklayın.
 
-6. **Uygulamalar ve araçlar için güncelleştirme seçeneklerini belirleyin** listesinde **Office Paylaşılan Özellikler** ' i genişletin.
+6. **uygulamalar ve araçlar için güncelleştirme seçeneklerini belirleyin** listesinde **Office paylaşılan özellikler** ' i genişletin.
 
-7. **Visual Basic for Applications**' nin yanındaki açılan menüyü açın ve sonra Bilgisayarımdan **Çalıştır**' a tıklayın.
+7. **Visual Basic for Applications**' nin yanındaki açılan menüyü açın ve sonra bilgisayarımdan **çalıştır**' a tıklayın.
 
 8. **Devam**’a tıklayın.
 
@@ -117,13 +118,13 @@ Microsoft Office sistemi projesi için bir Visual Studio Araçları oluşturmada
 
 1. Denetim Masası 'nda **Program Ekle/** Kaldır veya **Programlar ve Özellikler**' i çalıştırın.
 
-2. **Yüklü olan programlar** listesinden Office sürümünüzü seçin.
+2. **yüklü olan programlar** listesinde Office sürümünüzü seçin.
 
 3. **Değiştir**’e tıklayın.
 
 4. **Yeniden yükle veya Onar**' ı seçin ve ardından **İleri**' ye tıklayın.
 
-5. **Office yüklememdeki hataları Algıla ve Onar**' ı seçin ve ardından **yükleme**' ye tıklayın.
+5. **Office yüklememdeki hataları algıla ve onar**' ı seçin ve ardından **yükleme**' ye tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
+- [Office çözümleri güvenli hale getirme](../vsto/securing-office-solutions.md)

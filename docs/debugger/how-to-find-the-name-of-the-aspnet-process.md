@@ -1,6 +1,6 @@
 ---
-title: Çalışan ASP.NET işlemini bulun | Microsoft Docs
-description: Çalışan bir ASP.NET uygulamasında hata ayıklamayı öğrenin. Visual Studio debugger 'ı ada göre ASP.NET işlemine iliştirebilirsiniz.
+title: Çalışan işlem ASP.NET bulma | Microsoft Docs
+description: Çalışan bir uygulamanın hata ASP.NET öğrenin. Hata ayıklayıcısını Visual Studio adıyla ASP.NET işleme iliştirin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2018
 ms.topic: how-to
@@ -16,37 +16,38 @@ ms.assetid: 931a7597-b0f0-4a28-931d-46e63344435f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - aspnet
-ms.openlocfilehash: 11526639975924fd9984dce33a08e54c9a5405b9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ea5a2c954f031139c66616f80c4dc5b44d2efb5d8b0aa0329c5e043d4a75d909
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877661"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379132"
 ---
 # <a name="find-the-name-of-the-aspnet-process"></a>ASP.NET işleminin adını bulma
 
-Çalışan bir uygulamada hata ayıklamak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Visual Studio hata ayıklayıcı, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] işleme adına göre bağlanmalıdır.
+Çalışan bir uygulamada hata [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ayıklamak için Visual Studio hata ayıklayıcısının işleme adıyla [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] eklemesi gerekir.
 
-**Hangi işlemin bir ASP.NET uygulamasını çalıştırmakta olduğunu öğrenmek için:**
+**Bir uygulamanın hangi işlemi ASP.NET için:**
 
-1. Uygulama çalışırken, Visual Studio 'da,   >  **işleme Ekle** Hata Ayıkla ' yı seçin.
+1. Uygulama çalışıyorken, uygulamanın Visual Studio İşleme **Eklemede Hata**  >  **Ayıkla'ya seçin.**
 
-1. **Işleme İliştir** iletişim kutusunda, aşağıdaki listeden işlem adının ilk harflerini yazın veya bunları arama kutusuna girin. Çalıştıran biri, ASP.NET uygulamasını çalıştırdır. Uygulamada hata ayıklamak için bu işleme iliştirin.
+1. İşleme **Ekle iletişim** kutusunda, aşağıdaki listeden işlem adlarının ilk harflerini yazın veya arama kutusuna girin. Bu, ASP.NET uygulamasını çalıştıran ASP.NET. Uygulamanın hata ayıklaması için bu işleme ekleme.
 
-    - *w3wp.exe* IIS 6,0 ve üzeri.
-    - *aspnet_wp.exe* , IIS 'nin önceki sürümleridir.
-    - *iisexpress.exe* IISExpress.
-    - *dotnet.exe* ASP.NET Core.
-    - *inetinfo.exe* , işlem içi çalışan eski ASP uygulamalardır.
+    - *w3wp.exe* IIS 6.0 ve sonrasıdır.
+    - *aspnet_wp.exe* IIS'nin önceki sürümleridir.
+    - *iisexpress.exe* IISExpress'tir.
+    - *dotnet.exe* bir ASP.NET Core.
+    - *inetinfo.exe,* işlemde çalışan eski ASP uygulamalarıdır.
 
 >[!NOTE]
->Visual Studio 2012 ve önceki bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] kod dosya sisteminde olabilir ve *WebDev.WebServer.exe* veya *WebDev.WebServer40.exe* test sunucusunda çalıştırılabilir. Bu durumda, yerel hata ayıklama için işlem yerine *WebDev.WebServer.exe* veya *WebDev.WebServer40.exe* ekleyin [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] .
+>Visual Studio 2012 ve önceki kodlar dosya sisteminde olabilir ve test sunucusundaWebDev.WebServer.exe[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] veya *WebDev.WebServer40.exe.* ** Bu durumda, yerel hata ayıklama için işlem *yerineWebDev.WebServer.exe* *veyaWebDev.WebServer40.exe'ye* [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] iliştirin.
 
 **Ayrıca bkz:**
 
-- [Çalışan bir işleme iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
-- [Uzaktan hata ayıklama Web uygulamalarının önkoşulları](remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
+- [Çalışan bir işleme ekleme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
+- [Web uygulamalarında uzaktan hata ayıklama önkoşulları](remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
 - [Sistem gereksinimleri](../debugger/aspnet-debugging-system-requirements.md)
 - [ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

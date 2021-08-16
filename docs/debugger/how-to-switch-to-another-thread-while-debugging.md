@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklarken başka bir iş parçacığına geçme
-description: Visual Studio 'da çok iş parçacıklı bir uygulamada hata ayıklarken başka bir iş parçacığına geçmek için farklı yöntemleri gözden geçirin.
+description: Visual Studio çok iş parçacıklı bir uygulamada hata ayıklarken başka bir iş parçacığına geçiş yapmak için farklı yöntemleri gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 04/27/2017
 ms.topic: how-to
@@ -15,16 +15,17 @@ ms.assetid: 5cd76c52-76fa-4fcc-b37e-e9f0ecac0e9e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a0a68047c5c9e772fc978c56f2cd70dc9454ca57
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 5fd0c16266981fc46843f3aff37a07a30f5e8b981fb995aa645756e3af14c27a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112384700"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378768"
 ---
-# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>Nasıl yapılır: Visual Studio 'da hata ayıklarken başka bir Iş parçacığına geçme (C#, Visual Basic, C++)
+# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>nasıl yapılır: Visual Studio hata ayıklarken başka bir iş parçacığına geçme (C#, Visual Basic, C++)
 Çok iş parçacıklı bir uygulamada hata ayıklarken, çalışmakta olduğunuz iş parçacığından başka bir iş parçacığına geçiş yapmak için birkaç yöntemden birini kullanabilirsiniz.
 
 > [!NOTE]

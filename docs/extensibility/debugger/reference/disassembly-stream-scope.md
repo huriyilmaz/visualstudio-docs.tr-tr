@@ -1,5 +1,5 @@
 ---
-description: Ayrıştırılmış akışın kapsamını belirtir.
+description: Ayrık akışın kapsamını belirtir.
 title: DISASSEMBLY_STREAM_SCOPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 43e2b364-cbbe-4755-a7e6-a03f3054c965
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 828d6b9afc659a09a4f1091c741e6246512de025
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88747624041c24cc0df498108eed9936527503250a722a80e27bc4aa6ab63340
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096180"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378061"
 ---
 # <a name="disassembly_stream_scope"></a>DISASSEMBLY_STREAM_SCOPE
-Ayrıştırılmış akışın kapsamını belirtir.
+Ayrık akışın kapsamını belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,28 +50,28 @@ public enum enum_DISASSEMBLY_STREAM_SCOPE {
 
 ## <a name="fields"></a>Alanlar
 `DSS_HUGE`\
-Kod bağlamının ayırt edilen bir istemciden genellikle tek bir çağrıda almak isteyenden daha fazla çıkış üretebileceğinizi belirtir.
+Kod bağlamını parçalara ayırarak bir istemcinin genellikle tek bir çağrıda almak istemesi gerekenden daha fazla çıkış oluşturabileceklerini belirtir.
 
 `DSS_FUNCTION`\
-Kod bağlamı tarafından içerilen işlevin ayrıştırılmış olması gerektiğini belirtir. Ayrıştırılmış birleştirme akışının [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) yöntemi tarafından döndürüldüğünde bir işlevi temsil ettiğini belirtir.
+Kod bağlamının içerdiği işlevin birikerek biriktiri gerektiğini belirtir. Ayrık akışın [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) yöntemi tarafından döndürülen bir işlevi temsil ettiğini belirtir.
 
 `DSS_MODULE`\
-Yöntemi tarafından döndürüldüğünde `IDebugDisassemblyStream2::GetScope` , ayrıştırılmış birleştirme akışının bir modülü temsil ettiğini belirtir.
+yöntemi tarafından `IDebugDisassemblyStream2::GetScope` döndürülen, disassembly akışının bir modülü temsil ettiğini belirtir.
 
 `DSS_ALL`\
-Tüm adres alanı için ayrıştırılmış kodu belirtir.
+Adres alanı tamamının ayrımına göre belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[Getdisassemblystream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) yöntemine bir bağımsız değişken olarak geçirilir ve [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) yöntemi tarafından döndürülür.
+[GetDisassemblyStream yöntemine bağımsız](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) değişken olarak geçirilir ve [GetScope yöntemi tarafından](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) döndürülür.
 
-Bu değerler, bit düzeyinde birleştirilebilir `OR` .
+Bu değerler bitwise ile birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -1,6 +1,6 @@
 ---
-description: Simgenin sözcük üst öğesi için bir başvuru alır.
-title: 'IDiaSymbol:: get_lexicalParent | Microsoft Docs'
+description: Sembolün sözcük üst öğesi için bir başvuru verir.
+title: IDiaSymbol::get_lexicalParent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 4d119965-33a8-474c-9c64-95c5218c389c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d36147effa96d6c5a8ceb0b8f06a01cb0de5e455
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e0c12e2f79f1e8aa99daaacf5521b82a0d90f72c24f809064d2626c3b99beb5c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102162007"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379833"
 ---
 # <a name="idiasymbolget_lexicalparent"></a>IDiaSymbol::get_lexicalParent
-Simgenin sözcük üst öğesi için bir başvuru alır.
+Sembolün sözcük üst öğesi için bir başvuru verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,18 +35,18 @@ HRESULT get_lexicalParent (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Simgenin sözcük üst öğesini temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+[out] Sembolün sözcük üst öğelerini temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir simgenin sözcük üst öğesi kapsayan işlev veya modüldür. Örneğin, işlev parametresinin veya yerel değişkenin sözlü üst öğesi işlevin kendisidir, çünkü işlevin alt öğe üst öğesi içinde tanımlandığı modüldür.
+ Bir sembolün sözcük üst öğesi, kapsayan işlev veya modüldür. Örneğin, bir işlev parametresinin veya yerel değişkenin sözcük üst öğesi işlevin kendisiyken işlevin sözcük üst öğesi, içinde tanımlandığı modüldür.
 
- Sözcük üst öğeleri olarak görünebilen olası semboller, [sembol türlerinin sözlü hiyerarşisinde](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)belgelenmiştir.
+ Sözcük sözcük üstleri olarak görüne olası semboller Sembol Türlerinin [Sözcük Hiyerarşisi'ne belgelenmiş.](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

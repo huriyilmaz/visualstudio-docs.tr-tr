@@ -7,14 +7,15 @@ ms.assetid: 683f1b0c-1551-4bba-91fe-3855f03fdd69
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ebf3bbd1fe04b13f31de7ebd8c513de670dd480
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c39c27830d7e629a2a2e19c2b34a2ebff8c17f4833c897bdf681a2e0150ac678
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944140"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121358538"
 ---
 # <a name="how-to-search-for-topics"></a>Nasıl yapılır: konu arama
 
@@ -45,7 +46,7 @@ Sözdiziminin sorgunuzu nasıl etkilediğini anladıysanız, yalnızca ilgilendi
 
 Aşağıdaki tablo, yardım 'da arama sorguları geliştirmeye yönelik bazı temel kuralları ve yönergeleri içerir.
 
-|Syntax|Description|
+|Syntax|Açıklama|
 |------------|-----------------|
 |Büyük/küçük harf duyarlılığı|Aramalar büyük/küçük harfe duyarlı değildir. Büyük veya küçük harfli karakterler kullanarak arama ölçütlerinizi geliştirin. Örneğin, "OLE" ve "OLE" aynı sonuçları döndürür.|
 |Karakter birleşimleri|Yalnızca tek harf (a-z) veya sayı (0-9) için arama yapamazsınız. "And", "from" ve "with" gibi belirli ayrılmış kelimeleri aramaya çalışırsanız, bunlar yok sayılır. Daha fazla bilgi için, bu konunun ilerleyen kısımlarında [bulunan aramalardaki kelimelerin yoksayılan sözcükleri](#stopwords) inceleyin.|

@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 3886e20d45834f98f36b8d7e48f3b11c9ef7d5dd
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: b4099365a1c5709c6b4c74af3eb6eec0a5eb72b2d367527ce9168ce9cc1f51bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824828"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121267370"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma
   Şerit Tasarımcısını kullanarak özel bir sekme oluşturup bu sekmeye denetim ekleyip konumlandırabilirsiniz.
@@ -41,7 +42,7 @@ ms.locfileid: "107824828"
 - [Özel sekmedeki düğmeleri kullanarak Eylemler bölmesini gizleyin ve gösterin](#BKMK_HideShowActionsPane).
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -51,20 +52,20 @@ ms.locfileid: "107824828"
 - Microsoft Excel
 
 ## <a name="create-an-excel-workbook-project"></a>Excel çalışma kitabı projesi oluşturma
- Şerit Tasarımcısını kullanma adımları tüm Office uygulamaları için neredeyse aynıdır. Bu örnekte bir Excel çalışma kitabı kullanılmıştır.
+ şerit tasarımcısını kullanma adımları tüm Office uygulamaları için neredeyse aynıdır. Bu örnekte bir Excel çalışma kitabı kullanılmıştır.
 
 ### <a name="to-create-an-excel-workbook-project"></a>Excel çalışma kitabı projesi oluşturmak için
 
-- **MyExcelRibbon** adlı bir Excel çalışma kitabı projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+- **myexcelribbon** adlı bir Excel çalışma kitabı projesi oluşturun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni çalışma kitabını açar ve **Çözüm Gezgini** **MyExcelRibbon** projesini ekler.
+     Visual Studio tasarımcıda yeni çalışma kitabını açar ve **Çözüm Gezgini** için **myexcelribbon** projesini ekler.
 
 ## <a name="create-actions-panes"></a><a name="BKMK_CreateActionsPanes"></a> Eylem bölmeleri oluşturma
  Projeye iki özel eylem bölmesi ekleyin. Daha sonra bu eylemler bölmelerini gösteren ve özel sekmeye gizleyecek düğmeler ekleyeceksiniz.
 
 ### <a name="to-create-actions-panes"></a>Eylemler bölmesi oluşturmak için
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Project** menüsünde **yeni öğe ekle**' yi seçin.
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **ActionsPaneControl**' u ve ardından **Ekle**' yi seçin.
 
@@ -77,11 +78,11 @@ ms.locfileid: "107824828"
 5. İkinci bir eylemler bölmesi ve etiketi oluşturmak için 1 ile 5 arasındaki adımları yineleyin. İkinci etiketin **Text** özelliğini **Eylemler bölmesi 2** olarak ayarlayın.
 
 ## <a name="create-a-custom-tab"></a><a name="BKMK_CreateCustomTab"></a> Özel sekme oluşturma
- Office uygulaması tasarım yönergelerinden biri, kullanıcıların her zaman Office uygulaması kullanıcı arabirimi denetimine sahip olması gerekir. Bu özelliği eylemler bölmesine eklemek için, Şeritteki özel bir sekmeden her bir eylem bölmesini gösteren ve gizleyen düğmeler ekleyebilirsiniz. Özel bir sekme oluşturmak için projeye bir **Şerit (görsel Tasarımcı)** öğesi ekleyin. Tasarımcı denetimleri eklemenize ve konumlandıramanıza, denetim özelliklerini ayarlamanıza ve denetim olaylarını işleymenize yardımcı olur.
+ Office uygulama tasarım yönergelerinden biri, kullanıcıların Office uygulama kullanıcı arabirimine her zaman denetim sahibi olması gerekir. Bu özelliği eylemler bölmesine eklemek için, Şeritteki özel bir sekmeden her bir eylem bölmesini gösteren ve gizleyen düğmeler ekleyebilirsiniz. Özel bir sekme oluşturmak için projeye bir **Şerit (görsel Tasarımcı)** öğesi ekleyin. Tasarımcı denetimleri eklemenize ve konumlandıramanıza, denetim özelliklerini ayarlamanıza ve denetim olaylarını işleymenize yardımcı olur.
 
 ### <a name="to-create-a-custom-tab"></a>Özel sekme oluşturmak için
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Project** menüsünde **yeni öğe ekle**' yi seçin.
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** öğesini seçin.
 
@@ -99,7 +100,7 @@ ms.locfileid: "107824828"
 
 8. **Özellikler** penceresinde **etiketi** **Eylemler Bölmesi Yöneticisi** olarak ayarlayın.
 
-9. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden, **grup1** üzerine bir düğme sürükleyin.
+9. **araç kutusunun** **Office şerit denetimleri** sekmesinden, **grup1** üzerine bir düğme sürükleyin.
 
 10. **Button1**' i seçin.
 
@@ -107,7 +108,7 @@ ms.locfileid: "107824828"
 
 12. **Grup1** öğesine ikinci bir düğme ekleyin ve **başlık** özelliğini **Eylemler bölmesi 2**' yi gösterecek şekilde ayarlayın.
 
-13. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden, **grup1** üzerine bir **ToggleButton** denetimi sürükleyin.
+13. **araç kutusunun** **Office şerit denetimleri** sekmesinden **group1** üzerine bir **ToggleButton** denetimi sürükleyin.
 
 14. **Etiket** özelliğini **Eylemler bölmesini gizle** olarak ayarlayın.
 
@@ -134,7 +135,7 @@ ms.locfileid: "107824828"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab/MyRibbon.vb" id="Snippet3":::
 
 ## <a name="test-the-custom-tab"></a>Özel sekmeyi test etme
- Projeyi çalıştırdığınızda Excel başlar ve şeritte **özel sekme** sekmesi görüntülenir. Eylemler bölmelerini göstermek ve gizlemek için **özel Sekmesimde** bulunan düğmeleri seçin.
+ projeyi çalıştırdığınızda Excel başlar ve şeritte **özel sekme** sekmesi görünür. Eylemler bölmelerini göstermek ve gizlemek için **özel Sekmesimde** bulunan düğmeleri seçin.
 
 ### <a name="to-test-the-custom-tab"></a>Özel sekmeyi test etmek için
 
@@ -155,17 +156,17 @@ ms.locfileid: "107824828"
      Eylemler bölmeleri artık görünmez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Aşağıdaki konulardan Office Kullanıcı arabirimini özelleştirme hakkında daha fazla bilgi edinebilirsiniz:
+ Office kullanıcı arabirimini nasıl özelleştireceğinizi öğrenmek için aşağıdaki konulardan daha fazla bilgi edinebilirsiniz:
 
 - Herhangi bir belge düzeyi özelleştirmesine bağlam tabanlı kullanıcı arabirimi ekleyin. Daha fazla bilgi için bkz. [eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md).
 
-- Bir standart veya özel Microsoft Office Outlook formunu genişletin. Daha fazla bilgi için bkz. [Izlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md).
+- standart veya özel bir Microsoft Office Outlook formu genişletin. daha fazla bilgi için bkz. [izlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
-- [Outlook için şerit özelleştirme](../vsto/customizing-a-ribbon-for-outlook.md)
+- [Outlook için bir şeridi özelleştirme](../vsto/customizing-a-ribbon-for-outlook.md)
 - [Nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)
 - [Nasıl yapılır: yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md)

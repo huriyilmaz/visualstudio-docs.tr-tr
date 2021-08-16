@@ -1,6 +1,6 @@
 ---
-description: Tüm belgenin yok edildiğini belirtir.
-title: 'IDebugDocumentTextEvents2:: onDestroy | Microsoft Docs'
+description: Belgenin tamamının yok edilmiş olduğunu gösterir.
+title: IDebugDocumentTextEvents2::onDestroy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 60e4689c-c899-4c14-9d18-96393b741e1f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 011be7f08f6af124dd78e082ce5cd0d38afe982b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ffa245972961ee26e740df47fe325447d75ca634170f384e308c79b9602bdba3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066301"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377800"
 ---
 # <a name="idebugdocumenttextevents2ondestroy"></a>IDebugDocumentTextEvents2::onDestroy
-Tüm belgenin yok edildiğini belirtir.
+Belgenin tamamının yok edilmiş olduğunu gösterir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +40,7 @@ int onDestroy();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)

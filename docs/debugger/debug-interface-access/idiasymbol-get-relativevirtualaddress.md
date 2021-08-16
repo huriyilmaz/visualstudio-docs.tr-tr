@@ -1,6 +1,6 @@
 ---
-description: Konumun göreli sanal adresini (RVA) alır.
-title: 'IDiaSymbol:: get_relativeVirtualAddress | Microsoft Docs'
+description: Konumun göreli sanal adresini (RVA) alan.
+title: IDiaSymbol::get_relativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: e37219e3-c021-4057-9ec8-4f7cf3c13a15
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 261c24dc73b7fca7c26aac61185e5f197d089453
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4a20a9173ab21d0f8f556a2990410eedc1e87ab57506137cc0cfd4d614d581e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161874"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379801"
 ---
 # <a name="idiasymbolget_relativevirtualaddress"></a>IDiaSymbol::get_relativeVirtualAddress
-Konumun göreli sanal adresini (RVA) alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olarak ayarlandığında kullanın `LocIsStatic` .
+Konumun göreli sanal adresini (RVA) alan. [LocationType Enumeration olarak ayarlanırken](../../debugger/debug-interface-access/locationtype.md) `LocIsStatic` kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_relativeVirtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Konumun göreli sanal adresini döndürür.
+[out] Konumun göreli sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="example"></a>Örnek
 

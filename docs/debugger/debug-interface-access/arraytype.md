@@ -1,6 +1,6 @@
 ---
 title: ArrayType | Microsoft Docs
-description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında ArrayType sembol türü (SymTagArray) hakkındaki başvuru bilgilerini bulun.
+description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında ArrayType sembol türü (symtagarray) hakkında başvuru bilgileri bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,14 +12,15 @@ ms.assetid: 1d973a3a-2bde-46df-8625-85d519bb3cc9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: add93feca133b72a49a72a734fb5c439a3ae8199
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1419ce27f775b99424427b474ef8b94f5ff5a016154d011cb2127e48616f520a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857486"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121326704"
 ---
 # <a name="arraytype"></a>ArrayType
 Bir dizi bir sembol tarafından tanımlanır `SymTagArray` .

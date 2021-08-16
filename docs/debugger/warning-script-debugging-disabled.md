@@ -15,14 +15,15 @@ ms.assetid: 323d2b1d-52a4-42f7-b4ad-96b4b0c23b8d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 052445b1dbb69c433220caf5764413e04f0909fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f5b52bedf589be3e21ed5880c4d90f204ad68c04d4af09b4076a3be440ef4d9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884006"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378469"
 ---
 # <a name="warning-script-debugging-disabled"></a>Uyarı: Betik Hata Ayıklaması Devre Dışı
 Internet Explorer 'da betik hata ayıklaması Şu anda devre dışı
@@ -35,7 +36,7 @@ Internet Explorer 'da betik hata ayıklaması Şu anda devre dışı
 
 2. **İnternet Seçenekleri** iletişim kutusunda **Gelişmiş** ’e tıklayın.
 
-3. **Gelişmiş** sekmesinde, **Ayarlar** kutusu, **Gözatma** kategorisi ' ne bakın.
+3. **gelişmiş** sekmesinde, **Ayarlar** kutusu, **gözatma** kategorisi ' ne bakın.
 
 4. **Betik hata ayıklamayı devre dışı bırak (Internet Explorer)** seçimini kaldırın.
 

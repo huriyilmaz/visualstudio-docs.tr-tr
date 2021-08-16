@@ -1,6 +1,6 @@
 ---
-description: Kaynak dosyadaki belirli bir konum için kod bağlamlarının bir listesini alır.
-title: 'IDebugProgram2:: Enumcodebağlamları | Microsoft Docs'
+description: Kaynak dosyada verilen bir konum için kod bağlamlarının listesini alın.
+title: IDebugProgram2::EnumCodeContexts | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 478e06a2-07bb-4841-8887-deab0f42ebd0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2dbcc3f967f0569efcfc1287ba2b215760ce0b34
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7172ffbf40642e5a3c9bfe68737f6e5c4f935671682d533e81fc1a77cbeb63cd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076062"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276483"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
-Kaynak dosyadaki belirli bir konum için kod bağlamlarının bir listesini alır.
+Kaynak dosyada verilen bir konum için kod bağlamlarının listesini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,15 +45,15 @@ int EnumCodeContexts(
 
 ## <a name="parameters"></a>Parametreler
 `pDocPos`\
-'ndaki IDE tarafından bilinen bir kaynak dosyasındaki soyut konumu temsil eden bir [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) nesnesi.
+[in] IDE tarafından bilinen bir kaynak dosyada soyut konumu temsil eden bir [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) nesnesi.
 
-`ppEnum` dışı Kod bağlamlarının bir listesini içeren bir [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) nesnesi döndürür.
+`ppEnum` [out] Kod [bağlamlarının listesini içeren bir IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, oturum hata ayıklama Yöneticisi 'nin (SDM) veya IDE 'nin bir kaynak dosya konumunu kod konumuyla eşlemesine olanak sağlar. Kaynak birden fazla kod bloğu oluşturursa birden fazla kod bağlamı döndürülür (örneğin, C++ şablonları).
+ Bu yöntem, oturum hata ayıklama yöneticisinin (SDM) veya IDE'nin bir kaynak dosya konumunu kod konumunda eşlemesine olanak sağlar. Kaynak birden çok kod bloğu (örneğin, C++ şablonları) oluşturursa birden fazla kod bağlamı döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

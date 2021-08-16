@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla belgeleri yazdırma'
-description: Bir Microsoft Word belgesinin tamamını veya bir belgenin bir bölümünü varsayılan yazıcınıza nasıl yazdırabileceğinizi öğrenin.
+description: Microsoft Word belgenin tamamını veya bir belgenin bir kısmını varsayılan yazıcınıza nasıl yazdırabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 47f295a6259b8d722c9c3c714b62fe648bdea1c6
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 31b6bf4e9fa4041710da1269ff239eecb3e75749e1819144fc99fed5f198efb5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827207"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408129"
 ---
 # <a name="how-to-programmatically-print-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri yazdırma
-  Bir Microsoft Office Word belgesinin tamamını veya bir belgenin bir kısmını varsayılan yazıcınıza yazdırabilirsiniz.
+  bir Microsoft Office Word belgesinin tamamını veya bir belgenin bir kısmını varsayılan yazıcınıza yazdırabilirsiniz.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -43,7 +44,7 @@ ms.locfileid: "107827207"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet12":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet12":::
 
-## <a name="print-a-document-by-using-a-vsto-add-in"></a>VSTO eklentisini kullanarak belge yazdırma
+## <a name="print-a-document-by-using-a-vsto-add-in"></a>VSTO eklentisi kullanarak belge yazdırma
 
 ### <a name="to-print-an-entire-document"></a>Belgenin tamamını yazdırmak için
 

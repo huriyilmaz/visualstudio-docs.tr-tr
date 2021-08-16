@@ -11,17 +11,18 @@ ms.assetid: 6da944eb-36cd-4a8c-8d71-544c775cfcc1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 39a22a0534a464e9899e666550b31ab24503c05d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 995b197cd74612f324344c8fe9b74f9f96fc89449abfd83ba656f4102c9b52cf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096531"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378074"
 ---
 # <a name="canstop_reason"></a>CANSTOP_REASON
 Bir programın yürütmenin belirli bir noktaya ulaştıktan sonra yürütmeyi durdurup durdurmadığını tespit etmek için kullanılır.

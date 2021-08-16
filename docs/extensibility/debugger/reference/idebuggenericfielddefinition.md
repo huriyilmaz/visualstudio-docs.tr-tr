@@ -9,14 +9,15 @@ ms.assetid: b5a853b7-221e-4d62-8948-07423089d75d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c9b2a4b9dbdbf5d1b5faefb8dfbf498f873ec01
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b6d0ebd5b608fbcc2a1f93f1cf938701df13ef84d0f741fda107233836b797c4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063363"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377543"
 ---
 # <a name="idebuggenericfielddefinition"></a>IDebugGenericFieldDefinition
 Yönetilen kod genel türü için bir alanın tanımını temsil eder.

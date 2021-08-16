@@ -8,14 +8,15 @@ ms.assetid: 4509311d-6fe2-4b65-9b4a-ff0522585d6a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 17c917c6c23dff41a5692e95588ce757a8d08293
-ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+ms.openlocfilehash: 07bd89a925afd8b9a5b05692e1d5e01ba4accb8d8809b6929f635e206d9ccb96
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114232744"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379431"
 ---
 # <a name="capturecurrentframe"></a>CaptureCurrentFrame
 Geçerli çerçevenin kalan kısmını grafik günlük dosyasına yakalar.

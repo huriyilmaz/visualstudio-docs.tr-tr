@@ -12,17 +12,18 @@ ms.assetid: b32c12f9-b34d-43bd-a1b9-61af6cf8e51b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8fb3ae8bf41b8cb9eafa40d9bcc98c702cf359d0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 91332f8781b81b6b087dbeae4fabd3f121018020de6c1b6e68090f65a73d56cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088841"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121378009"
 ---
 # <a name="idebugboundbreakpoint2setpasscount"></a>IDebugBoundBreakpoint2::SetPassCount
 Bu ilişkili kesme noktasıyla ilişkili geçiş sayısını ayarlar veya değiştirir.

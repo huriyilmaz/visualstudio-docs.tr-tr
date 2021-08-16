@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: belgelerden yönetilen kod uzantılarını kaldırma'
-description: Özelleştirme derlemesini, Microsoft Word veya Excel için belge düzeyi özelleştirmenin parçası olan bir belgeden veya çalışma kitabından program aracılığıyla kaldırma.
+title: 'Nasıl yapabilirsiniz: Belgelerden yönetilen kod uzantılarını kaldırma'
+description: Özelleştirme derlemelerini, belge düzeyi özelleştirmenin bir parçası olan belge veya çalışma kitabından program aracılığıyla kaldırma Microsoft Word veya Excel.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,46 +13,47 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 129b1bda44abf7283efe1996f1898491025ee9d9
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: cf087b0c9da0197327b2fb548365ce6e4d00d5967be118f211916d6d6df34f81
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825452"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121408186"
 ---
-# <a name="how-to-remove-managed-code-extensions-from-documents"></a>Nasıl yapılır: belgelerden yönetilen kod uzantılarını kaldırma
-  Özelleştirme derlemesini, Microsoft Office Word veya Microsoft Office Excel için belge düzeyi özelleştirmenin parçası olan bir belge veya çalışma kitabından programlı bir şekilde kaldırabilirsiniz. Kullanıcılar daha sonra belgeleri açabilir ve içeriği görüntüleyebilir, ancak belgelere eklediğiniz herhangi bir özel kullanıcı arabirimi (UI) görünmez ve kodunuz çalışmaz.
+# <a name="how-to-remove-managed-code-extensions-from-documents"></a>Nasıl yapabilirsiniz: Belgelerden yönetilen kod uzantılarını kaldırma
+  Word veya Microsoft Office için belge düzeyinde özelleştirmenin parçası olan bir belge veya çalışma kitabından özelleştirme derlemelerini program Microsoft Office Excel. Kullanıcılar daha sonra belgeleri açıp içeriği görüntülemeye devam ediyor ancak belgelere ekli özel kullanıcı arabirimi (UI) görüntüleniyor ve kodunuz çalıştırılamayacak.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Özelleştirme derlemesini `RemoveCustomization` , tarafından sunulan yöntemlerden birini kullanarak kaldırabilirsiniz [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Hangi yöntemi kullanacağınızı, çalışma zamanında özelleştirmeyi kaldırmak isteyip istemediğinizi (yani, Word belgesi veya Excel çalışma kitabı açıkken özelleştirirken kod çalıştırarak) ya da özelleştirmeyi, kapalı bir belgeden veya Microsoft Office yüklü olmayan bir sunucuda bulunan bir belgeden kaldırmak istediğinize bağlıdır.
+ özelleştirme derlemesi tarafından sağlanan yöntemlerden `RemoveCustomization` birini kullanarak [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kaldırebilirsiniz. Hangi yöntemi kullandığınız, özelleştirmeyi çalışma zamanında kaldırmak istediğinize (Word belgesi veya Excel çalışma kitabı açıkken özelleştirmede kod çalıştırarak) veya özelleştirmeyi kapalı bir belgeden veya yüklü yüklü bir sunucuda yer alan bir belgeden kaldırmak Microsoft Office bağlıdır.
 
-## <a name="to-remove-the-customization-assembly-at-run-time"></a>Çalışma zamanında özelleştirme derlemesini kaldırmak için
+## <a name="to-remove-the-customization-assembly-at-run-time"></a>Özelleştirme derlemeyi çalışma zamanında kaldırmak için
 
-1. Özelleştirme kodunuzda <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> yöntemini (Word için) veya <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> yöntemini (Excel için) çağırın. Bu yöntem yalnızca özelleştirmeye artık gerek duyulmadığında çağrılmalıdır.
+1. Özelleştirme kodunda yöntemini <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> (Word için) veya yöntemini <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> (word için) Excel. Bu yöntem ancak özelleştirme artık gerekli olmadığı için çağrılmalı.
 
-     Kodunuzda bu yöntemi çağırdığınızda özelleştirmenin nasıl kullanıldığına bağlıdır. Örneğin, müşteriler, belgeyi yalnızca belgenin kendisi için ihtiyacı olan diğer istemcilere göndermeye hazırlanana kadar, özelleştirmenin özelliklerini kullanıyorsa, müşterinin tıkladığı zaman çağıran bazı Kullanıcı arabirimini sağlayabilirsiniz `RemoveCustomization` . Alternatif olarak, özelleştirmeniz ilk açıldığında belgeyi veriyle doldurursa, ancak özelleştirme doğrudan müşteriler tarafından erişilen başka herhangi bir özelliği sağlamıyorsa, özelleştirme belgeyi başlatmayı bitirdiğinde, Removeccustombir seçim yapabilirsiniz.
+     Kodunda bu yöntemi çağırma yöntemi, özelleştirmenizin nasıl kullanılana bağlıdır. Örneğin, müşteriler belgeyi yalnızca belgenin kendisine (özelleştirmeye değil) ihtiyacı olan diğer istemcilere göndermeye hazır olana kadar özelleştirmenizin özelliklerini kullanıyorsa, müşteri tıkladığında çağıran bazı kullanıcı arabirimi `RemoveCustomization` sekleyebilirsiniz. Alternatif olarak, özelleştirmeniz ilk açıldığında belgeyi verilerle doldurmakta ancak özelleştirme doğrudan müşteriler tarafından erişilen başka bir özellik sağlanmıyorsa, özelleştirmeniz belgeyi başlatmayı tamamlar bitirmez RemoveCustomization çağırabilirsiniz.
 
-## <a name="to-remove-the-customization-assembly-from-a-closed-document-or-a-document-on-a-server"></a>Bir sunucudaki kapalı bir belgeden veya bir belgeden özelleştirme derlemesini kaldırmak için
+## <a name="to-remove-the-customization-assembly-from-a-closed-document-or-a-document-on-a-server"></a>Özelleştirme derlemesi kapalı bir belgeden veya sunucu üzerinde bir belgeden kaldırmak için
 
-1. Konsol uygulaması veya Windows Forms projesi gibi Microsoft Office gerektirmeyen bir projede, *Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll* derlemesine bir başvuru ekleyin.
+1. Konsol uygulaması veya Windows Forms projesi gibi bir Microsoft Office gerektirmeyen bir projede,Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll *derlemesine* bir başvuru ekleyin.
 
-2. Aşağıdaki **Içeri aktarmaları** veya **using** ifadesini, kod dosyanızın en üstüne ekleyin.
+2. Aşağıdaki **imports veya** **using deyimini** kod dosyanın en üstüne ekleyin.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet1":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet1":::
 
-3. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A>Sınıfının statik yöntemini çağırın <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> ve parametresi için çözüm belge yolunu belirtin.
+3. sınıfının statik <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> yöntemini <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> çağırma ve parametresi için çözüm belge yolunu belirtme.
 
-     Aşağıdaki kod örneği, özelleştirmeyi masaüstündeki *WordDocument1.docx* adlı bir belgeden kaldırabildiğinizi varsayar.
+     Aşağıdaki kod örneğinde, özelleştirmeyi masaüstünde yer alanWordDocument1.docx *belgeden* kaldırabilirsiniz.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs" id="Snippet2":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb" id="Snippet2":::
 
-4. Projeyi derleyin ve özelleştirmeyi kaldırmak istediğiniz bilgisayarda uygulamayı çalıştırın. Bilgisayarda Office Runtime için Visual Studio 2010 Araçları yüklü olmalıdır.
+4. Projeyi derleme ve uygulamayı özelleştirmeyi kaldırmak istediğiniz bilgisayarda çalıştırma. Bilgisayarda, Office çalışma zamanı için Visual Studio 2010 Araçları yüklü olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)
-- [Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme](../vsto/how-to-attach-managed-code-extensions-to-documents.md)
+- [ServerDocument sınıfını kullanarak bir sunucu üzerinde belgeleri yönetme](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)
+- [Nasıl kullanılır: Belgelere Yönetilen kod uzantıları ekleme](../vsto/how-to-attach-managed-code-extensions-to-documents.md)

@@ -11,17 +11,18 @@ ms.assetid: 5b0ec0fb-84b3-4ce7-8e24-becf3d881d7d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5e28e0c32d5039ba0deda9a8c6801e6969c4ad96
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a323d934cceff20b5e89215dfb9a6d49020a707e07f5d3ca5f37a5fe189627c2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079897"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377294"
 ---
 # <a name="metadata_address_retval"></a>METADATA_ADDRESS_RETVAL
 Bu yapı bir yöntem veya işlevden döndürülen değeri temsil eder.
@@ -51,7 +52,7 @@ public struct METADATA_ADDRESS_RETVAL {
  Bu dönüş değerinin için olan metodun KIMLIĞI.
 
  `dwCorType`\
- Dönüş değerinin temel türü. Bu, `CorElementType` .NET Framework SDK CorHdr. h dosyasında tanımlanan Numaralandırmadaki bir değerdir.
+ Dönüş değerinin temel türü. bu, `CorElementType` .NET Framework SDK corhdr. h dosyasında tanımlanan numaralandırmadaki bir değerdir.
 
  `dwSigSize`\
  Dönüş değeri imzasının boyutu (içinde depolanan `rgSig` ).

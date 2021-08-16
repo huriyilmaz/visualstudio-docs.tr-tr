@@ -1,5 +1,5 @@
 ---
-description: Yığın çerçeve türünü belirtir.
+description: Yığın çerçevesi türünü belirtir.
 title: StackFrameTypeEnum | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 61e40163-eee0-4c1f-af47-cef3771bdc41
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b84ad19ec31cd1fae65913827b8ee381711f6534
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 383f6f5144eb9be777fc76af145d2e07a8ac1086101f44893173dd833237f79c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155308"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379644"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
-Yığın çerçeve türünü belirtir.
+Yığın çerçevesi türünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,23 +38,23 @@ enum StackFrameTypeEnum {
 ```
 
 ## <a name="elements"></a>Öğeler
-`FrameTypeFPO` Çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.
+`FrameTypeFPO` Çerçeve işaretçisi atlandı; FPO bilgileri kullanılabilir.
 
-`FrameTypeTrap` Çekirdek Tuzak Çerçevesi.
+`FrameTypeTrap` Çekirdek Yakalama çerçevesi.
 
-`FrameTypeTSS` Çekirdek Tuzak Çerçevesi.
+`FrameTypeTSS` Çekirdek Yakalama çerçevesi.
 
 `FrameTypeStandard` Standart EBP yığın çerçevesi.
 
-`FrameTypeFrameData` Çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.
+`FrameTypeFrameData` Çerçeve işaretçisi atlandı; Çerçeve verisi bilgileri kullanılabilir.
 
-`FrameTypeUnknown` Herhangi bir hata ayıklama bilgisi olmayan çerçeve.
+`FrameTypeUnknown` Hata ayıklama bilgisi olan çerçeve.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu Numaralandırmadaki değerler, [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) metoduna yapılan bir çağrı tarafından döndürülür.
+Bu numaralamada yer alan değerler, [IDiaStackFrame::get_type yöntemine yapılan bir çağrıyla](../../debugger/debug-interface-access/idiastackframe-get-type.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst. h
+Üst bilgi: cvconst.h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

@@ -3,27 +3,28 @@ title: Tablo Tasarımcısı için filtre dizeleri oluşturma | Microsoft Docs
 description: Tablo Tasarımcısı için filtre dizeleri oluşturma
 author: ghogen
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
-ms.openlocfilehash: cdfcacf38239e896687a236624bb167573f4bd1f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2dca9e8b4cd1a1fd90d67837368ca9d9530fea85c2509c12a5ab9e7d31336f86
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99846211"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121282650"
 ---
 # <a name="constructing-filter-strings-for-the-table-designer"></a>Tablo Tasarımcısı için Filtre Dizelerini Oluşturma
 ## <a name="overview"></a>Genel Bakış
-Visual Studio **Tablo Tasarımcısı** görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. Filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL WHERE yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. [Depolama hizmetleri REST API başvurusu](/rest/api/storageservices/)aracılığıyla tabloyu sorgulamak IÇIN bir URL oluştururken yaptığınız gibi $Filter sorgu seçeneğini de eklemeniz gerekmez.
+Visual Studio **Tablo Tasarımcısı** görüntülenen bir Azure tablosundaki verileri filtrelemek için bir filtre dizesi oluşturur ve bunu filtre alanına girersiniz. filtre dizesi sözdizimi WCF Veri Hizmetleri tarafından tanımlanır ve bir SQL where yan tümcesine benzerdir, ancak bir HTTP isteği aracılığıyla tablo hizmetine gönderilir. **Tablo Tasarımcısı** , sizin için uygun kodlamayı işler, böylece istenen özellik değerini filtrelemek için filtre alanına yalnızca özellik adı, karşılaştırma işleci, ölçüt değeri ve isteğe bağlı olarak Boolean işlecini girmeniz gerekir. tabloyu [Depolama hizmetleri REST API başvurusu](/rest/api/storageservices/)aracılığıyla sorgulamak için bir URL oluştururken yaptığınız gibi $filter sorgu seçeneğini de eklemeniz gerekmez.
 
-WCF Veri Hizmetleri, [Açık Veri Protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği (**$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
+WCF Veri Hizmetleri, [açık veri protokolü 'nü](https://www.odata.org/) (OData) temel alır. Filtre sistemi sorgu seçeneği (**$Filter**) hakkında daha fazla bilgi için bkz. [OData URI kuralları belirtimi](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 ## <a name="comparison-operators"></a>Karşılaştırma İşleçleri
 Aşağıdaki mantıksal işleçler tüm özellik türleri için desteklenir:
 
-| Mantıksal işleç | Description | Örnek filtre dizesi |
+| Mantıksal işleç | Açıklama | Örnek filtre dizesi |
 | --- | --- | --- |
 | eq |Eşittir |Şehir EQ ' Redmond ' |
 | gt |Büyüktür |Fiyat gt 20 |

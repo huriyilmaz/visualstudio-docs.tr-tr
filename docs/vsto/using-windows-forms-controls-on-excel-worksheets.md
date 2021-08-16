@@ -1,6 +1,6 @@
 ---
-title: Excel çalışma sayfalarında Windows Forms denetimleri kullanma
-description: Windows Forms denetimleri ekleyeceğiniz şekilde Microsoft Excel çalışma kitaplarınıza Windows Forms denetimleri nasıl ekleyebileceğiniz hakkında bilgi edinin.
+title: Çalışma Windows formlarında Excel Forms denetimlerini kullanma
+description: Microsoft Excel Forms'Windows a denetimler eklerken olduğu Microsoft Excel Formlar denetimleri ekleme hakkında bilgi Windows öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,35 +14,36 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f8c79e487e116741c393cef5a6f65b30cc4a8cfb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 30c8bd62801dfa26cc53f4660948e2f75d44e974a7a7126fc71a66bd3dc8791c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838223"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121267461"
 ---
-# <a name="use-windows-forms-controls-on-excel-worksheets"></a>Excel çalışma sayfalarında Windows Forms denetimleri kullanma
-  Microsoft Office Excel çalışma kitaplarına Windows Forms denetimleri eklediğiniz gibi Windows Forms denetimleri ekleyebilirsiniz. Belgelerde denetimlerle çalışma hakkında genel bilgi için bkz. [Office belgelerindeki Windows Forms denetimleri genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md).
+# <a name="use-windows-forms-controls-on-excel-worksheets"></a>Çalışma Windows formlarında Excel Forms denetimlerini kullanma
+  Formlara Windows Formlar denetimleri Microsoft Office Excel formlara denetimler ekley istediğiniz şekilde Windows. Belgeler üzerinde denetimlerle çalışma hakkında genel bilgi için bkz. [Windows form denetimlerine Office genel bakış.](../vsto/windows-forms-controls-on-office-documents-overview.md)
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="control-considerations-for-excel"></a>Excel için denetim konuları
- Excel 'e özgü bazı önemli noktalar vardır.
+## <a name="control-considerations-for-excel"></a>Denetimle ilgili dikkat edilmesi gerekenler Excel
+ Belirli konulara özgü birkaç önemli nokta Excel.
 
-### <a name="match-control-size-to-cell-size"></a>Denetim boyutunu hücre boyutuyla Eşleştir
- Üst hücrenin boyutu değiştirildiğinde denetimi otomatik olarak yeniden boyutlandırılacak şekilde ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md).
+### <a name="match-control-size-to-cell-size"></a>Denetim boyutunu hücre boyutuyla eşleşme
+ Üst hücrenin boyutu değiştirilirken denetimi otomatik olarak yeniden boyutlandırılmak için ayarlayın. Daha fazla bilgi için [bkz. Nasıl ekleyebilirsiniz: Çalışma sayfası hücrelerinde denetimleri yeniden boyutlandırma.](../vsto/how-to-resize-controls-within-worksheet-cells.md)
 
 ### <a name="add-components-that-are-shared-by-all-worksheets"></a>Tüm çalışma sayfaları tarafından paylaşılan bileşenleri ekleme
- Çalışma sayfaları yerine tüm çalışma sayfaları arasında paylaştırmak istediğiniz bileşenleri <xref:System.Data.DataSet> (örneğin, çalışma sayfası tasarımcısına) ekleyebilirsiniz. Bileşen, bileşen tepsisinde görünür.
+ Çalışma sayfaları yerine Çalışma Kitabı Tasarımcısına , gibi tüm çalışma sayfaları arasında <xref:System.Data.DataSet> paylaşmak istediğiniz bileşenleri ekleyebilirsiniz. Bileşen, bileşen tepsisinde görünür.
 
-### <a name="formula-for-embedding-controls"></a>Denetimleri katıştırma formülü
- Excel 'de bir denetim seçtiğinizde, **Formül çubuğuna** **= embed ("WinForms. Control. Host", "")** görürsünüz. Bu metin gereklidir ve silinmemelidir.
+### <a name="formula-for-embedding-controls"></a>Ekleme denetimleri için formül
+ denetim çubuğunda bir denetim Excel Formül Çubuğunda **=EMBED("WinForms.Control.Host","")** **ifadesinin yer alır.** Bu metin gereklidir ve silinmemelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md)
-- [Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
-- [İzlenecek yol: CheckBox denetimlerini kullanarak çalışma sayfası biçimlendirmesini değiştirme](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)
-- [İzlenecek yol: düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)
-- [İzlenecek yol: radyo düğmelerini kullanarak çalışma sayfasındaki bir grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)
+- [Nasıl olur: Çalışma sayfası hücrelerinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md)
+- [Nasıl olur: Yazdırma sırasında çalışma sayfaları denetimlerini gizleme](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
+- [Adım adım kılavuz: CheckBox denetimlerini kullanarak çalışma sayfası biçimlendirmesini değiştirme](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)
+- [Adım adım kılavuz: Düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)
+- [Adım adım kılavuz: Radyo düğmelerini kullanarak çalışma sayfasındaki grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)

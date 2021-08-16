@@ -11,17 +11,18 @@ ms.assetid: 8fa1a1d3-9fcb-4fb3-bf4e-e7172ac08d77
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 710738bc2284d4cba29a451209a91dd12091f1af
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 38fde9a0bfed0a915cdb4ea16e95d04597931c8c13975b866adce95dde4e2ac4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077882"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377840"
 ---
 # <a name="idebugcoreserver2getmachineinfo"></a>IDebugCoreServer2::GetMachineInfo
 Çekirdek sunucunun üzerinde çalıştığı makinenin açıklamasını alır.

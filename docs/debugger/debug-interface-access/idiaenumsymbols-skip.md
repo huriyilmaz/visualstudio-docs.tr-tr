@@ -1,6 +1,6 @@
 ---
-description: Bir numaralandırma dizisinde belirtilen sayıda sembolleri atlar.
-title: 'IDiaEnumSymbols:: Skip | Microsoft Docs'
+description: Bir numaralama dizisinde belirtilen sayıda simgeyi atlar.
+title: IDiaEnumSymbols::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: e601fbc9-b10b-41c7-8180-959e57efabe8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e3a8088353dcfe13974989b84960c513afda0bb5
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a0a9a4be6943f34379bc2217673eaceb6b904f19837154166b7eddfe7b8ce928
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159071"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121312191"
 ---
 # <a name="idiaenumsymbolsskip"></a>IDiaEnumSymbols::Skip
-Bir numaralandırma dizisinde belirtilen sayıda sembolleri atlar.
+Bir numaralama dizisinde belirtilen sayıda simgeyi atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,12 +33,12 @@ HRESULT Skip (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Atlanacak numaralandırma dizisindeki simgelerin sayısı.
+[in] Atlama sırasına göre numaralama dizisinde yer alan sembollerin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak başka sembol yoksa, döndürür.
+ Başarılı olursa, `S_OK` ; aksi takdirde, `S_FALSE` atlanabilecek başka sembol yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
