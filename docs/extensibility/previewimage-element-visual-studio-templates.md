@@ -1,6 +1,6 @@
 ---
-title: Previewiımage öğesi (Visual Studio şablonları) | Microsoft Docs
-description: PreviewImage öğesi hakkında bilgi edinin ve yeni proje veya yeni öğe Ekle iletişim kutusunda görünecek Önizleme resminin dosya adını nasıl belirtir.
+title: previewiımage öğesi (Visual Studio şablonları) | Microsoft Docs
+description: previewimage öğesi hakkında bilgi edinin ve yeni Project veya yeni öğe ekle iletişim kutusunda görünecek olan önizleme resminin dosya adını nasıl belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -14,15 +14,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6fc7a370885d24a586262bebd4182daacd84a9b2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a0ddae8f246ccedb6ca004743e7e18c22b38a0ddb4dabb671d55f07140274074
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090232"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431597"
 ---
-# <a name="previewimage-element-visual-studio-templates"></a>Previewiımage öğesi (Visual Studio şablonları)
-Önizleme görüntüsünün **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünecek olan önizleme resmini bir dosya adı olarak belirtir.
+# <a name="previewimage-element-visual-studio-templates"></a>previewiımage öğesi (Visual Studio şablonları)
+önizleme görüntüsü için **yeni Project** veya **yeni öğe ekle** iletişim kutusunda görünecek olan önizleme resmini bir dosya adı olarak belirtir.
 
  \<VSTemplate> \<TemplateData>
  \<PreviewImage>
@@ -46,7 +46,7 @@ ms.locfileid: "105090232"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
@@ -57,5 +57,5 @@ ms.locfileid: "105090232"
  `PreviewImage` isteğe bağlı bir öğedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

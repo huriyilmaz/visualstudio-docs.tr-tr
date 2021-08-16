@@ -1,6 +1,6 @@
 ---
-title: Visual Studio Kabuğu | Microsoft Docs
-description: Visual Studio Kabuğu, Visual Studio 'daki tümleştirme birincil aracısıdır ve temel işlevleri sağlar ve VSPackages 'ler arasında çapraz iletişimi destekler.
+title: Visual Studio Kabuk | Microsoft Docs
+description: Visual Studio kabuğu, Visual Studio tümleştirmenin birincil aracısıdır ve temel işlevsellik sağlar ve VSPackage'lar arasında çapraz iletişimi destekler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,72 +11,73 @@ ms.assetid: cb124ef4-1a6b-4bfe-bfbf-295ef9c07f36
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5dafd90294fd0968c78846d4162c1ff02c584f3f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0d2d79a36acdc7c210b81b5215d242d95adb947e8dcf17aec23a62bf4e05708a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074346"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375442"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Kabuğu
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kabuk, ' deki tümleştirme birincil aracısıdır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Kabuk, VSPackages 'ın ortak hizmetleri paylaşmasını sağlamak için gerekli işlevleri sağlar. Öğesinin mimari hedefi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackages içindeki birincil işlevselliğe Vest çünkü kabuk, temel işlevleri sağlamak ve bileşen VSPackages 'ler arasında çapraz iletişim desteği sağlamak için bir çerçevedir.
+kabuk, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] içinde tümleştirmenin birincil aracısıdır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kabuk, VSPackage'ların ortak hizmetleri paylaşması için gerekli işlevselliği sağlar. 'nin mimari hedefi VSPackage'larda birincil işlevselliğin en iyi şekilde çalışması olduğundan kabuk, temel işlevler sağlayan ve bileşeni VSPackage'ları arasında çapraz iletişimi destekleyen bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çerçevedir.
 
-## <a name="shell-responsibilities"></a>Kabuk sorumlulukları
- Kabukta aşağıdaki önemli sorumluluklar vardır:
+## <a name="shell-responsibilities"></a>Kabuk Sorumlulukları
+ Kabuğun aşağıdaki temel sorumlulukları vardır:
 
-- Destekleyici (COM arabirimleri aracılığıyla) Kullanıcı arabiriminin temel öğeleri (UI). Bunlar arasında varsayılan menüler ve araç çubukları, belge penceresi çerçeveleri veya çok belgeli arabirim (MDI) alt pencereleri ve araç penceresi çerçeveleri ve yerleştirme desteği bulunur.
+- Kullanıcı arabiriminin (UI) temel öğelerini destekleme (COM arabirimleri aracılığıyla). Bunlar varsayılan menüler ve araç çubukları, belge penceresi çerçeveleri veya çok belgeli arabirim (MDI) alt pencereleri ile araç penceresi çerçeveleri ve yerleştirme desteğidir.
 
-- Belgelerin kalıcılığını koordine etmek ve bir belgenin birden fazla yoldan veya uyumsuz yollarla açılabileceğinden emin olmak için, çalışan bir belge tablosunda (RDT) Şu anda açık olan tüm belgelerin çalışmakta olan bir listesini koruyun.
+- Belgelerin kalıcılığıyla eşgüdüm sağlamak ve bir belgenin birden fazla şekilde veya uyumsuz yollarla açılamaysini garanti etmek için, çalışan bir belge tablosunda (RDT) açık olan tüm belgelerin çalışan listesinin korunması.
 
-- Komut yönlendirme ve komut işleme arabirimini destekleme `IOleCommandTarget` .
+- Komut yönlendirme ve komut işleme arabirimini destekleme, `IOleCommandTarget` .
 
-- VSPackages, uygun zamanlarda yükleniyor. Kabuğun performansını iyileştirmek için VSPackage gecikme yükleme gerekir.
+- VSPackage'ları uygun zamanlarda yükleme. Kabuğun performansını geliştirmek için VSPackage'ın gecikmeli yüklenmesi gerekir.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>Temel bir kabuk işlevselliği sağlayan ve temel bir Pencereleme işlevselliği sağlayan, gibi bazı paylaşılan hizmetleri yönetme <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> .
+- Temel kabuk işlevselliği sağlayan ve temel pencere işlevselliği sağlayan gibi bazı paylaşılan <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell> <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> hizmetleri yönetme.
 
-- Çözüm (. sln) dosyalarını yönetme. Çözümler, Visual C++ 6,0 ' deki çalışma alanı (. DSW) dosyalarına benzer ilgili proje gruplarını içerir.
+- Çözüm (.sln) dosyalarını yönetme. Çözümler, 6.0'daki çalışma alanı (.dsw) dosyalarına benzer Visual C++ proje gruplarını içerir.
 
 - Kabuk genelinde seçimi, bağlamı ve para birimini izleme. Kabuk aşağıdaki öğe türlerini izler:
 
   - Geçerli proje
 
-  - Geçerli proje öğesi veya öğe kimliği geçerli <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>
+  - Geçerli proje öğesi veya geçerli ÖğeKimlik Numarası <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>
 
-  - **Özellikler** penceresi için geçerli seçim veya`SelectionContainer`
+  - Özellikler penceresi için **geçerli seçim** veya `SelectionContainer`
 
-  - Komutların, menülerin ve araç çubuklarının görünürlüğünü denetleyen UI bağlam kimlikleri veya Cmduiguid 'Leri
+  - Komutların, menülerin ve araç çubuklarının görünürlüğünü kontrol altına alan kullanıcı arabirimi bağlam kimlikleri veya CmdUIGuids
 
   - Etkin pencere, belge ve geri alma yöneticisi gibi şu anda etkin olan öğeler
 
-  - Dinamik yardım 'ı hedefleyen Kullanıcı bağlamı öznitelikleri
+  - Dinamik Yardım'a yol alan Kullanıcı Bağlamı öznitelikleri
 
-  Kabuk Ayrıca yüklü VSPackages ve geçerli hizmetler arasındaki iletişimi de dengeler. Bu, kabuğun temel özelliklerini destekler ve ' de tümleştirilmiş tüm VSPackages tarafından kullanılabilir hale getirir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu temel özellikler aşağıdaki öğeleri içerir:
+  Kabuk ayrıca yüklü VSPackage'lar ve geçerli hizmetler arasındaki iletişime de aracılık sağlar. Kabuğun temel özelliklerini destekler ve ile tümleştirilmiş tüm VSPackage'lar tarafından [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanılabilir. Bu temel özellikler aşağıdaki öğeleri içerir:
 
-- İletişim kutusu ve giriş ekranı **hakkında**
+- **İletişim** kutusu ve giriş ekranı hakkında
 
-- **Yeni ve varolan öğe** Ekle iletişim kutuları
+- **Yeni Ekle ve Var Olan Öğeyi Ekle iletişim** kutuları
 
-- **Sınıf görünümü** pencere ve **nesne tarayıcısı**
+- **Sınıf Görünümü** penceresi ve **Nesne Tarayıcısı**
 
 - **Başvurular** iletişim kutusu
 
-- **Belge Anahattı** penceresi
+- **Belge Ana Hat** penceresi
 
-- **Dinamik yardım** penceresi
+- **Dinamik Yardım** penceresi
 
 - **Bul** ve **Değiştir**
 
-- **Yeni** menüde **Proje Aç** ve **Dosya Aç** iletişim kutuları
+- **Yeni Project** aç **ve** Dosya Aç iletişim **kutuları**
 
-- **Araçlar** menüsündeki **Seçenekler** iletişim kutusu
+- **Araçlar** menüsündeki Seçenekler **iletişim** kutusu
 
 - **Özellikler** penceresi
 
 - **Çözüm Gezgini**
 
-- **Görev listesi** penceresi
+- **Görev Listesi** penceresi
 
 - **Araç Kutusu**
 

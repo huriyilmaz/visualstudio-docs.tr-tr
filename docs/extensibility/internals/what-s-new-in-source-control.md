@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2015 SDK 'da kaynak denetimindeki yenilikler | Microsoft Docs
-description: Kaynak denetimi VSPackages özellikleri hakkında bilgi edinin ve uygulama adımlarına genel bir bakış inceleyin.
+title: Visual Studio 2015 SDK'sı | Microsoft Docs
+description: KAYNAK denetimi VSPackage'larının özellikleri hakkında bilgi edinin ve uygulama adımlarına genel bir bakış gözden geçirme.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
@@ -12,40 +12,41 @@ ms.assetid: bcf85418-18fb-4824-9dae-d14bf3d56a77
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: da10750629fcdae66ab8456b3074c07f44e3cf05
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9f828aa153ddba9fcc0bb6db07084277b48b7c862447bd2b8fc4e6681123ab44
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069068"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431740"
 ---
-# <a name="whats-new-in-source-control-for-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK için kaynak denetimindeki yenilikler
+# <a name="whats-new-in-source-control-for-the-visual-studio-2015-sdk"></a>Visual Studio 2015 SDK'sı için Kaynak Denetimi'Visual Studio'daki YeniLer
 
-İçinde [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] , bir kaynak denetimi VSPackage uygulayarak bir çok Tümleşik kaynak denetimi çözümü sağlayabilirsiniz. Bu bölümde, VSPackages kaynak denetimi özellikleri açıklanmakta ve uygulama adımlarına genel bir bakış sağlanmaktadır.
+içinde, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] bir kaynak denetimi VSPackage'sı uygulayarak derin bir şekilde tümleşik kaynak denetimi çözümü s platformları s olun. Bu bölümde kaynak denetimi VSPackage'larının özellikleri açık ve uygulama adımlarına genel bir bakış sağlar.
 
-## <a name="the-source-control-vspackage"></a>Kaynak denetimi VSPackage
+## <a name="the-source-control-vspackage"></a>Kaynak Denetimi VSPackage
 
-Visual Studio iki tür kaynak denetimi çözümünü destekler. Visual Studio 'nun tüm sürümlerinde, yine de bir kaynak denetimi eklentisi API tabanlı eklentisini tümleştirmenize devam edebilirsiniz. Ayrıca, [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] yüksek düzeyde gelişmiş algoritmaların mümkündür ve bağımsız çalışma sınırı gerektiren kaynak denetimi çözümlerine uygun bir derin tümleştirme sağlayan kaynak denetimi için bir VSPackage oluşturabilirsiniz.
+Visual Studio iki tür kaynak denetimi çözümü destekler. Uygulamanın tüm Visual Studio, Yine de Kaynak Denetimi Eklentisi API'si tabanlı eklentiyi tümleştirebilirsiniz. Ayrıca, yüksek düzeyde gelişmişlik ve otonomi gerektiren kaynak denetimi çözümleri için uygun bir derin tümleştirme ve yol sağlayan kaynak denetimi için bir VSPackage [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] da oluşturabilirsiniz.
 
-VSPackage, Visual Studio 'ya neredeyse her türlü işlevselliği ekleyebilir. Kaynak denetimi VSPackage, kullanıcıya kaynak denetim sistemi ile arka uç iletişimine sunulan Kullanıcı ARABIRIMINDEN, Visual Studio için tam bir kaynak denetimi özelliği sağlar.
+VSPackage, uygulamanıza neredeyse her türlü işlevi Visual Studio. Kaynak denetimi VSPackage, kullanıcıya sunulan kullanıcı arabiriminden kaynak denetim sistemiyle arka uç Visual Studio için tam bir kaynak denetimi özelliği sağlar.
 
-Kaynak denetimi VSPackage uygulamak, "tümü veya Nothing" stratejisi gerektirir. Bir kaynak denetimi, VSPackage oluşturucusunun, kaynak denetimi işlevselliğinin tamamını kapsayan bir dizi kaynak denetim arabirimini ve yeni kullanıcı arabirimi öğelerini (iletişim kutuları, menüler ve araç çubukları) uygulamak için önemli miktarda çaba yatırması gerekir. böylece, Visual Studio ile başarılı bir şekilde tümleştirilebilir.
+VSPackage kaynak denetimi uygulamak için "hepsi veya hiçbir şey" stratejisi gerekir. VSPackage kaynak denetimi oluşturucusu, kaynak denetimi işlevselliğinin tamamını kapsayacak şekilde bir dizi kaynak denetim arabirimi ve yeni kullanıcı arabirimi öğeleri (iletişim kutuları, menüler ve araç çubukları) uygulamak ve herhangi bir paketin Visual Studio ile başarıyla tümleştiril için gereken arabirimleri uygulamak için önemli miktarda çaba göster Visual Studio.
 
-Aşağıdaki adımlarda, kaynak denetimi paketinin uygulanması için gerekli olan genel bir genel bakış sunulmaktadır. Ayrıntılar için bkz. [kaynak denetimi VSPackage oluşturma](../../extensibility/internals/creating-a-source-control-vspackage.md).
+Aşağıdaki adımlar, bir kaynak denetim paketini uygulamak için gerekenlere genel bir genel bakış sağlar. Ayrıntılar için [bkz. Kaynak Denetimi VSPackage Oluşturma.](../../extensibility/internals/creating-a-source-control-vspackage.md)
 
-1. Özel bir kaynak denetimi hizmetini hedefleyen bir VSPackage oluşturun.
+1. Özel bir kaynak denetimi hizmetine sahip olan bir VSPackage oluşturun.
 
-2. Arabirimleri, Visual Studio tarafından (örneğin, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> ve arabirimi) yapılan kaynak denetimi ile ilgili hizmetlerde uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider> .
+2. Kaynak denetimiyle ilgili hizmetlerde, arabirimler tarafından ara Visual Studio (örneğin, ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider> arabirimi) uygulama.
 
-3. Kaynak denetimi VSPackage 'a kaydolun.
+3. VsPackage kaynak denetiminizi kaydetme.
 
-4. Menü öğeleri, iletişim kutuları, araç çubukları ve bağlam menüleri dahil olmak üzere tüm kaynak denetimi kullanıcı arabirimini uygulayın.
+4. Menü öğeleri, iletişim kutuları, araç çubukları ve bağlam menüleri dahil olmak üzere tüm kaynak denetimi kullanıcı arabirimini uygulama.
 
-5. Kaynak denetimi ile ilgili tüm olaylar etkinken kaynak denetimine geçirilir ve VSPackage tarafından işlenmesi gerekir.
+5. Kaynak denetimiyle ilgili tüm olaylar etkin olduğunda kaynak denetimi VSackage'nıza geçirildi ve VSPackage'nız tarafından işlerinin olması gerekir.
 
-6. Kaynak denetimi VSPackage, arabirimi uygulayan gibi olayları dinlemesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> ve proje belgesi (TPD) olaylarını (arabirim tarafından uygulandığı şekilde <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> ) izleyip gerekli işlemleri gerçekleştirmelidir.
+6. VsPackage kaynak denetiminiz, arabirimi uygulayan olaylar gibi olayları dinlemeli ve Project Belgesi (TPD) olaylarını izlemeli (arabirim tarafından uygulanan şekilde) ve gerekli eylemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> gerçekleştirmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
 title: Görev Listesini Kullanma
-description: Visual Studio 'daki Görev Listesi kod açıklamalarını daha verimli bir şekilde izlemenize ve kullanmanıza nasıl yardımcı olabileceğini öğrenin.
+description: Visual Studio Görev Listesi kod açıklamalarını daha verimli bir şekilde izlemenize ve kullanmanıza nasıl yardımcı olabileceğini öğrenin.
 ms.date: 10/12/2020
 ms.topic: how-to
 f1_keywords:
@@ -13,21 +13,22 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 599623fc5c069c6c402de3718b1b16d20176eaad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f326885e0a98c4dc5a71f3024530d176951883101f126b0b2d9fe9755e843478
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925641"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121399489"
 ---
 # <a name="use-the-task-list"></a>Görev Listesini Kullanma
 
 Ve  , veya özel belirteçler gibi belirteçleri kullanan kod açıklamalarını izlemek `TODO` `HACK` ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetmek için görev listesi kullanın. Kaynak kodundaki konumuna gitmek için listedeki öğeye tıklayın.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments).
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments).
 
 ## <a name="the-task-list-window"></a>Görev Listesi penceresi
 
@@ -45,9 +46,9 @@ Sütunların sırasını değiştirmek için herhangi bir sütun başlığını 
 
 ## <a name="user-tasks"></a>Kullanıcı görevleri
 
-Kullanıcı görevi özelliği Visual Studio 2015 ' de kaldırılmıştır. Visual Studio 2013 ve önceki sürümlerinden Kullanıcı görevi verileri içeren bir çözümü açtığınızda, *. suo* dosyanızdaki Kullanıcı görevi verileri etkilenmez, ancak Kullanıcı görevleri görev listesinde gösterilmez.
+kullanıcı görevi özelliği Visual Studio 2015 ' de kaldırıldı. Visual Studio 2013 ve önceki sürümlerinden kullanıcı görevi verileri içeren bir çözümü açtığınızda, *. suo* dosyanızdaki kullanıcı görevi verileri etkilenmez, ancak kullanıcı görevleri görev listesinde gösterilmez.
 
-Kullanıcı görev verilerinize erişmeye ve güncelleştirmeye devam etmek istiyorsanız, projeyi Visual Studio 2013 açın ve Kullanıcı görevlerinin içeriğini tercih ettiğiniz proje yönetim aracına (Team Foundation Server gibi) kopyalayın.
+kullanıcı görev verilerinize erişmeye ve güncelleştirmeye devam etmek istiyorsanız, projeyi Visual Studio 2013 açın ve kullanıcı görevlerinin içeriğini tercih ettiğiniz proje yönetim aracına (Team Foundation Server gibi) kopyalayın.
 
 ## <a name="tokens-and-comments"></a>Belirteçler ve açıklamalar
 
@@ -67,7 +68,7 @@ Kodunuzda bir açıklama işaretçisi ve önceden tanımlanmış bir belirteç b
 
 ### <a name="custom-tokens"></a>Özel belirteçler
 
-Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK` , `TODO` , `UNDONE` ve `UnresolvedMergeConflict` . Bunlar büyük/küçük harfe duyarlı değildir. Ayrıca kendi özel belirteçlerinizi de oluşturabilirsiniz.
+varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK` , `TODO` , `UNDONE` ve `UnresolvedMergeConflict` . Bunlar büyük/küçük harfe duyarlı değildir. Ayrıca kendi özel belirteçlerinizi de oluşturabilirsiniz.
 
 > [!NOTE]
 > Varsayılan belirteçler yalnızca C/C++, C# ve VB dilleri için kullanılabilir. Diğer programlama dillerinde kendi belirteçlerinizi oluşturmak için aşağıdaki adımları kullanın.
@@ -112,4 +113,4 @@ Koddaki kısayollar arasında gezinmek için listeden bir kısayol seçin ve son
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Görev Listesi, ortam, Seçenekler iletişim kutusu](../ide/reference/task-list-environment-options-dialog-box.md)
-- [Görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments)
+- [görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments)

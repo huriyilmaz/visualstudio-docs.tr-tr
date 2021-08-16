@@ -1,6 +1,6 @@
 ---
-title: Yönetilen kodda bir Iş parçacığı adı ayarlama | Microsoft Docs
-description: Visual Studio 'da çok iş parçacıklı uygulama hata ayıklaması sırasında yönetilen kodda bir iş parçacığı adı ayarlayın. İş parçacığı adlandırması iş parçacıkları penceresinde iş parçacıklarını izlemek için kullanılır.
+title: Yönetilen Kod Kümesinde İş Parçacığı | Microsoft Docs
+description: Birden çok iş parçacıklı uygulamada hata ayıklama sırasında yönetilen kodda iş parçacığı Visual Studio. İş parçacığı adlandırma, İş Parçacıkları penceresindeki iş parçacıklarını izlemek için kullanılır.
 ms.custom: SEO-VS-2020
 ms.date: 04/27/2017
 ms.topic: how-to
@@ -18,19 +18,20 @@ ms.assetid: c0c4d74a-0314-4b71-81c9-b0b019347ab8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3defa5eaee2aafabcb4cf890516f7c78be47b1e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5d0ce2bdadd7ea325ef63aa3f561fa949945207295fce0ef69adabad474be6cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915774"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121379015"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>Nasıl Yapılır: Yönetilen Kodda İş Parçacığı Adı Ayarlama
-Visual Studio 'nun herhangi bir sürümünde iş parçacığı adlandırması mümkündür. İş parçacığı adlandırması **, iş parçacıkları penceresinde iş** parçacıklarını izlemek için yararlıdır.
+İş parçacığı adlandırma, iş parçacığı adlandırmanın herhangi bir Visual Studio. İş parçacığı adlandırma, İş Parçacıkları penceresindeki iş parçacıklarını izlemek **için** kullanışlıdır.
 
- Yönetilen kodda bir iş parçacığı adı ayarlamak için <xref:System.Threading.Thread.Name%2A> özelliğini kullanın.
+ Yönetilen kodda iş parçacığı adı ayarlamak için özelliğini <xref:System.Threading.Thread.Name%2A> kullanın.
 
 ## <a name="example"></a>Örnek
 
@@ -78,5 +79,5 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Nasıl Yapılır: Yerel Kodda İş Parçacığı Adı Ayarlama](../debugger/how-to-set-a-thread-name-in-native-code.md)

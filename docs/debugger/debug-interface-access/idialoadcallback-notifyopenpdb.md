@@ -11,14 +11,15 @@ ms.assetid: c0547f99-8468-4e57-82ca-9ef7d6707c8a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ab1f72c6f22f70bb94262c57327ab91f96a02183
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ce253b54bc4d8c5d911a8d7b7a78445fca7df38e389925a205944bbc5222ecee
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148299"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121405157"
 ---
 # <a name="idialoadcallbacknotifyopenpdb"></a>IDiaLoadCallback::NotifyOpenPDB
 Bir aday. pdb dosyası açıldığında çağırılır.

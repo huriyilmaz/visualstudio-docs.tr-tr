@@ -7,16 +7,17 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 56a1b20854cdd2c1821490bb4972d67bbe912056
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 284c4be79f2e1ac0450b88c7e857fdede4951e5c073439b0d359afb27a3eb204
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919667"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430009"
 ---
 # <a name="convert-switch-statement-to-switch-expression"></a>Switch deyimini switch ifadesine dönüştürme
 
