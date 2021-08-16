@@ -1,6 +1,6 @@
 ---
 title: XAML Tasarımcısı’nda verilere bağlama
-description: Çalışma yüzeyini ve Özellikler penceresi kullanarak veri bağlama özelliklerini ayarlayarak XAMl tasarımcısında bir denetime veri bağlamayı öğrenin.
+description: Çalışma panosu ve veri bağlama özelliklerini kullanarak XAMl Tasarımcısı'nda bir denetime veri bağlamayı Özellikler penceresi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,26 +12,27 @@ dev_langs:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 6bf3bd24b4a232899c64f6c0ecd819b0fe0f83a1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-xaml-tools
+ms.openlocfilehash: 9b6ad5e0286a6faedf60718fd1533d83cb3a5fcd7fdf2104b89d3bb09e69da91
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961319"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440249"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>İzlenecek yol: XAML Tasarımcısı’nda verilere bağlama
 
-XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak veri bağlama özelliklerini ayarlayabilirsiniz. Bu yönergedeki örnek, verileri bir denetime bağlamayı gösterir. Özellikle, izlenecek yol, adlı bir [DependencyProperty](xref:Windows.UI.Xaml.DependencyProperty) 'yi içeren basit bir alışveriş sepeti sınıfının nasıl oluşturulacağını gösterir `ItemCount` ve sonra `ItemCount` özelliği bir [TextBlock](xref:Windows.UI.Xaml.Controls.TextBlock) denetiminin **Text** özelliğine bağlar.
+Bu XAML Tasarımcısı, çalışma panosu ve veri bağlama özelliklerini ayarlamak için çalışma Özellikler penceresi. Bu kılavuzda yer alan örnek, bir denetime veri bağlamayı gösterir. Özellikle izlenecek yol, [adlı DependencyProperty](xref:Windows.UI.Xaml.DependencyProperty) değerine sahip basit bir alışveriş sepeti sınıfı oluşturma ve ardından özelliğini TextBlock denetiminde `ItemCount` `ItemCount` **Text** özelliğine bağlama [adımlarını](xref:Windows.UI.Xaml.Controls.TextBlock) gösterir.
 
-## <a name="to-create-a-class-to-use-as-a-data-source"></a>Veri kaynağı olarak kullanılacak bir sınıf oluşturmak için
+## <a name="to-create-a-class-to-use-as-a-data-source"></a>Veri kaynağı olarak kullanmak üzere bir sınıf oluşturmak için
 
-1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. Dosya menüsünde **Yeni** **dosya'Project.**  >  
 
-1. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümünü seçin, **Windows Masaüstü** düğümünü genişletin ve ardından **WPF uygulama** şablonunu seçin.
+1. Yeni **Project** iletişim kutusunda **Visual C#** **veya Visual Basic** düğümünü seçin, **Windows Masaüstü** düğümünü genişletin ve **ardından WPF Uygulaması şablonunu** seçin.
 
-1. Projeyi **BindingTest** olarak adlandırın ve **Tamam** düğmesini seçin.
+1. Projeye **BindingTest adını ve** ardından Tamam **düğmesini** seçin.
 
-1. **MainWindow.xaml.cs** (veya **MainWindow. xaml. vb**) dosyasını açın ve aşağıdaki kodu ekleyin. C# dilinde, kodu `BindingTest` ad alanına ekleyin (dosyadaki son kapanış parantezinden önce). Visual Basic ' de, yeni sınıfı eklemeniz yeterlidir.
+1. **MainWindow.xaml.cs** (veya **MainWindow.xaml.vb**) dosyasını açın ve aşağıdaki kodu ekleyin. C# içinde kodu ad alanına ekleyin `BindingTest` (dosyada son kapatma parantezi öncesinde). Bu Visual Basic yeni sınıfı eklemeniz gerekir.
 
    ```csharp
    public class ShoppingCart : DependencyObject
@@ -67,37 +68,37 @@ XAML Tasarımcısı, çalışma yüzeyini ve Özellikler penceresi kullanarak ve
 
    Bu kod, [PropertyMetadata](xref:Windows.UI.Xaml.PropertyMetadata) nesnesini kullanarak varsayılan öğe sayısı olarak 0 değerini ayarlar.
 
-1. **Dosya** **menüsünde Build**  >  **Build Solution** öğesini seçin.
+1. Dosya menüsünde **Derleme**   >  **Çözümü'ne tıklayın.**
 
-## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>ItemCount özelliğini bir TextBlock denetimine bağlamak için
+## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>ItemCount özelliğini textBlock denetimine bağlamak için
 
-1. Çözüm Gezgini, **MainWindow. xaml** için kısayol menüsünü açın ve **Görünüm Tasarımcısı**' nı seçin.
+1. Bu Çözüm Gezgini **MainWindow.xaml** kısayol menüsünü açın ve **Görünüm Tasarımcısı.**
 
-1. Araç kutusunda bir [kılavuz](xref:Windows.UI.Xaml.Controls.Grid) denetimi seçin ve forma ekleyin.
+1. Araç Kutusunda bir Kılavuz [denetimi seçin](xref:Windows.UI.Xaml.Controls.Grid) ve forma ekleyin.
 
-1. Seçili olan `Grid` Özellikler penceresi, **DataContext** özelliğinin yanındaki **Yeni** düğmesini seçin.
+1. `Grid`seçiliyken, Özellikler penceresi **DataContext** **özelliğinin** yanındaki Yeni düğmesini seçin.
 
-1. **Nesne Seç** iletişim kutusunda, **tüm derlemeleri göster** onay kutusunun temizlenmiş olduğundan emin olun, **BindingTest** ad alanı altında **ShoppingCart** ' i seçin ve **Tamam** düğmesini seçin.
+1. Nesne **Seç iletişim kutusunda Tüm**  derlemeleri göster onay kutusunun temiz olduğundan emin olun, BindingTest ad alanının altında **ShoppingCart'ı** seçin ve ardından **Tamam düğmesini** seçin. 
 
-     Aşağıdaki çizimde, **ShoppingCart** seçiliyken **nesne Seç** iletişim kutusu gösterilmektedir.
+     Aşağıdaki çizimde **ShoppingCart** **öğesinin** seçili olduğu Nesne Seç iletişim kutusu gösterilmiştir.
 
      ![Nesne Seç iletişim kutusu](../designers/media/blendselectobject.png)
 
-1. **Araç kutusunda**, `TextBlock` forma eklemek için bir denetim seçin.
+1. Araç **Kutusunda,** forma `TextBlock` eklemek için bir denetim seçin.
 
-1. `TextBlock`Denetim seçiliyken, Özellikler penceresi **metin** özelliğinin sağ tarafındaki özellik işaretini seçin ve sonra **veri bağlama oluştur**' u seçin. (Özellik işaretçisi küçük bir kutu gibi görünür.)
+1. Denetim seçiliyken, Özellikler penceresi Text özelliğinin sağ tarafından özellik işaretçisini seçin ve ardından Veri `TextBlock` **BağlamaSı Oluştur'a seçin.**  (Özellik işaretçisi küçük bir kutuya benzer.)
 
-1. Veri bağlamayı oluştur iletişim kutusunda, **yol** kutusunda, **ItemCount: (Int32)** özelliğini seçin ve sonra **Tamam** düğmesini seçin.
+1. Veri Bağlama Oluştur iletişim kutusundaki  Yol kutusunda **ItemCount : (int32)** özelliğini ve ardından Tamam **düğmesini** seçin.
 
-     Aşağıdaki çizimde, **ItemCount** özelliği seçili olan **veri bağlamayı oluştur** iletişim kutusu gösterilmektedir.
+     Aşağıdaki çizimde **ItemCount** **özelliğinin seçili** olduğu Veri BağlamaSı Oluştur iletişim kutusu gösterilmiştir.
 
-     ![Veri bağlama oluştur iletişim kutusu](../designers/media/xaml_create_data_binding.png)
+     ![Veri Bağlama Oluştur iletişim kutusu](../designers/media/xaml_create_data_binding.png)
 
-1. Uygulamayı çalıştırmak için **F5** tuşuna basın.
+1. Uygulamayı **çalıştırmak için F5** tuşuna basın.
 
-     `TextBlock`Denetim, varsayılan değer olan 0 değerini metin olarak göstermelidir.
+     Denetimde `TextBlock` varsayılan 0 değeri metin olarak göster gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
-- [Değer Dönüştürücüsü Ekle iletişim kutusu](/previous-versions/hh965588(v=vs.140))
+- [Değer Dönüştürücü ekle iletişim kutusu](/previous-versions/hh965588(v=vs.140))

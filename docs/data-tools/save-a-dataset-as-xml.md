@@ -1,6 +1,6 @@
 ---
 title: Bir veri kümesini XML olarak kaydetme
-description: Veri kümesini XML olarak kaydetme. Veri kümesinde, GetXml veya WriteXml gibi kullanılabilir XML yöntemlerini çağırarak bir veri kümesindeki XML verilerine erişin.
+description: Veri kümelerini XML olarak kaydedin. Veri kümesinde GetXml veya WriteXml gibi kullanılabilir XML yöntemlerini çağırarak bir veri kümesinde XML verilerine erişin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,33 +16,34 @@ ms.assetid: 68b8327c-ae05-49ff-b9ba-99183e70b52c
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 42974852a3051fd3473b6b23d880eeb38b966b95
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 144412b8e738391e1c0122efaef3dee658010422556541987f09b2ca31881697
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216208"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346940"
 ---
 # <a name="save-a-dataset-as-xml"></a>Bir veri kümesini XML olarak kaydetme
 
-Veri kümesindeki kullanılabilir XML yöntemlerini çağırarak bir veri kümesindeki XML verilerine erişin. Verileri XML biçiminde kaydetmek için, <xref:System.Data.DataSet.GetXml%2A> yöntemini ya da <xref:System.Data.DataSet.WriteXml%2A> bir yöntemini çağırabilirsiniz <xref:System.Data.DataSet> .
+Veri kümesinde kullanılabilir XML yöntemlerini çağırarak bir veri kümesinde XML verilerine erişin. Verileri XML biçiminde kaydetmek için yöntemini veya yöntemini <xref:System.Data.DataSet.GetXml%2A> <xref:System.Data.DataSet.WriteXml%2A> <xref:System.Data.DataSet> çağırabilirsiniz.
 
-Yöntemi çağırmak, <xref:System.Data.DataSet.GetXml%2A> XML olarak biçimlendirilen veri kümesindeki tüm veri tablolarından verileri içeren bir dize döndürür.
+yönteminin çağrılsı, XML olarak biçimlendirilmiş veri kümesinde yer alan tüm veri <xref:System.Data.DataSet.GetXml%2A> tablolarından verileri içeren bir dize döndürür.
 
-Yöntemi çağırmak, <xref:System.Data.DataSet.WriteXml%2A> XML biçimli verileri belirttiğiniz bir dosyaya gönderir.
+yönteminin <xref:System.Data.DataSet.WriteXml%2A> çağrılsı XML biçimli verileri belirttiğiniz bir dosyaya gönderir.
 
-## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>Bir veri kümesindeki verileri bir değişkene XML olarak kaydetmek için
+## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>Verileri bir veri kümesinde XML olarak bir değişkene kaydetmek için
 
-- <xref:System.Data.DataSet.GetXml%2A>Yöntemi bir döndürür <xref:System.String> . Türünde bir değişken bildirin <xref:System.String> ve yöntemin sonuçlarını atayın <xref:System.Data.DataSet.GetXml%2A> .
+- yöntemi <xref:System.Data.DataSet.GetXml%2A> bir <xref:System.String> döndürür. türünde bir değişken <xref:System.String> bildirin ve yöntemin sonuçlarını <xref:System.Data.DataSet.GetXml%2A> buna at uygun şekilde attayin.
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet12":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet12":::
 
-## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>Veri kümesindeki verileri bir dosyaya XML olarak kaydetmek için
+## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>Verileri bir veri kümesinde XML olarak bir dosyaya kaydetmek için
 
-- <xref:System.Data.DataSet.WriteXml%2A>Yönteminde birkaç aşırı yükleme vardır. Bir değişken bildirin ve dosyayı kaydetmek için geçerli bir yol atayın. Aşağıdaki kod, verilerin bir dosyaya nasıl kaydedileceğini gösterir:
+- yönteminde <xref:System.Data.DataSet.WriteXml%2A> çeşitli aşırı yüklemeler vardır. Bir değişken bildirin ve dosyayı kaydetmek için geçerli bir yol attayabilirsiniz. Aşağıdaki kod, verileri bir dosyaya kaydetmeyi gösterir:
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet13":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet13":::

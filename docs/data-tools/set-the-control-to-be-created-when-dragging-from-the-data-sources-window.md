@@ -1,6 +1,6 @@
 ---
-title: Sürüklerken oluşturulacak denetimi ayarla
-description: Veri kaynakları penceresinden, Visual Studio 'da WPF Tasarımcısı veya Windows Forms Tasarımcısı üzerine sürüklediğiniz zaman oluşturulacak denetimin nasıl ayarlanacağını öğrenin.
+title: Sürüklenme zaman oluşturmak için denetimi ayarlama
+description: Veri Kaynakları penceresinden WPF tasarımcısına veya Windows Forms tasarımcısına sürüklerken oluşturulacak denetimin nasıl ayar Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,63 +13,64 @@ ms.assetid: 20597ff8-0c98-43ec-8fb1-05376804ba48
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6b4d1782a82a1eb2147d540b1799f5152c4f2308
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1033ffad781efe15507c5a484cd83f88a837d00fb6bc28fc5df78404076d6361
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858442"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346836"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Veri Kaynakları penceresinden sürüklendiğinde denetimin oluşturulmasını ayarlama
 
-**Veri kaynakları** penceresinden WPF tasarımcısı veya Windows Forms Tasarımcısı üzerine sürükleyerek veri bağlantılı denetimler oluşturabilirsiniz. **Veri kaynakları** penceresindeki her öğe, tasarımcıya sürüklediğinizde oluşturulan bir varsayılan denetime sahiptir. Ancak, farklı bir denetim oluşturmayı tercih edebilirsiniz.
+Veri Kaynakları penceresindeki öğeleri WPF  tasarımcısına veya Windows Forms tasarımcısına sürükleyerek veriye bağlı denetimler oluşturabilirsiniz. Veri Kaynakları **penceresindeki her** öğe, tasarımcıya sürüklenerek oluşturulan varsayılan bir denetime sahip olur. Ancak farklı bir denetim oluşturabilirsiniz.
 
-## <a name="set-the-controls-to-be-created-for-data-tables-or-objects"></a>Veri tabloları veya nesneleri için oluşturulacak denetimleri ayarlama
+## <a name="set-the-controls-to-be-created-for-data-tables-or-objects"></a>Veri tabloları veya nesneler için oluşturulacak denetimleri ayarlama
 
-Veri **kaynakları** penceresinden veri tabloları veya nesneleri temsil eden öğeleri sürüklemeden önce, tüm verileri tek bir denetimde görüntülemeyi veya her bir sütunu ya da özelliği ayrı bir denetimde görüntülemeyi seçebilirsiniz.
+Veri Kaynakları penceresinden veri tablolarını  veya nesneleri temsil eden öğeleri sürüklemeden önce, tüm verileri tek bir denetimde görüntülemeyi veya her sütunu veya özelliği ayrı bir denetimde görüntülemeyi seçebilirsiniz.
 
-Bu bağlamda, *nesne* terimi özel bir iş nesnesi, bir varlık (varlık veri modeli) veya bir hizmet tarafından döndürülen bir nesne anlamına gelir.
+Bu bağlamda, nesne terimi *özel* bir iş nesnesine, bir varlığa (Varlık Veri Modeli) veya bir hizmet tarafından döndürülen nesneye başvurur.
 
 ### <a name="to-set-the-controls-to-be-created-for-data-tables-or-objects"></a>Veri tabloları veya nesneleri için oluşturulacak denetimleri ayarlamak için
 
-1. **WPF** tasarımcısı veya **Windows Forms** tasarımcısının açık olduğundan emin olun.
+1. **WPF tasarımcısının veya** Windows **Forms tasarımcısının açık** olduğundan emin olun.
 
-2. **Veri kaynakları** penceresinde, ayarlamak istediğiniz veri tablosu veya nesneyi temsil eden öğeyi seçin.
+2. Veri **Kaynakları penceresinde,** ayarlamak istediğiniz veri tablosu veya nesneyi temsil eden öğeyi seçin.
 
    > [!TIP]
-   > **Veri kaynakları** penceresi açık değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açabilirsiniz.
+   > Veri **Kaynakları penceresi açık** değilse Diğer Kaynakları Görüntüle'yi seçerek Windows   >    >  **açabilirsiniz.**
 
-3. Öğenin açılan menüsüne tıklayın ve ardından menüdeki aşağıdaki öğelerden birine tıklayın:
+3. Öğenin açılan menüsüne tıklayın ve ardından menüde aşağıdaki öğelerden birini tıklatın:
 
-    - Her veri alanını ayrı bir denetimde göstermek için **Ayrıntılar**' a tıklayın. Veri öğesini tasarımcıya sürüklediğinizde, bu eylem her bir denetimin etiketleriyle birlikte üst veri tablosu veya nesnesinin her bir sütunu veya özelliği için farklı bir veri bağlantılı denetim oluşturur.
+    - Her veri alanını ayrı bir denetimde görüntülemek için Ayrıntılar'a **tıklayın.** Veri öğesini tasarımcıya sürüklerken, bu eylem üst veri tablosu veya nesnesinin her sütunu veya özelliği için farklı bir veriye bağlı denetim ve her denetim için etiketler oluşturur.
 
-    - Tüm verileri tek bir denetimde göstermek için, listede **DataGrid** veya bir WPF uygulamasında **liste** veya Windows Forms uygulamasında **DataGridView** gibi farklı bir denetim seçin.
+    - Tüm verileri tek bir denetimde görüntülemek için, bir WPF uygulamasında **DataGrid** veya **List** gibi listeden farklı bir denetim seçin veya Windows Forms uygulamasında **DataGridView** seçin.
 
-    Kullanılabilir denetimlerin listesi, açtığınız tasarımcıya, projenizin hedeflediği .NET sürümüne ve **araç kutusu**'na veri bağlamayı destekleyen özel denetimler eklemiş olmanıza bağlıdır. Oluşturmak istediğiniz denetim kullanılabilir denetimler listesinde yoksa, denetimi listeye ekleyebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+    Kullanılabilir denetimlerin listesi açık olan tasarımcıya, projenizin hangi .NET sürümünü hedeflerine sahip olduğunu ve Araç Kutusuna veri bağlamayı destekleyen özel denetimler ekip **eklemenize bağlıdır.** Oluşturmak istediğiniz denetim kullanılabilir denetim listesinde yoksa, denetimi listeye ekleyebilirsiniz. Daha fazla bilgi için [Bkz. Veri Kaynakları penceresine özel denetimler ekleme.](../data-tools/add-custom-controls-to-the-data-sources-window.md)
 
-    **Veri kaynakları** penceresinde veri tabloları veya nesneleri için denetim listesine eklenebilen özel bir Windows Forms denetimi oluşturmayı öğrenmek için, bkz. [karmaşık veri bağlamayı destekleyen bir Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md).
+    Veri Kaynakları penceresindeki veri tabloları veya nesneler için denetim listesine eklenilen özel bir  Windows Forms denetimi oluşturma hakkında bilgi edinmek için bkz. Karmaşık veri bağlamayı destekleyen bir Windows Forms kullanıcı denetimi [oluşturma.](../data-tools/create-a-windows-forms-user-control-that-supports-complex-data-binding.md)
 
-## <a name="set-the-controls-to-be-created-for-data-columns-or-properties"></a>Veri sütunları veya özellikler için oluşturulacak denetimleri ayarlayın
+## <a name="set-the-controls-to-be-created-for-data-columns-or-properties"></a>Veri sütunları veya özellikleri için oluşturulacak denetimleri ayarlama
 
-Bir sütunu temsil eden bir öğeyi veya **veri kaynakları** penceresinden tasarımcıya bir nesne özelliğini sürükleyerek, denetimi oluşturulacak şekilde ayarlayabilirsiniz.
+Veri Kaynakları penceresinden bir sütunu veya nesnenin özelliğini  temsil eden bir öğeyi tasarımcıya sürüklemeden önce, denetimi oluşturulacak şekilde ayarlayın.
 
 ### <a name="to-set-the-controls-to-be-created-for-columns-or-properties"></a>Sütunlar veya özellikler için oluşturulacak denetimleri ayarlamak için
 
-1. **WPF** tasarımcısı veya **Windows Forms** tasarımcısının açık olduğundan emin olun.
+1. **WPF tasarımcısının veya** Windows **Forms tasarımcısının açık** olduğundan emin olun.
 
-2. **Veri kaynakları** penceresinde, sütun veya özelliklerini göstermek için istenen tabloyu veya nesneyi genişletin.
+2. Veri Kaynakları **penceresinde,** sütunlarını veya özelliklerini görüntülemek için istenen tabloyu veya nesneyi genişletin.
 
-3. Denetimin oluşturulmasını ayarlamak istediğiniz her bir sütunu veya özelliği seçin.
+3. Denetimin oluşturulacak şekilde ayarlamak istediğiniz her sütunu veya özelliği seçin.
 
-4. Sütun veya özelliğin açılan menüsüne tıklayın ve ardından öğe tasarımcıya sürüklendiğinde oluşturmak istediğiniz denetimi seçin.
+4. Sütun veya özelliğin açılan menüsüne tıklayın ve öğe tasarımcıya sürüklendikten sonra oluşturmak istediğiniz denetimi seçin.
 
-     Kullanılabilir denetimlerin listesi, açtığınız tasarımcıya, projenizin hedeflediği .NET sürümüne ve **araç kutusuna** eklediğiniz veri bağlamayı destekleyen özel denetimlere bağlıdır. Oluşturmak istediğiniz denetim kullanılabilir denetimler listesinde ise, denetimi listeye ekleyebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
+     Kullanılabilir denetimlerin listesi açık olan tasarımcıya, projenizin hangi .NET sürümünün hedeflerine ve Araç Kutusuna ekley istediğiniz veri bağlamayı destekleyen özel **denetimlere bağlıdır.** Oluşturmak istediğiniz denetim kullanılabilir denetim listesinde yer alıyorsa, denetimi listeye ekleyebilirsiniz. Daha fazla bilgi için [Bkz. Veri Kaynakları penceresine özel denetimler ekleme.](../data-tools/add-custom-controls-to-the-data-sources-window.md)
 
-     Veri **kaynakları** penceresinde veri sütunları veya özellikler için denetim listesine eklenebilen özel bir denetim oluşturmayı öğrenmek için bkz. [basit veri bağlamayı destekleyen bir Windows Forms Kullanıcı denetimi oluşturma](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).
+     Veri Kaynakları penceresinde veri sütunları veya özellikleri için denetim listesine eklenilen  özel bir denetim oluşturma hakkında bilgi edinmek için bkz. Basit veri bağlamayı destekleyen [Windows Forms kullanıcı denetimi oluşturma.](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)
 
-     Sütun veya özellik için bir denetim oluşturmak istemiyorsanız, açılan menüden **hiçbiri** ' ni seçin. Bu, üst tabloyu veya nesneyi tasarımcıya sürüklemek istiyorsanız yararlıdır, ancak belirli bir sütunu veya özelliği eklemek istemezsiniz.
+     Sütun veya özellik için denetim oluşturmak istemiyorsanız açılan **menüden Hiçbiri'yi** seçin. Bu, üst tabloyu veya nesneyi tasarımcıya sürüklemek ancak belirli bir sütunu veya özelliği eklemek istemiyorsanız kullanışlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

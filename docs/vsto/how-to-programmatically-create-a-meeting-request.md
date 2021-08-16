@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma'
-description: Microsoft Outlook 'ta program aracılığıyla bir toplantı isteği oluşturma ve isteği gerekli bir katılımcıya gönderme hakkında bilgi edinin.
+title: 'Nasıl kurulur: Program aracılığıyla toplantı isteği oluşturma'
+description: Microsoft Outlook'de program aracılığıyla toplantı isteği oluşturma ve isteği gerekli bir katılımcıya gönderme hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 74479f68f763822f4f80fa6bb33cb708d4db26da
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: dfa0c7b8eb39a9bc8a64191784fab0d3788cf86d78f19a948310b6cbcf82e59d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828728"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440779"
 ---
-# <a name="how-to-programmatically-create-a-meeting-request"></a>Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma
-  Bu örnek Outlook Microsoft Office bir toplantı isteği oluşturur ve isteği gerekli bir katılımcıya gönderir.
+# <a name="how-to-programmatically-create-a-meeting-request"></a>Nasıl kurulur: Program aracılığıyla toplantı isteği oluşturma
+  Bu örnek, Microsoft Office Outlook bir toplantı isteği oluşturur ve isteği gerekli bir katılımcıya gönderir.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -34,4 +35,4 @@ ms.locfileid: "107828728"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Takvim öğeleriyle çalışma](../vsto/working-with-calendar-items.md)
-- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
+- [Kullanmaya başlayın programlama VSTO Eklentileri](../vsto/getting-started-programming-vsto-add-ins.md)

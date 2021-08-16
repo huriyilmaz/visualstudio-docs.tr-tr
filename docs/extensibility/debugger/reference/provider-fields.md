@@ -11,17 +11,18 @@ ms.assetid: 39631545-2b0e-45b4-978b-d63656484b02
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a1ab410d9780078cd786b75f14d0321498eca8fd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bbe12a51af968ccc88a1a572553e6278cc12c4890042a6777f97e45fb23a427f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079546"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306328"
 ---
 # <a name="provider_fields"></a>PROVIDER_FIELDS
 Bir program sağlayıcısıyla ilişkili özellikleri belirtir.

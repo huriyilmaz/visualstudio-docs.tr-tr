@@ -1,6 +1,6 @@
 ---
 title: Bir veri kümesini doldururken kısıtlamaları kapatma
-description: Bir veri kümesini doldururken kısıtlamaların nasıl kapatılacağı hakkında bilgi. Güncelleştirme kısıtlamalarını programlama yoluyla veya Veri Kümesi Tasarımcısı kullanarak askıya alın.
+description: Bir veri kümesi doldururken kısıtlamaları nasıl kapatacaklarını bilmek. Güncelleştirme kısıtlamalarını program aracılığıyla veya güncelleştirme kısıtlamalarını Veri Kümesi Tasarımcısı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,36 +20,37 @@ ms.assetid: 553f7d0c-2faa-4c17-b226-dd02855bf1dc
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3280894ba1634f9775def74a88dcb413c94ba77a
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: c0e894841797064cd458eb558ce548957202dafbbdab1ed3bf1d9dfd160dde97
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215714"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346706"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>Bir veri kümesini doldururken kısıtlamaları kapatma
 
-Bir veri kümesi kısıtlamalar içeriyorsa (örneğin, yabancı anahtar kısıtlamaları), veri kümesinde gerçekleştirilen işlemlerin sırasıyla ilgili hatalar oluşturabilir. Örneğin, ilgili üst kayıtları yüklemeden önce alt kayıtları yükleme bir kısıtlamayı ihlal edebilir ve hataya neden olabilir. Bir alt kayıt yükledikten hemen sonra kısıtlama ilgili üst kaydı denetler ve bir hata oluşturur.
+Bir veri kümesi kısıtlamalar (yabancı anahtar kısıtlamaları gibi) içeriyorsa, veri kümesine karşı gerçekleştirilen işlemlerin sırasıyla ilgili hatalar olabilir. Örneğin, ilgili üst kayıtları yüklemeden önce alt kayıtların yüklenmesi kısıtlamayı ihlal etmek ve hataya neden olabilir. Bir alt kaydı yükleyemediklerinden, kısıtlama ilgili üst kaydı denetler ve bir hata döndürür.
 
-Geçici kısıtlama askıya almaya izin veren bir mekanizma yoksa, alt tabloya bir kayıt yüklemeye her seferinde bir hata oluşur. Bir veri kümesindeki tüm kısıtlamaları askıya almanın başka bir yolu <xref:System.Data.DataRow.BeginEdit%2A> , ve <xref:System.Data.DataRow.EndEdit%2A> özellikleridir.
+Geçici kısıtlamanın askıya alınmasına izin verecek bir mekanizma yoksa, alt tabloya her kayıt yükleme denemesi sırasında bir hata ortaya çıkar. Bir veri kümesinde tüm kısıtlamaları askıya almanın bir diğer yolu, <xref:System.Data.DataRow.BeginEdit%2A> ve <xref:System.Data.DataRow.EndEdit%2A> özellikleridir.
 
 > [!NOTE]
-> Kısıtlamalar devre dışı bırakıldığında doğrulama olayları (örneğin, <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> ) oluşturulmaz.
+> Kısıtlamalar kapalı olduğunda doğrulama <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> olayları (örneğin, ve ) yükseltlanmaz.
 
-## <a name="to-suspend-update-constraints-programmatically"></a>Güncelleştirme kısıtlamalarını programlı bir şekilde askıya almak için
+## <a name="to-suspend-update-constraints-programmatically"></a>Güncelleştirme kısıtlamalarını program aracılığıyla askıya almak için
 
-- Aşağıdaki örnek, bir veri kümesindeki kısıtlama denetiminin geçici olarak nasıl kapatılacağı gösterilmektedir:
+- Aşağıdaki örnekte, bir veri kümesinde kısıtlama denetiminin nasıl geçici olarak kapatıldığını gösterir:
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet10":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet10":::
 
-## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>Veri Kümesi Tasarımcısı kullanarak güncelleştirme kısıtlamalarını askıya almak için
+## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>Güncelleştirme kısıtlamalarını askıya almak için Veri Kümesi Tasarımcısı
 
-1. Veri kümenizi **veri kümesi Tasarımcısı** açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. veri kümenizi **Veri Kümesi Tasarımcısı.** Daha fazla bilgi için [bkz. Adım adım kılavuz:](walkthrough-creating-a-dataset-with-the-dataset-designer.md)veri kümesi oluşturma Veri Kümesi Tasarımcısı.
 
-2. **Özellikler** penceresinde, <xref:System.Data.DataSet.EnforceConstraints%2A> özelliğini olarak ayarlayın `false` .
+2. Özellikler **penceresinde** özelliğini olarak <xref:System.Data.DataSet.EnforceConstraints%2A> `false` ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

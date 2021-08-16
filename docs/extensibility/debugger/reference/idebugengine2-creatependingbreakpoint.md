@@ -11,17 +11,18 @@ ms.assetid: 92e85b90-a931-48d9-89a7-a6edcb83ae5a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fa06a4c88afecfebbd0b1258d7f1830dfdaad5ac
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9088fdc05142faca79a4d2f6b31a76b2344c7800c6920cc19927486c01957ae7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105093879"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307836"
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
 Hata ayıklama altyapısında (DE) bekleyen bir kesme noktası oluşturur.

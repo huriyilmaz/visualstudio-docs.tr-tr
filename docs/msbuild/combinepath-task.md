@@ -1,6 +1,6 @@
 ---
 title: CombinePath görevi | Microsoft Docs
-description: MSBuild CombinePath görevinin, belirtilen yolları tek bir yolda birleştirmek için nasıl kullanılacağı hakkında bilgi edinin.
+description: MSBuild CombinePath görevinin, belirtilen yolları tek bir yolda birleştirmek için nasıl kullanılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,14 +16,15 @@ ms.assetid: c20edbf4-3d4f-4f66-b1d5-753a0d858ed8
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: f1eb27a311f1b61e3e36b4c9eaa65de7f3fd8f1c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 203b91147418a6e05325d7442fc6e7d59b84df8e169aed5048b7edf68e9743d0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939506"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270997"
 ---
 # <a name="combinepath-task"></a>CombinePath görevi
 

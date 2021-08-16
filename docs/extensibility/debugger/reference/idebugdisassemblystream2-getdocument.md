@@ -1,6 +1,6 @@
 ---
 description: Bu giriş akışıyla ilişkili kaynak belgeyi alır.
-title: 'IDebugDisassemblyStream2:: GetDocument | Microsoft Docs'
+title: IDebugDisassemblyStream2::GetDocument | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: 3d039a44-ebaa-4413-ac18-7cfd92c408bd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1d214cf9be09dea4a4bf244224a5ae1bd6d882ef
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 641a6b3b6601e0e4cac8f82d5d7e375792af1e848bfa77c652b21df84e43d9b8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067003"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262041"
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
 Bu giriş akışıyla ilişkili kaynak belgeyi alır.
@@ -44,16 +45,16 @@ int GetDocument(
 
 ## <a name="parameters"></a>Parametreler
 `bstrDocumentUrl`\
-'ndaki Belge URL 'SI.
+[in] Belge URL'si.
 
 `ppDocument`\
-dışı Belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
+[out] Belgeyi [temsil eden bir IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, gerçek bir dosyada depolanmayan metin belgelerinin bulunduğu hata ayıklama motorları tarafından uygulanır.
+ Bu yöntem, gerçek bir dosyada depolanmış metin belgelerine sahip hata ayıklama altyapıları tarafından uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

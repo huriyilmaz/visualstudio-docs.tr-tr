@@ -1,6 +1,6 @@
 ---
-title: ProjectItem öğesi (Visual Studio öğe şablonları) | Microsoft Docs
-description: Öğe şablonları için ProjectItem öğesi ve şablonun bir proje ya da öğe için olup olmadığına bağlı olarak farklı öznitelikleri kabul etme hakkında bilgi edinin.
+title: ProjectItem Öğesi (Visual Studio Öğe Şablonları) | Microsoft Docs
+description: Öğe şablonları için ProjectItem öğesini ve şablonun bir proje mi yoksa bir öğe için mi olduğuna bağlı olarak farklı öznitelikleri nasıl kabul eder? hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,18 +16,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0910486202bca781ec19b6d5895e68ed93f8c3d5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 460f5ea31913e57dd095f7cbdf6677e24acb3a12a2fa70f80abb0acb67a34f8a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068732"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447811"
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem öğesi (Visual Studio öğe şablonları)
-Öğe şablonunda bulunan bir dosyayı belirtir.
+Öğe şablonuna dahil edilen bir dosyayı belirtir.
 
 > [!NOTE]
-> `ProjectItem`Öğesi, şablonun bir proje veya öğe için olup olmadığına bağlı olarak farklı öznitelikleri kabul eder. Bu konuda `ProjectItem` öğesi için öğesi açıklanmaktadır. `ProjectItem`Proje şablonları için bir açıklama için bkz. [ProjectItem öğesi (Visual Studio proje şablonları)](../extensibility/projectitem-element-visual-studio-project-templates.md).
+> öğesi, `ProjectItem` şablonun bir proje mi yoksa bir öğe mi olduğuna bağlı olarak farklı öznitelikleri kabul eder. Bu konuda `ProjectItem` öğenin öğesi açıklanmıştır. Proje şablonları için `ProjectItem` öğesinin açıklaması için bkz. [ProjectItem öğesi (Visual Studio proje şablonları)](../extensibility/projectitem-element-visual-studio-project-templates.md).
 
  \<VSTemplate> \<TemplateContent>
  \<ProjectItem>
@@ -52,11 +52,11 @@ ms.locfileid: "105068732"
 
 | Öznitelik | Açıklama |
 |---------------------| - |
-| `SubType` | İsteğe bağlı öznitelik.<br /><br /> Birden çok dosya öğesi şablonundaki bir öğenin alt türünü belirtir. Bu değer, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] öğeyi açmak için kullanılacak düzenleyiciyi belirlemekte kullanılır. |
-| `CustomTool` | İsteğe bağlı öznitelik.<br /><br /> Proje dosyasındaki öğe için CustomTool 'ı ayarlar. |
-| `ItemType` | İsteğe bağlı öznitelik.<br /><br /> Proje dosyasındaki öğe için ItemType 'ı ayarlar. |
-| `ReplaceParameters` | İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda, öğenin değiştirilmesini gerektiren parametre değerleri olup olmadığını belirten bir Boole değeri. Varsayılan değer `false` olarak belirlenmiştir. |
-| `TargetFileName` | İsteğe bağlı öznitelik.<br /><br /> Şablondan oluşturulan öğenin adını belirtir. Bu öznitelik, bir öğe adı oluşturmak için parametre değişimini kullanmak için yararlıdır. |
+| `SubType` | İsteğe bağlı öznitelik.<br /><br /> Çok dosyalı bir öğe şablonunda bir öğenin alt türü belirtir. Bu değer, öğeyi açmak için kullanılacak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] düzenleyiciyi belirlemek için kullanılır. |
+| `CustomTool` | İsteğe bağlı öznitelik.<br /><br /> Proje dosyasındaki öğe için CustomTool'ları ayarlar. |
+| `ItemType` | İsteğe bağlı öznitelik.<br /><br /> Proje dosyasındaki öğe için ItemType'i ayarlar. |
+| `ReplaceParameters` | İsteğe bağlı öznitelik.<br /><br /> Şablondan proje oluşturulduğunda öğenin değiştirilmesi gereken parametre değerlerine sahip olup olmadığını belirten boole değeri. Varsayılan değer `false` olarak belirlenmiştir. |
+| `TargetFileName` | İsteğe bağlı öznitelik.<br /><br /> Şablondan oluşturulan öğenin adını belirtir. Bu öznitelik, öğe adı oluşturmak için parametre değiştirme kullanmak için kullanışlıdır. |
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -70,21 +70,21 @@ ms.locfileid: "105068732"
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- `string`Şablon *. zip* dosyasındaki bir dosyanın adını temsil eden bir.
+ Şablonda `string` bir dosyanın adını temsil  eden bir.zip.
 
 ## <a name="remarks"></a>Açıklamalar
- `ProjectItem` , öğesinin isteğe bağlı bir alt öğesidir `TemplateContent` .
+ `ProjectItem` isteğe bağlı bir alt alt `TemplateContent` veridir.
 
- `TargetFileName`Özniteliği parametreleri olan dosyaları yeniden adlandırmak için kullanılabilir. Örneğin, File *. vb* dosyası template *. zip* dosyasının kök dizininde mevcutsa, ancak dosyanın **Yeni öğe Ekle** iletişim kutusunda belirtilen dosya ADıNA göre adlandırılmış olmasını istiyorsanız aşağıdaki XML 'i kullanacaksınız:
+ özniteliği, `TargetFileName` dosyaları parametrelerle yeniden adlandırmak için kullanılabilir. Örneğin, *MyFile.vb* dosyası şablon *.zip* dosyasının kök dizininde mevcutsa, ancak dosyanın Yeni Öğe Ekle iletişim kutusunda kullanıcı  tarafından sağlanan dosya adına göre adlandırılmış olması gerekirse, aşağıdaki XML'yi kullanırsınız:
 
 ```xml
 <ProjectItem TargetFileName="$fileinputname$.vb">MyFile.vb</ProjectItem>
 ```
 
- Bu şablondan bir öğe oluşturulduğunda, dosya adı kullanıcının **Yeni öğe Ekle** iletişim kutusuna girdiği adı temel alır. Bu, çok dosya öğesi şablonları oluştururken faydalıdır. Daha fazla bilgi için bkz. [nasıl yapılır: birden çok dosya öğesi şablonları](../ide/how-to-create-multi-file-item-templates.md) ve [şablon parametreleri](../ide/template-parameters.md)oluşturma.
+ Bu şablondan bir öğe oluşturulduğunda, dosya adı kullanıcının Yeni Öğe Ekle iletişim kutusuna girdiği **adı temel** alır. Bu, çok dosyalı öğe şablonları oluştururken kullanışlıdır. Daha fazla bilgi [için, bkz. How to: Create multi-file item templates and](../ide/how-to-create-multi-file-item-templates.md) [Template parameters](../ide/template-parameters.md).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir sınıf için standart öğe şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+ Aşağıdaki örnek, bir sınıf için standart öğe şablonunun meta verilerini [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] gösterir.
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"
@@ -103,7 +103,7 @@ ms.locfileid: "105068732"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablonu şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılır: birden çok dosya öğesi şablonları oluşturma](../ide/how-to-create-multi-file-item-templates.md)
+- [Nasıl kullanılır: Çok dosyalı öğe şablonları oluşturma](../ide/how-to-create-multi-file-item-templates.md)
 - [Şablon parametreleri](../ide/template-parameters.md)

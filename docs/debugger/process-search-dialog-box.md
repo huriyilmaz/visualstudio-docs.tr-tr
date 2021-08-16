@@ -1,6 +1,6 @@
 ---
-title: İşlem arama Iletişim kutusu | Microsoft Docs
-description: Işlemler görünümündeki belirli bir işlemin düğümünü bulmak ve seçmek için Işlem arama ' yı kullanın. İşlem KIMLIĞI, modül dizesi ve arama yönü belirtebilirsiniz.
+title: İşlem Arama İletişim Kutusu | Microsoft Docs
+description: İşlemler Görünümünde belirli bir işleme yönelik düğümü bulmak ve seçmek için İşlem Arama'ya tıklayın. İşlem kimliğini, modül dizesini ve arama yönünü belirtabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,35 +10,36 @@ ms.assetid: 518e8153-eec2-4db9-a6f7-416ec11d8e09
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a8cd8c0b74dc06a72e7c20bd3af11fd91df07eb3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26bff1c484326762ac14025dcddf5f35cb5d64ee204fafd2ef6f13ac9387c16f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891532"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121263497"
 ---
 # <a name="process-search-dialog-box"></a>İşlem Arama İletişim Kutusu
-[Işlemler görünümündeki](../debugger/processes-view.md)belirli bir işlemin düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir **işlem** Görünümü penceresine taşıyın. Sonra **arama** menüsünden **işlemi bul** ' u seçin.
+İşlemler Görünümünde belirli bir işleme yönelik düğümü bulmak ve seçmek için [bu iletişim kutusunu kullanın.](../debugger/processes-view.md) Bu iletişim kutusunu görüntülemek için odağı bir İşlemler **görünümü penceresine** taşıma. Ardından Arama **menüsünden** İşlem **Bul'a** tıklayın.
 
  Aşağıdaki ayarlar kullanılabilir:
 
- **İşlem** Aranacak işlem KIMLIĞI.
+ **İşlem** Aranan işlem kimliği.
 
- **Modül** Aranacak modül dizesi.
+ **Modül** Aranan modül dizesi.
 
- **Arama yönü yukarı veya aşağı** Aramanın ilk yönü.
+ **Arama Yönü Yukarı veya Aşağı** Aramanın ilk yönü.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Işlemler görünümünde Işlem arama](../debugger/how-to-search-for-a-process-in-processes-view.md) Işlemler görünümünde belirli bir işlemin nasıl bulunacağını açıklar.
+ [İşlemler Görünümünde İşlem Arama](../debugger/how-to-search-for-a-process-in-processes-view.md) İşlemler görünümünde belirli bir işlemi bulma işlemini açıklar.
 
- [Işlem görünümü](../debugger/processes-view.md) Etkin işlemlerin ağaç görünümünü görüntüler.
+ [İşlemler Görünümü](../debugger/processes-view.md) Etkin işlemlerin ağaç görünümünü görüntüler.
 
- [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
+ [Spy++ Görünümleri](../debugger/spy-increment-views.md) Pencerelerin, iletilerin, işlemlerin ve iş parçacıklarının Spy++ ağaç görünümlerini açıklar.
 
- [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.
+ [Spy++ kullanma](../debugger/using-spy-increment.md) Spy++ aracını tanıtıyor ve nasıl kullanıLl olduğunu açıklar.
 
- [Işlem özellikleri Iletişim kutusu](../debugger/process-properties-dialog-box.md) Işlemler görünümünde seçilen bir işlemin özelliklerini görüntülemek için kullanılır.
+ [İşlem Özellikleri İletişim Kutusu](../debugger/process-properties-dialog-box.md) İşlemler görünümünde seçilen bir sürecin özelliklerini görüntülemek için kullanılır.
 
- [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.
+ [Spy++ Başvurusu](../debugger/spy-increment-reference.md) Her Spy++ menüsünü ve iletişim kutusunu açıklayan bölümler içerir.

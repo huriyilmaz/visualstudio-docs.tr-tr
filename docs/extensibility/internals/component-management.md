@@ -1,6 +1,6 @@
 ---
 title: Bileşen yönetimi | Microsoft Docs
-description: Visual Studio 'da VSPackage yükleyicisi oluştururken Windows Installer bileşenlerini yönetmeyi öğrenin.
+description: Visual Studio bir vspackage yükleyicisi oluştururken Windows Installer bileşenlerini yönetmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,21 +11,22 @@ ms.assetid: 029bffa2-6841-4caa-a41a-442467e1aedc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9767af4c30957111526303600f9e8eda815b42f0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6ff094b0ad7457eabc569ce10d44a80c1f6db639cc7c855dc4f27c77c68edbc4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057097"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275534"
 ---
 # <a name="component-management"></a>Bileşen yönetimi
-Windows Installer görev birimleri Windows Installer bileşenleri (bazen WICs veya yalnızca bileşenler olarak adlandırılır) olarak adlandırılır. Bir GUID, Windows Installer kullanan kurulumlara yönelik temel yükleme birimi ve başvuru sayımı olan her bir WIC 'yi tanımlar.
+Windows Installer görev birimleri Windows Installer bileşenleri (bazen wics veya yalnızca bileşenler olarak adlandırılır) olarak adlandırılır. bir guıd, Windows Installer kullanan kurulumlara yönelik temel yükleme birimi ve başvuru sayımı olan her bir wic 'yi tanımlar.
 
- VSPackage yükleyicinizi oluşturmak için birkaç ürün kullanabilseniz de, bu tartışma Windows Installer (*. msi*) dosyalarının kullanımını varsayar. Yükleyicinizi oluştururken doğru başvuru sayımı her zaman gerçekleşmeleri için dosya dağıtımını doğru şekilde yönetmeniz gerekir. Sonuç olarak, ürününüzün farklı sürümleri, yükleme ve kaldırma senaryolarında bir karışımında birbirini engellemez veya bunları bozmaz.
+ vspackage yükleyicinizi oluşturmak için birkaç ürün kullanabilirsiniz, ancak bu tartışma Windows Installer (*.msi*) dosyalarının kullanımını varsayar. Yükleyicinizi oluştururken doğru başvuru sayımı her zaman gerçekleşmeleri için dosya dağıtımını doğru şekilde yönetmeniz gerekir. Sonuç olarak, ürününüzün farklı sürümleri, yükleme ve kaldırma senaryolarında bir karışımında birbirini engellemez veya bunları bozmaz.
 
- Windows Installer, bileşen düzeyinde başvuru sayımı oluşur. Kaynaklarınızı (dosyalar, kayıt defteri girişleri vb.) bileşenlere dikkatle düzenlemeniz gerekir. Farklı senaryolarda yardımcı olabilecek modüller, Özellikler ve ürünler gibi diğer kuruluş düzeyleri vardır. Daha fazla bilgi için bkz. [Windows Installer temel kavramları](../../extensibility/internals/windows-installer-basics.md).
+ Windows Installer, bileşen düzeyinde başvuru sayımı oluşur. Kaynaklarınızı (dosyalar, kayıt defteri girişleri vb.) bileşenlere dikkatle düzenlemeniz gerekir. Farklı senaryolarda yardımcı olabilecek modüller, Özellikler ve ürünler gibi diğer kuruluş düzeyleri vardır. daha fazla bilgi için bkz. [Windows Installer temel kavramları](../../extensibility/internals/windows-installer-basics.md).
 
 ## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>Yan yana yükleme için kurulum yazma yönergeleri
 
@@ -37,7 +38,7 @@ Windows Installer görev birimleri Windows Installer bileşenleri (bazen WICs ve
 
      Bu strateji, yan yana yükleme sırasında doğru şekilde yazmanıza yardımcı olur.
 
-- Sürümler arasında aynı Windows Installer bileşenlerini kullanarak paylaşılan dosyaları ve kayıt defteri anahtarlarını yükler.
+- sürümler arasında aynı Windows Installer bileşenlerini kullanarak paylaşılan dosyaları ve kayıt defteri anahtarlarını yükler.
 
      Farklı bir bileşen kullanıyorsanız, bir sürümlü VSPackage kaldırıldığında dosya ve kayıt defteri girdileri kaldırılır, ancak başka bir VSPackage hala yüklüdür.
 

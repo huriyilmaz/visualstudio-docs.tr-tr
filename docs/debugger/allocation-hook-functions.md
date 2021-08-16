@@ -1,6 +1,6 @@
 ---
 title: Ayırma kanca Işlevleri | Microsoft Docs
-description: Visual Studio 'da C çalışma zamanı (CRT) hata ayıklaması yapmanız gerektiğinde _CrtSetAllocHook kullanılarak yüklenen ayırma kanca işlevlerini nasıl kullanacağınızı öğrenin.
+description: Visual Studio ' de C çalışma zamanı (CRT) hata ayıklaması yapmanız gerektiğinde _CrtSetAllocHook kullanılarak yüklenen ayırma kanca işlevlerini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,14 +22,15 @@ ms.assetid: 6bfbdb65-8cb1-4c21-8c45-7194a2b77c1e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c032ca57e5a046a9f2dd2295226263ffe20f99e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5406cf76eee3ae81ea629e2bc41b4d97cb7d68cdae5e4f9cb48a43b24547fc6e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858013"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346381"
 ---
 # <a name="allocation-hook-functions"></a>Atama Kanca İşlevleri
 Bellek her ayrıldığı, yeniden ayrıldığı veya serbest bırakılmış her seferinde [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook)kullanılarak yüklenen bir ayırma kanca işlevi çağırılır. Bu tür bir kanca, birçok farklı amaçla kullanabilirsiniz. Uygulamanın, ayırma düzenlerini incelemek veya daha sonra analiz edilmek üzere günlük ayırma bilgileri gibi yetersiz bellek durumlarını nasıl işlediğini sınamak için kullanın.

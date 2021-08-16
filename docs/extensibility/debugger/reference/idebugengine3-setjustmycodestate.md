@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, hata ayıklama altyapısına, Adatmycode durum bilgilerini söyler.
-title: 'IDebugEngine3:: Setadatmycodestate | Microsoft Docs'
+description: Bu yöntem, hata ayıklama altyapısına JustMyCode durum bilgilerini söyler.
+title: IDebugEngine3::SetJustMyCodeState | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 8ec17fbf-df93-424a-b2ed-fd1e5ee51256
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6e527dbaeb9c04171bf26ea00e550eac336ac6a8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fb528d3f8c12e21f327b168a88d4df070e2863188fcc8e1580135db9685c1ca4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066131"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307784"
 ---
 # <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
-Bu yöntem, hata ayıklama altyapısına, Adatmycode durum bilgilerini söyler.
+Bu yöntem, hata ayıklama altyapısına JustMyCode durum bilgilerini söyler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +47,19 @@ int SetJustMyCodeState(
 
 ## <a name="parameters"></a>Parametreler
 `fUpdate`\
-'ndaki `TRUE`Geçerli bilgileri güncelleştirmek için sıfır olmayan () ( `FALSE` daha önce ayarlanmış herhangi bir şey yok sayılıyor).
+[in] Tüm bilgileri sıfırlamak için sıfır ( ) geçerli bilgileri güncelleştirmek için sıfır ( ) olmayan `TRUE` `FALSE` (önceden ayarlanmış herhangi bir şeyi yoksayarak).
 
 `dwModules`\
-'ndaki İçindeki bilgi yapılarının sayısı `rgJMCSpec.`
+[in] içinde bilgi yapısı sayısı `rgJMCSpec.`
 
 `rgJMCSpec`\
-'ndaki Kullanılacak [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) yapıları dizisi.
+[in] Kullanabileceğiniz [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) yapı dizisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Adammycode, bu sistem kodu için kaynak kodu kullanılabilir olsa bile, yalnızca bir kullanıcıya ait kodu ve sistem kodu gibi tüm ara kodları yok saymanın hata ayıklaması kavramıdır.
+ JustMyCode, yalnızca bir kullanıcıya ait olan kodda hata ayıklama ve sistem kodu gibi tüm ara kodları yoksayma kavramıdır( kaynak kodu söz konusu sistem kodu için kullanılabilir olsa bile).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

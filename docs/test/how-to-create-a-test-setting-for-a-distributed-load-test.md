@@ -10,22 +10,23 @@ ms.assetid: b63d4b71-3b74-4872-b2d1-f0bd1a9a8544
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 4ca0058d1f06e00941766ed1ecf6f81d73939a8c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 4dca95365bb93f8129d513be19708862b393854d90f46a3cc6bb23002f566743
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877999"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121441100"
 ---
 # <a name="how-to-create-a-test-settings-file-for-a-distributed-load-test"></a>Nasıl yapılır: dağıtılmış yük testi için test ayarları dosyası oluşturma
 
-Test aracılarını ve test denetleyicilerini kullanarak bu testleri birden çok makineye dağıtabilmeniz için yük testlerinizin *test ayarlarını* yapılandırın. Test ayarlarını Ayrıca, toplamak istediğiniz veri türlerini veya Visual Studio 'dan yük testlerinizi çalıştırdığınızda test makinelerini nasıl etkileyeceğini belirten *Tanılama veri bağdaştırıcılarını* kullanacak şekilde yapılandırabilirsiniz.
+Test aracılarını ve test denetleyicilerini kullanarak bu testleri birden çok makineye dağıtabilmeniz için yük testlerinizin *test ayarlarını* yapılandırın. Test ayarlarını Ayrıca, toplamak istediğiniz veri türlerini veya Visual Studio ' den yük testlerinizi çalıştırdığınızda test makinelerini nasıl etkileyeceğini belirten *Tanılama veri bağdaştırıcılarını* kullanmak için yapılandırabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Örneğin, ASP.NET profil oluşturucu tanılama veri bağdaştırıcısını kodun performans dökümünü toplamak için kullanabilirsiniz. Ayrıca, tanılama veri bağdaştırıcıları, test makinesinde olası performans sorunlarını taklit etmek veya kullanılabilir sistem belleğini azaltmak için kullanılabilir.
+örneğin, kodun performans dökümünü toplamak için ASP.NET Profiler tanılama veri bağdaştırıcısını kullanabilirsiniz. Ayrıca, tanılama veri bağdaştırıcıları, test makinesinde olası performans sorunlarını taklit etmek veya kullanılabilir sistem belleğini azaltmak için kullanılabilir.
 
-Visual Studio için test ayarları bir dosyada depolanır. Test ayarları her bir rolle ilgili olarak aşağıdaki bilgileri tanımlar:
+Visual Studio için Test ayarları bir dosyada depolanır. Test ayarları her bir rolle ilgili olarak aşağıdaki bilgileri tanımlar:
 
 - Test edilen uygulamanız için gereken roller kümesi
 
@@ -39,7 +40,7 @@ Bir çözüme Web performansı ve yük testi projesi eklediğinizde, *varsayıla
 
 Test denetleyicisi, test ayarlarınızda her bir rol için kullanılabilecek aracılara sahip olacaktır. Test denetleyicileri ve test aracıları hakkında daha fazla bilgi için bkz. [Visual Studio ile test denetleyicilerini ve test aracılarını yönetme](../test/manage-test-controllers-and-test-agents.md).
 
-Visual Studio 'dan çalıştırmayı planladığınız yük testleri için çözümünüzdeki test ayarlarını oluşturmak ve kaldırmak için bu adımları izleyin.
+Visual Studio 'den çalıştırmayı planladığınız yük testlerine yönelik çözümünüzdeki test ayarlarını oluşturmak ve kaldırmak için bu adımları izleyin.
 
 ## <a name="create-a-test-settings-file"></a>Test ayarları dosyası oluşturma
 
@@ -47,7 +48,7 @@ Visual Studio 'dan çalıştırmayı planladığınız yük testleri için çöz
 
      **Yeni Öğe Ekle** iletişim kutusu görünür.
 
-2. **Yüklü şablonlar** bölmesinde, **Test ayarları**' nı seçin.
+2. **yüklü şablonlar** bölmesinde, **Test Ayarlar** öğesini seçin.
 
 3. Seçim **Ad** kutusunda, test ayarları dosyasının adını değiştirin.
 
@@ -55,7 +56,7 @@ Visual Studio 'dan çalıştırmayı planladığınız yük testleri için çöz
 
      Yeni test ayarları dosyası, **Çözüm öğeleri** klasörü altında **Çözüm Gezgini** görüntülenir.
 
-5. **Test ayarları** iletişim kutusu görüntülenir. **Genel** sayfa seçilidir.
+5. **Test Ayarlar** iletişim kutusu görüntülenir. **Genel** sayfa seçilidir.
 
      Şimdi, test ayarları değerlerini düzenleyebilir ve kaydedebilirsiniz.
 
@@ -109,7 +110,7 @@ Visual Studio 'dan çalıştırmayı planladığınız yük testleri için çöz
 
      **Rol ve tanılama veri bağdaştırıcısı örneği:**
 
-     Örneğin, "SQL kullanır" özniteliği "true" olarak ayarlanmış ve "RAM > 16GB" olarak ayarlanmış bir özniteliği olan "SQL Server" adlı bir sunucu rolü olan "Masaüstü Istemcisi" adlı bir istemci rolü oluşturabilirsiniz. **Roller** sayfasında **Testleri çalıştırmak Için rol olarak ayarla** ' yı seçerek "Masaüstü istemcisi" nin testleri çalıştıracağınızı belirtirseniz, test denetleyicisi Testlerı çalıştırmak için "SQL kullanır" özniteliği "true" olarak ayarlanmış test aracıları olan makineleri seçer. Test denetleyicisi Ayrıca "RAM > 16GB" özniteliğini içeren test aracılarına sahip SQL Server makinelerini, yalnızca role dahil edilen veri ve tanılama bağdaştırıcıları tarafından tanımlanan verileri toplamak için de seçer. "Masaüstü Istemcisi" test aracısı Ayrıca, söz konusu rol için veri ve tanılama bağdaştırıcılarını de seçerseniz, üzerinde çalıştığı makineler için veri toplayabilir.
+     örneğin, "RAM > 16gb" olarak ayarlanmış bir özniteliği olan "SQL Server" olarak ayarlanmış bir SQL özniteliği olan "masaüstü istemcisi" adlı bir istemci rolü oluşturabilirsiniz ". **roller** sayfasında **testleri çalıştırmak için rol olarak ayarla** ' yı seçerek "masaüstü istemcisi" nin testleri çalıştıracağınızı belirtirseniz, test denetleyicisi testleri çalıştırmak için "kullanır SQL" özniteliğini içeren test aracıları olan makineleri seçer. test denetleyicisi ayrıca, "RAM > 16gb" özniteliğini içeren test aracılarına sahip SQL sunucu makinelerini, yalnızca role dahil edilen veri ve tanılama bağdaştırıcıları tarafından tanımlanan verileri toplamak için de seçer. "Masaüstü Istemcisi" test aracısı Ayrıca, söz konusu rol için veri ve tanılama bağdaştırıcılarını de seçerseniz, üzerinde çalıştığı makineler için veri toplayabilir.
 
      Her bir tanılama veri bağdaştırıcısı hakkındaki ayrıntılar ve bunu yapılandırma hakkında daha fazla bilgi için, ilgili konuyu aşağıdaki tabloda görebilirsiniz.
 
@@ -119,12 +120,12 @@ Visual Studio 'dan çalıştırmayı planladığınız yük testleri için çöz
 
     |Tanılama veri bağdaştırıcısı|Yük testlerinde kullanma|İlişkili konu|
     |-|-------------------------|-|
-    |**IntelliTrace ve test etkisi için ASP.net Istemci proxy 'si:** Bu proxy, IntelliTrace ve test etkisi tanılama veri bağdaştırıcıları için bir istemciden bir Web sunucusuna http çağrıları hakkında bilgi toplamanıza olanak tanır.|![Bilgi simgesi](../test/media/vc364f4.gif)<br /><br /> Test Aracısı makinelerinde sistem bilgilerini toplamak için özel bir ihtiyacınız yoksa, bu bağdaştırıcıyı eklemeyin. **Dikkat:**  Toplanan büyük miktarda veri nedeniyle oluşan sorunlardan dolayı yük testlerinde IntelliTrace bağdaştırıcısının kullanımını önermiyoruz. <br /><br /> Test etkisi verileri, yük testleri kullanılarak toplanmaz.||
+    |**ıntellitrace ve Test etkisi için istemci Proxy ASP.NET:** Bu proxy, IntelliTrace ve test etkisi tanılama veri bağdaştırıcıları için bir istemciden bir Web sunucusuna http çağrıları hakkında bilgi toplamanıza olanak tanır.|![Bilgi simgesi](../test/media/vc364f4.gif)<br /><br /> Test Aracısı makinelerinde sistem bilgilerini toplamak için özel bir ihtiyacınız yoksa, bu bağdaştırıcıyı eklemeyin. **Dikkat:**  Toplanan büyük miktarda veri nedeniyle oluşan sorunlardan dolayı yük testlerinde IntelliTrace bağdaştırıcısının kullanımını önermiyoruz. <br /><br /> Test etkisi verileri, yük testleri kullanılarak toplanmaz.||
     |**IntelliTrace:** Bir günlük dosyasında depolanan belirli tanılama izleme bilgilerini yapılandırabilirsiniz. Bir günlük dosyası *. tdlog* uzantısına sahiptir. Testinizi çalıştırdığınızda bir test adımı başarısız olursa, bir hata oluşturabilirsiniz. Tanılama izlemesini içeren günlük dosyası bu hataya otomatik olarak eklenir. Günlük dosyasında toplanan veriler, kodda bir hatayı yeniden oluşturmak ve tanılamak için gereken süreyi azaltarak hata ayıklama verimliliğini artırır. Bu günlük dosyasından yerel oturum başka bir bilgisayarda yeniden oluşturulabilir. Bu, bir hatanın yeniden oluşturulamayacağından riskini azaltır.<br /><br /> Daha fazla bilgi için bkz. [IntelliTrace verilerini toplama](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md).|![Önemli simgesi](../test/media/vc364f3.gif)<br /><br /> Toplanan ve günlüğe kaydedilen büyük miktarda veri nedeniyle oluşan sorunlardan dolayı yük testlerinde IntelliTrace bağdaştırıcısının kullanımını önermiyoruz. IntelliTrace bağdaştırıcısını yalnızca uzun çalıştırmayan ve çok sayıda test aracısı kullanmayan yük testlerinde kullanmayı denemeniz gerekir.|[Nasıl yapılır: hata ayıklama zor sorunlarını gidermek için IntelliTrace verilerini toplama](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)|
-    |**ASP.NET Profil Oluşturucu:** ASP.NET Web uygulamalarında performans verilerini toplayan ASP.NET profil oluşturmayı içeren bir test ayarı oluşturabilirsiniz.|ASP.NET Profiler tanılama veri bağdaştırıcısı Internet Information Services (IIS) işlemini profiller, bu nedenle bir geliştirme Web sunucusunda çalışmayacaktır. Yük testinizde web sitesinin profilini almak için, IIS 'nin üzerinde çalıştığı makineye bir test aracısı yüklemeniz gerekir. Test Aracısı Yük oluşturmamayacak, ancak yalnızca koleksiyon Aracısı olacak. Daha fazla bilgi için bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).|[Nasıl yapılır: test ayarlarını kullanarak yük testleri için ASP.NET profil oluşturucuyu yapılandırma](../test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md)|
+    |**ASP.NET profil oluşturucu:** ASP.NET web uygulamalarında performans verilerini toplayan ASP.NET profil oluşturma içeren bir test ayarı oluşturabilirsiniz.|ASP.NET profiler tanılama veri bağdaştırıcısı, Internet Information Services (ııs) işlemini profiller, bu nedenle bir geliştirme web sunucusunda çalışmayacaktır. Yük testinizde web sitesinin profilini almak için, IIS 'nin üzerinde çalıştığı makineye bir test aracısı yüklemeniz gerekir. Test Aracısı Yük oluşturmamayacak, ancak yalnızca koleksiyon Aracısı olacak. Daha fazla bilgi için bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).|[nasıl yapılır: test ayarlarını kullanarak yük testleri için ASP.NET profil oluşturucuyu yapılandırma](../test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md)|
     |**Olay günlüğü:** Test sonuçlarına dahil edilecek olay günlüğü toplamayı dahil etmek için bir test ayarı yapılandırabilirsiniz.||[Nasıl yapılır: test ayarlarını kullanarak olay günlüğü koleksiyonunu yapılandırma](/previous-versions/dd504816(v=vs.110))|
     |**Ağ öykünmesi:** Test ayarı kullanarak testinize yapay bir ağ yükü koymak istediğinizi belirtebilirsiniz. Ağ öykünmesi, çevirmeli gibi belirli bir ağ bağlantı hızına öykünüyerek makineye ve makineden iletişimi etkiler. **Note:**  Ağ öykünmesi, ağ bağlantısı hızını artırmak için kullanılamaz.|Ağ öykünmesi bağdaştırıcısı, yük testleri tarafından yok sayılır. Bunun yerine, yük testleri yük testi senaryosunun ağ karışımında belirtilen ayarları kullanır.<br /><br /> Daha fazla bilgi için bkz. [sanal ağ türlerini belirtme](../test/specify-virtual-network-types-in-a-load-test-scenario.md).||
-    |**Sistem bilgileri:** Sistem bilgileri tanısı ve veri toplayıcısının çalıştırıldığı makineler hakkındaki sistem bilgilerini içerecek şekilde bir test ayarı ayarlanabilir. Sistem bilgileri, test ayarları kullanılarak test sonuçlarında belirtilir.|![Bilgi simgesi](../test/media/vc364f4.gif)<br /><br /> Sistem bilgilerini hem yük aracılarından hem de test altındaki sistemden toplayabilirsiniz.|Bu bilgileri toplamak için yapılandırma gerekmez.|
+    |**Sistem Bilgileri:** Sistem Bilgileri tanılama ve veri toplayıcısının çalıştırıldığı makineler hakkında sistem bilgilerini içerecek şekilde bir test ayarı ayarlanabilir. Sistem bilgileri, test ayarları kullanılarak test sonuçlarında belirtilir.|![Bilgi simgesi](../test/media/vc364f4.gif)<br /><br /> Sistem bilgilerini hem yük aracılarından hem de test altındaki sistemden toplayabilirsiniz.|Bu bilgileri toplamak için yapılandırma gerekmez.|
     |**Test etkisi:** Bir test çalışması çalıştırıldığında, uygulama kodunuzun hangi yöntemlerinin kullanıldığı hakkında bilgi toplayabilirsiniz. Bu, hangi testlerin bu geliştirme değişikliklerinden etkilendiğini belirlemede, geliştiriciler tarafından yapılan uygulama kodundaki değişikliklerle birlikte kullanılabilir.|Test etkisi verileri, Yük Testleriyle toplanmaz.||
     |**Video kaydedicisi:** Otomatikleştirilmiş bir test çalıştırdığınızda masaüstü oturumunuzun bir video kaydını oluşturabilirsiniz. Bu, kodlanmış UI testi için kullanıcı eylemlerini görüntülemek için yararlı olabilir. Video, diğer takım üyelerinin yeniden oluşturulması zor olan uygulama sorunlarını yalıtmalarına yardımcı olabilir. **Note:**  Testleri uzaktan çalıştırırken, aracı etkileşimli işlem modunda çalışmadığı sürece video kaydedicisi çalışmaz.|![Önemli simge ](../test/media/vc364f3.gif) **uyarısı:**  yük testleri için video kaydedici bağdaştırıcısının kullanımını önermiyoruz.|[Nasıl yapılır: test ayarlarını kullanarak testler sırasında ekran ve ses kayıtlarını ekleme](../test/how-to-include-recordings-of-the-screen-and-voice-during-tests.md)|
 
@@ -157,7 +158,7 @@ Visual Studio 'dan çalıştırmayı planladığınız yük testleri için çöz
     1. **Ana bilgisayar türü**' nde, **varsayılan** seçeneğinin seçildiğini doğrulayın.
 
         > [!NOTE]
-        > **Konak türündeki** **ASP.net** , yük testlerinde desteklenmez.
+        > **konak türündeki** **ASP.NET** yük testlerinde desteklenmez.
 
     2. Yük testinizde web performansının ve birim testlerinin, 32-bit veya 64-bit işlemler olarak çalışmasını isteyip istemediğinizi seçmek için, **32 bit veya 64 bit işlem içinde Testi Çalıştır** açılan öğesini kullanın.
 

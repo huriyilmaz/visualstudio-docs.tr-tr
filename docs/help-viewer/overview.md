@@ -1,6 +1,6 @@
 ---
 title: Çevrimdışı yardım belgeleri
-description: Microsoft Yardım Görüntüleyicisi kullanarak Visual Studio ve .NET gibi çeşitli ürün ve teknolojiler için çevrimdışı yardım belgeleri yükleyip görüntüleyin.
+description: Microsoft Yardım Görüntüleyicisi kullanarak Visual Studio ve .net gibi çeşitli ürün ve teknolojiler için çevrimdışı yardım belgeleri yükleyip görüntüleyin.
 ms.date: 11/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -18,18 +18,19 @@ ms.assetid: 74e41666-2ce8-4ac0-a0e5-3723d1e322c2
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 339d424dd0b09404fc135a119606d47cf7570be3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1ad2225e5bf24959502ad559f011efeafd78126882c023bb2a7c8abf64d56c23
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944101"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121304846"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Yardım Görüntüleyicisi
 
-Microsoft Yardım Görüntüleyicisi kullanarak, yerel bilgisayarınızdaki çeşitli ürün ve teknolojilerin içeriğini yükleyebilir ve görüntüleyebilirsiniz. Bu ürünler Visual Studio, .NET, dil başvurusu, SQL Server ve Windows geliştirme içerir. Yardım Görüntüleyicisi şunları yapmanızı sağlar:
+Microsoft Yardım Görüntüleyicisi kullanarak, yerel bilgisayarınızdaki çeşitli ürün ve teknolojilerin içeriğini yükleyebilir ve görüntüleyebilirsiniz. bu ürünler Visual Studio, .net, dil başvurusu, SQL Server ve Windows geliştirmeyi içerir. Yardım Görüntüleyicisi şunları yapmanızı sağlar:
 
 - Kitap olarak da adlandırılan içerik kümelerini indirin. Bu, "çevrimdışı" çalışmanız ve belgelere erişiminizin olması gerektiğinde yararlı olabilir.
 
@@ -41,12 +42,12 @@ Microsoft Yardım Görüntüleyicisi kullanarak, yerel bilgisayarınızdaki çe�
 
 - Konuları görüntüleyin, yer işaretini ve yazdırın.
 
-Yardım Görüntüleyicisi 'ni yüklemek için bkz. [Microsoft Yardım Görüntüleyicisi yüklemesi](../help-viewer/installation.md). Çevrimiçi değil yardım görüntüleyicisinde yardım konularını okumaya başlamak için Visual Studio 'daki **Yardım** menüsüne gidin ve Yardım Görüntüleyicisi 'nde **Yardım tercihi**  >  **Başlat**' ı seçin.
+Yardım Görüntüleyicisi 'ni yüklemek için bkz. [Microsoft Yardım Görüntüleyicisi yüklemesi](../help-viewer/installation.md). çevrimiçi değil yardım görüntüleyicisinde yardım konularını okumaya başlamak için Visual Studio ' deki **yardım** menüsüne gidin ve yardım görüntüleyicisi 'nde **yardım tercihi**  >  **başlat**' ı seçin.
 
 > [!TIP]
 > Bir internet bağlantınızın PDF sürümünü indirileceği sırada görüntüleyebilmeniz için içeriği yerel olarak indirmenin bir başka yolu. Docs.microsoft.com üzerinde birçok belge kümesi, içindekiler tablosunun (TOC) alt kısmına bir bağlantı içerir ve bu TOC 'nin tüm makalelerini içeren bir PDF dosyasını indirir.
 >
-> ![Visual Studio belgeleri için PDF 'YI indirin](media/overview/download-pdf.png)
+> ![Visual Studio belgeleri için PDF 'yi indirin](media/overview/download-pdf.png)
 
 ## <a name="help-viewer-tour"></a>Yardım Görüntüleyicisi turu
 
@@ -54,7 +55,7 @@ Gezinti sekmelerini kullanarak yüklü içerikte bilgi bulabilir, konu sekmesind
 
 ### <a name="navigation-tabs"></a>Gezinti sekmeleri
 
-|Tab|Description|
+|Tab|Açıklama|
 |---|-----------|
 |İçindekiler|Yüklü içeriği hiyerarşi (İçindekiler tablosu) olarak görüntüler. Görüntülenen başlıkları filtrelemek için ölçüt belirtebilirsiniz.|
 |Dizin oluşturma|Dizinli terimlerin alfabetik bir listesini görüntüler. Dizinde arama yapabilir, girişleri filtrelemek için ölçütler belirtebilir ve dizin girişlerinin belirttiğiniz metni içermesini veya kullanmaya başlamasını isteyebilirsiniz.|

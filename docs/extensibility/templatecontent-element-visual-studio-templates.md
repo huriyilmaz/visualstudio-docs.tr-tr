@@ -1,5 +1,5 @@
 ---
-title: TemplateContent öğesi (Visual Studio şablonları) | Microsoft Docs
+title: templatecontent öğesi (Visual Studio şablonları) | Microsoft Docs
 description: TemplateContent öğesi ve şablonun içeriğini nasıl belirttiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 389f8e0ab6c6c7254b34721d20da40cc2d33df59
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8eaffebca1d0b1a343050ee1bb63e6508a7ac718b37ffbcc18a4d5d6f2a4de5f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056031"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447733"
 ---
 # <a name="templatecontent-element-visual-studio-templates"></a>TemplateContent Öğesi (Visual Studio Şablonları)
 

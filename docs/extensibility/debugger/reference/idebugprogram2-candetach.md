@@ -1,6 +1,6 @@
 ---
-description: Bir hata ayıklama altyapısının (DE) programdan ayrılamayacağını belirler.
-title: 'IDebugProgram2:: CanDetach | Microsoft Docs'
+description: Bir hata ayıklama altyapısının (DE) programdan ayrılabilir olup olmadığını belirler.
+title: IDebugProgram2::CanDetach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: dcd9ab6c-49e5-447e-aa7c-89f571f4a052
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9e751429fe26060a515f94aa3d402954ff598d39
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 45d4bef36f5b1e283d654bcee4b6eaac09becd6b7f9ffe54f969f78f6ef1f655
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076179"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276613"
 ---
 # <a name="idebugprogram2candetach"></a>IDebugProgram2::CanDetach
-Bir hata ayıklama altyapısının (DE) programdan ayrılamayacağını belirler.
+Bir hata ayıklama altyapısının (DE) programdan ayrılabilir olup olmadığını belirler.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +40,7 @@ int CanDetach();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Ayrıyabiliyorsanız, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aynı `S_FALSE` programdan ayıramdan ayrılmsam döndürür.
+ ayırabilirse `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. `S_FALSE`DE'nin programdan ayrılamazsa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

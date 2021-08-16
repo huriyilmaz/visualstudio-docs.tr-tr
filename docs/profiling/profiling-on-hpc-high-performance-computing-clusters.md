@@ -18,19 +18,20 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d7ce643f0684520da52a450ff40c60928808d26
-ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
+ms.openlocfilehash: 27e761d9a96a8ca2495e24684f9011fb6d09d7b104b75c28cda9077069698889
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104884102"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121442066"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>HPC (yüksek performanslı bilgi işlem) kümelerinde profil
 
-Visual Studio Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Windows HPC kümelerinin işlem düğümlerinde profil oluşturabilirsiniz. HPC hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [WINDOWS HPC](https://azure.microsoft.com/solutions/big-compute/) .
+Visual Studio Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Windows HPC kümelerinin işlem düğümlerinde profil oluşturabilirsiniz. hpc hakkında daha fazla bilgi için Microsoft Web sitesindeki [Windows HPC](https://azure.microsoft.com/solutions/big-compute/) bölümüne bakın.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -38,7 +39,7 @@ Bir HPC işlem düğümünde profil yapmak için aşağıdakileri yapmanız gere
 
 - Microsoft HPC Pack 2008 ' i Visual Studio ile aynı bilgisayara yükler. Bilgisayar HPC kümesinin bir parçası olmak zorunda değildir. HPC Pack 'i [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=4812)' nde yükleyebilirsiniz.
 
-- .NET Framework 4 ve Profil Oluşturma Araçları tek başına sürümünü HPC işlem düğümüne yükler. Hem .NET Framework hem de tek başına profil Oluşturucu için program yükleme, Visual Studio yükleme medyasında bulunabilir. **Göz önünde** .NET Framework yükledikten ve Profil Oluşturma Araçları yüklemeden önce işlemi yeniden başlatmanız gerekir.
+- .NET Framework 4 ve Profil Oluşturma Araçları tek başına sürümünü HPC işlem düğümüne yükler. hem .NET Framework hem de tek başına profil oluşturucu için yükleme programları Visual Studio yükleme medyasında bulunabilir. **Göz önünde** .NET Framework yükledikten ve Profil Oluşturma Araçları yüklemeden önce işlemi yeniden başlatmanız gerekir.
 
   .NET Framework 4 ve tek başına Profil Oluşturma Araçları etkin bir HPC işlem düğümüne yüklemek ve küme makinesinde profil oluşturmayı etkinleştirmek için şu adımları izleyin:
 
@@ -70,7 +71,7 @@ HPC kümesi ve hedef bilgilerini belirtmek için HPC performans sihirbazını ku
 
    - İçinde açık olan bir projeyi profil için [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] , **bir veya daha fazla kullanılabilir proje** seçeneğini belirleyin ve ardından listeden proje adını seçin.
 
-   - Açık bir projede olmayan bir ikilinin profilini eklemek için **çalıştırılabilir (. EXE dosyası)** seçeneğini.
+   - Açık bir projede olmayan bir ikilinin profilini eklemek için **çalıştırılabilir (.EXE dosyası)** seçeneğini belirleyin.
 
 4. **İleri**’ye tıklayın.
 
@@ -144,9 +145,9 @@ Performans oturumu özellikleri sayfasının HPC Başlatma Özellikleri sayfası
 | **Dağıtılacak ek dosyalar** | İşlem düğümünde dağıtılacak ek dosyaların noktalı virgülle ayrılmış bir listesini belirtir. Bir iletişim kutusunu kullanarak birden çok dosya seçmek için üç nokta düğmesini (**...**) tıklayabilirsiniz. |
 | **Mpiexec komutu** | MPı uygulamasını Başlatan uygulamayı belirtir. Varsayılan değer **mpiexec.exe** |
 | **Mpiexec bağımsız değişkenleri** | mpiexec.exe komutuna geçirilecek bağımsız değişkenleri belirtir. |
-| **Kümede istenen düğümler** | Uygulamanın çalıştırılacağı kümedeki düğüm sayısını belirtir. |
-| **CRT dosyaları dağıtma** | Doğru olduğunda, kümede C/C++ çalışma süresini dağıtır. |
-| **Ön profil betiği** | Profil oluşturma oturumu başlamadan önce yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir. |
-| **Profil öncesi betik bağımsız değişkenleri** | Profil öncesi betiğe geçirilecek bağımsız değişkenleri belirtir. |
-| **Profil sonrası betiği** | Profil oluşturma oturumu bittikten sonra yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir. |
-| **Profil sonrası betik bağımsız değişkenleri** | Profil sonrası betiğe geçirilecek bağımsız değişkenleri belirtir. |
+| **Kümede istenen düğümler** | Uygulamayı çalıştıracak kümedeki düğüm sayısını belirtir. |
+| **CRT dosyalarını dağıtma** | True olduğunda, kümede C/C++ çalışma zamanı dağıtır. |
+| **Profil öncesi betik** | Profil oluşturma oturumu başlamadan önce yerel geliştirme bilgisayarda çalıştıracak betiğin yolunu ve dosya adını belirtir. |
+| **Profil öncesi betik bağımsız değişkenleri** | Profil öncesi betiğine geçecek bağımsız değişkenleri belirtir. |
+| **Profil sonrası betik** | Profil oluşturma oturumu sona erdikten sonra yerel geliştirme bilgisayarda çalıştıracak betiğin yolunu ve dosya adını belirtir. |
+| **Profil sonrası betik bağımsız değişkenleri** | Profil sonrası betiğine geçecek bağımsız değişkenleri belirtir. |

@@ -1,6 +1,6 @@
 ---
 title: ResolveComReference görevi | Microsoft Docs
-description: MSBuild 'in, bir veya daha fazla tür kitaplığı adının veya. tlb dosyasının bir listesini almak ve bunları diskteki konumlara çözümlemek için ResolveComReference görevini nasıl kullandığını öğrenin.
+description: MSBuild, bir veya daha fazla tür kitaplığı adının veya. tlb dosyasının bir listesini almak ve bunları diskteki konumlara çözümlemek için resolvecomreference görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 07/25/2019
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: c9bf5fcf-6453-40ea-b50f-a212adc3e9b5
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0384ee6cbfa749589e15ab073cc31ffebb53985e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ce84c7154824a00019cf54105a09a03b207e3ff06f0bc33d5dcd2012cfcf3fd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912537"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270360"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference görevi
 
@@ -59,23 +60,23 @@ Bir veya daha fazla tür kitaplığı adının veya *. tlb* dosyasının bir lis
 
  Aşağıdaki tabloda, parametresine geçirilen öğeler için kullanılabilen öğe meta verileri açıklanmaktadır `TypeLibNames` .
 
-|Meta veri|Description|
+|Meta veri|Açıklama|
 |--------------|-----------------|
 |`GUID`|Gerekli öğe meta verileri.<br /><br /> Tür kitaplığı için GUID. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
 |`VersionMajor`|Gerekli öğe meta verileri.<br /><br /> Tür kitaplığının ana sürümü. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
 |`VersionMinor`|Gerekli öğe meta verileri.<br /><br /> Tür kitaplığının ikincil sürümü. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
 |`EmbedInteropTypes`|İsteğe bağlı `Boolean` meta veriler.<br /><br />  İse `true` , birlikte çalışma BIR DLL oluşturmak yerine bu başvurudan doğrudan birlikte çalışma türlerini derlemeye ekleyin.|
 |`LocaleIdentifier`|İsteğe bağlı öğe meta verileri.<br /><br /> Tür kitaplığının yerel ayar tanımlayıcısı (veya LCıD). Bu, bir Kullanıcı, bölge veya uygulama tarafından tercih edilen insan dilini belirleyen 32 bitlik bir değer olarak belirtilir. Bu öğe meta verileri belirtilmemişse, görev "0" varsayılan yerel ayar tanıtıcısını kullanır.|
-|`WrapperTool`|İsteğe bağlı öğe meta verileri.<br /><br /> Bu tür kitaplığı için derleme sarmalayıcısı oluşturmak için kullanılan sarmalayıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "Tlbimp" öğesinin varsayılan sarmalayıcı aracını kullanır. Mevcut, büyük/küçük harf duyarsız seçenekleri şunlardır:<br /><br /> -   `Primary`: COM bileşeni için önceden oluşturulmuş bir birincil birlikte çalışma derlemesini kullanmak istediğinizde bu sarmalayıcı aracını kullanın. Bu sarmalayıcı aracını kullandığınızda, bir sarmalayıcı çıkış dizini belirtmeyin çünkü bu, görevin başarısız olmasına neden olur.<br />-   `TLBImp`: COM bileşeni için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.<br />-   `AXImp`: Bir ActiveX denetimi için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.|
+|`WrapperTool`|İsteğe bağlı öğe meta verileri.<br /><br /> Bu tür kitaplığı için derleme sarmalayıcısı oluşturmak için kullanılan sarmalayıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "Tlbimp" öğesinin varsayılan sarmalayıcı aracını kullanır. Mevcut, büyük/küçük harf duyarsız seçenekleri şunlardır:<br /><br /> -   `Primary`: COM bileşeni için önceden oluşturulmuş bir birincil birlikte çalışma derlemesini kullanmak istediğinizde bu sarmalayıcı aracını kullanın. Bu sarmalayıcı aracını kullandığınızda, bir sarmalayıcı çıkış dizini belirtmeyin çünkü bu, görevin başarısız olmasına neden olur.<br />-   `TLBImp`: COM bileşeni için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.<br />-   `AXImp`: bir ActiveX denetimi için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.|
 
 ## <a name="typelibfiles-item-metadata"></a>TypeLibFiles öğe meta verileri
 
  Aşağıdaki tabloda, parametresine geçirilen öğeler için kullanılabilen öğe meta verileri açıklanmaktadır `TypeLibFiles` .
 
-|Meta veri|Description|
+|Meta veri|Açıklama|
 |--------------|-----------------|
 |`EmbedInteropTypes`|İsteğe bağlı `Boolean` parametre.<br /><br />  İse `true` , birlikte çalışma BIR DLL oluşturmak yerine bu başvurudan doğrudan birlikte çalışma türlerini derlemeye ekleyin.|
-|`WrapperTool`|İsteğe bağlı öğe meta verileri.<br /><br /> Bu tür kitaplığı için derleme sarmalayıcısı oluşturmak için kullanılan sarmalayıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "Tlbimp" öğesinin varsayılan sarmalayıcı aracını kullanır. Mevcut, büyük/küçük harf duyarsız seçenekleri şunlardır:<br /><br /> -   `Primary`: COM bileşeni için önceden oluşturulmuş bir birincil birlikte çalışma derlemesini kullanmak istediğinizde bu sarmalayıcı aracını kullanın. Bu sarmalayıcı aracını kullandığınızda, bir sarmalayıcı çıkış dizini belirtmeyin çünkü bu, görevin başarısız olmasına neden olur.<br />-   `TLBImp`: COM bileşeni için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.<br />-   `AXImp`: Bir ActiveX denetimi için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.|
+|`WrapperTool`|İsteğe bağlı öğe meta verileri.<br /><br /> Bu tür kitaplığı için derleme sarmalayıcısı oluşturmak için kullanılan sarmalayıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "Tlbimp" öğesinin varsayılan sarmalayıcı aracını kullanır. Mevcut, büyük/küçük harf duyarsız seçenekleri şunlardır:<br /><br /> -   `Primary`: COM bileşeni için önceden oluşturulmuş bir birincil birlikte çalışma derlemesini kullanmak istediğinizde bu sarmalayıcı aracını kullanın. Bu sarmalayıcı aracını kullandığınızda, bir sarmalayıcı çıkış dizini belirtmeyin çünkü bu, görevin başarısız olmasına neden olur.<br />-   `TLBImp`: COM bileşeni için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.<br />-   `AXImp`: bir ActiveX denetimi için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.|
 
 > [!NOTE]
 > Bir tür kitaplığını benzersiz şekilde tanımlamak için sağladığınız daha fazla bilgi, görevin diskteki doğru dosyaya çözümlenme olasılığı artar.
@@ -86,15 +87,15 @@ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından parametrel
 
 Bu görevin çalışması için COM DLL 'nin makinede kayıtlı olması gerekmez.
 
-## <a name="msb4803-error"></a>MSB4803 hatası
+## <a name="msb4803-error"></a>MSB4803 Hatası
 
-CLI komutlarından görevi kullanan bir projeyi çalıştırmaya çalışırsanız, şu `ResolveCOMReference` `dotnet` hatayı alırsınız:
+CLI komutlarından görevi kullanan bir projeyi `ResolveCOMReference` çalıştırmayı `dotnet` denersanız şu hatayı alırsınız:
 
 ```output
 MSB4803: The task "ResolveComReference" is not supported on the .NET Core version of MSBuild. Please use the .NET Framework version of MSBuild.
 ```
 
-Bu görev, komut satırından komutunu çalıştırdığınızda kullanılan MSBuild 'in .NET Core sürümünde desteklenmez `dotnet build` . MSBuild 'in .NET Framework sürümünü kullandığından, Visual Studio Geliştirici Komut İstemi [MSBuild.exe](msbuild-command-line-reference.md) çağırarak projeyi oluşturmayı deneyin.
+Bu görev, komutu komut MSBuild kullanılan .NET Core sürümünde `dotnet build` desteklenmiyor. Bu, [MSBuild.exe'nin](msbuild-command-line-reference.md) Visual Studio Geliştirici Komut İstemi sürümünü kullandığından, .NET Framework projesini MSBuild.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

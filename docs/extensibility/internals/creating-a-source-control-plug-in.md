@@ -1,6 +1,6 @@
 ---
 title: Kaynak denetimi eklentisi oluşturma | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamına (IDE) kaynak denetimi özelliği ekleyen bir kaynak denetimi eklentisi oluşturmayı öğrenin.
+description: Visual Studio tümleşik geliştirme ortamına (ıde) kaynak denetimi özelliği ekleyen bir kaynak denetimi eklentisi oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,17 +12,18 @@ ms.assetid: c7e69fa4-150e-469a-a6fc-fa1260bdbb07
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc302ee7327740380bb02e28c99e5117c926c7bc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 495c04edfc85bacf50d2f7ba5440c27d17d08ed3c805f0f39d55408f6a6969a5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056902"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121305795"
 ---
 # <a name="create-a-source-control-plug-in"></a>Kaynak denetimi eklentisi oluşturma
-Visual Studio SDK, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamına (IDE) kaynak denetimi özelliği eklemenize olanak sağlayan kaynaklar sağlar. Bu belgede özetlenen kaynak denetimi eklentisi API 'siyle uyumlu herhangi bir eklenti DLL 'SI kullanmanıza olanak sağlar.
+Visual Studio SDK, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamına (ıde) kaynak denetimi özelliği eklemenize olanak sağlayan kaynaklar sağlar. Bu belgede özetlenen kaynak denetimi eklentisi API 'siyle uyumlu herhangi bir eklenti DLL 'SI kullanmanıza olanak sağlar.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Kullanmaya başlama](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

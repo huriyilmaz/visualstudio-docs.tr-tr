@@ -7,21 +7,22 @@ ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bf1d90e4c56e0768faa0dd2e877f0d2bcb1eb5d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d207fd29eb77a5e90c1aae2fb60f0672d3769ab57cfcd7ad0e4a3035bd6332c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950188"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121441844"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
 Visual Studio, performans ölçümü ve profil oluşturma araçlarının bir seçimini sunmaktadır. CPU kullanımı ve bellek kullanımı gibi bazı araçlar, hata ayıklayıcı ile veya olmadan çalışabilir ve derleme yapılandırmalarında yayın veya hata ayıklama yapabilir. [Tanılama Araçları penceresinde](../profiling/profiling-feature-tour.md#measure-performance-while-debugging) görüntülenen araçlar yalnızca hata ayıklama oturumu sırasında çalışır. [Performans Profilcisi](../profiling/profiling-feature-tour.md#post_mortem) 'nde görüntülenen araçlar hata ayıklayıcı olmadan çalışır ve verileri durdurup toplamayı seçtikten sonra sonuçları çözümleyebilirsiniz (mortem analizi için).
 
 >[!NOTE]
->Windows 7 ve üzeri ile hata ayıklayıcı olmayan performans araçlarını kullanabilirsiniz. Hata ayıklayıcı ile tümleşik profil oluşturma araçlarını çalıştırmak için Windows 8 veya üzeri gereklidir.
+>hata ayıklayıcı olmayan performans araçlarını Windows 7 ve üzeri sürümlerle kullanabilirsiniz. hata ayıklayıcı ile tümleşik profil oluşturma araçlarını çalıştırmak için Windows 8 veya üzeri gereklidir.
 
 Hata ayıklayıcı olmayan performans profil oluşturucusu ve hata ayıklayıcı ile tümleşik Tanılama Araçları, farklı bilgi ve deneyimler sağlar. Hata ayıklayıcı ile tümleşik araçlar, değişken değerleri gösterir ve kesme noktaları kullanmanıza izin verir. Hata ayıklayıcı olmayan araçlar, son kullanıcı deneyimine daha yakın sonuçlar verir.
 
@@ -39,15 +40,15 @@ Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağı
 
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Hata ayıklarken profil oluşturma verilerini topla
 
-**Hata ayıklama**  >  **başlatma hata ayıklamayı** seçerek veya **F5** tuşuna basarak, Visual Studio 'da hata ayıklamayı başlattığınızda, varsayılan olarak **Tanılama araçları** pencere görüntülenir. El ile açmak için   >  **Windows**  >  **göster tanılama araçları** Hata Ayıkla ' yı seçin. **Tanılama araçları** pencere, olaylar, işlem belleğı ve CPU kullanımı hakkındaki bilgileri gösterir.
+**hata ayıklamayı**  >  **başlat hata ayıklamayı** seçerek veya **F5** tuşuna basarak Visual Studio hata ayıklamayı başlattığınızda, varsayılan olarak **Tanılama Araçları** pencere görüntülenir. el ile açmak için, **hata ayıkla**  >  **Windows**  >  **Tanılama Araçları göster**' i seçin. **Tanılama araçları** pencere, olaylar, işlem belleğı ve CPU kullanımı hakkındaki bilgileri gösterir.
 
 ![Tanılama Araçları penceresinin ekran görüntüsü](../profiling/media/diagnostictoolswindow.png " Tanılama Araçları Penceresi")
 
-- **Bellek kullanımını**, **UI analizini** ve **CPU kullanımını** görüntüleyip görüntüleyemeyeceğinizi belirlemek için araç çubuğundaki **Ayarlar** simgesini kullanın.
+- **bellek kullanımını**, **uı analizini** ve **CPU kullanımını** görüntüleyip görüntüleyemeyeceğinizi belirlemek için araç çubuğundaki **Ayarlar** simgesini kullanın.
 
-- Daha fazla seçenek içeren **Tanılama Araçları özellik sayfalarını** açmak için **Ayarlar** açılan listesinden **Ayarlar** ' ı seçin.
+- daha fazla seçenek içeren **Tanılama Araçları özellik sayfalarını** açmak için **Ayarlar** açılan listesinden **Ayarlar** ' yi seçin.
 
-- Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **IntelliTrace**'e giderek IntelliTrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
+- Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **ıntellitrace**'e giderek ıntellitrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
 Hata ayıklamayı durdurduğunuzda Tanılama oturumu sonlanır.
 
@@ -74,7 +75,7 @@ Daha fazla bilgi için, [Tanılama Araçları penceresinin Olaylar sekmesinde ar
 
 Performans verilerini hata ayıklama olmadan toplamak için, performans profil Oluşturucu araçlarını çalıştırabilirsiniz.
 
-1. Visual Studio 'da bir proje açıkken, çözüm yapılandırmasını **yayın** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine**) seçin.
+1. Visual Studio bir proje açın, çözüm yapılandırmasını **serbest** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcı** (veya **yerel makine**) seçeneğini belirleyin.
 
 1. **Hata ayıklama**  >  **performans profil oluşturucuyu** seçin veya **alt** + **F2** tuşuna basın.
 
@@ -107,4 +108,4 @@ Daha fazla bilgi için bkz.
 
 ## <a name="collect-profiling-data-from-the-command-line"></a>Komut satırından profil oluşturma verilerini toplama
 
-Komut satırından performans verilerini ölçmek için, Visual Studio ya da uzak araçlarla birlikte bulunan VSDiagnostics.exe kullanabilirsiniz. Bu, Visual Studio yüklü olmayan sistemlerdeki performans izlemelerini yakalamak veya performans izlemelerinin toplanması için yararlıdır. Ayrıntılı yönergeler için bkz. [komut satırından uygulama performansını ölçme](../profiling/profile-apps-from-command-line.md).
+komut satırından performans verilerini ölçmek için, Visual Studio ya da uzak araçlarla birlikte bulunan VSDiagnostics.exe kullanabilirsiniz. bu, Visual Studio yüklü olmayan sistemlerde performans izlemelerini yakalamak veya performans izlemelerinin toplanmasını komut dosyası oluşturmak için kullanışlıdır. Ayrıntılı yönergeler için bkz. [komut satırından uygulama performansını ölçme](../profiling/profile-apps-from-command-line.md).

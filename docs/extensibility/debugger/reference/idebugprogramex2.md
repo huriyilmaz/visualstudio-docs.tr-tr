@@ -11,14 +11,15 @@ ms.assetid: 663359ed-635a-4539-addb-0cc52f19d1bd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e39a469d04ac14f3ed36366d035bf4ca01a9d2ef
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1c1cff5e18dfca2838595848c2ae4f18c076441ec51ed78e93e467bdbbca9f8b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087333"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276405"
 ---
 # <a name="idebugprogramex2"></a>IDebugProgramEx2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) bir programa iliştirmelerini ve bir programla ilişkili program düğümünü almasını sağlar.

@@ -11,17 +11,18 @@ ms.assetid: 1b0f02cb-8ace-4614-88f3-0e10239012b3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4dd3b8fbe65a72ccf937007d19117359859ff29f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fde2dd02ffb0e8a314fb8c0c71c43fdc529fca587f64a7d05ca7641f42e40480
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087112"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306900"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
 Bu yöntem bir belge konumunu hata ayıklama adresleri dizisiyle eşler.

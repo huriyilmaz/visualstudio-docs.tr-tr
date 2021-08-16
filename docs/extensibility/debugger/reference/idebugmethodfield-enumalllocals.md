@@ -11,17 +11,18 @@ ms.assetid: 0bc7cc13-2628-4bd8-8c06-4d2aa6755ea8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 021dd54157a46e35c0acbb7dd7315fe155304b6d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9b31c956fa5cc94c8c595b5cf92f10498ea40a1ddb7fc5d4f2e830c3ea946d9d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076699"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307316"
 ---
 # <a name="idebugmethodfieldenumalllocals"></a>IDebugMethodField::EnumAllLocals
 Bir derleyici tarafından oluşturulan işlemler de dahil olmak üzere, yöntemin tüm yerel değişkenleri için bir Numaralandırıcı oluşturur.

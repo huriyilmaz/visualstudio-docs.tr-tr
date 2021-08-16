@@ -25,17 +25,18 @@ ms.assetid: 6fe97aac-2131-4615-bd92-d3afee741558
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9af71aba1b26c3d8160af229d8c050038800106a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 379015e0029419256f8071866775aa50b2a608f7e1a26e936dccaf3a9c41af90
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865819"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345861"
 ---
 # <a name="continuing-execution-after-an-exception"></a>Özel Durumdan Sonra Yürütmeye Devam Etme
-Bir özel durum nedeniyle hata ayıklayıcı yürütmeyi bozarsa, varsayılan olarak **özel durum yardımcısını** görürsünüz. **Seçenekler** Iletişim kutusunda **özel durum yardımcısını** devre dışı bırakırsanız, **özel durum Yardımcısı** (C# veya Visual Basic) veya **özel durum** iletişim kutusu (C++) görüntülenir.
+Bir özel durum nedeniyle hata ayıklayıcı yürütmeyi bozarsa, varsayılan olarak **özel durum yardımcısını** görürsünüz. **seçenekler** iletişim kutusunda **özel durum yardımcısını** devre dışı bırakırsanız, **özel durum yardımcısı** (C# veya Visual Basic) veya **özel durum** iletişim kutusu (C++) görüntülenir.
 
  **Özel durum Yardımcısı** göründüğünde, özel duruma neden olan sorunu gidermeyi deneyebilirsiniz.
 

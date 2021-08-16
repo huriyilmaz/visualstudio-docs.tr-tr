@@ -8,22 +8,23 @@ ms.assetid: 3dbc3247-00f5-4644-8ff9-72e9febcf09a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fb8d00d68a61fd2e97740ee46f92433ea34abb65
-ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+ms.openlocfilehash: c9cda1347a0f1293165b5cbb553f1102eac615c67d3659a000c263bd762d17fe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114232849"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121263666"
 ---
 # <a name="1x1-viewport-size-variant"></a>1x1 Görünüm Penceresi Boyut Çeşidi
 Tüm işleme hedeflerine yönelik görünüm açısı boyutlarını 1x1 piksele azaltır.
 
 ## <a name="interpretation"></a>Yorum
- Daha küçük bir görünüm açısı, gölgelendirmek zorunda olduğunuz piksel sayısını azaltır. Ancak daha küçük bir görünüm noktası, işlemesi gereken köşe sayısını azaltmaz. Görünüm açısı boyutlarının 1x1 piksel olarak değiştirilmesi, uygulamanıza piksel gölgelendirmeyi etkili bir şekilde ortadan kaldırmanızı sağlar.
+ Daha küçük bir görünüm açısı, gölgelendirmek zorunda olduğunuz piksel sayısını azaltır. Ancak daha küçük bir görünüm noktası, işlemesi gereken köşe sayısını azaltmaz. Görünüm açısı boyutlarını 1x1 piksel olarak ayarlama, uygulamanıza piksel gölgelendirmeyi etkili bir şekilde ortadan kaldırıyor.
 
- Bu değişken büyük bir performans kazancı gösteriyorsa, bu durum, uygulamanın çok fazla dolgu oranı tükettiğine işaret ediyor olabilir. Buna ek olarak, çözünürlüğünü hedef platform için fazla yüksek olabilir veya uygulamanız daha sonra üzerine yazılan pikselleri gölgelendirmek için önemli ölçüde zaman harcayabilir ve bunun üzerine *yazılabilir.* Daha küçük bir çerçeve arabelleği veya fazla çizim miktarını azaltmak, uygulamanın performansını artırır.
+ Bu değişken büyük bir performans kazancı gösteriyorsa, bu durum, uygulamanın çok fazla dolgu oranı tükettiğine işaret ediyor olabilir. Buna ek olarak, çözünürlüğünü hedef platform için fazla yüksek olabilir veya uygulamanız daha sonra üzerine yazılan pikselleri gölgelendirmek için önemli ölçüde zaman harcayabilir ve üzerine *çizi olarak da anılabilir.* Daha küçük bir çerçeve arabelleği veya fazla çizim miktarını azaltmak, uygulamanın performansını artırır.
 
 ## <a name="remarks"></a>Açıklamalar
  veya için yapılan her çağrıdan sonra görünüm açısı boyutları 1x1 piksele `ID3D11DeviceContext::OMSetRenderTargets` `ID3D11DeviceContext::RSSetViewports` sıfırlanır.

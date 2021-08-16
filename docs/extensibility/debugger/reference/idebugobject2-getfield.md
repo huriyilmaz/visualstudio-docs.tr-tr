@@ -11,17 +11,18 @@ ms.assetid: add6a6b5-e752-47dd-9613-29206ea809b0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 051c92b55b8fbd937abc20235d708f72f9c27078
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e3ad75a3bb1361d0b3f9625fa5fcaa989b75220ee8d8ed20892831fcb962e20c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087866"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307277"
 ---
 # <a name="idebugobject2getfield"></a>IDebugObject2::GetField
 Bu nesnenin türünü alır.

@@ -1,91 +1,85 @@
 ### YamlMime:Hub
 title: Visual Studio oyun geliştirme belgeleri
-summary: Visual Studio 'yu, Mac için Visual Studio ve Unity, Unreal Engine gibi tümleştirdikleri önde gelen araçları kullanarak Oyunlar yapmayı öğrenin.
+summary: 'Visual Studio, Mac için Visual Studio ve Unity, unreal Engine gibi tümleştirdikleri önde gelen araçları ve daha fazlasını kullanarak oyun yapmayı öğrenin.'
 brand: visual-studio
 metadata:
-  title: Visual Studio oyun geliştirme belgeleri | Microsoft Docs
-  description: Bu makalede, Visual Studio 'nun oyun geliştirme için özellikleri tanıtılmaktadır.
+  title: oyun geliştirme belgelerini Visual Studio | Microsoft Docs
+  description: 'bu makalede, oyun geliştirme için Visual Studio özellikleri tanıtılmaktadır.'
   author: therealjohn
   ms.author: johmil
   ms.date: 08/05/2020
   ms.topic: hub-page
-  ms.openlocfilehash: 5cd2470d62d90f686cc5175ac15e7c49eadfc014
-  ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
-  ms.translationtype: MT
-  ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2020
-  ms.locfileid: "96926506"
 highlightedContent:
   items:
-  - title: Visual Studio ile oyun geliştirme
-    itemType: overview
-    url: https://visualstudio.microsoft.com/vs/features/game-development
-  - title: Unity ile C# oyun geliştirme
-    itemType: learn
-    url: unity/get-started/visual-studio-tools-for-unity.md
-  - title: Unity için Visual Studio Araçları yenilikler nelerdir?
-    itemType: whats-new
-    url: unity/change-log-visual-studio-tools-for-unity.md
-  - title: Unity ile ilk 3B uygulamanızı oluşturma
-    itemType: quickstart
-    url: https://dotnet.microsoft.com/learn/games/unity-tutorial/intro
-  - title: .NET oyun geliştirme hakkında daha fazla bilgi edinin
-    itemType: learn
-    url: https://dotnet.microsoft.com/apps/gaming
+    - title: Visual Studio ile oyun geliştirme
+      itemType: overview
+      url: 'https://visualstudio.microsoft.com/vs/features/game-development'
+    - title: Unity ile C# oyun geliştirme
+      itemType: learn
+      url: unity/get-started/visual-studio-tools-for-unity.md
+    - title: Unity için Visual Studio Araçları yenilikler nelerdir?
+      itemType: whats-new
+      url: unity/change-log-visual-studio-tools-for-unity.md
+    - title: Unity ile ilk 3B uygulamanızı oluşturma
+      itemType: quickstart
+      url: 'https://dotnet.microsoft.com/learn/games/unity-tutorial/intro'
+    - title: .NET oyun geliştirme hakkında daha fazla bilgi edinin
+      itemType: learn
+      url: 'https://dotnet.microsoft.com/apps/gaming'
 productDirectory:
   title: Oyun geliştirme
-  summary: Visual Studio ve .NET ile tümleştirilmiş önde gelen araçlar ve teknolojiler hakkında daha fazla bilgi edinin
+  summary: Visual Studio ve .net ile tümleştirilmiş önde gelen araçlar ve teknolojiler hakkında daha fazla bilgi edinin
   items:
-  - title: Unity
-    imageSrc: unity/media/unity-logo.png
-    links:
-    - url: unity/get-started/visual-studio-tools-for-unity.md
-      text: Tur Unity için Visual Studio Araçları
-    - url: unity/get-started/getting-started-with-visual-studio-tools-for-unity.md
-      text: Visual Studio ve Unity ile çalışmaya başlama
-    - url: unity/troubleshooting/troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
-      text: Sorun giderme Unity için Visual Studio Araçları
-  - title: MonoGame
-    imageSrc: monogame/media/monogame-logo.png
-    links:
-    - url: https://www.monogame.net/
-      text: MonoGame 'e genel bakış
-    - url: https://docs.monogame.net/articles/getting_started/0_getting_started.html
-      text: MonoGame ile çalışmaya başlama
-    - url: https://docs.monogame.net/articles/getting_started/0_getting_started.html#setting-up-your-development-environment
-      text: MonoGame için Visual Studio 'Yu ayarlama
-  - title: Unreal Engine
-    imageSrc: unreal/media/unreal-engine-logo.png
-    links:
-    - url: https://www.unrealengine.com/features
-      text: Unreal Engine 'e genel bakış
-    - url: https://docs.unrealengine.com/GettingStarted/index.html
-      text: Unreal Engine ile çalışmaya başlama
-    - url: https://docs.unrealengine.com/Programming/Development/VisualStudioSetup/index.html
-      text: Unreal Engine için Visual Studio 'Yu ayarlama
+    - title: Unity
+      imageSrc: unity/media/unity-logo.png
+      links:
+        - url: unity/get-started/visual-studio-tools-for-unity.md
+          text: tur Unity için Visual Studio Araçları
+        - url: unity/get-started/getting-started-with-visual-studio-tools-for-unity.md
+          text: Visual Studio ve Unity ile çalışmaya başlama
+        - url: unity/troubleshooting/troubleshooting-and-known-issues-visual-studio-tools-for-unity.md
+          text: sorun giderme Unity için Visual Studio Araçları
+    - title: MonoGame
+      imageSrc: monogame/media/monogame-logo.png
+      links:
+        - url: 'https://www.monogame.net/'
+          text: MonoGame 'e genel bakış
+        - url: 'https://docs.monogame.net/articles/getting_started/0_getting_started.html'
+          text: MonoGame ile çalışmaya başlama
+        - url: 'https://docs.monogame.net/articles/getting_started/0_getting_started.html#setting-up-your-development-environment'
+          text: monogame için Visual Studio ayarlama
+    - title: Unreal Engine
+      imageSrc: unreal/media/unreal-engine-logo.png
+      links:
+        - url: 'https://www.unrealengine.com/features'
+          text: Unreal Engine 'e genel bakış
+        - url: 'https://docs.unrealengine.com/GettingStarted/index.html'
+          text: Unreal Engine ile çalışmaya başlama
+        - url: 'https://docs.unrealengine.com/Programming/Development/VisualStudioSetup/index.html'
+          text: unreal Engine için Visual Studio ayarlama
 conceptualContent:
-  title: Visual Studio ile düzeyini artırma
-  summary: Visual Studio ile kod düzenlemesi, hata ayıklama, derleme ve daha fazlası hakkında daha fazla bilgi edinin.
+  title: Visual Studio düzeyini artırma
+  summary: 'Visual Studio ile kod düzenlemesi, hata ayıklama, derleme ve daha fazlası hakkında daha fazla bilgi edinin.'
   items:
-  - title: Visual Studio’yu kullanmayı öğrenin
-    links:
-    - text: Kılavuzlu turu başlat
-      url: /docs/get-started/visual-studio-ide.md
-      itemType: overview
-    - text: Kodu yazma ve düzenleme
-      url: /docs/ide/index-writing-code.yml
-      itemType: tutorial
-    - text: Genel hata ayıklama özellikleri
-      itemType: tutorial
-      url: /docs/debugger/debugger-feature-tour.md
-  - title: Öğreticiyi izleyin
-    links:
-    - text: Unity ile ilk oyununuzu
-      url: https://dotnet.microsoft.com/learn/games/unity-tutorial/intro
-      itemType: tutorial
-    - text: MonoGame örnekleri & gösterileri
-      url: https://docs.monogame.net/articles/samples.html
-      itemType: tutorial
-    - text: Unreal Engine öğreticileri
-      url: https://www.unrealengine.com/en-US/onlinelearning-courses
-      itemType: learn
+    - title: Visual Studio’yu kullanmayı öğrenin
+      links:
+        - text: Kılavuzlu turu başlat
+          url: /docs/get-started/visual-studio-ide.md
+          itemType: overview
+        - text: Kodu yazma ve düzenleme
+          url: /docs/ide/index-writing-code.yml
+          itemType: tutorial
+        - text: Genel hata ayıklama özellikleri
+          itemType: tutorial
+          url: /docs/debugger/debugger-feature-tour.md
+    - title: Öğreticiyi izleyin
+      links:
+        - text: Unity ile ilk oyununuzu
+          url: 'https://dotnet.microsoft.com/learn/games/unity-tutorial/intro'
+          itemType: tutorial
+        - text: MonoGame örnekleri & gösterileri
+          url: 'https://docs.monogame.net/articles/samples.html'
+          itemType: tutorial
+        - text: Unreal Engine öğreticileri
+          url: 'https://www.unrealengine.com/en-US/onlinelearning-courses'
+          itemType: learn

@@ -1,6 +1,6 @@
 ---
 title: DLL projelerinde hata ayıkla | Microsoft Docs
-description: Visual Studio 'da dinamik bağlantı kitaplığı (DLL) dosyalarını ayıklayın. Dll 'Leri oluşturmak, derlemek, yapılandırmak ve hatalarını ayıklamak için Visual Studio 'Yu kullanın.
+description: Visual Studio içindeki dinamik bağlantı kitaplığı (DLL) dosyalarında hata ayıklayın. dll 'leri oluşturmak, derlemek, yapılandırmak ve hatalarını ayıklamak için Visual Studio kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/06/2018
 ms.topic: conceptual
@@ -18,22 +18,23 @@ ms.assetid: 433cab30-d191-460b-96f7-90d2530ca243
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b6ad51d6b791def360f12b2d64e4ef6841c7bcda
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7fbeca9fbe809e157190aab60a8ecdd33b000b7a65ac35986f12aa3a767b1140
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872800"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121264091"
 ---
-# <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio 'da dll 'Leri hata ayıklama (C#, C++, Visual Basic, F #)
+# <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio hata ayıklama dll 'leri (C#, C++, Visual Basic, F #)
 
-DLL (dinamik bağlantı kitaplığı), birden fazla uygulama tarafından kullanılabilen kod ve verileri içeren bir kitaplıktır. Dll 'Leri oluşturmak, derlemek, yapılandırmak ve hatalarını ayıklamak için Visual Studio 'Yu kullanabilirsiniz.
+DLL (dinamik bağlantı kitaplığı), birden fazla uygulama tarafından kullanılabilen kod ve verileri içeren bir kitaplıktır. dll 'leri oluşturmak, derlemek, yapılandırmak ve hatalarını ayıklamak için Visual Studio kullanabilirsiniz.
 
 ## <a name="create-a-dll"></a>DLL oluşturma
 
-Aşağıdaki Visual Studio proje şablonları dll 'Ler oluşturabilir:
+aşağıdaki Visual Studio proje şablonları dll 'ler oluşturabilir:
 
 - C#, Visual Basic veya F # sınıf kitaplığı
 - C# veya Visual Basic Windows Forms Control (WCF) kitaplığı
@@ -41,16 +42,16 @@ Aşağıdaki Visual Studio proje şablonları dll 'Ler oluşturabilir:
 
 Daha fazla bilgi için bkz. [MFC hata ayıklama teknikleri](../debugger/mfc-debugging-techniques.md).
 
-WCF kitaplığı hata ayıklaması, bir sınıf kitaplığında hata ayıklamaya benzer. Ayrıntılar için bkz. [Windows Forms denetimleri](/dotnet/framework/winforms/controls/index).
+WCF kitaplığı hata ayıklaması, bir sınıf kitaplığında hata ayıklamaya benzer. ayrıntılar için bkz. [Windows Forms denetimleri](/dotnet/framework/winforms/controls/index).
 
 Genellikle başka bir projeden DLL çağırırın. Çağıran projede hata ayıkladığınızda, DLL yapılandırmasına bağlı olarak, DLL kodunda bir adım adım ve hata ayıklama yapabilirsiniz.
 
 ## <a name="dll-debug-configuration"></a><a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> DLL hata ayıklama yapılandırması
 
-Bir uygulama oluşturmak için Visual Studio proje şablonu kullandığınızda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklama ve yayın derleme yapılandırmalarına yönelik gerekli ayarları otomatik olarak oluşturur. Gerekirse bu ayarları değiştirebilirsiniz. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
+bir uygulama oluşturmak için Visual Studio proje şablonu kullandığınızda, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklama ve yayın derleme yapılandırmalarına yönelik gerekli ayarları otomatik olarak oluşturur. Gerekirse bu ayarları değiştirebilirsiniz. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [C# hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
+- [C# hata ayıklama yapılandırması için Project ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md)
 
@@ -86,7 +87,7 @@ C/C++ projeleri için, çıktı klasörüne kopyalamak yerine, proje özellik sa
 
 1. **Tamam**’ı seçin.
 
-C++ proje ayarları hakkında daha fazla bilgi için bkz. [Windows C++ Özellik sayfası başvurusu](/cpp/build/reference/property-pages-visual-cpp).
+c++ proje ayarları hakkında daha fazla bilgi için bkz. [Windows C++ özellik sayfası başvurusu](/cpp/build/reference/property-pages-visual-cpp).
 
 ## <a name="build-a-debug-version"></a><a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> Hata ayıklama sürümü oluşturma
 
@@ -98,7 +99,7 @@ DLL dosyasını doğru konumunda çağırdığınızdan emin olun. Bu açık gö
 
 ## <a name="debug-a-dll"></a><a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> DLL hatalarını ayıklama
 
-Bir DLL dosyasını doğrudan çalıştıramazsınız. Genellikle bir *. exe* dosyası olan bir uygulama tarafından çağrılmalıdır. Daha fazla bilgi için bkz. [Visual Studio projeleri-C++](/cpp/ide/creating-and-managing-visual-cpp-projects).
+Bir DLL dosyasını doğrudan çalıştıramazsınız. Genellikle bir *.exe* dosyası olan bir uygulama tarafından çağrılmalıdır. daha fazla bilgi için bkz. [Visual Studio projeler-C++](/cpp/ide/creating-and-managing-visual-cpp-projects).
 
 Bir DLL dosyasında hata ayıklamak için, [çağıran uygulamadan hata ayıklamayı başlatabilir](#vxtskdebuggingdllprojectsthecallingapplication)veya çağıran uygulamayı belirterek [DLL projesinden hata ayıklaması](how-to-debug-from-a-dll-project.md) yapabilirsiniz. Ayrıca, çağıran bir uygulama kullanmadan, tasarım zamanında DLL işlevleri veya yöntemleri değerlendirmek için hata ayıklayıcı [anında penceresini](#vxtskdebuggingdllprojectstheimmediatewindow) de kullanabilirsiniz.
 
@@ -123,20 +124,20 @@ DLL 'yi çağıran uygulama şunları yapabilir:
 
 Çağıran uygulamada hata ayıklamaya başlamadan önce, DLL 'de bir kesme noktası ayarlayın. Bkz. [kesme noktaları kullanma](../debugger/using-breakpoints.md). DLL kesme noktası isabet edildiğinde, kodu adım adım ilerleyerek her satırdaki eylemi gözlemleyerek yapabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../debugger/navigating-through-code-with-the-debugger.md).
 
-Hata ayıklama sırasında, uygulamanın yüklediği dll ve *. exe* dosyalarını doğrulamak için **modüller** penceresini kullanabilirsiniz. **Modüller** penceresini açmak için hata ayıklama sırasında Windows modülleri **Hata Ayıkla**' yı seçin  >    >  . Daha fazla bilgi için bkz. [nasıl yapılır: modüller penceresini kullanma](../debugger/how-to-use-the-modules-window.md).
+Hata ayıklama sırasında, dll 'Leri ve uygulamanın yüklediği dosyaları *.exe* doğrulamak için **modüller** penceresini kullanabilirsiniz. **modüller** penceresini açmak için hata ayıklama sırasında Windows modülleri **hata ayıkla**' yı seçin  >    >  . Daha fazla bilgi için bkz. [nasıl yapılır: modüller penceresini kullanma](../debugger/how-to-use-the-modules-window.md).
 
 ### <a name="use-the-immediate-window"></a><a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> Hemen penceresini kullanma
 
 Tasarım zamanında DLL işlevlerini veya yöntemlerini değerlendirmek için **hemen** penceresini kullanabilirsiniz. **Komut** penceresi, çağıran bir uygulamanın rolünü yürütür.
 
 >[!NOTE]
->En çok proje türüyle tasarım zamanında **hemen** penceresini kullanabilirsiniz. SQL, Web projeleri veya betik için desteklenmez.
+>En çok proje türüyle tasarım zamanında **hemen** penceresini kullanabilirsiniz. SQL, web projeleri veya betik için desteklenmez.
 
 Örneğin, sınıfında adlı bir yöntemi test etmek için `Test` `Class1` :
 
-1. DLL projesi açıkken, Windows anında **Hata Ayıkla**' yı seçerek   >    >   veya **CTRL** + **alt** + **I** tuşlarına basarak hemen pencereyi açın.
+1. DLL projesi açıkken **hata ayıkla** Windows hemen '  ni seçerek  >    >   veya **Ctrl** + **Alt** + **I** tuşlarına basarak hemen pencereyi açın.
 
-1. `Class1` **Komut** penceresine aşağıdaki C# kodunu yazıp **ENTER** tuşuna basarak bir nesne oluşturun. Bu yönetilen kod, uygun sözdizimi değişikliklerinde C# ve Visual Basic için geçerlidir:
+1. `Class1` **Komut** penceresine aşağıdaki C# kodunu yazıp **ENTER** tuşuna basarak bir nesne oluşturun. bu yönetilen kod, uygun sözdizimi değişikliklerinde C# ve Visual Basic için geçerlidir:
 
    ```csharp
    Class1 obj = new Class1();
@@ -166,7 +167,7 @@ Ayrıca, yönetilen bir çağıran projeden yerel bir DLL dosyasında hata ayık
 - [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)
 - [C++ projelerinde hata ayıklamaya hazırlanma](../debugger/debugging-preparation-visual-cpp-project-types.md)
 - [C#, F # ve Visual Basic proje türleri](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
-- [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
-- [C# hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
-- [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
+- [C++ hata ayıklama yapılandırması için Project ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)
+- [C# hata ayıklama yapılandırması için Project ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)
+- [Visual Basic hata ayıklama yapılandırması için Project ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
 - [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)

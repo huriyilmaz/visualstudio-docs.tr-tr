@@ -11,17 +11,18 @@ ms.assetid: e31cdc78-f621-498b-9ca4-aefa790b9f6f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4a34b7160849852da7f1cbe94dae9dc75dc47501
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4db5f1189340e93799fc83bfb9f38e7ac1aa92c5222de6da78e27d2aa487c7cf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086332"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276171"
 ---
 # <a name="reference_compare"></a>REFERENCE_COMPARE
 Başvurular için karşılaştırma türünü belirtir.
@@ -47,23 +48,23 @@ public enum enum_REFERENCE_COMPARE {
 
 ## <a name="fields"></a>Alanlar
  `REF_COMPARE_EQUAL`\
- Eşit karşılaştırmayı belirtir.
+ Eşit karşılaştırma belirtir.
 
  `REF_COMPARE_LESS_THAN`\
- Daha küçüktür bir karşılaştırmayı belirtir.
+ Daha az karşılaştırma belirtir.
 
  `REF_COMPARE_GREATER_THAN`\
- Daha büyük bir karşılaştırmayı belirtir.
+ Karşılaştırmadan büyük bir değer belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md) metoduna bir bağımsız değişken olarak geçirilir.
+ Karşılaştırma yöntemine bağımsız değişken [olarak](../../../extensibility/debugger/reference/idebugreference2-compare.md) geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

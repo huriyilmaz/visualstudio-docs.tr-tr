@@ -11,17 +11,18 @@ ms.assetid: 6d335b2c-66bc-460c-a4a6-4f3f1b697c2c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e7f58dd088b37d3f1a404677c6c76bb09160b438
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a5593bd883b935e361623b8bc0325b3d78aea54b378db38a949ed258bad7df66
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067601"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121262678"
 ---
 # <a name="constructor_enum"></a>CONSTRUCTOR_ENUM
 Farklı Oluşturucu türlerini seçer.

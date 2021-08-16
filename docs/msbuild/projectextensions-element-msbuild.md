@@ -1,6 +1,6 @@
 ---
 title: Projecısions öğesi (MSBuild) | Microsoft Docs
-description: MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlayan Msbuildprojecısions öğesi hakkında bilgi edinin.
+description: MSBuild proje dosyalarının MSBuild olmayan bilgileri içermesini sağlayan msbuildprojecısions öğesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: f95f312f-ff92-41eb-9469-ad99e236a307
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: b7b186fa1d7a5ecb8297045d4b0bbb111d136d1d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 850bef50c5e381c4e15aa1967ca49382362bcf027eabd5330015f06da9d95373
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905286"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270425"
 ---
 # <a name="projectextensions-element-msbuild"></a>Projecısions öğesi (MSBuild)
 
-MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. Bir öğenin içindeki her şey `ProjectExtensions` MSBuild tarafından yok sayılacak.
+MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. Bir öğenin içindeki her şey `ProjectExtensions` MSBuild yok sayılır.
 
  \<Project> \<ProjectExtensions>
 
@@ -47,11 +48,11 @@ MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. Bir �
 
 ### <a name="attributes"></a>Öznitelikler
 
- Yok
+ Hiçbiri
 
 ### <a name="child-elements"></a>Alt öğeleri
 
- Yok
+ Hiçbiri
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -81,5 +82,5 @@ MSBuild proje dosyalarının MSBuild olmayan bilgiler içermesini sağlar. Bir �
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

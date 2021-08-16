@@ -11,17 +11,18 @@ ms.assetid: 7428dfeb-8929-41b2-9b99-cb343a86c02d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dd8b1793bad585dd808ebd812b610cd68aabc129
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5ec3dcb514097f495aa323948d7491a80811fdecf95269793e61f82545f49930
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077609"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121307953"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
 Özel özniteliğin adı verilen özel öznitelik baytlarını edinir.

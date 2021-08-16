@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
-ms.openlocfilehash: 7b11f09d8fb70612d4496987f69583b2ac691275
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9834dd21b68f15fbc3b07e701adcfcc98519dc8248423f699f579243bffa6ea0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74985240"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121439923"
 ---
 # <a name="refactoring"></a>Yeniden Düzenle
 
@@ -19,7 +19,7 @@ Kodu yeniden düzenleme, kodun genel davranışının değişmeyeceğinden emin 
 
 Yeniden düzenleme, bir isteyen kod tabanı üretir, sizin için daha kolay bir şekilde çalışabilir, okunabilir ve sürdürülebilir hale gelir.
 
-Mac için Visual Studio, Microsoft 'un açık kaynaklı .NET derleyicisi platformu ile, daha yeniden düzenleme işlemlerine izin verir.
+Mac için Visual Studio, Microsoft 'un açık kaynaklı .net derleyicisi platformu ile, daha yeniden düzenleme işlemlerine izin verir.
 
 ## <a name="renaming"></a>Adlandırıl
 
@@ -27,7 +27,7 @@ Mac için Visual Studio, Microsoft 'un açık kaynaklı .NET derleyicisi platfor
 
 ![Menü öğesini yeniden adlandır](media/refactoring-renaming1.png)
 
-Bu, simgeyi ve ona yapılan tüm başvuruları vurgular. Yeni bir ad yazmaya başladığınızda kodunuzdaki tüm başvuruları otomatik olarak değiştirir ve **ENTER**tuşuna basarak yeniden adlandırma tamamlanmanıza işaret edebilirsiniz:
+Bu, simgeyi ve ona yapılan tüm başvuruları vurgular. Yeni bir ad yazmaya başladığınızda kodunuzdaki tüm başvuruları otomatik olarak değiştirir ve **ENTER** tuşuna basarak yeniden adlandırma tamamlanmanıza işaret edebilirsiniz:
 
 ![Yeniden adlandırma ve tanımlayıcı](media/refactoring-renaming2.png)
 
@@ -45,7 +45,7 @@ Alternatif olarak, kodunuzda herhangi bir yere **ENTER + ENTER** tuşuna basabil
 
 ![Seçenek bağlam öğelerini gir](media/refactoring-image2a.png)
 
-Bu seçenekleri etkinleştirmek için, seçeneklerde *Açık dosyaların kaynak analizini etkinleştir* ' i seçmeniz gerekir **Mac için Visual Studio > tercihleri > metin Düzenleyicisi > kaynak analizi**:
+bu seçenekleri etkinleştirmek için, seçeneklerde *açık dosyaların kaynak analizini etkinleştir* ' i seçmeniz gerekir **Mac için Visual Studio > tercihleri > metin düzenleyicisi > kaynak analizi**:
 
 ![Kaynak analizini etkinleştirme](media/refactoring-options.png)
 
@@ -113,5 +113,5 @@ Herhangi bir dosya için kaynak analizinin tüm sonuçlarını, istediğiniz zam
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı eylemler (Windows üzerinde Visual Studio)](/visualstudio/ide/quick-actions)
-- [Kodu yeniden düzenleme (Windows üzerinde Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)
+- [hızlı eylemler (Windows Visual Studio)](/visualstudio/ide/quick-actions)
+- [kodu yeniden düzenleme (Windows Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)

@@ -1,6 +1,6 @@
 ---
-title: Program sonlandırılıyor | Microsoft Docs
-description: Bu makalede, IDE 'nin tek bir iş parçacığıyla tek bir programı sonlandırmak için hata ayıklama altyapısını nasıl kullandığı açıklanır.
+title: Program | Microsoft Docs
+description: Bu makalede IDE'nin tek bir iş parçacığıyla tek bir programı sonlandırmak için hata ayıklama altyapısını nasıl kullandığı açıklanmıştır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,25 +11,26 @@ ms.assetid: eedda0a3-5e05-44fe-841d-a2f4866ac72d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: db67e0a391f40fc17a80e616e10aa46a600337a4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bbfe64c5f08cdf82001d1a7df0a80fbc3269c79de895ec499c49d8b5248532a6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057864"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306094"
 ---
-# <a name="terminating-a-program"></a>Program sonlandırılıyor
-Aşağıdaki bölümde, bir iş parçacığı ile tek bir programın sonlandırılması açıklanmaktadır.
+# <a name="terminating-a-program"></a>Programı sonlandırma
+Aşağıdaki bölümde, tek bir iş parçacığı ile tek bir programın sonlandırılması açıkmektedir.
 
 ## <a name="termination-process"></a>Sonlandırma işlemi
 
-1. DE geçerli bir [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md)Ile bir [IDebugThreadDestroyEvent2](../../extensibility/debugger/reference/idebugthreaddestroyevent2.md) gönderir.
+1. DE, geçerli bir [IDebugThread2 ile bir IDebugThreadDestroyEvent2](../../extensibility/debugger/reference/idebugthreaddestroyevent2.md) [gönderir.](../../extensibility/debugger/reference/idebugthread2.md)
 
-2. DE geçerli bir [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)Ile bir [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) gönderir.
+2. DE, geçerli bir [IDebugProgram2 ile bir IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) [gönderir.](../../extensibility/debugger/reference/idebugprogram2.md)
 
-   IDE tasarım moduna girer. Hata ayıklama altyapısı veya çalışma zamanı ortamı, programı bağlantı noktasından kaldırmak için [IDebugPortNotify2:: RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) yöntemini çağırır.
+   IDE tasarım moduna geçer. Hata ayıklama altyapısı veya çalışma zamanı ortamı, programı bağlantı noktasıyla kaldırmak için [IDebugPortNotify2::RemoveProgramNode'u](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) arar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklayıcı olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)

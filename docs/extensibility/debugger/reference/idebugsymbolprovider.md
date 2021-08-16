@@ -11,14 +11,15 @@ ms.assetid: df5f095f-1dee-46f9-84cf-92417c71d5fb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: bda1ec3c65e2f3fdc811b6bde636e78f5a787f32
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9bdbf198b65483a8241de571e2f5fde307a312d25225480c63898da9323898f6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053171"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306770"
 ---
 # <a name="idebugsymbolprovider"></a>IDebugSymbolProvider
 Bu arabirim sembolleri ve türleri sağlayan bir sembol sağlayıcısını temsil eder ve bunları alan olarak döndürür.
@@ -44,15 +45,15 @@ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugSymbolProvider` .
 |`Uninitialize`|Kullanım dışı. Kullanmayın.|
 |[GetContainerField](../../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md)|Hata ayıklama adresini içeren alanı alır.|
 |`GetField`|Kullanım dışı. Kullanmayın.|
-|[GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)|Bir belge konumunu hata ayıklama adresleri dizisiyle eşler.|
-|[GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md)|Bir belge bağlamını bir hata ayıklama adresleri dizisiyle eşler.|
-|[GetContextFromAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getcontextfromaddress.md)|Bir hata ayıklama adresini bir belge bağlamına eşler.|
+|[GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)|bir belge konumunu hata ayıklama adresleri dizisine Haritalar.|
+|[GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md)|bir belge bağlamını hata ayıklama adresleri dizisine Haritalar.|
+|[GetContextFromAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getcontextfromaddress.md)|bir hata ayıklama adresini bir belge bağlamına Haritalar.|
 |[GetLanguage](../../../extensibility/debugger/reference/idebugsymbolprovider-getlanguage.md)|Hata ayıklama adresinde kodu derlemek için kullanılan dili alır.|
 |`GetGlobalContainer`|Kullanım dışı. Kullanmayın.|
 |[GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)|Tam nitelikli bir yöntem adını temsil eden alanı alır.|
 |[GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)|Tam sınıf adını temsil eden sınıf alanı türünü alır.|
 |[GetNamespacesUsedAtAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnamespacesusedataddress.md)|Hata ayıklama adresiyle ilişkili ad alanları için bir Numaralandırıcı oluşturur.|
-|[GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)|Sembol adını bir sembol türüyle eşleştirir.|
+|[GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)|sembol adına bir sembol adı Haritalar.|
 |[GetNextAddress](../../../extensibility/debugger/reference/idebugsymbolprovider-getnextaddress.md)|Bir yöntemde belirli bir hata ayıklama adresini izleyen hata ayıklama adresini alır.|
 
 ## <a name="remarks"></a>Açıklamalar

@@ -1,6 +1,6 @@
 ---
 description: Görev çalışıyor ancak henüz tamamlanmadı.
-title: TASK_STATE_EXECUTED Alanı | Microsoft Docs
+title: TASK_STATE_EXECUTED alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,23 +9,24 @@ ms.assetid: 75b8f9d0-b908-40d0-b109-70feaed2ab0c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca0d2f578cc4e20b71e562d5b82245995bfd2969
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: b99471317dd54c4a088af9a9f7d25d9b889a1b2a4a6c2e491d31cbf0e65c79ad
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902858"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121306263"
 ---
 # <a name="task_state_executed-field"></a>TASK_STATE_EXECUTED alanı
 Görev çalışıyor ancak henüz tamamlanmadı.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Derleme:** mscorlib (mscorlib.dll)
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +35,7 @@ Görev çalışıyor ancak henüz tamamlanmadı.
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- M_stateFlags [alanı](../../extensibility/debugger/m-stateflags-field.md) bu değeri içeriyorsa özelliği <xref:System.Threading.Tasks.Task.Status%2A> değerini <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> döndürür.
+ [M_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

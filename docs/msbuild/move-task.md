@@ -1,6 +1,6 @@
 ---
 title: Görevi taşı | Microsoft Docs
-description: Yeni konumlara dosya taşınan MSBuild taşıma görevinin parametreleri ve ayarları hakkında bilgi edinin.
+description: dosyaları yeni konumlara taşımak MSBuild taşıma görevinin parametreleri ve ayarları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,14 +16,15 @@ ms.assetid: d1405347-1309-4f18-b565-905408093d59
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9121c14037ac1bc5740d1f0684f92226a361e6d5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 761d499c01fdc2fda0a7f8e539377a9ce2bb50edb8e33429cf799265ac59c494
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918182"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121270516"
 ---
 # <a name="move-task"></a>Taşıma görevi
 

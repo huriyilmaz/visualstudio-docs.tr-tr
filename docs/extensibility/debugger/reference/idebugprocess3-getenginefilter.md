@@ -1,6 +1,6 @@
 ---
-description: Kullanılabilir hata ayıklama motorları için benzersiz tanımlayıcıların dizisini alır.
-title: 'IDebugProcess3:: GetEngineFilter | Microsoft Docs'
+description: Kullanılabilir hata ayıklama altyapıları için bir dizi benzersiz tanımlayıcıyı döndürür.
+title: IDebugProcess3::GetEngineFilter | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: ccb7ecb0-f189-4e80-b5b2-221a095e01f5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7c2628424f4f5e9446c763324dfcf9ced4f1896e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bcb04ed408d0ed3947bd7b31f0eaa8876fa329339ff431bcdb25e5f08b91b812
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076569"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276704"
 ---
 # <a name="idebugprocess3getenginefilter"></a>IDebugProcess3::GetEngineFilter
-Kullanılabilir hata ayıklama motorları için benzersiz tanımlayıcıların dizisini alır.
+Kullanılabilir hata ayıklama altyapıları için bir dizi benzersiz tanımlayıcıyı döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +42,10 @@ public int GetEngineFilter(
 
 ## <a name="parameters"></a>Parametreler
 `pEngineArray`\
-dışı Hata ayıklama motorları için benzersiz tanımlayıcılar içeren bir yapıya başvuru.
+[out] Hata ayıklama altyapıları için benzersiz tanımlayıcılar içeren bir yapıya başvuru.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

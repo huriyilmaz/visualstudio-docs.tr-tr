@@ -7,12 +7,12 @@ ms.assetid: 933c7f9e-dce9-46e7-939e-68682c65d972
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 01/27/2021
-ms.openlocfilehash: 61f6f6987aaf570edd1eac6b77eafdffeb37b430
-ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
+ms.openlocfilehash: dabdd03589e49e518c6bb19905264c5196b19fef1c995cd4661fb6dc9ad8f137
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99105408"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121265602"
 ---
 # <a name="managing-visual-studio-subscriptions"></a>Visual Studio aboneliklerini yönetme
 

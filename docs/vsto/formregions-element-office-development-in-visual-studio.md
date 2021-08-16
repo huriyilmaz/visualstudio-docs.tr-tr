@@ -1,6 +1,6 @@
 ---
-description: Vstov4 ad alanının FormRegion öğesi, bir VSTO eklentisi ile ilişkili Microsoft Office Outlook form bölgelerini içerir.
-title: "&lt;FormRegion &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+description: vstov4 ad alanının formRegions öğesi, Microsoft Office Outlook eklenti ile ilişkili form bölgelerini VSTO içerir.
+title: '&lt;formRegions &gt; öğesi (Office geliştirme Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -15,17 +15,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 7c8fd7e0ced0fadcd945388a9730513b2a591ed0
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: e1a4439f5c1dab78ce32c553a4bee98db6fa7da4f072152c3a046ba819222128
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223465"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440870"
 ---
-# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;FormRegion &gt; öğesi (Visual Studio 'Da Office geliştirme)
-  `formRegions`Ad alanı öğesi, `vstov4` bir VSTO eklentisi ile Ilişkili Microsoft Office Outlook form bölgelerini içerir.
+# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions &gt; öğesi (Office geliştirme Visual Studio)
+  Ad `formRegions` alanının `vstov4` öğesi, Microsoft Office Outlook eklenti ile ilişkili form bölgelerini VSTO içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,21 +38,21 @@ ms.locfileid: "102223465"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `formRegions`Ad alanı öğesi, `vstov4` `formRegion` bir Outlook VSTO eklentisi için tüm öğeleri içerir. Yalnızca form bölgelerini içeren Outlook VSTO eklentileri için gereklidir.
+ Ad `formRegions` alanının `vstov4` öğesi, bir `formRegion` eklentinin tüm öğelerini Outlook VSTO içerir. Yalnızca form bölgelerini Outlook VSTO eklentileri oluşturmak için gereklidir.
 
- `formRegions`Uygulama bildiriminde tanımlı yalnızca bir öğe olabilir.
+ Bir uygulama bildiriminde `formRegions` tanımlanan yalnızca bir öğe olabilir.
 
- `formRegions`Öğesinde hiç öznitelik yok.
+ öğesinin `formRegions` özniteliği yoktur.
 
- `formRegions`Öğesi aşağıdaki öğeye sahiptir.
+ öğesi `formRegions` aşağıdaki öğeye sahip.
 
-### <a name="formregion"></a>Bağımsız
- Form bölgelerini içeren Outlook VSTO eklentileri için gereklidir. `formRegion`Öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;FormRegion&#62; öğesinde ](../vsto/formregion-element-office-development-in-visual-studio.md)tanımlanmıştır.
+### <a name="formregion"></a>Formregion
+ Form Outlook VSTO içeren eklentiler oluşturmak için gereklidir. öğesi `formRegion` [formRegion&#60;öğesinde&#62; geliştirme &#40;Office öğesinde Visual Studio&#41;. ](../vsto/formregion-element-office-development-in-visual-studio.md)
 
-## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
+## <a name="vsto-add-in-example"></a>VSTO Eklenti örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, `formRegions` kullanılarak dağıtılan uygulama düzeyi Office çözümü için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneği, kullanılarak `formRegions` dağıtılan bir uygulama düzeyi uygulama Office öğesi [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -68,6 +69,6 @@ ms.locfileid: "102223465"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
-- [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
+- [Uygulama çözümleri için Office bildirimleri](../vsto/application-manifests-for-office-solutions.md)
+- [Dağıtım çözümleri için Office bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
 - [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

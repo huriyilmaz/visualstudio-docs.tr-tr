@@ -1,5 +1,5 @@
 ---
-description: Bu yöntem, bu işlemde (ve içerdiği tüm programlar) Düzenle ve devam et özelliğini açıkça devre dışı bırakır.
+description: Bu yöntem, bu işlemde (ve içerdiği tüm programlarda) Düzenle ve Devam'ı açıkça devre dışı bırakıyor.
 title: IDebugProcess3::D isableENC | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: cffdbdac-4d76-4aeb-aa55-5d0410db99f1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7f9c4a1e05cf7d4a98489daf0c2ee3377d54f417
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 429cacbc4ef87224459493b0815d9e5dcff7fac3f61ca510d334501226a08eef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081626"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276743"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
-Bu yöntem, bu işlemde (ve içerdiği tüm programlar) Düzenle ve devam et özelliğini açıkça devre dışı bırakır. Özel bir bağlantı noktası sağlayıcısı her zaman döndürmelidir `E_NOTIMPL` .
+Bu yöntem, bu işlemde (ve içerdiği tüm programlarda) Düzenle ve Devam'ı açıkça devre dışı bırakıyor. Özel bir bağlantı noktası sağlayıcı her zaman geri `E_NOTIMPL` dönmeli.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +42,16 @@ HRESULT DisableENC(
 
 ## <a name="parameters"></a>Parametreler
 `reason`\
-'ndaki [Encunkullanılabilirliği Blereason](../../../extensibility/debugger/reference/encunavailablereason.md) numaralandırmasından bir değer.
+[in] [EncUnavailableReason enumerasyonundan](../../../extensibility/debugger/reference/encunavailablereason.md) bir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 > [!NOTE]
-> Özel bir bağlantı noktası sağlayıcısı her zaman döndürmelidir `E_NOTIMPL` .
+> Özel bir bağlantı noktası sağlayıcı her zaman geri `E_NOTIMPL` dönmeli.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir işlem için Düzenle ve devam et devre dışı bırakıldığında, işlem yeniden başlatılarak yalnızca yeniden etkinleştirilebilir.
+ Bir işlem için Düzenle ve Devam Edin devre dışı bırakılmıştır, yalnızca işlemi yeniden başlatarak yeniden etkinleştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

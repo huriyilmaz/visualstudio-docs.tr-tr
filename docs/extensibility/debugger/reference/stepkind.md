@@ -11,17 +11,18 @@ ms.assetid: d3d8cf76-24bf-455e-803e-0e3e28f0b262
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2363062ba8de362980a490133b77e374e9bc8507
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9a972617b071f3c6f45a289a5fc01647bf3adee7fd9ebfa4ba4e2712c4774816
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061504"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121276184"
 ---
 # <a name="stepkind"></a>STEPKIND
 Adımlama için adım türünü belirtir.

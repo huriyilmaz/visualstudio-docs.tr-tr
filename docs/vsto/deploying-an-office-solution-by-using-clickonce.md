@@ -1,6 +1,6 @@
 ---
-title: ClickOnce kullanarak Office çözümü dağıtma
-description: ClickOnce kullanıyorsanız Office çözümünüzü daha az adımda nasıl dağıtabileceğinizi öğrenin. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler.
+title: ClickOnce kullanarak Office çözümü ClickOnce
+description: Office kullanarak Office daha az adımda nasıl dağıtabilirsiniz ClickOnce. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,112 +13,113 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 03b4f3d2f1a342f6c1977d616793634500850e7a
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 84c3740a1fd51863c782942a12d9863d3bf448c85379f89b82268a01847f0b44
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828624"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121297054"
 ---
-# <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce kullanarak Office çözümü dağıtma
-  ClickOnce kullanıyorsanız Office çözümünüzü daha az adımda dağıtabilirsiniz. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler. Bununla birlikte, ClickOnce, çözümünüzü bir bilgisayarın her kullanıcısı için ayrı ayrı yüklemenizi gerektirir. Bu nedenle, birden fazla Kullanıcı çözümünüzü aynı bilgisayarda çalıştırabileceğinden, Windows Installer (*. msi*) kullanmayı düşünmelisiniz.
+# <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce kullanarak Office çözümü ClickOnce
+  Office Office daha az adımda dağıt ClickOnce abilirsiniz. Güncelleştirmeleri yayımlarsanız, çözümünüz bunları otomatik olarak algılar ve yükler. Bununla birlikte, ClickOnce, çözümünüzü bir bilgisayarın her kullanıcısı için ayrı ayrı yüklemenizi gerektirir. Bu nedenle, birden fazla kullanıcı Windows aynı *bilgisayarda çalıştıracaksa, Windows* Yükleyicisi'ni (.msi) kullanmayı göz önünde bulundurabilirsiniz.
 
 ## <a name="in-this-topic"></a>Bu konuda
 
 - [Çözümü yayımlama](#Publish)
 
-- [Çözüme nasıl güven vermek istediğinize karar verin](#Trust)
+- [Çözüme nasıl güven vermek istediğinize karar verme](#Trust)
 
-- [Kullanıcıların çözümü yüklemesine yardımcı olma](#Helping)
+- [Kullanıcıların çözümü yüklemesi için yardım](#Helping)
 
-- [Bir çözümün belgesini son kullanıcının bilgisayarına koyma (yalnızca belge düzeyinde özelleştirmeler)](#Put)
+- [Çözümün belgesini son kullanıcının bilgisayarına koyma (yalnızca belge düzeyinde özelleştirmeler)](#Put)
 
-- [Bir çözümün belgesini SharePoint çalıştıran bir sunucuya koyma (yalnızca belge düzeyinde özelleştirmeler)](#SharePoint)
+- [Çözümün belgesini bir çözümü çalıştıran bir sunucuya SharePoint (yalnızca belge düzeyinde özelleştirmeler)](#SharePoint)
 
 - [Özel bir yükleyici oluşturma](#Custom)
 
 - [Güncelleştirme yayımlama](#Update)
 
-- [Bir çözümün yükleme konumunu değiştirme](#Location)
+- [Çözümün yükleme konumunu değiştirme](#Location)
 
-- [Bir çözümü önceki bir sürüme geri alma](#Roll)
+- [Çözümü önceki bir sürüme geri alma](#Roll)
 
-  Bir Windows Installer dosyası oluşturarak Office çözümünü dağıtma hakkında daha fazla bilgi için, bkz. [Windows Installer kullanarak Office çözümü dağıtma](../vsto/deploying-a-vsto-solution-by-using-windows-installer.md).
+  Windows Installer dosyası oluşturarak bir Office çözümü dağıtma hakkında daha fazla bilgi için bkz. Windows Yükleyicisi kullanarak Office [çözümü dağıtma.](../vsto/deploying-a-vsto-solution-by-using-windows-installer.md)
 
 ## <a name="publish-the-solution"></a><a name="Publish"></a> Çözümü yayımlama
- Çözümünüzü **Yayımla sihirbazını** veya **Proje tasarımcısını** kullanarak yayımlayabilirsiniz. Bu yordamda, tüm yayımlama seçenekleri kümesini sağladığından **Proje tasarımcısını** kullanacaksınız. Bkz. [Visual Studio 'Da Office geliştirme &#40;Yayımlama sihirbazı&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md).
+ Yayımlama Sihirbazı'nı veya  Project **Designer'ı kullanarak Project yayımabilirsiniz.** Bu yordamda, yayımlama seçeneklerinin **tam Project sağladığı** için Project Designer'ın kullanıladır. Bkz. [Visual Studio&#41;'de &#40;Office yayımlama sihirbazı. ](../vsto/publish-wizard-office-development-in-visual-studio.md)
 
 #### <a name="to-publish-the-solution"></a>Çözümü yayımlamak için
 
-1. **Çözüm Gezgini**, projeniz için adlandırılmış düğümü seçin.
+1. Bu **Çözüm Gezgini** projeniz için adlandırılmış düğümü seçin.
 
-2. Menü çubuğunda **Proje**, *ProjectName* **Özellikler**' i seçin.
+2. Menü çubuğunda , *ProjectName* **Project** seçeneğini **belirleyin.**
 
-3. **Proje tasarımcısında**, aşağıdaki çizimin gösterdiği **Yayımla** sekmesini seçin.
+3. Project **Tasarımcısı'nda,** aşağıdaki **çizimde** gösterildiği Gibi Yayımla sekmesini seçin.
 
-    ![Proje Tasarımcısı ' nın Yayımla sekmesi](../vsto/media/vsto-publishtab.png "Proje Tasarımcısı ' nın Yayımla sekmesi")
+    ![Project Designer'ın yayımlama sekmesi](../vsto/media/vsto-publishtab.png "Project tasarımcısının yayımla sekmesi")
 
-4. **Yayımlama klasörü konumu (FTP sunucusu veya dosya yolu)** kutusunda, **Proje Tasarımcısı** 'nın çözüm dosyalarını kopyalamasını istediğiniz klasörün yolunu girin.
+4. Yayımlama **Klasörü Konumu (ftp sunucusu veya** dosya yolu) kutusuna, **Project Designer'ın** çözüm dosyalarını kopyalaması için istediğiniz klasörün yolunu girin.
 
     Aşağıdaki yol türlerinden herhangi birini girebilirsiniz.
 
-   - Yerel bir yol (örneğin, *C:\folderadı \ KlasörAdı*).
+   - Yerel yol (örneğin, *C:\FolderName\FolderName*).
 
-   - Ağınızdaki bir klasörün Tekdüzen adlandırma kuralı (UNC) yolu (örneğin, *\\ \Sunucuadı \ KlasörAdı*).
+   - Ağ üzerinde bir klasörün Tekdü Adlandırma Kuralı (UNC) yolu (örneğin, *\\ \ServerName\FolderName*).
 
-   - Bir göreli yol (örneğin, varsayılan olarak projenin yayımlandığı klasör olan *publishfolder \\*).
+   - Göreli yol (örneğin, projenin varsayılan olarak yayımladığı klasör olan *PublishFolder). \\*
 
-5. **Yükleme klasörü URL 'si** kutusuna, son kullanıcıların çözümünüzü bulacağı konumun tam yolunu girin.
+5. Yükleme **Klasörü URL'si** kutusuna, son kullanıcıların çözümlerinizi bulacakları konumun tam yolunu girin.
 
-    Konumu henüz bilmiyorsanız, bu alana hiçbir şey girmeyin. Varsayılan olarak, ClickOnce, kullanıcılarınızın çözümü yüklediği klasörde güncelleştirmeleri arar.
+    Konumu henüz bilmiyorsanız bu alana hiçbir şey girmeyin. Varsayılan olarak, ClickOnce, kullanıcılarınızın çözümü yüklediği klasörde güncelleştirmeleri arar.
 
-6. **Önkoşullar** düğmesini seçin.
+6. **Önkoşullar düğmesini** seçin.
 
-7. **Önkoşullar** iletişim kutusunda, **Önkoşul bileşenlerini yüklemek Için Kurulum programı oluştur** onay kutusunun işaretli olduğundan emin olun.
+7. **Önkoşullar** iletişim kutusunda Önkoşul bileşenlerini yüklemek için **kurulum programı oluştur onay kutusunun** seçili olduğundan emin olun.
 
-8. **Yüklenecek önkoşulları seçin** listesinde, **Windows Installer 4,5** ve uygun .NET Framework paketinin onay kutularını seçin.
+8. Yükleme **önkoşullarını seçin listesinde,** Windows **Installer 4.5** ve uygun .NET Framework seçin.
 
-    Örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] öğesini hedefliyorsa, **Windows Installer 4,5** ve **Microsoft .NET Framework 4,5 Full** onay kutularını seçin.
+    Örneğin, çözümünüz hedefi ise, Windows [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] Installer **4.5** ve Microsoft .NET Framework **4.5 Tam** onay kutularını seçin.
 
-9. Çözümünüz 4,5 .NET Framework hedefliyorsa, **Office çalışma zamanı Için Visual Studio 2010 araçları** onay kutusunu da seçin.
+9. Çözümünüz .NET Framework 4.5'i hedeflese, **Visual Studio Çalışma Zamanı için Visual Studio 2 Office 010 Araçları onay** kutusunu da seçin.
 
     > [!NOTE]
-    > Varsayılan olarak, bu onay kutusu görünmez. Bu onay kutusunu göstermek için bir Önyükleyici paketi oluşturmanız gerekir. Bkz. [Visual Studio 2012 Ile Office 2013 VSTO eklentisi Için önyükleyici paketi oluşturma](create-vsto-add-ins-for-office-by-using-visual-studio.md).
+    > Varsayılan olarak, bu onay kutusu görünmez. Bu onay kutusunu göstermek için bir Önyükleyici paketi oluşturmanız gerekir. Bkz. [2012 ile Office 2013 VSTO](create-vsto-add-ins-for-office-by-using-visual-studio.md)önyükleyici Visual Studio paketi oluşturma.
 
-10. **Önkoşullar için yüklemeyi belirtin** altında, görüntülenen seçeneklerden birini belirleyin ve sonra **Tamam** düğmesini seçin.
+10. **Önkoşullar için yükleme konumunu belirtin** altında, görünen seçeneklerden birini belirleyin ve ardından Tamam **düğmesini** seçin.
 
      Aşağıdaki tabloda her bir seçenek açıklanmaktadır.
 
     |Seçenek|Açıklama|
     |------------|-----------------|
-    |**Önkoşulları bileşen satıcısının Web sitesinden indir**|Kullanıcıdan, bu önkoşulları satıcının sitesinden indirmesi ve yüklemesi istenir.|
-    |**Önkoşulları Uygulamam ile aynı konumdan indir**|Önkoşul yazılımı çözümle birlikte yüklenir. Bu seçeneği tercih ederseniz, Visual Studio sizin için önkoşul paketlerinin tümünü yayımlama konumuna kopyalar. Bu seçeneğin çalışması için önkoşul paketleri geliştirme bilgisayarında olmalıdır.|
+    |**Bileşen satıcısının web sitesinden önkoşulları indirme**|Kullanıcıdan, bu önkoşulları satıcının sitesinden indirmesi ve yüklemesi istenir.|
+    |**Önkoşulları uygulamam ile aynı konumdan indirme**|Önkoşul yazılımı çözümle birlikte yüklenir. Bu seçeneği tercih ederseniz, Visual Studio sizin için önkoşul paketlerinin tümünü yayımlama konumuna kopyalar. Bu seçeneğin çalışması için önkoşul paketleri geliştirme bilgisayarında olmalıdır.|
     |**Önkoşulları aşağıdaki konumdan indirin**|Visual Studio tüm önkoşul paketlerini belirttiğiniz konuma kopyalar ve bunları çözümle birlikte yükler.|
 
-     Bkz. [Önkoşullar iletişim kutusu](../ide/reference/prerequisites-dialog-box.md).
+     Bkz. [Önkoşullar iletişim kutusu.](../ide/reference/prerequisites-dialog-box.md)
 
-11. **Güncelleştirmeler** düğmesini seçin, her son kullanıcının VSTO eklentisinin veya özelleştirmenin güncelleştirmeleri denetlemesini istediğiniz sıklığı belirtin ve sonra **Tamam** düğmesini seçin.
+11. Güncelleştirmeler **düğmesini** seçin, her bir son kullanıcının güncelleştirmeleri denetlemesi için VSTO veya özelleştirmeyi ne sıklıkta görmek istediğinizi belirtin ve ardından **Tamam düğmesini** seçin.
 
     > [!NOTE]
-    > Bir CD veya çıkarılabilir sürücü kullanarak dağıtıyorsanız, **güncelleştirmeleri hiçbir şekilde denetle** seçenek düğmesini seçin.
+    > Cd veya çıkarılabilir sürücü kullanarak dağıtıyorsanız Güncelleştirmeleri hiçbir zaman denetleme **seçeneğini** belirtin.
 
-     Bir güncelleştirmeyi yayımlama hakkında daha fazla bilgi için bkz. [güncelleştirme yayımlama](#Update).
+     Bir güncelleştirmeyi yayımlama hakkında bilgi için bkz. [Güncelleştirme yayımlama.](#Update)
 
-12. **Seçenekler düğmesini seçin** , **Seçenekler iletişim kutusundaki seçenekleri gözden** geçirin ve **Tamam** düğmesini seçin.
+12. Seçenekler **düğmesini** seçin, Seçenekler iletişim kutusundaki **seçenekleri gözden** geçirin ve ardından Tamam **düğmesini** seçin.
 
-13. **Şimdi Yayımla** düğmesini seçin.
+13. Şimdi **Yayımla düğmesini** seçin.
 
      Visual Studio, bu yordamda daha önce belirttiğiniz yayımlama klasörüne aşağıdaki klasörleri ve dosyaları ekler.
 
-    - **Uygulama dosyaları** klasörü.
+    - Uygulama **Dosyaları** klasörü.
 
     - Kurulum programı.
 
     - En son sürümün dağıtım bildirimine işaret eden bir dağıtım bildirimi.
 
-      **Uygulama dosyaları** klasörü, yayımladığınız her sürüm için bir alt klasör içerir. Her bir sürüme özgü alt klasörde aşağıdaki dosyalar bulunur.
+      Uygulama **Dosyaları klasörü,** yayımlamış her sürüm için bir alt klasör içerir. Her bir sürüme özgü alt klasörde aşağıdaki dosyalar bulunur.
 
     - Uygulama bildirimi.
 
@@ -126,38 +127,38 @@ ms.locfileid: "107828624"
 
     - Özelleştirme derlemeleri.
 
-      Aşağıdaki çizimde bir Outlook VSTO eklentisinin Yayımla klasörünün yapısı gösterilmektedir.
+      Aşağıdaki çizimde, Outlook VSTO Eklentisinde yayımla klasörünün yapısı gösterilmiştir.
 
-      ![Klasör yapısını Yayımla](../vsto/media/publishfolderstructure.png "Klasör yapısını Yayımla")
+      ![Klasör Yapısını Yayımlama](../vsto/media/publishfolderstructure.png "Klasör yapısını Yayımla")
 
     > [!NOTE]
-    > ClickOnce, güvenli olmayan bir uzantı nedeniyle Internet Information Services (IIS) güvenli yüklemesinin dosyaları engelmeyeceği şekilde derlemelere *. deploy* uzantısını ekler. Kullanıcı çözümü yüklediğinde ClickOnce *. deploy* uzantısını kaldırır.
+    > ClickOnce derlemelere *.deploy* uzantısını ekler, böylece güvenli Internet Information Services (IIS) güvenli olmayan bir uzantı nedeniyle dosyaları engellemez. Kullanıcı çözümü yükleyene ClickOnce *.deploy uzantısını* kaldırır.
 
 14. Çözüm dosyalarını, bu yordamda daha önce belirttiğiniz yükleme konumuna kopyalayın.
 
-## <a name="decide-how-you-want-to-grant-trust-to-the-solution"></a><a name="Trust"></a> Çözüme nasıl güven vermek istediğinize karar verin
- Bir çözümün kullanıcı bilgisayarları üzerinde çalışması için önce, sizin güven kazandırmanız ya da kullanıcıların çözümü yükledikleri sırada bir güvenlik istemine yanıt vermeleri gerekir. Çözüme güven kazandırmak için, bilinen ve güvenilir bir yayımcıyı tanımlayan bir sertifika kullanarak bildirimleri imzalayın. Bkz. [uygulama ve dağıtım bildirimlerini imzalayarak çözüme güvenin](../vsto/granting-trust-to-office-solutions.md#Signing).
+## <a name="decide-how-you-want-to-grant-trust-to-the-solution"></a><a name="Trust"></a> Çözüme nasıl güven vermek istediğinize karar verme
+ Bir çözümün kullanıcı bilgisayarları üzerinde çalışması için önce, sizin güven kazandırmanız ya da kullanıcıların çözümü yükledikleri sırada bir güvenlik istemine yanıt vermeleri gerekir. Çözüme güven kazandırmak için, bilinen ve güvenilir bir yayımcıyı tanımlayan bir sertifika kullanarak bildirimleri imzalayın. Bkz. [Uygulama ve dağıtım bildirimlerini imzalayarak çözüme güvenin.](../vsto/granting-trust-to-office-solutions.md#Signing)
 
- Belge düzeyinde bir özelleştirme dağıtıyorsanız ve belgeyi kullanıcının bilgisayarındaki bir klasöre koymak veya belgeyi bir SharePoint sitesinde kullanılabilir hale getirmek istiyorsanız, Office 'in belge konumuna güvendiğinden emin olun. Bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
+ Belge düzeyinde özelleştirme dağıtıyorsanız ve belgeyi kullanıcının bilgisayarına bir klasöre koymak veya belgeyi SharePoint sitesinde kullanılabilir hale Office emin olun. Bkz. [Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
 
-## <a name="help-users-install-the-solution"></a><a name="Helping"></a> Kullanıcıların çözümü yüklemesine yardımcı olma
- Kullanıcılar, Kurulum programını çalıştırarak, dağıtım bildirimini açarak veya belge düzeyinde özelleştirme sırasında belgeyi doğrudan açarak çözümü yükleyebilir. En iyi uygulama olarak, kullanıcılar çözümünüzü kurulum programını kullanarak yüklemelidir. Diğer iki yaklaşım, önkoşul yazılımının yüklü olduğundan emin değildir. Kullanıcılar belgeyi yükleme konumundan açmak isterse, Office uygulamasının Güven Merkezi'nde bu konumu güvenilir konumlar listesine eklemeleri gerekir.
+## <a name="help-users-install-the-solution"></a><a name="Helping"></a> Kullanıcıların çözümü yüklemesi için yardım
+ Kullanıcılar kurulum programını çalıştırarak, dağıtım bildirimini açarak veya belge düzeyinde özelleştirme sırasında belgeyi doğrudan açarak çözümü yükleyebilir. En iyi uygulama olarak, kullanıcılar çözümünüzü kurulum programını kullanarak yüklemelidir. Diğer iki yaklaşım, önkoşul yazılımının yüklü olduğundan emin değildir. Kullanıcılar belgeyi yükleme konumundan açmak isterse, Office uygulamasının Güven Merkezi'nde bu konumu güvenilir konumlar listesine eklemeleri gerekir.
 
 ### <a name="opening-the-document-of-a-document-level-customization"></a>Belge düzeyinde bir özelleştirmenin belgesini açma
  Kullanıcılar, belge düzeyinde bir özelleştirmenin belgesini doğrudan yükleme konumundan açabilirler veya belgeyi kendi yerel bilgisayarlarına kopyalayıp sonra bu kopyayı açabilirler.
 
- En iyi uygulama olarak, kullanıcılar belgenin bir kopyasını kendi bilgisayarlarında açmalıdır; böylece birden fazla kullanıcı aynı anda aynı kopyayı açmaya çalışmaz. Bu uygulamayı zorunlu tutmak için, kurulum programınızı, belgeyi kullanıcı bilgisayarlarına kopyalayacak şekilde yapılandırabilirsiniz. Bkz. [bir çözümün belgesini son kullanıcının bilgisayarına koyma (yalnızca belge düzeyinde özelleştirmeler)](#Put).
+ En iyi uygulama olarak, kullanıcılar belgenin bir kopyasını kendi bilgisayarlarında açmalıdır; böylece birden fazla kullanıcı aynı anda aynı kopyayı açmaya çalışmaz. Bu uygulamayı zorunlu tutmak için, kurulum programınızı, belgeyi kullanıcı bilgisayarlarına kopyalayacak şekilde yapılandırabilirsiniz. Bkz. [Çözümün belgesini son kullanıcının bilgisayarına koyma (yalnızca belge düzeyinde özelleştirmeler)](#Put).
 
-### <a name="install-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>Bir IIS Web sitesinden dağıtım bildirimini açarak çözümü yükler
- Kullanıcılar, web'ten dağıtım bildirimini açmak suretiyle bir Office çözümünü yükleyebilirler. Ancak, Internet Information Services (IIS) güvenli bir yüklemesi *. VSTO* uzantısına sahip dosyaları engeller. Bir Office çözümünü IIS kullanarak dağıtabilmeniz için önce MIME türü IIS'de tanımlanmalıdır.
+### <a name="install-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>Iis web sitesinden dağıtım bildirimini açarak çözümü yükleyin
+ Kullanıcılar, web'ten dağıtım bildirimini açmak suretiyle bir Office çözümünü yükleyebilirler. Ancak, *.vsto* uzantısına Internet Information Services (IIS) güvenli bir yüklemesi dosyaları engelleyebilir. Bir Office çözümünü IIS kullanarak dağıtabilmeniz için önce MIME türü IIS'de tanımlanmalıdır.
 
 ##### <a name="to-add-the-vsto-mime-type-to-iis-60"></a>IIS 6.0'a .vsto MIME türünü eklemek için
 
-1. IIS 6,0 çalıştıran sunucuda, **Başlat**  >  **tüm programlar**  >  **Yönetim Araçları**  >   **Internet Information Services (IIS) Yöneticisi**' ni seçin.
+1. IIS 6.0 çalıştıran sunucuda Tüm Programları Başlat YönetimSelsel Araçlar  >    >    >   **(IIS) Yöneticisi Internet Information Services 'yi seçin.**
 
-2. Bilgisayar adını, **Web siteleri** klasörünü veya yapılandırmakta olduğunuz Web sitesini seçin.
+2. Bilgisayar adını, **Web Siteleri** klasörünü veya yapılandırmakta olduğunu web sitesini seçin.
 
-3. Menü çubuğunda **eylem**  >  **özellikleri**' ni seçin.
+3. Menü çubuğunda Eylem **Özellikleri'ne**  >  **tıklayın.**
 
 4. **Http üstbilgileri** sekmesinde **MIME türleri** düğmesini seçin.
 
@@ -196,9 +197,9 @@ ms.locfileid: "107828624"
 
 ### <a name="create-a-class-that-defines-the-post-deployment-action"></a>Dağıtım sonrası eylemi tanımlayan bir sınıf oluşturma
 
-1. Menü çubuğunda **Dosya**  >  **Ekle**  >  **Yeni proje**' yi seçin.
+1. menü çubuğunda **dosya**  >  **ekle**  >  **yeni Project**' yi seçin.
 
-2. **Yeni Proje Ekle** iletişim kutusunda, **yüklü şablonlar** bölmesinde **Windows** klasörünü seçin.
+2. **yeni Project ekle** iletişim kutusunda, **yüklü şablonlar** bölmesinde **Windows** klasörünü seçin.
 
 3. **Şablonlar** bölmesinde, **sınıf kitaplığı** şablonunu seçin.
 
@@ -206,7 +207,7 @@ ms.locfileid: "107828624"
 
 5. **Çözüm Gezgini**, **FileCopyPDA** projesini seçin.
 
-6. Menü çubuğunda **Proje**  >  **Başvuru Ekle**' yi seçin.
+6. menü çubuğunda **Project**  >  **başvuru ekle**' yi seçin.
 
 7. **.Net** sekmesinde, ve başvurularını ekleyin `Microsoft.VisualStudio.Tools.Applications.Runtime` `Microsoft.VisualStudio.Tools.Applications.ServerDocument` .
 
@@ -233,13 +234,13 @@ ms.locfileid: "107828624"
 
 5. **Çözüm Gezgini**, **ExcelWorkbook** projesini seçin.
 
-6. Menü çubuğunda **Proje**  >  **Yeni klasör**' ü seçin.
+6. menü çubuğunda   >  **yeni klasör** Project ' yi seçin.
 
 7. **Veri** girin ve **ENTER** tuşunu seçin.
 
 8. **Çözüm Gezgini**, **veri** klasörünü seçin.
 
-9. Menü çubuğunda **Proje**  >  **ekleme varolan öğe**' yi seçin.
+9. menü çubuğunda **Project**  >  **varolan öğe ekle**' yi seçin.
 
 10. **Varolan öğe Ekle** iletişim kutusunda, **ExcelWorkbook** projesinin çıkış dizinine gidin, **ExcelWorkbook.xlsx** dosyasını seçin ve sonra **Ekle** düğmesini seçin.
 
@@ -249,7 +250,7 @@ ms.locfileid: "107828624"
 
      Bu adımları tamamladığınızda, projeniz aşağıdaki çizime benzeyecektir.
 
-     ![Dağıtım sonrası eyleminin proje yapısı.](../vsto/media/vsto-postdeployment.png "Dağıtım sonrası eyleminin proje yapısı.")
+     ![dağıtım sonrası eyleminin Project yapısı.](../vsto/media/vsto-postdeployment.png "dağıtım sonrası eyleminin Project yapısı.")
 
 13. **ExcelWorkbook** projesini yayımlayın.
 
@@ -282,9 +283,9 @@ ms.locfileid: "107828624"
 
 ### <a name="re-sign-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini yeniden imzalama
 
-1. **%Userprofile%\sk\studio 2013 \ projeleriexcelworkbook\excelworkbook** klasöründe **ExcelWorkbook_TemporaryKey. pfx** sertifika dosyasını kopyalayın ve *publishfolder* **\Application files\excelworkbook** \_ _mostrecentpublishedversion_ klasörüne yapıştırın.
+1. **%userprofile%\documents\ Visual Studio 2013 \ \ excel \ kullanıcılar \ ExcelWorkbook** klasöründe, **ExcelWorkbook_TemporaryKey. pfx** sertifika dosyasını kopyalayın ve *publishfolder* **\application files\excelworkbook** \_ _mostrecentpublishedversion_ klasörüne yapıştırın.
 
-2. Visual Studio komut istemi ' ni açın ve ardından dizinleri **c:\publish\Application files\excelworkbook** \_ _mostrecentpublishedversion_ klasörüne (örneğin, **c:\publish\Application Files \ ExcelWorkbook_1_0_0_4**) değiştirin.
+2. Visual Studio komut istemi ' ni açın ve ardından dizinleri **c:\publish\application files\excelworkbook** \_ _mostrecentpublishedversion_ klasörüne (örneğin, **c:\publish\application files \ ExcelWorkbook_1_0_0_4**) değiştirin.
 
 3. Aşağıdaki komutu çalıştırarak değiştirilmiş uygulama bildirimini imzalayın:
 
@@ -308,7 +309,7 @@ ms.locfileid: "107828624"
 
 5. *ExcelWorkbook. VSTO* dosyasını **c:\publish\Application files\excelworkbook** \_ _mostrecentversionnumber_ dizinine kopyalayın.
 
-## <a name="put-the-document-of-a-solution-onto-a-server-thats-running-sharepoint-document-level-customizations-only"></a><a name="SharePoint"></a> Bir çözümün belgesini SharePoint çalıştıran bir sunucuya koyma (yalnızca belge düzeyinde özelleştirmeler)
+## <a name="put-the-document-of-a-solution-onto-a-server-thats-running-sharepoint-document-level-customizations-only"></a><a name="SharePoint"></a>bir çözümün belgesini SharePoint çalıştıran bir sunucuya koyma (yalnızca belge düzeyinde özelleştirmeler)
  Belge düzeyinde özelleştirmenizi SharePoint kullanarak son kullanıcılara yayımlayabilirsiniz. Kullanıcılar SharePoint sitesine gidip belgeyi açtığında, çalışma zamanı çözümü paylaşılan ağ klasöründen kullanıcının yerel bilgisayarına otomatik olarak yükler. Çözüm yerel olarak yüklendikten sonra, belge başka bir yere (örneğin, masaüstüne) kopyalansa bile özelleştirme işlevini yerine getirmeye devam eder.
 
 #### <a name="to-put-the-document-on-a-server-thats-running-sharepoint"></a>Belgeyi SharePoint çalıştıran bir sunucuya koymak için
@@ -319,17 +320,17 @@ ms.locfileid: "107828624"
 
     - SharePoint çalıştıran sunucuyu, tüm bilgisayarlarda Word veya Excel'deki Güven Merkezi'ne eklemek için Office Yapılandırma Aracı'nı kullanın.
 
-         Bkz. [Office 2010 'de güvenlik ilkeleri ve ayarları](/previous-versions/office/office-2010/cc178946(v=office.14)).
+         bkz. [Office 2010 güvenlik ilkeleri ve ayarları](/previous-versions/office/office-2010/cc178946(v=office.14)).
 
     - Her kullanıcının aşağıdaki adımları uygulamasını sağlayın.
 
-        1. Yerel bilgisayarda Word veya Excel ' i açın, **Dosya** sekmesini seçin ve ardından **Seçenekler** düğmesini seçin.
+        1. yerel bilgisayarda, Word 'ü veya Excel açın, **dosya** sekmesini seçin ve ardından **seçenekler** düğmesini seçin.
 
         2. **Güven Merkezi** Iletişim kutusunda **güvenilir konumlar** düğmesini seçin.
 
         3. **Ağımdaki Güvenilen konumlara Izin ver (önerilmez)** onay kutusunu seçin ve ardından **Yeni Konum Ekle** düğmesini seçin.
 
-        4. **Yol** kutusuna, karşıya yüklediğiniz belgeyi içeren SharePoint belge kitaplığının URL 'sini girin (örneğin, *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName* ).
+        4. **yol** kutusuna, karşıya yüklediğiniz belgeyi içeren SharePoint belge kitaplığının URL 'sini girin (örneğin, *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName* ).
 
              Default *. aspx* veya *AllItems. aspx* gibi varsayılan Web sayfasının adını eklemeyin.
 
@@ -338,9 +339,9 @@ ms.locfileid: "107828624"
              Kullanıcılar belgeyi SharePoint sitesinden açtığında, belge açılır ve özelleştirme yüklenir. Kullanıcılar belgeyi kendi masaüstlerine kopyalayabilir. Belgedeki özellikler belgenin ağ konumuna işaret ettiğinden, özelleştirme çalışmaya devam edecektir.
 
 ## <a name="create-a-custom-installer"></a><a name="Custom"></a> Özel bir yükleyici oluşturma
- Çözümü yayımladığınızda sizin için oluşturulan Kurulum programını kullanmak yerine Office çözümünüz için özel bir yükleyici oluşturabilirsiniz. Örneğin, yüklemeyi başlatmak için bir oturum açma komut dosyası kullanabilir veya bir toplu iş dosyası kullanarak çözümü Kullanıcı etkileşimi olmadan yükleyebilirsiniz. Bu senaryolar en çok, önkoşullar son kullanıcı bilgisayarlarında zaten yüklü olduğunda işe yarar.
+ çözümü yayımladığınızda sizin için oluşturulan kurulum programını kullanmak yerine Office çözümünüz için özel bir yükleyici oluşturabilirsiniz. Örneğin, yüklemeyi başlatmak için bir oturum açma komut dosyası kullanabilir veya bir toplu iş dosyası kullanarak çözümü Kullanıcı etkileşimi olmadan yükleyebilirsiniz. Bu senaryolar en çok, önkoşullar son kullanıcı bilgisayarlarında zaten yüklü olduğunda işe yarar.
 
- Özel yükleme işleminizin bir parçası olarak, varsayılan olarak aşağıdaki konuma yüklenen Office çözümleri (*VSTOInstaller.exe*) için yükleyici aracını çağırın:
+ özel yükleme işleminizin bir parçası olarak, varsayılan olarak aşağıdaki konumda yüklü olan Office çözümleri (*VSTOInstaller.exe*) için yükleyici aracını çağırın:
 
  *%CommonProgramFiles%\Microsoft shared\VSTO\10.0\VSTOInstaller.exe*
 
@@ -363,16 +364,16 @@ ms.locfileid: "107828624"
 |-100|Bir veya daha fazla komut satırı seçeneği geçerli değil veya birden çok kez ayarlanmış. Daha fazla bilgi için "vstoinstaller/?" girin veya bkz. [bir ClickOnce Office çözümü için özel yükleyici oluşturma](/previous-versions/bb772078(v=vs.110)).|
 |-101|Bir veya daha fazla komut satırı seçeneği geçerli değil. Daha fazla bilgi için "vstoinstaller /?" girin.|
 |-200|Dağıtım bildirimi URI 'SI geçerli değil. Daha fazla bilgi için "vstoinstaller /?" girin.|
-|-201|Dağıtım bildirimi geçerli olmadığından çözüm yüklenemedi. Bkz. [Office çözümleri Için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md).|
-|-202|Uygulama bildiriminin Office Visual Studio Araçları bölümü geçerli olmadığından çözüm yüklenemedi. Bkz. [Office çözümleri Için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).|
+|-201|Dağıtım bildirimi geçerli olmadığından çözüm yüklenemedi. [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)' ne bakın.|
+|-202|uygulama bildiriminin Office için Visual Studio Araçları bölümü geçerli olmadığından çözüm yüklenemedi. [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)bölümüne bakın.|
 |-203|Yükleme hatası oluştuğundan çözüm yüklenemedi. Dağıtım bildiriminin URI'sini veya ağ dosya konumunu denetleyin ve sonra yeniden deneyin.|
-|-300|Güvenlik özel durumu oluştuğundan çözüm yüklenemedi. Bkz. [güvenli Office çözümleri](../vsto/securing-office-solutions.md).|
+|-300|Güvenlik özel durumu oluştuğundan çözüm yüklenemedi. bkz. [Secure Office solutions](../vsto/securing-office-solutions.md).|
 |-400|Çözüm yüklenemedi.|
 |-401|Çözüm kaldırılamadı.|
 |-500|Çözüm yüklenemediğinden ya da kaldırılamadığından veya dağıtım bildirimi indirilemediğinden işlem iptal edildi.|
 
 ## <a name="publish-an-update"></a><a name="Update"></a> Güncelleştirme yayımlama
- Bir çözümü güncelleştirmek için, **projeyi Proje Tasarımcısı** veya **Yayımla Sihirbazı**' nı kullanarak yeniden yayımlayın ve sonra güncelleştirilmiş çözümü yükleme konumuna kopyalayın. Dosyaları yükleme konumuna kopyalarken, önceki dosyaların üzerine yazdığınızdan emin olun.
+ bir çözümü güncelleştirmek için **Project tasarımcısı** veya **yayımla sihirbazı**' nı kullanarak yeniden yayımlayın ve sonra güncelleştirilmiş çözümü yükleme konumuna kopyalayın. Dosyaları yükleme konumuna kopyalarken, önceki dosyaların üzerine yazdığınızdan emin olun.
 
  Çözümün bir güncelleştirmeyi bir sonraki sefer denetlemesi, yeni sürümü otomatik olarak bulup yükler.
 
@@ -414,11 +415,11 @@ ms.locfileid: "107828624"
 
 1. **Dosya** sekmesinde, aşağıdaki çizimin gösterdiği **bilgi**' yi seçin.
 
-     ![Excel 'de bilgi sekmesi](../vsto/media/vsto-infotab.png "Excel 'de bilgi sekmesi")
+     ![Excel bilgi sekmesi](../vsto/media/vsto-infotab.png "Excel bilgi sekmesi")
 
 2. **Özellikler** listesinde, aşağıdaki çizimin gösterdiği **Gelişmiş Özellikler**' i seçin.
 
-     ![Excel 'de gelişmiş özellikler.](../vsto/media/vsto-advanceddocumentproperties.png "Excel 'de gelişmiş özellikler.")
+     ![Excel gelişmiş özellikler.](../vsto/media/vsto-advanceddocumentproperties.png "Excel.")
 
 3. **Özellikler** listesindeki **özel** sekmesinde, aşağıdaki çizimde gösterildiği gibi _AssemblyLocation ' yi seçin.
 
@@ -451,18 +452,18 @@ ms.locfileid: "107828624"
 
      Aşağıdaki resimde, bu örnekteki publish (yayımlama) klasörü yapısı gösterilmektedir.
 
-     ![Klasör yapısını Yayımla](../vsto/media/publishfolderstructure.png "Klasör yapısını Yayımla")
+     ![Klasör yapısını Yayımla](../vsto/media/publishfolderstructure.png "Klasör Yapısını Yayımlama")
 
      Kullanıcının uygulamayı ya da özelleştirilmiş belgeyi bir sonraki açışında, dağıtım bildirimindeki değişiklik algılanır. Office çözümünün önceki sürümü ClickOnce önbelleğinden çalışır.
 
 > [!NOTE]
-> Yerel veriler çözümün sadece bir önceki sürümü için kaydedilir. İki sürümü geri alırsanız yerel veriler korunmaz. Yerel veriler hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarında yerel ve uzak verilere erişme](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md).
+> Yerel veriler çözümün sadece bir önceki sürümü için kaydedilir. İki sürümü geri alırsanız yerel veriler korunmaz. yerel veriler hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarında yerel ve uzak verilere erişme](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
-- [Office çözümlerini yayımlama](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110))
-- [Nasıl yapılır: ClickOnce Office çözümü yüklemesi](/previous-versions/bb608592(v=vs.110))
-- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](/previous-versions/bb608595(v=vs.110))
-- [ClickOnce Office çözümü için özel bir yükleyici oluşturma](/previous-versions/bb772078(v=vs.110))
+- [Office çözümleri yayımlama](../vsto/deploying-an-office-solution-by-using-clickonce.md)
+- [nasıl yapılır: ClickOnce kullanarak Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110))
+- [nasıl yapılır: ClickOnce Office çözümü yüklemesi](/previous-versions/bb608592(v=vs.110))
+- [nasıl yapılır: ClickOnce kullanarak bir SharePoint sunucusuna belge düzeyinde Office çözümü yayımlama](/previous-versions/bb608595(v=vs.110))
+- [ClickOnce office çözümü için özel bir yükleyici oluşturma](/previous-versions/bb772078(v=vs.110))

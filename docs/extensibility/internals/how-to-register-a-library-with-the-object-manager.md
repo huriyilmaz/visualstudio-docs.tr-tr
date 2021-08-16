@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: bir kitaplığı nesne yöneticisiyle kaydetme | Microsoft Docs'
-description: Sınıf Görünümü ve Nesne Tarayıcısı gibi gözatma araçlarındaki sembolleri görüntüleyebilmeniz için Visual Studio nesne Yöneticisi ile bir kitaplığı nasıl kaydedeceğinizi öğrenin.
+description: Sınıf Görünümü ve Nesne Tarayıcısı gibi gözatma araçlarındaki sembolleri görüntüleyebilmeniz için Visual Studio nesne yöneticisiyle bir kitaplığı kaydetmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,14 +14,15 @@ ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b83b68af4c026c40aca7969068ad015a61d64321
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7d902db579048e3ea30866aefa5b1cc132e964b7eee8153a5e102eee3b762b68
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086072"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121305678"
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>Nasıl yapılır: bir kitaplığı nesne yöneticisiyle kaydetme
 **Sınıf görünümü**, **nesne tarayıcısı** **çağrı tarayıcısı** ve **sembol sonuçları bulma** gibi semboller-tarama araçları, projenizdeki veya dış bileşenlerdeki sembolleri görüntülemenizi sağlar. Semboller, ad alanları, sınıflar, arabirimler, Yöntemler ve diğer dil öğelerini içerir. Kitaplıklar bu sembolleri izler ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] araçları verilerle dolduran nesne Yöneticisi 'nde kullanıma sunar.

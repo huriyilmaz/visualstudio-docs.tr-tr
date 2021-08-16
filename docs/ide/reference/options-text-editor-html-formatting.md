@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, metin düzenleyici, HTML (Web Forms), biçimlendirme
-description: HTML bölümündeki biçimlendirme sayfasını kullanarak kod düzenleyicisinde biçimlendirme kodu için HTML projesi seçeneklerini ayarlama hakkında bilgi edinin.
+title: Seçenekler, Metin Düzenleyici, HTML (Web Forms), Biçimlendirme
+description: Kod Düzenleyicisi'nde kodu biçimlendirmek üzere HTML projesi seçeneklerini ayarlamak için HTML bölümündeki Biçimlendirme sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
@@ -12,94 +12,94 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fd8d7e6bd81e32858f990c70bbcdf0bf00049867
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22e4d986204645e136709efad87e27b5b97289ec0d6042d8bc03cbfbcd9fb9ee
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943841"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121271920"
 ---
-# <a name="options-text-editor-html-web-forms-formatting"></a>Seçenekler, metin düzenleyici, HTML (Web Forms), biçimlendirme
+# <a name="options-text-editor-html-web-forms-formatting"></a>Seçenekler, Metin Düzenleyici, HTML (Web Forms), Biçimlendirme
 
-Kod düzenleyicisinde biçimlendirme kodu için HTML projesi seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin ve ardından **metin düzenleyici**  >  **HTML (Web Forms)**  >  **biçimlendirmesini** genişletin.
+Kod **Düzenleyicisi'nde** kodu biçimlendirmek üzere HTML projesi seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını kullanın. Bu sayfaya erişmek için menü çubuğunda Araçlar Seçenekleri'ni seçin ve ardından Metin  >  Düzenleyicisi   >  **HTML (Web Forms) Biçimlendirme'yi**  >  **genişletin.**
 
-## <a name="capitalization"></a>Büyük harfe çevirme
+## <a name="capitalization"></a>Büyük harf
 
-Bu seçenekler belirlendiğinde, kaynak görünümü ve XML düzenleyicileri öğeler ilk oluşturulduğunda ve otomatik biçimlendirme sırasında öğe ve özniteliklerin adlarına varsayılan bir durum biçimi uygular. **Otomatik biçimlendirme ayarlarını uygula** ayarı otomatik yeniden biçimlendirme işleminin gerçekleştiği saati belirlenir.
+Bu seçenekler seçildiğinde, Kaynak görünümü ve XML düzenleyicileri, öğeler ilk oluşturulduğunda ve otomatik biçimlendirme sırasında öğe ve özniteliklerin adlara varsayılan bir büyük/küçük harf biçimi uygulayabilir. Otomatik **Biçimlendirme Uygula** ayarları, otomatik yeniden biçimlendirmenin oluştuğu zamanı belirler.
 
 > [!WARNING]
-> XML büyük/küçük harfe duyarlıdır. Varsayılan bir durum ayarlama, XML ayrıştırıcılarını etkileyebilir.
+> XML büyük/büyük/büyük harfe duyarlıdır. Varsayılan durum ayarı XML ayrıştırıcılarını etkileyene kadar devam ediyor olabilir.
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-**Sunucu etiketi, sunucu öznitelikleri**
+**Sunucu etiketi, Sunucu öznitelikleri**
 
-Bu seçenekler, Web sunucusu denetimleri için biçimlendirmenin nasıl büyük harfli olduğunu belirtir.
-
-|Seçenek|Sonuç|
-|---------------------------------|------------------------------|
-|**Girildiği gibi**|Öğe durumu tam olarak girdiğiniz gibidir.|
-|**Büyük harfe**|Öğe adları büyük harfle yeniden biçimlendirilir.|
-|**Küçük harf**|Öğe adları küçük harfe biçimlendirilir.|
-|**Derleme tanımı**|Öğe durumu, öğenin karşılık gelen tür sınıfında nasıl tanımlandığınıza göre belirlenir.|
-
-**İstemci etiketi, Istemci öznitelikleri**
-
-Bu seçenekler, otomatik biçimlendirmenin HTML özniteliklerinin ve özelliklerinin adlarını büyük veya küçük harfe ve bu adların girildiği gibi tutup değiştirmediğini belirtir.
+Bu seçenekler, Web sunucusu denetimleri için işaretlemenin büyük harfle nasıl büyük harfe nasıl hazır olduğunu belirtir.
 
 |Seçenek|Sonuç|
 |---------------------------------|------------------------------|
-|**Girildiği gibi**|Öznitelik durumu tam olarak girdiğiniz gibidir.|
-|**Büyük harfe**|Öznitelik adları büyük harfle yeniden biçimlendirilir.|
-|**Küçük harf**|Öznitelik adları küçük harfe biçimlendirilir.|
+|**Girildi olarak**|Öğe durumu, tam olarak sizin girdiklerin durumudur.|
+|**Büyük harfe**|Öğe adları büyük harfe yeniden biçimlendirildi.|
+|**Küçük harf**|Öğe adları küçük harfe yeniden biçimlendirildi.|
+|**Derleme tanımı**|Öğe durumu, öğenin karşılık gelen tür sınıfında nasıl tanımlandığına göre belirlenir.|
+
+**İstemci etiketi, İstemci öznitelikleri**
+
+Bu seçenekler, otomatik biçimlendirmenin HTML özniteliklerinin ve özelliklerinin adlarını büyük harf veya küçük harf olarak değiştirip değiştirmeyeceklerini veya girildik şekilde tutarlarını belirtir.
+
+|Seçenek|Sonuç|
+|---------------------------------|------------------------------|
+|**Girildi olarak**|Öznitelik durumu, tam olarak sizin girdiklerin durumuna göredir.|
+|**Büyük harfe**|Öznitelik adları büyük harfe yeniden biçimlendirildi.|
+|**Küçük harf**|Öznitelik adları küçük harfe yeniden biçimlendirildi.|
 
 ## <a name="automatic-formatting-options"></a>Otomatik biçimlendirme seçenekleri
 
-Bu seçenekler, otomatik biçimlendirme sırasında kaynak görünümü düzenleyicisinin fiziksel satır sonlarını eklemesine veya kaldırmasına neden olur. Ayrıca, düzenleyicinin özniteliklerin etrafına tırnak ekleyip eklememeyeceğini de belirtebilirsiniz.
+Bu seçenekler, Kaynak görünümü düzenleyicisinin otomatik biçimlendirme sırasında fiziksel satır sonlarını eklemesini veya kaldırmalarını sağlar. Ayrıca düzenleyicinin özniteliklerin etrafında tırnak içine alınıp alınmayacaklarını da belirtabilirsiniz.
 
 > [!NOTE]
-> Bu ayarlar, XML biçimlendirmesi içinde boşluk değiştirmez.
+> Bu ayarlar XML işaretlemesinde boşluk değiştirmez.
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-- **Yazarken öznitelik değer tırnakları Ekle**
+- **Yazarken öznitelik değeri tırnak içine alın**
 
-   Bu seçenek belirlendiğinde, düzenleyici, yazarken otomatik olarak özniteliklerin etrafında tırnak işaretleri koyar (örneğin: ID = "Select1"). İşaretinizdeki tırnak işaretlerini el ile eklemeyi tercih ediyorsanız bu seçeneği temizleyin.
-
-   > [!NOTE]
-   > Bu seçeneğin seçili olup olmadığı, işaretinizdeki tüm mevcut tırnak işaretleri korunur; tırnak işaretleri hiçbir şekilde kaldırılmaz.
-
-- **Biçimlendirme sırasında öznitelik değer tırnakları Ekle**
-
-   Bu seçenek belirlendiğinde, otomatik biçimlendirme öznitelik değerlerinin etrafında tırnak işaretleri ekler (örneğin: ID = "Select1").
+   Bu seçenek seçildiğinde, siz yazarken düzenleyici otomatik olarak özniteliklerin etrafına tırnak işaretleri koyar (örneğin: ID="Select1"). İşaretlemenize el ile tırnak işareti eklemek isterseniz bu seçeneği silin.
 
    > [!NOTE]
-   > Bu seçeneğin seçili olup olmadığı, işaretinizdeki tüm mevcut tırnak işaretleri korunur.
+   > Bu seçeneğin seçili olup olmadığı, işaretlemenizin tüm mevcut tırnak işaretleri korunur; tırnak işaretleri hiçbir zaman kaldırılamaz.
 
-- **Kapanış etiketini otomatik ekle**
+- **Biçimlendirmede öznitelik değeri tırnak içine alın**
 
-   Bu seçenek belirlendiğinde, açma etiketini kapattığınızda düzenleyici otomatik olarak bir kapatma etiketi (örneğin, **\</b>** ) oluşturur.
+   Bu seçenek seçildiğinde, otomatik biçimlendirme öznitelik değerlerinin etrafına tırnak işaretleri ekler (örneğin: ID="Select1").
+
+   > [!NOTE]
+   > Bu seçeneğin seçili olup olmadığı, işaretlemenizin tüm mevcut tırnak işaretleri korunur.
+
+- **Otomatik ekleme kapatma etiketi**
+
+   Bu seçenek seçildiğinde, siz açılış etiketini kapatarak düzenleyici otomatik olarak bir **\</b>** kapanış etiketi (örneğin, ) oluşturur.
 
 ## <a name="tag-wrapping"></a>Etiket sarmalama
 
-Bu seçenekler, belirli bir uzunluktan daha fazla gittiklerinde düzenleyicinin etiketleri çizgilere böler.
+Bu seçenekler, belirli bir uzunluktan fazla olursa düzenleyicinin etiketleri satırlara dönüştürip kesmeyeceklerini belirler.
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-- **Belirtilen uzunluk aşıldığında etiketleri sarın**
+- **Belirtilen uzunluğu aşarken etiketleri sarmalama**
 
-   Seçildiğinde, etiket, **uzunluk** metin kutusunda belirttiğiniz uzunlukla daha fazla olursa düzenleyici çizgiler arasındaki etiketleri keser. Bu eylem, yeni bir etiket yazarken değil, yalnızca etiketi biçimlendirirken oluşur.
+   Bu seçildiğinde, etiket Uzunluk metin kutusunda belirttiğiniz uzunluktan fazla olursa düzenleyici etiketleri **satırlar arasında** kırar. Bu eylem yalnızca etiketi biçimlendirken gerçekleşir, yeni bir etiket yazarken değil.
 
    > [!NOTE]
-   > Belirttiğiniz değer en düşük değer olarak kullanılır. Düzenleyici bağımsız öznitelikleri parçalara ayırmaz.
+   > Belirttiğiniz değer, minimum değer olarak kullanılır. Düzenleyici tek tek öznitelikleri kesmez.
 
 - **Uzunluk**
 
-   Sarmalamadan önce bir satırda görüntülenecek karakter sayısını belirtir. Bu giriş kutusu, **belirtilen uzunluk aşıldığında etiketleri Sarla** onay kutusu işaretli değilse devre dışıdır.
+   Sarmalamadan önce bir satırda görüntülemek istediğiniz karakter sayısını belirtir. Belirtilen uzunluk aşılırken etiketleri **sarmala kutusu işaretli değilse bu giriş** kutusu devre dışı bırakılır.
 
-- **Etikete özgü seçenekler**
+- **Etikete Özgü Seçenekler**
 
-   Tek tek Etiketler veya etiket grupları için biçimlendirme seçeneklerini ayarlamanıza olanak sağlayan **etikete özgü seçenekler** iletişim kutusunu görüntüler.
+   Tek tek **etiketler veya** etiket grupları için biçimlendirme seçeneklerini ayarlamaya olanak sağlayan Etikete Özgü Seçenekler iletişim kutusunu görüntüler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

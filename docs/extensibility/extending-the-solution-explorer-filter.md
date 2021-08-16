@@ -1,6 +1,6 @@
 ---
 title: Çözüm Gezgini filtresini genişletme | Microsoft Docs
-description: Visual Studio SDK 'da farklı dosyaları göstermek veya gizlemek için Çözüm Gezgini filtre işlevini genişletmeyi öğrenin.
+description: Visual Studio SDK 'sında farklı dosyaları göstermek veya gizlemek için Çözüm Gezgini filtre işlevini genişletmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,20 +11,21 @@ ms.assetid: df976c76-27ec-4f00-ab6d-a26a745dc6c7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1256b807d67f95aa8ca1e952a4dca7bd550e0fc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e0d9b7a3f3dcd1f3641d65a26e9919621cff15f7fcfff5f9968dc692769d2b53
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075022"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275976"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>Çözüm Gezgini filtresini uzat
 Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre işlevini genişletebilirsiniz. Örneğin, bu kılavuzda gösterdiği gibi yalnızca **Çözüm Gezgini** C# sınıf fabrikası dosyalarını gösteren bir filtre oluşturabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ### <a name="create-a-visual-studio-package-project"></a>Visual Studio paket projesi oluşturma
 
@@ -56,7 +57,7 @@ Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre i�
 
 4. **Kaynak** alanında, **Geçerli çözümde bir proje** seçin.
 
-5. **Proje** alanında, **FileFilter**' ı seçin ve ardından **Tamam** düğmesini seçin.
+5. **Project** alanında, **FileFilter**' ı seçin ve ardından **tamam** düğmesini seçin.
 
 ### <a name="add-the-filter-code"></a>Filtre kodunu ekleyin
 
@@ -188,9 +189,9 @@ Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre i�
 
 ### <a name="test-your-code"></a>Kodunuza test etme
 
-1. Projeyi derleyin ve çalıştırın. Visual Studio 'nun ikinci bir örneği görüntülenir. Bu, deneysel örnek olarak adlandırılır.
+1. Projeyi derleyin ve çalıştırın. ikinci bir Visual Studio örneği görüntülenir. Bu, deneysel örnek olarak adlandırılır.
 
-2. Visual Studio 'nun deneysel örneğinde bir C# projesi açın.
+2. Visual Studio deneysel örneğinde bir C# projesi açın.
 
 3. **Çözüm Gezgini** araç çubuğuna eklediğiniz düğmeyi arayın. Sol taraftaki dördüncü düğme olmalıdır.
 

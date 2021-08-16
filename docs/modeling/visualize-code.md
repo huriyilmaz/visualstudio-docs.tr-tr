@@ -11,18 +11,19 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 90c180bf9d910227013c2e089001ce5332cd1bd3
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 50ccc16c6367d6e177d523e0480479d447cfc940937593a2b04829d03d94f758
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388353"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443977"
 ---
 # <a name="visualize-code"></a>Kodu görselleştirme
 
-Mevcut kodu anlamanıza ve uygulamanızı açıklamanıza yardımcı Visual Studio görselleştirme ve modelleme araçlarını kullanabilirsiniz. Bu, değişikliklerinizin kodu nasıl etkileyeceğini görsel olarak öğrenmenize ve bu değişikliklerden elde edilen iş ve riskleri değerlendirmenize yardımcı olur. Örneğin:
+Mevcut kodu anlamanıza ve uygulamanızı açıklamanıza yardımcı Visual Studio görselleştirme ve modelleme araçlarını kullanabilirsiniz. Bu, değişikliklerinizin kodu nasıl etkileyeceğini görsel olarak öğrenmenize ve bu değişikliklerden elde edilen iş ve riskleri değerlendirmenize yardımcı olur. Örnek:
 
 - Kodundaki ilişkileri anlamak için bu ilişkileri görsel olarak eşler.
 
