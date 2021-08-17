@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d4c5ab78d8a7d125bf78b32317bfeba673d7ef99852d69aab5e99bd6a59ee96
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 19c07363ee9e9662700ca7488a9d9ff43597fbb0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121361125"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080305"
 ---
 # <a name="implement-an-expression-evaluator"></a>İfade değerlendiricisi uygulama
 > [!IMPORTANT]

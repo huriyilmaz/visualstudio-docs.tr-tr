@@ -1,5 +1,5 @@
 ---
-title: MacOS erişilebilirlik seçeneklerini kullanma
+title: macOS erişilebilirlik seçeneklerini kullanma
 description: MacOS erişilebilirlik seçeneklerini ve yüksek karşıtlık, klavye gezintisi ve VoiceOver gibi özellikleri kullanma
 author: heiligerdankgesang
 ms.author: dominicn
@@ -13,36 +13,36 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121350008"
 ---
-# <a name="accessibility-features-of-macos"></a>MacOS erişilebilirlik özellikleri
+# <a name="accessibility-features-of-macos"></a>macOS'un erişilebilirlik özellikleri
 
-macOS, kullanıcıların değişen yetenekler konusunda yardımcı olacak çok sayıda özelliği olan erişilebilir bir işletim sistemidir. Bu özellikler arasında yüksek karşıtlık modu, klavye gezintisi ve VoiceOver (macOS ekran okuyucusu) bulunur.
+macOS, çeşitli özelliklere sahip kullanıcılara yardımcı olacak çeşitli özelliklere sahip erişilebilir bir işletim sistemidir. Bu özellikler arasında yüksek karşıtlık modu, klavye gezintisi ve VoiceOver (macOS ekran okuyucusu) yer alır.
 
-## <a name="enable-accessibility-features"></a>Erişilebilirlik özelliklerini etkinleştir
+## <a name="enable-accessibility-features"></a>Erişilebilirlik özelliklerini etkinleştirme
 
-Mac için Visual Studio, yardımcı teknolojiler için destek varsayılan olarak kapalıdır. Erişilebilirlik desteğini etkinleştirmek için:
+Bu Mac için Visual Studio yardımcı teknolojiler için destek varsayılan olarak kapalıdır. Erişilebilirlik desteğini etkinleştirmek için:
 
-1. **Visual Studio (menü)**  >  **tercihleri**  >  ' ne gidin ve **erişilebilirlik**' i seçin.
+1. Visual Studio **(menü) Tercihler**  >    >  **Diğer'e gidin** ve Erişilebilirlik'i **seçin.**
 
-1. **Erişilebilirliği etkinleştir** onay kutusunu seçin.
+1. Erişilebilirliği **Etkinleştir onay** kutusunu seçin.
 
-   ![Erişilebilirliği etkinleştir seçiliyken erişilebilirlik tercihlerinin ekran görüntüsü](media/accessibility-preferences.png)
+   ![Erişilebilirliği Etkinleştir'in seçili olduğu Erişilebilirlik Tercihleri'nin ekran görüntüsü](media/accessibility-preferences.png)
 
-1. Apple 'ın yardımcı teknolojileri desteğini etkinleştirmek için **Visual Studio yeniden başlat** ' ı seçin.
+1. **Apple'Visual Studio** yardımcı teknolojileri için desteği etkinleştirmek için Yeniden Başlat'ı seçin.
 
-Alternatif olarak, erişilebilirlik özelliklerini etkinleştirmek için komut satırını da kullanabilirsiniz. Bunu yapmak için terminalde aşağıdaki komutu girin:
+Alternatif olarak, erişilebilirlik özelliklerini etkinleştirmek için komut satırı kullanabilirsiniz. Bunu yapmak için terminale aşağıdaki komutu girin:
 
 ```bash
 defaults write com.microsoft.visual-studio com.monodevelop.AccessibilityEnabled 1
 ```
 
-Bu ayarı komut satırı aracılığıyla değiştirdikten sonra Visual Studio yeniden başlatmanız gerekir.
+Bu ayarı komut satırı aracılığıyla değiştirdikten sonra, bu ayarı yeniden başlatmanız Visual Studio.
 
-## <a name="increase-the-contrast-in-macos"></a>MacOS 'taki karşıtlığı artırma
+## <a name="increase-the-contrast-in-macos"></a>macOS'ta karşıtlığı artırma
 
-Mac için Visual Studio macos 'ta artan karşıtlığı destekler, uı öğelerinin kontrastını artırır ve anahatlar daha fazla tanımlanmış hale getirir. Bunu etkinleştirmek için:
+Mac için Visual Studio macOS'ta daha fazla karşıtlığı destekler, kullanıcı arabirimi öğelerinin karşıtlıkını artırır ve ana hatları daha tanımlı hale gelir. Bunu etkinleştirmek için:
 
-1. **Sistem tercihlerini** açın.
+1. Sistem **Tercihleri'ne açın.**
 
-1. **Erişilebilirlik**' e gidin ve **görüntüle**' yi seçin.
+1. **Erişilebilirlik'e gidin** ve Görüntüle'yi **seçin.**
 
-1. **Karşıtlığı artır** onay kutusunu seçin.
+1. **Karşıtlığı artır onay** kutusunu seçin.

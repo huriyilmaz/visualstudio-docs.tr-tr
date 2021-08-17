@@ -1,6 +1,6 @@
 ---
-description: Compiland kaynak dosyasının dosya adını alın.
-title: IDiaSymbol::get_sourceFileName | Microsoft Docs
+description: Compiland kaynak dosyasının dosya adını alır.
+title: 'IDiaSymbol:: get_sourceFileName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bffb8e9a947bf39a393b485697dca73cfb939f76bdfc5ffa8850f5a70c900434
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 72be035d9a56a1ff7a837a9bff98ce358ba49773
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420553"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081128"
 ---
 # <a name="idiasymbolget_sourcefilename"></a>IDiaSymbol::get_sourceFileName
-Compiland kaynak dosyasının dosya adını alın.
+Compiland kaynak dosyasının dosya adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_sourceFileName (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Compiland kaynak dosyasının dosya adını döndürür.
+dışı Compiland kaynak dosyasının dosya adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

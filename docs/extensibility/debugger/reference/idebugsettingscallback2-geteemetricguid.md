@@ -1,6 +1,6 @@
 ---
-description: Bir ifade değerlendirici ölçüsünün adına verilen benzersiz tanımlayıcıyı alır.
-title: 'IDebugSettingsCallback2:: GetEEMetricGuid | Microsoft Docs'
+description: Bir ifade değerlendiricisi ölçüm için benzersiz tanımlayıcının adını verir.
+title: IDebugSettingsCallback2::GetEEMetricGuid | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,20 +9,21 @@ ms.assetid: 3d70c19a-595d-44f1-a7b3-a0cf8f15e371
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 45e858cf78e8b0acf7e50a95d73cd06523396bc1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 37f9c2cf2fd3e3f376cfd2905465aabd7966a00f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071382"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063791"
 ---
 # <a name="idebugsettingscallback2geteemetricguid"></a>IDebugSettingsCallback2::GetEEMetricGuid
-Bir ifade değerlendirici ölçüsünün adına verilen benzersiz tanımlayıcıyı alır.
+Bir ifade değerlendiricisi ölçüm için benzersiz tanımlayıcının adını verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +47,19 @@ HRESULT GetEEMetricGuid(
 
 ## <a name="parameters"></a>Parametreler
 `guidLang`\
-'ndaki Programlama dilinin benzersiz tanıtıcısı.
+[in] Programlama dilinin benzersiz tanımlayıcısı.
 
 `guidVendor`\
-'ndaki Satıcının benzersiz tanıtıcısı.
+[in] Satıcının benzersiz tanımlayıcısı.
 
 `pszMetric`\
-'ndaki Ölçümün adı.
+[in] Ölçümün adı.
 
 `pguidValue`\
-dışı Ölçümün benzersiz tanımlayıcısını döndürür.
+[out] Ölçümün benzersiz tanımlayıcısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

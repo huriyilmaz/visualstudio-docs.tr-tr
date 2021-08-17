@@ -1,6 +1,6 @@
 ---
-title: Hata Ayıklayıcı Hata Ayıklayıcısını Genişletme yol | Microsoft Docs
-description: Visual Studio ayıklama belgelerinde örnek, başvuru ve hata ayıklayıcıyı özelleştirmenin tipik yollarını gösteren çeşitli senaryolar yer almaktadır.
+title: Hata ayıklayıcıyı genişletmek için yol haritası | Microsoft Docs
+description: Visual Studio hata ayıklama belgelerinin örnekleri, bir başvuru ve hata ayıklayıcıyı özelleştirmenin tipik yollarını gösteren çeşitli senaryolar vardır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,23 +14,23 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ccb48584435debdca17fac31c436a898c70448ad114c7718b30443adc6eeeb0b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 00da6cede11993e0b498978bc9a18ec0e21781b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389026"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063648"
 ---
-# <a name="roadmap-for-extending-the-debugger"></a>Hata ayıklayıcısını genişletmek için yol haritası
-Bu belge, ile hata ayıklayıcısını genişletmek için kılavuz [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] ve başvuru bilgileri [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] sağlar.
+# <a name="roadmap-for-extending-the-debugger"></a>Hata ayıklayıcıyı genişletmek için yol haritası
+Bu belge [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] , hata ayıklayıcıyı ile genişletmek için kılavuz ve başvuru bilgileri sağlar [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama belgeleri örnekler, kapsamlı bir başvuru ve hata ayıklayıcıyı özelleştirmenin tipik yollarını gösteren çeşitli temsili senaryolar içerir.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama belgelerinin örnekleri, kapsamlı bir başvuru ve hata ayıklayıcıyı özelleştirmenin tipik yollarını gösteren çeşitli temsili senaryolar bulunur.
 
- Derleyiciniz ve çıkışı, üründe hata ayıklamayı ayarlamak için gerekenleri belirler. Derleyiciniz:
+ Derleyicinizi ve çıktısı, ürününüzün hata ayıklamayı ayarlamak için gerekenleri tespit ediyor. Derleyicinizi:
 
-- Yerel işletim Windows hedeflemektedir ve bir *yazar. PDB* dosyası, ile tümleştirilmiş yerel kod hata ayıklama altyapısı (DE) ile programlarda hata ayıklaması [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sabilirsiniz. DE veya ifade değerlendiricisi uygulama gerekli değil. İfade değerlendirici, C++ programlama dilinin söz dizimi için yazılır.
+- Windows yerel işletim sistemini hedefler ve a yazar *. PDB* dosyası, ile tümleştirilmiş yerel kod hata ayıklama altyapısı (de) ile programlarda hata ayıklaması yapabilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bir DE veya ifade değerlendirici uygulamanız gerekmez. İfade değerlendiricisi, C++ programlama dilinin sözdizimi için yazılmıştır.
 
-- Microsoft ara dili (MSIL) çıktısı üretir, programlarda hata ayıklamak için de tümleşik yönetilen kod hata ayıklama altyapısı DE [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanabilirsiniz. Bu nedenle, yalnızca bir ifade değerlendiricisi uygulama gerekir. Sizin için bir örnek ifade değerlendirici sağlanır. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
+- Microsoft ara dili (MSIL) çıkışı üretir, yönetilen kod hata ayıklama altyapısı ile, ayrıca ile tümleştirilmiş programlarda hata ayıklaması yapabilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu nedenle, yalnızca bir ifade değerlendirici uygulamanız gerekir. Sizin için örnek bir ifade değerlendirici sunulmaktadır. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
    [İfade değerlendirmesi](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md)
 
@@ -42,13 +42,13 @@ Bu belge, ile hata ayıklayıcısını genişletmek için kılavuz [!INCLUDE[vs_
 
    [Ortak dil çalışma zamanı ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
 
-- Özel bir işletim sistemini veya başka bir çalışma zamanı ortamını hedefler, kendi DE'nizi yazmanız gerekir. ATL COM kullanarak basit bir DE oluşturan bir öğretici sağlanır. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
+- Özel bir işletim sistemini veya diğer bir çalışma zamanı ortamını hedefler, kendi DE yazmanız gerekir. ATL COM kullanarak basit bir DE oluşturan bir öğretici sunulmaktadır. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
    [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 
    [Öğretici: ATL COM kullanarak hata ayıklama altyapısı oluşturma](/previous-versions/bb147024(v=vs.90))
 
-   [Bağlantı noktası sağlayıcı uygulama](../../extensibility/debugger/implementing-a-port-supplier.md)
+   [Bağlantı noktası sağlayıcısı uygulama](../../extensibility/debugger/implementing-a-port-supplier.md)
 
    [Örnekler](../../extensibility/debugger/visual-studio-debugging-samples.md)
 

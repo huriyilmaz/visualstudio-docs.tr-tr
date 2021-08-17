@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ba2d155ac5541a128290adb48841cf6ba23c9a4968c37d508f7e510f62b90f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d310b2f16b80f7b9058c53dc0766d38ead6f61ac
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420457"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081088"
 ---
 # <a name="idiasymbolget_unmodifiedtypeid"></a>IDiaSymbol::get_unmodifiedTypeId
 Özgün (değiştirilmemiş) türün kimliğini alın.

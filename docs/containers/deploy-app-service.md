@@ -91,7 +91,7 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama
 
    ![Yayımla sihirbazının ekran görüntüsü](media/deploy-app-service/publish-choices.png)
 
-1. Belirli **hedef sekmesinde,** kapsayıcı türünüze bağlı olarak **App Service (Windows)** veya **App Service (Linux)** gibi uygun dağıtım hedefini seçin.
+1. Belirli **hedef sekmesinde,** kapsayıcı türünüze bağlı olarak **App Service (Windows)** veya App Service **(Linux)** gibi uygun dağıtım hedefini seçin.
 
    ![Yayımla sihirbazının Belirli hedef sekmesinin ekran görüntüsü](media/deploy-app-service/publish-app-service-windows.png)
 

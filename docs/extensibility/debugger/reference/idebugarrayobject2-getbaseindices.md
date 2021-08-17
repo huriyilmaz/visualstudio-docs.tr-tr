@@ -10,17 +10,18 @@ ms.assetid: 882951a2-3da0-49bf-8d1e-7daedd13ffe6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3843b93bb9255c28b8ca083af37a3ba4ecbd7f7e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 584b0f39bd9f50b68f928cdfb2b93e6e9ea0af28
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067562"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079941"
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
 Dizideki boyutların sayısını verilen her bir dizin için temel dizinleri (alt sınır) alır.

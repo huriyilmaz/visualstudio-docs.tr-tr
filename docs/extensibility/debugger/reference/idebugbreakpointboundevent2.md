@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63aa58209d2d2b96575e9f8c092f696757dcd661d2062a7ba1e0f22e79428d6f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab7d7155deda4e7ab6144c3ee6b1c9d69b26a795
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292981"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079876"
 ---
 # <a name="idebugbreakpointboundevent2"></a>IDebugBreakpointBoundEvent2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'ne (SDM), bekleyen bir kesme noktasının yüklenmiş bir programa başarıyla bağlandığını söyler.

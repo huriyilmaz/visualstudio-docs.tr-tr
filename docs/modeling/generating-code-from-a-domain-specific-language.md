@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 57dc7ca55bcc0508cd3b78f5ea334b848322d17dd8e666ff051c25f6a7695ae3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b86507ac3e5aaadc0fc5f5c1b2bb9c1f380d9e5b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121288717"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047913"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>Etki Alanına Özgü Dilden Kod Oluşturma
 

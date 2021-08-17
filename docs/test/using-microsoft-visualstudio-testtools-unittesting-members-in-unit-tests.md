@@ -1,24 +1,25 @@
 ---
 title: Birim testlerinde MSTest kullanın
-description: Visual Studio 'da birim testini destekleyen MSTest Framework hakkında bilgi edinin. Birim testlerini kodlarınızda bu sınıfları ve üyeleri kullanın.
+description: Visual Studio içinde birim testini destekleyen MSTest Framework hakkında bilgi edinin. Birim testlerini kodlarınızda bu sınıfları ve üyeleri kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 03/02/2018
 ms.topic: reference
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 4eef06bb48730fba9ba1df145857d41323cbfdd7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d69660fddc4947e85a49616285d546a30d91bb1262a4c6ed4820d3516faaf7dc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946325"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352337"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>Birim testlerinde MSTest çerçevesini kullanma
 
-[MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) Framework, Visual Studio 'da birim testini destekler. <xref:Microsoft.VisualStudio.TestTools.UnitTesting>Birim testlerini kodlarunuzda, ad alanındaki sınıfları ve üyeleri kullanın. Ayrıca, koddan oluşturulmuş bir birim testini iyileştirirken de kullanabilirsiniz.
+[MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) Framework Visual Studio birim testini destekler. <xref:Microsoft.VisualStudio.TestTools.UnitTesting>Birim testlerini kodlarunuzda, ad alanındaki sınıfları ve üyeleri kullanın. Ayrıca, koddan oluşturulmuş bir birim testini iyileştirirken de kullanabilirsiniz.
 
 ## <a name="framework-members"></a>Çerçeve üyeleri
 
@@ -97,7 +98,7 @@ Birim testleri, çeşitli onay, özel durum ve öznitelik türlerini kullanarak 
 
 ## <a name="the-testcontext-class"></a>TestContext sınıfı
 
-Aşağıdaki öznitelikler ve bunlara atanan değerler, belirli bir test yöntemi için Visual Studio Özellikler penceresi görüntülenir. Bu özniteliklere birim testinin kodu aracılığıyla erişilmek üzere tasarlanmamıştır. Bunun yerine, Visual Studio 'nun IDE 'si veya Visual Studio test altyapısı aracılığıyla, birim testinin kullanıldığı ya da çalıştırıldığı yolları etkiler. Örneğin, bu özniteliklerin bazıları **Test Yöneticisi** penceresinde ve **test sonuçları** penceresinde sütun olarak görünür, bu da testleri ve test sonuçlarını gruplamak ve sıralamak için bunları kullanabileceğiniz anlamına gelir. Bu tür bir özniteliği <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> , birim testlerine rastgele meta veriler eklemek için kullandığınız bir özniteliktir. Örneğin, birim testini ile işaretleyerek, bu testin kapsamakta olduğu bir test geçişinin adını depolamak için kullanabilirsiniz `[TestProperty("TestPass", "Accessibility")]` . Ya da bunu, sahip olduğu test türünün bir göstergesini depolamak için kullanabilirsiniz `[TestProperty("TestKind", "Localization")]` . Bu özniteliği kullanarak oluşturduğunuz özellik ve atadığınız Özellik değeri, her ikisi de başlık **testi** altındaki Visual Studio **özellikleri** penceresinde görüntülenir.
+aşağıdaki öznitelikler ve bunlara atanan değerler belirli bir test yöntemi için Visual Studio Özellikler penceresi görünür. Bu özniteliklere birim testinin kodu aracılığıyla erişilmek üzere tasarlanmamıştır. bunun yerine, Visual Studio ıde veya Visual Studio test motoru aracılığıyla sizin tarafınızdan, birim testinin kullanıldığı veya çalıştırıldığı yolları etkiler. Örneğin, bu özniteliklerin bazıları **Test Yöneticisi** penceresinde ve **test sonuçları** penceresinde sütun olarak görünür, bu da testleri ve test sonuçlarını gruplamak ve sıralamak için bunları kullanabileceğiniz anlamına gelir. Bu tür bir özniteliği <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> , birim testlerine rastgele meta veriler eklemek için kullandığınız bir özniteliktir. Örneğin, birim testini ile işaretleyerek, bu testin kapsamakta olduğu bir test geçişinin adını depolamak için kullanabilirsiniz `[TestProperty("TestPass", "Accessibility")]` . Ya da bunu, sahip olduğu test türünün bir göstergesini depolamak için kullanabilirsiniz `[TestProperty("TestKind", "Localization")]` . bu özniteliği kullanarak oluşturduğunuz özellik ve atadığınız özellik değeri, her ikisi de başlık **testine özgü** Visual Studio **özellikler** penceresinde görüntülenir.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 
@@ -121,7 +122,7 @@ Aşağıdaki öznitelikler ve bunlara atanan değerler, belirli bir test yöntem
 
 ## <a name="attributes-used-to-generate-reports"></a>Rapor oluşturmak için kullanılan öznitelikler
 
-Bu bölümdeki öznitelikler, bir Team Foundation Server takım projesinin proje hiyerarşisindeki varlıklarla süsledikleri test yöntemiyle ilgilidir.
+bu bölümdeki öznitelikler, bir Team Foundation Server takım projesinin proje hiyerarşisindeki varlıklarla süsledikleri test yöntemiyle ilgilidir.
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.CssIterationAttribute>
 

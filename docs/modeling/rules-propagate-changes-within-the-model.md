@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: ca814206135d8b9be9273e1bdf113cd6db7efc6312391cd5acf6cf1e1559f7d9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f6434d4427371a0e2bd39da7c9979b6c29d521e6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121231489"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034051"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>Değişiklikleri Modelin İçinde Yayan Kurallar
 Bir değişikliği bir öğeden diğerine, görselleştirme ve modelleme SDK 'sını (VMSDK) yaymak için bir depolama kuralı oluşturabilirsiniz. Depodaki herhangi bir öğe için bir değişiklik olduğunda, genellikle en dıştaki işlem işlendiği zaman, kurallar yürütülmek üzere zamanlanır. Farklı türlerde olaylar için bir öğe ekleme veya silme gibi farklı türde kurallar vardır. Belirli öğe, şekil veya diyagram türlerine kurallar ekleyebilirsiniz. Birçok yerleşik özellik kurallar tarafından tanımlanır: Örneğin, kurallar model değiştiğinde bir diyagramın güncelleştirildiğinden emin olur. Kendi kurallarınızı ekleyerek, etki alanına özgü dilinizi özelleştirebilirsiniz.
@@ -160,14 +160,14 @@ namespace ExampleNamespace
 
 6. Kurallara ve kurallarından bilgi geçirmek için, içinde bilgileri saklayabilirsiniz `TransactionContext` . Bu yalnızca işlem sırasında tutulan bir sözlüktür. İşlem sona erdiğinde atılmış olur. Her kuraldaki olay bağımsız değişkenleri buna erişim sağlar. Kuralların öngörülebilir bir sırada yürütülebileceğini unutmayın.
 
-7. Diğer alternatifleri göz önünde bulundurarak kuralları kullanın. Örneğin, bir değer değiştiğinde bir özelliği güncellemek istiyorsanız, hesaplanmış bir özellik kullanmayı düşünün. Şeklin boyutunu veya konumunu sınırlamak için `BoundsRule` kullanın. Özellik değerindeki bir değişikliği yanıtlamak için özelliğine bir `OnValueChanged` işleyici ekleyin. Daha fazla bilgi için [bkz. Değişiklikleri Yanıt verme ve Yayma.](../modeling/responding-to-and-propagating-changes.md)
+7. Diğer alternatifleri göz önünde bulundurarak kuralları kullanın. Örneğin, bir değer değiştiğinde bir özelliği güncellemek istiyorsanız, hesaplanmış bir özellik kullanmayı düşünün. Bir şeklin boyutunu veya konumunu kısıtlamak istiyorsanız, bir kullanın `BoundsRule` . Özellik değerindeki bir değişikliğe yanıt vermek istiyorsanız, `OnValueChanged` özelliğine bir işleyici ekleyin. Daha fazla bilgi için bkz. [değişiklikleri yanıtlama ve yayma](../modeling/responding-to-and-propagating-changes.md).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir etki alanı ilişkisi örneği 2 öğeye bağlantı vermek için bir özelliği günceller. Kural yalnızca kullanıcı bir diyagramda bağlantı oluşturduğunda değil, aynı zamanda program kodu bir bağlantı oluşturduğunda da tetiklenir.
+ Aşağıdaki örnek, iki öğeyi bağlamak için bir etki alanı ilişkisi örneği oluşturulduğunda bir özelliği günceller. Kural, yalnızca Kullanıcı diyagramda bir bağlantı oluşturduğunda değil, aynı zamanda program kodu bir bağlantı oluşturduğunda tetiklenecektir.
 
- Bu örneği test etmek için Task Flow çözüm şablonunu kullanarak bir DSL oluşturun ve aşağıdaki kodu Dsl projesine bir dosyaya girin. Çözümü derleme ve çalıştırma ve Hata ayıklama projesinde Örnek dosyasını açın. Açıklama şekli ile akış öğesi arasında Açıklama Bağlantısı çizme. Açıklamanın metni, bağlantılı olduğu en son öğeyle ilgili rapor olarak değişir.
+ bu örneği test etmek için, görev Flow çözüm şablonunu kullanarak bir DSL oluşturun ve dsl projesindeki bir dosyaya aşağıdaki kodu ekleyin. Çözümü derleyin ve çalıştırın ve hata ayıklama projesinde örnek dosyayı açın. Açıklama şekli ve flow öğesi arasında bir açıklama bağlantısı çizin. Açıklamadaki metin, üzerine bağladığınız en son öğe üzerinde rapor olarak değişir.
 
- Uygulamada, genellikle her AddRule için bir DeleteRule yazarsiniz.
+ Uygulamada, genellikle her AddRule için bir DeleteRule yazarsınız.
 
 ```csharp
 using System;

@@ -1,7 +1,7 @@
 ---
-title: SharePoint çözümünü yerel SharePoint sitesine dağıtma & yayımlama
+title: Bir & yerel SharePoint sitesinde yayımlamak için SharePoint dağıtma
 titleSuffix: ''
-description: Geliştirme bilgisayarınızda SharePoint çözümlerini yerel bir SharePoint sunucusuna dağıtmayı veya yayımlamayı inceleyin.
+description: Geliştirme bilgisayarınızda yerel bir SharePoint çözüm dağıtmayı veya SharePoint yayımlamayı gözden geçirme.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,38 +14,39 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 22fe46e2876b14551637dd97712e1728816b020e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0ca33017e48db24a4f1ab055289683737d047c4e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913697"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047718"
 ---
-# <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Nasıl yapılır: bir SharePoint çözümünü yerel bir SharePoint sitesine dağıtma ve yayımlama
-  Geliştirme bilgisayarınızda, SharePoint çözümlerini yerel bir SharePoint sunucusuna dağıtabilir veya yayımlayabilirsiniz. Dağıtım işlemi *. wsp* dosyasını SharePoint sunucusuna kopyalar, çözümü yüklenir ve ardından özellikleri etkinleştirir. Yayımlama işlemi yalnızca *. wsp* dosyasını SharePoint sunucusuna kopyalar ve onu kurar. SharePoint 'te etkinleştirmek için el ile etkinleştirmeniz gerekir.
+# <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Nasıl SharePoint: Yerel SharePoint çözümü dağıtma ve yayımlama
+  Geliştirme çözümlerinizi geliştirme SharePoint yerel bir SharePoint sunucuya dağıtabilirsiniz veya yayımlayın. Dağıtım işlemi , *.wsp* dosyasını SharePoint sunucusuna kopyalar, çözümü yüklür ve ardından özellikleri etkinleştirir. Yayımlama işlemi yalnızca *.wsp dosyasını* SharePoint sunucuya kopyalar ve bunu yüklür. Bu özelliği etkin bir şekilde etkinleştirmek için el ile SharePoint.
 
-## <a name="to-deploy-a-sharepoint-solution-to-the-local-sharepoint-server"></a>Bir SharePoint çözümünü yerel SharePoint sunucusuna dağıtmak için
+## <a name="to-deploy-a-sharepoint-solution-to-the-local-sharepoint-server"></a>Yerel SharePoint sunucusuna bir çözüm SharePoint için
 
-1. **Çözüm Gezgini**, dağıtmak istediğiniz projeyi seçin.
+1. Bu **Çözüm Gezgini** içinde, dağıtmak istediğiniz projeyi seçin.
 
-2. Menü çubuğunda **Oluştur**, **Çözümü dağıt**' ı seçin.
+2. Menü çubuğunda Derleme, Çözüm **Dağıtma'ya tıklayın.**
 
-     *. Wsp* dosyası oluşturulur ve yerel SharePoint sunucusunda yüklüdür. Ayrıca, Özellikler etkinleştirilir.
+     *.wsp* dosyası oluşturulur ve yerel sunucuya SharePoint yüklenir. Ayrıca, özellikler etkinleştirilir.
 
-## <a name="to-publish-a-sharepoint-solution-to-a-local-sharepoint-server"></a>Bir SharePoint çözümünü yerel bir SharePoint sunucusuna yayımlamak için
+## <a name="to-publish-a-sharepoint-solution-to-a-local-sharepoint-server"></a>Yerel bir SharePoint sunucusuna bir çözüm SharePoint için
 
-1. **Çözüm Gezgini**' de, yayımlamak istediğiniz SharePoint projesinin kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
+1. Bu **Çözüm Gezgini,** yayımlamak istediğiniz SharePoint projesinin kısayol menüsünü açın ve yayımla'yı **seçin.**
 
-2. **Yayımla** Iletişim kutusunda **dosya sistemine yayınla** seçenek düğmesini seçin.
+2. Yayımla **iletişim** kutusunda Dosya Sisteminde **Yayımla seçeneğini** belirleyin.
 
-3. **Hedef konum** metin kutusuna bir yerel yol girin ve ardından **Yayınla** düğmesini seçin.
+3. Hedef **Konum metin** kutusuna yerel bir yol girin ve ardından Yayımla **düğmesini** seçin.
 
-     Yayımlama ilerlemesi, Visual Studio **çıktı** penceresinde görünür. İşlem tamamlandığında, çözüm (*. wsp*) dosyası yerel SharePoint sunucusuna yüklenir. Ancak, hala SharePoint 'te kullanılmak üzere etkinleştirilmelidir. Çözüm dosyası zaten varsa, bir hata oluşur ve var olan dosyanın üzerine yazmak isteyip istemediğinizi sorar. Paketi yükseltme hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzak bir sunucuda SharePoint çözümlerini dağıtma, yayımlama ve yükseltme](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)konusunda uzak paketleri yükseltme bölümüne bakın.
+     Yayımlama ilerleme durumu Çıkış penceresinde Visual Studio **görüntülenir.** İşlem tamamlandığında çözüm (*.wsp*) dosyası yerel sunucuya SharePoint yüklenir. Ancak, yine de bu bek bir SharePoint. Çözüm dosyası zaten varsa bir hata oluşur ve var olan dosyanın üzerine yazmak isteyip istemediğinizi sorar. Paketi yükseltme hakkında daha fazla bilgi için, Uzak bir sunucuda uzak paketleri yükseltme: Uzak bir sunucu üzerinde dağıtım, yayımlama ve SharePoint yükseltme bölümündeki [bölümüne bakın.](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: uzak bir sunucuda SharePoint çözümlerini dağıtma, yayımlama ve yükseltme](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)
-- [SharePoint çözüm paketleri oluşturma](../sharepoint/creating-sharepoint-solution-packages.md)
-- [Nasıl yapılır: bir SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
-- [Nasıl yapılır: Paket Tasarımcısını kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)
+- [Nasıl kullanılır: Uzak bir sunucuda SharePoint, yayımlama ve yükseltme](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)
+- [Çözüm SharePoint paketleri oluşturma](../sharepoint/creating-sharepoint-solution-packages.md)
+- [Nasıl SharePoint: SharePoint paketi özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
+- [Nasıl kullanılır: Paket Tasarımcısını kullanarak pakete özellik ve öğe ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)

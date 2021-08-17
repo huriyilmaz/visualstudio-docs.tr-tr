@@ -1,6 +1,6 @@
 ---
 title: Koleksiyon yöntemlerini seçin | Microsoft Docs
-description: Visual Studio Profil Oluşturma Araçları performans verisi toplamanın üç yöntemini destekler. Uygulamanız için ihtiyacınız olan birini nasıl seçebileceğinizi öğrenin.
+description: Visual Studio Profil Oluşturma Araçları performans verileri toplamanın üç yöntemini destekler. Uygulamanız için ihtiyacınız olan birini nasıl seçebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,19 +11,20 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a304006a778dc4766e6b4be9ceb133450c0dfb52
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0c6d3ae4fcca7ebfa902478e037212ec815c3ed2b91942134d8fde3595af2d01
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876920"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333099"
 ---
 # <a name="how-to-choose-collection-methods"></a>Nasıl yapılır: koleksiyon yöntemleri seçme
 
-Visual Studio Profil Oluşturma Araçları performans verilerini toplamak için üç yöntem destekler: örnekleme, izleme ve eşzamanlılık. .NET bellek ayırma ve yaşam süresi verilerini toplamak için örnekleme veya izleme yöntemini de kullanabilirsiniz.
+Visual Studio Profil Oluşturma Araçları performans verileri toplamanın üç yöntemini destekler: örnekleme, izleme ve eşzamanlılık. .NET bellek ayırma ve yaşam süresi verilerini toplamak için örnekleme veya izleme yöntemini de kullanabilirsiniz.
 
 Uygulamanız için en uygun koleksiyon yöntemini belirtmek üzere performans oturumu **yöntemi** özelliğini kullanabilirsiniz. Bir performans oturumunun Özellik sayfalarından, Performans Gezgini veya performans sihirbazından koleksiyon yöntemini ayarlayabilirsiniz. Komut satırı araçları kullanıyorsanız daha fazla bilgi için bkz. [komut satırından profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md) .
 
@@ -37,7 +38,7 @@ Uygulamanız için en uygun koleksiyon yöntemini belirtmek üzere performans ot
 |----------------------------| - |
 | **CPU örnekleme** | İlk analizler ve CPU kullanımı sorunlarını analiz etmek için yararlı olan uygulama istatistiklerini toplar. |
 | **Yapısı** | Odaklanmış analizler ve giriş/çıkış performans sorunlarını analiz etmek için yararlı olan ayrıntılı zamanlama verilerini toplar. |
-| **.NET bellek ayırma** | Örnekleme profili oluşturma yöntemini kullanarak .NET Framework bellek ayırma verilerini toplar. |
+| **.NET bellek ayırma** | örnekleme profili oluşturma yöntemini kullanarak .NET Framework bellek ayırma verilerini toplar. |
 | **Eşzamanlılık** | Sayısal kaynak çekişmesini verilerini toplar. |
 
 ## <a name="performance-explorer"></a>Performans Gezgini
@@ -78,7 +79,7 @@ Uygulamanız için en uygun koleksiyon yöntemini belirtmek üzere performans ot
 
 4. **Örnekleme** veya **izleme**' ye tıklayın.
 
-5. .NET Framework nesne ayırmalarının boyutunu ve sayısını toplamak için **.NET nesne ayırma bilgilerini topla** ' ya tıklayın.
+5. .NET Framework nesne ayırmalarının boyutunu ve sayısını toplamak için **.net nesne ayırma bilgilerini topla** ' ya tıklayın.
 
 6. Seçim Ayrıca, nesne belleğinin geri alındığı çöp toplama nesilleri hakkında veri toplamak için **.NET nesne yaşam süresi bilgilerini toplayın** .
 

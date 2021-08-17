@@ -1,21 +1,21 @@
 ---
 title: Visual Studio Test Aracısı 2019 iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Otomatikleştirilmiş testleri çalıştırmak ve testleri uzaktan yüklemek için Visual Studio iş yükünü ve bileşen kimliklerini kullanma
+description: otomatikleştirilmiş testleri çalıştırmak ve testleri uzaktan yüklemek için Visual Studio iş yükü ve bileşen kimlikleri kullanın
 keywords: ''
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
-ms.date: 05/24/2021
+ms.date: 08/10/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 8f9d4c873748f273515465f0ed833eaa9c1fe6b7
-ms.sourcegitcommit: 18e7300d4878f2fcd0263a4aff31a755ae8fc289
+ms.openlocfilehash: 7c7755a3658b0d990e93bd5c326c9bdbd12e6814
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110449661"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048232"
 ---
 ## <a name="test-agent"></a>Test Aracısı
 

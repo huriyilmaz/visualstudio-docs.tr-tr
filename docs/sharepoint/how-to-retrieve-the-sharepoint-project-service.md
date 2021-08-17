@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: SharePoint proje hizmetini alma | Microsoft Docs'
-description: Project System Extensions, Sunucu Gezgini uzantıları veya diğer Visual Studio uzantılarında SharePoint proje hizmetine nasıl erişebileceğinizi anlayın.
+title: 'nasıl yapılır: SharePoint Project hizmetini alma | Microsoft Docs'
+description: project system extensions, Sunucu Gezgini uzantıları veya diğer Visual Studio uzantılarında SharePoint proje hizmeti nasıl erişebileceğinizi anlayın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -12,28 +12,29 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: ef53a0328fe8427b356132fe878b52a3e504ea9a
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: aa962e3b82ec994cfceee3d82566029c536af283
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106214466"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047627"
 ---
-# <a name="how-to-retrieve-the-sharepoint-project-service"></a>Nasıl yapılır: SharePoint proje hizmetini alma
-  SharePoint proje hizmetine aşağıdaki çözüm türlerinde erişebilirsiniz:
+# <a name="how-to-retrieve-the-sharepoint-project-service"></a>nasıl yapılır: SharePoint proje hizmeti alma
+  SharePoint proje hizmeti aşağıdaki çözüm türlerinde erişebilirsiniz:
 
-- SharePoint proje sisteminin bir proje uzantısı, proje öğesi uzantısı veya proje öğesi türü tanımı gibi uzantısı. Bu uzantı türleri hakkında daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
+- proje uzantısı, proje öğesi uzantısı veya proje öğesi türü tanımı gibi SharePoint proje sisteminin bir uzantısı. bu uzantı türleri hakkında daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
 
-- **Sunucu Gezgini** Içindeki **SharePoint bağlantıları** düğümünün uzantısı. Bu uzantı türleri hakkında daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint Connections düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+- **Sunucu Gezgini** **SharePoint bağlantıları** düğümünün bir uzantısı. bu uzantı türleri hakkında daha fazla bilgi için bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
-- VSPackage gibi başka bir Visual Studio uzantısı türü.
+- vspackage gibi başka bir Visual Studio uzantısı türü.
 
 ## <a name="retrieve-the-service-in-project-system-extensions"></a>Hizmeti proje sistem uzantılarında alma
- SharePoint proje sisteminin herhangi bir uzantısında, proje hizmetine <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectService%2A> bir nesnenin özelliğini kullanarak erişebilirsiniz <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> .
+ SharePoint proje sisteminin herhangi bir uzantısında, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectService%2A> bir nesnenin özelliğini kullanarak proje hizmeti erişebilirsiniz <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> .
 
- Ayrıca, aşağıdaki yordamları kullanarak proje hizmetini de alabilirsiniz.
+ aşağıdaki yordamları kullanarak proje hizmeti da alabilirsiniz.
 
 #### <a name="to-retrieve-the-service-in-a-project-extension"></a>Bir proje uzantısında hizmeti almak için
 
@@ -41,12 +42,12 @@ ms.locfileid: "106214466"
 
 2. Hizmete erişmek için *ProjectService* parametresini kullanın.
 
-     Aşağıdaki kod **örneği, bir** ileti yazmak için proje hizmetinin nasıl kullanılacağını ve basit bir proje uzantısında **hata listesi** pencere olduğunu gösterir.
+     aşağıdaki kod örneği, bir iletiyi bir basit proje uzantısında **çıkış** penceresine ve **Hata Listesi** penceresine yazmak için proje hizmeti nasıl kullanacağınızı gösterir.
 
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb" id="Snippet1":::
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs" id="Snippet1":::
 
-     Proje uzantıları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint Proje uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-extension.md).
+     proje uzantıları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint projesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-extension.md).
 
 #### <a name="to-retrieve-the-service-in-a-project-item-extension"></a>Bir proje öğesi uzantısında hizmeti almak için
 
@@ -54,12 +55,12 @@ ms.locfileid: "106214466"
 
 2. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType.ProjectService%2A>Hizmeti almak Için *projectItemType* parametresinin özelliğini kullanın.
 
-     Aşağıdaki kod örneği, **Çıkış** penceresine bir ileti yazmak ve **liste tanımı** proje öğesinin basit uzantısında **hata listesi** penceresine bir ileti yazmak için proje hizmetinin nasıl kullanılacağını gösterir.
+     aşağıdaki kod örneği, **liste tanımı** proje öğesinin basit uzantısında **çıkış** penceresine ve **Hata Listesi** pencereye bir ileti yazmak için proje hizmeti nasıl kullanacağınızı gösterir.
 
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb" id="Snippet2":::
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs" id="Snippet2":::
 
-     Proje öğesi uzantıları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint proje öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).
+     proje öğesi uzantıları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint projesi öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).
 
 #### <a name="to-retrieve-the-service-in-a-project-item-type-definition"></a>Bir proje öğesi tür tanımında hizmeti almak için
 
@@ -67,15 +68,15 @@ ms.locfileid: "106214466"
 
 2. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.ProjectService%2A>Hizmeti almak Için *typeDefinition* parametresinin özelliğini kullanın.
 
-     Aşağıdaki kod örneği, bir ileti yazmak ve basit bir proje öğesi türü tanımında **hata listesi** **penceresine, proje** hizmetinin nasıl kullanılacağını gösterir.
+     aşağıdaki kod örneği, bir iletiyi bir basit proje öğesi türü tanımındaki **çıkış** penceresine ve **Hata Listesi** penceresine yazmak için proje hizmeti nasıl kullanacağınızı gösterir.
 
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.vb" id="Snippet3":::
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromprojectsystemextensions.getprojectservice/extension/extension.cs" id="Snippet3":::
 
-     Proje öğesi türlerini tanımlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
+     proje öğesi türlerini tanımlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: tanımlama SharePoint proje öğesi türü](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
 
 ## <a name="retrieve-the-service-in-server-explorer-extensions"></a>Sunucu Gezgini uzantılarında hizmeti alma
- **Sunucu Gezgini** **SharePoint bağlantıları** düğümünün bir uzantısında, proje hizmetine <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> bir nesnenin özelliğini kullanarak erişebilirsiniz <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> .
+ **Sunucu Gezgini** **SharePoint bağlantıları** düğümünün bir uzantısında, <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.ServiceProvider%2A> bir nesnenin özelliğini kullanarak proje hizmeti erişebilirsiniz <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> .
 
 #### <a name="to-retrieve-the-service-in-a-server-explorer-extension"></a>Sunucu Gezgini uzantılı hizmeti almak için
 
@@ -83,15 +84,15 @@ ms.locfileid: "106214466"
 
 2. <xref:System.IServiceProvider.GetService%2A>Bir nesne istemek için yöntemini kullanın <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> .
 
-     Aşağıdaki kod örneği, **Çıkış** penceresine bir ileti yazmak için proje hizmetinin nasıl kullanılacağını ve uzantının **Sunucu Gezgini** liste düğümlerine eklediği bir kısayol menüsünden **hata listesi** penceresini gösterir.
+     aşağıdaki kod örneği, **çıkış** penceresine bir ileti yazmak için proje hizmeti kullanmayı ve uzantının **Sunucu Gezgini** liste düğümlerine eklediği bir kısayol menüsünden **Hata Listesi** pencereyi gösterir.
 
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.vb" id="Snippet1":::
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/spextensibility.projectservice.fromspexplorerextensions.getprojectservice/extension/extension.cs" id="Snippet1":::
 
-     **Sunucu Gezgini**' de **SharePoint bağlantıları** düğümünü genişletme hakkında daha fazla bilgi Için bkz. [nasıl yapılır: bir SharePoint düğümünü genişletme Sunucu Gezgini](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
+     **Sunucu Gezgini** **SharePoint bağlantıları** düğümünü genişletme hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint düğümünü genişletme Sunucu Gezgini](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
 
-## <a name="retrieve-the-service-in-other-visual-studio-extensions"></a>Diğer Visual Studio uzantılarında hizmeti alma
- Proje hizmetini bir VSPackage içinde veya Otomasyon nesne modelindeki bir nesneye erişimi olan herhangi bir Visual Studio uzantısı içinde, <xref:EnvDTE80.DTE2> arabirimi uygulayan bir proje şablonu Sihirbazı gibi alabilirsiniz <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> .
+## <a name="retrieve-the-service-in-other-visual-studio-extensions"></a>hizmeti diğer Visual Studio uzantılarında alma
+ bir vspackage içindeki proje hizmeti alabilir veya otomasyon nesne modelindeki bir nesneye erişimi olan herhangi bir Visual Studio uzantısında, <xref:EnvDTE80.DTE2> arabirimi uygulayan bir proje şablonu sihirbazı gibi <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> .
 
  Bir VSPackage içinde, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> aşağıdaki yöntemlerden birini kullanarak bir nesne isteyebilirsiniz:
 
@@ -99,9 +100,9 @@ ms.locfileid: "106214466"
 
 - Statik <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> Yöntem. Daha fazla bilgi için bkz. [GetGlobalService kullanma](../extensibility/internals/service-essentials.md#how-to-use-getglobalservice).
 
-  Bir nesneye erişimi olan bir Visual Studio uzantısında, nesne <xref:EnvDTE80.DTE2> yöntemini kullanarak bir nesne isteyebilirsiniz <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> <xref:Microsoft.VisualStudio.Shell.ServiceProvider> . Daha fazla bilgi için bkz. [DTE nesnesinden hizmet alma](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object).
+  bir nesneye erişimi olan Visual Studio uzantısında <xref:EnvDTE80.DTE2> , nesne yöntemini kullanarak bir nesne isteyebilirsiniz <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> <xref:Microsoft.VisualStudio.Shell.ServiceProvider> . Daha fazla bilgi için bkz. [DTE nesnesinden hizmet alma](../extensibility/how-to-get-a-service.md#getting-a-service-from-the-dte-object).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md)
+- [SharePoint kullanın proje hizmeti](../sharepoint/using-the-sharepoint-project-service.md)
 - [Nasıl yapılır: hizmet alma](../extensibility/how-to-get-a-service.md)
 - [Nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)

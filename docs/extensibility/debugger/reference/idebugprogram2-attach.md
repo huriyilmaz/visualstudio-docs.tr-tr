@@ -11,17 +11,18 @@ ms.assetid: de069fbf-a565-4905-b102-f5658c55aacd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4f9565ea0975e38ced80f0747560cf1a24b4150c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 74dd257a1380880ab1ea1958862f81e2d069694f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076231"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030223"
 ---
 # <a name="idebugprogram2attach"></a>IDebugProgram2::Attach
 Programa iliştirir.

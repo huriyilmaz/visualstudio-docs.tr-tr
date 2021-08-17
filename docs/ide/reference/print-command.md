@@ -1,6 +1,6 @@
 ---
-title: Hata Ayıkla. Yazdır
-description: Print komutu ve bir ifadeyi değerlendirme veya belirtilen metni görüntüleme hakkında bilgi edinin.
+title: Print
+description: Print komutunu ve bir ifadeyi nasıl değerlendirip belirtilen metni görüntüleyeni hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 02cc2625c4c9bc04ccbfb5f6a5ab6854453be99b43edd341bb6f2a5750cd0249
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 157f8cfe3847aadebc34edb763fdda726f7cd1eb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121271816"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048784"
 ---
 # <a name="print-command"></a>Yazdır komutu
 
@@ -42,19 +42,19 @@ Gereklidir. Değerlendirilecek ifade veya görüntülenecek metin.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu komut için bir diğer ad olarak soru işareti (?) kullanabilirsiniz. Bu nedenle, örneğin, komut
+Bu komut için soru işaretini (?) diğer ad olarak kullanabilirsiniz. Örneğin, komutu
 
 ```cmd
 >Debug.Print expA
 ```
 
-Ayrıca, şöyle yazılabilir
+olarak da yaz
 
 ```cmd
 ? expA
 ```
 
-Bu komutun her iki sürümü de ifadenin geçerli değerini döndürür `expA` .
+Bu komutun her iki sürümü de ifadesinin geçerli değerini `expA` verir.
 
 ## <a name="example"></a>Örnek
 
@@ -64,8 +64,8 @@ Bu komutun her iki sürümü de ifadenin geçerli değerini döndürür `expA` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ifadeyi değerlendir komutu](../../ide/reference/evaluate-statement-command.md)
+- [Deyimi Değerlendir Komutu](../../ide/reference/evaluate-statement-command.md)
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

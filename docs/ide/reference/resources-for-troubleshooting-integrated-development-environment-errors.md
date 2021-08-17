@@ -1,6 +1,6 @@
 ---
 title: IDE hataları için sorun giderme kaynakları
-description: Bilgi Bankası makalelerini, forumları veya ürün desteğini kullanarak bir sorunu çözmenize yardımcı olmak için yeterince bilgilendirici olmayan IDE hatalarında sorun giderme hakkında bilgi edinin.
+description: Bir sorunu çözmenize Bilgi Bankası bilgilendirici olmayan IDE hatalarını gidermek için Bilgi Bankası makalelerini, forumları veya ürün desteğini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/18/2020
 ms.topic: troubleshooting
@@ -90,46 +90,47 @@ f1_keywords:
 - VB_E_TERRCLASSNOTREG
 - vs.webclient.help.general
 ms.assetid: 8f866eb5-a206-4c16-807e-96a0f2c0e645
-author: TerryGLee
-ms.author: tglee
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e2b678423cb8e212d435682a6a56947cd3f3276
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d332963ca50cd711400a19d935b4d810e755daab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957939"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048758"
 ---
 # <a name="resources-for-troubleshooting-ide-errors"></a>IDE hataları için sorun giderme kaynakları
 
-Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Bir hata iletisindeki bilgiler sorunu çözmenize yardımcı değilse, Bilgi Bankası makaleleri, Forumlar veya ürün desteği gibi diğer kaynaklara da başvurabilirsiniz.
+Tüm hata iletilerinin belirli bir ilişkili Yardım konusu yok. Hata iletisinde yer alan bilgiler sorunu çözmenize yardımcı olmazsa makale, forum veya ürün desteği Bilgi Bankası diğer kaynaklara başvurabilirsiniz.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio sorunlarını giderme](/visualstudio/mac/troubleshooting).
+> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Mac için Visual Studio.](/visualstudio/mac/troubleshooting)
 
-## <a name="knowledge-base-articles"></a>Bilgi Bankası makaleleri
+## <a name="knowledge-base-articles"></a>Bilgi Bankası makaleler
 
-Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. Visual Studio için KB makalelerini [Visual Studio sorun giderme](/troubleshoot/visualstudio/welcome-visual-studio/) sayfasında görüntüleyebilirsiniz.
+Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. Sorun giderme sayfasında Visual Studio KB [makalelerini Visual Studio görüntüleyebilirsiniz.](/troubleshoot/visualstudio/welcome-visual-studio/)
 
 ## <a name="developer-forums"></a>Geliştirici forumları
 
-Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, diğer kişilerin aynı sorun hakkında nakledilip nakledilmediğini görmek için forumlarda arama yapabilirsiniz.
+Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Başkalarının aynı sorun hakkında yayında olup olmadığını görmek için forumlarda arama da bulabilirsiniz.
 
-Forum kaynaklarının listesi aşağıdadır:
+Forum kaynaklarının listesi:
 
-- [Soru-cevap&A 'da Visual Studio](/answers/products/vs/)
+- [Visual Studio A&da](/answers/products/vs/)
 - [Visual Studio MSDN Forumu](https://social.msdn.microsoft.com/Forums/vstudio)
 - [Stack Overflow](https://stackoverflow.com/search?q=%22visual+studio%22)
 - [Reddit](https://www.reddit.com/r/VisualStudio)
 
 ## <a name="product-support"></a>Ürün desteği
 
-Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](https://support.microsoft.com/en-us) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizde sunulan ürün desteği hakkında bilgi için bkz. [Visual Studio geri bildirim seçenekleri](../../ide/feedback-options.md) sayfası.
+Diğer kaynakları denemenin ardından hala sorularınız varsa, web sitesini ziyaret ederek Microsoft destek [hizmetleriyle Microsoft Desteği](https://support.microsoft.com/en-us) edebilirsiniz. Alanınıza uygun ürün desteği hakkında daha fazla bilgi için Visual Studio [sayfasına](../../ide/feedback-options.md) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Ağla ilgili veya ara sunucu hatalarıyla ilgili sorunları giderme](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
-* [Sorun giderme (Windows için Visual Studio)](/troubleshoot/visualstudio/welcome-visual-studio/)
+* [Ağ ile ilgili veya ara sunucu hatalarını giderme](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
+* [Sorun giderme (Visual Studio için Windows)](/troubleshoot/visualstudio/welcome-visual-studio/)
 * [Sorun giderme (Mac için Visual Studio)](/visualstudio/mac/troubleshooting)

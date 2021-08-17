@@ -137,12 +137,12 @@ Unity için Visual Studio Araçları, Unity projenizin güçlü hata ayıklayıc
 :::zone pivot="windows"
 
 1. Bağlan Visual Studio Unity'ye Ekle etiketli **Oynat** düğmesine tıklayarak **Unity'ye** tıklayın veya F5 klavye **kısayolunu kullanın.**
-![Visual Studio'da Oynat'a tıklayın](../media/vs/vstu-play-button.png)
+![Dosyada Oynat'a Visual Studio](../media/vs/vstu-play-button.png)
 
 :::zone-end
 :::zone pivot="macos"
 
-1. Bağlan Visual Studio Düğmesine tıklayarak Unity'ye **tıklayın** veya Komut **+ Dönüş veya** **F5 yazın.**
+1. Bağlan Visual Studio Düğmesine tıklayarak **Unity'ye** tıklayın veya Komut **+ Dönüş veya** **F5 yazın.**
 ![Mac için Visual Studio'da Oynat'a tıklayın](../media/vsm/using-vsmac-tools-unity-image5.png)
 
 :::zone-end
@@ -155,24 +155,24 @@ Unity için Visual Studio Araçları, Unity projenizin güçlü hata ayıklayıc
 ![macOS üzerinde Unity'de Oynat'a tıklayın](../media/vsm/using-vsmac-tools-unity-image6.png)
 :::zone-end
 
-3. Oyun Visual Studio'a bağlıyken Unity düzenleyicisinde çalışırken, karşılaşılan herhangi bir kesme noktası oyunun yürütülmesini duraklatacak ve oyunun kesme noktasıyla karşılaştığı kod hattını Visual Studio.
+3. Oyun Visual Studio'a bağlıyken Unity düzenleyicisinde çalışırken, karşılaşılan tüm kesme noktaları oyunun yürütülmesini duraklatacak ve oyunun kesme noktasıyla karşılaştığı kod hattını Visual Studio.
 
 #### <a name="stop-debugging"></a>Hata ayıklamayı durdurma
 
 :::zone pivot="windows"
 
 Visual Studio'da Durdur düğmesine tıklayın veya Shift + F5 klavye **kısayolunu kullanın.** 
-![Dosyada Durdur'a Visual Studio](../media/vs/vstu-stop-debugger.png)
+![Visual Studio'da Durdur'a tıklayın](../media/vs/vstu-stop-debugger.png)
 
 :::zone-end
 :::zone pivot="macos"
 
 Mac için Visual Studio'da Durdur düğmesine tıklayın veya **Shift + Komut + Return tuşlarına basın.** 
-![Dosyada Durdur'a Mac için Visual Studio](../media/vsm/using-vsmac-tools-unity-image7.png)
+![Mac için Visual Studio'da Durdur'a tıklayın](../media/vsm/using-vsmac-tools-unity-image7.png)
 
 :::zone-end
 
-Hata ayıklamada hata ayıklama hakkında daha fazla Visual Studio için bkz. Hata [Ayıklayıcısı'Visual Studio bakın.](/debugger/debugger-feature-tour.md)
+Uygulama içinde hata ayıklama hakkında daha fazla Visual Studio için [bkz. Hata Ayıklayıcısı'Visual Studio bakın.](/debugger/debugger-feature-tour.md)
 
 #### <a name="attach-to-unity-and-play"></a>Unity ve Play'e ekleme
 

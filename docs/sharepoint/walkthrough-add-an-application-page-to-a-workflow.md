@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: bir uygulama sayfasını bir Iş akışına ekleme | Microsoft Docs'
-description: Bu izlenecek yolda, bir SharePoint iş akışı çözümüne bir uygulama sayfası ekleyin. İş akışı kodunu düzeltme. Uygulama sayfasını oluşturun, kodlayın ve test edin.
+description: bu izlenecek yolda, bir SharePoint iş akışı çözümüne bir uygulama sayfası ekleyin. İş akışı kodunu düzeltme. Uygulama sayfasını oluşturun, kodlayın ve test edin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,21 +15,22 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: d07b5272a31a0c649e12f353aefaa7c63c335eb5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50017d9a7c368bdc9cbcfa5438aec09a63d4508b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882667"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047549"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>İzlenecek yol: bir uygulama sayfasını bir iş akışına ekleme
   Bu izlenecek yol, bir iş akışından türetilmiş verileri bir iş akışı projesine görüntüleyen bir uygulama sayfasının nasıl ekleneceğini gösterir. BT Kılavuzu [: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)konu başlığı altında açıklanan projede oluşturulur.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Bir ASPX uygulama sayfasını bir SharePoint iş akışı projesine ekleme.
+- bir SharePoint iş akışı projesine ASPX uygulaması sayfası ekleme.
 
 - İş akışı projesinden veri alma ve düzenleme.
 
@@ -40,7 +41,7 @@ ms.locfileid: "99882667"
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
+- [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]Ve SharePoint desteklenen sürümleri.
 
 - Visual Studio.
 
@@ -53,7 +54,7 @@ ms.locfileid: "99882667"
 
 1. [Ilgili Izlenecek yol: ilişkilendirme ve başlatma formları Ile Iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) başlıklı konudaki tamamlanan projeyi yükleyin [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. *Workflow1.cs* veya *Workflow1. vb* için kodu açın (programlama dilinize bağlı olarak).
+2. *Workflow1. cs* veya *Workflow1. vb* için kodu açın (programlama dilinize bağlı olarak).
 
 3. `createTask1_MethodInvoking`Yönteminin altına aşağıdaki kodu ekleyin:
 
@@ -68,11 +69,11 @@ ms.locfileid: "99882667"
     ```
 
 ## <a name="create-an-application-page"></a>Uygulama sayfası oluşturma
- Ardından, projeye bir ASPX formu ekleyin. Bu form, gider raporu iş akışı projesinden alınan verileri görüntüler. Bunu yapmak için bir uygulama sayfası eklersiniz. Bir uygulama sayfası, diğer SharePoint sayfalarıyla aynı ana sayfayı kullanır, yani SharePoint sitesindeki diğer sayfalara benzecektir.
+ Ardından, projeye bir ASPX formu ekleyin. Bu form, gider raporu iş akışı projesinden alınan verileri görüntüler. Bunu yapmak için bir uygulama sayfası eklersiniz. bir uygulama sayfası, diğer SharePoint sayfalarıyla aynı ana sayfayı kullanır, yani SharePoint sitesindeki diğer sayfalara benzecektir.
 
 #### <a name="to-add-an-application-page-to-the-project"></a>Projeye bir uygulama sayfası eklemek için
 
-1. ExpenseReport projesini seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
+1. ExpenseReport projesini seçin ve ardından menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
 2. **Şablonlar** bölmesinde, **uygulama sayfası** şablonunu seçin, proje öğesi için varsayılan adı kullanın (**ApplicationPage1. aspx**) ve **Ekle** düğmesini seçin.
 
@@ -99,7 +100,7 @@ ms.locfileid: "99882667"
     ```
 
 ## <a name="code-the-application-page"></a>Uygulama sayfasını kodlayın
- Ardından, gider raporu Özet uygulama sayfasına kod ekleyin. Sayfayı açtığınızda, kod, ayrılan harcama limitini aşan giderler için SharePoint 'teki görev listesini tarar. Raporda her öğe, masrafların toplamı ile birlikte listelenir.
+ Ardından, gider raporu Özet uygulama sayfasına kod ekleyin. sayfayı açtığınızda kod, ayrılan harcama limitini aşan giderler için SharePoint görev listesini tarar. Raporda her öğe, masrafların toplamı ile birlikte listelenir.
 
 #### <a name="to-code-the-application-page"></a>Uygulama sayfasını kodlayın
 
@@ -297,24 +298,24 @@ ms.locfileid: "99882667"
     ```
 
     > [!WARNING]
-    > Koddaki "TestServer" öğesini, SharePoint çalıştıran geçerli bir sunucunun adıyla değiştirdiğinizden emin olun.
+    > Koddaki "TestServer" öğesini SharePoint çalıştıran geçerli bir sunucu adıyla değiştirdiğinizden emin olun.
 
 ## <a name="test-the-application-page"></a>Uygulama sayfasını test etme
  Ardından, uygulama sayfasının gider verilerini doğru şekilde görüntüleyip görüntülemediğini saptayın.
 
 #### <a name="to-test-the-application-page"></a>Uygulama sayfasını sınamak için
 
-1. Çalıştırmak ve projeyi SharePoint 'e dağıtmak için **F5** tuşunu seçin.
+1. Çalıştırmak ve SharePoint için projeyi dağıtmak üzere **F5** tuşunu seçin.
 
-2. Giriş düğmesini seçin ve ardından, SharePoint sitesindeki paylaşılan belgeler listesini göstermek için hızlı **Başlangıç** çubuğundaki **paylaşılan belgeler** bağlantısını seçin.
+2. giriş düğmesini seçin ve sonra SharePoint sitesinde paylaşılan belgeler listesini göstermek için hızlı **başlangıç** çubuğundaki **paylaşılan belgeler** bağlantısını seçin.
 
-3. Bu örneğe ilişkin gider raporlarını göstermek için, sayfanın üst kısmındaki **LibraryTools** sekmesinden **Belgeler** bağlantısını seçerek ve ardından araç şeridinde **belgeyi karşıya yükle** düğmesini seçerek belgeler listesine bazı yeni belgeler yükleyin.
+3. bu örneğe ilişkin gider raporlarını göstermek için, sayfanın üst kısmındaki **librarytools** sekmesinden **belgeler** bağlantısını seçerek ve ardından araç şeridinde **Upload belge** düğmesini seçerek belgeler listesine bazı yeni belgeler yükleyin.
 
-4. Bazı belgeleri karşıya yükledikten sonra, sayfanın en üstündeki **LibraryTools** sekmesinde bulunan **kitaplık** bağlantısını seçip araç şeridinde **kitaplık ayarları** düğmesini seçerek iş akışını oluşturun.
+4. bazı belgeleri karşıya yükledikten sonra, sayfanın en üstündeki **librarytools** sekmesinde bulunan **kitaplık** bağlantısını seçip araç şeridinde **kitaplık Ayarlar** düğmesini seçerek iş akışını oluşturun.
 
-5. **Belge kitaplığı ayarları** sayfasında, **izinler ve yönetim** bölümünde **iş akışı ayarları** bağlantısını seçin.
+5. **belge kitaplığı Ayarlar** sayfasında, **izinler ve yönetim** bölümünde **iş akışı Ayarlar** bağlantısını seçin.
 
-6. **Iş akışı ayarları** sayfasında, **iş akışı Ekle** bağlantısını seçin.
+6. **iş akışı Ayarlar** sayfasında, **iş akışı ekle** bağlantısını seçin.
 
 7. **Iş akışı Ekle** sayfasında, **ExpenseReport-Workflow1** iş akışını seçin, Iş akışı için **ExpenseTest** gibi bir ad girin ve ardından **İleri** düğmesini seçin.
 
@@ -322,7 +323,7 @@ ms.locfileid: "99882667"
 
 8. Ilişkilendirme formunda, **otomatik onay limiti** kutusuna **1000** girin ve sonra **iş akışını ilişkilendir** düğmesini seçin.
 
-9. SharePoint giriş sayfasına geri dönmek için **giriş** düğmesini seçin.
+9. SharePoint giriş sayfasına dönmek için **giriş** düğmesini seçin.
 
 10. Hızlı Başlat çubuğunda **paylaşılan belgeler** bağlantısını seçin.
 
@@ -343,7 +344,7 @@ ms.locfileid: "99882667"
 ## <a name="next-steps"></a>Sonraki adımlar
  SharePoint uygulama sayfaları hakkında daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
 
- Visual Studio 'da Visual Web Tasarımcısı 'nı kullanarak SharePoint sayfası içeriğini nasıl tasarlayacağınızı öğrenmek için aşağıdaki konulardan daha fazla bilgi edinebilirsiniz:
+ SharePoint sayfası içeriğini nasıl tasarlayacağınızı öğrenmek için aşağıdaki konulardan Visual Studio Visual Web tasarımcısı ' nı kullanabilirsiniz:
 
 - [SharePoint için Web bölümleri oluşturun](../sharepoint/creating-web-parts-for-sharepoint.md).
 

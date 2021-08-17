@@ -1,6 +1,6 @@
 ---
 title: Modülleri Listele Komutu
-description: Modülleri Listele komutu ve geçerli işlem için modülleri nasıl listeleyeceğinizi öğrenin.
+description: Modülleri Listele komutunu ve geçerli işlem için modülleri nasıl listeley olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,14 +14,15 @@ ms.assetid: 3cb73774-6ac0-43b2-b781-75ed47175bfd
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a38a5423568528d267fd92894b8b06b4e5667c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90a76b448fa4670e87baee821102734391f120415a29ec66f1d021aeb70f0f78
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852069"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121429192"
 ---
 # <a name="list-modules-command"></a>Modülleri Listele Komutu
 Geçerli işlem için modülleri listeler.
@@ -35,44 +36,44 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>Parametreler
-Adrestir`yes|no`
+/Address:`yes|no`
 
-İsteğe bağlı. Modüllerin bellek adreslerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin bellek adreslerinin göster olup olmadığını belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
-Ada`yes|no`
+/Name:`yes|no`
 
-İsteğe bağlı. Modüllerin adlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin adlarının göster olup olmadığını belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
-Siparişi`yes|no`
+/Order:`yes|no`
 
-İsteğe bağlı. Modüllerin sırasının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin sırası gösterip göstermey kararlarını belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
-Yolun`yes|no`
+/Path:`yes|no`
 
-İsteğe bağlı. Modüllerin yollarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin yollarının göster olup olmadığını belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
-İşle`yes|no`
+/Process:`yes|no`
 
-İsteğe bağlı. Modül işlemlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin işlemlerinin göster olup olmadığını belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
 /SymbolFile:`yes|no`
 
-İsteğe bağlı. Modüllerin sembol dosyalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin sembol dosyalarının göster olup olmadığını belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
 /SymbolStatus:`yes|no`
 
-İsteğe bağlı. Modüllerin sembol durumlarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin sembol durumlarının göster olup olmadığını belirtir. Varsayılan değer `yes` olarak belirlenmiştir.
 
-İlişkin`yes|no`
+/Timestamp:`yes|no`
 
-İsteğe bağlı. Modüllerin zaman damgalarının gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin zaman damgasının gösterilip gösteril olmadığını belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
-Sürümünüze`yes|no`
+/Version:`yes|no`
 
-İsteğe bağlı. Modüllerin sürümlerinin gösterilip gösterilmeyeceğini belirtir. Varsayılan değer `no` olarak belirlenmiştir.
+İsteğe bağlı. Modüllerin sürümlerinin göster olup olmadığını belirtir. Varsayılan değer `no` olarak belirlenmiştir.
 
 ## <a name="example"></a>Örnek
-Bu örnekte, geçerli işlem için modül adları, adresler ve zaman damgaları listelenmektedir.
+Bu örnekte geçerli işlem için modül adları, adresler ve zaman damgası listelendi.
 
 ```
 Debug.ListModules /Address:yes /Name:yes /Order:no /Path:no /Process:no /SymbolFile:no /SymbolStatus:no /Timestamp:yes /Version:no
@@ -80,6 +81,6 @@ Debug.ListModules /Address:yes /Name:yes /Order:no /Path:no /Process:no /SymbolF
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
 - [Nasıl Yapılır: Modüller Penceresini Kullanma](../../debugger/how-to-use-the-modules-window.md)

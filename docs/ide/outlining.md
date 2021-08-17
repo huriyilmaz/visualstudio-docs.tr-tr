@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fdd0a67bb561f3b339ad7d8f6743c51182fa74ab9fd33dbd6cb39a6bafcc4a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fc44968f42f95dcc3a7fa1ce5e80e07a0988496a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412835"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062413"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
 

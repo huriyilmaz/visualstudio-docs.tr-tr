@@ -1,6 +1,6 @@
 ---
-title: Kesme noktası oluşturma | Microsoft Docs
-description: Oturum ayıklama Yöneticisi 'nin bir kesme noktası bağlamak için gereken modül yüklendiğinde yaptığı Yöntem çağrıları hakkında bilgi edinin.
+title: Kesme Noktası Oluşturma | Microsoft Docs
+description: Bir kesme noktası bağlamak için gereken modül yüklendiğinde oturum hata ayıklama yöneticisinin çağıran yöntem çağrılarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,20 +11,21 @@ ms.assetid: 6f9f87bb-192e-45e0-9a7a-ffe729e87f7d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 719a003e3dd46f46a0bf30642bed4b428d0956f9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ff6669ad1ce27582794461bd951785c3f35cde7d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068004"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080357"
 ---
 # <a name="create-a-breakpoint"></a>Kesme noktası oluşturma
-Aşağıda, kesme noktası oluşturma işlemi açıklanmaktadır.
+Aşağıda bir kesme noktası oluşturma işlemi açıkmektedir.
 
 ## <a name="methods-in-breakpoint-creation"></a>Kesme noktası oluşturma yöntemleri
- Bir kesme noktası bağlamak için gereken modül yüklendiğinde, oturum hata ayıklama Yöneticisi (SDM) aşağıdaki yöntemleri çağırır:
+ Bir kesme noktası bağlamak için gereken modül yüklendiğinde, oturum hata ayıklama yöneticisi (SDM) aşağıdaki yöntemleri çağrıları:
 
 1. [IDebugPendingBreakpoint2::Enable](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)
 
@@ -33,7 +34,7 @@ Aşağıda, kesme noktası oluşturma işlemi açıklanmaktadır.
 3. [IDebugPendingBreakpoint2::CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)
 
     > [!NOTE]
-    > **Canbind** , yalnızca bir Kullanıcı **kesme noktaları** penceresinden bir kesme noktası yaptığında çağrılır.
+    > **CanBind** yalnızca kullanıcı Kesme Noktaları penceresinden bir kesme noktası **geldiğinde** çağrılır.
 
 4. [IDebugPendingBreakpoint2::Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
 

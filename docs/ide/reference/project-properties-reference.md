@@ -11,20 +11,21 @@ ms.assetid: eec49aec-5474-48a7-889d-709045b9a475
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e7174e15992ab6ae077847e5ee6e3467435d8ef
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01ac2b9d998ab71df356f66d1f3d70402a0f852c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952947"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062244"
 ---
-# <a name="project-properties-reference"></a>Proje Özellikleri başvurusu
+# <a name="project-properties-reference"></a>Project Özellikler başvurusu
 
 Proje özelliklerini yapılandırma ve özelleştirme hakkında daha fazla bilgi edinin.
 
-## <a name="project-properties-pages"></a>Proje özellikleri sayfaları
+## <a name="project-properties-pages"></a>Project Özellikler sayfaları
 
 | Başlık | Açıklama |
 | - | - |

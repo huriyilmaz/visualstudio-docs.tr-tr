@@ -1,6 +1,6 @@
 ---
-title: Sınıf veya tür oluştur
-description: Hızlı Eylemler ve yeniden düzenlemeler menüsünü kullanarak bir sınıf veya tür için kodu hemen oluşturma hakkında bilgi edinin.
+title: Sınıf veya tür oluşturma
+description: Bir sınıf veya tür için kodu hemen oluşturmak üzere Hızlı Eylemler ve Yeniden Düzenlemeler menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
@@ -15,83 +15,83 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: bdc33159915f4079c12cf0f282c4b1154cd9ec070acb56948870bb2497c7d276
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3af7bb3f8a52029c0b9e11df802b8f4788711af0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121318440"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034311"
 ---
-# <a name="generate-a-class-or-type-in-visual-studio"></a>Visual Studio bir sınıf veya tür oluşturma
+# <a name="generate-a-class-or-type-in-visual-studio"></a>Sınıf veya tür oluşturma Visual Studio
 
-Bu kod üretimi için geçerlidir:
+Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Bir sınıf veya tür için kodu hemen üretmenizi sağlar.
+**Ne:** Bir sınıf veya tür için kodu hemen oluşturmana olanak sağlar.
 
-**Ne zaman:** Yeni bir sınıf veya tür tanıtmanız ve bunu otomatik olarak doğru bir şekilde bildirmek istemeniz gerekir.
+**Ne zaman:** Yeni bir sınıf veya tür tanıtılır ve otomatik olarak düzgün bir şekilde bildirilir.
 
-**Neden:** Sınıfı veya türü kullanmadan önce bildirebilirsiniz, ancak bu özellik sınıfı veya türü otomatik olarak oluşturacaktır.
+**Neden:** Sınıf veya türü, kullanmadan önce bildirebilirsiniz, ancak bu özellik sınıf veya türü otomatik olarak üretir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi kırmızı dalgalı çizgi olan çizgiye yerleştirin. Kırmızı dalgalı çizgi, henüz mevcut olmayan bir sınıfı gösterir.
+1. İmlecinizi kırmızı bir geçişin bulunduğu satıra yerleştirebilirsiniz. Kırmızı geçiş, henüz mevcut olmayan bir sınıfı gösterir.
 
    - C#:
 
-       ![Vurgulanmış kod C #](media/class-highlight-cs.png)
+       ![Vurgulanan kod C #](media/class-highlight-cs.png)
 
    - Visual Basic:
 
        ![Vurgulanan kod VB](media/class-highlight-vb.png)
 
-2. Sonra, aşağıdakilerden birini yapın:
+2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
-      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
-      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
-      - Sağ üst köşedeki ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
+      - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
+      - Kırmızı çizginin üzerine gelin ve ![hata ampulü](media/error-bulb.png) simgesi görüntülenir.
+      - Sağ üst köşedeki ![hata ampulü](media/error-bulb.png) simgesi, metin imleci kırmızı çizgiyle çizgi üzerinde zaten varsa sol kenar boşluğunda görünür.
 
-      ![Sınıf önizlemesi oluştur](media/class-preview-cs.png)
+      ![Sınıf önizlemesi oluşturma](media/class-preview-cs.png)
 
-3. Açılan menüdeki seçeneklerden birini seçin:
+3. Açılan menüden seçeneklerden birini belirleyin:
 
-   - Yeni dosyada '*TypeName*' sınıfını oluştur &mdash; *TypeName*. cs/. vb adlı dosyada *TypeName* adlı bir sınıf oluşturur
-   - '*TypeName*' sınıfı oluşturma &mdash; geçerli dosyada *TypeName* adlı bir sınıf oluşturur.
-   - '*TypeName*' iç içe sınıfını oluşturma &mdash; , geçerli sınıfın içinde Iç içe yerleştirilmiş *TypeName* adlı bir sınıf oluşturur.
-   - Yeni tür üret... &mdash; Belirttiğiniz tüm özelliklerle yeni bir sınıf veya yapı oluşturur.
+   - Yeni dosyada '*TypeName*' sınıfı oluşturma &mdash; TypeName .cs/.vb adlı bir dosyada *TypeName* adlı bir sınıf oluşturur 
+   - Generate class '*TypeName*' &mdash; Geçerli dosyada *TypeName adlı* bir sınıf oluşturur.
+   - İç içe geçmiş '*TypeName*' sınıfı &mdash; oluştur Geçerli sınıfın içinde iç içe geçmiş *TypeName* adlı bir sınıf oluşturur.
+   - Yeni tür oluştur... &mdash; Belirttiğiniz tüm özelliklerle birlikte yeni bir sınıf veya yapı oluşturur.
 
    > [!TIP]
-   > Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
+   > Seçiminizi **yapmadan** önce yapılacak tüm değişiklikleri görmek için önizleme penceresinin [altındaki](../../ide/preview-changes.md) Değişiklikleri önizle bağlantısını kullanın.
 
-4. **Yeni tür öğesi oluştur** ' u seçtiyseniz **tür oluştur** iletişim kutusu açılır. Yeni türün erişilebilirliğini, türünü ve konumunu yapılandırın.
+4. Yeni tür öğesi **oluştur'ı seçtiysanız** Tür **Oluştur** iletişim kutusu açılır. Yeni türün erişilebilirliğini, türünü ve konumunu yapılandırma.
 
-   ![Tür oluştur](media/class-newtype-cs.png)
+   ![Tür oluşturma](media/class-newtype-cs.png)
 
    Seçim | Açıklama
    --- | ---
-   Access | Türü *varsayılan*, *iç* veya *genel* erişime sahip olacak şekilde ayarlayın.
-   Tip | Bu, *sınıf* veya *Yapı* olarak ayarlanabilir.
-   Name | Bu değiştirilemez ve zaten yazdığınız ad olur.
-   Project | Çözümünüzde birden fazla proje varsa, sınıfın/yapının nerede canlı olmasını istediğinizi seçebilirsiniz.
-   Dosya Adı | Yeni bir dosya oluşturabilir veya türü mevcut bir dosyaya ekleyebilirsiniz.
+   Access | Türü Varsayılan , İç *veya Genel* *erişime* *sahip olacak şekilde* ayarlayın.
+   Tip | Bu, sınıf veya *yapı* olarak *ayarlanmış olabilir.*
+   Name | Bu değiştirilemez ve önceden yazmış olduğunuz ad olur.
+   Project | Çözümünüzde birden çok proje varsa, sınıfın/yapının yaşamalarını istediğiniz yeri seçebilirsiniz.
+   Dosya Adı | Yeni bir dosya oluşturabilir veya türü var olan bir dosyaya eklemek için kullanabilirsiniz.
 
-Sınıf veya yapı oluşturulur. C# için bir Oluşturucu da oluşturulur.
+Sınıf veya yapı oluşturulur. C# için bir oluşturucu da oluşturulur.
 
 - C#
 
-   ![Sınıf sonucu oluştur C #](media/class-result-cs.png)
+   ![Sınıf sonucu oluşturma C #](media/class-result-cs.png)
 
 - Visual Basic
 
-   ![Sınıf sonucu oluştur VB](media/class-result-vb.png)
+   ![Sınıf sonucu oluşturma VB](media/class-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod oluşturma](../code-generation-in-visual-studio.md)
+- [Kod Oluşturma](../code-generation-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

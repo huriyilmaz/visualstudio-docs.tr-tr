@@ -15,15 +15,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e414b8a27ee64832d13d6f4614e53131bb9bae4dd01bee63715c9c28edf5493a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f94710fea84201af2a89dc1ce609e0de7588f0c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359643"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094964"
 ---
 # <a name="custom-tools"></a>Özel araçlar
-*Özel araçlar,* bir aracı proje içinde bir öğeyle ilişkilendirmenizi ve dosya her kaydedilebilirken bu aracı çalıştırmanızı sağlar. Bazen tek dosya oluşturucular olarak da adlandırılan bazı özel araçlar *genellikle* verilerden kod oluşturan çevirmenleri (veya tam tersi) uygulamak için kullanılır. Örneğin, tek dosya oluşturucuları [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] .settings ve  *.resx* dosyalarında kod oluşturabilir ve kaynak kodu oluşturabilir. Oluşturulan kaynak kodu, *.settings* ve *.resx* dosyalarındaki verilere kesin olarak türü kesin olarak yazarak erişim sağlar. ve [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] proje türleri özel araçları [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] destekler; proje türleri [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] desteklemez. Kendi proje türleriniz özel araçları da destekleyebilirsiniz.
+*Özel araçlar,* bir aracı proje içinde bir öğeyle ilişkilendirmenizi ve dosya her kaydedilebilirken bu aracı çalıştırmanızı sağlar. Bazen tek dosya oluşturucular olarak da adlandırılan bazı özel araçlar *genellikle* verilerden kod oluşturan çevirmenleri (veya tam tersi) uygulamak için kullanılır. Örneğin, tek dosya oluşturucuları [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] .settings ve  *.resx* dosyalarından kod oluşturabilir ve kaynak kodu oluşturabilir. Oluşturulan kaynak kodu, *.settings* ve *.resx* dosyalarındaki verilere kesin olarak türü kesin olarak yazarak erişim sağlar. ve [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] proje türleri özel araçları [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] destekler; proje türleri [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] desteklemez. Kendi proje türleriniz özel araçları da destekleyebilirsiniz.
 
  Özel araçlar, arabirimi uygulayan kayıtlı `IVsSingleFileGenerator` bileşenlerdir.
 
@@ -32,7 +32,7 @@ ms.locfileid: "121359643"
 ## <a name="in-this-section"></a>Bu bölümde
 - [Tek dosya oluşturucuları uygulama](../../extensibility/internals/implementing-single-file-generators.md)
 
- Özel bir araç uygulamak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> arabirimin nasıl kullanıldığını açıklar.
+ Özel bir araç uygulamak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> arabiriminin nasıl kullanıldığını açıklar.
 
 - [Tek dosya oluşturucuları kaydetme](../../extensibility/internals/registering-single-file-generators.md)
 

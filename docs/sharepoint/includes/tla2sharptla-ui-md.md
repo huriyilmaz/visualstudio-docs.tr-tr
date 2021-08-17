@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9d57875196c613785a1eee010c55223a0f1aa821
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c32699ff595e13b5c1315db137593163f4e28052592c776bea23471139b2422
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89324599"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122047686"
 ---
 Kullanıcı arabirimi

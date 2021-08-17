@@ -4,18 +4,19 @@ description: Bağlı bir deneyim, bir istemci makinesinden internet 'e bağlanı
 ms.date: 05/20/2021
 ms.topic: conceptual
 helpviewer_keywords: ''
-author: SayyedaM
-ms.author: sayyedamussa
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
-ms.openlocfilehash: 689fc40be8aee959023777a3fac6d9134ee979ea
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 23c8107f8a11f7947f5e03c6512cf12321b87ece565ce52c94add4545373181e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222896"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430518"
 ---
 # <a name="connected-experiences-in-visual-studio"></a>**Visual Studio bağlı deneyimler** #
 

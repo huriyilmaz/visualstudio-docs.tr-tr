@@ -1,6 +1,6 @@
 ---
-description: simgenin bir C++ AMP hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_isAcceleratorGroupSharedLocal | Microsoft Docs'
+description: Sembolün, C++ AMP Accelerator için derlenmiş kodda grup tarafından paylaşılan yerel değişkene karşılık gelen bir bayrağını alın.
+title: IDiaSymbol::get_isAcceleratorGroupSharedLocal | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,7 +20,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121379873"
 ---
 # <a name="idiasymbolget_isacceleratorgroupsharedlocal"></a>IDiaSymbol::get_isAcceleratorGroupSharedLocal
-simgenin bir C++ AMP hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.
+Sembolün, C++ AMP Accelerator için derlenmiş kodda grup tarafından paylaşılan yerel değişkene karşılık gelen bir bayrağını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_isAcceleratorGroupSharedLocal(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `BOOL`simgenin bir C++ AMP hızlandırıcısı için derlenmiş kodda paylaşılan bir yerel değişkene karşılık geldiğini gösteren bir işaretçisi. İse `TRUE` , `get_baseDataSlot` ve `get_baseDataOffset` yöntemleri değişkeni için depolama konumu bilgilerini almak üzere kullanılabilir.
+[out] Sembolün, C++ AMP Accelerator için derlenmiş kodda grup paylaşılan yerel değişkenine `BOOL` karşılık gelen bir işaretçi. `TRUE`ise, `get_baseDataSlot` `get_baseDataOffset` değişkeninin depolama konumu bilgilerini almak için ve yöntemleri kullanılabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

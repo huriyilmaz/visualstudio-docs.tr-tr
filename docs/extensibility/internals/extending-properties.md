@@ -1,6 +1,6 @@
 ---
-title: Özellikleri genişletme | Microsoft Docs
-description: Visual Studio Özellikler penceresi Özellikler listesini genişletmek için uygulamanız ve çağırmanız gereken arabirimler hakkında bilgi edinin.
+title: Özellikleri Genişletme | Microsoft Docs
+description: Uygulamalı ve uygulamalı arabirimler hakkında bilgi edinmek ve uygulamanın özellik listesini genişletmek için Visual Studio Özellikler penceresi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,70 +10,71 @@ ms.assetid: 68e2cbd4-861c-453f-8c9f-4ab6afc80e67
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b1006f74cd2de03b4fe74e090d7ffcd1c921e5d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3f631e09287c6d28aa61ea7832d3f4d5241548e1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069653"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063479"
 ---
-# <a name="extend-properties"></a>Özellikleri Genişlet
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Özellikler** penceresi, com ve com+ bileşenleri için bir evrensel Özellik tarayıcısıdır ve tüm [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ürünleri destekler. **Özellikler** penceresi, `ITypeInfo` Tümleşik GELIŞTIRME ortamındaki (IDE) diğer herhangi bir pencerede seçili olan nesnenin tasarım zamanı özelliklerini listelemek için tür bilgileri ve com+ meta verileri ile birlikte kullanılabilir.
+# <a name="extend-properties"></a>Özellikleri genişletme
+Özellikler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **penceresi** COM ve COM+ bileşenleri için evrensel bir özellik tarayıcısıdır ve tüm ürünleri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] destekler. Özellikler **penceresi,** o anda seçili olan nesnenin tasarım zamanı özelliklerini tümleşik geliştirme ortamındaki (IDE) başka bir pencerede listeleye tür bilgileri ve COM+ meta `ITypeInfo` verileriyle çalışır.
 
- Klavyede **F4** tuşuna basılarak veya **Görünüm** menüsündeki **Özellikler penceresini** seçerek açılabilen **Özellikler** penceresi, yapılandırma bağımsız, tasarım zamanı özelliklerini ve seçili nesnelerin olaylarını görüntülemek ve düzenlemek için kullanılır. Çözümlerle ve projelerle ilişkili yapılandırma bağımlı özellikler, [özellik sayfalarında](../../extensibility/internals/property-pages.md)görüntülenir. Daha fazla bilgi için [yapılandırma seçeneklerini yönetin](../../extensibility/internals/managing-configuration-options.md).
+  Klavyede **F4** tuşuna basılarak veya Görünüm menüsünde Özellikler Penceresi seçerek açılabilir Özellikler penceresi, seçili nesnelerin yapılandırmadan bağımsız, tasarım zamanı özelliklerini ve olaylarını görüntülemek ve düzenlemek için kullanılır.   Çözümler ve projelerle ilişkili yapılandırmaya bağımlı özellikler, Özellik sayfalarında [görüntülenir.](../../extensibility/internals/property-pages.md) Daha fazla bilgi için, [Yapılandırma seçeneklerini yönetme.](../../extensibility/internals/managing-configuration-options.md)
 
  ![Özellikler penceresi genel bakış](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow") Özellikler penceresi
 
- Bu bölümde, **Özellikler** penceresinin bireysel alanlarıyla ilgili ayrıntılı bilgiler ve pencereyi doldurmak için uygulamanız ve çağırmanız gereken arabirimler yer almaktadır.
+ Bu bölümde Özellikler penceresinin tek tek alanlarıyla ilgili ayrıntılı bilgiler ve pencereyi doldurmak için uygulayacak ve çağıracak arabirimler yer almaktadır. 
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Özellikler penceresi genel bakış](../../extensibility/internals/properties-window-overview.md)
 
- Araç penceresi ve belge penceresine göre **Özellikler** penceresinin amacını açıklar.
+ Araç penceresine ve **belge** penceresine göre Özellikler penceresinin amacını açıklar.
 
-- [Şablon İlkesi ve Özellikler penceresi](../../extensibility/internals/template-policy-and-the-properties-window.md)
+- [Şablon ilkesi ve Özellikler penceresi](../../extensibility/internals/template-policy-and-the-properties-window.md)
 
- Projenin bir kurumsal şablon projesinde nasıl dahil olduğunu ve bu kuruluş şablonu projesinin ilkeyi nasıl zorlayacağını açıklar.
+ Bir projenin bir kurumsal şablon projesinde nasıl yer içerdiğini ve bu kurumsal şablon projesinin ilkeyi nasıl zorlay olduğunu tartışan.
 
-- [Özellikler penceresi alanları ve arabirimleri](../../extensibility/internals/properties-window-fields-and-interfaces.md)
+- [Özellikler penceresi arabirimleri ve alanları](../../extensibility/internals/properties-window-fields-and-interfaces.md)
 
- **Özellikler** penceresinde hangi bilgilerin görüntülendiğini belirleyen seçimin temelini açıklar.
+ Özellikler penceresinde hangi bilgilerin görüntülenmiyor olduğunu belirleyen seçimin **temelini** açıklar.
 
-- [Özellikler penceresi nesne listesi](../../extensibility/internals/properties-window-object-list.md)
+- [Özellikler penceresi listesi](../../extensibility/internals/properties-window-object-list.md)
 
- Bu listedeki farklı bir nesnenin bir çağrıyı tetiklediği, ortamın yeni bir nesne seçilmiş olduğunu bilgilendirdiğini açıklayan **Özellikler** penceresi nesne listesinin amacını açıklar.
+ Özellikler penceresi nesne  listesinin amacını açıklar ve bu listeden farklı bir nesnenin bir çağrıyı tetikleyene kadar ortamda yeni bir nesnenin seçili olduğu konusunda nasıl bilgi sahibi olduğunu açıklar.
 
 - [Özellikler penceresi düğmeleri](../../extensibility/internals/properties-window-buttons.md)
 
- **Özellikler** penceresi araç çubuğunda görünen dört varsayılan düğmenin amacını açıklar.
+ Özellikler penceresi araç çubuğunda görüntülenen dört varsayılan **düğmenin** amacını açıklar.
 
-- [Özellikler görüntü Kılavuzu](../../extensibility/internals/properties-display-grid.md)
+- [Özellikler görüntüleme kılavuzu](../../extensibility/internals/properties-display-grid.md)
 
- Özellik adlarının ve özellik değerleri alanlarının kılavuzda nerede bulunduğu açıklanmaktadır.
+ Özellik adları ve özellik değerleri alanlarının kılavuzda nerede yer alan olduğunu açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Proje türleri](../../extensibility/internals/project-types.md)
+- [Project türleri](../../extensibility/internals/project-types.md)
 
- Projeleri IDE 'nin yapı taşları olarak açıklar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ Projeleri IDE'nin yapı taşları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] olarak ele almaktadır.
 
 - [Derleme ve oluşturma](../../ide/compiling-and-building-in-visual-studio.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Uygulamaları oluştururken sürekli test ve hata ayıklama için platformu nasıl kullanabileceğinizi açıklar.
+ Uygulamaları derleme sırasında sürekli test etmek [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve hata ayıklamak için platformu nasıl kullanabileceğinizi açıklar.
 
-- [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)
+- [ıdispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
- `IDispatch`Bir nesnenin yöntemleri ve özellikleri hakkında bilgi almak ve erişmek için bir geç bağlantılı mekanizma sağlamak üzere ilk olarak Otomasyonu destekleyecek şekilde tasarlanan arabirimi açıklar.
+ Bir nesnenin yöntemleri ve özellikleri hakkında bilgilere erişmek ve bu bilgileri almak için geç bağlı bir mekanizma sağlayarak, ilk olarak otomasyonu destekleyecek `IDispatch` şekilde tasarlanmış arabirimini açıklar.
 
 - [Uygulama ayarlarını yönetme (.NET)](../../ide/managing-application-settings-dotnet.md)
 
- Uygulamanızı, özellik değerlerinin uygulamanın derlenmiş kodu yerine bir dış yapılandırma dosyasında depolanması için yapılandırmanıza olanak sağlayan uygulama ayarlarına genel bir bakış sağlar.
+ Özellik değerlerinin, uygulamanın derlenmiş kodu yerine bir dış yapılandırma dosyasında depolandığı şekilde, uygulama ayarlarını yapılandırmanıza izin veren bir genel bakış sağlar.
 
 - [Çözümler ve projeler](../../ide/solutions-and-projects-in-visual-studio.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Çözümler ve projeler aracılığıyla geliştirme çabalarınız için gereken başvurular, veri bağlantıları, klasörler ve dosyalar gibi öğeleri verimli bir şekilde nasıl yönettiğini açıklar.
+ Çözümler ve projeler aracılığıyla geliştirme çalışmanız için gereken başvurular, veri bağlantıları, klasörler ve dosyalar gibi öğeleri ne kadar verimli [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir şekilde yönetebilirsiniz?
 
-- [Visual Studio 'nun diğer kısımlarını genişletme](../../extensibility/extending-other-parts-of-visual-studio.md)
+- [Diğer bölümleri Visual Studio](../../extensibility/extending-other-parts-of-visual-studio.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hizmetlerin, geri kalanı ile eşleşen kullanıcı arabirimi öğeleri oluşturmak için nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ Hizmetlerinin, geri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kalanıyla eşan kullanıcı arabirimi öğeleri oluşturmak için nasıl kullanılası [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] açıklanmış.

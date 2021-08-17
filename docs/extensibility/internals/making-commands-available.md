@@ -16,16 +16,16 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f845644650c3ed87d0a62543da5a8155dcf806b02b8cb65db30e5297350ee185
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c92d9b34c669f5de4df8b9bd42cfb9e9e53996e2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121305561"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063258"
 ---
 # <a name="making-commands-available"></a>Komutları kullanılabilir yapma
 
-Kullanıcı arabirimine birden çok VSPackage Visual Studio kullanıcı arabirimi (UI) komutlarıyla aşırı kalabalık hale geliyor olabilir. Bu sorunu azaltmaya yardımcı olmak için paketinizi aşağıdaki gibi programabilirsiniz:
+Bir kullanıcı arabirimine birden çok VSPackage Visual Studio, kullanıcı arabirimi (UI) komutlarıyla aşırı kalabalık hale geliyor olabilir. Bu sorunu azaltmaya yardımcı olmak için paketinizi aşağıdaki gibi programabilirsiniz:
 
 - Paketi yalnızca bir kullanıcı gerektirdiğinde yüklenecek şekilde programla.
 
@@ -48,7 +48,7 @@ Aşağıdaki örnek, bir .vsct dosyasından menü komutunun tanımını gösteri
 </Button>
 ```
 
-Örnekte, üst grup , Araçlar menüsü gibi üst düzey bir menenin alt öğesi ise, komut bu menüde görünür, ancak komutu yürüten paket, komut bir kullanıcı tarafından tıklanmazsa `MyMenuGroup` yüklenmez.  Ancak, komutunu arabirimini uygulayacak şekilde programlaarak, komutu içeren menü ilk kez genişletilirken <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> paketin yüklenmelerini etkinleştirebilirsiniz.
+Örnekte, üst grup Araçlar menüsü gibi üst düzey bir menenin alt öğesi ise, komut bu menüde görünür, ancak komutu yürüten paket, komut bir kullanıcı tarafından tıklanmazsa `MyMenuGroup` yüklenmez.  Ancak, komutunu arabirimini uygulayacak şekilde programlaarak, komutu içeren menü ilk kez genişletilirken <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> paketin yüklenmelerini etkinleştirebilirsiniz.
 
 Gecikmeli yüklemenin başlangıç performansını da geliştirebilir.
 
@@ -97,7 +97,7 @@ Paketin kendisini yüklemeden IDE'de bir paket komutunu görüntü veya gizleyeb
 
 ### <a name="custom-context-guids"></a>Özel bağlam GUID'leri
 
-Uygun bir komut bağlamı GUID'si önceden tanımlanmamışsa, VSPackage içinde bir tane tanımlayabilir ve komutlarınızı görünürlüğünü kontrol etmek için gerektiğinde etkin veya etkin değil olarak programabilirsiniz. Hizmeti kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> şunları yapmak için:
+Uygun bir komut bağlamı GUID'si önceden tanımlanmamışsa VSPackage içinde bir tane tanımlayabilir ve komutlarınızı görünürlüğünü kontrol etmek için gerektiğinde etkin veya etkin değil olarak programabilirsiniz. Hizmeti kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> şunları yapmak için:
 
 - Bağlam GUID'lerini kaydetme (yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.GetCmdUIContextCookie%2A> çağırarak).
 

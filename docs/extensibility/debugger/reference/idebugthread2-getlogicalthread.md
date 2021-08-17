@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d7de78853611e8ef117fc7a4afc68648e6d3d4741796f1162f09b759331d9c9d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: de33532e0d81287b44e9e623df683c9a76de1a7c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389494"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029572"
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
 Hata ayıklama motorları bu yöntemi uygulamaz.

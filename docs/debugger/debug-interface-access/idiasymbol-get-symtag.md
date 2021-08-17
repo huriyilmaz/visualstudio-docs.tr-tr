@@ -11,14 +11,15 @@ ms.assetid: 139a35bd-faeb-4878-be72-394dedfbb18f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d8988efac8f29ec587a48568a9b61a40d7c710b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f224cae40faec38a3ebbf91da31ed2378d7943bc86823c59ef05cf1d29bbd725
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155735"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436390"
 ---
 # <a name="idiasymbolget_symtag"></a>IDiaSymbol::get_symTag
 Sembol türü sınıflandırıcısını alır.

@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 12cd8d34e2ac7567e4f3c9a07ab2a779b070a189f2b5d90da5b1b62412c8d6c1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 76272c69b636da2bb104a28049f2dd31c88f9527
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121426982"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033700"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line"></a>nasıl yapılır: komut satırını kullanarak uygulama istatistikleri toplamak için profil oluşturucuyu bir ASP.NET web uygulamasına iliştirme
 bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir ASP.NET Web uygulamasına profiler eklemek ve örnekleme yöntemini kullanarak performans istatistikleri toplamak için Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
@@ -106,26 +106,26 @@ bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir ASP.
 
  **VSPerfCLREnv/globaloff** komutu profil oluşturma ortam değişkenlerini temizler. Yeni ortam ayarlarının uygulanması için bilgisayarı yeniden başlatmanız gerekir.
 
- **VSPerfClrEnv /globaloff** komutu profil oluşturma ortam değişkenlerini temizler, ancak bilgisayar yeniden başlatana kadar sistem yapılandırması sıfırlanmaz.
+ **VSPerfCLREnv/globaloff** komutu profil oluşturma ortam değişkenlerini temizler, ancak bilgisayar yeniden başlatılana kadar sistem yapılandırması sıfırlanmaz.
 
-#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sona erdir
+#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sonlandırmak için
 
-1. Profilleyiciyi hedef uygulamadan ayırmak için aşağıdakilerden birini yapın:
+1. Profil oluşturucuyu hedef uygulamadan ayırmak için aşağıdakilerden birini yapın:
 
-   - **VSPerfCmd /detach yazın**
+   - **VSPerfCmd/detach** yazın
 
       -veya-
 
-   - Çalışan [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] işlemini kapatın.
+   - [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Çalışan işlemini kapatın.
 
-2. Profilleyiciyi kapatın. Tür:**VSPerfCmd** [/shutdown](../profiling/shutdown.md)
+2. Profil oluşturucuyu kapatın. Tür:**VSPerfCmd** [/Shutdown](../profiling/shutdown.md)
 
-3. (İsteğe bağlı) Profil oluşturma ortam değişkenlerini temizleme. Şunu yazın:
+3. Seçim Profil oluşturma ortamı değişkenlerini temizleyin. Şunu yazın:
 
-    **VSPerfCmd /globaloff**
+    **VSPerfCmd/globaloff**
 
 4. Bilgisayarı yeniden başlatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Web ASP.NET profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Örnekleme yöntemi veri görünümleri](../profiling/profiler-sampling-method-data-views.md)

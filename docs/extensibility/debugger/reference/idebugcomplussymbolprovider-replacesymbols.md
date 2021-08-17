@@ -1,6 +1,6 @@
 ---
-description: Geçerli hata ayıklama sembollerini, belirtilen veri akışındaki verilerle değiştirir.
-title: 'IDebugComPlusSymbolProvider:: Lacesymbir | Microsoft Docs'
+description: Geçerli hata ayıklama sembollerini belirtilen veri akışındaki sembollerle değiştirir.
+title: IDebugComPlusSymbolProvider::ReplaceSymbols | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b9ac9c1101d162456fa66773076eda49172cec7263a5ff28e3223b95efb04566
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4fc12a5445297e0d91be69ca0f1ec3db7ea1d98e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390261"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079746"
 ---
 # <a name="idebugcomplussymbolproviderreplacesymbols"></a>IDebugComPlusSymbolProvider::ReplaceSymbols
-Geçerli hata ayıklama sembollerini, belirtilen veri akışındaki verilerle değiştirir.
+Geçerli hata ayıklama sembollerini belirtilen veri akışındaki sembollerle değiştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +46,19 @@ int ReplaceSymbols(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-'ndaki Uygulama etki alanının tanımlayıcısı.
+[in] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-'ndaki Modülün benzersiz tanıtıcısı.
+[in] Modülün benzersiz tanımlayıcısı.
 
 `pStream`\
-'ndaki Yeni sembolleri içeren veri akışı.
+[in] Yeni sembolleri içeren veri akışı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::ReplaceSymbols(

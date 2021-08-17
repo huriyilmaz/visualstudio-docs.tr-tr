@@ -11,17 +11,18 @@ ms.assetid: f58575db-f926-4ac8-83ff-7b3b86ab61e2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 72cb26cf71b2994b25033d61adea52e8439d2fbd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8e06aa9bec22ce0270465e3e414242c36510e997
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092312"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064246"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
 Daha sonraki değerlendirme için metin biçimindeki bir ifadeyi ayrıştırır.

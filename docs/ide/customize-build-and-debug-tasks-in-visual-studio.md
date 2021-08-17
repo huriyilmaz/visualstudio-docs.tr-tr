@@ -1,6 +1,6 @@
 ---
 title: JSON dosyalarıyla derleme hata ayıklama görevlerini özelleştirme
-description: Bazı yapılandırma ayrıntılarını sağlamak için görevleri özelleştirmeyi ve bu temelin tanımadığını Visual Studio hata ayıklamayı öğrenin.
+description: Visual Studio tanımadığı bir kod temeli çalıştırmak ve hata ayıklamak üzere görevleri özelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
@@ -16,46 +16,46 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bfd9ede5f26c2e872f3339f15b17b4835b40312de17de2a5316f6448a01e61c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d05ffcc5140edcf04dd03b591df100831304fc6b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121259376"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049031"
 ---
-# <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>"Klasör Aç" geliştirme için derleme ve hata ayıklama görevlerini özelleştirme
+# <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>"Klasör aç" geliştirmesi için derleme ve hata ayıklama görevlerini özelleştirin
 
-Visual Studio dili ve kod tabanını nasıl çalıştıracaklarını biliyor ama her şeyi nasıl çalıştıracaklarını bilmiyor. Visual Studio'de bir kod Visual Studio ve kodunuzun nasıl çalıştırılamadı yapılandırmasını biliyorsanız, bu klasörü ek bir yapılandırma olmadan hemen çalıştırabilirsiniz. [](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+Visual Studio birçok farklı dili ve kod esaslarını çalıştırmayı bilir, ancak her şeyin nasıl çalıştırılacağını bilmez. Visual Studio [bir kod klasörünü açtıysanız](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) Visual Studio ve kodunuzu nasıl çalıştıracağınızı biliyorsanız, ek bir yapılandırma olmadan hemen çalıştırabilirsiniz.
 
-Kod temeli, Visual Studio tanımaz özel derleme araçları kullanıyorsa, kod üzerinde çalıştırmak ve hata ayıklamak için bazı yapılandırma ayrıntılarını Visual Studio. Derleme görevlerini tanımlayarak Visual Studio nasıl derlemeniz *gerektirebilirsiniz?* Bir dilin kodunu derlemesi ve çalıştırması için gereken tüm öğeleri belirtmek için bir veya daha fazla derleme görevi oluşturabilirsiniz. Ayrıca, neredeyse istediğiniz her şeyi gerçekleştirebilir rastgele görevler de oluşturabilirsiniz. Örneğin, bir klasörün içeriğini listeleye veya bir dosyayı yeniden adlandırmaya yönelik bir görev oluşturabilirsiniz.
+kod temeli Visual Studio tanımadığı özel yapı araçları kullanıyorsa, çalıştırmak ve Visual Studio kodda hata ayıklamak için bazı yapılandırma ayrıntılarını sağlamanız gerekir. *derleme görevlerini* tanımlayarak kodunuzun nasıl oluşturulacağını Visual Studio söyleyebilirsiniz. Bir dilin kodunu derlemek ve çalıştırmak için gereken tüm öğeleri belirtmek için bir veya daha fazla yapı görevi oluşturabilirsiniz. İstediğiniz neredeyse her şeyi yapabildiği rastgele görevler de oluşturabilirsiniz. Örneğin, bir klasörün içeriğini listelemek veya bir dosyayı yeniden adlandırmak için bir görev oluşturabilirsiniz.
 
-Aşağıdaki *.json* dosyalarını kullanarak projeniz olmayan kod tabanınızı özelleştirin:
+Aşağıdaki *. JSON* dosyalarını kullanarak proje-Less kod tabanınızı özelleştirin:
 
 |Dosya adı|Amaç|
 |-|-|
-|*tasks.vs.js*|Özel derleme komutlarını ve derleyici anahtarlarını ve rastgele (derlemeyle ilgili olmayan) görevleri belirtin.<br>Görevler'i **Çözüm Gezgini** menü öğesi aracılığıyla **erişilir.**|
-|*launch.vs.js*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>Uygulama aracılığıyla **erişilen Çözüm Gezgini** menü öğesi hata ayıkla ve **Başlat'a Ayarlar.**|
+|*Üzerindetasks.vs.js*|Özel derleme komutları ve derleyici anahtarları ve rastgele (derleme olmayan ilişkili) görevleri belirtin.<br>**Çözüm Gezgini** sağ tıklama menü öğesi **görevleri Yapılandır**' ı kullanarak erişilir.|
+|*Üzerindelaunch.vs.js*|Hata ayıklama için komut satırı bağımsız değişkenlerini belirtin.<br>**Çözüm Gezgini** sağ tıklayıp menü öğesi **hata ayıklama ve Ayarlar başlatın**.|
 
-Bu *.json* dosyaları, kod tabanının kök klasöründe *.vs* adlı gizli bir klasörde bulunur. Dosyalarda *tasks.vs.js* ve launch.vs.js, Visual Studio'de bir dosya veya klasörde Görevleri Yapılandır veya Hata  Ayıkla  ve Ayarlar'yi Başlat'ı seçerseniz, **Çözüm Gezgini.** Kullanıcılar genellikle bunları kaynak denetimine almak istemediklerine göre bu *.json* dosyaları gizlenir. Ancak, bunları kaynak denetimine kontrol etmek için dosyaları kod tabanının köküne sürükleyin ve burada görünürler.
+Bu *. JSON* dosyaları, kod tabanınızın kök klasöründe *vs. ile* adlı gizli bir klasörde bulunur. dosyalardaki *tasks.vs.js* ve *launch.vs.js* , **Çözüm Gezgini** bir dosya veya klasör üzerinde **görevleri yapılandır** veya **hata ayıkla ve Ayarlar başlat ' ı** seçerek Visual Studio tarafından gerekli bir şekilde oluşturulur. Kullanıcılar genellikle kaynak denetimine denetlemek istemediğinden, bu *. JSON* dosyaları gizlidir. Ancak onları kaynak denetimine denetleyebilmek istiyorsanız, dosyaları görünür oldukları kod tabanınızın köküne sürükleyin.
 
 > [!TIP]
-> Dosya çubuğunda gizli Visual Studio görüntülemek için, araç **çubuğundaki** Tüm Dosyaları **Göster Çözüm Gezgini** seçin.
+> gizli dosyaları Visual Studio görüntülemek için, **Çözüm Gezgini** araç çubuğunda **tüm dosyaları göster** düğmesini seçin.
 
-## <a name="define-tasks-with-tasksvsjson"></a>Görev tanımlama ve tasks.vs.jstanımlama
+## <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.jsile görevleri tanımlama
 
-Derleme betiklerini veya geçerli çalışma alanınıza sahip dosyalarınız üzerinde herhangi bir dış işlemi doğrudan IDE'de görev olarak çalıştırarak otomatik hale abilirsiniz. Bir dosya veya klasöre sağ tıklar ve Görevleri Yapılandır'ı seçerek yeni bir **görev yapılandırabilirsiniz.**
+Mevcut çalışma alanınızda bulunan dosyalar üzerinde, derleme betikleri veya diğer dış işlemleri otomatikleştirebilir ve bunları doğrudan IDE 'de görevler olarak çalıştırabilirsiniz. Bir dosya veya klasöre sağ tıklayıp **görevleri Yapılandır**' ı seçerek yeni bir görev yapılandırabilirsiniz.
 
-![Görevleri Yapılandır menüsü](../ide/media/customize-configure-tasks-menu.png)
+![Görevler menüsünü Yapılandır](../ide/media/customize-configure-tasks-menu.png)
 
-Bu, .vs klasöründe *tasks.vs.jsdosyasını* oluşturur *(veya* açar). Bu dosyada bir derleme görevi veya rastgele görev tanımlayabilir ve ardından sağ tıklama  menüsünden Çözüm Gezgini çağırabilirsiniz.
+Bu, *. vs* klasöründeki dosyasında *tasks.vs.js* oluşturur (veya açar). Bu dosyada bir yapı görevi veya rastgele bir görev tanımlayabilir ve sonra **Çözüm Gezgini** sağ tıklama menüsünde bunu verdiğiniz adı kullanarak çağırabilirsiniz.
 
-Özel görevler tek tek dosyalara veya belirli bir türe sahip tüm dosyalara eklenebilir. Örneğin, NuGet dosyaları bir "Paketleri Geri Yükle" görevine sahip olacak şekilde ya da tüm kaynak dosyalar, tüm paket dosyaları için bir linter gibi statik bir analiz görevi olacak *şekilde ya*.jsolabilir.
+Özel görevler tek tek dosyalara veya belirli bir türdeki tüm dosyalara eklenebilir. örneğin, NuGet paket dosyaları bir "paket geri yükleme" görevine sahip olacak şekilde yapılandırılabilir veya tüm kaynak dosyaları, tüm *.js* dosyaları için bir kater gibi bir statik analiz görevine sahip olacak şekilde yapılandırılabilir.
 
-### <a name="define-custom-build-tasks"></a>Özel derleme görevleri tanımlama
+### <a name="define-custom-build-tasks"></a>Özel derleme görevlerini tanımlama
 
-Kod tabanınız, Visual Studio tanımaz özel derleme araçları kullanıyorsa, bazı yapılandırma adımlarını tamamlayana kadar kodu Visual Studio içinde çalıştıramaz ve hata ayıkamazsiniz. Visual Studio, *kodunuzu derleme,* yeniden derleme ve temizleme Visual Studio anlatabilirsiniz derleme görevleri sağlar. Derleme *tasks.vs.jsdosyası,* iç geliştirme Visual Studio kod tabanınız tarafından kullanılan özel derleme araçlarına uygundur.
+kod tabanınız Visual Studio tanımadığı özel yapı araçları kullanıyorsa, bazı yapılandırma adımlarını tamamlayana kadar Visual Studio kodu çalıştıramazsınız ve hatalarını ayıklayamazsınız. Visual Studio, kodunuzu oluşturma, yeniden oluşturma ve temizleme Visual Studio söyleyebileceğiniz *derleme görevleri* sağlar. derleme görev dosyasında *tasks.vs.js* , kod tabanınızın kullandığı özel derleme araçlarına Visual Studio iç geliştirme döngüsünü bağar.
 
-*hello.cs* adlı tek bir C# dosyasından oluşan bir kod tabanı düşünün. Böyle *bir kod* temeli için makefile şöyle olabilir:
+*Hello. cs* adlı tek bir C# dosyasından oluşan bir kod temeli düşünün. Böyle bir kod temeli için *derleme görevleri dosyası* şöyle görünebilir:
 
 <!-- markdownlint-disable MD010 -->
 ```makefile
@@ -76,7 +76,7 @@ bin:
 ```
 <!-- markdownlint-enable MD010 -->
 
-Derleme, *temizleme ve* yeniden derleme hedeflerini içeren böyle bir derleme dosyası için aşağıdakitasks.vs.js *tanımlayabilirsiniz.* Derleme aracı olarak NMAKE kullanarak kod tabanını oluşturmak, yeniden derlemek ve temizlemek için üç derleme görevi içerir.
+Oluşturma, temizleme ve yeniden oluşturma hedeflerini içeren böyle bir *derleme görevleri* dosyası için, dosyasında aşağıdaki *tasks.vs.js* tanımlayabilirsiniz. Derleme aracı olarak NMAKE kullanarak kod temeli oluşturmaya, yeniden oluşturmaya ve temizlemeye yönelik üç derleme görevi içerir.
 
 ```json
 {
@@ -120,20 +120,20 @@ Derleme, *temizleme ve* yeniden derleme hedeflerini içeren böyle bir derleme d
 }
 ```
 
-üzerinde derleme görevleri tanımladığınız *tasks.vs.js,* öğesinde ilgili dosyalara ek sağ tıklama menüsü (bağlam menüsü) **öğeleri Çözüm Gezgini.** Bu örnekte, herhangi bir derleme dosyası dosyasının bağlam menüsüne "derleme", "yeniden derleme" ve *"temizleme" seçenekleri* eklenir.
+*tasks.vs.jsüzerinde* yapı görevlerini tanımladıktan sonra, **Çözüm Gezgini** ilgili dosyalara sağ tıklama menüsü (bağlam menüsü) öğeleri eklenir. Bu örnek için, "derleme", "yeniden derleme" ve "Temizleme" seçenekleri, *derleme görevleri* dosyası dosyalarının bağlam menüsüne eklenir.
 
-![derleme, yeniden derleme ve temizleme ile derleme dosyası bağlam menüsü](media/customize-build-rebuild-clean.png)
+![derleme, yeniden oluşturma ve Temizleme ile derleme görevleri dosyası bağlam menüsü](media/customize-build-rebuild-clean.png)
 
 > [!NOTE]
-> Komutlar, ayarları nedeniyle Görevleri **Yapılandır komutunun** altındaki bağlam menüsünde `contextType` görünür. "build", "rebuild" ve "clean" derleme komutlarıdır, bu nedenle bağlam menüsünün ortasındaki derleme bölümünde görünürler.
+> Komutlar, ayarları nedeniyle **görevleri Yapılandır** komutunun altındaki bağlam menüsünde görüntülenir `contextType` . "derleme", "yeniden derleme" ve "Temizleme" yapı komutlardır, bu nedenle bağlam menüsünün ortasındaki derleme bölümünde görünürler.
 
-Bu seçeneklerden birini seçerek görev yürütülür. Çıkış, Çıkış **penceresinde,** derleme hataları ise Hata Listesinde **görünür.**
+Bu seçeneklerden birini belirlediğinizde, görev yürütülür. Çıktı, **Çıkış** penceresinde görünür ve derleme hataları **hata listesi** görüntülenir.
 
-### <a name="define-arbitrary-tasks"></a>Rastgele görevler tanımlama
+### <a name="define-arbitrary-tasks"></a>Rastgele görevleri tanımlama
 
-Tam olarak istediğiniz her şeyi *tasks.vs.js* rastgele görevler tanımlayabilirsiniz. Örneğin, o anda seçili olan dosyanın adını Çıkış penceresinde  görüntülemek veya belirtilen dizinde dosyaları listeleyecek bir görev tanımlayabilirsiniz.
+Yalnızca istediğiniz herhangi bir şeyi yapmak için dosyada *tasks.vs.js* rastgele görevler tanımlayabilirsiniz. Örneğin, seçili dosyanın adını **Çıkış** penceresinde göstermek veya belirtilen bir dizindeki dosyaları listelemek için bir görev tanımlayabilirsiniz.
 
-Aşağıdaki örnekte, tek *tasks.vs.jstanımlayan* bir dosyada bir dosyanın nasıl tanımladığı gösterir. Çağrıldığında, görev seçili durumdaki dosyanın dosya *adını*.jsgörüntüler.
+Aşağıdaki örnekte, tek bir görevi tanımlayan bir dosya *tasks.vs.js* gösterilmektedir. Çağrıldığında, görev seçili olan *.js* dosyanın dosya adını görüntüler.
 
 ```json
 {
@@ -150,18 +150,18 @@ Aşağıdaki örnekte, tek *tasks.vs.jstanımlayan* bir dosyada bir dosyanın na
 }
 ```
 
-- `taskName` sağ tıklama menüsünde görünen adı belirtir.
-- `appliesTo` komutun hangi dosyalarda gerçekleştirilecek olduğunu belirtir.
-- `command`özelliği çağrılan komutu belirtir. Bu örnekte ortam `COMSPEC` değişkeni, komut satırı yorumlayıcıyı tanımlamak ** için kullanılır ve genelliklecmd.exe.
-- `args`özelliği, çağrılan komuta geçirilen bağımsız değişkenleri belirtir.
-- Makro, `${file}` seçilen dosyayı Çözüm Gezgini. 
+- `taskName` sağ tıklama menüsünde görüntülenen adı belirtir.
+- `appliesTo` komutun hangi dosyalara uygulanabilir olduğunu belirtir.
+- `command`Özelliği çağrılacak komutu belirtir. Bu örnekte, `COMSPEC` ortam değişkeni, genellikle *cmd.exe* komut satırı yorumlayıcısını belirlemek için kullanılır.
+- `args`Özelliği, çağrılan komuta geçirilecek bağımsız değişkenleri belirtir.
+- `${file}`Makro seçili dosyayı **Çözüm Gezgini** alır.
 
-Üzerinetasks.vs.js *sonra,* klasördeki herhangi bir dosya *.js* tıklar ve Echo dosya **adı'ı seçebilirsiniz.** Dosya adı Çıkış **penceresinde** görüntülenir.
+*tasks.vs.js* kaydettikten sonra, klasördeki herhangi bir *.js* dosyasına sağ tıklayıp **yankı dosya adı**' nı seçebilirsiniz. Dosya adı **Çıkış** penceresinde görüntülenir.
 
 > [!NOTE]
-> Kod tabanınız dosyada bir tasks.vs.jsiçeriyorsa, dosyanın sağ  tıklama menüsünden veya bir dosyanın bağlam menüsünden Görevleri Yapılandır'ı seçerek bir **Çözüm Gezgini.**
+> Kod tabanınız dosya *tasks.vs.js* içermiyorsa, **Çözüm Gezgini** bir dosyanın sağ tıklama veya bağlam menüsünden **görevleri Yapılandır** ' ı seçerek bir tane oluşturabilirsiniz.
 
-Sonraki örnek, bin dizininin dosyalarını ve alt klasörlerini listeleye bir *görev* tanımlar.
+Sonraki örnek, *bin* dizininin dosyalarını ve alt klasörlerini listeleyen bir görevi tanımlar.
 
 ```json
 {
@@ -179,48 +179,48 @@ Sonraki örnek, bin dizininin dosyalarını ve alt klasörlerini listeleye bir *
 }
 ```
 
-- `${outDir}` , ilk olarak blok öncesinde tanımlanan özel bir `tasks` makro. Ardından özelliğinde `args` çağrılır.
+- `${outDir}` , bloğundan önce ilk tanımlanan özel bir makrodur `tasks` . Daha sonra `args` özelliğinde çağırılır.
 
-Bu görev tüm dosyalar için geçerlidir. Çözüm Gezgini'daki herhangi bir dosyada bağlam menüsünü açabilirsiniz. Görevin **adı** Liste Çıkışları menüsünün alt kısmında görünür. Çıkışları **Listele'yi** seçerseniz, bin *dizininin* içeriği, **dizinde** yer alan Çıkış penceresinde Visual Studio.
+Bu görev tüm dosyalar için geçerlidir. **Çözüm Gezgini** bir dosya üzerinde bağlam menüsünü açtığınızda, görevin ad **listesi çıktıları** menünün alt kısmında görünür. **Liste çıktıları**' nı seçtiğinizde, *bin* dizininin Içeriği Visual Studio ' deki **Çıkış** penceresinde listelenir.
 
 ![Bağlam menüsünde rastgele görev](../ide/media/customize-arbitrary-task-menu.png)
 
 ### <a name="settings-scope"></a>Ayarlar kapsamı
 
-Bir *tasks.vs.jskök* dizininde ve alt dizinlerde birden çok dosya dosyası olabilir. Bu tasarım, esnekliğin kod tabanının farklı alt dizinlerde farklı davranışa sahip olmasına olanak sağlar. Visual Studio tüm ayarları toplar veya geçersiz kılar ve dosyalara aşağıdaki sırayla önceliklerini ayarlar:
+Dosyalarda birden çok *tasks.vs.js* , bir kod temelinin kökünde ve alt dizinlerinde bulunabilir. Bu tasarım, kod temelinin farklı alt dizinlerinde farklı davranışa sahip olmak için esneklik sağlar. , dosyaları aşağıdaki sırada önceliklendirerek, kod temeli boyunca toplamaları veya geçersiz kılma ayarlarını Visual Studio:
 
-- Ayarlar klasörünün *.vs* dizinindeki dosyaları görüntüler.
-- Bir ayarın hesapta olduğu dizin.
-- Geçerli dizinin üst dizini, kök dizine kadar.
-- Ayarlar dizine dosya ekler.
+- kök klasörün *. vs* dizinindeki dosyaları Ayarlar.
+- Bir ayarın hesaplandığı dizin.
+- Kök dizine kadar olan geçerli dizinin üst dizini.
+- kök dizindeki dosyaları Ayarlar.
 
-Bu toplama kuralları, üzerindetasks.vs.js *geçerlidir.* Diğer dosya ayarlarının nasıl toplanmış olduğu hakkında bilgi için bu makalede bu dosyaya karşılık gelen bölüme bakın.
+Bu toplama kuralları *üzerindetasks.vs.js* için geçerlidir. Diğer dosyadaki ayarların nasıl toplandığından ilgili bilgi için, bu makaledeki dosyanın ilgili bölümüne bakın.
 
-### <a name="properties-for-tasksvsjson"></a>tasks.vs.jsözellikleri
+### <a name="properties-for-tasksvsjson"></a>tasks.vs.jsiçin Özellikler
 
-Bu bölümde, üzerinde uygulama içinde belirtebilirsiniz bazı *tasks.vs.jsaçıktır.*
+Bu bölümde, *üzerindetasks.vs.js* belirtebileceğiniz bazı özellikler açıklanmaktadır.
 
-#### <a name="appliesto"></a>Appliesto
+#### <a name="appliesto"></a>appliesTo
 
-Alanında adını belirterek herhangi bir dosya veya klasör için görevler `appliesTo` oluşturabilirsiniz, örneğin `"appliesTo": "hello.js"` . Aşağıdaki dosya maskeleri değer olarak kullanılabilir:
+Alanında adını belirterek herhangi bir dosya veya klasör için görevler oluşturabilirsiniz `appliesTo` , örneğin `"appliesTo": "hello.js"` . Aşağıdaki dosya maskeleri değer olarak kullanılabilir:
 
 |Dosya maskesi|Açıklama|
 |-|-|
-|`"*"`| görevi çalışma alanında tüm dosya ve klasörler için kullanılabilir|
-|`"*/"`| görevi çalışma alanında tüm klasörler için kullanılabilir|
-|`"*.js"`| görev, çalışma alanında uzantılı tüm *.js* kullanılabilir|
-|`"/*.js"`| görev, çalışma alanının kökünde *uzantı.js* tüm dosyalar tarafından kullanılabilir|
-|`"src/*/"`| görevi, *src* klasörünün tüm alt klasörleri tarafından kullanılabilir|
-|`"makefile"`| görevi çalışma alanı içinde *tüm makefile* dosyaları için kullanılabilir|
-|`"/makefile"`| görevi yalnızca çalışma alanının kökünde bulunan *makefile* için kullanılabilir|
+|`"*"`| görev, çalışma alanındaki tüm dosya ve klasörler için kullanılabilir|
+|`"*/"`| görev, çalışma alanındaki tüm klasörler için kullanılabilir|
+|`"*.js"`| görev, çalışma alanındaki uzantıya *.js* tüm dosyalar için kullanılabilir|
+|`"/*.js"`| görev, uzantı *.js* çalışma alanının kökündeki tüm dosyalar için kullanılabilir|
+|`"src/*/"`| görev *src* klasörünün tüm alt klasörlerinde kullanılabilir|
+|`"makefile"`| görev, çalışma alanındaki tüm *derleme görevleri* dosyası dosyaları için kullanılabilir|
+|`"/makefile"`| görev yalnızca çalışma alanının kökündeki *derleme görevleri dosyası* tarafından kullanılabilir|
 
-#### <a name="macros-for-tasksvsjson"></a>tasks.vs.jsiçin makrolar
+#### <a name="macros-for-tasksvsjson"></a>tasks.vs.jsmakrolar
 
-|Makro|Açıklama|
+|Makroya|Açıklama|
 |-|-|
-|`${env.<VARIABLE>}`| Herhangi bir ortam değişkenlerini belirtir (örneğin, ${env. Geliştirici komut istemi için ayarlanmış PATH}, ${env.COMSPEC} gibi). Daha fazla bilgi için [bkz. Geliştirici Komut İstemi Geliştirici PowerShell.](../ide/reference/command-prompt-powershell.md)|
+|`${env.<VARIABLE>}`| Herhangi bir ortam değişkenini belirtir (örneğin, $ {env. Geliştirici komut istemi için ayarlanan PATH}, $ {env. COMSPEC} ve benzeri). Daha fazla bilgi için bkz. [Geliştirici komut istemi ve geliştirici PowerShell](../ide/reference/command-prompt-powershell.md).|
 |`${workspaceRoot}`| Çalışma alanı klasörünün tam yolu (örneğin, *C:\sources\hello*)|
-|`${file}`| Bu görevi çalıştırmak için seçilen dosyanın veya klasörün tam yolu (örneğin, *C:\sources\hello\src\hello.js*)|
+|`${file}`| Bu görevi çalıştırmak için seçilen dosya veya klasörün tam yolu (örneğin, *C:\sources\hello\src\hello.js*)|
 |`${relativeFile}`| Dosya veya klasörün göreli yolu (örneğin, *src\hello.js*)|
 |`${fileBasename}`| Dosyanın yolu veya uzantısı olmayan adı (örneğin, *Merhaba*)|
 |`${fileDirname}`| Dosya adı hariç dosyanın tam yolu (örneğin, *C:\sources\hello\src*)|

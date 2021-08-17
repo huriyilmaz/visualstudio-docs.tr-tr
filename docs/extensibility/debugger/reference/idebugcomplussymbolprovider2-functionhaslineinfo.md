@@ -10,17 +10,18 @@ ms.assetid: e1b508f1-6521-492f-b110-ab957744a037
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0dbd06be472288db41a4e20bfa85fdbe23621efc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: edbd89219be3d5ef56e37f98475282d51f2eafa1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067198"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079668"
 ---
 # <a name="idebugcomplussymbolprovider2functionhaslineinfo"></a>IDebugComPlusSymbolProvider2::FunctionHasLineInfo
 Belirtilen yöntemin satır bilgilerine sahip olup olmadığını belirler.

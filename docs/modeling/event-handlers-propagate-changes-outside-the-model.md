@@ -1,6 +1,6 @@
 ---
 title: Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri
-description: Görselleştirme ve modelleme SDK 'sında, değişiklikleri mağaza dışındaki kaynaklarda yaymaya yönelik mağaza olay işleyicilerini tanımlayabileceğinizi öğrenin.
+description: Görselleştirme ve Modelleme SDK'sı ile değişiklikleri mağazanın dışındaki kaynaklara yayma için mağaza olay işleyicileri tanımlayabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,38 +13,38 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e2cd3ac4771da6d5cc5beb925e717a49b25912d22cc72e66210e34f13f46512
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0617021a5184b3812a88c26dce2c142b1d769544
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386101"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027753"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>Değişiklikleri Modelin Dışına Yayan Olay İşleyicileri
 
-görselleştirme ve modelleme SDK 'sında mağaza dışı değişkenler, dosyalar, diğer mağazalardaki modeller veya diğer Visual Studio uzantıları gibi mağaza dışındaki kaynaklara değişiklikleri yaymak için depo olay işleyicilerini tanımlayabilirsiniz. Mağaza olay işleyicileri, tetikleme olayının gerçekleştiği işlemin sonundan sonra yürütülür. Bunlar ayrıca bir geri alma veya yineleme işleminde yürütülür. Bu nedenle, mağaza kurallarından farklı olarak mağaza olayları, deponun dışındaki değerleri güncelleştirmek için en yararlı seçenektir. .NET olaylarının aksine, Store olay işleyicileri bir sınıfı dinlemek için kaydedilir: her örnek için ayrı bir işleyici kaydetmeniz gerekmez. Değişiklikleri işlemek için farklı yollar arasından nasıl seçim yapılacağı hakkında daha fazla bilgi için bkz. [yanıt verme ve yayma değişiklikleri](../modeling/responding-to-and-propagating-changes.md).
+Görselleştirme ve Modelleme SDK'sı'da mağaza dışındaki kaynaklara değişiklikleri yayan depo olay işleyicileri tanımlayabilirsiniz. Örneğin, depo dışı değişkenler, dosyalar, diğer depolarda bulunan modeller veya diğer Visual Studio uzantıları. Depolama olayı işleyicileri, tetikleyici olayın meydana geldiği işlem sona erdikten sonra yürütülür. Bunlar aynı zamanda Bir Geri Al veya Yinele işlemiyle yürütülür. Bu nedenle, depo kurallarının aksine, depo olayları en çok depo dışındaki değerleri güncelleştirmek için yararlıdır. .NET olaylardan farklı olarak, depo olay işleyicileri bir sınıfı dinlemek için kaydedilir: her örnek için ayrı bir işleyici kaydetmeye gerek yok. Değişiklikleri işlemenin farklı yolları arasında seçim yapmak hakkında daha fazla bilgi için bkz. Değişiklikleri [Yanıt verme ve Yayma.](../modeling/responding-to-and-propagating-changes.md)
 
-Grafik yüzeyi ve diğer kullanıcı arabirimi denetimleri, depo olayları tarafından işlenebilen dış kaynak örnekleridir.
+Grafik yüzeyi ve diğer kullanıcı arabirimi denetimleri, depo olayları tarafından işilebilecek dış kaynaklara örnek olarak verilmiştir.
 
-### <a name="to-define-a-store-event"></a>Bir mağaza olayını tanımlamak için
+### <a name="to-define-a-store-event"></a>Mağaza olayı tanımlamak için
 
-1. İzlemek istediğiniz olay türünü seçin. Tam liste için özelliklerine bakın <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> . Her özellik bir olay türüne karşılık gelir. En sık kullanılan olay türleri şunlardır:
+1. İzlemek istediğiniz olay türünü seçin. Tam liste için özelliklerine <xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory> bakın. Her özellik bir olay türüne karşılık gelen bir özelliktir. En sık kullanılan olay türleri:
 
-    - `ElementAdded` -bir model öğesi, ilişki bağlantısı, şekil veya bağlayıcı oluşturulduğunda tetiklenir.
+    - `ElementAdded` - model öğesi, ilişki bağlantısı, şekil veya bağlayıcı oluşturulduğunda tetiklenir.
 
-    - ElementPropertyChanged-bir `Normal` etki alanı özelliğinin değeri değiştiğinde tetiklenir. Olay yalnızca yeni ve eski değerler eşit değilse tetiklenir. Olay, hesaplanan ve özel depolama özelliklerine uygulanamaz.
+    - ElementPropertyChanged - bir etki alanı özelliğinin `Normal` değeri değiştirilse tetiklenir. Olay yalnızca yeni ve eski değerler eşit değilse tetiklenir. Olay hesaplanan ve özel depolama özelliklerine uygulanamaz.
 
          İlişki bağlantılarına karşılık gelen rol özelliklerine uygulanamaz. Bunun yerine, `ElementAdded` etki alanı ilişkisini izlemek için kullanın.
 
-    - `ElementDeleted` -bir model öğesi, ilişki, şekil veya bağlayıcı silindikten sonra tetiklenir. Öğesinin özellik değerlerine erişmeye devam edebilirsiniz, ancak diğer öğelerle hiçbir ilişkisi olmayacaktır.
+    - `ElementDeleted` - model öğesi, ilişki, şekil veya bağlayıcı silindikten sonra tetiklenir. Yine de öğenin özellik değerlerine erişebilirsiniz, ancak diğer öğelerle hiçbir ilişkisi olmaz.
 
-2. **DslPackage** projesindeki ayrı bir kod dosyasında, _yourdsl_**DocData** için kısmi bir sınıf tanımı ekleyin.
+2. **DslPackage** projesinde _ayrı bir kod dosyasına YourDsl_**DocData** için kısmi bir sınıf tanımı ekleyin.
 
-3. Aşağıdaki örnekte olduğu gibi olayın kodunu Yöntem olarak yazın. `static`Erişmek istemediğiniz müddetçe olabilir `DocData` .
+3. Aşağıdaki örnekte olduğu gibi, olayın kodunu bir yöntem olarak yazın. Erişmek `static` istemiyorsanız `DocData` olabilir.
 
-4. `OnDocumentLoaded()`İşleyiciyi kaydetmek için geçersiz kılın. Birden fazla işleyiciniz varsa, bunları aynı yerde kaydedebilirsiniz.
+4. `OnDocumentLoaded()`İşleyiciyi kaydetmek için geçersiz kılın. Birden fazla işleyiciye sahipsanız, bunların hepsini aynı yere kaydedesiniz.
 
-Kayıt kodunun konumu önemli değil. `DocView.LoadView()` alternatif bir konumdur.
+Kayıt kodunun konumu kritik değildir. `DocView.LoadView()` alternatif bir konum.
 
 ```csharp
 using System;
@@ -91,13 +91,13 @@ namespace Company.MusicLib
 }
 ```
 
-## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>Depoda geri alınamaz ayarlamalar yapmak için olayları kullanma
+## <a name="use-events-to-make-undoable-adjustments-in-the-store"></a>Mağazada Geri Alınabilir Ayarlamalar Yapmak için Olayları Kullanma
 
-Olay işleyicisi işlem tamamlandıktan sonra yürütüldüğü için mağaza olayları normalde mağaza içindeki değişiklikleri yayılırken kullanılmaz. Bunun yerine, bir mağaza kuralı kullanırsınız. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
+Olay işleyicisi, işlem işlendikten sonra yürütülür. Bunun yerine, bir mağaza kuralı kullanabilirsiniz. Daha fazla bilgi için [bkz. Kurallar Modelde Değişiklikleri Yayma.](../modeling/rules-propagate-changes-within-the-model.md)
 
-Ancak, kullanıcının ek güncelleştirmeleri özgün olaydan ayrı olarak geri almak istiyorsanız, depoya ek güncelleştirmeler yapmak için bir olay işleyicisi kullanabilirsiniz. Örneğin, küçük harf karakterlerinin albüm başlıkları için normal kural olduğunu varsayalım. Kullanıcı büyük harfe yazıldıktan sonra başlığı küçük harfe düzelten bir mağaza olay işleyicisi yazabilirsiniz. Ancak Kullanıcı, geri al komutunu kullanarak, büyük harf karakterlerini geri yükleyerek düzeltmeyi iptal edebilir. İkinci bir geri alma kullanıcının değişikliğini kaldırır.
+Bununla birlikte, kullanıcının ek güncelleştirmeleri özgün olaydan ayrı olarak geri alamalarını istemeniz durumunda depoda ek güncelleştirmeler yapmak için bir olay işleyicisi kullanabilirsiniz. Örneğin, küçük harf karakterlerinin, başlık başlıkları için her zamanki kural olduğunu varsayalım. Kullanıcı büyük harfle yazdıktan sonra başlığı küçük harfe düzelten bir mağaza olay işleyicisi yazabilir. Ancak kullanıcı, büyük harf karakterlerini geri yükleyerek düzeltmenizi iptal etmek için Geri Al komutunu kullanabilir. İkinci bir Geri Alma işlemi kullanıcının değişikliklerini kaldırır.
 
-Buna karşılık, aynı şeyi yapmak için bir mağaza kuralı aldıysanız, kullanıcının değişikliği ve düzeltmesi aynı işlemde olur, böylece kullanıcı özgün değişikliği kaybetmeden ayarlamayı geri alamazsınız.
+Buna karşılık, aynı şeyi yapmak için bir mağaza kuralı yazarsanız, kullanıcının değişikliği ve düzeltmeniz aynı işlemde olur ve böylece kullanıcı özgün değişikliği kaybetmeden ayarlamayı geri alamaz.
 
 ```csharp
 partial class MusicLibDocView
@@ -161,35 +161,35 @@ private static void AlbumTitleAdjuster(object sender,
 }
 ```
 
-Mağazayı güncelleştiren bir olay yazarsanız:
+Depoda güncelleştirmeler yapılan bir olay yazarsanız:
 
-- `store.InUndoRedoOrRollback`Geri al 'da model öğelerinde değişiklik yapmaktan kaçınmak için kullanın. İşlem Yöneticisi depodaki her şeyi özgün durumuna geri ayarlayacaktır.
+- Geri `store.InUndoRedoOrRollback` Alma'da model öğelerinde değişiklik yapmaktan kaçınmak için kullanın. İşlem yöneticisi, depoda yer alan her şeyi özgün durumuna geri ayarlar.
 
-- `store.InSerializationTransaction`Model dosyadan yüklenirken değişiklik yapmaktan kaçınmak için kullanın.
+- Model `store.InSerializationTransaction` dosyadan yüklenirken değişiklik yapmaktan kaçınmak için kullanın.
 
-- Değişiklikleriniz, daha fazla olayın tetiklenmesi için yol açacaktır. Sonsuz bir döngüden kaçındığınızdan emin olun.
+- Değişiklikleriniz daha fazla olay tetiklenir. Sonsuz döngüden kaçının.
 
-## <a name="store-event-types"></a>Olay türlerini depola
+## <a name="store-event-types"></a>Olay türlerini depolama
 
-Her olay türü Store. EventManagerDirectory içindeki bir koleksiyona karşılık gelir. Herhangi bir zamanda olay işleyicileri ekleyebilir veya kaldırabilirsiniz, ancak belge yüklendiğinde bunları eklemek her zamanki gibi olur.
+Her olay türü Store.EventManagerDirectory'de bir koleksiyona karşılık gelen bir koleksiyondur. Olay işleyicilerini istediğiniz zaman ekleyebilir veya kaldırabilirsiniz, ancak belge yüklendiğinde bunları eklemek normaldir.
 
-|`EventManagerDirectory` Özellik adı|Yürütüldüğünde yürütülür|
+|`EventManagerDirectory` Özellik adı|Şu zaman yürütülür:|
 |-|-|
-|ElementAdded|Bir etki alanı sınıfı, etki alanı ilişkisi, şekil, bağlayıcı veya Diyagram örneği oluşturulur.|
-|ElementDeleted|Bir model öğesi deponun öğe dizininden kaldırıldı ve artık hiçbir ilişkinin kaynağı veya hedefi değil. Öğe gerçekten bellekten silinmez, ancak gelecekte geri alma durumunda tutulur.|
-|Elementeventsbaşladı|Bir dış işlemin sonunda çağırılır.|
-|ElementEventsEnded|Tüm diğer olaylar işlendiğinde çağrılır.|
-|Elementtaşındı|Bir model öğesi bir depolama bölümünden diğerine taşındı.<br /><br /> Bu, diyagramdaki bir şeklin konumuyla ilgili değildir.|
-|ElementPropertyChanged|Bir etki alanı özelliğinin değeri değişti. Bu, yalnızca eski ve yeni değerler eşit değilse yürütülür.|
-|Roleplayerdeğişti|Bir ilişkinin iki rolünden biri (bitiyor), yeni bir öğeye başvurur.|
-|RolePlayerOrderChanged|1 ' den büyük çokluğa sahip bir rolde, bağlantıların sırası değişmiştir.|
-|Işlem başlangıcı||
-|Işlem yürütüldü||
+|Elementadded|Bir etki alanı sınıfı, etki alanı ilişkisi, şekil, bağlayıcı veya diyagram örneği oluşturulur.|
+|ElementDeleted|Model öğesi mağazanın öğe dizininden kaldırılmıştır ve artık hiçbir ilişkinin kaynağı veya hedefi değildir. öğesi bellekten silinmez, ancak gelecekteki bir Geri Alma durumunda korunur.|
+|ElementEventsBegun|Dış işlem sonunda çağrılır.|
+|ElementEventsEnded|Diğer tüm olaylar işlendiğinde çağrılır.|
+|ElementMoved|Bir model öğesi bir mağaza bölümden diğerine taşındı.<br /><br /> Bu, diyagramda bir şeklin konumuyla ilgili değildir.|
+|ElementPropertyChanged|Bir etki alanı özelliğinin değeri değişmiştir. Bu yalnızca eski ve yeni değerler eşitsizlikse yürütülür.|
+|RolePlayerChanged|bir ilişkinin iki rolü (sona erer) biri yeni bir öğeye başvurur.|
+|RolePlayerOrderChanged|Çokluğu 1'den büyük olan bir rolde bağlantı dizisi değişmiştir.|
+|TransactionBeginning||
+|TransactionCommitted||
 |TransactionRolledBack||
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Değişikliklere Yanıt Verme ve Değişiklikleri Yayma](../modeling/responding-to-and-propagating-changes.md)
-- [Örnek kod: devre şemaları](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [Örnek kod: Devre Diyagramları](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

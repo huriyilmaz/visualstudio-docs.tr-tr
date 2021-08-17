@@ -11,17 +11,18 @@ ms.assetid: 0248430a-3b61-4809-87a9-e9b6bb7d1130
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7bb3ea3220c6b4be74e0767f0e88ab1b46d2685c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88334ae13ca4941749c2a7434e0829b880074cde5397d4251849fc7bf67a6331
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096713"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417749"
 ---
 # <a name="bp_location_type"></a>BP_LOCATION_TYPE
 Kesme noktası isteği için kesme noktasının konum türünü belirtir.

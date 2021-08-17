@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 059acd0e797b4edd7f22de20560e2bb4a348228ab000f9053439949006f1b324
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 52093660a867ddac2080c68480d1138bbb6ecf12
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420399"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080945"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio 'de hata ayıklayıcı pencerelerini kullanarak verileri inceleyin
 

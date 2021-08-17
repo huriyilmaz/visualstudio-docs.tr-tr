@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem, bu bağlantı noktasının yerel makinede olup olmadığını belirler.
-title: 'IDebugDefaultPort2:: Queryıslocal | Microsoft Docs'
+title: IDebugDefaultPort2::QueryIsLocal | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,14 +11,15 @@ ms.assetid: 1a42e774-c6ed-419a-a0e3-cab5778652ca
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e678e1219bfc9c64fe33be545e82e7fbb596b2db
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c84e7d52425b6060995d7713e4aee72d931d894d9a9afc6e100c6d408d4d442f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067133"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292734"
 ---
 # <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
 Bu yöntem, bu bağlantı noktasının yerel makinede olup olmadığını belirler.
@@ -36,7 +37,7 @@ int QueryIsLocal();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- `S_OK`Bu bağlantı noktasının yerel olup olmadığını (çağıranın bulunduğu makinede) veya `S_FALSE` bağlantı noktasının başka bir makine üzerinde olup olmadığını döndürür.
+ Bu `S_OK` bağlantı noktası yerelse (arayanla aynı makinede) veya `S_FALSE` bağlantı noktası başka bir makinede ise döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

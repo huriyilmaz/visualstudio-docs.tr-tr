@@ -1,5 +1,5 @@
 ---
-title: Yük testi günlük kaydı ayarları
+title: yük testi günlüğe kaydetme Ayarlar
 description: Yük testi günlük ayarlarını, toplanan performans verilerinin miktarını denetlemek için değiştirme hakkında bilgi edinin. Bu, çok büyük sonuç dosyalarına yol açabilir.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
@@ -10,12 +10,13 @@ ms.assetid: 9649226a-857d-41ef-8ec7-047b6e498033
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: db84e5be44d70934331d9e7d9c47e78bc669bedb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 6a5ecba31faca0594ec1705054222b17f366263c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838301"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032920"
 ---
 # <a name="modify-load-test-logging-settings"></a>Yük testi günlük ayarlarını değiştir
 

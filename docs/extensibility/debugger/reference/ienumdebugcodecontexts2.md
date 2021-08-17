@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, hata ayıklama oturumuyla ilişkili kod bağlamlarını veya belirli bir program veya belgeyi sıralar.
+description: Bu arabirim, hata ayıklama oturumuyla veya belirli bir program ya da belgeyle ilişkili kod bağlamlarını numaralar.
 title: IEnumDebugCodeContexts2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 490c15afea7e7034cad00398c02026ae2460d294be686f874d23e0105798091e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8b52be981dbda8bb3b73fc2596dc8988e021765d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121238807"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095627"
 ---
 # <a name="ienumdebugcodecontexts2"></a>IEnumDebugCodeContexts2
-Bu arabirim, hata ayıklama oturumuyla ilişkili kod bağlamlarını veya belirli bir program veya belgeyi sıralar.
+Bu arabirim, hata ayıklama oturumuyla veya belirli bir program ya da belgeyle ilişkili kod bağlamlarını numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,34 +30,34 @@ Bu arabirim, hata ayıklama oturumuyla ilişkili kod bağlamlarını veya belirl
 IEnumDebugCodeContexts2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), bir programdaki belirli bir metin konumu için kod bağlamlarının listesini ya da belirli bir belge bağlamı için kod bağlamlarının listesini göstermek üzere bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), bir programda belirli bir metin konumu için kod bağlamlarının listesini veya belirli bir belge bağlamı için kod bağlamlarının listesini temsil etmek üzere bu arabirimi uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir programın kaynak belgesindeki belirli bir metin konumu için kod bağlamlarının bir listesini temsil eden bu arabirimi almak için [Enumcodebağlamlarını](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md) çağırın.
+ Bir programın kaynak belgesinde belirli bir metin konumu için kod bağlamlarının listesini temsil eden bu arabirimi elde etmek için [EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md) çağrısı.
 
- Belirli bir kaynak belgedeki tüm kod bağlamlarının listesini temsil eden bu arabirimi almak için [Enumcodebağlamlarını](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md) çağırın.
+ Belirli bir kaynak belgede tüm kod bağlamlarının listesini temsil eden bu arabirimi elde etmek için [EnumCodeContexts](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md) çağrısı.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IEnumDebugCodeContexts2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IEnumDebugCodeContexts2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Sonraki](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)|Sabit Listesi dizisinde belirtilen sayıda kod bağlamı alır.|
-|[Atla](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-skip.md)|Sabit Listesi dizisinde belirtilen sayıda kod bağlamlarını atlar.|
-|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-getcount.md)|Bir Numaralandırıcı içindeki kod bağlamlarının sayısını alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)|Bir numaralama dizisinde belirtilen sayıda kod bağlamını alan.|
+|[Atla](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-skip.md)|Bir numaralama dizisinde belirtilen sayıda kod bağlamını atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-getcount.md)|Numaralayıcıda kod bağlamlarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, kullanıcının sonraki ifadeyi ayarlarken veya bir kaynak dosya için ayrıştırılmış kodu göstererek bir kod bağlamlarının listesini doldurmak üzere [enumcodebağlamlarını](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md) çağırır. Birden çok kod bağlamı oluşabilir, örneğin, C++ stilinde bir şablonun birden çok örneği olduğunda.
+ Visual Studio, kullanıcının bir sonraki deyimi ayarlarken veya kaynak dosya için disassembly'yi gösterdiği kod bağlamlarının listesini doldurmak için [EnumCodeContexts'i](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md) çağırır. Örneğin bir C++stili şablonun birden çok örneği olduğunda birden çok kod bağlamı oluşabilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

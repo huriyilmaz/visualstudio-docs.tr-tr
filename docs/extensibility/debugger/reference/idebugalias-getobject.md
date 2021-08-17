@@ -11,17 +11,18 @@ ms.assetid: 97bc3af6-6e55-4940-8a6d-692c61257806
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 53a5e984cfc0aa4bdd7d03c4ef6a130dfc960221
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7a92702163d0430e732f27f7155f2114137d00593bca90d13c49088158c08835
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085188"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121434210"
 ---
 # <a name="idebugaliasgetobject"></a>IDebugAlias::GetObject
 Bu diğer adın için olduğu nesneyi alır.

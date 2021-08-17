@@ -1,6 +1,6 @@
 ---
-title: UWP uygulamaları için uygulama Özellik sayfası
-description: Evrensel Windows Platformu (UWP) projesinin derleme ve paket bilgilerini belirtmek ve Windows 10 sürümünü hedeflemek için uygulama sayfasını nasıl kullanacağınızı öğrenin.
+title: UWP uygulamaları için uygulama özellik sayfası
+description: Evrensel Platform (UWP) projesinin derleme ve paket bilgilerini ve hedef Windows belirtmek için Uygulama sayfasını kullanmayı Windows 10 öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/23/2018
 ms.topic: reference
@@ -11,44 +11,45 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - uwp
-ms.openlocfilehash: 21dd08f81802661cae9d77ee3449f4e9369ca768
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d63e1a0d7493b4d6f56f826db72c2c328defbaac970d2d6bc18ca8b42b339c92
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965089"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430959"
 ---
 # <a name="application-property-page-uwp-projects"></a>Uygulama özellik sayfası (UWP projeleri)
 
-Evrensel Windows Platformu (UWP) projesinin derleme ve paket bilgilerini belirtmek ve Windows 10 sürümünü hedeflemek için **uygulama** özelliği sayfasını kullanın.
+Evrensel **Platform** (UWP) projesinin derleme ve paket bilgilerini ve hedef Windows sürümünü belirtmek için Uygulama özellik Windows 10 kullanın.
 
-![Uygulama özellik sayfası](media/application-page-uwp.png)
+![Uygulama özelliği sayfası](media/application-page-uwp.png)
 
-**Uygulama** sayfasına erişmek için **Çözüm Gezgini** içinde proje düğümünü seçin. Ardından   >  , menü çubuğunda Proje **özellikleri** ' ni seçin. Özellik sayfaları **uygulama** sekmesinde açılır.
+Uygulama sayfasına **erişmek** için uygulama sayfasındaki proje **Çözüm Gezgini.** Ardından menü **Project**  >  **Özellikler'i** seçin. Özellik sayfaları Uygulama **sekmesinde** açılır.
 
-## <a name="general-section"></a>Genel Bölüm
+## <a name="general-section"></a>Genel bölümü
 
-**Bütünleştirilmiş kod adı** &mdash; Derleme bildirimini tutacak çıkış dosyasının adını belirtir.
+**Derleme adı** &mdash; Derleme bildirimini tutacak çıkış dosyasının adını belirtir.
 
-Programlı olarak bu özelliğe erişmek için bkz <xref:VSLangProj.ProjectProperties.AssemblyName%2A> ..
+Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.AssemblyName%2A> .
 
-**Varsayılan ad alanı** &mdash; Projeye eklenen dosyalar için temel ad alanını belirtir. Ad alanları hakkında daha fazla bilgi için bkz. [ad alanları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), [ad alanları (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [ad alanları (C++)](/cpp/cpp/namespaces-cpp).
+**Varsayılan ad alanı** &mdash; Projeye eklenen dosyalar için temel ad alanını belirtir. Ad alanları hakkında daha fazla bilgi için bkz. Ad Alanları [(C# programlama kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), [Ad Alanları (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [Ad Alanları (C++)](/cpp/cpp/namespaces-cpp).
 
-Programlı olarak bu özelliğe erişmek için bkz <xref:VSLangProj.ProjectProperties.RootNamespace%2A> ..
+Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.RootNamespace%2A> .
 
-**Derleme bilgileri** &mdash; Bu düğme seçildiğinde, [derleme bilgileri iletişim kutusu](../../ide/reference/assembly-information-dialog-box.md)görüntülenir.
+**Derleme Bilgileri** &mdash; Bu düğmeyi seçerek [Derleme Bilgileri iletişim kutusu görüntülenir.](../../ide/reference/assembly-information-dialog-box.md)
 
-**Paket bildirimi** &mdash; Bu düğme seçildiğinde, bildirim Tasarımcısı açılır. Bildirim tasarımcısına Ayrıca **Çözüm Gezgini** _Package. appxmanifest_ dosyası seçilerek de erişilebilir. Daha fazla bilgi için bkz. [bildirim Tasarımcısı ile paket yapılandırma](/windows/msix/package/packaging-uwp-apps#configure-your-project).
+**Paket Bildirimi** &mdash; Bu düğmeyi seçmek bildirim tasarımcısını açar. Bildirim tasarımcısına, içinde _Package.appxmanifest_ dosyası seçerek de **Çözüm Gezgini.** Daha fazla bilgi için [bkz. Bildirim tasarımcısı ile paket yapılandırma.](/windows/msix/package/packaging-uwp-apps#configure-your-project)
 
 ## <a name="targeting-section"></a>Hedefleme bölümü
 
-Bu bölümdeki açılan listeleri kullanarak uygulamanız için Windows 10 ' un hedef sürümünü ve en düşük sürümünü ayarlayabilirsiniz. Windows 10 ' un en son sürümünü hedefliyorsanız ve bir kurumsal uygulama geliştiriyorsanız, daha eski bir sürümü çok daha destekliyorsanız önerilir. Hangi Windows 10 sürümü seçeceğiniz hakkında daha fazla bilgi için bkz. [UWP sürümü seçme](/windows/uwp/updates-and-versions/choose-a-uwp-version).
+Bu bölümdeki açılan listeleri kullanarak uygulamanıza yönelik Windows 10 sürümünü ve en düşük sürümünü ayarlayın. Windows 10'nin en son sürümünü hedeflemeniz ve bir kurumsal uygulama geliştiriyorsanız eski bir en düşük sürümü de desteklemeniz önerilir. Hangi sürümde hangi Windows 10 için bkz. [UWP sürümü seçme.](/windows/uwp/updates-and-versions/choose-a-uwp-version)
 
-Visual Studio 'da Platform hedefleme hakkında daha fazla bilgi için bkz. [Platform hedefleme](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting).
+Platform hedefleme hakkında daha fazla bilgi Visual Studio bkz. [Platform hedefleme.](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İlk UWP uygulamanızı oluşturma](/windows/uwp/get-started/your-first-app)
-- [UWP sürümü seçin](/windows/uwp/updates-and-versions/choose-a-uwp-version)
+- [UWP sürümü seçme](/windows/uwp/updates-and-versions/choose-a-uwp-version)

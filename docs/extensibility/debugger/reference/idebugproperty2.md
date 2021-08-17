@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a368969251eb4f47746a1cb56491cf8f0dcf3d63664835177ea690b3ecab2b6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2ee75a964ba578891a18273fae032b0013a2d5c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307004"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029924"
 ---
 # <a name="idebugproperty2"></a>IDebugProperty2
 Bu arabirim bir yığın çerçevesi özelliğini, bir program belgesi özelliğini ya da başka bir özelliği temsil eder. Özelliği genellikle bir ifade değerlendirmesinin sonucudur.

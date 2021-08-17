@@ -1,6 +1,6 @@
 ---
 title: -Upgrade (devenv.exe)
-description: Çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını bu dosyalar için geçerli dosya biçimine güncelleştirmek için Upgrade devenv komut satırı anahtarını Visual Studio öğrenin.
+description: çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını, bu dosyaların geçerli Visual Studio biçimlerine güncelleştirmek için Upgrade devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -15,16 +15,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3787cccb41738050fae1fe16e03e8a8ca273f5ebb30ac3b71e9d146c1b9e2001
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b82eb2d9be21464b0f160a114972ab6ae7df4d0b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387154"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048628"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 
-Çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını, bu dosyalar için geçerli Visual Studio olarak günceller.
+çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını, bu dosyalar için geçerli Visual Studio biçimlerine güncelleştirir.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -36,11 +36,11 @@ devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 
 - *SolutionFile*
 
-  Bir çözümün tamamını ve projelerini yükseltıyorsanız gereklidir. Çözüm dosyasının yolu ve adı. Yalnızca çözüm dosyasının adını veya tam yolu ve çözüm dosyasının adını girebilirsiniz. adlı klasör veya dosya henüz yoksa oluşturulur.
+  Bir çözümün tamamını ve projelerini yükseltiyorsanız gereklidir. Çözüm dosyasının yolu ve adı. Yalnızca çözüm dosyasının adını veya çözüm dosyasının tam yolunu ve adını girebilirsiniz. Adlı klasör veya dosya henüz yoksa, oluşturulur.
 
 - *ProjectFile*
 
-  Tek bir projeyi yükseltıyorsanız gereklidir. Çözüm içindeki bir proje dosyasının yolu ve adı. Yalnızca proje dosyasının adını veya tam yolu ve proje dosyasının adını girebilirsiniz. adlı klasör veya dosya henüz yoksa oluşturulur.
+  Tek bir projeyi yükseltiyorsanız gereklidir. Çözüm içindeki bir proje dosyasının yolu ve adı. Yalnızca proje dosyasının adını veya proje dosyasının tam yolunu ve adını girebilirsiniz. Adlı klasör veya dosya henüz yoksa, oluşturulur.
 
 - `/Out`*OutputFilename*
 
@@ -48,15 +48,15 @@ devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yedeklemeler otomatik olarak oluşturulur ve geçerli dizinde oluşturulan Backup adlı bir dizine kopyalanır.
+Yedeklemeler otomatik olarak oluşturulur ve geçerli dizinde oluşturulan yedekleme adlı bir dizine kopyalanır.
 
-Kaynak denetimli çözümlerin veya projelerin yükseltilmeden önce kullanıma alınmış olması gerekir.
+Kaynak denetimli çözümlerin veya projelerin yükseltibilmeleri için önce kullanıma alınması gerekir.
 
-anahtarı, `/Upgrade` anahtar kullanılarak Visual Studio. Yükseltmenin sonuçları, çözümün veya projenin geliştirme dili için Yükseltme Raporu'nda görülebilir. Hata veya kullanım bilgisi döndürülemedi. Visual Studio'de projeleri yükseltme hakkında daha fazla bilgi için bkz. Visual Studio [Projelerini Taşıma, Geçirme ve Yükseltme.](../../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+Anahtar kullanmak `/Upgrade` Visual Studio açmaz. Yükseltmenin sonuçları, çözüm veya projenin geliştirme dili için yükseltme raporunda görülebilir. Hata veya kullanım bilgisi döndürülmedi. projeleri Visual Studio yükseltme hakkında daha fazla bilgi için bkz. [bağlantı noktası, geçiş ve yükseltme Visual Studio projeleri](../../porting/port-migrate-and-upgrade-visual-studio-projects.md).
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, "MyProject.sln" adlı bir çözüm dosyasını yükselter.
+Bu örnek, "MyProject. sln" adlı bir çözüm dosyasını yükseltir.
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MyProject\MyProject.sln" /upgrade

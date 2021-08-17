@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 2422261a8eea07eff963d9bf94fa9db26ba7415618b7bdc2cac9b9e80f130298
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f2c5f5daed884d009ecf13a69222e58f3a654b6d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121424979"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047406"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>Kodunuzu test etmek için kodlanmış UI testi kullanın
 
@@ -379,7 +379,7 @@ Oluşturulan kod hakkında daha fazla bilgi için bkz. [Kodlanmış ui testinin 
 
 Kodlanmış UI testlerinde UI test denetimleriyle birlikte çalışıyorken bunlar iki parçaya ayrılır: eylemler ve özellikler.
 
-- İlk bölüm, kullanıcı arabirimi test denetimlerini gerçekleştirebilir eylemlerden oluşur. Örneğin, Kodlanmış UI testleri kullanıcı arabirimi test denetiminde fare tıklamalarını benzetebilir veya ui test denetimlerini etkilemesi için klavyede türe sahip anahtarların benzetimini yapabilirsiniz.
+- İlk bölüm, kullanıcı arabirimi test denetimlerini gerçekleştirebilir eylemlerden oluşur. Örneğin, Kodlanmış UI testleri kullanıcı arabirimi test denetiminde fare tıklamalarını benzetebilir veya kullanıcı arabirimi test denetimlerini etkilemesi için klavyede türe sahip anahtarların benzetimini yapabilirsiniz.
 
 - İkinci bölüm, kullanıcı arabirimi test denetiminde özellik alama ve ayarlama özelliğine olanak sağlamaktır. Örneğin, Kodlanmış UI testleri, bir 'de öğe sayısını veya `ListBox` bir'i `CheckBox` seçili durum olarak ayarlıyor olabilir.
 
@@ -397,13 +397,13 @@ Fare tıklamaları veya klavye eylemleri gibi kullanıcı arabirimi test denetim
 
 **UI Test Denetimi Özelliklerine Erişme**
 
-Kullanıcı arabirimi denetimine özgü özellik değerlerini almak ve ayarlamak için, bir denetimin özelliklerini doğrudan almak veya ayarlamak ya da ve yöntemlerini, almak veya ayarlamak istediğiniz belirli özelliğin adıyla  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A?displayProperty=fullName> <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A?displayProperty=fullName> kullanabilirsiniz.
+Ui denetimine özgü özellik değerlerini almak ve ayarlamak için, bir denetimin özelliklerini doğrudan almak veya ayarlamak ya da almak veya ayarlamak istediğiniz belirli özelliğin adıyla ve yöntemlerini  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A?displayProperty=fullName> <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A?displayProperty=fullName> kullanabilirsiniz.
 
 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A> daha sonra uygun türüne atlandırarak bir nesnesi <xref:System.Type> döndürür. <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A> özelliğinin değeri için bir nesnesi kabul eder.
 
 ### <a name="to-get-or-set-properties-from-ui-test-controls-directly"></a>Ui test denetimlerinden özellikleri doğrudan almak veya ayarlamak için
 
-<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> [HtmlList](xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList) veya [WinComboBox](xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinComboBox)gibi ' den türeyen denetimlerle, özellik değerlerini doğrudan edinebilirsiniz veya ayarlayın. Aşağıdaki kodda bazı örnekler verilmiştir:
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> [HtmlList](xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList) veya [WinComboBox](xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinComboBox)gibi ' den türeten denetimlerle, özellik değerlerini doğrudan edinebilirsiniz veya ayarlayın. Aşağıdaki kodda bazı örnekler verilmiştir:
 
 ```csharp
 int i = myHtmlList.ItemCount;
@@ -439,10 +439,10 @@ Kodlanmış UI test günlüklerini kullanarak Kodlanmış UI testlerini analiz e
 ## <a name="whats-next"></a>Sırada ne var?
 
 ::: moniker range="vs-2017"
-**Kodlanmış UI testleri çalıştırmaya ek seçenekler:** Bu konuda daha önce açıklandığı gibi, kodlanmış UI Visual Studio doğrudan bir kullanıcı arabiriminden çalıştırabilirsiniz. Ayrıca, otomatik ui testlerini Microsoft Test Yöneticisi veya Azure Pipelines. Kodlanmış UI testleri otomatikleştirildiklerinde, diğer otomatikleştirilmiş testlerin aksine, bunları çalıştırarak masaüstüyle etkileşime geçmeleri gerekir.
+**Kodlanmış UI testleri çalıştırmaya ek seçenekler:** Kodlanmış UI testlerini bu konunun Visual Studio doğrudan kodlanmış UI testlerini çalıştırabilirsiniz. Ayrıca, otomatik ui testlerini Microsoft Test Yöneticisi veya Azure Pipelines. Kodlanmış UI testleri otomatikleştirildiklerinde, diğer otomatikleştirilmiş testlerin aksine, bunları çalıştırarak masaüstüyle etkileşime geçmeleri gerekir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-**Kodlanmış UI testleri çalıştırmaya ek seçenekler:** Bu konuda daha önce açıklandığı gibi, kodlanmış UI Visual Studio doğrudan bir kullanıcı arabiriminden çalıştırabilirsiniz. Ayrıca, kullanıcı arabirimini kullanarak otomatik ui Azure Pipelines. Kodlanmış UI testleri otomatikleştirildiklerinde, diğer otomatikleştirilmiş testlerin aksine, bunları çalıştırarak masaüstüyle etkileşime geçmeleri gerekir.
+**Kodlanmış UI testleri çalıştırmaya ek seçenekler:** Kodlanmış UI testlerini bu konunun Visual Studio doğrudan kodlanmış UI testlerini çalıştırabilirsiniz. Ayrıca, kullanıcı arabirimini kullanarak otomatik ui Azure Pipelines. Kodlanmış UI testleri otomatikleştirildiklerinde, diğer otomatikleştirilmiş testlerin aksine, bunları çalıştırarak masaüstüyle etkileşime geçmeleri gerekir.
 ::: moniker-end
 
 - [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md)

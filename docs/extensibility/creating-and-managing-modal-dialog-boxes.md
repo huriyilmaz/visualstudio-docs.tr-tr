@@ -1,6 +1,6 @@
 ---
 title: Kalıcı Iletişim kutuları oluşturma ve yönetme | Microsoft Docs
-description: Visual Studio içinde, DialogWindow kullanarak ve DialogWindow 'u kullanmadan kalıcı iletişim kutusu oluşturmayı öğrenin.
+description: Visual Studio içinde, hem dialogwindow kullanarak hem de dialogwindow 'u kullanmadan kalıcı iletişim kutusu oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,17 +10,18 @@ ms.assetid: 491bc0de-7dba-478c-a76b-923440e090f3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96ac3c9ee92cd9124485dde29814f4a1e5c942c8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88c1f943fd7c8579673047acbc533ca4577992bc7e13258276496a2499129e5c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055758"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293462"
 ---
 # <a name="create-and-manage-modal-dialog-boxes"></a>Kalıcı iletişim kutuları oluşturma ve yönetme
-Visual Studio içinde kalıcı iletişim kutusu oluşturduğunuzda iletişim kutusu görüntülenirken iletişim kutusunun ana penceresinin devre dışı olduğundan emin olmanız gerekir ve iletişim kutusu kapatıldıktan sonra üst pencereyi yeniden etkinleştirin. Bunu yapmazsanız, şu hatayı alabilirsiniz: *kalıcı bir iletişim kutusu etkin olduğundan Microsoft Visual Studio kapatılamadı. Etkin iletişim kutusunu kapatın ve yeniden deneyin.*
+Visual Studio içinde kalıcı iletişim kutusu oluşturduğunuzda iletişim kutusu görüntülenirken iletişim kutusunun üst penceresinin devre dışı olduğundan emin olun, ardından iletişim kutusu kapatıldıktan sonra üst pencereyi yeniden etkinleştirin. bunu yapmazsanız, şu hatayı alabilirsiniz: *kalıcı bir iletişim kutusu etkin olduğundan Microsoft Visual Studio kapatılamadı. Etkin iletişim kutusunu kapatın ve yeniden deneyin.*
 
 Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, bunu türetirsiniz <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> ve <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A> iletişim kutusunu göstermek için öğesini çağırın. Bunu yaparsanız, ana pencerenin kalıcı durumunu yönetmeniz gerekmez.
 
@@ -70,7 +71,7 @@ Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, 
     testDialog.ShowModal();
     ```
 
-7. Uygulamayı derleyin ve çalıştırın. Visual Studio 'nun deneysel örneği görünmelidir. Deneysel örneğin **Araçlar** menüsünde, **OpenDialog Invoke** adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir. Pencereyi simge durumuna küçültebilir ve ekranı kaplamasını sağlayabilmelisiniz.
+7. Uygulamayı derleyin ve çalıştırın. deneysel Visual Studio örneği görünmelidir. Deneysel örneğin **Araçlar** menüsünde, **OpenDialog Invoke** adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir. Pencereyi simge durumuna küçültebilir ve ekranı kaplamasını sağlayabilmelisiniz.
 
 ## <a name="create-and-manage-a-dialog-box-not-derived-from-dialogwindow"></a>DialogWindow 'dan türetilmeyen bir iletişim kutusu oluşturma ve yönetme
 

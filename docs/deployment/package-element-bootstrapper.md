@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 13542ef9f0e9ad8eca90a9643cd25ae061691a676f26f1a882f039b7f3e21226
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d2979fa8b1027184999925437adbb3c49b73ff51
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435484"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080435"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;Package &gt; öğesi (önyükleyici)
 `Package`Öğesi, bir paket dosyasının içindeki en üst düzey xml öğesidir.

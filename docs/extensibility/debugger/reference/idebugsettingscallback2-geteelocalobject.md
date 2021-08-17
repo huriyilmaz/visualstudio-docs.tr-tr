@@ -9,17 +9,18 @@ ms.assetid: e69a3469-a049-420c-b918-c48a1e7b9baf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f8dc96d8eaabbae8b9cea155cf72f2958b6b942b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 137f7758386d8d6aa164b6a39f3806c472d6b271
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075659"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063817"
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
 Ölçüm adı verilen bir ifade değerlendirici yerel nesnesi alır.

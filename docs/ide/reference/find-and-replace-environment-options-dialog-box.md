@@ -14,14 +14,15 @@ ms.assetid: f804d6d5-6309-46e4-8294-b83e880b5ec9
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c0fab4fd10d985ad1cee01fbea4269934c01d243
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1ca8cfcd59bca8f2f7eaa7091824c0426a2411129c577ad6572023033a0ee41
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860925"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357498"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Bul ve Değiştir, Ortam, Seçenekler İletişim Kutusu
 

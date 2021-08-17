@@ -1,6 +1,6 @@
 ---
-title: Özellikler PenceresiNe Genel Bakış | Microsoft Docs
-description: Bu genel bakışta IDE'de Özellikler penceresi etkileşimde bulunmak için Visual Studio arabirimleri öğrenin.
+title: Özellikler Penceresine Genel Bakış | Microsoft Docs
+description: Bu genel bakışta IDE'de Özellikler penceresi için Visual Studio arabirimleri öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,28 +10,29 @@ ms.assetid: 289ed4f2-02ac-4899-855e-42dfe57ee05f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e0b775cbc96303f53bcd795b2121d10af83714e6
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 2377ee69458f3becb94ee79b8cd580fdbb92823d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899673"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028949"
 ---
 # <a name="properties-window-overview"></a>Özellikler Penceresine Genel Bakış
 Özellikler **penceresi,** tümleşik geliştirme ortamında (IDE) kullanılabilen iki ana pencere türünde seçilen nesnelerin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] özelliklerini görüntülemek için kullanılır. Bu iki tür pencere vardır:
 
-- Çözüm Gezgini, Sınıf Görünümü ve Nesne tarayıcısı gibi araç pencereleri
+- Çözüm Gezgini, Sınıf Görünümü ve Object Browser gibi araç pencereleri
 
 - Form tasarımcısı, XML düzenleyicisi ve HTML düzenleyicisi gibi düzenleyicileri ve tasarımcıları içeren belge pencereleri
 
 ## <a name="using-the-properties-window"></a>Özellikler Penceresini Kullanma
  Özellikler **penceresi,** seçilen tek veya birden çok öğenin özelliklerini görüntüler. Birden çok öğe seçilirse, tüm seçili nesneler için tüm özelliklerin kesişimi görüntülenir.
 
- Form tasarım penceresinde veya COM+ meta verileri kullanan HTML düzenleyicisinde seçili bir nesneyle ilgili olaylar Özellikler **penceresinde** görüntülenir. Örneğin, bir düğmeyi seçerek ilişkili olaylarını (örneğin, bu düğmeye `OnClick` bağlanan bir olay) görüntüebilirsiniz.
+ Form tasarım penceresinde veya COM+ meta verileri kullanan HTML düzenleyicisinde seçilen bir nesneyle ilgili olaylar Özellikler **penceresinde** görüntülenir. Örneğin, bir düğmeyi seçerek bir olay gibi ilişkili olaylarını görüntüebilirsiniz. Bu olaylar `OnClick` bu düğmeye bağlanabilirsiniz.
 
- Özellikler penceresinde **görüntülenen olaylar** öncelikli olarak koda bağlı nesnelerle kullanılır. Kodla ilgili bir şey yapmayan bir dosya biçimini düzenliyorsanız hiçbir olayla ilgili olmaz. Olaylar yalnızca çalışan kod ile **belirli** nesnelerle ilişkili belirli olaylar arasında bir bağlama olduğunda Özellikler penceresinde görüntülenir. Buna örnek olarak, bu nesne etkinleştirildiğinde yürütülen seçili bir nesnenin ardındaki kod olabilir.
+ Özellikler penceresinde **görüntülenen olaylar** öncelikli olarak koda bağlı nesnelerle kullanılır. Kodla ilgili bir şey yapmayan bir dosya biçimini düzenliyorsanız, hiçbir olayla ilgili olmaz. Olaylar yalnızca çalışan kod ile **belirli** nesnelerle ilişkili belirli olaylar arasında bir bağlama olduğunda Özellikler penceresinde görüntülenir. Bunun bir örneği, nesne etkinleştirildiğinde yürütülen seçili bir nesnenin ardındaki kod olabilir.
 
  Aşağıdaki tabloda Özellikler penceresi tarafından kullanılan birincil arabirimler **listeleniyor.**
 

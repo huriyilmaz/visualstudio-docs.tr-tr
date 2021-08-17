@@ -1,6 +1,6 @@
 ---
 title: -Log (devenv.exe)
-description: Tüm etkinlikleri sorun giderme için günlük dosyasına kaydetmek üzere log Devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
+description: Sorun giderme için log devenv komut satırı anahtarını kullanarak tüm etkinlikleri günlük dosyasına günlüğe kaydedin.
 ms.custom: SEO-VS-2020
 ms.date: 12/12/2018
 ms.topic: reference
@@ -12,22 +12,23 @@ ms.assetid: ae23c4ae-2376-4fe3-b8d2-81d34e61c8ba
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: a7a4f8f3fc7fe0e0f8b7ff6bd460ea2efd8192d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 20972061208021ceea189c46e8e299a488748532e40eeed2544f28db13887efd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919396"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357147"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 
-Tüm etkinliği, sorun giderme amacıyla günlük dosyasına kaydeder. Bu dosya, `devenv /log` en az bir kez çağrıldıktan sonra görüntülenir. Varsayılan olarak, günlük dosyası şurada bulunur:
+Tüm etkinliği, sorun giderme amacıyla günlük dosyasına kaydeder. Bu dosya, en az bir kez `devenv /log` çağrıldıktan sonra görüntülenir. Günlük dosyası varsayılan olarak burada bulunur:
 
-**% AppData% \\ Microsoft \\ VisualStudio \\** \<Version\> **\\ActivityLog.xml**
+**%APPDATA% \\ Microsoft \\ VisualStudio \\** \<Version\> **\\ActivityLog.xml**
 
-\<Version\>Visual Studio sürümüdür. Ancak, farklı bir yol ve dosya adı belirtebilirsiniz.
+burada, \<Version\> Visual Studio sürümüdür. Ancak, farklı bir yol ve dosya adı belirtebilirsiniz.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -39,17 +40,17 @@ devenv /Log NameOfLogFile
 
 - *NameOfLogFile*
 
-  Gereklidir. Kaydedilecek günlük dosyasının tam yolu ve adı.
+  Gereklidir. Kaydedilen günlük dosyasının tam yolu ve adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
 Bu anahtar, diğer tüm anahtarlardan sonra komut satırının en sonunda görünmelidir.
 
-Günlük yalnızca, anahtarla açtığınız tüm Visual Studio örnekleri için yazılır `/Log` .
+Günlük yalnızca anahtarıyla açtığınız Visual Studio tüm örneklerde `/Log` yazılır.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek `MyVSLog.xml` , kullanıcının giriş dizinindeki dosyasına günlüğü yönlendirir.
+Bu örnek, günlüğe `MyVSLog.xml` kaydetmeyi kullanıcının giriş dizininde dosyaya yönlendiren bir örnektir.
 
 ```shell
 devenv /log "%USERPROFILE%\MyVSLog.xml"

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27541d1a9f238acbe626a67520868bfd882833717487ea253c37a64fdf8a1f21
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bab404519695b71c84c82216606b59529b1d4386
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338624"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029846"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
 Bir başvurunun seçili alt öğelerinin listesini alır. Daha sonraki kullanımlar için ayrılmıştır.

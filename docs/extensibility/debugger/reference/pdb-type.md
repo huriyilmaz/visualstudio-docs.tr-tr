@@ -1,5 +1,5 @@
 ---
-description: Bu yapı, PDB simgesinden alınan alan türüyle ilgili bilgileri belirtir.
+description: Bu yapı bir PDB sembolünden alınan alan türü hakkında bilgi belirtir.
 title: PDB_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3b2a812fa59c8017b6a4296d0172fc2225d099470685450c50e2c618b6bd66f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 115d327411cb3d04f26e44ede6fee0f17ff3d9b6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415175"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034636"
 ---
 # <a name="pdb_type"></a>PDB_TYPE
 
-Bu yapı, PDB simgesinden alınan alan türüyle ilgili bilgileri belirtir.
+Bu yapı bir PDB sembolünden alınan alan türü hakkında bilgi belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,25 +49,25 @@ public struct PDB_TYPE {
 ## <a name="members"></a>Üyeler
 
 `ulAppDomainID`\
-Sembolün geldiği uygulamanın kimliği. Bu, uygulamanın bir örneğini benzersiz olarak tanımlamak için kullanılır.
+Simgenin geldiği uygulamanın KIMLIĞI. Bu, uygulamanın bir örneğini benzersiz bir şekilde tanımlamak için kullanılır.
 
 `guidModule`\
-Bu alanı içeren modülün GUID'si.
+Bu alanı içeren modülün GUID 'ı.
 
 `symid`\
-Bu alana karşılık gelen sembolün kimliği.
+Bu alana karşılık gelen simgenin KIMLIĞI.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, yapının alanı olarak [(TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) enumerasyonundan bir değer) ayarlanırken dwTYPE_KIND `dwKind` olarak `TYPE_INFO` `TYPE_KIND_PDB` görünür. [](../../../extensibility/debugger/reference/dwtype-kind.md)
+Bu yapı, [](../../../extensibility/debugger/reference/type-info.md) `dwKind` `TYPE_INFO` yapı alanı `TYPE_KIND_PDB` ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından bir değer) olarak ayarlandığında TYPE_INFO yapısındaki birleşimin bir parçası olarak görüntülenir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üst bilgi: sh.h
+Üstbilgi: SH. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

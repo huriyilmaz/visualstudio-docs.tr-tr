@@ -17,21 +17,22 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: b970e9e502542da0452c1ed4f1ebb4585f00559b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 87f03dbbcf4e6c38d55d2a3c7deb5cbc9f0bb8b5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903965"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048901"
 ---
 # <a name="manage-application-resources-net"></a>Uygulama kaynaklarını yönetme (.NET)
 
 Kaynak dosyaları, bir uygulamanın parçası olan ancak derlenmediği, örneğin simge dosyaları veya ses dosyaları gibi dosyalardır. Bu dosyalar derleme sürecinin bir parçası olmadığından, ikili dosyalarınızı yeniden derlemek zorunda kalmadan bunları değiştirebilirsiniz. Uygulamanızı yerelleştirmek istiyorsanız, uygulamanızı yerelleştirmeniz durumunda değiştirilmesi gereken tüm dizelerin ve diğer kaynakların kaynak dosyalarını kullanmanız gerekir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [uygulama kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources).
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [uygulama kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources).
 
 .NET uygulamalarındaki kaynaklar hakkında daha fazla bilgi için bkz. [.net Apps 'Teki kaynaklar](/dotnet/framework/resources/index).
 
@@ -55,4 +56,4 @@ Kaynaklar, .NET projelerinde diğer proje türlerinden farklı şekilde yönetil
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET uygulamalarında kaynaklar (.NET Framework)](/dotnet/framework/resources/index)
-- [Uygulama kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources)
+- [uygulama kaynaklarını yönetme (Mac için Visual Studio)](/visualstudio/mac/managing-app-resources)
