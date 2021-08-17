@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 38b9dca8b5f3d5a44cd304f7cdd6a24f9805ca8a9efda2099767d5fb6eb573d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 54eeb75a623a7c20d0fad3f5f66e30c0b4617558
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411340"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069424"
 ---
 # <a name="about-domain-specific-languages"></a>Etki Alanına Özgü Diller Hakkında
 

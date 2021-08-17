@@ -12,14 +12,15 @@ ms.assetid: 5ccfcc80-dea5-48a1-8bae-6a26f8d3bc56
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c79d27c01035f83b506ffad4ec138c8c68f98d2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7fd3f27aaf6080a853dbacc856d0b6ac258319b81560bd002a5b562ecef6a7dc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097038"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342849"
 ---
 # <a name="evaluate-expressions"></a>İfadeleri değerlendir
 İfadeler **,** **hızlı** bir şekilde veya **anında** Windows 'tan geçirilen dizelerden oluşturulur . Bir ifade değerlendirildiğinde, değişken veya bağımsız değişkenin adını ve türünü ve değerini içeren yazdırılabilir bir dize oluşturur. Bu dize, karşılık gelen IDE penceresinde görüntülenir.

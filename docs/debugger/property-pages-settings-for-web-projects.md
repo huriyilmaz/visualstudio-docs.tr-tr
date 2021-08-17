@@ -1,6 +1,6 @@
 ---
 title: Web projeleri için özellik ayarları | Microsoft Docs
-description: Bir web sitesi hata ayıklama yapılandırmasının özellik ayarlarını, uygulamanın Özellik Sayfaları iletişim kutusunda nasıl değiştir Visual Studio.
+description: Visual Studio özellik sayfaları iletişim kutusunda bir Web sitesi hata ayıklama yapılandırması için özellik ayarlarını nasıl değiştirileceğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -31,28 +31,28 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121453084"
 ---
 # <a name="property-pages-settings-for-web-projects"></a>Web Projeleri Özellik Sayfası Ayarları
-Hata Ayıklama ve Sürüm Yapılandırmaları'da ele  alınarak, Özellik Sayfaları iletişim kutusunda bir web sitesi hata ayıklama [yapılandırmasının özellik ayarlarını değiştirebilirsiniz.](../debugger/how-to-set-debug-and-release-configurations.md) Aşağıdaki tablolarda, Özellik Sayfaları iletişim kutusunda hata ayıklayıcıyla ilgili **ayarların nerede bulunamaz olduğu** gösterir.
+Web sitesi hata ayıklama yapılandırması için özellik ayarlarını, [hata ayıklama ve sürüm yapılandırmalarında](../debugger/how-to-set-debug-and-release-configurations.md)anlatıldığı gibi **Özellik sayfaları** iletişim kutusunda değiştirebilirsiniz. Aşağıdaki tablolarda, **Özellik sayfaları** iletişim kutusunda hata ayıklayıcı ile ilgili ayarların nerede bulunacağı gösterilmektedir.
 
-### <a name="start-options-category"></a>Başlangıç Seçenekleri kategorisi
+### <a name="start-options-category"></a>Başlangıç seçenekleri kategorisi
 
 | **Ayar** | **Açıklama** |
 | - | - |
-| **Başlatma Eylemi** | Uygulama başlatmayla ilgili seçenekleri gruplaan başlık. |
-| **Geçerli Sayfayı kullan** | Geçerli sayfayı hata ayıklama için başlangıç noktası olarak belirtir. |
-| **Belirli bir sayfa:** | Hata ayıklamaya başlamak istediğiniz Web sayfasını belirtir. |
-| **Dış programı başlat:** | Hata ayıklamak istediğiniz programı başlatmak için komutunu belirtir. |
-| **Komut satırı bağımsız değişkenleri:** | Yukarıda belirtilen komutun bağımsız değişkenlerini belirtir. |
-| **Çalışma dizini:** | Hata ayıklandı olan programın çalışma dizinini belirtir. içinde [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] çalışma dizini, uygulamanın varsayılan olarak \bin\debug konumundan başlat olduğu dizindir. |
-| **Başlangıç URL'si** | Hata ayıklamak istediğiniz Web uygulamasının konumunu belirtir. |
-| **Sayfa açmayın. Dış bir uygulamanın isteğini bekleme** | Dış bir uygulamanın isteği için beklemesi gerekir. Bu seçenek, Internet Explorer başka bir uygulamayı başlatmaz. Yalnızca bir uygulama tarafından çağrıldıklarda hata ayıklamaya hazırlar. |
-| **Sunucu** | Kullanılacak sunucuyla ilgili seçenekleri gruplaan başlık. |
-| **Varsayılan Web sunucusunu kullanma** | Varsayılan Web sunucusunun kullan olduğunu belirtir. |
-| **Özel sunucu kullanma** | Sunucu olarak kullanmak üzere Temel URL'yi girmenize olanak sağlar. |
-| **Hata ayıklayıcı** | Yapılacak hata ayıklama türüyle ilgili seçenekleri gruplama başlığı. |
-| **ASP.NET hata ayıklama** | Geliştirme platformu için yazılmış sunucu sayfalarının hata [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ayıklamasını sağlar. Başlangıç URL'si içinde bir URL **belirtmeniz gerekir.** |
-| **Yerel kodda hata ayıklama** | Yönetilen uygulamanıza gelen yerel (yönetilemeyen) Win32 koduna yapılan çağrılarda hata ayıklamanıza olanak sağlar. |
-| **SQL Server hata ayıklama** | Veritabanı nesnelerinin hata SQL Server izin verir. |
-| **Silverlight hata ayıklama** | Silverlight bileşenlerinin hata ayıklamasını sağlar. |
+| **Başlatma eylemi** | Uygulama başlatma ile ilgili seçenekleri gruplandıran başlık. |
+| **Geçerli sayfayı kullan** | Hata ayıklama için başlangıç noktası olarak geçerli sayfayı belirtir. |
+| **Belirli sayfa:** | Hata ayıklamaya başlamak istediğiniz Web sayfasını belirtir. |
+| **Dış programı Başlat:** | Hata ayıklamak istediğiniz programı başlatma komutunu belirtir. |
+| **Komut satırı bağımsız değişkenleri:** | Yukarıda belirtilen komut için bağımsız değişkenleri belirtir. |
+| **Çalışma dizini:** | Hata ayıklanan programın çalışma dizinini belirtir. ' De [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] , çalışma dizini uygulamanın başlatıldığı dizindir, varsayılan olarak, \bin\Debug ' dır. |
+| **Başlangıç URL 'SI** | Hata ayıklamak istediğiniz Web uygulamasının konumunu belirtir. |
+| **Bir sayfa açmayın. Dış uygulamadan gelen bir isteği bekle** | Bir dış uygulamadan bir istek beklendiğini diyor. Bu seçenek, Internet Explorer 'ı veya başka bir uygulamayı başlatamaz. Yalnızca bir uygulama tarafından çağrıldığında hata ayıklama için hazırlar. |
+| **Sunucu** | Kullanılacak sunucu ile ilgili seçenekleri gruplandıran başlık. |
+| **Varsayılan Web sunucusunu kullan** | Varsayılan Web sunucusunu kullanacağınızı diyor. |
+| **Özel sunucu kullan** | Sunucu olarak kullanılacak temel URL 'YI girmenize olanak sağlar. |
+| **Hata ayıklayıcıları** | Yapılacak hata ayıklama türüyle ilgili seçenekleri gruplandıran başlık. |
+| **ASP.NET hata ayıklama** | Geliştirme platformu için yazılan sunucu sayfalarının hata ayıklamasını sağlar [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . **Başlangıç URL**'SINDE bir URL belirtmeniz gerekir. |
+| **Yerel kod hata ayıklaması** | Yönetilen uygulamanızdan yerel (yönetilmeyen) Win32 koduna yapılan çağrıların hatalarını ayıklamanızı sağlar. |
+| **SQL Server hata ayıklama** | SQL Server veritabanı nesnelerinin hatalarını ayıklamasına izin verir. |
+| **Silverlight hata ayıklaması** | Silverlight bileşenlerinde hata ayıklamasına izin verir. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcısı Ayarlar hazırlama](../debugger/debugger-settings-and-preparation.md)
+- [hata ayıklayıcı Ayarlar ve hazırlığı](../debugger/debugger-settings-and-preparation.md)

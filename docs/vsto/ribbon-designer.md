@@ -29,12 +29,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 16546308d19cd32ac7c701b733caec3bbf8cdff4a36dcc3424706d0d6bd98f2e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5bef09e7b808b4473f15b2d103bac7a55ce1eef8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121243516"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025777"
 ---
 # <a name="ribbon-designer"></a>Şerit Tasarımcısı
   Şerit Tasarımcısı görsel tasarım tuvaldir. bir Microsoft Office uygulamasının şeritlerine özel sekmeler, gruplar ve denetimler eklemek için şerit tasarımcısını kullanın.

@@ -11,15 +11,16 @@ ms.assetid: 1ee53df5-b0dc-4265-9d4f-527830d08725
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 45071fb94b00be721e8c76c69dc5135a59f3a9b1
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: ba763c21c99cf717a905119d9f61f863a8a1b8d3663ecbf25f5617c19d166255
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465783"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333359"
 ---
 # <a name="da0502-maximum-cpu-consumption-by-the-process-being-profiled"></a>DA0502: işlem tarafından profili oluşturulan en yüksek CPU tüketimi
 

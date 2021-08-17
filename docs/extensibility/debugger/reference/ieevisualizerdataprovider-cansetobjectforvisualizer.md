@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, Görselleştirici tarafından temsil ettiği veri nesnesine sahip olup olmadığını belirler.
-title: 'IEEVisualizerDataProvider:: CanSetObjectForVisualizer | Microsoft Docs'
+description: Bu yöntem görselleştiricinin temsil ettiği veri nesnesinin güncelleştirilip güncelleştirilenene sahip olup olmadığını belirler.
+title: IEEVisualizerDataProvider::CanSetObjectForVisualizer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 70fd3c6f-2f82-43a3-993b-c1dc8aa080bf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81d958bb7cb931f485f8efa807dc9d322bab1fa4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d0ad23c26a5e989d643fdc16f3437781aa7f0d0c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058189"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126004"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-Bu yöntem, Görselleştirici tarafından temsil ettiği veri nesnesine sahip olup olmadığını belirler.
+Bu yöntem görselleştiricinin temsil ettiği veri nesnesinin güncelleştirilip güncelleştirilenene sahip olup olmadığını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int CanSetObjectForVisualizer(
 
 ## <a name="parameters"></a>Parametreler
 `b`\
-dışı `TRUE`Görselleştirici üzerindeki nesne güncelleştirilemeyebilir (), değilse sıfır ( `FALSE` ).
+[out] Görselleştiricide nesne güncelleştirilene kadar sıfır ( ) değil, sıfır `TRUE` ( ) ise `FALSE` güncelleştirilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, salt okuma belleğine bağlıysa bir nesne değiştirilebilir olmayabilir.
+ Örneğin, bir nesne salt okunur belleğe bağlı ise değiştirilebilir olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

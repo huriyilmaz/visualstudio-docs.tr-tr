@@ -11,17 +11,18 @@ ms.assetid: 432aff03-08a5-4c5a-b2d5-e212090fc70a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 266d786df422e5260e212a4005feb7d3167af099
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 78308844f64e87c95a41b662c2055f770809f262
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057903"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125302"
 ---
 # <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 
@@ -47,22 +48,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>Üyeler
 
 `dwValidFields`\
-Bu yapıda açıklanan arama bilgilerinin türünü belirten [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) Numaralandırmadaki bayrakların birleşimi.
+Bu yapıda açıklanan [arama SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) belirten bir numaralama enumerasyonundan gelen bayrakların birleşimi.
 
 `bstrVerboseSearchInfo`\
-Tek bir dizeye birleştirilmiş arama yolu ve sonuçları.
+Arama yolu ve sonuçları tek bir dizede birlenmiş.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı [Getsymbolınfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) yöntemine yapılan çağrıdan döndürülür.
+Bu yapı [GetSymbolInfo yöntemine yapılan bir çağrıdan](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) döndürülür.
 
-`bstrVerboseSearchInfo`Alan boş değilse, aranan yolların ve bu aramanın sonuçlarının bir listesini içerir. Liste, bir yol ile, ardından üç nokta ("...") ve ardından sonuç olarak biçimlendirilir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/linefeed) çifti ile ayrılır. Bu model şöyle görünür:
+Alan `bstrVerboseSearchInfo` boş yoksa, arama yapılan yolların listesini ve bu aramanın sonuçlarını içerir. Liste bir yol ile biçimlendirildi, ardından üç nokta ("..." ) ve ardından sonuç geldi. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/satır besleme) çifti ile ayrılır. Desen şu şekildedir:
 
-\<path>...\<result> \r\n \<path> ... \<result> \r\n \<path> ...\<result>
+\<path>...\<result>\r\n\<path> ... \<result> \<path>\r\n...\<result>
 
-Son girişin bir \r\n dizisine sahip olmadığına unutmayın.
+Son girdinin bir \r\n unutmayın.
 
-`bstrVerboseSearchInfo`Standart Out 'a gönderilen olası bir dize aşağıda verilmiştir.
+Standart dışı bir `bstrVerboseSearchInfo` dizeye gönderilen olası bir dizeyi burada açık şekilde sınız.
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -72,11 +73,11 @@ Son girişin bir \r\n dizisine sahip olmadığına unutmayın.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

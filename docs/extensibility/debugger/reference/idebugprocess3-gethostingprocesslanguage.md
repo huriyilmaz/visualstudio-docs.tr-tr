@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bu işlemin dilini temsil eden bir GUID döndürür ve SetHostingProcessLanguage çağrısıyla ayarlanır.
-title: 'IDebugProcess3:: GetHostingProcessLanguage | Microsoft Docs'
+description: Bu yöntem, SetHostingProcessLanguage çağrısı tarafından ayarlandırılan bu sürecin dilini temsil eden bir GUID döndürür.
+title: IDebugProcess3::GetHostingProcessLanguage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 52fca002-a9ef-43b1-9192-afbe7bb59ad4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2615f0e43c21983e220600e30ea9b78f508c8ddb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2d3ae1425e98fcc923c1be1d4d2af7e64837371f57e29934afb8ba08f592ce22
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076556"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121416189"
 ---
 # <a name="idebugprocess3gethostingprocesslanguage"></a>IDebugProcess3::GetHostingProcessLanguage
-Bu yöntem, bir `GUID` [Sethostingprocesslanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)çağrısıyla ayarlanan bu işlemin dilini temsil eden bir döndürür.
+Bu yöntem, `GUID` [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)çağrısı tarafından ayarlandırılan bu sürecin dilini temsil eden bir döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,10 +43,10 @@ int GetHostingProcessLanguage(
 
 ## <a name="parameters"></a>Parametreler
 `pguidLang`\
-dışı `GUID` Bu işlemin dili. `GUID_NULL` (C++) veya `Guid.Empty` (C#), dilin ayarlanmayacağı anlamına gelir.
+[out] Bu `GUID` sürecin dilinin. `GUID_NULL` (C++) `Guid.Empty` veya (C#), dilin ayarlanmaz.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

@@ -9,14 +9,15 @@ ms.assetid: f4f5a96a-8230-493d-9696-8d2716bda261
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 90b3c048edb4e52a426a2fd40d8bfd31168fea7d
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: c6e20f40111f88ad304e5ce86cf4f60a8449418b7d83b6ae9879c6598f0c7f0a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900180"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338091"
 ---
 # <a name="task_state_canceled-field"></a>TASK_STATE_CANCELED alanı
 Görev, çalışma durumuna ulaşılmadan önce iptal edildi veya iptal işlemini onayladığından özel durum olmadan tamamlandı.
@@ -25,7 +26,7 @@ Görev, çalışma durumuna ulaşılmadan önce iptal edildi veya iptal işlemin
 
  **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 

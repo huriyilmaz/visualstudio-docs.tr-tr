@@ -10,21 +10,22 @@ ms.assetid: bfe083b6-3e35-4b9c-ad4f-b30b9ff412a5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a19808e76714e0435bd5bb638aea0fbc7eaba929
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 155906d5dfa35a66cd85053cac3c66c2a11a9b45ea94c7fc4f850e8656d5bf4c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062063"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121335023"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>İzlenecek yol: özel düzenleyiciye özellikler ekleme
 Özel bir düzenleyici oluşturduktan sonra, ona daha fazla özellik ekleyebilirsiniz.
 
 ## <a name="to-create-an-editor-for-a-vspackage"></a>VSPackage için bir düzenleyici oluşturmak için
 
-1. Visual Studio Package proje şablonunu kullanarak özel bir düzenleyici oluşturun.
+1. Visual Studio paketi proje şablonunu kullanarak özel bir düzenleyici oluşturun.
 
      Daha fazla bilgi için bkz. [Izlenecek yol: özel düzenleyici oluşturma](../extensibility/walkthrough-creating-a-custom-editor.md).
 
@@ -40,7 +41,7 @@ ms.locfileid: "105062063"
 
 4. Düzenleyici 'nin belge görünümü nesne penceresini yönetmek için yerinde etkinleştirme veya Basitleştirilmiş ekleme kullanmasını isteyip istemediğinize karar verin.
 
-     Basitleştirilmiş bir katıştırma Düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme Düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015).
+     basitleştirilmiş bir katıştırma düzenleyicisi penceresi, standart bir belge görünümü barındırır, ancak yerinde etkinleştirme düzenleyicisi penceresi, belge görünümü olarak bir ActiveX denetimi veya başka bir etkin nesne barındırır. Daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md) ve [yerinde etkinleştirme](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015).
 
 5. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>Komutları işlemek için arabirimini uygulayın.
 
@@ -71,7 +72,7 @@ ms.locfileid: "105062063"
 
     2. `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> İçin bir işaretçi almak üzere hizmette çağrı yapın <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .
 
-9. Kullanıcıların, düzenleyici ve **araç kutusu** arasında veya dış düzenleyiciler (Microsoft Word gibi) ve **araç kutusu** arasında öğeleri sürükleyip bırakması için izin sağlayın. Şu adımları izleyin:
+9. kullanıcıların, düzenleyici ve **araç kutusu** arasında ya da dış düzenleyiciler (Microsoft Word gibi) ve **araç kutusu** arasında öğeleri sürükleyip bırakması için izin sağlayın. Şu adımları izleyin:
 
     1. `IDropTarget`Düzenleyicinize bir bırakma hedefi olduğunu IDE 'yi uyarmak için düzenleyicinize uygulayın.
 

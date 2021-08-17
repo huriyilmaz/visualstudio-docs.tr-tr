@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fc83fd49184a0bb784b44ec80588571e8d6e560
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3a601701bba6384e9ece69a2e91750ca753786e917a3f17fd92e5660dcd63343
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941326"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333710"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Hatalı davranan çok iş parçacıklı uygulamalar için ortak desenler
 
@@ -32,7 +33,7 @@ Bazı durumlarda, çok sayıda iş parçacığı olmasına rağmen bilgisayar ye
 
 Aşağıdaki çizimde gösterildiği gibi eşzamanlılık görselleştiricisi de bu belirtiyi CPU kullanımı görünümünde kullanıma sunabileceğinden, burada birden çok iş parçacığı varlığına rağmen uygulama yalnızca bir mantıksal çekirdek tüketir.
 
-Daha fazla bilgi için, bkz. MSDN Magazine makalesi [Iş parçacığı performans-kaynak çekişme profili Visual Studio 2010](/archive/msdn-magazine/2010/june/msdn-magazine-thread-performance-resource-contention-concurrency-profiling-in-visual-studio-2010).
+daha fazla bilgi için, Visual Studio 2010 ' de bkz. MSDN Magazine article [iş parçacığı performansı-kaynak çekişmesini oluşturma](/archive/msdn-magazine/2010/june/msdn-magazine-thread-performance-resource-contention-concurrency-profiling-in-visual-studio-2010)konusunun "sorun ile başlayın".
 
 ![Kilit çakışması](../profiling/media/lockcontention_2.png "LockContention_2")
 

@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15e9877c8458d7c7188fb1d466335090de7c10ed1f73b78ba0f12f9a7780ad6e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 960e87e629caca705d8dc8e8fd54de3731b9604e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121343232"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096706"
 ---
 # <a name="debug-tasks"></a>Hata ayıklama görevleri
 Bir programda hata ayıklamak için, başlatılmalıdır ve buna bir hata ayıklama altyapısı (DE) eklenmelidir, aksi takdirde DE daha önce başlatılmış bir programa eklenmelidir. İliştirildikten sonra, belirli başlangıç olaylarını üretmelidir. Yanıt olarak, hata ayıklama paketi IDE 'de ayarlanan kesme noktalarını bağlamaya çalışır. Program, bağlantılı bir kesme noktasına rastarsa, durdurur ve Kullanıcı girişini bekler.

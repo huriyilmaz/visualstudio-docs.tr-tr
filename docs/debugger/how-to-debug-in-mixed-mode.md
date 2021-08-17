@@ -17,14 +17,15 @@ ms.assetid: 2859067d-7fcc-46b0-a4df-8c2101500977
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1144fa2f775427a3a46feda46d8bba015e960f2a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1e476090748bb789b6b877981cc1e8bc1616fcc5f8ee5dd9cba29f8d76f7bf00
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913242"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453811"
 ---
 # <a name="how-to-debug-in-mixed-mode-c-c-visual-basic"></a>Nasıl yapılır: karışık modda hata ayıklama (C#, C++, Visual Basic)
 
@@ -39,7 +40,7 @@ Aşağıdaki yordamlarda, karışık modda hata ayıklama olarak da bilinen yön
 Çağıran bir uygulamanın projesine erişiminiz yoksa dll 'de dll projesinden hata ayıklaması yapabilirsiniz. Yalnızca DLL projesinde hata ayıklamak için karışık moda ihtiyacınız yoktur. Daha fazla bilgi için bkz. [nasıl yapılır: DLL projesinde hata ayıklama](../debugger/how-to-debug-from-a-dll-project.md).
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve komutlar, Visual Studio ayarlarınıza veya sürümüne bağlı olarak bu makaledeki olanlarından farklı bir şekilde farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
+> gördüğünüz iletişim kutuları ve komutlar, Visual Studio ayarlarınıza veya sürümüne bağlı olarak bu makaledeki olanlarından farklı bir şekilde farklılık gösterebilir. ayarlarınızı değiştirmek için **araçlar**  >  **içeri aktar ve dışarı aktar Ayarlar**' ı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
 ## <a name="enable-mixed-mode-debugging-for-a-native-calling-app"></a>Yerel bir çağıran uygulama için karışık modda hata ayıklamayı etkinleştir
 
@@ -55,7 +56,7 @@ Aşağıdaki yordamlarda, karışık modda hata ayıklama olarak da bilinen yön
 
 ## <a name="enable-mixed-mode-debugging-for-a-managed-calling-app"></a>Yönetilen bir çağıran uygulama için karışık modda hata ayıklamayı etkinleştir
 
-1. **Çözüm Gezgini** ' de C# veya Visual Basic projesi seçin ve **Özellikler** simgesini seçin, **alt** + **ENTER** tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
+1. **Çözüm Gezgini** ' de C# veya Visual Basic projesi seçin ve **özellikler** simgesini seçin, **Alt** + **enter** tuşuna basın veya sağ tıklayıp **özellikler**' i seçin.
 
 1. **Hata Ayıkla** sekmesini seçin ve ardından **yerel kod hata ayıklamayı etkinleştir**' i seçin.
 
@@ -64,7 +65,7 @@ Aşağıdaki yordamlarda, karışık modda hata ayıklama olarak da bilinen yön
    ![Yerel kod hata ayıklamasını etkinleştir](../debugger/media/dbg-mixed-mode-from-csharp.png "Yerel kod hata ayıklamasını etkinleştir")
 
 > [!NOTE]
-> Visual Studio 'nun çoğu Visual Studio 2017 sürümünden itibaren, bir .NET Core uygulamasında yerel kod için karışık modda hata ayıklamayı etkinleştirmek amacıyla proje özellikleri yerine *launchSettings.jsdosya üzerinde* kullanmanız gerekir. Ayrıntılar için bkz. [yönetilen ve yerel kodda hata ayıklama](../debugger/how-to-debug-managed-and-native-code.md).
+> Visual Studio 2017 ' den başlayarak Visual Studio çoğu sürümünde, .net Core uygulamasında yerel kod için karışık modda hata ayıklamayı etkinleştirmek amacıyla proje özellikleri yerine *launchSettings.js* dosyasında kullanmanız gerekir. Ayrıntılar için bkz. [yönetilen ve yerel kodda hata ayıklama](../debugger/how-to-debug-managed-and-native-code.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

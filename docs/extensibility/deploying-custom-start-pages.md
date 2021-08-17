@@ -15,12 +15,12 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 6cbe93af3737526a5adf1719f0f4b129cb3076a7dadaa2bade9a413e0a69407e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 07b757ab200bb3439fb82224ea1c20e3edb8ea16
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414928"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070388"
 ---
 # <a name="deploy-custom-start-pages"></a>Özel başlangıç sayfalarını dağıtma
 

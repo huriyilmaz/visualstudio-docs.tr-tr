@@ -11,17 +11,18 @@ ms.assetid: 748750f4-76e7-4580-9da2-afba07681b37
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a0be668c369143509c000cee767d302b83ba6287
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 02c5299d2168282ba2e008b087db8f097b3b5988
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086852"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125926"
 ---
 # <a name="ieevisualizerservicegetpropertyproxy"></a>IEEVisualizerService::GetPropertyProxy
 Bu yöntem, bir özellik nesnesi için bir proxy döndürür.

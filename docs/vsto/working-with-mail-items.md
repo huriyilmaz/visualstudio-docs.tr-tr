@@ -1,6 +1,6 @@
 ---
 title: Posta öğeleriyle çalışma
-description: MailItem sınıfının, e-posta iletileriyle görevleri gerçekleştirmek için kullanılan yöntemleri ve özellikleri içerdiğini öğrenin.
+description: MailItem sınıfının, e-posta iletileriyle görevleri gerçekleştirmek için kullanabileceğiniz yöntemleri ve özellikleri içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f5a7020ef93c3067b116eb2fe933af8971e786b0c46c1e56c70ee4b23cb60103
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 399442092a68f745d5b6bf7e01d627c54cdf8142
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121296430"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025400"
 ---
 # <a name="work-with-mail-items"></a>Posta öğeleriyle çalışma
   sınıfı, <xref:Microsoft.Office.Interop.Outlook.MailItem> e-posta iletileriyle görevleri gerçekleştirmek için kullanabileceğiniz yöntemleri ve özellikleri içerir.

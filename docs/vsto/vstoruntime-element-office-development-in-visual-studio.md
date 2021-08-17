@@ -1,7 +1,7 @@
 ---
-title: "&lt;vstoRuntime &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+title: '&lt;vstoruntime &gt; öğesi (Visual Studio Office geliştirme)'
 titleSuffix: ''
-description: Vstav3 ad alanının vstoRuntime öğesi, belirli bir Office çözümü için Office çalışma zamanının Visual Studio Araçları desteklenen bir sürümünü içerir.
+description: vstav3 ad alanının vstoruntime öğesi, belirli bir Office çözümü için Office için Visual Studio Araçları çalışma zamanının desteklenen bir sürümünü içerir.
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 7c856836bd2ba107a2fa6c3017c5ecb2694fcf6b
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: 1ce97744f8b7fc93317c80755b01ede222df2a4b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102468578"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025647"
 ---
-# <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime &gt; öğesi (Visual Studio 'Da Office geliştirme)
-  `vstoRuntime`Ad alanı öğesi, `vstav3` belirli bir Office çözümü için Office çalışma zamanının Visual Studio Araçları desteklenen bir sürümünü içerir.
+# <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoruntime &gt; öğesi (Visual Studio Office geliştirme)
+  `vstoRuntime`ad alanı öğesi, `vstav3` belirli bir Office çözümü için Office için Visual Studio Araçları çalışma zamanının desteklenen bir sürümünü içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,20 +37,20 @@ ms.locfileid: "102468578"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `vstoRuntime`Öğesi gereklidir ve `vstav3` ad alanında bulunur. Office çözümü, Office çalışma zamanı için Visual Studio Araçları iki sürümünü destekliyorsa, `vstoRuntime` uygulama bildiriminde iki öğe vardır.
+ `vstoRuntime`Öğesi gereklidir ve `vstav3` ad alanında bulunur. bir Office çözümü Office için Visual Studio Araçları çalışma zamanının iki sürümünü destekliyorsa, `vstoRuntime` uygulama bildiriminde iki öğe vardır.
 
  `vstoRuntime`Öğesi aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`release`|Gereklidir. Office çalışma zamanı için Visual Studio Araçları yayın sürümü.|
-|`version`|Gereklidir. Office çalışma zamanı Visual Studio Araçları sürüm numarası.|
-|`supportUrl`|İsteğe bağlı. Office çalışma zamanı Visual Studio Araçları yükleme konumuna bağlantı.|
+|`release`|Gereklidir. Office için Visual Studio Araçları çalışma zamanının yayın sürümü.|
+|`version`|Gereklidir. Office için Visual Studio Araçları çalışma zamanının sürüm numarası.|
+|`supportUrl`|İsteğe bağlı. Office için Visual Studio Araçları çalışma zamanının yükleme konumuna bağlantı.|
 
  `vstoRuntime` öğesi yok.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, `vstoRuntime` kullanılarak dağıtılan bir Office çözümünün uygulama bildiriminde bulunan öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+ aşağıdaki kod örneği, `vstoRuntime` kullanılarak dağıtılan bir Office çözümü için uygulama bildiriminde bulunan öğeyi gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . bu kod örneği, [Office çözümleri için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ```xml
 <vstav3:vstoRuntime
@@ -62,4 +63,4 @@ ms.locfileid: "102468578"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [uygulama bildirimini ClickOnce](../deployment/clickonce-application-manifest.md)

@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda eklenen kaynağı alır.
-title: 'IDiaEnumInjectedSources:: Next | Microsoft Docs'
+description: Numaralama sırasına belirtilen sayıda kaynak eklemesini sağlar.
+title: IDiaEnumInjectedSources::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121455162"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
-Sabit Listesi dizisinde belirtilen sayıda eklenen kaynağı alır.
+Numaralama sırasına belirtilen sayıda kaynak eklemesini sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Alınacak Numaralandırıcı içindeki eklenen kaynak sayısı.
+[in] Numaralayıcıya alınan kaynakların sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen eklenmiş kaynakları temsil eden [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnelerinin bir dizisini döndürür.
+[out] İstenen ekleme kaynaklarını [temsil eden bir IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesneleri dizisi döndürür.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki eklenen kaynak sayısını döndürür.
+[out] Getirilen numaralayıcıya alınan kaynakların sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla eklenen kaynak yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Daha `S_FALSE` fazla kaynak eklemezse döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

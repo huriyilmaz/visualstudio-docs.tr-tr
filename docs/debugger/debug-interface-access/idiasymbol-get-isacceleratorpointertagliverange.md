@@ -1,6 +1,6 @@
 ---
-description: Bir C++ AMP Accelerator için derlenmiş kodda işaretçi değişkeninin etiket bileşeni için sembolü tanım aralığı simgesine karşılık gelen bir bayrak alınır.
-title: IDiaSymbol::get_isAcceleratorPointerTagLiveRange | Microsoft Docs
+description: simgenin bir C++ AMP hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için açıklama aralığı simgesine karşılık geldiğini belirten bir bayrak alır.
+title: 'IDiaSymbol:: get_isAcceleratorPointerTagLiveRange | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,7 +20,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121454746"
 ---
 # <a name="idiasymbolget_isacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
-Sembolün, C++ AMP Accelerator için derlenmiş  kodda bir işaretçi değişkeninin etiket bileşeni için tanım aralığı simgesine karşılık gelen bir bayrak alınır. Tanım aralığı simgesi, bir adres aralığı için değişkenin konumudür.
+simgenin bir C++ AMP hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_isAcceleratorPointerTagLiveRange(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Sembolün tanım `BOOL` aralığı simgesine karşılık gelen bir işaretçi.
+dışı `BOOL` Simgenin, açıklama aralığı simgesine karşılık geldiğini gösteren bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

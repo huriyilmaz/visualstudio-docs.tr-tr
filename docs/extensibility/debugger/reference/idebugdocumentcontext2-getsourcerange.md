@@ -1,6 +1,6 @@
 ---
-description: Bu belge bağlamının kaynak kodu aralığını alır.
-title: 'IDebugDocumentContext2:: GetSourceRange | Microsoft Docs'
+description: Bu belge bağlamının kaynak kod aralığını alır.
+title: IDebugDocumentContext2::GetSourceRange | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 5903c75e-5390-4d13-9314-1ee276255313
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a66f1b99793b1c8fa8036771d7815f95a395462a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0eeec0f04f45cda0c257299923f0da9224312974
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066600"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096407"
 ---
 # <a name="idebugdocumentcontext2getsourcerange"></a>IDebugDocumentContext2::GetSourceRange
-Bu belge bağlamının kaynak kodu aralığını alır.
+Bu belge bağlamının kaynak kod aralığını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,18 +45,18 @@ int GetSourceRange(
 
 ## <a name="parameters"></a>Parametreler
 `pBegPosition`\
-[in, out] Başlangıç konumuyla doldurulmuş bir [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı. Bu bilgi gerekmiyorsa bu bağımsız değişkeni null bir değer olarak ayarlayın.
+[in, out] Başlangıç [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) doldurulan bir yapıdır. Bu bilgi gerekli yoksa bu bağımsız değişkeni null değere ayarlayın.
 
 `pEndPosition`\
-[in, out] Bitiş konumuyla doldurulmuş bir [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı. Bu bilgi gerekmiyorsa bu bağımsız değişkeni null bir değer olarak ayarlayın.
+[in, out] Bitiş [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) doldurulan bir yapıdır. Bu bilgi gerekli yoksa bu bağımsız değişkeni null değere ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak aralığı, geçerli deyimden hemen hemen sonra koda katkıda bulunan önceki deyimden hemen sonra olmak üzere, kaynak kodu aralığıdır. Kaynak aralığı genellikle, açıklamalar dahil olmak üzere kaynak deyimlerini, ayrıştırma penceresindeki kodla birlikte karıştırmak için kullanılır.
+ Kaynak aralığı, geçerli deyimden koda katkıda bulunan önceki deyiminden hemen sonraya kadar olan kaynak kodu aralığının tamamıdır. Kaynak aralığı genellikle açıklamalar da dahil olmak üzere kaynak deyimlerini, disassembly penceresindeki kodla karıştırmak için kullanılır.
 
- Yalnızca bu belge bağlamı içinde yer alan kod deyimlerinin aralığını almak için [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) yöntemini çağırın.
+ Yalnızca bu belge bağlamındaki kod deyimleri için aralığı almak için [GetStatementRange yöntemini çağırmanız](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

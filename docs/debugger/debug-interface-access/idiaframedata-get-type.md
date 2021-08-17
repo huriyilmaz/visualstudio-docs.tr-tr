@@ -11,14 +11,15 @@ ms.assetid: efca38b5-c479-4d0a-a164-f903f25c5509
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c362f6a781d7596c438a3fc2c8d0acfc47f070a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2c712652cbdb84b987e898a44c97779e0ff5417b32cf69cd88dffe64792219db
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157688"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455074"
 ---
 # <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
 Derleyiciye özgü çerçeve türünü alır.

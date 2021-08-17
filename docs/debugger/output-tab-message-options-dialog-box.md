@@ -1,6 +1,6 @@
 ---
-title: Çıkış sekmesi, Ileti seçenekleri Iletişim kutusu | Microsoft Docs
-description: İleti seçeneklerinin çıkış sekmesini kullanarak Iletiler görünümünde hangi ileti verilerinin göründüğünü belirtin. Bu makalede kullanılabilir ayarlar açıklanmaktadır.
+title: Çıkış Sekmesi, İleti Seçenekleri İletişim Kutusu | Microsoft Docs
+description: İletiLer Görünümü'ne hangi ileti verilerinin görüntülendiğinden belirtmek için İleti Seçenekleri'nin Çıkış sekmesini kullanın. Bu makalede kullanılabilir ayarlar açıklanmıştır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,28 +21,28 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121404419"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>Çıktı Sekmesi, İleti Seçenekleri İletişim Kutusu
-İleti [görünümü](../debugger/messages-view.md)' nde her bir iletiden hangi verilerin kullanılacağını belirtmek için **Çıkış** sekmesini kullanın. [Ileti seçenekleri Iletişim kutusunu](../debugger/message-options-dialog-box.md)göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.
+her **iletiden** hangi verilerin İletiler Görünümü'ne listelen bir veri olduğunu belirtmek için [Çıktı sekmesini kullanın.](../debugger/messages-view.md) İleti Seçenekleri İletişim [Kutusunu görüntülemek için Spy](../debugger/message-options-dialog-box.md) **menüsünden Günlük** İletileri'ne tıklayın. 
 
- **Çıkış** sekmesinde aşağıdaki ayarlar kullanılabilir:
+ Çıkış sekmesinde aşağıdaki ayarlar **kullanılabilir:**
 
- **Satır numaraları** Satır numaralarını görüntüleyin.
+ **Satır Numaraları** Satır numaralarını görüntüleme.
 
- **Ileti Iç Içe geçme düzeyi** Düzey başına bir dönemdeki iç içe iletiler ön eki.
+ **İleti İç İçe Yerleştirme Düzeyi** Düzey başına bir nokta ile iç içe geçmiş iletiler öneki.
 
- **Ham Ileti parametreleri** Onaltılı **wParam** ve **lParam** değerlerini görüntüler.
+ **Ham İleti Parametreleri** Onaltılık **wParam ve** **lParam değerlerini** görüntüler.
 
- **Kodu çözülen Ileti parametreleri** **WParam** ve **lParam** değerlerinin ileti özel kod çözmede elde edilecek sonuçları görüntüler.
+ **Kodu Çözülen İleti Parametreleri** **wParam** ve **lParam** değerlerinin iletiye özgü kod çözme sonuçlarını görüntüler.
 
- **Ham dönüş değerleri** Onaltılı **LRESULT** dönüş değerini görüntüleyin.
+ **Ham Dönüş Değerleri** Onaltılık **lResult dönüş değerini** görüntüler.
 
- **Kodu çözülen dönüş değerleri** **LRESULT** dönüş değerinin ileti özel kod çözme sonuçlarını görüntüler.
+ **Kodu Çözülen Dönüş Değerleri** **lResult** dönüş değerinin iletiye özgü kod çözme sonuçlarını görüntüler.
 
- **Ileti kaynağı zamanı** Windows sisteminin başlatılmasından bu yana geçen süre (yalnızca postalanan iletiler için).
+ **İleti Kaynak Zamanı** Sistem tarafından Windows geçen süre (yalnızca gönderilen iletiler için).
 
- **Ileti fare konumu** İleti gönderildiğinde farenin ekran koordinatları (yalnızca Postalanan iletiler için).
+ **İleti Fare Konumu** İleti gönderilirken farenin ekran koordinatları (yalnızca gönderilen iletiler için).
 
- **En fazla satır** Şu anda seçili olan Iletiler görünümünde tutulan satır sayısını sınırlayın.
+ **Maksimum satır sayısı** Seçili olan İletiler görünümündeki satır sayısını sınırla.
 
- **Ayrıca Iletileri dosyaya kaydet** İleti günlüğü için bir çıkış dosyası belirtin. Bu çıkış dosyası mesaj günlüğü penceresiyle aynı anda yazılır.
+ **Ayrıca İletileri Dosyaya Da Günlüğe Kaydedin** İleti günlüğü için bir çıkış dosyası belirtin. Bu çıkış dosyası ileti günlüğü penceresiyle aynı anda yazılır.
 
- **Ayarlar varsayılan olarak kaydet** Yeni ileti akışı pencereleri için önceki ayarları kaydedin. Bu ayarlar, Spy + + programından çıktığınızda kaydedilir.
+ **Varsayılan Ayarlar olarak kaydetme** Yeni ileti akışı pencereleri için önceki ayarları kaydedin. Spy++ 'dan çıkıldıklarda bu ayarlar kaydedilir.

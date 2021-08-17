@@ -1,6 +1,6 @@
 ---
-description: Metodun seçili yerel değişkenleri için bir Numaralandırıcı oluşturur.
-title: 'IDebugMethodField:: Enumyereller | Microsoft Docs'
+description: yönteminin seçili yerel değişkenleri için bir numaralayıcı oluşturur.
+title: IDebugMethodField::EnumLocals | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: b0456a6d-2b96-49e2-a871-516571b4f6a5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b7ecaeac949cf139f6b18f30a10a0030002c7f0f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2b9ea26c91f441ee5615e86bade7e1e412d59837e28d7fe3eedab06e715540c7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076686"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121339602"
 ---
 # <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
-Metodun seçili yerel değişkenleri için bir Numaralandırıcı oluşturur.
+yönteminin seçili yerel değişkenleri için bir numaralayıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,18 +45,18 @@ int EnumLocals(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki Yerelleri alacağınız bağlamı veya kapsamı seçen hata ayıklama adresini temsil eden bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi.
+[in] Yerellerin hangi bağlamı veya kapsamı seçerek hata ayıklama adresini temsil eden [bir IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi.
 
 `ppLocals`\
-dışı Yereller listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür; Aksi takdirde, Yereller yoksa null değeri döndürür.
+[out] Yerellerin [listesini temsil eden bir IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür; aksi takdirde, yerel ayar yoksa null değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, S_OK döndürür veya Yereller yoksa S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, S_OK döndürür veya S_FALSE yerel dil yoksa bu işlevi döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Yalnızca verilen hata ayıklama adresini içeren blok içinde tanımlanan değişkenler numaralandırılır. Derleyicinin ürettiği Yereller dahil tüm Yereller gerekliyse, [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) metodunu çağırın.
+Yalnızca verilen hata ayıklama adresini içeren blok içinde tanımlanan değişkenler numaralandı. Derleyici tarafından oluşturulan yereller dahil olmak üzere tüm yereller gerekli ise [EnumAllLocals yöntemini](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) çağırın.
 
-Bir yöntem, birden fazla kapsam bağlamı veya blok içerebilir. Örneğin, aşağıdaki contrived yöntemi üç kapsam, iki iç blok ve Yöntem gövdesinin kendisini içerir.
+Bir yöntem birden çok kapsam bağlamı veya blok içerebilir. Örneğin, aşağıdaki contrived yöntemi üç kapsam içerir: iki iç blok ve yöntem gövdesi.
 
 ```csharp
 public void func(int index)
@@ -75,7 +76,7 @@ public void func(int index)
 }
 ```
 
-[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) nesnesi, `func` yöntemin kendisini temsil eder. `EnumLocals`Yöntemi bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) kümesi ile çağırmak `Inner Scope 1` `temp1` , örneğin değişkenini içeren bir sabit listesi döndürür.
+[IDebugMethodField nesnesi](../../../extensibility/debugger/reference/idebugmethodfield.md) yöntemin `func` kendisini temsil eder. Adrese `EnumLocals` ayarlanmış [bir IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) ile yöntemini çağırma, değişkeni içeren bir `Inner Scope 1` sabit değer `temp1` döndürür, örneğin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

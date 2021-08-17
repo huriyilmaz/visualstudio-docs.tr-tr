@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: c796cedd457db405fe3d12a9ed0881881ddfee6b8f333adc1f9379d962650e24
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aa9411d77b8bdece857a4c63bc96fa04727ceb67
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121350972"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025101"
 ---
 # <a name="xml-editor"></a>XML düzenleyicisi
 

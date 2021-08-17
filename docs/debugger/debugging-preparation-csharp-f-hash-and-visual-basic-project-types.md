@@ -44,11 +44,11 @@ Bu bölümdeki konular, proje şablonları tarafından oluşturulan C#, F# ve pr
 
  [Konsol Projeleri](../debugger/debugging-preparation-console-projects.md) C# veya konsol uygulamalarında hata ayıklamak için dikkat edilmesi gereken [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ek noktalar sağlar. Bu komut satırı bağımsız değişkenlerini belirtmeyi, komut isteminden uygulama başlatmayı, Çıkış penceresine yazmayı ve Konsol penceresinin sorunlarını gidermeyi içerir.
 
- [Windows Hizmetleri](../debugger/debugging-preparation-windows-services.md) Bir hizmet Windows açıklar ve Hizmet Uygulamalarında Hata Ayıklama Windows bağlantısı sağlar.
+ [Windows Hizmetleri](../debugger/debugging-preparation-windows-services.md) Bir hizmet Windows açıklar ve Hizmet Uygulamalarında Hata Ayıklama bağlantısı Windows sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
- [Hata ayıklayıcısı Ayarlar hazırlama](../debugger/debugger-settings-and-preparation.md) Hata ayıklayıcı ile programda hata ayıklamak için gerçekleştirmeniz gereken ayarları ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hazırlıkları kapsar.
+ [Hata Ayıklayıcısı Ayarlar Hazırlama](../debugger/debugger-settings-and-preparation.md) Hata ayıklayıcı ile programda hata ayıklamak için gerçekleştirmeniz gereken ayarları ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hazırlıkları kapsar.
 
  [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md) Yönetilen kodda yazılan uygulamalar için yaygın hata ayıklama sorunlarını ve tekniklerini kapsar.
 

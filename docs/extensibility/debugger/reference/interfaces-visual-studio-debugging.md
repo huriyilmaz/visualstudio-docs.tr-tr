@@ -1,6 +1,6 @@
 ---
-title: Arabirimler (Visual Studio hata ayıklama) | Microsoft Docs
-description: Visual Studio Hata ayıklamasında çekirdek arabirimler, ifade değerlendirme arabirimleri ve sembol sağlayıcısı arabirimleri hakkında bilgi edinmek için bu kaynakları kullanın.
+title: Arabirimler (Visual Studio Ayıklama) | Microsoft Docs
+description: Hata ayıklamada temel arabirimler, ifade değerlendirme arabirimleri ve sembol sağlayıcısı arabirimleri hakkında bilgi edinmek Visual Studio kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,17 +10,18 @@ ms.assetid: 79875cbb-f946-49d4-94eb-941d0e1a40b2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 185781d17e1b80aab5267902031bf3d1ede1231c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 214cd86f74e89e5f30dccd12c1acd54b3e86543e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082614"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103227"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>Arabirimler (Visual Studio Hata Ayıklama)
-Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasındaki arabirim sayfasında alfabetik olarak listelenir.
+Yöntemler, içindekiler tablosundaki her arabirimin altında alfabetik olarak listelenir ve arabirim sayfasında Vtable sırasına göre listelenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)
@@ -29,16 +30,16 @@ Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasınd
 
 - [Expression Evaluation Interfaces](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 
- Kesme modunda bir çağrı yığınında ifadeleri değerlendiren arabirimleri açıklar.
+ Kesme modu sırasında bir çağrı yığınında ifadeleri değerlendiren arabirimleri açıklar.
 
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 
- Bir sembol sağlayıcının türleri tanımlayıcılarla ilişkilendirmek için uyguladığı arabirimleri açıklar.
+ Bir sembol sağlayıcısının türleri tanımlayıcılar ile ilişkilendirmek için uygulayan arabirimleri açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
 
- Hata ayıklama SDK 'sının arabirimleri, Numaralandırıcılar ve yapıları için belgeler içerir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
+ Hata Ayıklama SDK'sı arabirimleri, numaralayıcıları ve yapıları [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] için belgeler içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

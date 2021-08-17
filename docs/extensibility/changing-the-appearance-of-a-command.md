@@ -12,14 +12,15 @@ ms.assetid: da2474fa-f92d-4e9e-b8bf-67c61bf249c2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ddeed08d7bc33b9a9ae5405876f3b28459d4eaf2
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 6344d5d58856c420807e80020d80f0067d0f973c566b3e613782e5fa0b85ef11
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905039"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452634"
 ---
 # <a name="change-the-appearance-of-a-command"></a>Komutun görünümünü değiştirme
 Bir komutun görünümünü değiştirerek, kullanıcıya geri bildirim sağlayabilirsiniz. Örneğin, kullanılamayan bir komutun farklı görünmesini isteyebilirsiniz. Komutları kullanılabilir veya kullanılamaz hale getirebilirsiniz, gizleyebilir veya gösterebilir veya menüdeki bu öğeleri denetleyebilir ya da işaretini kaldırabilirsiniz.
@@ -80,7 +81,7 @@ Bir komutun görünüşünü değiştirmek için şu eylemlerden birini gerçekl
     }
     ```
 
-6. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görünmelidir.
+6. Projeyi derleyin ve hata ayıklamayı başlatın. deneysel Visual Studio örneği görünmelidir.
 
 7. **Araçlar** menüsünde, **ChangeMenuText komutunu çağır** komutuna tıklayın. Bu noktada, komut adı **ChangeMenuText olarak çağırılır**, bu nedenle komut Işleyicisi **ChangeMyCommand ()** öğesini çağırmaz.
 

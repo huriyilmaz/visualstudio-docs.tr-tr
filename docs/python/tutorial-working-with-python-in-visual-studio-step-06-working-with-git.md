@@ -23,23 +23,23 @@ ms.locfileid: "121229318"
 
 **Önceki adım: [Paketleri yükleme ve Python ortamınızı yönetme](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
-Visual Studio, yerel Git depoları ve depolama ve depolama gibi hizmetlerle doğrudan GitHub Azure Repos. Tümleştirme bir depoyu kopyalamayı, değişiklikleri işlemeyi ve dalları yönetmeyi içerir.
+Visual Studio, yerel Git depoları ve depolama ve depolama gibi hizmetler üzerinde uzak depolarla GitHub tümleştirme Azure Repos. Tümleştirme bir depoyu kopyalamayı, değişiklikleri işlemeyi ve dalları yönetmeyi içerir.
 
-Bu makalede, mevcut bir proje için yerel Git deposu oluşturmaya ve git'in Git ile ilgili bazı özelliklerine Visual Studio temel bir genel bakış sağlar.
+Bu makalede, mevcut bir proje için yerel Git deposu oluşturmaya ve git'in Git ile ilgili özelliklerinden Visual Studio temel bir genel bakış sağlar.
 
 1. Önceki adımda yer alan Visual Studio gibi bir proje [](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)açıkken çözüme sağ tıklayın ve Kaynak Denetimine Çözüm **Ekle'yi seçin.** Visual Studio proje kodunuzu içeren yerel bir Git deposu oluşturur.
 
 1. Bu Visual Studio Projenin Git deposuyla ilgili denetimler, git deposu penceresinin sağ alt köşesinde Visual Studio algılar. Denetimler bekleyen işlemeleri, değişiklikleri, depo adını ve dalı gösterir. Ek bilgileri görmek için denetimlerin üzerine gelin.
 
-    ![Uygulama penceresinde git denetimi üzerine gelindiğinde ek Visual Studio görünür](media/working-with-git-01.png)
+    ![Uygulama penceresinde git denetimi üzerine gelindiğinde ek Visual Studio görüntülenir](media/working-with-git-01.png)
 
 1. Yeni bir depo oluşturma veya Git denetimlerini seçme Visual Studio yeni **Takım Gezgini** açılır. (Pencereyi Görünüm ile herhangi bir zamanda **açabilirsiniz**  >  **Takım Gezgini** menü komutu.) Pencerede üç ana bölme vardır ve bu bölme üst bilgisinde açılan Takım Gezgini **geçiş** yapar. Yayımlama **işlemleri** sağlayan Eşitleme bölmesi, Anında İlerle denetimi **(yukarı** ok simgesi) seçerek de görünür:
 
-    ![Takım Gezgini depoyu Visual Studio sonra yeniden çalışma](media/working-with-git-02.png)
+    ![Takım Gezgini depoyu Visual Studio sonra yeni bir depo oluşturma](media/working-with-git-02.png)
 
 1. atlanmamış **değişiklikleri** gözden geçirmek ve istediğiniz zaman işlemek için Değişiklikler'i (veya kalem simgesiyle Git denetimi) seçin.
 
-    ![Takım Gezgini iş Visual Studio değişikliklerin nasıl gösterilebilir](media/working-with-git-03.png)
+    ![Takım Gezgini yapılan Visual Studio gösteren Visual Studio içinde](media/working-with-git-03.png)
 
     Değişiklikler listesinde bir dosyaya **çift tıklar** ve bu dosya için bir fark görünümü açın:
 
@@ -49,13 +49,13 @@ Bu makalede, mevcut bir proje için yerel Git deposu oluşturmaya ve git'in Git 
 
     ![Takım Gezgini gösteren Visual Studio içinde](media/working-with-git-04.png)
 
-1. Depo adıyla Git denetimi seçerek (önceki görüntüde **CosineWave),** **Takım Gezgini** bir **Bağlan** arabirimi gösterir ve bu arabirimle hızlıca başka bir depoya geçebilirsiniz.
+1. Depo adı (önceki görüntüde **CosineWave)** olan Git denetimi seçerek **Takım Gezgini** bir **Bağlan** arabirimi gösterir ve bu arabirimle hızlıca başka bir depoya geçebilirsiniz.
 
 1. Yerel depo kullanırken, işlenen değişiklikler doğrudan depoya gider. Uzak depoya bağlıysanız, **Takım Gezgini'de** açılan üst bilgisini seçin,  Eşitleme bölümüne geçmek  için Eşitle'yi seçin ve burada sunulan **Çekme** ve **Getirme** komutlarıyla birlikte çalışabilirsiniz.
 
 ## <a name="go-deeper"></a>Daha derine gitme
 
-Uzak bir Git deposundan proje oluşturma hakkında kısa bir kılavuz için bkz. [Hızlı Başlangıç: Visual Studio'da Python kodu deposu](quickstart-03-python-in-visual-studio-project-from-repository.md)kopyalama.
+Uzak bir Git deposundan proje oluşturma hakkında kısa bir kılavuz için bkz. [Hızlı Başlangıç: Visual Studio'de Python kodu deposu kopyalama.](quickstart-03-python-in-visual-studio-project-from-repository.md)
 
 Birleştirme çakışmalarını işleme, çekme istekleriyle kodu gözden geçirme, dallar arasında yenidenbasing ve tek tek seçme değişiklikleri gibi çok daha kapsamlı bir öğretici için bkz. Git ve [Kullanmaya başlayın ile Azure Repos.](/azure/devops/repos/git/gitquickstart)
 

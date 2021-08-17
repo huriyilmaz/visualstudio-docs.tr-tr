@@ -304,31 +304,31 @@ ms.locfileid: "121391179"
 
 - Web apps ve SharePoint uygulamaları için toplayıcı, belirtilen uygulama havuzunu paylaşan her uygulama için verileri kaydeder. Bu, aynı uygulama havuzunu paylaşan herhangi bir uygulamayı yavaşlatabilir, ancak yalnızca bir koleksiyon planında tek bir uygulama için modüller belirleyebilseniz de olabilir.
 
-   Toplayıcının diğer uygulamaları yavaşlatmasını engellemek için, her uygulamayı kendi uygulama havuzunda barındırın.
+   Toplayıcının diğer uygulamaları yavaşlatmalarını önlemek için her uygulamayı kendi uygulama havuzunda barındırabilirsiniz.
 
-- IntelliTrace 'in veri topladığı toplama planındaki olayları gözden geçirin. İlgili olmayan veya ilgilendiğiniz olayları devre dışı bırakmak için koleksiyon planını düzenleyin.
+- IntelliTrace'in veri toplayan koleksiyon planında olayları gözden geçirme. İlgili olmayan veya ilginizi toplamaya gerek olmayan olayları devre dışı bırakmak için koleksiyon planını düzenleyin.
 
-   Bir olayı devre dışı bırakmak için `enabled` öğesi için özniteliğini şu `<DiagnosticEventSpecification>` şekilde ayarlayın `false` :
+   Bir olayı devre dışı bırakmak için `enabled` öğesinin `<DiagnosticEventSpecification>` özniteliğini olarak `false` ayarlayın:
 
    `<DiagnosticEventSpecification enabled="false">`
 
-   `enabled`Öznitelik yoksa, olay etkinleştirilir.
+   Öznitelik `enabled` yoksa olay etkinleştirilir.
 
-   *Bu, performansı nasıl geliştirir?*
+   *Bu, performansı nasıl artırır?*
 
-  - Uygulamayla ilgili olmayan olayları devre dışı bırakarak, başlangıç süresini azaltabilirsiniz. örneğin, Windows iş akışı kullanmayan uygulamalar için Windows iş akışı olaylarını devre dışı bırakın.
+  - Uygulamayla ilgili olmayan olayları devre dışı bırakarak başlatma süresini azaltabilirsiniz. Örneğin, Windows kullanmayan uygulamalar için İş Akışı olaylarını Windows devre dışı bırakabilirsiniz.
 
-  - Kayıt defterine erişen ancak kayıt defteri ayarlarıyla ilgili sorunları göstermemekte olan uygulamalar için kayıt defteri olaylarını devre dışı bırakarak, başlatma ve çalışma süresi performansını geliştirebilirsiniz.
+  - Kayıt defterine erişen ancak kayıt defteri ayarlarıyla ilgili sorunları göstermeyen uygulamalar için kayıt defteri olaylarını devre dışı bırakarak hem başlatma hem de çalışma zamanı performansını geliştirebilirsiniz.
 
-- IntelliTrace 'in veri topladığı toplama planındaki modülleri gözden geçirin. Koleksiyon planını yalnızca ilgilendiğiniz modülleri içerecek şekilde düzenleyin:
+- IntelliTrace'in veri toplayan koleksiyon planı modüllerini gözden geçirme. Koleksiyon planını yalnızca ilginizi gereken modülleri içerecek şekilde düzenleyin:
 
-  1. Toplama planını açın. Öğesini bulun `<ModuleList>` .
+  1. Koleksiyon planını açın. öğesini `<ModuleList>` bulun.
 
-  2. İçinde `<ModuleList>` , `isExclusionList` özniteliğini olarak ayarlayın `false` .
+  2. içinde `<ModuleList>` `isExclusionList` özniteliğini olarak `false` ayarlayın.
 
-  3. `<Name>`Her modülü aşağıdakilerden biriyle belirtmek için öğesini kullanın: dosya adı, adı bu dizeyi içeren herhangi bir modül dahil olmak üzere dize değeri veya ortak anahtar.
+  3. Her modülü şunlardan biri ile belirtmek için öğesini kullanın: dosya adı, dize değeri, adı bu dizeyi veya ortak anahtarı içeren herhangi `<Name>` bir modülü dahil etmek için.
 
-     Örneğin, Fabrikam Fiber Web uygulamasının yalnızca ana Web modülünden veri toplamak için şöyle bir liste oluşturun:
+     Örneğin, Fabrikam Fiber Web uygulamasının yalnızca ana Web modülünden veri toplamak için aşağıdakine benzer bir liste oluşturun:
 
   ```xml
   <ModuleList isExclusionList="false">
@@ -336,7 +336,7 @@ ms.locfileid: "121391179"
   </ModuleList>
   ```
 
-   Adı "Fabrikam" içeren tüm modüllerden veri toplamak için, şöyle bir liste oluşturun:
+   Adı "Fabrikam" olan herhangi bir modülden veri toplamak için aşağıdakine benzer bir liste oluşturun:
 
   ```xml
   <ModuleList isExclusionList="false">
@@ -344,7 +344,7 @@ ms.locfileid: "121391179"
   </ModuleList>
   ```
 
-   Ortak anahtar belirteçlerini belirterek modüllerden veri toplamak için şöyle bir liste oluşturun:
+   Modüllerden ortak anahtar belirteçlerini belirterek veri toplamak için aşağıdakine benzer bir liste oluşturun:
 
   ```xml
   <ModuleList isExclusionList="false">
@@ -356,35 +356,35 @@ ms.locfileid: "121391179"
   </ModuleList>
   ```
 
-   *Bu, performansı nasıl geliştirir?*
+   *Bu, performansı nasıl artırır?*
 
-   Bu, uygulama başlatıldığında ve çalıştırıldığında IntelliTrace 'in topladığı Yöntem çağrısı bilgilerini ve diğer izleme verilerini azaltır. Bu veriler şunları yapmanızı sağlar:
+   Bu, intelliTrace'in uygulama başlatıldığında ve çalıştır olduğunda toplayan yöntem çağrı bilgileri ve diğer izleme verileri miktarını azaltır. Bu veriler şunları sağlar:
 
-  - Verileri topladıktan sonra kod adım adım.
+  - Verileri toplayarak kodda adım adım inin.
 
-  - İşlev çağrılarından geçirilen ve döndürülen değerleri inceleyin.
+  - İşlev çağrılarına geçirilen ve işlev çağrılarından döndürülen değerleri inceleme.
 
-    *Bunun yerine modülleri dışlamayız?*
+    *Bunun yerine modüller neden dışlansın?*
 
-    Varsayılan olarak, koleksiyon planları özniteliğini olarak ayarlayarak modülleri hariç tutar `isExclusionList` `true` . Ancak, modüllerin dışlanması hala, listenin ölçütlerine uymayan ve üçüncü taraf veya açık kaynaklı modüller gibi sizi ilgilendiremeyen modüllerden veri toplamaya neden olabilir.
+    Varsayılan olarak, koleksiyon planları özniteliğini olarak ayarerek modülleri `isExclusionList` `true` dışlar. Ancak, modüllerin hariç tutularak yine de listenin ölçütlerine uygun olmayan ve üçüncü taraf veya açık kaynak modüller gibi ilgini toplamayabilirsiniz.
 
-- *IntelliTrace 'in toplamayacak herhangi bir veri var mı?*
+- *IntelliTrace'in toplaması mümkün olmayan veriler var mı?*
 
-   Evet, performans etkisini azaltmak için, IntelliTrace veri toplamayı, metotlara geçirilen ve metotlardan döndürülen temel veri türleri değerleriyle kısıtlar ve metotlara geçirilen ve metotlardan döndürülen üst düzey nesnelerdeki alanlarda ilkel veri türleri değerleri ile kısıtlar.
+   Evet, performans etkisini azaltmak için IntelliTrace, veri toplamayı yöntemlere geçirilen ve yöntemlerden döndürülen ilkel veri türlerinin değerleriyle ve yöntemlerden geçirilen ve yöntemlerden döndürülen üst düzey nesnelerdeki alanlardaki temel veri türlerinin değerleriyle kısıtlar.
 
-   Örneğin, bir `AlterEmployee` tamsayı ve bir nesne kabul eden bir yöntem imzasına sahip olduğunuzu varsayalım `id` `Employee` `oldemployee` :
+   Örneğin, bir tamsayıyı ve `AlterEmployee` nesnesini kabul eden bir yöntem imzanız olduğunu `id` `Employee` `oldemployee` varsayalım:
 
    `public Employee AlterEmployee(int id, Employee oldemployee)`
 
-   `Employee`Tür şu özniteliklere sahiptir: `Id` , `Name` ve `HomeAddress` . Ve türü arasında bir ilişki ilişkisi var `Employee` `Address` .
+   Türün `Employee` şu öznitelikleri vardır: `Id` , ve `Name` `HomeAddress` . ile türü arasında bir `Employee` ilişki `Address` vardır.
 
-   ![Çalışan ve adres arasındaki ilişki](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
+   ![Çalışan ile Adres arasındaki ilişki](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
 
-   Toplayıcı `id` ,, `Employee.Id` `Employee.Name` ve `Employee` yönteminden döndürülen nesnenin `AlterEmployee` değerlerini kaydeder. Ancak toplayıcı, nesne hakkında, null olup olmadığı dışında bir bilgi kaydetmez `Address` . Toplayıcı aynı zamanda yöntemdeki yerel değişkenlerle ilgili verileri, `AlterEmployee` diğer yöntemler ise Yöntem olarak bu yerel değişkenleri parametre olarak kullanmadığı sürece de kaydetmez.
+   Toplayıcı, yönteminden `id` `Employee.Id` döndürülen , ve `Employee.Name` `Employee` nesnesinin değerlerini `AlterEmployee` kaydeder. Ancak toplayıcı, nesneyle ilgili bilgileri null olup `Address` olmadığı dışında kaydetmez. Toplayıcı ayrıca, diğer yöntemler bu yerel değişkenleri parametre olarak kullanmadıkça yönteminde yerel değişkenlerle ilgili verileri kaydetmez ve bu noktada yöntem parametresi `AlterEmployee` olarak kaydedilirler.
 
-## <a name="where-else-can-i-get-intellitrace-data"></a><a name="WhereElse"></a> IntelliTrace verilerini başka bir şekilde alabilirim?
+## <a name="where-else-can-i-get-intellitrace-data"></a><a name="WhereElse"></a> IntelliTrace verilerini başka nereden edinebilirsiniz?
 
-Visual Studio Enterprise bir IntelliTrace hata ayıklama oturumundan IntelliTrace verileri alabilirsiniz. [IntelliTrace özelliklerine](../debugger/intellitrace-features.md)bakın.
+IntelliTrace verilerini bir IntelliTrace hata ayıklama oturumundan Visual Studio Enterprise. Bkz. [IntelliTrace Özellikleri.](../debugger/intellitrace-features.md)
 
 ## <a name="where-can-i-get-more-information"></a>Daha fazla bilgiyi nereden bulabilirim?
  [Kayıtlı IntelliTrace verilerini kullanma](../debugger/using-saved-intellitrace-data.md)
@@ -392,11 +392,11 @@ Visual Studio Enterprise bir IntelliTrace hata ayıklama oturumundan IntelliTrac
  [IntelliTrace](../debugger/intellitrace.md)
 
 ### <a name="blogs"></a>Bloglar
- [IntelliTrace tek başına toplayıcıyı uzaktan kullanma](https://devblogs.microsoft.com/devops/using-the-intellitrace-standalone-collector-remotely/)
+ [IntelliTrace Tek Başına Toplayıcıyı Uzaktan Kullanma](https://devblogs.microsoft.com/devops/using-the-intellitrace-standalone-collector-remotely/)
 
- [IntelliTrace koleksiyon planları oluşturma ve özelleştirme](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/)
+ [IntelliTrace Koleksiyon Planları Oluşturma ve Özelleştirme](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/)
 
- [Üretim sunucularında IntelliTrace toplamasını iyileştirme](https://devblogs.microsoft.com/devops/optimizing-intellitrace-collection-on-production-server/)
+ [Üretim Sunucularında IntelliTrace Koleksiyonunu En Iyi Duruma Getirme](https://devblogs.microsoft.com/devops/optimizing-intellitrace-collection-on-production-server/)
 
  [Microsoft DevOps](https://devblogs.microsoft.com/devops/)
 

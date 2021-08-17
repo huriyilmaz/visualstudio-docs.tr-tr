@@ -1,6 +1,6 @@
 ---
-description: Programın kapladığı bellek baytlarını alır.
-title: 'IDebugProgram2:: GetMemoryBytes | Microsoft Docs'
+description: Program tarafından kapladığı bellek baytlarını alın.
+title: IDebugProgram2::GetMemoryBytes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 1cdedb47-caf8-468e-aaf4-163f16afb403
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27b3ce2dda13e45bb4d82f68eb02a8930de55764
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 17f6c106a387c5a53a78e8488929f9a54389d58971854f925b3f9f9550c3548b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053691"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338858"
 ---
 # <a name="idebugprogram2getmemorybytes"></a>IDebugProgram2::GetMemoryBytes
-Programın kapladığı bellek baytlarını alır.
+Program tarafından kapladığı bellek baytlarını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetMemoryBytes(
 
 ## <a name="parameters"></a>Parametreler
 `ppMemoryBytes`\
-dışı Programın bellek baytlarını temsil eden bir [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi döndürür.
+[out] Programın bellek [baytlarını temsil eden bir IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi tarafından temsil edilen bellek baytları, program yürütüldüğünde ayrılan belleğe değil programın bellekteki görüntüsü içindir.
+ [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi tarafından temsil edilen bellek baytları, program yürütülürken ayrılan bellek değil, bellekte programın görüntüsüne yöneliktir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

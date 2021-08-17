@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bir nesnenin verilerini görüntülemek ve değiştirmek için bir proxy arabirimi sağlar.
+description: Bu arabirim, bir nesnenin verilerini görüntülemek ve değiştirmek için bir ara sunucu arabirimi sağlar.
 title: IPropertyProxyProvider | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 52e9f7fc-6fe0-4d23-890b-5673dca8c3cb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87bc0bfa11c54f8eade595f6bf0bfaba1fa277ca
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 838bffb792d709dc237aae279f3af754d4e7873d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058098"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029222"
 ---
 # <a name="ipropertyproxyprovider"></a>IPropertyProxyProvider
-Bu arabirim, bir nesnenin verilerini görüntülemek ve değiştirmek için bir proxy arabirimi sağlar.
+Bu arabirim, bir nesnenin verilerini görüntülemek ve değiştirmek için bir ara sunucu arabirimi sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,28 +30,28 @@ Bu arabirim, bir nesnenin verilerini görüntülemek ve değiştirmek için bir 
 IPropertyProxyProvider : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- İfade değerlendirici (EE), bu arabirimi, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini uygulayan aynı nesne üzerinde, görselin tür Görselleştiriciler desteğinin bir parçası olarak uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ İfade değerlendiricisi (EE), bu arabirimi, EE'nin tür görselleştiricileri desteğinin bir parçası olarak [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini uygulayan aynı nesne üzerinde uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [](/cpp/atl/queryinterface) `IDebugProperty3` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
+ Bu arabirimi almak için bir arabirimde [QueryInterface](/cpp/atl/queryinterface) `IDebugProperty3` çağrısı yapmak.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- `IPropertyProxyProvider`Arabirimi aşağıdaki yöntemi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Arabirimi `IPropertyProxyProvider` aşağıdaki yöntemi kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)|Bir nesne üzerindeki verileri görüntülemek için bir özellik proxy arabirimini alır.|
+|[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)|Bir nesnede verileri görüntülemek için bir özellik ara sunucusu arabirimini alın.|
 
 ## <a name="remarks"></a>Açıklamalar
- EE bu arabirimi uygusa da [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) 'nin uygulanması genellikle [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md)tarafından işlenir. IEEVisualizerService arabirimini edinme hakkında ayrıntılar için bkz. [verileri görselleştirme ve görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) .
+ Uygulama EE arabirimini uygulaysa [da, GetPropertyProxy'nin](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) uygulaması genellikle [GetPropertyProxy tarafından işleniyor.](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) IEEVisualizerService arabirimini alma hakkında ayrıntılı bilgi için bkz. Verileri Görselleştirme ve Görüntüleme. [](../../../extensibility/debugger/visualizing-and-viewing-data.md)
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

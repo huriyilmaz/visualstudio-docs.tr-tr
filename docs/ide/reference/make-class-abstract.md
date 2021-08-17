@@ -1,6 +1,6 @@
 ---
 title: Sınıfı soyut yapma
-description: Özet bir yöntem yazdıktan sonra sınıfınızın nasıl soyut hale yapılacağını öğrenin.
+description: Soyut bir yöntem yazdıktan sonra sınıfınızı soyut yapmayı öğrenin.
 ms.date: 11/03/2020
 ms.topic: reference
 author: mikadumont
@@ -12,34 +12,34 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9cd956bf312b356b98cdefdf30a98f4b77be796ec66b0a3862d480f5727fb045
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 767a81ae1957a7a3c2865bef060f5f0016e7a7c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372405"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101095"
 ---
 # <a name="make-class-abstract"></a>Sınıfı soyut yapma
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Sınıf soyut yeniden düzenlemesi yapın.
+**Ne:** Sınıf soyut yeniden düzenlemesi yapma.
 
-**Ne zaman:** Soyut olmayan bir sınıfta soyut bir yöntem yazarsınız.
+**Ne zaman:** Soyut bir sınıfta soyut bir yöntem yazarsiniz.
 
-**Neden:**  Soyut bir yöntem yazdıktan sonra bir sınıf soyut hale getirmek için kod düzeltmesine sahip olmak size zaman kazandırır.
+**Neden:**  Soyut yöntem yazdıktan sonra sınıfı soyut hale gelecek bir kod düzeltmesi yapmak size zaman tasarrufu sağlar.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Giriş işaretini soyut yönteme yerleştirin.
+1. Caret'inizi soyut yöntemin üzerine yer.
 
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
 
-3. **' Abstract ' sınıfını oluştur '** u seçin.
+3. Make **class 'abstract' (Sınıf 'soyut' yapma) öğesini seçin.**
 
     ![Sınıfı soyut yapma](media/make-class-abstract.png)
 

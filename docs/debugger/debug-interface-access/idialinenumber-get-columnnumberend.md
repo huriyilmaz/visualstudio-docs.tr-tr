@@ -11,14 +11,15 @@ ms.assetid: 02fa56c1-87b6-405a-adee-3bb6bc62de2d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b11dcd94b0e51feb3b70070e5abf1139c6c9eff0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 19e3ed60a17abdb39e9027455fc4e96bcad3a32a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157611"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066601"
 ---
 # <a name="idialinenumberget_columnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
 İfade veya deyimin bittiği tek tabanlı kaynak sütun numarasını alır.

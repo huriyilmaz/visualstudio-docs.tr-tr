@@ -1,7 +1,7 @@
 ---
 title: Kod ölçümlerini hesapla
 ms.date: 11/02/2018
-description: Döngüsel karmaşıklığı, sınıf bağlantısı ve diğer Visual Studio kod ölçümleri hakkında bilgi edinin. Ölçümlerin geliştirme ilerlemesini nasıl izleyip riskleri belirleyebilmesi için bkz..
+description: döngüsel karmaşıklığı, sınıf bağlantısı ve diğer Visual Studio kod ölçümleri hakkında bilgi edinin. Ölçümlerin geliştirme ilerlemesini nasıl izleyip riskleri belirleyebilmesi için bkz..
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
 f1_keywords:
@@ -15,26 +15,27 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e77667feae806b66092195f30b028ccca653b2b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8cbcb6f53f70de6f42b87551309a557f31b29f03a3bb73ea9825075bcb481a23
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860457"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455510"
 ---
 # <a name="code-metrics-values"></a>Kod ölçüm değerleri
 
 Modern yazılım uygulamalarının artan karmaşıklığı, kodun güvenilir ve sürdürülebilir hale getirilmesi zorluklarını de artırır. Kod ölçümleri, geliştiricilerin geliştirdikleri koda daha iyi Öngörüler sağlayan bir yazılım ölçüleri kümesidir. Geliştiriciler kod ölçümlerinden yararlanarak hangi türlerin ve/veya yöntemlerin yeniden çalışması gerektiğini veya daha kapsamlı olarak test edildiğini anlayabilirler. Geliştirme ekipleri potansiyel riskleri tanımlayabilir, projenin geçerli durumunu anlayabilir ve yazılım geliştirme sırasında ilerleme durumunu izleyebilir.
 
-Geliştiriciler, yönetilen kodların karmaşıklığını ve bakımlarını ölçen kod ölçüm verileri oluşturmak için Visual Studio 'Yu kullanabilir. Tüm çözüm veya tek bir proje için kod ölçüm verileri oluşturulabilir.
+geliştiriciler, yönetilen kodların karmaşıklığını ve bakımlarını ölçen kod ölçüm verileri oluşturmak için Visual Studio kullanabilir. Tüm çözüm veya tek bir proje için kod ölçüm verileri oluşturulabilir.
 
-Visual Studio 'da kod ölçüm verileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: kod ölçümleri verileri oluşturma](../code-quality/how-to-generate-code-metrics-data.md).
+Visual Studio ' de kod ölçüm verileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: kod ölçümleri verileri oluşturma](../code-quality/how-to-generate-code-metrics-data.md).
 
 ## <a name="software-measurements"></a>Yazılım ölçümleri
 
-Aşağıdaki listede, Visual Studio 'Nun hesapladığı kod ölçümleri sonuçları gösterilmektedir:
+aşağıdaki listede Visual Studio hesapladığı kod ölçümleri sonuçları gösterilmektedir:
 
 - Bakım **dizini** -kodu korumanın göreli kolaylığını temsil eden 0 ile 100 arasında bir dizin değeri hesaplar. Yüksek bir değer, daha iyi bakım anlamına gelir. Renk kodlu derecelendirmeler kodunuzda sorun noktaları hızlı bir şekilde belirlemek için kullanılabilir. Yeşil derecelendirme 20 ile 100 arasındadır ve kodun iyi bakım yaptığını gösterir. Sarı bir derecelendirme 10 ile 19 arasındadır ve kodun oldukça sürdürülebilir olduğunu gösterir. Kırmızı bir derecelendirme 0 ile 9 arasında bir derecelendirmesidir ve düşük bakım olduğunu gösterir. Daha fazla bilgi için bkz. [Bakımma dizini aralığı ve anlamı](code-metrics-maintainability-index-range-and-meaning.md).
 
@@ -46,9 +47,9 @@ Aşağıdaki listede, Visual Studio 'Nun hesapladığı kod ölçümleri sonuçl
 
 ::: moniker range=">=vs-2019"
 
-- **Kaynak kodu satırları** -boş satırlar da dahil olmak üzere kaynak dosyanızda bulunan kaynak kodu satırlarının tam sayısını gösterir. Bu ölçüm, Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. ölçümlerini ('nın 2.9.5 sürümüyle) ile başlayarak kullanılabilir.
+- **Kaynak kodu satırları** -boş satırlar da dahil olmak üzere kaynak dosyanızda bulunan kaynak kodu satırlarının tam sayısını gösterir. bu ölçüm Visual Studio 2019 sürüm 16,4 ve Microsoft. codeanalysis. ölçümler ('nın 2.9.5 sürümüyle) ' den başlayarak kullanılabilir.
 
-- **Yürütülebilir kod satırları** -yürütülebilir kod satırlarının veya işlemlerin yaklaşık sayısını gösterir. Bu, çalıştırılabilir koddaki işlem sayısı sayısıdır. Bu ölçüm, Visual Studio 2019 sürüm 16,4 ve Microsoft. CodeAnalysis. ölçümlerini ('nın 2.9.5 sürümüyle) ile başlayarak kullanılabilir. Bu değer genellikle, eski modda kullanılan MSIL yönergesi tabanlı ölçüm olan önceki ölçüm ve **kod satırları** için yakın bir eşleşmedir.
+- **Yürütülebilir kod satırları** -yürütülebilir kod satırlarının veya işlemlerin yaklaşık sayısını gösterir. Bu, çalıştırılabilir koddaki işlem sayısı sayısıdır. bu ölçüm Visual Studio 2019 sürüm 16,4 ve Microsoft. codeanalysis. ölçümler ('nın 2.9.5 sürümüyle) ' den başlayarak kullanılabilir. Bu değer genellikle, eski modda kullanılan MSIL yönergesi tabanlı ölçüm olan önceki ölçüm ve **kod satırları** için yakın bir eşleşmedir.
 ::: moniker-end
 ::: moniker range="vs-2017"
 

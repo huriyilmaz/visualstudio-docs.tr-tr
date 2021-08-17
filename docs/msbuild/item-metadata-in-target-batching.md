@@ -1,6 +1,6 @@
 ---
-title: Hedef toplu Işleme içindeki öğe meta verileri | Microsoft Docs
-description: MSBuild 'in, bir derleme hedefinin giriş ve çıkışları üzerinde bağımlılık analizi gerçekleştirmek için hedef toplu işleme içindeki öğe meta verilerini nasıl kullandığını öğrenin.
+title: Hedef Toplu İşlemDe Öğe Meta Verileri | Microsoft Docs
+description: Derleme MSBuild giriş ve çıkışlarında bağımlılık analizi gerçekleştirmek için hedef toplu işlemde öğe meta verilerini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,24 +12,25 @@ ms.assetid: f3cc4186-6a4c-4161-bbe5-1ec638b4925b
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d3389d24ded805c7b1f8bbb8d31daef0cbef1a5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 10691a013f79f83854f1b942a2d9d1ec1d9cf8c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913913"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069067"
 ---
 # <a name="item-metadata-in-target-batching"></a>Toplu hedef işlemede öğe meta verileri
 
-MSBuild, bir derleme hedefinin giriş ve çıkışları üzerinde bağımlılık Analizi gerçekleştirme yeteneğine sahiptir. Hedefin giriş veya çıkış çıkışları güncel olduğunu tespit ederseniz, hedef atlanır ve derleme devam eder. `Target` öğeler, `Inputs` `Outputs` bağımlılık analizi sırasında incelenecek öğeleri belirtmek için ve özniteliklerini kullanır.
+MSBuild, derleme hedefinin giriş ve çıkışları üzerinde bağımlılık analizi gerçekleştirebilme özelliğine sahip. Hedefin girişlerinin veya çıkışlarının güncel olduğu belirlenirse hedef atlanır ve derleme devam eder. `Target` öğeleri, bağımlılık `Inputs` `Outputs` analizi sırasında incelen öğeleri belirtmek için ve özniteliklerini kullanır.
 
-Bir hedef, giriş veya çıkış olarak toplanmış öğeleri kullanan bir görev içeriyorsa, `Target` hedef öğe öğesi, MSBuild 'in zaten güncel olan `Inputs` `Outputs` öğelerin toplu işlerini atlamasını sağlamak için veya özniteliklerinde toplu işleme kullanmalıdır.
+Hedef, giriş veya çıkış olarak toplu öğeleri kullanan bir görev içeriyorsa, hedefin öğesi zaten güncel olan öğelerin toplu işlerini atlamak için MSBuild'yi etkinleştirmek üzere veya özniteliklerinde toplu işlemi `Target` `Inputs` `Outputs` kullanmıştır.
 
 ## <a name="batch-targets"></a>Toplu iş hedefleri
 
-Aşağıdaki örnek, `Res` öğe meta verilerine bağlı olarak iki toplu işlem içine bölünen adlı bir öğe listesi içerir `Culture` . Bu toplu işlerin her biri `AL` göreve geçirilir ve bu, her toplu iş için bir çıkış derlemesi oluşturur. `Outputs`Öğe özniteliğinde toplu `Target` işlem kullanarak, MSBuild, hedefi çalıştırmadan önce her bir toplu iş öğesinin güncel olup olmadığını tespit edebilir. Hedef toplu işlem kullanılmadan, her iki öğe de hedef her yürütüldüğünde görev tarafından çalıştırılır.
+Aşağıdaki örnek, öğe meta `Res` verilerine göre iki toplu işleme ayrılmış adlı bir öğe `Culture` listesi içerir. Bu toplu işlerden her biri göreve `AL` geçirildi ve bu da her toplu iş için bir çıkış derlemesi oluşturur. Öğenin özniteliğinde toplu işlemi kullanarak MSBuild her toplu iş için hedefi çalıştırmadan önce güncel olup `Outputs` `Target` olmadığını belirleyebilirsiniz. Hedef toplu işlemeyi kullanmadan, hedef her yürütülürken her iki öğe toplu işi de görev tarafından çalıştırıldı.
 
 ```xml
 <Project
@@ -71,7 +72,7 @@ Aşağıdaki örnek, `Res` öğe meta verilerine bağlı olarak iki toplu işlem
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Artımlı derleme](../msbuild/how-to-build-incrementally.md)
+- [Nasıl yap: Artımlı olarak derleme](../msbuild/how-to-build-incrementally.md)
 - [Toplu İşleme](../msbuild/msbuild-batching.md)
-- [Target öğesi (MSBuild)](../msbuild/target-element-msbuild.md)
+- [Hedef öğe (MSBuild)](../msbuild/target-element-msbuild.md)
 - [Toplu görev işlemede öğe meta verileri](../msbuild/item-metadata-in-task-batching.md)

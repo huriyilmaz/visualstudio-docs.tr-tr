@@ -1,6 +1,6 @@
 ---
-title: Özellikleri ve özellik penceresini genişletme | Microsoft Docs
-description: Özellikler penceresi özellikleri genişletme hakkında bilgi edinin. Bu, seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve düzenlemek için kullanılır.
+title: Özellikleri ve Özellik Penceresini Genişletme | Microsoft Docs
+description: Seçilen nesnelerin tasarım zamanı Özellikler penceresi ve olaylarını görüntülemek ve düzenlemek için kullanılan Özellikler penceresi'daki özellikleri genişletme hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,19 +17,19 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72c8c3c91d9b06681c05cc834db60cc89b7692788f3f0a08e246c9658cb8fea0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d8035a1e2019398f79cbf3f842d373c7373f127d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414915"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125172"
 ---
-# <a name="extend-properties-and-the-property-window"></a>Özellikleri ve özellik penceresini genişletme
-**Özellikler** penceresi, seçili nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve düzenlemek için kullanılır.
+# <a name="extend-properties-and-the-property-window"></a>Özellikleri ve Özellik penceresini genişletme
+Özellikler **penceresi,** seçilen nesnelerin tasarım zamanı özelliklerini ve olaylarını görüntülemek ve düzenlemek için kullanılır.
 
- İçindeki bir nesneyi seçtiğinizde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bu nesnenin ortak özellikleri **Özellikler** penceresinde görünür. Daha fazla bilgi için bkz. [Özellikler penceresi genel bakış](../extensibility/internals/properties-window-overview.md).
+ içinde bir nesnesi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] seçerek, bu nesnenin genel  özellikleri Özellikler penceresinde görünür. Daha fazla bilgi için bkz. [Özellikler penceresi genel bakış.](../extensibility/internals/properties-window-overview.md)
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Özellikler penceresi özellikleri kullanıma sunun](../extensibility/exposing-properties-to-the-properties-window.md) Özellikler penceresi özel özelliklerinizi nasıl görüntübileceğinizi açıklar.
+- [Özellikleri Özellikler penceresi](../extensibility/exposing-properties-to-the-properties-window.md) Özel özelliklerinizin kullanıcı tarafından nasıl görüntülendiğinden Özellikler penceresi.
 
-- [Proje özelliklerini al](../extensibility/getting-project-properties.md) Proje özelliklerinin nasıl alınacağını açıklar.
+- [Proje özelliklerini al](../extensibility/getting-project-properties.md) Proje özelliklerinin nasıl elde etmek olduğunu açıklar.

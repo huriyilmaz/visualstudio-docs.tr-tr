@@ -79,13 +79,13 @@ Test altındaki projedeki işlevlere erişimi etkinleştirmek için test projeni
 
 ### <a name="link-to-object-or-library-files"></a>Nesne veya kitaplık dosyalarına bağlantı
 
-Test kodu test etmek istediğiniz işlevleri dışarı aktaramazsa, test projesinin bağımlılıklarına .obj veya .lib çıktısı dosyalarını ekleyin. Daha fazla bilgi için [bkz. Testleri nesne veya kitaplık dosyalarına bağlama.](how-to-use-microsoft-test-framework-for-cpp.md#object_files)
+Test kodu test etmek istediğiniz işlevleri dışarı aktaramazsa, test projesinin bağımlılıklarına .obj veya .lib çıktısı dosyalarını ekebilirsiniz. Daha fazla bilgi için [bkz. Testleri nesne veya kitaplık dosyalarına bağlama.](how-to-use-microsoft-test-framework-for-cpp.md#object_files)
 
 ### <a name="add-include-directives-for-header-files"></a>Üst #include için yeni yönergeler ekleme
 
 Ardından, birim testi *.cpp dosyanıza,* test etmek istediğiniz türleri ve işlevleri bildiren tüm üst bilgi `#include` dosyaları için bir yönerge ekleyin. Yazın, `#include "` ardından IntelliSense, seçmenize yardımcı olmak için etkinleştirecek. Ek üst bilgiler için tekrarlayın.
 
-![IntelliSense'Çözüm Gezgini üst bilgi dosyasını vurgulayan bir #include yönergesi ekleniyor ifadesini gösteren ekran görüntüsü.](media/cpp-add-includes-test-project.png)
+![IntelliSense'Çözüm Gezgini üst #include vurgulayan bir #include yönergesi ekleniyor ifadesini gösteren ekran görüntüsü.](media/cpp-add-includes-test-project.png)
 
 Kaynak dosyada her bir include deyimine tam yol yazmamak için, gerekli klasörleri Project Özellikler C/C++ Genel Ek Ekleme  >    >    >    >  **Dizinleri'ne ebilirsiniz.**
 
@@ -122,40 +122,40 @@ Test *sahiplerini, önceliğini* ve diğer bilgileri belirtmek için test yönte
    ![Testleri çalıştırmadan önce Test Gezgini](media/cpp-test-explorer.png)
 
    > [!NOTE]
-   > Test Gezgini ile CTest **tümleştirmesi** henüz kullanılamıyor. CMake ana menüsünden CTest testleri çalıştırın.
+   > Test Gezgini ile CTest **tümleştirmesi** henüz kullanılamıyor. CMake ana menüsünden CTest testlerini çalıştırın.
 
-1. Tüm testlerinizi pencerede görünmüyorsa, projedeki düğümüne sağ tıklar ve Derleme veya Yeniden Derleme'yi **Çözüm Gezgini** **test projesini** **derleme.**
+1. Tüm testlerinizi pencerede görünmüyorsa, projedeki düğümüne sağ tıklar ve Derleme veya Yeniden Derleme'yi **Çözüm Gezgini** **projesini** **derleme.**
 
-1. **Test Gezgini'nde,** **Tüm Testleri** Çalıştır'ı seçin veya çalıştırmak istediğiniz testleri seçin. Diğer seçenekler için bir teste sağ tıklayın ve kesme noktaları etkin hata ayıklama modunda çalıştırmayı da içerir. Tüm testleri çalıştırdıktan sonra, pencere hangi testlerin başarılı olduğunu ve hangilerinin başarısız olduğunu gösterir:
+1. **Test Gezgini'nde,** **Tüm Testleri** Çalıştır'ı seçin veya çalıştırmak istediğiniz testleri seçin. Diğer seçenekler için bir teste sağ tıklayın ve kesme noktaları etkin hata ayıklama modunda çalıştırmayı da içerir. Tüm testleri çalıştırdıktan sonra, pencerede hangi testlerin başarılı olduğu ve hangilerinin başarısız olduğu gösterilir:
 
 ![Testler çalıştır çalıştırktan sonra Test Gezgini](media/cpp-test-explorer-passed.png)
 
-Başarısız testler için ileti, nedeni tanılamaya yardımcı olan ayrıntılar sunar. Bir açılır menü için başarısız teste sağ tıklayın. Hatanın oluştuğu işlevin içinde ilerlemek için **Seçili testlerin hatalarını ayıkla** ' yı seçin.
+Başarısız testler için ileti, nedeni tanılamaya yardımcı olan ayrıntılar sunar. Açılan menü için başarısız olan teste sağ tıklayın. Hatanın **meydana geldiği işlevde** adım adım ilerlerken Seçili Testlerde Hata Ayıkla'ya seçin.
 
-**Test Gezgini**'ni kullanma hakkında daha fazla bilgi için bkz. [Test Gezgini Ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md).
+Test Gezgini'ni kullanma hakkında **daha fazla bilgi için** [bkz. Test Gezgini ile birim testleri çalıştırma.](run-unit-tests-with-test-explorer.md)
 
-Birim testi ile ilgili daha fazla bilgi için bkz. [birim testi temelleri](unit-test-basics.md)
+Birim testiyle ilgili daha fazla bilgi için [bkz. Birim testi temelleri](unit-test-basics.md)
 
 ## <a name="use-codelens"></a>CodeLens kullanma
 
-**Visual Studio 2017 ve üzeri (Professional ve Enterprise sürümleri)**
+**Visual Studio 2017 ve sonraki sürümler (Professional ve Enterprise sürümleri)**
 
-[CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) , kod düzenleyicisinden çıkmadan bir birim testinin durumunu hızlıca görmenizi sağlar.
+[CodeLens,](../ide/find-code-changes-and-other-history-with-codelens.md) kod düzenleyicisinden ayrılmadan birim testinin durumunu hızla görmenizi sağlar.
 
-Aşağıdaki yollarla bir C++ birim testi projesi için CodeLens 'i başlatabilirsiniz:
+C++ birim testi projesi için CodeLens'i şu yöntemlerden birini kullanarak başlatabilirsiniz:
 
-- Test projenizi veya çözümünüzü düzenleyin ve oluşturun.
-- Projenizi veya çözümünüzü yeniden derleyin.
-- Testleri **Test Gezgini** penceresinden çalıştırın.
+- Test projenizi veya çözümlerinizi düzenleyin ve derleme.
+- Projenizi veya çözümlerinizi yeniden oluşturma.
+- Test Gezgini **penceresinden testleri** çalıştırın.
 
 Başlatıldıktan sonra, her birim testinin üzerinde test durumu simgelerini görebilirsiniz.
 
-![C++ CodeLens simgeleri](media/cpp-test-codelens-icons.png)
+![C++ CodeLens Simgeleri](media/cpp-test-codelens-icons.png)
 
 Daha fazla bilgi için simgeye tıklayın veya birim testini çalıştırmak veya hata ayıklamak için:
 
-![C++ CodeLens Run ve hata ayıklama](media/cpp-test-codelens-run-debug.png)
+![C++ CodeLens Çalıştırma ve Hata Ayıklama](media/cpp-test-codelens-run-debug.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kodunuzun birim testi](unit-test-your-code.md)
+- [Kodunuzu birim testi](unit-test-your-code.md)

@@ -1,6 +1,6 @@
 ---
 title: Değişiklikleri Modelin İçinde Yayan Kurallar
-description: Görselleştirme ve Modelleme SDK'sı (VMSDK) içinde bir öğeden diğerine değişiklik yaymayı öğrenmek için mağaza kuralı oluşturma hakkında bilgi edinebilirsiniz.
+description: Görselleştirme ve modelleme SDK (VMSDK) ' de bir öğeden diğerine değişiklik yaymak için bir depolama kuralı oluşturma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,21 +10,22 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: bde67bd8375e3752370b3b815f8ed155d3123741
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: ca814206135d8b9be9273e1bdf113cd6db7efc6312391cd5acf6cf1e1559f7d9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387599"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121231489"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>Değişiklikleri Modelin İçinde Yayan Kurallar
-Görselleştirme ve Modelleme SDK'sı (VMSDK) içinde bir öğeden diğerine değişiklik yayacak bir depo kuralı oluşturabilirsiniz. Store'daki herhangi bir öğede değişiklik olduğunda, kurallar yürütülecek şekilde zamanlanmış olur ve genellikle en dıştaki işlem yürütülür. Öğe ekleme veya silme gibi farklı olay türleri için farklı türlerde kurallar vardır. Belirli öğe, şekil veya diyagram türlerine kurallar iliştirebilirsiniz. Birçok yerleşik özellik kurallarla tanımlanır: örneğin kurallar, model değiştiklerde diyagramın güncelleştirilmiş olmasını sağlar. Kendi kurallarınızı ekleyerek etki alanına özgü dilinizi özelleştirebilirsiniz.
+Bir değişikliği bir öğeden diğerine, görselleştirme ve modelleme SDK 'sını (VMSDK) yaymak için bir depolama kuralı oluşturabilirsiniz. Depodaki herhangi bir öğe için bir değişiklik olduğunda, genellikle en dıştaki işlem işlendiği zaman, kurallar yürütülmek üzere zamanlanır. Farklı türlerde olaylar için bir öğe ekleme veya silme gibi farklı türde kurallar vardır. Belirli öğe, şekil veya diyagram türlerine kurallar ekleyebilirsiniz. Birçok yerleşik özellik kurallar tarafından tanımlanır: Örneğin, kurallar model değiştiğinde bir diyagramın güncelleştirildiğinden emin olur. Kendi kurallarınızı ekleyerek, etki alanına özgü dilinizi özelleştirebilirsiniz.
 
- Mağaza kuralları, özellikle mağaza içindeki değişiklikleri yayın; diğer bir ifadeyle model öğelerinde yapılan değişiklikler, ilişkiler, şekiller veya bağlayıcılar ve bunların etki alanı özellikleri için kullanışlıdır. Kullanıcı Geri Al veya Yeniden Çalıştır komutlarını çağıran kurallar çalıştırlanmaz. Bunun yerine, işlem yöneticisi depo içeriğinin doğru durumuna geri yüklendiklerini emin olur. Değişiklikleri mağazanın dışındaki kaynaklara yayın, Store Events kullanın. Daha fazla bilgi için [bkz. Olay İşleyicileri Değişiklikleri Modelin Dışına Yayma.](../modeling/event-handlers-propagate-changes-outside-the-model.md)
+ Mağaza kuralları özellikle mağaza içindeki değişiklikleri yayılırken, model öğelerinde, ilişkilerde, şekillerde veya bağlayıcılarda ve bunların etki alanı özelliklerinde yapılan değişiklikler için kullanışlıdır. Kullanıcı geri al veya Yinele komutlarını çağırdığında kurallar çalıştırılmaz. Bunun yerine, işlem Yöneticisi depo içeriklerinin doğru duruma geri yüklenmesini sağlar. Değişiklikleri mağaza dışındaki kaynaklara yaymak istiyorsanız mağaza olayları ' nı kullanın. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
- Örneğin, kullanıcı (veya kodunuz) ExampleDomainClass türünde yeni bir öğe oluşturduğunda, modelin başka bir bölümünde başka bir türün ek bir öğesinin oluşturulacak olduğunu belirtmek istediğinizi varsayalım. Bir AddRule yazıp ExampleDomainClass ile ilişkilendirmek için kullanabilirsiniz. Ek öğeyi oluşturmak için kuralda kod yazardınız.
+ Örneğin, Kullanıcı (veya kodunuz) ExampleDomainClass türünde yeni bir öğe oluşturduğunda, modelin başka bir bölümünde başka bir türün ek bir öğesinin oluşturulduğunu belirtmek istediğinizi varsayalım. AddRule yazıp ExampleDomainClass ile ilişkilendirebilirsiniz. Ek öğeyi oluşturmak için kurala kod yazarsınız.
 
 ```csharp
 using System;
@@ -70,21 +71,21 @@ namespace ExampleNamespace
 ```
 
 > [!NOTE]
-> Bir kuralın kodu yalnızca Mağaza içindeki öğelerin durumunu değiştirsin; diğer bir ifadeyle kural yalnızca model öğelerini, ilişkileri, şekilleri, bağlayıcıları, diyagramları veya özelliklerini değiştirsin. Değişiklikleri mağazanın dışındaki kaynaklara yayın, Store Events'i tanımlayın. Daha fazla bilgi için [bkz. Olay İşleyicileri Değişiklikleri Modelin Dışına Yayma.](../modeling/event-handlers-propagate-changes-outside-the-model.md)
+> Bir kuralın kodu yalnızca depodaki öğelerin durumunu değiştirmeli; diğer bir deyişle, kuralın yalnızca model öğelerini, ilişkileri, şekilleri, bağlayıcıları, diyagramları veya özelliklerini değiştirmesi gerekir. Değişiklikleri mağaza dışındaki kaynaklara yaymak istiyorsanız mağaza olaylarını tanımlayın. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-### <a name="to-define-a-rule"></a>Kural tanımlamak için
+### <a name="to-define-a-rule"></a>Bir kural tanımlamak için
 
-1. Kuralı özniteliğiyle ön ekli bir sınıf olarak `RuleOn` tanımlayın. özniteliği, kuralı etki alanı sınıflarınızı, ilişkilerinizi veya diyagram öğelerinizin biri ile ilişkilendirmektedir. Kural bu sınıfın her örneğine uygulanır ve bu da soyut olabilir.
+1. Kuralı, özniteliğiyle önekli bir sınıf olarak tanımlayın `RuleOn` . Özniteliği, kuralı etki alanı sınıflarınız, ilişkilerinizde veya diyagram öğelerinden biriyle ilişkilendirir. Kural bu sınıfın soyut olabilecek her örneğine uygulanır.
 
-2. Etki alanı model sınıfınıza tarafından döndürülen kümeye `GetCustomDomainModelTypes()` ekleyerek kuralı kaydetme.
+2. Kuralı, `GetCustomDomainModelTypes()` etki alanı modeli sınıfınıza tarafından döndürülen kümesine ekleyerek kaydettirin.
 
-3. Kural sınıfını soyut Kural sınıflarından biri ile türetin ve yürütme yönteminin kodunu yazın.
+3. Özet kural sınıflarından birindeki kural sınıfını türetirsiniz ve yürütme yönteminin kodunu yazın.
 
-   Aşağıdaki bölümlerde bu adımlar daha ayrıntılı olarak açıklanmaktadır.
+   Aşağıdaki bölümlerde bu adımlar daha ayrıntılı olarak açıklanır.
 
-### <a name="to-define-a-rule-on-a-domain-class"></a>Bir etki alanı sınıfında kural tanımlamak için
+### <a name="to-define-a-rule-on-a-domain-class"></a>Bir etki alanı sınıfında bir kural tanımlamak için
 
-- Özel bir kod dosyasında, bir sınıf tanımlayın ve özniteliğiyle ön <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> eke sahip olun:
+- Özel bir kod dosyasında, bir sınıf tanımlayın ve özniteliği ile önek yapın <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> :
 
     ```csharp
     [RuleOn(typeof(ExampleElement),
@@ -94,19 +95,19 @@ namespace ExampleNamespace
 
     ```
 
-- İlk parametrenin konu türü bir etki alanı sınıfı, etki alanı ilişkisi, şekil, bağlayıcı veya diyagram olabilir. Genellikle, etki alanı sınıflarında ve ilişkilerde kurallar uygulanır.
+- İlk parametresindeki konu türü bir etki alanı sınıfı, etki alanı ilişkisi, şekil, bağlayıcı veya diyagram olabilir. Genellikle, kuralları etki alanı sınıflarına ve ilişkilerine uygularsınız.
 
-     genellikle `FireTime` `TopLevelCommit` olur. Bu, kuralın yalnızca işlemde tüm birincil değişiklikler yapıldıktan sonra yürütülmelerini sağlar. Alternatifler, değişikliğin hemen ardından kuralı yürüten Satır içidir; ve LocalCommit, kuralı geçerli işlem sonunda yürütür (en dıştaki olabilir). Ayrıca, bir kuralın kuyrukta sıralamasını etkileyecek şekilde önceliğini de ayarlayın, ancak bu, gereken sonucu elde etmek için güvenilir olmayan bir yöntemdir.
+     `FireTime`Genellikle `TopLevelCommit` . Bu, kuralın yalnızca işlemin tüm birincil değişiklikleri yapıldıktan sonra yürütülmesini sağlar. Alternatif olarak, kuralı değişiklikten hemen sonra yürüten satır Içi olur; ve geçerli işlemin sonunda kuralı yürüten Localcommıt (en dıştaki olmayabilir). Ayrıca, kuyruktaki sıralamayı etkilemek için bir kuralın önceliğini ayarlayabilirsiniz, ancak bu, ihtiyacınız olan sonucu elde etmek için güvenilir bir yöntemdir.
 
-- Konu türü olarak soyut bir sınıf belirtsiniz.
+- Konu türü olarak bir soyut sınıf belirtebilirsiniz.
 
-- Kural, konu sınıfının tüm örnekleri için geçerlidir.
+- Kural, konu sınıfının tüm örneklerine uygulanır.
 
-- için varsayılan değer `FireTime` TimeToFire.TopLevelCommit'tir. Bu, en dıştaki işlem işlendiklerinden kuralın yürütültülürken neden olur. Bunun alternatifi TimeToFire.Inline'dır. Bu, kuralın tetiklenen olaydan kısa süre sonra yürütülecek olmasına neden olur.
+- İçin varsayılan değer `FireTime` TimeToFire. TopLevelCommit ' dir. Bu, en dıştaki işlem yürütüldüğü zaman kuralın yürütülmesine neden olur. Bir alternatif TimeToFire. Inline. Bu, kuralın tetikleme olayından kısa bir süre sonra yürütülmesini sağlar.
 
 ### <a name="to-register-the-rule"></a>Kuralı kaydetmek için
 
-- Etki alanı modelinize tarafından döndürülen türler listesine kural `GetCustomDomainModelTypes` sınıfınızı ekleyin:
+- Kural sınıfınızı, `GetCustomDomainModelTypes` etki alanı modelinizde tarafından döndürülen türler listesine ekleyin:
 
     ```csharp
     public partial class ExampleDomainModel
@@ -122,51 +123,51 @@ namespace ExampleNamespace
 
     ```
 
-- Etki alanı modeli sınıfı adının ne olduğundan emin değilsanız **Dsl\GeneratedCode\DomainModel.cs** dosyasının içine bakın
+- Etki alanı modeli sınıfınızın adından emin değilseniz, dosyanın içine bakın **Dsl\GeneratedCode\DomainModel.cs**
 
-- Bu kodu DSL projenizin özel bir kod dosyasına yazın.
+- Bu kodu DSL projenizdeki özel bir kod dosyasına yazın.
 
-### <a name="to-write-the-code-of-the-rule"></a>Kuralın kodunu yazmak için
+### <a name="to-write-the-code-of-the-rule"></a>Kural kodunu yazmak için
 
-- Kural sınıfını aşağıdaki temel sınıflardan biri ile türetin:
+- Kural sınıfını aşağıdaki temel sınıflardan birinden türet:
 
   | Temel sınıf | Tetikleyici |
   |-|-|
-  | <xref:Microsoft.VisualStudio.Modeling.AddRule> | Bir öğe, bağlantı veya şekil eklenir.<br /><br /> Yeni öğelere ek olarak yeni ilişkileri algılamak için bunu kullanın. |
-  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | Bir etki alanı özellik değeri değiştirilir. yöntem bağımsız değişkeni eski ve yeni değerleri sağlar.<br /><br /> Şekiller için, şekil taşınırsa yerleşik özellik `AbsoluteBounds` değiştirlendiğinde bu kural tetiklenir.<br /><br /> Çoğu durumda, geçersiz kılmak veya özellik `OnValueChanged` işleyicisinde `OnValueChanging` daha kullanışlıdır. Bu yöntemler değişiklik öncesinde ve sonrasında hemen çağrılır. Buna karşılık kural genellikle işlem sonunda çalışır. Daha fazla bilgi için [bkz. Etki Alanı Özellik Değeri Değişikliği İşleyicileri.](../modeling/domain-property-value-change-handlers.md) **Not:**  Bu kural, bir bağlantı oluşturulduğunda veya silindiğinde tetiklanmaz. Bunun yerine, etki `AddRule` alanı ilişkisi için bir ve `DeleteRule` yazın. |
-  | <xref:Microsoft.VisualStudio.Modeling.DeletingRule> | Bir öğe veya bağlantı silinecekken tetiklenir. ModelElement.IsDeleting özelliği, işlem sonuna kadar true olur. |
-  | <xref:Microsoft.VisualStudio.Modeling.DeleteRule> | Bir öğe veya bağlantı silindiğinde gerçekleştirilir. Kural, DeletingRules dahil olmak üzere diğer tüm kurallar yürütülürkten sonra yürütülür. ModelElement.IsDeleting false, ModelElement.IsDeleted ise true. Sonraki bir Geri Alma işlemi için izin vermek için öğe bellekten gerçekten kaldırılamaz, ancak Store.ElementDirectory'den kaldırılır. |
-  | <xref:Microsoft.VisualStudio.Modeling.MoveRule> | Bir öğe bir mağaza bölümden diğerine taşınır.<br /><br /> (Bunun şeklin grafik konumuyla ilgili olmadığını fark etmek.) |
-  | <xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule> | Bu kural yalnızca etki alanı ilişkileri için geçerlidir. Bir bağlantının herhangi bir ucunda açıkça bir model öğesi atarsanız tetiklenir. |
-  | <xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule> | Bir öğeye veya öğeden bağlantıların sırası bir bağlantıda MoveBefore veya MoveToIndex yöntemleri kullanılarak değiştirlendiğinde tetiklenir. |
+  | <xref:Microsoft.VisualStudio.Modeling.AddRule> | Öğe, bağlantı veya şekil eklendi.<br /><br /> Yeni öğelere ek olarak yeni ilişkileri algılamak için bunu kullanın. |
+  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | Bir etki alanı özellik değeri değiştirildi. Method bağımsız değişkeni eski ve yeni değerleri sağlar.<br /><br /> Şekiller için, bu kural yerleşik özelliği değiştiğinde tetiklenir `AbsoluteBounds` , şekil taşınır.<br /><br /> Çoğu durumda, `OnValueChanged` özellik işleyicisine veya geçersiz kılınması daha uygundur `OnValueChanging` . Bu yöntemler değişiklikten hemen önce ve sonra çağrılır. Buna karşılık, kural genellikle işlemin sonunda çalışır. Daha fazla bilgi için bkz. [etki alanı özellik değeri değişiklik işleyicileri](../modeling/domain-property-value-change-handlers.md). **Note:**  Bu kural bir bağlantı oluşturulduğunda veya silindiğinde tetiklenmez. Bunun yerine, `AddRule` `DeleteRule` etki alanı ilişkisi için bir ve yazın. |
+  | <xref:Microsoft.VisualStudio.Modeling.DeletingRule> | Bir öğe veya bağlantı silinmek üzere olduğunda tetiklenir. ModelElement. ıssilmenin özelliği işlemin sonuna kadar doğru. |
+  | <xref:Microsoft.VisualStudio.Modeling.DeleteRule> | Bir öğe veya bağlantı silindiğinde yapılır. Kural, DeletingRules dahil tüm diğer kuralların çalıştırıldıktan sonra yürütülür. ModelElement. IsDeleted yanlış ve ModelElement. IsDeleted doğru. Sonraki geri almaya izin vermek için, öğe bellekten kaldırılmamıştır, ancak Store. ElementDirectory 'den kaldırılır. |
+  | <xref:Microsoft.VisualStudio.Modeling.MoveRule> | Bir öğe bir depolama bölümünden diğerine taşınır.<br /><br /> (Bunun şeklin grafik konumuyla ilgili olmadığına dikkat edin.) |
+  | <xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule> | Bu kural yalnızca etki alanı ilişkileri için geçerlidir. Bir bağlantı sonuna açıkça bir model öğesi atarsanız tetiklenir. |
+  | <xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule> | Bir bağlantı üzerinde MoveBefore veya MoveToIndex metotları kullanılarak bir öğeden veya bir öğeden bağlantı sıralaması değiştirildiğinde tetiklenir. |
   | <xref:Microsoft.VisualStudio.Modeling.TransactionBeginningRule> | Bir işlem oluşturulduğunda yürütülür. |
-  | <xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule> | İşlem işlendikleri zaman yürütülür. |
-  | <xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule> | İşlem geri alınca yürütülür. |
+  | <xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule> | İşlem teslim etmek üzere olduğunda yürütülür. |
+  | <xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule> | İşlem geri alınana kadar yürütüldüğünde yürütülür. |
 
-- Her sınıfın geçersiz kılarak bir yöntemi vardır. Bulmak `override` için sınıfınıza yazın. Bu yöntemin parametresi, değiştirilen öğeyi tanımlar.
+- Her sınıfın geçersiz kılabileceğiniz bir yöntemi vardır. `override`Saptamak için sınıfınıza yazın. Bu yöntemin parametresi, değiştirilmekte olan öğeyi tanımlar.
 
-  Kurallar hakkında aşağıdaki noktalara dikkatin:
+  Kurallarla ilgili aşağıdaki noktalara dikkat edin:
 
-1. Bir işlemde yapılan değişiklikler kümesi birçok kuralı tetikler. Genellikle en dıştaki işlem yürütülürken kurallar yürütülür. Bunlar belirtilmemiş bir sırada yürütülür.
+1. Bir işlemdeki değişiklikler kümesi birçok kuralı tetikleyebilirler. Genellikle, en dıştaki işlem işlendiği zaman kurallar yürütülür. Belirtilmemiş bir sırada yürütülürler.
 
-2. Kural her zaman bir işlem içinde yürütülür. Bu nedenle, değişiklik yapmak için yeni bir işlem oluşturmanıza gerek yok.
+2. Bir kural, her zaman bir işlem içinde yürütülür. Bu nedenle, değişiklik yapmak için yeni bir işlem oluşturmanız gerekmez.
 
-3. Kurallar, bir işlem geri alınırken veya Geri Al veya Yinele işlemleri gerçekleştiriliyorsa yürütülmez. Bu işlemler, Mağaza'nın tüm içeriğini önceki durumuna sıfırlar. Bu nedenle, kuralınız Store dışındaki herhangi bir şeyin durumunu değiştirirse, Store içeriğiyle zaman uyumlu olmaz. Mağaza dışındaki durumu güncelleştirmek için Olaylar'ın kullanımı daha iyidir. Daha fazla bilgi için [bkz. Olay İşleyicileri Değişiklikleri Modelin Dışına Yayma.](../modeling/event-handlers-propagate-changes-outside-the-model.md)
+3. Bir işlem geri alındığında veya geri alma veya yineleme işlemleri gerçekleştirildiğinde kurallar yürütülmez. Bu işlemler deponun tüm içeriğini önceki durumuna sıfırlar. Bu nedenle, kuralınız mağaza dışındaki herhangi bir şeyin durumunu değiştirirse mağaza içeriğiyle eşitlenmiş halde kalabilir. Durumu mağaza dışında güncelleştirmek için olayları kullanmak daha iyidir. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-4. Bir model dosyadan yüklendiğinde bazı kurallar yürütülür. Yükleme veya kaydetmenin devam edip olmadığını belirlemek için `store.TransactionManager.CurrentTransaction.IsSerializing` kullanın.
+4. Bazı kurallar, bir model dosyadan yüklendiğinde yürütülür. Yükleme veya kaydetme işleminin devam edilip edilmeyeceğini öğrenmek için kullanın `store.TransactionManager.CurrentTransaction.IsSerializing` .
 
-5. Kuralınız daha fazla kural tetikleyicisi oluşturursa, bunlar tetikleme listesinin sonuna eklenir ve işlem tamamlandıktan önce yürütülür. DeletedRules diğer tüm kurallardan sonra yürütülür. Bir kural bir işlemde birçok kez, her değişiklik için bir kez çalışmasına neden olabilir.
+5. Kuralınızın kodu daha fazla kural tetikleyicisi oluşturursa, bu bunlar tetikleme listesinin sonuna eklenir ve işlem tamamlanmadan önce yürütülür. Silinmeyen kurallar tüm diğer kurallardan sonra yürütülür. Bir kural, her değişiklik için bir kez olmak üzere bir işlem içinde birçok kez çalıştırılabilir.
 
-6. Kurallara ve kurallardan bilgi geçmek için, bilgileri içinde `TransactionContext` depolarsiniz. Bu yalnızca işlem sırasında bakımı yapılan bir sözlüktir. İşlem sona erdiğinde atılması gerekir. Her kuralda olay bağımsız değişkenleri buna erişim sağlar. Kuralların öngörülebilir bir sırada yürütül olmadığını unutmayın.
+6. Kurallara ve kurallarından bilgi geçirmek için, içinde bilgileri saklayabilirsiniz `TransactionContext` . Bu yalnızca işlem sırasında tutulan bir sözlüktür. İşlem sona erdiğinde atılmış olur. Her kuraldaki olay bağımsız değişkenleri buna erişim sağlar. Kuralların öngörülebilir bir sırada yürütülebileceğini unutmayın.
 
-7. Diğer alternatifleri göz önünde bulundurarak kuralları kullanın. Örneğin, bir değer değişirken bir özelliği güncelleştirmek için hesaplanmış özellik kullanmayı göz önünde bulundurabilirsiniz. Bir şeklin boyutunu veya konumunu kısıtlamak istiyorsanız, bir kullanın `BoundsRule` . Özellik değerindeki bir değişikliğe yanıt vermek istiyorsanız, `OnValueChanged` özelliğine bir işleyici ekleyin. Daha fazla bilgi için bkz. [değişiklikleri yanıtlama ve yayma](../modeling/responding-to-and-propagating-changes.md).
+7. Diğer alternatifleri göz önünde bulundurarak kuralları kullanın. Örneğin, bir değer değiştiğinde bir özelliği güncellemek istiyorsanız, hesaplanmış bir özellik kullanmayı düşünün. Şeklin boyutunu veya konumunu sınırlamak için `BoundsRule` kullanın. Özellik değerindeki bir değişikliği yanıtlamak için özelliğine bir `OnValueChanged` işleyici ekleyin. Daha fazla bilgi için [bkz. Değişiklikleri Yanıt verme ve Yayma.](../modeling/responding-to-and-propagating-changes.md)
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, iki öğeyi bağlamak için bir etki alanı ilişkisi örneği oluşturulduğunda bir özelliği günceller. Kural, yalnızca Kullanıcı diyagramda bir bağlantı oluşturduğunda değil, aynı zamanda program kodu bir bağlantı oluşturduğunda tetiklenecektir.
+ Aşağıdaki örnek, bir etki alanı ilişkisi örneği 2 öğeye bağlantı vermek için bir özelliği günceller. Kural yalnızca kullanıcı bir diyagramda bağlantı oluşturduğunda değil, aynı zamanda program kodu bir bağlantı oluşturduğunda da tetiklenir.
 
- Bu örneği test etmek için, görev akışı çözüm şablonunu kullanarak bir DSL oluşturun ve DSL projesindeki bir dosyaya aşağıdaki kodu ekleyin. Çözümü derleyin ve çalıştırın ve hata ayıklama projesinde örnek dosyayı açın. Açıklama şekli ve flow öğesi arasında bir açıklama bağlantısı çizin. Açıklamadaki metin, üzerine bağladığınız en son öğe üzerinde rapor olarak değişir.
+ Bu örneği test etmek için Task Flow çözüm şablonunu kullanarak bir DSL oluşturun ve aşağıdaki kodu Dsl projesine bir dosyaya girin. Çözümü derleme ve çalıştırma ve Hata ayıklama projesinde Örnek dosyasını açın. Açıklama şekli ile akış öğesi arasında Açıklama Bağlantısı çizme. Açıklamanın metni, bağlantılı olduğu en son öğeyle ilgili rapor olarak değişir.
 
- Uygulamada, genellikle her AddRule için bir DeleteRule yazarsınız.
+ Uygulamada, genellikle her AddRule için bir DeleteRule yazarsiniz.
 
 ```csharp
 using System;

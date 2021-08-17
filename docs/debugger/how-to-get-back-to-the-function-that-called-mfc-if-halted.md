@@ -1,6 +1,6 @@
 ---
-title: Durdurulan MFC'yi çağıran işleve geri | Microsoft Docs
-description: Hata ayıklayıcısında yürütme durdurulsa MFC adlı işleve nasıl geri Visual Studio anlıyoruz.
+title: Durdurulan MFC işlevini çağıran işleve geri | Microsoft Docs
+description: Hata ayıklayıcısında yürütme durdurulsa MFC'yi çağıran işleve Visual Studio anlıyoruz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -38,7 +38,7 @@ ms.locfileid: "121453596"
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünde İçeri ve Dışarı  **Ayarlar'yi** seçin. Daha fazla bilgi için [bkz. Ayarları sıfırlama.](../ide/environment-settings.md#reset-settings)
 
-Hata Ayıklama **menüsündeki** Break  komutunu kullanarak programı durdurduysanız ve MFC'de sonlandı ve sorunun kodunda olduğundan emin olduysanız Çağrı Yığını penceresini kullanarak işlevinize geri dönebilirsiniz. Daha fazla bilgi için, [bkz. How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md).
+Hata Ayıklama **menüsündeki** Break  komutunu kullanarak programı durdurduysanız ve MFC'de sonlandı ve sorunun kodunuzda olduğundan emin olduysanız Çağrı Yığını penceresini kullanarak işlevinize geri dönebilirsiniz. Daha fazla bilgi için, [bkz. How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md).
 
 Bazen kodunuz ileti pompasını bozabilir. Bu durumda, çağrı yığınında kullanıcı kodu yoktur. Bu sorunu önlemek için Kesme komutu yerine kesme noktaları (büyük olasılıkla koşullar ve isabet sayıları ile) **kullanabilirsiniz.** Daha fazla bilgi için [bkz. Kesme Noktaları ve İzleme Noktaları.](/previous-versions/ktf38f66(v=vs.100))
 

@@ -11,14 +11,15 @@ ms.assetid: 4a4faa0d-d352-40ea-a21d-c09ea286a8e1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77c49f79ccdcfc4aa0325b89dfb38f3f8d4da721
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 4f0bcffa2f0d579d101c2ebcaed92e097c9443c8d4a54c50a6ff7ac798e30258
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902598"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121414148"
 ---
 # <a name="message-enumerator"></a>İleti numaralayıcı
 Aşağıdaki bayraklar, IDE'nin SccOpenProject çağrısında sağladığı bir geri çağırma işlevi olan işlev için kullanılır (geri çağırma işleviyle ilgili ayrıntılar için `TEXTOUTPROC` [bkz. LPTEXTOUTPROC).](../extensibility/lptextoutproc.md) [](../extensibility/sccopenproject-function.md)
@@ -48,13 +49,13 @@ enum {
 
  SCC_MSG_INFO İleti bilgilendirmedir.
 
- SCC_MSG_WARNING bir uyarıdır.
+ SCC_MSG_WARNING İleti bir uyarıdır.
 
  SCC_MSG_ERROR İleti bir hatadır.
 
  SCC_MSG_STATUS İleti durum çubuğu için hazır.
 
- SCC_MSG_DOCANCEL Metin yok; IDE veya `SCC_MSG_RTN_OK` `SCC_MSG_RTN_CANCEL` döndürür.
+ SCC_MSG_DOCANCEL metin yok; IDE veya `SCC_MSG_RTN_OK` `SCC_MSG_RTN_CANCEL` döndürür.
 
  SCC_MSG_STARTCANCEL bir iptal döngüsü başlatır.
 

@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4cdec9bea2883e67bf9ff2383319b966b4b73d8caeab7f6c92b1faaf3878fb8d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ad1d6e159ac1e008112a97bdec76fe2f791433ba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359864"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070197"
 ---
 # <a name="ide-constants"></a>IDE sabitleri
 
@@ -37,7 +37,7 @@ sınıfı, tümleşik geliştirme ortamına (IDE) özgü ve önceden yalnızca �
 |<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Code_guid>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>işleyiciler, bu değeri yöntemine ile Aç iletişim kutusunu (bu durumda olası `cmdidOpenWith` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> kod görünümlerini) almak için yöntemine iletir. |
 |<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Debugging_guid>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>işleyiciler bu değeri yöntemine ile aç iletişim kutusunu almak için yöntemine iletir. Bu durumda, ile aynı görünüme eşilen olası hata ayıklama `cmdidOpenWith` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> görünümleri  <xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Debugging_guid> <xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Code_guid> doldurulur.|
 |<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Designer_guid>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>işleyiciler bu değeri yöntemine ile Aç iletişim kutusunu `cmdidOpenWith` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> (bu durumda Form tasarımcısı **görünümlerini görüntüleme)** almak için yöntemine iletir. |
-|<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Primary_guid>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>işleyiciler bu değeri yöntemine ile Aç iletişim kutusunu (bu durumda düzenleyici fabrikasının varsayılan/birincil görünümünü) `cmdidOpenWith` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> almak için yöntemine iletir. |
+|<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.Primary_guid>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>işleyiciler bu değeri yöntemine ile Aç iletişim kutusunu (bu durumda düzenleyici fabrikasının `cmdidOpenWith` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> varsayılan/birincil  görünümünü) almak için yöntemine iletir.|
 |<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.TextView_guid>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>işleyiciler bu değeri yöntemine ile aç iletişim kutusunu almak için bu değeri bir belge veya veri `cmdidOpenWith` metin düzenleyicisi görünümü için buraya <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> iletir. |
 |<xref:Microsoft.VisualStudio.VSConstants.LOGVIEWID.UserChooseView_guid>|<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>işleyiciler bu değeri yöntemine iletir ve `cmdidOpenWith` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> kullanıcıdan hangi kullanıcı tanımlı görünümün kullanılamayacaklarını seçmesini istenir.|
 
@@ -47,33 +47,33 @@ sınıfı, tümleşik geliştirme ortamına (IDE) özgü ve önceden yalnızca �
 |-----------|-----------------|
 |[Cef. CloneFile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_CloneFile>)|Yöntemin ilk parametresi olarak bit olarak birleştirilmiş eski bir <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> bayrak.|
 |[Cef. OpenAsNew](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_OpenAsNew>)|, yönteminin ilk parametresi olarak bit olarak <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> birleştirildi, bu düzenleyici fabrikasının gerekli düzeltmeleri gerçekleştirmesi gerektiğini gösterir.|
-|[Cef. Openfile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_OpenFile>)|Bit olarak yönteminin ilk parametresi olarak bir <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> araya gelen bu bayrak, CEF'nin birbirini [dışlar. CloneFile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_CloneFile>).|
+|[Cef. Openfile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_OpenFile>)|Bu bayrak, yöntemin ilk parametresi olarak bitwise olarak birleştirildi ve <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> CEF'nin birbirini [dışlar. CloneFile](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_CloneFile>).|
 |[Cef. Sessiz](<xref:Microsoft.VisualStudio.VSConstants.CEF#Microsoft_VisualStudio_VSConstants_CEF_Silent>)|Yöntemin ilk parametresi olarak bit olarak bir araya gelen bu, düzenleyici fabrikasının bir kullanıcı arabirimi (UI) görüntülemeden <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> düzenleyiciyi oluşturması gerektiğini gösterir.|
 
 ## <a name="visual-studio-errors"></a>Visual Studio hataları
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_BUSY>|Söz konusu nesne zaten meşgul olduğunda arabirimler tarafından zaman uyumsuz davranışa döndürülen sabit|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_BUSY>|Söz konusu nesne zaten meşgul olduğunda, arabirimler tarafından zaman uyumsuz davranışa döndürülen sabit|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>|"Uyumsuz belge verileri" için özel Visual Studio HRESULT hatası.|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_PACKAGENOTLOADED>|"Paket yüklenmedi" iletisini gösteren Visual Studio HRESULT hatası.|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTALREADYEXISTS>|Hata HRESULT özeldir Visual Studio ve "Project zaten var olduğunu gösterir."|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTALREADYEXISTS>|Hata HRESULT, "Visual Studio var olduğunu" belirten Project.|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTMIGRATIONFAILED>|Hata HRESULT özeldir ve "Visual Studio yapılandırma başarısız oldu" Project belirtir.|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTNOTLOADED>|Hata HRESULT özeldir Visual Studio ve "Project değil."|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONALREADYOPEN>|"Çözüm zaten açık" iletisini gösteren Visual Studio HRESULT hatası.|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONNOTOPEN>|"Çözüm açık değil" iletisini gösteren Visual Studio HRESULT hatası.|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SPECIFYING_OUTPUT_UNSUPPORTED>|Arabiriminden dizi belirtme parametrelerine sahip derleme arabirimleri tarafından döndürülür, ancak uygulama yalnızca <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput> yöntemini tüm çıkışlara uygulayabilir.|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SPECIFYING_OUTPUT_UNSUPPORTED>|Arabirimden dizi belirtme parametrelerine sahip derleme arabirimleri tarafından döndürülür, ancak uygulama yalnızca <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput> yöntemini tüm çıkışlara uygulayabilir.|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>|Belge <xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A> düzenleyicide açılamıyor bir biçime sahipse yöntemi bu değeri döndürür.|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_WIZARDBACKBUTTONPRESS>|Kullanıcının bir uygulama sihirbazında geri düğmesine basmış olduğunu gösteren bir HRESULT Visual Studio.|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_WIZARDBACKBUTTONPRESS>|Kullanıcının bir uygulama sihirbazında geri düğmesine bastığına işaret Visual Studio.|
 
 ## <a name="visual-studio-constants"></a>Visual Studio sabitleri
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|Hata HRESULT özeldir ve "Visual Studio iletildi" Project gösterir.|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|"Araç kutusu işaretçisi" Visual Studio özel sabit.|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|"Araç Kutusu işaretçisi" Visual Studio özel sabit.|
 |<xref:Microsoft.VisualStudio.VSConstants.VSM_ENTERMODAL>|Kalıcılık başlangıcını Visual Studio yöntemi aracılığıyla bir bildirim iletisi yayınlamaya özel bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> sabit.|
-|<xref:Microsoft.VisualStudio.VSConstants.VSM_EXITMODAL>|Kalıcılık sonunu Visual Studio yöntemi aracılığıyla bir bildirim iletisi yayınlamaya <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> özel bir sabit.|
+|<xref:Microsoft.VisualStudio.VSConstants.VSM_EXITMODAL>|Kalıcılık sonunu Visual Studio yöntemi aracılığıyla bir bildirim iletisi yayınlamaya yönelik özel bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> sabit.|
 |<xref:Microsoft.VisualStudio.VSConstants.VSM_TOOLBARMETRICSCHANGE>|Komut çubuğu ölçümlerinin değiştiğini Visual Studio yöntemi aracılığıyla bir bildirim iletisi yayınlamaya özel bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A> sabit.|
 |<xref:Microsoft.VisualStudio.VSConstants.VSCOOKIE_NIL>|Tanımlama bilgisinin ayar Visual Studio özel sabit.|
 |[VSITEMID. Nil](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|Proje Visual Studio olmamasını temsil eden bir öğe tanımlayıcısı. Bu değer, geçerli seçim mevcut değilken kullanılır.|

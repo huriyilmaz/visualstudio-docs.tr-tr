@@ -1,6 +1,6 @@
 ---
-title: ReadLinesFromFile Görevi | Microsoft Docs
-description: MSBuild 'in bir metin dosyasından öğe listesini okumak için ReadLinesFromFile görevini nasıl kullandığını öğrenin. Dosya her satırda bir öğe içermelidir.
+title: ReadLinesFromFile Görev | Microsoft Docs
+description: Bir MSBuild listesini okumak için ReadLinesFromFile görevini nasıl kullandığını öğrenin. Dosyanın her satırda bir öğe olması gerekir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,35 +18,36 @@ ms.assetid: a18af929-b53a-4d9e-b7bf-e3d3737ee85f
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0361d0103afbe662a37b50358e125018a7378f39
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1634aa8a669fa03f217fedf04b5dd8620b95829c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931974"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068780"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile görevi
 
-Bir metin dosyasından öğelerin listesini okur.
+Bir metin dosyasındaki öğelerin listesini okur.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `ReadLinesFromFile` .
+ Aşağıdaki tabloda görevin parametreleri açık `ReadLinesFromFile` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`File`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Okunacak dosyayı belirtir. Dosya her satırda bir öğe içermelidir.|
-|`Lines`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Dosyadan okunan satırları içerir.|
+|`File`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Okunan dosyayı belirtir. Dosyanın her satırda bir öğe olması gerekir.|
+|`Lines`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Dosyadan okunan satırları içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `ReadLinesFromFile` bir metin dosyasındaki bir listeden öğe oluşturmak için görevini kullanır. Dosyadan okunan öğeler `ItemsFromFile` öğe koleksiyonunda depolanır.
+ Aşağıdaki örnek, bir `ReadLinesFromFile` metin dosyasındaki listeden öğe oluşturmak için görevini kullanır. Dosyadan okunan öğeler öğe `ItemsFromFile` koleksiyonunda depolanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

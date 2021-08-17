@@ -1,5 +1,5 @@
 ---
-description: Eşleşen adlara yönelik Case seçeneğini belirler.
+description: Eşleşen adlar için büyük/büyük/büyük harf seçeneğini seçer.
 title: NAME_MATCH | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 3842c417-a3c9-4259-a05f-52b64b829ef6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c093c49745d7fa1b754db020c85a538992de9555
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: eaff74a363b3431e59ef085836ce2bc387feb028
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086488"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029235"
 ---
 # <a name="name_match"></a>NAME_MATCH
-Eşleşen adlara yönelik Case seçeneğini belirler.
+Eşleşen adlar için büyük/büyük/büyük harf seçeneğini seçer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,16 +47,16 @@ public enum NameMatchOptions {
 
 ## <a name="fields"></a>Alanlar
  `nmNone`\
- Hiçbir seçenek belirtilmedi.
+ Hiçbir seçenek belirtilmez.
 
  `nmCaseSensitive`\
- Eşleştirilecek adların büyük/küçük harfe duyarlı olduğunu gösterir.
+ Eşleşmesi gereken adların büyük/büyük/büyük harfe duyarlı olduğunu gösterir.
 
  `nmCaseInsensitive`\
- Eşleştirilecek adların büyük/küçük harfe duyarlı olmadığını gösterir.
+ Eşleşmesi gereken adların büyük/büyük/büyük harfe duyarlı olmadığını gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- Aşağıdaki yöntemlere bir bağımsız değişken olarak geçirilir:
+ Aşağıdaki yöntemlere bağımsız değişken olarak geçirildi:
 
 - [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)
 
@@ -66,11 +67,11 @@ public enum NameMatchOptions {
 - [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst bilgi: sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

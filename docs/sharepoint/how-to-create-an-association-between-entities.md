@@ -56,7 +56,7 @@ ms.locfileid: "121409605"
 
 6. BDC Tasarımcısı'nda, kaynak varlık ile hedef varlık arasında ilişkilendirmeyi temsil eden bir satır görünür.
 
-     Visual Studio varlığın hizmet sınıfına ve kaynak varlığın hizmet sınıfına bir İlişki Gezgini yöntemi ekler. İlişki gezintisi yöntemleri hakkında daha fazla bilgi için bkz. [Desteklenen İşlemler.](/previous-versions/office/developer/sharepoint-2010/ee557363(v=office.14))
+     Visual Studio, hedef varlığın hizmet sınıfına ve kaynak varlığın hizmet sınıfına bir İlişki Gezgini yöntemi ekler. İlişki gezintisi yöntemleri hakkında daha fazla bilgi için bkz. [Desteklenen İşlemler.](/previous-versions/office/developer/sharepoint-2010/ee557363(v=office.14))
 
 7. Kaynak varlığın İlişki gezgini yönteminde, hedef varlıkların koleksiyonunu döndüren kod ekleyin.
 

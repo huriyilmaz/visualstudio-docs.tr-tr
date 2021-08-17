@@ -12,17 +12,18 @@ ms.assetid: 2f9a9720-c1ac-4430-8f28-200d85360452
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 68776819e985262ed62aea28d1849ad57c778779
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e7ff4b581f00e344437bc90d8c3998d004bb4fe
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072695"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126888"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
 Bu bekleyen kesme noktasından kaynaklanan tüm hata kesme noktalarının listesini alır.

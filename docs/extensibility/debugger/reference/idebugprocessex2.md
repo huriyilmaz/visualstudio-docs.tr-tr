@@ -11,14 +11,15 @@ ms.assetid: 44e309ba-1d6f-499b-aa7e-9b34858a6d57
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1bd22a779cd0a474b5df03d2315402dbe1a25239
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 11f2c1cbefa4100ac9b025fbdcc1fed119531434ea9dbec033b8233a2ad19730
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081522"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338910"
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) işleme iliştirmekte veya işlemden ayrıldığı bir işlemi bilgilendirmesini sağlar.

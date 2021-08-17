@@ -1,6 +1,6 @@
 ---
-title: RoslynCodeTaskFactory ile MSBuild satır Içi görevleri | Microsoft Docs
-description: Satır içi görevler olarak kullanılmak üzere bellek içi görev derlemeleri oluşturmak için platformlar arası Roslyn derleyicileri kullanan MSBuild RoslynCodeTaskFactory hakkında bilgi edinin.
+title: MSBuild RoslynCodeTaskFactory ile satır içi görevler | Microsoft Docs
+description: satır içi görevler olarak kullanılmak üzere bellek içi görev derlemeleri oluşturmak için platformlar arası roslyn derleyicileri kullanan MSBuild roslyncodetaskfactory hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 09/21/2017
 ms.topic: conceptual
@@ -10,21 +10,22 @@ ms.assetid: e72e6506-4a11-4edf-ae8d-cfb5a3b9d8a0
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c033c4d0ee36b9cb01618dd3ac3183e8782c70d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a926dbfd746978d1e37e772ddee3eb2ec07d08ae
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878428"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068871"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile MSBuild satır içi görevleri
 
-[CodeTaskFactory](../msbuild/msbuild-inline-tasks.md)' ye benzer şekilde, roslyncodetaskfactory, iç satır görevleri olarak kullanılmak üzere bellek içi görev derlemeleri oluşturmak için platformlar arası Roslyn derleyicileri kullanır.  RoslynCodeTaskFactory görevlerinin hedefi .NET Standard ve .NET Framework ve .NET Core çalışma zamanlarının yanı sıra Linux ve Mac OS gibi diğer platformlar üzerinde de çalışabilir.
+[CodeTaskFactory](../msbuild/msbuild-inline-tasks.md)' ye benzer şekilde, roslyncodetaskfactory, iç satır görevleri olarak kullanılmak üzere bellek içi görev derlemeleri oluşturmak için platformlar arası Roslyn derleyicileri kullanır.  roslyncodetaskfactory görevlerinin hedefi .NET Standard ve .NET Framework ve .net Core çalışma zamanlarının yanı sıra Linux ve Mac OS gibi diğer platformlar üzerinde de çalışabilir.
 
 >[!NOTE]
->RoslynCodeTaskFactory yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir. MSBuild sürümleri Visual Studio sürümlerini izleyerek Visual Studio 2017 sürüm 15,8 ve üzeri sürümlerde RoslynCodeTaskFactory kullanılabilir.
+>roslyncodetaskfactory yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir. MSBuild sürümler Visual Studio sürümleri izleyerek, roslyncodetaskfactory Visual Studio 2017 sürüm 15,8 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile bir satır içi görevin yapısı
 
@@ -62,11 +63,11 @@ Görevin kalan öğeleri `DoNothing` boştur ve bir satır içi görevin sıras�
 
 - `Task`Öğesi, görev kaynak kodunu tanımlar ve içerir.
 
-- `Reference`Öğesi, kodunuzda kullanmakta olduğunuz .NET derlemelerine başvuruları belirtir. Bu, Visual Studio 'da bir projeye başvuru ekleme ile eşdeğerdir. `Include`Öznitelik, başvurulan derlemenin yolunu belirtir.
+- `Reference`Öğesi, kodunuzda kullanmakta olduğunuz .NET derlemelerine başvuruları belirtir. Bu, Visual Studio bir projeye başvuru eklemekle eşdeğerdir. `Include`Öznitelik, başvurulan derlemenin yolunu belirtir.
 
 - `Using`Öğesi, erişmek istediğiniz ad alanlarını listeler. Bu, `Using` Visual C# içindeki ifadeye benzer. `Namespace`Öznitelik, dahil edilecek ad alanını belirtir.
 
-`Reference` ve `Using` öğeleri dilden bağımsız değildir. Satır içi görevler desteklenen .NET CodeDom dillerinin herhangi birinde yazılabilir (örneğin, Visual Basic veya Visual C#).
+`Reference` ve `Using` öğeleri dilden bağımsız değildir. satır içi görevler desteklenen .net CodeDom dillerinin herhangi birinde yazılabilir (örneğin, Visual Basic veya Visual C#).
 
 > [!NOTE]
 > Öğesi tarafından içerilen öğeler, `Task` Bu durumda kod görev fabrikası olan görev fabrikasına özeldir.
@@ -94,7 +95,7 @@ Alternatif olarak, `Source` `Code` görevin kodunu içeren bir dosyanın konumun
 
 ## <a name="hello-world"></a>Hello World
 
- RoslynCodeTaskFactory ile daha sağlam bir satır içi görev aşağıda verilmiştir. HelloWorld görevinde "Hello, World!" görüntülenir Varsayılan hata günlüğü cihazında, genellikle sistem konsolu veya Visual Studio **çıktı** penceresidir. `Reference`Örnekteki öğesi yalnızca çizim için dahil edilmiştir.
+ RoslynCodeTaskFactory ile daha sağlam bir satır içi görev aşağıda verilmiştir. HelloWorld görevinde "Hello, World!" görüntülenir varsayılan hata günlüğü cihazında, genellikle sistem konsolu veya Visual Studio **çıkış** penceresidir. `Reference`Örnekteki öğesi yalnızca çizim için dahil edilmiştir.
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -263,7 +264,7 @@ Bu satır içi görevler, yolları birleştirebilir ve dosya adını alabilir.
 
 ## <a name="provide-backward-compatibility"></a>Geriye dönük uyumluluk sağla
 
-`RoslynCodeTaskFactory` İlk olarak MSBuild sürüm 15,8 ' de kullanıma sunuldu. Visual Studio 'nun önceki sürümlerini ve MSBuild 'i desteklemek istediğiniz bir durumunuz olduğunu varsayalım, ancak `RoslynCodeTaskFactory` `CodeTaskFactory` was, ancak aynı derleme betiğini kullanmak istiyorsunuz. `Choose` `$(MSBuildVersion)` `RoslynCodeTaskFactory` Aşağıdaki örnekte olduğu gibi, veya için geri dönmeksizin derleme zamanına karar vermek üzere özelliğini kullanan bir yapı kullanabilirsiniz `CodeTaskFactory` :
+`RoslynCodeTaskFactory`ilk olarak MSBuild sürüm 15,8 ' de kullanıma sunulmuştur. Visual Studio ve MSBuild önceki sürümlerini desteklemek istediğiniz, ne zaman `RoslynCodeTaskFactory` kullanılabildiğinizi ancak `CodeTaskFactory` aynı derleme betiğini kullanmak istediğinizi varsayalım. `Choose` `$(MSBuildVersion)` `RoslynCodeTaskFactory` Aşağıdaki örnekte olduğu gibi, veya için geri dönmeksizin derleme zamanına karar vermek üzere özelliğini kullanan bir yapı kullanabilirsiniz `CodeTaskFactory` :
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

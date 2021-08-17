@@ -11,17 +11,17 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 5fc53a534b592b4f6a4799100ce16b1d45049457
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 18703ca0b438bcb0724bb8b94002a964366003c2cbe1b60fedf998e580e9d95b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104671800"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121403547"
 ---
 # <a name="tutorial"></a>Öğretici
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
 Bu öğreticide, devinit ve Codespaces ile [Eshoponweb deposunu](https://github.com/andysterland/eShopOnWeb) ayarlamayı inceleyeceğiz. Bu öğreticide, [Başlarken sayfasında](getting-started-with-devinit.md)açıklandığı gibi devınit 'in zaten kullanılabildiği varsayılmaktadır.
 
@@ -32,8 +32,8 @@ Bu öğreticide, devinit ve Codespaces ile [Eshoponweb deposunu](https://github.
 - Projenizin bağlı olduğu çalışma zamanları veya SDK 'lar nelerdir?
 - Projeniz için herhangi bir paket (örneğin, Chocolatey) gerekiyor mu?
 - Kurulum işleminiz herhangi bir eylemin alınmasını gerektiriyor (örneğin, bir komut dosyası çalıştırılıyor)?
-- Projenizin, Visual Studio ile birlikte yüklenen herhangi bir şeye örtük bağımlılıkları var mı?
-  - Bu durumda, bunları devinit kurulumuna de eklemek iyi bir fikirdir. Bu şekilde, Visual Studio yüklemesine yönelik bir bağlantısı kullanmaktan kaçınabilirsiniz.
+- Projenizin Visual Studio birlikte yüklenen herhangi bir şeye örtük bağımlılıkları var mı?
+  - Bu durumda, bunları devinit kurulumuna de eklemek iyi bir fikirdir. bu şekilde, Visual Studio yüklemesine karşı aşabilirsiniz.
 
 Bu bilgileri belirlemenin en iyi yöntemlerinden biri, şu anda deponuz için sahip olduğunuz el ile kurulum adımlarını araştırmaya yöneliktir. EShopOnWeb için, işlenmesi gereken birkaç nokta vardır:
 
@@ -52,7 +52,7 @@ Daha sonra, bunu devinit bağlamında nasıl gerçekleştireceğinizi inceleyece
 | :---------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------  |
 | En son .NET Core SDK yüklensin                                      | **Evet**! [ `require-dotnetcoresdk` Aracı](tool-require-dotnetcoresdk.md) kullanbiliriz                  |
 | .NET Entity Framework Core araçları CLı 'yı yükler                      | **Evet**! [ `dotnet-toolinstall` Aracı](tool-dotnet-toolinstall.md) kullanbiliriz                        |
-| SQL Server 2019 Express 'ı yükler                                   | **Evet**! [ `choco-install` Aracı](tool-choco-install.md) kullanbiliriz                                  |
+| SQL Server 2019 Express 'i yükler                                   | **Evet**! [ `choco-install` Aracı](tool-choco-install.md) kullanbiliriz                                  |
 | .NET Entity Framework kullanarak yerel veritabanını güncelleştirme                 | **Hayır**, ancak devınit 'i bir komut dosyasıyla birleştirerek yine de bunu yaptık!                               |
 
 Artık bu iletişime bir temel ile başlayalım `.devinit.json` . [ `.devinit.json` Şemaya](https://json.schemastore.org/devinit.schema-2.0)bir başvuru ve boş bir bölüm dahil edeceğiz `run` :
@@ -163,7 +163,7 @@ Hepsi bu!
 
 Artık kurulum adımlarımız olduğuna göre, [gerçek](https://github.com/andysterland/eShopOnWeb)depoyu kullanarak bunu canlı bir codespace 'e deneyelim.
 
-İlk olarak, Visual Studio 'Yu kullanarak bir codespace oluşturacağız:
+İlk olarak, Visual Studio kullanarak bir codespace oluşturacağız:
 
 :::image type="content" source="media/eshoponweb-github-codespaces-prompt.png" alt-text="Codespace oluşturma":::
 

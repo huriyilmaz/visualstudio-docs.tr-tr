@@ -1,6 +1,6 @@
 ---
-description: İfadenin veya deyimin başladığı sütun numarasını alır.
-title: 'IDiaLineNumber:: get_columnNumber | Microsoft Docs'
+description: İfadenin veya deyimin başladığı sütun numarasını alın.
+title: IDiaLineNumber::get_columnNumber | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cad0c103b61c8b50e5b10f7a63c13f6bda015ade0cb11903c0e730db9ca2e5a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dc09fa2761b6048219afc9af4ac2e1ce917a2601
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392195"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066620"
 ---
 # <a name="idialinenumberget_columnnumber"></a>IDiaLineNumber::get_columnNumber
-İfadenin veya deyimin başladığı sütun numarasını alır.
+İfadenin veya deyimin başladığı sütun numarasını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_columnNumber (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı İfadenin veya deyimin başladığı sütun numarasını döndürür. Değer sıfırsa, sütun bilgisi mevcut değildir.
+[out] İfadenin veya deyimin başladığı sütun numarasını döndürür. Değer sıfır ise sütun bilgileri mevcut değildir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen sütun değeri, satırdaki deyimin ilk karakterine satıra kadar olan bir bayt kaydırmadır.
+ Bu yöntem tarafından döndürülen sütun değeri, satırdaki deyiminin ilk karakterine doğru bir byte kaydırmadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

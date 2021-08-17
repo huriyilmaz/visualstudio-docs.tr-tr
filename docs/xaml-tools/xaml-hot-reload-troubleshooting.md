@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 02090956026e6359313534666237bcddd614f4ce3addfdc600d1a7f0289ed9d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0c90e8009540ad42c6efb6734c2ca034f4180a4e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440186"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025205"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
 

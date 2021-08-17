@@ -12,14 +12,15 @@ ms.assetid: c360d2ad-fe42-4d65-899d-d1588cc8a322
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9295644a07a1840cd4874b8bfff298ad9d46c928
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3ce9aef41af1cb0b11e5098ce2c6767716510eec8632fdf419d1b1f143afa72d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060919"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121337870"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>Sorgu Düzenleme Sorgu Kaydetme (Kaynak Denetimi VSPackage’ı)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] düzenleyiciler, sorgu düzenleme sorgusu kaydetme (QEQS) olaylarını yayınlayabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kaynak denetimi saplaması QEQS hizmetini uygular, bu sayede QEQS olaylarının alıcısı olur. Bu olaylar daha sonra şu anda etkin kaynak denetimi VSPackage için temsilci olarak atanır. Etkin kaynak denetimi VSPackage, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> ve yöntemlerini uygular. `IVsQueryEditQuerySave2`Arabirim yöntemleri genellikle bir belge ilk kez düzenlendikten hemen önce ve bir belge kaydedilmeden hemen önce çağrılır.

@@ -11,17 +11,18 @@ ms.assetid: a2604e6a-502d-473b-868f-b11ac64c7a35
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4da07b438ca35417de025a0d9ec6c2dfa01f464d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 97894a07c593a9793f898a7a44b59b5f9f87692c7b0e740b6ace6ce502e8cc57
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053444"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338455"
 ---
 # <a name="idebugstackframe2getexpressioncontext"></a>IDebugStackFrame2::GetExpressionContext
 Yığın çerçevesinin ve iş parçacığının geçerli bağlamı içindeki ifade değerlendirmesi için bir değerlendirme bağlamı alır.

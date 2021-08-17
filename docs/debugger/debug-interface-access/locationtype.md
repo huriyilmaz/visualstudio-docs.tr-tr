@@ -1,5 +1,5 @@
 ---
-description: Bir sembolde bulunan konum bilgilerinin türünü gösterir.
+description: Bir simgede yer alan konum bilgilerine ilişkin tür gösterir.
 title: LocationType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: d3e1eedc-bfd3-4c91-881b-d69565138d0f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f111e269f0a61e827a6d1334aee8b9250f3f46f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: d68e541060c07a523af001558f2804eed35d498d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155385"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097639"
 ---
 # <a name="locationtype"></a>LocationType
-Bir sembolde bulunan konum bilgilerinin türünü gösterir.
+Bir simgede yer alan konum bilgilerine ilişkin tür gösterir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,33 +48,33 @@ enum LocationType {
 
 `LocIsStatic` Konum statiktir.
 
-`LocIsTLS` Konum, iş parçacığı yerel depolama alanında.
+`LocIsTLS` Konum, iş parçacığı yerel depolamadadır.
 
-`LocIsRegRel` Konum, kayıt göreli.
+`LocIsRegRel` Konum register-relative'dır.
 
-`LocIsThisRel` Konum `this` -göreli.
+`LocIsThisRel` Konum `this` görelidir.
 
-`LocIsEnregistered` Konum bir yazmaç içinde.
+`LocIsEnregistered` Konum bir yazmama içindedir.
 
-`LocIsBitField` Konum bir bit alanıdır.
+`LocIsBitField` Konum bir bit alanındadır.
 
-`LocIsSlot` Konum bir Microsoft ara dil (MSIL) yuvadır.
+`LocIsSlot` Konum bir Microsoft Ara Dil (MSIL) yuvasıdır.
 
-`LocIsIlRel` Konum MSIL ile ilişkilidir.
+`LocIsIlRel` Konum MSIL görelidir.
 
-`LocInMetaData` Konum meta verilerde.
+`LocInMetaData` Konum meta verilerdedir.
 
-`LocIsConstant` Konum sabit bir değerde.
+`LocIsConstant` Konum sabit bir değerdedir.
 
-`LocTypeMax` Bu Numaralandırmadaki konum türlerinin sayısı.
+`LocTypeMax` Bu numaralamada yer alan konum türlerinin sayısı.
 
 ## <a name="remarks"></a>Açıklamalar
-[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) arabirimi için kullanılabilen özellikler simgenin görüntü dosyası içindeki konumuna bağlıdır. Daha fazla bilgi için bkz. [sembol konumları](../../debugger/debug-interface-access/symbol-locations.md).
+[IDiaSymbol arabiriminde](../../debugger/debug-interface-access/idiasymbol.md) kullanılabilen özellikler, simgenin görüntü dosyasındaki konumuna bağlıdır. Daha fazla bilgi için [bkz. Sembol Konumları.](../../debugger/debug-interface-access/symbol-locations.md)
 
-Bu Numaralandırmadaki değerler [IDiaSymbol:: get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md) metoduna yapılan bir çağrı tarafından döndürülür.
+Bu numaralamada yer alan değerler [IDiaSymbol::get_locationType yöntemine yapılan bir çağrıyla](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst. h
+Üst bilgi: cvconst.h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

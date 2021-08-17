@@ -1,6 +1,6 @@
 ---
-title: Seçenekler iletişim kutusundaki uluslararası ayarlar
-description: IDE 'nin birden fazla dil sürümüne sahip olduğunuzda varsayılan dili değiştirmek için ortam bölümündeki uluslararası ayarlar sayfasını nasıl kullanacağınızı öğrenin.
+title: seçenekler iletişim kutusunda uluslararası Ayarlar
+description: ıde 'nin birden fazla dil sürümüne sahip olduğunuzda varsayılan dili değiştirmek için ortam bölümündeki uluslararası Ayarlar sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,22 +17,23 @@ ms.assetid: e3a8815c-6995-4099-8e88-34f91fad55b2
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d9dc19c69bf99ba6f66648f396468ff36444eb3f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0b0efa5a6afa002e935e67fe56586195c41979a5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852277"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101173"
 ---
-# <a name="options-dialog-box-environment--international-settings"></a>Seçenekler iletişim kutusu: ortam \> Uluslararası ayarları
+# <a name="options-dialog-box-environment--international-settings"></a>seçenekler iletişim kutusu: ortam \> uluslararası Ayarlar
 
-Uluslararası Ayarlar sayfası, makinenizde tümleşik geliştirme ortamının (IDE) birden çok dil sürümüne sahip olduğunuzda varsayılan dili değiştirmenize olanak sağlar. Bu iletişim kutusuna, **Araçlar** menüsünden **Seçenekler** ' i ve ardından **ortam** klasöründen **Uluslararası ayarlar** ' ı seçerek erişebilirsiniz.
+uluslararası Ayarlar sayfası, makinenizde yüklü tümleşik geliştirme ortamının (ıde) birden çok dil sürümüne sahip olduğunuzda varsayılan dili değiştirmenize olanak sağlar. bu iletişim kutusuna, **araçlar** menüsünden **seçenekler** ' i ve ardından **ortam** klasöründen **uluslararası Ayarlar** ' yi seçerek erişebilirsiniz.
 
 **Dil**
 
-Yüklü ürün dili sürümleri için kullanılabilir dilleri listeler. Birden çok ürün dili veya ürünlerin karışık dil yüklemesi ortamı paylaşıyorsa, dil seçimi **Microsoft Windows Ile aynı** olarak değiştirilir.
+Yüklü ürün dili sürümleri için kullanılabilir dilleri listeler. Birden çok ürün dili veya ürünlerin karışık dil yüklemesi ortamı paylaşıyorsa, dil seçimi **Microsoft Windows Ile aynı** şekilde değiştirilir.
 
 > [!CAUTION]
 > Birden çok dilin yüklü olduğu bir sistemde, Visual C++ derleme araçları (cl.exe, link.exe, nmake.exe, bscmake.exe ve ilgili dosyalar) bu ayardan etkilenmez. Bu araçlar, yüklenen son dilin sürümünü kullanır. Visual C++ yapı araçları uydu DLL modelini kullandığından, daha önce yüklenen dile yönelik derleme araçlarının üzerine yazılır.

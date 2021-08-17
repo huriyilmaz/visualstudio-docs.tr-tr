@@ -11,14 +11,15 @@ ms.assetid: 5c542025-98cf-4307-901f-b9430f780cf0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c6af6aa1aa912c4a1f568bb11318803deb87939
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e4835b4bfecccb6c83bc5532663d5d7b6d86dedb7ccdd8b48def273f11e04efe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148726"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455098"
 ---
 # <a name="idiaenumsymbolsclone"></a>IDiaEnumSymbols::Clone
 Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.

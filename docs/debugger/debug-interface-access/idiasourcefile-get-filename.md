@@ -1,6 +1,6 @@
 ---
-description: Kaynak dosya adını alır.
-title: 'IDiaSourceFile:: get_fileName | Microsoft Docs'
+description: Kaynak dosya adını alın.
+title: IDiaSourceFile::get_fileName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121454906"
 ---
 # <a name="idiasourcefileget_filename"></a>IDiaSourceFile::get_fileName
-Kaynak dosya adını alır.
+Kaynak dosya adını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_fileName (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Kaynak dosya adını döndürür.
+[out] Kaynak dosya adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

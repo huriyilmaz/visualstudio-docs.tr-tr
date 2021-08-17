@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, ele geçirilebilecek özel durumları işlemek için IDebugStackFrame2 'i genişletir.
+description: Bu arabirim, araya gelen özel durumları işlemek için IDebugStackFrame2'nin genişletmesini sağlar.
 title: IDebugStackFrame3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 39af2f57-0a01-42b8-b093-b7fbc61e2909
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4049b728842e630a0f0b300130362b8efa8ceec0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6dbe76962d525daf22d276c229011ef318ba266d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053210"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126134"
 ---
 # <a name="idebugstackframe3"></a>IDebugStackFrame3
-Bu arabirim, ele geçirilebilecek özel durumları işlemek için [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 'i genişletir.
+Bu arabirim, [araya gelen özel durumları işlemek için IDebugStackFrame2'nin](../../../extensibility/debugger/reference/idebugstackframe2.md) genişletmesini sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,38 +30,38 @@ Bu arabirim, ele geçirilebilecek özel durumları işlemek için [IDebugStackFr
 IDebugStackFrame3 : IDebugStackFrame2
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), bu arabirimi, kesilen özel durumları desteklemek için [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) arabirimini uygulayan aynı nesne üzerinde uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), bu arabirimi, araya konulan özel durumları desteklemek için [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) arabirimini uygulayan nesnede de uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [](/cpp/atl/queryinterface) `IDebugStackFrame2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
+ Bu arabirimi almak için bir arabirimde [QueryInterface](/cpp/atl/queryinterface) `IDebugStackFrame2` çağrısı yapmak.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)öğesinden devralınan yöntemlere ek olarak `IDebugStackFrame3` aşağıdaki yöntemleri sunar.
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ [IDebugStackFrame2'den](../../../extensibility/debugger/reference/idebugstackframe2.md)devralınan yöntemlere ek olarak `IDebugStackFrame3` aşağıdaki yöntemleri gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|Herhangi bir normal özel durum işlemeyle önce geçerli yığın çerçevesi için bir özel durum işler.|
-|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|Yığın geriye doğru gerçekleşmesi durumunda kod bağlamını döndürür.|
+|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|Herhangi bir normal özel durum işlemeden önce geçerli yığın çerçevesi için bir özel durumu işleme.|
+|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|Yığın geriye doğru izleme gerçekleşirse bir kod bağlamı döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
- Oluşan bir özel durum, bir hata ayıklayıcının, normal özel durum işleme yordamlarının çalışma zamanı tarafından çağrılmadan önce bir özel durumu işleyebileceği anlamına gelir. Bir özel durumu kesintiye uğratan önce, çalışma süresinin, olmasa bile bir özel durum işleyicisinin mevcut olduğu anlamına gelir.
+ Araya alınan özel durum, bir hata ayıklayıcının herhangi bir normal özel durum işleme yordamı çalışma zamanı tarafından çağrılmadan önce bir özel durumu işleyebilirsiniz. Bir özel durumun araya olması, çalışma zamanında, mevcut bir özel durum işleyicisi olmadığını varsama anlamına gelir.
 
-- Tüm normal özel durum geri çağırma olayları sırasında [Yakatcurrentexception](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) çağrılır (Bu durum, karma mod kodunda (yönetilen ve yönetilmeyen kod) hata ayıklaması yapıyorsanız, bu durumda özel durum son şans geri çağırması sırasında yakalanamayan bir durumdur. Veya uygulamamazsa `IDebugStackFrame3` veya IDebugStackFrame3:: (gibi) öğesinden bir hata döndürürse, `InterceptCurrentException` `E_NOTIMPL` hata ayıklayıcı özel durumu normal şekilde işleymeyecektir.
+- [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) tüm normal özel durum geri çağırma olayları sırasında çağrılır (karma mod kodunda (yönetilen ve yönetilemeyen kod) hata ayıklaması yapmak için tek özel durumdur; bu durumda son şans geri çağırma sırasında özel durum kesilemez). DE uygulamazsa veya `IDebugStackFrame3` DE, IDebugStackFrame3:: (gibi) hata döndürürse, hata ayıklayıcı özel durumu `InterceptCurrentException` normal şekilde `E_NOTIMPL` işler.
 
- Hata ayıklayıcı, bir özel durumu kesintiye uğratan, kullanıcının hata ayıklamakta olan programın durumunda değişiklik yapmasına ve sonra özel durumun oluşturulduğu noktada yürütmeyi sürdürmesine izin verebilir.
+ Hata ayıklayıcı, bir özel durumu keserek, kullanıcının hata ayıklama yapılan programın durumu üzerinde değişiklik yapmalarına ve ardından yürütmeyi özel durumun at olduğu noktada sürdürmesine izin verebilir.
 
 > [!NOTE]
-> Yalnızca yönetilen kodda, yani ortak dil çalışma zamanı (CLR) altında çalışan bir programda, ele geçirilebilecek özel durumlara izin verilir.
+> Araya gelen özel durumlara yalnızca yönetilen kodda, yani Ortak Dil Çalışma Zamanı (CLR) altında çalışan bir programda izin verilir.
 
- Bir hata ayıklama altyapısı, işlevini kullanarak çalışma zamanında "metricExceptions" değerini 1 değerine ayarlayarak, kesintiye uğratan özel durumları desteklediğini belirtir `SetMetric` . Daha fazla bilgi için bkz. [hata ayıklama Için SDK yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md).
+ Hata ayıklama altyapısı, işlevini kullanarak "metricExceptions" değerini çalışma zamanında 1 değerine ayarerek özel durumların araya müdahalesini desteklediğini `SetMetric` gösterir. Daha fazla bilgi için bkz. [Hata Ayıklama için SDK Yardımcıları.](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

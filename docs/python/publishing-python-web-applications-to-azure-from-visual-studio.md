@@ -6,26 +6,27 @@ ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: b2848a54ddbce41b538bf58f82db42ede76026d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a0abf1334a976b095225b05ee0c5db8ea2295c519c65cfed9d5e39f839529ca8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912410"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121230020"
 ---
 # <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
 Mevcut olduğunda Python, Linux için Azure App Service desteklenir ve bu makalede açıklandığı gibi [Git dağıtımı](#publish-to-app-service-on-linux-using-git-deploy) ve [kapsayıcıları](#publish-to-app-service-on-linux-using-containers)kullanarak uygulama yayımlayabilirsiniz.
 
 > [!Note]
-> Windows için Azure App Service Python desteği resmi olarak kullanım dışıdır. Sonuç olarak, Visual Studio 'daki **Yayımla** komutu resmi olarak yalnızca bir [IIS hedefi](#publish-to-iis)için desteklenir ve Azure App Service üzerinde uzaktan hata ayıklama artık resmi olarak desteklenmez.
+> Windows için Azure App Service Python desteği resmi olarak kullanım dışıdır. sonuç olarak, Visual Studio 'daki **yayımla** komutu resmi olarak yalnızca bir [ııs hedefi](#publish-to-iis)için desteklenir ve Azure App Service üzerinde uzaktan hata ayıklama artık resmi olarak desteklenmez.
 >
-> Ancak Windows özelliklerinde [App Service yayımlama](publish-to-app-service-windows.md) , windows üzerinde App Service için Python uzantıları kullanılabilir olmaya devam ettiğinden, ancak hizmet verilmeyecektir veya güncelleştirilemediği için yine de çalışır.
+> ancak, [Windows özelliklerde App Service yayımlandığında](publish-to-app-service-windows.md) , Windows üzerinde App Service için Python uzantıları kullanılabilir olmaya devam eder, ancak hizmet verilmez veya güncellenmez.
 
 ## <a name="publish-to-app-service-on-linux-using-git-deploy"></a>Git dağıtımını kullanarak Linux üzerinde App Service yayımlama
 
@@ -42,10 +43,10 @@ Linux üzerinde App Service önceden oluşturulmuş kapsayıcıya güvenmek yeri
 
 Kapsayıcıları derlemek, yönetmek ve göndermek için iki seçenek vardır:
 
-- [Docker kapsayıcılarını kullanarak Python dağıtma](https://code.visualstudio.com/docs/python/tutorial-deploy-containers)bölümünde açıklandığı gibi Visual Studio Code ve Docker uzantısını kullanın. Visual Studio Code kullanmasanız bile, bu makalede, üretim-Ready uwsgi ve NGINX web sunucularını kullanarak Flask ve Docgo uygulamalarına yönelik kapsayıcı görüntüleri oluşturmaya yönelik faydalı Ayrıntılar sunulmaktadır. Azure CLı kullanarak aynı kapsayıcıyı dağıtabilirsiniz.
+- [docker kapsayıcılarını kullanarak Python dağıtma](https://code.visualstudio.com/docs/python/tutorial-deploy-containers)bölümünde açıklandığı gibi Visual Studio Code ve docker uzantısını kullanın. Visual Studio Code kullanmasanız bile, bu makalede, üretim-ready uwsgi ve ngınx web sunucularını kullanarak flask ve docgo uygulamalarına yönelik kapsayıcı görüntüleri oluşturmaya yönelik faydalı ayrıntılar sunulmaktadır. Azure CLı kullanarak aynı kapsayıcıyı dağıtabilirsiniz.
 
 - Azure belgelerindeki [özel bir Docker görüntüsü kullanma](/azure/app-service/containers/tutorial-custom-docker-image) bölümünde açıklandığı gibi, komut satırını ve Azure CLI 'yi kullanın. Bu kılavuz genel, ancak ve Python 'a özgü değildir.
 
 ## <a name="publish-to-iis"></a>IIS 'de Yayımla
 
-Visual Studio 'da **Yayımla** komutuyla bir Windows sanal makinesine veya diğer IIS özellikli bilgisayarlara yayımlayabilirsiniz. IIS kullanırken, uygulamada Python yorumlayıcısını bulma konusunda IIS 'ye bildiren bir *web.config* dosyası oluşturmayı veya değiştirmeyi unutmayın. Daha fazla bilgi için bkz. [IIS için Web uygulamalarını yapılandırma](configure-web-apps-for-iis-windows.md).
+Visual Studio, **yayımla** komutuyla Windows bir sanal makineye veya diğer ııs özellikli bilgisayarlara yayımlayabilirsiniz. IIS kullanırken, uygulamada Python yorumlayıcısını bulma konusunda IIS 'ye bildiren bir *web.config* dosyası oluşturmayı veya değiştirmeyi unutmayın. Daha fazla bilgi için bkz. [IIS için Web uygulamalarını yapılandırma](configure-web-apps-for-iis-windows.md).

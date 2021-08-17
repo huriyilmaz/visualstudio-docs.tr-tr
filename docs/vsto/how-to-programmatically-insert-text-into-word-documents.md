@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla Word belgelerine metin ekleme'
-description: Visual Studio kullanarak program aracılığıyla bir Microsoft Word belgesine nasıl metin ekleyebileceğiniz hakkında bilgi edinin.
+description: Visual Studio kullanarak program aracılığıyla Microsoft Word belgeye nasıl metin ekleyebileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f17828b4617f84cb104761918787b4bbb79f7afc
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: c2acc09b04ba08543faa449788f61f7fa72c8c72
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827363"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026193"
 ---
 # <a name="how-to-programmatically-insert-text-into-word-documents"></a>Nasıl yapılır: program aracılığıyla Word belgelerine metin ekleme
   Microsoft Office Word belgelerine metin eklemenin üç temel yolu vardır:
@@ -54,7 +55,7 @@ ms.locfileid: "107827363"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet51":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet51":::
 
-     Aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu kod etkin belgeyi kullanır.
+     aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu kod etkin belgeyi kullanır.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet51":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet51":::
@@ -76,7 +77,7 @@ ms.locfileid: "107827363"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet53":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet53":::
 
-     Aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu kod etkin belgeyi kullanır.
+     aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu kod etkin belgeyi kullanır.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet53":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet53":::

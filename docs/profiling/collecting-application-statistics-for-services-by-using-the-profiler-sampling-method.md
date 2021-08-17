@@ -1,6 +1,6 @@
 ---
-title: Windows Hizmetleri için istatistikleri toplama-profil oluşturucu örnekleme yöntemi
-description: Komut satırından profil oluşturma örnekleme yöntemini kullanarak Windows Hizmetleri için performans istatistikleri toplamak için yordamları ve seçenekleri gözden geçirin.
+title: Windows services için istatistikleri toplama-profil oluşturucu örnekleme yöntemi
+description: komut satırından profil oluşturma örnekleme yöntemini kullanarak Windows hizmetleri için performans istatistikleri toplamak üzere yordamları ve seçenekleri gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,21 +8,22 @@ ms.assetid: 07840ab2-3a92-4744-ac87-48b19e0ceecd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ffbc26cb10d80aedb36d33826f9eab675957c8ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bbb825bc851238ce2b0be98cc30921ca4a389bfe17d42e090566e8bd4997ddbf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868406"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333762"
 ---
 # <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>Profil Oluşturucu örnekleme yöntemini kullanarak hizmetler için uygulama istatistikleri toplama
-Bu bölümde, komut satırından örnekleme yöntemi kullanılarak Windows Hizmetleri için performans istatistiklerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
+bu bölümde, komut satırından örnekleme yöntemi kullanılarak Windows hizmetleri için performans istatistiklerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Windows 8 ve Windows Server 2012 gelişmiş güvenlik özellikleri Visual Studio profiler 'ın bu platformlarda verileri topladıkları şekilde gerekli önemli değişikliklere sahiptir. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. bkz. [Windows 8 ve Windows Server 2012 uygulamalarda performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 ## <a name="common-tasks"></a>Genel görevler
 
@@ -34,7 +35,7 @@ Bu bölümde, komut satırından örnekleme yöntemi kullanılarak Windows Hizme
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
-### <a name="profile-windows-services"></a>Profil Windows Hizmetleri
+### <a name="profile-windows-services"></a>profil Windows hizmetleri
 
 |Görev|İlgili İçerik|
 |----------|---------------------|
@@ -47,7 +48,7 @@ Bu bölümde, komut satırından örnekleme yöntemi kullanılarak Windows Hizme
 |Görev|İlgili İçerik|
 |----------|---------------------|
 |**Tek başına (istemci) uygulamalar profili**|-   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
-|**ASP.NET Web uygulamaları profili**|-   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
+|**Web uygulamalarının profilini ASP.NET**|-   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
 
 ### <a name="analyze-sampling-data-views-and-reports"></a>Örnekleme veri görünümlerini ve raporlarını çözümleyin
 - [Örnekleme yöntemi veri görünümleri](../profiling/profiler-sampling-method-data-views.md)

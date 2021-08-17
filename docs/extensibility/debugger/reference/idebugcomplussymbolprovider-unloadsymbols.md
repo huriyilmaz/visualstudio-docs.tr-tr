@@ -10,17 +10,18 @@ ms.assetid: 53e3ddc1-ab47-4097-8fef-b26e5504b37a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2684ff064ad1c69d71e2a64cec1526d50d7bfa47
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b57c4f9c0e58e8757ee7b2e89ed7e6e35337e5eca4fcbd7bf66bd55be39eefa7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067237"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342407"
 ---
 # <a name="idebugcomplussymbolproviderunloadsymbols"></a>IDebugComPlusSymbolProvider::UnloadSymbols
 Belirtilen modülün hata ayıklama sembollerini bellekten kaldırır.

@@ -1,7 +1,7 @@
 ---
 title: Proje oluşturma
 description: Azure Machine Learning galerisinden örnek kullanarak proje oluşturma
-keywords: ai, visual studio, azure machine learning
+keywords: AI, Visual Studio, Azure Machine Learning
 author: jillre
 ms.author: jillfra
 manager: jmartens
@@ -11,54 +11,54 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fd77c91e64cfc9cd6c425a03d58ed663ce3e28c6ea82b8400af78fe2c87aa4d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 060c45fbea194167344a3efeb2a0cab2c7e02a49
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121329194"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122067817"
 ---
-# <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio'daki Azure Machine Learning Galerisi'nde bir AI Visual Studio
+# <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>Visual Studio Azure Machine Learning galerisinden bir aı projesi oluşturma
 
-Azure Machine Learning, AI için Visual Studio Araçları ile tümleştirilmiştir. Azure sanal makineleri, Spark kümeleri ve daha fazlası gibi uzak işlem hedeflerine makine öğrenmesi işleri göndermek için bunu kullanabilirsiniz. 
+Azure Machine Learning aı için Visual Studio Araçları tümleşiktir. Azure sanal makineleri, Spark kümeleri ve daha fazlası gibi uzak işlem hedeflerine makine öğrenimi işleri göndermek için bu işlemi kullanabilirsiniz. 
 
-AI için [Visual Studio Araçları](installation.md)yükledinizkten sonra, Azure Machine Learning Sample Gallery'de önceden yapılmış tarifler kullanarak yeni bir Python projesi oluşturabilirsiniz.
+[aı için Visual Studio Araçları](installation.md)yükledikten sonra, Azure Machine Learning örnek galerisinde önceden hazırlanmış tarifler kullanarak yeni bir Python projesi oluşturmak kolaydır.
 
 > [!NOTE]
-> Azure Machine Learning Workbench'in yüklü olması gerekir. 
+> Azure Machine Learning Çalışma ekranı yüklü olmalıdır. 
 
-1. Visual Studio. AI **Sunucu Gezgini** menüsünü açıp **Küme Seç'i** seçerek ilgili **menüyü açın**
+1. Visual Studio başlatın. **AI araçları** menüsünü açıp **küme Seç** ' i seçerek **Sunucu Gezgini** açın.
 
-    ![Küme seçen](media/create-project-gallery/select-cluster.png)
+    ![Küme Seçicisi](media/create-project-gallery/select-cluster.png)
 
-2. Azure Machine Learning düğümünde Azure Machine Learning tıklayarak Sunucu Gezgini oturum Sunucu Gezgini  yönergeleri izleyin. 
+2. Sunucu Gezgini **Azure Machine Learning** düğümüne sağ tıklayarak Azure Machine Learning aboneliğinizde oturum açın ve **oturum aç** ' ı seçin ve yönergeleri izleyin.
 
     ![oturum aç](media/create-project-gallery/azureml-login.png)
 
-3. AI **Araçları'> Azure Machine Learning Örnek Galerisi'ni seçin.**
+3. **örnek galerisi > aı araçları**' nı Azure Machine Learning seçin.
 
-    ![Örnek galeri](media/create-project-gallery/gallery.png)
+    ![Örnek Galerisi](media/create-project-gallery/gallery.png)
 
-4. Bu Hızlı Başlangıç için **TensorFlow kullanarak " MNIST**" örneğini seçin ve Yükle'ye **tıklayın.** Şunları sağlama:
+4. Bu hızlı başlangıç için, "**TensorFlow kullanarak Mnist**" örneğini seçin ve ardından **Install**' a tıklayın. Aşağıdakileri sağlayın:
 
-   - **Kaynak Grubu:** Meta verilerin depolandığı Azure kaynak grubu
-   - **Hesap:** Azure Machine Learning deneme Hesabı
-   - **Çalışma** alanı: Azure Machine Learning çalışma alanı
-   - **Project Türü:** Makine öğrenmesi çerçevesi. Bu durumda **TensorFlow'ı seçin**
-   - **Çözüme Ekle:** Geçerli Çözüm çözümünüze ekleme Visual Studio yeni bir çözüm oluşturma ve açma olup olmadığını belirler
-   - **Project Yolu:** Kodu kaydetmek için konum
-   - **Project Adı:** **TensorFlowMNIST yazın**
+   - **Kaynak grubu**: meta verilerlerinizin depolanacağı Azure Kaynak grubu
+   - **hesap**: Azure Machine Learning deneme hesabı
+   - **çalışma alanı**: Azure Machine Learning çalışma alanı
+   - **Project türü**: machine learning çerçevesi. Bu durumda **TensorFlow** ' ı seçin.
+   - **çözüme ekle**: geçerli Visual Studio çözümünüze mi yoksa yeni bir çözüm oluşturup mi ekleneceğini belirler
+   - **Project yolu**: kodun kaydedileceği konum
+   - **Project adı**: **tensorflowmnist** yazın
 
-   ![Python Uygulama şablonu kullanırken sonuçta elde edilen proje](media/create-project-gallery/new-AzureSampleProject.png)
+   ![Python uygulama şablonu kullanılırken ortaya çıkan proje](media/create-project-gallery/new-AzureSampleProject.png)
 
-5. Visual Studio proje dosyasını `.pyproj` (diskte bir dosya) örnekte tanımlanan diğer dosyalarla birlikte oluşturur. "MNIST" şablonuyla, proje birkaç dosya içerir.
+5. Visual Studio, `.pyproj` örnek içinde tanımlanan diğer dosyalarla birlikte proje dosyasını (diskteki bir dosya) oluşturur. "MNIST" şablonuyla, proje birkaç dosya içerir.
 
-    ![TensorFlowMNIST projesinin dosyalarını gösteren Visual Studio Çözüm Gezgini ekran görüntüsü. tf_mnist.py için kod ana pencerede gösterilir.](media/create-project-gallery/azml-mnist.png)
+    ![tensorflowmnist projesi dosyalarını gösteren Visual Studio Çözüm Gezgini ekran görüntüsü. Tf_mnist. Kopyala için kod ana pencerede gösterilir.](media/create-project-gallery/azml-mnist.png)
 
-6. İş için Azure Machine Learning.
+6. İşi Azure Machine Learning gönder.
 
-    ![TensorFlowMNIST projesinin bağlam menüsünü "İş Gönder..." ile gösteren çalışma Visual Studio Çözüm Gezgini ekran görüntüsü Seçili.](media/create-project-gallery/submit-azml.png)
+    !["işi gönder..." ile tensorflowmnist projesi için bağlam menüsünü gösteren Visual Studio Çözüm Gezgini ekran görüntüsü seçildiğinde.](media/create-project-gallery/submit-azml.png)
 
-7. Docker kapsayıcısı içinde veya yerel makinede çalıştırma
+7. Bir Docker kapsayıcısında veya yerel makinenizde çalıştırın
 
-    ![Küme kullan seçeneğinin "azureml:/local" ve Başlangıç betiği "tf_mnist.py" olarak ayarlanmış şekilde İş Gönder iletişim kutusunun ekran görüntüsü.](media/create-project-gallery/azml-local.png)
+    ![Use kümesi ile Iş Gönder iletişim kutusunun ekran görüntüsü "azureml:/yerel" olarak ayarlanmış ve başlangıç betiği "tf_mnist. Kopyala" olarak ayarlandı.](media/create-project-gallery/azml-local.png)

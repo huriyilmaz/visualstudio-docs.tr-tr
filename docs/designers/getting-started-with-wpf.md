@@ -20,7 +20,7 @@ ms.locfileid: "121403613"
 ---
 # <a name="get-started-with-wpf"></a>WPF kullanmaya başlama
 
-Windows Presentation Foundation (WPF), masaüstü istemci uygulamaları oluşturan bir kullanıcı arabirimi çerçevesidir. WPF geliştirme platformu; uygulama modeli, kaynaklar, denetimler, grafikler, düzen, veri bağlama, belgeler ve güvenlik gibi çok çeşitli uygulama geliştirme özelliklerini destekler. Çerçeve .NET'in bir parçası olduğu için daha önce ASP.NET veya Windows Forms kullanarak .NET ile uygulama Windows programlama deneyimine aşina olmak gerekir. WPF, uygulama Extensible Application Markup Language bildirimli bir model sağlamak için Extensible Application Markup Language (XAML) kullanır.
+Windows Presentation Foundation (WPF), masaüstü istemci uygulamaları oluşturan bir kullanıcı arabirimi çerçevesidir. WPF geliştirme platformu; uygulama modeli, kaynaklar, denetimler, grafikler, düzen, veri bağlama, belgeler ve güvenlik gibi çok çeşitli uygulama geliştirme özelliklerini destekler. Çerçeve .NET'in bir parçası olduğu için daha önce ASP.NET veya Windows Forms kullanarak .NET ile uygulamalar Windows programlama deneyimine aşina olmak gerekir. WPF, uygulama Extensible Application Markup Language bildirimli bir model sağlamak için Extensible Application Markup Language (XAML) kullanır.
 
 Bu bölümde WPF'yi tanıtan ve çalışmaya başlamanıza yardımcı olan konular yer almaktadır.
 
@@ -32,7 +32,7 @@ Bu bölümde WPF'yi tanıtan ve çalışmaya başlamanıza yardımcı olan konul
 |XAML tasarım araçlarını karşılaştırmak istiyorum...|[XAML'i Visual Studio ve Visual Studio için Blend](../xaml-tools/designing-xaml-in-visual-studio.md)|
 |.NET'i yeni mi kullandın?|[.NET kılavuzu](/dotnet/standard/)<br /><br />[Uygulama TemelLeri](/dotnet/standard/application-essentials)<br /><br />[visual Başlarken C ile birlikte #](../ide/quickstart-csharp-console.md)|
 |WPF hakkında daha fazla bilgi...|[WPF’ye genel bakış](/dotnet/framework/wpf/introduction-to-wpf)<br /><br />[XAML'ye genel bakış (WPF)](/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br />[Denetimler](/dotnet/framework/wpf/controls/)<br /><br />[Veri bağlamaya genel bakış](/dotnet/desktop-wpf/data/data-binding-overview)<br /><br />[LINQ to XML ile WPF verilerini bağlama](/dotnet/framework/wpf/data/wpf-data-binding-with-linq-to-xml-overview)|
-|Forms geliştiricisi Windows misiniz?|[Windows Form denetimleri ve eşdeğer WPF denetimleri](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[WPF ve Windows Forms birlikte çalışabilirliği için desteklenen senaryolar](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
+|Windows Forms geliştiricisi misiniz?|[Windows Form denetimleri ve eşdeğer WPF denetimleri](/dotnet/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls)<br /><br />[WPF ve Windows Forms birlikte çalışabilirlik senaryolarında desteklenen](/dotnet/framework/wpf/advanced/wpf-and-windows-forms-interoperation)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

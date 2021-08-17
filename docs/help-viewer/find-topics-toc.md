@@ -1,6 +1,6 @@
 ---
 title: Yardım Görüntüleyicisi içindekiler tablosu kullanma
-description: İçindekiler Microsoft Yardım Görüntüleyicisi (İçindekiler) konu başlıklarını bulmak için bu tabloyu kullanın. ToC, yüklü kitaplarda yer alan tüm konuları içeren genişletilebilir bir listedir.
+description: İçindekiler Microsoft Yardım Görüntüleyicisi (İçindekiler) konu başlıklarını bulmak için Microsoft Yardım Görüntüleyicisi'i kullanın. ToC, yüklü kitaplarda yer alan tüm konuları içeren genişletilebilir bir listedir.
 ms.date: 11/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d5af58cdc36a47489fe911243d96780802fab515db80315fc8bf5bb91e51fb2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ae8303c42b3bb281b87aba94f66725725ba0c26c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358603"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124340"
 ---
 # Nasıl olur: İçindekiler tablosunda konuları bulma
 
@@ -33,7 +33,7 @@ ms.locfileid: "121358603"
 
 ## ToC'ye filtre uygulama
 
-İçindekiler sekmesinde görünen konuların kapsamını daraltmak için İçindekiler'i **filtreleyebilirsiniz.** Başlıklar listede yalnızca belirttiğiniz terimin kökünü içeriyorsa görünür. Örneğin, filtre olarak "sorun giderme" belirtirseniz, yalnızca "sorun giderme" veya "sorun giderme" içeren başlıklar görüntülenir. Başlıklarında terimi olmayan düğümler, üç nokta (**...**) ile tek bir düğüme daraltılmış olur.
+İçindekiler sekmesinde görünen konuların kapsamını daraltmak için İçindekiler'i **filtreleyebilirsiniz.** Başlıklar listede yalnızca belirttiğiniz terimin kökünü içeriyorsa görünür. Örneğin, filtre olarak "sorun giderme" belirtirseniz yalnızca "sorun giderme" veya "sorun giderme" içeren başlıklar görüntülenir. Başlıklarında terimi olmayan düğümler, üç nokta (**...**) ile tek bir düğüme daraltıldı.
 
 1. İçerikler **sekmesini** seçin.
 

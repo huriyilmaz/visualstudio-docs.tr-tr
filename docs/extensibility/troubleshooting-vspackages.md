@@ -11,19 +11,20 @@ ms.assetid: 274673e7-72e7-476f-a263-3411b5b874be
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1a52e6e659a3841214db5da7a44431b68ea98e7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a097e22bb483a638e1b02a73ff31a37261d4f5ecb99aca89dc5354ea78ece0b6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073761"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121413901"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage Sorunlarını Giderme
 Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğiniz yaygın sorunlar aşağıda verilmiştir.
 
-### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Visual Studio 'Nun başlamasını engelleyen bir VSPackage sorunlarını gidermek için
+### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Visual Studio başlamasını engelleyen bir vspackage sorunlarını gidermek için
 
 - [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Güvenli modda başlatın.
 
@@ -68,7 +69,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
    1. Kayıt defterinin paketler bölümünde VSPackage 'un CLSID 'sini bulun:
 
-        HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \packages
+        hklm\software\microsoft\ Visual Studio \\ *\<version>* \packages
 
    2. SatelliteDll alt anahtarı tarafından verilen yolun doğru olduğundan emin olun.
 
@@ -78,7 +79,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
      Hata ayıklama için iyi başlangıç noktaları, Oluşturucu ve başlatma yöntemidir. Ayrıca, bir menü komutu gibi değerlendirmek istediğiniz alanda kesme noktaları da ayarlayabilirsiniz. Kesme noktalarını etkinleştirmek için hata ayıklayıcı altında çalıştırmanız gerekir.
 
-    1. **Proje** menüsünde **Özellikler**' e tıklayın.
+    1. **Project** menüsünde **özellikler**' e tıklayın.
 
     2. **Özellik sayfaları** Iletişim kutusunda **Hata Ayıkla** sekmesini seçin.
 
@@ -113,7 +114,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
 1. Yönetilen kod için başvuru yollarının doğru olduğundan emin olun.
 
-   1. **Proje** menüsünde **Özellikler**' e tıklayın.
+   1. **Project** menüsünde **özellikler**' e tıklayın.
 
    2. **Özellik sayfaları** Iletişim kutusundaki **Başvurular** sekmesini seçin ve tüm yolların doğru olduğundan emin olun. Alternatif olarak, başvurulan nesnelere gitmek için **nesne tarayıcısı** kullanabilirsiniz.
 
@@ -121,7 +122,7 @@ Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğin
 
 2. Yönetilmeyen kod için, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CLSID kayıt defteri düğümünde VSPackage CLSID 'sini bulun:
 
-    HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \CLSID
+    hklm\software\microsoft\ Visual Studio \\ *\<version>* \clsıd
 
    Inprocserver32 girişinin VSPackage dll dosyasının doğru yoluna sahip olduğundan emin olun.
 

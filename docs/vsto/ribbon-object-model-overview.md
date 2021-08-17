@@ -117,7 +117,7 @@ ms.locfileid: "121226147"
 
  Visual Studio 2008 ' den yükselttiğiniz Visual C# projelerinde, oluşturucu şerit kod dosyasında görünür.
 
- Visual Basic projelerinde veya içinde oluşturduğunuz Visual C# projelerinde, [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] oluşturucu şerit tasarımcı kod dosyasında görünür. Bu dosya *YourRibbonItem* olarak adlandırılmıştır. Tasarımcı. cs veya *YourRibbonItem*. Designer. vb. Bu dosyayı projelerde Visual Basic için önce dosyanın tüm dosyalarını **göster** düğmesine tıklamanız Çözüm Gezgini.
+ Visual Basic projelerinde veya içinde oluşturduğunuz Visual C# projelerinde, [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] oluşturucu şerit tasarımcı kod dosyasında görünür. Bu dosya *YourRibbonItem* olarak adlandırılmıştır. Tasarımcı. cs veya *YourRibbonItem*. Designer. vb. Bu dosyayı projelerde Visual Basic için önce dosyanın içinde **Tüm** Dosyaları Göster düğmesine tıklamanız Çözüm Gezgini.
 
 ### <a name="set-properties-in-the-createribbonextensibilityobject-method"></a>CreateRibbonExtensibilityObject yönteminde özellikleri ayarlama
  Bir denetimin özelliklerini, `Ribbon` projenizin , veya sınıfındaki yöntemini `CreateRibbonExtensibilityObject` geçersiz `ThisAddin` `ThisWorkbook` `ThisDocument` kılarak ayarlayabilirsiniz. yöntemi hakkında daha fazla bilgi `CreateRibbonExtensibilityObject` için bkz. [Şerit'e Genel Bakış.](../vsto/ribbon-overview.md)
@@ -166,7 +166,7 @@ ms.locfileid: "121226147"
  Şeridin diğer örnekleri oluşturulduğunda bu özelliklerden herhangi birini farklı bir değere ayaran koşullu mantığınız varsa, bu kodun hiçbir etkisi olmaz.
 
 > [!NOTE]
-> Name özelliğinin **Bir** Şerit'e ekley istediğiniz her denetim için Outlook emin olur. Çalışma zamanında bir Outlook Şerit'e denetim eklersiniz, kodunda bu özelliği ayarlayabilirsiniz. Tasarım zamanında Bir Outlook Şerit'e denetim eklersiniz, Name özelliği otomatik olarak ayarlanır.
+> Name özelliğinin **bir** Şerit'e ekley istediğiniz her denetim için Outlook emin olur. Çalışma zamanında Outlook Şerit'e denetim eklersiniz, kodunda bu özelliği ayarlayabilirsiniz. Tasarım zamanında Bir Outlook Şerit'e denetim eklersiniz, Name özelliği otomatik olarak ayarlanır.
 
 ## <a name="ribbon-control-events"></a>Şerit denetimi olayları
  Her denetim sınıfı bir veya daha fazla olay içerir. Aşağıdaki tabloda bu olaylar açık almaktadır.
@@ -175,7 +175,7 @@ ms.locfileid: "121226147"
 |-----------|-----------------|
 |Eski kimlik doğrulamasını engelleme hakkında daha fazla bilgi edinmek için|Bir denetime tık olduğunda gerçekleşir.|
 |TextChanged|Bir düzenleme kutusunun veya birleşik giriş kutusunun metni değiştir geldiğinde gerçekleşir.|
-|ItemsLoading|Denetimin Items koleksiyonu, denetim tarafından Office. Office, kodunuz denetimin özelliklerini değiştirmeden veya yöntemini çağırana kadar Items koleksiyonunu önbelleğe <xref:Microsoft.Office.Core.IRibbonUI.InvalidateControl%2A> alıyor.|
+|ItemsLoading|Denetimin Items koleksiyonu, denetim tarafından istekte Office. Office, kodunuz denetimin özelliklerini değiştirmeden veya yöntemini çağırana kadar Items koleksiyonunu önbelleğe <xref:Microsoft.Office.Core.IRibbonUI.InvalidateControl%2A> alıyor.|
 |Buttonclick|veya içinde bir düğmeye <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> tıkıldığında <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> gerçekleşir.|
 |Selectionchanged|veya içinde seçim değişirse <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> gerçekleşir.|
 |DialogLauncherClick|Bir grubun sağ alt köşesindeki iletişim kutusu başlatıcı simgesine tıklarsanız gerçekleşir.|

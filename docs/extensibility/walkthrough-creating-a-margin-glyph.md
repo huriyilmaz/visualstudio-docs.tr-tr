@@ -10,24 +10,25 @@ ms.assetid: 814185db-24f9-417f-b3b1-7c5aabb42b45
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec5eecef40220c2cf2d4e3f1ece8eb5eb763bdeb
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 0672c68167b06195883b431b6e49b96f93cb9db8b9f80b94183c2a09a7a33289
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217417"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121334984"
 ---
 # <a name="walkthrough-create-a-margin-glyph"></a>İzlenecek yol: kenar boşluğu karakteri oluşturma
 Özel Düzenleyici uzantıları kullanarak Düzenleyici kenar boşluklarının görünümünü özelleştirebilirsiniz. Bu izlenecek yol, bir kod açıklamasında "Todo" sözcüğünün göründüğü her zaman gösterge marjına özel bir karakter koyar.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-mef-project"></a>MEF projesi oluşturma
 
-1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `TodoGlyphTest` .
+1. C# VSıX projesi oluşturun. ( **yeni Project** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **vsıx Project**' i seçin.) Çözümü adlandırın `TodoGlyphTest` .
 
 2. Bir düzenleyici sınıflandırıcı proje öğesi ekleyin. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
@@ -134,7 +135,7 @@ ms.locfileid: "106217417"
 
 1. Çözümü derleyin.
 
-2. **F5** tuşuna basarak projeyi çalıştırın. Visual Studio 'nun ikinci bir örneği başlar.
+2. **F5** tuşuna basarak projeyi çalıştırın. ikinci bir Visual Studio örneği başlar.
 
 3. Gösterge kenar boşluğunun göründüğünden emin olun. ( **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Metin Düzenleyicisi** sayfasında **Gösterge kenar boşluğunun** seçildiğinden emin olun.)
 

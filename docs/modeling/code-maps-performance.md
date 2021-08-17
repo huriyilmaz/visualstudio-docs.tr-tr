@@ -7,18 +7,19 @@ ms.topic: conceptual
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: d5a279a04b1bd76933df335bc0b2527ab4b2418f
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: c877554685a3a8111d529fab0fa58be4e4f00f4d8a86716a716391cbc97ac55e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389650"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411261"
 ---
 # <a name="improve-performance-for-code-maps"></a>Kod eşlemeleri için performansı geliştirme
 
-İlk kez bir harita 7.000 Visual Studio, bulduğu tüm bağımlılıkları dizinler. Bu işlem özellikle büyük çözümler için biraz zaman alsa da, daha sonra performansı iyiler. Kodunuz değişirse, Visual Studio güncelleştirilmiş kodu yeniden koda yeniden kodlar. Haritanın işlemeyi bitirme süresini en aza indirmek için aşağıdaki önerileri göz önünde bulundurabilirsiniz:
+İlk kez bir harita özel Visual Studio, bulduğu tüm bağımlılıkları dizinler. Bu işlem özellikle büyük çözümler için biraz zaman alsa da, daha sonra performansı iyiler. Kodunuz değişirse, Visual Studio yalnızca güncelleştirilmiş kodu yeniden koda yeniden kodlar. Haritanın işlemeyi bitirme süresini en aza indirmek için aşağıdaki önerileri göz önünde bulundurabilirsiniz:
 
 - Yalnızca ilgini alan bağımlılıkları eşler.
 
@@ -26,7 +27,7 @@ ms.locfileid: "112389650"
 
 - Kod haritası araç çubuğunda Derlemeyi Atla'ya **seçerek çözüm** için otomatik derlemeyi kapatın.
 
-- Kod haritası araç çubuğunda Üst Öğeleri Ekle'yi **seçerek üst** öğe eklemenin otomatik olarak nasıl devre dışı olduğunu kapatın.
+- Kod haritası araç çubuğunda Üst Öğeleri Ekle'yi **seçerek üst öğe** eklemenin otomatik olarak nasıl devre dışı olduğunu kapatın.
 
    ![Derleme ve Ekleme Ebeveyn düğmelerini atla](../modeling/media/codemapsfilterskipbuildicons.png)
 

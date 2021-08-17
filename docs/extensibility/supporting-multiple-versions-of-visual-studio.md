@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 'nun birden çok sürümünü destekleme | Microsoft Docs
-description: Vspackaları farklı sürümlere yükleyebilmeleri için Visual Studio 'nun çeşitli sürümlerini nasıl destekleyebileceğinizi öğrenin.
+title: Visual Studio birden çok sürümünü destekleme | Microsoft Docs
+description: bazı Visual Studio sürümlerini nasıl destekleyeceğinizi öğrenin ve vspackaları farklı sürümlere yükleyebilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,19 +11,20 @@ ms.assetid: 0047aa90-1ed4-40d3-8772-622b2719a4b1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d455ebf18ee8817e2adac2fa266592594ca7e6c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4e0624461d6f37468c0d44ace6c287bda67021bcbef7c525dd871dab691cf282
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056109"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121413836"
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>Visual Studio'nun Birden Çok Sürümünü Destekleme
-*Yan yana* terimi, bir ürünün birden çok sürümünü aynı bilgisayara yükleyip koruyabilmeniz anlamına gelir. VSPackages için, bir kullanıcının aynı bilgisayarda birçok Visual Studio sürümü yüklü olabileceği anlamına gelir. Ancak, VSPackages 'ın tek bir Visual Studio sürümüne yüklenmiş yan yana sürümlerine sahip olabilirsiniz.
+*Yan yana* terimi, bir ürünün birden çok sürümünü aynı bilgisayara yükleyip koruyabilmeniz anlamına gelir. vspackages için, bir kullanıcının aynı bilgisayarda birden fazla Visual Studio sürümü yüklü olabileceği anlamına gelir. Ancak, Visual Studio tek bir sürümüne yüklenmiş VSPackages 'nin yan yana sürümlerine sahip olabilirsiniz.
 
- VSPackage 'ın, Visual Studio 'nun yan yana sürümlerine yüklenebilmesini sağlamak için aşağıdakileri göz önünde bulundurun:
+ vspackage 'ın Visual Studio yan yana sürümüne yüklenebilmesini sağlamak için önce aşağıdakileri göz önünde bulundurun:
 
 - Hangi yan yana uygulama stratejisini izlemek istediğinizi belirlemelisiniz.
 
@@ -35,10 +36,10 @@ ms.locfileid: "105056109"
 
 - Yükleyicinizin uygulama stratejinizi işlemesi gerekir, böylece sürümlü bileşenler ve ayrıca tüm sürümler genelinde paylaşılan bileşenler doğru şekilde yüklenip kaydedilir.
 
-   Daha fazla bilgi için bkz. Windows Installer ve ayrıca [bileşen yönetimi](../extensibility/internals/component-management.md) [Ile VSPackages yükleme](../extensibility/internals/installing-vspackages-with-windows-installer.md) .
+   daha fazla bilgi için bkz. Windows Installer ve ayrıca [bileşen yönetimi](../extensibility/internals/component-management.md) [ile vspackages yükleme](../extensibility/internals/installing-vspackages-with-windows-installer.md) .
 
   > [!NOTE]
-  > Visual Studio 'nun bir sürümünü yüklemek .NET Framework buna karşılık gelen bir sürümünü de yüklüyor. Örneğin, Visual Studio 2010 ve Visual Studio 2012 'nin aynı bilgisayara yüklenmesi, sırasıyla .NET Framework 4,0 sürümlerini ve 4,5 sürümünü de yüklüyor.
+  > Visual Studio sürümünün yüklenmesi, .NET Framework ilgili bir sürümünü de yüklüyor. örneğin, aynı bilgisayara Visual Studio 2010 ve Visual Studio 2012 ' nin yüklenmesi, sırasıyla .NET Framework ve 4,5 4,0 sürümlerini de yüklüyor.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Paylaşılan ve sürümlü VSPackages arasında seçim yapma](../extensibility/choosing-between-shared-and-versioned-vspackages.md) VSPackage 'inizdeki yan yana sorunların nasıl çözümleneceğini açıklar.

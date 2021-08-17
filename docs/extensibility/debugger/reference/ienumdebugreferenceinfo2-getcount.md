@@ -1,6 +1,6 @@
 ---
-description: Numaralamada DEBUG_REFERENCE_INFO öğe sayısını döndürür.
-title: IEnumDebugReferenceInfo2::GetCount | Microsoft Docs
+description: Numaralandırmadaki DEBUG_REFERENCE_INFO öğe sayısını döndürür.
+title: 'IEnumDebugReferenceInfo2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f22197625989a3fbc74852729fc2166778da0d92decc17c70c8b81746e5183df
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 045bdf53bd131a970dd17811dbf43b7d1b5589a8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377254"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125445"
 ---
 # <a name="ienumdebugreferenceinfo2getcount"></a>IEnumDebugReferenceInfo2::GetCount
-Numaralamada öğe sayısını döndürür.
+Numaralandırmadaki öğe sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-[out] Numaralamada öğe sayısını döndürür.
+dışı Numaralandırmadaki öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, yalnızca , , ve yöntemlerinin uygulanmasının gerekli olduğunu belirten özel COM numaralama `Next` `Clone` `Skip` `Reset` arabiriminin bir parçası değildir.
+ Bu yöntem, yalnızca,, `Next` `Clone` `Skip` ve `Reset` yöntemlerinin uygulanması gerektiğini belirten normal com numaralandırma arabiriminin bir parçası değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

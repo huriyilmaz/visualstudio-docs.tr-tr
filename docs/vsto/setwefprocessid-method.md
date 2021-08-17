@@ -10,14 +10,15 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9c3d745f14185d46dce08d46b8c56391b108627d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e066da4c1c294669ad4baf4932c6d934e283a9c4914e9c23efc45ef3b1f2335d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882414"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121226108"
 ---
 # <a name="setwefprocessid-method"></a>SetWefProcessId yöntemi
   Web uzantıları çerçevesi (WEF) içeriğini çalıştıracak işlem tanımlayıcısı sağlar.

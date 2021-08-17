@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 74954be3d0506c6a87f3973da617d26a96af8e9152ef85cbb45e72ad2d54d0d4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d6eac0c6ae6cd539f2a5dfc3b65d05482b2e282d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430596"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101589"
 ---
 # <a name="command-window"></a>Komut Penceresi
 **Komut** penceresi, komutları veya diğer adları doğrudan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamında (IDE) yürütmek için kullanılır. Herhangi bir menüde görünmeyen menü komutlarını ve komutları çalıştırabilirsiniz. **komut** penceresini görüntülemek için, **görünüm** menüsünden **diğer Windows** seçin ve **komut penceresi**' ni seçin.

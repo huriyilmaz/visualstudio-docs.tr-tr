@@ -35,7 +35,7 @@ Aşağıdaki araçlar HTML sekmesinde varsayılan olarak kullanılabilir.
 
 **Işaretçi**
 
-![ASP.NET Mobil Tasarımcı HTMLSayfa İşaretçisi](../../ide/reference/media/vxpointer.gif)
+![ASP.NET Mobil Tasarımcı HTML Sayfası İşaretçisi](../../ide/reference/media/vxpointer.gif)
 
 Herhangi bir Araç Kutusu sekmesi açıldığında bu araç varsayılan olarak seçilir. Silinemez. İşaretçi nesneleri sayfa veya forma sürükleyerek Tasarım görünümü, yeniden boyutlandırmanıza ve yeniden konumlandırmanıza olanak sağlar. Daha fazla bilgi için [bkz. Araç Kutusu.](../../ide/reference/toolbox.md)
 
@@ -111,20 +111,20 @@ Giriş **(Dosya) girişini Tasarım görünümü** yüzeyine sürüklerken, belg
 
 öğesinin `input` bir öğesini `type="password"` ekler. Varsayılan `id="Password1"` olarak, ilk parola alanı için, `id="Password2"` ikinci için eklenir ve bu şekilde devam ediyor.
 
-Giriş **(Parola) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+Giriş **(Parola) girişini Tasarım görünümü** yüzeyine sürüklerseniz, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
 
 ```html
 <input id="Password1" type="password" name="Password1">
 ```
 
 > [!IMPORTANT]
-> Uygulamanız kullanıcı adları ve parolalar iletirse, web sitenizi aktarımı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanmak üzere yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Bağlantıların Güvenliğini Sağlama.](/previous-versions/tn-archive/bb418917(v=technet.10)) Ayrıca, tüm kullanıcı girişini doğrulamanızı da öneririz. Daha fazla bilgi için [bkz. Web Sayfaları (Razor) ASP.NET Kullanıcı Girişini Doğrulama.](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
+> Uygulamanız kullanıcı adları ve parolalar iletirse, web sitenizi aktarımı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanmak üzere yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Bağlantıların Güvenliğini Sağlama.](/previous-versions/tn-archive/bb418917(v=technet.10)) Ayrıca, tüm kullanıcı girişini doğrulamanızı öneririz. Daha fazla bilgi için [bkz. Web Sayfaları (Razor) ASP.NET Kullanıcı Girişini Doğrulama.](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
 
 **Giriş (Onay kutusu)**
 
 ![HTML web sayfası Araç Kutusu Onay Kutusu Seçeneği](../../ide/reference/media/vxcheckbox.gif)
 
-öğesinin `input` bir öğesini `type="checkbox"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Checkbox1"` olarak, ilk onay kutusu için , `id="Checkbox2"` ikinci onay kutusu için eklenir ve bu şekilde devam etmek için kullanılır.
+öğesinin `input` bir öğesini `type="checkbox"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Checkbox1"` olarak, ilk onay kutusu için, ikinci onay kutusu için eklenir `id="Checkbox2"` ve bu şekilde devam etmek için kullanılır.
 
 Giriş **(Onay kutusu) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
 
@@ -138,7 +138,7 @@ Giriş **(Onay kutusu) girişini Tasarım görünümü,** belgenize aşağıdaki
 
 öğesinin `input` bir öğesini `type="radio"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Radio1"` olarak, ilk radyo düğmesi için, ikinci radyo düğmesi için eklenir `id="Radio2"` ve bu şekilde devam edin.
 
-Giriş **(Radyo) girişini Tasarım görünümü** yüzeyine sürüklerken, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+Giriş **(Radyo) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
 
 ```html
 <input id="Radio1" type="radio" name="Radio1">
@@ -150,7 +150,7 @@ Giriş **(Radyo) girişini Tasarım görünümü** yüzeyine sürüklerken, belg
 
 öğesinin `input` bir öğesini `type="hidden"` ekler. Varsayılan `id="Hidden1"` olarak, ilk gizli alan için, `id="Hidden2"` ikinci için eklenir ve bu şekilde devam ediyor.
 
-Giriş **(Gizli) girişini Tasarım görünümü** yüzeyine sürüklerken, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+Giriş **(Gizli) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
 
 ```html
 <input id="Hidden1" type="hidden" name="Hidden1">
@@ -160,7 +160,7 @@ Giriş **(Gizli) girişini Tasarım görünümü** yüzeyine sürüklerken, belg
 
 ![HTMLpage Araç Çubuğu Metin Alanı](../../ide/reference/media/vxtextarea.gif)
 
-Bir öğe `textarea` ekler. Metin alanını yeniden boyutlandırabilir veya kaydırma çubuklarını kullanarak görüntüleme alanını aşan metinleri görüntüebilirsiniz. Görüntülenen varsayılan metni değiştirmek için özniteliğini `value` düzenleyin. Varsayılan `id="textarea1"` olarak, ikinci için ilk metin `id=" textarea 2"` alanı eklenir ve bu şekilde devam edin.
+Bir öğe `textarea` ekler. Metin alanını yeniden boyutlandırabilir veya kaydırma çubuklarını kullanarak görüntüleme alanını aşan metinleri görüntüebilirsiniz. Görüntülenen varsayılan metni değiştirmek için özniteliğini `value` düzenleyin. Varsayılan `id="textarea1"` olarak, ikinci için ilk metin `id=" textarea 2"` alanı eklenir ve bu şekilde devam ediyor.
 
 **Textarea'yı Tasarım görünümü** yüzeyine sürüklerken, aşağıdaki gibi HTML işaretlemesi belgenize eklenir:
 
@@ -201,7 +201,7 @@ Bir öğe `img` ekler. Öğesini ve metnini belirtmek için `src` bu öğeyi `al
 
 Bir açılan öğe ekler `select` (öznitelik `size` olmadan). Varsayılan `id="select1"` olarak, ilk liste kutusu için, `id="select2"` ikinci için eklenir ve bu şekilde devam edin.
 
-Select öğesini **Tasarım görünümü** sürüklerken, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Seç'i** Tasarım görünümü sürükleyerek belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
 
 ```html
 <select id="select1" name="select1"><option selected></option></select>
@@ -213,21 +213,21 @@ Size özelliğinin değerini `select` artırarak çok satırlı bir öğe oluşt
 
 ![HTML sayfası Yatay Kural Öğesi](../../ide/reference/media/vxhorizontal.gif)
 
-Bir öğe `hr` ekler. Çizginin kalınlığını artırmak için özniteliğini `size` düzenleyin.
+Bir `hr` öğesi ekler. Çizginin kalınlığını artırmak için `size` özniteliği düzenleyin.
 
-Yatay **Kural'ı** Tasarım görünümü sürükleyerek belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Yatay kuralı** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <hr width="100%" size=1>
 ```
 
-**Div**
+**DIV**
 
-![HTML sayfası Etiketi](../../ide/reference/media/vxlabel.gif)
+![HTML sayfa etiketi](../../ide/reference/media/vxlabel.gif)
 
-Özniteliği içeren `div` bir öğe `ms_positioning="FlowLayout"` ekler. Genişlik ve yükseklik dışında, bu öğe Flow Düzeni Paneli ile aynıdır. öğesinin içinde yer alan metni biçimlendirmek `div` için açılış `class="stylename"` etiketine bir özniteliği ekleyin.
+`div`Özniteliği içeren bir öğesi ekler `ms_positioning="FlowLayout"` . genişlik ve yükseklik dışında, bu öğe Flow düzen paneliyle aynıdır. Öğe içinde bulunan metni biçimlendirmek için `div` , `class="stylename"` açma etiketine bir öznitelik ekleyin.
 
-**Div'i** Tasarım görünümü sürükleyerek belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Div** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 
 ```html
 <div ms_positioning="FlowLayout" style="width: 70px; position: relative; height: 15px">Label</div>

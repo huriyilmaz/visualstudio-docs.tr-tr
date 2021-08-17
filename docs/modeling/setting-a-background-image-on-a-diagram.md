@@ -1,20 +1,21 @@
 ---
 title: Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
-description: Visual Studio Ve Modelleme SDK'sı'nda özel kod kullanarak oluşturulan bir tasarımcının arka plan görüntüsünü ayarlayabilirsiniz.
+description: Visual Studio Görselleştirme ve Modelleme SDK'sı'nda özel kod kullanarak oluşturulan bir tasarımcının arka plan görüntüsünü ayarlayabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 9304117932b92408f12a23747253de66dfd767d1
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 4de75e34696f7404488e804a87aa6f1d6c065860855e76b1ae1a7930f2940def
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385675"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121231463"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
 Görselleştirme Visual Studio Modelleme SDK'sı içinde, özel kod kullanarak oluşturulan bir tasarımcının arka plan görüntüsünü oluşturabilirsiniz.
@@ -51,7 +52,7 @@ Görselleştirme Visual Studio Modelleme SDK'sı içinde, özel kod kullanarak o
 
 14. Klasöre Özel **adını girin.**
 
-15. Özel klasörüne sağ tıklayın, Ekle'nin **üzerine gelin ve** Yeni **Öğe'ye tıklayın.**
+15. Özel klasörüne sağ tıklayın, Ekle'nin üzerine **gelin ve** Yeni **Öğe'ye tıklayın.**
 
 16. Yeni **Öğe Ekle iletişim** kutusundaki Şablonlar listesinde **Kod Dosyası'nın** **üzerine tıklayın.**
 

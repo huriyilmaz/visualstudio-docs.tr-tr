@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, alanlar sabit listesini ilk öğe olarak sıfırlar.
-title: 'IEnumDebugFields:: Reset | Microsoft Docs'
+description: Bu yöntem, alan numaralamalarını ilk öğeye sıfırlar.
+title: IEnumDebugFields::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 34448e389b545a3fe1d4ba7d86cbbe753567876606a4cae25118a573dfca3263
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cbedf6f73d8a7b914d9614ebe6cca669a0c190c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360254"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029430"
 ---
 # <a name="ienumdebugfieldsreset"></a>IEnumDebugFields::Reset
-Bu yöntem, numaralandırmayı ilk öğe olarak sıfırlar.
+Bu yöntem, numaralama öğesini ilk öğeye sıfırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int Reset();
  Hiçbiri
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra [Next 'e sonraki](../../../extensibility/debugger/reference/ienumdebugfields-next.md) çağrı, numaralandırmanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra Next [çağrısı,](../../../extensibility/debugger/reference/ienumdebugfields-next.md) numaralamanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

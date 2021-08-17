@@ -11,17 +11,18 @@ ms.assetid: 35b3c2f3-69f4-4013-b555-f847221f62e8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 92f55f511a68cca6685579eeb6d686108bf70799
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 27541d1a9f238acbe626a67520868bfd882833717487ea253c37a64fdf8a1f21
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071460"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338624"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
 Bir başvurunun seçili alt öğelerinin listesini alır. Daha sonraki kullanımlar için ayrılmıştır.
