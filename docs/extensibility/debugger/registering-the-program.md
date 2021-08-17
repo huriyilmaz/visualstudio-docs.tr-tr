@@ -11,14 +11,15 @@ ms.assetid: d726a161-7db3-4ef4-b258-9f6a5be68418
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4fda27bd0572713e16311e6feae8ff74870cb006
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 01566034b0cfece39367afdc1f86101c5ec553f8612bd469b90615ffc5b99fd9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070641"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377047"
 ---
 # <a name="register-the-program"></a>Programı Kaydet
 Hata ayıklama altyapısı bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilen bir bağlantı noktasını aldıktan sonra, bir programın hata ayıklamasını etkinleştirmeye yönelik bir sonraki adım, bağlantı noktası ile kaydettirilmelidir. Kaydolduktan sonra, program hata ayıklama için aşağıdaki yollardan biriyle kullanılabilir:

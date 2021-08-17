@@ -1,6 +1,6 @@
 ---
 title: GetAssemblyIdentity görevi | Microsoft Docs
-description: Belirtilen dosyalardan derleme kimliklerini almak ve kimlik bilgilerini çıkarmak için MSBuild GetAssemblyIdentity görevini kullanın.
+description: belirtilen dosyalardan derleme kimliklerini almak ve kimlik bilgilerini çıkarmak için MSBuild getassemblyıdentity görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: a977e072-37ad-4941-84a6-32a4483be55d
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 91a155e340f9ab246935f7b8cd6da46f3f364010
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b016d39453e79aea045c61a84202cad71d4164c32bc5d0aa566dd27f49870b77
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914720"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427826"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity görevi
 

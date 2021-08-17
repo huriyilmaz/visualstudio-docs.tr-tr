@@ -1,6 +1,6 @@
 ---
 title: Uııdmanager görevi | Microsoft Docs
-description: MSBuild Uıdmanager görevinin, kaynak XAML dosyalarındaki tüm XAML öğelerini yerelleştirmek için benzersiz tanımlayıcıları (UID 'ler) nasıl denetleyeceğini, güncelleştirdiğini veya kaldırmadığını öğrenin.
+description: kaynak XAML dosyalarındaki tüm XAML öğelerini yerelleştirmek için MSBuild uımanager görevinin benzersiz tanımlayıcıları (uıd 'ler) nasıl denetleyeceğini, güncelleştirdiğini veya kaldırmadığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,14 +19,15 @@ ms.assetid: 4fc7b5a5-11b0-46ca-9656-8c2a0b08d1fe
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 6287abee811d406ef7aafa5ce3cc3dc62624b0d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90df39308965b8ac7fd9513a44f4c136dcfc14cd71abd8b5973f33851830d2fe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902618"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369703"
 ---
 # <a name="uidmanager-task"></a>UidManager görevi
 

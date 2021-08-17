@@ -12,14 +12,15 @@ ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8fa68ff628212a207f860a3f9e6eca960481ee9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0b87074f6f1401f4e81bd457ae2d3c29169c1801b17ac60a1d0e8f9d032ddcfc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069887"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376449"
 ---
 # <a name="how-to-open-project-specific-editors"></a>Nasıl yapılır: projeye özgü düzenleyiciler açma
 Bir proje tarafından açılan bir öğe, doğası gereği bu proje için belirli düzenleyiciye bağlıysa, projenin projeye özgü bir düzenleyici kullanarak dosyayı açması gerekir. Dosya, bir düzenleyici seçmek için IDE 'nin mekanizmasına devredilemez. Örneğin, standart bir bit eşlem Düzenleyicisi kullanmak yerine, projenize özgü olan dosyadaki bilgileri tanıyan belirli bir bit eşlem düzenleyicisini belirtmek için bu projeye özgü düzenleyici seçeneğini kullanabilirsiniz.

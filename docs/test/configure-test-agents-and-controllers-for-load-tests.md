@@ -1,6 +1,6 @@
 ---
 title: Yük testleri için test aracılarını/test denetleyicilerini yapılandırma
-description: Tek bir bilgisayardan yalnızca bir bilgisayarın oluşturabileceğinden daha fazla yük oluşturmak için fiziksel veya sanal makineler kullanarak, Visual Studio 'Nun benzetimli yük oluşturma hakkında bilgi edinin.
+description: Visual Studio, tek bir bilgisayardan yalnızca bir bilgisayarın oluşturabileceğinden daha fazla yük oluşturmak için fiziksel veya sanal makineler kullanarak nasıl sanal yük oluşturabileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -9,16 +9,17 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 50356044b4463353f99ddf93ac41e08a572f3879
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 1f789b8e5816b072b815cb59bae6c1cd377e0d055db53b8a663f6b4d5c2f7266
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957250"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425066"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Yük testlerini çalıştırmak için Test aracılarına ve test denetleyicilerine genel bakış
 
-Visual Studio fiziksel veya sanal makineler kullanarak uygulamanız için benzetimli yük oluşturabilir. Bu makinelerin tek bir test denetleyicisi ve bir veya daha fazla test aracısı olarak ayarlanması gerekir. Test denetleyicisini ve test aracılarını, tek bir bilgisayardan yalnızca bir bilgisayarın oluşturabileceğinden daha fazla yük oluşturmak için kullanabilirsiniz.
+Visual Studio, fiziksel veya sanal makineler kullanarak uygulamanız için benzetilen yük oluşturabilir. Bu makinelerin tek bir test denetleyicisi ve bir veya daha fazla test aracısı olarak ayarlanması gerekir. Test denetleyicisini ve test aracılarını, tek bir bilgisayardan yalnızca bir bilgisayarın oluşturabileceğinden daha fazla yük oluşturmak için kullanabilirsiniz.
 
 > [!NOTE]
 > Ayrıca, Web sitenize aynı anda erişen birçok kullanıcının yükünü üreten sanal makineler sağlamak için bulut tabanlı yük testi de kullanabilirsiniz. Ancak, bulutta barındırılan sanal makinelerde test denetleyicisi/test Aracısı kurulumu kullanılması desteklenmez. [Azure test Plans kullanarak yük testlerini Çalıştır](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true)' da bulut tabanlı yük testi hakkında daha fazla bilgi edinin.
@@ -27,19 +28,19 @@ Visual Studio fiziksel veya sanal makineler kullanarak uygulamanız için benzet
 
 ## <a name="load-simulation-architecture"></a>Yük Simülasyon mimarisi
 
-Yük Simülasyon mimarisi, Visual Studio istemcisi, test denetleyicisi ve test aracılarından oluşur.
+yük simülasyon mimarisi, bir Visual Studio istemcisi, test denetleyicisi ve test aracılarından oluşur.
 
 - İstemci, testlerin geliştirilmesi, testlerin çalıştırılması ve test sonuçlarını görüntülemek için kullanılır.
 
 - Test denetleyicisi test aracılarını yönetmek ve test sonuçlarını toplamak için kullanılır.
 
-- Test aracıları, testleri çalıştırmak için kullanılır ve test ayarında tanımlanan sistem bilgileri ve ASP.NET profil oluşturma verileri dahil olmak üzere verileri toplar.
+- test aracıları, testleri çalıştırmak için kullanılır ve sistem bilgileri ve test ayarında tanımlanan profil oluşturma verileri ASP.NET dahil olmak üzere veri toplar.
 
 Bu mimari aşağıdaki avantajları sağlar:
 
 - Test denetleyicisine ek test aracıları ekleyerek yük oluşturmayı ölçeklendirebilme özelliği.
 
-- Aynı veya farklı bilgisayarlara istemci, test denetleyicisi ve test Aracısı yazılımı yükleme esnekliği. Örneğin:
+- Aynı veya farklı bilgisayarlara istemci, test denetleyicisi ve test Aracısı yazılımı yükleme esnekliği. Örnek:
 
    **Yerel yapılandırma:**
 
@@ -49,7 +50,7 @@ Bu mimari aşağıdaki avantajları sağlar:
 
     **Tipik uzak yapılandırma:**
 
-  - Machine1 ve 2: Visual Studio (aynı denetleyiciyi birden çok Sınayıcılar kullanabilir).
+  - Machine1 ve 2: Visual Studio (aynı denetleyiciyi birden çok test ediciler kullanabilir).
 
   - Machine3: denetleyici (aracıların yüklü olması de olabilir).
 

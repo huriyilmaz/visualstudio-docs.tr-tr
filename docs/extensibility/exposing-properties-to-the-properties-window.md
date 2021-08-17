@@ -12,14 +12,15 @@ ms.assetid: 47f295b5-1ca5-4e7b-bb52-7b926b136622
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f932772b031332d7df2a2487c70576f49407ba1
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 957a6445934d9d3af7cb0f9d61b72171d48521755a1ff9ff4410b31fbe9893a4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898743"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388701"
 ---
 # <a name="expose-properties-to-the-properties-window"></a>Özellikler penceresi özellikleri kullanıma sunun
 
@@ -27,7 +28,7 @@ Bu izlenecek yol, bir nesnenin ortak özelliklerini **Özellikler** penceresinde
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="expose-properties-to-the-properties-window"></a>Özellikler penceresi özellikleri kullanıma sunun
 
@@ -35,7 +36,7 @@ Bu bölümde, özel bir araç penceresi oluşturur ve **Özellikler** penceresin
 
 ### <a name="to-expose-properties-to-the-properties-window"></a>Özellikler penceresi özellikleri göstermek için
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `MyObjectPropertiesExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. her Visual Studio uzantısı, uzantı varlıklarını içeren bir vsıx dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `MyObjectPropertiesExtension` . vsıx proje şablonunu, **yeni Project** iletişim kutusunda "vsıx" arayarak bulabilirsiniz.
 
 2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `MyToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını *MyToolWindow. cs* olarak değiştirin. Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
@@ -94,11 +95,11 @@ Bu bölümde, özel bir araç penceresi oluşturur ve **Özellikler** penceresin
 
     `TrackSelection`Özelliği `GetService` `STrackSelection` , bir arabirim sağlayan bir hizmeti elde etmek için kullanır <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> . `OnToolWindowCreated`Olay işleyicisi ve `SelectList` yöntemi birlikte yalnızca araç pencere bölmesi nesnesinin kendisini içeren seçili nesnelerin bir listesini oluşturur. `UpdateSelection`Yöntemi, **Özellikler** penceresine araç penceresi bölmesinin ortak özelliklerini göstermesini söyler.
 
-6. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görünmelidir.
+6. Projeyi derleyin ve hata ayıklamayı başlatın. deneysel Visual Studio örneği görünmelidir.
 
 7. **Özellikler** penceresi görünmüyorsa, **F4** tuşuna basarak açın.
 
-8. **MyToolWindow** penceresini açın.   >  **Diğer pencereleri** görüntülemek için bunu bulabilirsiniz.
+8. **MyToolWindow** penceresini açın.   >  **diğer Windows** görüntülemek için bunu bulabilirsiniz.
 
     Pencere açılır ve pencere bölmesinin ortak özellikleri **Özellikler** penceresinde görünür.
 
@@ -272,7 +273,7 @@ Bu bölümde bir araç penceresi ekler ve özelliklerini kullanıma sunun. Özel
 
 Bu izlenecek yolda, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> seçilebilir nesne koleksiyonu ve seçilen nesne koleksiyonu aynı koleksiyon olacak şekilde uygulanır. Yalnızca seçilen nesne, özellik tarayıcısı listesinde görünür. Daha kapsamlı bir ISelectionContainer uygulaması için bkz. Reference. ToolWindow Samples.
 
-Visual Studio aracı Windows, Visual Studio oturumları arasında kalır. Araç penceresi durumunu kalıcı hale getirme hakkında daha fazla bilgi için bkz <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> ..
+Visual Studio araç pencereleri Visual Studio oturumları arasında kalır. Araç penceresi durumunu kalıcı hale getirme hakkında daha fazla bilgi için bkz <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> ..
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

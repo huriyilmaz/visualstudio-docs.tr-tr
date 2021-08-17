@@ -1,6 +1,6 @@
 ---
 title: FormatUrl görevi | Microsoft Docs
-description: Bir giriş URL 'sini doğru çıkış URL biçimine dönüştürmek için MSBuild FormatUrl görevinin nasıl kullanılacağı hakkında bilgi edinin.
+description: bir giriş url 'sini doğru çıkış url biçimine dönüştürmek için MSBuild formaturl görevinin nasıl kullanılacağı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,14 +16,15 @@ ms.assetid: 81114b67-520f-43b5-8891-224f68a78516
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: a9a05ce16289c012b067faa5bc302a3921cbe1c7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 601adcb918be3efad897ff1a1479b1613e56336fc5582b6d5dc1e2ad1d2e99fb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888101"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427905"
 ---
 # <a name="formaturl-task"></a>FormatUrl görevi
 

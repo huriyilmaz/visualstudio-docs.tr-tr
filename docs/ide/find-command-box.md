@@ -1,6 +1,6 @@
 ---
 title: Find-Command kutusu
-description: Bul/komut kutusu hakkında bilgi edinin ve bu uygulamayı kullanarak metin arayabilir ve Visual Studio komutlarını çalıştırabilirsiniz.
+description: bul/komut kutusu ve bu dosyayı kullanarak metin aramak ve Visual Studio komutları çalıştırmak için nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,18 +11,19 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e650acd4dabec3dd3c657a91e4258b1678918e61
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7a3d5e4b2a8014151234e009d97bca51785364a46ea91529ad5afde4f7dea653
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945675"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388245"
 ---
 # <a name="findcommand-box"></a>Bul/Komut kutusu
 
-**Bul/komut** kutusundan metin araması yapabilir ve Visual Studio komutlarını çalıştırabilirsiniz. **Bul/komut** kutusu hala bir araç çubuğu denetimi olarak kullanılabilir, ancak artık varsayılan olarak görünmez. **Standart** araç çubuğunda **Düğme Ekle veya Kaldır** ' ı ve ardından **bul**' u seçerek **Bul/komut** kutusunu görüntüleyebilirsiniz.
+**bul/komut** kutusundan metin araması yapabilir ve Visual Studio komutlarını çalıştırabilirsiniz. **Bul/komut** kutusu hala bir araç çubuğu denetimi olarak kullanılabilir, ancak artık varsayılan olarak görünmez. **Standart** araç çubuğunda **Düğme Ekle veya Kaldır** ' ı ve ardından **bul**' u seçerek **Bul/komut** kutusunu görüntüleyebilirsiniz.
 
 Bir komutu çalıştırmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , () işaretiyle daha büyük bir işareti ile ön yüzü **>** .
 
@@ -32,21 +33,21 @@ Bir komutu çalıştırmak için [!INCLUDE[vsprvs](../code-quality/includes/vspr
 
 ## <a name="searching-for-text"></a>Metin arama
 
-Varsayılan olarak, **Bul/komut** kutusunda metin belirttiğinizde ve ardından **ENTER** tuşunu seçtiğinizde, Visual Studio geçerli belgeyi veya araç penceresini **dosyalarda bul** iletişim kutusunda belirtilen seçenekleri kullanarak arar. Daha fazla bilgi için bkz. [metni bulma ve değiştirme](../ide/finding-and-replacing-text.md).
+varsayılan olarak, **bul/komut** kutusunda metin belirttiğinizde ve ardından **enter** tuşunu seçtiğinizde, Visual Studio **dosyalarda bul** iletişim kutusunda belirtilen seçenekleri kullanarak geçerli belgeyi veya araç penceresini arar. Daha fazla bilgi için bkz. [metni bulma ve değiştirme](../ide/finding-and-replacing-text.md).
 
 ## <a name="entering-commands"></a>Komutları girme
 
-Metin aramak yerine tek bir komut veya diğer ad vermek üzere **Bul/komut** kutusunu kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , komutu daha büyük () simgesiyle bir daha önyüz yapın **>** . Örneğin:
+Metin aramak yerine tek bir komut veya diğer ad vermek üzere **Bul/komut** kutusunu kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , komutu daha büyük () simgesiyle bir daha önyüz yapın **>** . Örnek:
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"
 ```
 
-Alternatif olarak, **komut** penceresini tek veya birden çok komut girmek ve yürütmek için de kullanabilirsiniz. Bazı komutlar veya diğer adlar kendileri tarafından girilebilir ve çalıştırılabilir; Diğerlerinin sözdiziminde bağımsız değişkenler olması gerekir. Bağımsız değişkenlere sahip komutların listesi için bkz. [Visual Studio komutları](../ide/reference/visual-studio-commands.md).
+Alternatif olarak, **komut** penceresini tek veya birden çok komut girmek ve yürütmek için de kullanabilirsiniz. Bazı komutlar veya diğer adlar kendileri tarafından girilebilir ve çalıştırılabilir; Diğerlerinin sözdiziminde bağımsız değişkenler olması gerekir. bağımsız değişkenlere sahip komutların listesi için bkz. [Visual Studio komutları](../ide/reference/visual-studio-commands.md).
 
 ## <a name="escape-characters"></a>Kaçış karakterleri
 
-Komutta bir şapka işareti ( **^** ) karakteri, bir denetim karakteri yerine, bundan hemen sonra gelen karakterin bir şekilde yorumlanması anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerindeki düz tırnak işaretlerini (**"**), boşlukları, baştaki eğik çizgileri, yüzleri veya diğer sabit karakterleri eklemek için kullanılabilir. Örneğin:
+Komutta bir şapka işareti ( **^** ) karakteri, bir denetim karakteri yerine, bundan hemen sonra gelen karakterin bir şekilde yorumlanması anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerindeki düz tırnak işaretlerini (**"**), boşlukları, baştaki eğik çizgileri, yüzleri veya diğer sabit karakterleri eklemek için kullanılabilir. Örnek:
 
 ```
 >Edit.Find ^^t /regex

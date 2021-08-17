@@ -11,14 +11,15 @@ ms.assetid: 5352d11a-debb-4c20-b9a0-d37d94900b1c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c09b9f061c9f718f8830cdb797cc56f35619e20
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1a110d88d0bd0e6e8783b9f22c22051b9a133666e41e4031948bcd96bfd5f27
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940741"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121435718"
 ---
 # <a name="thread-properties-dialog-box"></a>İş Parçacığı Özellikleri İletişim Kutusu
 Belirli bir iş parçacığı hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Iş parçacığı görünümü](../debugger/threads-view.md) penceresine taşıyın veya [iletiler görünümü](../debugger/messages-view.md) ' ni açın ve bir ileti genişletin. Ağaçta herhangi bir iş parçacığı düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.

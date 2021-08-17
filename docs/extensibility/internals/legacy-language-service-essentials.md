@@ -13,17 +13,18 @@ ms.assetid: c15e0ccb-e7c5-4dbb-affb-fe3d3244debe
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa3fc358e7557360f02a80f108bcbec74ae48e5f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 08e1403b518d989cabbd3784c36d97831bfd2bfc915dc33883dd0e354211e384
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074567"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375916"
 ---
 # <a name="legacy-language-service-essentials"></a>Eski Dil Hizmeti Temel Bileşenleri
-Programlama dilini Visual Studio ile tümleştirebilmek için bir dil hizmeti sağlamanız gerekir. Bu konuda, eski dil hizmetlerinde kullanılabilen özellikler açıklanmaktadır.
+Bir programlama dilini Visual Studio ile bütünleştirmek için bir dil hizmeti sağlamanız gerekir. Bu konuda, eski dil hizmetlerinde kullanılabilen özellikler açıklanmaktadır.
 
  Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Dil hizmeti uygulama hakkında daha fazla bilgi edinmek için bkz. [Düzenleyici ve dil hizmeti uzantıları](../../extensibility/editor-and-language-service-extensions.md).
 

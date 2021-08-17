@@ -1,6 +1,6 @@
 ---
 title: Eski dil hizmeti genişletilebilirliği | Microsoft Docs
-description: Visual Studio 'da eski dil hizmetlerinin yapısı, uygulanması ve genişletilebilirliği hakkında bilgi edinin.
+description: Visual Studio eski dil Hizmetleri yapısı, uygulamaları ve genişletilebilirliği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: 2700cd4d-5f68-43fc-b62f-dc80c3f3aa85
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f22d6997d932884e5aeb8d794b7884b40a8d5dab
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e492dbae044b5051fc4de9178da981003735d24b3b0e37ba944a99aa6dd4a125
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074502"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375877"
 ---
 # <a name="legacy-language-service-extensibility"></a>Eski Dil Hizmeti Genişletilebilirliği
 Dil hizmeti, IDE 'de kaynak kodu düzenlemede dile özgü destek sağlar.
@@ -30,11 +31,11 @@ Dil hizmeti, IDE 'de kaynak kodu düzenlemede dile özgü destek sağlar.
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Eski Dil Hizmetini Geçirme](../../extensibility/internals/migrating-a-legacy-language-service.md)
 
- Visual Studio 2008 ' den en son sürüme bir dil hizmetinin nasıl güncelleştireceğinizi açıklar.
+ dil hizmetinin Visual Studio 2008 ' den en son sürüme nasıl güncelleştireceğinizi açıklar.
 
 - [Eski Dil Hizmeti Temel Bileşenleri](../../extensibility/internals/legacy-language-service-essentials.md)
 
- Programlama dilini Visual Studio 'ya bütünleştirmek için dil hizmetleri geliştirme hakkında önemli bilgiler sağlar.
+ Bir programlama dilini Visual Studio ile bütünleştirmek için dil hizmetleri geliştirme hakkında önemli bilgiler sağlar.
 
 - [Eski Dil Hizmeti Geliştirme](../../extensibility/internals/developing-a-legacy-language-service.md)
 
@@ -55,8 +56,8 @@ Dil hizmeti, IDE 'de kaynak kodu düzenlemede dile özgü destek sağlar.
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Düzenleyici ve Dil Hizmeti Uzantıları](../../extensibility/editor-and-language-service-extensions.md)
 
- Visual Studio düzenleyicilerine genel bakış sağlar.
+ Visual Studio düzenleyicilere genel bakış sağlar.
 
 - [Hata Ayıklama için Dil Hizmeti Desteği](../../extensibility/internals/language-service-support-for-debugging.md)
 
- Ve programlarında hata ayıklama için kullanılan hata ayıklayıcı bileşenlerini oluşturmak ve özelleştirmek için gereken bilgileri içeren Visual Studio hata ayıklama SDK 'Sı ile ilgili bilgiler sağlar.
+ , programlarda hata ayıklamak için kullanılan hata ayıklayıcı bileşenlerini oluşturmak ve özelleştirmek için gereken bilgileri içeren Visual Studio hata ayıklama SDK 'sı ile ilgili bilgiler sağlar.

@@ -1,6 +1,6 @@
 ---
-title: MSBuild Dönüşümleri | Microsoft Docs
-description: MSBuild 'in, bir öğe listesinin diğerine nasıl bir öğe listesi dönüştürmeleri kullandığını, projelerin daha verimli bir şekilde nasıl oluşturulacağını öğrenin.
+title: MSBuild Dönüşümler | Microsoft Docs
+description: MSBuild projeleri daha verimli bir şekilde derlemek için, bir öğe listesini diğerine dönüştürmeleri, bire bir dönüşümleri nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,18 +11,19 @@ ms.assetid: d0bcfc3c-14fa-455e-805c-63ccffa4a3bf
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: ba6a71373026a5a41905efc7c91520a9f6b7c5c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0fd47ef85bd1789a8ff8ccad52709405ed38c4c78e9e8efbc462aa86d02a2ced
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878213"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370027"
 ---
 # <a name="msbuild-transforms"></a>MSBuild dönüşümleri
 
-Dönüşüm, bir öğe listesinin diğerine bire bir dönüştürmedir. Bir dönüşüm, öğe listelerini dönüştürmek üzere etkinleştirmenin yanı sıra, bir hedefin giriş ve çıkışları arasında doğrudan eşlemeyi belirlemesine olanak sağlar. Bu konu, dönüşümleri ve MSBuild 'in projeleri daha verimli bir şekilde oluşturmak için nasıl kullandığını açıklar.
+Dönüşüm, bir öğe listesinin diğerine bire bir dönüştürmedir. Bir dönüşüm, öğe listelerini dönüştürmek üzere etkinleştirmenin yanı sıra, bir hedefin giriş ve çıkışları arasında doğrudan eşlemeyi belirlemesine olanak sağlar. bu konu, dönüşümleri ve MSBuild projeleri daha verimli bir şekilde derlemek için nasıl kullandığını açıklar.
 
 ## <a name="transform-modifiers"></a>Dönüştürme değiştiricileri
 
@@ -51,7 +52,7 @@ Aşağıdaki örnekte, *. resx* dosyalarının bir listesi *. resources* dosyala
 
 ## <a name="dependency-analysis"></a>Bağımlılık Analizi
 
- Dönüşümler, dönüştürülmüş öğe listesi ve özgün öğe listesi arasında bire bir eşleme garantisi. Bu nedenle, bir hedef girişlerin dönüştürmeleri olan çıktılar oluşturursa, MSBuild girişlerin ve çıkışların zaman damgalarını çözümleyebilir ve bir hedefi atlayıp atlamaya, derlemenize veya kısmen yeniden oluşturmaya karar verebilir.
+ Dönüşümler, dönüştürülmüş öğe listesi ve özgün öğe listesi arasında bire bir eşleme garantisi. bu nedenle, bir hedef girişlerin dönüştürmeleri olan çıktılar oluşturursa, MSBuild giriş ve çıkışların zaman damgalarını çözümleyebilir ve bir hedefi atlayıp atlamaya, derlemenize veya kısmen yeniden oluşturmaya karar verebilirsiniz.
 
  [Kopyalama görevinde](../msbuild/copy-task.md) aşağıdaki örnekte, öğe listesindeki her dosya, `BuiltAssemblies` özniteliğinde bir dönüşüm kullanılarak belirtilen, görevin hedef klasöründeki bir dosyayla eşlenir `Outputs` . `BuiltAssemblies`Öğe listesindeki bir dosya değişirse, `Copy` görev yalnızca değiştirilen dosya için çalışır ve diğer tüm dosyalar atlanır. Bağımlılık Analizi ve dönüştürmeleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Artımlı derleme](../msbuild/how-to-build-incrementally.md).
 
@@ -69,9 +70,9 @@ Aşağıdaki örnekte, *. resx* dosyalarının bir listesi *. resources* dosyala
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
 
- Aşağıdaki örnek, dönüşümler kullanan bir MSBuild proje dosyası gösterir. Bu örnekte, *c:\sub0\sub1\alt 2\sub3* dizininde yalnızca bir *. xsd* dosyasının olduğu ve çalışma dizininin *c:\sub0* olduğu varsayılır.
+ aşağıdaki örnek, dönüşümler kullanan bir MSBuild proje dosyası gösterir. Bu örnekte, *c:\sub0\sub1\alt 2\sub3* dizininde yalnızca bir *. xsd* dosyasının olduğu ve çalışma dizininin *c:\sub0* olduğu varsayılır.
 
 ### <a name="code"></a>Kod
 

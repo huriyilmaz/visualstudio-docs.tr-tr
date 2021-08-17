@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bulucu yöntemi ekleme | Microsoft Docs'
-description: Visual Studio 'da, Iş verileri bağlantısı (BDC) hizmetinin bir SharePoint Web Bölümü veya listesindeki varlıkların listesini görüntülemesini sağlayan bir bulucu yöntemi ekleyin.
+description: Visual Studio ' de, iş verileri bağlantısı (BDC) hizmetinin bir SharePoint web bölümünde veya listesinde varlıkların bir listesini görüntülemesini sağlayan bir bulucu yöntemi ekleyin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 6bd75c94e2f0f557b85d945d141f952950abb2eb
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 5c7bb3cf932c1e90c0540cd4c8ec378487563b0b5122818a2d2744fd5e2ebb66
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216351"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425368"
 ---
 # <a name="how-to-add-a-finder-method"></a>Nasıl yapılır: Bulucu yöntemi ekleme
   Iş verileri bağlantısı (BDC) hizmetini bir Web Bölümü veya listesindeki varlıkların listesini görüntüleyecek şekilde etkinleştirmek için bir *Bulucu* yöntemi oluşturmanız gerekir. Bir bulucu yöntemi, bir varlık örnekleri koleksiyonu döndüren özel bir yöntemdir. Daha fazla bilgi için bkz. [Iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -35,7 +36,7 @@ ms.locfileid: "106216351"
 
     Daha fazla bilgi için bkz. [nasıl yapılır: bir modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Menü çubuğunda,   >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. menü çubuğunda   >  **diğer Windows**  >  **BDC yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. **IVB yöntemi ayrıntıları** penceresi hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -46,7 +47,7 @@ ms.locfileid: "106216351"
 4. Tür tanımlayıcısını bir varlık koleksiyonu türü tanımlayıcısı olarak yapılandırın. Bir varlık koleksiyonu türü tanımlayıcısı oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir parametrenin tür tanımlayıcısını tanımlama](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md).
 
    > [!NOTE]
-   > Varlığa belirli bir bulucu yöntemi eklediyseniz bu adımı gerçekleştirmeniz gerekmez. Visual Studio, belirli Bulucu yönteminde tanımladığınız tür tanımlayıcısını kullanır.
+   > Varlığa belirli bir bulucu yöntemi eklediyseniz bu adımı gerçekleştirmeniz gerekmez. Visual Studio, belirli bulucu yönteminde tanımladığınız tür tanımlayıcısını kullanır.
 
 5. **Çözüm Gezgini**' de, varlık için oluşturulan hizmet kodu dosyasının kısayol menüsünü açın ve **kodu görüntüle**' yi seçin. Hizmet kodu dosyası hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
 

@@ -1,6 +1,6 @@
 ---
-title: Öğe seç (MSBuild) | Microsoft Docs
-description: Alt öğeleri değerlendirmek için MSBuild Select öğesini kullanın ve değerlendirmek için bir ItemGroup veya PropertyGroup öğesi kümesi seçin.
+title: Öğe seçin (MSBuild) | Microsoft Docs
+description: alt öğeleri değerlendirmek için MSBuild öğesini seçin ve değerlendirmek için bir ıtemgroup veya propertygroup öğesi kümesi seçin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -19,16 +19,17 @@ ms.assetid: 7b8b025a-d944-4f5c-9018-c89fc2ef146d
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a3cb3ae9ef120954bb3c299cdf310a32da69845
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86370841d06bb2efbd5de5af635e2858d607e8c8969aade244aae45430d6744a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939519"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370443"
 ---
-# <a name="choose-element-msbuild"></a>Öğe seç (MSBuild)
+# <a name="choose-element-msbuild"></a>Öğe seçin (MSBuild)
 
 , `ItemGroup` Değerlendirilecek öğe ve/veya öğe kümesi seçmek için alt öğeleri değerlendirir `PropertyGroup` .
 
@@ -127,4 +128,4 @@ ms.locfileid: "99939519"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Koşullu yapılar](../msbuild/msbuild-conditional-constructs.md)
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

@@ -11,17 +11,18 @@ ms.assetid: 5156f593-5052-4e3a-9d02-081916fb342d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ed8a686b2796070d0d4116bd4af66237a217346b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f3048e40cd082a78282c9819d37782f9b33867ff1929299cee6ce5c0a35af636
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082445"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389078"
 ---
 # <a name="ipropertyproxyeesideinitsourcedataprovider"></a>IPropertyProxyEESide::InitSourceDataProvider
 Bu nesnenin kaynak verilerini başlatır ve ilk verileri içeren bir nesne döndürür.

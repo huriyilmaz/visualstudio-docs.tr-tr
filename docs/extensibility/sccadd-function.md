@@ -11,14 +11,15 @@ ms.assetid: 545268f3-8e83-446a-a398-1a9db9e866e8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f73a91f7f801ca89a633f1722e0c4d1183fb3dc
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 7e8d671483f2e141aa2971fca6a60bdaf433db21d10ce829617dc55c25a3de01
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904857"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388142"
 ---
 # <a name="sccadd-function"></a>SccAdd işlevi
 Bu işlev, kaynak denetim sistemine yeni dosyalar ekler.

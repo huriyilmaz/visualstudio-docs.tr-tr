@@ -1,62 +1,63 @@
 ---
-title: 'F için önceki .NET Framework sürümlerini hedefle #'
-description: "Visual Studio 'da F # kullanırken .NET Framework eski sürümü hedefleme hakkında bilgi edinin."
+title: 'F için önceki .NET Framework sürümleri hedefleme #'
+description: Visual Studio'de F# kullanırken .NET Framework eski sürümünü hedefleme hakkında Visual Studio.
 ms.date: 07/11/2018
 ms.topic: troubleshooting
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: fe9d87a5cdea04251d7ab30b6e9e0fed6b0c4b31
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a275a9f24ba3c3cbbfa2eb52a1166c46c1992421b2fee584c0fb628529b31c5c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945532"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372939"
 ---
-# <a name="target-older-versions-of-net-f"></a>.NET 'in eski sürümlerini hedefleyin (F #)
+# <a name="target-older-versions-of-net-f"></a>.NET'in eski sürümlerini hedefleme (F#)
 
-Windows 8.1 üzerinde Visual Studio yüklü olduğunda bir F # projesinde 2,0, 3,0 veya 3,5 .NET Framework hedeflemesini denediğinizde aşağıdaki hata görünebilir:
+.NET Framework .NET Framework, 3.0 veya 3.5'i bir F# projesinde Visual Studio yüklü olduğunda hedeflemeye çalışsanız aşağıdaki hata Windows 8.1:
 
-**Bu proje için 2,0 F # çalışma zamanı gerekiyor, ancak çalışma zamanı yüklü değil.**
+**Bu proje için 2.0 F# çalışma zamanı gerekir ancak bu çalışma zamanı yüklenmez.**
 
-Bu hatanın aşağıdaki koşullar birleşimi altında oluştuğu bilinmektedir:
+Bu hatanın aşağıdaki koşulların birleşimi altında oluştuğu bilinir:
 
-- Visual Studio 'Yu Windows 8.1 yüklediniz.
+- Visual Studio'Windows 8.1.
 
-- .NET Framework 3,5 ' i Visual Studio 'Yu yüklemeden önce etkinleştirmediniz.
+- .NET Framework 3.5'i yüklemeden önce Visual Studio.
 
-- Projeniz 2,0, 3,0 veya 3,5 .NET Framework hedefler.
+- Projeniz 2.0.NET Framework, 3.0 veya 3.5'i hedefler.
 
-Visual Studio 'Yu yüklediğinizde, .NET Framework yüklü sürümlerini algılar. Visual Studio, F # 2,0 çalışma zamanını yalnızca 3,5 .NET Framework yüklüyse ve etkinse yüklenir.
+Yükleme Visual Studio, uygulamanın yüklü sürümlerini .NET Framework. Visual Studio, F# 2.0 çalışma zamanı yalnızca .NET Framework 3.5 yüklü ve etkinse yüklenir.
 
-## <a name="resolve-the-error"></a>Hatayı çözümle
+## <a name="resolve-the-error"></a>Hatayı çözme
 
-Bu hatayı çözmek için şunlardan birini yapabilirsiniz:
+Bu hatayı çözmek için şunları da alabilirsiniz:
 
-- .NET Framework daha yeni bir sürümünü hedefleyin.
+- Uygulamanın daha yeni bir sürümünü .NET Framework.
 
-- Windows 8.1 .NET Framework 3,5 ' i etkinleştirin ve sonra Visual Studio yüklemesini onararak F # 2,0 çalışma zamanını yükledikten sonra. Bunu yapmak için adımları izleyin.
+- .NET Framework 3.5'i Windows 8.1 ve ardından Visual Studio yüklemesini onararak F# 2.0 çalışma Visual Studio yükleyin. Bunu yapmak için aşağıdaki adımları izleyin.
 
-### <a name="to-enable-the-net-framework-35-on-windows-81"></a>Windows 8.1 .NET Framework 3,5 ' i etkinleştirmek için
+### <a name="to-enable-the-net-framework-35-on-windows-81"></a>3.5 .NET Framework 3.5'i Windows 8.1
 
-1. **Başlangıç** ekranında **Denetim Masası** yazın.
+1. Başlangıç **ekranında** **Denetim Masası.**
 
-   Siz yazarken, **Denetim Masası** simgesi **uygulamalar** başlığı altında görüntülenir.
+   Siz yazarak Uygulamalar **Denetim Masası** simgesi **görünür.**
 
-2. **Denetim Masası** simgesini seçin, **Programlar** simgesini seçin ve ardından **Windows özelliklerini aç veya kapat** bağlantısını seçin.
+2. Yeni **Denetim Masası** simgesini seçin, Programlar **simgesini** seçin ve ardından Windows **özellikleri aç veya kapat bağlantısını** seçin.
 
-3. **.NET Framework 3,5 (.net 2,0 ve 3,0 dahil)** onay kutusunun seçili olduğundan emin olun ve **Tamam** düğmesini seçin. .NET Framework isteğe bağlı bileşenleri için alt düğümlerin onay kutularını seçmeniz gerekmez.
+3. **.NET Framework 3.5 (.NET 2.0 ve 3.0 içerir)** onay kutusunun seçili olduğundan emin olun ve ardından **Tamam düğmesini** seçin. Alt düğümlerin isteğe bağlı bileşenleri için onay kutularını seçmenize gerek .NET Framework.
 
-   .NET Framework 3,5, zaten yoksa etkindir.
+   3.5 .NET Framework 3.5 önceden etkinleştirilmediyse etkinleştirilir.
 
-### <a name="to-install-the-f-20-runtime"></a>F # 2,0 çalışma zamanını yüklemek için
+### <a name="to-install-the-f-20-runtime"></a>F# 2.0 çalışma zamanlarını yüklemek için
 
-[Visual Studio 'yu onarmak için adımları](../install/repair-visual-studio.md)izleyin.
+'i [onarmak için Visual Studio.](../install/repair-visual-studio.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F # Kılavuzu (.NET Framework)](/dotnet/fsharp/)
+- [F# kılavuzu (.NET Framework)](/dotnet/fsharp/)
 - [Visual Studio’da F#](fsharp-visual-studio.md)

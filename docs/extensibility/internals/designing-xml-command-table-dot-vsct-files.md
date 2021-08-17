@@ -10,14 +10,15 @@ ms.assetid: bb87a322-bac4-4258-92bc-9a876f05d653
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d6409b5e624cd8596e669f191b2644aaf27a88c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 24ff181b541cc2f7d46dcfb30bca38fa0f1e297b3ec4bcee61417d0ada6be943
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090934"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376280"
 ---
 # <a name="design-xml-command-table-vsct-files"></a>XML komut tablosu (. vsct) dosyaları tasarlama
 Bir XML komut tablosu (*. vsct*) dosyası, VSPackage için komut öğelerinin yerleşimini ve görünümünü açıklar. Komut öğeleri düğme, Birleşik giriş kutuları, menüler, araç çubukları ve komut öğesi gruplarını içerir. Bu makale, XML komut tablosu dosyalarını, komut öğelerini ve menülerini nasıl etkileyeceğini ve bunların nasıl oluşturulacağını açıklamaktadır.
@@ -117,7 +118,7 @@ Var olan bir *. CTO* dosyasını bir *. vsct* dosyasına dönüştürmek için *
 ## <a name="vsct-file-notes"></a>. vsct dosya notları
  Her iki derleme sonrasında bir *. vsct* dosyasında herhangi bir değişiklik yaparsanız ve bunu yerel BIR uydu dll 'e yerleştirirseniz, **/Setup/nosetupvstemptıvedevenv.exe** çalıştırmalısınız. Bunu yaptığınızda, Deneysel kayıt defterinde belirtilen VSPackage kaynaklarının yeniden yapılandırılması ve yeniden oluşturulması için açıklanan iç veritabanı vardır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Geliştirme sırasında, birden çok VSPackage projesinin oluşturulup, IDE 'de kafa karıştırıcı ile sonuçlanmasına neden olabilecek Deneysel kayıt defteri Hive 'de kaydettirilmesi mümkündür. Bunu yapmak için, tüm kayıtlı VSPackages 'leri ve IDE 'de yapmış olabileceği tüm değişiklikleri kaldırmak üzere deneysel Hive 'yi varsayılan ayarlara sıfırlayabilirsiniz. Deneysel Hive 'yi sıfırlamak için, Visual Studio SDK ile birlikte gelen CreateExpInstance.exe aracını kullanın. Şu adreste bulabilirsiniz:
+ Geliştirme sırasında, birden çok VSPackage projesinin oluşturulup, IDE 'de kafa karıştırıcı ile sonuçlanmasına neden olabilecek Deneysel kayıt defteri Hive 'de kaydettirilmesi mümkündür. Bunu yapmak için, tüm kayıtlı VSPackages 'leri ve IDE 'de yapmış olabileceği tüm değişiklikleri kaldırmak üzere deneysel Hive 'yi varsayılan ayarlara sıfırlayabilirsiniz. deneysel hive 'yi sıfırlamak için Visual Studio SDK ile birlikte gelen CreateExpInstance.exe aracını kullanın. Şu adreste bulabilirsiniz:
 
  *% PROGRAMFILES (x86)% \ Visual Studio \\ \<version> SDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe*
 

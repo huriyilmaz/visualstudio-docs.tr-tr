@@ -6,14 +6,15 @@ ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 78f847acaf67a61064e64b765d9c138ec2fe93a9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bf60445e153d307d877a83026eeac8db3dacdbee095857ed63bf23aac35415e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959031"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368788"
 ---
 # <a name="gpu-usage"></a>GPU kullanımı
 
@@ -36,7 +37,7 @@ Grafik Tanılama gereksinimleri hakkında daha fazla bilgi için bkz [. Başlark
 
 ## <a name="use-the-gpu-usage-tool"></a>GPU kullanımı aracını kullanma
 
-Uygulamanızı GPU kullanımı aracı altında çalıştırdığınızda, Visual Studio bir Tanılama oturumu oluşturur. Bu oturum, gerçek zamanlı olarak uygulamanızın işleme performansı ve GPU kullanımı hakkında üst düzey bilgileri grafiklerinizi grafikleri.
+uygulamanızı GPU kullanımı aracı altında çalıştırdığınızda, Visual Studio bir tanılama oturumu oluşturur. Bu oturum, gerçek zamanlı olarak uygulamanızın işleme performansı ve GPU kullanımı hakkında üst düzey bilgileri grafiklerinizi grafikleri.
 
 GPU kullanım aracı 'nı başlatmak için:
 
@@ -76,9 +77,9 @@ GPU kullanım raporunu oluşturmak ve görüntülemek için:
 Bu seçim, raporu içeren yeni bir sekmeli belge açar. GPU kullanımı raporu, CPU 'da bir grafik olayının ne zaman başlatıldığını, GPU 'ya ulaştığında ve GPU 'nun onu çalıştırmak için ne kadar sürdüğünü görmenizi sağlar. Bu bilgiler, kodunuzda daha fazla paralellik için performans sorunlarını ve fırsatları belirlemenize yardımcı olabilir.
 
 <!-- VERSIONLESS -->
-## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>GPUView veya Windows Performans Çözümleyicisi 'ne aktar
+## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>gpuview veya Windows Performance Analyzer 'a aktar
 
-Visual Studio 2017 ile başlayarak, bu verileri [Gpuview](/windows-hardware/drivers/display/using-gpuview) ve [Windows Performans Çözümleyicisi](/windows-hardware/test/wpt/windows-performance-analyzer)ile açabilirsiniz. Yalnızca tanılama oturumunun sağ alt köşesinde bulunan **GpuView 'Da aç** veya **WPA bağlantılarında aç** ' ı seçin.
+Visual Studio 2017 ' den başlayarak, bu verileri [gpuview](/windows-hardware/drivers/display/using-gpuview) ve [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)ile açabilirsiniz. Yalnızca tanılama oturumunun sağ alt köşesinde bulunan **GpuView 'Da aç** veya **WPA bağlantılarında aç** ' ı seçin.
 
 ![Tanılama oturumu penceresinin, bağlantılarla vurgulanan ekran görüntüsü](media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
@@ -97,7 +98,7 @@ Aradığınızı bulmaya yardımcı olması için, işlem adlarına, iş parçac
 
  Daha fazla ayrıntı aşağıdadır:
 
-|Filtre denetimi|Description|
+|Filtre denetimi|Açıklama|
 |--------------------|-----------------|
 |**İşleme**|İlgilendiğiniz işlemin adı. Tanılama oturumu sırasında GPU kullanan tüm süreçler bu açılan listeye dahil edilir. İşlemle ilişkili renk, iş parçacıklarının zaman çizelgelerine ait etkinliğinin rengidir.|
 |**Zincirinin**|İlgilendiğiniz iş parçacığı KIMLIĞI. Çok iş parçacıklı bir uygulamada, bu bilgiler ilgilendiğiniz işleme ait olan belirli iş parçacıklarını yalıtmanıza yardımcı olabilir. Seçilen iş parçacığıyla ilişkili olaylar her bir zaman çizelgesinde vurgulanır.|
@@ -144,7 +145,7 @@ Aşağıdaki GPU donanım ve sürücüleri desteklenir:
 
 |Satıcı|GPU açıklaması|Sürücü sürümü gerekli|
 |------------|---------------------|-----------------------------|
-|Intel®|4. nesil Intel® Çekirdek Işlemcileri (' Haswell ')<br /><br /> -Intel® HD grafikleri (GT1)<br />-Intel® HD grafik 4200 (GT2)<br />-Intel® HD grafik 4400 (GT2)<br />-Intel® HD grafik 4600 (GT2)<br />-Intel® HD grafik P4600 (GT2)<br />-Intel® HD grafik P4700 (GT2)<br />-Intel® HD grafik 5000 (GT3)<br />-Intel® Iris™ Graphics 5100 (GT3)<br />-Intel® Iris™ Pro grafik 5200 (GT3e)|(en son sürücüleri kullanın)|
+|Intel®|4. nesil Intel® Çekirdek Işlemcileri (' Haswell ')<br /><br /> -Intel® HD grafikleri (GT1)<br />-Intel® HD grafik 4200 (GT2)<br />-Intel® HD grafik 4400 (GT2)<br />-Intel® HD grafik 4600 (GT2)<br />-Intel® HD grafik P4600 (GT2)<br />-Intel® HD grafik P4700 (GT2)<br />-Intel® HD grafik 5000 (GT3)<br />-Intel® Iris™ Graphics 5100 (GT3)<br />-ıntel® ıris™ Pro Graphics 5200 (GT3e)|(en son sürücüleri kullanın)|
 |AMD®|Bu yana, AMD Radeon™ HD 7000-Serisi (AMD Radeon™ HD 7350-7670 hariç tutar)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPU 'Lar ve grafik çekirdeği Ileri (GCN) mimarisine sahip AMD FirePro GPU hızlandırıcıları<br /><br /> DC Core Next (GCN) mimarisi (' Kaveri ', ' kabini ', ' Temash ', ' Beema ', ' Mullins ') özelliklerine sahip AMD® E serisi ve AMD A Serisi Hızlandırılmış Işlem birimleri (APUs)|14,7 RC3 veya üzeri|
 |NVıDıA®|NVıDıA® GeForce® 400 serisi 'nden bu yana<br /><br /> NVIDIA® GeForce® GPU 'Lar, NVıDıA Quadro® GPU 'Lar ve NVıDıA® Tesla™, Fermi™, Kepler™ veya Maxwell™ mimarisine sahiptir|343,37 veya üzeri|
 

@@ -7,17 +7,18 @@ ms.topic: conceptual
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c65a7ba67c3972620b3d589188e233827a12ffd
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: ab0aa917f79845b7baaad4c65583a5a5a07853f4feec28cab7de9646751aaf3b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387274"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121429153"
 ---
 # <a name="how-to--with-text-templates"></a>Nasıl yapılır ... Metin Şablonları ile
-Visual Studio şablonları, herhangi bir türden metin oluşturmanın yararlı bir yolunu sağlar. Metin şablonlarını kullanarak uygulamanın bir parçası olarak çalışma zamanında ve tasarım zamanında metin oluşturabilir ve proje kodunuzun bir bölümünü oluşturabilirsiniz. Bu konu başlığında en sık sorulan "Nasıl yaparım?...?" Soru.
+Visual Studio şablonları, herhangi bir türden metin oluşturmanın yararlı bir yolunu sağlar. Metin şablonlarını kullanarak çalışma zamanında, uygulamanın bir parçası olarak ve tasarım zamanında metin oluşturabilir ve proje kodunuzun bir bölümünü oluşturabilirsiniz. Bu konu başlığında en sık sorulan "Nasıl yaparım?...?" Soru.
 
  Bu konu başlığında, madde işaretleriyle önce gelen birden çok yanıt alternatif önerilerdir.
 
@@ -37,7 +38,7 @@ Visual Studio şablonları, herhangi bir türden metin oluşturmanın yararlı b
 
 - Yalnızca çalışma zamanında kullanılabilen şablonlardan oluşturmak için standart metin şablonlarını kullanabilirsiniz. Bir uzantı Visual Studio metin templating hizmetini çağırabilirsiniz. Daha fazla bilgi için [bkz. VS Uzantısında Metin Dönüştürmeyi Faturalama.](../modeling/invoking-text-transformation-in-a-vs-extension.md) Diğer bağlamlarda metin templating altyapısını kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>.
 
-     Bu \<#@parameter#> şablonlara parametre geçmek için yönergesi kullanın. Daha fazla bilgi için bkz. [T4 Parametre Yönergesi.](../modeling/t4-parameter-directive.md)
+     Parametreleri \<#@parameter#> bu şablonlara geçmek için yönergesi kullanın. Daha fazla bilgi için bkz. [T4 Parametre Yönergesi.](../modeling/t4-parameter-directive.md)
 
 ### <a name="read-another-project-file-from-a-template"></a>Şablondan başka bir proje dosyası okuma
  Şablonla aynı projeden Visual Studio okumak için:
@@ -58,7 +59,7 @@ Yöntemleri kendiniz yazıyorsanız:
 
 - Bir çalışma zamanı metin şablonu yazıyorsanız, çalışma zamanı metin şablonunuzla aynı adı alan kısmi bir sınıf tanımı yazın. Bu sınıfa ek yöntemleri ekleyin.
 
-- Yöntemleri, özellikleri ve özel `<#+ ... #>` sınıfları bildirebilirsiniz bir sınıf özellik denetim bloğu yazın. Metin şablonu derlenmiş olduğunda sınıfına dönüştürüler. Standart denetim blokları `<#...#>` ve metinler tek bir yönteme, sınıf özellik blokları ise ayrı üyeler olarak eklenir. Daha fazla bilgi için [bkz. Metin Şablonu Denetim Blokları.](../modeling/text-template-control-blocks.md)
+- Yöntemleri, özellikleri ve özel `<#+ ... #>` sınıfları bildirebilirsiniz bir sınıf özellik denetim bloğu yazın. Metin şablonu derlenmiş olduğunda sınıfına dönüştürüler. Standart denetim blokları `<#...#>` ve metinler tek bir yönteme dönüşür ve sınıf özellik blokları ayrı üyeler olarak eklenir. Daha fazla bilgi için [bkz. Metin Şablonu Denetim Blokları.](../modeling/text-template-control-blocks.md)
 
    Sınıf özellikleri olarak tanımlanan yöntemler ekli metin blokları da içerebilir.
 
@@ -73,14 +74,14 @@ Yöntemleri kendiniz yazıyorsanız:
 
 ### <a name="generate-files-from-a-complex-model"></a>Karmaşık bir modelden dosya oluşturma
 
-- Modeli temsil etmek için etki alanına özgü bir dil (DSL) oluşturmayı göz önünde bulundurabilirsiniz. Bu, modeliniz içinde öğelerin adlarını yansıtan türleri ve özellikleri kullanırsınız, çünkü şablonları yazmayı çok daha kolay hale getirir. Dosyayı ayrıştırmanız veya XML düğümlerde gezinmenize gerek yok. Örneğin:
+- Modeli temsil etmek için etki alanına özgü bir dil (DSL) oluşturmayı göz önünde bulundurabilirsiniz. Bu, modeliniz içinde öğelerin adlarını yansıtan türleri ve özellikleri kullanırsınız, çünkü şablonları yazmayı çok daha kolay hale getirir. Dosyayı ayrıştırmanız veya XML düğümlerde gezinmenize gerek yok. Örnek:
 
      `foreach (Book book in this.Library) { ... }`
 
      Daha fazla bilgi için [bkz. Başlarken Dilleriyle Domain-Specific ve](../modeling/getting-started-with-domain-specific-languages.md) Domain-Specific [Dilinden Kod Oluşturma.](../modeling/generating-code-from-a-domain-specific-language.md)
 
-### <a name="get-data-from-visual-studio"></a>Veri kaynağından veri Visual Studio
- Içinde sağlanan hizmetleri kullanmak Visual Studio, özniteliğini `hostSpecific` ayarp derlemeyi `EnvDTE` yükle. Örneğin:
+### <a name="get-data-from-visual-studio"></a>Visual Studio'dan veri Visual Studio
+ Bu hizmetlerde sağlanan Visual Studio, özniteliğini `hostSpecific` ayarp derlemeyi `EnvDTE` yük olarak ayarlayın. Örnek:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -110,12 +111,12 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="what-is-a-model"></a>"Model" nedir?
 
-- Giriş, şablonunuz tarafından okunur. Bir dosyada veya veritabanında olabilir. XML veya Visio çizimi ya da etki alanına özgü bir dil (DSL) ya da UML modeli ya da düz metin olabilir. Birden fazla dosya arasında yayılacaktır. Genellikle birden fazla şablon bir modeli okur.
+- Giriş, şablonunuz tarafından okunur. Bir dosyada veya veritabanında olabilir. XML veya Visio çizim veya etki alanına özgü dil (DSL) ya da UML modeli ya da düz metin olabilir. Birden fazla dosya arasında yayılacaktır. Genellikle birden fazla şablon bir modeli okur.
 
      "Model" teriminin anlamı, işletmenizin bazı yönünü, oluşturulan program kodundan veya diğer dosyalardan daha doğrudan temsil ettiğidir. Örneğin, bu, oluşturulan yazılımınız tarafından denetlenecek bir iletişim ağının planını temsil ediyor olabilir.
 
 ### <a name="what-is-the-benefit-of-using-text-templates"></a>Metin şablonlarını kullanmanın avantajı nedir?
- Genellikle, bir modelden birden çok kod veya başka dosya üretirsiniz. Model, gereksinimleri oluşturulan koddan daha doğrudan temsil eder. Uygulama ayrıntısı atlar ve kod yerine gereksinimler bakımından yazılır. Gereksinimler her zaman olduğu gibi değiştiklerinde, modeli program kodunun farklı bölümlerine göre daha kolay ve daha güvenilir bir şekilde güncelleştirebilirsiniz.
+ Genellikle, bir modelden birden çok kod veya başka dosya üretirsiniz. Model, gereksinimleri oluşturulan koddan daha doğrudan temsil eder. Uygulama ayrıntısı atlar ve kod yerine gereksinimler açısından yazılır. Gereksinimler her zaman olduğu gibi değiştiklerinde, modeli program kodunun farklı bölümlerine göre daha kolay ve daha güvenilir bir şekilde güncelleştirebilirsiniz.
 
  Bu nedenle, çevik geliştirme yöntemleri açısından kod oluşturma değerli bir araçtır.
 
@@ -125,4 +126,4 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 
 ### <a name="what-is-t4"></a>"T4" nedir?
 
-- Burada açıklanan metin Visual Studio özellikleri için başka bir ad. Yayımlanmadan önceki sürüm , "Metin Şablonu Dönüşümü" kısaltması olarak kabul edildi.
+- Burada açıklanan metin Visual Studio için başka bir ad. Yayımlanmadan önceki sürüm , "Metin Şablonu Dönüşümü" kısaltması olarak kabul edildi.

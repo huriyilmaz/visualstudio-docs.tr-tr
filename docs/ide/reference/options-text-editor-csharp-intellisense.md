@@ -16,14 +16,15 @@ ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9181961c1f30a96e5b03434f4ab686024992e29a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 33dc002147ab07994dd3d64d64a595b896e9bcf41c594891ca4cf60e4bcb9061
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944023"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372159"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Seçenekler, Metin Düzenleyici, C#, IntelliSense
 

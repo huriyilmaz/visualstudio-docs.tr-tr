@@ -11,15 +11,16 @@ ms.assetid: 4017d9d1-d609-4f41-8e4e-976abae746b3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bdfe683d6afc518ea7981e016587413e0b9cb2f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 138ac253be9d275cf640efdbcca4b295ced0e63e2219605df12376d674e69285
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918818"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369026"
 ---
 # <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak tek başına bir uygulama için ayrıntılı zamanlama verileri toplama
 Bu bölümde, komut satırından izleme yöntemini kullanarak bir istemci (tek başına) bileşeni için ayrıntılı performans verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
@@ -28,7 +29,7 @@ Bu bölümde, komut satırından izleme yöntemini kullanarak bir istemci (tek b
 
 |Görev|İlgili içerik|
 |----------|---------------------|
-|**İzleme kullanarak bir .NET Framework uygulaması profili oluşturma**|-   [Nasıl yapılır: bir .NET bileşenini Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)|
+|**izleme kullanarak bir .NET Framework uygulaması profili oluşturma**|-   [Nasıl yapılır: bir .NET bileşenini Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)|
 |**İzleme kullanarak bir C/C++ uygulaması profili oluşturma**|-   [Nasıl yapılır: yerel bir bileşeni Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)|
 |**Katman etkileşim verileri ekleme**|-   [Katman etkileşim verileri toplama](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
 
@@ -46,7 +47,7 @@ Bu bölümde, komut satırından izleme yöntemini kullanarak bir istemci (tek b
 
 |Görev|İlgili İçerik|
 |----------|---------------------|
-|**Profil ASP.NET uygulamaları**|-   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
+|**ASP.NET uygulamalar profili**|-   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
 |**Profil hizmetleri**|-   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
 
 ### <a name="analyze-instrumentation-data-views-and-reports"></a>İzleme verileri görünümlerini ve raporlarını çözümleyin

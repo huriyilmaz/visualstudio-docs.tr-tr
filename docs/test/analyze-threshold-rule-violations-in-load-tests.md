@@ -17,12 +17,13 @@ ms.assetid: 969ed346-cf2e-4d48-82b3-edb3e075e1c0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 519a908b85c6cdf3dbecc38e032d72ac223a8bdc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: e17ae725b51308ed71b606c4118b56830d723d6cd0db2fe96869c89a47a559cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948055"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121425157"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>Yük Testi Çözümleyicisini kullanarak yük testlerinde eşik kuralı ihlallerini çözümleme
 

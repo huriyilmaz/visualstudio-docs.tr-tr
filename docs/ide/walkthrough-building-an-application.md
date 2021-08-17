@@ -10,20 +10,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f7fe40f78b8a8447c1ae784e33a25e905e368118
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24a1e3ffeab11b8e1fd88800e854febe10d93da6ce6c30ce55512fddb3efaff0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873833"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121371546"
 ---
 # <a name="walkthrough-build-an-application"></a>İzlenecek yol: Uygulama oluşturma
 
-Bu yönergeyi tamamlayarak, Visual Studio ile uygulama oluştururken yapılandırabileceğiniz çeşitli seçeneklerle daha tanıdık gelecektir. Özel bir yapı yapılandırması oluşturacak, belirli uyarı iletilerini gizleyecek ve örnek bir uygulama için derleme çıkış bilgilerini artıracaksınız.
+Bu yönergeyi tamamlayarak, Visual Studio ile uygulama oluştururken yapılandırabileceğiniz çeşitli seçeneklerle daha tanıdık geleceksiniz. Özel bir yapı yapılandırması oluşturacak, belirli uyarı iletilerini gizleyecek ve örnek bir uygulama için derleme çıkış bilgilerini artıracaksınız.
 
 ## <a name="install-the-sample-application"></a>Örnek uygulamayı yükler
 
-[WPF uygulamalarını oluşturmaya giriş](https://code.msdn.microsoft.com/Introduction-to-Building-b8d16419) örneği ' ni indirin. C# veya Visual Basic seçin. *. Zip* dosyası indirildikten sonra ayıklayın ve Visual Studio 'Yu kullanarak *expenseitgiriş. sln* dosyasını açın.
+[WPF uygulamalarını oluşturmaya giriş](https://code.msdn.microsoft.com/Introduction-to-Building-b8d16419) örneği ' ni indirin. C# veya Visual Basic seçin. *.zip* dosyası indirildikten sonra dosyayı ayıklayın ve Visual Studio kullanarak *expenseitgiriş. sln* dosyasını açın.
 
 ## <a name="create-a-custom-build-configuration"></a>Özel derleme yapılandırması oluşturma
 
@@ -75,9 +75,9 @@ Ardından, özel yapı yapılandırmasıyla çözümü oluşturacaksınız.
 
 Ardından, derleyici tarafından bir uyarının oluşturulmasına neden olan bazı kodlar tanıtılcağız.
 
-1. C# projesinde, *ExpenseReportPage.xaml.cs* dosyasını açın. **ExpenseReportPage** yönteminde aşağıdaki kodu ekleyin: `int i;` .
+1. C# projesinde *ExpenseReportPage. xaml. cs* dosyasını açın. **ExpenseReportPage** yönteminde aşağıdaki kodu ekleyin: `int i;` .
 
-    VEYA
+    OR
 
     Visual Basic projesinde *ExpenseReportPage. xaml. vb* dosyasını açın. Özel Oluşturucu **genel Sub New...**' da şu kodu ekleyin: `Dim i` .
 
@@ -97,13 +97,13 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. Menü çubuğunda,   >  **özellik sayfalarını** görüntüle ' yi seçin.
 
-     **Proje Tasarımcısı** açılır.
+     **Project tasarımcısı** açılır.
 
 1. **Yapı** sayfasını seçin ve ardından **uyarıları bastır** kutusunda **0168** uyarı numarasını belirtin.
 
-     ![Derleme sayfası, proje Tasarımcısı](../ide/media/buildwalk_csharpsuppresswarnings.png)
+     ![derleme sayfası, Project tasarımcı](../ide/media/buildwalk_csharpsuppresswarnings.png)
 
-     Daha fazla bilgi için bkz. [derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md).
+     daha fazla bilgi için bkz. [derleme sayfası, Project tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md).
 
 1. Çözümü derleyin.
 
@@ -111,17 +111,17 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
      ![Çıkış Penceresi, Visual C&#35; derleme uyarıları](../ide/media/buildwalk_visualcsharpbuildwarnings.png)
 
-### <a name="suppress-all-visual-basic-build-warnings"></a>Tüm Visual Basic derleme uyarılarını gösterme
+### <a name="suppress-all-visual-basic-build-warnings"></a>tüm Visual Basic derleme uyarılarını gösterme
 
 1. **Çözüm Gezgini**' de en üst düzey proje düğümünü seçin.
 
 2. Menü çubuğunda,   >  **özellik sayfalarını** görüntüle ' yi seçin.
 
-     **Proje Tasarımcısı** açılır.
+     **Project tasarımcısı** açılır.
 
 3. **Derle** sayfasında **tüm uyarıları devre dışı bırak** onay kutusunu seçin.
 
-     ![Derleme sayfası, proje Tasarımcısı](../ide/media/buildwalk_vbsuppresswarnings.png)
+     ![derleme sayfası, Project tasarımcısı](../ide/media/buildwalk_vbsuppresswarnings.png)
 
      Daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](../ide/configuring-warnings-in-visual-basic.md).
 
@@ -148,13 +148,13 @@ Yapı çıkışını yığılmaları yerine, derleme sırasında belirli uyarı 
 
 1. **Projeler ve çözümler** kategorisini seçin ve ardından **Oluştur ve Çalıştır** sayfasını seçin.
 
-1. **MSBuild proje derleme çıkışı ayrıntı** listesinde **normal**' i seçin ve ardından **Tamam** düğmesini seçin.
+1. **MSBuild projesi derleme çıkışı ayrıntı** listesinde **Normal**' i seçin ve ardından **tamam** düğmesini seçin.
 
 1. Menü çubuğunda,   >  **temiz çözüm** oluştur ' u seçin.
 
 1. Çözümü oluşturun ve ardından **Çıkış** penceresindeki bilgileri gözden geçirin.
 
-     Yapı bilgileri, yapılandırmanın başlatıldığı saati (başlangıcında bulunur) ve dosyaların işlendiği sırayı içerir. Bu bilgiler, Visual Studio 'Nun derleme sırasında çalıştığı gerçek derleyici söz dizimini da içerir.
+     Yapı bilgileri, yapılandırmanın başlatıldığı saati (başlangıcında bulunur) ve dosyaların işlendiği sırayı içerir. bu bilgiler, derleme sırasında Visual Studio çalışan gerçek derleyici söz dizimini da içerir.
 
      Örneğin, C# derlemesinde, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) seçeneği, bu konunun önceki kısımlarında yer alan üç farklı uyarıyla birlikte belirttiğiniz **0168** uyarı kodunu listeler.
 
@@ -169,11 +169,11 @@ Daha fazla bilgi için bkz. [nasıl yapılır: yapı günlüğü dosyalarını g
 
 Örnek uygulamanın, gönderim için en iyi duruma getirilmiş bir sürümünü oluşturabilirsiniz. Yayın derlemesi için, yürütülebilir dosyanın derleme dışına çıkmadan önce bir ağ paylaşımında kopyalanacağını belirtirsiniz.
 
-Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini değiştirme](../ide/how-to-change-the-build-output-directory.md) ve [Visual Studio 'da projeleri ve çözümleri oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini değiştirme](../ide/how-to-change-the-build-output-directory.md) ve [Visual Studio projeleri ve çözümleri oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md).
 
 ### <a name="specify-a-release-build-for-visual-basic"></a>Visual Basic için bir yayın derlemesi belirtin
 
-1. **Proje tasarımcısını** açın.
+1. **Project tasarımcısını** açın.
 
      ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
 
@@ -196,7 +196,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 ### <a name="specify-a-release-build-for-c"></a>C için bir yayın derlemesi belirtin\#
 
-1. **Proje tasarımcısını** açın.
+1. **Project tasarımcısını** açın.
 
      ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
 
@@ -226,5 +226,5 @@ Tebrikler! Bu yönergeyi başarıyla tamamladınız.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek yol: proje derleme (C++)](/cpp/ide/walkthrough-building-a-project-cpp)
-- [ASP.NET Web uygulaması projesi ön derlemesine genel bakış](/previous-versions/aspnet/aa983464\(v\=vs.110\))
+- [ASP.NET web uygulaması projesi ön derlemesine genel bakış](/previous-versions/aspnet/aa983464\(v\=vs.110\))
 - [İzlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md)

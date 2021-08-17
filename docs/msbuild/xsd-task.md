@@ -1,6 +1,6 @@
 ---
 title: XSD görevi | Microsoft Docs
-description: MSBuild 'in, bir kaynaktan şema veya sınıf dosyaları üreten xsd.exe XML şema tanımı aracını kaydırmak için XSD görevi nasıl kullandığını öğrenin.
+description: MSBuild, bir kaynaktan şema veya sınıf dosyaları oluşturan xsd.exe XML şema tanımı aracını kaydırmak için XSD görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
@@ -20,14 +20,15 @@ ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 7227fff5dd4c58e1bce81ef8cad5c32f854abf55
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5885add3c772bf3b2e42b556199fda3deb83426c55dccb3b5eb908a217e9efca
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960331"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369390"
 ---
 # <a name="xsd-task"></a>XSD görevi
 
@@ -64,7 +65,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını
 
      Oluşturulan kod için kullanılacak programlama dilini belirtir.
 
-     **CS** (varsayılan olan C#), **vb** (Visual Basic) veya **js** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
+     **CS** (varsayılan olan C#), **VB** (Visual Basic) veya **JS** (JScript) arasından seçim yapın. Ayrıca uygulayan bir sınıf için tam bir ad belirtin `System.CodeDom.Compiler.CodeDomProvider Class`.
 
 - **Ad Alanı**
 
@@ -76,7 +77,7 @@ Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını
 
      Gerekli `ITaskItem[]` parametre.
 
-     Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.
+     görevler tarafından tüketilen ve yayılan MSBuild kaynak dosya öğelerinin dizisini tanımlar.
 
 - **SuppressStartupBanner**
 

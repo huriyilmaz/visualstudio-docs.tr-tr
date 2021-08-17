@@ -1,6 +1,6 @@
 ---
 title: Kısayol tuşları (Yardım Görüntüleyicisi)
-description: Microsoft Yardım Görüntüleyicisi kısayol tuşlarının listesine bakın. Gezinti, pencere yönetimi ve içerik yönetimi için kısayol tuşlarını kullanın.
+description: Aşağıdaki listede kısayol tuşları listesine Microsoft Yardım Görüntüleyicisi. Gezinti, pencere yönetimi ve içerik yönetimi için kısayol tuşlarını kullanın.
 ms.date: 11/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,46 +10,47 @@ ms.assetid: ec14c85d-7efb-441c-a46b-bee34a227e39
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 24f13e61f783b041134dc38a4c9bc1690421b6cc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 684f867b5191eb7fe0d51c53acef6ab907d75014453ba689b68223894244b9b8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951140"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121373485"
 ---
-# <a name="shortcut-keys-in-help-viewer"></a>Yardım görüntüleyicisinde kısayol tuşları
+# <a name="shortcut-keys-in-help-viewer"></a>Yardım Görüntüleyicisi'nde kısayol tuşları
 
-Aşağıdaki tablodaki kısayol tuşlarını kullanarak **Microsoft Yardım Görüntüleyicisi** gidebilirsiniz:
+Aşağıdaki tabloda kısayol **Microsoft Yardım Görüntüleyicisi** kullanarak gezinti menüsünde gezinebilirsiniz:
 
-|Alan|U|Eylem|
+|Alan|Tuş|Eylem|
 |----------|---------------|------------|
-|Genel Uygulama|**Boşlu**|Düzenleme alanları dışında herhangi bir yere **girmek** yerine kullanın.|
-|Genel Uygulama|**F1**|Geçerli Kullanıcı arabirimi öğesiyle ilgili **Yardım 'ı** açın.|
-|Genel Uygulama|**F11**|Tam ekran görünümü ve normal görünüm arasında geçiş yapın.|
-|Araç Çubuğu|**Geri Al tuşu**<br /><br /> -VEYA-<br /><br /> **Alt** + **Sol ok**|Önceki sayfayı görüntüleyin.|
-|Araç Çubuğu|**Alt** + **Sağ ok**|Sonraki sayfayı görüntüleyin.|
-|Araç Çubuğu|**Alt** + **Giriş sayfası**|**Yardım gözden geçiren** giriş sayfasını görüntüleyin.|
-|Araç Çubuğu|**CTRL** + **S**|İçindekiler tablosunda geçerli konuyu vurgulayın ( **İçindekiler** sekmesinde).|
-|Araç Çubuğu|**CTRL** + **D**|Geçerli konuyu **Sık Kullanılanlar** sekmesine ekleyin.|
-|Araç Çubuğu|**CTRL** + **F**|Geçerli konu içinde metin arayabilmeniz için konu alanındaki **bul** çubuğunu görüntüleyin.|
-|Araç Çubuğu|**CTRL** + **P**|Geçerli sayfayı yazdır.|
-|Araç Çubuğu|**CTRL** + **F2**|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
-|Araç Çubuğu|**CTRL** + **O**|**Görüntüleyici seçenekleri** iletişim kutusunu görüntüleyin.|
-|Araç Çubuğu|**CTRL** + **SHIFT** + **A**|**Içeriği Yönet** sekmesini görüntüleyin.|
-|Gezginlerini|**Alt** + **C**<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **C**|**İçindekiler** sekmesini görüntüleyin.|
-|Gezginlerini|**Alt** + **Ben**<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **Ben**|**Dizin** sekmesini görüntüleyin.|
-|Gezginlerini|**Alt** + **F**<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **F**|**Sık Kullanılanlar** sekmesini görüntüleyin.|
-|Gezginlerini|**Alt** + **S**<br /><br /> -VEYA-<br /><br /> **CTRL** + E<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **S**|**Arama** sekmesini görüntüleyin.|
-|Gezginlerini|**Alt** + **A**<br /><br /> -VEYA-<br /><br /> **CTRL** + **SHIFT** + **A**|**Içeriği Yönet** sekmesini görüntüleyin.|
-|Konu|**Kısayol menü** tuşu<br /><br /> VEYA<br /><br /> **SHIFT** + **F10**|Geçerli UI öğesi için kısayol menüsünü görüntüler.|
-|Konu|**Yukarı Ok**|Belgenin başlangıcına doğru her seferinde bir satır başı kaydırın.|
-|Konu|**Aşağı Ok**|Tek seferde belgenin sonuna doğru ilerleyin.|
-|Konu|**Page Up**|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
-|Konu|**Page Down**|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
-|Konu|**Giriş Ekranı**|Belgenin başlangıcına gidin.|
-|Konu|**End**|Belgenin sonuna taşı.|
+|Genel Uygulama|**Alanı**|Düzenleme alanları dışında **herhangi bir** yere girin yerine kullanın.|
+|Genel Uygulama|**F1**|Geçerli **kullanıcı arabirimi** öğesi hakkında Yardım'a bakın.|
+|Genel Uygulama|**F11**|Tam ekran görünümü ile normal görünüm arasında geçiş.|
+|Araç Çubuğu|**Geri Al tuşu**<br /><br /> -VEYA-<br /><br /> **Alt** + **Sol Ok**|Önceki sayfayı görüntüler.|
+|Araç Çubuğu|**Alt** + **Sağ Ok**|Sonraki sayfayı görüntüleme.|
+|Araç Çubuğu|**Alt** + **Giriş**|Yardım Gözden **Geçireni giriş** sayfasını görüntüleme.|
+|Araç Çubuğu|**Ctrl tuşunu basılı tutarak** + **S**|İçindekiler sekmesindeki geçerli konuyu vurgulayın **(İçindekiler sekmesinde).**|
+|Araç Çubuğu|**Ctrl tuşunu basılı tutarak** + **D**|Geçerli konuyu Sık Kullanılanlar **sekmesine** ekleyin.|
+|Araç Çubuğu|**Ctrl tuşunu basılı tutarak** + **F**|Geçerli **konu** içinde metin aramak için konu başlığı alanında Bul çubuğunu görüntüler.|
+|Araç Çubuğu|**Ctrl tuşunu basılı tutarak** + **P**|Geçerli sayfayı yazdırma.|
+|Araç Çubuğu|**Ctrl tuşunu basılı tutarak** + **F2**|Geçerli sayfanın baskı önizlemesini görüntüleme.|
+|Araç Çubuğu|**Ctrl tuşunu basılı tutarak** + **O**|Görüntüleyici **Seçenekleri iletişim** kutusunu görüntüleme.|
+|Araç Çubuğu|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **M**|İçeriği Yönet **sekmesini** görüntüleyin.|
+|Navigasyon|**Alt** + **C**<br /><br /> -VEYA-<br /><br /> **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **C**|İçerikler **sekmesini** görüntüleyin.|
+|Navigasyon|**Alt** + **I**<br /><br /> -VEYA-<br /><br /> **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **I**|Dizin **sekmesini** görüntüleyin.|
+|Navigasyon|**Alt** + **F**<br /><br /> -VEYA-<br /><br /> **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **F**|Sık **Kullanılanlar sekmesini** görüntüleyin.|
+|Navigasyon|**Alt** + **S**<br /><br /> -VEYA-<br /><br /> **Ctrl** + E<br /><br /> -VEYA-<br /><br /> **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **S**|Arama **sekmesini** görüntüleyin.|
+|Navigasyon|**Alt** + **M**<br /><br /> -VEYA-<br /><br /> **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **M**|İçeriği Yönet **sekmesini** görüntüleyin.|
+|Konu|**Kısayol Menü** tuşu<br /><br /> OR<br /><br /> **Shift ile kaydırma** + **F10**|Geçerli kullanıcı arabirimi öğesinin kısayol menüsünü görüntüler.|
+|Konu|**Yukarı Ok**|Belge başlangıcına doğru her bir satırda ilerleyin.|
+|Konu|**Aşağı Ok**|Belgenin sonuna doğru her bir satırda ilerleyin.|
+|Konu|**Page Up**|Belge başlangıcına doğru bir defada bir ekran kaydırın.|
+|Konu|**Page Down**|Aynı anda bir ekranla belgenin sonuna doğru kaydırın.|
+|Konu|**Giriş Ekranı**|Belgenin başlangıcına geç.|
+|Konu|**End**|Belgenin sonuna kadar inin.|
 |Konu|**CTRL** + **F**|Bu sayfada arama metni bulun.|
 |Konu|**F5**|Geçerli sayfayı yenileyin.|
 |Konu|**CTRL** + **P**|Geçerli sayfayı yazdır.|

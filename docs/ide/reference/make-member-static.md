@@ -7,16 +7,17 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5478e85d89d4ea44d34e0a5ae9170aaffb3836f7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9456c81ff93eed6872bafbc7427e862a705c17072bcb3ae5a7e32c97d1685805
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919454"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121387347"
 ---
 # <a name="make-member-static"></a>Üyeyi statik yapma
 

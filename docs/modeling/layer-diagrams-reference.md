@@ -20,14 +20,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bb138164cfab44778c932a4bcb93572a3053a70
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: aeffcc63f841b2a01b613173e0df87a841af7b1c0e993da468c157af0b24b686
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112391042"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370559"
 ---
 # <a name="dependency-diagrams-reference"></a>Bağımlılık diyagramları: başvuru
 
@@ -60,15 +61,15 @@ Aşağıdaki tabloda bağımlılık diyagramında kullanabileceğiniz öğeler a
 
 |**Şekil**|**Öğe**|**Açıklama**|
 |-|-|-|
-|1|**Katman**|Sisteminize fiziksel yapıtlardan bir mantıksal grup. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler gibi olabilir.<br /><br /> Bir katmana bağlı yapıtları görmek için katmanın kısayol menüsünü  açın ve Ardından Katman Gezgini'ni açmak için Bağlantıları **Görüntüle'yi seçin.**<br /><br /> Daha fazla bilgi için [bkz. Katman Gezgini.](#Explorer)<br /><br /> -   **Yasak Ad Alanı Bağımlılıkları** - Bu katmanla ilişkili yapıtların belirtilen ad alanlarına bağımlı olayamaz.<br />-   **Yasak Ad Alanları** - Bu katmanla ilişkili yapıtların belirtilen ad alanlarına ait olması gerek olmadığını belirtir.<br />-   **Gerekli Ad Alanları** - Bu katmanla ilişkili yapıtların belirtilen ad alanlarından birinin ait olması gerektiğini belirtir.|
+|1|**Katman**|Sisteminize fiziksel yapıtlardan bir mantıksal grup. Bu yapıtlar ad alanları, projeler, sınıflar, yöntemler gibi olabilir.<br /><br /> Bir katmana bağlı yapıtları görmek için katmanın kısayol menüsünü  açın ve Ardından Katman Gezgini'ni açmak için Bağlantıları **Görüntüle'yi seçin.**<br /><br /> Daha fazla bilgi için [bkz. Katman Gezgini.](#Explorer)<br /><br /> -   **Yasak Ad Alanı Bağımlılıkları** - Bu katmanla ilişkili yapıtların belirtilen ad alanlarına bağımlı olayamaz.<br />-   **Yasak Ad Alanları** - Bu katmanla ilişkili yapıtların belirtilen ad alanlarına ait olması gerektiğini belirtir.<br />-   **Gerekli Ad Alanları** - Bu katmanla ilişkili yapıtların belirtilen ad alanlarından birinin ait olması gerektiğini belirtir.|
 |2|**Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabileceğini, ancak tam tersinin kullana olmadığını gösterir.<br /><br /> -   **Yön** - Bağımlılığın yönünü belirtir.|
-|3|**Çift Yönlü Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabileceğini ve bunun tam tersi olduğunu gösterir.<br /><br /> -   **Yön** - Bağımlılığın yönünü belirtir.|
+|3|**Çift Yönlü Bağımlılık**|Bir katmanın işlevselliği başka bir katmanda kullanabileceğini ve tam tersinin de geçerli olduğunu gösterir.<br /><br /> -   **Yön** - Bağımlılığın yönünü belirtir.|
 |4|**Yorum**|Diyagrama veya diyagramda öğelere genel notlar eklemek için kullanın.|
 |5|**Açıklama Bağlantısı**|Diyagramda öğelere açıklama bağlantısı için kullanın.|
 
 ## <a name="layer-explorer"></a><a name="Explorer"></a> Katman Gezgini
 
-Her katmanı çözümünüzde projeler, sınıflar, ad alanları, proje dosyaları ve yazılım diğer bölümleri gibi yapıtlara bağabilirsiniz. Katmanda yer alan sayı, katmana bağlı yapıt sayısını gösterir. Ancak katmanda yapıt sayısını okurken şunları unutmayın:
+Her katmanı çözümünüzde projeler, sınıflar, ad alanları, proje dosyaları ve yazılım diğer bölümleri gibi yapıtlara bağabilirsiniz. Katmanda bulunan sayı, katmana bağlı yapıt sayısını gösterir. Ancak katmanda yapıt sayısını okurken şunları unutmayın:
 
 - Bir katman diğer yapıları içeren bir yapıya bağlanırsa, ancak katman doğrudan diğer yapılara bağlanmazsa, sayı yalnızca bağlı yapıyı içerir. Bununla birlikte, diğer yapılar katman doğrulanırken analiz için alınır.
 
@@ -95,7 +96,7 @@ Bağımlılık diyagramında, bir veya daha fazla katman için kısayol menüsü
 |-|-|
 |**Kategoriler**|Yapıt türü; örneğin, sınıf, ad alanı, kaynak dosya ve diğer|
 |**Katman**|Yapıya bağlantı olan katman|
-|**Doğrulamayı Destekler**|True **ise,** katman doğrulama işlemi projenin bu öğeye veya bu öğeden bağımlılıklara uygun olduğunu doğrular.<br /><br /> False **ise,** bağlantı katman doğrulama sürecine katılmaz.<br /><br /> Daha fazla bilgi için [bkz. Bağımlılık Diyagramları: Yönergeler.](../modeling/layer-diagrams-guidelines.md)|
+|**Doğrulamayı destekler**|True **ise,** katman doğrulama işlemi projenin bu öğeye veya bu öğeden bağımlılıklara uygun olduğunu doğrular.<br /><br /> False **ise,** bağlantı katman doğrulama sürecine katılmaz.<br /><br /> Daha fazla bilgi için [bkz. Bağımlılık Diyagramları: Yönergeler.](../modeling/layer-diagrams-guidelines.md)|
 |**Tanımlayıcı**|Bağlantılı yapıt başvurusu|
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,6 +1,6 @@
 ---
-title: RC görevi | Microsoft Docs
-description: MSBuild 'in, kaynakları bir. res dosyasında derleyen, rc.exe Microsoft Windows Kaynak derleyicisi aracı 'nı kaydırmak için RC görevini nasıl kullandığını öğrenin.
+title: RC Görev | Microsoft Docs
+description: MSBuild microsoft Windows Kaynak Derleyicisi aracını sarmak için RC görevini nasıl kullandığını ve rc.exe bir .res dosyasına nasıl derlen olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,37 +22,38 @@ ms.assetid: 2fd26c75-a056-4dda-9f7e-2f90d3748d88
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f00e0b5cd0575613add2698058ba6b1357aec0f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: edd1d197da1b440fb6a70b51bf581569f9ac2795040406078363d50e648151a6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931987"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369962"
 ---
 # <a name="rc-task"></a>RC görevi
 
-Microsoft Windows Kaynak derleyicisi Aracı ' nı sarmalayan *rc.exe*. **RC** görevi, imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak (*. res*) dosyasına derler. Daha fazla bilgi için bkz. [kaynak derleyicisi](/windows/desktop/menurc/resource-compiler).
+Microsoft Windows Kaynak Derleyicisi aracını sarmalar ve *rc.exe.* **RC görevi,** imleçler, simgeler, bit eşlemler, iletişim kutuları ve yazı tipleri gibi kaynakları bir kaynak (*.res*) dosyasına derler. Daha fazla bilgi için [bkz. Kaynak Derleyicisi.](/windows/desktop/menurc/resource-compiler)
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda RC görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.
+ Aşağıdaki tabloda RC görevinin parametreleri açık almaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelen bir seçenektir.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**AdditionalIncludeDirectories**|İsteğe bağlı **dize []** parametresi.<br /><br /> İçerme dosyaları için aranan dizinler listesine bir dizin ekler.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki **/i** seçeneğine bakın.|
-|**AdditionalOptions**|İsteğe bağlı **dize** parametresi.<br /><br /> Komut satırı seçeneklerinin listesi; Örneğin,/ \<option1>  / \<option2>  / \<option#> . Başka bir **RC** görev parametresi tarafından temsil edilmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki seçeneklere bakın.|
-|**Kültür**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaynaklarda kullanılan kültürü temsil eden bir yerel ayar KIMLIĞI belirtir.<br /><br /> Daha fazla bilgi için RC kullanma bölümündeki **/l** SEÇENEĞINE [(rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)bakın.|
-|**Ignorestandardincludepath**|İsteğe bağlı **Boolean** parametresi.<br /><br /> İse `true` , Kaynak derleyicinin üstbilgi dosyalarını veya kaynak dosyalarını ararken INCLUDE ortam değişkenini denetlemesini önler.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki **/x** seçeneğine bakın.|
-|**NullTerminateStrings**|İsteğe bağlı **Boolean** parametresi.<br /><br /> Eğer `true` , null-dize tablosundaki tüm dizeleri sonlandırır.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki **/n** seçeneğine bakın.|
-|**PreprocessorDefinitions**|İsteğe bağlı **dize []** parametresi.<br /><br /> Kaynak derleyicisi için bir veya daha fazla önişlemci sembolü tanımlayın. Makro sembolleri listesini belirtin.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki **/d** seçeneğine bakın. Ayrıca bu tablodaki **UndefinePreprocessorDefinitions** bölümüne bakın.|
-|**ResourceOutputFileName**|İsteğe bağlı **dize** parametresi.<br /><br /> Kaynak dosyasının adını belirtir. Bir kaynak dosyası adı belirtin.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki **/fo** seçeneğine bakın.|
-|**ShowProgress**|İsteğe bağlı **Boolean** parametresi.<br /><br /> `true`, Derleyicinin ilerlemesini rapor eden iletileri görüntüler.<br /><br /> Daha fazla bilgi için RC kullanma içindeki **/v** SEÇENEĞINE [(rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)bakın.|
-|**Kaynak**|Gerekli `ITaskItem[]` parametre.<br /><br /> Görevler tarafından tüketilen ve yayılmakta olabilecek bir MSBuild kaynak dosya öğeleri dizisini tanımlar.|
-|**SuppressStartupBanner**|İsteğe bağlı **Boolean** parametresi.<br /><br /> İse `true` , görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için **/?** yazın. komut satırı seçeneği ve sonra **/nologo** seçeneğine bakın.|
-|**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.<br /><br /> İzleyici günlük dizinini belirtir.|
-|**UndefinePreprocessorDefinitions**|Önişlemci sembolünü tanımlama.<br /><br /> Daha fazla bilgi için [RC kullanma (rc komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içindeki **/u** seçeneğine bakın. Ayrıca bkz. bu tablodaki **PreprocessorDefinitions** .|
+|**AdditionalIncludeDirectories**|İsteğe **bağlı String[]** parametresi.<br /><br /> Ekleme dosyaları için aranan dizinler listesine bir dizin ekler.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/I** seçeneği.|
+|**AdditionalOptions**|İsteğe **bağlı Dize** parametresi.<br /><br /> Komut satırı seçeneklerinin listesi; Örneğin, / \<option1>  / \<option2>  / \<option#> . Başka bir RC görev parametresi tarafından temsil etmeyen komut satırı seçeneklerini belirtmek için **bu** parametreyi kullanın.<br /><br /> Daha fazla bilgi için BKZ. [RC kullanma (RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-).|
+|**Kültür**|İsteğe **bağlı Dize** parametresi.<br /><br /> Kaynaklarda kullanılan kültürü temsil eden bir yerel ayar kimliği belirtir.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/l** seçeneği.|
+|**IgnoreStandardIncludePath**|İsteğe **bağlı Boole parametresi.**<br /><br /> ise, `true` kaynak derleyicinin üst bilgi dosyalarını veya kaynak dosyalarını ararken INCLUDE ortam değişkenlerini denetlemesini önler.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/x** seçeneği.|
+|**NullTerminateStrings**|İsteğe **bağlı Boole parametresi.**<br /><br /> ise, `true` null-dize tablosunda tüm dizeleri sonlandırılır.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/n** seçeneği.|
+|**ÖnişlemciDefinitions**|İsteğe **bağlı String[]** parametresi.<br /><br /> Kaynak derleyicisi için bir veya daha fazla ön işlemci sembolü tanımlayın. Makro sembollerinin listesini belirtin.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/d** seçeneği. Ayrıca bu **tabloda UndefinePreprocessorDefinitions'a** bakın.|
+|**ResourceOutputFileName**|İsteğe **bağlı Dize** parametresi.<br /><br /> Kaynak dosyasının adını belirtir. Bir kaynak dosyası adı belirtin.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/fo** seçeneği.|
+|**ShowProgress**|İsteğe **bağlı Boole parametresi.**<br /><br /> ise, `true` derleyicinin ilerleme durumuyla ilgili olarak rapor eden iletileri görüntüler.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/v** seçeneği.|
+|**Kaynak**|Gerekli `ITaskItem[]` parametre.<br /><br /> Görevler tarafından tüketilebilir MSBuild kaynak dosya öğeleri içeren bir dizi tanımlar.|
+|**SuppressStartupBanner**|İsteğe **bağlı Boole parametresi.**<br /><br /> ise, `true` görev başlatıldığında telif hakkı ve sürüm numarası iletinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için **/? yazın.** komut satırı seçeneğine bakın ve **/nologo seçeneğine** bakın.|
+|**TrackerLogDirectory**|İsteğe **bağlı Dize** parametresi.<br /><br /> İzleyici günlüğü dizinini belirtir.|
+|**UndefinePreprocessorDefinitions**|Ön işlemci simgesinin tanımlarını geri anın.<br /><br /> Daha fazla bilgi için BKZ. RC Kullanma [(RC komut satırı)](/windows/win32/menurc/using-rc-the-rc-command-line-)içinde **/u** seçeneği. Ayrıca bu **tablodaki ÖnişlemciDefinitions'a** da bakın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

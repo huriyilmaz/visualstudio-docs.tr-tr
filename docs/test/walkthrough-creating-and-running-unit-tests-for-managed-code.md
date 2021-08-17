@@ -12,15 +12,16 @@ helpviewer_keywords:
 - unit tests, authoring
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 62772187c076b7891a0159b73cae2ca819ac6bc3
-ms.sourcegitcommit: fa253b04f1f6757c62a286e541b9bef36a97d1f9
+ms.openlocfilehash: b1f368973d274ae4000da60bbb98af4fcf6340bb568258f7ac61f9b00048143f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2021
-ms.locfileid: "114703343"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424663"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma
 

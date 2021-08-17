@@ -1,6 +1,6 @@
 ---
-title: DA0002-VSPerfCorProf.dll eksik | Microsoft Docs
-description: Bu uyarı, profil oluşturucu verileri koleksiyonu için komut satırı araçları, gerekli ortam değişkenlerini başlatmak için VSPerfCLREnv. cmd aracını kullanmadan veya Profil Oluşturma Araçları başlatıldığında başka bir profil oluşturucu çalışıyorsa oluşur.
+title: DA0002 - VSPerfCorProf.dll eksik | Microsoft Docs
+description: Profil oluşturma verileri koleksiyonu için komut satırı araçları, gerekli ortam değişkenlerini başlatmak için VSPerfCLREnv.cmd aracı kullanılmadan kullanılırsa veya profil oluşturma başlatılırken başka bir profil Profil Oluşturma Araçları oluşur.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,31 +12,32 @@ ms.assetid: 76e614b3-ad7e-4b92-b7be-88dc1329be1d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 763a28dcb2200549b13b3562ffe3ab9fa629cdc5
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: ba9edb5318bfd1daa77d08873b94db12afcbe3551c044b06e7e88698e52d6850
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102466186"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368844"
 ---
 # <a name="da0002-vsperfcorprofdll-is-missing"></a>DA0002: VSPerfCorProf.dll eksik
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0002|
-|Kategori|Profil Oluşturma Araçları kullanımı|
+|Kural Kimliği|DA0002|
+|Kategori|Profil Oluşturma Araçları Kullanımı|
 |Profil oluşturma yöntemleri|VSPerfCmd ve VSPerfASPNETCmd komut satırı araçlarını kullanarak profil oluşturma|
-|İleti|Dosya, *VSPerfCLREnv. cmd* ile ortam değişkenlerini düzgün şekilde ayarlamadan toplanmış gibi görünüyor. Yönetilen ikililerin sembolleri çözümlenmeyebilir.|
+|İleti|*VsPerfCLREnv.cmd* ile ortam değişkenlerini düzgün ayarlamadan dosyanın toplanmış olduğu görünüyor. Yönetilen ikili dosyalar için semboller çözümlenebilmiyor olabilir.|
 |Kural türü|Bilgi|
 
 ## <a name="cause"></a>Nedeni
- Profil Oluşturucu, profil oluşturma çalışması sırasında *VSPerfCorProf.dll* bulamadı. Bu uyarı, profil oluşturucu verileri koleksiyonu için komut satırı araçları, gerekli ortam değişkenlerini başlatmak için *VSPerfCLREnv. cmd* aracı kullanılmadan kullanıldığında oluşur. Uyarı, Profil Oluşturma Araçları başlatıldığında başka bir profil oluşturucu çalışıyorsa de tetikde olur.
+ Profil oluşturma çalıştırması *sırasındaVSPerfCorProf.dll* profil oluşturma profili bulamadı. Profil oluşturma verileri koleksiyonu için komut satırı araçları, gerekli ortam değişkenlerini başlatmak için *VSPerfCLREnv.cmd* aracı kullanılmadan kullanılırsa bu uyarı oluşur. Uyarı, başka bir profil oluşturma profili oluşturma başlatıcısı çalıştırılıyorsa Profil Oluşturma Araçları olabilir.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Profil Oluşturucu için bir profil oluşturma çalıştırılmadan önce, .NET Framework ikili dosyalarında sembolleri çözümlemek üzere belirli ortam değişkenlerinin ayarlanması gerekir. Bu uyarı, profil oluşturma verileri toplanmadan önce *VSPerfCLREnv. cmd* aracının çalıştırılmadığını önerir. Yönetilen ikililerin sembolleri çözümlenmeyebilir. Komut satırından Profil Oluşturma Araçları kullanma hakkında daha fazla bilgi için, bkz [. komut satırından profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ Belirli ortam değişkenleri, profil oluşturma çalışmadan önce, profil oluşturma ikilileri içinde sembolleri çözümlemek .NET Framework gerekir. Bu uyarı, profil oluşturma *verileri toplanmadan önce VSPerfCLREnv.cmd* aracının çalıştırılamamay olduğunu önerir. Yönetilen ikili dosyalar için semboller çözümlenebilmiyor olabilir. Komut satırına ilişkin Profil Oluşturma Araçları daha fazla bilgi için bkz. [Komut satırı profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md)
 
-## <a name="how-to-fix-violations"></a>İhlalleri çözme
- Profil Oluşturma Araçları içinde komut satırı araçlarını kullanarak yönetilen uygulamalar profilini oluştururken [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , veri toplamaya başlamadan önce [VSPerfCLREnv](../profiling/vsperfclrenv.md) komut satırı aracını çalıştırın.
+## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
+ Profil Oluşturma Araçları'daki komut satırı araçlarını kullanarak yönetilen uygulamaların profilini larken, veri toplamaya başlamadan önce [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [VSPerfCLREnv](../profiling/vsperfclrenv.md) komut satırı aracını çalıştırın.

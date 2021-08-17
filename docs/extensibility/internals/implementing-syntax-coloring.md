@@ -1,6 +1,6 @@
 ---
 title: Sözdizimi renklendirme uygulama | Microsoft Docs
-description: Yönetilen paket çerçevesinin (MPF) dil hizmeti özelliklerini kullanarak Visual Studio 'da söz dizimi renklendirmesini uygulamayı öğrenin.
+description: yönetilen paket çerçevesinin (mpf) dil hizmeti özelliklerini kullanarak Visual Studio söz dizimi renklendirmesinin nasıl uygulanacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,19 +12,20 @@ ms.assetid: 96e762ca-efd0-41e7-8958-fda4897c8c7a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c46cea481eceadef5118388633f84402870a209
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8170ed2791d746bc167f23d6b30c251aa731b129c2a153a4bae99af5ccf8a7f0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069614"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375967"
 ---
 # <a name="implementing-syntax-coloring"></a>Söz Dizimi Renklendirmesi Uygulama
 Dil hizmeti söz dizimi renklendirmesi sağlıyorsa, ayrıştırıcı bir metin satırını renklenebilir öğelerin dizisine dönüştürür ve bu renklenebilir öğelere karşılık gelen belirteç türlerini döndürür. Ayrıştırıcı, renklenebilir öğeler listesine ait olan belirteç türlerini döndürmelidir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] renk penceresindeki her renklenebilir öğeyi, uygun belirteç türüne Colorizer nesnesi tarafından atanan özniteliklere göre görüntüler.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir Ayrıştırıcı arabirimi belirtmez ve ayrıştırıcı uygulamasını tamamen sizin için yapın. Ancak, Visual Studio dil paketi projesinde varsayılan bir Ayrıştırıcı uygulamasının sağlanması gerekir. Yönetilen kod için, yönetilen paket çerçevesi (MPF), metin renklendirme için kapsamlı destek sağlar.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir Ayrıştırıcı arabirimi belirtmez ve ayrıştırıcı uygulamasını tamamen sizin için yapın. ancak, Visual Studio dil paketi projesinde varsayılan bir ayrıştırıcı uygulamasının sağlanması gerekir. Yönetilen kod için, yönetilen paket çerçevesi (MPF), metin renklendirme için kapsamlı destek sağlar.
 
  Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Sözdizimi renklendirmesinin yeni yolu hakkında daha fazla bilgi edinmek için bkz. [Izlenecek yol: metin vurgulama](../../extensibility/walkthrough-highlighting-text.md).
 

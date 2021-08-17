@@ -10,14 +10,15 @@ ms.assetid: c9f8eea2-c964-485d-9ad0-55a4bf425ae7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5a8d34c5a0e39b52949c1b60a6e73d18fff3d26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4a183a94e90a5b69c64b3a0bc709a20e478aaac711075c4881abc0039ad6e9e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954312"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369000"
 ---
 # <a name="c-library-reference"></a>C++ Kitaplığı başvurusu
 

@@ -1,6 +1,6 @@
 ---
-title: MSBuild koşullu yapılar | Microsoft Docs
-description: MSBuild 'in, seçme, ne zaman ve Otherwise öğelerinden koşullu işlemeye yönelik bir mekanizma sağladığını öğrenin.
+title: MSBuild Koşullu yapılar | Microsoft Docs
+description: MSBuild, seçim, ne zaman ve aksi takdirde öğesi ile koşullu işleme mekanizması sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,18 +22,19 @@ ms.assetid: dd54258e-f4fb-448f-9da4-d1817e0cbaf2
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 10b26e9bdc0c632f924a29cd2ad09c21f8048d31
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0cef675b46b32e6465f7f0256b0e60407742215852dc13ce27ff7354db0044bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919135"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427580"
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild koşullu yapıları
 
-MSBuild,/veya öğesini [Seç](../msbuild/choose-element-msbuild.md), [ne zaman](../msbuild/when-element-msbuild.md)ve [otherwise](../msbuild/otherwise-element-msbuild.md) öğeleri ile işlemek için bir mekanizma sağlar.
+MSBuild, [seçim](../msbuild/choose-element-msbuild.md), [ne zaman](../msbuild/when-element-msbuild.md)ve [Otherwise](../msbuild/otherwise-element-msbuild.md) öğelerinden birini kullanarak veya işlemek için bir mekanizma sağlar.
 
 ## <a name="use-the-choose-element"></a>Seçme öğesini kullanın
 
@@ -95,7 +96,7 @@ Bu örnekte, bir derleyici sabitindeki bir koşul `DEFINED_CONSTANT` kullanılı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğe seç (MSBuild)](../msbuild/choose-element-msbuild.md)
+- [Öğe seçin (MSBuild)](../msbuild/choose-element-msbuild.md)
 - [Ne zaman öğesi (MSBuild)](../msbuild/when-element-msbuild.md)
 - [Otherwise öğesi (MSBuild)](../msbuild/otherwise-element-msbuild.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

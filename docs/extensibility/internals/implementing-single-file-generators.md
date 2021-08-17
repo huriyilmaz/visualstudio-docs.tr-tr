@@ -1,6 +1,6 @@
 ---
-title: Single-File Oluşturucuları | Microsoft Docs
-description: IVsSingleFileGenerator arabirimini uygulayan özel bir araç kullanarak Visual Basic ve Visual C# proje sistemlerini Visual Studio.
+title: Single-File Teiciler uygulama | Microsoft Docs
+description: Visual Studio ' de Visual Basic ve Visual C# proje sistemlerini genişletmek için ıssingtafilegenerator arabirimini uygulayan özel bir aracın nasıl kullanılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,23 +12,24 @@ ms.assetid: fe9ef6b6-4690-4c2c-872c-301c980d17fe
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11ce8a69841d18d383e9d8e12c14d7af652d9cb8
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: fd3f5dbe8c213dc5b579254846e360ee55ab7687e0bf84791cd26fbc50e4bf3c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900050"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376020"
 ---
 # <a name="implementing-single-file-generators"></a>Tek Dosya Oluşturucular Ekleme
-bazen tek dosya oluşturucu olarak da adlandırılan özel bir araç, 'de ve proje sistemlerini [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] genişletmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanılabilir. Özel araç, arabirimi uygulayan bir COM <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> bileşenidir. Özel bir araç, bu arabirimi kullanarak tek bir giriş dosyasını tek bir çıkış dosyasına dönüştürer. Dönüştürmenin sonucu kaynak kod veya yararlı olan başka bir çıkış olabilir. Özel araç tarafından oluşturulan kod dosyalarının iki örneği, bir görsel tasarımcıda yapılan değişikliklere yanıt olarak oluşturulan kod ve Web Hizmetleri Açıklama Dili (WSDL) kullanılarak oluşturulan dosyalardır.
+Tek bir dosya Oluşturucu olarak da adlandırılan özel bir araç, [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] içindeki ve proje sistemlerini genişletmek için kullanılabilir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Özel bir araç, arabirimini uygulayan bir COM bileşenidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> . Bu arabirimi kullanarak, özel bir araç tek bir giriş dosyasını tek bir çıktı dosyasına dönüştürür. Dönüştürmenin sonucu, kaynak kodu veya yararlı olan herhangi bir çıkış olabilir. Bir görsel tasarımcıda ve Web Hizmetleri Açıklama Dili (WSDL) kullanılarak oluşturulan dosyalardaki değişikliklere yanıt olarak oluşturulan özel araç tarafından oluşturulan kod dosyaları için iki örnek kod verilebilir.
 
- Özel bir araç yüklendiğinde veya giriş dosyası kaydedildikçe, proje sistemi yöntemini çağırarak bir geri çağırma arabirimine başvuru iletir ve aracın ilerlemesini kullanıcıya <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress> bildirebilinir.
+ Özel bir araç yüklendiğinde veya giriş dosyası kaydedildiğinde, proje sistemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> yöntemini çağırır ve bir geri çağırma arabirimine bir başvuru geçirir ve bu da <xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress> aracın ilerlemesini kullanıcıya bildirebilirler.
 
- Özel aracın oluşturulan çıktı dosyası, giriş dosyasına bağımlılığı olan projeye eklenir. Proje sistemi, özel aracın uygulaması tarafından döndürülen dizeye göre çıkış dosyasının adını otomatik olarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> belirler.
+ Özel aracın oluşturduğu çıkış dosyası, giriş dosyasına bir bağımlılık ile projeye eklenir. Proje sistemi, özel aracın uygulamasının tarafından döndürülen dizeye göre çıkış dosyasının adını otomatik olarak belirler <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> .
 
- Özel bir aracın arabirimini uygulaması <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> gerekir. İsteğe bağlı olarak, özel araçlar <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite> giriş dosyası dışında kaynaklardan bilgi almak için arabirimini destekler. Her durumda, özel bir araç kullanamadan önce bunu sisteme veya yerel kayıt defterine [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaydetmeniz gerekir. Özel araçları kaydetme hakkında daha fazla bilgi için [bkz. Tek Dosya Oluşturucuları Kaydetme.](../../extensibility/internals/registering-single-file-generators.md)
+ Özel bir aracın arabirimini uygulaması gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> . İsteğe bağlı olarak, Özel Araçlar <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite> giriş dosyası dışındaki kaynaklardan bilgi almak için arabirimi destekler. Herhangi bir durumda, özel bir araç kullanabilmeniz için, bunu sisteme veya [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yerel kayıt defterine kaydetmeniz gerekir. Özel araçları kaydetme hakkında daha fazla bilgi için bkz. [tek dosya](../../extensibility/internals/registering-single-file-generators.md)oluşturucularını kaydetme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Türleri Görsel Tasarımcıların Kullanımına Sunma](../../extensibility/internals/exposing-types-to-visual-designers.md)

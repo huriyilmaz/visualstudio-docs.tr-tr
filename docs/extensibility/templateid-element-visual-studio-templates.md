@@ -1,5 +1,5 @@
 ---
-title: TemplateId öğesi (Visual Studio şablonları) | Microsoft Docs
+title: templateıd öğesi (Visual Studio şablonları) | Microsoft Docs
 description: TemplateId öğesi hakkında bilgi edinin ve TemplateGroupID öğesi tarafından bir öğe şablonları grubuna kategorilere ayrılmış bir öğe şablonu için bir tanımlayıcı belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e33f2d5c424e5d48cff212dc736bbc13e58801d5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: aa94da28cf02916b0961da722785c4f51d14d171ca61b69630f1a6c027491468
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056018"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388181"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID Öğesi (Visual Studio Şablonları)
 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) öğesi tarafından bir öğe şablonları grubuna kategorize edilmiş bir öğe şablonu için tanımlayıcıyı belirtir.
@@ -48,7 +48,7 @@ ms.locfileid: "105056018"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Öğe `string` tarafından bir öğe şablonları grubuna kategorize edilmiş bir öğe şablonu için tanımlayıcıyı temsil eden bir `TemplateGroupID` .

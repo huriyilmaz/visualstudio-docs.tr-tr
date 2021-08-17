@@ -8,14 +8,15 @@ ms.assetid: 36ea793b-3832-41a1-b906-69e680ad5e1d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a52322e575dc201a6bf1648af93d813828e0b17
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 82c875f115611c1e28af39874ca8f384b0afb067022f6539b0f2ff5d9855f77a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113223013"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375122"
 ---
 # <a name="walkthrough-create-an-sdk-using-c"></a>İzlenecek yol: C++ kullanarak SDK oluşturma
 bu izlenecek yol, yerel bir C++ matematik kitaplığı sdk 'sı oluşturmayı, SDK 'nın Visual Studio uzantısı (vsıx) olarak paketlemeyi ve sonra bir uygulama oluşturmak için nasıl kullanılacağını gösterir. İzlenecek yol aşağıdaki adımlara ayrılmıştır:

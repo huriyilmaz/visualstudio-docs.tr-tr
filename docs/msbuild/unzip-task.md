@@ -1,6 +1,6 @@
 ---
 title: Sıkıştırılmış görev | Microsoft Docs
-description: MSBuild unzip görevinin parametreleri ve kullanımı hakkında bilgi edinin. Bu, bir. zip arşivini belirtilen bir konuma kaldırır.
+description: MSBuild Unzip görevinin, belirli bir konuma bir .zip arşivlemesini içeren parametreler ve kullanımları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -22,21 +22,22 @@ caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 213d37108e37b9002b2241e6c0806d6d7db7caf6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dc0fe999e6a86f405208c0da3b0b9008a3214db2afb70e5307375d998e7f6b3e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902486"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369559"
 ---
 # <a name="unzip-task"></a>Unzip görevi
 
-Belirtilen konuma bir *. zip* arşivi olarak UnZIP.
+Belirtilen konuma bir *.zip* Arşivi kaldırır.
 
 >[!NOTE]
->`Unzip`Görev yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
+>`Unzip`görev yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir.
 
 ## <a name="parameters"></a>Parametreler
 

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Windows için Otomasyon sağlama | Microsoft Docs'
-description: Microsoft. VisualStudio. Shell. Interop yöntemlerini kullanarak Visual Studio 'da belge ve araç pencereleri için nasıl Otomasyon sağlayacağınızı öğrenin.
+description: Microsoft. VisualStudio. Shell. ınterop yöntemlerini kullanarak Visual Studio belge ve araç pencereleri için nasıl otomasyon sağlayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,14 +11,15 @@ ms.assetid: 512ab2a4-7987-4912-8f40-8804bf66f829
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 774b32dc1554fb6d6466be7e915fbaeea8185798
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8d84e58bb91d49382fe4713c9ecdb6ca081d13141ef3cc2080781ca2e6b666f1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078753"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388649"
 ---
 # <a name="how-to-provide-automation-for-windows"></a>Nasıl yapılır: Windows için Otomasyon sağlama
 

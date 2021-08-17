@@ -1,6 +1,6 @@
 ---
 title: StartTrackingContext | Microsoft Docs
-description: MSBuild StartTrackingContext için bir izleme bağlamı Başlatan parametreleri, gereksinimleri ve dönüş değerini öğrenin.
+description: İzleme bağlamını başlatan StartTrackingContext MSBuild parametreleri, gereksinimleri ve dönüş değerini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,18 +15,19 @@ ms.assetid: 720cd295-38e7-4974-86db-b8106b1207ba
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 15121f050fd5af9a5cb36ce15ffc2161076df06d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d0404f8ebceb66284f58fdfcc7a73f44b6e568fc78ff84cd9de124c7f75b1c44
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99929127"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369793"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
 
-Bir izleme bağlamı başlatın.
+İzleme bağlamı başlatma.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,18 +37,18 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
 
 #### <a name="parameters"></a>Parametreler
 
-'ndaki `intermediateDirectory`
+[in] `intermediateDirectory`
 
- İzleme günlüğünün depolayabileceği dizin.
+ İzleme günlüğünün depolan olduğu dizin.
 
-'ndaki `taskName`
+[in] `taskName`
 
  İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.
 
 ## <a name="return-value"></a>Döndürülen değer
 
- İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
+ İzleme bağlamı oluşturulduktan sonra **SUCCEEDED** bit kümesine sahip **bir HRESULT.**
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker. h*
+ **Üst bilgi:** *FileTracker.h*

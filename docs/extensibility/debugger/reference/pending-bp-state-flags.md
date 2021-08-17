@@ -11,17 +11,18 @@ ms.assetid: 85522449-3fd8-4da5-b0fe-a43160e0c33b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c5e462c460b5ae41f0a1a33db62a058b1da6fa15
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7b70553407f295bad1c227a2aacc41a34463726490eb959bace93dd7c55c1398
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086462"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388948"
 ---
 # <a name="pending_bp_state_flags"></a>PENDING_BP_STATE_FLAGS
 Bekleyen kesme noktası durum bayraklarını belirtir.
@@ -44,19 +45,19 @@ public enum enum_PENDING_BP_STATE_FLAGS {
 ```
 
 ## <a name="fields"></a>Alanlar
- `PBPSF_NONE` Tutucu.
+ `PBPSF_NONE` Yer tutucu.
 
- `PBPSF_VIRTUALIZED` Her yeni kod yüklendiğinde bağlanacak bir sanallaştırılmış bekleyen kesme noktası belirtir.
+ `PBPSF_VIRTUALIZED` Yeni kod her yüklendiğinde bağlanacak olan bir sanallaştırılmış bekleyen kesme noktası belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- `flags` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapısının üyesi için kullanılır.
+ PENDING_BP_STATE_INFO `flags` [yapısının üyesi için](../../../extensibility/debugger/reference/pending-bp-state-info.md) kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

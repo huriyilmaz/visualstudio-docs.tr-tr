@@ -1,6 +1,6 @@
 ---
-title: Araçları sürüm ayarlarını geçersiz kılma | Microsoft Docs
-description: Projeler ve çözümler için MSBuild Araç takımının değerini değiştirmek veya geçersiz kılmak için kullanabileceğiniz çeşitli yollar edinin.
+title: ToolsVersion Ayarlar |'i geçersiz kılma Microsoft Docs
+description: Projeler ve çözümler için MSBuild Araç Kümesi'nin değerini değiştirme veya geçersiz kılmanın çeşitli yollarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,42 +11,43 @@ ms.assetid: ccd42c07-0fb6-4e8b-9ebb-a6a6db18aa2e
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 855a07ab21d0396fea4605e5117e312608cb625e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 18b44ce11ec7e20dcf109f2b66a72d61b2a981dd08adb35349ed833b1b8925f0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918885"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370040"
 ---
-# <a name="override-toolsversion-settings"></a>Araçları sürüm ayarlarını geçersiz kıl
+# <a name="override-toolsversion-settings"></a>ToolsVersion ayarlarını geçersiz kılma
 
-Proje ve çözümlerin araç takımını üç şekilde değiştirebilirsiniz:
+Projeler ve çözümler için Araç Kümesi'nin üç farklı yolu vardır:
 
-1. Bir `-ToolsVersion` `-tv` komut satırından proje veya çözüm oluştururken anahtarı (veya kısaca) kullanarak.
+1. Proje veya `-ToolsVersion` çözümü komut satırdan derlemek için anahtarını `-tv` (veya kısaca ) kullanarak.
 
-2. `ToolsVersion`MSBuild görevinde parametresini ayarlayarak.
+2. Bu görev `ToolsVersion` için parametresini MSBuild.
 
-3. `$(ProjectToolsVersion)`Bir çözüm içindeki bir projede özelliğini ayarlayarak. Bu, diğer projelerden farklı bir araç takımı sürümüne sahip bir çözümde proje oluşturmanıza olanak sağlar.
+3. Bir çözüm `$(ProjectToolsVersion)` içindeki bir proje üzerinde özelliğini ayarerek. Bu, diğer projelerden farklı bir Araç Kümesi sürümüne sahip bir çözümde proje derlemenizi sağlar.
 
-## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>Komut satırı derlemelerindeki projelerin ve çözümlerin araçları sürüm ayarlarını geçersiz kılın
+## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>Komut satırı derlemelerinde projelerin ve çözümlerin ToolsVersion ayarlarını geçersiz kılma
 
- Visual Studio projeleri genellikle proje dosyasında belirtilen araçları sürümü ile derlense de, `-ToolsVersion` `-tv` Bu değeri geçersiz kılmak ve projeleri ve proje-proje bağımlılıklarını farklı bir araç kümesiyle derlemek için komut satırındaki (veya) anahtarını kullanabilirsiniz. Örneğin:
+ Visual Studio projelerde genellikle proje dosyasında belirtilen ToolsVersion ile derleme yapılsa da, bu değeri geçersiz kılmak ve tüm projeleri ve projeden projeye bağımlılıklarını farklı bir Araç Kümesi ile derlemek için komut satırı anahtarını `-ToolsVersion` `-tv` kullanabilirsiniz. Örnek:
 
 ```cmd
 msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 ```
 
- Bu örnekte, tüm projeler, araçları sürüm 12,0 kullanılarak oluşturulmuştur. (Ancak, bu konunun ilerleyen kısımlarında yer alarak [öncelik sırası](#order-of-precedence) bölümüne bakın.)
+ Bu örnekte tüm projeler ToolsVersion 12.0 kullanılarak hazır edilmiştir. (Ancak, bu konunun [ilerleyen kısımlarında Yer alan](#order-of-precedence) Öncelik sırası bölümüne bakın.)
 
- `-tv`Komut satırında anahtarı kullanırken, isteğe bağlı olarak bu `$(ProjectToolsVersion)` özelliği, çözümdeki diğer projelerden farklı bir bir bir bir
+ Komut satırı anahtarını kullanırken, isteğe bağlı olarak tek tek projelerde özelliğini kullanarak bunları çözümde yer alan diğer projelerden farklı `-tv` `$(ProjectToolsVersion)` bir ToolsVersion değeriyle derlemek için kullanabilirsiniz.
 
-## <a name="override-the-toolsversion-settings-using-the-toolsversion-parameter-of-the-msbuild-task"></a>MSBuild görevinin araçları sürümü parametresini kullanarak, araçları sürüm ayarlarını geçersiz kılın
+## <a name="override-the-toolsversion-settings-using-the-toolsversion-parameter-of-the-msbuild-task"></a>MSBuild görevinin ToolsVersion parametresini kullanarak ToolsVersion MSBuild geçersiz kılın
 
- MSBuild görevi, bir projenin başka bir proje oluşturması için birincil anlamına gelir. MSBuild görevini, projede belirtilenden farklı bir araçları sürümüne sahip bir proje oluşturmak üzere etkinleştirmek için, adlı isteğe bağlı bir görev parametresi sağlar `ToolsVersion` . Aşağıdaki örnek, bu parametrenin nasıl kullanılacağını gösterir:
+ Bu MSBuild, bir projenin başka bir proje oluşturması için birincil yol olarak görevdir. Bir MSBuild projesinde belirtilenden farklı ToolsVersion değerine sahip bir proje derlemesini sağlamak için, adlı isteğe bağlı bir görev parametresi `ToolsVersion` sağlar. Aşağıdaki örnek, bu parametrenin nasıl kullanılageldi:
 
-1. *ProjectA. proj* adlı ve aşağıdaki kodu içeren bir dosya oluşturun:
+1. *projectA.proj* adlı ve aşağıdaki kodu içeren bir dosya oluşturun:
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -64,7 +65,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     </Project>
     ```
 
-2. *ProjectB. proj* adlı ve aşağıdaki kodu içeren başka bir dosya oluşturun:
+2. *projectB.proj* adlı ve aşağıdaki kodu içeren başka bir dosya oluşturun:
 
     ```xml
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -84,9 +85,9 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     msbuild projectA.proj -t:go -toolsversion:3.5
     ```
 
-4. Aşağıdaki çıktı görüntülenir. İçin `projectA` , `-toolsversion:3.5` komut satırındaki ayarı `ToolsVersion=12.0` etiketindeki ayarı geçersiz kılar `Project` .
+4. Aşağıdaki çıkış görüntülenir. `projectA`için, `-toolsversion:3.5` komut satırı ayarı etiketinde ayarı `ToolsVersion=12.0` geçersiz `Project` kılar.
 
-     `ProjectB` , içinde bir görev tarafından çağırılır `projectA` . Bu görev `ToolsVersion=2.0` , için diğer ayarları geçersiz kılar `ToolsVersion` `projectB` .
+     `ProjectB` , içinde bir görev tarafından `projectA` çağrılır. Bu görev, `ToolsVersion=2.0` için diğer ayarları geçersiz `ToolsVersion` kılan `projectB` içerir.
 
     ```
     Output:
@@ -101,37 +102,37 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
 ## <a name="order-of-precedence"></a>Öncelik sırası
 
- Öncelik sırası, en yüksekten en düşüğe, şu olduğunu tespit etmek için kullanılır `ToolsVersion` :
+ Öncelik sırası (en yüksekten en düşüke) belirlemek için `ToolsVersion` kullanılır:
 
-1. `ToolsVersion`MSBuild görevinde, varsa projeyi oluşturmak için kullanılan öznitelik.
+1. Varsa, `ToolsVersion` MSBuild oluşturmak için kullanılan MSBuild özniteliği.
 
-2. `-toolsversion` `-tv` Varsa, msbuild.exe komutunda kullanılan (veya) anahtarı.
+2. Varsa, msbuild.exe komutunda `-toolsversion` `-tv` kullanılan (veya ) anahtarı.
 
-3. Ortam değişkeni `MSBUILDTREATALLTOOLSVERSIONSASCURRENT` ayarlandıysa, geçerli öğesini kullanın `ToolsVersion` .
+3. Ortam değişkeni `MSBUILDTREATALLTOOLSVERSIONSASCURRENT` ayarlanmışsa geçerli değerini `ToolsVersion` kullanın.
 
-4. Ortam değişkeni `MSBUILDTREATHIGHERTOOLSVERSIONASCURRENT` ayarlandıysa ve `ToolsVersion` Proje dosyasında tanımlı değeri geçerli olandan büyükse `ToolsVersion` , geçerli ' i kullanın `ToolsVersion` .
+4. Ortam değişkeni ayarlanmışsa ve proje dosyasında tanımlanan değeri geçerli olandan `MSBUILDTREATHIGHERTOOLSVERSIONASCURRENT` `ToolsVersion` büyükse `ToolsVersion` geçerli değerini `ToolsVersion` kullanın.
 
-5. Ortam değişkeni `MSBUILDLEGACYDEFAULTTOOLSVERSION` ayarlandıysa veya `ToolsVersion` ayarlanmamışsa, aşağıdaki adımlar kullanılır:
+5. Ortam değişkeni `MSBUILDLEGACYDEFAULTTOOLSVERSION` ayarlanmışsa veya `ToolsVersion` ayarlanmazsa aşağıdaki adımlar kullanılır:
 
-    1. `ToolsVersion`Proje dosyasının [Proje](../msbuild/project-element-msbuild.md) öğesinin özniteliği. Bu öznitelik yoksa, geçerli sürüm olduğu varsayılır.
+    1. Proje `ToolsVersion` dosyasının [Project](../msbuild/project-element-msbuild.md) öğesinin özniteliği. Bu öznitelik yoksa, geçerli sürüm olduğu varsayılır.
 
-    2. *MSBuild.exe.config* dosyasındaki varsayılan Araçlar sürümü.
+    2. MSBuild.exe.config *dosyasındaki varsayılanMSBuild.exe.config* sürümü.
 
-    3. Kayıt defterindeki varsayılan Araçlar sürümü. Daha fazla bilgi için bkz. [Standart ve özel araç takımı yapılandırması](../msbuild/standard-and-custom-toolset-configurations.md).
+    3. Kayıt defterindeki varsayılan araçlar sürümü. Daha fazla bilgi için [bkz. Standart ve özel Araç Kümesi yapılandırmaları.](../msbuild/standard-and-custom-toolset-configurations.md)
 
-6. Ortam değişkeni `MSBUILDLEGACYDEFAULTTOOLSVERSION` ayarlanmamışsa, aşağıdaki adımlar kullanılır:
+6. Ortam değişkeni `MSBUILDLEGACYDEFAULTTOOLSVERSION` ayarlanmazsa aşağıdaki adımlar kullanılır:
 
-    1. Ortam değişkeni `MSBUILDDEFAULTTOOLSVERSION` bir `ToolsVersion` varsa, bunu kullanın.
+    1. Ortam değişkeni mevcut `MSBUILDDEFAULTTOOLSVERSION` bir `ToolsVersion` değişkene ayarlanırsa, bunu kullanın.
 
-    2. `DefaultOverrideToolsVersion` *MSBuild.exe.config*' de ayarlanırsa, onu kullanın.
+    2. içinde `DefaultOverrideToolsVersion` *ayarlanmışsaMSBuild.exe.config* kullanın.
 
-    3. `DefaultOverrideToolsVersion`Kayıt defterinde ayarlandıysa, onu kullanın.
+    3. Kayıt `DefaultOverrideToolsVersion` defterinde ayarlanmışsa bunu kullanın.
 
-    4. Aksi takdirde, geçerli öğesini kullanın `ToolsVersion` .
+    4. Aksi takdirde, geçerli `ToolsVersion` kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çoklu Sürüm Desteği](../msbuild/msbuild-multitargeting-overview.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [Araç Takımı (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)
-- [Standart ve özel araç takımı yapılandırması](../msbuild/standard-and-custom-toolset-configurations.md)
+- [Standart ve özel Araç Kümesi yapılandırmaları](../msbuild/standard-and-custom-toolset-configurations.md)

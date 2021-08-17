@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: bir silici yöntemi ekleme | Microsoft Docs'
-description: Son kullanıcının bir SharePoint sitesindeki dış listeden bir veri kaydını silebilmesi için, Visual Studio 'nun BDC Tasarımcısı 'nda bir deleter yöntemi ekleme hakkında bilgi edinin.
+description: Visual Studio BDC tasarımcısında bir deleter yöntemi eklemeyi öğrenin. bu nedenle, son kullanıcının bir SharePoint sitesindeki dış listeden bir veri kaydını silebilmesi için.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,23 +19,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: f5c9dc0a5ca6b7651b4ddc1f4b58a8b72305a1a5
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 2ecdb9a9dde1ac10e1d4037078fe272f7e3229952830bc6fca3308e8f7bf4105
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106218002"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121385321"
 ---
 # <a name="how-to-add-a-deleter-method"></a>Nasıl yapılır: bir silici yöntemi ekleme
-  Bir son kullanıcının, modele bir deleter yöntemi ekleyerek bir SharePoint sitesindeki dış listeden bir veri kaydını silmesine izin verebilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+  son kullanıcının, modele bir deleter yöntemi ekleyerek bir SharePoint sitesindeki dış listeden bir veri kaydını silmesine olanak sağlayabilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-deleter-method"></a>Bir deleter yöntemi oluşturmak için
 
 1. **IVB tasarımcısında** bir varlık seçin.
 
-2. Menü çubuğunda,   >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. menü çubuğunda   >  **diğer Windows**  >  **BDC yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 

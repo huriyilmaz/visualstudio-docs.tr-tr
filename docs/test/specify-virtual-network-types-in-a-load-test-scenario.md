@@ -14,12 +14,13 @@ ms.assetid: 3c4f7874-081a-4ec4-9510-4d6d7d863a11
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 7783c8f90f1e289f8e13ed2bd85e8263edec3408
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: c2830b7bc78dd3b900692ca99b5fcc83b724e774736d7d2e2bdd8fee9a7cdbfc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894562"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424807"
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>Yük testi senaryosunda sanal ağ türlerini belirtme
 
@@ -41,7 +42,7 @@ Daha fazla bilgi için bkz. [karışım denetimi hakkında](../test/specify-virt
 
 ## <a name="true-network-emulation"></a>Gerçek ağ öykünmesi
 
-Visual Studio, yük testleri de dahil olmak üzere tüm test türleri için yazılım tabanlı doğru ağ öykünmesi kullanır. Gerçek ağ öykünmesi, ağ paketlerinin doğrudan işlemesini sağlayarak ağ koşullarına benzetir. Gerçek ağ öykünücüsü, Ethernet gibi güvenilir bir fiziksel bağlantı kullanarak hem kablolu hem de kablosuz ağların davranışını taklit edebilir. Aşağıdaki ağ öznitelikleri, gerçek ağ öykünmesine dahil edilir:
+Visual Studio yük testleri de dahil olmak üzere tüm test türleri için yazılım tabanlı doğru ağ öykünmesi kullanır. Gerçek ağ öykünmesi, ağ paketlerinin doğrudan işlemesini sağlayarak ağ koşullarına benzetir. Gerçek ağ öykünücüsü, Ethernet gibi güvenilir bir fiziksel bağlantı kullanarak hem kablolu hem de kablosuz ağların davranışını taklit edebilir. Aşağıdaki ağ öznitelikleri, gerçek ağ öykünmesine dahil edilir:
 
 - Ağ üzerinden gidiş dönüş süresi (gecikme)
 

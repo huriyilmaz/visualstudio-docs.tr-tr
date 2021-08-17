@@ -1,6 +1,6 @@
 ---
 title: Etki Alanı Özellik Değeri Değişiklik İşleyicileri
-description: Etki alanına özgü bir dilde kullanılmaktadır etki alanı özellik değeri Visual Studio işleyicileri hakkında bilgi edinmek.
+description: Visual Studio etki alanına özgü bir dilde kullanılabilen etki alanı özellik değeri değişiklik işleyicileri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
@@ -9,24 +9,25 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c6cdb027bafdf4d1fe7689d7dd30d697b539370
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: bfd2a8d12d61f795afb07dd250fef312b1720b627ac2888bc390a73a071985c4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389003"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370755"
 ---
 # <a name="domain-property-value-change-handlers"></a>Etki alanı özellik değeri değişiklik işleyicileri
 
-Etki Visual Studio etki alanına özgü bir dilde, bir etki alanı özelliğinin değeri değişirse, ve yöntemleri etki alanı özellik `OnValueChanging()` `OnValueChanged()` işleyicisinde çağrılır. Değişikliği yanıtlamak için bu yöntemleri geçersiz kılebilirsiniz.
+etki alanına özgü bir dilde Visual Studio, bir etki alanı özelliğinin değeri değiştiğinde, `OnValueChanging()` ve `OnValueChanged()` yöntemleri etki alanı özelliği işleyicisinde çağrılır. Değişikliğe yanıt vermek için bu yöntemleri geçersiz kılabilirsiniz.
 
-## <a name="override-the-property-handler-methods"></a>Özellik İşleyicisi yöntemlerini geçersiz kılma
+## <a name="override-the-property-handler-methods"></a>Özellik Işleyici yöntemlerini geçersiz kıl
 
-Etki alanına özgü dilinizin her etki alanı özelliği, üst etki alanı sınıfının içinde iç içe geçmiş bir sınıf tarafından ele alındı. Adı *PropertyName* PropertyHandler biçimindedir. **Dsl\Generated Code\DomainClasses.cs dosyasında bu özellik işleyicisi sınıfını inceebilirsiniz.** sınıfında, değer `OnValueChanging()` daha önce hemen çağrılır ve değer `OnValueChanged()` değiştikten hemen sonra çağrılır.
+Etki alanına özgü dilinizin her etki alanı özelliği, üst etki alanı sınıfının içinde iç içe yerleştirilmiş bir sınıf tarafından işlenir. Adı *PropertyName* propertyhandler biçimini izler. Bu özellik işleyicisi sınıfını **Dsl\generated Code\DomainClasses.cs** dosyasında inceleyebilirsiniz. Sınıfında, `OnValueChanging()` değer değiştirilmeden hemen önce çağrılır ve `OnValueChanged()` değer değiştirildikten hemen sonra çağrılır.
 
-Örneğin, adlı bir dize etki alanı özelliğine ve adlı bir tamsayı özelliğine sahip `Comment` adlı bir etki alanı `Text` sınıfına sahip olduğunu `TextLengthCount` varsayalım. Dizenin `TextLengthCount` uzunluğunun her zaman içermesi için aşağıdaki kodu Dsl `Text` projesinde ayrı bir dosyaya yazabilirsiniz:
+Örneğin, adında bir `Comment` dize alanı özelliği ve adlı bir tamsayı özelliği olan adlı bir etki alanı sınıfınız olduğunu varsayalım `Text` `TextLengthCount` . `TextLengthCount`Her zaman dize uzunluğunu içermesine neden olmak için `Text` aşağıdaki kodu DSL projesindeki ayrı bir dosyaya yazabilirsiniz:
 
 ```csharp
 // Domain Class "Comment":
@@ -52,27 +53,27 @@ public partial class Comment
 }
 ```
 
-Özellik işleyicileri hakkında aşağıdaki noktalara dikkatin:
+Özellik işleyicileri hakkında aşağıdaki noktalara dikkat edin:
 
-- Özellik işleyicisi yöntemleri, kullanıcı bir etki alanı özelliğinde değişiklik yapar ve program kodu özelliğine farklı bir değer atarken çağrılır.
+- Özellik işleyici yöntemleri, Kullanıcı bir etki alanı özelliğinde değişiklik yaptığında ve program kodu özelliğe farklı bir değer atarken, her ikisi de çağrılır.
 
-- Yöntemler yalnızca değer gerçekten değişirken çağrılır. Program kodu geçerli değere eşit bir değer atarsa işleyici çağrılmaz.
+- Yöntemler yalnızca değeri aslında değiştiğinde çağrılır. Program kodu geçerli değere eşit bir değer atadığında işleyici çağrılmaz.
 
-- Hesaplanan ve özel depolama etki alanı özelliklerinde OnValueChanged ve OnValueChanging yöntemleri yok.
+- Hesaplanan ve özel depolama alanı özelliklerinde OnValueChanged ve OnValueChanging yöntemleri yok.
 
-- Yeni değeri değiştirmek için bir değişiklik işleyicisi kullanılamaz. Bunu yapmak için, örneğin değeri belirli bir aralıkla kısıtlamak için bir `ChangeRule` tanımlayın.
+- Yeni değeri değiştirmek için bir değişiklik işleyicisi kullanamazsınız. Bunu yapmak istiyorsanız, örneğin değeri belirli bir aralığa kısıtlamak için bir tanımlayın `ChangeRule` .
 
-- Bir ilişkinin rolünü temsil eden bir özellik için değişiklik işleyicisi ek olamaz. Bunun yerine, ilişki `AddRule` sınıfında bir `DeleteRule` ve tanımlayın. Bağlantılar oluşturulduğunda veya değiştirlendiğinde bu kurallar tetiklenir. Daha fazla bilgi için [bkz. Kurallar Modelde Değişiklikleri Yayma.](../modeling/rules-propagate-changes-within-the-model.md)
+- Bir ilişkinin rolünü temsil eden bir özelliğe değişiklik işleyicisi ekleyemezsiniz. Bunun yerine, `AddRule` ilişki sınıfında bir ve bir tanımlayın `DeleteRule` . Bu kurallar, bağlantılar oluşturulduğunda veya değiştirildiğinde tetiklenir. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
-### <a name="changes-in-and-out-of-the-store"></a>Mağaza içinde ve dışında yapılan değişiklikler
+### <a name="changes-in-and-out-of-the-store"></a>Mağaza içindeki ve çıkan değişiklikler
 
-Özellik işleyicisi yöntemleri, değişikliği başlatan işlem içinde çağrılır. Bu nedenle, yeni bir işlem açmadan mağazada daha fazla değişiklik yapabilirsiniz. Değişiklikleriniz ek işleyici çağrıları ile sonuçlansa da olabilir.
+Özellik işleyici yöntemleri değişikliği Başlatan işlemin içinde çağırılır. Bu nedenle, yeni bir işlem açmadan mağazada daha fazla değişiklik yapabilirsiniz. Değişiklikleriniz ek işleyici çağrılarına neden olabilirler.
 
-Bir işlem geri alınırken, yeniden kullanılırken veya geri alınırken, mağazada, yani model öğelerinde, ilişkilerde, şekillerde, bağlayıcı diyagramlarında veya bunların özelliklerinde değişiklik yapmamanız gerekir.
+Bir işlem geri alındığında, redone veya geri alındığında mağazada değişiklik yapmamalıdır, diğer bir deyişle, model öğelerinde, ilişkilerde, şekillerde, bağlayıcılar diyagramlarında veya özelliklerinde değişiklik yapmanız gerekmez.
 
-Ayrıca, model dosyadan yüklenirken genellikle değerleri güncelleştirmezsiniz.
+Ayrıca, model dosyadan yüklenirken genellikle değerleri güncelleştiremezsiniz.
 
-Bu nedenle model değişiklikleri aşağıdaki gibi bir test tarafından koruma altındadır:
+Bu nedenle modelde yapılan değişiklikler şöyle bir test tarafından korunmalıdır:
 
 ```csharp
 if (!store.InUndoRedoOrRollback && !store. InSerializationTransaction)
@@ -81,11 +82,11 @@ if (!store.InUndoRedoOrRollback && !store. InSerializationTransaction)
 }
 ```
 
-Buna karşılık, özellik işleyiciniz değişiklikleri depo dışında bir dosyaya, veritabanına veya depo dışı değişkenlere yayırsa, kullanıcı geri almayı veya yeniden almayı çağıran dış değerlerin güncelleştirilsin diye bu değişiklikleri her zaman yapmanız gerekir.
+Buna karşılık, özellik işleyiciniz mağaza dışındaki değişiklikleri (örneğin, bir dosya, veritabanı veya depolama olmayan değişkenler) yaysa, bu değişiklikleri her zaman, Kullanıcı geri alma veya yineleme istediğinde dış değerlerin güncelleştirilmesini sağlayacak şekilde yapmalısınız.
 
-### <a name="cancel-a-change"></a>Değişikliği iptal etme
+### <a name="cancel-a-change"></a>Değişikliği iptal et
 
-Bir değişikliği önlemek için geçerli işlemi geri almak gerekir. Örneğin, bir özelliğin belirli bir aralıkta kalmasını sağlamak istiyor olabilir.
+Bir değişikliği engellemek isterseniz, geçerli işlemi geri alabilirsiniz. Örneğin, bir özelliğin belirli bir Aralık içinde kalmasını sağlamak isteyebilirsiniz.
 
 ```csharp
 if (newValue > 10)
@@ -95,26 +96,26 @@ if (newValue > 10)
 }
 ```
 
-### <a name="alternative-technique-calculated-properties"></a>Alternatif teknik: Hesaplanmış Özellikler
+### <a name="alternative-technique-calculated-properties"></a>Alternatif Teknik: hesaplanmış Özellikler
 
-Önceki örnekte OnValueChanged() işlevinin değerleri bir etki alanı özelliğinden diğerine yayma için nasıl kullanılası açıklandı. Her özelliğin kendi depolanmış değeri vardır.
+Önceki örnekte, bir etki alanı özelliğinden diğerine değer yaymak için OnValueChanged () nasıl kullanılabileceği gösterilmektedir. Her özelliğin kendi saklı değeri vardır.
 
-Bunun yerine türetilmiş özelliği Hesaplanmış özellik olarak tanımlamayı göz önünde bulundurabilirsiniz. Bu durumda özelliğin kendi depolama alanı yoktur ve işlevi tanımlamak her değer gerektiğinde değerlendirilir. Daha fazla bilgi için [bkz. Hesaplanan ve Özel Depolama Özellikleri.](../modeling/calculated-and-custom-storage-properties.md)
+Bunun yerine, türetilmiş özelliği hesaplanmış bir özellik olarak tanımlamayı düşünebilirsiniz. Bu durumda, özelliği kendi kendine depolamayı içermez ve değeri her gerektiğinde değerlendirilir. daha fazla bilgi için bkz. [hesaplanan ve özel Depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
 
-Önceki örnek yerine, Tür alanını  DSL `TextLengthCount` Tanımında  Hesaplanmış olarak ayarlayın. Bu etki alanı özelliği için **kendi Get** yönteminizi sağlar. **Get** yöntemi, dizenin geçerli uzunluğunu `Text` döndürür.
+Önceki örnek yerine, ' nin **tür** alanını `TextLengthCount` DSL tanımında **hesaplanacak** şekilde ayarlayabilirsiniz. Bu etki alanı özelliği için kendi **Get** yönteminizi sağlarsınız. **Get** yöntemi, dizenin geçerli uzunluğunu döndürür `Text` .
 
-Ancak, hesaplanmış özelliklerin olası bir dezavantajı, ifadenin değer her kullanılırken değerlendirilmesidir ve bu da bir performans sorununa neden olabilir. Ayrıca, hesaplanan bir özellikte OnValueChanging() ve OnValueChanged() yoktur.
+Ancak, hesaplanan özelliklerin potansiyel bir dezavantajı, ifadenin değeri her kullanıldığında, bir performans sorunu oluşturabilecek şekilde değerlendirilmesidir. Ayrıca, bir hesaplanmış özellikte OnValueChanging () ve OnValueChanged () yoktur.
 
-### <a name="alternative-technique-change-rules"></a>Alternatif teknik: Kuralları Değiştirme
+### <a name="alternative-technique-change-rules"></a>Alternatif Teknik: kuralları değiştirme
 
-Bir ChangeRule tanımlarsanız, bir özelliğin değerinin değiştir olduğu bir işlem sonunda yürütülür.  Daha fazla bilgi için [bkz. Kurallar Modelde Değişiklikleri Yayma.](../modeling/rules-propagate-changes-within-the-model.md)
+Bir ChangeRule tanımlarsanız, bu, özelliğin değerinin değiştiği bir işlemin sonunda yürütülür.  Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
-Tek bir işlemde birkaç değişiklik yapılırsa, hepsi tamamlandığında ChangeRule yürütülür. Buna karşılık, OnValue... yöntemleri, bazı değişiklikler gerçekleştirilene kadar yürütülür. Ne elde etmek istediğinize bağlı olarak, bu bir ChangeRule'a daha uygun hale gelir.
+Tek bir işlemde birkaç değişiklik yapılırsa, her tamamlandıklarında ChangeRule yürütülür. Bunun aksine OnValue... bazı değişiklikler gerçekleştirilmeyen Yöntemler yürütülür. Elde etmek istediğinize bağlı olarak, bu bir ChangeRule daha uygun hale gelebilir.
 
-Özelliğin yeni değerini belirli bir aralıkta tutmak üzere ayarlamak için bir ChangeRule da kullanabilirsiniz.
+Ayrıca, özelliğin yeni değerini belirli bir Aralık içinde tutmak üzere ayarlamak için bir ChangeRule de kullanabilirsiniz.
 
 > [!WARNING]
-> Bir kural depo içeriğinde değişiklik yaparsa, diğer kurallar ve özellik işleyicileri tetiklenir. Bir kural, onu tetikleyen özelliği değiştirirse, yeniden çağrılır. Kural tanımlarınızı sonsuz tetiklemeye neden olmaz emin olun.
+> Bir kural mağaza içeriklerde değişiklikler yapıyorsa, diğer kurallar ve özellik işleyicileri tetiklenebilir. Bir kural onu tetikleyen özelliği değiştirirse, yeniden çağrılır. Kural tanımlarınızın sonsuz tetikleme sonucu olmadığından emin olmanız gerekir.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -148,7 +149,7 @@ public partial class MyDomainModel
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki örnek, bir etki alanı özelliğinin özellik işleyicisini geçersiz kılar ve etki alanı sınıfı için bir özellik değiştir `ExampleElement` olduğunda kullanıcıya bilgi sağlar.
+Aşağıdaki örnek, bir etki alanı özelliğinin özellik işleyicisini geçersiz kılar ve etki alanı sınıfı için bir özellik değiştiğinde kullanıcıya bildirir `ExampleElement` .
 
 ### <a name="code"></a>Kod
 

@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, geçerli alan numaralandırmasının bir kopyasını ayrı bir nesne olarak döndürür.
-title: 'IEnumDebugFields:: Clone | Microsoft Docs'
+description: Bu yöntem, geçerli alan numaralamalarının bir kopyasını ayrı bir nesne olarak döndürür.
+title: IEnumDebugFields::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 7ec265a8-696f-45ce-a2a2-0a83e96fee1b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d4f3a37f6e664d7fe3278e3a7c3e088e1e9e4565
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a2c1e8e0003b9c6ded698b2da56c5a0dcb2ee1ef172060cfa3bc427a73e1faa2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058163"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389195"
 ---
 # <a name="ienumdebugfieldsclone"></a>IEnumDebugFields::Clone
-Bu yöntem, geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
+Bu yöntem, geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
+[out] Bu numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın kopyası, bu yöntemin çağrılışında orijinal ile aynı duruma sahiptir. Bununla birlikte, kopyanın ve özgün durumlarının durumları ayrıdır ve tek tek değiştirilebilir.
+ Numaralamanın kopyası, bu yöntemin çağrıldı olduğu sırada özgün ile aynı durumla aynıdır. Ancak kopyaların ve özgünlerin durumları ayrıdır ve tek tek değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

@@ -1,6 +1,6 @@
 ---
 title: -Project (devenv.exe)
-description: Projeyi derlemek, temizlemek, yeniden derlemek veya dağıtmak için belirtilen çözüm yapılandırmasındaki tek bir projeyi tanımlamak üzere Project Devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
+description: projeyi derlemek, temizlemek, yeniden derlemek veya dağıtmak için belirtilen çözüm yapılandırmasındaki tek bir projeyi tanımlamak üzere Project devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -16,14 +16,15 @@ ms.assetid: 8b07859c-3439-436d-9b9a-a8ee744eee30
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f61125c743cb33ccaccbb15c1345aa01fbc57bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41915f0fc2c7e981438c9799d1a26031ddda9af162a939d228307288016a5d63
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952908"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372184"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
 

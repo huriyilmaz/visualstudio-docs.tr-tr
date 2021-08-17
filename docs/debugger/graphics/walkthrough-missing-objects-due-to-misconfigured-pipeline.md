@@ -8,14 +8,15 @@ ms.assetid: ed8ac02d-b38f-4055-82fb-67757c2ccbb9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b2ce885969ec8b9e382f453eddf388a850e8ac7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a88882828cdab20e5492dfebceee90fbc8b576ebe1d5f2f6fda4170a1731e667
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906501"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436000"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>İzlenecek yol: Yanlış Yapılandırılmış Ardışık Düzen Nedeniyle Eksik Nesneler
 Bu izlenecek yol, bir geçersiz bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] piksel gölgelendiricisi nedeniyle eksik olan bir nesneyi araştırmak için grafik tanılama araçlarının nasıl kullanılacağını gösterir.
@@ -46,7 +47,7 @@ Bu izlenecek yol, bir geçersiz bir [!INCLUDE[vsprvs](../../code-quality/include
 
 2. **Çerçeve listesinde**, nesnenin görüntülenmediğini gösteren bir çerçeve seçin. Oluşturma hedefi seçili çerçeveyi yansıtacak şekilde güncelleştirilir. Bu senaryoda grafik günlüğü sekmesi şöyle görünür:
 
-    ![Visual Studio 'da grafik günlüğü belgesi](media/gfx_diag_demo_misconfigured_pipeline_step_1.png "gfx_diag_demo_misconfigured_pipeline_step_1")
+    ![Visual Studio grafik günlük belgesi](media/gfx_diag_demo_misconfigured_pipeline_step_1.png "gfx_diag_demo_misconfigured_pipeline_step_1")
 
    Sorunu gösteren bir çerçeve seçtikten sonra **grafik olay listesini** kullanarak tanımayı başlatabilirsiniz. **Grafik olay listesi** , etkin çerçeveyi işlemek için yapılan her Direct3D API çağrısını içerir — örneğin, cihaz durumunu ayarlamak, arabellekleri oluşturmak ve güncelleştirmek ve çerçevede görünen nesneleri çizmek için. Birçok çağrı türü — örneğin, çizim, dağıtma, kopyalama veya temizleme çağrıları — uygulama beklendiği gibi çalıştığında işleme hedefinde genellikle karşılık gelen bir değişikliğe (her zaman değil) göre ilginç olur. Her biri uygulamanın işlendiği geometriyi temsil ettiğinden, çizim çağrıları özellikle ilginç hale alınır.
 

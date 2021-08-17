@@ -1,6 +1,6 @@
 ---
 title: PropertyGroup öğesi (MSBuild) | Microsoft Docs
-description: Kullanıcı tanımlı bir özellik öğeleri kümesi içeren MSBuild PropertyGroup öğesi hakkında bilgi edinin.
+description: kullanıcı tanımlı özellik öğeleri kümesi içeren MSBuild propertygroup öğesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: ff1e6c68-b9a1-4263-a1ce-dc3b829a64d4
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 5182708e848587439795f5d6c04d87382b36f84a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 45c1700525b77011ee2a05b70ec2e0f73076e24a2891072d35c13994ed281eb6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932000"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370001"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup öğesi (MSBuild)
 
-Kullanıcı tanımlı [özellik](../msbuild/property-element-msbuild.md) öğeleri kümesi içerir. `Property`Bir MSBuild projesinde kullanılan her öğe bir `PropertyGroup` öğesinin alt öğesi olmalıdır.
+Kullanıcı tanımlı [özellik](../msbuild/property-element-msbuild.md) öğeleri kümesi içerir. `Property`bir MSBuild projesinde kullanılan her öğe bir `PropertyGroup` öğesinin alt öğesi olmalıdır.
 
  \<Project> \<PropertyGroup>
 
@@ -78,5 +79,5 @@ Kullanıcı tanımlı [özellik](../msbuild/property-element-msbuild.md) öğele
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)

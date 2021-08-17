@@ -1,6 +1,6 @@
 ---
 title: Ağ tabanlı yükleme oluşturma
-description: Bir kuruluş içinde sanal ağ dağıtımı için ağ Visual Studio noktası oluşturma hakkında bilgi öğrenin.
+description: kuruluş içinde Visual Studio dağıtmak için bir ağ yüklemesi noktası oluşturmayı öğrenin.
 ms.date: 04/06/2021
 ms.custom: seodec18
 ms.topic: conceptual
@@ -15,43 +15,43 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6f7d0db6d1e8e526f7906ff940c07788fd4bd1b6
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: dc0de7542efc8148ae83c730a4e7fd7adc7d5a9a1a260acc51f54375168f1e47
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115094032"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121386529"
 ---
-# <a name="create-a-network-installation-of-visual-studio"></a>Ağ yüklemesi oluşturma Visual Studio
+# <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio ağ yüklemesi oluşturma
 
-Bazen kuruluş yöneticisi, istemci iş istasyonlarına dağıtılabilir Visual Studio içeren bir ağ yükleme noktası oluşturmak ister. Bu, istemci makinelerinin sınırlı izinlere veya sınırlı İnternet erişimine sahip olduğu ya da şirket içi ekiplerin geliştirici araç kümesine belirli bir sürümü standart hale getirmeden önce uyumluluk testi yapmak istemesi senaryolarını kolaylaştırmaktır. Bir yöneticinin Visual Studio temel olarak hem  ilk yükleme hem de gelecekteki tüm ürün güncelleştirmeleri için tüm Visual Studio dosyalarını içeren bir iç statik ağ paylaşımında bulunan bir dosya önbelleğini oluşturacak bir ağ düzeni oluşturacak şekilde tasarlayacağız.
+bazen bir kurumsal yönetici, istemci iş istasyonlarına dağıtılabilecek Visual Studio dosyaları içeren bir ağ yüklemesi noktası oluşturmak istemektedir. Bu, istemci makinelerin internet 'e sınırlı izinleri olabileceği ya da iç ekipler Geliştirici araç takımının belirli bir sürümünde standartmadan önce uyumluluk testi yapmak istediği senaryolara yardımcı olur. yöneticinin, ilk yükleme ve gelecekteki tüm ürün güncelleştirmeleri için tüm Visual Studio dosyalarını içeren dahili bir statik ağ paylaşımında bulunan bir dosya önbelleği oluşturan bir _ağ düzeni oluşturabilmesi_ için Visual Studio tasarlıyoruz.
 
  > [!NOTE]
- >  - Kurum içinde birden fazla Visual Studio sürümünüz varsa (örneğin, hem Visual Studio 2019 Professional hem de Visual Studio 2019 Enterprise), her sürüm için ayrı bir ağ yükleme paylaşımı oluşturmanız gerekir.
- >  - İlk istemci yüklemesini öncesinde istemcilerin ürün güncelleştirmelerini nasıl _almalarını istediğinize_ karar vermenizi öneririz.  Bu, yapılandırma seçeneklerinizin doğru şekilde ayar olduğundan emin olunmasınızı kolaylaştırır. Seçenekleriniz, istemcilerin güncelleştirmeleri ağ düzeni konumdan veya İnternet'den aldırmalarını içerir. 
- >  - Özgün Visual Studio düzeni ve sonraki tüm ürün güncelleştirmeleri, onarım ve kaldırma işlevlerinin düzgün şekilde çalışması için aynı ağ dizininde olmalıdır.
+ >  - kuruluşunuzda kullanımda olan Visual Studio birden çok sürümü varsa (örneğin, hem Visual Studio 2019 Professional hem de Visual Studio 2019 Enterprise), her sürüm için ayrı bir ağ yüklemesi oluşturmanız gerekir.
+ >  - İlk istemci yüklemesi _yapmadan önce_ istemcilerin ürün güncelleştirmelerini nasıl alacağını tercih etmenizi öneririz.  Bu, yapılandırma seçeneklerinizin doğru şekilde ayarlandığından emin olmanızı kolaylaştırır. Seçenekleriniz, istemcilerin ağ düzeni konumundan veya internet 'ten güncelleştirme almasını içerir. 
+ >  - özgün Visual Studio yükleme düzeni ve sonraki tüm ürün güncelleştirmeleri, onarma ve kaldırma işlevlerinin düzgün çalışmasını sağlamak için aynı ağ dizininde bulunmalıdır.
 
-## <a name="download-the-visual-studio-bootstrapper"></a>Önyükleyiciyi Visual Studio indirme
+## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio önyükleyici indirin
 
-Istediğiniz uygulamanın sürümü için bir önyükleyici Visual Studio indirin. Kaydet'i ve **ardından Klasör** aç'ı **seçtiğinizden emin olun.**
+istediğiniz Visual Studio sürümü için bir önyükleyici dosyası indirin. **Kaydet**' i seçtiğinizden emin olun ve sonra **klasörü aç**' ı seçin.
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 sürüm 15.9 için en son önyükleyiciyi [](https://visualstudio.microsoft.com/vs/older-downloads/) almak için önceki sürümler sayfasına Visual Studio gidin ve aşağıdaki önyükleyici dosyalarından birini indirin:
+Visual Studio 2017 sürüm 15,9 için en son önyükleyici almak için, [önceki Visual Studio sürümler](https://visualstudio.microsoft.com/vs/older-downloads/) sayfasına gidin ve aşağıdaki önyükleyici dosyalarından birini indirin:
 
-| Sürüm                                      | Dosyaadı            |
+| Sürüm                                      | Kısaltın            |
 |----------------------------------------------|---------------------|
-| Visual Studio 2017 Enterprise sürüm 15.9   | vs_enterprise.exe   |
-| Visual Studio 2017 Professional sürüm 15.9 | vs_professional.exe |
-| Visual Studio 2017 Derleme Araçları sürüm 15.9  | vs_buildtools.exe   |
+| Visual Studio 2017 Enterprise sürüm 15,9   | vs_enterprise.exe   |
+| Visual Studio 2017 Professional sürüm 15,9 | vs_professional.exe |
+| Visual Studio 2017 derleme araçları sürüm 15,9  | vs_buildtools.exe   |
 
-Desteklenen diğer önyükleyiciler vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe ve vs_testprofessional.exe.
+Desteklenen diğer bootstrapdenetleyicileri vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe ve vs_testprofessional.exe içerir.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio indirmeleri sayfasından veya [seçtiğiniz sürüm](https://visualstudio.microsoft.com/downloads) ve sürüm için Visual Studio 2019 Sürümler sayfasından [Visual Studio 2019](/visualstudio/releases/2019/history#installing-an-earlier-release) önyükleyicisi'Visual Studio.  Kurulum yürütülebilir dosyanız veya daha belirli olması için, önyükleyici dosyası aşağıdakilerden &mdash; &mdash; biri ile eşler veya benzer olur:
+Visual Studio 2019 önyükleyici [Visual Studio indirmeleri sayfasından](https://visualstudio.microsoft.com/downloads) ya da Visual Studio seçtiğiniz sürümü için [Visual Studio 2019 yayınları](/visualstudio/releases/2019/history#installing-an-earlier-release) sayfasından indirerek başlayın.  Kurulum çalıştırılabiliriniz &mdash; veya daha belirgin olması için bir önyükleyici dosyası &mdash; eşleşecektir veya aşağıdakilerden birine benzer olacaktır:
 
 | Sürüm                    | İndir                                                                                                                                                                                                                           |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -59,15 +59,15 @@ Visual Studio indirmeleri sayfasından veya [seçtiğiniz sürüm](https://visua
 | Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
 | Visual Studio Derleme Araçları  | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
 
-Desteklenen diğer önyükleyiciler arasında [vs_teamexplorer.exe, ](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe) [vs_testagent.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)ve [vs_testcontroller.exe. ](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe)
+Desteklenen diğer bootstrapdenetleyicileri [vs_teamexplorer.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe), [vs_testagent.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)ve [vs_testcontroller.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe)içerir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
 >![!TIP]
-> Visual Studio 2022'nin yayımlanan sürümleri henüz kullanılamıyor, aşağıdaki önyükleyiciler Visual Studio 2022'nin önizleme sürümü için.
-Visual Studio indirme sayfasından Visual Studio 2022 [önyükleyicisi'ne indirin.](https://aka.ms/vs2022preview)
+> 2022 Visual Studio yayınlanan sürümleri henüz kullanılamıyor, aşağıdaki bootstrap, Visual Studio 2022 ' nin önizleme sürümüne yöneliktir.
+[Visual Studio indirmeleri sayfasından](https://aka.ms/vs2022preview)Visual Studio 2022 önyükleyici indirerek başlayın.
 
 | Sürüm                    | İndir                                                                             |
 |----------------------------|--------------------------------------------------------------------------------------|
@@ -79,52 +79,52 @@ Visual Studio indirme sayfasından Visual Studio 2022 [önyükleyicisi'ne indiri
 ::: moniker range="vs-2017"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slanın bir yayın sürümüyle Visual Studio için [bkz. Visual Studio ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md)
+>Daha önce bir önyükleyici dosyası indirdiyseniz ve hangi sürümün olduğunu doğrulamak istiyorsanız, bunun nasıl yapıldığını burada bulabilirsiniz. Windows, dosya gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **özellikler**' i seçin, **ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. bu sayıyı Visual Studio bir sürümüyle eşleştirmek için, bkz. [Visual Studio derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md).
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slanın bir yayınla eşleşmesi Visual Studio için [bkz. Visual Studio 2019 Yayınları.](/visualstudio/releases/2019/history)
+>Daha önce bir önyükleyici dosyası indirdiyseniz ve hangi sürümün olduğunu doğrulamak istiyorsanız, bunun nasıl yapıldığını burada bulabilirsiniz. Windows, dosya gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **özellikler**' i seçin, **ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. bu sayıyı Visual Studio bir sürümüyle eşleştirmek için, bkz. [Visual Studio 2019 sürümleri](/visualstudio/releases/2019/history).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu s numarayı bir sürümle Visual Studio için [bkz. Visual Studio 2022 Yayınları.](/visualstudio/releases/2022/history)
+>Daha önce bir önyükleyici dosyası indirdiyseniz ve hangi sürümün olduğunu doğrulamak istiyorsanız, bunun nasıl yapıldığını burada bulabilirsiniz. Windows, dosya gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **özellikler**' i seçin, **ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. bu sayıyı Visual Studio bir sürümüyle eşleştirmek için, bkz. [Visual Studio 2022 sürümleri](/visualstudio/releases/2022/history).
 
 ::: moniker-end
 
 ## <a name="create-an-offline-installation-folder"></a>Çevrimdışı yükleme klasörü oluşturma
 
-Bu adımı tamamlamak için bir İnternet bağlantınız olması gerekir.
+Bu adımı tamamlayabilmeniz için bir internet bağlantınızın olması gerekir.
 
-Bir komut istemi açın, önyükleyiciyi indirdiğiniz dizine gidin ve ağ yükleme önbelleğinizi oluşturmak ve korumak için [Visual Studio](../install/use-command-line-parameters-to-install-visual-studio.md) yüklemek için komut satırı parametrelerini kullanma sayfasında tanımlandığı gibi önyükleyicinin parametrelerini kullanın. İlk düzen oluşturmanın yaygın örnekleri aşağıda ve yüklemesi için [Komut satırı parametre Visual Studio gösterilmiştir.](../install/command-line-parameter-examples.md)  
+bir komut istemi açın, önyükleyiciyi indirdiğiniz dizine gidin ve ağ yükleme önbelleğinizi oluşturmak ve sürdürmek üzere [Visual Studio sayfasını yüklemek için komut satırı parametrelerini kullanma](../install/use-command-line-parameters-to-install-visual-studio.md) bölümünde tanımlandığı gibi önyükleyici parametrelerini kullanın. ilk düzen oluşturma örnekleri aşağıda verilmiştir [Visual Studio yükleme için komut satırı parametre örnekleri](../install/command-line-parameter-examples.md)aşağıda gösterilmektedir.  
 
    > [!IMPORTANT]
-   > Tek bir dil yereli için tam bir başlangıç düzeni için yaklaşık 35 GB disk alanı ve Visual Studio Community için 42 GB Visual Studio Enterprise. Ek [dil yerelleri için](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) her biri yaklaşık yarım GB gerekir. Daha fazla [bilgi için Ağ düzenini](#customize-the-network-layout) özelleştirme bölümüne bakın. Sonraki düzen güncelleştirmelerinin de aynı ağ konumu içinde depolanmış olması gerektiğini, bu nedenle ağ düzeni konumunun dizin içeriklerinin zaman içinde oldukça genişleyebizleyebilirsiniz.  
+   > tek bir dil yerel ayarı için bir başlangıç düzeni, Visual Studio Enterprise Visual Studio Community ve 42 gb için 35 gb disk alanı gerektirir. Ek [dil yerel ayarları](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales) her bırı için GB olmak üzere gereklidir. Daha fazla bilgi için [ağ yerleşimini özelleştirme](#customize-the-network-layout) bölümüne bakın. Sonraki düzen güncelleştirmelerinin aynı ağ konumunda de depolanması gerekir. bu nedenle, ağ düzeni konumunun Dizin içeriğinin zaman içinde çok büyük bir zaman almasını beklediğinden emin olun.  
 
-- Tüm diller ve tüm özelliklerle Visual Studio Enterprise başlangıç düzeni oluşturmak için şu şekilde çalıştırın:
+- tüm diller ve tüm özelliklerle Visual Studio Enterprise ilk düzeni oluşturmak için şunu çalıştırın:
 
   ```vs_enterprise.exe --layout c:\VSLayout```
 
-- Tüm diller ve tüm özelliklerle Visual Studio Professional başlangıç düzeni oluşturmak için şu şekilde çalıştırın:
+- tüm diller ve tüm özelliklerle Visual Studio Professional ilk düzeni oluşturmak için şunu çalıştırın:
 
   ```vs_professional.exe --layout c:\VSLayout```
 
-## <a name="modify-the-responsejson-file"></a>Dosya response.jsdeğiştirme
+## <a name="modify-the-responsejson-file"></a>Dosyadaki response.jsDeğiştir
 
-Kurulum çalıştır olduğunda `response.json` kullanılan varsayılan değerleri ayarlamak için dosyasını değiştirebilirsiniz.  Örneğin, dosyayı otomatik olarak `response.json` seçilecek belirli bir iş yükü kümesi seçecek şekilde yapılandırabilirsiniz. ayrıca istemcinin ağ `response.json` düzeni konumdan yalnızca güncelleştirilmiş dosyaları alacak olup olamayacaklarını belirtmek için de yapılandırabilirsiniz. Daha fazla bilgi için [bkz. Yanıt Visual Studio yüklemesini otomatikleştirme.](../install/automated-installation-with-response-file.md) 
+`response.json`Dosyayı, kurulum çalıştırıldığında kullanılan varsayılan değerleri ayarlamak için değiştirebilirsiniz.  Örneğin, `response.json` otomatik olarak seçilmesi gereken belirli bir iş yükü kümesini seçmek için dosyayı yapılandırabilirsiniz. Ayrıca, `response.json` istemcinin yalnızca ağ düzeni konumundan güncelleştirilmiş dosyaları alıp almamanız gerektiğini belirtmek için yapılandırabilirsiniz. daha fazla bilgi için bkz. [bir yanıt dosyasıyla Visual Studio yüklemeyi otomatikleştirme](../install/automated-installation-with-response-file.md). 
 
-Visual Studio önyükleyicisi bir dosyayla eşleştirilirken hata verirken bir sorunla karşılaştınız, daha fazla bilgi için bkz. Visual Studio'yi yükleme veya kullanma sırasında ağ ile `response.json` [ilgili](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) hataları giderme.
+Visual Studio önyükleyici ile bir dosyayla eşleştirmeniz sırasında hata oluşturan bir sorunla karşılaşırsanız `response.json` , daha fazla bilgi için [Visual Studio sayfasını yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) bölümüne bakın.
 
-## <a name="copy-the-layout-to-a-network-share"></a>Düzeni bir ağ paylaşımına kopyalama
+## <a name="copy-the-layout-to-a-network-share"></a>Düzeni bir ağ paylaşımında kopyalama
 
-İstemci makinelerinden çalıştırılamaları için düzeni bir ağ paylaşımında barındırabilirsiniz.
+İstemci makinelerden çalıştırılabilmesi için düzeni bir ağ paylaşımında barındırın.
 
-Aşağıdaki örnek [`xcopy`](/windows-server/administration/windows-commands/xcopy/) kullanır. Ayrıca isterseniz [`robocopy`](/windows-server/administration/windows-commands/robocopy/) kullanabilirsiniz.
+Aşağıdaki örnek kullanılmıştır [`xcopy`](/windows-server/administration/windows-commands/xcopy/) . Ayrıca, istediğiniz öğesini de kullanabilirsiniz [`robocopy`](/windows-server/administration/windows-commands/robocopy/) .
 
 ::: moniker range="vs-2017"
 
@@ -153,158 +153,158 @@ xcopy /e c:\VSLayout \\server\products\VS2022
 ::: moniker-end
 
 > [!IMPORTANT]
-> Bir hatayı önlemek için tam düzen yol 80 karakterden az olduğundan emin olun.
+> Bir hatayı engellemek için, tam düzen yolunuz 80 karakterden az olduğundan emin olun.
 
-## <a name="customize-the-network-layout"></a>Ağ düzenini özelleştirme
+## <a name="customize-the-network-layout"></a>Ağ yerleşimini özelleştirme
 
-Ağ düzeninizi özelleştirmek için kullanabileceğiniz çeşitli seçenekler vardır. Yalnızca belirli bir dil yerel ayar kümesi, iş [yükleri,](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)bileşenler ve bunların önerilen veya isteğe bağlı bağımlılıklarını içeren [kısmi bir düzen oluşturabilirsiniz.](workload-and-component-ids.md) İstemci iş istasyonlarına yalnızca bir iş yükü alt kümesi dağıtacaksanız bu yararlı olabilir. Düzeni özelleştirmek için tipik komut satırı parametreleri şunlardır:
+Ağ düzeninizi özelleştirmek için kullanabileceğiniz çeşitli seçenekler vardır. Yalnızca belirli bir [dil yerel](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)ayarı, [iş yükleri, bileşenler ve önerilen ya da isteğe bağlı bağımlılıklarını](workload-and-component-ids.md)içeren kısmi bir düzen oluşturabilirsiniz. Bu, istemci iş istasyonlarına yalnızca bir iş yükü alt kümesini dağıtacağınızı biliyorsanız yararlı olabilir. Düzeni özelleştirmeye yönelik tipik komut satırı parametreleri şunları içerir:
 
-* `--add` iş yükü [veya bileşen kimliklerini belirtmek için](workload-and-component-ids.md). <br>`--add`kullanılırsa, yalnızca ile belirtilen iş yükleri ve bileşenler `--add` indirilir.  `--add`Kullanılmazsa, tüm iş yükü ve bileşenler indirilir.
-* `--includeRecommended` belirtilen iş yükü kimlikleri için önerilen tüm bileşenleri dahil etmek için
-* `--includeOptional` belirtilen iş yükü kimlikleri için önerilen ve isteğe bağlı tüm bileşenleri dahil etmek için.
-* `--lang` dil [yerellerini belirtmek için](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales).
+* `--add`[iş yükünü veya bileşen kimliklerini](workload-and-component-ids.md)belirtmek için. <br>Kullanılıyorsa `--add` , yalnızca ile belirtilen iş yükleri ve bileşenler `--add` indirilir.  `--add`Kullanılmıyorsa, tüm iş yükü ve bileşenler indirilir.
+* `--includeRecommended` Belirtilen iş yükü kimlikleri için önerilen tüm bileşenleri dahil etmek için
+* `--includeOptional` Belirtilen iş yükü kimliklerinin tüm önerilen ve isteğe bağlı bileşenlerini dahil etmek için.
+* `--lang`[dil yerel ayarlarını](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)belirtmek için.
 
-Özel kısmi düzen oluşturma hakkında birkaç örnek aşağıda verilmiştir.
+Özel kısmi düzenin nasıl oluşturulacağı hakkında birkaç örnek aşağıda verilmiştir.
 
-* Yalnızca bir dil için tüm iş yüklerini ve bileşenleri indirmek için şu işlemi çalıştırın:
+* Tüm iş yüklerini ve bileşenleri yalnızca bir dile indirmek için şunu çalıştırın:
 
     ```shell
     vs_enterprise.exe --layout C:\VSLayout --lang en-US
     ```
 
-* Birden çok dilin tüm iş yüklerini ve bileşenlerini indirmek için şu işlemi çalıştırın:
+* Tüm iş yüklerini ve bileşenleri birden çok dile indirmek için şunu çalıştırın:
 
     ```shell
     vs_enterprise.exe --layout C:\VSLayout --lang en-US de-DE ja-JP
     ```
 
-* Tüm diller için tek bir iş yükü indirmek için şu işlemi çalıştırın:
+* Tüm diller için bir iş yükünü indirmek için şunu çalıştırın:
 
     ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --includeRecommended
     ```
 
-* İki iş yükünü ve üç dil için isteğe bağlı bir bileşeni indirmek için şu işlemi çalıştırın:
+* Üç dil için iki iş yükü ve isteğe bağlı bir bileşen indirmek için şunu çalıştırın:
 
     ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP
     ```
 
-* İki iş yükünü ve önerilen tüm bileşenlerini indirmek için:
+* İki iş yükünü ve tüm önerilen bileşenlerini indirmek için:
 
     ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended
     ```
 
-* İki iş yükünü ve önerilen ve isteğe bağlı bileşenlerinin hepsini indirmek için şu işlemi çalıştırın:
+* İki iş yükünü ve tüm önerilen ve isteğe bağlı bileşenlerini indirmek için şunu çalıştırın:
 
     ```shell
     vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional
     ```
 
-### <a name="save-your-layout-options"></a>Düzen seçeneklerinizi kaydetme
+### <a name="save-your-layout-options"></a>Düzen seçeneklerinizi kaydedin
 
-Bir düzen komutunu çalıştırarak belirttiğiniz seçenekler kaydedilir (iş yükleri ve diller gibi). Sonraki düzen komutları önceki seçeneklerin hepsini içerir.  Yalnızca İngilizce için tek bir iş yüküne sahip bir düzen örneği:
+Bir düzen komutu çalıştırdığınızda belirttiğiniz seçenekler kaydedilir (iş yükleri ve diller gibi). Sonraki düzen komutları, önceki tüm seçenekleri içerir.  Yalnızca Ingilizce için bir iş yüküne sahip bir düzen örneği aşağıda verilmiştir:
 
 ```shell
 vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US
 ```
 
-Bu düzeni daha yeni bir sürüme güncelleştirmek istediğinizde, ek komut satırı parametresi belirtmenize gerek yok. Önceki ayarlar bu düzen klasöründeki sonraki düzen komutları tarafından kaydedilir ve kullanılır.  Aşağıdaki komut, mevcut kısmi düzeni güncelleştirecek.
+Bu düzeni daha yeni bir sürüme güncellemek istediğinizde, ek komut satırı parametreleri belirtmeniz gerekmez. Önceki ayarlar, bu düzen klasöründeki sonraki düzen komutları tarafından kaydedilir ve kullanılır.  Aşağıdaki komut, mevcut kısmi düzeni güncelleştirecek.
 
 ```shell
 vs_enterprise.exe --layout c:\VSLayout
 ```
 
-Ek bir iş yükü eklemek istediğiniz zaman, bunun nasıl yapl bir örneği burada ve ardından ve burada açık bir şekilde açık ve açık bir şekilde açık ve açık bir şekilde açık bir şekilde ifade etmek gerekir. Bu durumda, Azure iş yükünü ve yerelleştirilmiş dili ekleyeceğiz.  Artık, hem yönetilen masaüstü hem de Azure bu düzene dahildir.  Ingilizce ve Almanca için dil kaynakları tüm bu iş yükleri için eklenmiştir. Düzen, kullanılabilir en son sürüme güncelleştirilir.
+Ek bir iş yükü eklemek istediğinizde, bunun nasıl yapılacağını gösteren bir örnek aşağıda verilmiştir. Bu durumda, Azure iş yükünü ve yerelleştirilmiş bir dili ekleyiz.  Artık hem Yönetilen Masaüstü hem de Azure bu düzende yer almaktadır.  Tüm bu iş yüklerine İngilizce ve Almanca dil kaynakları dahildir. Düzen, kullanılabilir en son sürüme güncelleştirilir.
 
 ```shell
 vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
 ```
 
-Varolan bir düzeni tam düzene güncelleştirmek istiyorsanız, aşağıdaki örnekte gösterildiği gibi--ALL seçeneğini kullanın.
+Var olan bir düzeni tam düzende güncelleştirmek için aşağıdaki örnekte gösterildiği gibi --all seçeneğini kullanın.
 
 ```shell
 vs_enterprise.exe --layout c:\VSLayout --all
 ```
 
-## <a name="deploy-from-a-network-installation"></a>Ağ yüklemesinden dağıtma
+## <a name="deploy-from-a-network-installation"></a>Ağ yüklemeden dağıtma
 
-yöneticiler, yükleme komut dosyasının bir parçası olarak istemci iş istasyonlarına Visual Studio dağıtabilir. ya da yönetici haklarına sahip kullanıcılar, makinesine Visual Studio yüklemek için doğrudan paylaşımdan kurulum çalıştırabilir.
+Yöneticiler, bir Visual Studio parçası olarak istemci iş istasyonlarına sanal ağ dağıtarak iş istasyonlarına dağıtın. Ya da yönetici haklarına sahip kullanıcılar doğrudan paylaşımdan kurulumu çalıştırarak makinelerine Visual Studio yükleyebilir.
 
-* Kullanıcılar, aşağıdaki komutu çalıştırarak yükleyebilir: <br>
+* Kullanıcılar aşağıdaki komutu çalıştırarak yükleyebilir: <br>
 
     ```shell
     \\server\products\VS\vs_enterprise.exe
     ```
 
-* Yöneticiler, aşağıdaki komutu çalıştırarak katılımsız modda yüklenebilir:
+* Yöneticiler aşağıdaki komutu çalıştırarak katılımsız modda yükleyebilir:
 
     ```shell
     \\server\products\VS\vs_enterprise.exe --quiet --wait --norestart
     ```
 
 > [!IMPORTANT]
-> Bir hatayı engellemek için, tam düzen yolunuz 80 karakterden az olduğundan emin olun.
+> Bir hatayı önlemek için tam düzen yol 80 karakterden az olduğundan emin olun.
 
 > [!TIP]
-> Bir toplu iş dosyasının parçası olarak yürütüldüğünde, bu `--wait` seçenek `vs_enterprise.exe` işlemin bir çıkış kodu vermeden önce Yüklemenin tamamlanmasını bekleyip beklememesini sağlar.
+> Bir toplu iş dosyasının parçası olarak yürütülürken seçeneği, bir çıkış kodu döndürene kadar yükleme tamamlandıktan sonra sürecin `--wait` `vs_enterprise.exe` beklemesini sağlar.
 >
-> Bu, bir Kurumsal Yönetici tamamlanmış bir yüklemede daha fazla eylem gerçekleştirmek istiyorsa (örneğin, [başarılı bir yüklemeye bir ürün anahtarı uygulamak](automatically-apply-product-keys-when-deploying-visual-studio.md)için), ancak yükleme işleminin bu yüklemeden dönüş kodunu işlemesini beklemesi gereken durumlarda yararlıdır.
+> Bu, kuruluş yöneticisinin tamamlanmış bir yüklemede daha fazla eylem gerçekleştirmek (örneğin, başarılı bir yükleme için bir ürün anahtarı [uygulamak)](automatically-apply-product-keys-when-deploying-visual-studio.md)istediği ancak yüklemenin bu yüklemeden dönüş kodunu işlemesi için yüklemenin tamamlandıktan sonra beklemesi gereken durumlarda kullanışlıdır.
 >
-> Kullanmıyorsanız `--wait` , `vs_enterprise.exe` yükleme tamamlanmadan önce işlem çıkar ve yükleme işleminin durumunu temsil etmeyen yanlış bir çıkış kodu döndürür.
+> kullanmazsanız, yükleme tamamlandıktan önce işlem çıkar ve yükleme işleminin durumunu temsil etmeyen yanlış bir `--wait` `vs_enterprise.exe` çıkış kodu döndürür.
 >
 
 ::: moniker range=">=vs-2019"
 > [!IMPORTANT]
-> Çevrimdışı yüklemeler için, "aşağıdaki parametrelerle eşleşen bir ürün bulunamıyor" ifadesini içeren bir hata iletisi alırsanız, `--noweb` anahtarı 16.3.5 veya sonraki bir sürümüyle kullandığınızdan emin olun.
+> Çevrimdışı yüklemeler için "Aşağıdaki parametrelerle eşleşen bir ürün bulunamadı" hata iletisini alırsanız, 16.3.5 veya sonraki bir sürüme sahip anahtarı kullanırkenn `--noweb` emin olun.
 >
 ::: moniker-end
 
-Bir düzenden yüklerken, yüklenen içerik düzenden alınır. Ancak, düzende olmayan bir bileşeni seçerseniz, internet 'ten elde edilir.  Visual Studio kurulumunun düzeninizde eksik olan içeriği indirmasını engellemek istiyorsanız, `--noWeb` seçeneğini kullanın. `--noWeb`Kullanılıyorsa ve mizanpajda yüklenmek üzere seçilen içerik eksikse, kurulum başarısız olur.
+Bir düzenden yüklemeniz, yüklü olan içerik düzenden edinilen içeriktir. Ancak, düzende olmayan bir bileşeni seçersiniz, bu bileşen internetten elde edersiniz.  Bu ayarın Visual Studio içeriği indirmesini engellemek için seçeneğini `--noWeb` kullanın. `--noWeb`kullanılırsa ve düzende yüklenmek üzere seçilen herhangi bir içerik eksikse, kurulum başarısız olur.
 
 > [!TIP]
-> İnternet 'e bağlı olmayan bir bilgisayarda çevrimdışı bir kaynaktan yüklemek istiyorsanız, `--noWeb` ve `--noUpdateInstaller` seçeneklerini belirtin. İlki, güncelleştirilmiş iş yüklerini, bileşenleri, vb. indirmeyi önler. İkincisi, yükleyicinin Web 'den kendi kendine güncelleştirilmesini engeller.
+> İnternet'e bağlı olmayan bir bilgisayara çevrimdışı bir kaynaktan yüklemek istiyorsanız, hem hem de `--noWeb` seçeneklerini `--noUpdateInstaller` belirtin. Önceki, güncelleştirilmiş iş yüklerinin, bileşenlerin ve diğer bileşenlerin indir indirebilirsiniz. İkincisi, yükleyicinin web'den kendi kendine güncelleştirmesini önler.
 
 > [!IMPORTANT]
-> bu `--noWeb` seçenek, internet 'e bağlı bir bilgisayardaki güncelleştirmeleri denetlemek için Visual Studio kurulum 'u durdurmaz. daha fazla bilgi için bkz. [ağ tabanlı Visual Studio dağıtımları için güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md) sayfası.
+> seçeneği, `--noWeb` İnternet'e Visual Studio bir bilgisayarda kurulumun güncelleştirmeleri denetlemesi engellerini durdurmaz. Daha fazla bilgi için Ağ [tabanlı dağıtımlarda güncelleştirmeleri denetleme Visual Studio bakın.](controlling-updates-to-visual-studio-deployments.md)
 
 ### <a name="error-codes"></a>Hata kodları
 
-Parametresini kullandıysanız, `--wait` işlem sonucuna bağlı olarak, `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
+parametresini `--wait` kullandıysanız, işlem sonucuna bağlı olarak ortam `%ERRORLEVEL%` değişkeni aşağıdaki değerlerden biri olarak ayarlanır:
 
 [!INCLUDE[install-error-codes-md](includes/install-error-codes-md.md)]
 
-## <a name="update-a-network-install-layout"></a>Ağ yüklemesi yerleşimini güncelleştirme
+## <a name="update-a-network-install-layout"></a>Ağ yükleme düzenini güncelleştirme
 
-Ürün güncelleştirmeleri kullanılabilir hale geldiğinde, güncelleştirilmiş paketleri eklemek için [ağ yüklemesi mizanpajını güncelleştirmek](update-a-network-installation-of-visual-studio.md) isteyebilirsiniz.
+Ürün güncelleştirmeleri kullanılabilir hale geldikça, ağ [yükleme düzenini güncelleştirilmiş paketleri dahil etmek](update-a-network-installation-of-visual-studio.md) için güncelleştirmek istiyor olabilir.
 
-## <a name="how-to-create-a-layout-for-a-previous-visual-studio-release"></a>önceki bir Visual Studio yayını için düzen oluşturma
+## <a name="how-to-create-a-layout-for-a-previous-visual-studio-release"></a>Önceki bir sürüm için düzen oluşturma Visual Studio oluşturma
 
-ilk olarak, "en son", "geçerli", "tek yeşil" ve "tıp" sözcüklerinin ayırt edilebilir iki tür Visual Studio bootstrapolduğunu anlamanız gerekir ve temelde "sabit sürüm" anlamına gelir. Önyükleyici dosyalarının her iki türü de tam olarak aynı ada sahiptir ve türü ayırt etmenin en iyi yolu, aldığınız yere dikkat çekici bir ödemelidir. [Visual Studio indirmeleri sayfasında](https://visualstudio.microsoft.com/downloads) bulunan bootstrapVisual Studio, bootstrapVisual Studio her zaman yeşil olarak kabul edilir ve önyükleyici çalıştırıldığı zaman kanalda bulunan en son sürümü her zaman yükler (veya güncelleştirir). [Visual Studio 2019 yayımları](/visualstudio/releases/2019/history) [Visual Studio 2022 yayınlar](/visualstudio/releases/2022/history) sayfasında bulunan veya Microsoft Update kataloğunda yönetici güncelleştirmesi içine eklenmiş olan bootstrapVisual Studio, ürünün belirli bir sabit sürümünü yükler.
+İlk olarak, "latest", "current", "evergreen" ve "tip" sözcükleriyle nitelendirilen ve temelde "sabit sürüm" anlamına gelen iki tür Visual Studio önyükleyicisi olduğunu anlamalısınız. Her iki önyükleyici dosyası türü de tam olarak aynı adla aynıdır ve türü ayırt etmek için en iyi yol, nereden bu türe sahip olduğunuz yere dikkat etmektir. [Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeleri sayfasında bulunan Visual Studio önyükleyicileri her zaman yeşil Visual Studio önyükleyici olarak kabul edilir ve önyükleyici çalıştırıldıklarında kanalda mevcut olan en son sürümü her zaman yüklenir (veya güncelleştirmeyi). [Visual Studio Visual Studio 2019](/visualstudio/releases/2019/history) Sürümler [Visual Studio 2022](/visualstudio/releases/2022/history) Sürümler sayfasında bulunan veya Microsoft Update Kataloğu'daki yönetici güncelleştirmesinde eklenmiş olan önyükleyiciler ürünün belirli bir sabit sürümünü yükleyin.
 
-bu nedenle, bugün bir tek tek yeşil Visual Studio önyükleyici indirir ve şu anda altı ay çalıştırırsanız, önyükleyici çalıştırıldığı sırada geçerli olan Visual Studio sürümünü yükler. Her zaman en son bitleri yüklemek ve güncel tutmak için tasarlanmıştır.
+Bu nedenle, bugün hiç yeşil Visual Studio önyükleyici indirip altı ay sonra çalıştırırsanız, önyükleyici çalıştırıldıklarında geçerli olan Visual Studio sürümü yüklenir. Her zaman en son bitleri yüklemek ve güncel tutmak için tasarlanmıştır.
 
-Sabit bağlantı önyükleyiciyi indirdiyseniz veya Microsoft Kataloğundan indirdiğiniz bir yönetici güncelleştirmesi çalıştırırsanız, ne zaman çalıştırıldıklarından bağımsız olarak ürünün belirli bir sürümünü yükler.
+Sabit bağlantı önyükleyicisini indirirseniz veya Microsoft Kataloğu'dan indirdiğiniz bir yönetici güncelleştirmesi çalıştırırsanız, ne zaman çalıştırnsa çalıştırsın her zaman ürünün belirli bir sürümünü yüklenir.
 
-Son olarak, bu Bootstrap'in herhangi birini kullanarak bir ağ düzeni oluşturabilirsiniz ve düzende oluşturulacak olan sürüm, kullandığınız önplanda, örneğin, sabit bir sürüm veya geçerli olacaktır. Daha sonra, herhangi bir ön önyükleyici kullanarak ağ yerleşimini güncelleştirebilir veya Microsoft Update kataloğundan yönetici güncelleştirme paketini de kullanabilirsiniz. Düzeni nasıl güncelleştirtiğinize bakılmaksızın, sonuçta elde edilen güncelleştirilmiş düzen ürünün belirli bir sürümünü içeren bir paket önbelleği olur ve daha sonra sabit bir bağlantı önyükleyici gibi davranır. bu nedenle, istemci düzenden her yüklendiğinde, istemci mizanpajda var olan Visual Studio belirli sürümünü yükler (daha yeni bir sürüm çevrimiçi olsa bile).
+Son olarak, bu önyükleyicilerden herhangi birini kullanarak bir ağ düzeni oluşturabilirsiniz ve düzende oluşturulacak sürüm kullandığınız önyükleyiciye bağlıdır, örneğin sabit bir sürüm veya geçerli olur. Daha sonra ağ düzenini daha sonra herhangi bir önyükleyici kullanarak güncelleştirebilirsiniz veya Katalog'dan yönetici güncelleştirme paketini Microsoft Update kullanabilirsiniz. Düzeni nasıl güncelleştirmiş olursanız olun, sonuçta elde edilen güncelleştirilmiş düzen ürünün belirli bir sürümünü içeren bir paket önbelleği olur ve ardından sabit bir bağlantı önyükleyicisi gibi davranır. Bu nedenle, istemci düzenden her yüklense, istemci düzende mevcut olan Visual Studio (daha yeni bir sürüm çevrimiçi olsa bile) belirli bir sürümünü yükleyebiliyor.
 
-### <a name="how-to-get-support-for-your-offline-installer"></a>Çevrimdışı Yükleyicinizle ilgili destek alma
+### <a name="how-to-get-support-for-your-offline-installer"></a>Çevrimdışı yükleyiciniz için destek nasıl elde edebilirsiniz?
 
-Çevrimdışı yüklemenizde bir sorunla karşılaşırsanız bunun hakkında bilgi sahibi olmak istiyoruz. Bize anlatmak için en iyi yol, [sorun bildir](../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanmaktır. Bu aracı kullandığınızda sorunu tanılamanıza ve gidermenize yardımcı olması için ihtiyacımız olan telemetri ve günlükleri bize gönderebilirsiniz.
+Çevrimdışı yükleme işlemiyle ilgili bir sorun yaşamanız gerekir. Bize söylemenin en iyi yolu Sorun Bildir [aracını kullanmaktır.](../ide/how-to-report-a-problem-with-visual-studio.md) Bu aracı kullanarak sorunu tanılamamıza ve düzeltmeye yardımcı olmak için ihtiyacımız olan telemetri ve günlükleri bize gönderebilirsiniz.
 
-Ayrıca, yükleme ile ilgili sorunlar için bir [**yükleme sohbeti**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) için destek seçeneği sunuyoruz.
+Ayrıca yüklemeyle ilgili [**sorunlar için bir**](https://visualstudio.microsoft.com/vs/support/#talktous) yükleme sohbeti (yalnızca İngilizce) destek seçeneği sunuyoruz.
 
-Diğer destek seçenekleri de mevcuttur. Bir liste için bkz. [geri bildirim](../ide/feedback-options.md) sayfamız.
+Başka destek seçenekleri de mevcuttur. Liste için Geri Bildirim [sayfamıza](../ide/feedback-options.md) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
 - [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
-- [Visual Studio yüklerken veya kullanırken ağla ilgili hatalarda sorun giderme](troubleshooting-network-related-errors-in-visual-studio.md)
-- [ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
-- [ürün yaşam döngüsü ve bakım Visual Studio](/visualstudio/releases/2019/servicing/)
+- [Ağ ile ilgili sorunları gidermek için ağ yükleme veya Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
+- [Ağ tabanlı dağıtımlarda güncelleştirmeleri Visual Studio denetleme](controlling-updates-to-visual-studio-deployments.md)
+- [Visual Studio yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
 - [Bakım temeli sırasında Visual Studio’yu güncelleştirme](update-servicing-baseline.md)
 - [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 - [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-- [Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)
+- [Çevrimdışı yükleme için Visual Studio sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)

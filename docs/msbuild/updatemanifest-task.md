@@ -1,6 +1,6 @@
 ---
 title: UpdateManifest görevi | Microsoft Docs
-description: MSBuild 'in seçili özellikleri bir bildirimde güncelleştirmek ve çekilmek için UpdateManifest görevini nasıl kullandığını öğrenin.
+description: MSBuild bir bildirimde seçili özellikleri güncelleştirmek ve çekilmek için updatemanifest görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,14 +16,15 @@ ms.assetid: 1291fd33-b89e-4e15-8fb1-69f9625cf2d2
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: b8bb090b66a52e9c2931e8bf4afc878d87a0ae36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e180eae1f2221b4450584d24a0daaf049c4c3480fe5b90bc37d8f06362b4b54e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902500"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369546"
 ---
 # <a name="updatemanifest-task"></a>UpdateManifest görevi
 

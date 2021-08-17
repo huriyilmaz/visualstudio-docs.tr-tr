@@ -1,6 +1,6 @@
 ---
 title: Projeleri birden çok platformu hedefleyecek şekilde yapılandırma
-description: Visual Studio 'nun birçok farklı CPU mimarilerini veya platformunu aynı anda hedeflemesi için bir yol sağladığını öğrenin.
+description: Visual Studio, bir çözümün birçok farklı CPU mimarilerini veya platformunu aynı anda hedeflemesini sağlamak için nasıl bir yol sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3255af161bd37d16eefeb6d41115cf0114059e81
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 151097f9482edb69eb6486e31d1eb9a5cd0740e03586af656ebc1bb01cb83937
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875438"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121387543"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma
 
@@ -31,7 +31,7 @@ Visual Studio, bir çözümün birçok farklı CPU mimarilerini veya platformunu
 
 1. **Yapı** menüsünde, **Yapılandırma Yöneticisi**’ne tıklayın.
 
-2. **Etkin çözüm platformu kutusunda** çözümünüzün hedeflemesini istediğiniz platformu seçin veya **\<New>** Yeni bir platform oluşturmayı seçin. Visual Studio, **Configuration Manager** iletişim kutusunda etkin platform olarak ayarlanan platformu hedeflemek için uygulamanızı derler.
+2. **Etkin çözüm platformu kutusunda** çözümünüzün hedeflemesini istediğiniz platformu seçin veya **\<New>** Yeni bir platform oluşturmayı seçin. Visual Studio, uygulamanızı, **Configuration Manager** iletişim kutusunda etkin platform olarak ayarlanan platformu hedefleyecek şekilde derler.
 
 ## <a name="remove-a-platform"></a>Platformu kaldırma
 
@@ -67,4 +67,4 @@ Ayarları yapılandırma ve platform ayarlarının birleşimine göre değiştir
 
 - [Nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)
 - [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
-- [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Visual Studio projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)

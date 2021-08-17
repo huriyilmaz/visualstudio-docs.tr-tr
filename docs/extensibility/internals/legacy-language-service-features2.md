@@ -1,6 +1,6 @@
 ---
 title: Eski dil hizmeti Features2 | Microsoft Docs
-description: Visual Studio SDK 'da Managed Extensibility Framework (MEF) uzantıları kullanarak sağlayabileceğinizi eski dil hizmeti özelliklerinden bazıları hakkında bilgi edinin.
+description: Visual Studio SDK 'sında Managed Extensibility Framework (MEF) uzantılarını kullanarak sağlayabileceğinizi eski dil hizmeti özelliklerinden bazıları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: 97c38622-ae0b-4ae0-90ed-604072c298d3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a12ee207f7fb7e4f4e2d202d5d63d468e9cea547
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ab3f467f9a3f247afc738a98ab824dd347f7c20a5d8f618b9684eb4ef1511b9f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074489"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375898"
 ---
 # <a name="legacy-language-service-features-2"></a>Eski dil hizmeti özellikleri 2
 Aşağıdaki konularda, sağlayabilmeniz için bazı eski dil hizmeti özellikleri listelenmektedir.

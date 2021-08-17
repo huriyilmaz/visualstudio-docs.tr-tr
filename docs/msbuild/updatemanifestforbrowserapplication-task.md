@@ -1,6 +1,6 @@
 ---
 title: UpdateManifestForBrowserApplication görevi | Microsoft Docs
-description: MSBuild 'in, uygulama bildirimine HostInBrowser öğesini eklemek için UpdateManifestForBrowserApplication görevinin nasıl çalıştığını öğrenin.
+description: MSBuild, uygulama bildirimine hostınbrowser öğesini eklemek için updatemanifestforbrowserapplication görevinin nasıl çalıştığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: 653339f7-654b-4d64-a26a-5c9f27036895
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e71e11988d4dd853b0f97c745b6d720a45adcdc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50c71a2d33449324543baa4d98f1edbb8b67d26e0e901210322acbb9290c4f5e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961553"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369533"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication görevi
 
-<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> **\<hostInBrowser />** Bir XAML tarayıcı UYGULAMASı (XBAP) projesi yapılandırıldığında, görev, uygulama bildirimine (*\<projectname> . exe. manifest*) eklemek için çalıştırılır.
+<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> **\<hostInBrowser />** Bir XAML tarayıcı UYGULAMASı (XBAP) projesi yapılandırıldığında, görev, uygulama bildirimine (*\<projectname>.exe. manifest*) eklemek için çalıştırılır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
@@ -40,7 +41,7 @@ ms.locfileid: "99961553"
 
 ## <a name="remarks"></a>Açıklamalar
 
- XBAP 'ler ClickOnce dağıtımı kullanılarak çalıştırılır, bu nedenle destekleyici dağıtım ve uygulama bildirimleri ile yayımlanmaları gerekir. MSBuild, bir uygulama bildirimi oluşturmak için [GenerateApplicationManifest](generateapplicationmanifest-task.md) görevini kullanır.
+ xbap 'ler ClickOnce dağıtım kullanılarak çalıştırılır, bu nedenle destekleyici dağıtım ve uygulama bildirimleri ile yayımlanmaları gerekir. MSBuild, bir uygulama bildirimi oluşturmak için [generateapplicationmanifest](generateapplicationmanifest-task.md) görevini kullanır.
 
  Ardından, bir uygulamayı bir tarayıcıdan barındırılacak şekilde yapılandırmak için, **\<hostInBrowser />** Aşağıdaki örnekte gösterildiği gibi, uygulama bildirimine ek bir öğe eklenmelidir:
 

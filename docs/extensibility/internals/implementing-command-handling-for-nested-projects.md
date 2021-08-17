@@ -1,6 +1,6 @@
 ---
-title: İç İçe Projeler için Komut İşleme | Microsoft Docs
-description: Tümleşik geliştirme ortamında (IDE) iç içe projeler için Visual Studio işlemeyi nasıl uygulayacaklarını öğrenin.
+title: Iç Içe projeler için komut Işlemeyi uygulama | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamında (ıde) iç içe projeler için komut işlemeyi uygulamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,36 +10,37 @@ ms.assetid: 48a9d66e-d51c-4376-a95a-15796643a9f2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4324e207d7b424295137f9523ed0bed538b3d806
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 54a3412050a8034a5941bbcb445795a28a86a1329bfa174678e067f7ef463729
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899992"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375942"
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>İç içe Projeler için Komut İşlemesi Uygulama
-IDE, ve arabirimleri aracılığıyla iç içe geçmiş projelere geçirilen komutları geçirebilirsiniz ya da üst projeler komutları filtreleye veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> geçersiz kılarak geçirebilirsiniz.
+IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimleri aracılığıyla iç içe projelere geçirilen komutları geçirebilir veya üst projeler komutları filtreleyebilir veya geçersiz kılabilir.
 
 > [!NOTE]
-> Yalnızca üst proje tarafından normalde işlenmiş komutlar filtrelenmiş olabilir. IDE **tarafından** **işlenmiş** Build ve Deploy gibi komutlar filtre olamaz.
+> Yalnızca üst proje tarafından normalde işlenen komutlar filtrelenebilir. IDE tarafından işlenen **derleme** ve **dağıtım** gibi komutlar filtrelenemez.
 
- Aşağıdaki adımlar, komut işlemeyi uygulama işlemini açıklar.
+ Aşağıdaki adımlarda komut işlemeyi uygulama işlemi açıklanır.
 
 ## <a name="procedures"></a>Yordamlar
 
 #### <a name="to-implement-command-handling"></a>Komut işlemeyi uygulamak için
 
-1. Kullanıcı iç içe bir projeyi veya iç içe geçmiş projedeki bir düğümü seçer:
+1. Kullanıcı iç içe geçmiş bir proje veya iç içe geçmiş bir projede bir düğüm seçtiğinde:
 
-   1. IDE yöntemini <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> çağırarak.
+   1. IDE <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemini çağırır.
 
-      — veya —
+      veya
 
-   2. Komutun kaynağı hiyerarşi penceresinden geliyorsa (örneğin, Çözüm Gezgini menü komutu gibi) IDE, projenin üst <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> öğesinde yöntemini çağırır.
+   2. Komut, Çözüm Gezgini içindeki kısayol menü komutu gibi bir hiyerarşi penceresinde başlatıldıysa IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> projenin üst kısmında yöntemini çağırır.
 
-2. Üst proje, üst projenin komutları filtrelemesi gerekip gerek olmadığını belirlemek için ve gibi parametreleri `QueryStatus` `pguidCmdGroup` `prgCmds` inceler. Üst proje komutları filtrelemek için uygulanmışsa şunları ayarlamış olması gerekir:
+2. Üst proje, `QueryStatus` `pguidCmdGroup` `prgCmds` ana projenin komutları filtreleyip filtreleyeceğini anlamak için, ve gibi geçirilecek parametreleri inceleyebilir. Üst proje, filtre komutlarına uygulanmışsa, şu şekilde ayarlanmalıdır:
 
    ```
    prgCmds[0].cmdf = OLECMDF_SUPPORTED;
@@ -47,11 +48,11 @@ IDE, ve arabirimleri aracılığıyla iç içe geçmiş projelere geçirilen kom
    prgCmds[0].cmdf &= ~MSOCMDF_ENABLED;
    ```
 
-    Daha sonra üst proje , 'ı geri `S_OK` getirsin.
+    Sonra üst proje döndürmelidir `S_OK` .
 
-    Üst proje komutu filtreleyene kadar yalnızca dönüş `S_OK` yapar. Bu durumda, IDE komutu otomatik olarak alt projeye yönlendirer.
+    Üst proje komutu filtrelemez, yalnızca döndürmelidir `S_OK` . Bu durumda IDE, komutu otomatik olarak alt projeye yönlendirir.
 
-    Üst projenin komutu alt projeye yönlendirmesi gerek değildir. IDE bu görevi gerçekleştirir.
+    Üst projenin komutu alt projeye yönlendirmesi gerekmez. IDE bu görevi gerçekleştirir...
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>

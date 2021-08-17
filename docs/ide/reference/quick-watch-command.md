@@ -1,6 +1,6 @@
 ---
 title: Hızlı Bakış Komutu
-description: Hızlı Izleme komutu ve seçilen veya belirtilen metnin hızlı Izleme penceresinin Ifade alanında nasıl görüntüleneceğini öğrenin.
+description: Hızlı İzleme komutu ve QuickWatch penceresinin İfade alanında seçili veya belirtilen metni görüntüleme hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,17 +13,18 @@ ms.assetid: 9670ac3a-8f2f-4874-974d-cb87d3b0cde1
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 5557fb9ca4c362f764cac04441add4fea0433856
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ae0717b8c4f4ffe6f3d469b21d26b794ee855dc6b25a965f2642e322892b76f4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958199"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121387076"
 ---
 # <a name="quick-watch-command"></a>Hızlı Bakış Komutu
-[QuickWatch](../../debugger/watch-and-quickwatch-windows.md) penceresinin Expression alanında seçili veya belirtilen metni görüntüler. Bu iletişim kutusunu, hata ayıklayıcı tarafından tanınan bir değişkenin veya ifadenin geçerli değerini ya da bir kaydın içeriğini hesaplamak için kullanabilirsiniz. Ayrıca, herhangi bir const olmayan değişkenin veya herhangi bir kaydın içeriğinin değerini değiştirebilirsiniz.
+[QuickWatch](../../debugger/watch-and-quickwatch-windows.md) penceresinin İfade alanında seçili veya belirtilen metni görüntüler. Hata ayıklayıcısı tarafından tanınan bir değişkenin veya ifadenin geçerli değerini veya yazmacın içeriğini hesaplamak için bu iletişim kutusunu kullanabilirsiniz. Ayrıca, sabit olmayan herhangi bir değişkenin değerini veya herhangi bir yazmaç içeriğini değiştirebilirsiniz.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -34,11 +35,11 @@ Debug.QuickWatchq [text]
 ## <a name="arguments"></a>Bağımsız değişkenler
 
 `text`\
-İsteğe bağlı. **QuickWatch** iletişim kutusuna eklenecek metin.
+İsteğe bağlı. **QuickWatch** iletişim kutusuna eklemek istediğiniz metin.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`text`Atlanırsa, imlecin üzerinde şu anda seçili olan metin veya sözcük izleme penceresi eklenir.
+`text`Atlanırsa, o anda imleçte seçili olan metin veya sözcük izleme penceresi.
 
 ## <a name="example"></a>Örnek
 
@@ -48,8 +49,8 @@ Debug.QuickWatchq [text]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da gözcü ve hızlı gözcü pencerelerini kullanarak değişkenlerde bir Izleme ayarlayın](../../debugger/watch-and-quickwatch-windows.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Visual Studio'daki Watch ve QuickWatch Windows kullanarak Değişkenler üzerinde watch Visual Studio](../../debugger/watch-and-quickwatch-windows.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

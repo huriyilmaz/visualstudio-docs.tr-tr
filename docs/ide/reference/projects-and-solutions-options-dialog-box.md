@@ -1,6 +1,6 @@
 ---
 title: Projeler ve çözümler, Seçenekler iletişim kutusu
-description: Projeler ve çözümlerle ilgili Visual Studio davranışını tanımlamak için projeler ve çözümler bölümünde Genel sayfasını nasıl kullanacağınızı öğrenin.
+description: projeler ve çözümlerle ilgili Visual Studio davranışını tanımlamak için projeler ve çözümler bölümünde genel sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
@@ -13,18 +13,19 @@ ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 2fab59a590b59452362a47d48bcdfa7dd8661f57
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c8b686b13fcd4289c70d6b6b89c7d7c96affaf92cbec2623805604cbc3e93998
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907506"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372067"
 ---
 # <a name="options-dialog-box-projects-and-solutions--general"></a>Seçenekler iletişim kutusu: projeler ve çözümler \> genel
 
-Visual Studio 'nun projelerle ve çözümlerle ilgili davranışını tanımlamak için bu sayfayı kullanın. Bu seçeneklere erişmek için **Araçlar**  >  **Seçenekler**, **Projeler ve çözümler**' i seçin ve ardından **genel**' i seçin.
+projeler ve çözümlerle ilgili Visual Studio davranışını tanımlamak için bu sayfayı kullanın. Bu seçeneklere erişmek için **Araçlar**  >  **Seçenekler**, **Projeler ve çözümler**' i seçin ve ardından **genel**' i seçin.
 
 **Genel** sayfasında aşağıdaki seçenekler bulunur.
 
@@ -38,7 +39,7 @@ Seçildiğinde, **Çözüm Gezgini** otomatik olarak açılır ve etkin öğe se
 
 ## <a name="show-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmasını göster
 
-Seçildiğinde, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve **Çözüm Özellik sayfaları** iletişim kutusunda görünür. Temizlenme sırasında, derleme yapılandırma seçenekleri **Proje özellik sayfaları** iletişim kutusunda ve bir yapılandırma ya da iki yapılandırma hata ayıklaması ve sürümü içeren Visual Basic ve C# projelerinin **Çözüm Özellik sayfaları** iletişim kutusunda görünmez. Bir projede Kullanıcı tanımlı bir yapılandırma varsa, derleme yapılandırma seçenekleri gösterilir.
+seçildiğinde, yapı yapılandırma seçenekleri **Project özellik sayfaları** iletişim kutusunda ve **çözüm özellik sayfaları** iletişim kutusunda görünür. temizlenme sırasında, derleme yapılandırma seçenekleri **Project özellik sayfaları** iletişim kutusunda ve bir yapılandırma ya da iki yapılandırma hata ayıklaması ve sürümü içeren Visual Basic ve C# projelerinin **çözüm özellik sayfaları** iletişim kutusunda görünmez. Bir projede Kullanıcı tanımlı bir yapılandırma varsa, derleme yapılandırma seçenekleri gösterilir.
 
 Seçilmediğinde, oluşturma **çözümü**, **çözümü yeniden oluşturma** ve **çözümü Temizleme** gibi **derleme** menüsündeki komutlar, sürüm yapılandırması üzerinde gerçekleştirilir ve hata **ayıklamayı Başlat** ve hata ayıklama **olmadan Başlat** gibi **hata** ayıklama menüsündeki komutlar hata ayıklama yapılandırmasında gerçekleştirilir.
 
@@ -50,7 +51,7 @@ Seçildiğinde, çözüm ve çözümler üzerinde işlem yapan tüm komutlar her
 
 ## <a name="save-new-projects-when-created"></a>Oluşturulduğunda yeni projeleri Kaydet
 
-Seçildiğinde, **Yeni proje** iletişim kutusunda projeniz için bir konum belirtebilirsiniz. Kaldırıldığında, tüm yeni projeler geçici proje olarak oluşturulur. Geçici projelerle çalışırken bir disk konumu belirtmek zorunda kalmadan bir proje oluşturup deneyebilirsiniz.
+seçildiğinde, **yeni Project** iletişim kutusunda projeniz için bir konum belirtebilirsiniz. Kaldırıldığında, tüm yeni projeler geçici proje olarak oluşturulur. Geçici projelerle çalışırken bir disk konumu belirtmek zorunda kalmadan bir proje oluşturup deneyebilirsiniz.
 
 ::: moniker-end
 
@@ -64,11 +65,11 @@ Yeni bir proje oluşturmaya veya var olan bir projeyi tam güvenilir olmayan bir
 
 ## <a name="prompt-for-symbolic-renaming-when-renaming-files"></a>Dosyaları yeniden adlandırırken sembolik yeniden adlandırma iste
 
-Seçildiğinde, Visual Studio projedeki tüm başvuruları kod öğesine de yeniden adlandırmasının gerekip gerekmediğini soran bir ileti kutusu görüntüler.
+seçildiğinde, Visual Studio projedeki tüm başvuruları kod öğesine de yeniden adlandırmasının gerekip gerekmediğini soran bir ileti kutusu görüntüler.
 
 ## <a name="prompt-before-moving-files-to-a-new-location"></a>Dosyaları yeni bir konuma taşımadan önce sor
 
-Seçildiğinde, dosya konumları **Çözüm Gezgini** eylemler tarafından değiştirilmeden önce Visual Studio bir onay iletisi kutusu görüntüler.
+seçildiğinde, dosya konumları **Çözüm Gezgini** eylemler tarafından değiştirilmeden önce Visual Studio bir onay iletisi kutusu görüntüler.
 
 ## <a name="reopen-documents-on-solution-load"></a>Çözüm yükünden belgeleri yeniden aç
 
@@ -91,10 +92,10 @@ Seçildiğinde, Çözüm Gezgini düğümlerin durumunu, çözümün en son aç�
 
 Bu seçenek belirlendiğinde ve Çözüm Gezgini bir SDK stili proje düğümüne çift tıkladığınızda veya seçin ve ardından **ENTER** tuşuna basarsanız proje dosyası (örneğin, \* . csproj dosyası) düzenleyicide XML olarak açılır. Seçimi kaldırıldığında, Çözüm Gezgini bir SDK stili proje düğümüne çift tıklayarak veya onu seçip **ENTER** tuşuna basarak yalnızca düğümü genişletme veya daraltma etkisi vardır.
 
-Bu seçenek seçilmezse ve bir SDK stili proje dosyasını düzenlemek istiyorsanız, Çözüm Gezgini ' de proje düğümüne sağ tıklayın ve **Proje dosyasını Düzenle**' yi seçin. Diğer proje türleri için öncelikle projeyi Visual Studio 'da düzenlemeden önce kaldırmanız gerekir.
+bu seçenek seçilmezse ve bir SDK stili proje dosyasını düzenlemek istiyorsanız, Çözüm Gezgini ' de proje düğümüne sağ tıklayın ve **Project dosyayı düzenle**' yi seçin. Diğer proje türleri için önce projeyi Visual Studio düzenlemeden önce kaldırmanız gerekir.
 
 > [!TIP]
-> *SDK stili bir proje* veya [Proje SDK](../../msbuild/how-to-use-project-sdk.md)'sı, MSBuild 15,0 ile tanıtılan daha yeni, daha kolay bir proje dosyası biçimine sahiptir. SDK stili bir proje `Sdk` , öğe üzerinde bir özniteliği içerir `Project` , örneğin `<Project Sdk="Microsoft.NET.Sdk">` . Visual Studio şablonlarından yeni bir .NET Core projesi oluşturduğunuzda Visual Studio bir SDK stili proje oluşturur, örneğin.
+> bir *sdk stili proje* veya [proje SDK](../../msbuild/how-to-use-project-sdk.md)'sı, MSBuild 15,0 ile tanıtılan daha yeni, daha kolay bir proje dosyası biçimine sahiptir. SDK stili bir proje `Sdk` , öğe üzerinde bir özniteliği içerir `Project` , örneğin `<Project Sdk="Microsoft.NET.Sdk">` . Visual Studio, örneğin Visual Studio şablonlarından birinden yeni bir .net Core projesi oluşturduğunuzda bir SDK stili proje oluşturur.
 
 ::: moniker-end
 

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Temel Phong Gölgelendiricisi Oluşturma'
-description: Gölgelendirici tasarımcısını ve yönlendirilebilir grafik gölgelendirici dilini kullanarak klasik Phong aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturma hakkında bilgi edinin.
+description: gölgelendirici tasarımcısını ve yönlendirilen Graph gölgelendirici dilini kullanarak klasik phong aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,18 +8,19 @@ ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: b5319526da9aa59951729389749e53f3df65b643
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b04f8b9188d982f12f6de2be13751644116a77eff5a72a1170f3808b2e8250eb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915714"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121435223"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>Nasıl yapılır: temel bir Phong gölgelendiricisi oluşturma
 
-Bu makalede, klasik Phong aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş Graf gölgelendirici dilinin (DGSL) nasıl kullanılacağı gösterilmektedir.
+bu makalede, klasik phong aydınlatma modelini uygulayan bir aydınlatma gölgelendiricisi oluşturmak için gölgelendirici tasarımcısının ve yönlendirilmiş Graph gölgelendirici dilinin (dgsl) nasıl kullanılacağı gösterilmektedir.
 
 ## <a name="the-phong-lighting-model"></a>Phong aydınlatma modeli
 
@@ -39,7 +40,7 @@ Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görünt�
 
 5. Yansımalı katkı ekleyin. **Yansımalı** düğümün **Çıkış** terminalini **Add** düğümünün **X** terminaline taşıyın ve ardından **Lambert** düğümünün **Çıkış** terminalini **Add** düğümünün **Y** terminaline taşıyın. Bu bağlantılar piksel için toplam dağıtma ve yansımalı renk katkıları birleştirir.
 
-6. Hesaplanan renk değerini son renge bağlayın. **Add** düğümünün **çıktı** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
+6. hesaplanan renk değerini son renge Bağlan. **Add** düğümünün **çıktı** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
 
    Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir ekip modeline uygulanan gölgelendirici önizlemesi gösterilmektedir.
 

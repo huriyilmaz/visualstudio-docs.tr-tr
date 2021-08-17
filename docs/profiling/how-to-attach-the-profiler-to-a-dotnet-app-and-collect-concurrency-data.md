@@ -1,6 +1,6 @@
 ---
 title: Eşzamanlılık verilerini toplamak için .NET 'e profil oluşturucu iliştirme
-description: Profil oluşturucuyu çalışan bir .NET Framework uygulamasına eklemek için Visual Studio Profil Oluşturma Araçları komut satırı araçlarını kullanarak işlem ve iş parçacığı eşzamanlılık verileri almayı öğrenin.
+description: profil oluşturucuyu çalışan bir .NET Framework uygulamasına eklemek için Visual Studio Profil Oluşturma Araçları komut satırı araçlarını kullanarak işlem ve iş parçacığı eşzamanlılık verileri almayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,18 +8,19 @@ ms.assetid: fdd41576-797e-4312-8520-fee7bb767e4a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f3eb5fbed055ef79595947954f86159b9cb2efc4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95c06dc9a043d0b11fb021ab8b1fadb33ec6dc830dfad4a0f0978fa5be8f85b1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958914"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121368519"
 ---
-# <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için profil oluşturucuyu .NET Framework tek başına bir uygulamaya Iliştirme
-Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , profil oluşturucuyu çalışan bir .NET Framework tek başına (istemci) uygulamasına eklemek ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
+# <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için profil oluşturucuyu .NET Framework tek başına bir uygulamaya iliştirme
+bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , profil oluşturucuyu çalışan bir .NET Framework tek başına (istemci) uygulamasına eklemek ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
 
 > [!NOTE]
 > Profil oluşturma araçlarının yolunu almak için bkz. [Walkthrough: Profiler API 'Leri kullanma](../profiling/walkthrough-using-profiler-apis.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir. Daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
@@ -28,7 +29,7 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , profil o
 
 ## <a name="attach-the-profiler"></a>Profil oluşturucuyu iliştirme
 
-#### <a name="to-attach-the-profiler-to-a-running-net-framework-application"></a>Profil oluşturucuyu çalışan bir .NET Framework uygulamasına eklemek için
+#### <a name="to-attach-the-profiler-to-a-running-net-framework-application"></a>profil oluşturucuyu çalışan bir .NET Framework uygulamasına eklemek için
 
 1. Bir komut istemi penceresi açın.
 
@@ -42,9 +43,9 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , profil o
 
     |Seçenek|Açıklama|
     |------------|-----------------|
-    |[/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath`|Profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir.|
+    |[/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath`|profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir.|
     |[/AutoMark](../profiling/automark.md) **:**`Interval`|Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir.|
-    |[/Events](../profiling/events-vsperfcmd.md) **:**`Config`|Profil oluşturma sırasında toplanacak bir Windows için olay Izleme (ETW) olayı belirtir. ETW olayları ayrı bir (. etl) dosyasında toplanır.|
+    |[/Events](../profiling/events-vsperfcmd.md) **:**`Config`|profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir olay izleme olayı belirtir. ETW olayları ayrı bir (. etl) dosyasında toplanır.|
 
 3. Hedef uygulamayı normal şekilde başlatın.
 
@@ -52,7 +53,7 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , profil o
 
      **VSPerfCmd/Attach:** `PID` [**/LineOff**] [**/targetclr:** `Version` ]
 
-    - `PID` hedef uygulamanın işlem KIMLIĞINI belirtir. Windows Görev Yöneticisi 'nde çalışan tüm işlemlerin işlem kimliklerini görüntüleyebilirsiniz.
+    - `PID` hedef uygulamanın işlem KIMLIĞINI belirtir. Windows görev yöneticisi 'nde çalışan tüm işlemlerin işlem kimliklerini görüntüleyebilirsiniz.
 
     - [/LineOff](../profiling/lineoff.md) satır numarası veri koleksiyonunu devre dışı bırakır.
 

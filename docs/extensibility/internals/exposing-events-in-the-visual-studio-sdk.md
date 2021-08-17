@@ -1,6 +1,6 @@
 ---
 title: Visual Studio SDK 'da olayları gösterme | Microsoft Docs
-description: Projeler ve proje öğeleri için olayları ortaya çıkaran Visual Studio SDK yöntemleri ve kayıt defteri girişleri hakkında bilgi edinin.
+description: projeler ve proje öğeleri için olayları ortaya çıkaran Visual Studio SDK yöntemleri ve kayıt defteri girişleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,14 +11,15 @@ ms.assetid: 70bbc258-c221-44f8-b0d7-94087d83b8fe
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99298329b969df3b9d7dbb46a3f4b9e7d4ed7091
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 97d655885e8a6ee670274eaeba172c7e950dc324d2b9324cf7db6e73fa57baaa
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898337"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376227"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>Visual Studio SDK 'da olayları kullanıma sunma
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Otomasyonu kullanarak olayları kaynak yapmanızı sağlar. Projeler ve proje öğeleri için olayları kaynak yapmanızı öneririz.
@@ -43,9 +44,9 @@ ms.locfileid: "112898337"
 
 8. `get_`Yöntemi, hem arabirimini hem de `IConnectionPointContainer` arabirimini uygulayan `IConnectionPoint` ve nesnesine döndüren başka bir IDispatch tabanlı olay nesnesi oluşturur `IDispatchpointer` .
 
-   Otomasyonu kullanarak bir olayı göstermek için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> kayıt defterine eklediğiniz dizeleri yanıtlamanız ve bunları izlemeniz gerekir. Temel proje örneğinde dizeler *BscProjectsEvents* ve *BscProjectItemsEvents*' dir.
+   Otomasyonu kullanarak bir olayı göstermek için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> kayıt defterine eklediğiniz dizeleri yanıtlamanız ve bunları izlemeniz gerekir. temel Project örneğinde dizeler *bscprojectsevents* ve *bscprojectıtemsevents*' dir.
 
-## <a name="registry-entries-from-the-basic-project-sample"></a>Temel proje örneğindeki kayıt defteri girişleri
+## <a name="registry-entries-from-the-basic-project-sample"></a>temel Project örneğinden kayıt defteri girişleri
  Bu bölümde, kayıt defterine Otomasyon olay değerlerinin ekleneceği yer gösterilmektedir.
 
  **[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0\Packages\\<PkgGUID \> \Automationevents]**
@@ -57,12 +58,12 @@ ms.locfileid: "112898337"
 |Ad|Tür|Aralık|Açıklama|
 |----------|----------|-----------|-----------------|
 |Varsayılan (@)|REG_SZ|Kullanılmıyor|Kullanılmıyor. Belgeler için veri alanını kullanabilirsiniz.|
-|*AutomationProjectsEvents*|REG_SZ|Olay nesnenizin adı.|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek, temel proje örneğinden gelir.|
-|*AutomationProjectItemEvents*|REG_SZ|Olay nesnenizin adı|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> Bu örnek, temel proje örneğinden gelir.|
+|*AutomationProjectsEvents*|REG_SZ|Olay nesnenizin adı.|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> bu örnek, temel Project örneğinden gelir.|
+|*AutomationProjectItemEvents*|REG_SZ|Olay nesnenizin adı|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> bu örnek, temel Project örneğinden gelir.|
 
  Olay nesnelerinizin herhangi biri bir Otomasyon tüketicisi tarafından istendiğinde, VSPackage 'ın desteklediği herhangi bir olay için yöntemler içeren bir kök nesnesi oluşturun. Ortam, `get_` Bu nesne üzerinde uygun yöntemi çağırır. Örneğin, çağrılırsa, `DTE.Events.AutomationProjectsEvents` `get_AutomationProjectsEvents` kök nesnesindeki yöntem çağrılır.
 
- ![Visual Studio proje olayları](../../extensibility/internals/media/projectevents.gif "ProjectEvents") Olaylar için otomasyon modeli
+ ![proje olaylarını Visual Studio](../../extensibility/internals/media/projectevents.gif "ProjectEvents") Olaylar için otomasyon modeli
 
  Sınıfı `CProjectEventsContainer` *BscProjectsEvents* için kaynak nesnesini temsil eder ve `CProjectItemsEventsContainer` *BscProjectItemsEvents* için kaynak nesnesini temsil eder.
 

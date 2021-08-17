@@ -8,14 +8,15 @@ ms.assetid: 45cfcee6-7a68-4d4f-b3f6-e2d8a0fa066a
 author: gregg-miskelly
 ms.author: greggm
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - greggm
-ms.openlocfilehash: adc1db57de2167ff3caa0e87e1075c8ff5b462e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cd02fe3e8df0372a2a5503c455c706c0006fcef1d14b1ccacfb1695036646415
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886723"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375162"
 ---
 # <a name="migrate-64-bit-debugger-com-class-registration"></a>64 bit hata ayıklayıcı COM sınıfı kaydını geçirme
 

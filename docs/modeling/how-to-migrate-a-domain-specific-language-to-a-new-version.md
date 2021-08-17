@@ -1,32 +1,33 @@
 ---
 title: 'Nasıl yapılır: Domain-Specific dil projesi geçirme'
-description: Bir etki alanına özgü dil projesinin Visual Studio 'nun daha yeni bir sürümüne nasıl geçirileceğiyle ilgili bilgi sağlar.
+description: Bir etki alanına özgü dil projesinin Visual Studio daha güncel bir sürümüne nasıl geçirileceğiyle ilgili bilgiler sağlar.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 8119f465e32d3754dc446524286e0a2c12dedc40
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: a3787795a1cb2d5a1691bcac79c6c8319e281610f9ffc9e2173d1d0019610059
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387196"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121429035"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Nasıl yapılır: Etki Alanına Özgü Dili Yeni Sürüme Geçirme
 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]İle dağıtılan sürümüne, etki alanına özgü dili tanımlayan ve kullanan projeleri geçirebilirsiniz [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] .
 
- Bir geçiş aracı bir parçası olarak sağlanır [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] . Araç, DSL araçlarını kullanan veya tanımlayan Visual Studio projelerini ve çözümlerini dönüştürür.
+ Bir geçiş aracı bir parçası olarak sağlanır [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] . araç, DSL araçlarını kullanan veya tanımlayan Visual Studio projeleri ve çözümleri dönüştürür.
 
- Geçiş aracını açıkça çalıştırmanız gerekir: Visual Studio 'da bir çözüm açtığınızda bu otomatik olarak başlatılmaz. Araç ve ayrıntılı kılavuz belgesi şu yolda bulunabilir:
+ Geçiş aracını açıkça çalıştırmanız gerekir: Visual Studio bir çözüm açtığınızda bu otomatik olarak başlatılmaz. Araç ve ayrıntılı kılavuz belgesi şu yolda bulunabilir:
 
- **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
+ **% Program dosyaları% \ Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>DSL projelerinizi geçirmeden önce
- Geçiş Aracı, Visual Studio proje dosyalarını (**. csproj**) ve çözüm dosyalarını (**. sln**) değiştirir.
+ geçiş aracı Visual Studio proje dosyalarını (**. csproj**) ve çözüm dosyalarını (**. sln**) değiştirir.
 
 #### <a name="to-prepare-projects-for-migration"></a>Projeleri geçişe hazırlamak için.
 
@@ -40,9 +41,9 @@ ms.locfileid: "112387196"
 
 1. DSL geçiş aracını başlatın.
 
-   - Windows Gezgini 'nde (veya dosya Gezgini) araca çift tıklayarak veya aracı bir komut isteminden başlatabilirsiniz. Araç şu konumda:
+   - Windows Explorer (veya dosya gezgini) ' nde araca çift tıklayabilir veya aracı bir komut isteminden başlatabilirsiniz. Araç şu konumda:
 
-        **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
+        **% ProgramFiles% \ Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 2. Dönüştürmek istediğiniz çözüm ve projeleri içeren bir klasör seçin.
 

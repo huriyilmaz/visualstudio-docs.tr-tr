@@ -1,6 +1,6 @@
 ---
-title: Otomasyon modelini kullanma | Microsoft Docs
-description: VSPackage 'ın Otomasyon modeline bağlandıktan sonra özellik ve yöntemlerini nasıl edineceğinizi öğrenin.
+title: Otomasyon Modeli | Microsoft Docs
+description: VSPackage'nizin otomasyon modeline bağlandıktan sonra özelliklerini ve yöntemlerini nasıl elde etmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,20 +10,21 @@ ms.assetid: 0c7f7889-fbfb-4b19-804f-b742138baecd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a25936e0be16231bbe315a2bd29a0d495115f392
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6412e27386ac0744ecaae607d83c7297900f464cd9ff843983019331ca6f17db
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085812"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121375630"
 ---
 # <a name="using-the-automation-model"></a>Otomasyon Modelini Kullanma
-VSPackage 'ı Otomasyon 'a bağladıktan sonra, <xref:EnvDTE.DTEClass.GetObject%2A> nesne üzerinde yöntemini çağırarak ve <xref:EnvDTE._DTE> almak istediğiniz nesneyi temsil eden bir dize geçirerek özellikleri ve yöntemleri elde edebilirsiniz.
+VSPackage'nızı otomasyona bağladıktan sonra nesnesinde yöntemini çağırarak, almak istediğiniz nesneyi temsil eden bir dizeyi geçerek özellikleri <xref:EnvDTE.DTEClass.GetObject%2A> <xref:EnvDTE._DTE> ve yöntemleri elde edersiniz.
 
-## <a name="obtaining-project-objects"></a>Proje nesneleri alma
- Aşağıda, bir Otomasyon tüketicisinin Proje Otomasyonu nesnelerini nasıl aldığını gösteren iki kod örneği verilmiştir. DTE nesnesini alma hakkında daha fazla bilgi için bkz. [nasıl yapılır: DTE ve DTE2 nesnelerine başvuruları alma](/previous-versions/68shb4dw(v=vs.140)).
+## <a name="obtaining-project-objects"></a>Project Alma
+ Aşağıda, otomasyon tüketicisi tarafından proje otomasyonu nesnelerini nasıl edinilene yönelik iki kod örneği verilmiştir. DTE nesnesinin nasıl elde edildiklerine ilişkin bilgi için bkz. Nasıl [kullanılır: DTE ve DTE2 Nesnelerine BaşvuruLar Al.](/previous-versions/68shb4dw(v=vs.140))
 
 ```vb
 Sub DoAutomation()
@@ -45,9 +46,9 @@ void DoAutomation(void)
 
 ```
 
- Bu noktada, belirli bir VSPackage 'ın parçası olan standart proje nesnelerini hiyerarşi modelinin altına taşımak için kullanabilirsiniz.
+ Bu noktada, hiyerarşi modelini aşağı taşımak için belirli bir VSPackage'ın parçası olan standart proje nesnelerini kullanabilirsiniz.
 
- Aşağıdaki kod örneği, özel bir proje türünün özelliği olan özel bir nesnenin nasıl alınacağını gösterir.:
+ Aşağıdaki kod örneği, özel bir proje türünün özelliği olan özel bir nesnenin nasıl elde etmek üzere olduğunu gösterir:
 
 ```vb
 Dim MyPrj As Project
@@ -60,7 +61,7 @@ objMyObject = MyPrj.Object 'You call .Object to get to special Project
 objMyObject.MySpecialMethodOrProperty
 ```
 
- Aşağıdaki kod, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Araçlar** menüsündeki ortam **genel** seçeneğinde tüm özelliklerin adlarını listeler:
+ Aşağıdaki kod, Araçlar menüsündeki Ortam Genel seçeneğinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yer **alan tüm** özelliklerin **adlarını** listeler:
 
 ```vb
 dim objDTE

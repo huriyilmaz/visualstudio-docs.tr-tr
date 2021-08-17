@@ -1,6 +1,6 @@
 ---
-title: Bir projede dosya açan düzenleyiciyi belirleme | Microsoft Docs
-description: Bir projede dosya açan düzenleyiciyi anlamak için Visual Studio tarafından kullanılan kayıt defteri anahtarları ve Visual Studio SDK yöntemleri hakkında bilgi edinin.
+title: Bir Project dosya açan düzenleyiciyi belirleme | Microsoft Docs
+description: bir projede dosya açan düzenleyiciyi belirleyebilmek için Visual Studio tarafından kullanılan kayıt defteri anahtarları ve Visual Studio SDK yöntemleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,14 +13,15 @@ ms.assetid: acbcf4d8-a53a-4727-9043-696a47369479
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb6f142ea25748f6798fb60d7c03862c51819349
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 197b310c37ba3c9395cd5120d4e0e8fb4d066e0669b3e409b06af0b10475137d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090869"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376241"
 ---
 # <a name="determine-which-editor-opens-a-file-in-a-project"></a>Bir projede dosya açan düzenleyiciyi belirleme
 Bir Kullanıcı projedeki bir dosyayı açtığında, bu dosya için uygun düzenleyiciyi veya tasarımcıyı açan bir yoklama işleminden geçer. Ortam tarafından çalıştırılan ilk yordam, hem standart hem de özel düzenleyiciler için aynıdır. Ortam, bir dosyayı açmak için kullanılacak düzenleyiciyi yoklayarak ve bu işlem sırasında VSPackage 'ın ortamla birlikte koordine olması gereken çeşitli kriterleri kullanır.
@@ -31,9 +32,9 @@ Bir Kullanıcı projedeki bir dosyayı açtığında, bu dosya için uygun düze
 
  **HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\ \<version> \Düzenleyiciler \\ \<editor factory guid> \Extensions**
 
- Ortam Ayrıca, **DocObject** alt anahtarına sahip herhangi bir nesne için **HKEY_CLASSES_ROOT\CLSID** anahtarındaki sınıf tanımlayıcılarını de denetler. Dosya Uzantısı orada bulunursa, Microsoft Word gibi uygulamanın katıştırılmış bir sürümü Visual Studio 'da yerinde oluşturulur. Bu belge nesneleri, arabirimini uygulayan bileşik dosyalar olmalıdır <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> veya nesnenin arabirimi uygulaması gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> .
+ Ortam Ayrıca, **DocObject** alt anahtarına sahip herhangi bir nesne için **HKEY_CLASSES_ROOT\CLSID** anahtarındaki sınıf tanımlayıcılarını de denetler. dosya uzantısı orada bulunursa, uygulamanın Microsoft Word gibi gömülü bir sürümü Visual Studio ' de yerinde oluşturulur. Bu belge nesneleri, arabirimini uygulayan bileşik dosyalar olmalıdır <xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage> veya nesnenin arabirimi uygulaması gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> .
 
- Kayıt defterindeki *. rtf* dosyaları için bir düzenleyici fabrikası yoksa, ortam **HKEY_CLASSES_ROOT \\ . rtf** anahtarına bakar ve orada belirtilen düzenleyiciyi açar. Dosya Uzantısı **HKEY_CLASSES_ROOT** bulunamazsa, ortam, bir metin dosyası ise dosyayı açmak Için Visual Studio çekirdek metin düzenleyicisini kullanır.
+ Kayıt defterindeki *. rtf* dosyaları için bir düzenleyici fabrikası yoksa, ortam **HKEY_CLASSES_ROOT \\ . rtf** anahtarına bakar ve orada belirtilen düzenleyiciyi açar. dosya uzantısı **HKEY_CLASSES_ROOT** bulunamazsa, ortam, bir metin dosyası ise dosyayı açmak için Visual Studio çekirdek metin düzenleyicisini kullanır.
 
  Çekirdek metin Düzenleyicisi başarısız olursa, bu durum dosya bir metin dosyası değilse, ortam dosyanın ikili düzenleyicisini kullanır.
 

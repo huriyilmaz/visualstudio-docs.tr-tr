@@ -1,6 +1,6 @@
 ---
 title: Merhaba Dünya uzantısı öğreticisi | Microsoft Docs
-description: Visual Studio 'ya bir proje oluşturmayı, bir komut eklemeyi ve kaynak kodu değiştirmeyi kapsayan yeni bir komut ekleme hakkında bilgi edinin.
+description: bir proje oluşturmayı, komut eklemeyi ve kaynak kodu değiştirmeyi içeren Visual Studio bir uzantı olarak yeni bir komut eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/14/2019
 ms.topic: tutorial
@@ -8,18 +8,19 @@ ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec465eda5a0bd7d017c3822390d68b43f76b5c47
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c53e0312de7d687c761546c0d5bd5d125665744fd6b78b71531a2eff749950f1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070186"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376991"
 ---
 # <a name="tutorial---create-your-first-extension-hello-world"></a>Öğretici-ilk uzantınızı oluşturun: Merhaba Dünya
 
-Bu Merhaba Dünya örnek, Visual Studio için ilk uzantınızı oluşturma konusunda size yol gösterir. Bu öğreticide, Visual Studio 'ya nasıl yeni bir komut ekleyeceğiniz gösterilmektedir.
+Bu Merhaba Dünya örnek, Visual Studio için ilk uzantınızı oluşturma konusunda size yol gösterir. Bu öğreticide, Visual Studio için nasıl yeni bir komut ekleyeceğiniz gösterilmektedir.
 
 İşlemde şunları yapmayı öğreneceksiniz:
 
@@ -33,22 +34,22 @@ Bu örnekte, "deyin Merhaba Dünya!" adlı özel bir menü düğmesi eklemek Iç
 ![Merhaba Dünya komutu](media/hello-world-say-hello-world.png)
 
 > [!NOTE]
-> Bu makale Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio genişletilebilirlik](/visualstudio/mac/extending-visual-studio-mac-walkthrough)Kılavuzu.
+> bu makale Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio genişletilebilirlik](/visualstudio/mac/extending-visual-studio-mac-walkthrough)kılavuzu.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Başlamadan önce, ihtiyacınız olan VSıX şablonunu ve örnek kodu içeren **Visual Studio uzantısı geliştirme** iş yükünü yüklediğinizden emin olun.
+başlamadan önce, ihtiyacınız olan vsıx şablonunu ve örnek kodu içeren **Visual Studio uzantısı geliştirme** iş yükünü yüklediğinizden emin olun.
 
 > [!NOTE]
-> Visual Studio genişletilebilirlik projesi oluşturmak için herhangi bir Visual Studio (Community, Professional veya Enterprise) sürümünü kullanabilirsiniz.
+> bir Visual Studio genişletilebilirlik projesi oluşturmak için Visual Studio herhangi bir sürümünü (Community, Professional veya Enterprise) kullanabilirsiniz.
 
 ## <a name="create-an-extensibility-project"></a>Genişletilebilirlik projesi oluşturma
 
 ::: moniker range="vs-2017"
 
-Adım 1. **Dosya** menüsünden **Yeni**  >  **Proje**' yi seçin.
+Adım 1. **dosya** menüsünden **yeni**  >  **Project**' yi seçin.
 
-Adım 2. Sağ üst köşedeki arama kutusuna "VSIX" yazın ve Visual C# **VSIX projesi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** Için "HelloWorld" yazın ve **Tamam**' ı seçin.
+Adım 2. Sağ üst köşedeki arama kutusuna "VSIX" yazın ve Visual C# **vsıx Project** seçin. İletişim kutusunun alt kısmındaki **ad** Için "HelloWorld" yazın ve **Tamam**' ı seçin.
 
 ![Yeni proje](media/hello-world-new-project.png)
 
@@ -60,9 +61,9 @@ Bu öğreticiyi bırakmanız ve geri dönebilmeniz gerekiyorsa, yeni HelloWorld 
 
 ::: moniker range=">=vs-2019"
 
-Adım 1. **Dosya** menüsünden **Yeni**  >  **Proje**' yi seçin. "VSIX" araması yapın ve Visual C# **VSIX projesini** ve sonra **İleri**' yi seçin.
+Adım 1. **dosya** menüsünden **yeni**  >  **Project**' yi seçin. "vsıx" araması yapın ve Visual C# **vsıx Project** seçin ve ardından **ileri**' ye tıklayın.
 
-Adım 2. **Proje adı** Için "HelloWorld" girin ve **Oluştur**' u seçin.
+Adım 2. **Project adı** için "HelloWorld" girin ve **oluştur**' u seçin.
 
 ![Yeni proje](media/hello-world-new-project-2019.png)
 
@@ -88,7 +89,7 @@ Yeni komut dosyanız **Çözüm Gezgini** görünür. **Kaynaklar** düğümü a
 
 Bu noktada, komut ve düğme metni otomatik olarak oluşturulur ve çok ilginç değildir. Değişiklik yapmak istiyorsanız VSCT dosyasını ve CS dosyasını değiştirebilirsiniz.
 
-* VSCT dosyası, komutlarınızı yeniden adlandırabileceğiniz ve Visual Studio komut sisteminde nerede gittikleri yeri tanımlayabileceğiniz yerdir. VSCT dosyasını keşfederken, VSCT Code denetimlerinin her bir bölümünü açıklayan açıklamalar görürsünüz.
+* vsct dosyası, komutlarınızı yeniden adlandırabileceğiniz ve Visual Studio komut sisteminde nereye gittikleri de tanımlayabileceğiniz yerdir. VSCT dosyasını keşfederken, VSCT Code denetimlerinin her bir bölümünü açıklayan açıklamalar görürsünüz.
 
 * CS dosyası, tıklama işleyicisi gibi eylemleri tanımlayabileceğiniz yerdir.
 
@@ -146,9 +147,9 @@ Değişikliklerinizi her dosyaya kaydettiğinizden emin olun.
 
 ## <a name="run-it"></a>Çalıştırın
 
-Artık kaynak kodu Visual Studio deneysel örneğinde çalıştırabilirsiniz.
+artık Visual Studio deneysel örneğinde kaynak kodu çalıştırabilirsiniz.
 
-Adım 1. **Hata ayıklamayı Başlat** komutunu çalıştırmak için **F5** tuşuna basın. Bu komut, projenizi oluşturur ve hata ayıklayıcıyı başlatır ve **deneysel örnek** olarak adlandırılan yeni bir Visual Studio örneğini başlatır.
+Adım 1. **Hata ayıklamayı Başlat** komutunu çalıştırmak için **F5** tuşuna basın. bu komut, projenizi oluşturur ve **deneysel örnek** olarak adlandırılan Visual Studio yeni bir örneğini başlatarak hata ayıklayıcıyı başlatır.
 
 ::: moniker range="vs-2017"
 
@@ -166,9 +167,9 @@ Yeni özel komutınızdan çıktıyı görmeniz gerekir, bu durumda **Merhaba D�
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio genişletilebilirliği ile çalışmanın temellerini öğrenmiş olduğunuza göre buradan daha fazla bilgi edinebilirsiniz:
+artık Visual Studio genişletilebilirlik ile çalışmanın temellerini öğrenmiş olduğunuza göre buradan daha fazla bilgi edinebilirsiniz:
 
-* [Visual Studio uzantıları geliştirmeye başlayın](starting-to-develop-visual-studio-extensions.md) -örnekler, Öğreticiler. ve uzantınızı yayımlama
-* Visual [studio 2017 SDK 'daki](what-s-new-in-the-visual-studio-2017-sdk.md) yenilikler-visual Studio 2017 ' de yeni genişletilebilirlik özellikleri
-* Visual [studio 2019 SDK 'daki](whats-new-visual-studio-2019-sdk.md) yenilikler-visual Studio 2019 ' de yeni genişletilebilirlik özellikleri
-* [Visual STUDIO SDK içinde](internals/inside-the-visual-studio-sdk.md) -Visual Studio genişletilebilirliğine ilişkin ayrıntıları öğrenin
+* [Visual Studio uzantıları geliştirmeye başlayın](starting-to-develop-visual-studio-extensions.md) -örnekler, öğreticiler. ve uzantınızı yayımlama
+* [Visual Studio 2017 SDK 'daki](what-s-new-in-the-visual-studio-2017-sdk.md) yenilikler-Visual Studio 2017 ' deki yeni genişletilebilirlik özellikleri
+* [Visual Studio 2019 SDK 'daki](whats-new-visual-studio-2019-sdk.md) yenilikler-Visual Studio 2019 ' deki yeni genişletilebilirlik özellikleri
+* [Visual Studio SDK 'nın içinde](internals/inside-the-visual-studio-sdk.md) -Visual Studio genişletilebilirliği ayrıntılarını öğrenin

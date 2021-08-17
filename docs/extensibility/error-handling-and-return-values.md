@@ -12,14 +12,15 @@ ms.assetid: b2d9079d-39a6-438a-8010-290056694b5c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef33936e3dc36d98cc88b1285aa0b198a84cbd59
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 187b2896026b7550d4e67df7cbf85d69dae99ac99184be5f456b19d7a862b16d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898327"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376891"
 ---
 # <a name="error-handling-and-return-values"></a>Hata işleme ve dönüş değerleri
 VSPackages ve COM, hatalar için aynı mimariyi kullanır. `SetErrorInfo`Ve `GetErrorInfo` Işlevleri, Win32 uygulama programlama ARABIRIMININ (API) bir parçasıdır. Tümleşik geliştirme ortamındaki (IDE) herhangi bir VSPackage, hata bildirimi alırken zengin hata bilgilerini kaydetmek için bu genel Win32 API 'Lerini çağırabilir. , [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] Hata bilgilerini yönetmek için birlikte çalışma derlemeleri sağlar.

@@ -1,6 +1,6 @@
 ---
-title: Özel hata ayıklama altyapısını kaydetme | Microsoft Docs
-description: Hata ayıklama altyapısının kendisini bir sınıf fabrikası olarak kaydetme, COM kurallarını izleyen ve kayıt defteri aracılığıyla Visual Studio ile kaydetme hakkında bilgi edinin.
+title: Özel Hata Ayıklama AltyapısıNı | Microsoft Docs
+description: Hata ayıklama altyapısının kendisini com kurallarına göre sınıf fabrikası olarak kaydetmenin yanı sıra kayıt defteri aracılığıyla Visual Studio olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,31 +10,32 @@ ms.assetid: 9984cd3d-d34f-4662-9ace-31766499abf5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 04e4e8de875cb66ed285e610950baa1c5bf4ef3f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e0d1537958b783d35be4d95303ecdd19fe03dababae1b411bd261230ef27ab2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070667"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377066"
 ---
-# <a name="register-a-custom-debug-engine"></a>Özel bir hata ayıklama altyapısını kaydetme
-Hata ayıklama altyapısı kendisini bir sınıf fabrikası olarak kaydetmelidir, COM kurallarını ve Visual Studio kayıt defteri alt anahtarı aracılığıyla Visual Studio 'Ya kaydolmalıdır.
+# <a name="register-a-custom-debug-engine"></a>Özel hata ayıklama altyapısını kaydetme
+Hata ayıklama altyapısının kendisini com kurallarına göre bir sınıf fabrikası olarak kaydetmesi ve Visual Studio kayıt defteri alt anahtarı Visual Studio kaydetmesi gerekir.
 
 > [!NOTE]
-> Bir hata ayıklama altyapısını, öğreticinin bir parçası olarak oluşturulan Textyorumlayıcı örneğinde nasıl kaydedebileceğinizi gösteren bir örnek bulabilirsiniz [: atl com kullanarak hata ayıklama altyapısı oluşturma](/previous-versions/bb147024(v=vs.90)).
+> Öğretici: [ATL COM](/previous-versions/bb147024(v=vs.90))kullanarak hata ayıklama altyapısının bir parçası olarak inşa edilen TextInterpreter örneğinde hata ayıklama altyapısını kaydetme örneği bulabilirsiniz.
 
 ## <a name="dll-server-process"></a>DLL sunucusu işlemi
- Hata ayıklama altyapısı genellikle kendi DLL 'sinde bir COM sunucusu olarak ayarlanır. Bu nedenle, Visual Studio 'nun erişebilmesi için hata ayıklama altyapısının CLSID 'sini COM ile kaydetmesi gerekir. Daha sonra hata ayıklama altyapısının, hata ayıklama altyapısının desteklediği herhangi bir özelliği (ölçümler olarak da bilinir) oluşturmak için kendisini Visual Studio ile kaydetmesi gerekir. Visual Studio kayıt defteri alt anahtarına yazılan ölçümler seçimi, hata ayıklama altyapısının desteklediği özelliklere bağlıdır.
+ Hata ayıklama altyapısı genellikle kendi DLL'sinde COM sunucusu olarak ayarlanır. Bu nedenle, hata ayıklama altyapısının sınıf fabrikasının CLSID'sini, Visual Studio com'a kaydetmesi gerekir. Ardından, hata ayıklama altyapısının desteklediği herhangi bir Visual Studio (ölçümler olarak da bilinir) kurmak için hata ayıklama altyapısının kendisini bu altyapıya kaydetmesi gerekir. Kayıt defteri alt anahtarına Visual Studio seçimi, hata ayıklama altyapısının desteklediği özelliklere bağlıdır.
 
- [Hata ayıklama Için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) yalnızca bir hata ayıklama altyapısını kaydetmek için gereken kayıt defteri konumlarını değil; Ayrıca, kayıt defterini daha kolay hale getirmeye yönelik bir dizi kullanışlı işlevi ve C++ geliştiricileri için bildirim içeren *dbgmetric. lib* kitaplığını açıklar.
+ [Hata ayıklama için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) yalnızca bir hata ayıklama altyapısını kaydetmek için gereken kayıt defteri konumlarını açıklamakla birlikte; Ayrıca, C++ geliştiricileri için kayıt defterinin daha kolay yönlendirilmesine neden olan bir dizi yararlı işlev ve bildirim içeren *dbgmetric.lib* kitaplığını açıklar.
 
 ### <a name="example"></a>Örnek
- Aşağıdaki örnek (Textyorumlayıcı örneğinden), `SetMetric` Visual Studio ile bir hata ayıklama altyapısını kaydetmek için işlevinin ( *dbgmetric. lib*) nasıl kullanılacağını gösterir. Geçirilmekte olan ölçümler *dbgmetric. lib* içinde de tanımlanır.
+ Aşağıdaki örnekte (TextInterpreter örneğinden), bir hata ayıklama altyapısını veritabanına kaydetmek için `SetMetric` işlevinin *(dbgmetric.lib'den)* nasıl Visual Studio. Geçirilen ölçümler *dbgmetric.lib içinde de tanımlanır.*
 
 > [!NOTE]
-> Textyorumlayıcı temel bir hata ayıklama altyapısıdır; ayarlanmamış — ve bu nedenle, diğer tüm özellikleri kaydetmez. Daha eksiksiz bir hata ayıklama altyapısı `SetMetric` , hata ayıklama altyapısının desteklediği her bir özellik için bir çağrı listesinin tamamını veya bunların eşdeğerini içermelidir.
+> TextInterpreter temel bir hata ayıklama altyapısıdır; diğer özellikleri ayarlamaz ve bu nedenle kaydetmez. Daha eksiksiz bir hata ayıklama altyapısı, hata ayıklama altyapısının desteklediği her özellik için bir çağrı veya bunların `SetMetric` eşdeğerlerinin tam listesine sahip olur.
 
 ```
 // Define base registry subkey to Visual Studio.
@@ -53,4 +54,4 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 - [Hata ayıklama için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-- [Öğretici: ATL COM kullanarak hata ayıklama altyapısı oluşturma](/previous-versions/bb147024(v=vs.90))
+- [Öğretici: ATL COM kullanarak hata ayıklama altyapısını bina](/previous-versions/bb147024(v=vs.90))

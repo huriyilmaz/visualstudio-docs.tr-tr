@@ -7,17 +7,18 @@ ms.topic: reference
 author: kendrahavens
 ms.author: kehavens
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee5776e9fc39b77f8059146848d847e0976a5664
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04bcc54702b81ebf4516598eca3dab9e1e258cd3efc9a5c52145ea6812119990
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958290"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121387198"
 ---
 # <a name="pull-members-up"></a>Üyeleri çekme
 

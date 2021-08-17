@@ -15,14 +15,15 @@ ms.assetid: 9f2cce86-345a-4e22-84ba-91542d81e67a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c81020b7c1933075f2faee026be17dd0fec4319
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fad740b0111f909af92a3e8ccc42e10c574b321946f17d386a04ded41408c31b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884448"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121435796"
 ---
 # <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>Kayıtlı IntelliTrace verilerini kullanma (C#, Visual Basic, C++)
 
@@ -30,16 +31,16 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
  Bilgisayarınızda yüklü olduğundan emin olun:
 
-- Uygulama kodunuz için eşleşen kaynak dosyalar ve sembol (. pdb) dosyaları. Aksi halde, Visual Studio kaynak konumları çözümleyemez ve "semboller bulunamadı" iletisini gösterir. Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ve [dağıtımdan sonra sorunları tanılama](../debugger/diagnose-problems-after-deployment.md).
+- Uygulama kodunuz için eşleşen kaynak dosyalar ve sembol (. pdb) dosyaları. aksi takdirde, Visual Studio kaynak konumları çözemez ve "semboller bulunamadı" iletisini gösterir. Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ve [dağıtımdan sonra sorunları tanılama](../debugger/diagnose-problems-after-deployment.md).
 
-- Geliştirme bilgisayarınızda veya başka bir bilgisayarda. iTrace dosyaları açmak için Visual Studio Enterprise (profesyonel veya Community Edition değil)
+- geliştirme bilgisayarınızda veya başka bir bilgisayarda. itrace dosyaları açmak için Visual Studio Enterprise (ancak Professional veya Community sürümler)
 
 - Şu kaynaklardan birinden bir. iTrace dosyası:
 
-    |**Kaynak**|**Bakýn**|
+    |**Kaynak**|**Bkz.**|
     |----------------|-------------|
-    |Visual Studio Enterprise (Professional veya Community Edition) bir IntelliTrace oturumu|[IntelliTrace Özellikleri](../debugger/intellitrace-features.md)|
-    |ASP.NET Web Apps ve dağıtımda çalışan SharePoint uygulamaları için tek başına veya System Center 2012 R2 Operations Manager ile Microsoft Monitoring Agent|-   [Dağıtımdan sonra sorunları tanılama](../debugger/diagnose-problems-after-deployment.md)<br />-   [System Center 2012 R2 'deki yenilikler Operations Manager](/previous-versions/system-center/system-center-2012-R2/dn249700(v=sc.12))|
+    |Visual Studio Enterprise bir ıntellitrace oturumu (ancak Professional veya Community sürümlerde değil)|[IntelliTrace Özellikleri](../debugger/intellitrace-features.md)|
+    |dağıtımda çalışan ASP.NET web uygulamaları ve SharePoint uygulamaları için tek başına veya System Center 2012 R2 Operations Manager ile Microsoft Monitoring Agent|-   [Dağıtımdan sonra sorunları tanılama](../debugger/diagnose-problems-after-deployment.md)<br />-   [System Center 2012 R2 'deki yenilikler Operations Manager](/previous-versions/system-center/system-center-2012-R2/dn249700(v=sc.12))|
 
 ## <a name="what-do-you-want-to-do"></a><a name="GetStarted"></a> Ne yapmak istiyorsunuz?
 
@@ -50,13 +51,13 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 - [IntelliTrace günlüğünden hata ayıklamayı Başlat](#StartDebugging)
 
 ## <a name="open-an-intellitrace-log"></a><a name="Open"></a> Bir IntelliTrace günlüğü açın
- Visual Studio Enterprise olan bir bilgisayarda. iTrace dosyasını açın.
+ Visual Studio Enterprise olan bir bilgisayarda. itrace dosyasını açın.
 
-- Visual Studio dışında. iTrace dosyasına çift tıklayın veya dosyayı Visual Studio içinde açın.
+- Visual Studio dışında. itrace dosyasına çift tıklayın veya dosyayı Visual Studio içinde açın.
 
      \- veya
 
-- . İTrace dosyası Team Foundation Server iş öğesine eklenmişse, iş öğesinde şu adımları izleyin:
+- . itrace dosyası Team Foundation Server iş öğesine eklenmişse, iş öğesinde şu adımları izleyin:
 
   - **Tüm bağlantılar** altında. iTrace dosyasını bulun. Açın.
 
@@ -68,17 +69,17 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 > Hata ayıklama sırasında IntelliTrace dosyasını kapattıysanız, kolayca yeniden açabilirsiniz. **Hata Ayıkla** menüsüne gidin, **IntelliTrace**' i ve **günlük özetini göster**' i seçin. **IntelliTrace** penceresinde **günlük özetini göster** ' i de seçebilirsiniz. Bu yalnızca IntelliTrace ile hata ayıklarken kullanılabilir.
 
 ## <a name="understand-the-intellitrace-log"></a><a name="Understand"></a> IntelliTrace günlüğünü anlayın
- . İTrace dosyasındaki aşağıdaki bölümlerden bazıları yalnızca belirli bir kaynaktan (örneğin, SharePoint uygulamalarından) veri topladıysanız görünür.
+ . itrace dosyasındaki aşağıdaki bölümlerden bazıları yalnızca belirli bir kaynaktan (örneğin, SharePoint uygulamalardan) veri topladıysanız görünür.
 
 |**Section**|**Vardır**|**Koleksiyon kaynağı**|
 |-----------------|------------------|---------------------------|
-|[Performans Ihlalleri](#Performance)|Yapılandırılan eşiği aşan işlev çağrılarına sahip performans olayları|IIS 'de barındırılan ASP.NET Web Apps için tek başına toplayıcı ya da System Center 2012 R2 Operations Manager Microsoft Monitoring Agent|
+|[Performans Ihlalleri](#Performance)|Yapılandırılan eşiği aşan işlev çağrılarına sahip performans olayları|ııs 'de barındırılan ASP.NET web apps için tek başına toplayıcı veya System Center 2012 R2 Operations Manager Microsoft Monitoring Agent|
 |[Özel durum verileri](#ExceptionData)|Her özel durum için tam çağrı yığını da dahil olmak üzere özel durumlar|Tüm kaynaklar|
-|[Çözümlemeleri](#Analysis)|Yalnızca SharePoint 2010 ve SharePoint 2013 uygulamaları için. Hata ayıklayıcı olayları, ULS olayları, işlenmemiş özel durumlar ve Microsoft Monitoring Agent kaydettiği diğer veriler gibi IntelliTrace ve SharePoint olaylarını tanılayın.|Microsoft Monitoring Agent, tek başına toplayıcı ya da System Center 2012 R2 Operations Manager|
-|[Sistem bilgisi](#SystemInfo)|Konak sisteminin ayarları ve belirtimleri|Tüm kaynaklar|
+|[Çözümlemeleri](#Analysis)|yalnızca SharePoint 2010 ve SharePoint 2013 uygulamaları için. hata ayıklayıcı olayları, ULS olayları, işlenmemiş özel durumlar ve Microsoft Monitoring Agent kaydettiği diğer veriler gibi ıntellitrace ve SharePoint olaylarını tanılayın.|tek başına toplayıcı veya System Center 2012 R2 Operations Manager Microsoft Monitoring Agent|
+|[Sistem bilgisi](#SystemInfo)|konak sisteminin Ayarlar ve belirtimleri|Tüm kaynaklar|
 |[İş parçacıkları listesi](#ThreadsList)|Koleksiyon sırasında çalıştırılan iş parçacıkları|Tüm kaynaklar|
 |[Modül](#Modules)|Hedef işlemin yüklendikleri sırada yüklediği modüller.|Tüm kaynaklar|
-|[Web Isteği](#Modules)|Üretim IIS Web uygulamaları ve SharePoint 2010 ve SharePoint 2013 için Web isteği verileri|Microsoft Monitoring Agent ve tek başına toplayıcı|
+|[Web Isteği](#Modules)|üretim ııs web uygulamaları için web istek verileri ve 2010 SharePoint ve SharePoint 2013|Microsoft Monitoring Agent ve tek başına toplayıcı|
 
  Her bölümde bilgi bulmanıza yardımcı olacak bazı ipuçları aşağıda verilmiştir:
 
@@ -150,23 +151,23 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
     |**Çağrı yığını**|Özel durum için çağrı yığını.<br /><br /> Çağrı yığınını görmek için listeden bir özel durum seçin. Çağrı yığını, özel durum listesinin altında görüntülenir.|
 
 ### <a name="analysis"></a><a name="Analysis"></a> Çözümlemeleri
- SharePoint bağıntı KIMLIĞI kullanarak SharePoint 2010 ve SharePoint 2013 uygulamalarıyla ilgili sorunları tanılayın veya Microsoft Monitoring Agent bulunan işlenmemiş özel durumları gözden geçirin.
+ SharePoint bağıntı kimliği kullanarak SharePoint 2010 ve SharePoint 2013 uygulamalarıyla ilgili sorunları tanılayın veya Microsoft Monitoring Agent bulunan işlenmemiş özel durumları gözden geçirin.
 
-- Eşleşen web isteğini ve olaylarını bulmak için bir SharePoint bağıntı KIMLIĞI kullanın. Bir olay seçin ve sonra olayın gerçekleştiği noktada ve hata ayıklamaya başlayın.
+- eşleşen web isteğini ve olaylarını bulmak için SharePoint bağıntı kimliği kullanın. Bir olay seçin ve sonra olayın gerçekleştiği noktada ve hata ayıklamaya başlayın.
 
-- İşlenmemiş özel durumlar Microsoft Monitoring Agent, bir özel durum seçin ve sonra özel durumun oluştuğu noktada hata ayıklamayı başlatın.
+- işlenmemiş özel durumlar Microsoft Monitoring Agent, bir özel durum seçin ve sonra özel durumun oluştuğu noktada hata ayıklamayı başlatın.
 
 ##### <a name="start-debugging-with-a-sharepoint-correlation-id"></a>SharePoint bağıntı kimliği ile hata ayıklamayı başlat
 
-1. SharePoint bağıntı KIMLIĞINI kaynağından kopyalayın.
+1. SharePoint bağıntı kimliğini kaynağından kopyalayın.
 
-    Örneğin:
+    Örnek:
 
-    ![IntelliTrace &#45; SharePoint hatası &#45; bağıntı KIMLIĞI](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
+    ![ıntellitrace &#45; SharePoint hata &#45; bağıntı kimliği](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
 
-2. . İTrace dosyasını açın, ardından **analiz** ' a gidin ve eşleşen web isteğini ve kayıtlı olayları gözden geçirmek için SHAREPOINT bağıntı kimliği ' ni girin.
+2. . itrace dosyasını açın, **analiz** bölümüne gidin ve eşleşen web isteğini ve kayıtlı olayları gözden geçirmek için SharePoint bağıntı kimliği girin.
 
-    ![IntelliTrace günlüğü &#45; SharePoint bağıntı KIMLIĞI girin](../debugger/media/entersharepointcorrelationid.png "Entersharepointbağıntıkimliği")
+    ![ıntellitrace günlük &#45; SharePoint bağıntı kimliği girin](../debugger/media/entersharepointcorrelationid.png "Entersharepointbağıntıkimliği")
 
 3. **Istek olayları**' nın altında, olayları inceleyin. En üstten başlayarak olaylar gerçekleşdikleri sırada görüntülenir.
 
@@ -176,15 +177,15 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
       ![IntelliTrace günlük dosyası &#45; Web isteği &#43; olaylarını görüntüleme](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")
 
-   Bu tür SharePoint olaylarını IntelliTrace olaylarıyla birlikte görebilirsiniz:
+   ıntellitrace olaylarıyla birlikte bu tür SharePoint olayları görebilirsiniz:
 
 - **Kullanıcı profili olayları**
 
-     Bu olaylar SharePoint bir kullanıcı profili yüklediğinde ve Kullanıcı profili özellikleri okunmasından veya değiştirildiğinde gerçekleşir.
+     bu olaylar, SharePoint bir kullanıcı profili yüklediğinde ve kullanıcı profili özellikleri okunmasından veya değiştirildiğinde gerçekleşir.
 
 - **Birleşik günlüğe kaydetme sistemi (ULS) olayları**
 
-     Microsoft Monitoring Agent, SharePoint ULS olaylarının bir alt kümesini ve bu alanları kaydeder:
+     Microsoft Monitoring Agent, SharePoint ULS olaylarının ve bu alanların bir alt kümesini kaydeder:
 
     |**IntelliTrace alanı**|**SharePoint ULS alanı**|
     |----------------------------|------------------------------|
@@ -194,19 +195,19 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
     |**Kategori**|**Kategori**|
     |**Alan**|**Ürün**|
     |**Çıktı**|**İleti**|
-    |**Bağıntı Kimliği**|**Bağıntı Kimliği**|
+    |**Bağıntı KIMLIĞI**|**Bağıntı KIMLIĞI**|
 
 ##### <a name="start-debugging-from-an-unhandled-exception"></a>İşlenmemiş bir özel durumdan hata ayıklamayı başlat
 
-1. Özel durum için bir SharePoint bağıntı KIMLIĞI seçin. Özel durumlar türe ve çağrı yığınına göre gruplandırılır.
+1. bir özel durum için SharePoint bağıntı kimliği seçin. Özel durumlar türe ve çağrı yığınına göre gruplandırılır.
 
 2. Seçim Bir özel durum grubu için çağrı yığınını görmek için **çağrı yığınını** genişletin.
 
 3. Özel durumun oluştuğu noktada hata ayıklamayı başlatmak için **hata ayıklama özel durumunu** seçin.
 
-    ![IntelliTrace log &#45; SharePoint işlenmemiş özel durumları](../debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")
+    ![ıntellitrace günlüğü işlenmemiş özel durumları SharePoint &#45;](../debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")
 
-   İzlenecek yol için bkz. [Izlenecek yol: IntelliTrace kullanarak bir SharePoint uygulamasında hata ayıklama](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md). Aracının kaydettiği veri türleri için bkz. [IntelliTrace Özellikleri](../debugger/intellitrace-features.md).
+   izlenecek yol için bkz. [izlenecek yol: SharePoint uygulamada ıntellitrace kullanarak hata ayıklama](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md). Aracının kaydettiği veri türleri için bkz. [IntelliTrace Özellikleri](../debugger/intellitrace-features.md).
 
 ### <a name="threads-list"></a><a name="ThreadsList"></a> İş parçacıkları listesi
  Hedef işlemde çalıştırılan kayıtlı iş parçacıklarını inceleyin. Seçili bir iş parçacığında ilk geçerli IntelliTrace olayından hata ayıklamaya başlayabilirsiniz.
@@ -236,7 +237,7 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
      Bu, seçilen test adımından sonra ilk geçerli IntelliTrace olayından hata ayıklamayı başlatır.
 
-     Test verileri mevcut olduğunda, IntelliTrace test çalıştırmasını gerçekleştirmek için kullanılan ilişkili Team Foundation Server derlemesini çözümlemeye çalışır. Yapı bulunursa, uygulamanın ilişkili sembolleri otomatik olarak çözümlenir.
+     test verileri mevcut olduğunda, ıntellitrace test çalıştırmasını gerçekleştirmek için kullanılan ilişkili Team Foundation Server derlemesini çözümlemeye çalışır. Yapı bulunursa, uygulamanın ilişkili sembolleri otomatik olarak çözümlenir.
 
 |**Alan**|**Şunu gösterir**|
 |---------------|-------------------|
@@ -269,4 +270,4 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
  [Visual Studio Hata Ayıklayıcısı](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 #### <a name="guidance"></a>Rehber
- [Visual Studio 2012 ile sürekli teslim için test etme-Bölüm 6: bir test araç kutusu](/previous-versions/msp-n-p/jj159337(v=pandp.10))
+ [Visual Studio 2012 ile sürekli teslim için test etme-bölüm 6: bir test araç kutusu](/previous-versions/msp-n-p/jj159337(v=pandp.10))

@@ -1,6 +1,6 @@
 ---
-title: Proje türlerini dağıtma | Microsoft Docs
-description: Visual Studio SDK 'sında yeni bir proje türü toplayıcısı ve yeniden dağıtım için Windows Installer paketi kullanarak yönetilen kod proje türlerini dağıtmayı öğrenin.
+title: Dağıtım Project Türleri | Microsoft Docs
+description: Visual Studio SDK'da yeni bir proje türü toplayıcısı ve yeniden dağıtım için Windows Yükleyicisi paketini kullanarak yönetilen kod proje türlerini dağıtmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,20 +11,21 @@ ms.assetid: 7f132f67-8589-464c-90dc-0d57ae02aa8f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 121dda58b8e01c5b0029d8b3c93ef66d2657446e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ad2684b15f4e3a388193b71d9bfdb32bf37a316f3dc177fb892a7bd61578f727
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090999"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376293"
 ---
-# <a name="deploy-project-types"></a>Proje türlerini dağıt
-[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Yeni bir proje türü toplayıcısı (*ProjectAggregator2.dll*) ve ayrıca yeniden dağıtım için bir Windows Installer paketi (*ProjectAggregator2.msi*) yüklenir. Yönetilen kod proje türleri için yeni toplayıcısı 'nı kullanmanız gerekir. ProjectAggregator2, proje toplayıcısı 'nda, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yönetilen kod proje türlerinin düzgün çalışmasını engelleyen sınırlamalar çerçevesinde çalışır. Aşağıdaki adımlarda, VSPackage 'ın yeni toplayıcısı 'nı kullanacak şekilde nasıl değiştirileceği açıklanır.
+# <a name="deploy-project-types"></a>Proje türlerini dağıtma
+[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]yeni bir proje türü toplayıcısı (*ProjectAggregator2.dll*) ve ayrıca yeniden dağıtım için Windows *Yükleyicisi* paketini (ProjectAggregator2.msi). Yönetilen kod proje türleri için yeni toplayıcıyı kullan gerekir. ProjectAggregator2, yönetilen kodlu proje türlerinin düzgün bir şekilde çalışmasını engelleyen proje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] toplayıcısı sınırlamalarıyla çalışır. Aşağıdaki adımlarda, VSPackage'nızı yeni toplayıcıyı kullanmak üzere nasıl değiştiryebilirsiniz?
 
 1. NativeHierarchyWrapper projesini çözümünüzden kaldırın.
 
-2. Tüm NativeHierarchyWrapper ikililerini kurulumınızdan kaldırın.
+2. Tüm NativeHierarchyWrapper ikili dosyalarını kurulumdan kaldırın.
 
-3. *ProjectAggregator2.msi* , kuruluma ekleyin.
+3. Kurulum *ProjectAggregator2.msi* ekleme.

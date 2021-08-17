@@ -1,6 +1,6 @@
 ---
-title: Belge pencerelerini | Microsoft Docs
-description: Visual Studio 'da, bunların nasıl uygulanacağı ve çalışan belge tablosunun (RDT) durumlarını nasıl izlediği dahil olmak üzere belge pencereleri hakkında bilgi edinin.
+title: Belge Windows | Microsoft Docs
+description: Visual Studio ' deki belge pencereleri hakkında bilgi edinin ve bunları nasıl uygulayacağınızı ve çalışan belge tablosunun (rdt) durumlarını nasıl izlediğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,17 +10,18 @@ ms.assetid: 50081d48-987f-43db-8bf9-51b7cf76e9c0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: df7a797c0b4587698197412f49eef6bfab183a7a
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: fc3fc77d895805eae1dbffb092721fc0c8dd616c63b796da42205e1e65c42ea9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899920"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376254"
 ---
 # <a name="document-windows"></a>Belge pencereleri
-Visual Studio 'da *belge penceresi* , bir çoklu belge ARABIRIMI (MDI) penceresiyle ilişkili olan bir çerçeveli alt penceredir. Belge pencereleri genellikle kaynak kodu veya metin görüntüleme ve değiştirme için kullanılır, ancak diğer işlevsel türleri de barındırabilir. Belge pencereleri:
+Visual Studio, *belge penceresi* bir çoklu belge arabirimi (mdı) penceresiyle ilişkili olan bir çerçeveli alt penceredir. Belge pencereleri genellikle kaynak kodu veya metin görüntüleme ve değiştirme için kullanılır, ancak diğer işlevsel türleri de barındırabilir. Belge pencereleri:
 
 - Aynı anda birden çok dosya görüntülenebilmesi için üst MDI 'daki ayrı yatay veya dikey sekme grupları halinde düzenlenebilir.
 
@@ -32,7 +33,7 @@ Visual Studio 'da *belge penceresi* , bir çoklu belge ARABIRIMI (MDI) penceresi
 
   Gruplandırma, yerleştirme ve kayan komutlar, bir belge penceresi sekmesi için kısayol menüsünde bulunabilir.
 
-  Visual Studio 'daki pencere davranışı hakkında daha fazla bilgi için bkz. [Özelleştirme pencere düzenleri](../../ide/customizing-window-layouts-in-visual-studio.md).
+  Visual Studio pencere davranışı hakkında daha fazla bilgi için bkz. [özelleştirme pencere düzenleri](../../ide/customizing-window-layouts-in-visual-studio.md).
 
 ## <a name="document-window-implementation"></a>Belge penceresi uygulama
  Belge pencereleri bir düzenleyici uygulayarak oluşturulur. <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>Arabirim, bir düzenleyiciyi örnekleyici belge pencerelerini oluşturur. Daha fazla bilgi için bkz. [düzenleyicideki eski arabirimler](/previous-versions/visualstudio/visual-studio-2015/extensibility/legacy-interfaces-in-the-editor?preserve-view=true&view=vs-2015).

@@ -1,6 +1,6 @@
 ---
 title: Filesınıflandırıcı görevi | Microsoft Docs
-description: Bir derlemeye eklenecek kaynak kaynakları kümesini sınıflandırmak için MSBuild Filesınıflandırıcı görevini kullanın.
+description: bir derlemeye eklenecek kaynak kaynakları kümesini sınıflandırmak için MSBuild filesınıflandırıcı görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,14 +17,15 @@ ms.assetid: 14e03310-fcc0-4bb2-a84d-cda12be66367
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f030a240bf02b3261ce903803095b83555a4531
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: df4d07364f0f1b707ed4f4f95aca9a90de484f0da40eab9a369fc28cde398090
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957367"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121428074"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier görevi
 

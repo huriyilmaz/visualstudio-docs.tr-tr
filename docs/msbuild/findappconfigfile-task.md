@@ -1,6 +1,6 @@
 ---
-title: FindAppConfigFile Görevi | Microsoft Docs
-description: Belirtilen listelerde app.config dosyasını bulmak için MSBuild FindAppConfigFile görevini kullanmayı öğrenin.
+title: FindAppConfigFile Task | Microsoft Docs
+description: Sağlanan listelerde MSBuild dosyanın (varsa) bulun app.config FindAppConfigFile görevini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,33 +16,34 @@ ms.assetid: e292de3e-7482-4426-83ce-d921061808bf
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: ff26ee3505671d29df610278d701803b816d30f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f078b3110fa7888c59f6a5aaf374f5a714db9dc70341a3bb2550e64cabcd29b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877141"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121428061"
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile görevi
 
-Varsa, belirtilen listelerdeki *app.config* dosyasını bulur.
+Sağlanan *app.config* varsa, bir dosya bulur.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `FindAppConfigFile` .
+ Aşağıdaki tabloda görevin parametreleri açık `FindAppConfigFile` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`AppConfigFile`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Varsa, listede bulunan ilk eşleşen öğeyi belirtir.|
-|`PrimaryList`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Arama yapılacak birincil listeyi belirtir.|
-|`SecondaryList`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Arama yapılacak ikincil listeyi belirtir.|
+|`AppConfigFile`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Varsa, listede bulunan ilk eşleşen öğeyi belirtir.|
+|`PrimaryList`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Aranan birincil listeyi belirtir.|
+|`SecondaryList`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Aranan ikincil listeyi belirtir.|
 |`TargetPath`|Gerekli `String` parametre.<br /><br /> Meta veri olarak eklenecek değeri belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, tabloda listelenen parametrelerin yanı sıra sınıfından devralınan parametreleri de sınıfından <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

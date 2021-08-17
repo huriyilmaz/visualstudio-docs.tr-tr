@@ -1,6 +1,6 @@
 ---
 title: Birden çok bilgisayarda derleme ortamı oluşturma
-description: Visual Studio 'Yu bir ana bilgisayara yükleyerek ve sonra çeşitli dosya ve ayarları başka bir bilgisayara kopyalayarak kuruluşunuzda bir yapı ortamı oluşturun.
+description: bir konak bilgisayara Visual Studio yükleyerek ve sonra çeşitli dosya ve ayarları başka bir bilgisayara kopyalayarak kuruluşunuzda bir yapı ortamı oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -13,16 +13,16 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ae0e5f2516dd1f78aea880289f549ca3a44f3bb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6dcdf6b1b916a5f5f38137967d3d2a33072bca8f72d3ceb42b0b2ca27f7d6fc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881975"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121386543"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>İzlenecek yol: Birden çok bilgisayarda derleme ortamı oluşturma
 
-Kuruluşunuzda Visual Studio 'Yu bir ana bilgisayara yükleyerek ve sonra çeşitli dosya ve ayarları, yapılara katılabilecek şekilde başka bir bilgisayara kopyalayarak kuruluşunuz içinde bir yapı ortamı oluşturabilirsiniz. Visual Studio 'Yu diğer bilgisayara yüklemenize gerek yoktur.
+kuruluşunuzda bir konak bilgisayara Visual Studio yükleyerek ve sonra çeşitli dosya ve ayarları, yapılara katılabilecek şekilde başka bir bilgisayara kopyalayarak kuruluşunuz içinde bir yapı ortamı oluşturabilirsiniz. diğer bilgisayara Visual Studio yüklemenize gerek yoktur.
 
 Bu belge, yazılımı dışarıdan yeniden dağıtmak veya üçüncü taraflara derleme ortamları sağlamak için bir haklara sahip değildir.
 
@@ -41,74 +41,74 @@ Bu izlenecek adımları tamamladıktan sonra, bu tür uygulamaları oluşturmak 
 
 Birden çok bilgisayar ortamı, bu tür uygulamaları oluşturmak için kullanılamaz:
 
-- UWP uygulamaları. UWP uygulamaları oluşturmak için, Visual Studio 'Yu yapı bilgisayarına yüklemelisiniz.
-- .NET Framework 4 veya önceki sürümleri hedefleyen masaüstü uygulamaları. Bu tür uygulamaları oluşturmak için, Yapı bilgisayarında Visual Studio 'Yu veya .NET başvuru derlemelerini ve araçlarını (Windows 7,1 SDK 'dan) yüklemelisiniz.
+- UWP uygulamaları. UWP uygulamaları oluşturmak için, yapı bilgisayarına Visual Studio yüklemelisiniz.
+- .NET Framework 4 veya önceki sürümleri hedefleyen masaüstü uygulamaları. bu tür uygulamaları oluşturmak için, yapı bilgisayarında Visual Studio veya .net başvuru derlemelerini ve araçlarını (Windows 7,1 SDK 'sinden) yüklemelisiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-**.Net masaüstü geliştirme** iş yükü yüklü Visual Studio.
+**.net masaüstü geliştirme** iş yükü yüklü Visual Studio.
 
 ## <a name="install-software-on-the-computers"></a>Bilgisayarlara yazılım yüklemesi
 
 İlk olarak, ana bilgisayarı ayarlayın ve ardından yapı bilgisayarını ayarlayın.
 
-Visual Studio 'Yu ana bilgisayara yükleyerek, daha sonra yapı bilgisayarına kopyalayacaksınız dosya ve ayarları oluşturursunuz. Visual Studio 'Yu bir x86 veya x64 bilgisayara yükleyebilirsiniz, ancak yapı bilgisayarının mimarisinin ana bilgisayar mimarisiyle eşleşmesi gerekir.
+ana bilgisayara Visual Studio yükleyerek, daha sonra yapı bilgisayarına kopyalayacaksınız dosya ve ayarları oluşturursunuz. Visual Studio bir x86 veya x64 bilgisayara yükleyebilirsiniz, ancak yapı bilgisayarının mimarisinin ana bilgisayar mimarisiyle eşleşmesi gerekir.
 
-1. Ana bilgisayarda, Visual Studio 'Yu yükler.
+1. Ana bilgisayarda Visual Studio ' yi yükleyip.
 
-2. Yapı bilgisayarında, 4,5 veya sonraki bir sürümü .NET Framework. Yüklendiğini doğrulamak için, kayıt defteri alt **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** anahtarındaki **Sürüm** girişinin **4,5** veya daha yüksek bir değere sahip olduğundan emin olun.
+2. yapı bilgisayarında, 4,5 veya sonraki bir sürümü .NET Framework. Yüklendiğini doğrulamak için, kayıt defteri alt **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** anahtarındaki **Sürüm** girişinin **4,5** veya daha yüksek bir değere sahip olduğundan emin olun.
 
 ## <a name="copy-files-from-the-host-computer-to-the-build-computer"></a>Dosyaları ana bilgisayardan yapı bilgisayarına Kopyala
 
-Bu bölüm, ana bilgisayardan yapı bilgisayarına belirli dosyaları, derleyiciler, derleme araçları, MSBuild varlıkları ve kayıt defteri ayarlarının kopyalanmasını ele alır. Bu yönergeler, Visual Studio 'Yu ana bilgisayarda varsayılan konuma yüklediğinizi varsayar; başka bir konuma yüklediyseniz, adımları uygun şekilde ayarlayın.
+bu bölüm, ana bilgisayardan yapı bilgisayarına belirli dosyaların, derleyicilerin, derleme araçlarının, MSBuild varlıkların ve kayıt defteri ayarlarının kopyalanmasını ele alır. bu yönergelerde, ana bilgisayardaki varsayılan konuma Visual Studio yüklediğinizi varsayılmaktadır; başka bir konuma yüklediyseniz, adımları uygun şekilde ayarlayın.
 
-- X86 bilgisayarda, varsayılan konum *C:\Program Files\Microsoft Visual Studio*
-- X64 bilgisayarda, varsayılan konum *C:\Program Files (x86) \Microsoft Visual Studio* ' dır
+- X86 bilgisayarda, varsayılan konum *C:\Program Files \ Microsoft Visual Studio*
+- X64 bilgisayarda, varsayılan konum *C:\Program Files (x86) \ Microsoft Visual Studio*
 
 *Program dosyaları* klasörünün adının yüklü olan işletim sistemine bağlı olduğuna dikkat edin. X86 bilgisayarda, ad *program dosyalarıdır*; x64 bilgisayarda, ad *Program Files (x86)*' dır. Sistem mimarisinden bağımsız olarak, Bu izlenecek yol *% ProgramFiles%* olarak *Program Files* klasörüne başvurur.
 
 > [!NOTE]
-> Yapı bilgisayarında, tüm ilgili dosyalar aynı sürücüde olmalıdır. Ancak, bu sürücünün sürücü harfi, Visual Studio 'nun ana bilgisayarda yüklü olduğu sürücünün sürücü harfinden farklı olabilir. Herhangi bir durumda, bu belgenin ilerleyen kısımlarında açıklandığı gibi kayıt defteri girişleri oluştururken dosyaların konumunu hesaba almalısınız.
+> Yapı bilgisayarında, tüm ilgili dosyalar aynı sürücüde olmalıdır. ancak, bu sürücünün sürücü harfi, ana bilgisayara Visual Studio yüklendiği sürücü için sürücü harfinden farklı olabilir. Herhangi bir durumda, bu belgenin ilerleyen kısımlarında açıklandığı gibi kayıt defteri girişleri oluştururken dosyaların konumunu hesaba almalısınız.
 
 ### <a name="copy-the-windows-sdk-files-to-the-build-computer"></a>Windows SDK dosyalarını yapı bilgisayarına kopyalayın
 
-1. Yalnızca Windows 8 için Windows SDK yüklüyse, bu klasörleri, ana bilgisayardan yapı bilgisayarına özyinelemeli olarak kopyalayın:
+1. yalnızca Windows 8 Windows SDK yüklüyse, bu klasörleri konak bilgisayardan yapı bilgisayarına yinelemeli olarak kopyalayın:
 
-   - %Kits\8.0\bin\
+   - % ProgramFiles% \ Windows Kits\8.0\bin\
 
-   - %Kits\8.0\catalogs\
+   - % ProgramFiles% \ Windows kits\8.0\catalogs\
 
-   - %Kits\8.0\designtime\
+   - % ProgramFiles% \ Windows kits\8.0\designtime\
 
-   - %Kits\8.0\include\
+   - % ProgramFiles% \ Windows kits\8.0\include\
 
-   - %Kits\8.0\lib\
+   - % ProgramFiles% \ Windows kits\8.0\lib\
 
-   - %Kits\8.0\redist\
+   - % ProgramFiles% \ Windows kits\8.0\redist\
 
-   - %Kits\8.0\references\
+   - % ProgramFiles% \ Windows kits\8.0\references\
 
-   Ayrıca, bu diğer Windows 8 setlerine sahipseniz...
+   ayrıca, bu diğer Windows 8 takımları da varsa...
 
-   - Microsoft Windows değerlendirme ve dağıtım seti
+   - Microsoft Windows değerlendirmesi ve dağıtım seti
 
-   - Microsoft Windows Sürücü Seti
+   - Microsoft Windows sürücü seti
 
    - Microsoft Windows donanım sertifikasyon seti
 
-   ... Bunlar, önceki adımda listelenen *%Kits\8.0* klasörlerine dosya yüklemiş olabilirler ve lisans koşulları bu dosyalar için Build-Server haklarına izin vermiyor olabilir. Dosyaların yapı bilgisayarınıza kopyalanıp kopyalanmayacağını doğrulamak için, yüklü her Windows Kit 'in lisans koşullarını denetleyin. Lisans koşulları, Build-Server haklarına izin vermedikçe, dosyaları yapı bilgisayarından kaldırın.
+   ... önceki adımda listelenen *% ProgramFiles% \ Windows kits\8.0* klasörlerine dosya yüklemiş olabilirler ve lisans koşulları bu dosyalar için yapı-sunucu haklarına izin vermiyor olabilir. dosyaların yapı bilgisayarınıza kopyalanıp kopyalanmayacağını doğrulamak için, yüklü her Windows kit 'in lisans koşullarını denetleyin. Lisans koşulları, Build-Server haklarına izin vermedikçe, dosyaları yapı bilgisayarından kaldırın.
 
 2. Aşağıdaki klasörleri yinelemeli olarak ana bilgisayardan yapı bilgisayarına kopyalayın:
 
-    - %ProgramFiles%\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4,0 Araçları \
+    - %programfiles%\microsoft sdk 'lar \ Windows \v8.0a\bin\netfx 4,0 Tools \
 
     - %ProgramFiles%\Common Files\Merge modülleri \
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition> \VC\
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \vc\
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\Tools\ProjectComponents\
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\Tools\ProjectComponents\
 
-    - %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\v110\
+    - % ProgramFiles% \ MSBuild \Microsoft.Cpp\v4.0\v110\
 
     - %ProgramFiles%\Reference, Lies\microsoft\framework \\ . Netcore\v4,\
 
@@ -116,23 +116,23 @@ Bu bölüm, ana bilgisayardan yapı bilgisayarına belirli dosyaları, derleyici
 
 3. Bu dosyaları ana bilgisayardan yapı bilgisayarına kopyalayın:
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\msobj110.dll
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\msobj110.dll
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\mspdb110.dll
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\mspdb110.dll
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\mspdbcore.dll
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\mspdbcore.dll
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\mspdbsrv.exe
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\mspdbsrv.exe
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\msvcdis110.dll
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\msvcdis110.dll
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\Tools\makehm.exe
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\Tools\makehm.exe
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\Tools\VCVarsQueryRegistry.bat
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\Tools\VCVarsQueryRegistry.bat
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\Tools\vsvars32.bat
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\Tools\vsvars32.bat
 
-4. Aşağıdaki Visual C++ çalışma zamanı kitaplıkları yalnızca derleme bilgisayarında yapı çıktıları çalıştırırsanız gereklidir — Örneğin, otomatik testlerin bir parçası olarak. Dosyalar genellikle, sistem mimarisine bağlı olarak *%ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition> \vc\redist\x86* veya *%ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition> \vc\redist\x64* klasörü altındaki alt klasörlerde bulunur. X86 sistemlerinde, x86 ikililerini *Windows\System32* klasörüne kopyalayın. X64 sistemlerde, x86 ikililerini *Windows\syswow64* klasörüne ve x64 ikililerini *Windows\System32* klasörüne kopyalayın.
+4. Aşağıdaki Visual C++ çalışma zamanı kitaplıkları yalnızca derleme bilgisayarında yapı çıktıları çalıştırırsanız gereklidir — Örneğin, otomatik testlerin bir parçası olarak. dosyalar genellikle sistem mimarisine bağlı olarak *% programfiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \vc\redist\x86* veya *% programfiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \vc\redist\x64* klasörü altındaki alt klasörlerde bulunur. x86 sistemlerinde, x86 ikililerini *Windows \system32* klasörüne kopyalayın. x64 sistemlerde, x86 ikililerini *Windows \SysWOW64* klasörüne ve x64 ikililerini *Windows \system32* klasörüne kopyalayın.
 
     - \Microsoft.VC110.ATL\atl110.dll
 
@@ -229,7 +229,7 @@ MSBuild ayarlarını yapılandırmak için kayıt defteri girişleri oluşturman
 
    - **% RegistryRoot%\VisualStudio\SxS\VS7@11.0**
 
-   - <strong>%RegistryRoot%\Windows Kits\yüklendi Roots@KitsRoot</strong>
+   - <strong>% registryroot% \ Windows kits\yüklendiRoots@KitsRoot</strong>
 
    - <strong>% RegistryRoot%\MSBuild\ToolsVersions\4.0\11.0@VCTargetsPath</strong>
 
@@ -241,7 +241,7 @@ MSBuild ayarlarını yapılandırmak için kayıt defteri girişleri oluşturman
 
    - <strong>%RegistryRoot%\Microsoft SDKs\Windows\v8.0A\WinSDK-NetFx40Tools-x64@InstallationFolder</strong>
 
-   Yapı Bilgisayarınız x64 ise ve MSBuild 'in 64 bit sürümünü kullanmak istiyorsanız veya bir x64 bilgisayarda Team Foundation Server derleme hizmeti kullanıyorsanız, yerel 64 bit kayıt defterinde aşağıdaki kayıt defteri girdilerini oluşturun. Bu girişlerin nasıl ayarlanacağını öğrenmek için konak bilgisayara bakın.
+   yapı bilgisayarınız x64 ise ve MSBuild 64 bit sürümünü kullanmak istiyorsanız veya bir x64 bilgisayarda Team Foundation Server derleme hizmeti kullanıyorsanız, yerel 64 bit kayıt defterinde aşağıdaki kayıt defteri girdilerini oluşturun. Bu girişlerin nasıl ayarlanacağını öğrenmek için konak bilgisayara bakın.
 
    - <strong>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS@ProductDir</strong>
 
@@ -253,11 +253,11 @@ MSBuild ayarlarını yapılandırmak için kayıt defteri girişleri oluşturman
 
 ## <a name="set-environment-variables-on-the-build-computer"></a>Yapı bilgisayarında ortam değişkenlerini ayarlama
 
-Yapı bilgisayarında MSBuild 'i kullanmak için, PATH ortam değişkenlerini ayarlamanız gerekir. Değişkenleri ayarlamak için *vcvarsall.bat* kullanabilir veya bunları el ile yapılandırabilirsiniz.
+yapı bilgisayarında MSBuild kullanmak için, PATH ortam değişkenlerini ayarlamanız gerekir. Değişkenleri ayarlamak için *vcvarsall.bat* kullanabilir veya bunları el ile yapılandırabilirsiniz.
 
 ### <a name="use-vcvarsallbat-to-set-environment-variables"></a>Ortam değişkenlerini ayarlamak için vcvarsall.bat kullanma
 
-Yapı bilgisayarında bir **komut istemi** penceresi açın ve *% Program Files%\Microsoft Visual Studio \\ \<version> \\ \<edition>\VC\vcvarsall.bat* çalıştırın. Kullanmak istediğiniz araç takımını (x86, yerel x64 veya x64 çapraz derleyicisi) belirtmek için bir komut satırı bağımsız değişkeni kullanabilirsiniz. Bir komut satırı bağımsız değişkeni belirtmezseniz, x86 araç takımı kullanılır.
+derleme bilgisayarında bir **komut istemi** penceresi açın ve *% Program Files% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\VC\vcvarsall.bat* çalıştırın. Kullanmak istediğiniz araç takımını (x86, yerel x64 veya x64 çapraz derleyicisi) belirtmek için bir komut satırı bağımsız değişkeni kullanabilirsiniz. Bir komut satırı bağımsız değişkeni belirtmezseniz, x86 araç takımı kullanılır.
 
 Bu tabloda *vcvarsall.bat* için desteklenen bağımsız değişkenler açıklanmaktadır:
 
@@ -267,41 +267,41 @@ Bu tabloda *vcvarsall.bat* için desteklenen bağımsız değişkenler açıklan
 |x86_amd64|x64 çapraz|x86, x64|x64|
 |amd64|x64 yerel|x64|x64|
 
-*vcvarsall.bat* başarıyla çalışırsa — diğer bir deyişle, hata iletisi görüntülenmediğinde, sonraki adımı atlayabilir ve [MSBuild derlemelerini bu belgenin yapı bilgisayarı bölümünde genel derleme ÖNBELLEĞI 'ne (GAC) yüklemeye](#install-msbuild-to-gac) devam edebilirsiniz.
+*vcvarsall.bat* başarıyla çalışırsa — diğer bir deyişle, bir hata iletisi görüntülenmediğinde, bir sonraki adımı atlayabilir ve bu belgenin [yapı bilgisayarı bölümünde genel derleme önbelleği 'ne (GAC)](#install-msbuild-to-gac) bu bir sonraki adımı atlayıp MSBuild devam edebilirsiniz.
 
 ### <a name="manually-set-environment-variables"></a>Ortam değişkenlerini el ile ayarlama
 
 1. Komut satırı ortamını el ile yapılandırmak için bu yolu PATH ortam değişkenine ekleyin:
 
-    - % Program Files%\Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\IDE
+    - % Program dosyaları% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\IDE
 
-2. İsteğe bağlı olarak, çözümlerinizi oluşturmak için MSBuild 'in kullanılmasını kolaylaştırmak için yol değişkenine aşağıdaki yolları da ekleyebilirsiniz.
+2. isteğe bağlı olarak, çözümlerinizi oluşturmak için MSBuild kullanmayı kolaylaştırmak için yol değişkenine aşağıdaki yolları da ekleyebilirsiniz.
 
-   Yerel 32 bit MSBuild 'i kullanmak istiyorsanız, bu yolları yol değişkenine ekleyin:
+   yerel 32-bit MSBuild kullanmak istiyorsanız, bu yolları yol değişkenine ekleyin:
 
-   - % Program Files%\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4,0 Araçları
+   - % Program files%\microsoft sdk \ Windows \v8.0a\bin\netfx 4,0 araçları
 
    - %windir%\Microsoft.NET\Framework\v4.0.30319
 
-   Yerel 64 bit MSBuild 'i kullanmak istiyorsanız, bu yolları yol değişkenine ekleyin:
+   yerel 64-bit MSBuild kullanmak istiyorsanız, bu yolları yol değişkenine ekleyin:
 
-   - % Program Files%\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4,0 Tools\x64
+   - % Program files%\microsoft sdk \ Windows \v8.0a\bin\netfx 4,0 tools\x64
 
    - %windir%\Microsoft.NET\Framework64\v4.0.30319
 
-## <a name="install-msbuild-assemblies-to-the-global-assembly-cache-gac-on-the-build-computer"></a><a name="install-msbuild-to-gac" /> Yapılandırma bilgisayarında genel derleme önbelleği 'ne (GAC) MSBuild derlemeleri yükler
+## <a name="install-msbuild-assemblies-to-the-global-assembly-cache-gac-on-the-build-computer"></a><a name="install-msbuild-to-gac" />derleme bilgisayarında genel derleme önbelleği 'ne (GAC) MSBuild derlemeleri yükler
 
-MSBuild, derleme bilgisayarında GAC 'ye bazı ek derlemeler yüklenmesini gerektirir.
+MSBuild, derleme bilgisayarında GAC 'ye bazı ek derlemelerin yüklenmesini gerektirir.
 
 1. Aşağıdaki derlemeleri ana bilgisayardan yapı bilgisayarına kopyalayın. Bunlar GAC 'ye yüklenebileceğinden, bunları yapı bilgisayarına nereye yerleştirdiğinizden bağımsız değildir.
 
     - % ProgramFiles% \MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.Build.CPPTasks.Common.v110.dll
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\CommonExtensions\Microsoft\VC\Project\Microsoft.VisualStudio.Project.VisualC.VCProjectEngine.dll
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\CommonExtensions\Microsoft\VC\Project\Microsoft.VisualStudio.Project.VisualC.VCProjectEngine.dll
 
-    - %ProgramFiles%\Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.VCProjectEngine.dll
+    - % ProgramFiles% \ Microsoft Visual Studio \\ \<version> \\ \<edition>\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.VCProjectEngine.dll
 
-2. Derlemeleri GAC 'ye yüklemek için derleme bilgisayarında *gacutil.exe* bulun — genellikle%ProgramFiles%\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4,0 Araçları \\ . Bu klasörü bulamazsanız, Bu izlenecek yolun [ana bilgisayar bilgisayarındaki dosyaları Kopyala](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#copy-files-from-the-host-computer-to-the-build-computer) bölümünde bulunan adımları yineleyin.
+2. derlemeleri GAC 'ye yüklemek için derleme bilgisayarında *gacutil.exe* bulun — genellikle%programfiles%\microsoft sdk 'lar \ Windows \v8.0a\bin\netfx 4,0 araçları \\ . Bu klasörü bulamazsanız, Bu izlenecek yolun [ana bilgisayar bilgisayarındaki dosyaları Kopyala](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#copy-files-from-the-host-computer-to-the-build-computer) bölümünde bulunan adımları yineleyin.
 
      Yönetici haklarına sahip bir **komut istemi** penceresi açın ve her dosya için bu komutu çalıştırın:
 
@@ -312,50 +312,50 @@ MSBuild, derleme bilgisayarında GAC 'ye bazı ek derlemeler yüklenmesini gerek
 
 ## <a name="build-projects"></a>Yapı projeleri
 
-Azure Pipelines kullanarak Visual Studio projeleri ve çözümleri oluşturabilir veya bunları komut satırında oluşturabilirsiniz. Projeleri oluşturmak için Azure Pipelines kullandığınızda, sistem mimarisine karşılık gelen MSBuild yürütülebiliri çağırır. Komut satırında 32-bit MSBuild veya 64-bit MSBuild kullanabilirsiniz ve yol ortam değişkenini ayarlayarak ya da mimariye özgü MSBuild yürütülebilir dosyasını doğrudan çağırarak MSBuild mimarisini seçebilirsiniz.
+Visual Studio projeleri ve çözümleri oluşturmak için Azure Pipelines kullanabilir veya bunları komut satırında oluşturabilirsiniz. projeleri oluşturmak için Azure Pipelines kullandığınızda, sistem mimarisine karşılık gelen MSBuild yürütülebiliri çağırır. Komut satırı üzerinde, 32 bit MSBuild veya 64 bit MSBuild kullanabilirsiniz ve PATH ortam değişkenlerini ayarerek veya mimariye özgü MSBuild yürütülebilir dosyasını doğrudan kullanarak MSBuild mimarisini seçebilirsiniz.
 
-Komut isteminde *msbuild.exe* kullanmak için aşağıdaki komutu çalıştırın, burada *çözüm. sln* , çözümünüzün adı için bir yer tutucudur.
+Komut *msbuild.exe* komutunu kullanmak için, *solution.sln'nin* çözüm adının yer tutucusu olduğu aşağıdaki komutu çalıştırın.
 
-**MSBuild** *Solution. sln*
+**msbuild** *solution.sln*
 
-Komut satırında MSBuild 'i kullanma hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).
+Komut satırı üzerinde komut satırı MSBuild hakkında daha fazla bilgi için [bkz. Komut satırı başvurusu.](../msbuild/msbuild-command-line-reference.md)
 
-## <a name="create-the-build-environment-so-that-it-can-be-checked-into-source-control"></a>Kaynak denetimine denetlenebilmesi için derleme ortamını oluşturun
+## <a name="create-the-build-environment-so-that-it-can-be-checked-into-source-control"></a>Kaynak denetimine iade etmek için derleme ortamı oluşturma
 
-Çeşitli bilgisayarlara dağıtılabilecek ve "GAC" dosyaları gerektirmeyen ya da kayıt defteri ayarlarını değiştiren bir yapı ortamı oluşturabilirsiniz. Aşağıdaki adımlar bunu gerçekleştirmenin yalnızca bir yoludur. Bu adımları yapı ortamınızın benzersiz özelliklerine uyarlayın.
+Çeşitli bilgisayarlara dağıtılabilir ve "GAC"-ing dosyaları gerektirmeyen veya kayıt defteri ayarlarını değiştirmeyen bir derleme ortamı oluşturabilirsiniz. Aşağıdaki adımlar bunu başarma yollarından yalnızca biridir. Bu adımları derleme ortamının benzersiz özelliklerine uyarlar.
 
 > [!NOTE]
-> *tracker.exe* , derleme sırasında bir hata oluşturmayacak şekilde artımlı derlemeyi devre dışı bırakmanız gerekir. Artımlı derlemeyi devre dışı bırakmak için, bu derleme parametresini ayarlayın:
+> Artımlı derlemeyi devre dışı bırakarak *tracker.exe* sırasında hata oluşturmasını geri alasınız. Artımlı derlemeyi devre dışı bırakmak için şu derleme parametresini ayarlayın:
 >
-> **MSBuild** *çözümü. sln* **/p: TrackFileAccess = false**
+> **msbuild** *solution.sln* **/p:TrackFileAccess=false**
 
-1. Ana bilgisayarda bir *deposu* dizini oluşturun.
+1. Konak *bilgisayarda bir Depot* dizini oluşturun.
 
-     Bu adımlar dizine% deposu% olarak başvurur.
+     Bu adımlar dizini %Depot% olarak ifade etmek için kullanılır.
 
-2. Dizinleri ve dosyaları, Bu izlenecek yolun [dosyaları ana bilgisayardan yapı bilgisayarına](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#copy-files-from-the-host-computer-to-the-build-computer) Kopyala bölümünde açıklandığı gibi kopyalayın, ancak bunları az önce oluşturduğunuz *% deposu%* dizininin altına yapıştırın. Örneğin, *%Kits\8.0\Bin* konumundan *%Depot%\Windows Kits\8.0\Bin dizinine* kopyalayın.
+2. Dizinleri ve dosyaları konak bilgisayardan [](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#copy-files-from-the-host-computer-to-the-build-computer) derleme bilgisayarına kopyalama bölümünde açıklandığı gibi kopyalayın, ancak bunları yeni oluşturduğunuz *%Depot%* dizininin altına yapıştırın. Örneğin, *%ProgramFiles%\Windows Kits\8.0\bin* konumundan *%Depot%\Windows Kits\8.0\bin* dizinine kopyalayın.
 
-3. Dosyalar *% deposu%* içine yapıştırılırken şu değişiklikleri yapın:
+3. Dosyalar *%Depot% içinde yapıştırıldıklarında* şu değişiklikleri yapın:
 
-    - %Depot%\MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.CPP.Targets, \Microsoft.Cpp.InvalidPlatforms.targets \\ , \Microsoft.cppbuild.targets \\ ve \Microsoft.CppCommon.targets içindeki \\ her örneğini değiştirin
+    - %Depot%\MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.CPP.Targets, \Microsoft.Cpp.InvalidPlatforms.targets , \\ \Microsoft.cppbuild.targets \\ ve \Microsoft.CppCommon.targets içinde, her örneğini \\ değiştirir
 
-         AssemblyName = "Microsoft. Build. CppTasks. Common. v110, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a"
+         AssemblyName="Microsoft.Build.CppTasks.Common.v110, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
 
-         şöyle değiştirin:
+         kullanıcısı
 
-         AssemblyFile = "$ (VCTargetsPath11) Microsoft.Build.CppTasks.Common.v110.dll".
+         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll".
 
-         Eski adlandırma, GAC'ed olan derlemeye bağımlıdır.
+         Önceki adlandırma, derlemenin GAC'ed olmasıyla ilgilidir.
 
-    - % Deposu% \MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.CPPClean.Targets içinde her örneğini değiştirin
+    - %Depot% \MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.CPPClean.Targets dizininde,
 
-         AssemblyName = "Microsoft. Build. CppTasks. Common. v110, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a"
+         AssemblyName="Microsoft.Build.CppTasks.Common.v110, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
 
-         şöyle değiştirin:
+         kullanıcısı
 
-         AssemblyFile = "$ (VCTargetsPath11) Microsoft.Build.CppTasks.Common.v110.dll".
+         AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll".
 
-4. Bir *. props* dosyası oluşturun — örneğin, *partner. oto Imports. props*— ve projelerinizi içeren klasörün köküne yerleştirin. Bu dosya, çeşitli kaynakları bulmak için MSBuild tarafından kullanılan değişkenleri ayarlamak için kullanılır. Değişkenler bu dosya tarafından ayarlanmamışsa, kayıt defteri değerlerini kullanan diğer *. props* dosyaları ve *. targets* dosyaları tarafından ayarlanır. Hiçbir kayıt defteri değeri ayarlamadığımızda, bu değişkenler boş olur ve derleme başarısız olur. Bunun yerine, bunu *partner. oto Imports. props* öğesine ekleyin:
+4. *Partner.AutoImports.props* gibi bir *.props* dosyası oluşturun ve projelerinizi içeren klasörün köküne yazın. Bu dosya, çeşitli kaynakları bulmak için MSBuild değişkenler ayarlamak için kullanılır. Değişkenler bu dosya tarafından ayarlanmazsa, kayıt defteri değerlerine güvenen diğer *.props* dosyaları ve *.targets* dosyaları tarafından ayarlanır. Hiçbir kayıt defteri değeri ayarlamaysak bu değişkenler boş olur ve derleme başarısız olur. Bunun yerine, bunu *Partner.AutoImports.props'a ekleyin:*
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -378,7 +378,7 @@ Komut satırında MSBuild 'i kullanma hakkında daha fazla bilgi için bkz. [kom
     </Project>
     ```
 
-5. Her proje dosyasında, satırın arkasına aşağıdaki satırı ekleyin `<Project Default Targets...>` .
+5. Proje dosyalarınızın her biri, en üstüne, satırın sonraya aşağıdaki satırı `<Project Default Targets...>` ekleyin.
 
     ```xml
     <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Partner.AutoImports.props))\Partner.AutoImports.props"/>
@@ -388,11 +388,11 @@ Komut satırında MSBuild 'i kullanma hakkında daha fazla bilgi için bkz. [kom
 
 6. Komut satırı ortamını aşağıdaki gibi değiştirin:
 
-    - *1. adımda oluşturduğunuz deposu dizininin* deposu = location öğesini ayarlayın
+    - *1. adımda oluşturduğunuz Depot dizininin Depot= konumunu ayarlama*
 
-    - Küme yolu =% path%; *bilgisayardaki MSBuild 'in konumu*;% D epot%\Windows\System32;% D epot%\Windows\SysWOW64;% D epot%\Microsoft Visual Studio 15.0 \ Common7\IDE\
+    - path=%path%; *bilgisayarda MSBuild* konumu ;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 15.0\Common7\IDE\
 
-       Yerel 64 bit oluşturma için MSBuild 'in 64 bit sürümüne işaret edin.
+       Yerel 64 bit bina için, 64 bit sürümüne işaret MSBuild.
 
 ::: moniker-end
 
@@ -400,11 +400,11 @@ Komut satırında MSBuild 'i kullanma hakkında daha fazla bilgi için bkz. [kom
 
 6. Komut satırı ortamını aşağıdaki gibi değiştirin:
 
-    - *1. adımda oluşturduğunuz deposu dizininin* deposu = location öğesini ayarlayın
+    - *1. adımda oluşturduğunuz Depot dizininin Depot= konumunu ayarlama*
 
-    - Küme yolu =% path%; *bilgisayardaki MSBuild 'in konumu*;% D epot%\Windows\System32;% D epot%\Windows\SysWOW64;% D epot%\Microsoft Visual Studio 16.0 \ Common7\IDE\
+    - path=%path%; *bilgisayarda MSBuild* konumu ;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 16.0\Common7\IDE\
 
-       Yerel 64 bit oluşturma için MSBuild 'in 64 bit sürümüne işaret edin.
+       Yerel 64 bit bina için, 64 bit sürümüne işaret MSBuild.
 
 ::: moniker-end
 

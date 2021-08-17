@@ -15,14 +15,15 @@ ms.assetid: ecd06658-ad02-4440-bccd-88437b7fb816
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ddb1feb3e5234b26e2ebceb9f899554d55b3015
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 13542ef9f0e9ad8eca90a9643cd25ae061691a676f26f1a882f039b7f3e21226
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940351"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121435484"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;Package &gt; öğesi (önyükleyici)
 `Package`Öğesi, bir paket dosyasının içindeki en üst düzey xml öğesidir.
@@ -149,10 +150,10 @@ ms.locfileid: "99940351"
 |--------------------| - |
 | `Culture` | Gereklidir. Bu paket için kullanılacak dili belirleyen kültürü tanımlar. Bu öznitelik, `Strings` yükleme sırasında ürün adları ve hata iletileri için kültüre özgü dizeleri listeleyen öğesi için bir anahtardır. |
 | `Name` | Gereklidir. Gibi bir araç içinde geliştiriciye görüntülenecek paketin adı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bu öznitelik, ve `Strings` `String` `Name` `Culture` özellikleriyle eşleşecek şekilde ayarlanmış bir öğesi içermesi gereken öğesi `Name` `Culture` için bir anahtardır `Package` . |
-| `LicenseAgreement` | İsteğe bağlı. Dağıtım paketindeki End-User lisans sözleşmesi 'Ni (EULA) içeren dosyanın adını belirtir.  Bu dosya düz metin (*. txt*) ya da zengin metin biçimi olabilir. (*. rtf*) |
+| `LicenseAgreement` | İsteğe bağlı. Dağıtım paketindeki End-User lisans sözleşmesi 'Ni (EULA) içeren dosyanın adını belirtir.  Bu dosya düz metin (*.txt*) ya da zengin metin biçimi olabilir. (*. rtf*) |
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, 2,0 .NET Framework yeniden dağıtımı için tüm paket dosyalarını gösterir.
+ aşağıdaki kod örneği, 2,0 .NET Framework yeniden dağıtımı için tüm paket dosyalarını gösterir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

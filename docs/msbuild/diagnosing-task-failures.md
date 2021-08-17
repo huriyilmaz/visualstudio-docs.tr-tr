@@ -1,6 +1,6 @@
 ---
-title: Görev başarısızlıklarını tanılama | Microsoft Docs
-description: Başarısız görev, araç adı ve diğer bilgileri tanımlayarak MSBuild görev başarısızlıklarını tanılamayı öğrenin.
+title: Görev hatalarını tanılama | Microsoft Docs
+description: Başarısız görevi, araç MSBuild diğer bilgileri belirleyerek görev hatalarını tanılamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 09/25/2019
 ms.topic: troubleshooting
@@ -14,34 +14,35 @@ dev_langs:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 33aa8787144f185b5bcd2e26df5e7fa90ce3213f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75ae93a5bf1b82d2101643512f2fa80da9d0271a51462181b7260c3652abdeed
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877245"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370313"
 ---
 # <a name="diagnosing-task-failures"></a>Görev başarısızlıklarını tanılama
 
-`MSB6006` , <xref:Microsoft.Build.Utilities.ToolTask> -türetilmiş bir sınıf, görev daha belirli bir hata günlüğe oturum açmadığından sıfır olmayan çıkış kodu döndüren bir araç işlemi çalıştırdığında yayılır.
+`MSB6006` , türetilen bir sınıf, görev daha belirli bir hata günlüğe kayıt edemedi ise sıfır olmayan bir çıkış kodu döndüren bir <xref:Microsoft.Build.Utilities.ToolTask> araç işlemi çalıştırdığı zaman yayımlar.
 
-## <a name="identifying-the-failing-task"></a>Hatalı görevi tanımlama
+## <a name="identifying-the-failing-task"></a>Başarısız görevi tanımlama
 
-Bir görev hatasıyla karşılaştığınızda, ilk adım başarısız olan görevi tanımlamaktır.
+Bir görev hatasıyla karşılaştığınız zaman ilk adım başarısız olan görevi tanımlamaktır.
 
-Hatanın metni, araç adını (görevin uygulamasının veya yürütülebilir dosyanın adı tarafından sağlanmış bir kolay ad <xref:Microsoft.Build.Utilities.ToolTask.ToolName> ) ve sayısal çıkış kodunu belirtir. Örneğin,
+Hatanın metni, araç adını (görevin uygulaması tarafından sağlanan kolay bir ad veya yürütülebilir dosyanın adı) ve sayısal çıkış <xref:Microsoft.Build.Utilities.ToolTask.ToolName> kodunu belirtir. Örneğin,
 
 ```text
 error MSB6006: "custom tool" exited with code 1.
 ```
 
-Araç adı `custom tool` ve çıkış kodu olur `1` .
+Araç adı, `custom tool` çıkış kodu ise `1` olur.
 
 ### <a name="command-line-builds"></a>Komut satırı derlemeleri
 
-Yapı bir Özet (varsayılan) içerecek şekilde yapılandırıldıysa Özet şöyle görünür:
+Derleme bir özet içerecek şekilde yapılandırılmışsa (varsayılan), özet şöyle olur:
 
 ```text
 Build FAILED.
@@ -51,20 +52,20 @@ Build FAILED.
   S:\MSB6006_demo\MSB6006_demo.csproj(19,5): error MSB6006: "custom tool" exited with code 1.
 ```
 
-Bu sonuç, dosyanın 19 `S:\MSB6006_demo\MSB6006_demo.csproj` . satırda, projede adlı hedefte tanımlanan bir görevde oluştuğunu gösterir `InvokeToolTask` `S:\MSB6006_demo\MSB6006_demo.csproj` .
+Bu sonuç, hatanın projesinde adlı hedefte dosyasının 19. `S:\MSB6006_demo\MSB6006_demo.csproj` satırda tanımlanan bir `InvokeToolTask` görevde meydana geldiğine işaret `S:\MSB6006_demo\MSB6006_demo.csproj` ediyor.
 
 ### <a name="in-visual-studio"></a>Visual Studio’da
 
-Aynı bilgiler, ve sütunlarındaki Visual Studio hata listesinde bulunur `Project` `File` `Line` .
+Aynı bilgiler , ve Visual Studio hata listesinde `Project` de `File` `Line` mevcuttur.
 
 ## <a name="finding-more-failure-information"></a>Daha fazla hata bilgisi bulma
 
-Bu hata, görev belirli bir hata günlük kaydı gerçekleştirmediği zaman yayınlanır. Bir hata kaydetme hatası genellikle görev, çağırdığı araç tarafından yayılan hata biçimini anlamak için yapılandırılmadığı için.
+Bu hata, görev belirli bir hatayı günlüğe günlüğe kaydedilirken yayımlar. Bir hatayı günlüğe kaydetme hatası genellikle görevin çağırdığı araç tarafından yayılan hata biçimini anlamak için yapılandırılmamış bir durumdur.
 
-İyi davranmış araçlar, genellikle bazı bağlamsal veya hata bilgilerini standart çıktısına veya hata akışına yayar ve görevler bu bilgileri varsayılan olarak yakalayıp günlüğe kaydeder. Ek bilgi için hata oluşmadan önce günlük girdilerine bakın. Bu bilgileri korumak için derlemeyi daha yüksek bir günlük düzeyiyle yeniden çalıştırmak gerekebilir.
+İyi davranan araçlar genellikle bazı bağlamsal veya hata bilgilerini standart çıkışlarına veya hata akışına yayır ve görevler bu bilgileri varsayılan olarak yakalar ve günlüğe alır. Ek bilgi için hatanın meydana gelmeden önceki günlük girişlerine bakın. Bu bilgileri korumak için derlemeyi daha yüksek bir günlük düzeyiyle yeniden çalıştırmanız gerekebilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Günlüğe kaydetme sırasında tanımlanan ek bağlam veya hatalar sorunun kök nedenini açığa çıkarır.
+Umarız günlük kaydında tanımlanan ek bağlam veya hatalar, sorunun kök nedenini ortaya çıkartır.
 
-Aksi takdirde, başarısız olan göreve giriş olan özellikleri ve öğeleri inceleyerek olası nedenleri daraltmanız gerekebilir.
+Yoksa, başarısız göreve giriş olan özellikleri ve öğeleri inceerek olası nedenleri daraltmanız gerekir.

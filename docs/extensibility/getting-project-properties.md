@@ -1,5 +1,5 @@
 ---
-title: Proje özelliklerini alma | Microsoft Docs
+title: Project özellikleri alınıyor | Microsoft Docs
 description: Proje özelliklerini bir araç penceresinde görüntülemeyi öğrenin. Bu örnekte, araç penceresindeki ağaç denetimi gösterilmektedir.
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
@@ -11,14 +11,15 @@ ms.assetid: 96ba07ca-0811-4013-8602-12550ac4ba79
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3f7f6cc788e693ae143b288c589fc868c59d531
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 3244fde5689bc81431f4e14bd6322fd61f9594e01e088156c6781225b0c7b2b2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900674"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121376618"
 ---
 # <a name="get-project-properties"></a>Proje özelliklerini al
 
@@ -26,11 +27,11 @@ Bu izlenecek yol, bir araç penceresinde proje özelliklerinin nasıl görüntü
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
-### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>Bir VSıX projesi oluşturmak ve araç penceresi eklemek için
+### <a name="to-create-a-vsix-project-and-add-a-tool-window"></a>vsıx Project oluşturmak ve araç penceresi eklemek için
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `ProjectPropertiesExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. her Visual Studio uzantısı, uzantı varlıklarını içeren bir vsıx dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `ProjectPropertiesExtension` . vsıx proje şablonunu, **yeni Project** iletişim kutusunda "vsıx" arayarak bulabilirsiniz.
 
 2. Adlı özel bir araç penceresi öğe şablonu ekleyerek bir araç penceresi ekleyin `ProjectPropertiesToolWindow` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda**, **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **özel araç penceresi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını olarak değiştirin `ProjectPropertiesToolWindow.cs` . Özel bir araç penceresi oluşturma hakkında daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
@@ -99,6 +100,6 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 5. Deneysel örnekte bir proje açın.
 
-6.   >  **Diğer pencereleri** görüntüle ' de **ProjectPropertiesToolWindow**' ye tıklayın.
+6. diğer **görünüm**  >  **Windows** **ProjectPropertiesToolWindow**' ye tıklayın.
 
   Araç penceresinde ağaç denetimini, ilk projenin adı ve tüm proje özellikleri ile birlikte görmeniz gerekir.

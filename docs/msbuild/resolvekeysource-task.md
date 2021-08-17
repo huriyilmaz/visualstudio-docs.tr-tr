@@ -1,6 +1,6 @@
 ---
-title: ResolveKeySource görevi | Microsoft Docs
-description: Tanımlayıcı ad anahtar kaynağını belirleyen MSBuild ResolveKeySource görevinin parametreleri hakkında bilgi edinin.
+title: ResolveKeySource Görev | Microsoft Docs
+description: Güçlü ad anahtarı kaynağını belirleyen MSBuild ResolveKeySource görevinin parametreleri hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,39 +18,40 @@ ms.assetid: 449f06c2-e9aa-4236-ab1e-c45c25452b2e
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c06e012f84f1f18805ca458289c023679d0593d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 897e4482d45c5f191df8e60b091782bce467e1ba10d6d2c595856d77ad8d470e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912550"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427593"
 ---
 # <a name="resolvekeysource-task"></a>ResolveKeySource görevi
 
-Tanımlayıcı ad anahtar kaynağını belirler.
+Güçlü ad anahtar kaynağını belirler.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `ResolveKeySource` .
+ Aşağıdaki tabloda görevin parametreleri açık `ResolveKeySource` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`AutoClosePasswordPromptShow`|İsteğe bağlı `Int32` parametre.<br /><br /> Sayıyı aşağı doğru göstermek için geçmesi gereken süreyi saniye cinsinden alır veya ayarlar.|
-|`AutoClosePasswordPromptTimeout`|İsteğe bağlı `Int32` parametre.<br /><br /> Parola istemi iletişim kutusunu kapatmadan önce beklenecek süreyi saniye cinsinden alır veya ayarlar.|
-|`CertificateFile`|İsteğe bağlı `String` parametre.<br /><br /> Sertifika dosyasının yolunu alır veya ayarlar.|
-|`CertificateThumbprint`|İsteğe bağlı `String` parametre.<br /><br /> Sertifika parmak izini alır veya ayarlar.|
-|`KeyFile`|İsteğe bağlı `String` parametre.<br /><br /> Anahtar dosyasının yolunu alır veya ayarlar.|
-|`ResolvedKeyContainer`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Çözümlenen anahtar kapsayıcısını alır veya ayarlar.|
-|`ResolvedKeyFile`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Çözümlenen anahtar dosyasını alır veya ayarlar.|
-|`ResolvedThumbprint`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Çözümlenen sertifika parmak izini alır veya ayarlar.|
-|`ShowImportDialogDespitePreviousFailures`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`, Önceki hatalara karşın içeri aktarma iletişim kutusunu gösterir.|
-|`SuppressAutoClosePasswordPrompt`|İsteğe bağlı `Boolean` parametre.<br /><br /> Parola istem iletişim kutusunun otomatik olarak kapanmayacağını belirten bir Boole değeri alır veya ayarlar.|
+|`AutoClosePasswordPromptShow`|İsteğe `Int32` bağlı parametre.<br /><br /> Geri sayım iletiyi görüntülemek için saniye olarak süre miktarını alır veya ayarlar.|
+|`AutoClosePasswordPromptTimeout`|İsteğe `Int32` bağlı parametre.<br /><br /> Parola istemi iletişim kutusunu kapatmadan önce bekleme süresi (saniye olarak) alır veya ayarlar.|
+|`CertificateFile`|İsteğe `String` bağlı parametre.<br /><br /> Sertifika dosyasının yolunu alır veya ayarlar.|
+|`CertificateThumbprint`|İsteğe `String` bağlı parametre.<br /><br /> Sertifika parmak izini alır veya ayarlar.|
+|`KeyFile`|İsteğe `String` bağlı parametre.<br /><br /> Anahtar dosyasının yolunu alır veya ayarlar.|
+|`ResolvedKeyContainer`|İsteğe `String` bağlı çıkış parametresi.<br /><br /> Çözümlenen anahtar kapsayıcısı alır veya ayarlar.|
+|`ResolvedKeyFile`|İsteğe `String` bağlı çıkış parametresi.<br /><br /> Çözümlenen anahtar dosyasını alır veya ayarlar.|
+|`ResolvedThumbprint`|İsteğe `String` bağlı çıkış parametresi.<br /><br /> Çözümlenen sertifika parmak izini alır veya ayarlar.|
+|`ShowImportDialogDespitePreviousFailures`|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` önceki hatalara rağmen içeri aktarma iletişim kutusunu gösterir.|
+|`SuppressAutoClosePasswordPrompt`|İsteğe `Boolean` bağlı parametre.<br /><br /> Parola istemi iletişim kutusunun otomatik olarak kapanması gerekip gerek olmadığını belirten bir Boole değeri alır veya ayarlar.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

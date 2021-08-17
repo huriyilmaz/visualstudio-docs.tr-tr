@@ -1,6 +1,6 @@
 ---
 title: Gelişmiş Derleme Ayarları İletişim Kutusu (C#)
-description: Projenin Gelişmiş derleme yapılandırma özelliklerini belirtmek için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+description: projenin gelişmiş derleme yapılandırma özelliklerini belirtmek için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/05/2019
 ms.technology: vs-ide-compile
@@ -15,16 +15,16 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8569231ee1b9f19752bf58691b41ec74789bb761
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81ad77639a5ffb957c0de12069732e51103e8651f775469de2d1b8c5c5d6cde7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869004"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372796"
 ---
-# <a name="advanced-build-settings-dialog-box-c"></a>Gelişmiş derleme ayarları iletişim kutusu (C#)
+# <a name="advanced-build-settings-dialog-box-c"></a>gelişmiş derleme Ayarlar iletişim kutusu (C#)
 
-Projenin Gelişmiş derleme yapılandırma özelliklerini belirtmek için **Proje Tasarımcısı** ' nın **Gelişmiş derleme ayarları** iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca C# projeleri için geçerlidir.
+projenin gelişmiş derleme yapılandırma özelliklerini belirtmek için **Project tasarımcısının** **gelişmiş derleme Ayarlar** iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca C# projeleri için geçerlidir.
 
 ## <a name="general"></a>Genel
 
@@ -94,9 +94,9 @@ Daha fazla bilgi için bkz. [/Debug (C# derleyici seçenekleri)](/dotnet/csharp/
 
 **Kitaplık temel adresi**
 
-DLL 'nin yükleneceği tercih edilen temel adresi belirtir. Bir DLL için varsayılan temel adres .NET Framework ortak dil çalışma zamanı tarafından ayarlanır. Daha fazla bilgi için bkz. [/BaseAddress (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option).
+DLL 'nin yükleneceği tercih edilen temel adresi belirtir. bir DLL için varsayılan temel adres .NET Framework ortak dil çalışma zamanı tarafından ayarlanır. Daha fazla bilgi için bkz. [/BaseAddress (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/index)
-- [Derleme sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md)
+- [yapı sayfası, Project tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md)

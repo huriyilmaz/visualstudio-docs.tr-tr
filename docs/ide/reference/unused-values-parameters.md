@@ -1,23 +1,24 @@
 ---
 title: Kullanılmayan değerler ve parametreler
-description: Kullanılmayan değer atamaları, değişkenler ve parametreler hakkında bilgi edinin ve Visual Studio 'da kod düzenleyicisinde nasıl göründüğünü öğrenin.
+description: Kullanılmayan değer atamaları, değişkenler ve parametreler hakkında bilgi edinin ve bunların Visual Studio kod düzenleyicisinde nasıl göründüğünü öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/15/2019
 ms.topic: reference
 author: kendrahavens
 ms.author: kehavens
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: cd0b6e936f4478cb4b74a3f004e69d77dbad7fbc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 40711469ff7e945a77bb3affbd2f1099ab59ba40653362f026a4afe4e9a14370
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960617"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121371856"
 ---
 # <a name="unused-value-assignments-variables-and-parameters"></a>Kullanılmayan değer atamaları, değişkenler ve parametreler
 
@@ -45,4 +46,4 @@ Bu yeniden düzenleme için geçerlidir:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
-- [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)
+- [.net geliştiricileri için İpuçları](../csharp-developer-productivity.md)

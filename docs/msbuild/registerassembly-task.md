@@ -1,6 +1,6 @@
 ---
 title: RegisterAssembly görevi | Microsoft Docs
-description: MSBuild 'in, belirtilen derleme içindeki meta verileri okumak için RegisterAssembly görevini nasıl kullandığını öğrenin ve gerekli girdileri kayıt defterine ekleyin.
+description: MSBuild, belirtilen derleme içindeki meta verileri okumak ve gerekli girdileri kayıt defterine eklemek için registerassembly görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: ba5f19ac-6764-4d28-9b79-a86de58f8987
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 55625cb1611fec8ed0e8925a671e43505b96c2b9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f96f71c62a3198fd053c3b96044525b05ed7c8aef894a1b3b29609b9d25a0c6c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931856"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121369988"
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly görevi
 
-Belirtilen derleme içindeki meta verileri okur ve gerekli girdileri kayıt defterine ekler ve bu da COM istemcilerinin saydam olarak .NET Framework sınıfları oluşturmalarına olanak tanır. Bu görevin davranışı, [Regasm.exe (derleme kayıt aracı)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)ile benzerdir, ancak aynı değildir.
+belirtilen derleme içindeki meta verileri okur ve gerekli girdileri kayıt defterine ekler ve bu da COM istemcilerinin saydam olarak .NET Framework sınıfları oluşturmalarına olanak tanır. Bu görevin davranışı, [Regasm.exe (derleme kayıt aracı)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)ile benzerdir, ancak aynı değildir.
 
 ## <a name="parameters"></a>Parametreler
 

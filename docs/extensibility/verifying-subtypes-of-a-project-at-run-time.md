@@ -1,5 +1,5 @@
 ---
-title: Çalışma zamanında bir projenin alt türlerini doğrulama | Microsoft Docs
+title: çalışma zamanında bir Project alt türlerini doğrulama | Microsoft Docs
 description: VSPackage 'ın bağımlı olduğu belirtilen özel proje alt türünün varlığını nasıl doğrulayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,14 +11,15 @@ ms.assetid: b87780ec-36a3-4e9a-9ee2-7abdc26db739
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 621a40e1857d7c78ec4c5be08a3b7c3808a0d48b
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: fca9d6b7a85de4e9c63f459d1ace0e832143f182a664cad7b6186007dd703a27
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905479"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121387804"
 ---
 # <a name="verify-subtypes-of-a-project-at-run-time"></a>Çalışma zamanında bir projenin alt türlerini doğrulama
 Özel bir proje alt türüne bağımlı olan VSPackage, alt tür yoksa düzgün bir şekilde başarısız olması için o alt türü aramak için mantık içermelidir. Aşağıdaki yordamda, belirtilen bir alt tür varlığının nasıl doğrulanyapılacağı gösterilmektedir.
@@ -69,6 +70,6 @@ ms.locfileid: "112905479"
     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje alt türleri](../extensibility/internals/project-subtypes.md)
-- [Proje alt türleri tasarımı](../extensibility/internals/project-subtypes-design.md)
+- [Project alt türleri](../extensibility/internals/project-subtypes.md)
+- [Project alt türler tasarımı](../extensibility/internals/project-subtypes-design.md)
 - [Proje alt türleri tarafından genişletilen Özellikler ve Yöntemler](../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)

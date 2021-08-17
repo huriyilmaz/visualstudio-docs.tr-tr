@@ -12,20 +12,21 @@ ms.assetid: 94a06468-a44d-403d-a931-77bbc9d06e56
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: dba50cf598c3c74f6c9407fbef5d55f938941a11
-ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
+ms.openlocfilehash: eb9c82d02a708d8aec49a620b836da6761594733c67b52cb04c1e4d7adfe62ae
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110687642"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372471"
 ---
-# <a name="import-and-export-settings-command-vssettings-file"></a>Ayarları içeri ve dışarı aktar komutu (. vssettings dosyası)
+# <a name="import-and-export-settings-command-vssettings-file"></a>Ayarlar komutu (. vssettings dosyası) içeri ve dışarı aktarma
 
-Visual Studio ayarlar dosyasını içeri aktarır, dışarı aktarır veya sıfırlar `.vssettings` .
+Visual Studio ayarları dosyasını içeri aktarır, dışarı aktarır veya sıfırlar `.vssettings` .
 
-Dosyanın şeması açık. En yaygın olarak, şema her kategorinin bir etiket olduğu bir XML yapısına uyar ve bu, kendisini alt kategori etiketleri içerebilir. Bu alt kategori etiketleri, özellik değeri etiketleri içerebilir. Çoğu paket ortak yapıyı kullandığından, Visual Studio 'daki herhangi bir paket, tarafından seçtiği şemayı kullanarak rastgele XML 'yi dosyaya katkıda bulunabilir.
+Dosyanın şeması açık. En yaygın olarak, şema her kategorinin bir etiket olduğu bir XML yapısına uyar ve bu, kendisini alt kategori etiketleri içerebilir. Bu alt kategori etiketleri, özellik değeri etiketleri içerebilir. çoğu paket ortak yapıyı kullandığından, Visual Studio her bir paket, seçtiği şemayı içeren bir dosyaya rastgele XML katkıda bulunabilir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +50,7 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu komutu hiçbir anahtar olmadan çalıştırmak, **Ayarları içeri ve dışarı aktarma** Sihirbazı 'nı açar. Daha fazla bilgi için bkz. ayarlarınızı ve [ortam ayarlarınızı](../environment-settings.md) [eşitler](../synchronized-settings-in-visual-studio.md) .
+bu komutu hiçbir anahtar olmadan çalıştırmak, **Ayarlar içeri ve dışarı aktarma** sihirbazı 'nı açar. Daha fazla bilgi için bkz. ayarlarınızı ve [ortam ayarlarınızı](../environment-settings.md) [eşitler](../synchronized-settings-in-visual-studio.md) .
 
 ## <a name="example"></a>Örnek
 
@@ -65,5 +66,5 @@ Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 
 - [Ortam ayarları](../../ide/environment-settings.md)
 - [Ayarlarınızı eşitler](../../ide/synchronized-settings-in-visual-studio.md)
-- [Visual Studio IDE 'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio ıde 'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
 - [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)

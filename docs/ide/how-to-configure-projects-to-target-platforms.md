@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: projeleri hedef platformlar için yapılandırma'
-description: Visual Studio 'Nun, 64 bitlik platformlar dahil farklı platformları hedeflemek için uygulamalarınızı ayarlamanıza nasıl olanak sağladığını öğrenin.
+description: Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedeflemek üzere ayarlamanıza nasıl olanak sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/16/2019
 ms.technology: vs-ide-compile
@@ -20,20 +20,20 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f8a298f19f247c45740e87074804755f6ca691ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6320c942c5aeab81c1c194ecb6b2538c0020308e192e680066bc0cbc824ce51c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969873"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121387595"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>Nasıl yapılır: projeleri hedef platformlar için yapılandırma
 
-Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamanıza olanak sağlar. Visual Studio 'da 64 bit platform desteği hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](/dotnet/framework/64-bit-apps).
+Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platformları hedefleyecek şekilde ayarlamanıza olanak sağlar. Visual Studio 'de 64 bit platform desteği hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](/dotnet/framework/64-bit-apps).
 
 ## <a name="target-platforms-with-the-configuration-manager"></a>Configuration Manager ile hedef platformları
 
-**Configuration Manager** , projenizde hedeflemek üzere yeni bir platform eklemek için bir yol sağlar. Visual Studio 'ya dahil olan platformlardan birini seçerseniz, projenizin özellikleri seçili platform için projenizi oluşturmak üzere değiştirilir.
+**Configuration Manager** , projenizde hedeflemek üzere yeni bir platform eklemek için bir yol sağlar. Visual Studio bulunan platformlardan birini seçerseniz, projenizin özellikleri seçili platform için projenizi oluşturmak üzere değiştirilir.
 
 ### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>Bir projeyi 64 bitlik bir platformu hedefleyecek şekilde yapılandırmak için
 
@@ -48,25 +48,25 @@ Visual Studio, uygulamalarınızı 64 bitlik platformlar dahil farklı platforml
     2. **Yazın veya yeni platform listesini seçin** , **x64** öğesini seçin.
 
         > [!NOTE]
-        > Yapılandırmanıza yeni bir ad verirseniz, **Proje tasarımcısında** ayarları doğru platformu hedefleyecek şekilde değiştirmeniz gerekebilir.
+        > yapılandırmanıza yeni bir ad verirseniz, doğru platformu hedeflemek için **Project tasarımcısında** ayarları değiştirmeniz gerekebilir.
 
     3. Ayarları geçerli platform yapılandırmasından kopyalamak istiyorsanız, seçin ve sonra **Tamam** düğmesini seçin.
 
 64 bitlik platformu hedefleyen tüm projeler için özellikler güncellenir ve projenin sonraki derlemesi 64 bit platformlar için iyileştirilir.
 
 > [!NOTE]
-> **Win32** platform adı C++ projeleri için kullanılır ve **x86** anlamına gelir. Visual Studio hem proje düzeyi platformları hem de çözüm düzeyi platformları ve proje platformları dile özgü proje sistemlerinden gelir. C++ projeleri **Win32** ve **x64** kullanır, ancak çözüm platformları **x86** ve **x64** kullanır. Çözüm yapılandırması olarak **x86** seçeneğini belirlediğinizde, Visual Studio, C++ projeleri için **Win32** platformunu seçer. Hem proje düzeyi platformu hem de çözüm düzeyi platform ayarlarını görmek için **Configuration Manager** açın ve iki platform ayarını aklınızda yapın. Çözüm düzeyi Platform **etkin çözüm platformu** açılan listesinde gösterilir ve tablo her proje için proje düzeyi platformu gösterir.
+> **Win32** platform adı C++ projeleri için kullanılır ve **x86** anlamına gelir. Visual Studio hem proje düzeyi platformları hem de çözüm düzeyi platformları ve proje platformları dile özgü proje sistemlerinden gelir. C++ projeleri **Win32** ve **x64** kullanır, ancak çözüm platformları **x86** ve **x64** kullanır. çözüm yapılandırması olarak **x86** ' yı seçtiğinizde, Visual Studio C++ projeleri için **Win32** platformunu seçer. Hem proje düzeyi platformu hem de çözüm düzeyi platform ayarlarını görmek için **Configuration Manager** açın ve iki platform ayarını aklınızda yapın. Çözüm düzeyi Platform **etkin çözüm platformu** açılan listesinde gösterilir ve tablo her proje için proje düzeyi platformu gösterir.
 > ![Çözüm platformunu ve proje platformunu gösteren ekran görüntüsü](media/project-platform-win32.png)
 
-## <a name="target-platforms-in-the-project-designer"></a>Proje tasarımcısında hedef platformlar
+## <a name="target-platforms-in-the-project-designer"></a>Project tasarımcısında hedef platformlar
 
-**Proje Tasarımcısı** Ayrıca, projenizle farklı platformları hedeflemek için bir yol sağlar. **Yeni çözüm platformu** iletişim kutusundaki listede yer alan platformlardan birini seçmek çözümünüz için çalışmazsa, özel bir yapılandırma adı oluşturabilir ve **Proje tasarımcısında** ayarları değiştirerek doğru platformu hedefleyebilirsiniz.
+**Project tasarımcı** , projenizle farklı platformları hedeflemek için bir yol da sağlar. **yeni çözüm platformu** iletişim kutusundaki listede yer alan platformlardan birini seçmek çözümünüz için çalışmazsa, özel bir yapılandırma adı oluşturabilir ve **Project tasarımcısında** ayarları değiştirerek doğru platformu hedefleyebilirsiniz.
 
 Bu görevin gerçekleştirilmesi, kullanmakta olduğunuz programlama diline göre farklılık gösterir. Daha fazla bilgi için aşağıdaki bağlantılara bakın:
 
 - [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Projeler için bkz. [/Platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform).
 
-- [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Projeler için bkz. [derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md).
+- [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]projeler için bkz. [derleme sayfası, Project tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md).
 
 - [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]Projeler için bkz. [/clr (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).
 
@@ -118,7 +118,7 @@ Hem x86 hem de x64 sürümlerine sahip bir .NET bütünleştirilmiş kodu veya D
 > Visual Studio 2017 ' de proje dosyasını düzenlemeden önce projeyi kaldırmanız gerekir. Projeyi kaldırmak için proje düğümüne sağ tıklayın ve **Projeyi Kaldır**' ı seçin. Düzenlemeler tamamlandığında, değişiklikleri kaydedin ve proje düğümüne sağ tıklayıp **projeyi yeniden yükle**' yi seçerek projeyi yeniden yükleyin.
 ::: moniker-end
 
-Proje dosyası hakkında daha fazla bilgi için bkz. [MSBuild proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md).
+proje dosyası hakkında daha fazla bilgi için bkz. [MSBuild proje dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
