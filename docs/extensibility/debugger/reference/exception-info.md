@@ -11,17 +11,18 @@ ms.assetid: d046957a-b97d-420b-b46b-c67cbaef709e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1ec97b56cc7fca8c2185d7180a8d34e87b084b11
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58eed1c31bc4ce6c209d462694a8d47a9c6597c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059476"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073064"
 ---
 # <a name="exception_info"></a>EXCEPTION_INFO
 Hata ayıklamakta olan program tarafından oluşturulan bir özel durumu veya çalışma zamanı hatasını açıklar.

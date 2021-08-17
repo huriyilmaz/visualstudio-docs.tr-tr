@@ -1,6 +1,6 @@
 ---
-title: CreateItem görevi | Microsoft Docs
-description: Öğe koleksiyonlarını giriş öğeleriyle doldurmak için MSBuild CreateItem görevini kullanın, öğelerin bir listeden diğerine kopyalanmasını sağlar.
+title: CreateItem Görev | Microsoft Docs
+description: Öğe koleksiyonlarını MSBuild öğeleriyle doldurmak ve öğelerin bir listeden diğerine kopyalanmış olması için CreateItem görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,42 +18,43 @@ ms.assetid: c4311f38-979e-4324-b524-9e8c1cbdc41a
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: f2d0e165171cb3619d3690e129e18f778504969e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c36723600d09adf622d7facf4e434bdea7714425
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901399"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054892"
 ---
 # <a name="createitem-task"></a>CreateItem görevi
 
-Öğe koleksiyonlarını giriş öğeleriyle doldurur. Bu, öğelerin bir listeden diğerine kopyalanmasını sağlar.
+Öğe koleksiyonlarını giriş öğeleriyle doldurmak. Bu, öğelerin bir listeden diğerine kopyalanır.
 
 > [!NOTE]
-> Bu görev kullanım dışıdır. .NET Framework 3,5 ' den başlayarak, öğe grupları [hedef](../msbuild/target-element-msbuild.md) öğelerin içine yerleştirilebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
+> Bu görev kullanım dışıdır. 3.NET Framework 3.5'den başlayarak, öğe grupları Hedef öğelerin [içine yerleştirilebilirsiniz.](../msbuild/target-element-msbuild.md) Daha fazla bilgi için bkz. [Öğeler.](../msbuild/msbuild-items.md)
 
 ## <a name="attributes"></a>Öznitelikler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `CreateItem` .
+ Aşağıdaki tabloda görevin parametreleri açık `CreateItem` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`AdditionalMetadata`|İsteğe bağlı `String` dizi parametresi.<br /><br /> Çıkış öğelerine iliştirilecek ek meta verileri belirtir.  Aşağıdaki sözdizimine sahip öğe için meta veri adını ve değerini belirtin:<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> Birden fazla meta veri adı/değer çifti noktalı virgülle ayrılmalıdır. Ad veya değer noktalı virgül ya da başka bir özel karakter içeriyorsa, bunun atlanmaları gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: MSBuild 'teki özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md).|
-|`Exclude`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Çıkış öğesi koleksiyonundan dışlanacak öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md) ve [nasıl yapılır: derlemeden dosya çıkarma](../msbuild/how-to-exclude-files-from-the-build.md).|
-|`Include`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Çıkış öğesi koleksiyonuna dahil edilecek öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir.|
-|`PreserveExistingMetadata`|İsteğe bağlı `Boolean` parametre.<br /><br /> `True`Zaten yoksa, yalnızca ek meta verileri uygulayın.|
+|`AdditionalMetadata`|İsteğe `String` bağlı dizi parametresi.<br /><br /> Çıkış öğelerine eklenecek ek meta verileri belirtir.  Öğenin meta veri adını ve değerini aşağıdaki söz dizimleriyle belirtin:<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> Birden çok meta veri adı/değer çifti noktalı virgülle ayrılabilir. Ad veya değer noktalı virgül veya başka özel karakterler içeriyorsa, bunlar kaçmalıdır. Daha fazla bilgi için, [bkz. How to: Escape special characters in MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md).|
+|`Exclude`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Çıkış öğesi koleksiyonundan hariç tutulacak öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir. Daha fazla bilgi için [bkz. Öğeler](../msbuild/msbuild-items.md) [ve Nasıl Kullanılır: Dosyaları derlemeden hariç tut.](../msbuild/how-to-exclude-files-from-the-build.md)|
+|`Include`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Çıkış öğesi koleksiyonuna eklenecek öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir.|
+|`PreserveExistingMetadata`|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `True` ek meta verileri yalnızca henüz yoksa uygulayabilirsiniz.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği, öğe koleksiyonundan adlı yeni bir öğe koleksiyonu oluşturur `MySourceItemsWithMetadata` `MySourceItems` . `CreateItem`Görev, yeni öğe koleksiyonunu öğedeki öğelerle doldurur `MySourceItems` . Daha sonra `MyMetadata` , `Hello` Yeni koleksiyondaki her bir öğeye değeri olan adlı ek bir meta veri girişi ekler.
+ Aşağıdaki kod örneği, öğesi koleksiyonundan adlı `MySourceItemsWithMetadata` yeni bir öğe koleksiyonu `MySourceItems` oluşturur. Görev, `CreateItem` yeni öğe koleksiyonunu öğedeki öğelerle `MySourceItems` doldurmak için kullanılır. Ardından, yeni koleksiyonda her `MyMetadata` öğeye değeriyle adlı ek bir meta veri girişi `Hello` ekler.
 
- Görev yürütüldükten sonra `MySourceItemsWithMetadata` öğe koleksiyonu, için meta veri girdileriyle birlikte *FILE1. resx* ve *dosya2. resx* öğelerini içerir `MyMetadata` . `MySourceItems`Öğe koleksiyonu değiştirilmez.
+ Görev yürütülürken, öğe koleksiyonu `MySourceItemsWithMetadata` *file1.resx* ve *file2.resx* öğelerini içerir ve her ikisi de için meta veri girdileri `MyMetadata` içerir. Öğe `MySourceItems` koleksiyonu değiştirilmez.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -76,11 +77,11 @@ ms.locfileid: "99901399"
 </Project>
 ```
 
- Aşağıdaki tabloda, görev yürütmeden sonra çıkış öğesinin değeri açıklanmaktadır. Öğe meta verileri, öğeden sonra parantez içinde gösterilir.
+ Aşağıdaki tabloda, görev yürütmeden sonra çıkış öğesinin değeri açıklanır. Öğe meta verileri, öğeden sonra parantez içinde gösterilir.
 
 |Öğe koleksiyonu|İçindekiler|
 |---------------------|--------------|
-|`MySourceItemsWithMetadata`|*FILE1. resx* ( `MyMetadata="Hello"` )<br /><br /> *dosya2. resx* ( `MyMetadata="Hello"` )|
+|`MySourceItemsWithMetadata`|*file1.resx* ( `MyMetadata="Hello"` )<br /><br /> *file2.resx* ( `MyMetadata="Hello"` )|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

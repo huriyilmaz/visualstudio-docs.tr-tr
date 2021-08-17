@@ -1,6 +1,6 @@
 ---
-title: Özellikleri ve öğeleri karşılaştırma | Microsoft Docs
-description: MSBuild özelliklerinin ve öğelerin bilgileri görevlere nasıl iletmekte, koşulların nasıl değerlendirileceğini ve proje dosyasının başvurbileceği değerleri nasıl depolayacağınızı öğrenin.
+title: Özellikler ve Öğeler karşılaştırması | Microsoft Docs
+description: Özellikleri ve MSBuild bilgileri görevlere nasıl iletir, koşulları değerlendirir ve proje dosyasının başvurabilirsiniz değerlerini depolamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,28 +13,28 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 358389095e71dd52aa8dfeb211bef71c4485faef
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e1348b4bd342e42f01fe6751d8ebdf6bae900b9789e9f2ebb3df4aaae89fa741
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122055048"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443795"
 ---
 # <a name="compare-properties-and-items"></a>Özellikleri ve öğeleri karşılaştırma
 
-MSBuild özellikler ve öğeler, bilgileri görevlere geçirmek, koşulları değerlendirmek ve proje dosyası genelinde başvurulabilen değerleri depolamak için kullanılır.
+MSBuild özellikleri ve öğelerinin her ikisi de görevlere bilgi geçiş yapmak, koşulları değerlendirmek ve proje dosyası boyunca başvurulan değerleri depolamak için kullanılır.
 
-- Özellikler ad-değer çiftleridir. daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+- Özellikler ad-değer çiftleridir. Daha fazla bilgi için [bkz. MSBuild .](../msbuild/msbuild-properties.md)
 
-- Öğeler genellikle dosyaları temsil eden nesnelerdir. Öğe nesnelerinde ilişkili meta veri koleksiyonları olabilir. Meta veriler ad-değer çiftleridir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
+- Öğeler genellikle dosyaları temsil eden nesnelerdir. Öğe nesnelerinin ilişkili meta veri koleksiyonları olabilir. Meta veriler ad-değer çiftleridir. Daha fazla bilgi için bkz. [Öğeler.](../msbuild/msbuild-items.md)
 
-## <a name="scalars-and-vectors"></a>Dolandırılabilen ve vektörlerini
+## <a name="scalars-and-vectors"></a>Skaler ve vektörler
 
-MSBuild özellikler yalnızca bir dize değeri olan ad-değer çiftleri olduğundan, genellikle *skaler* olarak tanımlanır. MSBuild öğe türleri öğe listeleri olduğundan, genellikle *vektör* olarak tanımlanır. Ancak, uygulamada Özellikler birden çok değeri temsil edebilir ve öğe türlerinde sıfır veya bir öğe olabilir.
+Bu MSBuild yalnızca bir dize değerine sahip olan ad-değer çiftleri olduğundan, bunlar genellikle *skaler olarak açıklanmıştır.* Bu MSBuild türleri öğe listesi olduğundan, bunlar genellikle vektör olarak *açıklanmıştır.* Ancak, pratikte özellikler birden çok değeri temsil eder ve öğe türleri sıfır veya bir öğeye sahip olabilir.
 
-### <a name="target-dependency-injection"></a>Hedef bağımlılığı ekleme
+### <a name="target-dependency-injection"></a>Hedef bağımlılık ekleme
 
-Özelliklerin birden çok değeri nasıl temsil ettiğini görmek için, oluşturulacak hedefler listesine bir hedef eklemek için ortak kullanım modelini göz önünde bulundurun. Bu liste genellikle, hedef adları noktalı virgülle ayırarak bir özellik değeri ile temsil edilir.
+Özelliklerin birden çok değeri nasıl temsil saya olduğunu görmek için, bir hedef listesine bir hedef eklemek için ortak bir kullanım desenini göz önünde bulundurabilirsiniz. Bu liste genellikle noktalı virgülle ayrılmış hedef adlarla bir özellik değeriyle temsil edilen bir listedir.
 
 ```xml
 <PropertyGroup>
@@ -46,7 +46,7 @@ MSBuild özellikler yalnızca bir dize değeri olan ad-değer çiftleri olduğun
 </PropertyGroup>
 ```
 
-`BuildDependsOn`Özelliği genellikle bir hedef özniteliğin bağımsız değişkeni olarak kullanılır `DependsOnTargets` , etkin bir şekilde bir öğe listesine dönüştürülüyor. Hedef eklemek veya hedef yürütme sırasını değiştirmek için bu özellik geçersiz kılınabilir. Örneğin,
+özelliği `BuildDependsOn` genellikle bir hedef özniteliğin bağımsız değişkeni olarak kullanılır ve bunu bir öğe listesine etkili bir şekilde `DependsOnTargets` dönüştürür. Bu özellik, hedef eklemek veya hedef yürütme sırası değiştirmek için geçersiz kılınabilir. Örneğin,
 
 ```xml
 <PropertyGroup>
@@ -57,13 +57,13 @@ MSBuild özellikler yalnızca bir dize değeri olan ad-değer çiftleri olduğun
 </PropertyGroup>
 ```
 
-değer vererek CustomBuild hedefini hedef listeye ekler `BuildDependsOn` `BeforeBuild;CoreBuild;AfterBuild;CustomBuild` .
+CustomBuild hedefini hedef listesine ekler ve değerini `BuildDependsOn` `BeforeBuild;CoreBuild;AfterBuild;CustomBuild` verir.
 
-MSBuild 4,0 ' den başlayarak hedef bağımlılığı ekleme kullanımdan kaldırılmıştır. `AfterTargets` `BeforeTargets` Bunun yerine ve özniteliklerini kullanın. Daha fazla bilgi için bkz. [hedef derleme sırası](../msbuild/target-build-order.md).
+4.0 MSBuild başlayarak, hedef bağımlılık ekleme kullanım dışıdır. Bunun yerine `AfterTargets` ve `BeforeTargets` özniteliklerini kullanın. Daha fazla bilgi için [bkz. Hedef derleme sırası.](../msbuild/target-build-order.md)
 
-### <a name="conversions-between-strings-and-item-lists"></a>Dizeler ve öğe listeleri arasındaki dönüşümler
+### <a name="conversions-between-strings-and-item-lists"></a>Dizeler ve öğe listeleri arasındaki dönüştürmeler
 
-MSBuild, gerektiğinde öğe türlerine ve dize değerlerine dönüştürme işlemleri gerçekleştirir. bir öğe listesinin nasıl bir dize değeri haline gelebileceklerini görmek için, bir MSBuild özelliğinin değeri olarak bir öğe türü kullanıldığında ne olacağını göz önünde bulundurun:
+MSBuild öğe türlerine ve dize değerlerine dönüştürmeleri gereken şekilde gerçekleştirir. Bir öğe listesinin dize değerine nasıl dönüşe olduğunu görmek için, bir öğe türü bir öğe türü MSBuild düşünün:
 
 ```xml
 <ItemGroup>
@@ -74,47 +74,47 @@ MSBuild, gerektiğinde öğe türlerine ve dize değerlerine dönüştürme işl
 </PropertyGroup>
 ```
 
-OutputDir öğe türü `Include` "KeyFiles;" değerine sahip bir özniteliğe sahip \\ Sertifikalar \\ ". MSBuild bu dizeyi iki öğe olarak ayrıştırır: keyfiles \ ve Certificates \\ . outputdir öğe türü outputdirlist özelliğinin değeri olarak kullanıldığında MSBuild, öğe türünü noktalı virgülle ayrılmış "keyfiles;" dizesine dönüştürür veya "düzleştirir" \\ Sertifikalar \\ ".
+OutputDir öğe türünün `Include` "KeyFiles \\ ; \\Sertifikalar". MSBuild dizeyi iki öğeye ayrıştırıyor: KeyFiles\ ve Certificates \\ . OutputDirList özelliğinin değeri olarak OutputDir öğe türü kullanılırsa, MSBuild türü "KeyFiles" noktalı virgülle ayrılmış dizeye dönüştürür veya \\ "düzler". \\Sertifikalar".
 
-## <a name="properties-and-items-in-tasks"></a>Görevlerdeki Özellikler ve öğeler
+## <a name="properties-and-items-in-tasks"></a>Görevlerdeki özellikler ve öğeler
 
-özellikler ve öğeler MSBuild görevlere giriş ve çıkış olarak kullanılır. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
+Özellikler ve öğeler, görevleri gerçekleştirmek için giriş ve MSBuild kullanılır. Daha fazla bilgi için bkz. [Görevler.](../msbuild/msbuild-tasks.md)
 
-Özellikler görevlere öznitelik olarak geçirilir. görev içinde, bir MSBuild özelliği, değeri bir dizeye ve dizeden dönüştürülebileceği bir özellik türü ile temsil edilir. Desteklenen özellik türleri,,,,,, `bool` `char` `DateTime` `Decimal` `Double` `int` `string` ve işleyebileceği herhangi bir tür içerir <xref:System.Convert.ChangeType%2A> .
+Özellikler, görevlere öznitelik olarak geçirildi. Görev içinde, MSBuild değeri dizeye ve dizeden dönüştürülen bir özellik türüyle temsil edilen bir özellik türü. Desteklenen özellik türleri arasında `bool` , , , , , , , ve `char` `DateTime` `Decimal` `Double` `int` `string` işlebilir herhangi bir <xref:System.Convert.ChangeType%2A> tür yer almaktadır.
 
-Öğeler görevlere nesneler olarak geçirilir <xref:Microsoft.Build.Framework.ITaskItem> . Görev içinde, <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> öğenin değerini temsil eder ve <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> meta verilerini alır.
+Öğeler görevlere nesne olarak <xref:Microsoft.Build.Framework.ITaskItem> geçirildi. Görev içinde, <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> öğenin değerini temsil eder <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> ve meta verilerini verir.
 
-Öğe türünün öğe listesi bir nesne dizisi olarak geçirilebilir `ITaskItem` . .NET Framework 3,5 ' den başlayarak, öğeler bir hedefteki öğe listesinden özniteliği kullanılarak kaldırılabilir `Remove` . Öğeler bir öğe listesinden kaldırılabildiğinden, öğe türünde sıfır öğe olması mümkündür. Bir öğeye bir öğe listesi geçirilirse, görevdeki kod bu olasılığa göz atın.
+Bir öğe türünün öğe listesi bir nesne dizisi olarak `ITaskItem` geçirebilirsiniz. 3.NET Framework 3.5'den itibaren, öğeleri özniteliği kullanılarak hedef öğe listesinden `Remove` kaldırılabilir. Öğeler bir öğe listesinden kaldırılalana kadar, bir öğe türünün sıfır öğeye sahip olması mümkündür. Bir öğe listesi bir göreve geçirilse, görev kodu bu olasılığı denetlemeli.
 
 ## <a name="property-and-item-evaluation-order"></a>Özellik ve öğe değerlendirme sırası
 
-Bir yapılandırmanın değerlendirme aşamasında, içeri aktarılan dosyalar, göründükleri sırada yapıya dahil edilir. Özellikler ve öğeler üç geçişte aşağıdaki sırada tanımlanır:
+Derlemenin değerlendirme aşamasında, içe aktarılan dosyalar, görünme sırasına göre derlemeye dahil olur. Özellikler ve öğeler üç geçişte aşağıdaki sırayla tanımlanır:
 
-- Özellikler, göründükleri sırada tanımlanır ve değiştirilir.
+- Özellikler, görünme sırasına göre tanımlanır ve değiştirilir.
 
-- Öğe tanımları, göründükleri sırada tanımlanır ve değiştirilir.
+- Öğe tanımları, görünme sırasına göre tanımlanır ve değiştirilir.
 
-- Öğeler, göründükleri sırada tanımlanır ve değiştirilir.
+- Öğeler, görünme sırasına göre tanımlanır ve değiştirilir.
 
-Bir yapı yürütme aşamasında, hedefler içinde tanımlanan özellikler ve öğeler göründükleri sırada tek bir aşamada birlikte değerlendirilir.
+Bir derlemenin yürütme aşamasında, hedefler içinde tanımlanan özellikler ve öğeler, tek bir aşamada, bunların görünme sırasına göre birlikte değerlendirilir.
 
-Ancak, bu tam hikaye değildir. Bir özellik, öğe tanımı veya öğe tanımlandığında, değeri değerlendirilir. İfade değerlendirici değeri belirten dizeyi genişletir. Dize genişletmesi derleme aşamasına bağımlıdır. Daha ayrıntılı bir özellik ve öğe değerlendirme sırası aşağıda verilmiştir:
+Ancak bu tam bir hikaye değildir. Bir özellik, öğe tanımı veya öğe tanımlandığı zaman, değeri değerlendirilir. İfade değerlendiricisi, değeri belirten dizeyi genişlettir. Dize genişletmesi derleme aşamasına bağlıdır. Daha ayrıntılı bir özellik ve öğe değerlendirme sırası şu şekildedir:
 
-- Bir yapı değerlendirme aşamasında:
+- Derlemenin değerlendirme aşamasında:
 
-  - Özellikler, göründükleri sırada tanımlanır ve değiştirilir. Özellik işlevleri yürütülür. $ (PropertyName) biçimindeki özellik değerleri ifadeler içinde genişletilir. Özellik değeri genişletilen ifadeye ayarlanır.
+  - Özellikler, görünme sırasına göre tanımlanır ve değiştirilir. Özellik işlevleri yürütülür. $(PropertyName) formundaki özellik değerleri ifadelerin içinde genişletilir. Özellik değeri genişletilmiş ifadeye ayarlanır.
 
-  - Öğe tanımları, göründükleri sırada tanımlanır ve değiştirilir. Özellik işlevleri ifadelerde zaten genişletilmişti. Meta veri değerleri genişletilmiş ifadelere ayarlanır.
+  - Öğe tanımları, görünme sırasına göre tanımlanır ve değiştirilir. Özellik işlevleri zaten ifadelerin içinde genişletildi. Meta veri değerleri genişletilmiş ifadelere ayarlanır.
 
-  - Öğe türleri, göründükleri sırada tanımlanır ve değiştirilir. @ (ItemType) formundaki öğe değerleri genişletilir. Öğe dönüştürmeleri de genişletilir. Özellik işlevleri ve değerleri ifadelerde zaten genişletilmişti. Öğe listesi ve meta veri değerleri genişletilmiş ifadelere ayarlanır.
+  - Öğe türleri, görünme sırasına göre tanımlanır ve değiştirilir. @(ItemType) formundaki öğe değerleri genişletilir. Öğe dönüştürmeleri de genişletilir. Özellik işlevleri ve değerleri zaten ifadelerin içinde genişletildi. Öğe listesi ve meta veri değerleri genişletilmiş ifadelere ayarlanır.
 
-- Bir yapı yürütme aşamasında:
+- Derlemenin yürütme aşamasında:
 
-  - Hedefler içinde tanımlanan özellikler ve öğeler göründükleri sırada birlikte değerlendirilir. Özellik işlevleri yürütülür ve özellik değerleri ifadeler içinde genişletilir. Öğe değerleri ve öğe dönüştürmeleri de genişletilir. Özellik değerleri, öğe türü değerleri ve meta veri değerleri genişletilmiş ifadelere ayarlanır.
+  - Hedefler içinde tanımlanan özellikler ve öğeler, görünme sırasına göre birlikte değerlendirilir. Özellik işlevleri yürütülür ve özellik değerleri ifadelerin içinde genişletilir. Öğe değerleri ve öğe dönüştürmeleri de genişletilir. Özellik değerleri, öğe türü değerleri ve meta veri değerleri genişletilmiş ifadelere ayarlanır.
 
-### <a name="subtle-effects-of-the-evaluation-order"></a>Değerlendirme sırasının hafif etkileri
+### <a name="subtle-effects-of-the-evaluation-order"></a>Değerlendirme siparişinin hafif etkileri
 
-Bir yapılandırmanın değerlendirme aşamasında, özellik değerlendirmesi öğe değerlendirmesinden önce gelir. Bununla birlikte, özellikler öğe değerlerine bağlı olarak görünen değerlere sahip olabilir. Aşağıdaki betiği göz önünde bulundurun.
+Derlemenin değerlendirme aşamasında özellik değerlendirmesi öğe değerlendirmeden önce olur. Bununla birlikte, özellikler öğe değerlerine bağlı olarak görünen değerlere sahip olabilir. Aşağıdaki betiği göz önünde bulundurarak.
 
 ```xml
 <ItemGroup>
@@ -130,19 +130,19 @@ Bir yapılandırmanın değerlendirme aşamasında, özellik değerlendirmesi ö
 </Target>
 ```
 
-Ileti görevinin yürütülmesi şu iletiyi görüntüler:
+İleti görevinin yürütülmesi şu iletiyi görüntüler:
 
 ```
 KeyFileVersion: 1.0.0.3
 ```
 
-Bunun nedeni değeri `KeyFileVersion` aslında " \@ (KeyFile-> '% (sürüm) ')" dizesidir. Özellik ilk tanımlandığında öğe ve öğe dönüştürmeleri genişletilmedi, bu nedenle `KeyFileVersion` özelliğe genişletilmemiş dizenin değeri atandı.
+Bunun nedeni, değerinin aslında `KeyFileVersion` " \@ (KeyFile->'%(Sürüm)')" dizesidir. Özellik ilk tanımlandığı zaman öğe ve öğe dönüştürmeleri genişletilmemiştir, bu nedenle özelliğine genişletilmemiş `KeyFileVersion` dizenin değeri atanmıştır.
 
-yapı yürütme aşamasında, ileti görevini işlediğinde, MSBuild " \@ (KeyFile-> '% (sürüm) ')" dizesini "1.0.0.3" yield olarak genişletir.
+Derlemenin yürütme aşaması sırasında, MSBuild " \@ (KeyFile->'%(Sürüm)')" dizesini genişletarak "1.0.0.3" döndürür.
 
-Özellik ve öğe grupları sırayla ters çevrilse de aynı iletinin göründüğünden emin olun.
+Özellik ve öğe grupları sırasıyla tersine çevrilse bile aynı iletinin görüntüye sahip olduğunu unutmayın.
 
-İkinci bir örnek olarak, özellik ve öğe grupları hedefler içinde bulunduğunda neler olabileceğini göz önünde bulundurun:
+İkinci bir örnek olarak, özellik ve öğe grupları hedeflerde yer alıyorsa neler olacağını göz önünde bulundurabilirsiniz:
 
 ```xml
 <Target Name="AfterBuild">
@@ -158,15 +158,15 @@ yapı yürütme aşamasında, ileti görevini işlediğinde, MSBuild " \@ (KeyFi
 </Target>
 ```
 
-Ileti görevi şu iletiyi görüntüler:
+İleti görevi şu iletiyi görüntüler:
 
 ```
 KeyFileVersion:
 ```
 
-Bunun nedeni, oluşturma işlemi sırasında, hedeflerin içinde tanımlanan özellik ve öğe gruplarının aynı anda en alta doğru değerlendirilmesinden kaynaklanır. `KeyFileVersion`Tanımlandığında, `KeyFile` bilinmiyor. Bu nedenle, öğe dönüştürmesi boş bir dizeye genişletilir.
+Bunun nedeni, derlemenin yürütme aşamasında, hedeflerde tanımlanan özellik ve öğe gruplarının aynı anda en üstten aşağıya doğru değerlendirilmesidir. tanımlandığı `KeyFileVersion` zaman `KeyFile` bilinmiyor. Bu nedenle, öğe dönüştürmesi boş bir dizeye genişler.
 
-Bu durumda, özellik ve öğe gruplarının sırasını tersine çevirme özgün iletiyi geri yükler:
+Bu durumda, özellik ve öğe gruplarının sırası ters çevrilerek özgün ileti geri yüklemesi iletiyi geri alır:
 
 ```xml
 <Target Name="AfterBuild">
@@ -182,7 +182,7 @@ Bu durumda, özellik ve öğe gruplarının sırasını tersine çevirme özgün
 </Target>
 ```
 
-Değeri `KeyFileVersion` "1.0.0.3" olarak ayarlanır ve " \@ (KeyFile-> '% (sürüm) ')" olarak ayarlanmıştır. Ileti görevi şu iletiyi görüntüler:
+değeri `KeyFileVersion` "1.0.0.3" olarak ayarlanır ve " \@ (KeyFile->'%(Version)')" olarak ayarlanmaz. İleti görevi şu iletiyi görüntüler:
 
 ```
 KeyFileVersion: 1.0.0.3

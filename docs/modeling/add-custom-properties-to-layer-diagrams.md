@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 70588a2d472a1170b58911eece4fa70831064f72
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 8f06b7b6faaa78a2543f34c4f4966e06f6e32f8a73fdf72dea128aaa457315e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389858"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121231684"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel özellikler ekleme
 
@@ -33,14 +34,14 @@ Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer
 > [!IMPORTANT]
 > Özellikleri açmak için, katman özelliklerinin görünmesini istediğiniz her bilgisayarda aşağıdaki değişikliği yapın:
 >
-> 1. **Yönetici olarak çalıştır**'ı kullanarak not defteri 'ni çalıştırın. *%ProgramFiles%\Microsoft Visual Studio [Version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest* öğesini açın.
+> 1. **yönetici olarak çalıştır**'ı kullanarak Not Defteri çalıştırın. *% ProgramFiles% \ Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest* öğesini açın.
 > 2. **İçerik** öğesinin içinde şunu ekleyin:
 >
 >     ```xml
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
 >     ```
 >
-> 3. Visual Studio uygulama Başlat menüsünün **Visual Studio Araçları** bölümünde **Geliştirici komut istemi**' i açın. Şunları girin:
+> 3. Visual Studio uygulama başlat menüsünün **Visual Studio Araçları** bölümü altında **Geliştirici Komut İstemi**' yı açın. Şunları girin:
 >
 >      `devenv /rootSuffix /updateConfiguration`
 >
@@ -49,7 +50,7 @@ Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer
 
 **Kodunuzun bir VSıX projesinde olduğundan emin olun**
 
-Eğer özelliği bir komutun, hareketin veya doğrulama projesinin parçasıysa, herhangi bir şey eklemeniz gerekmez. Özel özellik kodu, MEF bileşeni olarak tanımlanmış bir Visual Studio genişletilebilirlik projesinde tanımlanmalıdır. Daha fazla bilgi için bkz. [bağımlılık diyagramlarına komut ve hareket ekleme](../modeling/add-commands-and-gestures-to-layer-diagrams.md) veya [bağımlılık diyagramlarına özel mimari doğrulaması ekleme](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
+Eğer özelliği bir komutun, hareketin veya doğrulama projesinin parçasıysa, herhangi bir şey eklemeniz gerekmez. özel özellik kodu, MEF bileşeni olarak tanımlanan bir Visual Studio genişletilebilirlik projesinde tanımlanmalıdır. Daha fazla bilgi için bkz. [bağımlılık diyagramlarına komut ve hareket ekleme](../modeling/add-commands-and-gestures-to-layer-diagrams.md) veya [bağımlılık diyagramlarına özel mimari doğrulaması ekleme](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
 **Özel özelliği tanımlayın**
 

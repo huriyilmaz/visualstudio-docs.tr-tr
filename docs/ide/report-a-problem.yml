@@ -112,7 +112,7 @@ sections:
       Rapor etmekte olduğunuz sorunun önceden bildirilmez olduğundan emin olmak için aramanın kullanılması önerilir. Problemle eşleşen mevcut bir öğe bulursanız bu sorun biletini izleyin ve oy kullanın.
 
 
-      Ekiplerimizin yaşadığı sorunları yeniden oluşturması için size yardımcı olacak tüm bilgileri sağlama.  Bu bilgiler gerekli yeniden proje adımlarını, kod parçalarını, ekran görüntülerini, yenidenpro kayıtlarını, günlük dosyalarını ve diğer yapıtları içerir.  burada bir [sorunu Visual Studio.](./how-to-report-a-problem-with-visual-studio.md)
+      Ekiplerimizin yaşadığı sorunları yeniden oluşturması için size yardımcı olacak tüm bilgileri sağlama.  Bu bilgiler gerekli yeniden proje adımlarını, kod parçalarını, ekran görüntülerini, yenidenpro kayıtlarını, günlük dosyalarını ve diğer yapıtları içerir.  Burada, [bir sorunu Visual Studio.](./how-to-report-a-problem-with-visual-studio.md)
   - question: >
       Geri bildirimimin önceliği nedir?
     answer: >
@@ -134,7 +134,7 @@ sections:
   - question: >
       Developer Community web sitesinde IDE'Visual Studio için neden sorun Community ekley bilmiyorum?
     answer: >-
-      Bir sorunu Visual Studio tanılama bilgisinin rapora otomatik olarak dahil sinesine olanak sağlar. Mühendislerimize sorununuzu tam olarak anlamaları ve çözmek için çalışmaları gereken bağlamı veren temel bilgilerdir.
+      Tanılama bilgileri aracılığıyla Visual Studio tanılama bilgileri rapora otomatik olarak dahil edilir. Mühendislerimize sorununuzu tam olarak anlamaları ve çözmek için çalışmaları gereken bağlamı veren temel bilgilerdir.
 
 
       Visual Studio aracılığıyla rapor edebilirim; büyük günlük dosyaları, kilitlenme bilgileri, ekran görüntüleri, yeniden üretim kaydı ve daha yüksek kaliteli çözünürlükleri size daha hızlı teslim etmeye yardımcı olan diğer yapıtlar gibi zengin tanılama bilgilerini bizimle kolayca paylaşabilirsiniz.

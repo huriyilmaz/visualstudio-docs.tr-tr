@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, Windows Form Tasarımcısı, genel
-description: Visual Studio 'daki Windows Form Tasarımcısı ızgaraların ve diğer özelliklerinin tercihlerini ayarlamak için genel sayfasını nasıl kullanacağınızı öğrenin.
+title: seçenekler, Windows Form Tasarımcısı, genel
+description: kılavuzlar ve Visual Studio Windows Form Tasarımcısı diğer özelliklerine yönelik tercihleri ayarlamak için genel sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: reference
@@ -12,28 +12,29 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: c55d3dae96ff2757c8a9ba1969c378aa2290d716
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-general
+ms.openlocfilehash: e263976523b85d5705bd9bbe324fa7e58c406c74381ead10c395ca935b9f7e9b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932260"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447408"
 ---
-# <a name="options-dialog-box-windows-forms-designer"></a>Seçenekler iletişim kutusu: Windows Form Tasarımcısı
+# <a name="options-dialog-box-windows-forms-designer"></a>seçenekler iletişim kutusu: Windows Form Tasarımcısı
 
-Windows Form Tasarımcısı seçenekleri sayfası, Visual Studio 'daki Windows Form Tasarımcısı kılavuzlar ve diğer özellikler için tercihleri ayarlamanıza olanak sağlar. **Araçlar** menüsünden **Seçenekler** iletişim kutusunu açın.
+Windows Form Tasarımcısı seçenekleri sayfası, kılavuz ve Visual Studio Windows Form Tasarımcısı diğer özelliklerine yönelik tercihleri ayarlamanıza olanak sağlar. **Araçlar** menüsünden **Seçenekler** iletişim kutusunu açın.
 
-## <a name="code-generation-settings"></a>Kod oluşturma ayarları
+## <a name="code-generation-settings"></a>kod oluşturma Ayarlar
 
 **İyileştirilmiş kod oluşturma**\
-İyileştirilmiş kod oluşturmayı sunar. Bazı denetimler bu modla uyumlu olmayabilir. Bu değişikliğin etkili olması için Visual Studio 'Nun kapatılıp yeniden açılması gerekir.
+İyileştirilmiş kod oluşturmayı sunar. Bazı denetimler bu modla uyumlu olmayabilir. bu değişikliğin etkili olabilmesi için Visual Studio kapatılıp yeniden açılması gerekir.
 
 ## <a name="high-dpi-support"></a>Yüksek DPı desteği
 
 **DPı ölçeklendirme bildirimleri**\
-Windows form tasarımcısında, Visual Studio 'Yu %100 ölçeklendirmeyle yeniden başlatabileceği bir ileti gösterin. Daha fazla bilgi için bkz. [Visual Studio 'DA DPI tanımayı devre dışı bırakma](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio).
+Windows Form tasarımcısında, %100 ölçeklendirmeyle Visual Studio yeniden başlatabileceği bir ileti gösterin. Daha fazla bilgi için bkz. [VISUAL STUDIO DPI tanımayı devre dışı bırakma](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio).
 
-## <a name="layout-settings"></a>Düzen ayarları
+## <a name="layout-settings"></a>düzen Ayarlar
 
 **Varsayılan Kılavuz hücre boyutu**\
 Tasarımcıda yatay ve dikey kılavuz çizgileri arasındaki boşluğu piksel cinsinden ayarlar. Varsayılan boyut 8, 8 ' dir. En büyük boyut 200, 200 ' dir.
@@ -47,7 +48,7 @@ Tasarımcıların boyutlandırma kılavuzunu görüntüleyip görüntülememedi�
 **Kılavuza yasla**\
 Tasarımcıların nesneleri ve denetimleri kılavuza yapışıp uydurmayacağını belirler. Diğer bir deyişle, tasarımcıda öğelerin yeniden boyutlandırılması ve taşınması, bu özellik açık olduğunda GridSize artıcıyla sınırlıdır. SnapToGrid 'in açık olması, Kullanıcı arabiriminin çeşitli yönlerini kesin bir şekilde yerleştirmeyi kolaylaştırır, ancak bir denetimin yerleştirebileceği özgürlüğü kısıtlar. Varsayılan olarak, SnapToGrid açıktır.
 
-## <a name="object-bound-smart-tag-settings"></a>Nesne ile bağlantılı akıllı etiket ayarları
+## <a name="object-bound-smart-tag-settings"></a>nesne ile bağlantılı akıllı etiket Ayarlar
 
 **Akıllı etiketleri otomatik olarak aç**\
 Denetimlerin ve bileşenlerin Akıllı Etiketler görüntüleyip görüntülemediğini belirler. Tüm denetimler ve bileşenler akıllı etiketleri desteklemez.

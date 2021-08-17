@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: b2b1ea54741e4548c2f5c3385313d0736b7f93c9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: a8653bdc5b16e244247c15755d3e018ecb9b6b5114b6242661648f219fb58de5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122055945"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447050"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>5. Adım: Formunuza denetimler ekleme
 

@@ -1,6 +1,6 @@
 ---
-title: IDE 'de seçim ve para birimi | Microsoft Docs
-description: VSPackages 'ın para birimi izlemede nasıl bir parçası olduğunu öğrenin. Visual Studio IDE, seçim bağlamını kullanarak şu anda seçili nesneler hakkında bilgi tutar.
+title: IDE'de Seçim ve Para Birimi | Microsoft Docs
+description: VSPackage'ların para birimi izlemeye nasıl katıldıklarını öğrenin. IDE Visual Studio seçili nesnelerle ilgili bilgileri seçim bağlamını kullanarak sürdürür.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,56 +13,57 @@ ms.assetid: 2f6f18d1-acd8-454d-a856-9a4d81155052
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0fb65a63b99f625f8d32af8436db753a0f17322e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e167d963592e6f555082978c07d3fd7a70cb5fa82636864f5518665bffc6d38f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080911"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275196"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>IDE’de Seçim ve Para Birimi
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), kullanıcıların seçilmiş olan nesneler hakkında seçim *bağlamını* kullanarak bilgi saklar. Seçim bağlamında VSPackages, para birimi izlemede iki şekilde bir parçası alabilir:
+Tümleşik [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geliştirme ortamı (IDE), seçim bağlamını kullanarak kullanıcıların seçili nesneleri hakkında bilgi *sağlar.* Seçim bağlamıyla VSPackage'lar para birimi izleme kapsamında iki şekilde yer alır:
 
-- IDE 'ye VSPackages hakkında para birimi bilgilerini yayarak.
+- VSPackage'lar hakkında para birimi bilgilerini IDE'ye yayarak.
 
-- Kullanıcılar, IDE içindeki şu anda etkin olan seçimleri izleyerek.
+- Kullanıcıların IDE'de şu anda etkin olan seçimlerini izleme.
 
-## <a name="selection-context"></a>Seçim bağlamı
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE genel olarak IDE para birimini kendi genel seçim bağlamı nesnesinde izler. Aşağıdaki tabloda seçim bağlamını oluşturan öğeler gösterilmektedir.
+## <a name="selection-context"></a>Seçim Bağlamı
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE, kendi genel seçim bağlamı nesnesinde IDE para birimini genel olarak takip eder. Aşağıdaki tabloda seçim bağlamını ortaya koyan öğeler yer alır.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Geçerli hiyerarşi|Genellikle geçerli proje; BOŞ bir geçerli hiyerarşi, çözümün bir bütün olarak güncel olduğunu gösterir.|
-|Geçerli öğe kimliği|Geçerli hiyerarşi içindeki seçili öğe; Proje penceresinde birden çok seçim olduğunda, birden çok geçerli öğe olabilir.|
-|Geçerli `SelectionContainer`|Özellikler penceresi özellikleri görüntülemesi gereken bir veya daha fazla nesneyi tutar.|
+|Geçerli hiyerarşi|Genellikle geçerli proje; NULL geçerli hiyerarşisi, çözümün bir bütün olarak geçerli olduğunu gösterir.|
+|Geçerli ItemID|Geçerli hiyerarşi içinde seçilen öğe; bir proje penceresinde birden çok seçim olduğunda, birden çok geçerli öğe olabilir.|
+|Şu anki `SelectionContainer`|Uygulamanın özelliklerini görüntülemesi gereken bir Özellikler penceresi daha fazla nesne tutar.|
 
- Ayrıca, ortam iki genel liste tutar:
+ Buna ek olarak, ortam iki genel liste bulundurmaktadır:
 
-- Etkin UI komut tanımlayıcılarının listesi
+- Etkin kullanıcı arabirimi komut tanımlayıcılarının listesi
 
 - Şu anda etkin olan öğe türlerinin listesi.
 
-### <a name="window-types-and-selection"></a>Pencere türleri ve seçimi
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE pencereleri iki genel türe göre düzenler:
+### <a name="window-types-and-selection"></a>Pencere Türleri ve Seçimi
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE, pencereleri iki genel türe göre düzenleyebilir:
 
 - Hiyerarşi türü pencereler
 
 - Araç ve belge pencereleri gibi çerçeve pencereleri
 
-  IDE, para birimini bu pencere türlerinin her biri için farklı izler.
+  IDE, bu pencere türlerinin her biri için para birimini farklı izler.
 
-  En yaygın proje türü pencere, IDE 'nin denetlediği Çözüm Gezgini ' dir. Proje türü bir pencere, genel seçim bağlamının genel hiyerarşisini ve öğe sayısını izler ve pencere, geçerli hiyerarşiyi belirlemede kullanıcının seçimine bağlıdır. Proje türü Windows için, ortam, <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> VSPackages 'ın açık öğelerin geçerli değerlerini izleyebileceği genel hizmeti sağlar. Ortamdaki özellik göz atma özelliği bu genel hizmet tarafından yönlendiriliyor.
+  En yaygın proje türü penceresi, IDE'nin denetiminde olduğu çözüm gezginidir. Proje türü bir pencere, genel seçim bağlamının genel hiyerarşisini ve ItemID'sini izler ve pencere geçerli hiyerarşiyi belirlemek için kullanıcının seçimine bağlı olur. Proje türü pencereleri için ortam, VSPackage'ların açık öğeler için geçerli değerleri <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> izleyene genel hizmeti sağlar. Ortamda özellik tarama bu genel hizmet tarafından çalıştırılır.
 
-  Çerçeve pencereleri, diğer yandan, SelectionContext değerini (hiyerarşi/ItemId/SelectionContainer trio) göndermek için çerçeve penceresi içindeki DocObject ' i kullanın. . Çerçeve pencereleri <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> Bu amaçla hizmeti kullanır. DocObject, yalnızca seçim kapsayıcısına ait değerleri gönderebilir, bu, MDI alt belgeleri için tipik olduğu gibi, hiyerarşi ve öğe için yerel değerleri değişmeden bırakır.
+  Öte yandan çerçeve pencereleri, SelectionContext değerini (hierarchy/ItemID/SelectionContainer üçlüsü) itmek için çerçeve penceresindeki DocObject öğesini kullanın. . Çerçeve pencereleri bu amaçla <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> hizmeti kullanır. DocObject, MDI alt belgelerinde olduğu gibi hiyerarşi ve ItemID için yerel değerleri değiştirmeden bırakarak yalnızca seçim kapsayıcısı için değerleri iter.
 
-### <a name="events-and-currency"></a>Olaylar ve para birimi
- Ortamın para birimi kavramını etkileyen iki tür olay meydana gelebilir:
+### <a name="events-and-currency"></a>Olaylar ve Para Birimi
+ Ortamın para birimini etkileyen iki tür olay oluşabilir:
 
-- Genel düzeye yayılan ve pencere çerçevesi seçim bağlamını değiştiren olaylar. Bu tür bir olay örnekleri, açılan bir MDI alt penceresi, açılan bir araç penceresi veya açılan bir proje türü araç penceresi içerir.
+- Genel düzeye yayma ve pencere çerçevesi seçim bağlamını değiştirme olayları. Bu tür bir olayın örnekleri arasında açılan MDI Alt Penceresi, açılan genel bir araç penceresi veya açılan proje türü araç penceresi yer atılır.
 
-- Pencere çerçevesi seçim bağlamı içinde izlenen öğeleri değiştiren olaylar. Örnek olarak, bir DocObject içindeki seçimi değiştirme veya bir proje türü penceresinde seçimi değiştirme sayılabilir.
+- Pencere çerçevesi seçim bağlamı içinde izleme yapılan öğeleri değiştiren olaylar. Örnek olarak DocObject içindeki seçimi değiştirme veya proje türü penceresinde seçimi değiştirme örnek olarak verilmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Seçim Bağlamı Nesneleri](../../extensibility/internals/selection-context-objects.md)

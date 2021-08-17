@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 33c7f939a8f630592890c3c03be662099680e64b87d4179425497ee864a6718c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 26729a2b7be80f60c0eb3720bf1853247558314f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262522"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072999"
 ---
 # <a name="exception_state"></a>EXCEPTION_STATE
 Özel durum durumunu belirtir.
@@ -86,7 +86,7 @@ public enum enum_EXCEPTION_STATE {
 Özel durumun ilk at at at durdurun. Bir özel durum olayı açıkken, bu bayrak özel durum olayı bir ilk şans özel durum olayı olduğunu gösterir.
 
 `EXCEPTION_STOP_SECOND_CHANCE`\
-Özel durumun saniyelik olarak at at at. Bir özel durum olayı açıkken, özel durum olayı ikinci şans özel durum olayı olduğunu gösterir.
+Özel durumun saniyelik at at at durdurma. Bir özel durum olayı açıkken, özel durum olayı ikinci şans özel durum olayı olduğunu gösterir.
 
 `EXCEPTION_STOP_USER_FIRST_CHANCE`\
 Kullanıcı modu özel durumu ilk başta kesildi. Bir özel durum olayı açıkken, özel durum olayı bir ilk şans kullanıcı özel durum olayı olduğunu gösterir.

@@ -1,6 +1,6 @@
 ---
-title: Birlikte yazmayı ve eklentileri anlayın
-description: Birlikte yazma hakkında bilgi edinin ve bulutta barındırılan bir çalışma kitabını diğer kullanıcılarla aynı anda düzenlemenizi sağlayan Windows Masaüstü için Excel 'in bir özelliğidir.
+title: Ortak kimlik doğrulamayı ve Eklentileri anlama
+description: Birlikte kimlik doğrulamayı ve Excel masaüstü Windows bulutta barındırılan bir çalışma kitabını diğer kullanıcılarla aynı anda düzenlemenizi sağlayan bir özelliği olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 07/20/2017
 ms.topic: conceptual
@@ -12,20 +12,21 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e7889965590865639149b79e8c6d285e333b3822
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 39f490ab9f61c231a59000c4b035cd796405db96
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968794"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025673"
 ---
-# <a name="understand-coauthoring-and-add-ins"></a>Birlikte yazmayı ve eklentileri anlayın
+# <a name="understand-coauthoring-and-add-ins"></a>Ortak kimlik doğrulamayı ve Eklentileri anlama
 
-Coauthoring, bulutta (yani OneDrive, OneDrive Iş veya SharePoint Online) barındırılan bir çalışma kitabını diğer kullanıcılarla eşzamanlı olarak düzenlemenizi sağlayan Windows Masaüstü için Excel 'in bir özelliğidir. Bu özelliğin eklenmesiyle, kullanıcılar birlikte yazarken bile sorunsuz çalıştığından emin olmak için Excel çözümünüzdeki ayarlamaları yapmanız gerekebilir. Bkz. [Excel 'de birlikte yazma hakkında](/office/vba/excel/concepts/about-coauthoring-in-excel).
+Birlikte kimlik doğrulaması, Windows masaüstü için Excel'ın bulutta barındırılan bir çalışma kitabını (başka bir OneDrive, OneDrive İş veya SharePoint Online) diğer kullanıcılarla aynı anda düzenlemenizi sağlayan bir özelliğidir. Bu özelliğin yanı sıra, kullanıcılar birlikte kimlik doğrulaması yaparken bile sorunsuz bir şekilde çalışmasını sağlamak için Excel Çözümünüz üzerinde ayarlamalar yapmak zorundayabilirsiniz. Bkz. [Excel' içinde birlikte kimlik doğrulaması hakkında.](/office/vba/excel/concepts/about-coauthoring-in-excel)
 
-Note: Windows Masaüstü için birlikte yazma, 2017 sürümünde sunulmuştur ve şu anda Office365 aboneleri için sunulmaktadır. Office 2016 veya önceki bir sürümü için kalıcı lisans satın alan kullanıcıların şu anda birlikte yazma özelliğine erişimi yoktur. (Excel Online, Android için Excel, iOS için Excel ve Windows Mağazası 'nda Excel Mobile, birlikte yazmayı da destekler).
+Not: Windows Desktop Excel için ortak kimlik doğrulaması 2017'de tanıtıldı ve şu anda Office365 aboneleri tarafından kullanılabilir. 2016 veya önceki Office kalıcı lisans satın alan kullanıcıların şu anda ortak kimlik doğrulama özelliğine erişimi yok. (Excel Store'Android için Excel, iOS Excel için Excel Mobile, Windows, Windows kimlik doğrulamayı da destekler).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Excel çözümleri](./excel-solutions.md)

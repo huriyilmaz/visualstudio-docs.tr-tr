@@ -1,6 +1,6 @@
 ---
 title: XSLT stil sayfalarında hata ayıkla
-description: Bu kılavuzda bulunan adımları izleyerek XSLT stil sayfasında hata ayıklamak için Visual Studio 'da XSLT hata ayıklayıcısı 'nı nasıl kullanacağınızı öğrenin.
+description: bu kılavuzda bulunan adımları izleyerek xslt stil sayfasında hata ayıklamak için Visual Studio xslt hata ayıklayıcısını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: how-to
@@ -8,14 +8,15 @@ ms.assetid: 3db9fa5a-f619-4cb6-86e7-64b364e58e5d
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 7935abf4bee4d7f9532ca1dfae0b7105c42067d1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b591b597b2cb0930c2ee2e3c4ceb23158ac2956c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875165"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025153"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>İzlenecek yol: XSLT stil sayfasında hata ayıklama
 
@@ -24,7 +25,7 @@ Bu izlenecek yolda bulunan adımlarda XSLT hata ayıklamanın nasıl kullanılac
 Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-files) yerel bilgisayarınıza kopyalayın. Stil sayfası, diğeri ise stil sayfasına giriş olarak kullanacağımız XML dosyasıdır. Bu kılavuzda, kullandığımız stil sayfası maliyeti ortalama defter fiyatının altında olan tüm kitapları bulur.
 
 > [!NOTE]
-> XSLT hata ayıklayıcısı yalnızca Visual Studio 'nun Professional ve Enterprise sürümlerinde kullanılabilir.
+> XSLT hata ayıklayıcısı yalnızca Visual Studio Professional ve Enterprise sürümlerinde kullanılabilir.
 
 ## <a name="start-debugging"></a>Hata ayıklamayı Başlat
 
@@ -48,7 +49,7 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 
    - Başlangıç etiketini sağ tıklatın `xsl:if` ve **kesme** noktası  >  **Ekle kesme noktası**' nı seçin.
 
-      ![Visual Studio 'da XSL dosyasında kesme noktası ekle](media/insert-breakpoint.PNG)
+      ![Visual Studio içindeki XSL dosyasında kesme noktası ekle](media/insert-breakpoint.PNG)
 
 6. Menü çubuğunda, **XML**  >  **XSLT hata ayıklamayı Başlat** ' ı seçin (veya **alt** + **F5** tuşuna basın).
 
@@ -56,13 +57,13 @@ Bu izlenecek yol için hazırlanmak üzere, önce iki [örnek dosyayı](#sample-
 
    Düzenleyicide, hata ayıklayıcı `xsl:if` stil sayfasının öğesine yerleştirilir. *below-average.xml* adlı başka bir dosya düzenleyicide açılır; Bu, giriş dosyasındaki her düğüm *books.xml* işlendiği şekilde doldurulacak çıkış dosyasıdır.
 
-   **Oto, Yereller** ve  **Gözcü 1** pencereleri, Visual Studio penceresinin alt kısmında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
+   **oto, yereller** ve  **gözcü 1** pencereleri Visual Studio penceresinin en altında görünür. **Yereller** penceresi tüm yerel değişkenleri ve bunların geçerli değerlerini görüntüler. Bu, stil sayfasında tanımlanan değişkenleri ve ayrıca hata ayıklayıcının Şu anda bağlamdaki düğümleri izlemek için kullandığı değişkenleri içerir.
 
 ## <a name="watch-window"></a>Gözcü penceresi
 
 Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gözcü** penceresine iki değişken ekleyeceğiz. (İzlemek istediğiniz değişkenler zaten orada ise, değerleri incelemek için **Yereller** penceresini de kullanabilirsiniz.)
 
-1. **Hata Ayıkla** menüsünde **Windows**'u  >    >  **izle 1**' i seçin.
+1. **hata ayıkla** menüsünden **Windows**  >  **izle**  >  **izle 1**' i seçin.
 
    **1. gözcü** penceresi görünür hale gelir.
 
@@ -76,7 +77,7 @@ Giriş dosyası işlendiğinde değerlerini inceleyebileceğiniz için, **1. gö
 
 4. Düğümünü genişletin `self::node()` ve ardından değeri olan düğümü genişletin `price` .
 
-   ![Visual Studio 'da XSLT hata ayıklaması sırasında izleme penceresi](media/xslt-debugging-watch-window.png)
+   ![izleme penceresi XSLT hata ayıklaması sırasında Visual Studio](media/xslt-debugging-watch-window.png)
 
    Geçerli kitap düğümü için kitap fiyatının değerini görebilir ve değeri ile karşılaştırabilirsiniz `$bookAverage` . Kitap fiyatı ortalamanın altında olduğundan, `xsl:if` hata ayıklama işlemine devam ettiğinizde koşulun başarılı olması gerekir.
 

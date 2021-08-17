@@ -272,7 +272,7 @@ Ayrıca, kod Düzenleyicisi penceresinde belirli bir kod kapsamı simgesini seç
 
    ![' İf ' koşullu bildiriminde kod kapsamı](media/lut-start/code-coverage-cs1.png)
 
-1. Yönteminde okuyan satırdaki yeşil onay işaretine tıklayın `return Char.IsUpper(s[0])` `StartsWithUpper` . Aşağıdaki çizimde gösterildiği gibi, Live Unit Testing yalnızca iki testin bu kod satırına yer ve tüm testlerin başarıyla yürütülmektedir.
+1. Yönteminde okuyan satırdaki yeşil onay işaretine tıklayın `return Char.IsUpper(s[0])` `StartsWithUpper` . Aşağıdaki çizimde gösterildiği gibi Live Unit Testing yalnızca iki testin bu kod satırına yer ve tüm testlerin başarıyla yürütülmektedir.
 
    ![Dönüş deyimi için kod kapsamı](media/lut-start/code-coverage-cs2.png)
 
@@ -295,7 +295,7 @@ Kod kapsamı yönteminin `StartsWithLower` kapsamına genişletmek için şunlar
 1. Live Unit Testing kodunuzu değiştirerek yeni ve değiştirilmiş testleri otomatik olarak yürütür. Aşağıdaki çizimde gösterildiği gibi, eklemış olduğunuz ikisi ve değiştirdklerinden biri de dahil olmak üzere tüm testler başarılı oldu.
 
    ::: moniker range="vs-2017"
-   ![Test kapsamı genişlettikten sonra Test Gezgini](media/lut-start/test-dynamic.png)
+   ![Test kapsamını genişlettikten sonra Test Gezgini](media/lut-start/test-dynamic.png)
    ::: moniker-end
    ::: moniker range=">=vs-2019"
    ![Test kapsamını genişlettikten sonra Canlı Test Gezgini](media/lut-start/vs-2019/test-dynamic.png)
@@ -311,7 +311,7 @@ Bazı durumlarda Test Gezgini'nde **başarılı testler** gri olabilir. Bu, bir 
 
 ## <a name="handle-a-test-failure"></a>Test hatalarını işleme
 
-Bu bölümde test hatalarını belirlemek, gidermek ve Live Unit Testing için bu bilgileri nasıl kullanabileceğiniz hakkında bilgi edinebilirsiniz. Bunu yapmak için test kapsamını yöntemine `HasEmbeddedSpaces` genişletebilirsiniz.
+Bu bölümde test hatalarını tanımlamak, gidermek ve Live Unit Testing için bu bilgileri nasıl kullanabileceğiniz hakkında bilgi edinebilirsiniz. Bunu yapmak için test kapsamını yöntemine `HasEmbeddedSpaces` genişletebilirsiniz.
 
 1. Test dosyanıza aşağıdaki yöntemi ekleyin:
 
@@ -351,7 +351,7 @@ Bu bölümde test hatalarını belirlemek, gidermek ve Live Unit Testing için b
 
    Ayrıca, aşağıdaki çizimde gösterildiği gibi Visual Studio testimizle ilgili sorunları gidermemize yardımcı olmak için aşağıdaki hata ayıklama araçlarının hepsi kullanılabilir:
 
-   ![Visual Studio ayıklama araçları](media/lut-start/debugging-tools-cs.png)
+   ![Visual Studio hata ayıklama araçları](media/lut-start/debugging-tools-cs.png)
 
    Otomatikler **penceresinde** değişkenin değerinin dizinin ikinci öğesi olan `phrase` "Name\tDescription" olduğunu unutmayın. Test yöntemi, bu `HasEmbeddedSpaces` dize `true` geçiriken dönüş bekler; bunun yerine `false` döndürür. Görünen o ki sekme karakteri olan "\t" karakterini ekli alan olarak tanımaz.
 
@@ -371,4 +371,4 @@ Bu, hatanın ön araştırması için yeterli bilgi sağlar. (Test `TestHasEmbed
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Live Unit Testing'Visual Studio](live-unit-testing.md)
-- [Live Unit Testing Sorulan Sorular](live-unit-testing-faq.yml)
+- [Live Unit Testing Sık Sorulan Sorular](live-unit-testing-faq.yml)

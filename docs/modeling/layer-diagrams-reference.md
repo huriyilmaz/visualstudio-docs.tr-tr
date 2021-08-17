@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: aeffcc63f841b2a01b613173e0df87a841af7b1c0e993da468c157af0b24b686
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b08f2814fc20cf97da0e0c081ea2d8a6d49e0129
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370559"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055451"
 ---
 # <a name="dependency-diagrams-reference"></a>Bağımlılık diyagramları: başvuru
 

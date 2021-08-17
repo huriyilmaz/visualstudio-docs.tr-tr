@@ -11,17 +11,18 @@ ms.assetid: 116c7324-7645-4c15-b484-7a5cdd065ef5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8aa2815eab2e78b373340ca1d4c60b4ae9929548
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b6eb4692d59d8e4bf089787ec2f8e4f2ec33bcad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053249"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087476"
 ---
 # <a name="idebugstackframe3interceptcurrentexception"></a>IDebugStackFrame3::InterceptCurrentException
 Geçerli özel durumu ele almak istediğinde geçerli yığın çerçevesinde hata ayıklayıcı tarafından çağırılır.

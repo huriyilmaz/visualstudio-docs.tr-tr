@@ -11,17 +11,18 @@ ms.assetid: 392de54b-9af0-4567-953b-1b41acd1e05c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2e9f09749cfb3495e71d9cbacfd4a9d430acc107
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 376647665e10872f8942a1a3e2ed712a304c5fbe
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087021"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087437"
 ---
 # <a name="idebugsymbolprovidergetnamespacesusedataddress"></a>IDebugSymbolProvider::GetNamespacesUsedAtAddress
 Bu yöntem, hata ayıklama adresiyle ilişkili ad alanları için bir Numaralandırıcı oluşturur.

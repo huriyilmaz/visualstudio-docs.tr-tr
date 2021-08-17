@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c54ed56f00791d8783b8cacdc69616baa4052040f8a04e17d846459a846921a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 28ce682f6ea5070f0551f10a521e4874a38ed40c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121428464"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055074"
 ---
 # <a name="common-msbuild-project-properties"></a>Yaygın MSBuild proje özellikleri
 
@@ -104,7 +104,7 @@ aşağıdaki tabloda Visual Studio proje dosyalarında tanımlanan veya MSBuild 
 | Satellite_BaseAddress | .NET | Hedef kullanılarak kültüre özgü uydu derlemeleri derlemeleri için temel `CreateSatelliteAssemblies` adres. |
 | Satellite_CompanyName | .NET | Uydu derleme oluşturma sırasında *AL.exe* şirket adı. |
 | Satellite_Configuration | .NET | Uydu derleme oluşturma sırasında *AL.exe* yapılandırma adı. |
-| Satellite_Description | .NET | Uydu derlemesi oluşturma sırasında *AL.exe* açıklama metni. |
+| Satellite_Description | .NET | Uydu derlemesi oluşturma sırasında *AL.exe* için açıklama metni. |
 | Satellite_EvidenceFile | .NET | Belirtilen dosyayı "Security.Evidence" kaynak adına sahip uydu derlemeye katıştırır. |
 | Satellite_FileVersion | .NET | Uydu derlemesinde Dosya Sürümü alanı için bir dize belirtir. |
 | Satellite_Flags | .NET | Uydu derlemesinde Flags alanı için bir değer belirtir. |
@@ -124,22 +124,22 @@ aşağıdaki tabloda Visual Studio proje dosyalarında tanımlanan veya MSBuild 
 | SkipInvalidConfigurations | Tümü | olduğunda, geçersiz platform ve yapılandırma birleşimleri üzerinde bir uyarı üretir, ancak derlemeyi başarısız olmaz; tanımsız `true` `false` olduğunda veya tanımsız olduğunda (varsayılan), bir hata üretir. |
 | StartupObject | .NET | Main yöntemini veya Sub Main yordamını içeren sınıfı veya modülü belirtir. Bu özellik, derleyici `/main` anahtarına eşdeğerdir. |
 | SubsystemVersion | .NET | Oluşturulan yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir. Bu özellik, derleyici `/subsystemversion` anahtarına eşdeğerdir. Bu özelliğin varsayılan değeri hakkında bilgi için bkz. [/subsystemversion (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/subsystemversion) veya [/subsystemversion (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/subsystemversion-compiler-option). |
-| TargetCompactFramework | .NET | Uygulamanın .NET Compact Framework uygulamayı çalıştırmak için gereken sürümü. Bunun belirterek, aksi takdirde başvuramayabilecek belirli çerçeve derlemelerine başvurasınız. |
+| TargetCompactFramework | .NET | Uygulamanın .NET Compact Framework uygulamayı çalıştırmak için gereken sürüm. Bunun belirterek, aksi takdirde başvuramayabilecek belirli çerçeve derlemelerine başvurasınız. |
 | TargetFrameworkVersion | .NET | Uygulamanın .NET Framework uygulamayı çalıştırmak için gereken sürümü. Bunun belirterek, aksi takdirde başvuramayabilecek belirli çerçeve derlemelerine başvurasınız. |
 | TreatWarningsAsErrors | .NET | varsa, tüm uyarıların hata olarak kabul edilirse neden olduğu bir boole `true` parametresi. Bu parametre, derleyici `/nowarn` anahtarına eşdeğerdir. |
 | UseHostCompilerIfAvailable | .NET | varsa, derleme görevinin işlem içinde derleyici nesnesini kullanmalarına neden olan bir boole `true` parametresi. Bu parametre yalnızca Visual Studio. |
-| Utf8Output | .NET | ise, derleyici çıkışını UTF-8 kodlamasını kullanarak günlüğe kaydeden bir boole `true` parametresi. Bu parametre, derleyici `/utf8Output` anahtarına eşdeğerdir. |
+| Utf8Output | .NET | ise, `true` UTF-8 kodlamasını kullanarak derleyici çıkışını günlüğe kaydeden bir boole parametresi. Bu parametre, derleyici `/utf8Output` anahtarına eşdeğerdir. |
 | VbcToolPath | Visual Basic | Geçerli sürümü geçersiz kılınmış olduğunda *vbc.exe* konum belirten *isteğevbc.exe* yol. |
-| VbcVerbosity | Visual Basic | Derleyicinin çıkışının ayrıntılı Visual Basic belirtir. Geçerli değerler şunlardır "sessiz," "normal" (varsayılan değer) veya "ayrıntılıdır." |
-| VisualStudioVersion | Tümü | bu projenin çalışıyor olarak değerlendirilmesi gereken Visual Studio sürümünü belirtir. bu özellik belirtilmezse, MSBuild makul bir varsayılan değere ayarlar.<br /><br /> Bu özellik, derleme için kullanılan hedef kümesini belirtmek için çeşitli proje türlerinde kullanılır. `ToolsVersion`Bir proje için 4,0 veya üzeri bir değere ayarlanırsa, `VisualStudioVersion` hangi alt araç takımını kullanacağınızı belirtmek için kullanılır. Daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md). |
-| WarningsAsErrors | .NET | Hata olarak değerlendirmek için uyarıların listesini belirtir. Bu parametre, `/warnaserror` derleyici anahtarıyla eşdeğerdir. |
-| Warninggözetimi Taserrors | .NET | Hata olarak değerlendirilmediğini belirten uyarıların bir listesini belirtir. Bu parametre, `/warnaserror` derleyici anahtarıyla eşdeğerdir. |
-| Win32Manifest | .NET | Son derlemeye katıştırılması gereken bildirim dosyasının adı. Bu parametre, `/win32Manifest` derleyici anahtarıyla eşdeğerdir. |
-| Win32Resource | .NET | Son derlemeye katıştırılacak Win32 kaynağının dosya adı. Bu parametre, `/win32resource` derleyici anahtarıyla eşdeğerdir. |
+| VbcVerbosity | Visual Basic | Derleyicinin çıkışının ayrıntılı Visual Basic belirtir. Geçerli değerler "Sessiz", "Normal" (varsayılan değer) veya "Ayrıntılı" değerlerdir. |
+| Visualstudioversion | Tümü | Bu projenin Visual Studio olarak kabul edilen uygulamanın sürümünü belirtir. Bu özellik belirtilmezse, MSBuild makul bir varsayılan değere ayarlar.<br /><br /> Bu özellik, derleme için kullanılan hedef kümesi belirtmek için çeşitli proje türlerinde kullanılır. Bir proje için 4.0 veya daha yüksek bir değere ayarlanırsa, kullanılacak alt `ToolsVersion` araç takımı belirtmek için `VisualStudioVersion` kullanılır. Daha fazla bilgi için [bkz. Araç Kümesi (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md). |
+| WarningsAsErrors | .NET | Hata olarak davranan uyarıların listesini belirtir. Bu parametre, derleyici `/warnaserror` anahtarına eşdeğerdir. |
+| WarningsNotAsErrors | .NET | Hata olarak kabul edilen uyarıların listesini belirtir. Bu parametre, derleyici `/warnaserror` anahtarına eşdeğerdir. |
+| Win32Manifest | .NET | Son derlemeye ekli olması gereken bildirim dosyasının adı. Bu parametre, derleyici `/win32Manifest` anahtarına eşdeğerdir. |
+| Win32Kaynak | .NET | Son derlemeye katıştıracak Win32 kaynağının dosya adı. Bu parametre, derleyici `/win32resource` anahtarına eşdeğerdir. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
 - [Yaygın MSBuild öğesi meta verileri](common-msbuild-item-metadata.md)
-- [MSBuild Ayrılmış ve Iyi bilinen Özellikler](msbuild-reserved-and-well-known-properties.md)
-- [.net SDK projeleri için MSBuild başvurusu](/dotnet/core/project-sdk/msbuild-props)
+- [MSBuild Ayrılmış ve İyi Bilinen Özellikler](msbuild-reserved-and-well-known-properties.md)
+- [MSBuild SDK projeleri için başvuru](/dotnet/core/project-sdk/msbuild-props)

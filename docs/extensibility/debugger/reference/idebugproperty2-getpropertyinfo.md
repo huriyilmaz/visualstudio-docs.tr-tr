@@ -1,6 +1,6 @@
 ---
-description: Bir özelliği tanımlayan DEBUG_PROPERTY_INFO yapısını alır.
-title: 'IDebugProperty2:: GetPropertyInfo | Microsoft Docs'
+description: Bir DEBUG_PROPERTY_INFO açıklayan bir veri yapısı alır.
+title: IDebugProperty2::GetPropertyInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 26ffe65e84f8c878644e3fd4cec7fa3ad16ba544c221c8a02779870253d923df
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 31a0d1ea0d0b859402fbf8800fc10728c5c914b9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338715"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087736"
 ---
 # <a name="idebugproperty2getpropertyinfo"></a>IDebugProperty2::GetPropertyInfo
-Bir özelliği tanımlayan [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısını alır.
+Bir [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) açıklayan bir veri yapısı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,25 +53,25 @@ int GetPropertyInfo (
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-'ndaki Yapıda doldurulacak alanları belirten [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Numaralandırmadaki değerlerin bir birleşimi `pPropertyInfo` .
+[in] Yapıda hangi [alanların DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) belirten bir numaralama enumerasyonundan değerlerin `pPropertyInfo` birleşimi.
 
 `nRadix`\
-'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak Radix.
+[in] Tüm sayısal bilgileri biçimlendirmek için kullanılacak radix.
 
 `dwTimeout`\
-'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. `INFINITE`Sonsuza kadar beklemek için kullanın.
+[in] Bu yöntemden dönmeden önce bek için milisaniye cinsinden en uzun süreyi belirtir. Süresiz `INFINITE` olarak beklemek için kullanın.
 
 `rgpArgs`\
-[in, out] Gelecekte kullanılmak üzere ayrılmıştır; null değere ayarlayın.
+[in, out] Gelecekteki kullanım için ayrılmıştır; null değere ayarlanır.
 
 `dwArgCount`\
-'ndaki Gelecekte kullanılmak üzere ayrılmıştır; sıfır olarak ayarlayın.
+[in] Gelecekteki kullanım için ayrılmıştır; sıfır olarak ayarlayın.
 
 `pPropertyInfo`\
-dışı Özelliğin açıklamasıyla doldurulmuş bir [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısı.
+[out] Özelliğin [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) doldurulan bir yapıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

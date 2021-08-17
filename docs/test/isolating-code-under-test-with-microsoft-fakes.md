@@ -41,12 +41,12 @@ Fakes iki türde olabilir:
 ::: moniker-end
 
 > [!NOTE]
-> - Visual Studio profil oluşturma, Microsoft Fakes kullanan testler için kullanılamaz.
+> - Profil oluşturma Visual Studio, profil oluşturma kullanan testlerde Microsoft Fakes.
 
 ## <a name="choose-between-stub-and-shim-types"></a>Saplama ve dolgu türleri arasında seçim
 Genelde bu sınıfları aynı anda geliştirip güncelleştirdiğinizden bir Visual Studio projesini bileşen olarak kabul edebilirsiniz. Projenin çözümünüzdeki diğer projelere veya diğer derlemelere yaptığı çağrılar için saptama ve dolgu kullanmayı deneyebilirsiniz.
 
-Genel bir kılavuzluk sağlaması için, Visual Studio çözümünüzdeki çağrılar için saptamaları ve diğer başvurulan derlemelerde çağrılar için dolgu verilerini kullanın. Bunun nedeni kendi çözümünüzde bileşenleri, saptamaların gerektirdiği şekilde arabirimleri tanımlayarak ayırmanızın iyi bir uygulama olmasıdır. Ancak,System.dllgibi  dış derlemeler genellikle ayrı arabirim tanımları ile sağlanmaz, bu nedenle bunun yerine dolguları kullansanız gerekir.
+Genel bir kılavuzluk sağlaması için, Visual Studio çözümünüzdeki çağrılar için saptamaları ve diğer başvurulan derlemelerde çağrılar için dolgu verilerini kullanın. Bunun nedeni kendi çözümünüzde bileşenleri, saptamaların gerektirdiği şekilde arabirimleri tanımlayarak ayırmanızın iyi bir uygulama olmasıdır. Ancak,System.dllgibi  dış derlemeler genellikle ayrı arabirim tanımları ile sağlanmaz, bu nedenle bunun yerine dolgular kullansanız gerekir.
 
 Diğer değerlendirmeler şunlardır:
 
@@ -84,14 +84,14 @@ Daha ayrıntılı bir açıklama için bkz. Birim testi için uygulamanın parç
 
     ```
 
-2. **Derleme Fakes ekleme**
+2. **Derlemeyi Fakes Ekleme**
 
    1. Içinde **Çözüm Gezgini**, 
        - Daha eski bir .NET Framework Project (SDK stili olmayan), birim testi projenizin **Başvurular düğümünü** genişletin.
        ::: moniker range=">=vs-2019"
-       - .NET Framework, .NET Core veya .NET 5.0'ı hedef alan SDK  stili bir proje için Bağımlılıklar düğümünü genişleterek  **Derlemeler,** Projeler veya Paketler altında sahtesini yapmak için derlemeyi **bulun.**
+       - .NET Framework, .NET Core veya .NET 5.0'ı hedef alan SDK stili  bir proje için Bağımlılıklar düğümünü genişleterek  **Derlemeler,** Projeler veya Paketler altında sahtesini yapmak için derlemeyi **bulun.**
        ::: moniker-end
-       - Visual Basic'da çalışıyorsanız **Başvurular** düğümünü görmek **için Çözüm Gezgini** araç çubuğunda Tüm **Dosyaları Göster'i** seçin.
+       - Visual Basic'da çalışıyorsanız **Başvurular** düğümünü görmek için **Çözüm Gezgini** araç çubuğunda Tüm **Dosyaları Göster'i** seçin.
    2. Dolgu oluşturmak istediğiniz sınıf tanımlarını içeren derlemeyi seçin. Örneğin, **DateTime'ı** dolgu olarak eklemek için **System.dll.**
 
    3. Kısayol menüsünde Derleme **ekle'yi Fakes seçin.**
@@ -175,7 +175,7 @@ Gerçek sürüm her çağrıda tutarsız bir şekilde farklı bir değer döndü
 
 Dolguları kullanmak için uygulama kodunu değiştirmeniz veya belirli bir şekilde yazmanız gerek değildir.
 
-1. **Derleme Fakes ekleme**
+1. **Derlemeyi Fakes Ekleme**
 
      Bu **Çözüm Gezgini,** birim testi projenizin başvurularını açın ve sahtesini yapmak istediğiniz yöntemi içeren derleme başvurularını seçin. Bu örnekte, sınıfı `DateTime`System.dll. **  Bir projedeki başvuruları görmek Visual Basic Tüm Dosyaları **Göster'i seçin.**
 
@@ -260,7 +260,7 @@ Derlemeler Microsoft Fakes gerektirdiği Visual Studio Enterprise, Fakes Derleme
 
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Bunun bir alternatifi, derleme derlemelerinizi CI'Fakes denetleme ve MSBuild [görevidir.](../msbuild/msbuild-task.md?view=vs-2019&preserve-view=true) Bunu yapmak için, aşağıdaki kod parçacığına benzer şekilde test projeniz içinde oluşturulan Fakes derlemeye bir derleme başvurusuna sahip olduğundan emin olmak gerekir:
+> Bunun bir alternatifi, derleme derlemelerinizi CI Fakes ya kontrol etmek ve MSBuild [görevi kullanmaktır.](../msbuild/msbuild-task.md?view=vs-2019&preserve-view=true) Bunu yapmak için, aşağıdaki kod parçacığına benzer şekilde test projeniz içinde oluşturulan Fakes derlemeye bir derleme başvurusuna sahip olduğundan emin olmak gerekir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -277,35 +277,35 @@ Test projenize örtülü derleme başvuruları eklemeye taşındığımız için
 Yapılandırılmış dizinde Microsoft Fakes derlemeler olduğu sürece `FakesAssemblies` (Varsayılan `$(ProjectDir)FakesAssemblies` olarak), vstest görevini kullanarak [testleri çalıştırabilirsiniz.](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true)
 
 ::: moniker range=">=vs-2019"
-Microsoft Fakes kullanan [vstest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true) görevi .NET Core ve .NET 5.0 projeleriyle dağıtılmış test Visual Studio 2019 Güncelleştirme 9 Önizleme ve daha üst `20201020-06` sürümü gerekir.
+Microsoft Fakes kullanan [vstest](/azure/devops/pipelines/tasks/test/vstest?view=azure-devops&preserve-view=true) görevi .NET Core ve .NET 5.0 projeleriyle dağıtılmış test için Visual Studio 2019 Güncelleştirme 9 Önizlemesi ve `20201020-06` üst sürümü gerekir.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 ## <a name="transitioning-your-net-framework-test-projects-that-use-microsoft-fakes-to-sdk-style-net-framework-net-core-or-net-50-projects"></a>.NET Framework kullanan Microsoft Fakes SDK stili .NET Framework, .NET Core veya .NET 5.0 projelerine geçiş
-.NET Core veya .NET 5.0'.NET Framework geçiş yapmak Microsoft Fakes için ayarlanmış bir kümede çok az değişiklik gerekir. Göz önünde bulundurarak göz önünde bulundurarak şu durumlar olabilir:
-- Özel bir proje şablonu kullanıyorsanız, bunun SDK stili ve uyumlu bir hedef çerçeve için yapılar olduğundan emin olmanız gerekir.
-- belirli türler .NET Framework ve .net core/. NET 5,0 ' deki farklı derlemelerde mevcuttur (örneğin, `System.DateTime` .NET Framework içinde `System` / `mscorlib` ve `System.Runtime` .net Core ve .net 5,0 ' de bulunur) ve bu senaryolarda, bir derlemeyi faıllanmış olarak değiştirmeniz gerekir.
-- Fakes derlemesine ve test projesine bir derleme başvurunuz varsa, şuna benzer bir eksik başvuru hakkında bir derleme uyarısı görebilirsiniz:
+.NET Core veya .NET 5.0'.NET Framework geçiş yapmak Microsoft Fakes için ayarlanmış bir kümede çok az değişiklik gerekir. Göz önünde bulundurarak dikkat etmek zorunda olacağınız durumlar:
+- Özel bir proje şablonu kullanıyorsanız, bunun SDK stilinde olduğundan ve uyumlu bir hedef çerçeve için oluşturulduğudan emin olmak gerekir.
+- Bazı türler .NET Framework ve .NET Core/.NET 5.0'daki farklı derlemelerde (örneğin, .NET Framework'de ve .NET Core ve `System.DateTime` `System` / `mscorlib` `System.Runtime` .NET 5.0'da mevcuttur) ve bu senaryolarda sahte derlemeyi değiştirmek gerekir.
+- Fakes derlemesi ve test projesine bir derleme başvurusu varsa, aşağıdakine benzer eksik başvuru hakkında bir derleme uyarısıyla karşınız olabilir:
   ```
   (ResolveAssemblyReferences target) ->
   warning MSB3245: Could not resolve this reference. Could not locate the assembly "AssemblyName.Fakes". Check to make sure the assembly exists on disk.
   If this reference is required by your code, you may get compilation errors.
   ```
-  bu uyarı Fakes oluşturma sırasında yapılan gerekli değişikliklerden kaynaklanıyor olabilir. Artık derleme sırasında dolaylı olarak eklemediğimiz için, proje dosyasından derleme başvurusu kaldırılarak bu kaçınılabilir.
+  Bu uyarı, oluşturmanın yoksayılabilir olması Fakes değişikliklerden dolayıdır. Derleme başvurusu proje dosyasından kaldırılarak bundan kaçınabilirsiniz çünkü artık derleme sırasında bunları örtülü olarak ekleyebilirsiniz.
 ::: moniker-end
 
 ## <a name="microsoft-fakes-support"></a>Microsoft Fakes desteği 
-### <a name="microsoft-fakes-in-older-projects-targeting-net-framework-non-sdk-style"></a>.NET Framework (SDK olmayan stili) hedefleyen daha eski projelerde Microsoft Fakes.
-- Microsoft Fakes derleme üretimi Visual Studio Enterprise 2015 ve üzeri sürümlerde desteklenir.
-- Microsoft Fakes testler, kullanılabilir tüm Microsoft. testplatform NuGet paketleriyle çalıştırılabilir.
-- kod kapsamı, Visual Studio Enterprise 2015 ve üzeri Microsoft Fakes kullanan test projeleri için desteklenir.
+### <a name="microsoft-fakes-in-older-projects-targeting-net-framework-non-sdk-style"></a>Microsoft Fakes (SDK stili olmayan) .NET Framework eski projelerde yer alır.
+- Microsoft Fakes derleme oluşturma, 2015 ve Visual Studio Enterprise için de destekleni.
+- Microsoft Fakes testleri tüm kullanılabilir Microsoft.TestPlatform ve NuGet çalıştırabilirsiniz.
+- Kod kapsamı, 2015 ve Microsoft Fakes Visual Studio Enterprise test projeleri için de destek sağlar.
 
-### <a name="microsoft-fakes-in-sdk-style-net-framework-net-core-and-net-50-projects"></a>SDK stilindeki .NET Framework, .net Core ve .net 5,0 projelerinde Microsoft Fakes
-- Microsoft Fakes derleme oluşturma, Visual Studio Enterprise 2019 güncelleştirme 6 ' da önizlenmiş ve güncelleştirme 8 ' de varsayılan olarak etkinleştirilmiştir.
-- .NET Framework hedeflenen projeler için Microsoft Fakes testleri, kullanılabilir tüm Microsoft. testplatform NuGet paketleriyle çalıştırılabilir.
-- .net Core ve .net 5,0 ' i hedefleyen projeler için Microsoft Fakes testleri, [16.9.0-preview-20210106-01](https://www.nuget.org/packages/Microsoft.TestPlatform/16.9.0-preview-20210106-01) ve üzeri sürümlerle Microsoft. testplatform NuGet paketleriyle çalıştırılabilir.
-- kod kapsamı, Visual Studio Enterprise sürüm 2015 ve üzeri Microsoft Fakes kullanarak .NET Framework hedefleme test projeleri için desteklenir.
-- Microsoft Fakes kullanarak .net Core ve .net 5,0 ' i hedefleyen test projeleri için kod kapsamı desteği Visual Studio 2019 güncelleştirme 9 ve üzeri sürümlerde kullanılabilir.
+### <a name="microsoft-fakes-in-sdk-style-net-framework-net-core-and-net-50-projects"></a>Microsoft Fakes SDK stili .NET Framework, .NET Core ve .NET 5.0 projelerinde destek
+- Microsoft Fakes 2019 Güncelleştirme 6'Visual Studio Enterprise önizlemesi yapıldı ve Güncelleştirme 8'de varsayılan olarak etkindir.
+- Microsoft Fakes projelerin tüm kullanılabilir Microsoft.TestPlatform .NET Framework paketleriyle çalıştır NuGet abilirsiniz.
+- .NET Core Microsoft Fakes .NET 5.0'i hedef alan projelerin testlerini Microsoft.TestPlatform NuGet [paketleriyle 16.9.0-preview-20210106-01](https://www.nuget.org/packages/Microsoft.TestPlatform/16.9.0-preview-20210106-01) ve daha yüksek sürümleriyle çalıştırabilirsiniz.
+- Kod kapsamı, 2015 ve .NET Framework .NET Framework Microsoft Fakes test Visual Studio Enterprise test projeleri için de destek sağlar.
+- Microsoft Fakes kullanarak .NET Core ve .NET 5.0'ı hedef alan test projeleri için kod kapsamı desteği, Visual Studio 2019 güncelleştirme 9 ve üzerinde kullanılabilir.
 
 
 ## <a name="in-this-section"></a>Bu bölümde

@@ -16,12 +16,13 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 74269872992935568362a061d47f7335dbaedec8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 8aea1a2e52cb123cdd052e426d78089fc4aa97ad21c81729b82bc05a182ffa60
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936424"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121227732"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>Kodlanmış web performans testi oluşturma
 
@@ -43,11 +44,11 @@ Web performans testleri, Web uygulamanıza göz atarak kaydedilir. Testler, bird
 
      Yeni kodlanmış test kod düzenleyicisinde açılır.
 
-     Çözümünüze eklediğiniz Web performansına ve yük testi projesi şablonuna bağlı olarak, kod Visual Basic ya da Visual C# ' de oluşturulur.
+     çözümünüze eklediğiniz web performansına ve yük testi projesi şablonuna bağlı olarak, kod Visual Basic ya da Visual C# ' de oluşturulur.
 
      ![Yeni kodlanmış test kod düzenleyicisinde açılıyor](../test/media/web_test_coded_generate_opencodeeditor.png)
 
-     Kodda GetRequestEnumerator () yönteminin veya Visual Basic içindeki Run () yönteminin, her doğrulama kuralını ve bu test içindeki Web isteklerini içerdiğini görebilirsiniz.
+     kodda getrequestenumerator () yönteminin veya Visual Basic içindeki Run () yönteminin, her doğrulama kuralını ve bu test içindeki web isteklerini içerdiğini görebilirsiniz.
 
 4. Basit kod eklemeyi göstermek için, metodun sonuna kadar aşağı kaydırın ve son Web isteğinin kodundan sonra aşağıdaki kodu ekleyin:
 

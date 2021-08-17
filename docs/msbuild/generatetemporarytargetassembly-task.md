@@ -1,6 +1,6 @@
 ---
 title: GenerateTemporaryTargetAssembly Görevi | Microsoft Docs
-description: Bir proje yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturmak için MSBuild GenerateTemporaryTargetAssembly görevini kullanın.
+description: bir proje yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturmak için MSBuild GenerateTemporaryTargetAssembly görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: 92b6539c-6897-45e0-8989-0c234bbfe782
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: f4a41a5cbecea69d4843cbd70479a604f91b2218
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 505eb1370dd1ccbcfe782211bf9f1a4e958ef10906da4afcd9c1deb3fa4bf0bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914744"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443496"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly görevi
 
@@ -35,10 +36,10 @@ ms.locfileid: "99914744"
 
 | Parametre | Açıklama |
 |--------------------------| - |
-| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir ve ayrıca geçici olarak oluşturulan hedef derlemenin adıdır. Örneğin, bir proje adı *WinExeAssembly.exe* olan bir Windows yürütülebiliri oluşturursa, **AssemblyName** parametresinin değeri **WinExeAssembly** olur. |
-| `CompileTargetName` | Gerekli **dize** parametresi.<br /><br /> Kaynak kod dosyalarından derlemeler oluşturmak için kullanılan MSBuild hedefinin adını belirtir. **CompileTargetName** için tipik değer **CoreCompile**' dir. |
+| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir ve ayrıca geçici olarak oluşturulan hedef derlemenin adıdır. örneğin, bir proje adı *WinExeAssembly.exe* olan bir Windows çalıştırılabilir dosyası oluşturursa, **AssemblyName** parametresinin değeri **winexeassembly** olur. |
+| `CompileTargetName` | Gerekli **dize** parametresi.<br /><br /> kaynak kod dosyalarından derlemeler oluşturmak için kullanılan MSBuild hedefinin adını belirtir. **CompileTargetName** için tipik değer **CoreCompile**' dir. |
 | `CompileTypeName` | Gerekli **dize** parametresi.<br /><br /> **CompileTargetName** parametresi tarafından belirtilen hedef tarafından gerçekleştirilen derlemenin türünü belirtir. **CoreCompile** hedefi için bu değer **derlenir**. |
-| `CurrentProject` | Gerekli **dize** parametresi.<br /><br /> Proje için geçici bir hedef derleme gerektiren MSBuild proje dosyasının tam yolunu belirtir. |
+| `CurrentProject` | Gerekli **dize** parametresi.<br /><br /> geçici bir hedef derleme gerektiren proje için MSBuild proje dosyasının tam yolunu belirtir. |
 | `GeneratedCodeFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) görevi tarafından oluşturulan dile özgü yönetilen kod dosyalarının listesini belirtir. |
 | `IntermediateOutputPath` | Gerekli **dize** parametresi.<br /><br /> Geçici hedef derlemenin oluşturulduğu dizini belirtir. |
 | `MSBuildBinPath` | Gerekli **dize** parametresi.<br /><br /> Geçici hedef derlemeyi derlemek için gereken *MSBuild.exe* konumunu belirtir. |

@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, metin düzenleyici, C/C++, görünüm
-description: Code dalgalı çizgiler, etkin olmayan kod, ana hat ve Visual Studio içinde daha birçok yöntemi değiştirmek için C/C++ bölümündeki görünüm sayfasını nasıl kullanacağınızı öğrenin.
+description: Code dalgalı çizgiler, etkin olmayan kod, ana hat ve Visual Studio içindeki varsayılan davranışı değiştirmek için C/C++ bölümündeki görünüm sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d08953ca3c493f3b3e42dd4ddd84bc19bdfd6e
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
+ms.openlocfilehash: caa0b67c5c59474948a7abb18b391e42d18fbd3996e126175b5990bf63766a81
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96041080"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447447"
 ---
 # <a name="options-text-editor-cc-view"></a>Seçenekler, metin düzenleyici, C/C++, görünüm
 

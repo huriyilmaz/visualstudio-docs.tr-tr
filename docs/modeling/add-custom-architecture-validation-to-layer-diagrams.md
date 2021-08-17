@@ -13,12 +13,12 @@ ms.technology: vs-ide-modeling
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: c917ecacdfbe95965ae7a571b251e89c62c23eda
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 4cf79cd6234b66f60c8b3487a0dcaed0bcd57fba3937269657b34e1ce40856ef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122069366"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443964"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel mimari doğrulaması ekleme
 
@@ -159,7 +159,7 @@ Katman doğrulama uzantısını tanımlamak için aşağıdaki özelliklere sahi
 
 Kullanıcı Mimariyi **Doğrula** menü komutunu çağırsa, katman çalışma zamanı sistemi bir grafik üretmek için katmanları ve yapıtlarını analiz eder. Graf dört parçadan oluşur:
 
-- Grafikte düğümler ve Visual Studio olarak temsil edilen bir çözüm olan Visual Studio katmanı modelleri.
+- Grafikte düğümler ve Visual Studio olarak temsil edilen bir çözüm için katman modelleri.
 
 - Çözümde tanımlanan ve düğüm olarak temsil edilen kod, proje öğeleri ve diğer yapıtlar ve analiz işlemi tarafından bulunan bağımlılıkları temsil eden bağlantılar.
 
@@ -214,7 +214,7 @@ Deneysel bir örneği ilk kez başlatan Visual Studio uzantınızı test etmek, 
 
 ### <a name="run-clean-solution-before-validate-architecture"></a>Mimariyi Doğrulamadan Önce Temiz Çözümü Çalıştırma
 
-Doğrulama kodunuzu her güncelleştirin,  Doğrulama komutunu test etmek için **önce** deneysel çözümün Derleme menüsündeki Çözümü Temizle komutunu kullanın. Doğrulama sonuçları önbelleğe alınmış olduğundan bu gereklidir. Test bağımlılığı diyagramını veya kodunu güncelleştirmemiş olursanız doğrulama yöntemleri yürütülmez.
+Doğrulama kodunuzu her güncelleştirin,  Doğrulama komutunu test etmek **için** önce deneysel çözümün Derleme menüsündeki Çözümü Temizle komutunu kullanın. Doğrulama sonuçları önbelleğe alınmış olduğundan bu gereklidir. Test bağımlılığı diyagramını veya kodunu güncelleştirmemiş olursanız doğrulama yöntemleri yürütülmez.
 
 ### <a name="launch-the-debugger-explicitly"></a>Hata Ayıklayıcıyı Açıkça Başlatma
 
@@ -228,7 +228,7 @@ Deneysel örneği her zaman CTRL+F5 tuşlarına basarak başlat (**Hata Ayıklam
 
 ### <a name="deploying-a-validation-extension"></a>Doğrulama Uzantısı Dağıtma
 
-Doğrulama uzantınızı, uygulamanın uygun bir sürümünün Visual Studio yüklemek için hedef bilgisayarda VSIX dosyasını açın.
+Doğrulama uzantınızı, uygun bir Visual Studio yüklü bir bilgisayara yüklemek için hedef bilgisayarda VSIX dosyasını açın.
 
 ## <a name="example-code"></a><a name="example"></a> Örnek kod
 

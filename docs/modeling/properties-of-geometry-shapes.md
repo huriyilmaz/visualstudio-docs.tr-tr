@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: aea5ebb6bfefe59bc0d761f4da095e3d64391706e5ee73e32fd3e8871216ad61
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 62df0b182a0f160e3851ac5953bb7ca264f1b009
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121231476"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055412"
 ---
 # <a name="properties-of-geometry-shapes"></a>Geometri Şekillerinin Özellikleri
 Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl görüntülendiğinden belirtmek için geometri şekillerini kullanabilirsiniz. Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, bkz. Domain-Specific Dili [Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
@@ -52,7 +52,7 @@ Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl
 |Açıklama|Oluşturulan tasarımcıyı belgeley etmek için kullanılan açıklama.|\<none>|
 |Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Araç İpucu Metni Düzeltildi|Sabit bir araç ipucu için kullanılan metin.|\<none>|
-|Yardım Anahtar Sözcüğü|Bu şekil için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
+|Help Anahtar Sözcüğü|Bu şekil için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

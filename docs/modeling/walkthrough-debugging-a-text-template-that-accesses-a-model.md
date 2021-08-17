@@ -1,62 +1,63 @@
 ---
-title: 'Kılavuz: Modele Erişen Metin Şablonlarında Hata Ayıklama'
-description: Modele erişen bir metin şablonunda hata ayıklama hakkında bilgi sağlar.
+title: 'İzlenecek yol: modele erişen metin şablonlarında hata ayıklama'
+description: Bir modele erişen metin şablonunda hata ayıklama hakkında bilgi sağlar.
 ms.date: 11/04/2016
 ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: d39b1ac72210145cc1efa1c513b7f3b76d8c2e36
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: c5ddcdd662e18332b5c912cf1a2834343abc79d88e4331abd96273c3a08db4c2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388236"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121231281"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>İzlenecek yol: Modele Erişen Metin Şablonunda Hata Ayıklama
-Etki alanına özgü bir dil çözümünde metin şablonlarını değiştirerek veya eklerken, altyapı şablonu kaynak koduna dönüştürerek veya oluşturulan kodu derleyene zaman hatayla karşınıza çıkabilirsiniz. Aşağıdaki kılavuzda, metin şablonunda hata ayıklamak için gerçekleştirebilirsiniz.
+Etki alanına özgü dil çözümünde metin şablonlarını değiştirirken veya eklediğinizde, motor şablonu kaynak koda dönüştürdiğinde veya üretilen kodu derlediğinde hata alabilirsiniz. Aşağıdaki kılavuzda, bir metin şablonunda hata ayıklamak için yapabileceğiniz bazı şeyler gösterilmektedir.
 
 > [!NOTE]
-> Genel olarak metin şablonları hakkında daha fazla bilgi için bkz. [Kod Oluşturma ve T4 Metin Şablonları.](../modeling/code-generation-and-t4-text-templates.md) Metin şablonlarında hata ayıklama hakkında daha fazla bilgi için [bkz. Adım adım kılavuz: Metin Şablonunda Hata Ayıklama.](debugging-a-t4-text-template.md)
+> Genel olarak metin şablonları hakkında daha fazla bilgi için bkz. [kod oluşturma ve T4 Metin şablonları](../modeling/code-generation-and-t4-text-templates.md). Metin şablonlarının hatalarını ayıklama hakkında daha fazla bilgi için bkz. [Izlenecek yol: metin şablonunda hata ayıklama](debugging-a-t4-text-template.md).
 
-## <a name="creating-a-domain-specific-language-solution"></a>Domain-Specific Dili Çözümü Oluşturma
- Bu yordamda, aşağıdaki özelliklere sahip etki alanına özgü bir dil çözümü oluşturabilirsiniz:
+## <a name="creating-a-domain-specific-language-solution"></a>Domain-Specific dil çözümü oluşturma
+ Bu yordamda, aşağıdaki özelliklere sahip olan, etki alanına özgü bir dil çözümü oluşturursunuz:
 
 - Ad: DebuggingTestLanguage
 
-- Çözüm şablonu: Minimum Dil
+- Çözüm şablonu: minimal dil
 
-- Dosya uzantısı: .ddd
+- Dosya Uzantısı:. ddd
 
-- Şirket adı: Fabrikam
+- Şirket adı: fabrikam
 
-  Etki alanına özgü bir dil çözümü oluşturma hakkında daha fazla bilgi için [bkz. Nasıl: Domain-Specific Dil Çözümü Oluşturma.](../modeling/how-to-create-a-domain-specific-language-solution.md)
+  Etki alanına özgü dil çözümü oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Domain-Specific dil çözümü oluşturma](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
 ## <a name="creating-a-text-template"></a>Metin şablonu oluşturma
- Çözümünüz için bir metin şablonu ekleyin.
+ Çözümünüze bir metin şablonu ekleyin.
 
 #### <a name="to-create-a-text-template"></a>Metin şablonu oluşturmak için
 
-1. Çözümü derleme ve hata ayıklayıcıda çalıştırmaya başlama. (Derleme menüsünde **Çözümü Yeniden** Oluştur'a **tıklayın** ve ardından Hata Ayıklama menüsünde Hata **Ayıklamayı** **Başlat'a tıklayın.)** Hata ayıklama Visual Studio yeni bir örnek açılır.
+1. Çözümü derleyin ve hata ayıklayıcıda çalıştırmayı başlatın. ( **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın ve ardından **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.) yeni bir Visual Studio örneği hata ayıklama projesini açar.
 
-2. Hata Ayıklama projesine `DebugTest.tt` adlı bir metin dosyası ekleyin.
+2. Hata ayıklama projesine adlı bir metin dosyası ekleyin `DebugTest.tt` .
 
-3. Uygulamanın Özel **Araç özelliğinin** olarak DebugTest.tt emin `TextTemplatingFileGenerator` olun.
+3. DebugTest.tt öğesinin **özel araç** özelliğinin olarak ayarlandığından emin olun `TextTemplatingFileGenerator` .
 
-## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Metin şablonundan modele erişen hata ayıklama yönergeleri
- Bir metin şablonunda deyimlerinden ve ifadelerinden bir modele erişmek için önce oluşturulan yönerge işlemcisini çağırmalısınız. Oluşturulan yönerge işlemcisinin çağrılarak modeliniz sınıflarını metin şablonu koduna özellik olarak kullanılabilir. Daha fazla bilgi için [bkz. Metin Şablonlarından Modellere Erişme.](../modeling/accessing-models-from-text-templates.md)
+## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Bir metin şablonundan bir modele erişen hata ayıklama yönergeleri
+ Bir metin şablonundaki deyimlerden ve ifadelerden bir modele erişebilmek için önce oluşturulan bir yönerge işlemcisini çağırmanız gerekir. Oluşturulan yönerge işlemcisini çağırmak, modelinizdeki sınıfları metin şablonu kodu özelliği olarak kullanılabilir hale getirir. Daha fazla bilgi için bkz. [metin şablonlarından modellere erişme](../modeling/accessing-models-from-text-templates.md).
 
- Aşağıdaki yordamlarda, yanlış yönerge adı ve yanlış bir özellik adı için hata ayıklarsiniz.
+ Aşağıdaki yordamlarda yanlış yönerge adı ve yanlış özellik adı hatalarını ayıklayacaksınız.
 
-#### <a name="to-debug-an-incorrect-directive-name"></a>Yanlış yönerge adının hata ayıklaması için
+#### <a name="to-debug-an-incorrect-directive-name"></a>Yanlış yönerge adında hata ayıklamak için
 
-1. aşağıdaki kodla DebugTest.tt kodu değiştirin:
+1. DebugTest.tt içindeki kodu aşağıdaki kodla değiştirin:
 
     > [!NOTE]
-    > Kod bir hata içeriyor. Hata ayıklamak için hataya neden olur.
+    > Kod bir hata içeriyor. Hata ayıklama için hatayı alırsınız.
 
     ```csharp
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
@@ -89,17 +90,17 @@ Etki alanına özgü bir dil çözümünde metin şablonlarını değiştirerek 
     #>
     ```
 
-2. Bu **Çözüm Gezgini,** Özel Araç'DebugTest.tt sağ tıklayın ve ardından Özel **Aracı Çalıştır'a tıklayın.**
+2. **Çözüm Gezgini**' de, DebugTest.tt ' a sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
-     Hata **Listesi penceresinde** şu hata görüntülenir:
+     **Hata listesi** penceresinde şu hata görüntülenir:
 
-     **'DebuggingTestLanguageDirectiveProcessor' adlı işlemci, 'modelRoot' adlı yönergeyi desteklemez. Dönüştürme çalıştırmayacak.**
+     **' DebuggingTestLanguageDirectiveProcessor ' adlı işlemci ' modelRoot ' adlı yönergeyi desteklemez. Dönüşüm çalıştırılmayacak.**
 
-     Bu durumda, yönerge çağrısı yanlış bir yönerge adı içerir. Yönerge adı `modelRoot` olarak belirttiniz ancak doğru yönerge adı şu şekildedir: `DebuggingTestLanguage` .
+     Bu durumda, yönerge çağrısı yanlış bir yönerge adı içeriyor. `modelRoot`Yönerge adı olarak belirttiniz, ancak doğru yönerge adı `DebuggingTestLanguage` .
 
-3. Hata Listesi penceresinde hataya **çift tıklayıp** koda atlayın.
+3. Koda gitmek için **hata listesi** penceresindeki hataya çift tıklayın.
 
-4. Kodu düzeltmek için yönerge adını olarak `DebuggingTestLanguage` değiştirebilirsiniz.
+4. Kodu düzeltmek için yönerge adını olarak değiştirin `DebuggingTestLanguage` .
 
      Değişiklik vurgulanır.
 
@@ -111,16 +112,16 @@ Etki alanına özgü bir dil çözümünde metin şablonlarını değiştirerek 
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>
     ```
 
-5. Bu **Çözüm Gezgini,** Özel Araç'DebugTest.tt sağ tıklayın ve ardından Özel **Aracı Çalıştır'a tıklayın.**
+5. **Çözüm Gezgini**' de, DebugTest.tt ' a sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
-     Şimdi sistem metin şablonunu dönüştüren ve karşılık gelen çıkış dosyasını oluşturur. Hata Listesi penceresinde herhangi bir **hata görmüyorsanız.**
+     Artık sistem metin şablonunu dönüştürür ve ilgili çıktı dosyasını oluşturur. **Hata listesi** penceresinde herhangi bir hata görmezsiniz.
 
-#### <a name="to-debug-an-incorrect-property-name"></a>Yanlış özellik adının hata ayıklaması için
+#### <a name="to-debug-an-incorrect-property-name"></a>Yanlış özellik adında hata ayıklamak için
 
-1. aşağıdaki kodla DebugTest.tt kodu değiştirin:
+1. DebugTest.tt içindeki kodu aşağıdaki kodla değiştirin:
 
     > [!NOTE]
-    > Kod bir hata içeriyor. Hata ayıklamak için hataya neden olur.
+    > Kod bir hata içeriyor. Hata ayıklama için hatayı alırsınız.
 
     ```csharp
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
@@ -153,27 +154,27 @@ Etki alanına özgü bir dil çözümünde metin şablonlarını değiştirerek 
     #>
     ```
 
-2. Bu **Çözüm Gezgini,** Özel Araç'DebugTest.tt sağ tıklayın ve ardından Özel **Aracı Çalıştır'a tıklayın.**
+2. **Çözüm Gezgini**' de, DebugTest.tt ' a sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
-     Hata **Listesi penceresi** görüntülenir ve şu hatalardan birini görüntüler:
+     **Hata listesi** penceresi görünür ve şu hatalardan birini görüntüler:
 
      (C#)
 
-     **Dönüştürmeyi derleme: Microsoft.VisualStudio.TextTemplating \<GUID> . GeneratedTextTransformation', 'ExampleModel' için bir tanım içermez**
+     **Dönüştürme derleniyor: Microsoft. VisualStudio. Textşablon oluşturma \<GUID> . GeneratedTextTransformation ', ' ExampleModel ' için bir tanım içermiyor**
 
      (Visual Basic)
 
-     **Dönüştürmeyi derleme: 'ExampleModel', 'Microsoft.VisualStudio.TextTemplating' üyesi \<GUID> değil. GeneratedTextTransformation'.**
+     **Dönüştürme derleniyor: ' ExampleModel ', ' Microsoft. VisualStudio. Textşablon oluşturma ' üyesi değil \<GUID> . GeneratedTextTransformation'.**
 
-     Bu durumda, metin şablonu kodu yanlış bir özellik adı içeriyor. Özellik adı `ExampleModel` olarak belirttiniz, ancak doğru özellik adı : `LibraryModel` . Aşağıdaki kodda gösterildiği gibi, provides parametresinde doğru özellik adını bulabilirsiniz:
+     Bu durumda, metin şablonu kodu yanlış bir özellik adı içerir. `ExampleModel`Özellik adı olarak belirttiniz, ancak doğru özellik adı `LibraryModel` . Doğru özellik adını aşağıdaki kodda gösterildiği gibi, sağlar parametresinde bulabilirsiniz:
 
     ```
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>
     ```
 
-3. Hata Listesi penceresinde hataya çift tıklayıp koda atlayın.
+3. Koda gitmek için Hata Listesi penceresindeki hataya çift tıklayın.
 
-4. Kodu düzeltmek için metin şablonu kodunda `LibraryModel` özellik adını olarak değiştirebilirsiniz.
+4. Kodu düzeltmek için özellik adını `LibraryModel` metin şablonu kodunda olarak değiştirin.
 
      Değişiklikler vurgulanır.
 
@@ -208,6 +209,6 @@ Etki alanına özgü bir dil çözümünde metin şablonlarını değiştirerek 
     #>
     ```
 
-5. Bu **Çözüm Gezgini,** Özel Araç'DebugTest.tt sağ tıklayın ve ardından Özel **Aracı Çalıştır'a tıklayın.**
+5. **Çözüm Gezgini**' de, DebugTest.tt ' a sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
-     Şimdi sistem metin şablonunu dönüştüren ve karşılık gelen çıkış dosyasını oluşturur. Hata Listesi penceresinde herhangi bir **hata görmüyorsanız.**
+     Artık sistem metin şablonunu dönüştürür ve ilgili çıktı dosyasını oluşturur. **Hata listesi** penceresinde herhangi bir hata görmezsiniz.

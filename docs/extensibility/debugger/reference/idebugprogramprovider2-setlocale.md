@@ -1,6 +1,6 @@
 ---
-description: Yerel ayara özgü kaynaklar için kullanılacak bir yerel ayar oluşturur.
-title: 'IDebugProgramProvider2:: SetLocale | Microsoft Docs'
+description: Yerele özgü tüm kaynaklar için kullanılacak bir yerel seçim sağlar.
+title: IDebugProgramProvider2::SetLocale | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 04bac56536b81b48901be8327910de13a14d682122fcf4d860e0fa3c329372cd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 633ce11ac2e28dd6294c3169c86697279731f9b8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402525"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087749"
 ---
 # <a name="idebugprogramprovider2setlocale"></a>IDebugProgramProvider2::SetLocale
-Yerel ayara özgü kaynaklar için kullanılacak bir yerel ayar oluşturur.
+Yerele özgü tüm kaynaklar için kullanılacak bir yerel seçim sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int SetLocale(
 
 ## <a name="parameters"></a>Parametreler
 `wLangID`\
-'ndaki Kurulacak dil KIMLIĞI. Örneğin, Ingilizce için 1033.
+[in] Oluşturulacak dil kimliği. Örneğin, İngilizce için 1033.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

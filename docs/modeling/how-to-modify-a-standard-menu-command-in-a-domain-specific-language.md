@@ -1,6 +1,6 @@
 ---
-title: DSL 'de standart menü komutunu değiştirme
-description: DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan davranışı nasıl değiştirebileceğinizi öğrenin.
+title: DSL'de standart menü komutunu değiştirme
+description: DSL'niz içinde otomatik olarak tanımlanan bazı standart komutların davranışını nasıl değiştiryebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,52 +13,52 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 744c52dc23a7f144a42c371abc7faab520c58226f488a04540bd590c8965c2d2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb575eb52e9a95d2ba548659ec8d265605f5e64d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121428958"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055464"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dilde Standart Menü Komutunu Değiştirme
 
-DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan davranışı değiştirebilirsiniz. Örneğin, hassas bilgileri dışladığı için **kesmeyi** değiştirebilirsiniz. Bunu yapmak için, komut kümesi sınıfındaki yöntemleri geçersiz kılabilirsiniz. Bu sınıflar, DslPackage projesindeki CommandSet. cs dosyasında tanımlanır ve öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> .
+DSL'niz içinde otomatik olarak tanımlanan bazı standart komutların davranışını değiştirebilirsiniz. Örneğin, hassas bilgileri **dışlamak** için Kes'i değiştirebilirsiniz. Bunu yapmak için, bir komut kümesi sınıfındaki yöntemleri geçersiz kılar. Bu sınıflar, DslPackage projesinde CommandSet.cs dosyasında tanımlanır ve 'den <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> türetilen.
 
 > [!NOTE]
-> Kendi Menü komutlarınızı oluşturmak isterseniz, bkz. [nasıl yapılır: kısayol menüsüne komut ekleme](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
+> Kendi menü komutlarınızı oluşturmak için bkz. [Nasıl kullanılır: Kısayol Menüsüne Komut Ekleme.](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
 
-## <a name="what-commands-can-you-modify"></a>Hangi komutlara değişiklik yapabilirsiniz?
+## <a name="what-commands-can-you-modify"></a>Hangi komutları değiştirebilirsiniz?
 
-### <a name="to-discover-what-commands-you-can-modify"></a>Değiştirebileceğiniz komutları öğrenmek için
+### <a name="to-discover-what-commands-you-can-modify"></a>Hangi komutları değiştirebilirsiniz?
 
-1. `DslPackage`Projesinde öğesini açın `GeneratedCode\CommandSet.cs` . Bu C# dosyası, ' ın bir yan kuruluşu olarak Çözüm Gezgini bulunabilir `CommandSet.tt` .
+1. `DslPackage`Projesinde'i `GeneratedCode\CommandSet.cs` açın. Bu C# dosyası, Çözüm Gezgini bir yan kuruluşu olarak `CommandSet.tt` bulunabilir.
 
-2. Adları "" ile biten bu dosyadaki sınıfları bulur `CommandSet` , örneğin `Language1CommandSet` ve `Language1ClipboardCommandSet` .
+2. Bu dosyada adları " " ile biten sınıfları `CommandSet` bulun, örneğin ve `Language1CommandSet` `Language1ClipboardCommandSet` .
 
-3. Her komut kümesi sınıfında, "" yazın ve `override` ardından bir boşluk girin. IntelliSense, geçersiz kılabileceğiniz yöntemlerin bir listesini gösterir. Her komutun adı " `ProcessOnStatus` " ve "" olan bir çift yöntemi vardır `ProcessOnMenu` .
+3. Her komut kümesi sınıfında " `override` " yazın ve ardından bir boşluk yazın. IntelliSense geçersiz kılabilirsiniz yöntemlerin listesini gösterir. Her komutun adları " " ve " " " şeklinde başlayan `ProcessOnStatus` bir yöntem çifti `ProcessOnMenu` vardır.
 
-4. Komut kümesi sınıflarından hangilerinin değiştirmek istediğiniz komutu içerdiğini göz önünde görürsünüz.
+4. Hangi komut kümesi sınıflarının değiştirmek istediğiniz komutu içerdiğini unutmayın.
 
 5. Düzenlemelerinizi kaydetmeden dosyayı kapatın.
 
     > [!NOTE]
-    > Normalde, oluşturulan dosyaları düzenlememelisiniz. Dosyaların bir sonraki oluşturulışında tüm düzenlemeler kaybedilir.
+    > Normalde, oluşturulan dosyaları düzenlemeniz gerekir. Dosyalar bir sonraki oluşturmada tüm düzenlemeler kaybedilir.
 
-## <a name="extend-the-appropriate-command-set-class"></a>Uygun komut kümesi sınıfını Genişlet
+## <a name="extend-the-appropriate-command-set-class"></a>Uygun komut kümesi sınıfını genişletme
 
 Komut kümesi sınıfının kısmi bildirimini içeren yeni bir dosya oluşturun.
 
-### <a name="to-extend-the-command-set-class"></a>Komut kümesi sınıfını genişletmek için
+### <a name="to-extend-the-command-set-class"></a>Komut Kümesi sınıfını genişletmek için
 
-1. Çözüm Gezgini, DslPackage projesinde, GeneratedCode klasörünü açın ve ardından CommandSet.tt ' ın altında yazıp oluşturulan CommandSet. cs dosyasını açın. Ad alanını ve burada tanımlanan ilk sınıfın adını unutmayın. Örneğin, şu şekilde karşılaşabilirsiniz:
+1. Bu Çözüm Gezgini DslPackage projesinde GeneratedCode klasörünü açın, sonra CommandSet.tt'nin altına bakın ve oluşturulan CommandSet.cs dosyasını açın. Burada tanımlanan ilk sınıfın ad alanını ve adını not ekleyin. Örneğin, şunları görebilir:
 
      `namespace Company.Language1`
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. **DslPackage**' de, **özel kod** adlı bir klasör oluşturun. Bu klasörde adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
+2. **DslPackage içinde** Özel Kod adlı bir **klasör oluşturun.** Bu klasörde adlı yeni bir sınıf dosyası `CommandSet.cs` oluşturun.
 
-3. Yeni dosyada, oluşturulan kısmi sınıfla aynı ad alanına ve ada sahip kısmi bir bildirim yazın. Örnek:
+3. Yeni dosyada, oluşturulan kısmi sınıfla aynı ad alanına ve adına sahip kısmi bir bildirim yazın. Örnek:
 
     ```csharp
     using System;
@@ -69,22 +69,22 @@ Komut kümesi sınıfının kısmi bildirimini içeren yeni bir dosya oluşturun
     ```
 
     > [!NOTE]
-    > Yeni dosyayı oluşturmak için sınıf dosya şablonunu kullandıysanız, hem ad alanını hem de sınıf adını düzeltmeniz gerekir.
+    > Yeni dosyayı oluşturmak için sınıf dosyası şablonunu kullandıysanız, hem ad alanını hem de sınıf adını düzeltmeniz gerekir.
 
-## <a name="override-the-command-methods"></a>Komut yöntemlerini geçersiz kılın
+## <a name="override-the-command-methods"></a>Komut yöntemlerini geçersiz kılma
 
-Çoğu komutun iki ilişkili yöntemi vardır:... gibi bir ada sahip Yöntem `ProcessOnStatus` komutun görünür ve etkin olup olmayacağını belirler. Kullanıcı diyagrama sağ tıkladığında çağrılır ve hızlı bir şekilde yürütülecektir ve hiçbir değişiklik yapmamalıdır. `ProcessOnMenu`... Kullanıcı komuta tıkladığında çağrılır ve komutun işlevini gerçekleştirmesi gerekir. Bu yöntemlerin birini ya da her ikisini de geçersiz kılmak isteyebilirsiniz.
+Çoğu komutun iki ilişkili yöntemi vardır: ... gibi bir adı `ProcessOnStatus` olan yöntemi komutun görünür ve etkin olup olmadığını belirler. Kullanıcı diyagrama sağ tıkladığında çağrılır ve hızlı bir şekilde yürütülerek değişiklik yapmaları gerekir. `ProcessOnMenu`... kullanıcı komutuna tıkladığında çağrılır ve komutun işlevini gerçekleştirmesi gerekir. Bu yöntemlerden birini veya her ikisini geçersiz kılmak istiyor olabilir.
 
-### <a name="to-change-when-the-command-appears-on-a-menu"></a>Komutun bir menüde göründüğü zaman değiştirmek için
+### <a name="to-change-when-the-command-appears-on-a-menu"></a>Komut bir menüde görüntülendiğinde değiştirmek için
 
-ProcessOnStatus öğesini geçersiz kıl... yöntemidir. Bu yöntem, parametrenin MenuCommand öğesinin Visible ve Enabled özelliklerini ayarlamanız gerekir. Genellikle komut buna bakar. Geçerli seçim komutun seçili öğelere uygulanıp uygulanmadığını belirleme ve ayrıca, komutun geçerli durumunda uygulanıp uygulanamayacağını tespit etmek için özelliklerine de bakabilirler.
+ProcessOnStatus'u Geçersiz Kıl... Yöntem. Bu yöntem, MenuCommand parametresinin Visible ve Enabled özelliklerini ayarlamalı. Genellikle komut buna bakarak. Komutun seçili öğeler için geçerli olup olmadığını belirlemek için CurrentSelection ve ayrıca komutun geçerli durumlarına uygulanıp uygulanamayacaklarını belirlemek için özelliklerine bakabilirsiniz.
 
-Genel bir kılavuz olarak Visible özelliği, öğelerin seçilmesinin belirlenmesi gerekir. Komutun menüdeki siyah veya gri görünüp görünmeyeceğini belirleyen Enabled özelliği, seçimin geçerli durumuna bağlıdır.
+Genel bir kılavuz olarak Visible özelliği hangi öğelerin seçilecekleri tarafından belirlenecektir. Komutun menüde siyah mı yoksa gri mi görüntülendiğinden belirleyen Enabled özelliği, seçimin geçerli durumuna bağlı olmalıdır.
 
-Aşağıdaki örnek, Kullanıcı birden fazla şekil seçtiği zaman sil menü öğesini devre dışı bırakır.
+Aşağıdaki örnek, kullanıcı birden fazla şekil seçtikten sonra Sil menü öğesini devre dışı bırakıyor.
 
 > [!NOTE]
-> Bu yöntem, komutun bir tuş vuruşu aracılığıyla kullanılabilir olup olmadığını etkilemez. Örneğin, sil menü öğesini devre dışı bırakmak komutun silme anahtarı aracılığıyla çağrılmasını engellemez.
+> Bu yöntem, komutun bir tuş vuruşu ile kullanılabilir olup olmadığını etkilemez. Örneğin, Sil menü öğesinin devre dışı bırakılması komutun Sil anahtarı aracılığıyla çağrılması engellemez.
 
 ```csharp
 /// <summary>
@@ -103,13 +103,13 @@ protected override void ProcessOnStatusDeleteCommand (MenuCommand command)
 }
 ```
 
-İlk olarak temel yöntemi çağırmak, ilgilenmekte olduğunuz tüm durum ve ayarlarla başa çıkmak için iyi bir uygulamadır.
+Kaygılanmazken tüm durumlarla ve ayarlarla başa olmak için ilk olarak temel yöntemi çağırmayı iyi bir yöntemdir.
 
-ProcessOnStatus yöntemi depodaki öğeleri oluşturmamalıdır, silmemelidir veya güncelleştirmemelidir.
+ProcessOnStatus yöntemi, Store'da öğe oluşturma, silme veya güncelleştirme işlemiyle ilgili değildir.
 
 ### <a name="to-change-the-behavior-of-the-command"></a>Komutun davranışını değiştirmek için
 
-ProcessOnMenu 'yi geçersiz kıl... yöntemidir. Aşağıdaki örnek, silme anahtarını kullanarak kullanıcının aynı anda birden fazla öğeyi silmesini engeller.
+Override the ProcessOnMenu... Yöntem. Aşağıdaki örnek, Silme anahtarını kullanarak bile kullanıcının aynı anda birden fazla öğeyi silmesini önler.
 
 ```csharp
 /// <summary>
@@ -126,25 +126,25 @@ protected override void ProcessOnMenuDeleteCommand()
 }
 ```
 
-Kodunuz depoda değişiklik yapıyorsa (örneğin, öğeleri veya bağlantıları oluşturma, silme veya güncelleştirme), bunu bir işlemin içinde yapmanız gerekir. Daha fazla bilgi için bkz. [model öğeleri oluşturma ve güncelleştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+Kodunuz Mağazada öğe veya bağlantı oluşturma, silme veya güncelleştirme gibi değişiklikler yaparsa, bunu bir işlem içinde gerçekleştirebilirsiniz. Daha fazla bilgi için [bkz. Model öğelerini oluşturma ve güncelleştirme.](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)
 
 ### <a name="write-the-code-of-the-methods"></a>Yöntemlerin kodunu yazma
 
-Aşağıdaki parçalar genellikle bu yöntemler içinde yararlı olur:
+Aşağıdaki parçalar genellikle bu yöntemlerde yararlıdır:
 
-- `this.CurrentSelection`. Kullanıcının sağ tıklamış olduğu şekil, bu şekil ve bağlayıcılar listesine her zaman dahildir. Kullanıcı diyagramın boş bir kısmına tıkladığında diyagram, listenin tek üyesidir.
+- `this.CurrentSelection`. Kullanıcının sağ tıklamış olduğu şekil her zaman bu şekil ve bağlayıcı listesine eklenir. Kullanıcı diyagramın boş bir parçasına tıklarsa Diyagram listenin tek üyesidir.
 
-- `this.IsDiagramSelected()` - `true` Kullanıcı diyagramın boş bir kısmına tıklamıştır.
+- `this.IsDiagramSelected()` - `true` kullanıcı diyagramın boş bir parçasına tıklamışsa.
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` -Kullanıcı birden çok şekil seçmedi
+- `this.IsSingleSelection()` - kullanıcı birden çok şekil seçmedi
 
-- `this.SingleSelection` -kullanıcıya sağ tıklamış olan şekil veya diyagram
+- `this.SingleSelection` - kullanıcının sağ tıklamış olduğu şekil veya diyagram
 
-- `shape.ModelElement as MyLanguageElement` -bir şekil tarafından temsil edilen model öğesi.
+- `shape.ModelElement as MyLanguageElement` - bir şekille temsil edilen model öğesi.
 
-Öğesinden öğeye nasıl gidebileceğiniz ve nesnelerin ve bağlantıların nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
+Öğeden öğeye nasıl gidilen ve nesne ve bağlantı oluşturma hakkında daha fazla bilgi için bkz. [Program Kodunda Modelde](../modeling/navigating-and-updating-a-model-in-program-code.md)Gezinme ve Güncelleştirme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -154,4 +154,4 @@ Aşağıdaki parçalar genellikle bu yöntemler içinde yararlı olur:
 - [VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [VSCT XML Şeması Başvurusu](../extensibility/vsct-xml-schema-reference.md)
-- [VMSDK-devre şemaları örneği. Kapsamlı DSL özelleştirmesi](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [VMSDK - Devre Diyagramları örneği. Kapsamlı DSL Özelleştirmesi](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

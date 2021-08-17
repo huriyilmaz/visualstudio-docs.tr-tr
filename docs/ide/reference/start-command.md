@@ -1,6 +1,6 @@
 ---
 title: Başlat Komutu
-description: Başlangıç komutu ve başlangıç projesinde hata ayıklamaya başlama hakkında bilgi edinin.
+description: Başlat komutunu ve başlangıç projesinde hata ayıklamanın nasıl başladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,15 @@ ms.assetid: dc4e4aa2-b0ab-4e00-92db-6dc3058ddc21
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cae9d4630a854bc24c952380a1e27cbab42d261
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8cb226ae59e38e12488fe0fed790307df462f34f962cef6302eb21e3ca77604a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938661"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121446940"
 ---
 # <a name="start-command"></a>Başlat Komutu
 Başlangıç projesinde hata ayıklamaya başlar.
@@ -34,13 +35,13 @@ Debug.Start [address]
 ## <a name="arguments"></a>Bağımsız değişkenler
 `address`
 
-İsteğe bağlı. Kaynak kodundaki bir kesme noktasına benzer şekilde programın yürütmeyi askıya aldığı adres. Bu bağımsız değişken yalnızca hata ayıklama modunda geçerlidir.
+İsteğe bağlı. Programın, kaynak kodda kesme noktası gibi yürütmeyi askıya alma adresi. Bu bağımsız değişken yalnızca hata ayıklama modunda geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar
-Çalıştırıldığında **Başlat** komutu, belirtilen adrese bir RunToCursor işlemi gerçekleştirir.
+**Yürütülürken** Başlat komutu, belirtilen adrese bir RunToCursor işlemi gerçekleştirir.
 
 ## <a name="example"></a>Örnek
-Bu örnek, hata ayıklayıcıyı başlatır ve oluşan tüm özel durumları yoksayar.
+Bu örnek hata ayıklayıcıyı başlatır ve oluşan özel durumları yoksayar.
 
 ```cmd
 >Debug.Start
@@ -48,7 +49,7 @@ Bu örnek, hata ayıklayıcıyı başlatır ve oluşan tüm özel durumları yok
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 043251ad59cc61cd250aa0213bbda8bf7d4e1fc16d5e839d15698ff6911c5ba2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8c496e30b5d20bfad7b06e44660045e2e2394ed1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390313"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073077"
 ---
 # <a name="eventattributes"></a>EVENTATTRIBUTES
 Olay özniteliklerini belirtir.

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: SharePoint çözümlerine özellik ekleme | Microsoft Docs'
-description: Visual Studio 'da SharePoint çözümlerine nasıl özellik ekleneceğini anlayın. Farklı türlerde SharePoint dosyalarını düzenlemek için daha fazla özellik öğesi ekleyebilirsiniz.
+title: 'Nasıl olur: SharePoint Solutions | Microsoft Docs'
+description: Visual Studio'da çözümlerini SharePoint özelliğin nasıl ek Visual Studio. Farklı dosya türlerini düzenlemek için daha fazla özellik SharePoint ebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -12,21 +12,22 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: b8418b63b2397da109a11f287bd21321fd2468ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6630f00d348936a033fe0e974957e545c784946b47048688901e7b3aa425ea50
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879715"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121228775"
 ---
-# <a name="how-to-add-a-feature-to-sharepoint-solutions"></a>Nasıl yapılır: SharePoint çözümlerine özellik ekleme
-  Bir SharePoint çözümü oluşturduğunuzda, çözüme bir özellik ve bir paket eklenir. Farklı türlerde SharePoint dosyalarını düzenlemek için daha fazla özellik öğesi ekleyebilirsiniz.
+# <a name="how-to-add-a-feature-to-sharepoint-solutions"></a>Nasıl SharePoint: SharePoint ekleme
+  Tek bir SharePoint, çözüme bir Özellik ve bir Paket eklenir. Farklı dosya türlerini düzenlemek için daha fazla Özellik SharePoint ebilirsiniz.
 
-### <a name="to-add-a-feature-through-solution-explorer"></a>Çözüm Gezgini aracılığıyla bir özellik eklemek için
+### <a name="to-add-a-feature-through-solution-explorer"></a>Çözüm Gezgini aracılığıyla özellik eklemek için
 
-1. **Çözüm Gezgini**, **Özellikler** için kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
+1. Bu **Çözüm Gezgini** Özellikler kısayol menüsünü **açın ve Özellik** Ekle'yi **seçin.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Dağıtım çözümlerini SharePoint dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

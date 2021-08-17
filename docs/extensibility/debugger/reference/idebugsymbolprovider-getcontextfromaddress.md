@@ -11,17 +11,18 @@ ms.assetid: 7a27d56f-20d4-4e5c-af7b-7307d3aff0a1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e8e4f80759986942c7cf23452924fcc5e4fea1b0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 295042af5e41ac9785ae4941465a73b6883498be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087099"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087450"
 ---
 # <a name="idebugsymbolprovidergetcontextfromaddress"></a>IDebugSymbolProvider::GetContextFromAddress
 Bu yöntem bir hata ayıklama adresini bir belge bağlamına eşler.

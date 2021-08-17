@@ -1,6 +1,6 @@
 ---
 title: Proje dosyasının adına veya konumuna başvurma
-description: Kendi özelliklerinizi oluşturmak zorunda kalmadan, proje dosya adına veya konumuna başvurmak için MSBuild ayrılmış özelliklerini nasıl kullanacağınızı öğrenin.
+description: Kendi özelliklerinizi oluşturmak MSBuild proje dosya adına veya konuma başvuru yapmak için ayrılmış özellikler kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,26 +16,27 @@ ms.assetid: c8fcc594-5d37-4e2e-b070-4d9c012043b5
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c6527a4f54abf147d54e73c8f887b57b70ff4243
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95d94b3fb006a717e71b5a010ad38e0b59692d6ae0ce385787f020907dd0e8bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914181"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443483"
 ---
-# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl yapılır: proje dosyasının adına veya konumuna başvurma
+# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl olur: Proje dosyasının adına veya konumuna başvuru
 
-Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan proje dosyasında kullanabilirsiniz. MSBuild, proje dosyası adına ve proje ile ilgili diğer özelliklere başvuran ayrılmış özellikler sağlar. Ayrılmış özellikler hakkında daha fazla bilgi için bkz. [MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md).
+Proje dosyasının kendi özelliğini oluşturmak zorunda kalmadan projenin adını veya konumunu kullanabilirsiniz. MSBuild, proje dosya adına ve projeyle ilgili diğer özelliklere başvurulan ayrılmış özellikler sağlar. Ayrılmış özellikler hakkında daha fazla bilgi için [bkz. MSBuild ve iyi bilinen özellikleri.](../msbuild/msbuild-reserved-and-well-known-properties.md)
 
 ## <a name="use-the-project-properties"></a>Proje özelliklerini kullanma
 
- MSBuild, proje dosyalarınızda her seferinde tanımlanmaksızın kullanabileceğiniz bazı ayrılmış özellikleri sağlar. Örneğin, ayrılmış özelliği `MSBuildProjectName` Proje dosyası adına bir başvuru sağlar. Ayrılmış özelliği, `MSBuildProjectDirectory` Proje dosyası konumuna bir başvuru sağlar.
+ MSBuild, her zaman tanımlamadan proje dosyalarında kullanabileceğiniz bazı ayrılmış özellikler sağlar. Örneğin, ayrılmış özellik `MSBuildProjectName` proje dosya adına bir başvuru sağlar. Ayrılmış `MSBuildProjectDirectory` özellik, proje dosyası konumu için bir başvuru sağlar.
 
 #### <a name="to-use-the-project-properties"></a>Proje özelliklerini kullanmak için
 
-- Herhangi bir özellikle yaptığınız gibi, proje dosyasındaki özelliğine $ () gösterimiyle başvurun. Örneğin:
+- Herhangi bir özellikte olduğu gibi $() notasyonuyla proje dosyasındaki özelliğine başvurun. Örnek:
 
   ```xml
   <CSC Sources = "@(CSFile)"
@@ -43,16 +44,16 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
   </CSC>
   ```
 
-  Ayrılmış bir özellik kullanmanın bir avantajı, proje dosya adında yapılan tüm değişikliklerin otomatik olarak eklenmesine olanak sağlar. Projeyi bir sonraki oluşturduğunuzda, çıkış dosyası, sizin bölüminizdeki başka bir eylemde bulunması gereken yeni bir ada sahip olacaktır.
+  Ayrılmış özellik kullanmanın bir avantajı, proje dosya adı üzerinde yapılan tüm değişikliklerin otomatik olarak dahil edilmiş bir özelliktir. Projeyi bir sonraki derlemeniz sırasında, çıkış dosyası sizin tarafınıza başka bir eylem gerektirmayacak şekilde yeni bir ad içerir.
 
-  Dosya veya Proje başvurularında özel karakterlerin kullanımı hakkında daha fazla bilgi için bkz. [MSBuild özel karakterler](../msbuild/msbuild-special-characters.md).
+  Dosya veya proje başvurularında özel karakterlerin kullanımı hakkında daha fazla bilgi için [bkz. MSBuild karakterlerini kullanma.](../msbuild/msbuild-special-characters.md)
 
 > [!NOTE]
-> Ayrılmış Özellikler proje dosyasında yeniden tanımlanamaz.
+> Ayrılmış özellikler proje dosyasında yeniden tanımlanamaz.
 
 ## <a name="example-1"></a>Örnek 1
 
- Aşağıdaki örnek proje dosyası, çıkış için adı belirtmek üzere bir ayrılmış özellik olarak proje adına başvurur.
+ Aşağıdaki örnek proje dosyası, çıktının adını belirtmek için proje adına ayrılmış özellik olarak başvurur.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -81,7 +82,7 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 
 ## <a name="example-2"></a>Örnek 2
 
- Aşağıdaki örnek proje dosyası, `MSBuildProjectDirectory` Proje dosyası konumundaki bir dosyanın tam yolunu oluşturmak için ayrılmış özelliği kullanır.
+ Aşağıdaki örnek proje dosyası, proje dosyası konumu içinde bir dosyanın tam `MSBuildProjectDirectory` yolunu oluşturmak için ayrılmış özelliğini kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -93,7 +94,7 @@ Projenin adını veya konumunu, kendi özelliğini oluşturmak zorunda kalmadan 
 </Project>
 ```
 
-Örnek, statik .NET Framework yöntemini çağırmak için [Özellik işlevi](property-functions.md) sözdizimini kullanır <xref:System.IO.Path.Combine*?displayProperty=fullName> .
+Örnek, static [](property-functions.md) .NET Framework yöntemini çağıran Property işlevi sözdizimini <xref:System.IO.Path.Combine*?displayProperty=fullName> kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

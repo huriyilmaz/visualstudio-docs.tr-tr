@@ -1,6 +1,6 @@
 ---
-description: Modüller numaralamada belirtilen öğe sayısını atlar.
-title: IEnumDebugModules2::Skip | Microsoft Docs
+description: Modüller numaralandırmasında belirtilen sayıda öğeyi atlar.
+title: 'IEnumDebugModules2:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121360189"
 ---
 # <a name="ienumdebugmodules2skip"></a>IEnumDebugModules2::Skip
-Belirtilen öğe sayısını atlar.
+Belirtilen sayıda öğeyi atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int Skip(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Atlana öğe sayısı.
+'ndaki Atlanacak öğe sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. kalan `S_FALSE` `celt` öğe sayısından büyükse döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE` `celt` Kalan öğelerin sayısından büyükse döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kalan öğe sayısından büyük bir değer belirtirse, en sona ayarlanır `celt` ve `S_FALSE` döndürülür.
+ `celt`Kalan öğelerin sayısından daha büyük bir değer belirtiyorsa, numaralandırma sonuna ayarlanır ve `S_FALSE` döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

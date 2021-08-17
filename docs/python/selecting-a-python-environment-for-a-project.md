@@ -11,12 +11,12 @@ ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1305aec9581cb4ae933980e022f88c878738df7d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d62b36216cdbf7f49d77b7e95c0b52949da30ed0695cb8e86368a07057e6275d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122027259"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121229851"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>Proje için Python ortamı seçme
 
@@ -64,7 +64,7 @@ Sanal ortam, belirli bir Python yorumlayıcının ve diğer genel ve conda ortam
 
 Sanal ortam kullanmanın bir avantajı, zaman içinde proje geliştirirken sanal ortamın her zaman projenin tam bağımlılıklarını yansıtmasıdır. (Paylaşılan bir genel ortam, diğer yandan, projesinde kullanıp kullanmamanıza bakarak istediğiniz sayıda kitaplığı içerir.) Daha sonra sanal *ortamdan kolaycarequirements.txt* bir dosya oluşturabilirsiniz. Bu dosya daha sonra bu bağımlılıkları başka bir geliştirme veya üretim bilgisayarına yeniden yüklemek için kullanılır. Daha fazla bilgi için [bkz. Gerekli paketleri requirements.txt. ](managing-required-packages-with-requirements-txt.md)
 
-Bir projeyi bir Visual Studio dosyası içerenrequirements.txt *Visual Studio* otomatik olarak sanal ortamı yeniden oluşturmanıza izin verir. Yükleme Visual Studio yüklü olmayan bilgisayarlarda, paketleri geri yüklemek `pip install -r requirements.txt` için kullanabilirsiniz.
+Bir projeyi bir Visual Studio dosyası içerenrequirements.txt *Visual Studio* otomatik olarak sanal ortamı yeniden oluşturmanıza izin verir. Yükleme Visual Studio bilgisayarlarda, paketleri geri yüklemek için `pip install -r requirements.txt` kullanabilirsiniz.
 
 Bir sanal ortam temel yorumlayıcıya sabit kodlu bir yol içerdiğinden ve *requirements.txt* kullanarak ortamı yeniden oluşturasınız, genellikle kaynak denetiminden sanal ortam klasörünün tamamını atlarsınız.
 
@@ -79,7 +79,7 @@ Sanal ortam projenize eklendiktan sonra Python Ortamları **penceresinde** gör�
 
 Yeni bir sanal ortamı doğrudan aşağıdaki gibi Visual Studio oluşturabilirsiniz:
 
-1. **Çözüm Gezgini'da Python** **Ortamları'Çözüm Gezgini** tıklayın ve Aşağıdaki iletişim kutusunu getiren Sanal Ortam Ekle'yi seçin:
+1. **Çözüm Gezgini'da Python** **Ortamları'Çözüm Gezgini** tıklayın ve Sanal Ortam Ekle'yi seçin. Bu iletişim kutusu aşağıdaki iletişim kutusunu getirir:
 
     ![Sanal ortam oluşturma](media/environments/environments-add-virtual-1.png)
 
@@ -102,7 +102,7 @@ Yeni bir sanal ortamı doğrudan aşağıdaki gibi Visual Studio oluşturabilirs
 
 Başka bir yerde zaten sanal ortam oluşturduysanız, bir proje için aşağıdaki gibi etkinleştirebilirsiniz:
 
-1. Uygulama'da **Python Ortamları'Çözüm Gezgini** **tıklayın ve** Var Olan Sanal Ortamı **Ekle'yi seçin.**
+1. Uygulama'da **Python Ortamları'Çözüm Gezgini** tıklayın **ve** Var Olan Sanal **Ortamı Ekle'yi seçin.**
 
 1. Görüntülenen **Gözat** iletişim kutusunda sanal ortamı içeren klasöre gidin ve seçin ve Tamam'ı **seçin.** Bu Visual Studio ortamda bir *requirements.txt* dosyası algılarsa, bu paketlerin yük olup olmadığını sorar.
 
@@ -114,7 +114,7 @@ Başka bir yerde zaten sanal ortam oluşturduysanız, bir proje için aşağıda
 
 Yeni bir sanal ortamı doğrudan aşağıdaki gibi Visual Studio oluşturabilirsiniz:
 
-1. Çözüm Gezgini'da **Python** **Ortamları'Çözüm Gezgini'ye** sağ tıklayın ve  Ortam Ekle'yi seçin veya Python araç çubuğundaki ortamlar açılan listesinden Ortam Ekle'yi seçin. Görüntülenen **Ortam Ekle** iletişim kutusunda Sanal Ortam **sekmesini** seçin:
+1. **Çözüm Gezgini'da** **Python** Ortamları'Çözüm Gezgini'ye sağ tıklayın ve  Ortam Ekle'yi seçin veya Python araç çubuğundaki ortamlar açılan listesinden Ortam Ekle'yi seçin. Görüntülenen **Ortam Ekle** iletişim kutusunda Sanal Ortam **sekmesini** seçin:
 
     ![Ortam Ekle iletişim kutusunun Sanal ortam sekmesi](media/environments/environments-add-virtual-1-2019.png)
 
@@ -135,7 +135,7 @@ Yeni bir sanal ortamı doğrudan aşağıdaki gibi Visual Studio oluşturabilirs
 
 Başka bir yerde zaten sanal ortam oluşturduysanız, bir proje için aşağıdaki gibi etkinleştirebilirsiniz:
 
-1. **Çözüm Gezgini'da Python** **Ortamları'Çözüm Gezgini** **Ekle'yi seçin.**
+1. Çözüm Gezgini'da Python **Ortamları'Çözüm Gezgini'a** sağ tıklayın ve **Ortam Ekle'yi seçin.** 
 
 1. Görüntülenen **Gözat** iletişim kutusunda sanal ortamı içeren klasöre gidin ve seçin ve Tamam'ı **seçin.** Bu Visual Studio ortamda bir *requirements.txt* dosyası algılarsa, bu paketlerin yük olup olmadığını sorar.
 
@@ -167,7 +167,7 @@ Conda paket yöneticisi genellikle varsayılan `https://repo.continuum.io/pkgs/`
 
 Görüntülenen girdilerin her zaman doğru olmadığını ve yükleme ve kaldırmanın güvenilir veya kullanılabilir olmadığının farkında olun. Visual Studio varsa pip paket yöneticisini kullanır ve gerektiğinde indirir ve indirir. Visual Studio paket yöneticisini easy_install kullanabilirsiniz. veya komut satırı `pip` kullanılarak yüklenmiş paketler de `easy_install` görüntülenir.
 
-Ayrıca, Visual Studio conda ortamına paketleri yüklemek için kullanmayı şu `conda` anda desteklememektedir. Bunun `conda` yerine komut satırı kullanın.
+Ayrıca, Visual Studio conda ortamına paketleri yüklemek için kullanmanın şu `conda` anda destekçi olmadığını unutmayın. Bunun `conda` yerine komut satırı kullanın.
 
 > [!Tip]
 > Pip'in bir paketi yükleyememe durumu, paketin *\* .pyd* dosyalarındaki yerel bileşenler için kaynak kodu dahil olmasıdır. Gerekli sürüm yüklü Visual Studio pip bu bileşenleri derleyemzamaz. Bu durumda görüntülenen hata iletisi **şudur: Hata: vcvarsall.bat.** `easy_install` genellikle önceden derlenmiş ikili dosyaları indirebilir ve Python'ın eski sürümleri için uygun bir derleyiciyi 'den [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) indirebilirsiniz. Diğer ayrıntılar için Python araçları ekip blog'unda ["vcvarsallbat bulunamıyor"](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) ile başa çıkıyoruz.
@@ -175,6 +175,6 @@ Ayrıca, Visual Studio conda ortamına paketleri yüklemek için kullanmayı şu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Python ortamlarını Visual Studio](managing-python-environments-in-visual-studio.md)
-- [Bağımlılıklar requirements.txt kullanım](managing-required-packages-with-requirements-txt.md)
+- [Bağımlılıklar requirements.txt kullanma](managing-required-packages-with-requirements-txt.md)
 - [Arama yolları](search-paths.md)
 - [Python Ortamları pencere başvurusu](python-environments-window-tab-reference.md)

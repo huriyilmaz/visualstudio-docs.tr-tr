@@ -1,6 +1,6 @@
 ---
-title: Bağlantı noktası tedarikçileri | Microsoft Docs
-description: Bu makalede, Visual Studio 'daki hata ayıklayıcı mimarisinde bir bağlantı noktası tedarikçinin tanımı ve rolü açıklanır.
+title: Port Suppliers | Microsoft Docs
+description: Bu makalede, Visual Studio'da hata ayıklayıcı mimarisinde bağlantı noktası sağlayıcının tanımı ve Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,31 +11,32 @@ ms.assetid: a8f3db96-1a13-4e93-9ef6-0861880369e0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0526135f706a42c622617a069e501297570e3b49
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 098e1546dea997f83f0c73b5d337657b1a8d77a8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899127"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073285"
 ---
-# <a name="port-suppliers"></a>Bağlantı noktası tedarikçileri
-Hata ayıklayıcı mimarisinde, bir *bağlantı noktası sağlayıcısı*:
+# <a name="port-suppliers"></a>Bağlantı noktası sağlayıcıları
+Hata ayıklayıcısı mimarisinde bir bağlantı *noktası sağlayıcı:*
 
-- , Bir sunucu tarafından içerilir ve bu sunucuya istekte bağlantı noktaları sağlar.
+- Bir sunucu tarafından bulunur ve bu sunucuya istek üzerine bağlantı noktaları sağlar.
 
-- , İçeren sunucuya bağlantı noktaları ekleyebilir ve kaldırabilir.
+- Bağlantı noktalarını içeren sunucuya ekleyebilir ve kaldırabilir.
 
-- , Sunucu tarafından sağlanan tüm bağlantı noktalarını numaralandırabilirler.
+- Sunucuya sağladığı tüm bağlantı noktalarını numara olarak numaralara dığrabilirsiniz.
 
-- , Kayıt defteri aracılığıyla Visual Studio ile kaydedilen bir [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimi tarafından temsil edilir. Bu arabirim [Getporttedarikçinin](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)çağırarak elde edilebilir.
+- Kayıt defteri aracılığıyla bir [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimiyle temsil Visual Studio ile kaydedilir. Bu arabirim [GetPortSupplier çağrılarak elde edilir.](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)
 
-  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Varsayılan bir bağlantı noktası tedarikçisi ve varsayılan bir bağlantı noktası sağlar. Özel bir bağlantı noktasının uygulanması gerekiyorsa, bu özel bağlantı noktalarını sağlamak için özel bir bağlantı noktası tedarikçinin de uygulanması gerekir.
+  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , varsayılan bir bağlantı noktası sağlayıcı ve varsayılan bir bağlantı noktası sağlar. Özel bir bağlantı noktasının uygulanması gerekirse, bu özel bağlantı noktalarını sağlamak için özel bir bağlantı noktası sağlayıcının da uygulanması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sunucular](../../extensibility/debugger/servers-visual-studio-sdk.md)
 - [Bağlantı noktaları](../../extensibility/debugger/ports.md)
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)
 - [GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)

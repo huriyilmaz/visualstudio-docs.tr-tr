@@ -1,5 +1,5 @@
 ---
-title: Özel ASP.NET Hata Ayıklama | Microsoft Docs
+title: Özel Durumlar ASP.NET Hata Ayıklama | Microsoft Docs
 description: Hata ayıklayıcının uygulamanıza işlanmamış özel durumlar için durarak ASP.NET öğrenin. Kesmenin sistem dışı kodda oluştuğundan emin olabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -32,7 +32,7 @@ ms.locfileid: "121362282"
 
  İşlenemeyen özel [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] durumlarda hata ayıklamak için hata ayıklayıcının bu özel durumlar için durduğundan emin olun. Çalışma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] zamanının üst düzey bir özel durum işleyicisi vardır. Bu nedenle, hata ayıklayıcı varsayılan olarak işlanmamış özel durumlarda hiçbir zaman kesmez. Bir özel durum sızıp hata ayıklayıcıya girebilirsiniz. Özel durumlar iletişim kutusunda Özel durumlar: Bu özel durum için **thrown** ayarı olduğunda **Kesme'yi** seçmeniz gerekir.
 
- Yalnızca kendi kodum etkinleştirdiyseniz, özel durum şu olduğunda **kesme:** Bir .NET yönteminde veya başka bir sistem kodunda özel durum etkinleştirilmişse hata ayıklayıcı hemen kesmeye neden olmaz. Bunun yerine, hata ayıklayıcı sistem dışı koda isabet edene kadar yürütme devam eder ve ardından hata ayıklar. Sonuç olarak, bir özel durum oluştuğunda sistem kodunda adım adım ilerlersiniz.
+ Özel durum olduğunda Yalnızca kendi kodum **etkinleştirdiyseniz:** Bir .NET yönteminde veya başka bir sistem kodunda özel durum etkinleştirilmişse hata ayıklayıcı hemen kesmeye neden olmaz. Bunun yerine, hata ayıklayıcı sistem dışı koda isabet edene kadar yürütme devam eder ve ardından hata ayıklar. Sonuç olarak, bir özel durum oluştuğunda sistem kodunda adım adım ilerlersiniz.
 
  Yalnızca kendi kodum daha kullanışlı olacak başka bir seçenek daha sağlar: Özel durum olduğunda **kesme: Kullanıcı tarafından işlanmamış**. Bir özel durum için bu ayarı seçerseniz, hata ayıklayıcı kullanıcı kodunda yürütmeyi bozabilir, ancak yalnızca özel durum yakalanmaz ve kullanıcı kodu tarafından işlanmazsa. Bu ayar, işleyici kullanıcı olmayan kodda olduğundan üst düzey özel durum [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] işleyicinin etkisini olumsuz etkilemektedir.
 

@@ -13,17 +13,17 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d5a1d8291a304ca1376bd5eba1d24715f162ddb7fe4214a30e48ed663cf5417
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0cd561e9c1585380a4321801cf8bd21ff40e4d41
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121305470"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041912"
 ---
 # <a name="web-site-support"></a>Web Sitesi Desteği
 Web sitesi proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri de Web uygulamaları oluşturabilir. Web sitesi projesi, ilişkili kodu olan her Web sayfası için bir yürütülebilir dosya üretir. /App_Code klasöründeki kaynak kod dosyalarından ek yürütülebilir App_Code oluşturulur.
 
- Web sitesi proje sistemleri, mevcut bir proje sistemine şablonlar ve kayıt öznitelikleri ekleyerek oluşturulur. Bu özniteliklerden biri, dil için IntelliSense sağlayıcısını seçer. IntelliSense sağlayıcısı uygulaması başvuruları işler ve önbelleğe alınmamış bir akıllı Web sayfası isten geldiğinde dil derleyicisini arar.
+ Web sitesi proje sistemleri, var olan bir proje sistemine şablonlar ve kayıt öznitelikleri ek tarafından oluşturulur. Bu özniteliklerden biri, dil için IntelliSense sağlayıcısını seçer. IntelliSense sağlayıcısı uygulaması başvuruları işler ve önbelleğe alınmamış bir akıllı Web sayfası isten geldiğinde dil derleyicisini arar.
 
  Web sayfalarını derlemek için kullanılan dil derleyicisi ile kayıtlı olması [!INCLUDE[vstecasp](../../code-quality/includes/vstecasp_md.md)] gerekir. Aşağıdaki örnekte olduğu [ \<compiler> gibi,](/dotnet/framework/configure-apps/file-schema/compiler/compiler-element) Web.config kaydetmek için bir Web.config öğesi kullanabilirsiniz:
 

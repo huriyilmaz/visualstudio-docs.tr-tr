@@ -1,6 +1,6 @@
 ---
-title: CreateCSharpManifestResourceName Görev | Microsoft Docs
-description: CreateCSharpManifestResourceName MSBuild kullanarak belirli bir .resx dosya adı veya başka bir kaynaktan C# stilinde bir bildirim adı oluşturun.
+title: CreateCSharpManifestResourceName görevi | Microsoft Docs
+description: verilen bir. resx dosya adından veya başka bir kaynaktan C# stili bildirim adı oluşturmak için createcsharpmanifestresourcename görevi MSBuild kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/15/2020
 ms.topic: reference
@@ -19,34 +19,34 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 900665ce4ea91c83559aa470344c3d0b4cd60c6fd7590b3a2bbc376f6f069940
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2c8633972152cb1d8c08b21a2f6dd44bb20e77bd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370352"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054918"
 ---
 # <a name="createcsharpmanifestresourcename-task"></a>CreateCSharpManifestResourceName görevi
 
-Belirli bir *.resx* dosya adı veya başka bir kaynaktan C# stili bir bildirim adı oluşturur.
+Verilen *. resx* dosya adından veya diğer kaynaklardan C# stili bir bildirim adı oluşturur.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda [CreateCSharpManifestResourceName görevinin parametreleri açık almaktadır.](../msbuild/createcsharpmanifestresourcename-task.md)
+ Aşağıdaki tabloda [CreateCSharpManifestResourceName görevinin](../msbuild/createcsharpmanifestresourcename-task.md)parametreleri açıklanmaktadır.
 
 | Parametre | Açıklama |
 | - | - |
-| `ManifestResourceNames` | <xref:Microsoft.Build.Framework.ITaskItem>`[]`salt okunur parametresi çıktısı.<br /><br /> Sonuçta elde edilen bildirim adları. |
-| `ResourceFiles` | Gerekli `String` parametre.<br /><br /> C# bildirim adının oluşturularak kaynak dosyasının adı. |
-| `RootNamespace` | İsteğe `String` bağlı parametre.<br /><br /> Genellikle proje dosyasından alınan kaynak dosyasının kök ad alanı. olabilir. `null` |
-| `PrependCultureAsDirectory` | İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` kültür adı bildirim kaynağı adının hemen öncesinde bir dizin adı olarak eklenir. Varsayılan değer `true` olarak belirlenmiştir. |
-| `ResourceFilesWithManifestResourceNames` | İsteğe bağlı salt `String` okunur çıkış parametresi.<br /><br /> Artık bildirim kaynağı adını içeren kaynak dosyasının adını döndürür. |
+| `ManifestResourceNames` | <xref:Microsoft.Build.Framework.ITaskItem>`[]`salt okuma parametresi çıktı.<br /><br /> Elde edilen bildirim adları. |
+| `ResourceFiles` | Gerekli `String` parametre.<br /><br /> C# bildirim adının oluşturulacağı kaynak dosyasının adı. |
+| `RootNamespace` | İsteğe bağlı `String` parametre.<br /><br /> Kaynak dosyasının genellikle proje dosyasından alınan kök ad alanı. Olabilir `null` . |
+| `PrependCultureAsDirectory` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , kültür adı bildirim kaynağı adından hemen önce bir dizin adı olarak eklenir. Varsayılan değer `true` olarak belirlenmiştir. |
+| `ResourceFilesWithManifestResourceNames` | İsteğe bağlı salt okunurdur `String` çıkış parametresi.<br /><br /> Artık bildirim kaynağı adını içeren kaynak dosyasının adını döndürür. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- [CreateCSharpManifestResourceName](../msbuild/createcsharpmanifestresourcename-task.md) görevi, belirli bir *.resx* dosyasına veya başka bir kaynak dosyasına atanacak uygun bildirim kaynak adını belirler. Görev, bir kaynak dosyasına mantıksal bir ad sağlar ve sonra bunu meta veri olarak bir çıkış parametresine iliştirer.
+ [CreateCSharpManifestResourceName görevi](../msbuild/createcsharpmanifestresourcename-task.md) , belirli bir *. resx* veya diğer kaynak dosyasına atanacak uygun bildirim kaynağı adını belirler. Görev, bir kaynak dosyasına mantıksal bir ad sağlar ve ardından bunu meta veriler olarak bir çıkış parametresine ekler.
 
- Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

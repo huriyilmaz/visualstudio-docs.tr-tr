@@ -1,6 +1,6 @@
 ---
 title: VS SDK NuGet paketleri
-description: bir Visual Studio uzantısını Visual Studio 2022 önizlemesine geçirirken ihtiyacınız olabilecek VS SDK metapackage ve diğer NuGet paketleri hakkında bilgi edinin.
+description: Bir Visual Studio uzantısını NuGet 2022 Preview sürümüne geçirinken ihtiyacınız olan VS SDK meta Visual Studio paketleri hakkında bilgi edinebilirsiniz.
 ms.date: 06/08/2021
 ms.topic: conceptual
 author: leslierichardson95
@@ -11,29 +11,29 @@ monikerRange: vs-2022
 ms.workload:
 - vssdk
 feedback_system: GitHub
-ms.openlocfilehash: 6ad4070c4dbf6aa5e9867cf88ec7982e7281f9667d0abcc4360db41e164241e0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cf2e07cf2d222c06b36c97cf2d4faf982c4039f4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121305392"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041665"
 ---
 # <a name="sdk-reference-packages"></a>SDK başvuru paketleri
 
 [!INCLUDE [preview-note](../includes/preview-note.md)]
 
-Visual Studio uzantıları yazmak için en kolay yol, [ `Microsoft.VisualStudio.Sdk` NuGet paketine](https://www.nuget.org/packages/microsoft.visualstudio.sdk)yönelik bir başvurudur.
-bu paket, Visual Studio 2017 (15,0), Visual Studio 2019 (16,0, 16,9) ve artık Visual Studio 2022 hedefleyecek şekilde kullanılabilir.
+Uzantılar yazmanın Visual Studio en kolay yolu, NuGet [ `Microsoft.VisualStudio.Sdk` paketine başvuru yapmaktır.](https://www.nuget.org/packages/microsoft.visualstudio.sdk)
+Bu paket Visual Studio 2017 (15.0), Visual Studio 2019 (16.0, 16.9) ve şimdi 2022'Visual Studio için kullanılabilir.
 
-Uzantınıza bağlı olarak, yukarıdaki meta pakette bulunmayan ek VS SDK paketleri eklemek gerekebilir.
-Özel diğer SDK paketlerine başvurulduğunda, bu paketler büyük VS sürümler arasında farklılık gösterebilir.
+Uzantınıza bağlı olarak, yukarıdaki meta pakete dahil olmayan ek VS SDK paketleri eklemek gerekebilir.
+Belirli diğer SDK paketlerine başvururken, bu paketler ana VS sürümleri arasında farklılık gösterebilir.
 
-birçok birlikte çalışma derlemesinin Visual Studio 2022 ' dan önce katıştırıldığına unutmayın. Visual Studio 2022 ' den başlayarak ekleme artık gerekli değildir veya desteklenmez.
-Lütfen *bunları* bağlamak yerine birlikte çalışma derlemelerimize başvurun.
+2022'den önce birçok birlikte çalışma derlemesi Visual Studio unutmayın. 2022 Visual Studio den itibaren ekleme artık gerekli değildir veya desteklemektedir.
+Lütfen *bunları* bağlama yerine birlikte çalışma derlemelerimize bakın.
 
-aşağıdaki tabloda derlemelerinden veya paketlerden bir eşleme sunulmaktadır. Visual Studio 2022 uzantınızın, Visual Studio 2022 ' i hedeflerken başvurmak için yeni paket kimliğine zaten başvuruda bulunulamayabilir. bazı durumlarda, derlemeler artık yalnızca yerel bir Visual Studio yüklemesinde bulunan NuGet paketlerinde kullanılabilir.
+Aşağıdaki tabloda, Visual Studio 2022 öncesi uzantınız, 2022'ye yönelik olarak başvurulacak yeni paket kimliğine zaten başvururken derlemelerden veya paketlerden bir eşleme Visual Studio sağlar. Bazı durumlarda, derlemeler artık daha önce yalnızca NuGet yerel bir yüklemeden kullanılabilen paketlerde Visual Studio kullanılabilir.
 
-ön Visual Studio 2022 | Visual Studio 2022
+2022 Visual Studio öncesi | Visual Studio 2022
 --|--
 `envdte` | `Microsoft.VisualStudio.Interop`
 `envdte100` | `Microsoft.VisualStudio.Interop`
@@ -45,7 +45,7 @@ aşağıdaki tabloda derlemelerinden veya paketlerden bir eşleme sunulmaktadır
 `Microsoft.VisualStudio.CommandBars` | `Microsoft.VisualStudio.Interop`
 `Microsoft.VisualStudio.Designer.Interfaces` | `Microsoft.VisualStudio.Interop`
 `Microsoft.VisualStudio.OLE.Interop` | `Microsoft.VisualStudio.Interop`
-`Microsoft.VisualStudio.SDK.EmbedInteropTypes` | Dışı. Başvuruyu kaldır.)
+`Microsoft.VisualStudio.SDK.EmbedInteropTypes` | (Eski. Başvuru kaldır.)
 `Microsoft.VisualStudio.Shell.Embeddable` | `Microsoft.VisualStudio.Shell.Framework`
 `Microsoft.VisualStudio.Shell.Interop.10.0` | `Microsoft.VisualStudio.Interop`
 `Microsoft.VisualStudio.Shell.Interop.11.0` | `Microsoft.VisualStudio.Interop`
@@ -103,5 +103,5 @@ aşağıdaki tabloda derlemelerinden veya paketlerden bir eşleme sunulmaktadır
 `VSLangProj80` | `Microsoft.VisualStudio.Interop`
 `VSLangProj90` | `Microsoft.VisualStudio.Interop`
 
-Yalnızca bir birleştirilmiş birlikte çalışma derlemesinden kaç adet birlikte çalışma derlemesi kullanılabileceğini aklınızda bulabilirsiniz.
-Bir paketin yukarıdaki tabloda görünmediğinden, bu iki sürüm genelinde aynı olabilir.
+Artık yalnızca bir birleştirilmiş birlikte çalışma derlemesi için kaç birlikte çalışma derlemesi kullanılabilir olduğunu unutmayın.
+Bir paket yukarıdaki tabloda görünmese de iki sürümde aynı olabilir.

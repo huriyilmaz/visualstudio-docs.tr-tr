@@ -1,7 +1,7 @@
 ---
-title: Başlarken (Visual Studio 'da SharePoint geliştirme) | Microsoft Docs
+title: başlarken (Visual Studio SharePoint geliştirme) | Microsoft Docs
 titleSuffix: ''
-description: Visual Studio 'da SharePoint geliştirme ile çalışmaya başlayın. SharePoint, Web tabanlı bir işbirliği platformu sunar.
+description: Visual Studio SharePoint geliştirme ile çalışmaya başlayın. SharePoint web tabanlı işbirliği platformu sunar.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: overview
@@ -15,49 +15,50 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: a710d71b80f8aa64efef52b891a8c8a760b92c10
-ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
+ms.openlocfilehash: 5c69c709118a544b4384721c20f75d11643c9644f70f936e622f9b8035361c7e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112112879"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121228902"
 ---
-# <a name="get-started-sharepoint-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da SharePoint geliştirme)
+# <a name="get-started-sharepoint-development-in-visual-studio"></a>başlarken (Visual Studio SharePoint geliştirme)
 
-  Bu bölüm, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ' den faydalanan SharePoint çözümleri geliştirmek için ile çalışmaya başlamanıza yardımcı olur [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .
+  bu bölüm, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve avantajlarından yararlanan SharePoint çözümleri geliştirmek için ile çalışmaya başlamanıza yardımcı olur [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .
 
- SharePoint eklentileri hakkında daha fazla bilgi için bkz. [SharePoint eklentileri oluşturma](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
+ SharePoint eklentileri hakkında daha fazla bilgi için bkz. [derleme SharePoint eklentileri](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
 
- SharePoint, Web tabanlı bir işbirliği platformu sunar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , liste tanımları, iş akışları, iş verileri bağlantı modelleri ve site tanımları dahil olmak üzere SharePoint siteleri ve içeriği oluşturmak için birçok proje şablonu sağlar. Ayrıca, ' de SharePoint projeleri ve araçları için Uzantılar oluşturabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+ SharePoint Web tabanlı işbirliği platformu sunar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]liste tanımları, iş akışları, iş verileri bağlantı modelleri ve site tanımları dahil olmak üzere SharePoint siteleri ve içerikleri oluşturmak için birçok proje şablonu sağlar. ayrıca, ' de SharePoint projeler ve araçlar için uzantılar oluşturabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 |Konu|Açıklama|
 |-----------|-----------------|
-|[SharePoint hataları için ek bilgiler](../sharepoint/additional-information-for-sharepoint-errors.md)|SharePoint geliştirme ve sorun giderme sırasında yardımın nerede bulunacağını açıklar.|
+|[SharePoint hatalar için ek bilgiler](../sharepoint/additional-information-for-sharepoint-errors.md)|SharePoint geliştirme ve sorun giderme işlemleri sırasında nereden yardım bulunacağını açıklar.|
 
 ## <a name="related-sections"></a>İlgili bölümler
 
 |Konu|Açıklama|
 |-----------|-----------------|
-|[SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)|' De SharePoint geliştirmesini açıklar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
-|[SharePoint için genel bir geliştirme ortamı ayarlama](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|SharePoint çözümü oluşturmak için gerekli yüklemeleri açıklar|
-|[SharePoint için site sütunları, içerik türleri ve listeler oluşturma](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)|SharePoint için Visual Studio Araçları geliştirmesi kullanılarak SharePoint için özel site sütunları, içerik türleri ve listeleri oluşturmayı açıklar.|
+|[SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)|içinde SharePoint geliştirmeyi açıklar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
+|[SharePoint için genel bir geliştirme ortamı ayarlama](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|SharePoint çözümü oluşturmak için gereken yüklemeleri açıklar|
+|[SharePoint için site sütunları, içerik türleri ve listeler oluşturma](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)|SharePoint geliştirmesi için Visual Studio araçları kullanılarak SharePoint için özel site sütunları, içerik türleri ve listeler oluşturmayı açıklar.|
 |[SharePoint iş akışı çözümleri oluşturma](../sharepoint/creating-sharepoint-workflow-solutions.md)|İş akışı tasarımını ve geliştirmeyi açıklar.|
 |[İş verilerini SharePoint ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md)|İş verilerini bütünleştirmek için Iş verileri bağlantısı (BDC) modellerine nasıl bağlanacağınızı açıklar.|
-|[SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)|Web bölümleri ve Web Bölümü sayfalarını, SharePoint sitesindeki sayfaların yapı taşlarını açıklar.|
+|[SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)|SharePoint sitesindeki sayfaların yapı taşlarını web bölümleri ve web bölümü sayfaları açıklanmaktadır.|
 |[SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md)|Tasarımcı kullanarak uygulama sayfalarının nasıl tasarlanacağını açıklar.|
-|[Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)|SharePoint 'te uygulama sayfaları ve Web Bölümleri için özel, yeniden kullanılabilir denetimler oluşturmayı açıklar.|
-|[Sunucu Gezgini kullanarak SharePoint bağlantılarına gözatın](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)|Bir Visual Studio araç penceresinde bir SharePoint sitesinin bileşenleri arasında gezinmeyi açıklar.|
-|[SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)|SharePoint çözümlerini derleme ve hata ayıklama işlemlerini açıklar.|
-|[SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)|SharePoint çözümlerini paketleme ve dağıtma işlemini açıklar.|
-|[SharePoint araçlarını Visual Studio 'da genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|SharePoint araçlarının, ihtiyacınız olan özellikleri oluşturmak için nasıl genişletileceğini açıklar.|
+|[Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)|SharePoint içinde uygulama sayfaları ve Web Bölümleri için özel, yeniden kullanılabilir denetimlerin nasıl oluşturulduğunu açıklar.|
+|[Sunucu Gezgini kullanarak SharePoint bağlantılara gözatamazsınız](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)|bir Visual Studio araç penceresinde bir SharePoint sitesinin bileşenleri arasında gezinmeyi açıklar.|
+|[SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)|SharePoint çözümlerinin nasıl oluşturulduğunu ve hata ayıklanılacağını açıklar.|
+|[SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)|SharePoint çözümlerinin nasıl paketleneceğini ve dağıtılacağını açıklar.|
+|[Visual Studio SharePoint araçlarını genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|ihtiyaç duyduğunuz özellikleri oluşturmak için SharePoint araçlarının nasıl genişletileceğini açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
-- [Sunucu Gezgini kullanarak SharePoint bağlantılarına gözatın](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
-- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Sunucu Gezgini kullanarak SharePoint bağlantılara gözatamazsınız](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
+- [SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

@@ -19,14 +19,15 @@ ms.assetid: e6e0fa4f-75c4-4a52-af15-281cd61876ca
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ddbfb4d001f73e30296a35c2cff4aae0e0c527f9
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: ce71f30b6008de006ad2ab96c0388dc3e1ee507247d9c9a500304c94d5197846
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221125"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447434"
 ---
 # <a name="properties-window"></a>Özellik penceresi
 
@@ -46,7 +47,7 @@ Göre
 Alfabetik olarak, seçilen nesneler için tüm tasarım zamanı özelliklerini ve olaylarını sıralar. Soluk olmayan bir özelliği düzenlemek için, sağ tarafındaki hücreyi tıklatın ve değişiklikleri girin.
 
 Özellik sayfaları \
-Seçili öğe için **Özellik sayfaları** iletişim kutusunu veya **Proje Tasarımcısı** ' nı görüntüler. Özellik sayfaları, **Özellikler** penceresinde kullanılabilen özelliklerin bir alt kümesini, aynısını veya bir üst kümesini görüntüler. Projenizin etkin yapılandırmasıyla ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.
+seçili öğe için **özellik sayfaları** iletişim kutusunu veya **Project tasarımcısını** görüntüler. Özellik sayfaları, **Özellikler** penceresinde kullanılabilen özelliklerin bir alt kümesini, aynısını veya bir üst kümesini görüntüler. Projenizin etkin yapılandırmasıyla ilgili özellikleri görüntülemek ve düzenlemek için bu düğmeyi kullanın.
 
 Özelliklerinin
 Bir nesnenin özelliklerini görüntüler. Birçok nesnenin aynı zamanda **Özellikler** penceresi kullanılarak görüntülenebilen olayları vardır.
@@ -61,7 +62,7 @@ Bir nesne için olayları görüntüler.
 > Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca bir form veya denetim Tasarımcısı bir proje bağlamında etkin olduğunda kullanılabilir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] . XAML dosyaları düzenlenirken, olaylar Özellikler penceresinin ayrı bir sekmesinde görünür.
 
 İletilerine
-Tüm Windows iletilerini listeler. Seçili sınıf için belirtilen işlemler için belirtilen işleyici işlevlerini eklemenize veya silmesine izin verir.
+tüm Windows iletilerini listeler. Seçili sınıf için belirtilen işlemler için belirtilen işleyici işlevlerini eklemenize veya silmesine izin verir.
 
 > [!NOTE]
 > Bu **Özellikler** penceresi araç çubuğu denetimi yalnızca **sınıf görünümü** bir proje bağlamında etkin pencere olduğunda kullanılabilir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] .

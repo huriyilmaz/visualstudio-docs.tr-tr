@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Dosya Uzantısı
-description: Belirli dosya uzantılarına sahip tüm dosyaların Visual Studio IDE tarafından nasıl işleneceğini belirtmek için dosya uzantısı sayfasını nasıl kullanacağınızı öğrenin.
+description: belirli dosya uzantılarına sahip dosyaların Visual Studio ıde tarafından nasıl işleneceğini belirtmek için dosya uzantısı sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,18 +15,19 @@ ms.assetid: 05298fc5-fc4e-4bb2-b942-1f7d2dcdff0f
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f163f1aca78832f38e73eaaed882ae1ac6cff17
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4cf271d0bb5c0d5b7ba7d0f251ec0bb087748990661b45f11738299ec207ba60
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943945"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447421"
 ---
 # <a name="options-text-editor-file-extension"></a>Seçenekler, Metin Düzenleyici, Dosya Uzantısı
 
-Bu seçenekler iletişim kutusu, belirli dosya uzantılarına sahip tüm dosyaların Visual Studio tümleşik geliştirme ortamı (IDE) tarafından nasıl işleneceğini belirtmenizi sağlar. Girdiğiniz her **uzantı** Için bir düzen deneyimi seçebilirsiniz. Bu, belirli bir türdeki belgelerin açılacağı IDE düzenleyicisini veya tasarımcısını seçmenizi sağlar. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin, **metin düzenleyici** düğümünü genişletin ve **Dosya Uzantısı**' nı seçin.
+bu seçenekler iletişim kutusu, belirli dosya uzantılarına sahip tüm dosyaların Visual Studio tümleşik geliştirme ortamı (ıde) tarafından nasıl işleneceğini belirtmenizi sağlar. Girdiğiniz her **uzantı** Için bir düzen deneyimi seçebilirsiniz. Bu, belirli bir türdeki belgelerin açılacağı IDE düzenleyicisini veya tasarımcısını seçmenizi sağlar. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin, **metin düzenleyici** düğümünü genişletin ve **Dosya Uzantısı**' nı seçin.
 
 "Kodlama ile" seçeneğini belirlediğinizde, bu belgenin bir kodlama şemasını seçmenize olanak tanıyan bir belge açtığınızda bir iletişim kutusu görüntülenir. Bu, proje belgelerinizin sürümlerini farklı platformlarda veya farklı hedef dillerde kullanılmak üzere hazırlıyorsanız yararlı olabilir.
 

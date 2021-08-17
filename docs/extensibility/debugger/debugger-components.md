@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklayıcı bileşenleri | Microsoft Docs
-description: Visual Studio hata ayıklayıcı tarafından yönetilen ve vspackage olarak uygulanan bir hata ayıklama oturumu oluşturan öğeler hakkında bilgi edinin.
+title: Hata Ayıklayıcı Bileşenleri | Microsoft Docs
+description: VSPackage olarak uygulanan Visual Studio hata ayıklayıcısı tarafından yönetilen bir hata ayıklama oturumunun öğelerini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,55 +15,55 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2ebe084538388174d1c205ab101ade465c694f955c3f481598edb0b1da60827
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d4e2eb0e0b702bfa97485bd943da7b9dcc59c328
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121324151"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073376"
 ---
-# <a name="debugger-components"></a>Hata ayıklayıcı bileşenleri
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı bir VSPackage olarak uygulanır ve hata ayıklama oturumunun tamamını yönetir. Hata ayıklama oturumu aşağıdaki öğeleri içerir:
+# <a name="debugger-components"></a>Hata ayıklayıcısı bileşenleri
+Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklayıcısı VSPackage olarak uygulanır ve hata ayıklama oturumunun tamamını yönetir. Hata ayıklama oturumu aşağıdaki öğelerden oluşur:
 
-- **Hata ayıklama paketi:** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Hata ayıklayıcı, hata ayıklamanın ne olduğuna bakılmaksızın aynı kullanıcı arabirimini sağlar.
+- **Pakette Hata Ayıklama:** Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklayıcı, hangi hata ayıklandı olursa olsun aynı kullanıcı arabirimini sağlar.
 
-- **Oturum hata ayıklama Yöneticisi (SDM):** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Çeşitli hata ayıklama altyapısının yönetimi için hata ayıklayıcıya tutarlı bir programlama arabirimi sağlar. Tarafından uygulanır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+- **Oturum hata ayıklama yöneticisi (SDM):** Çeşitli hata ayıklama altyapılarının yönetimi için Hata Ayıklayıcı'ya tutarlı bir program [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] arabirimi sağlar. Tarafından [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uygulanır.
 
-- **İşlem hata ayıklama Yöneticisi (PDM):** Tüm çalışan örnekleri için, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklanan veya hataları ayıklanabilecek tüm programların bir listesini yönetir. Tarafından uygulanır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+- **İşlem hata ayıklama yöneticisi (PDM):** tüm çalışan örnekleri için, hata ayıklandı veya hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklandı olan tüm programların listesini yönetir. Tarafından [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uygulanır.
 
-- **Hata ayıklama altyapısı (de):** Hata ayıklamakta olan bir programın izlenmesini, çalışan programın durumunu SDM ve PDM ile iletişimi ve bir programın bellek ve değişkenlerinin durumunun gerçek zamanlı analizini sağlamak için ifade değerlendirici ve sembol sağlayıcısıyla etkileşim kurmayı sağlamaktan sorumludur. Tarafından uygulanır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (desteklediği diller için) ve kendi çalışma süresini desteklemek isteyen üçüncü taraf satıcıları.
+- **Hata ayıklama altyapısı (DE):** Hata ayıklaması yapılan bir programı izlemek, çalışan programın durumunu SDM ve PDM'ye ile iletişim kurmak ve bir programın belleğinin ve değişkenlerinin durumunun gerçek zamanlı analizini sağlamak için ifade değerlendiricisi ve sembol sağlayıcısıyla etkileşim kurmakla sorumludur. Kendi çalışma zamanlarını desteklemek isteyen (desteklediği diller için) ve üçüncü [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] taraf satıcılar tarafından uygulanır.
 
-- **İfade değerlendirici (ee):** Bir program belirli bir noktada durdurulduğunda Kullanıcı tarafından sağlanan değişkenleri ve ifadeleri dinamik olarak değerlendirmek için destek sağlar. Tarafından uygulanır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (desteklediği diller için) ve kendi dillerini desteklemek isteyen üçüncü taraf satıcıları.
+- **İfade değerlendirici (EE):** Bir program belirli bir noktada durdurulmuş olduğunda kullanıcı tarafından sağlanan değişkenleri ve ifadeleri dinamik olarak değerlendirme desteği sağlar. Kendi dillerini desteklemek isteyen (desteklediği diller için) ve üçüncü taraf [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] satıcılar tarafından uygulanır.
 
-- **Sembol sağlayıcısı (SP):** Sembol işleyici olarak da bilinen, anlamlı bilgilerin sağlanması için bir programın hata ayıklama sembollerini programın çalışan bir örneğine eşler (örneğin, kaynak kodu düzeyinde hata ayıklama ve ifade değerlendirmesi). Tarafından uygulanır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (ortak dil çalışma zamanı [clr] sembolleri ve program veritabanı [pdb] sembol dosyası biçimi için) ve hata ayıklama bilgilerini depolamak için kendi özel bir yöntemine sahip üçüncü taraf satıcıları.
+- **Sembol sağlayıcısı (SP):** Sembol işleyicisi olarak da adlandırılan bu program, hata ayıklama sembollerini programın çalışan bir örneğine eşler; böylece anlamlı bilgiler sağlanmalıdır (kaynak kodu düzeyinde hata ayıklama ve ifade değerlendirmesi gibi). Bu, (Ortak Dil Çalışma Zamanı [CLR] sembolleri ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Program DataBase [PDB] sembol dosyası biçimi için) ve hata ayıklama bilgilerini depolamak için kendi özel yöntemine sahip üçüncü taraf satıcılar tarafından uygulanır.
 
-  aşağıdaki diyagramda Visual Studio hata ayıklayıcının bu öğeleri arasındaki ilişki gösterilmektedir.
+  Aşağıdaki diyagramda, hata ayıklayıcının bu öğeleri arasındaki Visual Studio gösterir.
 
-  ![Hata ayıklama bileşenlerine genel bakış](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")
+  ![Hata Ayıklama Bileşenlerine Genel Bakış](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Hata ayıklama paketi](../../extensibility/debugger/debug-package.md) [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kabukta çalışan ve tüm Kullanıcı arabirimini işleyen hata ayıklama paketini açıklar.
+ [Pakette hata ayıklama](../../extensibility/debugger/debug-package.md) Kabukta çalışan ve tüm kullanıcı arabirimini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ele alan hata ayıklama paketini ele almaktadır.
 
- [İşlem hata ayıklama Yöneticisi](../../extensibility/debugger/process-debug-manager.md) PDM özelliklerine genel bir bakış sağlar. Bu, hata ayıklaması yapılan işlemlerin yöneticisidir.
+ [İşlem hata ayıklama yöneticisi](../../extensibility/debugger/process-debug-manager.md) Hata ayıklaması yapılan işlemlerin yöneticisi olan PDM'nin özelliklerine genel bir bakış sağlar.
 
- [Oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md) IDE 'ye hata ayıklama oturumunun Birleşik bir görünümünü sağlayan SDM 'yi tanımlar. SDM, DE ' i yönetir.
+ [Oturum hata ayıklama yöneticisi](../../extensibility/debugger/session-debug-manager.md) IDE'de hata ayıklama oturumunun birleşik bir görünümünü sağlayan SDM'i tanımlar. SDM, DE'i yönetir.
 
- [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md) , Tarafından sağlanan hata ayıklama hizmetlerini belgeler.
+ [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md) DE'nin sağladığı hata ayıklama hizmetlerini belgeler.
 
- [İşletimsel modlar](../../extensibility/debugger/operational-modes.md) IDE 'nin çalışabileceği üç moda genel bakış sağlar: tasarım modu, çalıştırma modu ve kesme modu. Geçiş mekanizmaları de ele alınmıştır.
+ [İşletimsel modlar](../../extensibility/debugger/operational-modes.md) IDE'nin çalışabiliyor olduğu üç moda genel bakış sağlar: tasarım modu, çalıştırma modu ve kesme modu. Geçiş mekanizmaları da ele alınmıştır.
 
- [İfade değerlendirici](../../extensibility/debugger/expression-evaluator.md) çalışma zamanında EE amacını açıklar.
+ [İfade değerlendirici](../../extensibility/debugger/expression-evaluator.md) Çalışma zamanında EE açıklar.
 
- [Sembol sağlayıcısı](../../extensibility/debugger/symbol-provider.md) Uygulamasının, sembol sağlayıcısının değişkenleri ve ifadeleri değerlendirme şeklini açıklar.
+ [Sembol sağlayıcısı](../../extensibility/debugger/symbol-provider.md) Sembol sağlayıcısının uygulamada değişkenleri ve ifadeleri nasıl değerlendirip değerlendirip değerlendirmeyi ele almaktadır.
 
- [Tür görselleştiricisi ve özel Görüntüleyici](../../extensibility/debugger/type-visualizer-and-custom-viewer.md) Bir tür görselleştiricisi ve özel görüntüleyicisinin ne olduğunu ve her ikisini de desteklemek için ifade değerlendirici 'nin hangi rol üzerinde oynatılacağını açıklar.
+ [Tür görselleştiricisi ve özel görüntüleyici](../../extensibility/debugger/type-visualizer-and-custom-viewer.md) Bir tür görselleştiricinin ve özel görüntüleyicinin ne olduğunu ve ifade değerlendiricinin her ikisini desteklemede oynadığı rolü tartışmaktadır.
 
 ## <a name="related-sections"></a>İlgili bölümler
- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md) Ana hata ayıklama mimarisi kavramlarını açıklar.
+ [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md) Ana hata ayıklama mimari kavramlarını açıklar.
 
- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md) Aynı anda kod, belge ve ifade değerlendirme bağlamlarının içinde nasıl çalıştığını açıklar. Üç bağlamın her biri için, bu konuyla ilgili konum, konum veya değerlendirmeyi açıklar.
+ [Hata ayıklayıcısı bağlamları](../../extensibility/debugger/debugger-contexts.md) DE'nin kod, belge ve ifade değerlendirme bağlamları içinde aynı anda nasıl çalış olduğunu açıklar. Üç bağlamın her biri için ilgili konum, konum veya değerlendirmeyi açıklar.
 
- [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md) Bir program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerinin bağlantılarını içerir.
+ [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md) Program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerinin bağlantılarını içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kullanmaya başlama](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)

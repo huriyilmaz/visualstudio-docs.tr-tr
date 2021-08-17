@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bdbf198b65483a8241de571e2f5fde307a312d25225480c63898da9323898f6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3ba1475f62ff1732fd7b4a4e8554a428bf053be6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121306770"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087424"
 ---
 # <a name="idebugsymbolprovider"></a>IDebugSymbolProvider
 Bu arabirim sembolleri ve türleri sağlayan bir sembol sağlayıcısını temsil eder ve bunları alan olarak döndürür.

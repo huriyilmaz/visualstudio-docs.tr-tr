@@ -11,17 +11,18 @@ ms.assetid: 3361c495-2673-4b7c-82e3-dee74e1fa58d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 017dfa60c1f854a36f1087bef87203f0b22ae4dc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e56b2d5883e1c26fbfaa8657b8fed3c5236db348
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083641"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087567"
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
 Bir başvuruyu diğerine karşılaştırır. Daha sonraki kullanımlar için ayrılmıştır.

@@ -44,7 +44,7 @@ ms.locfileid: "121228564"
 
 5. içinde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir olay alıcı projesi oluşturun.
 
-6. Ne **tür bir olay alıcısı istiyor musunuz? listesinde** Öğe Olaylarını **Listele'yi seçin.**
+6. Ne tür **bir olay alıcısı istiyor musunuz? listesinde** Öğe Olaylarını **Listele'yi seçin.**
 
     > [!NOTE]
     > Bir liste tanımına kapsamı olan başka bir olay alıcısı türü de seçebilirsiniz; örneğin, E-posta **Olaylarını Listele** veya İş **Akışı Olaylarını Listele.**

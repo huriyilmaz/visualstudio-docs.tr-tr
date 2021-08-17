@@ -29,11 +29,11 @@ Kaynak denetimi uygulanırken projeler için aşağıdaki tasarım kararları di
  Bu karar her şeyi içerir değildir ve öğe temelinde olabilir.
 
 ## <a name="will-the-project-include-special-files"></a>Proje özel dosyalar içerecek mi?
- Bir diğer önemli tasarım kararı da proje yapınız için özel dosyalar olup olmadığıdır. Özel dosyalar, hem dosyalarda hem de iade etme ve Çözüm Gezgini iletişim kutularında görünen dosyaların altında yatan gizli dosyalardır. Özel dosyalar kullanıyorsanız şu yönergeleri izleyin:
+ Bir diğer önemli tasarım kararı da proje yapınız için özel dosyalar olup olmadığıdır. Özel dosyalar, iade etme ve iade etme iletişim Çözüm Gezgini görünen dosyaların altında yatan gizli dosyalardır. Özel dosyalar kullanıyorsanız şu yönergeleri izleyin:
 
 1. Özel dosyaları proje kök düğümüyle, yani proje dosyasının kendisiyle ilişkilendirme. Proje dosyanız tek bir dosya olması gerekir.
 
-2. Bir projede özel dosyalar ekleniyor, kaldırılıyor veya yeniden adlandırılıyorsa, dosyaların özel dosyalar olduğunu belirten bayrak kümesiyle uygun <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2> olaylar çıkarılmalıdır. Bu olaylar, uygun yöntemleri çağıran projeye yanıt olarak ortam tarafından <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> çağrılır.
+2. Bir projede özel dosyalar ekleniyor, kaldırılıyor veya yeniden adlandırılıyorsa, uygun olaylar dosyaların özel dosyalar olduğunu belirten bayrak <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2> kümesiyle birlikte çıkarılmalıdır. Bu olaylar, uygun yöntemleri çağıran projeye yanıt olarak ortam tarafından <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> çağrılır.
 
 3. Projeniz veya düzenleyiciniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> bir dosyayı çağırsa, bu dosyayla ilişkili özel dosyalar otomatik olarak kullanıma alınmış olmaz. Özel dosyaları üst dosyayla birlikte iletir. Ortam, geçirilen tüm dosyalar arasındaki ilişkiyi algılar ve özel dosyaları iade kullanıcı arabiriminde uygun şekilde gizler.
 

@@ -10,12 +10,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-xaml-tools
-ms.openlocfilehash: da206cedbe2cf14be1fc6bcd2d8f1dd1cd154524767ed9b33ddb69e392599053
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab851ced6f553e89a12c0a13a681fcd6aad1485c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121393472"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025218"
 ---
 # <a name="animate-objects-in-xaml-designer"></a>XAML Tasarımcısı’nda nesnelere animasyon ekleme
 

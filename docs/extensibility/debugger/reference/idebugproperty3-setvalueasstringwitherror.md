@@ -1,6 +1,6 @@
 ---
-description: Bu özelliğin değerini ayarlar ve gerekirse bir hata mesajı döndürür.
-title: 'IDebugProperty3:: SetValueAsStringWithError | Microsoft Docs'
+description: Bu özelliğin değerini ayarlar ve gerekirse bir hata iletisi döndürür.
+title: IDebugProperty3::SetValueAsStringWithError | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: b378368f-4a45-4b2f-8e3d-3bff7a18ab17
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 021d2fed674408e1aa9ab6a7e71be83c1c2737ce
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 94b8c33fe806814e204d8718196b0e424f0738dc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083927"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087723"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
-Bu özelliğin değerini ayarlar ve gerekirse bir hata mesajı döndürür.
+Bu özelliğin değerini ayarlar ve gerekirse bir hata iletisi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,25 +49,25 @@ int SetValueAsStringWithError(
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-'ndaki Ayarlanacak değer.
+[in] Ayar için değer.
 
 `dwRadix`\
-'ndaki Ayarlanmış değerin taban tabanı.
+[in] Ayar olan değerin radyansı.
 
 `dwTimeout`\
-'ndaki Değer için beklenecek sürenin uzunluğu ( `INFINITE` süresiz olarak bekleme anlamına gelir).
+[in] Değerin ayar için bekleme süresi (sonsuza kadar `INFINITE` bekleme anlamına gelir).
 
 `errorString`\
-dışı Değer ayarlanırken bir hata oluşursa, bu durum hatanın nedenini taşır.
+[out] Değeri ayar alan bir hata varsa, hatanın nedeni bu olur.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
 Gelen değer değerlendirilecek bir ifade olabilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini kullanıma sunan bir **cproperty** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini ortaya çıkaran **bir CProperty** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CProperty::SetValueAsStringWithError(

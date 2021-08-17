@@ -15,12 +15,13 @@ ms.assetid: 211edbd7-9fe4-4251-ba85-8bec4363261b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 78c6dd0f9ffa89f7b1a2ac7ac7a2344b67a47970
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 90f2ed785c0edd90ae7ad6fc9614d134f6b557f2f7af24a9e9901de88c676507
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868055"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121227823"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma
 
@@ -51,7 +52,7 @@ Test denetleyicisi tarafından kullanılan varsayılan bağlantı noktası 6901 
 
    Test denetleyicisi istemciye ilk kez bağlanmayı denediğinde güvenlik duvarı bildirimleri alabilirsiniz.
 
-   Windows Server 2008 ' de, güvenlik duvarı bildirimleri varsayılan olarak devre dışıdır ve gelen bağlantıları kabul edebilmesi için Istemci programları (*devenv.exe*, *mstest.exe*, *mlm.exe*) için güvenlik duvarı özel durumlarını el ile eklemeniz gerekir.
+   Windows Server 2008 ' de, güvenlik duvarı bildirimleri varsayılan olarak devre dışıdır ve gelen bağlantıları kabul edebilmesi için istemci programları (*devenv.exe*, *mstest.exe*, *mlm.exe*) için güvenlik duvarı özel durumlarını el ile eklemeniz gerekir.
 
 ## <a name="outgoing-connections"></a>Giden bağlantılar
 

@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 623623c6883146647cc8f0f3dc6c8f3fcab88289b4014c7ecf6f18b17c217e6f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: daa88d858af5b99beda41631c6c139be9aff425d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121243282"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025179"
 ---
 # <a name="writeline-activity-designer"></a>WriteLine Etkinlik Tasarımcısı
 
@@ -30,7 +30,7 @@ Etkinlik, <xref:System.Activities.Statements.WriteLine> belirtilen bir nesneye m
 
 ### <a name="using-the-writeline-activity-designer"></a>WriteLine Etkinlik Tasarımcısını Kullanma
 
-Araç Kutusunun Temel Öğeler **kategorisindeki** **WriteLine** etkinlik **tasarımcısına erişin.** **WriteLine etkinlik** tasarımcısı, **Araç** Kutusundan sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirilmelerinden sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.WriteLine> WriteLine değerine sahip <xref:System.Activities.Activity.DisplayName%2A> bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **WriteLine** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+Araç Kutusunun Temel Öğeler **kategorisindeki** **WriteLine** etkinlik **tasarımcısına erişin.** **WriteLine etkinlik** tasarımcısı, **Araç** Kutusundan sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirilmelerinden sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.WriteLine> WriteLine değerine <xref:System.Activities.Activity.DisplayName%2A> sahip bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **WriteLine** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-writeline-properties"></a>WriteLine Özellikleri
 
@@ -39,7 +39,7 @@ Aşağıdaki tablo, <xref:System.Activities.Statements.WriteLine> özellikleri g
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.WriteLine> adı. Varsayılan değer WriteLine'dır. kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.WriteLine.Text%2A>|Yanlış|Yazacak metin. Özelliğini ayarlamak için, **WriteLine** Visual Basic tasarımcısının **Metin** kutusuna veya özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.WriteLine.Text%2A>|Yanlış|Yazacak metin. Özelliğini ayarlamak için, **WriteLine** Visual Basic tasarımcısının **Metin** kutusuna veya özellik kılavuzuna bir metin ifadesi yazın.|
 |<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Yanlış|, <xref:System.IO.TextWriter> <xref:System.Activities.Statements.WriteLine> <xref:System.Activities.Statements.WriteLine.Text%2A> yazar. Varsayılan olarak konsol kullanılır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -9,17 +9,18 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2be8f4da963c21d9f7f68939421dd7d2d72d0b
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 0540c119cfd5b6f6a67b820c46e55539afe2e0244ee2e99db5891ba1d1f901a8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390118"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121231541"
 ---
 # <a name="model-your-app39s-architecture"></a>Uygulama mimarinizi&#39;modeli
-Yazılım sisteminizin veya uygulamanın kullanıcılarının ihtiyaçlarını karşılamaya yardımcı olmak için, yazılım sisteminizin veya Visual Studio genel yapısının ve davranışının açıklamasının bir parçası olarak Visual Studio'da model oluşturabilirsiniz. Modelleri kullanarak, tasarım boyunca kullanılan desenleri de açıkabilirsiniz. Bu modeller mevcut mimariyi anlamanıza, değişiklikleri tartışmanıza ve amaçlarınızı net bir şekilde ifade etmeye yardımcı olur.
+Yazılım sisteminizin veya uygulamanın kullanıcılarının ihtiyaçlarını karşılamaya yardımcı olmak için, yazılım sisteminizin veya Visual Studio genel yapısının ve davranışının açıklamasının bir parçası olarak Visual Studio'de modeller oluşturabilirsiniz. Modelleri kullanarak, tasarım boyunca kullanılan desenleri de açıkabilirsiniz. Bu modeller mevcut mimariyi anlamanıza, değişiklikleri tartışmanıza ve amaçlarınızı net bir şekilde ifade etmeye yardımcı olur.
 
  Bu özelliği destekleyen Visual Studio için bkz. Mimari ve [modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
@@ -30,7 +31,7 @@ Yazılım sisteminizin veya uygulamanın kullanıcılarının ihtiyaçlarını k
 
  Bir sistemin mimarisi iki bölüme ayrıl olabilir:
 
-- [Üst Düzey Tasarım](#Structure). Bu, ana bileşenleri ve her gereksinimi karşılamak için birbirleriyle nasıl etkileşim kur olduklarını açıklar. Sistem büyükse, her bileşenin nasıl daha küçük bileşenlerden oluşan bir tasarıma sahip olduğunu gösteren kendi üst düzey tasarımı olabilir.
+- [Üst Düzey Tasarım](#Structure). Bu, ana bileşenleri ve her gereksinimi karşılamak için birbirleriyle nasıl etkileşim kur olduklarını açıklar. Sistem büyükse, her bileşenin nasıl daha küçük bileşenlerden oluşan olduğunu gösteren kendi üst düzey tasarımı olabilir.
 
 - [Bileşenlerin tasarımları](#Patterns) boyunca kullanılan Tasarım Desenleri ve kuralları. Desen, programlama hedefine ulaşmak için belirli bir yaklaşımı açıklar. Bir tasarım boyunca aynı desenleri kullanarak, takımınız değişiklik yapma ve yeni yazılım geliştirme maliyetini düşürerek.
 
@@ -64,18 +65,18 @@ Yazılım sisteminizin veya uygulamanın kullanıcılarının ihtiyaçlarını k
 
   Gereksinimleri ve mimari modelleri ayrı tutmak, gereksinimleri kullanıcılarla tartışmayı kolaylaştırma konusunda faydalıdır. Ayrıca, gereksinimleri değiştirmeden tasarımı yeniden düzenlemenizi ve alternatif mimarileri göz önünde bulundurmanıza yardımcı olur.
 
-  Bir gereksinimlere veya mimari modele koymamız gereken ayrıntı miktarı, projenin ölçeğine ve ekibin boyutuna ve dağılımına bağlıdır. Kısa bir proje üzerinde yer alan küçük bir ekip, iş kavramlarının sınıf diyagramını ve bazı tasarım desenlerini çizmekten başka bir şey yapmak zorunda değildir; Birden fazla bölgeye dağıtılmış büyük bir projenin daha fazla ayrıntıya ihtiyacı olur.
+  Bir gereksinimlere veya mimari modele koymamız gereken ayrıntı miktarı, projenin ölçeğine ve ekibin boyutuna ve dağılımına bağlıdır. Kısa bir proje üzerinde küçük bir ekip, iş kavramlarının sınıf diyagramını ve bazı tasarım desenlerini çizmekten başka bir şey yapmak zorunda değildir; Birden fazla bölgeye dağıtılmış büyük bir projenin daha fazla ayrıntıya ihtiyacı olur.
 
 ## <a name="architectural-patterns"></a><a name="BigDecisions"></a> Mimari Desenler
  Geliştirmenin erken dönemleri için tasarımın bağlı olduğu başlıca teknolojileri ve öğeleri seçmeniz gerekir. Bu seçeneklerin hangi alanlarda olması gerektiğini şunlardır:
 
 - Veritabanı ile dosya sistemi arasındaki seçim ve ağa bağlı bir uygulama ile web istemcisi arasındaki seçim gibi temel teknoloji seçimleri.
 
-- Çerçeveler arasında seçim gibi çerçeve seçimleri Windows Workflow Foundation ADO.NET Entity Framework.
+- Windows Workflow Foundation veya ADO.NET Entity Framework.
 
-- Tümleştirme yöntemi seçenekleri, örneğin bir kurumsal hizmet veri aracı veya noktadan noktaya kanal arasında.
+- Tümleştirme yöntemi seçenekleri, örneğin bir kurumsal hizmet veri verisi veya noktadan noktaya kanal arasında.
 
-  Bu seçenekler genellikle ölçek ve esneklik gibi hizmet kalitesi gereksinimlerine göre belirlenir ve ayrıntılı gereksinimler bilinmeden önce bu tercihler edilebilir. Büyük bir sistemde, donanım ve yazılım yapılandırması kesinlikle birbiriyle ilişkilidir.
+  Bu seçenekler genellikle ölçek ve esneklik gibi hizmet kalitesi gereksinimlerine göre belirlenir ve ayrıntılı gereksinimler bilinmeden önce bu seçeneklerden biri olabilir. Büyük bir sistemde, donanım ve yazılım yapılandırması kesinlikle birbiriyle ilişkilidir.
 
   Sizin seçimleriniz, mimari modeli nasıl kullanabileceğinizi ve yorumlaymanizi etkiler. Örneğin, veritabanı kullanan bir sistemde, sınıf diyagramında ilişkiler veritabanındaki ilişkileri veya yabancı anahtarları temsil ederken, XML dosyalarını temel alan bir sistemde ilişkilendirmeler XPath kullanan çapraz başvuruları gösteriyor olabilir. Dağıtılmış bir sistemde, sıralı diyagramda yer alan iletiler bir kabloda iletileri temsil eder; kendi içinde bir uygulamada işlev çağrılarını temsil ediyor olabilir.
 

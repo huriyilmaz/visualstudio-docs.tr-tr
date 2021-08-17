@@ -7,15 +7,16 @@ ms.assetid: 0b61cdf7-75b7-4abd-aff2-7bd997717626
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d371384d70c6a6a7a57620839eca2c41c292d0b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1d2339ee7638fa6e3a4b1776abd61196cbe814cf075228b5d0eee651d89e70cc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922052"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121230982"
 ---
 # <a name="troubleshoot-performance-tools-issues"></a>Performans araçları sorunlarını giderme
 Profil Oluşturma Araçları kullandığınızda aşağıdaki sorunlardan biriyle karşılaşabilirsiniz:
@@ -31,7 +32,7 @@ Profil Oluşturma Araçları kullandığınızda aşağıdaki sorunlardan biriyl
 
  Bu sorun birkaç sorundan kaynaklanıyor olabilir:
 
-- Örnekleme veya .NET bellek yöntemi kullanılarak profili oluşturulmuş bir işlem, uygulamanın çalışmasını gerçekleştiren işlem haline gelen bir alt işlem başlatır. Örneğin, bazı uygulamalar, bir Windows uygulaması veya bir komut satırı uygulaması olarak başlatılıp başlatılmayacağını anlamak için komut satırını okur. Bir Windows uygulaması isteniyorsa, özgün işlem Windows uygulaması olarak yapılandırılmış yeni bir işlem başlatır ve ardından orijinal işlem çıkar. Profil Oluşturma Araçları alt işlemlere yönelik verileri otomatik olarak toplamadığından, hiçbir veri toplanmaz.
+- Örnekleme veya .NET bellek yöntemi kullanılarak profili oluşturulmuş bir işlem, uygulamanın çalışmasını gerçekleştiren işlem haline gelen bir alt işlem başlatır. örneğin, bazı uygulamalar, Windows bir uygulama olarak veya bir komut satırı uygulaması olarak başlatılıp başlatılmayacağını anlamak için komut satırını okur. Windows bir uygulama isteniyorsa, özgün işlem, Windows uygulama olarak yapılandırılmış yeni bir işlem başlatır ve ardından özgün işlem çıkar. Profil Oluşturma Araçları alt işlemlere yönelik verileri otomatik olarak toplamadığından, hiçbir veri toplanmaz.
 
      Bu durumda profil oluşturma verilerini toplamak için, profil oluşturucuyu, uygulamayı profil Oluşturucu ile başlatmak yerine alt işleme bağlayın. Daha fazla bilgi için bkz [. nasıl yapılır: performans araçlarını çalışan Işlemlere bağlama ve ayırma](../profiling/how-to-attach-and-detach-performance-tools-to-running-processes.md) ve [Iliştirme (VSPerfCmd)](../profiling/attach.md)
 

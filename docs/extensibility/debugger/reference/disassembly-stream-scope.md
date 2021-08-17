@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 88747624041c24cc0df498108eed9936527503250a722a80e27bc4aa6ab63340
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f33c8489746f857ebb7c9225af6dce73161edad5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378061"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073090"
 ---
 # <a name="disassembly_stream_scope"></a>DISASSEMBLY_STREAM_SCOPE
 Ayrık akışın kapsamını belirtir.
@@ -56,7 +56,7 @@ Kod bağlamını parçalara ayırarak bir istemcinin genellikle tek bir çağrı
 Kod bağlamının içerdiği işlevin birikerek biriktiri gerektiğini belirtir. Ayrık akışın [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) yöntemi tarafından döndürülen bir işlevi temsil ettiğini belirtir.
 
 `DSS_MODULE`\
-yöntemi tarafından `IDebugDisassemblyStream2::GetScope` döndürülen, disassembly akışının bir modülü temsil ettiğini belirtir.
+yöntemi tarafından `IDebugDisassemblyStream2::GetScope` döndürülen, ayrık akışın bir modülü temsil ettiğini belirtir.
 
 `DSS_ALL`\
 Adres alanı tamamının ayrımına göre belirtir.

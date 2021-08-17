@@ -1,5 +1,5 @@
 ---
-description: Bir sistem KIMLIĞI ya da bir GUID olabilecek işlem KIMLIĞINI belirtir.
+description: Sistem kimliği veya GUID olabilir işlem kimliğini belirtir.
 title: AD_PROCESS_ID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 4cb40d12-2e92-4f09-83f4-689928bd65b3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 479a30c85fe16830d49c3d44dc2daea4eed9f31c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 604c8c65ec149814f0a2439658e7a1dbc002c54f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094490"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073272"
 ---
 # <a name="ad_process_id"></a>AD_PROCESS_ID
-Bir sistem KIMLIĞI ya da bir GUID olabilecek işlem KIMLIĞINI belirtir.
+Sistem kimliği veya GUID olabilir işlem kimliğini belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,18 +51,18 @@ public struct AD_PROCESS_ID {
 
 ## <a name="members"></a>Üyeler
 `ProcessIdType`\
-[AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) numaralandırmasından, birleşimin nasıl yorumlanacağı `ProcessId` (veya yönetilen kod için, hangi yapının erişim üyesinin) belirtileceği belirten bir değer.
+Bir AD_PROCESS_ID_TYPE [(veya,](../../../extensibility/debugger/reference/ad-process-id-type.md) erişilen yapının üyesi olan yönetilen kod için) nasıl yorumlandıracaklarını belirten bir `ProcessId` değerdir.
 
 `dwProcessId`\
-Sistemden bir değer olarak işlem KIMLIĞI.
+Sistemden bir değer olarak işlem kimliği.
 
 `guidProcessId`\
-GUID olarak işlem KIMLIĞI.
+GUID olarak işlem kimliği.
 
-Dwkullanılmamış doldurma.
+dwUnused Doldurma.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı aşağıdaki yöntemlere geçirilir:
+Bu yapı aşağıdaki yöntemlere geçirildi:
 
 - [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)
 
@@ -78,11 +79,11 @@ Ve aşağıdaki yöntemlerden döndürülür:
 - [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

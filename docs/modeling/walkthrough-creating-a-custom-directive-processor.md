@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: Özel Yönerge İşlemcisi Oluşturma'
-description: Metin şablonlarınızı özelleştirmek için özel yönerge işlemcileri yazmak üzere Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+description: metin şablonlarınızı özelleştirmek için özel yönerge işlemcileri yazmak üzere Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,17 +10,18 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: e23c8de467cc45abf6fa9f61dfb29dd6c5f1d9cc
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 816b99dfc80aa2436d22dc1df270301143bfdf23
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388249"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055256"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>İzlenecek yol: Özel Yönerge İşlemcisi Oluşturma
 
@@ -44,7 +45,7 @@ Bu kılavuzda, özel bir yönerge işlemcisi oluşturursunuz. Bir XML dosyasın�
 
 `<#@ CoolDirective Processor="CustomDirectiveProcessor" FileName="<Your Path>DocFile.xml" #>`
 
-Özel yönerge işlemcisi, değişkeni ve özelliği oluşturulan dönüştürme sınıfına ekler. Yazdığınız yönerge, <xref:System.CodeDom> altyapının oluşturulan dönüştürme sınıfına eklediği kodu oluşturmak için sınıflarını kullanır. <xref:System.CodeDom>Sınıflar, yönergenin parametresinde belirtilen dile bağlı olarak, Visual C# veya Visual Basic kod oluşturur `language` `template` . Yönerge işlemcisinin dili ve yönerge işlemcisine erişen metin şablonunun dilinin eşleşmesi gerekmez.
+Özel yönerge işlemcisi, değişkeni ve özelliği oluşturulan dönüştürme sınıfına ekler. Yazdığınız yönerge, <xref:System.CodeDom> altyapının oluşturulan dönüştürme sınıfına eklediği kodu oluşturmak için sınıflarını kullanır. <xref:System.CodeDom>sınıflar, yönergenin parametresinde belirtilen dile bağlı olarak, Visual C# veya Visual Basic kod oluşturur `language` `template` . Yönerge işlemcisinin dili ve yönerge işlemcisine erişen metin şablonunun dilinin eşleşmesi gerekmez.
 
 Yönergenin oluşturduğu kod aşağıdaki gibi görünür:
 
@@ -82,7 +83,7 @@ End Property
 1. Visual Studio'da, CustomDP adlı bir C# veya Visual Basic kitaplık projesi oluşturun.
 
     > [!NOTE]
-    > Yönerge işlemcisini birden fazla bilgisayara yüklemek isterseniz, bir Visual Studio uzantısı (VSıX) projesi kullanmak ve uzantıya bir. pkgdef dosyası eklemek daha iyidir. Daha fazla bilgi için bkz. [özel yönerge Işlemcisi dağıtma](../modeling/deploying-a-custom-directive-processor.md).
+    > yönerge işlemcisini birden fazla bilgisayara yüklemek isterseniz, Visual Studio extension (vsıx) projesi kullanmak ve uzantıya bir. pkgdef dosyası eklemek daha iyidir. Daha fazla bilgi için bkz. [özel yönerge Işlemcisi dağıtma](../modeling/deploying-a-custom-directive-processor.md).
 
 2. Bu derlemelere başvurular ekleyin:
 
@@ -601,7 +602,7 @@ End Property
     End Namespace
     ```
 
-4. Yalnızca Visual Basic için, **Proje** menüsünü açın ve **CustomDP özellikleri**' ne tıklayın. **Uygulama** sekmesinde, **kök ad alanında** varsayılan değeri silin `CustomDP` .
+4. yalnızca Visual Basic için **Project** menüsünü açın ve **customdp özellikleri**' ne tıklayın. **Uygulama** sekmesinde, **kök ad alanında** varsayılan değeri silin `CustomDP` .
 
 5. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
@@ -613,10 +614,10 @@ Projeyi derleyin. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
 ## <a name="register-the-directive-processor"></a>Yönerge Işlemcisini kaydetme
 
-Visual Studio 'da bir metin şablonundan bir yönergeyi çağırabilmeniz için, yönerge işlemcisi için bir kayıt defteri anahtarı eklemeniz gerekir.
+Visual Studio bir metin şablonundan bir yönergeyi çağırabilmeniz için, yönerge işlemcisi için bir kayıt defteri anahtarı eklemeniz gerekir.
 
 > [!NOTE]
-> Yönerge işlemcisini birden fazla bilgisayara yüklemek istiyorsanız derlemeinizle birlikte bir *. pkgdef* dosyası Içeren bir Visual Studio UZANTıSı (VSIX) tanımlanması daha iyidir. Daha fazla bilgi için bkz. [özel yönerge Işlemcisi dağıtma](../modeling/deploying-a-custom-directive-processor.md).
+> yönerge işlemcisini birden fazla bilgisayara yüklemek istiyorsanız derlemeinizle birlikte bir *. pkgdef* dosyası içeren bir Visual Studio uzantısı (vsıx) tanımlanması daha iyidir. Daha fazla bilgi için bkz. [özel yönerge Işlemcisi dağıtma](../modeling/deploying-a-custom-directive-processor.md).
 
 Yönerge işlemcilerinin anahtarları, kayıt defterinde aşağıdaki konumda bulunur:
 
@@ -637,7 +638,7 @@ Bu bölümde, özel bir yönerge işlemciniz için aynı konumda kayıt defterin
 
 ### <a name="to-add-a-registry-key-for-the-directive-processor"></a>Yönerge işlemcisi için bir kayıt defteri anahtarı eklemek için
 
-1. `regedit`Başlat menüsünü veya komut satırını kullanarak komutu çalıştırın.
+1. `regedit`Başlat menüsü veya komut satırını kullanarak komutu çalıştırın.
 
 2. **\\ \* 0 \ Texttemplating\directiveiþlemcileriHKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio** konumuna göz atın ve düğüme tıklayın.
 
@@ -680,7 +681,7 @@ Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının b
 
 ### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>Yönerge işlemcisini sınamada kullanmak için bir XML dosyası oluşturmak için
 
-1. Herhangi bir metin düzenleyicisini kullanarak *DocFile.xml* adlı bir dosya oluşturun (örneğin, Not defteri).
+1. herhangi bir metin düzenleyicisini kullanarak *DocFile.xml* adlı bir dosya oluşturun (örneğin, Not Defteri).
 
     > [!NOTE]
     > Bu dosyayı herhangi bir konumda (örneğin, *C:\Test\DocFile.xml*) oluşturabilirsiniz.
@@ -834,7 +835,7 @@ Bu örnekte, metin şablonu yönergeyi çağırır ve bir sınıf dosyasının b
 
 1. **Çözüm Gezgini**' de, TestDP.tt ' a sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
-   Visual Basic kullanıcılar için, TestDP.txt varsayılan olarak **Çözüm Gezgini** görünmeyebilir. Projeye atanan tüm dosyaları görüntülemek için, **Proje** menüsünü açın ve **tüm dosyaları göster**' e tıklayın.
+   Visual Basic kullanıcılar için, TestDP.txt varsayılan olarak **Çözüm Gezgini** görünmeyebilir. projeye atanan tüm dosyaları görüntülemek için **Project** menüsünü açın ve **tüm dosyaları göster**' e tıklayın.
 
 2. **Çözüm Gezgini**, TestDP.txt düğümünü genişletin ve ardından TestDP.txt çift tıklayarak düzenleyicide açın.
 

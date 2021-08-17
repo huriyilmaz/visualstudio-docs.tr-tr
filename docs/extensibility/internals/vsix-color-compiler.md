@@ -11,15 +11,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b30742061a9927ee8e7123c56a5d86b9cf72ff706dad04b9650a39b77a6350e0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1c724dae82bb8f7f05c83c96d1c331d72eac0abd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121238313"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042029"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
-Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temalarının renklerini temsil eden bir .xml dosyası alan ve bu renklerin Visual Studio'de kullanıla bir .pkgdef dosyasına kapatan bir konsol uygulamasıdır. Farklı dosyalar arasındaki farkları karşılaştırmak .xml, bu araç kaynak denetiminde özel renkleri yönetmek için yararlıdır. Derlemenin çıktısı geçerli bir .pkgdef dosyası olacak şekilde derleme ortamlarına da bağlanabilir.
+Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temalarının renklerini temsil eden bir .xml dosyası alan ve bu renklerin Visual Studio'de kullanıla bir .pkgdef dosyasına kapatan bir konsol uygulamasıdır. Farklı dosyalar arasındaki farkları karşılaştırmak .xml, bu araç kaynak denetiminde özel renkleri yönetmek için kullanışlıdır. Derlemenin çıktısı geçerli bir .pkgdef dosyası olacak şekilde derleme ortamlarına da bağlanabilir.
 
  **Tema XML şeması**
 
@@ -84,7 +84,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
  **Renk**
 
- öğesi, \<Color> bir bileşen veya kullanıcı arabiriminin durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State] olur. Yedekli olduğu için "renk" sözcüğü kullanma. Renk, öğe türünü ve rengin uygulanacak olduğu durumları veya "durum"ları net bir şekilde belirtmalıdır. Renk boş olamaz ve bir ve öğesinin bir veya her ikisini birden \<Background> \<Foreground> içermesi gerekir. Renk öğeleri şu şekilde tanımlanır:
+ öğesi, \<Color> bir bileşen veya kullanıcı arabiriminin durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State] olur. Yedekli olduğu için "renk" sözcüğü kullanma. Renk, öğe türünü ve rengin uygulanacak olduğu durumları veya "durumu" açıkça belirtmalıdır. Renk boş olamaz ve bir ve öğesinin bir veya her ikisini birden \<Background> \<Foreground> içermesi gerekir. Renk öğeleri şu şekilde tanımlanır:
 
 ```xml
 <Color Name="name">

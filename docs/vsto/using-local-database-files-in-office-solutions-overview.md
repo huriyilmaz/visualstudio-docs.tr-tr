@@ -1,6 +1,6 @@
 ---
 title: Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış
-description: Office çözümünüzdeki SQL Server Express (. mdf) dosya veya Microsoft Office erişim (. mdb) dosyası gibi bir veritabanı dosyasını nasıl kullanabileceğinizi öğrenin.
+description: Office çözümünüzde SQL Server Express (. mdf) dosyası veya Microsoft Office erişim (. mdb) dosyası gibi bir veritabanı dosyasını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 857038700a29f423250f006e743152bceea43c14
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 53c3124a6232271ae0f3759b695e7b07bf7b582ca16c741a9fed11b1b784ec78
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838243"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121226069"
 ---
 # <a name="use-local-database-files-in-office-solutions-overview"></a>Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış
-  Office çözümünüzde SQL Server Express (*. mdf*) dosyası veya Microsoft Office erişim (*. mdb*) dosyası gibi bir veritabanı dosyası ekleyebilirsiniz. Bu, son kullanıcıların, örneğin tek bir bilgisayarda kullanılan yerel bir envanter çözümünde, merkezi bir veritabanının saklanması gerekmediği durumlarda yerel bir veritabanını korumalarını sağlar.
+  Office çözümünüze SQL Server Express (*. mdf*) dosyası veya Microsoft Office erişim (*. mdb*) dosyası gibi bir veritabanı dosyası ekleyebilirsiniz. Bu, son kullanıcıların, örneğin tek bir bilgisayarda kullanılan yerel bir envanter çözümünde, merkezi bir veritabanının saklanması gerekmediği durumlarda yerel bir veritabanını korumalarını sağlar.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -37,10 +38,10 @@ ms.locfileid: "99838243"
  Çözümünüzü bir sunucuya dağıtır ve ardından belgeyi her bir son kullanıcıya dağıtırsanız, veritabanı dosyasını da el ile dağıtmanız ve belgeye göre aynı konuma kurmanız gerekir. Bu, veritabanı dosyasını da taşımadığı takdirde son kullanıcının belgeyi veya bilgisayarındaki yeni bir konuma taşıyamayacağı anlamına gelir.
 
 ## <a name="local-database-files-and-caching-the-dataset"></a>Yerel veritabanı dosyaları ve veri kümesini önbelleğe alma
- Excel ve Microsoft Office Word 'Ün Microsoft Office belge düzeyi çözümlerinde, DataSet örneğini özniteliğiyle işaretleyerek belgedeki veri kümelerini önbelleğe alabilirsiniz <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> . **Veri kaynağı Yapılandırma Sihirbazı**'nı kullanarak veritabanı dosyasını projenize eklediğinizde, bir türü belirtilmiş veri kümesi projenize otomatik olarak eklenir. <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>Veriler kullanıcının bilgisayarında zaten yerel olduğundan, bu veri kümesine uygulanması nadiren gereklidir. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
+ Microsoft Office Excel ve Word Microsoft Office için belge düzeyi çözümlerinde, dataset örneğini özniteliğiyle işaretleyerek belgedeki veri kümelerini önbelleğe alabilirsiniz <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> . **Veri kaynağı Yapılandırma Sihirbazı**'nı kullanarak veritabanı dosyasını projenize eklediğinizde, bir türü belirtilmiş veri kümesi projenize otomatik olarak eklenir. <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>Veriler kullanıcının bilgisayarında zaten yerel olduğundan, bu veri kümesine uygulanması nadiren gereklidir. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
 - [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)

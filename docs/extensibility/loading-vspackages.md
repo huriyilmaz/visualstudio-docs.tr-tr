@@ -1,6 +1,6 @@
 ---
 title: VSPackages yükleniyor | Microsoft Docs
-description: Performansı artırmak için mümkün olduğunda kullanılan Gecikmeli yükleme dahil olmak üzere Visual Studio 'da VSPackages yükleme hakkında bilgi edinin.
+description: performansı artırmak için mümkün olduğunda kullanılan gecikmeli yükleme de dahil olmak üzere Visual Studio vspackages yükleme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,20 +11,21 @@ ms.assetid: f4c3dcea-5051-4065-898f-601269649d92
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39a58bcbad79191f54a7b4eeb2aa12e90d8a6e44
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d56192fed9138e6edd8f18753893b195c174c5b9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073293"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041730"
 ---
 # <a name="load-vspackages"></a>VSPackages yükleme
-VSPackages, yalnızca işlevleri gerekli olduğunda Visual Studio 'ya yüklenir. Örneğin, Visual Studio bir proje fabrikası veya VSPackage 'ın uyguladığı bir hizmet kullandığında VSPackage yüklenir. Bu özellik Gecikmeli yükleme olarak adlandırılır ve performansı artırmak için kullanılır.
+vspackages, yalnızca işlevleri gerekli olduğunda Visual Studio yüklenir. örneğin, Visual Studio bir proje fabrikası veya vspackage 'ın uyguladığı bir hizmeti kullandığında vspackage yüklenir. Bu özellik Gecikmeli yükleme olarak adlandırılır ve performansı artırmak için kullanılır.
 
 > [!NOTE]
-> Visual Studio, VSPackage 'ı yüklemeden VSPackage tarafından sunulan komutlar gibi belirli VSPackage bilgilerini belirleyebilir.
+> Visual Studio, vspackage 'ı yüklemeden, vspackage tarafından sunulan komutlar gibi belirli vspackage bilgilerini belirleyebilir.
 
  VSPackages, belirli bir kullanıcı arabirimi (UI) bağlamında, örneğin bir çözüm açık olduğunda, tekrar yükleme olarak ayarlanabilir. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>Özniteliği bu bağlamı ayarlar.
 

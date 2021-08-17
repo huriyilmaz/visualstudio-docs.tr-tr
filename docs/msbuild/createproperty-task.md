@@ -1,6 +1,6 @@
 ---
-title: CreateProperty görevi | Microsoft Docs
-description: Özellikleri geçirilen değerlerle doldurmak için MSBuild CreateProperty görevini kullanın, değerlerin bir özellikten veya dizeden diğerine kopyalanmasını sağlar.
+title: CreateProperty Task | Microsoft Docs
+description: CreateProperty MSBuild kullanarak değerleri geçirilen değerlerle doldurmak ve değerlerin bir özellik veya dizeden diğerine kopyalanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,35 +18,36 @@ ms.assetid: fbc31a88-62d4-43d2-b739-68ef3fac38f5
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ea412f67629998eab035b8cca79111659ab8a0c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be38b53074bb8f290cd9cd865d60513712be5505
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901370"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054840"
 ---
 # <a name="createproperty-task"></a>CreateProperty görevi
 
-Özellikleri geçirilen değerlerle doldurur. Bu, değerlerin bir özellikten veya dizeden diğerine kopyalanmasını sağlar.
+Özellikleri geçirilen değerlerle doldurmak. Bu, değerlerin bir özellikten veya dizeden diğerine kopyalanır.
 
 ## <a name="attributes"></a>Öznitelikler
 
-Aşağıdaki tablo, görevin parametrelerini açıklar `CreateProperty` .
+Aşağıdaki tabloda görevin parametreleri açık `CreateProperty` almaktadır.
 
 | Parametre | Açıklama |
 |------------------| - |
-| `Value` | İsteğe bağlı `String` çıkış parametresi.<br /><br /> Yeni özelliğe kopyalanacak değeri belirtir. |
-| `ValueSetByTask` | İsteğe bağlı `String` çıkış parametresi.<br /><br /> Parametresiyle aynı değeri içerir `Value` . Bu parametreyi yalnızca, çıktılar güncel olduğundan, kapsayan hedefi atlayarak MSBuild tarafından ayarlanan çıkış özelliğini kullanmaktan kaçınmak istediğinizde kullanın. |
+| `Value` | İsteğe `String` bağlı çıkış parametresi.<br /><br /> Yeni özelliğine kopya eklenecek değeri belirtir. |
+| `ValueSetByTask` | İsteğe `String` bağlı çıkış parametresi.<br /><br /> parametresiyle aynı değeri `Value` içerir. Bu parametreyi yalnızca çıkış özelliğinin MSBuild çıkışlar güncel olduğundan kapsayan hedefi atlarken bu parametreyi kullanın. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `CreateProperty` `NewFile` ve özelliğinin değerlerinin birleşimini kullanarak özelliğini oluşturmak için görevini kullanır `SourceFilename` `SourceFileExtension` .
+Aşağıdaki örnek, `CreateProperty` ve özelliğinin `NewFile` değerlerinin birleşimini kullanarak özelliğini oluşturmak için `SourceFilename` görevini `SourceFileExtension` kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -70,7 +71,7 @@ Aşağıdaki örnek, `CreateProperty` `NewFile` ve özelliğinin değerlerinin b
 </Project>
 ```
 
-Projeyi çalıştırdıktan sonra `NewFile` özelliğin değeri *Module1. vb*' dir.
+Projeyi çalıştırdıktan sonra özelliğinin değeri `NewFile` *Module1.vb olur.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

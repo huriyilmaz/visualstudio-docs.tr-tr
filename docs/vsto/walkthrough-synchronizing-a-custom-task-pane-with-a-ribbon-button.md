@@ -23,21 +23,22 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5e7fe64d2df3298d53f567d11fe765280843e2ce
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: ce9f00bf31013450c25dd3bac6325e7288be50a2b866989fd3b0b9d301b30410
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826791"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121225757"
 ---
 # <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>İzlenecek yol: özel görev bölmesini Şerit düğmesi ile senkronize etme
-  Bu izlenecek yol, Şeritteki iki durumlu düğmeye tıklayarak kullanıcıların gizleyebileceğiniz veya görüntüleyeceği özel bir görev bölmesi oluşturmayı gösterir. Microsoft Office uygulamalar, kullanıcıların özel görev bölmelerini göstermek veya gizlemek için varsayılan bir yol sağlamadığından, bir düğme gibi her zaman bir kullanıcı arabirimi (UI) öğesi oluşturmalısınız.
+  Bu izlenecek yol, Şeritteki iki durumlu düğmeye tıklayarak kullanıcıların gizleyebileceğiniz veya görüntüleyeceği özel bir görev bölmesi oluşturmayı gösterir. Microsoft Office uygulamalar, kullanıcıların özel görev bölmelerini göstermek veya gizlemek için varsayılan bir yol sağlamadığından, bir düğme gibi her zaman bir kullanıcı arabirimi (uı) öğesi oluşturmalısınız.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
- Bu izlenecek yol Excel 'i özel olarak kullanıyor olsa da, izlenecek yol tarafından gösterilen kavramlar yukarıda listelenen tüm uygulamalar için geçerlidir.
+ bu izlenecek yol özellikle Excel kullanıyor olsa da, izlenecek yol tarafından gösterilen kavramlar yukarıda listelenen tüm uygulamalar için geçerlidir.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -48,7 +49,7 @@ ms.locfileid: "107826791"
 - İki durumlu düğmeyi özel görev bölmesiyle eşitleme.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -58,20 +59,20 @@ ms.locfileid: "107826791"
 - Microsoft Excel veya Microsoft [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] .
 
 ## <a name="create-the-add-in-project"></a>Eklenti projesi oluşturma
- Bu adımda, Excel için bir VSTO eklentisi projesi oluşturacaksınız.
+ bu adımda, Excel için VSTO bir eklenti projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Excel eklentisi proje şablonunu kullanarak **SynchronizeTaskPaneAndRibbon** adlı bir Excel eklentisi projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Excel eklentisi proje şablonunu kullanarak, **SynchronizeTaskPaneAndRibbon** adlı bir Excel eklentisi projesi oluşturun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn. cs** veya **ThisAddIn. vb** kod dosyasını açar ve **SynchronizeTaskPaneAndRibbon** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="add-a-toggle-button-to-the-ribbon"></a>Şerit 'e iki durumlu düğme Ekle
- Office uygulaması tasarım yönergelerinden biri, kullanıcıların her zaman Office uygulaması kullanıcı arabirimi denetimine sahip olması gerekir. Kullanıcıların özel görev bölmesini denetlemesine olanak tanımak için, görev bölmesini gösteren ve gizleyen bir şerit iki durumlu düğme ekleyebilirsiniz. İki durumlu düğme oluşturmak için projeye **Şerit (görsel Tasarımcı)** öğesi ekleyin. Tasarımcı denetimleri eklemenize ve konumlandıramanıza, denetim özelliklerini ayarlamanıza ve denetim olaylarını işleymenize yardımcı olur. Daha fazla bilgi için bkz. [Şerit Tasarımcısı](../vsto/ribbon-designer.md).
+ Office uygulama tasarım yönergelerinden biri, kullanıcıların Office uygulama kullanıcı arabirimine her zaman denetim sahibi olması gerekir. Kullanıcıların özel görev bölmesini denetlemesine olanak tanımak için, görev bölmesini gösteren ve gizleyen bir şerit iki durumlu düğme ekleyebilirsiniz. İki durumlu düğme oluşturmak için projeye **Şerit (görsel Tasarımcı)** öğesi ekleyin. Tasarımcı denetimleri eklemenize ve konumlandıramanıza, denetim özelliklerini ayarlamanıza ve denetim olaylarını işleymenize yardımcı olur. Daha fazla bilgi için bkz. [Şerit Tasarımcısı](../vsto/ribbon-designer.md).
 
 ### <a name="to-add-a-toggle-button-to-the-ribbon"></a>Şerit 'e iki durumlu düğme eklemek için
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+1. **Project** menüsünde, **yeni öğe ekle**' ye tıklayın.
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** öğesini seçin.
 
@@ -83,7 +84,7 @@ ms.locfileid: "107826791"
 
 5. **Özellikler** penceresinde, **etiket** özelliğini **görev bölmesi Yöneticisi** olarak ayarlayın.
 
-6. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden, **görev bölmesi Yöneticisi** grubuna bir **ToggleButton** sürükleyin.
+6. **araç kutusunun** **Office şerit denetimleri** sekmesinden, **görev bölmesi yöneticisi** grubuna bir **ToggleButton** sürükleyin.
 
 7. **ToggleButton1** tıklayın.
 
@@ -94,7 +95,7 @@ ms.locfileid: "107826791"
 
 ### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>Özel görev bölmesinin kullanıcı arabirimini tasarlamak için
 
-1. **Proje** menüsünde **Kullanıcı denetimi Ekle**' ye tıklayın.
+1. **Project** menüsünde **kullanıcı denetimi ekle**' ye tıklayın.
 
 2. **Yeni öğe Ekle** iletişim kutusunda, Kullanıcı denetiminin adını **TaskPaneControl** olarak değiştirin ve **Ekle**' ye tıklayın.
 
@@ -103,11 +104,11 @@ ms.locfileid: "107826791"
 3. **Araç kutusunun** **ortak denetimler** sekmesinden kullanıcı denetimine bir **TextBox** denetimi sürükleyin.
 
 ## <a name="create-the-custom-task-pane"></a>Özel görev bölmesini oluşturma
- VSTO eklentisi başladığında özel görev bölmesini oluşturmak için, <xref:Microsoft.Office.Tools.AddIn.Startup> VSTO eklentisinin olay işleyicisindeki görev bölmesine Kullanıcı denetimini ekleyin. Varsayılan olarak, özel görev bölmesi görünür olmayacaktır. Bu izlenecek yolda daha sonra, Kullanıcı Şerit 'e eklediğiniz iki durumlu düğmeye tıkladığında görev bölmesini görüntüleyecek veya gizleyecek kodu ekleyeceksiniz.
+ VSTO eklentisi başlatıldığında özel görev bölmesini oluşturmak için, <xref:Microsoft.Office.Tools.AddIn.Startup> VSTO eklentisinin olay işleyicisinde görev bölmesine kullanıcı denetimini ekleyin. Varsayılan olarak, özel görev bölmesi görünür olmayacaktır. Bu izlenecek yolda daha sonra, Kullanıcı Şerit 'e eklediğiniz iki durumlu düğmeye tıkladığında görev bölmesini görüntüleyecek veya gizleyecek kodu ekleyeceksiniz.
 
 ### <a name="to-create-the-custom-task-pane"></a>Özel görev bölmesini oluşturmak için
 
-1. **Çözüm Gezgini**, **Excel**' i genişletin.
+1. **Çözüm Gezgini**' de **Excel**' ı genişletin.
 
 2. **ThisAddIn. cs** veya **ThisAddIn. vb** öğesine sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
@@ -138,7 +139,7 @@ ms.locfileid: "107826791"
 
 1. Şerit tasarımcısında **görev bölmesini göster** iki durumlu düğmesine çift tıklayın.
 
-     Visual Studio, `toggleButton1_Click` <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> iki durumlu düğmenin olayını işleyen adlı bir olay işleyicisini otomatik olarak oluşturur. Visual Studio Ayrıca kod düzenleyicisinde *MyRibbon. cs* veya *MyRibbon. vb* dosyasını açar.
+     Visual Studio `toggleButton1_Click` , <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> iki durumlu düğmenin olayını işleyen adlı bir olay işleyicisini otomatik olarak oluşturur. Visual Studio ayrıca kod düzenleyicisinde *myribbon. cs* veya *myribbon. vb* dosyasını açar.
 
 2. `toggleButton1_Click`Olay işleyicisini aşağıdaki kodla değiştirin. Kullanıcı iki durumlu düğmeye tıkladığında, bu kod geçiş düğmesine basıldığında veya basılmamış olmasına bağlı olarak özel görev bölmesini görüntüler veya gizler.
 
@@ -146,13 +147,13 @@ ms.locfileid: "107826791"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs" id="Snippet5":::
 
 ## <a name="test-the-add-in"></a>Eklentiyi test etme
- Projeyi çalıştırdığınızda, Excel özel görev bölmesini görüntülemeden açılır. Kodu test etmek için Şeritteki iki durumlu düğmeye tıklayın.
+ projeyi çalıştırdığınızda, Excel özel görev bölmesini görüntülemeden açılır. Kodu test etmek için Şeritteki iki durumlu düğmeye tıklayın.
 
 ### <a name="to-test-your-vsto-add-in"></a>VSTO eklentisini test etmek için
 
 1. Projenizi çalıştırmak için **F5** tuşuna basın.
 
-     Excel 'in açıldığını ve şeritte **Eklentiler sekmesinin göründüğünü** onaylayın.
+     Excel açıldığını ve şeritte **eklentiler** sekmesi göründüğünü onaylayın.
 
 2. Şeritteki **Eklentiler** sekmesine tıklayın.
 
@@ -167,15 +168,15 @@ ms.locfileid: "107826791"
 ## <a name="next-steps"></a>Sonraki adımlar
  Aşağıdaki konulardan özel görev bölmeleri oluşturma hakkında daha fazla bilgi edinebilirsiniz:
 
-- Farklı bir uygulama için VSTO eklentisi içinde özel bir görev bölmesi oluşturun. Özel görev bölmelerini destekleyen uygulamalar hakkında daha fazla bilgi için bkz. [özel görev bölmeleri](../vsto/custom-task-panes.md).
+- farklı bir uygulama için VSTO eklenti içinde özel bir görev bölmesi oluşturun. Özel görev bölmelerini destekleyen uygulamalar hakkında daha fazla bilgi için bkz. [özel görev bölmeleri](../vsto/custom-task-panes.md).
 
 - Bir uygulamayı özel görev bölmesinden otomatikleştirin. Daha fazla bilgi için bkz. [Izlenecek yol: uygulamayı özel görev bölmesinden otomatikleştirme](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md).
 
-- Outlook 'ta açılan her e-posta iletisi için özel bir görev bölmesi oluşturun. Daha fazla bilgi için bkz. [Izlenecek yol: Outlook 'ta e-posta iletileriyle özel görev bölmeleri görüntüleme](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).
+- Outlook ' de açılan her e-posta iletisi için özel bir görev bölmesi oluşturun. Daha fazla bilgi için bkz. [Izlenecek yol: Outlook e-posta iletileriyle özel görev bölmeleri görüntüleme](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Özel görev bölmeleri](../vsto/custom-task-panes.md)
 - [Nasıl yapılır: uygulamaya özel görev bölmesi ekleme](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 - [İzlenecek yol: bir uygulamayı özel görev bölmesinden otomatikleştirme](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)
-- [İzlenecek yol: Outlook 'ta e-posta iletileriyle özel görev bölmelerini görüntüleme](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)
+- [İzlenecek yol: Outlook 'da e-posta iletileriyle özel görev bölmelerini görüntüleme](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)
 - [Şerite genel bakış](../vsto/ribbon-overview.md)

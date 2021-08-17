@@ -1,6 +1,6 @@
 ---
 title: ConvertToAbsolutePath görevi | Microsoft Docs
-description: Göreli bir yolu veya başvuruyu mutlak bir yola dönüştürmek için MSBuild ConvertToAbsolutePath görevini kullanın.
+description: göreli bir yolu veya başvuruyu mutlak bir yola dönüştürmek için MSBuild ConvertToAbsolutePath görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: f1af2cb8-b4ef-4a72-be80-22fa526c4491
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c0529578d97ddbeaff4ec999329626fbf951094
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0579586cbc1a86c13833d5eb97765b68449390c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922550"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054983"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath görevi
 

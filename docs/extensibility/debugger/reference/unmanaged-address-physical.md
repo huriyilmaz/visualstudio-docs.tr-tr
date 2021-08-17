@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b9c9b3b0759d5a1831525708b5ae4915d063ca801a9e2c998ccaa0d1655b788e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e2abfd4bd36ef8e3f278c6df610cd7bb495c36ab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388896"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087372"
 ---
 # <a name="unmanaged_address_physical"></a>UNMANAGED_ADDRESS_PHYSICAL
 Bu yapı bir fiziksel adresi temsil eder.

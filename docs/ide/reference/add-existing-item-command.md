@@ -13,14 +13,15 @@ ms.assetid: 41f56131-d4c7-4f81-83b7-bdac713ea870
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 43c9e7d5947796bb1598bf9dc02420b31e43d167
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81260e9a6f3f164a54870c0850cf598ac58295772d65eb7e6c489095a2899f00
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933836"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121232763"
 ---
 # <a name="add-existing-item-command"></a>Varolan Öğeyi Ekle Komutu
 Geçerli çözüme var olan bir dosyayı ekler ve açar.
@@ -57,7 +58,7 @@ Bu örnek, Form1. frm dosyasını geçerli çözüme ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

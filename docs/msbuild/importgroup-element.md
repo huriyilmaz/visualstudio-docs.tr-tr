@@ -1,6 +1,6 @@
 ---
 title: ImportGroup öğesi | Microsoft Docs
-description: MSBuild 'in, isteğe bağlı bir koşul altında gruplanmış bir Içeri aktarma öğeleri koleksiyonu içermesi için ImportGroup öğesini nasıl kullandığını öğrenin.
+description: MSBuild, isteğe bağlı bir koşul altında gruplanmış bir içeri aktarma öğeleri koleksiyonu içeren ımporgroup öğesini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -16,19 +16,20 @@ ms.assetid: dac3fa2d-6678-4017-af35-93686f53f302
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e5ece72d83dd530a855d583ce061a22554d45a5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 883285c2178dce3c017ac8ea1503b402e6bbebcca3c8c62f924572dd29ba4ea0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914089"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443340"
 ---
 # <a name="importgroup-element"></a>ImportGroup öğesi
 
   
-`Import`İsteğe bağlı bir koşul altında gruplandırılan öğelerin bir koleksiyonunu içerir. Daha fazla bilgi için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
+`Import`İsteğe bağlı bir koşul altında gruplandırılan öğelerin bir koleksiyonunu içerir. Daha fazla bilgi için bkz. [Import öğesi (MSBuild)](../msbuild/import-element-msbuild.md).
 
 ```xml
 <Project>
@@ -58,7 +59,7 @@ ms.locfileid: "99914089"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[İçeri Aktarma](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.|
+|[İçeri Aktar](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -82,5 +83,5 @@ ms.locfileid: "99914089"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Öğeler](../msbuild/msbuild-items.md)

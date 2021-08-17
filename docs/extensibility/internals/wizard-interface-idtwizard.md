@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08a1ec6e79624d3f1eb74f9b5251a73523a998c739c7ea215e3622643c5b9926
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: af87757d96097708828ebbdcb017ddf0627ed6e4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359155"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041795"
 ---
 # <a name="wizard-interface-idtwizard"></a>Sihirbaz Arabirimi (IDTWizard)
 Tümleşik geliştirme ortamı (IDE), <xref:EnvDTE.IDTWizard> sihirbazları ile iletişim kurmak için arabirimini kullanır. Sihirbazlar IDE 'ye yüklenebilmek için bu arabirimi uygulamalıdır.

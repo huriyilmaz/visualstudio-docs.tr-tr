@@ -1,6 +1,6 @@
 ---
 description: Başvuru türünü ayarlar.
-title: 'IDebugReference2:: SetReferenceType | Microsoft Docs'
+title: IDebugReference2::SetReferenceType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: 5854a172-ea82-481c-97d9-c7fc16923d44
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b3faaa31d277f2966a5975fe31f59fd12cd8c355
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 68e9a400c1f958bdd0f4b9601a5caab641c5ec1e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075815"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087515"
 ---
 # <a name="idebugreference2setreferencetype"></a>IDebugReference2::SetReferenceType
 Başvuru türünü ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
@@ -42,7 +43,7 @@ int SetReferenceType (
 
 ## <a name="parameters"></a>Parametreler
 `dwRefType`\
-'ndaki [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) numaralandırmasından başvuru türünü belirten bir değer.
+[in] Başvuru türünü [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) bir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

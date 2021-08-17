@@ -1,6 +1,6 @@
 ---
-description: Bu genel parametrenin dizinini alır.
-title: 'Idebuggenericparamfield:: GetIndex | Microsoft Docs'
+description: Bu genel parametrenin dizinini alan.
+title: IDebugGenericParamField::GetIndex | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121360306"
 ---
 # <a name="idebuggenericparamfieldgetindex"></a>IDebugGenericParamField::GetIndex
-Bu genel parametrenin dizinini alır.
+Bu genel parametrenin dizinini alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ int GetIndex(
 
 ## <a name="parameters"></a>Parametreler
 `pIndex`\
-dışı Bu genel parametrenin dizin değeri.
+[out] Bu genel parametrenin dizin değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Örneğin, sözlük (K, V) için, K dizini 0, V Dizin 1 ' dir.
+Örneğin, Sözlük (K,V), K dizin 0, V ise dizin 1'tir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugGenericParamField arabirimini ortaya çıkaran bir CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl [uygulandığını](../../../extensibility/debugger/reference/idebuggenericparamfield.md) gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetIndex(DWORD* pIndex)

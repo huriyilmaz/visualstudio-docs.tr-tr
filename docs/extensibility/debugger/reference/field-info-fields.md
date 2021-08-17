@@ -1,5 +1,5 @@
 ---
-description: Bir IDebugField nesnesi hakkında hangi bilgilerin alınması gerektiğini belirtir.
+description: Bir IDebugField nesnesi hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
 title: FIELD_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: a69487d2-e701-4165-804a-8a011df9a3bd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0bd13473be5817e821f61b646bd1634cfe06388b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 03b89d7337888033b2a2ce02e71d37a1340a4580
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059437"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073038"
 ---
 # <a name="field_info_fields"></a>FIELD_INFO_FIELDS
-Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi hakkında hangi bilgilerin alınması gerektiğini belirtir.
+[Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,30 +54,30 @@ public enum enum_FIELD_INFO_FIELDS {
 
 ## <a name="fields"></a>Alanlar
 `FIF_FULLNAME`\
-`bstrFullName` [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısındaki alanı başlatın/kullanın.
+Çalışma alanı `bstrFullName` yapısında alanını [FIELD_INFO.](../../../extensibility/debugger/reference/field-info.md)
 
 `FIF_NAME`\
-Yapıda alanı başlatın/kullanın `bstrName` `FIELD_INFO` .
+Yapıda alanını `bstrName` `FIELD_INFO` başlatma/kullanma.
 
 `FIF_TYPE`\
-Yapıda alanı başlatın/kullanın `bstrType` `FIELD_INFO` .
+Yapıda alanını `bstrType` `FIELD_INFO` başlatma/kullanma.
 
 `FIF_MODIFIERS`\
-Yapıda alanı başlatın/kullanın `bstrModifiers` `FIELD_INFO` .
+Yapıda alanını `bstrModifiers` `FIELD_INFO` başlatma/kullanma.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler aynı zamanda [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemine bir bağımsız değişken olarak geçirilir ve bu da [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısının hangi alanlarının başlatıldığını belirtir.
+Bu değerler ayrıca, yeni yapının hangi alanlarının başlat olacağını belirtmek için [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) bağımsız değişken olarak geçirebilirsiniz.
 
-Bu değerler, `dwFields` `FIELD_INFO` hangi alanların kullanıldığını ve geçerli olduğunu göstermek için yapının üyesinde de kullanılır.
+Bu değerler, hangi alanların `dwFields` kullandır ve `FIELD_INFO` geçerli olduğunu belirtmek için yapının üyesinde de kullanılır.
 
-Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
+Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

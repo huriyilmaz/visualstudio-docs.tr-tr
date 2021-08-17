@@ -11,23 +11,24 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 8034e0d1df6410c842f7d93a4ee3023957904744
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 63f86f8e0b753d3f15f000a7f3846aeafec87f4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388093"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055204"
 ---
 # <a name="writing-a-t4-text-template"></a>T4 Metin Şablonu Yazma
 Metin şablonu, bu şablondan oluşturulacak metni içerir. Örneğin, web sayfası oluşturan bir şablonda " \<html> ..." ve bir HTML sayfasının diğer tüm standart bölümleri. Şablona, program *kodunun parçaları* olan denetim blokları eklenir. Denetim blokları farklı değerler sağlar ve metnin bazı bölümlerinin koşullu ve tekrarlı olmasına olanak sağlar.
 
- Oluşturulan dosyanın bir prototipi ile başlayabilirsiniz ve sonucu değişen denetim bloklarını artımlı olarak ekleyebiliyorsanız, bu yapı bir şablonu geliştirmeyi kolaylaştırır.
+ Oluşturulan dosyanın bir prototipi ile başlayabilirsiniz ve sonucu değişen denetim bloklarını artımlı olarak ekleyebiliyorsanız, bu yapı bir şablonun geliştirilmesini kolaylaştırır.
 
  Metin şablonları aşağıdaki bölümlerden oluşur:
 
-- **Yönergeler:** Şablonun nasıl işlenmeyi denetlemesine neden olan öğeler.
+- **Yönergeler** - şablonun nasıl işlenmeyi kontrol altına alan öğeler.
 
 - **Metin blokları** - doğrudan çıkışa kopyalanan içerik.
 
@@ -38,7 +39,7 @@ Bu konudaki örnekleri denemek için, T4 Metin Şablonları kullanarak Tasarım 
 ## <a name="directives"></a>Yönergeler
  Metin şablonu yönergeleri, metin şablon oluşturma altyapısına dönüştürme kodunun ve çıkış dosyasının nasıl oluşturularak ilgili genel yönergeler sağlar.
 
- Örneğin, aşağıdaki yönerge çıktı dosyasının bir dosya uzantısına sahip .txt belirtir:
+ Örneğin, aşağıdaki yönerge çıktı dosyasının bir .txt belirtir:
 
 ```
 <#@ output extension=".txt" #>
@@ -99,7 +100,7 @@ Hello!
 > Döngü veya koşullu gibi bir bileşik deyim içine metin bloğu katıştırıyorken her zaman ayraç {...} kullanın metin bloğu içermesi için.
 
 ### <a name="expression-control-blocks"></a>İfade denetim blokları
- İfade denetim bloğu bir ifadeyi değerlendirir ve dizeye dönüştürür. Bu, çıkış dosyasına eklenir.
+ İfade denetim bloğu bir ifadeyi değerlendirir ve bir dizeye dönüştürür. Bu, çıkış dosyasına eklenir.
 
  İfade denetim blokları simgelerle ayrılmıştır `<#= ... #>`
 
@@ -157,7 +158,7 @@ private int Square(int i)
  Denetim blokları hakkında daha fazla bilgi için [bkz. Metin Şablonu Denetim Blokları.](../modeling/text-template-control-blocks.md)
 
 ### <a name="class-feature-blocks-can-contain-text-blocks"></a>Sınıf özellik blokları metin blokları içerebilir
- Metin oluşturan bir yöntem yazabilir. Örneğin:
+ Metin oluşturan bir yöntem yazabilir. Örnek:
 
 ```
 List of Squares:
@@ -187,7 +188,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="System.Xml" #>
 ```
 
- Mutlak yol adlarını veya yol adı içinde standart makro adlarını kullan gerekir. Örneğin:
+ Mutlak yol adlarını veya yol adı içinde standart makro adlarını kullan gerekir. Örnek:
 
 ```
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
@@ -198,7 +199,7 @@ private void WriteSquareLine(int i)
  Daha fazla bilgi için bkz. [T4 Derleme Yönergesi.](../modeling/t4-assembly-directive.md)
 
 ### <a name="namespaces"></a>Ad alanları
- import yönergesi, C# içinde `using` yan tümcesi veya C# içinde `imports` yan tümcesi Visual Basic. Tam ad kullanmadan kodundaki türlere başvurabilirsiniz:
+ import yönergesi, C# içinde `using` yan tümcesi veya C# içinde yan `imports` tümcesi Visual Basic. Tam ad kullanmadan kodundaki türlere başvurabilirsiniz:
 
 ```
 <#@ import namespace="System.Xml" #>
@@ -227,7 +228,7 @@ private void WriteSquareLine(int i)
  Daha fazla bilgi için [bkz. Metin Şablonu Yardımcı Programı Yöntemleri.](../modeling/text-template-utility-methods.md)
 
 ## <a name="transforming-data-and-models"></a>Verileri ve Modelleri Dönüştürme
- Metin şablonu için en kullanışlı uygulama model, veritabanı veya veri dosyası gibi bir kaynağın içeriğine göre malzeme oluşturmaktır. Şablonunuz verileri ayıklar ve yeniden biçimlendirer. Şablon koleksiyonu, böyle bir kaynağı birden çok dosyaya dönüştürebilirsiniz.
+ Metin şablonu için en kullanışlı uygulama model, veritabanı veya veri dosyası gibi bir kaynağın içeriğine göre malzeme oluşturmaktır. Şablonunuz verileri ayıklar ve yeniden biçimlendirer. Bir şablon koleksiyonu, böyle bir kaynağı birden çok dosyaya dönüştürebilirsiniz.
 
  Kaynak dosyayı okumak için çeşitli yaklaşımlar vardır.
 
@@ -238,9 +239,9 @@ private void WriteSquareLine(int i)
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Bir dosyayı gezinilebilir model olarak yükleme.** Daha güçlü bir yöntem, verileri model olarak okumaktır ve metin şablonu kodunuzun gezinebilirsiniz. Örneğin, bir XML dosyası yükp XPath ifadeleriyle dosyada gezinebilirsiniz. Xml verilerini [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) sınıf kümesi oluşturmak için dexsd.exekullanabilirsiniz.
+ **Bir dosyayı gezinilebilir model olarak yükleme.** Daha güçlü bir yöntem, verileri model olarak okumaktır ve metin şablonu kodunuzun gezinebilirsiniz. Örneğin, bir XML dosyası yükp XPath ifadeleriyle dosyada gezinebilirsiniz. Xml verilerini [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) sınıf kümesi oluşturmak için dexsd.exe'yi kullanabilirsiniz.
 
- **Model dosyasını diyagramda veya formda düzenleyin.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , bir modeli diyagram veya Windows formu olarak düzenlemenizi sağlayan araçlar sağlar. Bu, modeli oluşturulan uygulamanın kullanıcıları ile tartışmayı kolaylaştırır. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] ayrıca, modelin yapısını yansıtan türü kesin olarak ayarlanmış bir sınıf kümesi oluşturur. Daha fazla bilgi için [bkz. Domain-Specific Dilinden Kod Oluşturma.](../modeling/generating-code-from-a-domain-specific-language.md)
+ **Model dosyasını bir diyagram veya formda düzenleyin.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]bir modeli diyagram veya diyagram olarak düzenlemenizi sağlayan araçlar Windows sağlar. Bu, modeli oluşturulan uygulamanın kullanıcıları ile tartışmayı kolaylaştırır. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] ayrıca, modelin yapısını yansıtan türü kesin olarak ayarlanmış bir sınıf kümesi oluşturur. Daha fazla bilgi için [bkz. Domain-Specific Dilinden Kod Oluşturma.](../modeling/generating-code-from-a-domain-specific-language.md)
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Tasarım zamanı şablonlarında göreli dosya yolları
  Tasarım [zamanı metin şablonunda,](../modeling/design-time-code-generation-by-using-t4-text-templates.md)metin şablonuna göre bir konumdaki bir dosyaya başvuru yapmak için `this.Host.ResolvePath()` kullanın. Ayrıca yönergesinde `hostspecific="true"` de `template` ayarlay gerekir:
@@ -261,7 +262,7 @@ Ayrıca, konak tarafından sağlanan diğer hizmetleri de elde edin. Daha fazla 
 
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Tasarım Zamanı Metin Şablonları ayrı bir AppDomain içinde çalıştırıldı
 
- Tasarım zamanı metin [şablonunun ana uygulamadan ayrı](../modeling/design-time-code-generation-by-using-t4-text-templates.md) bir AppDomain içinde çalıştır gerektiğinin farkındasınız. Çoğu durumda bu önemli değildir, ancak bazı karmaşık durumlarda kısıtlamaları keşfedersiniz. Örneğin, şablondan ayrı bir hizmetten veri almak veya şablondan veri geçmek için hizmetin seri hale getirilebilir bir API sağlaması gerekir.
+ Tasarım zamanı metin [şablonunun ana uygulamadan ayrı](../modeling/design-time-code-generation-by-using-t4-text-templates.md) bir AppDomain içinde çalıştır gerektiğinin farkındasınız. Çoğu durumda bu önemli değildir, ancak bazı karmaşık durumlarda kısıtlamaları keşfedersiniz. Örneğin, ayrı bir hizmetten şablonun içinde veya dışında veri geçişi yapmak için hizmetin serileştirilebilir bir API sağlaması gerekir.
 
  (Bu, kodunuzun geri [kalanıyla](../modeling/run-time-text-generation-with-t4-text-templates.md)birlikte derlenmiş kod sağlayan bir çalışma zamanı metin şablonu için doğru değildir.)
 

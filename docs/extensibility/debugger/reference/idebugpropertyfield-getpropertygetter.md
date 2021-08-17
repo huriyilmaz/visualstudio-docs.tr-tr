@@ -1,6 +1,6 @@
 ---
-description: özelliğini alan yöntemini alır.
-title: IDebugPropertyField::GetPropertyGetter | Microsoft Docs
+description: Özelliği alan yöntemi alır.
+title: 'IDebugPropertyField:: GetPropertyGetter | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 55c7594863860923014eea4c213ad8dd59a8073156cacc0a8f4565d3700371c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 59486320cc8265efe3c8597d07bbd98f69010fc2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338637"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087632"
 ---
 # <a name="idebugpropertyfieldgetpropertygetter"></a>IDebugPropertyField::GetPropertyGetter
-özelliğini alan yöntemini alır.
+Özelliği alan yöntemi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetPropertyGetter(
 
 ## <a name="parameters"></a>Parametreler
 `ppField`\
-[out] Özelliğini alan [yöntemi temsil eden bir IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) nesnesi döndürür.
+dışı Özelliği alan yöntemi temsil eden bir [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Özelliğini ayaran yöntemi almak için [GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md) yöntemini çağırır.
+ Özelliği ayarlayan yöntemi almak için [GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md) yöntemi çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)

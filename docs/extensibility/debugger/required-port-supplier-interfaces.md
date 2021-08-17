@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f09a1cf675b9836e9bf909d13e3d8036f359928510e5c2f733701432e40a9fd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e82150e613235bca066d80a99ba975c7556d4466
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432962"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087307"
 ---
 # <a name="required-port-supplier-interfaces"></a>Gerekli bağlantı noktası sağlayıcısı arabirimleri
 Bir bağlantı noktası tedarikçinin [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimini uygulaması gerekir. [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma | Microsoft Docs'
-description: Bir MSBuild proje dosyasında bir hedefin nasıl kaydedileceğini ve hedefin kullanması gereken başka bir projeye nasıl içeri aktarılacağını öğrenin.
+title: 'nasıl yapılır: birden çok Project dosyasında aynı hedefi kullanma | Microsoft Docs'
+description: MSBuild bir proje dosyasında bir hedefin nasıl kaydedileceğini ve hedefin kullanması gereken başka bir projeye nasıl içeri aktarılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,28 +11,29 @@ ms.assetid: 163734bd-1bfd-4093-a730-7741fc21742d
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c351b7f676dec678bd4f070a1f8fb9af97c5d28
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 710c38aa99026721f61968d241997ee8f94a5331ae4bc9b9479e3d2b1dca73a4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914114"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443444"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma
 
-Birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında aynı görevleri ve hedefleri kullanmanız gerektiğini fark edebilirsiniz. Her proje dosyasındaki bu görevlerin veya hedeflerin tüm açıklamalarını eklemek yerine, bir hedefi ayrı bir proje dosyasında kaydedebilir ve sonra bu projeyi, hedefi kullanmak için gereken diğer bir projeye içeri aktarabilirsiniz.
+birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında aynı görevleri ve hedefleri kullanmanız gerektiğini fark edebilirsiniz. Her proje dosyasındaki bu görevlerin veya hedeflerin tüm açıklamalarını eklemek yerine, bir hedefi ayrı bir proje dosyasında kaydedebilir ve sonra bu projeyi, hedefi kullanmak için gereken diğer bir projeye içeri aktarabilirsiniz.
 
 ## <a name="use-the-import-element"></a>Içeri aktarma öğesini kullanın
 
-Öğesi, başka bir proje dosyasına `Import` bir proje dosyası eklemek için kullanılır. İçeri aktarılmakta olan proje dosyası geçerli bir MSBuild proje dosyası olmalı ve iyi biçimlendirilmiş XML içermelidir. `Project`Öznitelik, içeri aktarılan proje dosyasının yolunu belirtir. Öğesi hakkında daha fazla bilgi için `Import` bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
+Öğesi, başka bir proje dosyasına `Import` bir proje dosyası eklemek için kullanılır. içeri aktarılmakta olan proje dosyası geçerli bir MSBuild proje dosyası olmalı ve iyi biçimlendirilmiş XML içermelidir. `Project`Öznitelik, içeri aktarılan proje dosyasının yolunu belirtir. Öğesi hakkında daha fazla bilgi için `Import` bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
 
 #### <a name="to-import-a-project"></a>Bir projeyi içeri aktarmak için
 
 1. İçeri aktarılan projedeki Özellikler ve öğeler için parametre olarak kullanılan proje dosyasını içeri aktarma, tüm özellikler ve öğeler ' i tanımlayın.
 
-2. `Import`Projeyi içeri aktarmak için öğesini kullanın. Örneğin:
+2. `Import`Projeyi içeri aktarmak için öğesini kullanın. Örnek:
 
      `<Import Project="MyCommon.targets"/>`
 

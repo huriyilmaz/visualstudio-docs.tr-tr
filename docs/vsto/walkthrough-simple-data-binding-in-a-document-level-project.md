@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: belge düzeyi projede basit veri bağlama'
-description: Belge düzeyindeki bir projede veri bağlamanın temellerini öğrenin ve bir SQL Server veritabanındaki tek bir veri alanı Microsoft Excel 'de adlandırılmış bir aralığa bağlanır.
+description: belge düzeyindeki bir projede veri bağlamanın temellerini öğrenin ve bir SQL Server veritabanındaki tek bir veri alanı Microsoft Excel bir adlandırılmış aralığa bağlanır.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,23 +17,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 36d4da65a6cd39c53f1f9d8edf4f9d9b1fe46284
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: c965b63c4f7aec8229fce45be95b5b7c74bd0c96
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826856"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025478"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>İzlenecek yol: belge düzeyi projede basit veri bağlama
-  Bu izlenecek yol, belge düzeyindeki bir projede veri bağlamanın temellerini gösterir. SQL Server veritabanındaki tek bir veri alanı, Microsoft Office Excel içindeki bir adlandırılmış aralığa bağlanır. İzlenecek yol Ayrıca, tablodaki tüm kayıtlarda kaydırmanıza imkan tanıyan denetimlerin nasıl ekleneceğini gösterir.
+  Bu izlenecek yol, belge düzeyindeki bir projede veri bağlamanın temellerini gösterir. SQL Server veritabanındaki tek bir veri alanı Microsoft Office Excel adlandırılmış bir aralığa bağlanır. İzlenecek yol Ayrıca, tablodaki tüm kayıtlarda kaydırmanıza imkan tanıyan denetimlerin nasıl ekleneceğini gösterir.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Excel projesi için veri kaynağı oluşturma.
+- Excel projesi için bir veri kaynağı oluşturma.
 
 - Çalışma sayfasına denetimler ekleme.
 
@@ -53,26 +54,26 @@ ms.locfileid: "107826856"
 - SQL Server veritabanına okuma ve yazma izinleri.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
- Bu adımda, bir Excel çalışma kitabı projesi oluşturacaksınız.
+ bu adımda, bir Excel çalışma kitabı projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **basit veri bağlamamı** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **basit veri bağlamamın** adı Visual Basic veya C# kullanarak Excel bir çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-   Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **basit veri bağlama projem** **Çözüm Gezgini** ekler.
+   Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **basit veri bağlama** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
  Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
+1. **veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
 2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
-4. Northwind örnek SQL Server veritabanına yönelik bir veri bağlantısı seçin veya **Yeni bağlantı** düğmesini kullanarak yeni bir bağlantı ekleyin.
+4. Northwind örnek SQL Server veritabanına yönelik bir veri bağlantısı seçin veya **yeni bağlantı** düğmesini kullanarak yeni bir bağlantı ekleyin.
 
 5. Bir bağlantı seçildikten veya oluşturulduktan sonra **İleri**' ye tıklayın.
 
@@ -192,9 +193,9 @@ ms.locfileid: "107826856"
 
 - Hücreleri tek bir alana değil, tablodaki birden çok sütuna bağlayın. Daha fazla bilgi için bkz. [Izlenecek yol: belge düzeyi projede karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md).
 
-- <xref:System.Windows.Forms.BindingNavigator>Kayıtlar arasında gezinmek için bir denetim kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms BindingNavigator denetimi ile verilerde gezinme](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).
+- <xref:System.Windows.Forms.BindingNavigator>Kayıtlar arasında gezinmek için bir denetim kullanın. daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms BindingNavigator denetimi ile verilerde gezinme](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Office çözümlerindeki veriler](../vsto/data-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde veri](../vsto/data-in-office-solutions.md)
 - [İzlenecek yol: belge düzeyi projede karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)

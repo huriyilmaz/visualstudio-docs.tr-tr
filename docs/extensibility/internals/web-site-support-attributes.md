@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e5eb1af28c7a8dd7dccf2c161474f821f004c07e06f11b554f898190971837a0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fc98f580b8619cb68ccc929b0e529dcead683e68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414200"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041977"
 ---
 # <a name="web-site-support-attributes"></a>Web Sitesi Destek Öznitelikleri
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web sitesi projesi, Web programlama dilleri için destek sağlayacak şekilde genişletilmiştir. Dil seçildiğinde proje şablonlarının Yeni Web Sitesi iletişim kutusunda görünmesi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **için** dilin kendisini ile kaydetmesi gerekir.
@@ -26,7 +26,7 @@ ms.locfileid: "121414200"
 IronPython Studio örneği web sitesi desteği içerir. Örnek, IronPython'un yeni Web projeleri için bir codebehind dili olarak kaydolması için aşağıdaki öznitelik sınıflarını içerir.
 
 ## <a name="websiteprojectattribute"></a>WebSiteProjectAttribute
- Bu öznitelik dil projesine yerleştirilir. Dili Yeni Web Sitesi iletişim kutusundaki Dil listesinde Web **programlama** dilleri **listesine** ekler. Örneğin, aşağıdaki kod Listeye IronPython ekler:
+ Bu öznitelik dil projesine yerleştirilir. Dili Yeni Web Sitesi iletişim kutusundaki Dil listesinde **Web programlama** dilleri **listesine** ekler. Örneğin, aşağıdaki kod Listeye IronPython ekler:
 
 ```
 [WebSiteProject("IronPython", "Iron Python")]
@@ -36,7 +36,7 @@ public class PythonProjectPackage : ProjectPackage
  Bu öznitelik ayrıca şablonlar yolunu templates klasörüne işaret etmek için ayarlar. Şablonlar klasörünün konumu hakkında daha fazla bilgi için bkz. [Web Sitesi Destek Şablonları.](../../extensibility/internals/web-site-support-templates.md)
 
 ## <a name="websiteprojectrelatedfilesattribute"></a>WebSiteProjectRelatedFilesAttribute
- Bu öznitelik dil projesine yerleştirilir. Web Sitesi projesinin bir dosya türünü (ilgili) içinde başka bir dosya türü (birincil) altında iç içe yerleştirmesini **Çözüm Gezgini.**
+ Bu öznitelik dil projesine yerleştirilir. Web Sitesi projesinin bir dosya türünü (ilgili) içinde başka bir dosya türü (birincil) altında iç içe **yerleştirmesini Çözüm Gezgini.**
 
  Örneğin, aşağıdaki kod IronPython codebehind dosyasının bir .aspx dosyasıyla ilişkili olduğunu belirtir. IronPython Web sitesi çözümünde yeni bir .aspx Web sayfası oluşturulduğunda, yeni bir .py kaynak dosyası oluşturulur ve .aspx sayfasının alt düğümü olarak görünür.
 
@@ -55,7 +55,7 @@ public class PythonProjectPackage : ProjectPackage
 public class PythonPackage : Package, IOleComponent
 ```
 
- IVsIntellisenseProject uygulaması, kod içeren bir Web sayfası istensin ancak önbelleğe alınmazsa başvuruları işler ve dil derleyicisini arar.
+ IVsIntellisenseProject uygulaması, kod içeren bir Web sayfası istensin ancak önbelleğe alınmazsa başvuruları işler ve dil derleyicisini çağırabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Web Sitesi Desteği](../../extensibility/internals/web-site-support.md)
