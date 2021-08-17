@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 45c1700525b77011ee2a05b70ec2e0f73076e24a2891072d35c13994ed281eb6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7ca05a0f96a159d354c09d9542327cfa73ff76e8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370001"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084889"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup öğesi (MSBuild)
 

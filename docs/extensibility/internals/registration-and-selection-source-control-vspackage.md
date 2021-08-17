@@ -1,6 +1,6 @@
 ---
 title: Kayıt ve seçim (kaynak denetimi VSPackage) | Microsoft Docs
-description: Visual Studio ile bir kaynak denetimi VSPackage kaydetme ve birden çok kayıtlı kaynak denetimi paketinden hangi paketin yükleneceğini seçme hakkında bilgi edinin.
+description: kaynak denetimi vspackage 'ı Visual Studio kaydetme ve birden çok kayıtlı kaynak denetimi paketinden hangi paketin yükleneceğini seçme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff23784bb833c6a68e368f5db5d3b6f1a7433bb0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3b2c64584eb550aba9bc0ea6240fccdeed79bb614001ca62235fface5d3635f9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069419"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275274"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>Kayıt ve Seçim (Kaynak Denetimi VSPackage’ı)
 Kaynak denetimi VSPackage, içinde kullanıma sunmak için kaydedilmelidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Birden fazla kaynak denetimi VSPackage kayıtlıysa, Kullanıcı hangi VSPackage 'ın uygun zamanlarda yükleneceğini seçebilir. VSPackages hakkında daha fazla ayrıntı ve bunların nasıl kaydedileceği hakkında bilgi için bkz. [VSPackages](../../extensibility/internals/vspackages.md) .
@@ -35,9 +36,9 @@ Kaynak denetimi VSPackage, içinde kullanıma sunmak için kaydedilmelidir [!INC
 
 - Paket GUID 'SI: Bu, kaynak denetim uygulamasını (Bu bölümde ID_Package denir) içeren paket için ana GUID 'dir.
 
-- Kaynak denetimi GUID 'SI: Bu, Visual Studio kaynak denetimi saplamaya kaydolmak için kullanılan VSPackage için bir GUID 'dir ve ayrıca bir komut UI bağlamı GUID 'SI olarak da kullanılır. Kaynak denetimi hizmeti GUID 'SI, kaynak denetimi GUID 'sinin altına kaydedilir. Örnekte, kaynak denetimi GUID 'SI ID_SccProvider olarak adlandırılır.
+- kaynak denetimi guıd 'si: bu, Visual Studio kaynak denetimi saplamaya kaydolmak için kullanılan vspackage için bir guıd 'dir ve ayrıca bir komut uı bağlamı guıd 'si olarak da kullanılır. Kaynak denetimi hizmeti GUID 'SI, kaynak denetimi GUID 'sinin altına kaydedilir. Örnekte, kaynak denetimi GUID 'SI ID_SccProvider olarak adlandırılır.
 
-- Kaynak denetimi hizmeti GUID 'SI: Bu, Visual Studio tarafından kullanılan özel hizmet GUID 'sidir (Bu bölümde SID_SccPkgService denir). Buna ek olarak, kaynak denetimi paketinin VSPackages, araç pencereleri vb. için diğer GUID 'Leri tanımlanması gerekir.
+- kaynak denetimi hizmeti guıd 'si: bu, Visual Studio tarafından kullanılan özel hizmet guıd 'sidir (bu bölümde SID_SccPkgService olarak adlandırılır). Buna ek olarak, kaynak denetimi paketinin VSPackages, araç pencereleri vb. için diğer GUID 'Leri tanımlanması gerekir.
 
   Aşağıdaki kayıt defteri girdilerinin bir kaynak denetimi VSPackage tarafından yapılması gerekir:
 
@@ -68,7 +69,7 @@ Kaynak denetimi VSPackage, içinde kullanıma sunmak için kaydedilmelidir [!INC
 
  Herhangi bir çözüm açıldığında ve VSPackage için kayıt defteri anahtarı çözüm dosyasında olduğunda, bir kaynak denetimi VSPackage çağrılır. Çözüm açıldığında, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kayıt defteri değerini bulur ve uygun kaynak denetimi VSPackage 'ı yükler. Tüm kaynak denetimi VSPackages, yukarıda açıklanan kayıt defteri girişlerine sahip olmalıdır. Kaynak denetimi altındaki bir çözüm, belirli bir kaynak denetimi VSPackage ile ilişkili olarak işaretlenir. Kaynak denetimi VSPackages, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> otomatik çözüm tabanlı VSPackage değiştirmeyi etkinleştirmek için öğesini uygulamalıdır.
 
-### <a name="visual-studio-ui-for-package-selection-and-switching"></a>Paket seçme ve değiştirme için Visual Studio Kullanıcı arabirimi
+### <a name="visual-studio-ui-for-package-selection-and-switching"></a>Visual Studio Paket seçme ve değiştirme için Kullanıcı arabirimi
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]**kaynak denetim kategorisi altındaki** **Seçenekler** iletişim kutusunda yer alan kaynak denetimi VSPackage ve eklenti seçimi için bir kullanıcı arabirimi sağlar. Kullanıcının etkin kaynak denetimi eklentisini veya VSPackage seçmesini sağlar. Açılan liste şunları içerir:
 
 - Tüm yüklü kaynak denetimi paketleri
@@ -79,7 +80,7 @@ Kaynak denetimi VSPackage, içinde kullanıma sunmak için kaydedilmelidir [!INC
 
   Yalnızca etkin kaynak denetimi seçeneği için Kullanıcı arabirimi görünür. VSPackage seçimi, önceki VSPackage için Kullanıcı arabirimini gizler ve yeni bir kullanıcı arabirimi gösterir. Etkin VSPackage, Kullanıcı başına temelinde seçilir. Bir kullanıcının eşzamanlı olarak birden fazla kopyası varsa [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , her biri farklı bir etkin VSPackage kullanabilir. Aynı bilgisayarda birden çok kullanıcı oturum açarsa, her Kullanıcı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] farklı bir etkin VSPackage ile ayrı ayrı açık olabilir. Birden çok örneği [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir kullanıcı tarafından kapatıldığında, son açık çözüm için etkin olan VSPackage kaynak denetimi, yeniden başlatma sırasında etkin olarak ayarlanacak varsayılan kaynak denetimi VSPackage olur.
 
-  Önceki sürümlerinden farklı olarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , IDE yeniden başlatması artık kaynak denetimi VSPackages ' ı geçmenin tek yoludur. VSPackage seçimi otomatiktir. Paketlerin değiştirilmesi için Windows kullanıcı ayrıcalıkları gerekir (yönetici veya Uzman Kullanıcı değil).
+  Önceki sürümlerinden farklı olarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , IDE yeniden başlatması artık kaynak denetimi VSPackages ' ı geçmenin tek yoludur. VSPackage seçimi otomatiktir. paket değiştirme Windows kullanıcı ayrıcalıkları gerektirir (yönetici veya uzman kullanıcı değil).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>

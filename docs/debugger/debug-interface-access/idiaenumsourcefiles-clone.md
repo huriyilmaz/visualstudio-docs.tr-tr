@@ -1,6 +1,6 @@
 ---
-description: Geçerli kaynak dosyaları numaralayıcı ile aynı numaralama durumunu içeren bir numaralayıcı oluşturur.
-title: IDiaEnumSourceFiles::Clone | Microsoft Docs
+description: Geçerli kaynak dosyaları numaralandırıcısı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
+title: 'IDiaEnumSourceFiles:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121455106"
 ---
 # <a name="idiaenumsourcefilesclone"></a>IDiaEnumSourceFiles::Clone
-Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.
+Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,12 +33,12 @@ HRESULT Clone (
 ```
 
 #### <a name="parameters"></a>Parametreler
- ppenum
+ ppEnum
 
-[out] Numaralayıcının bir kopyasını içeren bir [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) nesnesi döndürür. Kaynak dosyalar çoğaltılmış değil, yalnızca numaralayıcı.
+dışı Numaralandırıcı yinelemesi içeren bir [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) nesnesi döndürür. Kaynak dosyalar yinelenmez, yalnızca Numaralandırıcı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

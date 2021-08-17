@@ -10,14 +10,15 @@ ms.assetid: 5d9eb6e9-2e47-40f2-bf9c-464caa703dc9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9beb80eb997a844e7358b13f3fa8911de42af685
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ae42422ded43c8dde42cb08eae4d534afb98d5c82b249a51bfd7c4949fafd804
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913204"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453747"
 ---
 # <a name="how-to-display-process-properties"></a>Nasıl yapılır: İşlem Özelliklerini Görüntüleme
 [Işlemler görünümünde](../debugger/processes-view.md)listelenen bir işlem hakkında daha fazla bilgi edinmek Için [Işlem özellikleri iletişim kutusunu](../debugger/process-properties-dialog-box.md)kullanın.

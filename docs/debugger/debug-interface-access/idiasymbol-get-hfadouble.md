@@ -11,14 +11,15 @@ ms.assetid: efc247b9-c16e-4fa3-89b0-901caf7b74c3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 974c47f9630278995e134bc327971de178269f0f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 1f38d004deab394abff83fd24d8a871c8e40b9f5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160924"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052256"
 ---
 # <a name="idiasymbolget_hfadouble"></a>IDiaSymbol::get_hfaDouble
 Kullanıcı tanımlı bir türün (UDT) Double türünde homomojen nokta toplama (HFA) verisi içerip içermediğini belirten bir bayrak alır.

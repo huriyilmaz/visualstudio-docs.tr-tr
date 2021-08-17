@@ -1,6 +1,6 @@
 ---
 title: Performans Profiler 'da CPU kullanımını analiz etme
-description: C++, C#, Visual Basic ve JavaScript uygulamalarında kod çalıştırırken harcanan CPU süresini ve yüzdesini gösteren CPU kullanımı performans aracı hakkında bilgi edinin.
+description: C++, C#, Visual Basic ve JavaScript uygulamalarında kod çalıştırırken harcanan cpu süresini ve yüzdesini gösteren cpu kullanımı performans aracı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 04/02/2020
 ms.topic: how-to
@@ -8,31 +8,32 @@ ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a223a2007d62b84f06191c71523b861f94efe3d0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2e8db1683fa44ffa75ba6e0ac6aa1a5101c812c8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956132"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039312"
 ---
 # <a name="analyze-cpu-usage-without-debugging-in-the-performance-profiler"></a>Performans profil oluşturucusu 'nda hata ayıklama olmadan CPU kullanımını çözümleme
 
-Uygulamanızdaki performans sorunlarını araştırmaya başlamak için iyi bir yöntem, CPU kullanımını anlamaktır. **CPU kullanımı** performans aracı, C++, C#/Visual Basic ve JavaScript uygulamalarında kod ÇALıŞTıRıRKEN harcanan CPU süresini ve yüzdesini gösterir.
+Uygulamanızdaki performans sorunlarını araştırmaya başlamak için iyi bir yöntem, CPU kullanımını anlamaktır. **cpu kullanımı** performans aracı, C++, C#/Visual Basic ve JavaScript uygulamalarında kod yürütürken harcanan cpu süresini ve yüzdesini gösterir.
 
-CPU kullanımı aracı açık bir Visual Studio projesi üzerinde, yüklü bir Microsoft Store uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalışabilir. CPU kullanımı aracını hata ayıklama olmadan veya olmadan çalıştırabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+CPU kullanımı aracı açık bir Visual Studio projesi üzerinde, yüklü bir Microsoft Store uygulamasında çalışabilir veya çalışan bir uygulamaya veya işleme bağlanabilir. CPU kullanımı aracını hata ayıklama olmadan veya olmadan çalıştırabilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-Aşağıdaki yönergeler, Visual Studio performans profil oluşturucuyu kullanarak, hata ayıklayıcı olmadan CPU kullanımı aracının nasıl kullanılacağını göstermektedir. Örnekler yerel bir makinede bir yayın derlemesi kullanır. Yayın yapıları gerçek uygulama performansının en iyi görünümünü sağlar. Hata ayıklama Derlemeleriyle CPU kullanımını çözümlemek için (hata ayıklayıcı ekli), bkz. [Başlangıç Kılavuzu, performans profili oluşturma](../profiling/beginners-guide-to-performance-profiling.md).
+aşağıdaki yönergelerde, Visual Studio performans profil oluşturucuyu kullanarak CPU kullanımı aracının hata ayıklayıcı olmadan nasıl kullanılacağı gösterilmektedir. Örnekler yerel bir makinede bir yayın derlemesi kullanır. Yayın yapıları gerçek uygulama performansının en iyi görünümünü sağlar. Hata ayıklama Derlemeleriyle CPU kullanımını çözümlemek için (hata ayıklayıcı ekli), bkz. [Başlangıç Kılavuzu, performans profili oluşturma](../profiling/beginners-guide-to-performance-profiling.md).
 
 Genellikle, yerel makine yüklü uygulama yürütmeyi en iyi şekilde çoğaltır. Uzak bir cihazdan veri toplamak için, uygulamayı bir Uzak Masaüstü Bağlantısı değil doğrudan cihazda çalıştırın.
 
 >[!NOTE]
->[Performans profil oluşturucuyu](../profiling/profiling-feature-tour.md)kullanmak için Windows 7 veya üzeri gereklidir.
+>[performans profil oluşturucuyu](../profiling/profiling-feature-tour.md)kullanmak için Windows 7 veya üzeri bir sürüm gerekir.
 
 ## <a name="collect-cpu-usage-data"></a>CPU kullanım verilerini topla
 
-1. Visual Studio projesinde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine**) seçin.
+1. Visual Studio projesinde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcı** (veya **yerel makine**) seçeneğini belirleyin.
 
     ![Yayın ve yerel makine seçin](../profiling/media/cpuuse_selectreleaselocalmachine.png "Yayın ve yerel makine seçin")
 
@@ -79,7 +80,7 @@ Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun 
 ![Çağrı ağacı yapısı](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Çağrı ağacı yapısı")
 ::: moniker-end
 
-|Görüntü|Description|
+|Görüntü|Açıklama|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Çoğu uygulamalarda, **dış kodu göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm bir **[Dış kod]** düğümüdür. Düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içerir, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|
@@ -92,19 +93,19 @@ Kodunuz tarafından yürütülen System ve Framework işlevlerine *dış kod* de
 
 Dış kodun çağrı yollarını görüntülemek için, ana tanılama raporu sayfasında (sağ bölme), **filtre** açılan listesinden **dış kodu göster** ' i seçin ve ardından **Uygula**' yı seçin. **CPU kullanımı** sayfasının **çağrı ağacı** görünümü daha sonra dış kod çağrılarını genişletir. ( **Filtre** açılan listesi, ayrıntılı görünümlerde değil, ana tanılama sayfasında kullanılabilir.)
 
-![Dış kodu göster](../profiling/media/cpu_use_wt_filterview.png "Dış kodu göster")
+![Dış kodu göster](../profiling/media/cpu_use_wt_filterview.png "Dış Kodu Göster")
 
 Birçok harici kod çağrısı zinciri daha fazla iç içe geçmiş olduğundan, zincirin genişliği, **Işlev adı** sütununun görüntüleme genişliğini aşabilir. Sonra işlev adları **..**. olarak görünür.
 
-![Çağrı ağacındaki iç içe dış kod](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "Çağrı ağacındaki iç içe dış kod")
+![Çağrı ağacındaki iç içe dış kod](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "Çağrı ağacında iç içe dış kod")
 
 Aradığınız bir işlev adını bulmak için arama kutusunu kullanın. Seçili çizginin üzerine gelin veya verileri görüntülemek için yatay kaydırma çubuğunu kullanın.
 
 ::: moniker range=">=vs-2019"
-![İç içe geçmiş dış kodu arayın](../profiling/media/vs-2019/cpu-use-wt-showexternalcodetoowide-found.png "İç içe geçmiş dış kodu arayın")
+![İç içe geçmiş dış kodu arayın](../profiling/media/vs-2019/cpu-use-wt-showexternalcodetoowide-found.png "İç içe dış kod arama")
 ::: moniker-end
 ::: moniker range="vs-2017"
-![İç içe geçmiş dış kodu arayın](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "İç içe geçmiş dış kodu arayın")
+![İç içe geçmiş dış kodu arayın](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "İç içe dış kod arama")
 ::: moniker-end
 
 ### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a> CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler

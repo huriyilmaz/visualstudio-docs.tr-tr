@@ -1,6 +1,6 @@
 ---
-description: Başvurunun değerinin bayt cinsinden boyutunu alır.
-title: 'IDebugReference2:: GetSize | Microsoft Docs'
+description: Başvuru değerinin bayt cinsinden boyutunu alır.
+title: IDebugReference2::GetSize | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121292162"
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
-Başvurunun değerinin bayt cinsinden boyutunu alır. Daha sonraki kullanımlar için ayrılmıştır.
+Başvuru değerinin bayt cinsinden boyutunu alır. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,7 +43,7 @@ int GetSize (
 
 ## <a name="parameters"></a>Parametreler
 `pdwSize`\
-dışı Başvurunun değerinin bayt cinsinden boyutunu döndürür.
+[out] Başvuru değerinin bayt cinsinden boyutunu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

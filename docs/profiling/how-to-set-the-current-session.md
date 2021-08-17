@@ -1,6 +1,6 @@
 ---
-title: Geçerli oturumu ayarla | Microsoft Docs
-description: Performans Gezgini birden çok performans oturumu açmayı öğrenin ve geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçin.
+title: Geçerli Oturum | Microsoft Docs
+description: Oturum açma sırasında birden çok performans oturumu Performans Gezgini ve geçerli oturum olarak ayar yapmak için görünür performans oturumlarından birini seçmeyi öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,25 +14,26 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 857fa7e76e0f8830d9a892ba123106ff2add736e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1438014d593e9a2772449856ba67a90b84d99ce2c607ffb75594361dc05be4d7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906960"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121332722"
 ---
 # <a name="how-to-set-the-current-session"></a>Nasıl yapılır: Geçerli oturumu ayarlama
 
-**Performans Gezgini** birden çok performans oturumu açabilir ve ardından geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçebilirsiniz.
+içinde birden çok performans oturumu **Performans Gezgini** ve ardından geçerli oturum olarak ayarlamak için görünür performans oturumlarından birini seçin.
 
-Geçerli oturum olarak bir oturum ayarladıktan sonra, **Performans Gezgini** araç çubuğunda **Başlat** ' a tıklamak geçerli oturumun profilini oluşturmaya başlar.
+Bir oturumu geçerli oturum olarak ayardikten sonra, Performans Gezgini araç çubuğunda Başlat'a tıklarsanız geçerli oturumun profilini oluşturma başlar.  
 
 ## <a name="to-set-current-performance-session"></a>Geçerli performans oturumunu ayarlamak için
 
-- **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **geçerli oturum olarak ayarla**' ya tıklayın.
+- Bu **Performans Gezgini,** performans oturumuna sağ tıklayın ve ardından Geçerli Oturum Olarak **Ayarla'ya tıklayın.**
 
      Oturum adı kalın olarak görünür.
 

@@ -13,36 +13,37 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: d85edb9773783abe6282918c432fc1a4eff83944
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 3477930ba181f4a0f33d8711e882cda8ba63af17
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826726"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026375"
 ---
 # <a name="how-to-add-a-custom-task-pane-to-an-application"></a>Nasıl yapılır: uygulamaya özel görev bölmesi ekleme
-  VSTO eklentisini kullanarak yukarıda listelenen uygulamalara özel bir görev bölmesi ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel görev bölmeleri](../vsto/custom-task-panes.md).
+  VSTO eklentisi kullanarak yukarıda listelenen uygulamalara özel bir görev bölmesi ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel görev bölmeleri](../vsto/custom-task-panes.md).
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="add-a-custom-task-pane-to-an-application"></a>Uygulamaya özel görev bölmesi ekleme
 
 ### <a name="to-add-a-custom-task-pane-to-an-application"></a>Uygulamaya özel görev bölmesi eklemek için
 
-1. Yukarıda listelenen uygulamalardan biri için bir VSTO eklenti projesi açın veya oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. yukarıda listelenen uygulamalardan biri için VSTO eklenti projesi açın veya oluşturun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. **Proje** menüsünde **Kullanıcı denetimi Ekle**' ye tıklayın.
+2. **Project** menüsünde **kullanıcı denetimi ekle**' ye tıklayın.
 
 3. **Yeni öğe Ekle** iletişim kutusunda, Yeni Kullanıcı denetiminin adını **MyUserControl** olarak değiştirin ve ardından **Ekle**' ye tıklayın.
 
      Kullanıcı denetimi tasarımcıda açılır.
 
-4. **Araç kutusundan** bir veya daha fazla Windows Forms denetimini Kullanıcı denetimine ekleyin.
+4. **araç kutusundan** bir veya daha fazla Windows Forms denetimini kullanıcı denetimine ekleyin.
 
 5. **ThisAddIn. cs** veya **ThisAddIn. vb** kod dosyasını açın.
 

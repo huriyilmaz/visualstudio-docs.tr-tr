@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6d03223e4571a6792dacf0de413a4caaced08ba3c7c53266dfbe004f5434bbfc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e543a603029c529841bb1d10e48109538255eafa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448942"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070890"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 Yığın çerçevesinin açıklamasını alır.
@@ -47,7 +47,7 @@ int GetInfo (
 
 ## <a name="parameters"></a>Parametreler
 `dwFieldSpec`\
-[in] Parametrenin hangi [alanlarının doldurulacaklarını](../../../extensibility/debugger/reference/frameinfo-flags.md) belirten FRAMEINFO_FLAGS `pFrameInfo` bayrağının bir birleşimi.
+[in] Parametrenin hangi [alanlarının doldurulması](../../../extensibility/debugger/reference/frameinfo-flags.md) FRAMEINFO_FLAGS bir numaralandırılan `pFrameInfo` bayrakların birleşimi.
 
 `nRadix`\
 [in] Herhangi bir sayısal bilgiyi biçimlendirmek için kullanılacak radyan.

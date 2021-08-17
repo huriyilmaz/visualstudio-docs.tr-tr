@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 4184bcc959b9966f830baa08abcb5d3d769a2f2ed6daad3d252af3eb00870985
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fb6d40558acac6c51f353925b7e8a5b5453f611a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384904"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026700"
 ---
 # <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>Nasıl: Yük testi düzenleyicisini kullanarak eşik kuralı ekleme
 

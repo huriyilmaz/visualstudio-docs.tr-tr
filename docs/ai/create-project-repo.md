@@ -11,12 +11,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 103d71c819930514f5340a835c079030d6927b7f3589a07b927ac9d7cdc1f789
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 91678f7d0e6843c569e069b30f1c8e5017b254d9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121349071"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053494"
 ---
 # <a name="clone-a-repository-of-python-code-in-visual-studio"></a>Visual Studio Python kodu deposunu kopyalama
 

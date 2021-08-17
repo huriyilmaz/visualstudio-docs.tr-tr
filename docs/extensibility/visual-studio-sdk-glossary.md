@@ -1,6 +1,6 @@
 ---
 title: Visual Studio SDK sözlüğü | Microsoft Docs
-description: Bu sözlük, Visual Studio SDK belgelerinde kullanılan terimler için tanımlar sağlar.
+description: bu sözlük Visual Studio SDK belgelerinde kullanılan terimler için tanımlar sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,22 +10,23 @@ ms.assetid: b64d432b-c39b-4904-ad18-3c3218b6e3aa
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49e91a64220882eea196819a1860052dc871bec4
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 28ef66eb7fc8a004b4d13ea6c3dbc56f7a467e465e4103c6cacf7581b656e209
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905429"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121335296"
 ---
 # <a name="visual-studio-sdk-glossary"></a>Visual Studio SDK sözlüğü
 Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] .
 
 ## <a name="terms"></a>Terimler
- Bir yardımcı program uygulaması, sürücü veya bir birincil uygulamaya eklenen diğer yazılımlar. Visual Studio tümleşik geliştirme ortamında (IDE), eklenti IDE 'nin yeteneklerini genişleten Otomasyon tabanlı bir uygulamadır.
+ Bir yardımcı program uygulaması, sürücü veya bir birincil uygulamaya eklenen diğer yazılımlar. Visual Studio tümleşik geliştirme ortamında (ıde), eklenti ıde 'nin yeteneklerini genişleten otomasyon tabanlı bir uygulamadır.
 
- Otomasyon modeli Visual Studio 'nun önceki sürümlerinde genişletilebilirlik modeli olarak bilinen otomasyon modeli, IDE 'yi hedefleyen temeldeki yordamlara erişmenizi sağlayan bir programlama arabirimidir. Eklentiler, sihirbazlar ve makrolar, IDE 'nin işlevselliğini denetlemek veya genişletmek için Otomasyon modelindeki nesneleri kullanır.
+ otomasyon modeli Visual Studio önceki sürümlerinde, genişletilebilirlik modeli olarak bilinen otomasyon modeli, ıde 'yi hedefleyen temeldeki yordamlara erişmenizi sağlayan bir programlama arabirimidir. Eklentiler, sihirbazlar ve makrolar, IDE 'nin işlevselliğini denetlemek veya genişletmek için Otomasyon modelindeki nesneleri kullanır.
 
  bir GUID 'in kullanıcı ARABIRIMI bağlam Ilişkilendirmesi bir kullanıcı arabirimi komutunun veya bir araç çubuğu gibi öğesinin görünürlüğiyle Ilişkilendirilmesi. Komut UI bağlamı, bir pencereye eklenmemiş olan seçim bağlamından farklı.
 
@@ -55,13 +56,13 @@ Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLU
 
   DocData, belge/görünüm ayrımı olan bir dünyanın içindeki bir belgenin temel aldığı verileri kapsülleyerek bir COM nesnesi (örneğin, metin düzenleyici örneğinde, bu, tüm metin Düzenleyicisi görünümlerini temel alan metin arabelleği olacaktır). EditorFactory bu nesneyi sağlayamazsa, IDE onun adına bir tane oluşturmaz. Bu nesnenin sorumluluğu, aynı şekilde birden fazla görünüm için veri kalıcılığını ve paylaşım semantiğini yönettiğdedir `DocData` . `DocData`Nesne `IOleCommandTarget` arabirimini destekliyorsa, UIShell komut yönlendirmesine dahil edilir.
 
-  Konak tarafından sunulan bir çerçeve içinde Kullanıcı arabirimini barındırmak için kullanılan DocObject teknolojisi. Daha belirgin olarak, bu terim ve ilgili arabirimleri destekleyen herhangi bir eklemeye başvurur `IOleDocument` . Bu teknolojide COM belgelerinin uygulama ayrıntısı, Visual Basic 5,0 ' deki araç pencereleri, Visual Basic 6,0 ' deki ActiveX tasarımcıları vb. gibi birçok olası uygulama vardır.
+  Konak tarafından sunulan bir çerçeve içinde Kullanıcı arabirimini barındırmak için kullanılan DocObject teknolojisi. Daha belirgin olarak, bu terim ve ilgili arabirimleri destekleyen herhangi bir eklemeye başvurur `IOleDocument` . bu teknoloji, COM belgelerinin uygulama ayrıntısı, Visual Basic 5,0 ' deki araç pencereleri, Visual Basic 6,0 ' deki ActiveX tasarımcıları vb. gibi birçok olası uygulamayı içerir.
 
   bir bütün olarak belgeye genel olarak başvurmak için kullanılan belge ( `DocData` ve) `DocView` . Örneğin, bir Belgebir çerçeve bir içerir `DocView` , ancak kalıcılığı işlemek için öğesine bir başvurusu da saklar `DocData` .
 
   DocView kullanıcının temel aldığı görüntüleme ve düzenleme için etkileşimde bulunduğu DocObject/katıştırma/WindowPane `DocData` . Kullanıcılar, arabirim tasarımının parçası olan belge/görünüm ayrımı özelliğinden faydalanır `DocObject` . Kullanıcılar, olarak bilinen temel alınan verilerin daha soyut (ve daha az şekillendirilmiş) bir kavramı kullanmak yerine bir görünüm görevi gören bir tüm DocObject kullanır `DocData` . `DocView` nesneler, IDE 'nin belge çerçevesi nesneleriyle (MDI alt pencereleri) her zaman katıştırılır.
 
-  DTE `DTE` (geliştirme araçları genişletilebilirliği) nesnesi, Visual Studio Automation modelindeki en üst erişim noktasıdır ve IDE 'yi programlı bir şekilde otomatikleştirmenize ve genişletmenize olanak tanır.
+  DTE `DTE` (geliştirme araçları genişletilebilirliği) nesnesi, ıde 'yi programlama yoluyla otomatik hale getirmenizi ve genişletmenizi sağlayan Visual Studio automation modelindeki en üst erişim noktasıdır.
 
   IDE tarafından uygulanan ve arama anahtar sözcüğü veya **F1** yardım konuları listesini görüntüleyen dinamik Yardım penceresi araç penceresi.
 
@@ -69,7 +70,7 @@ Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLU
 
   IDE 'ye değiştiren, özelleştiren veya ekleyen bir özellik uzantısı. Otomasyon modeli veya VSPackages kullanarak uzantılar oluşturursunuz.
 
-  Dış düzenleyici Microsoft Word gibi IDE 'ye özgü olmayan bir düzenleyici. Kendi mekanizmaları aracılığıyla kaydedilir ve IDE dışında kullanılabilir. Bu düzenleyici katıştırılabiliyorsanız IDE 'deki bir pencere içinde görünür. Katıştırılamaz, ayrı bir üst düzey pencere oluşturulur.
+  Dış düzenleyici, IDE 'ye özgü olmayan, Microsoft Word gibi bir düzenleyicidir. Kendi mekanizmaları aracılığıyla kaydedilir ve IDE dışında kullanılabilir. Bu düzenleyici katıştırılabiliyorsanız IDE 'deki bir pencere içinde görünür. Katıştırılamaz, ayrı bir üst düzey pencere oluşturulur.
 
   düğümlerin hiyerarşi ağacı, her düğüm bir özellikler kümesiyle ilişkili.
 
@@ -87,17 +88,17 @@ Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLU
 
   Dil hizmeti VSPackage geliştiricilerinin metin işaretleme ve renklendirme gibi bilgisayar dil kodu düzenleyicilerinin özelliklerini uygulamasına izin veren bir nesne kümesi.
 
-  Çeşitli dosyalar proje projesi, herhangi bir projede olmayan dosyaları açmak için kullanılır. Bu projedeki öğelerin listesi kalıcı değil.
+  çeşitli dosyalar projesi, herhangi bir projede olmayan dosyaları açmak için kullanılan Project. Bu projedeki öğelerin listesi kalıcı değil.
 
   Proje projeleri, hiyerarşi nesnelerinden veya arabirimini uygulayan COM nesnelerinden oluşur `IVsHierarchy` .
 
   projeye özgü tasarımcı veya düzenleyici proje türünden bağımsız olarak kullanılamayan bir tasarımcı. Projeye özgü tüm tasarımcılar, kayıt defterine kendi düzenleyici fabrikası bilgilerini girmelidir. Daha sonra, belirli bir projede belirli bir dosya türü açıldığında, bu, tasarımcıyı bir kez oluşturabilir.
 
-  Proje türü pencere, geçerli etkin proje hiyerarşisini ve öğeyi genel seçim bağlamından sürekli izleyen bir pencere. Proje türü Windows, `SVsTrackSelectionEx` DEĞIŞIKLIKLERI IDE 'ye uyarı vermek ve kullanıcıya geri bildirim göstermek için hizmeti kullanın. Çözüm Gezgini bir proje türü pencere örneğidir.
+  Proje türü pencere, geçerli etkin proje hiyerarşisini ve öğeyi genel seçim bağlamından sürekli izleyen bir pencere. Project windows, `SVsTrackSelectionEx` değişiklikleri ıde 'yi uyarmak ve kullanıcıya geri bildirim göstermek için hizmeti kullanın. Çözüm Gezgini bir proje türü pencere örneğidir.
 
   Daha önce Özellikler penceresi özellik tarayıcısı.
 
-  Projenin dosyaları aynı dizinde olması gerekmeyen başvuru tabanlı proje projesi. Bunun yerine, diğer ilişkisiz dizinlerden dosyalara yapılan başvurular proje tarafından saklanır ve saklanır.
+  projenin dosyaları aynı dizinde olması gerekmeyen başvuru tabanlı projeler Project. Bunun yerine, diğer ilişkisiz dizinlerden dosyalara yapılan başvurular proje tarafından saklanır ve saklanır.
 
   IDE 'nin şu anda açık olan tüm belgelerin listesini tuttuğu belge tablosu Iç yapısı çalıştırılıyor. Liste, belgelerin Şu anda düzenlenip düzenlenmediğine bakılmaksızın bellekteki tüm açık belgeleri içerir. Belge, bir düzenleyicide açılan saklı yordamlar, projedeki dosyalar veya ana proje dosyası (örneğin, *. vcproj dosyası) dahil olmak üzere, kaydedilen herhangi bir öğedir.
 
@@ -119,7 +120,7 @@ Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLU
 
   belirli bir proje türünden bağımsız olarak kullanılabilecek standart düzenleyici düzenleyici. Bu tür düzenleyicilerde kayıt defterine kayıtlı EditorFactory vardır. Bu, IDE 'nin düzenleyiciyi bulmasını ve çağırabilmesini sağlar.
 
-  standart işletim sistemi Düzenleyicisi Visual Studio 'Ya özgü olmayan bir katıştırma. Bu, iyi bilinen Win32 anahtarları kullanılarak kaydedilir (örneğin, Win32 Explorer nasıl çağıracağını bilir). Böyle bir düzenleyici gömülebilir, düzenleyici hala IDE 'deki yerinde görüntülenir. Aksi takdirde, bu tür düzenleyiciler için ayrı bir üst düzey pencere oluşturulur.
+  standart işletim sistemi düzenleyicisi Visual Studio özgü olmayan bir katıştırma. Bu, iyi bilinen Win32 anahtarları kullanılarak kaydedilir (örneğin, Win32 Explorer nasıl çağıracağını bilir). Böyle bir düzenleyici gömülebilir, düzenleyici hala IDE 'deki yerinde görüntülenir. Aksi takdirde, bu tür düzenleyiciler için ayrı bir üst düzey pencere oluşturulur.
 
   `IVsUserContext`bağlam çantasına bağlı bir nesne için alt bağlam paketi. Nesne, IDE bileşeni içindeki bir seçim için arama anahtar sözcüklerini, **F1** anahtar sözcüklerini ve öznitelikleri barındırır. Alt bağlam örnekleri araç penceresinde bir komut veya bir düzenleyicide anahtar sözcük içerir.
 
@@ -137,6 +138,6 @@ Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLU
 
   Kullanıcı arabirimi hiyerarşisi `IVsUIHierarchy` bir hiyerarşinin görüntülenmesini sağlamak için arabirimi uygulayan BIR com nesnesi. UI hiyerarşisi penceresi `ISelectionContainer` Özellikler penceresi güncelleştirmek için arabirimi uygular; isterseniz diğer proje türü pencereler bu uygulamayı kullanabilir.
 
-  VSCT Visual Studio komut tablosu. . Vsct dosyası, XML biçimindeki menülerin, araç çubuklarının ve komutların yerleşimi ve davranışları hakkında bilgiler içerir.
+  vsct Visual Studio komut tablosu. . Vsct dosyası, XML biçimindeki menülerin, araç çubuklarının ve komutların yerleşimi ve davranışları hakkında bilgiler içerir.
 
-  VSPackage aşağıdaki öğelerden bir veya daha fazlasını katkıdan, Visual Studio IDE 'yi genişleten yüklenebilir bir yazılım parçasıdır: Kullanıcı arabirimi, hizmetler, proje türleri veya düzenleyici/tasarımcı. VSPackage, arabirimi uygulayan bir COM nesnesinden `IVsPackage` ve seçimi ve diğer özellikleri desteklemek için diğer arabirimleri uygulayan bir veya daha fazla com nesnesi içerir. Ayrıca, VSPackage, belirli kayıt gereksinimlerine sahiptir.
+  vspackage aşağıdaki öğelerden bir veya daha fazlasını katkısıyla Visual Studio ıde 'yi genişleten yüklenebilir bir yazılım parçasıdır: kullanıcı arabirimi, hizmetler, proje türleri veya düzenleyici/tasarımcı. VSPackage, arabirimi uygulayan bir COM nesnesinden `IVsPackage` ve seçimi ve diğer özellikleri desteklemek için diğer arabirimleri uygulayan bir veya daha fazla com nesnesi içerir. Ayrıca, VSPackage, belirli kayıt gereksinimlerine sahiptir.

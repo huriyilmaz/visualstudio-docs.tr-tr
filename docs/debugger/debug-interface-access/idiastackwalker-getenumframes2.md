@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 06c5017323b1ad9d139d8a0b2fd4296a2def356cee983216006471c071956b50
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 80fbd406a9ad2d3aa691e1fd2650222447d0e109
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454857"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052346"
 ---
 # <a name="idiastackwalkergetenumframes2"></a>IDiaStackWalker::getEnumFrames2
 Belirli bir platform türü için yığın çerçeve numaralandırıcısı alır.

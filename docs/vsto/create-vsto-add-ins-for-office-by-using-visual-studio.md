@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 83d4274a9b74ba37121eb2d9cb8d40fe892b4794446bc3af4c217174a8ff052a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cde476569626270fb7c27f6e49abe8b33a953751
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121424456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026726"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
 > [!IMPORTANT]

@@ -10,14 +10,15 @@ ms.assetid: c4692d17-6cd2-4ad1-8590-d7275c771c70
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c3ff013f546393447b8303575489164a3a7be00a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 12ed8b9b71fe8d0a8a5260069709ca1f8a2bad15c65869020d735f42f5af3447
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941144"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333541"
 ---
 # <a name="concurrency-visualizer-markers"></a>Eşzamanlılık görselleştiricisi işaretçileri
 Eşzamanlılık görselleştiricisi içinde işaretçiler, bir uygulamadaki olayları temsil eden simgelerdir.  Genellikle uygulama, bir uygulamadaki aşamaları veya oluşumları belirlemek için bu olayları oluşturur.  Olaylar, uygulama tarafından veya uygulama tarafından kullanılan kitaplıklar ve çalışma zamanları tarafından oluşturulabilir.
@@ -35,10 +36,10 @@ Eşzamanlılık görselleştiricisi içinde işaretçiler, bir uygulamadaki olay
  İşaretçiler üreten her iş parçacığının ayrı bir zaman çizelgesi kanalı vardır.  İşaretleyici olayları oluşturmaktan sorumlu iş parçacığının KIMLIĞI, işaret kanalının açıklamasının yanında gösterilir.  İşaret kanalının sol tarafında gösterilen KIMLIK, geçerli işlemdeki başka bir iş parçacığının KIMLIĞIYLE eşleşir.
 
 ## <a name="marker-importance"></a>İşaret önemi
- İşaretçiler dört önem düzeyinden birine sahip olabilir: düşük, normal, yüksek ve kritik.  İşaret kaynaklarını önem düzeyine göre filtreleyebilirsiniz.  Örneğin, yalnızca normal veya kritik öneme sahip belirli bir kaynağın işaretçilerini görmek isterseniz, filtreyi [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunda yapılandırabilirsiniz. Bir işaretin önem derecesi, araç ipucunda ve [Işaretçiler raporunda](../profiling/markers-report.md)görüntülenir.
+ İşaretçiler dört önem düzeyinden birine sahip olabilir: düşük, normal, yüksek ve kritik.  İşaret kaynaklarını önem düzeyine göre filtreleyebilirsiniz.  örneğin, yalnızca normal veya kritik öneme sahip belirli bir kaynağın işaretçilerini görmek isterseniz, filtreyi [gelişmiş Ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunda yapılandırabilirsiniz. Bir işaretin önem derecesi, araç ipucunda ve [Işaretçiler raporunda](../profiling/markers-report.md)görüntülenir.
 
 ## <a name="marker-category"></a>İşaretleyici kategorisi
- İşaretleyici kategorisi, aynı kaynaktan gelen bir işaretleyici olayları grubunu belirtir.  Eşzamanlılık görselleştiricisi, bayrakların ve yayılmaları farklı kategorilerini ayırt etmek için renk kullanır. Eşzamanlılık Görselleştiricisini, belirli bir olay sağlayıcısından işaret olaylarını filtrelemek için kategorileri kullanacak şekilde yapılandırabilirsiniz.  Filtreyi yapılandırmak için [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu kullanın.
+ İşaretleyici kategorisi, aynı kaynaktan gelen bir işaretleyici olayları grubunu belirtir.  Eşzamanlılık görselleştiricisi, bayrakların ve yayılmaları farklı kategorilerini ayırt etmek için renk kullanır. Eşzamanlılık Görselleştiricisini, belirli bir olay sağlayıcısından işaret olaylarını filtrelemek için kategorileri kullanacak şekilde yapılandırabilirsiniz.  filtreyi yapılandırmak için [gelişmiş Ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu kullanın.
 
 ## <a name="known-sources-of-markers"></a>Bilinen işaret kaynakları
  Tüm ETW sağlayıcıları, sağlayıcı belirli kısıtlamalara uygun olduğu sürece işaretçiler oluşturabilir. Eşzamanlılık Görselleştiricisi ' i işaretçiler için ek olay kaynaklarını dinleyecek şekilde yapılandırabilirsiniz. Varsayılan olarak, bu olay kaynaklarını dinler:
@@ -57,7 +58,7 @@ Eşzamanlılık görselleştiricisi içinde işaretçiler, bir uygulamadaki olay
 
 - [C++ AMP (C++ Accelerated Massive Parallelism)](/cpp/parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism)
 
-  Çeşitli kaynaklardaki işaretlerin eşzamanlılık Görselleştiricide görüntülenip görüntülenmeyeceğini denetlemek için, [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) Iletişim kutusundaki işaretçiler sekmesini kullanabilirsiniz. Bu, önemli ve kategoriye göre işaretleyiciler için filtre uygulayabilirsiniz.
+  çeşitli kaynaklardaki işaretlerin eşzamanlılık görselleştiricide görüntülenip görüntülenmeyeceğini denetlemek için, [gelişmiş Ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusundaki işaretçiler sekmesini kullanabilirsiniz. bu, önemli ve kategoriye göre işaretleyiciler için filtre uygulayabilirsiniz.
 
 ## <a name="markers-from-eventsource"></a>EventSource 'tan işaretçiler
  Eşzamanlılık görselleştiricisi Ayrıca EventSource olaylarını gösterebilir.  Daha fazla bilgi için bkz. [EventSource olaylarını işaretçiler olarak görselleştirme](../profiling/visualizing-eventsource-events-as-markers.md).

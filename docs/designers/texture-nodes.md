@@ -8,14 +8,15 @@ ms.assetid: b7df5ef3-dd4f-4964-9d96-34e0e180515e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf9ea986fde744ec384f68338eca0d2239a3e73
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7de72c166ed7cb834a6675265364bf9bdfe5dbbff60ffc5d2095683de30040d2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902267"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293657"
 ---
 # <a name="texture-nodes"></a>Doku düğümleri
 
@@ -30,7 +31,7 @@ Gölgelendirici tasarımcısında, doku düğümleri örnek olarak çeşitli dok
 |**UV kaydır**|Belirtilen doku koordinatlarını zaman işlevi olarak bomkler.<br /><br /> Bunu, bir nesnenin yüzeyi genelinde bir dokuyu veya normal Haritayı taşımak için kullanabilirsiniz.<br /><br /> **Girişinin**<br /><br /> `UV`: `float2`<br /> Kaydırma için koordinatlar.<br /><br /> `Time`: `float`<br /> Saniye cinsinden, kaydırma süresi (saniye cinsinden).<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Panolduğunuz koordinatlar.|**Hız X**<br /> Saniyede x ekseni boyunca yatay olarak kullanılan dokklerin sayısı.<br /><br /> **Hız Y**<br /> Y ekseni boyunca, saniye başına yatay olarak kullanılan doklarca sayısı.|
 |**Paralaks UV**|Yükseklik ve görüntüleme açısı işlevi olarak belirtilen doku koordinatlarından oluşan bir işlev.<br /><br /> Bu efekt, *paralaks eşlemesi* veya sanal öteleme eşlemesi olarak bilinir. Bunu, düz bir yüzey üzerinde bir derinlik yanılsaması oluşturmak için kullanabilirsiniz.<br /><br /> **Girişinin**<br /><br /> `UV`: `float2`<br /> Displace için koordinatlar.<br /><br /> `Height`: `float`<br /> Koordinatlarla ilişkili olan heightmap değeri `UV` .<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Hatalı yerleştirilen koordinatlar.|**Derinlik Düzlemi**<br /> Paralaks efektinin başvuru derinliği. Varsayılan olarak, değer 0,5 ' dir. Daha küçük değerler dokuyu kaldırın; daha büyük değerler, yüzeyi içine havuza ayırır.<br /><br /> **Derinlik Ölçeği**<br /> Paralaks efektinin ölçeği. Bu, görünür derinliği daha fazla veya daha az belirgin hale getirir. Tipik değerler 0,02 ile 0,1 arasında değişir.|
 |**UV döndür**|Belirtilen doku koordinatlarını bir zaman işlevi olarak merkezi bir nokta etrafında döndürür.<br /><br /> Bunu, bir nesnenin yüzeyinde bir dokuyu veya normal Haritayı almak için kullanabilirsiniz.<br /><br /> **Girişinin**<br /><br /> `UV`: `float2`<br /> Döndürülecek koordinatlar.<br /><br /> `Time`: `float`<br /> Saniye cinsinden, kaydırma süresi (saniye cinsinden).<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Döndürülen koordinatlar.|**Orta X**<br /> Döndürme merkezini tanımlayan x koordinatı.<br /><br /> **Orta Y**<br /> Döndürme merkezini tanımlayan y koordinatı.<br /><br /> **Hız**<br /> Dokunun saniye başına döndüğü radyan cinsinden açı.|
-|**Doku koordinatı**|Geçerli pikselin doku koordinatları.<br /><br /> Doku koordinatları, yakın köşelerin doku koordinat öznitelikleri arasında enterpolasyonu tarafından belirlenir. Bunu, doku alanındaki geçerli pikselin konumu olarak düşünebilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Doku koordinatları.|Yok|
+|**Doku koordinatı**|Geçerli pikselin doku koordinatları.<br /><br /> Doku koordinatları, yakın köşelerin doku koordinat öznitelikleri arasında enterpolasyonu tarafından belirlenir. Bunu, doku alanındaki geçerli pikselin konumu olarak düşünebilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Doku koordinatları.|Hiçbiri|
 |**Doku boyutları**|2B doku eşlemesinin genişlik ve yüksekliğini verir.<br /><br /> Bir gölgelendiricide dokunun genişliğini ve yüksekliğini göz önünde bulundurmanız için doku boyutlarını kullanabilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Dokunun bir vektör olarak ifade edilen genişliği ve yüksekliği. Genişlik, vector öğesinin ilk öğesinde saklanır. Yükseklik ikinci öğesinde saklanır.|**Doku**<br /> Doku boyutlarıyla ilişkili doku kaydı.|
 |**Texel Delta**|Bir 2B doku haritasının dokun arasındaki Delta (mesafe) çıktısını verir.<br /><br /> Bir gölgelendiricide komşu doku hücresi değerinin değerlerini örneklemek için doku hücresi değerinin Delta öğesini kullanabilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Bir doku hücresi değerinin 'den sonraki doku hücresi değerinin 'ye (pozitif yönde çapraz geçiş), normalleştirilmiş doku alanında vektör olarak ifade edilen Delta (uzaklık). Delta 'un U veya V koordinatlarını seçerek veya negatifi atlayarak tüm komşu metinlerinizin konumlarını türetebilirsiniz.|**Doku**<br /> Doku hücresi değerinin Delta ile ilişkili doku kaydı.|
-|**Doku örneği**|2B doku eşlemesinden belirtilen koordinatlarda bir renk örneği alır.<br /><br /> Bir nesnenin yüzeyi üzerinde renk ayrıntısı sağlamak için doku haritası kullanabilirsiniz.<br /><br /> **Girişinin**<br /><br /> `UV`: `float2`<br /> Örneğin çekildiği koordinatlar.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float4`<br /> Renk örneği.|**Doku**<br /> Örnekleyici ile ilişkili doku kaydı.|
+|**Doku örneği**|2B doku eşlemesinden belirtilen koordinatlarda bir renk örneği alır.<br /><br /> Bir nesnenin yüzeyinde renk ayrıntıları sağlamak için doku eşlemesi kullanabilirsiniz.<br /><br /> **Giriş:**<br /><br /> `UV`: `float2`<br /> Örneğin alınarak alınan koordinatlar.<br /><br /> **Çıkış:**<br /><br /> `Output`: `float4`<br /> Renk örneği.|**Doku**<br /> Örnekleyiciyle ilişkili doku yazmacı.|

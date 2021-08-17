@@ -1,6 +1,6 @@
 ---
-description: Bu simgeyle temsil edilen nesne tarafından kullanılan bit veya bellek bayt sayısını verir.
-title: IDiaSymbol::get_length | Microsoft Docs
+description: Bu sembol tarafından temsil edilen nesne tarafından kullanılan bit veya bayt sayısını alır.
+title: 'IDiaSymbol:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121454698"
 ---
 # <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
-Bu simgeyle temsil edilen nesne tarafından kullanılan bit veya bellek bayt sayısını verir.
+Bu sembol tarafından temsil edilen nesne tarafından kullanılan bit veya bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,16 +35,16 @@ HRESULT get_length (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bu simgeyle temsil edilen nesne tarafından kullanılan bellek bayt veya bit sayısını döndürür.
+dışı Bu sembol tarafından temsil edilen nesne tarafından kullanılan bayt veya bellek bitlerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Sembolün [LocationType Numaralama değeri](../../debugger/debug-interface-access/locationtype.md) ise, bu yöntem tarafından döndürülen uzunluk bittir; aksi takdirde, uzunluk diğer tüm konum türleri için bayt `LocIsBitField` cinsindendir.
+ Simgenin [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) ise `LocIsBitField` , bu yöntemin döndürdüğü uzunluk bit olarak olur; aksi takdirde, uzunluk diğer tüm konum türleri için bayt cinsinden olur.
 
 ## <a name="example"></a>Örnek
 
@@ -58,8 +58,8 @@ pSymbol->get_length( &length );
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

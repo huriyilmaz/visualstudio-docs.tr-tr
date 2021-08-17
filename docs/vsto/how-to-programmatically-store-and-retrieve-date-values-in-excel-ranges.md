@@ -1,6 +1,6 @@
 ---
-title: Excel aralıklarında program aracılığıyla tarih değerlerini depolama & alma
-description: Microsoft Excel aralıklarında tarih değerlerini programlı bir şekilde depolamak ve almak için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+title: tarih değerlerini program aracılığıyla Excel aralıklarında depola & al
+description: Microsoft Excel aralıklarında tarih değerlerini programlı bir şekilde depolamak ve almak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -20,24 +20,25 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 6e3115e00147a5dff850f6e0c051ffc3b6733218
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: c9dbf0d63b13d6f7b66fc24c82a80e7fecea5d4c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826245"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025971"
 ---
-# <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>Nasıl yapılır: program aracılığıyla Excel aralıklarında tarih değerlerini depolama ve alma
-  Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde veya yerel Excel Aralık nesnesinde değerleri saklayabilir ve alabilirsiniz.
+# <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>nasıl yapılır: program aracılığıyla Excel aralıklarında tarih değerlerini depolama ve alma
+  değerleri bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim veya yerel Excel aralığı nesnesinde depolayıp alabilir.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Visual Studio 'da Office geliştirme araçları 'nı kullanarak bir aralıktaki 1/1/1900 veya sonraki bir tarih değerini depolarsanız, OLE Automation (OA) biçiminde depolanır. <xref:System.DateTime.FromOADate%2A>OLE Otomasyonu (OA) tarihlerinin değerini almak için yöntemini kullanmanız gerekir. Tarih 1/1/1900 ' den daha eski ise, bir dize olarak depolanır.
+ Visual Studio Office geliştirme araçlarını kullanarak bir aralıktaki 1/1/1900 veya sonraki bir tarih değerini depolarsanız OLE Automation (OA) biçiminde depolanır. <xref:System.DateTime.FromOADate%2A>OLE Otomasyonu (OA) tarihlerinin değerini almak için yöntemini kullanmanız gerekir. Tarih 1/1/1900 ' den daha eski ise, bir dize olarak depolanır.
 
 > [!NOTE]
-> Excel tarihleri, 1900 ayın ilk iki ayı için OLE Otomasyon tarihlerinden farklıdır. Ayrıca, **1904 tarih sistemi** seçeneği işaretliyse farklılık da vardır. Aşağıdaki kod örnekleri bu farklılıkları gidermez.
+> Excel tarihler, 1900 ilk iki aya ait OLE otomasyon tarihlerinden farklıdır. Ayrıca, **1904 tarih sistemi** seçeneği işaretliyse farklılık da vardır. Aşağıdaki kod örnekleri bu farklılıkları gidermez.
 
 ## <a name="use-a-namedrange-control"></a>NamedRange denetimi kullanma
 
@@ -62,9 +63,9 @@ ms.locfileid: "107826245"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet52":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet52":::
 
-## <a name="use-native-excel-ranges"></a>Yerel Excel aralıklarını kullan
+## <a name="use-native-excel-ranges"></a>yerel Excel aralıklarını kullan
 
-### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>Yerel Excel Aralık nesnesinde bir tarih değeri depolamak için
+### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>yerel Excel aralığı nesnesinde bir tarih değeri depolamak için
 
 1. <xref:Microsoft.Office.Interop.Excel.Range> **A1** hücresini temsil eden bir oluştur.
 
@@ -76,7 +77,7 @@ ms.locfileid: "107826245"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet26":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet26":::
 
-### <a name="to-retrieve-a-date-value-from-a-native-excel-range-object"></a>Yerel Excel Aralık nesnesinden bir tarih değeri almak için
+### <a name="to-retrieve-a-date-value-from-a-native-excel-range-object"></a>yerel Excel range nesnesinden bir tarih değeri almak için
 
 1. Tarih değerini öğesinden alın `rng` .
 

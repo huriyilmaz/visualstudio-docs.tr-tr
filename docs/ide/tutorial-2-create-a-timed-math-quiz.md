@@ -11,19 +11,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: fc4a86e7201497b035cae62944cdaeaa3b7264461b82d79b9bd1ae59706794f7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7d2dea54ebab5f05b783038a0f756d61dab83c3b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121371326"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040651"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Öğretici 2: Zamanlı matematik testi oluşturma
 
 Bu öğreticide, test sınavını alan kişi belirli bir süre içinde dört rastgele aritmetik sorunu yanıtlaması gereken bir test oluşturacak.
 
 > [!NOTE]
-> Bu öğreticide hem C# hem Visual Basic, bu nedenle kullanmakta olan programlama diline özgü bilgilere odaklanın.
+> Bu öğreticide hem C# hem de Visual Basic, bu nedenle kullanmakta olan programlama diline özgü bilgilere odaklanın.
 
 Bu öğretici, aşağıdaki görevlerde size yol gösterir:
 

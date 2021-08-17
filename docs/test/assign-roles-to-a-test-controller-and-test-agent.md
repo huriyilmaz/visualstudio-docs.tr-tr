@@ -15,12 +15,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8a0aa35e34e95f4b9737034fa7e5b7ea2fff0b2b1aa6abf9cfb6a6688ee2bd32
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1caf441e0dab8ef1216380dbc5d7bc8c1ec1b461
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121395453"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038493"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Bir test denetleyicisine ve test aracısına rol atama
 
@@ -62,14 +62,14 @@ Bu makalede, test denetleyicisi ve test aracısı kullanan bir test ayarının n
 
 1. **Roller'i seçin.**
 
-     **Roller** sayfası görüntülenir.
+     Roller  sayfası görüntülenir.
 
 2. Testlerinizi uzaktan çalıştırmak için Test yürütme yöntemi **açılan** listesini kullanın ve Uzaktan **yürütme'yi seçin.**
 
 3. Denetleyici **açılan** listesinde, test denetleyicinizin bilgisayar [adını yazın.](../test/lab-management/install-configure-test-agents.md)
 
     > [!NOTE]
-    > denetleyiciyi ilk kez ekliyorsanız, açılan listede hiçbir denetleyici listelenmiyor. Liste, diğer test ayarlarında belirttiğiniz önceki denetleyiciler tarafından doldurulur.
+    > Denetleyiciyi ilk kez ekliyorsanız, açılan listede hiçbir denetleyici listelenmiyor. Liste, diğer test ayarlarında belirttiğiniz önceki denetleyiciler tarafından doldurulur.
 
 4. **Roller'in** altında Ekle'yi **seçin.**
 
@@ -89,7 +89,7 @@ Bu makalede, test denetleyicisi ve test aracısı kullanan bir test ayarının n
 
 4. **Konaklar'ı seçin.**
 
-5. (İsteğe bağlı) Makineniz Microsoft Windows'nin 64 bit sürümü altında çalışıyorsa ve Testlerinizi Herhangi bir **CPU** yapılandırması kullanarak derle yaptıysanız, Testi **32 bit veya 64 bit** işlemde çalıştır açılan listesini kullanın ve Testleri 64 bit makinede **64 bit** işlemde çalıştır'ı seçin.
+5. (İsteğe bağlı) Makineniz Microsoft Windows'nin 64 bit sürümü altında çalışıyorsa ve testini Herhangi bir **CPU** yapılandırması kullanarak derle yaptıysanız, Testi **32 bit veya 64 bit** işlemde çalıştır açılan listesini kullanın ve Testleri 64 bit makinede **64 bit** işlemde çalıştır'ı seçin.
 
     > [!TIP]
     > Maksimum esneklik için test projelerinizi Herhangi bir **CPU yapılandırmasıyla derlemeniz** gerekir. Ardından hem 32 bit hem de 64 bit aracılar üzerinde çalıştırarak. Test projelerini **64 bit** yapılandırmayla derlemenin bir avantajı yoktur.
@@ -100,7 +100,7 @@ Bu makalede, test denetleyicisi ve test aracısı kullanan bir test ayarının n
 
 ::: moniker range="vs-2017"
 
-8. Test menüsünde **Test**  Ayarlar Dosya Ayarlar >  *TestSettingDistributedTestWalkthrough.testsettings dosyasını* seçin.
+8. Test menüsünde **Test**  Ayarlar Test Ayarlar'ı seçin ve >  *ardından TestSettingDistributedTestWalkthrough.testsettings dosyasını* seçin.
 
 ::: moniker-end
 

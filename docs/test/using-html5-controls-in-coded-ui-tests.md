@@ -1,6 +1,6 @@
 ---
 title: Kodlanmış UI Testlerinde HTML5 Denetimleri Kullanma
-description: Internet Explorer 9 ve daha fazla koda dahil edilen HTML5 denetimleri için kodlanmış UI testleri Internet Explorer 10.
+description: Internet Explorer 9 ve daha yeni bir koda dahil edilen HTML5 denetimleri için kodlanmış UI testleri Internet Explorer 10.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: dbe1588789dbf7f8384a658a600864ae6cbb8c10b59fd0c93d8b07225e000d80
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aa961c87dfae8dc740fa72d6915b27f3a735da1a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121395016"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054021"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>Kodlanmış UI testlerinde HTML5 denetimlerini kullanma
 
@@ -31,7 +31,7 @@ Kodlanmış UI testleri, Internet Explorer 9 ve daha yeni bir Internet Explorer 
 > Önceki sürümlerde Internet Explorer 10, kodlanmış UI testlerini, önceki işlemle karşılaştırıldığında daha yüksek bir ayrıcalık düzeyinde Internet Explorer mümkündu. Kodlanmış UI testlerini Internet Explorer 10, hem kodlanmış UI testi Internet Explorer işlem aynı ayrıcalık düzeyinde olması gerekir. Bunun nedeni, Internet Explorer 10'daki daha güvenli AppContainer özellikleridir.
 
 > [!WARNING]
-> Internet Explorer 10'da kodlanmış ui testi Internet Explorer 9 veya Internet Explorer 8 kullanılarak çalıştırılamayabilirsiniz. Bunun nedeni, Internet Explorer 10, Video, ProgressBar ve Kaydırıcı gibi HTML5 denetimlerinin de dahil olduğu bir durum. Bu HTML5 denetimleri, Internet Explorer 9 veya Internet Explorer 8 tarafından tanınmaz. Benzer şekilde, Internet Explorer 9 kullanarak kodlanmış UI testleri, Internet Explorer 8 tarafından tanınmayacak bazı HTML5 denetimleri de içerebilir.
+> Internet Explorer 10'da kodlanmış ui testi Internet Explorer 9 veya Internet Explorer 8 kullanılarak çalıştırılamayabilirsiniz. Bunun nedeni, Internet Explorer 10, Video, ProgressBar ve Kaydırıcı gibi HTML5 denetimlerinin yer alamlarıdır. Bu HTML5 denetimleri, Internet Explorer 9 veya Internet Explorer 8 tarafından tanınmaz. Benzer şekilde, Internet Explorer 9 kullanarak kodlanmış UI testleri, Internet Explorer 8 tarafından tanınmayacak bazı HTML5 denetimleri de içerebilir.
 
 ## <a name="audio-control"></a>Ses Denetimi
 
@@ -55,7 +55,7 @@ Onay ekliyebilirsiniz özellikler listesi için bkz. [HTMLAudioElement.](https:/
 **Filtre özellikleri:** için filtre özellikleri `HtmlAudio` `Src` , ve `Class` `ControlDefinition` 'tir. `TagInstance`
 
 > [!NOTE]
-> Seek ve Pause için süre önemli olabilir. Kayıttan yürütme sırasında, kodlanmış UI testi sesi duraklatmadan önce `(TimeSpan)` belirtilen süreye kadar bekler. Özel bir durumla, Belirtilen süre Duraklat komutuna isabetmeden önce geçti ise, bir özel durum oluşturur.
+> Seek ve Pause için süre önemli olabilir. Kayıttan yürütme sırasında, kodlanmış UI testi sesi duraklatmadan önce `(TimeSpan)` belirtilen süreye kadar bekler. Belirli bir özel durumla, Pause komutuna gelmeden önce belirtilen süre geçti ise, bir özel durum oluşturur.
 
 ## <a name="video-control"></a>Video Denetimi
 **Video denetimi:** HTML5 Video denetimine yapılan eylemler doğru şekilde kaydedilir ve tekrar oynattır.

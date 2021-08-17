@@ -24,7 +24,7 @@ ms.locfileid: "121403508"
 ---
 # <a name="add-visual-studio-commands-to-a-start-page"></a>Başlangıç Visual Studio komutlarını ekleme
 
-Özel bir Başlangıç Sayfası oluşturdukta, bu sayfaya Visual Studio komutlarını ekleyebilirsiniz. Bu belgede, başlangıç komutlarını Bir Başlangıç Visual Studio XAML nesnelerine bağlamanın farklı yolları ele yer atır.
+Özel bir Başlangıç Sayfası 7.000.000 Visual Studio ekleyebilirsiniz. Bu belgede, bir Başlangıç Sayfasındaki XAML nesnelerine Visual Studio komutlarını bağlamanın farklı yolları ele alır.
 
 XAML'de komutlar hakkında daha fazla bilgi için bkz. [Komuta genel bakış](/dotnet/framework/wpf/advanced/commanding-overview)
 

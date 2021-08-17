@@ -1,6 +1,6 @@
 ---
-title: Kod için Otomasyon sağlama | Microsoft Docs
-description: İç veri yapınız tarafından belirlenen arabirimlerin uygulanması için bir kod modeli uygulama hakkında bilgi edinin.
+title: Kod Çözümleri için Otomasyon | Microsoft Docs
+description: İç veri yapınız tarafından belirlenen arabirimlerin uygulanmasını gerektiren bir kod modeli uygulama hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -21,19 +21,19 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121275365"
 ---
 # <a name="providing-automation-for-code"></a>Kod için Otomasyon Sağlama
-Kodunuz için bir otomasyon modeli oluşturmak gerekli değildir. Ortam SDK 'Sı bu işlemi gerçekleştirmek için bir örnek sağlamaz. Kod modellerine ilişkin Öngörüler için, nesnesine bakın <xref:EnvDTE.CodeModel> .
+Kodunuz için otomasyon modeli oluşturmak gerekli değildir. Ortam SDK'sı bunu yapmak için bir örnek sağlamaz. Kod modelleri hakkında içgörüler için nesnesine <xref:EnvDTE.CodeModel> bakın.
 
- Bir kod modeli uygulamak için, iç veri yapınız tarafından belirlenen arabirimleri uygulamanız gerekir. Nesneler `IDispatch` sınıfından türetilmelidir.
+ Bir kod modeli uygulamak için, iç veri yapınız tarafından belirlenen tüm arabirimleri uygulamanız gerekir. Nesneleri sınıfından `IDispatch` türetilen gerekir.
 
- Genişletmediğiniz nesneler <xref:EnvDTE.CodeModel> ve <xref:EnvDTE.FileCodeModel> <xref:EnvDTE.Project> nesnesinden kullanılabilir ve aşağıdaki gibi görünür:
+ ve gibi genişleten <xref:EnvDTE.CodeModel> nesneler <xref:EnvDTE.FileCodeModel> nesnesinden <xref:EnvDTE.Project> kullanılabilir ve aşağıdaki gibi olur:
 
 - <xref:EnvDTE.Project.CodeModel%2A>
 
 - <xref:EnvDTE.ProjectItem.FileCodeModel%2A>
 
- `CodeModel` `FileCodeModel` `Project` Ve nesnelerinizin döndürdüğü nesnede yalnızca veya arabirimini uygulamayı seçebilirsiniz <xref:EnvDTE.ProjectItem> . Bu arabirimden proje sisteminiz için uygun olan tüm işlevleri sağlayın.
+ Ve nesnelerinden geri dönüş nesnesinde yalnızca veya `CodeModel` `FileCodeModel` arabirimini uygulamaya karar `Project` <xref:EnvDTE.ProjectItem> veebilirsiniz. Bu arabirimden proje sisteminiz için uygun olan tüm işlevleri sağlama.
 
- Standart ve arabirimlerde kullanılamayan Yöntemler veya özellikler gibi özellikler eklemek istiyorsanız, `CodeModel` `FileCodeModel` Standart 'dan devralan kendi arabirimini oluşturun. Son kullanıcıların bunu arayacağı bilmesini sağlamak için, bunu proje sisteminizle birlikte belgelediğinizden emin olun. Standart arabirimini döndürürler, ancak Kullanıcı, varsa, `QueryInterface` Bu yöntemi çağırabilir veya varsa arayüzüne çevirebilirsiniz.
+ Standart ve arabirimlerden kullanılabilir olmayan yöntemler veya özellikler gibi özellikler eklemek için, standarttan devralınan kendi `CodeModel` `FileCodeModel` arabiriminizi oluşturun. Son kullanıcıların bunu nasıl bakacaklarını bilmek için bunu proje sisteminize belgeleyenin. Standart arabirimini geri dönersiniz, ancak kullanıcı yöntemini çağırarak veya mevcut olduğu `QueryInterface` biliniyorsa arabiriminize atabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Otomasyon Modeline Genel Bakış](../../extensibility/internals/automation-model-overview.md)

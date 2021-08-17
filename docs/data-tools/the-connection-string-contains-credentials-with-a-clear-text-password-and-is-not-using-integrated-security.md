@@ -20,23 +20,23 @@ ms.locfileid: "121346823"
 ---
 # <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>Bağlantı dizesi şifresiz parola içeren kimlik bilgileri içeriyor ve tümleşik güvenliği kullanmıyor
 
-Bağlantı dizesini geçerli DBML dosyasına ve uygulama yapılandırma dosyalarına bu hassas bilgilerle kaydetmek istiyor musunuz?  Bağlantı dizesini hassas bilgiler olmadan kaydetmek için **Hayır** ' a tıklayın.
+Bağlantı dizesini bu hassas bilgilerle geçerli DBML dosyasına ve uygulama yapılandırma dosyalarına kaydetmek istiyor musunuz?  Bağlantı **dizesini** hassas bilgiler olmadan kaydetmek için Hayır'a tıklayın.
 
-Gizli bilgiler (bağlantı dizesinde bulunan parolalar) içeren veri bağlantılarıyla çalışırken, bağlantı dizesini bir projenin DBML dosyasına ve uygulama yapılandırma dosyasına, hassas bilgileri içeren veya olmayan bir şekilde kaydetme seçeneği verilir.
+Hassas bilgiler (bağlantı dizesine dahil olan parolalar) içeren veri bağlantılarıyla çalışırken, bağlantı dizesini projenin DBML dosyasına ve uygulama yapılandırma dosyasına hassas bilgilerle veya hassas bilgiler olmadan kaydetme seçeneği verilir.
 
 > [!WARNING]
-> **bağlantı** özellikleri **uygulaması Ayarlar** özelliğinin **False** olarak ayarlanması, parolayı dbml dosyasına ekleyecek.
+> Application Ayarlar  Bağlantı **özellikleri** **özelliğinin False** olarak ayarnması parolayı DBML dosyasına ekler.
 
 ## <a name="save-options"></a>Kayıt seçenekleri
 
-- Bağlantı dizesini hassas bilgilerle kaydetmek için **Evet**' i seçin.
+- Bağlantı dizesini hassas bilgilerle kaydetmek için Evet'i **seçin.**
 
-   Bağlantı dizesi bir uygulama ayarı olarak depolanır. Bağlantı dizesi, gizli bilgileri düz metin olarak içerir. DBML dosyası gizli bilgileri içermez.
+   Bağlantı dizesi bir uygulama ayarı olarak depolanır. Bağlantı dizesi, hassas bilgileri düz metin olarak içerir. DBML dosyası hassas bilgileri içermez.
 
-- Bağlantı dizesini hassas bilgiler olmadan kaydetmek için **Hayır**' ı seçin.
+- Bağlantı dizesini hassas bilgiler olmadan kaydetmek için Hayır'ı **seçin.**
 
-   Bağlantı dizesi bir uygulama ayarı olarak depolanır, ancak parola dahil edilmez.
+   Bağlantı dizesi bir uygulama ayarı olarak depolanır, ancak parola dahil değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio araçlar LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [LINQ to SQL araçları Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

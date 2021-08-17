@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl kullanılır: Çok dilli Office arabirimini hedefleme'
+title: 'Nasıl kullanılır: Çok Office kullanıcı arabirimini hedefleme'
 description: Çok dilli kullanıcı Visual Studio program aracılığıyla hedefleyebilirsiniz Microsoft Office nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -27,12 +27,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121394192"
 ---
-# <a name="how-to-target-the-office-multilingual-user-interface"></a>Nasıl kullanılır: Çok dilli Office arabirimini hedefleme
+# <a name="how-to-target-the-office-multilingual-user-interface"></a>Nasıl kullanılır: Çok Office kullanıcı arabirimini hedefleme
   Çok Dilde Kullanıcı Arabirimi (MUI), son kullanıcıya kullanıcı arabiriminin (UI) dilini değiştirme olanağı veren bir Microsoft Office özelliğidir. Örneğin, İngilizce kullanıcı arabirimiyle çalışan bir son kullanıcı, kullanıcı arabiriminin dilini İspanyolca olarak değiştirebilir.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Uygulamanız Office'nin birçok dilini kullanan kişiler tarafından kullanılacaksa, kullanıcı arabirimi dizelerinin dilini kullanıcının bilgisayarında Office tarafından kullanılan dille eş olacak şekilde otomatik olarak değiştirmek için kod kullanılmaktadır (kullanıcının doğru kaynakları yüklüyse).
+ Uygulamanız birçok Office dili kullanan kişiler tarafından kullanılacaksa, kullanıcı arabirimi dizelerinin dilini, kullanıcının bilgisayarında Office tarafından kullanılan dille eş olacak şekilde otomatik olarak değiştirmek için kod kullanılmaktadır (kullanıcının doğru kaynakları yüklüyse).
 
 ## <a name="to-check-the-current-office-ui-setting"></a>Geçerli kullanıcı arabirimi ayarını Office için
 

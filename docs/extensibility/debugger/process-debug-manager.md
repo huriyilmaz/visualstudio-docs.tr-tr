@@ -11,19 +11,20 @@ ms.assetid: d0861e0c-b819-490c-9604-5e6d08ac291a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 04fb89f4b009640760d624f1efa197cdaa56bda7
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 57b6ba687039486bee9b6313cd18438db1b18e51aa1a68730c2ba6e64800a7e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900752"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452478"
 ---
 # <a name="process-debug-manager"></a>İşlem hata ayıklama yöneticisi
-İşlem hata ayıklama yöneticisi (PDM), program ve Visual Studio yöneten bir bileşendir ve oturum hata ayıklama yöneticisi ve hata ayıklama altyapıları tarafından kullanılabilir hale geldi.
+İşlem hata ayıklama yöneticisi (PDM), program ve Visual Studio yöneten, oturum hata ayıklama yöneticisi ve hata ayıklama altyapıları için kullanılabilir hale Visual Studio'nin bir bileşenidir.
 
- PDM, hata ayıklaması yapılan tüm işlemleri yönetir. Hata ayıklamak için bir programın PDM'ye kayıtlı olması gerekir. Bu kayıt, program başlat zamanı bir bağlantı noktası veya hata ayıklama altyapısı tarafından yapılır.
+ PDM, hata ayıklaması yapılan tüm işlemleri yönetir. Hata ayıklamak için bir programın PDM'ye kayıtlı olması gerekir. Bu kayıt, program başlatılana kadar bir bağlantı noktası veya hata ayıklama altyapısı tarafından yapılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İşlemler](../../extensibility/debugger/processes.md)

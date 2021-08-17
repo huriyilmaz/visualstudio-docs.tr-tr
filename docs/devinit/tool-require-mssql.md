@@ -1,6 +1,6 @@
 ---
 title: require-mssql
-description: devinit aracı-MSSQL gerektirir.
+description: devinit tool require-mssql.
 ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
@@ -21,28 +21,28 @@ ms.locfileid: "121390544"
 # <a name="require-mssql"></a>require-mssql
 
 > [!IMPORTANT]
-> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
 
-`require-mssql`araç, [Microsoft SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/application-development) 'ı MS SQL Server ıso aracılığıyla yüklemek için kullanılır. SQL sunucusu, `localhost` tümleşik Windows kimlik doğrulaması kullanılarak kullanılabilir olacaktır SQL sunucusu bağlantı dizesiyle erişilebilir olacaktır `"Server=localhost;Integrated Security=true;"` .
+Araç, `require-mssql` MS SQL server ISO üzerinden Microsoft SQL Server [2019 Developer Edition'ı](https://www.microsoft.com/sql-server/application-development) yüklemek için kullanılır. SQL sunucusu, tümleşik kimlik doğrulaması Windows üzerinde kullanılabilir SQL sunucusuna `localhost` bağlantı dizesiyle erişilebilir. `"Server=localhost;Integrated Security=true;"`
 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak [açıklanmış varsayılan](#default-behavior) davranışı takip eder.
 
 | Ad                                             | Tür   | Gerekli | Değer                                                                                   |
 |--------------------------------------------------|--------|----------|-----------------------------------------------------------------------------------------|
-| **yorumlar**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                   |
-| [**girişinin**](#input)                              | dize | No       | Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                                                  |
-| [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.              |
+| **yorumlar**                                     | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                                   |
+| [**Giriş**](#input)                              | dize | No       | Ayrıntılar [için](#input) aşağıdaki Giriş'e bakın.                                                  |
+| [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.              |
 
 ### <a name="input"></a>Giriş
 
-`input`Özelliği iki değerden birini içeren bir dize olabilir:
+özelliği `input` iki değerden birini içeren bir dize olabilir:
 
 | Değer     | Açıklama                              |
 |-----------|------------------------------------------|
-| install   | SQL sunucusu yüklenir.                     |
-| kaldırma | tüm SQL sunucu yüklemelerini kaldırır. |
+| install   | Bir SQL yüklenir.                     |
+| Kaldırmak | Tüm sunucu SQL kaldırır. |
 
 ### <a name="additional-options"></a>Ek seçenekler
 
@@ -50,37 +50,37 @@ Kullanılmadı.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-aracın varsayılan davranışı `require-mssql` SQL sunucusu yüklemektir.
+Aracın varsayılan `require-mssql` davranışı, SQL yüklemektir.
 
-### <a name="built-in-options"></a>Yerleşik Seçenekler
+### <a name="built-in-options"></a>Yerleşik seçenekler
 
-`require-mssql`Araç, yükleyicinin gözetimsiz olarak çalıştırıladiğinden emin olmak için bir dizi yükleyici komut satırı bağımsız değişkeni ayarlar. bu bağımsız değişkenler aşağıda listelenmiştir ve bunlara ilişkin belgeler [SQL yüklemesi belgelerinde](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-ver15&preserve-view=true)bulunabilir.
+Araç, `require-mssql` yükleyicinin başsız çalışması için bir dizi yükleyici komut satırı bağımsız değişkeni ayarlar. Bu bağımsız değişkenler aşağıda listelenmiştir ve bu bağımsız değişkenlerle ilgili belgeler yükleme [SQL bulunabilir.](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-ver15&preserve-view=true)
 
 | Ad                                                               | Açıklama |
 |--------------------------------------------------------------------|-------------|
 | /q                                                                 |             |
-| /ACTION = Install                                                    |             |
-| /FEATURES = SQLEngine, LocalDB                                       |             |
+| /ACTION=Yükle                                                    |             |
+| /FEATURES=SQLEngine, LocalDB                                       |             |
 | /UpdateEnabled                                                     |             |
-| /UpdateSource = MU                                                   |             |
-| /X86 = yanlış                                                         |             |
-| /ıNSTANCENAME = MSSQLSERVER                                          |             |
-| /INSTALLSHAREDDIR = "C:\Program Files \ Microsoft SQL Server"          |             |
-| /INSTALLSHAREDWOWDIR = "C:\Program Files (x86) \ Microsoft SQL Server" |             |
-| /SQLSVCıNSTANTFILEINIT = true                                        |             |
-| /INSTANCEDIR = "C:\Program Files \ Microsoft SQL Server"               |             |
-| /AGTSVCACCOUNT = "NT Service\SQLSERVERAGENT"                         |             |
-| /AGTSVCSTARTUPTYPE = Manual                                          |             |
-| /SQLSVCSTARTUPTYPE = otomatik                                       |             |
-| /SQLHARMANLAMA = "SQL_Latin1_General_CP1_CI_AS"                       |             |
-| /SQLSVCACCOUNT = "NT Service\MSSQLSERVER"                            |             |
-| /SQLSYSADMINACCOUNTS = Yöneticiler                                |             |
+| /UpdateSource=MU                                                   |             |
+| /X86=false                                                         |             |
+| /INSTANCENAME=MSSQLSERVER                                          |             |
+| /INSTALLSHAREDDIR="C:\Program Files\Microsoft SQL Server"          |             |
+| /INSTALLSHAREDWOWDIR="C:\Program Files (x86)\Microsoft SQL Server" |             |
+| /SQLSVCINSTANTFILEINIT=True                                        |             |
+| /INSTANCEDIR="C:\Program Files\Microsoft SQL Server"               |             |
+| /AGTSVCACCOUNT="NT Service\SQLSERVERAGENT"                         |             |
+| /AGTSVCSTARTUPTYPE=Manual                                          |             |
+| /SQLSVCSTARTUPTYPE=Automatic                                       |             |
+| /SQLCOLLATION="SQL_Latin1_General_CP1_CI_AS"                       |             |
+| /SQLSVCACCOUNT="NT Service\MSSQLSERVER"                            |             |
+| /SQLSYSADMINACCOUNTS=Administrators                                |             |
 | /IACCEPTSQLSERVERLICENSETERMS                                      |             |
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-msssql` `.devinit.json` .
+Aşağıda, kullanarak çalıştırmaya bir `require-msssql` örnek `.devinit.json` verilmiştir.
 
-#### <a name="devinitjson-that-will-install-mssql"></a>.devinit.js, MSSQL 'yi yükleyecek:
+#### <a name="devinitjson-that-will-install-mssql"></a>.devinit.jsMSSQL'i yüklemesi için:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

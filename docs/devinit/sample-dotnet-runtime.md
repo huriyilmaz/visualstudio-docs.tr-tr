@@ -1,6 +1,6 @@
 ---
 title: .NET Core Runtime
-description: DotNet/Runtime deposu için devinit kullanan örnek özelleştirme.
+description: dotnet/runtime repo için devinit kullanan örnek özelleştirme.
 ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
@@ -11,23 +11,23 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: d703e71b6f8ab57ab07c4143fdd5435585c6004c
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 3c8ba55338a957239732f7a45a46acbcb3d9c95bf980efc5e49af4e898cbfac1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672455"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452862"
 ---
 # <a name="net-core-runtime"></a>.NET Core çalışma zamanı
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
 
-Bu örnekte, .NET Core çalışma zamanı [DotNet/çalışma](https://github.com/dotnet/runtime) zamanının [GitHub codespaces](https://github.com/features/codespaces)ile otomatik olarak sağlanması için nasıl özelleştirileceği gösterilmektedir.
+Bu örnek, .NET Core Çalışma Zamanı [dotnet/runtime'ın](https://github.com/dotnet/runtime) [Codespaces](https://github.com/features/codespaces)ile otomatik olarak sağ GitHub göstermektedir.
 
 ## <a name="postclonesetupps1"></a>PostCloneSetup.ps1
 
-Bu komut dosyası _PostCloneSetup.ps1_ çağrılır ve depoyu kurmak için yerel olarak da çalıştırılabilir. Bu dosyanın _.devcontainer.js_ ile aynı klasörde olması gerekir.
+Bu betik, _PostCloneSetup.ps1_ olarak çağrılır ve depoyu ayarlamak için yerel olarak da çalıştırılabilir. Bu dosyanın, üzerinde dosyayla aynı _.devcontainer.jsgerekir._
 
 ```console
 devinit init
@@ -36,7 +36,7 @@ git config --system core.longpaths true
 
 ## <a name="packagesconfig"></a>packages.config
 
-_packages.config_ dosyası, yüklenecek Chocolatey paketlerinin listesini tanımlayan bir [Chocolatey](https://chocolatey.org/) dosyasıdır. Bu dosyanın _.devcontainer.js_ ile aynı klasörde olması gerekir.
+Bu _packages.config,_ [yüklenilen Chocolatey](https://chocolatey.org/) paketlerinin listesini tanımlayan bir Chocolatey dosyasıdır. Bu dosyanın, üzerinde dosyayla aynı _.devcontainer.jsgerekir._
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -48,7 +48,7 @@ _packages.config_ dosyası, yüklenecek Chocolatey paketlerinin listesini tanım
 
 ## <a name="devinitjson"></a>.devinit.json
 
-[`.devinit.json`](devinit-json.md)Dosyanın içeriği. Bu dosyanın dosyadaki _.devcontainer.js_ klasörde olması gerekir.
+Dosyanın [`.devinit.json`](devinit-json.md) içeriği. Bu dosyanın, dosyada yer alan dosyanın _.devcontainer.jsolması_ gerekir.
 
 ```json
 {
@@ -67,9 +67,9 @@ _packages.config_ dosyası, yüklenecek Chocolatey paketlerinin listesini tanım
 }
 ```
 
-## <a name="devcontainerjson"></a>Üzerinde .devcontainer.js
+## <a name="devcontainerjson"></a>.devcontainer.js
 
-Depo kökündeki dosya _.devcontainer.js_ içeriği.
+Dosyanın _.devcontainer.js_ kökte.
 
 ```json
 {

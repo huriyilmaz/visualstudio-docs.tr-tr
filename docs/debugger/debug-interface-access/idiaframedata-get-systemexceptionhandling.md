@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f8de570d7861444b5dcd10be566cc6489cda7afdf3541f1e722385d6c1c33f5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e6ac56cb23c47ee1378b8ae5eb1d2a50a1c30c50
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405221"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052414"
 ---
 # <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
 Sistem özel durum işlemenin geçerli olup olmadığını belirten bir bayrak alınır.

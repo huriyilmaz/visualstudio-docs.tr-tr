@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: eea4f9afd82dd87385e02ba9f149e91f336369a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 45fb15376ef36b363caad66faf2c948cd2e3e7e7fe3ae1c6a0388fa1ceb7fd07
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944075"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121334477"
 ---
 # <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>Seçenekler iletişim kutusu: metin düzenleyici \> C# \> kod stili \> biçimlendirme
 
@@ -42,7 +43,7 @@ Bu seçenekler sayfasına erişmek için, menü çubuğundan **Araçlar**  >  **
 
 Bu ayarlar, kod düzenleyicisinin koda biçimlendirme seçeneklerini uyguladığı *zaman* etkiler.
 
-|Etiketle|Description|
+|Etiketle|Açıklama|
 |-----------|-----------------|
 |**Yazarken Otomatik Biçimlendir**|Seçimi kaldırıldığında,, ve biçim **bloğu on}** seçeneklerinde **Biçim açıklaması** devre dışı bırakılır.|
 |**; Üzerinde otomatik olarak biçim ekstresi**|Seçildiğinde, deyimi, düzenleyici için seçilen biçimlendirme seçeneklerine göre tamamlama sırasında biçimlendirir.|
@@ -52,7 +53,7 @@ Bu ayarlar, kod düzenleyicisinin koda biçimlendirme seçeneklerini uyguladığ
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2017 ' deki **belge biçimlendirme** komutunu kullanarak C# dosyaları için daha önce kod stili ayarları uyguladıysanız, bu Işlev artık [**kod temizleme**](../code-styles-and-code-cleanup.md#apply-code-styles)olarak kullanılabilir.
+daha önce C# dosyaları için kod stili ayarlarını Visual Studio 2017 ' deki **belge biçimlendir** komutunu kullanarak uyguladıysanız, bu işlev artık [**kod temizleme**](../code-styles-and-code-cleanup.md#apply-code-styles)olarak kullanılabilir.
 
 ::: moniker-end
 
@@ -62,7 +63,7 @@ Visual Studio 2017 ' deki **belge biçimlendirme** komutunu kullanarak C# dosyal
 
 Bu ayarlar, dosya üzerinde ek kod temizleme işlemini gerçekleştirmek için **Biçim belgesi** komutunu yapılandırır. Bu ayarların nasıl uygulandığı hakkında daha fazla bilgi için bkz. [belge komutunu Biçimlendir](../code-styles-and-code-cleanup.md#apply-code-styles).
 
-|Etiketle|Description|İlgili EditorConfig ve araçlar > seçenekleri kuralları|
+|Etiketle|Açıklama|İlgili EditorConfig ve araçlar > seçenekleri kuralları|
 |-----------|-----------------|-----------------|-----------------|
 |**Tüm C# biçimlendirme kurallarını Uygula (girintileme, kaydırma, Aralık)**|**Biçim belgesi** komutu her zaman biçimlendirme sorunlarını düzeltir. Bu ayar değiştirilemez.| [Core EditorConfig seçenekleri](../../ide/create-portable-custom-editor-options.md)<br/>[.NET EditorConfig biçimlendirme seçenekleri](/dotnet/fundamentals/code-analysis/style-rules/formatting-rules)<br/><br/>**Araçlar**  >  **Seçenekler**  >  **Metin düzenleyici**  >  **C#**  >  **Biçimlendirme** > [**girintileme** veya **yeni çizgiler** ya da **boşluk** ya da **kaydırma**]|
 |**Biçimlendirme sırasında ek kod temizlemeyi gerçekleştir**|Seçildiğinde, **Edit. FormatDocument** komutunda belirtilen kurallara ilişkin düzeltmeleri uygular.| Yok |
@@ -81,7 +82,7 @@ Bu ayarlar, dosya üzerinde ek kod temizleme işlemini gerçekleştirmek için *
 |**Gereksiz yayınları kaldır**|Seçildiğinde, **düzenleme. FormatDocument** tetiklendiğinde mümkün olduğunda gereksiz yayınları kaldırır.| Yok |
 |**Kullanılmayan değişkenleri kaldır**|Seçildiğinde, **Edit. FormatDocument** tetiklendiğinde kullanılmayan değişkenleri kaldırır.| Yok |
 
-![Visual Studio 'Da C# için kod temizleme ayarları](media/format-document-settings.png)
+![Visual Studio C# için kod temizleme ayarları](media/format-document-settings.png)
 
 ::: moniker-end
 
@@ -89,13 +90,13 @@ Bu ayarlar, dosya üzerinde ek kod temizleme işlemini gerçekleştirmek için *
 
 Bu sayfadaki girintileme seçenekleri, kod otomatik olarak biçimlendirilirken geçerlidir. Kod otomatik olarak biçimlendirildiğinde bir örnek, **yapıştırırken otomatik olarak Biçimlendir** seçildiğinde kodu dosyaya yapıştırmaktır. ( **Yapıştırma sırasında otomatik biçim** seçeneği **biçimlendirme**  >  aşamasındadır **Genel**.)
 
-![Visual Studio 'da C# Metin Düzenleyicisi girintileme seçenekleri](media/csharp-indentation-options.png)
+![Visual Studio'de C# metin düzenleyicisi girintileme seçenekleri](media/csharp-indentation-options.png)
 
 > [!TIP]
-> Ayrıca, **metin düzenleyici**  >  **C#**  >  **sekmeleri** Seçenekler sayfasında girintileme seçenekleri de vardır. Bu seçenekler yalnızca, satırın sonunda **ENTER** tuşuna bastığınızda, imleci yalnızca kod düzenleyicisinin nereye yerleştirdiği belirlenir.
+> Metin Düzenleyici C# Sekmeler **seçenekleri sayfasında**  >    >  **girintileme seçenekleri de** vardır. Bu seçenekler yalnızca satırın sonuna **Enter** tuşuna basarak kod düzenleyicisinin imleci nereye yerleştireceklerini belirler.
 >
-> ![Visual Studio 'da C# Metin Düzenleyicisi sekmeleri seçenekleri](media/csharp-tabs-options.png)
+> ![C# metin düzenleyicisi sekme seçenekleri Visual Studio](media/csharp-tabs-options.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel, ortam, Seçenekler iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md)
+- [Genel, Ortam, Seçenekler iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md)

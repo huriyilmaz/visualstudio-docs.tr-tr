@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: işlem kullanarak verileri kaydetme'
-description: Visual Studio veri kümesi araçlarıyla bir işlem kullanarak nasıl veri kaydedileceğini inceleyin. System. Transactions ad alanını kullanarak bir işleme veri kaydedersiniz.
+title: 'Nasıl kullanılır: İşlem kullanarak veri kaydetme'
+description: Veri kümesinde DataSet araçlarıyla bir işlem kullanarak veri kaydetmeyi Visual Studio. System.Transactions ad alanını kullanarak bir işlemde veri kaydedebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -26,29 +26,29 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121346914"
 ---
-# <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl yapılır: işlem kullanarak verileri kaydetme
+# <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl kullanılır: İşlem kullanarak veri kaydetme
 
-Bir işlemde verileri, <xref:System.Transactions> ad alanını kullanarak kaydedersiniz. <xref:System.Transactions.TransactionScope>Sizin için otomatik olarak yönetilen bir işleme katılmak için nesnesini kullanın.
+Ad alanını kullanarak bir işlemde veri <xref:System.Transactions> kaydedebilirsiniz. Sizin <xref:System.Transactions.TransactionScope> için otomatik olarak yönetilen bir işlemde katılmak için nesnesini kullanın.
 
-Projeler *System. Transactions* derlemesine bir başvuru ile oluşturulmaz, bu nedenle işlemleri kullanan projelere el ile bir başvuru eklemeniz gerekir.
+Projeler *System.Transactions* derlemesi başvurusuyla oluşturulmaz, bu nedenle işlemleri kullanan projelere el ile başvuru eklemeniz gerekir.
 
-Bir işlemi uygulamanın en kolay yolu, <xref:System.Transactions.TransactionScope> bir ifadede bir nesne örnekkullanmaktır `using` . (Daha fazla bilgi için bkz. [using deyimleri](/dotnet/visual-basic/language-reference/statements/using-statement)ve [using deyimleri](/dotnet/csharp/language-reference/keywords/using-statement).) Bildiriminde çalışan kod, `using` işleme katılır.
+İşlem uygulamanın en kolay yolu, deyiminde bir <xref:System.Transactions.TransactionScope> nesnenin örneğini `using` oluşturmadır. (Daha fazla bilgi için [bkz. Using deyimi](/dotnet/visual-basic/language-reference/statements/using-statement), ve [Using deyimi](/dotnet/csharp/language-reference/keywords/using-statement).) deyimi içinde çalışan `using` kod, işlemde yer almaktadır.
 
-İşlemi yürütmek için, <xref:System.Transactions.TransactionScope.Complete%2A> using bloğundaki son ifade olarak yöntemi çağırın.
+İşlem işlemek için using <xref:System.Transactions.TransactionScope.Complete%2A> bloğunda son deyim olarak yöntemini çağırma.
 
-İşlemi geri almak için yöntemini çağırmadan önce bir özel durum oluşturun <xref:System.Transactions.TransactionScope.Complete%2A> .
+İşlem geri almak için yöntemini çağırmadan önce bir özel durum <xref:System.Transactions.TransactionScope.Complete%2A> oluşturur.
 
-## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll bir başvuru eklemek için
+## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll'a başvuru eklemek için
 
-1. **Project** menüsünde **başvuru ekle**' yi seçin.
+1. Yeni **Project** Ekle'yi **seçin.**
 
-2. **.net** sekmesinde (SQL Server projeler için **SQL Server** sekmesinde), **System. Transactions**' ı seçin ve ardından **tamam**' ı seçin.
+2. **.NET sekmesinde** **(** SQL Server projeleri için SQL Server sekmesi), **System.Transactions'ı ve** ardından Tamam'ı **seçin.**
 
      Projeye *System.Transactions.dll* bir başvuru eklenir.
 
-## <a name="to-save-data-in-a-transaction"></a>Verileri bir işlem içinde kaydetmek için
+## <a name="to-save-data-in-a-transaction"></a>Bir işlemde veri kaydetmek için
 
-- İşlemi içeren using deyimindeki verileri kaydetmek için kod ekleyin. Aşağıdaki kod, using deyimindeki bir nesnenin nasıl oluşturulacağını ve örneklendirilecek <xref:System.Transactions.TransactionScope> :
+- İşlem içeren using deyimine veri kaydetmek için kod ekleyin. Aşağıdaki kod, using deyiminde nesne oluşturma ve <xref:System.Transactions.TransactionScope> örneği oluşturma adımları gösterir:
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form2.vb" id="Snippet11":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form2.cs" id="Snippet11":::

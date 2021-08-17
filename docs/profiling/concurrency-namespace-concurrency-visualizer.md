@@ -12,14 +12,15 @@ ms.assetid: 001fbfce-a278-4502-aa27-26d65dd61453
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 884af287ced5a13cf4483e01617ffaf594d03e66
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3305b42dd2acc2684c5bb1a9d6c538d3f254c573
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941209"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039624"
 ---
 # <a name="concurrency-namespace-concurrency-visualizer"></a>Eşzamanlılık ad alanı (eşzamanlılık görselleştiricisi)
 `Concurrency`Ad alanı, C++ için eşzamanlı bir programlama çerçevesi olan eşzamanlılık çalışma zamanı erişim sağlayan sınıfları ve işlevleri sağlar. Daha fazla bilgi için bkz. [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime).

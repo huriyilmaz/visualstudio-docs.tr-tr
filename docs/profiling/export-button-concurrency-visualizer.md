@@ -1,6 +1,6 @@
 ---
-title: Dışarı Aktar Düğmesi (Eşzamanlılık Görselleştiricisi) | Microsoft Docs
-description: Eşzamanlılık Görselleştiricisi'nde Dışarı Aktar düğmesini gözden geçirme. Dışarı Aktar düğmesi, çağrı yığınını kendi kayıtlarınız için .csv dosyası olarak dışarı aktarmanıza olanak sağlar.
+title: Dışarı aktarma düğmesi (eşzamanlılık görselleştiricisi) | Microsoft Docs
+description: Eşzamanlılık görselleştiricisi içindeki dışarı aktar düğmesini gözden geçirin. Dışarı aktar düğmesi, çağrı yığınını kendi kayıtlarınız için bir .csv dosyası olarak dışa aktarmanıza olanak tanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,8 +22,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121396584"
 ---
-# <a name="export-button-concurrency-visualizer"></a>Dışarı Aktar düğmesi (Eşzamanlılık Görselleştiricisi)
-Dışarı **Aktar** düğmesi çağrı yığınını olarak dışarı aktarmaya olanak sağlar. *kendi* kayıtlarınız için csv dosyası veya dosya adı gibi başka bir araçla Microsoft Excel.
+# <a name="export-button-concurrency-visualizer"></a>Dışarı aktarma düğmesi (eşzamanlılık görselleştiricisi)
+**Dışarı aktar** düğmesi çağrı yığınını bir olarak dışa aktarmanız sağlar. kendi kayıtlarınız için veya Microsoft Excel gibi başka bir araçla birlikte kullanmak üzere *CSV* dosyası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık Görselleştiricisi](../profiling/concurrency-visualizer.md)

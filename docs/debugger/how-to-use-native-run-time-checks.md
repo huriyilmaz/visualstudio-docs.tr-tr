@@ -40,15 +40,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c74cdc63e7c72950050872135f2181002c3d4e57ca718db206f0fdf8979e88b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5189712cbaff2abd2fb814ee23dc6a87ae086fc7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378742"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122051878"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>Nasıl Yapılır: Yerel Çalışma Zamanı Denetimlerini Kullanma
-Bir Visual Studio C++ projesinde, yerel [](/cpp/preprocessor/runtime-checks) runtime_checks gibi yaygın çalışma zamanı hatalarını yakalamak için kullanabilirsiniz:
+Bir Visual Studio C++ projesinde yerel runtime_checks [](/cpp/preprocessor/runtime-checks) kullanarak aşağıdakiler gibi yaygın çalışma zamanı hatalarını yakalayabilirsiniz:
 
 - Yığın işaretçisi bozulması.
 
@@ -72,7 +72,7 @@ Bir Visual Studio C++ projesinde, yerel [](/cpp/preprocessor/runtime-checks) run
 
 ### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>Hata ayıklama derlemesinde yerel çalışma zamanı denetimlerini etkinleştirmek için
 
-- **/RTC seçeneğini** kullanın ve C çalışma zamanı kitaplığının (/MDd gibi) hata ayıklama sürümüyle bağlantı kullanın.
+- **/RTC seçeneğini** kullanın ve bir C çalışma zamanı kitaplığının (/MDd gibi) hata ayıklama sürümüyle bağlantı kullanın.
 
 ### <a name="to-modify-native-run-time-check-behavior"></a>Yerel çalışma zamanı denetim davranışını değiştirmek için
 

@@ -1,6 +1,6 @@
 ---
 title: Profil oluşturma komut satırı - .NET hizmetini takip, bellek verilerini al
-description: Visual Studio Profil Oluşturma Araçları hizmeti için bellek ayırma ve nesne yaşam süresi verilerini toplamak üzere .NET Framework öğrenin.
+description: Visual Studio Profil Oluşturma Araçları hizmeti için bellek ayırma ve nesne yaşam süresi verilerini toplamak üzere komut satırı araçlarını .NET Framework öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,33 +12,33 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60ad31c91123f3226227920e08c5194136cfe09ff774a045e1721b2091c527a1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bee906058e9ab8072723d02a170dee21a4eb0c6f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121231190"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038870"
 ---
-# <a name="how-to-instrument-a-net-framework-service-and-collect-memory-data-by-using-the-profiler-command-line"></a>Nasıl kullanılır: Profil .NET Framework komut satırı kullanarak bir hizmette veri toplamayı ve bellek verilerini toplama
+# <a name="how-to-instrument-a-net-framework-service-and-collect-memory-data-by-using-the-profiler-command-line"></a>Nasıl kullanılır: Profil .NET Framework kullanarak bir hizmette veri toplama ve bellek verilerini toplama
 
-Bu makalede, bir Profil Oluşturma Araçları hizmetini Profil Oluşturma Araçları bellek kullanım verilerini toplamak için .NET Framework komut satırı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] araçlarının nasıl kullanımı açıklanmıştır. Bellek ayırma verilerini toplayabilirsiniz veya hem bellek ayırma hem de nesne yaşam süresi verilerini toplayabilirsiniz.
+Bu makalede, bir Profil Oluşturma Araçları hizmetini .NET Framework bellek kullanım verilerini toplamak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] için .NET Framework komut satırı araçlarının nasıl kullanımı açıklanmıştır. Bellek ayırma verilerini toplayabilirsiniz veya hem bellek ayırma hem de nesne yaşam süresi verilerini toplayabilirsiniz.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012 profil oluşturma Visual Studio bu platformlarda veri toplama şeklinde önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Uygulama [ve uygulama Windows 8 performans Windows Server 2012 bakın.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
+> Windows 8 ve Windows Server 2012'daki gelişmiş güvenlik özellikleri, Visual Studio profil oluşturmanın bu platformlarda veri toplaması sırasında önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Uygulama [ve uygulama Windows 8 performans Windows Server 2012 bakın.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
 >
 > [!NOTE]
-> Bilgisayar başlatıldıktan sonra hizmet yeniden başlatılamazsa, işletim sistemi başlatıldığında başlayan bir hizmet gibi, bir hizmetin profilini, ölçümleme yöntemiyle profillerini oluşturmazsınız.
+> Bilgisayar başlatıldıktan sonra hizmet yeniden başlatılamazsa, bir hizmetin profilini, işletim sistemi başlatıldığında başlayan bir hizmet gibi, ölçümleme yöntemiyle profillerini oluşturmazsınız.
 >
 > Profil oluşturma araçlarının yolunu almak için [bkz. Komut satırı araçlarının yolunu belirtme.](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md) 64 bit bilgisayarlarda, araçların hem 64 bit hem de 32 bit sürümleri kullanılabilir. Profil oluşturma komut satırı araçlarını kullanmak için, araç yolunu Komut İstemi penceresinin PATH ortam değişkenine eklemeniz veya komutun kendisine eklemeniz gerekir.
 
 ## <a name="start-the-profiling-session"></a>Profil oluşturma oturumunu başlatma
- .NET Framework hizmetlerinden performans verileri toplamak için [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) aracını kullanarak uygun ortam değişkenlerini ve [VSInstr.exe](../profiling/vsinstr.md) aracını başlatarak hizmet ikili dosyasının bir araç kopyasını oluşturursınız.
+ .NET Framework hizmetlerinden performans verileri toplamak için [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) aracını kullanarak uygun ortam değişkenlerini ve [VSInstr.exe](../profiling/vsinstr.md) aracını başlatarak hizmet ikili dosyasının bir instrumented kopyasını oluşturun.
 
  Hizmeti barındıran bilgisayarın profil oluşturma için yapılandırılması için yeniden başlatılması gerekir. Ayrıca hizmeti Service Control Manager'dan el ile de başlatmanız gerekir. Ardından profil oluşturma hizmetini ve ardından .NET Framework başlatabilirsiniz.
 
  Ölçüme alınan bileşen yürütülürken, bellek verileri otomatik olarak bir veri dosyasına toplanır. Profil oluşturma oturumu sırasında veri toplamayı duraklatabilir ve sürdürebilirsiniz.
 
- Profil oluşturma oturumunu sona ererken hizmeti kapatır ve profilleyiciyi açıkça kapatırsiniz. Çoğu durumda, bir oturumun sonunda profil oluşturma ortam değişkenlerini temizlemenizi öneririz.
+ Profil oluşturma oturumunu sona erdirmak için hizmeti kapatır ve profilleyiciyi açıkça kapatırsiniz. Çoğu durumda, bir oturumun sonunda profil oluşturma ortam değişkenlerini temizlemenizi öneririz.
 
 #### <a name="to-begin-profiling-a-net-framework-service"></a>Bir hizmet profili .NET Framework için
 
@@ -79,7 +79,7 @@ Bu makalede, bir Profil Oluşturma Araçları hizmetini Profil Oluşturma Araçl
    | Seçenek | Açıklama |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Çalışan işleminin sahibi olan hesabın etki alanını ve kullanıcı ASP.NET belirtir. İşlem oturum açmış kullanıcıdan farklı bir kullanıcı olarak çalışıyorsa bu seçenek gereklidir. İşlem sahibi, Görev Yöneticisi'nin İşlemler sekmesindeki Kullanıcı Adı Windows listelenir. |
-   | [/crosssession](../profiling/crosssession.md) | Diğer oturum açma oturumlarında işlemlerin profil oluşturmasını sağlar. Uygulama farklı bir oturumda ASP.NET bu seçenek gereklidir. Oturum kimliği, Görev **Yöneticisi'nin** İşlemler **sekmesindeki** Oturum Windows listelenir. **/CS,** **/crosssession için bir kısaltma olarak belirtilebilir.** |
+   | [/crosssession](../profiling/crosssession.md) | Diğer oturum açma oturumlarında işlemlerin profil oluşturmasını sağlar. Bu seçenek, ASP.NET farklı bir oturumda çalışıyorsa gereklidir. Oturum kimliği, Görev **Yöneticisi'nin** İşlemler **sekmesindeki** Oturum Windows listelenir. **/CS,** **/crosssession için bir kısaltma olarak belirtilebilir.** |
    | [/waitstart](../profiling/waitstart.md)[**:** `Interval` ] | Profil oluşturmanın hata döndürmeden önce başlatılmasını bekleyeceği saniye sayısını belirtir. `Interval`Belirtilmezse, profil oluşturma süresiz olarak bekler. Varsayılan **olarak, /start hemen** döndürür. |
    | [/globaloff](../profiling/globalon-and-globaloff.md) | Profilleyiciyi veri koleksiyonu duraklatılmış olarak başlatmak için **/start komut** satırına **/globaloff** seçeneğini ekleyin. Profil **oluşturmayı devam ettiren /globalon** kullanın. |
    | [/counter](../profiling/counter.md) **:**`Config` | Yapılandırma'da belirtilen işlemci performans sayacından bilgi toplar. Sayaç bilgileri her profil oluşturma olayında toplanan verilere eklenir. |
@@ -113,20 +113,20 @@ Bu makalede, bir Profil Oluşturma Araçları hizmetini Profil Oluşturma Araçl
 
 #### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sona erdir
 
-1. Hizmeti Service Control Manager'dan durdurun.
+1. Hizmeti hizmet denetimi Yöneticisi 'nden durdurun.
 
-2. Profilleyiciyi kapatın. Şunu yazın:
+2. Profil oluşturucuyu kapatın. Şunu yazın:
 
-     **VSPerfCmd /shutdown**
+     **VSPerfCmd/shutdown**
 
-3. Tüm profil oluşturmayı tamamlandıktan sonra profil oluşturma ortam değişkenlerini temizleyebilirsiniz. Şunu yazın:
+3. Tüm profil oluşturmayı tamamladığınızda, profil oluşturma ortam değişkenlerini temizleyin. Şunu yazın:
 
-     **VSPerfClrEnv /globaloff**
+     **VSPerfClrEnv/globaloff**
 
-     Instrumented modülünü özgün modülle değiştirin. Gerekirse, hizmetin Başlangıç Türünü yeniden yapılandırabilirsiniz.
+     Belgelenmiş modülün değerini özgün ile değiştirin. Gerekirse, hizmetin başlangıç türünü yeniden yapılandırın.
 
 4. Bilgisayarı yeniden başlatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)
-- [.NET bellek veri görünümleri](../profiling/dotnet-memory-data-views.md)
+- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)

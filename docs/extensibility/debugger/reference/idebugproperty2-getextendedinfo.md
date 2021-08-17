@@ -11,17 +11,18 @@ ms.assetid: 0c9c0b2b-7540-4424-adb5-fce7aa37a026
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad540166ff769aaa894ad4142843553951217234
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 97649d53ce7f5b0e44d084003de165207d6fcebe
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065041"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071317"
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 Özelliği için genişletilmiş bilgileri alır.
@@ -57,7 +58,7 @@ dışı `VARIANT` Genişletilmiş özellik bilgilerini almak için kullanılabil
 
  Aşağıdaki GUID 'Ler genellikle bu yöntem tarafından tanınır (ad hiçbir derlemede kullanılamadığından, C# için GUID değerleri belirtilir). İç kullanım için ek GUID 'Ler oluşturulabilir.
 
-|Name|GUID|Description|
+|Name|GUID|Açıklama|
 |----------|----------|-----------------|
 |guidDocument|{3f98de84-fee9-11D0-b47f-00a0244a1dd2}|Belgeye bir `IUnknown` arabirim döndürür. Genellikle, [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) arabirimi Bu arabirimden elde edilebilir `IUnknown` .|
 |guidCodeContext|{e2fc65e-56ce-11D1-b528-00aax004a8797}|`IUnknown`Belge bağlamına bir arabirim döndürür. Genellikle, [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimi Bu arabirimden elde edilebilir `IUnknown` .|

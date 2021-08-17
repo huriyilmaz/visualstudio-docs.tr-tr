@@ -11,14 +11,15 @@ ms.assetid: 69dab9bf-2c68-4f70-9678-3b50fba3e6fa
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fc8e3b69321e89959ea2367488e4601269834d3
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4327ad529b9bb0e45b064741134e75208e74e00ea05d34d2d88a999d23e45290
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156967"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344687"
 ---
 # <a name="idiasession"></a>IDiaSession
 Hata ayıklama sembolleri için bir sorgu bağlamı sağlar.

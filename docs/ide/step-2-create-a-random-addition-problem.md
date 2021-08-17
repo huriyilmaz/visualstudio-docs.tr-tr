@@ -4,8 +4,6 @@ description: Rastgele sayılara göre matematik sorunları ekleyerek, testi zorl
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
@@ -13,14 +11,15 @@ ms.assetid: 6461c4cf-f2aa-4bf5-91ed-06820a4f893d
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 13508845e2d1592715530c2961af3d1c114aea84
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 91d747e856d162b25db7fee059a3922f5f1ad5a6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296540"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040884"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>2. Adım: Rastgele bir toplama problemi oluşturma
 

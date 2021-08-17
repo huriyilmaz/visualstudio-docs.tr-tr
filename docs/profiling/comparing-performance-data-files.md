@@ -11,15 +11,16 @@ ms.assetid: e6fda144-f21d-4912-9d16-1b8d3555a210
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5dd59467292769608ea2eaea4a2520870906aaed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d057c691e6f850edecd253ce460795591083b2d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941261"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039689"
 ---
 # <a name="compare-performance-data-files"></a>Performans veri dosyalarını karşılaştırma
 

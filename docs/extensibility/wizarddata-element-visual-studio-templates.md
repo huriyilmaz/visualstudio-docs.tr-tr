@@ -1,5 +1,5 @@
 ---
-title: WizardData öğesi (Visual Studio şablonları) | Microsoft Docs
+title: wizarddata öğesi (Visual Studio şablonları) | Microsoft Docs
 description: WizardData öğesi ve nasıl özel bir XML belirtir hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd7b85433b4e02491852589d32eea9a4f223da14
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7d51d9827c5edcbcf522eb206add4769a8583f34ac7aa72732b472523e197bb6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061894"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400445"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData Öğesi (Visual Studio Şablonları)
 
@@ -73,7 +73,7 @@ Bu öğede herhangi bir XML belirtilebilir. XML özel sihirbaz uzantısına bir 
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir C# Windows uygulaması için Standart proje şablonu meta verilerini gösterir.
+aşağıdaki örnek, bir C# Windows uygulaması için standart proje şablonu meta verilerini gösterir.
 
 ```xml
 <VSTemplate Version="3.0.0" Type="Item"

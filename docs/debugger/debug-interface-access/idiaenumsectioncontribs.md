@@ -11,14 +11,15 @@ ms.assetid: 0d6c0632-310f-4a99-8921-58149a1817e3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a17419e34623669bfbec6a1630867e65de18ca6
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 48dddc4563087f242f88ff55191dcc47c0b1dba92f253820bde56b329642f361
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159274"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455114"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 Veri kaynağında bulunan çeşitli bölüm katkılarını numaralandırır.

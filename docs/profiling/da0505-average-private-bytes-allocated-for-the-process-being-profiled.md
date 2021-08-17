@@ -1,6 +1,6 @@
 ---
-title: DA0505-profili oluşturulan Işlem için ayrılan ortalama özel bayt sayısı | Microsoft Docs
-description: Bu ileti, işlemin o anda ayrılan ortalama sanal bellek miktarını bayt (özel bayt) olarak bildirir.
+title: DA0505 - İşlem için ayrılan ortalama Özel Bayt sayısı | Microsoft Docs
+description: Bu ileti, işlem tarafından şu anda bayt cinsinden ayrılan ortalama sanal bellek miktarını (Özel bayt) raporlar.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,38 +11,39 @@ ms.assetid: 32c612ea-d077-44ba-8e6f-3a96333bad00
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f141ce40c22fbd6ee9445dc676b49f0d601f2a74
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: 5ff9af2c9bf9d1eb285056bbfebf16daefe1ac627377c537df502ab74812473c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465822"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333216"
 ---
 # <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505: Profili oluşturulan İşlem için ayırılmış Ortalama Özel Baytlar
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0505|
+|Kural Kimliği|DA0505|
 |Kategori|Kaynak Yönetimi|
 |Profil oluşturma yöntemi|Tümü|
-|İleti|Bu bilgiler yalnızca bilgi için toplanmıştı. Işlem özel baytları sayacı, profil oluşturduğunuz işlem tarafından ayrılan sanal belleği ölçer. Bildirilen değer tüm ölçüm aralıklarında hesaplanan ortalama değerdir.|
+|İleti|Bu bilgiler yalnızca bilgi için toplanmış. İşlem Özel Bayt sayacı, profil oluşturmakta olan işlem tarafından ayrılan sanal belleği ölçür. Bildirilen değer, tüm ölçüm aralıklarında hesaplanan ortalama değerdir.|
 |Kural türü|Bilgi|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak musiki yöntemlerini kullanarak profil 10 örnek toplayan bu kuralı tetiklemeniz gerekir.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Bu ileti, işlemin o anda ayrılan ortalama sanal bellek miktarını bayt (özel bayt) olarak bildirir. Özel baytlar, işlem tarafından yalnızca işlem içinde çalışan iş parçacıklarının erişebileceği sanal bellek konumlarını temsil eder.
+ Bu ileti, işlem tarafından şu anda bayt cinsinden ayrılan ortalama sanal bellek miktarını (Özel bayt) raporlar. Özel baytlar, işlem tarafından yalnızca işlem içinde çalışan iş parçacıkları tarafından erişilebilen sanal bellek konumlarını temsil eder.
 
- 32 bit makinede çalışan 32 bitlik işlemler için, işlem adres alanının özel bölümünün üst sınırı 2 GB 'dir. 32 bit işlemleri [/3gb](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot.ini anahtarını kullanarak 3 GB 'a kadar sanal bellek alabilir. 64 bit makinede çalışan 32 bitlik bir işlem, 4 GB 'a kadar özel sanal bellek elde edebilir.
+ 32 bit makinede çalışan 32 bit işlemler için, işlem adres alanı özel bölümünün üst sınırı 2 GB'tır. [/3GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot.ini anahtarı kullanılarak, 32 bit işlemler 3 GB'a kadar sanal bellek edinebiliyor. 64 bit makinede çalışan 32 bit işlem, 4 GB'a kadar özel sanal bellek edinebiliyor.
 
- 64 bit makinede çalışan 64 bitlik bir işlem, 8 TB 'a kadar özel sanal belleği elde edebilir.
+ 64 bit makinede çalışan 64 bit işlem, 8 TB'a kadar özel sanal bellek elde ediyor olabilir.
 
- Bildirilen değer, bir işlemin etkin olduğu tüm ölçüm aralıklarının ortalaması olarak belirlenir.
+ Bildirilen değer, profili yapılan sürecin etkin olduğu tüm ölçüm aralıklarının ortalamasıdır.
 
- İşlem adres alanları hakkında daha fazla bilgi için Windows bellek yönetimi belgelerindeki [sanal adres alanı](/windows/win32/memory/virtual-address-space) ' na bakın.
+ İşlem adres alanları hakkında daha fazla bilgi için Bellek [Yönetimi belgelerinde](/windows/win32/memory/virtual-address-space) Windows Alanı'ne bakın.
 
 ## <a name="how-to-use-rule-data"></a>Kural verilerini kullanma
- Bildirilen değeri, programın farklı sürümlerinin veya derlemelerin performansını karşılaştırmak veya farklı profil oluşturma senaryolarında uygulamanın performansını anlamak için kullanın.
+ Programın farklı sürümlerinin veya derlemelerinin performansını karşılaştırmak veya farklı profil oluşturma senaryolarında uygulamanın performansını anlamak için bildirilen değeri kullanın.

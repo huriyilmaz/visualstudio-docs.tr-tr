@@ -1,6 +1,6 @@
 ---
-description: Öznitelik sağlayıcıları veya derleme sürecinin diğer bileşenleri tarafından sembol deposuna yerleştirilmiş kaynakların listesini alır.
-title: 'IDiaSession:: Finınjectedsource | Microsoft Docs'
+description: Öznitelik sağlayıcıları veya derleme işleminin diğer bileşenleri tarafından sembol deposuna yerleştirilmiş kaynakların listesini alın.
+title: IDiaSession::findInjectedSource | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121391843"
 ---
 # <a name="idiasessionfindinjectedsource"></a>IDiaSession::findInjectedSource
-Öznitelik sağlayıcıları veya derleme sürecinin diğer bileşenleri tarafından sembol deposuna yerleştirilmiş kaynakların listesini alır.
+Öznitelik sağlayıcıları veya derleme işleminin diğer bileşenleri tarafından sembol deposuna yerleştirilmiş kaynakların listesini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,16 +34,16 @@ HRESULT findInjectedSource (
 ```
 
 #### <a name="parameters"></a>Parametreler
- Trgblob
+ srcFile
 
-'ndaki Aranacak kaynak dosyanın adı.
+[in] Aranır kaynak dosyanın adı.
 
  ppResult
 
-dışı Tüm eklenen kaynakların bir listesini içeren bir [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) nesnesi döndürür.
+[out] Tüm [eklenir kaynakların listesini içeren bir IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

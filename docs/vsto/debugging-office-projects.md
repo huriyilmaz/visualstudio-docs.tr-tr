@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 0fbd7623cac8acddcbea3265ed3d4da125d3638b16e7f94e240b199118c3e0e8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7289ade83f72d68d940aad979a1590b3740e1849
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394764"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026518"
 ---
 # <a name="debug-office-projects"></a>Projelerde Office ayıklama
   Diğer projeler için Office Microsoft araçlarını kullanarak [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projelerde hata [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ayıkabilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Yereller penceresinde kesme noktası ekleme ve değişkenleri görüntüleme gibi  hata ayıklayıcı özellikleri, projelerde hata ayıklaması Office kullanılabilir. Hata ayıklama araçları hakkında [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] daha fazla bilgi için [bkz.](../debugger/debugger-feature-tour.md)Visual Studio.
@@ -38,26 +38,26 @@ ms.locfileid: "121394764"
 [!include[Add-ins note](includes/addinsnote.md)]
 
 ## <a name="start-and-stop-the-debugger"></a>Hata ayıklayıcıyı başlatma ve durdurma
- Diğer projelerde hata ayıklamaya Office gibi bir projesinde hata ayıklamaya [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **başlayabilirsiniz; örneğin, F5 tuşuna basarak.** VSTO Eklenti projesinde hata ayıklamaya başlarken, hedeflenen Office uygulaması için yeni bir işlem başlar ve VSTO Eklenti yüklenir.
+ Diğer projelerde hata ayıklamaya Office gibi bir projesinde hata ayıklamaya başlayabilirsiniz; örneğin [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **F5 tuşuna basarak.** VSTO Eklenti projesinde hata ayıklamaya başlarken, hedeflenen Office uygulaması için yeni bir işlem başlar ve VSTO Eklenti yüklenir.
 
  Belge düzeyi projede hata ayıklamaya başlarken, belge veya çalışma kitabı yeni bir Word veya Excel açılır.
 
- Hata ayıklayıcıyı durdursanız, hata ayıklayıcı uygulama işlemini aniden sonlandırılır veya hata ayıklayıcıyı ayırmak için ayarlanmışsa ayırır. Sonlandırılan uygulama işlemi sırasında açılan Office tüm belgeler de uyarı olmadan kapatılır ve tüm unsaved değişiklikleri kaybolur. Bu, hata ayıklayıcı çalışırken açılan tüm belgeleri veya çalışma kitaplarını içerebilir.
+ Hata ayıklayıcıyı durdursanız, hata ayıklayıcı uygulama işlemini aniden sonlandırılır veya hata ayıklayıcıyı ayırmak için ayarlanmışsa ayırır. Sonlandırılan uygulama işlemi sırasında açılan Office belgeler de uyarı olmadan kapatılır ve tüm unsaved değişiklikleri kaybolur. Bu, hata ayıklayıcı çalışırken açılan tüm belgeleri veya çalışma kitaplarını içerebilir.
 
  Normalde, hata ayıklayıcıyı durdurmadan önce işlemden ayırmak daha iyidir, böylece uygulamanın Office şekilde çıkabilirsiniz. Hata ayıklayıcıyı durdurduktan sonra açık bir belge veya çalışma sayfasıyla çalışmak istemeniz de ilk olarak işlemden ayrılabilirsiniz.
 
- Word için belge düzeyi özelleştirmede hata ayıklarsanız, hata ayıklayıcıyı tekrar tekrar durdurmak ve Word'in aniden kapanmasına neden olmak Normal şablonun bozulmasına neden olabilir. Bu durumda, bozuk Normal şablonunu silebilirsiniz ve Word'i bir sonraki aç açsanız otomatik olarak yeniden oluşturulur. Ancak, Normal şablonda depolanan tüm makrolar yeniden oluşturulmz.
+ Word için belge düzeyi özelleştirmede hata ayıklarsanız, hata ayıklayıcıyı tekrar tekrar durdurmak ve Word'in aniden kapanmasına neden olmak Normal şablonun bozulmasına neden olabilir. Bu durumda, bozuk Normal şablonunu silebilirsiniz ve Word'i bir sonraki aç açsanız otomatik olarak yeniden oluşturulur. Ancak, Normal şablonda depolanan makrolar yeniden oluşturulmz.
 
-### <a name="debug-office-2013-vsto-add-ins-by-using-either-office-2013-or-office-2016"></a>2013 Office 2013 VSTO 2013 veya 2016'Office kullanarak Office ayıklama
- Visual Studio 2015 kullanıyorsanız ve her iki Office sürümünüz de yan yana yüklüyse, Visual Studio 2016'Office başlar. Visual Studio 2013 2013 Visual Studio Office.
+### <a name="debug-office-2013-vsto-add-ins-by-using-either-office-2013-or-office-2016"></a>2013 Office 2013 VSTO 2013 veya Office 2016'Office hataları ayıklama
+ Visual Studio 2015 kullanıyorsanız ve her iki Office sürümünüz de yan yana yüklüyse, Visual Studio 2016'Office başlar. Visual Studio 2013 kullanıyorsanız Visual Studio 2013'Office başlar.
 
- VSTO Eklentinizin hata ayıklamak için farklı bir Office (2013 veya 2016) sürümünü kullanmak, **Project Tasarımcısı'nda** açın  ve Hata Ayıkla sekmesinde Dış programı başlat seçeneği **düğmesini** seçin. Ardından, uygulama yürütülebilir dosyası için uygun Office göz atabilirsiniz.
+ VSTO Eklentinizin hata ayıklamak için farklı bir Office (2013 veya 2016) sürümünü kullanmak, **Project Designer'ı** açın  ve Hata Ayıkla sekmesinde Dış programı başlat seçeneği **düğmesini** seçin. Ardından, uygulama yürütülebilir dosyası için uygun Office göz atabilirsiniz.
 
 ## <a name="f10-and-f11-behavior"></a>F10 ve F11 davranışı
  Bir Office projesinde hata ayıklamaya başlarken, **F10** ve **F11** diğer Visual Basic veya C# projelerinde hata ayıklamaya başlarken aynı davranışa sahip olmaz. Hata Visual Basic veya C# projelerinde hata ayıklayıcı ana işlevde durur; Office projelerinde Visual Studio uygulamanın ana işlevi üzerinde Office sahip değildir. Ancak, hata ayıklama sırasında **F10** ve **F11,** Visual Basic ve C# projelerinde aynı işlevlere sahiptir.
 
 ## <a name="display-exceptions"></a>Özel durumları görüntüleme
- Yönetilen kodun yönetilemeyen kodla etkileşim kurma Visual Studio uygulamalar tarafından oluşan hataları Microsoft Office. Örneğin, VSTO geliştirme araçları kullanılarak oluşturulan Office bir Visual Studio özel durum oluşturursa, Microsoft Office uygulama hata görüntülemeden devam eder. Bu hataları görmek için hata ayıklayıcısını ortak dil çalışma zamanı özel durumlarına göre bozacak şekilde ayarlayın. Daha fazla bilgi için [bkz. Hata ayıklayıcısı ile özel durumları yönetme.](../debugger/managing-exceptions-with-the-debugger.md)
+ Yönetilen kodun yönetilemeyen kodla etkileşim kurma Visual Studio uygulamalar tarafından oluşan hataları Microsoft Office. Örneğin, VSTO geliştirme araçları kullanılarak oluşturulan Office bir Visual Studio özel durum oluşturursa, Microsoft Office uygulama hata görüntülemeden devam eder. Bu hataları görmek için hata ayıklayıcıyı ortak dil çalışma zamanı özel durumlarına göre bozacak şekilde ayarlayın. Daha fazla bilgi için [bkz. Hata ayıklayıcısı ile özel durumları yönetme.](../debugger/managing-exceptions-with-the-debugger.md)
 
  Hata ayıklayıcısını ortak dil çalışma zamanı özel durumlarına göre ayıracak şekilde ayarsanız, artık işleneler ve çalışma zamanının kendisiyle ilgili olmayan bazı ilk şans özel durumları da dahil olmak üzere tüm özel durumlar artık hata ayıklayıcısına dahil olur. Msosec'in bulunamayarak ilgili hatalar her projede görünür, ancak yoksaymak güvenlidir. Bu msosec özel durumları çözümlerinizi etkilemez.
 
@@ -69,7 +69,7 @@ ms.locfileid: "121394764"
  Hata **Ayıklama** özellik  sayfasındaKi Eylemi Başlat Project **olarak** ayarlanırsa, Visual Studio başlangıç seçenekleri olarak komut satırı bağımsız değişkenlerini belirtse bile projede hata ayıklarken komut satırı bağımsız değişkenlerini kullanmaz. Hata ayıklamaya başlarken komut satırı bağımsız değişkenlerini kullanmak için Start **Project** dışında **bir Başlangıç Eylemi seçmeniz gerekir.**
 
 ## <a name="source-control"></a>Kaynak denetimi
- Hata ayıklama özellikleri, kaynak denetimi altındaki birden çok kullanıcı arasında paylaşılmaz. Visual Basic ve C# projeleri hata ayıklama özelliklerini kullanıcıya özgü bir dosyada (*ProjectName*.vbproj.user veya *ProjectName*.csproj.user) depolar ve bu dosya kaynak denetimi altında değildir. Birden fazla kişi hata ayıklarken, her kişinin hata ayıklama özelliklerini el ile girmesi gerekir.
+ Hata ayıklama özellikleri, kaynak denetimi altındaki birden çok kullanıcı arasında paylaşılmaz. Visual Basic ve C# projeleri hata ayıklama özelliklerini kullanıcıya özgü bir dosyada (*ProjectName*.vbproj.user veya *ProjectName*.csproj.user) depolar ve bu dosya kaynak denetimi altında değildir. Birden fazla kişi hata ayıklarken, her kişinin hata ayıklama özelliklerini el ile girmeleri gerekir.
 
 ## <a name="debug-cached-datasets-in-a-document-level-project"></a>Belge düzeyi projesinde önbelleğe alınmış veri kümelerini ayıklama
  Her proje derlemeniz için veri kümesi boşaltılır ve yeniden oluşturulur. Önbelleğe alınmış bir veri kümesine hata ayıklamak için belgeyi dosyanın dışında Visual Studio sonra hata ayıklayıcıyı ekleyebilirsiniz.
@@ -78,7 +78,7 @@ ms.locfileid: "121394764"
  Word 97-2003 Belge (.doc*) biçimini temel alan bir Word Belgesi projesinde hata ayıklamak için proje klasörünü güvenilen klasör */* listesine eklemeniz gerekir. Bunun nasıl olduğu hakkında daha fazla bilgi için bkz. [Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
 
 ## <a name="debug-disabled-add-ins"></a>Devre dışı bırakılmış eklentilerde hata ayıklama
- Microsoft Office uygulamaları beklenmedik VSTO eklentileri devre dışı bırakabilirsiniz. Bir Microsoft Office uygulama, VSTO her başlatıldığında sorunlu kodun yüklenmesini önlemek için eklentileri devre dışı bırakıyor. Ancak, tipik hata ayıklama sırasında beklenmeyen davranışlara neden olmak da kolaydır. Eklentilerini yeniden etkinleştirme hakkında VSTO için, bkz. Nasıl 2014' VSTO devre dışı bırakılmış bir [eklentiyi yeniden etkinleştirme.](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)
+ Microsoft Office uygulamaları beklenmedik VSTO eklentileri devre dışı bırakabilirsiniz. Bir Microsoft Office uygulama, VSTO her başlatıldığında sorunlu kodun yüklenmesini önlemek için eklentileri devre dışı bırakıyor. Ancak, tipik hata ayıklama sırasında beklenmeyen davranışlara neden olmak da kolaydır. VSTO Eklentilerini yeniden etkinleştirme hakkında bilgi için, bkz. Nasıl 2011: Devre dışı [bırakılmış VSTO Eklentiyi Yeniden Etkinleştirme.](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)
 
  Uygulamaların eklentilerde kullanabileceği iki tür Microsoft Office vardır: VSTO devre dışı bırakma ve devre dışı bırakma.
 

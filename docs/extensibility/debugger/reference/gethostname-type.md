@@ -1,5 +1,5 @@
 ---
-description: Ana bilgisayar adının türünü belirtir.
+description: Konak adının türünü belirtir.
 title: GETHOSTNAME_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3fa3e81b1151f722c9bc6b6b05da0da213f8a95c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d16e9b2ce7e8320aeba97856f9beb883ffd5fe5d2504adbff64336007144d655
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122127564"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293293"
 ---
 # <a name="gethostname_type"></a>GETHOSTNAME_TYPE
-Ana bilgisayar adının türünü belirtir.
+Konak adının türünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,20 +46,20 @@ public enum enum_GETHOSTNAME_TYPE {
 
 ## <a name="fields"></a>Alanlar
 `GHN_FRIENDLY_NAME`\
-Konağın kolay adını belirtir.
+Ana bilgisayarın kolay adını belirtir.
 
 `GHN_FILE_NAME`\
-Konağın bir dosya adını belirtir.
+Ana bilgisayarın dosya adını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler, farklı biçimlerde bir ana bilgisayar adı almak için [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) yöntemine bir bağımsız değişken olarak geçirilir.
+Bu değerler, farklı biçimlerde bir konak adı almak için [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) yöntemine bağımsız değişken olarak geçirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -1,6 +1,6 @@
 ---
 description: Bir programın hata ayıklaması için kullanılamaz hale getirir.
-title: 'IDebugProgramPublisher2:: UnpublishProgram | Microsoft Docs'
+title: IDebugProgramPublisher2::UnpublishProgram | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: 627e7d38-b2ac-4873-9a40-37ff7f47cd1d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc00a6339ba6e0b4405a4ebdbecd97fa34ad0e3b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6e51d327f8b5a6963a87c13aa7c19b2d6ab297b0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065118"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071359"
 ---
 # <a name="idebugprogrampublisher2unpublishprogram"></a>IDebugProgramPublisher2::UnpublishProgram
 Bir programın hata ayıklaması için kullanılamaz hale getirir.
@@ -42,13 +43,13 @@ int UnpublishProgram(
 
 ## <a name="parameters"></a>Parametreler
 `pDebuggeeInterface`\
-'ndaki `IUnknown` Programa yönelik bir arabirim. Bu, [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) yöntemine sağlanan değerdir ve kaldırılan programı benzersiz şekilde tanımlar (yani, bir tanımlama bilgisi olarak kullanılır).
+[in] Programın `IUnknown` arabirimi. Bu, [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) yöntemine sağlanan değerle aynıdır ve kaldırılan programı benzersiz olarak tanımlar (yani tanımlama bilgisi olarak kullanılır).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir programı hata ayıklama motorları ve oturum hata ayıklama Yöneticisi tarafından kullanılabilir hale getirmek için [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) yöntemini kullanın.
+ Bir programı hata ayıklama altyapıları ve oturum hata ayıklama yöneticisi için kullanılabilir yapmak için [PublishProgram yöntemini](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)

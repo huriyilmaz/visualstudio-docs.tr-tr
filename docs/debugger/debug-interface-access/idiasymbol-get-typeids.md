@@ -1,6 +1,6 @@
 ---
-description: Bu simge için derleyiciye özgü tür tanımlayıcı değerlerinin dizisini alır.
-title: 'IDiaSymbol:: get_typeIds | Microsoft Docs'
+description: Bu simge için derleyiciye özgü tür tanımlayıcı değerlerinin dizisini döndürür.
+title: IDiaSymbol::get_typeIds | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121391651"
 ---
 # <a name="idiasymbolget_typeids"></a>IDiaSymbol::get_typeIds
-Bu simge için derleyiciye özgü tür tanımlayıcı değerlerinin dizisini alır.
+Bu simge için derleyiciye özgü tür tanımlayıcı değerlerinin dizisini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,21 +37,21 @@ HRESULT get_typeIds (
 #### <a name="parameters"></a>Parametreler
  `cTypeIds`
 
-'ndaki Verilerin tutulacağı arabelleğin boyutu.
+[in] Verileri tutmak için arabelleğin boyutu.
 
  `pcTypeIds`
 
-dışı `typeIds` Yazılan sayıyı veya varsa, `typeIds` `NULL` toplam tür tanımlayıcısı sayısını döndürür.
+[out] Yazılan veya ise toplam tür `typeIds` `typeIds` tanımlayıcılarının `NULL` sayısını döndürür.
 
  `typeIds[]`
 
-dışı Tür tanımlayıcılarıyla doldurulacak bir dizi.
+[out] Tür tanımlayıcıları ile doldurulması gereken bir dizi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d5459909e99da3ecd6627d14ae464b651b7c535a4226cbf89f6a9985288987ae
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f3c04112ff216ecbf2fc683206a30d9be6b44971
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397000"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084603"
 ---
 # <a name="channels-threads-view"></a>Kanallar (iş parçacıkları görünümü)
 Eşzamanlılık görselleştiricisi dört tür kanal gösterir: iş parçacığı kanalları, disk kanalları, işaret kanalları ve GPU kanalları.

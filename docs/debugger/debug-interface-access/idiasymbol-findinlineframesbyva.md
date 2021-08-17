@@ -1,6 +1,6 @@
 ---
-description: 'IDiaSymbol:: findInlineFramesByVA, bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.'
-title: 'IDiaSymbol:: findInlineFramesByVA | Microsoft Docs'
+description: IDiaSymbol::findInlineFramesByVA, bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler arasında devamını sağlayan bir sabit adı alır.
+title: IDiaSymbol::findInlineFramesByVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,7 +20,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121454818"
 ---
 # <a name="idiasymbolfindinlineframesbyva"></a>IDiaSymbol::findInlineFramesByVA
-Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
+Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler üzerinde devamını sağlayan bir sabit adı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,14 +34,14 @@ HRESULT findInlineFramesByVA (
 #### <a name="parameters"></a>Parametreler
  `va`
 
-'ndaki Adresi bir VA olarak belirtir.
+[in] Adresi VA olarak belirtir.
 
  `ppResult`
 
-dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
+[out] Alınan `IDiaEnumSymbols` çerçevelerin listesini içeren bir nesneyi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

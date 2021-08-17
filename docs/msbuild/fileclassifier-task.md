@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: df4d07364f0f1b707ed4f4f95aca9a90de484f0da40eab9a369fc28cde398090
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1758b671b8151bb851074190c6afcd2468f9f1c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121428074"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085110"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier görevi
 

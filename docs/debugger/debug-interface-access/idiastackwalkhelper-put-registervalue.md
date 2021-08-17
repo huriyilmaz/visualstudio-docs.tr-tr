@@ -1,5 +1,5 @@
 ---
-description: IDiaStackWalkHelper::p ut_registerValue bir kaydın değerini ayarlar.
+description: IDiaStackWalkHelper::p ut_registerValue, yazmacın değerini ayarlar.
 title: IDiaStackWalkHelper::p ut_registerValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 8f02ce54-ef59-455f-8aa6-dc26761c7aff
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fdc66faea9537759e9754ce799339175db585673
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a93a21b10f6793cd75c6999998bc21b923ce69d7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156827"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052325"
 ---
 # <a name="idiastackwalkhelperput_registervalue"></a>IDiaStackWalkHelper::put_registerValue
-Bir kaydın değerini ayarlar.
+Yazmanın değerini ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,17 +36,17 @@ HRESULT put_registerValue (
 #### <a name="parameters"></a>Parametreler
  `index`
 
-'ndaki Yazılacak kaydı belirten [CV_HREG_e sabit listesi](../../debugger/debug-interface-access/cv-hreg-e.md) numaralandırmasından bir değer.
+[in] Yazmacı [belirten CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) enumeration enumeration değerinden bir değer.
 
  `NewVal`
 
-'ndaki Yeni kayıt değeri.
+[in] Yeni yazmaz değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Değerin boyutuna rağmen bir uygulama yalnızca kaydın normal olarak tuttuğu şeyi depolamalıdır. Örneğin, 8 bitlik bir kayıt yalnızca verilen değerin en düşük 8 bitini tutacaktır.
+ Değerin boyutuna rağmen, uygulama yalnızca yazmaca normal olarak nelerin sahip olduğunu depolamalı. Örneğin, bir 8 bit yazmalık, verilen değerin yalnızca en düşük 8 bitlerini tutar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

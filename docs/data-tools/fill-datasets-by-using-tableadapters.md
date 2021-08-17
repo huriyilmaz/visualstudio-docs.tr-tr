@@ -55,7 +55,7 @@ TableAdapter'lar, bir veritabanına bağlanarak sorgular veya saklı yordamlar �
 
 ![İstemci uygulamasında veri akışı](../data-tools/media/clientdatadiagram.gif)
 
-TableAdapter'lar, Veri Kümesi Tasarımcısı ile **tasarlanırken** TableAdapter sınıfları iç içe geçmiş sınıfları olarak  <xref:System.Data.DataSet> oluşturulmaz. Her veri kümesine özgü ayrı ad alanlarında bulunurlar. Örneğin, adlı bir veri küme varsa, içinde ile ilişkili `NorthwindDataSet` TableAdapter'lar  <xref:System.Data.DataTable> `NorthwindDataSet` ad alanı `NorthwindDataSetTableAdapters` olacaktır. Belirli bir TableAdapter bağdaştırıcısına program aracılığıyla erişmek için TableAdapter'ın yeni bir örneğini bildirmeniz gerekir. Örnek:
+TableAdapter'lar, Veri Kümesi Tasarımcısı ile tasarlansa da TableAdapter sınıfları iç içe geçmiş sınıfları olarak <xref:System.Data.DataSet> oluşturulmaz. Her veri kümesine özgü ayrı ad alanlarında bulunurlar. Örneğin, adlı bir veri küme varsa, içinde ile ilişkili `NorthwindDataSet` TableAdapter'lar  <xref:System.Data.DataTable> `NorthwindDataSet` ad alanı `NorthwindDataSetTableAdapters` olacaktır. Belirli bir TableAdapter bağdaştırıcısına program aracılığıyla erişmek için TableAdapter'ın yeni bir örneğini bildirmeniz gerekir. Örnek:
 
 :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataTableAdapters/CS/Class1.cs" id="Snippet7":::
 :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataTableAdapters/VB/Class1.vb" id="Snippet7":::
@@ -88,7 +88,7 @@ TableAdapter'lar, yapılandırılmış bir sınıfı kapsülleerek standart veri
 
 ## <a name="tableadapter-methods-and-properties"></a>TableAdapter yöntemleri ve özellikleri
 
-TableAdapter sınıfı bir .NET türü değildir. Bu, belgelerde veya Object Browser'da bunu alamay **anlamına gelir.** Daha önce bahsedilen sihirbazlardan birini kullanarak tasarım zamanında oluşturulur. Bir TableAdapter'a oluşturma adımlarında atanan ad, üzerinde çalışmakta olduğu tablonun adına göredir. Örneğin, adlı veritabanındaki bir tabloyu temel alan bir TableAdapter oluştururken `Orders` TableAdapter olarak `OrdersTableAdapter` adlandırılmıştır. TableAdapter'ın sınıf adı, Veri Kümesi Tasarımcısı.  
+TableAdapter sınıfı bir .NET türü değildir. Bu, belgelerde veya Object Browser'da bunu alamay anlamına **gelir.** Daha önce bahsedilen sihirbazlardan birini kullanarak tasarım zamanında oluşturulur. Bir TableAdapter'a oluşturma adımlarında atanan ad, üzerinde çalıştığın tablonun adına göredir. Örneğin, adlı veritabanındaki bir tabloyu temel alan bir TableAdapter oluştururken `Orders` TableAdapter olarak `OrdersTableAdapter` adlandırılmıştır. TableAdapter'ın sınıf adı, Veri Kümesi Tasarımcısı.  
 
 TableAdapter'ların yaygın olarak kullanılan yöntemleri ve özellikleri aşağıda ve listelerde ve listelerde yer almaktadır:
 
@@ -102,7 +102,7 @@ TableAdapter'ların yaygın olarak kullanılan yöntemleri ve özellikleri aşa�
 
 ## <a name="tableadapter-update-method"></a>TableAdapter güncelleştirme yöntemi
 
-TableAdapter bağdaştırıcıları veritabanından okuma ve yazma yapmak için veri komutlarını kullanır. TableAdapter'ın ilk (main) sorgusunu, ilişkili veri tablosu şemasının yanı sıra yöntemiyle ilişkili , ve komutlarını oluşturmak için temel olarak `Fill` `InsertCommand` `UpdateCommand` `DeleteCommand` `TableAdapter.Update` kullanın. TableAdapter'ın yöntemini çağırma, TableAdapter ilk yapılandırıldığında oluşturulan deyimlerini `Update` **çalıştırır; TableAdapter** Sorgu Yapılandırma Sihirbazı ile birlikte eklenen ek sorgulardan birini çalıştırmaz.
+TableAdapter bağdaştırıcıları veritabanından okuma ve yazma yapmak için veri komutlarını kullanır. TableAdapter'ın ilk (main) sorgusunu, ilişkili veri tablosu şemasının yanı sıra yöntemiyle ilişkili , ve komutlarını oluşturmak için temel olarak `Fill` `InsertCommand` `UpdateCommand` `DeleteCommand` `TableAdapter.Update` kullanın. TableAdapter'ın yöntemini çağırma, TableAdapter ilk yapılandırıldığında oluşturulan deyimlerini `Update` **çalıştırır; TableAdapter** Sorgu Yapılandırma Sihirbazı ile eklenen ek sorgulardan birini çalıştırmaz.
 
 TableAdapter'i kullanarak normalde gerçekleştirecekleri komutlarla aynı işlemleri etkili bir şekilde gerçekleştirir. Örneğin, bağdaştırıcının yöntemini çağırsanız, bağdaştırıcı özelliğinde veri komutunu çalıştırır ve sonuç kümesi veri tablosuna yüklemek için bir veri okuyucu `Fill` `SelectCommand` (örneğin, <xref:System.Data.SqlClient.SqlDataReader> ) kullanır. Benzer şekilde, bağdaştırıcının yöntemini çağırsanız, veri tablosunda değiştirilen her kayıt için uygun komutu `Update` (, `UpdateCommand` ve `InsertCommand` `DeleteCommand` özelliklerinde) çalıştırır.
 
@@ -117,7 +117,7 @@ Bu doğrudan yöntemleri oluşturmak istemiyorsanız TableAdapter'ın **Generate
 
 ## <a name="tableadapter-support-for-nullable-types"></a>Null değere sahip türler için TableAdapter desteği
 
-TableAdapter'lar ve null değere sahip türleri `Nullable(Of T)` `T?` destekler. Dosyalarda null değere değiştirilebilir türler hakkında daha fazla Visual Basic bkz. [Null Değer Türleri.](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types) C# içinde null değere değiştirilebilir türler hakkında daha fazla bilgi için [bkz. Null değere değiştirilebilir türleri kullanma.](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)
+TableAdapter'lar ve null değere sahip türleri `Nullable(Of T)` `T?` destekler. Veri verilerinde null değere değiştirilebilir türler hakkında daha fazla Visual Basic bkz. [Null DeğerLenebilir Değer Türleri.](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types) C# içinde null değere değiştirilebilir türler hakkında daha fazla bilgi için [bkz. Null değere değiştirilebilir türleri kullanma.](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)
 
 <a name="tableadaptermanager-reference"></a>
 
@@ -138,7 +138,7 @@ Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri ve `Table
 
 ## <a name="security"></a>Güvenlik
 
-Bir CommandType özelliği olarak ayarlanmış veri komutlarını kullanıyorsanız, istemciden veritabanınıza geçirmeden <xref:System.Data.CommandType.Text> önce gönderilen bilgileri dikkatle kontrol edin. Kötü amaçlı kullanıcılar, yetkisiz erişim elde etmek veya veritabanına zarar SQL amacıyla değiştirilmiş veya ek kullanıcı deyimleri göndermeye (ekleme) deneyebilir. Kullanıcı girişini bir veritabanına aktarmadan önce her zaman bilgilerin geçerli olduğunu doğrulayın. Mümkün olduğunda her zaman parametreli sorgular veya saklı yordamlar kullanmak en iyi yöntemdir.
+Bir CommandType özelliği olarak ayarlanmış veri komutlarını kullanıyorsanız, istemciden veritabanınıza geçirmeden <xref:System.Data.CommandType.Text> önce gönderilen bilgileri dikkatle kontrol edin. Kötü amaçlı kullanıcılar, yetkisiz erişim elde etmek veya veritabanına zarar SQL amacıyla değiştirilmiş veya ek deyimler göndermeye (ekleme) deneyebilir. Kullanıcı girişini bir veritabanına aktarmadan önce her zaman bilgilerin geçerli olduğunu doğrulayın. Mümkün olduğunda her zaman parametreli sorgular veya saklı yordamlar kullanmak en iyi yöntemdir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
-title: Mevcut Tsıncollection &lt; T &gt; etkinlik Tasarımcısı
-description: <T>Mevcut bir Tsıncollection etkinliği oluşturmak ve yapılandırmak için iş akışı Tasarımcısı ' de var olan bulunan Tsıncollection etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin <T> .
+title: ExistsInCollection &lt; T &gt; Etkinlik Tasarımcısı
+description: ExistsInCollection etkinliği oluşturmak ve yapılandırmak için <T> İş Akışı Tasarımcısı'da ExistsInCollection etkinlik tasarımcısını kullanmayı <T> öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,29 +22,29 @@ ms.locfileid: "121408024"
 ---
 # <a name="existsincollectiont-activity-designer"></a>ExistsInCollection\<T> Etkinlik Tasarımcısı
 
-Var olan **Tsıncollection \<T>** etkinlik Tasarımcısı bir etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.ExistsInCollection%601> .
+Bir etkinlik oluşturmak ve yapılandırmak için **\<T> ExistsInCollection** etkinlik tasarımcısı <xref:System.Activities.Statements.ExistsInCollection%601> kullanılır.
 
-## <a name="the-existsincollectiont-activity"></a>Varolan Tsıncollection \<T> etkinliği
+## <a name="the-existsincollectiont-activity"></a>ExistsInCollection \<T> Etkinliği
 
-<xref:System.Activities.Statements.ExistsInCollection%601>Etkinlik belirli bir koleksiyonda belirtilen öğenin mevcut olup olmadığını belirler.
+Etkinlik, <xref:System.Activities.Statements.ExistsInCollection%601> belirtilen bir öğenin belirli bir koleksiyonda var olup olmadığını belirler.
 
-### <a name="using-the-existsincollectiont-activity-designer"></a>Mevcut Tsıncollection \<T> etkinlik tasarımcısını kullanma
+### <a name="using-the-existsincollectiont-activity-designer"></a>ExistsInCollection Etkinlik \<T> Tasarımcısını Kullanma
 
-**\<T> Mevcut Tsıncollection** etkinlik Tasarımcısı, iş akışı Tasarımcısı **araç kutusu** sekmesine tıklanarak erişilen **araç kutusu** **koleksiyon** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
+**ExistsInCollection \<T>** etkinlik tasarımcısı, araç kutusunun Araç Kutusu sekmesine tıklayarak erişilen  Araç Kutusu'İş Akışı Tasarımcısı.  Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
-Var olan **Tsıncollection \<T>** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.ExistsInCollection%601> , varsayılan değeri var olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A><Int32 \> . (Varsayılan olarak, *TypeArgument* **Int32**' dir. Özellik kılavuzunda değiştirilebilir.)  Değer, var <xref:System.Activities.Activity.DisplayName%2A> olan **Tsıncollection<\> T** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenmelidir.
+**ExistsInCollection \<T>** etkinlik **tasarımcısı, Araç** Kutusundan sürüklenerek İş Akışı Tasarımcısı bir içinde olduğu gibi genellikle her yerde bu etkinlik yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, <xref:System.Activities.Statements.ExistsInCollection%601> <xref:System.Activities.Activity.DisplayName%2A> Varsayılan ExistsInCollection ve Int32<bir etkinlik \> oluşturur. *(TypeArgument* varsayılan olarak **Int32'dir.** Özellik kılavuzunda değiştirilebilir.)  Değer, <xref:System.Activities.Activity.DisplayName%2A> **\> ExistsInCollection** üst bilgisinde veya T<tasarımcısında veya özellik **kılavuzundaki DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenemez.
 
-### <a name="the-existsincollectiont-properties"></a>Mevcut Tsıncollection \<T> Özellikleri
+### <a name="the-existsincollectiont-properties"></a>ExistsInCollection \<T> Özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.ExistsInCollection%601> Özellikler gösterilmektedir ve tasarımcıda nasıl kullanıldıkları açıklanmıştır:
+Aşağıdaki tablo, <xref:System.Activities.Statements.ExistsInCollection%601> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar:
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.ExistsInCollection%601> . Varsayılan değer, Int32<Vartsincollection ' dur \> . <xref:System.Activities.Activity.DisplayName%2A>Değer kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.ExistsInCollection%601.Item%2A>|Doğru|Koleksiyonda aranacak öğe \<T> . Bu öğe, *TypeArgument* türünde *T* türünde. öğeyi belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
-|<xref:System.Activities.Statements.ExistsInCollection%601.Collection%2A>|Doğru|Öğenin bulunup bulunmadığını kontrol edilecek koleksiyon. Bu koleksiyon **ıcollection<TypeArgument türünde \> .** koleksiyonu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
-|*TypeArgument*|Doğru|İçinde yer alan öğelerin T türü <xref:System.Collections.Generic.ICollection%601> . Varsayılan olarak, bu *TypeArgument* türü **Int32** olarak ayarlanır. Türü değiştirmek için, özellik kılavuzundaki Birleşik giriş kutusunda *TypeArgument* değerini değiştirin.|
-|<xref:System.Activities.Activity%601.Result%2A>|Yanlış|Koleksiyonda belirtilen öğenin var olup olmadığını gösteren bir değer. sonuca bağlanacak bir değişken belirtmek için, özellik kılavuzuna bir Visual Basic değişkeni yazın.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.ExistsInCollection%601> adı. Varsayılan değer, Int32'<ExistsInCollection'dır. \> Değer <xref:System.Activities.Activity.DisplayName%2A> kesinlikle gerekli değildir ancak bir değer kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.ExistsInCollection%601.Item%2A>|Doğru|Koleksiyonunda bakıla \<T> öğe. Bu öğe T *türündedir* ve *TypeArgument türündedir.* Öğeyi belirtmek için özellik kılavuzuna Visual Basic bir ifade yazın.|
+|<xref:System.Activities.Statements.ExistsInCollection%601.Collection%2A>|Doğru|Öğenin var olup olamayacakları kontrol etmek için koleksiyon. Bu koleksiyon, **TypeArgument için ICollection<\> türündedir.** Koleksiyonu belirtmek için özellik kılavuzuna Visual Basic bir ifade yazın.|
+|*TypeArgument*|Doğru|içinde yer alan öğelerin T <xref:System.Collections.Generic.ICollection%601> türü. Varsayılan olarak, bu *TypeArgument* türü **Int32 olarak ayarlanır.** Türü değiştirmek için özellik kılavuzunda birleşik giriş kutusunda *TypeArgument* değerini değiştirebilirsiniz.|
+|<xref:System.Activities.Activity%601.Result%2A>|Yanlış|Belirtilen öğenin koleksiyonda mevcut olup olmadığını belirten bir değer. Sonucu bağlamak için bir değişken belirtmek için, özellik kılavuzunda Visual Basic değişken yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
