@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklayıcıda verilerin özel görünümlerini oluşturma | Microsoft Docs
-description: Visual Studio hata ayıklayıcısında program durumunu inceleme ve değiştirme yöntemlerinin çeşitli yollarını öğrenin. Bunlar, oto ve Izleme pencereleri, veri Ipuçları ve Görselleştiriciler gibi öğeleri içerir.
+title: Hata ayıklayıcısında verilerin özel görünümlerini | Microsoft Docs
+description: Hata ayıklayıcısında program durumunu incelemenin ve değiştirmenin Visual Studio öğrenin. Bunlar Otomatikler ve İzleme pencereleri, DataTips ve Görselleştiriciler'i içerir.
 ms.custom: SEO-VS-2020
 ms.date: 01/09/2019
 ms.topic: conceptual
@@ -19,26 +19,27 @@ ms.assetid: 13e1105f-f987-402e-9108-ec6ac12be042
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d51821597c68a9b8e0c97e4cac3c7dc7ec2b8cf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 58d63d95ed2aa24f1c78708cbcb701d68ad39be0c01c9d54f25172a0b43fb551
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884357"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121418746"
 ---
-# <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında verilerin özel görünümlerini oluşturma (C#, Visual Basic, C++)
+# <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında (C#, Visual Basic, C++) verilerin özel görünümlerini oluşturma
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı programınızın durumunu incelemek ve değiştirmek için birçok araç sağlar. Bu araçların çoğu yalnızca kesme modunda çalışır.
+Hata [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayıklayıcısı, program durumunu incelemek ve değiştirmek için birçok araç sağlar. Bu araçların çoğu yalnızca kesme modunda çalışır.
 
-## <a name="create-custom-views-of-data-in-variable-windows-and-datatips"></a>Değişken Windows ve veri Ipuçlarında verilerin özel görünümlerini oluşturma
+## <a name="create-custom-views-of-data-in-variable-windows-and-datatips"></a>Değişken pencerelerde ve DataTips'te verilerin özel görünümlerini oluşturma
 
- **Oto** ve **Gözcü** pencereleri gibi [hata ayıklayıcı pencerelerinin](../debugger/debugger-windows.md)birçoğu, değişkenleri incelemenizi sağlar. C++ türlerinin, yönetilen nesnelerin ve kendi türlerinizin hata ayıklayıcı değişkeni penceresinde ve [veri ipuçlarında](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)nasıl gösterileceğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [C++ nesnelerinin özel görünümlerini oluşturma](../debugger/create-custom-views-of-native-objects.md) ve [yönetilen nesnelerin özel görünümlerini oluşturma](../debugger/create-custom-views-of-managed-objects.md).
+ Otomatikler [ve İzleme pencereleri](../debugger/debugger-windows.md)gibi hata **ayıklayıcısı pencerelerinin** **çoğu** değişkenleri incelemenizi sağlar. C++ türlerinin, yönetilen nesnelerin ve kendi türlerinizin hata ayıklayıcısı değişken pencerelerinde ve [DataTips'te nasıl gösterildiğini özelleştirebilirsiniz.](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) Daha fazla bilgi için [bkz. C++ nesnelerinin özel görünümlerini oluşturma](../debugger/create-custom-views-of-native-objects.md) [ve Yönetilen nesnelerin özel görünümlerini oluşturma.](../debugger/create-custom-views-of-managed-objects.md)
 
-## <a name="create-custom-visualizers"></a>Özel Görselleştiriciler oluşturma
+## <a name="create-custom-visualizers"></a>Özel görselleştiriciler oluşturma
 
- Görselleştiriciler bir nesne veya değişkenin içeriğini anlamlı bir şekilde görüntülemenizi sağlar. Visual Studio hata ayıklayıcısında bir Görselleştirici, Büyüteç ![Visualizersimgesi](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi") simgesini kullanarak açabileceğiniz farklı pencereler anlamına gelir. Örneğin, HTML Görselleştirici bir HTML dizesinin bir tarayıcıda nasıl yorumlanıp görüntüleneceğini gösterir. Görsel öğelere veri Ipuçları, **Gözcü** penceresi, **oto** penceresi ve **Yerel öğeler** penceresi aracılığıyla erişebilirsiniz. **QuickWatch** iletişim kutusu ayrıca bir Görselleştirici sağlar. Daha fazla bilgi için bkz. [özel Görselleştiriciler oluşturma](../debugger/create-custom-visualizers-of-data.md).
+ Görselleştiriciler, bir nesnenin veya değişkenin içeriğini anlamlı bir şekilde görüntülemenizi sağlar. Hata Visual Studio görselleştirici, büyüteç ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi") simgesini kullanarak açabilirsiniz farklı pencerelere başvurur. Örneğin, HTML görselleştiricisi bir HTML dizesinin tarayıcıda nasıl yorumlandır ve görüntülenebilir olduğunu gösterir. Görselleştiricilere DataTips, **İzleme** penceresi, Otomatikler **penceresi ve** Yereller **penceresinden erişebilirsiniz.** QuickWatch **iletişim** kutusu bir görselleştirici de sağlar. Daha fazla bilgi için [bkz. Özel görselleştiriciler oluşturma.](../debugger/create-custom-visualizers-of-data.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

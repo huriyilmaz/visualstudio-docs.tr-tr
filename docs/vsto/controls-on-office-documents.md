@@ -1,6 +1,6 @@
 ---
-title: Office belgelerindeki denetimler
-description: Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ve konak denetimleri eklemek için Visual Studio 'da Office geliştirme araçları 'nı nasıl kullanabileceğinizi öğrenin.
+title: Office belgelerdeki denetimler
+description: Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ve konak denetimleri eklemek için Visual Studio Office geliştirme araçlarını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,23 +16,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5e94f39f287055cc4812d85abe2a4bfc0d81eb2b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50285a80f0179e78edc88f9e68528ff8fc6c9eef3bd005f4575cd2444699fa31
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947951"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394829"
 ---
-# <a name="controls-on-office-documents"></a>Office belgelerindeki denetimler
-  Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ve *konak denetimleri* eklemek Için Visual Studio 'da Office geliştirme araçları ' nı kullanabilirsiniz. Konak denetimleri, Word ve Excel nesne modellerinde çeşitli kullanıcı arabirimi (UI) nesnelerini genişleten nesnelerdir.
+# <a name="controls-on-office-documents"></a>Office belgelerdeki denetimler
+  Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ve *konak denetimleri* eklemek için Visual Studio Office geliştirme araçlarını kullanabilirsiniz. konak denetimleri, Word ve Excel nesne modellerinde çeşitli kullanıcı arabirimi (uı) nesnelerini genişleten nesnedir.
 
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
- Excel veya Word için VSTO eklentisi projeleri geliştirirken, çalışma zamanında bu denetimleri herhangi bir açık belge veya çalışma kitabına programlı olarak ekleyebilirsiniz.
+ Excel veya Word için VSTO eklentisi projesi geliştirirken, çalışma zamanında bu denetimleri herhangi bir açık belge veya çalışma kitabına programlı olarak ekleyebilirsiniz.
 
- Excel veya Word için belge düzeyi projeleri geliştirirken, bu denetimleri programlı bir şekilde çalışma zamanında ekleyebilir veya Visual Studio tasarımcısını kullanarak bu denetimleri projenizdeki belgeye veya çalışma kitabına tasarım zamanında ekleyebilirsiniz.
+ Excel veya Word için belge düzeyi projeler geliştirirken, bu denetimleri programlı bir şekilde çalışma zamanında ekleyebilir veya bu denetimleri, tasarım zamanında projenizdeki belgeye veya çalışma kitabına eklemek için Visual Studio tasarımcısını kullanabilirsiniz.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
@@ -43,19 +44,19 @@ ms.locfileid: "99947951"
 
  Kodda konak öğeleri ve konak denetimleri kullandığınızda karşılaşabileceğiniz sorunlar açıklanmaktadır.
 
-- [Office belgelerindeki Windows Forms denetimlerine genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Windows Office belgelere genel bakış üzerinde form denetimleri](../vsto/windows-forms-controls-on-office-documents-overview.md)
 
- Excel ve Word belgelerinde Windows Forms denetimleri kullanma ve Windows form üzerinde denetimlerden farklı olan bilgiler sağlar.
+ Excel ve Word belgelerinde Windows Forms denetimleri kullanımı ve Windows formundaki denetimlerden farklı oldukları hakkında bilgiler sağlar.
 
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
 
  Word ve Excel belgelerine Windows Forms denetimlerinin ve konak denetimlerinin nasıl ekleneceğini ve bu denetimlerin belgede nasıl kalıcı hale getirilemeyeceğini açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
 
- Visual Studio 'Yu kullanarak Microsoft Office uygulamalarının Kullanıcı arabirimini özelleştirmenin farklı yolları hakkında bilgiler sağlar.
+ Visual Studio kullanarak Microsoft Office uygulamalarının kullanıcı arabirimini özelleştirmenin farklı yolları hakkında bilgi sağlar.
 
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 
- Verileri belge içindeki konak denetimlerine bağlayarak Word ve Excel belgelerindeki verileri nasıl kullanabileceğinizi açıklar.
+ verileri belgedeki konak denetimlerine bağlayarak Word ve Excel belgelerindeki verileri nasıl kullanabileceğinizi açıklar.

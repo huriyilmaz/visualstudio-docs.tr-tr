@@ -17,18 +17,19 @@ ms.assetid: b9ff4ed0-9e80-49df-9016-a81189319afd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b790bcdc11e80b8f01877efe4a8d9497038b260b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 86e5d3aeb1290bc5067897d693d1b6c218bb42db233631fa3ee3206369a938ef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884266"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121418603"
 ---
 # <a name="visualizer-api-reference"></a>Görselleştirici API Başvurusu
 
-Görselleştirici API 'Leri, Visual Studio hata ayıklayıcısı için Görselleştirici yazmak isteyen kullanıcılar için sağlanır. Görselleştirici, Visual Studio hata ayıklayıcısı Kullanıcı arabiriminin işlevselliğini genişleten küçük bir uygulamadır. Görselleştirici, Görselleştirici tasarlandığı belirli bir türün veri nesnesini görüntüleyebilir (ve isteğe bağlı olarak düzenleyebilir).
+görselleştiricisi apı 'leri, Visual Studio hata ayıklayıcı için görselleştirici yazmak isteyen kullanıcılar için sağlanır. görselleştirici, Visual Studio hata ayıklayıcı kullanıcı arabiriminin işlevlerini genişleten küçük bir uygulamadır. Görselleştirici, Görselleştirici tasarlandığı belirli bir türün veri nesnesini görüntüleyebilir (ve isteğe bağlı olarak düzenleyebilir).
 
 ## <a name="in-this-section"></a>Bu Bölümde
 

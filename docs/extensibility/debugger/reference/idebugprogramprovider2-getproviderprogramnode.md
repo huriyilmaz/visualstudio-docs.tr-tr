@@ -11,17 +11,18 @@ ms.assetid: e62e8e83-acbb-4c52-aedf-ffbd4670db29
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 07e7184c189d501b2fcb604590eeb121bae8ccdc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bf520d68a47b8a7e8f4ed7b71c7544ffdf0a947fcdc2c140c68f0ce7ef328bf1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065287"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402577"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
 Belirli bir program için program düğümünü alır.

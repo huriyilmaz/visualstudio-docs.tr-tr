@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 582b38b7a4115a140f6031b2d4c9227edfd438d1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b88700bf0e0b9a0b07e9806bdb1bb76ae99705801deeb23cc3f24605476b0f36
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146242"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391502"
 ---
 # <a name="error-workgroup-remote-logon-failure"></a>Hata: Çalışma Grubu Uzak Oturum Açma Başarısız
 Bu hata şunu okur:
@@ -37,14 +38,14 @@ Bu hata şunu okur:
 
 - Uzak makinede eşleşen adı ve parolayı içeren bir hesap yok.
 
-- Hem Visual Studio bilgisayarı hem de uzak makine çalışma gruplarında ise, bu hata uzak makinedeki varsayılan **yerel güvenlik ilkesi** ayarı nedeniyle oluşabilir. **Yerel güvenlik ilkesi** ayarı için varsayılan ayar **Yalnızca Konuk-yerel kullanıcılar konuk olarak kimlik doğrular**. Bu kurulumda hata ayıklamak için, uzak makinedeki ayarı **Klasik yerel kullanıcılar olarak kimlik doğrulaması yapacak** şekilde değiştirmeniz gerekir.
+- hem Visual Studio bilgisayar hem de uzak makine çalışma gruplarında ise, bu hata uzak makinedeki varsayılan **yerel güvenlik ilkesi** ayarı nedeniyle oluşabilir. **Yerel güvenlik ilkesi** ayarı için varsayılan ayar **Yalnızca Konuk-yerel kullanıcılar konuk olarak kimlik doğrular**. Bu kurulumda hata ayıklamak için, uzak makinedeki ayarı **Klasik yerel kullanıcılar olarak kimlik doğrulaması yapacak** şekilde değiştirmeniz gerekir.
 
 > [!NOTE]
 > Aşağıdaki görevleri gerçekleştirmek için bir yönetici olmanız gerekir.
 
 ### <a name="to-open-the-local-security-policy-window"></a>Yerel Güvenlik Ilkesi penceresini açmak için
 
-1. **Secpol. msc** Microsoft Yönetim Konsolu ek bileşenini başlatın. Windows Search 'te, Windows Run kutusunda veya bir komut isteminde secpol. msc yazın.
+1. **Secpol. msc** Microsoft Yönetim Konsolu ek bileşenini başlatın. Windows aramada, Windows çalıştır kutusunda veya bir komut isteminde secpol. msc yazın.
 
 ### <a name="to-add-user-rights-assignments"></a>Kullanıcı hakları ataması eklemek için
 

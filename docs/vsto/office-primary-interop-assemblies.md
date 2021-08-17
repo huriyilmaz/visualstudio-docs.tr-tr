@@ -1,6 +1,6 @@
 ---
 title: Office birincil birlikte çalışma derlemeleri
-description: Birincil birlikte çalışma derlemesini (PIA) kullanarak Office projesinden bir Microsoft Office uygulamasının özelliklerine erişim elde edin.
+description: Bir Microsoft Office projesinden bir uygulamanın özelliklerine erişmek için birincil birlikte çalışma derlemesini (PIA) Office öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -14,116 +14,117 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 2041c1d8b39f88f611cee09f17c498ea54130122
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6f610e9cd1667b84f382f7b1f48c231a69ec44797bafc343f11a7c508636df1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892066"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394178"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office birincil birlikte çalışma derlemeleri
 
-Office projesinden bir Microsoft Office uygulamasının özelliklerini kullanmak için, uygulama için birincil birlikte çalışma derlemesini (PIA) kullanmanız gerekir. PIA, yönetilen kodun bir Microsoft Office uygulamasının COM tabanlı nesne modeliyle etkileşime geçmesini sağlar.
+Bir Office projesinden bir Microsoft Office uygulamasının özelliklerini kullanmak için, uygulamanın birincil birlikte çalışma derlemesini (PIA) kullansanız gerekir. PIA, yönetilen kodun bir uygulamanın COM tabanlı Microsoft Office modeliyle etkileşim kurmalarına olanak sağlar.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-Yeni bir Office projesi oluşturduğunuzda, Visual Studio, projeyi derlemek için gerekli olan PIA 'lara başvurular ekler. Bazı senaryolarda, ek PIA 'lara başvurular eklemeniz gerekebilir (örneğin, bir projede Microsoft Office Excel için bir Microsoft Office Word özelliği kullanmak istiyorsanız).
+Yeni bir proje Office, Visual Studio oluşturmak için gereken PIA'lara başvurular ekler. Bazı senaryolarda, ek PIA'lara başvurular eklemeniz (örneğin, Microsoft Office Word özelliğini bir projesinde Microsoft Office Excel).
 
-Bu konuda Office projelerinde Microsoft Office PIA kullanmanın aşağıdaki yönleri açıklanmaktadır:
+Bu konuda, Office projelerinde Microsoft Office PIA'larını kullanmanın Office açıklanmıştır:
 
-- [Projeleri derlemek ve çalıştırmak için birincil birlikte çalışma derlemelerini ayırın](#separateassemblies)
+- [Projeleri derlemek ve çalıştırmak için birincil birlikte çalışma derlemelerini ayırma](#separateassemblies)
 
-- [Tek bir projede birden çok Microsoft Office uygulamasının özelliklerini kullanma](#usingfeatures)
+- [Tek bir projede birden Microsoft Office uygulamanın özelliklerini kullanma](#usingfeatures)
 
-- [Microsoft Office uygulamaları için birincil birlikte çalışma derlemelerinin tam listesi](#pialist)
+- [Özel uygulamalar için birincil birlikte çalışma derlemelerinin Microsoft Office listesi](#pialist)
 
-Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemeleri](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
+Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [Birincil birlikte çalışma derlemeleri.](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))
 
 <a name="separateassemblies"></a>
 
-## <a name="separate-primary-interop-assemblies-to-build-and-run-projects"></a>Projeleri derlemek ve çalıştırmak için birincil birlikte çalışma derlemelerini ayırın
+## <a name="separate-primary-interop-assemblies-to-build-and-run-projects"></a>Projeleri derlemek ve çalıştırmak için birincil birlikte çalışma derlemelerini ayırma
 
-Visual Studio, geliştirme bilgisayarında farklı PIA kümelerini kullanır. Bu farklı derleme kümeleri aşağıdaki konumlarda bulunur:
+Visual Studio bilgisayarda farklı PIA kümeleri kullanır. Bu farklı derleme kümeleri aşağıdaki konumlardadır:
 
 - Program dosyaları dizinindeki bir klasör
 
-  Derlemelerin bu kopyaları kod yazdığınızda ve proje oluşturduğunuzda kullanılır. Visual Studio bu derlemeleri otomatik olarak yüklenir.
+  Derlemelerin bu kopyaları, kod yazmanız ve proje derlemek için kullanılır. Visual Studio derlemeleri otomatik olarak yüklemez.
 
 - Genel derleme önbelleği
 
-  Derlemelerin bu kopyaları, projeleri çalıştırdığınızda veya hata ayıkladığınızda olduğu gibi bazı geliştirme görevleri sırasında kullanılır. Visual Studio bu derlemeleri yüklemez ve kaydetmez; Bunu sizin yapmanız gerekir.
+  Derlemelerin bu kopyaları, projeleri çalıştırma veya projelerde hata ayıklama gibi bazı geliştirme görevleri sırasında kullanılır. Visual Studio derlemeleri yüklemez ve kaydetmez; Bunu kendiniz yapmak gerekir.
 
-### <a name="primary-interop-assemblies-in-the-program-files-directory"></a>Program Files dizinindeki birincil birlikte çalışma derlemeleri
+### <a name="primary-interop-assemblies-in-the-program-files-directory"></a>Program dosyaları dizininde birincil birlikte çalışma derlemeleri
 
-Visual Studio 'Yu yüklediğinizde, PIA 'ler, genel derleme önbelleğinin dışında dosya sistemindeki bir konuma otomatik olarak yüklenir. Yeni bir proje oluşturduğunuzda, Visual Studio PIA 'lerin bu kopyalarına otomatik olarak projenize başvurular ekler. Visual Studio, projenizi geliştirirken ve oluştururken tür başvurularını çözümlemek için genel derleme önbelleğindeki derlemeler yerine PIA 'lerin bu kopyalarını kullanır.
+Bu dosyaları Visual Studio, PIA'lar genel derleme önbelleğinin dışında, dosya sisteminde bir konuma otomatik olarak yüklenir. Yeni bir proje oluştururken, Visual Studio piA'ların bu kopyalarına otomatik olarak başvurular ekler. Visual Studio, projenizi geliştirirken ve derlemenize tür başvurularını çözümlemek için genel derleme önbelleğinde derlemeler yerine PIA'ların bu kopyalarını kullanır.
 
-PIA 'ların bu kopyaları, Visual Studio 'nun farklı sürümleri genel derleme önbelleğine kaydedildiğinde oluşabilecek çeşitli geliştirme sorunlarından kaçınmaya yardımcı olur.
+PIA'ların bu kopyaları, Visual Studio sürümleri genel derleme önbelleğine kaydedilene kadar ortaya çıkabilir çeşitli geliştirme sorunlarından kaçınmanıza yardımcı olur.
 
-Visual Studio 2017 ' den itibaren, PIA 'ların bu kopyaları geliştirme bilgisayarındaki aşağıdaki paylaşılan konumlara yüklenir:
+2017'Visual Studio başlayarak, piA'ların bu kopyaları geliştirme bilgisayarında aşağıdaki paylaşılan konumlara yüklenir:
 
 - `%ProgramFiles%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\`
 
 - (veya `%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\` 64 bit işletim sistemlerinde)
 
 > [!NOTE]
-> Visual Studio 'nun eski sürümlerinde bu PIA 'ler, `%ProgramFiles%` Visual Studio 'nun bu sürümü için klasörü altında bulunan Office\pıa için Visual Studio Araçları yüklenir.
+> Önceki sürümler Visual Studio, bu PIA'lar söz Office için Visual Studio Araçları\PIA klasörüne, söz `%ProgramFiles%` Visual Studio.
 > Örneğin: `%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Visual Studio Tools for Office\PIA\`
 
-### <a name="primary-interop-assemblies-in-the-global-assembly-cache"></a>Genel derleme önbelleğindeki birincil birlikte çalışma derlemeleri
+### <a name="primary-interop-assemblies-in-the-global-assembly-cache"></a>Genel derleme önbelleğinde birincil birlikte çalışma derlemeleri
 
-Belirli geliştirme görevlerini gerçekleştirmek için, PIA 'lar geliştirme bilgisayarındaki genel derleme önbelleğinde yüklü ve kayıtlı olmalıdır. Genellikle, geliştirme bilgisayarına Office yüklediğinizde PIA 'lar otomatik olarak yüklenir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
+Belirli geliştirme görevlerini gerçekleştirmek için PIA'ların geliştirme bilgisayarına yüklenmiş ve genel derleme önbelleğine kayıtlı olması gerekir. PiA'lar genellikle geliştirme bilgisayarına Office otomatik olarak yüklenir. Daha fazla bilgi için, [bkz. Configure a computer to develop Office .](../vsto/configuring-a-computer-to-develop-office-solutions.md)
 
-Office PIA 'Ları, son kullanıcı bilgisayarlarında Office çözümlerini çalıştırmak için gerekli değildir. Daha fazla bilgi için bkz. [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md).
+Bu Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarında farklı PIA'lar Office gerekmez. Daha fazla bilgi için, [bkz. Tasarım ve Office çözümleri.](../vsto/designing-and-creating-office-solutions.md)
 
 <a name="usingfeatures"></a>
 
-## <a name="use-features-of-multiple-microsoft-office-applications-in-a-single-project"></a>Tek bir projede birden çok Microsoft Office uygulamasının özelliklerini kullanma
+## <a name="use-features-of-multiple-microsoft-office-applications-in-a-single-project"></a>Tek bir projede birden Microsoft Office uygulamanın özelliklerini kullanma
 
-Visual Studio 'daki her Office proje şablonu, tek bir Microsoft Office uygulamayla çalışacak şekilde tasarlanmıştır. Çoklu Microsoft Office uygulamalarında özellikleri kullanmak veya Visual Studio 'da proje olmayan bir uygulama veya bileşendeki özellikleri kullanmak için, gerekli PIA 'lara bir başvuru eklemeniz gerekir.
+Office proje şablonu Visual Studio tek bir uygulamayla çalışacak şekilde Microsoft Office tasarlanmıştır. Birden çok Microsoft Office uygulamasındaki özellikleri kullanmak veya Visual Studio'de projesiz bir uygulamada veya bileşende özellikleri kullanmak için, gerekli PIA'lara bir başvuru eklemeniz gerekir.
 
-Çoğu durumda, dizin altında Visual Studio tarafından yüklenen PIA 'lara başvurular eklemeniz gerekir `%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\` . Derlemelerin bu sürümleri, **başvuru Yöneticisi** Iletişim kutusunun **Framework** sekmesinde görünür. Daha fazla bilgi için bkz. [nasıl yapılır: birincil birlikte çalışma Derlemeleriyle Office uygulamalarını hedefleme](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md).
+Çoğu durumda, dizin altındaki bir kullanıcı tarafından yüklenmiş PIA'lara Visual Studio eklemeniz `%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\` gerekir. Derlemelerin bu sürümleri Başvuru Yöneticisi **iletişim** kutusunun Framework **sekmesinde** görünür. Daha fazla bilgi için [bkz. Nasıl Office derlemeleri aracılığıyla uygulamaları hedefleme.](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 
-PIA 'leri genel derleme önbelleğine yükleyip kaydettirmiş olmanız durumunda derlemelerin bu sürümleri **başvuru Yöneticisi** Iletişim kutusunun **com** sekmesinde görünür. Bunları kullandığınızda oluşabilecek bazı geliştirme sorunları olduğu için derlemelerin bu sürümlerine başvuru eklememelisiniz. Örneğin, genel derleme önbelleğinde PIA 'ların farklı sürümlerini kaydettirdiğiniz takdirde, **başvuru Yöneticisi** Iletişim kutusunun **com** sekmesinde derlemenin farklı bir sürümünü belirtseniz bile, projeniz son kaydedilen derlemenin sürümüne otomatik olarak bağlanır.
+PIA'ları genel derleme önbelleğine yüklemiş ve kaydettiyebilirsiniz; derlemelerin bu sürümleri Başvuru Yöneticisi iletişim kutusunun **COM** **sekmesinde** görünür. Derlemelerin bu sürümlerine başvuru eklemekten kaçınmanız gerekir çünkü bunları kullanırken ortaya çıkabilir bazı geliştirme sorunları vardır. Örneğin, genel derleme önbelleğinde FARKLı PIA'ların sürümlerini kaydettiyebilirsiniz, Başvuru Yöneticisi iletişim kutusunun **COM** sekmesinde derlemenin farklı bir sürümünü belirtse bile projeniz en son kaydedilen derlemenin sürümüne otomatik olarak bağlanacaktır. 
 
 > [!NOTE]
-> Bazı derlemeler, bunlara başvuran bir derleme eklendiğinde projeye otomatik olarak eklenir. Örneğin, `Office.dll` `Microsoft.Vbe.Interop.dll` Word, Excel, Outlook, Microsoft Forms veya Graph derlemelerine bir başvuru eklediğinizde, ve derlemelerine yapılan başvurular otomatik olarak eklenir.
+> Bazı derlemeler, bu derlemelere başvurulan bir derleme ekleniyorsa projeye otomatik olarak eklenir. Örneğin, Word, Excel, Outlook, Microsoft Forms veya Graph derlemelerine bir başvuru Graph ve `Office.dll` `Microsoft.Vbe.Interop.dll` derlemelerine başvurular otomatik olarak eklenir.
 
 <a name="pialist"></a>
 
-## <a name="primary-interop-assemblies-for-microsoft-office-applications"></a>Microsoft Office uygulamaları için birincil birlikte çalışma derlemeleri
+## <a name="primary-interop-assemblies-for-microsoft-office-applications"></a>Uygulama derlemeleri için birincil birlikte Microsoft Office derlemeleri
 
-Aşağıdaki tabloda, ve için kullanılabilen birincil birlikte çalışma derlemeleri listelenmektedir [!INCLUDE[Office_16_short](../vsto/includes/office-16-short-md.md)] [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] .
+Aşağıdaki tabloda , ve için kullanılabilen birincil birlikte çalışma derlemeleri [!INCLUDE[Office_16_short](../vsto/includes/office-16-short-md.md)] [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] listele türetir. [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]
 
 <br/>
 
-|Office uygulaması veya bileşeni|Birincil birlikte çalışma derleme adı|
+|Office uygulama veya bileşen oluşturma|Birincil birlikte çalışma derleme adı|
 |-------------------------------------|-----------------------------------|
-|Microsoft Access 14,0 nesne kitaplığı<br /><br /> Microsoft Access 15,0 nesne kitaplığı|Microsoft.Office.Interop.Access.dll|
-|Microsoft Office 14,0 Access Database Engine nesne kitaplığı<br /><br /> Microsoft Office 15,0 Access Database Engine nesne kitaplığı|Microsoft.Office.Interop.Access.Dao.dll|
-|Microsoft Excel 14,0 nesne kitaplığı<br /><br /> Microsoft Excel 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia&preserve-view=true)|
-|Microsoft Graph 14,0 nesne kitaplığı (grafikler için PowerPoint, Access ve Word tarafından kullanılır)<br /><br /> Microsoft Graph 15,0 nesne kitaplığı|Microsoft.Office.Interop.Graph.dll|
-|Microsoft InfoPath 2,0 tür kitaplığı (yalnızca InfoPath 2007 için)|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form&preserve-view=true)|
-|Microsoft InfoPath XML birlikte çalışma derlemesi (yalnızca InfoPath 2007 için)|Microsoft.Office.Interop.InfoPath.Xml.dll|
-|Microsoft Office 14,0 nesne kitaplığı (Office paylaşılan işlevselliği)<br /><br /> Microsoft Office 15,0 nesne kitaplığı (Office paylaşılan işlevselliği)|office.dll|
-|Outlook Görünüm denetimini Microsoft Office (Web sayfalarınızda ve uygulamalarda, gelen kutunuza erişmek için kullanılabilir)|Microsoft.Office.Interop.OutlookViewCtl.dll|
-|Microsoft Outlook 14,0 nesne kitaplığı<br /><br /> Microsoft Outlook 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia&preserve-view=true)|
-|Microsoft PowerPoint 14,0 nesne kitaplığı<br /><br /> Microsoft PowerPoint 15,0 nesne kitaplığı|Microsoft.Office.Interop.PowerPoint.dll|
-|Microsoft Project 14,0 nesne kitaplığı<br /><br /> Microsoft Project 15,0 nesne kitaplığı|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server&preserve-view=true)|
-|Microsoft Publisher 14,0 nesne kitaplığı<br /><br /> Microsoft Publisher 15,0 nesne kitaplığı|Microsoft.Office.Interop.Publisher.dll|
-|Microsoft SharePoint Designer 14,0 Web nesnesi başvuru kitaplığı|Microsoft.Office.Interop.SharePointDesigner.dll|
-|Microsoft SharePoint Designer 14,0 sayfa nesne başvuru kitaplığı|Microsoft.Office.Interop.SharePointDesignerPage.dll|
-|Microsoft Akıllı Etiketler 2,0 tür kitaplığı **Note:**  akıllı etiketler ve ' de kullanım dışıdır [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)] .|Microsoft.Office.Interop.SmartTag.dll|
-|Microsoft Visio 14,0 tür kitaplığı<br /><br /> Microsoft Visio 15,0 tür kitaplığı|Microsoft.Office.Interop.Visio.dll|
-|Microsoft Visio 14,0 Web türü kitaplığı olarak kaydet<br /><br /> Microsoft Visio 15,0 Web türü kitaplığı olarak kaydet|Microsoft.Office.Interop.Visio.SaveAsWeb.dll|
-|Microsoft Visio 14,0 çizim denetim türü kitaplığı<br /><br /> Microsoft Visio 15,0 çizim denetim türü kitaplığı|Microsoft.Office.Interop.VisOcx.dll|
-|Microsoft Word 14,0 nesne kitaplığı<br /><br /> Microsoft Word 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia&preserve-view=true)|
+|Microsoft Access 14.0 Nesne Kitaplığı<br /><br /> Microsoft Access 15.0 Nesne Kitaplığı|Microsoft.Office.Interop.Access.dll|
+|Microsoft Office 14.0 Access Veritabanı Altyapısı Nesne Kitaplığı<br /><br /> Microsoft Office 15.0 Access Veritabanı Altyapısı Nesne Kitaplığı|Microsoft.Office.Interop.Access.Dao.dll|
+|Microsoft Excel 14.0 Nesne Kitaplığı<br /><br /> Microsoft Excel 15.0 Nesne Kitaplığı|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia&preserve-view=true)|
+|Microsoft Graph 14.0 Nesne Kitaplığı (PowerPoint, Access ve Word tarafından graflar için kullanılır)<br /><br /> Microsoft Graph 15.0 Nesne Kitaplığı|Microsoft.Office.Interop.Graph.dll|
+|Microsoft InfoPath 2.0 Tür Kitaplığı (yalnızca InfoPath 2007 için)|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form&preserve-view=true)|
+|Microsoft InfoPath XML Birlikte Çalışma Derlemesi (yalnızca InfoPath 2007 için)|Microsoft.Office.Interop.InfoPath.Xml.dll|
+|Microsoft Office 14.0 Nesne Kitaplığı (Office işlevselliği)<br /><br /> Microsoft Office 15.0 Nesne Kitaplığı (Office işlevselliği)|office.dll|
+|Microsoft Office Outlook Görünüm Denetimi (Gelen Kutunuza erişmek için Web sayfalarında ve uygulamalarda kullanılabilir)|Microsoft.Office.Interop.OutlookViewCtl.dll|
+|Microsoft Outlook 14.0 Nesne Kitaplığı<br /><br /> Microsoft Outlook 15.0 Nesne Kitaplığı|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia&preserve-view=true)|
+|Microsoft PowerPoint 14.0 Nesne Kitaplığı<br /><br /> Microsoft PowerPoint 15.0 Nesne Kitaplığı|Microsoft.Office.Interop.PowerPoint.dll|
+|Microsoft Project 14.0 Nesne Kitaplığı<br /><br /> Microsoft Project 15.0 Nesne Kitaplığı|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server&preserve-view=true)|
+|Microsoft Publisher 14.0 Nesne Kitaplığı<br /><br /> Microsoft Publisher 15.0 Nesne Kitaplığı|Microsoft.Office.Interop.Publisher.dll|
+|Microsoft SharePoint Designer 14.0 Web Nesnesi Başvuru Kitaplığı|Microsoft.Office.Interop.SharePointDesigner.dll|
+|Microsoft SharePoint Tasarımcısı 14.0 Sayfa Nesnesi Başvuru Kitaplığı|Microsoft.Office.Interop.SharePointDesignerPage.dll|
+|Microsoft Akıllı Etiketler 2.0 Tür Kitaplığı **Not:**  ve içinde akıllı etiketler kullanım [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)] [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)] dışıdır.|Microsoft.Office.Interop.SmartTag.dll|
+|Microsoft Visio 14.0 Tür Kitaplığı<br /><br /> Microsoft Visio 15.0 Tür Kitaplığı|Microsoft.Office.Interop.Visio.dll|
+|Microsoft Visio 14.0 Web Türü Kitaplığı Olarak Kaydet<br /><br /> Microsoft Visio 15.0 Web Türü Kitaplığı Olarak Kaydet|Microsoft.Office.Interop.Visio.SaveAsWeb.dll|
+|Microsoft Visio 14.0 Çizim Denetim Türü Kitaplığı<br /><br /> Microsoft Visio 15.0 Çizim Denetim Türü Kitaplığı|Microsoft.Office.Interop.VisOcx.dll|
+|Microsoft Word 14.0 Nesne Kitaplığı<br /><br /> Microsoft Word 15,0 nesne kitaplığı|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia&preserve-view=true)|
 |Microsoft Visual Basic for Applications genişletilebilirliği 5,3|Microsoft.Vbe.Interop.dll|
 
 ### <a name="binding-redirect-assemblies"></a>Bağlama yeniden yönlendirme derlemeleri
 
-Office PIA 'Ları genel derleme önbelleğine yükleyip kaydettiğinizde (Office ile veya PIA 'lar için yeniden dağıtılabilir paketi yükleyerek), bağlama yeniden yönlendirme derlemeleri de yalnızca genel derleme önbelleğine yüklenir. Bu derlemeler, çalışma zamanında birincil birlikte çalışma derlemelerinin doğru sürümünün yüklendiğinden emin olmanıza yardımcı olur.
+Office pıa 'leri genel derleme önbelleğine yükleyip kaydettiğinizde (Office ya da pıa 'lar için yeniden dağıtılabilir paketi yüklediğinizde), bağlama yeniden yönlendirme derlemeleri de yalnızca genel derleme önbelleğine yüklenir. Bu derlemeler, çalışma zamanında birincil birlikte çalışma derlemelerinin doğru sürümünün yüklendiğinden emin olmanıza yardımcı olur.
 
 Örneğin, bir derlemeye başvuran bir çözüm [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] aynı birincil birlikte çalışma derlemesinin sürümüne sahip olan bir bilgisayarda çalıştığında, bağlama yeniden yönlendirme derlemesi [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] çalışma zamanına [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] birincil birlikte çalışma derlemesinin sürümünü yüklemesini söyler.
 
@@ -131,12 +132,12 @@ Daha fazla bilgi için bkz. [nasıl yapılır: otomatik bağlama yeniden yönlen
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: birincil birlikte çalışma Derlemeleriyle Office uygulamalarını hedefleme](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
+- [nasıl yapılır: birincil birlikte çalışma bütünleştirilmiş kodları aracılığıyla Office uygulamalarını hedefleme](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 - [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md)
 - [InfoPath çözümleri](../vsto/infopath-solutions.md)
 - [Outlook nesne modeline genel bakış](../vsto/outlook-object-model-overview.md)
 - [PowerPoint çözümleri](../vsto/powerpoint-solutions.md)
-- [Proje çözümleri](../vsto/project-solutions.md)
+- [Project çözümleri](../vsto/project-solutions.md)
 - [Visio nesne modeline genel bakış](../vsto/visio-object-model-overview.md)
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)
-- [Visual Studio 'da Office geliştirme &#40;Genel başvuru&#41;](../vsto/general-reference-office-development-in-visual-studio.md)
+- [genel başvuru &#40;Office geliştirme Visual Studio&#41;](../vsto/general-reference-office-development-in-visual-studio.md)

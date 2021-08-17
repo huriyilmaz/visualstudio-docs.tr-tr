@@ -11,17 +11,18 @@ ms.assetid: fa934121-3f58-44dc-9c30-d3f752e44c8b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d5b31d922880a02461e1cf55cec898eb186fbfe1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a5bffe8192b434b00d59e1d89b625ff13d5253c80035a26a83ee28ebe94b8ef1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053054"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415722"
 ---
 # <a name="idebugthread2setthreadname"></a>IDebugThread2::SetThreadName
 İş parçacığının adını ayarlar.

@@ -11,14 +11,15 @@ ms.assetid: 2c37b3aa-97a9-4665-8709-edd917f18cb1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b58eb61a65ff8ed0a6455d81128539ad5e6d00a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 235c36be2fd6ec4ee98b2efc97ee37a0d5077425aaa4f7f2ad62d767e0eb6a67
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058254"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402707"
 ---
 # <a name="idebugprogramhost2"></a>IDebugProgramHost2
 Bu arabirim bir programla ilgili konak (işlem) bilgilerini sağlar.

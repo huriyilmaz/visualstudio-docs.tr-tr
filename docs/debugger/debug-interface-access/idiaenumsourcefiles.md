@@ -1,5 +1,5 @@
 ---
-description: Veri kaynağında bulunan çeşitli kaynak dosyalarını numaralandırır.
+description: Veri kaynağında bulunan çeşitli kaynak dosyaları numaralar.
 title: IDiaEnumSourceFiles | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 5c0779a6-a2ea-408a-90da-ebdecf2b83c0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f6ebef58f2746ac99e2836ae486a45bdbebcedd
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e3c0f4594a8a937bcaafe92daa28d5a61a541b86a9dc443bb46bb9bb1ee98ec2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159183"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392435"
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
-Veri kaynağında bulunan çeşitli kaynak dosyalarını numaralandırır.
+Veri kaynağında bulunan çeşitli kaynak dosyaları numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,26 +30,26 @@ Veri kaynağında bulunan çeşitli kaynak dosyalarını numaralandırır.
 IDiaEnumSourceFiles : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumSourceFiles` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaEnumSourceFiles` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumSourceFiles::get__NewEnum](../../debugger/debug-interface-access/idiaenumsourcefiles-get-newenum.md)|`IEnumVARIANT Interface`Bu Numaralandırıcı sürümünü alır.|
-|[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)|Kaynak dosya sayısını alır.|
-|[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)|Bir dizin aracılığıyla bir kaynak dosyası alır.|
-|[IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md)|Sabit Listesi dizisinde belirtilen sayıda kaynak dosyası alır.|
-|[IDiaEnumSourceFiles::Skip](../../debugger/debug-interface-access/idiaenumsourcefiles-skip.md)|Sabit Listesi dizisinde belirtilen sayıda kaynak dosyasını atlar.|
-|[IDiaEnumSourceFiles::Reset](../../debugger/debug-interface-access/idiaenumsourcefiles-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[IDiaEnumSourceFiles::Clone](../../debugger/debug-interface-access/idiaenumsourcefiles-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[IDiaEnumSourceFiles::get__NewEnum](../../debugger/debug-interface-access/idiaenumsourcefiles-get-newenum.md)|Bu `IEnumVARIANT Interface` numaralayıcının sürümünü alın.|
+|[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)|Kaynak dosya sayısını alın.|
+|[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)|Bir kaynak dosyayı dizin ile alma.|
+|[IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md)|Numaralama dizisinde belirtilen sayıda kaynak dosyayı alan.|
+|[IDiaEnumSourceFiles::Skip](../../debugger/debug-interface-access/idiaenumsourcefiles-skip.md)|Bir numaralama dizisinde belirtilen sayıda kaynak dosya atlar.|
+|[IDiaEnumSourceFiles::Reset](../../debugger/debug-interface-access/idiaenumsourcefiles-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[IDiaEnumSourceFiles::Clone](../../debugger/debug-interface-access/idiaenumsourcefiles-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-`QueryInterface`Yöntemi bir [IDiaTable](../../debugger/debug-interface-access/idiatable.md) nesnesi üzerinde çağırarak bu arabirimi elde edin. Ayrıntılar için örneğe bakın.
+Bir `QueryInterface` [IDiaTable](../../debugger/debug-interface-access/idiatable.md) nesne üzerinde yöntemini çağırarak bu arabirimi alın. Ayrıntılar için örneğine bakın.
 
 ## <a name="example"></a>Örnek
-Bu örnek, `IDiaEnumSourceFiles` BIR DIA oturum nesnesindeki Tablo listesinden arabirimin nasıl alınacağını gösterir. Kaynak dosya bilgilerine erişme örneği için, bkz. [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) arabirimi.
+Bu örnekte, bir DIA oturum `IDiaEnumSourceFiles` nesnesinde tablo listesinden arabirimin nasıl alınarak elde edilir? Kaynak dosya bilgilerine erişme örneği için bkz. [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) arabirimi.
 
 ```C++
 
@@ -81,9 +82,9 @@ IDiaEnumSourceFiles* GetEnumSourceFiles(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

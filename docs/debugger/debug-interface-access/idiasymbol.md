@@ -11,14 +11,15 @@ ms.assetid: 01ad328a-736c-4933-a9f8-c2ded19ddd8c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f0d48d0a3ed09ea98c9bb299b921409b711b695a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0fee827b8d955dc86f81d3b8f9e13d7c6b29a4d1f684464c27c2a268d2756cd3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161720"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420386"
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
 Bir sembol örneğinin özelliklerini açıklar.
@@ -50,8 +51,8 @@ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaSymbol` .
 |[IDiaSymbol::findInlineeLinesByRVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyrva.md)|Bir istemcinin, belirtilen göreli sanal adres (RVA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.|
 |[IDiaSymbol::findInlineeLinesByVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyva.md)|Bir istemcinin, belirtilen sanal adres (VA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.|
 |[IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsbyrvaforacceleratorpointertag.md)|Karşılık gelen bir etiket değeri verildiğinde, bu yöntem, belirtilen bir göreli sanal adresteki bu saplama işlevinde bulunan simgelerin bir listesini döndürür.|
-|[IDiaSymbol::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsforacceleratorpointertag.md)|C++ AMP saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
-|[IDiaSymbol::get_acceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags.md)|C++ AMP Hızlandırıcı saplama işlevine karşılık gelen tüm Hızlandırıcı işaretçisi etiketi değerlerini döndürür.|
+|[IDiaSymbol::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsforacceleratorpointertag.md)|C++ AMP saplama işlevindeki hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
+|[IDiaSymbol::get_acceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags.md)|C++ AMP hızlandırıcı saplama işlevine karşılık gelen tüm hızlandırıcı işaretçisi etiketi değerlerini döndürür.|
 |[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|Bir sınıf üyesinin erişim değiştiricisini alır.|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|Bir adres konumunun konum kısmını alır.|
 |[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|Bir adres konumunun bölüm kısmını alır.|
@@ -107,8 +108,8 @@ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaSymbol` .
 |[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|İşlevin satır içi özniteliğiyle işaretlenip işaretlenmediğini belirten bir bayrak alır.|
 |[IDiaSymbol::get_interruptReturn](../../debugger/debug-interface-access/idiasymbol-get-interruptreturn.md)|İşlevin kesme yönergesinden dönüş yapıp kullanmadığını belirten bir bayrak alır.|
 |[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|İşlevin temel sınıf sanal işlevi olup olmadığını belirten bir bayrak alır.|
-|[IDiaSymbol::get_isAcceleratorGroupSharedLocal](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorgroupsharedlocal.md)|Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.|
-|[IDiaSymbol::get_isAcceleratorPointerTagLiveRange](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorpointertagliverange.md)|Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *Açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.|
+|[IDiaSymbol::get_isAcceleratorGroupSharedLocal](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorgroupsharedlocal.md)|simgenin bir C++ AMP hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.|
+|[IDiaSymbol::get_isAcceleratorPointerTagLiveRange](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorpointertagliverange.md)|simgenin bir C++ AMP hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.|
 |[IDiaSymbol::get_isAcceleratorStubFunction](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorstubfunction.md)|Simgenin bir çağrıya karşılık gelen hızlandırıcı için derlenen bir gölgelendirici için üst düzey işlev simgesine karşılık geldiğini gösterir `parallel_for_each` .|
 |[IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)|Verilerin birçok sembol toplamasının bir parçası olup olmadığını belirten bir bayrak alır.|
 |[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|Sembol dosyasının C türlerini içerip içermediğini gösteren bir bayrak alır.|
@@ -154,7 +155,7 @@ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaSymbol` .
 |[IDiaSymbol::get_noReturn](../../debugger/debug-interface-access/idiasymbol-get-noreturn.md)|İşlevin [noreturn](/cpp/cpp/noreturn) özniteliğiyle bildirilip aşılmadığını gösteren bir bayrak alır.|
 |[IDiaSymbol::get_noStackOrdering](../../debugger/debug-interface-access/idiasymbol-get-nostackordering.md)|Yığın arabelleği denetiminin bir parçası olarak yığın sıralaması yapılıp yapılmayacağını belirten bir bayrak alır.|
 |[IDiaSymbol::get_notReached](../../debugger/debug-interface-access/idiasymbol-get-notreached.md)|İşlevin veya etiketin hiç erişilmediğini belirten bir bayrak alır.|
-|[IDiaSymbol::get_numberOfAcceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-numberofacceleratorpointertags.md)|C++ AMP saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
+|[IDiaSymbol::get_numberOfAcceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-numberofacceleratorpointertags.md)|C++ AMP saplama işlevindeki hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
 |[IDiaSymbol::get_numberOfModifiers](../../debugger/debug-interface-access/idiasymbol-get-numberofmodifiers.md)|Özgün türe uygulanan değiştiricilerin sayısını alır.|
 |[IDiaSymbol::get_numberOfRegisterIndices](../../debugger/debug-interface-access/idiasymbol-get-numberofregisterindices.md)|Kayıt dizinlerinin sayısını alır.|
 |[IDiaSymbol::get_numberOfRows](../../debugger/debug-interface-access/idiasymbol-get-numberofrows.md)|Matristeki satır sayısını alır.|
@@ -259,10 +260,10 @@ Aşağıdaki yöntemlerden birini çağırarak bu arabirimi edinin:
 - [IDiaSymbol::get_types](../../debugger/debug-interface-access/idiasymbol-get-types.md)
 
 ## <a name="example"></a>Örnek
-Bu örnek, belirli bir göreli sanal adreste bir işlev için yerel değişkenlerin nasıl görüntüleneceğini gösterir. Ayrıca farklı türlerin simgelerinin birbirleriyle nasıl ilişkili olduğunu gösterir.
+Bu örnek, belirli bir göreli sanal adreste bir işlev için yerel değişkenlerin nasıl görüntüleneceğini gösterir. Ayrıca farklı tür simgelerinin birbirine nasıl bağlı olduğunu gösterir.
 
 > [!NOTE]
-> `CDiaBSTR` , `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.
+> `CDiaBSTR` , bir sarmalama ve örnekleme kapsam dışında olduğunda dize serbest serbest bırakarak otomatik `BSTR` olarak tanıtıcı bir sınıftır.
 
 ```C++
 void DumpLocalVars( DWORD rva, IDiaSession *pSession )
@@ -337,9 +338,9 @@ void DumpLocalVars( DWORD rva, IDiaSession *pSession )
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-`Header:` Dia2. h
+`Header:` Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

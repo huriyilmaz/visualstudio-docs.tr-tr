@@ -11,14 +11,15 @@ ms.assetid: 859d1a51-1c65-4c8b-ae74-3b74b181ebcd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 973135865b0b1c460f4c9000036f2af04a9ae3ce
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bbc67be1904c785f10ea1e3ee3144d2d40380730749247f58be639bbd0cbb8f4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086696"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389416"
 ---
 # <a name="ieevisualizerserviceprovider"></a>IEEVisualizerServiceProvider
 > [!IMPORTANT]
@@ -33,10 +34,10 @@ IEEVisualizerServiceProvider : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları
- Visual Studio, `CLSID` Visual STUDIO IDE 'ye Görselleştiriciler türündeki sınıf kimliklerini sağlamak için kullanılan bir Görselleştirici hizmeti nesnesi oluşturmak için bu arabirimi uygular.
+ Visual Studio, bu arabirimi bir görselleştirici hizmeti nesnesi oluşturmak için uygular, bu da `CLSID` Visual Studio ıde 'ye görselleştiriciler türündeki sınıf kimliklerini sağlamak için kullanılır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- İfade değerlendirici (EE), bu arabirimi edinmek için [GetEEService](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md) 'i çağırır.
+ ifade değerlendirici (EE), bu arabirimi edinmek için [geteeservice](../../../extensibility/debugger/reference/idebugbinder3-geteeservice.md) 'i çağırır.
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
 
@@ -45,7 +46,7 @@ IEEVisualizerServiceProvider : IUnknown
 |[CreateVisualizerService](../../../extensibility/debugger/reference/ieevisualizerserviceprovider-createvisualizerservice.md)|Görselleştiricisi hizmetini oluşturur|
 
 ## <a name="remarks"></a>Açıklamalar
- `IEEVisualizerServiceProvider`Arabirim, [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)uygulamasının uygulanması sırasında elde edilir. Bu arabirimin oluşturduğu Görselleştirici hizmeti, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimine işlevsellik sağlamak IÇIN, ee 'ın uygulamaktan sorumlu olduğunu bir şekilde kullanılır. EE ayrıca tür görselleştiricilerini bir özelliğin değerini görüntülemesine ve değiştirmesine izin veren bir [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) arabirimi uygulamaktan sorumludur.
+ `IEEVisualizerServiceProvider`Arabirim, [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)uygulamasının uygulanması sırasında elde edilir. bu arabirimin oluşturduğu görselleştiricisi hizmeti, EE uygulamaktan sorumlu olan bir [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimine işlevsellik sağlamak için kullanılır. EE, tür görselleştiricilerin bir özelliğin değerini görüntülemesine ve değiştirmesine izin veren bir [ıeevisualizerdataprovider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) arabirimi uygulamaktan de sorumludur.
 
  Bu arabirimlerin nasıl etkileşim kurabileceğine ilişkin ayrıntılar için bkz. [verileri görselleştirme ve görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) .
 

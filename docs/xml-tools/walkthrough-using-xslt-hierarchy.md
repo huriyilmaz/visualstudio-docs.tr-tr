@@ -1,30 +1,31 @@
 ---
 title: 'İzlenecek Yol: XSLT Hiyerarşisi Kullanma'
-description: Bu yönergedeki adımları izleyerek, Visual Studio 'daki XSLT hiyerarşisi aracını kullanarak başvurulan bir stil sayfasında hata ayıklamayı öğrenin.
+description: Bu kılavuzda yer alan adımları kullanarak, Visual Studio'de XSLT Hiyerarşisi aracını kullanarak başvurulan stil sayfalarında hata ayıklamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 94c8a26d75b92f9b8d51e3ca61f761985a5b4959
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-xml-tools
+ms.openlocfilehash: 514331475913d6fc368f744379a6ddf21703b0ea22a394e660bce328fda6c68b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875048"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423546"
 ---
-# <a name="walkthrough-use-xslt-hierarchy"></a>İzlenecek yol: XSLT hiyerarşisini kullanma
+# <a name="walkthrough-use-xslt-hierarchy"></a>Adım adım kılavuz: XSLT hiyerarşisini kullanma
 
-XSLT hiyerarşisi aracı birçok XML geliştirme görevini basitleştirir. XSLT stil sayfası genellikle `includes` ve yönergelerini kullanır `imports` . Derleme, asıl stil sayfasından başlar, ancak bir XSLT stil sayfası derlenirken bir hata gördüğünüzde, hata asıl stil sayfasından farklı bir kaynaktan gelebilir. Hata düzeltme veya stil sayfasını düzenlemede, eklenen veya içeri aktarılan stil sayfalarına erişim gerekebilir. Hata ayıklayıcı içindeki stil sayfasında adım adım dahil edilen ve içeri aktarılan stil sayfaları açılabilir ve bir veya daha fazla eklenen stil sayfasından bir veya daha fazla noktaya kesme noktası eklemek isteyebilirsiniz.
+XSLT Hiyerarşisi aracı birçok XML geliştirme görevlerini basitleştiriyor. XSLT stil sayfası genellikle ve `includes` `imports` yönergelerini kullanır. Derleme asıl stil sayfalarından başlar, ancak XSLT stil sayfası derlemenin bir sonucu olarak hata gördüğünüzde, hata asıl stil sayfalarından farklı bir kaynaktan gelebilir. Hatayı düzeltmek veya stil sayfalarını düzenlemek, dahil edilen veya içe aktarılan stil sayfalarına erişim gerektirir. Hata ayıklayıcıda stil sayfası boyunca adım ekleme ve içeri aktarılan stil sayfaları açabilirsiniz. Ayrıca, dahil edilen stil sayfalarının bir veya daha fazlasının bir noktasında kesme noktası eklemek de iyi olabilir.
 
-XSLT hiyerarşisi aracının yararlı olabilecek başka bir senaryo, yerleşik şablon kurallarına kesme noktaları koymaktadır. Şablon kuralları, stil sayfasının her bir modu için oluşturulan ve düğüm ile eşleşen başka bir şablon olmadığında çağrılan özel şablonlardır `xsl:apply-templates` . Yerleşik şablonlar kurallarında hata ayıklamayı uygulamak için, XSLT hata ayıklayıcı dosyayı geçici klasördeki kurallarla oluşturur ve bunları asıl stil sayfasıyla birlikte derler. Koddan kod içine `xsl:apply-template` adımlanmadan, asıl stil sayfasına dahil edilen stil sayfalarını bulmak veya yerleşik şablon kurallarıyla stil sayfasını bulmak ve açmak zor olabilir.
+XSLT Hiyerarşisi aracının yararlı olduğu bir diğer senaryo da yerleşik şablon kurallarına kesme noktaları koymaktır. Şablon kuralları, stil sayfası her modu için oluşturulan ve düğümle eşleşen başka bir şablon olduğunda tarafından `xsl:apply-templates` çağrılan özel şablonlardır. XSLT hata ayıklayıcısı, yerleşik şablon kurallarında hata ayıklama uygulamak için dosyayı geçici klasördeki kurallarla oluşturur ve bunları asıl stil sayfasıyla birlikte derler. Bazı kodlardan koda adımlamadan, asıl stil sayfalarına dahil edilmiş stil sayfalarını bulmak veya yerleşik şablon kurallarıyla stil sayfalarını bulup `xsl:apply-template` açmak zor olabilir.
 
-Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilmektedir.
+Bu konudaki örnek, başvurulan stil sayfalarında hata ayıklamayı gösteriyor.
 
-## <a name="to-debug-in-a-referenced-style-sheet"></a>Başvurulan bir stil sayfasında hata ayıklamak için
+## <a name="to-debug-in-a-referenced-style-sheet"></a>Başvurulan stil sayfası içinde hata ayıklamak için
 
-1. Visual Studio 'da bir XML belgesi açın. Bu örnek aşağıdaki belgeyi kullanır:
+1. Bir XML belgesini Visual Studio. Bu örnek aşağıdaki belgeyi kullanır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -48,7 +49,7 @@ Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilm
     </COLLECTION>
     ```
 
-1. Aşağıdaki *xslıncludefile. xsl dosyasını* ekleyin:
+1. Aşağıdaki *xslincludefile.xsl dosyasını ekleyin:*
 
     ```xml
     <?xml version='1.0'?>
@@ -71,7 +72,7 @@ Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilm
     </xsl:stylesheet>
     ```
 
-3. Aşağıdaki *xslınclude. xsl* dosyasını ekleyin:
+3. Aşağıdaki *xslinclude.xsl dosyasını* ekleyin:
 
     ```xml
     <?xml version='1.0'?>
@@ -105,11 +106,11 @@ Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilm
     </xsl:stylesheet>
     ```
 
-4. Yönergede bir kesme noktası ekleyin `<xsl:include href="xslincludefile.xsl" />` .
+4. yönergesi'ne bir kesme noktası `<xsl:include href="xslincludefile.xsl" />` ekleyin.
 
 5. Hata ayıklamayı başlatın.
 
-6. Hata ayıklayıcı yönergede durdurulduğunda, `<xsl:include href="xslincludefile.xsl" />` **adımla** düğmesine basın. Hata ayıklama, başvurulan stil sayfasında devam edebilir. Hiyerarşi görünür ve tasarımcı doğru yolu görüntüler.
+6. Hata ayıklayıcısı yönergede `<xsl:include href="xslincludefile.xsl" />` durduğunda, Adımla **düğmesine** basın. Hata ayıklama başvurulan stil sayfası içinde devam eder. Hiyerarşi görünür durumdadır ve tasarımcı doğru yolu görüntüler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

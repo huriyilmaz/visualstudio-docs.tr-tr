@@ -11,15 +11,16 @@ ms.assetid: 5224ac52-0fc2-4269-8eb2-ead7fda3afd4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1be2c43d876124945cce6cb9e3ae9605b8127394
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: da930d7cf55bad216331e87178889b0e730458a9f3a7f64a22fab2c3e7a618bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941092"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121396766"
 ---
 # <a name="customize-performance-tools-report-views"></a>Performans araçları rapor görünümlerini özelleştirme
 Bu bölümde, Profil Oluşturma Araçları ile oluşturulan raporların nasıl özelleştirileceği ele alınmaktadır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

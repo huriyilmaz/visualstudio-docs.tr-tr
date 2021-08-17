@@ -1,6 +1,6 @@
 ---
 description: Bir özelliğin üst özelliğini alır.
-title: 'IDebugProperty2:: GetParent | Microsoft Docs'
+title: IDebugProperty2::GetParent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: 58780469-fe25-4d84-9187-67940ca0767f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ef12171d338802b585818954858f5af4d723a34c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f18cfb17e5ac021fa7d73293fa95ed7afbf9ffb21acb4e9a4d910649d59c3caf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064845"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402422"
 ---
 # <a name="idebugproperty2getparent"></a>IDebugProperty2::GetParent
 Bir özelliğin üst özelliğini alır.
@@ -42,10 +43,10 @@ int GetParent (
 
 ## <a name="parameters"></a>Parametreler
 `ppParent`\
-dışı Özelliğin üst öğesini temsil eden bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
+[out] Özelliğin [üst nesnesini temsil eden bir IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. `S_GETPARENT_NO_PARENT`Üst öğe yoksa döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür. Üst `S_GETPARENT_NO_PARENT` öğe yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

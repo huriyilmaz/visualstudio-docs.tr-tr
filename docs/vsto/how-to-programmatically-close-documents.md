@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla belgeleri kapatma'
-description: Etkin belgeyi nasıl kapatabileceğinizi veya kapatılacak bir Microsoft Office Word belgesi nasıl kullanabileceğinizi öğrenin.
+description: etkin belgeyi nasıl kapatabileceğinizi veya kapatılacak bir Microsoft Office Word belgesi nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,14 +13,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 1b31a35ac1fa452f526d109dd93ca8264f78947b
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 795629796c0b72368e9bf0bc4fa0e36bdbdcda414b0d5c3af97875f6326171b7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825361"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394511"
 ---
 # <a name="how-to-programmatically-close-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri kapatma
   Etkin belgeyi kapatabilir veya kapatılacak bir belge belirtebilirsiniz.
@@ -28,7 +29,7 @@ ms.locfileid: "107825361"
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
 ## <a name="close-the-active-document"></a>Etkin belgeyi kapat
- Etkin belgeyi kapatmak için iki yordam vardır: biri belge düzeyinde özelleştirmeler ve VSTO eklentileri için bir tane.
+ etkin belgeyi kapatmak için iki yordam vardır: biri belge düzeyi özelleştirmeler ve biri VSTO eklentiler için.
 
 ### <a name="to-close-the-active-document-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki etkin belgeyi kapatmak için
 
@@ -51,7 +52,7 @@ ms.locfileid: "107825361"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet3":::
 
 ## <a name="close-a-document-that-you-specify-by-name"></a>Ada göre belirttiğiniz bir belgeyi kapatma
- Ada göre belirttiğiniz bir belgeyi kapatmanıza olanak, VSTO eklentileri ve belge düzeyi özelleştirmeleri için aynıdır.
+ ada göre belirttiğiniz bir belgeyi kapatmanız, VSTO eklentileri ve belge düzeyi özelleştirmeleri için aynıdır.
 
 ### <a name="to-close-a-document-that-you-specify-by-name"></a>Ada göre belirttiğiniz bir belgeyi kapatmak için
 

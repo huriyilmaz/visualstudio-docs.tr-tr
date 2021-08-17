@@ -1,6 +1,6 @@
 ---
 title: Yüklemeden sonra çalıştırılması gereken komutlar | Microsoft Docs
-description: Visual Studio 'da bir. msi dosyası aracılığıyla dağıtılan bir uzantı yüklemenizin parçası olarak çalıştırılması gereken komutlar hakkında bilgi edinin.
+description: Visual Studio bir .msi dosyası aracılığıyla dağıtılan bir uzantı yüklemenizin parçası olarak çalıştırılması gereken komutlar hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,25 +10,26 @@ ms.assetid: c9601f2e-2c6e-4da9-9a6e-e707319b39e2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef557c0c679fad0dff25a51a8529270e4bd7ced2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9038fafaccef8d73b15684fef8d425645ab55dcf6296487fa4993685dc5a17ea
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057149"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401510"
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>Yüklemeden sonra çalıştırılması gereken komutlar
-Uzantınızı bir *. msi* dosyası aracılığıyla dağıtırsanız, Visual Studio 'nun uzantılarınızı bulması için **devenv/setup** ' ı yüklemenizin bir parçası olarak çalıştırmanız gerekir.
+uzantınızı bir *.msi* dosyası aracılığıyla dağıtırsanız, **devenv/setup** ' ı yüklemenizin bir parçası olarak çalıştırmanız gerekir ve bu, uzantılarınızı keşfetmesi için Visual Studio.
 
 > [!NOTE]
-> Bu konudaki bilgiler, Visual Studio 2008 ve öncesiyle *devenv.exe* bulmak için geçerlidir. Visual Studio 'nun sonraki sürümleriyle *devenv.exe* bulma hakkında daha fazla bilgi için bkz. [sistem gereksinimlerini algılama](../../extensibility/internals/detecting-system-requirements.md).
+> bu konudaki bilgiler, Visual Studio 2008 ve önceki sürümlerde *devenv.exe* bulmak için geçerlidir. daha sonraki Visual Studio sürümleriyle *devenv.exe* bulma hakkında daha fazla bilgi için bkz. [sistem gereksinimlerini algılama](../../extensibility/internals/detecting-system-requirements.md).
 
 ## <a name="find-devenvexe"></a>devenv.exe bul
  Her sürümün *devenv.exe* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , kayıt defteri değerlerini özellikler olarak depolamak için RegLocator tablosu ve AppSearch tablolarını kullanarak, yükleyiciler tarafından yazılan kayıt defteri değerlerinden bulabilirsiniz. Daha fazla bilgi için bkz. [sistem gereksinimlerini algılama](../../extensibility/internals/detecting-system-requirements.md).
 
-### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>Visual Studio 'nun farklı sürümlerindeki devenv.exe bulmak için RegLocator tablo satırları
+### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>Farklı Visual Studio sürümlerinden devenv.exe bulmak için RegLocator tablo satırları
 
 |İmza|Root|Anahtar|Ad|Tür|
 |-----------------|----------|---------|----------|----------|
@@ -46,15 +47,15 @@ Uzantınızı bir *. msi* dosyası aracılığıyla dağıtırsanız, Visual Stu
 |DEVENV_EXE_2005|RL_DevenvExe_2005|
 |DEVENV_EXE_2008|RL_DevenvExe_2008|
 
- Örneğin, Visual Studio yükleyicisi **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** kayıt defteri değerini *C:\VS2008\Common7\IDE\devenv.exe* olarak yazar ve yükleyicinin çalıştırması gereken yürütülebilir dosyanın tüm yolu.
+ örneğin, Visual Studio yükleyicisi **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** kayıt defteri değerini *C:\VS2008\Common7\IDE\devenv.exe* olarak yazar ve yükleyicinin çalıştırması gereken yürütülebilir dosyanın tamamına yönelik bir yoldur.
 
 > [!NOTE]
 > RegLocator tablosunun Type sütunu 2 olduğundan, Imza tablosunda ek sürüm bilgisi belirtilmesi gerekli değildir.
 
 ## <a name="run-devenvexe"></a>devenv.exe Çalıştır
- AppSearch standart eylemi yükleyicide çalıştıktan sonra, AppSearch tablosundaki her bir özellik, ilgili Visual Studio sürümü için *devenv.exe* dosyasına işaret eden bir değere sahiptir. Belirtilen kayıt defteri değerlerinden herhangi biri mevcut değilse — Visual Studio 'nun bu sürümü yüklü olmadığından, belirtilen özellik null olarak ayarlanır.
+ AppSearch standart eylemi yükleyicide çalıştıktan sonra, AppSearch tablosundaki her bir özelliğin ilgili Visual Studio *devenv.exe* dosyasına işaret eden bir değeri vardır. belirtilen kayıt defteri değerlerinden herhangi biri mevcut değilse — Visual Studio sürümü yüklü olmadığından, belirtilen özellik null olarak ayarlanır.
 
- Windows Installer, özelliğin özel eylem türü 50 aracılığıyla işaret ettiği yürütülebilir dosyayı çalıştırmayı destekler. Özel eylem, `msidbCustomActionTypeInScript` `msidbCustomActionTypeCommit` VSPackage 'ın ile tümleştirmadan önce başarılı bir şekilde yüklendiğinden emin olmak için komut dosyası yürütme seçeneklerini (1024) ve (512) içermelidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Daha fazla bilgi için bkz. [komut dosyası yürütme seçeneklerinde](/windows/desktop/msi/custom-action-in-script-execution-options) [CustomAction tablosu](/windows/desktop/msi/customaction-table) ve özel eylem.
+ Windows Yükleyici, bir özelliğin, 50 özel eylem türü aracılığıyla işaret ettiği bir yürütülebiliri çalıştırmayı destekler. Özel eylem, `msidbCustomActionTypeInScript` `msidbCustomActionTypeCommit` VSPackage 'ın ile tümleştirmadan önce başarılı bir şekilde yüklendiğinden emin olmak için komut dosyası yürütme seçeneklerini (1024) ve (512) içermelidir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Daha fazla bilgi için bkz. [komut dosyası yürütme seçeneklerinde](/windows/desktop/msi/custom-action-in-script-execution-options) [CustomAction tablosu](/windows/desktop/msi/customaction-table) ve özel eylem.
 
  50 türündeki özel eylemler, kaynak sütunun değeri olarak yürütülebilir dosyayı içeren özelliği ve hedef sütununda komut satırı bağımsız değişkenlerini belirtir.
 
@@ -72,7 +73,7 @@ Uzantınızı bir *. msi* dosyası aracılığıyla dağıtırsanız, Visual Stu
 > [!NOTE]
 > Koşullarda kullanıldığında null değerli özellikler olarak değerlendirilir `False` .
 
- Her bir özel eylem için dizi sütununun değeri, Windows Installer paketinizin diğer sıra değerlerine bağlıdır. Sıra değerleri, *devenv.exe* özel eylemlerin, InstallFinalize standart eyleminden hemen önce mümkün olduğunca yakın şekilde çalışmasını sağlamalıdır.
+ her bir özel eylem için dizi sütununun değeri, Windows Installer paketinizin diğer sıra değerlerine bağlıdır. Sıra değerleri, *devenv.exe* özel eylemlerin, InstallFinalize standart eyleminden hemen önce mümkün olduğunca yakın şekilde çalışmasını sağlamalıdır.
 
 ### <a name="installexecutesequence-table-to-schedule-the-devenvexe-custom-actions"></a>devenv.exe özel eylemleri zamanlamak için InstallExecuteSequence tablosu
 
@@ -84,4 +85,4 @@ Uzantınızı bir *. msi* dosyası aracılığıyla dağıtırsanız, Visual Stu
 |CA_RunDevenv2008|DEVENV_EXE_2008|6608|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Installer ile VSPackages 'i yükler](../../extensibility/internals/installing-vspackages-with-windows-installer.md)
+- [Windows Installer ile vspackages 'i yükler](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

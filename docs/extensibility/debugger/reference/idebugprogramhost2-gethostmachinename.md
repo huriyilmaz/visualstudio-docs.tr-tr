@@ -11,17 +11,18 @@ ms.assetid: 4677ffe4-aa9b-4450-a63b-74cd3984d956
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5e81d0a371e79b54e49ebd1e9550b595678c80dd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e9b94c4a8478036c27ec964ef7f0d197bf205fe4d2b247d9c6d5a4c252101dd6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084005"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389611"
 ---
 # <a name="idebugprogramhost2gethostmachinename"></a>IDebugProgramHost2::GetHostMachineName
 Bu programın barındırdığı işlemin üzerinde çalıştığı makinenin adını alır.

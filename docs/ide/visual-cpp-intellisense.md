@@ -9,12 +9,12 @@ ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d555b2e509237e34375e1b85a35c57a6db4f3b
-ms.sourcegitcommit: df6ba39a62eae387e29f89388be9e3ee5ceff69c
+ms.openlocfilehash: ef572014009fd0516140f0d73ecbb054ff9bb011db1e334604dd274daafe6820
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96478893"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121399938"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ IntelliSense özellikleri
 
@@ -24,7 +24,7 @@ Bu makalede C++ IntelliSense özelliklerine genel bakış sunulmaktadır. Projen
 
 ## <a name="intellisense-features-in-c"></a>C++ ' da IntelliSense özellikleri
 
-IntelliSense, kodlamayı daha kolay hale getirmek için bir özellik kümesine verilen addır. Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici** **Options**  >  **C/C++**  >  **Gelişmiş** altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
+IntelliSense, kodlamayı daha kolay hale getirmek için bir özellik kümesine verilen addır. Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici**   >  **C/C++**  >  **Gelişmiş** altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
 
 ![Araç seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
 
@@ -58,13 +58,13 @@ Fare imlecini bir değişken üzerine getirdiğinizde, tür bilgilerini ve tür�
 
 ## <a name="error-squiggles"></a>Hata dalgalı çizgiler
 
-Dalgalı çizgiler bir program öğesi (değişken, anahtar sözcük, küme ayracı, tür adı vb.) altında bir hata veya koddaki olası bir hataya dikkat edin. Bir iletme bildirimi yazdığınızda, uygulamayı yazmanız gerektiğini hatırlatmak için yeşil bir dalgalı çizgi görünür. Şu anda etkin olmayan kodda bir hata olduğunda, örneğin Windows bağlamında çalışırken, ancak Android bağlamında bir hata olabilecek bir öğe girdiğinizde, bir paylaşılan projede mor renkli bir çizgi görünür. Kırmızı dalgalı çizgi, bir derleyici hatasını veya bir uyarı ile uğraşmanız gereken etkin kodda uyarı olduğunu gösterir.
+Dalgalı çizgiler bir program öğesi (değişken, anahtar sözcük, küme ayracı, tür adı vb.) altında bir hata veya koddaki olası bir hataya dikkat edin. Bir iletme bildirimi yazdığınızda, uygulamayı yazmanız gerektiğini hatırlatmak için yeşil bir dalgalı çizgi görünür. şu anda etkin olmayan kodda bir hata olduğunda, örneğin, Windows bağlamda çalışırken, ancak Android bağlamında hata olabilecek bir değer girdiğinizde, bir paylaşılan projede mor dalgalı çizgi görünür. Kırmızı dalgalı çizgi, bir derleyici hatasını veya bir uyarı ile uğraşmanız gereken etkin kodda uyarı olduğunu gösterir.
 
 ![Visual C&#43;&#43; hatası dalgalı çizgiler](../ide/media/vs2015_cpp_error_quiggles.png)
 
 ### <a name="code-colorization-and-fonts"></a>Kod renklendirme ve yazı tipleri
 
-Varsayılan renkler ve yazı tipleri, **Options** **ortam**  >  **yazı tipleri ve renkler** altında Seçenekler iletişim kutusunda değiştirilebilir. Yalnızca düzenleyiciden değil, burada birçok UI penceresi için yazı tiplerini değiştirebilirsiniz. C++ ' a özel ayarlar "C++" ile başlar; diğer ayarlar tüm diller içindir.
+Varsayılan renkler ve yazı tipleri,  **ortam**  >  **yazı tipleri ve renkler** altında Seçenekler iletişim kutusunda değiştirilebilir. Yalnızca düzenleyiciden değil, burada birçok UI penceresi için yazı tiplerini değiştirebilirsiniz. C++ ' a özel ayarlar "C++" ile başlar; diğer ayarlar tüm diller içindir.
 
 ## <a name="cross-platform-intellisense"></a>Platformlar arası IntelliSense
 
@@ -102,7 +102,7 @@ Varsayılan olarak, tek dosya IntelliSense yalnızca üst bilgi dosyalarını bu
 
 ## <a name="enable-or-disable-features"></a>Özellikleri etkinleştirme veya devre dışı bırakma
 
-Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici** **Options**  >  **C/C++**  >  **Gelişmiş** altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
+Farklı kişilerin ne kullanışlı olduğuna ilişkin farklı fikirleri olduğundan, IntelliSense özelliklerinin neredeyse hepsi, **metin düzenleyici**   >  **C/C++**  >  **Gelişmiş** altında Seçenekler iletişim kutusunda etkinleştirilebilir veya devre dışı bırakılabilir. **Seçenekler** iletişim kutusu, menü çubuğundaki **Araçlar** menüsünden kullanılabilir.
 
 ![Araç seçenekleri iletişim kutusu](../ide/media/sintellisensecpptoolsoptions.PNG)
 

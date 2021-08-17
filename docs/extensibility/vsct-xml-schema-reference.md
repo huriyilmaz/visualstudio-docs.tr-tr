@@ -11,14 +11,15 @@ ms.assetid: 49e7efae-e713-4762-a824-96fdaf92cdc9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d82cda9c91642b094deea50eda02676f9bb73f3
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: f3c1a09a7000b19980c14cd71fa02b600a2de9aea9fd514c1caa8e28a02307c1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905234"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400510"
 ---
 # <a name="vsct-xml-schema-reference"></a>VSCT XML Şeması Başvurusu
 Her biri için izin verilen alt öğe ve özniteliklere sahip bir komut tablosu derleyici şeması öğeleri tablosu sağlar.
@@ -26,7 +27,7 @@ Her biri için izin verilen alt öğe ve özniteliklere sahip bir komut tablosu 
  XML tabanlı bir komut tablosu yapılandırma (. vsct) dosyası, bir VSPackage 'ın tümleşik geliştirme ortamına (IDE) sağladığı komut öğelerini tanımlar. Bu öğeler menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutularını içerir.
 
 > [!NOTE]
-> VSCT derleyicisi,. vsct dosyasında bir Önişlemci çalıştırabilir. Bu genellikle C++ önişlemcisi olduğundan, C++ dosyalarında kullanılan aynı söz dizimine sahip eklemeleri ve makroları tanımlayabilirsiniz. Bunun örnekleri, **Yeni proje** sihirbazının bir VSPackage projesi için oluşturduğu. vsct dosyasında verilmiştir.
+> VSCT derleyicisi,. vsct dosyasında bir Önişlemci çalıştırabilir. Bu genellikle C++ önişlemcisi olduğundan, C++ dosyalarında kullanılan aynı söz dizimine sahip eklemeleri ve makroları tanımlayabilirsiniz. bunun örnekleri, **yeni Project** sihirbazının bir vspackage projesi için oluşturduğu. vsct dosyasında verilmiştir.
 
 ## <a name="optional-elements"></a>İsteğe bağlı öğeler
  Bazı VSCT öğeleri isteğe bağlıdır. Bir `Parent` bağımsız değişken belirtilmemişse, Group_Undefined: 0 kapsanacaktır. Bir `Icon` bağımsız değişken belirtilmemişse, guidOfficeIcon: Msotcıdnoıcon dahil edilir. Bir kısayol tuşu tanımlandığında, genellikle kullanılmamış olan öykünme isteğe bağlıdır.

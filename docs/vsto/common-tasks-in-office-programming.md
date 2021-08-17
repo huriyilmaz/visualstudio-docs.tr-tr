@@ -1,6 +1,6 @@
 ---
 title: Office programlamada ortak görevler
-description: Microsoft Office Word veya Office Excel 'in nesne modelini kullanmak zorunda kalmadan belge düzeyi özelleştirmesindeki verilere karşı nasıl program kullanabileceğinizi öğrenin.
+description: Microsoft Office Word veya Office Excel nesne modelini kullanmak zorunda kalmadan belge düzeyi özelleştirmesindeki verilere karşı nasıl programlama yapabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020SS
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,23 +14,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 67b09d3881dcde1d404b7ff0c1096ced1ecb50ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e7282fbd105491edb0aac45e116d10da5abf3d1ca77f16a75ae63d6b8c863f04
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910603"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424469"
 ---
 # <a name="common-tasks-in-office-programming"></a>Office programlamada ortak görevler
-  Bu konu, Visual Studio kullanarak Office çözümlerini programlamaya yönelik aşağıdaki yaygın soruların yanıtlarını bulmanıza yardımcı olmak için tasarlanmıştır.
+  bu konu, Visual Studio kullanarak Office çözümlerin programlanması hakkında aşağıdaki yaygın soruların yanıtlarını bulmanıza yardımcı olmak için tasarlanmıştır.
 
 - [Kurulum ve genel görevler](#projects).
 
 - [Kullanıcı arabirimi özelleştirme görevleri](#ui).
 
-- [Excel otomasyon görevleri](#excel).
+- [otomasyon görevlerini Excel](#excel).
 
 - [Word otomasyon görevleri](#word).
 
@@ -44,19 +45,19 @@ ms.locfileid: "99910603"
 
 ## <a name="setup-and-general-tasks"></a><a name="projects"></a> Kurulum ve genel görevler
 
-- [Nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+- [nasıl yapılır: Visual Studio Office projeler oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-- [Nasıl yapılır: Office çözümlerini yükseltme](/previous-versions/4bez6837(v=vs.140)).
+- [nasıl yapılır: Office çözümlerini yükseltme](/previous-versions/4bez6837(v=vs.140)).
 
-- [Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yüklemek](../vsto/how-to-install-office-primary-interop-assemblies.md).
+- [nasıl yapılır: birincil birlikte çalışma derlemelerini Office yüklemesi](../vsto/how-to-install-office-primary-interop-assemblies.md).
 
-- [Nasıl yapılır: birincil birlikte çalışma Derlemeleriyle Office uygulamalarını hedefleme](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md).
+- [nasıl yapılır: birincil birlikte çalışma bütünleştirilmiş kodları aracılığıyla Office uygulamaları hedefleme](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md).
 
-- [Nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+- [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
-- [Nasıl yapılır: kod çalıştırmadan Office çözümlerini açma](../vsto/how-to-open-office-solutions-without-running-code.md).
+- [nasıl yapılır: kod çalıştırmadan Office çözümleri açma](../vsto/how-to-open-office-solutions-without-running-code.md).
 
-- [Nasıl yapılır: bir Office çözümü için yapılandırma bilgilerini ayarlama](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md).
+- [nasıl yapılır: Office çözümü için yapılandırma bilgilerini ayarlama](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md).
 
 - [Nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
@@ -66,13 +67,13 @@ ms.locfileid: "99910603"
 
 ### <a name="controls-on-documents-and-worksheets"></a>Belge ve çalışma sayfalarındaki denetimler
 
-- [Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).
+- [nasıl yapılır: Office belgelere Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).
 
 - [Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md).
 
 - [Nasıl yapılır: çalışma sayfalarına ListObject denetimleri ekleme](../vsto/how-to-add-listobject-controls-to-worksheets.md).
 
-- [Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).
+- [nasıl yapılır: Office belgelere Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).
 
 - [Nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md).
 
@@ -80,9 +81,9 @@ ms.locfileid: "99910603"
 
 ### <a name="task-panes-in-document-level-customizations"></a>Belge düzeyi özelleştirmelerde görev bölmeleri
 
-- [Nasıl yapılır: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md).
+- [nasıl yapılır: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md).
 
-### <a name="task-panes-in-vsto-add-ins"></a>VSTO Eklentilerindeki görev bölmeleri
+### <a name="task-panes-in-vsto-add-ins"></a>VSTO eklentilerdeki görev bölmeleri
 
 - [Nasıl yapılır: uygulamaya özel görev bölmesi ekleme](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).
 
@@ -100,15 +101,15 @@ ms.locfileid: "99910603"
 
 ### <a name="outlook-form-regions"></a>Outlook form bölgeleri
 
-- [Nasıl yapılır: Outlook eklenti projesine form bölgesi ekleme](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).
+- [nasıl yapılır: Outlook eklentisi projesine form bölgesi ekleme](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md).
 
-- [Nasıl yapılır: Outlook 'un form bölgesini görüntülemesini engelleme](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md).
+- [nasıl yapılır: Outlook form bölgesi görüntülemesini engelleme](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md).
 
 ### <a name="custom-menus"></a>Özel menüler
 
 - [Nasıl yapılır: Kısayol menülerine komut ekleme](../vsto/how-to-add-commands-to-shortcut-menus.md).
 
-## <a name="excel-automation-tasks"></a><a name="excel"></a> Excel otomasyon görevleri
+## <a name="excel-automation-tasks"></a><a name="excel"></a>otomasyon görevlerini Excel
 
 - [Nasıl yapılır: çalışma sayfası hücresinde program aracılığıyla bir dizeyi görüntüleme](../vsto/how-to-programmatically-display-a-string-in-a-worksheet-cell.md).
 
@@ -138,7 +139,7 @@ ms.locfileid: "99910603"
 
 - [Nasıl yapılır: program aracılığıyla çalışma sayfalarını yazdırma](../vsto/how-to-programmatically-print-worksheets.md).
 
-- [Nasıl yapılır: program aracılığıyla Excel hesaplamalarını çalıştırma](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md).
+- [nasıl yapılır: program aracılığıyla Excel hesaplamaları çalıştırma](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md).
 
 - [Nasıl yapılır: çalışma sayfalarındaki verileri program aracılığıyla sıralama](../vsto/how-to-programmatically-sort-data-in-worksheets.md).
 
@@ -196,7 +197,7 @@ ms.locfileid: "99910603"
 
 - [Nasıl yapılır: çevrimdışı veya bir sunucuda kullanmak üzere verileri önbelleğe alma](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
 
-- [Nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md).
+- [nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md).
 
 - [Nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma](../vsto/how-to-cache-data-in-a-password-protected-document.md).
 
@@ -204,7 +205,7 @@ ms.locfileid: "99910603"
 
 - [Nasıl yapılır: belge düzeyi özelleştirmelerine özel XML bölümleri ekleme](../vsto/how-to-add-custom-xml-parts-to-document-level-customizations.md).
 
-- [Nasıl yapılır: VSTO Eklentilerini kullanarak belgelere özel XML bölümleri ekleme](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md).
+- [nasıl yapılır: VSTO eklentilerini kullanarak belgelere özel XML bölümleri ekleme](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md).
 
 ## <a name="server-side-document-management-tasks"></a><a name="server"></a> Sunucu tarafı belge yönetimi görevleri
 
@@ -214,25 +215,25 @@ ms.locfileid: "99910603"
 
 ## <a name="security-tasks"></a><a name="security"></a> Güvenlik görevleri
 
-- [Nasıl yapılır: Office çözümlerini imzalama](../vsto/how-to-sign-office-solutions.md).
+- [nasıl yapılır: Office çözümlerini imzalama](../vsto/how-to-sign-office-solutions.md).
 
 ## <a name="deployment-tasks"></a><a name="deployment"></a> Dağıtım görevleri
 
-- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110)).
+- [Nasıl Office: ClickOnce](/previous-versions/bb386095(v=vs.110))kullanarak bir ClickOnce.
 
-- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](/previous-versions/bb608595(v=vs.110)).
+- [Nasıl kullanılır: ClickOnce kullanarak Office düzeyinde bir SharePoint sunucusuna belge düzeyi ClickOnce.](/previous-versions/bb608595(v=vs.110))
 
-- [Nasıl yapılır: ClickOnce Office çözümünü yüklemek](/previous-versions/bb608592(v=vs.110)).
+- [Nasıl kurulur: Bir ClickOnce Office yükleyin.](/previous-versions/bb608592(v=vs.110))
 
-- [Nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yükler](/previous-versions/bb608608(v=vs.110)).
+- [Nasıl kurulur: Son kullanıcı bilgisayarlarına önkoşulları yük Office çalıştırın.](/previous-versions/bb608608(v=vs.110))
 
-- [Nasıl yapılır: Office çözümlerini dağıtmak IÇIN IIS 'ı hazırlama](/previous-versions/bb608629(v=vs.110)).
+- [Nasıl olur: Iis'yi, çözümlerini Office hazırlama.](/previous-versions/bb608629(v=vs.110))
 
-- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](/previous-versions/bb157871(v=vs.110)).
+- [Nasıl güncelleştirmesi: Dağıtılan Office güncelleştirme.](/previous-versions/bb157871(v=vs.110))
 
-- [Nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](/previous-versions/bb608626(v=vs.110)).
+- [Nasıl olur: Bir Office çözümünün yükleme yolunu değiştirme.](/previous-versions/bb608626(v=vs.110))
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
-- [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
+- [Kullanmaya başlayın &#40;Office geliştirme Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Uygulama ve Office tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
+- [Office örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)

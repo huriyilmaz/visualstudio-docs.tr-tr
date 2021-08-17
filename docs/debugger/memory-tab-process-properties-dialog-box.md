@@ -10,21 +10,22 @@ ms.assetid: a70785f2-5997-40ec-a90f-80a52449768b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a1bf0409dacdd6cb2f7de65462f637124a5cecd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f208c670019246bdca57db53840f3527d8e594a9f5910691e4e1dd6729ae5bc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99845028"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391271"
 ---
 # <a name="memory-tab-process-properties-dialog-box"></a>Bellek Sekmesi, İşlem Özellikleri İletişim Kutusu
 Bir işlemin belleği nasıl kullandığını göstermek için **bellek** sekmesini kullanın. [Işlem özellikleri Iletişim kutusunu](../debugger/process-properties-dialog-box.md)görüntülemek için odağı bir [işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Bellek** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
-|Giriş|Description|
+|Giriş|Açıklama|
 |-----------|-----------------|
 |**Sanal Bayt Sayısı**|İşlemin kullandığı sanal adres alanının geçerli boyutu (bayt cinsinden). Sanal adres alanının kullanımı, disk veya ana bellek sayfalarının karşılık gelen kullanımını göstermez. Ancak, sanal alan sınırlı olur ve çok fazla kullanımı, işlemin kitaplıklarını yükleme yeteneğini sınırlayabilir.|
 |**En yüksek sanal bayt sayısı**|İşlemin herhangi bir anda kullandığı en fazla sanal adres alanı bayt sayısı.|

@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı geçişi etkinlik Tasarımcısı
-description: İki durum arasında geçiş yapılandırmak için geçiş etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı - Geçiş Etkinliği Tasarımcısı
+description: İki eyalet arasında bir geçiş yapılandırmak için Geçiş etkinliği tasarımcısını nasıl kullanabileceğiniz hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,45 +9,46 @@ f1_keywords:
 ms.assetid: f6e8b5cc-7fb8-4699-9703-f3c9fc7cc316
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 24a20ca9f7905adee3b7d0d83801d0033a1752ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d7eed0579541f8f0e5355719c8bb2d2b79190854ea288b887af0000bcd370e3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875282"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121393425"
 ---
 # <a name="transition-activity-designer"></a>Transition Etkinlik Tasarımcısı
 
-<xref:System.Activities.Statements.Transition>İki durum arasındaki geçişi temsil eder.
+, <xref:System.Activities.Statements.Transition> iki durum arasındaki geçişi temsil eder.
 
-## <a name="using-the-transition-activity-designer"></a>Geçiş etkinliği tasarımcısını kullanma
+## <a name="using-the-transition-activity-designer"></a>Geçiş Etkinlik Tasarımcısını Kullanma
 
-Geçiş etkinliği Tasarımcısı iki durum arasında geçiş yapılandırmanızı sağlar.
+Geçiş etkinliği tasarımcısı iki durum arasında bir geçiş yapılandırmaya olanak sağlar.
 
-### <a name="transition-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı geçiş özellikleri
+### <a name="transition-properties-in-the-workflow-designer"></a>Geçiş Özellikleri İş Akışı Tasarımcısı
 
-Aşağıdaki tabloda, <xref:System.Activities.Statements.Transition> iş akışı Tasarımcısı kullanılarak ayarlanmakta olabilecek özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
+Aşağıdaki tabloda iş <xref:System.Activities.Statements.Transition> akışı tasarımcısı kullanılarak ayarlanacak özellikler ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Statements.Transition.DisplayName%2A>|Yanlış|Etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.Transition> . Varsayılan değer **T1**' dir. Değer, genişletilmiş geçiş tasarımcısının üst bilgisinde ve genişletilmiş geçiş Tasarımcısı içindeki eylem bölümünde bulunan özellik kılavuzunda düzenlenebilir. , <xref:System.Activities.Activity.DisplayName%2A> İş akışı tasarımcısının üst kısmında görüntülenen içerik haritası gezintisinde kullanılır.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.Transition.Condition%2A>|Yanlış|Varsa, denetim hedef durumuna geçirilmeden önce **true** olarak değerlendirilmesi gereken bir ifade belirtir. Bu koşul, özellik kılavuzunda ve genişletilmiş geçiş tasarımcısında düzenlenebilir. Paylaşılan bir geçişte birden çok koşul, geçiş tasarımcısında göründükleri sırayla değerlendirilir. **Note:**  <xref:System.Activities.Statements.Transition.Condition%2A> Bir geçişin **yanlış** olarak değerlendirileceğini (veya paylaşılan bir tetikleyici geçişinin tüm koşullarını **false** olarak değerlendirdiğine), geçişin gerçekleşmeyeceğini ve durumdan gelen tüm geçişlerin her tetikleyicisinin yeniden planlanacağını unutmayın. Bu öğreticide, koşulların yapılandırıldığı şekilde bu durum gerçekleşmemelidir (tahminin doğru veya hatalı olması için özel eylemlerdir).|
-|**Kaynak**|Doğru|Bu geçişin kaynaklandığı durumu gösterir. Kaynak durumunun adına tıklamak, tasarımcı görünümünü bu durumun genişletilmiş bir görünümüne geçirir. Bu değer, geçiş oluşturulduğunda ayarlanır ve değiştirilemez.|
-|<xref:System.Activities.Statements.Transition.Trigger%2A>|Yanlış|Tamamlanması geçişi Başlatan etkinliği belirtir. Bu etkinliği ayarlamak için, **araç kutusundan** bir etkinliği sürükleyin ve geçişin **tetikleme** bölümüne bırakın.|
-|<xref:System.Activities.Statements.Transition.Action%2A>|Yanlış|Tetikleyici etkinliği tamamlandığında ve varsa, <xref:System.Activities.Statements.Transition.Condition%2A> **doğru** sonucunu verirse yürütülen etkinliği belirtir. Bu etkinlik, <xref:System.Activities.Statements.State.Exit%2A> kaynak durumu için etkinlik varsa, hedef durumuna geçiş sırasında yürütülür. Geçiş Tasarımcısı genişletildiğinde, bu değer **araç kutusundan** bir etkinlik sürüklenerek geçişin **eylem** bölümüne bırakılarak ayarlanabilir. Tek bir geçiş için birden çok eylem olabilir. Tek tek eylemler genişletilebilir ve uygulanabilir olur ve bir geçişte birden çok eylem olduğunda, eylemde görüntülenen yukarı veya aşağı oka tıklanarak sıralanabilir.|
-|**Hedef**|Doğru|Geçiş tamamlandıktan sonra durum makinesinin geçiş durumunu gösterir. Bu, <xref:System.Activities.Statements.Transition.To%2A> nesne modelindeki geçişin özelliğine karşılık gelir. Hedef durumunun adına tıklamak, tasarımcı görünümünü bu durumun genişletilmiş bir görünümüne geçirir. Bu değer, geçiş oluşturulduğunda ayarlanır ve geçişi tasarımcıda hedef durumuna bağlayan ok sürüklenerek değiştirilebilir.|
+|<xref:System.Activities.Statements.Transition.DisplayName%2A>|Yanlış|Etkinlik tasarımcısının kolay <xref:System.Activities.Statements.Transition> adını belirtir. Varsayılan değer **T1'tir.** Değer, özellik kılavuzunda, genişletilmiş geçiş tasarımcısının üst bilgisinde ve genişletilmiş geçiş tasarımcısındaki eylem bölümünün üst bilgisinde düzenlenebilir. <xref:System.Activities.Activity.DisplayName%2A>, iş akışı tasarımcısının üst kısmında görüntülenen içerik harita gezintisinde kullanılır.<br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.Transition.Condition%2A>|Yanlış|Varsa, denetim hedef durumuna geçirimeden önce **True** olarak değerlendirmesi gereken bir ifade belirtir. Bu koşul özellik kılavuzunda ve genişletilmiş geçiş tasarımcısında düzenlenebilir. Paylaşılan geçişte birden çok durum, geçiş tasarımcısında görünme sırasına göre değerlendirilir. **Not:**  Bir geçişin False (veya paylaşılan tetikleyici geçişinin tüm koşulları False olarak değerlendirilir) olarak değerlendirilirse, geçiş oluşmaz ve durumdan tüm geçişler için tüm tetikleyiciler yeniden <xref:System.Activities.Statements.Transition.Condition%2A> zamanlanmaz.   Bu öğreticide, koşulların yapılandırılması nedeniyle bu durum olamaz (tahminin doğru mu yoksa yanlış mı olduğuyla ilgili belirli eylemlerimiz vardır).|
+|**Kaynak**|Doğru|Bu geçişin kaynaklandığı durumu gösterir. Kaynak durumunun adına tıklar, tasarımcı görünümünü bu durum için genişletilmiş bir görünüme iletir. Bu değer, geçiş oluşturulduğunda ayarlanır ve değiştirilemez.|
+|<xref:System.Activities.Statements.Transition.Trigger%2A>|Yanlış|Tamamlanmasının geçişi başlattığı etkinliği belirtir. Bu etkinliği ayarlamak için Bir etkinliği Araç **Kutusundan sürükleyip** geçişin **Tetikleyici** bölümüne bırakın.|
+|<xref:System.Activities.Statements.Transition.Action%2A>|Yanlış|Tetikleyici etkinliği tamamlandığında yürütülen etkinliği ve varsa , true olarak <xref:System.Activities.Statements.Transition.Condition%2A> değerlendirilir.  Bu etkinlik, varsa kaynak durumu için etkinlik yürütülürken hedef <xref:System.Activities.Statements.State.Exit%2A> durumuna geçişte yürütülür. Geçiş tasarımcısı genişletilirken, bu değer Araç Kutusundan  bir etkinliği sürükleyip geçişin **Eylem** bölümüne bırakarak ayarlanır. Tek bir geçiş için birden çok eylem olabilir. Tek tek eylemler genişletilebilir ve anlaşmalı olabilir ve bir geçişte birden çok eylem olduğunda eylemde görüntülenen yukarı veya aşağı oka tıklar.|
+|**Hedef**|Doğru|Geçiş tamamlandıktan sonra durum makinesinin geçiş durumunu gösterir. Bu, nesne <xref:System.Activities.Statements.Transition.To%2A> modelinde geçişin özelliğine karşılık gelen bir özelliktir. Hedef durum adına tıklarken tasarımcı görünümü, bu durum için genişletilmiş bir görünüme geçiştir. Bu değer, geçiş oluşturulduğunda ayarlanır ve tasarımcıda geçişi hedef durumuna bağlayan ok sürüklenerek değiştirilebilir.|
 
-### <a name="creating-transitions"></a>Geçişler oluşturma
+### <a name="creating-transitions"></a>Geçiş oluşturma
 
-Geçişler bir durumdan diğerine sürüklenerek veya bir durum başka bir durum üzerinde sürüklendiğinde görüntülenen üçgenlere bir durum bırakılarak oluşturulur. Sürükleyerek bir geçiş oluşturmak için, fareyi kaynak durumunun kenarının üzerine getirin ve kaynak durumdan bir çizgiyi hedef durumuna sürükleyin. Bırakarak geçiş oluşturmak için, hedef durumunu sürükleyin ve kaynak durumunun üzerine gelin ve kaynak durumu etrafında görüntülenen dört üçgenden birine bırakın. Hedef durum, **araç kutusundan** sürüklenen yeni bir durum ya da iş akışı tasarımcısından sürüklenen mevcut bir durum olabilir.
+Geçişler, bir çizginin bir durumdan diğerine sürüklenerek veya bir durum başka bir durum üzerine sürüklendikten sonra görünen üçgenlere bırakarak oluşturulur. Sürükleyerek geçiş oluşturmak için fareyi kaynak durumunun kenarının üzerine gelin ve bir satırı kaynak durumdan hedef durumuna sürükleyin. Bırakarak bir geçiş oluşturmak için hedef durumu sürükleyip kaynak durumunun üzerine gelin ve kaynak durumu çevresinde görünen dört üçgenden birinin üzerine bırakın. Hedef durum, Araç Kutusundan sürüklenen yeni bir durum **veya** iş akışı tasarımcısından sürüklenen mevcut bir durum olabilir.
 
 > [!NOTE]
-> Bir durum makinesindeki tek bir durum, iş akışı Tasarımcısı kullanılarak oluşturulan en fazla 76 geçişine sahip olabilir. Tasarımcı dışında oluşturulan iş akışları için bir durum geçişleri sınırı yalnızca sistem kaynaklarıyla sınırlıdır.
+> Durum makinesinde tek bir durum, iş akışı tasarımcısı kullanılarak oluşturulan en fazla 76 geçişe sahip olabilir. Tasarımcı dışında oluşturulan iş akışları için durum geçişleri sınırı yalnızca sistem kaynaklarıyla sınırlıdır.
 
-Paylaşılan tetikleyici geçişleri, aynı tetikleyici olayını paylaşan geçişler kümesidir. Paylaşılan tetikleyici, ortak bir tetikleyici olayını paylaşan birden çok geçiş için yapılandırılmış ifadelerin değerlendirmesine bağlı olarak bir hedef duruma yönelik koşullu ilerlemeyi sağlar. Bir geçişe ek eylemler eklemek ve paylaşılan bir geçiş oluşturmak için, istenen geçişin başlangıcını belirten daireye tıklayın ve istediğiniz duruma sürükleyin. Yeni geçiş, başlangıç geçişi olarak aynı tetikleyiciyi paylaşır, ancak benzersiz bir koşula ve eyleme sahip olur. Paylaşılan geçişler, geçiş Tasarımcısı ' nın altında **Paylaşılan tetikleyici geçişi ekle** ' ye tıklayarak geçiş Tasarımcısı içinden de oluşturulabilir ve sonra, bağlantı açılan listesinden, **kullanılabilir durumlar** ' da istenen hedef durumu seçebilirsiniz.
+Paylaşılan tetikleyici geçişleri, aynı tetikleyici olayı paylaşan geçiş kümesidir. Paylaşılan tetikleyici, ortak bir tetikleyici olayı paylaşan birden çok geçiş için yapılandırılmış ifadelerin değerlendirilmesine dayalı olarak hedef durumuna koşullu ilerlemeye olanak sağlar. Bir geçişe ek eylemler eklemek ve paylaşılan bir geçiş oluşturmak için, istenen geçişin başlangıcını gösteren daireye tıklayın ve istenen durumuna sürükleyin. Yeni geçiş, ilk geçişle aynı tetikleyiciyi paylaşır, ancak benzersiz bir koşula ve eyleme sahip olur. Paylaşılan geçişler, geçiş tasarımcısının alt kısmından Paylaşılan tetikleyici geçişi ekle'ye tıklar ve ardından bağlanmak için Kullanılabilir durumlardan istenen hedef durum açılır listesinden seçerek geçiş tasarımcısının **içinde** oluşturulabilir. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,8 +4,6 @@ description: Bir if ifadesinin nasıl ekleneceğini öğrenin. bu nedenle, oynat
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
@@ -13,14 +11,15 @@ ms.assetid: 42e1d08c-7b2e-4efd-9f47-85d6206afe35
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 68da08d84ea05c999a1678df4591737eb793daa6
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: bbfaac1ea0bcadf0120f1b0de79fddbe8a4c5b46599883e231af564cb8e2a272
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107297021"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121399443"
 ---
 # <a name="step-7-keep-pairs-visible"></a>7. Adım: Çiftleri görünür durumda tutma
 Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (yöntemi kullanarak) simgeleri ortadan <xref:System.Windows.Forms.Timer.Start> kaldırmamak yerine, oyunun kendisini sıfırlaması gerekir; böylece, `firstClicked` `secondClicked` Seçilen iki etiket için renkleri sıfırlamadan, ve başvuru değişkenlerini kullanarak hiçbir etiketi izlememek üzere.

@@ -1,6 +1,6 @@
 ---
 title: Özel belge özelliklerine genel bakış
-description: Belge düzeyinde bir proje oluşturduğunuzda, Visual Studio 'Nun projedeki belgeye iki özel özellik eklediği hakkında bilgi edinin.
+description: Belge düzeyi bir proje derlemek için Visual Studio projesinde belgeye iki özel özellik ekleyen bir uygulama olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,45 +17,46 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 51039c71c97614cb9e43df263b3d7155c9cb86f6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a7b8b30304ed840843818a4d576fdfdb49bc36b54e72f77f441e1d9864e876c0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947807"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424443"
 ---
 # <a name="custom-document-properties-overview"></a>Özel belge özelliklerine genel bakış
 
-Belge düzeyinde bir proje oluşturduğunuzda, Visual Studio projedeki belgeye iki özel özellik ekler: \_ AssemblyLocation ve \_ AssemblyName. Bir Kullanıcı bir belge açtığında, Microsoft Office uygulaması bu özel belge özelliklerini denetler. Belgede varsa, uygulama [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] özelleştirmeyi başlatan öğesini yükler. Daha fazla bilgi için bkz. [Visual Studio 'Da Office çözümlerinin mimarisi](../vsto/architecture-of-office-solutions-in-visual-studio.md).
+Belge düzeyinde bir proje derlemeniz Visual Studio projesinde belgeye iki özel özellik ekler: \_ AssemblyLocation ve \_ AssemblyName. Kullanıcı bir belgeyi açtığında, Microsoft Office bu özel belge özelliklerini denetler. Bunlar belgede mevcutsa, uygulama özelleştirmeyi [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] başlatan uygulamasını yükler. Daha fazla bilgi için [bkz. Office çözüm mimarisi Visual Studio.](../vsto/architecture-of-office-solutions-in-visual-studio.md)
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-## <a name="_assemblyname"></a>\_AssemblyName
+## <a name="_assemblyname"></a>\_Assemblyname
 
-Bu özellik, öğesinin Office çözüm yükleyicisi bileşenindeki bir arabirimin CLSID 'sini içerir [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . CLSID değeri 4E3C66D5-58D4-491E-A7D4-64AF99AF6E8B. Bu değeri asla değiştirmemelisiniz.
+Bu özellik, çözümünün Office bileşeninde bir arabirimin CLSID'lerini [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] içerir. CLSID değeri 4E3C66D5-58D4-491E-A7D4-64AF99AF6E8B'tir. Bu değeri hiçbir zaman değiştirmeysiniz.
 
 ## <a name="_assemblylocation"></a>\_AssemblyLocation
 
-Bu özellik özelleştirme için dağıtım bildirimiyle ilgili ayrıntıları sağlayan bir dize içerir. Bildirimler hakkında daha fazla bilgi için bkz. [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md).
+Bu özellik, özelleştirme için dağıtım bildirimi hakkında ayrıntılı bilgi sağlayan bir dize içerir. Bildirim hakkında daha fazla bilgi için [bkz. Uygulama ve dağıtım bildirimleri Office.](../vsto/application-and-deployment-manifests-in-office-solutions.md)
 
- \_AssemblyLocation Özellik değeri, çözümün nasıl dağıtıldığına bağlı olarak farklı biçimlere sahip olabilir:
+ AssemblyLocation \_ özellik değeri, çözümün nasıl dağıtılacağına bağlı olarak farklı biçimlere sahip olabilir:
 
-- Çözüm bir Web sitesinden, UNC yolundan veya CD ya da USB sürücüsünden yüklenmek üzere yayımlandıysa, _AssemblyLocation özelliği *DeploymentManifestPath* | *SolutionId* biçimindedir. Aşağıdaki dize bir örnektir:
+- Çözüm bir Web sitesinden, UNC yolundan veya bir CD veya USB sürücüsünden yüklenecek şekilde yayımlanırsa, _AssemblyLocation özelliği *DeploymentManifestPath* | *SolutionID biçimindedir.* Aşağıdaki dize bir örnektir:
 
      file://deployserver/MyShare/ExcelWorkbook1.vsto|74744e4b-e4d6-41eb-84f7-ad20346fe2d9
 
-- Visual Studio 'da çözümü çalıştırıyorsanız veya hata ayıklaması yapıyorsanız, _AssemblyLocation özelliği *DeploymentManifestName* | *SolutionId*| vstolocal biçimindedir. Aşağıdaki dize bir örnektir:
+- Çözümü Visual Studio'den çalıştırıyor veya hata ayıklarsanız, _AssemblyLocation özelliği *DeploymentManifestName* | *SolutionID*|vstolocal biçimindedir. Aşağıdaki dize bir örnektir:
 
-     ExcelWorkbook1. VSTO | 74744e4b-e4d6-41eb-84f7-ad20346fe2d9 | vstolocal
+     ExcelWorkbook1.vsto|74744e4b-e4d6-41eb-84f7-ad20346fe2d9|vstolocal
 
-  *SolutionId* , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] çözümü tanımlamak IÇIN kullandığı bir GUID 'dir. *Çözüm Kimliği* , projeyi oluşturduğunuzda otomatik olarak oluşturulur. **Vstolocal** terimi, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] derlemenin belgeyle aynı klasörden yüklenmesi gerektiğini gösterir.
+  *SolutionID,* çözümü tanımlamak için [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kullanan bir GUID'dir. Projeyi *derlemeniz* sırasında SolutionID otomatik olarak oluşturulur. **vstolocal** terimi, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] derlemenin belgeyle aynı klasörden yükleniyor olması gerektiğini gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da Office çözümlerinin mimarisi](../vsto/architecture-of-office-solutions-in-visual-studio.md)
-- [Belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md)
-- [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md)
-- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110))
-- [Nasıl yapılır: özel belge özelliklerini oluşturma ve değiştirme](../vsto/how-to-create-and-modify-custom-document-properties.md)
+- [Office çözüm mimarisi Visual Studio](../vsto/architecture-of-office-solutions-in-visual-studio.md)
+- [Belge düzeyinde özelleştirmelerin mimarisi](../vsto/architecture-of-document-level-customizations.md)
+- [Office çözümlerde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md)
+- [Nasıl Office: Office kullanarak bir ClickOnce](/previous-versions/bb386095(v=vs.110))
+- [Nasıl kullanılır: Özel belge özellikleri oluşturma ve değiştirme](../vsto/how-to-create-and-modify-custom-document-properties.md)

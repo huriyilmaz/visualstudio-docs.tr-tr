@@ -7,14 +7,15 @@ ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a6af0cd98e69a3c43ba70f5609567243e6285201
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 1b1d0fcad36f1f6e28b13b05d8fbf3cca6db08b6b04267218f3a014b16204500
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387976"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397065"
 ---
 # <a name="analyze-memory-usage"></a>Bellek kullanımını analiz etme
 
@@ -25,14 +26,14 @@ Bellek Kullanımı aracı, yönetilen ve yerel bellek yığınının *bir veya* 
 .NET geliştiricileri .NET Nesne Ayırma aracı veya Bellek kullanım [aracı arasında seçim](../profiling/memory-usage.md) olabilir.
 
 - [.NET Nesne Ayırma aracı,](../profiling/dotnet-alloc-tool.md) .NET kodundaki ayırma desenlerini ve anomalilerini tanımlamanıza yardımcı olur ve atık toplama ile ilgili yaygın sorunların belirlenmesine yardımcı olur. Bu araç yalnızca son bir son durum aracı olarak çalışır. Bu aracı yerel veya uzak makinelerde çalıştırabilirsiniz.
-- Bellek [Kullanımı aracı,](../profiling/memory-usage-without-debugging2.md) genellikle .NET uygulamalarıyla sık karşılaşılan bellek sızıntılarını tanımlamaya yardımcı olur. Kodda adımlama gibi belleği kontrol ederken hata ayıklayıcı özelliklerini kullanmak için hata [ayıklayıcı ile tümleşik Bellek](../profiling/memory-usage.md) kullanım aracı önerilir.
+- Bellek [Kullanımı aracı,](../profiling/memory-usage-without-debugging2.md) genellikle .NET uygulamalarıyla sık karşılaşılan bellek sızıntılarını tanımlamaya yardımcı olur. Kodda adımlama gibi bellek denetimi sırasında hata ayıklayıcı özelliklerini kullanmak gerekirse hata [ayıklayıcı ile tümleşik Bellek](../profiling/memory-usage.md) kullanım aracı önerilir.
 
 C++ geliştiricileri hata ayıklayıcısıyla tümleşik veya hata ayıklayıcı olmayan Bellek Kullanımı aracını kullanabilir.
 
 - [Hata ayıklayıcı ile bellek kullanımını analiz etme](../profiling/memory-usage.md)
 - [Hata ayıklayıcı olmadan bellek kullanımını analiz etme](../profiling/memory-usage-without-debugging2.md)
 
-Windows 7 ve sonraki bir sürümüyle hata ayıklayıcı olmadan profil oluşturma araçlarını kullanabilirsiniz. Windows 8 aracılarını hata ayıklayıcısıyla **(profil** oluşturma penceresiyle) çalıştırmak için Tanılama Araçları gerekir.
+Profil oluşturma araçlarını hata ayıklayıcısı olmadan 7 ve sonraki bir Windows kullanabilirsiniz. Windows 8 aracılarını hata ayıklayıcısıyla **(profil** oluşturma penceresiyle) çalıştırmak için Tanılama Araçları gerekir.
 
 ## <a name="blogs-and-videos"></a>Bloglar ve videolar
 

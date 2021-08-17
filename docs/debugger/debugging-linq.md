@@ -1,6 +1,6 @@
 ---
 title: LINQ hata ayıklama | Microsoft Docs
-description: Visual Studio 'da dil tümleşik sorgu (LINQ) hatalarını ayıklayın. LINQ sonuçlarını görüntüleyin. LINQ koduna adımla davranış farklarını anlayın.
+description: Visual Studio 'da dil ile tümleşik sorgu (LINQ) hata ayıklayın. LINQ sonuçlarını görüntüleyin. LINQ koduna adımla davranış farklarını anlayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,14 +19,15 @@ ms.assetid: dbae26cb-ac5f-4312-b474-b9f29714f4c6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e4940c6aa1d775389ab29eeb92fc29523ef115bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5391d9784324931cbb9d58b53e10722324c3efc9ebe82526b389786aecd49d6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872657"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420354"
 ---
 # <a name="debugging-linq"></a>LINQ'de Hata Ayıklama
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , dil ile tümleşik sorgu (LINQ) kodunda hata ayıklamayı destekler, bazı sınırlamalar vardır. Çoğu hata ayıklama özelliğinin adım adım, kesme noktaları ayarlama ve sonuçları hata ayıklayıcı penceresinde görüntüleme dahil olmak üzere LINQ deyimleriyle birlikte çalışır. Bu konu, LINQ hata ayıklamanın başlıca sınırlamalarını açıklamaktadır.
@@ -49,7 +50,7 @@ ms.locfileid: "99872657"
  LINQ to SQL sorgularda, koşul kodu hata ayıklayıcı denetiminin ötesinde olur. Bu nedenle, koşul koduna ilerlenemez. Bir ifade ağacına derlenen herhangi bir sorgu, hata ayıklayıcının denetiminin ötesinde bir kod üretir.
 
 ### <a name="stepping-in-visual-basic"></a>Visual Basic adımla
- Bir Visual Basic programı aracılığıyla adımlarken ve hata ayıklayıcı bir sorgu bildirimiyle karşılaştığında, bildirime adımla, ancak tüm bildirimi tek bir ifade olarak vurgular. Bu davranış, sorgu çağrılana kadar değerlendirilmediği için oluşur. Daha fazla bilgi için bkz. [VISUAL BASIC LINQ 'e giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq).
+ bir Visual Basic programı aracılığıyla adımlarken ve hata ayıklayıcı bir sorgu bildirimiyle karşılaştığında, bildirime adımla, ancak tüm bildirimi tek bir ifade olarak vurgular. Bu davranış, sorgu çağrılana kadar değerlendirilmediği için oluşur. Daha fazla bilgi için bkz. [VISUAL BASIC LINQ 'e giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq).
 
  Aşağıdaki örnek kodda ilerederseniz, hata ayıklayıcı sorgu bildirimini veya sorgu oluşturmayı tek bir ifade olarak vurgular.
 
@@ -111,7 +112,7 @@ End Function
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL hatalarını ayıklama](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6\(v\=vs.100\))
+- [Hata ayıklama SQL](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6\(v\=vs.100\))
 - [Özel Durumları Hata Ayıklayıcısı ile Yönetme](../debugger/managing-exceptions-with-the-debugger.md)
 - [LINQ Sorgularına Giriş (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
 - [Visual Basic'de LINQ'e Giriş](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq)

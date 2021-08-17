@@ -1,6 +1,6 @@
 ---
-title: Proje türü tasarım kararları | Microsoft Docs
-description: Yeni bir proje türü oluşturarak Visual Studio 'Yu genişletmenizin önüne bir öğe, proje dosyası kalıcılığı ve taahhüt mekanizması tasarım kararları hakkında bilgi edinin.
+title: Project Tasarım kararlarını yazın | Microsoft Docs
+description: yeni bir proje türü oluşturarak Visual Studio genişletmenize başlamadan önce, öğe, proje dosyası kalıcılığı ve taahhüt mekanizması tasarım kararları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,19 +13,20 @@ ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2f1a90082b0ba9d18336463b26cf72acea39851b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 07559518e0873d2392b35594cc5fbff6f7de0c32d1a8810895a8e348da83f4f5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064315"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401420"
 ---
 # <a name="project-type-design-decisions"></a>Proje Türü Tasarım Kararları
 Yeni bir proje türü oluşturmadan önce, proje türü ile ilgili çeşitli tasarım kararları almanız gerekir. Projelerinize hangi öğe türlerinin ekleneceğini, proje dosyalarının nasıl kalıcı olacağını ve hangi taahhüt modelinin kullanılacağını karar vermelisiniz.
 
-## <a name="project-items"></a>Proje öğeleri
+## <a name="project-items"></a>Project Öğeler
  Projeniz dosyaları veya soyut nesneleri kullanacak mı? Dosyaları kullanıyorsanız, bunlara başvuru tabanlı veya dizin tabanlı dosyalar olur. Dosyalar veya soyut nesneler yerel veya uzak olacak mı?
 
  Projedeki öğeler dosyalar olabilir veya bir veritabanı deposundaki nesneler veya Internet üzerindeki veri bağlantıları gibi daha soyut nesneler olabilir. Öğeler dosyalar ise, proje başvuru tabanlı ya da dizin tabanlı bir proje olabilir.
@@ -34,7 +35,7 @@ Yeni bir proje türü oluşturmadan önce, proje türü ile ilgili çeşitli tas
 
  Yerel öğeler, uygulamanın yüklü olduğu bilgisayarda depolanır. Uzak öğeler, yerel ağdaki ayrı bir sunucuda veya Internet 'te başka bir yerde depolanabilir.
 
-## <a name="project-file-persistence"></a>Proje dosyası kalıcılığı
+## <a name="project-file-persistence"></a>Project Dosya kalıcılığı
  Veriler ortak düz dosya sistemlerinde mi, yoksa yapılandırılmış depolamada mı depolanacak? Dosyalar standart bir düzenleyici veya projeye özgü bir düzenleyici kullanılarak açılacak mi?
 
  Verilerini kalıcı hale getirmek için, çoğu uygulama verilerini bir dosyaya kaydeder ve bir kullanıcının bilgileri gözden geçirmesi veya değiştirmesi gerektiğinde onu geri okur.
@@ -49,9 +50,9 @@ Yeni bir proje türü oluşturmadan önce, proje türü ile ilgili çeşitli tas
 
 - Dosyaları yerel olarak kaydedin ve sonra bir sunucuya yayımlayın veya öğe, uzak bir nesne ile bir veri bağlantısını temsil ettiğinde proje öğelerini kaydetmek için başka bir yaklaşım kullanın.
 
-  Kalıcılık hakkında daha fazla bilgi için bkz. [Proje kalıcılığı](../../extensibility/internals/project-persistence.md) ve [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
+  kalıcılık hakkında daha fazla bilgi için bkz. [Project kalıcılığı](../../extensibility/internals/project-persistence.md) ve [Project öğeleri açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
 
-## <a name="project-commitment-model"></a>Proje taahhüt modeli
+## <a name="project-commitment-model"></a>Project Taahhüt modeli
  Kalıcı veri nesneleri doğrudan modda veya işlem temelli modda açılacak mı?
 
  Veri nesneleri doğrudan modda açıldığında, verilerde yapılan değişiklikler anında veya Kullanıcı dosyayı el ile kaydettiğinde eklenir.

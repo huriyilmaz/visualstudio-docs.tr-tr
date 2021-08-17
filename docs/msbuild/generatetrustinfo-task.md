@@ -1,6 +1,6 @@
 ---
-title: GenerateTrustInfo görevi | Microsoft Docs
-description: Temel bildirim ve TargetZone ve ExcludedPermissions parametrelerinden uygulama güvenini oluşturmak için MSBuild GenerateTrustInfo görevini kullanın.
+title: GenerateTrustInfo Görev | Microsoft Docs
+description: Temel bildirimden MSBuild TargetZone ve ExcludedPermissions parametrelerinden uygulama güvenini oluşturmak için generateTrustInfo görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,34 +16,35 @@ ms.assetid: 3ca60816-4bb0-4fef-ae43-ca0bfb63def3
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 831f6fa76ba3d6cfdebbb6b850862155ad280641
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bc42796148ae37872dab9749da8ad20a19b7f22139facdf2d09dfc3d5b19abc0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914723"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397728"
 ---
 # <a name="generatetrustinfo-task"></a>GenerateTrustInfo görevi
 
-Temel bildirimden ve ve parametrelerinden uygulama güvenini oluşturur `TargetZone` `ExcludedPermissions` .
+Uygulama güvenini temel bildirimden ve ve `TargetZone` parametrelerinden `ExcludedPermissions` üretir.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `GenerateTrustInfo` .
+ Aşağıdaki tabloda görevin parametreleri açık `GenerateTrustInfo` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`ApplicationDependencies`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bağımlı derlemeleri belirtir.|
-|`BaseManifest`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Uygulama güvenini oluşturmak için temel bildirimi belirtir.|
-|`ExcludedPermissions`|İsteğe bağlı `String` parametre.<br /><br /> Bölge varsayılan izin kümesinden dışlanacak bir veya daha fazla noktalı virgülle ayrılmış izin kimliği değeri belirtir.|
-|`TargetZone`|İsteğe bağlı `String` parametre.<br /><br /> Makine ilkesinden alınan bölge varsayılan izin kümesini belirtir.|
-|`TrustInfoFile`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> Uygulama güvenlik güveni bilgilerini içeren dosyayı belirtir.|
+|`ApplicationDependencies`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı parametre.<br /><br /> Bağımlı derlemeleri belirtir.|
+|`BaseManifest`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> bağlı parametre.<br /><br /> Uygulama güveni oluşturmak için temel bildirimi belirtir.|
+|`ExcludedPermissions`|İsteğe `String` bağlı parametre.<br /><br /> Bölge varsayılan izin kümesinden hariç tutulacak bir veya daha fazla noktalı virgülle ayrılmış izin kimliği değeri belirtir.|
+|`TargetZone`|İsteğe `String` bağlı parametre.<br /><br /> Makine ilkesinden alınan bir bölge varsayılan izin kümesi belirtir.|
+|`TrustInfoFile`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> çıkış parametresi.<br /><br /> Uygulama güvenliği güven bilgilerini içeren dosyayı belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, tabloda listelenen parametrelerin yanı sıra sınıfından devralınan parametreleri de sınıfından <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

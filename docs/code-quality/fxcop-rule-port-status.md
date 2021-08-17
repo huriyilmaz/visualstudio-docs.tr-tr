@@ -1,7 +1,7 @@
 ---
 title: FxCop kural bağlantı noktası durumu
 ms.date: 05/21/2019
-description: Visual Studio 'da .NET çözümleyicilerine eklenen statik kod analizi kuralları hakkında bilgi edinin. Güncelleştirme taşıma konusunda yer alan kuralları ve kaynakları görüntüleyin.
+description: Visual Studio .NET çözümleyicilerine eklenen statik kod analizi kuralları hakkında bilgi edinin. Güncelleştirme taşıma konusunda yer alan kuralları ve kaynakları görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
@@ -10,22 +10,23 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: de23f3529cfcd321b0a7c3f9844ac69d96fed9c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d9c64040e4ff5b3ca96ef4b49b749b2be73a6dc63a0fa9fd48f2201007de2dcd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860327"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420971"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
-Daha önce Visual Studio 'da statik Kod analizini kullandıysanız, bu kurallardan hangilerinin [.net Çözümleyicileri](install-net-analyzers.md)olarak geçerli uygulamada kullanılabilir olduğunu merak ediyor olabilirsiniz. Bu sayfa, bir sayfada yer alan kuralları listeler. [Numaralandırmamaları](fxcop-unported-rules.md) ve bağlantı noktası ile ilgili planlar olup olmadığı hakkında bilgi için bkz. eksik kurallar.
+daha önce Visual Studio ' de statik kod analizini kullandıysanız, bu kurallardan hangilerinin [.net çözümleyicileri](install-net-analyzers.md)olarak geçerli uygulamada kullanılabilir olduğunu merak ediyor olabilirsiniz. Bu sayfa, bir sayfada yer alan kuralları listeler. [Numaralandırmamaları](fxcop-unported-rules.md) ve bağlantı noktası ile ilgili planlar olup olmadığı hakkında bilgi için bkz. eksik kurallar.
 
 ## <a name="ported-rules"></a>Taşınan kurallar
 
-Roslyn-çözümleyiciler depolarındaki otomatik olarak oluşturulan [Belgeler sayfasında](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md) , Roslyn çözümleyicilerine eklenen kuralların en güncel listesi bulunur. Bu sayfada Ayrıca kuralın varsayılan olarak etkinleştirilip etkinleştirilmeyeceğini ve ilişkili bir *kod düzeltmesine* sahip olup olmadığı gibi ek bilgiler de bulunur. ([Kod düzeltmeleri](../ide/quick-actions.md) , Visual Studio 'da ampul simgesi menüsünde sunulan tek tıklamayla düzeltmeler ' dir.)
+Roslyn-çözümleyiciler depolarındaki otomatik olarak oluşturulan [Belgeler sayfasında](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md) , Roslyn çözümleyicilerine eklenen kuralların en güncel listesi bulunur. Bu sayfada Ayrıca kuralın varsayılan olarak etkinleştirilip etkinleştirilmeyeceğini ve ilişkili bir *kod düzeltmesine* sahip olup olmadığı gibi ek bilgiler de bulunur. ([Kod düzeltmeleri](../ide/quick-actions.md) Visual Studio ' deki ampul simgesi menüsündeki tek tıklamayla düzeltmeler mevcuttur.)
 
 Bu sayfadaki tarihte, [.net çözümleyicilerine](install-net-analyzers.md) eklenen FxCop kurallarının listesi şunları içerir:
 
@@ -47,7 +48,7 @@ Kural Kimliği | Başlık
 [CA1021](/dotnet/fundamentals/code-analysis/quality-rules/ca1021) | out parametrelerinden kaçının
 [CA1024](/dotnet/fundamentals/code-analysis/quality-rules/ca1024) | Uygun yerlerde özellikleri kullanın
 [CA1027](/dotnet/fundamentals/code-analysis/quality-rules/ca1027) | Sabit listelerini FlagsAttribute ile işaretleyin
-[CA1028](/dotnet/fundamentals/code-analysis/quality-rules/ca1028) | Sabit Listesi depolaması Int32 olmalıdır
+[CA1028](/dotnet/fundamentals/code-analysis/quality-rules/ca1028) | Enum Depolama ınt32 olmalıdır
 [CA1030](/dotnet/fundamentals/code-analysis/quality-rules/ca1030) | Uygun yerlerde olayları kullanın
 [CA1031](/dotnet/fundamentals/code-analysis/quality-rules/ca1031) | Genel özel durum türlerini yakalamayın
 [CA1032](/dotnet/fundamentals/code-analysis/quality-rules/ca1032) | Standart özel durum oluşturucularını uygulayın
@@ -126,8 +127,8 @@ Kural Kimliği | Başlık
 [CA2101](/dotnet/fundamentals/code-analysis/quality-rules/ca2101) | P/Invoke dize bağımsız değişkenleri için sıralama belirtin
 [CA2109](/dotnet/fundamentals/code-analysis/quality-rules/ca2109) | Görünen olay işleyicilerini gözden geçirin
 [CA2119](/dotnet/fundamentals/code-analysis/quality-rules/ca2119) | Özel arabirimleri karşılayan metotları mühürleyin
-[CA2153](/dotnet/fundamentals/code-analysis/quality-rules/ca2153) | Bozuk durum özel durumlarını yakalamayın
-[CA2200](/dotnet/fundamentals/code-analysis/quality-rules/ca2200) | Yığın ayrıntılarını korumak için yeniden throw.
+[CA2153](/dotnet/fundamentals/code-analysis/quality-rules/ca2153) | Bozuk Durum Özel Durumlarını Yakalama
+[CA2200](/dotnet/fundamentals/code-analysis/quality-rules/ca2200) | Yığın ayrıntılarını korumak için yeniden bakın.
 [CA2201](/dotnet/fundamentals/code-analysis/quality-rules/ca2201) | Ayrılmış özel durum türlerini harekete geçirmeyin
 [CA2207](/dotnet/fundamentals/code-analysis/quality-rules/ca2207) | Değer türü statik alanları satır içi başlatın
 [CA2208](/dotnet/fundamentals/code-analysis/quality-rules/ca2208) | Bağımsız değişken özel durumlarını doğru örnekleyin
@@ -137,15 +138,15 @@ Kural Kimliği | Başlık
 [CA2215](/dotnet/fundamentals/code-analysis/quality-rules/ca2215) | Atma metotları taban sınıf atmayı çağırmalıdır
 [CA2216](/dotnet/fundamentals/code-analysis/quality-rules/ca2216) | Atılabilir türler sonlandırıcıyı bildirmelidir
 [CA2217](/dotnet/fundamentals/code-analysis/quality-rules/ca2217) | Sabit listelerini FlagsAttribute ile işaretlemeyin
-[CA2219](/dotnet/fundamentals/code-analysis/quality-rules/ca2219) | Finally yan tümcelerinde özel durum yükseltmeyin
+[CA2219](/dotnet/fundamentals/code-analysis/quality-rules/ca2219) | Finally yan tümceleri içinde özel durumlar yükseltilmez
 [CA2225](/dotnet/fundamentals/code-analysis/quality-rules/ca2225) | İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir
 [CA2226](/dotnet/fundamentals/code-analysis/quality-rules/ca2226) | İşleçler simetrik aşırı yüklemelere sahip olmalıdır
 [CA2227](/dotnet/fundamentals/code-analysis/quality-rules/ca2227) | Koleksiyon özellikleri salt okunur olmalıdır
 [CA2229](/dotnet/fundamentals/code-analysis/quality-rules/ca2229) | Serileştirme oluşturucularını uygulayın
-[CA2231](/dotnet/fundamentals/code-analysis/quality-rules/ca2231) | Eşittir değer türü geçersiz kılan aşırı yükleme işleci eşittir
-[CA2234](/dotnet/fundamentals/code-analysis/quality-rules/ca2234) | Dizeler yerine sistem URI nesnelerini geçirme
+[CA2231](/dotnet/fundamentals/code-analysis/quality-rules/ca2231) | Eşittir değer türünü geçersiz kılmada eşittir işlecinin aşırı yüklenmesi
+[CA2234](/dotnet/fundamentals/code-analysis/quality-rules/ca2234) | Dizeler yerine sistem uri nesnelerini geçme
 [CA2235](/dotnet/fundamentals/code-analysis/quality-rules/ca2235) | Tüm serileştirilebilir olmayan alanları işaretleyin
-[CA2237](/dotnet/fundamentals/code-analysis/quality-rules/ca2237) | ISerializable türlerini seri hale getirilebilir ile işaretle
+[CA2237](/dotnet/fundamentals/code-analysis/quality-rules/ca2237) | ISerializable türlerini serileştirilebilir ile işaretleme
 [CA2241](/dotnet/fundamentals/code-analysis/quality-rules/ca2241) | Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın
 [CA2242](/dotnet/fundamentals/code-analysis/quality-rules/ca2242) | NaN için doğru test edin
 [CA2243](/dotnet/fundamentals/code-analysis/quality-rules/ca2243) | Öznitelik dize harfleri doğru çözümlenmelidir
@@ -171,37 +172,37 @@ Kural Kimliği | Başlık
 [CA3010](/dotnet/fundamentals/code-analysis/quality-rules/ca3010) | XAML ekleme güvenlik açıkları için inceleme kodu
 [CA3011](/dotnet/fundamentals/code-analysis/quality-rules/ca3011) | DLL ekleme güvenlik açıkları için inceleme kodu
 [CA3012](/dotnet/fundamentals/code-analysis/quality-rules/ca3012) | Normal ifade ekleme güvenlik açıkları için inceleme kodu
-[CA3061](/dotnet/fundamentals/code-analysis/quality-rules/ca3061) | URL 'ye göre şema eklemeyin
-[CA3075](/dotnet/fundamentals/code-analysis/quality-rules/ca3075) | XML 'de güvenli olmayan DTD işleme
-[CA3076](/dotnet/fundamentals/code-analysis/quality-rules/ca3076) | Güvenli olmayan XSLT betiği işleme.
-[CA3077](/dotnet/fundamentals/code-analysis/quality-rules/ca3077) | API tasarımında, XmlDocument 'da ve XmlTextReader 'da güvenli olmayan Işlem
-[CA3147](/dotnet/fundamentals/code-analysis/quality-rules/ca3147) | Fiil Işleyicilerini Validate Antiforgery belirteci Ile işaretle
+[CA3061](/dotnet/fundamentals/code-analysis/quality-rules/ca3061) | URL'ye Göre Şema Ekleme
+[CA3075](/dotnet/fundamentals/code-analysis/quality-rules/ca3075) | XML'de güvenli olmayan DTD işleme
+[CA3076](/dotnet/fundamentals/code-analysis/quality-rules/ca3076) | Güvenli olmayan XSLT betik işleme.
+[CA3077](/dotnet/fundamentals/code-analysis/quality-rules/ca3077) | API Design, XmlDocument ve XmlTextReader'da Güvenli Olmayan İşleme
+[CA3147](/dotnet/fundamentals/code-analysis/quality-rules/ca3147) | Sahteciliği Doğrulama Belirteci ile Fiil İşleyicilerini İşaretle
 [CA5350](/dotnet/fundamentals/code-analysis/quality-rules/ca5350) | Zayıf Şifreleme Algoritmaları Kullanmayın
-[CA5351](/dotnet/fundamentals/code-analysis/quality-rules/ca5351) | Bozuk şifreleme algoritmaları kullanmayın
+[CA5351](/dotnet/fundamentals/code-analysis/quality-rules/ca5351) | Bozuk Şifreleme Algoritmaları Kullanma
 [CA5358](/dotnet/fundamentals/code-analysis/quality-rules/ca5358) | Güvenli Olmayan Şifreleme Modlarını Kullanmayın
-CA5359 | Sertifika doğrulamasını devre dışı bırakma
-CA5360 | Seri durumdan çıkarma sırasında tehlikeli yöntemleri çağırmayın
-[CA5361](/dotnet/fundamentals/code-analysis/quality-rules/ca5361) | Sağlam şifreleme için SChannel kullanımını devre dışı bırakma
-CA5362 | Kendisini seri hale getirilebilir sınıfta başvurma
-[CA5363](/dotnet/fundamentals/code-analysis/quality-rules/ca5363) | Istek doğrulamasını devre dışı bırakma
-[CA5364](/dotnet/fundamentals/code-analysis/quality-rules/ca5364) | Kullanım dışı güvenlik protokollerini kullanma
-CA5365 | HTTP üstbilgi denetimini devre dışı bırakma
-CA5366 | DataSet Için XmlReader kullanarak XML okuma
-CA5367 | Işaretçi alanları Ile türleri Serileştirmeyin
-CA5368 | Sayfadan türetilmiş sınıflar Için ViewStateUserKey ayarla
-[CA5369](/dotnet/fundamentals/code-analysis/quality-rules/ca5369) | Seri durumdan çıkarma Için XmlReader kullanın
-[CA5370](/dotnet/fundamentals/code-analysis/quality-rules/ca5370) | Okuyucuyu doğrulamak Için XmlReader kullanın
-[CA5371](/dotnet/fundamentals/code-analysis/quality-rules/ca5371) | Şema okuma Için XmlReader kullanın
-[CA5372](/dotnet/fundamentals/code-analysis/quality-rules/ca5372) | XPathDocument Için XmlReader kullanın
+CA5359 | Sertifika Doğrulamayı Devre Dışı Bırakma
+CA5360 | Deserialization'da Tehlikeli Yöntemler Çağırma
+[CA5361](/dotnet/fundamentals/code-analysis/quality-rules/ca5361) | Güçlü Şifrelemenin SChannel Kullanımını Devre Dışı Bırakma
+CA5362 | Seri hale getirilebilir sınıfta kendine başvur
+[CA5363](/dotnet/fundamentals/code-analysis/quality-rules/ca5363) | İstek Doğrulamayı Devre Dışı Bırakma
+[CA5364](/dotnet/fundamentals/code-analysis/quality-rules/ca5364) | Kullanım Dışı Güvenlik Protokollerini Kullanma
+CA5365 | HTTP Üst Bilgisi Denetlemeyi Devre Dışı Bırakma
+CA5366 | DataSet Read Xml için XmlReader Kullanma
+CA5367 | İşaretçi alanlarıyla türleri seri hale getirme
+CA5368 | Sayfadan türetilen sınıflar için ViewStateUserKey ayarlama
+[CA5369](/dotnet/fundamentals/code-analysis/quality-rules/ca5369) | Deserialize için XmlReader kullanma
+[CA5370](/dotnet/fundamentals/code-analysis/quality-rules/ca5370) | Okuyucuyu Doğrulama için XmlReader Kullanma
+[CA5371](/dotnet/fundamentals/code-analysis/quality-rules/ca5371) | Şema Okuma için XmlReader kullanma
+[CA5372](/dotnet/fundamentals/code-analysis/quality-rules/ca5372) | XPathDocument için XmlReader kullanma
 [CA5373](/dotnet/fundamentals/code-analysis/quality-rules/ca5373) | Eski anahtar türetme işlevini kullanmayın
-CA5374 | XslTransform kullanma
-CA5375 | Hesap paylaşılan erişim Imzasını kullanma
-CA5376 | SharedAccessProtocol HttpsOnly kullanın
-CA5377 | Kapsayıcı düzeyinde erişim Ilkesi kullan
+CA5374 | XslTransform Kullanma
+CA5375 | Hesap Paylaşılan Erişim İmzası Kullanma
+CA5376 | SharedAccessProtocol HttpsOnly kullanma
+CA5377 | Kapsayıcı Düzeyinde Erişim İlkesi Kullanma
 [CA5378](/dotnet/fundamentals/code-analysis/quality-rules/ca5378) | ServicePointManagerSecurityProtocols'u Devre Dışı Bırakma
-CA5379 | Zayıf anahtar türetme Işlevi algoritması kullanmayın
-CA9999 | Çözümleyici sürümü uyumsuzluğu
+CA5379 | Zayıf Anahtar Türetme İşlevi Algoritması Kullanma
+CA9999 | Çözümleyici sürümü eşleşmez
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET çözümleyici kuralları](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md)
+- [.NET çözümleyicisi kuralları](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Microsoft.CodeAnalysis.NetAnalyzers.md)

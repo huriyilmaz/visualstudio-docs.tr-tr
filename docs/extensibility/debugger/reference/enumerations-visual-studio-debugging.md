@@ -1,6 +1,6 @@
 ---
-description: Visual Studio hata ayıklama SDK 'Sı için numaralandırmalar aşağıda verilmiştir.
-title: Numaralandırmalar (Visual Studio hata ayıklama) | Microsoft Docs
+description: Hata Ayıklama SDK'sı için aşağıdaki Visual Studio numaralamaları.
+title: Numaralamalar (Visual Studio Ayıklama) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,172 +10,173 @@ ms.assetid: 557065bf-081f-4d57-8744-bae02b8a5a6e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 303b0ce662f56c1ab337383aaf4f4f2f09bb6ac8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1f9592569b436808b5e8d713e1e11ce6b890e20e6a1e5f8d2972d8173cc97b77
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095996"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390352"
 ---
 # <a name="enumerations-visual-studio-debugging"></a>Sabit Listeler (Visual Studio Hata Ayıklama)
-Hata ayıklama SDK 'Sı için numaralandırmalar aşağıda verilmiştir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
+Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] numaralamalar aşağıda velanmıştır.
 
-- [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısındaki BIR işlem kimliğinin nasıl yorumlanacağını belirtir.
+- [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) İşlem kimliğinin bir işlem yapısında nasıl [yorumlan AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) belirtir.
 
 - [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) Bir adresin türlerini belirtir.
 
-- [Assemblylocresolution](../../../extensibility/debugger/reference/assemblylocresolution.md) Bir derlemenin bulunduğu yeri belirtir.
+- [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) Derlemenin bulunduğu yeri belirtir.
 
 - [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) Hata ayıklama altyapısının (DE) bir program düğümüne iliştirme nedenini belirtir.
 
-- [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) Bekleyen ve bağlantılı kesme noktaları için kesme noktası koşul stilini belirtir.
+- [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) Bekleyen ve bağlı kesme noktaları için kesme noktası koşul stilini belirtir.
 
-- [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) Bir kesme noktasının hata türünü belirtir.
+- [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) Kesme noktası hata türünü belirtir.
 
-- [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) Bir kesme noktası ayarlarken ek bilgi belirtmek için kullanılabilen isteğe bağlı bayraklar sağlar.
+- [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) Kesme noktası ayarlarken ek bilgi belirtmek için kullanılmaktadır isteğe bağlı bayraklar sağlar.
 
-- [BP_FLAGS90](../../../extensibility/debugger/reference/bp-flags90.md) Bir kesme noktası ayarlarken ek bilgi belirtmek için kullanılabilecek, isteğe bağlı bayraklar için geçerli değerleri numaralandırır. Bu sabit listesi [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) numaralandırmayı genişletir.
+- [BP_FLAGS90](../../../extensibility/debugger/reference/bp-flags90.md) Bir kesme noktası ayarlarken ek bilgi belirtmek için kullanılmaktadır isteğe bağlı bayraklar için geçerli değerleri numaralar. Bu numaralama, tüm [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) genişlettir.
 
-- [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) Kesme noktası isteği için kesme noktasının konum türünü belirtir.
+- [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) Kesme noktası isteğinin konum türünü belirtir.
 
-- [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) Kesme noktasının tetiklenmesine neden olacak kesme noktası geçiş sayısıyla ilişkili koşulu belirtir.
+- [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) Kesme noktası geçiş sayısıyla ilişkilendirilmiş olan ve kesme noktasıyla ilişkili olan koşulu belirtir.
 
-- [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) Veri kesme noktasının donanımda öykünmesinin yapılıp yapılmayacağını veya uygulanıp uygulanmadığını belirtir.
+- [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) Veri kesme noktası öykünülse veya donanımda uygulanıp uygulanmadığını belirtir.
 
-- [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) Bir bağlantılı kesme noktasının varlığını ve etkinleştirilip etkinleştirilmeyeceğini belirtir.
+- [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) Bağlı bir kesme noktası olup olmadığını ve etkin olup olmadığını belirtir.
 
-- [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) Kesme noktasının bir kod konumunda olup olmadığını, bir veri konumu olduğunu veya başka bir kesme noktası türünü belirtir.
+- [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) Kesme noktası bir kod konumu, veri konumu veya başka bir kesme noktası türü olup olmadığını belirtir.
 
-- [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) Kesme noktasının bağlantısı kesildi sebebini sağlar.
+- [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) Bir kesme noktasıyla bağlantının kopma nedenini verir.
 
-- [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) Bir kesme noktasının hatalı çözümlenme hakkında hangi bilgilerin yapılacağını belirtir.
+- [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) Bir kesme noktası başarısız çözümlemesi hakkında hangi bilgilerin alınacak olduğunu belirtir.
 
-- [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Kesme noktası isteği hakkında hangi bilgilerin alınması gerektiğini belirtir.
+- [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Bir kesme noktası isteği hakkında hangi bilgilerin alınacak olduğunu belirtir.
 
-- [BPREQI_FIELDS90](../../../extensibility/debugger/reference/bpreqi-fields90.md) Kesme noktası isteği hakkında alınacak bilgileri belirten geçerli değerleri sıralar. Bu sabit listesi [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) numaralandırmayı genişletir.
+- [BPREQI_FIELDS90](../../../extensibility/debugger/reference/bpreqi-fields90.md) Bir kesme noktası isteği hakkında alınacak bilgileri belirten geçerli değerleri numaralar. Bu numaralama, tüm [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) genişlettir.
 
-- [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) Bir kesme noktasının başarıyla çözümlenmesi hakkında hangi bilgilerin alınacağını belirtir.
+- [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) Bir kesme noktası başarılı çözümlemesi hakkında hangi bilgilerin alınacak olduğunu belirtir.
 
-- [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) Bir programın yürütmenin belirli bir noktaya ulaştıktan sonra yürütmeyi durdurup durdurmadığını tespit etmek için kullanılır.
+- [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) Bir programın yürütmede belirli bir noktaya ulaştıktan sonra yürütmeyi durduranın olup olmadığını belirlemek için kullanılır.
 
-- [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) Bir hata ayıklama sunucusu ile hata ayıklama paketi arasında iletişim kurmak için kullanılan protokolü belirten bir değer.
+- [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) Bir hata ayıklama sunucusu ve hata ayıklama paketi arasında iletişim kurmak için kullanılan protokolü gösteren bir değer.
 
-- [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) Farklı Oluşturucu türlerini seçer.
+- [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) Farklı oluşturucu türlerini seçer.
 
-- [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) İki bellek bağlamlarını karşılaştırma ölçütlerini belirtir.
+- [CONTEXT_COMPARE](../../../extensibility/debugger/reference/context-compare.md) İki bellek bağlamını karşılaştırma ölçütlerini belirtir.
 
-- [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) Bellek bağlamı hakkında hangi bilgilerin alınması gerektiğini belirtir.
+- [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) Bir bellek bağlamı hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
 
-- [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) Bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) veya [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) arabirimi için çeşitli öznitelikleri açıklar.
+- [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) [IDebugProperty2 veya IDebugReference2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi [için çeşitli öznitelikleri](../../../extensibility/debugger/reference/idebugreference2.md) açıklar.
 
-- [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) İşlemin neden hata ayıklama için başlatıldığına ilişkin belirtir.
+- [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) İşlemin hata ayıklama için neden başlat olduğunu belirtir.
 
-- [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Bir hata ayıklama özelliği nesnesi hakkında hangi bilgilerin alınması gerektiğini belirtir.
+- [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Bir hata ayıklama özelliği nesnesi hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
 
-- [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) Bir hata ayıklama başvuru nesnesi hakkında hangi bilgilerin yapılacağını belirtir.
+- [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) Bir hata ayıklama başvuru nesnesi hakkında hangi bilgilerin alın olduğunu belirtir.
 
-- [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) Ayrıştırılmış derleme bayraklarını belirtir.
+- [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md) Ayrım için bayrakları belirtir.
 
-- [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) Ayrıştırılmış bir alan hakkında hangi bilgilerin alınması gerektiğini belirtir.
+- [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) Bir disassembly alanı hakkında hangi bilgilerin alınabileceklerini belirtir.
 
-- [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) Ayrıştırılmış akışın kapsamını belirtir.
+- [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) Ayrık akışın kapsamını belirtir.
 
-- [Displaykind](../../../extensibility/debugger/reference/displaykind.md) Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden gerçekleştirilecek bilgi türlerini temsil eden geçerli değerleri sıralar ve kullanıcıya görüntüler.
+- [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) [Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden alınan ve kullanıcıya görüntülenmek için bilgi türlerini temsil eden geçerli değerleri numaralar.
 
-- [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) İki belge içeriğini karşılaştırma ölçütlerini belirtir.
+- [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) İki belge bağlamını karşılaştırmak için ölçütleri belirtir.
 
-- [DumpType](../../../extensibility/debugger/reference/dumptype.md) Bir programın ne kadarının dökümünü alınacağını belirtir.
+- [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) Bir programın durumunun dökümlerinin ne kadarı olduğunu belirtir.
 
-- [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin türünün nasıl yorumlanacağını belirtir.
+- [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin türünü yorumlamayı belirtir.
 
-- [Haksız Blereason](../../../extensibility/debugger/reference/encunavailablereason.md) Düzenle ve devam et 'in kullanılamayan nedenleri temsil eder.
+- [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) Düzenle ve Devam'ın kullanılabilir olmadığının nedenlerini temsil eder.
 
-- [Evalflags](../../../extensibility/debugger/reference/evalflags.md) İfade değerlendirmesini denetleyen bayrakları belirtir.
+- [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) İfade değerlendirmesini kontrol eden bayrakları belirtir.
 
-- [EVALFLAGS90](../../../extensibility/debugger/reference/evalflags90.md) İfade değerlendirmesini denetleyen bayrakların geçerli değerlerini numaralandırır. Bu sabit listesi, [Evalflags](../../../extensibility/debugger/reference/evalflags.md) sabit listesini genişletir.
+- [EVALFLAGS90](../../../extensibility/debugger/reference/evalflags90.md) İfade değerlendirmesini kontrol eden bayraklar için geçerli değerleri numaralar. Bu numaralama [EVALFLAGS numaralama](../../../extensibility/debugger/reference/evalflags.md) süresini genişleter.
 
-- [EventAttributes](../../../extensibility/debugger/reference/eventattributes.md) Olay özniteliklerini belirtir.
+- [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) Olay özniteliklerini belirtir.
 
 - [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) Özel durum durumunu belirtir.
 
-- [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi hakkında hangi bilgilerin alınması gerektiğini belirtir.
+- [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) [Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
 
-- [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türünü belirtir.
+- [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türü belirtir.
 
-- [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin içerebildiği ek alan türlerini numaralandırır. Bu sabit listesi [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) numaralandırmayı genişletir.
+- [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) [Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin içereb olduğu ek alan türleri numaralandır. Bu numaralama, tüm [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) genişlettir.
 
-- [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) Alan türü için değiştiriciler belirtir.
+- [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) Bir alan türü için değiştiricileri belirtir.
 
-- [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) Yığın çerçeve nesnesi hakkında alınacak bilgileri belirtir.
+- [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) Bir yığın çerçevesi nesnesi hakkında almak için bilgileri belirtir.
 
-- [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) Ana bilgisayar adının türünü belirtir.
+- [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) Konak adının türünü belirtir.
 
-- [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) Alınacak dosyaların ad türünü belirtir.
+- [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) Alınan dosyaların ad türünü belirtir.
 
-- [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) Özel durumları kesintiye girilirken gerçekleştirilecek eylemleri belirtir.
+- [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) Özel durumlara müdahale etmek için hangi eylemlerin gerçekleştirin olduğunu belirtir.
 
-- [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) Bir programın nasıl başlatılabildiğini belirtir.
+- [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) Bir programın nasıl başlat olacağını belirtir.
 
-- [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) Belirli bir makine için alınacak bilgi türünü belirtir.
+- [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) Belirli bir makine için ne tür bilgilerin alın olduğunu belirtir.
 
-- [MACHINE_INFO_FLAGS](../../../extensibility/debugger/reference/machine-info-flags.md) Bir makineyi tanımlamakta kullanılır.
+- [MACHINE_INFO_FLAGS](../../../extensibility/debugger/reference/machine-info-flags.md) Bir makineyi tanımlamak için kullanılır.
 
-- [MessageType](../../../extensibility/debugger/reference/messagetype.md) İleti türünü ve nedenini belirtir.
+- [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) İleti türünü ve nedenini belirtir.
 
-- [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) Bir modülü tanımlamakta kullanılır.
+- [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) Bir modülü açıklamak için kullanılır.
 
 - [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) Hata ayıklama modülü bilgileri için bayrakları belirtir.
 
-- [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) Bir modül için simgelerin durumunu belirtir.
+- [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) Bir modül için sembollerin durumunu belirtir.
 
-- [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) Eşleşen adlara yönelik Case seçeneğini belirler.
+- [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) Eşleşen adlar için büyük/büyük/büyük harf seçeneğini seçer.
 
-- [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) İfade değerlendirici ' nden bir nesne türünü belirtir.
+- [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) İfade değerlendiriciden bir nesnenin türünü belirtir.
 
-- [Parseflags](../../../extensibility/debugger/reference/parseflags.md) Bir ifadenin nasıl ayrıştıralınacağını belirtir.
+- [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) Bir ifadeyi ayrıştırmayı belirtir.
 
-- [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) Bekleyen bir kesme noktasının durumunu belirtir (henüz bağlanmamış bir kesme noktası).
+- [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) Bekleyen bir kesme noktası (henüz bağlı değil bir kesme noktası) durumunu belirtir.
 
 - [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) Bekleyen kesme noktası durum bayraklarını belirtir.
 
-- [PORT_SUPPLIER_DESCRIPTION_FLAGS](../../../extensibility/debugger/reference/port-supplier-description-flags.md) Bir bağlantı noktası sağlayıcısı hakkında alınabilecek meta verileri tanımlar.
+- [PORT_SUPPLIER_DESCRIPTION_FLAGS](../../../extensibility/debugger/reference/port-supplier-description-flags.md) Bir bağlantı noktası sağlayıcı hakkında alınabilirsiniz meta verileri tanımlar.
 
-- [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) Bir işlem için hangi tür bilgilerin alınması belirtildi.
+- [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) Bir işlem için ne tür bilgilerin alınamadı.
 
-- [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) Bir işlemin özelliklerini açıklar veya belirtir.
+- [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) Bir işlem özelliklerini açıklar veya belirtir.
 
-- [PROGRAM_DESTROY_FLAGS](../../../extensibility/debugger/reference/program-destroy-flags.md) Program yok etme bayraklarının geçerli değerlerini numaralandırır.
+- [PROGRAM_DESTROY_FLAGS](../../../extensibility/debugger/reference/program-destroy-flags.md) Program yok etme bayraklarının geçerli değerlerini numaralar.
 
-- [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md) Bir program sağlayıcısıyla ilişkili özellikleri belirtir.
+- [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md) Program sağlayıcısıyla ilişkili özellikleri belirtir.
 
-- [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) Bir program sağlayıcısından elde edilecek istenen özellikleri belirtir.
+- [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) Bir program sağlayıcısından elde etmek istediğiniz özellikleri belirtir.
 
 - [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) Başvurular için karşılaştırma türünü belirtir.
 
 - [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) Başvuru türünü belirtir.
 
-- [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) Bir ayrıştırılmış bir derlemede arama başlatma konumunu belirtir.
+- [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) Bir disassembly içinde aramaya başlamak için konumunu belirtir.
 
-- [Stepkind](../../../extensibility/debugger/reference/stepkind.md) Adımlama için adım türünü belirtir.
+- [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) Adımlama için adım tür belirtir.
 
-- [Stepunit](../../../extensibility/debugger/reference/stepunit.md) Adımlama için adım birimini belirtir.
+- [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) Adımlama için adım birimini belirtir.
 
-- [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) Alınacak sembol bilgilerinin türünü belirtir.
+- [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) Hangi sembol bilgisinin alın başkanı olduğunu belirtir.
 
 - [TEXT_DOC_ATTR_2](../../../extensibility/debugger/reference/text-doc-attr-2.md) Bir belgenin özniteliklerini açıklar.
 
-- [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) Alınacak iş parçacığı hakkındaki bilgileri belirtir.
+- [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) Bir iş parçacığı hakkında hangi bilgilerin alın olacağını belirtir.
 
-- [ThreadState](../../../extensibility/debugger/reference/threadstate.md) İş parçacığının durumunu belirtir.
+- [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) İş parçacığının durumunu belirtir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg. h, sh. h veya Ee. h
+ Üst bilgi: msdbg.h, sh.h veya ee.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

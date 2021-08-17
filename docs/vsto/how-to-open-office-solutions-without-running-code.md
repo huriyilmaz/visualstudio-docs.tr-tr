@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: kod çalıştırmadan Office çözümlerini açma'
+title: 'nasıl yapılır: kod çalıştırmadan Office çözümlerini açma'
 description: Derleme kodunu çalıştırmadan yönetilen kod uzantıları içeren bir belge veya çalışma kitabını nasıl açabileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -18,17 +18,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 99f1a01a745544e7e11e724db9c6eafacf0ca201
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c20ddd8fbf05422bfbc948449c2cf3265c7e89c4212add41e220e6f04c77304b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876595"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394647"
 ---
-# <a name="how-to-open-office-solutions-without-running-code"></a>Nasıl yapılır: kod çalıştırmadan Office çözümlerini açma
-  Yönetilen kod uzantılarıyla oluşturulan Microsoft Office çözüm, son kullanıcının Office uygulamasındaki güvenlik ayarı yüksek olarak ayarlanmış olsa bile çalıştırılır. Bunun nedeni, .NET derleme kodu güvenliğinin Microsoft Office tarafından değil Microsoft .NET Framework tarafından yönetilmektedir.
+# <a name="how-to-open-office-solutions-without-running-code"></a>nasıl yapılır: kod çalıştırmadan Office çözümlerini açma
+  son kullanıcının Office uygulamasındaki güvenlik ayarı yüksek olarak ayarlansa bile, yönetilen kod uzantılarıyla oluşturulan Microsoft Office bir çözüm çalışır. bunun nedeni, .net derleme kodu güvenliğinin Microsoft Office tarafından değil Microsoft .NET Framework tarafından yönetilmektedir.
 
  Ancak, kodu çalıştırmadan bir belgeyi açmak isteyebileceğiniz durumlar vardır. Örneğin, belge açıldığında çalışan kod içerikleri değiştirebilir, ancak kod değiştirilmeden önce belgenin görünme şeklini güncelleştirmek isteyebilirsiniz. Ya da belgeyi içindeki belirli bilgileri bir kişiye göndermek isteyebilirsiniz ve kodun çalıştırılmasını ve muhtemelen içerikleri değiştirmesini istemezsiniz.
 
@@ -38,7 +39,7 @@ ms.locfileid: "99876595"
 
 ## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>Shift tuşunu kullanarak derlemeyi atlamak için
 
-- Belge açılırken Word ve Excel 'in başlatma olaylarını oluşturmasını engellemek için **SHIFT** tuşunu basılı tutarken **Dosya** menüsünden Belge ve çalışma kitaplarını açın.
+- belge açılırken Word ve Excel başlatma olaylarını oluşturmasını engellemek için **shıft** tuşunu basılı tutarken **dosya** menüsünden belge ve çalışma kitaplarını açın.
 
     > [!NOTE]
     > **Başlarken** görev bölmesinden bir belge veya çalışma kitabı açarsanız, **SHIFT** tuşunu basılı tutmak kodu atlamaz. Ayrıca, SHIFT 'in basılı tutulması, olayların belge açıldıktan sonra oluşturulmasını engellemez.
@@ -47,12 +48,12 @@ ms.locfileid: "99876595"
 
 ## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>Yeniden adlandırarak veya kaldırarak bir derlemeyi atlamak için
 
-- Derlemenin bulunduğu bilgisayarda gerekli izinleriniz varsa, belge veya çalışma kitabının onu bulamadığı şekilde derlemeyi yeniden adlandırabilir veya kaldırabilirsiniz. Bu, Office belgesi her açıldığında bir hata oluşunca oluşur.
+- Derlemenin bulunduğu bilgisayarda gerekli izinleriniz varsa, belge veya çalışma kitabının onu bulamadığı şekilde derlemeyi yeniden adlandırabilir veya kaldırabilirsiniz. Office belge her açıldığında bu hata oluşur.
 
      Çözüm birden çok kişi tarafından kullanılıyorsa, bu yöntem çözümün tümünün tarafından çalıştırılmasını önler. Bu, kodda veya başvurulan sunucuda bir sorun bulunursa ve tüm kullanıcıların bunu yürütmesini durdurmak istiyorsanız yararlı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
+- [Office çözümleri güvenli hale getirme](../vsto/securing-office-solutions.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 - [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md)

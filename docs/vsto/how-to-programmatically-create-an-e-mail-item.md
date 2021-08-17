@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma'
-description: Visual Studio 'Yu kullanarak Microsoft Outlook 'ta program aracılığıyla bir e-posta iletisi oluşturma hakkında bilgi edinin.
+title: 'Nasıl kullanılır: Program aracılığıyla e-posta öğesi oluşturma'
+description: Microsoft Outlook'de program aracılığıyla e-posta iletisi Outlook nasıl Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 10ff3648dfceaa62be0dd86a05a21432aa2f6118
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: bf0ed43b3c27a14c8d746d6bb0851b36180f523d29f139ae10df27383e21f1d8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826037"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423923"
 ---
-# <a name="how-to-programmatically-create-an-email-item"></a>Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma
-  Bu örnek Outlook Microsoft Office bir e-posta iletisi oluşturur.
+# <a name="how-to-programmatically-create-an-email-item"></a>Nasıl kullanılır: Program aracılığıyla e-posta öğesi oluşturma
+  Bu örnek, Microsoft Office Outlook'de bir e-posta iletisi oluşturur.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -33,4 +34,4 @@ ms.locfileid: "107826037"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)
-- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
+- [Kullanmaya başlayın programlama VSTO Eklentileri](../vsto/getting-started-programming-vsto-add-ins.md)

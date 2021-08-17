@@ -11,14 +11,15 @@ ms.assetid: 8d7bd359-d33e-4317-9674-d89283efd7de
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fdc207633a083e841221e3c6ca527c7ffb3dbcf7
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6ca3367b44fc9b35b16435e4b223de2ac0e9bae5ce1a190f409b4106accf9d51
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157884"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392331"
 ---
 # <a name="idiaenumtablesnext"></a>IDiaEnumTables::Next
 Sabit Listesi dizisinde belirtilen sayıda tabloyu alır.

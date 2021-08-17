@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Tanılama Veri Bağdaştırıcısı Oluşturma'
-description: Visual Studio kullanarak bir sınıf kitaplığı oluşturarak ve tanılama veri bağdaştırıcısı API 'Leri ekleyerek bir tanılama veri bağdaştırıcısı oluşturmayı öğrenin.
+description: Visual Studio kullanarak bir sınıf kitaplığı oluşturarak ve tanılama veri bağdaştırıcısı apı 'leri ekleyerek bir tanılama veri bağdaştırıcısı oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,22 +10,23 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: b35444987686107b9ba2788392abde498661f3de
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: d4b575265d13d603c52c5f389600b48f40ed3c62c2542eaf1a67fe655005bf4f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945155"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121395284"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Nasıl yapılır: tanılama veri bağdaştırıcısı oluşturma
 
-Bir *Tanılama veri bağdaştırıcısı* oluşturmak Için, Visual Studio 'yu kullanarak bir sınıf kitaplığı oluşturun ve ardından Visual Studio Enterprise tarafından sunulan tanılama veri bağdaştırıcısı API 'lerini sınıf kitaplığınıza eklersiniz. Test çalıştırması sırasında oluşturulan olayları işlerken, bir akış veya bir dosya olarak istediğiniz tüm bilgileri Framework tarafından verilen bir dosya olarak gönderin <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> . ' A gönderilen akışlar veya dosyalar, <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> testiniz tamamlandığında test sonuçlarına ek olarak depolanır. Bu test sonuçlarından bir hata oluşturursanız veya kullandığınızda [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] , dosyalar hataya da bağlanır.
+bir *tanılama veri bağdaştırıcısı* oluşturmak için Visual Studio kullanarak bir sınıf kitaplığı oluşturun ve Visual Studio Enterprise tarafından sunulan tanılama veri bağdaştırıcısı apı 'lerini sınıf kitaplığınıza ekleyin. Test çalıştırması sırasında oluşturulan olayları işlerken, bir akış veya bir dosya olarak istediğiniz tüm bilgileri Framework tarafından verilen bir dosya olarak gönderin <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> . ' A gönderilen akışlar veya dosyalar, <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> testiniz tamamlandığında test sonuçlarına ek olarak depolanır. Bu test sonuçlarından bir hata oluşturursanız veya kullandığınızda [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] , dosyalar hataya da bağlanır.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 Testlerinizin çalıştırıldığı makineyi etkileyen bir tanılama veri bağdaştırıcısı veya test altında uygulamanızı çalıştırmak için kullandığınız ortamın parçası olan bir makine oluşturabilirsiniz. Örneğin, test makinenizde testlerin çalıştırıldığı veya uygulama için Web sunucusu rolünde hizmet veren makinedeki dosyaları toplayan dosyaları toplama.
 
-Tanılama veri bağdaştırıcınıza, Visual Studio veya Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) kullanarak test ayarlarınızı oluşturduğunuzda görüntüleyen kolay bir ad verebilirsiniz. Test ayarları, testlerinizi çalıştırdığınızda ortamınızdaki belirli tanılama veri bağdaştırıcılarını hangi makine rolünün çalıştıracağınızı tanımlamanızı sağlar. Tanılama veri bağdaştırıcılarınızı, test ayarlarınızı oluştururken da yapılandırabilirsiniz. Örneğin, Web sunucunuzdaki özel günlükleri toplayan bir tanılama veri bağdaştırıcısı oluşturabilirsiniz. Test ayarlarınızı oluşturduğunuzda, bu Web sunucusu rolünü gerçekleştiren makinede veya makinelerde Bu tanılama veri bağdaştırıcısını çalıştırmayı seçebilir ve yalnızca oluşturulan son üç günlüğü toplamak için test ayarlarınızın yapılandırmasını değiştirebilirsiniz. Test ayarları hakkında daha fazla bilgi için bkz. [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
+tanılama veri bağdaştırıcınıza, Visual Studio veya Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) kullanarak test ayarlarınızı oluşturduğunuzda görüntüleyen kolay bir ad verebilirsiniz. Test ayarları, testlerinizi çalıştırdığınızda ortamınızdaki belirli tanılama veri bağdaştırıcılarını hangi makine rolünün çalıştıracağınızı tanımlamanızı sağlar. Tanılama veri bağdaştırıcılarınızı, test ayarlarınızı oluştururken da yapılandırabilirsiniz. Örneğin, Web sunucunuzdaki özel günlükleri toplayan bir tanılama veri bağdaştırıcısı oluşturabilirsiniz. Test ayarlarınızı oluşturduğunuzda, bu Web sunucusu rolünü gerçekleştiren makinede veya makinelerde Bu tanılama veri bağdaştırıcısını çalıştırmayı seçebilir ve yalnızca oluşturulan son üç günlüğü toplamak için test ayarlarınızın yapılandırmasını değiştirebilirsiniz. Test ayarları hakkında daha fazla bilgi için bkz. [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
 
 Tanılama veri bağdaştırıcınızın testte o noktada görev gerçekleştirebilmesi için testlerinizi çalıştırdığınızda olaylar tetiklenir.
 
@@ -34,7 +35,7 @@ Tanılama veri bağdaştırıcınızın testte o noktada görev gerçekleştireb
 
 Aşağıda, tanılama veri bağdaştırıcınızı oluştururken kullanabileceğiniz önemli olayların kısmi bir listesi verilmiştir. Tanılama veri bağdaştırıcısı olaylarının tamamı listesi için bkz <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> . soyut sınıf.
 
-|Olay|Description|
+|Olay|Açıklama|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|Test çalıştıralım başlangıcı|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|Test çalıştıralım bitişi|
@@ -245,7 +246,7 @@ Test ayarlarınızı oluştururken yapılandırdığınız bilgileri temel alan 
     > [!NOTE]
     > Varsayılan yapılandırma öğesi, ihtiyacınız olan tüm verileri içerebilir. Kullanıcı, test ayarlarında tanılama veri bağdaştırıcısını yapılandırmadığından, varsayılan veriler yürütüldüğünde tanılama veri bağdaştırıcınıza geçirilir. Bölümüne eklediğiniz XML, `<DefaultConfigurations>` tanımlanan şemanın parçası olma olasılığı olmadığı için, oluşturduğu XML hatalarını yoksayabilirsiniz.
     >
-    > Yükleme dizininizi temel alan aşağıdaki yolda başka yapılandırma dosyası örnekleri vardır: *Program Files\Microsoft Visual Studio 10.0 \ Common7\IDE\PrivateAssemblies\DataCollectors*.
+    > yükleme dizininizi temel alan aşağıdaki yolda farklı yapılandırma dosyaları örnekleri vardır: *Program files \ Microsoft Visual Studio 10.0 \ Common7\IDE\PrivateAssemblies\DataCollectors*.
 
      Testlerinizi çalıştırdığınızda bir ortamı kullanmak üzere test ayarlarınızı yapılandırma hakkında daha fazla bilgi için, bkz. [tanılama verilerini el ile testlerle toplama (Azure test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true).
 
@@ -257,7 +258,7 @@ Test ayarlarınızı oluştururken yapılandırdığınız bilgileri temel alan 
 
 14. Testlerinizi çalıştırdığınızda bir ortamı kullanmak üzere test ayarlarınızı yapılandırma hakkında daha fazla bilgi için, bkz. [tanılama verilerini el ile testlerle toplama (Azure test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true).
 
-15. Tanılama veri bağdaştırıcınızı seçmek için, önce mevcut bir test ayarlarını seçmeniz ya da Visual Studio 'dan veya Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) yeni bir tane oluşturmanız gerekir. Bağdaştırıcı, test ayarlarınızın **veri ve tanılama** sekmesinde sınıfa atadığınız kolay ad ile görüntülenir.
+15. tanılama veri bağdaştırıcınızı seçmek için, önce mevcut bir test ayarlarını seçmeniz veya Visual Studio veya Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) yeni bir tane oluşturmanız gerekir. Bağdaştırıcı, test ayarlarınızın **veri ve tanılama** sekmesinde sınıfa atadığınız kolay ad ile görüntülenir.
 
 16. Bu test ayarlarını etkin olacak şekilde ayarlayın. Test ayarları hakkında daha fazla bilgi için bkz. [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
 

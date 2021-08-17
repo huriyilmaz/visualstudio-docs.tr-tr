@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, Visual Studio 'Yu hata ayıklama altyapısı tarafından sağlanan kaynak belgedeki değişiklikler hakkında bilgilendirmek için kullanılır.
+description: bu arabirim, hata ayıklama altyapısı tarafından sağlanan kaynak belgedeki değişiklikler hakkında Visual Studio bildirmek için kullanılır.
 title: IDebugDocumentTextEvents2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: a10cbb6b-11a8-4056-b42a-2ecebf0e690d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: edf7cd483b39fb1fb5dc182a08bbbca8295b2359
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 378dd2c8892b659f867f24f4a392cb6e099aeb477ab8044716ca0b99baddbc87
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094100"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390222"
 ---
 # <a name="idebugdocumenttextevents2"></a>IDebugDocumentTextEvents2
-Bu arabirim, Visual Studio 'Yu hata ayıklama altyapısı tarafından sağlanan kaynak belgedeki değişiklikler hakkında bilgilendirmek için kullanılır.
+bu arabirim, hata ayıklama altyapısı tarafından sağlanan kaynak belgedeki değişiklikler hakkında Visual Studio bildirmek için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 

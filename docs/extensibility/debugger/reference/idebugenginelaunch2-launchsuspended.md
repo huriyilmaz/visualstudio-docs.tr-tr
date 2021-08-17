@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem hata ayıklama altyapısı (DE) yoluyla bir işlem başlatır.
-title: 'IDebugEngineLaunch2:: Launchaskıya alındı | Microsoft Docs'
+description: Bu yöntem, hata ayıklama altyapısı (DE) ile bir işlemi başlatıyor.
+title: IDebugEngineLaunch2::LaunchSuspended | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 5dd2643e-c20a-470e-9024-2a423eb39856
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2db2ce2a35cd8be6599fca3e01bc69a6680012b2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 27d4ae71dfa2c5a1c0f1d7806e1fa83c511a1bfd7131667880dce3dc5b3db54a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066028"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390092"
 ---
 # <a name="idebugenginelaunch2launchsuspended"></a>IDebugEngineLaunch2::LaunchSuspended
-Bu yöntem hata ayıklama altyapısı (DE) yoluyla bir işlem başlatır.
+Bu yöntem, hata ayıklama altyapısı (DE) ile bir işlemi başlatıyor.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -66,51 +67,51 @@ int LaunchSuspended(
 
 ## <a name="parameters"></a>Parametreler
 `pszMachine`\
-'ndaki İşlemin çalıştırılacağı makinenin adı. Yerel makineyi belirtmek için null değeri kullanın.
+[in] İşlem başlatan makinenin adı. Yerel makineyi belirtmek için null değer kullanın.
 
 `pPort`\
-'ndaki Programın çalışacağı bağlantı noktasını temsil eden [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabirimi.
+[in] Programın içinde çalıştıracak bağlantı noktasını temsil eden [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabirimi.
 
 `pszExe`\
-'ndaki Başlatılacak yürütülebilir dosyanın adı.
+[in] Başlatacak yürütülebilir dosyanın adı.
 
 `pszArgs`\
-'ndaki Yürütülebilir dosyaya geçirilecek bağımsız değişkenler. Bağımsız değişken yoksa, null bir değer olabilir.
+[in] Yürütülebilir dosyaya geçiş için bağımsız değişkenler. Bağımsız değişken yoksa null değer olabilir.
 
 `pszDir`\
-'ndaki Yürütülebilir dosya tarafından kullanılan çalışma dizininin adı. Çalışma dizini gerekmiyorsa null değeri olabilir.
+[in] Yürütülebilir dosya tarafından kullanılan çalışma dizininin adı. Çalışma dizini gerekmiyorsa null değer olabilir.
 
 `bstrEnv`\
-'ndaki NULL ile sonlandırılmış dizelerin ortam bloğu ve ardından ek bir NULL Sonlandırıcı.
+[in] NULL ile sonlandırılan dizelerin ortam bloğu, ardından ek bir NULL sonlandırıcısı.
 
 `pszOptions`\
-'ndaki Yürütülebilir dosya seçenekleri.
+[in] Yürütülebilir dosya seçenekleri.
 
 `dwLaunchFlags`\
-'ndaki Bir oturumun [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) belirtir.
+[in] Oturum [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) için geçerli olan yapılandırmayı belirtir.
 
 `hStdInput`\
-'ndaki Alternatif bir giriş akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
+[in] Alternatif bir giriş akışına işle. Yeniden yönlendirme gerekli yoksa 0 olabilir.
 
 `hStdOutput`\
-'ndaki Alternatif bir çıkış akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
+[in] Alternatif bir çıkış akışına işle. Yeniden yönlendirme gerekli yoksa 0 olabilir.
 
 `hStdError`\
-'ndaki Alternatif bir hata çıktı akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
+[in] Alternatif bir hata çıkış akışını işle. Yeniden yönlendirme gerekli yoksa 0 olabilir.
 
 `pCallback`\
-'ndaki Hata ayıklayıcı olaylarını alan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
+[in] Hata [ayıklayıcı olaylarını alan IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
 
 `ppDebugProcess`\
-dışı Başlatılan işlemi temsil eden elde edilen [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesini döndürür.
+[out] Başlatılan işlemi temsil [eden sonuçta elde edilen IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Normalde, [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] [launchaskıya alınan](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) yöntemini kullanarak bir programı başlatır ve ardından hata ayıklayıcıyı askıya alınmış programa iliştirir. Ancak, hata ayıklama altyapısının bir programı başlatması gerekebilecek durumlar vardır (örneğin, hata ayıklama altyapısı bir yorumlayıcının parçasıysa ve hata Ayıklanan program yorumlanan bir diliyorsa), bu durumda [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] `IDebugEngineLaunch2::LaunchSuspended` yöntemini kullanır.
+ Normalde, [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) yöntemini kullanarak bir program başlatıyor ve ardından hata ayıklayıcıyı askıya alınan programa iliştirer. Ancak, hata ayıklama altyapısının bir programı başlatması gereken durumlar olabilir (örneğin, hata ayıklama altyapısı bir yorumlayıcının parçası ise ve hata ayıklama yapılan program yorumlandı bir dilse), bu durumda [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] yöntemi `IDebugEngineLaunch2::LaunchSuspended` kullanır.
 
- İşlem askıya alınma durumunda başarılı bir şekilde başlatıldıktan sonra işlemi başlatmak için [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md) yöntemi çağırılır.
+ [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md) yöntemi, işlem askıya alındıktan sonra başarıyla başlatıldıktan sonra işlemi başlatmak için çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

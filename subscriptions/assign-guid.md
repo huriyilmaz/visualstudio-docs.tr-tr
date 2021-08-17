@@ -1,21 +1,21 @@
 ---
-title: Visual Studio abonelerine belirli GUID 'Ler atama | Microsoft Docs
+title: Visual Studio abonelere belirli guıd 'ler atama | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl özel abonelik GUID 'SI olabileceğini öğrenin
-ms.openlocfilehash: a0721029186605c6b9a277c9eb95a370a086d7d2
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.openlocfilehash: db8373f6b0b8da9b6586c18a8d1fe0dd8c5515335375b4c73f84c839139044ae
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776656"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121421574"
 ---
-# <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda belirli abonelikleri atama
+# <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalında belirli abonelikleri atama
 
-Yöneticiler artık bireysel abonelere belirli abonelikler atamak için Visual Studio abonelikleri yönetim portalını kullanabilir.  Bu, kuruluşun kısa bir süre için aboneliğe erişmesi gereken geçici personeli veya satıcıları olduğu durumlarda yararlı olabilir.  Yöneticiler, daha önce kısmen kullanılan bir abonelik atayabilir ve daha uzun süreli kullanım için yeni aboneliklerini bırakır.  
+yöneticiler artık bireysel abonelere belirli abonelikler atamak için Visual Studio abonelikleri yönetim portalını kullanabilir.  Bu, kuruluşun kısa bir süre için aboneliğe erişmesi gereken geçici personeli veya satıcıları olduğu durumlarda yararlı olabilir.  Yöneticiler, daha önce kısmen kullanılan bir abonelik atayabilir ve daha uzun süreli kullanım için yeni aboneliklerini bırakır.  
 
 Kullanıcılara belirli aboneliklerin GUID 'Lerinin nasıl atanacağını öğrenmek için videoyu izleyin veya okuyun. 
 
@@ -43,9 +43,9 @@ Dışarı aktarma işlemini gerçekleştirmek için:
 - **Abonelik durumu**: Bu alan "atanmış" veya "atanmamış" olduğunu gösterir.  Bir abonelikte "atanmış" durumu varsa, bu, ad, e-posta vb. gibi kullanıcı bilgilerine de sahip olur. 
 - **Kullanım durumu**: kullanım durumu "yeni" olarak, bir kullanıcıya hiçbir zaman atanmamış olduğunu veya bir kullanıcıya bir noktada atanmış olduğunu gösteren "kullanılan" anlamına gelir.  
 
-Bireysel kullanıcılara hangi aboneliklerde atamak istediğinizi öğrenmek için bu alanlardaki değerleri, elektronik tablodaki diğer bilgilerle birlikte kullanabilirsiniz. Listeyi durum, abonelik düzeyi, sona erme tarihi vb. ile daraltmaya yardımcı olmak için Excel 'de bir filtre uygulayabilirsiniz. 
+Bireysel kullanıcılara hangi aboneliklerde atamak istediğinizi öğrenmek için bu alanlardaki değerleri, elektronik tablodaki diğer bilgilerle birlikte kullanabilirsiniz. listeyi durum, abonelik düzeyi, sona erme tarihi vb. ile daraltmaya yardımcı olmak için Excel bir filtre uygulayabilirsiniz. 
 
-### <a name="upload-your-new-assignments"></a>Yeni atamalarınızı karşıya yükleyin
+### <a name="upload-your-new-assignments"></a>yeni atamalarınızı Upload
 
 Son adım, **toplu ekleme** şablonunu indirmenin yanı sıra atamak istediğiniz abonelikler için gerekli bilgileri doldurmanızı ve şablonu karşıya yüklemenizi sağlar.  Bu işlemin tamamen açıklaması için lütfen bkz. [birden çok kullanıcı ekleme](assign-license-bulk.md) makalesi.  
 

@@ -11,17 +11,18 @@ ms.assetid: c88c3ff4-3632-4199-b5de-83c6d21bcf75
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b9b7f5cb8d479d19bd9d7a5f89de065c52e581ec
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9208f2d6bb2ead37f44bf1c265d214216a9d120b964215a10473992dba288d73
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065131"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402512"
 ---
 # <a name="idebugprogrampublisher2setdebuggerpresent"></a>IDebugProgramPublisher2::SetDebuggerPresent
 Program yayımcısına bir hata ayıklayıcının var olduğunu ve çalıştığını söyler.

@@ -11,14 +11,15 @@ ms.assetid: 24e832eb-80b3-484c-a41b-11477ec9de99
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 724127e50708585613175b0f5773f231f1b33944
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 48a146ab67b0677bcfe7a8c55fc9feee0fa52bf2af043b67fa3388653e51c080
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156386"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420761"
 ---
 # <a name="idiasymbolget_container"></a>IDiaSymbol::get_container
 Bu işlev, bu sembolün üst/kapsayıcısını temsil eden bir simgeye yönelik bir işaretçi alır.

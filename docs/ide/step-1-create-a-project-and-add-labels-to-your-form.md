@@ -1,23 +1,22 @@
 ---
 title: '1. Adım: Proje oluşturma ve formunuza etiketler ekleme'
-description: Projeyi oluşturma, bir forma etiketler, bir düğme ve diğer denetimler ekleme ve eklerken her denetim için özellikleri ayarlama hakkında bilgi edinebilirsiniz.
+description: Projeyi oluşturma, forma etiketler, düğme ve diğer denetimler ekleme ve ekleyilen her denetim için özellikleri ayarlama hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 10/15/2019
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 0400c29e53c45ad9a98e7edca78fd2cf9741fcf0
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 80af3a97a70a176db0257055185240690c5f27691eb29cb75eefa8809d16614f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307758"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400009"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1. Adım: Proje oluşturma ve formunuza etiketler ekleme
 
@@ -30,16 +29,16 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
 ::: moniker range="vs-2017"
 
-1. Menü çubuğunda Dosya Yeni **Proje'yi** >  > **seçin.**
+1. Menü çubuğunda Dosya Yeni **Dosya'Project.** >  > 
 
-1. Yeni Proje iletişim kutusunun **sol tarafındaki Visual C#** veya Visual Basic'yi ve ardından Windows Masaüstü'nü **seçin.**  
+1. Yeni Project iletişim **kutusunun Visual Basic sol** tarafındaki Visual  **C#** veya Project'ı seçin ve ardından Masaüstü'Windows **seçin.**
 
-1. Şablon listesinde Windows Forms **App (.NET Framework)** şablonunu seçin, *MathQuiz* olarak ve ardından Tamam **düğmesini** seçin.
+1. Şablon listesinde Windows **Forms Uygulaması (.NET Framework)** şablonunu seçin, *MathQuiz* olarak ve ardından Tamam **düğmesini** seçin.
 
     Seçtiğiniz programlama diline bağlı *olarak Form1.cs* veya *Form1.vb* adlı bir form görüntülenir.
 
    > [!NOTE]
-   > **Windows Forms App (.NET Framework)** şablonunu görmüyorsanız. **.NET** masaüstü Visual Studio Yükleyicisi iş yükünü yüklemek için Visual Studio Yükleyicisi kullanın.<br/><br/>![.NET masaüstü geliştirme iş yükü Visual Studio Yükleyicisi](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Daha fazla bilgi için Yükleme [Visual Studio](../install/install-visual-studio.md) bakın.
+   > **Windows Forms Uygulaması (.NET Framework)** şablonunu görmüyorsanız. **.NET** masaüstü Visual Studio Yükleyicisi iş yükünü yüklemek için Visual Studio Yükleyicisi kullanın.<br/><br/>![.NET masaüstü geliştirme iş yükü Visual Studio Yükleyicisi](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Daha fazla bilgi için Yükleme [Visual Studio](../install/install-visual-studio.md) bakın.
 
 ::: moniker-end
 
@@ -49,30 +48,30 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
    !['Yeni proje oluştur' penceresini görüntüleme](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. Yeni **proje oluştur penceresinde,** arama kutusuna *Windows Forms* yazın veya yazın. Ardından Proje türü **listesinden** **Masaüstü'leri** seçin.
+1. Yeni **proje oluştur penceresinde,** arama kutusuna *Windows Formlar* yazın veya yazın. Ardından, uygulama **türü** listesinden **Masaüstü Project seçin.**
 
-   Proje türü **filtresini uyguladikten** sonra, C# veya Windows Forms için .NET Framework Uygulaması **(.NET Framework)** şablonunu seçin ve Visual Basic'yi **seçin.**
+   Uygulama türü **filtresini Project** C# veya Windows için **Windows Forms Uygulaması (.NET Framework)** şablonunu seçin ve Visual Basic'yi **seçin.**
 
    ![Windows Forms Uygulaması (.NET Framework) için C# veya Visual Basic şablonunu seçin](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
-   > **Windows Forms App (.NET Framework) şablonunu** görmüyorsanız Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin.
+   > Windows Forms Uygulaması **(.NET Framework)** şablonunu görmüyorsanız Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin.
    >
    > !['Yeni proje oluştur' penceresindeki 'Ne arıyorsanız bu değil' iletisinden 'Daha fazla araç ve özellik yükle' bağlantısı](../get-started/media/vs-2019/not-finding-what-looking-for.png)
    >
-   > Ardından, Visual Studio Yükleyicisi .NET masaüstü geliştirme **iş yükünü** seçin.
+   > Ardından, Visual Studio Yükleyicisi **.NET** masaüstü geliştirme iş yükünü seçin.
    >
    > ![.NET Core iş yükü Visual Studio Yükleyicisi](../ide/media/install-dot-net-desktop-env.png)
    >
    > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz isteniyor olabilir; öyleyse, bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin.
 
-1. Yeni **projenizi yapılandır penceresinde** Proje adı kutusuna *MathQuiz* **yazın veya** girin. Ardından **Oluştur'a seçin.**
+1. Yeni **projenizi yapılandır penceresine** Project adı kutusuna *MathQuiz* **yazın veya** girin. Ardından **Oluştur'a seçin.**
 
 ::: moniker-end
 
 ## <a name="to-set-properties-for-a-form"></a>Formun özelliklerini ayarlamak için
 
-1. Bu Visual Studio, formu (programlama diline bağlı olarak *Form1.cs* veya *Form1.vb)* seçin ve **ardından Text** özelliğini Matematik Testi **olarak değiştirebilirsiniz.**
+1. Bu Visual Studio form (programlama diline bağlı olarak *Form1.cs* veya *Form1.vb)* seçin ve **ardından Text** özelliğini Matematik Testi olarak **değiştirebilirsiniz.**
 
      Özellikler **penceresi** formun özelliklerini içerir.
 
@@ -80,7 +79,7 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
      Tümleşik geliştirme ortamının (IDE) sol alt köşesinde doğru boyut görünene kadar kenarlarını sürükleyerek formu yeniden boyutlandırabilirsiniz. Alternatif olarak Size özelliğinin değerlerini **değiştirebilirsiniz.**
 
-1. **FormBorderStyle özelliğinin** değerini **Fixed3D** olarak ve **MaximizeBox özelliğini False** olarak **ayarlayın.**
+1. **FormBorderStyle özelliğinin değerini** **Fixed3D** olarak ve **MaximizeBox özelliğini False** olarak **ayarlayın.**
 
      Bu değerler, test alan kullanıcıların formu yeniden boyutlandırmasını önler.
 
@@ -90,7 +89,7 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
      Bu etiket, sağ üst köşede testte kalan saniye sayısını gösteren bir kutu haline gelecektir.
 
-2. Kutuyu **yeniden boyutlandırmak için AutoSize** **özelliğini False** olarak değiştirebilirsiniz.
+2. Kutuyu yeniden **boyutlandırmak için AutoSize** **özelliğini False** olarak değiştirebilirsiniz.
 
 3. Kutunun etrafında bir çizgi çizmek için **BorderStyle** özelliğini **FixedSingle** olarak değiştirebilirsiniz.
 
@@ -100,7 +99,7 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
      Bu satırlar, form üzerinde denetimleri hizalamanıza yardımcı olur.
 
-6. Özellikler **penceresinde Text** özelliğini **seçin ve** ardından Geri Al **tuşuna basın.**
+6. Özellikler **penceresinde Text** özelliğini **seçin ve** ardından Geri Al **tuşuna basın ve** değerini sildi.
 
 7. Font özelliğinin yanındaki artı işaretine ( ) ve ardından Size özelliğinin değerini **+** **15,75 olarak değiştirerek.**  
 
@@ -136,7 +135,7 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
 10. Üç yeni **etiketi, plusLeftLabel** etiketinin sağ tarafından bir satırda olacak şekilde düzenleme.
 
-     Ara çizgilerini kullanarak bunları aralara yer ve sıralaabilirsiniz.
+     Boşluk satırı yapmak ve bunları yukarı doğru yapmak için boşluk çizgilerini kullanabilirsiniz.
 
 11. İkinci etiketin Text özelliğinin değerini **(artı** **+** işareti) olarak ayarlayın.
 
@@ -144,7 +143,7 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
 13. Dördüncü etiketin **Text** özelliğinin değerini (eşittir **=** işareti) olarak ayarlayın.
 
-14. Araç <xref:System.Windows.Forms.NumericUpDown> Kutusundan bir **denetim ekleyin,** yazı tipi boyutunu **18** olarak ayarlayın ve genişliğini **100 olarak ayarlayın.**
+14. Araç <xref:System.Windows.Forms.NumericUpDown> Kutusundan bir **denetim ekleyin,** yazı tipi boyutunu **18** olarak ve genişliğini **100 olarak ayarlayın.**
 
      Bu tür denetimler hakkında daha fazla bilgi edinmek için daha sonra bilgi alasiniz.
 
@@ -176,9 +175,9 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 
 7. Beş denetimi iki kez daha yapıştırın.
 
-8. Üçüncü satır için ilk **etiketi timesLeftLabel** olarak, ikinci etiketin **Text** özelliğini **×** (çarpma işareti) olarak, üçüncü etiketi **timesRightLabel** olarak ve NumericUpDown denetim ürününü olarak **yazın.**
+8. Üçüncü satır için ilk etiketi **timesLeftLabel** olarak, ikinci etiketin **Text** özelliğini **×** (çarpma işareti) olarak, üçüncü etiketi **timesRightLabel** olarak ve NumericUpDown denetim ürününü olarak **yazın.**
 
-9. Dördüncü satır için ilk etiketi **dividedLeftLabel** olarak, ikinci etiketin **Text** özelliğini **÷** (bölme işareti) olarak, üçüncü **etiketi dividedRightLabel** olarak ve NumericUpDown denetim bölüme **adını girin.**
+9. Dördüncü satır için ilk etiketi **dividedLeftLabel** olarak, ikinci etiketin **Text** özelliğini **÷** (bölme işareti) olarak, üçüncü **etiketi dividedRightLabel** olarak ve NumericUpDown denetim bölümü olarak **ad girin.**
 
     > [!NOTE]
     > Bu öğreticiden çarpma × ve bölme ÷ kopyalayıp forma yapıştırabilirsiniz.
@@ -198,18 +197,18 @@ Bu testi geliştirmenin ilk adımları olarak projeyi oluşturabilir ve forma et
 6. **startButton** denetimi **için TabIndex** özelliğinin değerini **1 olarak ayarlayın.**
 
     > [!NOTE]
-    > **TabIndex** özelliği, sınava alan kullanıcı Sekme tuşuna basınca denetimlerin **sıralamalarını** ayarlar. Nasıl çalıştığını görmek için herhangi bir iletişim kutusunu açın (örneğin, menü çubuğunda Dosya Aç'ı seçin) ve ardından   >   **Sekme** tuşuna birkaç kez tıklayın. Her **sekme** tuşunu seçtiğiniz her seferinde imlecinizin denetim ' e nasıl taşındığını izleyin. Bir programcı bu formu oluştururken bir sıraya karar verdi.
+    > **TabIndex** özelliği, sınava alan kullanıcı Sekme anahtarını seçerken denetimlerin **sıralamalarını** ayarlar. Nasıl çalıştığını görmek için herhangi bir iletişim kutusunu açın (örneğin, menü çubuğunda Dosya Aç'ı seçin) ve ardından   >   **Sekme** tuşuna birkaç kez tıklayın. Sekme tuşuna her seçimde imlecinizin denetimden nasıl hareket **ettiğinden emin** olmak. Bu formu oluştururken sırayı programcı verdi.
 
-7. Değer denetimi için **TabIndex** özelliğinin değerini **2**, fark denetimi için **3**, ürün denetimi için **4** ve bölüm denetimi için **5** olarak ayarlayın.
+7. NumericUpDown toplam denetimi **için TabIndex** özelliğinin değerini **2,** fark denetimi **için 3,** ürün denetimi için **4** ve bölüm denetimi için **5** olarak ayarlayın.
 
-     Form aşağıdaki ekran görüntüsüne benzer şekilde görünmelidir.
+     Formun aşağıdaki ekran görüntüsüne benzer olması gerekir.
 
      ![İlk matematik testi formu](../ide/media/express_formlaidout.png)
 
-8. **TabIndex** özelliğinin beklendiği gibi çalışıp çalışmadığını doğrulamak için **F5** tuşunu seçerek veya menü çubuğunda Hata **Ayıkla** Başlat ' ı seçerek programınızı kaydedip çalıştırın  >   ve ardından **sekme** tuşuna birkaç kez tıklayın.
+8. **TabIndex özelliğinin** beklediğiniz gibi çalıştığını doğrulamak için **F5** anahtarını seçerek veya menü çubuğunda Hata AyıklamaYı Başlat'ı seçerek programınızı kaydedin ve çalıştırın ve ardından Sekme tuşuna birkaç  >   kez basın. 
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için bkz. 2. **[Adım: rastgele bir ek sorun oluşturma](../ide/step-2-create-a-random-addition-problem.md)**.
+- Sonraki öğretici adımına gitmek için **[bkz. 2. Adım: Rastgele toplama sorunu oluşturma.](../ide/step-2-create-a-random-addition-problem.md)**
 
-- Genel bakış konusuna dönmek için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
+- Genel bakış konu başlığına dönmek için [bkz. Öğretici 2: Zamanlı matematik testi oluşturma.](../ide/tutorial-2-create-a-timed-math-quiz.md)

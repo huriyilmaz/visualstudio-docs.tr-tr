@@ -11,17 +11,18 @@ ms.assetid: e7564ff2-00b5-4750-8fd5-dc1029a16912
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8a4b9686e5e3eb565b3c7b1c86a90ceac45b37cc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b59699c5ec284c2bb1d9534de8960b7706c1804ea95310f1a14b93fd7085d472
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082354"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401862"
 ---
 # <a name="machine_info"></a>MACHINE_INFO
 Belirli bir makineyi açıklar.
@@ -46,23 +47,23 @@ public struct MACHINE_INFO {
 
 ## <a name="members"></a>Üyeler
  `Fields`\
- Yapının hangi alanlarının başlatıldığını belirten [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) Numaralandırmadaki bayrakların birleşimi.
+ Yapının hangi [alanlarının başlat MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) bir numaralandırılan bayrakların birleşimi.
 
  `bstrName`\
- Makine adı. [GetMachineName](../../../extensibility/debugger/reference/idebugcoreserver2-getmachinename.md)çağırma ile eşdeğerdir.
+ Makine adı. [GetMachineName çağrısına eşdeğerdir.](../../../extensibility/debugger/reference/idebugcoreserver2-getmachinename.md)
 
  `Flags`\
- Makine özniteliklerini açıklayan [MACHINE_INFO_FLAGS](../../../extensibility/debugger/reference/machine-info-flags.md) Numaralandırmadaki bayrakların birleşimi.
+ Makine özniteliklerini açıklayan [MACHINE_INFO_FLAGS](../../../extensibility/debugger/reference/machine-info-flags.md) bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı [Getmachineınfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) yöntemine yapılan bir çağrı ile döndürülür.
+ Bu yapı, [GetMachineInfo yöntemine yapılan bir çağrıyla](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

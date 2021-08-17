@@ -11,17 +11,18 @@ ms.assetid: 17914a71-10ea-4b6f-8982-e364f87dca53
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7a47371bf9af89ef3f185698ca25a9df99cad4c6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 07ede35a1014d9c192740af58e5a5bdcc4ff93851c8204905384955a77da2b00
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053080"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389520"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
 Bu iş parçacığının yığın çerçevelerinin bir listesini alır.

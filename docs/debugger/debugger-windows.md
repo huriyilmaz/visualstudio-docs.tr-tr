@@ -8,23 +8,24 @@ ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9959c73802e15ca25dcce62631e4faa81391d47a
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 059acd0e797b4edd7f22de20560e2bb4a348228ab000f9053439949006f1b324
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389897"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420399"
 ---
-# <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı pencerelerini kullanarak verileri İnceleme
+# <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio 'de hata ayıklayıcı pencerelerini kullanarak verileri inceleyin
 
-Programınızda hata ayıklarken çoğu hata ayıklayıcı penceresini açabilirsiniz. Hata ayıklayıcı pencerelerinin bir listesini görmek için, bir kesme noktası ayarlayın ve hata ayıklamayı başlatın. Kesme noktasına ulaştığınızda ve yürütme durduktan sonra **Windows > hata ayıkla**' ya tıklayın.
+Programınızda hata ayıklarken çoğu hata ayıklayıcı penceresini açabilirsiniz. Hata ayıklayıcı pencerelerinin bir listesini görmek için, bir kesme noktası ayarlayın ve hata ayıklamayı başlatın. Kesme noktasına ulaştığınızda ve yürütme durduktan sonra **hata ayıkla > Windows**' ne tıklayın.
 
 |Pencere|Kısayol tuşu|Konuya bakın|
 |-|-|-|
 |Kesme noktaları|CTRL + ALT + B|[Kesme noktaları kullan](../debugger/using-breakpoints.md)|
-|Özel durum ayarları|CTRL + ALT + E|[Hata ayıklayıcı ile özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md)|
+|özel durum Ayarlar|CTRL + ALT + E|[Hata ayıklayıcı ile özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md)|
 |Çıktı|CTRL + ALT + O|[Çıkış Penceresi](../ide/reference/output-window.md)|
 |İzle|CTRL + ALT + W, (1, 2, 3, 4)|[İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)|
 |QuickWatch|SHIFT + F9|[İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)|

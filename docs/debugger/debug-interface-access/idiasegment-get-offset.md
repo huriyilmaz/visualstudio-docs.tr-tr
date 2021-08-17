@@ -11,14 +11,15 @@ ms.assetid: 97415ac6-b072-4e3c-9dd3-73087ae605fc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 53618e4e8b47291f8a5200d0128adeb88c0499de
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c62a9b9eb14ddfc010c69d2969ad2ccf708142dfc3dddcefc86949aa3e4ebda0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147929"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392011"
 ---
 # <a name="idiasegmentget_offset"></a>IDiaSegment::get_offset
 Bölümün başladığı yeri segmentlerde alır.

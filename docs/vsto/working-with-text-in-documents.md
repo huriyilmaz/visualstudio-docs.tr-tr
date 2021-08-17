@@ -1,6 +1,6 @@
 ---
 title: Belgelerde metinle çalışma
-description: Office projelerinde metinle çalışmak üzere Microsoft Word 'ün nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
+description: Office projelerindeki metinle çalışmak üzere Microsoft Word nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,19 +15,20 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 07b3ed9cc39e4eb23bec587516786cf28a940e40
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 25a761bd20c2185a1502d0575d7faf86bbf2d7a31f0b05ab312241149e852ae8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920231"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423793"
 ---
 # <a name="work-with-text-in-documents"></a>Belgelerde metinle çalışma
-  Bu bölümdeki konularda, Office projelerinde metinle çalışmak üzere Microsoft Office Word nesne modelini kullanmak için adım adım yordamlar ve kod örnekleri sağlanmaktadır.
+  bu bölümdeki konularda, Office projelerindeki metinle çalışmak üzere Microsoft Office Word nesne modelini kullanmak için adım adım yordamlar ve kod örnekleri sağlanmaktadır.
 
- Bazı durumlarda, bu görevleri VSTO eklentilerinde gerçekleştirdiğiniz yollar, belge düzeyi özelleştirmelerde gerçekleştirdiğiniz yöntemlerle farklıdır.
+ bazı durumlarda, VSTO eklentilerde bu görevleri gerçekleştirdiğiniz yollar, bunları belge düzeyi özelleştirmelerde gerçekleştirmenizin yollarından farklıdır.
 
 |Görev|Yordam|
 |----------|---------------|

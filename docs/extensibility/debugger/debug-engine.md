@@ -10,14 +10,15 @@ ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87c4648ed37ef4fad0d79b7048593ff0c5b7d6d0
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 16b82ce91fea9fe3b841b449651d42c66a82af32302332d94eded8bb6f6076bc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905715"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390520"
 ---
 # <a name="debug-engine"></a>Hata ayıklama altyapısı
 Hata ayıklama altyapısı (DE), yürütme denetimi, kesme noktaları ve ifade değerlendirmesi gibi hata ayıklama hizmetleri sağlamak için yorumlayıcı veya işletim sistemi ile birlikte kullanılır. Aynı hata ayıklanmakta olan bir programın durumunu izlemenin DE sorumluluğundadır. Bunu gerçekleştirmek için, bu, CPU 'dan veya çalışma zamanının sağladığı API 'lerden bağımsız olarak, desteklenen çalışma zamanında bu için kullanılabilen yöntemleri kullanır.
@@ -25,13 +26,13 @@ Hata ayıklama altyapısı (DE), yürütme denetimi, kesme noktaları ve ifade d
  Örneğin, ortak dil çalışma zamanı (CLR) ICorDebugXXX arabirimleri aracılığıyla çalışan bir programı izlemeye yönelik mekanizmalar sağlar. CLR 'yi destekleyen bir DE, hata ayıklamakta olan bir yönetilen kod programının izini tutmak için uygun ICorDebugXXX arabirimlerini kullanır. Daha sonra bu bilgileri IDE 'ye ileten oturum hata ayıklama Yöneticisi 'nde (SDM) tüm durum değişikliklerini iletişim kurar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 > [!NOTE]
-> Bir hata ayıklama altyapısı belirli bir çalışma zamanını ve diğer bir deyişle, hata ayıklamakta olan programın çalıştırıldığı sistemi hedefler. CLR, yönetilen kod için çalışma zamanı ve Win32 çalışma zamanı yerel Windows uygulamaları içindir. Oluşturduğunuz dil bu iki çalışma zamanlarının birini hedefleyebilir, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gerekli hata ayıklama altyapılarını zaten temin eder. Uygulamanız için tek bir ifade değerlendirici.
+> Bir hata ayıklama altyapısı belirli bir çalışma zamanını ve diğer bir deyişle, hata ayıklamakta olan programın çalıştırıldığı sistemi hedefler. CLR, yönetilen kod için çalışma zamanı ve Win32 çalışma zamanı yerel Windows uygulamalar içindir. Oluşturduğunuz dil bu iki çalışma zamanlarının birini hedefleyebilir, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gerekli hata ayıklama altyapılarını zaten temin eder. Uygulamanız için tek bir ifade değerlendirici.
 
 ## <a name="debug-engine-operation"></a>Hata ayıklama altyapısı işlemi
  İzleme hizmetleri DE aynı arabirimler aracılığıyla uygulanır ve hata ayıklama paketinin farklı çalışma modları arasında geçişine neden olabilir. Daha fazla bilgi için bkz. [işletimsel modlar](../../extensibility/debugger/operational-modes.md). Çalışma zamanı ortamı başına genellikle yalnızca bir DE uygulama vardır.
 
 > [!NOTE]
-> Transact-SQL ve VBScript için ayrı uygulamalar olmakla kalmaz [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] ve [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] tek bir de paylaşabilirsiniz.
+> Transact-SQL ve VBScript için ayrı uygulamalar vardır ancak [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] tek bir de paylaşabilirsiniz.
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] hata ayıklama, hata ayıklama altyapısının iki şekilde çalışmasını sağlar: [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kabukta aynı işlemde veya hata ayıklamakta olan hedef programla aynı işlemde. İkinci form genellikle hata ayıklamakta olan işlem aslında yorumlayıcı altında çalışan bir komut dosyası olduğunda oluşur. Betiği izlemek için hata ayıklama altyapısı yorumlayıcı intimate bilgisine sahip olmalıdır. Bu durumda, yorumlayıcı aslında bir çalışma zamanı; hata ayıklama motorları, belirli çalışma zamanı uygulamalarına yöneliktir. Buna ek olarak, tek bir DE uygulanması işlem ve makine sınırları genelinde bölünebilir (örneğin, uzaktan hata ayıklama).
 

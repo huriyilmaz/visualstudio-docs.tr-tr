@@ -1,6 +1,6 @@
 ---
 title: MSBuild nasıl proje oluşturur
-description: MSBuild 'in, Visual Studio 'dan veya bir komut satırından veya betikten çağrıldığında proje dosyalarınızı nasıl işleyeceği hakkında bilgi edinin.
+description: Visual Studio veya bir komut satırı ya da komut dosyasından çağrılıp çağrılmayacağı MSBuild proje dosyalarınızı nasıl işleyerek öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 05/18/2020
 ms.topic: conceptual
@@ -9,38 +9,39 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bc7fe3898bec19b4eb0130e7279974823669e7f
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 2c5d8a602ffaaefb17480b9f64de9c49a992db500ed5a0cebc00098f6ac34c04
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106082545"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397962"
 ---
 # <a name="how-msbuild-builds-projects"></a>MSBuild nasıl proje oluşturur
 
-MSBuild gerçekten nasıl çalışır? Bu makalede, MSBuild 'in proje dosyalarınızı nasıl işleyeceği, Visual Studio 'dan veya bir komut satırından veya betikten nasıl işlem yapılacağını öğreneceksiniz. MSBuild 'in nasıl çalıştığını bilmek, sorunları daha iyi tanılamanıza ve derleme işleminizi daha iyi özelleştirmenize yardımcı olabilir. Bu makalede, derleme süreci açıklanmakta ve büyük ölçüde tüm proje türleri için uygulanabilir.
+MSBuild aslında nasıl çalışır? bu makalede, MSBuild Visual Studio veya bir komut satırı ya da betikten sonra proje dosyalarınızı nasıl işleyeceği hakkında bilgi edineceksiniz. MSBuild nasıl çalıştığını bilmek, sorunları daha iyi tanılamanıza ve derleme işleminizi daha iyi özelleştirmenize yardımcı olabilir. Bu makalede, derleme süreci açıklanmakta ve büyük ölçüde tüm proje türleri için uygulanabilir.
 
 Tüm derleme süreci, projeyi oluşturan hedeflerin ve görevlerin [ilk başlatma](#startup), [değerlendirme](#evaluation-phase)ve [yürütme](#execution-phase) bilgisinden oluşur. Bu girdilerin yanı sıra, dış içeri aktarmalar, çözüm veya proje düzeyinde *Microsoft. Common. targets* ve [Kullanıcı tarafından yapılandırılabilen içeri aktarmalar](#user-configurable-imports) gibi [Standart içeri aktarmalar](#standard-imports) da dahil olmak üzere yapı işleminin ayrıntılarını tanımlar.
 
 ## <a name="startup"></a>Başlangıç
 
-MSBuild, *Microsoft.Build.dll* içinde MSBuild nesne modeli aracılığıyla veya yürütülebilir dosya doğrudan komut satırında ya da CI sistemlerinde olduğu gibi bir betikte çağırarak Visual Studio 'dan çağrılabilir. Her iki durumda da, yapı işlemini etkileyen girişler proje dosyasını (veya Visual Studio için dahili proje nesnesi), muhtemelen bir çözüm dosyası, ortam değişkenleri ve komut satırı anahtarları ya da nesne modeli eşdeğerleriyle içerir. Başlangıç aşamasında, oturum cihazlarını yapılandırma gibi MSBuild ayarlarını yapılandırmak için komut satırı seçenekleri veya nesne modeli eşdeğerleri kullanılır. Veya anahtarını kullanarak komut satırında ayarlanan özellikler `-property` `-p` Genel özellikler olarak ayarlanır ve proje dosyaları daha sonra okunsa bile proje dosyalarında ayarlanacak tüm değerleri geçersiz kılar.
+MSBuild, *Microsoft.Build.dll* MSBuild nesne modeli aracılığıyla Visual Studio çağrılabilir veya yürütülebilir dosya doğrudan komut satırında veya cı sistemlerinde olduğu gibi bir betikte çağrılabilir. her iki durumda da, yapı işlemini etkileyen girişler proje dosyası (veya Visual Studio iç proje nesnesi), muhtemelen bir çözüm dosyası, ortam değişkenleri ve komut satırı anahtarları veya nesne modeli eşdeğerleri içerir. başlangıç aşamasında, komut satırı seçenekleri veya nesne modeli eşdeğerleri, günlüğe kaydetme cihazlarını yapılandırma gibi MSBuild ayarları yapılandırmak için kullanılır. Veya anahtarını kullanarak komut satırında ayarlanan özellikler `-property` `-p` Genel özellikler olarak ayarlanır ve proje dosyaları daha sonra okunsa bile proje dosyalarında ayarlanacak tüm değerleri geçersiz kılar.
 
 Sonraki bölümlerde, çözüm dosyaları veya proje dosyaları gibi giriş dosyaları hakkında bilgi verilmektedir.
 
 ### <a name="solutions-and-projects"></a>Çözümler ve projeler
 
-MSBuild örnekleri bir projeden veya bir çözümün parçası olarak birçok projeden oluşabilir. Çözüm dosyası bir MSBuild XML dosyası değil, ancak MSBuild bunu verilen yapılandırma ve platform ayarları için oluşturulması gereken tüm projeleri bildirmek üzere yorumlar. MSBuild bu XML girişini işlediğinde çözüm derlemesi olarak adlandırılır. Her çözüm derlemesinde bir şey çalıştırmanızı sağlayan bazı Genişletilebilir noktalara sahiptir, ancak bu derleme bireysel proje Derlemeleriyle ayrı bir çalıştırma olduğundan, çözüm derlemeden hiçbir özellik veya hedef tanım ayarı her proje derlemesi için uygun değildir.
+MSBuild örnekleri bir projeden veya bir çözümün parçası olarak birçok projeden oluşabilir. çözüm dosyası bir MSBuild XML dosyası değildir, ancak bu dosyayı verilen yapılandırma ve platform ayarları için oluşturulması gereken tüm projeleri bildirmek üzere yorumlar MSBuild. MSBuild bu XML girişini işlediğinde çözüm derlemesi olarak adlandırılır. Her çözüm derlemesinde bir şey çalıştırmanızı sağlayan bazı Genişletilebilir noktalara sahiptir, ancak bu derleme bireysel proje Derlemeleriyle ayrı bir çalıştırma olduğundan, çözüm derlemeden hiçbir özellik veya hedef tanım ayarı her proje derlemesi için uygun değildir.
 
 Çözüm yapısını [Özelleştirme](customize-your-build.md#customize-the-solution-build)konusunda çözüm derlemesini nasıl genişletebileceğinizi öğrenebilirsiniz.
 
-### <a name="visual-studio-builds-vs-msbuildexe-builds"></a>Visual Studio derlemeleri ve MSBuild.exe derlemeleri karşılaştırması
+### <a name="visual-studio-builds-vs-msbuildexe-builds"></a>Visual Studio derlemeleri ve MSBuild.exe yapılarını karşılaştırma
 
-Projelerin Visual Studio 'da ne zaman oluşturulması arasında bazı önemli farklılıklar vardır. MSBuild çalıştırılabiliri aracılığıyla doğrudan MSBuild 'i çağırdığınızda ya da bir derlemeyi başlatmak için MSBuild nesne modelini kullandığınızda. Visual Studio, Visual Studio Derlemeleriyle ilgili proje derleme sırasını yönetir; yalnızca tek bir proje düzeyinde MSBuild çağırır ve ne zaman, `BuildingInsideVisualStudio` `BuildProjectReferences` MSBuild 'in ne yaptığını önemli ölçüde etkileyen birkaç Boole özelliği (,) ayarlanır. Her projenin içinde yürütme, MSBuild aracılığıyla çağrıldığında, ancak başvurulan projeler ile aradaki farkı ortaya çıkar. MSBuild 'de, başvurulan projeler gerekli olduğunda, aslında bir yapı oluşur; diğer bir deyişle, görevleri ve araçları çalıştırır ve çıktıyı oluşturur. Visual Studio derlemesi başvurulan bir proje bulduğunda, MSBuild yalnızca başvurulan projeden beklenen çıkışları döndürür; Visual Studio 'nun bu diğer projelerin oluşturulmasını denetlemesine olanak tanır. Visual Studio derleme sırasını ve MSBuild 'e (gerektiğinde), tamamen Visual Studio 'nun denetimi altına göre ayrı olarak çağrı ve çağrıları belirler.
+Visual Studio ' de projelerin ne zaman derlenmesi arasında bazı önemli farklılıklar vardır. MSBuild çalıştırılabiliri aracılığıyla ya da bir derlemeyi başlatmak için MSBuild nesne modelini kullanırken MSBuild doğrudan çağırdığınızda. Visual Studio, Visual Studio derlemeler için proje derleme sırasını yönetir; yalnızca tek bir proje düzeyinde MSBuild çağırır ve ne zaman, MSBuild ne olduğunu önemli ölçüde etkileyen birkaç boole özelliği ( `BuildingInsideVisualStudio` , `BuildProjectReferences` ) ayarlanır. her projenin içinde yürütme, MSBuild ile çağrıldığında aynı olur, ancak başvurulan projelerle aradaki fark oluşur. MSBuild, başvurulan projeler gerekli olduğunda, aslında bir yapı oluşur; diğer bir deyişle, görevleri ve araçları çalıştırır ve çıktıyı oluşturur. Visual Studio derlemesi başvurulan bir projeyi bulduğunda, MSBuild yalnızca başvurulan projeden beklenen çıktıları döndürür; Visual Studio diğer projelerin oluşturulmasını denetlemenize olanak tanır. Visual Studio, derleme sırasını belirler ve tamamen Visual Studio denetimi altında tamamen MSBuild olarak (gerektiğinde) çağırır.
 
-MSBuild bir çözüm dosyasıyla çağrıldığında, MSBuild çözüm dosyasını ayrıştırır, standart bir XML giriş dosyası oluşturur, değerlendirir ve projeyi bir proje olarak yürütür. Çözüm derlemesi herhangi bir projeden önce yürütülür. Visual Studio 'dan derlerken, hiçbir şey olmaz; MSBuild çözüm dosyasını hiçbir şekilde görmez. Sonuç olarak, çözüm yapı özelleştirmesi (daha önce kullanarak) *. SolutionName. sln. targets* ve *After. SolutionName. sln. targets*) yalnızca MSBuild.exe veya nesne modeli temelli, Visual Studio derlemeleri için geçerlidir.
+MSBuild bir çözüm dosyasıyla çağrıldığında MSBuild çözüm dosyasını ayrıştırır, standart bir XML giriş dosyası oluşturur, değerlendirir ve projeyi bir proje olarak yürütür. Çözüm derlemesi herhangi bir projeden önce yürütülür. Visual Studio oluşturulurken bu durum gerçekleşmediği halde, MSBuild çözüm dosyasını hiçbir şekilde görmez. Sonuç olarak, çözüm yapı özelleştirmesi (daha önce kullanarak) *. SolutionName. sln. targets* ve *After. solutionname. sln. targets*) yalnızca MSBuild.exe veya nesne modeli temelli, Visual Studio derlemeleri için geçerlidir.
 
 ### <a name="project-sdks"></a>Proje SDK’leri
 
@@ -67,13 +68,13 @@ Bu geçişlerinin sırası önemli etkilere sahiptir ve proje dosyasını özell
 
 ### <a name="evaluate-environment-variables"></a>Ortam değişkenlerini değerlendir
 
-Bu aşamada, eşdeğer özellikleri ayarlamak için ortam değişkenleri kullanılır. Örneğin, PATH ortam değişkeni bir özellik olarak kullanılabilir hale getirilir `$(PATH)` . Komut satırından veya bir betikten çalıştırıldığında, komut ortamı normal olarak kullanılır ve Visual Studio 'dan çalıştırıldığında, Visual Studio başlatıldığında geçerli olan ortam kullanılır.
+Bu aşamada, eşdeğer özellikleri ayarlamak için ortam değişkenleri kullanılır. Örneğin, PATH ortam değişkeni bir özellik olarak kullanılabilir hale getirilir `$(PATH)` . komut satırından veya bir betikten çalıştırıldığında, komut ortamı normal olarak kullanılır ve Visual Studio çalıştırıldığında, Visual Studio başlatıldığında geçerli olan ortam kullanılır.
 
 ### <a name="evaluate-imports-and-properties"></a>İçeri aktarmaları ve özellikleri değerlendir
 
-Bu aşamada, proje dosyaları ve tüm içeri aktarma zinciri dahil olmak üzere tüm giriş XML 'SI okundu. MSBuild, projenin ve tüm içeri aktarılan dosyaların XML 'sini temsil eden bellek içi bir XML yapısı oluşturur. Şu anda, hedeflerde olmayan özellikler değerlendirilir ve ayarlanır.
+Bu aşamada, proje dosyaları ve tüm içeri aktarma zinciri dahil olmak üzere tüm giriş XML 'SI okundu. MSBuild, projenin ve tüm içeri aktarılan dosyaların xml 'sini temsil eden bellek içi bir xml yapısı oluşturur. Şu anda, hedeflerde olmayan özellikler değerlendirilir ve ayarlanır.
 
-Tüm XML giriş dosyalarını kendi sürecinde erken okurken MSBuild 'in bir sonucu olarak, derleme işlemi sırasında bu girdilerde yapılan değişiklikler geçerli derlemeyi etkilemez.
+tüm XML giriş dosyalarını kendi sürecinde erken okuma MSBuild bir sonucu olarak, derleme işlemi sırasında bu girdilerde yapılan değişiklikler geçerli derlemeyi etkilemez.
 
 Herhangi bir hedefin dışındaki özellikler, hedefler içindeki özelliklerden farklı şekilde işlenir. Bu aşamada, yalnızca herhangi bir hedefin dışında tanımlanan özellikler değerlendirilir.
 
@@ -111,29 +112,29 @@ Sıralama kuralları, [hedef derleme sırasını belirlemede](target-build-order
 
 ### <a name="project-references"></a>Proje Başvuruları
 
-MSBuild 'in ele aldığı iki kod yolu vardır, normal bir, burada açıklanmıştır ve sonraki bölümde açıklanan Graph seçeneği.
+MSBuild iki kod yolu vardır. bu, normal bir, ve sonraki bölümde açıklanan graph seçeneğidir.
 
 Bireysel projeler, diğer projelere öğeler aracılığıyla bağımlılığını belirler `ProjectReference` . Yığının en üstündeki bir proje oluşturmaya başladığında, `ResolveProjectReferences` ortak hedef dosyalarında tanımlanmış standart bir hedef olan hedefin çalıştırıldığı noktaya ulaşır.
 
-`ResolveProjectReferences` çıkışları almak için öğelerin girişleri ile MSBuild görevini çağırır `ProjectReference` . `ProjectReference`Öğeler gibi yerel öğelere dönüştürülür `Reference` . Geçerli projenin MSBuild yürütme aşaması, yürütme aşaması başvurulan projeyi işlemeye başladığında duraklar. (değerlendirme aşaması gerektiği şekilde yapılır). Başvurulan proje yalnızca bağımlı projeyi oluşturmaya başladıktan sonra oluşturulur ve bu sayede proje oluşturan projeler ağacı oluşturulur.
+`ResolveProjectReferences`MSBuild görevini, `ProjectReference` çıkışları almak için öğelerin girişleri ile çağırır. `ProjectReference`Öğeler gibi yerel öğelere dönüştürülür `Reference` . geçerli proje için MSBuild yürütme aşaması, yürütme aşaması başvurulan projeyi işlemeye başladığında duraklatılır. (değerlendirme aşaması öncelikle gerektiği şekilde yapılır). Başvurulan proje yalnızca bağımlı projeyi oluşturmaya başladıktan sonra oluşturulur ve bu sayede proje oluşturan projeler ağacı oluşturulur.
 
-Visual Studio, çözüm (. sln) dosyalarında proje bağımlılıkları oluşturulmasına olanak sağlar. Bağımlılıklar çözüm dosyasında belirtilir ve yalnızca bir çözüm oluşturulurken veya Visual Studio içinde oluşturulurken dikkate alınır. Tek bir proje oluşturuyorsanız, bu bağımlılık türü yok sayılır. Çözüm başvuruları öğelere MSBuild tarafından dönüştürülür `ProjectReference` ve bundan sonra aynı şekilde işlenir.
+Visual Studio çözüm (. sln) dosyalarında proje bağımlılıkları oluşturulmasına izin verir. Bağımlılıklar çözüm dosyasında belirtilir ve yalnızca bir çözüm oluşturulurken veya Visual Studio içinde oluşturulurken dikkate alınır. Tek bir proje oluşturuyorsanız, bu bağımlılık türü yok sayılır. çözüm başvuruları MSBuild tarafından `ProjectReference` öğelere dönüştürülür ve bundan sonra aynı şekilde işlenir.
 
 ### <a name="graph-option"></a>Graph seçeneği
 
-Grafik yapı anahtarını (veya) belirtirseniz, `-graphBuild` `-graph` `ProjectReference` MSBuild tarafından kullanılan birinci sınıf kavram olur. MSBuild, projenin tüm projelerini ayrıştırır ve yapı sırası grafı oluşturur. Bu, daha sonra yapı sırasını belirlemede geçen bir işlem olur. Ayrı projelerdeki hedeflerde olduğu gibi, MSBuild, başvurulan projelerin bağımlı oldukları projelerden sonra derlenmesini sağlar.
+Grafik yapı anahtarını (veya) belirtirseniz, `-graphBuild` `-graph` `ProjectReference` MSBuild tarafından kullanılan ilk sınıf kavram olur. MSBuild, tüm projeleri ayrıştırarak, projenin gerçek bağımlılık grafiği olan yapı sırası grafiğini oluşturur ve bu da yapı sırasını belirlemede geçen bir işlem olur. tek tek projelerdeki hedeflerde olduğu gibi MSBuild, başvurulan projelerin bağımlı oldukları projelerden sonra oluşturulduğundan emin olur.
 
 ## <a name="parallel-execution"></a>Paralel yürütme
 
-Çok işlemcili destek ( `-maxCpuCount` veya `-m` anahtar) kullanıyorsanız, MSBuild, kullanılabilir CPU çekirdeklerini kullanan MSBuild işlemi olan düğümleri oluşturur. Her proje kullanılabilir bir düğüme gönderilir. Bir düğüm içinde, tek tek proje, yürütme işlem temelli olarak oluşturulur.
+çok işlemcili destek ( `-maxCpuCount` veya `-m` anahtar) kullanıyorsanız, MSBuild, kullanılabilir CPU çekirdeklerini kullanan MSBuild süreçler olan düğümleri oluşturur. Her proje kullanılabilir bir düğüme gönderilir. Bir düğüm içinde, tek tek proje, yürütme işlem temelli olarak oluşturulur.
 
-Görevler <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> , MSBuild 'teki özelliğin değerine göre ayarlanmış bir Boole değişkeni ayarlanarak paralel yürütme için etkinleştirilebilir `$(BuildInParallel)` . Paralel yürütme için etkinleştirilen görevler için, bir çalışma Zamanlayıcı düğümleri yönetir ve işleri düğümlere atar.
+Görevler, <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> MSBuild özelliğin değerine göre ayarlanmış bir Boole değişkeni ayarlanarak paralel yürütme için etkinleştirilebilir `$(BuildInParallel)` . Paralel yürütme için etkinleştirilen görevler için, bir çalışma Zamanlayıcı düğümleri yönetir ve işleri düğümlere atar.
 
 Bkz. [MSBuild ile paralel olarak birden çok proje oluşturma](building-multiple-projects-in-parallel-with-msbuild.md)
 
 ## <a name="standard-imports"></a>Standart içeri aktarmalar
 
-*Microsoft. Common. props* ve *Microsoft. Common. targets* , .NET proje dosyaları tarafından (AÇıKÇA veya örtük olarak SDK stili projelere) Içeri aktarılır ve Visual Studio yüklemesinde *msbuild\current\bin* klasöründe bulunur. C++ projelerinin içeri aktarmalar hiyerarşisi vardır; bkz. [C++ projeleri Için MSBuild Iç işlevleri](/cpp/build/reference/msbuild-visual-cpp-overview).
+*microsoft. common. props* ve *microsoft. common. targets* , .net proje dosyaları (açıkça veya örtük olarak SDK stili projelere) tarafından içeri aktarılır ve Visual Studio yüklemesinde *MSBuild \current\bin* klasöründe bulunur. C++ projelerinin içeri aktarmalar hiyerarşisi vardır; bkz. [C++ projeleri için MSBuild iç işlevleri](/cpp/build/reference/msbuild-visual-cpp-overview).
 
 *Microsoft. Common. props* dosyası, geçersiz kılabileceğiniz Varsayılanları ayarlar. Proje dosyasının başlangıcında içeri aktarılır (açıkça veya örtük olarak). Bu şekilde, projenizin ayarları varsayılandan sonra görünür, böylece bunları geçersiz kılar.
 
@@ -195,22 +196,22 @@ Uygulamasında, *Microsoft. Common. targets* , *Microsoft. Common. CurrentVersio
 
 Aşağıdaki tabloda bu hedefler açıklanmaktadır; Bazı hedefler yalnızca belirli proje türleri için geçerlidir.
 
-| Hedef | Description |
+| Hedef | Açıklama |
 |--------|-------------|
-| BuildOnlySettings | Visual Studio tarafından proje yükünde MSBuild çağrıldığında, yalnızca gerçek derlemeler için ayarlar. |
+| BuildOnlySettings | Visual Studio tarafından proje yükünde MSBuild çağrıldığında değil yalnızca gerçek derlemeler için Ayarlar. |
 | PrepareForBuild | Derleme için önkoşulları hazırlama |
 | PreBuildEvent | Derlemeden önce yürütülecek görevleri tanımlamak için projeler için uzantı noktası |
 | ResolveProjectReferences | Proje bağımlılıklarını çözümleme ve başvurulan projeleri derleme |
 | ResolveAssemblyReferences| Başvurulan derlemeleri bulun. |
 | Resolvereferde | `ResolveProjectReferences` `ResolveAssemblyReferences` Tüm bağımlılıkları bulmak için ve içerir |
 | PrepareResources | Kaynak dosyalarını işle |
-| ResolveKeySource| Derlemeyi imzalamak için kullanılan tanımlayıcı ad anahtarını ve [ClickOnce](../deployment/clickonce-security-and-deployment.md) bildirimlerini imzalamak için kullanılan sertifikayı çözün. |
+| ResolveKeySource| derlemeyi imzalamak için kullanılan tanımlayıcı ad anahtarını ve [ClickOnce](../deployment/clickonce-security-and-deployment.md) bildirimlerini imzalamak için kullanılan sertifikayı çözün. |
 | Se | Derleyiciyi çağırır |
 | ExportWindowsMDFile | Derleyici tarafından oluşturulan WinMDModule dosyalarından bir [winmd](/uwp/winrt-cref/winmd-files) dosyası oluşturun. |
 | Unmanagedkayıt silme | Önceki bir derlemeden [com birlikte çalışma](/dotnet/standard/native-interop/cominterop) kayıt defteri girdilerini kaldırma/Temizleme |
 | GenerateSerializationAssemblies | [sgen.exe](/dotnet/standard/serialization/xml-serializer-generator-tool-sgen-exe)kullanarak bir XML serileştirme bütünleştirilmiş kodu oluşturun.|
 | CreateSatelliteAssemblies | Kaynaklardaki her benzersiz kültür için bir uydu bütünleştirilmiş kodu oluşturun. |
-| Bildirim oluştur | [ClickOnce](../deployment/clickonce-security-and-deployment.md) uygulaması ve dağıtım bildirimleri veya yerel bir bildirim oluşturur. |
+| Bildirim oluştur | [ClickOnce](../deployment/clickonce-security-and-deployment.md) uygulama ve dağıtım bildirimleri veya yerel bir bildirim oluşturur. |
 | GetTargetPath | Bu proje için derleme ürününü (yürütülebilir veya derleme) içeren, meta verilerle bir öğe döndürün. |
 | PrepareForRun | Yapı çıktılarını değiştirildiklerinde son dizine kopyalayın. |
 | UnmanagedRegistration | [Com birlikte çalışması](/dotnet/standard/native-interop/cominterop) için kayıt defteri girişlerini ayarlama |
@@ -232,13 +233,13 @@ Bu dosyalar, içindeki herhangi bir alt klasördeki herhangi bir proje için sta
 
 ## <a name="customizations-in-a-project-file"></a>Proje dosyasındaki özelleştirmeler
 
-Visual Studio, **Çözüm Gezgini**, **Özellikler** penceresinde veya **proje özelliklerinde** değişiklik yaparken proje dosyalarınızı güncelleştirir, ancak proje dosyasını doğrudan düzenleyerek kendi değişikliklerinizi de yapabilirsiniz.
+Visual Studio, **Çözüm Gezgini**, **özellikler** penceresinde veya **Project özelliklerde** değişiklik yaparken proje dosyalarınızı güncelleştirir, ancak proje dosyasını doğrudan düzenleyerek kendi değişikliklerinizi de yapabilirsiniz.
 
-Birçok yapı davranışı, proje ve çözümlerin tüm klasörlerinin genel olarak özellikleri ayarlamak için *, bir projeye* yerel ayarlar için proje dosyasında ya da önceki bölümde belirtildiği gibi, MSBuild özellikleri ayarlanarak yapılandırılabilir. Komut satırında veya betiklerdeki geçici derlemeler için, `/p` belirli bir MSBuild çağrısı için özellikleri ayarlamak üzere komut satırındaki seçeneğini de kullanabilirsiniz. Ayarlayabileceğiniz özellikler hakkında daha fazla bilgi için bkz. [Ortak MSBuild proje özellikleri](common-msbuild-project-properties.md) .
+birçok yapı davranışı, proje ve çözümlerin tüm klasörlerinin genel olarak özellikleri ayarlamak için, bir projeye yerel ayarlar için proje dosyasında ya da önceki bölümde bahsedilerek bir *dizin. build. props* dosyası oluşturularak MSBuild yapılandırılabilir. Komut satırında veya betiklerdeki geçici derlemeler için, `/p` belirli bir MSBuild çağrısı için özellikleri ayarlamak üzere komut satırındaki seçeneğini de kullanabilirsiniz. ayarlayabileceğiniz özellikler hakkında bilgi için bkz. [ortak MSBuild proje özellikleri](common-msbuild-project-properties.md) .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-MSBuild işlemi, burada açıklananlar dışında birkaç başka uzantı noktasına sahiptir. Bkz. [yapınızı özelleştirme](customize-your-build.md). [Visual Studio derleme işlemini genişletme](how-to-extend-the-visual-studio-build-process.md).
+MSBuild işlemi, burada açıklananlar dışında birkaç başka uzantı noktasına sahiptir. Bkz. [yapınızı özelleştirme](customize-your-build.md). [Visual Studio yapı sürecini genişletir](how-to-extend-the-visual-studio-build-process.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

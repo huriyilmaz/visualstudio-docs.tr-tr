@@ -1,6 +1,6 @@
 ---
-description: İlişkili programa ekler veya Attach işlemini Attach yöntemine erteler.
-title: 'IDebugProgramNodeAttach2:: OnAttach | Microsoft Docs'
+description: İlişkili programa iliştirer veya attach işlemini Attach yöntemine karşılar.
+title: IDebugProgramNodeAttach2::OnAttach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 5fe52761-a508-4ab5-abdb-334fb6590334
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 334a8e4bdf559e2d39d52a03dcf1a849f73af3e8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0650005ca04b01265f6e675db9426856389235caadfc36bb457280d7fbba1fb6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087268"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402642"
 ---
 # <a name="idebugprogramnodeattach2onattach"></a>IDebugProgramNodeAttach2::OnAttach
-İlişkili programa ekler veya Attach işlemini [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemine erteler.
+İlişkili programa iliştirer veya attach işlemini [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemine karşılar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,10 +46,10 @@ int OnAttach(
 [in] `GUID` ilişkili programa atamak için.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE` [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) yönteminin çağrılmaması gerekiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. `S_FALSE` [Attach yönteminin](../../../extensibility/debugger/reference/idebugengine2-attach.md) çağrılmaysa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, [Attach yöntemi çağrılmadan önce iliştirme işlemi](../../../extensibility/debugger/reference/idebugengine2-attach.md) sırasında çağrılır. `OnAttach`Yöntemi, Attach işlemini kendisi gerçekleştirebilir (Bu durumda, bu yöntem ' i döndürür `S_FALSE` ) veya iliştirme işlemini yönteme erteleyin `IDebugEngine2::Attach` ( `OnAttach` Yöntem döndürür `S_OK` ). Her iki olayda da `OnAttach` yöntemi, `GUID` hata ayıklanan programın belirtilen ' a göre ayarlayabilir `GUID` .
+ Bu yöntem, Attach yöntemi çağrılmadan [önce, ekleme işlemi](../../../extensibility/debugger/reference/idebugengine2-attach.md) sırasında çağrılır. yöntemi, ekleme işleminin kendisini gerçekleştirebilirsiniz (bu durumda bu yöntem döndürür) veya ekleme işlemini yöntemine `OnAttach` `S_FALSE` `IDebugEngine2::Attach` erteler `OnAttach` (yöntem `S_OK` döndürür). Her iki durumda `OnAttach` da yöntemi, hata `GUID` ayıklaması yapılan programın 'ı verilen olarak `GUID` ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)

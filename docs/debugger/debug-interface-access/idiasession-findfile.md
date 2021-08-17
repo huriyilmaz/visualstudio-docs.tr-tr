@@ -1,6 +1,6 @@
 ---
-description: Kaynak dosyalarını compiland ve adına göre alır.
-title: 'IDiaSession:: findFile | Microsoft Docs'
+description: Kaynak dosyaları compiland ve name'e göre alınır.
+title: IDiaSession::findFile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: a215dc21-b316-40d7-9923-55bfa014976b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: af547f9e504e9d832968bd18a370cb43e816e786
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: eddff6e842bdf29bfe07d7219e5cca5861be16ed4634d26f7ccdb02bdbdb0ec9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159008"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391867"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
-Kaynak dosyalarını compiland ve adına göre alır.
+Kaynak dosyaları compiland ve name'e göre alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,22 +38,22 @@ HRESULT findFile (
 #### <a name="parameters"></a>Parametreler
  `pCompiland`
 
-'ndaki Arama için bağlam olarak kullanılacak compiland 'yi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. `NULL`Tüm uygulamalarda kaynak dosyaları bulmak için bu parametreyi olarak ayarlayın.
+[in] Arama için bağlam olarak kullanılacak derlemeyi temsil eden [bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. Tüm derlemelerde `NULL` kaynak dosyaları bulmak için bu parametreyi olarak ayarlayın.
 
  `name`
 
-'ndaki Alınacak kaynak dosyanın adını belirtir. Bu parametreyi, alınacak `NULL` tüm kaynak dosyaları için olarak ayarlayın.
+[in] Alınan kaynak dosyanın adını belirtir. Tüm kaynak dosyalarının `NULL` alınsı için bu parametreyi olarak ayarlayın.
 
  `option`
 
-'ndaki Ad aramaya uygulanan karşılaştırma seçeneklerini belirtir. [NameSearchOptions numaralandırma](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırmasındaki değerler tek başına veya birlikte kullanılabilir.
+[in] Ad arama için uygulanan karşılaştırma seçeneklerini belirtir. [NameSearchOptions Enumeration enumeration](../../debugger/debug-interface-access/namesearchoptions.md) değerleri tek başına veya birlikte kullanılabilir.
 
  `ppResult`
 
-dışı Alınan kaynak dosyalarının listesini içeren bir [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) nesnesi döndürür.
+[out] Alınan kaynak dosyaların listesini içeren bir [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

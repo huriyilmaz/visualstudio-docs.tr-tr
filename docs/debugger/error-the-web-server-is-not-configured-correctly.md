@@ -15,14 +15,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 82af476e51e8fe016e5966847c8c6a7b3e45b0ce
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 711572aac90d499fb0392e56dada57b16c58e8e3823cee761a9825b6ab81bb99
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146528"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419903"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>Hata: Web sunucusu doğru yapılandırılmamış
 
@@ -34,17 +35,17 @@ Bu sorunu çözmek için şu adımları uygulayın:
 
     Örneğin, bir yayın derlemesi için bir yayımlama profili kullanıyorsanız, bunu hata ayıklama ve yeniden yayımlama için değiştirin. Aksi takdirde, hata ayıklama özniteliği yayımladığınızda olarak ayarlanır `false` .
 
-2. ISS Fiziksel yolun doğru olduğundan emin olun. IIS 'de bu ayarı, **fiziksel ayarlar > fiziksel yol** (veya daha eski IIS sürümlerindeki **Gelişmiş ayarlar** ) içinde bulabilirsiniz.
+2. ISS Fiziksel yolun doğru olduğundan emin olun. ııs 'de, bu ayarı **temel Ayarlar > fiziksel yol** (veya daha eski ııs sürümlerinde **gelişmiş Ayarlar** ) içinde bulabilirsiniz.
 
     Web uygulaması farklı bir makineye kopyalanmışsa, el ile yeniden adlandırılırsa veya taşındığında fiziksel yol yanlış olabilir. IIS 'i sıfırlayın ve yeniden deneyin.
 
-3. Visual Studio 'da yerel olarak hata ayıklaması yapıyorsanız, özelliklerde doğru sunucunun seçildiğini doğrulayın. (Proje türüne bağlı olarak **hata ayıklama >** **Web > sunucuları veya özellikleri > Özellikler** açın. Web Forms bir proje için, özellik sayfaları ' nı açın **> Başlat seçenekler > sunucu**).
+3. Visual Studio yerel olarak hata ayıklaması yapıyorsanız, özelliklerde doğru sunucunun seçildiğini doğrulayın. (Proje türüne bağlı olarak **hata ayıklama >** **Web > sunucuları veya özellikleri > Özellikler** açın. Web Forms bir proje için, özellik sayfaları ' nı açın **> başlat seçenekler > sunucu**).
 
-    IIS gibi bir dış (özel) sunucu kullanıyorsanız, URL 'nin doğru olması gerekir. Aksi takdirde IIS Express seçin ve yeniden deneyin.
+    IIS gibi bir dış (özel) sunucu kullanıyorsanız, URL 'nin doğru olması gerekir. aksi takdirde IIS Express seçin ve yeniden deneyin.
 
-4. ISS Sunucuda doğru ASP.NET sürümünün yüklü olduğundan emin olun.
+4. ISS sunucuda doğru ASP.NET sürümünün yüklü olduğundan emin olun.
 
-    IIS 'de ve Visual Studio projenizde eşleşmeyen ASP.NET sürümleri bu soruna neden olabilir. Çerçeve sürümünü web.config ayarlamanız gerekebilir. IIS 'de ASP.NET yüklemek için [Web Platformu Yükleyicisi (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)kullanın. Ayrıca bkz. [ASP.NET 3,5 ve ASP.NET 4,5 kullanarak ııs 8,0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) veya ASP.NET Core, [Windows üzerinde IIS ile barındırma](https://docs.asp.net/en/latest/publishing/iis.html).
+    ııs ve Visual Studio projenizde ASP.NET eşleşmeyen sürümleri bu soruna neden olabilir. Çerçeve sürümünü web.config ayarlamanız gerekebilir. ııs 'de ASP.NET yüklemek için [Web platformu yükleyicisi (webpı)](https://www.microsoft.com/web/downloads/platform.aspx)kullanın. ayrıca bkz. [ııs 8,0 ASP.NET 3,5 ve ASP.NET 4,5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) veya ASP.NET Core, [Windows üzerinde ııs ile barındırma](https://docs.asp.net/en/latest/publishing/iis.html).
 
 4. `maxConnection`IIS 'deki sınır çok düşükse ve çok fazla bağlantınız varsa, [bağlantı sınırını artırmanız](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)gerekebilir.
 

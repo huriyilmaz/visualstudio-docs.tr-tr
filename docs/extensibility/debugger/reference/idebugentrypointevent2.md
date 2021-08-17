@@ -1,5 +1,5 @@
 ---
-description: Hata ayıklama altyapısı (DE), program kullanıcı kodunun ilk yönergesini yürütmek üzere olduğunda, bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.
+description: Program ilk kullanıcı kodu yönergesini yürütmekle ilgili olduğunda hata ayıklama altyapısı (DE) bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
 title: IDebugEntryPointEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: a15d1cc3-97b7-438c-8d24-c23149708f42
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ccc928b3d0ca9106b6f83a4c398a694ba429ce8f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b41a6b95f0a7f0a842656e798f21aae1273cfc5a16869399de57d94604f180f0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066002"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389962"
 ---
 # <a name="idebugentrypointevent2"></a>IDebugEntryPointEvent2
-Hata ayıklama altyapısı (DE), program kullanıcı kodunun ilk yönergesini yürütmek üzere olduğunda, bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.
+Program ilk kullanıcı kodu yönergesini yürütmekle ilgili olduğunda hata ayıklama altyapısı (DE) bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,23 +30,23 @@ Hata ayıklama altyapısı (DE), program kullanıcı kodunun ilk yönergesini y�
 IDebugEntryPointEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- DE bu arabirimi normal işlemlerinin bir parçası olarak uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` .
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, bu arabirimi normal işlemlerinin bir parçası olarak uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- , Hata ayıklaması yapılan program yüklendiğinde ve kullanıcı kodunun ilk yönergesini yürütmeye hazırsa bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE, hata ayıklaması yapılan program yüklendiğinde ve kullanıcı kodunun ilk yönergelerini yürütmeye hazır olduğunda bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
 ## <a name="remarks"></a>Açıklamalar
-- [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) , program ilk yönergeyi yürütmek üzere olduğunda gönderilir. Örneğin, `IDebugEntryPoint2` program kullanıcının işlevini yürütmek üzere olduğunda gönderilir `main` .
+- [Program ilk yönergeyi yürütmek üzereyken IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) gönderilir. Örneğin, `IDebugEntryPoint2` program kullanıcının işlevini yürütmek üzereyken `main` gönderilir.
 
- Aynı olduğunda `IDebugEntryPointEvent2` , geçerli kod konumu kullanıcı kodunun ilk yönergesinde (gibi) olmalıdır `main` .
+ DE `IDebugEntryPointEvent2` gönderdiğinde, geçerli kod konumu gibi kullanıcı kodunun ilk yönergesinde yer alalıdır. `main`
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

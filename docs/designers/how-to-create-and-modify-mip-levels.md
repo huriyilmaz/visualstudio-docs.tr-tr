@@ -8,14 +8,15 @@ ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: be95611d7d1c931e1b349e7a8c6dc0be75c7c832
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 03840d4729ff719a7c52629e3acc553045e7147ebcaa467dd83c729371648166
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930986"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390816"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>Nasıl yapılır: MIP düzeyleri oluşturma ve değiştirme
 Bu belgede, doku alanı ayrıntı düzeyi (LoD) için *MIP düzeylerini* oluşturmak ve değiştirmek üzere **Görüntü Düzenleyicisi** 'nin nasıl kullanılacağı gösterilir.

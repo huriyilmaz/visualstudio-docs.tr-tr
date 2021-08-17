@@ -11,17 +11,18 @@ ms.assetid: d5b04bba-a8b9-4141-94fb-250c77f0534c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 388df1aaf2a0c93dd8860eaea22fcc9b49e684ad
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8fb797eb97a9d440893d23b9d00d883514cf58b32dec165cb5cd2ce3cdbfe79f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058150"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415550"
 ---
 # <a name="ienumdebugerrorbreakpoints2reset"></a>IEnumDebugErrorBreakpoints2::Reset
 Numaralandırmayı ilk öğeye sıfırlar.

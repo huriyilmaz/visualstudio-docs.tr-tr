@@ -6,15 +6,16 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 41863ccc845b0f74c300e927708e238193f223ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed58771c45061c180e5ff506babb78bac92416c41362eb8f9a873084df03444c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934864"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121395524"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Kodlanmış UI test günlüklerini kullanarak kodlanmış UI testlerini çözümleme
 
@@ -28,9 +29,9 @@ Senaryonuza bağlı olarak, günlüğü etkinleştirmek için aşağıdaki yönt
 
 - Test projenizde bir *App.config* dosyası yoksa:
 
-   1. Testinizi çalıştırdığınızda hangi *QTAgent \* . exe* işleminin başlatılmayı saptayın. Bunu yapmanın bir yolu Windows **Görev Yöneticisi**'nde **Ayrıntılar** sekmesini izlerken.
+   1. Testinizi çalıştırdığınızda hangi *QTAgent \*.exe* işleminin başlatılmayı saptayın. bunu yapmanın bir yolu Windows **görev yöneticisi**'ndeki **ayrıntılar** sekmesini izlerken.
 
-   2. *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\IDE* klasöründe karşılık gelen *. config* dosyasını açın. Örneğin, çalıştıran işlem *QTAgent_40.exe*, *QTAgent_40.exe.config* açın.
+   2. *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \\ \<edition> \Common7\IDE* klasöründen karşılık gelen *.config* dosyasını açın. Örneğin, çalıştıran işlem *QTAgent_40.exe*, *QTAgent_40.exe.config* açın.
 
    2. **EqtTraceLevel** değerini istediğiniz günlük düzeyi ile değiştirin.
 
@@ -64,7 +65,7 @@ Senaryonuza bağlı olarak, günlüğü etkinleştirmek için aşağıdaki yönt
 
 *QTAgent \*.exe.config* dosyasında yapılan DEĞIŞIKLIKLERLE kodlanmış bir UI testi çalıştırdığınızda, **Test Gezgini** sonuçlarında bir çıkış bağlantısı görürsünüz. Günlük dosyaları yalnızca testiniz başarısız olduğunda değil, izleme düzeyi **verbose** olarak ayarlandığında de başarılı testler için değil.
 
-1. **Test** menüsünde **Windows** ' u ve ardından **Test Gezgini**' ni seçin.
+1. **test** menüsünde **Windows** öğesini seçin ve ardından **test gezgini**' ni seçin.
 
 2. **Build** menüsünde **Build Solution** öğesini seçin.
 
@@ -73,7 +74,7 @@ Senaryonuza bağlı olarak, günlüğü etkinleştirmek için aşağıdaki yönt
      Otomatikleştirilmiş testler çalışır ve başarılı veya başarısız olup olmadığını gösterir.
 
     > [!TIP]
-    > **Test Gezginini** görüntülemek için **Test**  >  **pencereleri**' ni ve ardından **Test Gezgini**' ni seçin.
+    > **test gezginini** görüntülemek için **test**  >  **Windows** seçin ve ardından **test gezgini**' ni seçin.
 
 4. **Test Gezgini** sonuçlarında **Çıkış** bağlantısını seçin.
 

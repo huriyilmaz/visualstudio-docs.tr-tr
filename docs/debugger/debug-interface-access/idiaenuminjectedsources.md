@@ -1,5 +1,5 @@
 ---
-description: Veri kaynağında yer alan çeşitli eklenen kaynakları numaralandırın.
+description: Veri kaynağında bulunan çeşitli kaynaklara ekleme.
 title: IDiaEnumInjectedSources | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: f97e2392-22e1-48da-b7ce-ad94c8b684b0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: eb7ba63a06a18db75c969e5bc30ec462c2ccc618
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: eb012beb12b81b39afd61c155f2b5799f837dfdbb460532dcfd5adad529af51f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157996"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392531"
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
-Veri kaynağında yer alan çeşitli eklenen kaynakları numaralandırın.
+Veri kaynağında bulunan çeşitli kaynaklara ekleme.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,26 +30,26 @@ Veri kaynağında yer alan çeşitli eklenen kaynakları numaralandırın.
 IDiaEnumInjectedSources : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumInjectedSources` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaEnumInjectedSources` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumInjectedSources::get__NewEnum](../../debugger/debug-interface-access/idiaenuminjectedsources-get-newenum.md)|Bu Numaralandırıcının [IEnumVARIANT arabirimi](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) sürümünü alır.|
-|[IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)|Eklenen kaynakların sayısını alır.|
-|[IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)|Eklenen kaynağı bir dizin aracılığıyla alır.|
-|[IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)|Sabit Listesi dizisinde belirtilen sayıda eklenen kaynağı alır.|
-|[IDiaEnumInjectedSources::Skip](../../debugger/debug-interface-access/idiaenuminjectedsources-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda eklenen kaynağı atlar.|
-|[IDiaEnumInjectedSources::Reset](../../debugger/debug-interface-access/idiaenuminjectedsources-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[IDiaEnumInjectedSources::Clone](../../debugger/debug-interface-access/idiaenuminjectedsources-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[IDiaEnumInjectedSources::get__NewEnum](../../debugger/debug-interface-access/idiaenuminjectedsources-get-newenum.md)|Bu [numaralayıcının IEnumVARIANT](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) Arabirimi sürümünü alın.|
+|[IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)|Ekleme yapılan kaynakların sayısını alın.|
+|[IDiaEnumInjectedSources::Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)|Bir dizin ile bir ekleme kaynağı alınır.|
+|[IDiaEnumInjectedSources::Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)|Numaralama sırasına belirtilen sayıda kaynak eklemesini sağlar.|
+|[IDiaEnumInjectedSources::Skip](../../debugger/debug-interface-access/idiaenuminjectedsources-skip.md)|Bir numaralama dizisinde belirtilen sayıdaki ekli kaynağı atlar.|
+|[IDiaEnumInjectedSources::Reset](../../debugger/debug-interface-access/idiaenuminjectedsources-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[IDiaEnumInjectedSources::Clone](../../debugger/debug-interface-access/idiaenuminjectedsources-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim, belirli bir kaynak dosyanın adı ile [IDiaSession:: findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) yöntemi çağırarak veya arabirimin GUID 'Si Ile [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) metodunu çağırarak elde edilir `IDiaEnumInjectedSources` .
+Bu arabirim, belirli bir kaynak dosyanın adıyla [IDiaSession::findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) yöntemi çağrılarak veya arabirimin GUID'si ile [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) yöntemi çağrılarak `IDiaEnumInjectedSources` elde edilir.
 
 ## <a name="example"></a>Örnek
-Bu örnek, arabirimin nasıl alınacağını ( `GetEnumInjectedSources` işlevin) ve nasıl kullanılacağını ( `DumpAllInjectedSources` işlev) gösterir `IDiaEnumInjectedSources` . İşlevin bir uygulaması için bkz. [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) arabirimi `PrintPropertyStorage` . Alternatif bir çıktı için, bkz. [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabirimi.
+Bu örnek, arabirimin nasıl alın `GetEnumInjectedSources` (işlev) ve `DumpAllInjectedSources` (işlev) kullanılageldir) olduğunu `IDiaEnumInjectedSources` gösterir. İşlevin [uygulanması için bkz. IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) `PrintPropertyStorage` arabirimi. Alternatif bir çıkış için bkz. [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabirimi.
 
 ```C++
 
@@ -107,9 +108,9 @@ void DumpAllInjectedSources( IDiaSession* pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

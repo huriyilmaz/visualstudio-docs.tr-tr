@@ -11,14 +11,15 @@ ms.assetid: 710efe04-78b5-4f3e-a1d8-f9b069063503
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bf868f91d0eb8d1c80382632be40f348889ab12
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: df38c3d18f18f7c1c2bda021a8827fe76305c4c2cdd6fd2fce3e76269acf7c5d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147858"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391859"
 ---
 # <a name="idiasessionfindfilebyid"></a>IDiaSession::findFileById
 Kaynak dosya tanımlayıcısına göre bir kaynak dosyası alır.

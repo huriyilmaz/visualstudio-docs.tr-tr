@@ -10,17 +10,18 @@ ms.assetid: 147bacfa-f66c-43e0-8a72-e601058dc57f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 70c108f0a4af791a9866055f932a958100d59c2b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 753050171fccb3491a0dc6fcba43b2ed28d5be348aabaf39ed6663b52d7c7ca4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081288"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402109"
 ---
 # <a name="idebugsymbolproviderdirectgetsymunmanagedreader"></a>IDebugSymbolProviderDirect::GetSymUnmanagedReader
 Yönetilmeyen kod için bir sembol okuyucu alır.

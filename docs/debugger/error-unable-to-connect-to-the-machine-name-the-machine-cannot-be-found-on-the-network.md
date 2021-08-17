@@ -15,14 +15,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0d83f043e020ad3c65ac0f986ec174fac95585
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 73bae31eb1e15b96e6878d64954fbaa68828377ee8ad6b802fe466f7ec675d6f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146437"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419851"
 ---
 # <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı.
 Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
@@ -35,7 +36,7 @@ Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
 
 ### <a name="to-resolve-this-behavior"></a>Bu davranışı çözümlemek için
 
-- Yerel bilgisayarın ve uzak bilgisayarın aynı ağda bulunduğundan emin olun. Bunu yapmak için, uzak bilgisayara erişmeyi denemek üzere Microsoft Windows Explorer (veya dosya Gezgini) kullanın.
+- Yerel bilgisayarın ve uzak bilgisayarın aynı ağda bulunduğundan emin olun. bunu yapmak için, uzak bilgisayara erişmeyi denemek üzere Microsoft Windows gezgini 'ni (veya dosya gezgini) kullanın.
 
      '
 
@@ -47,4 +48,4 @@ Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [hata ayıklayıcı Ayarlar ve hazırlığı](../debugger/debugger-settings-and-preparation.md)

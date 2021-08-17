@@ -14,14 +14,15 @@ ms.assetid: e5c004b3-b364-4098-ac98-770076ca9981
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ca71db31fc976a2bc3c652929fd9215f2f3123f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 792e4b82e35bd23addd4424989862c97e9903d5dadf0d0ac3a60d52e8bd800a4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102166676"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419136"
 ---
 # <a name="security-warning-debugger-must-execute-untrusted-command"></a>Güvenlik Uyarısı: Hata Ayıklayıcı Güvenilmeyen Komut Yürütmeli
 Kaynak sunucu kullanırken bu uyarı iletişim kutusu görüntülenir. Hata ayıklayıcının kaynak kodu almak için yürütmesi gereken komutun, srcsvr.ini dosyasında bulunan kaynak sunucu için güvenilir Komutlar listesinde olmaması gerektiğini gösterir. Bu geçerli bir komut ise, srcsvr.ini dosyasına ekleyebilirsiniz. Aksi takdirde, bunu çalıştırmamalıdır. Daha fazla bilgi için bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).

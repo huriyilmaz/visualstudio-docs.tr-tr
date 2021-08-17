@@ -1,6 +1,6 @@
 ---
-description: Sembol konumunun sapmasını alır.
-title: 'IDiaSymbol:: get_offset | Microsoft Docs'
+description: Sembol konumunun uzaklığını alan.
+title: IDiaSymbol::get_offset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 8292bb08-4dc8-4663-beb4-258f5d5a448d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c5c3e59596fdfc1e769710f8459620303e72d6a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9aa71ecc2a2c2691702d0a56e3f90eb5c83bd99fcc19d9bf3e7d465952338fba
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155903"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420609"
 ---
 # <a name="idiasymbolget_offset"></a>IDiaSymbol::get_offset
-Sembol konumunun sapmasını alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) veya olduğunda kullanın `LocIsRegRel` `LocIsBitField` .
+Sembol konumunun uzaklığını alan. [LocationType Enumeration veya olduğunda](../../debugger/debug-interface-access/locationtype.md) `LocIsRegRel` `LocIsBitField` kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,23 +35,23 @@ HRESULT get_offset (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Sembol konumunun bayt cinsinden sapmasını döndürür.
+[out] Uzaklığı sembol konumunun bayt cinsinden döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu fark, daha önce belirlenen bilinen bir noktadan. Örneğin, bir `LocIsBitField` konum türünün konumu genellikle kapsayan sınıfın başından itibaren olur.
+ Uzaklık, daha önce belirlenen bilinen bir noktadan. Örneğin, bir konum türünün `LocIsBitField` uzaklığı genellikle içeren sınıfın başlangıcına göredir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 7.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

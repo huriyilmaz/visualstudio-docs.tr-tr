@@ -1,68 +1,68 @@
 ---
-title: Mac için Visual Studio oturum açma
-description: Mac için Visual Studio oturum açma
+title: Mac için Visual Studio'da oturum açma
+description: Mac için Visual Studio'de oturum açma
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 01/21/2020
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
 ms.topic: how-to
-ms.openlocfilehash: 9b4c3aa608969d9f62e2d5ab3bd3d98ef79236d9
-ms.sourcegitcommit: 08ee19f260164271e18bdbafe624301508f554ce
+ms.openlocfilehash: 378590e6041688c3d083594e95f31dfcaf05f64fa6f5dda9f6ed5902146ff5b1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "104999634"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121421757"
 ---
-# <a name="sign-in-to-visual-studio-for-mac"></a>Mac için Visual Studio oturum açın
+# <a name="sign-in-to-visual-studio-for-mac"></a>Mac için Visual Studio'da oturum açma
 
-Mac için Visual Studio oturum açma, [aboneliğinizi nasıl etkinleştirirsiniz](enable-subscription.md). Mac için Visual Studio yüklediğinizde, her zaman Community Edition 'ı varsayılan olarak alırsınız. [Profesyonel veya kurumsal lisansınız](https://visualstudio.microsoft.com/vs/compare/)varsa, ek özelliklerin kilidini açmak için ilk çalıştırmada oturum açmanız gerekir. Ayrıca şunları da alacaksınız:
+Abonelikte Mac için Visual Studio aboneliğinizi [etkinleştirmenizdir.](enable-subscription.md) Mac için Visual Studio indirerek her zaman varsayılan olarak Community sürümünü elde edin. Professional veya [Enterprise](https://visualstudio.microsoft.com/vs/compare/)lisansınız varsa, ek özelliklerin kilidini açmak için ilk olarak oturum açmanız gerekir. Ayrıca aşağıdakiler de elde olur:
 
-* **Visual Studio Dev Essentials programına erişim** – bu program ücretsiz yazılım teklifleri, eğitim, destek ve daha fazlasını içerir. Daha fazla bilgi için bkz. [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) .
+* **Visual Studio Dev Essentials erişimi** – Bu program ücretsiz yazılım teklifleri, eğitim, destek ve daha fazlasını içerir. Daha [fazla Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) için bkz. Visual Studio Dev Essentials.
 
-* Aynı hesap için kimlik bilgileri için yeniden sormadan **otomatik olarak IDE 'de Azure 'a bağlanın** .
+* **Aynı hesabın kimlik** bilgilerini yeniden istemine gerek kalmadan IDE'de Azure'a otomatik olarak bağlanın.
 
-Mac için Visual Studio ilk kez başlattığınızda, bir Microsoft hesabı kullanarak oturum açmanız istenir. Kullanmak istediğiniz lisansa bağlı bir Microsoft hesabı kullanın. Bir Microsoft hesabı yoksa, [hesap için nasıl yaparım? kaydolma](https://support.microsoft.com/account-billing/how-to-create-a-new-microsoft-account-a84675c3-3e9e-17cf-2911-3d56b15c0aaf)konusuna bakın.
+Mac için Visual Studio kez Microsoft hesabı. Kullanmak Microsoft hesabı bağlı bir lisans kullanın. Bir hesabınız yoksa Microsoft hesabı için Nasıl yaparım? [bkz.](https://support.microsoft.com/account-billing/how-to-create-a-new-microsoft-account-a84675c3-3e9e-17cf-2911-3d56b15c0aaf).
 
-' In hemen oturum açma kararı vermeyin, 30 gün boyunca bir değerlendirme kopyası kullanabilirsiniz. Mac için Visual Studio kopyanızı kullanmaya devam etmek için 30 günden sonra oturum açmalısınız.
+Hemen oturum açmama kararınız varsa, değerlendirme kopyasını 30 gün boyunca kullanabilirsiniz. 30 gün sonra, kopyanızı kullanmaya devam etmek için oturum Mac için Visual Studio.
 
-## <a name="how-to-sign-in-to-visual-studio-for-mac"></a>Mac için Visual Studio oturum açma
+## <a name="how-to-sign-in-to-visual-studio-for-mac"></a>Mac için Visual Studio'de oturum açma
 
 > [!TIP]
-> Mac için Visual Studio için oturum açmadan önce internet 'e bağlı olduğunuzdan emin olun. > abonelikler yalnızca çevrimiçi olarak etkinleştirilebilir. Bağlı değilseniz, "Bunu daha sonra yapacağım" seçeneğini belirleyin ve bağlandığınızda menüde oturum açın.
+> Oturum açmadan önce İnternet'e bağlı olduğunuzdan emin Mac için Visual Studio. > Abonelikler yalnızca çevrimiçi olarak etkinleştirilebilir. Bağlı değilken "Bunu daha sonra yapacağız" seçeneğini belirleyin ve bağlandıktan sonra menüden oturum açın.
 
-İlk başlatmada Mac için Visual Studio oturum açmak için aşağıdaki adımları uygulayın:
+İlk başlatmada Mac için Visual Studio için aşağıdaki adımları uygulayın:
 
-1. Oturum açma penceresindeki **Microsoft hesabıyla oturum açın** düğmesine tıklayın:
+1. Oturum **Microsoft hesabıyla oturum açın** aç düğmesine tıklayın:
 
-    ![Mac için Visual Studio içindeki hesaplar iletişim kutusu](media/ide-tour-2019-start-signin.png)
+    ![Hesaplarda Hesaplar iletişim Mac için Visual Studio](media/ide-tour-2019-start-signin.png)
 
-2. Microsoft kimlik bilgilerinizi girin:
+2. Microsoft Kimlik Bilgilerinizi girin:
 
     ![Microsoft kimlik bilgileri iletişim kutusu](media/signing-in-image13.png)
 
-4. Oturum açtıktan sonra klavye kısayollarını seçme seçeneğini görürsünüz. Kullanmak istediğiniz seçeneği belirleyin ve **devam edin**. Daha sonra Mac için Visual Studio 2019 başlangıç penceresi istenir. Buradan, yeni bir proje açabilir veya oluşturabilirsiniz:
+4. Oturum açtıktan sonra klavye kısayollarını seçme seçeneğiniz vardır. Kullanmak istediğiniz seçeneği belirleyin ve **Devam'ı seçin.** Ardından Mac için 2019 Visual Studio penceresi istenir. Buradan yeni bir proje açabilir veya oluşturabilirsiniz:
 
-    ![Oturum başarıyla açıldı](media/signing-in-image14.png)
+    ![Oturum açma başarılı](media/signing-in-image14.png)
 
-Alternatif olarak, **Visual Studio > oturum açma 'yı kullanabilirsiniz...** dilediğiniz zaman oturum açıp kapatmak için menü öğesi.
+Alternatif olarak, Oturum Visual Studio > **kullanabilirsiniz...** menü öğesiyle oturum açın ve istediğiniz zaman oturum açın.
 
 ## <a name="adding-multiple-user-accounts"></a>Birden çok kullanıcı hesabı ekleme
 
-Mac için Visual Studio, kişiselleştirme hesabınıza birden çok hesap eklenmesini destekler. Bu ek hesaplar, Azure gibi kaynaklara eklenen herhangi bir hesaptan erişmenizi sağlayacaktır.
+Mac için Visual Studio, kişiselleştirme hesabınıza birden çok hesap eklemeyi destekler. Bu ek hesaplar, eklenen hesaplardan Azure gibi kaynaklara erişmeye olanak sağlar.
 
-Ek Kullanıcı hesapları eklemek için Mac için Visual Studio ' dan **Visual Studio > hesabı...** menüsünü seçin. Ek hesap kimlik bilgilerini girmek için **Ekle...** düğmesine tıklayın.
+Ek kullanıcı hesapları eklemek için, Visual Studio > **Hesap... menüsünü** Mac için Visual Studio. Ek hesap kimlik bilgilerini girmek için **Ekle...** düğmesine tıklayın.
 
 ![Hesapları yönetme](media/user-accounts-login.png)
 
-## <a name="view-or-change-your-profile-information"></a>Profil bilgilerinizi görüntüleyin veya değiştirin
+## <a name="view-or-change-your-profile-information"></a>Profil bilgilerini görüntüleme veya değiştirme
 
-1. **Visual Studio > hesabına git...** ve **profilimi** Seç düğmesini seçin.
+1. Hesap... **Visual Studio > gidin** düğmesini seçin **ve Profilim** seçin.
 
-2. Tarayıcı penceresinde **Profili Düzenle** ' yi seçin ve istediğiniz ayarları değiştirin.
+2. Tarayıcı penceresinde Profili **düzenle'yi** seçin ve istediğiniz ayarları değiştirin.
 
-3. İşiniz bittiğinde **Değişiklikleri Kaydet**' i seçin.
+3. Bitirin, Değişiklikleri **kaydet'i seçin.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da oturum açın (Windows üzerinde)](/visualstudio/ide/signing-in-to-visual-studio)
-- [Birden çok kullanıcı hesabıyla çalışma (Windows üzerinde Visual Studio)](/visualstudio/ide/work-with-multiple-user-accounts)
+- [Visual Studio'de oturum açma (Windows)](/visualstudio/ide/signing-in-to-visual-studio)
+- [Birden çok kullanıcı hesabıyla çalışma (Visual Studio hesabı Windows)](/visualstudio/ide/work-with-multiple-user-accounts)

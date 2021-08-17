@@ -11,17 +11,18 @@ ms.assetid: 90cf7b7f-53d2-487e-b793-94501a6e24dd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad388a552a34ebd49819987a20f4876193a96658
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 85abab5d1e1955d645d73a1d753fec6c4f9a507f6653f0f727a9f39cfb17d7b2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071486"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402590"
 ---
 # <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
 Belirli bir işlemden çalışan programların bir listesini alır.

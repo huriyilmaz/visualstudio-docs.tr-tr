@@ -1,5 +1,5 @@
 ---
-description: Bir kaynak dosyasını temsil eder.
+description: Bir kaynak dosyayı temsil eder.
 title: IDiaSourceFile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 6e9be757-797f-4960-ba62-c14092620bbd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2695fdb267d328b596673ed08f5dc0be63cfaeaa
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5ea4678d0719a7643e2d13e02c4c7801d7cb7a23cb159e973f39074c159821c6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147585"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391763"
 ---
 # <a name="idiasourcefile"></a>IDiaSourceFile
-Bir kaynak dosyasını temsil eder.
+Bir kaynak dosyayı temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,24 +30,24 @@ Bir kaynak dosyasını temsil eder.
 IDiaSourceFile : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaSourceFile` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaSourceFile` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaSourceFile::get_uniqueId](../../debugger/debug-interface-access/idiasourcefile-get-uniqueid.md)|Bu görüntü için benzersiz bir basit tamsayı anahtar değeri alır.|
-|[IDiaSourceFile::get_fileName](../../debugger/debug-interface-access/idiasourcefile-get-filename.md)|Kaynak dosya adını alır.|
-|[IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)|Sağlama toplamı türünü alır.|
-|[IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)|Bu dosyaya başvuran satır numaralarına sahip olan compitika türlerini alır.|
-|[IDiaSourceFile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)|Sağlama toplamı baytlarını alır.|
+|[IDiaSourceFile::get_uniqueId](../../debugger/debug-interface-access/idiasourcefile-get-uniqueid.md)|Bu görüntü için benzersiz olan basit bir tamsayı anahtar değerini döndürür.|
+|[IDiaSourceFile::get_fileName](../../debugger/debug-interface-access/idiasourcefile-get-filename.md)|Kaynak dosya adını alın.|
+|[IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)|Sağlama alma türü alınır.|
+|[IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)|Bu dosyaya başvuran satır numaralarıyla derlemelerin bir numaralayıcısını verir.|
+|[IDiaSourceFile::get_checksum](../../debugger/debug-interface-access/idiasourcefile-get-checksum.md)|Sağlama toplam baytlarını alın.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-[IDiaEnumSourceFiles:: Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md) veya [IDiaEnumSourceFiles:: Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md) yöntemlerini çağırarak bu arabirimi elde edin. Ayrıntılar için örneğe bakın.
+[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md) veya [IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md) yöntemlerini çağırarak bu arabirimi alın. Ayrıntılar için örneğine bakın.
 
 ## <a name="example"></a>Örnek
-Bu işlev, belirtilen tabloya katkıda bulunan tüm kaynak dosyalarının adlarını görüntüler.
+Bu işlev, belirtilen tabloya katkıda bulunan tüm kaynak dosyaların adlarını görüntüler.
 
 ```C++
 void ShowSourceFiles(IDiaTable *pTable)
@@ -74,9 +75,9 @@ void ShowSourceFiles(IDiaTable *pTable)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

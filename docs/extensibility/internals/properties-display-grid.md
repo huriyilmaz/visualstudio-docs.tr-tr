@@ -1,6 +1,6 @@
 ---
-title: Özellikler görüntü Kılavuzu | Microsoft Docs
-description: Özellik adları ve özellik değerleri alanlarının Özellikler penceresi kılavuzda nerede olduğunu ve özellikleri genişletme bölümünde kılavuzla nasıl çalışacağınızı öğrenin.
+title: Özellikler Kılavuz | Microsoft Docs
+description: Özellik adlarının ve özellik değerlerinin alanlarının Özellikler penceresi kılavuzda nerede olduğunu ve özellikleri genişletmede kılavuzla nasıl çalışıı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,53 +10,54 @@ ms.assetid: 318e41b0-acf5-4842-b85e-421c9d5927c5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee3d7d8d6277f9cfa0352cb4961644e4860b46bb
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: f9186d9c912f27ec1e782eb4c6e48de3b340a6c1fadbb711cc7c2db02ef7ab5d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899660"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401316"
 ---
-# <a name="properties-display-grid"></a>Özellikler görüntü Kılavuzu
+# <a name="properties-display-grid"></a>Özellikler görüntüleme kılavuzu
 
-**Özellikler** penceresi kılavuz içindeki alanları görüntüler. Sol sütun özellik adlarını içerir; sağ sütun, özellik değerlerini içerir.
+Özellikler **penceresinde** bir kılavuz içindeki alanlar görüntülenir. Sol sütun özellik adlarını içerir; sağ sütun özellik değerlerini içerir.
 
 ## <a name="work-with-the-grid"></a>Kılavuzla çalışma
 
-İki sütunlu liste, tasarım zamanında değiştirilebilen yapılandırmaya bağımsız özellikleri ve bunların geçerli ayarlarını gösterir. Tüm özelliklerin gösterilmediğini unutmayın. Bir özellik, örneğin, yöntemi uygulayarak gizli olarak ayarlanabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> . Özellikle, alt özellikleri olan özellikleri gizlemek için:
+İki sütunlu liste, tasarım zamanında ve geçerli ayarlarında değiştirilene yapılandırmadan bağımsız özellikleri gösterir. Tüm özelliklerin gösterilmeyebilirsiniz. Bir özellik, örneğin yöntemi uygulanarak gizli olarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> ayarlanabilirsiniz. Özellikle, alt özellikleri olan özellikleri gizlemek için:
 
-1. `pfDisplay`Parametresini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> olarak ayarlayın `FALSE` .
+1. içinde `pfDisplay` parametresini olarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> `FALSE` ayarlayın.
 
-2. `pfHide`Parametresini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> olarak ayarlayın `TRUE` .
+2. içinde `pfHide` parametresini olarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> `TRUE` ayarlayın.
 
-**Özellikler** penceresine bilgi göndermek için IDE 'yi kullanır <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> . <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> , **Özellikler** penceresinde görüntülenecek ilgili özelliklerle birlikte seçilebilir nesneler içeren her bir pencere Için VSPackages tarafından çağırılır. **Çözüm Gezgini**, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> __VSHPROPID kullanılarak yapılan çağrıların uygulanması `GetProperty` [.](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) Browseable nesnelerini hiyerarşide almak için proje hiyerarşinizdeki VSHPROPID_BrowseObject.
+Özellikler penceresine bilgi **itmek** için IDE <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> kullanır. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>, Özellikler penceresinde görüntülenecek ilgili özelliklere sahip seçilebilir nesneleri içeren her pencere için VSPackages tarafından **çağrılır.** **Çözüm Gezgini** kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> çağrıların `GetProperty` uygulanmasını [__VSHPROPID. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) göz atılabilir nesneleri almak için proje hiyerarşinize göz atabilirsiniz.
 
-VSPackage [__VSHPROPID desteklemiyorsa. VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>), ıde <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> __VSHPROPID değerini kullanarak kullanmaya çalışır [. ](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) Hiyerarşi öğesi veya öğelerinin tedarik VSHPROPID_SelContainer.
+VSPackage'nız bu desteği [__VSHPROPID. VSHPROPID_BrowseObject,](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>)IDE, IDE'nin <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> [__VSHPROPID. VSHPROPID_SelContainer](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) öğenin veya öğelerin temini için kullanılır.
 
-Proje VSPackage 'ın, <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> kendi adına UYGULADıĞı IDE tarafından sağlanan pencere paketi (örneğin, **Çözüm Gezgini**) oluşturduğundan oluşturulması gerekmez <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> .
+Projenizin VSPackage'ını oluşturması gerekli değildir çünkü bunu uygulayan IDE tarafından sağlanan pencere paketi <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> (örneğin, **Çözüm Gezgini**) kendi <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> adına yapılarıdır.
 
-<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> IDE tarafından çağrılan üç yöntemden oluşur:
+<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> , IDE tarafından çağrılan üç yöntemden oluşur:
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A>**Özellikler** penceresinde görüntülenmek üzere seçilen nesne sayısını içerir.
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> , Özellikler penceresinde görüntülenecek seçilen nesne **sayısını** içerir.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>`IDispatch` **Özellikler** penceresinde görüntülenmek üzere seçilen nesneleri döndürür.
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>, `IDispatch` Özellikler penceresinde görüntülenmek üzere  seçilen nesneleri döndürür.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> tarafından döndürülen nesnelerden herhangi birinin <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> Kullanıcı tarafından seçilebilmesini sağlar. Bu, VSPackage 'ın Kullanıcı ARABIRIMINDEKI kullanıcıya görüntülenecek seçimi görsel olarak güncelleştirmesine olanak sağlar.
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> tarafından döndürülen nesnelerin kullanıcı tarafından <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> seçilmelerini mümkün yapar. Bu, VSPackage'ın kullanıcı arabiriminde görüntülenen seçimi görsel olarak güncelleştirmesini sağlar.
 
-**Özellikler** penceresi, `IDispatch` gözatılan özellikleri almak için nesnelerdeki bilgileri ayıklar. Özellikler tarayıcısı, `IDispatch` `ITypeInfo` ' den elde edilen sorgulama yaparak nesne tarafından desteklenen özellikleri ister `IDispatch::GetTypeInfo` . Daha sonra tarayıcı, **Özellikler** penceresini doldurmak ve kılavuzda görüntülenecek ayrı özellikler için değerleri değiştirmek üzere bu değerleri kullanır. Özellikler bilgisi nesnenin kendisi içinde tutulur.
+Özellikler **penceresi,** göz atlanan `IDispatch` özellikleri almak için nesnelerden bilgileri ayıklar. Özellikler tarayıcısı `IDispatch` nesnesine, 'den alınan sorgusunu kullanarak hangi `ITypeInfo` özellikleri desteklediğini sormak için `IDispatch::GetTypeInfo` kullanır. Ardından tarayıcı, Özellikler penceresini doldurmak ve **kılavuzda** görüntülenen tek tek özelliklerin değerlerini değiştirmek için bu değerleri kullanır. Özellikler bilgileri nesnenin içinde korunur.
 
-Döndürülen nesneler desteklediği için `IDispatch` çağıran, `IDispatch::Invoke` `ITypeInfo::Invoke` istenen bilgileri temsil eden önceden tanımlanmış bir dağıtım tanımlayıcısı (DISPID) ile ya da çağırarak nesne adı gibi bilgileri elde edebilir. Kullanıcı tanımlı tanımlayıcılarla çakışmadıklarından emin olmak için, tanımlanan DISPID 'ler negatif.
+Döndürülen nesneler desteklemesi nedeniyle çağıranı, istenen bilgileri temsil eden önceden tanımlanmış bir gönderme tanımlayıcısı `IDispatch` (DISPID) ile çağırarak nesnenin adı gibi `IDispatch::Invoke` `ITypeInfo::Invoke` bilgileri elde eder. Bildirilen DISPID'ler, kullanıcı tanımlı tanımlayıcılarla çakışmamalarını sağlamak için negatiftir.
 
-**Özellikler** penceresi, seçilen bir nesnenin belirli özelliklerinin özniteliklerine bağlı olarak farklı türlerdeki alanları görüntüler. Bu alanlar düzenleme kutularını, açılan listeleri ve özel Düzenleyici iletişim kutularına bağlantıları içerir.
+Özellikler **penceresi,** seçilen bir nesnenin belirli özelliklerinin özniteliklerine bağlı olarak farklı alan türlerini görüntüler. Bu alanlar düzenleme kutularını, açılan listeleri ve özel düzenleyici iletişim kutularının bağlantılarını içerir.
 
-- Numaralandırılmış bir listede yer alan değerler bir sorgu tarafından alınır <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> `IDispatch` . Numaralandırılmış bir listeden alınan değerler, alan adına çift tıklayarak ya da değere tıklayıp açılan listeden yeni değer seçilerek Özellikler kılavuzunda değiştirilebilir. Numaralandırılmış listelerden önceden tanımlanmış ayarlara sahip özellikler için, Özellikler listesinde özellik adına çift tıklamak, kullanılabilir seçimler aracılığıyla geçiş yapar. Yalnızca iki seçenekli (true/false gibi) önceden tanımlanmış özellikler için, seçenekler arasında geçiş yapmak üzere özellik adına çift tıklayın.
+- Numaralandı listesinde yer alan değerler, sorgusu tarafından <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> olarak `IDispatch` alınır. Listelenmiş bir listeden alınan değerler, alan adına çift tıklayarak veya değere tıklar ve açılır listeden yeni değer seçerek özellikler kılavuzunda değiştirilebilir. Numaralandı listelerden önceden tanımlanmış ayarlara sahip özellikler için Özellikler listesinde özellik adına çift tıklar, kullanılabilir seçenekler arasında döngüye gelir. Yalnızca iki seçeneği (true/false gibi) önceden tanımlanmış özellikler için, seçenekler arasında geçiş yapmak için özellik adına çift tıklayın.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A>İse, `false` değerin değiştirildiğini belirten değer kalın metinde görüntülenir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> değerin özgün değere sıfırlanıp sıfırlanmadığını anlamak için kullanılır. Bu durumda, değere sağ tıklayıp görüntülenecek menüden **Sıfırla** ' yı seçerek varsayılana geri dönebilirsiniz. Aksi takdirde, değeri el ile varsayılan olarak değiştirmeniz gerekir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> Ayrıca tasarım zamanı sırasında görüntülene Özellikler adlarını yerelleştirebilmeniz ve gizlemenize izin verir, ancak çalışma zamanı sırasında görüntülenecek özellik adlarını etkilemez.
+- ise, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A> `false` değerin değiştirdiğini belirtirse, değer kalın metin olarak görüntülenir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> değerin özgün değere sıfırlanabilir olup olmadığını belirlemek için kullanılır. Öyleyse, değere sağ tıklar ve görüntülenen menüden Sıfırla'yı **seçerek varsayılan** değere geri dönebilirsiniz. Aksi takdirde, değeri el ile varsayılan değere geri dönmeniz gerekir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> ayrıca tasarım zamanında görüntülenen özelliklerin adlarını yerelleştirmeye ve gizlemeye olanak sağlar, ancak çalışma zamanında görüntülenen özellik adlarını etkilemez.
 
-- Üç nokta (...) düğmesine tıklamak, kullanıcının seçebileceğiniz özellik değerlerinin bir listesini görüntüler (bir renk seçici veya yazı tipi listesi gibi). <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> Bu değerleri sağlar.
+- Üç nokta (...) düğmesine tıklarken, kullanıcının seçerek seçebiliyor olduğu özellik değerlerinin (renk seçici veya yazı tipi listesi gibi) listesi görüntülenir. <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> bu değerleri sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özellikleri Genişlet](../../extensibility/internals/extending-properties.md)
+- [Özellikleri genişletme](../../extensibility/internals/extending-properties.md)

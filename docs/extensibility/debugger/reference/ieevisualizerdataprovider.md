@@ -11,17 +11,18 @@ ms.assetid: 5fdfe6e3-b94e-4edb-acc5-41d8773d8ca5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6af1f32a627b713c7907c9de29470f7624fdd7e4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77c45809da3f28e71f29750a867dd2a5456880de0fd811ca105c32b29ff9cc41
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080300"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401979"
 ---
 # <a name="ieevisualizerdataprovider"></a>IEEVisualizerDataProvider
 > [!IMPORTANT]

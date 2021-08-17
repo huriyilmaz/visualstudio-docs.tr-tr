@@ -11,14 +11,15 @@ ms.assetid: 78005efa-2883-4823-b4e4-711a66672c78
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5349b477d7c4566fff9f93a32eb81bb228afffb4
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8b50e437db991df942c68b23a7c3ac664bb2c59e7fa32c4495a643b4b4db163b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147480"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391771"
 ---
 # <a name="idiastackframeget_lengthparams"></a>IDiaStackFrame::get_lengthParams
 Yığına gönderilen parametrelerin bayt sayısını alır.

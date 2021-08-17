@@ -1,33 +1,34 @@
 ---
-title: Visual Studio 2022 Preview'da uzantı oluştururken hedef Visual Studio 2019
-description: Visual Studio 2022 Preview ile projeyi Visual Studio 2019 ile Visual Studio öğrenin.
+title: Visual Studio 2022 önizlemesinde uzantı oluştururken hedef Visual Studio 2019
+description: projeyi Visual Studio 2022 önizleme ile oluşturursanız, Visual Studio uzantınızın Visual Studio 2019 ile çalışmasını nasıl sağlayacağınızı öğrenin.
 ms.date: 06/08/2021
 ms.topic: conceptual
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 monikerRange: vs-2022
 ms.workload:
 - vssdk
 feedback_system: GitHub
-ms.openlocfilehash: b6d8c21b2bb67664ceba348ef1ea9746305e3e8d
-ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
+ms.openlocfilehash: 0abd690d5c9d1af9e58bfa856d8880f01e34e8f0c4758188c6f2dd7f15303564
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114592235"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400900"
 ---
-# <a name="target-a-previous-version-when-creating-an-extension-in-visual-studio-2022-preview"></a>Visual Studio 2022 Preview'da uzantı oluştururken önceki bir sürümü hedefleme
+# <a name="target-a-previous-version-when-creating-an-extension-in-visual-studio-2022-preview"></a>Visual Studio 2022 önizlemesinde uzantı oluştururken önceki bir sürümü hedefleyin
 
 [!INCLUDE [preview-note](../includes/preview-note.md)]
 
-Visual Studio 2022 Preview kullanarak yeni bir VSIX projesi oluşturulduğunda, proje 2022'yi Visual Studio oluşturulur. 2019 veya önceki Visual Studio bir sürümü hedeflemek için oluşturulan projeyi değiştirmeniz gerekir.
+Visual Studio 2022 önizlemesi kullanarak yeni bir vsıx projesi oluşturduğunuzda, proje Visual Studio 2022 ' i hedefleyen bir şablondan oluşturulur. Visual Studio 2019 veya önceki bir sürümü hedeflemek istiyorsanız, oluşturulan projeyi değiştirmeniz gerekir.
 
-Uzantınıza [kodun çoğunu](update-visual-studio-extension.md#use-shared-projects-for-multi-targeting) veya tüm Visual Studio 2019 ve Visual Studio 2022 hedeflerini hedeflemek için paylaşılan projeleri kullanmayı göz önünde bulundurabilirsiniz.
+uzantınızın çoğunu veya tamamını paylaşırken Visual Studio 2019 ve Visual Studio 2022 ' i hedeflemek için [paylaşılan projeler](update-visual-studio-extension.md#use-shared-projects-for-multi-targeting) kullanmayı göz önünde bulundurun.
 
-2019'da hedeflen vsIX Visual Studio izleyin:
+Visual Studio 2019 ' i hedefleyecek vsıx projesinde şu adımları uygulayın:
 
-1. öğesini `source.extension.vsixmanifest` ve sürüm aralığını `ProductArchitecture` kaldırmak için dosyasını düzenleyin:
+1. `source.extension.vsixmanifest` `ProductArchitecture` Öğeyi ve sürüm aralığını kaldırmak için dosyayı düzenleyin:
 
     ```diff
     -<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
@@ -36,16 +37,16 @@ Uzantınıza [kodun çoğunu](update-visual-studio-extension.md#use-shared-proje
      </InstallationTarget>
     ```
 
-   Ayrıca önkoşulları da güncelleştirin:
+   Ayrıca önkoşulları güncelleştirin:
 
     ```diff
     -<Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
     +<Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
     ```
 
-    Gerekli diğer güncelleştirmeler için dosyayı gözden geçirme.
+    Gerekli olabilecek diğer güncelleştirmeler için dosyayı gözden geçirin.
 
-1. Proje dosyanıza başvurarak VS SDK paketlerinin sürümlerini değiştirme:
+1. Proje dosyanızda başvurduğunuz VS SDK paketlerinin sürümlerini değiştirin:
 
     ```diff
     -<PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.0-preview.1" />

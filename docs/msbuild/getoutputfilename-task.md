@@ -1,6 +1,6 @@
 ---
-title: GetOutputFileName görevi | Microsoft Docs
-description: cl.exe ve diğer araçların çıkış dosyası adı seçeneklerini belirtmek için MSBuild GetOutputFileName yardımcı görevini kullanın.
+title: GetOutputFileName Görev | Microsoft Docs
+description: Dosya adı MSBuild ve diğer araçlar için çıkış dosyası adı seçeneklerini belirtmek üzere GetOutputFileName cl.exe yardımcı görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
@@ -19,27 +19,27 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: cb4670bb84b151332951608f7b20ef5ea44e59a3
-ms.sourcegitcommit: c4927ef8fe239005d7feff6c5a7707c594a7a05c
+ms.openlocfilehash: 5de0fab9f6aa3b6a57248b4f236e816fe60bdd44c76a55cd466ea287fd9c38d6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92436785"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397637"
 ---
 # <a name="getoutputfilename-task"></a>GetOutputFileName görevi
 
-Yalnızca çıkış dizini veya tam dosya adı ya da hiçbir şey belirtilmesine izin veren CL ve diğer araçların çıkış dosyası adını almak için yardımcı görev.
+Cl ve diğer araçlar için çıkış dosyası adını almaya yönelik yardımcı görev, yalnızca çıkış dizini ya da tam dosya adı ya da hiçbir şey belirtmeye izin verir.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda, **Getoutputfilename** görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda **GetOutputFileName görevinin parametreleri açıklanır.**
 
 |Parametre|Açıklama|
 |---------------|-----------------|
 |**OutputExtension**|Gerekli **dize** parametresi.|
-|**Çıktı**|İsteğe bağlı **dize** çıkış parametresi.|
-|**OutputPath**|İsteğe bağlı **dize** parametresi.|
-|**Kaynakdosya**|Gerekli **dize** parametresi.|
+|**Outputfile**|İsteğe **bağlı dize** çıkış parametresi.|
+|**Outputpath**|İsteğe **bağlı dize** parametresi.|
+|**SourceFile**|Gerekli **dize** parametresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

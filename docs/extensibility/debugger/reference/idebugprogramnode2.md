@@ -11,14 +11,15 @@ ms.assetid: 80e511d8-9b40-4a85-aa5d-952fa5ee6ae7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55bd6180c3b7681196e72460c951ffeafe9f2cf7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7237d03907a961135a767a246c4f9d291ef17d293b0d04f8020915b8ab0e31e7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087281"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389572"
 ---
 # <a name="idebugprogramnode2"></a>IDebugProgramNode2
 Bu arabirim, hata ayıklamanın bir programını temsil eder.

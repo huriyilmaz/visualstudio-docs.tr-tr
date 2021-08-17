@@ -11,14 +11,15 @@ ms.assetid: cb61dfd9-fe69-461c-8185-288440454864
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d944cc5fc190be0917016adb14febf74162a0ca4
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: bb5ed15f7ba88f114ec8923a5932a2890a5d2031440e3b50895d59e07f05a760
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156316"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420705"
 ---
 # <a name="idiasymbolget_haseha"></a>IDiaSymbol::get_hasEHa
 İşlevin zaman uyumsuz (yapılandırılmış) özel durum işleme içerip içermediğini belirten bir bayrak alır.

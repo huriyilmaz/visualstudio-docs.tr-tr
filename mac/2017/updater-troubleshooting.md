@@ -1,26 +1,26 @@
 ---
 title: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor
-description: "' Güncelleştirme bilgilerini alma hatası ' hatasını gördüğünüzde nasıl düzeltileceğini gösteren yönergeler. Mac için Visual Studio 2017"
+description: "'Güncelleştirme bilgileri alınırken hata oluştu' hatasını gördüğünüzde düzeltme yönergeleri. Mac Visual Studio 2017'de"
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/13/2019
 ms.technology: vs-ide-install
 ms.assetid: 8825BBAD-65C0-480F-9868-A01E64F28250
 ms.topic: troubleshooting
-ms.openlocfilehash: c631bae40d06a000e2e90c26ae5a9862c1e09aaa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ef25ffe564c268b131164abd5125dc48dee4729f9311baa7a3578ca9add627be
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85950569"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121393191"
 ---
 # <a name="troubleshooting-updater-has-errors-retrieving-information"></a>Sorun Giderme: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor
 
-Nadir bir gün içinde, [Mac için Visual Studio güncelleştirmeyi](update.md)denediğinizde "güncelleştirme bilgileri alınırken hata oluştu" hata iletisini görebilirsiniz. Bu durumda, çözümü onarmak için aşağıdaki adımları deneyin:
+Nadiren de olsa, 'i güncelleştirmeye deneerek "Güncelleştirme bilgileri alınırken hata oluştu" [hata iletisini Mac için Visual Studio.](update.md) Bu durumda, düzeltmek için aşağıdaki adımları deneyin:
 
-- İnternet bağlantınızı kontrol edin. Bu hatanın en yaygın nedeni bağlantıda yer açdır.
-  - Bir bileşen indirilemezse, indirmeyi yeniden denemek için bileşen adının yanındaki yeniden dene düğmesine tıklayabilirsiniz.
-- IDE 'yi yeniden başlatın.
-- Bu hata iletisini görmeye devam ederseniz, **. dmg** hala makinenizde veya [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20Mac) adresinden Indirebilirsiniz Mac Için Visual Studio 2017 yükleyicisi 'ni kullanarak güncelleştirmeyi deneyebilirsiniz.
-  - Yükleyici, makinenizde yüklü olan tüm bileşenleri güncelleştirecek.
-  - Yükleyiciyi yeniden çalıştırarak, daha önce yüklemediyseniz eksik olan bileşenleri de yükleyebilirsiniz.
+- İnternet bağlantınızı kontrol edin. Bağlantıda bir düşüş, bu hatanın en yaygın nedenidir.
+  - Bir bileşen indiremezse, bileşenin adının yanındaki yeniden dene düğmesine tıklayarak indirmeyi yeniden indirebilirsiniz.
+- IDE'i yeniden başlatın.
+- Bu hata iletisini görmeye devam edersanız, mac için Visual Studio 2017 Yükleyicisi'nin **(.dmg** hala makineniz üzerinde ise) kullanarak [](https://my.visualstudio.com/Downloads?q=Visual%20Studio%20for%20Mac) güncelleştirmeyi de güncelleştirmeyi deneyebilir veya bu güncelleştirmeyi my.visualstudio.com
+  - Yükleyici, makinenize yüklenmiş bileşenleri güncelleştirecek.
+  - Yükleyiciyi yeniden çalıştırarak, daha önce yüklememiş olduğu tüm eksik bileşenleri de yükleyebilirsiniz.

@@ -1,6 +1,6 @@
 ---
-description: Bloğun göreli sanal adresini (RVA) alır.
-title: 'IDiaLineNumber:: get_relativeVirtualAddress | Microsoft Docs'
+description: Bloğun göreli sanal adresini (RVA) alın.
+title: IDiaLineNumber::get_relativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: ba8142e3-5c77-43cc-bd33-c077dcc18cab
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e27f498551dc12dd0117ec8810482d5c1a7faf0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0f9d3842d048e02a07496516e950b13c03760f635fd916854691e9bd4ea4759c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157513"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392171"
 ---
 # <a name="idialinenumberget_relativevirtualaddress"></a>IDiaLineNumber::get_relativeVirtualAddress
-Bloğun göreli sanal adresini (RVA) alır.
+Bloğun göreli sanal adresini (RVA) alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +35,10 @@ HRESULT get_relativeVirtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bloğun görüntüyle ilişkili sanal adresini döndürür.
+[out] Bloğun görüntü göreli sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
