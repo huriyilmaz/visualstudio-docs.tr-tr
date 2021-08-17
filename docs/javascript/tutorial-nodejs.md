@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 56a9c807751de1c8de79523f34a966c3fe87920a887905c77311c663faa39d3f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dae63215fe41d42f1a20f5d21e7c51e05163281a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386286"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027987"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Öğretici: Visual Studio Node.js ve Express uygulaması oluşturma
 
@@ -235,9 +235,9 @@ Bir sonraki adım, hata ayıklayıcının ekli olduğu Visual Studio çalıştı
     ![Hata ayıklama hedefini seçin](../javascript/media/tutorial-nodejs-deploy-target.png)
     ::: moniker-end
 
-    Chrome makineniz üzerinde kullanılabilir ancak seçenek olarak göstermüyorsa, hata ayıklama hedefi açılan listesinden Birlikte Gözat'ı seçin ve varsayılan tarayıcı hedefi olarak Chrome'u seçin (Varsayılan Olarak **Ayarla'ya tıklayın).** 
+    Makinede Chrome mevcutsa ancak bir seçenek olarak göstermüyorsa, hata ayıklama hedefi açılan listesinden Birlikte Gözat'ı seçin ve varsayılan tarayıcı hedefi olarak Chrome'u seçin (Varsayılan Olarak **Ayarla'ya tıklayın).** 
 
-1. Uygulamayı **çalıştırmak için F5** (**Hata**  >  **AyıklamaYı Başlat**) tuşuna basın.
+1. Uygulamayı **çalıştırmak için F5** '**e**(  >  **Hata AyıklamaYı** Başlat ) basın.
 
     Hata ayıklayıcı, ayar istediğiniz kesme noktası üzerinde duraklatılır. Artık uygulama durumunu inceebilirsiniz.
 
@@ -271,9 +271,9 @@ Bir sonraki adım, hata ayıklayıcının ekli olduğu Visual Studio çalıştı
 
 1. Çıktı **penceresi,** Azure'a dağıtım ilerlemesini gösterir.
 
-    Başarılı bir dağıtımda, uygulamanız Azure App Service.'de çalışan bir tarayıcıda açılır. Bir görüntüyü görüntülemek için bir düğmeye tıklayın.
+    Başarılı bir dağıtımda, uygulamanız Azure App Service. Bir görüntüyü görüntülemek için bir düğmeye tıklayın.
 
-   ![Azure App Service'de çalışan uygulama](../javascript/media/tutorial-nodejs-running-in-azure.png)
+   ![Azure App Service'da çalışan uygulama](../javascript/media/tutorial-nodejs-running-in-azure.png)
 
 Tebrikler, bu öğreticiyi tamamladıktan sonra!
 

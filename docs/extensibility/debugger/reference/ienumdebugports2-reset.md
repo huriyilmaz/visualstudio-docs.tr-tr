@@ -1,6 +1,6 @@
 ---
-description: Bağlantı noktası numaralandırmasını ilk öğe olarak sıfırlar.
-title: 'IEnumDebugPorts2:: Reset | Microsoft Docs'
+description: Bağlantı noktası numaralamalarını ilk öğeye sıfırlar.
+title: IEnumDebugPorts2::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121433183"
 ---
 # <a name="ienumdebugports2reset"></a>IEnumDebugPorts2::Reset
-Numaralandırmayı ilk öğeye sıfırlar.
+Numaralama öğesini ilk öğeye sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumdebugports2-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra Next yöntemine yapılan sonraki [çağrı,](../../../extensibility/debugger/reference/ienumdebugports2-next.md) numaralamanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)

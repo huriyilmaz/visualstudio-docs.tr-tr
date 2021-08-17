@@ -1,6 +1,6 @@
 ---
 title: CustomType | Microsoft Docs
-description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında CustomType sembol türü (SymTagCustomType) hakkında başvuru bilgileri bulun.
+description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında customtype sembol türü (symtagcustomtype) hakkında başvuru bilgileri bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,14 +12,15 @@ ms.assetid: 1b66bc0a-7979-416f-bf7f-e5df91584c91
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6912567ac7dedc6885d990dd96f21c41a1867292
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 96c5369b3fa3bed59a1f70e2518bf1b700f7e1cb95693eb6b2a6461b2be45941
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865484"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345714"
 ---
 # <a name="customtype"></a>CustomType
 Satıcı tanımlı türler (derleyiciye özgü türler) bir sembol tarafından tanımlanır `SymTagCustomType` .

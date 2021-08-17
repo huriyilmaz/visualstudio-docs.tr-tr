@@ -1,6 +1,6 @@
 ---
 title: GetVstoSolutionMetadata işlevi
-description: GetVstoSolutionMetadata API 'sinin Office altyapısını nasıl desteklediğini öğrenin ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
+description: getvstosolutionmetadata apı 'sinin Office altyapısını nasıl desteklediğini öğrenin ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
@@ -10,17 +10,18 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: eaf58f312afd379fb1f16d208c323777ec725231
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 14cf1d9ab6c8c3a734caa737b99a5edaededb94f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860613"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026427"
 ---
 # <a name="getvstosolutionmetadata-function"></a>GetVstoSolutionMetadata işlevi
-  Bu API, Office altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
+  bu apı Office altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
 
 ## <a name="syntax"></a>Sözdizimi
 

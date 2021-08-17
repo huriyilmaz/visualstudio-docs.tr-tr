@@ -1,5 +1,5 @@
 ---
-description: Bir kesme noktasının hata türünü belirtir.
+description: Kesme noktası hata türünü belirtir.
 title: BP_ERROR_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: c483eaab-db29-46de-bfdb-5c2a9a9cfb68
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ddff439aba67248bd2eb706a85c5f91b4bf1628d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ea1df999b285790e66c268a4d36901d149b219f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085292"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073155"
 ---
 # <a name="bp_error_type"></a>BP_ERROR_TYPE
-Bir kesme noktasının hata türünü belirtir.
+Kesme noktası hata türünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,46 +67,46 @@ public enum enum_BP_ERROR_TYPE {
 Kesme noktası hatası olmadığını belirtir.
 
 `BPET_TYPE_WARNING`\
-Bir uyarı stili kesme noktası hatası belirtir.
+Uyarı stilinde bir kesme noktası hatası belirtir.
 
 `BPET_TYPE_ERROR`\
-Bir hata stili kesme noktası hatası belirtir.
+Hata stilinde bir kesme noktası hatası belirtir.
 
 `BPET_SEV_HIGH`\
-Yüksek öneme sahip kesme noktası hatasını belirtir.
+Yüksek önem dereceli bir kesme noktası hatası belirtir.
 
 `BPET_SEV_GENERAL`\
-Orta öneme sahip kesme noktası hatasını belirtir.
+Orta önem dereceli bir kesme noktası hatası belirtir.
 
 `BPET_SEV_LOW`\
-Düşük öneme sahip kesme noktası hatasını belirtir.
+Düşük önem dereceli bir kesme noktası hatası belirtir.
 
 `BPET_TYPE_MASK`\
-Bir maske stili kesme noktası hatası belirtir.
+Maske stili bir kesme noktası hatası belirtir.
 
 `BPET_SEV_MASK`\
-Bir önem düzeyi-maske stili kesme noktası hatası belirtir.
+Önem derecesi maske stilinde bir kesme noktası hatası belirtir.
 
 `BPET_GENERAL_WARNING`\
-Genel uyarı stili kesme noktası hatasını belirtir.
+Genel uyarı stilinde bir kesme noktası hatası belirtir.
 
 `BPET_GENERAL_ERROR`\
-Genel hata stili kesme noktası hatasını belirtir.
+Genel hata stilinde bir kesme noktası hatası belirtir.
 
 `BPET_ALL`\
 Tüm kesme noktası hata türlerini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler bit düzeyinde birleştirilebilir `OR` ve `dwType` [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısının üyesi için kullanılabilir. [Enumerrorkesmenoktaları](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) metoduna parametre olarak geçirilir.
+Bu değerler bitwise ile birleştirilmiş `OR` olabilir ve veri `dwType` yapısının üyesi [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) kullanılabilir. [EnumErrorBreakpoints yöntemine parametre olarak](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) geçirildi.
 
-Kesme noktası hata türü bir tür ve önem derecesi oluşur. Bu, kesme noktası hata türünün hiçbir şekilde bir tür (örneğin, `BPET_TYPE_ERROR` ) veya önem derecesi (örneğin,) olduğu anlamına gelir `BPET_SEV_GENERAL` . `BPET_GENERAL_WARNING` ve `BPET_GENERAL_ERROR` genel uyarı ve hata kesme noktaları için önceden tanımlanmış değerler sağlar.
+Kesme noktası hata türü bir tür ve önem derecesine göre oluşur. Bu, bir kesme noktası hata türünün hiçbir zaman tek başına yalnızca bir tür (örneğin, ,) veya önem `BPET_TYPE_ERROR` derecesi (örneğin, `BPET_SEV_GENERAL` ) olduğu anlamına gelir. `BPET_GENERAL_WARNING` ve `BPET_GENERAL_ERROR` genel uyarı ve hata kesme noktaları için önceden tanımlanmış değerler sağlar.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

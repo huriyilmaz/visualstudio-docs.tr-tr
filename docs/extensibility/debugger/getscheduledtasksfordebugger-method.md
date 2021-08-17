@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e63c7fefe387c0bd7980980eb43a0f78b5c4ffb5a878af3d22b16b4f77806ba7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d25acf7d40c2f1f78dcf2102ca612289426c5f80
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342745"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073337"
 ---
 # <a name="getscheduledtasksfordebugger-method"></a>GetScheduledTasksForDebugger Metodu
 Tüm zamanlanmış görevlerin bir dizisini alır.

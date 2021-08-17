@@ -1,6 +1,6 @@
 ---
 title: Özellikleri ve öğeleri karşılaştırma | Microsoft Docs
-description: MSBuild özelliklerinin ve öğelerinin görevlere bilgi iletmekte, koşulları değerlendirmenize ve proje dosyasının başvurbileceği değerleri nasıl depoleyeceğinizi öğrenin.
+description: MSBuild özelliklerinin ve öğelerin bilgileri görevlere nasıl iletmekte, koşulların nasıl değerlendirileceğini ve proje dosyasının başvurbileceği değerleri nasıl depolayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,26 +10,27 @@ ms.assetid: b9da45ae-d6a6-4399-8628-397deed31486
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 226b86d621de2faee5a71d9fdb3fea39f20b984e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 358389095e71dd52aa8dfeb211bef71c4485faef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888127"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055048"
 ---
 # <a name="compare-properties-and-items"></a>Özellikleri ve öğeleri karşılaştırma
 
-MSBuild özellikleri ve öğeleri, bilgileri görevlere geçirmek, koşulları değerlendirmek ve proje dosyası genelinde başvurulabilen değerleri depolamak için kullanılır.
+MSBuild özellikler ve öğeler, bilgileri görevlere geçirmek, koşulları değerlendirmek ve proje dosyası genelinde başvurulabilen değerleri depolamak için kullanılır.
 
-- Özellikler ad-değer çiftleridir. Daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
+- Özellikler ad-değer çiftleridir. daha fazla bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 - Öğeler genellikle dosyaları temsil eden nesnelerdir. Öğe nesnelerinde ilişkili meta veri koleksiyonları olabilir. Meta veriler ad-değer çiftleridir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
 ## <a name="scalars-and-vectors"></a>Dolandırılabilen ve vektörlerini
 
-MSBuild özellikleri yalnızca bir dize değeri olan ad-değer çiftleri olduğundan, genellikle *skaler* olarak tanımlanır. MSBuild öğe türleri öğe listeleri olduğundan, genellikle *vektör* olarak tanımlanır. Ancak, uygulamada Özellikler birden çok değeri temsil edebilir ve öğe türlerinde sıfır veya bir öğe olabilir.
+MSBuild özellikler yalnızca bir dize değeri olan ad-değer çiftleri olduğundan, genellikle *skaler* olarak tanımlanır. MSBuild öğe türleri öğe listeleri olduğundan, genellikle *vektör* olarak tanımlanır. Ancak, uygulamada Özellikler birden çok değeri temsil edebilir ve öğe türlerinde sıfır veya bir öğe olabilir.
 
 ### <a name="target-dependency-injection"></a>Hedef bağımlılığı ekleme
 
@@ -62,7 +63,7 @@ MSBuild 4,0 ' den başlayarak hedef bağımlılığı ekleme kullanımdan kaldı
 
 ### <a name="conversions-between-strings-and-item-lists"></a>Dizeler ve öğe listeleri arasındaki dönüşümler
 
-MSBuild, gerektiğinde öğe türlerine ve dize değerlerine dönüştürme yapar. Bir öğe listesinin nasıl bir dize değeri haline gelebileceklerini görmek için, bir MSBuild özelliğinin değeri olarak bir öğe türü kullanıldığında ne olacağını göz önünde bulundurun:
+MSBuild, gerektiğinde öğe türlerine ve dize değerlerine dönüştürme işlemleri gerçekleştirir. bir öğe listesinin nasıl bir dize değeri haline gelebileceklerini görmek için, bir MSBuild özelliğinin değeri olarak bir öğe türü kullanıldığında ne olacağını göz önünde bulundurun:
 
 ```xml
 <ItemGroup>
@@ -73,13 +74,13 @@ MSBuild, gerektiğinde öğe türlerine ve dize değerlerine dönüştürme yapa
 </PropertyGroup>
 ```
 
-OutputDir öğe türü `Include` "KeyFiles;" değerine sahip bir özniteliğe sahip \\ Sertifikalar \\ ". MSBuild bu dizeyi iki öğe olarak ayrıştırır: KeyFiles \ ve Certificates \\ . OutputDir öğe türü OutputDirList özelliğinin değeri olarak kullanıldığında, MSBuild, öğe türünü noktalı virgülle ayrılmış "KeyFiles;" dizesine dönüştürür veya "düzleştirir" \\ Sertifikalar \\ ".
+OutputDir öğe türü `Include` "KeyFiles;" değerine sahip bir özniteliğe sahip \\ Sertifikalar \\ ". MSBuild bu dizeyi iki öğe olarak ayrıştırır: keyfiles \ ve Certificates \\ . outputdir öğe türü outputdirlist özelliğinin değeri olarak kullanıldığında MSBuild, öğe türünü noktalı virgülle ayrılmış "keyfiles;" dizesine dönüştürür veya "düzleştirir" \\ Sertifikalar \\ ".
 
 ## <a name="properties-and-items-in-tasks"></a>Görevlerdeki Özellikler ve öğeler
 
-Özellikler ve öğeler, MSBuild görevlerine giriş ve çıkış olarak kullanılır. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
+özellikler ve öğeler MSBuild görevlere giriş ve çıkış olarak kullanılır. Daha fazla bilgi için bkz. [Görevler](../msbuild/msbuild-tasks.md).
 
-Özellikler görevlere öznitelik olarak geçirilir. Görev içinde, bir MSBuild özelliği, değeri bir dizeye ve dizeden dönüştürülebileceği bir özellik türü ile temsil edilir. Desteklenen özellik türleri,,,,,, `bool` `char` `DateTime` `Decimal` `Double` `int` `string` ve işleyebileceği herhangi bir tür içerir <xref:System.Convert.ChangeType%2A> .
+Özellikler görevlere öznitelik olarak geçirilir. görev içinde, bir MSBuild özelliği, değeri bir dizeye ve dizeden dönüştürülebileceği bir özellik türü ile temsil edilir. Desteklenen özellik türleri,,,,,, `bool` `char` `DateTime` `Decimal` `Double` `int` `string` ve işleyebileceği herhangi bir tür içerir <xref:System.Convert.ChangeType%2A> .
 
 Öğeler görevlere nesneler olarak geçirilir <xref:Microsoft.Build.Framework.ITaskItem> . Görev içinde, <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> öğenin değerini temsil eder ve <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> meta verilerini alır.
 
@@ -137,7 +138,7 @@ KeyFileVersion: 1.0.0.3
 
 Bunun nedeni değeri `KeyFileVersion` aslında " \@ (KeyFile-> '% (sürüm) ')" dizesidir. Özellik ilk tanımlandığında öğe ve öğe dönüştürmeleri genişletilmedi, bu nedenle `KeyFileVersion` özelliğe genişletilmemiş dizenin değeri atandı.
 
-Yapı yürütme aşamasında Ileti görevini işlediğinde, MSBuild " \@ (keyfile-> '% (sürüm) ')" dizesini "1.0.0.3" yield olarak genişletir.
+yapı yürütme aşamasında, ileti görevini işlediğinde, MSBuild " \@ (KeyFile-> '% (sürüm) ')" dizesini "1.0.0.3" yield olarak genişletir.
 
 Özellik ve öğe grupları sırayla ters çevrilse de aynı iletinin göründüğünden emin olun.
 

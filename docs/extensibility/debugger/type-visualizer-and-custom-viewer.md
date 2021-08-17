@@ -1,6 +1,6 @@
 ---
-title: Tür görselleştiricisi ve özel Görüntüleyici | Microsoft Docs
-description: Belirli bir biçimde verileri görüntüleyen tür görselleştiricisi bileşenleri ve özel görüntüleyiciler hakkında bilgi edinin ve bunlar arasındaki farkları öğrenin.
+title: Tür Görselleştiricisi ve Özel Görüntüleyici | Microsoft Docs
+description: Tür görselleştirici bileşenleri ve verileri belirli bir biçimde görüntüleyen özel görüntüleyiciler ve aralarındaki farklar hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,26 +14,26 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a3e5e678edd5d616ea3ffc132dce0b8e28e3ef170242ba7c9611cb9f6920201
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a27606abf4b33acfb812d55cad83a801f05d3f2f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121306029"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042620"
 ---
-# <a name="type-visualizer-and-custom-viewer"></a>Tür görselleştiricisi ve özel Görüntüleyici
-Tür görselleştiricisi, belirli bir biçimdeki bir veri parçasını görüntüleyen bir bileşendir. Biçim tamamen Görselleştiriciyi uygulayan, son kullanıcı veya görselin Görselleştiricisinin bir tedarikçisidir.
+# <a name="type-visualizer-and-custom-viewer"></a>Tür görselleştiricisi ve özel görüntüleyici
+Tür görselleştirici, bir veri parçasını belirli bir biçimde görüntüleyen bir bileşendir. Biçim, son kullanıcı veya üçüncü taraf görselleştirici sağlayıcı gibi görselleştiriciyi kimin uygulayan kişi olduğu tamamen size göredir.
 
- Özel bir görüntüleyici, belirli bir biçimdeki verilerin bir parçasını görüntüleyen bir özel ifade değerlendiricisi bölümüdür. Bu biçim, özel görüntüleyicisinin uygulayıcısı 'na tamamıyla yapılır; bu, biçimin ifade değerlendiricisi 'nin (EE) uygulayıcısı 'na kadar olduğu anlamına gelir.
+ Özel görüntüleyici, bir veri parçasını belirli bir biçimde görüntüleyen özel ifade değerlendiricinin bir kısmıdır. Bu biçim tamamen özel görüntüleyicinin uygulayıcısı tarafından biçimlendirilmiş ve bu da biçimin ifade değerlendiricisine (EE) ait olduğu anlamına gelir.
 
-## <a name="support-for-type-visualizers-in-an-expression-evaluator"></a>İfade değerlendirici içindeki tür Görselleştiriciler için destek
- EE görselleştiriciler için erişilebilen bir arabirim kümesini destekleyerek tür görselleştiricileri destekler: [ıeevisualizerservice](../../extensibility/debugger/reference/ieevisualizerservice.md) ve [ıeevisualizerdataprovider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)gibi arabirimler. ancak, EE tür görselleştiricisini uygulamaktan sorumlu değildir: EE yalnızca dış görselleştiricilerin tür bilgilerine erişmesine izin verir. bu tür görselleştiriciler EE birlikte ve başka bir üçüncü taraf satıcı tarafından sağlanan Visual Studio uygun yere yüklenmiş ve hatta son kullanıcı tarafından yüklenebilir.
+## <a name="support-for-type-visualizers-in-an-expression-evaluator"></a>İfade değerlendiricisinde tür görselleştirici desteği
+ Bir EE görselleştiriciler için erişilebilir bir arabirim kümesi destekleyip tür görselleştiricileri destekler: [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md) ve [IEEVisualizerDataProvider gibi arabirimler.](../../extensibility/debugger/reference/ieevisualizerdataprovider.md) Ancak, EE görselleştiricinin kendisi uygulamaktan sorumlu değildir: EE yalnızca dış görselleştiricilerin tür bilgilerine erişmesine izin verir. Bu tür görselleştiriciler EE birlikte göndererek Visual Studio üçüncü taraf satıcı tarafından veya hatta son kullanıcı tarafından sağlanan uygun yere yüklenmiş olabilir.
 
-## <a name="support-for-custom-viewers-in-an-expression-evaluator"></a>İfade değerlendiricisi içinde özel görüntüleyiciler için destek
- bir EE ayrıca, EE kendisinin veri türünü görüntüleme kodunu sağladığı özel görüntüleyiciler de destekleyebilir. Özel bir Görüntüleyici [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) arabirimini uygular, bu da her türlü biçimde verileri gösteren tüm görevleri işler. Görüntüleyici, ekran üzerinde tam denetime sahiptir ve verilerin değiştirilmesine izin verebilir. EE tarafından sağlanan tüm özel görüntüleyiciler, ürün sevk edildiğinde EE ile birlikte gelir.
+## <a name="support-for-custom-viewers-in-an-expression-evaluator"></a>İfade değerlendiricisinde özel görüntüleyici desteği
+ Bir EE, veri türünü görüntülemek için kodu EE özel görüntüleyicileri de desteklemektedir. Özel görüntüleyici, verileri istenen biçimde göstermenin tüm görevlerini yerine gösteren [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) arabirimini kullanır; görüntüleyici, görüntü üzerinde tam denetime sahip olur ve hatta verilerin değiştirilmesine izin ve hatta hatta izin ve hatta olabilir. Ürün tarafından sağlanan tüm özel EE, ürün EE ile birlikte gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md)
+- [Hata ayıklayıcısı bileşenleri](../../extensibility/debugger/debugger-components.md)
 - [İfade değerlendirici](../../extensibility/debugger/expression-evaluator.md)
 - [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)
 - [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)

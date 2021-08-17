@@ -1,6 +1,6 @@
 ---
 title: typeof ifadesini nameof ifadesine dönüştürme
-description: Visual Studio ' de hızlı eylemler ve yeniden düzenlemeler menüsünü kullanarak, typeof 'yi C# ve GetType ' de nameof ' a dönüştürmek için Visual Basic.
+description: Visual Studio'de Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanarak C# içinde typeof ve GetType'i Visual Basic.
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -12,39 +12,39 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98f1680b63060f820bf8c7a8b23efd2731e18f98
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d37ae59d34968f91c95624784ce647831ef51804c4d67e8ad278472cacc1208f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101524"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121429948"
 ---
 # <a name="convert-typeof-to-nameof"></a>Dönüştür `typeof``nameof`
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 - Visual Basic
 
-**Ne:** , ' In bir örneğini C# ' de `typeof(<QualifiedType>).Name` `nameof(<QualifiedType>)` ve bir örneğini Visual Basic olarak dönüştürmenize imkan tanır `GetType(<QualifiedType>).Name` `NameOf(<QualifiedType>)` .
+**Ne:** C# içinde bir örneğini olarak, bir örneğini ise `typeof(<QualifiedType>).Name` `nameof(<QualifiedType>)` 'ye `GetType(<QualifiedType>).Name` `NameOf(<QualifiedType>)` dönüştürmenizi Visual Basic.
 
-**Ne zaman:**  Öğesinin tüm örnekleri `typeof(<QualifiedType>).Name` `someType` genel tür değildir. Bu dışlama gereklidir çünkü bu durum, ile aynı dize değerini döndürmez `nameof(<QualifiedType>)` . aynı değer Visual Basic örneği için de geçerlidir.
+**Ne zaman:**  tüm örnekleri `typeof(<QualifiedType>).Name` burada `someType` genel bir tür değil. Bu dışlama gereklidir çünkü bu durum ile aynı dize değerini `nameof(<QualifiedType>)` döndürür. Aynı durum, örnek için Visual Basic olur.
 
-**Neden:** `nameof` Öğesinin adı yerine kullanılarak, `type` bir nesneyi alma ile ilgili yansımayı önler `type` ve bunu yazmanın daha kolay bir yoludur.
+**Neden:** yerine adını kullanmak, bir nesneyi almakla ilgili yansımayı önler ve `nameof` `type` daha `type` pragmatik bir yazma yolu olur.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi `typeof(<QualifiedType>).Name` C# örneği Içine veya `GetType(<QualifiedType>).Name` Visual Basic içine yerleştirin.
+1. İmlecinizi `typeof(<QualifiedType>).Name` C# örneğinin veya `GetType(<QualifiedType>).Name` Visual Basic.
 
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
 
 3. Aşağıdaki seçeneklerden birini belirleyin:
 
     - C#
-      <br>' **typeof ' öğesini ' nameof ' olarak dönüştür**' ![ ü seçin: ' typeof ' öğesini ' nameof ' olarak dönüştür ' Visual Studio içindeki hızlı eylemler ve yeniden düzenlemeler menüsünün ekran görüntüsü ' nameof ' seçili ve C# kod değişiklikleri gösteriliyor.](media/convert-type-of.PNG)
+      <br>**'typeof' türünü 'nameof'** olarak dönüştür seçeneğini belirleyin: Visual Studio 'typeof' öğesini 'nameof' olarak dönüştür seçeneğinin seçili olduğu ve C# kod değişikliklerinin gösterildiği Hızlı Eylemler ve Yeniden Düzenleme menüsünün ekran ![ görüntüsü.](media/convert-type-of.PNG)
 
     - Visual Basic
-      <br>' **gettype ' öğesini ' nameof ' olarak dönüştür**' ü seçin: ![ ' gettype ' öğesini ' nameof ' öğesine dönüştür ve Visual Basic kod değişikliği gösterilen Visual Studio hızlı eylemlerin ve yeniden düzenlemeler menüsünün ekran görüntüsü.](media/convert-get-type.PNG)
+      <br>**'GetType' öğesini 'NameOf'** olarak dönüştür seçeneğini belirleyin: 'GetType' öğesini 'NameOf' olarak dönüştür seçeneğinin seçili olduğu Visual Studio Hızlı Eylemler ve Yeniden Düzenleme menüsünün ekran görüntüsü Visual Basic kod değişiklikleri ![ gösteriliyor.](media/convert-get-type.PNG)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

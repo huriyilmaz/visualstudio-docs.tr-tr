@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e955b1bda01d81a97ad196ca767a5232a9bc37c324a47d8a81470448acc0a2b1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c38a0529ca0e93e0924b9afc2805b57f159d73e5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264205"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074511"
 ---
 # <a name="idiasymbolget_arrayindextypeid"></a>IDiaSymbol::get_arrayIndexTypeId
 Sembolün dizi dizin türü tanımlayıcısını döndürür.

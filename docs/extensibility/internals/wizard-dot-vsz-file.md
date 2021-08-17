@@ -1,6 +1,6 @@
 ---
-title: Sihirbaz (. Vsz) Dosya | Microsoft Docs
-description: IDE'nin sihirbazları başlatmak için kullandığı .vsz dosyaları hakkında bilgi öğrenin. Dosyalar hangi sihirbazın çağrıleceği ve sihirbaza nelerin geçeceği hakkında bilgi içerir.
+title: Sihirbaz (. Vsz) dosyası | Microsoft Docs
+description: IDE 'nin sihirbazları başlatmak için kullandığı. vsz dosyaları hakkında bilgi edinin. Dosyalar, hangi sihirbazın çağrılacağını ve sihirbaza ne geçilecek hakkında bilgiler içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,20 +15,20 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 716ac3ce08b51695219b5c8cd33f49134f33d3626943e02c939c7427920f6e87
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cf6d381ff163711eb1026071a91660d74d835c71
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121261131"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041769"
 ---
 # <a name="wizard-vsz-file"></a>Sihirbaz (.Vsz) Dosyası
 
-Tümleşik geliştirme ortamı (IDE), sihirbazları başlatmak için .vsz dosyalarını kullanır. Bu .vsz dosyaları, IDE'nin hangi sihirbazı çağıran ve sihirbaza hangi bilgilerin geçeceği belirlemek için kullandığı bilgileri içerir.
+Tümleşik geliştirme ortamı (IDE), sihirbazları başlatmak için. vsz dosyalarını kullanır. Bu. vsz dosyaları, hangi sihirbazın çağrılacağını ve sihirbaza hangi bilgilerin geçirileceğini belirlemek için IDE 'nin kullandığı bilgileri içerir.
 
-.vsz dosyası, bölüm olmayan .ini biçimlendirilmiş bir metin dosyasının sürümüdür. IDE tarafından bilinen bilgiler dosyanın başında depolanır. Bu, sihirbaz arasında IDE'nin çağıran bir bağlantı ve IDE'ye geçirilen .vsz dosyasındaki parametreleri sağlar. Dosyanın geri kalanı, sihirbaza özgü ve IDE tarafından toplanacak ve belirli bir sihirbaza geçir edilecek parametreleri sağlar.
+. Vsz dosyası, bölümü olmayan .ini biçimli bir metin dosyasının sürümüdür. IDE tarafından bilinen bilgiler dosyanın başında depolanır. Bu, IDE 'nin çağırdığı sihirbaz ve IDE 'ye geçirilecek. vsz dosyasındaki parametreler arasında bir bağlantı sağlar. Dosyanın geri kalanı sihirbaza özgü ve IDE tarafından toplanacak ve belirli sihirbaza geçirilecek parametreler sağlar.
 
-Aşağıdaki örnek bir .vsz dosyasının içeriğini gösterir.
+Aşağıdaki örnek bir. vsz dosyasının içeriğini gösterir.
 
 ```
 VSWizard 8.0
@@ -37,20 +37,20 @@ Param="WIZARDNAME = Wizard One"
 Param="WIZARDUI = FALSE"
 ```
 
-.vsz dosyasındaki parçalar aşağıda ve ve ardından ve hatta yer alan bölümlerden oluşur.
+. Vsz dosyasındaki parçalar aşağıda verilmiştir.
 
 |Bölüm|Açıklama|
 |----------|-----------------|
-|Vswizard|Dosyanın ilk parametresi, şablon dosyası biçiminin sürüm numarasıdır. Bu sürüm numarası 6.0, 7.0, 7.1 veya 8.0 olabilir. Diğer sayılar başlatılamayacak ve Geçersiz Biçim hatasına neden olacak.|
-|Sihirbazı|Bu alan, sihirbazın OLE ProgID'sini veya alternatif olarak IDE tarafından ortak olarak oluşturulur sihirbazın CLSID'sini guid dizesi gösterimini içerir.|
-|Param|Bu parçalar isteğe bağlıdır. Gereken sayıda ekleyebilir.|
+|VSWizard|Dosyadaki ilk parametre, şablon dosya biçiminin sürüm numarasıdır. Bu sürüm numarası 6,0, 7,0, 7,1 veya 8,0 olmalıdır. Diğer sayılar başlatılamaz ve geçersiz biçim hatasına neden olabilir.|
+|Ekleme|Bu alan, sihirbazın OLE ProgID 'sini veya alternatif olarak IDE tarafından birlikte oluşturulan sihirbazın CLSID 'inin GUID dize gösterimini içerir.|
+|Param|Bu parçalar isteğe bağlıdır. Gereken kadar çok sayıda ekleyebilirsiniz.|
 
-Parametreler, .vsz dosyasının sihirbaza ek özel parametreler iletir. Her değer, sihirbaza değişken dizisinde bir dize öğesi olarak geçirildi. Daha fazla bilgi için [bkz. Özel Parametreler.](../../extensibility/internals/custom-parameters.md)
+Parametreler,. vsz dosyasını Sihirbaza ek özel parametreler geçirecek şekilde etkinleştirir. Her değer, sihirbaza bir varyant dizisinde dize öğesi olarak geçirilir. Daha fazla bilgi için bkz. [özel parametreler](../../extensibility/internals/custom-parameters.md).
 
-.vsz dosyanıza varsayılan bir yerel ayar kimliği eklemek için =xxxx'i belirtin; burada xxxx yerel ayar kimliğidir, örneğin İngilizce için `FALLBACK_LCID` 1033. Parametre `FALLBACK_LCID` tanımlandığı zaman, geçerli kimlik bulunamasa sihirbaz sağlanan geri dönüş yerel ayar kimliğini kullanır.
+. Vsz dosyanıza varsayılan bir yerel ayar KIMLIĞI eklemek için, `FALLBACK_LCID` = xxxx belirtin; burada xxxx yerel ayar kimliği, örneğin, İngilizce için 1033. `FALLBACK_LCID`Parametre tanımlandığında, sihirbaz, GEÇERLI kimlik bulunamazsa, sağlanan geri dönüş yerel ayar kimliğini kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Parametreler](../../extensibility/internals/custom-parameters.md)
+- [Özel parametreler](../../extensibility/internals/custom-parameters.md)
 - [Sihirbazlar](../../extensibility/internals/wizards.md)
 - [Şablon Dizin Açıklaması (.Vsdir) Dosyaları](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

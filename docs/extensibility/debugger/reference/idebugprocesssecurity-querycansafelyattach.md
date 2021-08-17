@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, kullanıcının güvenli olmayan bir işleme iliştirmadan önce bağlantı noktası sağlayıcısı 'nın bir uyarı görüntülemesine olanak tanır.
-title: 'Idebugprocesssecurity:: QueryCanSafelyAttach | Microsoft Docs'
+description: Bu yöntem, kullanıcı güvenli olmayan bir işleme eklemeden önce bağlantı noktası sağlayıcının bir uyarı görüntülemesi için izin verir.
+title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,20 +9,21 @@ ms.assetid: 63ec1ae8-27da-4574-aa15-1c986fe9fe58
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cbbfcf11a35fcfc43ae9e903b13a7480a3cf9743
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b9ee481bb61f0dde92b3e59cbbc728985d0074cb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076283"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087905"
 ---
 # <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
-Bu yöntem, kullanıcının güvenli olmayan bir işleme iliştirmadan önce bağlantı noktası sağlayıcısı 'nın bir uyarı görüntülemesine olanak tanır.
+Bu yöntem, kullanıcı güvenli olmayan bir işleme eklemeden önce bağlantı noktası sağlayıcının bir uyarı görüntülemesi için izin verir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +40,7 @@ int QueryCanSafelyAttach();
 
 - `S_OK`: İşleme ekleme güvenlidir ve hiçbir uyarı iletişim kutusu gösterilmez.
 
-- `S_FALSE`: Ekleme bir güvenlik sorunu ve uyarı içeren bir iletişim kutusu gösterilir.
+- `S_FALSE`: Ekleme bir güvenlik sorunu olabilir ve uyarıyla birlikte bir iletişim kutusu gösterilir.
 
 - `FAILURE`: İşleme ekleme başarısız oluyor.
 

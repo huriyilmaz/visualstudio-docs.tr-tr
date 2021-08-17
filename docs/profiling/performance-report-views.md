@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe11179ddf78d574f9512ebc0a1d63233d00cddac0f8f34443135b94e6d0da3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2d05d89dfb47c2ccd383acce542c7a1ebc45200b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410430"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027493"
 ---
 # <a name="performance-report-views"></a>Performans raporu görünümleri
 Bu bölüm Profil Oluşturma Araçları raporları ve görünümleri için başvuru bilgileri sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Profil oluşturma veri dosyalarının görünümleri [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] Tümleşik geliştirme environmentIDE görüntülenir. Raporlar [VSPerfReport](../profiling/vsperfreport.md) komut satırı aracı tarafından oluşturulur.

@@ -1,7 +1,7 @@
 ---
-title: çözüm veya proje olmadan Visual Studio JavaScript kodu yazma
+title: Çözüm veya proje olmadan Visual Studio JavaScript kodu yazma
 titleSuffix: ''
-description: Visual Studio bir proje dosyasında veya çözüm dosyasında bağımlılığı olmayan kod oluşturma desteği sağlar
+description: Visual Studio proje dosyasına veya çözüm dosyasına bağımlılık olmadan kod oluşturma desteği sağlar
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.topic: how-to
@@ -14,54 +14,54 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 42c3b9f4cc688dd5f2df1fde3f678060a7997bcfc4814760568a95f92c56b01f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c1cad687f73af5eb59f23a2d176e5b8facd3da40
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121258167"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028026"
 ---
-# <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>çözüm veya proje olmadan Visual Studio JavaScript ve TypeScript kodu geliştirme
+# <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Çözüm veya proje olmadan Visual Studio JavaScript ve TypeScript kodu geliştirme
 
-Visual Studio 2017 ' den başlayarak, [proje veya çözümler olmadan kod geliştirebilirsiniz](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md). bu, bir kod klasörü açmanıza ve ıntellisense, arama, yeniden düzenleme, hata ayıklama ve daha fazlası gibi zengin düzenleyici desteğiyle çalışmaya hemen başlayabilmenizi sağlar. bu özelliklere ek olarak, Visual Studio için Node.js araçları, TypeScript dosyaları oluşturmaya, npm paketlerini yönetmeye ve npm betikleri çalıştırmaya yönelik destek ekler.
+Visual Studio 2017'den başlayarak, [](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)bir kod klasörü açıp IntelliSense, arama, yeniden düzenleme, hata ayıklama ve daha fazlası gibi zengin düzenleyici desteğiyle hemen çalışmaya başlamanızı sağlayan, projeleri veya çözümleri olmayan kod geliştirebilirsiniz. Node.js Tools for Visual Studio, bu özelliklere ek olarak TypeScript dosyaları oluşturma, npm paketlerini yönetme ve npm betiklerini çalıştırma desteği ekler.
 
-Başlamak için araç çubuğundan **Dosya**  >  **Aç**  >  **klasörünü** seçin. Çözüm Gezgini klasördeki tüm dosyaları görüntüler ve düzenlemeden başlamak için herhangi bir dosyayı açabilirsiniz. arka planda, npm, derleme ve hata ayıklama özelliklerini etkinleştirmek için dosyaları dizine Visual Studio.
+Çalışmaya başlamanız için araç **çubuğundan**  >    >  **Dosya Klasör Aç'ı** seçin. Çözüm Gezgini klasördeki tüm dosyaları görüntüler ve düzenlemeye başlamak için dosyalardan herhangi birini açabilirsiniz. Arka planda, Visual Studio, derleme ve hata ayıklama özelliklerini etkinleştirmek için dosyaları dizinler.
 
 > [!IMPORTANT]
-> bu makalede açıklanan, npm tümleştirmesi dahil özelliklerinin birçoğu, Visual Studio 2017 sürüm 15,8 veya sonraki sürümleri gerektirir. Visual Studio **Node.js geliştirme** iş yükünün yüklü olması gerekir.
+> Npm tümleştirmesi de dahil olmak üzere bu makalede açıklanan özelliklerin birçoğu, 2017 Visual Studio 15.8 veya sonraki sürümleri gerektirir. Geliştirme Visual Studio **Node.js iş** yükünün yüklü olması gerekir.
 
 ## <a name="npm-integration"></a>npm tümleştirmesi
 
-Açtığınız klasör bir *package.js* dosyası içeriyorsa, NPM 'ye özgü bir bağlam menüsünü (kısayol menüsü) göstermek için *package.jsüzerinde* sağ tıklayabilirsiniz.
+Açık klasör bir *dosyada* package.jsiçeriyorsa, npm'ye *özgü bir bağlampackage.js* (kısayol menüsü) göstermek için aç'a sağ tıklarsınız.
 
-![Çözüm Gezgini NPM menüsü](../javascript/media/solution-explorer-npm-ctx.png)
+![Çözüm Gezgini'de npm menüsü](../javascript/media/solution-explorer-npm-ctx.png)
 
-Kısayol menüsünde, NPM tarafından yüklenen paketleri, [NPM paketlerini](npm-package-management.md) bir proje dosyası kullanırken yönettiğiniz şekilde yönetebilirsiniz.
+Kısayol menüsünde npm tarafından yüklenmiş paketleri, proje dosyası kullanırken npm paketlerini [yönetmekle](npm-package-management.md) aynı şekilde yönetebilirsiniz.
 
-Ayrıca, menü Ayrıca `scripts` *üzerindepackage.js* öğesinde tanımlanan betikleri çalıştırmanıza de olanak tanır. Bu betikler, ortam değişkeninde kullanılabilir Node.js sürümünü kullanacaktır `PATH` . Betikler yeni bir pencerede çalışır. Bu, derleme veya çalıştırma betikleri çalıştırmak için harika bir yoldur.
+Ayrıca menü, öğesinde tanımlanan betikleri üzerinde birpackage.js`scripts` *sağlar.* Bu betikler, ortam değişken Node.js betiklerin `PATH` sürümünü kullanır. Betikler yeni bir pencerede çalıştır. Bu, derleme veya çalıştırma betiklerini yürütmek için harika bir yol sağlar.
 
 ## <a name="build-and-debug"></a>Derleme ve hata ayıklama
 
 ### <a name="packagejson"></a>package.json
-Klasördeki *package.js* bir `main` öğesi belirtiyorsa, **hata ayıklama** komutu, *package.js* için sağ tıklama kısayol menüsünde kullanılabilir olacaktır.
-Bunu tıklatmak, belirtilen komut dosyası bağımsız değişkeni olarak *node.exe* başlayacaktır.
+Klasördeki *package.js* öğesi belirtirse, hata ayıkla komutu, üzerinde belirtilen öğenin sağ tıklama `main` kısayol menüsündepackage.js *kullanılabilir.* 
+Bu düğmeye *tıklar* node.exebağımsız değişkeni olarak belirtilen betikle çalışmaya başlar.
 
 ### <a name="javascript-files"></a>JavaScript dosyaları
-JavaScript dosyalarında hata ayıklama yaparak bir dosyaya sağ tıklayıp kısayol menüsünden **Hata Ayıkla** ' yı seçebilirsiniz. Bu, bağımsız değişkeni olarak bu JavaScript dosyası ile *node.exe* başlar.
+Bir dosyaya sağ tıklar ve kısayol menüsünden Hata ayıkla'yı seçerek JavaScript **dosyalarında** hata ayıkabilirsiniz. Bu *node.exe* JavaScript dosyasıyla bağımsız değişkeni olarak başlar.
 
-### <a name="typescript-files-and-tsconfigjson"></a>TypeScript dosyaları ve üzerinde tsconfig.js
-Klasörde mevcut bir *tsconfig.js* yoksa, bu dosyayı derleyip hata ayıklamanın kısayol menü komutlarını görmek Için bir TypeScript dosyasına sağ tıklayabilirsiniz. Bu komutları kullandığınızda, varsayılan seçeneklerle *tsc.exe* kullanarak derleyin veya hata ayıklayın. (Hata ayıklayabilmeniz için önce dosyayı oluşturmanız gerekir.)
-
-> [!NOTE]
-> TypeScript kodu oluştururken ' de yüklü en yeni sürümü kullanıyoruz `C:\Program Files (x86)\Microsoft SDKs\TypeScript` .
-
-Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıklamak üzere bir menü komutu görmek Için bir TypeScript dosyasına sağ tıklayabilirsiniz. Seçeneği yalnızca `outFile` *üzerindetsconfig.js* belirtilmemişse görüntülenir. Eğer `outFile` belirtilmişse, *üzerindetsconfig.js* sağ tıklayıp doğru seçeneği belirleyerek bu dosyada hata ayıklayabilirsiniz. Bu `tsconfig.json` Dosya Ayrıca, derleyici seçeneklerini belirtmenize izin veren bir yapı seçeneği sağlar.
+### <a name="typescript-files-and-tsconfigjson"></a>TypeScript dosyaları ve tsconfig.jsdosyaları
+Klasörde herhangi *birtsconfig.js* yoksa, bu dosyayı derlemek ve hata ayıklamak için kısayol menüsü komutlarını görmek için TypeScript dosyasına sağ tıklarsınız. Bu komutları kullanırken, varsayılan seçenekleri kullanarak derlemetsc.exe *hata* ayıklarsınız. (Hata ayıklamadan önce dosyayı derlemelisiniz.)
 
 > [!NOTE]
-> *tsconfig.js* hakkında daha fazla bilgi Için [tsconfig.jsTypeScript el kitabı sayfasında](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)hakkında daha fazla bilgi edinebilirsiniz.
+> TypeScript kodu oluşturmada, 'de yüklü en yeni sürümü `C:\Program Files (x86)\Microsoft SDKs\TypeScript` kullanıyoruz.
 
-## <a name="unit-tests"></a>Birim testleri
-*üzerindepackage.js* bir test kökü belirterek Visual Studio birim testi tümleştirmesini etkinleştirebilirsiniz:
+Klasörde bir *tsconfig.jsdosyası* varsa TypeScript dosyasına sağ tıklar ve bu TypeScript dosyasında hata ayıklaması yapmak için menü komutunu ekleyebilirsiniz. Seçeneği yalnızca üzerinde belirtilen içinde `outFile` *belirtilmemişsetsconfig.jsgörünür.* belirtilirse, dosyanın hata ayıklaması için sağ tıklartsconfig.js`outFile` ve doğru seçeneği belirtebilirsiniz.  Dosya, `tsconfig.json` derleyici seçeneklerini belirtmenize olanak sağlayan bir derleme seçeneği de sağlar.
+
+> [!NOTE]
+> Hakkında daha fazla bilgi için *tsconfig.jstypescript* [tsconfig.jssayfasında bulabilirsiniz.](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+
+## <a name="unit-tests"></a>Birim Testleri
+üzerinde bir test kökü belirterek Visual Studio testi tümleştirmeyi *package.js:*
 
 ```json
 {
@@ -73,14 +73,14 @@ Klasörde mevcut bir *tsconfig.js* varsa, bu TypeScript dosyasında hata ayıkla
 }
 ```
 
-Test Çalıştırıcısı, hangi test çerçevesinin kullanılacağını belirleyen yerel olarak yüklenen paketleri numaralandırır.
-Desteklenen çerçevelerin hiçbiri tanınmazsa, Test Çalıştırıcısı varsayılan olarak *ExportRunner* olur. Desteklenen diğer çerçeveler şunlardır:
+Test çalıştırıcısı, hangi test çerçevesini kullanmak üzere yerel olarak yüklenmiş paketleri numaralandırıyor.
+Desteklenen çerçevelerden hiçbiri tanınmıyorsa, test çalıştırıcı varsayılan olarak *ExportRunner 'ı kullanır.* Desteklenen diğer çerçeveler:
 * Mocha ([mochajs.org](https://mochajs.org/))
-* Jasmine ([Jasmine.GitHub.io](https://jasmine.github.io/))
-* Bant ([GitHub.com/substack/Tape](https://github.com/substack/tape))
+* Jasmine ([Jasmine.github.io](https://jasmine.github.io/))
+* Bant ([github.com/substack/tape](https://github.com/substack/tape))
 * Jest ([jestjs.io](https://jestjs.io/))
 
-test gezgini 'ni açtıktan sonra ( **test**  >  **Windows**  >  **test gezginini** seçin), Visual Studio testleri bulur ve görüntüler.
+Test Gezgini'ni açtıktan sonra **(Test**  >  **Gezgini Windows'ni**  >  seçin), Visual Studio testlerini keşfeder ve görüntüler.
 
 > [!NOTE]
-> Test Çalıştırıcısı yalnızca test kökündeki JavaScript dosyalarını numaralandıracaktır, çünkü uygulamanız TypeScript 'te yazılmışsa, önce bunları derlemeniz gerekir.
+> Test çalıştırıcısı, javascript dosyalarını yalnızca test kökünde numaralar; eğer uygulamanız TypeScript'te yazılmışsa önce bu dosyaları derlemeniz gerekir.

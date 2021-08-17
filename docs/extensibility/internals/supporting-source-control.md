@@ -1,6 +1,6 @@
 ---
 title: Kaynak denetimini destekleme | Microsoft Docs
-description: Visual Studio 'Nun, projeniz veya düzenleyiciniz için dosya kullanıma alma işlemlerini, iadelerini ve diğer kaynak denetimi işlemlerini nasıl desteklediğini öğrenin.
+description: Visual Studio, projeniz veya düzenleyiciniz için dosya kullanıma alma işlemleri, iadeler ve diğer kaynak denetimi işlemlerini nasıl desteklediğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: 567acde3-354e-4f39-8d99-0ef86c103396
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56880cab310367a5c4da3af0cf310867a5519495
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f2769e6a6633214e2f7e95d20f2bd61cb360d492f8d850e48d95b8ec6134a97c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080612"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431974"
 ---
 # <a name="supporting-source-control"></a>Kaynak Denetimini Destekleme
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , projeniz veya düzenleyiciniz için dosya kullanıma alma işlemleri, iadeler ve diğer kaynak denetimi işlemlerini destekler. Kaynak Denetim istemcisi olarak, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] dinamik olarak tanımlanmış bir dosya kümesi için arşivleme, sürüm oluşturma ve denetim olanakları sağlayan gibi bir kaynak denetimi paketiyle etkileşime geçmek üzere tasarlanmıştır.

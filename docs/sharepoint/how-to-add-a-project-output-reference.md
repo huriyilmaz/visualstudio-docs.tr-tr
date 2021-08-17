@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: proje çıktı başvurusu ekleme | Microsoft Docs'
-description: SharePoint 'e ait olmayan proje derlemelerini (veya Silverlight projelerinde. xap dosyalarını) SharePoint 'e dağıtabilmeniz için bir proje çıkış başvurusu eklemeyi öğrenin.
+title: 'nasıl yapılır: Project çıkış başvurusu ekleme | Microsoft Docs'
+description: SharePoint için SharePoint olmayan proje derlemelerini (veya Silverlight projelerinde. xap dosyaları) dağıtabilmeniz için bir proje çıkış başvurusu eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,35 +14,36 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: c79c3d19dbd4b72bab9facdd81542fdc0620e1a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f3b97019003d2cad0109dbbd08b5471f98704abe6614e1ee4d50c77c8fa9cee
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99965869"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121332332"
 ---
 # <a name="how-to-add-a-project-output-reference"></a>Nasıl yapılır: proje çıktı başvurusu ekleme
-  SharePoint olmayan proje derlemelerini (veya. xap dosyalarını Silverlight projelerinde) SharePoint 'e dağıtmak için, bunları bir proje çıktı başvurusu olarak ekleyin.
+  SharePoint için SharePoint olmayan proje derlemelerini (veya. xap dosyalarını Silverlight projelerinde) dağıtmak için, bunları bir proje çıktı başvurusu olarak ekleyin.
 
- Bu işlem iki proje arasında bir çözüm derleme bağımlılığı oluşturur. Proje çıkış başvurularıyla ilişkili projeler, SharePoint projesi oluşturulup dağıtılmadan önce oluşturulur.
+ Bu işlem iki proje arasında bir çözüm derleme bağımlılığı oluşturur. proje çıkış başvurularıyla ilişkili projeler, SharePoint projesi oluşturulup dağıtılmadan önce oluşturulur.
 
 ### <a name="to-add-a-project-output-reference"></a>Proje çıkış başvurusu eklemek için
 
-1. En az bir SharePoint projesi ve SharePoint olmayan bir proje içeren bir çözüm yükleyin.
+1. en az bir SharePoint projesi ve SharePoint olmayan bir proje içeren bir çözüm yükleyin.
 
-2. **Çözüm Gezgini**, SharePoint proje düğümünde bir öğe seçin.
+2. **Çözüm Gezgini**, SharePoint projesi düğümünde bir öğe seçin.
 
-3. **Özellikler** penceresinde, **Proje çıktısı başvuruları** özelliğini seçin ve yanındaki üç nokta (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) düğmesini seçin.
+3. **özellikler** penceresinde, **çıkış başvuruları özelliğini Project** seçin ve yanındaki üç nokta (![ASP.NET Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) düğmesini seçin.
 
-4. **Proje çıktısı başvuruları** Iletişim kutusunda **Ekle** düğmesini seçin.
+4. **çıkış başvurularını Project** iletişim kutusunda **ekle** düğmesini seçin.
 
-5. Özellikler bölmesinde, **dağıtım türü** özelliğinin yanındaki oku seçin ve ardından başvuru yaptığınız SharePoint olmayan öğe Için **ElementFile** gibi uygun bir değer seçin.
+5. özellikler bölmesinde, **dağıtım türü** özelliğinin yanındaki oku seçin ve ardından başvuru yaptığınız SharePoint olmayan öğe için **elementfile** gibi uygun bir değer seçin.
 
-6. **Proje adı**' nın yanındaki oku seçin, SharePoint olmayan proje öğesinin adını seçin ve **Tamam** düğmesini seçin.
+6. **Project ad**' ın yanındaki oku seçin, SharePoint olmayan proje öğesinin adını seçin ve **tamam** düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
 - [Nasıl yapılır: denetimleri güvenli denetim olarak Işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md)
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

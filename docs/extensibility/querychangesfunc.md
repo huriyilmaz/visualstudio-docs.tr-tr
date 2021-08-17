@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e9a28e4f75187cce110280d471f0a6f830d52e96706654c91929b324da70f57d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3d0db2c6c8b42594135a49fb62421134966e0e22
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375175"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028715"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 Bu, bir dosya adı koleksiyonunu numaralandırmak ve her bir dosyanın durumunu belirleyebilmek için [SccQueryChanges](../extensibility/sccquerychanges-function.md) işlemi tarafından kullanılan bir geri çağırma işlevidir.

@@ -1,6 +1,6 @@
 ---
 description: Verilen özellik tanımlayıcıları için karşılık gelen dize adlarını alır.
-title: 'IDiaPropertyStorage:: ReadPropertyNames | Microsoft Docs'
+title: IDiaPropertyStorage::ReadPropertyNames | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,14 +11,15 @@ ms.assetid: f8bcab77-afca-4a8f-8710-697842f8a518
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cbb6d511a6be9ed408b076162a3d00d22705075a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 3c49a688fe1ecf9892ec5943934749694e8a839b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148145"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074767"
 ---
 # <a name="idiapropertystoragereadpropertynames"></a>IDiaPropertyStorage::ReadPropertyNames
 Verilen özellik tanımlayıcıları için karşılık gelen dize adlarını alır.
@@ -36,21 +37,21 @@ HRESULT ReadPropertyNames (
 #### <a name="parameters"></a>Parametreler
  `cpropid`
 
-'ndaki İçindeki özellik kimliği sayısı `rgpropid` .
+[in] içinde özellik kimliklerinin `rgpropid` sayısı.
 
  `rgpropid`
 
-'ndaki Adların alınacağı özellik kimliklerinin dizisi ( `PROPID` WTypes. h olarak bir olarak tanımlanır `ULONG` ).
+[in] Adların almak için sahip olduğu özellik kimlikleri dizisi ( `PROPID` WTypes.h içinde bir olarak `ULONG` tanımlanır).
 
  `rglpwstrName`
 
-[in, out] Belirtilen özellik kimlikleri için özellik adları dizisi. Dizi, istenen özellik adı sayısını tutmak için önceden ayrılmış olmalıdır ve en az dizeleri tutabilecek olmalıdır `cpropid``BSTR` .
+[in, out] Belirtilen özellik kimlikleri için özellik adları dizisi. Dizi, istenen özellik adlarını tutmak için önceden ayrılmış olmalı ve en azından dizeleri `cpropid``BSTR` tutabilecektir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Döndürülen özellik adları artık gerekli olmadığında serbest bırakılmalıdır (işlevi çağırarak `SysFreeString` ).
+ Döndürülen özellik adları artık gerekli olmadığı zaman serbest bırak (işlevi `SysFreeString` çağırarak) gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

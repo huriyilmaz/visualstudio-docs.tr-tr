@@ -1,6 +1,6 @@
 ---
-description: Başvuru bölümü, API 'ye kavramsal genel bakış, tüm API öğelerinin sözdizimini ve kullanımını gösteren bir kılavuz ve kod örnekleri örneği içerir.
-title: apı başvurusu (Visual Studio hata ayıklama) | Microsoft Docs
+description: Başvuru bölümünde API'ye kavramsal bir genel bakış, tüm API öğeleri için söz dizimi ve kullanımı gösteren bir kılavuz ve çeşitli kod örnekleri yer almaktadır.
+title: API Başvurusu (Visual Studio Ayıklama) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,37 +12,37 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 244af855dd63942fd2df586a128a1b53c71649e1a518ac516e43dc2afe9cddd5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ac51ded5f99fc2d73d09e563bdf05ee0ac40469f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239366"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073207"
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API Başvurusu (Visual Studio Hata Ayıklama)
-Başvuru bölümü, API 'ye kavramsal genel bakış, tüm API öğelerinin sözdizimini ve kullanımını gösteren bir kılavuz ve kod örnekleri örneği içerir. Tüm başvurular kategoriye göre alfabetik olarak listelenir.
+Başvuru bölümünde API'ye kavramsal bir genel bakış, tüm API öğeleri için söz dizimi ve kullanımı gösteren bir kılavuz ve çeşitli kod örnekleri yer almaktadır. Tüm başvurular kategoriye göre alfabetik olarak listelenir.
 
- Aşağıdaki tabloda `HRESULT` Yöntemler tarafından döndürülen ortak değerler gösterilmektedir.
+ Aşağıdaki tablo, yöntemler tarafından `HRESULT` döndürülen ortak değerleri gösterir.
 
 |Ad|Açıklama|Değer|
 |----------|-----------------|-----------|
 |S_OK|Başarılı.|0x00000000|
-|E_UNEXPECTED|Beklenmeyen hata.|0x8000FFFF|
-|E_NOTIMPL|Uygulanmaz.|0x80004001|
-|E_OUTOFMEMORY|İşlemi tamamlamaya yetecek bellek yok.|0x8007000E|
-|E_INVALIDARG|Bir veya daha fazla bağımsız değişken geçersiz.|0x80070057|
-|E_NOINTERFACE|Böyle bir arabirim desteklenmiyordur.|0x80004002|
+|E_unexpected|Beklenmeyen hata.|0x8000FFFF|
+|E_notımpl|Uygulanmaz.|0x80004001|
+|E_outofmemory|işlemi tamamlamak için yeterli bellek yok.|0x8007000E|
+|E_ınvalıdarg|Bir veya daha fazla bağımsız değişken geçersiz.|0x80070057|
+|E_noınterface|Böyle bir arabirim desteklenmiyor.|0x80004002|
 |E_POINTER|Geçersiz işaretçi.|0x80004003|
 |E_HANDLE|Geçersiz tanıtıcı.|0x80070006|
-|E_ABORT|İşlem iptal edildi.|0x80004004|
-|E_FAIL|Beklenmeyen hata.|0x80004005|
+|E_ABORT|İşlem durduruldu.|0x80004004|
+|E_faıl|Beklenmeyen hata.|0x80004005|
 |E_ACCESSDENIED|Genel erişim reddedildi hatası.|0x80070005|
 
 > [!NOTE]
-> Bir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklama yöntemi `S_OK` döndürüldüğünde, tüm out parametre işaretçilerinin geçerli olduğu varsayılır, yani, döndürülen parametre işaretçileri üzerinde hiçbir doğrulama yapılmaz `S_OK` .
+> Bir hata ayıklama yöntemi döndür olduğunda, tüm out parametre işaretçilerinin geçerli olduğu varsayılır; başka bir şekilde, döndürülen parametre işaretçileri üzerinde [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] `S_OK` doğrulama `S_OK` yürütülmz.
 >
 > [!NOTE]
-> Geçersiz veya `NULL` [out] PARAMETRELERI IDE 'nin kilitlenmesine neden olabilir.
+> Geçersiz `NULL` veya [out] parametreleri IDE'nin kilitlenmesi neden olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler](../../../extensibility/debugger/reference/interfaces-visual-studio-debugging.md)

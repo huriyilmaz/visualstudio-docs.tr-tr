@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f3f0182ee7cb696fea33aa41df076f6579e7db948b7f6113fc46d419f53989f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 77929647b86f5397fa5986f2223b8e52c9d65c86
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121237858"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041600"
 ---
 # <a name="register-and-unregister-vspackages"></a>VSPackage'ları kaydetme ve kaydını çıkarma
 VsPackage kaydetmek için öznitelikleri kullanır, ancak
@@ -45,7 +45,7 @@ public sealed class BasicPackage : Package
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp
 ```
 
- Visual Studio geliştirme örneğinize yüklemiş olduğunuz bir uzantıyı kaldırmak için Araçlar Uzantıları ve Güncelleştirmeler'e gidin, uzantıyı bulun ve  >  Kaldır'a **tıklayın.**
+ Visual Studio geliştirme örneğinize yüklemiş bir uzantıyı kaldırmak için Araçlar Uzantıları ve Güncelleştirmeler'e gidin, uzantıyı bulun ve  >  Kaldır'a **tıklayın.**
 
  Herhangi bir nedenle bu yöntemlerden hiçbiri uzantıyı kaldırmada başarılı olursa, VSPackage derlemesini komut satırına şu şekilde kaldırabilirsiniz:
 
@@ -70,7 +70,7 @@ public class CustomRegistrationAttribute : RegistrationAttribute
 }
 ```
 
- özniteliği öznitelik sınıflarında özniteliğin ait olduğu program öğesini (sınıf, yöntem vb.) belirtmek için kullanılır, birden çok kez kullanılabilir olup olmadığını ve devralınıp devralınıp devralılamayacaklarını <xref:System.AttributeUsageAttribute> belirtir.
+ özniteliği, özniteliğin ait olduğu program öğesini (sınıf, yöntem vb.), birden çok kez kullanılanın olup olmadığını ve devralınıp devralılamayacaklarını belirtmek için öznitelik <xref:System.AttributeUsageAttribute> sınıflarında kullanılır.
 
 ### <a name="create-a-registry-key"></a>Kayıt defteri anahtarı oluşturma
 

@@ -10,17 +10,18 @@ ms.assetid: b3b45ed2-ea4e-4389-b78a-11fc9796a6c1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d59c3bd88c82d6f7bacc7ce66c33b36a137d4e8b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8d1eacfea362f13e0557764dfc3bee411d73d6fa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081353"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087398"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
 Sembol grubundaki modüller hakkındaki bilgileri alır.

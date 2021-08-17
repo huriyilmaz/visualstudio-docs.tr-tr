@@ -11,14 +11,15 @@ ms.assetid: 43278b79-bf16-4c08-bcf1-6f7f7a17feab
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a4000426b72472d57b589f26543dd1547f8dc982
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 380592c15a0644fe64ab1e3f68fdd9ab0ec7d9d9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072396"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088217"
 ---
 # <a name="idebugportnotify2"></a>IDebugPortNotify2
 Bu arabirim, üzerinde çalıştığı bağlantı noktasıyla ayıklanabilecek bir programı kaydeder veya kaydını siler.

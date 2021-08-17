@@ -1,6 +1,6 @@
 ---
 title: ExtensionDataItem Öğesi | Microsoft Docs
-description: Yeni proje öğesi şemasında bir öğe olan ExtensionDataItem öğesi SharePoint bilgilerini görüntüleme.
+description: Proje öğesi şemasında yer alan bir öğe olan ExtensionDataItem öğesi SharePoint başvuru bilgilerini görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual

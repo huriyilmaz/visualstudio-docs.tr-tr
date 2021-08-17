@@ -1,52 +1,53 @@
 ---
-title: Foreach döngüsünü LINQ 'a Dönüştür
-description: IEnumerable kullanan herhangi bir foreach döngüsünü LINQ sorgusuna veya LINQ çağrı formuna (LINQ yöntemi olarak da bilinir) dönüştürün.
+title: Foreach döngüsü LINQ'ye dönüştürme
+description: IEnumerable kullanan foreach döngülerini LINQ sorgusuna veya LINQ çağrı formuna (LINQ yöntemi olarak da bilinir) dönüştürebilirsiniz.
 ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8ff489e11cc5c61c5e840b4b12d05ba5da46ce41
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: af9d538ca2f6fd0a7610fef4548c51723cd4f75b120e59e11bedba27435f283a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102466296"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430258"
 ---
-# <a name="convert-a-foreach-loop-to-linq"></a>Foreach döngüsünü LINQ 'a Dönüştür
+# <a name="convert-a-foreach-loop-to-linq"></a>Foreach döngüsü LINQ'ye dönüştürme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** IEnumerable kullanan *foreach* DÖNGÜNÜZÜ bir LINQ SORGUSUNA veya LINQ çağrı formuna (LINQ yöntemi olarak da bilinir) kolayca dönüştürmenize olanak sağlar.
+**Ne:** IEnumerable kullanan *foreach* döngüyü bir LINQ sorgusuna veya LINQ çağrı formuna (LINQ yöntemi olarak da bilinir) kolayca dönüştürmenize olanak sağlar.
 
-**Ne zaman:** IEnumerable kullanan bir foreach döngüsüne sahipsiniz ve bu döngünün LINQ sorgusu olarak okunmasını istiyorsunuz.
+**Ne zaman:** IEnumerable kullanan bir foreach döngün var ve bu döngüyü LINQ sorgusu olarak okumak istiyor.
 
-**Neden:** Bir foreach döngüsü yerine LINQ sözdizimini kullanmayı tercih edersiniz. [LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq) , C# içindeki birinci sınıf dil yapısına bir sorgu oluşturur. LINQ bir dosyadaki kod miktarını azaltabilir, kodu daha kolay okunabilir hale getirir ve farklı veri kaynaklarının benzer sorgu ifadesi desenlerine sahip olmasına izin verir.
+**Neden:** Foreach döngüsü yerine LINQ söz dizimi kullanmayı tercih edersiniz. [LINQ,](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq) C# dilinde birinci sınıf dil yapısına bir sorgu oluşturur. LINQ bir dosyada kod miktarını azaltır, kodun okunmasını kolaylaştırır ve farklı veri kaynaklarının benzer sorgu ifadesi desenlerine sahip olmasına olanak sağlar.
 
 > [!NOTE]
-> LINQ sözdizimi genellikle bir foreach döngüsünden daha az verimlidir. Kodunuzun okunabilirliğini geliştirmek için LINQ kullandığınızda oluşabilecek herhangi bir performans zorunluluğunu getirir dikkat etmeniz iyidir.
+> LINQ söz dizimi genellikle foreach döngüsünden daha az verimlidir. Kodunuzun okunabilirliğini geliştirmek için LINQ'i kullanırken ortaya çıkabilir performans farklarının farkında olmak iyi bir fikirdir.
 
-## <a name="convert-a-foreach-loop-to-linq-refactoring"></a>Foreach döngüsünü LINQ yeniden düzenlemeye Dönüştür
+## <a name="convert-a-foreach-loop-to-linq-refactoring"></a>Foreach döngüsü linQ yeniden düzenlemeye dönüştürme
 
-1. İmlecinizi `foreach` anahtar sözcüğe yerleştirin.
+1. İmlecinizi anahtar sözcüğüne `foreach` ekleyin.
 
-    ![IEnumerable örneği kullanan foreach](media/convert-foreach-to-LINQ.png)
+    ![IEnumerable kullanan Foreach örneği](media/convert-foreach-to-LINQ.png)
 
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
 
-   ![LINQ menü örneğine Dönüştür](media/convert-foreach-to-LINQ-codefix.png)
+   ![LINQ menü örneğine dönüştürme](media/convert-foreach-to-LINQ-codefix.png)
 
-3. **LINQ 'A Dönüştür** veya **LINQ 'a Dönüştür (çağrı formu)** seçeneğini belirleyin.
+3. **LINQ'ye Dönüştür veya Linq'e** **Dönüştür (çağrı formu) öğesini seçin.**
 
    ![LINQ sorgu sonucu örneği](media/convert-foreach-to-LINQ-result.png)
 
-   ![LINQ Call form sonuç örneği](media/convert-foreach-to-LINQ-callform-result.png)
+   ![LINQ çağrı formu sonuç örneği](media/convert-foreach-to-LINQ-callform-result.png)
 
 ### <a name="sample-code"></a>Örnek kod
 
@@ -80,4 +81,4 @@ public class Class1
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
 - [Değişiklikleri Önizle penceresi](../../ide/preview-changes.md)
-- [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)
+- [.NET İpuçları için geliştirmeler](../csharp-developer-productivity.md)

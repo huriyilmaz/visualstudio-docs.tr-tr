@@ -1,6 +1,6 @@
 ---
 title: Project Türü | Microsoft Docs
-description: Kullanıcıların yeni proje türünü tanımasını ve Visual Studio kayıt defteri girdileri oluşturmayı öğrenin.
+description: Yeni projenizin türünü tanımasını ve Visual Studio kayıt defteri girdileri oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d20db232bc340e241f2fc4ab05927c59660741b5b0bc5e77e4280a6a1498d41
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8b3966b807f87fd6767727e66b6f5b035cfc1510
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121401277"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042172"
 ---
 # <a name="registering-a-project-type"></a>Proje Türü Kaydetme
 Yeni bir proje türü oluşturdukta, proje türünü tanımayı ve bu türle [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çalışmanızı sağlayan kayıt defteri girdileri oluşturmanız gerekir. Bu kayıt defteri girdilerini genellikle bir kayıt defteri betiği (.rgs) dosyası kullanarak oluşturabilirsiniz.
@@ -28,7 +28,7 @@ Yeni bir proje türü oluşturdukta, proje türünü tanımayı ve bu türle [!I
  Aşağıdaki örnekte, kayıt defterindeki deyimler, varsa varsayılan yolları ve verileri sağlar ve ardından her deyimi için kayıt defteri betiğinden girdileri içeren bir tabloyu içerir. Tablolar betik girişlerini ve deyimler hakkında ek bilgileri sağlar.
 
 > [!NOTE]
-> Aşağıdaki kayıt defteri bilgileri, proje türlerinizi kaydetmek için yazacakları kayıt defteri betikleri girişlerinin türüne ve amaçlarına bir örnek olarak tasarlanmıştır. Gerçek girişleriniz ve kullanımları, proje türüne özgü gereksinimlere göre değişiklik gösterebilir. Geliştirmekte olduğunu proje türüne yakından benzeyen bir tane bulmak için kullanılabilir örnekleri gözden geçirmeniz ve ardından bu örneğin kayıt defteri betiklerini gözden geçirmeniz gerekir.
+> Aşağıdaki kayıt defteri bilgileri, proje türlerinizi kaydetmek için yazacakları kayıt defteri betikleri girişlerinin türüne ve amaçlarına bir örnek olarak tasarlanmıştır. Gerçek girişleriniz ve kullanımları proje türüne özgü gereksinimlere göre değişebilir. Geliştirmekte olduğunu proje türüne yakından benzeyen bir tane bulmak için kullanılabilir örnekleri gözden geçirmeniz ve ardından bu örneğin kayıt defteri betiklerini gözden geçirmeniz gerekir.
 
  Aşağıdaki örnekler, HKEY_CLASSES_ROOT.
 
@@ -90,7 +90,7 @@ Yeni bir proje türü oluşturdukta, proje türünü tanımayı ve bu türle [!I
 |`ProductName`|REG_SZ|`Figure Project Sample`|Proje türünün adı.|
 |`ProductVersion`|REG_SZ|`9.0`|Proje türü sürümünün sürüm numarası.|
 |`MinEdition`|REG_SZ|`professional`|Kaydedilen VSPackage sürümü.|
-|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|VSPackage projesinin paket yükleme anahtarı. Anahtar, ortam başlatıldıktan sonra proje yüklendiğinde doğrulanır.|
+|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|VSPackage projesinin paket yükleme anahtarı. Ortam başlatıldıktan sonra proje yüklendiğinde anahtar doğrulanır.|
 |`DllName`|REG_SZ|`%RESOURCE_DLL%`|Proje türü için yerelleştirilmiş kaynakları içeren uydu DLL'nin dosya adı.|
 |`Path`|REG_SZ|`%RESOURCE_PATH%`|Uydu DLL'nin yolu.|
 |`FigProjectsEvents`|REG_SZ|Değer için bkz. deyimi.|Bu otomasyon olayı için döndürülen metin dizesini belirler.|

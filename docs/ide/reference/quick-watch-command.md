@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ae0717b8c4f4ffe6f3d469b21d26b794ee855dc6b25a965f2642e322892b76f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3b47b34fafce8acf2eebaf01257e76df5b195c14
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387076"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056166"
 ---
 # <a name="quick-watch-command"></a>Hızlı Bakış Komutu
 [QuickWatch](../../debugger/watch-and-quickwatch-windows.md) penceresinin İfade alanında seçili veya belirtilen metni görüntüler. Hata ayıklayıcısı tarafından tanınan bir değişkenin veya ifadenin geçerli değerini veya yazmacın içeriğini hesaplamak için bu iletişim kutusunu kullanabilirsiniz. Ayrıca, sabit olmayan herhangi bir değişkenin değerini veya herhangi bir yazmaç içeriğini değiştirebilirsiniz.
@@ -39,7 +39,7 @@ Debug.QuickWatchq [text]
 
 ## <a name="remarks"></a>Açıklamalar
 
-`text`Atlanırsa, o anda imleçte seçili olan metin veya sözcük izleme penceresi.
+`text`Atlanırsa, imleçte seçili olan metin veya sözcük izleme penceresi.
 
 ## <a name="example"></a>Örnek
 
@@ -49,7 +49,7 @@ Debug.QuickWatchq [text]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'daki Watch ve QuickWatch Windows kullanarak Değişkenler üzerinde watch Visual Studio](../../debugger/watch-and-quickwatch-windows.md)
+- [Visual Studio'daki Watch ve QuickWatch Windows Kullanarak Değişkenler üzerinde İzleme Visual Studio](../../debugger/watch-and-quickwatch-windows.md)
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)

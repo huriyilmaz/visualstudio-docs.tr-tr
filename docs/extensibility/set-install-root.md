@@ -1,6 +1,6 @@
 ---
 title: VSIX v3 ile uzantılar klasörünü dışarıdan yükleme | Microsoft Docs
-description: Visual Studio SDK uzantı varlıklarını uzantılar klasörünün dışına ve hangi konumların geçerli olduğunu yükleme hakkında bilgi edinin.
+description: uzantılar klasörünün dışında Visual Studio SDK uzantısı varlıklarını yükleme ve hangi konumların geçerli olduğu hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/09/2016
 ms.topic: how-to
@@ -8,29 +8,30 @@ ms.assetid: 913c3745-8aa9-4260-886e-a05aecfb2225
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24b1e1a73ff588e5531eec2025c8a3c9e94760a4
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 145fb9e4b94bb641ae0f491a09bc5b5c3cd0bc20bc8d9b2cc76c85e65170fa28
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898454"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431518"
 ---
 # <a name="install-outside-the-extensions-folder"></a>Uzantılar klasörünün dışına yükleme
 
-Visual Studio 2017 ve VSıX v3 (sürüm 3) ile başlayarak, uzantı varlıkları uzantılar klasörünün dışında yüklenebilir. Şu anda, şu konumlar geçerli yükleme konumları olarak etkindir (burada [ıNSTALLDIR], Visual Studio örneğinin yükleme diziniyle eşlenir):
+Visual Studio 2017 ve vsıx v3 (sürüm 3) ile başlayarak, uzantı varlıkları uzantılar klasörünün dışında yüklenebilir. şu anda, şu konumlar geçerli yükleme konumları olarak etkindir (burada [ınstalldir] Visual Studio örneğinin yükleme diziniyle eşlenir):
 
-* [INSTALLDIR] \MSBuild
+* [INSTALLDIR] \ MSBuild
 * [INSTALLDIR] \Xml\Schemas
 * [INSTALLDIR] \Common7\IDE\PublicAssemblies
 * [INSTALLDIR] \Lisanslar
 * [INSTALLDIR] \Common7\IDE\ReferenceAssemblies
 * [INSTALLDIR] \Common7\IDE\RemoteDebugger
-* [INSTALLDIR] \Common7\IDE\VC\VCTargets (yalnızca Visual Studio 2017 için desteklenir; Visual Studio 2019 ve üzeri için kullanım dışı)
+* [ınstalldir] \Common7\IDE\VC\VCTargets (yalnızca Visual Studio 2017 için desteklenir; Visual Studio 2019 ve üzeri için kullanım dışıdır)
 
 > [!NOTE]
-> VSıX biçimi, Visual Studio Install Folder yapısını dışarıdan yüklemenize izin vermez. 
+> vsıx biçimi, Visual Studio install klasörü yapısını dışarıdan yüklemenize izin vermez. 
 
 Bu dizinlere yüklemeyi desteklemek için VSıX, "makine başına örnek başına" yüklenmelidir. Bu, uzantısı. valtmanifest tasarımcısında "tüm kullanıcılar" onay kutusu seçilerek etkinleştirilebilir:
 
@@ -38,7 +39,7 @@ Bu dizinlere yüklemeyi desteklemek için VSıX, "makine başına örnek başın
 
 ## <a name="how-to-set-the-installroot"></a>InstallRoot nasıl ayarlanır
 
-Yükleme dizinlerini ayarlamak için, Visual Studio 'daki **Özellikler** penceresini kullanabilirsiniz. Örneğin, `InstallRoot` bir proje başvurusunun özelliğini yukarıdaki konumlardan birine ayarlayabilirsiniz:
+Yükleme dizinlerini ayarlamak için Visual Studio **Özellikler** penceresini kullanabilirsiniz. Örneğin, `InstallRoot` bir proje başvurusunun özelliğini yukarıdaki konumlardan birine ayarlayabilirsiniz:
 
 ![kök özelliklerini yükler](media/install-root-properties.png)
 
@@ -57,7 +58,7 @@ Bu, `ProjectReference` VSIX projesinin. csproj dosyasının içindeki karşılı
 
 ## <a name="how-to-set-a-subpath-under-the-installroot"></a>InstallRoot altında bir alt yol ayarlama
 
-Öğesinin altındaki bir alt yolu yüklemek isterseniz `InstallRoot` , özelliği özelliği gibi ayarlayarak bunu yapabilirsiniz `VsixSubPath` `InstallRoot` . Örneğin, proje başvurusunun çıktısının ' [ıNSTALLDIR] \MSBuild\MyCompany\MySDK\1.0 ' öğesine yüklenmesini istiyoruz. Bunu özellik Tasarımcısı ile kolayca yapabiliriz:
+Öğesinin altındaki bir alt yolu yüklemek isterseniz `InstallRoot` , özelliği özelliği gibi ayarlayarak bunu yapabilirsiniz `VsixSubPath` `InstallRoot` . örneğin, proje başvurusunun çıktısının ' [ınstalldir] \ MSBuild \MyCompany\MySDK\1.0 ' öğesine yüklenmesini istiyoruz. Bunu özellik Tasarımcısı ile kolayca yapabiliriz:
 
 ![alt yolu ayarla](media/set-subpath.png)
 

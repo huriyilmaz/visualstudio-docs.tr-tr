@@ -11,14 +11,15 @@ ms.assetid: d3eab1a0-db05-4838-833f-57e93a6ad096
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fd580226aa6dbe6329e87011314126030342c88
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 01afda5c89483d829e0bdaac1e6de1f428ff91a5ef866b4e2ccd18c2436f5f87
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158157"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345207"
 ---
 # <a name="idiaenumdebugstreamdatareset"></a>IDiaEnumDebugStreamData::Reset
 Numaralandırılmış bir dizinin başlangıcına sıfırlanır.

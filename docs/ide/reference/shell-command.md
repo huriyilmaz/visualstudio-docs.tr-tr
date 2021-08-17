@@ -1,6 +1,6 @@
 ---
 title: Kabuk Komutu
-description: Kabuk komutu ve Visual Studio içinden yürütülebilir programları nasıl Başlatan hakkında bilgi edinin.
+description: Kabuk komutu ve dosyanın içindeki yürütülebilir programları nasıl Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,17 +18,18 @@ ms.assetid: 737fda23-b852-45c4-a9fe-41cbce6ba70f
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b520d3bedf31bc09dc0cf48e86777872176e2e0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dd2bbef4fde4d40b4b71fbf78ee70db9c506d0f21df57aefb717b72ceba93365
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957627"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121356887"
 ---
 # <a name="shell-command"></a>Kabuk Komutu
-İçinden çalıştırılabilir programları başlatır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+içinde yürütülebilir programları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] başlatıyor.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -39,48 +40,48 @@ Tools.Shell [/command] [/output] [/dir:folder] path [args]
 ## <a name="arguments"></a>Bağımsız değişkenler
 `path`
 
-Gereklidir. Yürütülecek dosyanın yolu ve dosya adı ya da açılacak belge. Belirtilen dosya yol ortam değişkeninde dizinlerden birinde değilse tam yol gereklidir.
+Gereklidir. Yürütülecek dosyanın yolu ve dosya adı veya açılacak belge. Belirtilen dosya PATH ortam değişkenli dizinlerden biri içinde yoksa tam yol gereklidir.
 
 `args`
 
-İsteğe bağlı. Çağrılan programa geçirilecek herhangi bir bağımsız değişken.
+İsteğe bağlı. Çağrılan programa geçilen tüm bağımsız değişkenler.
 
 ## <a name="switches"></a>Anahtarlar
-/CommandWindow [veya]/Command [veya]/c [veya]/cmd
+/commandwindow [veya] /command [or] /c [or] /cmd
 
-İsteğe bağlı. Yürütülebilir dosyanın çıktısının **komut** penceresinde görüntülendiğini belirtir.
+İsteğe bağlı. Yürütülebilir dosyanın çıktının Komut penceresinde **görüntülendiğinden belirtir.**
 
-/dir: `folder` [veya]/d: `folder`
+/dir: `folder` [or] /d: `folder`
 
-İsteğe bağlı. Program çalıştırıldığında ayarlanacak çalışma dizinini belirtir.
+İsteğe bağlı. Program çalıştır çalışırken ayar için çalışma dizinini belirtir.
 
-/OutputWindow [veya]/output [veya]/Out [veya]/o
+/outputwindow [veya] /output [or] /out [veya] /o
 
-İsteğe bağlı. Yürütülebilir dosyanın çıktısının **Çıkış** penceresinde görüntülendiğini belirtir.
+İsteğe bağlı. Yürütülebilir dosyanın çıktının Çıkış penceresinde **görüntülendiğinden belirtir.**
 
 ## <a name="remarks"></a>Açıklamalar
-/Dir/o/c anahtarlarının hemen sonra belirtilmesi gerekir `Tools.Shell` . Yürütülebilir dosyanın adından sonra belirtilen her şey, komut satırı bağımsız değişkenleri olarak kendisine geçirilir.
+/dir /o /c anahtarları hemen sonra `Tools.Shell` belirtilmelidir. Yürütülebilir dosyanın adına göre belirtilen her şey komut satırı bağımsız değişkenleri olarak geçirilebilir.
 
-Önceden tanımlanmış diğer ad, yerine `Shell` kullanılabilir `Tools.Shell` .
+Önceden tanımlanmış diğer `Shell` ad yerine `Tools.Shell` kullanılabilir.
 
 > [!CAUTION]
-> `path`Bağımsız değişken dizin yolunu ve dosya adını sağlarsa, aşağıdaki gibi tüm yol adını sabit tırnak ("" ") içine almalısınız:
+> Bağımsız değişken dizin yolunu ve dosya adını sağlarsa, pathname'in tamamını aşağıda olduğu gibi değişmez tırnak `path` içine (""") yazmanız gerekir:
 
 ```cmd
 Tools.Shell """C:\Program Files\SomeFile.exe"""
 ```
 
-Her üç çift tırnak ("" ") kümesi, `Shell` işlemci tarafından tek bir çift tırnak karakteri olarak yorumlanır. Bu nedenle, önceki örnek şu yol dizesini `Shell` komutuna geçirir:
+Üç çift tırnak (""") kümesi, işlemci tarafından tek bir çift `Shell` tırnak karakteri olarak yorumlanır. Bu nedenle, önceki örnek aslında aşağıdaki yol dizesini komutuna `Shell` iletir:
 
 ```cmd
 "C:\Program Files\SomeFile.exe"
 ```
 
 > [!CAUTION]
-> Yol dizesini değişmez tırnak işaretleri ("" ") içine aldıysanız, Windows yalnızca ilk alana kadar olan dizenin kısmını kullanır. Örneğin, yukarıdaki yol dizesi düzgün şekilde alıntılanmışsa Windows, C:\ dizininde bulunan "program" adlı bir dosya arar. kök dizin. C:\Program.exe yürütülebilir bir dosyanın gerçekten kullanılabilir olması durumunda bile, Windows bu programı istenen "c:\Program Files\SomeFile.exe" programının yerine yürütmeye çalışır.
+> Yol dizesini değişmez tırnak içine ("""), Windows dizenin yalnızca ilk alana kadar olan kısmını kullanır. Örneğin, yukarıdaki yol dizesi düzgün bir şekilde tırnak içine Windows C:\ konumunda bulunan "Program" adlı bir dosyayı aramanız gerekir. kök dizini. Bir C:\Program.exe yürütülebilir dosya gerçekten kullanılabilirse, bir tane kötü amaçlı kurcalama tarafından yüklenmiş olsa bile, Windows istenen "c:\Program Files\SomeFile.exe" programı yerine bu programı yürütmeyi denebilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki komut, dosyayı klasörüne kopyalamak için xcopy.exe kullanır `MyText.txt` `Text` . xcopy.exe çıkışı hem **komut penceresinde** hem de **Çıkış** penceresinde görüntülenir.
+Aşağıdaki komut, xcopy.exe klasörüne kopyalamak için `MyText.txt` xcopy.exe komutunu `Text` kullanır. Komut xcopy.exe hem de Çıkış **penceresinde** **görüntülenir.**
 
 ```cmd
 >Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt
@@ -88,8 +89,8 @@ Aşağıdaki komut, dosyayı klasörüne kopyalamak için xcopy.exe kullanır `M
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
 - [Çıkış Penceresi](../../ide/reference/output-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

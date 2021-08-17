@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12968e24159dec5a4709ea14452feede1f8cf8ff36cd7ef9d73dba4bc679d2fb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0682f1d25ed01e5b7b3261718b7e2c261110137a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414433"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042107"
 ---
 # <a name="source-control-integration-overview"></a>Kaynak Denetimini Tümleştirmeye Genel Bakış
 Bu bölümde, kaynak denetimiyle tümleşmenin iki Visual Studio karşılaştırıldı; bir kaynak denetimi Eklentisi ve kaynak denetimi çözümü sağlayan ve yeni kaynak denetimi özelliklerini vurgulayan bir VSPackage. Visual Studio, kaynak denetimi VSPackage'ları ile kaynak denetimi eklentileri arasında el ile geçişe ve otomatik çözüm tabanlı anahtarlamaya olanak sağlar.
@@ -29,7 +29,7 @@ Bu bölümde, kaynak denetimiyle tümleşmenin iki Visual Studio karşılaştır
  ![Kaynak Denetimine Genel Bakış](../../extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")
 
 ## <a name="source-control-plug-in"></a>Kaynak Denetimi Eklentisi
- Tüm sürümler Visual Studio Kaynak Denetimi Eklentisi API'si belirtimi sürüm 1.2'yi tümleştirme yolu olarak destekler. Kaynak denetimi eklentisi uygulayan, Kaynak Denetimi Eklentisi Oluşturma konusunda açıklandığı gibi kaynak denetimi tümleştirmesi ve kaydı için Kaynak Denetimi Eklentisi API'si işlevlerini uygulayan bir DLL [yazar.](../../extensibility/internals/creating-a-source-control-plug-in.md) Bu yaklaşımda Tümleşik Geliştirme Ortamı (IDE) iade, iade, araç/seçenek özellik sayfaları, araç çubukları ve kaynak denetimi özellikleri gibi iletişim kutuları için kullanıcı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] arabirimini kullanır. Kaynak Denetimi Eklentisi API'sine katı bir şekilde bağlılık, Visual Studio ve kullanıcı için sorun olmayan bir deneyimle kolay bir tümleştirme sağlar. Bu, kaynak denetimi eklentisinin API'de ayrıntılı olarak yer alan işlevlerin ve geri çağırmaların çoğunu uygulaması gerektiğini gösterir.
+ Tüm sürümler Visual Studio kaynak denetimi eklenti API'si belirtimi sürüm 1.2'yi tümleştirme yolu olarak destekler. Kaynak denetimi eklentisi uygulayan, Kaynak Denetimi Eklentisi Oluşturma konusunda açıklandığı gibi kaynak denetimi tümleştirmesi ve kaydı için Kaynak Denetimi Eklentisi API'si işlevlerini uygulayan bir DLL [yazar.](../../extensibility/internals/creating-a-source-control-plug-in.md) Bu yaklaşımda Tümleşik Geliştirme Ortamı (IDE) iade, iade, araç/seçenek özellik sayfaları, araç çubukları ve kaynak denetimi özellikleri gibi iletişim kutuları için kullanıcı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] arabirimini kullanır. Kaynak Denetimi Eklentisi API'sine katı bir şekilde bağlılık, Visual Studio ve kullanıcı için sorun olmayan bir deneyimle kolay bir tümleştirme sağlar. Bu, kaynak denetimi eklentisinin API'de ayrıntılı olarak yer alan işlevlerin ve geri çağırmaların çoğunu uygulaması gerektiğini gösterir.
 
  Kaynak Denetimi Eklentisi API'sini kullanarak bir kaynak denetimi eklentisi uygulamak için şu adımları izleyin:
 
@@ -39,7 +39,7 @@ Bu bölümde, kaynak denetimiyle tümleşmenin iki Visual Studio karşılaştır
 
 3. Kaynak Denetim Bağdaştırıcısı Paketi (kaynak denetimi eklentileri aracılığıyla kaynak denetimi işlevselliğini Visual Studio bileşeni) istendiğinde bir yardımcı kullanıcı arabirimi oluşturun ve görüntü oluşturun
 
-   Bir kaynak denetimi komutuna yanıt olarak, Visual Studio IDE temel işlemler için standart bir kullanıcı arabirimi sunar ve ardından Kaynak Denetimi Eklentisi API'sinde tanımlanan işlevler aracılığıyla bilgileri kaynak denetimi eklentisine iletir. Gelişmiş seçenekler için kaynak denetim eklentisi, kaynak denetimli projeye göz atma gibi kendi kullanıcı arabirimini sunmak için çağrılmalıdır. Bu, kaynak denetimiyle ilgilenmek için kullanıcıya iki farklı kullanıcı arabirimi stili sunabilirsiniz: kullanıcı arabirimi Visual Studio kullanıcı arabirimi ve kaynak denetimi eklentisinin sunduğu kullanıcı arabirimi. Bu, en çok gelişmiş kaynak denetimi işlemleriyle fark edilebilir.
+   Bir kaynak denetimi komutuna yanıt olarak, Visual Studio IDE temel işlemler için standart bir kullanıcı arabirimi sunar ve ardından Kaynak Denetimi Eklentisi API'sinde tanımlanan işlevler aracılığıyla bilgileri kaynak denetimi eklentisine iletir. Gelişmiş seçenekler için kaynak denetim eklentisi, kaynak denetimli projeye göz atma gibi kendi kullanıcı arabirimini sunmak için çağrılmalıdır. Bu, kaynak denetimiyle ilgilenmek için kullanıcıya iki farklı kullanıcı arabirimi stili sunabilirsiniz: Visual Studio kullanıcı arabirimi ve kaynak denetimi eklentisinin sunduğu kullanıcı arabirimi. Bu, en çok gelişmiş kaynak denetimi işlemleriyle fark edilebilir.
 
 ### <a name="drawbacks-to-implementing-a-source-control-plug-in"></a>Kaynak Denetimi Eklentisi Uygulamanın Dezavantajları
 

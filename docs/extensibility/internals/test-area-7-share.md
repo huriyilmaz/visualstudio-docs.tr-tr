@@ -1,6 +1,6 @@
 ---
-title: 'Test alanı 7: paylaşma | Microsoft Docs'
-description: bu kaynak denetimi test alanı, Visual Studio kaynak denetimi eklentiniz için Share komutunu kullanarak konumlar arasında öğelerin paylaşılmasını ele alır.
+title: 'Test Alanı 7: Paylaşım | Microsoft Docs'
+description: Bu kaynak denetimi test alanı, kaynak denetimi eklentiniz için Paylaş komutunu kullanarak Visual Studio paylaşmayı kapsar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,52 +14,52 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41c826350254939c4f848bd19addca136224e817
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 23b5564470551b1732e57e4cf07cbd191c069d21afd6ac1f0b563f596c852fcd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122124548"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431779"
 ---
 # <a name="test-area-7-share"></a>Test Alanı 7: Paylaş
-Bu test alanı, **paylaşma** komutu aracılığıyla konumlar arasında öğelerin paylaşılmasını ele alır.
+Bu test alanı, Paylaş komutu aracılığıyla konumlar arasında öğe **paylaşımını** kapsar.
 
- Bir ssgıons işlemi, bir kaynak denetimi dosya hiyerarşisi içindeki iki veya daha fazla konum arasındaki dosya ve klasör öğelerinin görünür bir şekilde çoğaltılmasıyla yapılır. Çoğaltma sunucuda gerçekten gerçekleşmiyor, ancak Kullanıcı, belirtilen iki veya daha fazla konumda aynı dosyayı görür. Paylaşılan öğeler üzerinde değişiklik yapıldığında, bu değişiklikler diğer tüm paylaşılan konumlarda görünür.
+ Hhare işlemi, bir kaynak denetim dosyası hiyerarşisi içindeki iki veya daha fazla konum arasında dosya ve klasör öğelerinin görünür bir şekilde çoğaltılmasıdır. Yineleme sunucuda gerçekten oluşmaz, ancak kullanıcı aynı dosyayı belirtilen iki veya daha fazla konumda görebilir. Paylaşılan öğelerden herhangi biri üzerinde her değişiklik yapıldı mı, bu değişiklikler diğer tüm paylaşılan konumlarda görünür.
 
- Klasörler halinde paylaşma, kaynak denetimi altında en az bir dosya içeren bir klasör seçerseniz işe yarar. Share komutu aşağıdaki koşullarda devre dışı bırakılır:
+ Klasörlerde paylaşım, içinde kaynak denetimi altında en az bir dosya olan bir klasör seçmenize yarar. Paylaşım komutu aşağıdaki koşullar altında devre dışı bırakılır:
 
-- Seçili klasör boş bir klasörstur.
+- Seçilen klasör boş bir klasörse.
 
-- Gerçek bir klasör varsa ancak kaynak denetimi dosyası içermiyorsa.
+- Gerçek bir klasör varsa ancak kaynak denetim dosyası içeriyorsa.
 
-- Sanal bir klasör varsa, kaynak denetimi altındaki dosyaların içinde olup olmadığı.
+- Kaynak denetimi altındaki dosyaların içinde olup olmadığı, sanal bir klasör varsa.
 
-- Bir uzak site Web projesi varsa.
+- Uzak Site Web projesi varsa.
 
-## <a name="command-menu-access"></a>Komut menüsü erişimi
- Aşağıdaki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamı menü yolları test durumlarında kullanılır.
+## <a name="command-menu-access"></a>Komut Menüsü Erişimi
+ Aşağıdaki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleşik geliştirme ortamı menü yolları test çalışmalarında kullanılır.
 
- Share: **Dosya** -> **kaynağı denetim** -> **paylaşma**.
+ Paylaşım: **Dosya** -> **Kaynağı Denetim** -> **Paylaşımı.**
 
-## <a name="expected-behavior"></a>Beklenen davranış
+## <a name="expected-behavior"></a>Beklenen Davranış
 
-- Paylaşılan dosya paylaşılan konumda görüntülenir.
+- Paylaşılan dosya paylaşılan konumda görünür.
 
-- Kaynak denetimi sürüm deposu geçmişini görüntülemek, dosyaların paylaşıldığını gösterir.
+- Kaynak denetimi sürüm deposu geçmişini görüntülemek, dosyalarda paylaşım olduğunu gösterir.
 
-- Paylaşılan bir dosyayı düzenleme, dosyanın her iki konumunu da düzenler.
+- Paylaşılan bir dosyayı düzenlemek, dosyanın her iki konumunu da düzenler.
 
 ## <a name="test-cases"></a>Test Çalışmaları
- Aşağıda, paylaşma testi alanı için özel test çalışmaları verilmiştir.
+ Aşağıda, Share test alanı için belirli test testleri yer almaktadır.
 
-|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|
+|Eylem|Test Adımları|Doğrulandı Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
-|Kaynak denetimi altındaki yüklü bir projeden başka bir yüklü projeye dosya paylaşma|1. yeni bir proje oluşturun.<br />2. çözüme ikinci bir proje ekleyin.<br />3. ikinci projede ilk projede olmayan bir ada sahip bir dosya oluşturun.<br />4. çözümü kaynak denetimine ekleyin.<br />5. ilk projeyi seçin.<br />6. **Share** iletişim kutusunu açın (**Dosya**  ->  **kaynağı denetim**  ->  **paylaşma**).<br />7. dosyayı ikinci projeden ilk proje ile paylaşabilirsiniz.<br />8. istenirse **kullanıma alma** kabul edin.|Ortak beklenen davranış.|
-|Bir projeden diğerine dosya paylaşma|1. yeni bir proje oluşturun.<br />2. kaynak denetimine ekleyin.<br />3. çözümü kapatın.<br />4. ikinci bir proje oluşturun (yeni çözüm.)<br />5. çözümü kaynak denetimine ekleyin.<br />6. projeyi seçin.<br />7. **paylaşma** iletişim kutusunu açın (**Dosya**  ->  **kaynağı denetim**  ->  **paylaşma**).<br />8. önceden eklenen projeden bir dosyayı açık projeye paylaşabilirsiniz.<br />9. istenirse **kullanıma alma** kabul edin.|Ortak beklenen davranış.|
-|Projenin bir parçası olmayan dosyayı kaynak denetiminden o anda yüklü olan projeye paylaşma|1. yeni bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. kaynak denetimine proje veya çözümün parçası olmayan bir dosya ekleyin.<br />4. projeyi seçin ve **paylaşma** iletişim kutusunu açın (**Dosya**  ->  **kaynağı denetim**  ->  **paylaşma**).<br />5. **paylaşma** iletişim kutusunda geçerli proje veya çözüm içinde olmayan bir dosya seçin ve onu paylaşabilirsiniz.<br />6. istenirse **kullanıma alma** kabul edin.|Kaynak denetimi deposu bir get gerçekleştirdi, bu nedenle dosya şimdi projenin yerel konumudur.|
-|Aynı proje içindeki dosyaları farklı bir klasöre paylaşma|1. **Araçlar**   ->  **Seçenekler**  ->  **kaynak denetiminde** otomatik olarak kullanıma alma ' yı seçin.<br />2. yeni bir proje oluşturun ve kaynak denetimine ekleyin.<br />3. projeye bir klasör ekleyin.<br />4. klasöre bir dosya ekleyin ve klasörü iade edin.<br />5. klasörü seçin.<br />6. **Share** iletişim kutusunu açın (**Dosya**  ->  **kaynağı denetim**  ->  **paylaşma**).<br />7. dosyayı seçili klasöre paylaşabilirsiniz.|Ortak beklenen davranış.<br /><br /> Klasör, paylaşımda kullanılmadan önce içindeki bir dosyayla birlikte iade edilmiş olmalıdır.|
-|bir klasörü yüklenen Project paylaşma — özyinelemeli|1. yeni bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. projeyi seçin.<br />4. **paylaşma** iletişim kutusunu açın (**Dosya**  ->  **kaynağı denetim**  ->  **paylaşma**).<br />5. bir klasör seçin.<br />6. klasörü yinelemeli olarak projeyle paylaşabilirsiniz.|Ortak beklenen davranış.|
-|Birden çok dosyayı bir projeden diğerine paylaşma|1. içinde birden çok dosya içeren yeni bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. çözümü kapatın.<br />4. yeni bir çözümde yeni bir proje oluşturun.<br />5. çözümü kaynak denetimine ekleyin.<br />6. projeyi seçin.<br />7. **paylaşma** iletişim kutusunu açın (**Dosya**  ->  **kaynağı denetim**  ->  **paylaşma**).<br />8. daha önce oluşturulan projeden birkaç dosyayı şu anda açık olan projeyle paylaşabilirsiniz.|Ortak beklenen davranış.|
+|Kaynak denetimi altındaki bir yüklenen projeden başka bir yüklenen projeyle dosya paylaşma|1. Yeni bir proje oluşturun.<br />2. Çözüme ikinci bir proje ekleyin.<br />3. İkinci projede ilk projede yer alan bir adla bir dosya oluşturun.<br />4. Çözümü kaynak denetimine ekleyin.<br />5. İlk projeyi seçin.<br />6. Paylaş **iletişim** kutusunu açın (**Dosya Kaynağı**  ->  **Denetim**  ->  **Paylaşımı**).<br />7. dosyayı ikinci projeden ilk projeyle paylaşın.<br />8. **İstendiğinde Check Out** 'i kabul edin.|Ortak Beklenen Davranış.|
+|Bir projeden diğerine dosya paylaşma|1. Yeni bir proje oluşturun.<br />2. Kaynak denetimine ekleyin.<br />3. Çözümü kapatın.<br />4. İkinci bir proje (yeni çözüm) oluşturun.<br />5. Çözümü kaynak denetimine ekleyin.<br />6. Projeyi seçin.<br />7. Paylaş iletişim **kutusunu** açın (**Dosya Kaynağı**  ->  **Denetim**  ->  **Paylaşımı**).<br />8. Daha önce eklenen projeden açık projeye bir dosya paylaşın.<br />9. **İstendiğinde Check Out** 'i kabul edin.|Ortak Beklenen Davranış.|
+|Kaynak denetiminden projenin parçası değil, o anda yüklü olan projeyle dosya paylaşma|1. Yeni bir proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Kaynak denetimine projenin veya çözümün parçası olan bir dosya ekleyin.<br />4. Projeyi seçin ve Paylaş iletişim **kutusunu** açın (**Dosya Kaynağı**  ->  **Denetim**  ->  **Paylaşımı**).<br />5. Paylaş iletişim kutusunda **geçerli proje** veya çözüm içinde mevcut olmayan bir dosyayı seçin ve paylaşın.<br />6. **İstendiğinde Check Out** 'i kabul edin.|Kaynak denetim deposu bir Get işlemi gerçekleştirdi, bu nedenle dosya artık projenin yerel bir yerinde.|
+|Aynı proje içindeki dosyaları farklı bir klasöre paylaşma|1. Araçlar **Seçenekleri Kaynak Denetimi'ne** **otomatik olarak** göz  ->    ->  **at'ı seçin.**<br />2. Yeni bir proje oluşturun ve bunu kaynak denetimine ekleyin.<br />3. Projeye bir klasör ekleyin.<br />4. Klasöre bir dosya ekleyin ve klasörünü iade edin.<br />5. Klasörü seçin.<br />6. Paylaş **iletişim** kutusunu açın (**Dosya Kaynağı**  ->  **Denetim**  ->  **Paylaşımı**).<br />7. Dosyayı seçili klasöre paylaşın.|Ortak Beklenen Davranış.<br /><br /> Klasör, paylaşım için kullanılmadan önce içinde bir dosyayla iade edilmelidir.|
+|Yüklenen dosyada klasör paylaşma — Project|1. Yeni bir proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projeyi seçin.<br />4. Paylaş iletişim **kutusunu** açın (**Dosya Kaynağı**  ->  **Denetim**  ->  **Paylaşımı**).<br />5. Bir klasör seçin.<br />6. Klasörü projede tekrar tekrar paylaşın.|Ortak Beklenen Davranış.|
+|Bir projeden diğerine birkaç dosya paylaşma|1. Içinde birkaç dosya olan yeni bir proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Çözümü kapatın.<br />4. Yeni bir çözümde yeni bir proje oluşturun.<br />5. Çözümü kaynak denetimine ekleyin.<br />6. Projeyi seçin.<br />7. Paylaş iletişim **kutusunu** açın (**Dosya Kaynağı**  ->  **Denetim**  ->  **Paylaşımı**).<br />8. Önceden oluşturulmuş olan projeden açık olan projeyle birkaç dosya paylaşın.|Ortak Beklenen Davranış.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri için Test Kılavuzu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

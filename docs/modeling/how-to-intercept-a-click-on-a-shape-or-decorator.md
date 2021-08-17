@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: a279bbc3a4de88c7f8410a47752b200920c6b30e1f76c39f793107fd389fa482
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 91e3b5588139e55f707d1bd8a89804b50aeac3f6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121428984"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055503"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Nasıl yapılır: Şekil veya Dekoratörde bir Click için Araya Girme
 Aşağıdaki yordamlar, bir şekle veya simge dekoratörüne tıklamanın yolunu kesmeyi gösterir. Tıklamalara, çift tıklamalara, sürüklemelere ve diğer hareketlere müdahale etmek ve öğenin yanıt vermesini sekleyebilirsiniz.

@@ -24,17 +24,17 @@ MSBuild projenizin parçası olan Öğeleri (görüntü kaynakları gibi) ve pro
 
 ### <a name="viewing-the-msbuild-file"></a>MSBuild görüntüleme
 
-Proje MSBuild sağ tıklar ve Bulıcı'da Ortaya Çıkar'ı seçerek **bir dosya bulun.** Bulıcı penceresi, aşağıdaki görüntüde gösterildiği gibi dosya dahil olmak üzere projeniz ile `.csproj` ilgili tüm dosyaları ve klasörleri görüntüler:
+Proje MSBuild sağ tıklar ve Bulıcı'da Ortaya Çıkar'ı **seçerek yeni dosyanın konumunu bulun.** Bulıcı penceresi, aşağıdaki görüntüde gösterildiği gibi dosya dahil olmak üzere projeniz ile `.csproj` ilgili tüm dosyaları ve klasörleri görüntüler:
 
 ![Bulıcı'da csproj konumu](media/customizing-build-system-image1.png)
 
-dosyasını yeni bir sekmede görüntülemek Mac için Visual Studio proje adınıza sağ tıklayın ve Araçlar'a göz > `.csproj` **dosyasını düzenleyin:**
+dosyasını yeni bir sekmede görüntülemek Mac için Visual Studio proje adınıza sağ tıklayın ve Dosya Düzenle'ye `.csproj` **> göz atabilirsiniz:**
 
 ![kaynak düzenleyicisinde csproj'ı açma](media/customizing-build-system-image2.png)
 
 ### <a name="composition-of-the-msbuild-file"></a>Dosyanın MSBuild oluşturma
 
-Tüm MSBuild zorunlu bir kök öğe `Project` içerir, şöyle:
+Tüm MSBuild dosyaları zorunlu bir kök `Project` öğe içerir, şöyle:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -48,11 +48,11 @@ Genellikle, proje bir dosyayı da içeri `.targets` aktarır. Bu dosya, çeşitl
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 ```
 
-Hedefler dosyası bir diğer MSBuild dosyasıdır. Bu dosya, MSBuild proje tarafından yeniden kullanılabilir bir kod içerir. Örneğin, özelliğiyle (veya değişkeniyle) temsil edilen bir dizinde bulunan dosya, C# kaynak dosyalarından C# derlemeleri derleme `Microsoft.CSharp.targets` `MSBuildBinPath` mantığını içerir.
+Hedefler dosyası bir diğer MSBuild dosyasıdır. Bu dosya, MSBuild tarafından yeniden kullanılabilir bir kod içerir. Örneğin, özelliğiyle (veya değişkeniyle) temsil edilen bir dizinde bulunan dosya, C# kaynak dosyalarından C# derlemeleri derleme `Microsoft.CSharp.targets` `MSBuildBinPath` mantığını içerir.
 
 ### <a name="items-and-properties"></a>Öğeler ve özellikler
 
-Veri verilerinde iki temel veri MSBuild *vardır: öğeler* ve *özellikler*, aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
+Veri verilerinde iki temel veri MSBuild *vardır:* öğeler ve *özellikler*, aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
 
 #### <a name="properties"></a>Özellikler
 
@@ -74,7 +74,7 @@ Bir PropertyGroup kullanılarak ayarlanır ve herhangi bir sayıda özellik içe
 </PropertyGroup>
 ```
 
-Özellikler, söz dizimi kullanılarak ifadelerden `$()` başvurulabilirsiniz. Örneğin, `$(Foo)` özelliğinin değeri olarak `Foo` değerlendirilir. Özellik ayarlanmazsa, herhangi bir hata olmadan boş bir dize olarak değerlendirilir.
+Özellikler, söz dizimi kullanılarak ifadelerden `$()` başvurul olabilir. Örneğin, `$(Foo)` özelliğinin değeri olarak `Foo` değerlendirilir. Özellik ayarlanmazsa, herhangi bir hata olmadan boş bir dize olarak değerlendirilir.
 
 #### <a name="items"></a>Öğeler
 
@@ -82,7 +82,7 @@ Bir PropertyGroup kullanılarak ayarlanır ve herhangi bir sayıda özellik içe
 
 Öğeler bir bildirerek `ItemGroup` oluşturulur. Herhangi bir sayıda öğe içeren herhangi bir sayıda ItemGroup olabilir.
 
-Örneğin, aşağıdaki kod parçacığı iOS Başlatma Ekranlarını oluşturur. Başlatma Ekranları, görüntünün yolu `BundleResource` olarak özelikle birlikte derleme türüne sahip olur:
+Örneğin, aşağıdaki kod parçacığı iOS Başlatma Ekranlarını oluşturur. Başlatma Ekranları, görüntünün yolu `BundleResource` olarak spec ile derleme türüne sahip olur:
 
 ```xml
  <ItemGroup>

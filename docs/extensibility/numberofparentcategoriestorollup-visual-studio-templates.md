@@ -1,6 +1,6 @@
 ---
 title: NumberOfParentCategoriesToRollUp öğesi (şablonlar)
-description: NumberOfParentCategoriesToRollUp öğesi hakkında bilgi edinin ve yeni proje iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.
+description: numberofparentcategoriestorollup öğesi hakkında bilgi edinin ve yeni Project iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,15 +16,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 02c6f0e22429b268fb643c622ebd1f237a4721d3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 899e5e991c998f26c46749875f3c10a7555136f89b95dc8d9c0351a734c0d722
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090479"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431675"
 ---
-# <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp öğesi (Visual Studio şablonları)
-**Yeni proje** iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.
+# <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>numberofparentcategoriestorollup öğesi (Visual Studio şablonları)
+**yeni Project** iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.
 
  \<VSTemplate> \<TemplateData>
  \<NumberOfParentCategoriesToRollUp>
@@ -50,18 +50,18 @@ ms.locfileid: "105090479"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  `integer`Değer gereklidir.
 
- Bu değer, şablonu **Yeni proje** iletişim kutusunda görüntüleyecek üst kategori sayısını belirtir.
+ bu değer, **yeni Project** iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
  `NumberOfParentCategoriesToRollUp` isteğe bağlı bir öğedir.
 
 ## <a name="example"></a>Örnek
- Bu örnek, bir Windows uygulaması için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] . Bu meta verilere sahip bir şablon en üst düzey düğümün altına iki klasör düzeyi yerleştirirse [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] , şablon **Yeni proje** iletişim kutusundaki en üst düzey düğümünde görünür. `NumberOfParentCategoriesToRollUp`Ayarlanmamışsa, şablon yalnızca fiziksel olarak bulunduğu düğümde görüntülenir.
+ bu örnek, bir Windows uygulamasının meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] . bu meta verilere sahip bir şablon en üst düzey düğümün altına iki klasör düzeyi yerleştirirse [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] , şablon **yeni Project** iletişim kutusundaki en üst düzey düğümünde görünür. `NumberOfParentCategoriesToRollUp`Ayarlanmamışsa, şablon yalnızca fiziksel olarak bulunduğu düğümde görüntülenir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -89,5 +89,5 @@ ms.locfileid: "105090479"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

@@ -1,68 +1,69 @@
 ---
-title: Geçici bir değişkeni değeriyle değiştir
-description: Geçici bir değişkeni kaldırmak ve bunun yerine değeri ile değiştirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+title: Geçici bir değişkeni değeriyle değiştirme
+description: Geçici bir değişkeni kaldırmak ve bunun yerine değeriyle değiştirmek için Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: ebe062d5dd569ae1d2162ea7334f91d8b82decdb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0d9a498cb8c6b6f8a52b590e6f080ff9e0d0dbcd742b916abc035648d921ce65
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852381"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357290"
 ---
-# <a name="inline-a-temporary-variable-refactoring"></a>Geçici bir değişken yeniden düzenleme
+# <a name="inline-a-temporary-variable-refactoring"></a>Satır içi geçici değişken yeniden düzenlemesi
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Geçici bir değişkeni kaldırmanıza ve bunun yerine değeri ile değiştirmenize izin verir.
+**Ne:** Geçici bir değişkeni kaldırmanız ve bunun yerine değerini değiştirmenize olanak sağlar.
 
-**Ne zaman:** Geçici değişkenin kullanımı, kodun anlaşılması daha zor hale getirir.
+**Ne zaman:** Geçici değişkenin kullanımı, kodun daha zor an anlamalarını sağlar.
 
-**Neden:** Geçici bir değişkenin kaldırılması kodu daha kolay okunabilir hale gelebilir.
+**Neden:** Geçici bir değişkenin kaldırılması, kodun okunmalarını kolaylaştırabilir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Metin imlecini satır içine eklenecek geçici değişkenin içine vurgulayın veya yerleştirin:
+1. Metin imlecini vurgulayın veya satır içine yerleştirerek geçici değişkenin içine girin:
 
    - C#:
 
-       ![Vurgulanan kod-C #](media/inline-highlight-cs.png)
+       ![Vurgulanan kod - C #](media/inline-highlight-cs.png)
 
    - Visual Basic:
 
-       ![Vurgulanan kod Visual Basic](media/inline-highlight-vb.png)
+       ![Vurgulanan kod- Visual Basic](media/inline-highlight-vb.png)
 
-2. Sonra, aşağıdakilerden birini yapın:
+2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+      - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
    - **Fare**
-      - Koda sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - Koda sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
 
-3. Önizleme penceresi açılır penceresinde **satır içi geçici değişken** ' i seçin.
+3. Önizleme **penceresi açılır penceresinde Satır** içi geçici değişken'i seçin.
 
-   Değişken kaldırılır ve kullanımları değişkenin değerine göre değişir.
+   değişkeni kaldırılır ve kullanımları değişkenin değeriyle değiştirilir.
 
    - C#:
 
-      ![Satır içi sonuç-C #](media/inline-result-cs.png)
+      ![Satır içi sonuç - C #](media/inline-result-cs.png)
 
    - Visual Basic:
 
-      ![Satır içi sonuç-Visual Basic](media/inline-result-vb.png)
+      ![Satır içi sonuç - Visual Basic](media/inline-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

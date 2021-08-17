@@ -19,7 +19,7 @@ Bu Visual Studio kullanarak, Docker kapsayıcıları ile çalışırken performa
 
 ## <a name="container-tools-settings"></a>Kapsayıcı Araçları ayarları
 
-Ana menüden Araçlar ve **Seçenekler'i > Kapsayıcı** **Araçları'> Ayarlar.** Kapsayıcı araçları ayarları görüntülenir.
+Ana menüden Araçlar ve **Seçenekler'> Kapsayıcı** Araçları'> Ayarlar.  Kapsayıcı araçları ayarları görüntülenir.
 
 ::: moniker range="vs-2017"
 
@@ -30,7 +30,7 @@ Ana menüden Araçlar ve **Seçenekler'i > Kapsayıcı** **Araçları'> Ayarlar.
 
 Kapsayıcı Araçları **Genel** ayarları:
 
-![Visual Studio Kapsayıcı Araçları seçenekleri: Gerekirse Docker Desktop'ı yükleyin ve SSL sertifikasına ASP.NET Core güvenin.](./media/configure-container-tools/tools-options-1.png)
+![Visual Studio Kapsayıcı Araçları seçenekleri: Gerekirse Docker Desktop'ı yükleme ve SSL sertifikasına ASP.NET Core yükleme.](./media/configure-container-tools/tools-options-1.png)
 
 Kapsayıcı Araçları **Tek Project** **ve Docker Compose** ayarları:
 
@@ -45,7 +45,7 @@ Aşağıdaki tablo, bu seçeneklerin nasıl ayarlana karar vermede size yardımc
 | Proje yükü üzerinde gerekli Docker görüntülerini otomatik olarak çekme | Açık | Docker Compose | Projeleri yüklerken daha yüksek performans için Visual Studio arka planda bir Docker çekme işlemi başlatacak ve böylece kodunuzu çalıştırmaya hazır olduğunda görüntünün indirilmiş veya indirme işlemi sırasında olduğu gibi. Yalnızca proje yükleniyor ve koda göz atıyorsanız, ihtiyacınız olan kapsayıcı görüntülerini indirmekten kaçınmak için bu özelliği kapatabilirsiniz. |
 | Kapsayıcıları arka planda otomatik olarak başlatma | Açık | Docker Compose | Daha yüksek performans için Visual Studio derleme ve çalıştırma için hazır birim bağlamaları olan bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulacaklarını kontrol etmek için bunu kapatın. |
 | Çözüm kapatılırken kapsayıcıları otomatik olarak sonla | Açık | Docker Compose | Çözümünüz için kapsayıcıların çözümü kapattıktan veya kapattıktan sonra çalışmaya devam etmek Visual Studio. |
-| localhost SSL sertifikasına güvenme isteminde değil | Kapalı | ASP.NET Core 2.1 projeleri | localhost SSL sertifikasına güvenilmiyorsa, Visual Studio bu onay kutusu işaretli olmadığı sürece projenizi her çalıştırsanız bu sertifikayı sorabilirsiniz. |
+| localhost SSL sertifikasına güvenme isteminde değil | Kapalı | ASP.NET Core 2.1 projeleri | localhost SSL sertifikasına güvenilmiyorsa, Visual Studio onay kutusu işaretli olmadığı sürece, projenizi her kez çalıştırarak bu sertifikayı sorabilirsiniz. |
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -62,7 +62,7 @@ Aşağıdaki tabloda Tekli veri **Project** ve **Docker Compose** açık almakta
 | Name | Varsayılan Ayar | Uygulanan Öğe | Açıklama |
 | -----|:---------------:|:----------:| ----------- |
 | Proje açıkken gerekli Docker görüntülerini çekme | Doğru | Tek Project, Docker Compose | Projeleri yüklerken daha yüksek performans için Visual Studio arka planda bir Docker çekme işlemi başlatacak ve böylece kodunuzu çalıştırmaya hazır olduğunda görüntünün indirilmiş veya indirme işlemi sırasında olduğu gibi. Yalnızca proje yükleniyor ve koda göz atıyorsanız, ihtiyacınız olan kapsayıcı görüntülerini indirmekten kaçınmak için False olarak ayarlayın.  |
-| Proje açıkken kapsayıcıları çalıştırma | Doğru | Tek Project, Docker Compose | Daha yüksek performans için Visual Studio, kapsayıcınızı derlemek ve çalıştırmak için hazır hale gelecek şekilde bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulacaklarını kontrol etmek için False olarak **ayarlayın.** |
+| Proje açıkken kapsayıcıları çalıştırma | Doğru | Tek Project, Docker Compose | Daha yüksek performans Visual Studio, kapsayıcınızı derlemek ve çalıştırmak için hazır hale gelecek şekilde bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulacaklarını kontrol etmek için False olarak **ayarlayın.** |
 | Proje kapatmada kapsayıcıları durdurma | Doğru | Tek Project ve Docker Compose | Çözümünüz **için** kapsayıcıların çözümü kapattıktan veya kapattıktan sonra çalışmaya devam etmek Visual Studio. |
 
 ::: moniker-end

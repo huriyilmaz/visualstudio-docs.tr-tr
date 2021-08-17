@@ -11,14 +11,15 @@ ms.assetid: 2c935ee0-2e22-4be0-a852-73736f33c8c9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d00c970c522adf232f9a18b762c7d6cf3cf3b794
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a4d75583b2c936b82e167618356a9ae0547f337e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084902"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089023"
 ---
 # <a name="idebugeventcallback2"></a>IDebugEventCallback2
 Bu arabirim hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisini (SDM) göndermek için kullanılır.

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla belgeleri kaydetme'
-description: Belge adını değiştirmeden veya yeni bir adla belgeyi programlı bir şekilde kaydetmek için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+description: belge adını değiştirmeden veya yeni bir adla belgeyi programlı bir şekilde kaydetmek için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,14 +13,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 97f56ce0bd44eac71430a099b4fda9a7eddc7958
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 7571ca0d16bdd1fc8ebb9f8552d6b55618ffa746dc505bf8bdc81ee2e9452306
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107829014"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121351724"
 ---
 # <a name="how-to-programmatically-save-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri kaydetme
 

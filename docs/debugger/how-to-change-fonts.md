@@ -10,14 +10,15 @@ ms.assetid: 3ee22eb9-978f-4efd-a5e0-f071745496ce
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b52a32d6360776572f17b1ab43a9c46f77ff18ec
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 1b7d884739382fd836bd229d8edde5e7ad4ab92a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155035"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074104"
 ---
 # <a name="how-to-change-fonts"></a>Nasıl yapılır: Yazı Tiplerini Değiştirme
 Spy + + Windows için yazı tipi, yazı tipi stili ve yazı tipi boyutunu değiştirebilirsiniz.

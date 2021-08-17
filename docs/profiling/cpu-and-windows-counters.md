@@ -38,11 +38,11 @@ Windows sayaçları, işletim sisteminin Windows uygulama, hizmet veya sürücü
 
 CPU sayaçları, bilgisayarın CPU's un donanımla ilgili olayların sayısını depolar. Ölçüm ölçümünü profil oluşturma yöntemini kullanarak CPU sayacı verilerini toplayan veriler, işlevler ve modüller için verilere eklenir. Ölçüm ölçüm yöntemini kullanarak birden çok CPU sayacı toplayabilirsiniz. Örnekleme yöntemini kullanarak örneklene olay olarak kullanmak üzere bir sayaç seçersiniz.
 
-Performans sayaçları CPU'ya özgü. Bir CPU'nun farklı modelleri ve sürümleri, aynı performans sayacını etkinleştirmek için önemli ölçüde farklı yapılandırma ayarlarına sahip olabilir. [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] Profilleyici taşınabilir olayları bazı yaygın performans sayaçlarını belirli işlemcilerden bağımsızdır ve genel performans olaylarını toplamaya veya örneklemeye olanak sağlar.
+Performans sayaçları CPU'ya özeldir. Bir CPU'nun farklı modelleri ve sürümleri, aynı performans sayacını etkinleştirmek için önemli ölçüde farklı yapılandırma ayarlarına sahip olabilir. [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] Profilleyici taşınabilir olayları bazı yaygın performans sayaçlarını belirli işlemcilerden bağımsızdır ve genel performans olaylarını toplamaya veya örneklemeye olanak sağlar.
 
-Profilleyiciyi kullanırken belirli bir olayı saymak (örneğin, L2 önbellek isabetleri) varsa, bu olay göndereni etrafında bir performans oturumu derlemeniz gerekir. Bunu L2 önbelleğine sahip herhangi bir CPU'da da yapabiliriz. Performans oturumu, değişiklik yapmadan platformdan platforma taşınabilirsiniz.
+Profilleyiciyi kullanırken belirli bir olayı saymak (örneğin, L2 önbellek isabetleri) için ilgili olay göndereni etrafında bir performans oturumu derlemeniz gerekir. Bunu L2 önbelleğine sahip herhangi bir CPU'da da yapabiliriz. Performans oturumu, değişiklik yapmadan platformdan platforma taşınabilirsiniz.
 
-Profil Visual Studio, belirli bir platform için belirli olayları desteklemeye devam eder. Örneğin, Pentium 4 platformunda bir geliştirici NetBurst mimarisine özgü olayları saymak istiyor olabilir. Bu olay taşınabilir değildir ancak geliştirici tarafından belirli bir platformda belirli bir performans oturumu için kullanılabilir.
+Profil Visual Studio, belirli bir platform için belirli olayları desteklemeye devam eder. Örneğin, Pentium 4 platformunda bir geliştirici NetBurst mimarisine özgü olayları saymak istiyor olabilir. Bu olay taşınabilir değildir, ancak geliştirici tarafından belirli bir platformda belirli bir performans oturumu için kullanılabilir.
 
 ## <a name="portable-and-platform-events"></a>Taşınabilir ve platform olayları
 

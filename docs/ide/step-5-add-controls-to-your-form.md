@@ -5,19 +5,18 @@ ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: dc2746f4-0b5c-4674-9ef7-f40f94150f52
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d2c05dbaa70585fb1a15f4f7378ea85c2c0a33b9
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: b2b1ea54741e4548c2f5c3385313d0736b7f93c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296306"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055945"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>5. Adım: Formunuza denetimler ekleme
 
@@ -25,7 +24,7 @@ Bu adımda, <xref:System.Windows.Forms.PictureBox> Formunuza denetim ve denetim 
 
 ## <a name="how-to-add-controls-to-your-form"></a>Formunuza denetimler ekleme
 
-1. Visual Studio IDE 'nin sol tarafındaki **araç kutusu** sekmesini seçin (veya **CTRL** + **alt** + **X** tuşlarına basın) ve ardından **ortak denetimler** grubunu genişletin. Bu, formlarda gördüğünüz en yaygın denetimleri gösterir.
+1. Visual Studio ıde 'nin sol tarafındaki **araç kutusu** sekmesini seçin (veya **Ctrl** + **Alt** + **X** tuşlarına basın) ve ardından **ortak denetimler** grubunu genişletin. Bu, formlarda gördüğünüz en yaygın denetimleri gösterir.
 
 1. Formunuza PictureBox denetimi eklemek için **PictureBox** öğesine çift tıklayın. TableLayoutPanel formunuzu dolduracak şekilde yerleştirilmiş olduğundan, IDE, PictureBox denetimini ilk boş hücreye (sol üst köşe) ekler.
 

@@ -11,17 +11,18 @@ ms.assetid: 41f69e0a-e82c-473d-8b7a-0c40fc5730fc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad704eda53807d344b23736d2d9b55e172c36468
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3203dd3ec8669a3adf37580398d1089d9a93776b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072214"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088191"
 ---
 # <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
 Bir bağlantı noktası tedarikçinin yeni bağlantı noktaları ekleyebildiğini doğrular.

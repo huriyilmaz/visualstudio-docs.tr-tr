@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 747a7d93d0ea449c2b8d04da27394004446c937148fbe7cf8931da1a564c3535
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 13d8d1b91423f91b8d25ed89d96908a74879e261
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121230995"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027571"
 ---
 # <a name="message-markers"></a>İleti işaretçileri
 Bir ileti işaretçisi, günlük çıkışını temsil eder. İleti, belirli bir zamanda belirli bir iş parçacığı tarafından verilen bir dizedir. İletileri diğer araçlarla kullanmak üzere bir metin dosyasına dışarı aktarabilirsiniz. İleti dizesini görüntülemek için işaretçiyi eşzamanlılık görselleştiricisi içindeki bir iletiye taşıyabilirsiniz. Ve [işaretçiler raporundaki](../profiling/markers-report.md)tüm ileti işaretleyicilerini görüntüleyebilirsiniz.  Aşağıdaki çizimde bir ileti işaretçisi gösterilmektedir.

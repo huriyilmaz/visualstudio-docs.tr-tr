@@ -11,14 +11,15 @@ ms.assetid: 24ba362e-5be1-481a-b071-e1ebd3cae6e8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80f4214139b1698ebc5de25fef923615b407063a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 63aa58209d2d2b96575e9f8c092f696757dcd661d2062a7ba1e0f22e79428d6f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088724"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292981"
 ---
 # <a name="idebugbreakpointboundevent2"></a>IDebugBreakpointBoundEvent2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'ne (SDM), bekleyen bir kesme noktasının yüklenmiş bir programa başarıyla bağlandığını söyler.

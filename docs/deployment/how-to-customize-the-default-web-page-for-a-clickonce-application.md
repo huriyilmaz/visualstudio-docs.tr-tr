@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 5185d3b49d8d1accaae7055f8bd073f9a25007dc92adff8c0978de957a55c284
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2a1a3ae95889c3e57a2404090d7cf2db7a27e9a9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403964"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073844"
 ---
 # <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>nasıl yapılır: bir ClickOnce uygulaması için varsayılan Web sayfasını özelleştirme
 bir ClickOnce uygulamasını web 'de yayımlarken, bir web sayfası otomatik olarak oluşturulur ve uygulamayla birlikte yayımlanır. Varsayılan sayfa, uygulamanın adını ve uygulamanın yükleneceği bağlantıları, önkoşulları yüklemeyi veya MSDN 'de yardım erişimini içerir.

@@ -11,21 +11,22 @@ ms.assetid: b04d1327-a45e-4c12-a0d0-67672b3fa855
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 9947551fce9bc05b44c3d7f22a11966793b87e55
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c8ff06fbde43071dce911349babf0dd737bc6a48
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878688"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028156"
 ---
 # <a name="how-to-change-text-case-in-the-editor"></a>Nasıl yapılır: düzenleyicide metin durumunu değiştirme
 
 Seçilen metnin büyük/küçük harflere veya tüm küçük harflere dönüştürülmesini sağlamak için menü komutlarını veya klavye kısayollarını kullanabilirsiniz.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, bu makalede açıklananlardan farklı olarak **genel** ortam ayarlarını temel alır. Ortam ayarlarınızı değiştirmek için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
+> Gördüğünüz iletişim kutuları ve menü komutları, bu makalede açıklananlardan farklı olarak **genel** ortam ayarlarını temel alır. ortam ayarlarınızı değiştirmek için **araçlar**  >  **içeri ve dışarı aktarma Ayarlar** seçin ve ardından **tüm ayarları sıfırla**' yı seçin.
 
 ## <a name="to-change-text-case"></a>Metin durumunu değiştirmek için
 

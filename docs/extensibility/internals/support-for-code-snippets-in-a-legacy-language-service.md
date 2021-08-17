@@ -12,14 +12,15 @@ ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9578159554f77a9ad7553a56c054a863b3b63fd5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2684e0f369320889f74656cd8b10003ee5187bf6c24d1daf5aa4932cbb993377
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080768"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121432052"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Kod Parçacıkları için Destek
 Kod parçacığı, kaynak dosyaya eklenen bir kod parçasıdır. Kod parçacığı, bir alan kümesi içeren XML tabanlı bir şablondur. Bu alanlar, kod parçacığı eklendikten sonra vurgulanır ve kod parçacığının eklendiği içeriğe bağlı olarak farklı değerlere sahip olabilir. Kod parçacığı eklendikten hemen sonra dil hizmeti kod parçacığını biçimlendirebilir.
@@ -50,7 +51,7 @@ Kod parçacığı, kaynak dosyaya eklenen bir kod parçasıdır. Kod parçacığ
 ### <a name="installing-the-snippet-files"></a>Kod parçacığı dosyalarını yükleme
  Bir dilin tüm kod parçacıkları, genellikle her dosya için bir kod parçacığı şablonu olan XML dosyalarında şablon olarak depolanır. Kod parçacığı şablonları için kullanılan XML şeması hakkında daha fazla bilgi için bkz. [kod parçacıkları şema başvurusu](../../ide/code-snippets-schema-reference.md). Her kod parçacığı şablonu bir dil KIMLIĞIYLE tanımlanır. Bu dil KIMLIĞI kayıt defterinde belirtilir ve `Language` \<Code> şablondaki etiketin özniteliğine konur.
 
- Genellikle kod parçacığı şablonu dosyalarının depolandığı iki konum vardır: 1) ve Kullanıcı klasöründe dilinizin yüklendiği 2). Bu konumlar kayıt defterine eklenerek, Visual Studio **kod parçacıkları yöneticisinin** kod parçacıklarını bulabilmesini sağlar. Kullanıcının klasörü, Kullanıcı tarafından oluşturulan kod parçacıklarının depolandığı yerdir.
+ Genellikle kod parçacığı şablonu dosyalarının depolandığı iki konum vardır: 1) ve Kullanıcı klasöründe dilinizin yüklendiği 2). bu konumlar kayıt defterine eklenerek Visual Studio **kod parçacıkları yöneticisinin** parçacıkları bulabilmesini sağlar. Kullanıcının klasörü, Kullanıcı tarafından oluşturulan kod parçacıklarının depolandığı yerdir.
 
  Yüklenen kod parçacığı şablon dosyaları için tipik klasör düzeni şuna benzer: *[InstallRoot]* \\ *[TestLanguage]* \parçacıklar \\ *[LCID]* \Snippets.
 
@@ -60,7 +61,7 @@ Kod parçacığı, kaynak dosyaya eklenen bir kod parçasıdır. Kod parçacığ
 
  *[LCID]* , yerel ayar kimliğidir. Bu, kod parçacılarınızın yerelleştirilmiş sürümlerinin depolandığı bir şekilde yapılır. Örneğin, Ingilizce 'nin yerel ayar KIMLIĞI 1033, bu nedenle *[LCID]* 1033 ile değiştirilmiştir.
 
- Bir ek dosyanın sağlanması ve genellikle SnippetsIndex.xml veya ExpansionsIndex.xml olarak adlandırılan bir dizin dosyası olması gerekir (. xml dosyasında biten geçerli bir dosya adını kullanabilirsiniz). Bu dosya genellikle *[InstallRoot]* \\ *[TestLanguage]* klasöründe depolanır ve kod parçacıkları klasörünün tam konumunu ve kod parçacıklarını kullanan dil hizmetinin GUID kimliğini ve GUID 'sini belirtir. Dizin dosyasının tam yolu, daha sonra "kayıt defteri girdilerini yükleme" bölümünde açıklandığı gibi kayıt defterine konur. Bir SnippetsIndex.xml dosyasına bir örnek aşağıda verilmiştir:
+ Bir ek dosyanın sağlanması ve genellikle SnippetsIndex.xml veya ExpansionsIndex.xml olarak adlandırılan bir dizin dosyası olması gerekir (.xml biten geçerli bir dosya adını kullanabilirsiniz). Bu dosya genellikle *[InstallRoot]* \\ *[TestLanguage]* klasöründe depolanır ve kod parçacıkları klasörünün tam konumunu ve kod parçacıklarını kullanan dil hizmetinin GUID kimliğini ve GUID 'sini belirtir. Dizin dosyasının tam yolu, daha sonra "kayıt defteri girdilerini yükleme" bölümünde açıklandığı gibi kayıt defterine konur. Bir SnippetsIndex.xml dosyasına bir örnek aşağıda verilmiştir:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -79,19 +80,19 @@ Kod parçacığı, kaynak dosyaya eklenen bir kod parçasıdır. Kod parçacığ
 
  \<Language>Etiket, DIL kimliğini ( `Lang` özniteliği) ve DIL hizmeti GUID 'sini belirtir.
 
- Bu örnek, dil hizmetinizi Visual Studio yükleme klasörüne yüklediğinizi varsayar. % LCıD%, kullanıcının geçerli yerel ayar KIMLIĞIYLE değiştirilmiştir. \<SnippetDir>Her farklı dizin ve yerel ayar için bir tane olmak üzere birden çok etiket eklenebilir. Buna ek olarak, bir kod parçacığı klasörü, her biri dizin dosyasında bir etikete gömülü olan etiketi ile tanımlanan alt klasörleri içerebilir \<SnippetSubDir> \<SnippetDir> .
+ bu örnek, dil hizmetinizi Visual Studio yükleme klasörüne yüklediğinizi varsayar. % LCıD%, kullanıcının geçerli yerel ayar KIMLIĞIYLE değiştirilmiştir. \<SnippetDir>Her farklı dizin ve yerel ayar için bir tane olmak üzere birden çok etiket eklenebilir. Buna ek olarak, bir kod parçacığı klasörü, her biri dizin dosyasında bir etikete gömülü olan etiketi ile tanımlanan alt klasörleri içerebilir \<SnippetSubDir> \<SnippetDir> .
 
- Kullanıcılar, diliniz için kendi kod parçacıklarını da oluşturabilir. Bunlar genellikle kullanıcının ayarlar klasöründe depolanır (örneğin, [ *TestDocs]* \Code parçacıklarında \\ *[TestLanguage]* \test kodu parçacıkları; burada *[TestDocs]* , Visual Studio 'nun Kullanıcı ayarları klasörünün konumudur.
+ Kullanıcılar, diliniz için kendi kod parçacıklarını da oluşturabilir. Bunlar genellikle kullanıcının ayarlar klasöründe depolanır (örneğin, [TestDocs *]* \Code parçacıklarında \\ *[TestLanguage]* \test kodu parçacıkları; burada *[TestDocs]* Visual Studio için kullanıcının ayarlar klasörünün konumudur.
 
  Aşağıdaki değiştirme öğeleri, \<DirPath> Dizin dosyasındaki etiketinde saklanan yola yerleştirilebilir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
 |IC|Yerel ayar KIMLIĞI.|
-|InstallRoot|Visual Studio için kök yükleme klasörü, örneğin, C:\Program Files\Microsoft Visual Studio 8.|
+|InstallRoot|Visual Studio için kök yükleme klasörü; örneğin, C:\Program Files \ Microsoft Visual Studio 8.|
 |% ProjDir%|Geçerli projeyi içeren klasör.|
 |% ProjItem%|Geçerli Proje öğesini içeren klasör.|
-|% TestDocs%|Kullanıcının ayarlar klasöründeki klasör; Örneğin, C:\Documents and Settings \\ *[UserName]* \Bir studio\8.|
+|% TestDocs%|kullanıcının ayarlar klasöründeki klasör, örneğin, C:\Documents and Ayarlar \\ *[username]* \documents \ Visual Studio \ 8.|
 
 ### <a name="enabling-code-snippets-for-your-language-service"></a>Dil hizmetiniz için kod parçacıklarını etkinleştirme
  Özelliği VSPackage 'a ekleyerek dil hizmetiniz için kod parçacıklarını etkinleştirebilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> (Ayrıntılar Için [eski dil hizmeti kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md) konusuna bakın). <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.ShowRoots%2A>Ve <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.SearchPaths%2A> parametreleri isteğe bağlıdır, ancak `SearchPaths` **kod parçacıkları yöneticisini kod parçacığı yöneticisine** bilgilendirmek için adlandırılmış parametreyi dahil etmelisiniz.
@@ -205,7 +206,7 @@ Kod parçacığı, kaynak dosyaya eklenen bir kod parçasıdır. Kod parçacığ
 
     ```
 
-     Sınıfında aşağıdaki yöntemler <xref:Microsoft.VisualStudio.Package.ExpansionProvider> Visual Studio tarafından kod parçacığını ekleme işlemi sırasında verilen sırada çağırılır:
+     sınıfındaki aşağıdaki yöntemler, <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını ekleme işlemi sırasında verilen sırada Visual Studio tarafından çağırılır:
 
 4. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnItemChosen%2A>
 
@@ -327,7 +328,7 @@ namespace TestLanguagePackage
 }
 ```
 
- Dil hizmeti kısayol adını aldığında, <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FindExpansionByShortcut%2A> dosya adını ve kod parçacığı başlığını almak için yöntemini çağırır. Dil hizmeti daha sonra <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A> <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını eklemek için sınıfındaki yöntemini çağırır. Aşağıdaki yöntemler, <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını ekleme işlemi sırasında sınıfında verilen sırada Visual Studio tarafından çağırılır:
+ Dil hizmeti kısayol adını aldığında, <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FindExpansionByShortcut%2A> dosya adını ve kod parçacığı başlığını almak için yöntemini çağırır. Dil hizmeti daha sonra <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A> <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını eklemek için sınıfındaki yöntemini çağırır. aşağıdaki yöntemler, <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını ekleme işlemi sırasında sınıfında verilen sırada Visual Studio tarafından çağırılır:
 
 1. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.IsValidKind%2A>
 

@@ -10,12 +10,12 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 10/15/2019
-  ms.openlocfilehash: 59307a58a3e6618d78ec76d3489a4e61ed6b3282
-  ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+  ms.openlocfilehash: 40df43cc350a5fa4b8964038ff664411fd1e702157b0d585afa8e1f1f886197d
+  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/13/2021
-  ms.locfileid: "122040495"
+  ms.lasthandoff: 08/12/2021
+  ms.locfileid: "121356055"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
@@ -35,19 +35,19 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Angular uygulaması oluşturma
+    - text: Angular Oluşturma
       url: tutorial-create-angular-app.md?view=vs-2022
-    - text: React uygulaması oluşturma
+    - text: React Oluşturma
       url: tutorial-create-react-app.md
-    - text: Bir Vue uygulaması oluşturma
+    - text: Vue Uygulaması oluşturma
       url: tutorial-create-vue-app.md
     - text: Node.js ve Vue.js ile web uygulaması oluşturma
       url: quickstart-vuejs-with-nodejs.md
   - linkListType: tutorial
     links:
-    - text: Angular ve ASP.NET Core bir web uygulaması oluşturun
+    - text: Angular ve ASP.NET Core
       url: tutorial-asp-net-core-with-angular.md?view=vs-2022
-    - text: React ve ASP.NET Core bir web uygulaması oluşturun
+    - text: React ve ASP.NET Core
       url: tutorial-asp-net-core-with-react.md?view=vs-2022
     - text: Node.js ve Express ile web uygulaması oluşturma
       url: tutorial-nodejs.md

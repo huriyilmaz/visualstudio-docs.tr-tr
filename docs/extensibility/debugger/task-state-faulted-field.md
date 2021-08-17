@@ -9,14 +9,15 @@ ms.assetid: ced826ae-09a9-4acf-af00-a2343d396bb8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a3e1bf4fe6a95bd55cf366d1f5b8f56d7ea9c05
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 4d7010bfa6dc23b514f760cac055670d6de41d4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902845"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102850"
 ---
 # <a name="task_state_faulted-field"></a>TASK_STATE_FAULTED alanı
 İşlenmemiş bir özel durum nedeniyle görev tamamlandı.
@@ -25,7 +26,7 @@ ms.locfileid: "112902845"
 
  **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 

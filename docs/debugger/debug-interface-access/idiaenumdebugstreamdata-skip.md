@@ -1,6 +1,6 @@
 ---
-description: Numaralandırılmış bir dizide belirtilen sayıda kaydı atlar.
-title: 'IDiaEnumDebugStreamData:: Skip | Microsoft Docs'
+description: Numaralandı bir dizide belirtilen sayıda kaydı atlar.
+title: IDiaEnumDebugStreamData::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fed50813441176454ae52d7c72847207a1ec78d4b9deb2505ab9ded94f98b1b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6275c370e7eb7569555fd72af25a6244ba87af7f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380617"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074982"
 ---
 # <a name="idiaenumdebugstreamdataskip"></a>IDiaEnumDebugStreamData::Skip
-Numaralandırılmış bir dizide belirtilen sayıda kaydı atlar.
+Numaralandı bir dizide belirtilen sayıda kaydı atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,12 +33,12 @@ HRESULT Skip (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Numaralandırılmış dizide atlanacak kayıt sayısı.
+[in] Numaralandı dizisinde atlana kayıt sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, öğesini döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak daha fazla kayıt yoksa döndürür.
+ Başarılı olursa, `S_OK` döndürür; aksi takdirde, `S_FALSE` atlanabilecek başka kayıt yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

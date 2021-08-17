@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6525da8cd530d6e0b0ab14655e26ddd42c5813977efd0c42a222bc5fea1dcef6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5e72c2ddba9bfbca2c3fdaa43ae1f278009e3960
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412353"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028039"
 ---
 # <a name="add-debuggerdisplay-attribute"></a>DebuggerDisplay özniteliği Ekle
 

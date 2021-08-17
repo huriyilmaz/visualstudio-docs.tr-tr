@@ -1,6 +1,6 @@
 ---
-title: XML Şema Tasarımcısı Graph Görünümü
-description: Genel şema Graph ve düğümler arasındaki ilişkilerin grafik gösterimini sağlayan XML Şema Tasarımcısı'nda Graph Görünümü hakkında bilgi öğrenin.
+title: XML şema tasarımcısı Graph görünümü
+description: genel şema düğümlerinin grafik temsilini ve düğümler arasındaki ilişkileri sağlayan XML şema tasarımcısında Graph görünümü hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,132 +20,132 @@ ms.locfileid: "121351082"
 ---
 # <a name="graph-view"></a>Graph görünümü
 
-Graph Görünümü, genel şema düğümlerinin ve düğümler arasındaki ilişkilerin grafik gösterimini sağlar. Graph Görünümü'nin tasarım yüzeyinde ayarlanmış şema düzenini değiştirmesine izin vermeyebilirsiniz. Graph Görünümü, XML Şema Tasarımcısı araç çubuğunu ve breadcrumb çubuğunu da içerir.
+Graph görünümü, genel şema düğümlerinin ve düğümler arasındaki ilişkilerin grafik gösterimini sağlar. Graph görünümünün, tasarım yüzeyinde şema kümesinin düzenini değiştirme izni olmadığına unutmayın. Graph görünümü XML şema tasarımcısı araç çubuğunu ve içerik haritası çubuğunu da içerir.
 
-Aşağıdaki görüntüde, tasarım Graph genel düğüme sahip bir Görünüm görünümü yer almaktadır.
+aşağıdaki görüntüde, tasarım yüzeyinde altı genel düğüm ile Graph görünümü gösterilmektedir.
 
-![XML Şema Tasarımcısı Graph Görünümü](../xml-tools/media/xsddesigner_graphview.gif)
+![XML şema tasarımcısı Graph görünümü](../xml-tools/media/xsddesigner_graphview.gif)
 
 ## <a name="design-surface"></a>Tasarım yüzeyi
 
-Graph Görünümü'nin tasarım yüzeyi, XML şema tasarımcısı çalışma [alanının içeriğini görüntüler.](../xml-tools/xml-schema-designer-workspace.md) Çalışma alanı şema kümesinden herhangi bir genel düğüm içeriyorsa, düğümler Tasarım yüzeyini görüntüle Graph düğümler üzerinde gösterilir ve ilişkileri olan düğümler arasında oklar çizilir.
+Graph görünümünün tasarım yüzeyi, [XML şema tasarımcısı çalışma alanının](../xml-tools/xml-schema-designer-workspace.md)içeriğini görüntüler. çalışma alanı, şema kümesinden herhangi bir genel düğüm içeriyorsa, düğümler Graph görünümü tasarım yüzeyinde gösterilir ve her türlü ilişki olan düğümler arasında oklar çizilir.
 
-Görünümde bir düğüme çift Graph XML düzenleyicisi açılır.
+Graph görünümünde bir düğüme çift tıkladığınızda XML düzenleyicisi görüntülenir.
 
-Seçili düğümleri çalışma alanında silmek için XSD Tasarımcısı araç çubuğunu veya Sil **anahtarını** kullanın.
+Seçili düğümleri çalışma alanından silmek için, XSD Tasarımcı araç çubuğunu veya **Delete** tuşunu kullanın.
 
-Tasarım yüzeyi boşsa XML düzenleyicisi, **XML** Şema Gezgini ve filigran gösterilir. Filigran, *tüm* XSD Tasarımcısı görünümlerinin bağlantılarının listesidir.
+Tasarım yüzeyi boşsa, XML Düzenleyicisi, **XML şema Gezgini** ve filigran gösterilir. *Filigran* , tüm XSD tasarımcı görünümlerinin bağlantılarının listesidir.
 
-![XSD Tasarımcısı; Graph Görünüm](../xml-tools/media/xsdgraphviewwatermark.gif)
+![XSD Tasarımcısı; Graph Görünümü](../xml-tools/media/xsdgraphviewwatermark.gif)
 
-Şema kümesinde hatalar varsa, listenin sonunda şu metin görüntülenir: "Kümede hataları görüntülemek ve düzeltmek için Hata Listesini kullanın."
+Şema kümesinde hatalar varsa, listenin sonunda aşağıdaki metin görüntülenir: "küme içindeki hataları görüntülemek ve onarmak için Hata Listesi kullanın."
 
-## <a name="breadcrumb-bar"></a>Breadcrumb çubuğu
+## <a name="breadcrumb-bar"></a>İçerik haritası çubuğu
 
-Graph View(Görünüm) altındaki breadcrumb çubuğu, seçilen düğümün şema kümesinde nerede olduğunu gösterir. Birden çok öğe seçilirse, breadcrumb çubuğu boş olur.
+Graph görünümünün alt tarafındaki içerik haritası çubuğu, seçili düğümün şema kümesinde bulunduğu yeri gösterir. Birden çok öğe seçilirse, içerik haritası çubuğu boş olur.
 
 ## <a name="context-right-click-menu"></a>Bağlam (sağ tıklama) menüsü
 
-Aşağıdaki tabloda Görünüm tasarım yüzeyindeki tüm düğümler için kullanılabilen Graph açık bulunmaktadır.
+aşağıdaki tabloda Graph görünümü tasarım yüzeyindeki tüm düğümler için kullanılabilen seçenekler açıklanmaktadır.
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**XML Şema Gezgini'nde göster**|Odağı Şema Gezgini'ne koyar ve şema kümesi düğümünü vurgular.|
-|**Görünümde Graph Göster**|Graph Görünümüne geçiş (gri).|
-|**Örnek XML Oluşturma**|Yalnızca genel öğeler için kullanılabilir. Genel öğe için örnek bir XML dosyası üretir.|
-|**Çalışma Alanını Temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
-|**Çalışma Alanı'dan kaldırma**|Seçilen düğümleri çalışma alanında ve tasarım yüzeyinden kaldırır.|
-|**Çalışma Alanı'dan seçim dışında tüm seçenekleri kaldırma**|Çalışma alanı ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|
-|**Diyagramı Görüntü Olarak Dışarı Aktarma**|Tasarım yüzeyini bir XPS dosyasına kaydeder.|
-|**Hepsini Seç**|Tasarım yüzeyindeki tüm düğümleri seçer.|
-|**Kodu Görüntüle**|Seçilen düğümü içeren dosyayı XML düzenleyicisinde açar. XML Şema Gezgini'nde **seçilen öğe** XML düzenleyicisinde de seçilir.|
-|**Özellikler Penceresi**|Özellikler **penceresini** açar (henüz açık değilse). Bu pencerede düğümle ilgili bilgiler görüntülenir.|
+|**XML şema Gezgini 'nde göster**|Şema Gezginine odaklankoyar ve şema kümesi düğümünü vurgular.|
+|**Graph görünümünde göster**|Graph görünümüne geçiş yapar (gri).|
+|**Örnek XML oluştur**|Yalnızca genel öğeler için kullanılabilir. Genel öğe için örnek bir XML dosyası oluşturur.|
+|**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
+|**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
+|**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|
+|**Diyagramı görüntü olarak dışarı aktar**|Tasarım yüzeyini bir XPS dosyasına kaydeder.|
+|**Tümünü Seç**|Tasarım yüzeyinde tüm düğümleri seçer.|
+|**Kodu Görüntüle**|XML düzenleyicisinde Seçili düğümü içeren dosyayı açar. XML **şeması Gezgini** 'nde seçilen öğe, XML düzenleyicisinde de seçilidir.|
+|**Özellikler penceresi**|**Özellikler** penceresini açar (zaten açık değilse). Bu pencere, düğüm hakkındaki bilgileri görüntüler.|
 
-Yukarıda açıklanan ortak seçeneklere ek olarak, genel öğeler için bağlam menüsünde de aşağıdaki seçenekler vardır:
-
-|Seçenek|Açıklama|
-|-|-----------------|
-|**Tür Tanımı Ekleme**|Diyagrama temel türü ekler.|
-|**Tüm Başvuruları Ekle**|Öğesine başvuran tüm düğümleri ekler ve aralarındaki ilişkileri belirtmek için oklar çizer.|
-|**Değiştirme Grubu Üyeleri Ekleme**|Tüm değiştirme grubu üyelerini ekler. Öğe bir değiştirme grubunun baş veya üyesi ise bu seçenek görünümde görünür.|
-|**Örnek XML Oluşturma**|Genel öğe için örnek bir XML dosyası üretir.|
-
-Yukarıda açıklanan yaygın seçeneklere ek olarak, genel basit ve genel karmaşık türler için bağlam menüsünde de aşağıdaki seçenekler vardır:
+Yukarıda açıklanan ortak seçeneklere ek olarak, genel öğelerin bağlam menüsü de aşağıdaki seçeneklere sahiptir:
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Temel Tür Ekleme**|Seçilen tür genel bir türden türetildiyse, seçilen türün temel türünü ekler.|
-|**Tüm Başvuruları Ekle**|Seçilen türün tüm başvurularını ekler. Bu, seçilen türün öğelerini ve özniteliklerini ve seçilen türden türetilen türleri içerir.|
-|**Türetilen Tüm Türleri Ekle**|Seçilen türden doğrudan ve dolaylı olarak türetilen tüm türleri ekler.|
-|**Tüm ÜstLeri Ekle**|Tüm üst (temel) türleri ekler.|
+|**Tür tanımı Ekle**|Temel türü diyagrama ekler.|
+|**Tüm başvuruları Ekle**|Öğeye başvuran tüm düğümleri ekler ve aralarındaki ilişkileri göstermek için oklar çizer.|
+|**Değiştirme grubu üyeleri Ekle**|Tüm değiştirme grubu üyelerini ekler. Bu seçenek, öğe bir değiştirme grubunun Head veya üyesiyse görünümde görüntülenir.|
+|**Örnek XML oluştur**|Genel öğe için örnek bir XML dosyası oluşturur.|
 
-Yukarıda açıklanan ortak seçeneklere ek olarak, genel gruplar ve öznitelik grupları için bağlam menüsü de aşağıdaki seçeneklere sahiptir:
-
-|Seçenek|Açıklama|
-|-|-----------------|
-|**Tüm Başvuruları Ekle**|Gruba başvuran tüm düğümleri ekler ve aralarındaki ilişkileri belirtmek için oklar çizer.|
-|**Tüm Üyeleri Ekle**|Grubun tüm üyelerini ekler ve aralarındaki ilişkileri göstermek için oklar çizer.|
-
-Yukarıda açıklanan ortak seçeneklere ek olarak, genel özniteliklerin bağlam menüsünde de aşağıdaki seçenekler vardır:
+Yukarıda açıklanan ortak seçeneklere ek olarak, genel basit ve genel karmaşık türlerin bağlam menüsü de aşağıdaki seçeneklere sahiptir:
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Tüm Başvuruları Ekle**|Gruba başvuran tüm düğümleri ekler ve aralarındaki ilişkileri belirtmek için oklar çizer.|
+|**Taban türü Ekle**|Seçilen tür genel bir türden türetildiyse, seçilen türün temel türünü ekler.|
+|**Tüm başvuruları Ekle**|Seçilen türdeki tüm başvuruları ekler. Bu, seçilen türden öğeleri ve öznitelikleri ve seçilen türden türetilmiş türleri içerir.|
+|**Tüm türetilmiş türleri ekle**|Seçilen türden doğrudan ve dolaylı olarak türetilen tüm türleri ekler.|
+|**Tüm üst öğeleri ekle**|Tüm üst (taban) türlerini ekler.|
+
+Yukarıda açıklanan ortak seçeneklere ek olarak, genel gruplar ve öznitelik grupları için de bağlam menüsü aşağıdaki seçeneklere sahiptir:
+
+|Seçenek|Açıklama|
+|-|-----------------|
+|**Tüm başvuruları Ekle**|Gruba başvuran tüm düğümleri ekler ve aralarındaki ilişkileri göstermek için oklar çizer.|
+|**Tüm üyeleri Ekle**|Grubun tüm üyelerini ekler ve aralarındaki ilişkileri göstermek için oklar çizer.|
+
+Yukarıda açıklanan ortak seçeneklere ek olarak, genel özniteliklerin bağlam menüsü de aşağıdaki seçeneklere sahiptir:
+
+|Seçenek|Açıklama|
+|-|-----------------|
+|**Tüm başvuruları Ekle**|Gruba başvuran tüm düğümleri ekler ve aralarındaki ilişkileri göstermek için oklar çizer.|
 
 ## <a name="properties-window"></a>Özellik penceresi
 
-Özellikler penceresini ilk kez açmak için bağlam (sağ tıklama) **menüsünü** kullanın. Varsayılan olarak Özellikler **penceresi,** uygulamanın sağ alt köşesinde Visual Studio. İçerik Modeli Görünümü'ne işlenen bir düğüme tıklarken, bu düğümün özellikleri Özellikler Penceresinde **görüntülenir.**
+İlk olarak **Özellikler** penceresini açmak için bağlam (sağ tıklama) menüsünü kullanın. Varsayılan olarak, **Özellikler** penceresi Visual Studio sağ alt köşesinde görüntülenir. Içerik modeli görünümünde işlenen bir düğüme tıkladığınızda, bu düğümün özellikleri **Özellikler** penceresinde görüntülenir.
 
 ## <a name="xsd-toolbar"></a>XSD araç çubuğu
 
-Aşağıdaki XSD Araç Çubuğu düğmeleri, Graph etkin olduğunda etkinleştirilir.
+Graph görünümü etkinken aşağıdaki XSD araç çubuğu düğmeleri etkinleştirilir.
 
-![XML Şema Tasarımcısı Araç Çubuğu](../xml-tools/media/xsdgraphviewtoolbar.gif)
+![XML şema Tasarımcısı araç çubuğu](../xml-tools/media/xsdgraphviewtoolbar.gif)
 
 |Seçenek|Açıklama|
 |-|-----------------|
-|**Başlangıç Görünümünü Göster**|Başlangıç [Görünümü'ne geçişler.](../xml-tools/start-view.md) Bu görünüme, Ctrl 1 klavye **kısayolu** + **kullanılarak erişilebilir.**|
-|**İçerik Modeli Görünümünü Göster**|İçerik Modeli [Görünümüne geçişler.](../xml-tools/content-model-view.md) Bu görünüme, Ctrl 2 klavye **kısayolu** + **kullanılarak erişilebilir.**|
-|**Görünüm Graph Göster**|görünüme [Graph.](../xml-tools/graph-view.md) Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **3**.|
-|**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
-|**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
-|**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır. bu seçenek, içerik modeli görünümünde ve Graph görünümünde etkinleştirilir.|
-|**Soldan sağa**|Graph görünümündeki yerleşimi, düğümlerin soldan sağa hiyerarşik gösterimine değiştirir. Bu seçeneğe, klavye kısayolu: **alt** + **sağ ok** kullanılarak erişilebilir.|
-|**Sağdan sola**|Graph görünümündeki düzeni düğümlerin sağdan sola hiyerarşik bir gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt** + **sol ok**.|
-|**Yukarıdan aşağıya**|Graph görünümündeki düzeni düğümlerin üst-alt hiyerarşik gösterimine dönüştürür. Bu seçeneğe klavye kısayolu kullanılarak erişilebilir: **alt** + **aşağı ok**.|
-|**Aşağıdan yukarıya**|Graph görünümündeki düzeni düğümlerin yukarıdan yukarıya hiyerarşik gösterimine dönüştürür. Bu seçeneğe, klavye kısayolu: **alt** + **yukarı ok** kullanılarak erişilebilir.|
+|**Başlangıç görünümünü göster**|[Başlangıç görünümüne](../xml-tools/start-view.md)geçer. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **1**.|
+|**Içerik modeli görünümünü göster**|[Içerik modeli görünümüne](../xml-tools/content-model-view.md)geçiş yapar. Bu görünüme klavye kısayolu kullanılarak erişilebilir: **CTRL** + **2**.|
+|**Graph görünümünü göster**|[Graph görünümüne](../xml-tools/graph-view.md)geçer. Bu görünüme, Ctrl 3 klavye **kısayolu** + **kullanılarak erişilebilir.**|
+|**Çalışma Alanını Temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
+|**Çalışma Alanı'dan kaldırma**|Seçilen düğümleri çalışma alanında ve tasarım yüzeyinden kaldırır.|
+|**Çalışma Alanı'dan seçim dışında tüm seçenekleri kaldırma**|Çalışma alanı ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır. Bu seçenek, İçerik Modeli Görünümü'ne ve Graph etkinleştirilir.|
+|**Soldan Sağa**|Graph Görünümü'nde düzeni, düğümlerin soldan sağa hiyerarşik gösterimine değiştirir. Bu seçenenlere klavye kısayolu kullanılarak erişilebilir: **Sağ alt** + **ok.**|
+|**Sağdan Sola**|Graph Görünümü'nde düzeni, düğümlerin sağdan sola hiyerarşik gösterimine değiştirir. Bu seçenence klavye kısayolu kullanılarak erişilebilir: **Alt** + **sol ok.**|
+|**Üstten Aşağıya**|Graph Görünümü'nde düzeni, düğümlerin üst-alt hiyerarşik gösterimine değiştirir. Bu seçenenlere klavye kısayolu kullanılarak erişilebilir: **Alt** + **aşağı ok.**|
+|**Aşağıdan Yukarıya**|Graph Görünümü'nde düzeni, düğümlerin alt-üst hiyerarşik gösterimine değiştirir. Bu seçenence klavye kısayolu kullanılarak erişilebilir: **Alt** + **yukarı ok.**|
 
-## <a name="panscroll"></a>Kaydır/KAYDIR
+## <a name="panscroll"></a>Kaydır/Kaydır
 
-Tasarım yüzeyini, kaydırma çubuklarını kullanarak ya da tıklamakta ve fareyle sürüklerken **CTRL** tuşunu basılı tutarak kaydırabilirsiniz. Tasarım yüzeyini tıklama ve sürükleme kullanarak kaydırdığınızda, imleç dört yönü işaret eden dört çapraz geçiş olacak şekilde değişir.
+Tasarım yüzeyini kaydırma çubuklarını kullanarak veya fareye tıklar ve sürüklerken **Ctrl** tuşunu basılı tutarak kaydırabilirsiniz. Tıklama ve sürükleme kullanarak tasarım yüzeyini kaydırıyorsanız, imleç dört yönde işaret eden dört çapraz ok olarak değişir.
 
-## <a name="undoredo"></a>Geri Al/Yinele
+## <a name="undoredo"></a>Geri Al/Tekrarla
 
-geri al/yinele özelliği, aşağıdaki eylemler için Graph görünümünde etkinleştirilir:
+Geri alma/yenidendo özelliği, aşağıdaki eylemler Graph Görünüm'de etkinleştirilir:
 
 - Sürükleyip bırakarak tek bir düğüm ekleme.
 
-- Şema Gezgini 'nde arama sonuçları penceresinden birden çok düğüm ekleme veya görünüm sorguları başlatma.
+- Şema Gezgini'nde veya Başlangıç Görünümü sorgularında arama sonuçları penceresinden birden çok düğüm ekleme.
 
-- Tek veya birden çok düğüm siliniyor.
+- Tek veya birden çok düğümü silme.
 
 ## <a name="zoom"></a>Zoom
 
-yakınlaştırma Graph görünümünün sağ alt köşesinde bulunur.
+Yakınlaştırma, Graph Görünümü'nin sağ alt köşesinde mevcuttur.
 
-Yakınlaştırma, aşağıdaki yollarla denetlenebilir:
+Yakınlaştırma aşağıdaki yollarla denetlenebilir:
 
-- **Ctrl** tuşunu basılı tutarak ve fare Graph görünüm yüzeyi üzerine getirildiğinde fare tekerleğini döndürürken.
+- **Ctrl tuşunu basılı tutarak** ve fare görünüm yüzeyinin üzerine geldiğinde fare tekerleğini Graph döndürerek.
 
-- Kaydırıcı denetimini kullanarak. Kaydırıcı geçerli yakınlaştırma düzeyini gösterir.
+- Kaydırıcı denetimi kullanarak. Kaydırıcı geçerli yakınlaştırma düzeyini gösterir.
 
-Yakınlaştırma kaydırıcısı, seçtiğinizde yakınlaştırılır, üzerine gelin veya yakınlaştırmak için fare tekerleği ile **CTRL** tuşlarını kullanın; Tüm diğer zamanlarda saydamdır.
+Yakınlaştırma kaydırıcısı seçiliyken opaktır, üzerine gelin veya yakınlaştırmak için fare tekerleğiyle **Ctrl** tuşunu kullanın; diğer tüm zamanlarda saydamdır.
 
-## <a name="xml-editor-integration"></a>XML düzenleyici tümleştirmesi
+## <a name="xml-editor-integration"></a>XML düzenleyicisi tümleştirmesi
 
-bir düğüme tıklayarak ve kod bağlamını görüntüle (sağ tıklama) menüsünü kullanarak Graph görünümü ile XML düzenleyicisi arasında geri ve ileri geçiş yapabilirsiniz.
+Bir düğüme tıklar ve Kodu Görüntüle bağlamını (sağ tıklama) kullanarak Graph Görünümü ile XML düzenleyicisi arasında geçiş yapabilirsiniz.
 
-XML düzenleyicisinde şema kümesinde değişiklik yaparsanız, değişiklikler Graph görünümünde eşitlenir. Daha fazla bilgi için bkz. [XML Düzenleyicisi Ile tümleştirme](../xml-tools/integration-with-xml-editor.md).
+XML düzenleyicisinde ayarlanmış şemada değişiklik yaptısanız, değişiklikler Graph Görünümü'nde eşitlenir. Daha fazla bilgi için [bkz. XML düzenleyicisiyle tümleştirme.](../xml-tools/integration-with-xml-editor.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,14 +11,15 @@ ms.assetid: e85f50a3-211c-4220-a9f4-789950ba2782
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 557ae68e63280348ab315c3240e05dbfc38a8d4d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ffb2aa817caff01b598bc789c6aaa8b7dbacfcd1d3d590a7715f6be4e18d1121
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066288"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417346"
 ---
 # <a name="idebugdocumenttext2"></a>IDebugDocumentText2
 Bu arabirim bir metin belgesini temsil eder.
@@ -29,29 +30,29 @@ Bu arabirim bir metin belgesini temsil eder.
 IDebugDocumentText2 : IDebugDocument2
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bir hata ayıklama altyapısı (DE), sağlaması gereken kaynak kodu metin biçiminde olduğunda bu arabirimi uygular. Bu en tipik durum olduğu için, [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimini de uygularsa, arabirimi de uygulamalıdır `IDebugDocumentText2` .
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bir hata ayıklama altyapısı (DE), kaynağı olması gereken kaynak kod metin formunda olduğunda bu arabirimi uygulamaz. Bu en tipik durum olduğu için, DE [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimini uygulayıyorsa arabirimini de uygulaması `IDebugDocumentText2` gerekir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- `QueryInterface`Bu arabirimi bir arabirimden elde etmek için yöntemini kullanın `IDebugDocument2` .
+ Bu arabirimi `QueryInterface` bir arabirimden almak için yöntemini `IDebugDocument2` kullanın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Bu arabirim, arabirimindeki yöntemlere ek olarak `IDebugDocument2` aşağıdaki yöntemleri uygular:
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Bu arabirim, arabirimde `IDebugDocument2` yöntemlerine ek olarak aşağıdaki yöntemleri de kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetSize](../../../extensibility/debugger/reference/idebugdocumenttext2-getsize.md)|Belgedeki bu konumdaki metnin boyutunu alır.|
-|[GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)|Belgedeki belirtilen konumdan metni alır.|
+|[GetSize](../../../extensibility/debugger/reference/idebugdocumenttext2-getsize.md)|Belgenin bu konumundaki metnin boyutunu alın.|
+|[GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)|Belgede belirtilen konumdan metni alan.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirimi uygulayan bir nesne <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> , <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> bir [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md) nesnesinin arabirimini sağlayan arabirimini de uygulamalıdır.
+ Bu arabirimi uygulayan bir nesne, <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md) nesnesi için arabirimini sağlar arabirimini de uygulamalı.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

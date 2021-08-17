@@ -11,17 +11,18 @@ ms.assetid: 47943f0a-54cb-4493-a62e-5dba97bd4c35
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f7dabef93e8160a2319bc5cefeb189fa335f4b9f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d4c279bdadb692007a66eed38ccd595d94be3c05f5c2777a3a30eae6af33666c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082341"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433092"
 ---
 # <a name="parseflags"></a>PARSEFLAGS
 Bir ifadenin nasıl ayrıştıralınacağını belirtir.

@@ -11,14 +11,15 @@ ms.assetid: 46ac5eee-73a3-44a1-8635-6c58ba193cb6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fa87529f90b20d7d9099dd76e294e406ae0c7a08
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5f5edbbe7e01e1b15f308687d58be0623521b1ce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161182"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074583"
 ---
 # <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 Bir kaydın değerini alır.

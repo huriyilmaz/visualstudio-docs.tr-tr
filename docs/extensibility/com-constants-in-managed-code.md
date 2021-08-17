@@ -1,6 +1,6 @@
 ---
-title: Yönetilen kodda COM sabitleri | Microsoft Docs
-description: Bazı standart COM sabitleri yönetilen kod için kullanılabilir hale getiren yönetilen paket çerçevesi hakkında bilgi edinin.
+title: Yönetilen KodDa COM Sabitleri | Microsoft Docs
+description: Yönetilen kodda bazı standart COM sabitlerini kullanılabilir hale getiren Yönetilen Paket Çerçevesi hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,17 +10,18 @@ ms.assetid: b6663608-b049-44b0-a75b-080fdc5faafc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb259d754befa3596e1dff1e49931c8ee81c665b
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: a55d9e934f85c6be2dc3822dc8373d8cbcacf40f1abe2eff5536fbabfb5aed0e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904327"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293618"
 ---
-# <a name="com-constants-in-managed-code"></a>Yönetilen koddaki COM sabitleri
-Yönetilen paket çerçevesi (MPF), bazı standart COM sabitleri yönetilen kod için kullanılabilir hale getirir. Bu sabitler, başvurunuz için aşağıda listelenmiştir.
+# <a name="com-constants-in-managed-code"></a>Yönetilen kodda COM sabitleri
+Yönetilen Paket Çerçevesi (MPF), bazı standart COM sabitlerini yönetilen kod için kullanılabilir hale getirmıştır. Bu sabitler başvuru için aşağıda listelenmiştir.
 
 ## <a name="boolean-hresult-values"></a>Boole HRESULT değerleri
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>
@@ -91,7 +92,7 @@ Yönetilen paket çerçevesi (MPF), bazı standart COM sabitleri yönetilen kod 
 
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>
 
-## <a name="ole-dispatch-errors"></a>OLE dağıtım hataları
+## <a name="ole-dispatch-errors"></a>OLE gönderme hataları
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>

@@ -1,6 +1,6 @@
 ---
-title: '&lt;Assembly &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
-description: Bütünleştirilmiş kod öğesi kök öğesidir ve ClickOnce dağıtımında gereklidir. İlk kapsanan öğesi bir assemblyIdentity öğesi olmalıdır.
+title: '&lt;assembly &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+description: bütünleştirilmiş kod öğesi kök öğesidir ve ClickOnce dağıtımında gereklidir. İlk kapsanan öğesi bir assemblyIdentity öğesi olmalıdır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,16 +16,17 @@ ms.assetid: b8e3362a-f821-4696-b98d-571d4bbfe431
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: b7838e0a212bbc1e743783255106bb44561fbe62
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 54affc5f75a17fe93beac0ee62207f6c25a1c448
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837768"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074039"
 ---
-# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;Assembly &gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;assembly &gt; öğesi (ClickOnce dağıtımı)
 Dağıtım bildirimi için en üst düzey öğe.
 
 ## <a name="syntax"></a>Syntax
@@ -47,7 +48,7 @@ Dağıtım bildirimi için en üst düzey öğe.
 |`manifestVersion`|Gereklidir. Bu özniteliğin olarak ayarlanması gerekir `1.0` .|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, `assembly` kullanılarak dağıtılan bir uygulama için dağıtım bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu kod örneği, [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md) konusu için sağlanmış daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneği, `assembly` kullanılarak dağıtılan bir uygulama için dağıtım bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . bu kod örneği, [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md) konusu için sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ```xml
 <asmv1:assembly

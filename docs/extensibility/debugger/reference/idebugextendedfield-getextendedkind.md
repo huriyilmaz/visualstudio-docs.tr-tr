@@ -10,17 +10,18 @@ ms.assetid: 20dc1c13-3cc0-4bb4-9c99-fa85587c86c3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 91438d87a59c94efd837389229cb107e81573f12
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a91b98a831b9d6a6b7137155b6a12c0cd1b49b20f4403dfc0b3d4654d3018cb4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077219"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292461"
 ---
 # <a name="idebugextendedfieldgetextendedkind"></a>IDebugExtendedField::GetExtendedKind
 Belirtilen genişletilmiş alan türünü alır.

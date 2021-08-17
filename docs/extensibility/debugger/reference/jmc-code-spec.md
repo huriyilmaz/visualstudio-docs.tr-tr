@@ -1,5 +1,5 @@
 ---
-description: Bu yapı, bir modül için Adatmycode bilgilerini ayarlamak için kullanılır.
+description: Bu yapı, bir modülün JustMyCode bilgilerini ayarlamak için kullanılır.
 title: JMC_CODE_SPEC | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: d89498f1-4234-46d9-b4e2-abbcbca5068a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d9bb05d55268d3f0ef497831616b8e27aae4bb86
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca44db2c6e6c097cfe26845eb3f60303155257aa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058085"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042848"
 ---
 # <a name="jmc_code_spec"></a>JMC_CODE_SPEC
-Bu yapı, bir modül için Adatmycode bilgilerini ayarlamak için kullanılır.
+Bu yapı, bir modülün JustMyCode bilgilerini ayarlamak için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +45,20 @@ public struct JMC_CODE_SPEC {
 
 ## <a name="members"></a>Üyeler
 `fIsUserCode`\
-`TRUE`Modül Kullanıcı kodu olarak düşünülse sıfır olmayan (), aksi takdirde, `FALSE` Modül dış kod olarak değerlendirilip ayıklanamayacak kadar sıfır ().
+Modül kullanıcı kodu olarak kabul edilirse sıfır olmayan ( ), değilse sıfır ( ) ise modül dış kod olarak kabul edilir ve hata `TRUE` `FALSE` ayıklanmaz.
 
 `bstrModuleName`\
 Söz konusu modülün adı.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, [Setyatmycodestate](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) metoduna bu tür yapıların bir listesi olarak geçirilir.
+Bu yapı, bu tür yapıların listesi olarak [SetJustMyCodeState yöntemine](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

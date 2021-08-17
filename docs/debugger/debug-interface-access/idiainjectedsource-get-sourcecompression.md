@@ -11,14 +11,15 @@ ms.assetid: 854b142f-23a9-466c-bf7f-98e581d5abcd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 868c89da413372e5793f92a5df6bb74c02207421
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9ad6002dea8a09ffc841b711f0f721ac746163d872ac673c2d344f936a962f1e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148411"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345039"
 ---
 # <a name="idiainjectedsourceget_sourcecompression"></a>IDiaInjectedSource::get_sourceCompression
 Kullanılan kaynak sıkıştırma göstergesini alır.

@@ -6,18 +6,19 @@ ms.topic: reference
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 monikerRange: vs-2022
 ms.workload:
 - vssdk
 feedback_system: GitHub
-ms.openlocfilehash: d6375fb428eab6647854fe165aeb208ef8121e73
-ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
+ms.openlocfilehash: 4501fdb465452eff1623e39c50e8c97f3bb5ca5b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114592326"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041652"
 ---
-# <a name="visual-studio-2022-sdk-removed-apis"></a>Visual Studio 2022 SDK API'leri kaldırıldı
+# <a name="visual-studio-2022-sdk-removed-apis"></a>Visual Studio 2022 SDK api'leri kaldırıldı
 
 [!INCLUDE [preview-note](../includes/preview-note.md)]
 
@@ -31,7 +32,7 @@ Aşağıdaki API'ler Visual Studio SDK'dan kaldırılmıştır ve artık kullan�
 * [`IVsDummy`](#ivsdummy)
 * [`Microsoft.VisualStudio.Shell.Task`](#microsoftvisualstudioshelltask)
 * [Kaynak kasadan açma](#open-from-source-safe)
-* [Yeni XAML Tasarımcısı WPF .NET Framework](#new-wpf-xaml-designer-for-net-framework)
+* [.NET Framework XAML Tasarımcısı için yeni WPF .NET Framework](#new-wpf-xaml-designer-for-net-framework)
 
 ## <a name="ivsimageservice"></a>IVsImageService
 
@@ -48,7 +49,7 @@ Aşağıdaki API'ler Visual Studio SDK'dan kaldırılmıştır ve artık kullan�
 | GetIconForFile             | GetImageMonikerForFile                 |
 | GetIconForFileEx           | GetImageMonikerForFile                 |
 
-`IVsImageService`'nin Ad yerine ad (dize) ile özel görüntülere başvurulan Add ve Get yöntemleri.  Kodunuzu özel görüntülere başvurmak için yalnızca bilinen adlar kullanmak üzere değiştirmeniz tercih edilir, ancak bu pratik olmadığını kanıtlarsa, bir adı bilinen adla ilişkilendirmenize olanak sağlayacak birkaç yöntem `IVsImageService2` vardır:
+`IVsImageService`'nin Ad yerine ad (dize) ile özel görüntülere başvurulan Add ve Get yöntemleri.  Kodunuzu özel görüntülere başvurmak için yalnızca bilinen adlar kullanmak üzere değiştirmeniz tercih edilir, ancak bunun pratik olmadığını kanıtlarsa, bir adı bilinen adla ilişkilendirmenize olanak sağlayacak birkaç yöntem `IVsImageService2` vardır:
 
 * `TryAssociateNameWithMoniker`
 * `GetImageMonikerForName`
@@ -57,7 +58,7 @@ Bu iki yöntemi kullanarak görüntülere adla başvuru yapmaya devam edersiniz.
 
 ## <a name="iblockcontextprovider"></a>IBlockContextProvider
 
-`IBlockContextProvider`2022'de ve Visual Studio kaldırılıyor. Bunun yerine tüm `IBlockContextProvider` kullanıcıları 'a `IStructureContextSourceProvider` taşınarak.
+`IBlockContextProvider`2022'de ve ilgili Visual Studio kaldırılıyor. Bunun yerine tüm `IBlockContextProvider` kullanıcıları 'a `IStructureContextSourceProvider` taşınarak.
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
@@ -65,7 +66,7 @@ kullanıcılarının `IBlockContextProvider` bunun yerine `IStructureContextSour
 
 ## <a name="itooltipprovider"></a>IToolTipProvider
 
-`IToolTipProvider`2022'de ve Visual Studio kaldırılıyor. Bunun yerine tüm `IToolTipProvider` kullanıcıları 'a `IToolTipService` taşınarak.
+`IToolTipProvider`2022'de ve ilgili Visual Studio kaldırılıyor. Bunun yerine tüm `IToolTipProvider` kullanıcıları 'a `IToolTipService` taşınarak.
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
@@ -109,7 +110,7 @@ Yok.
 
 ## <a name="ivsdummy"></a>IVsDummy
 
-`IVsDummy`2022'Visual Studio kaldırılıyor ve değiştirilemez. 
+`IVsDummy`, 2022'Visual Studio kaldırılıyor ve değiştirilemez. 
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 
@@ -131,9 +132,9 @@ Aşağıdaki yöntemler, olaylar ve sabitler kaldırıldığı için kaynak kasa
 
 Yok.
 
-## <a name="new-wpf-xaml-designer-for-net-framework"></a>Yeni XAML Tasarımcısı WPF .NET Framework
+## <a name="new-wpf-xaml-designer-for-net-framework"></a>.NET Framework XAML Tasarımcısı için yeni WPF .NET Framework
 
-.NET Framework için geçerli WPF XAML Tasarımcısı kullanım dışı bırakıldı ve .NET (.NET Core) için WPF XAML Tasarımcısı için kullanılan mimariye bağlı olarak, .NET Framework için yeni bir WPF XAML Tasarımcısı ile değiştirilir. Bu, WPF'nin .NET Framework Microsoft'a göre genişletilebilirlik modelini .design.dll anlamına gelir. Windows. Design.Genişletilebilirlik artık desteklenmiyor. .NET Framework için yeni WPF XAML Tasarımcısı, .NET (.NET Core) için WPF XAML Tasarımcısı aynı genişletilebilirlik modelini sağlayacaktır. .NET (.NET Core) .designtools.dll bir uzantı oluşturduysanız, bu uzantı yeni WPF XAML Tasarımcısı için .NET Framework. WPF platformları (.NET Framework ve .NET Core) ve UWP platformları için yeni genişletilebilirlik modeline geçiş hakkında daha fazla bilgi için lütfen aşağıdaki geçiş bağlantısına bakın. 
+.NET Framework için geçerli WPF XAML Tasarımcısı kullanım dışı bırakıldı ve .NET (.NET Core) için WPF XAML Tasarımcısı için kullanılan mimariye göre .NET Framework için yeni bir WPF XAML Tasarımcısı ile değiştirilir. Bu, WPF'nin .NET Framework Microsoft'a göre genişletilebilirlik modelini .design.dll anlamına gelir. Windows. Design.Genişletilebilirlik artık desteklenmiyor. .NET Framework için XAML Tasarımcısı yeni WPF .NET Framework. .NET (.NET Core) için WPF XAML Tasarımcısı aynı genişletilebilirlik modelini sağlayacaktır. .NET (.NET Core) .designtools.dll bir uzantı oluşturduysanız, bu uzantı yeni WPF XAML Tasarımcısı için .NET Framework. WPF platformları (.NET Framework ve .NET Core) ve UWP platformları için yeni genişletilebilirlik modeline geçiş hakkında daha fazla bilgi için lütfen aşağıdaki geçiş bağlantısına bakın. 
 
 ### <a name="recommended-updates"></a>Önerilen güncelleştirmeler
 

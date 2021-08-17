@@ -1,5 +1,5 @@
 ---
-description: Hata ayıklama altyapısı (DE), yüklenecek bir belge istemek için bu arabirimi kullanır.
+description: Hata ayıklama altyapısı (DE), bir belgenin yüklenmek için bu arabirimi kullanır.
 title: IDebugActivateDocumentEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 6f37edd7-a48c-4b41-b160-dff9be63a284
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbf24620b3dfa508a52463598219be4b2d7439a8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5eeae3a29c4e0fdfaad3808228ce6bed9cfe3d7ff2f6e56f0699ed4e051d64df
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094412"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121434236"
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
-Hata ayıklama altyapısı (DE), yüklenecek bir belge istemek için bu arabirimi kullanır.
+Hata ayıklama altyapısı (DE), bir belgenin yüklenmek için bu arabirimi kullanır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,29 +30,29 @@ Hata ayıklama altyapısı (DE), yüklenecek bir belge istemek için bu arabirim
 IDebugActivateDocumentEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Ayrıca, bu arabirimi açılacak kaynak dosyasına ihtiyaç duyduğunda uygular. Bu arabirim yalnızca ile çalışan veya betik yorumlayıcılarının bir parçası olan hata ayıklama motorları tarafından uygulanır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde UYGULANMALıDıR (SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` ).
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, bir kaynak dosyanın açılmasını gerekli olduğunda bu arabirimi uygulamaya almaktadır. Bu arabirim yalnızca betik yorumlayıcılarının bir parçası olan veya ile birlikte çalışmakta olan hata ayıklama altyapıları tarafından uygulanır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanarak (SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır).
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Ayrıca, bir kaynak dosyası açılması gerektiğinde bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE, bir kaynak dosyanın açılmasını gerektirse bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugActivateDocumentEvent2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugActivateDocumentEvent2` gösterir.
 
-|Yöntemler|Description|
+|Yöntemler|Açıklama|
 |-------------|-----------------|
-|[GetDocument](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocument.md)|Etkinleştirilecek belgeyi alır.|
+|[GetDocument](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocument.md)|Etkinleştirilen belgeyi alır.|
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext.md)|Belge içindeki konumu açıklayan belge bağlamını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirimin kullanıldığı tipik bir senaryo, bir HTML sayfasındaki betik kodunda ayrıştırma hatası oluşursa, komut dosyası da bu arabirimi SDM 'ye gönderir, böylece ayrıştırma hatası olan belge görüntülenir.
+ Bu arabirimin kullandığı tipik bir senaryo, BIR HTML sayfasındaki betik kodunda ayrıştırma hatası oluşursa, DE betiği bu arabirimi SDM'ye gönderir ve böylece ayrıştırma hatasına sahip belge görüntülenebilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

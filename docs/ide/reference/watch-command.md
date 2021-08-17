@@ -1,6 +1,6 @@
 ---
 title: İzle Komutu
-description: Izleme komutu ve izleme penceresi belirtilen bir örneğini nasıl oluşturup açtığı hakkında bilgi edinin.
+description: İzleme komutu hakkında bilgi edinmek ve bir uygulamanın belirtilen örneğini nasıl oluşturduğu ve izleme penceresi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,17 +13,18 @@ ms.assetid: aa02e647-d9f5-4905-a651-52a8df595795
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e7c0530cf91467ec6c9bb2e6937b38510059041b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2258c704e8a91b2b00942a8dcae5ca5215da028d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836182"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056049"
 ---
 # <a name="watch-command"></a>İzle Komutu
-Bir **Gözcü** penceresinin belirtilen bir örneğini oluşturur ve açar. Değişkenler, ifadeler ve yazmaçların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir **Gözcü** penceresi kullanabilirsiniz.
+İzleme penceresinin belirtilen bir örneğini oluşturur **ve** açar. Değişkenlerin, **ifadelerin** ve yazmaların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir İzleme penceresi kullanabilirsiniz.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -38,7 +39,7 @@ Gereklidir. İzleme penceresinin örnek numarası.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`index`Bir tamsayı olmalıdır. Geçerli değerler 1, 2, 3 veya 4 ' dir.
+bir `index` tamsayı olmalıdır. Geçerli değerler 1, 2, 3 veya 4'tir.
 
 ## <a name="example"></a>Örnek
 
@@ -49,8 +50,8 @@ Gereklidir. İzleme penceresinin örnek numarası.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Otomatikler ve Yereller Pencereleri](../../debugger/autos-and-locals-windows.md)
-- [Visual Studio 'da gözcü ve hızlı gözcü pencerelerini kullanarak değişkenlerde bir Izleme ayarlayın](../../debugger/watch-and-quickwatch-windows.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Visual Studio'de Watch ve QuickWatch Windows kullanarak Değişkenler üzerinde watch Visual Studio](../../debugger/watch-and-quickwatch-windows.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

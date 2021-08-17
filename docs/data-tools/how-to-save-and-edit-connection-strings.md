@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Bağlantı Dizelerini Kaydetme ve Düzenleme'
-description: Uygulama uygulamalarında bağlantı dizelerini kaydetmeyi ve düzenlemeyi Visual Studio. Bağlantı dizesini doğrudan uygulama ayarlarında kaydedin veya düzenleyin.
+description: Uygulama uygulamalarında bağlantı dizelerini kaydetmeyi ve düzenlemeyi Visual Studio olun. Bağlantı dizesini doğrudan uygulama ayarlarında kaydedin veya düzenleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -30,7 +30,7 @@ Daha fazla bilgi için [bkz. Bağlantı bilgilerini koruma.](/dotnet/framework/d
 Veri **Kaynağı Yapılandırma Sihirbazı'nda,** Bağlantı Dizesini Uygulama Yapılandırma Dosyasına Kaydet sayfasında **bağlantıyı kaydetme seçeneğini** belirleyin.
 
 ## <a name="to-save-a-connection-string-directly-into-application-settings"></a>Bağlantı dizesini doğrudan uygulama ayarlarına kaydetmek için
-1. Bu **Çözüm Gezgini,** My Project **simgesine (Visual Basic)** veya **Özellikler** simgesine (C#) çift tıklar ve **Project Tasarımcısı'Project açın.**
+1. Bu **Çözüm Gezgini,** My **Project simgesine (Visual Basic)** veya **Özellikler** simgesine (C#) çift tıklar ve **Project Tasarımcısı'Project açın.**
 1. **Ayarlar** sekmesini seçin.
 1. Bağlantı dizesi **için** bir Ad girin. Kodda bağlantı dizesine erişirken bu adı kullanın.
 1. Tür olarak **ayarlayın** (**Bağlantı dizesi**).
@@ -41,7 +41,7 @@ Veri **Kaynağı Yapılandırma Sihirbazı'nda,** Bağlantı Dizesini Uygulama Y
 Uygulama ayarlarına kaydedilen bağlantı bilgilerini, Uygulama Tasarımcısı'Project **değiştirebilirsiniz.**
 
 ### <a name="to-edit-a-connection-string-stored-in-application-settings"></a>Uygulama ayarlarında depolanan bir bağlantı dizesini düzenlemek için
-1. Bu **Çözüm Gezgini,** My Project **simgesine (Visual Basic)** veya **Özellikler** simgesine (C#) çift tıklar ve **Project Tasarımcısı'Project açın.**
+1. Bu **Çözüm Gezgini,** My **Project simgesine (Visual Basic)** veya **Özellikler** simgesine (C#) çift tıklar ve **Project Tasarımcısı'Project açın.**
 1. **Ayarlar** sekmesini seçin.
 1. Düzenlemek istediğiniz bağlantıyı bulun ve Değer alanında **metni** seçin.
 1. Değer alanında bağlantı **dizesini** düzenleyin veya Bağlantı Özellikleri **iletişim** kutusuyla bağlantınızı düzenlemek için Değer alanında üç nokta (...)  **düğmesine** tıklayın.

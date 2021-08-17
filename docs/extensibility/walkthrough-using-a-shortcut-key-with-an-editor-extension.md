@@ -10,24 +10,25 @@ ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2d49fa9e858d65529e466f6ed960835ab8c2324
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e07ed59b6415cc826bc6dc6d5c1e9947b51ec606
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061959"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041522"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>İzlenecek yol: bir düzenleyici uzantısıyla kısayol tuşu kullanma
 Düzenleyici uzantıdaki kısayol tuşlarına yanıt verebilirsiniz. Aşağıdaki izlenecek yol, bir kısayol tuşu kullanarak bir metin görünümüne Görünüm kenarlığı nasıl ekleneceğini gösterir. Bu izlenecek yol, görünüm penceresinin kenarlığı düzenleyici şablonunu temel alır ve + karakterini kullanarak kenarlığı eklemenize olanak tanır.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework oluşturma (MEF) Project
 
-1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `KeyBindingTest` .
+1. C# VSıX projesi oluşturun. ( **yeni Project** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **vsıx Project**' i seçin.) Çözümü adlandırın `KeyBindingTest` .
 
 2. Projeye bir düzenleyici metni kenarlığı öğe şablonu ekleyin ve bunu adlandırın `KeyBindingTest` . Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).
 
@@ -57,9 +58,9 @@ public AdornmentLayerDefinition editorAdornmentLayer;
 ```
 
 ## <a name="handle-typechar-command"></a>Tanıtıcı TYPECHAR komutu
-Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komutları işlemenin tek yolu bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> temel komut filtresi uygulamamıştı. Visual Studio 2017 sürüm 15,6, düzenleyici komut işleyicilerine dayalı modern basitleştirilmiş bir yaklaşım getirmiştir. Sonraki iki bölümde hem eski hem de modern yaklaşımı kullanarak bir komutun nasıl işleneceği gösterilmektedir.
+Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komutları işlemenin tek yolu bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> temel komut filtresi uygulamamıştı. Visual Studio 2017 sürüm 15,6, düzenleyici komut işleyicilerini temel alan modern basitleştirilmiş bir yaklaşım getirmiştir. Sonraki iki bölümde hem eski hem de modern yaklaşımı kullanarak bir komutun nasıl işleneceği gösterilmektedir.
 
-## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Komut filtresini tanımlama (Visual Studio 2017 sürüm 15,6 ' den önce)
+## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>komut filtresini tanımlayın (Visual Studio 2017 sürüm 15,6 ' den önce)
 
  Komut filtresi, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> kenarlığı örneğini oluşturarak komutu işleyen öğesinin bir uygulamasıdır.
 
@@ -134,7 +135,7 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
 
     ```
 
-## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>Komut filtresini ekleme (Visual Studio 2017 sürüm 15,6 ' den önce)
+## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>komut filtresini ekleyin (Visual Studio 2017 sürüm 15,6 ' den önce)
  Kenarlığı sağlayıcının metin görünümüne bir komut filtresi eklemesi gerekir. Bu örnekte sağlayıcı, <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> metin görünümü oluşturma olaylarını dinlemek için uygular. Bu kenarlığı sağlayıcısı ayrıca kenarlığı 'in Z düzenini tanımlayan kenarlığı katmanını dışarı aktarır.
 
 1. KeyBindingTestTextViewCreationListener dosyasında, aşağıdaki using yönergelerini ekleyin:
@@ -193,13 +194,13 @@ Visual Studio 2017 sürüm 15,6 ' den önce, bir düzenleyici uzantısında komu
     }
     ```
 
-## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>Bir komut işleyici uygulama (Visual Studio 2017 sürüm 15,6 ' den başlayarak)
+## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>komut işleyicisini uygulama (Visual Studio 2017 sürüm 15,6 ' den başlayarak)
 
 İlk olarak, en son Düzenleyici API 'sine başvurmak için projenin NuGet başvurularını güncelleştirin:
 
 1. Projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
 
-2. **NuGet Paket Yöneticisi**' nde **güncelleştirmeler** sekmesini seçin, **tüm paketleri Seç** onay kutusunu seçin ve ardından **Güncelleştir**' i seçin.
+2. **Nuget Paket Yöneticisi**' de **güncelleştirmeler** sekmesini seçin, **tüm paketleri seç** onay kutusunu seçin ve ardından **güncelleştir**' i seçin.
 
 Komut işleyicisi <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601> , kenarlığı örneğini oluşturarak komutu işleyen öğesinin uygulamasıdır.
 

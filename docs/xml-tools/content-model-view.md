@@ -90,42 +90,42 @@ Içerik modeli görünümü etkinken aşağıdaki XSD Tasarımcı araç çubuğu
 |**Çalışma alanını temizle**|Çalışma alanını ve tasarım yüzeyini temizler.|
 |**Çalışma alanından Kaldır**|Seçili düğümleri çalışma alanından ve tasarım yüzeyinden kaldırır.|
 |**Seçimi çalışma alanından Tümünü Kaldır**|Çalışma alanından ve tasarım yüzeyinden seçilmemiş düğümleri kaldırır.|
-|**Belgeleri göster**|Ek açıklama/belge düğümü içeriğini gösterir veya gizler.|
+|**Belgeleri göster**|Ek Açıklama/Belge düğümü içeriğini gösterir veya gizler.|
 
-## <a name="panscroll"></a>Kaydır/KAYDIR
+## <a name="panscroll"></a>Kaydır/Kaydır
 
-Tasarım yüzeyini, kaydırma çubuklarını kullanarak ya da tıklamakta ve fareyle sürüklerken **CTRL** tuşunu basılı tutarak kaydırabilirsiniz. Tasarım yüzeyini tıklama ve sürükleme kullanarak kaydırdığınızda, imleç dört yönü işaret eden dört çapraz oka dönüşür.
+Tasarım yüzeyini kaydırma çubuklarını kullanarak veya fareye tıklar ve sürüklerken **Ctrl** tuşunu basılı tutarak kaydırabilirsiniz. Tıklama ve sürükleme kullanarak tasarım yüzeyini kaydırıyorsanız, imleç dört yönde işaret eden dört çapraz ok olarak değişir.
 
-## <a name="undoredo"></a>Geri Al/Yinele
+## <a name="undoredo"></a>Geri Al/Tekrarla
 
-Geri Al/Yinele özelliği, aşağıdaki eylemler için Içerik modeli görünümünde etkinleştirilir:
+Geri alma/yenidendo özelliği, aşağıdaki eylemler için İçerik Modeli Görünümünde etkinleştirilir:
 
 - Sürükleyip bırakarak tek bir düğüm ekleme.
 
-- Şema Gezgini 'nde arama sonuçları penceresinden birden çok düğüm ekleme.
+- Şema Gezgini'nde arama sonuçları penceresinden birden çok düğüm ekleme.
 
-- Başlangıç görünümünden düğüm ekleme.
+- Başlangıç Görünümünden düğüm ekleme.
 
-- Tek veya birden çok düğüm siliniyor.
+- Tek veya birden çok düğümü silme.
 
 ## <a name="zoom"></a>Zoom
 
-Yakınlaştırma, Içerik modeli görünümünün sağ alt köşesinde bulunur.
+Yakınlaştırma, İçerik Modeli Görünümü'nin sağ alt köşesinde kullanılabilir.
 
-Yakınlaştırma, aşağıdaki yollarla denetlenebilir:
+Yakınlaştırma aşağıdaki yollarla denetlenebilir:
 
-- **CTRL** tuşunu basılı tutarak fare tekerleği, Içerik modeli görünüm yüzeyi üzerine getirildiğinde fare tekerleğini döndürürken.
+- **Ctrl tuşunu basılı** tutarak ve fare İçerik Modeli Görünümü yüzeyinin üzerine geldiğinde fare tekerleğini döndürerek.
 
-- Kaydırıcı denetimini kullanarak. Kaydırıcı geçerli yakınlaştırma düzeyini gösterir.
+- Kaydırıcı denetimi kullanarak. Kaydırıcı geçerli yakınlaştırma düzeyini gösterir.
 
-Yakınlaştırma kaydırıcısı, seçtiğinizde yakınlaştırılır, üzerine gelin veya yakınlaştırmak için fare tekerleği ile **CTRL** tuşlarını kullanın; Tüm diğer zamanlarda saydamdır.
+Yakınlaştırma kaydırıcısı seçiliyken opaktır, üzerine gelin veya yakınlaştırmak için fare tekerleğiyle **Ctrl** tuşunu kullanın; diğer tüm zamanlarda saydamdır.
 
-## <a name="xml-editor-integration"></a>XML düzenleyici tümleştirmesi
+## <a name="xml-editor-integration"></a>XML düzenleyicisi tümleştirmesi
 
-Sağ tıklama (bağlam) menüsünü kullanarak **XSD Tasarımcısı** ile XML Düzenleyicisi arasında geri ve ileri geçiş yapabilirsiniz.
+Sağ tıklama (bağlam) menüsünü kullanarak **XSD Tasarımcısı** ile XML düzenleyicisi arasında geçiş yapabilirsiniz.
 
-XML düzenleyicisinde şema kümesinde değişiklik yaparsanız, değişiklikler Içerik modeli görünümünde eşitlenir. Daha fazla bilgi için bkz. [XML Düzenleyicisi Ile tümleştirme](../xml-tools/integration-with-xml-editor.md).
+XML düzenleyicisinde şema kümesinde değişiklik yaptısanız, değişiklikler İçerik Modeli Görünümü'nde eşitlenir. Daha fazla bilgi için [bkz. XML düzenleyicisiyle tümleştirme.](../xml-tools/integration-with-xml-editor.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML şema Tasarımcısı çalışma alanı](../xml-tools/xml-schema-designer-workspace.md)
+- [XML Şema Tasarımcısı Çalışma Alanı](../xml-tools/xml-schema-designer-workspace.md)

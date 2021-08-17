@@ -2,27 +2,28 @@
 title: Birim testini kullanmaya başlama
 description: kod durumunu korumak ve müşterilerinizin yapabilmesi için hata ve hataları bulmak üzere birim testlerini tanımlamak ve çalıştırmak için Visual Studio kullanın.
 ms.custom: SEO-VS-2020
-ms.date: 12/22/2020
+ms.date: 08/10/2021
 ms.topic: tutorial
 helpviewer_keywords:
 - unit testing, create unit test plans
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 97d100738a47ba91c0f7cb87fdee5da53f2ede5d
-ms.sourcegitcommit: fa253b04f1f6757c62a286e541b9bef36a97d1f9
+ms.openlocfilehash: 61fdd59aa107d7ab953916dbd7d95906345659ac
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2021
-ms.locfileid: "114703360"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026778"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
 kod durumunu korumak, kod kapsamı sağlamak ve müşterilerinizin yapabilmesi için hata ve hataları bulmak üzere birim testlerini tanımlamak ve çalıştırmak için Visual Studio kullanın. Kodunuzun düzgün çalıştığından emin olmak için birim testlerinizi sıklıkla çalıştırın.
 
-Bu makalede, kod ve çizimler C# kullanır, ancak kavramlar ve Özellikler .NET dilleri, C++, Python, JavaScript ve TypeScript için geçerlidir.
+Bu makalede, kod C# ve C++ kullanıyorsa, çizimler C# dilinde, ancak kavramlar ve Özellikler .NET dilleri, C++, Python, JavaScript ve TypeScript için geçerlidir.
 
 ## <a name="create-unit-tests"></a>Birim testleri oluşturma
 
@@ -30,8 +31,9 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 
 1. Visual Studio test etmek istediğiniz projeyi açın.
 
-   Bu makalede, örnek bir birim testi gösterimi amacıyla, **Merhaba WorldCore** adlı basit bir "Merhaba Dünya" C# projesi test eder. Bu tür bir projenin örnek kodu aşağıdaki gibidir:
+   Örnek birim testi gösterimi amacıyla, bu makalede **HelloWorld** adlı basit bir "Merhaba Dünya" C# veya C++ konsol projesi (C# ' de **Merhaba Dünya çekirdeği** ) test eder. Bu tür bir projenin örnek kodu aşağıdaki gibidir:
 
+   ### <a name="net"></a>[.NET](#tab/dotnet)
    ```csharp
    namespace HelloWorldCore
 
@@ -44,14 +46,25 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
       }
    ```
 
+   ### <a name="c"></a>[C++](#tab/cpp)
+   ```cpp
+   #include <iostream>
+
+   int main()
+   {
+      std::cout << "Hello World!\n";
+   }
+   ```
+   ---
+
 1. **Çözüm Gezgini**, çözüm düğümünü seçin. ardından, üst menü çubuğundan **dosya**  >  **ekle**  >  **yeni Project**' yi seçin.
 
-1. Yeni proje iletişim kutusunda, kullanmak istediğiniz test çerçevesi için MSTest gibi bir birim testi projesi şablonu bulun ve seçin.
+1. Yeni proje iletişim kutusunda, kullanmak istediğiniz test çerçevesi için MSTest (C#) veya **yerel birim test** projesi (C++) gibi bir birim testi proje şablonu bulun ve seçin.
 
-   Visual Studio 2017 sürüm 14,8 ' den başlayarak, .net dilleri nunit ve xunit için yerleşik şablonlar içerir. C++ için, dil tarafından desteklenen bir test çerçevesini seçmeniz gerekir. Python için bkz. test projenizi ayarlamak için [Python kodunda birim testi ayarlama](../python/unit-testing-python-in-visual-studio.md) .
+   Visual Studio 2017 sürüm 14,8 ' den başlayarak, .net dilleri nunit ve xunit için yerleşik şablonlar içerir. C++ için, bu örnekte Microsoft yerel birim testi çerçevesini kullanan **yerel birim testi** projesi ' ni seçin. (Farklı bir C++ test çerçeveleri kullanmak için bkz. [C/C++ için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md)). Python için bkz. test projenizi ayarlamak için [Python kodunda birim testi ayarlama](../python/unit-testing-python-in-visual-studio.md) .
 
    > [!TIP]
-   > C# için daha hızlı bir yöntem kullanarak koddan birim testi projeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [birim testi projeleri ve test yöntemleri oluşturma](../test/unit-test-basics.md#create-unit-test-projects-and-test-methods). bu yöntemi .net Core veya .NET Standard ile kullanmak için, Visual Studio 2019 gerekir.
+   > Yalnızca C# için, daha hızlı bir yöntem kullanarak koddan birim testi projeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [birim testi projeleri ve test yöntemleri oluşturma](../test/unit-test-basics.md#create-unit-test-projects-and-test-methods). bu yöntemi .net Core veya .NET Standard ile kullanmak için, Visual Studio 2019 gerekir.
 
    Aşağıdaki çizimde, .NET sürümünde desteklenen bir MSTest birim testi gösterilmektedir.
 
@@ -83,7 +96,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 
 1. Birim testi yöntemine kod ekleyin.
 
-   Örneğin, test çerçevesinden eşleşen doğru belge sekmesini seçerek aşağıdaki kodu kullanabilirsiniz: MSTest, NUnit veya xUnit (yalnızca .NET üzerinde desteklenir).
+   Örneğin, test çerçevesinden eşleşen doğru belge sekmesini seçerek aşağıdaki kodu kullanabilirsiniz: MSTest, NUnit veya xUnit (yalnızca .NET üzerinde desteklenir) veya C++ Microsoft birim testi çerçevesi.
 
    ### <a name="mstest"></a>[MSTest](#tab/mstest)
 
@@ -175,6 +188,44 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
     }
     ```
 
+    ### <a name="microsoft-native-unit-test-framework"></a>[Microsoft yerel birim test çerçevesi](#tab/msunittest)
+
+    ```cpp
+    #include "pch.h"
+    #include "CppUnitTest.h"
+    #include "../HelloWorldUnitTestCPP/HelloWorldUnitTestCPP.cpp"   // Update using your project name
+
+    using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+    namespace HelloWorldTests
+    {
+       TEST_CLASS(HelloWorldTests)
+       {
+       public:
+
+          TEST_METHOD(TestMethod)
+          {
+             std::string expected = "Hello World!\n";
+
+             std::stringstream buffer;
+             std::streambuf* sbuf = std::cout.rdbuf(); // Save cout's buffer
+             std::cout.rdbuf(buffer.rdbuf()); // Redirect cout to the stringstream buffer
+
+             // Call main() in your test
+             int result = main();
+
+             // When finished, redirect cout to the original buffer 
+             std::cout.rdbuf(sbuf);
+             std::cout << "std original buffer: \n";
+             std::cout << buffer.get();
+
+             // Test
+             Assert::AreEqual(expected, buffer.str());
+          }
+       };
+    }
+    ```
+
     ---
 
 ## <a name="run-unit-tests"></a>Birim testlerini çalıştırma
@@ -204,7 +255,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 Visual Studio 2017 veya sonraki sürümlerde MSTest, xunit veya nunit test çerçevesini kullanıyorsanız, birim testlerinizin canlı sonuçlarını görebilirsiniz.
 
 > [!NOTE]
-> bu adımları izlemek için Visual Studio Enterprise gereklidir.
+> bu adımları izlemek için, .net kodu ve şu test çerçevelerinden biri ile birlikte Visual Studio Enterprise gereklidir: MSTest, xunit veya nunit.
 
 1. **Test** Live Unit Testing Başlat ' a tıklayarak **Test** menüsünden canlı birim testi ' ni açın  >    >  .
 
@@ -232,13 +283,13 @@ Canlı birim testi hakkında daha fazla bilgi için bkz. [canlı birim testi](..
 
 ## <a name="use-a-third-party-test-framework"></a>Üçüncü taraf bir test çerçevesi kullanma
 
-programlama dilinize bağlı olarak, Boost, Google ve nunit gibi üçüncü taraf test çerçevelerini kullanarak Visual Studio birim testlerini çalıştırabilirsiniz. Bir üçüncü taraf çerçevesini kullanmak için:
+programlama dilinize bağlı olarak nunit, Boost veya Google C++ test çerçevesi gibi üçüncü taraf test çerçeveleri kullanarak Visual Studio birim testlerini çalıştırabilirsiniz. Bir üçüncü taraf çerçevesini kullanmak için:
 
 - seçtiğiniz çerçeveye ait NuGet paketini yüklemek için **NuGet Paket Yöneticisi** kullanın.
 
 - .Net Visual Studio 2017 sürüm 14,6 ' den başlayarak, Visual Studio nunit ve xunit test çerçeveleri için önceden yapılandırılmış test projesi şablonlarını içerir. şablonlar, desteği etkinleştirmek için gerekli NuGet paketlerini de içerir.
 
-- C++ Visual Studio 2017 ve sonraki sürümlerinde, Boost gibi bazı çerçeveler zaten dahil edilmiştir. Daha fazla bilgi için bkz. [Visual Studio 'de C/C++ için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md).
+- C++ Visual Studio 2017 ve sonraki sürümlerinde, Google C++ test çerçevesi gibi bazı çerçeveler zaten dahil edilmiştir. Daha fazla bilgi için bkz. [Visual Studio 'de C/C++ için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md).
 
 Birim testi projesi eklemek için:
 
@@ -285,3 +336,6 @@ Birim testi projesi eklemek için:
 
 > [!div class="nextstepaction"]
 > [Yönetilen kod için birim testleri oluşturma ve çalıştırma](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+
+> [!div class="nextstepaction"]
+> [C/C++ için birim testleri yazma](../test/writing-unit-tests-for-c-cpp.md)

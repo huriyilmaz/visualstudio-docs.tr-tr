@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, metin düzenleyici, JavaScript, kod doğrulama
-description: JavaScript 'in hataları işleme biçimini etkileyen ayarları değiştirmek için Seçenekler iletişim kutusunun kod doğrulama sayfasını nasıl kullanacağınızı öğrenin.
+title: Seçenekler, Metin Düzenleyici, JavaScript, Kod Doğrulama
+description: JavaScript'in hataları işleme yolunu etkileyen ayarları değiştirmek için Seçenekler iletişim kutusunun Kod Doğrulama sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.technology: vs-javascript
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dc6fbde896a2f043040c93710ca48bc95193127
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aab9a249a9f17fdb93a0ca832b03254bab7cf2c101579e344bef2d45e13d066d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932559"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357095"
 ---
-# <a name="options-dialog-box-text-editor--javascripttypescript--code-validation"></a>Seçenekler iletişim kutusu: metin düzenleyici \> JavaScript/TypeScript \> kod doğrulama
+# <a name="options-dialog-box-text-editor--javascripttypescript--code-validation"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> JavaScript/TypeScript \> Kod Doğrulaması
 
-JavaScript 'in hataları işleme biçimini etkileyen ayarları değiştirmek için **Seçenekler** Iletişim kutusunun **kod doğrulama** sayfasını kullanın. Menü çubuğunda **Araçlar**   >  **Seçenekler** ' i ve ardından **metin Düzenleyicisi**  >  **JavaScript/TypeScript**  >  **kodu doğrulaması** ' nı genişleterek kod doğrulama sayfasına erişebilirsiniz.
+**JavaScript'in** hataları işleme **yolunu** etkileyen ayarları değiştirmek için Seçenekler iletişim kutusunun Kod Doğrulama sayfasını kullanın. Menü çubuğundaKimlik **Seçenekleri'ni** seçerek ve ardından Metin Düzenleyici   >     >  **JavaScript/TypeScript** Kod Doğrulama'ya genişleterek Kod Doğrulama sayfasına  >  **erişebilirsiniz.**
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
-**Kod doğrulama** sayfası aşağıdaki bölümleri içerir:
+Kod **Doğrulama sayfası** aşağıdaki bölümleri içerir:
 
 ## <a name="javascript-errors"></a>JavaScript hataları
 
@@ -33,13 +33,13 @@ JavaScript düzenleyicisinin belgenizdeki sözdizimini doğrulama şekline iliş
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-**JavaScript hatalarını etkinleştir**
+**JavaScript hatalarını etkinleştirme**
 
-**True** olarak ayarlandığında JavaScript kod Düzenleyicisi JavaScript ve JSX dosyaları için hataları gösterir. Hatalar, (JS) önekiyle **hata listesi** görüntülenir. Bu hataları görüntülemek, yazmadığınız kodla çalışıyorsanız ve sözdizimi hatalarını gidermeyi düşünmüyorsanız yararlıdır.
+True olarak **ayarlanırsa,** JavaScript kod düzenleyicisi JavaScript ve JSX dosyaları için hatalar gösterir. Hatalar, (JS) **ön** ekli Hata Listesinde görüntülenir. Bu hataları görüntülemek, yazmadınız ve söz dizimi hatalarını düzeltmeyi niyetli olmadığınız kodlarla çalışıyorsanız kullanışlıdır.
 
 **Hataları uyarı olarak göster**
 
-**True** olarak ayarlandığında JavaScript hataları **hata listesi** hatalar yerine uyarılar olarak gösterilir.
+True olarak **ayarlanırsa,** JavaScript hataları Hata Listesinde hatalar yerine uyarı **olarak gösterilir.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

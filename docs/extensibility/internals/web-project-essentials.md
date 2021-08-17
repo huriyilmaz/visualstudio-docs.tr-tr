@@ -1,6 +1,6 @@
 ---
-title: Web projesi temelleri | Microsoft Docs
-description: Web projelerinin Visual Studio 'da nasıl çalıştığı hakkında iç ayrıntıları öğrenin.
+title: Web Project Essentials | Microsoft Docs
+description: Web projelerinin Visual Studio nasıl çalıştığı hakkında iç ayrıntıları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: ca2f4e43-322c-4431-8680-52da846940bc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9442dcdd460e1213c3c07ee87a5ea2e0d7099072
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 54888223ec789babd4af15c6b675a138bdb81520
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085708"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042016"
 ---
 # <a name="web-project-essentials"></a>Web Projesi Temel Bileşenleri
 Web projeleri Web uygulamaları oluşturur. Web projesini, akıllı Web sayfaları olan bir Web uygulaması oluşturmak için kullanabilirsiniz. Akıllı bir Web sayfasında, Web sayfasını istek üzerine işleyen sunucu tarafı kodu vardır.
@@ -34,14 +35,14 @@ Web projeleri Web uygulamaları oluşturur. Web projesini, akıllı Web sayfalar
 
   - Web uygulaması projesi (WAP), tüm akıllı Web sayfaları için kodu ve/App_Code klasöründeki tüm kaynak dosyaları birleştiren tek bir yürütülebilir dosya oluşturur.
 
-- Web projesinin çözüm dosyası, Web sitesinden ayrı olarak bulunur. Varsayılan olarak, çözüm dosyaları \Documents yolunda ve Settings \\  \\ *\<Visual Studio ####>* \Documents \projects \\ *yourwebsite* konumundadır.
+- Web projesinin çözüm dosyası, Web sitesinden ayrı olarak bulunur. varsayılan olarak, çözüm dosyaları \documents dizininde bulunur ve \\ *hesabınızı* \\ *\<Visual Studio ####>* \belgeler\projects \ \\ *web sitesini* Ayarlar.
 
   > [!NOTE]
   > Çözüm dosyasını Web sitesiyle birlikte tutmak istiyorsanız, dosyayı buraya taşıyın ve yeniden açın.
 
-- Visual Studio 'da çözüm dosyası olmayan bir Web sitesi açarsanız, bu dosya için otomatik olarak yeni bir çözüm dosyası oluşturulur.
+- Visual Studio çözüm dosyası olmayan bir Web sitesi açarsanız, bu dosya için otomatik olarak yeni bir çözüm dosyası oluşturulur.
 
-- Web projelerinin proje dosyaları yok. Proje bilgileri çözüm dosyasında, web.config dosyasında ve başka bir yerde saklanır.
+- Web projelerinin proje dosyaları yok. Project bilgiler çözüm dosyasında, web.config dosyasında ve başka bir yerde depolanır.
 
 - Web projesine genel özellikler eklemek, otomatik olarak Web projesi çözüm klasöründe bir depolama dosyası oluşturur.
 
@@ -51,7 +52,7 @@ Web projeleri Web uygulamaları oluşturur. Web projesini, akıllı Web sayfalar
 
 - Proje ve öğe şablonları ve projeye kayıt eklenerek bir Web sitesi proje sistemi uygulanır [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)] .
 
-- WAP sistemi, proje türü olarak da adlandırılan bir proje alt türü olarak uygulanır. [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)]WAP sistemi oluşturmak için proje WAP alt türü tarafından düzlüyor. Proje alt türleri hakkında daha fazla bilgi için bkz. [Proje alt türleri](../../extensibility/internals/project-subtypes.md).
+- WAP sistemi, proje türü olarak da adlandırılan bir proje alt türü olarak uygulanır. [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)]WAP sistemi oluşturmak için proje WAP alt türü tarafından düzlüyor. proje alt türleri hakkında daha fazla bilgi için bkz. [Project alt türleri](../../extensibility/internals/project-subtypes.md).
 
 - Bir akıllı Web sayfası, HTML 'yi sunucu tarafı programlama diliyle birleştirir. Sunucu tarafı diline, içerilen dil denir. Kapsanan bir dili desteklemek için, Web projesi sisteminin arabirimlerin ailesini uygulaması gerekir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> .
 
