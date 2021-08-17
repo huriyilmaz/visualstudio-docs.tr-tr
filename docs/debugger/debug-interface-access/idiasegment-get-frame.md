@@ -1,6 +1,6 @@
 ---
-description: Segment numarasını alır.
-title: 'IDiaSegment:: get_frame | Microsoft Docs'
+description: Segment numarasını alın.
+title: IDiaSegment::get_frame | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4383f8879b1746062f9b9d26c2f169d90037d93102eef5e1c8a33028db6d33e0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab6ee447fb26e3155bc0129617e28f336d314bb1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392027"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044401"
 ---
 # <a name="idiasegmentget_frame"></a>IDiaSegment::get_frame
-Segment numarasını alır.
+Segment numarasını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_frame (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Segment numarasını döndürür.
+[out] Segment numarasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

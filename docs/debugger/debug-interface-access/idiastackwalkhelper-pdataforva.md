@@ -1,5 +1,5 @@
 ---
-description: Sanal adresle ilişkili PDATA veri bloğunu döndürür.
+description: Sanal adresle ilişkili PDATA veri bloğunü döndürür.
 title: IDiaStackWalkHelper::p dataForVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: fafc38fe-74dc-4726-9a51-eebf3a673d7f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 91f156d51b787666cf756a4de277587a46b0dd39
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c2267173539401f9b673a6cf760abe9070279970
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158917"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091152"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
-Sanal adresle ilişkili PDATA veri bloğunu döndürür.
+Sanal adresle ilişkili PDATA veri bloğunü döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,27 +38,27 @@ HRESULT pdataForVA(
 #### <a name="parameters"></a>Parametreler
  `va`
 
-'ndaki Elde edilecek verilerin sanal adresini belirtir.
+[in] Elde edilen verilerin sanal adresini belirtir.
 
  `cbData`
 
-'ndaki Elde edilecek verilerin bayt cinsinden boyutu.
+[in] Elde edilen verilerin bayt cinsinden boyutu.
 
  `pcbData`
 
-dışı Alınan bayt cinsinden gerçek veri boyutunu döndürür.
+[out] Elde edilen verilerin gerçek boyutunu bayt cinsinden döndürür.
 
  `pbData`
 
-[in, out] İstenen verilerle doldurulmuş bir arabellek. Olamaz `NULL` .
+[in, out] İstenen verilerle doldurulmuş bir arabellek. olamaz. `NULL`
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Belirtilen adres IÇIN PDATA yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Belirtilen `S_FALSE` adres için PDATA yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir compiland 'nin PDATA (". pdata" adlı bölüm), işlevler için özel durum işleme hakkında bilgi içerir.
+ Bir derlemenin PDATA (".pdata" adlı bölümü), işlevler için özel durum işleme hakkında bilgi içerir.
 
- Çağıranın ne kadar veri döndürüleceğini, çağıranın ne kadar veri olduğunu sorabilmesi için ne kadar veri döndürüleceğini bilir. Bu nedenle, parametresi bir hata döndürmek için bu yöntemin uygulanması kabul edilebilir `pbData` `NULL` .
+ Çağıran ne kadar verinin döndürül olacağını bilir, bu nedenle çağıranın ne kadar veri kullanılabilir olduğunu sorması gerek yoktur. Bu nedenle, parametresi ise bu yöntemin uygulanması bir hata döndürür. `pbData` `NULL`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

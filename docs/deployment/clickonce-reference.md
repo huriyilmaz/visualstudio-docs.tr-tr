@@ -1,6 +1,6 @@
 ---
 title: ClickOnce Başvuru | Microsoft Docs
-description: Uygulama uygulamalarını temsil etmek için kullanılan XML dosyalarının yapısını anlamak için bu ClickOnce kullanın.
+description: ClickOnce uygulamalarını temsil etmek için kullanılan XML dosyalarının yapısını anlamak için bu başvuru makalelerini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,24 +18,24 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 2af4b0a0278ccd447e19ae5f946551165304d12bdac9e7e024c6a7e92329c532
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a91b3ff44a81b5f991f20ea79bff273b080e4bc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435705"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104943"
 ---
 # <a name="clickonce-reference"></a>ClickOnce başvurusu
-Aşağıdaki sayfalarda, uygulamaları temsil etmek için kullanılan XML dosyalarının ClickOnce açıkmektedir.
+aşağıdaki sayfalarda ClickOnce uygulamalarını temsil etmek için kullanılan XML dosyalarının yapısı açıklanır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [ClickOnce Uygulama Bildirimi](../deployment/clickonce-application-manifest.md)
+ [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
 
- Uygulama bildirimini tanımlayan öğeleri ve öznitelikleri listeler ve açıklar.
+ Uygulama bildirimini oluşturan öğeleri ve öznitelikleri listeler ve tanımlar.
 
  [ClickOnce Dağıtım Bildirimi](../deployment/clickonce-deployment-manifest.md)
 
- Dağıtım bildirimini tanımlayan öğeleri ve öznitelikleri listeler ve açıklar.
+ , Bir dağıtım bildirimi oluşturan öğeleri ve öznitelikleri listeler ve tanımlar.
 
  [Ürün ve Paket Şema Başvurusu](../deployment/product-and-package-schema-reference.md)
 
@@ -43,19 +43,19 @@ Aşağıdaki sayfalarda, uygulamaları temsil etmek için kullanılan XML dosyal
 
  [ClickOnce Yönetilmeyen API Başvurusu](../deployment/clickonce-unmanaged-api-reference.md)
 
- dfshim.dll'dan gelen, dfshim.dll.
+ dfshim.dll 'ten yönetilmeyen ortak API 'Leri listeler.
 
 ## <a name="reference"></a>Başvuru
 
 ## <a name="related-sections"></a>İlgili bölümler
  [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)
 
- Dağıtım hakkında ayrıntılı kavramsal ClickOnce sağlar.
+ ClickOnce dağıtımı hakkında ayrıntılı kavramsal bilgiler sağlar.
 
 <xref:System.Deployment.Application>
 
- Yönetilen kod içinde ortak sınıfları destekleyen ortak sınıfların başvuru ClickOnce bağlantılar sağlar.
+ yönetilen kod içinde ClickOnce destekleyen ortak sınıfların başvuru belgelerine bağlantılar sağlar.
 
  [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
 
- Bu görevleri gerçekleştirmek için izlenecek yollar ve nasıl ClickOnce sağlar.
+ ClickOnce görevleri gerçekleştiren izlenecek yollar ve nasıl yapılır.

@@ -1,6 +1,6 @@
 ---
 title: Yereller değerlendiriliyor | Microsoft Docs
-description: Visual Studio 'Nun, programın geçerli durumuna bağlı olan yerel bir değer içeren bellekteki konuma nasıl eriştiği hakkında bilgi edinin.
+description: Visual Studio, programın geçerli durumuna bağlı olan yerel bir değer içeren bellekteki konuma nasıl eriştiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: 7d1ed528-4e7a-4d8f-87b4-162440644a75
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26543152293cd93bc5565995f2e6c451417aca37
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c355dce5ec9d02b547b6af862a7296a7809972dd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096999"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089530"
 ---
 # <a name="evaluate-locals"></a>Yerelleri değerlendir
 > [!IMPORTANT]

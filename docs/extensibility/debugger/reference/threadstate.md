@@ -11,17 +11,18 @@ ms.assetid: 62efdd7c-25b1-4fd3-9d06-ac1830a418a9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 513e90e649d71a4fb7d5bc220eb9752925151d9f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e4aa5162259cf1937ef24506a32be9d87fb61327
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070823"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042744"
 ---
 # <a name="threadstate"></a>THREADSTATE
 İş parçacığının durumunu belirtir.
@@ -51,29 +52,29 @@ public enum enum_THREADSTATE {
 
 ## <a name="fields"></a>Alanlar
  `THREADSTATE_RUNNING`\
- İş parçacığının çalıştığını gösterir.
+ İş parçacığının çalışıyor olduğunu gösterir.
 
  `THREADSTATE_STOPPED`\
- Bir kesme noktası nedeniyle iş parçacığının durdurulduğunu belirtir.
+ Bir kesme noktası nedeniyle iş parçacığının durdurulmuş olduğunu gösterir.
 
  `THREADSTATE_FRESH`\
- İş parçacığının oluşturulduğunu, ancak henüz kod çalışmadığını gösterir.
+ İş parçacığının oluşturulmuş olduğunu ancak henüz kod çalıştırmamış olduğunu gösterir.
 
  `THREADSTATE_DEAD`\
- İş parçacığının ölü olduğunu gösterir.
+ İş parçacığının yok olduğunu gösterir.
 
  `THREADSTATE_FROZEN`\
- İş parçacığının dondurulmuş olduğunu belirtir (yürütme yapılamaz).
+ İş parçacığının dondurulup dondurulup gerçekleştirile olmadığını gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- `dwThreadState` [Threadproperties](../../../extensibility/debugger/reference/threadproperties.md) yapısının alanı için kullanılır.
+ `dwThreadState` [THREADPROPERTIES yapısının alanı için](../../../extensibility/debugger/reference/threadproperties.md) kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

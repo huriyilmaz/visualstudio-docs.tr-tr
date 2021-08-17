@@ -1,6 +1,6 @@
 ---
-title: '&lt;Assembly &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
-description: Bütünleştirilmiş kod öğesi kök öğesidir ve ClickOnce uygulamasında gereklidir. İlk kapsanan öğesi bir assemblyIdentity öğesi olmalıdır.
+title: '&lt;assembly &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+description: bütünleştirilmiş kod öğesi kök öğesidir ve ClickOnce uygulamasında gereklidir. İlk kapsanan öğesi bir assemblyIdentity öğesi olmalıdır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,16 +16,17 @@ ms.assetid: 51410569-10f9-4c0a-96b5-d39185edbefc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: f86ed604ae6b893f02da1d4f65a816bd05f34f94
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc8fb424c3a6232f27737521604247cf55ebc20e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837794"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090071"
 ---
-# <a name="ltassemblygt-element-clickonce-application"></a>&lt;Assembly &gt; öğesi (ClickOnce uygulaması)
+# <a name="ltassemblygt-element-clickonce-application"></a>&lt;assembly &gt; öğesi (ClickOnce uygulaması)
 Uygulama bildirimi için en üst düzey öğe.
 
 ## <a name="syntax"></a>Syntax
@@ -55,7 +56,7 @@ Uygulama bildirimi için en üst düzey öğe.
 |`manifestVersion`|Gereklidir. `manifestVersion`Özniteliğin olarak ayarlanması gerekir `1.0` .|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, `assembly` bir uygulama için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu kod örneği, [ClickOnce uygulama bildiriminde](../deployment/clickonce-application-manifest.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneği, `assembly` bir uygulama için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . bu kod örneği, [ClickOnce uygulama bildiriminde](../deployment/clickonce-application-manifest.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ```xml
 <asmv1:assembly
@@ -72,5 +73,5 @@ Uygulama bildirimi için en üst düzey öğe.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [uygulama bildirimini ClickOnce](../deployment/clickonce-application-manifest.md)
 - [\<assembly> dosyalarında](../deployment/assembly-element-clickonce-deployment.md)

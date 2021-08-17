@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bir yığın çerçevesi özelliğine veya başka bir özelle ilgili bir başvuru temsil eder.
+description: Bu arabirim bir yığın çerçevesi özelliğine veya başka bir özelliğe başvuruyu temsil eder.
 title: IDebugReference2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,18 +14,18 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e2b1ee845f45591a892d14caa0d126e981fb4b2ce71e70524580370ce4ce2c1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb94ceba197e0006dee98392df01f836c45692c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338494"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029755"
 ---
 # <a name="idebugreference2"></a>IDebugReference2
-Bu arabirim, bir yığın çerçevesi özelliğine veya başka bir özelle ilgili bir başvuru temsil eder.
+Bu arabirim bir yığın çerçevesi özelliğine veya başka bir özelliğe başvuruyu temsil eder.
 
 > [!NOTE]
-> `IDebugReference2` , gelecekte kullanılmak üzere ayrılmıştır ve tüm yöntemleri de `E_NOTIMPL` dönüşletir.
+> `IDebugReference2` gelecekte kullanılmak üzere ayrılmıştır ve tüm yöntemleri döndürmelidir `E_NOTIMPL` .
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,46 +33,46 @@ Bu arabirim, bir yığın çerçevesi özelliğine veya başka bir özelle ilgil
 IDebugReference2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE, belirli bir değere başvuru olduğunu temsil etmek için bu arabirimi uygulamaya almaktadır. Örneğin, değer bir ifade değerlendirmesinin sonucu olarak sayısal bir değer, belleği görüntülemek için kullanılan bir bellek bağlamı veya yazmayların ve değerlerinin listesi olabilir.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu arabirim, belirli bir değer türüne başvuruyu temsil etmek için DE uygular. Örneğin, değer bir ifade değerlendirmesinin sonucu olarak sayısal bir değer, bellek görüntülemek için kullanılan bir bellek bağlamı veya bir kayıt listesi ve bunların değerleri olabilir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu [arabirimi almak için GetReference'ı](../../../extensibility/debugger/reference/idebugproperty2-getreference.md) çağırma. [GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md) ve [GetDerivedMostReference da](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md) bu arabirimi geri döner.
+ Bu arabirimi edinmek için [GetReference](../../../extensibility/debugger/reference/idebugproperty2-getreference.md) öğesini çağırın. [GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md) ve [Getderivedmostreference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md) Ayrıca bu arabirimi de döndürür.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
- Aşağıdaki tabloda yöntemlerini `IDebugReference2` gösterir.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugReference2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)|Bu [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) açıklayan bir veri yapısı alır.|
-|[SetValueAsString](../../../extensibility/debugger/reference/idebugreference2-setvalueasstring.md)|Bu başvuru değerini bir dizeden ayarlar.|
-|[SetValueAsReference](../../../extensibility/debugger/reference/idebugreference2-setvalueasreference.md)|Bu başvuru değerini başka bir başvurudan ayarlar.|
-|[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)|Bu başvuruya yapılan başvuruların en küçüklerini numaralandır.|
-|[GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md)|Bu başvuru için üst öğe alır.|
-|[GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md)|Bu başvuru için en çok türetilmiş başvuru alır.|
-|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md)|Bu başvuru için başvurulan bellek baytlarını alır.|
+|[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)|Bu başvuruyu açıklayan [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısını alır.|
+|[SetValueAsString](../../../extensibility/debugger/reference/idebugreference2-setvalueasstring.md)|Bu başvurunun değerini bir dizeden ayarlar.|
+|[SetValueAsReference](../../../extensibility/debugger/reference/idebugreference2-setvalueasreference.md)|Bu başvurunun değerini başka bir başvuruya ayarlar.|
+|[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)|Bu başvurunun alt öğelerini numaralandırır.|
+|[GetParent](../../../extensibility/debugger/reference/idebugreference2-getparent.md)|Bu başvurunun üst öğesini alır.|
+|[GetDerivedMostReference](../../../extensibility/debugger/reference/idebugreference2-getderivedmostreference.md)|Bu başvurunun en fazla türetilmiş başvurusunu alır.|
+|[GetMemoryBytes](../../../extensibility/debugger/reference/idebugreference2-getmemorybytes.md)|Bu başvurunun başvurduğu bellek baytlarını alır.|
 |[GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)|Bu başvuru için bir bellek bağlamı alır.|
-|[GetSize](../../../extensibility/debugger/reference/idebugreference2-getsize.md)|Bu başvuru için bayt cinsinden boyutu alır.|
+|[GetSize](../../../extensibility/debugger/reference/idebugreference2-getsize.md)|Bu başvurunun bayt cinsinden boyutunu alır.|
 |[SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)|Bu başvuru türünü ayarlar.|
-|[Karşılaştır](../../../extensibility/debugger/reference/idebugreference2-compare.md)|Bu başvuru başka bir başvuruyla karşılaştırıldığında.|
+|[Karşılaştır](../../../extensibility/debugger/reference/idebugreference2-compare.md)|Bu başvuruyu başka bir ile karşılaştırır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!NOTE]
-> Bu "özellik" kullanımı, bir sınıfın üye değişkeni anlamına gelen ile karıştırılmamalıdır, ancak bir böyle `IDebugReference2` bir varlığı temsil eder.
+> Bu "Property" kullanımı, bu `IDebugReference2` tür bir varlığı temsil edebilir ancak bir sınıfın üye değişkeni anlamı olan ile karıştırılmamalıdır.
 
-- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) bir özelliği temsil ederken, bir özelliğin başvurularını temsil ederken, genellikle hata ayıklaması yapılan programda bir `IDebugReference2` nesneye yapılan başvuru.
+- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) bir özelliği temsil ederken, `IDebugReference2` genellikle hata ayıklanan programdaki bir nesneye yapılan bir özelliğe başvuruyu temsil eder.
 
- Bir özellik ile başvuru arasındaki temel fark, bir özelliğin bir nesnenin adlandırılmış örneğine, başvuru ise adsız bir örneği ifade eder. Örneğin, bir özellik tarafından programın yığınında bir nesnesine `"a.b"` başvurabilirsiniz. Başka bir özellik ile aynı nesneye `"c.d"` başvurur. Bu özeliklere başvuru yapmak için bunun veya `"a.b"` `"c.d"` kapsamının içinde olması gerekir. Bu nesneye yapılan başvurular adsızdır; bu nesnenin belleği geçerli olduğu sürece nesnesine başvurulabilirsiniz.
+ Bir özellik ve başvuru arasındaki temel fark, bir özelliğin bir nesnenin adlandırılmış örneğine başvurduğu, ancak bir başvurunun adlandırılmamış bir örneğe başvurduğu anlamına gelir. Örneğin, bir özellik programın yığın içindeki bir nesneye başvurabilir `"a.b"` . Başka bir özellik, ile aynı nesneye başvurabilir `"c.d"` . Bu özelliğe başvurma yöntemi, bunun `"a.b"` ya da `"c.d"` kapsam içinde olmasını gerektirir. Aynı nesneye bir başvuru Nameless; nesne, bu nesnenin belleği geçerli olduğu sürece başvuruda bulunabilir.
 
- Arabirim `IDebugProperty2` adı, türü ve adresi olan bir değer olarak düşünebilirsiniz. Öte yandan , `IDebugReference2` türü ve adresi olarak düşünebilirsiniz.
+ Bir `IDebugProperty2` arabirim bir ada, türe ve adrese sahip bir değer olarak düşünülebilir. `IDebugReference2`Diğer taraftan, bir tür ve bir adres olarak düşünülebilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

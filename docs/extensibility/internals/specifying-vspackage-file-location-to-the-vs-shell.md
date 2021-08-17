@@ -1,6 +1,6 @@
 ---
-title: VS Shell 'e VSPackage dosya konumunu belirtme | Microsoft Docs
-description: Visual Studio 'nun VSPackage 'ı yüklemek için derleme DLL 'sini bulması için nasıl mümkün olabileceğini öğrenin.
+title: VS Shell'de VSPackage Dosya Konumunu | Microsoft Docs
+description: VsPackage'ı yüklemek için Visual Studio DLL'lerini bulmanın nasıl mümkün olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,24 +11,25 @@ ms.assetid: beb8607a-4183-4ed2-9ac8-7527f11513b1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: efec1ac3f7ccb3884265f3740108aaef261e9378
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 044655e6f1b1eb984e521b26cb9796ae3e5543d0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064091"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057167"
 ---
 # <a name="specifying-vspackage-file-location-to-the-vs-shell"></a>VS Kabuğuna VSPackage Dosya Konumunu Belirtme
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage 'ı yüklemek için derleme DLL dosyasını bulabilmelidir. Aşağıdaki tabloda açıklandığı gibi çeşitli yollarla konumunu bulabilirsiniz.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage'ı yüklemek için derleme DLL'lerini bulmalıdır. Aşağıdaki tabloda açıklandığı gibi çeşitli yollarla bu dosyayı buabilirsiniz.
 
 | Yöntem | Açıklama |
 | - | - |
-| CodeBase kayıt defteri anahtarını kullanın. | CodeBase anahtarı, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] herhangi bir tam dosya yolundan VSPackage derlemesini yüklemek için doğrudan kullanılabilir. Anahtarın değeri DLL 'nin dosya yolu olmalıdır. Bu, paket derlemenizi yüklemek için en iyi yoldur [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu teknik bazen "CodeBase/Private yükleme dizini tekniği" olarak adlandırılır. Kayıt sırasında, kod temelinin değeri, kayıt öznitelik sınıflarına tür örneği aracılığıyla geçirilir <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.RegistrationContext> . |
-| DLL 'yi **PrivateAssemblies** dizinine yerleştirin. | Derlemeyi, dizinin **PrivateAssemblies** alt dizinine yerleştirin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . **PrivateAssemblies** içinde bulunan derlemeler otomatik olarak algılanır, ancak **Başvuru Ekle** iletişim kutusunda görünmez. **PrivateAssemblies** ve **PublicAssemblies** arasındaki fark, **PublicAssemblies** içindeki derlemelerin **Başvuru Ekle** iletişim kutusunda numaralandırılmanızdır. "CodeBase/Private yükleme dizini" tekniğinin kullanılmasını tercih ediyorsanız, **PrivateAssemblies** dizinine yüklemeniz gerekir. |
-| Tanımlayıcı adlı bütünleştirilmiş kod ve derleme kayıt defteri anahtarını kullanın. | Derleme anahtarı, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kesin bir adlandırılmış VSPackage derlemesini yüklemeye açıkça doğrudan yönlendirmek için kullanılabilir. Anahtarın değeri derlemenin tanımlayıcı adı olmalıdır. |
-| DLL 'yi **PublicAssemblies** dizinine yerleştirin. | Son olarak, derleme ayrıca **PublicAssemblies** alt dizinine yerleştirilebilecek. **PublicAssemblies** içinde bulunan derlemeler otomatik olarak algılanır ve ' de **Başvuru Ekle** iletişim kutusunda da görünür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .<br /><br /> VSPackage derlemeleri yalnızca, diğer VSPackage geliştiricileri tarafından yeniden kullanılması amaçlanan yönetilen bileşenleri içeriyorsa **PublicAssemblies** dizinine yerleştirilmelidir. Derlemelerin çoğunluğu bu ölçütü karşılamıyor. |
+| CodeBase kayıt defteri anahtarını kullanın. | CodeBase anahtarı, VSPackage derlemeyi herhangi bir tam dosya [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yolundan yüklemek için doğrudan kullanılabilir. Anahtarın değeri, DLL'nin dosya yoludur. Bu, paket derlemenizi yüklemenin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] en iyi yolu. Bu teknik bazen "CodeBase/özel yükleme dizini tekniği" olarak adlandırılır. Kayıt sırasında kod tabanının değeri, tür örneği aracılığıyla kayıt özniteliği sınıflara <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.RegistrationContext> geçirilir. |
+| DLL'yi **PrivateAssemblies dizinine** ekleyin. | Derlemeyi dizinin **PrivateAssemblies** alt dizinine [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yer. **PrivateAssemblies'te bulunan** derlemeler otomatik olarak algılanır, ancak Başvuru Ekle **iletişim kutusunda** görünmez. **PrivateAssemblies** ile **PublicAssemblies** arasındaki **fark, PublicAssemblies'te** derlemelerin Başvuru Ekle iletişim kutusunda **numaralandırılacaklarıdır.** "CodeBase/özel yükleme dizini" tekniğini kullanmamayı seçtiyebilirsiniz, **privateAssemblies dizinine yüklemeniz** gerekir. |
+| Strong adlı bir derleme ve Derleme kayıt defteri anahtarı kullanın. | Derleme anahtarı, adlandırılmış güçlü bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage derlemesi yüklemek için açıkça doğrudan kullanılabilir. Anahtarın değeri derlemenin güçlü adı olabilir. |
+| DLL'yi **PublicAssemblies dizinine** ekleyin. | Son olarak, derleme **PublicAssemblies alt dizinine** de yer olabilir. **PublicAssemblies'te bulunan** derlemeler otomatik olarak algılanır ve içinde Başvuru Ekle **iletişim** kutusunda da [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] görünür.<br /><br /> VSPackage derlemeleri yalnızca diğer VSPackage geliştiricileri tarafından yeniden kullanılması amaçlanan yönetilen bileşenler içeriyorsa **PublicAssemblies** dizinine yerleştirilsin. Derlemelerin çoğu bu ölçütü karşılamaz. |
 
 > [!NOTE]
-> Tüm bağımlı derlemeleriniz için tanımlayıcı adlandırılmış ve imzalı derlemeler kullanın. Bu derlemelerin de kendi dizininizde veya genel derleme önbelleğinde (GAC) yüklü olması gerekir. Bu, zayıf ad bağlama olarak bilinen, aynı temel dosya adına sahip Derlemelerle çakışmalara karşı koruma sağlar.
+> Tüm bağımlı derlemeler için güçlü adlandırılmış, imzalı derlemeler kullanın. Bu derlemeler kendi dizininize veya genel derleme önbelleğine (GAC) de yük olmalıdır. Bu, zayıf ad bağlaması olarak bilinen aynı temel dosya adına sahip derlemelerle çakışmalara karşı koruma sağlar.

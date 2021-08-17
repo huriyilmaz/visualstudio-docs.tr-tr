@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: bir Oluşturucu yöntemi ekleme | Microsoft Docs'
-description: SharePoint 'teki Iş verileri bağlantısı (BDC) hizmetindeki bir varlığın veri kaynağına yeni veri ekleyen bir Oluşturucu yönteminin nasıl ekleneceğini öğrenin.
+description: SharePoint ' deki Iş verileri bağlantısı (BDC) hizmetindeki bir varlığın veri kaynağına yeni veri ekleyen bir Oluşturucu yönteminin nasıl ekleneceğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 950745a533fbea8d360c8bea6d839a304dd6e0d7
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: adec17c0a381edb3587da50d3d9e3e8aedbc6cdd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216416"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106839"
 ---
 # <a name="how-to-add-a-creator-method"></a>Nasıl yapılır: bir Oluşturucu yöntemi ekleme
   Bir Oluşturucu yöntemi, bir varlığın veri kaynağına yeni veri ekler. Iş verileri bağlantısı (BDC) hizmeti, kullanıcılar modeli temel alan bir listenin **şeritinde** **Yeni öğe** düğmesini seçişinizde bu yöntemi çağırır. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,13 +34,13 @@ ms.locfileid: "106216416"
 
 1. **IVB tasarımcısında** bir varlık seçin.
 
-2. Menü çubuğunda,   >  **diğer Windows**  > **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. menü çubuğunda   >  **diğer Windows**  > **BDC yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
 3. **Yöntem Ekle** listesinde, **Oluşturucu yöntemi oluştur**' u seçin.
 
-    Visual Studio, modele aşağıdaki öğeleri ekler ve bu öğeler **BDC Yöntem ayrıntıları** penceresinde görünür.
+    Visual Studio aşağıdaki öğeleri modele ekler ve bu öğeler **BDC yöntem ayrıntıları** penceresinde görüntülenir.
 
    - **Create** adlı bir yöntem.
 

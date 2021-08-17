@@ -7,27 +7,28 @@ ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36b77dc79574b1741c8feaded65104810e58c2fb
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: ca7eea3b88b6cfe38bd0d1be568b9aeaf5e329ed
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898798"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028936"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio İçin Görüntüler ve Simgeler
-## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio 'da görüntü kullanımı
- Resim oluşturmadan önce, [Visual Studio Görüntü Kitaplığı](https://www.microsoft.com/download/details.aspx?id=35825)'nda 1000 + görüntüden birini kullanmayı düşünün.
+## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Visual Studio görüntü kullanımı
+ resim oluşturmadan önce [Visual Studio görüntü kitaplığındaki](https://www.microsoft.com/download/details.aspx?id=35825)1000 + görüntüden birini kullanmayı düşünün.
 
 ### <a name="types-of-images"></a>Görüntü türleri
 
-- **Simgeler**. Komutlarda, hiyerarşilerde, şablonlarda ve benzeri görünen küçük görüntüler. Visual Studio 'da kullanılan varsayılan simge boyutu 16x16 PNG 'dir. Görüntü hizmeti tarafından üretilen simgeler otomatik olarak HDPı desteği için XAML biçimini oluşturur.
+- **Simgeler**. Komutlarda, hiyerarşilerde, şablonlarda ve benzeri görünen küçük görüntüler. Visual Studio için kullanılan varsayılan simge boyutu 16x16 PNG 'dir. Görüntü hizmeti tarafından üretilen simgeler otomatik olarak HDPı desteği için XAML biçimini oluşturur.
 
     > [!NOTE]
-    > Görüntüler menü sisteminde kullanıldığında, her komut için bir simge oluşturmamalıdır. Komutlarınızın bir simge alması gerekip gerekmediğini görmek için [Visual Studio Için menülere ve komutlara](../../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md) danışın.
+    > Görüntüler menü sisteminde kullanıldığında, her komut için bir simge oluşturmamalıdır. komutlarınızın bir simge alması gerekip gerekmediğini görmek için [Visual Studio menülere ve komutlara](../../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md) danışın.
 
-- **Küçük resimleri.** Yeni proje iletişim kutusu gibi bir iletişim kutusunun Önizleme alanında kullanılan görüntüler.
+- **Küçük resimleri.** yeni Project iletişim kutusu gibi bir iletişim kutusunun önizleme alanında kullanılan görüntüler.
 
 - **İletişim kutusu görüntüleri.** Açıklayıcı grafikler veya ileti göstergeleri olarak iletişim kutularında ya da sihirbazlarda görünen görüntüler. Yalnızca zor bir kavram göstermek veya kullanıcının dikkatini çekmek (uyarı, uyarı) için gerekli olduğunda seyrek ve yalnızca kullanın.
 
@@ -38,7 +39,7 @@ ms.locfileid: "112898798"
 ## <a name="icon-design"></a><a name="BKMK_IconDesign"></a> Simge tasarımı
 
 ### <a name="overview"></a>Genel Bakış
- Visual Studio, temizleme geometrisi ve 50/50 bir pozitif/negatif (Açık/Koyu) olan modern stil simgeleri kullanır ve doğrudan, anlaşılır olmayan metaphiler kullanır. Netme, basitleştirme ve bağlam etrafında önemli simge tasarım noktaları merkezi.
+ Visual Studio, temiz geometri ve 50/50 bir pozitif/negatif (açık/koyu) bakiyesi olan modern stil simgeleri kullanır ve doğrudan, anlaşılabilir metaphiler kullanır. Netme, basitleştirme ve bağlam etrafında önemli simge tasarım noktaları merkezi.
 
 - **Netlik:** bir simgenin anlamı ve kişiselleştirme durumunu gösteren çekirdek benzetimini 'a odaklanın.
 
@@ -59,7 +60,7 @@ ms.locfileid: "112898798"
 ### <a name="icon-creation"></a>Simge oluşturma
 
 #### <a name="concept-development"></a>Kavram geliştirme
- Visual Studio Kullanıcı arabirimi içinde çok çeşitli simge türlerini içerir. Geliştirme sırasında simge türünü dikkatle düşünün. Simge öğeleriniz için belirsiz veya seyrek olmayan UI nesneleri kullanmayın. Akıllı etiket simgesiyle birlikte bu durumlarda sembolik için kabul edin. Soldaki soyut etiketin anlamı, sağdaki Kullanıcı arabirimi tabanlı sürümden daha belirgin olduğunu unutmayın:
+ Visual Studio, kullanıcı arabirimi içinde çok çeşitli simge türleri içeriyor. Geliştirme sırasında simge türünü dikkatle düşünün. Simge öğeleriniz için belirsiz veya seyrek olmayan UI nesneleri kullanmayın. Akıllı etiket simgesiyle birlikte bu durumlarda sembolik için kabul edin. Soldaki soyut etiketin anlamı, sağdaki Kullanıcı arabirimi tabanlı sürümden daha belirgin olduğunu unutmayın:
 
 |**Sembolik canlandırın 'nin doğru kullanımı**|**Sembolik Imagery 'nin yanlış kullanımı**|
 |-|-|
@@ -104,13 +105,13 @@ ms.locfileid: "112898798"
 
  Durum bildirim öğeleri, tek başına simgeler olarak daha iyi kullanılır. Bununla birlikte, bir bildirimin temel öğede (örneğin, görev tamamlanma simgesiyle) yığın olarak oluşturulması gereken bağlamlar vardır:
 
- ![Visual Studio 'da tek başına bildirimler](../../extensibility/ux-guidelines/media/0404-16_standalonenotificationicons.png "0404-16_StandaloneNotificationIcons")<br />Tek başına bildirim simgeleri
+ ![Visual Studio bağımsız bildirimler](../../extensibility/ux-guidelines/media/0404-16_standalonenotificationicons.png "0404-16_StandaloneNotificationIcons")<br />Tek başına bildirim simgeleri
 
  ![Görev tamamlanma simgesi](../../extensibility/ux-guidelines/media/0404-17_taskcomplete.png "0404-17_TaskComplete")<br />Görev tamamlanma simgesi
 
- Proje simgeleri genellikle birden çok boyut içeren. ico dosyalarıdır. En çok 16x16 simgesi aynı öğeleri içerir. 32x32 sürümlerinde, uygun olduğunda proje türü de dahil olmak üzere daha fazla ayrıntı vardır.
+ Project simgeler genellikle birden çok boyut içeren. ico dosyalarıdır. En çok 16x16 simgesi aynı öğeleri içerir. 32x32 sürümlerinde, uygun olduğunda proje türü de dahil olmak üzere daha fazla ayrıntı vardır.
 
- ![Visual Studio 'da proje simgeleri](../../extensibility/ux-guidelines/media/0404-18_iconprojectthreesizes.png "0404-18_IconProjectThreeSizes")<br />VB Windows Denetim Kitaplığı proje simgeleri, 16x16 ve 32x32
+ ![Visual Studio simgeleri Project](../../extensibility/ux-guidelines/media/0404-18_iconprojectthreesizes.png "0404-18_IconProjectThreeSizes")<br />VB Windows denetim kitaplığı Project simgeleri, 16x16 ve 32x32
 
  Bir simgeyi piksel çerçevesi içinde ortalayın. Bu mümkün değilse, simgeyi çerçevenin üst ve/veya sağına hizalayın.
 
@@ -120,13 +121,13 @@ ms.locfileid: "112898798"
 
  ![Ortalanmış ve piksel çerçevesinin üstüne hizalanmış simge](../../extensibility/ux-guidelines/media/0404-21_icontopalign.png "0404-21_IconTopAlign")<br />Ortalanmış ve çerçevenin en üstüne hizalanmış simge
 
- İdeal hizalama ve denge elde etmek için simgenin temel öğesini eylem glifleriyle tıkamaktan kaçının. Glyph'i temel öğenin sol üst yanına yakın bir yere yer. Ek bir öğe eklerken simgenin hizalamasını ve dengelerini göz önünde bulundurabilirsiniz.
+ İdeal hizalama ve denge elde etmek için simgenin temel öğesini eylem klifleriyle tıkamaktan kaçının. Glyph'i temel öğenin sol üst yanına yakın bir yere yer. Ek öğe eklerken simgenin hizalamasını ve dengelerini göz önünde bulundurabilirsiniz.
 
 |**Hizalamayı ve dengeyi düzeltme**|**Yanlış hizalama ve bakiye**|
 |-|-|
 |![Doğru simge bakiyesi ve hizalaması](../../extensibility/ux-guidelines/media/0404-22_alignbalancecorrect.png "0404-22_AlignBalanceCorrect")|![Yanlış simge bakiyesi ve hizalaması](../../extensibility/ux-guidelines/media/0404-23_alignbalanceincorrect.png "0404-23_AlignBalanceIncorrect")|
 
- Öğeleri ve kümelerde kullanılan simgelerin boyut eşlikli olduğundan emin olmak. Yanlış eşleştirmede dairenin ve okun fazla büyük olduğunu ve eşleşme olmadığını unutmayın.
+ Öğeleri ve kümelerde kullanılan simgelerin boyut eşlikli olduğundan emin olur. Yanlış eşleştirmede dairenin ve okun fazla büyük olduğunu ve eşleşme olmadığını unutmayın.
 
 |**Doğru boyut eşlik**|**Yanlış boyut eşlik**|
 |-|-|
@@ -143,7 +144,7 @@ ms.locfileid: "112898798"
  ![Simge açılarını düzeltme](../../extensibility/ux-guidelines/media/0404-30_iconanglescorrect.png "0404-30_IconAnglesCorrect")
 
 #### <a name="perspective"></a>Perspektif
- Simgeyi net ve anlaşılır bir şekilde tut. Perspektifi ve açık kaynağı yalnızca gerekli olduğunda kullanın. Simge öğelerinde perspektifin kullanımından kaçınılmalıdır, ancak bazı öğeler bu olmadan tanınamaz. Böyle durumlarda, stilize edilmiş bir perspektif öğenin netliğini iletir.
+ Simgeyi net ve anlaşılır bir şekilde tutma. Perspektifi ve açık kaynağı yalnızca gerekli olduğunda kullanın. Simge öğelerinde perspektif kullanmaktan kaçınılmalıdır, ancak bazı öğeler bu olmadan tanınamaz. Böyle durumlarda, stilize edilmiş bir perspektif öğenin netliğini iletir.
 
  ![3 noktalı perspektif](../../extensibility/ux-guidelines/media/0404-31_3pointperspective.png "0404-31_3PointPerspective")<br />3 noktalı perspektif
 
@@ -188,26 +189,26 @@ ms.locfileid: "112898798"
 
  **Küçük (16x16)** proje simgelerinin en fazla iki öğeye sahip olması gerekir: bir temel ve bir değiştirici.
 
- ![Küçük (16x16)](../../extensibility/ux-guidelines/media/0404-43_16x16project1.png "0404-43_16x16Project1") proje ![simgelerinin örnekleri 16x16 proje simgesi &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-44_16x16project2.png "0404-44_16x16Project2") ![16x16](../../extensibility/ux-guidelines/media/0404-45_16x16project3.png "0404-45_16x16Project3") proje simgesi &#40;3&#41;<br />Küçük (16x16) proje simgeleri örnekleri
+ ![Küçük (16x16)](../../extensibility/ux-guidelines/media/0404-43_16x16project1.png "0404-43_16x16Project1") ![proje simgelerinin örnekleri 16x16 proje simgesi &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-44_16x16project2.png "0404-44_16x16Project2") ![16x16](../../extensibility/ux-guidelines/media/0404-45_16x16project3.png "0404-45_16x16Project3") proje simgesi &#40;3&#41;<br />Küçük (16x16) proje simgeleri örnekleri
 
  **Büyük (32x32)** proje simgeleri şu öğelerden en fazla dört taneden oluşur: bir temel, bire iki değiştirici ve bir dil katman.
 
  ![Büyük (32x32) proje simgeleri örnekleri](../../extensibility/ux-guidelines/media/0404-46_32x32project.png "0404-46_32x32Project")<br />Büyük (32x32) proje simgeleri örnekleri
 
 ### <a name="production-details"></a>Üretim ayrıntıları
- Tüm yeni kullanıcı arabirimi öğeleri Windows Presentation Foundation (WPF) kullanılarak oluşturulacak ve WPF'nin tüm yeni simgeleri 32 bit PNG biçiminde olmalıdır. 24 bit PNG, saydamlığı desteklemez ve bu nedenle simgeler için önerilmez.
+ Tüm yeni kullanıcı arabirimi öğeleri Windows Presentation Foundation (WPF) kullanılarak oluşturulmalı ve WPF için tüm yeni simgeler 32 bit PNG biçiminde olmalıdır. 24 bit PNG, saydamlığı desteklemez ve bu nedenle simgeler için önerilmez.
 
- Çözünürlüğü 96 DPI'ye kaydedin.
+ Çözünürlüğü 96 DPI olarak kaydedin.
 
 #### <a name="file-types"></a>Dosya türleri
 
 - **32 bit PNG: Simgeler** için tercih edilen biçim. Tek bir tarama (piksel) görüntüsünü depolayabilirsiniz kayıpsız veri sıkıştırma dosyası biçimi. 32 bit PNG dosyaları alfa kanal saydamlığını, düzeltmeyi ve ara özelliği destekler.
 
-- **32 bit BMP:** WPF olmayan denetimler için. XP veya yüksek renk olarak da adlandırılan 32 bit BMP, rgb/A görüntü biçimidir ve alfa kanalı saydamlığı olan gerçek renkli bir görüntüdir. Alfa kanal, Adobe Adobe'de belirlenen ve bit eşlem içinde ek (dördüncü) renk kanalı olarak kaydedilen bir saydamlık katmanıdır. Renk derinliği hakkında hızlı bir görsel ipucu sağlamak için 32 bitlik tüm BMP dosyalarına sanat çalışmaları sırasında siyah bir arka plan eklenir. Bu siyah arka plan, kullanıcı arabiriminde maskelenmiş alanı temsil eder.
+- **32 bit BMP:** WPF olmayan denetimler için. XP veya yüksek renk olarak da adlandırılan 32 bit BMP, bir RGB/A görüntü biçimidir ve alfa kanalı saydamlığı olan gerçek renkli bir resimdir. Alfa kanal, Adobe Adobe Adobe'de belirlenen ve ardından bit eşlem içinde ek (dördüncü) renk kanalı olarak kaydedilen bir saydamlık katmanıdır. Renk derinliği hakkında hızlı bir görsel ipucu sağlamak için 32 bitlik tüm BMP dosyalarına sanat çalışmaları sırasında siyah bir arka plan eklenir. Bu siyah arka plan, kullanıcı arabiriminde maskelenmiş alanı temsil eder.
 
-- **32 bit ICO:** Proje simgeleri ve Öğe Ekle için. Tüm ICO dosyaları, alfa kanal saydamlığı (RGB/A) ile 32 bit gerçek renktir. ICO dosyaları birden çok boyut ve renk derinliği depolayana kadar Vista simgeleri genellikle 16x16, 32x32, 48x48 ve 256x256 görüntü boyutlarını içeren bir ICO biçimindedir. Windows Gezgini'nde düzgün bir şekilde görüntülemek için ICO dosyalarının her görüntü boyutu için 24 bit ve 8 bit renk derinliklerine indirgenmiş olması gerekir.
+- **32 bit ICO:** Project ve Öğe Ekle için. Tüm ICO dosyaları, alfa kanal saydamlığı (RGB/A) ile 32 bit gerçek renktir. ICO dosyaları birden çok boyut ve renk derinliği depolayana kadar Vista simgeleri genellikle 16x16, 32x32, 48x48 ve 256x256 görüntü boyutlarını içeren bir ICO biçimindedir. Windows Gezgini'nde düzgün bir şekilde görüntülemek için ICO dosyalarının her görüntü boyutu için 24 bit ve 8 bit renk derinliklerine indirgenmiş olması gerekir.
 
-- **XAML:** Tasarım yüzeyleri ve Windows donatıcıları için. XAML simgeleri ölçeklendirme, döndürme, dosyalama ve saydamlığı destekleyen vektör tabanlı görüntü dosyalarıdır. Günümüzde bu Visual Studio yaygın değildir ancak esneklikleri nedeniyle daha popüler hale geliyor.
+- **XAML:** Tasarım yüzeyleri ve Windows için. XAML simgeleri ölçeklendirme, döndürme, dosyalama ve saydamlığı destekleyen vektör tabanlı görüntü dosyalarıdır. Günümüzde bu Visual Studio yaygın değildir, ancak esneklikleri nedeniyle daha popüler hale geliyor.
 
 - **Svg**
 
@@ -216,22 +217,22 @@ ms.locfileid: "112898798"
 - **24 bit GIF:** Visual Studio çubuğu için. Saydamlığı destekleyen bir gerçek renk RGB görüntü biçimi. GIF dosyaları genellikle Sihirbaz resmi ve GIF animasyonlarında kullanılır.
 
 ### <a name="icon-construction"></a>Simge yapısı
- Uygulamanın en küçük simge boyutu Visual Studio 16x16'dır. Yaygın olarak kullanılan en büyük kullanım 32x32'dir. Simge tasarlarken 16x16, 24x24 veya 32x32 çerçevenin tamamını doldurmayın. Okunaklı, tekdüze simge yapısı, kullanıcı tanıma için önemlidir. Simgeleri inşa etmek için aşağıdaki noktalara uyun.
+ Uygulamanın en küçük simge boyutu Visual Studio 16x16'dır. Yaygın olarak kullanılan en büyük kullanım 32x32'dir. Simge tasarlarken 16x16, 24x24 veya 32x32 çerçevenin tamamını doldurmamalarını unutmayın. Okunaklı, tekdüze simge yapısı, kullanıcı tanıma için önemlidir. Simgeleri inşa etmek için aşağıdaki noktalara uyun.
 
 - Simgeler net, anlaşılır ve tutarlı olmalıdır.
 
-- Durum bildirimi öğelerini tek simgeler olarak kullanmak ve bunları bir simge temel öğesinin üzerine yığmama daha iyidir. Belirli bağlamlarda, kullanıcı arabirimi durum öğesinin bir temel öğe ile eşleştirilmiş olması gerektirebilir.
+- Durum bildirimi öğelerini tek simge olarak kullanmak ve bunları bir simge temel öğesinin üzerine yığmamak daha iyidir. Belirli bağlamlarda, kullanıcı arabirimi durum öğesinin bir temel öğe ile eşleştirilmiş olması gerektirebilir.
 
-- Proje simgeleri genellikle çeşitli boyutlardaki .ico dosyalarıdır. Yalnızca 16x16, 24x24 ve 32x32 simgeleri güncelleştiriliyor. Çoğu 16x16 ve 24x24 simgeleri aynı öğeleri içerir. 32x32 simgeleri, uygun olduğunda proje dil türü de dahil olmak üzere daha fazla ayrıntı içerir.
+- Project simgeleri genellikle çeşitli boyutlara sahip .ico dosyalarıdır. Yalnızca 16x16, 24x24 ve 32x32 simgeleri güncelleştiriliyor. Çoğu 16x16 ve 24x24 simgeleri aynı öğeleri içerir. 32x32 simgeleri, uygun olduğunda proje dil türü de dahil olmak üzere daha fazla ayrıntı içerir.
 
 - 32x32 simgeleri için temel öğeler genellikle 2 piksel çizgi ağırlığına sahiptir. Ayrıntı öğeleri için 1 veya 2 piksel çizgi ağırlığı kullanılabilir. Hangisinin daha uygun olduğunu belirlemek için en iyi kararınızı kullanın.
 
-- 16x16 ve 24x24 simgeleri için öğeler arasında en az 1 piksel boşluk içerir. 32x32 simgeleri için öğeler arasında ve değiştirici ile temel öğe arasında 2 piksel boşluk kullanın.
+- 16x16 ve 24x24 simgeleri için öğeler arasında en az 1 piksel boşluk içerir. 32x32 simgeleri için öğeler arasında ve değiştirici ile temel öğe arasında 2 piksellik boşluk kullanın.
 
   ![16x16, 24x24 ve 32x32 boyutlu simgeler için öğe aralığı](../../extensibility/ux-guidelines/media/0404-47_elementspacing.png "0404-47_ElementSpacing")<br />16x16, 24x24 ve 32x32 boyutlu simgeler için öğe aralığı
 
 #### <a name="color-and-accessibility"></a>Renk ve erişilebilirlik
- Visual Studio uyumluluk yönergeleri, ürünle ilgili tüm simgelerin renk ve karşıtlık için erişilebilirlik gereksinimlerini geçmelerini gerektirir. Bu, simge ters çevirme yoluyla başarıldı ve tasarımını tamamlarken bunların üründe program aracılığıyla ters çevireceklerini fark ediyorsanız.
+ Visual Studio uyumluluk yönergeleri, üründe yer alan tüm simgelerin renk ve karşıtlık için erişilebilirlik gereksinimlerini geçmelerini gerektirir. Bu, simge ters çevirme yoluyla lenir ve tasarımını tamamlarsanız, bunların üründe program aracılığıyla ters çevireceklerini fark ediyorsanız.
 
  Simgelerde renk kullanma hakkında daha fazla Visual Studio için [bkz. Görüntülerde renk kullanma.](../../extensibility/ux-guidelines/images-and-icons-for-visual-studio.md#BKMK_UsingColorInImages)
 
@@ -242,7 +243,7 @@ ms.locfileid: "112898798"
 
 - bir eylemi göstermek için
 
-- kullanıcıya durum bildirimi uyarısı yapmak için
+- bir durum bildirimi için kullanıcıya uyarı
 
 - dil ilişkilerini atama
 
@@ -300,7 +301,7 @@ ms.locfileid: "112898798"
 
  Koyu altın öncelikle "yeni" değiştiricisi için kullanılır.
 
-|Yeni Proje|Yeni grafik oluştur|Yeni birim testi|Yeni liste öğesi|
+|Yeni Proje|Yeni Graph oluştur|Yeni birim testi|Yeni liste öğesi|
 |-|-|-|-|
 |![Yeni proje simgesi](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")|![Yeni grafik simgesi oluştur](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")|![Yeni birim testi simgesi](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")|![Yeni liste öğesi simgesi](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")|
 
@@ -320,7 +321,7 @@ ms.locfileid: "112898798"
 |Klasörler|Klasör|DCB67A/220.182.122|![DCB67A örneği](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![Klasör rengi simgesi](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405-23_FolderColor")|
 
 #### <a name="visual-studio-languages"></a>Visual Studio dilleri
- Visual Studio 'da kullanılabilen ortak dillerin veya platformların her biri ilişkili bir renge sahiptir. Bu renkler temel simgenin üzerinde veya bileşik simgelerin sağ üst köşesinde görünen dil değiştiricilerinde kullanılır.
+ Visual Studio bulunan ortak dillerin veya platformların her biri ilişkili bir renge sahiptir. Bu renkler temel simgenin üzerinde veya bileşik simgelerin sağ üst köşesinde görünen dil değiştiricilerinde kullanılır.
 
 |Kullanım|Name|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
@@ -345,7 +346,7 @@ ms.locfileid: "112898798"
 |![HTML simgesi](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![WPF simgesi](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![ASP simgesi](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS simgesi](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript simgesi](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript|
 
 #### <a name="intellisense"></a>IntelliSense
- IntelliSense simgeleri özel bir renk paleti kullanır. Bu renkler, kullanıcıların IntelliSense açılan listesinde farklı öğeler arasında hızlı bir şekilde ayrım yapmak için kullanılır.
+ IntelliSense simgeleri özel bir renk paleti kullanır. Bu renkler, kullanıcıların IntelliSense açılan listesinde yer alan farklı öğeler arasında hızla ayrım yapmak için kullanılır.
 
 |Kullanım|Name|Değer (tüm temalar)|Swatch|
 |-----------|----------|--------------------------|------------|

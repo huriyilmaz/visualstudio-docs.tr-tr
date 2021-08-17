@@ -1,7 +1,7 @@
 ---
-title: Windows'Visual Studio python desteği
+title: Windows'Visual Studio'da Python desteği
 titleSuffix: ''
-description: Visual Studio'daki Python özelliklerinin özeti, Windows üzerinde en iyi Python IDE'Visual Studio için Python Araçları PTVS olarak da bilinir).
+description: Visual Studio'daki Python özelliklerinin özeti, bu Windows (Visual Studio için Python Araçları, PTVS olarak da bilinir) en iyi Python IDE'leridir.
 ms.date: 06/05/2019
 ms.topic: overview
 author: JoshuaPartlow
@@ -19,18 +19,18 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121441883"
 ---
-# <a name="work-with-python-in-visual-studio-on-windows"></a>Python ile Visual Studio'ta Windows
+# <a name="work-with-python-in-visual-studio-on-windows"></a>Python ile Visual Studio'de Windows
 
 Python hem güçlü bir geliştirici topluluğu hem de birçok ücretsiz kitaplık tarafından desteklenen, güvenilir, esnek, öğrenmesi kolay, tüm işletim sistemlerinde ücretsiz olarak kullanabileceğiniz popüler bir programlama dilidir. Python; web uygulamaları, web hizmetleri, masaüstü uygulamaları, betik ve bilimsel bilgi işlem gibi her türlü geliştirmeyi destekler ve birçok üniversite, bilim insanı, gündelik geliştirici ve profesyonel geliştirici tarafından kullanılır. Dil hakkında daha fazla bilgi edinmek için [python.org](https://www.python.org) [Python for Beginners hakkında bilgi edinmek için:](https://www.python.org/about/gettingstarted/).
 
 Visual Studio, Windows üzerinde güçlü bir Python IDE'Windows. Visual Studio Python geliştirme [](https://github.com/Microsoft/ptvs) ve veri bilimi iş yükleri (Visual Studio  2017 ve sonrası) ve ücretsiz Visual Studio için Python Araçları uzantısı (Visual Studio 2015 ve önceki sürümler) aracılığıyla **Python** dili için açık kaynak desteği sağlar.
 
-Python şu anda Mac için Visual Studio destek Visual Studio Code Mac ve Linux'ta kullanılabilir (soru ve [yanıtlara bakın).](#questions-and-answers)
+Python şu anda Mac için Visual Studio destek Mac için Visual Studio Mac ve Linux'ta Visual Studio Code (soru ve [yanıtlara bakın) aracılığıyla kullanılabilir.](#questions-and-answers)
 
 Başlamak için:
 
 - Python iş [yükünü ayarlamak](installing-python-support-in-visual-studio.md) için yükleme yönergelerini izleyin.
-- Bu makaledeki bölümler aracılığıyla Visual Studio Python özelliklerini tanıma.
+- Bu makaledeki bölümler aracılığıyla uygulamanın Python Visual Studio hakkında bilgi edinebilirsiniz.
 ::: moniker range="vs-2017"
 - Proje oluşturmak için Bir veya daha fazla Hızlı Başlangıç'ın üzerinden gidin. Emin değilseniz [Flask ile web uygulaması oluşturma ile çalışmaya başlayabilirsiniz.](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)
 ::: moniker-end
@@ -41,7 +41,7 @@ Başlamak için:
 
 ::: moniker range=">=vs-2019"
 > [!Note]
-> Visual Studio Python sürüm 2.7'nin yanı sıra 3.5 ile 3.7 arasında bir sürümü destekler. Python'ın diğer Visual Studio yazılmış kodu düzenlemek için Visual Studio kullanılabilir, ancak bu sürümler resmi olarak desteklenemez ve IntelliSense ve hata ayıklama gibi özellikler çalışmayabiliyor. Python sürüm 3.8 desteği hala geliştirme aşamasındadır. Destekle ilgili belirli ayrıntılar, sürümündeki bu [izleme GitHub.](https://github.com/microsoft/PTVS/issues/5822)
+> Visual Studio Python sürüm 2.7'nin yanı sıra 3.5 ile 3.7 arasında bir sürümü destekler. Python'ın diğer Visual Studio yazılmış kodu düzenlemek için Visual Studio kullanılabilir, ancak bu sürümler resmi olarak desteklenemez ve IntelliSense ve hata ayıklama gibi özellikler çalışmayabiliyor. Python sürüm 3.8 desteği hala geliştirme aşamasındadır, destekle ilgili belirli ayrıntılar bu izleme [sorununda GitHub.](https://github.com/microsoft/PTVS/issues/5822)
 ::: moniker-end
 
 ## <a name="support-for-multiple-interpreters"></a>Birden çok yorumlayıcı desteği
@@ -82,7 +82,7 @@ Bilinen her Python ortamı Visual Studio, ayrı bir komut istemi kullanmak yerin
 
 ![Visual Studio'de Python etkileşimli penceresi](media/interactive-window.png)
 
-Visual Studio, Python kod düzenleyicisi ile Etkileşimli pencere arasında sıkı tümleştirme **de** sağlar. **Ctrl** Enter klavye kısayolu, düzenleyicide yer alan geçerli kod satırına (veya kod bloğuna) rahatça Etkileşimli pencereye gönderir ve sonraki satıra +  (veya bloğuna) ilerler.  **Ctrl tuşunu basılı tutarak** + **Enter,** hata ayıklayıcıyı çalıştırmak zorunda kalmadan kodda kolayca adım adım ilerlersiniz. Ayrıca, aynı tuş vuruşunu kullanarak **seçili** kodu Etkileşimli pencereye gönderebilir ve Etkileşimli penceresinden **düzenleyiciye** kolayca kod yapıştırabilirsiniz. Bu özellikler birlikte Etkileşimli penceresindeki bir kod kesimine  ilişkin ayrıntıları çalışmanız ve sonuçları düzenleyicide kolayca bir dosyaya kaydetmenize olanak sağlar.
+Visual Studio, Python kod düzenleyicisi ile Etkileşimli pencere arasında sıkı tümleştirme **de** sağlar. **Ctrl** Enter klavye kısayolu, düzenleyicide yer alan geçerli kod satırına (veya kod bloğuna) rahatça Etkileşimli pencereye gönderir ve sonraki satıra +  (veya bloğuna) ilerler.  **Ctrl tuşunu basılı tutarak** + **Enter,** hata ayıklayıcıyı çalıştırmak zorunda kalmadan kodda kolayca adım adım adım çalışmana olanak sağlar. Ayrıca, aynı tuş vuruşunu **kullanarak seçili** kodu Etkileşimli pencereye gönderebilir ve Etkileşimli penceresinden **düzenleyiciye** kolayca kod yapıştırabilirsiniz. Bu özellikler birlikte Etkileşimli penceresindeki bir kod kesiminin  ayrıntılarını bulup sonuçları düzenleyicide bir dosyaya kolayca kaydetmenize olanak sağlar.
 
 Visual Studio satır içi çizimler, .NET ve IPyter (WPF) dahil olmak üzere REPL'de IPython/Jupyter'Windows Presentation Foundation destekler.
 
@@ -100,11 +100,11 @@ Daha fazla bilgi için:
 
 Visual Studio, bir projenin zaman içinde büyüdükçe karmaşıklığını yönetmenize yardımcı olur. Bir *Visual Studio bir* klasör yapısından çok daha fazlasıdır: Farklı dosyaların nasıl kullanıldıklarının ve bunların birbirine nasıl ilişkili olduğunu anlamayı içerir. Visual Studio, uygulama kodunu, test kodunu, web sayfalarını, JavaScript'i, derleme betiklerini ve daha sonra dosyaya uygun özellikleri etkinleştirmeyi ayırt yardımcı olur. Ayrıca Visual Studio, Python projesi ve C++ uzantısı projesi gibi birden çok ilgili projeyi yönetmenize de yardımcı olur.
 
-![Hem Python Visual Studio C++ projelerini içeren bir Visual Studio çözümü](media/projects-solution-explorer-two-projects.png)
+![Hem Python Visual Studio C++ projelerini içeren bir çözüm](media/projects-solution-explorer-two-projects.png)
 
 Project ve öğe şablonları, farklı türlerde projeler ve dosyalar ayarlama sürecini otomatikleştirerek değerli zaman tasarrufu sağlar ve karmaşık ve hataya açık ayrıntıların yönetilmesinden tasarruf sağlar. Visual Studio; Python sınıfları, birim testleri, Azure web yapılandırması, HTML ve hatta Django uygulamaları gibi dosyalar için şablonların yanı sıra web, Azure, veri bilimi, konsol ve diğer proje türleri için şablonlar sağlar.
 
-[![Visual Studio'da Python proje ve öğe şablonları](media/project-and-item-templates.png)](media/project-and-item-templates.png#lightbox)
+[![Visual Studio'de Python proje ve öğe Visual Studio](media/project-and-item-templates.png)](media/project-and-item-templates.png#lightbox)
 
 Daha fazla bilgi için:
 
@@ -117,12 +117,12 @@ Daha fazla bilgi için:
 
 ## <a name="full-featured-debugging"></a>Tam özellikli hata ayıklama
 
-Bu Visual Studio güçlü hata ayıklayıcısıdır. Python için özellikle Python Visual Studio Python/C++ karma mod hata ayıklama, Linux'ta uzaktan  hata ayıklama, Etkileşimli pencere içinde hata ayıklama ve Python birim testlerinde hata ayıklamayı içerir.
+Bu Visual Studio güçlü hata ayıklayıcısıdır. Özellikle Python için Python/C++ Visual Studio mod hata ayıklama, Linux üzerinde uzaktan hata ayıklama, Etkileşimli pencere içinde hata ayıklama ve Python birim testlerinde hata ayıklama özellikleri vardır. 
 
-![Visual Studio açılan pencereyi gösteren Python için hata ayıklayıcısı](media/debugging-exception-popup.png)
+![Visual Studio özel durum açılan pencereyi gösteren Python için hata ayıklayıcısı](media/debugging-exception-popup.png)
 
 ::: moniker range=">=vs-2019"
-2019'da Visual Studio proje dosyası olmadan kodu çalıştırabilir ve Visual Studio ayıkabilirsiniz. Örnek [için bkz. Hızlı Başlangıç: Python kodunu bir klasörde açma](quickstart-05-python-visual-studio-open-folder.md) ve çalıştırma.
+2019'Visual Studio içinde, bir proje dosyası olmadan kodu çalıştırabilir ve Visual Studio ayıkabilirsiniz. Örnek [için bkz. Hızlı Başlangıç: Python kodunu bir klasörde açma](quickstart-05-python-visual-studio-open-folder.md) ve çalıştırma.
 ::: moniker-end
 
 Daha fazla bilgi için:
@@ -261,23 +261,23 @@ Visual Studio 2015 ve önceki sürümleri [visualstudio.microsoft.com/vs/older-d
 |         Azure          |   2017 +   |   2015   | 2013 Comm | 2013 Masaüstü |       2013 Web       |      2013 Pro +       |      2012 Pro +       |    2010 SP1 Pro +     |
 |------------------------|----------|----------|-----------|--------------|----------------------|----------------------|----------------------|----------------------|
 |   Web sitesine dağıt   | &#10004; | &#10004; | &#10004;  |   &#10007;   |       &#10004;       |       &#10004;       |       &#10004;       | &#10004;<sup>2</sup> |
-|   Web rolüne dağıt   | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
-| Çalışan rolüne dağıt  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
-| Azure öykünücüsü 'nde Çalıştır  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
+|   Web rolüne dağıtma   | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
+| Çalışan rolüne dağıtma  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
+| Azure öykünücüsünü çalıştırma  |    ?     |    ?     |     ?     |   &#10007;   | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> |       &#10007;       |
 |    Uzaktan hata ayıklama    | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>6</sup> | &#10004;<sup>8</sup> | &#10004;<sup>8</sup> |       &#10007;       |
-| Sunucu Gezgini Ekle | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>7</sup> | &#10004;<sup>7</sup> |       &#10007;       |       &#10007;       |
+| Ekleme Sunucu Gezgini | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>7</sup> | &#10004;<sup>7</sup> |       &#10007;       |       &#10007;       |
 
 <br/>
 
-|           Docgo şablonları           |   2017 +   |   2015   | 2013 Comm | 2013 Masaüstü |       2013 Web       |      2013 Pro +       | 2012 Pro + | 2010 SP1 Pro + |
+|           Django şablonları           |   2017+   |   2015   | 2013 Comm | 2013 Masaüstü |       2013 Web       |      2013 Pro+       | 2012 Pro+ | 2010 SP1 Pro+ |
 |--------------------------------------|----------|----------|-----------|--------------|----------------------|----------------------|-----------|---------------|
 |              Hata Ayıklama               | &#10004; | &#10004; | &#10004;  |   &#10007;   |       &#10004;       |       &#10004;       | &#10004;  |   &#10004;    |
 |            Otomatik tamamlama             | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>5</sup> | &#10004;<sup>5</sup> | &#10004;  |   &#10004;    |
-| CSS ve JavaScript için otomatik tamamlanma | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>5</sup> | &#10004;<sup>5</sup> | &#10007;  |   &#10007;    |
+| CSS ve JavaScript için otomatik tamamlama | &#10004; | &#10004; | &#10004;  |   &#10007;   | &#10004;<sup>5</sup> | &#10004;<sup>5</sup> | &#10007;  |   &#10007;    |
 
 <br/>
 
-|                  Hata Ayıklama                  |   2017 +   |   2015   | 2013 Comm | 2013 Masaüstü | 2013 Web | 2013 Pro + | 2012 Pro + | 2010 SP1 Pro + |
+|                  Hata Ayıklama                  |   2017+   |   2015   | 2013 Comm | 2013 Masaüstü | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 |---------------------------------------------|----------|----------|-----------|--------------|----------|-----------|-----------|---------------|
 |                  Hata Ayıklama                  | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
 |         Proje olmadan hata ayıklama         | &#10004; | &#10004; | &#10004;  |   &#10004;   | &#10004; | &#10004;  | &#10004;  |   &#10004;    |
@@ -310,13 +310,13 @@ Visual Studio 2015 ve önceki sürümleri [visualstudio.microsoft.com/vs/older-d
 
 1. Azure Web rolü ve çalışan rolü için destek, [.net 2,3-VS 2012 veya üzeri Için Azure SDK](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs11AzurePack.appids) gerektirir.
 
-1. Azure Web rolü ve çalışan rolü için destek, [.net 2,3-VS 2013 veya üzeri Için Azure SDK](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) gerektirir.
+1. Azure Web Rolü ve Çalışan Rolü desteği için [.NET 2.3 - VS 2013](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) veya sonraki bir sürümü için Azure SDK gerekir.
 
-1. Visual Studio 2013 'deki docgo şablon düzenleyicisi, güncelleştirme 2 ' ye yükleyerek çözümlenen bazı bilinen sorunlara sahiptir.
+1. Visual Studio 2013 Django şablon düzenleyicisinde Güncelleştirme 2 yükleyerek çözülen bazı bilinen sorunlar var.
 
-1. Windows 8 veya üstünü gerektirir. Visual Studio 2013 Web için Express **Işleme İliştir** iletişim kutusuna sahip değildir ancak Azure Web sitesi uzaktan hata ayıklaması, **Sunucu Gezgini** Içinde **hata ayıklayıcı (Python)** komutu kullanılarak yine de mümkündür. uzaktan hata ayıklama, [.net 2,3-Visual Studio 2013 veya üzeri için Azure SDK](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) gerektirir.
+1. Daha Windows 8 veya sonraki bir zaman gerektirir. Visual Studio 2013 Web için Express'te  İşleme Ekle iletişim kutusu yok, ancak Azure Web Sitesi uzaktan hata ayıklaması, Sunucu Gezgini'de Hata Ayıklayıcıyı Ekle **komutu** **kullanılarak mümkündür.** Uzaktan hata ayıklama için [.NET 2.3 için Azure SDK - Visual Studio 2013](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) veya sonraki bir sürümü gerekir.
 
-1. Windows 8 veya üstünü gerektirir. **Sunucu Gezgini** **hata ayıklayıcı (Python) komutunun eklenmesi** , [.net 2,3-Visual Studio 2013 veya üzeri için Azure SDK](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) gerektirir.
+1. Daha Windows 8 veya sonraki bir zaman gerektirir. **.NET** [2. Visual Studio 2013 3](https://www.microsoft.com/web/handlers/webpi.ashx/getinstaller/VWDOrVs2013AzurePack.appids) - **Sunucu Gezgini** veya sonraki bir sürümü için Azure SDK gerektirir.
 
-1. Windows 8 veya üstünü gerektirir.
+1. Daha Windows 8 veya sonraki bir zaman gerektirir.
 ::: moniker-end

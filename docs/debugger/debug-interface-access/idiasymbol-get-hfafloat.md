@@ -11,14 +11,15 @@ ms.assetid: 73ddcffe-cdac-4b03-be42-82ef985d17ee
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec1c2054d669ada2c2313cb85427324d9903137
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f2947d49f351b21a2702049fcf97f363a9e3d301
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160885"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044232"
 ---
 # <a name="idiasymbolget_hfafloat"></a>IDiaSymbol::get_hfaFloat
 Kullanıcı tanımlı bir türün (UDT) float türünde homojen kayan nokta toplama (HFA) verisi içerip içermediğini belirten bir bayrak alır.

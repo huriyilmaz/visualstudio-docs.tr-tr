@@ -11,14 +11,15 @@ ms.assetid: a1320587-7ce7-401f-9548-2f8bcece5cc3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 05c8b9b418bd40fe22dc2227feca3dd7c6960020
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b509c84c9ee0fe81a7c9532bbc6f218af277df5d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148691"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044633"
 ---
 # <a name="idiaenumsymbolsbyaddrnext"></a>IDiaEnumSymbolsByAddr::Next
 Sıradaki simgeleri adrese göre alır.

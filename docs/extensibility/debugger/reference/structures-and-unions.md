@@ -1,6 +1,6 @@
 ---
 title: Yapılar ve | Microsoft Docs
-description: Bu makale, Visual Studio Debugging SDK'sında yapıların ve Visual Studio açıklamalarına bağlantı verir.
+description: Bu makale, Visual Studio Hata Ayıklama SDK'sında yapıların ve Visual Studio açıklamalarına bağlantı verir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd727409541d7b4935fcf676bf17319ae25b3a04b67bded0a14b548ade213f08
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a5ac418731fc3676c4813ff3e346f452342f7df9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377073"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057401"
 ---
 # <a name="structures-and-unions"></a>Yapılar ve Birleşimler
 Hata Ayıklama SDK'sı'nın Visual Studio ve unions aşağıda velanmıştır.
@@ -39,11 +39,11 @@ Hata Ayıklama SDK'sı'nın Visual Studio ve unions aşağıda velanmıştır.
 
 - [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) Kodda bir işlevde kesme noktası uzaklığı konumunu açıklar.
 
-- [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) Kullanıcının IDE'den gire bir dizeye göre kod kesme noktaları ayarlaması için kullanılır.
+- [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) Kullanıcının IDE'den girebilirsiniz bir dizeye dayalı olarak kod kesme noktaları ayarlama için kullanılır.
 
 - [BP_LOCATION_DATA_STRING](../../../extensibility/debugger/reference/bp-location-data-string.md) Kullanıcının IDE'den girebilirsiniz bir dizeye dayalı veri kesme noktaları ayarlama için kullanılır.
 
-- [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) Belirli bir konumdaki bir kesme noktası çözümlemeyi açıklar.
+- [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) Belirli bir konumdaki bir kesme noktası çözümlemesi açıklar.
 
 - [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) Bir kesme noktası daha önce geçirildikten sonra hangi sayı ve koşullar üzerinde işten atılacağı açıklar.
 
@@ -75,7 +75,7 @@ Hata Ayıklama SDK'sı'nın Visual Studio ve unions aşağıda velanmıştır.
 
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) Bir dizi farklı adres türüne sahip birini temsil eder.
 
-- [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) Özel bir görüntüleyiciyi veya tür görselleştiriciyi tanımlar.
+- [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) Özel görüntüleyiciyi veya tür görselleştiriciyi tanımlar.
 
 - [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) Buna karşılık ad, tür ve değere sahip hiyerarşik bir nesnenin hata ayıklama özelliğini açıklar.
 
@@ -133,7 +133,7 @@ Hata Ayıklama SDK'sı'nın Visual Studio ve unions aşağıda velanmıştır.
 
 - [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) Fiziksel adresi açıklar.
 
-- [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) Bir işaretçiye göreli bir adresi açıklar `this` ( `Me` Visual Basic).
+- [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) Bir işaretçiye göreli bir adresi `this` açıklar ( `Me` Visual Basic).
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg.h, sh.h veya ee.h

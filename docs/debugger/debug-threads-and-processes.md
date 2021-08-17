@@ -1,6 +1,6 @@
 ---
-title: İş parçacıklarında ve işlemlerde hata ayıklama için Araçlar | Microsoft Docs
-description: Visual Studio 'da iş parçacıklarında ve işlemlerde hata ayıklama için araçları gözden geçirin. İş parçacıkları ve süreçler belirli bir sırada yürütülmesi gereken yönergelerin dizilerini temsil eder.
+title: İş parçacıklarında ve işlemlerde hata ayıklamaya | Microsoft Docs
+description: İş parçacıklarında ve işlemlerde hata ayıklamaya yönelik araçları Visual Studio. İş parçacıkları ve işlemler, belirli bir sırada yürütmesi gereken yönergeler dizilerini temsil eder.
 ms.custom: SEO-VS-2020
 ms.date: 04/21/2018
 ms.topic: conceptual
@@ -19,45 +19,46 @@ ms.assetid: 9f0c8505-b6b2-452b-adfd-076db14d8115
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d3b2bc8a0a9011c04642070125c247a8dceed66
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e1a377550b43d6f746e609586561a3dfb5046089
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873190"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105420"
 ---
-# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Visual Studio 'da iş parçacıklarında ve işlemlerde hata ayıklama araçları
-*Iş parçacıkları* ve *süreçler* , bilgisayar bilimi 'ndeki ilgili kavramlardır. Her ikisi de belirli bir sırada yürütülmesi gereken yönergelerin dizilerini temsil eder. Ancak, ayrı iş parçacıkları veya süreçlerdeki yönergeler paralel olarak çalıştırılabilir.
+# <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>İş parçacıklarında ve işlemlerde hata ayıklamaya Visual Studio
+*İş* parçacıkları *ve süreçler,* bilgisayar bilimiyle ilgili kavramlardır. Her ikisi de belirli bir sırayla yürütmesi gereken yönergeler dizilerini temsil eder. Ancak, ayrı iş parçacıklarında veya işlemlerde yönergeler paralel olarak yürütülür.
 
- İşletim sisteminde süreçler bulunur ve kullanıcıların program veya uygulama olarak gördükleri kullanıcılara karşılık gelir. Bir işlem içinde, diğer yandan bir iş parçacığı bulunur. Bu nedenle, iş parçacıkları bazen *hafif süreçler* olarak adlandırılır. Her işlem bir veya daha fazla iş parçacığından oluşur.
+ İşlemler işletim sisteminde mevcuttur ve kullanıcıların program veya uygulama olarak neleri göreceğine karşılık gelen işlemlerdir. Öte yandan bir iş parçacığı bir işlem içinde mevcuttur. Bu nedenle, iş parçacıkları bazen hafif *işlemler olarak adlandırılır.* Her işlem bir veya daha fazla iş parçacığı içerir.
 
- Birden çok işlemin varlığı, bir bilgisayarın bir seferde birden fazla görev gerçekleştirmesini sağlar. Birden çok iş parçacığının varlığı, bir işlemin bir işi paralel olarak gerçekleştirilmesine olanak sağlar. Çok işlemcili bir bilgisayarda, süreçler veya iş parçacıkları farklı işlemcilerde çalışabilir. Bu, doğru paralel işlemeyi mümkün bir şekilde sunar.
+ Birden çok işlem olması, bir bilgisayarın aynı anda birden fazla görev gerçekleştirmelerini sağlar. Birden çok iş parçacığının varlığı, bir işlemi paralel olarak gerçekleştirilecek işi ayırmaya olanak sağlar. Çok işlemcili bir bilgisayarda işlemler veya iş parçacıkları farklı işlemcilerde çalışır. Bu, gerçek paralel işlemeyi sağlar.
 
- Kusursuz paralel işleme her zaman mümkün değildir. İş parçacıkları bazen eşitlenmelidir. Bir iş parçacığının bir sonucu başka bir iş parçacığından beklemek zorunda kalabilir veya bir iş parçacığının başka bir iş parçacığının kullandığı bir kaynağa özel erişime ihtiyacı olabilir. Eşitleme sorunları, çok iş parçacıklı uygulamalardaki hataların yaygın bir nedendir. Bazen iş parçacıkları hiçbir zaman kullanılamayan bir kaynağı bekliyor olabilir. Bu, *kilitlenme* adlı bir koşula neden olur.
+ Kusursuz paralel işleme her zaman mümkün değildir. İş parçacıkları bazen eşitlenmeli. Bir iş parçacığının başka bir iş parçacığından gelen sonucu beklemesi veya bir iş parçacığının başka bir iş parçacığının kullanmakta olduğu kaynağa özel erişimi olabilir. Eşitleme sorunları, çok iş parçacıklı uygulamalarda hataların yaygın bir nedenidir. Bazen iş parçacıkları, hiçbir zaman kullanılabilir hale gelir bir kaynak için beklemeye neden olabilir. Bu durum kilitlenme adlı bir *koşula neden olur.*
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı, iş parçacıkları ve süreçlerinde hata ayıklamak için güçlü ancak kullanımı kolay araçlar sağlar.
+ Hata [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayıklayıcısı, iş parçacıklarında ve işlemlerde hata ayıklamak için güçlü ancak kullanımı kolay araçlar sağlar.
 
-## <a name="tools-and-features"></a>Araçlar ve Özellikler
-' De kullanmanız gereken araçlar, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklamaya çalıştığınız kodun türüne bağlıdır:
+## <a name="tools-and-features"></a>Araçlar ve özellikler
+içinde kullanmak istediğiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] araçlar, hata ayıklamaya çalıştığın kod türüne bağlıdır:
 
-- İşlemler için, birincil Araçlar **Işleme İliştir** iletişim kutusu, **Işlemler** penceresi ve **hata ayıklama konumu** araç çubuğudur.
+- İşlemler için birincil araçlar İşleme Ekle **iletişim** kutusu, **İşlemler penceresi ve** Hata Ayıklama Konumu araç **çubuğu'larıdır.**
 
-- İş parçacıkları için, hata ayıklama için birincil Araçlar **Iş parçacıkları** penceresidir, kaynak pencereleri, **Paralel Yığınlar** penceresi, **paralel Izleme** penceresi ve **hata ayıklama konumu** araç çubuğudur.
+- İş parçacıklarında hata ayıklamaya yardımcı  olan birincil araçlar İş Parçacıkları penceresi, kaynak pencerelerde iş parçacığı işaretçileri, **Paralel** Yığınlar penceresi, **Paralel** İzleme penceresi ve Hata Ayıklama Konumu araç çubuğu'larıdır. 
 
-- <xref:System.Threading.Tasks.Task> [Görev paralel KITAPLıĞı (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl), [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime/) (yerel kod), çok iş parçacıklı uygulamalarda hata ayıklamaya yönelik birincil Araçlar **Paralel Yığınlar** penceresi, **paralel Izleme** penceresi ve **Görevler** penceresi ( **Görevler** penceresi JavaScript Promise nesnesini de destekler) öğesini kullanan kod için.
+- Görev Paralel <xref:System.Threading.Tasks.Task> [Kitaplığı'nda (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)kullanan kodlar için, [Eşzamanlılık Çalışma Zamanı](/cpp/parallel/concrt/concurrency-runtime/) (yerel kod),    çok iş parçacıklı uygulamalarda hata ayıklamak  için birincil araçlar Paralel Yığınlar penceresi, Paralel İzleme penceresi ve Görevler penceresidir (Görevler penceresi JavaScript promise nesnesini de destekler).
 
-- GPU 'daki iş parçacıkları hata ayıklaması için, birincil araç **GPU Iş parçacıkları** Windows.
+- GPU'da iş parçacıklarında hata ayıklama için birincil araç GPU İş Parçacıkları **pencereleridir.**
 
-  Aşağıdaki tabloda, kullanılabilir bilgiler ve bu yerlerden her birinde gerçekleştirebileceğiniz eylemler gösterilmektedir:
+  Aşağıdaki tabloda, kullanılabilir bilgiler ve bu yerlerin her birsinde gerçekleştirebilirsiniz eylemler yer alır:
 
-|Kullanıcı Arabirimi|Kullanılabilir bilgiler|Gerçekleştirebileceğiniz eylemler|
+|Kullanıcı Arabirimi|Kullanılabilir Bilgiler|Gerçekleştirin Eylemler|
 |--------------------|---------------------------|-----------------------------|
-|**Işleme İliştir** iletişim kutusu|Ekleyebileceğiniz kullanılabilir süreçler:<br /><br /> -İşlem adı (. exe)<br />-İşlem KIMLIĞI numarası<br />-MenuBar başlığı<br />-Type (yönetilen v 4.0; Yönetilen v 2.0, v 1.1, v 1.0; Itanium x64 IA64<br />-Kullanıcı adı (hesap adı)<br />-Oturum numarası|İliştirilecek bir işlem seçin<br /><br /> Uzak bilgisayar seçin<br /><br /> Uzak bilgisayarlara bağlanmak için taşıma türünü değiştir|
-|**İşlem** penceresi|Ekli süreçler:<br /><br /> -İşlem adı<br />-İşlem KIMLIĞI numarası<br />-Process. exe dosyasının yolu<br />-MenuBar başlığı<br />-State (kesme. Çalıştıran<br />-Hata ayıklama (yerel, yönetilen vb.)<br />-Aktarım türü (varsayılan, kimlik doğrulama olmadan yerel)<br />-Transport niteleyicisi (uzak bilgisayar)|Aracı<br /><br /> -İliştirme<br />-Ayır<br />-Sonlandır<br /><br /> Kısayol menüsü:<br /><br /> -İliştirme<br />-Ayır<br />-Hata ayıklama durdurulduğunda ayır<br />-Sonlandır|
-|**Iş parçacıkları** penceresi|Geçerli işlemdeki iş parçacıkları:<br /><br /> -İş parçacığı KIMLIĞI<br />-Yönetilen KIMLIK<br />-Category (ana iş parçacığı, arabirim iş parçacığı, uzak yordam çağrısı işleyicisi veya çalışan iş parçacığı)<br />-İş parçacığı adı<br />-İş parçacığının oluşturulduğu konum<br />-Öncelik<br />-Benzeşim maskesi<br />-Askıya alınma sayısı<br />-İşlem adı<br />-Bayrak göstergesi<br />-Askıya alınmış gösterge|Aracı<br /><br /> -Ara<br />-Arama yığınında ara<br />-Bayrak Yalnızca kendi kodum<br />-Bayrak özel modül seçimi<br />-Gruplandırma ölçütü<br />-Sütunlar<br />-Callyığınları Genişlet/Daralt<br />-Grupları Genişlet/Daralt<br />-Iş parçacıklarını dondurma/çözme<br /><br /> Kısayol menüsü:<br /><br /> -Kaynakta iş parçacıklarını göster<br />-Bir iş parçacığına geçiş yap<br />-Çalışan bir iş parçacığını dondurma<br />-Dondurulmuş bir iş parçacığını çözme<br />-Ek çalışma için bir iş parçacığına bayrak ekleyin<br />-Bir iş parçacığının bayrağını kaldır<br />-Bir iş parçacığını yeniden adlandırma<br />-İş parçacıklarını gösterme ve gizleme<br /><br /> Diğer eylemler:<br /><br /> -Veri Ipucunda bir iş parçacığının çağrı yığınını görüntüleme|
-|Kaynak penceresi|Sol cilt payındaki iş parçacığı göstergeleri, tek veya birden çok iş parçacığını belirtir (varsayılan olarak, **Iş parçacıkları** penceresinde kısayol menüsü kullanılarak açıktır)|Kısayol menüsü:<br /><br /> -Bir iş parçacığına geçiş yap<br />-Ek çalışma için bir iş parçacığına bayrak ekleyin<br />-Bir iş parçacığının bayrağını kaldır|
+|**İşleme Ekle** iletişim kutusu|Şu işlemlere ek işlemler abilirsiniz:<br /><br /> - İşlem adı (.exe)<br />- İşlem kimliği numarası<br />- Menü Çubuğu Başlığı<br />- Tür (Yönetilen v4.0; Yönetilen v2.0, v1.1, v1.0; x86; x64; IA64)<br />- Kullanıcı Adı (hesap adı)<br />- Oturum numarası|Eklemek istediğiniz işlemi seçin<br /><br /> Uzak bilgisayar seçme<br /><br /> Uzak bilgisayarlara bağlanmak için aktarım türünü değiştirme|
+|**İşlemler** penceresi|Ekli İşlemler:<br /><br /> - İşlem Adı<br />- İşlem kimliği numarası<br />- İşlem yolu .exe<br />- Menü Çubuğu Başlığı<br />- Durum (Kesme. Çalışıyor)<br />- Hata Ayıklama (Yerel, Yönetilen ve bu şekilde devam ediyor.)<br />- Aktarım türü (varsayılan, kimlik doğrulaması olmayan yerel)<br />- Aktarım Niteleyicisi (uzak bilgisayar)|Araçları:<br /><br /> - Ekleme<br />- Ayırma<br />- Sonlandırma<br /><br /> Kısayol menüsü:<br /><br /> - Ekleme<br />- Ayırma<br />- Hata ayıklama durdurulurken ayırma<br />- Sonlandırma|
+|**İş parçacıkları** penceresi|Geçerli işlemde iş parçacıkları:<br /><br /> - İş Parçacığı Kimliği<br />- Yönetilen Kimlik<br />- Kategori (ana iş parçacığı, arabirim iş parçacığı, uzaktan yordam çağrısı işleyicisi veya çalışan iş parçacığı)<br />- İş Parçacığı Adı<br />- İş parçacığının oluşturulacak konumu<br />- Öncelik<br />- Benzeşm Maskesi<br />- Askıya Alınan Sayı<br />- İşlem Adı<br />- Bayrak Göstergesi<br />- Askıya alınmış gösterge|Araçları:<br /><br /> - Arama<br />- Arama Çağrı Yığını<br />- Bayrak Yalnızca kendi kodum<br />- Özel Modül Seçimi bayrağı oluşturma<br />- Grupla<br />- Sütunlar<br />- Çağrı yığınlarını genişletme/daraltma<br />- Grupları genişletme/daraltma<br />- İş Parçacıklarını Dondurma/Çözme<br /><br /> Kısayol menüsü:<br /><br /> - İş parçacıklarını kaynakta gösterme<br />- İş parçacığına geçiş<br />- Çalışan bir iş parçacığını dondurma<br />- Donmuş iş parçacığını çözme<br />- Ek çalışma için iş parçacığına bayrak uygulama<br />- bir iş parçacığının bayrağını açma<br />- bir iş parçacığını yeniden adlandırma<br />- İş parçacıklarını gösterme ve gizleme<br /><br /> Diğer eylemler:<br /><br /> - DataTip'te bir iş parçacığı için çağrı yığınını görüntüleme|
+|Kaynak penceresi|Sol oluklu iş parçacığı göstergeleri tek veya birden çok iş parçacığını gösterir (varsayılan olarak, İş Parçacıkları penceresinde kısayol menüsü kullanılarak **açık)**|Kısayol menüsü:<br /><br /> -Bir iş parçacığına geçiş yap<br />-Ek çalışma için bir iş parçacığına bayrak ekleyin<br />-Bir iş parçacığının bayrağını kaldır|
 |**Hata ayıklama konumu** araç çubuğu|-Geçerli işlem<br />-Uygulamayı askıya alma<br />-Uygulamayı sürdürür<br />-Uygulamayı askıya alma ve kapatma<br />-Geçerli iş parçacığı<br />-Geçerli iş parçacığı bayrak durumunu değiştirme<br />-Yalnızca bayraklı iş parçacıklarını göster<br />-Yalnızca geçerli işlemi göster<br />-Geçerli yığın çerçevesi|-Başka bir işleme geçiş yap<br />-Uygulamayı askıya alma, sürdürme veya kapatma<br />-Geçerli işlemde başka bir iş parçacığına geçiş yap<br />-Geçerli iş parçacığında başka bir yığın çerçevesine geçiş yap<br />-Geçerli iş parçacıklarını işaretle veya bayrak kaldır<br />-Yalnızca bayraklı iş parçacıklarını göster<br />-Yalnızca geçerli işlemi göster|
 |**Paralel Yığınlar** penceresi|-Birden çok iş parçacığı için yığınları tek bir pencerede çağırın.<br />-Her iş parçacığı için etkin yığın çerçevesi.<br />-Her bir yöntem için çağıranlar ve Callet 'ler.|-Belirtilen iş parçacıklarını filtrele<br />-Görevler görünümüne geç<br />-Bir iş parçacığını işaretle veya bayrak kaldır<br />-Yakınlaştır|
 |**Paralel izleme** penceresi|-Özel dikkat etmek istediğiniz bir iş parçacığını işaretlemek için kullanabileceğiniz bayrak sütunu.<br />-Bir okun seçili çerçeveyi gösterdiği çerçeve sütunu.<br />-Makine, işlem, kutucuk, görev ve iş parçacığını görüntüleyebilen yapılandırılabilir bir sütun.|-Bir iş parçacığını işaretle veya bayrak kaldır<br />-Yalnızca bayraklı iş parçacıklarını göster<br />-Kare değiştirme<br />-Bir sütunu sıralama<br />-Grup iş parçacıkları<br />-İş parçacıklarını dondurma veya çözme<br />-Paralel izleme penceresi verileri dışarı aktarma|

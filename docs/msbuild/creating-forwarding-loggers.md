@@ -1,5 +1,5 @@
 ---
-title: Günlük Kayıt | Oluşturma Microsoft Docs
+title: Günlük Kayıt Günlüklerini | Microsoft Docs
 description: Proje MSBuild izlemek istediğiniz olayları seçmenize olanak vererek günlük verimliliğini artırmak için günlük kaydı günlüklerini iletme günlüklerini oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,18 +14,18 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c4f8cc9ec0658ffcfaa9be8bc971222d77d14373
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e70edc25bc27b8c113b6d3bf52b6a43cf1dc0d7637a9ffc3dbfd1c4817dfd09b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122054814"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121370339"
 ---
 # <a name="create-forwarding-loggers"></a>Yönlendirme günlüklerini oluşturma
 
 Günlüğe kaydetme, çok işlemcili bir sistemde proje derleme sırasında izlemek istediğiniz olayları seçmenize olanak vererek günlüğe kaydetme verimliliğini artırır. Günlükleyicileri ileterek istenmeyen olayların merkezi günlükleyiciye aşırı yığılması, derleme zamanını yavaşlatması ve günlüğün karmaşık hale etkinleştirilmesini önlenebilir.
 
- Bir iletme günlükleyicisi oluşturmak için arabirimini uygulayarak yöntemlerini el ile veya sınıfını ve önceden yapılandırılmış yöntemlerini <xref:Microsoft.Build.Framework.IForwardingLogger> <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> kullanabilirsiniz. (İkinci seçenek çoğu uygulama için yeterli olacaktır.)
+ Bir iletme günlükleyicisi oluşturmak için arabirimini uygulayarak yöntemlerini el ile gerçekleştirebilir veya sınıfını ve önceden yapılandırılmış yöntemlerini <xref:Microsoft.Build.Framework.IForwardingLogger> <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> kullanabilirsiniz. (İkinci seçenek çoğu uygulama için yeterli olacaktır.)
 
 ## <a name="register-events-and-respond-to-them"></a>Olayları kaydetme ve yanıtlama
 

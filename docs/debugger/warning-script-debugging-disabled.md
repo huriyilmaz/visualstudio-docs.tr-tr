@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f5b52bedf589be3e21ed5880c4d90f204ad68c04d4af09b4076a3be440ef4d9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d23d6eaf21375095c04284981b9178a02decec96
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378469"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090154"
 ---
 # <a name="warning-script-debugging-disabled"></a>Uyarı: Betik Hata Ayıklaması Devre Dışı
 Internet Explorer 'da betik hata ayıklaması Şu anda devre dışı

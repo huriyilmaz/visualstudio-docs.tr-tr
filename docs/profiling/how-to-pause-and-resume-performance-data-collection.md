@@ -9,15 +9,16 @@ ms.assetid: b8e76363-65cd-424d-8173-3e2b5f54203b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 523649c8147cb007ff360cc0a4b9e3e5dfb551a0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f25ef398acd7c58b4fc8cf44408ddc0187908a40bd07af84fb6160a590c7d4e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907114"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121355067"
 ---
 # <a name="how-to-pause-and-resume-performance-data-collection"></a>Nasıl yapılır: Performans verileri toplamayı duraklatma ve sürdürme
 Profil oluşturma oturumu sayfa penceresinde, profil oluşturma verilerinin toplanmasını etkileşimli bir şekilde denetleyebilirsiniz.

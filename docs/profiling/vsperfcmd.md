@@ -1,6 +1,6 @@
 ---
 title: VSPerfCmd | Microsoft Docs
-description: Performans veri toplamayı başlatmak ve durdurmak için VSPerfCmd.exe aracının nasıl kullanıldığını öğrenin. Ayrıca çeşitli VSPerfCmd araç seçenekleri hakkında bilgi edinin.
+description: Performans verilerini toplamayı VSPerfCmd.exe ve durdurmak için VSPerfCmd.exe aracının nasıl olduğunu öğrenin. Ayrıca çeşitli VSPerfCmd araç seçenekleri hakkında bilgi edinebilirsiniz.
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,71 +13,72 @@ ms.assetid: 778bc105-7643-46c4-a338-f3620e31125a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a501a3f815d48630afe1a849e91c1fdb52c979fa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90345169af67118a9184f91afc3984ca9b915c0ebe104feecf9455523d27bde0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911454"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121353987"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
-*VSPerfCmd.exe* Aracı, performans verileri toplamayı başlatmak ve durdurmak için kullanılır. Aşağıdaki sözdizimini kullanır:
+Performans *VSPerfCmd.exe* toplamayı başlatmak ve durdurmak için aşağıdaki araç kullanılır. Aşağıdaki söz dizimlerini kullanır:
 
 ```cmd
 VSPerfCmd [/U] [/options]
 ```
 
- Aşağıdaki tablolarda *VSPerfCmd.exe* araç seçenekleri açıklanır.
+ Aşağıdaki tablolarda, *VSPerfCmd.exe* seçenekleri açıktır.
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**Larınız**|Yeniden yönlendirilen konsol çıkışı Unicode olarak yazılmıştır. Belirtilen ilk seçenek olmalıdır.|
-|[Başlangıç](../profiling/start.md) **:**`mode`|Profil oluşturma hizmetini belirtilen modda başlatır.|
-|[Çıkış](../profiling/output.md) **:**`filename`|Çıkış dosyası adını belirtir. Yalnızca **Start** ile kullanın.|
-|[Çapraz oturum&#124;CS](../profiling/crosssession.md)|Windows oturumlarında profil oluşturmayı etkinleştirilir. Yalnızca **Start**, **Attach** **veya Launch** ile kullanın.|
-|[Kullanıcı](../profiling/user-vsperfcmd.md) **:**[ `domain\` ]`username`|Profil Oluşturucu hizmetine belirtilen hesabın erişimini sağlar. Yalnızca **Start** ile kullanın.|
-|[WaitStart](../profiling/waitstart.md)[**:** `n` ]|Veri toplama günlükçüsü 'nin başlatılmasını bekler. `n`Belirtilmişse, **VSPerfCmd** en fazla saniye beklecektir `n` . `n`Belirtilmemişse, **VSPerfCmd** süresiz olarak bekleyecektir. Bu, **VSPerfCmd** 'nin toplu işlemin bir parçası olarak kullanılmasını kolaylaştırır.|
-|[Sayaç](../profiling/counter.md) **:**`cfg`|Örnek profil oluşturma yöntemi kullanıldığında, bir CPU sayacı ve örnekleme aralığı olarak kullanılacak olay sayısını belirtir. Yalnızca bir sayaç değeri örnekleyebilirsiniz.<br /><br /> İzleme profili oluşturma yöntemi kullanıldığında, her bir izleme noktasında toplanacak bir CPU sayacı belirtir. Yalnızca **Start:** `Trace` , **Attach** veya **Launch** ile kullanın.|
+|**U**|Yeniden yönlendirilen konsol çıkışı Unicode olarak yazılır. Belirtilen ilk seçenek olması gerekir.|
+|[Başlat:](../profiling/start.md) `mode`|Profil oluşturma hizmetini belirtilen modda başlatır.|
+|[Çıktı:](../profiling/output.md) `filename`|Çıktı dosyasının adını belirtir. Yalnızca Başlat ile **kullanın.**|
+|[CS'de çapraz&#124;çapraz geçiş](../profiling/crosssession.md)|Farklı oturumlarda profil Windows sağlar. Yalnızca Başlat, **Ekle** veya **Başlat** **ile kullanın.**|
+|[Kullanıcı:](../profiling/user-vsperfcmd.md) [ `domain\` ]`username`|Belirtilen hesabın profil oluşturma hizmetine erişimini sağlar. Yalnızca Başlat ile **kullanın.**|
+|[WaitStart](../profiling/waitstart.md)[**:** `n` ]|Veri toplama günlükleyicinin başlatılmasını bekler. belirtilirse `n` **VSPerfCmd** en fazla saniye `n` bekler. `n`Belirtilmezse **VSPerfCmd** süresiz olarak bekler. Bu, **vsPerfCmd'nin bir** toplu işlem kapsamında kullanımını kolaylaştırıyor.|
+|[Sayaç:](../profiling/counter.md) `cfg`|Örnek profil oluşturma yöntemi kullanılırken, bir CPU sayacı ve örnekleme aralığı olarak kullanılacak olay sayısını belirtir. Yalnızca bir sayaç değerini örnekleysiniz.<br /><br /> Ölçüm aracı profil oluşturma yöntemi kullanılırken, her bir ölçüm noktasında toplanacak bir CPU sayacı belirtir. Yalnızca **Başlangıç:** `Trace` , Ekleme veya **Başlatma** ile **kullanın.**|
 |[QueryCounters](../profiling/querycounters.md)|Geçerli makine için geçerli CPU sayaçlarının listesini görüntüler.|
-|[WinCounter](../profiling/wincounter.md) **:** *yol*|Profil işaretleme verileriyle birlikte içerilecek bir Windows performans sayacı olayı belirtir. Yalnızca **Start** ile kullanın.|
-|[Otomatik işaret](../profiling/automark.md) **:** *n*|Windows performans sayacı veri toplama olayları arasındaki zaman aralığını (milisaniye olarak) belirtir. **WinCounter** ile kullanın.|
-|[Olaylar](../profiling/events-vsperfcmd.md) **:**`option`|Windows için belirtilen olay Izleme (ETW) olayları koleksiyonunu denetler. ETW verileri bir öğesine toplanır. profil oluşturma verileri olmayan *ITIL* dosyası (.*VSP*) dosyası.|
-|[Durum](../profiling/status.md)|Profil oluşturucunun durumunu, şu anda profili oluşturulan süreçler hakkındaki bilgileri ve profil oluşturucuyu denetleme yetkisine sahip hesapları görüntüler.|
-|[Kapanıyor](../profiling/shutdown.md)[**:** `n` ]|Profil oluşturma veri dosyasını kapatır ve profil oluşturucuyu kapatır.|
-|[GlobalOn](../profiling/globalon-and-globaloff.md)|**Vsperfcmdglobaloff** çağrısından sonra veri toplamayı sürdürür.|
-|[GlobalOff](../profiling/globalon-and-globaloff.md)|Tüm veri toplamayı durduruyor, ancak profil oluşturma oturumunu sonlandırmaz.|
-|[ProcessOn](../profiling/processon-and-processoff.md) **:**`pid`|Profil oluşturma, **Vsperfcmdprocessoff** çağrısı tarafından duraklatıldıktan sonra belirtilen işlem için veri toplamayı sürdürür.|
-|[ProcessOff](../profiling/processon-and-processoff.md) **:**`pid`|Belirtilen işlem için veri toplamayı durduruyor.|
-|[ThreadOn ve ThreadOff](../profiling/threadon-and-threadoff.md) **:** *TID*|Profil oluşturma, **VSPerfCmdThreadOff** çağrısıyla duraklatıldıktan sonra belirtilen işlem için profil oluşturmayı sürdürür. Yalnızca izleme yöntemiyle profil oluşturma sırasında **ThreadOn üzerinde** kullanın.|
-|[ThreadOn ve ThreadOff](../profiling/threadon-and-threadoff.md) **:** *TID*|Belirtilen iş parçacığı için profil oluşturmayı duraklatır. **ThreadOff** ' i yalnızca izleme yöntemiyle profil oluşturma sırasında kullanın.|
-|[Mark](../profiling/mark.md) **:** _marknum_[**,**_MarkText_**]**|Profil oluşturma veri dosyasına isteğe bağlı metin ile bir işaret ekler.|
+|[WinCounter:](../profiling/wincounter.md)  *path*|Profil işareti Windows dahil etmek için bir performans sayacı olayı belirtir. Yalnızca Başlat ile **kullanın.**|
+|[AutoMark:](../profiling/automark.md)  *n*|Performans sayacı veri toplama olayları arasındaki zaman aralığını (Windows cinsinden) belirtir. **WinCounter ile kullanın.**|
+|[Olaylar:](../profiling/events-vsperfcmd.md) `option`|Windows (ETW) olayları için belirtilen Olay İzleme koleksiyonunu kontrol eder. ETW verileri bir için toplanır. profil oluşturma verileri ( değil *itl* dosyası.*vsp*) dosyasını seçin.|
+|[Durum](../profiling/status.md)|Profil oluşturmanın durumunu, profili şu anda profili yapılan işlemlerle ilgili bilgileri ve profilleyiciyi denetleme yetkisi olan hesapları görüntüler.|
+|[Kapatma](../profiling/shutdown.md)[**:** `n` ]|Profil oluşturma veri dosyasını kapatır ve profilleyiciyi kapatır.|
+|[GlobalOn](../profiling/globalon-and-globaloff.md)|**VSPerfCmdGlobalOff çağrısından sonra veri toplamayı sürdürür.**|
+|[GlobalOff](../profiling/globalon-and-globaloff.md)|Tüm veri toplamayı durdurur, ancak profil oluşturma oturumunu sona erer.|
+|[ProcessOn:](../profiling/processon-and-processoff.md) `pid`|Profil oluşturma **VSPerfCmdProcessOff** çağrısı tarafından duraklatıldıktan sonra belirtilen işlem için veri toplamayı sürdürür.|
+|[ProcessOff:](../profiling/processon-and-processoff.md) `pid`|Belirtilen işlem için veri toplamayı durdurur.|
+|[ThreadOn ve ThreadOff:](../profiling/threadon-and-threadoff.md)  *tid*|Profil oluşturma **vsPerfCmdThreadOff** çağrısı tarafından duraklatıldıktan sonra belirtilen işlem için profil oluşturmayı sürdürür. Yalnızca ölçümleme yöntemiyle profil oluşturmada **ThreadOn** kullanın.|
+|[ThreadOn ve ThreadOff:](../profiling/threadon-and-threadoff.md)  *tid*|Belirtilen iş parçacığı için profil oluşturmayı duraklatıyor. Yalnızca ölçümleme yöntemiyle profil oluşturmada **ThreadOff** kullanın.|
+|[İşaret:](../profiling/mark.md)  _MarkNum_[**,**_MarkText_**]**|Profil oluşturma veri dosyasına isteğe bağlı metinle bir işaret ekler.|
 
-## <a name="sample-method-options"></a>Örnek Yöntem seçenekleri
- Aşağıdaki seçenekler yalnızca örnekleme profili oluşturma yöntemi kullanılırken kullanılabilir.
-
-|Seçenek|Açıklama|
-|------------|-----------------|
-|[Başlatma](../profiling/launch.md) **:** *yürütülebilir*|Belirtilen uygulamayı başlatır ve profil oluşturmaya başlar.|
-|[Args](../profiling/args.md) **:** *bağımsız değişkenler*|Başlatılan uygulamaya geçirilecek komut satırı bağımsız değişkenlerini belirtir.|
-|[Konsol](../profiling/console.md)|Yeni komut istemi penceresinde belirtilen komutu başlatır.|
-|[İliştirme](../profiling/attach.md) **:** *pid*[**,**_pid_]|Belirtilen işlemlerin profilini oluşturmaya başlıyor. İşlemler işlem KIMLIĞI veya işlem adı ile tanımlanabilir.|
-|[Ayır](../profiling/detach.md)[**:**_pid_[,_pid_]]|Belirtilen işlemlerin profilini oluşturmayı durduruyor. İşlemler işlem KIMLIĞI veya işlem adı ile tanımlanabilir. Hiçbir işlem belirtilmemişse, tüm işlemler için profil oluşturma durdurulur.|
-|[GC](../profiling/gc-vsperfcmd.md)[**:**{**ayırma** `&#124;` **ömrü**}]|.NET bellek ayırma ve nesne yaşam süresi verilerini toplar. Yalnızca **VSPerfCmdLaunch** seçeneğiyle kullanın.|
-
-### <a name="sample-interval-options"></a>Örnek Aralık seçenekleri
- Aşağıdaki seçenekler, örnekleme aralıklarının türünü ve süresini belirtir. Varsayılan değer **Zamanlayıcı**' dır. Ayrıca, **sayaç** seçeneğini kullanarak Aralık olarak bir CPU sayacı belirtebilirsiniz. Bu seçenekler yalnızca **başlatma** ile veya profil oluşturma oturumunun ilk **iliştirme** ile belirtilebilir.
+## <a name="sample-method-options"></a>Örnek yöntem seçenekleri
+ Aşağıdaki seçenekler yalnızca örnekleme profil oluşturma yöntemini kullanırken kullanılabilir.
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|[PF](../profiling/pf.md)[**:**_n_]|Her n. sayfa hatasında örnekler (varsayılan = 10).|
-|[Sys](../profiling/sys-vsperfcmd.md)[**:**_n_]|Her n. sistem çağrısında örnekler (varsayılan = 10).|
-|[Süreölçer](../profiling/timer.md)[**:**_n_]|Her n. işlemci döngüsünün örnekleri (varsayılan = 10000000).|
+|[Başlatma:](../profiling/launch.md) **Yürütülebilir** |Belirtilen uygulamayı başlatır ve profil oluşturmayı başlatır.|
+|[Args:](../profiling/args.md)  *Bağımsız Değişkenler*|Başlatılan uygulamaya geçilen komut satırı bağımsız değişkenlerini belirtir.|
+|[Konsol](../profiling/console.md)|Belirtilen komutu yeni bir komut istemi penceresinde başlatır.|
+|[Ekleme:](../profiling/attach.md)  *PID*[**,**_PID_]|Belirtilen işlemlerin profilini oluşturmayı başlar. İşlemler, işlem kimliği veya işlem adıyla tanımlandı.|
+|[Ayırma](../profiling/detach.md)[**:**_PID_[,_PID_]]|Belirtilen işlemlerin profilini oluşturmayı durdurur. İşlemler, işlem kimliği veya işlem adıyla tanımlandı. Hiçbir işlem belirtilmezse, profil oluşturma tüm işlemler için durdurulr.|
+|[GC](../profiling/gc-vsperfcmd.md)[**:**{**Ayırma** `&#124;` **Ömrü**}]|.NET bellek ayırma ve nesne yaşam süresi verilerini toplar. Yalnızca **VSPerfCmdLaunch seçeneğiyle** kullanın.|
+
+### <a name="sample-interval-options"></a>Örnek aralık seçenekleri
+ Aşağıdaki seçenekler örnekleme aralıklarının türünü ve süresini belirtir. Varsayılan değer **Zamanlayıcı'dır.** Ayrıca Sayaç seçeneğini kullanarak bir CPU sayacını aralık olarak **belirtebilirsiniz.** Bu seçenekler yalnızca Başlat ile veya **profil** oluşturma oturumunun **ilk Eklemesi** ile belirtilebilir.
+
+|Seçenek|Açıklama|
+|------------|-----------------|
+|[PF](../profiling/pf.md)[**:**_n_]|Her n-th sayfa hatasıyla ilgili örnekler (default=10).|
+|[Sys](../profiling/sys-vsperfcmd.md)[**:**_n_]|Her n-th sistem çağrısıyla ilgili örnekler (default=10).|
+|[Zamanlayıcı](../profiling/timer.md)[**:**_n_]|Her n-th işlemci döngüsünde örnekler (default=10000000).|
 
 ## <a name="service-component-and-kernel-mode-device-options"></a>Hizmet bileşeni ve çekirdek modu cihaz seçenekleri
- Aşağıdaki yönetici seçenekleri, profil oluşturma hizmeti bileşenlerini veya çekirdek modu cihaz sürücülerini destekler. Yönetici seçenekleri profil oluşturma izinlerini ayarlar ve profili oluşturulmuş hizmeti ya da cihaz sürücüsünü denetler.
+ Aşağıdaki Yönetici seçenekleri hizmet bileşenlerinin veya çekirdek modu cihaz sürücülerinin profilini oluşturmayı destekler. Yönetici seçenekleri profil oluşturma izinlerini ayarlayın ve profili profili yapılan hizmet veya cihaz sürücüsünü denetleyin.
 
  Yönetici seçeneklerinin, yönetici kimlik bilgileriyle çalışan bir komut isteminde yürütülmesi gerekir.
 

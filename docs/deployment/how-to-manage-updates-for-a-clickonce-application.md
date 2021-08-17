@@ -1,6 +1,6 @@
 ---
-title: ClickOnce uygulaması için güncelleştirmeleri yönetme | Microsoft Docs
-description: Güncelleştirmeleri otomatik olarak veya ClickOnce uygulamalarınız için programlı olarak denetlemeye yönelik seçenekler hakkında bilgi edinin.
+title: ClickOnce uygulama için güncelleştirmeleri yönetme | Microsoft Docs
+description: güncelleştirmeleri otomatik olarak veya ClickOnce uygulamalarınız için programlı olarak denetlemeye yönelik seçenekler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,16 +19,17 @@ ms.assetid: a3f23f05-e7f1-4620-b23c-2d68f9643684
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 03b8b3899a90588ca747ca93c0ff6bd7279e1bec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 988fc33a7f8d4f2d535a55fac636340c6dfb93ed
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900558"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089985"
 ---
-# <a name="how-to-manage-updates-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için güncelleştirmeleri yönetme
+# <a name="how-to-manage-updates-for-a-clickonce-application"></a>nasıl yapılır: ClickOnce bir uygulama için güncelleştirmeleri yönetme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar güncelleştirmeleri otomatik olarak veya programlı bir şekilde denetleyebilir. Bir geliştirici olarak, güncelleştirme denetimlerinin ne zaman ve nasıl gerçekleştirileceğini, güncelleştirmelerin zorunlu olup olmadığını ve uygulamanın güncelleştirmeleri denetlemesi gereken yeri belirtme konusunda çok sayıda esnekliğe sahip olursunuz.
 
  Uygulamayı, uygulama başlamadan önce otomatik olarak güncelleştirmeleri denetlemek üzere veya uygulama başladıktan sonra ayarlanan aralıklarda otomatik olarak denetleyecek şekilde yapılandırabilirsiniz. Ayrıca, gerekli en düşük sürümü belirtebilirsiniz; diğer bir deyişle, kullanıcının sürümü gereken sürümden düşükse bir güncelleştirme yüklenir.
@@ -37,13 +38,13 @@ ms.locfileid: "99900558"
 
  Ayrıca, uygulamanızı tek bir konumdan dağıtabilir ve başka bir konumdan güncelleştirebilirsiniz. "Farklı bir güncelleştirme konumu belirtmek Için" yordamına bakın.
 
- Daha fazla bilgi için bkz. [ClickOnce güncelleştirme stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md).
+ daha fazla bilgi için bkz. [ClickOnce güncelleştirme stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md).
 
- Güncelleştirme davranışı, **Proje Tasarımcısı** ' nın **Yayımla** sayfasında bulunan **uygulama güncelleştirmeleri** iletişim kutusunda yönetilir.
+ güncelleştirme davranışı, **Project tasarımcısının** **yayımla** sayfasından erişilebilen **uygulama güncelleştirmeleri** iletişim kutusunda yönetilir.
 
 ### <a name="to-check-for-updates-before-the-application-starts"></a>Uygulama başlamadan önce güncelleştirmeleri denetlemek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -55,7 +56,7 @@ ms.locfileid: "99900558"
 
 ### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>Uygulama başladıktan sonra arka planda güncelleştirmeleri denetlemek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -69,7 +70,7 @@ ms.locfileid: "99900558"
 
 ### <a name="to-specify-a-minimum-required-version-for-the-application"></a>Uygulama için gerekli en düşük sürümü belirtmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -81,7 +82,7 @@ ms.locfileid: "99900558"
 
 ### <a name="to-specify-a-different-update-location"></a>Farklı bir güncelleştirme konumu belirtmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
@@ -93,17 +94,17 @@ ms.locfileid: "99900558"
 
 ### <a name="to-check-for-updates-programmatically"></a>Güncelleştirmeleri program aracılığıyla denetlemek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
 
 2. **Yayımla** sekmesine tıklayın.
 
 3. **Güncelleştirmeler** düğmesine tıklayarak **uygulama güncelleştirmeleri** iletişim kutusunu açın.
 
-4. **Uygulama güncelleştirmeleri** iletişim kutusunda **uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun temizlenmiş olduğundan emin olun. (İsteğe bağlı olarak, güncelleştirmeleri programlı olarak denetlemek ve ayrıca ClickOnce çalışma zamanının güncelleştirmeleri otomatik olarak denetlemesini sağlamak için bu onay kutusunu seçebilirsiniz.)
+4. **Uygulama güncelleştirmeleri** iletişim kutusunda **uygulamanın güncelleştirmeleri denetlemesi gereken** onay kutusunun temizlenmiş olduğundan emin olun. (isteğe bağlı olarak, güncelleştirmeleri programlı bir şekilde denetlemek için bu onay kutusunu seçebilirsiniz ve ayrıca ClickOnce çalışma zamanının güncelleştirmeleri otomatik olarak denetlemesini sağlayabilirsiniz.)
 
 5. **Güncelleştirme konumu** alanına, tam URL ile güncelleştirme konumunu, biçimini kullanarak *http://Hostname/ApplicationName* veya *\\ \server\applicationname* biçimini kullanarak bir UNC yolunu girin veya güncelleştirme konumuna göz atarak **göz** atın düğmesine tıklayın. Güncelleştirme konumu, uygulamanın kendisi için güncelleştirilmiş bir sürümünü arayacağı yerdir.
 
-6. Kullanıcıların güncelleştirmeleri denetlemesini seçmesini sağlayacak bir Windows formunda düğme, menü öğesi veya diğer kullanıcı arabirimi öğesi oluşturun. Bu öğenin olay işleyicisinden, güncelleştirmeleri denetlemek ve yüklemek için bir yöntem çağırın. [Nasıl yapılır: ClickOnce DAĞıTıM API 'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)bölümünde, bu tür bir yöntem için Visual Basic ve Visual C# kodu örneği bulabilirsiniz.
+6. kullanıcıların güncelleştirmeleri denetlemesini seçmesini sağlayacak bir Windows Form üzerinde düğme, menü öğesi veya diğer kullanıcı arabirimi öğesi oluşturun. Bu öğenin olay işleyicisinden, güncelleştirmeleri denetlemek ve yüklemek için bir yöntem çağırın. [nasıl yapılır: ClickOnce dağıtım apı 'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)bölümünde, bu tür bir yöntem için Visual Basic ve Visual C# kodu örneği bulabilirsiniz.
 
 7. Uygulamanızı oluşturun.
 
@@ -112,5 +113,5 @@ ms.locfileid: "99900558"
 - [Uygulama güncelleştirmeleri iletişim kutusu](/previous-versions/visualstudio/visual-studio-2010/axw1fa38(v=vs.100))
 - [ClickOnce güncelleştirme stratejisini seçme](../deployment/choosing-a-clickonce-update-strategy.md)
 - [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
-- [Nasıl yapılır: ClickOnce dağıtım API 'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)
+- [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [nasıl yapılır: ClickOnce dağıtım apı 'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)

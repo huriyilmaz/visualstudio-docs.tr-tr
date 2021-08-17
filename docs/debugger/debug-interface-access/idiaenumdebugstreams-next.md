@@ -1,6 +1,6 @@
 ---
-description: Numaralama dizisinde belirtilen sayıda hata ayıklama akışı alınır.
-title: IDiaEnumDebugStreams::Next | Microsoft Docs
+description: Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışı alır.
+title: 'IDiaEnumDebugStreams:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a0ddae675861d3f276f47fc4bd36741b992272c40a38544652419bea7686a1ea
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ee745674ebd5292c1c3d6b4a314ecd6684a55368
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392560"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044747"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
-Numaralama dizisinde belirtilen sayıda hata ayıklama akışı alınır.
+Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- Celt
+ celt
 
-[in] Numaralayıcıda alınan hata ayıklama akışlarının sayısı.
+'ndaki Alınacak Numaralandırıcı içindeki hata ayıklama akışlarının sayısı.
 
- Rgelt
+ rgelt
 
-[out] Alınan hata ayıklama [akışlarını temsil eden bir IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesneleri dizisi döndürür.
+dışı Alınmakta olan hata ayıklama akışlarını temsil eden [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnelerinin bir dizisini döndürür.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Döndürülen hata ayıklama akışlarının sayısını döndürür.
+dışı Döndürülen hata ayıklama akışlarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` akış yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla akış yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 42b676d5046cbf01f63f1b57fcf9e3907f4080cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abe89172fd5fde4fad5fbf6d48c591dc6df80137c0ee09db3d4273dd75337d49
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89325441"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122075269"
 ---
 Kullanıcı arabirimi

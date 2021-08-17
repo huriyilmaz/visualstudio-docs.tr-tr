@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c623f74bfa0e13cf53d3777379ff18936c9242c09b6a4f2e022f12d79230718a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 09a7f32a36077d6bb80907ff81243d3d1a189257
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420851"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091031"
 ---
 # <a name="idiasymbolget_backendmajor"></a>IDiaSymbol::get_backEndMajor
 Derleyicinin arka uç ana sürüm numarasını alın.

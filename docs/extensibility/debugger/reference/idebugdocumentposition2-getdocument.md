@@ -1,6 +1,6 @@
 ---
 description: İçeren belgeyi alır.
-title: IDebugDocumentPosition2::GetDocument | Microsoft Docs
+title: 'IDebugDocumentPosition2:: GetDocument | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 38197715a7047581c90a5cb2d2b6a31f1c222c1d73fceeda2079df5c9ffe7730
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 69320654977a5e5059f64f338860cc465d9eb060
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121323553"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089231"
 ---
 # <a name="idebugdocumentposition2getdocument"></a>IDebugDocumentPosition2::GetDocument
 İçeren belgeyi alır.
@@ -43,10 +43,10 @@ int GetDocument(
 
 ## <a name="parameters"></a>Parametreler
 `ppDoc`\
-[out] Bu konumu içeren belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
+dışı Bu konumu içeren belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

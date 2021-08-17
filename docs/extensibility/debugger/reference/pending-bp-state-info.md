@@ -11,17 +11,18 @@ ms.assetid: 4d73ceff-43f9-4e95-8dba-88e1fab2def3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a4da8892239740c65e1fcbbe618fa1ea76183e96
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 16d73973b9d6170023f605dd42e7d451b32fd6bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079689"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042783"
 ---
 # <a name="pending_bp_state_info"></a>PENDING_BP_STATE_INFO
 Bir kod konumuna bağlanmaya yönelik bir kesme noktasının durumu hakkında bilgi içerir.

@@ -1,6 +1,6 @@
 ---
-description: Bu arabirim, IDebugProcess2 ımplemenbu tarafından uygulanan bir uzantı arabirimidir.
-title: Idebugprocessqueryproperties | Microsoft Docs
+description: Bu arabirim, IDebugProcess2 uygulayanları tarafından uygulanan bir uzantı arabirimidir.
+title: IDebugProcessQueryProperties | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,20 +9,21 @@ ms.assetid: ce29a248-81a0-42c0-99a7-1606e8c548ec
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ae5fb8766e9cd0f48e85fa0b060efb4faa7bc496
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9dad8262b2c8add1787d07dbd4589c2398d9c807abef5aaa06fc3ba46244f193
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076296"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433417"
 ---
 # <a name="idebugprocessqueryproperties"></a>IDebugProcessQueryProperties
-Bu arabirim, [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) ımplemenbu tarafından uygulanan bir uzantı arabirimidir. Uygulayıcının hata ayıklama işlem ortamıyla ilgili bilgi almasına izin verir.
+Bu arabirim, [IDebugProcess2 uygulayanları tarafından uygulanan bir uzantı](../../../extensibility/debugger/reference/idebugprocess2.md) arabirimidir. Bu, uygulamanın hata ayıklama işlemi ortamı hakkında bilgi alamasını sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,26 +31,26 @@ Bu arabirim, [IDebugProcess2](../../../extensibility/debugger/reference/idebugpr
 IDebugProcessQueryProperties: IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama sürecinin yürütme ortamıyla ilgili bilgi almak için bu arabirimi uygulayın.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama işleminin yürütme ortamı hakkında bilgi almak için bu arabirimi kullanın.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProcessQueryProperties` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugProcessQueryProperties` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[QueryProperty](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperty.md)|Bir özellik değeri için sorgular.|
+|[QueryProperty](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperty.md)|Özellik değeri için sorgular.|
 |[QueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties-queryproperties.md)|Özellik değerleri için sorgular.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim nadiren uygulanabilir.
+ Bu arabirim nadiren uygulanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: Portprıv. h
+ Üst bilgi: Portpriv.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

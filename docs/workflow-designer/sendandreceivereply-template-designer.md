@@ -1,6 +1,6 @@
 ---
 title: SendAndReceiveReply Şablon Tasarımcısı
-description: Önceden yapılandırılmış Send ve ReceiveReply etkinlikleri çifti oluşturmak için İş Akışı Tasarımcısı ' de SendAndReceiveReply şablonunu nasıl kullanabileceğinizi öğrenin.
+description: Önceden yapılandırılmış Bir çift Gönderme ve AlmaReply etkinlikleri oluşturmak için İş Akışı Tasarımcısı'da SendAndReceiveReply şablonunu nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,46 +11,47 @@ ms.assetid: 818a8c84-6593-416d-b016-1d91b85ffb68
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 02bcc4a812a541ea792a190dc21dfbeb3119c008
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b39383e23f917f3f19c590e20f96dcdf8d611239ed6b1477aee4cd93bbcb12e9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943698"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440428"
 ---
 # <a name="sendandreceivereply-template-designer"></a>SendAndReceiveReply Şablon Tasarımcısı
 
-**SendAndReceiveReply** şablonu, önceden yapılandırılmış ve etkinlik çifti oluşturmak için kullanılır <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> . Etkinlikler bir <xref:System.Activities.Statements.Sequence> etkinliğin parçasıdır ve istemcideki istek/yanıt iletisi değişim deseninin bir parçası olarak bağıntılı.
+**SendAndReceiveReply** şablonu, önceden yapılandırılmış ve etkinlik çifti oluşturmak <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> için kullanılır. Etkinlikler bir etkinliğin <xref:System.Activities.Statements.Sequence> parçasıdır ve istemcide istek/yanıt iletisi değişim deseninin bir parçası olarak ilişkilidir.
 
 ## <a name="the-sendandreceivereply-template"></a>SendAndReceiveReply şablonu
 
-**SendAndReceiveReply** şablonunu eklemek, <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> bir etkinlik içinde ve etkinliklerini oluşturmanın yanı sıra üç şeyi de yapar <xref:System.Activities.Statements.Sequence> :
+**SendAndReceiveReply** şablonunu eklemek, etkinlik içinde ve etkinliklerini <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> oluşturmanın yanı sıra üç şey <xref:System.Activities.Statements.Sequence> yapar:
 
-- <xref:System.ServiceModel.Activities.Send.OperationName%2A> <xref:System.ServiceModel.Activities.Send.ServiceContractName%2A> Etkinliğin ve özelliklerini yapılandırır <xref:System.ServiceModel.Activities.Send> .
+- Etkinliğin <xref:System.ServiceModel.Activities.Send.OperationName%2A> ve <xref:System.ServiceModel.Activities.Send.ServiceContractName%2A> özelliklerini <xref:System.ServiceModel.Activities.Send> yapılandırıyor.
 
-- <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> <xref:System.ServiceModel.Activities.ReceiveReply> Etkinliğin özelliğini etkinliğe bağlar <xref:System.ServiceModel.Activities.Send> .
+- Etkinliğin <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> özelliğini <xref:System.ServiceModel.Activities.ReceiveReply> etkinliğine <xref:System.ServiceModel.Activities.Send> bağlar.
 
-- <xref:System.ServiceModel.Activities.CorrelationHandle>Üst etkinlikte bir değişken olarak oluşturur.
+- Üst <xref:System.ServiceModel.Activities.CorrelationHandle> etkinlikte değişken olarak bir oluşturur.
 
-### <a name="use-the-sendandreceivereply-template-designer"></a>SendAndReceiveReply Şablon tasarımcısını kullanma
+### <a name="use-the-sendandreceivereply-template-designer"></a>SendAndReceiveReply Şablon Tasarımcısını Kullanma
 
-**Araç kutusunun** **mesajlaşma** kategorisindeki **SendAndReceiveReply** etkinlik tasarımcısına erişin. **SendAndReceiveReply** etkinlik Tasarımcısı **araç kutusundan** sürüklenebilir ve etkinliklerin genellikle yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik tasarımcısının atılması, <xref:System.ServiceModel.Activities.Send> **Send** Activity Designer ile yapılandırılabilen bir etkinlik ve <xref:System.ServiceModel.Activities.ReceiveReply> **ReceiveReplyForSend** Tasarımcısı ile yapılandırılabilecek bir bağıntılı oluşturur.
+Araç Kutusunun **Mesajlaşma kategorisindeki SendAndReceiveReply** **etkinlik** **tasarımcısına erişin.** **SendAndReceiveReply** etkinlik **tasarımcısı, Etkinlikler** genellikle yerleştirildikten sonra Araç Kutusundan sürükleyip İş Akışı Tasarımcısı yüzeyine bırakılır. Etkinlik tasarımcısı bırakıldığında, Etkinlik gönder tasarımcısıyla yapılandırılan ve <xref:System.ServiceModel.Activities.Send>  <xref:System.ServiceModel.Activities.ReceiveReply> **ReceiveReplyForSend** tasarımcısıyla yapılandırılan bir ilişkili etkinlik oluşturur.
 
-Etkinliği yapılandırmak için **gönderme** tasarımcısını kullanma hakkında daha fazla bilgi için <xref:System.ServiceModel.Activities.Send> bkz. [Send](../workflow-designer/send-activity-designer.md).
+Etkinliği yapılandırmak için Gönder **tasarımcısını kullanma hakkında** daha fazla bilgi <xref:System.ServiceModel.Activities.Send> için bkz. [Gönder.](../workflow-designer/send-activity-designer.md)
 
-### <a name="properties-of-receivereply"></a>ReceiveReply özellikleri
+### <a name="properties-of-receivereply"></a>ReceiveReply Özellikleri
 
-Aşağıdaki tabloda <xref:System.ServiceModel.Activities.ReceiveReply> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, Özellikler kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilir.
+Aşağıdaki tabloda özellikler <xref:System.ServiceModel.Activities.ReceiveReply> ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır. Bu özellikler özellikler kılavuzunda düzenlenebilir ve bazıları da İş Akışı Tasarımcısı düzenlenebilir.
 
 | Özellik Adı | Gerekli | Kullanım |
 |-|----------|-|
-| <xref:System.Activities.Activity.DisplayName%2A> | Yanlış | Etkinliğin isteğe bağlı kolay adı <xref:System.ServiceModel.Activities.ReceiveReply> . Varsayılan değer ReceiveReplyForSend ' dir.<br /><br /> Kolay için varsayılan olmayan bir değer kullanılması <xref:System.Activities.Activity.DisplayName%2A> kesinlikle gerekli olmasa da, bu tür bir değer kullanmak en iyisidir. |
-| <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> | Doğru | <xref:System.ServiceModel.Activities.Send>Bu etkinlikle eşleştirilmiş etkinliğe başvuru <xref:System.ServiceModel.Activities.ReceiveReply> . Bu özellik **null** olmamalıdır. <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri, istemci üzerinde bir istek/yanıt mesajlaşma modelini modellemek için birlikte kullanılır. Bu özellik hangi <xref:System.ServiceModel.Activities.Send> etkinliğin eşleştirilmek gerektiğini belirtir. Tasarımcıda Bu özelliği düzenleyemezsiniz, çünkü <xref:System.ServiceModel.Activities.Send> etkinliği oluşturduğunuz etkinliğe otomatik olarak bağlanır <xref:System.ServiceModel.Activities.ReceiveReply> . |
-| <xref:System.ServiceModel.Activities.ReceiveReply.Content%2A> | Yanlış | Alacak ileti veya parametre içeriğini belirtir. <xref:System.ServiceModel.Activities.ReceiveMessageContent>Etkinlik ya da <xref:System.ServiceModel.Activities.ReceiveParametersContent> etkinlik olabilir. Özellik kılavuzundaki **içerik** alanının yanındaki üç nokta düğmesine tıklayarak veya **alma** etkinliği Tasarımcısı yüzeyinde **içerik** etiketinin yanındaki **Tanımla** düğmesine tıklayarak bu özelliği düzenleyin. Her ikisi de **Içerik tanımı** iletişim kutusunu görüntüler. Bu kutunun nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Içerik tanımı Iletişim kutusu](../workflow-designer/content-definition-dialog-box.md). |
-| <xref:System.ServiceModel.Activities.ReceiveReply.CorrelationInitializers%2A> | Yanlış | <xref:System.ServiceModel.Activities.CorrelationInitializer> <xref:System.ServiceModel.Activities.CorrelationHandle> Bu <xref:System.ServiceModel.Activities.Receive> etkinliği iş akışı içinde yapılandıran birden çok nesneyi başlatacak nesne koleksiyonunu belirtir. Özellikler kılavuzundaki özelliğin yanındaki üç nokta düğmesine tıklayarak <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> **bağıntı başlatıcıları Ekle** iletişim kutusunu açın. Bu kutuyu kullanma hakkında daha fazla bilgi için bkz. [Correlationbaşlatıcıları ekleme Iletişim kutusu](../workflow-designer/add-correlationinitializers-dialog-box.md). |
-| <xref:System.ServiceModel.Activities.ReceiveReply.Action%2A> | Yanlış | İletinin eylem üst bilgisini belirtir. Açıkça ayarlanmamışsa, değeri varsayılan olarak şu şekilde ayarlanır:<br /><br /> `https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}`. |
+| <xref:System.Activities.Activity.DisplayName%2A> | Yanlış | Etkinliğin isteğe bağlı kolay <xref:System.ServiceModel.Activities.ReceiveReply> adı. Varsayılan değer ReceiveReplyForSend'tir.<br /><br /> Kolay için varsayılan olmayan bir değerin kullanımı kesinlikle gerekli değildir, ancak böyle bir değer <xref:System.Activities.Activity.DisplayName%2A> kullanmak en iyisidir. |
+| <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> | Doğru | Bu <xref:System.ServiceModel.Activities.Send> etkinlikle eşleştirilmiş etkinlik <xref:System.ServiceModel.Activities.ReceiveReply> başvurusu. Bu özellik **null olmamalıdır.** <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri, istek/yanıt mesajlaşma desenini modellemek için istemcide birlikte kullanılır. Bu özellik hangi <xref:System.ServiceModel.Activities.Send> etkinliğin eşleştirilmiş olduğunu belirtir. Tasarımcıda bu özelliği düzenleyemezsiniz çünkü bu özellik, etkinliği oluşturduğunuz <xref:System.ServiceModel.Activities.Send> etkinliğin otomatik olarak bağlı <xref:System.ServiceModel.Activities.ReceiveReply> olmasıdır. |
+| <xref:System.ServiceModel.Activities.ReceiveReply.Content%2A> | Yanlış | Alacak iletiyi veya parametre içeriğini belirtir. Bir etkinlik veya <xref:System.ServiceModel.Activities.ReceiveMessageContent> etkinlik <xref:System.ServiceModel.Activities.ReceiveParametersContent> olabilir. Özellik kılavuzunda İçerik alanı'nın yanındaki  üç nokta düğmesine tıklayarak veya Alma etkinliği tasarımcısının  yüzeyinde İçerik  etiketinin yanındaki Tanımla düğmesine tıklayarak bu özelliği düzenleyin.  Her ikisi de **İçerik Tanımı iletişim kutusunu** görüntüler. Bu kutunun kullanımı hakkında daha fazla bilgi için bkz. [İçerik Tanımı İletişim Kutusu.](../workflow-designer/content-definition-dialog-box.md) |
+| <xref:System.ServiceModel.Activities.ReceiveReply.CorrelationInitializers%2A> | Yanlış | bu etkinliği iş akışı <xref:System.ServiceModel.Activities.CorrelationInitializer> içinde yapılandıran <xref:System.ServiceModel.Activities.CorrelationHandle> birden çok nesne başlatan nesnelerin koleksiyonunu <xref:System.ServiceModel.Activities.Receive> belirtir. Özellikler kılavuzunda özelliğin yanındaki üç nokta düğmesine <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> tıklayarak Bağıntı **Başlatıcıları Ekle iletişim kutusunu** açın. Bu kutuyu kullanma hakkında daha fazla bilgi için, [bkz. Add CorrelationInitializers Dialog Box](../workflow-designer/add-correlationinitializers-dialog-box.md). |
+| <xref:System.ServiceModel.Activities.ReceiveReply.Action%2A> | Yanlış | İletinin eylem üst bilgilerini belirtir. Açıkça ayarlanmazsa, değeri varsayılan olarak şöyle olur:<br /><br /> `https://tempuri.org/{service contract namespace}/{service contract name}/{operation name}`. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4f12787cc94566a3cb3014b62b295ac5f867531e3d6e507fa1115b4003ae4a97
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5231b12b530d8934d5baa94c906160d9d982f7f0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402252"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029729"
 ---
 # <a name="idebugreturnvalueevent2getreturnvalue"></a>IDebugReturnValueEvent2::GetReturnValue
 Bir işlev üzerinde veya üzerinde atlama sırasında döndürülen değeri alır.

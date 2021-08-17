@@ -1,6 +1,6 @@
 ---
-description: Bir işlemi yürütmeyi sürdürür.
-title: IDebugPortEx2::ResumeProcess | Microsoft Docs
+description: Bir işlemin yürütülmesini sürdürür.
+title: 'IDebugPortEx2:: ResumeProcess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 50796635b2a06f320014ae57d8d55b3f523617aad78b6ee3a96d3ce270706cc1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 730db0282614601c6d32ec364dd8b83e30f51b95
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121321902"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030275"
 ---
 # <a name="idebugportex2resumeprocess"></a>IDebugPortEx2::ResumeProcess
-Bir işlemi yürütmeyi sürdürür.
+Bir işlemin yürütülmesini sürdürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int ResumeProcess(
 
 ## <a name="parameters"></a>Parametreler
 `pPortProcess`\
-[in] Devam ettirilen işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
+'ndaki Sürdürülecek işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

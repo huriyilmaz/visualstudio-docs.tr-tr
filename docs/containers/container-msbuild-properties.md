@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-container-tools
 ms.topic: reference
-ms.openlocfilehash: ffa465afecfa5e515ec7e169bddeacbd7fef6acdee71a0eb1f6f38447596da93
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b284296e4f7bc0f2d641e3094717f95161aef2d7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405363"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045027"
 ---
 # <a name="container-tools-build-properties"></a>Kapsayıcı araçları derleme özellikleri
 

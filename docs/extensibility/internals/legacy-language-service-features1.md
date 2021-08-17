@@ -1,6 +1,6 @@
 ---
 title: Eski dil hizmeti Features1 | Microsoft Docs
-description: Yönetilen paket çerçevesi (MPF) dil hizmetinde desteklenen Visual Studio özellikleri hakkında bilgi edinin.
+description: yönetilen paket çerçevesi (mpf) dil hizmetinde desteklenen Visual Studio özellikleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: a646e4f0-767d-4cd1-8e1a-9a2aa210a1b7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bb5169eeb53aa16d0827cdf50cb50d0db34d996
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 94099df26da9d9fcd62db62ad440820056775a81
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074528"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042289"
 ---
 # <a name="legacy-language-service-features-1"></a>Eski dil hizmeti özellikleri 1
 Yönetilen bir paket çerçevesi (MPF) dil hizmeti, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sözdizimi vurgulama, IntelliSense ve kesme noktası doğrulaması gibi bir veya daha fazla özelliği destekleyebilir. Her özellik diğerlerinden bağımsız olarak uygulanabilir, ancak yalnızca bir tarayıcı gerektiren sözdizimi vurgulama dışında bir Ayrıştırıcı ve tarayıcı gerektirir.

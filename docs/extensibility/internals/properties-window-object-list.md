@@ -1,6 +1,6 @@
 ---
 title: Özellikler Penceresi Nesne Listesi | Microsoft Docs
-description: Visual Studio IDE'de nesne listesiyle etkileşim kurmak için Özellikler penceresi arabirimler hakkında bilgi Visual Studio öğrenin.
+description: Özellikler penceresi IDE'de nesne listesiyle etkileşim kurmak için Özellikler penceresi arabirimler hakkında Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,15 +13,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ce39d335d48335408eea192c23bd5a091900a48055dcad0d65671b158b7b6e5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4ed4b3fc37d4110d6cd6dfd02c2dea503cbee194
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121275404"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042133"
 ---
 # <a name="properties-window-object-list"></a>Özellikler Penceresi Nesne Listesi
-Özellikler penceresindeki nesne **listesi,** seçimi bir veya daha fazla seçili pencerede bulunan diğer nesnelerle değiştirmenizi sağlayan bir açılan listedir. Bu listenin içinde farklı bir nesne seçildiğinde, ortamı yeni bir nesnenin seç olduğunu bildirmek <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> için çağrısı tetiklenir. Ardından Özellikler penceresinde **görüntülenen bilgiler,** yeni seçilen nesneyle ilişkili özellikleri gösterecek şekilde değiştirilir.
+Özellikler penceresindeki nesne **listesi,** seçimi bir veya daha fazla seçili pencerede bulunan diğer nesnelerle değiştirmenizi sağlayan bir açılan listedir. Bu listenin içinde farklı bir nesne seçmek, ortamı yeni bir nesnenin seç olduğunu <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> bildirmek için çağrısı tetikler. Ardından Özellikler penceresinde **görüntülenen bilgiler,** yeni seçilen nesneyle ilişkili özellikleri gösterecek şekilde değiştirilir.
 
 ## <a name="the-object-list"></a>Nesne Listesi
  Nesne listesi iki alandan oluşur: nesne adı (kalın olarak görüntülenir) ve nesne türü.

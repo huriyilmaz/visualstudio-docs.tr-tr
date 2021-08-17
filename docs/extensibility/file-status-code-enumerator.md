@@ -1,6 +1,6 @@
 ---
 title: Dosya Durum Kodu Numaralayıcı | Microsoft Docs
-description: SccStatus numaralayıcı, kaynak denetim sisteminde bir dosyanın durumunu belirten sabit değerler içerir ve SccQueryInfo ve POPLISTFUNC tarafından kullanılır.
+description: SccStatus numaralayıcı, kaynak denetim sisteminde bir dosyanın durumunu belirten ve SccQueryInfo ile POPLISTFUNC tarafından kullanılan sabit değerler içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,17 +13,18 @@ ms.assetid: 5c37876b-c83c-4ca1-837b-57cd465a879a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95de8a29efcd56880cdaf452c9f21b90bba1c5c9
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 2e5014f3ba96d11fc5a851e5255404fae50289322062786a6952bf4bec192cb9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900973"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448331"
 ---
-# <a name="file-status-code-enumerator"></a>Dosya durum kodu numaralayıcı
-`SccStatus`Numaralayıcı, kaynak denetim sisteminde bir dosyanın durumunu belirten adlandırılmış sabit değerler içerir. Bu numaralama [SccQueryInfo](../extensibility/sccqueryinfo-function.md) ve callback işlevi tarafından kullanılır (ayrıntılar için `POPLISTFUNC` [bkz. POPLISTFUNC).](../extensibility/poplistfunc.md)
+# <a name="file-status-code-enumerator"></a>Dosya durumu kodu numaralayıcı
+`SccStatus`Numaralayıcı, kaynak denetim sisteminde bir dosyanın durumunu belirten adlandırılmış sabit değerler içerir. Bu numaralama [SccQueryInfo](../extensibility/sccqueryinfo-function.md) ve geri çağırma işlevi tarafından kullanılır (ayrıntılar için `POPLISTFUNC` bkz. [POPLISTFUNC).](../extensibility/poplistfunc.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +54,7 @@ enum SccStatus {
 ## <a name="members"></a>Üyeler
  SCC_STATUS_INVALID Durumu alınamadı; buna güvenmez.
 
- SCC_STATUS_NOTCONTROLLED Dosya kaynak denetimi altında değil.
+ SCC_STATUS_NOTCONTROLLED Dosyası kaynak denetimi altında değil.
 
  SCC_STATUS_CONTROLLED Dosya kaynak denetimi altında.
 
@@ -77,9 +78,9 @@ enum SccStatus {
 
  SCC_STATUS_PINNED dosyası açık bir sürümle paylaşılır.
 
- SCC_STATUS_MODIFIED dosya değiştirildi/bozuk/ihlal edildi.
+ SCC_STATUS_MODIFIED Dosya değiştirildi/bozuk/ihlal edildi.
 
- SCC_STATUS_OUTBYUSER Dosya geçerli kullanıcı tarafından kullanıma alınmış.
+ SCC_STATUS_OUTBYUSER dosyası geçerli kullanıcı tarafından kullanıma alınmış.
 
  SCC_STATUS_NOMERGE dosya hiçbir zaman ile birleştirilemez ve GET öncesinde kaydedilemez.
 

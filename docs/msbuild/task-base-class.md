@@ -13,14 +13,15 @@ ms.assetid: 6c3f6238-b9f0-4325-b8b0-de61090bd0a2
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: bf6bc7cf353a8a1da7854a350f352e69013eb52e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2c905fc11fb42538577baac350d3592ebab2d85869fb12364d130b5759d25178
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966103"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121355834"
 ---
 # <a name="task-base-class"></a>Görev temel sınıfı
 

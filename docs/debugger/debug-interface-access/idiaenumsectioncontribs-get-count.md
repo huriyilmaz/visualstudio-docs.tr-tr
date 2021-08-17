@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d35072216113127a2ac8c560708ae929fcecf4d862dfb7401013f53ceaad5b77
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a5ad181d5036208c6c9d5b98c2d7d27d38edb621
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380464"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044689"
 ---
 # <a name="idiaenumsectioncontribsget_count"></a>IDiaEnumSectionContribs::get_Count
 Bölüm katkılarının sayısını alır.

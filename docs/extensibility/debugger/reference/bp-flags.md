@@ -1,5 +1,5 @@
 ---
-description: Bir kesme noktası ayarlarken ek bilgi belirtmek için kullanılabilen isteğe bağlı bayraklar sağlar.
+description: Kesme noktası ayarlarken ek bilgi belirtmek için kullanılmaktadır isteğe bağlı bayraklar sağlar.
 title: BP_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c1bc858ee22b388d5a782a572f2267f78450c1048d4bb8a7c6718656d4d049b5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5f0d79bd6e3c1495f85ed6f8436a781445173810
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390491"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104657"
 ---
 # <a name="bp_flags"></a>BP_FLAGS
-Bir kesme noktası ayarlarken ek bilgi belirtmek için kullanılabilen isteğe bağlı bayraklar sağlar.
+Kesme noktası ayarlarken ek bilgi belirtmek için kullanılmaktadır isteğe bağlı bayraklar sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,22 +51,22 @@ public enum enum_BP_FLAGS {
 Kesme noktası bayrağı olmadığını belirtir.
 
 `BP_FLAG_MAP_DOCPOSITION`\
-Hata ayıklama altyapısının (DE), belge konumunu kullanarak kesme noktasını eşlemesi gerektiğini belirtir. Bu yalnızca, Active Server sayfaları (ASP) gibi komut dosyası yönelimli kaynak dosyalarında ayarlanan kesme noktaları için geçerlidir.
+Hata ayıklama altyapısının (DE) belge konumunu kullanarak kesme noktasıyla eşlemesi gerektiğini belirtir. Bu yalnızca Active Server Pages (ASP) gibi betik yönelimli kaynak dosyalarda ayarlanmış kesme noktaları için geçerlidir.
 
 `BP_FLAG_DONT_STOP`\
-Kesme noktasının hata ayıklama altyapısı tarafından işlenmesi gerektiğini, ancak hata ayıklama altyapısının sonunda durmamalıdır (yani, bir [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) olay nesnesi gönderilmemelidir). Bu bayrak, öncelikle izleneme noktalarıyla kullanılmak üzere tasarlanmıştır.
+Kesme noktası hata ayıklama altyapısı tarafından işlenmeli, ancak hata ayıklama altyapısının sonunda orada durmama gerektiğini belirtir (yani, [bir IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) olay nesnesi gönderilmez). Bu bayrak öncelikli olarak izleme noktalarıyla birlikte kullanılacak şekilde tasarlanmıştır.
 
 ## <a name="remarks"></a>Açıklamalar
-`dwFlags` [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ve [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapılarının üyesi için kullanılır.
+BP_REQUEST_INFO `dwFlags` ve [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info.md) için kullanılır. [](../../../extensibility/debugger/reference/bp-request-info2.md)
 
-Bu değerler, bit düzeyinde birleştirilebilir `OR` .
+Bu değerler bitwise ile birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

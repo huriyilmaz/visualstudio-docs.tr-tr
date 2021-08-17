@@ -8,14 +8,15 @@ ms.assetid: fce2b708-1aef-454f-be59-52b76f359351
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bb4a293e4879838d53093b41cacf004b57de7e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4cddb1ecab1a2600d347aebeb245f2faf693a7db5ae7f2aa2467acf3ae69f1ae
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968612"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440103"
 ---
 # <a name="security-considerations-when-working-with-xml-data"></a>XML verileriyle çalışırken güvenlik konuları
 
@@ -23,7 +24,7 @@ Bu konuda, XML Düzenleyicisi veya XSLT hata ayıklayıcıyla çalışırken bil
 
 ## <a name="xml-editor"></a>XML düzenleyicisi
 
-XML Düzenleyicisi, Visual Studio metin düzenleyiciyi temel alır. <xref:System.Xml> <xref:System.Xml.Xsl> XML işlemlerinin çoğunu işlemek için ve sınıflarını kullanır.
+XML düzenleyicisi Visual Studio metin düzenleyicisine dayalıdır. <xref:System.Xml> <xref:System.Xml.Xsl> XML işlemlerinin çoğunu işlemek için ve sınıflarını kullanır.
 
 - XSLT dönüştürmeleri yeni bir uygulama etki alanında yürütülür. XSLT dönüşümleri *korumalı* değildir; diğer bir deyişle, bilgisayarınızın kod erişimi güvenlik ilkesi, XSLT stil sayfasının bulunduğu yere göre kısıtlanmış izinleri belirlemekte kullanılır. Örneğin, bir Internet konumundan stil sayfaları en kısıtlı izinlere sahiptir, ancak sabit sürücünüze kopyalanmış stil sayfaları tam güvenle çalışır.
 
@@ -35,7 +36,7 @@ XML Düzenleyicisi, Visual Studio metin düzenleyiciyi temel alır. <xref:System
 
 ## <a name="xslt-debugger"></a>XSLT hata ayıklayıcısı
 
-XSLT hata ayıklayıcı, ve ad alanından Visual Studio tarafından yönetilen hata ayıklama altyapısını ve sınıfları kullanır <xref:System.Xml> <xref:System.Xml.Xsl> .
+XSLT hata ayıklayıcısı, ve ad alanından yönetilen Visual Studio hata ayıklama altyapısını ve sınıfları kullanır <xref:System.Xml> <xref:System.Xml.Xsl> .
 
 - XSLT hata ayıklayıcısı her XSLT dönüşümünü bir korumalı uygulama etki alanında çalıştırır. Bilgisayarınızın kod erişimi güvenlik ilkesi, XSLT stil sayfasının bulunduğu yere göre kısıtlanmış izinleri belirlemekte kullanılır. Örneğin, bir Internet konumundan stil sayfaları en kısıtlı izinlere sahiptir, ancak sabit sürücünüze kopyalanmış stil sayfaları tam güvenle çalışır.
 

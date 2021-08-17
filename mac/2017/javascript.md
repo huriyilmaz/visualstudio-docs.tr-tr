@@ -1,6 +1,6 @@
 ---
 title: JavaScript ve TypeScript
-description: Mac için Visual Studio'de JavaScript desteği hakkında Mac için Visual Studio
+description: Mac için Visual Studio'de JavaScript desteği hakkında bilgi
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/03/2018
@@ -23,19 +23,19 @@ JavaScript yazma hakkında daha fazla bilgi için bkz. [JavaScript Kodu](/script
 
 ## <a name="adding-a-javascript-file"></a>JavaScript dosyası ekleme
 
-JavaScript dosyaları genellikle yeni ASP.NET Core iletişim kutusu aracılığıyla yeni **projelere** eklenir. Javascript dosyası eklemek için projenize sağ tıklayın ve Yeni Dosya **Ekle'> gidin:**
+JavaScript dosyaları genellikle Yeni Dosya ASP.NET Core **projelerine** eklenir. Javascript dosyası eklemek için projenize sağ tıklayın ve Yeni Dosya **ekle'> gidin:**
 
 ![projeye yeni dosyalar ekleme](media/javascript-image1.png)
 
-Yeni Dosya **iletişim kutusunda Web** Uygulaması Boş **JS >** Veya TypeScript dosyası web > **seçin.** Bir ad girin ve Yeni'yi **seçin:**
+Yeni Dosya **iletişim kutusunda Web** Uygulaması Boş **JS >** Veya Web Uygulaması **TypeScript > seçin.** Bir ad girin ve Yeni'yi **seçin:**
 
 ![şablondan yeni bir typescript dosyası oluşturma](media/javascript-image2.png)
 
 ## <a name="intellisense"></a>IntelliSense
 
-Mac için Visual Studio, [intellisense JavaScript Language Service,](/visualstudio/ide/javascript-intellisense) kod yazarken akıllı kod tamamlama, parametre bilgileri ve üye listelerine sahip olmak için JavaScript Language Service'yi kullanır.
+Mac için Visual Studio IntelliSense [JavaScript Language Service,](/visualstudio/ide/javascript-intellisense) kod yazarken akıllı kod tamamlama, parametre bilgileri ve üye listelerine sahip olmak için JavaScript Language Service'yi kullanır.
 
-Mac için Visual Studio javaScript intellisense tür çıkarılması, JSDoc veya TypeScript bildirimine dayalı olabilir.
+Mac için Visual Studio JavaScript intellisense tür çıkarılması, JSDoc veya TypeScript bildirimine dayalı olabilir.
 
 - **Tür çıkarı–** Bir nesnenin türü, çevreleyen kod bağlamı tarafından an ifade eder. Daha fazla bilgi için Visual Studio [IntelliSense'te tür çıkarı temel alan bölümüne bakın.](/visualstudio/ide/javascript-intellisense#intellisense-based-on-type-inference)
 - **JSDoc–** Tür çıkarca doğru tür bilgilerini sağlamayan zamanlar vardır. Bu durumlarda tür bilgileri [JSDoc](https://jsdoc.app/about-getting-started.html) ek açıklamaları tarafından açıkça sağlanmalıdır. Daha fazla bilgi için Visual Studio [IntelliSense'in JSDoc'yi temel alan bölümüne bakın](/visualstudio/ide/javascript-intellisense#intellisense-based-on-jsdoc)

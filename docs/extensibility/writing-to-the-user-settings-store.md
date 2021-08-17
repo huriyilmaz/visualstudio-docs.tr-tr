@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb169700ea55eb8bd4d1a762fa5e8d082c04981df1573255d18ca8d41bb3955a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b27796000919336e2585d5b3e7c288a88abe261f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334932"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028351"
 ---
 # <a name="writing-to-the-user-settings-store"></a>Kullanıcı Ayarları Deposuna Yazma
 Kullanıcı ayarları, **Araçlar/Seçenekler** iletişim kutusu, Özellikler pencereleri ve diğer diğer iletişim kutuları gibi yazılabilir ayarlardır. Visual Studio uzantılar, bunları küçük miktarlarda veri depolamak için kullanabilir. bu izlenecek yol, kullanıcı ayarları deposundan okuma ve yazma yoluyla Visual Studio bir dış araç olarak Not Defteri nasıl ekleneceğini gösterir.

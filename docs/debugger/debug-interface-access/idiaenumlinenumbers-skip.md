@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda satır sayısını atlar.
-title: 'IDiaEnumLineNumbers:: Skip | Microsoft Docs'
+description: Bir numaralama dizisinde belirtilen sayıda satır numarasını atlar.
+title: IDiaEnumLineNumbers::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 564fc9ff55e7162851ad834873fa8f49fd7fb76c34ab146dfe5d77af4f44e69c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d6785472988543d1d439e08801170f94f4744d0d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380465"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074934"
 ---
 # <a name="idiaenumlinenumbersskip"></a>IDiaEnumLineNumbers::Skip
-Sabit Listesi dizisinde belirtilen sayıda satır sayısını atlar.
+Bir numaralama dizisinde belirtilen sayıda satır numarasını atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,12 +33,12 @@ HRESULT Skip (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Atlanacak numaralandırma dizisindeki satır numarası sayısı.
+[in] Atlanır numaralama dizisinde satır numaralarının sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, öğesini döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak daha fazla satır numarası yoksa döndürür.
+ Başarılı olursa; `S_OK` aksi takdirde, `S_FALSE` atlanabilecek başka satır numarası yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

@@ -11,14 +11,15 @@ ms.assetid: 6e045045-da8c-4338-9423-81a1ca20c405
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e667766974b8cc97a171567bd267c9ac0f245229
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c23788815590f5122191cc3db7190cfb9581e1c8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161168"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091131"
 ---
 # <a name="idiasymbolfindchildrenex"></a>IDiaSymbol::findChildrenEx
 Simgenin alt öğelerini alır. Döndürülen yerel semboller, program iyileştirme ile derlenmişse canlı Aralık bilgilerini içerir.

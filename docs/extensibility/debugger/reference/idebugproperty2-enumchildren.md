@@ -11,17 +11,18 @@ ms.assetid: cf79f666-65d1-417c-af7c-9271bac9a267
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 58378b04589c7e55272eeb3c2ce761516835a77c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 89a377ea09822db6ac86ddd19c714021099df995733fcb1bd2e43fd0a1df4ec1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065053"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121449072"
 ---
 # <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
 Özelliğin alt öğelerinin bir listesini alır.

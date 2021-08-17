@@ -9,17 +9,18 @@ ms.assetid: c73c60ac-da6e-45ae-8f04-95353a24ca3e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 42a13075b233d5b0fe70b314a4b2d025a2a4c7d3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a376a8d51d7b4d974bf0c7b609bbc53cc334cb33
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076309"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057583"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
 Bağlantı noktası tedarikçiden Kullanıcı adını alır.
