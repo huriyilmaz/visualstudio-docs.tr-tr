@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: d60a7bd348bba51009bbab5264fa94d5370ac4246345e283f51eff72eaf3258a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 225391cc764e9cd5d5f120d44b2822a861fb1b16
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443873"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055308"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>İzlenecek yol: Konağı Oluşturulan bir Yönerge İşlemcisine Bağlama
 
@@ -347,7 +347,7 @@ Yönerge işlemcisini oluşturduktan sonra yönerge işlemcisini ve Izlenecek Yo
 
 5. **Gezgin Windows de,** dosya adını içeren klasöre TestTemplateWithDP.txt.
 
-     Klasör ayrıca dosya adını da TestTemplateWithDP1.txt.
+     Klasör ayrıca dosya adını TestTemplateWithDP1.txt.
 
 6. Metin şablonu dönüştürme sonuçlarını görmek için bu dosyayı açın.
 

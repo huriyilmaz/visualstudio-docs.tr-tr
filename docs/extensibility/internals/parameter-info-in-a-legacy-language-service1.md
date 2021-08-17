@@ -14,14 +14,15 @@ ms.assetid: f367295e-45b6-45d2-9ec8-77481743beef
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4dade924ef89be22161c598ba0ae64084c0697ea
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 715b9c5aa672fae29b349f30470e1f6e210f1ff926cf447c08bc4e0528eca416
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061153"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121275482"
 ---
 # <a name="parameter-info-in-a-legacy-language-service-1"></a>Eski dil hizmeti 1 ' de parametre bilgisi
 IntelliSense parametre bilgisi araç ipucu kullanıcılara bir dil yapısında oldukları yerleri hakkında ipuçları sağlar.

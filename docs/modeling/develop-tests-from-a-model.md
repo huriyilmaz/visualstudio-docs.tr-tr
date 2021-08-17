@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: b1d4d2d1d30c21bcfd7b6ee47eba9a4ed97f26e67f768779f474c9e2f33dbfa8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dc5d96f7fd4381b129b88b388ec6ecfeb8a8198b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386152"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055516"
 ---
 # <a name="develop-tests-from-a-model"></a>Model aracılığıyla test geliştirme
 Sistem ve bileşenlerinin testlerini düzenlemenize yardımcı olmak için gereksinimleri ve mimari modelleri kullanabilirsiniz. Bu uygulama, kullanıcılar ve diğer paydaşlar için önemli olan gereksinimleri test etmenizi sağlar ve gereksinimler değiştiklerinde testleri hızla güncelleştirmenizi sağlar. [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]kullanıyorsanız, modeller ve testler arasındaki bağlantıları da koruyabilirsiniz.
@@ -118,45 +118,45 @@ Assert (countAfter == countBefore = 1);
  Her iki durumda da, gereksinimler modeli ile sistem testleri arasında olduğu gibi model öğeleriyle alt sistem testleri arasında bir ilişki kurebilirsiniz.
 
 ### <a name="isolate-components-with-provided-and-required-interfaces"></a>Sağlanan ve Gerekli Arabirimlerle Bileşenleri Yalıtma
- Bir bileşenin sisteminizin veya dış hizmetlerinizin diğer bölümlerine sahip olduğu tüm bağımlılıkları belirlemek ve bunları gerekli arabirimler olarak göstermek yararlıdır. Bu alıştırma genellikle, tasarımın geri kalanından çok daha fazla ayrılmış ve kolayca ayrılabilir bir şekilde yeniden tasarlamasına yol açar.
+ Bir bileşenin sistem veya dış hizmetlerinizin diğer bölümlerine sahip olduğu tüm bağımlılıkları tanımlamak ve bunları Gerekli Arabirimler olarak temsil etmek yararlıdır. Bu alıştırma genellikle bileşeni tasarımının geri kalanından çok daha ayrılabilir ve kolayca ayrılabilir hale gelen bazı yeniden tasarımlara neden olur.
 
- Bu ayrılma avantajı, bileşenin genellikle kullandığı hizmetlerin sahte nesneleriyle değiştirilerek test için yürütülemeidir. Bunlar, test amaçları için ayarlanan bileşenlerdir. Bir sahte bileşen, bileşeninizin gerektirdiği arabirimi sağlar ve bunları benzetimli verilerle sorgular. Sahte bileşenler, bileşenin tüm arabirimlerine bağlanabilmiş olan bir bütün test bandı parçasını oluşturur.
+ Bu özelliğin bir avantajı, bileşenin test için yürütülerek yerine genellikle kullandığı sahte nesneler olmasıdır. Bunlar test amacıyla ayarlanmış bileşenlerdir. Sahte bir bileşen, bileşeninizin gerektirdiği arabirimi sağlar ve simülasyon verileriyle sorguları yanıtlar. Sahte bileşenler, bileşenin tüm arabirimleri ile bağlantı kurabilirsiniz tam bir test sıyrıtının bir parçası olur.
 
- Sahte testin bir avantajı, bileşeninizin kullanacağı diğer bileşenler hala geliştirme aşamasında olduğundan, bileşenlerinizi geliştirebileceğiniz bir avantajdır.
+ Sahte testin bir avantajı, bileşeninizi geliştirebilirken, hizmetlerini kullana diğer bileşenler hala geliştirme aşamasındadır.
 
-## <a name="maintain-the-relationships-between-tests-and-model"></a>Testler ve model arasındaki Ilişkileri koruma
- Birkaç haftada bir yineleme gerçekleştiren tipik bir projede, gereksinim incelemesi her yinelemenin başlangıcında yakınında tutulur. Toplantıda bir sonraki yinelemede teslim edilecek özellikler ele alınmaktadır. Gereksinimler modeli, geliştirilecek eylem kavramlarını, senaryoları ve işlem dizilerini tartışmak için kullanılabilir. İş hissedarları öncelikleri, geliştiriciler tahminleri yapar ve test ediciler her bir özelliğin beklenen davranışının doğru yakalandığından emin olur.
+## <a name="maintain-the-relationships-between-tests-and-model"></a>Testler ve Model Arasındaki İlişkileri Koruma
+ Birkaç haftada bir yineleme gerçekleştiren tipik bir projede, her yinelemenin başlangıcına yakın bir gereksinimler gözden geçirmesi gerçekleştirildi. Toplantı, bir sonraki yinelemede teslim edilecek özellikleri ele alır. Gereksinimler modeli, geliştirilecek kavramları, senaryoları ve eylem dizilerini tartışmanıza yardımcı olmak için kullanılabilir. İş paydaşları öncelikleri belirlemekte, geliştiriciler tahminde bulunuyor ve testçiler her özelliğin beklenen davranışının doğru bir şekilde yakalanmasına yardımcı olur.
 
- Sınama yazma, bir gereksinimi tanımlamanın en etkili yoludur ve ayrıca bir kişinin gerekli olanları anlayacağından emin olmanın etkili bir yoludur. Ancak, bir belirtim atölyesi sırasında testlerin yazılması çok uzun sürer, model oluşturma işlemi çok daha hızlı bir şekilde yapılabilir.
+ Test yazma, gereksinimi tanımlamanın en etkili yoludur ve aynı zamanda bir kişinin gerekli olan şeyi net bir şekilde anlayamalarını sağlamak için etkili bir yoldur. Ancak, test yazmanın belirtim atölyesinde yapılması çok uzun sürerken model oluşturma çok daha hızlı bir şekilde yapılabilir.
 
- Bir test noktasından, gereksinimler modeli testler için bir toplu değer olarak görülebilir. Bu nedenle, proje genelinde testler ve modeller arasındaki ilişkinin korunması önemlidir.
+ Test açısından bir gereksinimler modeli, testlerin kısa bir noktası olarak görülebilir. Bu nedenle, proje boyunca testler ve model arasındaki ilişkiyi korumak önemlidir.
 
-## <a name="attaching-test-cases-to-model-elements"></a><a name="Attaching"></a> Model öğelerine test durumları iliştirme
- Projeniz kullanıyorsa [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , testlerinizi modelinizdeki öğelere bağlayabilirsiniz. Bu, gereksinimlerdeki bir değişiklikten etkilenen testleri hızlı bir şekilde bulmanıza olanak sağlar ve bir gereksinimin gerçekleştirilme kapsamını izlemenize yardımcı olur.
+## <a name="attaching-test-cases-to-model-elements"></a><a name="Attaching"></a> Model Öğelerine Test Çalışmalarını Ekleme
+ Projeniz [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] kullanıyorsa, testleri modelinizin öğelerine bağabilirsiniz. Bu, gereksinimlerde yapılan bir değişiklikten etkilenen testleri hızlı bir şekilde bulmanıza olanak sağlar ve bir gereksinimin ne ölçüde gerçekleştiriliyor olduğunu izlemenizi sağlar.
 
- Testleri tüm öğe türlerine bağlayabilirsiniz. İşte bazı örnekler:
+ Testleri her tür öğeye bebilirsiniz. İşte bazı örnekler:
 
-- Kullanım örneğini, onu uygulayan testlere bağlayın.
+- Kullanım büyük/küçük harf kullanımını bunu kullanan testlere bağlama.
 
-- Kullanım örneği sonkoşulun yan tümcesini veya hedefini, kullanım örneğine bağlı açıklamaların üzerine yazın ve ardından her açıklamaya test bağlayın.
+- Kullanım durumu son koşul veya hedefinin yan tümcelerini kullanım durumuna bağlı açıklamalara yazın ve ardından testleri her açıklamaya bağlama.
 
-- Sınıf diyagramlarındaki veya Etkinlik diyagramlarındaki açıklamalarda sabit kurallar yazın ve bunları testlerle ilişkilendirin.
+- Sınıf diyagramları veya etkinlik diyagramları hakkında açıklamalarda sabit kurallar yazın ve bunları testlere bağlama.
 
-- Testleri bir etkinlik diyagramına veya tek tek etkinliklere bağlayın.
+- Testleri bir etkinlik diyagramına veya tek tek etkinliklere bağlama.
 
-- Bir test paketini bileşene bağlayın veya sınar.
+- Bir test paketini test olduğu bileşene veya alt sisteme bağlama.
 
-#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Testleri model öğesine veya ilişkiye bağlamak için
+#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Testleri bir model öğesine veya ilişkiye bağlama
 
-1. İçinde [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] , bir gereksinim oluşturun ve üzerinde bir test paketi temel alır.
+1. içinde, [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] bir gereksinim oluşturun ve bir test paketini temel alan bir paket oluşturun.
 
-    Oluşturduğunuz gereksinim içindeki bir iş öğesidir [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] . Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak, bir kullanıcı hikayesi, gereksinim veya kullanım örneği iş öğesi olabilir. Daha fazla bilgi için bkz. [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true).
+    Oluşturma gereksinimi, içinde bir iş [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] öğesidir. Projenizin Team Foundation ile kullandığı işlem şablonuna bağlı olarak bir Kullanıcı Hikayesi, Gereksinim veya Kullanım Durumu iş öğesi olabilir. Daha fazla bilgi için [bkz. Çevik araçlar ve Çevik proje yönetimi hakkında.](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)
 
-2. Gereksinim iş öğesini modelinizdeki bir veya daha fazla öğeye bağlayın.
+2. Gereksinim iş öğesini modelinize bir veya daha fazla öğeye bağlama.
 
-    Modelleme diyagramında bir öğeye, açıklamaya veya ilişkiye sağ tıklayın ve sonra **Iş öğesine bağla**' ya tıklayın.
+    Modelleme diyagramında bir öğeye, açıklamaya veya ilişkiye sağ tıklayın ve ardından İş Öğesine **Bağlantı'ya tıklayın.**
 
-3. Test paketine, model öğesinde ifade edilen gereksinimi doğrulayan test çalışmalarına ekleyin.
+3. Test paketine, model öğesinde ifade edildi gereksinimini doğru eden test testlerini ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

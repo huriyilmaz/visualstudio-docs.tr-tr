@@ -1,6 +1,6 @@
 ---
 title: Breakpoint-Related Yöntemleri | Microsoft Docs
-description: Visual Studio hata ayıklama, kodda bir konuma başarıyla bağlı olan bağlı kesme noktaları ve henüz bağlı olan bekleyen kesme noktaları destekler.
+description: Visual Studio hata ayıklaması, kodda bir konuma başarıyla bağlı olan bağlı kesme noktaları ve henüz bağlı olan bekleyen kesme noktaları destekler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,14 +11,15 @@ ms.assetid: a6f77bf0-bf81-443f-8683-5f12075bbe10
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec218cea05dffc1c558cabdef47895da9ad7ba9c
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: ad634ddce8f42c8bf5e183ebdf8f75389553dba5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901506"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073441"
 ---
 # <a name="breakpoint-related-methods"></a>Kesme noktasıyla ilgili yöntemler
 Hata ayıklama altyapısı (DE), kesme noktası ayarını desteklemeli. Visual Studio hata ayıklama aşağıdaki kesme noktası türlerini destekler:
@@ -34,7 +35,7 @@ Hata ayıklama altyapısı (DE), kesme noktası ayarını desteklemeli. Visual S
 ## <a name="discussion"></a>Tartışma
  Örneğin, yönergeler henüz yüklenmemişse bekleyen bir kesme noktası oluşur. Kod yüklendiğinde bekleyen kesme noktaları, koda kesme yönergeleri eklemek için koda önceden verilen konumda bağlamayı dener. Olaylar, bağlamanın başarılı olduğunu göstermek veya bağlama hataları olduğunu bildirmek için oturum hata ayıklama yöneticisine (SDM) gönderilir.
 
- Bekleyen bir kesme noktası, karşılık gelen bağlı kesme noktalarına ait kendi iç listesini de yönetir. Bekleyen bir kesme noktası, koda birçok kesme noktası eklemeye neden olabilir. Hata Visual Studio arabiriminde bekleyen kesme noktalarına ve buna karşılık gelen bağlı kesme noktalarına bir ağaç görünümü yer almaktadır.
+ Bekleyen bir kesme noktası, karşılık gelen bağlı kesme noktalarına ait kendi iç listesini de yönetir. Bekleyen bir kesme noktası, koda birçok kesme noktası eklemeye neden olabilir. Hata Visual Studio arabiriminde bekleyen kesme noktaları ve buna karşılık gelen sınır kesme noktaları ağaç görünümü gösterir.
 
  Bekleyen kesme noktaları oluşturma ve kullanma, [IDebugEngine2::CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) yönteminin ve aşağıdaki [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimlerinin yöntemlerinin uygulanmasını gerektirir.
 
@@ -82,7 +83,7 @@ Hata ayıklama altyapısı (DE), kesme noktası ayarını desteklemeli. Visual S
 |[GetBreakpointType](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)|Kesme noktası türünü alır.|
 |[GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)|Bir kesme noktası çözümleme bilgilerini alır.|
 
- Kaynak kodu bir kesme noktasıyla görüntülemek [için IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve/veya [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)yöntemlerini uygulamanız gerekir.
+ Kaynak kodu bir kesme noktası içinde görüntülemek için [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve/veya [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)yöntemlerini uygulamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yürütme denetimi ve durum değerlendirmesi](../../extensibility/debugger/execution-control-and-state-evaluation.md)
