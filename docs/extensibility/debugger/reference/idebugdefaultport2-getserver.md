@@ -11,17 +11,18 @@ ms.assetid: cacb4b74-0f39-471c-af38-54b73f5b2868
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e26356b01a04d736f9131c2762c897b6ce258997
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f841379db4154c424b59ce9223f374243d53288c9d3e3a5cb3d35e5cbba05415
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077466"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417541"
 ---
 # <a name="idebugdefaultport2getserver"></a>IDebugDefaultPort2::GetServer
 Bu yöntem, bu bağlantı noktasının açık olduğu sunucuya bir arabirim edinir.
@@ -48,7 +49,7 @@ dışı [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcore
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) , Visual Studio tarafından uygulanır ve bağlantı noktasının bulunduğu sunucuyu temsil eder.
+ [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) Visual Studio tarafından uygulanır ve bağlantı noktasının bulunduğu sunucuyu temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

@@ -1,6 +1,6 @@
 ---
-description: Satır numarası sayısını alır.
-title: 'IDiaEnumLineNumbers:: get_Count | Microsoft Docs'
+description: Satır numaralarının sayısını verir.
+title: IDiaEnumLineNumbers::get_Count | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cc56a003fb0c4658b757652006c6f0154f9d1272f639736a49f2435c9de65a1f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a72c34ef5c1ca1ddfc19e20291cfea8249a7857e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380489"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036546"
 ---
 # <a name="idiaenumlinenumbersget_count"></a>IDiaEnumLineNumbers::get_Count
-Satır numarası sayısını alır.
+Satır numaralarının sayısını verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_Count (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı Satır numarası sayısını döndürür.
+[out] Satır numaralarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

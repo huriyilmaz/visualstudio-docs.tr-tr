@@ -1,21 +1,21 @@
 ---
-title: Visual Studio test denetleyicisi 2019 iş yükü ve bileşen kimlikleri
+title: Visual Studio Test denetleyicisi 2019 iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Visual Studio iş yükünü ve bileşen kimliklerini kullanarak otomatikleştirilmiş testleri birden çok makineye dağıtma
+description: otomatikleştirilmiş testleri birden çok makineye dağıtmak için Visual Studio iş yükü ve bileşen kimliklerini kullanma
 keywords: ''
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
-ms.date: 05/24/2021
+ms.date: 08/10/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: f72eea5ebbe8ca6f8197002c03237733af6bc2c2
-ms.sourcegitcommit: 18e7300d4878f2fcd0263a4aff31a755ae8fc289
+ms.openlocfilehash: d375c9a583ee706d2e86c520972003029b987442
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110449935"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028141"
 ---
 ## <a name="test-controller"></a>Test denetleyicisi
 

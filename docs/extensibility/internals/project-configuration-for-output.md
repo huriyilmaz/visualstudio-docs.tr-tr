@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc071f765756007ceb2c3e50c424bd758a9111437d3218f0da20db7d2fd50c65
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bde6407304114c7e5fb70388e43c9eabe6d53c31
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388583"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049759"
 ---
 # <a name="project-configuration-for-output"></a>Çıkış için Proje Yapılandırması
 Her yapılandırma, yürütülebilir dosya veya kaynak dosyaları gibi çıkış öğeleri üreten bir dizi derleme işlemini desteklemektedir. Bu çıkış öğeleri kullanıcıya özeldir ve yürütülebilir dosyalar (.exe, .dll, .lib) ve kaynak dosyalar (.idl, .h dosyaları) gibi ilgili çıkış türlerini bağlantılı gruplara yerleştirebilirsiniz.

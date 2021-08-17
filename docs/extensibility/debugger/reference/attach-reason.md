@@ -11,17 +11,18 @@ ms.assetid: 159fb70b-a344-4ba6-9115-b7eaa16e228f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9da162dd2c477d5b901be6c622e2456f44d26a35
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 185cec33a3ea8d6538ae6d820f0690bc68b5270daa74161d46f4788137b234e2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085435"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121434496"
 ---
 # <a name="attach_reason"></a>ATTACH_REASON
 Hata ayıklama altyapısının (DE) bir program düğümüne iliştirme nedenini belirtir.

@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, hata ayıklama adresinde kodu derlemek için kullanılan dili alır.
-title: 'IDebugSymbolProvider:: GetLanguage | Microsoft Docs'
+description: Bu yöntem, kodu hata ayıklama adreslerinde derlemek için kullanılan dili alır.
+title: IDebugSymbolProvider::GetLanguage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: e4142183-3d8b-418f-907f-4ee4c753d8ce
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e7bcf2bd16212767fc8eff6106cdb3602bc293c9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d3df12a86aef556c450c9861fa98eb2659ac070a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086995"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029664"
 ---
 # <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
-Bu yöntem, hata ayıklama adresinde kodu derlemek için kullanılan dili alır.
+Bu yöntem, kodu hata ayıklama adreslerinde derlemek için kullanılan dili alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +47,19 @@ int GetLanguage(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen bir adres nesnesi.
+[in] [IDebugAddress arabirimiyle temsil edilen bir adres](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi.
 
 `pguidLanguage`\
-dışı `GUID` Dili belirten bir döndürür.
+[out] Dili `GUID` belirten bir döndürür.
 
 `pguidLanguageVendor`\
-dışı `GUID` Dili satıcıyı belirten bir döndürür.
+[out] Dil `GUID` satıcısını belirten bir döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata ayıklama altyapısı, doğru ifade değerlendiricisi seçmek için gereken bilgileri almak üzere bu yöntemi çağırır.
+ Hata ayıklama altyapısı, doğru ifade değerlendiriciyi seçmek için gereken bilgileri almak için bu yöntemi arar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

@@ -1,6 +1,6 @@
 ---
-description: Bir tablo numaralandırma dizisini başlangıca sıfırlar.
-title: 'IDiaEnumTables:: Reset | Microsoft Docs'
+description: Tabloların bir numaralama dizisini en başta sıfırlar.
+title: IDiaEnumTables::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 033039f4-5132-48c4-ba46-376243e3519f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 57a0f32362f2a6bd19c79aee32e32d0ffbd1d93b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b561b1888c705a8443ee485c8bf6da292f010bac4e0bc482b9ccd5f1c849ddb8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157877"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345087"
 ---
 # <a name="idiaenumtablesreset"></a>IDiaEnumTables::Reset
-Bir numaralandırma dizisini başlangıca sıfırlar.
+Bir numaralama dizisini en başta sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 

@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 073ad50f3bc5bc135e6fd7f22afcbaac721f8d99e08c8862816672387c111b32
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 70d99cb76530f6f5b0452063c2d1d0aa21629e34
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440688"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083056"
 ---
 # <a name="how-to-programmatically-sort-data-in-worksheets"></a>Nasıl yapılır: çalışma sayfalarındaki verileri program aracılığıyla sıralama
   Çalışma zamanında çalışma sayfası aralıkları ve listelerinde bulunan verileri sıralayabilirsiniz. Aşağıdaki kod, ilk sütundaki verilerin adlı çok sütunlu bir aralığı `Fruits` ve sonra ikinci sütundaki verileri sıralar.

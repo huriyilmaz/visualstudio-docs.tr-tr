@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e2aa32e5bf04e4f5c931ec3e8de3d156f7c8bcebb993749d8e348075523a7be4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 683164a2a3c6e6e63d4a783d55ea481d3eb8547f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390365"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065104"
 ---
 # <a name="debug_custom_viewer"></a>DEBUG_CUSTOM_VIEWER
 Özel görüntüleyiciyi veya tür görselleştiriciyi tanımlayan yapı.

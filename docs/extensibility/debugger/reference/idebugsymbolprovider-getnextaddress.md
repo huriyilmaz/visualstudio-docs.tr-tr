@@ -11,17 +11,18 @@ ms.assetid: 704eeb94-cb13-49d1-82b6-7d83ed0f19c0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dc269dcfc472c2f8bb3e5a9ed9a91ecd25292870
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 35016b6b332e1ed4fe81ca784242f1081cb885d3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075581"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029638"
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
 Bir yöntemde belirli bir hata ayıklama adresini izleyen hata ayıklama adresini alır.

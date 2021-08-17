@@ -1,6 +1,6 @@
 ---
-title: Kullanmaya başlayın (Visual Studio 'da Office geliştirme)
-description: Office çözümleri oluşturmak için Visual Studio 'da Microsoft Office geliştirici araçlarını kullanmaya nasıl başlayabileceğinizi öğrenin.
+title: başlarken (Visual Studio Office geliştirme)
+description: Office çözümleri derlemek için Visual Studio Microsoft Office geliştirici araçlarını kullanmaya nasıl başlayabileceğinizi öğrenin.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 08/14/2019
@@ -13,52 +13,53 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c6946da0f432eea5a2368820bc44da5449c8303d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bce4ad2f525efe84eafaf8be7680cdc04aaebeb01486bab271b7dd71255ab230
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895225"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352077"
 ---
-# <a name="get-started-office-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da Office geliştirme)
-  Bu bölümde, Visual Studio 'da Microsoft Office geliştirici araçlarını kullanmaya başlamanıza yardımcı olacak konular yer almaktadır.
+# <a name="get-started-office-development-in-visual-studio"></a>başlarken (Visual Studio Office geliştirme)
+  bu bölümde Visual Studio Microsoft Office geliştirici araçlarını kullanmaya başlamanıza yardımcı olacak konular yer almaktadır.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 
- Visual Studio 'da Office çözümleri geliştirmeye yönelik arka plan bilgileri sağlar.
+ Visual Studio Office çözümleri geliştirmeye yönelik arka plan bilgileri sağlar.
 
-- [.NET Framework 4 ' ü veya .NET Framework 4,5 ' i hedefleyen Office projelerinin tasarımında yapılan değişiklikler](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
+- [.NET Framework 4 veya .NET Framework 4,5 ' i hedefleyen Office projelerinin tasarımında yapılan değişiklikler](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
- Veya sonraki sürümlerini hedefleyen Office projelerinin yeni tasarımını açıklar [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ve Office projelerinde veya daha sonraki bir sürümüne geçiş yaptığınız koda yapılan değişiklikleri listeler [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
+ veya sonraki bir sürümü hedefleyen Office projelerinin yeni tasarımını açıklar [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ve ya da daha yenisine geçiş yaptığınız Office projelerde koda yapılan değişiklikleri listeler [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
 
-- [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
+- [Office uygulama ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
 
- Şerit genişletilebilirliği, özel görev bölmeleri, Eylemler bölmeleri ve form bölgeleri gibi Office geliştirme özelliklerini kullanmak için hangi uygulamaların ve projelerin gerekli olduğunu açıklar.
+ şerit genişletilebilirliği, özel görev bölmeleri, eylemler bölmeleri ve form bölgeleri gibi Office geliştirme özelliklerini kullanmak için hangi uygulamaların ve projelerin gerektiğini açıklar.
 
 - [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md)
 
- Office geliştirme araçları, Office çözümlerini son kullanıcı bilgisayarlarında ve Office birincil birlikte çalışma derlemelerinin çalışmasına olanak tanıyan çalışma zamanının yüklenmesiyle ilgili bilgi ve adımları sağlar.
+ Office geliştirme araçlarını, Office çözümlerin son kullanıcı bilgisayarlarında çalışmasını sağlayan çalışma zamanının ve Office birincil birlikte çalışma derlemelerinin yüklenmesiyle ilgili bilgileri ve adımları sağlar.
 
-- [Excel için başlangıç programı belge düzeyi özelleştirmelerini kullanmaya başlama](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
+- [Excel için program belge düzeyi özelleştirmelerini kullanmaya başlayın](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
 
- Excel için belge düzeyinde özelleştirmeler oluşturmak üzere Visual Studio 'Yu kullanmak için gereken önemli kavramların bir özetini sağlar.
+ Excel için belge düzeyi özelleştirmeleri oluşturmak üzere Visual Studio kullanmak için gereken önemli kavramların özetini sağlar.
 
 - [Word için belge düzeyi özelleştirmeleri Programlamaya Başlama](../vsto/getting-started-programming-document-level-customizations-for-word.md)
 
- Word için belge düzeyi özelleştirmeler oluşturmak üzere Visual Studio 'Yu kullanmak için gereken önemli kavramların bir özetini sağlar.
+ Word için belge düzeyi özelleştirmesi oluşturmak üzere Visual Studio kullanmak için gereken önemli kavramların özetini sağlar.
 
-- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
+- [VSTO eklentileriyle çalışmaya başlama](../vsto/getting-started-programming-vsto-add-ins.md)
 
- Microsoft Office uygulamalar için Office (VSTO) eklentileri için uygulama düzeyi Visual Studio Araçları oluşturmak üzere Visual Studio 'Yu kullanmak için gereken önemli kavramların bir özetini sağlar.
+ Microsoft Office uygulamaları için uygulama düzeyi Office için Visual Studio Araçları (VSTO) eklentileri oluşturmak üzere Visual Studio kullanmak için gereken önemli kavramların özetini sağlar.
 
-- [Visual Studio 'da VBA ve Office çözümleri karşılaştırması](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)
+- [Visual Studio karşılaştırılan VBA ve Office çözümleri](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)
 
- Office çözümleri geliştirmek için Visual Studio 'daki Visual Basic for Applications ve Office geliştirme araçlarının göreli güçlerini açıklar.
+ Office çözümleri geliştirmeye yönelik Visual Studio Visual Basic for Applications ve Office geliştirme araçlarının göreli güçlerini açıklar.
 
 - [Office programlamada ortak görevler](../vsto/common-tasks-in-office-programming.md)
 
@@ -69,9 +70,9 @@ ms.locfileid: "99895225"
 
  Ortak görevleri gerçekleştirmeye yönelik adım adım yönergeler veren örnek uygulamalara ve konulara bağlantılar sağlar.
 
-- [Visual Studio 'da Office çözümlerinin mimarisi](../vsto/architecture-of-office-solutions-in-visual-studio.md)
+- [Visual Studio Office çözümlerin mimarisi](../vsto/architecture-of-office-solutions-in-visual-studio.md)
 
- Office çözümlerinin bileşenlerini ve bunların tasarım zamanı ve çalışma zamanında nasıl çalıştığını açıklar.
+ Office çözümlerin bileşenlerini ve bunların tasarım zamanı ve çalışma zamanında nasıl çalıştığını açıklar.
 
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 
@@ -79,14 +80,14 @@ ms.locfileid: "99895225"
 
 - [Office çözümleri geliştirme](../vsto/developing-office-solutions.md)
 
- Office projesinde kod ve Kullanıcı arabirimi özelleştirmelerinin nasıl uygulanacağı hakkında bilgi sağlar.
+ Office bir projede kod ve kullanıcı arabirimi özelleştirmelerinin nasıl uygulanacağı hakkında bilgi sağlar.
 
-- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
+- [Office çözümleri güvenli hale getirme](../vsto/securing-office-solutions.md)
 
  Office çözümleri için güvenlik gereksinimleri hakkında bilgi sağlar.
 
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 
- Kullanıcılarınız için Office çözümlerini nasıl kullanabileceğiniz hakkında bilgi sağlar ve bir dağıtım yöntemi seçip güvenliği ayarladığınızda göz önünde bulundurmanız gereken başlıca sorunları açıklar.
+ kullanıcılarınız için Office çözümlerin nasıl kullanılabildiği hakkında bilgi sağlar ve bir dağıtım yöntemi seçip güvenlik ayarı yaparken göz önünde bulundurmanız gereken başlıca sorunları açıklar.
 
-- [Office teknik makaleleri ve görsel nasıl yapılır konusunda Visual Studio Araçları](/previous-versions/office/developer/office-2007/bb871648(v=office.12)) Visual Studio kullanılarak oluşturulan Office çözümleriyle ilgili videolar ve teknik makalelere bağlantılar içerir.
+- [teknik makaleler ve görsel nasıl yapılır? Office için Visual Studio Araçları](/previous-versions/office/developer/office-2007/bb871648(v=office.12)) Visual Studio kullanılarak oluşturulan Office çözümlerle ilgili videolar ve teknik makalelere bağlantılar içerir.

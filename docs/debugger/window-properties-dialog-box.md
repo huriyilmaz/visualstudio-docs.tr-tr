@@ -1,6 +1,6 @@
 ---
-title: Pencere özellikleri Iletişim kutusu | Microsoft Docs
-description: Windows görünümünde listelenen bir pencerenin özelliklerini görüntülemeyi öğrenin. Bu makalede, özellikleri belgeleyen diğer makalelerin bağlantıları bulunur.
+title: Pencere Özellikleri İletişim Kutusu | Microsoft Docs
+description: Görünüm'de listelenen bir pencerenin özelliklerini görüntülemeyi Windows öğrenin. Bu makalede, özellikleri belgeleen diğer makalelerin bağlantıları vardır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,38 +13,38 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 46e4f448d7e98cbf8fd9594f9273c3907807b4e939985a6e962353ea7bdbc508
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 234b46288d32689ae868af78cf3a72b183516818
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239538"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035871"
 ---
 # <a name="window-properties-dialog-box"></a>Pencere Özellikleri İletişim Kutusu
-Belirli bir pencere hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. bu iletişim kutusunu görüntülemek için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
+Belirli bir pencere hakkında daha fazla bilgi için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı Görünüm [penceresine Windows hareket](../debugger/windows-view.md) ettirin. Ağaçta herhangi bir pencere düğümünü seçin ve ardından Görünüm **menüsünden** **Özellikler'i** seçin.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Genel sekmesi. pencere özellikleri Iletişim kutusu](../debugger/general-tab-window-properties-dialog-box.md) Seçilen pencere hakkındaki bilgileri gösterir.
+ [Genel Sekmesi. Pencere Özellikleri İletişim Kutusu](../debugger/general-tab-window-properties-dialog-box.md) Seçilen pencereyle ilgili bilgileri gösterir.
 
- [Stiller sekmesi. pencere özellikleri Iletişim kutusu](../debugger/styles-tab-window-properties-dialog-box.md) Seçilen pencereye uygulanan stilleri gösterir.
+ [Stiller Sekmesi. Pencere Özellikleri İletişim Kutusu](../debugger/styles-tab-window-properties-dialog-box.md) Seçilen pencereye uygulanan stilleri gösterir.
 
- [Windows sekmesi. pencere özellikleri iletişim kutusu](../debugger/windows-tab-window-properties-dialog-box.md) Seçili pencereyle ilgili Windows hakkındaki bilgileri gösterir.
+ [Windows Sekmesi. Pencere Özellikleri İletişim Kutusu](../debugger/windows-tab-window-properties-dialog-box.md) Seçilen pencereyle ilgili pencerelerle ilgili bilgileri gösterir.
 
- [Sınıf sekmesi. pencere özellikleri Iletişim kutusu](../debugger/class-tab-window-properties-dialog-box.md) Seçili pencerenin sınıfındaki bilgileri gösterir.
+ [Sınıf Sekmesi. Pencere Özellikleri İletişim Kutusu](../debugger/class-tab-window-properties-dialog-box.md) Seçilen pencerenin sınıfıyla ilgili bilgileri gösterir.
 
- [Işlem sekmesi. pencere özellikleri Iletişim kutusu](../debugger/process-tab-window-properties-dialog-box.md) Seçili pencerenin işlemini tanımlar.
+ [İşlem Sekmesi. Pencere Özellikleri İletişim Kutusu](../debugger/process-tab-window-properties-dialog-box.md) Seçilen pencerenin işlemini tanımlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Pencere arama Iletişim kutusu](../debugger/window-search-dialog-box.md) Windows görünümünde belirli bir pencerenin düğümünü bulmak için kullanılır.
+ [Pencere Arama İletişim Kutusu](../debugger/window-search-dialog-box.md) Bu görünümde belirli bir pencereye yönelik düğümü bulmak Windows kullanılır.
 
- [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.
+ [Spy++ Başvurusu](../debugger/spy-increment-reference.md) Her Spy++ menüsünü ve iletişim kutusunu açıklayan bölümler içerir.
 
- [Bulucu aracını kullanma](../debugger/how-to-use-the-finder-tool.md) Bu aracın Windows 'un özellikler veya iletiler için nasıl tarayacağını gösterir.
+ [Bulıcı Aracını Kullanma](../debugger/how-to-use-the-finder-tool.md) Bu aracın özellikler veya iletiler için pencereleri nasıl tarar?
 
- [Windows görünümünde pencere aranıyor](../debugger/how-to-search-for-a-window-in-windows-view.md) Windows görünümünde belirli bir pencerenin nasıl bulunacağını açıklar.
+ [Windows Görünümünde Pencere Arama](../debugger/how-to-search-for-a-window-in-windows-view.md) Bir görünümde belirli bir pencereyi Windows açıklar.
 
- [Windows görünümü](../debugger/windows-view.md) Kullanılabilir pencerelerin ve denetimlerin ağaç görünümünü görüntüler.
+ [Windows Görünümü](../debugger/windows-view.md) Kullanılabilir pencerelerin ve denetimlerin ağaç görünümünü görüntüler.
 
- [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
+ [Spy++ Görünümleri](../debugger/spy-increment-views.md) Pencerelerin, iletilerin, işlemlerin ve iş parçacıklarının Spy++ ağaç görünümlerini açıklar.
 
- [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.
+ [Spy++ kullanma](../debugger/using-spy-increment.md) Spy++ aracını tanıtıyor ve nasıl kullanıLl olduğunu açıklar.

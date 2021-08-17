@@ -1,5 +1,5 @@
 ---
-description: Yığın çerçevesi türünü belirtir.
+description: Yığın çerçeve türünü belirtir.
 title: StackFrameTypeEnum | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 383f6f5144eb9be777fc76af145d2e07a8ac1086101f44893173dd833237f79c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 400a1db1f8a5ee5ffde7e00a428d83d170dc0d05
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379644"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097602"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
-Yığın çerçevesi türünü belirtir.
+Yığın çerçeve türünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,23 +38,23 @@ enum StackFrameTypeEnum {
 ```
 
 ## <a name="elements"></a>Öğeler
-`FrameTypeFPO` Çerçeve işaretçisi atlandı; FPO bilgileri kullanılabilir.
+`FrameTypeFPO` Çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.
 
-`FrameTypeTrap` Çekirdek Yakalama çerçevesi.
+`FrameTypeTrap` Çekirdek Tuzak Çerçevesi.
 
-`FrameTypeTSS` Çekirdek Yakalama çerçevesi.
+`FrameTypeTSS` Çekirdek Tuzak Çerçevesi.
 
 `FrameTypeStandard` Standart EBP yığın çerçevesi.
 
-`FrameTypeFrameData` Çerçeve işaretçisi atlandı; Çerçeve verisi bilgileri kullanılabilir.
+`FrameTypeFrameData` Çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.
 
-`FrameTypeUnknown` Hata ayıklama bilgisi olan çerçeve.
+`FrameTypeUnknown` Herhangi bir hata ayıklama bilgisi olmayan çerçeve.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralamada yer alan değerler, [IDiaStackFrame::get_type yöntemine yapılan bir çağrıyla](../../debugger/debug-interface-access/idiastackframe-get-type.md) döndürülür.
+Bu Numaralandırmadaki değerler, [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) metoduna yapılan bir çağrı tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst.h
+Üst bilgi: cvconst. h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

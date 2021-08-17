@@ -9,14 +9,15 @@ ms.assetid: 78338537-b451-4655-9f04-a21f6fe197a3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2873b0e1ff5d89ba7da8f346ebfa3307d14c5385
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: b3dd80191b215a61ea31075cb0bf273f27ab37da435a3642dce928be9a4ff149
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903859"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121434704"
 ---
 # <a name="asynctaskmethodbuilderobjectidfordebugger-property"></a>AsyncTaskMethodBuilder. ObjectIdForDebugger özelliği
 Bu oluşturucuyu hata ayıklayıcıya benzersiz bir şekilde tanımlamak için kullanılabilecek bir nesne alır.
@@ -25,7 +26,7 @@ Bu oluşturucuyu hata ayıklayıcıya benzersiz bir şekilde tanımlamak için k
 
  **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ bu iç üyeye .NET Framework erişemediği için, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 

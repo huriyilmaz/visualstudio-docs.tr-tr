@@ -1,6 +1,6 @@
 ---
 title: JavaScript ve TypeScript
-description: Mac için Visual Studio'de JavaScript desteği hakkında Mac için Visual Studio
+description: Mac için Visual Studio'de JavaScript desteği hakkında bilgi
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/03/2018
@@ -23,7 +23,7 @@ JavaScript yazma hakkında daha fazla bilgi için bkz. [JavaScript Kodu](/script
 
 ## <a name="adding-a-javascript-file"></a>JavaScript dosyası ekleme
 
-JavaScript dosyaları genellikle yeni ASP.NET Core iletişim kutusu aracılığıyla yeni **projelere** eklenir. Javascript dosyası eklemek için projenize sağ tıklayın ve Yeni Dosya **ekle'> gidin:**
+JavaScript dosyaları genellikle Yeni Dosya ASP.NET Core **projelerine** eklenir. Javascript dosyası eklemek için projenize sağ tıklayın ve Yeni Dosya **ekle'> gidin:**
 
 ![projeye yeni dosyalar ekleme](media/javascript-image1.png)
 
@@ -33,7 +33,7 @@ Yeni Dosya **iletişim kutusunda Web** Uygulaması Boş **JS >** Veya Web Uygula
 
 ## <a name="intellisense"></a>IntelliSense
 
-Mac için Visual Studio, [intellisense JavaScript Language Service,](/visualstudio/ide/javascript-intellisense) kod yazarken akıllı kod tamamlama, parametre bilgileri ve üye listelerine sahip olmak için JavaScript Language Service'yi kullanır.
+Mac için Visual Studio IntelliSense [JavaScript Language Service,](/visualstudio/ide/javascript-intellisense) kod yazarken akıllı kod tamamlama, parametre bilgileri ve üye listelerine sahip olmak için JavaScript Language Service'yi kullanır.
 
 Mac için Visual Studio JavaScript IntelliSense tür çıkarılması, JSDoc veya TypeScript bildirimlerine dayalı olabilir.
 

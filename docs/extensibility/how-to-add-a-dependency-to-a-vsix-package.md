@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl: VSIX PaketiNe Bağımlılık Ekleme | Microsoft Docs'
+title: 'Nasıl: VSIX Paketine Bağımlılık Ekleme | Microsoft Docs'
 description: Hedef bilgisayarda zaten mevcut olan bağımlılıkları yüken bir VSIX paket dağıtımı ayarlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -16,14 +16,14 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58453344957b5264e9f3061878953c2007d56c238f71b4200c6d518df6d7af1c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0335e243fe0779060282cecdc58ad9deb608c948
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359929"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050422"
 ---
-# <a name="how-to-add-a-dependency-to-a-vsix-package"></a>Nasıl: VSIX paketine bağımlılık ekleme
+# <a name="how-to-add-a-dependency-to-a-vsix-package"></a>Nasıl olur: VSIX paketine bağımlılık ekleme
 
 Hedef bilgisayarda zaten mevcut olan bağımlılıkları yüken bir VSIX paket dağıtımı kurabilirsiniz. Bunu gerçekleştirmek için, VSIX bağımlılıklarını *source.extension.vsixmanifest dosyasına* dahil edin.
 

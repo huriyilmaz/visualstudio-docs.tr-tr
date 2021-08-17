@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 2f58bc342eb4066bff744912bbdcd154c9dc580ecacb17f5f1117acc91a1cb62
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 31165f4d3f9b70fe9848163c8a3771cc8e886e1f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121409650"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027194"
 ---
 # <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Visual Studio SharePoint araçlarını genişletme
   Visual Studio ' deki SharePoint araçları birçok uygulama geliştirme senaryosunun gereksinimlerini karşılar. Ancak, sizin veya diğer geliştiricilerin gerek duyduğu işlevleri sağlamayan durumlar bulabilirsiniz. bu durumlarda, ihtiyacınız olan işlevleri oluşturmak için SharePoint araçlarını genişletebilirsiniz.

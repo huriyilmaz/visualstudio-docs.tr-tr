@@ -11,14 +11,15 @@ ms.assetid: 904223b1-6e26-4980-b310-d0b222cdbbbd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 887737ac28204d9abdbf3b7002233af6d0b2e465
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fe47a750625698f2fc930ed51ca9d8cedcec103b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156813"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036338"
 ---
 # <a name="idiastackwalkhelpersearchforreturnaddress"></a>IDiaStackWalkHelper::searchForReturnAddress
 En yakın işlev dönüş adresi için belirtilen yığın çerçevesini arar.

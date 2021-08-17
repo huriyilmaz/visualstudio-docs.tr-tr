@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e2db37f558aaa39444deef994a885fc424cede528588e376d1382231a7d3a13f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bdc240af5e2f075d3c107ac719097e0b57a3bb44
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415448"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029482"
 ---
 # <a name="ienumdebugcustomattributesgetcount"></a>IEnumDebugCustomAttributes::GetCount
 Bir Numaralandırıcı içindeki özel özniteliklerin sayısını alır.

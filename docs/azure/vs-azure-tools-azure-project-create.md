@@ -8,12 +8,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/19/2019
 ms.author: ghogen
-ms.openlocfilehash: 0e7030349f47990f9ee12f8d51856bf8dcb5f0b18bf4c8a2bd32001d5b12cc82
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b5893787a1a5a7569c072d49fddd6902118f6aed
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121406744"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082419"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>Visual Studio ile Azure bulut hizmeti projesi oluşturması
 

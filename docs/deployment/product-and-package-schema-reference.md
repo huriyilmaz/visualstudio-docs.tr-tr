@@ -1,6 +1,6 @@
 ---
-title: Ürün ve paket şema başvurusu | Microsoft Docs
-description: ClickOnce uygulaması için gereken dış bağımlılıkları açıklayan bir XML bildirimi olan ürün dosyası hakkında bilgi edinin.
+title: Ürün ve Paket Şema Başvurusu | Microsoft Docs
+description: Bir uygulamanın ihtiyaç ettiği dış bağımlılıkları açıklayan bir XML bildirimi olan ürün dosyası hakkında ClickOnce öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -25,37 +25,38 @@ ms.assetid: 5a74878f-b896-4cca-b968-98d00fe78fb0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e409ba89a9ca472f0025ddcf81383ed83641db5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 420d3ca592094b67210efd625a17d97545e7ec54
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918365"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065234"
 ---
 # <a name="product-and-package-schema-reference"></a>Ürün ve paket şema başvurusu
-*Ürün dosyası* , bir uygulamanın gerektirdiği tüm dış bağımlılıkları açıklayan bir XML bildirimidir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Dış bağımlılıklara örnek olarak .NET Framework ve Microsoft Data Access Components (MDAC) bulunur. Bir paket dosyası bir ürün dosyasına benzer, ancak yerelleştirilmiş derlemeler, lisans sözleşmeleri ve belgeler gibi bir bağımlılığın kültüre bağlı bileşenleri yüklemek için kullanılır.
+Ürün *dosyası,* bir uygulamanın ihtiyaç ettiği tüm dış bağımlılıkları açıklayan bir XML [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirimidir. Dış bağımlılıklara örnek olarak .NET Framework Ve Microsoft Veri Erişim Bileşenleri (MDAC) yer alır. Paket dosyası bir ürün dosyasına benzer, ancak yerelleştirilmiş derlemeler, lisans anlaşmaları ve belgeler gibi bağımlılığın kültüre bağımlı bileşenlerini yüklemek için kullanılır.
 
- Ürün ve paket dosyası `Product` `Package` , her biri aşağıdaki öğeleri içeren en üst düzey veya öğeden oluşur.
+ Ürün ve paket dosyası, her biri aşağıdaki öğeleri içeren bir üst `Product` `Package` düzey veya öğeden oluşur.
 
 |Öğe|Açıklama|Öznitelikler|
 |-------------|-----------------|----------------|
-|[\<Product> Dosyalarında](../deployment/product-element-bootstrapper.md)|Ürün dosyaları için gerekli en üst düzey öğe.|Yok|
-|[\<Package> Dosyalarında](../deployment/package-element-bootstrapper.md)|Paket dosyaları için gerekli en üst düzey öğe.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
-|[\<RelatedProducts> Dosyalarında](../deployment/relatedproducts-element-bootstrapper.md)|Ürün dosyaları için isteğe bağlı öğe. Bu ürünün yüklediği veya bağlı olduğu diğer ürünler.|Yok|
-|[\<InstallChecks> Dosyalarında](../deployment/installchecks-element-bootstrapper.md)|Gerekli öğe. Yükleme sırasında yerel bilgisayarda gerçekleştirilecek bağımlılık denetimlerini listeler.|Yok|
-|[\<Commands> Dosyalarında](../deployment/commands-element-bootstrapper.md)|Gerekli öğe.  , Tarafından açıklanan bir veya daha fazla yükleme denetimini yürütür `InstallChecks` ve Denetim başarısız olduğunda hangi paketin yükleneceğini belirtir.|Yok|
-|[\<PackageFiles> Dosyalarında](../deployment/packagefiles-element-bootstrapper.md)|Gerekli öğe. Bu yükleme işlemi tarafından yüklenebilen paketleri listeler.|Yok|
-|[\<Strings> Dosyalarında](../deployment/strings-element-bootstrapper.md)|Gerekli öğe. Ürün adının ve hata dizelerinin yerelleştirilmiş sürümlerini depolar.|Yok|
+|[\<Product> Öğe](../deployment/product-element-bootstrapper.md)|Ürün dosyaları için gerekli üst düzey öğe.|Hiçbiri|
+|[\<Package> Öğe](../deployment/package-element-bootstrapper.md)|Paket dosyaları için gerekli üst düzey öğe.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
+|[\<RelatedProducts> Öğe](../deployment/relatedproducts-element-bootstrapper.md)|Ürün dosyaları için isteğe bağlı öğesi. Bu ürünün yüklemiş olduğu veya bağlı olduğu diğer ürünler.|Hiçbiri|
+|[\<InstallChecks> Öğe](../deployment/installchecks-element-bootstrapper.md)|Gerekli öğe. Yükleme sırasında yerel bilgisayarda gerçekleştirecek bağımlılık denetimlerini listeler.|Hiçbiri|
+|[\<Commands> Öğe](../deployment/commands-element-bootstrapper.md)|Gerekli öğe.  tarafından açıklandığı gibi bir veya daha fazla yükleme denetimi yürütür ve denetim `InstallChecks` başarısız olursa hangi paketin yük kurulacak olduğunu ifade ediyor.|Hiçbiri|
+|[\<PackageFiles> Öğe](../deployment/packagefiles-element-bootstrapper.md)|Gerekli öğe. Bu yükleme işlemi tarafından yüklenebilirsiniz paketleri listeler.|Hiçbiri|
+|[\<Strings> Öğe](../deployment/strings-element-bootstrapper.md)|Gerekli öğe. Ürün adı ve hata dizelerinin yerelleştirilmiş sürümlerini depolar.|Hiçbiri|
 
 ## <a name="remarks"></a>Açıklamalar
- Paket şeması, kendi kendine özgü bir mantığı içeren MS Build önyüklemesi görevi tarafından oluşturulan bir saplama programı olan *Setup.exe* tarafından kullanılır. Şema sürücüleri, yükleme işleminin her yönüyle.
+ Paket şeması, ms *Setup.exe* önyükleme görevi tarafından oluşturulan ve kendi çok az sabit kodlu mantığını içeren saplama programı olanSetup.exetarafından tüketilir. Şema, yükleme işleminin her yönünü destekler.
 
- `InstallChecks` setup.exe belirli bir paketin varlığı için gerçekleştirmesi gereken testler. `PackageFiles` Kurulum işleminin yüklenmesi gerekebilecek tüm paketleri listeler, belirli bir test başarısız olur. Komutları altındaki her komut girdisi tarafından tanımlanan testlerin birini yürütür `InstallChecks` ve `PackageFile` testin başarısız olması gerektiğini belirtir. `Strings`Ürün adlarını ve hata iletilerini yerelleştirmek için öğesini kullanabilirsiniz, böylece uygulamanızı istediğiniz sayıda dilde yüklemek için tek bir yükleme ikilisini kullanabilirsiniz.
+ `InstallChecks` bu setup.exe paketin varlığı için gerçekleştirmesi gereken testler. `PackageFiles` , verilen bir test başarısız olursa kurulum işleminin yüklemesi gerektirmiş olabileceği tüm paketleri listeler. Komutlar altındaki her Komut girişi, tarafından açıklanan testlerden birini yürütür ve testin `InstallChecks` başarısız `PackageFile` olması için çalıştıracakları testleri belirtir. Ürün adlarını ve hata iletilerini yerelleştirmek için öğesini kullanabilirsiniz, böylece herhangi bir sayıda dil için uygulamanızı yüklemek üzere tek bir yükleme `Strings` ikilisi kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, .NET Framework yüklemek için tüm ürün dosyalarını gösterir.
+ Aşağıdaki kod örneği, uygulamanın yüklemesi için eksiksiz bir ürün .NET Framework.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

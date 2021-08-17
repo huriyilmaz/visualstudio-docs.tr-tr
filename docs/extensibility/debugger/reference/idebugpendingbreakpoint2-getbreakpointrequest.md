@@ -1,6 +1,6 @@
 ---
-description: Bu bekleyen kesme noktasını oluşturmak için kullanılan kesme noktası isteğini alır.
-title: 'IDebugPendingBreakpoint2:: GetBreakpointRequest | Microsoft Docs'
+description: Bu bekleyen kesme noktası oluşturmak için kullanılan kesme noktası isteğini alır.
+title: IDebugPendingBreakpoint2::GetBreakpointRequest | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121339144"
 ---
 # <a name="idebugpendingbreakpoint2getbreakpointrequest"></a>IDebugPendingBreakpoint2::GetBreakpointRequest
-Bu bekleyen kesme noktasını oluşturmak için kullanılan kesme noktası isteğini alır.
+Bu bekleyen kesme noktası oluşturmak için kullanılan kesme noktası isteğini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,10 +44,10 @@ int GetBreakpointRequest(
 
 ## <a name="parameters"></a>Parametreler
 `ppBPRequest`\
-dışı Bu bekleyen kesme noktasını oluşturmak için kullanılan kesme noktası isteğini temsil eden bir [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) nesnesi döndürür.
+[out] Bekleyen bu kesme noktası oluşturmak için kullanılan kesme noktası isteğini temsil eden [bir IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

@@ -1,6 +1,6 @@
 ---
 title: Alt menüye en son kullanılan bir liste ekleme | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamındaki (IDE) bir alt menüye en son kullanılan menü komutlarını içeren dinamik bir liste eklemeyi öğrenin.
+description: Visual Studio tümleşik geliştirme ortamındaki (ıde) bir alt menüye en son kullanılan menü komutlarını içeren dinamik bir liste eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,19 +12,20 @@ ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb238afb0f583f1b913fbd87f4f50e43679ebd7d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 71c649d9eeb66b67cde133bef6a525427c618209
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060022"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035338"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>Alt menüye en son kullanılan bir liste ekleme
 Bu izlenecek yol, [bir menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md)ve bir alt menüye nasıl dinamik bir liste ekleneceğini gösterir. Dinamik liste, en son kullanılanlar (MRU) listesini oluşturma temelini oluşturur.
 
-Dinamik menü listesi, bir menüdeki yer tutucu ile başlar. Menü her gösterildiğinde, Visual Studio tümleşik geliştirme ortamı (IDE), yer tutucuya gösterilmesi gereken tüm komutlar için VSPackage ister. Dinamik bir liste, bir menü üzerinde herhangi bir yerde gerçekleşebilir. Bununla birlikte, dinamik listeler genellikle alt menülerde veya menülere göre kendi alt menülerinde depolanır ve görüntülenir. Bu tasarım düzenlerini kullanarak, menüdeki diğer komutların konumunu etkilemeden genişletmek ve sözleşme yapmak için dinamik komut listesini etkinleştirirsiniz. Bu kılavuzda, dinamik MRU listesi, alt menünün geri kalanından bir çizgi ile ayrılmış olan mevcut bir alt menünün altında görüntülenir.
+Dinamik menü listesi, bir menüdeki yer tutucu ile başlar. menü her gösterildiğinde, Visual Studio tümleşik geliştirme ortamı (ıde), yer tutucuya gösterilmesi gereken tüm komutlar için vspackage ister. Dinamik bir liste, bir menü üzerinde herhangi bir yerde gerçekleşebilir. Bununla birlikte, dinamik listeler genellikle alt menülerde veya menülere göre kendi alt menülerinde depolanır ve görüntülenir. Bu tasarım düzenlerini kullanarak, menüdeki diğer komutların konumunu etkilemeden genişletmek ve sözleşme yapmak için dinamik komut listesini etkinleştirirsiniz. Bu kılavuzda, dinamik MRU listesi, alt menünün geri kalanından bir çizgi ile ayrılmış olan mevcut bir alt menünün altında görüntülenir.
 
 Teknik olarak, dinamik bir liste bir araç çubuğuna da uygulanabilir. Ancak, Kullanıcı bunu değiştirmek için belirli adımlar almadığı takdirde bir araç çubuğunun değişmeden kalması gerektiğinden bu kullanım yaptık.
 
@@ -33,13 +34,13 @@ Bu izlenecek yol, her birinin seçildiği her seferinde (seçili öğe listenin 
 Menüler ve *. vsct* dosyaları hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
-Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
+bu yönergeyi izlemek için Visual Studio SDK 'sını yüklemelisiniz. daha fazla bilgi için bkz. [SDK Visual Studio](../extensibility/visual-studio-sdk.md).
 
 ## <a name="create-an-extension"></a>Uzantı oluşturma
 
 - Aşağıdaki yordamlarda değiştirilen alt menüyü oluşturmak için [menüye alt menü ekleme](../extensibility/adding-a-submenu-to-a-menu.md) içindeki yordamları izleyin.
 
-  Bu izlenecek yolda bulunan yordamlar, VSPackage adının, `TestCommand` [Visual Studio menü çubuğuna bir menü eklemek için](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)kullanılan addır.
+  bu yönergedeki yordamlar, `TestCommand` [Visual Studio menü çubuğuna bir menü eklemek için](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)kullanılan ad olan vspackage adının olduğunu varsayar.
 
 ## <a name="create-a-dynamic-item-list-command"></a>Dinamik öğe listesi komutu oluştur
 

@@ -1,6 +1,6 @@
 ---
-title: Visual Basic deyimlerini durdur | Microsoft Docs
-description: Visual Studio bir kesme noktası ayarlamaya yönelik programsal bir alternatif sağlayan Visual Basic Stop ifadesini inceleyin.
+title: Visual Basic |'de Stop Deyimleri Microsoft Docs
+description: Bir Visual Basic noktası ayarlamaya program aracılığıyla alternatif sağlayan Visual Basic Stop deyimini Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,24 +20,24 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f572626fd64359dd16e95fefc1d282af9e81a5e183e3e85c62ac41a62510fd0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 624f7f586e9051edfee4d16d8706df22de64fda4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121361762"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096901"
 ---
 # <a name="stop-statements-in-visual-basic"></a>Visual Basic'de durdur deyimleri
 
-Visual Basic Stop deyimleri, kesme noktası ayarlamaya yönelik bir alternatif sağlar. Hata ayıklayıcı bir stop ifadesiyle karşılaştığında, programın yürütülmesini keser (kesme moduna girer). C# programcıları, öğesine yapılan bir çağrı kullanarak aynı etkiyi elde edebilir <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .
+Visual Basic Stop deyimi, kesme noktası ayarlamaya programlı bir alternatif sağlar. Hata ayıklayıcısı bir Stop deyimiyle karşılaştığında programın yürütülmesini durdurur (kesme moduna girer). C# programcıları çağrısı kullanarak aynı etkiyi elde ediyor <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> olabilir.
 
-Bir stop ifadesini, kaynak kodunuzu düzenleyerek ayarlayabilir veya kaldırabilirsiniz. Bir kesme noktası gibi hata ayıklayıcı komutlarını kullanarak stop deyimlerini ayarlayamazsınız veya temizleyemezsiniz.
+Kaynak kodunuzu düzenleyerek Bir Stop deyimini ayarlayın veya kaldırın. Kesme noktası gibi hata ayıklayıcı komutlarını kullanarak Stop deyimlerini ayaramaz veya temizleyesiniz.
 
-End ifadesinin aksine, stop deyimleri değişkenleri sıfırlamaz veya size tasarım moduna geri döndürmez. Uygulamayı çalıştırmaya devam etmek için hata ayıklama menüsünden devam ' ı seçebilirsiniz.
+End deyiminden farklı olarak Stop deyimi değişkenleri sıfırlamaz veya sizi tasarım moduna geri dönmez. Uygulamayı çalıştırmaya devam etmek için Hata Ayıklama menüsünden Devam'ı seçebilirsiniz.
 
-hata ayıklayıcı dışında bir Visual Basic uygulaması çalıştırdığınızda, Just-ın-Time hata ayıklaması etkinse Stop deyimleri hata ayıklayıcıyı başlatır. Just-In-Time hata ayıklaması etkinleştirilmemişse, stop deyimleri bir End deyimmiş gibi davranır ve yürütmeyi sonlandırır. queryunload veya Unload olayı gerçekleşmez, bu nedenle tüm Stop deyimlerini Visual Basic uygulamanızın yayın sürümünden kaldırmanız gerekir. Daha fazla bilgi için bkz. [tam zamanında hata ayıklama](just-in-time-debugging-in-visual-studio.md).
+Hata ayıklayıcının Visual Basic bir uygulama çalıştırsanız, Tam Zamanında hata ayıklama etkinleştirilirse Bir Durdurma deyimi hata ayıklayıcıyı başlatıyor. Tam Zamanında hata ayıklama etkinleştirilmediyse Stop deyimi bir End deyimi gibi davranır ve yürütmeyi sonlandırılır. QueryUnload veya Unload olayı oluşmaz, bu nedenle tüm Stop deyimlerini uygulama uygulamanıza ilişkin Yayın sürümünden Visual Basic gerekir. Daha fazla bilgi için [bkz. Tam Zamanında Hata Ayıklama.](just-in-time-debugging-in-visual-studio.md)
 
- Stop deyimlerini kaldırma zorunludur kaçınmak için, koşullu derleme kullanabilirsiniz:
+ Stop deyimlerini kaldırma gereğini önlemek için koşullu derlemeyi kullanabilirsiniz:
 
 ```vb
 #If DEBUG Then
@@ -47,7 +47,7 @@ hata ayıklayıcı dışında bir Visual Basic uygulaması çalıştırdığın�
 #End If
 ```
 
-Diğer bir seçenek de <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> stop ifadesinin yerine bir ifade kullanmaktır. Bir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ifade yalnızca belirtilen koşul karşılanmazsa yürütmeyi keser. <xref:System.Diagnostics.Debug.Assert%2A> bir yayın sürümü oluşturduğunuzda deyimler otomatik olarak kaldırılır. Daha fazla bilgi için bkz. [Yönetilen koddaki Onaylamalar](assertions-in-managed-code.md). <xref:System.Diagnostics.Debug.Assert%2A>Her zaman hata ayıklama sürümünde yürütmeyi kesintiye neden olan bir bildirim istiyorsanız bunu yapabilirsiniz:
+Bir diğer alternatif de <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Stop deyimi yerine deyimi kullanmak olabilir. Deyimi <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> yalnızca belirtilen bir koşul karşılanmazsa yürütmeyi sonlar. <xref:System.Diagnostics.Debug.Assert%2A> bir Yayın sürümü derleme sırasında deyimleri otomatik olarak kaldırılır. Daha fazla bilgi için [bkz. Yönetilen Kodda Onaylar.](assertions-in-managed-code.md) Hata Ayıklama sürümünde yürütmeyi her zaman bozan bir deyime sahip <xref:System.Diagnostics.Debug.Assert%2A> olmak için şunları yapabiliriz:
 
 ```csharp
 Debug.Assert(false);
@@ -57,7 +57,7 @@ Debug.Assert(false);
 Debug.Assert(False)
 ```
 
-Ancak başka bir alternatif <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> yöntemi kullanmaktır:
+Bir diğer alternatif de yöntemini kullanmak <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> olabilir:
 
 ```csharp
 Debug.Fail("a clever output string goes here");
@@ -69,6 +69,6 @@ Debug.Fail("a clever output string goes here")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklayıcı güvenliği](debugger-security.md)
+- [Hata Ayıklayıcı Güvenliği](debugger-security.md)
 - [C#, F# ve Visual Basic Proje Türleri](debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
 - [Yönetilen Kodda Hata Ayıklama](debugging-managed-code.md)

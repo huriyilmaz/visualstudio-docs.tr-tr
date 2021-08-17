@@ -1,6 +1,6 @@
 ---
 title: Otomasyon Modeline Genel Bakış | Microsoft Docs
-description: Bir eklenti Visual Studio uzantısını yazarak bir dizi nesneden oluşan Visual Studio otomasyon modeli hakkında bilgi öğrenin.
+description: Eklenti veya Visual Studio yazarak bir dizi nesneden oluşan Visual Studio otomasyon modeli hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -43,7 +43,7 @@ Otomasyon modeli, eklenti veya uzantı için bir Visual Studio nesne kümesi iç
 
 - Oluşturma
 
-Otomasyon hakkında daha fazla bilgi için bkz. Visual Studio için [otomasyon ve genişletilebilirlik.](/previous-versions/visualstudio/visual-studio-2015/extensibility/extensibility-in-visual-studio?preserve-view=true&view=vs-2015) Bu belge ve bağlantı sağladığı belgeler, VSPackage'nız için nasıl otomasyon sağlamanız gerektiğiyle ilgili kararlar a yardımcı olur.
+Otomasyon hakkında daha fazla bilgi için [bkz.](/previous-versions/visualstudio/visual-studio-2015/extensibility/extensibility-in-visual-studio?preserve-view=true&view=vs-2015)Otomasyon ve Visual Studio. Bu belge ve bağlantı sağladığı belgeler, VSPackage'nız için nasıl otomasyon sağlamanız gerektiğiyle ilgili kararlar a yardımcı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl: Eklenti oluşturma](/previous-versions/80493a3w(v=vs.140))

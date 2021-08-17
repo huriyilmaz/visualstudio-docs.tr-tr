@@ -1,6 +1,6 @@
 ---
-title: Iç Içe projeler için AddItem Iletişim kutusunu filtreleme | Microsoft Docs
-description: üst projenin ıvsfilteraddprojectıtemdlg arabirimini uygulayarak Visual Studio iç içe geçmiş bir proje için addıtem iletişim kutusunu nasıl filtreleyeceğinizi öğrenin.
+title: İç İçe Projeler için AddItem İletişim Kutusunu Filtreleme | Microsoft Docs
+description: Üst projenin IVsFilterAddProjectItemDlg arabirimini kullanarak Visual Studio bir iç içe proje için AddItem iletişim kutusunu filtrelemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,26 +14,26 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bb4a9a76cc4ca074051ccb7ad48ae70b0e29e92
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: aa65af14d05b60e78643f03c1f74719fb1c25eadf246451287ed04d58723e4f4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122069945"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338013"
 ---
-# <a name="filter-the-additem-dialog-box-for-nested-projects"></a>İç içe projeler için AddItem iletişim kutusunu filtrele
-İç içe geçmiş bir proje için bir **ek iletişim kutusu** görüntülediğinizde, ana proje iletişim kutusunda hangi öğelerin görüntülendiğini denetleyebilir.
+# <a name="filter-the-additem-dialog-box-for-nested-projects"></a>İç içe projeler için AddItem iletişim kutusunu filtreleme
+İç içe bir proje **için AddItem** iletişim kutusu görüntülendiğinde, üst proje iletişim kutusunda hangi öğelerin görüntülendiğinden emin olabilir.
 
- Arabirim, ek <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> bir iletişim kutusunda olacak düğümleri filtrelemenizi sağlar.  Alt proje **AddItem** iletişim kutusunu görüntülediğinde, üst öğe `IVsFilterAddProjectItemDlg` arabirimi uygulayabilir ve aksi takdirde alt öğe projesinde görüntülenecek öğeleri filtreleyebilirsiniz.
+ Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> **AddItem** iletişim kutusunda olacak düğümleri filtrelemenize olanak sağlar. Alt proje **AddItem** iletişim kutusunu görüntülendiğinde üst öğe, alt projenin başka bir şekilde görüntülenebilir arabirimini ve `IVsFilterAddProjectItemDlg` filtre öğelerini uygulamaya ekleyebilir.
 
- projeler belirli üst projeler altında işleve göre gruplandırılırken, `IVsFilterAddProjectItemDlg` kullanıcının iç içe geçmiş bir projedeki kısayol menüsünde **Project öğe ekle** ' yi seçtiği zaman uygulayabilirsiniz. `IvsFilterAddProjectItemDlg displays`Yalnızca proje öğeleri veya bu gruba özgü dosyalar uygulama. diğer gruplar için Project öğeler, aynı dizinde depolansalar bile iletişim kutusunda filtrelenmez.
+ Projeler belirli üst projelerin altında işleve göre gruplanmışsa, kullanıcı iç içe bir proje içindeki kısayol menüsünden Project Öğe Ekle'yi seçerek `IVsFilterAddProjectItemDlg` bunu gerçekleştirebilirsiniz.  Yalnızca bu `IvsFilterAddProjectItemDlg displays` gruba özgü proje öğelerini veya dosyaları uygulama. Project grupların tüm öğeleri, aynı dizinde depolanmış olsalar bile iletişim kutusunun dışında filtrelenmiş olur.
 
- Bir kullanıcı alt öğe için **AddItem** iletişim kutusunu açtığında, ana projenin `IVsFilterAddProjectItemDlg` arabirim uygulanması çağrılır.
+ Kullanıcı alt öğe için **AddItem** iletişim kutusunu açtığında, üst projenin arabirim `IVsFilterAddProjectItemDlg` uygulaması çağrılır.
 
- `IVsFilterAddProjectItemDlg`Arabirim filtreleme kategorisine göre de uygulanabilir. Daha fazla bilgi için bkz. [Yeni öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) ve [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md).
+ Arabirim `IVsFilterAddProjectItemDlg` ayrıca kategoriye göre filtreleme de gerçekleştirebilirsiniz. Daha fazla bilgi için [Bkz. Yeni Öğe Ekle iletişim kutusuna öğe ekleme ve](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) Proje ve öğe [şablonlarını kaydetme.](../../extensibility/internals/registering-project-and-item-templates.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>
-- [Yeni öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
-- [Proje ve öğe şablonlarını Kaydet](../../extensibility/internals/registering-project-and-item-templates.md)
-- [İç içe projeler](../../extensibility/internals/nesting-projects.md)
+- [Yeni Öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
+- [Projeleri iç içe yerleştirme](../../extensibility/internals/nesting-projects.md)

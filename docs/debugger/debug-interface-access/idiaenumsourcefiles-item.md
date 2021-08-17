@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 798aa0aafc17e03ea56eecc7de46c273c3346396bca57990bc0c56e8f4eb67d8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0a47a77766489bbc99441cfdb95a25e4473cbcc8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392475"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097847"
 ---
 # <a name="idiaenumsourcefilesitem"></a>IDiaEnumSourceFiles::Item
 Bir dizin aracılığıyla bir kaynak dosyası alır.

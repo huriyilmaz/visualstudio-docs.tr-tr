@@ -1,6 +1,6 @@
 ---
-title: Wizardexgeri öğesi (Visual Studio şablonları) | Microsoft Docs
-description: Wizardexgeri öğesi ve Şablon Sihirbazı ' nı özelleştirmek için kayıt öğelerini nasıl içerdiği hakkında bilgi edinin.
+title: WizardExtension Öğesi (Visual Studio Şablonları) | Microsoft Docs
+description: WizardExtension öğesini ve şablon sihirbazını özelleştirmek için kayıt öğelerini nasıl içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,15 +16,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c32f9f2050e04741a2612de30e2718f45c0603de
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 41e17f80d2d0fb2de71a2187f42032a756aee2a21dc5a224579092344f0b234f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061816"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121334958"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension Öğesi (Visual Studio Şablonları)
-Şablon Sihirbazı ' nı özelleştirmek için kayıt öğelerini içerir.
+Şablon sihirbazını özelleştirmek için kayıt öğelerini içerir.
 
  \<VSTemplate> ... \<WizardExtension>
 
@@ -47,8 +47,8 @@ ms.locfileid: "105061816"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Bütünleştirilmiş Kod](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> Genel derleme önbelleğinde görüntülenen bir derlemenin adını veya tanımlayıcı adını belirtir. Öğesinde en az bir öğe olmalıdır `Assembly` `WizardExtension` .|
-|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> Arabirimi uygulayan sınıfın tam adı `IWizard` . Öğesinde en az bir öğe olmalıdır `FullClassName` `WizardExtension` .|
+|[Bütünleştirilmiş Kod](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> Genel derleme önbelleğinde görünen derlemenin adını veya güçlü adını belirtir. Bir öğede en az `Assembly` bir öğe `WizardExtension` olması gerekir.|
+|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|Gerekli öğe.<br /><br /> Arabirimi uygulayan sınıfın tam `IWizard` adı. Bir öğede en az `FullClassName` bir öğe `WizardExtension` olması gerekir.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
@@ -57,10 +57,10 @@ ms.locfileid: "105061816"
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Proje şablonu, öğe şablonu veya başlangıç seti için tüm meta verileri içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
- `WizardExtension` , öğesinin isteğe bağlı bir alt öğesidir `VSTemplate` .
+ `WizardExtension` isteğe bağlı bir alt `VSTemplate` öğesidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir Windows uygulaması için Standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+ Aşağıdaki örnek, bir uygulama için standart proje şablonunun meta [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] verilerini Windows göstermektedir.
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"

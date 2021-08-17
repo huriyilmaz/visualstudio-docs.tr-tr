@@ -1,6 +1,6 @@
 ---
-title: Spy Menü Komutları | Microsoft Docs
-description: Spy++ pencereleri ve görünümleri ile çalışmak için komutlar sunan Spy menüsünü keşfedin. Kullanılabilir komutlar Windows, İş Parçacıkları, Günlük İletileri ve Bul Penceresi'dir.
+title: Spy menü komutları | Microsoft Docs
+description: Spy + + Windows ve görünümleriyle çalışmak için komutlar sunan Spy menüsünü gezin. kullanılabilir komutlar Windows, süreçler, iş parçacıkları, günlük iletileri ve bulma penceresini içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,24 +13,24 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a1ee554206904c5f432fb6cc44a5496776a666baabcc7339fa63ad32e6033b15
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5786ac9ad94de46c9dfebffc862730f8fb63c646
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404276"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096875"
 ---
 # <a name="spy-menu-commands"></a>Spy Menü Komutları
-**Spy menüsü,** Spy++ öğeleri ve görünümleri ile Windows komutları sağlar.
+**spy** menüsü, spy + + Windows ve görünümleriyle çalışma komutları sağlar.
 
- **Windows** Yeni bir Windows açar.
+ **Windows** yeni bir Windows görünümü açar.
 
- **İşlemler** Yeni bir İşlemler görünümü açar.
+ **Süreçler** Yeni bir süreçler görünümü açar.
 
- **İş Parçacıkları** Yeni bir İş Parçacıkları görünümü açar.
+ **Iş parçacıkları** Yeni bir Iş parçacığı görünümü açar.
 
- **Günlük İletileri** Yeni bir İletiler görünümü açar ve görünüm [için İleti Seçenekleri İletişim](../debugger/message-options-dialog-box.md) Kutusu açılır.
+ **Günlük iletileri** Yeni bir Iletiler görünümü açar ve görünümün [Ileti seçenekleri Iletişim kutusunu](../debugger/message-options-dialog-box.md) açar.
 
- **Pencere Bul** Fareyle bir pencere seçmek için **BulWindow** iletişim kutusunu görüntüler.
+ **Pencereyi bul** Fare ile bir pencere seçmek için **FindWindow** iletişim kutusunu görüntüler.
 
- **Çıkış** Spy++ yardımcı programını kapatır.
+ **Çıkış** Spy + + yardımcı programını kapatır.

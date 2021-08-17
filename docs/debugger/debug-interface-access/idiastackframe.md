@@ -11,14 +11,15 @@ ms.assetid: 486d25b8-a590-41c1-bdb5-faff3ae35632
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f6f53ae3f6314a0236282f1bb664fd56618f0bad
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: dfc07bf755951afb303be684803aa226c40147fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102162322"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036369"
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
 Yığın çerçevesinin özelliklerini gösterir.

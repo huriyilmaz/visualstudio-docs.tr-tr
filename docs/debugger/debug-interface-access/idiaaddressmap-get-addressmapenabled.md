@@ -11,14 +11,15 @@ ms.assetid: 6183dc5e-befa-4e5a-ae5a-f4aa24f3ed9e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a55ff89e97d1898ec2ced2b62f7cdfa5a0df817
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 592beea4cd85ad14b878886e0cbd8c94ad4d88eb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149111"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081693"
 ---
 # <a name="idiaaddressmapget_addressmapenabled"></a>IDiaAddressMap::get_addressMapEnabled
 Belirli bir oturum için bir adres eşlemesinin yapılıp yapılmayacağını belirtir.

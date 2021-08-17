@@ -11,14 +11,15 @@ ms.assetid: c0496f6f-f8f2-435f-8674-6c32db6c5934
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ddb088d2427c910bc8418923a2ffe794108340b9
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 309726ede99b25bd41ab65d7dfaf52cc9915d32a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148033"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081488"
 ---
 # <a name="idiasectioncontribget_compiland"></a>IDiaSectionContrib::get_compiland
 Bu bölüme katkıda bulunan compiland simgesine bir başvuru alır.

@@ -1,6 +1,6 @@
 ---
-description: Belirtilen sanal adres (VA) aralığında yer alan satırlar için satır numarası bilgilerini alır.
-title: 'IDiaSession:: findLinesByVA | Microsoft Docs'
+description: Belirtilen sanal adres (VA) aralığındaki satırlar için satır numarası bilgilerini alın.
+title: IDiaSession::findLinesByVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cd4d27c96a6a08c6fc63d38d9845d30366be760c7db9e5fd34dfac55fc9ae497
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fca9006f0b7a556be022eaac9682aa58b9e70228
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380145"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081352"
 ---
 # <a name="idiasessionfindlinesbyva"></a>IDiaSession::findLinesByVA
-Belirtilen sanal adres (VA) aralığında yer alan satırlar için satır numarası bilgilerini alır.
+Belirtilen sanal adres (VA) aralığındaki satırlar için satır numarası bilgilerini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,18 +37,18 @@ HRESULT findLinesByVA (
 #### <a name="parameters"></a>Parametreler
 `va`
 
-'ndaki Adresi bir VA olarak belirtir.
+[in] Adresi VA olarak belirtir.
 
 `length`
 
-'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığının bayt sayısını belirtir.
+[in] Bu sorguyla birlikte ele alınan adres aralığının bayt sayısını belirtir.
 
 `ppResult`
 
-dışı Belirtilen adres aralığını kapsayan tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
+[out] Belirtilen adres aralığını içeren tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
 
 ## <a name="example"></a>Örnek
-Bu örnek, işlevin sanal adresini ve uzunluğunu kullanarak bir işlevde bulunan tüm satır numaralarını elde eden bir işlevi gösterir.
+Bu örnek, işlevin sanal adresini ve uzunluğunu kullanarak bir işlevde yer alan tüm satır numaralarını alan bir işlevi gösterir.
 
 ```C++
 IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession)

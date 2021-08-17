@@ -1,6 +1,6 @@
 ---
-title: targetplatformname öğesi (Visual Studio şablonları) | Microsoft Docs
-description: TargetPlatformName öğesi ve proje şablonunun hedeflediği platformu nasıl belirttiği hakkında bilgi edinin.
+title: TargetPlatformName Öğesi (Visual Studio Şablonları) | Microsoft Docs
+description: TargetPlatformName öğesini ve proje şablonunun hedeflemektedir platformunu nasıl belirtir hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -19,7 +19,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121358901"
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName Öğesi (Visual Studio Şablonları)
-Proje şablonunun hedeflediği platformu belirtir. Bu öğe, uygulama oluşturmak için bir proje şablonu kullanılacağını belirtmek için kullanılır [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] .
+Proje şablonunun hedefley olduğu platformu belirtir. Bu öğe, uygulama oluşturmak için bir proje şablonu kullanmak için [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ Proje şablonunun hedeflediği platformu belirtir. Bu öğe, uygulama oluşturma
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|Proje şablonunun hedeflediği işlem sisteminin sürümünü belirtir.|
+|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|Proje şablonu tarafından hedeflenen işlem sisteminin sürümünü belirtir.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırarak Yeni Öğe Ekle iletişim kutusunda **Project** **şekilde** tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Metnin **Windows** olması gerekir.
+ Metin, olarak **Windows.**
 
 ## <a name="example"></a>Örnek
- Bu örnek, proje şablonunun hedeflediği [!INCLUDE[win8](../debugger/includes/win8_md.md)] veya daha sonraki bir sürümünü belirtir.
+ Bu örnek, proje şablonunun veya sonraki bir şablonu [!INCLUDE[win8](../debugger/includes/win8_md.md)] hedefle olduğunu belirtir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">

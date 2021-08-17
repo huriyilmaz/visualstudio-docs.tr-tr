@@ -10,14 +10,15 @@ ms.assetid: 61d24820-0cd9-48b6-8674-6813f7493237
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ed7ce97e6ff7e8801953877ed80afa7ca262f20
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2c09fd6f9862fb3c3426b74bb7c0f62e947bc6050ea02edcbc81990f283bee58
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097233"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121343018"
 ---
 # <a name="enable-a-program-to-be-debugged"></a>Bir programın ayıklanamayacağını etkinleştir
 Hata ayıklama altyapısından (DE) bir programda hata ayıklamadan önce, önce bunu başlatmanız veya mevcut bir programa bağlamanız gerekir.

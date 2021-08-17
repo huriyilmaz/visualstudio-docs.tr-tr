@@ -1,6 +1,6 @@
 ---
 title: Windows görünümünde pencere ara | Microsoft Docs
-description: Visual Studio 'da tanıtıcısını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini kullanarak Spy + + aracının Windows görünümündeki belirli bir pencereyi arayın.
+description: Visual Studio ' de onun tutamacını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini kullanarak Spy + + aracının Windows görünümünde belirli bir pencereyi arayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,23 +10,24 @@ ms.assetid: 30306970-b861-4315-acf8-f86a43d4e73b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c0051a17d3a2360776f48cee2bd7f1d2f11a2492
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: afadf34d121a5746deda017041c13d170c871392cee482e55866655f485e7530
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920104"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453494"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>Nasıl Yapılır: Pencereler Görünümünde Pencere Arama
-Windows görünümündeki belirli bir pencereyi, onun tanıtıcısını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini arama ölçütü olarak kullanarak arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, pencere ağacındaki seçili pencerenin özniteliklerini gösterir.
+Windows görünümünde belirli bir pencereyi, onun tanıtıcısını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini arama ölçütü olarak kullanarak arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, pencere ağacındaki seçili pencerenin özniteliklerini gösterir.
 
  İkinci düzeye (masaüstünün alt öğesi olan tüm pencereler) genişletilmiş ağacıyla başlayın, böylece Masaüstü düzeyi pencereleri sınıf adı ve başlığıyla tanımlayabilmenizi sağlayabilirsiniz. Masaüstü düzeyi bir pencere seçtikten sonra, belirli bir alt pencereyi bulmak için bu düzeyi genişletebilirsiniz.
 
-### <a name="to-search-for-a-window-in-windows-view"></a>Windows görünümünde bir pencere aramak için
+### <a name="to-search-for-a-window-in-windows-view"></a>Windows görünümünde pencere aramak için
 
-1. Windows 'u Spy + +, [Windows görünüm](../debugger/windows-view.md) penceresi ve hedef pencere görünür olacak şekilde düzenleyin.
+1. windows 'u Spy + +, [Windows görünüm](../debugger/windows-view.md) penceresi ve hedef pencere görünür olacak şekilde düzenleyin.
 
 2. **Arama** menüsünde, **pencereyi bul**' u seçin.
 
@@ -49,4 +50,4 @@ Windows görünümündeki belirli bir pencereyi, onun tanıtıcısını, başlı
 
 5. **Tamam**'a tıklayın.
 
-    Eşleşen bir pencere bulunursa, [Windows görünümü](../debugger/windows-view.md) penceresinde vurgulanır.
+    eşleşen bir pencere bulunursa, [Windows görünümü](../debugger/windows-view.md) penceresinde vurgulanır.

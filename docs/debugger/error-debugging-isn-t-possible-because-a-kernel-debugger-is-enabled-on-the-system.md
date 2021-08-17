@@ -1,6 +1,6 @@
 ---
-title: '&apos;Sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden dolayı hata ayıklama yapılamıyor | Microsoft Docs'
-description: bu ileti, hata ayıklama modunda başlatılan bir Windows 7 veya Windows Vista sisteminde yönetilen kodda hata ayıklamaya çalıştığınızda oluşur ve uygulama clr 2,0, 3,0 veya 3,5 clr sürümünü kullanır.
+title: System &apos; |'da Çekirdek Hata Ayıklayıcısı Etkinleştirildiğinden Hata Ayıklama | Microsoft Docs
+description: Bu ileti, hata ayıklama modunda başlatan Windows 7 veya Windows Vista sisteminde yönetilen kodda hata ayıklamaya çalıştığınızda ve uygulama CLR CLR 2.0, 3.0 veya 3.5 sürümünü kullandığında oluşur.
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -18,43 +18,43 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b1e1983706e66781b36cfa779f3bc3eb9737d23ffb472d6a911988b49c3a0ef8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8a09e47641ac8b94a3c7a60b39c4260bdd6ea5af
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240279"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036034"
 ---
-# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Hata: sistemde bir çekirdek hata ayıklayıcısı etkinleştirildiğinden, ISN&#39;t hata ayıklaması mümkün
-Yönetilen kodda hata ayıklarken, aşağıdaki hata iletisini alabilirsiniz:
+# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>Hata: Sistemde&#39;Hata Ayıklayıcısı Etkinleştirildiğinden Hata Ayıklama Mümkün Değil
+Yönetilen kodda hata ayıklarken aşağıdaki hata iletisini alabilirsiniz:
 
 ```cmd
 Debugging isn't possible because a kernel debugger is enabled on the system
 ```
 
- Bu ileti, yönetilen kodda hata ayıklamaya çalıştığınızda oluşur:
+ Yönetilen kodda hata ayıklamaya çalışsanız bu ileti oluşur:
 
-- [!INCLUDE[win7](../debugger/includes/win7_md.md)] [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] hata ayıklama modunda başlatılan bir veya sisteminde.
+- hata [!INCLUDE[win7](../debugger/includes/win7_md.md)] ayıklama [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] modunda başlatan bir veya sisteminde.
 
-- uygulama CLR 2,0, 3,0 veya 3,5 CLR sürümünü kullanır.
+- uygulama CLR CLR 2.0, 3.0 veya 3.5 sürümünü kullanır.
 
 ## <a name="solution"></a>Çözüm
 
-#### <a name="to-fix-this-problem"></a>Bu sorunu gidermek için
+#### <a name="to-fix-this-problem"></a>Bu sorunu düzeltmek için
 
-- Uygulamanızı CLR sürüm 4,0 veya 4,5 kullanmak üzere yükseltin
-
-   —veya—
-
-- İçinde çekirdek hata ayıklamayı ve hata ayıklamayı devre dışı bırakın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+- ClR sürüm 4.0 veya 4.5'i kullanmak için uygulamanızı yükseltin
 
    —veya—
 
-- Yerine çekirdek hata ayıklayıcısını kullanarak hata ayıklayın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+- içinde çekirdek hata ayıklamayı ve hata ayıklamayı devre dışı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bırakma.
 
    —veya—
 
-- Çekirdek hata ayıklayıcısında Kullanıcı modu özel durumlarını devre dışı bırakın.
+- yerine Çekirdek Hata Ayıklayıcı'sını kullanarak hata [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayıklar.
+
+   —veya—
+
+- Çekirdek Hata Ayıklayıcısı'da kullanıcı modu özel durumlarını devre dışı bırak.
 
 #### <a name="to-disable-kernel-debugging-in-the-current-session"></a>Geçerli oturumda çekirdek hata ayıklamasını devre dışı bırakmak için
 
@@ -64,7 +64,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
     Kdbgctrl.exe -d
     ```
 
-#### <a name="to-disable-kernel-debugging-for-all-sessions-windows-vista-and-windows-7"></a>tüm oturumlarda çekirdek hata ayıklamayı devre dışı bırakmak için (Windows Vista ve Windows 7)
+#### <a name="to-disable-kernel-debugging-for-all-sessions-windows-vista-and-windows-7"></a>Tüm oturumlarda çekirdek hata ayıklamasını devre dışı bırakmak için (Windows Vista ve Windows 7)
 
 1. Komut istemine şunları yazın:
 
@@ -74,15 +74,15 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
 2. Bilgisayarı yeniden başlatın.
 
-#### <a name="to-disable-kernel-debugging-for-all-sessions-other-windows-operating-systems"></a>tüm oturumlarda çekirdek hata ayıklamayı devre dışı bırakmak için (diğer Windows işletim sistemleri)
+#### <a name="to-disable-kernel-debugging-for-all-sessions-other-windows-operating-systems"></a>Tüm oturumlar (diğer işletim sistemleri) için çekirdek hata Windows devre dışı bırakmak için
 
-1. Sistem sürücünüzde boot.ini bulun (genellikle C: \\ ). boot.ini dosyası gizli ve salt okunurdur. Bu nedenle, görüntülemek için aşağıdaki komutu kullanmanız gerekir:
+1. Sistem boot.ini (genellikle C: ) konumlarını \\ bulun. boot.ini dosyası gizli ve salt okunur olabilir. Bu nedenle, bunu görmek için aşağıdaki komutu kullanabilirsiniz:
 
     ```cmd
     dir /ASH
     ```
 
-2. Not Defteri kullanarak boot.ini açın ve aşağıdaki seçenekleri kaldırın:
+2. Aşağıdaki boot.ini kullanarak Not Defteri ve aşağıdaki seçenekleri kaldırın:
 
     ```cmd
     /debug
@@ -92,14 +92,14 @@ Debugging isn't possible because a kernel debugger is enabled on the system
 
 3. Bilgisayarı yeniden başlatın.
 
-#### <a name="to-debug-with-the-kernel-debugger"></a>Çekirdek hata ayıklayıcı ile hata ayıklamak için
+#### <a name="to-debug-with-the-kernel-debugger"></a>Çekirdek Hata Ayıklayıcısı ile hata ayıklamak için
 
-1. Çekirdek hata ayıklayıcı bağlanarsa, hata ayıklamaya devam etmek isteyip istemediğinizi soran bir ileti görürsünüz. Devam etmek için düğmeye tıklayın.
+1. Çekirdek Hata Ayıklayıcısı'nın bağlı olduğu bir iletiyle hata ayıklamaya devam etmek isteyip istemediklerini sorarsınız. Devam etmek için düğmeye tıklayın.
 
-2. `User break exception(Int 3).`Bu durum oluşursa, hata ayıklamaya devam etmek için aşağıdaki çekirdek hata ayıklayıcı komutunu yazın:
+2. Bu durumda hata `User break exception(Int 3).` ayıklamaya devam etmek için aşağıdaki Çekirdek Hata Ayıklayıcısı komutunu yazın:
 
      `gn`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklayıcı Güvenliği](../debugger/debugger-security.md)
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)

@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c316f66a20f692ccdc20ed4b709efb0522e517d34b95f558be1e3ef30bbffe54
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c8d82d1e4839a4830eb9a2ac0ac49f80f8e80138
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413914"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028624"
 ---
 # <a name="signing-vsix-packages"></a>VSIX Paketlerini İmzalama
 uzantı derlemelerinin Visual Studio çalıştırılmadan önce imzalanması gerekmez, ancak bunu yapmak iyi bir uygulamadır.

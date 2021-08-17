@@ -1,6 +1,6 @@
 ---
 title: WCF hizmetlerine adımla | Microsoft Docs
-description: Windows Communication Foundation (WCF) hizmetine adımlayın. İstemci ile aynı Visual Studio çözümindeyse, WCF hizmeti içindeki kesme noktaları ' nı ziyaret edin.
+description: Windows Communication Foundation (WCF) hizmetine adımlayın. istemci ile aynı Visual Studio çözümindeyse, WCF hizmeti içindeki kesme noktaları ' nı ziyaret edin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,14 +16,15 @@ ms.assetid: 9893ad01-54af-499f-85a6-9d1cfe6eb640
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f3a884698586cdd9a89ff62a090f02af3953a91
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a73d6438547138c016533562a0b7ae71f894967b3d5da08c9d2408fdc0029bb6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896641"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453455"
 ---
 # <a name="how-to-step-into-wcf-services"></a>Nasıl Yapılır: WCF Hizmetleri İçine Adımlama
 İçinde [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] , BIR WCF hizmetine adım adım ekleyebilirsiniz. WCF hizmeti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] istemcisiyle aynı çözümde ise, WCF hizmetinin içindeki kesme noktalarına de ulaşırsınız.
@@ -34,7 +35,7 @@ ms.locfileid: "99896641"
 
 1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]WCF istemcisi ve WCF hizmeti projelerini içeren bir çözüm oluşturun.
 
-2. Çözüm Gezgini, WCF Istemci projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' ya tıklayın.
+2. Çözüm Gezgini, WCF Istemci projesine sağ tıklayın ve ardından **başlangıç Project olarak ayarla**' ya tıklayın.
 
 3. app.config veya web.config dosyasında hata ayıklamayı etkinleştirin. Daha fazla bilgi için bkz. [WCF hata ayıklama kısıtlamaları](../debugger/limitations-on-wcf-debugging.md).
 

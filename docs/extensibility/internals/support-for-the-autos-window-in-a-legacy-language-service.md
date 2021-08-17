@@ -11,14 +11,15 @@ ms.assetid: 47d40aae-7a3c-41e1-a949-34989924aefb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70a8697027cde07ca2b30d01a73a80d771155c5c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6806f4ce6cbdc02ac716c5567af4ce2e6829e69dadd17cd7ff2c1631aee6b00a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080638"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121432027"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Eski dil hizmetindeki oto penceresi için destek
 

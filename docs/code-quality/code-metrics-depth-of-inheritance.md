@@ -1,71 +1,72 @@
 ---
-title: Kod ölçümleri-devralma derinliği
+title: Kod ölçümleri - Devralma derinliği
 ms.date: 1/8/2021
-description: Visual Studio 'da kod ölçümleri için devralma ölçüsünün derinliğini öğrenin.
+description: Kod ölçümleri için devralma ölçümlerinin derinliği hakkında bilgi Visual Studio.
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d6ac085463087fc73aac4429488ab475e91c10f
-ms.sourcegitcommit: cc66c898ce82f9f1159bd505647f315792cac9fc
+ms.openlocfilehash: 6b212f349435f395df9e3acb8a802f51de949f63ae2c494dc30fb08c7091c517
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "109682697"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121405580"
 ---
-# <a name="code-metrics---depth-of-inheritance-dit"></a>Kod ölçümleri-devralmanın derinliği (DıT)
+# <a name="code-metrics---depth-of-inheritance-dit"></a>Kod ölçümleri - Devralma derinliği (DIT)
 
-Bu makalede, nesne odaklı analiz için özel olarak tasarlanan ölçülerden biri hakkında bilgi edinirsiniz: devralma derinliği. Devralma ağacının (DıT) derinliği olarak da adlandırılan devralma derinliği [, "düğümden](#ck)ağacın köküne kadar olan en fazla uzunluk" olarak tanımlanır. Bunu basit bir örnekle görebilirsiniz. Yeni bir sınıf kitaplığı projesi oluşturun ve herhangi bir kod yazmadan önce kod ölçümlerini **analiz edin > çözüm Için kod ölçümlerini hesapla**' yı seçin.
+Bu makalede, nesne odaklı analiz için özel olarak tasarlanmış ölçümlerden biri hakkında bilgi edinmek için: Devralma Derinliği. Devralma ağacının derinliği (DIT) olarak da adlandırılan devralma derinliği, "düğümden ağacın köküne kadar olan en uzun uzunluk" [CK olarak tanımlanır.](#ck) Bunu basit bir örnekle de görmektesiniz. Yeni bir Sınıf Kitaplığı projesi oluşturun ve herhangi bir kod yazmadan önce Çözüm için Kod Ölçümlerini >'i seçerek **kod ölçümlerini hesap edin.**
 
-![Devralma örneği 1](media/depth-of-inheritance-example-1.png)
+![Devralma derinliği örneği 1](media/depth-of-inheritance-example-1.png)
 
-Tüm sınıflar öğesinden devraldığı `System.Object` için Derinlik 1 ' dir. Bu sınıftan devralması ve yeni sınıfı incelerseniz, sonucu görebilirsiniz:
+Tüm sınıflar'dan `System.Object` devralınmalarından bu yana derinlik şu anda 1'tir. Bu sınıftan devralınır ve yeni sınıfı incelersanız, sonucu görebilir:
 
-![Devralma örneği 2 derinliği](media/depth-of-inheritance-example-2.png)
+![Devralma derinliği örneği 2](media/depth-of-inheritance-example-2.png)
 
-Ağaçtaki düğüm ( `Class2` Bu durumda) altında, devralma derinliğine göre daha yüksek olduğuna dikkat edin. Alt öğe oluşturmaya devam edebilir ve derinliğin istediğiniz kadar artmasına neden olabilirsiniz.
+Ağaçtaki düğüm ne kadar düşük olursa ( bu durumda), devralma `Class2` derinliğinin o kadar yüksek olduğunu fark ettik. Çocuk oluşturmaya devam eder ve derinliğin istediğiniz kadar artmasına neden olur.
 
 ## <a name="assumptions"></a>Varsayımlar
 
-Devralma derinliği üç [temel varsayımda](#ck)belirlenir:
+Devralma derinliği, CK üç temel varsayıma [dayanır:](#ck)
 
-1. Hiyerarşide daha derin bir sınıf, büyük olasılıkla devraldığı yöntemlerin sayısı artar ve bu da davranışını tahmin etmeye daha zor hale gelir.
+1. Hiyerarşide bir sınıf ne kadar derine inerse, devralınacak yöntem sayısı o kadar fazladır ve bu da davranışını tahmin etmek daha zor hale gelir.
 
-2. Daha derin ağaçlar daha fazla sınıf ve yöntem dahil olduğundan daha fazla tasarım karmaşıklığı içerir.
+2. Daha derin ağaçlarda daha fazla sınıf ve yöntem söz konusu olduğu için tasarım karmaşıklığı daha fazladır.
 
-3. Ağaçtaki daha derin sınıfların devralınan yöntemleri yeniden kullanmak için daha büyük bir olasılığı vardır.
+3. Ağaçtaki daha derin sınıflar devralınan yöntemleri yeniden kullanabilir.
 
-Varsayımlar 1 ve 2, derinlik için daha yüksek bir sayı olmasının hatalı olduğunu söyler. Bu, sona erdiği, iyi bir şekildir; Ancak, varsayım 3, olası kod yeniden kullanımı için derinlik için daha yüksek bir sayının iyi olduğunu gösterir.
+1. ve 2. varsayımlar, derinlik için daha yüksek bir sayıya sahip olmak kötü olduğunu söyler. Sona ererse iyi durumda olursanız; ancak, 3 varsayımı daha yüksek bir derinlik sayısının olası kod yeniden kullanımı için iyi olduğunu gösterir.
 
 ## <a name="analysis"></a>Analiz
 
-Derinlik ölçüsünü şu şekilde okuyabilirsiniz:
+Derinlik ölçümlerini şu şekilde okuyabilirsiniz:
 
 - Derinlik için düşük sayı
 
-  Derinlik açısından düşük bir sayı daha az karmaşıklık anlamına gelir ancak devralma yoluyla daha az kod yeniden kullanımı olasılığı vardır.
+  Derinlik için düşük bir sayı daha az karmaşıklık anlamına gelir, ancak devralma aracılığıyla daha az kod yeniden kullanma olasılığı da vardır.
 
 - Derinlik için yüksek sayı
 
-  Derinlik açısından yüksek bir sayı, devralma yoluyla kod yeniden kullanımı için daha fazla olasılık, aynı zamanda koddaki hataların büyük bir olasılığı daha yüksektir.
+  Derinlik için yüksek bir sayı, devralma aracılığıyla kodun yeniden kullanılması olasılığının daha yüksek olduğunu, ancak kodda hata olasılığının daha yüksek olduğunu da gösterir.
 
 ## <a name="code-analysis"></a>Kod Çözümleme
 
-Kod Analizi bir bakım kuralları kategorisi içerir. Daha fazla bilgi için bkz. [Bakımlamama kuralları](/dotnet/fundamentals/code-analysis/quality-rules/maintainability-warnings). Eski Kod analizini kullanırken, genişletilmiş tasarım kılavuz kuralı kümesi bir bakım alanı içerir:
+Kod analizi, Bakım kuralları kategorisini içerir. Daha fazla bilgi için [bkz. Bakım kuralları.](/dotnet/fundamentals/code-analysis/quality-rules/maintainability-warnings) Eski kod analizini kullanırken, Genişletilmiş Tasarım Kılavuzu kural kümesi bir bakım alanı içerir:
 
-![Devralma tasarım yönergeleri kural kümelerinin derinliği](media/depth-of-inheritance-design-guidelines.png)
+![Devralma tasarımı yönergeleri kural kümelerinin derinliği](media/depth-of-inheritance-design-guidelines.png)
 
-Bakım alanının içinde, devralma için bir kuraldır:
+Bakım alanı, devralmaya bir kuraldır:
 
-![Devralma bakımınızın derinliği](media/depth-of-inheritance-maintainability-rule.png)
+![Devralma bakımı kuralının derinliği](media/depth-of-inheritance-maintainability-rule.png)
 
-Bu kural, devralma derinliği 6 veya daha büyük olduğunda bir uyarı verir, bu nedenle aşırı devralmayı önlemeye yardımcı olmak için iyi bir kuraldır. Kural hakkında daha fazla bilgi edinmek için bkz. [CA1501](/dotnet/fundamentals/code-analysis/quality-rules/ca1501).
+Bu kural, devralma derinliği 6 veya daha yüksek olduğunda bir uyarı gösterir, bu nedenle aşırı devralmayı önlemeye yardımcı olmak iyi bir kuraldır. Kural hakkında daha fazla bilgi edinmek için bkz. [CA1501](/dotnet/fundamentals/code-analysis/quality-rules/ca1501).
 
-## <a name="putting-it-all-together"></a>Tümünü bir araya getirme
+## <a name="putting-it-all-together"></a>Hepsini Bir Araya Koyma
 
-DıT için yüksek değerler, hatalara yönelik potansiyel olarak yüksek olması anlamına gelir, düşük değerler hatalara karşı olası değeri azaltır. DıT için yüksek değerler devralma yoluyla kod yeniden kullanımı için daha fazla potansiyel bir değer gösteriyorsa, düşük değerler devralmadan faydalanabilir daha az kod yeniden kullanımı önerir. Yeterli veri olmaması nedeniyle, DıT değerleri için şu anda kabul edilmeyen standart yok. Kısa süre önce gerçekleştirilen çalışmalar, bu ölçüm [Shatnawi](#shatnawi)için standart bir sayı olarak kullanılabilecek, önemli bir sayıyı belirlemede yeterli veri bulamadı. Bunu desteklemeye yönelik bir empırik kanıt olmasa da, birkaç kaynak, 5 veya 6 ' dan bir DıT 'in üst sınır olmasını önerir. Örneğin, bkz [http://www.devx.com/architect/Article/45611](http://www.devx.com/architect/Article/45611) ..
+DIT için yüksek değerler, hata riskinin de yüksek olduğu anlamına gelir, düşük değerler hata riskini azaltır. DIT için yüksek değerler, devralma aracılığıyla kodun yeniden kullanılması için daha büyük bir potansiyel olduğunu gösterir, düşük değerler ise devralmadan yararlanan daha az kod yeniden kullanımı önerir. Yeterli veri olmaması nedeniyle şu anda DIT değerleri için kabul edilen bir standart yoktur. Kısa süre önce yapılan çalışmalar bile [Shatnawi](#shatnawi)ölçümü için standart bir sayı olarak kullanılmaktadır. Bunu desteklemek için ampirik bir kanıt yoktur, ancak birçok kaynak DIT'nin üst sınır olarak 5 veya 6 olması gerektiğini önerir. Örneğin, [http://www.devx.com/architect/Article/45611](http://www.devx.com/architect/Article/45611) bkz. .
 
 ## <a name="citations"></a>Alıntı
 
@@ -79,4 +80,4 @@ Subramanyam, R. & Ancak, M. S. (2003). Object-Oriented Tasarım Karmaşıklığ�
 
 ### <a name="shatnawi"></a>Shatnawi
 
-Shatnawi, R. (2010). Open-Source Sistemlerinde Object-Oriented Ölçümlerinin Kabul Edilebilir Risk Düzeylerinin Nicel Bir Araştırma (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 36, Hayır. 2).
+Shatnawi, R. (2010). Open-Source Sistemlerindeki Object-Oriented Ölçümlerinin Kabul Edilebilir Risk Düzeylerinin Nicel Bir Araştırma (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 36, Hayır. 2).

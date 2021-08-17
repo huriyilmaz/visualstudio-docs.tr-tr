@@ -12,14 +12,15 @@ ms.assetid: 7c8cd8fe-169e-4161-9cff-5e9015984add
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2452d9aca52c281a96ea8f5738bc38ed21ee63e8
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 92a881f8d2f32cd0662ba8bd6bc00942f5acc37f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161629"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036013"
 ---
 # <a name="symbol-locations"></a>Simge Konumları
 Çoğu simgenin görüntü dosyası içinde tanımlı bir konumu vardır. Bir simgenin konumu, [LocationType numaralandırma](../../debugger/debug-interface-access/locationtype.md) numaralandırmasındaki bir değerle belirtilir. Sembol, konumuna bağlı olarak ek özellikleri destekleyebilir.

@@ -1,6 +1,6 @@
 ---
-title: Menüye alt menü ekleme | Microsoft Docs
-description: Alt menü oluşturma, Visual Studio menü çubuğuna ekleme ve alt menüye yeni bir komut ekleme hakkında bilgi edinin.
+title: Menü Menüsüne Alt Menü | Microsoft Docs
+description: Alt menü oluşturma, menü çubuğuna Visual Studio ve alt menüye yeni bir komut ekleme hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,30 +13,31 @@ ms.assetid: 692600cb-d052-40e2-bdae-4354ae7c6c84
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc6d521e699beb2345ba76e2e617ff749886eee9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6ebd3a4d97d19977b8a97ff7fcb2a545654f4165
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094907"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065195"
 ---
-# <a name="add-a-submenu-to-a-menu"></a>Menüye alt menü ekleme
-Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini göstererek, [Visual Studio menü çubuğuna bir menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) bölümündeki gösteride oluşturulur.
+# <a name="add-a-submenu-to-a-menu"></a>Menüye Alt Menü Ekleme
+Bu kılavuz, TestMenu menüsüne bir alt menü [eklemeyi Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) Menü Çubuğuna Menü Ekle'de yer alan **gösterime göre ekleyebilirsiniz.**
 
- Alt menü, başka bir menüde görünen ikincil bir menü olur. Bir alt menü, adını izleyen ok ile tanımlanabilir. Ada tıklamak alt menüye ve komutlarının görüntülenmesine neden olur.
+ Alt menü, başka bir menüde görünen ikincil bir menü olur. Alt menüsü, adının yanındaki ok ile belirlenebilirsiniz. Adına tıklarsınız, alt menü ve komutlarının görüntülenebilir.
 
- Bu izlenecek yol, Visual Studio menü çubuğundaki bir menüde bir alt menü oluşturur ve alt menüye yeni bir komut koyar. İzlenecek yol yeni komutu de uygular.
+ Bu kılavuz, Visual Studio menüsünde bir alt menü oluşturur ve alt menüye yeni bir komut koyar. Kılavuz yeni komutu da uygulamaya almaktadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ 2015'Visual Studio başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Bu, kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="add-a-submenu-to-a-menu"></a>Menüye alt menü ekleme
+## <a name="add-a-submenu-to-a-menu"></a>Menüye Alt Menü Ekleme
 
-1. Projeyi ve menü öğesini oluşturmak için [Visual Studio menü çubuğuna menü ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) bölümündeki adımları izleyin. Bu izlenecek yolda yer alan adımlarda VSıX projesinin adı olduğu varsayılır `TopLevelMenu` .
+1. Projeyi ve menü [öğesini oluşturmak için Visual Studio Menü Çubuğuna](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) Menü Ekleme'de yer alan adımları izleyin. Bu kılavuzda yer alan adımlarda VSIX projesinin adının olduğu `TopLevelMenu` varsayılacaktır.
 
-2. *TestCommandPackage. vsct* öğesini açın. Bölümünde alt menü için bir `<Symbols>` `<IDSymbol>` , alt menü grubu ve diğeri Ise `<GuidSymbol>` "guidTopLevelMenuCmdSet" adlı düğümde bir öğe ekleyin. Bu, `<IDSymbol>` üst düzey menünün öğesini içeren düğümdür.
+2. *TestCommandPackage.vsct'i açın.* bölümünde, alt menüsü için bir öğe, alt menüsü grubu için bir öğe ve komutu için bir öğe ekleyin; bunların hepsi `<Symbols>` `<IDSymbol>` `<GuidSymbol>` "guidTopLevelMenuCmdSet" adlı düğümdedir. Bu, üst düzey menü için `<IDSymbol>` öğesini içeren düğümle aynıdır.
 
     ```xml
     <IDSymbol name="SubMenu" value="0x1100"/>
@@ -44,7 +45,7 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
     <IDSymbol name="cmdidTestSubCommand" value="0x0105"/>
     ```
 
-3. Yeni oluşturulan alt menüyü `<Menus>` bölümüne ekleyin.
+3. Yeni oluşturulan alt menüsü bölümüne `<Menus>` ekleyin.
 
     ```xml
     <Menu guid="guidTestCommandPackageCmdSet" id="SubMenu" priority="0x0100" type="Menu">
@@ -56,9 +57,9 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
     </Menu>
     ```
 
-     Üst öğenin GUID/ID çifti, [Visual Studio menü çubuğuna bir menü ekle](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)menüsünde oluşturulan menü grubunu belirtir ve üst düzey menünün bir alt öğesidir.
+     Üst öğenin GUID/KIMLIK çifti, Visual Studio Menü Çubuğuna Menü Ekle kısmında oluşturulan menü grubunu belirtir ve üst düzey meninin alt öğesidir. [](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)
 
-4. 2. adımda tanımlanan menü grubunu `<Groups>` bölümüne ekleyin ve alt menünün alt öğesi yapın.
+4. 2. adımda tanımlanan menü grubunu bölümüne `<Groups>` ekleyin ve alt menü grubunun alt öğesi olarak belirleyin.
 
     ```xml
     <Group guid="guidTestCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">
@@ -66,7 +67,7 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
     </Group>
     ```
 
-5. `<Button>` `<Buttons>` 2. adımda oluşturulan komutu alt menüdeki bir öğe olarak tanımlamak için bölümüne yeni bir öğesi ekleyin.
+5. `<Button>`2. adımda `<Buttons>` oluşturulan komutu alt menüdeki bir öğe olarak tanımlamak için bölümüne yeni bir öğe ekleyin.
 
     ```xml
     <Button guid="guidTestCommandPackageCmdSet" id="cmdidTestSubCommand" priority="0x0000" type="Button">
@@ -79,19 +80,19 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
     </Button>
     ```
 
-6. Çözümü oluşturun ve hata ayıklamayı başlatın. Deneysel örneği görmeniz gerekir.
+6. Çözümü derleme ve hata ayıklamayı başlatma. Deneysel örneği görüyor gerekir.
 
-7. **Alt menü** adlı yeni bir alt menü görmek Için **TestMenu** öğesine tıklayın. Alt **menüyü açmak Için alt menü** ' ye tıklayın ve yeni bir komut, **Test Sub komutunu** görüntüleyin. **Test Sub komutunu** tıklatmak hiçbir şey yapmaz.
+7. Alt Menü adlı yeni bir alt menü görmek için **TestMenu'ya** **tıklayın.** Alt **menüyü** açmak için Alt Menü'ye tıklayın ve yeni bir komut olan **Test Alt Komutu'na bakın.** Test Alt **Komutu'na tıklarken hiçbir şey** olmadığını fark etmek.
 
-## <a name="add-a-command"></a>Komut Ekle
+## <a name="add-a-command"></a>Komut Ekleme
 
-1. *TestCommand. cs* ' i açın ve var olan komut kimliğinden sonra AŞAĞıDAKI komut kimliğini ekleyin.
+1. *TestCommand.cs'yi* açın ve mevcut komut kimliğinin ardından aşağıdaki komut kimliğini ekleyin.
 
     ```csharp
     public const int cmdidTestSubCmd = 0x0105;
     ```
 
-2. Alt komutunu ekleyin. Komut oluşturucusunu bulun. Yöntemine yapılan çağrıdan hemen sonra aşağıdaki satırları ekleyin `AddCommand` .
+2. Alt komutu ekleyin. Komut oluşturucusu bulun. yöntemi çağrısının hemen sonrasını aşağıdaki satırları `AddCommand` ekleyin.
 
     ```csharp
     CommandID subCommandID = new CommandID(CommandSet, cmdidTestSubCmd);
@@ -99,7 +100,7 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
     commandService.AddCommand(subItem);
     ```
 
-    `SubItemCallback`Komut işleyicisi daha sonra tanımlanacaktır. Oluşturucunun şimdi şöyle görünmesi gerekir:
+    Komut `SubItemCallback` işleyicisi daha sonra tanımlanmalıdır. Oluşturucu şimdi aşağıdaki gibi görünüyor:
 
     ```csharp
     private TestCommand(Package package)
@@ -125,7 +126,7 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
     }
     ```
 
-3. Ekleyin `SubItemCallback()` . Bu, alt menüdeki New komutuna tıklandığında çağrılan yöntemidir.
+3. `SubItemCallback()`ekleyin. Bu, altmenüste yeni komut tık olduğunda çağrılır yöntemidir.
 
     ```csharp
     private void SubItemCallback(object sender, EventArgs e)
@@ -151,11 +152,11 @@ Bu izlenecek yol, **TestMenu** menüsüne bir alt menü nasıl ekleneceğini gö
     }
     ```
 
-4. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görünmelidir.
+4. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örneğin görünmesi gerekir.
 
-5. **TestMenu** menüsünde, **alt menü** ' ye tıklayın ve ardından **Sub komutunu test et**' e tıklayın. İleti kutusu görünür ve metin, TestCommand. SubItemCallback () "Içinde" test komutunu "görüntüler.
+5. **TestMenu menüsünde Alt** **Menü'ye ve ardından** Test Alt **Komutu'na tıklayın.** Bir ileti kutusu görüntüleniyor ve "TestCommand.SubItemCallback() İçinde Test Komutu" metni görüntüleniyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio menü çubuğuna bir menü ekleyin](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)
+- [Yeni menü çubuğuna Visual Studio ekleme](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

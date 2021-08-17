@@ -1,6 +1,6 @@
 ---
 title: Microsoft Office bu bilgisayarda yüklü değil
-description: Proje türünüze karşılık Visual Studio uygulamanın Microsoft Office ne yapacaklarını öğrenin.
+description: Visual Studio, proje türüne karşılık gelen Microsoft Office uygulamasını bulamadığında ne yapılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: error-reference
@@ -15,20 +15,20 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5c3f2c7baf51c4d8db70c9e7707bc3abba593ae4642536aab863b4da377e3e3e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d982a6d1430728f38377e1e43c4d7ff396493693
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366036"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082874"
 ---
 # <a name="microsoft-office-is-not-installed-on-the-computer"></a>Microsoft Office bilgisayarda yüklü değil
-  Visual Studio proje türüne Microsoft Office uygulamanın türünü bulamıyorum. Bir eklenti eklenti VSTO geliştirmeniz, projenin hata ayıklaması veya çalıştırması anlamına gelir. Belge düzeyi bir proje oluşturmak için çalışıyorsanız, bu projeyi oluşturamazsınız.
+  Visual Studio, proje türüne karşılık gelen Microsoft Office uygulamasını bulamıyor. VSTO bir eklenti projesi geliştiriyorsanız, projeyi ayıklamanıza veya çalıştırmazsınız demektir. Belge düzeyinde bir proje oluşturmaya çalışıyorsanız bu proje oluşturmeyeceğiniz anlamına gelir.
 
 ## <a name="to-correct-the-error"></a>Hatayı düzeltmek için
 
-1. Birincil birlikte Microsoft Office derlemeleri de dahil olmak üzere proje türüyle ilişkili bir uygulama yükleme. Desteklenen sürüm sürümleri hakkında daha fazla bilgi Microsoft Office için bkz. Bir bilgisayarı yazılım çözümleri [geliştirmek Office yapılandırma.](../vsto/configuring-a-computer-to-develop-office-solutions.md)
+1. birincil birlikte çalışma derlemeleri dahil olmak üzere proje türüyle ilişkili Microsoft Office uygulamasını yükler. desteklenen Microsoft Office sürümleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yeni çözümler geliştirmek için bilgisayarı Office yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md)
-- [Nasıl yapılandırılır: Bir bilgisayarı bir bilgisayarla ilgili Office yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)
+- [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md)
+- [nasıl yapılır: Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)

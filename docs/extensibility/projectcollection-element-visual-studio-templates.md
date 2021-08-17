@@ -1,6 +1,6 @@
 ---
-title: ProjectCollection öğesi (Visual Studio şablonları) | Microsoft Docs
-description: ProjectCollection öğesi hakkında bilgi edinin ve çoklu proje şablonlarının organizasyonunu ve içeriğini nasıl belirtir.
+title: ProjectCollection Öğesi (Visual Studio Şablonları) | Microsoft Docs
+description: ProjectCollection öğesini ve çok projeli şablonların kuruluş ve içeriklerini nasıl belirtir hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e835843094b9495b8907a3ada727435b8806c78d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1e6d37b55837b0a069148f7bd6c74da0da3511e664d253fdaa7c0de0b80ab7dc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068771"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431584"
 ---
 # <a name="projectcollection-element-visual-studio-templates"></a>ProjectCollection öğesi (Visual Studio şablonları)
 Birden fazla projeli şablonların içeriğini ve düzenini belirtir.
@@ -48,7 +48,7 @@ Birden fazla projeli şablonların içeriğini ve düzenini belirtir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Çoklu Proje şablonundaki bir projeyi belirtir.|
+|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Çok projeli bir şablonda bir proje belirtir.|
 |[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Birden fazla projeli şablonlardaki projeleri gruplandırır.|
 
 ### <a name="parent-elements"></a>Üst öğeler
@@ -58,10 +58,10 @@ Birden fazla projeli şablonların içeriğini ve düzenini belirtir.
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonun içeriğini belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı olarak davranır. `ProjectCollection`Öğesi şablonda yer almak üzere projeleri belirtmek için kullanılır. Çoklu proje şablonları hakkında daha fazla bilgi için bkz. [nasıl yapılır: çoklu proje şablonları oluşturma](../ide/how-to-create-multi-project-templates.md).
+ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı olarak davranır. `ProjectCollection`öğesi, şablonda yer alan projeleri belirtmek için kullanılır. Birden çok projeli şablonlar hakkında daha fazla bilgi için [bkz. Nasıl 2012:](../ide/how-to-create-multi-project-templates.md)Birden çok proje şablonu oluşturma.
 
 ## <a name="example"></a>Örnek
- Bu örnekte basit bir çoklu proje root *. vstemplate* dosyası gösterilmektedir. Bu örnekte, şablon iki proje içerir `My Windows Application` ve `My Class Library` . `ProjectName`Öğesi üzerindeki özniteliği, `ProjectTemplateLink` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Bu projeyi atamak için adını ayarlar. `ProjectName`Özniteliği yoksa, *. vstemplate* dosyasının adı proje adı olarak kullanılır.
+ Bu örnekte basit bir çok projeli kök *.vstemplate dosyası* gösterir. Bu örnekte şablon iki proje içerir: `My Windows Application` ve `My Class Library` . öğesinde `ProjectName` `ProjectTemplateLink` özniteliği, bu projeyi atamak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] için için adını ayarlar. Öznitelik `ProjectName` yoksa proje adı olarak *.vstemplate* dosyasının adı kullanılır.
 
 ```
 <VSTemplate Version="3.0.0" Type="ProjectGroup"
@@ -86,6 +86,6 @@ Birden fazla projeli şablonların içeriğini ve düzenini belirtir.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablonu şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılır: birden çok proje şablonu oluşturma](../ide/how-to-create-multi-project-templates.md)
+- [Nasıl yapılanlar: Çok projeli şablonlar oluşturma](../ide/how-to-create-multi-project-templates.md)

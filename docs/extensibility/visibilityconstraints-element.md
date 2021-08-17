@@ -13,14 +13,15 @@ ms.assetid: d6dcd314-6fe4-4693-a189-91fa026c7b34
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 160a3950e31567aafc2d675971fd7263adb2ad5b
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 0a24761a7f0c71f50be70b12de1203c0f22d2b8a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905481"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049252"
 ---
 # <a name="visibilityconstraints-element"></a>Visibilitykýsýtlamaöğesi
 Visibilitykýsýtlamalarý öğesi, komut ve araç çubuklarının grup gruplarının statik görünürlüğünü belirler. Görünürlük öncelikle, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage yüklenmeden tümleşik geliştirme ortamı (IDE) tarafından denetlenir.

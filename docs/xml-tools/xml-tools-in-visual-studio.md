@@ -66,7 +66,7 @@ Ek özellikler şunlardır:
 
 ## <a name="xml-schema-designer"></a>XML Şema Tasarımcısı
 
-[XML Şema Tasarımcısı,](xml-schema-designer.md) XML şema Visual Studio dil (XSD) şemaları ile çalışmana olanak sağlamak için xml düzenleyicisi ile tümleşiktir.
+[XML Şema Tasarımcısı,](xml-schema-designer.md) XML şema Visual Studio (XSD) şemaları ile çalışmana olanak sağlamak için xml düzenleyicisi ve xml düzenleyicisi ile tümleşiktir.
 
 ## <a name="xslt-debugging"></a>XSLT hata ayıklama
 

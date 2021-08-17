@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 01299107e9260272044548323e84cab1f78e6867438293bde9e315458a2bd369
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5a4d09ea1850d825fd24d1af395a4b4d2a7d7e0f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121343696"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065273"
 ---
 # <a name="mixed-mode-debugging-for-x64-processes-is-only-supported-when-using-microsoftnet-framework-4-or-greater"></a>x64 işlemleri için karışık modda hata ayıklama yalnızca Microsoft.NET Framework 4 veya daha yenisi kullanılırken desteklenir
 .NET Framework 4'den önceki sürümler, x64 işlemlerinin karma mod hata ayıklaması için destek sağlamaz. Bu, hata ayıklama sırasında yönetilen koddan yerel koda veya yerel koddan yönetilen koda adımlamay anlamına gelir.

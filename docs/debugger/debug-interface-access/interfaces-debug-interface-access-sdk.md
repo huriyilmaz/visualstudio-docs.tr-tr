@@ -1,6 +1,6 @@
 ---
-description: Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasındaki arabirim sayfasında alfabetik olarak listelenir.
-title: Arabirimler (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
+description: Yöntemler, içindekiler tablosundaki her arabirimin altında ve arabirim sayfasında Vtable sırasıyla alfabetik olarak listelenir.
+title: Arabirimler (Arabirim Erişimi SDK'sı Hata Ayıklama) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,117 +15,117 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c9b22e36d70f85ffbc4f28aea0925f681fa22703f92e578bc0e41d1a67cbabf9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a225edc9d357f93b76cff7eb4c8c2daef4b4bdda
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404645"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065927"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)
-Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasındaki arabirim sayfasında alfabetik olarak listelenir.
+Yöntemler, içindekiler tablosundaki her arabirimin altında ve arabirim sayfasında Vtable sırasıyla alfabetik olarak listelenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 
-DIA SDK hata ayıklama nesneleri için sanal ve göreli sanal adresleri nasıl hesaplatığına ilişkin denetim sağlar.
+Hata ayıklama nesneleri için sanal DIA SDK ve göreli sanal adreslerin nasıl hesap sağladığı üzerinde denetim sağlar.
 
 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 
-Hata ayıklama sembolleri kaynağına erişimi başlatır.
+Hata ayıklama sembollerinin kaynağına erişimi başlatma.
 
 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 
-Hata ayıklama veri akışındaki kayıtlara erişim sağlar.
+Hata ayıklama veri akışında kayıtlara erişim sağlar.
 
 [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)
 
-Veri kaynağında bulunan çeşitli hata ayıklama akışlarını numaralandırır.
+Veri kaynağında bulunan çeşitli hata ayıklama akışlarını numaralar.
 
 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 
-Veri kaynağında bulunan çeşitli çerçeve verisi öğelerini numaralandırır.
+Veri kaynağında bulunan çeşitli çerçeve veri öğelerini numaralar.
 
 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 
-Veri kaynağında yer alan çeşitli eklenen kaynakları numaralandırın.
+Veri kaynağında bulunan çeşitli kaynaklara ekleme.
 
 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 
-Veri kaynağında bulunan çeşitli satır numaralarını numaralandırır.
+Veri kaynağında bulunan çeşitli satır numaralarını numaralar.
 
 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)
 
-Veri kaynağında bulunan çeşitli bölüm katkılarını numaralandırır.
+Veri kaynağında yer alan çeşitli bölüm katkılarını numaralar.
 
 [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 
-Veri kaynağında bulunan çeşitli kesimleri numaralandırır.
+Veri kaynağında bulunan çeşitli segmentleri numaralar.
 
 [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 
-Veri kaynağında bulunan çeşitli kaynak dosyalarını numaralandırır.
+Veri kaynağında bulunan çeşitli kaynak dosyaları numaralar.
 
 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 
-Kullanılabilir çeşitli yığın çerçevelerini numaralandırır.
+Kullanılabilir çeşitli yığın çerçevelerini numaralar.
 
 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 
-Veri kaynağında bulunan çeşitli sembolleri numaralandırır.
+Veri kaynağında bulunan çeşitli sembolleri numaralar.
 
 [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 
-Veri kaynağında bulunan çeşitli sembolleri ele alarak sıralar.
+Veri kaynağında bulunan çeşitli sembolleri adrese göre numaralar.
 
 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 
-Veri kaynağında bulunan çeşitli tabloları numaralandırır.
+Veri kaynağında bulunan çeşitli tabloları numaralar.
 
 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 
-Yığın çerçevesinin ayrıntılarını gösterir.
+Bir yığın çerçevesinin ayrıntılarını gösterir.
 
 [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)
 
-Modülün veya görüntünün temel konumunun ve bellek uzaklarının ayrıntılarını gösterir.
+Modül veya görüntünün temel konum ve bellek uzaklıklarının ayrıntılarını açığa çıkarır.
 
 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)
 
-DIA veri kaynağında depolanan program kaynak koduna erişir.
+DIA veri kaynağında depolanan program kaynak koduna erişer.
 
 [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
-Bir bayt bloğundan bir kaynak dosya satır numarasıyla eşleme işlemini açıklayan bilgilere erişir.
+Görüntü metni bloğundan kaynak dosya satırı numarasına eşleme işlemini açıklayan bilgilere erişer.
 
 [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)
 
-DIA sembol konumlandırma yordamının geri çağırmaları alır, böylece bir kullanıcı arabiriminin konum denemesinin ilerlemesini raporlemelerini sağlar.
+DIA sembolünü bulma yordamından geri çağırmaları alır ve bu sayede kullanıcı arabiriminin konum girişiminin ilerlemesini bildirmesini sağlar.
 
 [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)
 
-,, Bulma işleminde kısıtlamaların bulunmasına izin veren bir ÇYA sembol yordamının yerini alan geri çağırmaları alır.
+DIA sembol bulma yordamından geri çağırmalar alır ve bulma işlemi üzerinde kısıtlamalara olanak sağlar.
 
 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
 
-Bir DIA özellik kümesinin kalıcı özelliklerini okumanızı sağlar.
+DIA özellik kümesi kalıcı özelliklerini okumana olanak sağlar.
 
 [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)
 
-İstemci uygulamasının dosya konumuyla belirtilen bir yürütülebilir dosya bayt sağlaması için izin sağlar.
+bir istemci uygulamasının dosya konumu tarafından belirtilen yürütülebilir dosya baytlarını temin unu sağlar.
 
 [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)
 
-Bir istemci uygulamanın, göreli bir sanal adresle belirtilen bir yürütülebilir dosya bayt vermesini sağlar.
+bir istemci uygulamasının göreli bir sanal adres tarafından belirtilen yürütülebilir dosyanın baytlarını sağlar.
 
 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 
-Bir bölüm katkısını açıklayan verileri alır, diğer bir deyişle, bir compiland tarafından görüntüye katkıda bulunulan bir bellek bloğu.
+Bölüm katkısını açıklayan, yani bir derleme tarafından görüntüye katkıda bulunan bitişik bir bellek bloğu olan verileri alınır.
 
 [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)
 
-bölüm numarasından adres alanının segmentlerine veri Haritalar.
+Haritalar numarasından adres alanı segmentlerine veri içerir.
 
 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 
@@ -133,40 +133,40 @@ Hata ayıklama sembolleri için bir sorgu bağlamı sağlar.
 
 [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 
-Bir kaynak dosyasını temsil eder.
+Bir kaynak dosyayı temsil eder.
 
 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 
-Yığın çerçevesinin özelliklerini gösterir.
+Bir yığın çerçevesinin özelliklerini gösterir.
 
 [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)
 
-PDB dosyasını kullanarak bir yığın yürüme yöntemi sağlar.
+PDB dosyasını kullanarak yığında adım adım yol yapmaya yönelik yöntemler sağlar.
 
 [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 
-[IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yönteminin etkinleştirmeleri arasında yığın bağlamını korur.
+[IDiaFrameData::execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yönteminin çağrıları arasında yığın bağlamını sürdürür.
 
 [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 
-Program hata ayıklama veritabanı (PDB) dosyasını kullanarak yığını yürüme işlemini kolaylaştırır.
+Program hata ayıklama veritabanı (PDB) dosyasını kullanarak yığının üzerinde dolmasına yardımcı olur.
 
 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 
-Bir sembol örneğinin özelliklerini açıklar.
+Sembol örneğinin özelliklerini açıklar.
 
 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 
-Bir DIA veri kaynağı tablosunu numaralandırır.
+DIA veri kaynağı tablolarını numaralar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 
-DIA SDK çeşitli arabirimleri tarafından kullanılan numaralandırmaları ve yapıları açıklar.
+Uygulamanın çeşitli arabirimleri tarafından kullanılan numaralar ve yapılar DIA SDK.
 
 [Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
-DIA SDK bulunan sabitleri açıklar.
+Komutlar içinde kullanılabilir sabitleri DIA SDK.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0f1dba4bc860a77e65c4b544f241f131254009e6622a63a471e2ba9c3e3895d9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5dc58ad37599c9c2ac7a8964bf968c7b070e6b59
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391611"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065887"
 ---
 # <a name="managedtype"></a>ManagedType
 Yönetilen tür (meta veriler tarafından tanımlanan veya C# gibi dillerin bellek ve kaynak yönetimi işlevselliğine yerel olan herhangi bir simge) bir sembolle `SymTagManagedType` tanımlanır.

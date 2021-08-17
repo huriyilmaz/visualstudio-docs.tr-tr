@@ -1,5 +1,5 @@
 ---
-description: De örneği oluşturulduğunda hata ayıklama altyapısı (DE) bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
+description: Hata ayıklama altyapısı (DE), bir örneği oluşturulduğunda bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.
 title: IDebugEngineCreateEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef22f958783d5450b30b1b0940db043668ae43504ca5e3495ec15b06949f5bab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8c9aed6f55a7b708d79c746ac25bf7cc7a1e38a6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390079"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096316"
 ---
 # <a name="idebugenginecreateevent2"></a>IDebugEngineCreateEvent2
-De örneği oluşturulduğunda hata ayıklama altyapısı (DE) bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
+Hata ayıklama altyapısı (DE), bir örneği oluşturulduğunda bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,25 +30,25 @@ De örneği oluşturulduğunda hata ayıklama altyapısı (DE) bu arabirimi otur
 IDebugEngineCreateEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE, bu arabirimi normal işlemlerinin bir parçası olarak uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesnede uygulanarak (SDM, arabirime `QueryInterface` erişmek için yöntemini `IDebugEvent2` kullanır).
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ DE bu arabirimi normal işlemlerinin bir parçası olarak uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekır (SDM, `QueryInterface` arabirime erişmek için yöntemini kullanır `IDebugEvent2` ).
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE örneği esn ekli olduğunda DE bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
+ De, örneği oluşturulduğunda bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
- Aşağıdaki tabloda yöntemlerini `IDebugEngineCreateEvent2` gösterir.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugEngineCreateEvent2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetEngine](../../../extensibility/debugger/reference/idebugenginecreateevent2-getengine.md)|Yeni oluşturulan hata ayıklama altyapısını (DE) temsil eden nesneyi alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

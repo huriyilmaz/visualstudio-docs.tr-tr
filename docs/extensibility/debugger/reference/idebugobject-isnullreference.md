@@ -1,6 +1,6 @@
 ---
-description: Bu nesnenin null bir başvuru olup olmadığını sınar.
-title: 'IDebugObject:: ısnullreference | Microsoft Docs'
+description: Bu nesnenin null başvuru olup olmadığını test eder.
+title: IDebugObject::IsNullReference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dbc163532bf1f41327d3d9615f6fdf9a1bd3b320
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 4c96dd0ec84c88039155300cca19c8b36e3fa8d39245a78343347a368ed82379
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122088503"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433482"
 ---
 # <a name="idebugobjectisnullreference"></a>IDebugObject::IsNullReference
-Bu nesnenin null bir başvuru olup olmadığını sınar.
+Bu nesnenin null başvuru olup olmadığını test eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int IsNullReference(
 
 ## <a name="parameters"></a>Parametreler
 `pfIsNull`\
-dışı `TRUE`Bu nesne null bir başvuru ise sıfır olmayan () döndürür; Aksi takdirde, sıfır () döndürür `FALSE` .
+[out] Bu nesne null başvuru ise sıfır olmayan ( ) döndürür; aksi `TRUE` takdirde sıfır () `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Null başvuru, boş bir nesne veya atanmamış bir nesne anlamına gelir.

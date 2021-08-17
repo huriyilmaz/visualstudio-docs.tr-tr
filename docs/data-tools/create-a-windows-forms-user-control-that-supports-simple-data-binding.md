@@ -78,7 +78,7 @@ Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanıl�
 
 İlk adım, Windows **Forms Uygulaması oluşturmaktır:**
 
-1. Bu Visual Studio, Dosya menüsünde **Yeni** **dosya'Project.**  >  
+1. Bu Visual Studio, Dosya **menüsünde Yeni** **dosya'Project.**  >  
 
 2. Sol **bölmede Visual C#** **Visual Basic** görseli genişletin ve ardından Masaüstü'Windows **seçin.**
 
@@ -149,7 +149,7 @@ Bu adım, Northwind **örnek veritabanındaki** tabloyu temel alan bir veri kayn
 
 ## <a name="set-the-phone-column-to-use-the-phonenumberbox-control"></a>PhoneNumberBox denetimi kullanmak için telefon sütununu ayarlama
 
-Veri **Kaynakları penceresinde,** öğeleri form üzerine sürüklemeden önce denetimin oluşturulacak şekilde ayarlayın:
+Veri **Kaynakları penceresinde,** öğeleri form üzerine sürüklemeden önce oluşturulacak denetimi ayarlayın:
 
 1. Tasarımcıda **Form1'i** açın.
 
@@ -161,13 +161,13 @@ Veri **Kaynakları penceresinde,** öğeleri form üzerine sürüklemeden önce 
 
 5. Veri Kullanıcı Arabirimi Özelleştirme Seçenekleri iletişim kutusundaki **İlişkili Denetimler** **listesinden PhoneNumberBox'ı** seçin. 
 
-6. Telefon sütunundaki **açılan oka tıklayın ve** **PhoneNumberBox'ı seçin.**
+6. Telefon sütunundaki açılan oka **tıklayın ve** **PhoneNumberBox'ı seçin.**
 
 ## <a name="add-controls-to-the-form"></a>Forma denetimler ekleme
 
 Veri Kaynakları penceresindeki öğeleri forma sürükleyerek **veriye bağlı** denetimler oluşturabilirsiniz.
 
-Formda veriye bağlı denetimler oluşturmak  için Ana  Müşteriler düğümünü Veri Kaynakları penceresinden forma sürükleyin ve verileri Veri Kaynakları sütununda görüntülemek için **PhoneNumberBox** Telefon **doğrulayın.**
+Formda veriye bağlı denetimler oluşturmak için Veri  Kaynakları penceresinden ana **Müşteriler** düğümünü forma sürükleyin ve verileri veri sütununa görüntülemek için **PhoneNumberBox** Telefon **doğrulayın.**
 
 Formda, kayıtlarda gezinmek için bir araç şeridi ( ) ile birlikte açıklayıcı <xref:System.Windows.Forms.BindingNavigator> etiketlere sahip veriye bağlı denetimler görünür. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
 

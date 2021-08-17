@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfbd8a47aaf7fa62d4e72842645d1acb709c43f2b11c90893a2867577fb8d459
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7a7e090205c7667877c203f37c0ac1e7a5666424
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415512"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029443"
 ---
 # <a name="ienumdebugerrorbreakpoints2"></a>IEnumDebugErrorBreakpoints2
 Bu arabirim, bekleyen bir kesme noktasıyla ilişkili hata kesme noktalarını numaralandırır.

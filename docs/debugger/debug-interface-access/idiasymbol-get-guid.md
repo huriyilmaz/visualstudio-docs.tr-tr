@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f08b0b6128a014f59c42ed8146b96912c2e7da0eb27a4cbb6e35e2e3655b241b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c06ed62ad6820ea44bd1259edcac738020361129
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420721"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097695"
 ---
 # <a name="idiasymbolget_guid"></a>IDiaSymbol::get_guid
 Sembolün genel olarak benzersiz tanımlayıcısını (GUID) alır.

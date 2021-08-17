@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bir işlemde çalışan ve iş parçacığı bilgileri sağlayarak yürütmeyi genişleten bir programı temsil eder.
+description: Bu arabirim, bir işlemde çalışan bir programı temsil eder ve iş parçacığı bilgilerini sağlayarak Yürütme'yi genişletmektedir.
 title: IDebugProgram3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,17 +9,18 @@ ms.assetid: 4301ba23-c00c-4ce5-8b1e-3f27da312034
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 339aff9bdd41a27f48ef1a7ef1e01d9529835403
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8e1de2b61e7a942853cd0bae0d5526820030a4701921482a4aeb979cbfe96a2d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084343"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338832"
 ---
 # <a name="idebugprogram3"></a>IDebugProgram3
-Bu arabirim, bir işlemde çalışan ve iş parçacığı bilgileri sağlayarak [yürütmeyi](../../../extensibility/debugger/reference/idebugprogram2-execute.md) genişleten bir programı temsil eder.
+Bu arabirim, bir işlemde çalışan bir programı temsil eder ve iş parçacığı bilgilerini [sağlayarak Yürütme'yi](../../../extensibility/debugger/reference/idebugprogram2-execute.md) genişletmektedir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,28 +28,28 @@ Bu arabirim, bir işlemde çalışan ve iş parçacığı bilgileri sağlayarak 
 IDebugProgram3 : IDebugProgram3
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE) ve özel bir bağlantı noktası sağlayıcısı, bu arabirimi bir işlem içindeki bir programı temsil etmek için uygular. Oturum hata ayıklama Yöneticisi (SDM), [iliştirilecek](../../../extensibility/debugger/reference/idebugprogram2-attach.md)bilgileri sağlamak için bu arabirimi de uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) ve özel bir bağlantı noktası sağlayıcı, bir süreci bir programı temsil etmek için bu arabirimi benimser. Oturum hata ayıklama yöneticisi (SDM), Attach 'e bilgi sağlamak için bu arabirimi de [uygulamaya almaktadır.](../../../extensibility/debugger/reference/idebugprogram2-attach.md)
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olayı yeni bir program için bu arabirimi döndürür. Bu arabirim, birden fazla arabirimde birçok yöntem için bir parametre olarak da kullanılır.
+ [IDebugProgramCreateEvent2 olayı](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) yeni bir program için bu arabirimi döndürür. Bu arabirim, birden çok arabirimde birçok yöntem için parametre olarak da kullanılır.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProgram3` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugProgram3` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|Programı yürütür. İş parçacığı, çalıştırıldığında kullanıcı tarafından hangi iş parçacığının görüntülemekte olduğunu hata ayıklayıcı bilgilerini vermek üzere döndürülür.|
+|[ExecuteOnThread](../../../extensibility/debugger/reference/idebugprogram3-executeonthread.md)|Programı yürütür. İş parçacığı, hata ayıklayıcıya yürütürken kullanıcının hangi iş parçacığını görüntüle ilgili bilgi vermek için döndürülür.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="remarks"></a>Açıklamalar
- Bir program, belirli bir çalışma zamanı mimarisinde çalışan bir iş parçacığı kapsayıcısıdır ve bir işlem bir veya daha fazla programdan oluşur.
+ Program, belirli bir çalışma zamanı mimarisinde çalışan bir iş parçacığı kapsayıcısı, bir işlem ise bir veya daha fazla programdan yapılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

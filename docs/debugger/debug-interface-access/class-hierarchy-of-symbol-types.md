@@ -12,21 +12,22 @@ ms.assetid: 0ccd6990-4654-44cd-a6f3-bdd82fe90f6c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c33b6852935bbe02c75b0814fd2f77095d283c15
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 97817cec3ef4a36264b0f5e994509cc527bd2de44b64379ac921554d76b95ae8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865577"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345732"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Simge Türlerinin Sınıf Hiyerarşisi
 Aşağıdaki tablo, sınıf hiyerarşisindeki sembol türlerini açıklar.
 
 ## <a name="symbol-types"></a>Sembol türleri
 
-|Sembol türü|Description|
+|Sembol türü|Açıklama|
 |-----------------|-----------------|
 |[UDT](../../debugger/debug-interface-access/udt.md)|Her bir sınıfı, yapıyı ve birleşimi temsil etmek için kullanılan simge.|
 |[Enum (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/enum-debug-interface-access-sdk.md)|Numaralandırılmış türlerin simgesi.|

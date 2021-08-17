@@ -1,42 +1,43 @@
 ---
-title: Kodlanmış UI testlerini ve eylem kayıtlarını genişletme
-description: Kodlanmış UI test çerçevesinin genişletilebilirliği avantajlarından yararlanarak, belirli bir kullanıcı arabirimi için kodlanmış UI test çerçevesine uzantı oluşturmayı öğrenin.
+title: Kodlanmış UI Testlerini ve Eylem Kayıtlarını Genişletme
+description: Kodlanmış UI test çerçevesinin genişletilebilirlik avantajını kullanarak belirli kullanıcı arabiriminiz için kodlanmış UI test çerçevesine uzantı oluşturma hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8c4a846fe9425af7dc62ef93276c0272f480b7f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71ab67e5457d4616d9abbba0570443e6a1b2a817
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949876"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026765"
 ---
 # <a name="extend-coded-ui-tests-and-action-recordings"></a>Kodlanmış UI testlerini ve eylem kayıtlarını genişletme
 
-Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her kullanıcı arabirimini desteklemez. Test etmek istediğiniz belirli kullanıcı arabirimini desteklemiyor olabilir. Örneğin, bir Microsoft Excel elektronik tablosu için hemen kodlanmış UI testi veya eylem kaydı oluşturamazsınız. Ancak, kodlanmış UI test çerçevesinin genişletilebilirliğine katılarak, kendi uzantınızı, belirli kullanıcı arabirimini destekleyen kodlanmış UI test çerçevesi için oluşturabilirsiniz.
+Kodlanmış UI testleri ve eylem kayıtları için test çerçevesi, olası her kullanıcı arabirimini desteklemez. Test etmek istediğiniz belirli bir kullanıcı arabirimini desteklemeyebilir. Örneğin, bir kullanıcı arabirimi elektronik tablosu için hemen kodlanmış ui testi veya eylem Microsoft Excel oluşturamazsiniz. Ancak, kodlanmış UI test çerçevesinin genişletilebilirlik avantajını kullanarak belirli kullanıcı arabiriminizi destekleyen kodlanmış UI test çerçevesine kendi uzantınızı oluşturabilirsiniz.
 
-![UI test mimarisi](../test/media/ui_testarch.png)
+![UI Test Mimarisi](../test/media/ui_testarch.png)
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-## <a name="sample-extension-to-test-microsoft-excel"></a>Microsoft Excel 'i test etmek için örnek uzantı
+## <a name="sample-extension-to-test-microsoft-excel"></a>Test etmek için örnek Microsoft Excel
 
-Bu [blog gönderisi](/archive/blogs/gautamg/3-introducing-sample-excel-extension) , kodlanmış UI test çerçevesi için bir [örnek uzantının](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Components.PostAttachments/00/09/94/38/24/ExcelPluginSample.zip) bağlantısını içerir. Ayrıca, [KODLANMıŞ UI testi genişletilebilirliği için blog gönderisi serisinin](/archive/blogs/gautamg/series-on-coded-ui-test-extensibility)tamamını görüntüleyebilirsiniz.
+Bu [blog gönderisi,](/archive/blogs/gautamg/3-introducing-sample-excel-extension) kodlanmış UI [test çerçevesi için](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Components.PostAttachments/00/09/94/38/24/ExcelPluginSample.zip) örnek bir uzantının bağlantısını içerir. Kodlanmış UI [testi genişletilebilirliği için blog gönderisi serisinin tamamını da görüntüebilirsiniz.](/archive/blogs/gautamg/series-on-coded-ui-test-extensibility)
 
 > [!NOTE]
-> Örnek, Microsoft Excel 2010 ile kullanılmak üzere tasarlanmıştır. Excel 'in diğer sürümleriyle çalışmayabilir ya da çalışmayabilir.
+> Örnek, örnekle birlikte kullanılmak üzere Microsoft Excel 2010. Bu, uygulamanın diğer sürümleriyle birlikte Excel.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>
-- [UITestActionFilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))
+- [Uıtestactionfilter](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>
-- [Kodunuzu test etmek için UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md)
-- [Kodlanmış UI testleri için en iyi uygulamalar](../test/best-practices-for-coded-ui-tests.md)
-- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Kodunuzu test etmek için UI otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md)
+- [Kodlanmış UI testleri için en iyi yöntemler](../test/best-practices-for-coded-ui-tests.md)
+- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen yapılandırmalar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

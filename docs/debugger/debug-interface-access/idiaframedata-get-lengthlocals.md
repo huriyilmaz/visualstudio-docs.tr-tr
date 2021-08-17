@@ -1,6 +1,6 @@
 ---
-description: IDiaFrameData::get_lengthLocals yığına gönderilen yerel değişkenlerin bayt sayısını alınır.
-title: IDiaFrameData::get_lengthLocals | Microsoft Docs
+description: 'IDiaFrameData:: get_lengthLocals, yığına gönderilen yerel değişkenlerin bayt sayısını alır.'
+title: 'IDiaFrameData:: get_lengthLocals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 35e634fc44292277341a519e1cd3eccade51feecccc323eec8dc280b21cba503
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 923a648b9c45458866c7b40764770238dd3b823b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392339"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081616"
 ---
 # <a name="idiaframedataget_lengthlocals"></a>IDiaFrameData::get_lengthLocals
-Yığına gönderilen yerel değişkenlerin bayt sayısını alın.
+Yığına gönderilen yerel değişkenlerin bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_lengthLocals (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Yerel değişkenlerin bayt sayısını döndürür.
+dışı Yerel değişkenlerin bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen değer genellikle bir program dizesinin yorumlanmasında kullanılır (program dizesinin tanımı için [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemine bakın).
+ Bu yöntemin döndürdüğü değer genellikle program dizesinin yorumu içinde kullanılır (program dizesinin tanımı için [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) metoduna bakın).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -11,14 +11,15 @@ ms.assetid: f80a2e24-5744-4fec-bab0-3ed51aef6e58
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f314152355459ffd2437621efaae002ef284c765
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: bae3cc21ae6c54912279bbc283235c25fb47c20cb6b5bc0b58b8f8bf2bf2eb5a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148138"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344935"
 ---
 # <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
 `ULONGLONG`Bir özellik kümesindeki değerleri okur.
@@ -45,7 +46,7 @@ dışı Özellik değerini döndürür.
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. `E_INVALIDARG`Özelliğin tür olup olmadığını döndürür `ULONGLONG` .
 
 ## <a name="remarks"></a>Açıklamalar
- `ULONGLONG`, Windows tarafından 64 bitlik işaretsiz tamsayı olarak tanımlanır.
+ `ULONGLONG`, Windows tarafından 64 bitlik işaretsiz bir tamsayı olarak tanımlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

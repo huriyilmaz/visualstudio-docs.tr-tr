@@ -1,6 +1,6 @@
 ---
 description: Belirtilen hata ayıklama adresinin bir sıra noktası olup olmadığını belirler.
-title: 'IDebugComPlusSymbolProvider2:: IsAddressSequencePoint | Microsoft Docs'
+title: IDebugComPlusSymbolProvider2::IsAddressSequencePoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,17 +10,18 @@ ms.assetid: 89b27c57-5295-428b-8229-a402500d8cd3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 966981d4dba7e1517e8e89471ccd2c062a8fb822
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bc854d686260abaf92eca56f9b1a5d1d58fbe55e67db66df2a6f1c8f1dd724c3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084967"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342368"
 ---
 # <a name="idebugcomplussymbolprovider2isaddresssequencepoint"></a>IDebugComPlusSymbolProvider2::IsAddressSequencePoint
 Belirtilen hata ayıklama adresinin bir sıra noktası olup olmadığını belirler.
@@ -41,13 +42,13 @@ int IsAddressSequencePoint(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
+[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Hata ayıklama adresi bir sıra noktası ise, öğesini döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` .
+Hata ayıklama adresi bir sıra noktası ise döndürür; `S_OK` aksi takdirde `S_FALSE` döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider2** arabirimini ortaya çıkaran bir [CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsAddressSequencePoint(

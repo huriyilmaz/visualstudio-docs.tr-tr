@@ -1,6 +1,6 @@
 ---
 title: Cloud Services (genişletilmiş destek) kullanma
-description: Azure Resource Manager kullanarak bir Cloud Services (genişletilmiş destek) oluşturma ve dağıtma hakkında Visual Studio
+description: Cloud Services ile Azure Resource Manager kullanarak Cloud Services (genişletilmiş destek) Visual Studio
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.date: 01/25/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: e4b858a8f13ba3cd1ea75fc4c9334677f2dbb1ddfaeb94f4569163843f908b53
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 547c3b6e81ad1df0f0beffec54a25ad7c0b32ed7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312684"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082445"
 ---
 # <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio"></a>Visual Studio'de Cloud Services (genişletilmiş destek) oluşturma ve Visual Studio
 
@@ -23,11 +23,11 @@ Visual Studio [2019 sürüm 16.9'dan](https://visualstudio.microsoft.com/vs/)ba�
 
 ## <a name="publish-to-cloud-services-extended-support"></a>Cloud Services'da yayımlama (genişletilmiş destek)
 
-Mevcut Azure Bulut Hizmeti projenizi Cloud Services (genişletilmiş destek) yayımlarsanız, klasik Bir Azure Bulut Hizmeti'ne yayımlama özelliği korunur. 2019 Visual Studio 16.9 ve sonraki sürümlerde klasik bulut hizmeti projelerinin Yayımla komutu olan Yayımla **(genişletilmiş destek)** özel bir sürümü vardır.  Bu komut, öğesinde kısayol **menüsünde Çözüm Gezgini.**
+Mevcut Azure Bulut Hizmeti projenizi Cloud Services (genişletilmiş destek) yayımlarsanız, klasik Bir Azure Bulut Hizmeti'ne yayımlama özelliği korunur. 2019 Visual Studio 16.9 ve sonraki sürümlerde klasik bulut hizmeti projelerinin  Yayımla komutu olan Yayımla **(genişletilmiş destek)** özel bir sürümü vardır. Bu komut, öğesinin kısayol menüsünde **Çözüm Gezgini.**
 
-Cloud Services(genişletilmiş destek) için yayımlamanız gereken bazı farklar vardır. Örneğin, bu dağıtım yuvaları genişletilmiş  destek yayımlama modelinin parçası değildir, çünkü Hazırlama veya Üretim'de yayımlamanız istenlanmaz. Bunun yerine, Cloud Services (genişletilmiş destek) ile birden çok dağıtım oluşturabilir ve dağıtımları Azure portal. Visual Studio aracı bunu 16.9'da ayarlamaya izin verir ancak değiştirme özelliği Cloud Services'nin (genişletilmiş destek) sonraki bir sürümüne kadar etkinleştirilmez ve Önizleme sırasında dağıtım zamanında hataya neden olabilir.
+Cloud Services(genişletilmiş destek) için yayımlamanız gereken bazı farklar vardır. Örneğin, bu dağıtım yuvaları genişletilmiş  destek yayımlama modelinin parçası değildir, çünkü Hazırlama veya Üretim'de yayımlarsanız size sorulanmaz. Bunun yerine, Cloud Services (genişletilmiş destek) ile birden çok dağıtım oluşturabilir ve dağıtımları Azure portal. Visual Studio aracı bunu 16.9'da ayarlamaya izin verir ancak değiştirme özelliği Cloud Services'nin (genişletilmiş destek) sonraki bir sürümüne kadar etkinleştirilmez ve Önizleme sırasında dağıtım zamanında hataya neden olabilir.
 
-Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayımlamadan önce projenizin kullandığı depolama hesaplarını kontrol edin ve V1 veya Depolama V2 Depolama emin olun. Klasik depolama hesabı türleri dağıtım zamanında hata iletisiyle başarısız olur. Tanılama tarafından kullanılan depolama hesabını kontrol edin. Tanılama depolama hesabını kontrol etmek için [bkz. Sanal makineler ve sanal makineler için Azure Cloud Services ayarlama.](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md) Hizmetiniz klasik bir depolama hesabı kullanıyorsa, bunu yükseltebilirsiniz; bkz. [Genel amaçlı v2 depolama hesabına yükseltme.](/azure/storage/common/storage-account-upgrade?tabs=azure-portal)  Depolama hesabı türleri hakkında genel bilgi için bkz. [Depolama genel bakış.](/azure/storage/common/storage-account-overview)
+Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayımlamadan önce projenizin kullandığı depolama hesaplarını kontrol edin ve V1 veya Depolama V2 Depolama emin olun. Klasik depolama hesabı türleri dağıtım zamanında hata iletisiyle başarısız olur. Tanılama tarafından kullanılan depolama hesabını kontrol edin. Tanılama depolama hesabını kontrol etmek için [bkz. Sanal makineler ve sanal makineler için Azure Cloud Services ayarlama.](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md) Hizmetiniz klasik bir depolama hesabı kullanıyorsa, bunu yükseltebilirsiniz; Bkz. [Genel amaçlı v2 depolama hesabına yükseltme.](/azure/storage/common/storage-account-upgrade?tabs=azure-portal)  Depolama hesabı türleri hakkında genel bilgi için bkz. [Depolama genel bakış.](/azure/storage/common/storage-account-overview)
 
 ### <a name="to-publish-a-classic-azure-cloud-service-project-to-cloud-services-extended-support"></a>Klasik bir Azure Cloud Service projesini Cloud Services (genişletilmiş destek)
 
@@ -43,7 +43,7 @@ Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayıml
 
 1. **Aboneliğinizi seçin** - Dağıtımınız için kullanmak istediğiniz aboneliği seçin.
 
-1. Ayarlar  seçin. 
+1. Ayarlar  **seçin.**
 
    ![Ortak Ayarlar](./media/cloud-services-extended-support/publish-settings.png)
 
@@ -57,7 +57,7 @@ Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayıml
 
 1. **Hizmet yapılandırması** - Bulut veya **Yerel'i** **seçin.**
 
-1. **Depolama -** Bu dağıtım için kullanmak üzere depolama hesabını seçin veya Yeni **oluştur'a** seçerek bir depolama hesabı oluşturun. Bölge, her depolama hesabı için parantez içinde görüntülenir. Depolama hesabının veri merkezi konumunun, bulut hizmeti için veri merkezi konumuyla aynı olması önerilir (Common Ayarlar).
+1. **Depolama -** Bu dağıtım için kullanmak üzere depolama hesabını seçin veya Yeni **oluştur'a seçerek** bir depolama hesabı oluşturun. Bölge, her depolama hesabı için parantez içinde görüntülenir. Depolama hesabının veri merkezi konumunun, bulut hizmeti için veri merkezi konumuyla aynı olması önerilir (Common Ayarlar).
 
    Azure depolama hesabı, uygulama dağıtımı için paketi depolar.
 
@@ -71,13 +71,13 @@ Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayıml
 
    ![Tanılama ayarları](./media/cloud-services-extended-support/diagnostics-settings.png)
 
-   Tanılama, bir Azure bulut hizmetiyle (genişletilmiş destek) ilgili sorunları gidermenize olanak sağlar. Tanılama hakkında bilgi için, [bkz. Configuring Diagnostics for Azure Cloud Services and Virtual Machines](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md). Application Analizler için [bkz. Application Analizler?](/azure/application-insights/app-insights-overview).
+   Tanılama, bir Azure bulut hizmetiyle (genişletilmiş destek) ilgili sorunları gidermenize olanak sağlar. Tanılama hakkında bilgi için, [bkz. Configuring Diagnostics for Azure Cloud Services and Virtual Machines](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md). Application Analizler hakkında bilgi için [bkz. Application Analizler?](/azure/application-insights/app-insights-overview).
 
 1. Özet **sayfasına** taşımak için **Sonraki'yi** seçin.
 
    ![Özet](./media/cloud-services-extended-support/publish-summary.png)
 
-1. **Hedef profil** - Seçtiğiniz ayarlardan bir yayımlama profili oluşturabilirsiniz. Örneğin, bir test ortamı için bir profil ve üretim için başka bir profil oluşturabilirsiniz. Bu profili kaydetmek için Kaydet **simgesini** seçin. Sihirbaz, profili oluşturur ve Visual Studio kaydeder. Profil adını değiştirmek için Hedef profil **listesini açın ve** **Yönet... 'i seçin.**
+1. **Hedef profil** - Seçtiğiniz ayarlardan bir yayımlama profili oluşturabilirsiniz. Örneğin, bir test ortamı için bir profil ve üretim için başka bir profil oluşturabilirsiniz. Bu profili kaydetmek için Kaydet **simgesini** seçin. Sihirbaz, profili oluşturur ve Visual Studio kaydeder. Profil adını değiştirmek için Hedef profil listesini **açın ve** **Yönet... 'i seçin.**
 
    > [!Note]
    > Yayımlama profili, Çözüm Gezgini içinde Visual Studio ve profil ayarları *.azurePubxml* uzantısına sahip bir dosyaya yazılır. Ayarlar XML etiketlerinin öznitelikleri olarak kaydedilir.
@@ -92,4 +92,4 @@ Bu öğreticiyi kullanarak oluşturduğunuz Azure kaynaklarını temizlemek içi
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yayımla ekranındaki Yapılandır düğmesini kullanarak **sürekli tümleştirmeyi** (CI) **ayarlayın.** Daha fazla bilgi için Azure Pipelines [bakın.](/azure/devops/pipelines/?view=azure-devops&preserve-view=true)
+Yayımla ekranındaki Yapılandır düğmesini kullanarak **sürekli tümleştirmeyi** (CI) **ayarlayın.** Daha fazla bilgi için [bkz. Azure Pipelines bakın.](/azure/devops/pipelines/?view=azure-devops&preserve-view=true)

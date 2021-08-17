@@ -17,25 +17,26 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: d568d5ca2025f1467fa96387493b1e8b4ed1ec6e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5868dfe761030ed46d71b45cbe646959f8824ece
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931701"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027051"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>Nasıl yapılır: bir yönteme parametre ekleme
   Yöntemine bilgi iletmek veya bir yöntemden bilgi döndürmek için bir parametre kullanın. Tüm yöntemler en az bir parametreye sahip olmalıdır. Oluşturmak istediğiniz yöntem türünü desteklemek için bir parametre tasarlamak hakkında daha fazla bilgi için, bkz. [Iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
- Bir yöntemine parametre eklediğinizde, Visual Studio Parameter öğesini projenizdeki model dosyasının XML 'e ekler. Bir parametre öğesinin öznitelikleri hakkında daha fazla bilgi için bkz. [parametresi](/previous-versions/office/developer/sharepoint-2010/ee557705(v=office.14)).
+ bir yöntemine parametre eklediğinizde Visual Studio, parametre öğesini projenizdeki model dosyasının XML 'e ekler. Bir parametre öğesinin öznitelikleri hakkında daha fazla bilgi için bkz. [parametresi](/previous-versions/office/developer/sharepoint-2010/ee557705(v=office.14)).
 
 ### <a name="to-add-a-parameter-to-a-method"></a>Bir yönteme parametre eklemek için
 
 1. Bir varlığa bir yöntem ekleyin.
 
-2. Menü çubuğunda,   >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. menü çubuğunda   >  **diğer Windows**  >  **BDC yöntemi ayrıntılarını** görüntüle ' yi seçin.
 
      **IVB yöntemi ayrıntıları** penceresi açılır. Daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 

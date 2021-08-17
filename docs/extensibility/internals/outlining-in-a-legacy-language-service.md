@@ -1,6 +1,6 @@
 ---
-title: Eski dil hizmetinde ana hat oluşturma | Microsoft Docs
-description: Eski dil hizmetindeki gizli bölgelerin uygulanmasıyla ana hattı oluşturmayı nasıl destekleyeceğinizi öğrenin.
+title: Eski Dil Hizmeti hizmetlerinde | Microsoft Docs
+description: Eski bir dil hizmetine gizli bölgelerin uygulanmasıyla ilgili nasıl bir açıklama yapmayı destekley öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,41 +15,41 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73b2adbc6dbaab22d5d1888b42db3c0256e31846dcd1633241c6faae7b74a3ce
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c9a4906b500d7c073f3f17d06e04b656f27be1fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414642"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049798"
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Ana Hat Oluşturma
-Anahat oluşturma karmaşık bir programı bir genel bakış veya anahatta daraltmak mümkün kılar. Örneğin, C# ' de tüm yöntemler tek bir satıra daraltılabilir ve yalnızca Yöntem imzası gösteriliyor. Ayrıca, yapılar ve sınıflar yalnızca yapıların ve sınıfların adlarını gösterecek şekilde daraltılabilirler. Tek bir yöntemin içinde,, ve gibi yalnızca ilk bir deyim göstererek genel akışı göstermek için karmaşık mantık daraltılabilir `foreach` `if` `while` .
+Ana hatlama, karmaşık bir programı genel bakış veya ana hat olarak daraltabilirsiniz. Örneğin, C# içinde tüm yöntemler tek bir satıra daraltarak yalnızca yöntem imzasını gösterebilirsiniz. Ayrıca yapılar ve sınıflar yalnızca yapıların ve sınıfların adlarını gösterecek şekilde daraltılmış olabilir. Tek bir yöntemin içinde, yalnızca , ve gibi deyimlerin ilk satırı göstererek genel akışı göstermek için `foreach` karmaşık mantık `if` daraltılmış `while` olabilir.
 
- Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Daha fazla bilgi edinmek için bkz. [Izlenecek yol: Ana hat](../../extensibility/walkthrough-outlining.md).
+ Eski dil hizmetleri VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın daha yeni yolu MEF uzantılarını kullanmaktır. Daha fazla bilgi için bkz. [Adım adım kılavuz: Açıklama.](../../extensibility/walkthrough-outlining.md)
 
 > [!NOTE]
-> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni düzenleyici API'sini mümkün olan en kısa sürede kullanmaya başlamayı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
-## <a name="enabling-support-for-outlining"></a>Ana hat desteğini etkinleştirme
- `AutoOutlining`Otomatik anahat oluşturmayı etkinleştirmek için kayıt defteri girdisi 1 olarak ayarlanır. Otomatik anahat oluşturma, gizli bölgeleri tanımlamak ve anahat oluşturma gliflerini göstermek için bir dosya yüklendiğinde veya değiştirildiğinde kaynağın tamamına bir ayrıştırmaya ayarlanır. Ayrıca, ana hat Kullanıcı tarafından el ile denetlenebilir.
+## <a name="enabling-support-for-outlining"></a>Outlining için Desteği Etkinleştirme
+ Kayıt `AutoOutlining` defteri girişi, otomatik açıklamayı etkinleştirmek için 1 olarak ayarlanır. Otomatik açıklama, bir dosya yüklendiğinde veya değiştirerek gizli bölgeleri tanımlamak ve altı çizili glyph'leri göstermek için kaynağın tamamının ayrıştırıcılarını ayarlar. Outlining kullanıcı tarafından el ile de denetlenebilir.
 
- `AutoOutlining`Kayıt defteri girişinin değeri, sınıfındaki özelliği aracılığıyla elde edilebilir <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> <xref:Microsoft.VisualStudio.Package.LanguagePreferences> . `AutoOutlining`Kayıt defteri girişi, özniteliğe adlandırılmış bir parametre ile başlatılabilir <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> (Ayrıntılar Için [eski dil hizmeti kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md) konusuna bakın).
+ Kayıt defteri `AutoOutlining` girişinin değeri, sınıfındaki <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> özelliği aracılığıyla elde <xref:Microsoft.VisualStudio.Package.LanguagePreferences> edilir. Kayıt `AutoOutlining` defteri girdisi özniteliğine adlandırılmış bir parametreyle <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> başlatabilirsiniz (ayrıntılar [için bkz. Eski Dil Hizmeti Kaydetme).](../../extensibility/internals/registering-a-legacy-language-service1.md)
 
-## <a name="the-hidden-region"></a>Gizli bölge
- Ana hat sağlamak için dil hizmetinizin gizli bölgeleri desteklemesi gerekir. Bunlar, genişletilebilen veya daraltılabilen metnin yayılmıştır. Gizli bölgeler, küme ayraçları veya özel semboller gibi standart dil sembolleri ile sınırlandırılabilir. Örneğin, C# ' ın `#region` / `#endregion` gizli bir bölgeyi sınırlandıran bir çifti vardır.
+## <a name="the-hidden-region"></a>Gizli Bölge
+ Açıklama sağlamak için dil hizmetinizin gizli bölgeleri desteklemesi gerekir. Bunlar, genişletilen veya daraltılmış metin aralıklarıdır. Gizli bölgeler küme ayraçları gibi standart dil sembolleri veya özel sembollerle sınırlandırılmış olabilir. Örneğin, C# gizli `#region` / `#endregion` bir bölgeyi sınırlayıcı bir çifte sahip.
 
- Gizli bölgeler, arabirim olarak ortaya çıkarılan bir gizli bölge yöneticisi tarafından yönetilir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> .
+ Gizli bölgeler, arabirim olarak açık olan gizli bölge yöneticisi tarafından <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> yönetilir.
 
- Ana hat, gizli bölgeler <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion> arabirimini kullanır ve gizli bölge, geçerli görünür durum ve yayılma daraltıldığında görüntülenecek olan başlığı içerir.
+ Ana açıklama, arabiriminde gizli bölgeleri kullanır ve gizli bölgenin, geçerli görünür durumunun ve aralığın daraltılmış olduğu zaman <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegion> gösterilecek başlığı içerir.
 
- Dil hizmeti ayrıştırıcısı, <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> Gizli bölgeler için varsayılan davranışa sahip yeni bir gizli bölge eklemek için yöntemini kullanır, ancak <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> Yöntem anahattın görünümünü ve davranışını özelleştirmenize olanak sağlar. Gizli bölgeler gizli bölge oturumuna verildiğinde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dil hizmetinin gizli bölgelerini yönetir.
+ Dil hizmeti ayrıştırıcısı, gizli bölgeler için varsayılan davranışla yeni bir gizli bölge eklemek için yöntemini kullanır, yöntem ise ana hat görünümünü ve <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddHiddenRegion%2A> davranışını özelleştirmenize olanak sağlar. Gizli bölgeler gizli bölge oturumuna verildiktan sonra [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dil hizmeti için gizli bölgeleri yönetir.
 
- Gizli bölge oturumunun ne zaman yok edildiğini, gizli bir bölgenin değiştirildiğini veya belirli bir gizli bölgenin görünür olduğundan emin olmanız gerekiyorsa, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.Source> ve sırasıyla uygun yöntemleri,,, ve geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A> <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A> <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A> .
+ Gizli bölge oturumunun ne zaman yok olduğunu belirlemeniz gerekirse, gizli bir bölge değiştirilir veya belirli bir gizli bölgenin görünür olduğundan emin olun; sınıfından bir sınıf türetmeli ve sırasıyla uygun yöntemleri <xref:Microsoft.VisualStudio.Package.Source> <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A> , ve geçersiz <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A> <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A> kılmanız gerekir.
 
 ### <a name="example"></a>Örnek
- Tüm küme ayraçları çiftleri için gizli bölgeler oluşturmaya yönelik basitleştirilmiş bir örnek aşağıda verilmiştir. Dilin ayraç eşleştirme sağladığı ve eşleştirilecek ayraçların en azından küme ayraçları ({ve}) içerdiğinden varsayılır. Bu yaklaşım yalnızca tanım amaçlıdır. Tam bir uygulama, içindeki servis taleplerinin eksiksiz bir şekilde işlenmesini içermelidir <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> . Bu örnek ayrıca <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> tercihi geçici olarak nasıl ayarlayagösterdiğini gösterir `true` . Alternatif olarak, `AutoOutlining` dil paketinizin özniteliğinde adlandırılmış parametresini belirtmektir `ProvideLanguageServiceAttribute` .
+ Tüm küme ayraçları çiftleri için gizli bölgeler oluşturmaya örnek olarak basitleştirilmiş bir örnek verilmektedir. Dilin küme ayracı eşleştirme sağladığı varsayılır ve eşleştirilen küme ayraçları en azından küme ayraçlarını ({ ve }) içerir. Bu yaklaşım yalnızca açıklayıcı amaçlara yöneliktir. Tam bir uygulama, içinde durumların eksiksiz bir şekilde işlenmesine sahip <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> olur. Bu örnek ayrıca tercihin geçici olarak <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> nasıl `true` ayarlandırıldığını da gösterir. Alternatif olarak, dil `AutoOutlining` paketinizin özniteliğinde `ProvideLanguageServiceAttribute` adlandırılmış parametreyi belirtabilirsiniz.
 
- Bu örnekte, açıklamalar, dizeler ve değişmez değerler için C# kuralları varsayılır.
+ Bu örnekte açıklamalar, dizeler ve değişmez dizeler için C# kuralları varsayılmıştır.
 
 ```csharp
 using Microsoft.VisualStudio.Package;

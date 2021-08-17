@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8968bac298983eef2101d170a52de897b131ee71
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7b103cd6d352c78db1db53efb3a20aafaaa64f3e85edee7d214e6ce917e5095a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122051904"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453405"
 ---
 # <a name="how-to-stop-code-changes"></a>Nasıl Yapılır: Kod Değişikliklerini Durdurma
 Düzenle ve Devam Etmeyi kod değişiklikleri uygulama sürecindeyken, işlemi durdurabilirsiniz.
