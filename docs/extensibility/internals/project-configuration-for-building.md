@@ -1,5 +1,5 @@
 ---
-title: Derleme için proje yapılandırması | Microsoft Docs
+title: Project Oluşturma yapılandırması | Microsoft Docs
 description: Belirli bir çözüme yönelik çözüm yapılandırmalarının listesinin yeni bir proje türündeki çözüm konfigürasyonları iletişim kutusu tarafından nasıl yönetildiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,14 +11,15 @@ ms.assetid: 2c83615d-fa4d-4b9f-b315-7a69b3000da0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf98698d3527220c4bc25cdf36132f0088ae4ea7
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 07112d61162f4007db1581c75188295e152e809cd733ff6b3220c5ed1ca742b3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899936"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401562"
 ---
 # <a name="project-configuration-for-building"></a>Derleme için Proje Yapılandırması
 Belirli bir çözüme yönelik çözüm yapılandırmalarının listesi, çözüm yapılandırması iletişim kutusu tarafından yönetilir.
@@ -38,11 +39,11 @@ Belirli bir çözüme yönelik çözüm yapılandırmalarının listesi, çözü
 
  Çözümler ve projeler için yapılandırmaları ekleme ve yeniden adlandırma ile ilgili bilgi için bkz. [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md) .
 
- Proje bağımlılıkları ve derleme sırası çözüm yapılandırması bağımsızdır: Yani, Çözümdeki tüm projeler için yalnızca bir bağımlılık ağacı ayarlayabilirsiniz. Çözüme veya projeye sağ tıklayıp **Proje bağımlılıkları** ya da **proje derleme sırası** seçeneğini belirleyerek **Proje bağımlılıkları** iletişim kutusu açılır. Ayrıca, **Proje** menüsünden de açılabilir.
+ Project bağımlılıklar ve derleme siparişi çözüm yapılandırması bağımsızdır: yani, çözümdeki tüm projeler için yalnızca bir bağımlılık ağacı ayarlayabilirsiniz. çözüme veya projeye sağ tıklayıp **Project bağımlılıkları** veya **Project derleme sırası** seçeneğinin belirlenmesi **Project bağımlılıklar** iletişim kutusunu açar. ayrıca, **Project** menüsünden de açılabilir.
 
- ![Proje bağımlılıkları](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies") Proje bağımlılıkları
+ bağımlılıklar Project bağımlılıkları ![Project](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")
 
- Proje bağımlılıkları, projelerin hangi sırada derleyeceğini belirleme. Bir çözümdeki projelerin derolacağı tam sırayı görüntülemek için iletişim kutusundaki derleme sırası sekmesini kullanın ve yapı sırasını değiştirmek için bağımlılıklar sekmesini kullanın.
+ Project bağımlılıklar, projelerin hangi sırada derleyeceğini tespit ediyor. Bir çözümdeki projelerin derolacağı tam sırayı görüntülemek için iletişim kutusundaki derleme sırası sekmesini kullanın ve yapı sırasını değiştirmek için bağımlılıklar sekmesini kullanın.
 
 > [!NOTE]
 > Listede onay kutuları seçili, ancak ya da arabirimler tarafından belirtilen açık bağımlılıklar nedeniyle bu ortam tarafından soluk görüntülenen ve değiştirilemeyen bir proje tarafından eklenmiş olan projeler <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> . Örneğin, bir projeden başka bir projeye bir proje başvurusu eklemek, [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] yalnızca başvuru silinerek kaldırılabileceği bir yapı bağımlılığı ekler. Onay kutuları açık ve soluk olarak görünen projeler bir bağımlılık döngüsü oluşturabileceğinden (örneğin, Project1 Project2 'e bağımlı olur ve Project2, Project1 'e bağımlı olur) ve derlemeyi temizler.

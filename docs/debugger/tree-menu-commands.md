@@ -1,6 +1,6 @@
 ---
-title: Ağaç menü komutları | Microsoft Docs
-description: Spy + + ağaç menüsü, görünümleri genişletmek veya daraltmak için komutlar sağlar. Ağaç menü komutlarının bir listesini, her birinin kısa bir açıklamasıyla görüntüleyin.
+title: Ağaç Menü Komutları | Microsoft Docs
+description: Spy++ Ağacı menüsü görünümleri genişletmeye veya daraltmaya yönelik komutlar sağlar. Her biri için kısa bir açıklamayla birlikte Ağaç menü komutlarının listesine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,22 +10,23 @@ ms.assetid: ffc1b893-17b1-477f-92a1-e4a59261ca1a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9dc99ca9652e0df1027b4aeab3519291c8f12034
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 879874a7dfc0bdd8275811e9e6fd39d527ac750d6f7185935e2ec2c6e16d38ad
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870460"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391219"
 ---
 # <a name="tree-menu-commands"></a>Ağaç Menü Komutları
-**Ağaç** menüsü, görünümleri genişletmek veya daraltmak için komutlar sağlar.
+Ağaç **menüsü** görünümleri genişletme veya daraltma komutları sağlar.
 
- **Bir düzey Genişlet** Bir düzey altındaki bir düzeyi görüntüleyerek bir sistem görünümünde Şu anda seçili olan öğeyi genişletir.
+ **Bir Düzeyi Genişletme** Sistem görünümünde seçili olan öğeyi, altında bir düzey görüntüleyerek genişleter.
 
- **Dalı Genişlet** Şu anda seçili olan öğenin altındaki tüm düzeyleri genişletir.
+ **Dalı Genişletme** Seçili öğenin altındaki tüm düzeyleri genişletiyor.
 
- **Tümünü Genişlet** Bir sistem görünümündeki tüm düzeyleri genişletir ve görüntüler.
+ **Hepsini Genişlet** Bir sistem görünümündeki tüm düzeyleri genişleter ve görüntüler.
 
- **Daraltma** Şu anda seçili olan öğenin altındaki tüm düzeyleri daraltır.
+ **Daralt** Seçili öğenin altındaki tüm düzeyleri daraltıyor.

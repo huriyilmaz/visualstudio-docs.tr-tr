@@ -1,26 +1,27 @@
 ---
 title: TargetCLR | Microsoft Docs
-description: Bir uygulamaya CLR 'nin birden fazla sürümü yüklendiğinde, TargetCLR seçeneğinin profil için ortak dil çalışma zamanı sürümünü nasıl belirttiğinden öğrenin.
+description: Bir uygulamada CLR'nin birden fazla sürümü yüklendiğinde TargetCLR seçeneğinin profili oluşturmak için ortak dil çalışma zamanı sürümünü nasıl belirtir?
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f9732480-287f-40f1-a4ff-b112e143b940
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 76454a77a895a44d4c6871ad5061ee4b6079e604
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b2101d6702c4a493ba720ca1107d74c9fdeb7b2fc8e99e188c8400dd867109c0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868198"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121396389"
 ---
 # <a name="targetclr"></a>TargetCLR
-**Targetclr** seçeneği, BIR uygulamaya CLR 'nin birden fazla sürümü yüklendiğinde profil için ortak dil çalışma zamanı (CLR) sürümünü belirtir.
+**TargetCLR** seçeneği, bir uygulamada CLR'nin birden fazla sürümü yüklendiğinde profili oluşturmak için ortak dil çalışma zamanı (CLR) sürümünü belirtir.
 
- Profil Oluşturma Araçları, varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uygulama tarafından yüklenen CLR 'nin ilk sürümünü hedefleyin.
+ Varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları uygulama tarafından yüklenen ilk CLR sürümünü hedefler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -29,17 +30,17 @@ VSPerfCmd.exe {/Launch:AppName | /Attach:PID} /TargetCLR[:ClrVersion] [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `ClrVersion` CLR sürüm numarası. **Vn. N.** 2 sürüm biçimini kullanın.
+ `ClrVersion` CLR'nin sürüm numarası. **vN.N.NNNNN sürüm biçimini kullanın.**
 
 ## <a name="required-options"></a>Gerekli seçenekler
- **Targetclr** seçeneği yalnızca **başlatma** veya **iliştirme** seçenekleriyle kullanılabilir.
+ **TargetCLR seçeneği** yalnızca Başlatma veya Ekleme **seçenekleriyle** kullanılabilir. 
 
- **Başlatma:** `AppName` Belirtilen uygulamayı başlatır ve profile başlar.
+ **Başlatma:** `AppName` Belirtilen uygulamayı başlatır ve profil oluşturmaya başlar.
 
- **Ekle:** `PID` Belirtilen işlemi profil olarak başlatır.
+ **Ekleme:** `PID` Belirtilen işlem profilini oluşturmak için başlar.
 
 ## <a name="example"></a>Örnek
- Bu örnekte, CLR Version 4.0.11003 'ın profili oluşturulmuş olduğundan emin olmak için TargetCLR seçeneği kullanılır.
+ Bu örnekte, CLR sürüm 4.0.11003'in profilinin doğru olduğundan emin olmak için TargetCLR seçeneği kullanılır.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp

@@ -9,14 +9,15 @@ f1_keywords:
 author: jillre
 ms.author: jillfra
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8005a427aeb0e07235c077d23f12906ab2d29ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 929140a744765bc69d745ccfe0e4e645a4369d675d2c0a06791afc90a8867ae3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943867"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400185"
 ---
 # <a name="options-text-editor-f-intellisense"></a>Seçenekler, metin düzenleyici, F #, IntelliSense
 

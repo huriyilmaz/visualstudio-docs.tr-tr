@@ -1,6 +1,6 @@
 ---
 title: Profil oluşturucu komut satırı-açık istemci .NET uygulaması, eşzamanlılık verileri al
-description: Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını, .NET tek başına uygulamasını başlatıp işlem ve iş parçacığı eşzamanlılık verilerini toplamayı öğrenin.
+description: .net tek başına uygulamasını başlatmak ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,18 +8,19 @@ ms.assetid: 17a48848-bd3e-44ef-9971-e39836ff1df2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 81311e9dea2c5367b44cdf2cc8e2327a8aff5617
-ms.sourcegitcommit: 20f546a0b13b56e7b0da21abab291d42a5ba5928
+ms.openlocfilehash: f9ed0972f96ef3d9ef8a5692943ca31548e3667f4ade64812990ba20ab5186cf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104884115"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121396519"
 ---
-# <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için Profil Oluşturucu ile tek başına .NET Framework uygulaması başlatma
-Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Framework tek başına (istemci) uygulaması başlatmak ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağını açıklar
+# <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için profil oluşturucu ile tek başına .NET Framework uygulaması başlatma
+bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Framework tek başına (istemci) uygulaması başlatmak ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını açıklar
 
 > [!NOTE]
 > Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut Istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir.
@@ -27,7 +28,7 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
  Profil Oluşturucu uygulamaya iliştirirken, veri toplamayı duraklatabilir ve devam ettirebilirsiniz. Profil oluşturma oturumunu sonlandırmak için, profil oluşturucunun artık uygulamaya bağlı olmaması ve profil oluşturucunun açıkça kapatılması gerekir.
 
 ## <a name="start-the-application-with-the-profiler"></a>Uygulamayı Profil Oluşturucu ile başlatma
- Profil Oluşturucu ile .NET Framework hedef uygulamayı başlatmak için *VSPerfClrEnv.exe* kullanarak .NET Framework profil oluşturma değişkenlerini ayarlayabilirsiniz. Ardından VSPerfCmd **/Start** ve **/Launch** seçeneklerini kullanarak profil oluşturucuyu başlatabilir ve uygulamayı başlatabilirsiniz. **/Start** ve **/Launch** seçeneklerini ve ilgili seçeneklerini tek bir komut satırında belirtebilirsiniz. Ayrıca, hedef uygulama başladığında veri toplamayı duraklatmak için komut satırına **/globaloff** seçeneğini ekleyebilirsiniz. Ardından, veri toplamaya başlamak için ayrı bir komut satırında **/GlobalOn** komutunu kullanın.
+ profil oluşturucu ile .NET Framework hedef uygulamayı başlatmak için *VSPerfClrEnv.exe* kullanarak .NET Framework profil oluşturma değişkenlerini ayarlayabilirsiniz. Ardından VSPerfCmd **/Start** ve **/Launch** seçeneklerini kullanarak profil oluşturucuyu başlatabilir ve uygulamayı başlatabilirsiniz. **/Start** ve **/Launch** seçeneklerini ve ilgili seçeneklerini tek bir komut satırında belirtebilirsiniz. Ayrıca, hedef uygulama başladığında veri toplamayı duraklatmak için komut satırına **/globaloff** seçeneğini ekleyebilirsiniz. Ardından, veri toplamaya başlamak için ayrı bir komut satırında **/GlobalOn** komutunu kullanın.
 
 #### <a name="to-start-an-application-with-the-profiler"></a>Profil Oluşturucu ile bir uygulamayı başlatmak için
 
@@ -53,9 +54,9 @@ Bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Fram
    | - | - |
    | [/User](../profiling/user-vsperfcmd.md) **:**[ `domain\` ]`username` | Profil oluşturucuya erişim verilecek hesabın isteğe bağlı etki alanını ve Kullanıcı adını belirtir. |
    | [/CrossSession](../profiling/crosssession.md) | Diğer oturum oturumlarda işlemlerin profilini oluşturmayı mümkün. |
-   | [/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath` | Profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
+   | [/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath` | profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
    | [/AutoMark](../profiling/automark.md) **:**`Interval` | Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir. |
-   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | Profil oluşturma sırasında toplanacak bir Windows için olay Izleme (ETW) olayı belirtir. ETW olayları ayrı bir (.*ETL*) dosyası. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir olay izleme olayı belirtir. ETW olayları ayrı bir (.*ETL*) dosyası. |
 
 3. Hedef uygulamayı başlatın. Şunu yazın:
 

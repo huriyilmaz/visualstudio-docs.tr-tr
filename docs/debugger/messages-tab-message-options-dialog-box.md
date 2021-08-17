@@ -1,6 +1,6 @@
 ---
-description: İleti görünümünde listelemek istediğiniz ileti türlerini seçmek için Iletiler sekmesini kullanın ve ileti arama ölçütlerini belirtin.
-title: İletiler sekmesi, Ileti seçenekleri Iletişim kutusu | Microsoft Docs
+description: İletiler sekmesini kullanarak İletiler Görünümü'ne hangi ileti türlerinin listelen adreslen adreslen olduğunu seçin ve ileti arama ölçütlerini belirtin.
+title: İletiler Sekmesi, İleti Seçenekleri İletişim Kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,34 +9,35 @@ ms.assetid: fb9fa211-e82c-40a5-9e4b-ba8de07313c0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 66c1abcedbf48e8cd80aeafe0c4a5def1ddbb9eb
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e1b81fd00da997912a0b9ad1ece7abc28136f8e7c7bb06fd91dd571d5cd752b3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160374"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391258"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>İletiler Sekmesi, İleti Seçenekleri İletişim Kutusu
-İleti [görünümünde](../debugger/messages-view.md)listelemek istediğiniz ileti türlerini seçmek ve ileti arama ölçütlerini belirtmek için **iletiler** sekmesini kullanın. [Ileti seçenekleri Iletişim kutusunu](../debugger/message-options-dialog-box.md)göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.
+İletiler **sekmesini** kullanarak İletiler Görünümü'ne hangi ileti türlerinin [listelen adreslen adreslen](../debugger/messages-view.md)olduğunu seçin ve ileti arama ölçütlerini belirtin. İleti Seçenekleri İletişim [Kutusunu görüntülemek için Spy](../debugger/message-options-dialog-box.md) **menüsünden Günlük** İletileri'ne tıklayın. 
 
- Genellikle, önce **Ileti grupları**' nı seçin ve ardından **görüntülenecek iletileri** tek tek seçerek seçimi hassas şekilde ayarlayabilirsiniz. All **düğmesi tüm** ileti türlerini seçer ve **hiçbiri** düğmesi tüm türleri temizler.
+ Genellikle, önce İleti **Grupları'ı seçer** ve ardından Görünüm'e tek tek İletiler'i **seçerek seçimde ince ayarlarlarsınız.** Tüm **düğmesi** tüm ileti türlerini seçer ve Hiçbiri **düğmesi** tüm türleri temizler.
 
- **İletiler** sekmesinde aşağıdaki ayarlar kullanılabilir:
+ İletiler sekmesinde aşağıdaki ayarlar **kullanılabilir:**
 
- **Görüntülenecek iletiler** Görüntülenecek belirli iletileri seçin. Yeni bir Iletiler penceresi oluşturduğunuzda, tüm iletiler görüntülenebilir. İletileri **iletiler** sekmesinden filtreleyerek, bu filtre yalnızca yeni iletiler için geçerlidir, Windows görünümünde zaten görüntülenmiş iletiler değildir.
+ **Görüntülenilen İletiler** Görüntülemek için belirli iletileri seçin. Yeni bir İletiler penceresi 7.000.000'e kadar tüm iletileri görüntüler. İletiler sekmesinden  iletileri filtreleyelirken, bu filtre yalnızca yeni iletiler için geçerlidir; bu filtre, daha önce Windows uygulanır.
 
- **Ileti grupları** Görüntülenecek ileti gruplarını seçin. Kullanılabilir gruplar şunlardır:
+ **İleti Grupları** Görüntülemek için ileti gruplarını seçin. Kullanılabilir gruplar şunlardır:
 
-- WM_USER: WM_USER büyük veya eşit bir kodla
+- WM_USER: bir kod büyük veya bu değere eşit WM_USER
 
-- Kaydedildi: **RegisterWindowMessage** çağrısıyla kaydedilir
+- Registered: **RegisterWindowMessage çağrısıyla** kaydedildi
 
-- Bilinmiyor: 0 ile arasında bilinmeyen iletiler (WM_USER-1)
+- Bilinmiyor: 0 ile arasında bilinmeyen iletiler (WM_USER - 1)
 
-  Bu **Ileti gruplarının** , **görüntülenecek iletiler** altındaki belirli girdilerle eşlemediğine unutmayın. Bir grup seçtiğinizde, seçim doğrudan ileti akışına uygulanır.
+  Bu İleti **Gruplarının, Görüntülemek** için İletiler altındaki belirli girişlere **eşlenemli olmadığını unutmayın.** Bir grup seçerek seçim doğrudan ileti akışına uygulanır.
 
-  **Ileti grupları** içindeki gri onay kutusu, görüntülenecek **iletiler** liste kutusunda o gruptaki iletiler için değiştirildiğini belirtir; Bu gruptaki ileti türlerinin hepsi seçili değil.
+  İleti Grupları içinde gri renkli bir  **onay kutusu,** Görüntülenilecek İletiler liste kutusunun o gruptaki iletiler için değiştirildiğinden; bu gruptaki tüm ileti türleri seçilmez.
 
-  **Ayarları varsayılan olarak kaydet** Geçerli ayarları daha sonra ileti arama seçenekleri olarak kullanmak üzere kaydedin. Bu ayarlar, Spy + + ' dan çıkıldığında da kaydedilir.
+  **Varsayılan Ayarlar olarak kaydetme** Geçerli ayarları daha sonra ileti arama seçenekleri olarak kullanmak üzere kaydedin. Bu ayarlar Spy++ çıkışında da kaydedilir.

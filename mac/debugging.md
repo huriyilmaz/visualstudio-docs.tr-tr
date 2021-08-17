@@ -1,32 +1,32 @@
 ---
 title: Mac için Visual Studio ile hata ayıklama
-description: Hata ayıklama, programlama için ortak ve gerekli bir parçasıdır. Yetişkinlere yönelik bir IDE olarak, Mac için Visual Studio hata ayıklamayı kolay hale getirmek için bir bütün özellik paketini içerir. Güvenli hata ayıklamadan veri görselleştirmesine kadar, bu makale Mac için Visual Studio ' de hata ayıklamanın tam potansiyelini nasıl kullanacağınızı açıklayacak.
+description: Hata ayıklama, programlama için ortak ve gerekli bir parçasıdır. yetişkinlere yönelik bir ıde olarak, Mac için Visual Studio hata ayıklamayı kolay hale getirmek için bir bütün özellik paketini içerir. güvenli hata ayıklamadan veri görselleştirmesine kadar, bu makale Mac için Visual Studio ' de hata ayıklamanın tam potansiyelini nasıl kullanacağınızı açıklayacak.
 author: therealjohn
 ms.author: johmil
 ms.date: 5/13/2020
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
 ms.topic: overview
-ms.openlocfilehash: 04fae5874a4fefcb51bdef8b00c8cb3b7171057e
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 8963baa8a6ae0e93a1454b9542da4f5f3255af2ca457253b1f340b8d028942dc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493263"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121422647"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>Mac için Visual Studio ile hata ayıklama
 
-Mac için Visual Studio, .NET Core, .NET Framework, Unity ve Xamarin uygulamaları desteğiyle ilgili hata ayıklayıcılarına sahiptir.
+Mac için Visual Studio, .net Core, .NET Framework, Unity ve Xamarin uygulamaları desteğiyle ilgili hata ayıklayıcılarına sahiptir.
 
 Mac için Visual Studio, mono çalışma zamanına uygulanan [*mono yazılım hata ayıklayıcısını*](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)kullanır ve bu, tüm platformlarda yönetilen kodun hatalarını ayıklamasına Mac için Visual Studio olanak tanır.
 
 ## <a name="the-debugger"></a>Hata ayıklayıcı
 
-Mac için Visual Studio, tüm Xamarin uygulamalarındaki yönetilen (C# veya F #) kodunda hata ayıklamak için mono Soft Debugger 'ı kullanır. Mono geçici hata ayıklayıcı, mono çalışma zamanı içinde yerleşik bir ortak hata ayıklayıcı olduğundan, normal hata ayıklayıcılarından farklıdır; oluşturulan kod ve mono çalışma zamanı, bir hata ayıklama deneyimi sağlamak için IDE ile birlikte çalışır. Mono çalışma zamanı, [mono belgelerinde](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)hakkında daha fazla bilgi edinmek için bir kablo protokolü aracılığıyla hata ayıklama işlevini kullanıma sunar.
+Mac için Visual Studio, tüm Xamarin uygulamalarındaki yönetilen (C# veya F #) kodunda hata ayıklamak için Mono Soft Debugger 'ı kullanır. Mono geçici hata ayıklayıcı, mono çalışma zamanı içinde yerleşik bir ortak hata ayıklayıcı olduğundan, normal hata ayıklayıcılarından farklıdır; oluşturulan kod ve mono çalışma zamanı, bir hata ayıklama deneyimi sağlamak için IDE ile birlikte çalışır. Mono çalışma zamanı, [mono belgelerinde](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)hakkında daha fazla bilgi edinmek için bir kablo protokolü aracılığıyla hata ayıklama işlevini kullanıma sunar.
 
 [Lldb]( http://lldb.llvm.org/index.html) veya [gdb]( https://www.gnu.org/software/gdb/)gibi sabit hata ayıklayıcılar, hata ayıklaması yapılan programdan bilgi veya ortak işlem olmadan bir programı denetler, ancak yerel iOS veya Android kodunda hata ayıklamanıza gerek kalmadan Xamarin uygulamalarında hata ayıklarken yararlı olabilir.
 
-.NET Core ve ASP.NET Core uygulamaları için Mac için Visual Studio .NET Core hata ayıklayıcısını kullanır. Bu hata ayıklayıcı Ayrıca ortak bir hata ayıklayıcı ve .NET çalışma zamanı ile birlikte çalışır.
+.net core ve ASP.NET Core uygulamaları için Mac için Visual Studio .net core hata ayıklayıcısını kullanır. Bu hata ayıklayıcı Ayrıca ortak bir hata ayıklayıcı ve .NET çalışma zamanı ile birlikte çalışır.
 
 ## <a name="using-the-debugger"></a>Hata ayıklayıcıyı kullanma
 
@@ -67,7 +67,7 @@ Ayrıca, bir kesme noktası olması gereken koşulları görüntüleyen kurallar
 
  ![Kesme noktası bağlam menüsü](media/debugging-image4.png)
 
-* Varolan bir kesme noktasına koşul eklemek için, kesme noktasına sağ tıklayın ve  **kesme noktası özellikleri** ' ni seçin veya  **kesme noktaları penceresinde** aşağıda gösterilen kesme noktasını Düzenle düğmesini seçin:
+* Varolan bir kesme noktasına koşul eklemek için, kesme noktasına sağ tıklayın ve  **kesme noktası özellikleri**' ni seçin veya  **kesme noktaları penceresinde** aşağıda gösterilen kesme noktasını Düzenle düğmesini seçin:
 
  ![Kesme noktaları penceresinde mevcut kesme noktasını Düzenle](media/debugging-image5.png)
 
@@ -95,7 +95,7 @@ Hata ayıklayıcı duraklatıldığında, kenar boşluğundaki bir ok yürütül
 ![Sonraki ifadeyi ayarlamak için sürükle ve bırak oku](media/debugger-drag-setnextstatement.gif)
 
 > [!CAUTION]
-> Geçerli yürütme satırını değiştirmek, bir uygulamada beklenmeyen davranışlara neden olabilir. Ayrıca, sonraki deyimin yürütülmesi için değiştirilmesinin mümkün olmadığı bazı koşullar da vardır. Örneğin, oku bir yöntemden başka bir yönteme sürüklemek işe alınacaktır. Bu desteklenmeyen durumlarda Mac için Visual Studio, geçerli yürütme satırını değiştiremediğini bilmenizi sağlayan bir iletişim kutusu görüntüler. 
+> Geçerli yürütme satırını değiştirmek, bir uygulamada beklenmeyen davranışlara neden olabilir. Ayrıca, sonraki deyimin yürütülmesi için değiştirilmesinin mümkün olmadığı bazı koşullar da vardır. Örneğin, oku bir yöntemden başka bir yönteme sürüklemek işe alınacaktır. bu desteklenmeyen durumlarda Mac için Visual Studio, geçerli yürütme satırını değiştiremediğini bilmenizi sağlayan bir iletişim kutusu görüntüler. 
 
 ## <a name="debugging-monos-class-libraries"></a>Mono sınıf kitaplıklarında hata ayıklama
 
@@ -103,10 +103,10 @@ Xamarin ürünleri, mono 'ın sınıf kitaplıkları için kaynak kodla birlikte
 
 Bu özellik hata ayıklama sırasında daha fazla bellek tükettiği için varsayılan olarak kapalıdır.
 
-Bu özelliği etkinleştirmek için,  **Mac için Visual Studio > tercihleri > hata ayıklayıcıya** gidin ve aşağıda gösterildiği gibi " **dış koda adımla** " seçeneğinin **seçildiğinden** emin olun:
+bu özelliği etkinleştirmek için, **Mac için Visual Studio > tercihleri > hata ayıklayıcıya** gidin ve aşağıda gösterildiği gibi "**dış koda adımla**" seçeneğinin **seçildiğinden** emin olun:
 
 ![Dış koda adımla seçeneği](media/debugging-image8.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da hata ayıklama (Windows üzerinde)](/visualstudio/debugger/)
+- [Visual Studio hata ayıklama (Windows)](/visualstudio/debugger/)

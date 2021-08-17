@@ -1,6 +1,6 @@
 ---
-description: Bir başvurunun türetilmiş en çok başvurusunu alır.
-title: 'IDebugReference2:: GetDerivedMostReference | Microsoft Docs'
+description: Bir başvurudan türetilmiş en çok başvuru alır.
+title: IDebugReference2::GetDerivedMostReference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 07253b74-7d39-48e0-8e85-ac8dfd919f6e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9c482b05620f280b2948aefe7e95eb38682268c6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6b69df586154bdbaf242463a5292232e4ba137201d8b8e169015fed2ebf3fe9c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071447"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402265"
 ---
 # <a name="idebugreference2getderivedmostreference"></a>IDebugReference2::GetDerivedMostReference
-Bir başvurunun türetilmiş en çok başvurusunu alır. Daha sonraki kullanımlar için ayrılmıştır.
+Bir başvurudan türetilmiş en çok başvuru alır. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetDerivedMostReference(
 
 ## <a name="parameters"></a>Parametreler
 `ppDerivedMost`\
-dışı En çok türetilen özelliği temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.
+[out] Türetilmiş en [çok özelliği temsil eden bir IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, bu özellik, `ClassRoot` tarafından türetilen ancak gerçekten bir örnek oluşturma olan bir nesne tanımlıyor `ClassDerived` `ClassRoot` , bu yöntem, nesne başvurusunu temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür `ClassDerived` .
+ Örneğin, bu özellik uygulayan ancak aslında 'den türetilen bir örneği olan bir nesneyi açıklarsa, bu yöntem nesneye bir başvuruyu temsil eden `ClassRoot` `ClassDerived` bir `ClassRoot` [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi `ClassDerived` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

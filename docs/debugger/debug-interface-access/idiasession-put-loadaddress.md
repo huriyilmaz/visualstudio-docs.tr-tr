@@ -11,14 +11,15 @@ ms.assetid: b157b245-1ea0-4b80-8962-d8b278dbc742
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 05dc21a67a88270c4d3bce46387e46ed5a8e8497
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: cd5e8e6e4343584280f9031920f2f126f8526b9e2aba1d622185452b718430a5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157002"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391811"
 ---
 # <a name="idiasessionput_loadaddress"></a>IDiaSession::put_loadAddress
 Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini ayarlar.

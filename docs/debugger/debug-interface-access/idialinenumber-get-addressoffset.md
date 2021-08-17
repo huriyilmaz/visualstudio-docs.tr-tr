@@ -11,14 +11,15 @@ ms.assetid: 3bcb5500-b26c-4d3c-9d81-0a389a3715c3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ec25e04e3d2bb6cbf5b34fedefa6eec20a1a3792
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 293b7d2655727405c2070a79d213611f3a1f1a1abedd52a7ee83161359aadce6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148320"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392235"
 ---
 # <a name="idialinenumberget_addressoffset"></a>IDiaLineNumber::get_addressOffset
 Bir bloğun başladığı bellek adresinin konum kısmını alır.

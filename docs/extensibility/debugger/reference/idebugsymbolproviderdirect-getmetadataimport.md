@@ -10,17 +10,18 @@ ms.assetid: b51a492c-af00-4b08-93fb-6c19ee4916aa
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 52bc940485a99c545bc4450412a6aa4b3f8b104a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 831a95390d1a81e8fee786fb202ac79b0eb4452b64bded729130f96c8c73e727
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081301"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402187"
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
 Meta veri içeri aktarma bilgilerini alır.

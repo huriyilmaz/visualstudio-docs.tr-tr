@@ -1,6 +1,6 @@
 ---
-description: Kod yolları numaralandırmasını ilk öğe olarak sıfırlar.
-title: 'IEnumCodePaths2:: Reset | Microsoft Docs'
+description: Kod yolları numaralamalarını ilk öğeye sıfırlar.
+title: IEnumCodePaths2::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 490c0e19-ff4b-4673-bd06-cdee996ac226
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ac7be476f1ec119d43b8794e5d2e1be02d66f521
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 909f85f64dd9eb87329e1871993aa5935a0b9ed83c96b322efa21898a160a95e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091792"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415669"
 ---
 # <a name="ienumcodepaths2reset"></a>IEnumCodePaths2::Reset
-Numaralandırmayı ilk öğeye sıfırlar.
+Numaralama öğesini ilk öğeye sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +40,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumcodepaths2-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra Next yöntemine yapılan [sonraki](../../../extensibility/debugger/reference/ienumcodepaths2-next.md) çağrı, numaralamanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)

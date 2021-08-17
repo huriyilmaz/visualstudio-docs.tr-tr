@@ -11,14 +11,15 @@ ms.assetid: efaba727-f271-44e9-beec-8441fb57664d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a30f05193931bf4df70f4cdb028bd08d2ba9569d
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b52c199ad9bdd3c2964e638e78c5a3868f3953ef2330eacc5eb5c04d9ee47ff2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148768"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392419"
 ---
 # <a name="idiaenumstackframesreset"></a>IDiaEnumStackFrames::Reset
 Numaralandırma dizisini başlangıca sıfırlar.

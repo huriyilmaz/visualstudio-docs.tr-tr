@@ -9,20 +9,21 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: ae85c7f98aab3e852a810976cc1cecbd83b65307
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: f33e24c9284a785eeef2ba87d9f63855fc4d9c8259f6adc6ac44d1090a85dc34
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388379"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121398079"
 ---
 # <a name="validate-your-system-during-development"></a>Geliştirme sırasında sisteminizi doğrulama
 
 Visual Studio, yazılımlarınızı kullanıcı gereksinimleriyle ve sisteminizin mimarisiyle tutarlı tutmaya yardımcı olabilir.
 
-Bu özelliklerin hangi sürümlerinin Visual Studio için bkz. Mimari ve modelleme [araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
+Bu özelliklerin hangi sürümlerinin Visual Studio desteklemektedir, bkz. [Mimari ve modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
 ## <a name="key-tasks"></a>Önemli Görevler
 
@@ -37,7 +38,7 @@ Yazılımınızı doğrulamak için aşağıdaki görevleri kullanın:
 
 |**Kategori**|**Bağlantılar**|
 |-|-|
-|**Videolar**|![Channel ](../data-tools/media/playvideo.gif) [9: Doug Seven: Code Understanding and Systems Design with Visual Studio 2010](https://channel9.msdn.com/shows/VS2010Launch/Doug-Seven-Code-Understanding-and-Systems-Design-with-Visual-Studio-2010) video bağlantısı<br /><br /> ![video bağlantısı ](../data-tools/media/playvideo.gif) [Channel 9: Architecting an Application](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-5-architecting-an-application))|
+|**Videolar**|![Channel 9 video ](../data-tools/media/playvideo.gif) [bağlantısı: Doug Seven: Code Understanding and Systems Design with Visual Studio 2010](https://channel9.msdn.com/shows/VS2010Launch/Doug-Seven-Code-Understanding-and-Systems-Design-with-Visual-Studio-2010)<br /><br /> ![video bağlantısı ](../data-tools/media/playvideo.gif) [Channel 9: Architecting an Application](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-5-architecting-an-application))|
 |**Forumlar**|- [Visual Studio Görselleştirme & Modelleme Araçları](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio genişletilebilirliği](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)|
 
 ## <a name="see-also"></a>Ayrıca bkz.

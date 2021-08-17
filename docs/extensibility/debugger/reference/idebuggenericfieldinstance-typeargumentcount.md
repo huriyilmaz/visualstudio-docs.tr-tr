@@ -10,17 +10,18 @@ ms.assetid: e662c5ea-a5c1-478e-a268-5980dadffcd1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c7afd914b3880ca1004a319a66b3f4176e15789e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e36f631f879ddaa8de6db2c69388ee709c7044330c4a9b2b7bef929b8271db4e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072877"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402693"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 Bu örnek için tür parametresi bağımsız değişkenlerinin sayısını döndürür.

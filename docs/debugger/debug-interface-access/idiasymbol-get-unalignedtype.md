@@ -1,6 +1,6 @@
 ---
-description: Kullanıcı tanımlı veri türünün hizalanmamış olup olmadığını belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_unalignedType | Microsoft Docs'
+description: Kullanıcı tanımlı veri türünün hizasız olup olmadığını belirten bir bayrak alınır.
+title: IDiaSymbol::get_unalignedType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: fdcb38fb-490e-4d15-b4e5-3770043a366c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b126951bdc178aca4aae36faeb2d41e307bf9ef1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4096b0a30c6bf1adc18a43218ffe3598eeb8273a11ebfe2c3ff67908010e1fc1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155545"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420521"
 ---
 # <a name="idiasymbolget_unalignedtype"></a>IDiaSymbol::get_unalignedType
-Kullanıcı tanımlı veri türünün hizalanmamış olup olmadığını belirten bir bayrak alır.
+Kullanıcı tanımlı veri türünün hizasız olup olmadığını belirten bir bayrak alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_unalignedType (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Kullanıcı tanımlı veri türü hizalanmamış ise döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Kullanıcı `TRUE` tanımlı veri türü hizalanmamışsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

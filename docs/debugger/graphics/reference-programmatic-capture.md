@@ -8,14 +8,15 @@ ms.assetid: ef60eb8d-1ac2-4e3a-9b4b-f6da0bdd9da8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 572629235e3b64028b70ff59090f9c4f7991d323
-ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+ms.openlocfilehash: 5655e5493a69628de4b188d78de415c1f02b816716d406bf0e10279698c0ad77
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114232706"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419812"
 ---
 # <a name="reference-programmatic-capture"></a>Başvuru (Programlı Yakalama)
 Grafik Tanılama, Programlı yakalama API 'SI aracılığıyla yakalama özellikleri üzerinde programlama denetimini destekler. Bu API 'yi, grafik tanılama HUD (baş ekran) için ileti açıp eklemek, grafik günlük dosyalarını başlatıp oluşturmak ve grafik bilgilerini yakalamak için kullanabilirsiniz.

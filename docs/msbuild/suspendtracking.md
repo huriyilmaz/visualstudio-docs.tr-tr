@@ -1,6 +1,6 @@
 ---
 title: SuspendTracking | Microsoft Docs
-description: Geçerli bağlamda izlemeyi askıya alarak MSBuild SuspendTracking için sözdizimi, gereksinimler ve dönüş değeri hakkında bilgi edinin.
+description: geçerli bağlamda izlemeyi askıya alacak MSBuild SuspendTracking için sözdizimi, gereksinimler ve dönüş değeri öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,14 +15,15 @@ ms.assetid: f5e06e5a-8083-444c-99c1-07ba834226b5
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: e8be768bc48c1815fc00069640e5bf3f4370f434
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 420ba1fd7cc4285d638cf4d82b4e9d1d7f0ad23bfc6d5c23331ebe1ba3964dbd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945285"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397273"
 ---
 # <a name="suspendtracking"></a>SuspendTracking
 

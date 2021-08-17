@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Visual Studio denetimi belgeleri
-summary: Git ve Visual Studio gibi kaynak denetimi teknolojilerini kullanarak kodunuzu kendi içinde GitHub.
+summary: Git ve Visual Studio gibi kaynak denetimi teknolojilerini kullanarak kodunuzu GitHub.
 metadata:
   title: Sürüm denetimi & Git ile kaynak denetimi Visual Studio
-  description: Kaynaklarda sürüm/kaynak denetimi Visual Studio. Kod tabanınızı terk etmeden Git'te kod yayınlarınızı paylaşabilir, & GitHub ve yönetebilirsiniz.
+  description: Kaynaklarda sürüm/kaynak denetimi Visual Studio. Kod tabanınızı terk etmeden Git'te kod yayınlarınızı paylaşabilir& GitHub tümleştirebilirsiniz ve yönetebilirsiniz.
   ms.topic: landing-page
   ms.date: 07/02/2021
   author: TerryGLee
@@ -11,12 +11,12 @@ metadata:
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 49c867109e9189141b8b0aa3900f7a31d4b62f26
-  ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+  ms.openlocfilehash: d15faeee0489650cc1ccb2143eca9a981969f91d218f963183467be86ccf83c9
+  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/04/2021
-  ms.locfileid: "115094845"
+  ms.lasthandoff: 08/12/2021
+  ms.locfileid: "121424625"
 landingContent:
 - title: Genel Bakış
   linkLists:

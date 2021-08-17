@@ -1,6 +1,6 @@
 ---
-title: Outlook e-posta öğelerinden ekleri program aracılığıyla Kaydet
-description: Visual Studio 'Yu kullanarak Microsoft Outlook e-posta öğelerinden ekleri programlı bir şekilde nasıl kaydedebileceğinizi öğrenin.
+title: ekleri Outlook e-posta öğelerinden program aracılığıyla kaydetme
+description: Microsoft Outlook e-posta öğelerinden ekleri programlı bir şekilde kaydetmek için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -16,16 +16,17 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ad64593f91e14bcfd993929420764869a8359e3e
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 0099f06210dc7164df28a3e3b3f3e3e3ef7cb54865a7ead0585fdccf21d1cf0d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826700"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394270"
 ---
-# <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>Nasıl yapılır: Outlook e-posta öğelerinden program aracılığıyla ekleri kaydetme
+# <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>nasıl yapılır: Outlook e-posta öğelerinden program aracılığıyla ekleri kaydetme
 
 Bu örnek, e-posta eki, posta gelen kutusuna alındığında belirtilen klasöre kaydedilir.
 

@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-Içerik tanımı Iletişim kutusu
-description: Send, Receive, SendReply ve ReceiveReply etkinliklerinin Içerik özelliklerini yapılandırmak için Içerik tanımı iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı - İçerik Tanımı İletişim Kutusu
+description: Gönder, Al, GönderReply ve ReceiveReply etkinliklerinin İçerik özelliklerini yapılandırmak için İçerik Tanımı iletişim kutusunu nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,31 +10,32 @@ ms.assetid: 7e4237c3-90a1-4149-bd8a-3643d1dde0df
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: a25d049b17381c49bfa1b4a5544972b6dc5fe499
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b368c0090878bdd25bccf068df9ce19e3457e43349376dfb0249d01e590c5c4f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955651"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423728"
 ---
 # <a name="content-definition-dialog-box"></a>İçerik Tanımı İletişim Kutusu
 
-**İçerik tanımı** iletişim kutusu,,,  <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> ve etkinliklerinin içerik özelliklerini yapılandırmak için iş akışı Tasarımcısı kullanılır <xref:System.ServiceModel.Activities.ReceiveReply> . Bu kutuyu kullanan etkinlik tasarımcıları hakkında daha fazla bilgi için [gönderme](../workflow-designer/send-activity-designer.md), [alma](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)ve [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) konularına bakın.
+İçerik **Tanımı iletişim** kutusu İş Akışı Tasarımcısı , , ve  etkinliklerinin İçerik özelliklerini yapılandırmak <xref:System.ServiceModel.Activities.Send> için <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.ReceiveReply> kullanılır. Bu kutuyu kullanan etkinlik tasarımcıları hakkında daha fazla bilgi için [Gönderme,](../workflow-designer/send-activity-designer.md)Alma [,](../workflow-designer/receive-activity-designer.md) [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)ve [SendAndReceiveReply konularına](../workflow-designer/sendandreceivereply-template-designer.md) bakın.
 
-Aşağıdaki tabloda **bağıntı Başlat** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır:
+Aşağıdaki tabloda Bağıntı Başlat iletişim kutusunun kullanıcı arabirimi (UI) **öğeleri** açık almaktadır:
 
-|Arabirim Öğesi|Description|
+|Arabirim Öğesi|Açıklama|
 |-|-----------------|
-|**İleti**|İleti **türü** açılan liste kutusunu kullanarak ileti **verisi** ifadesi metin kutusu ve türü ile ileti içeriğini belirtir. Varsayılan olarak, **Içerik tanımı** <xref:System.ServiceModel.Activities.ReceiveMessageContent> <xref:System.ServiceModel.Channels.Message> iş akışı hizmeti tanımında bir veya ileti sözleşme türü bekleyen öğesini kullanır.|
-|**Parametreler**|Kullanmak için **Parametreler** radyo düğmesine tıklayın <xref:System.ServiceModel.Activities.ReceiveParametersContent> ve bu da veri anlaşması bekler. <xref:System.Activities.OutArgument>Değerleri geçerli iş akışındaki değişken parametrelerine atanmış olan anahtar/değer çiftlerinin genel bir koleksiyonunu ayarlamak için veri kılavuzunu kullanın.|
+|**İleti**|İleti türü açılan liste **kutusunu kullanarak** İleti veri ifadesi metin kutusu ile ileti içeriğini **ve** türünü belirtir. varsayılan olarak, **İçerik Tanımı,** iş akışı <xref:System.ServiceModel.Activities.ReceiveMessageContent> hizmet tanımı içinde bir veya ileti sözleşme türü bekler olan <xref:System.ServiceModel.Channels.Message> kullanır.|
+|**Parametreler**|Kullanmak **için Parametreler** radyo düğmesine <xref:System.ServiceModel.Activities.ReceiveParametersContent> tıklayın. Bu düğme bir veri sözleşmesi bekler. Değerleri geçerli iş akışındaki değişken parametrelere atanmış olan anahtar/değer çiftlerinin genel <xref:System.Activities.OutArgument> koleksiyonunu ayarlamak için veri kılavuzu kullanın.|
 
-**Içerik tanımı** Iletişim kutusu **Send**, **Receive**, **ReceiveAndSendReply** ve **SendAndReceiveReply** tasarımcıları tarafından kullanılır. Bunlara erişmek her durumda benzerdir ve yordamı göstermek için alma durumu burada kullanılır.
+İçerik **Tanımı iletişim** kutusu Send **,** **Receive**, **ReceiveAndSendReply** ve **SendAndReceiveReply** tasarımcıları tarafından kullanılır. Her durumda erişim benzerdir ve burada Alma büyük/küçük harf yordamını göstermek için kullanılır.
 
-**Alma** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, etkinliklerin genellikle yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. Bu <xref:System.ServiceModel.Activities.Receive> , varsayılan alma için bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . **Al** etkinlik Tasarımcısı ' nı seçin ve **İçerik tanımı** Iletişim kutusunun Özellikler kılavuzundaki **içerik** özelliği için (içerik) metninin yanındaki üç nokta düğmesine tıklayın.
+Alma  etkinliği tasarımcısı Araç Kutusundan **sürüklenip** etkinlikler genellikle yerleştirildikten sonra İş Akışı Tasarımcısı yüzeyine bırakılır. Bu, varsayılan <xref:System.ServiceModel.Activities.Receive> Alma değerine sahip bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. Alma **etkinliği tasarımcısını** seçin ve İçerik Tanımı iletişim kutusunun görünmesi için özellik kılavuzunda  **content** özelliğinin (İçerik) metninin yanındaki üç nokta düğmesine tıklayın.
 
-İçerik, bir etkinliğin **ileti** bölümü içinde <xref:System.ServiceModel.Activities.ReceiveMessageContent> veya bir etkinliğin **parametre** bölümünde belirtilebilir <xref:System.ServiceModel.Activities.ReceiveParametersContent> .
+İçerik, bir etkinliğin **İleti bölümünde** veya bir <xref:System.ServiceModel.Activities.ReceiveMessageContent> etkinliğin **Parametre** bölümünde <xref:System.ServiceModel.Activities.ReceiveParametersContent> belirtilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

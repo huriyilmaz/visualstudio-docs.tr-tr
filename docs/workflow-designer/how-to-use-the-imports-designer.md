@@ -10,18 +10,19 @@ ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: fd736c01843d746ee43a82e6bb6f5239da1c660e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6b1b83b73a02d283450d161f69353e8a72aa159b5987a393327ac4432d6fb729
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894055"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121393984"
 ---
 # <a name="how-to-use-the-imports-designer"></a>Nasıl Yapılır: İçeri Aktarmalar Tasarımcısını Kullanma
 
-İçeri aktarmalar Tasarımcısı, ifadeleriniz içinde kullanacağınız türler için ad alanları girmenize olanak sağlar. İçeri **aktarmalar** veya Visual Basic ve C# ' deki anahtar sözcükleri **kullanarak** çok benzer şekilde, Imports tasarımcısında ad alanlarını belirtmek, tam nitelikli bir sürüm türü adı yerine ifadenizde bir tür adı girmenizi sağlar.
+İçeri aktarmalar Tasarımcısı, ifadeleriniz içinde kullanacağınız türler için ad alanları girmenize olanak sağlar. içeri **aktarmalar** veya Visual Basic ve C# ' deki anahtar sözcükleri **kullanarak** çok benzer şekilde, ımports tasarımcısında ad alanlarını belirtmek, tam nitelikli bir sürüm türü adı yerine ifadenizde bir tür adı girmenizi sağlar.
 
 İçeri aktarmalar Tasarımcısı, Kullanıcı arabirimindeki her iki değişikliğe ve iş akışı kaydedildiğinde yapılan değişikliklere tepki verir. İş akışı kaydedildiğinde, ad alanları içeri aktarmalar tasarımcısına otomatik olarak eklenebilir. Buna aşağıdakiler dahildir:
 
@@ -35,7 +36,7 @@ ms.locfileid: "99894055"
 
 ## <a name="to-add-a-namespace-to-the-list-of-imported-namespaces"></a>İçeri aktarılan ad alanları listesine bir ad alanı eklemek için
 
-1. Visual Studio 'da veya bir yeniden barındırılan iş akışı uygulamasında bir WCF Iş akışı hizmeti uygulaması, iş akışı konsol uygulaması veya etkinlik kitaplığı projesi açın.
+1. Visual Studio veya bir yeniden barındırılan iş akışı uygulamasında bir WCF iş akışı hizmeti uygulaması, iş akışı konsol uygulaması veya etkinlik kitaplığı projesi açın.
 
 2. Ana tuvalin alt kısmındaki **Içeri aktarmalar** ' a tıklayın. Içeri aktarmalar Tasarımcısı görüntülenir.
 

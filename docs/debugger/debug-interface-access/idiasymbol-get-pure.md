@@ -11,14 +11,15 @@ ms.assetid: b61107e9-9144-4981-b7ef-58a339b80c58
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c51066fe1e1bbc8d165e07bd2b2653d0e2912ebe
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0c570580b65a908ff73e5f884299cb187738b23df7b6aa71143b458b7c1d386d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161923"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420577"
 ---
 # <a name="idiasymbolget_pure"></a>IDiaSymbol::get_pure
 İşlevin saf sanal olup olmadığını belirten bir bayrak alır.

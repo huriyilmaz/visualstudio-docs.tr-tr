@@ -11,14 +11,15 @@ ms.assetid: b50edb2c-fb8d-4def-993d-17d23d2027c1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28fbdfc16733b5cce0d1442c98c624f694adbe1d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3c3ddd18efd48b43ff59aaa2e60ed8361f3a73da2b3b462b472b45a3ef9db34d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083784"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402344"
 ---
 # <a name="idebugpropertyfield"></a>IDebugPropertyField
 Bu arabirim bir özelliği almaya ve ayarlamaya izin veren işlevleri sağlar.

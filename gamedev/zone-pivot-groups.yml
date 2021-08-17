@@ -9,9 +9,9 @@ groups:
   - id: macos
     title: Mac için Visual Studio
 metadata:
-  ms.openlocfilehash: 311a5ecb0fca457b8abbb4b617a38edec11ff5ae
-  ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+  ms.openlocfilehash: 31b055eea3f6204e097d7bc15141798057d80ec1f8d351276a05899357cec6bc
+  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/05/2020
-  ms.locfileid: "94341712"
+  ms.lasthandoff: 08/12/2021
+  ms.locfileid: "121423234"

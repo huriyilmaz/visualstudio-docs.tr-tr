@@ -1,6 +1,6 @@
 ---
 title: require-azureartifactscredentialprovider
-description: devinit Aracı,-azureartifactscredentialprovider gerektirir.
+description: devinit tool require-azureartifactscredentialprovider.
 ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
@@ -11,46 +11,46 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: e5ba9847b09f06f853f48a0885de5e0d63664fac
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 477e85f0c038197c6bdb1bd053be720b14efd7cf930f77475a1ac05d8a11c84a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104671611"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390592"
 ---
 # <a name="require-azureartifactscredentialprovider"></a>require-azureartifactscredentialprovider
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren, Visual Studio 2019'dan GitHub Codespaces'a bağlanmak artık desteklemeyecek ve bu özel önizlemenin sonucuna varıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi almak Visual Studio geliştirici topluluğu forummize dahil olmak için sizi teşvik ediyoruz.
 
-`require-azureartifactscredentialprovider`Araç Azure Artifacts kimlik bilgisi sağlayıcısını yüklüyor. Azure Artifacts kimlik bilgisi sağlayıcısı, .NET geliştirme iş akışınızın bir parçası olarak NuGet paketlerini geri yüklemek için gereken kimlik bilgilerinin alımını otomatikleştirir. Azure Artifacts kimlik [bilgisi sağlayıcısı hakkında](https://github.com/microsoft/artifacts-credprovider/blob/master/README.md)daha fazla bilgi edinin.
+Araç, `require-azureartifactscredentialprovider` Azure Artifacts Kimlik Bilgisi Sağlayıcı. Bu Azure Artifacts Kimlik Bilgisi Sağlayıcı, .NET geliştirme iş akışınız kapsamında NuGet geri yüklemek için gereken kimlik bilgilerinin alımını otomatik hale gelir. Burada daha fazla bilgi Azure Artifacts Kimlik Bilgisi Sağlayıcı [okuyun.](https://github.com/microsoft/artifacts-credprovider/blob/master/README.md)
 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı [olarak açıklanmış varsayılan](#default-behavior) davranışı takip eder.
 
 | Ad                                             | Tür   | Gerekli | Değer                                                                                |
 |--------------------------------------------------|--------|----------|--------------------------------------------------------------------------------------|
-| **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                |
-| [**girişinin**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
-| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                     |
+| **yorumlar**                                     | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                                |
+| [**Giriş**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar [için](#input) aşağıdaki girişe bakın. |
+| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.                     |
 
 ### <a name="input"></a>Giriş
 
-Kullanılmadı. Bahsedildiğinde herhangi bir girişi yoksayar.
+Kullanılmadı. Varsa herhangi bir girişi yoksayar.
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Ek seçenekler, kimlik bilgisi sağlayıcısı komutuna olduğu gibi geçirilir.
+Ek seçenekler kimlik bilgisi sağlayıcısı komutuna olduğu gibi geçirilebilir.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı, `require-azureartifactscredentialprovider` Azure Artifacts kimlik bilgisi sağlayıcısı 'nın en son sürümünü yüklemektir.
+Aracın varsayılan `require-azureartifactscredentialprovider` davranışı, uygulamanın en son sürümünü Azure Artifacts Kimlik Bilgisi Sağlayıcı.
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-azureartifactscredentialprovider` `.devinit.json` .
+Aşağıda, kullanarak çalıştırmaya bir `require-azureartifactscredentialprovider` örnek `.devinit.json` verilmiştir.
 
-#### <a name="devinitjson-that-will-install-azure-artifacts-credential-provider"></a>.devinit.js, Azure Artifacts kimlik bilgisi sağlayıcısı yükleyecek:
+#### <a name="devinitjson-that-will-install-azure-artifacts-credential-provider"></a>.devinit.js, şunları Azure Artifacts Kimlik Bilgisi Sağlayıcı:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

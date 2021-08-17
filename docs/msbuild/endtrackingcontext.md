@@ -1,6 +1,6 @@
 ---
 title: EndTrackingContext | Microsoft Docs
-description: Geçerli izleme bağlamını sonlandırmak için, MSBuild EndTrackingContext ' i kullanmak için sözdizimi, dönüş değeri ve gereksinimleri öğrenin.
+description: Geçerli izleme bağlamını sona MSBuild EndTrackingContext için söz dizimi, dönüş değeri ve gereksinimleri öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,18 +15,19 @@ ms.assetid: c2c5d794-8dc8-4594-8717-70dc79a0e75d
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 90f4c8c4a83a496dba537e74dddfde4ae3f2f21a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: debfb2a287c8efe447c0c1fa299ddf15d25936f802609c4b00a55dfb91a646f6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877232"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397936"
 ---
 # <a name="endtrackingcontext"></a>EndTrackingContext
 
-Geçerli izleme bağlamını sonlandırın.
+Geçerli izleme bağlamını sona erdirin.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,11 +37,11 @@ HRESULT WINAPI EndTrackingContext();
 
 ## <a name="return-value"></a>Döndürülen değer
 
-İzleme bağlamı sonlandırıldıysa, **başarılı** biti ayarlanmış bir **HRESULT** .
+İzleme bağlamı sona ererse **BAŞARILI** bit kümesine sahip **bir HRESULT.**
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Üstbilgi:** *FileTracker. h*
+**Üst bilgi:** *FileTracker.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

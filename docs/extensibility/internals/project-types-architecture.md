@@ -1,6 +1,6 @@
 ---
-title: Proje türleri mimarisi | Microsoft Docs
-description: Bu makalede, Visual Studio 'daki proje türleri mimarisiyle ilgili ayrıntılı bilgiler içeren makalelere bağlantı bulunur.
+title: Project Türler Mimarisi | Microsoft Docs
+description: Bu makale, veri kaynaklarında proje türlerinin mimarisi hakkında ayrıntılı bilgi içeren makalelere Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,40 +10,41 @@ ms.assetid: 9c1d940f-8a54-41f7-a8aa-c870e324371c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b03ca1db09df7176eb52d5c8141bf87b1637d79
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6d42bda91e9714b8deff4822e2e41c2af1af8dc4d2ef96274727d8b5f7f35ff5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064286"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401391"
 ---
 # <a name="project-types-architecture"></a>Proje Türleri Mimarisi
-Bu bölüm, içindeki proje türlerinin mimarisi hakkında ayrıntılı bilgiler içerir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+Bu bölüm, içinde proje türlerinin mimarisi hakkında ayrıntılı bilgi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] içerir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Proje Modeli Öğeleri](../../extensibility/internals/elements-of-a-project-model.md)
 
- Bir proje türünün tüketebileceği Hizmetleri ve uygulanması gereken arabirimleri listeler.
+ Bir proje türünün tükettiği hizmetleri ve uygulaması gereken arabirimleri listeler.
 
 - [Proje Modeli Çekirdek Bileşenleri](../../extensibility/internals/project-model-core-components.md)
 
- Hem uygulanması gereken hem de isteğe bağlı olarak ek işlevsellik sağlamak için uygulayabileceğiniz arabirimlerin proje türleri açıklanmaktadır.
+ Proje türlerinin ek işlevsellik sağlamak için hem uygulaması gereken hem de isteğe bağlı olarak uygulayan arabirimleri açıklar.
 
 - [Proje Türlerinin Oluşturulacağı Durumlar](../../extensibility/internals/when-to-create-project-types.md)
 
- , Ne zaman bir proje türü oluşturmanız gerektiğine ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aynı hedefe ulaşmak Için VSPackages ve düzenleyiciler gibi başka bir genişletilebilirlik özelliğini ne zaman kullanacağınızı belirlemenize yardımcı olur.
+ Aynı hedefe ulaşmak için ne zaman bir proje türü oluşturmanız ve VSPackage'lar ve düzenleyiciler gibi başka bir genişletilebilirlik özelliğini ne zaman kullanabileceğiniz hakkında [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] karar vermede size yardımcı olur.
 
 - [Hiyerarşiler ve Seçim](../../extensibility/internals/hierarchies-and-selection.md)
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tutarlı ve basitleştirilmiş bir kullanıcı deneyimi sağlamak için hiyerarşi ve seçim bağlamını nasıl kullandığını açıklar.
+ Tutarlı ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] basitleştirilmiş bir kullanıcı deneyimi sağlamak için hiyerarşilerin ve seçim bağlamının nasıl kullandığını açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Proje Alt Türleri](../../extensibility/internals/project-subtypes.md)
 
- Proje alt türleri, ve proje sistemlerinin davranışını özelleştirmenize nasıl olanak sağladığını açıklar [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] .
+ Proje alt türlerinin ve proje sistemlerinin davranışını özelleştirmenize nasıl izin verebileceğinizi [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] açıklar.
 
 - [Proje Türleri](../../extensibility/internals/project-types.md)
 
- , [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamının (IDE) temel yapı taşları olarak projelere genel bir bakış sağlar. Bağlantılar, projelerin kod oluşturma ve derleme şeklini açıklayan ek konulara sağlanır.
+ Tümleşik geliştirme ortamının (IDE) temel yapı taşları olarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projelere genel bir bakış sağlar. Projelerin kodu derlemeyi ve derlemeyi denetlemeyi açıklayan ek konulara bağlantılar sağlanır.

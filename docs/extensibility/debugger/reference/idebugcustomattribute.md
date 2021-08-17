@@ -11,14 +11,15 @@ ms.assetid: c5ae41e9-00b9-4cca-871d-b8de9ef390d1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5b96f4330371e8fb18b75a6ad6f17d61cccd3812
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1007e82474093a04321bb3e550913fdc587f1dacf5d39c75ce9491c095588fb7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095439"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402941"
 ---
 # <a name="idebugcustomattribute"></a>IDebugCustomAttribute
 Bu arabirim özel bir özniteliği temsil eder ve özniteliğin adını, üst ve sınıf türünü sağlayabilir.

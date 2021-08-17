@@ -1,6 +1,6 @@
 ---
 title: Web uygulamalarında hata ayıklama | Microsoft Docs
-description: ASP.NET Apps, JavaScript ve TypeScript uygulamaları veya AJAX betik uygulamaları gibi farklı türlerde Web uygulamalarında hata ayıklamanıza yardımcı olacak bağlantılar bulabilirsiniz.
+description: ASP.NET uygulamalar, JavaScript ve TypeScript uygulamaları veya AJAX betik uygulamaları gibi farklı türlerde web uygulamalarında hata ayıklamanıza yardımcı olacak bağlantılar bulabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/05/2019
 ms.topic: conceptual
@@ -13,14 +13,15 @@ ms.assetid: a096a90d-6d0d-4752-9fb5-417635ccab3e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c7dd36846bf1d7ac0c24a73a489ed2c461837ca7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f171d008c3d1ffcc6cc1c9d2bd49a62ea4daf778f67b26919ee42599dafeb40e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872280"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391555"
 ---
 # <a name="debugging-web-applications"></a>Web Uygulamalarında Hata Ayıklama
 
@@ -28,11 +29,11 @@ Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımc
 
 - ASP.NET uygulamalarında hata ayıklama
 
-  Uygulamalarda hata ayıklamayı etkinleştirmek için gereken adımlar için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] bkz. [Debug ASP.net Applications](how-to-enable-debugging-for-aspnet-applications.md).
+  uygulamalarda hata ayıklamayı etkinleştirmek için gereken adımlar için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] bkz. [ASP.NET uygulamalarda hata ayıklama](how-to-enable-debugging-for-aspnet-applications.md).
 
-- ASP.NET 'de istemci tarafı komut dosyasında hata ayıkla
+- ASP.NET istemci tarafı betikte hata ayıklama
 
-  Gerekli adımlar için [Microsoft Edge 'de blog gönderisi hata ayıklama JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) ve [Google Chrome için bu gönderi](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)bölümüne bakın.
+  gerekli adımlar için Microsoft Edge ve [Google Chrome için bu gönderisine yönelik](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)blog gönderisi [hata ayıklama JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) bölümüne bakın.
 
 - JavaScript ve TypeScript hatalarını ayıklama
 
@@ -48,6 +49,6 @@ Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımc
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [hata ayıklayıcı Ayarlar ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)

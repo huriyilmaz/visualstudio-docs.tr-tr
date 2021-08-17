@@ -11,14 +11,15 @@ ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a7ffb9e100a621019a5d0ced855575a05708ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f14fe6095011e77341803c0cdeda5bcd94f0eb8805644859b5c2d6d4e8709481
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875308"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423767"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
@@ -33,7 +34,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli Kullanıcı
 - Etkinliğe bir catch eklenirken <xref:System.Activities.Statements.TryCatch> .
 
 > [!NOTE]
-> Tür tarayıcısı Visual Basic basit dizi türleri görüntüleyebilir, ancak çok boyutlu dizi türleri gösterebilir. Ayrıntılar için bkz. [pürüzlü Diziler](/previous-versions/visualstudio/visual-studio-2008/hkhhsz9t(v=vs.90)) ve [çok boyutlu diziler](/previous-versions/visualstudio/visual-studio-2008/d2de1t93(v=vs.90)) .
+> tür tarayıcısı Visual Basic basit dizi türleri görüntüleyebilir, ancak çok boyutlu dizi türleri gösterebilir. Ayrıntılar için bkz. [pürüzlü Diziler](/previous-versions/visualstudio/visual-studio-2008/hkhhsz9t(v=vs.90)) ve [çok boyutlu diziler](/previous-versions/visualstudio/visual-studio-2008/d2de1t93(v=vs.90)) .
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Tür tarayıcısından bir değer veya başvuru türü seçme
 
@@ -65,7 +66,7 @@ Tür tarayıcısındaki türler, etkinlik Tasarımcısı geliştiricilerine gör
 
 **Tür adı** kutusundaki türlerin listesi, bir eşleşme bulmak için daha fazla karakter yazdığınızda daha kısa olur. Yalnızca FullyQualified adı yazdığınız dize ile başlayan türler veya kısa adı yazdığınız dize ile başlayan ve filtrelenmiş listede görünen türler.
 
-Örneğin:
+Örnek:
 
 1. Yazma **işlemi** eşleşiyor <xref:System.OperationCanceledException> ancak eşleşmiyor <xref:System.InvalidOperationException> . Eşleştirmek için <xref:System.InvalidOperationException> , System. ı veya geçersiz yazmaya başlayın.
 

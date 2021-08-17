@@ -13,14 +13,15 @@ ms.assetid: db6c3ddd-a1ba-450a-897a-bb568a5377fc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 502b93f18aacfed26d3ea440c017e6de5281a35d
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 22f10cb94421d891f62bc5e57769e740e25dc05089c7dd442a145ebd1077b060
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900193"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401797"
 ---
 # <a name="extern-element"></a>Extern öğesi
 Extern öğesi, derleme zamanında *. vsct* dosyası ile birleştirmek için herhangi bir dış üstbilgi (*. h*) dosyasına başvurur. Birleştirilecek dosyalar, VSCT derleyicisine verilen veya bir [Include öğesi](../extensibility/include-element.md)tarafından başvurulan içerme yolunda olmalıdır. Dosyalar, diğer *. vsct* dosyaları veya C++ üst bilgi dosyaları olabilir.
@@ -71,6 +72,6 @@ Extern öğesi, derleme zamanında *. vsct* dosyası ile birleştirmek için her
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

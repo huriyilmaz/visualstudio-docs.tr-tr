@@ -11,17 +11,18 @@ ms.assetid: 2e4653c5-10f1-493c-9973-f31d266c5d48
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 42b51d93f9c0cec3a2ee74b2dfc0f4621c608c07
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 585f05969f0bf987abd6db67fae826ba00e916a6eb279989042087a499b757b5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083693"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402382"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 İşlem sınırları genelinde belirtilen bir arabirimi edinir.

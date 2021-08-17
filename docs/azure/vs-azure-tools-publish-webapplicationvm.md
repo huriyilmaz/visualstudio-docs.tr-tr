@@ -3,16 +3,17 @@ title: Publish-WebApplicationVM | Microsoft Docs
 description: Bir Web uygulamasını bir sanal makineye dağıtmayı öğrenin. Bu betik, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
 author: ghogen
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 6bd9659adec2d1d88a7a02c7985fc0f823c5d811
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 83e90eb6c0105dc21ce07bf4c12e8d8c2fbe2fb3012ad9a2df8f79942ebda6ab
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844014"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121421200"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM (Windows PowerShell betiği)
 Bir sanal makineye bir Web uygulaması dağıtır. Komut dosyası, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
@@ -51,7 +52,7 @@ Sanal makineyi oluşturmak istediğiniz Azure aboneliğinin adı.
 | Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="webdeploypackage"></a>WebDeployPackage
-Sanal makinede yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Bkz. [nasıl yapılır: Visual Studio 'Da Web dağıtım paketi oluşturma](/previous-versions/aspnet/dd465323(v=vs.110)).
+Sanal makinede yayımlanacak Web dağıtım paketinin yolu. Bu paketi, Visual Studio Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Bkz. [nasıl yapılır: Visual Studio Web dağıtım paketi oluşturma](/previous-versions/aspnet/dd465323(v=vs.110)).
 
 | Diğer adlar | yok |
 | --- | --- |
@@ -84,7 +85,7 @@ Sanal makine hesabının kimlik bilgileri. Örnek:-VMPassword @ {Name = "admin";
 | Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="databaseserverpassword"></a>DatabaseServerPassword
-Azure 'da SQL veritabanı için kimlik bilgileri. Örnek:-DatabaseServerPassword @ {Name = "admin"; Password = "parola"}
+Azure 'da SQL veritabanının kimlik bilgileri. Örnek:-DatabaseServerPassword @ {Name = "admin"; Password = "parola"}
 
 | Diğer adlar | yok |
 | --- | --- |
@@ -103,12 +104,12 @@ Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 | Konum |adlandırılmış |
 | Varsayılan değer |yanlış |
 | İşlem hattı girişi kabul edilsin mi? |yanlış |
-| Joker karakterler kabul edilsin mi? |yanlış |
+| Joker karakter kabul edilsin mi? |yanlış |
 
 ## <a name="remarks"></a>Açıklamalar
-Geliştirme ve test ortamları oluşturmak için betiğin nasıl kullanılacağına ilişkin ayrıntılı bir açıklama için, bkz. [geliştirme ve test ortamlarında yayımlamak Için Windows PowerShell betiklerini kullanma](vs-azure-tools-publishing-using-powershell-scripts.md).
+Geliştirme ve Test ortamları oluşturmak için betiği kullanma hakkında eksiksiz bir açıklama için bkz. Geliştirme ve Test Ortamlarına Yayımlamak Windows PowerShell [Betikleri Kullanma.](vs-azure-tools-publishing-using-powershell-scripts.md)
 
-JSON yapılandırma dosyası, dağıtılması gereken ayrıntıları belirtir. Projeyi oluştururken belirttiğiniz bilgileri içerir (örneğin ad, benzeşim grubu, VHD görüntüsü ve sanal makinenin boyutu). Ayrıca sanal makinedeki uç noktaları, sağlama yapılacak veritabanlarını ve Web Dağıtım parametrelerini de içerir. Aşağıdaki kod örnek bir JSON yapılandırma dosyasını göstermektedir:
+JSON yapılandırma dosyası, nelerin dağıtılacağına ilişkin ayrıntıları belirtir. Projeyi oluşturulduğunda belirttiğiniz ad, benzeşm grubu, VHD görüntüsü ve sanal makinenin boyutu gibi bilgileri içerir. Ayrıca sanal makinede uç noktaları, sağlanmayacak veritabanlarını (varsa) ve web dağıtım parametrelerini içerir. Aşağıdaki kod, örnek bir JSON yapılandırma dosyasını gösterir:
 
 ```
 {
@@ -177,4 +178,4 @@ JSON yapılandırma dosyası, dağıtılması gereken ayrıntıları belirtir. P
 }
 ```
 
-Sağlanan öğeleri değiştirmek için JSON yapılandırma dosyasını düzenleyebilirsiniz. Bir sanal makine ve bulut hizmeti gereklidir, ancak veritabanı bölümü isteğe bağlıdır.
+Sağlananları değiştirmek için JSON yapılandırma dosyasını düzenleyebilirsiniz. Sanal makine ve bulut hizmeti gereklidir, ancak veritabanı bölümü isteğe bağlıdır.

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Visual Studio uzantısını güncelleştirme | Microsoft Docs'
-description: Güncelleştirilmiş sürümü yüklemek için uzantıları ve güncelleştirmeleri kullanarak sisteminizdeki bir Visual Studio uzantısını güncelleştirmeyi öğrenin.
+title: 'Nasıl Visual Studio: Visual Studio Uzantısını | Microsoft Docs'
+description: Güncelleştirilmiş sürümü yüklemek için Visual Studio ve Güncelleştirmeler'i kullanarak sisteminize bir uzantıyı güncelleştirme hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,56 +12,57 @@ ms.assetid: 93f79774-7b79-4dd6-94ad-13698f72c257
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2af6217ac2f056461c6d833de5d804ebdab17b6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8b1dce6d9f8e410f4cf0b642a2f50eeb864a0d54d7fedafa3a524e76615ebb83
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074866"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401602"
 ---
-# <a name="how-to-update-a-visual-studio-extension"></a>Nasıl yapılır: Visual Studio uzantısını güncelleştirme
-Güncelleştirilmiş sürümü yüklemek için **uzantıları ve güncelleştirmeleri** kullanarak sisteminizdeki bir Visual Studio uzantısını güncelleştirebilirsiniz. Bir uzantının güncelleştirilmiş bir sürümünü oluşturursanız VSıX bildirimindeki sürüm numarasını artırarak onu güncelleştirilmiş olarak belirtebilirsiniz.
+# <a name="how-to-update-a-visual-studio-extension"></a>Nasıl Visual Studio: Visual Studio güncelleştirme
+Güncelleştirilmiş sürümü yüklemek Visual Studio ve Güncelleştirmeler'i kullanarak sisteminize bir **uzantıyı** güncelleştirin. Bir uzantının güncelleştirilmiş bir sürümünü oluşturmanız halinde, VSIX bildiriminde sürüm numarasını artırarak uzantıyı güncelleştirilmiş olarak belirtemezsiniz.
 
- Gelen uzantının VSıX bildirimi `ID` yüklü bir ve daha yüksek bir sayıyla aynı olduğunda güncelleştirmeler yüklenir `Version` . `Version`Numara aynı veya daha düşükse, paket yüklenemez. `ID`Değerler eşleşmezse, henüz yüklenmeyen paket ayrı bir uzantı olarak tanınır.
+ Gelen uzantının VSIX bildirimi yüklü olanla aynı ve daha yüksek bir `ID` sayıya sahip olduğunda güncelleştirmeler `Version` yüklenir. Sayı `Version` aynı veya daha düşükse paket yük olamaz. Değerler `ID` eşleşmezse, henüz yüklenmemiş paket ayrı bir uzantı olarak tanınır.
 
- Geliştirme sırasında çakışmaların önlenmesine yardımcı olmak için, devam eden uzantıların önceki sürümlerini kaldırmanızı ve ayrıca diğer olası çakışan uzantıları kaldırmanızı veya devre dışı bırakmanızı öneririz.
+ Geliştirme sırasında çakışmaları önlemeye yardımcı olmak için devam eden uzantıların önceki sürümlerini kaldırmanızı ve ayrıca çakışan diğer uzantıları kaldırmanızı veya devre dışı bırakmanızı öneririz.
 
-## <a name="to-update-an-extension-on-your-system"></a>Sisteminizdeki bir uzantıyı güncelleştirmek için
+## <a name="to-update-an-extension-on-your-system"></a>Sisteminiz üzerinde bir uzantıyı güncelleştirmek için
 
 1. **Araçlar** menüsünde **Uzantılar ve Güncelleştirmeler**’e tıklayın.
 
-2. Sol bölmede **güncelleştirmeler**' e tıklayın.
+2. Sol bölmede Güncelleştirmeler'e **tıklayın.**
 
 3. Orta bölmede, yüklemek istediğiniz güncelleştirmeye tıklayın.
 
-     Güncelleştirilmiş uzantının sürüm numarası sağ bölmede diğer bilgilerle birlikte görüntülenir.
+     Güncelleştirilmiş uzantının sürüm numarası, diğer bilgilerle birlikte sağ bölmede görüntülenir.
 
-4. Sağ bölmenin alt kısmındaki **Güncelleştir**' e tıklayın.
+4. Sağ bölmenin alt kısmında Güncelleştir'e **tıklayın.**
 
-## <a name="to-publish-an-update-of-an-extension"></a>Bir uzantının güncelleştirmesini yayımlamak için
+## <a name="to-publish-an-update-of-an-extension"></a>Uzantı güncelleştirmesini yayımlamak için
 
-1. Visual Studio 'da, güncelleştirmek istediğiniz uzantının çözümünü açın. Değişiklikleri yapın.
+1. Bu Visual Studio güncelleştirmek istediğiniz uzantının çözümünü açın. Değişiklikleri yapın.
 
     > [!IMPORTANT]
-    > İmzasız tüm Kullanıcı uzantıları otomatik olarak güncellenmez. Uzantılarınızı her zaman imzalamanız gerekir.
+    > Imzasız tüm kullanıcı uzantıları otomatik olarak güncelleştirilmez. Uzantılarınızı her zaman imzalamanız gerekir.
 
-2. **Çözüm Gezgini**' de, *kaynak. uzantı. manifest*' i açın.
+2. içinde **Çözüm Gezgini** *source.extension.manifest 'i açın.*
 
-3. Bildirim tasarımcısında, **Sürüm** alanındaki sayının değerini artırın.
+3. Bildirim tasarımcısında Sürüm alanında sayanın **değerini** artır.
 
-4. Çözümü kaydedin ve derleyin.
+4. Çözümü kaydedin ve derlemek.
 
-5. Yeni *. vsix* dosyasını (projenin * \bin\Debug \* klasöründe) [Visual Studio Market](https://marketplace.visualstudio.com/vs) Web sitesine yükleyin.
+5. Upload *.vsix* dosyasını (projenin *\bin\Debug \* klasöründe) [Visual Studio Market](https://marketplace.visualstudio.com/vs) Web sitesine kopyalayın.
 
-     Uzantının önceki bir sürümüne sahip olan bir Kullanıcı **uzantıları ve güncelleştirmeleri** açtığında yeni sürüm **güncelleştirmeler** listesinde görünür ve araç, güncelleştirmeleri otomatik olarak aramak üzere ayarlanır.
+     Uzantının önceki bir sürümüne sahip olan bir kullanıcı Uzantılar ve Güncelleştirmeler'i açtığında, aracın güncelleştirmeleri otomatik olarak araması için ayarlanmışsa yeni sürüm Güncelleştirmeler listesinde görünür.  
 
-     **Güncelleştirmeler bölmesinin alt** kısmındaki güncelleştirmeler için otomatik denetlemeyi etkinleştirebilir veya devre dışı bırakabilirsiniz (**kullanılabilir güncelleştirmelerin otomatik algılanmasını etkinleştir/devre dışı bırak**), bu, **Araçlar**   >  **Seçenekler**  >  **ortam**  >  **uzantıları ve güncelleştirmeler**'deki güncelleştirme denetimi ayarını değiştirir.
+     Güncelleştirmeler bölmesinin alt kısmında güncelleştirmeler için  otomatik denetimi etkinleştirebilirsiniz veya devre dışı ekleyebilirsiniz ( Kullanılabilir güncelleştirmelerin otomatik algılanmasına olanak tanıyın/devre dışı bırak), bu ayar Araçlar  Seçenekleri Ortam Uzantıları ve Güncelleştirmeleri'nde Güncelleştirmeleri denetleme ayarını  >    >    >  **değiştirir.**
 
     > [!NOTE]
-    > Visual Studio 2015 güncelleştirme 2 ' den başlayarak,   >    >    >  Kullanıcı başına uzantılar, tüm Kullanıcı Uzantıları veya her ikisi için de otomatik güncelleştirme isteyip istemediğinizi (Araçlar Seçenekler ortam **uzantıları ve güncelleştirmeler**' de) belirtebilirsiniz (varsayılan ayar).
+    > Visual Studio 2015 Güncelleştirme 2'den başlayarak, kullanıcı başına uzantılar, tüm kullanıcı uzantıları veya her ikisi (varsayılan ayar) için otomatik güncelleştirmeler isteyip istemeyebilirsiniz (Araçlar Seçenekler Ortam Uzantıları ve  >    >    >  Güncelleştirmeler'de) belirtebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSıX paketinin anatomumu](../extensibility/anatomy-of-a-vsix-package.md)
+- [VSIX paketinin anatomisi](../extensibility/anatomy-of-a-vsix-package.md)
 - [Visual Studio uzantılarını bulma ve kullanma](../ide/finding-and-using-visual-studio-extensions.md)

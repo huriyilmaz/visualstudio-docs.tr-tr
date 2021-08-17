@@ -1,6 +1,6 @@
 ---
 description: Belirtilen türde ve boyutta bir dizi oluşturur.
-title: 'IDebugTypeFieldBuilder2:: CreateArrayOfType | Microsoft Docs'
+title: IDebugTypeFieldBuilder2::CreateArrayOfType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,17 +10,18 @@ ms.assetid: 85166ac9-0bff-49a0-b2fd-ca7f7a8eae4b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 954e30fc79ea6e581bc9f39dd17433f976b422ab
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3d64de27d36e73f860345393f687d72b3af28d934ee2d9a662ec7ba5ead5bc3c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083511"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389481"
 ---
 # <a name="idebugtypefieldbuilder2createarrayoftype"></a>IDebugTypeFieldBuilder2::CreateArrayOfType
 Belirtilen türde ve boyutta bir dizi oluşturur.
@@ -45,16 +46,16 @@ int CreateArrayOfType (
 
 ## <a name="parameters"></a>Parametreler
 `pTypeField`\
-'ndaki Dizinin tutacağız öğelerin türü.
+[in] Dizide yer alan öğelerin türü.
 
 `rank`\
-'ndaki Dizideki öğe sayısı.
+[in] Dizide öğe sayısı.
 
 `pArrayOfTypeField`\
-dışı Yeni diziyi temsil eden [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnelerini döndürür.
+[out] Yeni [diziyi temsil eden IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnelerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugTypeFieldBuilder2](../../../extensibility/debugger/reference/idebugtypefieldbuilder2.md)

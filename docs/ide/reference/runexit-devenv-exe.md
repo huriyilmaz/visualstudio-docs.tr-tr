@@ -1,6 +1,6 @@
 ---
 title: -RunExit (devenv.exe)
-description: Belirtilen proje veya çözümü derlemek ve çalıştırmak için RunExit Devenv komut satırı anahtarını kullanmayı ve ardından IDE 'yi kapatmayı öğrenin.
+description: RunExit devenv komut satırı anahtarını kullanarak belirtilen projeyi veya çözümü derlemeyi ve çalıştırmayı ve ardından IDE'sini kapatmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -12,18 +12,19 @@ ms.assetid: bfc94875-5fc0-4110-b961-d59c0b403790
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 695996a6bde054d4e9ae79efdef1955ef93ef527
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 67b53d02b53a49dd91b9c106537f9c6f342a947754e7bf138c7100cb4719aefb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957887"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400107"
 ---
 # <a name="runexit-devenvexe"></a>/RunExit (devenv.exe)
 
-Belirtilen proje veya çözümü derler ve çalıştırır ve ardından tümleşik geliştirme ortamını (IDE) kapatır.
+Belirtilen projeyi veya çözümü derler ve çalıştırır ve ardından tümleşik geliştirme ortamını (IDE) kapatır.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -35,11 +36,11 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 
 - *SolutionName*
 
-  Bir çözüm dosyasının tam yolu ve adı.
+  Çözüm dosyasının tam yolu ve adı.
 
-- *ProjectName*
+- *Projeadı*
 
-  Bir proje dosyasının tam yolu ve adı.
+  Proje dosyasının tam yolu ve adı.
 
 - `/Out`*OutputFilename*
 
@@ -47,15 +48,15 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Belirtilen proje veya çözümü, etkin çözüm yapılandırması için belirtilen ayarlara göre derler ve çalıştırır. Bu anahtar, proje veya çözüm çalıştırılırken IDE 'yi en aza indirir. Proje veya çözüm çalışmayı tamamladıktan sonra IDE 'yi kapatır.
+Etkin çözüm yapılandırması için belirtilen ayarlara göre belirtilen projeyi veya çözümü derler ve çalıştırır. Bu anahtar, proje veya çözüm çalışırken IDE'nin en aza indirilmesine neden olur. Proje veya çözüm çalışma tamamlandıktan sonra IDE'nin kapanması.
 
-- Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
+- Çift tırnak içinde boşluk içeren dizeleri içine alın.
 
-- Hatalar da dahil olmak üzere Özet bilgiler, **komut** penceresinde veya anahtarla belirtilen herhangi bir günlük dosyasında görüntülenebilir `/Out` .
+- Hatalar da dahil olmak üzere özet bilgileri Komut penceresinde **veya** anahtarıyla belirtilen herhangi bir günlük dosyasında `/Out` görüntülenebilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, `MySolution` etkin dağıtım yapılandırmasını kullanarak çözümü küçültülmüş BIR IDE 'de çalıştırır ve ardından IDE 'yi kapatır.
+Bu örnek, etkin dağıtım `MySolution` yapılandırmasını kullanarak çözümü simge durumuna küçültülmüş bir IDE'de çalıştırır ve ardından IDE'sini kapatır.
 
 ```
 devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"

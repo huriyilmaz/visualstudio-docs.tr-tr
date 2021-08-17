@@ -6,15 +6,16 @@ ms.date: 01/29/2019
 ms.topic: how-to
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 8ca3cbe82bf4253e660ce69960570e40702c5512
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81dcaf5bee778c3330f504030634db7b24030c5bf360528b7c23f3c472242811
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942366"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121395374"
 ---
 # <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
@@ -25,23 +26,23 @@ Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneği
 
 ## <a name="to-create-a-unit-test-project"></a>Birim testi projesi oluşturmak için
 
-1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin veya **CTRL** + **SHIFT** + **N** tuşuna basın.
+1. **dosya** menüsünde, **yeni**  >  **Project**' yi seçin veya **Ctrl** + **shıft** + **N** tuşuna basın.
 
 ::: moniker range="vs-2017"
 
-2. **Yeni proje** iletişim kutusunda, **yüklü** düğümünü genişletin, test projeniz için kullanmak istediğiniz dili seçin ve ardından **Test**' i seçin.
+2. **yeni Project** iletişim kutusunda, **yüklü** düğümünü genişletin, test projeniz için kullanmak istediğiniz dili seçin ve ardından **test**' i seçin.
 
-3. Kullanmak istediğiniz test çerçevesinin proje şablonunu seçin, örneğin **MSTest test projesi** veya **NUnit test projesi**. Projeyi adlandırın ve ardından **Tamam**' ı seçin.
+3. kullanmak istediğiniz test çerçevesinin proje şablonunu seçin, örneğin **MSTest test Project** veya **nunit test Project**. Projeyi adlandırın ve ardından **Tamam**' ı seçin.
 
-   ![Visual Studio 2017 ' de test projesi şablonları](media/test-project-templates.png)
+   ![Visual Studio 2017 ' de Test projesi şablonları](media/test-project-templates.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. **Yeni proje oluştur** sayfasında, arama kutusuna **birim testi** yazın. Kullanmak istediğiniz test çerçevesinin proje şablonunu seçin, örneğin **MSTest test projesi** veya **NUnit test projesi** ve sonra **İleri**' yi seçin.
+2. **Yeni proje oluştur** sayfasında, arama kutusuna **birim testi** yazın. kullanmak istediğiniz test çerçevesinin proje şablonunu seçin, örneğin **MSTest test Project** veya **nunit test Project** ve ardından **ileri**' yi seçin.
 
-   ![Visual Studio 2019 ' de test projesi şablonları](media/vs-2019/test-project-templates.png)
+   ![Visual Studio 2019 ' de Test projesi şablonları](media/vs-2019/test-project-templates.png)
 
 3. **Yeni projenizi yapılandırın** sayfasında, projeniz için bir ad girin ve ardından **Oluştur**' u seçin.
 
@@ -51,7 +52,7 @@ Birim testleri genellikle test altındaki kodun yapısını yansıtır. Örneği
 
    1. **Çözüm Gezgini**' de test projesi seçin.
 
-   2. **Proje** menüsünde, **Başvuru Ekle**' yi seçin.
+   2. **Project** menüsünde **başvuru ekle**' yi seçin.
 
    3. **Başvuru Yöneticisi**' nde **Projeler** altındaki **çözüm** düğümünü seçin. Test etmek istediğiniz kod projesini seçin ve ardından **Tamam**' ı seçin.
 

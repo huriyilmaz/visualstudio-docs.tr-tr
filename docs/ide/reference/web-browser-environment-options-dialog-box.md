@@ -21,21 +21,22 @@ ms.assetid: 586db4eb-032d-4cb5-93a6-a7c14de1ae49
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c87077005ae2ebbcc8fba92c9f1dc09f17bb3157
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 397951791116066820be0c423fd4556d4fbbf89a7ff7cc1d38e19c62d32f0de0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836221"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121399951"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>Seçenekler iletişim kutusu: ortam \> Web tarayıcısı
 
 Hem iç Web tarayıcısı hem de Internet Explorer seçeneklerini ayarlar. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **ortam** klasörünü genişletin ve **Web tarayıcısı**' nı seçin.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. ayarlarınızı değiştirmek için **araçlar** menüsünden **içeri aktar ve dışarı aktar Ayarlar** seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
 
 > [!IMPORTANT]
 > Web 'den belirli dosyaları veya bileşenleri açmak, bilgisayarınızda kod yürütebilir.
@@ -60,10 +61,10 @@ IDE Web tarayıcısını açtığınızda görünen sayfayı ayarlar.
 
 ## <a name="internet-explorer-options"></a>Internet Explorer seçenekleri
 
-İnternet **özellikleri** Iletişim kutusunda Internet Explorer seçeneklerini değiştirmek için tıklayın. Bu iletişim kutusunda yapılan değişiklikler hem iç Web tarayıcısını hem de Visual Studio IDE dışında başlatılan Internet Explorer örneklerini (örneğin, Başlat menüsünden) etkiler.
+İnternet **özellikleri** Iletişim kutusunda Internet Explorer seçeneklerini değiştirmek için tıklayın. bu iletişim kutusunda yapılan değişiklikler hem iç Web tarayıcısını hem de ınternet Explorer 'ın Visual Studio ıde dışında başlatılan örneklerini (örneğin, Başlat menüsü) etkiler.
 
 > [!NOTE]
-> Visual Studio iç Web tarayıcısını tercih ettiğiniz bir tarayıcıyla değiştirmek için, **Bununla birlikte araştır** iletişim kutusunu kullanın. ' In sağ tıklama veya bağlam menüsünden, örneğin, projenizde bir HTML dosyası olan iletişim kutusuna erişebilirsiniz.
+> Visual Studio iç Web tarayıcısını tercih ettiğiniz bir tarayıcıyla değiştirmek için, **bununla birlikte araştır** iletişim kutusunu kullanın. ' In sağ tıklama veya bağlam menüsünden, örneğin, projenizde bir HTML dosyası olan iletişim kutusuna erişebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

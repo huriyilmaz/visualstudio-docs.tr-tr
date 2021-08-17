@@ -13,40 +13,41 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a1f115dfff92b1c5e5979e62af257cde6a92360
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 4cd2dd9610167197a8deaa1bdc88d4e5689636e75263785d92618eceee37f3bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216598"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121398507"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>İzlenecek yol: kullanımdan oluştur özelliğinden önce test geliştirme
 
 Bu konu başlığı altında, test-ilk geliştirmeyi destekleyen [kullanım dışı oluşturma](../ide/visual-csharp-intellisense.md#generate-from-usage) özelliğinin nasıl kullanılacağı gösterilmektedir.
 
- *Test-ilk geliştirme* , ürün belirtimlerine göre birim testlerini ilk kez yazacağınız ve sonra testlerin başarılı olması için gereken kaynak kodu yazdığınız yazılım tasarımına yönelik bir yaklaşımdır. Visual Studio, tanımlanmadan önce test çalışmalarınıza ilk kez başvurduğunuzda kaynak kodunda yeni türler ve Üyeler oluşturarak test ilk geliştirmeyi destekler.
+ *Test-ilk geliştirme* , ürün belirtimlerine göre birim testlerini ilk kez yazacağınız ve sonra testlerin başarılı olması için gereken kaynak kodu yazdığınız yazılım tasarımına yönelik bir yaklaşımdır. Visual Studio, test durumlarınıza ilk kez başvurulduklarında kaynak kodunda yeni türler ve üyeler üreterek öncelikle test geliştirme desteği destekler.
 
-Visual Studio, iş akışınız için en az kesintiyle yeni türler ve Üyeler oluşturur. Türler, Yöntemler, özellikler, alanlar veya oluşturucular için kod içinde geçerli konumunuzu bırakmadan, saplamalar oluşturabilirsiniz. Tür oluşturma seçeneklerini belirtmek için bir iletişim kutusu açtığınızda, odak iletişim kutusu kapandığında geçerli açık dosyaya hemen döner.
+Visual Studio, iş akışınıza en az kesintiyle yeni türler ve üyeler üretir. Türler, Yöntemler, özellikler, alanlar veya oluşturucular için kod içinde geçerli konumunuzu bırakmadan, saplamalar oluşturabilirsiniz. Tür oluşturma seçeneklerini belirtmek için bir iletişim kutusu açtığınızda, odak iletişim kutusu kapandığında geçerli açık dosyaya hemen döner.
 
 **Kullanımdan oluştur** özelliği, Visual Studio ile tümleştirilen test çerçeveleri ile birlikte kullanılabilir. Bu konuda, Microsoft birim testi çerçevesi gösterilmiştir.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="create-a-windows-class-library-project-and-a-test-project"></a>Windows sınıf kitaplığı projesi ve test projesi oluşturma
+### <a name="create-a-windows-class-library-project-and-a-test-project"></a>Windows sınıf kitaplığı projesi ve Test projesi oluşturma
 
 1. C# veya Visual Basic 'de yeni bir **Windows sınıf kitaplığı** projesi oluşturun. `GFUDemo_VB` `GFUDemo_CS` Kullandığınız dile bağlı olarak veya olarak adlandırın.
 
-2. **Çözüm Gezgini**, üstteki çözüm simgesine sağ tıklayın,   >  **Yeni proje** Ekle ' yi seçin.
+2. **Çözüm Gezgini**, üstteki çözüm simgesine sağ tıklayın,   >  **yeni Project** ekle ' yi seçin.
 
-3. Yeni bir **birim testi projesi (.NET Framework)** projesi oluşturun.
+3. yeni bir **birim testi Project (.NET Framework)** projesi oluşturun.
 
    ::: moniker range="vs-2017"
 
-   Aşağıdaki çizimde, C# şablonları için **Yeni proje** iletişim kutusu gösterilmektedir.
+   aşağıdaki çizimde, C# şablonları için **yeni Project** iletişim kutusu gösterilmektedir.
 
-   ![Birim testi proje şablonu](../ide/media/newproject_test.png)
+   ![birim testi Project şablonu](../ide/media/newproject_test.png)
 
    ::: moniker-end
 
@@ -79,7 +80,7 @@ Visual Studio, iş akışınız için en az kesintiyle yeni türler ve Üyeler o
 
 5. **Tür oluştur** iletişim kutusunu açmak için **yeni tür oluştur** ' a tıklayın. Bu iletişim kutusu, türü farklı bir projede oluşturmayı içeren seçenekler sağlar.
 
-6. **Proje** listesinde, Visual Studio 'nun dosyayı test projesi yerine sınıf kitaplığı projesine eklemesini Istemek Için **gfudemo \_ vb** veya **GFUDemo_CS** ' a tıklayın. Henüz seçili değilse, **yeni dosya oluştur** ' u seçin ve *otomobil. cs* veya *otomobil. vb* olarak adlandırın.
+6. **Project** listesinde, test projesi yerine bir dosyayı sınıf kitaplığı projesine eklemek Visual Studio bildirmek için **gfudemo \_ VB** veya **GFUDemo_CS** ' e tıklayın. Henüz seçili değilse, **yeni dosya oluştur** ' u seçin ve *otomobil. cs* veya *otomobil. vb* olarak adlandırın.
 
      ![Yeni tür oluştur iletişim kutusu](../ide/media/genotherdialog.png)
 

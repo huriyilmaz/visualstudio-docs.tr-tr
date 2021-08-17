@@ -11,14 +11,15 @@ ms.assetid: d5ce10f9-047a-4b74-aa1d-295128898b89
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b0de198e96ff268a0744a4a97a4a160c585af9c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: dda137697f4645af166d846af9605358c7f0c489bc3ef86692f00688f50f0221
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069913"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401732"
 ---
 # <a name="how-to-open-standard-editors"></a>Nasıl yapılır: standart düzenleyiciler açma
 Standart bir düzenleyici açtığınızda, IDE 'nin dosya için projeye özgü bir düzenleyici belirtmek yerine, belirlenen dosya türü için standart bir düzenleyici belirlemesine izin verirolursunuz.

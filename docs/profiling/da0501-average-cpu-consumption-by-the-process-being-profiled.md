@@ -11,15 +11,16 @@ ms.assetid: b01946b4-75e3-47d5-a1a1-cebfae66a3af
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 242a3ff10042a53997b17f662af145440df2e95a
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: d503321cf877a1132795c14d7705cbce356cba6304d94b7adaad9d58eee2d358
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465835"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121396688"
 ---
 # <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501: işlem tarafından ortalama CPU kullanımı profili oluşturuldu.
 

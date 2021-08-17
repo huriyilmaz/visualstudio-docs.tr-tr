@@ -1,5 +1,5 @@
 ---
-title: Visual Studio aboneliğinde ön üretim stoku | Visual Studio Market
+title: Visual Studio abonelikte ön üretim stoku | Visual Studio 'Nde
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,30 +7,30 @@ ms.assetid: 7d74e113-8fb2-490e-8502-48cce7b1327a
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Yöneticiler hakkında, ön üretim envanterleri yürütme sorumluluğunu öğrenin
-ms.openlocfilehash: f6b1e1ebc02a986be86fb48578a4be47ccc3dfaa
-ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
+ms.openlocfilehash: 73c48bab862ba866bf61999ff3caeeaa361685411946e9a9f6486f40b0a78b90
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104757678"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121393026"
 ---
 # <a name="inventory-of-pre-production-environment"></a>Üretim öncesi ortam envanteri
-Visual Studio abonelikleri, cihazları yerine kullanıcıları sayarak varlık yönetimini basitleştirir.
+Visual Studio abonelikler, cihazları yerine kullanıcıları sayarak varlık yönetimini basitleştirir.
 
 Visual Studio yöneticileri **, adlandırılmış bireylere** Visual Studio abonelikleri atamalıdır. Dev1, Dev2 veya "FeatureTeam" gibi takım adlarının kullanımı gibi adlandırma kurallarına **izin verilmez**.
 
 Üretim öncesi ortamınızın envanterini almayı kolaylaştırmak için bazı yollar şunlardır:
-- Kullanıcı atamalarınızı gözden geçirin. Microsoft, Visual Studio abonelik atamalarını izlemenize yardımcı olması için [Visual Studio yönetim portalı](https://manage.visualstudio.com/) adlı bir Web sitesi sağlar.
+- Kullanıcı atamalarınızı gözden geçirin. Microsoft, Visual Studio abonelik atamalarını izlemenize yardımcı olması için [Visual Studio yönetim portalı](https://manage.visualstudio.com/) adlı bir web sitesi sağlar.
 - Kullanıcıları listelemek için şirket içi veya bulut tabanlı Active Directory kullanın. Kullanıcı erişimini yönetmek için Active Directory kullanıyorsanız, geliştirme ve kullanıcıları Dizin üyeliğiyle test edebilirsiniz.
-- Envanter sistemleri için otomatikleştirilmiş araçları kullanın. Ayrıca, yazılım varlıklarınızı yönetmenize ve üretim öncesi ortamlarını üretimden ayırt etmenize yardımcı olması için bir yazılım envanteri aracı da kullanmanız gerekebilir. Microsoft System Center ile birçok müşteri, envanter sürecinin bu bölümünü otomatik hale getirmeye yardımcı olmak için adlandırma kuralları oluşturur.
+- Envanter sistemleri için otomatikleştirilmiş araçları kullanın. Ayrıca, yazılım varlıklarınızı yönetmenize ve üretim öncesi ortamlarını üretimden ayırt etmenize yardımcı olması için bir yazılım envanteri aracı da kullanmanız gerekebilir. Microsoft System Center birçok müşteri, envanter sürecinin bu bölümünü otomatik hale getirmeye yardımcı olmak için adlandırma kuralları oluşturur.
 - El ile mutabakata yönelik yardım alın. Geliştirme ve test ortamlarınızla geliştirme ve test kullanıcılarınız için test etmenize yardımcı olmak üzere personelinizi listeleme.
 
 > [!NOTE]
-> Visual Studio abonelikleri yazılımı, son kullanıcılar tarafından kabul testi veya geri bildirim, bir üretim veritabanına bağlanan ortam, olağanüstü durum kurtarma veya üretim yedeklemesini destekleme veya en yüksek etkinlik dönemlerinde üretim için kullanılan ortamlar dahil olmak üzere üretim ortamları için lisanslanmaz. Buna özel durumlar, [Visual Studio lisanslama teknik incelemesine](https://aka.ms/vslicensing)göre belirtilen belirli abonelik düzeyleri için özel avantajlar içerir.  
+> Visual Studio abonelik yazılımı, son kullanıcılar tarafından kabul testi veya geri bildirim, bir üretim veritabanına bağlanan ortam, olağanüstü durum kurtarma veya üretim yedeklemesini destekleme veya en yüksek etkinlik dönemlerinde üretim için kullanılan ortamlar dahil olmak üzere üretim ortamları için lisanslanır. buna özel durumlar, [Visual Studio lisanslama teknik incelemesi](https://aka.ms/vslicensing)içinde özetlenen belirli abonelik düzeyleri için özel avantajlar içerir.  
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
-- [Visual Studio abonelikleri desteği](https://aka.ms/vsadminhelp)
+- [Visual Studio abonelik desteği](https://aka.ms/vsadminhelp)
 - [Toplu Lisanslama Koşulları](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,6 +1,6 @@
 ---
-description: Çağıran koddan bir XML Web hizmetine adımlıyorsanız, çağrı bazen zaman aşımına uğrar ve bu da hata ayıklamaya devam edemeyebilirsiniz.
-title: Web hizmetlerinde hata ayıklanırken zaman aşımı | Microsoft Docs
+description: Kodu çağıran bir XML Web hizmetine adımlarken, hata ayıklamaya devam etmek için devam edelamayabilirsiniz.
+title: Web Hizmetleri hata ayıklama sırasında zaman aşımı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 dev_langs:
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 338dd92b69760c395554a878b36fc4bab05e09a3
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9270a36015c3227b27d3a921370255e7f15d0aa994f69cb7548f82832b1fb885
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146515"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419916"
 ---
 # <a name="error-timeout-while-debugging-web-services"></a>Hata: Web Hizmetlerinde Hata Ayıklarken Zaman Aşımı
-Çağıran koddan bir XML Web hizmetine adımlıyorsanız, çağrı bazen zaman aşımına uğrar ve bu da hata ayıklamaya devam edemeyebilirsiniz. Bunun gibi bir hata iletisi görebilirsiniz.
+Kodu çağıran bir XML Web hizmetine adımlarken, hata ayıklamaya devam etmek için devam edelamayabilirsiniz. Bunun gibi bir hata iletisiyle karşınız olabilir.
 
 ```cmd
 An unhandled exception of type 'System.Net.WebException' occurred in
@@ -33,7 +34,7 @@ Additional information: The operation has timed-out.
 ```
 
 ## <a name="solution"></a>Çözüm
- Bu sorundan kaçınmak için, XML Web hizmeti çağrısının zaman aşımı değerini, bu örnekte gösterildiği gibi sonsuz olarak ayarlayın:
+ Bu sorunu önlemek için XML Web hizmetine yapılan çağrının zaman aşımı değerini şu örnekte gösterildiği gibi sonsuz olarak ayarlayın:
 
 ```csharp
 Service1 obj = new Service1();

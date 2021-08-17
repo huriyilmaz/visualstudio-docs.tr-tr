@@ -1,6 +1,6 @@
 ---
-title: Uzantıları gidiş dönüş
-description: Visual Studio genişletilebilirlik projelerinin Visual Studio 2015 ve Visual Studio 2019 ya da Visual Studio 2017 arasında gidiş dönüş yapmayı öğrenin.
+title: Uzantıları Gidiş Dönüş Olarak Gidiş Dönüş
+description: Visual Studio 2015 ile Visual Studio 2019 veya 2017 arasında Visual Studio genişletilebilirlik projeleri Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/25/2017
 ms.topic: how-to
@@ -10,99 +10,99 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: 3db3264bf5226b5679452659928e451e7975b001
-ms.sourcegitcommit: d10f37dfdba5d826e7451260c8370fd1efa2c4e4
+ms.openlocfilehash: a5430271875917c890477a13e67056052ed382ee26546ef7536909866f0e8346
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "96993620"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401699"
 ---
-# <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Nasıl yapılır: Visual Studio 2019/2017 ve Visual Studio 2015 ile uyumlu uzantılar yapma
+# <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Nasıl yapabilirsiniz: Uzantıların 2019/2017 Visual Studio 2015 ve Visual Studio uyumlu hale Visual Studio yapma
 
-Bu belgede, Visual Studio 2015 ile Visual Studio 2019 veya Visual Studio 2017 arasında genişletilebilirlik projelerinin nasıl gezilebileceği açıklanmaktadır. Bu yükseltmeyi tamamladıktan sonra, bir proje hem Visual Studio 2015 hem de Visual Studio 2019 ya da 2017 içinde açabilir, oluşturabilir, kurabilir ve çalıştırılabilir. Başvuru olarak, Visual Studio 2015 ile Visual Studio 2019 veya 2017 arasında gidiş dönüş sağlayan bazı uzantılar [vs SDK genişletilebilirlik örneklerinde](https://github.com/Microsoft/VSSDK-Extensibility-Samples)bulunabilir.
+Bu belgede genişletilebilirlik projelerinin Visual Studio 2015 ile Visual Studio 2019 veya 2017 arasında gidiş dönüş Visual Studio açıklandı. Bu yükseltmeyi tamamladıktan sonra bir proje hem Visual Studio 2015 hem de Visual Studio 2019 veya 2017'de açabilecek, derleme, yükleme ve çalıştırabilecek. Başvuru olarak, Visual Studio 2015 ile Visual Studio 2019 veya 2017 arasında gidiş dönüş genişletilebilir bazı uzantılar VS SDK genişletilebilirlik [örneklerde bulunabilir.](https://github.com/Microsoft/VSSDK-Extensibility-Samples)
 
-Yalnızca Visual Studio 2019/2017 ' de derlemeyi planlıyorsanız, ancak çıktı VSıX 'in hem Visual Studio 2015 hem de Visual Studio 2019/2017 ' de çalıştırılmasını istiyorsanız [uzantı geçiş belgesine](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)bakın.
+Yalnızca Visual Studio 2019/2017'de derlemek, ancak çıkış VSIX'in hem Visual Studio 2015 hem de Visual Studio 2019/2017'de çalışmasını istiyorsanız Uzantı geçişi belgesine [bakın.](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
 
 > [!NOTE]
-> Sürümler arasında Visual Studio 'daki değişiklikler nedeniyle, bir sürümde çalışan bazı şeyler başka bir sürümde çalışmaz. Erişmeye çalıştığınız özelliklerin her iki sürümde de kullanılabildiğinden emin olun, aksi durumda uzantı beklenmedik sonuçlara neden olur.
+> Sürümler arasında Visual Studio değişiklikler nedeniyle, bir sürümde çalışan bazı şeyler başka bir sürümde çalışmıyor. Erişmeye çalıştığınız özelliklerin her iki sürümde de kullanılabilir olduğundan emin olmak, yoksa uzantıda beklenmeyen sonuçlarla karşılaşabilirsiniz.
 
-Bu belgede, bir VSıX 'i yuvarlamak için tamamlayacağımız adımların bir ana hattı aşağıda verilmiştir:
+VsIX'i gidiş dönüş yapmak için bu belgede tamamlayılacak adımların ana hatları aşağıda velanmıştır:
 
-1. Doğru NuGet paketlerini içeri aktarın.
-2. Uzantı bildirimini güncelleştir:
+1. Doğru veri NuGet içeri aktarın.
+2. Uzantı Bildirimini Güncelleştir:
     * Yükleme hedefi
     * Önkoşullar
-3. CSProj güncelleştir:
-    * Güncelleştirin `<MinimumVisualStudioVersion>` .
-    * Özelliği ekleyin `<VsixType>` .
+3. CSProj güncelleştirildi:
+    * 'i `<MinimumVisualStudioVersion>` güncelleştirin.
+    * özelliğini `<VsixType>` ekleyin.
     * Hata ayıklama özelliğini `($DevEnvDir)` 3 kez ekleyin.
-    * Derleme araçlarını ve hedefleri içeri aktarmaya yönelik koşullar ekleyin.
+    * Derleme araçlarını ve hedeflerini içeri aktarmaya yönelik koşullar ekleyin.
 
 4. Derleme ve Test Etem
 
 ## <a name="environment-setup"></a>Ortamı ayarlama
 
-Bu belge, makinenizde aşağıdakilerin yüklü olduğunu varsayar:
+Bu belgede makinenize aşağıdakilerin yüklü olduğu varsayıldı:
 
-* VS SDK yüklü Visual Studio 2015
-* Genişletilebilirlik iş yükünün yüklü olduğu Visual Studio 2019 veya 2017
+* Visual Studio SDK'nın yüklü olduğu 2015 sürümü
+* Visual Studio Genişletilebilirlik iş yükü yüklü 2019 veya 2017
 
 ## <a name="recommended-approach"></a>Önerilen yaklaşım
 
-Visual Studio 2019 veya 2017 yerine Visual Studio 2015 ile bu yükseltmeyi başlatmak önemle önerilir. Visual Studio 2015 ' de geliştirmesinin başlıca avantajı, Visual Studio 2015 ' de bulunmayan derlemelere başvurmatığınızdan emin olunması sağlamaktır. Visual Studio 2019 veya 2017 ' de geliştirme yaparsanız, yalnızca Visual Studio 2019 veya 2017 sürümünde bulunan bir derlemeye bağımlılık getirebilmeniz riski vardır.
+Bu yükseltmeyi 2019 veya 2017'Visual Studio yerine Visual Studio 2015 ile başlatmanızı öneririz. Visual Studio 2015'te geliştirmenin temel avantajı, 2015'te mevcut olan derlemelere Visual Studio sağlamaktır. Visual Studio 2019 veya 2017'de geliştirme yapacaksanız, yalnızca Visual Studio 2019 veya 2017'de mevcut olan bir derlemeye bağımlılık uygulama riski vardır.
 
-## <a name="ensure-there-is-no-reference-to-projectjson"></a>project.jsiçin bir başvuru olmadığından emin olun
+## <a name="ensure-there-is-no-reference-to-projectjson"></a>Üzerinde bir başvuru project.js
 
-Bu belgede daha sonra, **. csproj* dosyanıza koşullu içeri aktarma deyimleri ekleyeceğiz. NuGet başvurularınız *üzerindeproject.js* depolanıyorsa bu çalışmaz. Bu nedenle, tüm NuGet başvurularını *packages.config* dosyasına taşımanız önerilir.
-Projeniz dosyada bir *project.js* içeriyorsa:
+Bu belgenin devamında, **.csproj* dosyanıza koşullu içeri aktarma deyimleri ekleeceğiz. Bu, kaynak başvurularınızı NuGet içinde depolanıyorsa *project.jsçalışmaz.* Bu nedenle, tüm başvurular NuGet dosyanın *packages.config* önerilir.
+Projeniz dosyada bir *project.jsiçeriyorsa:*
 
-* *project.jsüzerindeki* başvuruları bir yere göz atın.
-* **Çözüm Gezgini**, projedeki *project.js* dosya silin. Bu, dosyadaki *project.js* siler ve projeden kaldırır.
+* üzerinde *project.js.*
+* dosyasından **Çözüm Gezgini** *projedenproject.jsdosyasını* silin. Bu, *project.jsdosyasını* siler ve projeden kaldırır.
 * NuGet başvurularını projeye geri ekleyin:
-  * **Çözüme** sağ tıklayın ve **çözüm Için NuGet Paketlerini Yönet**' i seçin.
-  * Visual Studio sizin için *packages.config* dosyasını otomatik olarak oluşturur.
+  * Çözüm'e sağ tıklayın **ve Çözüm** için NuGet **Paketlerini Yönet'i seçin.**
+  * Visual Studio otomatik olarak *packages.config* dosya oluşturur.
 
 > [!NOTE]
-> Projeniz EnvDTE paketleri içeriyorsa, **Başvuru Ekle** **' yi seçerek ve** uygun başvuruyu ekleyerek eklenmeleri gerekebilir. NuGet paketlerinin kullanılması, projenizi oluşturmaya çalışırken hata oluşturabilir.
+> Projeniz EnvDTE paketleri içeriyorsa, Başvuru ekle'yi seçerek ve  uygun başvuru ekleniyorsa Başvurular'a sağ tıklarsanız bunların ekleniyor olması gerekir.  NuGet paketlerin kullanımı, projenizi derlemeye çalışırken hatalara neden olabilir.
 
-## <a name="add-appropriate-build-tools"></a>Uygun derleme araçlarını ekleyin
+## <a name="add-appropriate-build-tools"></a>Uygun derleme araçları ekleme
 
-Uygun şekilde derleme ve hata ayıklama yapmamızı sağlayacak derleme araçları eklememiz gerekiyor. Microsoft, Microsoft. VisualStudio. SDK. BuildTasks adlı bir derleme oluşturdu.
+Derlemeyi ve hata ayıklamayı uygun şekilde sağlayacak derleme araçlarını eklemeye dikkat etmek gerekir. Microsoft, bunun için Microsoft.VisualStudio.Sdk.BuildTasks adlı bir derleme oluşturdu.
 
-Hem Visual Studio 2015 hem de 2019/2017 ' de bir Vsıxv3 oluşturup dağıtmak için aşağıdaki NuGet paketlerini yapmanız gerekir:
+Hem Visual Studio 2015 hem de 2019/2017'de VSIXv3 derlemek ve dağıtmak için aşağıdaki NuGet gerekir:
 
-Sürüm | Oluşturulan Araçlar
+Sürüm | Yerleşik Araçlar
 --- | ---
-Visual Studio 2015 | Microsoft. VisualStudio. SDK. BuildTasks. 14.0
-Visual Studio 2019 veya 2017 | Microsoft. VSSDK. BuildTool
+Visual Studio 2015 | Microsoft.VisualStudio.Sdk.BuildTasks.14.0
+Visual Studio 2019 veya 2017 | Microsoft.VSSDK.BuildTool
 
 Bunun için:
 
-* Projenize Microsoft. VisualStudio. SDK. BuildTasks. 14.0 NuGet paketini ekleyin.
-* Projeniz Microsoft. VSSDK. BuildTools içermiyorsa, ekleyin.
-* Microsoft. VSSDK. BuildTools sürümünün 15. x veya daha büyük olduğundan emin olun.
+* Microsoft.VisualStudio.Sdk.BuildTasks.14.0 NuGet paketini projenize ekleyin.
+* Projeniz Microsoft.VSSDK.BuildTools içeriyorsa ekleyin.
+* Microsoft.VSSDK.BuildTools sürümünün 15.x veya daha büyük olduğundan emin olun.
 
-## <a name="update-extension-manifest"></a>Uzantı bildirimini Güncelleştir
+## <a name="update-extension-manifest"></a>Uzantı bildirimini güncelleştirme
 
 ### <a name="1-installation-targets"></a>1. Yükleme hedefleri
 
-Visual Studio 'ya bir VSıX oluşturmak için hangi sürümlerin hedefleyeceğinizi söylememiz gerekir. Genellikle, bu başvurular sürüm 14,0 (Visual Studio 2015), sürüm 15,0 (Visual Studio 2017) veya sürüm 16,0 (Visual Studio 2019) ' ya kadar. Bizim örneğimizde, her ikisi için de bir uzantı yükleyecek bir VSıX oluşturmak istiyoruz, bu nedenle her iki sürümü de hedefliyoruz. VSıX 'in 14,0 ' den önceki sürümlerde oluşturup yüklemesini istiyorsanız bu, önceki sürüm numarası ayarlanarak yapılabilir; Ancak, sürüm 10,0 ve önceki sürümleri artık desteklenmemektedir.
+VsIX Visual Studio hangi sürümleri hedefleymız olduğunu anlatmamız gerekiyor. Genellikle, bu başvurular sürüm 14.0 (Visual Studio 2015), sürüm 15.0 (Visual Studio 2017) veya sürüm 16.0 (Visual Studio 2019) olabilir. Bu durumda her iki sürüm için de uzantı yükecek bir VSIX oluşturmak istiyor, dolayısıyla her iki sürümü de hedeflememiz gerekiyor. VSIX'inizin 14.0'dan önceki sürümlerde derlemesi ve yüklemesi yapmak için önceki sürüm numarası ayar yapılabilir; ancak, sürüm 10.0 ve önceki sürümler artık desteklenmiyor.
 
-* Visual Studio 'da *Source. Extension. valtmanifest* dosyasını açın.
-* **Hedefleri yüklensin** sekmesini açın.
-* **Sürüm aralığını** [14,0, 17,0) olarak değiştirin. ' [', Visual Studio 'Nun 14,0 ve bu sürümü aşan tüm sürümleri içermesini söyler. ') ', Visual Studio 'Nun sürüm 17,0 ' ye kadar olan tüm sürümleri dahil etmek üzere söylemasını söyler.
-* Tüm değişiklikleri kaydedin ve Visual Studio 'nun tüm örneklerini kapatın.
+* *source.extension.vsixmanifest dosyasını* Visual Studio.
+* Hedefleri **Yükle sekmesini** açın.
+* Sürüm  Aralığını [14.0, 17.0) olarak değiştirme. '[', Visual Studio 14.0'ın ve bunu geçen tüm sürümlerin dahil olduğunu söyler. ')' Visual Studio sürüm 17.0'a kadar olan ancak dahil olmak üzere tüm sürümleri dahil etmek zorunda olmadığını söyler.
+* Tüm değişiklikleri kaydedin ve uygulamanın tüm Visual Studio.
 
-![Yükleme hedefi görüntüsü](media/visual-studio-installation-targets-example.png)
+![Yükleme Hedefleri Görüntüsü](media/visual-studio-installation-targets-example.png)
 
-### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2. *uzantı. valtmanifest* dosyasına Önkoşullar ekleniyor
+### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2. *extension.vsixmanifest dosyasına Önkoşullar* Ekleme
 
-Önkoşul olarak Visual Studio Core Düzenleyicisi gerekir. Visual Studio 'Yu açın ve önkoşulları eklemek için güncelleştirilmiş bildirim tasarımcısını kullanın.
+Önkoşul olarak Visual Studio Core Editor'a ihtiyacımız var. Ön Visual Studio eklemek için güncelleştirilmiş bildirim tasarımcısını kullanın.
 
 Bunu el ile yapmak için:
 
-* Dosya Gezgini 'nde proje dizinine gidin.
-* *Extension. valtmanifest* dosyasını bir metin düzenleyicisiyle açın.
+* Dosya Gezgini'da proje dizinine gidin.
+* *extension.vsixmanifest dosyasını bir* metin düzenleyicisiyle açın.
 * Aşağıdaki etiketi ekleyin:
 
 ```xml
@@ -114,36 +114,36 @@ Bunu el ile yapmak için:
 * Dosyayı kaydedin ve kapatın.
 
 > [!NOTE]
-> Tüm Visual Studio 2019 veya 2017 sürümleriyle uyumlu olduğundan emin olmak için önkoşul sürümünü el ile düzenlemeniz gerekebilir. Bunun nedeni, tasarımcının en düşük sürümü Visual Studio 'nun geçerli sürümünüz olarak (örneğin, 15.0.26208.0) ekleyecektir. Ancak, diğer kullanıcıların önceki bir sürümü olabileceğinden, bunu 15,0 olarak el ile düzenlemeniz gerekir.
+> 2019 veya 2017'nin tüm sürümleriyle uyumlu olduğundan emin olmak için Önkoşul sürümünü el ile Visual Studio gerekebilir. Bunun nedeni tasarımcının en düşük sürümü geçerli sürüm olarak eklemesi Visual Studio (örneğin, 15.0.26208.0). Ancak, diğer kullanıcılar daha önceki bir sürüme sahip olabilir, bu sürümü 15.0'a el ile düzenlemek gerekir.
 
-Bu noktada, bildirim dosyanız şuna benzer görünmelidir:
+Bu noktada bildirim dosyanız şuna benzer şekilde görünüyor:
 
-![Önkoşul örneği](media/visual-studio-prerequisites-example.png)
+![Önkoşul Örneği](media/visual-studio-prerequisites-example.png)
 
-## <a name="modify-the-project-file-myprojectcsproj"></a>Proje dosyasını değiştirme (MyProject. csproj)
+## <a name="modify-the-project-file-myprojectcsproj"></a>Proje dosyasını değiştirme (myproject.csproj)
 
-Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya sahip olmanız kesinlikle önerilir. [Burada](https://github.com/Microsoft/VSSDK-Extensibility-Samples)birkaç örnek bulabilirsiniz. Herhangi bir genişletilebilirlik örneği seçin, başvuru için *. csproj* dosyasını bulun ve aşağıdaki adımları yürütün:
+Bu adımı yaparken değiştirilmiş bir .csproj'a başvuru açılması kesinlikle önerilir. Burada birkaç örnek [bulabilirsiniz.](https://github.com/Microsoft/VSSDK-Extensibility-Samples) Herhangi bir genişletilebilirlik örneğini seçin, başvuru için *.csproj* dosyasını bulun ve aşağıdaki adımları yürütün:
 
-* **Dosya Gezgini**'nde proje dizinine gidin.
-* *MyProject. csproj* dosyasını bir metin düzenleyicisiyle açın.
+* dizininde proje dizinine **Dosya Gezgini.**
+* *myproject.csproj dosyasını bir* metin düzenleyicisiyle açın.
 
-### <a name="1-update-the-minimumvisualstudioversion"></a>1. MinimumVisualStudioVersion güncelleştirin
+### <a name="1-update-the-minimumvisualstudioversion"></a>1. MinimumVisualStudioVersion Güncelleştirme
 
-* En düşük Visual Studio sürümünü olarak ayarlayın `$(VisualStudioVersion)` ve koşullu bir ifade ekleyin. Mevcut değilse bu etiketleri ekleyin. Etiketlerin aşağıdaki gibi ayarlandığından emin olun:
+* En düşük Visual Studio sürümünü olarak ayarlayın `$(VisualStudioVersion)` ve buna bir koşullu deyim ekleyin. Bu etiketleri yoksa ekleyin. Etiketlerin aşağıda olduğu gibi ayarlanmıştır:
 
 ```xml
 <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
 <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
 ```
 
-### <a name="2-add-the-vsixtype-property"></a>2. Valttype özelliğini ekleyin.
+### <a name="2-add-the-vsixtype-property"></a>2. VsixType özelliğini ekleyin.
 
-* Aşağıdaki etiketi `<VsixType>v3</VsixType>` bir özellik grubuna ekleyin.
+* Bir özellik grubuna `<VsixType>v3</VsixType>` aşağıdaki etiketi ekleyin.
 
 > [!NOTE]
-> Bunu etiketinin altına eklemeniz önerilir `<OutputType></OutputType>` .
+> Bunu etiketinin altına eklemeniz `<OutputType></OutputType>` önerilir.
 
-### <a name="3-add-the-debugging-properties"></a>3. hata ayıklama özelliklerini ekleyin
+### <a name="3-add-the-debugging-properties"></a>3. Hata ayıklama özelliklerini ekleme
 
 * Aşağıdaki özellik grubunu ekleyin:
 
@@ -155,7 +155,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 </PropertyGroup>
 ```
 
-* Aşağıdaki kod örneğinin tüm örneklerini *. csproj* dosyasından ve *. csproj. User* dosyalarından silin:
+* Aşağıdaki kod örneğinin tüm örneklerini *.csproj dosyasından* ve *.csproj.user dosyalarından* silin:
 
 ```xml
 <StartAction>Program</StartAction>
@@ -163,9 +163,9 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <StartArguments>/rootsuffix Exp</StartArguments>
 ```
 
-### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. derleme araçları içeri aktarmaları için koşullar ekleyin
+### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. Derleme araçları içeri aktarmalara koşullar ekleme
 
-* `<import>`Microsoft. VSSDK. BuildTools başvurusuna sahip olan etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' != '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
+* `<import>`Microsoft.VSSDK.BuildTools başvurusu olan etiketlere ek koşullu deyimler ekleyin. Koşul `'$(VisualStudioVersion)' != '14.0' And` deyiminin önüne ekleme. Bu deyimler csproj dosyasının üst bilgisinde ve alt bilgisinde görünür.
 
 Örnek:
 
@@ -173,7 +173,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
-* `<import>`Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' == '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
+* `<import>`Microsoft.VisualStudio.Sdk.BuildTasks.14.0 olan etiketlere ek koşullu deyimler ekleyin. Koşul `'$(VisualStudioVersion)' == '14.0' And` deyiminin önüne ekleme. Bu deyimler csproj dosyasının üst bilgisinde ve alt bilgisinde görünür.
 
 Örnek:
 
@@ -181,7 +181,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
 ```
 
-* `<Error>`Microsoft. VSSDK. BuildTools başvurusuna sahip olan etiketlere ek koşullu deyimler ekleyin. Bunu `'$(VisualStudioVersion)' != '14.0' And` koşul ifadesinin önüne ekleyerek yapın. Bu deyimler csproj dosyasının altbilgisinde görünür.
+* `<Error>`Microsoft.VSSDK.BuildTools başvurusu olan etiketlere ek koşullu deyimler ekleyin. Bunu yapmak için condition `'$(VisualStudioVersion)' != '14.0' And` deyiminin önüne eklersiniz. Bu deyimler csproj dosyasının alt bilgisinde görünür.
 
 Örnek:
 
@@ -189,7 +189,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
-* `<Error>`Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' == '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler csproj dosyasının altbilgisinde görünür.
+* `<Error>`Microsoft.VisualStudio.Sdk.BuildTasks.14.0 olan etiketlere ek koşullu deyimler ekleyin. Koşul `'$(VisualStudioVersion)' == '14.0' And` deyiminin önüne ekleme. Bu deyimler csproj dosyasının alt bilgisinde görünür.
 
 Örnek:
 
@@ -197,22 +197,22 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
 ```
 
-* Csproj dosyasını kaydedin ve kapatın. 
-  * Çözümde birden fazla proje kullanıyorsanız, proje bağlam menüsünde "başlangıç projesi olarak ayarla" seçeneğini kullanarak bu projeyi başlangıç projesi olarak ayarlayın. Bu, Visual Studio 'Yu kaldırdıktan sonra bu projeyi yeniden açmasını sağlar.
+* csproj dosyasını kaydedin ve kapatın. 
+  * Çözümde birden fazla proje kullanıyorsanız, proje bağlam menüsünde "Başlangıç Project Olarak Ayarla" seçeneğini kullanarak bu projeyi Başlangıç Project olarak ayarlayın). Bu, Visual Studio kaldırılan projenin yeniden açılmasını sağlar.
 
-## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2019-or-2017"></a>Visual Studio 2015 ve Visual Studio 2019 veya 2017 ' de Uzantı yüklemelerini test edin
+## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2019-or-2017"></a>Visual Studio 2015 ve 2019 veya 2017 Visual Studio yüklemelerini test etmek
 
-Bu noktada, projeniz hem Visual Studio 2015 hem de Visual Studio 2017 üzerine yükleyebileceğiniz bir Vsıxv3 oluşturmaya hazırlanmalıdır.
+Bu noktada projeniz hem 2015 hem de 2017'de Visual Studio VSIXv3 Visual Studio hazır olur.
 
-* Projenizi Visual Studio 2015 ' de açın.
-* Projenizi derleyin ve bir VSıX 'in doğru bir şekilde derlemelerin çıktıda onaylayın.
+* Projenizi 2015 Visual Studio açın.
+* Projenizi derleme ve çıkışta VSIX'in doğru şekilde derlemesini onaylayın.
 * Proje dizininize gidin.
-* *\Bin\debug* klasörünü açın.
-* VSıX dosyasına çift tıklayın ve uzantınızı Visual Studio 2015 ve Visual Studio 2019/2017 ' ye yükler.
-* Uzantıyı, yüklü bölümünde yer alan **Araçlar**  >  **Uzantılar ve güncelleştirmeler** ' de görediğinizden emin  olun.
-* Çalıştığını denetlemek için uzantıyı çalıştırmayı/kullanmayı deneyin.
+* *\bin\Debug klasörünü* açın.
+* VSIX dosyasına çift tıklayın ve uzantınızı Visual Studio 2015 ve 2019/2017 Visual Studio yükleyin.
+* Uzantıyı Yüklü bölümündeki Araçlar Uzantıları  >  **ve Güncelleştirmeler bölümünde gördüğünüzden** **emin** olun.
+* Çalıştığını kontrol etmek için uzantıyı çalıştırmayı/kullanmayı deneme.
 
-![VSıX bulma](media/finding-a-VSIX-example.png)
+![VSIX bulma](media/finding-a-VSIX-example.png)
 
 > [!NOTE]
-> Projeniz **dosyayı açan** iletiyle yanıt vermezse, Visual Studio 'yu kapatmayı zorla, proje dizininiz ' ne gidin, gizli klasörleri gösterin ve *. vs* klasörünü silin.
+> Projeniz dosyasını açma iletisiyle yanıt **vermezse,** dosyayı kapatmaya Visual Studio, proje dizininize gidin, gizli klasörleri gösterir ve *.vs klasörünü* silin.

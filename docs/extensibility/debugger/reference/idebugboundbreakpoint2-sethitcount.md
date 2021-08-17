@@ -12,17 +12,18 @@ ms.assetid: 8145d875-26b1-4049-a2a2-e7d3d7f4735f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 63284fea43c283ad291e0207946fe6f5d36f5a4d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e2958c9ef57405f0e1a3cf5312c51a31bc24e4641190cb905b5c3007499e86b4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095777"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390326"
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
 Bağlantılı kesme noktası için isabet sayısını ayarlar.

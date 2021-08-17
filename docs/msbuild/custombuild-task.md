@@ -1,6 +1,6 @@
 ---
-title: CustomBuild görevi | Microsoft Docs
-description: Bu makalede, C++ derleme işlemini özelleştirmeyi desteklemek için MSBuild tarafından kullanılan MSBuild CustomBuild görevi açıklanır.
+title: CustomBuild Görev | Microsoft Docs
+description: Bu makalede, MSBuild C++ derleme işlemini özelleştirmeyi desteklemek için MSBuild custombuild görevi açıklanmıştır.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
@@ -19,26 +19,26 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 640c1e6ae286b45f8700709829140093452a9491
-ms.sourcegitcommit: bd9417123c6ef67aa2215307ba5eeec511e43e02
+ms.openlocfilehash: 03c8c41aa50651354a490f31f4bfe71e2dae7cdef4d066fd8d45edb8e742e757
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92796556"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397949"
 ---
 # <a name="custombuild-task"></a>CustomBuild görevi
 
-Microsoft C++ derleyici aracı 'nı sarmalayan cmd.exe. Bu sınıf, [Trackedvctooltask](../msbuild/trackedvctooltask-base-class.md)'dan türetilir, ancak dosya bağımlılıklarını saptamak için dosya izlemeyi kullanmaz. Artımlı derleme düzgün şekilde çalışması için tüm bağımlılıklar doğrudan bir AdditionalDependencies olarak belirtilmelidir.
+Microsoft C++ derleyici aracını sarmalar ve cmd.exe. Bu sınıf [TrackedVCToolTask'tan](../msbuild/trackedvctooltask-base-class.md)türetilen, ancak dosya bağımlılıklarını bulmak için dosya izleme kullanmaz. Artımlı derlemenin düzgün çalışması için tüm bağımlılıklar açıkça AdditionalDependencies olarak belirtilmelidir.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda, **CustomBuild** görevinin parametreleri açıklanmaktadır.
+Aşağıdaki tabloda CustomBuild görevinin **parametreleri açık** almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**BuildSuffix**|İsteğe bağlı **dize** parametresi.|
-|**Ğına**|Gerekli **ıtaskitem []** parametresi.|
-|**TrackerLogDirectory**|İsteğe bağlı **dize** parametresi.|
+|**BuildSuffix**|İsteğe **bağlı dize** parametresi.|
+|**Kaynaklar**|Gerekli **ITaskItem[]** parametresi.|
+|**TrackerLogDirectory**|İsteğe **bağlı dize** parametresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

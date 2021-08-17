@@ -11,14 +11,15 @@ ms.assetid: 0aa97951-f7e1-4fa5-a87f-2920460c122d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 07254544c4f86bae494e16f5fa1914b7dee345c0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 09421e68e727378be4a9bce20652b9aab9e5706544f84c103967192b59a9061b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161025"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420752"
 ---
 # <a name="idiasymbolget_customcallingconvention"></a>IDiaSymbol::get_customCallingConvention
 İşlevin özel bir çağırma kuralına sahip olup olmadığını belirten bir bayrak alır.

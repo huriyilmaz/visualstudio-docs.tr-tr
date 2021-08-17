@@ -1,6 +1,6 @@
 ---
 description: Bir dize nesnesi oluşturur.
-title: 'IDebugFunctionObject:: CreateStringObject | Microsoft Docs'
+title: IDebugFunctionObject::CreateStringObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: fd6070ab-07d4-4ea1-8d71-b16592d6f1a7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 15ad52d990492d7f78f3f8246e786dc0b037e23f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bde58276a04508f3e402a813a1b3414c3f06617868e0e8dc6670f0abfd357cea
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072903"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402746"
 ---
 # <a name="idebugfunctionobjectcreatestringobject"></a>IDebugFunctionObject::CreateStringObject
 Bir dize nesnesi oluşturur.
@@ -44,16 +45,16 @@ int CreateStringObject(
 
 ## <a name="parameters"></a>Parametreler
 `pcstrString`\
-'ndaki Dize nesnesi için dize değeri.
+[in] Dize nesnesinin dize değeri.
 
 `ppObject`\
-dışı Yeni oluşturulan dize nesnesini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi döndürür.
+[out] Yeni oluşturulan dize nesnesini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimi tarafından temsil edilen işlevin parametresi olan bir dizeyi temsil eden bir nesne oluşturmak için bu yöntemi çağırın.
+ [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimi tarafından temsil edilen işleve parametre olan bir dizeyi temsil eden bir nesne oluşturmak için bu yöntemi çağırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

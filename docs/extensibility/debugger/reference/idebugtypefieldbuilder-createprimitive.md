@@ -10,17 +10,18 @@ ms.assetid: 512c6ff0-97c5-409f-939f-4cc969bc4bb9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 60c095080770837b8afe50898cd570894a1130ed
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8190d3dea262b3d8dd7fb003eb615cf7c0c24af823e1bf3b615a94c9910a9fbe
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083563"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402018"
 ---
 # <a name="idebugtypefieldbuildercreateprimitive"></a>IDebugTypeFieldBuilder::CreatePrimitive
 Temel bir türü temsil eden bir nesne oluşturur.

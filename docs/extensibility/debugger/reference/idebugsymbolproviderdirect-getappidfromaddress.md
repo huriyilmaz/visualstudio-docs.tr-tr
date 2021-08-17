@@ -10,17 +10,18 @@ ms.assetid: d76a0f36-79c4-4c58-9db3-880b00d11610
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0e93a24eaea8f74ac839b7a240ab7a95aaf3f4ee
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cc1b4db3588489fb4fc32846c655f732fb70b7b6d16d84fe4da8e35e517503c6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071122"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402200"
 ---
 # <a name="idebugsymbolproviderdirectgetappidfromaddress"></a>IDebugSymbolProviderDirect::GetAppIDFromAddress
 Hata ayıklama adresi verilen uygulama etki alanı tanımlayıcısını alır.

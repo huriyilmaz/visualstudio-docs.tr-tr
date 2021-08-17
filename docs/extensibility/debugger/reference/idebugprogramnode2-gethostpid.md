@@ -11,17 +11,18 @@ ms.assetid: e65b4b15-46d8-4ca7-9456-2b4c078f7cf9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4e3fa384bc22c864f6438fb3c54e044d9fff7368
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 710c148f3fa45c08d103653f0da29124a23c6b7b4f93d1aa5816ef86d336e04a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087255"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402655"
 ---
 # <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
 Programı barındıran işlem için sistem işlem tanımlayıcısını alır.

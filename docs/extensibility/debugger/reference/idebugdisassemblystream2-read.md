@@ -1,6 +1,6 @@
 ---
-description: Ayrıştırılmış birleştirme akışındaki geçerli konumdan başlayan yönergeleri okur.
-title: 'IDebugDisassemblyStream2:: Read | Microsoft Docs'
+description: Ayrık akışta geçerli konumdan başlayarak yönergeleri okur.
+title: IDebugDisassemblyStream2::Read | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 7db5f6bb-73ee-45bc-b187-c1b6aa2dfdd5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bcabd0cc42f013b579ee32deeb33d68cd9d45f5d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: baa00f49844a4cdfa05905610f3e2ff6e6f6c4a1af7f124be5d55eb036606edc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066925"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402850"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
-Ayrıştırılmış birleştirme akışındaki geçerli konumdan başlayan yönergeleri okur.
+Ayrık akışta geçerli konumdan başlayarak yönergeleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,26 +49,26 @@ int Read(
 
 ## <a name="parameters"></a>Parametreler
 `dwInstructions`\
-'ndaki ' İ çözeceği yönergelerin sayısı. Bu değer aynı zamanda dizinin uzunluk üst sınırıdır `prgDisassembly` .
+[in] Parçalara ayırabilecek yönergelerin sayısı. Bu değer aynı zamanda dizinin maksimum uzunluğu `prgDisassembly` dadır.
 
 `dwFields`\
-'ndaki [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) Numaralandırmadaki, doldurulacak alanları gösteren bayrakların birleşimi `prgDisassembly` .
+[in] Hangi alanların doldurulması [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) bayrakların bir birleşimi. `prgDisassembly`
 
 `pdwInstructionsRead`\
-dışı Aslında ayrıştırılmış yönergelerin sayısını döndürür.
+[out] Aslında biriktirildi yönergelerin sayısını döndürür.
 
 `prgDisassembly`\
-dışı Ayrıştırılmış bir yönerge başına bir yapı olan, ayrıştırılmış kodla doldurulmuş, ayrıştırılmış bir [veri](../../../extensibility/debugger/reference/disassemblydata.md) yapıları dizisi. Bu dizinin uzunluğu parametresi tarafından dikte edilir `dwInstructions` .
+[out] Bir dizi [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısı, her bir ayrık yönerge için bir yapı olan, bir kod olarak doldurulan bir kod. Bu dizinin uzunluğu parametresi tarafından `dwInstructions` dikte edildi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Geçerli kapsamda kullanılabilir olan en fazla yönerge sayısı [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) metodu çağırarak elde edilebilir.
+ Geçerli kapsamda kullanılabilen en fazla yönergelerin sayısı [GetSize yöntemi çağrılarak elde](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) edilir.
 
- Next yönergesinin okunduğu geçerli konum, [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) yöntemi çağırarak değiştirilebilir.
+ Sonraki yönergenin okunma [konumu, Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) yöntemi çağrılarak değiştirilebilir.
 
- `DSF_OPERANDS_SYMBOLS`Bayrak, `DSF_OPERANDS` `dwFields` yönergeleri oluştururken sembol adlarının kullanılması gerektiğini göstermek için parametresindeki bayrağa eklenebilir.
+ Yönergelerin biriktirirken sembol adlarının kullan gerektiğini belirtmek için parametresinde `DSF_OPERANDS_SYMBOLS` `DSF_OPERANDS` `dwFields` bayrağına bayrağı eklenebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

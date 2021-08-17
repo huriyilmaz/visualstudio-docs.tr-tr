@@ -20,19 +20,20 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 830ecea036ee972321d98994ab36924e0c61a09b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ce9a1bda7f828a71fe6128d034d7a81dbb5e678541c3ebac06b3f3214259fec
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954273"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424144"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>Nasıl yapılır: Backstage görünümüne denetimler ekleme
   **Dosya** sekmesine tıkladığınızda açılan menüye denetim eklemek Için şerit tasarımcısını kullanabilirsiniz. Uygulamayı çalıştırdığınızda, **Dosya** sekmesine eklediğiniz denetimler, **Eklentiler** adlı bir grup görünür.
 
- Visual Studio 'daki şerit tasarımcısını kullanarak yerleşik denetimlerden önce veya sonra Denetim konumlandırabilirsiniz. Yerleşik denetim, Backstage görünümünde zaten görüntülenen bir denetimdir. Denetimleri yerleşik denetimlerden önce veya sonra konumlandırmak istiyorsanız, Şerit XML kullanmanız gerekir. **Şerit (XML)** hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md). Backstage görünümünü özelleştirme hakkında daha fazla bilgi için bkz. [geliştiriciler Için office 2010 Backstage görünümüne giriş](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) ve [geliştiriciler Için Office 2010 Backstage görünümünü özelleştirme](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
+ Visual Studio içindeki şerit tasarımcısını kullanarak, yerleşik denetimlerden önce veya sonra Denetim konumlandırabilirsiniz. Yerleşik denetim, Backstage görünümünde zaten görüntülenen bir denetimdir. Denetimleri yerleşik denetimlerden önce veya sonra konumlandırmak istiyorsanız, Şerit XML kullanmanız gerekir. **Şerit (XML)** hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md). Backstage görünümünü özelleştirme hakkında daha fazla bilgi için bkz. [geliştiriciler için Office 2010 backstage görünümüne giriş](/previous-versions/office/developer/office-2010/ee691833(v=office.14)) ve [geliştiriciler için Office 2010 backstage görünümünü özelleştirme](/previous-versions/office/developer/office-2010/ee815851(v=office.14)).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -46,7 +47,7 @@ ms.locfileid: "99954273"
 
      Bir menü Tasarımcısı görüntülenir. Bu tasarım yüzeyi herhangi bir denetim içermiyor.
 
-3. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden, aşağıdaki denetimlerden herhangi birini menü tasarımcısına sürükleyin:
+3. **araç kutusunun** **Office şerit denetimleri** sekmesinden, aşağıdaki denetimlerden herhangi birini menü tasarımcısına sürükleyin:
 
     - Düğme
 

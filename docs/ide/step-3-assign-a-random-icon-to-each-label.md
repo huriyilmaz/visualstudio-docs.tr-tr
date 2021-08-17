@@ -4,8 +4,6 @@ description: Simgelerin her oyunda aynı hücrelerde gösterilmemesi için her e
 ms.custom: SEO-VS-2020
 ms.date: 03/21/2020
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
@@ -13,14 +11,15 @@ ms.assetid: 0ba5ed7a-9aaa-41f4-95d2-e3c2d567bc79
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 282f9ecc7b4f1f083eebe21c93a5bcc5c8fcc8d0
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 7ddf631848532c86f023d08d03864ea17c4824a29c8ad60aaa9c9e912d69b94c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296462"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121399521"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>3. Adım: Her etikete rastgele bir simge atama
 
@@ -55,9 +54,9 @@ Simgeler her oyunda aynı hücrelerde gösterilirse, oyun pek de zorlu olmaz. Bu
 
      İlk satır, **Denetim** değişkenini **iconLabel** adlı bir etikete dönüştürür. Bundan sonraki satır, `if` dönüştürmenin çalıştığından emin olmak için denetleyen bir ifadedir. Dönüştürme işe alıyorsa, `if` deyimindeki deyimler çalışır. (Önceki öğreticilerden hatırlayabileceğiniz gibi, `if` ifade belirttiğiniz koşulu değerlendirmek için kullanılır.) Deyimdeki ilk satır, `if` simgeler listesindeki öğelerden birine karşılık gelen rastgele bir sayı Içeren **rasgelenumber** adlı bir değişken oluşturur. Bunu yapmak için, <xref:System.Random.Next> <xref:System.Random> daha önce oluşturduğunuz nesnenin yöntemini kullanır. `Next`Yöntemi rastgele sayı döndürür. Bu satır, <xref:System.Collections.Generic.List%601.Count> rastgele sayının seçim aralığını belirlemek için **simgeler** listesinin özelliğini de kullanır. Sonraki satır, simge listesi öğelerinden birini <xref:System.Windows.Forms.Label.Text> etiketin özelliğine atar. Derleme dışı bırakılan satır bu konunun sonunda açıklanmaktadır. Son olarak, deyimindeki son satır, `if` forma eklenmiş olan simgeyi listeden kaldırır.
 
-     Kodun belirli bir bölümünün ne işe yaradığından emin olamadığınızda, fare işaretçisini kod öğesinin üzerine getirip ortaya çıkan araç ipucunu gözden geçirebileceğinizi unutmayın. Ayrıca, Visual Studio hata ayıklayıcısını kullanarak, program çalışırken kodun her satırını adım adım geçebilirsiniz. Bkz. [nasıl yaparım?: Visual Studio 'daki hata ayıklayıcıyla adımla mı?](https://msdn.microsoft.com/vstudio/ee672313.aspx) veya daha fazla bilgi için [hata ayıklayıcıyla birlikte kod içine gidin](../debugger/navigating-through-code-with-the-debugger.md) .
+     Kodun belirli bir bölümünün ne işe yaradığından emin olamadığınızda, fare işaretçisini kod öğesinin üzerine getirip ortaya çıkan araç ipucunu gözden geçirebileceğinizi unutmayın. Ayrıca, Visual Studio hata ayıklayıcısını kullanarak, program çalışırken kodun her satırını adım adım geçebilirsiniz. [Nasıl yaparım?: Visual Studio hata ayıklayıcıyla adımla](https://msdn.microsoft.com/vstudio/ee672313.aspx) veya daha fazla bilgi için [hata ayıklayıcıyla kod içinde gezinin](../debugger/navigating-through-code-with-the-debugger.md) .
 
-3. Oyun panosunu simgelerle doldurmanız için `AssignIconsToSquares()` Program başlatıldıktan hemen sonra yöntemi çağırmanız gerekir. C# kullanıyorsanız, Form1 oluşturucusunda yöntemine yapılan çağrının hemen altına bir ifade ekleyin `InitializeComponent()` , böylece formunuz görüntülenmeden önce  kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. Daha fazla bilgi için bkz. [oluşturucular (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya Visual Basic [oluşturucular ve Yıkıcılar kullanın](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\)) .
+3. Oyun panosunu simgelerle doldurmanız için `AssignIconsToSquares()` Program başlatıldıktan hemen sonra yöntemi çağırmanız gerekir. C# kullanıyorsanız, Form1 oluşturucusunda yöntemine yapılan çağrının hemen altına bir ifade ekleyin `InitializeComponent()` , böylece formunuz görüntülenmeden önce  kendisini ayarlamak için yeni yönteminizi çağırır. Oluşturucular, sınıf veya yapı gibi yeni bir nesne oluşturduğunuzda çağrılır. daha fazla bilgi için bkz. [oluşturucular (C# programlama kılavuzu)](/dotnet/csharp/programming-guide/classes-and-structs/constructors) veya Visual Basic [oluşturucular ve yıkıcılar kullanın](/previous-versions/visualstudio/visual-studio-2008/2z08e49e\(v\=vs.90\)) .
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step2_3_4/cs/form1.cs" id="Snippet13":::
 

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma'
-description: Kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmesini engellemek için Microsoft Excel 'de koruma özelliğini nasıl kullanabileceğinizi öğrenin.
+description: kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmesini engellemek için Microsoft Excel koruma özelliğini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,24 +15,25 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 31c0184cbf8f29db6d33d135cf295f8277b55f2e
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 154742672786e5aa32ebfe4a5516c658cdc483556d745d6b06e367c57b20123d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827109"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394400"
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma
-  Microsoft Office Excel 'deki koruma özelliği, kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmelerini önlemeye yardımcı olur. Varsayılan olarak, korumayı etkinleştirdikten sonra tüm hücreler kilitlenir.
+  Microsoft Office Excel koruma özelliği, kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmelerini önlemeye yardımcı olur. Varsayılan olarak, korumayı etkinleştirdikten sonra tüm hücreler kilitlenir.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Belge düzeyi özelleştirmelerinde Excel tasarımcısını kullanarak çalışma sayfalarını koruyabilirsiniz. Ayrıca, bir çalışma sayfasını herhangi bir proje türünde çalışma zamanında programlı bir şekilde koruyabilirsiniz.
+ belge düzeyi özelleştirmelerinde Excel tasarımcısını kullanarak çalışma sayfalarını koruyabilirsiniz. Ayrıca, bir çalışma sayfasını herhangi bir proje türünde çalışma zamanında programlı bir şekilde koruyabilirsiniz.
 
 > [!NOTE]
-> Korunan çalışma sayfasının bölümlerine Windows Forms denetimleri ekleyemezsiniz.
+> korunan çalışma sayfasının bölümlerine Windows Forms denetimleri ekleyemezsiniz.
 
 ## <a name="use-the-designer"></a>Tasarımcıyı kullanma
 
@@ -74,5 +75,5 @@ ms.locfileid: "107827109"
 - [Nasıl yapılır: program aracılığıyla çalışma sayfalarını gizleme](../vsto/how-to-programmatically-hide-worksheets.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md)
-- [Office Projelerindeki Nesnelere Genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
+- [Office projelerindeki nesnelere genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

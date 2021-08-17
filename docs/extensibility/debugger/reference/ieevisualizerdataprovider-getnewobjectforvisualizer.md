@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, Görselleştirici için yeni bir nesne alır.
-title: 'IEEVisualizerDataProvider:: GetNewObjectForVisualizer | Microsoft Docs'
+description: Bu yöntem görselleştirici için yeni bir nesnesi alır.
+title: IEEVisualizerDataProvider::GetNewObjectForVisualizer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: a898d549-4898-4fde-aad1-e8bb89129652
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: af26455e37d0ecf881cd0bed898e1997f00a82ea
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e073afadb97d4b0f33e70d2ffce86f10828360d2581728e277d7723e843b17c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083355"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401992"
 ---
 # <a name="ieevisualizerdataprovidergetnewobjectforvisualizer"></a>IEEVisualizerDataProvider::GetNewObjectForVisualizer
-Bu yöntem, Görselleştirici için yeni bir nesne alır. Bu yöntem, var olan nesneden her zaman yeni bir nesne oluşturur.
+Bu yöntem görselleştirici için yeni bir nesnesi alır. Bu yöntem her zaman mevcut nesneden yeni bir nesne oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetNewObjectForVisualizer(
 
 ## <a name="parameters"></a>Parametreler
 `ppObject`\
-dışı Yeni nesne.
+[out] Yeni nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `This method` Şu anda temsil eden nesneyi yeniden değerlendirir ve sonucu yeni bir nesne olarak döndürür. Mevcut nesne, değerlendirmenin bir sonucu olarak güncelleştirilecektir.
+ `This method` şu anda temsil ettiği nesneyi yeniden değerlendirir ve sonucu yeni bir nesne olarak döndürür. Değerlendirme sonucunda mevcut nesne güncelleştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

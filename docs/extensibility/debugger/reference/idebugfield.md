@@ -11,14 +11,15 @@ ms.assetid: adecdd1c-b1b9-4027-92da-74cbe910636f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: c519ccfe70ba5685dec8230bf3e4fcb0eb768921
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 24997c7dd1337c711f767a4af3e3dda454bb8459034801706abd68d006475c5d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073683"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121389819"
 ---
 # <a name="idebugfield"></a>IDebugField
 Bu arabirim bir alanı, diğer bir deyişle, bir simgenin veya türün açıklamasını temsil eder.

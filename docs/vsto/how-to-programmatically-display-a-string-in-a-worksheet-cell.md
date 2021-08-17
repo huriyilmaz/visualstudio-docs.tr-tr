@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfası hücresinde program aracılığıyla bir dizeyi görüntüleme'
-description: Bir Microsoft Excel çalışma sayfası hücresinde NamedRange denetimi veya yerel bir Excel Aralık nesnesi kullanarak bir dizeyi programlı bir şekilde görüntülemeyi öğrenin.
+description: NamedRange denetimi veya yerel bir Excel range nesnesi kullanarak Microsoft Excel çalışma sayfası hücresinde program aracılığıyla bir dizeyi nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 8a7bc48df6e30381ff275b9f11dabe04a25d6dd7
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 4e6e7b1159101319d41e86b8bc4a81c70c8e2035872166a2f739e31dde64268c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825933"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423871"
 ---
 # <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>Nasıl yapılır: çalışma sayfası hücresinde program aracılığıyla bir dizeyi görüntüleme
-  Bu örnek, bir hücredeki metnin programlı olarak nasıl görüntüleneceğini gösterir. Hücrede metin göstermek için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim veya yerel Excel Aralık nesnesi kullanın.
+  Bu örnek, bir hücredeki metnin programlı olarak nasıl görüntüleneceğini gösterir. hücrede metin göstermek için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim ya da yerel Excel range nesnesi kullanın.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -38,10 +39,10 @@ ms.locfileid: "107825933"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet68":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet68":::
 
-## <a name="use-a-native-excel-range"></a>Yerel bir Excel aralığı kullan
+## <a name="use-a-native-excel-range"></a>yerel Excel aralığı kullan
  Aşağıdaki kod, programlı olarak yeni bir Aralık oluşturur ve buna bir değer atar.
 
-### <a name="to-display-text-in-an-excel-range"></a>Excel aralığında metin göstermek için
+### <a name="to-display-text-in-an-excel-range"></a>Excel aralıkta metin görüntüleme
 
 1. **A1** hücresindeki aralığı alın `Sheet1` ve değeri **Merhaba Dünya** olarak ayarlayın.
 
@@ -49,8 +50,8 @@ ms.locfileid: "107825933"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet69":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Windows formu kullanarak veri toplama](../vsto/walkthrough-collecting-data-using-a-windows-form.md)
+- [izlenecek yol: Windows formu kullanarak veri toplama](../vsto/walkthrough-collecting-data-using-a-windows-form.md)
 - [Office çözümlerinde sorun giderme](../vsto/troubleshooting-office-solutions.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Office Projelerindeki Nesnelere Genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
+- [Office projelerindeki nesnelere genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

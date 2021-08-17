@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda bölüm katkılarını alır.
-title: 'IDiaEnumSectionContribs:: Next | Microsoft Docs'
+description: Numaralama dizisinde belirtilen sayıda bölüm katkısını alma.
+title: IDiaEnumSectionContribs::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: a6bb2adb-ee6d-4f3c-ab5b-e89361c8880e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d6e33d1c56b1dd2501af2a84af8fbeef5a2831e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 66771f984a5ba0ed7e6061dc133768e7fbd959a7c273cd273bb299a424900063
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159323"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392483"
 ---
 # <a name="idiaenumsectioncontribsnext"></a>IDiaEnumSectionContribs::Next
-Sabit Listesi dizisinde belirtilen sayıda bölüm katkılarını alır.
+Numaralama dizisinde belirtilen sayıda bölüm katkısını alma.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ HRESULT Next(
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Alınacak numaralandırıcıdaki bölüm katkılarının sayısı.
+[in] Numaralayıcıda alınan bölüm katkılarının sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen bölüm katkılarını temsil eden [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesneleriyle doldurulacak bir dizi.
+[out] İstenen bölüm katkılarını temsil eden [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesneleriyle doldurulması gereken bir dizi.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Alınan Numaralandırıcı içindeki bölüm katkılarının sayısını döndürür.
+[out] Numaralayıcıda alınan bölüm katkılarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Başka bölüm katkıları yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` bölüm katkısı yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

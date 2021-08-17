@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a740a6f7a4c532a61a5e412c94fa4321c5da707
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 65c068df87a47ce956f35c9bbc41893d77f001faeae6a1ce34d232a937ea1a7a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385766"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121398222"
 ---
 # <a name="security-of-text-templates"></a>Metin Şablonlarının Güvenliği
 Metin şablonlarının güvenlikle ilgili sorunları vardır:

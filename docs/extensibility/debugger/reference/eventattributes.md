@@ -11,17 +11,18 @@ ms.assetid: 04db10f7-df31-4464-98e8-b3777428179e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 922c60c0bb36c58b88c2422580eeda0db1c02d42
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 043251ad59cc61cd250aa0213bbda8bf7d4e1fc16d5e839d15698ff6911c5ba2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059489"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390313"
 ---
 # <a name="eventattributes"></a>EVENTATTRIBUTES
 Olay özniteliklerini belirtir.

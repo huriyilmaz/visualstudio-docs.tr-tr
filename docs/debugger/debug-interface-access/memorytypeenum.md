@@ -1,5 +1,5 @@
 ---
-description: Erişmek için bellek türünü belirtir.
+description: Erişilen bellek türünü belirtir.
 title: MemoryTypeEnum | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 8778c047-edeb-4495-8f9f-3f8bbb297099
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 557991a66f7e70dedcd7dad2a05d7e25fd0cd6b2
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 891af8c8f6196fcafa8f623fa0fd81c44548b81c9a3294001312c2a7c6e341d1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155371"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420377"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
-Erişmek için bellek türünü belirtir.
+Erişilen bellek türünü belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,19 +36,19 @@ enum MemoryTypeEnum {
 ```
 
 #### <a name="parameters"></a>Parametreler
-`MemTypeCode` Yalnızca kod belleğine erişir.
+`MemTypeCode` Yalnızca kod belleğine erişer.
 
-`MemTypeData` Verilere veya yığın belleğine erişir.
+`MemTypeData` Verilere veya yığın belleğine erişer.
 
-`MemTypeStack` Yalnızca yığın belleğine erişir.
+`MemTypeStack` Yalnızca yığın belleğine erişer.
 
-`MemTypeAny` Her türlü belleğe erişir.
+`MemTypeAny` Her türlü belleğe erişer.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu Numaralandırmadaki değerler, farklı bellek türlerine erişimi sınırlandırmak için [IDiaStackWalkHelper:: readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) yöntemine geçirilir.
+Bu numaralamada yer alan değerler, farklı bellek türlerine erişimi sınırlamak için [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) yöntemine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst. h
+Üst bilgi: cvconst.h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

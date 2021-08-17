@@ -1,6 +1,6 @@
 ---
-description: Uzak makine adı 'nda SQL Server ile bağlantı kurulamıyor.
-title: Uzak makinedeki SQL Server bağlantı kurulamıyor | Microsoft Docs
+description: Uzak makine adı* SQL Server bağlantı kuramıyor.
+title: Uzak makine SQL Server bağlantı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -14,21 +14,22 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b42519b2d33a7322a7f704643fbad4fd22f70d00
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8993e3858d95423787b05f1933a68a279f6d4363f9bc149cabe539358e9a0c84
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146475"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419864"
 ---
 # <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>Hata: Uzak makinede SQL Server'a bağlanılamıyor
-Uzak makine *adında* SQL Server ile bağlantı kurulamıyor. Erişim reddedildi. Uzak makinede uzaktan hata ayıklayıcıyı yüklediğinizi doğrulayın. Uzak makine etki alanında değilse veya Visual Studio yerel hesap olarak çalışıyorsa, uzak makinenin yerel hesapla aynı Kullanıcı adı ve parolaya sahip bir hesabı olması gerekir.
+Uzak makine SQL Server bağlantı *kuramıyor.* Erişim reddedildi. Uzak makineye uzaktan hata ayıklayıcısını yüklemiş olduğunu doğrulayın. Uzak makine bir etki alanında yoksa veya yerel Visual Studio olarak çalışıyorsa, uzak makinenin yerel hesapla aynı kullanıcı adı ve parolası olan bir hesabı olmalıdır.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
+- Bkz. [Uzaktan Hata Ayıklama.](../debugger/remote-debugging.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SQL hatalarını ayıklama](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))
+- [Hata ayıklama SQL](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))

@@ -1,6 +1,6 @@
 ---
-title: Özel bir belgeyi kaydetme | Microsoft Docs
-description: Visual Studio IDE 'ye eklediğiniz proje türü için özel bir belge için gerçekleşen işlem hakkında bilgi edinin.
+title: Özel Belge Kaydetme | Microsoft Docs
+description: IDE'ye ek olarak proje türü için özel bir belge için oluşan işlem hakkında Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,36 +12,37 @@ ms.assetid: 040b36d6-1f0a-4579-971c-40fbb46ade1d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a536a5f0f2b1cac09c65079974c661e09e9139ab
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ae3e4fd732b4a0a296701b137fa158eb5926162b11f1cdaf8988c2f4ed3a10bb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080924"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121401250"
 ---
 # <a name="saving-a-custom-document"></a>Özel Belge Kaydetme
-Ortam **Kaydet**, **farklı kaydet** ve **Tümünü Kaydet** komutlarını işler. Kullanıcı **Kaydet**, **farklı kaydet** veya **Dosya** menüsünde **Tümünü** Kaydet ' i tıklattığında ya da çözümü kapatsa da, Tümünü Kaydet ' i tıklattığınızda aşağıdaki işlem gerçekleşir.
+Ortam Save , **Save** **As** ve Save **All komutlarını** işlemektedir. Kullanıcı Dosya menüsünde **Kaydet,** **Farklı** **Kaydet** veya  Hepsini Kaydet'e tıkladığında ya da çözümü kapatarak Hepsini Kaydet'e tıkladığında, aşağıdaki işlem gerçekleşir.
 
- ![Müşteri Düzenleyicisini kaydet](../../extensibility/internals/media/private.gif "Özel") Özel bir düzenleyici için Kaydet, farklı Kaydet ve tüm komut işlemesini Kaydet
+ ![Müşteri Düzenleyicisi Kaydetme](../../extensibility/internals/media/private.gif "Özel") Özel bir düzenleyici için Kaydet, Farklı Kaydet ve Tüm komut işlemeyi kaydet
 
- Bu işlem aşağıdaki adımlarda ayrıntılı olarak verilmiştir:
+ Bu işlem aşağıdaki adımlarda ayrıntılı olarak açıktır:
 
-1. Farklı **Kaydet** ve **Kaydet** komutları için, ortam, <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> etkin belge penceresini ve bu nedenle hangi öğelerin kaydedilmesi gerektiğini belirlemek için hizmetini kullanır. Etkin belge penceresi bilindiğinde ortam, çalışan belge tablosundaki belge için hiyerarşi işaretçisini ve öğe tanımlayıcısını (ItemId) bulur. Daha fazla bilgi için bkz. [çalışma belge tablosu](../../extensibility/internals/running-document-table.md).
+1. Farklı **Kaydet** ve **Kaydet komutları** için ortam, etkin belge penceresini ve bu nedenle hangi öğelerin kaydedilebilir olduğunu belirlemek üzere <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> hizmeti kullanır. Etkin belge penceresi bilindiği zaman ortam, çalışan belge tablosunda belgenin hiyerarşi işaretçisini ve öğe tanımlayıcısını (itemID) bulur. Daha fazla bilgi için [bkz. Belge Tablosu Çalıştırma.](../../extensibility/internals/running-document-table.md)
 
-     Tümünü Kaydet komutu için, ortam, kaydedilecek tüm öğelerin listesini derlemek için çalışan belge tablosundaki bilgileri kullanır.
+     Tüm Öğeleri Kaydet komutu için ortam, kaydedilen tüm öğelerin listesini derlemek için çalışan belge tablosunda yer alan bilgileri kullanır.
 
-2. Çözüm bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> çağrı aldığında, seçilen öğeler kümesi (yani, hizmet tarafından sunulan çoklu seçimler) boyunca yinelenir <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> .
+2. Çözüm bir çağrı aldığında, seçilen öğe kümesinde (yani hizmet tarafından ortaya çıkarıla birden çok <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> seçim) aynı şekilde <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> devam eder.
 
-3. Seçimdeki her öğe için çözüm, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> Kaydet menü komutunun etkinleştirilmesi gerekip gerekmediğini belirleme yöntemini çağırmak için hiyerarşi işaretçisini kullanır. Bir veya daha fazla öğe kirli olursa Kaydet komutu etkinleştirilir. Hiyerarşi standart bir düzenleyici kullanıyorsa, hiyerarşi, metodu çağırarak, bu durumda, durumu düzenleyicide kirli durum için sorgulama temsilcileri <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> .
+3. Seçimde yer alan her öğede çözüm, Kaydet menü komutunun etkin olup olmadığını belirlemek üzere <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> yöntemini çağıran hiyerarşi işaretçisini kullanır. Bir veya daha fazla öğe kirli ise Kaydet komutu etkinleştirilir. Hiyerarşi standart bir düzenleyici kullanıyorsa, hiyerarşi yöntemini çağırarak kirli durum sorgulamayı düzenleyiciye <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> devreder.
 
-4. Kirli olan her seçili öğe için, çözüm uygun hiyerarşilerde yöntemi çağırmak için hiyerarşi işaretçisini kullanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> .
+4. Kirli olan her seçili öğede çözüm, uygun hiyerarşilerde yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.SaveItem%2A> çağıran hiyerarşi işaretçisini kullanır.
 
-     Özel bir düzenleyici söz konusu olduğunda, belge verileri nesnesi ve proje arasındaki iletişim özeldir. Bu nedenle, tüm özel Kalıcılık sorunları bu iki nesne arasında işlenir.
+     Özel düzenleyicide, belge veri nesnesi ile proje arasındaki iletişim özeldir. Bu nedenle, bu iki nesne arasında özel kalıcılık sorunları ele alınan.
 
     > [!NOTE]
-    > Kendi kalıcılığını uygularsanız, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A> zaman kazanmak için yöntemini çağırdığınızdan emin olun. Bu yöntem, dosyanın kaydedilmesi güvenli olduğundan emin olmak için kontrol eder (örneğin, dosya salt okunurdur).
+    > Kendi kalıcılığınızı uygulayacaksanız, zaman kazanmak için yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A> çağırdığını emin olun. Bu yöntem, dosyayı kaydetmenin güvenli olduğundan emin olmak için denetler (örneğin, dosya salt okunur değildir).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>

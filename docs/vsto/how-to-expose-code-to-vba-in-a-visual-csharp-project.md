@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: C# projesinde kodu VBA kullanımına sunma'
-description: İki tür kodun birbirleriyle etkileşime geçmesini isterseniz, bir Visual C# projesindeki kodu Visual Basic for Applications (VBA) koduna nasıl kullanıma sunabileceğinizi öğrenin.
+description: iki tür kodun birbirleriyle etkileşime geçmesini isterseniz, bir Visual C# projesindeki kodu Visual Basic for Applications (VBA) koduna nasıl kullanıma sunabileceğinizi öğrenin.
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,19 +15,20 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 1df1eed4edec3efdbf93f4effc352b3d02656d04
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7e9c654b683c0a308fc7ead8aafeacc7b730d8720650bf0c19b7128acd2ac08f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889414"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121394712"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>Nasıl yapılır: Visual C# projesinde kodu VBA kullanımına sunma
-  İki tür kodun birbirleriyle etkileşime geçmesini isterseniz, bir Visual C# projesindeki kodu Visual Basic for Applications (VBA) kodu olarak kullanıma sunabilirsiniz.
+  iki tür kodun birbirleriyle etkileşime geçmesini isterseniz, bir Visual C# projesindeki kodu Visual Basic for Applications (VBA) kodu olarak kullanıma sunabilirsiniz.
 
- Visual C# işlemi Visual Basic işlemden farklıdır. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic projesindeki kodu VBA 'de kullanıma](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)sunma.
+ Visual C# işlemi Visual Basic işlemden farklıdır. daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic projesindeki kodu VBA 'de kullanıma](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)sunma.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
@@ -38,14 +39,14 @@ ms.locfileid: "99889414"
 
 ### <a name="to-expose-code-in-a-visual-c-project-to-vba"></a>Visual C# projesindeki kodu VBA 'da ortaya çıkarmak için
 
-1. Makroları destekleyen ve zaten VBA kodu içeren bir Word belgesini, Excel çalışma kitabını veya Excel şablonunu temel alan belge düzeyinde bir proje açın veya oluşturun.
+1. makroları destekleyen ve zaten VBA kodu içeren bir Word belgesini, Excel çalışma kitabını veya Excel şablonunu temel alan belge düzeyi bir proje açın veya oluşturun.
 
     Makroları destekleyen belge dosyası biçimleri hakkında daha fazla bilgi için bkz. [VBA ve belge düzeyi özelleştirmelerini birleştirme](../vsto/combining-vba-and-document-level-customizations.md).
 
    > [!NOTE]
    > Bu özellik Word şablon projelerinde kullanılamaz.
 
-2. Belgedeki VBA kodunun, kullanıcıdan makroları etkinleştirmesini istemeden çalışmasına izin verildiğinden emin olun. Office projesinin konumunu, Word veya Excel için Güven Merkezi ayarlarındaki güvenilir konumlar listesine ekleyerek çalıştırmak için VBA koduna güvenebilirsiniz.
+2. Belgedeki VBA kodunun, kullanıcıdan makroları etkinleştirmesini istemeden çalışmasına izin verildiğinden emin olun. Office projesinin konumunu, Word veya Excel güven merkezi ayarlarındaki güvenilir konumlar listesine ekleyerek çalıştırmak için VBA koduna güvenebilirsiniz.
 
 3. VBA 'ya göstermek istediğiniz üyeyi projenizdeki ortak bir sınıfa ekleyin ve yeni üyeyi **ortak** olarak bildirin.
 
@@ -89,22 +90,22 @@ ms.locfileid: "99889414"
    [System.Runtime.InteropServices.ComVisible(true)]
    ```
 
-9. İçindeki tasarımcıda belgeyi (Word için) veya çalışma sayfasını (Excel için) açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+9. içindeki tasarımcıda belge (Word için) veya çalışma sayfası (Excel için) açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 10. **Özellikler** penceresinde, **ReferenceAssemblyFromVbaProject** özelliğini seçin ve değeri **true** olarak değiştirin.
 
     > [!NOTE]
-    > Çalışma kitabı veya belge zaten VBA kodu içermiyorsa veya belgedeki VBA kodunun çalıştırılmak üzere güvenilir olmaması durumunda, **ReferenceAssemblyFromVbaProject** özelliğini **true** olarak ayarladığınızda bir hata iletisi alırsınız. Bunun nedeni, Visual Studio 'Nun belgedeki VBA projesini değiştiremeyeceği durumdur.
+    > Çalışma kitabı veya belge zaten VBA kodu içermiyorsa veya belgedeki VBA kodunun çalıştırılmak üzere güvenilir olmaması durumunda, **ReferenceAssemblyFromVbaProject** özelliğini **true** olarak ayarladığınızda bir hata iletisi alırsınız. bunun nedeni Visual Studio, bu durumdaki belgedeki VBA projesini değiştirememelidir.
 
 11. Görüntülenen iletide **Tamam** ' a tıklayın. Bu ileti, projeyi ' den çalıştırırken çalışma kitabına veya belgeye VBA kodu eklerseniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , projeyi bir sonraki sefer OLUŞTURDUĞUNUZDA VBA kodunun kaybolacağını hatırlatır. Bunun nedeni, projeyi her oluşturduğunuzda derleme çıkış klasöründeki belgenin üzerine yazılır.
 
-     Bu noktada, Visual Studio projeyi VBA projesinin derlemeye çağırabilmesi için yapılandırır. Visual Studio, VBA projesine adlı bir yöntemi de ekler `GetManagedClass` . VBA 'da gösterilen sınıfa erişmek için VBA projesinin herhangi bir yerinden bu yöntemi çağırabilirsiniz.
+     bu noktada, projeyi VBA projesinin derlemeye çağırabilmesi için Visual Studio yapılandırır. Visual Studio VBA projesine adlı bir yöntemi de ekler `GetManagedClass` . VBA 'da gösterilen sınıfa erişmek için VBA projesinin herhangi bir yerinden bu yöntemi çağırabilirsiniz.
 
 12. Projeyi derleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [nasıl yapılır: Visual Studio Office projeler oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 - [VBA ve belge düzeyi özelleştirmelerini birleştirme](../vsto/combining-vba-and-document-level-customizations.md)
 - [İzlenecek yol: Visual C&#35; projesindeki VBA 'dan kod çağırma](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)
-- [Nasıl yapılır: Visual Basic projesindeki kodu VBA 'de kullanıma sunma](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)
+- [nasıl yapılır: Visual Basic projesindeki kodu VBA 'de kullanıma sunma](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)

@@ -1,45 +1,45 @@
 ---
 title: Proje öğeleri ekleme ve kaldırma
-description: Bu belge, Mac için Visual Studio proje öğelerinin nasıl ekleneceğini ve kaldırılacağını açıklar
+description: Bu belgede, bu belgeye proje öğelerini ekleme ve kaldırma Mac için Visual Studio
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
 ms.topic: how-to
-ms.openlocfilehash: 14f1b08464f1bc0f9e1db8a4e7ddbad23a84573e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b0b506a1ac77b4f305eb5021c0e4c5094a797fb652825184f15bcc971b8ac9c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85938883"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423305"
 ---
 # <a name="adding-and-removing-project-items"></a>Proje öğeleri ekleme ve kaldırma
 
-**Çözüm bölmesi** proje düğümüne sağ tıklayıp **yeni dosya > dosyasına**göz atarak projenize yeni proje öğeleri ekleyebilirsiniz:
+Yeni proje öğelerini projenize eklemek için Project düğümüne sağ tık  Çözüm Bölmesi Yeni Dosya Ekle'ye **göz >:**
 
-![Yeni proje öğesi Ekle](media/add-and-remove-project-items-image1.png)
+![Yeni Öğe Project Ekleme](media/add-and-remove-project-items-image1.png)
 
-Bu, boş sınıflar veya boş numaralandırmalar gibi varsayılan şablonlara ek olarak oluşturmakta olduğunuz uygulamanın türüne dayalı olarak dosya şablonları sağlayan yeni dosya Iletişim kutusunu görüntüler. Örneğin, bir iOS uygulaması yazıyorsanız, yeni bir boş görsel taslak dosyası oluşturmak için **görsel taslak** seçeneğini belirleyebilirsiniz:
+Boş Sınıflar veya Boş Numaralar gibi varsayılan şablonlara ek olarak, oluşturmakta olduğunu uygulama türüne göre dosya şablonları sağlayan Yeni Dosya İletişim Kutusu görüntülenir. Örneğin, bir iOS uygulaması yazıyorsanız, yeni boş bir Storyboard dosyası oluşturmak için **Storyboard'u** seçin:
 
-![İOS 'ta yeni boş görsel taslak ekleme](media/add-and-remove-project-items-image2.png)
+![iOS'ta yeni boş storyboard ekleme](media/add-and-remove-project-items-image2.png)
 
-## <a name="adding-existing-files"></a>Mevcut Dosyalar ekleniyor
+## <a name="adding-existing-files"></a>Mevcut dosyaları ekleme
 
-Proje düğümüne sağ tıklayıp **> dosya Ekle...** öğesini seçerek projenize mevcut dosyaları ekleyebilirsiniz. Alternatif olarak, tüm bir klasörü eklemek için **ekle > var olan klasör ekle...** öğesini seçin. Bu, sisteminizde gerekli öğeyi eklemek için aramanızı sağlayan dosya tarayıcısını görüntüler.
+Mevcut dosyaları projenize eklemek için Project düğümüne sağ tık > **Ekle... seçeneğini kullanabilirsiniz.** Alternatif olarak, klasörün tamamını eklemek için Var Olan Klasör **Ekle... > Ekle'yi seçin.** Bu, eklemek istediğiniz öğeyi bulmak için sisteminizi aramanıza olanak sağlayan dosya tarayıcısını görüntüler.
 
-## <a name="removing-items"></a>Öğeler kaldırılıyor
+## <a name="removing-items"></a>Öğeleri kaldırma
 
-Geçerli projenizden bir öğeyi kaldırmak için öğeye sağ tıklayın ve **Kaldır** ' ı seçin.
+Geçerli projenizin bir öğesini kaldırmak için öğeye sağ tıklayın ve Kaldır'ı **seçin**
 
-![Öğeyi kaldır](media/add-and-remove-project-items-image3.png)
+![Öğeyi Kaldır](media/add-and-remove-project-items-image3.png)
 
-Bu, öğeyi Sil iletişim kutusunu görüntüler. Projeden kaldırmak için seçeneklerden birini seçin:
+Bu, öğeyi sil iletişim kutusunu görüntüler. Projeden kaldırmak için seçeneklerden birini belirleyin:
 
-![Öğe Sil iletişim kutusu](media/add-and-remove-project-items-image4.png)
+![Öğeyi sil iletişim kutusu](media/add-and-remove-project-items-image4.png)
 
-* **Sil** -öğeyi projeden ve diskten kaldırır.
-* **Projeden kaldır** -öğeyi projeden kaldırır, ancak diskten kaldırmaz
+* **Sil** - Öğeyi projeden ve diskten kaldırır.
+* **Dosyadan Project** - Öğeyi projeden kaldırır, ancak diskten kaldırmaz
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio 'da çözümler ve projeler (Windows üzerinde)](/visualstudio/ide/solutions-and-projects-in-visual-studio)
+* [Visual Studio 'de çözümler ve projeler (Windows)](/visualstudio/ide/solutions-and-projects-in-visual-studio)

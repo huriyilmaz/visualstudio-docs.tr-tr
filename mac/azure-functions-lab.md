@@ -1,22 +1,22 @@
 ---
 title: 'Öğretici: Azure İşlevleri'
-description: Mac için Visual Studio 'de Azure Işlevleriyle çalışmaya yönelik ayrıntılı bir yol.
+description: Mac için Visual Studio 'de Azure işlevleriyle çalışmaya yönelik ayrıntılı bir yol.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 11/06/2020
 ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
 ms.topic: tutorial
-ms.openlocfilehash: 3fa653a1acaae0f9b58d17f86d6e2e0feeb027a6
-ms.sourcegitcommit: 2cf3a03044592367191b836b9d19028768141470
+ms.openlocfilehash: 2bb80c08b2d2fab16f3fd926d9a806898eeb68bbcd3b3632ffb3af478b34453c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94493029"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121393891"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>Öğretici: Azure Işlevleri 'ni kullanmaya başlama
 
-Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturmaya nasıl başlayacağınızı öğreneceksiniz. Ayrıca, Azure Işlevleri geliştiricileri tarafından kullanılabilen çok sayıda bağlama ve tetikleyiciden birini temsil eden Azure depolama tabloları ile de tümleştirilebilir.
+bu laboratuvarda, Mac için Visual Studio kullanarak Azure işlevleri oluşturmaya nasıl başlayacağınızı öğreneceksiniz. Ayrıca, Azure Işlevleri geliştiricileri tarafından kullanılabilen çok sayıda bağlama ve tetikleyiciden birini temsil eden Azure depolama tabloları ile de tümleştirilebilir.
 
 ## <a name="objectives"></a>Hedefler
 
@@ -34,20 +34,20 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
 1. **Mac için Visual Studio** başlatın.
 
-2. **Yeni çözüm > dosya** ' yı seçin.
+2. **Yeni çözüm > dosya**' yı seçin.
 
-3. **Cloud > genel** kategorisinden **Azure işlevleri** şablonunu seçin. Azure Işlevleri 'ni barındıran bir .NET sınıf kitaplığı oluşturmak Için C# ' i kullanacaksınız. **İleri** ’ye tıklayın.
+3. **Cloud > genel** kategorisinden **Azure işlevleri** şablonunu seçin. Azure Işlevleri 'ni barındıran bir .NET sınıf kitaplığı oluşturmak Için C# ' i kullanacaksınız. **İleri**’ye tıklayın.
 
     ![Azure işlevleri şablon seçimi](media/azure-functions-lab-image1.png)
 
-4. **Proje adını** **"AzureFunctionsLab"** olarak ayarlayın ve **Oluştur** ' a tıklayın.
+4. **Project adını** **"AzureFunctionsLab"** olarak ayarlayın ve **oluştur**' a tıklayın.
 
     ![Azure işlev projenizi adlandırma ve oluşturma](media/azure-functions-lab-image2.png)
 
-5. **Çözüm penceresindeki** düğümleri genişletin. Varsayılan proje şablonu, çeşitli Azure WebJobs paketlerinin yanı sıra paketteki Newtonsoft.JsNuGet başvurularını içerir.
+5. **Çözüm penceresindeki** düğümleri genişletin. varsayılan proje şablonu, çeşitli Azure webjobs paketlerine yönelik NuGet başvuruları ve ayrıca paketteki Newtonsoft.Jsiçerir.
 
      Ayrıca üç dosya vardır:-hizmet ayarlarını yapılandırmak için üzerinde ana bilgisayar **local.settings.js** genel yapılandırma seçeneklerini açıklamak için **üzerindehost.js** .
-        -Proje şablonu, varsayılan bir HttpTrigger de oluşturur. Bu laboratuvarın sau için, **HttpTrigger.cs** dosyasını projeden silmelisiniz.
+        -Proje şablonu, varsayılan bir HttpTrigger de oluşturur. Bu laboratuvarın sau için, **Httptrigger. cs** dosyasını projeden silmeniz gerekir.
 
     **Üzerindelocal.settings.js** açın. Varsayılan olarak iki boş bağlantı dizesi ayarı vardır.
 
@@ -57,7 +57,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
 1. Konumundaki Azure hesabınızda oturum açın [https://portal.azure.com](https://portal.azure.com) .
 
-1. Ekranın solunda bulunan **Sık Kullanılanlar** bölümünde **depolama hesapları** ' nı seçin:
+1. ekranın solunda bulunan **sık kullanılanlar** bölümünün altında **Depolama hesapları**' nı seçin:
 
     ![depolama hesapları öğesini gösteren Azure portal sık kullanılanlar bölümü](media/azure-functions-lab-image4.png)
 
@@ -69,7 +69,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![Yeni depolama hesabı ayrıntıları](media/azure-functions-lab-image6.png)
 
-1. **Oluştur** 'a tıklayın. Depolama hesabının oluşturulması birkaç dakika sürebilir. Başarılı bir şekilde oluşturulduktan sonra bir bildirim alırsınız.
+1. **Oluştur**’a tıklayın. Depolama hesabının oluşturulması birkaç dakika sürebilir. Başarılı bir şekilde oluşturulduktan sonra bir bildirim alırsınız.
 
     ![Dağıtım başarılı bildirimi](media/azure-functions-lab-image7.png)
 
@@ -83,13 +83,13 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![anahtar 1 için bilgiler](media/azure-functions-lab-image9.png)
 
-1. **Mac için Visual Studio** ' e dönün ve **local.settings.js** ' de **AzureWebJobsStorage** ayarı olarak içindeki tam bağlantı dizesini yapıştırın. Artık, kaynaklarına erişmesi gereken işlevlere yönelik özniteliklerde ayar adına başvurabilirsiniz.
+1. **Mac için Visual Studio** ' e dönün ve **local.settings.js**' de **AzureWebJobsStorage** ayarı olarak içindeki tam bağlantı dizesini yapıştırın. Artık, kaynaklarına erişmesi gereken işlevlere yönelik özniteliklerde ayar adına başvurabilirsiniz.
 
     ![bağlantı anahtarı girilen yerel ayarlar dosyası](media/azure-functions-lab-image10.png)
 
 ## <a name="example-3-creating-and-debugging-an-azure-function"></a>Örnek 3: bir Azure Işlevi oluşturma ve hata ayıklama
 
-1. Artık kod eklemeye başlamaya hazırsınız. .NET sınıf kitaplığı ile çalışırken, Azure Işlevleri statik yöntemler olarak eklenir. **Çözüm penceresinde** **Azurefunctions** proje düğümüne sağ tıklayın ve **Ekle > Ekle işlevi** ' ni seçin:
+1. Artık kod eklemeye başlamaya hazırsınız. .NET sınıf kitaplığı ile çalışırken, Azure Işlevleri statik yöntemler olarak eklenir. **Çözüm penceresinde** **Azurefunctions** proje düğümüne sağ tıklayın ve **Ekle > Ekle işlevi**' ni seçin:
 
     ![İşlev seçeneği Ekle](media/azure-functions-lab-image11.png)
 
@@ -143,7 +143,7 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
     ![Dönüş satırında kesme noktası ayarlandı](media/azure-functions-lab-image17.png)
 
-1. **F5** tuşuna basarak veya **hata ayıklamayı Başlat > Çalıştır** ' a tıklayarak projeyi bir hata ayıklama oturumunda derleyin ve çalıştırın. Alternatif olarak, **Çalıştır** düğmesine tıklayabilirsiniz. Bu seçenekler aynı görevi gerçekleştirir. Bu laboratuvarın geri kalanında **F5** 'e başvurmuş, ancak en rahat bulduğunuz yöntemi kullanabilirsiniz.
+1. **F5** tuşuna basarak veya **hata ayıklamayı Başlat > Çalıştır**' a tıklayarak projeyi bir hata ayıklama oturumunda derleyin ve çalıştırın. Alternatif olarak, **Çalıştır** düğmesine tıklayabilirsiniz. Bu seçenekler aynı görevi gerçekleştirir. Bu laboratuvarın geri kalanında **F5**'e başvurmuş, ancak en rahat bulduğunuz yöntemi kullanabilirsiniz.
 
     ![Projeyi derleyin ve çalıştırın](media/azure-functions-lab-image18.png)
 
@@ -165,13 +165,13 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
 1. Çalışmaya devam etmek için **F5** tuşuna basın.
 
-1. Tarayıcıda, yöntemin XML sonucu işlenir. Beklenildiği gibi, sabit kodlanmış toplama işlemi de bir üst sınırı üretir. Bkz. Safari 'de yalnızca "3" görüyorsanız, **safari > tercihleri** ' ne gidin > Gelişmiş ' e gidin ve " **menü çubuğunda geliştirme menüsünü göster** " onay kutusunu işaretleyin ve sayfayı yeniden yükleyin.
+1. Tarayıcıda, yöntemin XML sonucu işlenir. Beklenildiği gibi, sabit kodlanmış toplama işlemi de bir üst sınırı üretir. Safari'de yalnızca "3" seçeneğini görüyorsanız **Safari > Tercihler > Gelişmiş'e** gidin ve " Menü çubuğundaKi Geliştirme menüsünü göster" onay kutusunu işaretleyin ve sayfayı yeniden yükleyin.
 
-1. **Mac için Visual Studio** , hata ayıklama oturumunu sonlandırmak için **Durdur** düğmesine tıklayın. Yeni değişikliklerin tamamlandığından emin olmak için, hata ayıklama oturumunu yeniden başlatmayı (durdurmak ve çalıştırmak) unutmayın.
+1. Hata **Mac için Visual Studio'** içinde **Durdur düğmesine** tıklayarak hata ayıklama oturumunu sona erer. Yeni değişikliklerin top olduğundan emin olmak için hata ayıklama oturumunu yeniden başlatmayı (durdurmayı ve sonra çalıştırmayı) unutmayın.
 
-    ![Hata ayıklamayı Durdur seçeneği](media/azure-functions-lab-image22.png)
+    ![Hata ayıklamayı durdur seçeneği](media/azure-functions-lab-image22.png)
 
-1. **Run** yönteminde **x** ve **y** tanımlarını aşağıdaki kodla değiştirin. Bu kod, ek işlemin belirtilen parametrelere göre dinamik olarak gerçekleştirilebilmesi için URL 'nin sorgu dizesinden değerleri ayıklar.
+1. Run **yönteminde** **x** ve **y tanımlarını** aşağıdaki kodla değiştirin. Bu kod, url'nin sorgu dizesinde yer alan değerleri ayıklar, böylece ekleme işlemi sağlanan parametrelere göre dinamik olarak gerçek olabilir.
 
     ```csharp
     var query = HttpUtility.ParseQueryString(req.RequestUri.Query);
@@ -185,55 +185,55 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
 
 1. Uygulamayı çalıştırın.
 
-1. Tarayıcı penceresine dönün ve dizeyi `/?x=2&y=3` URL 'ye ekleyin. Tüm URL artık olmalıdır `http://localhost:7071/api/Add?x=2&y=3` . Yeni URL 'ye gidin.
+1. Tarayıcı penceresine geri dönüp dizeyi `/?x=2&y=3` URL'ye ekleyin. Url'nin tamamı artık `http://localhost:7071/api/Add?x=2&y=3` olmalıdır. Yeni URL'ye gidin.
 
-1. Bu kez, sonuç yeni parametreleri yansıtmalıdır. Projeyi farklı değerlerle çalıştırmayı ücretsiz olarak hissetmekten çekinmeyin. Hata denetimi olmadığını unutmayın, bu nedenle geçersiz veya eksik parametreler hata oluşturacak.
+1. Bu kez sonuç yeni parametreleri yansıtacak. Projeyi farklı değerlerle çalıştırmakta serbestsiniz. Herhangi bir hata denetimi olmadığını, dolayısıyla geçersiz veya eksik parametrelerin hataya neden olduğunu unutmayın.
 
 1. Hata ayıklama oturumunu durdurun.
 
-## <a name="exercise-4-working-with-functionjson"></a>Alıştırma 4: üzerinde function.jsçalışma
+## <a name="exercise-4-working-with-functionjson"></a>Alıştırma 4: function.jsçalışma
 
-1. Önceki bir alıştırmada, kitaplıkta tanımlanan Azure Işlevi için "üretilmiş" bir iş işlevi Mac için Visual Studio bahsedildi. Bunun nedeni, Azure Işlevlerinin çalışma zamanında Yöntem özniteliklerini kullanmamaktır ancak bunun yerine, Azure Işlevlerinin nerede ve nasıl kullanılabilir hale getirilmekte olduğunu yapılandırmak için derleme zamanı dosya sistemi kuralını kullanır. **Çözüm penceresinde** , proje düğümünüzle sağ tıklayın ve **Finder 'da açığa çıkar** ' ı seçin.
+1. Önceki bir alıştırmada, kitaplıkta tanımlanan Mac için Visual Studio Azure İşlevi için bir iş işlevinin "üreti" olduğu belirtildi. Bunun nedeni Azure İşlevleri çalışma zamanında yöntem özniteliklerini kullanmamış olması, bunun yerine derleme zamanı dosya sistemi kuralı kullanarak çalışma zamanının kullanılabilir olduğu yeri ve Azure İşlevleri yapılandırmadır. Çözüm Penceresinde **proje düğümünü** sağ tıklatın ve Bulıcı'da **Ortaya Çıkar'ı seçin.**
 
-     ![Finder 'da açığa çıkar menü seçeneği](media/azure-functions-lab-image23.png)
+     ![Bulıcı menü seçeneğinde ortaya çıkar](media/azure-functions-lab-image23.png)
 
-1. **Bin/Debug/Netstandard 2.0** 'a ulaşana kadar dosya sisteminde ilerleyin. **Add** adlı bir klasör olmalıdır. Bu klasör C# kodundaki işlev adı özniteliğiyle birlikte kullanılacak şekilde oluşturulmuştur. Dosyadaki tek bir **function.js** göstermek için Ekle klasörünü genişletin. Bu dosya, Azure Işlevini barındırmak ve yönetmek için çalışma zamanı tarafından kullanılır. Derleme zamanı desteği olmayan diğer dil modellerinde (C# betiği veya JavaScript gibi), bu klasörlerin el ile oluşturulması ve saklanması gerekir. C# geliştiricileri için, derleme sırasında öznitelik meta verilerinden otomatik olarak oluşturulur. **function.js** üzerinde sağ tıklayın ve Visual Studio 'da açmak için seçin.
+1. **bin/Debug/netstandard2.0'a ulaşana kadar dosya sisteminde aşağı gidin.** Ekle adlı bir klasör **olması gerekir.** Bu klasör, C# kodundaki işlev adı özniteliğine karşılık gelen şekilde oluşturulmuş. Dosyada tek bir dosyanın görünür olduğu klasörü **function.jsgenişletin.** Bu dosya, azure işlevini barındırmak ve yönetmek için çalışma zamanı tarafından kullanılır. Derleme zamanı desteği olmayan diğer dil modellerinde (C# betiği veya JavaScript gibi) bu klasörlerin el ile oluşturularak korunması gerekir. C# geliştiricileri için, derleme sırasında öznitelik meta verilerinden otomatik olarak oluşturulurlar. Aç'a **sağfunction.jstıklayın** ve seçerek bu seçeneği Visual Studio.
 
-    ![Dosya dizininde function.js](media/azure-functions-lab-image24.png)
+    ![function.jsdizininde](media/azure-functions-lab-image24.png)
 
-1. Bu öğreticinin önceki adımları verildiğinde C# özniteliklerinin temel olarak anlaşılmalıdır. Bu şekilde hesaba katılarak, bu JSON tanıdık görünmelidir. Ancak, önceki alıştırmalarda kapsanmayan birkaç öğe vardır. Örneğin, her **bağlamanın** **Yön** kümesi olmalıdır. **"İçinde", "ın"** parametresi, parametrenin giriş olduğu anlamına gelir, yani **"Out"** parametresi, bir dönüş değeri ( **$Return** aracılığıyla) veya yönteme **giden** bir parametre olduğunu gösterir. Ayrıca, derleme içinde **scriptfile** (Bu son konuma göre) ve **entryPoint** yöntemi (public ve static) belirtmeniz gerekir. Sonraki birkaç adımda, bu modeli kullanarak özel bir işlev yolu ekleyeceksiniz, bu nedenle bu dosyanın içeriğini Pano 'ya kopyalayın.
+1. Bu öğreticinin önceki adımlarını göz atarak, C# öznitelikleri hakkında temel bir anlayışa sahipsiniz. Bunu dikkate alarak bu JSON'un tanıdık olması gerekir. Ancak, önceki alıştırmalarda ele atılmlı birkaç öğe vardır. Örneğin, her **bağlamanın** kendi yön **kümesine sahip olması** gerekir. "in" parametresi, **parametrenin** giriş olduğu anlamına gelir ancak **"out",** parametrenin bir dönüş değeri **($return** aracılığıyla) veya yönteme yönelik bir out **parametresi** olduğunu gösterir. Ayrıca derleme içinde **scriptFile** (bu son konuma göre) ve **entryPoint** yöntemini (genel ve statik) belirtmeniz gerekir. Sonraki birkaç adımda bu modeli kullanarak özel bir işlev yolu ekliysiniz, bu nedenle bu dosyanın içeriğini panoya kopyalayın.
 
-    ![Mac için Visual Studio 'da açık dosya function.js](media/azure-functions-lab-image25.png)
+    ![function.jsmac için Visual Studio'da açık olan bir dosya üzerinde yükleme](media/azure-functions-lab-image25.png)
 
-1. **Çözüm penceresinde** , **AzureFunctionsLab** proje düğümüne sağ tıklayın ve **> yeni klasör ekle** ' yi seçin. Yeni klasörü **Adder** olarak adlandırın. Varsayılan kural olarak, bu klasörün adı API **/Adder** gibi API 'nin yolunu tanımlar.
+1. Çözüm Penceresinde **AzureFunctionsLab** proje düğümüne sağ tıklayın ve Yeni Klasöre **Ekle'> seçin.**  Yeni klasöre **Adder adını girin.** Varsayılan kural olarak, bu klasörün adı API'nin yolunu **(api/Adder gibi) tanımlar.**
 
     ![Yeni klasör seçeneği](media/azure-functions-lab-image26.png)
 
-1. **Adder** klasörüne sağ tıklayın ve **> yeni dosya Ekle** ' yi seçin.
+1. Adder klasörüne **sağ tıklayın ve** Yeni Dosya **ekle'> seçin.**
 
     ![Yeni dosya seçeneği](media/azure-functions-lab-image27.png)
 
-1. **Web** kategorisini ve **boş JSON dosyası** şablonunu seçin. **Adı** **işlev** olarak ayarlayın ve **Yeni** ' ye tıklayın.
+1. Web **kategorisini** ve Boş **JSON Dosyası şablonunu** seçin. **Ad'ı işlev** olarak **ayarlayın ve** Yeni'ye **tıklayın.**
 
-    ![Boş JSON dosyası seçeneği](media/azure-functions-lab-image28.png)
+    ![Boş json dosyası seçeneği](media/azure-functions-lab-image28.png)
 
-1. Yeni oluşturulan dosyanın varsayılan içeriğini değiştirmek için içindeki diğer **function.js** içeriğini (adım 3 ' ten) yapıştırın.
+1. Yeni oluşturulan dosyanın varsayılan **içeriğinifunction.js** için diğer dosyanın içeriğini (3. adımdan) üzerine yapıştırın.
 
-1. JSON dosyasının en üstünden aşağıdaki satırları kaldırın:
+1. Aşağıdaki satırları json dosyasının üst kısmından kaldırın:
 
     ```json
     "configurationSource":"attributes",
     "generatedBy":"Microsoft.NET.Sdk.Functions-1.0.13",
     ```
 
-1. İlk bağlamanın sonunda ( **"Name": "REQ"** satırı), aşağıdaki özellikleri ekleyin. Önceki satıra virgül eklemeyi unutmayın. Bu özellik varsayılan kökü geçersiz kılar, böylece artık yoldan **int** parametreleri ayıklar ve bunları **x** ve **y** adlı yöntem parametrelerine yerleştirebilirsiniz.
+1. İlk bağlamanın sonuna **("name": "req" satırına)** aşağıdaki özellikleri ekleyin. Önceki satıra virgül dahil etme. Bu özellik, artık **int** parametrelerini yoldan ayıklar ve **bunları x** ve y adlı yöntem parametrelerine yer değiştirecek şekilde varsayılan kökünü geçersiz **kılar.**
 
     ```json
     "direction": "in",
     "route": "Adder/{x:int?}/{y:int?}"
     ```
 
-1. İlk altında başka bir bağlama ekleyin. Bu bağlama işlevinin dönüş değerini işler. Önceki satıra virgül eklemeyi unutmayın:
+1. İlkin altına başka bir bağlama ekleyin. Bu bağlama işlevin dönüş değerini işler. Önceki satıra virgül dahil etme:
 
     ```json
     {
@@ -243,13 +243,13 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
     }
     ```
 
-1. Ayrıca, aşağıda gösterildiği gibi, dosyanın alt kısmındaki **entryPoint** özelliğini **"Add2"** adlı bir yöntemi kullanacak şekilde güncelleştirin. Bu, **API/Adder...** yolunun herhangi bir ada sahip uygun bir yönteme ( **Add2** burada) eşlendiğini göstermek için kullanılır.
+1. Ayrıca dosyanın en altındaki **entryPoint** özelliğini aşağıda gösterildiği gibi **"Add2"** adlı bir yöntem kullanmak için güncelleştirin. Bu, **api/Adder...** yolunun herhangi bir adla (buraya Ekle2) uygun bir yönteme **eşleyene bir yol olduğunu göstermektir.**
 
     ```json
     "entryPoint": "<project-name>.<function-class-name>.Add2"
     ```
 
-1. Dosyadaki son **function.js** aşağıdaki JSON gibi görünmelidir:
+1. Dosyada **function.jsdosyanız** aşağıdaki json'a benzer şekilde görünüyor:
 
     ```json
     {
@@ -276,11 +276,11 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
     }
     ```
 
-1. Bu işi yapmak için gereken son adım, bu dosyayı her değiştiğinde çıkış dizinindeki aynı göreli yola kopyalamak Mac için Visual Studio söylemek. Dosya seçili olduğunda sağ taraftaki çubuktan Özellikler sekmesini seçin ve **Çıkış Dizinine Kopyala** ' yı seçerseniz, **daha yeniyse kopyala** ' yı seçin:
+1. Tüm bu çalışmaları yapmak için gereken son adım, Mac için Visual Studio her değişiklikte bu dosyayı çıkış dizininde aynı göreli yola kopyalamasını talimatını etmektir. Dosya seçiliyken sağ çubuktan özellikler sekmesini seçin ve  Çıkış dizinine kopyala için Daha yeniyse **kopyala'ya tıklayın:**
 
-    ![JSON dosyası için Özellikler seçenekleri](media/azure-functions-lab-image30.png)
+    ![JSON dosyası için özellikler seçenekleri](media/azure-functions-lab-image30.png)
 
-1. **Add.cs** ' de, `Run` Yöntemi (özniteliği dahil), beklenen işlevi yerine getirmek için aşağıdaki yöntemle değiştirin. Bu çok benzerdir, ancak `Run` hiçbir öznitelik kullanmaz ve **x** ve **y** için açık parametrelere sahip olur.
+1. **Add.cs içinde** beklenen işlevi yerine getirmek için yöntemini `Run` (özniteliği dahil) aşağıdaki yöntemle değiştirin. çok benzerdir, ancak hiçbir öznitelik kullanmaz ve `Run` x ve y için açık **parametrelere** **sahip olur.**
 
     ```csharp
     public static int Add2(
@@ -293,23 +293,23 @@ Bu laboratuvarda, Mac için Visual Studio kullanarak Azure Işlevleri oluşturma
     }
     ```
 
-1. Projeyi derlemek ve çalıştırmak için **F5** tuşuna basın.
+1. Projeyi **derlemek ve** çalıştırmak için F5 tuşuna basın.
 
-1. Yapı tamamlandığından ve platform dönerek, artık yeni eklenen yönteme eşlenen istekler için kullanılabilen ikinci bir yol olduğunu gösterir:
+1. Derleme tamamlandıktan ve platform hazırlandıktan sonra yeni eklenen yönteme eşlenen istekler için ikinci bir yol olduğunu gösterir:
 
-    ![Http işlevleri URL 'SI](media/azure-functions-lab-image31.png)
+    ![Http işlevlerinin URL'si](media/azure-functions-lab-image31.png)
 
-1. Tarayıcı penceresini döndürün ve adresine gidin **http://localhost:7071/api/Adder/3/5** .
+1. Tarayıcı penceresini iade edin ve 'a **http://localhost:7071/api/Adder/3/5** gidin.
 
-1. Bu kez Yöntem bir kez daha çalışarak yoldan parametreler çekerek ve bir toplam üretir.
+1. Bu kez yöntem bir kez daha çalışır, yoldan parametreleri çekerek bir toplam sağlar.
 
-1. **Mac için Visual Studio** dönün ve hata ayıklama oturumunu sonlandırın.
+1. Hata **Mac için Visual Studio** ve hata ayıklama oturumunu sona erer.
 
-## <a name="exercise-5-working-with-azure-storage-tables"></a>Alıştırma 5: Azure depolama tablolarıyla çalışma
+## <a name="exercise-5-working-with-azure-storage-tables"></a>Alıştırma 5: Azure depolama tabloları ile çalışma
 
-Genellikle, oluşturduğunuz hizmet şimdiye kadar geliştirdiğimiz ve önemli miktarda zaman ve/veya altyapı gerektiren çok daha karmaşık olabilir. Bu durumda, kaynaklar kullanılabilir olduğunda işlenmek üzere sıraya alınmış istekleri kabul etmek için uygun olduğunu, hangi Azure Işlevleri için destek sağladığını de fark edebilirsiniz. Diğer durumlarda, verileri merkezi olarak saklamak isteyeceksiniz. Azure depolama tabloları bunu hızla yapmanızı sağlar.
+Genellikle, derlemek için şu ana kadar gerçekleştirilen hizmetten çok daha karmaşık olabilir ve yürütülecek önemli miktarda zaman ve/veya altyapıya ihtiyaç vardır. Bu durumda, kaynaklar kullanılabilir olduğunda iş için kuyruğa alınan istekleri kabul etme ve bu istekler için destek Azure İşlevleri bulabilirsiniz. Diğer durumlarda, verileri merkezi olarak depolamak istemeyebilirsiniz. Azure Depolama tabloları bunu hızlı bir şekilde yapmalarını sağlar.
 
-1. Aşağıdaki sınıfı **Add.cs** öğesine ekleyin. Ad alanı içinde, ancak var olan sınıfın dışına gitmelidir.
+1. Aşağıdaki sınıfı **Add.cs'ye ekleyin.** Ad alanının içine ancak var olan sınıfın dışına girilir.
 
     ```csharp
     public class TableRow : TableEntity
@@ -320,7 +320,7 @@ Genellikle, oluşturduğunuz hizmet şimdiye kadar geliştirdiğimiz ve önemli 
     }
     ```
 
-1. **Add** sınıfı içinde, başka bir işlevi tanıtmak için aşağıdaki kodu ekleyin. Bunun, bir HTTP yanıtı içermediğinden bu ana kadar benzersiz olduğunu unutmayın. Son satır, daha sonra ( **partitionkey** ve **rowkey** ), ayrıca parametrelerini ve toplamlarını daha sonra almayı kolaylaştıran bazı önemli bilgilerle doldurulmuş yeni bir **TableRow** döndürür. Yöntemi içindeki kod ayrıca, işlevin ne zaman çalıştığını daha kolay bilmesini sağlamak için **Tracewriter** kullanır.
+1. Add **sınıfına** başka bir işlev eklemek için aşağıdaki kodu ekleyin. Bunun şu ana kadar http yanıtı içermeyen benzersiz olduğunu unutmayın. Son satır, daha sonra (**PartitionKey** ve **RowKey**) daha sonra almayı kolaylaştıracak bazı önemli bilgilerle doldurulmuş yeni bir **TableRow** ile birlikte parametrelerini ve toplamını döndürür. yöntemi içindeki kod, işlev çalıştırılırken daha kolay bilgi için **TraceWriter** kullanır.
 
     ```csharp
     [FunctionName("Process")]
@@ -346,30 +346,30 @@ Genellikle, oluşturduğunuz hizmet şimdiye kadar geliştirdiğimiz ve önemli 
     }
     ```
 
-1. Projeyi derlemek ve çalıştırmak için **F5** tuşuna basın.
+1. Projeyi **derlemek ve** çalıştırmak için F5 tuşuna basın.
 
-1. Tarayıcı sekmesinde öğesine gidin **http://localhost:7071/api/Process/4/6** . Bu, kuyruğa başka bir ileti yerleştirir. Bu, sonunda tabloya başka bir satırın eklenmesine neden olur.
+1. Tarayıcı sekmesinde, 'a **http://localhost:7071/api/Process/4/6** gidin. Bu, kuyruğa başka bir ileti ekleniyor ve sonunda tabloya başka bir satır ekleniyor.
 
-1. **Terminal** 'e dönün ve **4 + 6** gelen isteğini izleyin.
+1. **Terminal'e geri** dönüp **4 + 6 için gelen isteği izleyin.**
 
-    ![Ek isteği gösteren Terminal çıkışı](media/azure-functions-lab-image32.png)
+    ![Toplama isteğini gösteren terminal çıkışı](media/azure-functions-lab-image32.png)
 
-1. İsteği aynı URL 'ye yenilemek için tarayıcıya dönün. Bu kez, **işlem** yönteminden sonra bir hata görürsünüz. Bunun nedeni, kodun zaten var olan bir bölüm ve satır anahtarı birleşimini kullanarak Azure Tablo depolama tablosuna bir satır eklemeye çalışıyor olması.
+1. İsteği aynı URL'ye yenilemek için tarayıcıya geri dönebilirsiniz. Bu kez Process yönteminden sonra bir **hatayla karşılaştısınız.** Bunun nedeni, kodun zaten var olan bir bölüm ve satır Depolama kullanarak Azure Tablo tablosuna satır eklemeye denemesidir.
 
     ```
     System.Private.CoreLib: Exception while executing function: Process. Microsoft.Azure.WebJobs.Host: Error while handling parameter $return after function returned:. Microsoft.Azure.WebJobs.Host: The specified entity already exists.
     ```
 
-1. Hata ayıklama oturumunu sonlandırın.
+1. Hata ayıklama oturumunu sona erer.
 
-1. Hatayı hafifletmek için, **Tracewriter** parametresinden hemen önce Yöntem tanımına aşağıdaki parametreyi ekleyin. Bu parametre, Azure Işlevleri platformunu, sonuçları depolamak için kullandığımız **Partitionkey** üzerindeki **sonuçlar** tablosundan bir **TableRow** almaya çalışacak şekilde yönlendirir. Ancak, aynı yöntemin diğer **x** ve **y** parametrelerine göre **rowkey** 'in dinamik olarak oluşturulduğunu fark ettiğinizde gerçek sihirli bir kısmı oynatma halinde gelir. Bu satır zaten varsa, **tableRow** geliştirici tarafından gerekli ek iş olmadan başladığında, bu durumda olur. Satır yoksa, yalnızca null olur. Bu verimlilik sıralaması, geliştiricilerin altyapıya değil önemli iş mantığına odaklanmasını sağlar.
+1. Hatayı azaltmak için aşağıdaki parametreyi TraceWriter parametresinin hemen öncesinde yöntem **tanımına** ekleyin. Bu parametre, Azure İşlevleri platforma sonuçları depolamak için kullanmakta olduğu  **PartitionKey'te** Bulunan Sonuçlar tablosundan **TableRow** alma girişiminde bulunarak bunu denemesi talimatı verir. Ancak **RowKey'in** aynı yöntem için diğer **x** ve **y** parametrelerine göre dinamik olarak oluşturulduğuna dikkat edin. Bu satır zaten varsa, **yöntem geliştiricinin** fazladan çalışması gerektirerek başladığında tableRow bu satıra sahip olur. Satır yoksa yalnızca null olur. Bu verimlilik, geliştiricilerin altyapıya değil önemli iş mantığına odaklanmalarını sağlar.
 
     ```csharp
     [Table("Results", "sums", "{x}_{y}")]
     TableRow tableRow,
     ```
 
-1. Aşağıdaki kodu yönteminin başına ekleyin. **TableRow** null değilse, işlem için beklenen sonuçlara zaten sahip olduğumuz ve anında dönebiliyoruz. Aksi takdirde, işlev daha önce olduğu gibi devam eder. Bu, verileri döndürmek için en güçlü yol olmayabilir, ancak çok az kod içeren birden çok ölçeklenebilir katmanda inanılmaz gelişmiş işlemleri düzenleyebilmenin noktasını gösterir.
+1. Aşağıdaki kodu yönteminin başına ekleyin. **tableRow** null değilse, istenen işlem için zaten sonuçlarımız vardır ve bunu hemen döndürenin. Aksi takdirde işlev daha önce olduğu gibi devam eder. Verileri iade etmek için en güçlü yol bu değildir ancak çok az kodla birden çok ölçeklenebilir katmanda son derece karmaşık işlemleri düzenlemenizi sağlar.
 
     ```csharp
     if (tableRow != null)
@@ -379,17 +379,17 @@ Genellikle, oluşturduğunuz hizmet şimdiye kadar geliştirdiğimiz ve önemli 
     }
     ```
 
-1. Projeyi derlemek ve çalıştırmak için **F5** tuşuna basın.
+1. Projeyi **derlemek ve** çalıştırmak için F5 tuşuna basın.
 
-1. Tarayıcı sekmesinde URL 'YI yenileyin **http://localhost:7071/api/Process/4/6** . Bu kaydın tablo satırı var olduğundan, hemen ve hatasız döndürmelidir. HTTP çıktısı olmadığından çıktıyı terminalde görebilirsiniz.
+1. Tarayıcı sekmesindeki URL'yi **http://localhost:7071/api/Process/4/6** yenileyin. Bu kaydın tablo satırı mevcut olduğu için hemen ve hatasız olarak geri dönilmelidir. HTTP çıkışına sahip olmadığınız için çıkışı Terminal'de de görebilirsiniz.
 
-    ![Tablo satırını gösteren Terminal çıkışı zaten var](media/azure-functions-lab-image33.png)
+    ![Tablo satırı zaten var olduğunu gösteren terminal çıkışı](media/azure-functions-lab-image33.png)
 
-1. URL 'YI, henüz test edilmemiş bir birleşimi yansıtacak şekilde güncelleştirin **http://localhost:7071/api/Process/5/7** . Terminal 'teki, tablo satırının bulunamadığını (beklenen şekilde) belirten iletiyi not edin.
+1. URL'yi gibi henüz test edilmemiş bir birleşimi yansıtacak şekilde **http://localhost:7071/api/Process/5/7** güncelleştirin. Terminal'de tablo satırı bulunamadı (beklendiği gibi) belirten iletiyi not alırsınız.
 
-    ![Yeni işlemi gösteren Terminal çıkışı](media/azure-functions-lab-image34.png)
+    ![Yeni işlemi gösteren terminal çıkışı](media/azure-functions-lab-image34.png)
 
-1. **Mac için Visual Studio** dönün ve hata ayıklama oturumunu sonlandırın.
+1. Hata **Mac için Visual Studio** ve hata ayıklama oturumunu sona erer.
 
 <!--
 1. Finally, let's take a look at what it's like to work with multiple input records. Rather than specify a specific **TableRow**, you can request an **IQueryable<TableRow>** using the same attributes, and the runtime will fill it with the appropriate resource you need. Add the code below to create a **List** function that lists all items that currently exist in the Azure table we've been working with. Also note that we're specifying that the MIME type of the response is **application/json**, so the runtime will automatically render as JSON.
@@ -415,4 +415,4 @@ Genellikle, oluşturduğunuz hizmet şimdiye kadar geliştirdiğimiz ve önemli 
 
 ## <a name="summary"></a>Özet
 
-Bu laboratuvarda, Mac için Visual Studio ile Azure Işlevleri oluşturmaya nasıl başladığınızı öğrendiniz.
+Bu laboratuvarda, Azure İşlevleri ile Mac için Visual Studio.

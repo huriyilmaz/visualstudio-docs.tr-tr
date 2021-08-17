@@ -1,6 +1,6 @@
 ---
-description: 'IDebugEngineLaunch2:: TerminateProcess bir işlemi sonlandırır.'
-title: 'IDebugEngineLaunch2:: TerminateProcess | Microsoft Docs'
+description: IDebugEngineLaunch2::TerminateProcess bir işlemi sonlandırılır.
+title: IDebugEngineLaunch2::TerminateProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: f7039e7f-5f57-4222-9ad2-11a66b2da6e0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ede981ee812c69654614cf828fc31a4ccf7849be
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b4b13a11def20f2bc6b90133661df6e4375b4dc832e2d91ba26c24644a24aa68
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065963"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390053"
 ---
 # <a name="idebugenginelaunch2terminateprocess"></a>IDebugEngineLaunch2::TerminateProcess
-Bir işlemi sonlandırır.
+Bir işlemi sonlandırılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int TerminateProcess (
 
 ## <a name="parameters"></a>Parametreler
 `pProcess`\
-'ndaki Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
+[in] Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemi çağırmadan önce [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) yöntemini çağırın.
+ Bu yöntemi [çağırmadan önce CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) yöntemini çağırma.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

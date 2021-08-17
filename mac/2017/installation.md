@@ -1,6 +1,6 @@
 ---
 title: Mac için Visual Studio 2017 'yi yükler
-description: Platformlar arası geliştirme için gereken Mac için Visual Studio ve ek bileşenlerin nasıl yükleneceğine ilişkin yönergeler.
+description: platformlar arası geliştirme için gereken Mac için Visual Studio ve ek bileşenlerin nasıl yükleneceğine ilişkin yönergeler.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 11/03/2018
@@ -8,27 +8,27 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: be799764c3d6913cd2a13c6d631fc3450f8875a0
-ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
+ms.openlocfilehash: b89a778b2ff1044ad788673337d7cea9fb37c8abe4620216387413f87372c1f7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98719922"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121423156"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>Mac için Visual Studio 2017 'yi yükler
 
 > [!NOTE]
-> Mac için Visual Studio 2019 [artık kullanılabilir](installation.md?view=vsmac-2019&preserve-view=true). Daha eski Mac için Visual Studio sürümleri için bkz. Visual Studio [İndirmeleri sayfası](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac).
+> Mac için Visual Studio 2019 [artık kullanılabilir](installation.md?view=vsmac-2019&preserve-view=true). daha eski Mac için Visual Studio sürümleri için, Visual Studio [indirmeleri sayfasına](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac)bakın.
 
-## <a name="downgrading-from-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 ' den daha eski sürüme mı?
+## <a name="downgrading-from-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 ' den eski sürüme düşürme mi?
 
-En iyi deneyim için, daha önce Mac için Visual Studio 2019 ' i [kaldırtığınızdan](uninstall.md) emin olmanız gerekir. İndirmenizi sağlayan sorunlar yaşıyorsanız, [bir sorun bildirerek](report-a-problem.md)bize bilgi verdiğinizden emin olun.
+en iyi deneyim için, önce, Mac için Visual Studio 2019 ' yi [kaldırmanızı](uninstall.md) öneririz. İndirmenizi sağlayan sorunlar yaşıyorsanız, [bir sorun bildirerek](report-a-problem.md)bize bilgi verdiğinizden emin olun.
  
 ## <a name="requirements"></a>Gereksinimler
 
 Mac için Visual Studio karşıdan yüklerken yerel, platformlar arası uygulamalar geliştirmeye başlamak için, hazırlık aşamasında ve ayarlamanız gereken birkaç şey vardır.
 
-Visual Studio 'da iOS ile çalışmaya yönelik olarak aşağıdaki parçalar gereklidir:
+Visual Studio ' de iOS ile çalışma için aşağıdaki parçalara ihtiyacınız vardır:
 
 - MacOS High Sierra 10,13 veya üzeri bir Mac.
 - Xcode 9,3 veya üzeri. En son kararlı sürüm genellikle önerilir.
@@ -36,7 +36,7 @@ Visual Studio 'da iOS ile çalışmaya yönelik olarak aşağıdaki parçalar ge
 
 ## <a name="install"></a>Yükleme
 
-1. [My.VisualStudio.com](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac) 'dan Mac için Visual Studio indirin
+1. [my.visualstudio.com](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac) 'dan Mac için Visual Studio indirin
 
 2. Yükleyici paketi indirildikten sonra, yükleyiciyi bağlamak için **VisualStudioForMacInstaller. dmg** dosyasını tıklatın ve ardından aşağıdaki görüntüde gösterildiği gibi logoyu çift tıklayarak çalıştırın:
 
@@ -67,8 +67,8 @@ Visual Studio 'da iOS ile çalışmaya yönelik olarak aşağıdaki parçalar ge
       - Yalnızca Mac – **MacOS** platformunu seçin ( [**Xcode**](https://developer.apple.com/xcode/)'u yüklemeniz gerekeceğini unutmayın).
       - Tam platformlar arası Xamarin uygulamaları – **Android**, **IOS** ve **MacOS** platformları ' nı seçin.
    * **.NET Core uygulamaları** – **.NET Core** platformunu seçin.
-   * **Web uygulamalarını ASP.NET Core** – **.NET Core** platformunu seçin.
-   * **Platformlar arası Unity oyun geliştirme** – Mac için Visual Studio dışında hiçbir ek platform yüklenmesi gerekmez. Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](./setup-vsmac-tools-unity.md) bakın.
+   * **Web uygulamalarını ASP.NET Core** – **.net Core** platformunu seçin.
+   * **platformlar arası Unity oyun geliştirme** – Mac için Visual Studio dışında hiçbir ek platform yüklenmesi gerekmez. Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](./setup-vsmac-tools-unity.md) bakın.
 
    Bu yükleme ekranında her bir bileşenin sürümü ve boyutu görüntülenir. Her bir bileşene tıklayarak bu bileşene ait bağımlılıkların bir listesini görüntüleyebilirsiniz (Android için), indirdiği ek paketler (.NET Core için) veya gerekli olan tüm ek uygulamaları (iOS ve macOS için) görüntüleyebilirsiniz:
 
@@ -88,16 +88,16 @@ Visual Studio 'da iOS ile çalışmaya yönelik olarak aşağıdaki parçalar ge
 
    ![Yükleyiciye devam etmek için izinleri girin](media/installer-image10.png)
 
-10. Yükleme başarılı olduktan sonra **Başlat**' a basarak Visual Studio 'da uygulama geliştirmeye başlayabilirsiniz:
+10. yükleme başarılı olduktan sonra **başlat**'a basarak Visual Studio uygulamalar geliştirmeye başlayabilirsiniz:
 
     ![Visual Studio’yu açın](media/installer-image11.png)
 
 > [!NOTE]
 > Özgün yükleme sırasında bir platform veya araç yüklememeyi seçtiyseniz (#6 adımında bunu seçerek), bileşenleri daha sonra eklemek istiyorsanız [yükleyiciyi](https://visualstudio.microsoft.com/vs/) yeniden çalıştırmalısınız.
 
-## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Bir güvenlik duvarı veya proxy sunucusunun arkasında Mac için Visual Studio yüklemesi
+## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>bir güvenlik duvarı veya proxy sunucusunun arkasında Mac için Visual Studio yüklemesi
 
-Bir güvenlik duvarının arkasında Mac için Visual Studio yüklemek için, yazılım için gerekli araçların ve güncelleştirmelerin indirilmelerine izin vermek üzere belirli uç noktalara erişilebilir hale gelmelidir.
+bir güvenlik duvarının arkasında Mac için Visual Studio yüklemek için, yazılım için gerekli araçların ve güncelleştirmelerin indirilmelerine izin vermek üzere belirli uç noktalara erişilebilir hale gelmelidir.
 
 Ağınızı aşağıdaki konumlara erişime izin verecek şekilde yapılandırın:
 
@@ -118,7 +118,7 @@ Mac için Visual Studio yükleme, uygulamalarınız için kod yazmaya başlayabi
 2. [Android SDK Emulator](https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/)
 4. [Cihazı Dağıtım için Ayarlama](https://developer.xamarin.com/guides/android/getting_started/installation/set_up_device_for_development/)
 
-### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>.NET Core Uygulamaları, ASP.NET Core Web Apps, Unity oyun geliştirme
+### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>.net Core uygulamaları, ASP.NET Core web apps, Unity oyun geliştirme
 
 Diğer Iş yükleri için [Iş yükleri](./workloads.md) sayfasına bakın.
 
@@ -128,4 +128,4 @@ Diğer Iş yükleri için [Iş yükleri](./workloads.md) sayfasına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 2017 'yi (Windows üzerinde) yükler](/visualstudio/install/install-visual-studio)
+- [Visual Studio 2017 'yi (Windows) yükler](/visualstudio/install/install-visual-studio)

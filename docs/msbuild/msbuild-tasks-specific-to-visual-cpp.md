@@ -1,6 +1,6 @@
 ---
-title: C++ ' a özgü MSBuild görevleri | Microsoft Docs
-description: MSBuild 'in C++ kodu oluştururken kullandığı, C++ yüklendiğinde kullanılabilen MSBuild görevleri bölümüne bakın.
+title: MSBuild C++ ' a özel görevler | Microsoft Docs
+description: c++ kodu oluştururken MSBuild tarafından kullanılan c++ yüklendiğinde kullanılabilecek MSBuild görevleri bölümüne bakın.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2019
 ms.topic: reference
@@ -15,18 +15,19 @@ ms.assetid: 05410f0c-7356-4692-bc00-20664421c9ff
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ba5ad3beb8a676df23cc69184c8766bca72f77
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d88d5a04126d06ad420f1af37abe3343ad23d74fd55c882f8580fd649f5e2da
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878272"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397455"
 ---
-# <a name="msbuild-tasks-specific-to-c"></a>C++ ' a özgü MSBuild görevleri
+# <a name="msbuild-tasks-specific-to-c"></a>C++ ' a özgü MSBuild görevler
 
-Görevler, derleme işlemi sırasında çalışan kodu sağlar. C++ yüklendiğinde, MSBuild ile yüklenenlere ek olarak aşağıdaki görevler kullanılabilir. Daha fazla bilgi için bkz. [MSBuild (C++) genel bakış](/cpp/build/msbuild-visual-cpp-overview).
+Görevler, derleme işlemi sırasında çalışan kodu sağlar. C++ yüklendiğinde, MSBuild ile yüklenenlere ek olarak aşağıdaki görevler kullanılabilir. daha fazla bilgi için bkz. [MSBuild (C++) genel bakış](/cpp/build/msbuild-visual-cpp-overview).
 
  Her görevin parametrelerine ek olarak, her görevin aşağıdaki parametreleri de vardır.
 
@@ -41,7 +42,7 @@ Görevler, derleme işlemi sırasında çalışan kodu sağlar. C++ yüklendiği
 |-----------|-----------------|
 |[BscMake görevi](../msbuild/bscmake-task.md)|Microsoft 'A ait bilgi Bakımı yardımcı programı aracını (*bscmake.exe*) sarar.|
 |[CL görevi](../msbuild/cl-task.md)|C++ derleyici aracını sarmalanmış (*cl.exe*).|
-|[CPPClean görevi](../msbuild/cppclean-task.md)|Bir C++ projesi yapılandırıldığında MSBuild 'in oluşturduğu geçici dosyaları siler.|
+|[CPPClean görevi](../msbuild/cppclean-task.md)|bir C++ projesi yapılandırıldığında MSBuild oluşturduğu geçici dosyaları siler.|
 |[ClangCompile görevi](../msbuild/clangcompile-task.md)|C++ derleyici aracını sarmalanmış (*clang.exe*).|
 |[CustomBuild görevi](../msbuild/custombuild-task.md)|C++ derleyici aracını sarmalanmış (*cmd.exe*).|
 |[FXC görevi](../msbuild/fxc-task.md)|Yapı sürecinde HLSL gölgelendirici derleyicileri kullanın.|
@@ -53,12 +54,12 @@ Görevler, derleme işlemi sırasında çalışan kodu sağlar. C++ yüklendiği
 |[MT görevi](../msbuild/mt-task.md)|Microsoft bildirim aracı 'nı (*mt.exe*) sarmalanmış.|
 |[MultiToolTask görevi](../msbuild/multitooltask-task.md)|Açıklama yok.|
 |[ParallelCustomBuild görevi](../msbuild/parallelcustombuild-task.md)|[CustomBuild görevinin](../msbuild/custombuild-task.md)paralel örneklerini çalıştırın.|
-|[RC görevi](../msbuild/rc-task.md)|Microsoft Windows Kaynak derleyicisi aracı 'nı (*rc.exe*) kaydırır.|
+|[RC görevi](../msbuild/rc-task.md)|Microsoft Windows kaynak derleyicisi aracını (*rc.exe*) sarmalanmış.|
 |[SetEnv görevi](../msbuild/setenv-task.md)|Belirtilen ortam değişkeninin değerini ayarlar veya siler.|
 |[TrackedVCToolTask temel sınıfı](../msbuild/trackedvctooltask-base-class.md)|[Vctooltask](../msbuild/vctooltask-base-class.md)'dan devralır.|
 |[VCMessage görevi](../msbuild/vcmessage-task.md)|Bir derleme sırasında uyarı iletilerini ve hata iletilerini günlüğe kaydeder. (Genişletilebilir değil. Yalnızca iç kullanım.)|
 |[VCToolTask temel sınıfı](../msbuild/vctooltask-base-class.md)|[ToolTask](/dotnet/api/microsoft.build.utilities.tooltask)'dan devralır.|
-|[XDCMake görevi](../msbuild/xdcmake-task.md)|XML belge açıklaması (*. xdc*) dosyalarını bir *. XML* dosyasında birleştiren XML belge aracı 'nı (*xdcmake.exe*) sarmalanmış hale gelir.|
+|[XDCMake görevi](../msbuild/xdcmake-task.md)|XML belge açıklaması (*. xdc*) dosyalarını bir *.xml* dosyasına birleştiren XML belge aracı 'nı (*xdcmake.exe*) sarmalanmış hale gelir.|
 |[XSD görevi](../msbuild/xsd-task.md)|Bir kaynaktan şema veya sınıf dosyaları üreten XML şema tanımı aracını (*xsd.exe*) sarmalanmış olarak kaydırır. *Aşağıdaki nota bakın.*|
 |[MSBuild başvurusu](../msbuild/msbuild-reference.md)|MSBuild sisteminin öğelerini açıklar.|
 |[Görevler](../msbuild/msbuild-tasks.md)|Bir yapı oluşturmak için birleştirilebilecek kod birimleri olan görevleri açıklar.|

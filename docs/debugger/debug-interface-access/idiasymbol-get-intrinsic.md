@@ -11,14 +11,15 @@ ms.assetid: f969f595-d9f9-48b9-adaa-63a6e4e09575
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bddec7880c69ccc9f4ce0ff20490ef355a71cfbd
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 32f828682f51c98bfd39c1f1d9d4c9bd149791cf8bd348eacd0d03eb7069c4e1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147312"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121420689"
 ---
 # <a name="idiasymbolget_intrinsic"></a>IDiaSymbol::get_intrinsic
 Bir sınıfın içsel bir tür olup olmadığını belirten bir bayrak alır.

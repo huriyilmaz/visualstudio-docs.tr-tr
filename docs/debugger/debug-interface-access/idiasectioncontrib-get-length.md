@@ -11,14 +11,15 @@ ms.assetid: d0f6b9c7-90fc-4e3c-945a-b8f683a8f006
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f429a4ee113e9f7a102f783cb336284d7af6bc0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: eb8c2ee0408b0f02c7edfd1acd9ccbf13352d62bf50663968719c7e383db17da
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157240"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121392139"
 ---
 # <a name="idiasectioncontribget_length"></a>IDiaSectionContrib::get_length
 Bir bölümdeki bayt sayısını alır.

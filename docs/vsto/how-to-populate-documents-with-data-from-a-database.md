@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma'
-description: Çözümünüzdeki veritabanından verileri nasıl kullanabileceğinizi ve verileri bir belgede göstermek için Windows Forms denetimleri nasıl kullanabileceğinizi öğrenin.
+description: çözümünüzdeki veritabanından verileri nasıl kullanabileceğinizi ve verileri bir belgede göstermek için Windows Forms denetimleri nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,26 +13,27 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: eb848d789185fe42e301eea414b4e2566f431897
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef324d108a8b8014c2c45671435ff2de811db6a72c5ca5e287013b4668949ae7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918606"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121424092"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma
 
-Microsoft Office, Windows Forms projelerindeki verilere erişirken kullandığınız şekilde, belge düzeyi projelerdeki verilere erişebilirsiniz. Aynı araçları ve kodu kullanarak verileri bir veritabanından çözümünüze taşıyın ve verileri görüntülemek için Windows Forms denetimleri kullanabilirsiniz.
+Microsoft Office, Windows Forms projelerindeki verilere erişirken kullandığınız şekilde, belge düzeyi projelerdeki verilere erişebilirsiniz. aynı araçları ve kodu kullanarak verileri bir veritabanından çözümünüze taşıyın ve verileri görüntülemek için Windows Forms denetimleri kullanabilirsiniz.
 
-Bunlara ek olarak, konak denetimlerini kullanarak verileri görüntüleyebilirsiniz. Konak denetimleri, Microsoft Office Word 'de olaylar ve veri bağlama özelliğiyle geliştirilmiş yerel nesnelerdir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+Bunlara ek olarak, konak denetimlerini kullanarak verileri görüntüleyebilirsiniz. konak denetimleri, Microsoft Office Word 'de olaylar ve veri bağlama özelliğiyle geliştirilmiş yerel nesnelerdir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
-Aşağıdaki örnek, tasarımcı kullanarak belge düzeyi projelerde veri bağlantılı denetimlerin nasıl ekleneceğini gösterir. Çalışma zamanında VSTO eklenti projelerinde veriye bağlama denetimleri ekleme hakkında bir örnek için bkz. [Izlenecek yol: VSTO eklenti projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).
+Aşağıdaki örnek, tasarımcı kullanarak belge düzeyi projelerde veri bağlantılı denetimlerin nasıl ekleneceğini gösterir. çalışma zamanında VSTO eklenti projelerine veri bağlama denetimleri ekleme hakkında bir örnek için, bkz. [izlenecek yol: VSTO eklenti projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).
 
-![video bağlantısı](../vsto/media/playvideo.gif "video bağlantısı") İlgili video gösterimi için bkz. [Office sistemi için Visual Studio araçları kullanarak verileri Word 2007 içerik denetimlerine bağlama (3,0)](/previous-versions/office/developer/office-2007/bb967663(v=office.12)).
+![video bağlantısı](../vsto/media/playvideo.gif "video bağlantısı") ilgili video gösterimi için bkz. [Office sistemi için Visual Studio Araçları kullanarak verileri Word 2007 içerik denetimlerine bağlama (3,0)](/previous-versions/office/developer/office-2007/bb967663(v=office.12)).
 
 ## <a name="add-a-control-to-a-document-at-design-time"></a>Belgeye tasarım zamanında bir denetim ekleme
 
@@ -52,7 +53,7 @@ Belgeye bir içerik denetimi eklenir. İçerik denetiminin türü, seçtiğiniz 
 
 Denetime ek olarak, aşağıdaki verilerle ilgili nesneler projenize otomatik olarak eklenir:
 
-- Veritabanına bağladığınız veri tablolarını kapsülleyen türü belirtilmiş bir veri kümesi. Daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
+- Veritabanına bağladığınız veri tablolarını kapsülleyen türü belirtilmiş bir veri kümesi. Daha fazla bilgi için bkz. [Visual Studio veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
 - <xref:System.Windows.Forms.BindingSource>Denetimi türü belirtilmiş veri kümesine bağlayan bir. Daha fazla bilgi için bkz. [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
@@ -70,7 +71,7 @@ Yazılan veri kümesine ve veritabanına güncelleştirmelerin gönderilmesi hak
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Nasıl yapılır: belgeleri nesnelerden verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)

@@ -11,17 +11,18 @@ ms.assetid: 7b2cb14a-511a-4fef-9e4f-308139719fba
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5bcf68b95bb905d41aaab906603cd4dd248e52ad
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 00b025ac3d14ee9c2d6bd767ff45c28222c71009ffe6702e183ffe705e3eaf31
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095946"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390300"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 İfade değerlendirmesini denetleyen bayrakları belirtir.

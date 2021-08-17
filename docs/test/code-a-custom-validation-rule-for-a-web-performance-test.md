@@ -17,12 +17,13 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: ae5228c4da9abef9b5bee417d5d3d71bb28d416d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: fce100dff65ce4a900affd270cc9779e5e208feadb382763192a53a2b83d4927
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964595"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121395440"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web performans testi için özel doğrulama kuralı kodu oluşturma
 
@@ -35,7 +36,7 @@ Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir do
 
 ## <a name="to-create-custom-validation-rules"></a>Özel doğrulama kuralları oluşturmak için
 
-1. Web performans testi içeren bir test projesi açın.
+1. web performans testi içeren bir Test Project açın.
 
 2. Seçim Doğrulama kuralınızı depolayacağınız ayrı bir sınıf kitaplığı projesi oluşturun.
 
@@ -48,9 +49,9 @@ Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir do
 
 5. Seçim Yeni sınıf kitaplığı projesi oluşturun.
 
-6. Seçim Test projesinde, özel doğrulama kuralını içeren sınıf kitaplığı projesine bir başvuru ekleyin.
+6. Seçim Test Project, özel doğrulama kuralını içeren sınıf kitaplığı projesine bir başvuru ekleyin.
 
-7. Test projesinde, **Web Performans Testi Düzenleyicisi** bir Web başarım testi açın.
+7. Test Project, **Web Performans Testi Düzenleyicisi** bir web başarım testi açın.
 
 8. Özel doğrulama kuralını bir Web performans testi isteğine eklemek için, bir isteğe sağ tıklayın ve **doğrulama kuralı ekle**' yi seçin.
 

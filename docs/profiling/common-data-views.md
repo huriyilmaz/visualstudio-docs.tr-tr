@@ -11,15 +11,16 @@ ms.assetid: ee5e964c-1222-496d-b825-166443a89d2b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: acb27aa2d5a1a0dd032612635f4b6549fa6671e9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7fd392884396917dbf20cc45e8960d258333ae9fea9874a6f9a38376e38cea85
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941287"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121396831"
 ---
 # <a name="common-data-views"></a>Ortak veri görünümleri
 Bu bölüm, tüm profil oluşturma yöntemleri için ortak olan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri içerir.

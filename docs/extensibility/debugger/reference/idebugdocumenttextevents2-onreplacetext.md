@@ -11,17 +11,18 @@ ms.assetid: cb39f025-66d8-4dc0-bef6-1bdc8e07db92
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9f57c0a48e523a57582130107a0d8b1012b1232e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2553c26ecbe229bcaab4989b22349a0644a2b869a5ad7e6fb3629f62d195a636
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054354"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402837"
 ---
 # <a name="idebugdocumenttextevents2onreplacetext"></a>IDebugDocumentTextEvents2::onReplaceText
 Hata ayıklama paketine metnin belgede değiştirildiğini bildirir.

@@ -9,14 +9,15 @@ ms.assetid: cf3eb110-d07f-4995-b68b-08290aa67d6f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d597b7a6089f07a1a7233fc780398358c2ad7d4
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ab445ff035eeb56460c6802edf1bdd395253a7cc4a0815f73c77f8b558d01529
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160724"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121391683"
 ---
 # <a name="idiasymbolget_numberofrows"></a>IDiaSymbol::get_numberOfRows
 Matristeki satır sayısını alır.

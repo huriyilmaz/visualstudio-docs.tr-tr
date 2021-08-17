@@ -6,16 +6,17 @@ ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9de3caf4bd0c9401628bb050168f3a7045f902f0
-ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
+ms.openlocfilehash: cd021ab15e7318a36fb7e41dd6f4f24ccaeebf0226b9a9ac76d0394d09a5349d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114592183"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121395930"
 ---
 # <a name="python-projects-in-visual-studio"></a>Visual Studio 'de Python projeleri
 
@@ -103,27 +104,27 @@ aşağıdaki tabloda Visual Studio 2019 ' de kullanılabilen şablonlar özetlen
 | **IronPython WPF uygulaması** | uygulamanın kullanıcı arabirimi için Windows Presentation Foundation XAML dosyaları ile ıronpython kullanan bir proje yapısı. Visual Studio XAML kullanıcı arabirimi tasarımcısı sağlar, arka plan kod Python 'da yazılabilir ve uygulama bir konsolu görüntülemeden çalışır. |
 | **IronPython Silverlight Web sayfası** | Silverlight kullanan bir tarayıcıda çalışan bir IronPython projesi. Uygulamanın Python kodu Web sayfasına betik olarak dahildir. Ortak betik etiketi, bir Silverlight içinde çalışan IronPython 'u Başlatan, Python kodunuzun DOM ile etkileşimde bulunduğu bazı JavaScript kodlarını çeker. |
 | **ıronpython Windows Forms uygulaması** | Windows Forms ile kod kullanılarak kullanıcı arabirimi ile ıronpython kullanan bir proje yapısı. Uygulama, konsolu görüntülemeden çalışır. |
-| **Arka plan uygulaması (IoT)** | , Cihazlarda arka plan hizmetleri olarak çalışacak Python projelerinin dağıtılmasını destekler. daha fazla bilgi için [Windows ıot Geliştirme Merkezi](https://dev.windows.com/en-us/iot) ziyaret edin. |
-| **Python uzantı modülü** | python **yerel geliştirme araçlarını** Visual Studio 2017 veya sonraki bir sürümde (bkz. [yükleme](installing-python-support-in-visual-studio.md)) python iş yüküne yüklediyseniz, bu şablon Visual C++ altında görüntülenir. Bu, [Python Için c++ uzantısı oluşturma](working-with-c-cpp-python-in-visual-studio.md)konusunda açıklananlara benzer bir C++ uzantısı DLL için çekirdek yapı sağlar. |
+| **Arka plan uygulaması (IoT)** | Cihazlarda arka plan hizmetleri olarak çalıştırmak için Python projelerini dağıtmayı destekler. Daha fazla [bilgi Windows IoT Geliştirme Merkezi IoT'leri](https://dev.windows.com/en-us/iot) ziyaret edin. |
+| **Python Uzantısı Modülü** | Bu şablon, Visual C++ 2017 veya sonraki bir sürümüne **Python** iş yüküyle Python yerel geliştirme araçlarını yüklemiş Visual Studio altında görünür (bkz. [Yükleme).](installing-python-support-in-visual-studio.md) Python için C++ uzantısı oluşturma konusunda açıklananlara benzer şekilde C++ uzantısı DLL'si [için temel yapıyı sağlar.](working-with-c-cpp-python-in-visual-studio.md) |
 ::: moniker-end
 
 > [!Note]
-> python, yorumlanan bir dil olduğundan, Visual Studio ' deki Python projeleri, diğer derlenmiş dil projeleri gibi tek başına yürütülebilir dosya oluşturmaz (örneğin, C#). Daha fazla bilgi için bkz. [sorular ve yanıtlar](overview-of-python-tools-for-visual-studio.md#questions-and-answers).
+> Python yorumlanır bir dil olduğundan, Visual Studio python projeleri, derlenmiş diğer dil projeleri (örneğin C#) gibi tek başına yürütülebilir bir yürütülebilir dosya üretmez. Daha fazla bilgi için bkz. [sorular ve yanıtlar.](overview-of-python-tools-for-visual-studio.md#questions-and-answers)
 
 <a name="create-project-from-existing-files"></a>
 
-### <a name="create-a-project-from-existing-files"></a>Mevcut dosyalardan bir proje oluşturma
+### <a name="create-a-project-from-existing-files"></a>Mevcut dosyalardan proje oluşturma
 
 > [!Important]
-> Burada açıklanan işlem özgün kaynak dosyalarını taşımaz veya kopyalamaz. Bir kopyalama ile çalışmak istiyorsanız önce klasörü çoğaltın.
+> Burada açıklanan işlem özgün kaynak dosyaları taşımaz veya kopyalamaz. Bir kopyayla çalışmak için önce klasörü çoğaltabilirsiniz.
 
 [!INCLUDE[project-from-existing](includes/project-from-existing.md)]
 
-## <a name="linked-files"></a>Bağlı dosyalar
+## <a name="linked-files"></a>Bağlantılı dosyalar
 
-Bağlantılı dosyalar bir projeye getirilen ancak genellikle uygulamanın proje klasörlerinin dışında bulunan dosyalardır. Bunlar, bir kaplama kısayolu simgesi olan normal dosyalar olarak **Çözüm Gezgini** görünürler: ![ bağlı dosya simgesi](media/projects-linked-file-icon.png)
+Bağlantılı dosyalar bir projeye getirilen ancak genellikle uygulamanın proje klasörlerinin dışında bulunan dosyalardır. Bunlar, **Çözüm Gezgini** kısayol simgesiyle normal dosyalar olarak görünür: ![ Bağlantılı dosya simgesi](media/projects-linked-file-icon.png)
 
-Bağlantılı dosyalar *. pyproj* dosyasında öğesi kullanılarak belirtilir `<Compile Include="...">` . Bağlı dosyalar, dizin yapısının dışında göreli bir yol kullanıyorsa veya **Çözüm Gezgini** içinde yollar kullandıklarında açık bir şekilde yapılır:
+Bağlantılı dosyalar öğesi kullanılarak *.pyproj* dosyasında `<Compile Include="...">` belirtilir. Bağlı dosyalar dizin yapısının dışında göreli bir yol kullanıyorsa örtülü veya dizin içindeki yolları kullanıyorsa **açık Çözüm Gezgini:**
 
 ```xml
 <Compile Include="..\test2.py">
@@ -131,44 +132,44 @@ Bağlantılı dosyalar *. pyproj* dosyasında öğesi kullanılarak belirtilir `
 </Compile>
 ```
 
-Bağlı dosyalar aşağıdaki koşullardan herhangi biri altında yok sayılır:
+Bağlantılı dosyalar aşağıdaki koşullardan herhangi biri altında yoksayılır:
 
-- Bağlantılı dosya, bağlantı meta verilerini ve Include özniteliğinde belirtilen yolu proje dizini içinde yaşar
-- Bağlantılı dosya proje hiyerarşisi içinde bulunan bir dosyayı yineliyor
-- Bağlantılı dosya, bağlantı meta verilerini içerir ve bağlantı yolu proje hiyerarşisinin dışında göreli bir yoldur
-- Bağlantı yolunun kökü
+- Bağlantılı dosya, Bağlantı meta verilerini ve Include özniteliğinde belirtilen yolu proje dizininde içerir
+- Bağlantılı dosya, proje hiyerarşisinde mevcut olan bir dosyayı yineler
+- Bağlantılı dosya Bağlantı meta verilerini içerir ve Bağlantı yolu proje hiyerarşisinin dışında göreli bir yoldur
+- Bağlantı yolunun kökü vardır
 
 ### <a name="work-with-linked-files"></a>Bağlantılı dosyalarla çalışma
 
-Var olan bir öğeyi bağlantı olarak eklemek için, projede dosyayı eklemek istediğiniz klasörü sağ tıklatın ve ardından   >  **Varolan öğe** Ekle ' yi seçin. Görüntülenen iletişim kutusunda bir dosya seçin ve **Ekle** düğmesine açılan listeden **bağlantı olarak ekle** ' yi seçin. Çakışan dosya olmadığından, bu komut seçili klasörde bir bağlantı oluşturur. Ancak, aynı ada sahip bir dosya zaten varsa veya projede zaten bu dosya için bir bağlantı varsa bağlantı eklenmez.
+Var olan bir öğeyi bağlantı olarak eklemek için projesinde dosyayı eklemek istediğiniz klasöre sağ tıklayın ve Var Olan Öğeyi **Ekle'yi**  >  **seçin.** Açılan iletişim kutusunda bir dosya seçin ve Ekle **düğmesinin** açılan menüsünden Bağlantı Olarak **Ekle'yi** seçin. Çakışan dosya olmadığının şartıyla, bu komut seçili klasörde bir bağlantı oluşturur. Ancak projede zaten aynı adı veya bu dosyanın bağlantısı olan bir dosya varsa bağlantı eklenmez.
 
-Proje klasörlerinde zaten bulunan bir dosyaya bağlantı kurmayı denerseniz, bir bağlantı olarak değil, normal bir dosya olarak eklenir. Dosyayı bir bağlantıya dönüştürmek **için dosya**  >  **farklı kaydet** ' i seçerek dosyayı proje hiyerarşisi dışında bir konuma kaydedin; Visual Studio otomatik olarak bağlantıya dönüştürülür. Benzer şekilde, dosyayı   >  Proje hiyerarşisinde bir yere kaydetmek için dosya **farklı kaydet** kullanılarak bir bağlantı geri dönüştürülebilir.
+Proje klasörlerde zaten var olan bir dosyaya bağlantı girişiminde bulunursanız, bağlantı olarak değil, normal bir dosya olarak eklenir. Bir dosyayı bir bağlantıya dönüştürmek için Dosya **Farklı**  >  **Kaydet'i** seçerek dosyayı proje hiyerarşisinin dışındaki bir konuma kaydedin; Visual Studio otomatik olarak bir bağlantıya dönüştürür. Benzer şekilde, bir bağlantı, dosyayı proje hiyerarşisinin içinde **bir** yere kaydetmek için  >   Dosya Farklı Kaydet kullanılarak geri dönüştürmek için kullanılabilir.
 
-Bağlı bir dosyayı **Çözüm Gezgini** taşırsanız bağlantı taşınır ancak gerçek dosya etkilenmez. Benzer şekilde, bir bağlantıyı silme, dosyayı etkilemeden bağlantıyı kaldırır.
+bağlantılı bir dosyayı dosyanın **Çözüm Gezgini,** bağlantı taşınır ancak gerçek dosya etkilenmez. Benzer şekilde, bağlantıyı silmek de dosyayı etkilemeden bağlantıyı kaldırır.
 
 Bağlantılı dosyalar yeniden adlandırılamaz.
 
 ## <a name="references"></a>Başvurular
 
-Visual Studio projeler, **Çözüm Gezgini** içindeki **başvurular** düğümü altında görünen projelere ve uzantılara başvuru eklemeyi destekler:
+Visual Studio projeleri, projelerde ve uzantılarda, uygulamanın Başvurular düğümü altında görünen **başvurular** **eklemeyi Çözüm Gezgini:**
 
-![Python projelerindeki uzantı başvuruları](media/projects-extension-references.png)
+![Python projelerinde uzantı başvuruları](media/projects-extension-references.png)
 
-Uzantı başvuruları genellikle projeler arasındaki bağımlılıkları gösterir ve tasarım zamanında IntelliSense sağlamak veya derleme zamanında bağlamak için kullanılır. Python projeleri, başvuruları benzer bir biçimde kullanır, ancak Python 'un dinamik doğası gereği, gelişmiş IntelliSense sağlamak için öncelikle tasarım zamanında kullanılır. ayrıca, ek bağımlılıklar yüklemek üzere Microsoft Azure dağıtım için de kullanılabilir.
+Uzantı başvuruları genellikle projeler arasındaki bağımlılıkları ifade ediyor ve tasarım zamanında IntelliSense sağlamak veya derleme zamanında bağlantı sağlamak için kullanılır. Python projeleri başvuruları benzer bir şekilde kullanır, ancak Python'ın dinamik yapısı nedeniyle bunlar öncelikli olarak tasarım zamanında gelişmiş IntelliSense sağlamak için kullanılır. Bunlar, ek bağımlılıkları yüklemek Microsoft Azure dağıtım için de kullanılabilir.
 
 ### <a name="extension-modules"></a>Uzantı modülleri
 
-*. PYD* dosyası başvurusu, oluşturulan modül için IntelliSense 'i sağlar. Visual Studio, *. pyd* dosyasını Python yorumlayıcı 'ya yükler ve bunların türlerini ve işlevlerini gözlemleyip. Ayrıca, imza yardımı sağlamak için işlevler için belge dizelerini ayrıştırmaya çalışır.
+*.pyd* dosyasına yapılan başvuru, oluşturulan modül için IntelliSense'i sağlar. *Visual Studio.pyd dosyasını* Python yorumlayıcıya yükler ve türlerini ve işlevlerini inceler. Ayrıca, imza yardımı sağlamak için işlevler için belge dizelerini ayrıştırmaya çalışır.
 
-herhangi bir zamanda uzantı modülü diskte güncelleştirilirse, Visual Studio arka planda modülü yeniden analiz eder. Bu eylemin çalışma zamanı davranışı üzerinde hiçbir etkisi yoktur, ancak bazı tamamlamalar analiz tamamlanana kadar kullanılamaz.
+Uzantı modülü diskte herhangi bir zamanda güncelleştirildiğinde, Visual Studio modülünü arka planda yeniden kullanır. Bu eylemin çalışma zamanı davranışı üzerinde hiçbir etkisi yoktur, ancak analiz tamamlandıktan sonra bazı tamamlamalar kullanılamaz.
 
-Modülün bulunduğu klasöre bir [arama yolu](search-paths.md) da eklemeniz gerekebilir.
+Modülü içeren klasöre [bir arama](search-paths.md) yolu da eklemeniz gerekir.
 
 ### <a name="net-projects"></a>.NET projeleri
 
-IronPython ile çalışırken, IntelliSense 'i etkinleştirmek için .NET derlemelerine başvurular ekleyebilirsiniz. Çözümünüzdeki .NET projeleri için, Python projenizde **Başvurular** düğümüne sağ tıklayın, **Başvuru Ekle**' yi seçin, **Projeler** sekmesini seçin ve istediğiniz projeye gidin. Ayrı olarak indirdiğiniz dll 'Ler için, bunun yerine, **Gözden** geçirme sekmesini seçin ve istenen dll 'ye gidin.
+IronPython ile çalışırken, IntelliSense'i etkinleştirmek için .NET derlemelerine başvurular ebilirsiniz. Çözümünüzdeki .NET projeleri için Python  projenizin Başvurular düğümüne sağ tıklayın,  Başvuru Ekle'yi **seçin,** Projeler sekmesini seçin ve istenen projeye göz atın. Ayrı olarak indirdiğiniz DLL'ler için Gözat sekmesini **seçin** ve istediğiniz DLL'ye göz atabilirsiniz.
 
-Bir çağrısı yapılıncaya kadar IronPython içindeki başvurular kullanılamadığından `clr.AddReference('<AssemblyName>')` , `clr.AddReference` genellikle kodunuzun başlangıcında derlemeye uygun bir çağrı eklemeniz gerekir. örneğin, Visual Studio içindeki **ıronpython Windows Forms uygulama** projesi şablonu tarafından oluşturulan kod, dosyanın en üstünde iki çağrı içerir:
+IronPython'daki başvurular çağrısı yapılana kadar kullanılamaz olduğundan, derlemeye, genellikle kodunuzun başına uygun bir çağrı `clr.AddReference('<AssemblyName>')` `clr.AddReference` eklemeniz gerekir. Örneğin, **Windows'de IronPython Windows Forms** Uygulaması proje şablonu Visual Studio dosyanın en üstünde iki çağrı içerir:
 
 ```python
 import clr
@@ -183,9 +184,9 @@ from System.Windows.Forms import *
 
 ### <a name="webpi-projects"></a>WebPI projeleri
 
-webpı akışı aracılığıyla ek bileşenler yükleyebileceğiniz Microsoft Azure Cloud Services dağıtım için webpı ürün girişlerine başvurular ekleyebilirsiniz. Varsayılan olarak, belirtilen akış Python 'a özgüdür ve Docgo, Cpyıthon ve diğer çekirdek bileşenleri içerir. Ayrıca, aşağıda gösterildiği gibi kendi akışınızı de seçebilirsiniz. Microsoft Azure yayımlandığında, bir kurulum görevi başvurulan ürünlerin tümünü kurar.
+WebPI akışı aracılığıyla ek bileşenler yükleyecek şekilde web Microsoft Azure Cloud Services webpi ürün girişlerine başvurular ebilirsiniz. Varsayılan olarak, görüntülenen akış Python'a özgü olup Django, CPython ve diğer temel bileşenleri içerir. Ayrıca, aşağıda gösterildiği gibi kendi akışınızı da seçin. Microsoft Azure'da yayımlarken, bir kurulum görevi başvurulan tüm ürünleri yüklür.
 
 > [!IMPORTANT]
-> webpı projeleri Visual Studio 2017 veya Visual Studio 2019 ' de kullanılamaz.
+> WebPI projeleri 2017 veya Visual Studio 2019 Visual Studio kullanılamaz.
 
-![WebPI başvuruları](media/projects-webPI-components.png)
+![WebPI Başvuruları](media/projects-webPI-components.png)

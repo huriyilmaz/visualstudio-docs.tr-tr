@@ -11,17 +11,18 @@ ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8e35e0b219bb77ce722f2e06a260de7ecc837dfb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c1bc858ee22b388d5a782a572f2267f78450c1048d4bb8a7c6718656d4d049b5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085331"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121390491"
 ---
 # <a name="bp_flags"></a>BP_FLAGS
 Bir kesme noktası ayarlarken ek bilgi belirtmek için kullanılabilen isteğe bağlı bayraklar sağlar.
