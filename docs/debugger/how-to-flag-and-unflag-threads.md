@@ -18,25 +18,25 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 62b3b57e7932ac44a24a0d4946f38be6f1b5d9502dabc6a3bc8a8070414831b8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 89caed1b5721848e570a815e73d62b73608fecbd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379080"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128344"
 ---
 # <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Nasıl bilinir: İş Parçacıklarını Bayrakla BayrakLa ve Bayrakla Asma (C#, Visual Basic, C++)
 
-İş **Parçacıkları,** Paralel Yığınlar **(iş** parçacığı **görünümü),** Paralel İzleme ve GPU İş Parçacıkları pencerelerini bir simgeyle işaretleyerek özel olarak dikkat vermek istediğiniz bir iş parçacığını **işaretleyerek işaretleyerek** işaretlenir. Bu simge, sizin ve başkalarının bayraklı iş parçacıklarını diğer iş parçacıklarından ayırmanıza yardımcı olabilir.
+İş **Parçacıkları,** Paralel Yığınlar **(iş** parçacığı **görünümü),** Paralel İzleme ve GPU İş Parçacıkları pencerelerini bir simgeyle işaretleyerek özel olarak dikkat vermek istediğiniz bir iş parçacığını **işaretleyerek işaret** kullanabilirsiniz. Bu simge, sizin ve başkalarının bayraklı iş parçacıklarını diğer iş parçacıklarından ayırmanıza yardımcı olabilir.
 
-Bayraklı iş parçacıkları ayrıca  Hata Ayıklama  Konumu araç çubuğundaki İş Parçacığı listesinde ve diğer çok iş parçacıklı hata ayıklama pencerelerde özel işlem alır. Tüm iş parçacıklarını veya yalnızca işaretlenen iş parçacıklarını **İş** Parçacığı listesinde veya diğer pencerelerde gösterebilirsiniz.
+Bayraklı iş parçacıkları ayrıca  Hata Ayıklama  Konumu araç çubuğundaki İş Parçacığı listesinde ve diğer çok iş parçacıklı hata ayıklama pencerelerde özel işlem alır. Tüm iş parçacıklarını veya işaretlenen iş parçacıklarını yalnızca **İş** Parçacığı listesinde veya diğer pencerelerde gösterebilirsiniz.
 
 ### <a name="to-flag-or-unflag-a-thread"></a>Bir iş parçacığını bayrakla bayrakla bayraklama veya bayrağını açma
 
 - İş Parçacıkları **veya** **Paralel İzleme** penceresinde ilgilendiğinizi iş parçacığını bulun ve bayrağı seçmek veya temizlemek için bayrak simgesine tıklayın.
 - Paralel **Yığınlar penceresinde** bir iş parçacığına veya iş parçacığı grubuna sağ tıklayın ve Bayrak / veya Bayrağını **Aç \<thread> /** seçeneğini **seçin. \<thread>**
 
-### <a name="to-unflag-all-threads"></a>Tüm iş parçacıklarının bayrağını geri alama
+### <a name="to-unflag-all-threads"></a>Tüm iş parçacıklarını ünflag etmek için
 
 - İş Parçacıkları **penceresinde** herhangi bir iş parçacığına sağ tıklayın ve ardından Tüm İş **Parçacıklarını Bayrağını Aç'a tıklayın.**
 - Paralel İzleme **penceresinde tüm** bayraklı iş parçacıklarını seçin, ardından sağ tıklayın ve Bayrağını **aç'ı seçin.**

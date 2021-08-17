@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f964625f1dfb6996d6d2577c51b1ce8807a75a3afd676915e8677b80c1521ca
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 11c59ded5e3572eb0573738414f14e2804f4f177
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121326670"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129603"
 ---
 # <a name="baseclass"></a>BaseClass
 Kullanıcı tanımlı tür (UDT) sembolü için her temel sınıf, etiketli bir alt sınıf tarafından `SymTagBaseClass` tanımlanır. [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) özelliği, temel alınan UDT'nin sembolünü içerir ve temel alınan UDT'nin tüm özellikleri bu BaseClass simgesinin bir parçası olarak kullanılabilir.
@@ -49,7 +49,7 @@ Kullanıcı tanımlı tür (UDT) sembolü için her temel sınıf, etiketli bir 
 |[IDiaSymbol::get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md)|`LONG`|Yapı içindeki temel sınıfı temsil eden alt nesnenin uzaklığı.|
 |[IDiaSymbol::get_overloadedOperator](../../debugger/debug-interface-access/idiasymbol-get-overloadedoperator.md)|`BOOL`|`TRUE` temel sınıfın aşırı yüklenmiş işleçleri varsa.|
 |[IDiaSymbol::get_packed](../../debugger/debug-interface-access/idiasymbol-get-packed.md)|`BOOL`|`TRUE` temel sınıf paketli ise.|
-|[IDiaSymbol::get_scoped](../../debugger/debug-interface-access/idiasymbol-get-scoped.md)|`BOOL`|`TRUE` temel sınıf, küresel olmayan bir kapsamda görünüyorsa.|
+|[IDiaSymbol::get_scoped](../../debugger/debug-interface-access/idiasymbol-get-scoped.md)|`BOOL`|`TRUE` temel sınıf, küresel olmayan bir kapsamda görünürse.|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Sembolün dizin kimliği.|
 |[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagBaseClass` [(SymTagEnum Numaralama değerlerinden](../../debugger/debug-interface-access/symtagenum.md) biri).|
 |[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|Temel sınıf [UDT'nin simgesi.](../../debugger/debug-interface-access/udt.md)|

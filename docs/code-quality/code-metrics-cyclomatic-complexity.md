@@ -9,12 +9,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 949944b7bec47bf952e51ede2cb5593cb84e407ba1e7554765a5ce33edaded9f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b8de7119eb232afb904896cfedbbece9bbf2f8d5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240971"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129980"
 ---
 # <a name="code-metrics---cyclomatic-complexity"></a>Kod ölçümleri-döngüsel karmaşıklığı
 

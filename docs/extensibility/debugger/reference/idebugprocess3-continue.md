@@ -1,6 +1,6 @@
 ---
-description: Bu işlemi durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) korunur ve işlem yeniden yürütülmeye başlar.
-title: 'IDebugProcess3:: Continue | Microsoft Docs'
+description: Bu işlemi durdurulmuş durumdan çalıştırmaya devam eder. Önceki yürütme durumu (adım gibi) korunur ve işlem yeniden yürütülmaya başlar.
+title: IDebugProcess3::Continue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,23 +11,24 @@ ms.assetid: 57506242-5763-4c08-adb9-8a78ce02cebb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 11f2d5b652b950976834b8ba18f71a1dc0d1b34c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8e0dc621ce834582ee5a19a9124d856f94adaf2f706987176ff707c0c11fbd83
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081587"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121416241"
 ---
 # <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
-Bu işlemi durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) korunur ve işlem yeniden yürütülmeye başlar.
+Bu işlemi durdurulmuş durumdan çalıştırmaya devam eder. Önceki yürütme durumu (adım gibi) korunur ve işlem yeniden yürütülmaya başlar.
 
 > [!NOTE]
-> Bu yöntem [devam etmek](../../../extensibility/debugger/reference/idebugprogram2-continue.md)yerine kullanılmalıdır.
+> Bu yöntem, Continue yerine [kullanılmalıdır.](../../../extensibility/debugger/reference/idebugprogram2-continue.md)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,15 +46,15 @@ int Continue(
 
 ## <a name="parameters"></a>Parametreler
 `pThread`\
-'ndaki Devam etmek için iş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+[in] Devam etmek için iş parçacığını temsil eden [bir IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, kaç işlem hata ayıklandığına veya durdurma olayını hangi işlemin üretdiğine bakılmaksızın bu işlemde çağrılır. Uygulamanın önceki yürütme durumunu (bir adım gibi) yürütmesi ve yürütülmeye devam etmeden önce hiçbir daha durdurulmamış olsa da yürütmeye devam etmesi gerekir. Diğer bir deyişle, bu işlemdeki bir iş parçacığı adım adım bir işlem yapıyor ve başka bir işlem durdurulduğu için durdurulduysa ve daha sonra `Continue` çağrıldıysa, belirtilen iş parçacığının orijinal adım aşımı işlemini tamamlaması gerekir.
+ Bu yöntem, kaç işlemde hata ayıklandı veya durdurma olayı oluşturan işlemden bağımsız olarak bu işlemde çağrılır. Uygulama önceki yürütme durumunu (örneğin, bir adım) tutmalı ve önceki yürütmesini tamamlamadan önce hiç durdurulmamıştı gibi yürütmeye devam edecektir. Başka bir ifadeyle, bu işlemde bir iş parçacığı bir adım adım işlem yapıyorsa ve başka bir işlem durdurulmuş ve ardından çağrıldıktan sonra durduruldu ise, belirtilen iş parçacığının özgün adım adım `Continue` işlemi tamamlaması gerekir.
 
- **Uyarı** Bu çağrıyı gerçekleştirirken [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) için bir durdurma olayı veya anında (zaman uyumlu) olay göndermeyin; Aksi takdirde hata ayıklayıcı yanıt vermeyi durdurabilir.
+ **Uyarı** Bu çağrıyı işleme sırasında Bir durdurma olayı veya hemen (zaman uyumlu) [olayı Event'e](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) göndermeyin; aksi takdirde hata ayıklayıcı yanıt vermemeyebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

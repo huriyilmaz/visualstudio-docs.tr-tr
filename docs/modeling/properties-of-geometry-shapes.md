@@ -11,17 +11,18 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 94eb9ed8050b8a95fde712db4e98bd48f40a72ee
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: aea5ebb6bfefe59bc0d761f4da095e3d64391706e5ee73e32fd3e8871216ad61
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390391"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121231476"
 ---
 # <a name="properties-of-geometry-shapes"></a>Geometri Şekillerinin Özellikleri
-Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl görüntülendiğinden belirtmek için geometri şekillerini kullanabilirsiniz. Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, [bkz. Domain-Specific Dili Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
+Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl görüntülendiğinden belirtmek için geometri şekillerini kullanabilirsiniz. Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, bkz. Domain-Specific Dili [Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
  Geometri şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 
@@ -39,7 +40,7 @@ Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl
 |Özel Öznitelikler|Bu şekil için oluşturulan kaynak kod sınıfına öznitelik eklemek için kullanılır.|\<none>|
 |Çift Türetilen|ise, `True` hem temel bir sınıf hem de kısmi bir sınıf (geçersiz kılmalar aracılığıyla özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için [bkz. Oluşturulan Sınıfları Geçersiz Kılma ve Genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|Yanlış|
 |Özel Oluşturucuya Sahip|ise, `True` kaynak kodunda özel bir oluşturucu sağlanır. Daha fazla bilgi için [bkz. Oluşturulan Sınıfları Geçersiz Kılma ve Genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|Yanlış|
-|Devralma Değiştiricisi|Şekil ( veya ) ile oluşturulan kaynak kod sınıfının `none` devralmanın nasıl olduğunu `abstract` `sealed` açıklar.|yok|
+|Devralma Değiştiricisi|Şekilden ( veya ) oluşturulan kaynak kod sınıfının `none` devralmanın nasıl olduğunu `abstract` `sealed` açıklar.|yok|
 |Temel Geometri Şekli|Bu şeklin temel sınıfı.|(yok)|
 |Name|Bu şeklin adı.|Geçerli ad|
 |Ad Alanı|Bu şekle bağlı olan ad alanı.|Geçerli ad alanı|
@@ -51,7 +52,7 @@ Etki alanı sınıflarının örneklerinin etki alanına özgü bir dilde nasıl
 |Açıklama|Oluşturulan tasarımcıyı belgeley etmek için kullanılan açıklama.|\<none>|
 |Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Araç İpucu Metni Düzeltildi|Sabit bir araç ipucu için kullanılan metin.|\<none>|
-|Help Anahtar Sözcüğü|Bu şekil için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
+|Yardım Anahtar Sözcüğü|Bu şekil için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

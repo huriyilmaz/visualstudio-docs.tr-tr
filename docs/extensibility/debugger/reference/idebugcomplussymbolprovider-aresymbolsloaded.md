@@ -1,6 +1,6 @@
 ---
-description: Uygulama etki alanı tanımlayıcısı verilen belirtilen modül için hata ayıklama simgelerinin yüklenip yüklenmediğini belirler.
-title: 'IDebugComPlusSymbolProvider:: AreSymbolsLoaded | Microsoft Docs'
+description: Uygulama etki alanı tanımlayıcısı verilmelidir, belirtilen modül için hata ayıklama sembollerinin yük olup olmadığını belirler.
+title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: bbf8707d-f89c-4177-b019-d519f1ec6f4a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 567a0906544a28c2f145e8b4361045b56b6f9278
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ac784a7f6de528e773219a1aa65da333e8e09832044c25b2106ba72840fb037a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088308"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342472"
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
-Uygulama etki alanı tanımlayıcısı verilen belirtilen modül için hata ayıklama simgelerinin yüklenip yüklenmediğini belirler.
+Uygulama etki alanı tanımlayıcısı verilmelidir, belirtilen modül için hata ayıklama sembollerinin yük olup olmadığını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +44,16 @@ int AreSymbolsLoaded (
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-'ndaki Uygulama etki alanı için tanımlayıcı.
+[in] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-'ndaki Modül için benzersiz tanımlayıcı.
+[in] Modülün benzersiz tanımlayıcısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Hata ayıklama sembolleri yüklüyse, öğesini döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` .
+Hata ayıklama sembolleri yüklenirse döndürür; aksi `S_OK` takdirde `S_FALSE` döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(

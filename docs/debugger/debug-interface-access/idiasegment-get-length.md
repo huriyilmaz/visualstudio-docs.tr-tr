@@ -1,6 +1,6 @@
 ---
-description: Segmentte bayt sayısını alan.
-title: IDiaSegment::get_length | Microsoft Docs
+description: Kesimdeki bayt sayısını alır.
+title: 'IDiaSegment:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cc5e6f9bc8a04fea6e6deb9656e64c374c4df17d982bc2ae5661c9fd80f5e06
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fef912cc248b02ad9787977760837e1b45f45088
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392019"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128994"
 ---
 # <a name="idiasegmentget_length"></a>IDiaSegment::get_length
-Segmentte bayt sayısını alan.
+Kesimdeki bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_ length (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Segmentte bayt sayısını döndürür.
+dışı Kesimdeki bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31a7336bca97dde1d01be15a54c86d7b690a69928e4e1131064124c91871f59d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 07986620b374b82396ec2e8c46ee26620dfe6db6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121442111"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107062"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>hızlı başlangıç: Visual Studio CPU kullanım verilerini analiz etme (C++)
 

@@ -1,6 +1,6 @@
 ---
 title: Kod kapsamı testi
-description: Visual Studio 'nun kod kapsamı özelliğini kullanarak, kodlanmış testler tarafından proje kodunuzun ne oranlarından hangilerinin test edildiğini öğrenin.
+description: Visual Studio kod kapsamı özelliğini kullanarak proje kodunuzun hangi oranlarından kodlanmış testler tarafından test edildiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 07/23/2019
 ms.topic: conceptual
@@ -13,12 +13,13 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: c74a39c81de2612bca5c3fc39286a4432916eb11
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 157f7fe753b2bd3f9c406a0e055187ca57402cca
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850080"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106646"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Kod kapsamını kullanarak ne kadar kodun test edildiğini belirleme
 
@@ -36,7 +37,7 @@ Test yöntemlerini Test Gezgini'ni kullanarak çalıştırdığınızda kod kaps
 
 ## <a name="requirements"></a>Gereksinimler
 
-Kod kapsamı özelliği yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
+kod kapsamı özelliği yalnızca Visual Studio Enterprise sürümünde kullanılabilir.
 
 ## <a name="analyze-code-coverage"></a>Kod kapsamını analiz et
 
@@ -126,7 +127,7 @@ Birleştirme işleminin sonuçlarını kaydetmek için **kod kapsamı sonuçlar�
 > [!TIP]
 > Bir sınıfın dışlanması türetilmiş sınıfları dışlamaz.
 
-Örneğin:
+Örnek:
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;
@@ -268,13 +269,13 @@ Aşağıdaki makroları kullanın:
 
 ### <a name="include-or-exclude-additional-elements"></a>Ek öğeleri dahil etme veya dışlama
 
-Kod kapsamı Analizi yalnızca yüklenmiş ve. *pdb* dosyası *. dll* veya *. exe* dosyası ile aynı dizinde kullanılabilen derlemelerde gerçekleştirilir. Bu nedenle, bazı durumlarda, uygun *. pdb* dosyalarının kopyalarını alarak dahil edilen derleme kümesini genişletebilirsiniz.
+Kod kapsamı Analizi yalnızca yüklenmiş ve bir *. pdb* dosyasının *.dll* veya *.exe* dosyası ile aynı dizinde kullanılabildiği derlemelerde gerçekleştirilir. Bu nedenle, bazı durumlarda, uygun *. pdb* dosyalarının kopyalarını alarak dahil edilen derleme kümesini genişletebilirsiniz.
 
 Bir *. runsettings* dosyası yazarak kod kapsamı analizi için hangi derlemelerin ve öğelerin seçildiği hakkında daha fazla denetim gerçekleştirebilirsiniz. Örneğin, kendi sınıfları için öznitelikler eklemek zorunda kalmadan belirli tür derlemeleri hariç tutabilirsiniz. Daha fazla bilgi için bkz. [kod kapsamı analizini özelleştirme](../test/customizing-code-coverage-analysis.md).
 
 ## <a name="analyze-code-coverage-in-azure-pipelines"></a>Azure Pipelines kod kapsamını analiz etme
 
-Kodunuzu iade ettiğinizde, testleriniz yapı sunucusunda diğer takım üyelerinden gelen testlerle birlikte çalışır. Tüm projede en güncel ve kapsamlı kapsama görünümünü almak için Azure Pipelines kod kapsamını çözümlemek yararlı olur. Ayrıca, genellikle geliştirme makinelerinde çalıştırılmamaları için otomatikleştirilmiş Sistem testlerini ve diğer kodlanmış testleri de içerir. Daha fazla bilgi için bkz. [Derlemelerinizle birim testlerini çalıştırma](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true).
+Kodunuzu iade ettiğinizde, testleriniz yapı sunucusunda diğer takım üyelerinden gelen testlerle birlikte çalışır. tüm projede en güncel ve kapsamlı kapsama görünümünü almak için Azure Pipelines kod kapsamını çözümlemek yararlı olur. Ayrıca, genellikle geliştirme makinelerinde çalıştırılmamaları için otomatikleştirilmiş Sistem testlerini ve diğer kodlanmış testleri de içerir. Daha fazla bilgi için bkz. [Derlemelerinizle birim testlerini çalıştırma](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true).
 
 ## <a name="analyze-code-coverage-from-the-command-line"></a>Komut satırından kod kapsamını analiz etme
 
@@ -284,13 +285,13 @@ Komut satırından testleri çalıştırmak için *vstest.console.exe* kullanın
 
    ::: moniker range="vs-2017"
 
-   Windows **Başlat** menüsünde, vs 2017 için **Visual Studio 2017** > **Geliştirici komut istemi** seçin.
+   Windows **başlat** menüsünde  > **VS 2017 için** Visual Studio 2017 Geliştirici Komut İstemi ' yı seçin.
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   Windows **Başlat** menüsünde, vs 2019 için **Visual Studio 2019** > **Geliştirici komut istemi** seçin.
+   Windows **başlat** menüsünde  > **VS 2019 için** Visual Studio 2019 Geliştirici Komut İstemi ' yı seçin.
 
    ::: moniker-end
 

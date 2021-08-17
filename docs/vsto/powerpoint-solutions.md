@@ -1,6 +1,6 @@
 ---
 title: PowerPoint çözümleri
-description: Visual Studio 'Nun, Microsoft PowerPoint için VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağladığını öğrenin.
+description: Microsoft Visual Studio'ler için yeni eklenti oluşturmak üzere VSTO proje şablonları sağladığını PowerPoint.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -17,69 +17,70 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 4033c3fbae9aaefdc094d94d3a4ba70b67d40bf5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 97cec1fe5e1954ff04c56f40e3b0313aa35c2170
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891910"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025907"
 ---
 # <a name="powerpoint-solutions"></a>PowerPoint çözümleri
-  Visual Studio, Microsoft Office PowerPoint için VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. PowerPoint 'i otomatikleştirebilmek, PowerPoint özelliklerini genişletmek veya PowerPoint Kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz.
+  Visual Studio, VSTO için VSTO proje şablonları Microsoft Office PowerPoint. VSTO kullanıcı arabirimini (UI) PowerPoint, PowerPoint özelliklerini genişletmek veya PowerPoint özelliklerini özelleştirmek için PowerPoint kullanabilirsiniz.
 
- VSTO eklentileri hakkında daha fazla bilgi için bkz. VSTO eklentileri ve VSTO eklentilerinin [mimarisi](architecture-of-vsto-add-ins.md) [programlamasına](getting-started-programming-vsto-add-ins.md) başlama. Microsoft Office ile programlama konusunda yeni başladıysanız, bkz. [Visual Studio 'Da Office geliştirme &#40;kullanmaya başlama&#41;](getting-started-office-development-in-visual-studio.md).
+ Eklentilerin nasıl VSTO daha fazla bilgi için [bkz. Kullanmaya başlayın](getting-started-programming-vsto-add-ins.md) programlama VSTO Eklentileri ve [VSTO Mimarisi.](architecture-of-vsto-add-ins.md) Programlamaya yeni Microsoft Office, [bkz. Kullanmaya başlayın &#40;Office geliştirme Visual Studio&#41;. ](getting-started-office-development-in-visual-studio.md)
 
  [!INCLUDE[appliesto_pptallapp](includes/appliesto-pptallapp-md.md)]
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="automate-powerpoint-by-using-the-powerpoint-object-model"></a>PowerPoint nesne modelini kullanarak PowerPoint 'i otomatikleştirin
- PowerPoint nesne modeli, PowerPoint 'i otomatikleştirmek için kullanabileceğiniz birçok türü kullanıma sunar. Bu türler ortak görevleri gerçekleştirmek için kod yazmanıza olanak sağlar:
+## <a name="automate-powerpoint-by-using-the-powerpoint-object-model"></a>PowerPoint nesne modelini kullanarak PowerPoint otomatikleştirme
+ Nesne PowerPoint modeli, veri türlerini otomatikleştirmek için kullanabileceğiniz birçok PowerPoint. Bu türler, yaygın görevleri gerçekleştirmek için kod yazmanıza olanak sağlar:
 
-- Program aracılığıyla sunular oluşturun ve biçimlendirin.
+- Program aracılığıyla sunu oluşturma ve biçimlendirme.
 
-- Sunumlardan slaytlar ekleyin veya kaldırın.
+- Sunulara slayt ekleyin veya sunulardan slaytları kaldırın.
 
-- Slaytlara şekil ekleme veya şekilleri değiştirme.
+- Bir slayta şekil ekleme veya değiştirme.
 
-  Bir VSTO eklentisinin PowerPoint nesne modeline erişmek için, `Application` `ThisAddIn` projenizdeki sınıfının alanını kullanın. `Application`Alan, PowerPoint 'in geçerli örneğini temsil eden bir [uygulama](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) nesnesi döndürür. Daha fazla bilgi için bkz. [Program VSTO eklentileri](programming-vsto-add-ins.md).
+  Bir PowerPoint eklentiden VSTO nesne modeline erişmek için `Application` projenizin `ThisAddIn` sınıfının alanını kullanın. alanı, `Application` [uygulamanın geçerli](/previous-versions/office/developer/office-2010/ff764034(v=office.14)) örneğini temsil eden bir Application PowerPoint. Daha fazla bilgi için [bkz. Program VSTO Eklentileri](programming-vsto-add-ins.md).
 
-  PowerPoint nesne modeli ' ne çağırdığınızda, PowerPoint için birincil birlikte çalışma derlemesinde sunulan türleri kullanırsınız. Birincil birlikte çalışma derlemesi, VSTO eklentisinin yönetilen kodu ile PowerPoint 'teki COM nesne modelinde bir köprü görevi görür. PowerPoint birincil birlikte çalışma derlemesindeki tüm türler, [Microsoft. Office. Interop. PowerPoint](/previous-versions/office/developer/office-2010/ff763170(v=office.14)) ad alanında tanımlanmıştır. Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](office-solutions-development-overview-vsto.md) ve [Office birincil birlikte çalışma derlemeleri](office-primary-interop-assemblies.md).
+  Nesne modeline çağrı PowerPoint, derleme için birincil birlikte çalışma derlemesinde sağlanan türleri PowerPoint. Birincil birlikte çalışma derlemesi, VSTO Eklentisinde yönetilen kodla PowerPoint. Birincil birlikte çalışma derlemesinde PowerPoint türler [Microsoft.Office. Birlikte çalış -abilir -lik. PowerPoint](/previous-versions/office/developer/office-2010/ff763170(v=office.14)) Ad alanı. Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için [bkz. Office çözüm geliştirmeye](office-solutions-development-overview-vsto.md) genel bakış &#40;VSTO&#41;[ve Office derlemeleri.](office-primary-interop-assemblies.md)
 
-## <a name="use-the-powerpoint-object-model-documentation"></a><a name="WordOMDocumentation"></a> PowerPoint nesne modeli belgelerini kullanma
- PowerPoint nesne modeli hakkında tüm bilgiler için, PowerPoint birincil birlikte çalışma derlemesi (PIA) başvurusuna ve VBA nesne modeli başvurusuna başvurabilirsiniz.
+## <a name="use-the-powerpoint-object-model-documentation"></a><a name="WordOMDocumentation"></a>PowerPoint nesne modeli belgelerini kullanma
+ PowerPoint nesne modeli hakkında tam bilgi için, PowerPoint birincil birlikte çalışma derlemesi (PIA) başvurusuna ve VBA nesne modeli başvurusuna başvurabilirsiniz.
 
 ### <a name="primary-interop-assembly-reference"></a>Birincil birlikte çalışma derleme başvurusu
- PowerPoint PIA başvuru belgeleri, PowerPoint için birincil birlikte çalışma derlemesindeki türleri açıklar. Bu belge şu konumdan edinilebilir: [PowerPoint 2010 birincil birlikte çalışma derleme başvurusu](office-primary-interop-assemblies.md).
+ PiA PowerPoint belgelerinde, çalışma için birincil birlikte çalışma derlemesinde türleri PowerPoint. Bu belgeler şu konumdan kullanılabilir: [PowerPoint 2010 birincil birlikte çalışma derleme başvurusu.](office-primary-interop-assemblies.md)
 
- PIA içindeki sınıflar ve arabirimler arasındaki farklar ve PIA 'teki olayların nasıl uygulandığı gibi, PowerPoint PIA tasarımı hakkında daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/developer/office-2010/ff759900(v=office.14)).
+ PowerPoint PIA'nın tasarımı hakkında daha fazla bilgi için bkz. PIA'daki sınıflar ve arabirimler arasındaki farklar ve PIA'daki olayların uygulanması, bkz. Office birincil birlikte çalışma derlemelerinde [sınıflara ve](/previous-versions/office/developer/office-2010/ff759900(v=office.14))arabirimlere genel bakış.
 
 ### <a name="vba-object-model-reference"></a>VBA nesne modeli başvurusu
- VBA nesne modeli başvurusu, Visual Basic for Applications (VBA) koduna açık olduğu için PowerPoint nesne modelini belgeler. Daha fazla bilgi için bkz. [PowerPoint 2010 nesne modeli başvurusu](/office/vba/api/overview/PowerPoint/object-model).
+ VBA nesne modeli başvurusu, PowerPoint (VBA) koduna açık olduğu için Visual Basic for Applications modelini belgeler. Daha fazla bilgi için [bkz. PowerPoint 2010 nesne modeli başvurusu.](/office/vba/api/overview/PowerPoint/object-model)
 
- VBA nesne modeli başvurusundaki tüm nesneler ve Üyeler, PowerPoint birincil birlikte çalışma derlemesindeki (PIA) türlere ve üyelere karşılık gelir. Örneğin, VBA nesne modeli başvurusundaki sunum nesnesi, PowerPoint PIA içindeki [sunum](/previous-versions/office/developer/office-2010/ff761925(v=office.14)) türüne karşılık gelir. VBA nesne modeli başvurusu birçok özellik, yöntem ve olay için kod örnekleri sağlasa da, Visual Studio 'Yu kullanarak oluşturduğunuz bir PowerPoint VSTO eklentisi projesinde kullanmak istiyorsanız bu başvurudaki VBA kodunu Visual Basic veya Visual C# ' ye çevirmeniz gerekir.
+ VBA nesne modeli başvurusunda yer alan tüm nesneler ve üyeler, birincil birlikte çalışma derlemesi (PIA) içindeki PowerPoint ve üyelere karşılık geldi. Örneğin, VBA nesne modeli başvurusunda Presentation nesnesi PIA'daki [Sunum](/previous-versions/office/developer/office-2010/ff761925(v=office.14)) türüne PowerPoint verir. VBA nesne modeli başvurusu çoğu özellik, yöntem ve olay için kod örnekleri sağlar ancak bu başvuruda VBA kodunu Visual Basic veya Visual C# dili kullanarak oluşturacağını bir PowerPoint VSTO Eklenti projesinde kullanmak için çevirmeniz Visual Studio.
 
-## <a name="customize-the-user-interface-of-powerpoint"></a>PowerPoint 'in Kullanıcı arabirimini özelleştirme
- PowerPoint Kullanıcı arabirimini aşağıdaki yollarla değiştirebilirsiniz.
+## <a name="customize-the-user-interface-of-powerpoint"></a>Uygulamanın kullanıcı arabirimini PowerPoint
+ Kullanıcı arabirimini aşağıdaki PowerPoint değiştirebilirsiniz.
 
 |Görev|Daha fazla bilgi edinmek için|
 |----------|--------------------------|
 |Özel bir görev bölmesi oluşturun.|[Özel görev bölmeleri](custom-task-panes.md)|
-|Şerite özel sekmeler ekleyin.|[Şerite genel bakış](ribbon-overview.md)|
-|Şeritteki yerleşik bir sekmeye özel gruplar ekleyin.|[Nasıl yapılır: yerleşik bir sekmeyi özelleştirme](how-to-customize-a-built-in-tab.md)|
+|Şerit'e özel sekmeler ekleyin.|[Şerit'e genel bakış](ribbon-overview.md)|
+|Şerit'te yerleşik bir sekmeye özel gruplar ekleyin.|[Nasıl yapılır: Yerleşik sekmeyi özelleştirme](how-to-customize-a-built-in-tab.md)|
 
- PowerPoint ve diğer Microsoft Office uygulamalarının Kullanıcı arabirimini özelleştirme hakkında daha fazla bilgi için bkz. [OFFICE UI özelleştirmesi](office-ui-customization.md).
+ PowerPoint ve diğer Microsoft Office kullanıcı arabirimini özelleştirme hakkında daha fazla bilgi için [bkz. Office kullanıcı arabirimi özelleştirmesi.](office-ui-customization.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma](walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)
-- [VSTO Eklentilerini Programlamaya Başlama](getting-started-programming-vsto-add-ins.md)
-- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](office-solutions-development-overview-vsto.md)
+- [adım adım kılavuz: VSTO için İlk Eklentinizi PowerPoint](walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)
+- [Kullanmaya başlayın programlama VSTO Eklentileri](getting-started-programming-vsto-add-ins.md)
+- [Office çözümlerine genel bakış &#40;VSTO&#41;](office-solutions-development-overview-vsto.md)
 - [VSTO Eklentileri Mimarisi](architecture-of-vsto-add-ins.md)
-- [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](how-to-create-office-projects-in-visual-studio.md)
-- [Program VSTO eklentileri](programming-vsto-add-ins.md)
-- [Office çözümlerinde kod yazma](writing-code-in-office-solutions.md)
-- [Office birincil birlikte çalışma derlemeleri](office-primary-interop-assemblies.md)
-- [Office UI özelleştirmesi](office-ui-customization.md)
-- [Office geliştirme 'da PowerPoint 2010](/previous-versions/office/developer/office-2010/ff604967(v=office.14))
+- [Nasıl Office: Office projelerini Visual Studio](how-to-create-office-projects-in-visual-studio.md)
+- [Program VSTO Eklentileri](programming-vsto-add-ins.md)
+- [Kod yazma Office yazma](writing-code-in-office-solutions.md)
+- [Office birlikte çalışma derlemelerini birleştirme](office-primary-interop-assemblies.md)
+- [Office Kullanıcı arabirimi özelleştirmesi](office-ui-customization.md)
+- [PowerPoint geliştirmede 2010 Office geliştirme](/previous-versions/office/developer/office-2010/ff604967(v=office.14))

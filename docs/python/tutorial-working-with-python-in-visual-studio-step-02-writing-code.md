@@ -1,22 +1,23 @@
 ---
-title: Visual Studio 'da Python öğreticisi 2. adım, kodu yazma ve çalıştırma
+title: Visual Studio öğreticide Python adım 2, kodu yazma ve çalıştırma
 titleSuffix: ''
-description: Visual Studio 'da kod ekleme ve proje çalıştırma dahil olmak üzere Python özelliklerine yönelik temel bir izlenecek adım 2.
+description: kod düzenle ve proje çalıştırma dahil Visual Studio Python özelliklerine yönelik temel bir izlenecek adım 2.
 ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7ca28446377c2e04766f70c9146e09dc47b8f089
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7b6b985e53809bb3941246e66c2bdb24df3c9cdb4adecdc58b8eedec910113a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882784"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121229500"
 ---
 # <a name="step-2-write-and-run-code"></a>2. Adım: kodu yazma ve çalıştırma
 
@@ -24,9 +25,9 @@ ms.locfileid: "99882784"
 
 Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kodu gibi dosyaların *içeriğiyle* çalıştığınız yerde *Düzenleyici* pencere olur. Düzenleyici, programlama dili de dahil olmak üzere düzenlemekte olduğunuz dosya türünün bağlamsal olarak farkındadır ve IntelliSense kullanarak söz dizimi renklendirme ve otomatik tamamlama gibi özellikler sunar.
 
-1. Yeni bir "Python uygulaması" projesi oluşturduktan sonra, Visual Studio düzenleyicisinde *PythonApplication1.py* adlı varsayılan bir boş dosya açıktır.
+1. yeni bir "Python uygulaması" projesi oluşturduktan sonra, Visual Studio düzenleyicide *PythonApplication1.py* adlı varsayılan bir boş dosya açıktır.
 
-1. Düzenleyicide yazmaya başlayın `print("Hello, Visual Studio")` ve Visual Studio IntelliSense 'in bu şekilde otomatik tamamlama seçeneklerini nasıl görüntülediğini fark edin. Açılan listede, **sekme** tuşuna bastığınızda kullanılan varsayılan tamamlama, açılan listedeki ana hatlarıyla gösterilmiştir. Daha uzun deyimler veya tanımlayıcılar dahil edildiğinde tamamlamalar en çok yararlı olur.
+1. düzenleyicide yazmaya başlayın `print("Hello, Visual Studio")` ve Visual Studio ıntellisense 'in aynı şekilde otomatik tamamlama seçeneklerini nasıl görüntülediğini görürsünüz. Açılan listede, **sekme** tuşuna bastığınızda kullanılan varsayılan tamamlama, açılan listedeki ana hatlarıyla gösterilmiştir. Daha uzun deyimler veya tanımlayıcılar dahil edildiğinde tamamlamalar en çok yararlı olur.
 
     ![IntelliSense otomatik tamamlama açılan penceresi](media/vs-getting-started-python-04-IntelliSense1b.png)
 
@@ -40,16 +41,16 @@ Proje dosyalarını yönettiğiniz **Çözüm Gezgini** , genellikle, kaynak kod
     print("Hello, Visual Studio")
     ```
 
-1. Bağımsız değişkenden bildirimi ayıran söz dizimi renkine dikkat edin `print` `"Hello Visual Studio"` . Ayrıca, en son dizeyi geçici olarak silin `"` ve Visual Studio 'nun sözdizimi hataları içeren kod için kırmızı alt çizgiyi nasıl gösterdiğini görürsünüz. Sonra `"` kodu düzeltmek için öğesini değiştirin.
+1. Bağımsız değişkenden bildirimi ayıran söz dizimi renkine dikkat edin `print` `"Hello Visual Studio"` . ayrıca, dizenin en son öğesini geçici olarak silin `"` ve Visual Studio söz dizimi hataları içeren kod için kırmızı alt çizgiyi nasıl gösterdiğine dikkat edin. Sonra `"` kodu düzeltmek için öğesini değiştirin.
 
     ![IntelliSense sözdizimi renklendirme ve hata vurgulama](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > Tek bir geliştirme ortamı çok kişisel olduğundan Visual Studio, Visual Studio 'nun görünümü ve davranışı üzerinde tamamen denetim sağlar. **Araçlar**  >  **Seçenekler** menü komutunu seçin ve **ortam** ve **metin Düzenleyicisi** sekmeleri altındaki ayarları araştırın. Varsayılan olarak yalnızca sınırlı sayıda seçenek görürsünüz. Her programlama diline yönelik her bir seçeneği görmek için iletişim kutusunun altındaki **tüm ayarları göster** ' i seçin.
+    > tek bir geliştirme ortamı çok kişisel olduğundan, Visual Studio Visual Studio görünümü ve davranışı üzerinde tamamen denetim elde etmenizi sağlar. **Araçlar**  >  **Seçenekler** menü komutunu seçin ve **ortam** ve **metin Düzenleyicisi** sekmeleri altındaki ayarları araştırın. Varsayılan olarak yalnızca sınırlı sayıda seçenek görürsünüz. Her programlama diline yönelik her bir seçeneği görmek için iletişim kutusunun altındaki **tüm ayarları göster** ' i seçin.
 
-1. **CTRL** + **F5** tuşuna basarak veya hata ayıklama menüsü öğesi olmadan **Hata Ayıkla**  >  **Başlat** ' ı seçerek bu noktaya yazdığınız kodu çalıştırın. Kodunuzda hatalar varsa, Visual Studio sizi uyarır.
+1. **CTRL** + **F5** tuşuna basarak veya hata ayıklama menüsü öğesi olmadan **Hata Ayıkla**  >  **Başlat** ' ı seçerek bu noktaya yazdığınız kodu çalıştırın. kodunuzda hatalar varsa sizi uyarır Visual Studio.
 
-1. Programı çalıştırdığınızda, komut satırından *PythonApplication1.py* Ile bir Python yorumlayıcı çalıştırdığınız gibi, sonuçları görüntüleyen bir konsol penceresi görüntülenir. Pencereyi kapatmak ve Visual Studio düzenleyicisine dönmek için bir tuşa basın.
+1. Programı çalıştırdığınızda, komut satırından *PythonApplication1.py* Ile bir Python yorumlayıcı çalıştırdığınız gibi, sonuçları görüntüleyen bir konsol penceresi görüntülenir. pencereyi kapatmak ve Visual Studio düzenleyicisine dönmek için bir tuşa basın.
 
     ![Programın ilk çalışması için çıkış](media/vs-getting-started-python-07-output.png)
 

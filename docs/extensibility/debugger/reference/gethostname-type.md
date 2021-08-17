@@ -11,17 +11,18 @@ ms.assetid: 2be92bea-8133-412b-9015-1833baf16e1b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a333c112db08935896b40e41389284436d7ec6a7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3fa3e81b1151f722c9bc6b6b05da0da213f8a95c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059229"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127564"
 ---
 # <a name="gethostname_type"></a>GETHOSTNAME_TYPE
 Ana bilgisayar adının türünü belirtir.

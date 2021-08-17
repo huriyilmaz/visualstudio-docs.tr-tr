@@ -10,14 +10,15 @@ ms.assetid: 5d60e9e8-305e-4a48-829f-b9440fc8af7b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 69cc1d40b2a0e61c0cf7ad32cb8187d0dad16994
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 15e9877c8458d7c7188fb1d466335090de7c10ed1f73b78ba0f12f9a7780ad6e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094776"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121343232"
 ---
 # <a name="debug-tasks"></a>Hata ayıklama görevleri
 Bir programda hata ayıklamak için, başlatılmalıdır ve buna bir hata ayıklama altyapısı (DE) eklenmelidir, aksi takdirde DE daha önce başlatılmış bir programa eklenmelidir. İliştirildikten sonra, belirli başlangıç olaylarını üretmelidir. Yanıt olarak, hata ayıklama paketi IDE 'de ayarlanan kesme noktalarını bağlamaya çalışır. Program, bağlantılı bir kesme noktasına rastarsa, durdurur ve Kullanıcı girişini bekler.
@@ -37,12 +38,12 @@ Bir programda hata ayıklamak için, başlatılmalıdır ve buna bir hata ayıkl
 
  [Ifadeleri değerlendir](../../extensibility/debugger/evaluating-expressions.md) İfadelerin nasıl oluşturulduğunu ve bir ifadenin değerlendirildiği zaman ne olacağını açıklar.
 
- [Verileri görselleştirme ve görüntüleme](../../extensibility/debugger/visualizing-and-viewing-data.md) Tür görselleştiricilerinin ve özel görüntüleyicilerin ifade değerlendirici (EE) tarafından nasıl desteklendiği açıklanmaktadır.
+ [Verileri görselleştirme ve görüntüleme](../../extensibility/debugger/visualizing-and-viewing-data.md) Tür görselleştiricilerin ve özel görüntüleyicilerin ifade değerlendirici (EE) tarafından nasıl desteklendiği açıklanmaktadır.
 
 ## <a name="related-sections"></a>İlgili bölümler
  [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md) Ana hata ayıklama mimarisi kavramlarını açıklar.
 
- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md) Visual Studio hata ayıklama bileşenlerine genel bir bakış sağlar. Bu, DE, EE ve symbol işleyicisini (SH) içerir.
+ [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md) Visual Studio hata ayıklama bileşenlerine genel bir bakış sağlar, bu, EE ve sembol işleyicisini (SH) içerir.
 
  [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md) Aynı anda kod, belge ve ifade değerlendirme bağlamlarının içinde nasıl çalıştığını açıklar. Üç bağlamın her biri için, bu konuyla ilgili konum, konum veya değerlendirmeyi açıklar.
 

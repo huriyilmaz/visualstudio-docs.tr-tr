@@ -11,17 +11,18 @@ ms.assetid: c846a440-1d91-4d48-b8f1-82e902ae152b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 43651baac29b3904b9bc12d8d4b965ca1cd8e3ee
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c47ac0e0250c5164775de94bd82ec0499f6ea1b3d30e9905f3ec2b8fd7b32782
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066196"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342251"
 ---
 # <a name="idebugengine3loadsymbols"></a>IDebugEngine3::LoadSymbols
 Bu hata ayıklama altyapısı tarafından hata ayıklamakta olan tüm modüller için (gerektiğinde) semboller yükler.

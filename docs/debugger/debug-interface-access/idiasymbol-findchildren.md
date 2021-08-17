@@ -11,14 +11,15 @@ ms.assetid: 5fe7573a-e48b-428d-9c17-7421b7209246
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 809157c8ffd4b3955b7a8d7b079f63398437e35c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: d58c248e4960aa3605d3084ec8f917c4b405991ba9691376efbc3a11b926493e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161175"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344538"
 ---
 # <a name="idiasymbolfindchildren"></a>IDiaSymbol::findChildren
 Simgenin alt öğelerini alır.

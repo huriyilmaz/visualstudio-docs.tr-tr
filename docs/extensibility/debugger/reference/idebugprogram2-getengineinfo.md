@@ -11,17 +11,18 @@ ms.assetid: 3a4f2dc0-e082-4d8d-aeaf-463ab09d279b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8cf4dea1d85b6703b303ecf03d2080047f052458
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4bea94c8cc32668d8a86a63e353e5ae9392f9ba5ed833d34a3b6afcefb1488fd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075867"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338871"
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
 Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID 'sini alır.

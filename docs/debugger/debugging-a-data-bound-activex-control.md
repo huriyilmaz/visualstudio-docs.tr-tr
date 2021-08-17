@@ -1,6 +1,6 @@
 ---
-title: Data-Bound ActiveX denetiminde hata ayıklama | Microsoft Docs
-description: Hata ayıklama için bir kapsayıcı uygulaması oluşturarak bir veri kaynağı denetimine yönelik bir ActiveX denetiminde hata ayıklamanın nasıl yapılacağını öğrenin.
+title: Data-Bound ActiveX Control | Hata Ayıklama Microsoft Docs
+description: Hata ayıklama için bir kapsayıcı ActiveX bir veri kaynağı denetimine bağlı bir uygulamanın hata ayıklamasını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,25 +17,26 @@ ms.assetid: 9f6e1f00-e25b-48a9-8484-7e67a1232461
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 24de30887185ce4520817904ec6348ef6276b6d2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75339365340c7133a5faf9573cf65dab1bb171b91c33c3b89917c0d213e58d9e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872904"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344118"
 ---
 # <a name="debugging-a-data-bound-activex-control"></a>Veri Bağımlı ActiveX Denetiminde Hata Ayıklama
-Bir veri kaynağı denetimine bağlanacak bir ActiveX denetimi geliştiriyorsanız, kendi kapsayıcı uygulamanızı oluşturabilir ve bu kapsayıcıyı ActiveX denetiminde hata ayıklamak için kullanabilirsiniz.
+Veri kaynağı denetimine ActiveX bir kapsayıcı denetimi geliştiriyorsanız, kendi kapsayıcı uygulamanızı oluşturabilir ve bu kapsayıcıyı kullanarak veri kaynağı denetimi hata ActiveX kullanabilirsiniz.
 
- Örneğin, iletişim kutusuna bir iletişim kutusu tabanlı MFC uygulaması oluşturabilir ve veri bağlantılı denetiminizi ve bir veri kaynağı denetimini yerleştirebilirsiniz. Bu MFC uygulamasını, çalışma zamanı testi için ve veri bağlantılı ActiveX denetiminizin hata ayıklaması için kapsayıcı yürütülebilir dosyası olarak kullanabilirsiniz.
+ Örneğin, iletişim kutusu tabanlı bir MFC uygulaması oluşturabilir ve veriye bağlı denetiminizi ve bir veri kaynağı denetiminizi iletişim kutusuna yer değiştirebilirsiniz. Bu MFC uygulamasını çalışma zamanı testi için ve veriye bağlı uygulama denetiminizin hata ayıklaması için kapsayıcı yürütülebilir dosyası ActiveX kullanabilirsiniz.
 
-## <a name="using-the-test-container"></a>Test kapsayıcısını kullanma
- Denetim ya da kapsayıcıda çeşitli arabirimleri desteklemek üzere kolayca değiştirebileceğiniz bir kapsayıcı isterseniz, hata ayıklama oturumu için yürütülebilir dosya olarak ActiveX test kapsayıcısını kullanın. Farklı arabirimleri etkinleştirmek için, ActiveX test kapsayıcısında **kapsayıcı** menüsünde **Seçenekler** ' e tıklayın. Daha fazla bilgi için bkz. [Test kapsayıcısı Ile özellikleri ve olayları test etme](/cpp/mfc/testing-properties-and-events-with-test-container).
+## <a name="using-the-test-container"></a>Test Kapsayıcısı Kullanma
+ Denetimde veya kapsayıcıda çeşitli arabirimleri destekleyecek şekilde kolayca değiştirebiliyorsanız, hata ayıklama oturumunun yürütülebilir dosyası olarak ActiveX Test Kapsayıcısı'nın kullanın. Test Kapsayıcısı ActiveX çeşitli **arabirimleri** etkinleştirmek **için Kapsayıcı** menüsünden Seçenekler'e tıklayın. Daha fazla bilgi için [bkz. Test Kapsayıcısı ile Özellikleri ve Olayları Test Etme.](/cpp/mfc/testing-properties-and-events-with-test-container)
 
- Hata ayıklarken kapsayıcının kodunu değiştirmeniz gerekiyorsa, kapsayıcının hata ayıklama sürümünü kullanın veya ActiveX test kapsayıcısının hata ayıklama sürümünü kullanın. Daha fazla bilgi için bkz. [tstcon örneği: ActiveX denetimi test kapsayıcısı](/previous-versions/f9adb5t5(v=vs.100)).
+ Hata ayıklama sırasında kapsayıcının koduna adımlamanız gerekirse, kapsayıcının hata ayıklama sürümünü veya Test Kapsayıcısı'nın ActiveX sürümünü kullanın. Daha fazla bilgi için bkz. [TSTCON Örneği: ActiveX Test Kapsayıcısı.](/previous-versions/f9adb5t5(v=vs.100))
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [COM ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md)
-- [ActiveX denetimleri](/cpp/mfc/activex-controls)
+- [COM ve ActiveX Hata Ayıklama](../debugger/com-and-activex-debugging.md)
+- [ActiveX Denetim](/cpp/mfc/activex-controls)

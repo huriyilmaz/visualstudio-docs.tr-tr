@@ -1,6 +1,6 @@
 ---
-title: Spy + + görünümlerini göster | Microsoft Docs
-description: 'Spy + + dört görünüm sağlar: Windows, işlem, iş parçacığı ve ileti. Görünümler ve bunların nasıl görüntüleneceği hakkındaki bilgilerin bağlantıları için bu makaleye bakın.'
+title: Spy++ Görünümlerini | Microsoft Docs
+description: 'Spy++ dört görünüm sağlar: Windows, İşlem, İş Parçacıkları ve İletiler. Görünümler ve görüntüleme hakkında bilgi için bu makaleye bakın.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,15 +13,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f0bc70ee6bafe4e914621c7220bcfa4998f17e671f1209907c6ecb8b0cc4a01
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0baeb8097db6bb319e94f84b80a1e19651ad9abd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362022"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128550"
 ---
 # <a name="how-to-display-spy-views"></a>Nasıl Yapılır: Spy++ Görünümlerini Görüntüleme
-Spy + + başladığında, makinenizde bulunan tüm pencerelerin ve denetimlerin ağaç görünümü olan [Windows görünümünde](../debugger/windows-view.md)açılır. bu kök pencere "Windows 1" öğesine işaret eder. Ayrıca üç farklı Spy + + görünümü mevcuttur: [Iletiler görünümü](../debugger/messages-view.md), [süreçler görünümü](../debugger/processes-view.md)ve [iş parçacıkları görünümü](../debugger/threads-view.md). **Spy** menüsünden istediğiniz görünümü görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [Spy + + görünümleri](../debugger/spy-increment-views.md).
+Spy++ başlatıldığında, tüm [pencerelerin ve Windows](../debugger/windows-view.md)bir ağaç görünümü olan Görünüm'de açılır. Bu kök pencere "Windows 1" olarak gösterilir. Ayrıca üç spy++ görünümü daha vardır: [İletiler Görünümü,](../debugger/messages-view.md) [İşlemler Görünümü](../debugger/processes-view.md)ve İş [Parçacıkları Görünümü.](../debugger/threads-view.md) İstediğiniz görünümü Spy menüsünden **görüntüebilirsiniz.** Daha fazla bilgi için [bkz. Spy++ Görünümleri.](../debugger/spy-increment-views.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Spy++ Kullanma](../debugger/using-spy-increment.md)

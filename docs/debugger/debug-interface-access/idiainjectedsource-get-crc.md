@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 66a03b0ab307c15db1112008a9a4ea880b57ec456b387e8aa6d214173b0b85cf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 396a0742b2ac2c3afd8d2868326a701f6f0da6d5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392299"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066672"
 ---
 # <a name="idiainjectedsourceget_crc"></a>IDiaInjectedSource::get_crc
 Kaynak kodun baytlarından hesaplanan Döngüsel artıklık denetimi (CRC) alır.

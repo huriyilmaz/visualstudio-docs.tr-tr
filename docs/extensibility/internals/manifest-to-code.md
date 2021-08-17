@@ -1,6 +1,6 @@
 ---
 title: Manifest to Code | Microsoft Docs
-description: Bir .imagemanifest dosyasını alan Koddan Bildirim aracını kullanarak Görüntü Hizmeti'Visual Studio öğrenin.
+description: Görüntü Hizmeti'nin bir .imagemanifest dosyasını alan Koddan Bildirim aracının nasıl Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,17 +8,18 @@ ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e63349b27ec8ea5617f6d1836ce9ece3251662d3
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 5b8cc87ccc4fd6118a8c04fcfb1786aab4012f4a3a9a6805e272c397f8d9cd75
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903171"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121337909"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
-Manifest to Code aracı, Visual Studio Görüntü Hizmeti için bir .imagemanifest dosyası alan ve Visual Studio uzantıları için C++, C#, VB veya .vsct dosyalarında görüntü bildiriminin değerlerine başvurmak için bir sarmalayıcı dosyası veya dosyaları oluşturan bir konsol uygulamasıdır. Bu araç, doğrudan Visual Studio Görüntü Hizmeti'den görüntü isteğinde veya kod kendi kullanıcı arabirimini ve işlemesini işlemezse bildirim değerlerini API'ler aracılığıyla geçirme için kullanılmaktadır.
+Manifest to Code aracı, Visual Studio Görüntü Hizmeti için bir .imagemanifest dosyası alan ve Visual Studio uzantıları için C++, C#, VB veya .vsct dosyalarında görüntü bildiriminin değerlerine başvurmak için bir sarmalayıcı dosyası veya dosyası oluşturan bir konsol uygulamasıdır. Bu araç, doğrudan Visual Studio Görüntü Hizmeti'den görüntü isteğinde veya kod kendi kullanıcı arabirimini ve işlemesini işlemezse bildirim değerlerini API'ler aracılığıyla geçirme için kullanılmaktadır.
 
 ## <a name="how-to-use-the-tool"></a>Aracı kullanma
  **Syntax**
@@ -32,7 +33,7 @@ Manifest to Code aracı, Visual Studio Görüntü Hizmeti için bir .imagemanife
 |/manifest|Kod sarmalayıcıyı oluşturmak veya güncelleştirmek için görüntü bildiriminin yolu.|Gerekli|
 |/language|Kod sarmalayıcının oluşturul dili.<br /><br /> Geçerli değerler: CPP, C++, CS, CSharp, C#, VB veya VSCT Değerler büyük/yeni harfe duyarlı değildir.<br /><br /> VSCT dil seçeneği için /monikerClass, /classAccess ve /namespace seçenekleri yoksayılır.|Gerekli|
 |/imageIdClass|imageIdClass'ın adı ve araç tarafından oluşturulan ilişkili dosya. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur.<br /><br /> Varsayılan: \<Manifest Path> \MyImageIds.\<Lang Ext>|İsteğe Bağlı|
-|/monikerClass|monikerClass adı ve araç tarafından oluşturulan ilişkili dosya. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur. Bu, VSCT dili için yoksayılır.<br /><br /> Varsayılan: \<Manifest Path> \MyMonikers.\<Lang Ext>|İsteğe Bağlı|
+|/monikerClass|monikerClass'ın adı ve araç tarafından oluşturulan ilişkili dosya. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur. Bu, VSCT dili için yoksayılır.<br /><br /> Varsayılan: \<Manifest Path> \MyMonikers.\<Lang Ext>|İsteğe Bağlı|
 |/classAccess|imageIdClass ve monikerClass için erişim değiştiricisi. Erişim değiştiricinin verilen dil için geçerli olduğundan emin olun. Bu, VSCT dil seçeneği için yoksayılır.<br /><br /> Varsayılan: Genel|İsteğe Bağlı|
 |/namespace|Kod sarmalayıcıda tanımlanan ad alanı. Bu, VSCT dil seçeneği için yoksayılır. '.' veya '::' seçilen dil seçeneğine bakılmaksızın geçerli ad alanı ayırıcılarıdır.<br /><br /> Varsayılan: MyImages|İsteğe Bağlı|
 |/noLogo|Bu bayrağın ayarı ürün ve telif hakkı bilgilerini yazdırmayı durdurur.|İsteğe Bağlı|

@@ -12,12 +12,13 @@ ms.assetid: ac480fb7-f4f7-47dc-9ae5-98be3aca4fba
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: a79054fce5a61b2a9c87e86b5b9aa66420e9bb63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: ff28077f118af283ba2eac58e84c92dbadac1065
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957198"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068605"
 ---
 # <a name="configure-test-iterations-in-a-load-test-scenario"></a>Yük testi senaryosunda test yinelemelerini yapılandırma
 

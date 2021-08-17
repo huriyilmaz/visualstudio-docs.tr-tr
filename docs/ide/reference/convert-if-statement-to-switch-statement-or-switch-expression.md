@@ -1,48 +1,49 @@
 ---
-title: İf deyimini deyim veya ifadeye Dönüştür
-description: Bir IF deyimini switch deyimine veya C# 8,0 anahtar ifadesine dönüştürmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+title: if deyimini switch deyimine veya ifadesine dönüştürme
+description: Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanarak if deyimini switch deyimine veya C# 8.0 anahtar ifadesine dönüştürmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0d857338eb1c9b5bb66ccb89e20e6f892944d608
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9cde031d182f8f6e240f31bdf71472c18a2a0f59fd51834dc7a7b5bcd633530b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936837"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430066"
 ---
 # <a name="convert-if-statement-to-switch-statement-or-switch-expression"></a>if deyimini switch deyimine veya switch ifadesine dönüştürme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** IF deyimini bir [switch deyimine](/dotnet/csharp/language-reference/keywords/switch) veya C# 8,0 [anahtar ifadesine](/dotnet/csharp/whats-new/csharp-8#switch-expressions)Dönüştür.
+**Ne:** If deyimini switch [deyimine veya](/dotnet/csharp/language-reference/keywords/switch) C# 8.0 [switch ifadesine dönüştür.](/dotnet/csharp/whats-new/csharp-8#switch-expressions)
 
-**Ne zaman:** Bir `if` deyimi ifadeye `switch` veya ifadeye dönüştürmek istiyorsunuz `switch` ve tam tersi de geçerlidir.
+**Ne zaman:** Deyimi bir deyime `if` veya ifadeye `switch` (veya tam tersi) `switch` dönüştürmek istediğiniz.
 
-**Neden:** Bir `if` deyim kullanıyorsanız, bu yeniden düzenleme `switch` deyimlere veya ifadelere kolay bir geçişe olanak sağlar `switch` .
+**Neden:** Deyimi `if` kullanıyorsanız, bu yeniden düzenleme deyimlere veya ifadelere kolay bir geçiş `switch` `switch` sağlar.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi `if` anahtar sözcüğe yerleştirin.
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
-3. Aşağıdaki iki seçenekten seçim yapın:
+1. İmlecinizi anahtar sözcüğüne `if` ekleyin.
+2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+3. Aşağıdaki iki seçenekten birini belirleyin:
 
-    **' Switch ' Ifadesine Dönüştür '** ü seçin.
+    **"switch" deyimine dönüştür seçeneğini seçin.**
 
-   ![If ifadesini Switch ifadesine Dönüştür](media/convert-if-to-switch-statement.png)
+   ![if deyimini switch deyimine dönüştürme](media/convert-if-to-switch-statement.png)
 
-    **' Switch ' Ifadesine Dönüştür '** ü seçin.
+    **"Switch" ifadesine dönüştür seçeneğini seçin.**
 
-    ![IF deyimini anahtar ifadesine Dönüştür](media/convert-if-to-switch-expression.png)
+    ![if deyimini switch ifadesine dönüştürme](media/convert-if-to-switch-expression.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

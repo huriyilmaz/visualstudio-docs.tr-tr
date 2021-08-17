@@ -1,6 +1,6 @@
 ---
-title: Kaynak çakışması veri değerlerini anlama | Microsoft Docs
-description: Bir uygulamadaki rekabet iş parçacıkları paylaşılan bir kaynağa erişim için beklemeye zorlandığında, kaynak çekişmenin profilini oluşturma hakkında ayrıntılı bilgiler toplar.
+title: Kaynak İçeriği Veri Değerlerini Anlama | Microsoft Docs
+description: Kaynak rekabeti profili oluşturmanın, bir uygulamada iş parçacıklarının paylaşılan bir kaynağa erişmeyi beklemek zorunda olduğu zaman nasıl ayrıntılı bilgi toplayanı öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,30 +9,31 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e050879fc9a1bd74f95ae5d24a92dc7a59a73c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b397a3171cc03822271224679e2792da6d5e3f5a821f58cb5ec19707288bc202
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886073"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121230956"
 ---
-# <a name="understand-resource-contention-data-values"></a>Kaynak çakışması veri değerlerini anlama
+# <a name="understand-resource-contention-data-values"></a>Kaynakla ilgili veri değerlerini anlama
 
-Kaynak Çekişmesi profili oluşturma, bir uygulamadaki rekabet iş parçacıklarının paylaşılan bir kaynağa erişim için beklemeye zorlanması durumunda ayrıntılı çağrı yığını bilgilerini toplar.
+Kaynak rekabeti profili oluşturma, bir uygulama içinde rakip iş parçacıkları paylaşılan bir kaynağa erişimi beklemek zorunda kalan her sefer ayrıntılı çağrı yığını bilgilerini toplar.
 
-Kaynak çekişmeleri, modüller, işlevler, kaynak kodu satırları ve bekleme gerçekleştiği yönergelerin bir kaynağı beklerken harcanan toplam çekişme sayısını ve toplam süreyi görüntüler.
+Kaynak İhlal raporları modüller, işlevler, kaynak kod satırları ve beklemenin meydana geldiği yönergeler için kaynağı beklerken harcanan toplam süre ve toplam irdelez sayısını görüntüler.
 
-- Kapsamlı değerler, bir işlevi kaynak çekişmeleri ve işlevin bekleme toplam süresi tarafından beklemeye zorlayan toplam çekişmelerin sayısını görüntüler.  İşlev tarafından çağrılan alt işlevlerin neden olduğu çekişmeler, kapsamlı değerlere dahildir.
+- Kapsayıcı değerler, bir işlevi kaynak karşıtlıkları tarafından beklemeye zorlanan toplam içerik sayısını ve işlevin beklediği toplam zamanı görüntüler.  İşlev tarafından çağrılan alt işlevlerden kaynaklanan içerikler kapsayıcı değerlere dahil edilir.
 
-- Dışlamalı değerler yalnızca bir işlevin beklemesini ve işlevin gövdesinde kodun neden olduğunu zorlayan çekişmelerin sayısını görüntüler. Alt işlevlerin neden olduğu çekişmeler dahil değildir. İşlevin dışlamalı zamanı, yalnızca işlev gövdesinde deyimlerin neden olduğu bekleme sürelerini de içerir.
+- Özel değerler yalnızca bir işlevi beklemeye zorlanan ve işlevin gövdesinde yer alan koddan kaynaklanan içerik sayısını görüntüler. Alt işlevlerin neden olduğu içerikler dahil değildir. İşlev için özel zaman yalnızca işlev gövdesinde deyimlerin neden olduğu bekleme sürelerini de içerir.
 
-Kaynak çekişme raporu görünümleri Ayrıca zaman içinde bireysel çekişme olaylarını gösteren zaman çizelgesi grafiklerini içerir ve belirli bir olayı oluşturan çağrı yığınlarını gösterir. Daha fazla bilgi için aşağıdaki konulardan birine bakın:
+Kaynak tartışma raporu görünümleri ayrıca zaman içinde tek tek tartışma olaylarını ve belirli bir olayı oluşturan çağrı yığınlarını göstermek için zaman çizelgesi grafikleri içerir. Daha fazla bilgi için aşağıdaki konulardan birine bakın:
 
-- [İş parçacığı Ayrıntıları görünümü](../profiling/thread-details-view-contention-data.md)
+- [İş parçacığı ayrıntıları görünümü](../profiling/thread-details-view-contention-data.md)
 
-- [Kaynak Ayrıntıları görünümü](../profiling/resource-details-view-contention-data.md)
+- [Kaynak ayrıntıları görünümü](../profiling/resource-details-view-contention-data.md)
 
-Eşzamanlılık profili oluşturma işleminin ikinci modu hakkında daha fazla bilgi için bkz. [Eşzamanlılık görselleştiricisi](../profiling/concurrency-visualizer.md).
+İkinci eşzamanlılık profili oluşturma modu hakkında daha fazla bilgi için [bkz. Eşzamanlılık Görselleştiricisi.](../profiling/concurrency-visualizer.md)

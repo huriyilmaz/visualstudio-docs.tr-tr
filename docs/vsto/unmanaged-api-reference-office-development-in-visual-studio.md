@@ -26,7 +26,7 @@ ms.locfileid: "121226121"
 ---
 # <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>Unmanaged API başvurusu (Office geliştirme Visual Studio)
 
-2007 Microsoft Office'den başlayarak, Office uygulamaları ile birlikte bulunan bir VSTO Eklenti yükleyici bileşenine çağrı yapmak için [IManagedAddin](../vsto/imanagedaddin-interface.md) arabirimi arabirimini [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kullanır. Bu bileşen, eklentilerin yük yönetimine VSTO için kullanılır. Bu arabirimi kullanarak VSTO yükleyici bileşeninizi oluşturabilirsiniz.
+2007 Microsoft Office'den başlayarak, Office uygulamaları ile birlikte bulunan bir VSTO Eklenti yükleyici bileşenine çağrı yapmak için [IManagedAddin](../vsto/imanagedaddin-interface.md) arabirim arabirimini [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kullanır. Bu bileşen, eklentilerin yük yönetimine VSTO için kullanılır. Bu arabirimi kullanarak VSTO yükleyici bileşeninizi oluşturabilirsiniz.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 

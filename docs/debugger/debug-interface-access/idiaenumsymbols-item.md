@@ -11,14 +11,15 @@ ms.assetid: 2bd1ec04-e677-4e32-8e32-33334f1eed77
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d7223c19df1df3c73d976ede97a2fab98b7da91
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: edeccffd92749ac7f00ea6f866a37e933eb499c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148705"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129338"
 ---
 # <a name="idiaenumsymbolsitem"></a>IDiaEnumSymbols::Item
 Bir simgeyi bir dizin aracılığıyla alır.

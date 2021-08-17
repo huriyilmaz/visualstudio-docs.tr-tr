@@ -1,6 +1,6 @@
 ---
 title: Belgelerle çalışma
-description: Office projelerindeki belgelerle çalışmak üzere Microsoft Word 'ün nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
+description: Office projelerindeki belgelerle çalışmak üzere Microsoft Word nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,19 +14,20 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f04cdd246d95a4d5757ff64851a12cdede36f1b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 74a95849b44c9842133d90bb39b895daf882ee9c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920218"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068382"
 ---
 # <a name="work-with-documents"></a>Belgelerle çalışma
-  Bu bölümdeki konularda, Office projelerindeki belgelerle çalışmak üzere Microsoft Office Word nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri sağlanmaktadır.
+  bu bölümdeki konularda, Office projelerindeki belgelerle çalışmak üzere Microsoft Office Word nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri sağlanmaktadır.
 
- Bazı durumlarda, bu görevleri VSTO eklentilerinde gerçekleştirdiğiniz yollar, belge düzeyi özelleştirmelerde gerçekleştirdiğiniz yöntemlerle farklıdır.
+ bazı durumlarda, VSTO eklentilerde bu görevleri gerçekleştirdiğiniz yollar, bunları belge düzeyi özelleştirmelerde gerçekleştirmenizin yollarından farklıdır.
 
 |Görev|Yordam|
 |----------|---------------|

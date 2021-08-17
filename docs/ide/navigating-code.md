@@ -20,20 +20,20 @@ ms.author: tglee
 manager: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: 77b0f8782f9ffaf37701f13b30be6e068ce05f8d
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 7d45f96fd4e2b8096cb3e1ee9cd5a6e5ef2e6962ee08d29b76bfedaf4a65e1ca
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95871528"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121232958"
 ---
 # <a name="navigate-code"></a>Koda git
 
-Visual Studio, düzenleyicide kod gezinmek için birçok yol sunar. Bu konu, kodunuzda gezinmek için farklı yollar özetler ve daha fazla ayrıntıya gidecek konuların bağlantılarını sağlar.
+Visual Studio düzenleyicide kod gezinmek için birçok yol sağlar. Bu konu, kodunuzda gezinmek için farklı yollar özetler ve daha fazla ayrıntıya gidecek konuların bağlantılarını sağlar.
 
 ## <a name="navigate-backward-and-navigate-forward-commands"></a>Geriye git ve Ileri git komutları
 
-**Navigate Backward** **Ctrl** + **-** **Navigate Forward** **Ctrl** + **Shift** + **-** Ekleme noktasını önceki konumlara taşımak veya önceki bir konumdan daha yeni bir konuma geri dönmek için geri git (Ctrl) ve ileri git (Ctrl Shift) düğmelerine gidebilirsiniz. Bu düğmeler, ekleme noktasının son 20 konumunu korur. Bu komutlar Ayrıca **Görünüm** menüsünde **geri git** ' ın altında ve **İleri git**' in altında bulunur.
+  + **-**   +  + **-** Ekleme noktasını önceki konumlara taşımak veya önceki bir konumdan daha yeni bir konuma geri dönmek için geri git (Ctrl) ve ileri git (Ctrl Shift) düğmelerine gidebilirsiniz. Bu düğmeler, ekleme noktasının son 20 konumunu korur. Bu komutlar Ayrıca **Görünüm** menüsünde **geri git** ' ın altında ve **İleri git**' in altında bulunur.
 
 ![İleri ve geri gezinti düğmeleri](../ide/media/vs2017_nav_buttons.png)
 
@@ -59,7 +59,7 @@ Açılır kutuların etrafında aşağıdaki gibi gezinebilirsiniz:
 
 - Gezinti çubuğundan bir şeyi seçmeden koda odaklanmak için **ESC** tuşuna basın.
 
-Gezinti çubuğunu gizlemek için, **metin düzenleyici tüm diller** ayarlarında (**Araçlar** **Navigation bar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **tüm diller**) gezinti çubuğu seçeneğini değiştirin veya ayrı dillerin ayarlarını değiştirebilirsiniz.
+Gezinti çubuğunu gizlemek için, **metin düzenleyici tüm diller** ayarlarında (**Araçlar**   >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **tüm diller**) gezinti çubuğu seçeneğini değiştirin veya ayrı dillerin ayarlarını değiştirebilirsiniz.
 
 ## <a name="find-all-references"></a>Tüm başvuruları bul
 
@@ -92,7 +92,7 @@ Kaynak kodunda bir simgeye tıkladığınızda, söz konusu simgenin tüm örnek
 
 - **Simgeye git** (**CTRL** + **1**, **CTRL** + **S**): çözümdeki belirtilen simgeye gider.
 
-Visual Studio 2017 sürüm 15,8 ve sonraki sürümlerde, aşağıdaki gezinti komutlarına **Git** de kullanılabilir:
+Visual Studio 2017 sürüm 15,8 ve sonraki sürümlerde, aşağıdaki gezinti komutlarına **git** de kullanılabilir:
 
 - **Dosyadaki bir sonraki soruna git** (**alt** + **PgDn**) ve **dosyadaki bir önceki soruna git** (**alt** + **PgUp**)
 
@@ -145,27 +145,27 @@ Giriş | İşlev
 **Klavye** | Metin imlecinizi bir yere tür adının içine yerleştirin ve **CTRL** + **K**, **CTRL** + **T** tuşlarına basın
 **Fare** | Üye adına sağ tıklayın ve **Çağrı hiyerarşisini görüntüle** ' yi seçin.
 
-## <a name="next-method-and-previous-method-commands-visual-basic"></a>Next yöntemi ve önceki yöntem komutları (Visual Basic)
+## <a name="next-method-and-previous-method-commands-visual-basic"></a>Next Method ve Previous Method komutları (Visual Basic)
 
-Visual Basic kod dosyalarında, ekleme noktasını farklı yöntemlere taşımak için bu komutları kullanın. **Edit**  >  **Sonraki yöntemi** Düzenle veya **Edit**  >  **önceki yöntemi** Düzenle seçeneğini belirleyin.
+Kod Visual Basic ekleme noktasını farklı yöntemlere taşımak için bu komutları kullanın. Sonraki **Yöntemi Düzenle** veya  >  **Önceki** Yöntemi   >  **Düzenle'yi seçin.**
 
-## <a name="structure-visualizer"></a>Yapı görselleştiricisi
+## <a name="structure-visualizer"></a>Yapı Görselleştirici
 
-Kod düzenleyicisinde yapı görselleştiricisi özelliği, *Yapı Kılavuzu satırları* -kod tabanınızda eşleşen küme ayraçları belirten dikey kesikli çizgiler gösterir. Bu, mantıksal blokların nerede başlayıp bitmekte olduğunu görmeyi kolaylaştırır.
+Kod düzenleyicisinde Yapı Görselleştiricisi özelliği, kod tabanınıza eşleşen küme ayraçlarını gösteren yapı kılavuz çizgileri *-* dikey kesikli çizgiler gösterir. Bu, mantıksal blokların nereden başlayacağını ve sona erer olduğunu görmeyi kolaylaştırır.
 
-![Yapı görselleştiricisi](../ide/media/vside_structure_visualizer.png)
+![Yapı Görselleştirici](../ide/media/vside_structure_visualizer.png)
 
-Yapı Kılavuzu satırlarını devre dışı bırakmak için, **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **genel** ' e gidin ve **yapıyı göster kılavuz çizgileri** kutusunu temizleyin.
+Yapı kılavuz çizgilerini devre dışı bırakmak için **Araçlar**  >  **Seçenekler**  >  **Metin Düzenleyici Genel'e**  >  **gidin** ve **Yapı kılavuz çizgilerini göster kutusunun temizleyin.**
 
-## <a name="enhanced-scroll-bar"></a>Gelişmiş kaydırma çubuğu
+## <a name="enhanced-scroll-bar"></a>Geliştirilmiş kaydırma çubuğu
 
-Kodunuzun bir kuşbakışı görünümünü almak için, bir kod penceresinde gelişmiş kaydırma çubuğunu kullanabilirsiniz. Harita modunda, imleci kaydırma çubuğunu yukarı ve aşağı taşıdığınızda kodun önizlemelerini görebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: kaydırma çubuğunu özelleştirerek kodunuzu izleme](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md).
+Kodunuzun kuş bakış görünümünü elde etmek için kod penceresindeki gelişmiş kaydırma çubuğunu kullanabilirsiniz. Harita modunda, imleci kaydırma çubuğunu yukarı ve aşağı hareket ettirerek kodun önizlemelerini görebilirsiniz. Daha fazla bilgi için [bkz. Nasıl? Kaydırma çubuğunu özelleştirerek kodunuzu izleme.](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)
 
 ## <a name="codelens-information"></a>CodeLens bilgileri
 
-Kod düzenleyicisinde CodeLens kullandığınızda, değişiklikler ve bu değişiklikleri kimin yaptığını, başvuruları, hataları, iş öğelerini, kod incelemelerini ve birim test durumunu oluşturan belirli kod hakkındaki bilgileri bulabilirsiniz. CodeLens, Team Foundation Server Visual Studio Enterprise kullandığınızda bir başlık görünümü gibi çalışır. Bkz. [kod değişikliklerini ve diğer geçmişi bulma](../ide/find-code-changes-and-other-history-with-codelens.md).
+Kod düzenleyicisinde CodeLens'i kullanırken değişiklikler ve bu değişiklikleri kimin yaptığı, başvurular, hatalar, iş öğeleri, kod incelemeleri ve birim testi durumu gibi belirli kodlar hakkında bilgi bulabilirsiniz. CodeLens, Visual Studio Enterprise ile birlikte Team Foundation Server. Bkz. [Kod değişikliklerini ve diğer geçmişi bulma.](../ide/find-code-changes-and-other-history-with-codelens.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
-- [Çağrı hiyerarşisini görüntüle](../ide/reference/call-hierarchy.md)
+- [Çağrı hiyerarşisini görüntüleme](../ide/reference/call-hierarchy.md)

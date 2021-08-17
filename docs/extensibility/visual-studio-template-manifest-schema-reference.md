@@ -1,6 +1,6 @@
 ---
-title: Visual Studio şablon bildirimi şema başvurusu | Microsoft Docs
-description: Bu şema başvurusu, Visual Studio projesi veya öğe şablonları için oluşturulan Visual Studio şablon bildirim dosyalarının biçimini açıklar.
+title: Visual Studio Şablon Bildirimi Şema Başvurusu | Microsoft Docs
+description: Bu şema başvurusu, proje veya Visual Studio için oluşturulan şablon bildirim Visual Studio biçimini açıklar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,94 +8,95 @@ ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 259d2dd050f4681053f331bfd4ec39dd7b214059
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 4e0cb5372340bfd3ca624d3c9844bd34ef1e0914
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905390"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109948"
 ---
-# <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio şablon bildirim Şeması Başvurusu
-Bu şema, Visual Studio projesi veya öğe şablonları için oluşturulan Visual Studio şablon bildirimi (*. vstman*) dosyalarının biçimini açıklar. Şema Ayrıca, bu şablonla ilgili konumu ve ilgili diğer bilgileri de açıklar.
+# <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio şablonu bildirim şeması başvurusu
+Bu şema, proje veya Visual Studio şablonları için oluşturulan Visual Studio şablon bildirimi (*.vstman*) dosyalarının biçimini açıklar. Şema ayrıca konumu ve şablonla ilgili diğer bilgileri de açıklar.
 
- : Ayrı öğe ve proje şablonu dizinleri olduğundan, bir bildirimin öğe ve proje şablonlarının karışımı asla olmaması gerekir.
+ : Ayrı öğe ve proje şablonu dizinleri olduğundan, bir bildirim hiçbir zaman öğe ve proje şablonlarının bir karışımına sahip olması gerekir.
 
 > [!IMPORTANT]
-> Bu bildirim, Visual Studio 2017 ' den itibaren kullanılabilir.
+> Bu bildirim, 2017'Visual Studio kullanılabilir.
 
 ## <a name="vstemplatemanifest-element"></a>VSTemplateManifest öğesi
  Bildirimin kök öğesi.
 
 ### <a name="attributes"></a>Öznitelikler
 
-- **Sürüm**: şablon bildiriminin sürümünü temsil eden bir dize. Gereklidir.
+- **Sürüm:** Şablon bildiriminin sürümünü temsil eden bir dize. Gereklidir.
 
-- **Yerel ayar**: şablon bildiriminin yerel ayarlarını veya yerel ayarlarını temsil eden bir dize. Yerel ayar değeri tüm şablonlar için geçerlidir. Her yerel ayar için ayrı bir bildirim kullanmanız gerekir. İsteğe bağlı.
+- **Yerel seçim:** Şablon bildiriminin yerel veya yerel bölgelerini temsil eden bir dize. Yerel ayar değeri tüm şablonlar için geçerlidir. Her yerel seçim için ayrı bir bildirim kullan gerekir. İsteğe bağlı.
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-- **VSTemplateContainer** Seçim.
+- **VSTemplateContainer** Isteğe bağlı.
 
-- **VSTemplateDir** Seçim.
+- **VSTemplateDir** Isteğe bağlı.
 
 ### <a name="parent-element"></a>Üst öğe
  Yok.
 
 ## <a name="vstemplatecontainer"></a>VSTemplateContainer
- Şablon bildirim öğelerinin kapsayıcısı. Bir bildirimin tanımladığı her şablon için bir şablon kapsayıcısı vardır.
+ Şablon bildirimi öğelerinin kapsayıcısı. Bir bildirim, tanımladığı her şablon için bir şablon kapsayıcısı içerir.
 
 ### <a name="attributes"></a>Öznitelikler
- **VSTemplateType**: şablonun türünü belirten bir dize değeri ( `"Project"` , `"Item"` , veya `"ProjectGroup"` ). Gerekli
+ **VSTemplateType:** Şablonun türünü belirten bir dize değeri ( `"Project"` , `"Item"` veya `"ProjectGroup"` ). Gerekli
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-- **Relativepathondisk**: diskteki şablon dosyasının göreli yolu. Bu konum Ayrıca şablonun **Yeni proje** veya **Yeni öğe** iletişim kutusunda gösterilen şablon ağacında yerleşimini tanımlar. Dizin ve ayrı dosyalar olarak dağıtılan şablonlar için, bu yol şablon dosyalarını içeren dizine başvurur. *.zip* dosyası olarak dağıtılan şablonlar için, bu yol *.zip* dosyasının yolu olmalıdır.
+- **RelativePathOnDisk:** Diskte şablon dosyasının göreli yolu. Bu konum, şablonun Yeni Kaynak veya Yeni Öğe iletişim kutusunda gösterilen şablon **Project** **yerleşimini de** tanımlar. Bu yol, bir dizin ve tek tek dosyalar olarak dağıtılan şablonlar için şablon dosyalarını içeren dizine başvurur. .zipdosyası *olarak dağıtılan* şablonlar için bu yol, dosyanın *.zip* gerekir.
 
-- * * VSTemplateHeader: üstbilgiyi açıklayan bir [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) öğesi.
+- **VSTemplateHeader: Üst bilgiyi açıklayan [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) öğesi.
 
 ### <a name="parent-element"></a>Üst öğe
  **VSTemplateManifest**
 
 ## <a name="vstemplatedir"></a>VSTemplateDir
- Şablonun bulunduğu dizini açıklar. Bir bildirim, dizinler için yerelleştirilmiş ad ve sıralama düzeni sağlamak üzere, şablon Kategori ağacındaki görünümleri denetlemek için birden çok **VSTemplateDir** girişi içerebilir.
+ Şablonun bulunduğu dizini açıklar. Bir bildirim, dizinlerin şablon kategorisi ağacında görünümünü denetlemesi için yerelleştirilmiş ad ve sıralama düzeni sağlamak için birden çok **VSTemplateDir** girdisi içerebilir.
 
- **VSTemplateDir** girdileri, tasarımı nedeniyle yalnızca yerel ayar olmayan belirtilen bildirimlerde görünmelidir.
+ Tasarımı nedeniyle **VSTemplateDir** girişleri yalnızca yerel olarak belirtilmeyen bildirimlerde görünilmelidir.
 
 ### <a name="attributes"></a>Öznitelikler
  Yok.
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-- **RelativePath**: şablonun yolu. Yol başına yalnızca bir giriş olabilir, bu nedenle ilki tüm bildirimler için kazanacaktır.
+- **RelativePath:** Şablonun yolu. Yol başına yalnızca bir giriş olabilir, bu nedenle ilk giriş tüm bildirimlerde kazanır.
 
-- **LocalizedName**: yerelleştirilmiş adı belirten bir **namedescriptionıcon** öğesi. İsteğe bağlı.
+- **LocalizedName:** **Yerelleştirilmiş adı belirten nameDescriptionIcon** öğesi. İsteğe bağlı.
 
-- **SortOrder**: sıralama düzenini belirten bir dize. İsteğe bağlı.
+- **SortOrder:** Sıralama sırasını belirten bir dize. İsteğe bağlı.
 
-- **Parentfolderoverdename**: üst klasörün geçersiz kılınan adı. İsteğe bağlı. Bu öğe, adı belirten bir dize değeri olan bir **Name** özniteliğine sahiptir.
+- **ParentFolderOverrideName:** Üst klasörün geçersiz kılınan adı. İsteğe bağlı. Bu **öğenin, adı** belirten bir dize değeri olan Name özniteliği vardır.
 
 ### <a name="parent-element"></a>Üst öğe
  **VSTemplateManifest**
 
-## <a name="namedescriptionicon"></a>Namedescriptionıcon
- Büyük olasılıkla yerelleştirilmiş şablonlar için ad ve açıklamayı belirtir. Yukarıdaki **LocalizedName** bölümüne bakın.
+## <a name="namedescriptionicon"></a>NameDescriptionIcon
+ Büyük olasılıkla yerelleştirilmiş şablonlar için adı ve açıklamayı belirtir. Yukarıdaki **LocalizedName'e** bakın.
 
 ### <a name="attributes"></a>Öznitelikler
 
-- **Paket**: paketi belirten bir dize değeri. İsteğe bağlı.
+- **Paket:** Paketi belirten bir dize değeri. İsteğe bağlı.
 
-- **ID**: kimliği belirten bir dize değeri. İsteğe bağlı.
+- **ID:** Kimliği belirten bir dize değeri. İsteğe bağlı.
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
 
 ### <a name="parent-element"></a>Üst öğe
- **LocalizedName**
+ **Localizedname**
 
 ## <a name="examples"></a>Örnekler
- Aşağıdaki kod proje şablonu *. vstman* dosyasına bir örnektir.
+ Aşağıdaki kod, proje şablonu *.vstman dosyasının bir örneğidir.*
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
@@ -121,7 +122,7 @@ Bu şema, Visual Studio projesi veya öğe şablonları için oluşturulan Visua
 
 ```
 
- Aşağıdaki kod bir öğe şablonu *. vstman* dosyası örneğidir.
+ Aşağıdaki kod, bir öğe şablonu *.vstman dosyası örneğidir.*
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">

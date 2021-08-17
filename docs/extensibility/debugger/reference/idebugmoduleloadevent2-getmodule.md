@@ -1,6 +1,6 @@
 ---
-description: Yüklenmekte olan veya bellekten kaldırılan modülü alır.
-title: 'IDebugModuleLoadEvent2:: GetModule | Microsoft Docs'
+description: Yüklenen veya kaldırılan modülü alır.
+title: IDebugModuleLoadEvent2::GetModule | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: c86482bb-9ce5-4e63-bbe0-969b50169424
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4605b5eab9137fd918238143d8f0453f9f8c54b8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c632f0de62f931b68b56c321e846eca9265f50b9c19f0704da7fee2b7bd8a8ae
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065378"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417047"
 ---
 # <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
-Yüklenmekte olan veya bellekten kaldırılan modülü alır.
+Yüklenen veya kaldırılan modülü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +47,16 @@ int GetModule(
 
 ## <a name="parameters"></a>Parametreler
 `pModule`\
-dışı Yükleme veya kaldırma işlemi olan modülü temsil eden bir [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) nesnesi döndürür.
+[out] Yükleniyor veya kaldırılan modülü temsil eden bir [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) nesnesi döndürür.
 
 `pbstrDebugMessage`\
-[in, out] Bu olayı açıklayan isteğe bağlı bir ileti döndürür. Bu parametre null bir değer ise, herhangi bir ileti istenmez.
+[in, out] Bu olayı açıklayan isteğe bağlı bir ileti döndürür. Bu parametre null bir değerse ileti isteğinde yoktur.
 
 `pbLoad`\
-[in, out] Modül `TRUE` yüklüyorsanız sıfır ( `FALSE` ) ve modül boşaltılıyor. Bu parametre null bir değer ise, herhangi bir durum istenmez.
+[in, out] Modül yükleniyorsa sıfır ( ) ve modül `TRUE` kaldırıyorsa sıfır ( ) olarak `FALSE` ayarlayın. Bu parametre null bir değerse durum isteği yoktur.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)

@@ -1,6 +1,6 @@
 ---
-title: Görsel stiller etkinken WPF uygulaması yayımlama
-description: Görsel stiller etkinken WPF uygulaması yayımlamayı öğrenin ve bu sayede denetimlerin görünümünün Kullanıcı tarafından seçilen temaya göre değiştirilmesine izin verir.
+title: Görsel stillerin etkin olduğu bir WPF uygulaması yayımlama
+description: Kullanıcı tarafından seçilen temaya göre denetimlerin görünümünün değişmesini sağlayan görsel stillerin etkinleştirildiğinde bir WPF uygulamasını yayımlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,36 +8,37 @@ ms.assetid: 73b22b02-fc75-42aa-82d3-51fdcaf8e5c8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 285d624debed6dc498e3d274af2839137b5094d1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b231fc6635b5c974898ee2cc85ce8a4a64318039
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102171285"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127902"
 ---
-# <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Nasıl yapılır: görsel stiller etkinken WPF uygulaması yayımlama
+# <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Nasıl yapabilirsiniz: Görsel stiller etkinleştirilmiş bir WPF uygulaması yayımlama
 
-Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapmak için ortak denetimlerin görünümünü sağlar. Varsayılan olarak, görsel stiller Windows Presentation Foundation (WPF) uygulamaları için etkin değildir, bu nedenle bunları el ile etkinleştirmeniz gerekir. Ancak, bir WPF uygulaması için görsel stilleri etkinleştirmek ve sonra çözümün yayımlanması bir hataya neden olur. Bu konuda, bu hatanın nasıl çözümleneceği ve görsel stillerle bir WPF uygulaması yayımlama işleminin nasıl giderileceği açıklanmaktadır. Görsel stiller hakkında daha fazla bilgi için bkz. [görsel stillere genel bakış](/windows/desktop/Controls/visual-styles-overview). Hata iletisi hakkında daha fazla bilgi için bkz. [ClickOnce dağıtımlarında belirli hataların sorunlarını giderme](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md).
+Görsel stiller, kullanıcı tarafından seçilen temaya göre ortak denetimlerin görünümünün değişmesini sağlar. Varsayılan olarak, görsel stilleri Windows Presentation Foundation (WPF) uygulamaları için etkinleştirilmez, bu nedenle bunları el ile etkinleştirmeniz gerekir. Ancak, bir WPF uygulaması için görsel stilleri etkinleştirmek ve ardından çözümü yayımlamak hataya neden olur. Bu konuda, bu hatanın nasıl çözülecek ve görsel stiller etkinleştirilmiş bir WPF uygulaması yayımlama işlemi açıklanmıştır. Görsel stiller hakkında daha fazla bilgi için bkz. [Görsel stiller'e genel bakış.](/windows/desktop/Controls/visual-styles-overview) Hata iletisi hakkında daha fazla bilgi için [bkz. Dağıtımlarda belirli ClickOnce giderme.](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
 
- Hatayı gidermek ve Çözümü yayımlamak için aşağıdaki görevleri gerçekleştirmeniz gerekir:
+ Hatayı çözmek ve çözümü yayımlamak için aşağıdaki görevleri gerçekleştirmeniz gerekir:
 
-- [Çözümü görsel stiller etkin olmadan yayımlayın](#publish-the-solution-without-visual-styles-enabled).
+- [Çözümü görsel stilleri etkinleştirilmeden yayımlayın.](#publish-the-solution-without-visual-styles-enabled)
 
-- [Bir bildirim dosyası oluşturun](#create-a-manifest-file).
+- [Bir bildirim dosyası oluşturun.](#create-a-manifest-file)
 
-- [Bildirim dosyasını yayımlanan çözümün yürütülebilir dosyasına ekleyin](#embed-the-manifest-file-into-the-executable-file-of-the-published-solution).
+- [Bildirim dosyasını yayımlanan çözümün yürütülebilir dosyasına ekleme.](#embed-the-manifest-file-into-the-executable-file-of-the-published-solution)
 
-- [Uygulama ve dağıtım bildirimlerini imzalayın](#sign-the-application-and-deployment-manifests).
+- [Uygulama ve dağıtım bildirimlerini imzalar.](#sign-the-application-and-deployment-manifests)
 
-  Ardından, yayımlanan dosyaları son kullanıcıların uygulamayı yüklemesini istediğiniz konuma taşıyabilirsiniz.
+  Ardından, yayımlanan dosyaları son kullanıcıların uygulamayı yüklemelerini istediğiniz konuma taşıyabilirsiniz.
 
-## <a name="publish-the-solution-without-visual-styles-enabled"></a>Çözümü görsel stiller etkin olmadan yayımlayın
+## <a name="publish-the-solution-without-visual-styles-enabled"></a>Çözümü görsel stilleri etkinleştirilmeden yayımlama
 
-1. Projenizde görsel stillerin etkin olmadığından emin olun. İlk olarak, aşağıdaki XML için projenizin bildirim dosyasını kontrol edin. Ardından, XML varsa, XML 'i bir açıklama etiketi ile birlikte iliştirin.
+1. Projenizin görsel stillerinin etkinleştirilmemiş olduğundan emin olun. İlk olarak, aşağıdaki XML için projenizin bildirim dosyasını kontrol edin. Ardından, XML varsa, XML'i bir açıklama etiketiyle içine ekleyin.
 
-     Varsayılan olarak, görsel stiller etkin değildir.
+     Varsayılan olarak, görsel stilleri etkin değildir.
 
     ```xml
     <dependency>
@@ -47,38 +48,38 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
     </dependency>
     ```
 
-     Aşağıdaki yordamlarda, projenizle ilişkili bildirim dosyasının nasıl açılacağı gösterilmektedir.
+     Aşağıdaki yordamlar, projeniz ile ilişkili bildirim dosyasının nasıl aç olduğunu gösterir.
 
-    **Bildirim dosyasını Visual Basic bir projede açmak için**
+    **Bildirim dosyasını bir Visual Basic açmak için**
 
-    1. Menü çubuğunda, **Proje**, *ProjectName* **Özellikler**' i seçin, burada *ProjectName* WPF projenizin adıdır.
+    1. Menü çubuğunda, Project **,** *ProjectName* **Özellikleri'ne tıklayın;** burada *ProjectName,* WPF projenizin adıdır.
 
-         WPF projeniz için özellik sayfaları görüntülenir.
+         WPF projenizin özellik sayfaları görüntülenir.
 
-    2. **Uygulama** sekmesinde, **Windows ayarlarını görüntüle**' yi seçin.
+    2. Uygulama sekmesinde **Görünüm'e** **tıklayın ve Windows Ayarlar.**
 
-         App. manifest dosyası **kod düzenleyicisinde** açılır.
+         app.manifest dosyası Kod **Düzenleyicisi'nde açılır.**
 
-    **Bir C# projesinde bildirim dosyasını açmak için**
+    **Bildirim dosyasını bir C# projesinde açmak için**
 
-    1. Menü çubuğunda, **Proje**, *ProjectName* **Özellikler**' i seçin, burada *ProjectName* WPF projenizin adıdır.
+    1. Menü çubuğunda, Project **,** *ProjectName* **Özellikleri'ne tıklayın;** burada *ProjectName,* WPF projenizin adıdır.
 
-         WPF projeniz için özellik sayfaları görüntülenir.
+         WPF projenizin özellik sayfaları görüntülenir.
 
-    2. **Uygulama** sekmesinde, bildirim alanında görüntülenen adı bir yere göz önünde yapın. Bu, projenizle ilişkili bildirimin adıdır.
+    2. Uygulama **sekmesinde,** bildirim alanında görünen adı not ekleyin. Bu, projeniz ile ilişkili bildirimin adıdır.
 
         > [!NOTE]
-        > Bildirimi **varsayılan ayarlarla katıştır** veya bildirim **olmadan uygulama oluşturursanız** , bildirim alanında görsel stiller etkinleştirilmez. Bildirim alanında bir bildirim dosyasının adı görünürse, bu yordamın bir sonraki adımına geçin.
+        > Bildirim **alanında varsayılan ayarlarla bildirim** ekle veya Bildirim **olmadan** uygulama oluştur görünüyorsa, görsel stilleri etkinleştirilmez. Bildirim alanında bir bildirim dosyasının adı görünürse, bu yordamda bir sonraki adıma geçin.
 
-    3. **Çözüm Gezgini**, **tüm dosyaları göster**' i seçin.
+    3. Bu **Çözüm Gezgini** Tüm Dosyaları **Göster'i seçin.**
 
-         Bu düğme, hariç tutulan ve normalde gizlenen olanlar da dahil olmak üzere tüm proje öğelerini gösterir. Bildirim dosyası bir proje öğesi olarak görünür.
+         Bu düğme dışlananlar ve normalde gizlenenler de dahil olmak üzere tüm proje öğelerini gösterir. Bildirim dosyası bir proje öğesi olarak görünür.
 
-2. Çözümünüzü derleyin ve yayımlayın. Çözümü yayımlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
+2. Çözümlerinizi derleme ve yayımlama. Çözümü yayımlama hakkında daha fazla bilgi için bkz. [Yayımlama Sihirbazı'nı kullanarak ClickOnce uygulama yayımlama.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 
 ## <a name="create-a-manifest-file"></a>Bildirim dosyası oluşturma
 
-1. Aşağıdaki XML 'i bir not defteri dosyasına yapıştırın.
+1. Aşağıdaki XML dosyasını bir Not Defteri yapıştırın.
 
      Bu XML, görsel stilleri destekleyen denetimleri içeren derlemeyi açıklar.
 
@@ -97,35 +98,35 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
     </asmv1:assembly>
     ```
 
-2. Not defteri 'nde **Dosya**' ya ve ardından **farklı kaydet**' e tıklayın.
+2. Dosya Not Defteri'a **ve** ardından Farklı **Kaydet'e tıklayın.**
 
-3. **Farklı kaydet** iletişim kutusunda, **farklı kaydet türü** aşağı açılan listesinde **tüm dosyalar**' ı seçin.
+3. Farklı **Kaydet iletişim** kutusundaki Farklı Kaydet **türü açılan** listesinde Tüm Dosyalar'ı **seçin.**
 
-4. Dosya **adı** kutusunda dosyayı adlandırın ve dosya adının sonuna *. bildirimini* ekleyin. Örneğin: *Themes. manifest*.
+4. Dosya **adı kutusunda,** dosyayı olarak ad girin ve dosya adının sonuna *.manifest* yazın. Örneğin: *themes.manifest*.
 
-5. **Klasörlere Gözatadır** düğmesini seçin, herhangi bir klasör seçin ve ardından **Kaydet**' e tıklayın.
+5. Klasörlere **Gözat düğmesini seçin,** herhangi bir klasörü seçin ve kaydet'e **tıklayın.**
 
     > [!NOTE]
-    > Kalan yordamlar, bu dosyanın adının *Temalar. manifest* olduğunu ve dosyanın bilgisayarınızdaki *C:\Temp* dizinine kaydedildiğini varsayar.
+    > Kalan yordamlar, bu dosyanın adının *themes.manifest* olduğunu ve dosyanın bilgisayarınızda *C:\temp* dizinine kayded olduğunu varsayır.
 
-## <a name="embed-the-manifest-file-into-the-executable-file-of-the-published-solution"></a>Bildirim dosyasını yayımlanan çözümün yürütülebilir dosyasına ekleyin
+## <a name="embed-the-manifest-file-into-the-executable-file-of-the-published-solution"></a>Bildirim dosyasını yayımlanan çözümün yürütülebilir dosyasına ekleme
 
-1. **Visual Studio için geliştirici komut istemi** açın.
+1. için **Geliştirici Komut İstemi'Visual Studio.**
 
-    Visual Studio Geliştirici Komut İstemi nasıl açılacağı hakkında daha fazla bilgi için, bkz. [Geliştirici komut istemi ve geliştirici PowerShell](../ide/reference/command-prompt-powershell.md).
+    Geliştirici Komut İstemi için Geliştirici Komut İstemi hakkında daha fazla bilgi Visual Studio [bkz. Geliştirici Komut İstemi Geliştirici PowerShell.](../ide/reference/command-prompt-powershell.md)
 
    > [!NOTE]
-   > Geri kalan adımlar çözümünüz hakkında aşağıdaki varsayımlar yapar:
+   > Kalan adımlar çözümünüzle ilgili olarak aşağıdaki varsayımları yapın:
    >
-   > - Çözümün adı **MyWPFProject**' dir.
+   > - Çözümün adı **MyWPFProject'tir.**
    > - Çözüm şu dizinde bulunur: `%UserProfile%\Documents\Visual Studio 2010\Projects\` .
    >
-   > - Çözüm şu dizine yayımlandı: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish` .
+   > - Çözüm şu dizinde yayımlanır: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish` .
    > - Yayımlanan uygulama dosyalarının en son sürümü aşağıdaki dizinde bulunur: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`
    >
-   > Yukarıda açıklanan ad veya dizin konumlarını kullanmak zorunda değilsiniz. Yukarıda açıklanan ad ve konumlar yalnızca çözümünüzü yayımlamak için gereken adımları göstermek için kullanılır.
+   > Yukarıda açıklanan adı veya dizin konumlarını kullanmak zorunda değildir. Yukarıda açıklanan ad ve konumlar yalnızca çözümlerinizi yayımlamak için gereken adımları göstermek için kullanılır.
 
-2. Komut isteminde, yayımlanan uygulama dosyalarının en son sürümünü içeren dizinin yolunu değiştirin. Aşağıdaki örnekte bu adım gösterilmektedir.
+2. Komut isteminde, yayımlanan uygulama dosyalarının en son sürümünü içeren dizin yolunu seçin. Aşağıdaki örnekte bu adım gösterildi.
 
    ```cmd
    cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"
@@ -139,14 +140,14 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
 
 ## <a name="sign-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini imzalama
 
-1. Komut isteminde, geçerli dizindeki yürütülebilir dosyadan *. deploy* uzantısını kaldırmak için aşağıdaki komutu çalıştırın.
+1. Komut isteminde aşağıdaki komutu çalıştırarak geçerli dizinde yürütülebilir dosyadan *.deploy* uzantısını kaldırın.
 
    ```cmd
    ren MyWPFApp.exe.deploy MyWPFApp.exe
    ```
 
    > [!NOTE]
-   > Bu örnek, yalnızca bir dosyanın *. deploy* dosya uzantısına sahip olduğunu varsayar. Bu dizindeki *. deploy* dosya uzantısına sahip tüm dosyaları yeniden adlandırdığınızdan emin olun.
+   > Bu örnekte yalnızca bir dosyanın .deploy dosya *uzantısına sahip olduğu* varsaydır. Bu dizinde .deploy dosya uzantısına sahip tüm dosyaları *yeniden adlandırırsanız emin* olun.
 
 2. Komut isteminde, uygulama bildirimini imzalamak için aşağıdaki komutu çalıştırın.
 
@@ -155,16 +156,16 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
    ```
 
    > [!NOTE]
-   > Bu örnek, projenin *. pfx* dosyasını kullanarak bildirimi imzalayabildiğinizi varsayar. Bildirimi imzalayamazsınız, `-cf` Bu örnekte kullanılan parametreyi atlayabilirsiniz. Bildirimi parola gerektiren bir sertifikayla imzaladıktan sonra `-password` () seçeneğini belirtin `For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password` .
+   > Bu örnekte, projenin *.pfx* dosyasını kullanarak bildirimi imzalayabilirsiniz. Bildirimi imzalarsanız, bu örnekte kullanılan `-cf` parametresini atlarsanız. Bildirimi parola gerektiren bir sertifikayla imzalarsanız () `-password` seçeneğini `For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password` belirtin.
 
-3. Komut isteminde, bu yordamın önceki adımında yeniden adlandırdığınız dosyanın adına *. deploy* uzantısını eklemek için aşağıdaki komutu çalıştırın.
+3. Komut isteminde aşağıdaki komutu çalıştırarak *.deploy* uzantısını bu yordamın önceki adımlarında yeniden adlandırdınız dosyanın adına ekleyin.
 
    ```
    ren MyWPFApp.exe MyWPFApp.exe.deploy
    ```
 
    > [!NOTE]
-   > Bu örnek, yalnızca bir dosyanın *. deploy* dosya uzantısına sahip olduğunu varsayar. Bu dizindeki, daha önce *. deploy* dosya adı uzantısına sahip olan tüm dosyaları yeniden adlandırdığınızdan emin olun.
+   > Bu örnekte, yalnızca bir dosyanın *.deploy* dosya uzantısı olduğu varsaydır. Daha önce .deploy dosya adı uzantısına sahip olan bu dizinde yer alan tüm *dosyaları yeniden adlandırırsanız* emin olun.
 
 4. Komut isteminde, dağıtım bildirimini imzalamak için aşağıdaki komutu çalıştırın.
 
@@ -173,13 +174,13 @@ Görsel stiller, Kullanıcı tarafından seçilen temaya göre değişiklik yapm
    ```
 
    > [!NOTE]
-   > Bu örnek, projenin *. pfx* dosyasını kullanarak bildirimi imzalayabildiğinizi varsayar. Bildirimi imzalayamazsınız, `-cf` Bu örnekte kullanılan parametreyi atlayabilirsiniz. Bildirimi parola gerektiren bir sertifikayla imzaladıktan sonra, `-password` Bu örnekte olduğu gibi seçeneğini belirtin: `For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password` .
+   > Bu örnekte, projenin *.pfx* dosyasını kullanarak bildirimi imzalayabilirsiniz. Bildirimi imzalarsanız, bu örnekte kullanılan `-cf` parametresini atlarsanız. Bildirimi parola gerektiren bir sertifikayla imzalarsanız, şu örnekte `-password` olduğu gibi seçeneğini belirtin: `For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password` .
 
-   Bu adımları gerçekleştirdikten sonra, yayımlanan dosyaları son kullanıcıların uygulamayı yüklemesini istediğiniz konuma taşıyabilirsiniz. Çözümü sıklıkla güncelleştirmek istiyorsanız, bu komutları bir betiğe taşıyabilir ve yeni bir sürüm yayımladığınızda betiği çalıştırabilirsiniz.
+   Bu adımları gerçekleştirdikten sonra, yayımlanan dosyaları son kullanıcıların uygulamayı yüklemelerini istediğiniz konuma taşıyabilirsiniz. Çözümü sık sık güncelleştirmek için bu komutları bir betik içine taşımak ve her yeni sürüm yayımlasanız betiği çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ClickOnce Dağıtımları İçinde Belirli Hataları Giderme](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
-- [Görsel stillere genel bakış](/windows/desktop/Controls/visual-styles-overview)
-- [Görsel stilleri etkinleştirme](/windows/desktop/Controls/cookbook-overview)
-- [Geliştirici Komut İstemi ve geliştirici PowerShell](../ide/reference/command-prompt-powershell.md)
+- [Görsel Stiller'e Genel Bakış](/windows/desktop/Controls/visual-styles-overview)
+- [Görsel Stilleri Etkinleştirme](/windows/desktop/Controls/cookbook-overview)
+- [Geliştirici Komut İstemi ve Geliştirici PowerShell](../ide/reference/command-prompt-powershell.md)

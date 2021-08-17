@@ -7,14 +7,15 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 2234efa7bc15381660a86d670ae07673355c4d9b
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: 339249a58c4b5120328ad4e549da9144a6b162a65dca38c588a020fa42154d3a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114680021"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121229149"
 ---
 # <a name="debug-r-in-visual-studio"></a>Visual Studio 'de R 'de hata ayıkla
 

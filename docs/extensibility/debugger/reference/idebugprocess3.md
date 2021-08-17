@@ -22,10 +22,10 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121338949"
 ---
 # <a name="idebugprocess3"></a>IDebugProcess3
-Bu arabirim çalışan bir işlemi ve programlarını temsil eder. Bu arabirim, [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimindeki çeşitli yöntemlerin yerini alacak şekilde bulunur. İşlemdeki tüm programlar üzerinde denetim sağlar.
+Bu arabirim çalışan bir işlemi ve programlarını temsil eder. Bu [arabirim, IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabiriminde çeşitli yöntemlerin yerini almaktadır. Süreçteki tüm programlar üzerinde denetim sağlar.
 
 > [!NOTE]
-> [Devam etme](../../../extensibility/debugger/reference/idebugprogram2-continue.md), [yürütme](../../../extensibility/debugger/reference/idebugprogram2-execute.md)ve [adım](../../../extensibility/debugger/reference/idebugprogram2-step.md) yöntemleri kullanım dışıdır ve artık kullanılmamalıdır. Bunun yerine arabirim üzerinde ilgili yöntemleri kullanın `IDebugProcess3` .
+> [Devam](../../../extensibility/debugger/reference/idebugprogram2-continue.md) [edin,](../../../extensibility/debugger/reference/idebugprogram2-execute.md)Yürüt [ve](../../../extensibility/debugger/reference/idebugprogram2-step.md) Adım yöntemleri kullanım dışıdır ve artık kullanılmamalı. Bunun yerine arabirimde karşılık gelen `IDebugProcess3` yöntemleri kullanın.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,35 +33,35 @@ Bu arabirim çalışan bir işlemi ve programlarını temsil eder. Bu arabirim, 
 IDebugProcess3 : IDebugProcess2
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirim, programları bir grup olarak yönetmek için özel bir bağlantı noktası sağlayıcısı tarafından uygulanır. Programlar bir grup olarak yönetildiğinde, yürütmesini denetleyebilir ve bir ifade değerlendirici için dil oluşturabilirsiniz. Bu arabirimin bağlantı noktası sağlayıcısı tarafından uygulanması gerekir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim, programları grup olarak yönetmek için özel bir bağlantı noktası sağlayıcı tarafından uygulanır. Programlar bir grup olarak yönetiliyorsa, bunların yürütülmesini kontrol etmek ve bir ifade değerlendiricisi için bir dil kurmak. Bu arabirimin bağlantı noktası sağlayıcı tarafından uygulanması gerekir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim öncelikle bu işlemde tanımlanan bir program grubuyla etkileşim kurmak için oturum hata ayıklama Yöneticisi (SDM) tarafından çağrılır.
+ Bu arabirim, bu işlemde tanımlanan bir program grubuyla etkileşim kurmak için öncelikle oturum hata ayıklama yöneticisi (SDM) tarafından çağrılır.
 
- Bu arabirimi almak için bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) 'i çağırın.
+ Bu arabirimi elde etmek için [IDebugProcess2 arabiriminde](../../../extensibility/debugger/reference/idebugprocess2.md) [QueryInterface](/cpp/atl/queryinterface) çağrısında bulundunuz.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)öğesinden devralınan yöntemlere ek olarak `IDebugProcess3` aşağıdaki yöntemleri uygular.
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ [IDebugProcess2'den](../../../extensibility/debugger/reference/idebugprocess2.md)devralınan yöntemlere ek `IDebugProcess3` olarak aşağıdaki yöntemleri de kullanır.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Devam et](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|Bir işlemden yürütmeye devam eder.|
-|[Yürütme](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|Bir işlemin yürütülmesine başlar.|
-|[Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md)|İşlemler, işlemde bir yönerge veya ifade iletir.|
-|[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)|İşlemin hata ayıklama için başlatılmasının nedenini alır.|
-|[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|Hata ayıklama altyapısının uygun ifade değerlendiricisi 'nı yükleyebilmesi için barındırma dilini ayarlar.|
-|[GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)|Bu işlem için şu anda ayarlanmış olan dili alır.|
-|[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)|Bu işlem için Düzenle ve devam et (ENC) işlemini devre dışı bırakır.<br /><br /> Özel bir bağlantı noktası sağlayıcısı bu yöntemi uygulamaz (her zaman döndürmelidir `E_NOTIMPL` ).|
-|[GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)|Bu işlem için ENC durumunu alın.<br /><br /> Özel bir bağlantı noktası sağlayıcısı bu yöntemi uygulamaz (her zaman döndürmelidir `E_NOTIMPL` ).|
-|[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)|Kullanılabilir hata ayıklama motorları için benzersiz tanımlayıcıların dizisini alır.|
+|[Devam et](../../../extensibility/debugger/reference/idebugprocess3-continue.md)|Bir işlem yürütmeye veya adım adım işlemeye devam eder.|
+|[Yürütme](../../../extensibility/debugger/reference/idebugprocess3-execute.md)|Bir sürecin yürütülmesini başlar.|
+|[Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md)|Süreç içinde bir yönerge veya deyimi iletme adımları.|
+|[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)|Hata ayıklama için sürecin başlat nedenini alır.|
+|[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)|Hata ayıklama altyapısının uygun ifade değerlendiriciyi yükleyemediklerinden barındırma dilini ayarlar.|
+|[GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md)|Bu işlem için ayarlanmış olan dili alın.|
+|[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)|Bu işlem için Düzenle ve Devam 'ı (ENC) devre dışı eder.<br /><br /> Özel bir bağlantı noktası sağlayıcı bu yöntemi uygulamaz (her zaman geri `E_NOTIMPL` dönmeli).|
+|[GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)|Bu işlem için ENC durumunu al.<br /><br /> Özel bir bağlantı noktası sağlayıcı bu yöntemi uygulamaz (her zaman geri `E_NOTIMPL` dönmeli).|
+|[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)|Kullanılabilir hata ayıklama altyapıları için bir dizi benzersiz tanımlayıcıyı döndürür.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: Msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

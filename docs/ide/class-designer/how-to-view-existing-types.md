@@ -14,14 +14,15 @@ ms.assetid: de110a4e-5b51-4a40-9dee-615df4d8f999
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d5249102013aaf72a48c7137b415636952ed1d0d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 03bd0d6bc66e97c0449287823457c3af8eb0cc86
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951816"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109480"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı varolan türleri görüntüleme
 

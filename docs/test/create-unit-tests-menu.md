@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 4edef0815b6923ea204c1a0d1890837ec9bead6c
-ms.sourcegitcommit: fa253b04f1f6757c62a286e541b9bef36a97d1f9
+ms.openlocfilehash: 61e061c656e94a7aae6b6cbaeabc7614284cd8483a7120993fe87f951caadb8f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2021
-ms.locfileid: "114703321"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121227758"
 ---
 # <a name="create-unit-test-method-stubs-from-code"></a>Koddan birim testi yöntemi saplamaları oluştur
 

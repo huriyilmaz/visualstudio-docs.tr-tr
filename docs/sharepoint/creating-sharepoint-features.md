@@ -1,6 +1,6 @@
 ---
-title: SharePoint Özellikleri | Microsoft Docs
-description: Daha kolay SharePoint ilgili proje öğelerini grup SharePoint bir özellik oluşturun. SharePoint çözümüne özellikler ekleyin. Özellik tasarımcısını kullanın.
+title: SharePoint özellikleri oluşturuluyor | Microsoft Docs
+description: daha kolay dağıtım için ilgili SharePoint proje öğelerini gruplamak üzere bir SharePoint özelliği oluşturun. SharePoint çözümüne özellikler ekleyin. Özellik tasarımcısını kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,46 +16,46 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 7e78fb436e03fc6d6bc746ea1a047d838eeb4c3b6c23f4d413aaae5ebe84dabf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4eaf4a9541834215c0c66aed7bb9271faa79a1e3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385308"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106854"
 ---
-# <a name="create-sharepoint-features"></a>Yeni SharePoint oluşturma
-  Daha kolay dağıtım için SharePoint proje öğelerini grup SharePoint bir Özellik kullanabilirsiniz. Özellikler oluşturabilir, kapsamlar oluşturabilir ve özellik tasarımcısını kullanarak diğer özellikleri bağımlılık SharePoint işaretlerini oluşturabilirsiniz. Tasarımcı ayrıca her özelliği açıklayan bir XML dosyası olan bir bildirim de üretir.
+# <a name="create-sharepoint-features"></a>SharePoint özellikleri oluşturma
+  daha kolay dağıtım için ilgili SharePoint proje öğelerini gruplamak üzere bir SharePoint özelliği kullanabilirsiniz. SharePoint özellik tasarımcısını kullanarak özellikler oluşturabilir, kapsamları ayarlayabilir ve diğer özellikleri bağımlılıklar olarak işaretleyebilirsiniz. Tasarımcı Ayrıca her bir özelliği açıklayan bir XML dosyası olan bir bildirim oluşturur.
 
 ## <a name="add-features-to-the-sharepoint-solution"></a>SharePoint çözümüne özellikler ekleme
- Çözüm Gezgini Gezgini'ni kullanarak SharePoint çözümüne özellik ekleyebilirsiniz. Özellik eklemek için aşağıdaki yöntemlerden birini kullanabilirsiniz.
+ Çözüm Gezgini veya paketleme gezgini 'ni kullanarak SharePoint çözümüne bir özellik ekleyebilirsiniz. Bir özellik eklemek için aşağıdaki yöntemlerden birini kullanabilirsiniz.
 
-- Bu **Çözüm Gezgini** Özellikler kısayol menüsünü **açın ve Özellik** Ekle'yi **seçin.**
+- **Çözüm Gezgini**, **Özellikler** için kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
 
-- Paketleme **Gezgini'nde** paketin kısayol menüsünü açın ve Özellik **Ekle'yi seçin.**
+- **Paketleme Gezgini**' nde paketin kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
 
 ## <a name="using-the-feature-designer"></a>Özellik tasarımcısını kullanma
- Bir SharePoint, bir veya daha fazla SharePoint özelliği içerebilir. Bu özellikler, Çözüm Gezgini. Her Özelliğin, **Özellik özelliklerini özelleştirmek** için kullanabileceğiniz kendi Özellik Tasarımcısı vardır. Daha fazla bilgi için [bkz. Nasıl SharePoint özelleştirme.](../sharepoint/how-to-customize-a-sharepoint-feature.md) Özellikleri birbirinden ayırt etmek için başlık, açıklama, sürüm ve kapsam gibi Özellik özelliklerini yapılandırabilirsiniz.
+ SharePoint çözümü, Çözüm Gezgini özellik düğümü altında gruplanmış bir veya daha fazla SharePoint özelliği içerebilir. Her özelliğin özellik özelliklerini özelleştirmek için kullanabileceğiniz kendi **özellik Tasarımcısı** vardır. daha fazla bilgi için bkz. [nasıl yapılır: SharePoint özelleştirme özelliği](../sharepoint/how-to-customize-a-sharepoint-feature.md). Özellikleri diğerinden ayırt etmek için başlık, açıklama, sürüm ve kapsam gibi özellik özelliklerini yapılandırabilirsiniz.
 
-### <a name="feature-designer-options"></a>Özellik tasarımcısı seçenekleri
- Bir Özellik oluşturdukktan sonra özellik tasarımcısını kullanarak özelleştirebilirsiniz.
+### <a name="feature-designer-options"></a>Özellik Tasarımcısı seçenekleri
+ Bir özellik oluşturduktan sonra özelleştirmek için özellik tasarımcısını kullanabilirsiniz.
 
- Aşağıdaki tabloda Özellik Tasarımcısı'nda görüntülenen Özellik özellikleri açık almaktadır.
+ Aşağıdaki tabloda, özellik tasarımcısında görüntülenen özellik özellikleri açıklanmaktadır.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|Başlık|İsteğe bağlı. Özelliğin varsayılan başlığı *SolutionName* *FeatureName olarak ayarlanır.*|
-|Açıklama|İsteğe bağlı. SharePoint Özelliğinin açıklaması.|
-|Kapsam|Gereklidir. Bir Özellik, Çözüm Gezgini **kullanılarak oluşturulursa,** kapsam varsayılan olarak Web olarak ayarlanır.<br /><br /> - Grup: Bir Özelliği tüm sunucu grubu için etkinleştirin.<br /><br /> - Site: Bir site koleksiyonunda tüm web siteleri için bir Özelliği etkinleştirin.<br /><br /> - Web: Belirli bir web sitesi için özelliği etkinleştirin.<br /><br /> - WebApplication: Bir özelliği bir web uygulamasındaki tüm web siteleri için etkinleştirin.|
-|Çözümdeki Öğeler|Tüm SharePoint Özelliğine eklen menü öğeleri.|
-|Özellik öğeleri|SharePoint eklenen proje öğelerini içerir.|
+|Başlık|İsteğe bağlı. Özelliğin varsayılan başlığı *SolutionName* *featurename* olarak ayarlanmıştır.|
+|Açıklama|İsteğe bağlı. SharePoint özelliğinin açıklaması.|
+|Kapsam|Gereklidir. Bir özellik **Çözüm Gezgini** kullanılarak oluşturulduysa, kapsam varsayılan olarak Web 'e ayarlanır.<br /><br /> -Farm: tüm sunucu grubu için bir özelliği etkinleştirin.<br /><br /> -Site: bir site koleksiyonundaki tüm Web siteleri için bir özelliği etkinleştirin.<br /><br /> -Web: belirli bir Web sitesi için bir özelliği etkinleştirin.<br /><br /> -WebApplication: bir Web uygulamasındaki tüm Web siteleri için bir özelliği etkinleştirin.|
+|Çözümdeki öğeler|özelliğe eklenebilen tüm SharePoint öğeleri.|
+|Özelliğindeki öğeler|özelliğe eklenen SharePoint proje öğeleri.|
 
-## <a name="add-and-remove-sharepoint-project-items"></a>Proje öğelerini SharePoint kaldırma
- Dağıtım için SharePoint eklemek istediğiniz proje öğelerini SharePoint seçin. **Özellikler'e öğe** eklemek ve kaldırmak ve Özellik bildirimini görüntülemek için Özellik Tasarımcısı'ı kullanın. Daha fazla bilgi için, [bkz. How to: Add and remove items to SharePoint .](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)
+## <a name="add-and-remove-sharepoint-project-items"></a>SharePoint proje öğeleri ekleme ve kaldırma
+ dağıtım için SharePoint özelliği eklemek istediğiniz SharePoint proje öğelerini seçebilirsiniz. Özellik **tasarımcısını** kullanarak özelliklere öğe ekleyip kaldırın ve özellik bildirimini görüntüleyin. daha fazla bilgi için bkz. [nasıl yapılır: öğeleri ekleme ve kaldırma SharePoint özellikleri](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md).
 
-## <a name="add-feature-dependencies"></a>Özellik bağımlılıkları ekleme
- Özelliğiniz etkinleştirilmeden önce SharePoint sunucusunun belirli Özellikleri etkinleştirmesi için Özellik bildirimini yapılandırabilirsiniz. Örneğin, SharePoint özelliğiniz diğer işlevlere veya verilere bağlı ise, SharePoint sunucusu önce özelliğinizin bağlı olduğu Özelliklerden herhangi birini etkinleştirmeyi deneyebilir. Daha fazla bilgi için, [bkz. How to: Add and remove feature dependencies](../sharepoint/how-to-add-and-remove-feature-dependencies.md).
+## <a name="add-feature-dependencies"></a>Özellik bağımlılıkları Ekle
+ özellik bildirimini, SharePoint sunucusu, özelliği etkinleştirilmeden önce belirli özellikleri etkinleşmeyecek şekilde yapılandırabilirsiniz. örneğin, SharePoint özelliği işlevsellik veya veriler için diğer özelliklere bağımlıysa, SharePoint sunucusu öncelikle özelliğin bağlı olduğu özelliklerden birini etkinleştirmeyi deneyebilir. Daha fazla bilgi için bkz. [nasıl yapılır: özellik bağımlılıklarını ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-feature-dependencies.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl SharePoint: SharePoint özelleştirme](../sharepoint/how-to-customize-a-sharepoint-feature.md)
-- [Nasıl kullanılır: SharePoint özelliklerine öğe ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)
-- [Nasıl yapılanlar: Özellik bağımlılıkları ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-feature-dependencies.md)
+- [nasıl yapılır: SharePoint özelliğini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-feature.md)
+- [nasıl yapılır: SharePoint özelliklerine öğe ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)
+- [Nasıl yapılır: özellik bağımlılıklarını ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-feature-dependencies.md)

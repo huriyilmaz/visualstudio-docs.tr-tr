@@ -1,6 +1,6 @@
 ---
 title: Anonim Türü Tuple'a Dönüştürme
-description: Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanarak anonim bir türü veri türüne dönüştürme hakkında bilgi Visual Studio.
+description: Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanarak anonim bir türü bir veri türüne dönüştürme hakkında bilgi Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 099d6c99806e75b8348e13156eeba652021fd86a8d7e95eaa3a09df3f91fed66
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5618d0f551c76721997f89ae328571308eb32104
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430504"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101537"
 ---
 # <a name="convert-anonymous-type-to-tuple"></a>Anonim türü tanımlama grubuna dönüştürme
 

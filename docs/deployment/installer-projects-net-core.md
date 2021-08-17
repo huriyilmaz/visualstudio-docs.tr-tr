@@ -1,6 +1,6 @@
 ---
-description: uygulamaları msı olarak paketleme, genellikle Visual Studio Yükleyicisi projeleri uzantısı kullanılarak gerçekleştirilir.
-title: Visual Studio Yükleyicisi Projeler ve .NET Core 3,1
+description: Uygulamaları MSI olarak paketleme genellikle Visual Studio Yükleyicisi Projeleri Uzantısı kullanılarak kullanılmaktadır.
+title: Visual Studio Yükleyicisi Projeler ve .NET Core 3.1
 titleSuffix: ''
 ms.date: 08/18/2020
 ms.topic: conceptual
@@ -22,41 +22,41 @@ ms.locfileid: "121418440"
 ---
 # <a name="visual-studio-installer-projects-extension-and-net-core-31"></a>Visual Studio Yükleyicisi Projeleri Uzantısı ve .NET Core 3.1
 
-uygulamaları msı olarak paketleme, genellikle Visual Studio Yükleyicisi projeleri uzantısı kullanılarak gerçekleştirilir.
+Uygulamaları MSI olarak paketleme genellikle Visual Studio Yükleyicisi Projeleri Uzantısı kullanılarak kullanılmaktadır.
 
-uzantıyı buradan indirebilirsiniz: [Visual Studio Yükleyicisi projeler](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects)
+Uzantıyı buradan indirebilirsiniz: [Visual Studio Yükleyicisi Projeleri](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects)
 
 ## <a name="update-for-net-core"></a>.NET Core için güncelleştirme
-.NET Core yayımlamanın iki farklı modeline sahiptir.
+.NET Core'un yayımlama için iki farklı modeli vardır.
 
 - Çerçeveye bağımlı dağıtımlar
 
-- Kendi içinde bulunan uygulamalar çalışma zamanını içerir.
+- Kendi içinde uygulamalar çalışma zamanı içerir.
 
-Bu dağıtım stratejileri hakkında daha fazla bilgi edinmek için bkz. [.NET Core uygulama yayımlamaya genel bakış](/dotnet/core/deploying/).
+Bu dağıtım stratejileri hakkında daha fazla bilgi edinmek için bkz. [.NET Core uygulama yayımlamaya genel bakış.](/dotnet/core/deploying/)
 
-### <a name="workflow-changes-for-net-core-31"></a>.NET Core 3,1 için iş akışı değişiklikleri
+### <a name="workflow-changes-for-net-core-31"></a>.NET Core 3.1 için iş akışı değişiklikleri
 
-1. .NET Core 3,1 projeleri için doğru çıktıyı almak üzere **birincil çıkış** yerine **öğeleri yayımla** ' yı seçin.  bu iletişim kutusunu açmak için   >  projenin bağlam menüsünden **Project Output...** ekle öğesini seçin.
+1. .NET Core 3.1 **projeleri** için doğru çıkışı almak için Birincil Çıkış yerine Öğeleri Yayımla'yı seçin.   Bu iletişim kutusunu açmak için **projenin**  >  **Project...** öğesini seçin.
 
-    ![Project çıkış grubu ekle iletişim kutusunda öğeleri yayımla çıkış grubu](../deployment/media/installer-projects-net-core-publish-items-output.png "Yayımlama öğelerini seçin")
+    ![Öğeleri Yayımla çıkış grubu, Project Grubu Ekle iletişim kutusunda](../deployment/media/installer-projects-net-core-publish-items-output.png "Öğeleri Yayımla'yı seçin")
 
-2. Kendi kendine içerilen bir yükleyici oluşturmak için, doğru Özellikler ayarlanmış bir yayımlama profilinin göreli yolunu kullanarak, kurulum projesindeki **öğeleri yayımla** düğümünde **publishprofilepath** özelliğini ayarlayın.
+2. Kendi içinde bir yükleyici oluşturmak için, doğru özellikler kümesine sahip bir yayımlama profilinin göreli yolunu kullanarak kurulum projesinde Öğeleri Yayımla düğümünde **PublishProfilePath** özelliğini ayarlayın. 
 
-    ![Öğeleri yayımla proje çıkış öğesinde yayımlama profilini ayarlama](../deployment/media/installer-projects-net-core-publish-profile.png "Yayımlama profilini ayarla")
+    ![Öğeleri Yayımla proje çıkış öğesinde yayımlama profilini ayarlama](../deployment/media/installer-projects-net-core-publish-profile.png "Yayımlama Profili Ayarlama")
 
-### <a name="prerequisites-for-net-core-31"></a>.NET Core 3,1 önkoşulları
+### <a name="prerequisites-for-net-core-31"></a>.NET Core 3.1 önkoşulları
 
-Yükleyicinizin, çerçeveye bağımlı bir .NET Core 3,1 uygulaması için gerekli çalışma zamanını yükleyebilmesini isterseniz, bunu [önkoşulları](../deployment/application-deployment-prerequisites.md)kullanarak yapabilirsiniz.  Yükleyici projenizin Özellikler iletişim kutusunda **Önkoşullar...** iletişim kutusunu açın ve aşağıdaki girdileri görürsünüz:
+Yükleyicinizin, çerçeveye bağımlı bir .NET Core 3.1 uygulaması için gerekli çalışma zamanını yükleye biliyorsanız, önkoşulları kullanarak [bunu yapabiliriz.](../deployment/application-deployment-prerequisites.md)  Yükleyici projenizin özellikler iletişim kutusunda **Önkoşullar...** iletişim kutusunu açın; aşağıdaki girişleri görüntülenir:
 
-![Önkoşullar iletişim kutusunda .NET Core öğeleri](../deployment/media/installer-projects-net-core-prerequisites.png ".NET Core önkoşulları")
+![Önkoşullar iletişim kutusundaki .NET Core öğeleri](../deployment/media/installer-projects-net-core-prerequisites.png ".NET Core Önkoşulları")
 
-**.NET Core Runtime...** seçeneği konsol uygulamaları için seçilmelidir, **.net Masaüstü çalışma zamanı...** WPF/WinForms uygulamaları için seçilmelidir.
+Konsol **uygulamaları için .NET Core** Çalışma Zamanı... seçeneği seçilmelidir, WPF/WinForms uygulamaları için .NET Masaüstü Çalışma **Zamanı...** seçili olmalıdır.
 
 >[!NOTE]
->bu öğeler Visual Studio 2019 güncelleştirme 7 sürümünden başlayarak mevcuttur.
+>Bu öğeler, Visual Studio 2019 Güncelleştirme 7 sürümüyle başlayarak mevcuttur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Önkoşullar İletişim Kutusu](../ide/reference/prerequisites-dialog-box.md)
-- [Uygulama dağıtımı önkoşulları](../deployment/application-deployment-prerequisites.md)
+- [Uygulama Dağıtımı Önkoşulları](../deployment/application-deployment-prerequisites.md)

@@ -11,17 +11,18 @@ ms.assetid: e0c522c4-f759-4c32-ae87-7abcb573e77d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b01173f3f610176755559234666b3a867a81c29b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 05a1b7e5b0d00320bf74b04bf7f82534cdba7b5124d1e0241cb028995bd92609
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076673"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417060"
 ---
 # <a name="idebugmethodfieldenumstaticlocals"></a>IDebugMethodField::EnumStaticLocals
 Metodun statik yerel değişkenleri için bir Numaralandırıcı oluşturur.

@@ -1,6 +1,6 @@
 ---
-title: UWP uygulamalarında JavaScript bellek kullanımını analiz etme | Microsoft Docs
-description: JavaScript hafıza Çözümleyicisi 'nin bellek kullanımını anlamanıza ve JavaScript kullanarak Windows için tasarlanan UWP uygulamalarınızda bellek sızıntılarını bulmanıza yardımcı olmak için nasıl kullanılabilir olduğunu öğrenin.
+title: UWP Uygulamaları'da JavaScript Bellek Kullanımını analiz | Microsoft Docs
+description: JavaScript kullanarak bellek kullanımını anlamanıza ve UWP uygulamalarınıza bellek sızıntıları bulmanıza yardımcı olmak için JavaScript bellek çözümleyicisi'nin nasıl Windows olduğunu öğrenin.
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,150 +18,151 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f6fb446890c1485b6af249fd593cc9065bdba5aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f84517ad817706333cad4ea823f2a5994de10945
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918125"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107582"
 ---
-# <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP uygulamalarında JavaScript bellek kullanımını analiz etme
-JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını anlamanıza ve JavaScript kullanarak Windows için tasarlanan UWP uygulamalarınızda bellek sızıntılarını bulmanıza yardımcı olmak için kullanılabilir. Desteklenen uygulamalar, Evrensel Windows uygulamalarına yönelik uygulamalar içerir.
+# <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP uygulamalarına JavaScript bellek kullanımını analiz etme
+JavaScript bellek çözümleyicisi, Visual Studio kullanımı anlamanıza ve JavaScript kullanarak uygulamalar için yerleşik UWP uygulamalarınıza bellek sızıntılarını bu Windows yardımcı olmak için Windows kullanılabilir. Desteklenen uygulamalar, Universal Windows Apps uygulamalarını içerir.
 
- JavaScript bellek Çözümleyicisi bu işlemleri sizin için yapabilir:
+ JavaScript bellek çözümleyicisi şunları sizin için yapar:
 
-- En ilgili verileri vurgulayarak uygulamanızdaki bellek kullanımı sorunlarını hızlı bir şekilde bulmanıza yardımcı olun.
+- En ilgili verileri vurgulayarak uygulamanıza bellek kullanımı sorunlarını hızla bu konuda yardımcı olun.
 
-     Bu verileri, iki anlık görüntü arasındaki farkları gösteren ve daha ayrıntılı görünümlere bağlantılar sağlayan anlık görüntü özetleri ' nde alırsınız.
+     Bu verileri, iki anlık görüntü arasındaki farkları göstermek ve daha ayrıntılı görünümlere bağlantılar sağlamak için anlık görüntü özetlerinde elde edin.
 
-- Sorunları yalıtmaya yardımcı olmak için deleyiciler, türler ve köklerin görünümlerini sağlayın.
+- Sorunları yalıtmak için hakimlerin, türlerin ve köklerin görünümlerini sağlar.
 
-- JavaScript yığın verilerinde eylem yapılamayan bilgileri küçültün.
+- JavaScript yığın verisinde eyleme edilemez bilgileri azaltma.
 
-     Doğrudan uygulama kodunuzda oluşturulmayan nesneler otomatik olarak filtrelenir. Ayrıca, verileri nesne adına göre filtreleyebilirsiniz.
+     Doğrudan uygulama kodunda oluşturulmamış nesneler otomatik olarak filtrelenir. Verileri nesne adına göre de filtreleyebilirsiniz.
 
-## <a name="run-the-javascript-memory-analyzer"></a>JavaScript bellek Çözümleyicisi 'ni çalıştırma
- Visual Studio 'da açık çalışan bir UWP uygulamanız varsa bellek Çözümleyicisi 'ni kullanabilirsiniz.
+## <a name="run-the-javascript-memory-analyzer"></a>JavaScript bellek çözümleyiciyi çalıştırma
+ Bellek çözümleyicisi, çalışan bir UWP uygulaması açık olduğunda bellek çözümleyicisi Visual Studio.
 
-#### <a name="to-run-the-memory-analyzer"></a>Bellek Çözümleyicisi 'ni çalıştırmak için
+#### <a name="to-run-the-memory-analyzer"></a>Bellek çözümleyiciyi çalıştırmak için
 
 1. Visual Studio'yu açın.
 
-2. Uygulamayı Visual Studio 'dan çalıştırıyorsanız, **Standart** araç çubuğunda **hata ayıklamayı Başlat** listesinde, projeniz için hata ayıklama hedefini seçin: **yerel makine** ya da **cihaz**.
+2. Uygulamayı yerel makineden Visual Studio Standart araç çubuğundaki Hata Ayıklamayı  Başlat listesinde projenizin hata ayıklama hedefini seçin: **Yerel** Makine veya **Cihaz.** 
 
-3. Menü çubuğunda, **Hata Ayıkla**  >  **performans profil oluşturucusu**' nu seçin.
+3. Menü çubuğunda Hata **ayıkla'Performans Profili Oluşturucu.**  >  
 
-     Varsayılan olarak, geçerli başlangıç projesi çözümlenir. Analiz hedefini değiştirmek istiyorsanız **hedefi Değiştir**' i seçin.
+     Varsayılan olarak, geçerli başlangıç projesi analiz edilir. Analiz hedefini değiştirmek için Hedefi **Değiştir'i seçin.**
 
-     ![Değişiklik Analizi hedefi](../profiling/media/js_tools_target.png "JS_Tools_Target")
+     ![Değişiklik analizi hedefi](../profiling/media/js_tools_target.png "JS_Tools_Target")
 
      Analiz hedefi için aşağıdaki seçenekler kullanılabilir:
 
-    - **Başlangıç projesi**. Geçerli başlangıç projesini analiz eder. Uygulamayı uzak bir makinede çalıştırıyorsanız, varsayılan olan bu seçeneği seçmeniz gerekir.
+    - **Başlangıç Project.** Geçerli başlangıç projesini analiz eder. Uygulamayı uzak bir makinede çalıştırdıysanız, varsayılan seçenek olan bu seçeneği seçmeniz gerekir.
 
-    - **Uygulama çalıştırılıyor**. Çalışan uygulamalar listesinden bir UWP uygulaması seçmenizi sağlar. Uygulamanızı uzak bir makinede çalıştırırken bu seçeneği kullanamazsınız.
+    - **Çalışan Uygulama**. Çalışan uygulamalar listesinden bir UWP uygulaması seçmenize olanak sağlar. Bu seçeneği, uygulamayı uzak bir makinede çalıştırabilirsiniz.
 
-         Kaynak koda erişiminiz olmadığında bilgisayarınızda çalışan uygulamaların bellek kullanımını çözümlemek için bu seçeneği kullanın.
+         Kaynak koduna erişiminizin olmadığınız bilgisayarınızda çalışan uygulamaların bellek kullanımını analiz etmek için bu seçeneği kullanın.
 
-    - **Yüklü uygulama**. Çözümlemek istediğiniz yüklü bir UWP uygulamasını seçmenizi sağlar. Uygulamanızı uzak bir makinede çalıştırırken bu seçeneği kullanamazsınız.
+    - **Yüklü Uygulama**. Analiz etmek istediğiniz yüklü bir UWP uygulamasını seçmenize olanak sağlar. Bu seçeneği, uygulamayı uzak bir makinede çalıştırabilirsiniz.
 
-         Kaynak koda erişiminiz olmadığında bilgisayarınıza yüklediğiniz uygulamaların bellek kullanımını çözümlemek için bu seçeneği kullanın. Bu seçenek ayrıca, uygulama geliştirmeniz dışında herhangi bir uygulamanın bellek kullanımını çözümlemek istediğinizde yararlı olabilir.
+         Kaynak koduna erişiminizin olmadığınız bilgisayarınızda yüklü uygulamaların bellek kullanımını analiz etmek için bu seçeneği kullanın. Bu seçenek, yalnızca kendi uygulama geliştirmenizin dışında herhangi bir uygulamanın bellek kullanımını analiz etmek istediğiniz zaman da yararlı olabilir.
 
-4. **Kullanılabilir araçlar**' dan **JavaScript belleği** onay kutusunu seçin ve ardından **Başlat**' ı seçin.
+4. Kullanılabilir **Araçlar'dan** **JavaScript Belleği onay kutusunu** ve ardından Başlat'ı **seçin.**
 
-5. Bellek Çözümleyicisi 'ni başlattığınızda, bir kullanıcı hesabı denetim penceresi, Visual Studio ETW Collector.exe çalıştırma izninizi isteyebilir. **Evet**' i seçin.
+5. Bellek çözümleyiciyi başlatan bir Kullanıcı Hesabı Denetimi penceresi, ETW hesabı Visual Studio çalıştırma Collector.exe. **Evet'i seçin.**
 
-     İlgili bellek kullanımı senaryolarını test etmek ve aşağıdaki bölümlerde açıklandığı gibi bellek grafiğini görüntülemek için uygulamayla etkileşime geçin.
+     Aşağıdaki bölümlerde ele alınarak ilgili bellek kullanımı senaryolarını test etmek ve bellek grafiğini görüntülemek için uygulamayla etkileşime geçme.
 
-6. **Alt** sekmeye basarak Visual Studio 'ya geçiş yapın + .
+6. Alt Visual Studio tuşlarına basarak **geçiş** + **yapın.**
 
-7. Bellek Çözümleyicisinin toplarken verileri görüntülemek için **yığın anlık görüntüsü al**' ı seçin. Bu konunun ilerleyen kısımlarında [bir anlık görüntü özeti görüntüleyin](#view-a-snapshot-summary) bölümüne bakın.
+7. Bellek çözümleyicisi tarafından toplanan verileri görüntülemek için Yığın Anlık Görüntüsü **Al'ı seçin.** Bu [konu başlığında daha sonra bkz.](#view-a-snapshot-summary) Anlık görüntü özetini görüntüleme.
 
-## <a name="check-memory-usage"></a>Bellek kullanımını denetle
- JavaScript bellek Çözümleyicisi 'nde farklı görünümler kullanarak bellek sızıntılarını belirlemeyi deneyebilirsiniz. Uygulamanızın bellek sızıntısı olduğunu zaten düşünüyorsanız, bkz. önerilen bir iş akışı için [Bellek sızıntısını ayırma](#isolate-a-memory-leak) .
+## <a name="check-memory-usage"></a>Bellek kullanımını denetleme
+ JavaScript bellek çözümleyicisinde farklı görünümler kullanarak bellek sızıntılarını belirlemeye çalışabilirsiniz. Uygulamanın bellek sızdırıyor olduğunu zaten biliyorsanız bkz. Önerilen [iş akışı için bellek](#isolate-a-memory-leak) sızıntısını yalıtma.
 
- Bir uygulamadaki bellek sızıntılarını belirlemenize yardımcı olması için aşağıdaki görünümleri kullanın:
+ Bir uygulamanın bellek sızıntılarını belirlemeye yardımcı olmak için aşağıdaki görünümleri kullanın:
 
-- [Canlı bellek kullanım özetini görüntüleyin](#view-live-memory-usage-summary). Bellek kullanımındaki ani artışları aramak veya belirli eylemlerin sonucunda elde edilen bellek kullanımını sürekli olarak artırmak için bellek kullanımı grafiğini kullanın. Yığının anlık görüntülerini almak için canlı bellek kullanımı Özet görünümünü kullanın. Anlık görüntüler, bellek kullanımı grafiğinin altında bir koleksiyon olarak görüntülenir.
-
-    > [!TIP]
-    > Anlık görüntü alırken bellek kullanımında ani artış görürsünüz. Daha doğru büyüme göstergesi için anlık görüntü özetlerini kullanın.
-
-- [Bir anlık görüntü özeti görüntüleyin](#view-a-snapshot-summary). Bir bellek profili oluşturma oturumu sırasında veya sonrasında anlık görüntü Özet bilgilerini görüntüleyebilirsiniz. Anlık görüntü ayrıntılarını ve anlık görüntü farkı görünümlerini bağlamak için anlık görüntü özetlerini kullanın.
+- [Canlı bellek kullanımı özetini görüntüleme.](#view-live-memory-usage-summary) Bellek kullanımında ani artışları veya belirli eylemlerin neden olduğu bellek kullanımını sürekli artırmak için bellek kullanım grafiğini kullanın. Yığının anlık görüntülerini almak için canlı bellek kullanım özeti görünümünü kullanın. Anlık görüntüler, bellek kullanım grafı altında bir koleksiyon olarak görünür.
 
     > [!TIP]
-    > Genellikle, anlık görüntü farkı görünümleri bellek sızıntıları hakkında en yararlı bilgileri sağlayacaktır.
+    > Anlık görüntü alırken bellek kullanımında ani bir artışla karşınız olur. Büyümenin daha doğru bir göstergesi için anlık görüntü özetlerini kullanın.
 
-- [Anlık görüntü ayrıntılarını görüntüleyin](#view-snapshot-details). Tek bir anlık görüntü için ayrıntılı bellek kullanım verilerini gösterir.
+- [Anlık görüntü özetini görüntüleme.](#view-a-snapshot-summary) Bellek profili oluşturma oturumu sırasında veya sonrasında anlık görüntü özeti bilgilerini görüntüebilirsiniz. Anlık görüntü ayrıntılarına ve anlık görüntü fark görünümlerine bağlantı için anlık görüntü özetlerini kullanın.
 
-- [Anlık görüntü farkını görüntüleyin](#view-a-snapshot-diff). Anlık görüntüler arasındaki fark değerlerini gösterir. Bu görünümler nesne boyutu ve nesne sayımlarında farkları gösterir.
+    > [!TIP]
+    > Genellikle anlık görüntü fark görünümleri, bellek sızıntıları hakkında en yararlı bilgileri sağlar.
+
+- [Anlık görüntü ayrıntılarını görüntüleme.](#view-snapshot-details) Tek bir anlık görüntü için ayrıntılı bellek kullanım verilerini gösterir.
+
+- [Anlık görüntü farkını görüntüleme.](#view-a-snapshot-diff) Anlık görüntüler arasındaki fark değerlerini gösterir. Bu görünümler, nesne boyutu ve nesne sayıları arasındaki farkları gösterir.
 
 ## <a name="isolate-a-memory-leak"></a>Bellek sızıntısını yalıtma
- Bu adımlar, JavaScript bellek Çözümleyicisi 'ni daha verimli bir şekilde kullanmanıza yardımcı olabilecek bir iş akışı sağlar. Bu adımlar, uygulamanızın bellek sızıntısı olduğunu kuşkulanıyorsanız yararlı olabilir. Çalışan bir uygulamada bellek sızıntısı belirleme sürecinde size yol gösteren bir öğretici için bkz. [Izlenecek yol: bellek sızıntısı bulma (JavaScript)](javascript-memory.md).
+ Bu adımlar, JavaScript bellek çözümleyicisi'nin daha verimli bir şekilde kullanımına yardımcı olacak bir iş akışı sağlar. Bu adımlar, uygulamanıza bellek sızıntısı olduğunu şüpheleniyorsanız yararlı olabilir. Çalışan bir uygulamada bellek sızıntısı tanımlama işlemi boyunca size yol belirten bir öğretici için bkz. Adım adım: Bellek sızıntısı bulma [(JavaScript)](javascript-memory.md).
 
-1. Uygulamanızı Visual Studio 'da açın.
+1. Uygulamayı Visual Studio.
 
-2. JavaScript bellek Çözümleyicisi 'ni çalıştırın (önceki adımlara bakın).
+2. JavaScript Memory Analyzer'ı çalıştırın (önceki adımlara bakın).
 
-3. Uygulamanızı sınamak istediğiniz senaryo aracılığıyla çalıştırın. Örneğin senaryo, belirli bir sayfa yüklendiğinde veya uygulama başladığında büyük bir DOM mutasyonu içerebilir.
+3. Test etmek istediğiniz senaryo aracılığıyla uygulamalarınızı çalıştırın. Örneğin, senaryo büyük bir DOM ya da belirli bir sayfa yüklenirken veya uygulama başlatıldığında olabilir.
 
-4. Senaryo 1-4 ek süreleriyle tekrarlayın.
-
-   > [!TIP]
-   > Test senaryosunu birkaç kez tekrarlayarak, başlatma işinin sonuçlardan filtrelenerek filtrelenebilir olmasına yardımcı olabilirsiniz.
-
-5. Visual Studio 'ya geçiş yapın ( **alt** + **sekmeye** basın).
-
-6. **Yığın anlık görüntüsü al**' i seçerek temel bir yığın anlık görüntüsü alın.
-
-    Aşağıdaki çizimde bir taban çizgisi anlık görüntüsünün örneği gösterilmektedir.
-
-    ![Taban çizgisi anlık görüntüsü](../profiling/media/js_mem_leak_workflow_baseline.png "JS_Mem_Leak_Workflow_Baseline")
+4. Senaryoyu 1-4 kez daha tekrarlayın.
 
    > [!TIP]
-   > Anlık görüntülerin zamanlaması üzerinde daha kesin bir denetim için kodunuzda [kaynak kodu ilişkilendir](#associate-source-code-with-memory-usage-data) komutunu kullanabilirsiniz.
+   > Test senaryosunu birkaç kez tekrarlayarak başlatma çalışmalarının sonuçların dışında filtrelenmiş olduğundan emin olun.
 
-7. Uygulamanıza geçin ve test ettiğiniz senaryoyu yineleyin (yalnızca bir kez tekrarlayın).
+5. Anahtara Visual Studio **(Alt Sekmesi'ne** + **basın).**
 
-8. Visual Studio 'ya geçin ve ikinci bir anlık görüntü alın.
+6. Yığın Anlık Görüntüsü Al'a seçerek **temel yığın anlık görüntüsü alın.**
 
-9. Uygulamanıza geçin ve test ettiğiniz senaryoyu yineleyin (yalnızca bir kez tekrarlayın).
+    Aşağıdaki çizimde bir temel anlık görüntü örneği gösterilmiştir.
 
-10. Visual Studio 'ya geçin ve üçüncü bir anlık görüntü alın.
+    ![Temel anlık görüntü](../profiling/media/js_mem_leak_workflow_baseline.png "JS_Mem_Leak_Workflow_Baseline")
 
-     Aşağıdaki çizimde ikinci ve üçüncü bir anlık görüntü örneği gösterilmektedir.
+   > [!TIP]
+   > Anlık görüntülerin zamanlaması üzerinde daha kesin denetim için kodunda Kaynak kodu bellek kullanım verileriyle ilişkilendirme [komutunu](#associate-source-code-with-memory-usage-data) kullanabilirsiniz.
+
+7. Uygulamanıza geçiş yapmak ve test etmekte olduğunu senaryoyu tekrarlayın (yalnızca bir kez tekrarlayın).
+
+8. Geçiş Visual Studio ve ikinci bir anlık görüntü alın.
+
+9. Uygulamanıza geçiş yapmak ve test etmekte olduğunu senaryoyu tekrarlayın (yalnızca bir kez tekrarlayın).
+
+10. Sanal makineye Visual Studio ve üçüncü bir anlık görüntü alın.
+
+     Aşağıdaki çizimde ikinci ve üçüncü anlık görüntü örneği gösterilmiştir.
 
      ![İkinci ve üçüncü anlık görüntü](../profiling/media/js_mem_leak_workflow.png "JS_Mem_Leak_Workflow")
 
-     Bu iş akışında bir taban çizgisi, ikinci ve üçüncü anlık görüntü alarak, bellek sızıntılarıyla ilişkilendirilmemiş değişiklikleri daha kolay filtreleyebilirsiniz. Örneğin, bir sayfada üstbilgileri ve altbilgileri güncelleştirme gibi beklenen değişiklikler olabilir. Bu, bellek kullanımında bazı değişiklikler oluşturacak ancak bellek sızıntılarıyla ilgisiz olabilir.
+     Bu iş akışında bir taban çizgisi, ikinci ve üçüncü anlık görüntü alarak, bellek sızıntıları ile ilişkili olmayan değişiklikleri daha kolay filtrelayabilirsiniz. Örneğin, bir sayfada üst bilgileri ve alt bilgileri güncelleştirme gibi beklenen değişiklikler olabilir ve bu da bellek kullanımında bazı değişikliklere neden olur ancak bellek sızıntıları ile ilgili olabilir.
 
-11. Üçüncü anlık görüntüde, fark görünümlerinden birine bir bağlantı seçin:
+11. Üçüncü anlık görüntüden değişiklik görünümlerinden birinin bağlantısını seçin:
 
-    - Fark yığın boyutu (yığın boyutunun altındaki sol bağlantı). Bağlantı metni, geçerli anlık görüntünün yığın boyutu ve önceki anlık görüntünün yığın boyutu arasındaki farkı gösterir.
+    - Diferansiyel yığın boyutu (yığın boyutunun altındaki sol bağlantı). Bağlantı metni, geçerli anlık görüntüyü yığın boyutuyla önceki anlık görüntüye göre yığın boyutu arasındaki farkı gösterir.
 
-    - Türev nesne sayısı (nesne sayısı altındaki sağ bağlantı). Bağlantı metni iki değer gösterir (örneğin, + 1858/-1765): ilk değer önceki anlık görüntüden bu yana eklenen yeni nesne sayısıdır ve ikinci değer önceki anlık görüntüden bu yana kaldırılan nesne sayısıdır.
+    - Değişiklik nesnesi sayısı (nesne sayısı altındaki sağ bağlantı). Bağlantı metni iki değer gösterir (örneğin, +1858 / -1765): İlk değer önceki anlık görüntüden bu yana eklenen yeni nesne sayısı, ikinci değer ise önceki anlık görüntüden bu yana kaldırılan nesne sayısıdır.
 
-      Bu bağlantılar, açtığınız bağlantıya bağlı olarak, yığın üzerindeki türlerin bir fark anlık görüntü ayrıntıları görünümünü açar, korunan boyut veya nesne sayısına göre sıralanır.
+      Bu bağlantılar, açtığınız bağlantıya bağlı olarak, yığında bulunan türlerin yedekli boyuta veya nesne sayısına göre sıralanmış anlık görüntü ayrıntıları görünümünü açar.
 
-12. Bellek kullanımı sorunlarını belirlemenize yardımcı olması için aşağıdaki **kapsam** filtresi seçeneklerinden birini seçin:
+12. Bellek kullanımı sorunlarını tanımlamaya **yardımcı** olmak için aşağıdaki Kapsam filtresi seçeneklerine birini belirleyin:
 
-    - **Anlık görüntü #2 kalan nesneler**.
+    - **Snapshot #2'dan kalan nesneler.**
 
-    - **Anlık görüntü #2 ve #3 arasında eklenen nesneler**
+    - **Snapshot #2 ve #3**
 
     > [!TIP]
-    > Bellek sızıntılarını araştırmak için önceki anlık görüntüden kalan nesnelerin filtrelenmiş görünümünü kullanın. Örneğin, fark nesnesi sayısı + 205/-195 ise, bu görünümde sola kalan 10 nesne gösterilir ve bunlar büyük olasılıkla bellek sızıntıları için adaylardır.
+    > Bellek sızıntılarını araştırmak için önceki anlık görüntüden kalan nesnelerin filtrelenmiş görünümünü kullanın. Örneğin, fark nesnesi sayısı +205 / -195 ise, bu görünüm geriye kalan 10 nesneyi gösterir ve bunlar büyük olasılıkla bellek sızıntıları için adaydır.
 
-     Aşağıdaki çizimde, anlık görüntü #2 kalan nesnelerin fark görünümü gösterilmektedir.
+     Aşağıdaki çizimde, Snapshot #2'dan kalan nesnelerin değişiklik #2.
 
      ![Türleri gösteren anlık görüntü fark görünümü](../profiling/media/js_mem_snapshot_diff.png "JS_Mem_Snapshot_Diff")
 
-     Yukarıdaki çizimde, iki nesnenin önceki anlık görüntüden kaldığını görüyoruz. Bu durumun, belirli bir uygulama için beklenen davranış olup olmadığını araştırın. Aksi takdirde, bir bellek sızıntısı olduğunu gösterebilir.
+     Yukarıdaki çizimde, önceki anlık görüntüden kalan iki nesne olduğunu görüyoruz. Bunun belirli bir uygulama için beklenen davranış olup olmadığını araştırın. Yoksa, bir bellek sızıntısı olduğunu gösteriyor olabilir.
 
-13. Fark görünümlerindeki nesnelerin nerede olduğunu görmek için, atık olarak toplanmalarını önleyen bir nesne için kısayol menüsünü açın ve ardından **kökleri görünümünde göster**' i seçin. Çok sayıda nesne, genel nesne kökü olan tek bir nesne (veya birkaç nesne) tarafından başvurulduğu için bellekte tutulabilir.
+13. Fark görünümlerinde nesnelerinin kökünün genel nesneye kökün hangileri olduğunu görmek için, bu nesnelerin çöp toplamasını önleyen bir nesnenin kısayol menüsünü açın ve köklerde göster görünümünü **seçin.** Genel nesneye kök verili tek bir nesne (veya birkaç nesne) tarafından başvurıldıkları için çok sayıda nesne bellekte korunabilirsiniz.
 
 14. Üzerinde kalan nesneler görünümünde çok fazla nesne varsa, Bellek sızıntısının oluştuğu süreyi daha fazla yalıtmaya çalışın ve ardından üç anlık görüntüyü yeniden alın. Bellek sızıntısını daha iyi yalıtmak için [kaynak kodu bellek kullanım verileriyle ilişkilendir](#associate-source-code-with-memory-usage-data)' i kullanın, [kaynak kodu bellek kullanım verileriyle ilişkilendirin](#associate-source-code-with-memory-usage-data)ve bellek Çözümleyicisi 'nde bulunan diğer bellek kullanım verileriyle ilişkilendirin.
 
@@ -265,7 +266,7 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 
 - **# \<number> Snapshot içindeki tüm nesneler**. Bu filtre ayarı yığında hiçbir nesneyi filtreetmez.
 
-  Geçerli **kapsam** filtresiyle eşleşmeyen nesne başvurularını göstermek için, bölmenin sağ üst köşesinde bulunan ![bellek Çözümleyicisi ' nde yer](../profiling/media/js_mem_settings.png "JS_Mem_Settings") alan ayarlar listesi ayarları&#45;, **eşleşen olmayan başvuruları göster** ' i seçin. Bu ayarı etkinleştirirseniz, eşleşmesiz başvurular gri metinle birlikte görüntülenir.
+  geçerli **kapsam** filtresiyle eşleşmeyen nesne başvurularını göstermek için, bölmenin sağ üst köşesindeki ![bellek çözümleyicisi ' nde bulunan&#45;aşağı açılan listede Ayarlar](../profiling/media/js_mem_settings.png "JS_Mem_Settings") , ayarlar listesinde **eşleşmeyen başvuruları göster** ' i seçin. Bu ayarı etkinleştirirseniz, eşleşmesiz başvurular gri metinle birlikte görüntülenir.
 
 > [!TIP]
 > Bellek [sızıntısını yalıtmaya](#isolate-a-memory-leak) yönelik adımları izlemenizi ve ardından, bellek sızdıran nesneleri tanımlamanızı sağlamak için **kapsam** filtresi üzerinde kalan nesneleri kullanmanızı öneririz.
@@ -291,7 +292,7 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 > [!NOTE]
 > Döngüsel başvurular bir yıldız işareti (*) ve bilgilendirici araç ipucuyla birlikte gösterilir ve genişletilemez. Aksi takdirde, başvuru ağacını yürümesini ve belleği tutulan nesneleri tanımlamayı önler.
 
- Denk nesneleri tanımlamaya yönelik ek yardım istiyorsanız, üst bölmenin sağ üst köşesindeki Ayarlar listesi ![ayarları&#45;aşağı açılan listede bulunan bellek Çözümleyicisi listesinde](../profiling/media/js_mem_settings.png "JS_Mem_Settings") **nesne kimliklerini görüntüle** ' yi seçin. Bu seçenek, **tanımlayıcı (ler)** listesindeki nesne adları ' nın yanındaki nesne kimliklerini görüntüler (kimlikler yalnızca nesne başvuruları listesinde değil, tüm görünümlerde görünür). Aynı KIMLIĞE sahip nesneler paylaşılan başvurulardır.
+ denk nesneleri tanımlamaya ek yardım isterseniz, üst bölmenin sağ üst köşesindeki ![bellek çözümleyicisi ' nde bulunan&#45;aşağı açılan listede Ayarlar](../profiling/media/js_mem_settings.png "JS_Mem_Settings") ayarlar listesinde **nesne kimliklerini görüntüle** ' yi seçin. Bu seçenek, **tanımlayıcı (ler)** listesindeki nesne adları ' nın yanındaki nesne kimliklerini görüntüler (kimlikler yalnızca nesne başvuruları listesinde değil, tüm görünümlerde görünür). Aynı KIMLIĞE sahip nesneler paylaşılan başvurulardır.
 
  Aşağıdaki çizimde, kimlikleri gösterilen seçili bir öğe için nesne başvuruları listesi gösterilmektedir.
 
@@ -300,7 +301,7 @@ JavaScript hafıza Çözümleyicisi, Visual Studio 'da, bellek kullanımını an
 ## <a name="show-built-in-objects"></a>Yerleşik nesneleri göster
  Varsayılan olarak, Deleyiciler ve tür görünümleri yalnızca uygulamanızda oluşturduğunuz nesneleri gösterir. Bu, gereksiz bilgileri filtrelemenize ve uygulamayla ilgili sorunları yalıtmanıza yardımcı olur. Ancak, her zaman, JavaScript çalışma zamanının uygulamanız için oluşturduğu tüm nesneleri görüntülemek yararlı olabilir.
 
- Bu nesneleri görüntülemek için, bölmenin sağ üst köşesindeki Ayarlar listesi ![ayarları&#45;aşağı açılan listede, bellek Çözümleyicisi ' nde](../profiling/media/js_mem_settings.png "JS_Mem_Settings") **yerleşik bileşenleri göster** ' i seçin.
+ bu nesneleri görüntülemek için, bölmenin sağ üst köşesindeki ![bellek çözümleyicisi ' nde bulunan&#45;aşağı açılan listede Ayarlar](../profiling/media/js_mem_settings.png "JS_Mem_Settings") ayarlar listesinde **yerleşik bileşenleri göster** ' i seçin.
 
 ## <a name="save-diagnostic-session-files"></a>Tanılama oturumu dosyalarını Kaydet
  Tanılama anlık görüntü özetleri ve bunlarla ilişkili ayrıntılar görünümleri olarak kaydedilir. *diagsession* dosyaları. **Çözüm Gezgini** tanılama oturumları klasöründeki önceki tanılama oturumlarını görüntüler. **Çözüm Gezgini**, önceki oturumları açabilir veya dosyaları kaldırabilir veya yeniden adlandırabilirsiniz.
@@ -346,7 +347,7 @@ if (performance && performance.mark) {
 
  ![Profil Işareti kullanma](../profiling/media/js_mem_performance_marks.png "JS_Mem_Performance_Marks")
 
-## <a name="tips-to-identify-memory-issues"></a>Bellek sorunlarını belirlemek için ipuçları
+## <a name="tips-to-identify-memory-issues"></a>bellek sorunlarını belirlemek için İpuçları
 
 - Bellek sızıntılarını ayırt etmek için büyük olasılıkla bir fark görünümündeki **anlık görüntü # \<number> filtresinden kalan nesneleri** kullanarak [bir bellek sızıntısını yalıtma](#isolate-a-memory-leak) ve bu iş akışını izleyin.
 
@@ -354,7 +355,7 @@ if (performance && performance.mark) {
 
 - Bir bellek sorununun nedeni tanımlanmayı zorlaştırıyorsa, özellikle de görünümde görünen diğer nesnelerin çoğuna başvurular içerebilen bir nesne (ya da birkaç nesne) tanımlamasına yardımcı olmak için çeşitli görünümleri (örneğin, Deleyiciler ve türler) kullanın.
 
-- Kullanıcı yeni bir sayfaya gezindikten sonra, bellek sorunlarının yaygın bir nedeni olan, yanlışlıkla bellekte saklanan nesneleri arayın. Örneğin:
+- Kullanıcı yeni bir sayfaya gezindikten sonra, bellek sorunlarının yaygın bir nedeni olan, yanlışlıkla bellekte saklanan nesneleri arayın. Örnek:
 
   - URL 'nin yanlış kullanımı [. CreateObjectUrl](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) işlevi bu soruna neden olabilir.
 

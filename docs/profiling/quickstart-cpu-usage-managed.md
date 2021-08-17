@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: e3a030cd89d47d799fac05f290e9a8aab8eb80afaea5cf8e6b3c23dcdc2bef25
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d3902d8119b8de8eba49cf28a7730cc41d505438
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121245869"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107075"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>hızlı başlangıç: Visual Studio CPU kullanım verilerini çözümleme (C#, Visual Basic)
 

@@ -1,5 +1,5 @@
 ---
-title: VSTO eklentisinin çalışma zamanında belgeye denetim ekleme
+title: VSTO eklentisi 'nde çalışma zamanında belgeye denetim ekleme
 description: Kullanıcıların bir düğmeye bir düğme sınıfı veya bir zengin Textcontentcontrol arabirimi eklemesini sağlamak için Şeriti nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -15,23 +15,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c2088a4d2ca81418ca16b51b53b0af38595d75b2
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: ddc4f42be5c1b9a6fb439cdb097480b8d7a60e76
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825400"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025660"
 ---
-# <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>İzlenecek yol: bir VSTO eklentisinin çalışma zamanında belgeye denetim ekleme
-  Bir VSTO eklentisi kullanarak herhangi bir açık Microsoft Office Word belgesine denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların bir <xref:Microsoft.Office.Tools.Word.Controls.Button> belgeye veya bir belge eklemesine olanak tanımak için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> .
+# <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>izlenecek yol: bir VSTO eklentisi içinde çalışma zamanında belgeye denetim ekleme
+  bir VSTO eklentisi kullanarak herhangi bir açık Microsoft Office Word belgesine denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların bir <xref:Microsoft.Office.Tools.Word.Controls.Button> belgeye veya bir belge eklemesine olanak tanımak için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> .
 
- **Uygulama hedefi:** Bu konudaki bilgiler Word 2010 için VSTO eklentisi projelerine yöneliktir. Daha fazla bilgi edinmek için bkz. [Office Uygulaması ve Proje Türüne Göre Kullanılabilen Özellikler](../vsto/features-available-by-office-application-and-project-type.md).
+ **Uygulama hedefi:** bu konudaki bilgiler Word 2010 için VSTO eklenti projelerine yöneliktir. Daha fazla bilgi edinmek için bkz. [Office Uygulaması ve Proje Türüne Göre Kullanılabilen Özellikler](../vsto/features-available-by-office-application-and-project-type.md).
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Yeni bir Word VSTO eklentisi projesi oluşturuluyor.
+- yeni bir Word VSTO eklentisi projesi oluşturma.
 
 - Belgeye denetim eklemek için bir kullanıcı arabirimi (UI) sağlama.
 
@@ -49,20 +50,20 @@ ms.locfileid: "107825400"
 - [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
 ## <a name="create-a-new-word-add-in-project"></a>Yeni bir Word eklentisi projesi oluştur
- Bir Word VSTO eklentisi projesi oluşturarak başlayın.
+ bir Word VSTO eklentisi projesi oluşturarak başlayın.
 
-### <a name="to-create-a-new-word-vsto-add-in-project"></a>Yeni bir Word VSTO eklentisi projesi oluşturmak için
+### <a name="to-create-a-new-word-vsto-add-in-project"></a>yeni bir Word VSTO eklentisi projesi oluşturmak için
 
-1. Word için, **WordDynamicControls** ADLı bir VSTO eklenti projesi oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Word için **worddynamiccontrols** adlı bir VSTO eklentisi projesi oluşturun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. **Microsoft.Office.Tools.Word.v4.0.Utilities.dll** derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms bir denetim eklemek için bu başvuru gerekir.
+2. **Microsoft.Office.Tools.Word.v4.0.Utilities.dll** derlemesine bir başvuru ekleyin. bu izlenecek yolda daha sonra belgeye Windows Forms bir denetim eklemek için bu başvuru gerekir.
 
 ## <a name="provide-a-ui-to-add-controls-to-a-document"></a>Belgeye denetim eklemek için bir kullanıcı arabirimi sağlama
  Word 'deki Şerite özel bir sekme ekleyin. Kullanıcılar bir belgeye denetim eklemek için sekmedeki onay kutularını seçebilir.
 
 ### <a name="to-provide-a-ui-to-add-controls-to-a-document"></a>Belgeye denetim eklemek için bir kullanıcı arabirimi sağlamak için
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+1. **Project** menüsünde, **yeni öğe ekle**' ye tıklayın.
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** öğesini seçin.
 
@@ -74,7 +75,7 @@ ms.locfileid: "107825400"
 
 5. **Özellikler** penceresinde, **grup1** Için **Label** özelliğini, **Denetimler Ekle** olarak değiştirin.
 
-6. **Araç kutusunun** **Office Şerit denetimleri** sekmesinden **Group1** üzerine bir **CheckBox** denetimi sürükleyin.
+6. **araç kutusunun** **Office şerit denetimleri** sekmesinden **group1** üzerine bir **CheckBox** denetimi sürükleyin.
 
 7. Seçmek için **CheckBox1** öğesine tıklayın.
 
@@ -103,7 +104,7 @@ ms.locfileid: "107825400"
     Bu izlenecek yolda daha sonra, etkin belgede denetim eklemek ve kaldırmak için bu olay işleyicilerine kod ekleyeceksiniz.
 
 ## <a name="add-and-remove-controls-on-the-active-document"></a>Etkin belgede denetim ekleme ve kaldırma
- VSTO eklenti kodunda, bir denetim ekleyebilmeniz için etkin belgeyi bir <xref:Microsoft.Office.Tools.Word.Document> *konak öğesine* dönüştürmeniz gerekir. Office çözümlerinde, yönetilen denetimler yalnızca, denetimler için kapsayıcılar olarak davranan konak öğelerine eklenebilir. VSTO eklenti projelerinde, konak öğeleri yöntemi kullanılarak çalışma zamanında oluşturulabilir `GetVstoObject` .
+ VSTO eklentisi kodunda, bir denetim ekleyebilmeniz için etkin belgeyi bir <xref:Microsoft.Office.Tools.Word.Document> *konak öğesine* dönüştürmeniz gerekir. Office çözümlerinde, yönetilen denetimler yalnızca, denetimler için kapsayıcılar olarak davranan konak öğelerine eklenebilir. VSTO eklenti projelerinde, konak öğeleri yöntemi kullanılarak çalışma zamanında oluşturulabilir `GetVstoObject` .
 
  `ThisAddIn`Etkin belgeyi eklemek veya kaldırmak için çağrılabilecek sınıfa Yöntemler ekleyin <xref:Microsoft.Office.Tools.Word.Controls.Button> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> . Bu izlenecek yolda daha sonra <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click> Şeritteki onay kutularının olay işleyicilerinden bu yöntemleri çağıracaksınız.
 
@@ -127,7 +128,7 @@ ms.locfileid: "107825400"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControlsWalkthrough/ThisAddIn.cs" id="Snippet3":::
 
 ## <a name="remove-the-button-control-when-the-document-is-saved"></a>Belge kaydedildiğinde düğme denetimini kaldır
- Windows Forms denetimleri belge kaydedilip kapatıldığında kalıcı olmaz. Ancak, her denetim için bir ActiveX sarmalayıcı belgede kalır ve belge yeniden açıldığında bu sarmalayıcının kenarlığı son kullanıcılar tarafından görülebilir. VSTO eklentilerinde dinamik olarak oluşturulan Windows Forms denetimlerini temizlemek için birkaç yol vardır. Bu kılavuzda, belge kaydedildiğinde denetimi programlı bir şekilde kaldırırsınız <xref:Microsoft.Office.Tools.Word.Controls.Button> .
+ Windows Belge kaydedilip kapatıldığında form denetimleri kalıcı olmaz. ancak, her denetim için bir ActiveX sarmalayıcı belgede kalır ve belge yeniden açıldığında bu sarmalayıcının kenarlığı son kullanıcılar tarafından görülebilir. VSTO eklentilerde dinamik olarak oluşturulan Windows Forms denetimlerini temizlemek için birkaç yol vardır. Bu kılavuzda, belge kaydedildiğinde denetimi programlı bir şekilde kaldırırsınız <xref:Microsoft.Office.Tools.Word.Controls.Button> .
 
 ### <a name="to-remove-the-button-control-when-the-document-is-saved"></a>Belge kaydedildiğinde düğme denetimini kaldırmak için
 
@@ -178,16 +179,16 @@ ms.locfileid: "107825400"
      Düğme belgeden kaldırılır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Aşağıdaki konulardan VSTO Eklentilerindeki denetimler hakkında daha fazla bilgi edinebilirsiniz:
+ VSTO eklentilerindeki denetimler hakkında daha fazla bilgi için şu konulardan daha fazla bilgi edinebilirsiniz:
 
-- Çalışma zamanında bir belgeye birçok farklı denetim türünün nasıl ekleneceğini ve belgeyi yeniden açtığınızda denetimleri yeniden oluşturmayı gösteren bir örnek için, bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Word Add-In dinamik denetimler örneği.
+- çalışma zamanında bir belgeye birçok farklı denetim türünün nasıl ekleneceğini ve belge yeniden açıldığı zaman denetimleri yeniden oluşturmayı gösteren bir örnek için, [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)' a Add-In dinamik denetimler örneği ' ne bakın.
 
-- Excel için VSTO eklentisini kullanarak çalışma sayfasına nasıl denetim ekleneceğini gösteren bir izlenecek yol için bkz. [Izlenecek yol: çalışma ZAMANıNDA VSTO eklenti projesindeki denetimleri ekleme](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md).
+- Excel için VSTO eklentisi kullanılarak çalışma sayfasına denetimlerin nasıl ekleneceğini gösteren bir anlatım için bkz. [izlenecek yol: VSTO eklenti projesindeki çalışma sayfasına denetim ekleme](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Word çözümleri](../vsto/word-solutions.md)
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [Office belgelerinde dinamik denetimleri kalıcı hale getirme](../vsto/persisting-dynamic-controls-in-office-documents.md)
-- [Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [nasıl yapılır: Office belgelere Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
 - [Nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md)
-- [VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+- [Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında VSTO eklentilerde genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)

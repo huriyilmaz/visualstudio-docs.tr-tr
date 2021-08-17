@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklama oturumu | Microsoft Docs
-description: Bir IDE 'nin tek bir örneğinden başlatılan veya buna bağlanmış olan tüm süreçler olan bir hata ayıklama oturumu hakkında bilgi edinin.
+title: Oturum Hata Ayıklama | Microsoft Docs
+description: IDE'nin tek bir örneğinden başlatılan veya eklenen tüm işlemler olan bir hata ayıklama oturumu hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,22 +10,23 @@ ms.assetid: 18d82199-b2d4-47a9-924f-ab64faf60ca1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64a7be8c02588e9df5904f37b0a20363a7e77cc2
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 24919aea1751ef9ab7f867d5bc59c70a00a5f66e5386bdc4d8cce042d5bb70bc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905663"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417878"
 ---
-# <a name="debug-session"></a>Hata ayıklama oturumu
-Hata ayıklayıcı mimarisi açısından bir *oturum*:
+# <a name="debug-session"></a>Oturumda hata ayıklama
+Hata ayıklayıcısı mimarisi açısından bir *oturum:*
 
-- , Bir IDE 'nin tek bir örneğinden başlatılmış veya bağlı olan, ilişkili veya ilgisiz tüm işlemlerin kümesidir.
+- IDE'nin tek bir örneğinden başlatılan veya eklenmiş olan ilgili veya ilgisiz tüm işlemlerin kümesidir.
 
-- , Bir oturum hata ayıklama Yöneticisi (SDM) tarafından uygulanır. Daha fazla bilgi için bkz. [oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md).
+- Bir oturum hata ayıklama yöneticisi (SDM) tarafından uygulanır. Daha fazla bilgi için [bkz. Oturum Hata Ayıklama Yöneticisi.](../../extensibility/debugger/session-debug-manager.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md)
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Oturum hata ayıklama yöneticisi](../../extensibility/debugger/session-debug-manager.md)
+- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)

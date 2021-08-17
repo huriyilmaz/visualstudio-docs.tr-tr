@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 48a146ab67b0677bcfe7a8c55fc9feee0fa52bf2af043b67fa3388653e51c080
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7f84b3577b407fb8e60322b2de078815e6d3af81
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420761"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128746"
 ---
 # <a name="idiasymbolget_container"></a>IDiaSymbol::get_container
 Bu işlev, bu sembolün üst/kapsayıcısını temsil eden bir simgeye yönelik bir işaretçi alır.

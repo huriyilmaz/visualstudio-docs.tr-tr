@@ -13,21 +13,22 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e7cf87815f7d6a09242d2b361db904094fcfcdea
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 1cbb59dc2da38274efd77ae5c8cd1efc69f7c55d8cf86cb55fe06f96bdd2b852
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102146450"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121419786"
 ---
 # <a name="error-unable-to-initiate-dcom-communication"></a>Hata: DCOM iletişimi başlatılamıyor
-Yerel makine uzak makineyle iletişime kalkışmaya çalışırken bir DCOM hatası oluştu. Bunun nedeni uzak sunucudaki bir güvenlik duvarının veya uzak makinedeki Windows kimlik doğrulamasının bozuk olması nedeniyle oluşur.
+Yerel makine uzak makineyle iletişime kalkışmaya çalışırken bir DCOM hatası oluştu. bunun nedeni uzak sunucuda bir güvenlik duvarı veya uzak makinede bozuk Windows kimlik doğrulaması olur.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Uzak makinede Windows Güvenlik Duvarı etkinse, güvenlik duvarının yerel hata ayıklama için nasıl yapılandırılacağı hakkında yönergeler için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) .
+- uzak makinede Windows güvenlik duvarı etkinse, güvenlik duvarının yerel hata ayıklama için nasıl yapılandırılacağı hakkında yönergeler için bkz. [uzaktan hata ayıklama](../debugger/remote-debugging.md) .
 
 - Windows kimlik doğrulamasını geri yüklemek için her iki makineyi yeniden başlatmayı deneyin. Kerberos hataları için yerel ve uzak makinelerdeki olay günlüklerini inceleyin ve bilinen sorunlar için etki alanı yöneticilerine başvurun.
 

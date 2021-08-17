@@ -8,14 +8,15 @@ ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bc802d48bc76bc5f0c6a4c272bf994e87bb8443
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b057b4fa8670e1b7ed4c1f320a2e32b488fca172
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970315"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025114"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Nasıl yapılır: XSD şemasını temel alan XML belgesi oluşturma
 

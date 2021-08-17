@@ -1,6 +1,6 @@
 ---
-title: Kesme noktası siliniyor | Microsoft Docs
-description: Bekleyen bir kesme noktası silindiğinde, oturum hata ayıklama yöneticisinin bekleyen bir kesme noktasını ve bundan sonra gelen tüm bağlantılı kesme noktalarını nasıl kaldırdığına öğrenin.
+title: Kesme Noktası | Microsoft Docs
+description: Bekleyen bir kesme noktası silindiğinde oturum hata ayıklama yöneticisinin bekleyen bir kesme noktası ve ona bağlı olan tüm kesme noktaları nasıl kaldır olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,23 +11,24 @@ ms.assetid: 75a046cc-d20a-4c79-ad2d-1f18426ac5d0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d8e0d68f32ece7760805c05fd281b0e62a70003
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ff1d0af4ceedc8ebd4659b44e0a316919e54a92aca9a3a0341c9f9d184e439b3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097285"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121343259"
 ---
-# <a name="deleting-a-breakpoint"></a>Kesme noktasını silme
-Bekleyen bir kesme noktası silinirken aşağıdaki işlem açıklanmaktadır:
+# <a name="deleting-a-breakpoint"></a>Kesme noktası silme
+Aşağıda bekleyen bir kesme noktası silinirken yapılan işlem açıkmektedir:
 
 ## <a name="deletion-process"></a>Silme işlemi
- Oturum hata ayıklama Yöneticisi (SDM), bekleyen kesme noktasını ve bundan sonra gelen tüm bağlantılı kesme noktalarını kaldırmak için [IDebugPendingBreakpoint2::D Sil](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) yöntemini çağırır.
+ Oturum hata ayıklama yöneticisi (SDM), bekleyen kesme noktası ve ona bağlı tüm bağlı kesme noktaları kaldırmak için [IDebugPendingBreakpoint2::D elete](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) yöntemini çağırıyor.
 
 > [!NOTE]
-> Tek bir bağlantılı kesme noktası, [IDebugBoundBreakpoint2::D Sil](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)çağrısıyla de silinebilir.
+> Tek bir bağlı kesme noktası, [IDebugBoundBreakpoint2::D elete çağrısıyla da silinebilir.](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklayıcı olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: aramadan sonra program aracılığıyla seçimleri geri yükleme'
-description: Bir Microsoft Word belgesinde aramadan sonra seçimleri program aracılığıyla geri yüklemek için Visual Studio 'Yu nasıl kullanabileceğinizi öğrenin.
+title: 'Nasıl kurulur: Arama sonrasındaki seçimleri program aracılığıyla geri yükleme'
+description: Visual Studio belgesinde yapılan aramaların ardından seçimleri program aracılığıyla geri yüklemek için Microsoft Word öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -15,25 +15,26 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 2a9f804e218ec9dfa0e0550501dec0c1aa8388ff
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 57f71cad1335c29f4e92bb760de251f6100f51a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824025"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026180"
 ---
-# <a name="how-to-programmatically-restore-selections-after-searches"></a>Nasıl yapılır: aramadan sonra program aracılığıyla seçimleri geri yükleme
-  Bir belgede metin bulup değiştirirseniz, arama tamamlandıktan sonra kullanıcının özgün seçimini geri yüklemek isteyebilirsiniz.
+# <a name="how-to-programmatically-restore-selections-after-searches"></a>Nasıl kurulur: Arama sonrasındaki seçimleri program aracılığıyla geri yükleme
+  Belgede metin bulup değiştirirsanız, arama tamamlandıktan sonra kullanıcının özgün seçimini geri yüklemek iyi olabilir.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Örnek yordamdaki kod iki <xref:Microsoft.Office.Interop.Word.Range> nesne kullanır. Geçerli olanı depolar <xref:Microsoft.Office.Interop.Word.Selection> ve diğeri bir arama aralığı olarak kullanılacak tüm belgeyi ayarlar.
+ Örnek yordamdaki kod iki nesne <xref:Microsoft.Office.Interop.Word.Range> kullanır. Biri geçerli olan <xref:Microsoft.Office.Interop.Word.Selection> 'i depolar, biri ise belgenin tamamını arama aralığı olarak kullanmak üzere ayarlar.
 
 ## <a name="to-restore-the-users-original-selection-after-a-search"></a>Bir aramadan sonra kullanıcının özgün seçimini geri yüklemek için
 
-1. <xref:Microsoft.Office.Interop.Word.Range>Belge ve geçerli seçim için nesneleri oluşturun.
+1. Belge <xref:Microsoft.Office.Interop.Word.Range> ve geçerli seçim için nesneleri oluşturun.
 
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet83":::
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet83":::
@@ -48,14 +49,14 @@ ms.locfileid: "107824025"
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet85":::
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet85":::
 
-   Aşağıdaki örnek, tüm yöntemi gösterir.
+   Aşağıdaki örnek, tam yöntemini gösterir.
 
 ## <a name="example"></a>Örnek
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet82":::
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet82":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: belgelerde metni program aracılığıyla arama ve değiştirme](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
-- [Nasıl yapılır: Word 'de program aracılığıyla arama seçeneklerini ayarlama](../vsto/how-to-programmatically-set-search-options-in-word.md)
-- [Nasıl yapılır: belgelerdeki bulunan öğeler aracılığıyla program aracılığıyla döngü yapma](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
+- [Nasıl kullanılır: Belgelerde program aracılığıyla metin arama ve değiştirme](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
+- [Nasıl yapabilirsiniz: Word'de arama seçeneklerini program aracılığıyla ayarlama](../vsto/how-to-programmatically-set-search-options-in-word.md)
+- [Nasıl kullanılır: Belgelerde bulunan öğelerde program aracılığıyla döngü](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1b607c0530efcb8846e765dd3019f7a03c98476d4137b03af9f13056e6a4cd5b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4d849a046e993c52c49c369e1eeffcb46ba87b0c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121441740"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068741"
 ---
 # <a name="profile-python-code"></a>Profil Python kodu
 

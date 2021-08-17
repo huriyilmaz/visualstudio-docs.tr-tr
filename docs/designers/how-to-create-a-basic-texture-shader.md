@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Temel Doku Gölgelendiricisi Oluşturma'
-description: Dokusundaki son rengi RGB ve Alfa değerlerini ayarlayan tek dokuda bir gölgelendirici oluşturmak için gölgelendirici tasarımcısını ve yönlendirilmiş Graf gölgelendirici dilini kullanın.
+description: Son rengi dokudan RGB ve alfa Graph olarak ayaran tek doku gölgelendiricisi oluşturmak için Gölgelendirici Tasarımcısı ve Yönlendirilen Gölgelendirici Dili kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,49 +8,50 @@ ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 832d8aac861163c0d1c6b56c340502e32b2f555b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e094e8bd318fce3fdb755ea482a696b25af1cdd4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915676"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127772"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>Nasıl yapılır: Temel doku gölgelendiricisi oluşturma
 
-Bu makalede, tek bir doku gölgelendirici oluşturmak için Gölgelendirici Tasarımcısının ve yönlendirilmiş grafik gölgelendirici dilinin (DGSL) nasıl kullanılacağı gösterilmektedir. Bu gölgelendirici, son rengi doğrudan dokusunun örneklendiği RGB ve Alfa değerlerine ayarlar.
+Bu makalede Gölgelendirici Tasarımcısı'nın ve Yönlendirilen Graph Gölgelendirici Dili'nin (DGSL) tek doku gölgelendiricisi oluşturmak için nasıl kullanılası açıklanmıştır. Bu gölgelendirici, son rengi dokudan örnek alınan RGB ve alfa değerlerine doğrudan ayarlar.
 
 ## <a name="create-a-basic-texture-shader"></a>Temel doku gölgelendiricisi oluşturma
 
-Bir doku örneğinin Color ve Alpha değerlerini doğrudan nihai çıkış rengine yazarak temel, tek doku gölgelendiriciyi uygulayabilirsiniz.
+Doku örneğinin renk ve alfa değerlerini doğrudan son çıkış rengine yazarak temel, tek doku gölgelendiricisi kullanabilirsiniz.
 
-Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görüntülendiğinden emin olun.
+Başlamadan önce Özellikler penceresinin ve **Araç** Kutusunun **görüntülendiğinden emin** olun.
 
-1. Birlikte çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
+1. Çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize DGSL gölgelendiricisi ekleme hakkında bilgi için Gölgelendirici Tasarımcısı'Başlarken bölümüne [bakın.](../designers/shader-designer.md)
 
-2. **Nokta rengi** düğümünü silin. **Seç** modunda, **nokta rengi** düğümünü seçin ve ardından menü çubuğunda Sil **Düzenle**' yi seçin  >  . Bu, bir sonraki adımda eklenen düğüm için yer açar.
+2. Nokta Rengi **düğümünü** silin. Seçim **modunda** Nokta Rengi **düğümünü seçin** ve ardından menü çubuğunda Sil'i **düzenle'yi**  >  **seçin.** Bu, sonraki adımda eklenen düğüme yer sağlar.
 
-3. Grafiğe bir **doku örnek** düğümü ekleyin. **Araç kutusunda** **doku** altında **doku örneği** ' ni seçin ve tasarım yüzeyine taşıyın.
+3. **Grafiye doku** örneği düğümü ekleyin. Araç **Kutusunda, Doku** altında **Doku** **Örneği'yi seçin** ve tasarım yüzeyine taşıma.
 
-4. Grafiğe bir **doku koordinatı** düğümü ekleyin. **Araç kutusunda** **doku**' ın altında **doku koordinatı** ' nı seçin ve tasarım yüzeyine taşıyın.
+4. **Grafiye bir Doku** Koordinatı düğümü ekleyin. Araç **Kutusunda, Doku** altında **Doku** **Koordinatı'nı** seçin ve tasarım yüzeyine taşıma.
 
-5. Uygulanacak dokuyu seçin. **Seç** modunda, **doku örnek** düğümünü seçin ve ardından **Özellikler** penceresinde, **dosya adı** özelliğini kullanarak kullanmak istediğiniz dokuyu belirtin.
+5. Uygulanacak dokuyu seçin. Seç **modunda** Doku Örneği **düğümünü** seçin ve özellikler **penceresinde** Dosya adı özelliğini kullanarak kullanmak istediğiniz **dokuyu** belirtin.
 
-6. Dokuyu herkese açık bir şekilde erişilebilir hale getirin. **Doku örnek** düğümünü seçin ve ardından **Özellikler** penceresinde, **erişim** özelliğini **Public** olarak ayarlayın. Artık dokuyu **Model Düzenleyicisi** gibi başka bir araçtan ayarlayabilirsiniz.
+6. Dokuyu genel erişime açık hale. Doku Örneği **düğümünü** seçin ve Özellikler **penceresinde** **Access** özelliğini Genel olarak **ayarlayın.** Artık dokuyu Model Düzenleyicisi gibi başka bir araçtan **ayarlayabilirsiniz.**
 
-7. Doku koordinatlarını doku örneğine bağlayın. **Seç** modunda, **doku koordinat** düğümünün **Çıkış** terminali ' ni **doku örnek** düğümünün **UV** terminaline taşıyın. Bu bağlantı, belirtilen koordinatlarda dokuyu örnekler.
+7. Bağlan doku örneğine eşgüdüm sağlar. Seç **modunda** Doku **Koordinatı düğümünün** Çıkış **terminali'ni** Doku Örneği **düğümünün TERMINAL** **terminaline** hareket ettirin. Bu bağlantı, dokuyu belirtilen koordinatlarda örnekler.
 
-8. Doku örneğini son renge bağlayın. **Doku örneği** düğümünün **RGB** terminalini **son renk** düğümünün **RGB** terminaline taşıyın ve ardından **doku örnek** düğümünün **Alfa** terminalini **son renk** düğümünün **Alfa** terminaline taşıyın.
+8. Bağlan örneğini son renge doğru seçin. Doku Örneği **düğümünün RGB** terminali, **Son** Renk düğümünün **RGB** terminaline ve  ardından Doku Örneği düğümünün **Alfa** terminali ile Son Renk düğümünün **Alfa**  **terminaline** hareket ettirin.
 
-Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir küpe uygulanan gölgelendirici önizlemesi gösterilmektedir.
+Aşağıdaki çizimde tamamlanmış gölgelendirici grafı ve bir kübüne uygulanan gölgelendiricinin önizlemesi gösterilir.
 
 > [!NOTE]
-> Bu çizimde, önizleme şekli olarak bir düzlem kullanılır ve gölgelendirici efektini daha iyi göstermek için bir doku belirtilmiştir.
+> Bu çizimde, önizleme şekli olarak bir düzlem kullanılır ve gölgelendiricinin etkisini daha iyi göstermek için bir doku belirtilmiştir.
 
-![Gölgelendirici Grafiği ve efektinin önizlemesi](../designers/media/digit-texture-effect.png)
+![Gölgelendirici grafiği ve etkisinin önizlemesi](../designers/media/digit-texture-effect.png)
 
-Bazı biçimler bazı gölgelendiriciler için daha iyi önizleme sağlayabilir. Gölgelendirici tasarımcısında gölgelendiricilerin önizlemesi hakkında daha fazla bilgi için bkz. [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)
+Bazı şekiller bazı gölgelendiriciler için daha iyi önizlemeler sağlar. Gölgelendirici Tasarımcısı'nda gölgelendiricileri önizleme hakkında daha fazla bilgi için bkz. [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

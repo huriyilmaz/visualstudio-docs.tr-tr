@@ -18,26 +18,26 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 51b430a18a3d0934c16de19cbde82177a5f21f12
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 54d84e792a9cb2833b34191f0760606a9b61eed5f1eac731f6a79a3efd1a86cd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836468"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430921"
 ---
 # <a name="build-events-page-project-designer-c"></a>Derleme Olayları Sayfası, Proje Tasarımcısı (C#)
 
-Yapı yapılandırma yönergelerini belirtmek için **Proje Tasarımcısı** ' nın **Olayları oluştur** sayfasını kullanın. Ayrıca, herhangi bir oluşturma sonrası olayının çalıştırıldığı koşulları belirtebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: derleme olayları belirtme (C#)](../../ide/how-to-specify-build-events-csharp.md) ve [nasıl yapılır: derleme olaylarını belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md).
+yapı yapılandırma yönergelerini belirtmek için **Project tasarımcısı** 'nın **olayları oluştur** sayfasını kullanın. Ayrıca, herhangi bir oluşturma sonrası olayının çalıştırıldığı koşulları belirtebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: derleme olayları belirtme (C#)](../../ide/how-to-specify-build-events-csharp.md) ve [nasıl yapılır: derleme olaylarını belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md).
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
 **Yapılandırma**
 
-Bu denetim bu sayfada düzenlenebilir değildir. Bu denetimin açıklaması için bkz. [derleme sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md).
+Bu denetim bu sayfada düzenlenebilir değildir. bu denetimin açıklaması için bkz. [derleme sayfası, Project tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md).
 
 **Platform**
 
-Bu denetim bu sayfada düzenlenemez. Bu denetimin açıklaması için bkz. [derleme sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md).
+Bu denetim bu sayfada düzenlenemez. bu denetimin açıklaması için bkz. [derleme sayfası, Project tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md).
 
 **Oluşturma öncesi olay komut satırı**
 
@@ -51,7 +51,7 @@ Yapı başlamadan önce yürütülecek komutları belirtir. Uzun komutları yazm
 Yapı bittikten sonra yürütülecek komutları belirtir. Uzun komutları yazmak için derleme sonrası **olay/oluşturma sonrası olay komut satırı Iletişim kutusunu** göstermek üzere **derlemeyi Düzenle** ' ye tıklayın.
 
 > [!NOTE]
-> `call`. Bat dosyalarını çalıştıran tüm derleme sonrası komutlarının önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
+> `call`.bat dosyaları çalıştıran tüm derleme sonrası komutlarınız önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
 
 **Oluşturma sonrası olayını Çalıştır**
 
@@ -61,11 +61,11 @@ Aşağıdaki tabloda gösterildiği gibi, oluşturma sonrası olayının çalı�
 |------------|------------|
 |**Her zaman**|Oluşturma sonrası olay, yapılandırmanın başarılı olup olmamasına bakılmaksızın çalışacaktır.|
 |**Başarılı derleme üzerinde**|Oluşturma sonrası olay, derleme başarılı olursa çalışır. Bu nedenle, derleme başarılı olduğu sürece olay, güncel olan bir proje için de çalışır.|
-|**Derleme proje çıkışını güncelleştirdiğinde**|Oluşturma sonrası olay, yalnızca derleyicinin çıkış dosyası (. exe veya. dll) önceki derleyici çıkış dosyasından farklı olduğunda çalışır. Bu nedenle, bir proje güncel ise, derleme sonrası bir olay çalıştırılmaz.|
+|**Derleme proje çıkışını güncelleştirdiğinde**|Oluşturma sonrası olay, yalnızca derleyicinin çıkış dosyası (.exe veya .dll) önceki derleyici çıkış dosyasından farklı olduğunda çalıştırılır. Bu nedenle, bir proje güncel ise, derleme sonrası bir olay çalıştırılmaz.|
 
 ## <a name="in-the-project-file"></a>Proje dosyasında
 
-Visual Studio 'nun önceki sürümlerinde, IDE 'deki **PreBuildEvent** veya **PostBuildEvent** ayarını değiştirdiğinizde, Visual Studio `PreBuildEvent` `PostBuildEvent` proje dosyasına bir veya özelliği ekler. Örneğin, IDE 'deki **PreBuildEvent** komut satırı ayarınız aşağıdaki gibidir:
+Visual Studio önceki sürümlerinde, ıde 'deki **PreBuildEvent** veya **PostBuildEvent** ayarını değiştirdiğinizde Visual Studio `PreBuildEvent` `PostBuildEvent` proje dosyasına bir veya özelliği ekler. Örneğin, IDE 'deki **PreBuildEvent** komut satırı ayarınız aşağıdaki gibidir:
 
 ```input
 "$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"
@@ -79,7 +79,7 @@ ardından proje dosyası ayarı:
 </PropertyGroup>
 ```
 
-.NET Core projeleri için, Visual Studio 2019 (ve daha yeni güncelleştirmelerde Visual Studio 2017), `PreBuild` `PostBuild` **PreBuildEvent** ve **PostBuildEvent** ayarları için veya adında bir MSBuild hedefi ekler. Bu hedefler, MSBuild 'in tanıdığı **BeforeTargets** ve **AfterTargets** özniteliklerini kullanır. Örneğin, önceki örnekte, Visual Studio artık aşağıdaki kodu oluşturuyor:
+.net Core projeleri için, Visual Studio 2019 (ve daha son güncelleştirmelerde Visual Studio 2017), `PreBuild` `PostBuild` **PreBuildEvent** ve **PostBuildEvent** ayarları için veya adında bir MSBuild hedefi ekler. bu hedefler, MSBuild algıladığı **beforetargets** ve **aftertargets** özniteliklerini kullanır. örneğin, yukarıdaki örnek için Visual Studio şimdi aşağıdaki kodu üretir:
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">

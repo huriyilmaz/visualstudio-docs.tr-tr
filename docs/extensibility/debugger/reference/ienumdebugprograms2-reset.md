@@ -11,17 +11,18 @@ ms.assetid: b289242b-24ea-4df3-a811-20b0c8a903d6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a54961b40f4bde286d2adfd0b8bb791a9750583e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e94930f25e1355398ed61d595375614ab4ff16e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079962"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029378"
 ---
 # <a name="ienumdebugprograms2reset"></a>IEnumDebugPrograms2::Reset
 Numaralandırmayı ilk öğeye sıfırlar.

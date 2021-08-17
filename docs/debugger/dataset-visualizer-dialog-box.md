@@ -1,6 +1,6 @@
 ---
-title: Veri kümesi görselleştiricisi Iletişim kutusu | Microsoft Docs
-description: Visual Studio hata ayıklayıcı görselleştiriciler, verileri görüntüleyen bileşenlerdir. DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemek için DataSet Visualizer 'ı kullanın.
+title: Veri Kümesi Görselleştiricisi İletişim Kutusu | Microsoft Docs
+description: Visual Studio ayıklayıcı görselleştiricileri, verileri görüntü alan bileşenlerdir. DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemek için DataSet Görselleştirici'yi kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,24 +22,24 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: eb3c862c52e815b2ac03cb774ae5d709975e9e62eb35f0f5390e738e5c5b7d16
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 32c7867f0d392937c90d47ed17352e747b1fd3e7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345822"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066856"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Veri Kümesi Görselleştiricisi İletişim Kutusu
-DataSet Visualizer, bir DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemenizi sağlar. Hata ayıklayıcı değişkenleri penceresinde veya bir veri Ipucunda bu nesnelerden birinin değerinin yanında görünen büyüteç simgesine tıklayarak bu Görselleştirici 'a erişebilirsiniz.
+DataSet Görselleştiricisi bir DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemenize olanak sağlar. Hata ayıklayıcı değişkenleri penceresinde veya DataTip'te bu nesnelerden birinin Değeri'nin yanında görünen büyüteç simgesine tıklayarak bu görselleştiriciye erişebilirsiniz.
 
- Bu Görselleştirici içindeki nesnelerde değişiklik yapabilirsiniz. Bir satırı işlemenizden hemen sonra değişiklikler kaydedilir.
+ Bu görselleştiricideki nesneler üzerinde değişiklik yapabilirsiniz. Bir satırı işle hemen sonra değişiklikler kaydedilir.
 
 ## <a name="uielement-list"></a>UIElement Listesi
- Tablo bu açılan listeyi kullanarak görselleştirmek istediğiniz veri kümesi içinde bir tablo seçin.
+ Tablo Görselleştirmek istediğiniz veri kümesi içinde bir tablo seçmek için bu açılan liste kutusunu kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklayıcı Güvenliği](../debugger/debugger-security.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)
 - [Hata Ayıklayıcısı Pencereleri](../debugger/debugger-windows.md)
 - [Veri İpuçları'ndaki veri değerlerini görüntüleme](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)

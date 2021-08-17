@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfalarına XMLMappedRange denetimleri ekleme'
-description: Bir XML öğesini Microsoft Office Excel içindeki bir hücreyle eşleştirdiğinizde, Visual Studio otomatik olarak çalışma sayfanıza bir XmlMappedRange denetimi ekler.
+description: bir XML öğesini Microsoft Office Excel bir hücreye eşlediğinizde Visual Studio otomatik olarak çalışma sayfanıza bir xmlmappedrange denetimi ekleyen bir bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 065a904047630d15a8e9ed167a6a4a2764858387
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8fa5b3037b29cf15537215c9bf623c57ac8a119d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970328"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106334"
 ---
 # <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>Nasıl yapılır: çalışma sayfalarına XMLMappedRange denetimleri ekleme
-  Bir XML öğesini Microsoft Office Excel içindeki bir hücreyle eşleştirdiğinizde, Visual Studio otomatik olarak <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> çalışma sayfanıza bir denetim ekler.
+  bir XML öğesini Microsoft Office Excel bir hücreyle eşleştirdiğinizde, Visual Studio otomatik olarak <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> çalışma sayfanıza bir denetim ekler.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
@@ -43,17 +44,17 @@ ms.locfileid: "99970328"
 
      **XML kaynağı** görev bölmesi görüntülenir.
 
-4. **XML kaynağı** görev bölmesinde, **XML eşlemeleri**' ne tıklayın.
+4. **xml kaynağı** görev bölmesinde, **xml Haritalar**' ye tıklayın.
 
-5. **XML eşlemeleri** Iletişim kutusunda **Ekle**' ye tıklayın.
+5. **XML Haritalar** iletişim kutusunda **ekle**' ye tıklayın.
 
      **XML kaynağı** iletişim kutusu görüntülenir.
 
 6. **XML kaynağı** iletişim kutusundan bir XML şeması seçin ve **Aç**' a tıklayın.
 
-     Şema, **XML eşlemeleri** iletişim kutusuna eklenir.
+     şema **XML Haritalar** iletişim kutusuna eklenir.
 
-7. **XML eşlemeleri** Iletişim kutusunda **Tamam**' a tıklayın.
+7. **XML Haritalar** iletişim kutusunda **tamam**' a tıklayın.
 
 8. **XML kaynağı** görev bölmesindeki bir öğeyi çalışma sayfasındaki bir hücreye sürükleyin.
 
@@ -64,7 +65,7 @@ ms.locfileid: "99970328"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [XmlMappedRange denetimi](../vsto/xmlmappedrange-control.md)
-- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
+- [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)

@@ -1,6 +1,6 @@
 ---
 title: Komut Penceresi
-description: Komutları veya diğer adları doğrudan Visual Studio IDE 'de yürütmek için Komut penceresi nasıl kullanabileceğinizi öğrenin.
+description: komutları veya diğer adları doğrudan Visual Studio ıde 'de yürütmek için Komut penceresi nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,17 +16,18 @@ ms.assetid: 48711628-1909-4713-a73e-d7b714c77f8a
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: fba1c12743035c397780db64939dec8195a75afd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 74954be3d0506c6a87f3973da617d26a96af8e9152ef85cbb45e72ad2d54d0d4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942860"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430596"
 ---
 # <a name="command-window"></a>Komut Penceresi
-**Komut** penceresi, komutları veya diğer adları doğrudan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamında (IDE) yürütmek için kullanılır. Herhangi bir menüde görünmeyen menü komutlarını ve komutları çalıştırabilirsiniz. **Komut** penceresini görüntülemek Için, **Görünüm** menüsünde **diğer pencereler** ' i seçin ve **komut penceresi**' ni seçin.
+**Komut** penceresi, komutları veya diğer adları doğrudan [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamında (IDE) yürütmek için kullanılır. Herhangi bir menüde görünmeyen menü komutlarını ve komutları çalıştırabilirsiniz. **komut** penceresini görüntülemek için, **görünüm** menüsünden **diğer Windows** seçin ve **komut penceresi**' ni seçin.
 
 ## <a name="displaying-the-values-of-variables"></a>Değişkenlerin değerlerini görüntüleme
 Bir değişkenin değerini denetlemek için `varA` [Print komutunu](../../ide/reference/print-command.md)kullanın:
@@ -114,4 +115,4 @@ Bir giriş işareti, tırnak işaretlerinin içinde mi yoksa dışında mı oldu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)

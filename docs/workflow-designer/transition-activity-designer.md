@@ -1,6 +1,6 @@
 ---
 title: İş Akışı Tasarımcısı - Geçiş Etkinliği Tasarımcısı
-description: İki eyalet arasında bir geçiş yapılandırmak için Geçiş etkinliği tasarımcısını nasıl kullanabileceğiniz hakkında bilgi öğrenin.
+description: İki eyalet arasında bir geçiş yapılandırmak için Geçiş etkinliği tasarımcısını nasıl kullanabileceğiniz hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 7d7eed0579541f8f0e5355719c8bb2d2b79190854ea288b887af0000bcd370e3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a07642e195a3d589e32f2a78031e6d8749662299
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121393425"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025426"
 ---
 # <a name="transition-activity-designer"></a>Transition Etkinlik Tasarımcısı
 
@@ -38,7 +38,7 @@ Aşağıdaki tabloda iş <xref:System.Activities.Statements.Transition> akışı
 |<xref:System.Activities.Statements.Transition.Condition%2A>|Yanlış|Varsa, denetim hedef durumuna geçirimeden önce **True** olarak değerlendirmesi gereken bir ifade belirtir. Bu koşul özellik kılavuzunda ve genişletilmiş geçiş tasarımcısında düzenlenebilir. Paylaşılan geçişte birden çok durum, geçiş tasarımcısında görünme sırasına göre değerlendirilir. **Not:**  Bir geçişin False (veya paylaşılan tetikleyici geçişinin tüm koşulları False olarak değerlendirilir) olarak değerlendirilirse, geçiş oluşmaz ve durumdan tüm geçişler için tüm tetikleyiciler yeniden <xref:System.Activities.Statements.Transition.Condition%2A> zamanlanmaz.   Bu öğreticide, koşulların yapılandırılması nedeniyle bu durum olamaz (tahminin doğru mu yoksa yanlış mı olduğuyla ilgili belirli eylemlerimiz vardır).|
 |**Kaynak**|Doğru|Bu geçişin kaynaklandığı durumu gösterir. Kaynak durumunun adına tıklar, tasarımcı görünümünü bu durum için genişletilmiş bir görünüme iletir. Bu değer, geçiş oluşturulduğunda ayarlanır ve değiştirilemez.|
 |<xref:System.Activities.Statements.Transition.Trigger%2A>|Yanlış|Tamamlanmasının geçişi başlattığı etkinliği belirtir. Bu etkinliği ayarlamak için Bir etkinliği Araç **Kutusundan sürükleyip** geçişin **Tetikleyici** bölümüne bırakın.|
-|<xref:System.Activities.Statements.Transition.Action%2A>|Yanlış|Tetikleyici etkinliği tamamlandığında yürütülen etkinliği ve varsa , true olarak <xref:System.Activities.Statements.Transition.Condition%2A> değerlendirilir.  Bu etkinlik, varsa kaynak durumu için etkinlik yürütülürken hedef <xref:System.Activities.Statements.State.Exit%2A> durumuna geçişte yürütülür. Geçiş tasarımcısı genişletilirken, bu değer Araç Kutusundan  bir etkinliği sürükleyip geçişin **Eylem** bölümüne bırakarak ayarlanır. Tek bir geçiş için birden çok eylem olabilir. Tek tek eylemler genişletilebilir ve anlaşmalı olabilir ve bir geçişte birden çok eylem olduğunda eylemde görüntülenen yukarı veya aşağı oka tıklar.|
+|<xref:System.Activities.Statements.Transition.Action%2A>|Yanlış|Tetikleyici etkinliği tamamlandığında yürütülen etkinliği ve varsa , true olarak <xref:System.Activities.Statements.Transition.Condition%2A> değerlendirilir.  Bu etkinlik, varsa kaynak durumuna yönelik etkinlik yürütülürken hedef <xref:System.Activities.Statements.State.Exit%2A> durumuna geçişte yürütülür. Geçiş tasarımcısı genişletilirken, bu değer Araç Kutusundan  bir etkinliği sürükleyip geçişin **Eylem** bölümüne bırakarak ayarlanır. Tek bir geçiş için birden çok eylem olabilir. Tek tek eylemler genişletilebilir ve anlaşmalı olabilir ve bir geçişte birden çok eylem olduğunda eylemde görüntülenen yukarı veya aşağı oka tıklar.|
 |**Hedef**|Doğru|Geçiş tamamlandıktan sonra durum makinesinin geçiş durumunu gösterir. Bu, nesne <xref:System.Activities.Statements.Transition.To%2A> modelinde geçişin özelliğine karşılık gelen bir özelliktir. Hedef durum adına tıklarken tasarımcı görünümü, bu durum için genişletilmiş bir görünüme geçiştir. Bu değer, geçiş oluşturulduğunda ayarlanır ve tasarımcıda geçişi hedef durumuna bağlayan ok sürüklenerek değiştirilebilir.|
 
 ### <a name="creating-transitions"></a>Geçiş oluşturma

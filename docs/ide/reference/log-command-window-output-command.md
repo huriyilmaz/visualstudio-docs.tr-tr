@@ -13,14 +13,15 @@ ms.assetid: d4ecec35-5af4-4954-8d60-2cd24583fbb4
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 36f0ece9ed1e29c414fbb6bf6e5f7ab2fa514734
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 30baf6cb3ed9a66d6c9d5696909f215e5721fcbd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919408"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151398"
 ---
 # <a name="log-command-window-output-command"></a>Komut Penceresi Çıkışını Günlüğe Kaydet komutu
 

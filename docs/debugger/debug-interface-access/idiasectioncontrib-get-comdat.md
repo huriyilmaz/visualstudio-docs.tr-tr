@@ -1,6 +1,6 @@
 ---
-description: Bölümün bir COMDAT kaydı olup olmadığını gösteren bir bayrak alır.
-title: 'IDiaSectionContrib:: get_comdat | Microsoft Docs'
+description: Bölümünün bir COMDAT kaydı olup olmadığını belirten bir bayrak alınır.
+title: IDiaSectionContrib::get_comdat | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121344871"
 ---
 # <a name="idiasectioncontribget_comdat"></a>IDiaSectionContrib::get_comdat
-Bölümün bir COMDAT kaydı olup olmadığını gösteren bir bayrak alır.
+Bölümünün bir COMDAT kaydı olup olmadığını belirten bir bayrak alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_comdat (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Bölüm BIR COMDAT kaydı ise döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Bölümü `TRUE` bir COMDAT kaydı ise döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- COMDAT kaydı, paketlenmiş işlevleri bağlayıcıya görünür hale getiren ortak bir nesne dosyası biçimi (COFF) kaydıdır.
+ COMDAT kaydı, paketlenmiş işlevlerin bağlantıcıya görünür hale geldiği Ortak Nesne Dosyası Biçimi (COFF) kaydıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

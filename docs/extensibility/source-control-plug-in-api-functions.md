@@ -10,17 +10,18 @@ ms.assetid: 4b0536dd-4f92-4ef2-9031-4548281f37aa
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f93ddff78aa151218d0b46d017e4631d9489e44
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 369acd0f0b459aa4d5e5691c0159087c0bdf152edeb5388d3f62d3978f58ac30
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899608"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431467"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Kaynak Denetimi Eklentisi API İşlevleri
-Kaynak Denetimi Eklentisi API'si, bu API'ye uygun olarak kaynak denetimi eklentisi tarafından uygulanması gereken aşağıdaki işlevleri sağlar. Her işlevin imzaları ve bit bayrakları ve diğer parametrelerle ilişkili semantikler bu başvuruda ayrıntılı olarak açıklanmıştır.
+Kaynak Denetimi Eklentisi API'si, kaynak denetimi eklentisi tarafından bu API'ye uygun olarak uygulanması gereken aşağıdaki işlevleri sağlar. Her işlevin imzaları ve bit bayrakları ve diğer parametrelerle ilişkili semantikler bu başvuruda ayrıntılı olarak açıklanmıştır.
 
 ## <a name="initialization-and-housekeeping-functions"></a>Başlatma ve Bakım İşlevleri
 
@@ -39,15 +40,15 @@ Kaynak Denetimi Eklentisi API'si, bu API'ye uygun olarak kaynak denetimi eklenti
 |İşlev|Açıklama|
 |--------------|-----------------|
 |[SccAdd](../extensibility/sccadd-function.md)|Kaynak denetim sistemine tam yol adları tarafından belirtilen bir dosya dizisi ekler.|
-|[SccAddFromScc](../extensibility/sccaddfromscc-function.md)|Kullanıcının kaynak denetim sisteminde zaten bulunan dosyalara göz atarak bu dosyaları geçerli projenin parçası yapmalarına olanak sağlar.|
+|[SccAddFromScc](../extensibility/sccaddfromscc-function.md)|Kullanıcının kaynak denetim sisteminde zaten bulunan dosyalara göz atarak bu dosyaları geçerli projenin parçası yapmalarına izin verir.|
 |[SccCheckin](../extensibility/scccheckin-function.md)|Bir dosya dizisini denetler.|
 |[SccCheckout](../extensibility/scccheckout-function.md)|Bir dosya dizisini denetler.|
 |[SccDiff](../extensibility/sccdiff-function.md)|Yerel kullanıcının tam yol adı ile kaynak denetimi altındaki sürüm tarafından belirtilen dosyası arasındaki farkları gösterir.|
 |[SccGet](../extensibility/sccget-function.md)|Bir dosya kümesi için salt okunur bir kopyayı alan.|
-|[SccGetEvents](../extensibility/sccgetevents-function.md)|Çağıranın hakkında sorularak (aracılığıyla) dosyaların durumunu `SccQueryInfo` denetler.|
+|[SccGetEvents](../extensibility/sccgetevents-function.md)|Çağıranın sorarak sortt olduğu dosyaların durumunu denetler `SccQueryInfo` (aracılığıyla).|
 |[SccGetProjPath](../extensibility/sccgetprojpath-function.md)|Kaynak denetimi eklentisinin kullanıcıdan eklenti için anlamlı bir proje yolu isteminde uzlatır.|
 |[SccHistory](../extensibility/scchistory-function.md)|Tam yerel dosya adları dizisinin geçmişini gösterir.|
-|[SccPopulateList](../extensibility/sccpopulatelist-function.md)|Dosya listesini geçerli durumları için inceler. Ayrıca, bir dosya `pfnPopulate` ölçütüyle eşleşmezken çağıranı bildirmek için işlevini `nCommand` kullanır.|
+|[SccPopulateList](../extensibility/sccpopulatelist-function.md)|Geçerli durumları için dosya listesini inceler. Ayrıca, bir dosya `pfnPopulate` ölçütüyle eşleşmezken çağıranı bildirmek için işlevini `nCommand` kullanır.|
 |[SccProperties](../extensibility/sccproperties-function.md)|Tam dosyanın özelliklerini gösterir.|
 |[SccQueryInfo](../extensibility/sccqueryinfo-function.md)|Geçerli durumları için tam dosya listesini inceler.|
 |[SccRemove](../extensibility/sccremove-function.md)|Kaynak denetim sisteminden tam dosya dizisini kaldırır.|
@@ -80,12 +81,12 @@ Kaynak Denetimi Eklentisi API'si, bu API'ye uygun olarak kaynak denetimi eklenti
 |[SccGetExtendedCapabilities](../extensibility/sccgetextendedcapabilities-function.md)|Kaynak denetimi eklentisi tarafından desteklenen genişletilmiş özellikleri belirten bayrakları alın.|
 |[SccGetUserOption](../extensibility/sccgetuseroption-function.md)|Kullanıcıya özgü seçenekleri alma.|
 |[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)|Bir proje veya proje içinde kaynak denetimi altında olan dizinlerin ve dosyaların listesini inceler. Bulunan her dizin ve dosya adı bir geri çağırma işlevine geçirildi.|
-|[SccQueryChanges](../extensibility/sccquerychanges-function.md)|Dosya listesinde yapılan ad değişikliklerini inceler. Her dosya adı, değişiklik durumuyla birlikte bir geri çağırma işlevine geçirildi.|
+|[SccQueryChanges](../extensibility/sccquerychanges-function.md)|Dosya listesinde yapılan ad değişikliklerini inceler. Her dosya adı, değişiklik durumuyla bir geri çağırma işlevine geçirilir.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: scc.h
+ Üstbilgi: SCC. h
 
- (Ortam SDK'sı ortak içerir klasöründe, varsayılan olarak *[sürücü]* \Program Files\VSIP 8.0\EnvSDK\common\inc; MSSCCI örneğiyle VSIP klasöründe de sağlanır, *[sürücü]* \Program Files\VSIP 8.0\MSSCCI).
+ (Varsayılan *[sürücü]* \Program Files\VSIP 8.0 \ EnvSDK\common\inc; ADLı ortam SDK ortak içerme klasörü, MSSCCI örneği, *[sürücü]* \Program Files\VSIP 8.0 \ MSSCCı) ile VSIP klasöründe de sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri](../extensibility/source-control-plug-ins.md)

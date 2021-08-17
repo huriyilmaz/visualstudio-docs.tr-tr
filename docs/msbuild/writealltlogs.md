@@ -15,14 +15,15 @@ ms.assetid: 1fa3e10b-263c-4960-a9ad-485c02a7a872
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 65e0610c8148ab6ff32d8c19f6fd378ba46d76d5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: db57baaa0a31b8882d7a2fe7a72c051dae748b59
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933602"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108141"
 ---
 # <a name="writealltlogs"></a>WriteAllTLogs
 

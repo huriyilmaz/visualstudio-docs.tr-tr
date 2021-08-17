@@ -1,5 +1,5 @@
 ---
-title: Visual Studio abonelikler için CloudPilot avantajı | Microsoft Docs
+title: Visual Studio aboneliklerini | CloudPilot avantajı Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -15,7 +15,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121421423"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Bulut aboneliğinde CloudPilot Visual Studio avantajı
-Birkaç kolay adımda Microsoft Azure uygulamalarınızı yeni uygulamalara taşıma. Dakikalar içinde, geçişin başarılı olması için gereken tüm kod değişikliklerini kod satırına kadar tanıyın: Kapsayıcılar, VM'ler, App Services, SQL Azure ve/veya SQL MI. Ardından ASR, DMA ve DMS'den yararlanarak sihirbazları kullanarak uygulamaları Azure'a geçirebilirsiniz.
+Birkaç kolay adımda Microsoft Azure uygulamalarınızı yeni uygulamalara taşıma. Dakikalar içinde, geçişin başarılı olması için gereken tüm kod değişikliklerini kod satırına kadar tanıyın: Kapsayıcılar, VM'ler, App Services, SQL Azure ve/veya MI'SQL. Ardından ASR, DMA ve DMS'den yararlanarak sihirbazları kullanarak uygulamaları Azure'a geçirebilirsiniz.
 
 ## <a name="overview"></a>Genel Bakış
 UnifyCloud tarafından tasarlanan CloudPilot, geliştiricilerin uygulamaları hızla ve kolayca Azure'a taşıması için tasarlanmıştır.  El ile yapılan değerlendirmenin çok kısa bir sürede CloudPilot, Azure PaaS & IaaS geçiş maliyetlerini doğru bir şekilde belirler ve uygulamanın Bulutta çalışması için kod satırına kadar ayrıntılı öneriler sağlar. CloudPilot, Buluta geçiş eforu ve geliştirme planlamasının ilk değerlendirmesinde, bulut için ayrıntılı kod düzeyinde değişiklikler sunarak yeniden çarpanlara geçirme sürecinde ve kurumsal teknoloji denetimleri ve ilkelerine karşı son testte yardımcı olur.
@@ -41,7 +41,7 @@ UnifyCloud tarafından tasarlanan CloudPilot, geliştiricilerin uygulamaları h�
    > ![CloudPilot Kayıt Sayfası](_img/vs-cloudpilot/vs-cloudpilot-register.png)
 
    > [!NOTE]
-   > CloudPilot avantajının etkinleştirmeleri kuruluş başına on ile sınırlıdır ve bu, abonelikler veya abonelikler Visual Studio Enterprise Visual Studio Professional kullanılır.  Kuruluşta on etkinleştirme zaten kullanılırsa, CloudPilot avantajını etkinleştiremeyebilirsiniz ve UnifyCloud'dan daha fazla bilgi içeren bir e-posta alırsınız.
+   > CloudPilot avantajının etkinleştirmeleri kuruluş başına on ile sınırlıdır ve bu süre, Visual Studio Enterprise veya Visual Studio Professional kullanılır.  Kuruluşta on etkinleştirme zaten kullanılırsa, CloudPilot avantajını etkinleştiremeyebilirsiniz ve UnifyCloud'dan daha fazla bilgi içeren bir e-posta alırsınız.
 
 0. Daha sonra, CloudPilot hakkında bilgi sahibi olmak için tasarlanmış bir ürün sayfası görüntülenir.  CloudPilot portalına gitmek için sağ üst köşedeki **CloudPilot'a** gidin'e tıklayın.
 
@@ -62,7 +62,7 @@ UnifyCloud tarafından tasarlanan CloudPilot, geliştiricilerin uygulamaları h�
 | Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Enterprise ile abonelik GitHub Enterprise   | Vl | 2 lisans, 90 gün, sınırsız tarama       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
 | Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
-| Visual Studio Professional aboneliği GitHub Enterprise | Vl | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
+| Visual Studio Professional ile abonelik GitHub Enterprise | Vl | 1 lisans, 30 gün, bir tarama                                                            |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir           |
 | Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılamaz                                             |  Yok           |
 | MSDN Platformları (Standart)                                          | VL, Perakende                                              | Kullanılamaz                                              |  Yok          |
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
@@ -79,7 +79,7 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 - CloudPilot kullanmayla ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
   - [UnifyCloud ürünleriyle](https://www.unifycloud.com/contacts/) ilgili sorgular için UnifyCloud ile iletişime geçin.
   - [CloudPilot Kullanıcı Kılavuzu](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda Visual Studio için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
+- Abonelikler için satış, abonelikler, hesaplar ve faturalama Visual Studio yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
 - IDE, Azure DevOps Services veya Visual Studio ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.

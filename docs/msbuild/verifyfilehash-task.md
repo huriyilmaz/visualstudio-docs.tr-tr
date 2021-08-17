@@ -1,6 +1,6 @@
 ---
 title: VerifyFileHash görevi | Microsoft Docs
-description: MSBuild 'in, bir dosyanın beklenen dosya karması ile eşleşip eşleşmediğini doğrulamak için VerifyFileHash görevini nasıl kullandığını öğrenin ve eşleşmezse başarısız olur.
+description: MSBuild, bir dosyanın beklenen dosya karması ile eşleştiğini doğrulamak için verifyfilehash görevini nasıl kullandığını öğrenin ve eşleşmezse başarısız olur.
 ms.custom: SEO-VS-2020
 ms.date: 01/28/2019
 ms.topic: reference
@@ -15,20 +15,21 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: cfd6bb88a5bfbbffb7c99f7f43036cf9fee4d6ae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4ffdea3c624e451492b9cf970c89982adb1c571c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908799"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108232"
 ---
 # <a name="verifyfilehash-task"></a>VerifyFileHash görevi
 
 Bir dosyanın beklenen dosya karmasıyla eşleştiğini doğrular. Karma eşleşmezse, görev başarısız olur.
 
-Bu görev 15,8 ' ye eklenmiştir, ancak 16,0 ' nin altındaki MSBuild sürümleri için kullanmak üzere [geçici bir çözüm](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) gerektirir.
+bu görev 15,8 'e eklenmiştir, ancak 16,0 ' nin altındaki MSBuild sürümler için kullanmak üzere [geçici bir çözüm](https://github.com/Microsoft/msbuild/pull/3999#issuecomment-458193272) gerektirir.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
@@ -63,7 +64,7 @@ Aşağıdaki örnek, `VerifyFileHash` kendi sağlama toplamını doğrulamak iç
 </Project>
 ```
 
-MSBuild 16,5 ve üzeri sürümlerde, karma ile eşleşmediği zaman, denetim akışı için bir koşul olarak karma karşılaştırma kullanıyorsanız, aşağıdaki kodu kullanarak uyarının bir iletiye indirgenmesini sağlayabilirsiniz:
+MSBuild 16,5 ve üzeri sürümlerde, karma ile eşleşmediği zaman derlemeyi istemiyorsanız, örneğin denetim akışı için bir koşul olarak karma karşılaştırmayı kullanıyorsanız, aşağıdaki kodu kullanarak uyarıyı bir ileti ile indirgeyeleyebilirsiniz:
 
 ```xml
   <PropertyGroup>

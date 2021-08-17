@@ -1,6 +1,6 @@
 ---
 title: Veri kaynakları penceresine özel denetimler ekleme
-description: Visual Studio 'da veri kaynakları penceresine özel denetimler ekleyin. Bağlanabilir denetimler listesini özelleştirin. İlişkili denetimleri ekleyin.
+description: Visual Studio içindeki veri kaynakları penceresine özel denetimler ekleyin. Bağlanabilir denetimler listesini özelleştirin. İlişkili denetimleri ekleyin.
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,13 @@ ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 author: ghogen
 ms.author: ghogen
 manager: jmartens
-ms.openlocfilehash: 5591dc9c3422918fa8f9c605105ea10c8fbc447d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-data-tools
+ms.openlocfilehash: 2b29026eb9242dae0526f6022658f65c4a7b0a76
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867431"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122067240"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Veri kaynakları penceresine özel denetimler ekleme
 
@@ -35,16 +36,16 @@ Veri kaynakları penceresinde belirli bir veri türüne sahip öğeler için kul
 
 ### <a name="to-select-the-controls-to-be-listed-for-a-data-type"></a>Bir veri türü için listelenecek denetimleri seçmek için
 
-1. WPF Tasarımcısı veya Windows Form Tasarımcısı açık olduğundan emin olun.
+1. WPF tasarımcısı veya Windows Form Tasarımcısı açık olduğundan emin olun.
 
 2. **Veri kaynakları** penceresinde, pencereye eklediğiniz bir veri kaynağının parçası olan bir öğeye tıklayın ve sonra öğenin açılan menüsüne tıklayın.
 
    > [!TIP]
-   > Veri kaynakları penceresi açık değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
+   > veri kaynakları penceresi açık değilse,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
 
 3. Açılan menüde, **Özelleştir**' e tıklayın. Aşağıdaki iletişim kutularından biri açılır:
 
-    - **Windows Form Tasarımcısı** açıksa, **Seçenekler** Iletişim kutusunun **veri UI özelleştirmesi** sayfası açılır. Daha fazla bilgi için bkz. [veri Kullanıcı arabirimi özelleştirme seçenekleri iletişim kutusu](../ide/reference/options-windows-forms-designer-data-ui-customization.md).
+    - **Windows Form Tasarımcısı** açıksa, **seçenekler** iletişim kutusunun **veri uı özelleştirmesi** sayfası açılır. Daha fazla bilgi için bkz. [veri Kullanıcı arabirimi özelleştirme seçenekleri iletişim kutusu](../ide/reference/options-windows-forms-designer-data-ui-customization.md).
 
     - **WPF Tasarımcısı** açıksa, **denetimi bağlamayı Özelleştir** iletişim kutusu açılır.
 
@@ -83,7 +84,7 @@ Bir denetimi veri türüyle ilişkilendirmek istiyorsanız, ancak denetim **ili�
     |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Bu özniteliği, gibi verilerin listesini (veya tabloları) görüntüleyen denetimlerde uygulayın <xref:System.Windows.Forms.DataGridView> .|
     |<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Bu özniteliği, verilerin listelerini (veya tablolarını) görüntüleyen denetimlerde uygulayın, ancak aynı zamanda tek bir sütun veya bir özelliği (örneğin,) sunmalıdır <xref:System.Windows.Forms.ComboBox> .|
 
-2. Windows Forms için, **Seçenekler** Iletişim kutusunda **veri UI özelleştirmesi** sayfasını açın. Ya da WPF için **Denetim Bağlamayı Özelleştir** iletişim kutusunu açın. Daha fazla bilgi için bkz. [veri türü için bağlanabilir denetim listesini özelleştirme](#customize-the-bindable-controls-list).
+2. Windows Forms için, **seçenekler** iletişim kutusunda **veri uı özelleştirmesi** sayfasını açın. Ya da WPF için **Denetim Bağlamayı Özelleştir** iletişim kutusunu açın. Daha fazla bilgi için bkz. [veri türü için bağlanabilir denetim listesini özelleştirme](#customize-the-bindable-controls-list).
 
 3. **İlişkili denetimler** kutusunda, **araç** kutusuna yeni eklediğiniz denetim artık görünmelidir.
 

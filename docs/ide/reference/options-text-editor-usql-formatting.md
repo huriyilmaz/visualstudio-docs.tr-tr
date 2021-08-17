@@ -1,6 +1,6 @@
 ---
 title: U-SQL düzenleyicisi biçimlendirme seçenekleri
-description: Kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını ve alt sayfasını kullanmayı öğrenin ve bu sayfayı U-SQL.
+description: U-SQL ' de programlarken kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için biçimlendirme seçenekleri sayfasını ve alt sayfalarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/17/2019
 ms.topic: reference
@@ -16,42 +16,42 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: b08748478748079dbf3d8bdb253036370628ab842d5aae0674898109cc5acc3d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e13ef80bae3e59901a8fb0ae67a837a2f344b551
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334347"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069437"
 ---
-# <a name="options-text-editor-u-sql-formatting"></a>Seçenekler, Metin Düzenleyici, U-SQL, Biçimlendirme
+# <a name="options-text-editor-u-sql-formatting"></a>seçenekler, metin düzenleyici, U-SQL, biçimlendirme
 
-Kod **düzenleyicisinde** kodu biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için Araçlar **Seçenekleri'ne**  >  **tıklayın.** Seçenekler iletişim **kutusunda,** Metin Düzenleyici ve **Biçimlendirme'U-SQL**  >    >  **seçin.**
+Kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler**' i seçin. **seçenekler** iletişim kutusunda, biçimlendirme U-SQL **metin düzenleyici**' yi seçin  >    >  .
 
 ## <a name="general-page"></a>Genel sayfası
 
 ### <a name="general-settings"></a>Genel ayarlar
 
-Bu ayarlar, *kod düzenleyicisinin* koda biçimlendirme seçeneklerini ne zaman uygulaması olduğunu etkiler.
+Bu ayarlar, kod düzenleyicisinin koda biçimlendirme seçeneklerini uyguladığı *zaman* etkiler.
 
-- **Noktalı virgül girilirken tamamlanan deyimi otomatik olarak biçimlendirme**
+- **Tamamlandı ifadesini noktalı virgül girildiğinde otomatik olarak Biçimlendir**
 
-   Seçildiğinde, noktalı virgül anahtarını seçen deyimleri düzenleyici için seçilen biçimlendirme seçeneklerine göre biçimlendirin.
+   Seçildiğinde, düzenleyici için seçilen biçimlendirme seçeneklerine göre noktalı virgül tuşunu seçtiğinizde deyimlerini biçimlendirir.
 
-- **Yapıştırma sırasında otomatik olarak biçimlendirme**
+- **Yapıştırırken otomatik olarak Biçimlendir**
 
-   Seçildiğinde, düzenleyici için seçilen biçimlendirme seçeneklerine uyacak şekilde düzenleyiciye yapıştırilen metni biçimlendirin.
+   Seçildiğinde, düzenleyiciye yapıştırılan metni düzenleyici için seçilen biçimlendirme seçeneklerine uyacak şekilde biçimlendirir.
 
 ## <a name="preview-windows"></a>Önizleme pencereleri
 
-**Girintileme,** **Yeni Satırlar** ve **Aralık** alt sayfaları altta bir önizleme penceresi görüntüler. Önizleme penceresinde her seçeneğin etkisi gösterilir. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde, seçili seçeneğin bir örneği gösterilir. Onay kutusunu seçerek bir ayarı değiştirerek, önizleme penceresi yeni ayarın etkisini gösterecek şekilde uzer.
+**Girinti**, **yeni satırlar** ve **Aralık** alt sayfaları her biri en altta bir önizleme penceresi görüntüler. Önizleme penceresi her bir seçeneğin etkisini gösterir. Önizleme penceresini kullanmak için bir biçimlendirme seçeneği belirleyin. Önizleme penceresinde seçilen seçeneğe bir örnek gösterilir. Bir ayarı bir onay kutusu seçerek değiştirdiğinizde, Önizleme penceresi Yeni ayarın etkisini gösterecek şekilde güncelleştirilir.
 
-### <a name="indentation-remarks"></a>Girinti açıklamaları
+### <a name="indentation-remarks"></a>Girintileme açıklamaları
 
-Her dil için **Sekmeler sayfalarındaki** girintileme seçenekleri, yalnızca bir satırın sonuna **Enter** tuşuna basarak kod düzenleyicisinin imleci nereye yerleştireceklerini belirler. Biçimlendirme altındaki **girintileme seçenekleri,** kod otomatik olarak biçimlendirilirken uygulanır, örneğin:
+Her dilin **Sekmeler** sayfalarındaki girintileme seçenekleri yalnızca, bir satırın sonunda **ENTER** tuşuna bastığınızda yalnızca kod düzenleyicisinin işaretçiyi nereye yerleştirdiği belirlenir. **Biçimlendirme** altındaki girintileme seçenekleri, kod otomatik olarak biçimlendirilirken uygulanır, örneğin:
 
-- Dosyaya kod yapıştırırken Yapıştırda otomatik olarak **biçimlendir seçiliyken**
-- Biçimlendirilirken blok el ile yazıldı
+- **Yapıştırırken otomatik biçim** seçildiğinde kodu dosyaya yapıştırdığınızda
+- Biçimlendirilen blok el ile yazıldığında
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel, Ortam, Seçenekler iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md)
+- [Genel, ortam, Seçenekler iletişim kutusu](../../ide/reference/general-environment-options-dialog-box.md)

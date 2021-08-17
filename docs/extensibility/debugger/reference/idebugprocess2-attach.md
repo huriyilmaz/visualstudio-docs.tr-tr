@@ -11,17 +11,18 @@ ms.assetid: 40d78417-fde2-45c3-96c9-16e06bd9008d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c518a91ae6b6de32926f922d55943d7d950b4013
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2ebada428727dd356584de0a50cf31d3e407e7515295bede2d0957717054eaed
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071707"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121416527"
 ---
 # <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
 Oturum hata ayıklama yöneticisini (SDM) işleme iliştirir.

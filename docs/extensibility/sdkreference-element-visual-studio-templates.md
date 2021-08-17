@@ -1,5 +1,5 @@
 ---
-title: SDKReference öğesi (Visual Studio şablonları) | Microsoft Docs
+title: sdkreference öğesi (Visual Studio şablonları) | Microsoft Docs
 description: SDKReference öğesi ve öğe şablonunun bir SDK başvurusu kullandığını nasıl belirttiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ea070cf466782a1da09e1ba48d08a6965fd041a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5aa0ab4f9a795fd225e3fc2e26966a921f080c1722fe256f927b6a5d08a968ef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063714"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431532"
 ---
 # <a name="sdkreference-element-visual-studio-templates"></a>SDKReference Öğesi (Visual Studio Şablonları)
 Öğe şablonunun bir SDK başvurusu kullandığını belirtir.

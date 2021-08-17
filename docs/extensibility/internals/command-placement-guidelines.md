@@ -1,6 +1,6 @@
 ---
 title: Komut yerleştirme yönergeleri | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamında (IDE) konumlandırma komutları için kılavuzları ve en iyi uygulamaları öğrenin.
+description: Visual Studio tümleşik geliştirme ortamında (ıde) konumlandırma komutları için kılavuzları ve en iyi uygulamaları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,17 +12,18 @@ ms.assetid: 63b3478e-e08a-420b-a0ec-76767e0cb289
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 46aa6c341313a9d7c9d0a6d1666130d799ddc277
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f0e78221b93d766b8dd0f018501f3fc808a98c16
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057331"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029014"
 ---
 # <a name="command-placement-guidelines"></a>Komut yerleştirme yönergeleri
-Visual Studio tümleşik geliştirme ortamında (IDE) konumlandırma komutları için en iyi yöntemler, komut kümesinin boyutuna bağlı olarak değişiklik gösterir. Komutlar, *. vsct* dosyalarındaki bilgilere göre tanımlanır ve konumlandırılır.
+Visual Studio tümleşik geliştirme ortamındaki (ıde) konumlandırma komutlarının en iyi yöntemleri, komut kümesinin boyutuna bağlı olarak değişir. Komutlar, *. vsct* dosyalarındaki bilgilere göre tanımlanır ve konumlandırılır.
 
 ## <a name="best-practices-for-all-command-sets"></a>Tüm komut kümeleri için en iyi uygulamalar
  Her komut kümesi için aşağıdaki yönergeleri izleyin:
@@ -33,7 +34,7 @@ Visual Studio tümleşik geliştirme ortamında (IDE) konumlandırma komutları 
 
 - Yalnızca bir komut içeren gruplar kabul edilebilir.
 
-- Paketler, var olan Visual Studio menülerine çok sayıda komut eklememelidir. Bunun yerine, yeni komutları barındırmak için menüler veya alt menüler oluşturmaları gerekir.
+- paketler varolan Visual Studio menülere çok sayıda komut eklememelidir. Bunun yerine, yeni komutları barındırmak için menüler veya alt menüler oluşturmaları gerekir.
 
 - Varolan bir menüye komut yerleştirdiğinizde, amacı net olacak şekilde komutu adlandırın ve var olan komutlarla karıştırılmamalıdır.
 
@@ -59,4 +60,4 @@ Visual Studio tümleşik geliştirme ortamında (IDE) konumlandırma komutları 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

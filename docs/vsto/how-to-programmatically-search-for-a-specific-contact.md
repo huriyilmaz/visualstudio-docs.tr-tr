@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 0753fd56dd4d8f720f3f8b3c34fe34778a94e13b8c3ed21b068963ddf76cb932
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3fca6be21c03f5de2036e2b38ed9ecbb676f946f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384230"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026115"
 ---
 # <a name="how-to-programmatically-search-for-a-specific-contact"></a>Nasıl yapılanlar: Program aracılığıyla belirli bir kişi için arama
   Bu örnek, Outlook adı ve soyadına göre belirli bir kişi için bir kişi klasörü arar. Örnekte, John Evans adlı bir kişinin **contacts** klasöründe olduğu varsaydır.

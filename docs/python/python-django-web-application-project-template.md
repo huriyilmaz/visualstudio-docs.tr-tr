@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d9525cbf383c684326cda142c2117889ee9d911a63007308c635980110c31b45
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0307e36b102d452ee8ce0d7830b4e27bd30c3284
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121368084"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068728"
 ---
 # <a name="django-web-project-template"></a>Django web projesi şablonu
 ::: moniker range="vs-2017"

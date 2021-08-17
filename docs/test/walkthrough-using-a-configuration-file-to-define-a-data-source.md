@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 425eb19e516dc166c041203bd6139ee9f953d6b5b5feb32df94ceb49870a6c01
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 82a711e21d75486fb7217d1f831831fd3476b06b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384567"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106594"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Adım adım kılavuz: Veri kaynağı tanımlamak için yapılandırma dosyası kullanma
 

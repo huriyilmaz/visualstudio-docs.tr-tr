@@ -1,5 +1,5 @@
 ---
-description: Bir hata ayıklama oturumunu sonlandırdığınızda, Visual Studio Kullanıcı arabiriminin varsayılan davranışını geçersiz kılmak için bir hata ayıklama altyapısı sağlar.
+description: Hata ayıklama oturumunu sona ererken hata ayıklama altyapısının Visual Studio kullanıcı arabiriminin varsayılan davranışını geçersiz kmasına olanak sağlar.
 title: IDebugProgramDestroyEventFlags2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,17 +9,18 @@ ms.assetid: d384ff71-dc71-40b9-a871-801f8b6a3418
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6cb54b3a88255f9102f617298ff23c3e117d3cdd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 17c9cf3f910a1d94bf8a2972bb0615dd6f2e3b5762e99ae2eebff53c7a94611f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084239"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338754"
 ---
 # <a name="idebugprogramdestroyeventflags2"></a>IDebugProgramDestroyEventFlags2
-Bir hata ayıklama oturumunu sonlandırdığınızda, bir hata ayıklama altyapısının Kullanıcı arabiriminin varsayılan davranışını geçersiz kılmasını sağlar [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
+Hata ayıklama oturumunu sona ererken kullanıcı arabiriminin varsayılan davranışını geçersiz [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] kılmak için hata ayıklama altyapısını sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,22 +28,22 @@ Bir hata ayıklama oturumunu sonlandırdığınızda, bir hata ayıklama altyap�
 IDebugProgramDestroyEventFlags2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirim, hata ayıklama motorları tarafından uygulanır. Bir işlemin kullanım ömrü boyunca birden fazla program oluşturup bozmasına neden olabilecek konaklar için yararlıdır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim hata ayıklama altyapıları tarafından uygulanır. Bir işlem ömrü boyunca birden çok program oluşturan ve yok eden konaklar için yararlıdır.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProgramDestroyEventFlags2` .
+ Aşağıdaki tabloda yöntemlerini `IDebugProgramDestroyEventFlags2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|Program yok etme bayraklarını alır.|
+|[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|Program yok etme bayraklarını alın.|
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanıcı arabiriminin varsayılan davranışı, [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] tüm programlar bir program yok etme olayı gönderdikten sonra tasarım moduna geri dönmeyecektir. Bu arabirim bir hata ayıklama altyapısının bu davranışı değiştirmesini sağlar.
+ Kullanıcı arabiriminin varsayılan davranışı, tüm programlar bir program yok etme olayı [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] gönderdikten sonra tasarım moduna geri dönmektir. Bu arabirim, hata ayıklama altyapısının bu davranışı değiştirmesini sağlar.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: Msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

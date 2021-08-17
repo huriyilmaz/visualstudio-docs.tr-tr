@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2017 ' de profil oluşturma yenilikleri | Microsoft Docs
-description: Tanılama araçları 'nın, uygulamanızda düzeltilmesi gereken sorunları belirlemenize yardımcı olmak üzere yeni görselleştirmeler dahil edileceğini öğrenin.
+title: Visual Studio 2017'de Profil Oluşturma | Microsoft Docs
+description: Tanılama Araçları'nın, uygulamanıza düzeltmesi gereken sorunları tanımlamanıza yardımcı olacak yeni görselleştirmeler içerir.
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,31 +11,32 @@ ms.assetid: d4736cc8-8961-4089-be9e-d5190ce8353c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 9619daea30960f72b183447839db89adbaee7eb2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9021722e450bd16edbf16dfde019aa91a873664940172ca68055cd03a99bf565
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99938492"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121426227"
 ---
-# <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>İçindeki profil oluşturma araçlarındaki yenilikler [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>'de profil oluşturma araçlarında yapılan yeniler [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
-Tanılama araçları, uygulamanızda düzeltilmesi gereken sorunları belirlemenize yardımcı olacak yeni görselleştirmeler içerir. Tanılama araçları artık ASP.NET uygulamaları için destek içerir.
+Tanılama Araçları, uygulamanıza düzeltmesi gereken sorunları tanımlamanıza yardımcı olacak yeni görselleştirmeler içerir. Tanılama Araçları artık uygulamalar için destek ASP.NET içerir.
 
-Daha fazla bilgi için [sürüm notlarına [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
+Daha fazla bilgi için [bkz. sürüm [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] notları. ](/visualstudio/releasenotes/vs2017-relnotes)
 
-Performans analiziniz için önemli alanlara odaklanmanıza yardımcı olan araçlara bir **Özet** sekmesi eklenmiştir. Bu sekme, kaç olay oluştuğunu gösterir, yığının anlık görüntülerini almanızı sağlar ve CPU kullanımı veri toplamayı hızlıca etkinleştirmenizi sağlar. Bu görünümde tüm [Application Insights](/azure/azure-monitor/app/visual-studio) veya [UI çözümleme](/visualstudio/releasenotes/vs2017-relnotes) olayları gösterilir. Ayrıca, Visual Studio Enterprise için de bu görünüm IntelliTrace olaylarını gösterir.
+**Araçlara,** performans analizinizin önemli alanlarına odaklanmanıza yardımcı olacak bir Özet sekmesi eklenmiştir. Bu sekme kaç olay meydana geldiği gösterir, yığının anlık görüntülerini ala ve CPU kullanım verileri toplamayı hızlı bir şekilde etkinleştirmenizi sağlar. Bu görünüm tüm Application [Insights veya](/azure/azure-monitor/app/visual-studio) UI [analiz olaylarını](/visualstudio/releasenotes/vs2017-relnotes) gösterir. Ayrıca, bu Visual Studio Enterprise IntelliTrace olaylarını da gösterir.
 
-![Tanılama araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
+![Tanılama Araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
 
-CPU kullanım aracında, performans sorunlarına neden olabilecek işlevleri belirlemenize yardımcı olacak [Yeni görselleştirmeler](../profiling/Beginners-Guide-to-Performance-Profiling.md) vardır. Yeni **arayan/çağrılan** görünümü seçili bir işleve ve bu işlevden yapılan işlev çağrılarının maliyetlerini araştırmanıza olanak sağlar.
+CPU kullanım aracı, [performans sorunlarına](../profiling/Beginners-Guide-to-Performance-Profiling.md) neden olma olasılığı en yüksek işlevleri tanımlamanıza yardımcı olacak yeni görselleştirmelere sahiptir. Yeni **Çağıran/Çağrılı görünümü,** seçilen bir işleve yapılan ve işlevden yapılan işlev çağrılarının maliyetlerini araştırmayı sağlar.
 
-![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/diag-tools-caller-callee-2.png "Diagtoolscallerçağrılan")
+![Tanılama Araçları çağıran çağrı görünümü](../profiling/media/diag-tools-caller-callee-2.png "DiagToolsCallerCallee")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da profil](../profiling/index.yml)
+- [Visual Studio'de profil oluşturma](../profiling/index.yml)
 - [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

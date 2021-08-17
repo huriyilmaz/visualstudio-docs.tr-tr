@@ -11,17 +11,18 @@ ms.assetid: 05677385-7a7f-4545-8438-af00dde85db0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6c502504b3a31f3e4689db34f907f9596b214877
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c17457429f83ae012e12cdc6bf7ff1448cd74989afe52f870c52f75b4446e824
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071616"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121339040"
 ---
 # <a name="idebugprocess2enumthreads"></a>IDebugProcess2::EnumThreads
 İşlemde çalışan tüm iş parçacıklarının bir listesini alır.

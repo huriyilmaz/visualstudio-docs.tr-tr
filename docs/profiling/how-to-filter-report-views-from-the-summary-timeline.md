@@ -1,6 +1,6 @@
 ---
-title: Özet zaman çizelgesinden Rapor Görünümlerini Filtreleme | Microsoft Docs
-description: Raporlamayı belirli bir döneme göre kısıtlamak için Özet görünümü ' nin seçime göre filtrele seçeneğini kullanın. Veri dosyası yalnızca söz konusu dönem için yeniden çözümlenmelidir.
+title: Özet Zaman Çizelgesi'nde Rapor Görünümlerini | Microsoft Docs
+description: Raporlamayı belirli bir zaman dönemiyle kısıtlamak için Özet Görünümü'nin Seçime Göre Filtrele seçeneğini kullanın. Veri dosyası yalnızca o zaman dönemi için yeniden hazırlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,23 +8,24 @@ ms.assetid: 056b10a0-952b-4790-89e0-02aebe902e87
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b01f77a530f42b7834af8f16ddbbdda170467a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 107918d6f87ac5c9c3c0db99014eb4ad59d2c596
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897729"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107673"
 ---
-# <a name="how-to-filter-report-views-from-the-summary-timeline"></a>Nasıl yapılır: Özet zaman çizelgesinden Rapor Görünümlerini Filtreleme
-Özet görünümünün zaman çizelgesi grafiğinde bir zaman dilimi belirterek, performans raporlarında görüntülenen verileri filtreleyebilirsiniz. Raporları filtreleyerek, profil oluşturma veri dosyası, yalnızca belirttiğiniz zaman kesimini içerecek şekilde yeniden çözümlenir.
+# <a name="how-to-filter-report-views-from-the-summary-timeline"></a>Nasıllı: Özet zaman çizelgesinden rapor görünümlerini filtreleme
+Özet Görünümü'nin zaman çizelgesi grafiğinde bir zaman segmenti belirterek performans raporlarında görüntülenen verileri filtre görebilirsiniz. Raporları filtreleyenin, profil oluşturma veri dosyası yalnızca belirttiğiniz zaman segmentini içerecek şekilde yeniden analiz olur.
 
-### <a name="to-filter-a-profiling-report-from-the-summary-timeline-graph"></a>Özet zaman çizelgesi grafiğinden bir profil oluşturma raporunu filtrelemek için
+### <a name="to-filter-a-profiling-report-from-the-summary-timeline-graph"></a>Özet zaman çizelgesi grafiğinden profil oluşturma raporunu filtrelemek için
 
-1. Özet görünümü zaman çizelgesi grafiğinde, zaman çizelgesinde bir noktaya tıklayın ve fare işaretçisini zaman çizelgesinde başka bir noktaya sürükleyin.
+1. Özet Görünümü zaman çizelgesi grafiğinde, zaman çizelgesinde bir noktaya tıklayın ve ardından fareyi zaman çizelgesinde başka bir noktaya sürükleyin.
 
      Belirttiğiniz bölge gölgeli.
 
-2. **Seçime göre filtrele**' ye tıklayın.
+2. Seçime **Göre Filtrele'ye tıklayın.**

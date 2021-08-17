@@ -1,6 +1,6 @@
 ---
 title: Project dönüştürücüler
-description: dönüştür iletişim kutusu, önceki Visual Studio sürümlerinde kullanılmıştı ve artık kullanım dışıdır.
+description: Dönüştür iletişim kutusu, Visual Studio önceki sürümlerinde kullanılmıştır ve kullanım dışıdır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -26,7 +26,7 @@ ms.locfileid: "121430362"
 ---
 # <a name="convert-dialog-box"></a>Dönüştür iletişim kutusu
 
-**dönüştür** iletişim kutusu, önceki Visual Studio sürümlerinde kullanılmıştı ve artık kullanım dışıdır.
+Dönüştür **iletişim** kutusu, önceki sürümlerde Visual Studio artık kullanım dışıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

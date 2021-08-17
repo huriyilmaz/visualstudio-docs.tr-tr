@@ -18,22 +18,22 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 22efe77715cf157a7dba84cb9bd348c7e49859e1ce8e8b3ed113cca7e4a03e3e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: df241aa2a2f67b18d11653ba016b39b561866bec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408116"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025751"
 ---
 # <a name="secure-deployment"></a>Güvenli dağıtım
   Yeni bir çözüm Office, geliştirme bilgisayarınız projenizin kodunun çalışmasına izin verecek şekilde otomatik olarak güncelleştirilir. Ancak, çözümlerinizi dağıtırken, çözümü bir sertifikayla imzalayarak veya güven istemi anahtarını kullanarak güven kararını temel alan bir kanıt [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] sağlanız gerekir. Daha fazla bilgi için, [bkz. Grant trust to Office solutions](../vsto/granting-trust-to-office-solutions.md).
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Belge düzeyinde özelleştirmeler için, belgeyi bir ağ konuma dağıtırsanız, belgenin konumunu Office uygulamasının Güven Merkezi'nde güvenilir konumlar listesine de eklemeniz gerekir. Son kullanıcı bilgisayarlarında belge izinlerini ayarlama hakkında daha fazla bilgi için bkz. [Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
+ Belge düzeyinde özelleştirmeler için, belgeyi bir ağ konuma dağıtırsanız, belgenin konumunu, belge uygulamanın Güven Merkezi'nde güvenilir konumlar listesine de Office gerekir. Son kullanıcı bilgisayarlarında belge izinlerini ayarlama hakkında daha fazla bilgi için bkz. [Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
 
 ## <a name="prevent-office-solutions-from-running-code"></a>Çözüm Office çalıştırmasını engelleme
- Yöneticiler, tüm güvenlik çözümlerinin bilgisayarda Office önlemek için kayıt defterini kullanabilir. Yönetilen Office olan bir çözüm açıldığında, Office için Visual Studio Araçları çalışma zamanı bilgisayarda aşağıdaki kayıt defteri anahtarlarından biri altında adı olan bir girişin var olup `Disabled` olmadığını denetler:
+ Yöneticiler kayıt defterini kullanarak tüm Office çözümlerinin bilgisayarda çalışmasını önlenebilir. Yönetilen Office olan bir çözüm açıldığında, Office için Visual Studio Araçları çalışma zamanı bilgisayarda aşağıdaki kayıt defteri anahtarlarından biri altında adı olan bir girişin var olup `Disabled` olmadığını denetler:
 
 - **HKEY_CURRENT_USER\Software\Microsoft\VSTO**
 
