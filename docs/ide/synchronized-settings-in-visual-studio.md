@@ -1,6 +1,6 @@
 ---
-title: Ayarları eşitler
-description: Aynı kişiselleştirme hesabında oturum açarak Visual Studio ayarlarınızı birden çok bilgisayar arasında eşitlemeyi öğrenin.
+title: Ayarları eşitleme
+description: Aynı kişiselleştirme hesabında oturum Visual Studio birden çok bilgisayar arasında uygulama ayarlarınızı eşitlemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/18/2020
 ms.topic: conceptual
@@ -8,92 +8,93 @@ ms.assetid: a3d2ea29-be5d-4012-9820-44b06adbb7dd
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 396981533502f2687040f470ded9b490cab1ef7a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 360db67aa0daf09916ae21c9cd1028c0a285e35b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970640"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048459"
 ---
-# <a name="synchronize-visual-studio-settings-across-multiple-computers"></a>Visual Studio ayarlarını birden çok bilgisayar arasında eşitler
+# <a name="synchronize-visual-studio-settings-across-multiple-computers"></a>Birden Visual Studio bilgisayar arasında eşitleme ayarları
 
-Aynı kişiselleştirme hesabını kullanarak Visual Studio 'da birden çok bilgisayarda oturum açtığınızda, ayarlarınız bilgisayarlar arasında eşitlenebilir.
+Aynı kişiselleştirme hesabı Visual Studio birden çok bilgisayarda oturum asanız, ayarlarınız bilgisayarlar arasında eşitlenir.
 
 ## <a name="synchronized-settings"></a>Eşitlenmiş ayarlar
 
 Varsayılan olarak, aşağıdaki ayarlar eşitlenir:
 
-- Geliştirme ayarları. Visual Studio 'Yu ilk kez açtığınızda bir ayarlar koleksiyonu seçersiniz, ancak seçimi dilediğiniz zaman değiştirebilirsiniz. Daha fazla bilgi için bkz. [ortam ayarları](../ide/environment-settings.md).
+- Geliştirme ayarları. İlk kez bir ayar koleksiyonu seçerek Visual Studio istediğiniz zaman değiştirebilirsiniz. Daha fazla bilgi için [bkz. Ortam ayarları.](../ide/environment-settings.md)
 
-- Kullanıcı tanımlı komut diğer adları. Komut diğer adlarının nasıl tanımlanacağı hakkında daha fazla bilgi için bkz. [Visual Studio komut diğer adları](../ide/reference/visual-studio-command-aliases.md).
+- Kullanıcı tanımlı komut diğer adları. Komut diğer adlarını tanımlama hakkında daha fazla bilgi için [bkz. Visual Studio diğer adları.](../ide/reference/visual-studio-command-aliases.md)
 
-- **Pencere pencere**  >  **düzenlerini Yönet** sayfasında Kullanıcı tanımlı pencere düzenleri.
+- Pencere Düzenlerini Yönet **sayfasındaki**  >  **kullanıcı tanımlı pencere** düzenleri.
 
-- **Araçlar**  >  **Seçenekler** sayfalarında aşağıdaki seçenekler:
+- Araçlar Seçenekler sayfalarındaki **aşağıdaki**  >  **seçenekler:**
 
-  - **Ortam**  >  **genel** Seçenekler sayfasında Tema ve menü çubuğu büyük küçük harf ayarları.
+  - Ortam Genel seçenekleri sayfasındaki tema ve menü **çubuğu büyük/büyük/büyük/yeni**  >   ayarlar.
 
-  - **Ortam**  >  **yazı tipi ve renkler** seçenekleri sayfasındaki tüm ayarlar.
+  - Ortam Yazı Tipleri **ve Renkler**  >  **seçenekleri sayfasındaki tüm** ayarlar.
 
-  - **Ortam**  >  **klavye** seçenekleri sayfasındaki tüm klavye kısayolları.
+  - Ortam Klavye seçenekleri **sayfasındaki**  >  **tüm klavye** kısayolları.
 
-  - **Ortam**  >  **sekmeleri ve Windows** seçenekleri sayfasındaki tüm ayarlar.
+  - Ortam Sekmeleri ve  >  **Sekmeler sayfasındaki Windows** ayarlar.
 
-  - **Ortam**  >  **başlatma** seçenekleri sayfasındaki tüm ayarlar.
+  - Ortam Başlangıç seçenekleri  >  **sayfasındaki tüm** ayarlar.
 
-  - **Metin düzenleyici** seçenekleri sayfalarındaki tüm ayarlar (örneğin, [kod stili tercihleri](code-styles-and-code-cleanup.md)).
+  - Metin Düzenleyici seçenekleri **sayfalarındaki** tüm ayarlar, örneğin, [kod stili tercihleri.](code-styles-and-code-cleanup.md)
 
-  - **XAML Tasarımcısı** seçenekleri sayfalarındaki tüm ayarlar.
+  - Uygulama seçenekleri **sayfalarındaki XAML Tasarımcısı** ayarlar.
 
-## <a name="turn-off-synchronized-settings-on-a-particular-computer"></a>Belirli bir bilgisayardaki eşitlenmiş ayarları kapat
+## <a name="turn-off-synchronized-settings-on-a-particular-computer"></a>Belirli bir bilgisayarda eşitlenen ayarları kapatma
 
-Visual Studio için eşitlenmiş ayarlar varsayılan olarak açıktır. Bir bilgisayardaki eşitlenmiş ayarları, **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **hesapları** sayfasına gidip, **Visual Studio 'da oturum açıldığında cihazlarda ayarları eşitleme**' yi kaldırarak devre dışı bırakabilirsiniz.
+Eşitleme ayarları Visual Studio olarak açıktır. Araçlar Seçenekler Ortam Hesapları sayfasına gidip Visual Studio'de oturum asanız cihazlar arasında ayarları eşitle'nin işaretini kaldırarak bir bilgisayarda   >    >    >   **eşitlenen ayarları kapatabilirsiniz.**
 
-Örnek olarak, "A" bilgisayarındaki Visual Studio 'daki ayarları eşitlememeye karar verirseniz, "A" bilgisayarında yapılan herhangi bir ayar değişikliği "B" bilgisayarında veya "C" bilgisayarında görünmez. "B" ve "C" bilgisayarları birbirleriyle eşitlemeye devam eder, ancak "A" bilgisayarıyla kalmaz.
+Örneğin, "A" bilgisayarına Visual Studio ayarları eşitlemeye karar verdiyseniz, "A" bilgisayarda yapılan tüm ayar değişiklikleri "B" bilgisayarda veya "C" bilgisayarda görünmez. "B" ve "C" bilgisayarları "A" bilgisayarıyla değil, diğerleriyle eşitlemeye devam eder.
 
 > [!NOTE]
-> Ayarları, **Araçlar**  >  **Seçenekler** ortam hesapları sayfasındaki seçeneğin seçimini kaldırarak eşitlemeiyorsanız  >    >   , Visual Studio 'nun aynı bilgisayardaki diğer sürümleri veya sürümleri etkilenmez. Visual Studio 'nun bu yan yana yüklemeleri, ayarlarını eşitlemeye devam edecektir (çok fazla onay işareti yoksa).
+> Araçlar Seçenekler Ortam Hesapları sayfasındaki seçeneğin seçimini kaldırarak ayarları eşitlemezseniz, aynı bilgisayarda sahip Visual Studio diğer sürümler veya sürümleri  >    >    >   etkilenmez. Bu yan yana yüklemeleri Visual Studio ayarlarını eşitlemeye devam eder (burada seçeneğin işaretini de kaldırmayacaksanız).
 
-## <a name="synchronize-settings-across-visual-studio-ide-products-and-editions"></a>Visual Studio IDE ürünleri ve sürümleri üzerinde ayarları eşitler
+## <a name="synchronize-settings-across-visual-studio-ide-products-and-editions"></a>IDE ürünleri Visual Studio sürümleri arasında ayarları eşitleme
 
-Ayarlar, Visual Studio 'nun sürümleri *ve yan yana yüklenmiş olarak* eşitlenir. Ayrıca, Visual Studio için Blend da dahil olmak üzere Visual Studio IDE ürünleri arasında ayarlar eşitlenir. Ancak, Visual Studio IDE ürününün tek bir ürünü, Visual Studio ile paylaşılmayan kendi ayarlarına sahip olabilir. Örneğin, "A" bilgisayarındaki Visual Studio için Blend özgü ayarlar, "A" veya "B" bilgisayarlarında Visual Studio ile paylaşılmaz.
+Ayarlar yan yana yüklü olan Visual Studio sürümleri *arasında eşitlenir.* Ayarlar, IDE ürünleri dahil olmak Visual Studio IDE ürünleri arasında da Visual Studio için Blend. Ancak, IDE Visual Studio tek bir ürün, IDE ürünüyle paylaşılmadan kendi ayarlarına Visual Studio. Örneğin, "A" Visual Studio için Blend bilgisayara özgü ayarlar "A" Visual Studio "B" bilgisayarlarla paylaşılmaz.
 
-## <a name="side-by-side-synchronized-settings"></a>Yan yana eşitlenmiş ayarlar
+## <a name="side-by-side-synchronized-settings"></a>Yan yana eşitlenen ayarlar
 
 ::: moniker range="vs-2017"
 
-Araç penceresi düzeni gibi bazı ayarlar, Visual Studio 'nun farklı yan yana yüklemeleri arasında paylaşılmaz. *%Userprofile%\, Studio 2017 \ Settings* Içindeki *Currentsettings. vssettings* dosyası, *%LocalAppData%\Microsoft\VisualStudio\ 15.0_xxxxxxxx \settings* ile benzer bir yüklemeye özgü klasördür.
+Araç penceresi düzeni gibi bazı ayarlar, uygulamanın farklı yan yana yüklemeleri arasında Visual Studio. *%userprofile%\Documents\Visual Studio 2017\Ayarlar* konumundaki *CurrentSettings.vssettings* dosyası *, %localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx\Ayarlar* ile benzer bir yüklemeye özgü klasördedir.
 
 > [!NOTE]
-> Yüklemeye özgü yeni ayarları kullanmak için yeni bir yükleme yapın. Var olan bir Visual Studio yüklemesini yükselttiğinizde, mevcut paylaşılan konum kullanılır.
+> Yüklemeye özgü yeni ayarları kullanmak için yeni bir yükleme yapın. Mevcut bir uygulama yüklemesini Visual Studio, mevcut paylaşılan konumu kullanır.
 
-Şu anda Visual Studio 'nun yan yana yüklemelerine sahipseniz ve yüklemeye özgü yeni ayarlar dosya konumunu kullanmak istiyorsanız, aşağıdaki adımları izleyin:
+Şu anda bir uygulamanın yan yana yüklemeleri Visual Studio ve yüklemeye özgü yeni ayarlar dosya konumunu kullanmak için şu adımları izleyin:
 
-1. Visual Studio 2017 sürüm 15,3 veya sonraki bir sürüme yükseltin.
+1. 2017 Visual Studio 15.3 veya sonraki bir sürüme yükseltin.
 
-2. Tüm mevcut ayarlarınızı *%localappdata%\microsoft\visualstudio\ 15.0_xxxxxxxx* klasörünün dışında bir konuma dışarı aktarmak Için **ayarları Içeri ve dışarı aktarma Sihirbazı 'nı** kullanın.
+2. Tüm mevcut **Ayarlar ayarlarınızı** *%localappdata%\Microsoft\VisualStudio\15.0_xxxxxxxx* klasörünün dışındaki bir konuma dışarı aktarın.
 
-3. **VS 2017 için geliştirici komut istemi** açın ve çalıştırın `devenv /resetuserdata` .
+3. VS **2017 için Geliştirici Komut İstemi'i açın ve** `devenv /resetuserdata` çalıştırın.
 
-1. Visual Studio 'Yu açın ve dışarı aktarılan ayarlar dosyasından kaydedilen ayarları içeri aktarın.
+1. Dosyayı Visual Studio ve dışarı aktaran ayarlar dosyasından kaydedilen ayarları içeri aktarın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Araç penceresi düzeni gibi bazı ayarlar, Visual Studio 'nun farklı yan yana yüklemeleri arasında paylaşılmaz. *%Userprofile%\, Studio 2019 \ Settings* Içindeki *Currentsettings. vssettings* dosyası, *%LocalAppData%\Microsoft\VisualStudio\ 16.0_xxxxxxxx \settings* ile benzer bir yüklemeye özgü klasördür.
+Araç penceresi düzeni gibi bazı ayarlar, uygulamanın farklı yan yana yüklemeleri arasında Visual Studio. *%userprofile%\Documents\Visual Studio 2019\Ayarlar* konumundaki *CurrentSettings.vssettings* dosyası *, %localappdata%\Microsoft\VisualStudio\16.0_xxxxxxxx\Ayarlar* ile benzer bir yüklemeye özgü klasördedir.
 
 ::: moniker-end
 
-## <a name="reset-synchronized-settings"></a>Eşitlenmiş ayarları Sıfırla
+## <a name="reset-synchronized-settings"></a>Eşitlenen ayarları sıfırlama
 
-Tüm ayarları varsayılan değerlerine sıfırlamak için, Visual Studio 'da oturum açın ve ardından **Araçlar** içeri aktar ve dışarı aktar ayarları ' nı seçerek  >   **Ayarları içeri ve dışarı aktarma Sihirbazı**' nı açın. **Tüm ayarları Sıfırla** ' yı seçin ve ardından sihirbazın kalan adımlarını izleyin.
+Tüm ayarları varsayılan ayarlarına sıfırlamak için, Visual Studio'de oturum açın ve ardından Araçlar İçeri ve Dışarı Aktarma Ayarlar'nı seçerek İçeri ve Dışarı Aktarma  >   **sihirbazını Ayarlar açın.** Tüm **ayarları sıfırla'yı** seçin ve sihirbazın kalan adımlarını izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IDE’yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md)
 - [Ortam ayarları](../ide/environment-settings.md)
-- [Ortam > hesapları seçenekleri iletişim kutusu](reference/accounts-environment-options-dialog-box.md)
+- [Ortam > Hesapları Seçenekleri iletişim kutusu](reference/accounts-environment-options-dialog-box.md)
 - [Visual Studio sürümlerini yan yana yükleme](../install/install-visual-studio-versions-side-by-side.md)

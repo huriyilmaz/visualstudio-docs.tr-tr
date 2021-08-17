@@ -15,12 +15,12 @@ f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c749ebce702af7474b1d3c39b4bb71b6cce47a73aa656915037aeaf4d2308a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d8842764d81aa40c13865975e2d5dd28ae55eefa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412900"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062478"
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio performansını iyileştirme
 

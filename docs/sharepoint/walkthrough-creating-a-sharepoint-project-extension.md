@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 6db7829524b43718d8c41afa7792b86bc589c75c7874bc2e447f9093d4016370
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9355e533e408be7f1ed0f9a744f2babe2c1c463f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121244231"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047523"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>Adım adım kılavuz: SharePoint proje uzantısı oluşturma
   Bu kılavuzda, projelerde uzantı oluşturma SharePoint göstermektedir. Proje ekleniyor, siliniyor veya yeniden adlandırıldı gibi proje düzeyindeki olaylara yanıt vermek için bir proje uzantısı kullanabilirsiniz. Ayrıca özel özellikler ekleyebilir veya bir özellik değeri değiştiklerine yanıt veebilirsiniz. Proje öğesi uzantılarının aksine, proje uzantıları belirli bir proje türüyle SharePoint olamaz. Bir proje uzantısı 7.SharePoint 000.00000000000000000000000000000000000000000000000000000000000 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "121244231"
 
 - desteklenen [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] sürümleri, SharePoint ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. Bu kılavuzda, proje özelliği **Project** bir VSIX paketi oluşturmak için vsIX paket şablonu [!INCLUDE[TLA2#tla_sdk](../sharepoint/includes/tla2sharptla-sdk-md.md)] 1. Daha fazla bilgi için [bkz. SharePoint'de Visual Studio.](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. Bu kılavuzda, **proje özelliği Project** bir VSIX paketi oluşturmak için vsIX paket şablonu [!INCLUDE[TLA2#tla_sdk](../sharepoint/includes/tla2sharptla-sdk-md.md)] 1. Daha fazla bilgi için [bkz. SharePoint'de Visual Studio.](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
 
 ## <a name="create-the-projects"></a>Projeleri oluşturma
  Bu izlenecek yolu tamamlamak için iki proje oluşturmanız gerekir:
@@ -63,9 +63,9 @@ ms.locfileid: "121244231"
 
 1. 'i [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] başlatma.
 
-2. Menü çubuğunda Dosya Yeni **Dosya'Project.**  >    >  
+2. Menü çubuğunda Dosya Yeni'yi **seçin**  >  **ve**  >  **Project.**
 
-3. Yeni **Project** iletişim kutusunda **Visual C#** **veya** Visual Basic genişletin ve ardından **Genişletilebilirlik düğümünü** seçin.
+3. Yeni **Project** iletişim kutusunda **Visual C#** veya Visual Basic **düğümlerini** genişletin ve ardından **Genişletilebilirlik düğümünü** seçin.
 
     > [!NOTE]
     > Bu düğüm yalnızca Visual Studio SDK'sı yüklüyse kullanılabilir. Daha fazla bilgi için bu konunun önceki kısımlarında yer alan önkoşullar bölümüne bakın.
@@ -78,11 +78,11 @@ ms.locfileid: "121244231"
 
 #### <a name="to-create-the-extension-project"></a>Uzantı projesini oluşturmak için
 
-1. Bu **Çözüm Gezgini,** çözüm düğümünün kısayol menüsünü açın, Ekle'yi **ve** ardından Yeni **düğümler'i Project.**
+1. Bu **Çözüm Gezgini,** çözüm düğümünün kısayol menüsünü açın, Ekle'yi **seçin** ve ardından Yeni **oluştur'Project.**
 
-2. Yeni **Project** iletişim **kutusunda, Visual C#** veya Visual Basic **düğümlerini** genişletin ve sonra **Windows.**
+2. Yeni **Project** iletişim **kutusunda, Visual C#** veya Visual Basic **düğümlerini** genişletin ve **Windows.**
 
-3. İletişim kutusunun üst kısmında, **.NET Framework listesinden .NET Framework 4.5'i** seçin ve ardından Sınıf Kitaplığı proje **şablonunu** seçin.
+3. İletişim kutusunun üst kısmında, .NET Framework sürümleri **listesinden .NET Framework 4.5'i** seçin ve ardından Sınıf Kitaplığı **proje** şablonunu seçin.
 
 4. Ad **kutusuna** **ProjectExtension yazın** ve tamam **düğmesini** seçin.
 
@@ -97,7 +97,7 @@ ms.locfileid: "121244231"
 
 1. ProjectExtension projesine **CustomProperty** adlı bir kod dosyası ekleyin.
 
-2. **ProjectExtension projesinin kısayol menüsünü açın** ve Başvuru Ekle'yi **seçin.**
+2. **ProjectExtension** projesinin kısayol menüsünü açın ve Başvuru **Ekle'yi seçin.**
 
 3. Başvuru **Yöneticisi - CustomProperty** iletişim kutusunda **Çerçeve** düğümünü seçin ve ardından System.ComponentModel.Composition ve System'in yanındaki onay kutusunu seçin. Windows. Derlemeleri oluşturur.
 
@@ -133,7 +133,7 @@ ms.locfileid: "121244231"
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyayı bildirim tasarımcısında açar. Meta Veriler sekmesinde görüntülenen **bilgiler,** Uzantılar ve **Güncelleştirmeler'de de görünür.** Tüm VSIX paketleri extension.vsixmanifest dosyasını gerektirir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX Uzantı Şeması 1.0 Başvurusu.](/previous-versions/dd393700(v=vs.110))
 
-2. Ürün Adı **kutusuna Özel** Uygulama Özelliği **Project girin.**
+2. Ürün Adı **kutusuna Özel** Giriş özelliği **Project girin.**
 
 3. Yazar **kutusuna** Contoso **yazın.**
 
@@ -164,48 +164,48 @@ ms.locfileid: "121244231"
 
 13. Bu **Dosya Gezgini** ProjectExtensionPackage projesinin derleme çıkış klasörünü açın ve ardından klasörde ProjectExtensionPackage.vsix adlı bir dosya olduğunu doğrulayın.
 
-     Varsayılan olarak, derleme çıkış klasörü . Proje dosyanızı içeren klasörün altında \bin\Debug klasörü.
+     Varsayılan olarak, derleme çıkış klasörü .'dür. Proje dosyanızı içeren klasörün altında \bin\Debug klasörü.
 
 ## <a name="test-the-project-property"></a>Proje özelliğini test etmek
- Artık özel proje özelliğini test etmeye hazır oluruz. Deneysel bir örneğinde yeni proje özelliği uzantısında hata ayıklamak ve test etmek en kolay [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yöntemdir. Bu örneği [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , BIR VSIX veya başka bir genişletilebilirlik projesi çalıştırdığınızda oluşturulur. Projede hata ayıkladıktan sonra, uzantıyı sisteminize yükleyebilir ve sonra normal bir örneğinde hata ayıklamaya ve test etmeye devam edebilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+ Artık özel proje özelliğini test etmeye hazır oluruz. Deneysel bir örneğinde yeni proje özelliği uzantısında hata ayıklamak ve test etmek en kolay [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yöntemdir. Bu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] örneği, bir VSIX veya başka bir genişletilebilirlik projesi çalıştırarak oluşturulur. Projede hata ayıkladikten sonra uzantıyı sisteminize yükleyebilir ve ardından normal bir örneğinde hata ayıklamaya ve test yapmaya devam [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] edersiniz.
 
-#### <a name="to-debug-and-test-the-extension-in-an-experimental-instance-of-visual-studio"></a>Visual Studio deneysel örneğinde uzantı hatalarını ayıklamak ve test etmek için
+#### <a name="to-debug-and-test-the-extension-in-an-experimental-instance-of-visual-studio"></a>Uzantının deneysel bir örneğinde hata ayıklamak ve test etmek Visual Studio
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Yönetici kimlik bilgileriyle yeniden başlatın ve ardından Projecbir Sionpackage çözümünü açın.
+1. Yönetici [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kimlik bilgileriyle yeniden başlatın ve ProjectExtensionPackage çözümünü açın.
 
-2. **F5** tuşunu seçerek veya menü çubuğunda hata ayıklama   >  **Başlat hata** Ayıkla ' yı seçerek projenizin hata ayıklama derlemesini başlatın.
+2. **F5** anahtarını seçerek veya menü çubuğunda Hata AyıklamaYı Başlat'ı seçerek projenizin hata ayıklama   >  **derlemesini başlatabilirsiniz.**
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]uzantıyı%userprofile%\appdata\local\microsoft\visualstudio\11.0exp\extensions\contoso\custom Project property\1.0 dizinine yükleyip deneysel bir örneğini başlatır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Project Property\1.0 uzantısını yüker ve deneysel bir örneğini [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] başlatır.
 
-3. deneysel örneğinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir grup çözümü için bir SharePoint projesi oluşturun ve sihirbazdaki diğer değerler için varsayılan değerleri kullanın.
+3. deneysel örneğinde, bir grup SharePoint için bir proje oluşturun ve sihirbazda diğer değerler [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] için varsayılan değerleri kullanın.
 
-    1. menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
+    1. Menü çubuğunda Dosya Yeni'yi **seçin**  >  **ve**  >  **Project.**
 
-    2. **yeni Project** iletişim kutusunun en üstünde .NET Framework sürümleri listesinde **.NET Framework 3,5** ' i seçin.
+    2. Yeni Sürümler iletişim **Project** üst kısmında, .NET Framework sürümleri **listesinden 3.5'i** .NET Framework.
 
-         SharePoint araç uzantıları bu sürümünde özellikleri gerektirir [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] .
+         SharePoint uzantısı, bu sürümünde özellikler [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] gerektirir.
 
-    3. **şablonlar** düğümü altında, **Visual C#** veya **Visual Basic** düğümünü genişletin, **SharePoint** düğümünü seçin ve ardından **2010** düğümünü seçin.
+    3. Şablonlar **düğümü altında** Visual **C#** **veya Visual Basic** genişletin, SharePoint  düğümünü seçin ve ardından **2010 düğümünü** seçin.
 
-    4. **SharePoint 2010 Project** şablonunu seçin ve ardından **moduletest** ' i projenizin adı olarak girin.
+    4. SharePoint **2010 Project** şablonunu seçin ve ardından projenizin adı **olarak ModuleTest** girin.
 
-4. **Çözüm Gezgini**' de **ModuleTest** projesi düğümünü seçin.
+4. Bu **Çözüm Gezgini** **ModuleTest proje düğümünü** seçin.
 
-     Yeni bir özel özellik **eşleme görüntüleri klasörü** , varsayılan değeri **false** olan **Özellikler** penceresinde görünür.
+     Özellikler penceresinde varsayılan **değeri** False olan yeni **bir** özel özelliği Görüntüler Klasörünü Eşle **görüntülenir.**
 
-5. Bu özelliğin değerini **true** olarak değiştirin.
+5. Bu özelliğin değerini True olarak **değiştirir.**
 
-     bir görüntüler kaynak klasörü SharePoint projesine eklenir.
+     SharePoint projesine images kaynak klasörü eklenir.
 
-6. Bu özelliğin değerini yeniden **false** olarak değiştirin.
+6. Bu özelliğin değerini False olarak **yeniden değiştirir.**
 
-     **görüntüler klasörünü sil** iletişim kutusunda **evet** düğmesini seçerseniz, SharePoint projesinden görüntüler kaynak klasörü silinir.
+     Görüntüler klasörünü sil **mi?** iletişim kutusunda Evet düğmesini **seçerseniz,** Görüntüler kaynak klasörü SharePoint silinir.
 
-7. Deneysel örneğini kapatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+7. deneysel örneğini [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kapatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint projelerini genişlet](../sharepoint/extending-sharepoint-projects.md)
-- [nasıl yapılır: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
-- [SharePoint proje sistem türleri ve diğer Visual Studio proje türleri arasında dönüştürme](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)
-- [SharePoint proje sisteminin uzantılarında veri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
-- [özel verileri SharePoint araçları uzantılarıyla ilişkilendir](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
+- [SharePoint genişletme](../sharepoint/extending-sharepoint-projects.md)
+- [Nasıl yapılanlar: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
+- [Proje sistemi SharePoint diğer proje türleri arasında Visual Studio dönüştürme](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)
+- [Verileri proje sisteminin uzantılarına SharePoint kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
+- [Özel verileri SharePoint araçları uzantılarıyla ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)

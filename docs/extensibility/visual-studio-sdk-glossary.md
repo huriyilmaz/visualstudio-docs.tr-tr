@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28ef66eb7fc8a004b4d13ea6c3dbc56f7a467e465e4103c6cacf7581b656e209
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1738b39ec320b5272e884a2107ed85e28f507f3d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121335296"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028455"
 ---
 # <a name="visual-studio-sdk-glossary"></a>Visual Studio SDK sözlüğü
 Bu sözlük, belgelerde kullanılan terimlere yönelik tanımlar sağlar [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] .

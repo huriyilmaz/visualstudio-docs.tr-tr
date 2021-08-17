@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem bir belge konumunu hata ayıklama adresleri dizisiyle eşler.
-title: 'IDebugSymbolProvider:: GetAddressesFromPosition | Microsoft Docs'
+description: Bu yöntem, bir belge konumunu bir hata ayıklama adresleri dizisine eşler.
+title: IDebugSymbolProvider::GetAddressesFromPosition | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fde2dd02ffb0e8a314fb8c0c71c43fdc529fca587f64a7d05ca7641f42e40480
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5ea5d2bbfdec859b82ffbe49adff18d0d60b8cc5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121306900"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095901"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
-Bu yöntem bir belge konumunu hata ayıklama adresleri dizisiyle eşler.
+Bu yöntem, bir belge konumunu bir hata ayıklama adresleri dizisine eşler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,24 +49,24 @@ int GetAddressesFromPosition(
 
 ## <a name="parameters"></a>Parametreler
 `pDocPos`\
-'ndaki Belge konumu.
+[in] Belge konumu.
 
 `fStatmentOnly`\
-'ndaki TRUE ise, hata ayıklama adreslerini tek bir deyimle sınırlandırır.
+[in] TRUE ise, hata ayıklama adreslerini tek bir deyimle sınırlar.
 
 `ppEnumBegAddresses`\
-dışı Bu deyimle veya satırla ilişkili başlangıç hata ayıklama adresleri için bir Numaralandırıcı döndürür.
+[out] Bu deyim veya satırla ilişkili başlangıç hata ayıklama adresleri için bir numaralayıcı döndürür.
 
 `ppEnumEndAddresses`\
-dışı Bu deyimle veya satırla ilişkili bitiş hata ayıklama adresleri için bir [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) numaralandırıcısı döndürür.
+[out] Bu deyim veya satırla ilişkili son hata ayıklama adresleri için [bir IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) numaralayıcı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belge konumu genellikle kaynak satır aralığını gösterir. Bu yöntem, bu satırlarla ilişkili hata ayıklama adreslerini başlatma ve sonlandırma sağlar. Bazı diller birden çok satırı kapsayan deyimlere veya birden fazla deyim içeren satırlara izin verir. Bu yöntem, hata ayıklama adreslerini tek bir deyimle sınırlamak için bir bayrak sağlar.
+ Belge konumu genellikle bir kaynak satır aralığını gösterir. Bu yöntem, bu satırlarla ilişkili başlangıç ve bitiş hata ayıklama adreslerini sağlar. Bazı diller birden çok satıra yayılan deyimlere veya birden fazla deyim içeren satırlara izin veriyor. Bu yöntem, hata ayıklama adreslerini tek bir deyimle sınırlamak için bir bayrak sağlar.
 
- Tek bir deyimin, şablonlar söz konusu olduğunda olduğu gibi birden çok hata ayıklama adresi olması mümkündür.
+ Şablonlarda olduğu gibi tek bir deyimin birden çok hata ayıklama adresine sahip olmak mümkündür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

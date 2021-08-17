@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86b58d33f07eaae8ef93ddb82a77516a6eb182c467d77cc5857336bab6756844
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e431441d4a0ea8a447554b96bc9bf9d5f290110a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359617"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063466"
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>Varsayılan komut, Grup ve araç çubuğu yerleşimi
 Ürün ve kararlılık için, Kullanıcı arabirimi belirli komut gruplarını varsayılan olarak görüntüler ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Komutlar ve komut grupları için tanımlar sağlar. VSPackages, standart komutları ve komut gruplarını da kullanabilir.

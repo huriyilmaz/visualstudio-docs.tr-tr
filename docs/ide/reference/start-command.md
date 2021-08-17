@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cb226ae59e38e12488fe0fed790307df462f34f962cef6302eb21e3ca77604a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f5eb9036b12d066e03eb6e4de346d99f78b04c79
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121446940"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048706"
 ---
 # <a name="start-command"></a>Başlat Komutu
 Başlangıç projesinde hata ayıklamaya başlar.

@@ -1,5 +1,5 @@
 ---
-description: vstav3 ad alanının entryPoints öğesi, bir çözümle ilişkili tüm entryPoint öğelerini Office içerir.
+description: vstav3 ad alanının entryPoints öğesi, bir uygulama çözümüyle ilişkili tüm entryPoint öğelerini Office içerir.
 title: '&lt;entryPoints &gt; öğesi (Office geliştirme Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -40,7 +40,7 @@ ms.locfileid: "121424365"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- öğesi `entryPoints` gereklidir ve ad alanı `vstav3` içindedir. Her bir uygulama `entryPoints` çözümü için uygulama bildiriminde tanımlanan Office vardır. Örneğin, çok projeli bir dağıtımda Office çözüm dağıtırsanız, uygulama bildiriminde `entryPoints` üç öğe vardır.
+ öğesi `entryPoints` gereklidir ve ad alanı `vstav3` içindedir. Her bir uygulama `entryPoints` çözümü için uygulama bildiriminde tanımlanan Office vardır. Örneğin, çok projeli bir dağıtımda Office çözüm dağıtırsanız, uygulama `entryPoints` bildiriminde üç öğe vardır.
 
  öğesi `entryPoints` aşağıdaki özniteliğine sahip.
 
@@ -51,7 +51,7 @@ ms.locfileid: "121424365"
  `entryPoints` aşağıdaki öğelere sahiptir.
 
 ### <a name="entrypoint"></a>entryPoint
- Gereklidir. ad alanı içinde `entryPoint` öğenin rolü, Visual Studio&#41;`vstav3` geliştirme&#60;[entryPoint&#62; &#40;Office öğesinde tanımlanır. ](../vsto/entrypoint-element-office-development-in-visual-studio.md)
+ Gereklidir. ad alanı içinde öğenin rolü, Visual Studio&#41;geliştirme `entryPoint` `vstav3`&#60;[entryPoint&#62; öğesinde &#40;Office tanımlanır. ](../vsto/entrypoint-element-office-development-in-visual-studio.md)
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirme örneği
 
@@ -120,7 +120,7 @@ ms.locfileid: "121424365"
 ## <a name="multi-project-deployment-example"></a>Çok projeli dağıtım örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, çok `entryPoints` projeli bir dağıtım için uygulama bildiriminde öğesini gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
+ Aşağıdaki kod örneği, çok `entryPoints` projeli dağıtım için bir uygulama bildiriminde öğesini gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 

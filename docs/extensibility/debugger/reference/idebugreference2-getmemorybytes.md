@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9f40a611c1d8675950dab6a76795d7be1ed32faed5522134d24b8fc4d2dc61d7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a4796bece27d1d5d0ee32ba286e44ce1285b0586
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415916"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029794"
 ---
 # <a name="idebugreference2getmemorybytes"></a>IDebugReference2::GetMemoryBytes
 Bir başvuru değerini fiziksel olarak içeren bellek baytlarını alır. Daha sonraki kullanımlar için ayrılmıştır.

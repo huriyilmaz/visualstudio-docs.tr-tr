@@ -1,6 +1,6 @@
 ---
-description: Hedef CPU 'nun türünü alır.
-title: 'IDiaSymbol:: get_machineType | Microsoft Docs'
+description: Hedef CPU'nun türünü alan.
+title: IDiaSymbol::get_machineType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9af5d5b0b3dd4563daf88637f2fbf3c94eb32ccc09341156bc175375925a3622
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7b3d3712b8e74b5aab1f5427fc5b058090eeaf59
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121436414"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081216"
 ---
 # <a name="idiasymbolget_machinetype"></a>IDiaSymbol::get_machineType
-Hedef CPU 'nun türünü alır.
+Hedef CPU'nun türünü alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,14 +35,14 @@ HRESULT get_machineType (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Hedef CPU türünü belirten [IMAGE_FILE_MACHINE_ sabitlerinden](/windows/desktop/SysInfo/image-file-machine-constants) bir değer döndürür.
+[out] Hedef CPU türünü [IMAGE_FILE_MACHINE_ Sabitler'den](/windows/desktop/SysInfo/image-file-machine-constants) bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [IMAGE_FILE_MACHINE_ sabitleri](/windows/desktop/SysInfo/image-file-machine-constants) 
+- [IMAGE_FILE_MACHINE_ Sabitleri](/windows/desktop/SysInfo/image-file-machine-constants) 
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -25,12 +25,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 534e2d8616fb70ca0089cc2efa90c19ac97c62b7860723f64784549620111a85
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0be145d41fbc2ae112372ba1653caca983118605
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239616"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030717"
 ---
 # <a name="native-run-time-checks-customization"></a>Yerel Çalışma Zamanı Denetimlerini Özelleştirme
 **/RTC** ile derle (çalışma zamanı denetimleri) veya pragma kullanırken, C çalışma zamanı kitaplığı yerel `runtime_checks` çalışma zamanı denetimleri sağlar. Bazı durumlarda, çalışma zamanı denetimlerini özelleştirmek istiyor olabilir:

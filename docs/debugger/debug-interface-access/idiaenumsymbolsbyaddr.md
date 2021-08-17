@@ -11,14 +11,15 @@ ms.assetid: 37d3dcdf-e4fa-4354-b5e1-8843566b52ac
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c1c0e20b6b148f41781f9962f961128aa2d342fc
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 3d0750239248ac3afd1b95f8ae05a19707cf2fddbe966dd45a2d8dd1fb7d6775
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148600"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121380310"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
 Veri kaynağında bulunan çeşitli sembolleri ele alarak sıralar.

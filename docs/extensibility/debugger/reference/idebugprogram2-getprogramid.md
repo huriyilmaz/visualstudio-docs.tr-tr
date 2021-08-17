@@ -1,6 +1,6 @@
 ---
 description: Bu program için bir GUID alır.
-title: 'IDebugProgram2:: GetProgramId | Microsoft Docs'
+title: IDebugProgram2::GetProgramId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27793da2555f8bb1f61d0a9df6b616e2a551bf4813f1d416b71d7e3cd283d858
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: affe65f21cc9e9899349c87e237b49b1051210fc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276444"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030106"
 ---
 # <a name="idebugprogram2getprogramid"></a>IDebugProgram2::GetProgramId
 Bu program için bir GUID alır.
@@ -43,13 +43,13 @@ int GetProgramId(
 
 ## <a name="parameters"></a>Parametreler
 `pguidProgramId`\
-dışı `GUID` Bu program için döndürür.
+[out] Bu program `GUID` için döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir hata ayıklama altyapısı (DE), ilk olarak [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) veya [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemlerine geçirilen program tanımlayıcısını döndürmelidir. Bu, programın hata ayıklayıcı bileşenleri arasında tanımlanmasını sağlar.
+ Hata ayıklama altyapısının (DE), başlangıçta [OnAttach](../../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) veya Attach yöntemlerine geçirilen program [tanımlayıcısını geri](../../../extensibility/debugger/reference/idebugengine2-attach.md) getirebilirsiniz. Bu, hata ayıklayıcı bileşenleri arasında programın tanımlanmasına olanak sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

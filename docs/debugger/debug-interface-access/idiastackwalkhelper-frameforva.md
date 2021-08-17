@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c1f1162dc9c305138c84aa5c6d7981a13f41f7e00d903fe65e0be758bb561f95
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0043500ee5ea1222c6d316a3266c060c8d5f8edc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391715"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081320"
 ---
 # <a name="idiastackwalkhelperframeforva"></a>IDiaStackWalkHelper::frameForVA
 Belirtilen sanal adresi içeren yığın çerçevesini alır.

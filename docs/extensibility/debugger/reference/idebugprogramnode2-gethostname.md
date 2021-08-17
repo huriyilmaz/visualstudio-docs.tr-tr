@@ -11,17 +11,18 @@ ms.assetid: 16aad1ff-ad34-4394-a2e4-5621374a7729
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a9e8958adf8072715ccc3f51ceb28ef44904d768
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a1ee06aa58004dd08ec70f42f68c0267a9f567dc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087307"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029950"
 ---
 # <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
 Programı barındıran işlemin adını alır.

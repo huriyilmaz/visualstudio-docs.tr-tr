@@ -9,17 +9,18 @@ ms.assetid: 3e5a06c5-fb30-4b8a-b2d5-4a0570fc80bd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9267e45c5aa8254323fee461899ad99caf14f868
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 24e6b8bcefd47ddded83c28fc7d5df71327ced86
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085253"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080110"
 ---
 # <a name="bp_flags90"></a>BP_FLAGS90
 İsteğe bağlı bayraklar için geçerli değerleri numaralandırır. İsteğe bağlı bayraklar, bir kesme noktası ayarladığınızda ek bilgi belirtmek için kullanılabilir. Bu sabit listesi [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) numaralandırmayı genişletir.

@@ -1,6 +1,6 @@
 ---
-title: Arama menüsü komutları | Microsoft Docs
-description: belirli pencereleri aramak için komutların bulunduğu Visual Studio arama menüsünü gözden geçirin. Pencereyi bul/Işle/Iş parçacığı/Ileti, Sonrakini Bul ve Öncekini Bul ' u kullanın.
+title: Arama Menüsü Komutları | Microsoft Docs
+description: Belirli Visual Studio komutların yer alan Arama menüsünü gözden geçirebilirsiniz. Pencere/İşlem/İş Parçacığı/İleti Bul, Sonrakini Bul ve Öncekini Bul'ı kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,18 +13,18 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d6744ed0be09f08ae1856c5605fc2dd5145792913b585c510a4749b08aaec0d2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 256f506fa2355edcd93fce59c20a91995ddd0d18
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121294047"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030535"
 ---
 # <a name="search-menu-commands"></a>Arama Menü Komutları
-**Arama** menüsü, belirli pencereleri aramak için komutlar sağlar.
+Ara **menüsü** belirli pencereleri aramak için komutlar sağlar.
 
- **Pencere/işlem/Iş parçacığı/Ileti bul**  /  /  / **FinderTool** 'u kullanabileceğiniz veya arama ölçütlerini belirtebileceğiniz pencere işlem iş parçacığı **MessageSearch** iletişim kutusunu açar.
+ **Pencere/İşlem/İş Parçacığı/İleti Bul**  /  /  / **FinderTool'ı** **kullanabileceğiniz** veya arama ölçütlerini belirtebilirsiniz.
 
- **Sonrakini Bul** Sonraki eşleşen pencere, süreç, iş parçacığı veya ileti için geçerli görünümü arar. Bu menü öğesi (ve ilgili araç çubuğu düğmesi) yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir.
+ **Sonrakini Bul** Geçerli görünümde sonraki eşleşen pencereyi, işlemi, iş parçacığını veya iletiyi arar. Bu menü öğesi (ve ilgili araç çubuğu düğmesi) yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir.
 
- **Öncekini Bul** Önceki eşleşen pencere, süreç, iş parçacığı veya ileti için geçerli görünümü arar. Bu menü öğesi (ve ilgili araç çubuğu düğmesi) yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir.
+ **Öncekini Bul** Önceki eşleşen pencere, işlem, iş parçacığı veya ileti için geçerli görünümü arar. Bu menü öğesi (ve ilgili araç çubuğu düğmesi) yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir.

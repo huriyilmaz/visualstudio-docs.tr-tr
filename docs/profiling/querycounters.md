@@ -7,15 +7,16 @@ ms.assetid: 8059d4b2-af61-4a47-a6c2-8da5c0741c74
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e93546c97b2ddec0e944314c51c87da05a725db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d5dea7b93bded032f51650b895f16ad44948443c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950175"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027415"
 ---
 # <a name="querycounters"></a>QueryCounters
 **QueryCounters** seçeneği, BILGISAYARDAKI kullanılabilir CPU (donanım) performans sayaçlarını listeler.
@@ -39,5 +40,5 @@ VSPerfCmd.exe /QueryCounters
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

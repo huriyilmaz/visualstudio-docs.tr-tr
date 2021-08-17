@@ -1,6 +1,6 @@
 ---
-title: UsedCommand öğesi | Microsoft Docs
-description: UsedCommand öğesi, VSPackage 'ın başka bir. vsct dosyasında tanımlanan bir komuta erişmesini sağlar.
+title: UsedCommand Öğesi | Microsoft Docs
+description: UsedCommand öğesi, vsPackage'ın başka bir .vsct dosyasında tanımlanan bir komuta erişmesi için olanak sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33d6d5626f8ff96e9c52a71c4edfbc17de65eb749b90aa646d4dd53cf4edb9ed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0333b3a83333eebdb25da83206b9da2a4c9082ad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358863"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049291"
 ---
 # <a name="usedcommand-element"></a>UsedCommand Öğesi
-Bir VSPackage 'ın, başka bir. vsct dosyasında tanımlı bir komuta erişmesine olanak sağlar. Örneğin, VSPackage, kabuk tarafından tanımlanan standart **kopyalama** komutunu kullanıyorsa [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , komutu yeniden uygulamadan bir menü veya araç çubuğuna ekleyebilirsiniz.
+VsPackage'ın başka bir .vsct dosyasında tanımlanan bir komuta erişmesi için olanak sağlar. Örneğin, VSPackage'nız kabuk tarafından tanımlanan standart **Copy** komutunu kullanıyorsa, komutu yeniden uygulamadan bir menüye veya araç [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çubuğuna ekleyebilirsiniz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,9 +37,9 @@ Bir VSPackage 'ın, başka bir. vsct dosyasında tanımlı bir komuta erişmesin
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|guid|Gereklidir. Komutu tanımlayan GUID KIMLIK çiftinin GUID 'SI.|
-|kimlik|Gereklidir. Komutu tanımlayan GUID KIMLIK çiftinin KIMLIĞI.|
-|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|guid|Gereklidir. Komutu tanımlayan GUID kimlik çiftinin GUID'si.|
+|kimlik|Gereklidir. Komutu tanımlayan GUID kimliği çiftinin kimliği.|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu Öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -51,10 +51,10 @@ Bir VSPackage 'ın, başka bir. vsct dosyasında tanımlı bir komuta erişmesin
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[UsedCommands Öğesi](../extensibility/usedcommands-element.md)|Gruplar, UsedCommand öğeleri ve diğer UsedCommands gruplandırmaları.|
+|[UsedCommands Öğesi](../extensibility/usedcommands-element.md)|UsedCommand öğelerini ve diğer UsedCommands gruplamalarını gruplar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Öğeye bir komut eklenerek `<UsedCommands>` VSPackage, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage 'ın komutunu gerektirdiğini bildirir. `<UsedCommand>`Paketinizin her bir komut için, Visual Studio tüm sürümlerine ve yapılandırmalara dahil edilmemelidir. Örneğin, paketiniz Visual C++ özgü bir komut çağırırsa, komut için bir öğe eklemediğiniz takdirde, komut Visual Web Developer kullanıcıları tarafından kullanılamaz `<UsedCommand>` .
+ öğesine bir komut ekleyerek `<UsedCommands>` VSPackage, ortama [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage'ın komutunu gerektirdiğini bildirmektedir. Paketinizin gerektirdiği herhangi bir komut için, paketinizin tüm sürümlerine ve yapılandırmalara dahil edilecek `<UsedCommand>` bir öğe Visual Studio. Örneğin, paketiniz özel bir komut Visual C++, komutu için bir öğe dahil olmadığınız sürece komut Visual Web Developer kullanıcıları `<UsedCommand>` tarafından kullanılamaz.
 
 ## <a name="example"></a>Örnek
 

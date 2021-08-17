@@ -11,17 +11,18 @@ ms.assetid: cb7df109-d29a-4218-b900-6809091459dd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 64d8b862de9f068b41a9fc752855b6affa310298
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e3f30c658e4e0a86cead903f511395b01d93ffc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083069"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095367"
 ---
 # <a name="ienumdebugobjectsclone"></a>IEnumDebugObjects::Clone
 Bu yöntem, geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.

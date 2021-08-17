@@ -1,21 +1,21 @@
 ---
 title: Visual Studio Takım Gezgini 2019 iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Genel Visual Studio için tümleşik test araçları sağlamak üzere iş yükü ve bileşen kimliklerini kullanma
+description: Genel Visual Studio test araçları sağlamak için iş yükü ve bileşen kimliklerini kullanma
 keywords: ''
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
-ms.date: 05/24/2021
+ms.date: 08/10/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: a7de745bc5396a2289095c76fbd5c92c2952cf73
-ms.sourcegitcommit: 18e7300d4878f2fcd0263a4aff31a755ae8fc289
+ms.openlocfilehash: c4052ac217ecbe82674117dc3f258d0d1cd9fd8c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110449896"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048284"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2019"></a>Visual Studio temel düzenleyici (Visual Studio Takım Gezgini 2019'a dahildir)
 

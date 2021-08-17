@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 7d23b6d2bfdc3cbf619dcad4e96fc4a577bf8f90ec864292cb7aac2b3a2ebf26
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 72e104e25bdb17433e76ee1f52bdf56570afdacf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121352896"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047640"
 ---
 # <a name="how-to-run-code-when-deployment-steps-are-executed"></a>Nasıl yapılır: dağıtım adımları yürütüldüğünde kodu çalıştırma
   SharePoint projesindeki bir dağıtım adımı için ek görevler gerçekleştirmek istiyorsanız, Visual Studio her dağıtım adımını yürütmeden önce ve sonra SharePoint proje öğeleri tarafından oluşturulan olayları işleyebilirsiniz. daha fazla bilgi için bkz. [genişletme SharePoint paketleme ve dağıtım](../sharepoint/extending-sharepoint-packaging-and-deployment.md).

@@ -15,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 29330e94d57d81f9ddc2903b390006a022780e907441887612ee8629c1691784
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 79883df61b3aa25c5a64a4e3531e15b9f9dee35d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262210"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079824"
 ---
 # <a name="idebugcodecontext3getmodule"></a>IDebugCodeContext3::GetModule
 Hata ayıklama modülünün arabirimine bir başvuru alır.

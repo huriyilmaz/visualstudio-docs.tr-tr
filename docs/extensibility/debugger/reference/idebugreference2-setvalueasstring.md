@@ -1,6 +1,6 @@
 ---
-description: Bir dizeden başvurunun değerini ayarlar.
-title: 'IDebugReference2:: SetValueAsString | Microsoft Docs'
+description: Bir dizeden başvuru değerini ayarlar.
+title: IDebugReference2::SetValueAsString | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad19f6e2f27f09128986c5b99d743061921b95eb7824ad816396860535eaecb1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6f582cc79b3feb2eb8a5be431431c405774d1409
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338520"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063830"
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
-Bir dizeden başvurunun değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
+Bir dizeden başvuru değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,13 +47,13 @@ int SetValueAsString (
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-'ndaki Değer bir dize olarak.
+[in] Dize olarak değer.
 
 `dwRadix`\
-'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
+[in] Herhangi bir sayısal bilgiyi biçimlendirmek için kullanılacak radyan.
 
 `dwTimeout`\
-'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süre (milisaniye cinsinden). `INFINITE`Sonsuza kadar beklemek için kullanın.
+[in] Bu yöntemden dönmeden önce bek için milisaniye cinsinden en uzun süre. Süresiz `INFINITE` olarak beklemek için kullanın.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

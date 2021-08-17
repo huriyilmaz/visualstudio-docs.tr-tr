@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f16c11b79b117fcd796f1836f7a231632c8f18d23d25fb0f29c58f5c197e6c38
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1299810fa015f9e54d418209e13d366ff47bfb33
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398395"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048394"
 ---
 # <a name="use-visual-studio-search"></a>Visual Studio arama kullan
 

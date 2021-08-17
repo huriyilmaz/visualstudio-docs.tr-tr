@@ -1,6 +1,6 @@
 ---
 description: Belirli bir dizeden bir özelliğin değerini ayarlar.
-title: IDebugProperty2::SetValueAsString | Microsoft Docs
+title: 'IDebugProperty2:: SetValueAsString | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6d71f6926e9b973f83ae8f6d8e4a64ac127eaca6cf85e335cb6970c261c56840
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b9c1c83dc86b76d38f1f36a38f7e01d24a37f201
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121449020"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096056"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
 Belirli bir dizeden bir özelliğin değerini ayarlar.
@@ -47,21 +47,21 @@ int SetValueAsString (
 
 ## <a name="parameters"></a>Parametreler
 `pszValue`\
-[in] Ayarlandır değerini içeren bir dize.
+'ndaki Ayarlanacak değeri içeren bir dize.
 
 `nRadix`\
-[in] Herhangi bir sayısal bilgiyi yorumlamak için kullanılacak radyal. Radyanı otomatik olarak belirlemeye çalışırken bu 0 olabilir.
+'ndaki Herhangi bir sayısal bilgiyi yorumlamak için kullanılan bir taban. Bu, taban x 'i otomatik olarak belirlemeyi denemek için 0 olabilir.
 
 `dwTimeout`\
-[in] Bu yöntemden dönmeden önce bek için milisaniye cinsinden en uzun süreyi belirtir. Süresiz `INFINITE` olarak beklemek için kullanın.
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür. Aşağıdaki tabloda diğer olası değerler yer alır.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. Aşağıdaki tabloda olası diğer değerler gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Dize bir özellik değerine dönüştürüledi veya özellik değeri ayarlandı.|
-|`E_SETVALUE_VALUE_IS_READONLY`|özelliği salt okunur özelliktir.|
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Dize bir özellik değerine dönüştürülemedi veya özellik değeri ayarlanamadı.|
+|`E_SETVALUE_VALUE_IS_READONLY`|Özellik salt okunurdur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

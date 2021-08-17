@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: df18622d970bfc6ccf794eaec0eb52e0a5c15ac97cfe2a9c483bd715f272b6f0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8c91f41129716868a505475b8d447563ec93d5d4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121291941"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095835"
 ---
 # <a name="idebugthreaddestroyevent2"></a>IDebugThreadDestroyEvent2
 Bu arabirim, bir iş parçacığı tamamlandıktan sonra hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.

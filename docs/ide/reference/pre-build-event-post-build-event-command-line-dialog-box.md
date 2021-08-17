@@ -36,16 +36,16 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 20f8afa9dc9946644b935c34b98616d96a5fa875
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1cb0081c084549692b335edd414caa1eabba1225137030ecea04a1030004a468
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918317"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121334308"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Oluşturma öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu
 
-[Derleme olayları sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) için doğrudan düzenleme kutusuna derleme öncesi veya sonrası olayları yazabilir veya kullanılabilir makrolar listesinden ön ve derleme sonrası makroları seçebilirsiniz.
+[derleme olayları sayfası, doğrudan düzenleme kutusunda Project tasarımcı (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) için ön veya sonrası olayları yazabilir veya kullanılabilir makrolar listesinden ön ve derleme sonrası makroları seçebilirsiniz.
 
 > [!NOTE]
 > Proje güncel değilse ve derleme tetikleniyorsa, ön derleme olayları çalışmaz.
@@ -57,7 +57,7 @@ ms.locfileid: "99918317"
 Oluşturma öncesi ya da derleme sonrası için çalıştırılacak olayları içerir.
 
 > [!NOTE]
-> `call`. Bat dosyalarını çalıştıran tüm derleme sonrası komutlarının önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
+> `call`.bat dosyaları çalıştıran tüm derleme sonrası komutlarınız önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
 
 **Makrolar**
 
@@ -75,7 +75,7 @@ Makro tablosunda seçilen makro komut satırı düzenleme kutusuna ekler.
 
 Bu makroların herhangi birini dosya konumları belirtmek için veya birden çok seçim durumunda giriş dosyasının gerçek adını almak için kullanabilirsiniz. Bu makrolar büyük/küçük harfe duyarlı değildir.
 
-|Makroya|Description|
+|Makroya|Açıklama|
 |-----------|-----------------|
 |`$(ConfigurationName)`|Geçerli proje yapılandırmasının adı, örneğin "Debug".|
 |`$(OutDir)`|Proje dizinine göre çıkış dosyası dizininin yolu. Bu, çıkış dizini özelliğinin değerini çözümler. ' ' Sonunda ters eğik çizgi içeriyor \\ .|

@@ -1,6 +1,6 @@
 ---
-title: Office çözümlerini yükseltme ve geçirme
-description: Visual Studio önceki bir sürümünde oluşturulmuş bir Offince projeniz varsa, projeyi Visual Studio güncel sürümlerinde kullanmak üzere yükseltmeniz gerekir.
+title: Çözümlerini yükseltme Office geçirme
+description: Önceki bir sürümde oluşturulmuş bir Offince projeniz varsa projeyi Visual Studio sürümünde kullanmak için yükseltmeniz Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -19,74 +19,74 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: af09d705ddeb0fdbf01244ee085d93fb54d52ac7969c8e1e6de9917abc32b431
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 01515d0fb4339fd983532854e188f09c10a72022
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384151"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025712"
 ---
-# <a name="upgrade-and-migrate-office-solutions"></a>Office çözümlerini yükseltme ve geçirme
-  Visual Studio önceki bir sürümünde oluşturulmuş bir Microsoft Office projeniz varsa, projeyi Visual Studio güncel sürümlerinde kullanmak üzere yükseltmeniz gerekir. Microsoft Office bir projeyi yükseltmek için, uygulamayı Microsoft Office geliştirici araçlarını içeren bir Visual Studio sürümünde açın. Microsoft Office geliştirici araçlarını içeren Visual Studio sürümleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md).
+# <a name="upgrade-and-migrate-office-solutions"></a>Çözümlerini yükseltme Office geçirme
+  önceki bir Microsoft Office sürümünde oluşturulmuş bir Visual Studio projeniz varsa, projeyi geçerli Visual Studio sürümlerinde kullanmak için yükseltmeniz gerekir. Bir projenizi Microsoft Office için, bu projeyi Visual Studio geliştirici araçlarını içeren bir Microsoft Office açın. Geliştirici araçlarını içeren Visual Studio sürümleri hakkında daha fazla Microsoft Office için, bkz. Bir bilgisayarı Office [geliştirme.](../vsto/configuring-a-computer-to-develop-office-solutions.md)
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
 > [!NOTE]
-> Visual Studio, Visual Studio önceki sürümleri kullanılarak oluşturulan ınfopath form şablonu projelerini yükseltemez. Bu tür projeler geçerli Visual Studio sürümünde desteklenmez.
+> Visual Studio, önceki sürümleri kullanılarak oluşturulan InfoPath form şablonu projelerini Visual Studio. Bu tür projeler, geçerli sürümde Visual Studio.
 
-## <a name="changes-to-upgraded-projects"></a>Yükseltilen projelere yapılan değişiklikler
- bir Microsoft Office projesi yükselttiğinizde, Visual Studio projeyi aşağıdaki öğeleri hedefleyecek şekilde değiştirir:
+## <a name="changes-to-upgraded-projects"></a>Yükseltilen projelerde yapılan değişiklikler
+ Bir projesini Microsoft Office, Visual Studio aşağıdaki öğeleri hedefleyeceksiniz:
 
-- Office çalışma zamanına yönelik Visual Studio 2010 araçları. daha fazla bilgi için bkz. [Office için Visual Studio Araçları çalışma zamanına genel bakış](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+- Çalışma Visual Studio için Office 2010 Araçları. Daha fazla bilgi için bkz. [Office için Visual Studio Araçları genel bakış.](../vsto/visual-studio-tools-for-office-runtime-overview.md)
 
 - Geçerli derleme başvuruları.
 
-- proje türü tarafından desteklenen .NET Framework sürümü (yalnızca Visual Studio 2013 sürümüne yükselttiğinizde).
+- Proje türü .NET Framework desteklenen bir sürüm (Yalnızca Visual Studio 2013 sürümüne yükseltin).
 
-- proje türü tarafından desteklenen Microsoft Office sürümü (yalnızca Visual Studio 2013 sürümüne yükselttiğinizde).
+- Proje türü Microsoft Office desteklenen bir Visual Studio 2013 sürümü.
 
-## <a name="assembly-references"></a>Bütünleştirilmiş kod başvuruları
- Visual Studio, projedeki aşağıdaki derleme başvurularını yükseltir:
+## <a name="assembly-references"></a>Derleme başvuruları
+ Visual Studio, projede aşağıdaki derleme başvurularını yükselter:
 
-- Microsoft Office birincil birlikte çalışma derlemeleri (pıa).
+- Microsoft Office birlikte çalışma derlemelerini (PIA) kullanabilirsiniz.
 
-- İçindeki derlemeler [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . bu derlemeler hakkında daha fazla bilgi için bkz. [Office için Visual Studio Araçları çalışma zamanına genel bakış](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+- içinde [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] derlemeler. Bu derlemeler hakkında daha fazla bilgi için bkz. [Office için Visual Studio Araçları genel bakış.](../vsto/visual-studio-tools-for-office-runtime-overview.md)
 
 - Bağımlı derlemelerin yeni veya güncelleştirilmiş sürümleri.
 
 ## <a name="targeted-net-framework"></a>Hedeflenen .NET Framework
- bir projeyi Visual Studio 2013 yükselttiğinizde, Visual Studio ya da öğesini hedeflemek için projeyi değiştirir [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . projenin hedeflediği .net framework sürümü, bilgisayarınızda hangi Office sürümünün yüklü olduğuna bağlıdır. [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]yüklüyse, öğesini hedeflemek için projeyi değiştirir Visual Studio [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] . aksi takdirde, Visual Studio hedeflemek için projeyi değiştirir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
+ Bir projeyi Visual Studio 2013 Visual Studio veya hedefini [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] hedefleyeceksiniz. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] Proje tarafından hedeflenen .NET Framework sürümü, bilgisayarınızda yüklü Office sürümüne bağlıdır. [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]yüklüyse, Visual Studio hedefini hedefleyeceksiniz. [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] Aksi Visual Studio hedefini hedefleyeceksiniz. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]
 
 > [!NOTE]
-> Geliştirme ve son kullanıcı bilgisayarlarında yeniden hedeflenmiş bir çözüm çalıştırmak için bazı ek adımlar gerçekleştirmeniz gerekebilir ve projeniz, belirli özellikleri kullanıyorsa, artık derlenmeyecektir. daha fazla bilgi için bkz. [.NET Framework 4 veya sonraki sürümlere Office çözümleri geçirme](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md).
+> Geliştirme ve son kullanıcı bilgisayarlarında yeniden hedeflenmiş bir çözüm çalıştırmak için bazı ek adımlar gerçekleştirmeniz gerekebilirsiniz ve projeniz belirli özellikleri kullanıyorsa artık derlemeyecektir. Daha fazla bilgi için [bkz. Office 4 veya sonraki .NET Framework](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)geçirme.
 
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]bir Office projesinde veya üstünü hedefliyorsanız, .NET Framework 3,5 ' i hedeflediğinizde kullanılamayan bazı özellikleri kullanabilirsiniz. daha fazla bilgi için bkz. [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md).
+ Bir Office projesinde veya sonraki bir hedefiniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] varsa, 3.5'i hedefleye .NET Framework bazı özellikleri kullanabilirsiniz. Daha fazla bilgi için [bkz. Özel çözümler Office oluşturma.](../vsto/designing-and-creating-office-solutions.md)
 
-## <a name="targeted-office-application"></a>hedeflenen Office uygulaması
- bir Office projesini Visual Studio 2013 sürümüne yükselttiğinizde Visual Studio proje, belge düzeyi özelleştirme projesi veya VSTO eklenti projesi gibi proje türü tarafından desteklenen Microsoft Office sürümünü hedeflemek için projeyi değiştirir.
+## <a name="targeted-office-application"></a>Hedeflenen Office uygulaması
+ Office projesini Visual Studio 2013'a yükselterek Visual Studio, belge düzeyi özelleştirme projesi veya VSTO Eklenti projesi gibi proje türü tarafından desteklenen Microsoft Office sürümünü hedeflemektedir.
 
- Visual Studio 2013 Office projeler hedefleyebilir [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] ve [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] uygulamalar. Visual Studio, yüklediğiniz office 'in en son sürümünü hedeflemek için projeyi değiştirir. bu Office sürümlerinden hiçbiri yüklü değilse, Visual Studio projeyi yükseltmez.
-
-> [!NOTE]
-> hedef veya daha sonraki bir VSTO eklenti projesini yükseltirseniz [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] , `ThisAddIn_Startup` VSTO eklentisinin olay işleyicisinin uygulamadaki bir belgeye erişen bir kod içermediğinden emin olun. daha fazla bilgi için bkz. [Office uygulaması başladığında belgeye erişme](../vsto/programming-vsto-add-ins.md#AccessingDocuments).
-
- belge düzeyi özelleştirmeleri için, bir [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] projedeki bir *.xls* veya *.doc* uzantısı olan belgeler gibi ikili biçime sahip belgeleri Office açık XML biçimine dönüştürür. Open XML hakkında daha fazla bilgi için bkz. [yeni dosya adı uzantılarına giriş ve açık XML biçimleri](https://support.office.com/en-nz/article/Introduction-to-new-file-name-extensions-eca81dcb-5626-4e5b-8362-524d13ae4ec1).
+ Office projeleri Visual Studio 2013 uygulamaları [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] hedefleyene. Visual Studio, projeyi, yüklü olan en son Office sürümünü hedefleyeceksiniz. Bu sürümlerden hiçbiri Office yüklüyse, Visual Studio projeyi yükseltmez.
 
 > [!NOTE]
-> akıllı etiketler Excel 2010 ve Word 2010 ' de kullanım dışıdır. bu nedenle, çözümünüz akıllı etiketler kullanıyorsa, Visual Studio 2013 veya Visual Studio 2015 ' de test etmeden ve hata ayıklamadan önce bunları kaldırmanız gerekir.
+> VSTO Eklenti projesini veya sonraki bir sürümüne yükseltin, VSTO Eklentinin olay işleyicisinde uygulamanın bir belgeye erişen kodu içermey olduğundan [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] `ThisAddIn_Startup` emin olun. Daha fazla bilgi için [bkz. Uygulama başlatıldığında Office erişme.](../vsto/programming-vsto-add-ins.md#AccessingDocuments)
 
-## <a name="upgrade-microsoft-office-2003-projects"></a>Microsoft Office 2003 projelerini yükseltin
- belge düzeyi özelleştirmelerini yükseltmek için bazı ek konular ve Microsoft Office 2003 ' i hedefleyen VSTO eklentileri vardır.
+ Belge düzeyinde özelleştirmeler için,.xlsveya.docuzantısına sahip belgeler gibi ikili biçime sahip bir projede yer alan belgeleri Açık [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] XML biçimine Office dönüştürür.   Open XML hakkında daha fazla bilgi için [bkz. Yeni dosya adı uzantılarına ve Open XML biçimlerine giriş.](https://support.office.com/en-nz/article/Introduction-to-new-file-name-extensions-eca81dcb-5626-4e5b-8362-524d13ae4ec1)
 
-### <a name="document-level-projects"></a>Belge düzeyi projeleri
- projedeki belge Windows Forms denetimleri içeriyorsa, projeyi yükseltmeden önce Office ikinci sürüm çalışma zamanı için Visual Studio 2005 araçlarının de yüklü olması gerekir. Projeyi yükseltmeden önce çalışma zamanının bu sürümü geliştirme bilgisayarında yüklü değilse, yükseltilen proje derleme veya çalıştırma zamanı hataları içerebilir. projeyi yükseltmeyi tamamladıktan sonra, başka bir Office çözümü tarafından kullanılmıyorsa, Office ikinci sürüm çalışma zamanı için Visual Studio 2005 araçlarını geliştirme bilgisayarından kaldırabilirsiniz. çalışma zamanının bu sürümü, [Office ikinci sürüm çalışma zamanı (VSTO 2005 SE) (x86) için Microsoft Visual Studio 2005 araçlarında](https://www.microsoft.com/download/details.aspx?id=2392)Microsoft indirme merkezi 'nden yeniden dağıtılabilir bir paket olarak sunulmaktadır.
+> [!NOTE]
+> Akıllı etiketler 2010 ve Word 2010'Excel kullanım dışıdır. Bu nedenle, çözümünüz akıllı etiketler kullanıyorsa, 2015'te veya 2015'te Visual Studio 2013 veya Visual Studio kaldırmanız gerekir.
+
+## <a name="upgrade-microsoft-office-2003-projects"></a>2003 Microsoft Office yükseltme
+ 2003'ü hedef alan belge düzeyi özelleştirmeleri ve VSTO yükseltmeye yönelik bazı Microsoft Office vardır.
+
+### <a name="document-level-projects"></a>Belge düzeyi projeler
+ Proje içinde belge Windows Forms denetimleri içeriyorsa, projeyi yükseltmeden önce Visual Studio 2005 Office İkinci Sürüm Çalışma Zamanı için de yüklü olmalıdır. Projeyi yükseltmeden önce çalışma zamanının bu sürümü geliştirme bilgisayarına yüklenmemişse, yükseltilen proje derleme veya çalışma zamanı hataları içerebilir. Projeyi yükseltmeyi bitirdikten sonra, Visual Studio 2005 Tools for Office Second Edition Runtime'ı, başka bir yazılım çözümü tarafından kullanılmazsa geliştirme bilgisayardan Office edebilirsiniz. Çalışma zamanının bu sürümü, Office İkinci Sürüm Çalışma Zamanı [(VSTO 2005 SE) (x86) için Microsoft Visual Studio 2005](https://www.microsoft.com/download/details.aspx?id=2392)Araçları'nda Microsoft İndirme Merkezi'nden yeniden dağıtılabilir paket olarak kullanılabilir.
 
 ### <a name="vsto-add-in-projects"></a>VSTO Eklenti projeleri
- özgün projeniz için çözüm dosyası VSTO eklentisini yüklemek üzere yapılandırılmış bir kurulum veya ınstallshield Limited Edition projesi içeriyorsa Visual Studio projeyi yükseltir, ancak projede başka bir değişiklik yapmaz. VSTO eklentisini dağıtmak için bir Windows Installer dosyası kullanmaya devam etmek istiyorsanız, kurulum veya ınstallshield Limited Edition projesini, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] Office çalışma zamanı için Visual Studio 2010 araçları ve isteğe bağlı olarak VSTO eklentisinin başvurduğu birincil birlikte çalışma derlemelerini yüklemek üzere değiştirmelisiniz. daha fazla bilgi için bkz. [Windows Installer kullanarak Office çözümü dağıtma](../vsto/deploying-a-vsto-solution-by-using-windows-installer.md).
+ Özgün projenizin çözüm dosyasında VSTO Eklentisini yüklemek için yapılandırılmış bir Kurulum veya InstallShield Limited Edition projesi varsa Visual Studio projeyi yükseltse de projede başka bir değişiklik yapmaz. VSTO Eklentinizi dağıtmak için bir Windows Yükleyicisi dosyası kullanmaya devam etmek için Kurulum veya InstallShield Limited Edition projesini, Office Çalışma Zamanı için Visual Studio 2010 Araçları ve isteğe bağlı olarak VSTO Eklentiniz tarafından başvurulan birincil birlikte çalışma derlemeleri gibi yeni önkulları yüklemek için değiştirmeniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] gerekir. Daha fazla bilgi için [bkz. Office Yükleyicisi kullanarak bir Windows dağıtma.](../vsto/deploying-a-vsto-solution-by-using-windows-installer.md)
 
- VSTO eklentiyi dağıtmak için ClickOnce kullanmak istiyorsanız, kurulum veya ınstallshield Limited Edition projesini tamamen silebilirsiniz. ClickOnce kullanarak VSTO eklentileri dağıtma hakkında daha fazla bilgi için bkz. [Office çözümü dağıtma](../vsto/deploying-an-office-solution.md).
+ VSTO Eklentinizi dağıtmak için ClickOnce kullanmak için Kurulum veya InstallShield Limited Edition projesini tamamen silebilirsiniz. ClickOnce kullanarak VSTO dağıtma hakkında daha fazla bilgi için bkz. Office [dağıtma.](../vsto/deploying-an-office-solution.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [nasıl yapılır: Office çözümlerini yükseltme](/previous-versions/4bez6837(v=vs.140))
-- [Office çözümlerini .NET Framework 4 veya sonraki sürümlere geçirme](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
+- [Nasıl Office: Office yükseltme](/previous-versions/4bez6837(v=vs.140))
+- [Office 4 veya sonraki .NET Framework geçirme](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
 - [Project Yükseltme, Seçenekler iletişim kutusu](../vsto/project-upgrade-options-dialog-box.md)

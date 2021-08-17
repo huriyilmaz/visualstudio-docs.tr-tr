@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8313366d5a2a1439f022a74a6c070f57598e77c00dcf33ac95fd74e868beeef6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6e5b520fc15d5cd1edff3331f4622c6086b3b58d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360501"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096186"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
 Bu yöntem yöntem konumunu ve uzaklığı bir bellek adresine dönüştürür.
@@ -71,7 +71,7 @@ int GetMethodLocationProperty(
 ## <a name="remarks"></a>Açıklamalar
  Döndürülen adres, örneğin bir kesme noktası ayarlamak için kullanılabilir.
 
- adına `upstrFullyQualifiedMethodPlusOffset` rağmen, bu parametre kısmen nitelikli bir yöntem adı geçirebilirsiniz. Bu durumda, seçilen yöntem içine alan `pAddress` yöntemdir. Bu parametrenin nasıl yorumlanması, ifade değerlendiricinin ve desteklediği dilin uygulanmasına göredir.
+ adına `upstrFullyQualifiedMethodPlusOffset` rağmen, bu parametre kısmen nitelikli bir yöntem adı geçirebilirsiniz. Bu durumda, seçilen yöntem içine alan `pAddress` yöntemdir. Bu parametrenin nasıl yorumlanması, ifade değerlendiricinin uygulanmasına ve desteklediği dile göredir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

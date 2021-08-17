@@ -1,6 +1,6 @@
 ---
-description: Sanal bir işlevin sanal işlev tablosundaki sapmayı alır.
-title: 'IDiaSymbol:: get_virtualBaseOffset | Microsoft Docs'
+description: Bir sanal işlevin sanal işlev tablosunda uzaklığı alır.
+title: IDiaSymbol::get_virtualBaseOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 103b034f-36c4-42d5-aa34-1449a1e66d03
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f22826b9fb795543c27c621f95dd4e5ccf897b0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: de479ff62cfde9ed4e9c78331eb7ff61b2bb33be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161769"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081011"
 ---
 # <a name="idiasymbolget_virtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
-Sanal bir işlevin sanal işlev tablosundaki sapmayı alır.
+Bir sanal işlevin sanal işlev tablosunda uzaklığı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_virtualBaseOffset (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Sanal bir işlevin sanal işlev tablosundaki sapmayı döndürür.
+[out] Bir sanal işlevin sanal işlev tablosunda uzaklığı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

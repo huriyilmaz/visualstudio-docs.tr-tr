@@ -1,6 +1,6 @@
 ---
-title: Yeni Öğe Ekle İletişim Kutusuna Dizin Ekleme | Microsoft Docs
-description: Dizinleri kaydetmek için bir kayıt defteri betiği kullanarak Visual Studio Ekle iletişim kutusuna dizinler ekleme hakkında bilgi öğrenin.
+title: Yeni öğe Ekle Iletişim kutusuna dizin ekleme | Microsoft Docs
+description: dizinleri kaydetmek için bir kayıt defteri betiği kullanarak Visual Studio yeni öğe ekle iletişim kutusuna dizin eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,15 +13,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f25059d48867af36776cd08b27871e621e56226c8f4f3ae7d99d74bae2486bd9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 258ff221893fc9ec10c9e37920c87fb242f4dc36
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121275729"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095081"
 ---
-# <a name="add-directories-to-the-add-new-item-dialog-box"></a>Yeni Öğe Ekle iletişim kutusuna dizin ekleme
-Aşağıdaki kod örneği, Yeni Öğe Ekle iletişim kutusu için yeni bir dizin kümesi **kaydetmeyi** gösterir. Yeni Öğe Ekle **iletişim kutusunun dizinleri** her proje için farklıdır. Bu nedenle dizinler, projesinde bulunan **Projeler** alt anahtarı altında **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects.**
+# <a name="add-directories-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna dizin ekleme
+Aşağıdaki kod örneğinde **Yeni öğe Ekle** iletişim kutusu için yeni bir dizin kümesinin nasıl kaydedileceği gösterilmektedir. **Yeni öğe Ekle** iletişim kutusu için dizinler her proje için farklıdır. Bu nedenle, dizinler **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects** bulunan **Projeler** alt anahtarı altında kaydedilir.
 
 ## <a name="registry-script"></a>Kayıt defteri betiği
 
@@ -48,16 +48,16 @@ NoRemove Projects
 }
 ```
 
- `%Template_Path%`değeri, proje şablonlarını içeren dizinin tam yolunu belirtir. Bu şablonlar kopyalanan *.vsz* dosyaları veya prototypical şablon dosyaları olabilir.
+ `%Template_Path%`Değer, proje şablonlarını içeren dizinin tam yolunu belirtir. Bu şablonlar, klonlanacak *. vsz* dosyaları ya da Prototipik şablon dosyaları olabilir.
 
- değeri `SortPriority` bir sıralama önceliğini belirtir.
+ `SortPriority`Değer bir sıralama önceliği belirtir.
 
-## <a name="add-items-to-an-existing-project"></a>Mevcut projeye öğe ekleme
- Var olan bir projeye öğe de eklemek için kullanabilirsiniz. Örneğin, bir [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] proje için *\<root> \Program Files\Microsoft Visual Studio\VC#\CSharpProjectItems\LocalProjectItems* klasörüne öğe eklersiniz. Bu durumda, `%GUID_Project%` bir C# projesinin GUID değeridir ({FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}).
+## <a name="add-items-to-an-existing-project"></a>Mevcut bir projeye öğe ekleme
+ Ayrıca, varolan bir projeye öğe ekleyebilirsiniz. örneğin, bir proje için [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] *\<root> \program files \ Microsoft Visual Studio \vc # \csharpprojectıtems\localprojectıtems* klasörüne öğe ekleyebilirsiniz. Bu durumda, `%GUID_Project%` bir C# projesinin GUID 'sidir ({FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}).
 
- Ayrıca, bir proje alt türü programlamak tarafından mevcut bir projeyi genişleterek. Proje alt türüyle, yeni bir proje türü yazmadan projeyi genişletin. Proje alt türleri hakkında daha fazla bilgi için [bkz. Project alt türleri.](../../extensibility/internals/project-subtypes.md)
+ Ayrıca, varolan bir projeyi bir proje alt türünü programlamaya göre genişletebilirsiniz. Proje alt türü ile, yeni bir proje türü yazmadan bir projeyi genişletebilirsiniz. proje alt türleri hakkında daha fazla bilgi için bkz. [Project alt türleri](../../extensibility/internals/project-subtypes.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje ve öğe şablonlarını kaydetme](../../extensibility/internals/registering-project-and-item-templates.md)
-- [Yeni Öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
-- [Yeni Dizinler iletişim kutusuna Project ekleme](../../extensibility/internals/adding-directories-to-the-new-project-dialog-box.md)
+- [Proje ve öğe şablonlarını Kaydet](../../extensibility/internals/registering-project-and-item-templates.md)
+- [Yeni öğe Ekle iletişim kutusuna öğe ekleme](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [yeni Project iletişim kutusuna dizin ekleme](../../extensibility/internals/adding-directories-to-the-new-project-dialog-box.md)

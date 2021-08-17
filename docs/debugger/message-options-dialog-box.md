@@ -10,20 +10,21 @@ ms.assetid: 88ad85af-3f56-4df1-98b6-fab34c1e5874
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5963bcbfb74c6a7722c02b59459a6334d461b980
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22c6daa23ee811a26301f7c437dc480f50725d0ef53469b4864e0235193b2d59
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891793"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121343722"
 ---
 # <a name="message-options-dialog-box"></a>İleti Seçenekleri İletişim Kutusu
 [Iletiler görünümünde](../debugger/messages-view.md)hangi iletilerin listelendiğini seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Windows sekmesi, Ileti seçenekleri Iletişim kutusu](../debugger/windows-tab-message-options-dialog-box.md) Listeye eklenecek ileti türlerini seçmek için kullanılır. Bulucu aracını içerir.
+ [Windows sekmesi, ileti seçenekleri iletişim kutusu](../debugger/windows-tab-message-options-dialog-box.md) Listeye eklenecek ileti türlerini seçmek için kullanılır. Bulucu aracını içerir.
 
  [Iletiler sekmesi, Ileti seçenekleri Iletişim kutusu](../debugger/messages-tab-message-options-dialog-box.md) Görüntülenecek ileti türlerini seçmek için kullanılır.
 

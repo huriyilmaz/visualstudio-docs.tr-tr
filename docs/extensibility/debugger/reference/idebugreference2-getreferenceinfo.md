@@ -1,6 +1,6 @@
 ---
-description: Bir başvuruyu açıklayan DEBUG_REFERENCE_INFO yapısını alır.
-title: 'IDebugReference2:: Getreferenceınfo | Microsoft Docs'
+description: Bir DEBUG_REFERENCE_INFO açıklayan bir veri yapısı alır.
+title: IDebugReference2::GetReferenceInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 26445a6599e7e4b74b81de44cf891f95542d9c564a25a40944ed87eee6a46a2e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 88dc8d4bdbc0e354ccc327aa0c5b6968091c19c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338559"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029768"
 ---
 # <a name="idebugreference2getreferenceinfo"></a>IDebugReference2::GetReferenceInfo
-Bir başvuruyu açıklayan [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısını alır. Daha sonraki kullanımlar için ayrılmıştır.
+Başvuru [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıyı alır. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,22 +53,22 @@ int GetReferenceInfo (
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-'ndaki [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısında doldurulacak alanları belirleme [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) numaralandırmasındaki bayrakların birleşimi.
+[in] Veri verisi [yapısında doldurulacak](../../../extensibility/debugger/reference/debugref-info-flags.md) alanları belirleyen DEBUGREF_INFO_FLAGS bir bayrak [DEBUG_REFERENCE_INFO.](../../../extensibility/debugger/reference/debug-reference-info.md)
 
 `nRadix`\
-'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
+[in] Herhangi bir sayısal bilgiyi biçimlendirmek için kullanılacak radyan.
 
 `dwTimeout`\
-'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süre (milisaniye cinsinden). `INFINITE`Sonsuza kadar beklemek için kullanın.
+[in] Bu yöntemden dönmeden önce bek için milisaniye cinsinden en uzun süre. Süresiz `INFINITE` olarak beklemek için kullanın.
 
 `rgpArgs`\
-'ndaki [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnelerinden oluşan bir dizi. Gelecekte kullanılmak üzere ayrılmıştır; null değere ayarlayın.
+[in] [IDebugReference2 nesneleri dizisi.](../../../extensibility/debugger/reference/idebugreference2.md) Gelecekteki kullanım için ayrılmıştır; null değere ayarlanır.
 
 `dwArgCount`\
-'ndaki Dizideki başvuru bağımsız değişkenlerinin sayısı `rgpArgs` . Gelecekte kullanılmak üzere ayrılmıştır; 0 olarak ayarlayın.
+[in] Dizideki başvuru bağımsız `rgpArgs` değişkenlerinin sayısı. Gelecekteki kullanım için ayrılmıştır; 0 olarak ayarlayın.
 
 `pReferenceInfo`\
-dışı Özelliğin açıklamasıyla doldurulmuş [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapısı.
+[out] Özelliğin [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) doldurulan bir yapıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

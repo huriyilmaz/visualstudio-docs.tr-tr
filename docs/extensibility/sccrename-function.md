@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9085d764378c5e0743d239b3bde427befffb2d7cf1945f9ce8fa054ea780af4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 710816d2602e9d0ea2d169f4d5884072482a1665
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359006"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062660"
 ---
 # <a name="sccrename-function"></a>SccRename İşlevi
 Bu işlev, kaynak denetim sistemindeki bir dosyayı yeniden adlandırır.

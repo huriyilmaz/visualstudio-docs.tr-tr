@@ -11,14 +11,15 @@ ms.assetid: 30fa316b-a746-4028-acae-4efcd2066f38
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c69e1860e3a0b534e53d5431c77cdfa3753a6da1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 81687fad1bb60d418bb88a099ad39758cb0b7faf7eaf252a65ce33d92739bb2b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157863"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345127"
 ---
 # <a name="idiaenumtablesget_count"></a>IDiaEnumTables::get_Count
 Tablo sayısını alır.

@@ -11,12 +11,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 4dca95365bb93f8129d513be19708862b393854d90f46a3cc6bb23002f566743
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7e08163be95d2249b091ce40072d54111e35ef2b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121441100"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033284"
 ---
 # <a name="how-to-create-a-test-settings-file-for-a-distributed-load-test"></a>Nasıl kullanılır: Dağıtılmış yük testi için test ayarları dosyası oluşturma
 
@@ -54,7 +54,7 @@ Bu adımları izleyin ve çözümde çalışmayı planlayılan yük testleri iç
 
 4. **Ekle'yi seçin.**
 
-     Yeni test ayarları dosyası, Çözüm Gezgini **Öğeleri** klasörünün **altında görüntülenir.**
+     Yeni test ayarları dosyası, **Çözüm Gezgini** Öğeleri klasörünün **altında görüntülenir.**
 
 5. **Test Ayarlar** iletişim kutusu görüntülenir. Genel **sayfası** seçilidir.
 
@@ -68,7 +68,7 @@ Bu adımları izleyin ve çözümde çalışmayı planlayılan yük testleri iç
 
 9. **Roller'i seçin.**
 
-     **Roller** sayfası görüntülenir.
+     Roller  sayfası görüntülenir.
 
      ![Test ayarı rolü](../test/media/load_testtestrole.png)
 
@@ -110,7 +110,7 @@ Bu adımları izleyin ve çözümde çalışmayı planlayılan yük testleri iç
 
      **Rol ve tanılama veri bağdaştırıcıları örneği:**
 
-     Örneğin, "SQL kullanır" özniteliği "True" olarak ayarlanmış "Masaüstü İstemcisi" adlı bir istemci rolü ve "RAM > 16 GB" olarak ayarlanmış bir öznitelike sahip "SQL Server" adlı bir sunucu rolü oluşturabilirsiniz. "Masaüstü İstemcisi"nin, Roller sayfasında Testleri  çalıştırmak için rol olarak  ayarla'yi seçerek testleri çalıştıracaklarını belirtirse, test denetleyicisi testleri çalıştıracak "Uses SQL" özniteliğini içeren test aracıları olan makineleri seçer. Test denetleyicisi ayrıca SQL yalnızca role dahil olan veri ve tanılama bağdaştırıcıları tarafından tanımlanan verileri toplamak için "RAM > 16 GB" özniteliğini içeren test aracıları olan sunucu makinelerini de seçer. "Masaüstü İstemcisi" test aracısı, bu rol için veri ve tanılama bağdaştırıcıları da seçmenizde çalıştırıldık makineler için veri toplayabilirsiniz.
+     Örneğin, "SQL kullanır" özniteliği "True" olarak ayarlanmış "Masaüstü İstemcisi" adlı bir istemci rolü ve "RAM > 16 GB" olarak ayarlanmış bir öznitelike sahip "SQL Server" adlı bir sunucu rolü oluşturabilirsiniz. "Masaüstü İstemcisi"nin, Roller sayfasında Testleri  çalıştırmak için rol olarak  ayarla'yi seçerek testleri çalıştıracaklarını belirtirse, test denetleyicisi testleri çalıştıracak "Uses SQL" özniteliğini içeren test aracıları olan makineleri seçer. Test denetleyicisi ayrıca yalnızca role dahil olan veri ve tanılama bağdaştırıcıları tarafından tanımlanan verileri toplamak için "RAM > 16 GB" özniteliğini içeren test aracıları olan SQL sunucu makinelerini de seçer. "Masaüstü İstemcisi" test aracısı, bu rol için veri ve tanılama bağdaştırıcıları da seçmenizde çalıştırıldık makineler için veri toplayabilirsiniz.
 
      Tanılama veri bağdaştırıcılarının her biri ve nasıl yapılandırıldıklarının ayrıntıları için aşağıdaki tabloda ilişkilendirilmiş konuyu görüntüebilirsiniz.
 

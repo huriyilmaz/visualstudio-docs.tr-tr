@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Built-In Renklenebilir öğeleri kullanma | Microsoft Docs'
-description: dil hizmetiniz için Visual Studio tümleşik geliştirme ortamında (ıde) yerleşik renklenebilir öğeleri nasıl kullanacağınızı öğrenin.
+title: 'Nasıl kullanılır: Renk Built-In Öğeleri | Microsoft Docs'
+description: Dil hizmetiniz için tümleşik geliştirme ortamında (IDE) yerleşik renk Visual Studio kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,30 +14,30 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea6982d854380b8722e395db11f2ac5099a9bc26dd972ea0730cfbfeef586303
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 903a69eb19fb0d70558302aee4ae356ee65224ba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388675"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063271"
 ---
-# <a name="how-to-use-built-in-colorable-items"></a>Nasıl yapılır: yerleşik renklenebilir öğeleri kullanma
-Yerleşik renklenebilir öğeleri kullanmadan önce, kendi özel renksiz öğelerinizi sağlamaktan önce tümleşik geliştirme ortamına (IDE) işaret etmeniz gerekir ve bu durumda <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> nesneler olur. Bu, dil hizmeti için bir kayıt defteri girişi ayarlayarak yapabilirsiniz.
+# <a name="how-to-use-built-in-colorable-items"></a>Nasıl kullanılır: Yerleşik renklenebilir öğeleri kullanma
+Yerleşik renklenebilir öğeleri kullanmadan önce, önce tümleşik geliştirme ortamına (IDE) kendi özel renklenebilir öğelerinizi sağlamamanızı (bu durumda nesne) <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> işaretlendirmeniz gerekir. Dil hizmeti için bir kayıt defteri girişi ayarerek bunu yapacaktır.
 
 ## <a name="to-use-built-in-colorable-items"></a>Yerleşik renklenebilir öğeleri kullanmak için
 
-1. **HKEY_LOCAL_MACHINE\VisualStudio\\<X. Y> \Languages\Language Services \\<dil adı \>**, burada \<X.Y> bir sürümüdür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve \<Language Name> dilinizin adıdır, **RequestStockColors** adlı bir DWORD kayıt defteri giriş değeri oluşturun.
+1. **HKEY_LOCAL_MACHINE\VisualStudio<\\ X.Y>\Languages\Language Services \\<\> Dil** Adı altında, bir sürümüdür ve dilinizin adıdır, \<X.Y> [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] \<Language Name> **RequestStockColors** adlı bir DWORD kayıt defteri giriş değeri oluşturun.
 
-2. **RequestStockColors** kayıt defteri girdisinin değerini *1* olarak ayarlayın.
+2. **RequestStockColors kayıt defteri** giriş değerini *1 olarak ayarlayın.*
 
-    Kayıt defteri girişini oluşturduktan sonra, Colorizer 'ın yöntemi, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS> Düzenleyici tarafından kullanılacak renk öznitelikleri dizisini dolduracak şekilde numaralandırmanın üyelerini kullanabilir.
+    Kayıt defteri girdisini oluşturdukta, renklandırıcı yönteminiz, düzenleyici tarafından kullanmak üzere renk öznitelikleri dizisini doldurmak için sabitleyicinin <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS> üyelerini kullanabilir.
 
    > [!NOTE]
-   > Özel renklenebilir öğeler sağlıyorsanız bu kayıt defteri girişini ayarlamayın. Daha fazla bilgi için bkz. [özel renklenebilir öğeler](../../extensibility/internals/custom-colorable-items.md).
+   > Özel renklenebilir öğeler sağlıyorsanız bu kayıt defteri girişini ayarlayamazsanız. Daha fazla bilgi için [bkz. Özel renkleştirilebilir öğeler.](../../extensibility/internals/custom-colorable-items.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Özel düzenleyicilerde söz dizimi renklendirmesi](../../extensibility/syntax-coloring-in-custom-editors.md)
-- [Eski dil hizmetinde söz dizimi renklendirmesi](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
-- [Sözdizimi renklendirme uygulama](../../extensibility/internals/implementing-syntax-coloring.md)
-- [Özel renklenebilir öğeler](../../extensibility/internals/custom-colorable-items.md)
-- [Eski dil hizmetini Kaydet](../../extensibility/internals/registering-a-legacy-language-service2.md)
+- [Eski dil hizmetlerinde söz dizimi renklendirme](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
+- [Söz dizimi renklendirmesi uygulama](../../extensibility/internals/implementing-syntax-coloring.md)
+- [Özel renkleştirilebilir öğeler](../../extensibility/internals/custom-colorable-items.md)
+- [Eski dil hizmetini kaydetme](../../extensibility/internals/registering-a-legacy-language-service2.md)

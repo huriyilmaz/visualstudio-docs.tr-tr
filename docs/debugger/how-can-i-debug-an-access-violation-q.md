@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814810d6a7145648044ada1a772e4febc2d37a29a922d332dd9af87907753929
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ae42f11fa04f3f4fa2121756a382f7a8676778ec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362476"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080812"
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>C++ erişim Ihlalinde nasıl hata ayıklayabilirim?
 

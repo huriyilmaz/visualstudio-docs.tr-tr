@@ -13,16 +13,16 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 860b63f5ae01d74df27b4a15f5f5769b2deffffa6bd258c147e4ce63d0abc0aa
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 29970ff3c50a0e28e35751e1c9807f201f48f51f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411001"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047874"
 ---
 # <a name="model-user-requirements"></a>Kullanıcı gereksinimlerini modelleme
 
-Visual Studio etkinlikleri ve sisteminizin hedeflerine ulaşmalarına yardımcı olmak için oynadığı parça hakkında diyagramlar çizerek kullanıcı ihtiyaçlarını anlamanıza, tartışmanıza ve iletişim kurmanıza yardımcı olur. Gereksinimler modeli, her biri kullanıcıların ihtiyaçlarının farklı bir yönüne odaklanan bu diyagramlardan bir kümedir. Video gösterimi için bkz. [İş Etki Alanını Modelleme.](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)
+Visual Studio etkinlikleri ve sisteminizin hedeflerine ulaşmalarına yardımcı olmak için oynadığı parça hakkında diyagramlar çizerek kullanıcı ihtiyaçlarını anlamanıza, tartışmanıza ve iletişim kurmanıza yardımcı olur. Gereksinimler modeli, her biri kullanıcıların ihtiyaçlarının farklı bir yönüne odaklanan bu diyagramlardan bir kümedir. Bir video gösterimi için bkz. [İş Etki Alanını Modelleme.](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)
 
 Her model türünü destekleyen Visual Studio sürümlerini görmek için [bkz. Mimari ve](../modeling/analyze-and-model-your-architecture.md#VersionSupport)modelleme araçları için sürüm desteği.
 
@@ -57,7 +57,7 @@ Kullanıcıların gereksinimlerinin birkaç farklı görünümlerini oluşturabi
 |Ek belgeler veya iş öğeleri|Performans, güvenlik, kullanılabilirlik ve güvenilirlik ölçütleri.|[Hizmet kalitesi gereksinimlerini açıklama](#QoSRequirements)|
 |Ek belgeler veya iş öğeleri|Belirli bir kullanım durumuna özgü değil kısıtlamalar ve kurallar|[İş kurallarını gösterme](#BusinessRules)|
 
-Diyagram türlerinin çoğunun başka amaçlar için kullanılaca dikkat kullanılmaktadır. Diyagram türlerine genel bakış için [bkz. Uygulamanıza model oluşturma.](../modeling/create-models-for-your-app.md)
+Diyagram türlerinin çoğunun başka amaçlar için kullanıla değiştirilebilir. Diyagram türlerine genel bakış için [bkz. Uygulamanıza model oluşturma.](../modeling/create-models-for-your-app.md)
 
 ## <a name="showing-business-rules"></a><a name="BusinessRules"></a> Showing Business Rules
 
@@ -67,9 +67,9 @@ Birçok iş kuralı, kavramsal sınıflar arasındaki ilişkiler üzerinde kıs�
 
 ![Order sınıfına eklenen Açıklama'daki kural.](../modeling/media/uml_reqmcd2.png)
 
-*Dinamik iş kuralları,* izin verilebilecek olay dizilerini kısıtlar. Örneğin, bir kullanıcının sisteminiz üzerinde başka işlemler gerçekleştirmeden önce oturum açması gerektiğini göstermek için bir sıra veya etkinlik diyagramı kullanırsiniz.
+*Dinamik iş kuralları,* izin verilebilecek olay dizilerini kısıtlar. Örneğin, bir kullanıcının sisteminiz üzerinde başka işlemler gerçekleştirmeden önce oturum açması gerektiğini göstermek için bir sıra veya etkinlik diyagramı kullanabilirsiniz.
 
-Ancak birçok dinamik kural, statik kurallarla değiştirerek daha etkili ve genel olarak belirtiliyor olabilir. Örneğin, kavramsal sınıf modelinde bir sınıfa 'Logged In' Boole özniteliği ekleme. Oturum Açma'ya kullanım durumundaki günlüğün sonkoşulları olarak ve diğer kullanım durumlarının çoğunun önkoşulları olarak eklemeniz gerekir. Bu yaklaşım, olay dizilerinin olası tüm birleşimlerini tanımlamayı önlemenizi sağlar. Ayrıca modele yeni kullanım örnekleri eklemeniz gereken durumlarda da daha esnektir.
+Ancak birçok dinamik kural, statik kurallarla değiştirerek daha etkili ve genel olarak belirtiliyor olabilir. Örneğin, kavramsal sınıf modelinde bir sınıfa 'Logged In' Boole özniteliği ekleme. Oturum Açma'ya kullanım durumundaki günlüğün sonkoşulları olarak ve diğer kullanım örneklerinden çoğunun önkoşulları olarak eklemeniz gerekir. Bu yaklaşım, olay dizilerinin olası tüm birleşimlerini tanımlamayı önlemenizi sağlar. Ayrıca modele yeni kullanım örnekleri eklemeniz gereken durumlarda da daha esnektir.
 
 Buradaki seçimin gereksinimleri nasıl tanımladığınızla ilgili olduğunu ve bunun program kodundaki gereksinimleri nasıl uygulayasınızdan bağımsız olduğunu fark edin.
 

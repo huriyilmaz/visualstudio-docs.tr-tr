@@ -11,14 +11,15 @@ ms.assetid: 9d5465c7-f862-47a7-b249-4116605075a6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f86e7b9eafe9b211ff12d8e648cf554041fff195
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: f1b5178193ac7f2f4c7887808ff928447ed08ec420c22f65c738c52c41079e1f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223972"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121426449"
 ---
 # <a name="marker_serieswrite_alert-method"></a>marker_series:: write_alert yöntemi
 Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.

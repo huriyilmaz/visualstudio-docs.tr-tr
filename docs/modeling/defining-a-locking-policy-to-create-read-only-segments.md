@@ -1,6 +1,6 @@
 ---
 title: Salt Okunur Kesimler Oluşturmak için Kilitleme İlkesi Tanımlama
-description: Bir programın okunabilir ancak değiştirilene kadar etki alanına özgü dil (DSL) modelinin bir bölümünü veya hepsini kilitlemek için bir ilke tanımlamayı öğrenin.
+description: Bir program için bir ilkeyi, bir etki alanına özgü dil (DSL) modelinin okunmasını, ancak değiştirilmemesi için nasıl kilitleyebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,100 +10,100 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: e445e59fc91fc97cf85b28ee339c604c1e4c6261333d9e15ac66d746a0422aa0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c10fc92d222ebda2ad7e81549c91413d95825f2a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121316883"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047952"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>Salt Okunur Kesimler Oluşturmak için Kilitleme İlkesi Tanımlama
-Visual Studio Görselleştirme ve Modelleme SDK'sı'nın Sabitlik API'si, bir programın etki alanına özgü dil (DSL) modelinin bir kısmını veya hepsini okuyabilsin ama değiştirilesin diye kilitlemesini sağlar. Bu salt okunur seçenek, örneğin, bir kullanıcının iş arkadaşlarınızdan DSL modeline not ek açıklama ve gözden geçirmesini isteyerek özgün modeli değiştirmelerine izin veremelerini sağ şekilde etkinleştirmek için kullanılabilir.
+Visual Studio görselleştirme ve modelleme SDK 'sının kullanılabilirlik apı 'si, bir programın, bir etki alanına özgü dil (DSL) modelinin bir kısmını veya tamamını kilitlemesini, böylece okunabilmesi ancak değiştirilememesini sağlar. Bu salt okunurdur seçeneği, örneğin, bir kullanıcının iş arkadaşlarından bir DSL modeline açıklama ekleme ve gözden geçirmesine izin vermesini isteyebilir, ancak orijinalin değiştirilmesini engelleyebilir.
 
- Ayrıca DSL'nin yazarı olarak bir kilitleme ilkesi *tanımlayabilirsiniz.* Kilitleme ilkesi hangi kilitlere izin verildiğini, hangilerinin izin verilmediğini veya zorunlu olduğunu tanımlar. Örneğin, bir DSL yayımlarsanız, üçüncü taraf geliştiricileri yeni komutlarla genişletmeye teşvik yapabilirsiniz. Ancak, modelin belirtilen bölümlerinin salt okunur durumunu değiştirmelerini önlemek için bir kilitleme ilkesi de kullanabilirsiniz.
+ Ayrıca, bir DSL yazarı olarak bir *kilitleme ilkesi tanımlayabilirsiniz.* Kilitleme ilkesi hangi kilitlerin izin verileceğini, izin verilmediğini veya zorunlu olduğunu tanımlar. Örneğin, bir DSL yayımladığınızda, üçüncü taraf geliştiricilere yeni komutlarla genişletecek şekilde teşvik edebilirsiniz. Ancak, modelin belirtilen bölümlerinin salt okunurdur durumunu değiştirmesini engellemek için bir kilitleme ilkesi de kullanabilirsiniz.
 
 > [!NOTE]
-> Bir kilitleme ilkesi, yansıma kullanılarak yok olabilir. Üçüncü taraf geliştiriciler için net bir sınır sağlar, ancak güçlü güvenlik sağlamaz.
+> Kilitleme ilkesi, yansıma kullanılarak atlatılabilir. Üçüncü taraf geliştiricilere yönelik açık bir sınır sağlar, ancak güçlü güvenlik sağlamaz.
 
- Görselleştirme ve Modelleme SDK'sı web Visual Studio [daha fazla bilgi ve örnek](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db) bulabilirsiniz.
+ daha fazla bilgi ve örnek Visual Studio [görselleştirme ve modelleme SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db) web sitesinde bulunabilir.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="setting-and-getting-locks"></a>Ayar ve Alma Kilitleri
- Depoda, bölümde veya tek bir öğede kilitler ayarlayın. Örneğin, bu deyim model öğesinin silinmesini ve özelliklerinin değişmesini de önler:
+## <a name="setting-and-getting-locks"></a>Kilitleri ayarlama ve alma
+ Mağaza üzerinde, bir bölümde veya tek bir öğede kilit ayarlayabilirsiniz. Örneğin, bu ifade bir model öğesinin silinmesini engeller ve ayrıca özelliklerinin değiştirilmesini engeller:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling.Immutability; ...
 element.SetLocks(Locks.Delete | Locks.Property);
 ```
 
- İlişkilerdeki değişiklikleri, öğe oluşturmayı, bölümler arasındaki hareketi ve bir roldeki bağlantıları yeniden sıralamayı önlemek için diğer kilit değerleri kullanılabilir.
+ Diğer kilit değerleri, ilişkilerin, öğe oluşturma, bölümler arasında hareket etme ve bir roldeki bağlantıları yeniden sıralama gibi değişiklikleri engellemek için kullanılabilir.
 
- Kilitler hem kullanıcı eylemlerine hem de program koduna uygulanır. Program kodu bir değişiklik yapmaya `InvalidOperationException` çalışırsa, bir atılan. Geri Al veya Tekrarla işlemi sırasında kilitler yoksayılır.
+ Kilitler hem kullanıcı eylemlerine hem de program koduna uygulanır. Program kodu değişiklik yapmayı denerse, bir `InvalidOperationException` oluşturulur. Geri alma veya yineleme işleminde kilitler yok sayılır.
 
- kullanarak bir öğenin verilen kümede herhangi bir kilit olup olmadığını keşfedebilirsiniz ve kullanarak bir öğede geçerli `IsLocked(Locks)` kilitler kümesi elde `GetLocks()` edebilirsiniz.
+ Bir öğenin kullanarak belirli bir küme içinde herhangi bir kilidi olup olmadığını `IsLocked(Locks)` ve kullanarak bir öğe üzerinde geçerli kilit kümesini elde edip etmeyeceğinizi bulabilirsiniz `GetLocks()` .
 
- Bir işlem kullanmadan bir kilit ayarlayın. Kilit veritabanı, depolamanın bir parçası değildir. Depoda bir değer değişikliğine (örneğin OnValueChanged içinde) yanıt olarak bir kilit ayarlarsanız, Geri Alma işleminin parçası olan değişikliklere izin ver gerekir.
+ İşlem kullanmadan bir kilit ayarlayabilirsiniz. Kilit veritabanı, deponun bir parçası değil. Depodaki bir değer değişikliğine yanıt olarak bir kilit ayarlarsanız, örneğin OnValueChanged içinde, geri alma işleminin parçası olan değişikliklere izin vermeniz gerekir.
 
- Bu yöntemler, ad alanı içinde tanımlanan uzantı <xref:Microsoft.VisualStudio.Modeling.Immutability> yöntemleridir.
+ Bu yöntemler ad alanında tanımlanan genişletme yöntemleridir <xref:Microsoft.VisualStudio.Modeling.Immutability> .
 
-### <a name="locks-on-partitions-and-stores"></a>Bölümler ve depolar üzerinde kilitler
- Kilitler bölümlere ve depoya da uygulanabilir. Bir bölümde ayarlanmış bir kilit, bölümdeki tüm öğelere uygulanır. Bu nedenle, örneğin, aşağıdaki deyim kendi kilitlerinin durumları ne olursa olsun bir bölümdeki tüm öğelerin silinmesini önler. Bununla birlikte, gibi diğer `Locks.Property` kilitler yine de tek tek öğelerde ayarlanmış olabilir:
+### <a name="locks-on-partitions-and-stores"></a>Bölümler ve depolardaki kilitler
+ Kilitler ayrıca bölümlere ve depoya da uygulanabilir. Bölüm üzerinde ayarlanan bir kilit, bölümdeki tüm öğelere uygulanır. Bu nedenle, örneğin, aşağıdaki ifade, kendi kilitleri durumlarından bağımsız olarak bir bölümdeki tüm öğelerin silinmesini engeller. Bununla birlikte, gibi diğer kilitler `Locks.Property` ayrı ayrı öğeler üzerinde de ayarlanabilir:
 
 ```csharp
 partition.SetLocks(Locks.Delete);
 ```
 
- Store'da ayarlanmış bir kilit, bölümler ve öğelerde bu kilidin ayarlarından bağımsız olarak tüm öğeleri için geçerlidir.
+ Depolarda ayarlanan bir kilit, bölümler ve öğeler üzerindeki bu kilidin ayarlarından bağımsız olarak tüm öğelerine uygulanır.
 
-### <a name="using-locks"></a>Kilitleri Kullanma
+### <a name="using-locks"></a>Kilitleri kullanma
  Aşağıdaki örnekler gibi şemaları uygulamak için kilitleri kullanabilirsiniz:
 
-- Açıklamayı temsil eden öğeler dışındaki tüm öğelerde ve ilişkilerde yapılan değişikliklere izin alma. Bu, kullanıcıların modeli değiştirmeden modele not ek açıklamalarını sağlar.
+- Açıklamaları temsil eden öğeler hariç tüm öğe ve ilişkilerde değişikliklere izin vermeyin. Bu, kullanıcıların bir modele değişiklik yapmadan ek açıklama eklemesini sağlar.
 
-- Varsayılan bölümdeki değişikliklere izin verme, ancak diyagram bölümde değişikliklere izin verme. Kullanıcı diyagramı yeniden düzenleyebilir ancak temel alınan modeli değiştirilemez.
+- Varsayılan bölümdeki değişikliklere izin vermeyin, ancak diyagram bölümünde değişikliklere izin verin. Kullanıcı diyagramı yeniden düzenleyebilir, ancak temel modeli değiştiremezler.
 
-- Ayrı bir veritabanına kayıtlı bir grup kullanıcı dışında Mağazada yapılan değişikliklere izin ve değildir. Diğer kullanıcılar için diyagram ve model salt okunur olur.
+- Ayrı bir veritabanına kayıtlı Kullanıcı grubu dışında depoda değişikliklere izin vermeyin. Diğer kullanıcılar için Diyagram ve model salt okunurdur.
 
-- Diyagramın Boole özelliği true olarak ayarlanırsa modelde yapılan değişikliklere izin ve değildir. Bu özelliği değiştirmek için bir menü komutu sağlar. Bu, kullanıcıların yanlışlıkla değişiklik yapmalarını sağlamaya yardımcı olur.
+- Diyagramın Boolean özelliği true olarak ayarlandıysa modelde değişikliklere izin vermeyin. Bu özelliği değiştirmek için bir menü komutu sağlayın. Bu, kullanıcılara yanlışlıkla değişiklik yapmamasını sağlamaya yardımcı olur.
 
-- Öğelerin ve belirli sınıfların ilişkilerinin ek ve silinmesine izin verme, ancak özellik değişikliklerine izin verme. Bu, kullanıcılara özellikleri dolduracakları sabit bir form sağlar.
+- Belirli sınıfların öğelerinin ve ilişkilerinin eklenmesine ve silinmesine izin vermeyin, ancak özellik değişikliklerine izin vermez. Bu, kullanıcılara özellikleri dolduracakları sabit bir form sağlar.
 
-## <a name="lock-values"></a>Değerleri kilitleme
- Kilitler Bir Mağazada, Bölümde veya tek tek ModelElement'de ayar olabilir. Kilitler bir `Flags` numaralamadır: değerlerini '&#124;' kullanarak birleştirebilirsiniz.
+## <a name="lock-values"></a>Değerleri kilitle
+ Kilitler bir mağaza, bölüm veya tek bir ModelElement üzerinde ayarlanabilir. Kilitler bir `Flags` sabit listesi: ' &#124; ' kullanarak değerlerini birleştirebilirsiniz.
 
-- ModelElement kilitleri her zaman Bölümünün Kilitlerini içerir.
+- Bir ModelElement 'in kilitleri her zaman bölümünün kilitlerini içerir.
 
-- Bir Bölümün kilitleri her zaman Depo Kilitlerini içerir.
+- Bir bölümün kilitleri her zaman deponun kilitlerini içerir.
 
-  Bir bölümde veya depoda kilit ayaramaz ve aynı zamanda tek bir öğede kilidi devre dışı bırakamaz.
+  Bir bölüm veya mağaza üzerinde kilit ayarlayamazsınız ve aynı zamanda tek bir öğe üzerindeki kilidi devre dışı bırakın.
 
-|Değer|True ise `IsLocked(Value)` anlamına gelir|
+|Değer|True ise anlamı `IsLocked(Value)`|
 |-|-|
-|Hiçbiri|Kısıtlama yok.|
-|Özellik|Öğelerin etki alanı özellikleri değiştirilemez. Bu, bir ilişkide bir etki alanı sınıfının rolü tarafından oluşturulan özellikler için geçerli değildir.|
-|Ekle|Yeni öğeler ve bağlantılar bir bölümde veya depoda oluşturulamaz.<br /><br /> için geçerli `ModelElement` değildir.|
-|Taşı|True ise veya true ise `element.IsLocked(Move)` öğe bölümler arasında `targetPartition.IsLocked(Move)` taşınamaz.|
-|Sil|Bu kilit öğenin kendisinde ayarlanırsa veya silme işleminin yayılamayacak herhangi bir öğede (katıştırılmış öğeler ve şekiller gibi) bir öğe silinemez.<br /><br /> Öğesini kullanarak `element.CanDelete()` bir öğenin silinip siline olmadığını keşfedebilirsiniz.|
-|Sipariş|Bir roleplayer'da bağlantıların sırası değiştirilemez.|
-|Roleplayer|Bu öğede kaynak olarak alınan bağlantı kümesi değiştirilemez. Örneğin, yeni öğeler bu öğenin altına katıştıramaz. Bu, bu öğenin hedef olduğu bağlantıları etkilemez.<br /><br /> Bu öğe bir bağlantı ise, kaynağı ve hedefi etkilenmez.|
-|Tümü|Diğer değerlerin Bit olarak OR değeri.|
+|Hiçbiri|Kısıtlama yoktur.|
+|Özellik|Öğelerin etki alanı özellikleri değiştirilemez. Bu, bir ilişkide bir etki alanı sınıfının rolü tarafından oluşturulan özellikler için geçerlidir.|
+|Ekle|Yeni öğeler ve bağlantılar bir bölüm veya depoda oluşturulamaz.<br /><br /> İçin geçerli değildir `ModelElement` .|
+|Taşı|Öğesi true ise bölümler arasında taşınamaz `element.IsLocked(Move)` veya `targetPartition.IsLocked(Move)` true ise geçerlidir.|
+|Sil|Bu kilit öğenin kendisinde ayarlandıysa veya katıştırılmış öğeler ve şekiller gibi silme işleminin yayıldığı öğelerin herhangi birinde bir öğe silinemez.<br /><br /> `element.CanDelete()`Bir öğenin silinip silinemeyeceğini saptamak için kullanabilirsiniz.|
+|Sütunlarını|Bir rolündeki RolePlayer 'da bağlantıların sıralaması değiştirilemez.|
+|Rolündeki RolePlayer|Bu öğede kaynağı olan bağlantı kümesi değiştirilemez. Örneğin, yeni öğeler bu öğe altına Katıştırılamaz. Bu, bu öğenin hedef olduğu bağlantıları etkilemez.<br /><br /> Bu öğe bir bağlantı ise, kaynağı ve hedefi etkilenmez.|
+|Tümü|Diğer değerlerin bit düzeyinde veya diğer değerleri.|
 
-## <a name="locking-policies"></a>İlkeleri Kilitleme
- DSL'nin yazarı olarak bir kilitleme ilkesi *tanımlayabilirsiniz.* Kilitleme ilkesi SetLocks() işlemiyle denetlenmesiyle, belirli kilitlerin ayarlanmış olması engellenebilir veya belirli kilitlerin ayarlanmış olması zorunlu olabilir. Genellikle, kullanıcıların veya geliştiricilerin DSL'nin amaçlanan kullanımını yanlışlıkla bir değişken bildirerek yanlışlıkla dolamalarını engellememek için bir kilitleme ilkesi `private` kullanırsınız.
+## <a name="locking-policies"></a>Ilkeleri kilitleme
+ Bir DSL yazarı olarak bir *kilitleme ilkesi* tanımlayabilirsiniz. Bir kilitleme ilkesi SetLock () işlemini, belirli kilitlerin ayarlanmasını veya belirli kilitlerin ayarlanması gerektiğini önleyebilmenizi engelleyecek şekilde düzenler. Genellikle, bir kilitleme ilkesi kullanarak kullanıcıların veya geliştiricilerin, bir DSL 'nin amaçlanan kullanımını yanlışlıkla, bir değişken bildirebileceğiniz şekilde kullanmasını önleyin `private` .
 
- Kilitleri öğenin türüne bağlı tüm öğelerde ayarlamak için bir kilitleme ilkesi de kullanabilirsiniz. Bunun nedeni, `SetLocks(Locks.None)` bir öğe dosyadan ilk kez oluşturulduğunda veya dosyadan deserialized olduğunda her zaman çağrılır.
+ Ayrıca, öğe türüne bağımlı tüm öğelerde kilitleri ayarlamak için bir kilitleme ilkesi de kullanabilirsiniz. Bunun nedeni `SetLocks(Locks.None)` her zaman bir öğe ilk oluşturulduğunda veya dosyadan seri durumdan çıkarıldığı zaman çağrılır.
 
- Ancak, bir öğenin kilitlerini yaşam süresi boyunca değiştirmesi için bir ilke kullanılamaz. Bu etkiyi elde etmek için çağrıları kullan `SetLocks()` gerekir.
+ Ancak, bir ilke, ömrü boyunca bir öğe üzerindeki kilitleri değiştirmek için kullanılamaz. Bu etkiyi elde etmek için, için çağrıları kullanmanız gerekir `SetLocks()` .
 
- Kilitleme ilkesi tanımlamak için şunları yapmak gerekir:
+ Kilitleme ilkesi tanımlamak için şunları yapmanız gerekir:
 
-- uygulayan bir sınıf <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> oluşturun.
+- Uygulayan bir sınıf oluşturun <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> .
 
-- Bu sınıfı DSL'nizin DocData'sı aracılığıyla kullanılabilen hizmetlere ekleyin.
+- Bu sınıfı, DSL 'nizin DocData aracılığıyla kullanılabilen hizmetlere ekleyin.
 
 ### <a name="to-define-a-locking-policy"></a>Kilitleme ilkesi tanımlamak için
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> aşağıdaki tanımı içerir:
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> Aşağıdaki tanıma sahiptir:
 
 ```csharp
 public interface ILockingPolicy
@@ -114,7 +114,7 @@ public interface ILockingPolicy
 }
 ```
 
- Bu yöntemler Store, Partition veya ModelElement üzerinde çağrısı `SetLocks()` yapılırken çağrılır. Her yöntemde önerilen bir kilit kümesi sağlanır. Önerilen kümeyi veya kilitleri ekleyip çıkarabilirsiniz.
+ Bu yöntemler `SetLocks()` , bir mağaza, bölüm veya ModelElement üzerinde bir çağrı yapıldığında çağrılır. Her yöntemde, önerilen bir kilit kümesi sunulur. Önerilen kümeyi döndürebilir veya kilitleri ekleyip çıkarabilirsiniz.
 
  Örnek:
 
@@ -145,16 +145,16 @@ namespace Company.YourDsl.DslPackage // Change
     }
 ```
 
- Kullanıcıların, diğer kod çağrıları bile olsa her zaman öğeleri silebilir olduğundan emin olmak için `SetLocks(Lock.Delete):`
+ Diğer kod çağrısa bile kullanıcıların her zaman öğeleri silebilse emin olmak için `SetLocks(Lock.Delete):`
 
  `return proposedLocks & (Locks.All ^ Locks.Delete);`
 
- MyClass öğesinin her öğesinin tüm özelliklerinde değişikliğin izinlerini değiştirmek için:
+ Her MyClass öğesinin tüm özelliklerinde değişikliğe izin vermemek için:
 
  `return element is MyClass ? (proposedLocks | Locks.Property) : proposedLocks;`
 
-### <a name="to-make-your-policy-available-as-a-service"></a>İlkenizi hizmet olarak kullanılabilir hale yapmak için
- `DslPackage`Projenize, aşağıdaki örnekteki gibi kod içeren yeni bir dosya ekleyin:
+### <a name="to-make-your-policy-available-as-a-service"></a>İlkenizin bir hizmet olarak kullanılabilmesini sağlamak için
+ `DslPackage`Projenizde, aşağıdaki örneğe benzer bir kod içeren yeni bir dosya ekleyin:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;

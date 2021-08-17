@@ -12,12 +12,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
-ms.openlocfilehash: 928e6abedb53ed387b37aa9f90a232a15233bc94b09301af13598f0f56c4c298
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dbe68e27772df3a25cdef7c5bc62211b12f77a9c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387505"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048953"
 ---
 # <a name="how-to-create-multi-project-templates"></a>Nasıl yapılanlar: Çok projeli şablonlar oluşturma
 
@@ -27,13 +27,13 @@ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı ola
 
 Çok projeli şablonlar tek proje şablonlardan farklı davranır. Aşağıdaki benzersiz özelliklere sahiptir:
 
-- Şablon yeni bir proje oluşturmak için kullanılırken, çok projeli bir şablonda tek tek projelere ad atanamaz. Bunun yerine, *vstemplate* **dosyasındaki ProjectTemplateLink** öğesinde **ProjectName** özniteliğini kullanarak her proje için bir ad belirtin.
+- Şablon yeni bir proje oluşturmak için kullanılırken, çoklu proje şablonunda tek tek projelere ad atanamaz. Bunun yerine, *vstemplate* **dosyasındaki ProjectTemplateLink** öğesinde **ProjectName** özniteliğini kullanarak her proje için bir ad belirtin.
 
 - Çok projeli şablonlar farklı dillere yönelik projeler içerebilir, ancak şablonun tamamı yalnızca bir kategoriye yer kapsayabilirsiniz. *Vstemplate* dosyasının **ProjectType** öğesinde şablon kategorisini belirtin.
 
-Çok projeli bir şablon, bir dosyada sıkıştırılmış aşağıdaki *.zip* gerekir:
+Çok projeli bir şablon, aşağıdaki öğeleri  bir.zipiçermeli:
 
-- Çoklu proje şablonunun tamamı için bir kök *vstemplate* dosyası. Bu kök *vstemplate* dosyası, yeni bir proje oluşturmak için iletişim kutusunda görüntülenen meta verileri içerir. Ayrıca şablonda projeler için *vstemplate* dosyalarının nerede bulunacaklarını belirtir. Bu dosya, dosyanın kökünde *.zip.*
+- Çoklu proje şablonunun tamamı için bir kök *vstemplate* dosyası. Bu kök *vstemplate* dosyası, yeni bir proje oluşturmak için iletişim kutusunda görüntülenen meta verileri içerir. Ayrıca şablonda projeler için *vstemplate* dosyalarının nerede bulunacaklarını belirtir. Bu dosya, dosyanın kök *.zip.*
 
 - Tam bir proje şablonu için gereken dosyaları içeren iki veya daha fazla klasör. Klasörler proje için tüm kod dosyalarını ve ayrıca proje için *bir vstemplate* dosyasını içerir.
 
@@ -49,7 +49,7 @@ Birden fazla projeli şablonlar, iki veya daha fazla proje için kapsayıcı ola
 
 Birden çok projeli bir şablon için kök *vstemplate* dosyası aşağıdaki yollarla tek projeli şablondan farklıdır:
 
-- **VSTemplate öğesinin** **Type** özniteliği, öğesi yerine **ProjectGroup** **Project.** Örnek:
+- **VSTemplate öğesinin** **Type** özniteliği, öğesi yerine **ProjectGroup** **değerine Project.** Örnek:
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -101,7 +101,7 @@ Birden çok projeli bir şablon için kök *vstemplate* dosyası aşağıdaki yo
 
    Şablonu **Dışarı Aktarma Sihirbazı** açılır.
 
-4. Şablon Türünü **Seçin sayfasında Şablon'Project** **seçin.** Bir şablona dışarı aktarmayı istediğiniz projelerden birini seçin ve ardından Sonraki'yi **seçin.** (Çözümde her proje için bu adımları yineleyebilirsiniz.)
+4. Şablon Türünü **Seçin sayfasında Şablon'Project** **seçin.** Bir şablona dışarı aktarmayı istediğiniz projelerden birini seçin ve ardından Sonraki'yi **seçin.** (Çözümde yer alan her proje için bu adımları yineleyebilirsiniz.)
 
 5. Şablon Seçeneklerini **Seç sayfasında,** şablonunuz için bir ad ve isteğe bağlı bir açıklama, simge ve önizleme resmi girin. **Son**’u seçin.
 
@@ -120,7 +120,7 @@ Birden çok projeli bir şablon için kök *vstemplate* dosyası aşağıdaki yo
 
    Dosyalar ve klasörler bir dosya .zipsıkıştırılır.
 
-10. Dosya *.zip* proje şablonu dizinine kopyalayın. Varsayılan olarak, bu dizin *%USERPROFILE%\Documents\Visual Studio \<version\> \Templates\ProjectTemplates dizinidir.*
+10. .zip *proje* şablonu dizinine kopyalayın. Varsayılan olarak, bu dizin *%USERPROFILE%\Documents\Visual Studio \<version\> \Templates\ProjectTemplates dizinidir.*
 
 11. Bu Visual Studio Yeni **Dosya'Project**  >    >   seçin ve şablon görüntülendiğinden emin olun.
 

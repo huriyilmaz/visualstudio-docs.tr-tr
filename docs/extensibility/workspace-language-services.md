@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 'da çalışma alanları ve dil Hizmetleri | Microsoft Docs
+title: Visual Studio çalışma alanları ve dil Hizmetleri | Microsoft Docs
 description: Dil hizmetlerinin, çözümler ve projelerle çalışırken kullandıkları aynı zengin dil özelliklerine sahip açık klasör kullanıcılarını nasıl sağlayabilecekleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
@@ -9,12 +9,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: 815cfb9e17fed38b519719010acd997f7fdc5242
-ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
+ms.openlocfilehash: ccf64a52ec4a832fc6e73290fe1deaff3ed4db0de4cf442d2d6da3ecb65e5746
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97877045"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121400458"
 ---
 # <a name="workspaces-and-language-services"></a>Çalışma alanları ve dil Hizmetleri
 
@@ -22,9 +22,9 @@ Dil Hizmetleri, çözüm ve projelerle çalışırken kullandıkları aynı zeng
 
 ## <a name="initialization"></a>Başlatma
 
-Bir [çalışma alanında](workspaces.md)dil Hizmetleri, <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> yalnızca söz konusu dil hizmetinde uzmanlaşmış ve derleme yazma bir şeyi bilen bir uzantı noktasıyla başlatılır. Bu şekilde, bir dil hizmeti sahibi bir derleme sırasında derleyicisini çalıştırmaya yönelik klasörler ve dosyalar içinde kaç desen var olursa olsun, tek bir açık klasör uzantısını koruyabilir (örneğin, MSBuild, makefiles, vb.). Dosya bağlamının oluşturulduğu dosyalar diskte değiştirildiğinde ve dosya bağlamı yenilendiğinde, dil hizmeti sağlayıcısına güncelleştirilmiş dosya bağlamları kümesi bildirilir. Dil hizmeti sağlayıcısı daha sonra modelini güncelleştirebilir.
+Bir [çalışma alanında](workspaces.md)dil Hizmetleri, <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> yalnızca söz konusu dil hizmetinde uzmanlaşmış ve derleme yazma bir şeyi bilen bir uzantı noktasıyla başlatılır. bu şekilde, bir dil hizmeti sahibi bir derleme sırasında derleyicisini çalıştırmaya yönelik klasörler ve dosyalar içinde kaç desen var olursa olsun, tek bir açık klasör uzantısını koruyabilir (örneğin, MSBuild, makefiles, vb.). Dosya bağlamının oluşturulduğu dosyalar diskte değiştirildiğinde ve dosya bağlamı yenilendiğinde, dil hizmeti sağlayıcısına güncelleştirilmiş dosya bağlamları kümesi bildirilir. Dil hizmeti sağlayıcısı daha sonra modelini güncelleştirebilir.
 
-Bir belge düzenleyicide açıldığında, Visual Studio yalnızca eşleşen dosya bağlamı sağlayıcısı bulunan dosya bağlamı türleri gerektiren dil hizmeti sağlayıcılarını kabul eder. Ardından, eşleşen sağlayıcılardan dosya bağlamını, ile seçilen dil hizmeti sağlayıcısına geçirir `ILanguageServiceProvider.InitializeAsync` . Bu dosya bağlamı verileriyle hangi dil hizmeti sağlayıcısının yaptığı, dil hizmeti sağlayıcısının uygulama ayrıntısı, ancak beklenen Kullanıcı deneyimi, bu açık belge için daha zengin bir dil hizmetidir.
+bir belge düzenleyicide açıldığında, Visual Studio yalnızca eşleşen dosya bağlamı sağlayıcısı bulunan dosya bağlamı türleri gerektiren dil hizmeti sağlayıcılarını kabul eder. Ardından, eşleşen sağlayıcılardan dosya bağlamını, ile seçilen dil hizmeti sağlayıcısına geçirir `ILanguageServiceProvider.InitializeAsync` . Bu dosya bağlamı verileriyle hangi dil hizmeti sağlayıcısının yaptığı, dil hizmeti sağlayıcısının uygulama ayrıntısı, ancak beklenen Kullanıcı deneyimi, bu açık belge için daha zengin bir dil hizmetidir.
 
 ## <a name="using-ilanguageserviceprovider"></a>Ilanguageserviceprovider kullanma
 
@@ -62,4 +62,4 @@ Bir dil hizmetini desteklemek için bir uzantıya şunlar gerekir:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Çalışma alanı derlemesi](workspace-build.md) -aç klasörü MSBuild ve makefiles gibi derleme sistemlerini destekler.
+* [çalışma alanı oluşturma](workspace-build.md) -açık klasör, MSBuild ve makefiles gibi derleme sistemlerini destekler.

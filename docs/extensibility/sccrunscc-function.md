@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 277bfe2aa6c49a8d93307ce93d46b6fff6156f4f9c4fc008f6e5bb8e25212a6d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c5694a4ea1183f7f2f4b4b136c8221741adc02de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413953"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028663"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc İşlevi
 Bu işlev kaynak denetimi yönetim aracını çağırır.
@@ -53,7 +53,7 @@ SCCRTN SccRunScc(
 [in] Seçilen dosya adlarının dizisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini geri dönmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|

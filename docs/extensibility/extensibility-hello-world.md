@@ -1,6 +1,6 @@
 ---
 title: Merhaba Dünya uzantısı öğreticisi | Microsoft Docs
-description: bir proje oluşturmayı, komut eklemeyi ve kaynak kodu değiştirmeyi içeren Visual Studio bir uzantı olarak yeni bir komut eklemeyi öğrenin.
+description: Proje oluşturmayı, komut eklemeyi ve kaynak kodu değiştirmeyi içeren Visual Studio uzantısı olarak yeni bir komut eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/14/2019
 ms.topic: tutorial
@@ -11,91 +11,91 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c53e0312de7d687c761546c0d5bd5d125665744fd6b78b71531a2eff749950f1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7ae5cb6712a872844685e167996f1d68c4771a40
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376991"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063622"
 ---
-# <a name="tutorial---create-your-first-extension-hello-world"></a>Öğretici-ilk uzantınızı oluşturun: Merhaba Dünya
+# <a name="tutorial---create-your-first-extension-hello-world"></a>Öğretici - İlk uzantınızı oluşturma: Merhaba Dünya
 
-Bu Merhaba Dünya örnek, Visual Studio için ilk uzantınızı oluşturma konusunda size yol gösterir. Bu öğreticide, Visual Studio için nasıl yeni bir komut ekleyeceğiniz gösterilmektedir.
+Bu Merhaba Dünya örnek, uygulama için ilk uzantınızı oluşturma Visual Studio. Bu öğreticide, uygulamanıza yeni bir komut Visual Studio.
 
-İşlemde şunları yapmayı öğreneceksiniz:
+Bu süreçte şunları yapmayı öğrenirsiniz:
 
 * **[Genişletilebilirlik projesi oluşturma](#create-an-extensibility-project)**
 * **[Özel komut ekleme](#add-a-custom-command)**
-* **[Kaynak kodunu değiştirme](#modify-the-source-code)**
+* **[Kaynak kodu değiştirme](#modify-the-source-code)**
 * **[Çalıştırın](#run-it)**
 
-Bu örnekte, "deyin Merhaba Dünya!" adlı özel bir menü düğmesi eklemek Için Visual C# kullanacaksınız şöyle görünür:
+Bu örnekte Visual C# kullanarak "Say Merhaba Dünya!" adlı özel bir menü düğmesi Merhaba Dünya. şu şekilde görünüyor:
 
 ![Merhaba Dünya komutu](media/hello-world-say-hello-world.png)
 
 > [!NOTE]
-> bu makale Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio genişletilebilirlik](/visualstudio/mac/extending-visual-studio-mac-walkthrough)kılavuzu.
+> Bu makale, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Genişletilebilirlik için Mac için Visual Studio.](/visualstudio/mac/extending-visual-studio-mac-walkthrough)
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-başlamadan önce, ihtiyacınız olan vsıx şablonunu ve örnek kodu içeren **Visual Studio uzantısı geliştirme** iş yükünü yüklediğinizden emin olun.
+Başlamadan önce ihtiyacınız olan VSIX şablonunu ve **Visual Studio** uzantısı geliştirme iş yükünü yüklemiş olduğundan emin olun.
 
 > [!NOTE]
-> bir Visual Studio genişletilebilirlik projesi oluşturmak için Visual Studio herhangi bir sürümünü (Community, Professional veya Enterprise) kullanabilirsiniz.
+> Genişletilebilirlik projesi oluşturmak için Visual Studio (Community, Professional veya Enterprise) Visual Studio kullanabilirsiniz.
 
 ## <a name="create-an-extensibility-project"></a>Genişletilebilirlik projesi oluşturma
 
 ::: moniker range="vs-2017"
 
-Adım 1. **dosya** menüsünden **yeni**  >  **Project**' yi seçin.
+Adım 1. Dosya **menüsünden** Yeni **dosya'Project.**  >  
 
-Adım 2. Sağ üst köşedeki arama kutusuna "VSIX" yazın ve Visual C# **vsıx Project** seçin. İletişim kutusunun alt kısmındaki **ad** Için "HelloWorld" yazın ve **Tamam**' ı seçin.
+Adım 2. Sağ üstteki arama kutusuna "vsix" yazın ve Visual C# **VSIX Project.** İletişim kutusunun alt kısmında yer alan **Ad alanına** "HelloWorld" yazın ve Tamam'ı **seçin.**
 
-![Yeni proje](media/hello-world-new-project.png)
+![yeni proje](media/hello-world-new-project.png)
 
-Artık başlangıç sayfasını ve bazı örnek kaynakları görmeniz gerekir.
+Şimdi veri kaynağı sayfasını Başlarken bazı örnek kaynakları görüyor gerekir.
 
-Bu öğreticiyi bırakmanız ve geri dönebilmeniz gerekiyorsa, yeni HelloWorld projenizi **son** bölümdeki **başlangıç sayfasından** bulabilirsiniz.
+Bu öğreticiden ayrılmanız ve geri dönmeniz gerekirse, yeni HelloWorld projenizi En Son bölümündeki **Başlangıç Sayfasında** **bulabilirsiniz.**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Adım 1. **dosya** menüsünden **yeni**  >  **Project**' yi seçin. "vsıx" araması yapın ve Visual C# **vsıx Project** seçin ve ardından **ileri**' ye tıklayın.
+Adım 1. Dosya **menüsünden** Yeni **dosya'Project.**  >   "vsix" ifadesini arayın, Visual C# **VSIX** Project ve ardından Sonraki seçeneğini **seçin.**
 
-Adım 2. **Project adı** için "HelloWorld" girin ve **oluştur**' u seçin.
+Adım 2. Uygulama adı olarak "HelloWorld" **Project Oluştur'a** **seçin.**
 
-![Yeni proje](media/hello-world-new-project-2019.png)
+![yeni proje](media/hello-world-new-project-2019.png)
 
-Artık **Çözüm Gezgini**' de HelloWorld projesini görmeniz gerekir.
+Şimdi helloworld projesini içinde görüyor **Çözüm Gezgini.**
 
 ::: moniker-end
 
 ## <a name="add-a-custom-command"></a>Özel komut ekleme
 
-Adım 1. *. Valtmanifest* bildirim dosyasını seçerseniz, açıklama, yazar ve sürüm gibi hangi seçeneklerin değiştirilebilir olduğunu görebilirsiniz.
+Adım 1. *.vsixmanifest* bildirim dosyasını seçersiniz; açıklama, yazar ve sürüm gibi hangi seçeneklerin değiştirilebilir olduğunu seçebilirsiniz.
 
-Adım 2. Projeye sağ tıklayın (çözüme değil). Bağlam menüsünde **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
+Adım 2. Projeye sağ tıklayın (çözüme değil). Bağlam menüsünde Ekle'yi **ve ardından** Yeni Öğe'yi **seçin.**
 
-3. Adım **Genişletilebilirlik** bölümünü ve ardından **komut** öğesini seçin.
+3. Adım **Genişletilebilirlik bölümünü ve** ardından Komut'ı **seçin.**
 
-4. Adım: Alttaki **ad** alanına *Command. cs* gibi bir dosya adı girin.
+4. Adım: Alttaki **Ad** alanına *Command.cs* gibi bir dosya adı girin.
 
 ![özel komut](media/hello-world-vsix-command.png)
 
-Yeni komut dosyanız **Çözüm Gezgini** görünür. **Kaynaklar** düğümü altında komutlarınızla ilgili diğer dosyaları bulacaksınız. Örneğin, görüntüyü değiştirmek istiyorsanız PNG dosyası burada bulunur.
+Yeni komut dosyanız dosyasında **Çözüm Gezgini.** Kaynaklar **düğümü** altında komutunuzla ilgili diğer dosyaları bulabilirsiniz. Örneğin, görüntüyü değiştirmek isterseniz PNG dosyası buradadır.
 
-## <a name="modify-the-source-code"></a>Kaynak kodunu değiştirme
+## <a name="modify-the-source-code"></a>Kaynak kodu değiştirme
 
-Bu noktada, komut ve düğme metni otomatik olarak oluşturulur ve çok ilginç değildir. Değişiklik yapmak istiyorsanız VSCT dosyasını ve CS dosyasını değiştirebilirsiniz.
+Bu noktada, komut ve Düğme metni otomatik olarak ojendir ve pek ilgi çekici değildir. Değişiklik yapmak için VSCT dosyasını ve CS dosyasını değiştirebilirsiniz.
 
-* vsct dosyası, komutlarınızı yeniden adlandırabileceğiniz ve Visual Studio komut sisteminde nereye gittikleri de tanımlayabileceğiniz yerdir. VSCT dosyasını keşfederken, VSCT Code denetimlerinin her bir bölümünü açıklayan açıklamalar görürsünüz.
+* VSCT dosyası, komutlarınızı yeniden adlandırabilirsiniz ve komut sisteminde nereye Visual Studio tanımlayabilirsiniz. VSCT dosyasını keşfederken, VSCT kod denetimlerinin her bir bölümünü açıklayan açıklamalar fark edersiniz.
 
-* CS dosyası, tıklama işleyicisi gibi eylemleri tanımlayabileceğiniz yerdir.
+* CS dosyası, tıklama işleyicisi gibi eylemleri tanımladığınız dosyadır.
 
 ::: moniker range="vs-2017"
 
-Adım 1. **Çözüm Gezgini**' de, yeni komutunuz IÇIN vsct dosyasını bulun. Bu durumda, *Commandpackage. vsct* olarak adlandırılacaktır.
+Adım 1. Bu **Çözüm Gezgini** yeni komutunuz için VSCT dosyasını bulun. Bu durumda, *CommandPackage.vsct olarak çağrılır.*
 
 ![komut paketi vsct](media/hello-world-command-package-vsct.png)
 
@@ -103,11 +103,11 @@ Adım 1. **Çözüm Gezgini**' de, yeni komutunuz IÇIN vsct dosyasını bulun. 
 
 ::: moniker range=">=vs-2019"
 
-Adım 1. **Çözüm Gezgini**' de, uzantı vs paketinizin vsct dosyasını bulun. Bu durumda, *Merhaba Dünya Package. vsct* olarak adlandırılacaktır.
+Adım 1. Bu **Çözüm Gezgini,** uzantı VS paketinizin VSCT dosyasını bulun. Bu durumda *HelloWorldPackage.vsct olarak çağrılır.*
 
 ::: moniker-end
 
-Adım 2. `ButtonText`Parametresini olarak değiştirin `Say Hello World!` .
+Adım 2. parametresini `ButtonText` olarak `Say Hello World!` değiştirme.
 
 ```xml
   ...
@@ -121,7 +121,7 @@ Adım 2. `ButtonText`Parametresini olarak değiştirin `Say Hello World!` .
   ...
 ```
 
-3. Adım **Çözüm Gezgini** dönün ve *Command. cs* dosyasını bulun. Yönteminde, `Execute` dizesini `message` `string.Format(..)` olarak değiştirin `Hello World!` .
+3. Adım Geri dön komutu **Çözüm Gezgini** *Command.cs dosyasını* bulun. yönteminde `Execute` dizesini olarak `message` `string.Format(..)` `Hello World!` değiştirebilirsiniz.
 
 ```csharp
   ...
@@ -143,33 +143,33 @@ Adım 2. `ButtonText`Parametresini olarak değiştirin `Say Hello World!` .
   ...
 ```
 
-Değişikliklerinizi her dosyaya kaydettiğinizden emin olun.
+Her dosyada yaptığınız değişiklikleri kaydetmeyi emin olun.
 
 ## <a name="run-it"></a>Çalıştırın
 
-artık Visual Studio deneysel örneğinde kaynak kodu çalıştırabilirsiniz.
+Artık kaynak kodu Deneysel Örnekte Visual Studio çalıştırabilirsiniz.
 
-Adım 1. **Hata ayıklamayı Başlat** komutunu çalıştırmak için **F5** tuşuna basın. bu komut, projenizi oluşturur ve **deneysel örnek** olarak adlandırılan Visual Studio yeni bir örneğini başlatarak hata ayıklayıcıyı başlatır.
+Adım 1. Hata **Ayıklamayı Başlat** komutunu çalıştırmak için F5 **tuşuna** basın. Bu komut projenizi derlemek ve deneysel örneği adlı yeni bir Visual Studio başlatarak hata **ayıklayıcısını başlatır.**
 
 ::: moniker range="vs-2017"
 
-Visual Studio başlık çubuğunda **deneysel örnek** sözcüklerini görürsünüz.
+Deneysel Örnek **sözcüklerini başlık** çubuğunda Visual Studio görüyorsunuz.
 
 ![deneysel örnek başlık çubuğu](media/hello-world-exp-instance.png)
 
 ::: moniker-end
 
-Adım 2. **Deneysel örneğin** **araçlar** menüsünde **deyin Merhaba Dünya!**' e tıklayın.
+Adım 2. Deneysel Örneğin **Araçlar** menüsünde **Say** **Merhaba Dünya!**.
 
-![nihai sonuç](media/hello-world-final-result.png)
+![son sonuç](media/hello-world-final-result.png)
 
-Yeni özel komutınızdan çıktıyı görmeniz gerekir, bu durumda **Merhaba Dünya** size sunan ekranın merkezindeki iletişim kutusu. iletisi döndürmektedir.
+Yeni özel komutun çıkışını görüyor gerekir. Bu durumda, ekranın merkezinde size özel komut **Merhaba Dünya!** iletisi döndürmektedir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-artık Visual Studio genişletilebilirlik ile çalışmanın temellerini öğrenmiş olduğunuza göre buradan daha fazla bilgi edinebilirsiniz:
+Artık Genişletilebilirlik ve Genişletilebilirlik ile Visual Studio temel bilgilerine sahip olduğunuza göre, burada daha fazla bilgi veresiniz:
 
-* [Visual Studio uzantıları geliştirmeye başlayın](starting-to-develop-visual-studio-extensions.md) -örnekler, öğreticiler. ve uzantınızı yayımlama
-* [Visual Studio 2017 SDK 'daki](what-s-new-in-the-visual-studio-2017-sdk.md) yenilikler-Visual Studio 2017 ' deki yeni genişletilebilirlik özellikleri
-* [Visual Studio 2019 SDK 'daki](whats-new-visual-studio-2019-sdk.md) yenilikler-Visual Studio 2019 ' deki yeni genişletilebilirlik özellikleri
-* [Visual Studio SDK 'nın içinde](internals/inside-the-visual-studio-sdk.md) -Visual Studio genişletilebilirliği ayrıntılarını öğrenin
+* [Uzantılar geliştirmeye Visual Studio -](starting-to-develop-visual-studio-extensions.md) Örnekler, öğreticiler. ve uzantınızı yayımlama
+* [Visual Studio 2017 SDK'sı - 2017'de](what-s-new-in-the-visual-studio-2017-sdk.md) yeni Visual Studio özellikleri
+* [Visual Studio 2019 SDK'sı](whats-new-visual-studio-2019-sdk.md) - Visual Studio 2019'daki yeni genişletilebilirlik özellikleri
+* [Visual Studio SDK'sı](internals/inside-the-visual-studio-sdk.md) içinde - Genişletilebilirlik Visual Studio öğrenin

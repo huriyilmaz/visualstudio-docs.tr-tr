@@ -1,6 +1,6 @@
 ---
-description: Adı verilen bir ifade değerlendirici ölçüsünün değer dizesini alır.
-title: 'IDebugSettingsCallback2:: GetEEMetricString | Microsoft Docs'
+description: Bir ifade değerlendirici ölçümlerinin değer dizesini, adına göre alır.
+title: IDebugSettingsCallback2::GetEEMetricString | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121389546"
 ---
 # <a name="idebugsettingscallback2geteemetricstring"></a>IDebugSettingsCallback2::GetEEMetricString
-Adı verilen bir ifade değerlendirici ölçüsünün değer dizesini alır.
+Bir ifade değerlendirici ölçümlerinin değer dizesini, adına göre alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,19 +47,19 @@ private int GetEEMetricString(
 
 ## <a name="parameters"></a>Parametreler
 `guidLang`\
-'ndaki Programlama dilinin benzersiz tanıtıcısı.
+[in] Programlama dilinin benzersiz tanımlayıcısı.
 
 `guidVendor`\
-'ndaki Satıcının benzersiz tanıtıcısı.
+[in] Satıcının benzersiz tanımlayıcısı.
 
 `pszMetric`\
-'ndaki Ölçümün adı.
+[in] Ölçümün adı.
 
 `pbstrValue`\
-dışı Ölçüm değeri dizesini döndürür.
+[out] Ölçüm değeri dizesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

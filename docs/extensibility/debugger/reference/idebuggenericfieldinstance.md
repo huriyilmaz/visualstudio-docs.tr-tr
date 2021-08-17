@@ -1,6 +1,6 @@
 ---
-description: Yönetilen kod genel türü için bir alan örneğini temsil eder.
-title: Idebuggenericfieldınstance | Microsoft Docs
+description: Yönetilen kod genel türü için bir alanın örneğini temsil eder.
+title: IDebugGenericFieldInstance | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 639d6fa7ff60404cc4946f60432271701ad3946226d2d13357eada44ed24c0c3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 72a0f344bcaeedf54951ece404a37ccb053c3f60
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402694"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096147"
 ---
 # <a name="idebuggenericfieldinstance"></a>IDebugGenericFieldInstance
-Yönetilen kod genel türü için bir alan örneğini temsil eder.
+Yönetilen kod genel türü için bir alanın örneğini temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,16 +29,16 @@ IDebugGenericFieldInstance : IUnknown
 ```
 
 ## <a name="methods"></a>Yöntemler
- Bu arabirim aşağıdaki yöntemleri uygular:
+ Bu arabirim aşağıdaki yöntemleri kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetTypeArguments](../../../extensibility/debugger/reference/idebuggenericfieldinstance-gettypearguments.md)|Bu örnek için tür parametresi bağımsız değişkenlerini alır.|
+|[GetTypeArguments](../../../extensibility/debugger/reference/idebuggenericfieldinstance-gettypearguments.md)|Bu örnek için tür parametresi bağımsız değişkenlerini alın.|
 |[TypeArgumentCount](../../../extensibility/debugger/reference/idebuggenericfieldinstance-typeargumentcount.md)|Bu örnek için tür parametresi bağımsız değişkenlerinin sayısını döndürür.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst bilgi: Sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

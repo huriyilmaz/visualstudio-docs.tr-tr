@@ -57,7 +57,7 @@ ms.locfileid: "121353013"
 ## <a name="add-filter-descriptors"></a>Filtre tanımlayıcıları ekleme
  Modelin tüketicileri, bir varlığın bazı ölçütlere uyan örneklerini almak istiyor olabilir. Bu işlevi etkinleştirmek için bir yönteme filtre tanımlayıcısı ekleyebilirsiniz. Filtre tanımlayıcıları, model tüketicilerinin yürütmeden önce yöntemlere değer geçerek yöntem sonuç kümelerini filtrelemesini sağlar. Daha fazla bilgi için, [bkz. How to: Add Filter Parameters to Operations to Limit Instances from the External System](/previous-versions/office/developer/sharepoint-2010/ee554889(v=office.14)).
 
- SharePoint kullanıcıların filtre değerleri sağlamalarını sağlayan çeşitli özellikler sağlar. Örneğin, İş Verileri Web Bölümleri bir filtre metin kutusu sağlar. Kullanıcılar, metin kutusuna bir değer girerek bir listede yer alan verileri sınırlar. Bir yönteme filtre tanımlayıcısı ekleme hakkında daha fazla bilgi için bkz. [Nasıl ekleyebilirsiniz: Finder yöntemine filtre tanımlayıcısı ekleme.](../sharepoint/how-to-add-a-filter-descriptor-to-a-finder-method.md)
+ SharePoint kullanıcıların filtre değerleri sağlamalarını sağlayan çeşitli özellikler sağlar. Örneğin, İş Verileri Web Bölümleri bir filtre metin kutusu sağlar. Kullanıcılar, metin kutusuna bir değer girerek bir listede yer alan verileri sınırlar. Bir yönteme filtre tanımlayıcısı ekleme hakkında daha fazla bilgi için [bkz. Nasıl ekleyebilirsiniz: Finder yöntemine filtre tanımlayıcısı ekleme.](../sharepoint/how-to-add-a-filter-descriptor-to-a-finder-method.md)
 
 ### <a name="filter-descriptor-properties"></a>Filtre tanımlayıcısı özellikleri
  Bir filtre tanımlayıcısının **İlişkili Tür Tanımlayıcısı,** **Ad** ve **Tür özelliklerinin** değerini ayarlayabilirsiniz. Diğer tüm özellikler isteğe bağlıdır.

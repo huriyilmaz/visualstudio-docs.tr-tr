@@ -1,6 +1,6 @@
 ---
-title: Web performans testi için özel doğrulama kuralı oluşturma
-description: Doğrulama kuralı sınıfından, ValidationRule 'dan türetilmiş kendi doğrulama kurallarınızı oluşturmayı öğrenin.
+title: Web perf testi için özel doğrulama kuralı oluşturma
+description: ValidationRule doğrulama kuralı sınıfından türetilen kendi doğrulama kurallarınızı oluşturma hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -18,53 +18,53 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: fce100dff65ce4a900affd270cc9779e5e208feadb382763192a53a2b83d4927
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5eb34377ab17bec9a1e8bb51e213eb24b7415e48
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121395440"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026908"
 ---
-# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web performans testi için özel doğrulama kuralı kodu oluşturma
+# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web performans testi için özel doğrulama kuralı kodla
 
-Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir doğrulama kuralı sınıfından kendi kural sınıfınızı türetirsiniz. Doğrulama kuralları <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> taban sınıftan türetilir.
+Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir doğrulama kuralı sınıfından kendi kural sınıfını türetirsiniz. Doğrulama kuralları temel sınıftan <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> türetildi.
 
 > [!NOTE]
-> Ayrıca, özel ayıklama kuralları da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Yük testleri için özel kod ve eklentiler oluşturma](../test/create-custom-code-and-plug-ins-for-load-tests.md).
+> Özel ayıklama kuralları da oluşturabilirsiniz. Daha fazla bilgi için [bkz. Yük testleri için özel kod ve eklentiler oluşturma.](../test/create-custom-code-and-plug-ins-for-load-tests.md)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-create-custom-validation-rules"></a>Özel doğrulama kuralları oluşturmak için
 
-1. web performans testi içeren bir Test Project açın.
+1. Web performans testi Project test testini açın.
 
-2. Seçim Doğrulama kuralınızı depolayacağınız ayrı bir sınıf kitaplığı projesi oluşturun.
+2. (İsteğe bağlı) Doğrulama kuralınızı depolamak için ayrı bir Sınıf kitaplığı projesi oluşturun.
 
     > [!IMPORTANT]
-    > Bu sınıfı, testlerinizin bulunduğu projede oluşturabilirsiniz. Ancak, kuralı yeniden kullanmak istiyorsanız, kuralınızı depolayabileceği ayrı bir sınıf kitaplığı projesi oluşturmak daha iyidir. Ayrı bir proje oluşturursanız, bu yordamdaki isteğe bağlı adımları tamamlamalısınız.
+    > Sınıfını, testlerinizi içinde olduğu projede oluşturabilirsiniz. Ancak, kuralı yeniden kullanmak için kuralınızı depolamak üzere ayrı bir Sınıf kitaplığı projesi oluşturmanız daha iyi olur. Ayrı bir proje sanız, bu yordamda isteğe bağlı adımları tamamlamanız gerekir.
 
-3. Seçim Sınıf kitaplığı projesinde, Microsoft. VisualStudio. QualityTools. WebTestFramework DLL dosyasına bir başvuru ekleyin.
+3. (İsteğe bağlı) Sınıf kitaplığı projesinde Microsoft.VisualStudio.QualityTools.WebTestFramework DLL'lerine bir başvuru ekleyin.
 
-4. Sınıfından türeten bir sınıf oluşturun <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> . <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.Validate*>Ve üyelerini uygulayın <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*> .
+4. sınıfından türeten bir sınıf <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> oluşturun. ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.Validate*> üyelerini <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*> uygulama.
 
-5. Seçim Yeni sınıf kitaplığı projesi oluşturun.
+5. (İsteğe bağlı) Yeni Sınıf kitaplığı projesini derleme.
 
-6. Seçim Test Project, özel doğrulama kuralını içeren sınıf kitaplığı projesine bir başvuru ekleyin.
+6. (İsteğe bağlı) Test Project, özel doğrulama kuralını içeren Sınıf kitaplığı projesine bir başvuru ekleyin.
 
-7. Test Project, **Web Performans Testi Düzenleyicisi** bir web başarım testi açın.
+7. Test Project' içinde bir web performans testi **Web Performans Testi Düzenleyicisi.**
 
-8. Özel doğrulama kuralını bir Web performans testi isteğine eklemek için, bir isteğe sağ tıklayın ve **doğrulama kuralı ekle**' yi seçin.
+8. Özel doğrulama kuralını bir web performans testi isteğine eklemek için bir isteke sağ tıklayın ve Doğrulama Kuralı **Ekle'yi seçin.**
 
-     **Doğrulama kuralı ekle** iletişim kutusu görüntülenir. Özel doğrulama kuralınızı **bir kural seçin** listesinde, önceden tanımlanmış doğrulama kurallarıyla birlikte görürsünüz. Özel doğrulama kuralınızı seçin ve ardından **Tamam**' ı seçin.
+     Doğrulama **Kuralı Ekle** iletişim kutusu görüntülenir. Özel doğrulama kuralınızı Önceden tanımlanmış **doğrulama kurallarıyla** birlikte Kural seçin listesinde görünür. Özel doğrulama kuralınızı ve ardından Tamam'ı **seçin.**
 
-9. Web performans testinizi çalıştırın.
+9. Web performans testini çalıştırın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, özel bir doğrulama kuralının bir uygulamasını gösterir. Bu doğrulama kuralı, önceden tanımlanmış gerekli etiket doğrulama kuralının davranışını taklit eder. Bu örneği kendi özel doğrulama kurallarınız için bir başlangıç noktası olarak kullanın.
+Aşağıdaki kod, özel doğrulama kuralının uygulamasını gösterir. Bu doğrulama kuralı, önceden tanımlanmış Gerekli Etiket doğrulama kuralının davranışını taklit ediyor. Kendi özel doğrulama kurallarınız için başlangıç noktası olarak bu örneği kullanın.
 
 > [!WARNING]
-> Özel bir doğrulayıcı için koddaki ortak özellikler null değerlere sahip olamaz.
+> Özel doğrulayıcı için kodda genel özellikler null değerlere sahip olamaz.
 
 ```csharp
 using System;

@@ -1,6 +1,6 @@
 ---
-description: Yürütülebilir bir dosya başlatır.
-title: 'IDebugPortEx2:: Launchaskıya alındı | Microsoft Docs'
+description: Yürütülebilir bir dosya başlatıyor.
+title: IDebugPortEx2::LaunchSuspended | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 34b2cf99-2e52-4757-8969-1d12ac517ec0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fdffb6f87285e9f33d6abaf864b4d45345a304ca
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0c6db6cc7f67cc8cb4106215d33eb791c551a66b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072500"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030288"
 ---
 # <a name="idebugportex2launchsuspended"></a>IDebugPortEx2::LaunchSuspended
-Yürütülebilir bir dosya başlatır.
+Yürütülebilir bir dosya başlatıyor.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -56,36 +57,36 @@ int LaunchSuspended(
 
 ## <a name="parameters"></a>Parametreler
 `pszExe`\
-'ndaki Başlatılacak yürütülebilir dosyanın adı. Bu, tam yol veya parametrede belirtilen çalışma dizinine göre olabilir `pszDir` .
+[in] Başlatacak yürütülebilir dosyanın adı. Bu tam yol veya parametresinde belirtilen çalışma diziniyle göreli `pszDir` olabilir.
 
 `pszArgs`\
-'ndaki Yürütülebilir dosyaya geçirilecek bağımsız değişkenler. Bağımsız değişken yoksa, null bir değer olabilir.
+[in] Yürütülebilir dosyaya geçiş için bağımsız değişkenler. Bağımsız değişken yoksa null değer olabilir.
 
 `pszDir`\
-'ndaki Yürütülebilir dosya tarafından kullanılan çalışma dizininin adı. Çalışma dizini gerekmiyorsa null değeri olabilir.
+[in] Yürütülebilir dosya tarafından kullanılan çalışma dizininin adı. Çalışma dizini gerekmiyorsa null değer olabilir.
 
 `bstrEnv`\
-'ndaki Null ile sonlandırılmış dizelerin ortam bloğu ve ardından ek bir NULL Sonlandırıcı.
+[in] Null sonlandırılan dizelerin ortam bloğu, ardından ek bir NULL sonlandırıcısı.
 
 `hStdInput`\
-'ndaki Alternatif bir giriş akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
+[in] Alternatif bir giriş akışına işle. Yeniden yönlendirme gerekli yoksa 0 olabilir.
 
 `hStdOutput`\
-'ndaki Alternatif bir çıkış akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
+[in] Alternatif bir çıkış akışına işle. Yeniden yönlendirme gerekli yoksa 0 olabilir.
 
 `hStdError`\
-'ndaki Alternatif bir hata çıktı akışına işleyin. Yeniden yönlendirme gerekmiyorsa 0 olabilir.
+[in] Alternatif bir hata çıkış akışına işle. Yeniden yönlendirme gerekli yoksa 0 olabilir.
 
 `ppPortProcess`\
-dışı Başlatılan işlemi temsil eden bir [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi döndürür.
+[out] Başlatılan işlemi [temsil eden bir IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, askıya alınmış ve herhangi bir kod çalıştırmayan için işlemi başlatacaktır. İşlemi sürdürecek [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) yöntemi çağırılır.
+ Bu yöntem işlemi başlatarak askıya alınarak herhangi bir kod çalıştırmama işleminin başlatılmasını sağlar. Işlemi [devam ettiren ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) yöntemi çağrılır.
 
- Ayrıca, bir program hata ayıklama altyapısından başlatılabilir. Ayrıntılar için bkz. [Program başlatma](../../../extensibility/debugger/launching-a-program.md).
+ Bir program bir hata ayıklama altyapısından da başlatabilirsiniz. Ayrıntılar için [bkz. Program Başlatma.](../../../extensibility/debugger/launching-a-program.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

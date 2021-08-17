@@ -1,7 +1,7 @@
 ---
 title: Assembly Öğesi (Visual Studio Şablon Sihirbazı Uzantısı)
 titleSuffix: ''
-description: Derleme öğesi hakkında bilgi edinin ve IWizard arabirimini uygulayan derlemenin adının veya tanımlayıcı adının nasıl kullanılacağını öğrenin.
+description: Assembly öğesi hakkında bilgi ve IWizard arabirimini uygulayan derlemenin adını veya güçlü adını nasıl belirtir?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,15 +17,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1be9c72c01746b716b0202843b86ed2d5d52d44b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1e469eb19e9b1a48ca9ef0cf5348360dc0171d01f9315515665b176cbb038fa4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097493"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417994"
 ---
-# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly öğesi (Visual Studio Şablon Sihirbazı uzantısı)
-Arabirimi uygulayan derlemenin adını veya tanımlayıcı adını belirtir `IWizard` .
+# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Derleme öğesi (Visual Studio sihirbazı uzantısı)
+Arabirimi uygulayan derlemenin adını veya güçlü adını `IWizard` belirtir.
 
  \<VSTemplate>
 \<WizardExtension>
@@ -50,18 +50,18 @@ Arabirimi uygulayan derlemenin adını veya tanımlayıcı adını belirtir `IWi
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Şablon Sihirbazı ' nı özelleştirmek için kayıt öğelerini içerir.|
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Şablon sihirbazını özelleştirmek için kayıt öğelerini içerir.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu metin, arabirimini uygulayan derlemeyi belirtir `IWizard` . Bu derleme adının tam bir derleme adı olarak belirtilmesi gerekir. Örneğin, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.
+ Bu metin, arabirimi uygulayan derlemeyi `IWizard` belirtir. Bu derleme adı tam derleme adı olarak belirtilmelidir. Örneğin, `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`.
 
 ## <a name="remarks"></a>Açıklamalar
- `Assembly` , öğesinin gerekli bir alt öğesidir `WizardExtension` .
+ `Assembly` , öğesinin gerekli bir alt `WizardExtension` öğesidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir Windows uygulaması için Standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+ Aşağıdaki örnek, bir uygulama için standart proje şablonunun meta [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] verilerini Windows göstermektedir.
 
 ```xml
 <VSTemplate Version="3.0.0" Type="Item"
@@ -93,6 +93,6 @@ Arabirimi uygulayan derlemenin adını veya tanımlayıcı adını belirtir `IWi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablonu şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)
+- [Nasıl oluşturulur: Sihirbazları proje şablonlarıyla kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)

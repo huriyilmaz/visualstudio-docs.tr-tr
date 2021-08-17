@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf399a8ccf018e8e18c18ba0af2b54a0e5b948c9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 9e0c72f3c42520e78a53ab5fe2cc95ae3583b0c8ef40b20560edca495a3ea3da
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122029872"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121402317"
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) hata ayıklama altyapısını (DE) temsil eden bir arabirim almasına izin verir.

@@ -1,6 +1,6 @@
 ---
 title: Gecikmeli belge yükleme | Microsoft Docs
-description: Visual Studio 'da gecikmeli belge yükleme hakkında bilgi edinin ve bir belgedeki öğeleri yüklenmeden önce sorgulayıp uzantıları nasıl kodlarlar.
+description: Visual Studio ' de gecikmeli belge yükleme hakkında bilgi edinin ve yüklenmeden önce bir belgedeki öğeleri sorgulayıp uzantıları nasıl kodlarlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,20 +8,21 @@ ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 959af31f1986a4ff670adc5d74573cfb2bb850ce
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 63fd214225d1999d53c1ff696803499eba9c4b8a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090989"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063453"
 ---
 # <a name="delayed-document-loading"></a>Gecikmeli belge yükleme
 
-Bir Kullanıcı bir Visual Studio çözümünü yeniden açtığında, ilişkili belgelerin çoğu hemen yüklenmez. Belge penceresi çerçevesi, bekleyen bir başlatma durumunda oluşturulur ve bir yer tutucu belge (saplama çerçevesi denir) çalışan belge tablosuna (RDT) yerleştirilir.
+kullanıcı Visual Studio çözümünü yeniden açtığında, ilişkili belgelerin çoğu hemen yüklenmez. Belge penceresi çerçevesi, bekleyen bir başlatma durumunda oluşturulur ve bir yer tutucu belge (saplama çerçevesi denir) çalışan belge tablosuna (RDT) yerleştirilir.
 
-Uzantınız, belgelerde yüklenmeden önce öğeleri sorgulayarak, Visual Studio için genel bellek ayak izini artırabilen, proje belgelerinin gereksiz yere yüklenmesine neden olabilir.
+Uzantınız, yüklemeden önce belgelerdeki öğeleri sorgulayarak proje belgelerinin gereksiz yere yüklenmesine neden olabilir. Bu, Visual Studio için genel bellek ayak izini artırabilir.
 
 ## <a name="document-loading"></a>Belge yükleme
 
@@ -59,7 +60,7 @@ Belge tam olarak başlatıldığında oluşturulan RDT olayına abone olunarak b
 
 - Aksi takdirde, abone olabilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A> .
 
-Aşağıdaki örnek bir kuramsal belge erişim senaryosudur: bir Visual Studio uzantısı, açık belgeler hakkında bazı bilgileri, örneğin düzenleme kilidi sayısını ve belge verileriyle ilgili bir şeyi göstermek istemektedir. Kullanarak RDT içindeki belgeleri numaralandırır <xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments> <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> ve ardından her belge için, düzenleme kilidi sayısını ve belge verilerini almak için çağırır. Belge bekleyen başlatma durumundaysa, belge verileri istemek bunun gereksiz şekilde başlatılmasına neden olur.
+aşağıdaki örnek bir kuramsal belge erişim senaryosudur: bir Visual Studio uzantısı, açık belgeler hakkında bazı bilgileri, örneğin düzenleme kilit sayısını ve belge verileriyle ilgili bir şeyi göstermek istiyor. Kullanarak RDT içindeki belgeleri numaralandırır <xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments> <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A> ve ardından her belge için, düzenleme kilidi sayısını ve belge verilerini almak için çağırır. Belge bekleyen başlatma durumundaysa, belge verileri istemek bunun gereksiz şekilde başlatılmasına neden olur.
 
 Belgeye erişmenin daha verimli bir yolu, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A> düzenleme kilidi sayısını almak için kullanılır ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A> belgenin başlatılmış olup olmadığını anlamak için öğesini kullanır. Bayraklar [_VSRDTFLAGS4 içermiyorsa. RDT_PendingInitialization](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>), belge zaten başlatılmış ve belge verilerinin ile istenmesine <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A> gerek yok, hiçbir gereksiz başlatmaya neden olmaz. Bayraklar [_VSRDTFLAGS4 içeriyorsa. RDT_PendingInitialization](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4.RDT_PendingInitialization>), uzantı belge başlatılmadan belge verilerinin istenmesine engel olmalıdır. Bu başlatma `OnAfterAttributeChange(Ex)` olay işleyicisinde algılanabilir.
 

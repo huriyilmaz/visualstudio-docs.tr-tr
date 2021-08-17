@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2107c9523b3d9d5c96db273e1f39a8feb687d59aa917752e2875d8be4a223bfe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5a6db057075b57f07a733af146915db92446a077
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414460"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062842"
 ---
 # <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>Kaynak denetim bilgilerinin. proj ve. sln dosyalarından kaldırılması
 

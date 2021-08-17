@@ -1,6 +1,6 @@
 ---
-title: Glyph Control (Kaynak Denetimi VSPackage) | Microsoft Docs
-description: Kaynak denetimi altındaki öğelerin durumunu belirtmek için kendi simgelerinizi kullanmak üzere bir kaynak denetimi VSPackage'da özel simgeler görüntülemeyi öğrenin.
+title: Glif denetimi (kaynak denetimi VSPackage) | Microsoft Docs
+description: Kaynak denetimi altındaki öğelerin durumunu göstermek için kendi simgelerinizi kullanabilmeniz için bir kaynak denetiminde VSPackage içindeki özel glifleri görüntülemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,28 +14,28 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a692473176843730f8cb9c1acfeb90ed164e4ad
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 840ea85abfa995d9fc8df9e417ab13e78b25423e29d12684b3628760b5a61228
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122124600"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121337974"
 ---
-# <a name="glyph-control-source-control-vspackage"></a>Glyph denetimi (kaynak denetimi VSPackage)
-VSPackage'lar kaynak denetimi için kullanılabilen derin tümleştirmenin bir parçası, kaynak denetimi altındaki öğelerin durumunu göstermek için kendi glyph'lerini görüntüleme özelliğidir.
+# <a name="glyph-control-source-control-vspackage"></a>Glif denetimi (kaynak denetimi VSPackage)
+Kaynak denetimi VSPackages tarafından kullanılabilen derin tümleştirmenin bir parçası, kaynak denetimi altındaki öğelerin durumunu göstermek için kendi gliflerini görüntüleme olanağıdır.
 
-## <a name="levels-of-glyph-control"></a>Glyph denetimi düzeyleri
- Durum işareti, bir öğenin geçerli durumunu (örneğin, öğesinde veya öğesinde) **Çözüm Gezgini** gösteren bir **Sınıf Görünümü.** Bir kaynak denetimi VSPackage iki düzeyde glyph denetimi alıştırması olabilir. Glyph seçimi, IDE tarafından sağlanan önceden tanımlanmış bir dizi glyph ile sınırlayıcı olabilir veya görüntülenecek özel bir dizi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] glyph tanımlayabilir.
+## <a name="levels-of-glyph-control"></a>Glif denetimi düzeyleri
+ Durum karakteri, örneğin **Çözüm Gezgini** veya **sınıf görünümü** gibi, görüntülendiğinde bir öğenin geçerli durumunu gösteren bir simgedir. Kaynak denetimi VSPackage iki karakter düzeyi denetimi uygulayabilir. Karakter seçimini IDE tarafından sunulan önceden tanımlanmış bir karakter kümesiyle sınırlayabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] veya görüntülenecek özel bir glif kümesi tanımlayabilir.
 
-### <a name="default-set-of-glyphs"></a>Varsayılan glyph kümesi
- projesinde bir öğeyle ilişkili durum Çözüm Gezgini **belirlemek** için, bir proje kullanarak kaynak denetiminden durum glyph'i talep <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A> ediyor. Kaynak denetimi VSPackage, IDE tarafından sağlanan önceden tanımlanmış glyph'ler ile sınırlı olan bir glyph seçimi tutmaya karar verir. Bu durumda VSPackage, *vsshell.idl* içinde tanımlanan glyph sabit değerlerini temsil eden bir değer dizisini geri iletir. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon>. Bu, IDE tarafından ayarlanmış önceden tanımlanmış bir karakter kümesidir( örneğin, iadeli karakter için asma kilit ve kullanıma alınmış karakter için onay işareti).
+### <a name="default-set-of-glyphs"></a>Varsayılan glif kümesi
+ Bir proje, **Çözüm Gezgini** bir öğeyle ilişkili olan durum glifleri tespit etmek için, kullanarak kaynak denetiminden durum glifi ister <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2.GetSccGlyph%2A> . Kaynak denetimi VSPackage, IDE tarafından sunulan önceden tanımlanmış glifle sınırlı karakter seçimini tutmaya karar verebilir. Bu durumda, VSPackage, *vsshell. IDL* dosyasında tanımlanan glif numaralandırmaları temsil eden bir değer dizisini geri geçirir. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.VsStateIcon>. Bu, giriş karakteri için bir asma kilidi ve kullanıma hazır karakter için bir onay işareti gibi, IDE tarafından ayarlanan, önceden tanımlanmış bir karakter kümesidir.
 
-### <a name="custom-set-of-glyphs"></a>Özel bir dizi glyph
- Kaynak denetimi VSPackage, yüklendikten sonra benzersiz bir görünüm ve his için kendi ifadelerini kullanabilir. VSPackage yeni bir kaynak denetimi etkin olduğunda, önceki bir kaynak denetimi VSPackage hala yüklü ancak devre dışı olsa bile kendi glyph'lerini kullanmaya başlamalıdır. Bu modda, VSPackage kaynak denetimi, seçerse tutarlı bir görünüm elde etmek için mevcut [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] simgeleri kullanmaya devam ediyor.
+### <a name="custom-set-of-glyphs"></a>Özel glif kümesi
+ Kaynak denetimi VSPackage, yüklendiğinde benzersiz bir görünüm ve kullanım için kendi gliflerinden yararlanabilirsiniz. Yeni bir kaynak denetimi VSPackage etkinken, önceki bir kaynak denetimi VSPackage hala yüklenmiş ancak devre dışı olsa bile kendi glifleri kullanmaya başlayabilmelidir. Bu modda, kaynak denetimi VSPackage hala, seçerse tutarlı bir görünüm sağlamak için var olan simgeleri kullanabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- Hizmet, <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager> VSPackage'ın isteğe bağlı olarak uygulayan ve IDE tarafından istenecek <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs> arabirimini destekler. IDE bir istekte olduğunda, bu arabirimi o anda kayıtlı olan kaynak denetimi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage'dan almaya dener. Arabirim kayıtlı VSPackage içinde mevcutsa, IDE'nin özel glyph'lere olan isteği başarılı olur; aksi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] takdirde, IDE varsayılan glyphs kümelerini kullanır.
+ <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>Hizmet, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs> VSPackage 'ın isteğe bağlı olarak uygulayabileceği ve IDE tarafından istenecek bir arabirimi destekler. IDE bir istek yaptığında, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Bu arabirimi şu anda kayıtlı kaynak denetiminden almaya çalışır. Arabirim kayıtlı VSPackage içinde varsa, IDE 'nin özel Glifler isteği başarılı olur; Aksi halde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE varsayılan glif kümesini kullanır.
 
- yöntemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs.GetCustomGlyphList%2A> tarafından çeşitli kaynak denetim durumları gösteren [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] görüntülerin listesini almak için kullanılır. VSPackage kaynak denetimi, IDE'ye özel özellikleri için görüntü listesinin tanıtıcısını döndürür. IDE, bu noktada görüntü listesinin bir kopyasını yapar ve daha sonra görüntüde yer alan görselleri seçmek için bunu kullanır. Yeni arabirim desteklenmiyorsa veya yöntemi döndürürse, IDE tarafından sağlanan varsayılan `IVsSccGlyphs::GetCustomGlyphList` `E_NOTIMPL` glyph listesinden kendi glyph'lerini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] alır.
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs.GetCustomGlyphList%2A>Yöntemi, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çeşitli kaynak denetimi durumlarını gösteren görüntülerin bir listesini almak için tarafından kullanılır. Kaynak denetimi VSPackage, özel glifleri için görüntü listesine yönelik bir tutamacı IDE 'ye geri döndürür. IDE, bu noktada görüntü listesinin bir kopyasını oluşturur ve daha sonra görüntülenecek glifleri seçmek için onu kullanır. Yeni arabirim desteklenmiyorsa veya `IVsSccGlyphs::GetCustomGlyphList` Yöntem döndürüyorsa `E_NOTIMPL` , IDE, tarafından sağlanan varsayılan glif listesinden kendi glifleri alır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs>

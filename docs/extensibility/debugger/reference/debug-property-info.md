@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7bd2526853dd5c0c3bb84bdc7d00c76805dd28a1118b4a35b8d173b17ab9bde3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0e1381dfb28f936a8067fe28d6193e70d00ad95a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452400"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080097"
 ---
 # <a name="debug_property_info"></a>DEBUG_PROPERTY_INFO
 Bir hata ayıklama özelliği hakkında bilgi içerir.

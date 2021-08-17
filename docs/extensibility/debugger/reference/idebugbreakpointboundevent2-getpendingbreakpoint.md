@@ -1,6 +1,6 @@
 ---
-description: Bağlanan bekleyen kesme noktasını alır.
-title: 'IDebugBreakpointBoundEvent2:: GetPendingBreakpoint | Microsoft Docs'
+description: Bağlı olan bekleyen kesme noktası alır.
+title: IDebugBreakpointBoundEvent2::GetPendingBreakpoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 765ff47746ab150f8d2f8946bb13a42d30aada4fff75a6e25bbec134f97dc70d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 568e7ae9b0eb5521c9be931bbe96eb3b070b9998
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121293033"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079915"
 ---
 # <a name="idebugbreakpointboundevent2getpendingbreakpoint"></a>IDebugBreakpointBoundEvent2::GetPendingBreakpoint
-Bağlanan bekleyen kesme noktasını alır.
+Bağlı olan bekleyen kesme noktası alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetPendingBreakpoint(
 
 ## <a name="parameters"></a>Parametreler
 `ppPendingBP`\
-dışı Bağlanan bekleyen kesme noktasını temsil eden [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesini döndürür.
+[out] Bağlı olan bekleyen kesme noktası temsil eden [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) arabirimini kullanıma sunan bir **Cbreakpointsettcgeventbase** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugBreakpointBoundEvent2](../../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) arabirimini ortaya çıkaran **bir CBreakpointSetDebugEventBase** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 STDMETHODIMP CBreakpointSetDebugEventBase::GetPendingBreakpoint(

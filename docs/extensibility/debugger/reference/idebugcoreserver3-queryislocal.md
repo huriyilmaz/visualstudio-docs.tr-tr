@@ -1,6 +1,6 @@
 ---
 description: Sunucunun çağıranın yerel olup olmadığını belirler.
-title: 'IDebugCoreServer3:: Queryıslocal | Microsoft Docs'
+title: IDebugCoreServer3::QueryIsLocal | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: cca030de-f853-4ed7-b2fb-395f08a6b884
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e18074c92bdd63c1c378d71d3c84c4dde1745536
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c02bdfa1c6583cee1c1b6f42c5de4df504aaa70ffc5ab9cdae6950465c7c4afd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054315"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292773"
 ---
 # <a name="idebugcoreserver3queryislocal"></a>IDebugCoreServer3::QueryIsLocal
 Sunucunun çağıranın yerel olup olmadığını belirler.
@@ -39,7 +40,7 @@ int QueryIsLocal();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- `S_OK`Sunucunun yerel olduğunu göstermek için döndürür. `S_FALSE`Sunucu, genellikle uzaktan hata ayıklama için kullanılan bir msvsmon.exe örneğinden çalışıyorsa döndürür.
+ Sunucunun `S_OK` yerel olduğunu belirtmek için döndürür. Sunucu genellikle uzaktan hata ayıklama için kullanılan msvsmon.exe `S_FALSE` örneğinden çalıştırıyorsa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

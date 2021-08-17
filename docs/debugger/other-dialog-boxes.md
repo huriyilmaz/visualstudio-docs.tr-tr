@@ -1,6 +1,6 @@
 ---
-title: Diğer İletişim Kutuları | Microsoft Docs
-description: 'Bu bölümde iki iletişim kutusu belgelemektedir: Microsoft Spy++ Hakkında ve Spy++ Yardımı için Telif Hakkı Bildirimi.'
+title: Diğer Iletişim kutuları | Microsoft Docs
+description: 'Bu bölüm iki iletişim kutusunu belgelemektedir: Microsoft Spy + + hakkında ve Spy + + Yardımı için telif hakkı bildirimi.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,24 +14,24 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 37d21f43c05f40bc7bec63e38e9f4638b68fd410a1fe705817af95add20f7a51
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 36362c04ef2fe72035ba41afe122c07ad0819e51
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121263536"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030678"
 ---
 # <a name="other-dialog-boxes"></a>Diğer İletişim Kutuları
-Bu iletişim kutuları Spy++ programıyla ilgili bilgileri görüntüler.
+Bu iletişim kutularında Spy + + programı hakkında bilgiler görüntülenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Microsoft Spy++ hakkında](../debugger/about-microsoft-spy-increment.md) Spy++ programının sahipliğiyle ilgili bilgiler.
+ [Microsoft Spy + + hakkında](../debugger/about-microsoft-spy-increment.md) Spy + + programının sahipliğiyle ilgili bilgiler.
 
- [Spy++ Yardımı için Telif Hakkı Bildirimi](../debugger/copyright-notice-for-spy-increment-help.md) Telif hakkı yasal bildirimi.
+ [Spy + + Yardımı Için telif hakkı bildirimi](../debugger/copyright-notice-for-spy-increment-help.md) Telif hakkı yasal bildirimi.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Spy++ Başvurusu](../debugger/spy-increment-reference.md) Her Spy++ menüsünü ve iletişim kutusunu açıklayan bölümler içerir.
+ [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.
 
- [Spy++ kullanma](../debugger/using-spy-increment.md) Spy++ aracını tanıtıyor ve nasıl kullanıLl olduğunu açıklar.
+ [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.
 
- [Spy++ Görünümleri](../debugger/spy-increment-views.md) Pencerelerin, iletilerin, işlemlerin ve iş parçacıklarının Spy++ ağaç görünümlerini açıklar.
+ [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.

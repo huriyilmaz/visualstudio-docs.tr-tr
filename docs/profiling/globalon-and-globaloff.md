@@ -1,6 +1,6 @@
 ---
 title: GlobalOn ve GlobalOff | Microsoft Docs
-description: VSPerfCmd.exe 'teki GlobalOn ve GlobalOff seçeneklerini gözden geçirin. Bu seçenekler, komut satırı profil oluşturma oturumunda süreçler ve iş parçacıkları için profil oluşturmayı duraklatır ve devam ettirir.
+description: Aşağıdaki seçeneklerde GlobalOn ve GlobalOff VSPerfCmd.exe. Bu seçenekler, bir komut satırı profil oluşturma oturumunda işlemler ve iş parçacıkları için profil oluşturmayı duraklatma ve sürdürme.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,32 +8,33 @@ ms.assetid: 24b0ed68-d19e-473e-9af3-252c11d82bcf
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c940cc06142fc69460ed1e4a32303a6e3f919164
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 960a7d4f1977dfd79ba4d80505b733eba876e38721615f364986ac0bd22b23a8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907295"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121355262"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn ve GlobalOff
-*VSPerfCmd.exe* **globaloff** ve **GlobalOn** seçenekleri, komut satırı profil oluşturma oturumunda tüm süreçler ve iş parçacıkları için profil oluşturmayı duraklatır ve devam ettirir.
+**GlobalOff** *VSPerfCmd.exe* **GlobalOn** seçenekleri, bir komut satırı profil oluşturma oturumunda tüm işlemler ve iş parçacıkları için profil oluşturmayı duraklatma ve sürdürme.
 
- *VSPerfCmd.exe* komut satırında tek seçenekler olarak **GlobalOn** ve **globaloff** belirtebilir ya da bunları **Başlat**, **Başlat** veya **Ekle** seçeneklerini içeren komut satırlarına dahil edebilirsiniz.
+ GlobalOn  ve **GlobalOff** komutVSPerfCmd.exetek  seçenek olarak belirtebilirsiniz veya bunları **Başlat,** Başlat veya Ekle seçeneklerini de içeren komut satırlarına  dahilebilirsiniz.
 
- **GlobalOn** ve **globaloff** Ayrıca **ProcessOn**, **ProcessOff**, **ThreadOn** ve **ThreadOff** seçenekleriyle birleştirilebilir.
+ **GlobalOn** **ve GlobalOff,** **ProcessOn,** **ProcessOff,** **ThreadOn** ve **ThreadOff seçenekleriyle de birleştirilmiş** olabilir.
 
- **GlobalOn** ve **globaloff** seçenekleri, belirtilen bir işlem Için veri toplamayı denetleyen **ProcessOn** ve **ProcessOff** seçenekleriyle, belirtilen Iş parçacığı Için de veri toplamayı denetleyen **ThreadOn** ve **ThreadOff** seçenekleriyle etkileşime geçin.
+ **GlobalOn** ve **GlobalOff** seçenekleri, belirli bir işlem için veri toplamayı kontrol etmek üzere **ProcessOn** ve **ProcessOff** seçenekleriyle ve belirtilen bir iş parçacığı için veri toplamayı kontrol alan **ThreadOn** ve **ThreadOff** seçenekleriyle etkileşime geçmenizi sağlar.
 
- **Globaloff** ve **GlobalOn** SEÇENEKLERI Ayrıca profil oluşturucunun API Işlevleri tarafından yönetilen genel başlatma/durdurma sayısını da etkiler.
+ **GlobalOff ve** **GlobalOn** seçenekleri, profil oluşturmanın API işlevleri tarafından yönlendiren Genel Başlatma/Durdurma sayısını da etkiler.
 
-- **Globaloff** , genel Başlat/Durdur sayısını hemen 0 olarak ayarlar ve bu nedenle profil oluşturmayı duraklatır.
+- **GlobalOff,** Genel Başlangıç/Durdurma Sayısını hemen 0 olarak ayarlar ve bu nedenle profil oluşturmayı duraklattır.
 
-- **GlobalOn** , genel Başlat/Durdur sayısını hemen 1 olarak ayarlar ve bu nedenle profil oluşturma işlemine devam eder.
+- **GlobalOn,** Genel Başlangıç/Durdurma Sayısını hemen 1 olarak ayarlar ve bu nedenle profil oluşturmayı sürdürür.
 
-  Daha fazla bilgi için bkz. [profil oluşturma araçları API 'leri](../profiling/profiling-tools-apis.md).
+  Daha fazla bilgi için [bkz. Profil oluşturma araçları API'leri.](../profiling/profiling-tools-apis.md)
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,21 +49,21 @@ VSPerfCmd.exe {Launch:AppName|Attach:PID} /{GlobalOff|GlobalOn}[Options]
 #### <a name="parameters"></a>Parametreler
  Hiçbiri
 
-## <a name="valid-options"></a>Geçerli seçenekler
- **GlobalOn** ve **globaloff** , aşağıdaki seçenekleri de içeren komut satırlarında belirtilebilir.
+## <a name="valid-options"></a>Geçerli Seçenekler
+ **GlobalOn** **ve GlobalOff,** aşağıdaki seçenekleri de içeren komut satırlarında belirtilebilir.
 
- **Başlangıç:** `Method` Komut satırı profil oluşturucu oturumunu başlatır ve belirtilen profil oluşturma yöntemini ayarlar.
+ **Başlat:** `Method` Komut satırı profil oluşturma oturumunu başlatan ve belirtilen profil oluşturma yöntemini ayarlar.
 
- **Başlatma:** `AppName` Belirtilen uygulamayı başlatır ve örnekleme yöntemiyle profil oluşturmaya başlar.
+ **Başlatma:** `AppName` Belirtilen uygulamayı başlatır ve örnekleme yöntemiyle profil oluşturmayı başlatır.
 
- **Ekle:** `PID` Belirtilen işlemin profilini oluşturmaya başlıyor.
+ **Ekleme:** `PID` Belirtilen sürecin profilini oluşturmayı başlar.
 
- {**ProcessOff**&#124;**ProcessOn**} **:**`PID` Belirtilen işlem için profil oluşturmayı durduruyor veya başlatır.
+ {**ProcessOff**&#124;**ProcessOn**} **:**`PID` Belirtilen işlem için profil oluşturmayı durdurur veya başlatır.
 
- {**ThreadOff**&#124;**ThreadOn**} **:**`TID` Belirtilen işlem için profil oluşturmayı durduruyor veya başlatır (yalnızca izleme yöntemi).
+ {**ThreadOff**&#124;**ThreadOn**} **:**`TID` Belirtilen işlem için profil oluşturmayı durdurur veya başlatır (yalnızca ölçüm yöntemi).
 
 ## <a name="example"></a>Örnek
- Bu örnekte, uygulama başlatma ve kapatma için profil oluşturma verilerinin toplanmasını önlemek için **globaloff** ve **GlobalOn** seçenekleri kullanılır.
+ Bu örnekte, uygulama başlatma ve kapatma için profil oluşturma verilerini toplamayı önlemek için **GlobalOff** ve **GlobalOn** seçenekleri kullanılır.
 
 ```cmd
 ; Initialize the profiler with profiling stopped.
@@ -81,6 +82,6 @@ VSPerfCmd /Shutdown
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [Web ASP.NET profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

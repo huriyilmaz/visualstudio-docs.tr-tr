@@ -1,6 +1,6 @@
 ---
-title: Yazılım geliştirme kiti oluşturma | Microsoft Docs
-description: SDK 'ların genel altyapısı ve bir platform SDK 'sı ve uzantı SDK 'Sı oluşturma hakkında bilgi edinin.
+title: Yazılım Geliştirme Seti oluşturma | Microsoft Docs
+description: SDK'ların genel altyapısı ve platform SDK'sı ile uzantı SDK'sı oluşturma hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,38 +8,39 @@ ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc762912abdc58b33e49406dd46cadd152f732b6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b0543b280142747c9fdfdb9f6dfee87bb2f83da35b3f4ad539b685dd878ad1e8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089374"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293566"
 ---
 # <a name="create-a-software-development-kit"></a>Yazılım geliştirme seti oluşturma
 
-Yazılım Geliştirme Seti (SDK), Visual Studio 'da tek bir öğe olarak başvurkabilmeniz için bir API koleksiyonudur. **Başvuru Yöneticisi** iletişim kutusu, projeyle ilgili olan tüm SDK 'ları listeler. Bir projeye SDK eklediğinizde, API 'Ler Visual Studio 'da kullanılabilir.
+Yazılım geliştirme seti (SDK), bir api koleksiyonudur ve bu koleksiyonda tek öğe olarak başvurabilirsiniz Visual Studio. Başvuru **Yöneticisi** iletişim kutusunda, projeyle ilgili tüm SDK'ler liste olur. Bir projeye SDK eklerken API'ler Visual Studio.
 
 İki tür SDK vardır:
 
-- Platform SDK 'Ları, bir platform için uygulama geliştirmeye yönelik zorunlu bileşenlerdir. Örneğin, [!INCLUDE[win81](../debugger/includes/win81_md.md)] uygulama geliştirmek için SDK gereklidir [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] .
+- Platform SDK'ları, bir platform için uygulama geliştirmeye yönelik zorunlu bileşenlerdir. Örneğin, uygulama [!INCLUDE[win81](../debugger/includes/win81_md.md)] geliştirmek için SDK [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] gereklidir.
 
-- Uzantı SDK 'Ları, platformu genişleten ancak bu platform için uygulama geliştirmeye yönelik zorunlu olmayan isteğe bağlı bileşenlerdir.
+- Uzantı SDK'leri, platformu genişleten isteğe bağlı bileşenlerdir ancak bu platform için uygulama geliştirmek için zorunlu değildir.
 
-Aşağıdaki bölümlerde SDK 'ların genel altyapısı ve bir platform SDK 'sı ile Uzantı SDK 'Sı oluşturma açıklanır.
+Aşağıdaki bölümlerde SDK'ların genel altyapısı ve bir platform SDK'sı ile uzantı SDK'sı oluşturma açıklanmaktadır.
 
-## <a name="platform-sdks"></a>Platform SDK 'Ları
+## <a name="platform-sdks"></a>Platform SDK'ları
 
-Platform SDK 'Ları bir platforma yönelik uygulamalar geliştirmek için gereklidir. Örneğin, [!INCLUDE[win81](../debugger/includes/win81_md.md)] için uygulama geliştirmek için SDK gerekir [!INCLUDE[win81](../debugger/includes/win81_md.md)] .
+Platform için uygulama geliştirmek için platform SDK'leri gereklidir. Örneğin, [!INCLUDE[win81](../debugger/includes/win81_md.md)] için uygulama geliştirmek için SDK [!INCLUDE[win81](../debugger/includes/win81_md.md)] gereklidir.
 
 ### <a name="installation"></a>Yükleme
 
-Tüm Platform SDK 'Ları, *Hklm\software\microsoft\microsoft SDK 'ları \\ [TPI] \v [TPV] \\ @InstallationFolder = [SDK root]* konumunda yüklenecektir. Buna uygun olarak [!INCLUDE[win81](../debugger/includes/win81_md.md)] SDK, *Hklm\software\microsoft\microsoft SDKs\Windows\v8.1*' e yüklenir.
+Tüm platform SDK'ları *HKLM\Software\Microsoft\Microsoft SDK'ları \\ [TPI]\v[TPV] \\ @InstallationFolder = [SDK root] dizinine yüklenir.* Buna uygun [!INCLUDE[win81](../debugger/includes/win81_md.md)] olarak, SDK *HKLM\Software\Microsoft\Microsoft SDKs\Windows\v8.1 dizinine yüklenir.*
 
 ### <a name="layout"></a>Layout
 
-Platform SDK 'Ları aşağıdaki düzene sahiptir:
+Platform SDK'leri aşağıdaki düzendedir:
 
 ```
 \[InstallationFolder root]
@@ -52,41 +53,41 @@ Platform SDK 'Ları aşağıdaki düzene sahiptir:
                         \[arch]
 ```
 
-| Düğüm | Description |
+| Düğüm | Açıklama |
 |------------------------| - |
-| *Başvurular* klasörü | İle kodlanması yapabilen API 'Leri içeren ikili dosyaları içerir. Bunlar Windows meta verileri (WinMD) dosyalarını veya derlemelerini içerebilir. |
-| *Tasarım zamanı* klasörü | Yalnızca çalıştırma öncesi/hata ayıklama zamanında gereken dosyaları içerir. Bunlar XML docs, kitaplıklar, üst bilgiler, araç kutusu tasarım zamanı ikilileri, MSBuild yapıtları, vb. içerebilir.<br /><br /> XML belgeleri, ideal olarak *\Designtime* klasörüne yerleştirilecektir, ancak başvurular için XML docs, Visual Studio 'daki başvuru dosyası ile birlikte yerleştirilmeye devam edecektir. Örneğin, bir başvurunun XML belgesi <em>\ başvurular [ \\ config] \\ [Arch] \sample.dll</em> *\references [config] [Arch] \\ \\ \sample.xml* ve bu belgeye ait yerelleştirilmiş sürüm *\ başvurular \\ [config] \\ [Arch] \\ [locale] \sample.xml* olur. |
-| *Yapılandırma* klasörü | Yalnızca üç klasör olabilir: *hata ayıklama*, *Perakende* ve *CommonConfiguration*. SDK yazarları, SDK tüketicisinin hedefleyecek yapılandırmadan bağımsız olarak, aynı SDK dosyaları kümesi tüketilmesi gerekiyorsa, dosyalarını *CommonConfiguration* altına yerleştirebilir. |
-| *Mimari* klasörü | Desteklenen herhangi bir *mimari* klasörü bulunabilir. Visual Studio şu mimarileri destekler: x86, x64, ARM ve neutral. Note: Win32 ile x86 eşlenir ve eşlemeler ' ı nötr olarak eşleştirir.<br /><br /> MSBuild yalnızca Platform SDK 'Ları için *\CommonConfiguration\neutral* ' ın altında görünür. |
-| *SDKManifest.xml* | Bu dosya, Visual Studio 'Nun SDK 'Yı nasıl tüketmesi gerektiğini açıklar. İçin SDK bildirimine bakın [!INCLUDE[win81](../debugger/includes/win81_md.md)] :<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:** Nesne Tarayıcısı, gezinme listesinde görüntülenen değer.<br /><br /> **Platformıdentity:** Bu özniteliğin varlığı, Visual Studio 'ya ve MSBuild 'in bir platform SDK olduğunu ve bundan eklenen başvuruların yerel olarak kopyalanmayacağını söyler.<br /><br /> **TargetFramework:** Bu öznitelik, Visual Studio tarafından yalnızca bu özniteliğin değerinde belirtilen çerçeveleri hedefleyen projelerin SDK 'Yı tükettiği için kullanılır.<br /><br /> **MinVSVersion:** Bu öznitelik, Visual Studio tarafından yalnızca buna uygulanan SDK 'Ları kullanmak için kullanılır.<br /><br /> **Başvuru:** Bu özniteliğin yalnızca denetimleri içeren başvurular için belirtilmesi gerekir. Bir başvurunun denetimler içerip içermediğini belirtme hakkında bilgi için aşağıya bakın. |
+| *Başvurular* klasörü | Kodlandırılarak API'ler içeren ikili dosyaları içerir. Bunlar meta Windows (WinMD) dosyalarını veya derlemelerini içerebilir. |
+| *DesignTime* klasörü | Yalnızca çalıştırma öncesi/hata ayıklama zamanında gereken dosyaları içerir. Bunlar XML belgeleri, kitaplıklar, üst bilgiler, Araç Kutusu tasarım zamanı ikili dosyaları, MSBuild yapıtları vb. içerebilir<br /><br /> XML belgeleri ideal olarak *\DesignTime* klasörüne yerleştirilir, ancak başvurular için XML belgeleri, belgelerde başvuru dosyasıyla birlikte yerleştiril Visual Studio. Örneğin,<em>bir başvuru \References \\ [config] \\ [arch] \sample.dll</em> için XML belgesi *\References \\ [config] \\ [arch] \sample.xml* ve bu belgedeki yerelleştirilmiş sürüm *\References \\ [config] \\ \\ [arch] [locale]\sample.xml* olur. |
+| *Yapılandırma* klasörü | Yalnızca üç klasör *olabilir:* Hata Ayıklama, *Perakende ve* *CommonConfiguration*. SDK tüketicisi tarafından hedeflene yapılandırmadan bağımsız olarak aynı SDK dosyası kümesi tüketilmesi gerekirse, SDK yazarları dosyalarını *CommonConfiguration* altına yer yer almaktadır. |
+| *Mimari* klasörü | Desteklenen herhangi *bir mimari* klasörü olabilir. Visual Studio şu mimarileri destekler: x86, x64, ARM ve nötr. Not: Win32 x86 ile eşler ve AnyCPU nötr olarak eşler.<br /><br /> MSBuild Platform SDK'leri *için yalnızca \CommonConfiguration\n* altta görünüyor. |
+| *SDKManifest.xml* | Bu dosyada, Visual Studio SDK'yı nasıl tüketmesi gerektiği açıklanmıştır. için SDK Bildirimi'ne [!INCLUDE[win81](../debugger/includes/win81_md.md)] bakın:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:** Object Browser'ın Gözat listesinde görüntülene değer.<br /><br /> **PlatformIdentity:** Bu özniteliğin varlığı Visual Studio MSBuild SDK'nın bir platform SDK'sı olduğunu ve bu öznitelikten eklenen başvuruların yerel olarak kopyalanmaması gerektiğini söyler.<br /><br /> **TargetFramework:** Bu öznitelik, Visual Studio yalnızca bu özniteliğin değerinde belirtilen aynı Çerçeveleri hedef alan projelerin SDK'yı tüketemesi için kullanılır.<br /><br /> **MinVSVersion:** Bu öznitelik, Visual Studio yalnızca buna geçerli OLAN SDK'ları tüketmek için kullanılır.<br /><br /> **Başvuru:** Bu öznitelik yalnızca denetim içeren başvurular için belirtilmelidir. Başvuruda denetim olup olmadığını belirtme hakkında bilgi için aşağıya bakın. |
 
-## <a name="extension-sdks"></a>Uzantı SDK 'Ları
+## <a name="extension-sdks"></a>Uzantı SDK'ları
 
-Aşağıdaki bölümlerde Uzantı SDK 'Sı dağıtmak için yapmanız gerekenler açıklanır.
+Aşağıdaki bölümlerde, bir uzantı SDK'sı dağıtmak için ne ihtiyacınız olduğu açıklanmaktadır.
 
 ### <a name="installation"></a>Yükleme
 
-Uzantı SDK 'Ları, belirli bir kullanıcı veya bir kayıt defteri anahtarı belirtmeden tüm kullanıcılar için yüklenebilir. Tüm kullanıcılar için bir SDK yüklemek için aşağıdaki yolu kullanın:
+Uzantı SDK'leri, kayıt defteri anahtarı belirtmeden belirli bir kullanıcı veya tüm kullanıcılar için yükleyebilir. Tüm kullanıcılara bir SDK yüklemek için aşağıdaki yolu kullanın:
 
-*% Program Files%\Microsoft SDK 'Ları \<target platform\> \v<Platform sürüm numarası \> \ extensionsdk 'ları*
+*%Program Files%\Microsoft SDKs \<target platform\> \v<platform sürüm numarası \> \ExtensionSDKs*
 
 Kullanıcıya özgü yükleme için aşağıdaki yolu kullanın:
 
-*%USERPROFILE%\AppData\Local\Microsoft SDK 'Ları \<target platform\> \v<Platform sürüm numarası \> \ extensionsdk 'ları*
+*%USERPROFILE%\AppData\Local\Microsoft SDKs \<target platform\> \v<platform sürüm numarası \> \ExtensionSDKs*
 
-Farklı bir konum kullanmak istiyorsanız, iki işlemlerden birini yapmanız gerekir:
+Farklı bir konum kullanmak istediğiniz iki şey vardır:
 
 1. Bunu bir kayıt defteri anahtarında belirtin:
 
-     **HKLM\Software\Microsoft\Microsoft SDK 'Ları \<target platform> \v<Platform sürüm numarası \> \ extensionsdk 'ları\<SDKName>\<SDKVersion>**\
+     **HKLM\Software\Microsoft\Microsoft SDKs \<target platform> \v<platform sürüm numarası \> \ExtensionSDKs\<SDKName>\<SDKVersion>**\
 
-     ve değerine sahip olan bir (default) alt anahtarı ekleyin `<path to SDK><SDKName><SDKVersion>` .
+     ve değerine sahip bir (Varsayılan) alt anahtar `<path to SDK><SDKName><SDKVersion>` ekleyin.
 
-2. MSBuild özelliğini `SDKReferenceDirectoryRoot` proje dosyanıza ekleyin. Bu özelliğin değeri, başvurmak istediğiniz uzantı SDK 'larının bulunduğu, noktalı virgülle ayrılmış dizinlerin bir listesidir.
+2. MSBuild proje `SDKReferenceDirectoryRoot` dosyanıza ekleyin. Bu özelliğin değeri, başvuru yapmak istediğiniz Uzantı SDK'lerinin bulunduğu noktalı virgülle ayrılmış dizin listesidir.
 
 ### <a name="installation-layout"></a>Yükleme düzeni
 
-Uzantı SDK 'Ları aşağıdaki yükleme düzenine sahiptir:
+Uzantı SDK'leri aşağıdaki yükleme düzenine sahiptir:
 
 ```
 \<ExtensionSDKs root>
@@ -105,13 +106,13 @@ Uzantı SDK 'Ları aşağıdaki yükleme düzenine sahiptir:
 
 ```
 
-1. \\<SDKName \> \\<sdkversion \> : Uzantı SDK 'sının adı ve sürümü, SDK kökünün yolundaki karşılık gelen klasör adlarından türetilir. MSBuild diskte SDK 'Yı bulmak için bu kimliği kullanır ve Visual Studio bu kimliği **Özellikler** penceresi ve **başvuru Yöneticisi** iletişim kutusunda görüntüler.
+1. \\<SDKName<SDKVersion: Uzantı SDK'sı adı ve sürümü, SDK kökü yolundaki ilgili klasör \> \\ \> adlarından türetildi. MSBuild SDK'yı diskte bulmak için bu kimliği kullanır ve Visual Studio Özellikler  penceresinde ve Başvuru Yöneticisi iletişim **kutusunda** görüntülenir.
 
-2. *Başvurular* klasörü: API 'leri içeren ikili dosyalar. Bunlar Windows meta verileri (WinMD) dosyaları veya derlemeleri olabilir.
+2. *References* klasörü: API'leri içeren ikili dosyalar. Bunlar meta Windows (WinMD) dosyaları veya derlemeleri olabilir.
 
-3. *Redist* klasörü: çalışma zamanı/hata ayıklama için gereken dosyalar ve kullanıcının uygulamasının bir parçası olarak paketlenmesi gerekir. Tüm ikili dosyalar *\redist \\<config \> \\ \><Arch* altına yerleştirilmelidir ve ikili adların benzersizlik sağlamak için aşağıdaki biçimi olmalıdır: *]* \<company> . \<product> . \<purpose> . \<extension> <em>. Örneğin, * Microsoft.Cpp.Build.dll</em>. Diğer SDK 'lardan dosya adlarıyla çakışelebilecek adlara sahip tüm dosyalar (örneğin, JavaScript, CSS, PRI, XAML, PNG ve jpg dosyaları), <em> \\ \> \\ \> \\ \> \* xaml denetimleriyle ilişkili dosyalar dışında \redist<config<Arch<SDKName altına yerleştirilmelidir. Bu dosyalar * \redist \\<config \> \\<Arch \> \\<ComponentName \> \\ altına yerleştirilmelidir</em>.
+3. *Redist* klasörü: Çalışma zamanı/hata ayıklama için gereken ve kullanıcının uygulamasının bir parçası olarak paketlenebilecek dosyalar. Tüm ikili dosyalar *\redist \\<config \> \\<arkın \>* altına yerleştirilmeli ve ikili adların benzersiz olmasını sağlamak için aşağıdaki biçime sahip olmalıdır: *]* \<company> . \<product> \<purpose> . \<extension> <em>. Örneğin, *Microsoft.Cpp.Build.dll.</em> Diğer SDK'lardan dosya adlarına sahip olan tüm dosyalar (örneğin, javascript, css, pri, xaml, png ve jpg dosyaları), XAML denetimleriyle ilişkili dosyalar dışında <em>\redist<config<arch<sdkname altına \\ yerleştirilsin. \> \\ \> \\ \> \* Bu dosyalar * \redist ve config<altına<\\ \> \\ bileşen<\> \\ yerleştirilsin. \> \\ </em>
 
-4. *Tasarım zamanı* klasörü: yalnızca ön çalıştırma/hata ayıklama sırasında gerekli olan ve kullanıcının uygulamasının bir parçası olarak paketlenmemelidir. Bunlar XML belgeleri, kitaplıklar, üst bilgiler, araç kutusu tasarım zamanı ikilileri, MSBuild yapıtları vb. olabilir. Yerel bir proje tarafından tüketimine yönelik herhangi bir SDK 'nın bir *SDKName. props* dosyası olması gerekir. Aşağıda bu dosya türünün bir örneği gösterilmektedir.
+4. *DesignTime* klasörü: Yalnızca ön çalıştırma/hata ayıklama zamanında gereken ve kullanıcının uygulamasının bir parçası olarak pakete dahil olmaması gereken dosyalar. Bunlar XML belgeleri, kitaplıklar, üst bilgiler, araç kutusu tasarım zamanı ikili dosyaları, MSBuild yapıtları vb. olabilir. Yerel bir proje tarafından kullanılmak üzere tasarlanmış tüm SDK'ların bir *SDKName.props dosyası* olması gerekir. Aşağıda, bu tür bir dosyanın bir örneği ve ardından bir örnek ve ardından yer alan bir örnek ve sonra da bu dosyanın bir örneği ve ardından bu dosyanın bir örneği ve
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -129,15 +130,15 @@ Uzantı SDK 'Ları aşağıdaki yükleme düzenine sahiptir:
 
    ```
 
-    XML başvuru belgeleri, başvuru dosyasının yanına yerleştirilir. Örneğin, *\references \\<config \> \\<Arch \>\sample.dll* bütünleştirilmiş kodu için XML başvuru belgesi, *\references \\<config \> \\<Arch \>\sample.xml* ve bu belgenin yerelleştirilmiş sürümü *\references<\\ config<\> \\ Arch \> \\<locale \>\sample.xml*.
+    XML başvuru belgeleri başvuru dosyasıyla birlikte yerleştirilir. Örneğin, *\References<config<arch \\ \> \\ \>\sample.dll* derlemesi için XML başvuru belgesi *\References \\<config<arch \> \\ \>\sample.xml* ve bu belgenin yerelleştirilmiş sürümü *\References \\<config<arch<yerel \> \\ \> \\ \>\sample.xml'dır.*
 
-5. *Yapılandırma* klasörü: üç alt klasör: *Hata Ayıkla*, *Perakende* ve *CommonConfiguration*. SDK yazarları, SDK tüketicisinin hedeflediği yapılandırmadan bağımsız olarak aynı SDK dosyaları kümesi tüketilmesi gerektiğinde dosyalarını *CommonConfiguration* altına yerleştirebilir.
+5. *Yapılandırma* klasörü: üç alt klasör: *Hata ayıklama,* *Perakende* ve *CommonConfiguration*. SDK yazarları, SDK tüketicisi tarafından hedeflenen yapılandırmadan bağımsız olarak aynı SDK dosyası kümesi tüketilmesi gerektiği zaman *dosyalarını CommonConfiguration* altına yerlerinden yer almaktadır.
 
-6. *Mimari* klasörü: Şu mimariler desteklenir: x86, x64, ARM, nötr. Win32, x86 ile eşlenir ve eşlemeleri bağımsız olarak eşler.
+6. *Mimari* klasörü: Aşağıdaki mimariler de desteklemektedir: x86, x64, ARM, nötr. Win32 x86 ile eşler ve AnyCPU nötr olarak eşler.
 
 ### <a name="sdkmanifestxml"></a>SDKManifest.xml
 
-*SDKManifest.xml* dosyası, Visual Studio 'nun SDK 'yı nasıl tüketmesi gerektiğini açıklar. Aşağıda bir örnek verilmiştir:
+SDKManifest.xml dosyası, sdk'Visual Studio nasıl tüketilmesi gerektiğini açıklar. Aşağıda bir örnek verilmiştir:
 
 ```
 <FileList>
@@ -163,45 +164,45 @@ MoreInfo = "https://msdn.microsoft.com/MySDK">
 
 Aşağıdaki liste, dosyanın öğelerini verir:
 
-1. DisplayName: başvuru Yöneticisi, Çözüm Gezgini, Nesne Tarayıcısı ve Visual Studio için Kullanıcı arabirimindeki diğer konumlarda görünen değer.
+1. DisplayName: Başvuru Yöneticisi'nde, Çözüm Gezgini, Object Browser'da ve kullanıcı arabiriminde diğer konumlarda görünen Visual Studio.
 
-2. ProductFamilyName: Genel SDK ürün adı. Örneğin, [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)] SDK "Microsoft. WinJS. 1.0" ve "Microsoft. WinJS. 2.0" olarak adlandırılmıştır. Bu, "Microsoft. WinJS" ADLı SDK ürünleri ailesine ait. Bu öznitelik, bu bağlantıyı kurmak için Visual Studio ve MSBuild 'e izin verir. Bu öznitelik yoksa, SDK adı ürün ailesi adı olarak kullanılır.
+2. ProductFamilyName: Genel SDK ürün adı. Örneğin SDK, aynı SDK ürün ailesi olan [!INCLUDE[winjs_long](../debugger/includes/winjs_long_md.md)] "Microsoft.WinJS.1.0" ve "Microsoft.WinJS.2.0" olarak adlandırılır. Bu öznitelik, Visual Studio bağlantı MSBuild izin verir. Bu öznitelik yoksa, ürün ailesi adı olarak SDK Adı kullanılır.
 
-3. FrameworkIdentity: bir veya daha fazla Windows Bileşen kitaplığındaki bağımlılığı belirtir. Bu özniteliğin değeri, tüketen uygulamanın bildirimine konur. Bu öznitelik yalnızca Windows bileşen kitaplıkları için geçerlidir.
+3. FrameworkIdentity: Bir veya daha fazla bileşen kitaplığına Windows belirtir. Bu özniteliğin değeri, tüketen uygulamanın bildirimine yer alır. Bu öznitelik yalnızca bileşen kitaplıkları Windows geçerlidir.
 
-4. TargetFramework: başvuru Yöneticisi 'nde ve araç kutusunda bulunan SDK 'Ları belirtir. Bu, hedef çerçeve adları 'nın noktalı virgülle ayrılmış listesidir, örneğin ".NET Framework, sürüm = v 2.0; .NET Framework, sürüm = v 4.5.1". Aynı hedef Framework 'ün birkaç sürümü belirtilmişse, başvuru Yöneticisi filtreleme amacıyla belirtilen en düşük sürümü kullanır. Örneğin, ".NET Framework, Version = v 2.0; .NET Framework, Version = v 4.5.1" belirtilmişse, başvuru Yöneticisi ".NET Framework, sürüm = v 2.0" öğesini kullanacaktır. Belirli bir hedef çerçeve profili belirtilmişse, yalnızca bu profil başvuru Yöneticisi tarafından filtreleme amacıyla kullanılacaktır. Örneğin, "Silverlight, Version = v 4.0, profile = WindowsPhone" belirtildiğinde, başvuru Yöneticisi yalnızca Windows Phone profilinde filtreler; tam Silverlight 4,0 Framework 'Ü hedefleyen bir proje, başvuru yöneticisinde SDK 'Yı görmez.
+4. TargetFramework: Başvuru Yöneticisi'nde ve araç kutusunda bulunan SDK'leri belirtir. Bu, ".NET Framework, version=v2.0; .NET Framework, version=v4.5.1". Aynı hedef çerçevenin birkaç sürümü belirtilirse, Başvuru Yöneticisi filtreleme amacıyla belirtilen en düşük sürümü kullanır. Örneğin, ".NET Framework, version=v2.0; .NET Framework, version=v4.5.1" belirtilirse, Başvuru Yöneticisi ".NET Framework, version=v2.0" kullanır. Belirli bir hedef çerçeve profili belirtilirse, filtreleme amacıyla yalnızca bu profil Başvuru Yöneticisi tarafından kullanılır. Örneğin, "Silverlight, version=v4.0, profile=WindowsPhone" belirtilirse, Başvuru Yöneticisi yalnızca Windows Phone filtreler; Tam Silverlight 4.0 Framework'ü hedef alan bir proje, Başvuru Yöneticisi'nde SDK'yı görmüyor.
 
-5. MinVSVersion: en düşük Visual Studio sürümü.
+5. MinVSVersion: En düşük Visual Studio sürümü.
 
-6. MaxPlatformVerson: Uzantı SDK 'sının çalışmayacak platform sürümlerini belirtmek için en fazla hedef platform sürümü kullanılmalıdır. Örneğin, Microsoft Visual C++ çalışma zamanı paketi v 11.0 yalnızca Windows 8 projeleri tarafından başvurulmalıdır. Bu nedenle, Windows 8 projesinin MaxPlatformVersion değeri 8,0 ' dir. Bu, başvuru Yöneticisi bir Windows 8.1 projesi için Microsoft Visual C++ çalışma zamanı paketini filtreleyip bir proje buna başvurduğunda MSBuild bir hata oluşturur [!INCLUDE[win81](../debugger/includes/win81_md.md)] . Note: Bu öğe, tarihinde başlayarak desteklenir [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] .
+6. MaxPlatformVerson: Uzantı SDK'nızı kullanmayacak platform sürümlerini belirtmek için en yüksek hedef platform sürümü kullanılmalıdır. Örneğin, Microsoft Visual C++ Çalışma Zamanı Paketi v11.0'a yalnızca Windows 8 gerekir. Bu nedenle Windows 8 MaxPlatformVersion 8.0'dır. Bu, Başvuru Yöneticisi'nin bir Windows 8.1 proje için Microsoft Visual C++ Çalışma Zamanı Paketi'ni filtrele MSBuild proje ona başvurarak [!INCLUDE[win81](../debugger/includes/win81_md.md)] hataya neden olduğu anlamına gelir. Not: Bu öğe, 'den başlayarak de destekleni. [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]
 
-7. AppliesTo: geçerli Visual Studio proje türlerini belirterek başvuru yöneticisinde bulunan SDK 'Ları belirtir. Dokuz değer tanınıyor: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, Managed ve Native. SDK yazarı, ve ("+") veya ("&#124;"), değil ("!") kullanabilir yalnızca SDK için uygulanan proje türlerinin kapsamını belirtmek için işleçler.
+7. AppliesTo: Başvuru Yöneticisi'nde kullanılabilir OLAN SDK'ları, proje türleri için geçerli Visual Studio belirtir. Dokuz değer tanınır: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, Managed ve Native. SDK yazarı (" +') veya ("&#124;" kullanabilir), ("!") tam olarak SDK için geçerli proje türlerinin kapsamını belirtmek için işleçler.
 
-    WindowsAppContainer, uygulamalar için projeleri tanımlar [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] .
+    WindowsAppContainer, uygulamalar için projeleri [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] tanımlar.
 
-8. SupportPrefer32Bit: desteklenen değerler "true" ve "false" şeklindedir. Varsayılan değer "true" dır. Değer "false" olarak ayarlanırsa, [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] SDK 'ya başvuruda bulunan projenin Prefer32Bit etkin olması halinde MSBuild, projeler (veya masaüstü projeleri için bir uyarı) için bir hata döndürür. Prefer32Bit hakkında daha fazla bilgi için bkz. [derleme sayfası, proje Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md) veya [derleme sayfası, proje Tasarımcısı (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md).
+8. SupportPrefer32Bit: Desteklenen değerler "True" ve "False" değerleridir. Varsayılan değer "True" şeklindedir. Değer "False" olarak ayarlanırsa, SDK'ya başvurulan projede Prefer32Bit etkinse MSBuild projeleri için bir hata (veya masaüstü projeleri için [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] uyarı) döndürür. Prefer32Bit hakkında daha fazla bilgi için [bkz. Derleme sayfası, Project Tasarımcısı (C#)](../ide/reference/build-page-project-designer-csharp.md) veya Derleme [sayfası, Project Tasarımcısı (Visual Basic).](../ide/reference/compile-page-project-designer-visual-basic.md)
 
-9. Supportedmimariler: SDK 'nın desteklediği mimarilerin virgülle ayrılmış bir listesi. Tüketim projesindeki hedeflenen SDK mimarisi desteklenmiyorsa MSBuild bir uyarı görüntüler. Bu öznitelik belirtilmemişse, MSBuild hiçbir şekilde bu uyarı türünü görüntülemez.
+9. SupportedArchitectures: SDK'nın desteklediği mimarilerin noktalı virgülle ayrılmış listesi. MSBuild, tüketen projede hedeflenen SDK mimarisi desteklenmiyorsa bir uyarı görüntüler. Bu öznitelik belirtilmezse, MSBuild hiçbir zaman bu tür bir uyarı görüntülemez.
 
-10. SupportsMultipleVersions: Bu öznitelik **hata** veya **Uyarı** olarak ayarlandıysa, MSBUILD aynı projenin aynı SDK ailesinin birden çok sürümüne başvuramayacağını gösterir. Bu öznitelik yoksa veya **Izin ver** olarak ayarlanırsa, MSBuild bu hata veya uyarı türünü görüntülemez.
+10. SupportsMultipleVersions: Bu öznitelik **Hata** veya Uyarı olarak ayarlanırsa, MSBuild aynı projenin aynı SDK ailesinin birden çok sürümüne başvura olmadığını gösterir. Bu öznitelik yoksa veya İzin Ver olarak ayarlanırsa MSBuild bu tür bir hata veya uyarı görüntülemez.
 
-11. AppX: diskteki Windows Bileşen kitaplığı için uygulama paketlerinin yolunu belirtir. Bu değer, yerel hata ayıklama sırasında Windows Bileşen kitaplığı 'nın kayıt bileşenine geçirilir. Dosya adı için adlandırma kuralı.... *\<Company> \<Product> \<Architecture> \<Configuration> \<Version> . appx*. Yapılandırma ve mimari, Windows Bileşen kitaplığı için uygulanamazlar öznitelik adı ve öznitelik değeri için isteğe bağlıdır. Bu değer yalnızca Windows bileşen kitaplıkları için geçerlidir.
+11. AppX: Diskte bileşen kitaplığı için Windows paketlerinin yolunu belirtir. Bu değer, yerel hata ayıklama sırasında Windows kitaplığının kayıt bileşenine geçirilir. Dosya adı için adlandırma kuralı : *\<Company> . . . \<Product> . \<Architecture> \<Configuration> \<Version> . appx*. Yapılandırma ve Mimari, bileşen kitaplığı için geçerli yoksa öznitelik adı ve öznitelik Windows isteğe bağlıdır. Bu değer yalnızca bileşen kitaplıkları Windows geçerlidir.
 
-12. Copyredisttoaltdizini: *\redist* klasörü altındaki dosyaların, uygulama paketi köküne (yani, **uygulama paketi oluşturma** Sihirbazı 'nda seçilen **paket konumu** ) ve çalışma zamanı düzen köküne göre kopyalanması gerektiğini belirtir. Varsayılan konum, uygulama paketinin ve **F5** düzeninin köküdür.
+12. CopyRedistToSubDirectory: *\redist* klasörünün altındaki dosyaların uygulama paketi köküne (Yani, Uygulama Paketi  Oluşturma sihirbazında  seçilen Paket konumu) ve çalışma zamanı düzeni köküne göre nereye kopyalandır gerektiğini belirtir. Varsayılan konum, uygulama paketinin ve **F5** düzeninin kökündedir.
 
-13. Bağımlıdson: Bu SDK 'nın bağımlı olduğu SDK kimliklerini tanımlayan SDK kimliklerinin bir listesi. Bu öznitelik, başvuru Yöneticisi 'nin Ayrıntılar bölmesinde görünür.
+13. DependsOn: Bu SDK'nın bağlı olduğu SDK'ları tanımlayan SDK kimliklerinin listesi. Bu öznitelik Başvuru Yöneticisi'nin ayrıntılar bölmesinde görünür.
 
-14. Ayrıntılı bilgi: yardım ve daha fazla bilgi sağlayan Web sayfasının URL 'SI. Bu değer, başvuru Yöneticisi 'nin sağ bölmesindeki daha fazla bilgi bağlantısında kullanılır.
+14. MoreInfo: Yardım ve daha fazla bilgi sağlayan web sayfasının URL'si. Bu değer, Başvuru Yöneticisi'nin sağ bölmesindeki Daha Fazla Bilgi bağlantısında kullanılır.
 
-15. Kayıt türü: uygulama bildiriminde WinMD kaydını belirtir ve buna karşılık gelen bir uygulama DLL 'SI olan yerel WinMD için gereklidir.
+15. Kayıt Türü: Uygulama bildiriminde WinMD kaydını belirtir ve buna bir uygulama DLL'si olan yerel WinMD için gereklidir.
 
-16. Dosya başvurusu: yalnızca denetimleri içeren veya yerel Wınmds olan başvurular için belirtilir. Bir başvurunun denetimler içerip içermediğini belirtme hakkında bilgi için bkz. aşağıdaki [araç kutusu öğelerinin konumunu belirtme](#ToolboxItems) .
+16. Dosya Başvurusu: Yalnızca denetim içeren veya yerel WinMD'ler olan başvurular için belirtilir. Başvuruda denetimler olup olmadığını belirtme hakkında bilgi için aşağıdaki [Araç kutusu öğelerinin konumunu belirtme makalelerine](#ToolboxItems) bakın.
 
-## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a> Araç kutusu öğelerinin konumunu belirtin
+## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a> Araç kutusu öğelerinin konumunu belirtme
 
-*SDKManifest.xml* şemasının **ToolBoxItems** öğesi hem platform hem de Uzantı SDK 'larında araç kutusu öğelerinin kategori ve konumunu belirtir. Aşağıdaki örneklerde farklı konumların nasıl belirtilmesi gösterilmektedir. Bu, WinMD veya DLL başvuruları için geçerlidir.
+SDKManifest.xmlşemasının **ToolBoxItems** öğesi, hem platform hem de uzantı SDK'larında araç kutusu öğelerinin kategorisini ve konumunu belirtir.  Aşağıdaki örneklerde, farklı konumların nasıl belirtn olduğu gösterir. Bu, WinMD veya DLL başvuruları için geçerlidir.
 
-1. Araç kutusu varsayılan kategorisindeki denetimleri yerleştirin.
+1. Denetimleri araç kutusu varsayılan kategorisine yer.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -209,7 +210,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
     </File>
     ```
 
-2. Denetimleri belirli bir kategori adı altına yerleştirin.
+2. Denetimleri belirli bir kategori adının altına girin.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -217,7 +218,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
     </File>
     ```
 
-3. Denetimleri belirli kategori adları altına yerleştirin.
+3. Denetimleri belirli kategori adlarının altına yer.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -228,7 +229,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
     </File>
     ```
 
-4. Blend ve Visual Studio 'da farklı kategori adları altına denetimler yerleştirin.
+4. Blend'de denetimleri farklı kategori adlarının altına Visual Studio.
 
     ```xml
     // Blend accepts a slightly different structure for the category name because it allows a path rather than a single category.
@@ -238,7 +239,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
     </File>
     ```
 
-5. Blend ve Visual Studio 'da belirli denetimleri farklı şekilde numaralandırın.
+5. Blend'de belirli denetimleri farklı şekilde numara Visual Studio.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -249,7 +250,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
     </File>
     ```
 
-6. Belirli denetimleri numaralandırın ve Visual Studio ortak yolunun altına veya yalnızca tüm denetimler grubuna yerleştirin.
+6. Belirli denetimleri numaradan seçin ve ortak yol Visual Studio veya yalnızca Tüm Denetimler Grubu'nda yer alan alt grubuna yer seçin.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -260,7 +261,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
     </File>
     ```
 
-7. Belirli denetimleri numaralandırın ve araç kutusunda olmayan ChooseItems içinde yalnızca belirli bir kümeyi gösterin.
+7. Belirli denetimleri numaraya ayarlayın ve araç kutusunda olmadan ChooseItems içinde yalnızca belirli bir kümeyi gösterir.
 
     ```xml
     <File Reference = "sample.winmd">
@@ -271,6 +272,6 @@ Aşağıdaki liste, dosyanın öğelerini verir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: C++ kullanarak SDK oluşturma](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)
-- [İzlenecek yol: C# veya Visual Basic kullanarak SDK oluşturma](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)
+- [Adım adım kılavuz: C++ kullanarak SDK oluşturma](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)
+- [Adım adım kılavuz: C# veya Visual Basic](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)
 - [Bir projedeki başvuruları yönetme](../ide/managing-references-in-a-project.md)

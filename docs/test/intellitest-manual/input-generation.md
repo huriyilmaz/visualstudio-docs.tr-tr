@@ -8,15 +8,16 @@ helpviewer_keywords:
 - IntelliTest, Dynamic symbolic execution
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 1ae12d6b7465e7b0542c987aae9fb849f232fce3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 16d0c045d9f0085a462e3d7f7f55f8af6326cde6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916540"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033050"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>Dinamik sembolik yürütme kullanarak giriş oluşturma
 

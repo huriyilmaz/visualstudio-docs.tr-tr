@@ -10,12 +10,13 @@ ms.assetid: a0b2d8ff-3e2a-487e-9172-90047174f336
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: e096333d66fffd233bfb4b9de7f40e18f1277846
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 96b26f60fdc283baf90645e81453cb52fba17303
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966740"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033271"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>Nasıl yapılır: Web Performans Testi Düzenleyicisi için özel HTTP Gövde Düzenleyicisi oluşturma
 
@@ -31,21 +32,21 @@ Bu tür düzenleyicilerin uygulanması için:
 
 Bu arabirimler ad alanında yer alır <xref:Microsoft.VisualStudio.TestTools.WebTesting> .
 
-## <a name="create-a-windows-control-library-project"></a>Windows Denetim Kitaplığı projesi oluşturma
+## <a name="create-a-windows-control-library-project"></a>Windows denetim kitaplığı projesi oluşturma
 
-1. Visual Studio 'da yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Proje **Messagedüzenleyicilerini** adlandırın.
+1. Visual Studio ' de, yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Proje **Messagedüzenleyicilerini** adlandırın.
 
-   Proje yeni çözüme eklenir ve <xref:System.Windows.Forms.UserControl> Tasarımcı içinde adlandırılmış bir *UserControl1.cs* sunulur.
+   Proje yeni çözüme eklenir ve bir <xref:System.Windows.Forms.UserControl> adlandırılmış *UserControl1. cs* tasarımcıda sunulur.
 
 1. **Araç kutusundan**, **ortak denetimler** kategorisi altında, <xref:System.Windows.Forms.RichTextBox> UserControl1 yüzeyine sürükleyin.
 
 1. ![Denetimin sağ üst köşesinde bulunan eylem etiketi glifini (akıllı etiket karakter ](../test/media/vs_winformsmttagglyph.gif) ) seçin <xref:System.Windows.Forms.RichTextBox> ve sonra **üst kapsayıcıda yerleştir**' i seçin.
 
-1. **Çözüm Gezgini**, Windows Forms kitaplığı projesine sağ tıklayın ve **Özellikler**' i seçin.
+1. **Çözüm Gezgini**, Windows Forms kitaplığı projesine sağ tıklayın ve **özellikler**' i seçin.
 
 1. **Özellikler**' de **uygulama** sekmesini seçin.
 
-1. **Hedef çerçeve** açılan listesinde .NET Framework 4 (veya üzeri) öğesini seçin.
+1. **hedef çerçeve** açılan listesinde .NET Framework 4 (veya üzeri) öğesini seçin.
 
 1. **Hedef çerçeve değişimi** iletişim kutusu görüntülenir.
 
@@ -57,7 +58,7 @@ Bu arabirimler ad alanında yer alır <xref:Microsoft.VisualStudio.TestTools.Web
 
 1. Öğesini seçin. **Net** Tab, aşağı kaydırın ve **Microsoft. VisualStudio. QualityTools. WebTestFramework** ' ı seçin ve ardından **Tamam**' ı seçin.
 
-1. **Görünüm Tasarımcısı** hala açık değilse, **Çözüm Gezgini**' de, **UserControl1.cs** ' a sağ tıklayın ve ardından **tasarımcıyı görüntüle**' yi seçin.
+1. **Görünüm Tasarımcısı** hala açık değilse, **Çözüm Gezgini**' de, **UserControl1. cs** öğesine sağ tıklayın ve ardından **tasarımcıyı görüntüle**' yi seçin.
 
 1. Tasarım yüzeyinde sağ tıklayıp **kodu görüntüle**' yi seçin.
 
@@ -107,7 +108,7 @@ Bu arabirimler ad alanında yer alır <xref:Microsoft.VisualStudio.TestTools.Web
     }
     ```
 
-## <a name="add-a-class-to-the-windows-control-library-project"></a>Windows denetim kitaplığı projesine bir sınıf ekleme
+## <a name="add-a-class-to-the-windows-control-library-project"></a>Windows denetim kitaplığı projesine bir sınıf ekleyin
 
 Projeye bir sınıf ekleyin. Ve arabirimlerini uygulamak için kullanılacaktır <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> .
 
@@ -125,7 +126,7 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve Kullanıcı eklenti iletiş
 
 ### <a name="create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface"></a>Bir sınıf oluşturun ve ıtringhttpbodyeditorplugin arabirimini uygulayın
 
-1. **Çözüm Gezgini**' de, Windows Forms denetim kitaplığı projesine sağ tıklayın ve **Yeni öğe Ekle**' yi seçin.
+1. **Çözüm Gezgini**' de, Windows Forms denetim kitaplığı projesine sağ tıklayın ve **yeni öğe ekle**' yi seçin.
 
    **Yeni Öğe Ekle** iletişim kutusu görüntülenir.
 
@@ -268,16 +269,16 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve Kullanıcı eklenti iletiş
 
 1. **Yapı** menüsünde, **Oluştur \<Windows Form Control Library project name>**' u seçin.
 
-2. Visual Studio 'nun tüm örneklerini kapatın.
+2. Tüm Visual Studio örneklerini kapatın.
 
    > [!NOTE]
-   > Visual Studio 'Yu kapatmak, kopyalamayı denemeden önce *. dll* dosyasının kilitlenmediğinden emin olmanızı sağlar.
+   > Visual Studio kapatmak, kopyalamayı denemeden önce *.dll* dosyasının kilitlenmediğinden emin olur.
 
-3. Elde edilen *. dll* dosyasını projenizin *bin\Debug* klasöründen (örneğin, *MessageEditors.dll*) *%ProgramFiles%\Microsoft Visual studio\2017 \\ \<edition> \Common7\IDE\PrivateAssemblies\WebTestPlugins* dizinine kopyalayın.
+3. elde edilen *.dll* dosyasını projenizin *bin\debug* klasöründen (örneğin, *MessageEditors.dll*) *% ProgramFiles% \ Microsoft Visual Studio \ 2017 \\ \<edition> \Common7\IDE\PrivateAssemblies\WebTestPlugins* olarak kopyalayın.
 
 4. Visual Studio'yu açın.
 
-   *. Dll* artık Visual Studio ile kaydedilir.
+   *.dll* artık Visual Studio kaydedilir.
 
 ## <a name="verify-the-plug-ins-using-a-web-performance-test"></a>Web performans testini kullanarak eklentileri doğrulama
 
@@ -295,7 +296,7 @@ Dize gövdesinin düzenlenmesi tamamlandığında ve Kullanıcı eklenti iletiş
 
 ## <a name="compile-the-code"></a>Kodu derle
 
-Windows Denetim Kitaplığı projesi için hedeflenen Framework 'ün .NET Framework 4,5 olduğunu doğrulayın. Varsayılan olarak, Windows denetim kitaplığı projeleri, Microsoft. VisualStudio. QualityTools. WebTestFramework başvurusunun eklenmesine izin vermeyecek .NET Framework 4,5 Istemci çerçevesini hedefleyin.
+Windows denetim kitaplığı projesi için hedeflenen framework 'ün .NET Framework 4,5 olduğunu doğrulayın. varsayılan olarak, Windows denetim kitaplığı projeleri, Microsoft. VisualStudio. QualityTools. WebTestFramework başvurusunun eklenmesine izin vermeyecek .NET Framework 4,5 istemci çerçevesini hedefleyin.
 
 Daha fazla bilgi için bkz. [uygulama sayfası, proje Tasarımcısı (C#)](../ide/reference/application-page-project-designer-csharp.md).
 
@@ -312,4 +313,4 @@ Daha fazla bilgi için bkz. [uygulama sayfası, proje Tasarımcısı (C#)](../id
 - [Web performans testi için özel doğrulama kuralı kodu oluşturma](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
 - [Nasıl yapılır: yük testi eklentisi oluşturma](../test/how-to-create-a-load-test-plug-in.md)
 - [Kodlanmış web performans testi oluşturma](../test/generate-and-run-a-coded-web-performance-test.md)
-- [Nasıl yapılır: Web performans Test Sonuçları Görüntüleyicisi için Visual Studio eklentisi oluşturma](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)
+- [nasıl yapılır: Web performans Test Sonuçları görüntüleyicisi için Visual Studio eklentisi oluşturma](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)

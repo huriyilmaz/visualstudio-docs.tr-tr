@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c84e07fa5ac2d3fc3afafd1579c8012ad14b06c82eb8a566ecaa28f5904b158
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8b3cd5951b0ffe8a933c2920dfc1a7e107c5bf6f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121305834"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063596"
 ---
 # <a name="contribute-to-the-automation-model"></a>Otomasyon modeline katkıda bulunun
 Visual Studio ortamı özelleştirmek için bir dizi otomasyon arabirimi sağlar. Otomasyon modeli, son kullanıcıların yeni eklentiler ve uzantılar oluşturmalarını Visual Studio nesne modelidir.
@@ -50,15 +50,15 @@ Visual Studio ortamı özelleştirmek için bir dizi otomasyon arabirimi sağlar
 
 - [Seçenek sayfaları için otomasyon desteği](../../extensibility/internals/automation-support-for-options-pages.md)
 
- Nesneyi genişleterek VsPackage'ın araç menüsündeki özel Seçenekler  iletişim kutusunun özelliklerini  desteklemek için bir otomasyon nesnesinin nasıl geri getirileceni `DTE.Properties` açıklar.
+ Nesneyi genişleterek VsPackage'ın araç menüsündeki özel Seçenekler  iletişim kutusunun özelliklerini  desteklemek için bir otomasyon nesnesinin nasıl geri getirilebileceklerini `DTE.Properties` açıklar.
 
 - [Kod için otomasyon sağlama](../../extensibility/internals/providing-automation-for-code.md)
 
- Kodunuz için otomasyon modeli oluşturmanın gerekli olmadığını açıklar. Ancak, bu konu başlığında kod modelleri hakkında içgörü sağlayan bir bağlantı verilmektedir.
+ Kodunuz için otomasyon modeli oluşturmanın gerekli olmadığını açıklar. Ancak bu konu başlığında kod modelleri hakkında içgörü sağlayan bir bağlantı verilmektedir.
 
 - [Nasıl Windows: Windows](../../extensibility/internals/how-to-provide-automation-for-windows.md)
 
- Otomasyon sağlamanın, otomasyon nesnelerini bir pencerede kullanılabilir yapmak istediğiniz her durumda iyi bir fikir olduğunu ve ortamın önceden hazır bir otomasyon nesnesi sağlamamış olduğunu açıklar. Araç pencereleri ve belge pencereleri için otomasyonu ele alan.
+ Otomasyon sağlamanın, otomasyon nesnelerini bir pencerede kullanılabilir yapmak istediğiniz her durumda iyi bir fikir olduğunu ve ortamın zaten hazır bir otomasyon nesnesi sağlamamış olduğunu açıklar. Araç pencereleri ve belge pencereleri için otomasyonu ele alan.
 
 - [Otomasyon modelini kullanma](../../extensibility/internals/using-the-automation-model.md)
 

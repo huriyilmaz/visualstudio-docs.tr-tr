@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 44c2d2bc225369af7293de2fe4fef5bafa95db6f5fe58d400727119065df35fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 845b20a18ccc422419084b8de0c9af725e105637
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121409051"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033180"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>Visual Studio 2017 ve sonrasında C++ için CTest kullanma
 

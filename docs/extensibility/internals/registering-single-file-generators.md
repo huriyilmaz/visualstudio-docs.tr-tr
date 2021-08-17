@@ -1,6 +1,6 @@
 ---
 title: Tek dosya oluşturanlar kaydediliyor | Microsoft Docs
-description: Visual Studio 'da özel bir aracın örneğini oluşturmak ve belirli bir proje türüyle ilişkilendirmek için nasıl kaydedeceğinizi öğrenin.
+description: özel bir aracın örneğini oluşturmak ve belirli bir proje türüyle ilişkilendirmek için Visual Studio nasıl kaydedeceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: db7592c0-1273-4843-9617-6e2ddabb6ca8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee110defb06d308c017230a36cebc2b04b3c63b9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ad56731f0e0432dea2eb583d23dcf4285801e2f6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062687"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062972"
 ---
 # <a name="registering-single-file-generators"></a>Tek Dosya Oluşturucuları Kaydetme
 Özel bir aracın ' de kullanılabilmesini sağlamak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , onu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] örneklendirilecek ve belirli bir proje türüyle ilişkilenbilmeniz için kaydetmeniz gerekir.

@@ -1,6 +1,6 @@
 ---
-title: Bağlantı noktaları | Microsoft Docs
-description: Bu makalede, Visual Studio hata ayıklayıcı mimarisinde bir bağlantı noktasının tanımı ve rolü açıklanır.
+title: Bağlantı | Microsoft Docs
+description: Bu makalede, hata ayıklayıcısı mimarisinde bir bağlantı noktasının tanımı ve rolü Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,30 +14,30 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8b8da73935d4d170416c2717f5d64ebfe949640d5f9d6b4b2bc4bf113438966
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a504db1716eaad4fbf66c34985067310fada1fa1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262951"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080214"
 ---
 # <a name="ports"></a>Bağlantı noktaları
-Hata ayıklayıcı mimarisinde, bir *bağlantı noktası*:
+Hata ayıklayıcısı mimarisinde bir bağlantı *noktası:*
 
-- , Sunucuda çalışan bir işlem kümesi için bir kapsayıcıdır. örneğin, bir bağlantı noktası, Windows CE tabanlı bir cihaza seri kablo veya ağ bağlantılı DCOM olmayan bir makineye olan bağlantıyı temsil edebilir. Yerel makinede çalışan tüm işlemlerin bulunduğu, yerel bağlantı noktası olarak adlandırılan özel bir bağlantı noktası.
+- Bir sunucu üzerinde çalışan bir dizi işlem için kapsayıcıdır. Örneğin, bir bağlantı noktası seri kablo veya Windows CE DCOM olmayan bir makineye bağlı bir cihaza bağlantıyı temsil ediyor olabilir. Yerel bağlantı noktası olarak adlandırılan özel bağlantı noktası, yerel makinede çalışan tüm işlemleri içerir.
 
-- , Kendisini ada veya tanımlayıcıya göre tanımlayabilir.
+- Kendisini ad veya tanımlayıcıya göre tanımlayabilir.
 
-- Bağlantı noktasında çalışan tüm işlemlerin listesini oluşturabilir ve bu süreçler başlatabilir ve sonlandırabilirsiniz.
+- Bağlantı noktası üzerinde çalışan tüm işlemleri numaralandırılır ve bu işlemleri başlatarak sonlandırabilirsiniz.
 
-- , [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)'A bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) bağımsız değişkeni geçirerek oluşturulan bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilir.
+- AddPort'a [bir IDebugPortRequest2](../../extensibility/debugger/reference/idebugport2.md) bağımsız değişkeni geçerek oluşturulan [bir IDebugPort2](../../extensibility/debugger/reference/idebugportrequest2.md) [arabirimiyle temsil edildi.](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)
 
-  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hem yerel hem de yönetilen tüm Windows tabanlı süreçler işleyen varsayılan bir bağlantı noktası sağlar. Windows tabanlı olmayan dış cihazlarla bağlantı için özel bir bağlantı noktası ayarlanmalıdır. Bu tür özel bağlantı noktalarını sağlamak için özel bir bağlantı noktası sağlayıcısı da ayarlamanız gerekir.
+  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hem yerel hem de yönetilen tüm Windows işlemeye sahip varsayılan bir bağlantı noktası sağlar. Özel bağlantı noktası, temel tabanlı olmayan dış cihazlarla bağlantılar için Windows ayar gerekir. Bu tür özel bağlantı noktalarını sağlamak için özel bir bağlantı noktası sağlayıcı da ayarlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sunucular](../../extensibility/debugger/servers-visual-studio-sdk.md)
 - [İşlemler](../../extensibility/debugger/processes.md)
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)
 - [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)
 - [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

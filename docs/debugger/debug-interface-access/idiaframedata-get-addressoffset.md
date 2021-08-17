@@ -11,14 +11,15 @@ ms.assetid: b68e2e68-6483-4936-bf97-1b0a13cb75e2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 060d6d2fb2c56c0dc3aa8fbb01132a288a2ca45e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6013b4b50001393c071dbf0cfa38faebe9d729dc305b2963cdece4cc5ec5ed57
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157800"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345055"
 ---
 # <a name="idiaframedataget_addressoffset"></a>IDiaFrameData::get_addressOffset
 Çerçeve için kod adresinin konum kısmını alır.

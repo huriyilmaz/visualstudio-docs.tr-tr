@@ -11,17 +11,18 @@ ms.assetid: 34c0e949-1eb9-4108-9cb8-a3eb87fcf190
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2a3c5af63cf7f8447303be3f7f6e160592c998da
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f8f451e01a1d28db54e669046373ab84557748d3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072448"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030249"
 ---
 # <a name="idebugportnotify2addprogramnode"></a>IDebugPortNotify2::AddProgramNode
 Üzerinde çalıştığı bağlantı noktasıyla ayıklanabilecek bir programı kaydeder.

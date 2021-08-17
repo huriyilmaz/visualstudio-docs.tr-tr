@@ -1,78 +1,79 @@
 ---
-title: Visual Studio 'da şablon bulma sorunlarını giderme | Microsoft Docs
-description: Visual Studio SDK 'da özel proje ve şablon dağıtma sorunlarını gidermek için tanılama günlüğünü etkinleştirmeyi öğrenin.
+title: Visual Studio |'da şablon bulma sorunlarını giderme Microsoft Docs
+description: Visual Studio SDK'sı ile özel proje ve şablon dağıtma sorunlarını gidermek için tanılama günlüğünü etkinleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: troubleshooting
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82b7b3f5eced4c8e24830fba34e47d224186949d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bda204e4d9b25c5eca7670494e8e1112089b0d5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072955"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062595"
 ---
 # <a name="troubleshooting-template-installation"></a>Şablon yükleme sorunlarını giderme
 
-Projenizi veya öğe şablonlarınızı dağıtmaya yönelik sorunlarla karşılaşırsanız, tanılama günlüğünü etkinleştirebilirsiniz.
+Projenizi veya öğe şablonlarınızı dağıtırken sorun olursa tanılama günlüğünü etkinleştirebilirsiniz.
 
 ::: moniker range="vs-2017"
 
-1. Yüklemenizin *Common7\IDE\CommonExtensions* klasöründe bir pkgdef dosyası oluşturun. Örneğin, *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
+1. Yüklemeniz için *Common7\IDE\CommonExtensions* klasöründe bir pkgdef dosyası oluşturun. Örneğin, *C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Yüklemenizin *Common7\IDE\CommonExtensions* klasöründe bir pkgdef dosyası oluşturun. Örneğin, *C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
+1. Yüklemeniz için *Common7\IDE\CommonExtensions* klasöründe bir pkgdef dosyası oluşturun. Örneğin, *C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*.
 
 ::: moniker-end
 
-2. Aşağıdakileri pkgdef dosyasına ekleyin:
+2. pkgdef dosyasına aşağıdakini ekleyin:
 
     ```
     [$RootKey$\VsTemplate]
     "EnableTemplateDiscoveryLog"=dword:00000001
     ```
 
-3. Yüklemeniz için bir [Geliştirici komut istemi](../ide/reference/command-prompt-powershell.md) açın ve çalıştırın `devenv /updateConfiguration` .
+3. Yüklemeniz [Geliştirici Komut İstemi](../ide/reference/command-prompt-powershell.md) bir dosya açın ve `devenv /updateConfiguration` çalıştırın.
 
 ::: moniker range="vs-2017"
 
-4. Visual Studio 'Yu açın ve yeni proje ve yeni öğe iletişim kutularını başlatarak her iki şablon ağacının de başlatılmasını sağlar.
+4. Her Visual Studio ağaçlarını başlatmak için Yeni Project ve Yeni Öğe iletişim kutularını açın.
 
-   Şablon günlüğü artık **%LocalAppData%\microsoft\visualstudio\15.0_ [InstanceId] \VsTemplateDiagnosticsList.csv** (InstanceId, Visual Studio ÖRNEĞINIZIN yükleme kimliğine karşılık gelir) içinde görüntülenir. Her şablon ağacı başlatma, girdileri bu günlüğe ekler.
+   Şablon günlüğü artık **%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_[instanceid]\VsTemplateDiagnosticsList.csv(instanceid,** Visual Studio örneğinizin yükleme kimliğine karşılık gelen) konumunda görünür. Her şablon ağacı başlatması, bu günlüğe girdi ekler.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. Visual Studio 'Yu açın ve her iki şablon ağacının başlatılması için **Yeni proje** ve **Yeni öğe** oluştur iletişim kutularını başlatın.
+4. Her Visual Studio proje oluştur ve **Yeni** Öğe  iletişim kutularını başlatarak her iki şablon ağacını da başlatabilirsiniz.
 
-   Şablon günlüğü artık **%LocalAppData%\microsoft\visualstudio\16.0_ [InstanceId] \VsTemplateDiagnosticsList.csv** (InstanceId, Visual Studio ÖRNEĞINIZIN yükleme kimliğine karşılık gelir) içinde görüntülenir. Her şablon ağacı başlatma, girdileri bu günlüğe ekler.
+   Şablon günlüğü artık **%LOCALAPPDATA%\Microsoft\VisualStudio\16.0_[instanceid]\VsTemplateDiagnosticsList.csv(instanceid,** Visual Studio örneğinizin yükleme kimliğine karşılık gelen) konumunda görünür. Her şablon ağacı başlatması, bu günlüğe girdi ekler.
 
 ::: moniker-end
 
-Günlük dosyası şu sütunları içerir:
+Günlük dosyası aşağıdaki sütunları içerir:
 
-- Aşağıdaki değerlere sahip olan **Fullpathtotemplate**:
+- **Aşağıdaki değerlere sahip Olan FullPathToTemplate:**
 
-  - 1 bildirim tabanlı dağıtım için
+  - Bildirim tabanlı dağıtım için 1
 
-  - disk tabanlı dağıtım için 0
+  - Disk tabanlı dağıtım için 0
 
 - **TemplateFileName**
 
 - Diğer şablon özellikleri
 
 > [!NOTE]
-> Günlüğe kaydetmeyi devre dışı bırakmak için pkgdef dosyasını kaldırın veya değerini `EnableTemplateDiscoveryLog` olarak değiştirin `dword:00000000` ve sonra `devenv /updateConfiguration` yeniden çalıştırın.
+> Günlüğü devre dışı bırakmak için pkgdef dosyasını kaldırın veya değerini olarak `EnableTemplateDiscoveryLog` değiştirin `dword:00000000` ve yeniden `devenv /updateConfiguration` çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel proje ve öğe şablonları oluşturma](creating-custom-project-and-item-templates.md)
-- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Visual Studio giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

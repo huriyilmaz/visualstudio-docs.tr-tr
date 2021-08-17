@@ -1,6 +1,6 @@
 ---
 title: VCMessage görevi | Microsoft Docs
-description: MSBuild 'in bir C++ projeleri için derleme sırasında uyarı ve hata iletilerini günlüğe kaydetmek için VCMessage görevini nasıl kullandığını öğrenin.
+description: MSBuild, bir C++ projeleri için derleme sırasında uyarı ve hata iletilerini günlüğe kaydetmek için vcmessage görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
@@ -19,14 +19,15 @@ ms.assetid: 956675fd-05dc-40b4-856f-616145103498
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c8db60044080726b61a02a59cad68d93f683e282
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad0be84534352316aabf0272074f7e8c2c41ff6f7d4c6b313933c3b23e9e7a5c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908820"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121397208"
 ---
 # <a name="vcmessage-task"></a>VCMessage görevi
 
@@ -34,7 +35,7 @@ Bir derleme sırasında uyarı ve hata iletilerini günlüğe kaydeder.
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, C++ projeleri için MSBuild uygulamasına yardımcı olur ve Kullanıcı tarafından çağrılması amaçlanmamıştır. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
+ bu görev, C++ projeleri için MSBuild uygulamaya yardımcı olur ve kullanıcı tarafından çağrılması amaçlanmamıştır. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
 
 ## <a name="parameters"></a>Parametreler
 
