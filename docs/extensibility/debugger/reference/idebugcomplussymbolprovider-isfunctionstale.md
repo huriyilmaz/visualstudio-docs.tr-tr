@@ -9,17 +9,18 @@ ms.assetid: dcffc090-4ed8-47b2-ba51-bce1a6b6428d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93a6bd0eb2a6715587c2d845cf161dba8c756aa2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bf0cb10662512f4c5428e6774b3e72ef5a9fce276411afb76387fbad4098492e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095504"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121434067"
 ---
 # <a name="idebugcomplussymbolproviderisfunctionstale"></a>IDebugComPlusSymbolProvider::IsFunctionStale
 Belirtilen hata ayıklama adresindeki işlevin eski olarak kabul edileceğini belirler.

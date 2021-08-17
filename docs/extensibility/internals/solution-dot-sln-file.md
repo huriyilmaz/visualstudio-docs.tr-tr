@@ -1,6 +1,6 @@
 ---
 title: Çözüm (. Sln) dosyası
-description: Visual Studio 'da bir proje için durum bilgilerini tutan dosyalardan biri olan. sln dosyası hakkında bilgi edinin.
+description: Visual Studio bir proje için durum bilgilerini tutan dosyalardan biri olan. sln dosyası hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/15/2019
 ms.topic: conceptual
@@ -12,18 +12,19 @@ ms.assetid: 7d7ef539-2e4b-4637-b853-8ec7626609df
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 27364382a7e4318fce822b148e9d3df6747bfd1e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9a8b857905a4e0a599584d6eecc03879b7e656081772071885bd25461b2220bd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082003"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121432208"
 ---
 # <a name="solution-sln-file"></a>Çözüm (. sln) dosyası
 
-Çözüm, Visual Studio 'da proje düzenlemek için bir yapıdır. Çözüm, iki dosyada bulunan projeler için durum bilgilerini tutar:
+Çözüm, Visual Studio projelerin düzenlenmesine yönelik bir yapıdır. Çözüm, iki dosyada bulunan projeler için durum bilgilerini tutar:
 
 - . sln dosyası (metin tabanlı, paylaşılan)
 
@@ -35,7 +36,7 @@ VSPackage,. sln dosyasında başvurulmakta olan bir sonuç olarak yüklenirse, o
 
 . Sln dosyası, kalıcı veriler ve başvurduğu VSPackages projesi için ad-değer parametrelerini bulmak ve yüklemek üzere ortam tarafından kullanılan metin tabanlı bilgiler içerir. Bir Kullanıcı bir çözüm açtığında, ortam, `preSolution` `Project` ve çözümü `postSolution` yüklemek için. sln dosyasındaki bilgileri, çözüm içindeki projeleri ve çözüme ekli kalıcı bilgileri geçer.
 
-Her projenin dosyası, hiyerarşiyi ilgili projenin öğeleriyle doldurmak için ortam tarafından okunan ek bilgiler içerir. Hiyerarşi verilerinin kalıcılığı proje tarafından denetlenir. Veriler normalde. sln dosyasında depolanmaz, ancak bunu yapmak istiyorsanız, kasıtlı olarak proje bilgilerini. sln dosyasına yazabilirsiniz. Kalıcılık hakkında daha fazla bilgi için bkz. [Proje kalıcılığı](../../extensibility/internals/project-persistence.md) ve [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
+Her projenin dosyası, hiyerarşiyi ilgili projenin öğeleriyle doldurmak için ortam tarafından okunan ek bilgiler içerir. Hiyerarşi verilerinin kalıcılığı proje tarafından denetlenir. Veriler normalde. sln dosyasında depolanmaz, ancak bunu yapmak istiyorsanız, kasıtlı olarak proje bilgilerini. sln dosyasına yazabilirsiniz. kalıcılık hakkında daha fazla bilgi için bkz. [Project kalıcılığı](../../extensibility/internals/project-persistence.md) ve [Project öğeleri açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).
 
 ## <a name="file-header"></a>Dosya üstbilgisi
 
@@ -56,13 +57,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Dosya biçimi sürümünü tanımlayan standart üst bilgi.
 
 `# Visual Studio 15`\
-Visual Studio 'nun (en son) Bu çözüm dosyasını kaydettiği ana sürümü. Bu bilgiler, çözüm simgesindeki sürüm numarasını denetler.
+(en son) bu çözüm dosyasını kaydeden Visual Studio ana sürümü. Bu bilgiler, çözüm simgesindeki sürüm numarasını denetler.
 
 `VisualStudioVersion = 15.0.26730.15`\
-Visual Studio 'nun (en son) çözüm dosyasını kaydettiği tam sürümü. Çözüm dosyası aynı ana sürüme sahip olan yeni bir Visual Studio sürümü tarafından kaydedilirse, bu değer çözüm dosyalarındaki karmaşıklığı azaltmak için güncellenmez.
+Visual Studio tam sürümü (en son) çözüm dosyasını kaydetti. çözüm dosyası aynı ana sürüme sahip Visual Studio daha yeni bir sürümü tarafından kaydedilirse, bu değer çözüm dosyalarındaki karmaşıklığı azaltmak için güncellenmez.
 
 `MinimumVisualStudioVersion = 10.0.40219.1`\
-Bu çözüm dosyasını açmak için Visual Studio 'nun en düşük (en eski) sürümü.
+bu çözüm dosyasını açmak için Visual Studio en düşük (en eski) sürümü.
 
 ::: moniker-end
 
@@ -81,13 +82,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Dosya biçimi sürümünü tanımlayan standart üst bilgi.
 
 `# Visual Studio Version 16`\
-Visual Studio 'nun (en son) Bu çözüm dosyasını kaydettiği ana sürümü. Bu bilgiler, çözüm simgesindeki sürüm numarasını denetler.
+(en son) bu çözüm dosyasını kaydeden Visual Studio ana sürümü. Bu bilgiler, çözüm simgesindeki sürüm numarasını denetler.
 
 `VisualStudioVersion = 16.0.28701.123`\
-Visual Studio 'nun (en son) çözüm dosyasını kaydettiği tam sürümü. Çözüm dosyası aynı ana sürüme sahip olan yeni bir Visual Studio sürümü tarafından kaydedilirse, bu değer, dosyadaki karmaşıklığı azaltmak için güncellenmez.
+Visual Studio tam sürümü (en son) çözüm dosyasını kaydetti. çözüm dosyası aynı ana sürüme sahip Visual Studio daha yeni bir sürümü tarafından kaydedilirse, bu değer, dosyadaki karmaşıklığı azaltmak için güncellenmez.
 
 `MinimumVisualStudioVersion = 10.0.40219.1`\
-Bu çözüm dosyasını açmak için Visual Studio 'nun en düşük (en eski) sürümü.
+bu çözüm dosyasını açmak için Visual Studio en düşük (en eski) sürümü.
 
 ::: moniker-end
 

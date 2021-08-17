@@ -1,6 +1,6 @@
 ---
-description: Saklı Yordam sp_enable_sql_debug sunucuda yürütülemdi.
-title: Kullanıcı Saklı Yordam Yürüte sp_enable_sql_debug | Microsoft Docs
+description: Saklı yordam sp_enable_sql_debug sunucuda yürütülemedi.
+title: Kullanıcı, saklı yordamı çalıştıramadı sp_enable_sql_debug | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 dev_langs:
@@ -23,15 +23,15 @@ ms.locfileid: "121454321"
 ---
 # <a name="error-user-could-not-execute-stored-procedure-sp_enable_sql_debug"></a>Hata: Kullanıcı sp_enable_sql_debug Saklı Yordamını Yürütemedi
 
-Saklı Yordam sp_enable_sql_debug sunucuda yürütülemdi. Bunun nedeni:
+Saklı yordam sp_enable_sql_debug sunucuda yürütülemedi. Bunun nedeni şunlar olabilir:
 
-- Bağlantı sorunu. Sunucuyla kararlı bir bağlantınız olması gerekir.
+- Bir bağlantı sorunu. Sunucuyla kararlı bir bağlantınız olması gerekir.
 
-- Sunucuda gerekli izinlerin olmaması. SQL Server 2005'te hata ayıklamak için hem Visual Studio çalıştıran hesabın hem de SQL Server'a bağlanmak için kullanılan hesabın sysadmin rolünün üyesi olması gerekir. SQL Server'a bağlanmak için kullanılan hesap, Windows kullanıcı hesabınız (Windows kimlik doğrulaması kullanıyorsanız) veya kullanıcı kimliği ve parolası olan bir hesaptır (SQL kullanıyorsanız).
+- Sunucuda gerekli izinlerin bulunmaması. SQL Server 2005 ' de hata ayıklamak için Visual Studio çalıştıran hesabın ve SQL Server bağlanmak için kullanılan hesabın sysadmin rolünün üyeleri olması gerekir. SQL Server bağlanmak için kullanılan hesap Windows kullanıcı hesabıdır (Windows kimlik doğrulaması kullanıyorsanız) ya da kullanıcı kimliği ve parolası olan bir hesap (SQL kimlik doğrulaması kullanıyorsanız).
 
-Daha fazla bilgi için, [bkz. How to: Set SQL Server Permissions for Debugging](/previous-versions/w1bhybwz(v=vs.100)).
+daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama için SQL Server izinleri ayarlama](/previous-versions/w1bhybwz(v=vs.100)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıllı: Hata Ayıklama SQL Server İzinlerini Ayarlama](/previous-versions/w1bhybwz(v=vs.100))
-- [Hata Ayıklama SQL Ayarlama](/previous-versions/visualstudio/visual-studio-2010/s4sszxst\(v\=vs.100\))
+- [nasıl yapılır: hata ayıklama için SQL Server izinleri ayarlama](/previous-versions/w1bhybwz(v=vs.100))
+- [SQL hata ayıklamayı ayarlama](/previous-versions/visualstudio/visual-studio-2010/s4sszxst\(v\=vs.100\))

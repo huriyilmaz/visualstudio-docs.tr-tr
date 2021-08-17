@@ -11,15 +11,16 @@ ms.assetid: e9c43554-9a85-4d98-9fa4-3b19986e7b62
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a796dd962485e5569ec09b07b881a8bb183b6e9d
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: cb34ae103713df9867a633cdb2ac7e7c2985ef1c26e4c56057fdf673d13daade
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223647"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333190"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Profili oluşturulan İşlem için ayırılmış En Yüksek Sayıda Özel Bayt
 
@@ -42,7 +43,7 @@ ms.locfileid: "102223647"
 
  Bildirilen değer, tüm ölçüm aralıklarının üzerinde profili oluşturulan işlemin etkin olduğu en fazla değerdir.
 
- İşlem adres alanları hakkında daha fazla bilgi için Windows bellek yönetimi belgelerindeki [sanal adres alanı](/windows/win32/memory/virtual-address-space) ' na bakın.
+ işlem adres alanları hakkında daha fazla bilgi için, Windows bellek yönetimi belgelerindeki [sanal adres alanı](/windows/win32/memory/virtual-address-space) ' na bakın.
 
 ## <a name="how-to-use-rule-data"></a>Kural verilerini kullanma
  Bildirilen değeri, programın farklı sürümlerinin veya derlemelerin performansını karşılaştırmak veya farklı profil oluşturma senaryolarında uygulamanın performansını anlamak için kullanın.

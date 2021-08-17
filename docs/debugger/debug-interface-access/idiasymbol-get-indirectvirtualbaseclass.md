@@ -1,6 +1,6 @@
 ---
-description: Kullanıcı tanımlı veri türünün dolaylı bir sanal temel sınıf olup olmadığını belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_indirectVirtualBaseClass | Microsoft Docs'
+description: Kullanıcı tanımlı veri türünün dolaylı bir sanal temel sınıf olup olmadığını belirten bir bayrağını alın.
+title: IDiaSymbol::get_indirectVirtualBaseClass | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fa68050e3b2d98646423f46aff2fe4b036571c8c32172cea66fa2d2b586ce139
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 06a308af7d62672e8d130ff09bae3d561047870e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420697"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058733"
 ---
 # <a name="idiasymbolget_indirectvirtualbaseclass"></a>IDiaSymbol::get_indirectVirtualBaseClass
-Kullanıcı tanımlı veri türünün dolaylı bir sanal temel sınıf olup olmadığını belirten bir bayrak alır.
+Kullanıcı tanımlı veri türünün dolaylı bir sanal temel sınıf olup olmadığını belirten bir bayrağını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_indirectVirtualBaseClass (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Kullanıcı tanımlı veri türü dolaylı bir sanal temel sınıf ise döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Kullanıcı `TRUE` tanımlı veri türü dolaylı bir sanal temel sınıfsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 7.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

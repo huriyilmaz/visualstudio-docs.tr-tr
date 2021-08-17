@@ -196,7 +196,7 @@
           href: ide/creating-solutions-and-projects.md
         - name: Visual Studio 2017'de bir repodan proje açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
-        - name: Visual Studio 2019'da bir Visual Studio açma
+        - name: Visual Studio 2019'da bir repodan proje açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: 'Projeleri taşıma, geçirme ve yükseltme'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
@@ -446,7 +446,7 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Erişilemeyen kodları kaldırma
                   href: ide/reference/remove-unreachable-code.md
-                - name: Kullanılmayan başvuruları kaldır
+                - name: Kullanılmayan başvuruları kaldırma
                   href: ide/reference/remove-unused-references.md
                 - name: Rename
                   href: ide/reference/rename.md
@@ -1072,7 +1072,7 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
-        - name: Geliştirici Komut İstemi & geliştirici PowerShell
+        - name: Geliştirici Komut İstemi & Geliştirici PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md

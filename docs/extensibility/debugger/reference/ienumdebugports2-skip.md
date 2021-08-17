@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ae4651b936cb61394cb5ce6b692e9c1d0461a46da09efe56d6528858c547b503
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 906aec18fe6e82333e43db0efadd20cfd184eb66
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121238703"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042926"
 ---
 # <a name="ienumdebugports2skip"></a>IEnumDebugPorts2::Skip
 Belirtilen öğe sayısını atlar.
@@ -43,7 +43,7 @@ int Skip(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Atlana öğe sayısı.
+[in] Atlan öğe sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa `S_OK` döndürür. kalan `S_FALSE` `celt` öğe sayısından büyükse döndürür; aksi takdirde bir hata kodu döndürür.

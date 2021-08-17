@@ -21,13 +21,13 @@ ms.locfileid: "121347096"
 # <a name="how-to-configure-inheritance-by-using-the-or-designer"></a>Nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma
 Bu **Nesne İlişkisel Tasarımcısı** **(O/R Tasarımcısı)** genellikle ilişkisel sistemlerde uygulanan tek tablolu devralma kavramını destekler. Tek tablo devralmada, hem üst bilgiler hem de alt bilgiler için alanlar içeren tek bir veritabanı tablosu vardır. İlişkisel verilerde, bir ayrımcı sütun herhangi bir kaydın hangi sınıfa ait olduğunu belirleyen değeri içerir.
 
-Örneğin, bir şirket `Persons` tarafından çalışan herkesi içeren bir tablo düşünün. Bazı kişiler çalışan, bazıları ise yöneticidir. Tablo, yöneticiler için 1, çalışanlar için 2 değerine sahip olan adlı bir sütun içerir. Bu, `Persons` `EmployeeType` ayrımcı sütundur. Bu senaryoda, çalışanların bir alt sınıfını oluşturabilir ve sınıfı yalnızca 2 değerine sahip `EmployeeType` kayıtlarla doldurmak için kullanabilirsiniz. Sınıfların her biri için geçerli olan sütunları da kaldırabilirsiniz.
+Örneğin, bir şirket `Persons` tarafından çalışan herkesi içeren bir tablo düşünün. Bazı kişiler çalışan, bazıları ise yöneticidir. Tablo, yöneticiler için 1, çalışanlar için 2 değerine sahip olan adlı bir sütun `Persons` `EmployeeType` içerir. Bu, ayrımcı sütundur. Bu senaryoda, çalışanların bir alt sınıfını oluşturabilir ve sınıfı yalnızca 2 değerine sahip `EmployeeType` kayıtlarla doldurmak için kullanabilirsiniz. Sınıfların her biri için geçerli olan sütunları da kaldırabilirsiniz.
 
-Devralma kullanan (ve ilişkisel verilere karşılık gelen) bir nesne modeli oluşturmak biraz kafa karıştırıcı olabilir. Aşağıdaki yordam, O/R Tasarımcısı ile devralmayı yapılandırmak için **gereken adımları özetler.** Mevcut bir tabloya ve sütunlara başvurulmadan genel adımların takip etmek zor olabilir, bu nedenle verileri kullanan bir izlenecek yol sağlanır. **O/R** Tasarımcısını kullanarak devralmayı yapılandırmaya ilişkin ayrıntılı adım adım yönler için bkz. Kılavuz: Tek tablo devralma [(O/R Tasarımcısı)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)kullanarak LINQ to SQL sınıfları oluşturma.
+Devralma kullanan (ve ilişkisel verilere karşılık gelen) bir nesne modeli oluşturmak biraz kafa karıştırıcı olabilir. Aşağıdaki yordam, O/R Tasarımcısı ile devralmayı yapılandırmak için **gereken adımları özetler.** Mevcut bir tabloya ve sütunlara başvurulmadan genel adımların takip etmek zor olabilir, bu nedenle verileri kullanan bir izlenecek yol sağlanır. **O/R** Tasarımcısını kullanarak devralmayı yapılandırmaya ilişkin ayrıntılı adım adım yönler için bkz. Adım adım kılavuz: Tek tablo devralma [(O/R Tasarımcısı)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)kullanarak LINQ to SQL sınıfları oluşturma.
 
 ## <a name="to-create-inherited-data-classes"></a>Devralınan veri sınıfları oluşturmak için
 
-1. Mevcut bir Visual Basic veya C# **projesine LINQ to SQL** Sınıfları öğesi ekleyerek **O/R** Tasarımcısı'Visual Basic açın.
+1. Mevcut bir Visual Basic veya C# **projesine LINQ to SQL** Sınıf öğesi ekleyerek **O/R** Tasarımcısı'Visual Basic açın.
 
 2. Temel sınıf olarak kullanmak istediğiniz tabloyu **O/R Tasarımcısı'na sürükleyin.**
 
@@ -51,7 +51,7 @@ Devralma kullanan (ve ilişkisel verilere karşılık gelen) bir nesne modeli ol
 
 9. Temel **Sınıf AyırıcıSı Değer özelliğini,** kaydı temel tür olarak ifade eden değere ayarlayın. (Bu, ayrımcı sütunda depolanan ve temel sınıfı ayırt etmek için kullanılan değerdir.)
 
-10. İsteğe bağlı olarak,  Herhangi bir tanımlı devralma koduyla eşleşmez satırları yüklerken kullanılan bir devralma hiyerarşisinde bir tür ayarlamak için Devralma Varsayılan özelliğini de ayarlayın. Başka bir deyişle, bir kaydın ayrımcı sütununda Türetilmiş Sınıf Ayrımı Değeri  veya Temel Sınıf Ayrımı Değeri özelliklerinde değeriyle eşleşmeen bir değeri varsa, kayıt Devralma Varsayılanı olarak belirlenen türe **yüklenir.** 
+10. İsteğe bağlı olarak,  Herhangi bir tanımlı devralma koduyla eşleşmez satırları yüklerken kullanılan bir devralma hiyerarşisinde bir tür ayarlamak için Devralma Varsayılan özelliğini de ayarlayın. Başka bir deyişle, bir kaydın ayrımcı sütununda Türetilmiş Sınıf Ayrımı Değeri  veya Temel Sınıf Ayrımı Değeri özelliklerinde bulunan değerle eşleşmez bir değeri varsa, kayıt Devralma Varsayılanı olarak belirlenen türe **yüklenir.** 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

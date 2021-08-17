@@ -1,41 +1,42 @@
 ---
 title: Azure bulut hizmeti yayımlama
-description: Visual Studio Azure Uygulama Yayımlama Sihirbazı 'ndaki çeşitli ayarları nasıl yapılandıracağınızı öğrenin
+description: Visual Studio Azure uygulaması yayımlama sihirbazı 'nda çeşitli ayarları nasıl yapılandıracağınızı öğrenin
 author: ghogen
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: f965d8e7f71ba34be9901d77fa4f0af881805bb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8e1dcaf760eada7d67eaab445361d6aa8c0219de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091727"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>Visual Studio Azure Uygulamasını Yayımlama Sihirbazı'nı kullanma
 
-Visual Studio 'da bir Web uygulaması geliştirdikten sonra, **Azure uygulaması yayımlama** Sihirbazı 'nı kullanarak bu uygulamayı bir Azure bulut hizmetinde yayımlayabilirsiniz.
+Visual Studio ' de bir web uygulaması geliştirdikten sonra, **azure uygulaması yayımlama** sihirbazı 'nı kullanarak bu uygulamayı bir azure bulut hizmetinde yayımlayabilirsiniz.
 
 > [!Note]
 > Bu makale, Web sitelerine değil, bulut hizmetlerine dağıtım ile ilgilidir. Web sitelerine dağıtma hakkında daha fazla bilgi için bkz. [Azure Web sitesi dağıtma](https://social.msdn.microsoft.com/Search/windowsazure?query=How%20to%20Deploy%20an%20Azure%20Web%20Site&Refinement=138&ac=4#refinementChanges=117&pageNumber=1&showMore=false).
 
 ## <a name="accessing-the-publish-azure-application-wizard"></a>Azure uygulama yayımlama sihirbazına erişme
 
-Azure uygulaması Yayımlama Sihirbazı 'na, sahip olduğunuz Visual Studio projesinin türüne bağlı olarak iki şekilde erişebilirsiniz.
+Azure uygulaması yayımla sihirbazına, sahip olduğunuz Visual Studio projenin türüne bağlı olarak iki şekilde erişebilirsiniz.
 
 **Bir Azure bulut hizmeti projeniz varsa:**
 
-1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
+1. Visual Studio bir Azure bulut hizmeti projesi oluşturun veya açın.
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Yayımla**' yı seçin.
 
 **Azure için etkinleştirilmemiş bir Web uygulaması projeniz varsa:**
 
-1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
+1. Visual Studio bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünde,   >  **Dönüştür Azure bulut hizmeti projesine** Dönüştür ' ü seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünde, dönüştür ' ü   >  **Azure bulut hizmeti 'ne dönüştür Project**' i seçin.
 
 1. **Çözüm Gezgini**, yeni oluşturulan Azure projesine sağ tıklayın ve bağlam menüsünden **Yayımla**' yı seçin.
 
@@ -47,11 +48,11 @@ Azure uygulaması Yayımlama Sihirbazı 'na, sahip olduğunuz Visual Studio proj
 
 **Aboneliğinizi seçin** -dağıtımınız için kullanılacak aboneliği seçin.
 
-## <a name="settings-page---common-settings-tab"></a>Ayarlar sayfası-ortak ayarlar sekmesi
+## <a name="settings-page---common-settings-tab"></a>Ayarlar sayfası-ortak Ayarlar sekmesi
 
-![Ortak ayarlar](./media/vs-azure-tools-publish-azure-application-wizard/settings-common-settings.png)
+![ortak Ayarlar](./media/vs-azure-tools-publish-azure-application-wizard/settings-common-settings.png)
 
-**Bulut hizmeti** -açılan menüyü kullanarak var olan bir bulut hizmetini seçin ya da **&lt; Yeni>oluştur**' u seçin ve bir bulut hizmeti oluşturun. Veri merkezi her bir bulut hizmeti için parantez içinde görüntülenir. Bulut hizmeti için veri merkezi konumunun, depolama hesabı için veri merkezi konumuyla aynı olması önerilir (Gelişmiş ayarlar).
+**Bulut hizmeti** -açılan menüyü kullanarak var olan bir bulut hizmetini seçin ya da **&lt; Yeni>oluştur**' u seçin ve bir bulut hizmeti oluşturun. Veri merkezi her bir bulut hizmeti için parantez içinde görüntülenir. bulut hizmeti için veri merkezi konumunun, depolama hesabı için veri merkezi konumuyla aynı olması önerilir (gelişmiş Ayarlar).
 
 **Ortam** - **Üretim** veya **hazırlama** seçeneklerinden birini belirleyin. Uygulamanızı bir test ortamında dağıtmak istiyorsanız, hazırlama ortamını seçin.
 
@@ -63,13 +64,13 @@ Azure uygulaması Yayımlama Sihirbazı 'na, sahip olduğunuz Visual Studio proj
 
 **Tüm Web rolleri için Web dağıtımı etkinleştir** -hizmetin Web dağıtımını etkinleştirmek için bu seçeneği belirleyin. Bu özelliği kullanmak için, **tüm roller Için uzak masaüstünü etkinleştir** seçeneğini de seçmeniz gerekir. Daha fazla bilgi için bkz. [Visual Studio kullanarak bulut hizmeti yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
 
-## <a name="settings-page---advanced-settings-tab"></a>Ayarlar sayfası-Gelişmiş ayarlar sekmesi
+## <a name="settings-page---advanced-settings-tab"></a>Ayarlar sayfası-gelişmiş Ayarlar sekmesi
 
 ![Gelişmiş ayarlar](./media/vs-azure-tools-publish-azure-application-wizard/settings-advanced-settings.png)
 
 **Dağıtım etiketi** -varsayılan adı kabul edin ya da seçtiğiniz bir adı girin. Dağıtım etiketine tarihi eklemek için onay kutusunu seçili bırakın.
 
-**Depolama hesabı** -bu dağıtım için kullanılacak depolama hesabını seçin, * * &lt; bir depolama hesabı oluşturmak için yeni> oluşturun. Veri merkezi her depolama hesabı için parantez içinde görüntülenir. Depolama hesabı için veri merkezi konumunun, bulut hizmeti için veri merkezi konumuyla aynı olması önerilir (ortak ayarlar).
+**Depolama hesabı** -bu dağıtım için kullanılacak depolama hesabını seçin, * * &lt; bir depolama hesabı oluşturmak için yeni> oluşturun. Veri merkezi her depolama hesabı için parantez içinde görüntülenir. depolama hesabı için veri merkezi konumunun, bulut hizmeti için veri merkezi konumuyla aynı olması önerilir (ortak Ayarlar).
 
 Azure depolama hesabı, uygulama dağıtımı için paketi depolar. Uygulama dağıtıldıktan sonra, paket depolama hesabından kaldırılır.
 
@@ -81,13 +82,13 @@ Azure depolama hesabı, uygulama dağıtımı için paketi depolar. Uygulama da�
 
 ![Dağıtım ayarları](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
 
-**IntelliTrace 'ı etkinleştir** -IntelliTrace 'i etkinleştirmek istiyorsanız belirtin. IntelliTrace ile, Azure 'da çalıştırıldığında bir rol örneği için kapsamlı hata ayıklama bilgilerini günlüğe kaydedebilirsiniz. Bir sorunun nedenini bulmanız gerekiyorsa, Visual Studio 'dan Azure 'da çalışıyor gibi kodunuzda adım adım ilerlemek için IntelliTrace günlüklerini kullanabilirsiniz. IntelliTrace kullanma hakkında daha fazla bilgi için bkz. [Visual Studio ve IntelliTrace ile yayımlanmış bir Azure bulut hizmetinde hata ayıklama](./vs-azure-tools-intellitrace-debug-published-cloud-services.md).
+**IntelliTrace 'ı etkinleştir** -IntelliTrace 'i etkinleştirmek istiyorsanız belirtin. IntelliTrace ile, Azure 'da çalıştırıldığında bir rol örneği için kapsamlı hata ayıklama bilgilerini günlüğe kaydedebilirsiniz. bir sorunun nedenini bulmanız gerekiyorsa, Azure 'da çalışıyor gibi Visual Studio kodunuzda adım adım ilerlemek için ıntellitrace günlüklerini kullanabilirsiniz. ıntellitrace kullanma hakkında daha fazla bilgi için bkz. [Visual Studio ve ıntellitrace ile yayımlanmış bir Azure bulut hizmetinde hata ayıklama](./vs-azure-tools-intellitrace-debug-published-cloud-services.md).
 
-**Profil oluşturmayı etkinleştir** -performans profilini oluşturmayı etkinleştirmek istiyorsanız belirtin. Visual Studio Profiler, bulut hizmetinizin nasıl çalıştığı hakkında ayrıntılı bir analizler almanızı sağlar. Visual Studio Profiler 'ı kullanma hakkında daha fazla bilgi için bkz. [Azure bulut hizmetinin performansını test](./vs-azure-tools-performance-profiling-cloud-services.md)etme.
+**Profil oluşturmayı etkinleştir** -performans profilini oluşturmayı etkinleştirmek istiyorsanız belirtin. Visual Studio profiler, bulut hizmetinizin nasıl çalıştığı hakkında ayrıntılı bir analizler almanızı sağlar. Visual Studio profil oluşturucuyu kullanma hakkında daha fazla bilgi için bkz. [Azure bulut hizmetinin performansını Test](./vs-azure-tools-performance-profiling-cloud-services.md)etme.
 
-**Tüm roller Için uzaktan hata ayıklayıcıyı etkinleştir** -uzaktan hata ayıklamayı etkinleştirmek istediğinizi belirtin. Visual Studio kullanarak bulut hizmetlerinde hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'da bir Azure bulut hizmetinde veya sanal makinede hata ayıklama](./vs-azure-tools-debug-cloud-services-virtual-machines.md).
+**Tüm roller Için uzaktan hata ayıklayıcıyı etkinleştir** -uzaktan hata ayıklamayı etkinleştirmek istediğinizi belirtin. Visual Studio kullanarak bulut hizmetlerinde hata ayıklama hakkında daha fazla bilgi için, bkz. [Visual Studio 'de Azure bulut hizmetinde veya sanal makinede hata ayıklama](./vs-azure-tools-debug-cloud-services-virtual-machines.md).
 
-## <a name="diagnostics-settings-page"></a>Tanılama ayarları sayfası
+## <a name="diagnostics-settings-page"></a>tanılama Ayarlar sayfası
 
 ![Tanılama ayarları](./media/vs-azure-tools-publish-azure-application-wizard/diagnostic-settings.png)
 
@@ -97,20 +98,20 @@ Tanılama, bir Azure bulut hizmetinde (veya Azure sanal makinesinde) sorun gider
 
 ![Özet sayfası](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
-**Hedef profil** -seçtiğiniz ayarlardan bir yayımlama profili oluşturmayı tercih edebilirsiniz. Örneğin, bir test ortamı için bir profil ve bir üretim için başka bir profil oluşturabilirsiniz. Bu profili kaydetmek için **Kaydet** simgesini seçin. Sihirbaz profili oluşturur ve Visual Studio projesine kaydeder. Profil adını değiştirmek için, **hedef profil** listesini açın ve ardından **&lt; Yönet... &gt;** öğesini seçin.
+**Hedef profil** -seçtiğiniz ayarlardan bir yayımlama profili oluşturmayı tercih edebilirsiniz. Örneğin, bir test ortamı için bir profil ve bir üretim için başka bir profil oluşturabilirsiniz. Bu profili kaydetmek için **Kaydet** simgesini seçin. sihirbaz profili oluşturur ve Visual Studio projesine kaydeder. Profil adını değiştirmek için, **hedef profil** listesini açın ve ardından **&lt; Yönet... &gt;** öğesini seçin.
 
    > [!Note]
-   > Yayımlama profili, Visual Studio 'da Çözüm Gezgini görüntülenir ve profil ayarları. azurePubxml uzantılı bir dosyaya yazılır. Ayarlar, XML etiketlerinin öznitelikleri olarak kaydedilir.
+   > yayımlama profili Visual Studio Çözüm Gezgini görüntülenir ve profil ayarları. azurePubxml uzantılı bir dosyaya yazılır. Ayarlar, XML etiketlerinin öznitelikleri olarak kaydedilir.
 
 ## <a name="publishing-your-application"></a>Uygulamanızı yayımlama
 
-Projenizin dağıtımı için tüm ayarları yapılandırdıktan sonra, iletişim kutusunun alt kısmında **Yayımla** ' yı seçin. İşlem durumunu Visual Studio 'daki **Çıkış** penceresinde izleyebilirsiniz.
+Projenizin dağıtımı için tüm ayarları yapılandırdıktan sonra, iletişim kutusunun alt kısmında **Yayımla** ' yı seçin. İşlem durumunu, Visual Studio **Çıkış** penceresinde izleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Bir Web uygulamasını Visual Studio 'dan Azure bulut hizmeti 'ne geçirme ve yayımlama](./vs-azure-tools-migrate-publish-web-app-to-cloud-service.md)
+- [Visual Studio 'ten bir Web uygulamasını bir Azure bulut hizmetine geçirme ve yayımlama](./vs-azure-tools-migrate-publish-web-app-to-cloud-service.md)
 
-- [Azure bulut hizmeti yayımlamak için Visual Studio 'Yu nasıl kullanacağınızı öğrenin](./vs-azure-tools-publishing-a-cloud-service.md)
+- [Azure bulut hizmeti yayımlamak için Visual Studio kullanmayı öğrenin](./vs-azure-tools-publishing-a-cloud-service.md)
 
 - [Visual Studio ve IntelliTrace ile yayımlanan bir Azure bulut hizmetinin hatalarını ayıklama](./vs-azure-tools-intellitrace-debug-published-cloud-services.md)
 

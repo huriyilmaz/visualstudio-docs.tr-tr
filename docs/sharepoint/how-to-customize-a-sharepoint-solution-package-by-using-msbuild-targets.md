@@ -1,7 +1,7 @@
 ---
 title: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme
 titleSuffix: ''
-description: Visual Studio 'Nun bir komut isteminde MSBuild hedeflerini kullanarak SharePoint çözüm paketi dosyalarını (. wsp) nasıl oluşturduğunu özelleştirin.
+description: bir komut isteminde MSBuild hedeflerini kullanarak Visual Studio SharePoint çözüm paketi dosyalarını (. wsp) nasıl oluşturduğunu özelleştirin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: b4d181a6310e1ff924f060e906093d3c28d60ede
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 998bcd8ca191e5d7f5c3868836b4c498cae563c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959928"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106750"
 ---
-# <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>Nasıl yapılır: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme
-  Bir komut isteminde MSBuild hedeflerini kullanarak, Visual Studio 'Nun SharePoint paket dosyalarını (*. wsp*) nasıl oluşturduğunu özelleştirebilirsiniz. Örneğin, paket ara dizinini ve numaralandırılmış dosyaları belirten MSBuild öğe gruplarını değiştirmek için MSBuild özelliklerini özelleştirebilirsiniz.
+# <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>nasıl yapılır: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme
+  komut isteminde MSBuild hedeflerini kullanarak, Visual Studio SharePoint paket dosyalarını (*. wsp*) nasıl oluşturduğunu özelleştirebilirsiniz. örneğin, paketleme ara dizinini ve numaralandırılmış dosyaları belirten MSBuild öğesi gruplarını değiştirmek için MSBuild özelliklerini özelleştirebilirsiniz.
 
 ## <a name="customize-and-run-msbuild-targets"></a>MSBuild hedeflerini özelleştirme ve çalıştırma
  BeforeLayout ve AfterLayout hedeflerini özelleştirirseniz, paketlenecek dosyaları ekleme, kaldırma veya değiştirme gibi paket düzeninden önce görevleri gerçekleştirebilirsiniz.
@@ -42,9 +43,9 @@ ms.locfileid: "99959928"
 
     Bu örnek, bu hedefin paketlemeden önce bir ileti görüntüler.
 
-2. Dosyayı **CustomLayout. SharePoint. targets** olarak adlandırın ve SharePoint projesinin klasörüne kaydedin.
+2. dosyayı **customlayout. SharePoint. targets** olarak adlandırın ve SharePoint projesi klasörüne kaydedin.
 
-3. Projeyi açın, kısayol menüsünü açın ve ardından **Projeyi Kaldır**' ı seçin.
+3. Projeyi açın, kısayol menüsünü açın ve ardından **Project kaldır**' ı seçin.
 
 4. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından *\<ProjectName> . vbproj* veya *\<ProjectName> . csproj* **Düzenle** ' **yi seçin.**
 
@@ -56,7 +57,7 @@ ms.locfileid: "99959928"
 
 6. Proje dosyasını kaydedin ve kapatın.
 
-7. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **projeyi yeniden yükle**' yi seçin.
+7. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **Project yeniden yükle**' yi seçin.
 
    Projeyi yayımladığınızda, ambalaj başlamadan önce çıktıda ileti görüntülenir.
 
@@ -78,9 +79,9 @@ ms.locfileid: "99959928"
 
 4. Hedefler dosyasını kaydedin ve kapatın.
 
-5. Visual Studio 'Yu yeniden başlatın ve ardından projeyi açın.
+5. Visual Studio yeniden başlatın ve ardından projeyi açın.
 
    Projeyi yayımladığınızda, paketleme başlamadan önce BeforeLayout iletisi görünür ve paketleme bittikten sonra AfterLayout iletisi görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

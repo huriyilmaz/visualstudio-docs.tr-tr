@@ -1,6 +1,6 @@
 ---
-description: Bir program veritabanı (. pdb) dosyasını açıp hata ayıklama veri kaynağı olarak hazırlar.
-title: 'IDiaDataSource:: loadDataFromPdb | Microsoft Docs'
+description: Program veritabanı (.pdb) dosyasını açar ve hata ayıklama veri kaynağı olarak hazırlar.
+title: IDiaDataSource::loadDataFromPdb | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 02159073-8144-47f8-a0b0-aa0edcb92b5b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0766d951068c237e47f563a8d2ed5b3c84a9d74e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 053a09d770069bc0030025fb6be130276b9942d327dc971b400e7a434e038a2c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158262"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345255"
 ---
 # <a name="idiadatasourceloaddatafrompdb"></a>IDiaDataSource::loadDataFromPdb
-Bir program veritabanı (. pdb) dosyasını açıp hata ayıklama veri kaynağı olarak hazırlar.
+Program veritabanı (.pdb) dosyasını açar ve hata ayıklama veri kaynağı olarak hazırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,26 +35,26 @@ HRESULT loadDataFromPdb (
 #### <a name="parameters"></a>Parametreler
 pdbPath
 
-'ndaki . Pdb dosyasının yolu.
+[in] .pdb dosyasının yolu.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri yer alır.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|E_PDB_NOT_FOUND|Dosya açılamadı veya dosyanın biçimi geçersiz olduğundan belirlendi.|
-|E_PDB_FORMAT|Eski biçimdeki bir dosyaya erişme girişiminde bulunuldu.|
-|E_INVALIDARG|Geçersiz parametre.|
-|E_UNEXPECTED|Veri kaynağı zaten hazırlandı.|
+|E_PDB_NOT_FOUND|Dosya açılamadı veya dosyanın geçersiz bir biçime sahip olduğu belirlendi.|
+|E_PDB_FORMAT|Eski bir biçime sahip bir dosyaya erişmeye çalışıldı.|
+|E_ınvalıdarg|Geçersiz parametre.|
+|E_unexpected|Veri kaynağı zaten hazırlanmıştır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntem, hata ayıklama verilerini doğrudan bir. pdb dosyasından yükler.
+Bu yöntem, hata ayıklama verilerini doğrudan bir .pdb dosyasından yükler.
 
-. Pdb dosyasını belirli ölçütlere karşı doğrulamak için [IDiaDataSource:: loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) metodunu kullanın.
+.pdb dosyasını belirli ölçütlere göre doğrulamak için [IDiaDataSource::loadAndValidateDataFromPdb yöntemini](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) kullanın.
 
-Veri yükleme işlemine (bir geri çağırma mekanizması aracılığıyla) erişim kazanmak için [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu kullanın.
+Veri yükleme sürecine erişim elde etmek için (bir geri çağırma mekanizması aracılığıyla), [IDiaDataSource::loadDataForExe yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) kullanın.
 
-Bir. pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource:: Loaddatafromistreaı](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) metodunu kullanın.
+.pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource::loadDataFromIStream yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) kullanın.
 
 ## <a name="example"></a>Örnek
 

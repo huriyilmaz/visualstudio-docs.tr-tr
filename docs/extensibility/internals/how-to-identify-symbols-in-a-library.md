@@ -14,17 +14,17 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2b4d306203d90e7891aea4cfe97a034caa39dfbd279e8b93d65c2e8b39b5a62
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 33000a513f4a2580bb74a0b6ed5267231739244c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376202"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042510"
 ---
 # <a name="how-to-identify-symbols-in-a-library"></a>Nasıllı: Kitaplıkta sembolleri tanımlama
 Sembol tarama araçları sembollerin hiyerarşik görünümlerini görüntüler. Semboller ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve diğer dil öğelerini temsil eder.
 
- Hiyerarşide her simge, sembol kitaplığı tarafından nesne yöneticisine aşağıdaki arabirimler aracılığıyla [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geçirilen gezinti bilgileriyle belirlenebilirsiniz:
+ Hiyerarşide yer alan her simge, sembol kitaplığı tarafından aşağıdaki arabirimler aracılığıyla [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesne yöneticisine geçirilen gezinti bilgileriyle belirlenebilirsiniz:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo>
 
@@ -34,7 +34,7 @@ Sembol tarama araçları sembollerin hiyerarşik görünümlerini görüntüler.
 
  Hiyerarşide sembolün konumu bir simgeyi ayırt eder. Sembol tarama araçlarının belirli bir sembole gezinmesi için izin verir. Simgenin benzersiz, tam yolu konumu belirler. Yoldeki her öğe bir düğüm olur. Yol üst düzey düğümle başlar ve belirli bir simgeyle biter. Örneğin, M1 yöntemi C1 sınıfının bir üyesi ise ve C1 N1 ad alanı ise, M1 yönteminin tam yolu N1'tir. C1. M1. Bu yol üç düğüm içerir: N1, C1 ve M1.
 
- Gezinti bilgileri, nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisinin hiyerarşide sembolleri bulmasını, seçmesini ve seçmesini sağlar. Bir gözatma aracından diğerine gezinmeye olanak sağlar. Bir proje **içinde sembollere** göz atmak için Object Browser'ı kullanırken, bir yönteme sağ tıklayabilirsiniz ve Çağrı Tarayıcısı aracını başlatarak [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] yöntemi bir çağrı grafiğinde  görüntüleyebilirsiniz.
+ Gezinti bilgileri, nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisinin hiyerarşide sembolleri bulmasını, seçmesini ve seçmesini sağlar. Bir gözatma aracından diğerine gezinmeye olanak sağlar. Bir **projede sembollere** göz atmak için Nesne Tarayıcısı'nı kullanırken, bir yönteme sağ tıklayabilirsiniz ve yöntemi bir çağrı grafiğinde görüntülemek Çağrı Tarayıcısı aracı [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] başlatabilirsiniz. 
 
  İki form sembol konumunu açıklar. Kurallı form, sembolün tam yolunu temel alan bir formdur. Hiyerarşide sembolün benzersiz konumunu temsil eder. Sembol tarama aracında bağımsızdır. Kurallı form bilgilerini almak için nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisi yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsNavInfo.EnumCanonicalNodes%2A> arar. Sunu formu, sembolün belirli bir sembol tarama aracı içindeki konumunu açıklar. Sembolün konumu, hiyerarşide diğer sembollerin konumuyla görelidir. Verilen bir simgenin birden fazla sunu yolu olabilir, ancak yalnızca bir kurallı yol vardır. Örneğin, C1 sınıfı C2 sınıfından devralınır ve her iki sınıf da N1 ad alanına sahipse **Object Browser** aşağıdaki hiyerarşik ağacı görüntüler:
 

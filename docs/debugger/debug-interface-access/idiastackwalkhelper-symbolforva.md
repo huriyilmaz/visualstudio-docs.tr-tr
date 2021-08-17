@@ -1,6 +1,6 @@
 ---
-description: Belirtilen sanal adresi içeren simgeyi alır.
-title: 'IDiaStackWalkHelper:: symbolForVA | Microsoft Docs'
+description: Belirtilen sanal adresi içeren simgeyi alın.
+title: IDiaStackWalkHelper::symbolForVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 8dd9455d-d44c-4dd6-a0aa-31131cbea2aa
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f75ba05573c5c41baea3ab24ec5b7d06c916c0e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8f607d33fa516f3c1f61b4fb4c3b472c1e485321208faac70b95aeb9ea26af7b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156750"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454834"
 ---
 # <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
-Belirtilen sanal adresi içeren simgeyi alır.
+Belirtilen sanal adresi içeren simgeyi alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,14 +36,14 @@ HRESULT symbolForVA(
 #### <a name="parameters"></a>Parametreler
  `va`
 
-'ndaki İstenen sembolün içerdiği sanal adres. Simgenin bir `SymTagFunctionType` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından bir değer) olması gerekir.
+[in] İstenen sembolde yer alan sanal adres. Sembol bir `SymTagFunctionType` [(SymTagEnum Numaralama numaralama değerinden bir](../../debugger/debug-interface-access/symtagenum.md) değer) olması gerekir.
 
  `ppSymbol`
 
-dışı Belirtilen adresteki simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi.
+[out] Belirtilen adreste sembolünü temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

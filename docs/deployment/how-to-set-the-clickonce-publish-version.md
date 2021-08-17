@@ -1,6 +1,6 @@
 ---
-title: ClickOnce Publish sürümünü ayarla | Microsoft Docs
-description: Uygulamanın bir güncelleştirme olup olmadığını belirleyen ClickOnce Publish Version özelliğini ayarlamayı öğrenin.
+title: ClickOnce Yayımlama Sürümü | Microsoft Docs
+description: Uygulamanın bir güncelleştirme ClickOnce sürüm yayımlama özelliğini ayarlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,36 +16,37 @@ ms.assetid: 06f15504-6385-40a6-b01d-cd90ca36dc73
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d74d8b16e058b150187a231a1f3a7323c0c612
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 39c126a1e2758bbbbc24c0f6ef5fa9b6310669eb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885033"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089907"
 ---
-# <a name="how-to-set-the-clickonce-publish-version"></a>Nasıl yapılır: ClickOnce yayımlama sürümünü ayarlama
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` Özelliği, yayımlamakta olduğunuz uygulamanın güncelleştirme olarak değerlendirilip değerlendirilmeyeceğini belirler. Sürüm her artışında, uygulama bir güncelleştirme olarak yayımlanır.
+# <a name="how-to-set-the-clickonce-publish-version"></a>Nasıl ClickOnce: ClickOnce ayarlama
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` özelliği, yayımlamakta olan uygulamanın bir güncelleştirme olarak kabul edilir olup olmadığını belirler. Sürüm her artırılırsa, uygulama bir güncelleştirme olarak yayımlanır.
 
- `Publish Version`Özelliği, **Proje Tasarımcısı**' nın **Yayımla** sayfasında ayarlanabilir.
+ özelliği, `Publish Version` Project  **Designer'ın Yayımla sayfasından ayarlanır.**
 
 > [!NOTE]
-> Uygulamanın her yayımlanışında özelliği otomatik olarak arttacak bir proje seçeneği vardır `Publish Version` ; Bu seçenek varsayılan olarak etkindir. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce Yayım sürümünü otomatik olarak artırma](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md).
+> Uygulama her yayım olduğunda özelliği otomatik olarak artıran bir proje `Publish Version` seçeneği vardır; bu seçenek varsayılan olarak etkindir. Daha fazla bilgi için [bkz. Nasıl yapılır: Sürümü Yayımlamak için ClickOnce Artırma.](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)
 
-### <a name="to-change-the-publish-version"></a>Yayımla sürümünü değiştirmek için
+### <a name="to-change-the-publish-version"></a>Yayımlama sürümünü değiştirmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. içinde bir proje **seçiliyken Çözüm Gezgini** menüsünde **özellikler'Project'a** **tıklayın.**
 
-2. **Yayımla** sekmesine tıklayın.
+2. Yayımla **sekmesine** tıklayın.
 
-3. **Sürümü Yayımla** alanında, **ana**, **İkincil**, **derleme** veya **Düzeltme** sürüm numaralarını artırın.
+3. Sürümü **Yayımla alanında** Ana, **Küçük,** **Derleme** **veya** Düzeltme sürüm **numaralarını** artırarak.
 
     > [!NOTE]
-    > Sürüm numarasını hiçbir şekilde azaltmamanız gerekir; Bunun yapılması öngörülemeyen güncelleştirme davranışına neden olabilir.
+    > Bir sürüm numarasını hiçbir zaman azalmamanız gerekir; bunu yapmak öngörülemeyen güncelleştirme davranışına neden olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce güncelleştirme stratejisini seçme](../deployment/choosing-a-clickonce-update-strategy.md)
-- [Nasıl yapılır: ClickOnce Yayım sürümünü otomatik olarak artırma](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)
+- [Nasıl yapılır: Yayımlama sürümünü ClickOnce olarak artırma](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)
 - [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Nasıl ClickOnce: ClickOnce Sihirbazı'nı kullanarak bir uygulama yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

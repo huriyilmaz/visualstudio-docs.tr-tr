@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ce253b54bc4d8c5d911a8d7b7a78445fca7df38e389925a205944bbc5222ecee
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0a3642fa6a3082c03c8b582895d7f423fdc10573
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405157"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074815"
 ---
 # <a name="idialoadcallbacknotifyopenpdb"></a>IDiaLoadCallback::NotifyOpenPDB
 Bir aday. pdb dosyası açıldığında çağırılır.

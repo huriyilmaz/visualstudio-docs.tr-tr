@@ -1,6 +1,6 @@
 ---
-description: Bölümün başlangıcının sanal adresini (VA) alır.
-title: 'IDiaSegment:: get_virtualAddress | Microsoft Docs'
+description: Bölümün başlangıcının sanal adresini (VA) alın.
+title: IDiaSegment::get_virtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c1d4f9f63bf9baa9611ccf3c0a3a5d3963c6555053fbe49ab646c0e284674605
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cc961d24a93e91a6f5f83d8c809f528e6b7d7301
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454938"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044369"
 ---
 # <a name="idiasegmentget_virtualaddress"></a>IDiaSegment::get_virtualAddress
-Bölümün başlangıcının sanal adresini (VA) alır.
+Bölümün başlangıcının sanal adresini (VA) alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_virtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bölümün başlangıcının VA değerini döndürür.
+[out] Bölümün başlangıcının VA'sı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

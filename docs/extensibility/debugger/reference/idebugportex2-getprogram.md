@@ -1,6 +1,6 @@
 ---
-description: Program düğümüyle ilişkili programı alır.
-title: 'IDebugPortEx2:: GetProgram | Microsoft Docs'
+description: Bir program düğümüyle ilişkili programı alır.
+title: IDebugPortEx2::GetProgram | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: cd83a111-bfd5-4eae-b576-526466c6b6ec
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4efdd9c5a70849a6df1aefb95db384e3dd60f057
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e12dcdc121e01a943348b7fe584f076879cbaee2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072513"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057739"
 ---
 # <a name="idebugportex2getprogram"></a>IDebugPortEx2::GetProgram
-Program düğümüyle ilişkili programı alır.
+Bir program düğümüyle ilişkili programı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,12 +44,12 @@ int GetProgram(
 ```
 
 ## <a name="parameters"></a>Parametreler
-`pProgramNode` 'ndaki Program düğümünü temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.
+`pProgramNode` [in] Program [düğümünü temsil eden bir IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.
 
-`ppProgram` dışı Program düğümüyle ilişkili programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi döndürür.
+`ppProgram` [out] Program düğümüyle ilişkili programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

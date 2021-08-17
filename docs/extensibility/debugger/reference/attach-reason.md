@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 185cec33a3ea8d6538ae6d820f0690bc68b5270daa74161d46f4788137b234e2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2d47b655767815d8d15292f9fc5591a5ddd97808
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434496"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057830"
 ---
 # <a name="attach_reason"></a>ATTACH_REASON
 Hata ayıklama altyapısının (DE) bir program düğümüne iliştirme nedenini belirtir.
@@ -48,23 +48,23 @@ public enum enum_ATTACH_REASON {
 
 ## <a name="fields"></a>Alanlar
 `ATTACH_REASON_AUTO`\
-İşlem şu anda hata ayıklama modunda olduğundan iliştirme.
+İşlem şu anda hata ayıklama modunda olduğundan iliştirin.
 
 `ATTACH_REASON_LAUNCH`\
-İşlem başlatıldığından iliştirme.
+ekleme işlemi başlatıldı.
 
 `ATTACH_REASON_USER`\
-Kullanıcı isteği nedeniyle iliştirme.
+Bir kullanıcı isteği nedeniyle iliştirin.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler, [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) ve [Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) yöntemlerine parametre olarak kullanılır.
+Bu değerler Attach ve Attach metotları [için](../../../extensibility/debugger/reference/idebugengine2-attach.md) parametre [olarak](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -11,14 +11,15 @@ ms.assetid: 2f2cf1e0-f817-4ca0-b782-3341362c46a9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ca2162f9da71d42308feb44b15edcca77ad269df
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: cc9e6d5f17c348567cb68b83a805dedfc234f8da
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156421"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058773"
 ---
 # <a name="idiasymbolget_constructor"></a>IDiaSymbol::get_constructor
 Kullanıcı tanımlı veri türünün bir Oluşturucu veya yıkıcıya sahip olup olmadığını belirten bir bayrak alır.

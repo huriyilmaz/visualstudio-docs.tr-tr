@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklama C++
-description: Visual Studio hata ayıklayıcısını kullanarak yerel kodda hata ayıklama
+title: C++ hata ayıklama
+description: Visual Studio hata ayıklayıcısını kullanarak yerel Visual Studio ayıklama
 ms.custom: mvc
 ms.date: 08/06/2018
 ms.topic: quickstart
@@ -10,35 +10,36 @@ ms.assetid: 639e430b-6d2d-46bd-b738-8c60dfb384f1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8735ecd409eca2801b42b11bd3928a00e5191bf8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0292e73f952a05652142b8e146d21915af73bde2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840905"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105034"
 ---
-# <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>Hızlı başlangıç: Visual Studio hata ayıklayıcısını kullanarak C++ ile hata ayıklama
+# <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>Hızlı Başlangıç: Visual Studio hata ayıklayıcısını kullanarak C++ ile hata ayıklama
 
-Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardımcı olmak için birçok güçlü özellik sunar. Bu konu, temel özelliklerden bazılarını öğrenmenin hızlı bir yolunu sağlar.
+Hata Visual Studio hata ayıklayıcısı, uygulamalarınızı hata ayıklamanıza yardımcı olacak birçok güçlü özellik sağlar. Bu konu, temel özelliklerden bazıları hakkında bilgi edinmek için hızlı bir yol sağlar.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-1. Visual Studio 'Yu açın ve bir proje oluşturun.
+1. Visual Studio açın ve proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **C++** yazın, **Şablonlar**' ı seçin ve **Yeni konsol uygulaması projesi oluştur**' u seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama **kutusunu açmak için Ctrl + Q** yazın, **c++** yazın, Şablonlar'ı seçin ve ardından Yeni Konsol Uygulaması projesi **oluştur'a tıklayın.**  Görüntülenen iletişim kutusunda Oluştur'a **tıklayın.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C++** altında, **Windows Masaüstü**' nün ardından orta bölmedeki **Windows konsol uygulaması**' nı seçin. Ardından, **Mydbgapp** gibi bir ad yazın ve **Tamam**' a tıklayın.
+    Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual C++** altında Windows **Masaüstü'ne** tıklayın ve orta bölmede Konsol **Uygulaması'Windows seçin.** Ardından **MyDbgApp** gibi bir ad yazın ve Tamam'a **tıklayın.**
     ::: moniker-end
 
-    **Windows konsol uygulaması** proje şablonunu görmüyorsanız, **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. Visual Studio Yükleyicisi başlatılır. C++ iş yükü **Ile masaüstü geliştirmeyi** seçin ve ardından **Değiştir**' i seçin.
+    **Windows** Konsol Uygulaması proje şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Uygulama Visual Studio Yükleyicisi başlatıyor. **C++ ile masaüstü geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
     Visual Studio projeyi oluşturur.
 
-1. MyDbgApp. cpp içinde aşağıdaki kodu değiştirin
+1. MyDbgApp.cpp içinde aşağıdaki kodu değiştirin
 
     ```c++
     int main()
@@ -47,7 +48,7 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
     }
     ```
 
-    Bu kodla (kaldırmayın `#include "stdafx.h"` ):
+    bu kodla (kaldırmayın): `#include "stdafx.h"`
 
     ```c++
     #include <list>
@@ -78,64 +79,64 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
-*Kesme noktası* , Visual Studio 'nun çalışan kodunuzu askıya alması gerektiğini belirten bir işaretleyicidir, böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz. Hata ayıklamada en temel özelliktir.
+Kesme *noktası,* değişkenlerin değerlerine Visual Studio veya bellek davranışına veya bir kod dalını çalıştırıp çalıştırmamaya bakabilirsiniz. Hata ayıklamanın en temel özelliğidir.
 
-1. Kesme noktasını ayarlamak için, işlev çağrısının solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9** tuşuna basın).
+1. Kesme noktası ayarlamak için işlev çağrısının sol tarafından sol tarafta yer alan oluklara tıklayın (veya kod satırına tıklayın ve `doWork` **F9 tuşuna basın).**
 
     ![Kesme noktası ayarlama](../debugger/media/dbg-qs-set-breakpoint.png "Kesme noktası ayarlama")
 
-2. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla** seçeneğini belirleyin).
+2. Şimdi **F5 tuşuna basın** (veya Hata **Ayıkla'> Hata Ayıklamayı Başlat'ı seçin).**
 
-    ![Kesme noktasına isabet edin](../debugger/media/dbg-qs-hit-breakpoint.png "Kesme noktasına isabet edin")
+    ![Kesme noktası isabeti](../debugger/media/dbg-qs-hit-breakpoint.png "Kesme noktası isabeti")
 
-    Hata ayıklayıcı, kesme noktasını ayarladığınız yerde duraklatılır. Hata ayıklayıcının ve uygulama yürütmenin duraklatıldığı ifade sarı oklu belirtilir. İşlev çağrısının bulunduğu satır `doWork` henüz yürütülmedi.
+    Hata ayıklayıcısı kesme noktası ayarlayıcıyı duraklatıyor. Hata ayıklayıcısı ve uygulama yürütmenin duraklatılmış olduğu deyim sarı okla işaret ediyor. İşlev çağrısına `doWork` sahip satır henüz yürütülmedi.
 
     > [!TIP]
-    > Bir döngüde veya özyinelemedeki bir kesme noktası varsa veya sık sık adımtığınız çok sayıda kesme noktasına sahipseniz, kodunuzun yalnızca belirli koşullar karşılandığında askıya alındığından emin olmak için [koşullu bir kesme noktası](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) kullanın. Koşullu kesme noktası zaman kazandırır ve yeniden oluşturulması zor olan sorunların hatalarını ayıklamanızı kolaylaştırır.
+    > Döngüde veya recursion içinde bir kesme noktanız varsa veya sık sık adım attığınız [](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) çok sayıda kesme noktanız varsa, kodunuzun YALNIZCA belirli koşullar karşılandı olduğunda askıya alındıktan emin olmak için koşullu kesme noktası kullanın. Koşullu kesme noktası zamandan tasarruf sağlar ve yeniden oluşturması zor olan sorunlarda hata ayıklamayı da kolaylaştırır.
 
-    C++ ' da bellekle ilgili hatalarda hata ayıklamaya çalışırken, adres değerlerini incelemek için kesme noktaları da kullanabilirsiniz (NULL için arama) ve başvuru sayıları.
+    C++ içinde bellekle ilgili hatalarda hata ayıklamaya çalışırken, adres değerlerini (NULL ara) ve başvuru sayılarını incelemek için kesme noktaları da kullanabilirsiniz.
 
-## <a name="navigate-code"></a>Koda git
+## <a name="navigate-code"></a>Kodda gezinme
 
-Hata ayıklayıcının devam etmesini bildirmek için farklı komutlar vardır. Visual Studio 2017 ' den başlayarak kullanılabilecek yararlı bir kod Gezinti komutu gösteririz.
+Hata ayıklayıcıya devam etme talimatı için farklı komutlar vardır. 2017'den itibaren kullanılabilen yararlı bir kod gezinti Visual Studio gösteriyoruz.
 
-Kesme noktasında duraklalarken, tıklama `c1.push_back(20)` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak  deyimin üzerine gelin ve ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick") sonra da **Çalıştır** düğmesine basın.
+Kesme noktası duraklatılırken, yeşil Renkli Çalıştır düğmesine tıklar görünene kadar deyimin üzerine gelin ve ardından `c1.push_back(20)` **Çalıştır'a tıklayarak düğmesine** basın.  ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick")
 
-![Tıklama için Çalıştır](../debugger/media/dbg-qs-run-to-click.png "Tıklama için Çalıştır")
+![Tıklamak için çalıştır](../debugger/media/dbg-qs-run-to-click.png "Tıklamak için çalıştır")
 
-Uygulama, `doWork` düğmeye tıklamış olduğunuz kod satırında yürütme, çağırma ve duraklamaya devam eder.
+Uygulama, çağrısıyla `doWork` yürütmeye devam eder ve düğmesine tıklamış kod satırı üzerinde duraklatılır.
 
-Kod içinde ilerlemek için kullanılan yaygın klavye komutları **F10** ve **F11**. Daha ayrıntılı yönergeler için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
+Kodda adım adım gezinmek için kullanılan yaygın klavye komutları **F10** ve **F11'tir.** Daha ayrıntılı yönergeler için bkz. [Hata ayıklayıcıya ilk bakış.](../debugger/debugger-feature-tour.md)
 
-## <a name="inspect-variables-in-a-datatip"></a>Bir veri ipucunda değişkenleri İnceleme
+## <a name="inspect-variables-in-a-datatip"></a>Veri ipucunda değişkenleri inceleme
 
-1. Geçerli kod satırında (Sarı yürütme işaretçisi tarafından işaretlenir), `c1` bir DataTip göstermek için farenizle nesnenin üzerine gelin.
+1. Geçerli kod satırı (sarı yürütme işaretçisi ile işaretlenmiş) farenizin olduğu nesnenin üzerine gelerek `c1` bir veri ipucu gösterir.
 
-    ![Veri ipucunu görüntüleme](../debugger/media/dbg-qs-data-tip.png "Veri ipucunu görüntüleme")
+    ![Veri ipucu görüntüleme](../debugger/media/dbg-qs-data-tip.png "Veri ipucu görüntüleme")
 
-    Datatıp, değişkenin geçerli değerini gösterir `c1` ve özelliklerini incelemenizi sağlar. Hata ayıklarken, beklemediğinizi bir değer görürseniz, büyük olasılıkla kodun önceki veya çağırma satırlarında bir hata oluşur.
+    Veri ipucu değişkenin geçerli değerini `c1` gösterir ve özelliklerini incelemeye olanak sağlar. Hata ayıklama sırasında, beklemeyebilirsiniz bir değer görüyorsanız, büyük olasılıkla önceki veya çağıran kod satırlarında bir hata vardır.
 
-2. Nesnenin geçerli özellik değerlerini görmek için DataTip ' i genişletin `c1` .
+2. Nesnenin geçerli özellik değerlerine bakmak için veri ipucuna `c1` bakın.
 
-3. Kodu yürüttüğünüzde değerini görmeye devam edebilmeniz için veri ipucunu sabitlemek istiyorsanız `c1` , küçük sabitle simgesine tıklayın. (Sabitlenmiş veri ipucunu uygun bir konuma taşıyabilirsiniz.)
+3. Kod yürütürken değerini görmeye devam etmek için veri ipucuna sabitlemek için küçük pin `c1` simgesine tıklayın. (Sabitlenmiş veri ipucunı uygun bir konuma taşıyabilirsiniz.)
 
 ## <a name="edit-code-and-continue-debugging"></a>Kodu düzenleme ve hata ayıklamaya devam etme
 
-Hata ayıklama oturumunun ortasında kodunuzda test etmek istediğiniz bir değişikliği belirlerseniz, bunu da yapabilirsiniz.
+Hata ayıklama oturumunun ortasındayken kodunda test etmek istediğiniz bir değişikliği tespit ediyorsanız, bunu da kullanabilirsiniz.
 
-1. İkinci örneğine tıklayın ve öğesini `c2.front()` olarak değiştirin `c2.front()` `c2.back()` .
+1. İkinci örneğine tıklayın `c2.front()` ve olarak `c2.front()` `c2.back()` değişir.
 
-2. Hata ayıklayıcıyı ilerletmek ve düzenlenmiş kodu yürütmek için **F10** 'e (veya **hata ayıklama > adımla**) birkaç kez basın.
+2. Hata ayıklayıcıyı ilerlemek **ve düzenlenen kodu yürütmek için** birkaç kez **F10** 'a (veya Hata Ayıkla > AdımLa) tuşuna basın.
 
-    ![Düzenle ve devam et](../debugger/media/dbg-qs-edit-and-continue.gif "Düzenle ve devam et")
+    ![Düzenle ve devam](../debugger/media/dbg-qs-edit-and-continue.gif "Düzenle ve devam")
 
-    **F10** , hata ayıklayıcı bir ifadeyi tek seferde ilerletir, ancak bunlar içine adımlamak yerine işlevler üzerinde adımlar (yine de atladığınız kod).
+    **F10,** hata ayıklayıcıyı tek tek bir deyime ilerletmektedir, ancak işlevlere adımlarını atlar (atlayıp atlayılan kod yine de yürütülür).
 
-Düzenle ve devam et ve özellik sınırlamalarını kullanma hakkında daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
+Düzenle ve devam edin özelliğini kullanma ve özellik sınırlamaları hakkında daha fazla bilgi için bkz. Düzenle [ve Devam Edin.](../debugger/edit-and-continue.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, hata ayıklayıcıyı başlatma, kod adım adım ve değişkenleri İnceleme hakkında öğrendiniz. Hata ayıklayıcı özelliklerine ve daha fazla bilgi için bağlantılarla birlikte yüksek düzeyde bir görünüm sağlamak isteyebilirsiniz.
+Bu öğreticide hata ayıklayıcıyı başlatmayı, kodu adım adım incelemeyi ve değişkenleri incelemeyi öğrendiniz. Daha fazla bilgi için bağlantılarla birlikte hata ayıklayıcı özelliklerine üst düzey bir bakış elde etmek iyi olabilir.
 
 > [!div class="nextstepaction"]
 > [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

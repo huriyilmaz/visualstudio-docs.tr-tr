@@ -1,6 +1,6 @@
 ---
 title: require-vscomponent
-description: devinit aracı-vscomponent gerektirir.
+description: devinit tool require-vscomponent.
 ms.date: 02/08/2021
 ms.topic: reference
 author: andysterland
@@ -11,52 +11,52 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 7d6609c49efb9f77c9823ca3f703b8843ddb753e
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 5ba58bfde22ad5d6d9a7a3a2c64d95326a5e33c43adb327285ac6ba73da8390b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672675"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121418022"
 ---
 # <a name="require-vscomponent"></a>require-vscomponent
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
 
-`require-vscomponent`Araç, Visual Studio yapılandırmasını var olan Visual Studio 'ya aktarmak için kullanılır. Buradan daha fazla bilgi edinin `.vsconfig` [](../install/import-export-installation-configurations.md).
+Araç, `require-vscomponent` yapılandırma yapılandırmalarını mevcut Visual Studio içeri aktarmaya Visual Studio. Burada hakkında daha fazla bilgi `.vsconfig` [okuyun.](../install/import-export-installation-configurations.md)
 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı [olarak açıklanmış varsayılan](#default-behavior) davranışı takip eder.
 
 | Ad                                     | Tür   | Gerekli | Değer                                                                |
 |------------------------------------------|--------|----------|----------------------------------------------------------------------|
-| **açıklamaları**                             | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                |
-| [**girişinin**](#input)                      | dize | No       | Tam yolu `.vsconfig` . Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
-| [additionalOptions](#additional-options) | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.     |
+| **yorumlar**                             | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                |
+| [**Giriş**](#input)                      | dize | No       | tam `.vsconfig` yolu. Ayrıntılar [için](#input) aşağıdaki girişe bakın. |
+| [additionalOptions](#additional-options) | dize | No       | Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.     |
 
 ### <a name="input"></a>Giriş
 
-`input`Özelliği, dosyanın tam yolunu belirtmek için kullanılır `.vsconfig` . Söz konusu değilse, araç `.vsconfig` geçerli dizinde arama yapılır ve değeri Visual Studio yükleyicisi iletir.
+`input`özelliği, dosyanın tam yolunu belirtmek için `.vsconfig` kullanılır. Bahsediliyorsa, araç geçerli dizinde bir araması ve değeri `.vsconfig` dizine Visual Studio Yükleyicisi.
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `additionalOptions` . 
+Ek yapılandırma seçenekleri değeri olarak `additionalOptions` geçirebilirsiniz. 
 
 | Ad                      | Tür      | Gerekli | Değer                                                                                                                                                                                    |
 |---------------------------|-----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --InstallPath             | dize    | No       | Değiştirmek istediğiniz Visual Studio örneğinin install yolu.                                                                                                                       |
+| --installPath             | dize    | No       | Değiştirmek istediğiniz Visual Studio yükleme yolu.                                                                                                                       |
 
-Hiçbir yükleme yolu belirtilmemişse, makinenizde birden çok örnek varsa, araç makinenizde en eski yüklü Visual Studio 'Yu değiştirecektir. 
+Herhangi bir yükleme yolu belirtilmezse, makineniz üzerinde birden çok örnek Visual Studio aracı makinenize en erken yüklenmiş yükleme aracını değiştirir. 
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı `require-vscomponent` `.vsconfig` geçerli dizindeki bir dosyayı aramak ve bu ayrıntılarla Visual Studio yükleyicisi sessiz modda çalıştırmak içindir. `require-vscomponent` yalnızca var olan bir Visual Studio yüklemesinin değiştirilmesini destekler. 
+Aracın varsayılan davranışı, geçerli dizinde bir dosyayı arama ve bu ayrıntılarla Visual Studio Yükleyicisi sessiz modda `require-vscomponent` `.vsconfig` çalıştırmadır. `require-vscomponent`yalnızca mevcut bir Visual Studio destekler. 
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-vscomponent` `.devinit.json` .
+Aşağıda, kullanarak çalıştırmaya bir `require-vscomponent` örnek `.devinit.json` verilmiştir.
 
-#### <a name="devinitjson-that-will-import-the-configurations-of-a-given-vsconfig-file-path"></a>.devinit.js, belirli bir. vsconfig dosyası yolunun yapılandırmalarını içeri aktaracak:
+#### <a name="devinitjson-that-will-import-the-configurations-of-a-given-vsconfig-file-path"></a>.devinit.jsbir .vsconfig dosya yolunun yapılandırmalarını içeri aktaracak olan bir dosya adı:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -70,7 +70,7 @@ Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda veri
 }
 ```
 
-#### <a name="devinitjson-that-will-import-the-configurations-of-a-given-vsconfig-file-path-to-the-visual-studio-instance-specified-via-an-install-path"></a>Bunun .devinit.js, belirli bir. vsconfig dosyası yolunun yapılandırmalarını, bir install yolu ile belirtilen Visual Studio örneğine aktarır:
+#### <a name="devinitjson-that-will-import-the-configurations-of-a-given-vsconfig-file-path-to-the-visual-studio-instance-specified-via-an-install-path"></a>.devinit.js, belirli bir .vsconfig dosya yolunun yapılandırmalarını yükleme yoluyla belirtilen Visual Studio örneğine aktaracak:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

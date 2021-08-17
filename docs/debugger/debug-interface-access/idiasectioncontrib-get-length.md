@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: eb8c2ee0408b0f02c7edfd1acd9ccbf13352d62bf50663968719c7e383db17da
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: eea4f255f3ac85884cec1e8c1a1887af32814472
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392139"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044489"
 ---
 # <a name="idiasectioncontribget_length"></a>IDiaSectionContrib::get_length
 Bir bölümdeki bayt sayısını alır.

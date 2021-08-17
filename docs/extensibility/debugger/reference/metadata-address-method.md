@@ -11,17 +11,18 @@ ms.assetid: fc0e5370-1b4f-4867-837f-0d63c4b9dd09
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 40047dbdb35ad5958e923bb9a3ec18faa0d69be6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 21acc912a391f7fcc46a568df95be23a3e44c7d7e54ab8d5f77af7aecda5d283
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075477"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338260"
 ---
 # <a name="metadata_address_method"></a>METADATA_ADDRESS_METHOD
 Bu yapı, bir sınıfın bir yönteminin adresini temsil eder.

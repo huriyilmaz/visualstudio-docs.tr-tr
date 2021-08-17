@@ -12,14 +12,15 @@ ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b52ed40397793b44f8a9c7ed9c36aa5996ae0176
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: bdd7a8fea7725d9152036bbf0b23d351d62596692118c2ef7f904c5ec886e35b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900388"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121336726"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 Bu geri çağırma, IDE tarafından [SccPopulateList](../extensibility/sccpopulatelist-function.md) için sağlanır ve kaynak denetim eklentisi tarafından, bir dosya veya dizinlerin listesini güncelleştirmek için kullanılır (işleve de sağlanır `SccPopulateList` ).

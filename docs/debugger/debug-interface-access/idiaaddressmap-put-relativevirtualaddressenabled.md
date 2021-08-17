@@ -1,5 +1,5 @@
 ---
-description: İstemcinin, göreli sanal adreslerin (RVA) hesaplanmasını ve kullanımını etkinleştirmesine veya devre dışı bırakmasına izin verir.
+description: İstemcinin göreli sanal adreslerin (RVA) hesaplanması ve kullanımını etkinleştirmesini veya devre dışı bırakmasını sağlar.
 title: IDiaAddressMap::p ut_relativeVirtualAddressEnabled | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 767c078e-8ad7-4940-9e00-cae7704aadee
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c3aab1379a39ee6abfd977350743e36c9792efb
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 82cd5e7ee05c3e3ed024039f350b3a7f74b6fb9a826ac97a4d4ff0008b7cdb6e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158324"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345335"
 ---
 # <a name="idiaaddressmapput_relativevirtualaddressenabled"></a>IDiaAddressMap::put_relativeVirtualAddressEnabled
-İstemcinin, göreli sanal adreslerin (RVA) hesaplanmasını ve kullanımını etkinleştirmesine veya devre dışı bırakmasına izin verir.
+İstemcinin göreli sanal adreslerin (RVA) hesaplanması ve kullanımını etkinleştirmesini veya devre dışı bırakmasını sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,17 +35,17 @@ HRESULT put_relativeVirtualAddressEnabled (
 #### <a name="parameters"></a>Parametreler
  NewVal
 
-'ndaki `TRUE` Öğesini etkinleştirmek veya `FALSE` devre dışı bırakmak için olarak ayarlayın.
+[in] etkinleştirmek veya `TRUE` devre dışı bırakmak için olarak `FALSE` ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- DIA arabirimleri tarafından tanımlanan hata ayıklama nesnelerinin adresleri ve yürütülebilir dosyanın görüntü tabanına göreli olarak, göreli sanal adresler olarak alınabilir.
+ DIA arabirimleri tarafından tanımlanan hata ayıklama nesnelerinin adresleri ve yürütülebilir dosyanın görüntü tabanına göre, göreli sanal adresler olarak alınabilirsiniz.
 
- RVA kullanımı, kesimler başlangıçta bir PDB dosyasından yüklendiğinde etkinleştirilir. RVA öğesinin geçerli durumunu almak için [IDiaAddressMap:: get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) yöntemini çağırın.
+ Segmentler başlangıçta bir PDB dosyasından yüklendiğinde RVA'ların kullanımı etkinleştirilir. RVA'ların kullanımının geçerli durumunu almak için [IDiaAddressMap::get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) yöntemini arayın.
 
- `put_relativeVirtualAddress` [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi için başarılı bir çağrıdan sonra RVA etkinleştirmek üzere yöntemi çağrılmalıdır.
+ `put_relativeVirtualAddress` [IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemine yapılan başarılı bir çağrıdan sonra RVA'ları etkinleştirmek için yönteminin çağrılmış olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)

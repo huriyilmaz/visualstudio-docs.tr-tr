@@ -1,6 +1,6 @@
 ---
-title: CvCreateMarkerSeries Işlevi | Microsoft Docs
-description: Eşzamanlılık Görselleştiricisi SDK işlevi CvCreateMarkerSeries (C Kitaplığı) için başvuru bilgilerine bakın.
+title: CvCreateMarkerSeries İşlev | Microsoft Docs
+description: Eşzamanlılık Görselleştirici SDK'sı işlevi CvCreateMarkerSeries (C kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,17 +14,18 @@ ms.assetid: e280530b-137a-43a7-8643-aa514ab86ed7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8915724c39a656917d6565c60ddc7dfbb0737564
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ace7287bfbb12d078e8dcbc846042f8394215f1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941040"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076769"
 ---
 # <a name="cvcreatemarkerseries-function"></a>CvCreateMarkerSeries işlevi
-Belirli bir sağlayıcı için işaretleyici serisi oluşturur.
+Belirtilen sağlayıcı için işaretçi serisi oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,21 +42,21 @@ _Check_return_ HRESULT CvCreateMarkerSeriesA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pProvider` Sağlayıcı nesnesi daha önce CvInitProvider tarafından başlatıldı. NULL olamaz.
+ `pProvider` Daha önce CvInitProvider tarafından başlatılan provider nesnesi. NULL olamaz.
 
- `pSeriesName` İşaretleyici seri adı. NULL olamaz, ancak boş dizeye izin verilir.
+ `pSeriesName` İşaretçi serisi adı. NULL olamaz ancak boş dizeye izin verilir.
 
- `ppMarkerSeries` İşaretleyici serisi bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.
+ `ppMarkerSeries` İşaretçi serisi bağlamını depolanacak çıkış değişkeninin adresi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- İşaretleyici serisi başarıyla oluşturulduğunda S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
+ S_OK seri başarıyla oluşturulduğunda veya herhangi bir hata olduğunda hata kodu. Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvişaretleyiciler. h*
+ **Üst bilgi:** *cvmarkers.h*
 
  **Unicode:** CvCreateMarkerSeriesW
 
  **ANSI:** CvCreateMarkerSeriesA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

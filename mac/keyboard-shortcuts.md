@@ -16,7 +16,7 @@ ms.locfileid: "121349568"
 
 Klavye erişilebilirliği hakkında daha fazla bilgi [için bkz. Nasıl? Klavye Gezintisini Kullanma.](~/accessibility-keyboard.md)
 
-Uygun klavye kısayolunu kullanarak Mac için Visual Studio komutlara erişebilirsiniz. Bu belgede, temel anahtar bağlama şeması için **Mac için Visual Studio** kısayollar listelenmiş olur. Anahtar bağlama düzenini değiştirme hakkında daha fazla bilgi için [bkz. IDE'i Özelleştirme.](~/customizing-the-ide.md#key-bindings) Tercihler menü öğesini kullanarak ve Tercihler **penceresinde ortam Mac için Visual Studio'ı** seçerek komut kısayollarını  >   da   >   **özelleştirebilirsiniz.**
+Uygun klavye kısayolunu kullanarak Mac için Visual Studio komutlara erişebilirsiniz. Bu belgede, temel anahtar bağlama şeması için **Mac için Visual Studio** kısayollar listelenmiş olur. Anahtar bağlama düzenini değiştirme hakkında daha fazla bilgi için [bkz. IDE'i Özelleştirme.](~/customizing-the-ide.md#key-bindings) Tercihler menü öğesini kullanarak ve Tercihler **penceresinde ortam Mac için Visual Studio'ı** seçerek de bir komutun  >     >   **kısayollarını özelleştirebilirsiniz.**
 
 > [!TIP]
 > Bu belgede görüntülenen klavye kısayolları ve Mac için Visual Studio tuş bağlama tercihleri, macOS'ta yaygın olarak kullanılan semboller kullanılarak gösterilir. Bir simgeden emin değilseniz macOS anahtar sembolleri döngü [tablosuna bakın.](#macos-key-symbols-lookup)
@@ -158,59 +158,59 @@ En çok kullanılan ve en kullanışlı klavye kısayollarını indirilebilir pd
 |Öncekini Bul|**⇧ ⌘ G**, **⇧ F3**|
 |Seçimi beğen Öncekini Bul|**⇧ ⌘ F3**|
 |Bul|**⌘ F**|
-|Dosyaya git|**⇧ ⌘ D**|
-|Satıra git|**⌘ L**|
-|Türe git|**⇧ ⌘ T**|
-|Şuraya gidin|**⌘.**|
-|Dosyalarda Değiştir|**⌥ ⇧ ⌘ F**|
-|Değiştir|**⌥ ⌘ F**|
+|Dosyaya Git|**⇧⌘D**|
+|Satıra Git|**⌘L**|
+|Türe Git|**⇧⌘T**|
+|Şu sayfaya gidin:|**⌘.**|
+|Dosyalarda Değiştir|**⌥⇧⌘F**|
+|Değiştir|**⌥⌘F**|
 
 ## <a name="text-editor"></a>Metin Düzenleyici
 
 |Komutlar|Klavye kısayolları|
 |-|-|
 |Tam Sözcük|**⌃␣**|
-|Sol karakteri sil|**⌃ H**|
-|Sonraki alt sözcüğü Sil|**⌃⌦**|
-|Sonraki sözcüğü Sil|**⌥⌦**|
-|Önceki alt sözcüğü Sil|**⌃⌫**|
-|Önceki sözcüğü Sil|**⌥⌫**|
-|Sağ karakteri sil|**⌃ D**|
-|Satır sonuna kadar Sil|**⌃ K**|
+|Sol karakteri silme|**⌃H**|
+|Sonraki alt ifadeyi sil|**⌃⌦**|
+|Sonraki sözcüğü sil|**⌥⌦**|
+|Önceki alt ifadeyi silme|**⌃⌫**|
+|Önceki sözcüğü silme|**⌥⌫**|
+|Sağ karakteri silme|**⌃D**|
+|Satırın sonuna kadar silme|**⌃K**|
 |Dinamik kısaltma|**⌃/**|
 |Seçimi genişlet|**⌥⇧↓**|
 |Seçimi genişlet|**⌥⇧↑**|
-|Seçimi belge sonuna Genişlet|**⇧ ⌘ ↓**, **⇧ ⌘ ↘**|
-|Seçimi Belge başına Genişlet|**⇧ ⌘ ↑**, **⇧ ⌘ ↖**|
-|Seçimi satır sonuna Genişlet|**⇧ ↘**, **⇧ ⌘ →**|
-|Seçimi satır başına Genişlet|**⇧ ↖**, **⇧ ⌘ ←**|
-|Seçimi sonraki satıra Genişlet|**⇧↓**|
-|Seçimi sonraki sözcüğe Genişlet|**⌥ ⇧ →**|
-|Seçimi sayfa aşağı genişlet|**⇧⇟**|
-|Seçimi sayfaya Genişlet|**⇧⇞**|
-|Seçimi önceki satıra Genişlet|**⇧↑**|
-|Seçimi önceki sözcüğe Genişlet|**⌥⇧←**|
-|Seçimi sola Genişlet|**⇧←**|
-|Seçimi sağa Genişlet|**⇧ →**|
-|Giriş işaretini bul|**⌘\|**|
-|Bir karakter sola git|**⌃ B**|
-|Bir karakter sağa git|**⌃ F**|
-|Belgenin başlangıcına git|**⌘ ↑**|
-|Satırın başlangıcına git|**⌘ ←**, **⌃ A**|
-|Belgenin sonuna git|**⌘ ↓**|
-|Satır sonuna git|**⌘ →**, **⌃ E**|
-|Eşleşen ayraca git|**⇧ ⌘\\**|
-|Sonraki satıra git|**⌃ N**|
-|Sonraki sözcüğe git|**⌥ →**|
-|Önceki satıra git|**⌃ P**|
-|Önceki sözcüğe git|**⌥←**|
-|Giriş işaretinden sonra satır sonu Ekle|**⌃ O**|
-|Giriş işaretini EOL 'a taşı ve yeni satır ekle|**⇧⏎**|
-|Satırı veya vurgulanan seçimi aşağı taşı|**⌥↓**|
-|Satırı veya vurgulanan seçimi yukarı taşı|**⌥↑**|
-|Sonraki kullanıma taşı|**⌃ ⌥ ⌘ ↓**|
-|Önceki kullanıma taşı|**⌃ ⌥ ⌘ ↑**|
-|Parametre listesini göster|**⌃⇧␣**|
+|Belge sonuna seçimi genişletme|**⇧⌘↓**, **⇧⌘↘**|
+|Belge başlangıcına seçimi genişletme|**⇧⌘;**, **⇧⌘↖**|
+|Seçimi satır sona genişletme|**⇧↘**, **⇧⌘→**|
+|Seçimi satır başlangıcına genişletme|**⇧↖**, **⇧⌘←**|
+|Seçimi bir sonraki satıra genişletme|**⇧↓**|
+|Seçimi bir sonraki söze genişletme|**⌥⇧→**|
+|Seçimi sayfa aşağı genişletmek için genişletme|**⇧⇟**|
+|Sayfa yukarıya seçimi genişletme|**⇧⇞**|
+|Seçimi önceki satıra genişletme|**⇧↑**|
+|Seçimi önceki sözcükle genişletme|**⌥⇧←**|
+|Seçimi sola genişletme|**⇧←**|
+|Seçimi sağdan genişletme|**⇧→**|
+|Caret bulma|**⌘\|**|
+|Bir karakter sola git|**⌃B**|
+|Bir karakter sağa gitme|**⌃F**|
+|Belgenin başına gidin|**⌘↑**|
+|Satırın başına gitme|**⌘←**, **⌃A**|
+|Belgenin sonuna git|**⌘↓**|
+|Satırın sonuna git|**⌘→**, **⌃E**|
+|Eşleşen Ayraç'a gidin|**⇧⌘\\**|
+|Sonraki satıra gidin|**⌃N**|
+|Sonraki söze git|**⌥→**|
+|Önceki satıra git|**⌃P**|
+|Önceki söze git|**⌥←**|
+|Dikkat çizgisinin ardından satır sonu ekleme|**⌃O**|
+|Caret'i EOL'ye taşıma ve yeni satır ekleme|**⇧⏎**|
+|Satırı veya vurgulanmış seçimi aşağı taşıma|**⌥↓**|
+|Satırı veya vurgulanmış seçimi yukarı taşıma|**⌥↑**|
+|Sonraki kullanımlara geç|**⌃⌥⌘↓**|
+|Ön kullanıma taşıma|**⌃⌥⌘↑**|
+|Parametre Listesini Göster|**⌃⇧␣**|
 |Hızlı bilgileri göster|**⌘ F1**|
 |Kapsamları göster|**⌥ ⇧ ⌘ P**|
 |Karakterleri değiştir|**⌃ T**|

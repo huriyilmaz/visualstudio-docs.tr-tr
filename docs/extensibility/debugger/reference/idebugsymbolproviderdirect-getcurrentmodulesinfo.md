@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8d1eacfea362f13e0557764dfc3bee411d73d6fa
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5b24c93e139097efe6dc12c5ddfe14c961d8d7fa91064e7cc85a4c351dded181
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122087398"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415747"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
 Sembol grubundaki modüller hakkındaki bilgileri alır.

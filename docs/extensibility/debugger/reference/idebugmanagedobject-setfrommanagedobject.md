@@ -11,17 +11,18 @@ ms.assetid: 8700ee8d-2704-4580-bccc-046837a24edd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8c00e61de35e0cc9c33845236d8103bcd16cebfa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58b902732a0dcbfd30c7dd57b5c22a63fbc930ec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076855"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078901"
 ---
 # <a name="idebugmanagedobjectsetfrommanagedobject"></a>IDebugManagedObject::SetFromManagedObject
 Parametre olarak sunulan değer sınıfının örneğinden değer sınıfı nesnesinin örneğinin değerini ayarlar.

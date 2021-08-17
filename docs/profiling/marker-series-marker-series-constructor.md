@@ -11,14 +11,15 @@ ms.assetid: 042c7d23-f1d8-4e09-9e76-a21c30243790
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 88d82c78bc6126f6b3d96b77b39c729c4f452a28
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 16e766bc5c22cc6c9efb257c22326a4addf4bf0f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223985"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076470"
 ---
 # <a name="marker_seriesmarker_series-constructor"></a>marker_series:: marker_series Oluşturucusu
 `marker_series` sınıfının yeni bir örneğini başlatır.

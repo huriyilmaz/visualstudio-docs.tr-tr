@@ -1,22 +1,23 @@
 ---
-title: Visual Studio 'da Python eğitim 5. adım, paket yüklemesi
+title: Python Visual Studio öğretici adım 5, paket yüklemesi
 titleSuffix: ''
-description: Visual Studio 'da, Visual Studio 'nun bir Python ortamında paketleri yönetme özelliklerini gösteren, Python özelliklerine yönelik temel bir izlenecek yol 5. adımı.
+description: bir python ortamında paketlerin yönetilmesi için Visual Studio özelliklerini gösteren, Visual Studio python özelliklerine yönelik temel bir izlenecek yolun 5. adımı.
 ms.date: 03/09/2020
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c47eacf0c9977e7342bfda17e03ea53728ee9215
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be201d5d9897dd803f9eac3c012d3124c141c26e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901146"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076119"
 ---
 # <a name="step-5-install-packages-in-your-python-environment"></a>5. Adım: Python ortamınıza paket yüklemeyi
 
@@ -26,16 +27,16 @@ Python geliştirici topluluğu, kendi projeleriniz ile birleştirebilmeniz için
 
 ## <a name="view-environments"></a>Ortamları görüntüleme
 
-1.   >  **Diğer Windows**  >  **Python ortamlarını** görüntüle menü komutunu seçin. **Python ortamları** penceresi **Çözüm Gezgini** için bir eş olarak açılır ve size sunulan farklı ortamları gösterir. Listede, Visual Studio yükleyicisi kullanılarak yüklediğiniz ortamlar ve ayrı olarak yüklediğiniz ortamlar gösterilmektedir. Bu, genel, sanal ve Conda ortamlarını içerir. Kalın olan ortam, yeni projeler için kullanılan varsayılan ortamdır. Ortamlarla çalışma hakkında daha fazla bilgi için bkz. [Visual Studio ortamlarında Python ortamları oluşturma ve yönetme](managing-python-environments-in-visual-studio.md).
+1.   >  **diğer Windows**  >  **Python ortamlarını** görüntüle menü komutunu seçin. **Python ortamları** penceresi **Çözüm Gezgini** için bir eş olarak açılır ve size sunulan farklı ortamları gösterir. liste, Visual Studio yükleyicisini ve ayrı olarak yüklediğiniz ortamları gösterir. Bu, genel, sanal ve Conda ortamlarını içerir. Kalın olan ortam, yeni projeler için kullanılan varsayılan ortamdır. ortamlarla çalışma hakkında daha fazla bilgi için bkz. [Visual Studio ortamlarında Python ortamları oluşturma ve yönetme](managing-python-environments-in-visual-studio.md).
 
    ![Python ortamları penceresi](media/environments/environments-default-view-2019.png)
 
    > [!NOTE]
-   > Ayrıca, Çözüm Gezgini penceresini seçerek ve **CTRL + K, CTRL + '** klavye kısayolunu kullanarak Python ortamları penceresini açabilirsiniz. Kısayol işe yaramazsa ve menüde Python ortamları penceresini bulamıyorsanız, Python iş yükünü yüklemiş olmanız mümkün değildir. Python 'un nasıl yükleneceğine ilişkin yönergeler için bkz. [Visual Studio 'Da Python desteği nasıl yüklenir](installing-python-support-in-visual-studio.md) .
+   > Ayrıca, Çözüm Gezgini penceresini seçerek ve **CTRL + K, CTRL + '** klavye kısayolunu kullanarak Python ortamları penceresini açabilirsiniz. Kısayol işe yaramazsa ve menüde Python ortamları penceresini bulamıyorsanız, Python iş yükünü yüklemiş olmanız mümkün değildir. python 'un nasıl yükleneceğine ilişkin yönergeler için bkz. [Visual Studio python desteğini yüklemeyi](installing-python-support-in-visual-studio.md) öğrenin.
 
-2. Ortamın **genel bakış** sekmesi, ortamın yükleme klasörü ve yorumlayıcıları ile birlikte bu ortam için **etkileşimli** bir pencereye hızlı erişim sağlar. Örneğin **etkileşimli pencere aç** ' ı seçin ve Visual Studio 'da belirli bir ortam için **etkileşimli** bir pencere görüntülenir.
+2. Ortamın **genel bakış** sekmesi, ortamın yükleme klasörü ve yorumlayıcıları ile birlikte bu ortam için **etkileşimli** bir pencereye hızlı erişim sağlar. Örneğin **etkileşimli pencere aç** ' ı seçin ve bu ortam için **etkileşimli** bir pencere Visual Studio görüntülenir.
 
-3. Şimdi, yeni **Dosya** projesi olan yeni bir proje oluşturun  >    >  , **Python uygulama** şablonunu seçin. Görüntülenen kod dosyasında, önceki öğretici adımları gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik çizilir. Alternatif olarak, önceden oluşturduğunuz projeyi kullanabilir ve kodu değiştirebilirsiniz.
+3. şimdi, yeni Project **dosya** içeren yeni bir proje oluşturun  >    >  , **Python uygulama** şablonu ' nu seçin. Görüntülenen kod dosyasında, önceki öğretici adımları gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik çizilir. Alternatif olarak, önceden oluşturduğunuz projeyi kullanabilir ve kodu değiştirebilirsiniz.
 
     ```python
     from math import radians
@@ -75,9 +76,9 @@ Python geliştirici topluluğu, kendi projeleriniz ile birleştirebilmeniz için
    ![Ortamda Matplotlib yükleme işleminin tamamlanması](media/environments/environments-add-matplotlib2-2019.png)
 
    > [!NOTE]
-   > Visual Studio 'nun yeni yüklenmiş paket için IntelliSense veritabanını oluşturmakta olduğunu göstermek için, ortamın altında küçük bir ilerleme çubuğu görünür. **IntelliSense** sekmesinde daha ayrıntılı bilgiler de gösterilmektedir. Bu veritabanı tamamlanana kadar, otomatik tamamlama ve söz dizimi denetimi gibi IntelliSense özelliklerinin bu pakete yönelik düzenleyicide etkin olmayacak olduğunu unutmayın.
+   > Visual Studio, yeni yüklenen paket için ıntellisense veritabanını oluşturmakta olduğunu göstermek için ortamın altında küçük bir ilerleme çubuğu görünür. **IntelliSense** sekmesinde daha ayrıntılı bilgiler de gösterilmektedir. Bu veritabanı tamamlanana kadar, otomatik tamamlama ve söz dizimi denetimi gibi IntelliSense özelliklerinin bu pakete yönelik düzenleyicide etkin olmayacak olduğunu unutmayın.
    >
-   > Visual Studio 2017 sürüm 15,6 ve üzeri, IntelliSense ile çalışmaya yönelik farklı ve daha hızlı bir yöntem kullanır ve **IntelliSense** sekmesinden bu etkiye bir ileti görüntüler.
+   > Visual Studio 2017 sürüm 15,6 ve üzeri, ıntellisense ile çalışmaya yönelik farklı ve daha hızlı bir yöntem kullanır ve **ıntellisense** sekmesinden bu etkiye bir ileti görüntüler.
 
 ## <a name="run-the-program"></a>Programı çalıştırma
 

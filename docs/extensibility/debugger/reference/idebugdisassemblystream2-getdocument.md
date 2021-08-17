@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 641a6b3b6601e0e4cac8f82d5d7e375792af1e848bfa77c652b21df84e43d9b8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9dab147c8d55b175cf6ac327cb553a44bea5f32e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262041"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089283"
 ---
 # <a name="idebugdisassemblystream2getdocument"></a>IDebugDisassemblyStream2::GetDocument
 Bu giriş akışıyla ilişkili kaynak belgeyi alır.

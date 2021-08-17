@@ -1,7 +1,7 @@
 ---
 title: Klavye kısayolları
 titleSuffix: Blend for Visual Studio
-description: projeler, belgeler, nesneler, görünümler ve çalışma alanları ile çalışmaya yönelik komutlara erişen Visual Studio için Blend klavye kısayolları hakkında bilgi edinin.
+description: Proje, belge, Visual Studio için Blend, görünümler ve çalışma alanlarıyla çalışmaya yönelik komutlara erişen klavye kısayolları hakkında bilgi edinmek için bu klavye kısayollarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,73 +12,73 @@ manager: jmartens
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 55780e7f873bf8320fc01c489dcf2d1081d1c2b9dfab3743dbca44bbe913a24e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6611ffbcf7ac3ccf98cfc91d8423458ebe314ea3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121243100"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091935"
 ---
-# <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend klavye kısayolları
+# <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend'de klavye kısayolları
 
-## <a name="project-shortcuts"></a>Project kısayollar
+## <a name="project-shortcuts"></a>Project kısayolları
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|Yeni proje oluşturma|**CTRL** + **SHIFT** + **N**|
-|Bir projeyi veya çözümü açın (site değil)|**CTRL** + **SHIFT** + **O**|
-|Bir çözümü kapatma|**CTRL** + **SHIFT** + **C**|
-|Çözümün veya sitenin bir kopyasını kaydet|**CTRL** + **SHIFT** + **P**|
-|Projeye varolan bir öğe ekleme|**CTRL** + **Ben**|
-|DLL 'ye başvuru ekleme (WPF)|**Alt** + **SHIFT** + **R**|
-|Projeyi derleme|**CTRL** + **SHIFT** + **B**|
-|Projeyi veya siteyi test etme|**F5**|
+|Yeni proje oluşturma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **N**|
+|Proje veya çözüm açma (site değil)|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **O**|
+|Çözümü kapatma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **C**|
+|Çözümün veya sitenin bir kopyasını kaydetme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **P**|
+|Projeye var olan bir öğeyi ekleme|**Ctrl tuşunu basılı tutarak** + **I**|
+|DLL'ye başvuru ekleme (WPF)|**Alt** + **Shift ile kaydırma** + **R**|
+|Projeyi derleme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **B**|
+|Projeyi veya siteyi test edin|**F5**|
 
 ## <a name="document-shortcuts"></a>Belge kısayolları
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|Açık belgeler arasında geçiş yap|**CTRL** + **Sekme**|
-|Etkin belgeyi Kaydet|**CTRL** + **S**|
-|Tüm belgeleri kaydet|**CTRL** + **SHIFT** + **S**|
-|Etkin belgeyi kapat|**CTRL** + **W**|
-|Tüm açık belgeleri kapat|**CTRL** + **SHIFT** + **W**|
-|Son eylemi geri al|**CTRL**+ Z|
-|Geri alınan son eylemi yinele|**CTRL**+ Y veya **CTRL** + **SHIFT** + **Z**|
-|Tasarım zamanı ek açıklaması oluşturma|**CTRL** + **SHIFT** + **T**|
-|Kes|**CTRL** + **X**|
-|Kopyala|**CTRL** + **C**|
-|Yapıştır|**CTRL** + **V**|
+|Açık belgeler arasında geçiş|**Ctrl tuşunu basılı tutarak** + **Sekme**|
+|Etkin belgeyi kaydetme|**Ctrl tuşunu basılı tutarak** + **S**|
+|Tüm belgeleri kaydetme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **S**|
+|Etkin belgeyi kapatma|**Ctrl tuşunu basılı tutarak** + **W**|
+|Tüm açık belgeleri kapatma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **W**|
+|Son eylemi geri alma|**Ctrl**+Z|
+|Geri yapılan son eylemi tekrarla|**Ctrl**+Y veya **Ctrl** + **Shift** + **Z**|
+|Tasarım zamanı ek açıklaması oluşturma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **T**|
+|Kes|**Ctrl tuşunu basılı tutarak** + **X**|
+|Kopyala|**Ctrl tuşunu basılı tutarak** + **C**|
+|Yapıştır|**Ctrl tuşunu basılı tutarak** + **V**|
 |Sil|**Silme**|
-|Metin bul (yalnızca XAML görünümü veya JavaScript Düzenleyicisi)|**CTRL** + **F**|
-|Metnin bir sonraki tekrarını bul (yalnızca XAML görünümü veya JavaScript Düzenleyicisi)|**F3** veya **CTRL** + **H**|
+|Metin bulma (yalnızca XAML görünümü veya JavaScript düzenleyicisi)|**Ctrl tuşunu basılı tutarak** + **F**|
+|Metnin bir sonraki oluşumunu bulma (yalnızca XAML görünümü veya JavaScript düzenleyicisi)|**F3** veya **Ctrl** + **H**|
 
 ## <a name="object-shortcuts"></a>Nesne kısayolları
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|Yeni bir öğe oluşturun|**CTRL** + **N**|
-|Nesne yineleme|**Alt** tuşunu basılı tutun ve nesneyi sürükleyin|
-|Bir nesne için yeniden üst öğe|Nesneyi bir düzen panelinin üzerine sürükleyin ve **alt** tuşuna basın|
-|Denetimdeki metni düzenleme|**F2** (çıkmak için **ESC** )|
-|Bir denetimi düzenleme (WPF)|**CTRL** + **E**|
-|Seçili nesneleri aynı genişliğe getir|**CTRL** + **SHIFT** + **1**|
-|Seçili nesneleri aynı yüksekliğe getir|**CTRL** + **SHIFT** + **2**|
-|Seçili nesneleri aynı boyuta getir|**CTRL** + **SHIFT** + **9**|
-|Seçili nesneyi Yatayda ters çevir|**CTRL** + **SHIFT** + **3**|
-|Seçili nesneyi dikey olarak çevir|**CTRL** + **SHIFT** + **4**|
-|Birden çok nesne seçin|**CTRL** tuşunu basılı tutun|
-|Birden çok bitişik nesne seçin|**SHIFT** tuşunu basılı tutun|
-|Seçimi ekran boyutuna sığdır|**CTRL** + **9**|
-|Etkin kapsayıcıyı sabitle|**CTRL** + **SHIFT** + **D**|
-|Seçili nesneleri Sürükle|**Ok** tuşları|
-|Otomatik boyut genişliği|**CTRL** + **SHIFT** + **5**|
-|Yüksekliği otomatik boyutlandır|**CTRL** + **SHIFT** + **6**|
-|Nesneleri bir Düzen paneline göre gruplandırma|**CTRL** + **G**|
-|Nesne grubunu Çöz|**CTRL** + **SHIFT** + **G**|
-|Seçili nesneyi öne getir|**CTRL** + **SHIFT** + **]**|
-|Öne getir|**CTRL** + **]**|
-|Seçili nesneyi geri gönder|**CTRL** + **SHIFT** + **[**|
+|Yeni bir öğe oluşturun|**Ctrl tuşunu basılı tutarak** + **N**|
+|Nesneyi yineleme|Alt tuşunu **basılı** tutun ve nesneyi sürükleyin|
+|Bir nesneyi yeniden uygulama|Nesneyi bir düzen panelinin üzerine sürükleyin ve Alt tuşuna **basın**|
+|Denetimde metni düzenleme|**F2** (**Çıkmak** için esc)|
+|Denetimi düzenleme (WPF)|**Ctrl tuşunu basılı tutarak** + **E**|
+|Seçilen nesneleri aynı genişlikte yapma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **1**|
+|Seçilen nesneleri aynı yüksekliğe sahip yapma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **2**|
+|Seçilen nesneleri aynı boyutta yapma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **9**|
+|Seçili nesneyi yatay olarak çevirme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **3**|
+|Seçili nesneyi dikey olarak çevirme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **4**|
+|Birden çok nesne seçme|**Ctrl** tuşunu basılı tutun|
+|Birden çok bitişik nesne seçme|Shift tuşunu **basılı tutun**|
+|Seçimi ekran boyutuna sığdırma|**Ctrl tuşunu basılı tutarak** + **9**|
+|Etkin kapsayıcıyı sabitleme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **D**|
+|Seçili nesneleri nudge|**Ok** tuşları|
+|Otomatik boyut genişliği|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **5**|
+|Otomatik boyut yüksekliği|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **6**|
+|Nesneleri düzen panelinde grupla|**Ctrl tuşunu basılı tutarak** + **G**|
+|Nesne grubunu çöz|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **G**|
+|Seçilen nesneyi öne getirin|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **]**|
+|Öne getir|**Ctrl tuşunu basılı tutarak** + **]**|
+|Seçilen nesneyi geri gönderme|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **[**|
 |Geriye gönder|**Ctrl tuşunu basılı tutarak** + **[**|
 |Seçili nesnelerden kullanıcı denetimi yapma (WPF)|**F8**|
 |Nesnelerin oranlarını kısıtla|Nesneyi **sürüklerken Shift** tuşunu basılı tutun|

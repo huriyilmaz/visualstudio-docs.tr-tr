@@ -11,17 +11,18 @@ ms.assetid: 8f512704-12d0-46d2-959a-4f8dffe117b5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: de1d7a544987b3a70e3798a77b55d81f5a43e1fa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ae28719bdcf1fe3df23e08458265916bde1131cc7909ecbfdbe9dc3bca7505a4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066964"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292708"
 ---
 # <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
 Bu ayırt derleme akışının yönergelerindeki boyutu alır.

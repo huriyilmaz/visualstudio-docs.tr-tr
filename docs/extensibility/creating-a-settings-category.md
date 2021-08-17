@@ -1,6 +1,6 @@
 ---
 title: Ayarlar kategorisi oluşturma | Microsoft Docs
-description: Bir Visual Studio ayarları kategorisi oluşturmayı ve bir ayarlar dosyasından değerleri kaydetmek ve geri yüklemek için kullanmayı öğrenin.
+description: bir Visual Studio settings kategorisi oluşturmayı ve bir ayarlar dosyasından değerleri kaydetmek ve geri yüklemek için kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,25 +10,26 @@ ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe46ea835a119978fd3decd26949db3d59944e5e
-ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
+ms.openlocfilehash: bbdc247e11930f05649b8e7b3c9d6d4cb1740aab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110687613"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043719"
 ---
 # <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
 
-Bu kılavuzda, bir Visual Studio ayarları kategorisi oluşturup bir ayarlar dosyasından değerleri kaydetmek ve geri yüklemek için kullanabilirsiniz. Bir ayarlar kategorisi, "özel ayarlar noktası" olarak görünen ilgili özellikler grubudur. diğer bir deyişle, **Ayarları içeri ve dışarı** Aktarma Sihirbazı ' nda bir onay kutusu olarak. ( **Araçları Araçlar** menüsünde bulabilirsiniz.) Ayarlar bir kategori olarak kaydedilir veya geri yüklenir ve ayrı ayarlar sihirbazda görüntülenmez. Daha fazla bilgi için bkz. [ortam ayarları](../ide/environment-settings.md).
+bu kılavuzda bir Visual Studio ayarları kategorisi oluşturup bir ayarlar dosyasından değerleri kaydetmek ve geri yüklemek için kullanabilirsiniz. Bir ayarlar kategorisi, "özel ayarlar noktası" olarak görünen ilgili özellikler grubudur. diğer bir deyişle, **içeri aktarma ve dışarı aktarma Ayarlar** sihirbazındaki onay kutusu olarak. ( **Araçları Araçlar** menüsünde bulabilirsiniz.) Ayarlar, bir kategori olarak kaydedilir veya geri yüklenir ve ayrı ayarlar sihirbazda gösterilmez. Daha fazla bilgi için bkz. [ortam ayarları](../ide/environment-settings.md).
 
 Sınıfından türeterek bir ayarlar kategorisi oluşturursunuz <xref:Microsoft.VisualStudio.Shell.DialogPage> .
 
 Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasının](../extensibility/creating-an-options-page.md)ilk bölümünü tamamlamalısınız. Elde edilen seçenekler Özellik Kılavuzu, kategorideki özellikleri incelemenizi ve değiştirmenizi sağlar. Özellik kategorisini bir ayarlar dosyasına kaydettikten sonra, özellik değerlerinin nasıl depolandığını görmek için dosyayı inceleyebilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-settings-category"></a>Ayarlar kategorisi oluşturma
  Bu bölümde, ayarlar kategorisinin değerlerini kaydetmek ve geri yüklemek için özel bir ayar noktası kullanırsınız.
@@ -42,15 +43,15 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
     |Name|Değer|
     |----------|-----------|
     |106|Kategorim|
-    |107|Ayarlarım|
+    |107|Ayarlar|
     |108|OptionInteger ve OptionFloat|
 
-     Bu, kategoriye "Kategorim" adını, "Ayarlarım" nesnesini ve "OptionInteger ve OptionFloat" kategori açıklamasını oluşturan kaynaklar oluşturur.
+     bu, "kategorim" kategorisini, "my Ayarlar" nesnesini ve "optionınteger ve optionfloat" kategori açıklamasını oluşturan kaynakları oluşturur.
 
     > [!NOTE]
-    > Bu üçü arasında, Ayarları İçeri ve Dışarı Aktarma sihirbazında yalnızca **kategori adı görünmez.**
+    > bu üçü de yalnızca kategori adı **Ayarlar içeri ve dışarı aktarma** sihirbazı 'nda görünmez.
 
-3. *MyToolsOptionsPackage.cs* içinde, aşağıdaki örnekte gösterildiği gibi `float` `OptionFloat` `OptionPageGrid` sınıfına adlı bir özellik ekleyin.
+3. *Myaraçları Optionspackage. cs* dosyasında, `float` `OptionFloat` `OptionPageGrid` Aşağıdaki örnekte gösterildiği gibi sınıfına adlı bir özellik ekleyin.
 
     ```csharp
     public class OptionPageGrid : DialogPage
@@ -78,47 +79,47 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
     ```
 
     > [!NOTE]
-    > `OptionPageGrid`"Kategorim" adlı kategori artık ve olmak için iki özellik `OptionInteger` `OptionFloat` içerir.
+    > `OptionPageGrid`"Kategorim" adlı kategori, artık iki özelliklerden oluşur `OptionInteger` `OptionFloat` .
 
-4. sınıfına <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> bir ekleyin ve `MyToolsOptionsPackage` CategoryName "My Category" girin, ObjectName "My Settings" yazın ve isToolsOptionPage'i true olarak ayarlayın. categoryResourceID, objectNameResourceID ve DescriptionResourceID'yi daha önce oluşturulan karşılık gelen dize kaynağı kimlikleri olarak ayarlayın.
+4. sınıfına bir ekleyin <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> `MyToolsOptionsPackage` ve CategoryName "kategorim" verin, bunu ObjectName "my Ayarlar" olarak verin ve isaraçları optionpage öğesini doğru olarak ayarlayın. CategoryResourceId, ObjectNameResourceID ve DescriptionResourceId değerlerini daha önce oluşturulan karşılık gelen dize kaynak kimliklerine ayarlayın.
 
     ```csharp
     [ProvideProfileAttribute(typeof(OptionPageGrid),
         "My Category", "My Settings", 106, 107, isToolsOptionPage:true, DescriptionResourceID = 108)]
     ```
 
-5. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örnekte Kılavuzum Sayfasının artık **hem tamsayı hem** de kayan değerlere sahip olduğunu görüyoruz.
+5. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnekte, **kılavuz Sayfamın** şimdi tamsayı ve kayan değerleri olduğunu görmeniz gerekir.
 
-## <a name="examine-the-settings-file"></a>Ayarlar dosyasını inceleme
- Bu bölümde, özellik kategorisi değerlerini bir ayarlar dosyasına dışarı aktarın. Dosyayı inceler ve ardından değerleri özellik kategorisine geri içeri aktarabilirsiniz.
+## <a name="examine-the-settings-file"></a>Ayarlar dosyasını inceleyin
+ Bu bölümde, özellik kategorisi değerlerini bir ayarlar dosyasına dışarı aktaralırsınız. Dosyayı incelemektir ve sonra değerleri özellik kategorisine geri aktarabilirsiniz.
 
-1. F5 tuşuna basarak projeyi hata ayıklama **modunda başlatın.** Bu, deneysel örneği başlatır.
+1. **F5** tuşuna basarak projeyi hata ayıklama modunda başlatın. Bu, deneysel örneği başlatır.
 
-2. Araçlar Seçenekleri **iletişim**  >  **kutusunu** açın.
+2. **Araç**  >  **seçenekleri** iletişim kutusunu açın.
 
-3. Sol bölmedeki ağaç görünümünde Kategorim'i genişletin ve **ardından** Kılavuz **Sayfam'a tıklayın.**
+3. Sol bölmedeki ağaç görünümünde, **kategorim** ' ı genişletin ve ardından **kılavuz sayfam**' ı tıklatın.
 
-4. **OptionFloat değerini** 3,1416 ve **OptionInteger değerini** 12 olarak değiştirir. **Tamam**'a tıklayın.
+4. **OptionFloat** değerini 3,1416 ve **OptionInteger** değerlerini 12 olarak değiştirin. **Tamam**'a tıklayın.
 
-5. Araçlar menüsünde **Ayarları** İçeri ve Dışarı **Aktar'a tıklayın.**
+5. **araçlar** menüsünde **içeri aktar ve dışarı aktar Ayarlar**' a tıklayın.
 
-     **Ayarları içeri ve dışarı aktarma** Sihirbazı görüntülenir.
+     **Ayarlar içeri ve dışarı aktarma** sihirbazı görüntülenir.
 
 6. **Seçili ortam ayarlarını dışa aktarma** seçeneğinin belirlendiğinden emin olun ve ardından **İleri**' ye tıklayın.
 
-     **Dışarı aktarılacak ayarları seçin** sayfası görüntülenir.
+     **dışarı aktarılacak Ayarlar seçin** sayfası görüntülenir.
 
-7. Ayarlarım **' ı** tıklatın.
+7. **Ayarlar** tıklayın.
 
      **Açıklama** **OptionInteger ve OptionFloat** olarak değişir.
 
-8. **Ayarlarım '** ın seçili tek kategori olduğundan emin olun ve ardından **İleri**' ye tıklayın.
+8. **Ayarlar** seçili tek kategori olduğundan emin olun ve ardından **ileri**' ye tıklayın.
 
-     **Ayarlar dosyanızın adı** sayfası görüntülenir.
+     **Ayarlar dosya sayfanızın adı** görüntülenir.
 
 9. Yeni ayarlar dosyasını *MySettings. vssettings* olarak adlandırın ve uygun bir dizine kaydedin. **Finish (Son)** düğmesine tıklayın.
 
-   `.vssettings`Dosya, Visual Studio ayarları dosyasıdır. Dosyanın şeması açık. En yaygın olarak, şema her kategorinin bir etiket olduğu bir XML yapısına uyar ve bu, kendisini alt kategori etiketleri içerebilir. Bu alt kategori etiketleri, özellik değeri etiketleri içerebilir. Çoğu paket ortak yapıyı kullandığından, Visual Studio 'daki herhangi bir paket, tarafından seçtiği şemayı kullanarak rastgele XML 'yi dosyaya katkıda bulunabilir.
+   `.vssettings`dosya Visual Studio ayarları dosyasıdır. Dosyanın şeması açık. En yaygın olarak, şema her kategorinin bir etiket olduğu bir XML yapısına uyar ve bu, kendisini alt kategori etiketleri içerebilir. Bu alt kategori etiketleri, özellik değeri etiketleri içerebilir. çoğu paket ortak yapıyı kullandığından, Visual Studio her bir paket, seçtiği şemayı içeren bir dosyaya rastgele XML katkıda bulunabilir.
 
    **Dışarı aktarma tamamlandı** sayfası, ayarlarınızın başarıyla verildiğini bildiriyor.
 
@@ -141,20 +142,20 @@ Bu yönergeyi başlatmak için önce [bir seçenek sayfası oluştur sayfasını
 
 11. Ayarları değiştirmeden ayarlar dosyasını kapatın.
 
-12. Araçlar menüsünde **Seçenekler'e** tıklayın, Kategorim'i **genişletin,** Kılavuz Sayfam'a tıklayın ve **OptionFloat** değerini 1.0 ve **OptionInteger** değerini 1 olarak ayarlayın.   **Tamam**'a tıklayın.
+12. **Araçlar** menüsünde **Seçenekler**' i tıklatın, **kategorim**' ı genişletin, **kılavuz** Sayfam ' ı tıklatın ve ardından **OptionFloat** değerini 1,0 ve **OptionInteger** olarak 1 olarak değiştirin. **Tamam**'a tıklayın.
 
-13. Araçlar **menüsünde, Ayarları** İçeri ve Dışarı **Aktar'a tıklayın,** Seçili ortam ayarlarını içeri aktar'ı **seçin** ve ardından Sonraki'ye **tıklayın.**
+13. **araçlar** menüsünde **içeri aktar ve dışarı aktar Ayarlar**, **seçili ortam ayarlarını içeri aktar**' ı seçin ve ardından **ileri**' ye tıklayın.
 
-     Geçerli **Ayarları Kaydet** sayfası görüntülenir.
+     **geçerli Ayarlar kaydet** sayfası görüntülenir.
 
-14. **Hayır'ı seçin, yeni ayarları içeri aktarın ve** ardından Sonraki'ye **tıklayın.**
+14. **Hayır, yeni ayarları içeri aktar** ' ı seçin ve ardından **İleri**' ye tıklayın.
 
-     İçeri **Aktar için Ayarlar Koleksiyonu Seçin** sayfası görüntülenir.
+     **içeri aktarılacak Ayarlar koleksiyonunu seçin** sayfası görüntülenir.
 
-15. Ağaç *görünümünün Ayarlarım düğümünde MySettings.vssettings* dosyasını seçin.  Dosya ağaç görünümünde görünmüyorsa Gözat'a **tıklayın** ve dosyayı bulun. **İleri**’ye tıklayın.
+15. ağaç görünümünün **Ayarlar** düğümündeki *mysettings. vssettings* dosyasını seçin. Dosya ağaç görünümünde görünmezse, **Araştır** ' a tıklayın ve bulun. **İleri**’ye tıklayın.
 
-     İçeri **Aktar için Ayarları Seç** iletişim kutusu görüntülenir.
+     **içeri aktarılacak Ayarlar seç** iletişim kutusu görüntülenir.
 
-16. Ayarlarım'ın **seçili olduğundan** emin olun ve ardından Son'a **tıklayın.** Tamamlandı İçeri **Aktar sayfası görüntülendiğinde** Kapat'a **tıklayın.**
+16. **Ayarlar** seçili olduğundan emin olun ve ardından **son**' a tıklayın. **Alma Tamam** sayfası göründüğünde **Kapat**' a tıklayın.
 
-17. Araçlar menüsünde **Seçenekler'e** **tıklayın,** **Kategorim'i** genişletin, **Kılavuz** Sayfam'a tıklayın ve özellik kategorisi değerlerinin geri yüklendiklerini doğrulayın.
+17. **Araçlar** menüsünde **Seçenekler**' e tıklayın, **kategorim**' i genişletin, **kılavuz** Sayfam ' a tıklayın ve özellik kategorisi değerlerinin geri yüklendiğini doğrulayın.

@@ -1,6 +1,6 @@
 ---
 title: Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme
-description: Visual Studio 'da Word çözümleri geliştirirken, çözümlerinizde konak öğelerini ve konak denetimlerini nasıl kullanabileceğinizi öğrenin.
+description: Visual Studio ' de Word çözümleri geliştirirken, çözümlerinizde konak öğelerini ve konak denetimlerini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,24 +20,25 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 42784e27c26d729a87d5363ca41b6d2c70a364d7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 04385ef6f9074270b640ad392f5456a896034cd0d361e61a7a5f63e1f69f4950
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882511"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352259"
 ---
 # <a name="automate-word-by-using-extended-objects"></a>Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme
-  Visual Studio 'da Word çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini* kullanabilirsiniz. Bunlar, ve nesneleri gibi, Word nesne modelinde (yani, Word için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) bazı yaygın kullanılan nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> . Genişletilmiş nesneler, temel aldığı Word nesneleri gibi davranır, ancak nesnelere ek olaylar ve veri bağlama özellikleri ekler.
+  Visual Studio ' de Word çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimini* kullanabilirsiniz. Bunlar, ve nesneleri gibi, Word nesne modelinde (yani, Word için birincil birlikte çalışma derlemesi tarafından sunulan nesne modelinde) bazı yaygın kullanılan nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> . Genişletilmiş nesneler, temel aldığı Word nesneleri gibi davranır, ancak nesnelere ek olaylar ve veri bağlama özellikleri ekler.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Konak öğeleri ve konak denetimleri hem VSTO eklentileri hem de belge düzeyi özelleştirmelerinde kullanılabilir, ancak bunların kullanılabileceği bağlam her bir çözüm türü için farklılık açabilir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+ konak öğeleri ve konak denetimleri VSTO eklentiler ve belge düzeyi özelleştirmelerinde kullanılabilir, ancak bunların her bir çözüm türü için kullanılabileceği bağlam farklıdır. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
 ## <a name="document-host-item"></a>Belge konak öğesi
- Word projeleri, <xref:Microsoft.Office.Tools.Word.Document> ana bilgisayar öğesine erişmenizi sağlar. <xref:Microsoft.Office.Tools.Word.Document>Konak öğesi, konak denetimleri ve Windows Forms denetimleri de dahil olmak üzere diğer denetimler için bir kapsayıcı görevi görür ve yüzeyinde denetimlerle ilgili bilgileri saklar. <xref:Microsoft.Office.Tools.Word.Document>Konak öğesi ayrıca <xref:Microsoft.Office.Interop.Word.Document> , Word nesne modelinde karşılık gelen sınıf olan sınıf ile aynı üyelerin çoğunu sağlar.
+ Word projeleri, <xref:Microsoft.Office.Tools.Word.Document> ana bilgisayar öğesine erişmenizi sağlar. <xref:Microsoft.Office.Tools.Word.Document>konak öğesi, konak denetimleri ve Windows Forms denetimleri de dahil olmak üzere diğer denetimler için bir kapsayıcı görevi görür ve yüzeyinde denetimlerle ilgili bilgileri saklar. <xref:Microsoft.Office.Tools.Word.Document>Konak öğesi ayrıca <xref:Microsoft.Office.Interop.Word.Document> , Word nesne modelinde karşılık gelen sınıf olan sınıf ile aynı üyelerin çoğunu sağlar.
 
  Daha fazla bilgi için bkz. [belge konak öğesi](../vsto/document-host-item.md).
 
@@ -68,4 +69,4 @@ ms.locfileid: "99882511"
 - [Word çözümleri](../vsto/word-solutions.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+- [Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında VSTO eklentilerde genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)

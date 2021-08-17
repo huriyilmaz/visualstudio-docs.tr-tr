@@ -11,17 +11,18 @@ ms.assetid: d97611e2-def6-45a9-ad7d-eedf2ad4c82b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 293b3635dd1a725f90ce63a0aa2f8568d5b324e3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b99d32cb3ab5fbef859ea6d9b460b95426ac9149ca905b7058d19bf6a8326ef9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078181"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293358"
 ---
 # <a name="bp_res_data_flags"></a>BP_RES_DATA_FLAGS
 Veri kesme noktasının donanımda öykünmesinin yapılıp yapılmayacağını veya uygulanıp uygulanmadığını belirtir.

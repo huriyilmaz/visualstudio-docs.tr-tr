@@ -40,7 +40,7 @@
   items:
     - name: Bulut hizmeti projeleriyle çalışma
       items:
-        - name: Cloud Services kullan (genişletilmiş destek)
+        - name: Cloud Services (genişletilmiş destek) kullanma
           href: cloud-services-extended-support.md
         - name: Azure bulut hizmeti projesi oluşturma
           href: vs-azure-tools-azure-project-create.md

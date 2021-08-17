@@ -12,17 +12,18 @@ ms.assetid: 179c7c54-8446-462d-b099-e0f9cf06dc52
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a25a335ea373a6086b5a57829330e4c84566fe9c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bf5715983a64ea361f60978251981b1ea7325c0cec9f815f7d28a1f2a725df27
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072708"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121339222"
 ---
 # <a name="idebugpendingbreakpoint2enumboundbreakpoints"></a>IDebugPendingBreakpoint2::EnumBoundBreakpoints
 Bu bekleyen kesme noktasından bağlantılı olan tüm kesme noktalarını numaralandırır.

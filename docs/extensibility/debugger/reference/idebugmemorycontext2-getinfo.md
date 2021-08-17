@@ -12,17 +12,18 @@ ms.assetid: 08c7f091-1816-4d64-8834-f9ecaac5c58d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fe87f5dbf14d714f4915e99c23a56b8c9490dd23
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 799d161c82a0d84b524256c00788e1664e1a0d7a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058631"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043394"
 ---
 # <a name="idebugmemorycontext2getinfo"></a>IDebugMemoryContext2::GetInfo
 Bağlamını açıklayan [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısını alır.

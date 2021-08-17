@@ -11,17 +11,18 @@ ms.assetid: 407f87a3-2878-429b-8c65-b68feb36622a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 560cf7184e5fa7b25e35410313535675713742aa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8def7604362e7c1b84adf55dad8a9e10e31e7bb09331e24730e9abbcffcdbccb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085344"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342706"
 ---
 # <a name="bp_condition"></a>BP_CONDITION
 Bir kesme noktasının tetiklendiği koşulları açıklar.

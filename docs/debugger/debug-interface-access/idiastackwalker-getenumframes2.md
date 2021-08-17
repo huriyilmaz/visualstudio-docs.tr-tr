@@ -1,6 +1,6 @@
 ---
-description: Belirli bir platform türü için yığın çerçeve numaralandırıcısı alır.
-title: 'Idiastackdenetçisi:: getEnumFrames2 | Microsoft Docs'
+description: Belirli bir platform türü için yığın çerçevesi numaralayıcısını alma.
+title: IDiaStackWalker::getEnumFrames2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 80fbd406a9ad2d3aa691e1fd2650222447d0e109
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 06c5017323b1ad9d139d8a0b2fd4296a2def356cee983216006471c071956b50
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052346"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454857"
 ---
 # <a name="idiastackwalkergetenumframes2"></a>IDiaStackWalker::getEnumFrames2
-Belirli bir platform türü için yığın çerçeve numaralandırıcısı alır.
+Belirli bir platform türü için yığın çerçevesi numaralayıcısını alma.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,21 +38,21 @@ Belirli bir platform türü için yığın çerçeve numaralandırıcısı alır
 #### <a name="parameters"></a>Parametreler
  `cpuid`
 
-'ndaki [CV_CPU_TYPE_e sabit](../../debugger/debug-interface-access/cv-cpu-type-e.md) listesi numaralandırmasından, Platform türünü belirten bir değer.
+[in] Platform türünü [CV_CPU_TYPE_e enumeration](../../debugger/debug-interface-access/cv-cpu-type-e.md) enumeration değerinden bir değer.
 
  `pHelper`
 
-'ndaki Yardımcı [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) nesnesi.
+[in] Yardımcı [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) nesnesi.
 
  `ppEnum`
 
-dışı [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesnelerinin bir listesini içeren bir [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) nesnesi döndürür.
+[out] [IDiaStackFrame nesnelerinin listesini içeren bir IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) [nesnesi](../../debugger/debug-interface-access/idiastackframe.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Yalnızca x86 platformunun yığın çerçeve listesini almak için, [ıdiastackdenetçisi:: getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) metodunu çağırın.
+ Yalnızca x86 platformu için bir yığın çerçevesi listesi almak için [IDiaStackWalker::getEnumFrames yöntemini](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)

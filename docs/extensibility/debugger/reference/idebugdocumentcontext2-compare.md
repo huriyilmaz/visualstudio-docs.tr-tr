@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fa10a5dbaf141def906705dfb84dfa2b95f216e9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 320dd75e43f9c2fd9cfc7b81cba4e6f89407acf6e61d36edbc018f7c3e9e8278
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122089257"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292695"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
 Bu belge bağlamını, belge bağlamlarının verilen bir dizisiyle karşılar.

@@ -1,65 +1,64 @@
 ---
-title: Resim görüntüleyici uygulamanızı çalıştırın ve diğer özellikleri deneyin
-description: Resim görüntüleyici uygulamanızı çalıştırın ve resim görüntüleyici oluşturma öğreticisinde diğer özellikleri deneyin.
+title: Resim görüntüleyicisi uygulamasını çalıştırma ve diğer özellikleri deneme
+description: Resim görüntüleyicisi uygulamanızı çalıştırın ve resim görüntüleyici oluşturma öğreticisinde diğer özellikleri deneyin.
 ms.date: 09/11/2019
 ms.custom: SEO-VS-2020
 ms.assetid: 656614d0-4fe7-4a67-8edc-c10919377d09
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 91488b72559b2e6deff23a5cae389cd9b4001443
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 39bd1f97408f81b486a7c5f4128c71dca686608f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296514"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078121"
 ---
-# <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>11. Adım: resim görüntüleyici uygulamanızı çalıştırma ve diğer özellikleri deneme
+# <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>11. Adım: Resim görüntüleyicisi uygulamanızı çalıştırma ve diğer özellikleri deneme
 
-Resim görüntüleyici uygulamanız tamamlandı ve çalıştırılmaya hazırlanıyor. Uygulamanızı çalıştırabilir ve arka plan rengini ayarlayabilirsiniz <xref:System.Windows.Forms.PictureBox> . Daha fazla bilgi edinmek için formun rengini değiştirerek, düğmeleri ve onay kutusunu özelleştirerek ve formun özelliklerini değiştirerek uygulamayı geliştirmeyi deneyin.
+Resim görüntüleyicisi uygulamanız tamamlandı ve çalıştırmaya hazır. Uygulamalarınızı çalıştırabilirsiniz ve arka plan rengini <xref:System.Windows.Forms.PictureBox> ayarlayın. Daha fazla bilgi edinmek için formun rengini değiştirerek, düğmeleri ve onay kutusunu özelleştirerek ve formun özelliklerini değiştirerek uygulamayı geliştirmeye çalışabilirsiniz.
 
-## <a name="how-to-run-your-app-and-set-the-background-color"></a>Uygulamanızı çalıştırma ve arka plan rengini ayarlama
+## <a name="how-to-run-your-app-and-set-the-background-color"></a>Uygulama çalıştırma ve arka plan rengini ayarlama
 
-1. **F5**' i seçin veya menü çubuğunda Hata **Ayıkla**  >  **Başlat hata** Ayıkla ' yı seçin.
+1. **F5'i** seçin veya menü çubuğunda Hata Ayıklama Başlat **Hata**  >  **Ayıklama'ya tıklayın.**
 
-1. Bir resmi açmadan önce, **arka plan rengini ayarla** düğmesini seçin. **Renk** iletişim kutusu açılır.
+1. Bir resmi açmadan önce Arka plan **rengini ayarla düğmesini** seçin. Renk **iletişim** kutusu açılır.
 
      ![Renk iletişim kutusu](../ide/media/express_colordialog.png)<br/>
-***Color** _ _dialog kutusu *
+***Renk** _ _dialog kutusu*
 
-1. PictureBox arka plan rengini ayarlamak için bir renk seçin. `backgroundButton_Click()` `BackgroundButton_Click()` Nasıl çalıştığını anlamak için (veya,) yöntemine yakından bakın.
+1. PictureBox arka plan rengini ayarlamak için bir renk seçin. Nasıl çalıştığını anlamak `backgroundButton_Click()` için (veya `BackgroundButton_Click()` ) yöntemine yakından bakın.
 
     > [!NOTE]
-    > URL 'sini **Dosya Aç** iletişim kutusuna yapıştırarak Internet 'ten bir resim yükleyebilirsiniz. Arka plan renginiz görünür olduğundan, saydam bir arka plana sahip bir görüntü bulmaya çalışın.
+    > Url'sini Dosya Aç iletişim kutusuna yapıştırarak İnternet'e **bir resim** abilirsiniz. Arka plan renginizin olması için saydam arka plana sahip bir görüntü bulmaya çalışabilirsiniz.
 
-1. Temizlendiğinden emin olmak için **Resmi Temizle** düğmesini seçin. Sonra, **Kapat** düğmesini seçerek uygulamadan çıkın.
+1. Temiz **olduğundan emin olmak** için Resmi temizle düğmesini seçin. Ardından Kapat düğmesini seçerek **uygulamadan çıkın.**
 
 ## <a name="try-other-features"></a>Diğer özellikleri deneme
 
-* **BackColor** özelliğini kullanarak formun ve düğmelerin rengini değiştirin.
+* **BackColor** özelliğini kullanarak formun rengini ve düğmeleri değiştirme.
 
-* **Yazı tipi** ve **ForeColor** özelliklerini kullanarak düğmelerinizi ve onay kutusunu özelleştirin.
+* Font ve ForeColor özelliklerini kullanarak **düğmelerinizi** **ve onay kutularınızı özelleştirin.**
 
-* Formunuzun **FormBorderStyle** ve **ControlBox** özelliklerini değiştirin.
+* Form'nizin **FormBorderStyle ve** **ControlBox özelliklerini** değiştirin.
 
-* Kullanıcı **ENTER** veya **ESC** tuşunu seçtiğinde düğmelerin otomatik olarak seçilmesi için formunuzun **AcceptButton** ve **CancelButton** özelliklerini kullanın. Kullanıcı **ENTER** ' a tıkladığında ve Kullanıcı **ESC**' i seçtiğinde kutuyu kapatdığınızda, uygulamayı **Aç** iletişim kutusunu açın.
+* Kullanıcı Enter veya Esc tuşuna bassa düğmelerin otomatik olarak seçilecek  şekilde form'nizin AcceptButton ve **CancelButton** **özelliklerini** kullanın.  Kullanıcı Enter tuşuna **basınca** uygulamayı Dosya Aç iletişim **kutusunu** açın ve kullanıcı Esc'yi seçerken kutuyu **kapatın.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 > [!div class="nextstepaction"]
-> [Öğretici 2: süreli bir matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md)
+> [Öğretici 2: Zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md)
 
-Önceki öğretici adımına dönmek için bkz. [adım 10: ek düğmeler ve onay kutusu için kod yazma](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).
+Önceki öğretici adımına dönmek için [bkz. 10. Adım: Ek](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)düğmeler için kod yazma ve onay kutusu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Diğer C# öğreticileri](../get-started/csharp/index.yml)
-* [Daha fazla Visual Basic öğretici](../get-started/visual-basic/index.yml)
+* [Diğer Visual Basic öğreticileri](../get-started/visual-basic/index.yml)
 * [C++ öğreticisi](/cpp/get-started/tutorial-console-cpp)

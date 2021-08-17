@@ -1,6 +1,6 @@
 ---
-title: Düzenle ve devam et Iletişim kutusu | Microsoft Docs
-description: Hata ayıklarken kodu düzenlediyseniz Düzenle ve devam et iletişim kutusu görüntülenir. İzin istemeden kod değişiklikleri uygulayıp uygulayamayacağını nasıl denetleyeceğinizi öğrenin.
+title: Düzenle ve Devam İletişim Kutusu | Microsoft Docs
+description: Hata ayıklama sırasında kod düzenlerken Düzenle ve Devam Bırak iletişim kutusu görüntülenir. İzin istemeden kod değişiklikleri uygulayıp uygulamaymayacaklarını denetlemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,18 +20,18 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ea9626e14f0a8fb84c95afe6d6cb311d520f69d1772cf00bd0b5e789909dfa83
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 05a76497cca821221db1c9f14a8a000228d22b68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420241"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105373"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Düzenle ve Devam Et İletişim Kutusu
-(Yalnızca yerel) Bu iletişim kutusu hata ayıklama sırasında kodu düzenlediyseniz ve **Düzenle ve devam et** işlevinin kod değişikliklerini uygulayabileceğini algıladığında görüntülenir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
+(Yalnızca Yerel) Hata ayıklama sırasında kod düzenlenirken bu iletişim kutusu görüntülenir ve Düzenle ve Devam **Değiştir** kod değişiklikleri uygulayabileceklerini tanır. Daha fazla bilgi için bkz. [Düzenle ve Devam Edin.](../debugger/edit-and-continue.md)
 
- **Bu iletişim kutusunu hiçbir daha gösterme** Bu onay kutusunu seçerseniz, **Düzenle ve devam et** daha sonra izin istemeden kod değişikliklerini uygular. **Seçenekler** iletişim kutusuna gidip **hata ayıklama** klasörünü açıp, **Düzenle ve devam et** sayfasına tıklayıp, **hata ayıklama komutları tarafından çağırılır** ve **ilk olarak sor** seçeneğini belirleyerek bu uyarıyı yeniden açabilirsiniz.
+ **Bu iletişim kutusunu bir daha asla gösterme** Bu onay kutusunu işaret edersanız Düzenle **ve Devam Edin,** gelecekte izin istemeden kod değişikliklerini uygulayacak. Seçenekler iletişim kutusuna gidip Hata Ayıklama Klasörünü açarak,  Düzenle ve Devam  Et sayfasına tıklar ve  Hata ayıklama komutları tarafından çağrılır'ı ve önce Bana sor'u seçerek bu uyarıyı yeniden **açabilirsiniz.** 
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
-- [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](./edit-and-continue.md)
+- [Hata Ayıklayıcı Güvenliği](../debugger/debugger-security.md)
+- [Düzenle ve Devam, Hata Ayıklama, Seçenekler İletişim Kutusu](./edit-and-continue.md)

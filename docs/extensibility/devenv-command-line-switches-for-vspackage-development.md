@@ -1,6 +1,6 @@
 ---
 title: VSPackage geliştirme Command-Line için Devenv | Microsoft Docs
-description: Geliştiricilerin, IDE'nin ilk dosyasını başlatan dosya olan devenv.exe yürütürken komut Visual Studio nasıl otomatikleştirebilirlerini öğrenin.
+description: Geliştiricilerin, IDE'nin başlatan dosyası olan devenv.exe komut Visual Studio nasıl otomatikleştirebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ea08b4714a79e09fce5933b67997a032532481f
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 432aee15e77845308aad7c87284f43f3118c81f20d2bd5ce4c0c745a2b0f344b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904249"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338078"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage geliştirme için Devenv komut satırı anahtarları
 
-Visual Studio, geliştiricilerin IDE'nin başlatan dosyasını yürütürken komut `devenv.exe` Visual Studio sağlar.
+Visual Studio, geliştiricilerin IDE'de dosyasını başlatan dosyasını yürütürken komut `devenv.exe` Visual Studio sağlar.
 
  Görevler şunlardır:
 
@@ -46,10 +47,10 @@ Visual Studio belgelerde kullanıcı düzeyinde komut `devenv` satırı anahtarl
 | Komut satırı anahtarı | Açıklama |
 |---------------------| - |
 | `/ResetSkipPkgs` | Sorunlu VSPackage'ları yüklememek isteyen kullanıcılar tarafından eklenen tüm yükleme atlama seçeneklerini temizler ve ardından Visual Studio. SkipLoading etiketinin olması VSPackage yüklemesini devre dışı bıraktırır. Etiketinin yeniden temizleniyor, VSPackage'ın yüklenmesine olanak sağlar.<br /><br /> Bu anahtar hiçbir bağımsız değişken alır. |
-| `/RootSuffix` | Alternatif Visual Studio kullanarak yeni bir konum başlatır. Aşağıdaki komut, Visual Studio SDK yükleyicisi tarafından oluşturulan kısayol tarafından çalıştırılan komuttır:<br /><br /> `devenv /RootSuffix exp`<br /><br /> Bu durumda, `exp` belirli bir son eke sahip bir konum tanımlar (örneğin, `10.0Exp` `10.0` yerine). Deneysel örnek, kod yazmak için kullanmakta olduğunu Visual Studio vsPackage örneğinden ayrı olarak hata ayıklamaya olanak sağlar.<br /><br /> Bu anahtar, VSRegEx.exe kullanarak oluşturduğunuz konumu tanımlayan herhangi bir dizeyi VSRegEx.exe. Daha fazla bilgi için [bkz. Deneysel Örnek](../extensibility/the-experimental-instance.md). |
-| `/SafeMode` | Güvenli modda Visual Studio, yalnızca varsayılan IDE ve hizmetleri yükler. anahtarı, `/SafeMode` uygulama başlatıldığında tüm üçüncü taraf VSPackage'ların yüklenmesini Visual Studio kararlı yürütmeyi sağlar.<br /><br /> Bu anahtar hiçbir bağımsız değişken alır. |
+| `/RootSuffix` | Alternatif Visual Studio kullanarak yeni bir konum başlatır. Aşağıdaki komut, Visual Studio SDK yükleyicisi tarafından oluşturulan kısayol tarafından çalıştırılan komuttır:<br /><br /> `devenv /RootSuffix exp`<br /><br /> Bu durumda, `exp` belirli bir son eke sahip bir konum tanımlar (örneğin, `10.0Exp` `10.0` yerine). Deneysel örnek, kod yazmak için kullanmakta Visual Studio vsPackage örneğinden ayrı olarak hata ayıklamaya olanak sağlar.<br /><br /> Bu anahtar, VSRegEx.exe kullanarak oluşturduğunuz konumu tanımlayan herhangi bir dizeyi VSRegEx.exe. Daha fazla bilgi için [bkz. Deneysel Örnek](../extensibility/the-experimental-instance.md). |
+| `/SafeMode` | Güvenli modda Visual Studio, yalnızca varsayılan IDE ve hizmetleri yükler. anahtarı, `/SafeMode` uygulama başlatıldığında tüm üçüncü taraf VSPackage'ların yüklenmesini Visual Studio yürütmeyi sağlar.<br /><br /> Bu anahtar hiçbir bağımsız değişken alır. |
 | `/Setup` | Bu Visual Studio tüm kullanılabilir VSPackage'lardan menüleri, araç çubuklarını ve komut gruplarını açıklayan kaynak meta verilerini birleştirmeye zorlar. Bu komutu yalnızca yönetici olarak çalıştırabilirsiniz. <br /><br /> Bu anahtar hiçbir bağımsız değişken alır. Komutu `devenv /Setup` genellikle yükleme işleminin son adımı olarak verilir. Anahtarın `/Setup` kullanımı IDE'nin başlatılamaz.|
-| `/Splash` | Giriş Visual Studio her zamanki gibi gösterir ve ardından ana IDE'leri göstermeden önce bir ileti kutusu gösterir. İleti kutusu, giriş ekranı üzerinde çalışmanızı sağlar (örneğin VSPackage ürün simgesini kontrol etmek için).<br /><br /> Bu anahtar hiçbir bağımsız değişken alır. |
+| `/Splash` | Giriş Visual Studio her zamanki gibi gösterir ve ardından ana IDE'leri göstermeden önce bir ileti kutusu gösterir. İleti kutusu giriş ekranı üzerinde çalışmanızı sağlar (örneğin VSPackage ürün simgesini kontrol etmek için).<br /><br /> Bu anahtar hiçbir bağımsız değişken alır. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

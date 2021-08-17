@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bir iş parçacığının tamamlanması çalıştırıldığında hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
+description: Bu arabirim, bir iş parçacığı tamamlandıktan sonra hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
 title: IDebugThreadDestroyEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: fca3f603-9432-457b-9ddd-8b0ec17da046
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e97ad58a74c260703769dae83882d627c36c1d46
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: df18622d970bfc6ccf794eaec0eb52e0a5c15ac97cfe2a9c483bd715f272b6f0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086878"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121291941"
 ---
 # <a name="idebugthreaddestroyevent2"></a>IDebugThreadDestroyEvent2
-Bu arabirim, bir iş parçacığının tamamlanması çalıştırıldığında hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
+Bu arabirim, bir iş parçacığı tamamlandıktan sonra hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,28 +30,28 @@ Bu arabirim, bir iş parçacığının tamamlanması çalıştırıldığında h
 IDebugThreadDestroyEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu, bir iş parçacığının sona erini raporlamak için DE bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` .
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, bir iş parçacığının sona erdığını rapor etmek için bu arabirimi uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE, bir iş parçacığının sonlandırıldığından emin olmak için bu olay nesnesini oluşturur ve gönderir. Olay, ayıklanmakta olan programa eklendiği zaman SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE bu olay nesnesini oluşturur ve bir iş parçacığının sona ermiştir raporuna gönderir. Olay, hata ayıklama yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugThreadDestroyEvent2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugThreadDestroyEvent2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetExitCode](../../../extensibility/debugger/reference/idebugthreaddestroyevent2-getexitcode.md)|İş parçacığının çıkış kodunu alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, **Iş parçacıkları** penceresini güncelleştirmek için bu olayı kullanır.
+ Visual Studio İş Parçacıkları penceresini güncelleştirmek için bu **olayı** kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

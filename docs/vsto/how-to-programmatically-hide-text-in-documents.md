@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 72e869d585f2db5163036b4e8f024d4ca4c0c620c8aec829ffcdd6ccea1cf610
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cbf7215cca3913fdd07b2ebe006f4b2e16a2099
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366257"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106071"
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>Nasıl kullanılır: Belgelerde metni program aracılığıyla gizleme
   Belirli bir metin aralığı için özelliğini <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> ayarerek belge <xref:Microsoft.Office.Interop.Word.Range.Font%2A> içinde metni gizleyebilirsiniz.

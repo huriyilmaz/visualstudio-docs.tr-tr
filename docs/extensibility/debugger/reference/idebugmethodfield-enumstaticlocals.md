@@ -1,6 +1,6 @@
 ---
-description: Metodun statik yerel değişkenleri için bir Numaralandırıcı oluşturur.
-title: 'IDebugMethodField:: EnumStaticLocals | Microsoft Docs'
+description: yönteminin statik yerel değişkenleri için bir numaralayıcı oluşturur.
+title: IDebugMethodField::EnumStaticLocals | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 05a1b7e5b0d00320bf74b04bf7f82534cdba7b5124d1e0241cb028995bd92609
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 156df08f9df1ef6e6b8c72b3aa65e14dce84b531
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417060"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078875"
 ---
 # <a name="idebugmethodfieldenumstaticlocals"></a>IDebugMethodField::EnumStaticLocals
-Metodun statik yerel değişkenleri için bir Numaralandırıcı oluşturur.
+yönteminin statik yerel değişkenleri için bir numaralayıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int EnumStaticLocals(
 
 ## <a name="parameters"></a>Parametreler
 `ppLocals`\
-dışı Statik Yereller listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Statik Yereller yoksa null değeri döndürür.
+[out] Statik [yereller listesini temsil eden bir IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Statik yerel ayar yoksa null değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür veya statik Yereller yoksa S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK veya S_FALSE yerel olmayan bir değer döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Her öğe, farklı statik Yereller türlerini temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesidir. Tam olarak nesnenin temsil ettiği statik yerel türünü belirlemek için her nesne üzerinde [Getkinleştirilen d](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemini çağırın.
+ Her öğe, farklı statik yerel türleri temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesidir. Nesnenin tam olarak hangi statik yerel türü temsil ettiğini belirlemek için her nesnede [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemini çağırma.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

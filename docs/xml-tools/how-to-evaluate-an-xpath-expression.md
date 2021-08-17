@@ -8,14 +8,15 @@ ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 894263883cbb34c8d41ec67a5e595e801f723390
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5d229bc035edcb3460ca57050ddfd1988d94587
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873430"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091909"
 ---
 # <a name="evaluate-xpath-expressions"></a>XPath ifadelerini değerlendir
 

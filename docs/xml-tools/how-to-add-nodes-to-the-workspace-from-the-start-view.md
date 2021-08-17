@@ -1,6 +1,6 @@
 ---
-title: Başlangıç Görünümünden çalışma alanına düğüm ekleme
-description: Başlangıç Görünümündeki komutları kullanarak XML Şema Tasarımcısı çalışma alanına düğümler ekleme hakkında bilgi öğrenin.
+title: Başlangıç görünümünden çalışma alanına düğüm ekleme
+description: Başlangıç görünümündeki komutları kullanarak XML şeması Tasarımcısı çalışma alanına düğümler eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,20 +18,20 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121350959"
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl: Başlangıç Görünümünden çalışma alanına düğüm ekleme
+# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl yapılır: başlangıç görünümünden çalışma alanına düğüm ekleme
 
-Bu konuda, Başlangıç Görünümünden XML Şema Tasarımcısı çalışma alanına [genel düğümlerin](../xml-tools/xml-schema-designer-workspace.md) nasıl [ekli olduğu açıklanmıştır.](../xml-tools/start-view.md)
+Bu konuda, [Başlangıç görünümünden](../xml-tools/start-view.md) [XML şema Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md) genel düğümlerin nasıl ekleneceği açıklanmaktadır.
 
-## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>Başlangıç Görünümünden çalışma alanına düğüm eklemek için
+## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>Başlangıç görünümünden çalışma alanına düğüm eklemek için
 
-1. Nasıl olur: [XSD şema dosyası oluşturma ve düzenleme adımlarını izleyin.](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)
+1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
 
-2. XML düzenleyicisine sağ tıklayın ve **Görünüm Tasarımcısı.**
+2. XML düzenleyicisine sağ tıklayıp **Görünüm Tasarımcısı**' nı seçin.
 
-     Başlangıç Görünümü görüntülenir.
+     Başlangıç görünümü görüntülenir.
 
-     Şema **Kümesi Ayrıntıları bölümünde** iki (**2**) Genel Karmaşık **Türler olduğunu fark edin.**
+     **Şema kümesi ayrıntıları** bölümünde iki (**2**) **genel karmaşık tür** olduğunu fark edersiniz.
 
-3. Genel Karmaşık **Türler** başlığında sağ tarafa **ekle bağlantısına** tıklayın.
+3. **Genel karmaşık türler** başlığının sağındaki **Ekle** bağlantısına tıklayın.
 
-     ve `USAddress` `PurchaseOrderType` karmaşık tür düğümleri, Graph View'ın tasarım Graph görünür.
+     `USAddress`ve `PurchaseOrderType` karmaşık tür düğümleri Graph görünümünün tasarım yüzeyinde görünür.

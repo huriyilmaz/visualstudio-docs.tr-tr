@@ -11,17 +11,18 @@ ms.assetid: 2333b33b-042b-4ac6-9ebe-e66f95f52f51
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a2b9d5910b3a86b322a7589b285ba242dec4add2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c479f67850af2701f68324e2270cb26e73b84458e0da5f399df0b1b26430b234
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070927"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121432988"
 ---
 # <a name="text_doc_attr_2"></a>TEXT_DOC_ATTR_2
 Bir belgenin özniteliklerini açıklar.
@@ -39,21 +40,21 @@ public const uint TEXT_DOC_ATTR_READONLY_2 = 0x00000001;
 
 ## <a name="members"></a>Üyeler
  `TEXT_DOC_ATTR_READONLY_2`\
- Belgenin salt okunurdur.
+ Belgenin salt okunur olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!NOTE]
-> Bu değer, C# için derlemede tanımlanmamıştır. Bunun yerine, tanımı kaynak dosyanıza kopyalamanız gerekir.
+> Bu değer aslında C# için derlemede tanımlanmamıştır. Bunun yerine, tanımı kaynak dosyanıza kopyalamanız gerekir.
 
- [Onupdatebelgetattributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md) yöntemine bir bağımsız değişken olarak geçirilir.
+ [onUpdateDocumentAttributes yöntemine bağımsız değişken olarak](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md) geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

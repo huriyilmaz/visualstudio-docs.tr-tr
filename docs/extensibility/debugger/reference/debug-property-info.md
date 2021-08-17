@@ -1,5 +1,5 @@
 ---
-description: Hata ayıklama özelliği hakkında bilgi içerir.
+description: Bir hata ayıklama özelliği hakkında bilgi içerir.
 title: DEBUG_PROPERTY_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121452400"
 ---
 # <a name="debug_property_info"></a>DEBUG_PROPERTY_INFO
-Hata ayıklama özelliği hakkında bilgi içerir.
+Bir hata ayıklama özelliği hakkında bilgi içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,37 +55,37 @@ public struct DEBUG_PROPERTY_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwValidFields`\
-Hangi alanların doldurulması [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) bayrağının bir birleşimi.
+[DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.
 
 `bstrFullName`\
 Özelliğin tam adı.
 
 `bstrName`\
-Bağlam içindeki özellik adı.
+Bağlam içindeki Özellik adı.
 
 `bstrType`\
-Özellik türü, biçimlendirilmiş bir dize olarak.
+Özellik türü, biçimli bir dize olarak.
 
 `bstrValue`\
-Biçimlendirilmiş dize olarak özellik değeri.
+Biçimli bir dize olarak özellik değeri.
 
 `pProperty`\
-Bu [yapı tarafından açıklanan IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi.
+Bu yapı tarafından tanımlanan [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi.
 
 `dwAttrib`\
-Bu özelliğin [özniteliklerini açıklayan DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) bayrağının bir birleşimi.
+Bu özelliğin özniteliklerini açıklayan [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) numaralandırmasındaki bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
-Özellik, adı, türü ve değeri olan hiyerarşik yapıya sahip bir nesnedir. Örneğin, bir özellik yerel değişkenleri, parametreleri, izleme değişkenlerini ve ifadelerini ve yazmalarını açıklar.
+Bir özellik, bir ad, tür ve değer içeren hiyerarşik yapıdaki bir nesnedir. Örneğin, bir özellik yerel değişkenleri, parametreleri, izleme değişkenlerini ve ifadeleri ve kayıtları tanımlayabilir.
 
-Bu yapı, [doldurulan GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemine geçirildi. Bu yapı ayrıca [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) arabiriminden bu yapı listesinin bir parçası olarak döndürülür ve bu da [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) ve [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) yöntemlerine yapılan bir çağrıdan döndürülür.
+Bu yapı, doldurulduğu [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemine geçirilir. Bu yapı Ayrıca, [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) arabiriminden bu yapının listesinin bir parçası olarak da döndürülür, bu da [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) ve [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) yöntemlerine yapılan çağrıdan döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

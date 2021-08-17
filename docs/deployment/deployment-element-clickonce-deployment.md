@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dağıtım &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;dağıtım &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 description: Dağıtım öğesi, güncelleştirmelerin dağıtımı ve sistemde etkilenme için kullanılan öznitelikleri tanımlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -21,16 +21,17 @@ ms.assetid: 4fafa9c2-97a0-4cea-b8fd-9746dca33af4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 369d48c76ed82825021622af35141ef12ff42c76
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3067a5267c7bb4347b84aee55a1fdc47c5bfeb62
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893925"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090024"
 ---
-# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;Dağıtım &gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;dağıtım &gt; öğesi (ClickOnce dağıtım)
 Güncelleştirmelerin dağıtımı için kullanılan öznitelikleri ve sistemde pozlandırmayı tanımlar.
 
 ## <a name="syntax"></a>Syntax
@@ -64,11 +65,11 @@ Güncelleştirmelerin dağıtımı için kullanılan öznitelikleri ve sistemde 
 
 | Öznitelik | Açıklama |
 |--------------------------| - |
-| `install` | Gereklidir. Bu uygulamanın Windows **Başlat** menüsünde ve Denetim Masası **Program Ekle veya Kaldır** uygulamasında bir varlığı tanımlayıp tanımlamadığını belirtir. Geçerli değerler `true` ve ' dir `false` . `false`, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Her zaman bu uygulamanın en son sürümünü ağdan çalıştırır ve `subscription` öğesini tanımaz. |
+| `install` | Gereklidir. bu uygulamanın Windows **başlat** menüsünde ve denetim masası **program ekle veya kaldır** uygulamasında bir varlık tanımlayıp tanımlamadığını belirtir. Geçerli değerler `true` ve ' dir `false` . `false`, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Her zaman bu uygulamanın en son sürümünü ağdan çalıştırır ve `subscription` öğesini tanımaz. |
 | `minimumRequiredVersion` | İsteğe bağlı. Bu uygulamanın istemcide çalışabilecek en düşük sürümünü belirtir. Uygulamanın sürüm numarası dağıtım bildiriminde sağlanan sürüm numarasından azsa, uygulama çalışmaz. Sürüm numaraları biçiminde belirtilmelidir `N.N.N.N` , burada `N` işaretsiz bir tamsayıdır. `install`Özniteliği ise `false` , `minimumRequiredVersion` ayarlanmamalıdır. |
-| `mapFileExtensions` | İsteğe bağlı. Varsayılan olarak olur `false` . Eğer `true` , dağıtımdaki tüm dosyaların. deploy uzantısı olmalıdır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , bu uzantıyı Web sunucusundan indirdiği anda bu dosyaların dışına çıkaracaktır. Kullanarak uygulamanızı yayımlarsanız [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bu uzantıyı otomatik olarak tüm dosyalara ekler. Bu parametre, bir dağıtım içindeki tüm dosyaların, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . exe gibi "güvenli olmayan" uzantılar ile biten dosyaların aktarımını engelleyen bir Web sunucusundan indirilmesine izin verir. |
+| `mapFileExtensions` | İsteğe bağlı. Varsayılan olarak olur `false` . Eğer `true` , dağıtımdaki tüm dosyaların. deploy uzantısı olmalıdır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , bu uzantıyı Web sunucusundan indirdiği anda bu dosyaların dışına çıkaracaktır. Kullanarak uygulamanızı yayımlarsanız [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bu uzantıyı otomatik olarak tüm dosyalara ekler. Bu parametre, bir dağıtım içindeki tüm dosyaların, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .exe gibi "güvenli olmayan" uzantılar ile biten dosyaların aktarımını engelleyen bir Web sunucusundan indirilmesine izin verir. |
 | `disallowUrlActivation` | İsteğe bağlı. Varsayılan olarak olur `false` . `true`, Yüklü bir UYGULAMANıN URL 'ye tıklanması veya URL 'Yi Internet Explorer 'a girerek başlatılmasını önler. `install`Özniteliği yoksa, bu öznitelik yoksayılır. |
-| `trustURLParameters` | İsteğe bağlı. Varsayılan olarak olur `false` . İse `true` , URL 'nin uygulamaya geçirilen sorgu dizesi parametreleri içermesini sağlar ve komut satırı bağımsız değişkenleri bir komut satırı uygulamasına geçirilir. Daha fazla bilgi için bkz. [nasıl yapılır: sorgu dizesi bilgilerini bir çevrimiçi ClickOnce uygulamasında alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).<br /><br /> `disallowUrlActivation`Özniteliği ise `true` , `trustUrlParameters` bildirimden dışlanması ya da açıkça olarak ayarlanması gerekir `false` . |
+| `trustURLParameters` | İsteğe bağlı. Varsayılan olarak olur `false` . İse `true` , URL 'nin uygulamaya geçirilen sorgu dizesi parametreleri içermesini sağlar ve komut satırı bağımsız değişkenleri bir komut satırı uygulamasına geçirilir. daha fazla bilgi için bkz. [nasıl yapılır: sorgu dizesi bilgilerini bir çevrimiçi ClickOnce uygulamasında alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).<br /><br /> `disallowUrlActivation`Özniteliği ise `true` , `trustUrlParameters` bildirimden dışlanması ya da açıkça olarak ayarlanması gerekir `false` . |
 
  `deployment`Öğesi de aşağıdaki alt öğeleri içerir.
 
@@ -107,7 +108,7 @@ Güncelleştirmelerin dağıtımı için kullanılan öznitelikleri ve sistemde 
 
  Güncelleştirme denetimini devre dışı bırakmak için öğesini kaldırın `subscription` . Güncelleştirmeleri hiçbir zaman taramayacak dağıtım bildiriminde belirttiğinizde, yöntemini kullanarak güncelleştirmeleri el ile denetleyebilirsiniz <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A> .
 
- DeploymentProvider 'ın güncelleştirmelerle nasıl ilişkili olduğu hakkında daha fazla bilgi için bkz. [ClickOnce Update stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md).
+ deploymentProvider 'ın güncelleştirmelerle nasıl ilişkili olduğu hakkında daha fazla bilgi için bkz. [ClickOnce Update stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md).
 
 ## <a name="examples"></a>Örnekler
  Aşağıdaki kod örneğinde bir `deployment` dağıtım bildiriminde bir öğe gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Örnek, `deploymentProvider` tercih edilen güncelleştirme konumunu belirtmek için bir öğesi kullanır.

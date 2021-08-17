@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 86370841d06bb2efbd5de5af635e2858d607e8c8969aade244aae45430d6744a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8248ad385d3c1af5dde264a9c04c58acbf4f32b7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370443"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077731"
 ---
 # <a name="choose-element-msbuild"></a>Öğe seçin (MSBuild)
 

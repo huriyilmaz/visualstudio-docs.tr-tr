@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5211ad750391c8f7f43eb5a7084c090ff26c8d45
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: cc0cf5e3ac8f1097b85a25bfc36590dfc7410147bb1e17709ecbee9c7b32bd61
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122137905"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433573"
 ---
 # <a name="idebugmodopt"></a>IDebugModOpt
 Hata ayıklama isteğe bağlı değiştiricisini temsil eder.

@@ -1,6 +1,6 @@
 ---
 title: XSLT hata ayıklayıcısı pencereleri
-description: YerelLer, Çıkış, Kesme Noktaları, Çağrı Yığını ve İzleme pencereleri de dahil olmak üzere XSLT'ye özgü hata ayıklama davranışını kontrol altına alan XSLT hata ayıklayıcısı kullanıcı arabirimi parçaları hakkında bilgi öğrenin.
+description: YerelLer, Çıkış, Kesme Noktaları, Çağrı Yığını ve İzleme pencereleri dahil olmak üzere XSLT'ye özgü hata ayıklama davranışını kontrol altına alan XSLT hata ayıklayıcısı kullanıcı arabirimi parçaları hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -65,7 +65,7 @@ Bu **Görev Listesi** XSLT dosyasındaki betik bloklarında oluşan hataları i�
 
 Kesme Noktaları penceresinde geçerli projede ayarlanmış olan tüm kesme noktaları gösterilir. Pencere görünümdeyken bir kesme noktası eklenirse, pencere yeni kesme noktası gösterecek şekilde otomatik olarak güncelleştirilir.
 
-Kesme Noktaları penceresi, diğer hata ayıklayıcıları gibi Visual Studio davranarak.
+Kesme Noktaları penceresi, diğer hata ayıklayıcıları gibi Visual Studio davranacak.
 
 ## <a name="watch-window"></a>Gözcü penceresi
 
@@ -101,7 +101,7 @@ Daha fazla bilgi için, [bkz. How to: Evaluate an XPath expression](../xml-tools
 
 Disassembly penceresi, XSLT derleyicisi tarafından oluşturulan derleme kodunu gösterir. Bu pencere, diğer tüm farklı Visual Studio kullanılabilir.
 
-Daha fazla bilgi [için, Nasıl 2019:](../debugger/how-to-use-the-disassembly-window.md)Değerlendirme penceresini kullanma.
+Daha fazla bilgi [için, Nasıl: Değerlendirme penceresini kullanma.](../debugger/how-to-use-the-disassembly-window.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

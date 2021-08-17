@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl: Bir Yükleyici Için Kayıt Defteri Bilgileri Oluşturma | Microsoft Docs'
-description: RegPkg.exe yükleyici kurulum paketinde Visual Studio VSPackage kayıt defteri bilgileri oluşturmak için Windows kullanmayı öğrenin.
+title: 'Nasıl oluşturulur: Bir Yükleyici Için Kayıt Defteri Bilgileri | Microsoft Docs'
+description: RegPkg.exe yükleyici kurulum paketinde Visual Studio VSPackage kayıt defteri bilgileri oluşturmak için Windows yardımcı programını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,19 +15,19 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 092421db5e1ee4d38193b32b07650929aadbab4e6941b57950028640b1af1ad7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cc3a5bad80b41f66a4616ed31cb091833cea17cf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448045"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042523"
 ---
 # <a name="how-to-generate-registry-information-for-an-installer"></a>Nasıl oluşturulur: Bir yükleyici için kayıt defteri bilgileri oluşturma
 
-RegPkg.exe yardımcı programı, yönetilen bir VSPackage için kayıt bildirimi oluşturmak için kullanılabilir. Bildirim, bir Windows Yükleyicisi kurulum paketine dahil olabilir. RegPkg ayrıca, Windows Installer XML araç kümesine göre bir [kurulum kaynak dosyasına dahil edilecek bir dosya da üretebilirsiniz.](https://wixtoolset.org/)
+RegPkg.exe yardımcı programı, yönetilen bir VSPackage için kayıt bildirimi oluşturmak için kullanılabilir. Bildirim, bir Windows Yükleyicisi kurulum paketine dahil olabilir. RegPkg ayrıca, Windows Installer XML araç kümesine göre bir kurulum [kaynak dosyasına dahil edilecek bir dosya da üretebilirsiniz.](https://wixtoolset.org/)
 
 > [!IMPORTANT]
-> RegPkg, geliştirme sisteminize özgü yol adları oluşturur, bu nedenle RegPkg'yi her kullan biçimlendirilmiş özellikler için uygun Windows çıktıyı düzenlemeniz gerekir. Örneğin, değer `InprocServer32` bir *\<SystemFolder\>* mscoree.dllve yolların ve kullanması *\<#filekey\>* *\<$componentkey\>* gerekir. Çıkışı bu şekilde ayarlamak, Windows sürücüye veya farklı bir dizine, yerelleştirilmiş dizin adlarına ve kullanıcıların seçe yollarına sahip bilgisayarları destekler. Daha fazla bilgi için [bkz. Windows](https://msdn.microsoft.com/library?url=/library/msi/setup/formatted.asp) Yükleyici SDK'sı içinde biçimlendirildi. Geliştirme sistemi yollarınız için RegPkg kurallarına (örneğin, formun dosya kimlikleri) *File_ \<filename\>* daha az değişiklik yapmak gerekir.
+> RegPkg, geliştirme sisteminize özgü yol adları oluşturur, bu nedenle RegPkg'yi her kullan biçimlendirilmiş özellikler için uygun Windows çıktıyı düzenlemeniz gerekir. Örneğin, değer `InprocServer32` tek bir *\<SystemFolder\>mscoree.dll* ve yolların ve kullanması *\<#filekey\>* *\<$componentkey\>* gerekir. Çıkışı bu şekilde ayarlamak, Windows sürücüye veya farklı bir dizine, yerelleştirilmiş dizin adlarına ve kullanıcıların seçecekleri yollara sahip bilgisayarları destekler. Daha fazla bilgi için [bkz. Windows](https://msdn.microsoft.com/library?url=/library/msi/setup/formatted.asp) Yükleyici SDK'sı içinde biçimlendirildi. Geliştirme sistemi yollarınız için RegPkg kurallarına (örneğin, formun dosya kimlikleri) *File_ \<filename\>* daha az değişiklik yapmak gerekir.
 
 ## <a name="to-create-a-registration-manifest"></a>Kayıt bildirimi oluşturmak için
 
@@ -110,7 +110,7 @@ RegPkg.exe yardımcı programı, yönetilen bir VSPackage için kayıt bildirimi
     <Visual Studio SDK installation path>\VisualStudioIntegration\Tools\Bin\RegPkg /codebase /wixfile:IronPython.LanguageService.wxi ..\bin\Release\IronPython.LanguageService.dll
     ```
 
-## <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>Bir Yükleyici XML araç Windows dosyasını görüntülemek için
+## <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>Yükleyici XML araç Windows dosyasını görüntülemek için
 
 - Herhangi Windows Yükleyici XML Araç Kümesi ekleme dosyasını açın.
 

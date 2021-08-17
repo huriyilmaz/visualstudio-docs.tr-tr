@@ -1,6 +1,6 @@
 ---
-description: Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.
-title: IDiaEnumSegments::Clone | Microsoft Docs
+description: Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
+title: 'IDiaEnumSegments:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ecef9448b03df8238259bd8a9c5df8011e40c946
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: c5f4a642a6dd13b5101b7e07b10f854f4899d8f6e2975a37ba2f13e9351468cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081656"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121405253"
 ---
 # <a name="idiaenumsegmentsclone"></a>IDiaEnumSegments::Clone
-Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.
+Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,12 +33,12 @@ HRESULT Clone (
 ```
 
 #### <a name="parameters"></a>Parametreler
- ppenum
+ ppEnum
 
-[out] Numaralayıcının bir kopyasını içeren bir [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md) nesnesi döndürür. Segmentler çoğaltılmış değil, yalnızca numaralayıcı.
+dışı Numaralandırıcı yinelenen içeren bir [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md) nesnesi döndürür. Segmentler çoğaltılamaz, yalnızca Numaralandırıcı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

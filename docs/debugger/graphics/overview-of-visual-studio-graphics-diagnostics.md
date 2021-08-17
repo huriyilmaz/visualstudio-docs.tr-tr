@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c9ebb8ae3a0aba5a4059a01b5f2ba31359963eea058b519effbc28c40479630
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8a84700548af7db2281d666cd51bd6293bd884b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391335"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090856"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Genel Bakış
 Visual Studio *Grafik Tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows PC 'nizde veya uzak bir bilgisayarda ya da cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
@@ -112,9 +112,9 @@ Visual Studio *Grafik Tanılama* , Direct3D uygulamalarında işleme ve performa
  [Olay çağrı yığını](graphics-event-call-stack.md) penceresi, olay listesindeki her grafik olayının tüm çağrı yığınını görüntüler, hatta hata ayıklama bilgisi varsa uygulamanızın kaynak koduna atlamanızı sağlar. Bu, GPU 'da, uygulamanın kaynak kodunda kaynaklandığı yere geri doğru bir hata takip etmek için güçlü bir araçtır.
 
 ### <a name="object-table"></a>Nesne tablosu
- Uygulamanın işlene her çerçevesi büyük olasılıkla yüzlerce, hatta binlerce kaynak nesnesi tarafından de desteklene sahiptir. Bunlar geri arabellekleri ve işleme hedeflerini, dokuları, köşe arabelleklerini, dizin arabelleklerini, genel arabellekleri içerebilir. Direct3D'nin hatırlayacağı neredeyse her şey bir nesnedir.
+ Uygulama işlemesi yapılan her çerçeve büyük olasılıkla yüzlerce, hatta binlerce kaynak nesnesi tarafından de desteklene sahiptir. Bunlar geri arabellekleri ve işleme hedeflerini, dokuları, köşe arabelleklerini, dizin arabelleklerini, genel arabellekleri içerebilir. Direct3D'nin hatırlayacağı neredeyse her şey bir nesnedir.
 
- Nesne [Tablosu,](graphics-object-table.md) olay listesinde seçilen grafik olayı sırasında mevcut olan tüm nesneleri görüntüler. Tipik bir uygulamadaki nesnelerin çoğu doku olduğundan, olay listesi görüntülerle ilgili ayrıntıları bir bakışta göstermek için en iyi duruma getirilmiştir. Tür sütunu size her satırda ne tür bir nesne olduğunu söyler ve Biçim sütunu daha sonra nesnenin alt türünü veya sürümünü gösterir. Diğer ayrıntılar da gösterilir. Bazı nesnelerin, dokular (dokuyu görüntü olarak görüntüleyebilirsiniz) veya arabellekler (arabellek görüntüleyicinin arabellek biçimini tanımlayarak ham arabellek baytlarını ayrıştırma ve görüntülemesini seçebilirsiniz) gibi daha özel bir görüntüleyiciye sahip nesneyi görüntülemek için izleyebilirsiniz köprüler de vardır.
+ Nesne [Tablosu,](graphics-object-table.md) olay listesinde seçilen grafik olayı sırasında mevcut olan tüm nesneleri görüntüler. Tipik bir uygulamadaki nesnelerin çoğu doku olduğundan, olay listesi görüntülerle ilgili ayrıntıları bir bakışta göstermek için en iyi duruma getirilmiştir. Tür sütunu size her satırda ne tür bir nesne olduğunu söyler ve Biçim sütunu daha sonra nesnenin alt türünü veya sürümünü gösterir. Diğer ayrıntılar da gösterilir. Bazı nesneler, dokular (dokuyu görüntü olarak görüntüleyebilirsiniz) veya arabellekler (arabellek biçimini tanımlayarak arabellek görüntüleyicinin ham arabellek baytlarını ayrıştırma ve görüntüleme biçimini seçebilirsiniz) gibi daha özel bir görüntüleyiciye sahip nesneyi görüntülemek için izleyebilirsiniz köprülere de sahiptir.
 
 ### <a name="frame-analysis"></a>Çerçeve analizi
  Uygulama grafiğinizin yalnızca doğru olması değil hızlı olması da gerekir. Tümleşik grafiklere veya cep telefonlarına sahip dizüstü bilgisayarlar gibi daha az güçlü cihazlarda bile. Ayrıca yine de harika bir görünüme sahip olmak zorundalar.

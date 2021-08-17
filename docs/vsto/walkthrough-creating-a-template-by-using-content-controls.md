@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: içerik denetimlerini kullanarak şablon oluşturma'
-description: Bir Microsoft Word şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimleri kullanan belge düzeyi özelleştirmesi oluşturmayı öğrenin.
+description: Microsoft Word şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimleri kullanan belge düzeyi özelleştirmesi oluşturmayı öğrenin.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 7f78ca406d19461de7fa8e2a8c147b1003c9c852
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: d977aeb7eb4b16dab4de957df2a7b908fba58b18
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826973"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122075742"
 ---
 # <a name="walkthrough-create-a-template-by-using-content-controls"></a>İzlenecek yol: içerik denetimlerini kullanarak şablon oluşturma
-  Bu izlenecek yol, bir Microsoft Office sözcük şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimleri kullanan belge düzeyi özelleştirmesi oluşturmayı gösterir.
+  bu izlenecek yol, bir Microsoft Office sözcük şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimleri kullanan belge düzeyi özelleştirmesi oluşturmayı gösterir.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
@@ -58,7 +59,7 @@ ms.locfileid: "107826973"
 
 ### <a name="to-create-a-new-word-template-project"></a>Yeni bir Word şablonu projesi oluşturmak için
 
-1. **MyBuildingBlockTemplate** adlı bir Word şablonu projesi oluşturun. Sihirbazda, çözümde yeni bir belge oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **MyBuildingBlockTemplate** adlı bir Word şablonu projesi oluşturun. Sihirbazda, çözümde yeni bir belge oluşturun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda yeni Word şablonunu açar ve **Çözüm Gezgini** Için **MyBuildingBlockTemplate** projesini ekler.
 
@@ -166,7 +167,7 @@ ms.locfileid: "107826973"
 
 ### <a name="to-add-the-tables-to-the-building-blocks-in-the-template"></a>Şablondaki yapı taşlarına tablo eklemek için
 
-1. `ThisDocument_Startup` `ThisDocument` Önceki adımda eklediğiniz koddan sonra, sınıfının yöntemine aşağıdaki kodu ekleyin. Bu kod, şablondaki tüm yeniden kullanılabilir yapı taşlarını içeren Microsoft. Office. Interop. Word. Buildingblockendenemeler koleksiyonuna tabloları içeren yeni yapı taşları ekler. Yeni yapı taşları, **çalışan ve müşteri bilgileri** adlı yeni bir kategoride tanımlanır ve yapı taşı türü atanır `Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1` .
+1. `ThisDocument_Startup` `ThisDocument` Önceki adımda eklediğiniz koddan sonra, sınıfının yöntemine aşağıdaki kodu ekleyin. Bu kod, Microsoft 'a tabloları içeren yeni yapı taşları ekler. Office. Şablondaki yeniden kullanılabilir tüm yapı taşlarını içeren Interop. Word. Buildingblockendenemeler koleksiyonu. Yeni yapı taşları, **çalışan ve müşteri bilgileri** adlı yeni bir kategoride tanımlanır ve yapı taşı türü atanır `Microsoft.Office.Interop.Word.WdBuildingBlockTypes.wdTypeCustom1` .
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/ContentControlTemplateWalkthrough/ThisDocument.vb" id="Snippet4":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/ContentControlTemplateWalkthrough/ThisDocument.cs" id="Snippet4":::
@@ -243,4 +244,4 @@ ms.locfileid: "107826973"
 - [Nasıl yapılır: içerik denetimlerini kullanarak belge parçalarını koruma](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)

@@ -24,7 +24,7 @@ içinde varlık sınıfları arasındaki [!INCLUDE[vbtecdlinq](../data-tools/inc
 İlişki oluşturma için İlişki düzenleyici iletişim kutusunu kullanırken bir üst sınıf **ve** alt sınıf seçmeniz gerekir. Üst sınıf, birincil anahtarı içeren varlık sınıfıdır; alt sınıfı, yabancı anahtarı içeren varlık sınıfıdır. Örneğin, ve tablolarına eşlene varlık sınıfları oluşturulduktan sonra sınıf üst `Northwind Customers` `Orders` `Customer` sınıf, `Order` sınıf ise alt sınıf olur.
 
 > [!NOTE]
-> Tabloları Sunucu Gezgini **veya** **Veritabanı Gezgini** **(O/R Tasarımcısı)** **Nesne İlişkisel Tasarımcısı)** üzerine sürüklerken, ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur.
+> Tabloları Sunucu Gezgini **Veritabanı Gezgini** **(O/R Tasarımcısı)** **Nesne İlişkisel Tasarımcısı** üzerine sürüklerken, ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur. 
 
 ## <a name="association-properties"></a>İlişki özellikleri
 bir ilişkilendirme oluşturduk sonra, **O/R Tasarımcısı'nda ilişkilendirmeyi** seçerek Özellikler penceresinde bazı yapılandırılabilir **özellikler** vardır. (İlişkili sınıflar arasındaki çizgi ilişkilendirmedir.) Aşağıdaki tablo, bir ilişkilendirmenin özellikleri için açıklamalar sağlar.
@@ -52,7 +52,7 @@ bir ilişkilendirme oluşturduk sonra, **O/R Tasarımcısı'nda ilişkilendirmey
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to SQL araçları Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
-- [Adım adım kılavuz: LINQ to SQL sınıfları oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
+- [adım adım kılavuz: LINQ to SQL sınıfları oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [DataContext yöntemleri (O/R Tasarımcısı)](../data-tools/datacontext-methods-o-r-designer.md)
 - [Nasıl: Birincil anahtarları temsil etme](/dotnet/framework/data/adonet/sql/linq/how-to-represent-primary-keys)

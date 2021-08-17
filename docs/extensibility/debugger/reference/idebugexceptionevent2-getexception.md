@@ -11,17 +11,18 @@ ms.assetid: 7c98f41d-322b-4e72-a514-cbd4823eb70d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 72457b1b8931d028f555e7f9354f34b133fa79bb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d7da0fc91cd32ffedbf36f98f736c99db21c7a2e1904fe8af6aec2dec323e309
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084785"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292539"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
 Bu olayı tetikleyen özel durumun ayrıntılı bir açıklamasını alır.

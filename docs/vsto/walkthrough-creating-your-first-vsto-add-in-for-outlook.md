@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: Outlook için ilk VSTO eklentisini oluşturma'
-description: Microsoft Outlook için uygulama düzeyi eklentisi oluşturun. Bu özellik, hangi Outlook öğesinin açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir.
+title: 'Adım adım kılavuz: VSTO için İlk Eklentinizi Outlook'
+description: Microsoft Outlook için uygulama düzeyinde bir eklenti oluşturun. Bu özellik, hangi öğenin açık olduğuna bakılmaksızın Outlook kullanılabilir.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -15,17 +15,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: a6bcc134096284579e1097edf0e958105f48cfcb
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 189cbe343ed1cdc6fad135a7bb4614e7423f2b9d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824295"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059861"
 ---
-# <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>İzlenecek yol: Outlook için ilk VSTO eklentisini oluşturma
-  Bu izlenecek yol, Outlook Microsoft Office için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi Outlook öğesinin açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+# <a name="walkthrough-create-your-first-vsto-add-in-for-outlook"></a>Adım adım kılavuz: VSTO için İlk Eklentinizi Outlook
+  Bu kılavuzda, Microsoft Office Outlook için VSTO Eklenti oluşturma Microsoft Office Outlook. Bu tür bir çözümde, hangi öğenin açık olduğuna bakılmaksızın uygulamanın Outlook özellikleri kullanılabilir. Daha fazla bilgi için [bkz. Office çözüm geliştirmeye genel bakış &#40;VSTO&#41;. ](../vsto/office-solutions-development-overview-vsto.md)
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -33,13 +34,13 @@ ms.locfileid: "107824295"
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Outlook için Outlook VSTO eklentisi projesi oluşturma.
+- Outlook VSTO için bir Eklenti projesi Outlook.
 
-- Yeni bir posta iletisinin konusuna ve gövdesine metin eklemek için Outlook 'un nesne modelini kullanan kod yazma.
+- Yeni bir posta iletisinin konu ve gövdesine metin eklemek için Outlook nesnesinin nesne modelini kullanan kod yazma.
 
-- Test etmek için projeyi oluşturma ve çalıştırma.
+- Projeyi test etmek için bina ve çalıştırma.
 
-- VSTO eklentisinin geliştirme bilgisayarınızda artık otomatik olarak çalışmamasını sağlamak için tamamlanmış projeyi Temizleme.
+- Tamamlanan projeyi temizleyen VSTO artık geliştirme bilgisayarınızda otomatik olarak çalışmaz.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -52,97 +53,97 @@ ms.locfileid: "107824295"
 
 ## <a name="create-the-project"></a>Proje oluşturma
 
-### <a name="to-create-a-new-outlook-project-in-visual-studio"></a>Visual Studio 'da yeni bir Outlook projesi oluşturmak için
+### <a name="to-create-a-new-outlook-project-in-visual-studio"></a>Yeni bir Outlook proje oluşturmak Visual Studio
 
-1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+1. 'i [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] başlatma.
 
-2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
+2. Dosya menüsünde **Yeni'nin** üzerine **gelin ve** ardından Dosya'ya **Project.**
 
-3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' i genişletin.
+3. Şablonlar bölmesinde Visual **C#** veya **Visual Basic'ı** genişletin ve sonra **Office/SharePoint.**
 
-4. Genişletilmiş **Office/SharePoint** düğümü altında **Office eklentileri** düğümünü seçin.
+4. Genişletilmiş **Office/SharePoint** altında, **Office düğümünü** seçin.
 
-5. Proje şablonları listesinde bir Outlook VSTO eklentisi projesi seçin.
+5. Proje şablonları listesinde, eklenti projesini Outlook VSTO seçin.
 
-6. **Ad** kutusuna **FirstOutlookAddIn** yazın.
+6. Ad **kutusuna** **FirstOutlookAddIn yazın.**
 
 7. **Tamam**'a tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstOutlookAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstOutlookAddIn projesini** oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 
-## <a name="write-code-that-adds-text-to-each-new-mail-message"></a>Her yeni posta iletisine metin ekleyen kodu yazın
- Ardından, ThisAddIn kod dosyasına kod ekleyin. Yeni kod, her yeni posta iletisine metin eklemek için Outlook nesne modelini kullanır. Varsayılan olarak, ThisAddIn kod dosyası aşağıdaki oluşturulan kodu içerir:
+## <a name="write-code-that-adds-text-to-each-new-mail-message"></a>Her yeni posta iletisine metin ekleyen kod yazma
+ Ardından ThisAddIn kod dosyasına kod ekleyin. Yeni kod, her yeni posta Outlook eklemek için Outlook nesnesinin nesne modelini kullanır. Varsayılan olarak ThisAddIn kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- Sınıfın kısmi tanımı `ThisAddIn` . Bu sınıf, kodunuz için bir giriş noktası sağlar ve Outlook 'un nesne modeline erişim sağlar. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md). Sınıfın geri kalanı, `ThisAddIn` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
+- Sınıfın kısmi `ThisAddIn` tanımı. Bu sınıf kodunuz için bir giriş noktası sağlar ve kodun nesne modeline Outlook. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md) Sınıfın geri `ThisAddIn` kalanı, değiştirmeyebilirsiniz gizli bir kod dosyasında tanımlanır.
 
-- `ThisAddIn_Startup`Ve `ThisAddIn_Shutdown` olay işleyicileri. Bu olay işleyicileri Outlook, VSTO eklentinizi yüklerken ve kaldırıldığında çağrılır. Bu olay işleyicilerini, yüklendiğinde VSTO eklentisini başlatmak ve bu etkinlik kaldırıldığında VSTO eklentisi tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+- ve `ThisAddIn_Startup` olay `ThisAddIn_Shutdown` işleyicileri. Bu olay işleyicileri, Outlook eklentinizi yüklerken ve VSTO yüklerken çağrılır. Bu olay işleyicilerini kullanarak VSTO eklentinizi başlatıp yüklemesi kaldırılan eklentiniz tarafından VSTO kaynakları temizleyin. Daha fazla bilgi için [bkz. Office projelerinde olaylar.](../vsto/events-in-office-projects.md)
 
-### <a name="to-add-text-to-the-subject-and-body-of-each-new-mail-message"></a>Her yeni posta iletisinin konusuna ve gövdesine metin eklemek için
+### <a name="to-add-text-to-the-subject-and-body-of-each-new-mail-message"></a>Her yeni posta iletisinin konu ve gövdesine metin eklemek için
 
-1. ThisAddIn kod dosyasında sınıfında adlı bir alan bildirin `inspectors` `ThisAddIn` . Bu `inspectors` alan, geçerli Outlook örneğindeki Inspector pencerelerinin koleksiyonuna bir başvuru tutar. Bu başvuru, çöp toplayıcısının olay işleyicisini içeren belleği boşaltmasını önler <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> .
+1. ThisAddIn kod dosyasında sınıfında adlı bir `inspectors` alan `ThisAddIn` bildirin. alanı, `inspectors` geçerli örnek içinde Denetçi pencerelerinin koleksiyonuna bir başvuru Outlook sağlar. Bu başvuru, atık toplayıcının olay için olay işleyicisini içeren belleği serbest bırakarak <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> önlemesini sağlar.
 
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb" id="Snippet1":::
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs" id="Snippet1":::
 
-2. `ThisAddIn_Startup` yöntemini aşağıdaki kodla değiştirin. Bu kod, olaya bir olay işleyicisi ekler <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> .
+2. `ThisAddIn_Startup` yöntemini aşağıdaki kodla değiştirin. Bu kod, olayına bir olay <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> işleyicisi iliştirer.
 
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb" id="Snippet2":::
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs" id="Snippet2":::
 
-3. ThisAddIn kod dosyasında, sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod, olay için bir olay işleyicisini tanımlar <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> .
+3. ThisAddIn kod dosyasında sınıfına aşağıdaki kodu `ThisAddIn` ekleyin. Bu kod, olay için bir olay <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> işleyicisi tanımlar.
 
-    Kullanıcı yeni bir posta iletisi oluşturduğunda, bu olay işleyicisi metin konu satırına ve iletinin gövdesine metin ekler.
+    Kullanıcı yeni bir posta iletisi oluşturduğunda, bu olay işleyicisi konu satırına ve iletinin gövdesine metin ekler.
 
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb" id="Snippet3":::
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs" id="Snippet3":::
 
-   Her yeni posta iletisini değiştirmek için, önceki kod örnekleri aşağıdaki nesneleri kullanır:
+   Önceki kod örnekleri, her yeni posta iletisini değiştirmek için aşağıdaki nesneleri kullanır:
 
-- `Application` `ThisAddIn` Sınıfının alanı. `Application`Alan <xref:Microsoft.Office.Interop.Outlook.Application> , geçerli Outlook örneğini temsil eden bir nesne döndürür.
+- `Application`sınıfının `ThisAddIn` alanı. alanı, `Application` geçerli örneği temsil eden bir nesne döndürür <xref:Microsoft.Office.Interop.Outlook.Application> Outlook.
 
-- `Inspector`Olay işleyicisinin olay işleyicisi parametresi <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> . `Inspector`Parametresi <xref:Microsoft.Office.Interop.Outlook.Inspector> , yeni posta iletisinin Inspector penceresini temsil eden bir nesnedir. Daha fazla bilgi için bkz. [Outlook çözümleri](../vsto/outlook-solutions.md).
+- `Inspector`Olay için olay işleyicisi <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> parametresi. parametresi, `Inspector` yeni <xref:Microsoft.Office.Interop.Outlook.Inspector> posta iletisinin Denetçi penceresini temsil eden bir nesnesidir. Daha fazla bilgi için [bkz. Outlook çözümleri.](../vsto/outlook-solutions.md)
 
 ## <a name="test-the-project"></a>Projeyi test etme
- Projeyi derleyip çalıştırdığınızda, metnin konu satırında ve yeni bir posta iletisinin gövdesinde göründüğünü doğrulayın.
+ Projeyi derlemek ve çalıştırmak için metnin konu satırı ve yeni posta iletisinin gövdesinde görüntülendiğinden emin olur.
 
 ### <a name="to-test-the-project"></a>Projeyi test etmek için
 
-1. Projenizi derlemek ve çalıştırmak için **F5** tuşuna basın.
+1. Projenizi derlemek ve çalıştırmak için **F5'e** basın.
 
-     Projeyi derlediğinizde kod, projenin yapı çıkış klasörüne dahil olan bir derlemeye derlenir. Visual Studio Ayrıca, Outlook 'un VSTO eklentisini bulmasını ve yüklemesini sağlayan bir kayıt defteri girişi kümesi oluşturur ve VSTO eklentisinin çalışmasını sağlamak için geliştirme bilgisayarındaki güvenlik ayarlarını yapılandırır. Daha fazla bilgi için bkz. [Office çözümü derleme işlemine genel bakış](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md).
+     Projeyi derlerken kod, projenin derleme çıkış klasörüne dahil edilen bir derlemede derlenmiş olur. Visual Studio, Outlook'ın VSTO Eklentisini bulması ve yüklemesini sağlayan bir kayıt defteri girdileri kümesi de oluşturur ve geliştirme bilgisayarına güvenlik ayarlarını VSTO Eklentinin çalışmasına olanak sağlayacak şekilde yapılandırıyor. Daha fazla bilgi için [bkz. Office derleme sürecine genel bakış.](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)
 
-2. Outlook 'ta yeni bir posta iletisi oluşturun.
+2. Bu Outlook yeni bir posta iletisi oluşturun.
 
-3. Aşağıdaki metnin hem konu satırına hem de iletinin gövdesine eklendiğini doğrulayın.
+3. Aşağıdaki metnin hem konu satırına hem de iletinin gövdesine ekli olduğunu doğrulayın.
 
      **Bu metin kod kullanılarak eklenmiştir.**
 
-4. Outlook 'U kapatın.
+4. Outlook.
 
-## <a name="clean-up-the-project"></a>Projeyi temizle
- Projeyi geliştirmeyi bitirdiğinizde, VSTO eklenti derlemesini, kayıt defteri girişlerini ve güvenlik ayarlarını geliştirme bilgisayarınızdan kaldırın. Aksi halde, VSTO eklentisi geliştirme bilgisayarında Outlook 'U her açışınızda çalışır.
+## <a name="clean-up-the-project"></a>Projeyi temizleme
+ Bir proje geliştirmeyi tamamlasanız, VSTO derleme, kayıt defteri girdileri ve güvenlik ayarlarını geliştirme bilgisayarınızdan kaldırın. Aksi takdirde VSTO eklenti, geliştirme bilgisayarına her Outlook çalıştırabilirsiniz.
 
 ### <a name="to-clean-up-your-project"></a>Projenizi temizlemek için
 
-1. Visual Studio 'da, **Yapı** menüsünde **Çözümü Temizle**' ye tıklayın.
+1. Bu Visual Studio, Derleme **menüsünde Çözümü** Temizle'ye **tıklayın.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Outlook için temel bir VSTO eklentisi oluşturduğunuza göre, şu konulardan VSTO eklentileri geliştirme hakkında daha fazla bilgi edinebilirsiniz:
+ Outlook için temel VSTO eklenti oluşturduğunuza göre, VSTO eklentilerini geliştirme hakkında daha fazla bilgi edinmek için şu konulardan bilgi sebilirsiniz:
 
-- Outlook için VSTO Eklentilerini kullanarak gerçekleştirebileceğiniz genel programlama görevleri. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+- Genel programlama görevleri için VSTO Eklentilerini kullanarak gerçekleştirebilirsiniz Outlook. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md)
 
-- Outlook 'un nesne modelini kullanma. Daha fazla bilgi için bkz. [Outlook çözümleri](../vsto/outlook-solutions.md).
+- Uygulamanın nesne modelini Outlook. Daha fazla bilgi için [bkz. Outlook çözümleri.](../vsto/outlook-solutions.md)
 
-- Outlook 'un Kullanıcı arabirimini özelleştirme, örneğin, Şerite özel bir sekme ekleyerek veya kendi özel görev bölmenizi oluşturarak. Daha fazla bilgi için bkz. [OFFICE UI özelleştirmesi](../vsto/office-ui-customization.md).
+- Örneğin Şerit'Outlook özel bir sekme ekleyerek veya kendi özel görev bölmenizi oluşturarak kullanıcı arabirimini özelleştirme. Daha fazla bilgi için [bkz. Office kullanıcı arabirimi özelleştirmesi.](../vsto/office-ui-customization.md)
 
-- Outlook için VSTO eklentileri oluşturma ve hata ayıklama. Daha fazla bilgi için bkz. [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
+- Uygulama için VSTO ve hata ayıklama Outlook. Daha fazla bilgi için [bkz. Derleme Office.](../vsto/building-office-solutions.md)
 
-- Outlook için VSTO eklentileri dağıtılıyor. Daha fazla bilgi için bkz. [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
+- VSTO için Outlook. Daha fazla bilgi için [bkz. Bir Office dağıtma.](../vsto/deploying-an-office-solution.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
+- [Program VSTO Eklentileri](../vsto/programming-vsto-add-ins.md)
 - [Outlook çözümleri](../vsto/outlook-solutions.md)
-- [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
-- [Office çözümleri oluşturma](../vsto/building-office-solutions.md)
-- [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
-- [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md)
+- [Office Kullanıcı arabirimi özelleştirmesi](../vsto/office-ui-customization.md)
+- [Yeni Office oluşturma](../vsto/building-office-solutions.md)
+- [Bir Office dağıtma](../vsto/deploying-an-office-solution.md)
+- [Office şablonlarına genel bakış](../vsto/office-project-templates-overview.md)

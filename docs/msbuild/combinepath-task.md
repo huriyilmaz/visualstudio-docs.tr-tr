@@ -1,6 +1,6 @@
 ---
-title: CombinePath görevi | Microsoft Docs
-description: MSBuild CombinePath görevinin, belirtilen yolları tek bir yolda birleştirmek için nasıl kullanılacağını öğrenin.
+title: CombinePath Görev | Microsoft Docs
+description: Belirtilen yolları tek bir yolda birleştirmek MSBuild CombinePath görevini nasıl kullanabileceğiniz hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,32 +19,32 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 203b91147418a6e05325d7442fc6e7d59b84df8e169aed5048b7edf68e9743d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2461186e9ebe79cbdc1a5677f5fbf85baad11b6a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121270997"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077666"
 ---
 # <a name="combinepath-task"></a>CombinePath görevi
 
-Belirtilen yolları tek bir yol olarak birleştirir.
+Belirtilen yolları tek bir yolda birleştirir.
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda [CombinePath görevinin](../msbuild/combinepath-task.md)parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda CombinePath görevinin [parametreleri açık almaktadır.](../msbuild/combinepath-task.md)
 
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`BasePath`|Gerekli `String` parametre.<br /><br /> Diğer yollarla birleştirilecek temel yol. Göreli yol, mutlak yol veya boş olabilir.|
-|`Paths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Birleşik yolu oluşturmak için BasePath ile birleştirilecek bağımsız yolların listesi. Yollar göreli veya mutlak olabilir.|
-|`CombinedPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Bu görev tarafından oluşturulan Birleşik yol.|
+|`BasePath`|Gerekli `String` parametre.<br /><br /> Diğer yollarla birleştirilen temel yol. Göreli yol, mutlak yol veya boş olabilir.|
+|`Paths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Birleştirilmiş yolu oluşturmak için BasePath ile birleştirilen tek tek yolların listesi. Yollar göreli veya mutlak olabilir.|
+|`CombinedPaths`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Bu görev tarafından oluşturulan birleşik yol.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
- Aşağıdaki örnek, `CombinePath` `$(OutputDirectory)` ile birleştirilmiş bir kök yolu `$(PublishRoot)` `$(ReleaseDirectory)` ve bir alt klasör listesi birleştirerek özelliği oluşturmak için kullanarak bir çıktı klasörü yapısının nasıl oluşturulacağını gösterir `$(LangDirectories)` .
+ Aşağıdaki örnekte, ile birleşen bir kök yolu ve bir alt klasör listesi birleştirerek özelliğini oluşturmak için kullanarak bir çıkış klasörü `CombinePath` `$(OutputDirectory)` `$(PublishRoot)` `$(ReleaseDirectory)` yapısının nasıl oluşturul `$(LangDirectories)` açıklandı.
 
  ```xml
   <PropertyGroup>
@@ -65,7 +65,7 @@ Belirtilen yolları tek bir yol olarak birleştirir.
   </Target>
 ```
 
-`CombinePath`Bir liste olmasına izin veren tek özellik `Paths` , bu durumda çıktının de bir listesidir. Bu nedenle, `$(PublishRoot)` *\\ C:\site1* ise ve `$(ReleaseDirectory)` *\\ sürümüdür* ve `@(LangDirectories)` *en-US \; fr-fr \\* ise, bu örnekler klasörleri oluşturur:
+Liste olması için `CombinePath` izin veren tek `Paths` özelliktir; bu durumda çıkış da bir listedir. Bu `$(PublishRoot)` *nedenle, \\ C:\Site1* ise ve Sürüm `$(ReleaseDirectory)` *\\* ise ve `@(LangDirectories)` *en-us \; fr-fr \\* ise, bu örnek klasörleri oluşturur:
 
 - C:\Site1\Release\en-us\
 - C:\Site1\Release\fr-fr\

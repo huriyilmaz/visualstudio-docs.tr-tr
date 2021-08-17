@@ -11,14 +11,15 @@ ms.assetid: 3b9fb747-670b-4da7-bb70-612f7b911786
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 42b2c63932cc37e0c5c605e31e9dfb0671fdd586
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e685f56316f674d20e8aa9ec50f9ed8dfb38dc6158be744e9ab9f7bc714920af
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161004"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436539"
 ---
 # <a name="idiasymbolget_hasalloca"></a>IDiaSymbol::get_hasAlloca
 İşlevin çağrısı içerip içermediğini belirten bir bayrak alır `alloca` (Bu, yığında bellek ayırmak için kullanılır).

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 04c9c5a3526b1e1c42034d606d2a2cc588a748533e65a99a2907328be16ac8e3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f06559ff92fb448e81a1075a1cbe518c7b2a1e80
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121361190"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089452"
 ---
 # <a name="hit-a-breakpoint"></a>Kesme noktasına isabet edin
 Aşağıdaki bölümde, hata ayıklama altyapısı (DE) çalışırken veya adımla bir kesme noktasına rastlarken işlem açıklanmaktadır:
