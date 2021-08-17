@@ -11,14 +11,15 @@ ms.assetid: 1f2a4b94-3713-46e9-8272-3917187792bd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c2ceedbf0fad2141f978420909d31be2260818c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 33336093242bbdd89fe93f37fd00155a69a0c205ad2192295c8741bf574f2c50
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065937"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452023"
 ---
 # <a name="idebugerrorbreakpoint2"></a>IDebugErrorBreakpoint2
 Bu arabirim, geçersiz konum, geçersiz ifade veya bekleyen kesme noktasının bağlı olmadığı nedenleri (kod henüz yüklenmedi, vb.) gibi bir hata veya uyarı kesme noktasını temsil eder.

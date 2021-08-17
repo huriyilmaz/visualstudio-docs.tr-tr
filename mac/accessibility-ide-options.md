@@ -1,6 +1,6 @@
 ---
 title: IDE erişilebilirlik seçeneklerini ayarlama
-description: Mac için Visual Studio erişilebilirlik seçeneklerini ayarlamaya giriş
+description: Mac için Visual Studio'da erişilebilirlik seçeneklerini ayarlamaya giriş
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/23/2019
@@ -15,41 +15,41 @@ ms.locfileid: "121439581"
 ---
 # <a name="set-ide-accessibility-options"></a>IDE erişilebilirlik seçeneklerini ayarlama
 
-macos 'a doğrudan yerleştirilmiş özelliklerin yanı sıra Mac için Visual Studio, farklı yetenekler kullanıcılarına olanak tanımak için birçok erişilebilirlik özelliğine sahiptir.
+macOS'ta yerleşik özelliklere ek olarak, Mac için Visual Studio çeşitli özelliklere sahip kullanıcılarına olanak sağlamak için bir dizi erişilebilirlik özelliği vardır.
 
-## <a name="resize-tool-windows-and-editor-content"></a>Araç pencerelerini ve düzenleyici içeriğini yeniden boyutlandır
+## <a name="resize-tool-windows-and-editor-content"></a>Araç pencerelerini ve düzenleyici içeriğini yeniden boyutlandırma
 
 1. İçeriği yeniden boyutlandırmak istediğiniz araç penceresini veya düzenleyici penceresini seçin.
 
-1. Görünüm ' ü **(menü)** seçin ve ardından **Yakınlaştır ' ı (&#8984;+)** veya **uzaklaştır (&#8984;-)** seçeneğini belirleyin.
+1. Görünüm **(menü) seçeneğini** belirleyin ve ardından **Yakınlaştır (&#8984;+) veya** Uzaklaştır **(&#8984;-) seçeneğini belirleyin.**
 
 > [!TIP]
-> İçeriği varsayılan boyuta sıfırlamak için **Görünüm (menü)**  >  **Normal boyut (&#8984;0)** seçeneğini belirleyebilirsiniz.
+> İçeriği varsayılan boyuta sıfırlamak için Görünüm **(menü)** Normal Boyut  >  **(&#8984;0) seçeneğini belirleyin.**
 
 ## <a name="change-the-content-font-and-size"></a>İçerik yazı tipini ve boyutunu değiştirme
 
-Mac için Visual Studio ' deki çoğu araç penceresinde içeriğin yazı tipini ve boyutunu özelleştirmek mümkündür. Aşağıdaki adımları uygulayın:
+Çoğu araç penceresinde içeriğin yazı tipini ve boyutunu tek bir araç Mac için Visual Studio. Aşağıdaki adımları uygulayın:
 
-1. **Visual Studio (menü)**  >  **tercihlerine git... (&#8984;,)**.
+1. Visual Studio **(menü)**  >  **Tercihler... (&#8984;,)**.
 
-1. **Tercihler**' de **ortam**  >  **yazı tipleri**' ne gidin.
+1. **Tercihler'de** Ortam Yazı **Tipleri'ne**  >  **gidin.**
 
-1. **Metin Düzenleyicisi**, **genel araç penceresi metni** veya **Çıkış penceresi içerikleri** için yazı tipi ve boyut düğmesini seçin.
+1. Metin Düzenleyici, **Genel** **Araç Penceresi Metni veya İçerikler** **Çıkış Penceresi** için yazı tipi ve boyut düğmesini seçin.
 
-1. İstediğiniz yazı tipini, stili ve boyutu seçin ve **Tamam**' ı seçin.
+1. İstediğiniz yazı tipini, stili ve boyutu seçin ve Tamam'ı **seçin.**
 
 > [!TIP]
-> Her ayar için varsayılan yazı tipine ve stile geri dönmek için **Varsayılan olarak ayarla**' yı seçin.
+> Her ayar için varsayılan yazı tipine ve stile dönmek için Varsayılana **Ayarla'yi seçin.**
 
-## <a name="change-the-editor-syntax-highlighting"></a>Düzenleyici söz dizimi vurgulamasını değiştirme
+## <a name="change-the-editor-syntax-highlighting"></a>Düzenleyici söz dizimi vurgulamayı değiştirme
 
-Bazı kullanıcılar varsayılan renk düzeninin karşıtlığın veya renk gereksinimlerinin karşılamaz olduğunu fark edebilir. Mac için Visual Studio, iki yüksek karşıtlık teması da dahil olmak üzere, kullanıcının seçebileceğiniz birkaç alternatif teması vardır.
+Bazı kullanıcılar varsayılan renk düzeninin karşıtlık veya renk gereksinimlerini karşılamaz olduğunu fark ediyor olabilir. Mac için Visual Studio, iki yüksek karşıtlık teması dahil olmak üzere kullanıcının seçe bir dizi alternatif teması vardır.
 
-1. **Visual Studio (menü)**  >  **tercihlerine git... (&#8984;,)**.
+1. Visual Studio **(menü)**  >  **Tercihler... (&#8984;,)**.
 
-1. **Tercihler** bölümünde **metin düzenleyici**  >  **renk teması**' na gidin.
+1. **Tercihler'de** Metin Düzenleyici Renk  >  **Teması'ne gidin.**
 
 1. İstediğiniz temayı seçin.
 
 > [!TIP]
-> Tema, düzenleyicide gerçek zamanlı olarak güncelleştirilecek, bu sayede tercih ettiğiniz temayı önizleyebilir ve seçebilirsiniz.
+> Tema, düzenleyicide gerçek zamanlı olarak güncelleştirilerek tercih ettiğiniz temayı önizlemenize ve seçmenize yardımcı olur.

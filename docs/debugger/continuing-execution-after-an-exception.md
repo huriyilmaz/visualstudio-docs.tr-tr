@@ -1,6 +1,6 @@
 ---
-title: Özel durumdan sonra yürütmeye devam etme | Microsoft Docs
-description: İşlenmeyen bir özel durum nedeniyle hata ayıklayıcı yürütmeyi kesintiye düğünde ne olacağını öğrenin. Aynı iş parçacığında yürütmeye devam edebilirsiniz.
+title: Özel Durum Sonrasında Yürütmeye Devam | Microsoft Docs
+description: Hata ayıklayıcı işlanmamış bir özel durum nedeniyle yürütmeyi sonlara ayırsa ne olacağını öğrenin. Aynı iş parçacığında yürütmeye devam etmek mümkün olabilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -28,23 +28,23 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 379015e0029419256f8071866775aa50b2a608f7e1a26e936dccaf3a9c41af90
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: baed5da414077ee5d81482f092e697ddb608e420
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345861"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121732"
 ---
 # <a name="continuing-execution-after-an-exception"></a>Özel Durumdan Sonra Yürütmeye Devam Etme
-Bir özel durum nedeniyle hata ayıklayıcı yürütmeyi bozarsa, varsayılan olarak **özel durum yardımcısını** görürsünüz. **seçenekler** iletişim kutusunda **özel durum yardımcısını** devre dışı bırakırsanız, **özel durum yardımcısı** (C# veya Visual Basic) veya **özel durum** iletişim kutusu (C++) görüntülenir.
+Hata ayıklayıcısı bir özel durum nedeniyle yürütmeyi bozarsa, varsayılan olarak **Özel Durum Yardımcı'sını** göreceğiz. Seçenekler iletişim kutusunda Özel Durum  **Yardımcısı'nın** devre dışı bırakılmıştır, Özel Durum Yardımcısı **(C#** veya Visual Basic) veya Özel Durum iletişim kutusunu (C++) alırsınız. 
 
- **Özel durum Yardımcısı** göründüğünde, özel duruma neden olan sorunu gidermeyi deneyebilirsiniz.
+ Özel **Durum Yardımcı'sı** göründüğünde, özel durumla ilgili sorunu düzeltmeyi denemeyi edebilirim.
 
-## <a name="managed-and-native-code"></a>Yönetilen ve yerel kod
- Yönetilen ve yerel kodda, işlenmeyen bir özel durumdan sonra aynı iş parçacığında yürütmeye devam edebilirsiniz. **Özel durum Yardımcısı** , çağrı yığınını özel durumun oluşturulduğu noktaya geri vermez.
+## <a name="managed-and-native-code"></a>Yönetilen ve Yerel Kod
+ Yönetilen ve yerel kodda, iş parçacıklı bir özel durum sonrasında aynı iş parçacığında yürütmeye devam edersiniz. Özel **Durum Yardımcı,** çağrı yığınını özel durumun atılmış olduğu noktaya doğru geriye doğru geriye doğru takip eder.
 
-## <a name="mixed-code"></a>Karışık kod
- Karma bir yerel ve yönetilen kodda hata ayıklarken işlenmeyen bir özel durumla karşılaşırsanız, işletim sistemi kısıtlamaları çağrı yığınını geriye doğru geri çağırmayı önler. Çağrı yığınını kısayol menüsünü kullanarak yeniden geri sarılıyorsanız, hata iletisi, karışık kod hata ayıklaması dışında işlenmeyen bir işlenmemiş öğesinden geriye doğru bir hata mesajı olduğunu açıklar.
+## <a name="mixed-code"></a>Karma Kod
+ Karma yerel ve yönetilen kodda hata ayıklarken işlenebilir olmayan bir özel durumla karşılaşırsanız, işletim sistemi kısıtlamaları çağrı yığınının geriye doğru izlemesini önler. Kısayol menüsünü kullanarak çağrı yığınını geri sarmayı denersanız, hata ayıklayıcının karma kod hata ayıklaması dışında işlanmamış bir öğeden geriye doğru geri alamayğını açıklayan bir hata iletisi görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

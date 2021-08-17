@@ -10,14 +10,15 @@ ms.assetid: f523ad47-bbc0-4cda-a35c-41e67c4ba081
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d3ac314d5f8eb7980bdf5102d871546d3167141
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9ccf7591c56b7dbf4ab73750690a47b012a1cb26
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968677"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045833"
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch Etkinlik Tasarımcısı
 
@@ -29,7 +30,7 @@ ms.locfileid: "99968677"
 
 ### <a name="how-to-use-the-pick-activity-designer"></a>Seçme etkinliği tasarımcısını kullanma
 
-**Araç kutusunun** **Denetim akışı** kategorisindeki **PickBranch** tasarımcısına erişin.
+**araç kutusunun** **Control Flow** kategorisindeki **pickbranch** tasarımcısına erişin.
 
 <xref:System.Activities.Statements.PickBranch> **Branch1** ve **branch2** görünen adlarına sahip iki boş nesne, <xref:System.Activities.Statements.Pick> **çekme** etkinliği Tasarımcısı başlangıçta iş akışı Tasarımcısı bir etkinliğin öğeleri olarak oluşturulur. Bu ilgili <xref:System.Activities.Statements.PickBranch.DisplayName%2A> özellik değerleri, **PickBranch** Designer üst bilgisinde veya her dal için **Özellikler** penceresinde düzenlenebilir.
 
@@ -62,6 +63,6 @@ Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.PickBranch> 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
+- [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)
 - [Pick Etkinliği](/dotnet/framework/windows-workflow-foundation/pick-activity)
 - [Pick Etkinliği Kullanma](/dotnet/framework/windows-workflow-foundation/samples/using-the-pick-activity)

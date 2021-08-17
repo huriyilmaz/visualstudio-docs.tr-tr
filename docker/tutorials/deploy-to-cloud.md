@@ -1,19 +1,20 @@
 ---
-title: 'Docker öğreticisi-Bölüm 9: buluta dağıtma'
+title: 'Docker öğreticisi-Bölüm 10: buluta dağıtma'
 description: Barındırma için bir bulut hizmetine Docker uygulaması dağıtın.
-ms.date: 08/04/2020
+ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-docker
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: da38b7482396b0bf46f5566c0c4a5416c94e83eb
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: a0eecb44ae13f127e32cf0d15effdbd026d1e6c4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222831"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059757"
 ---
 # <a name="deploy-to-the-cloud"></a>Buluta dağıtın
 

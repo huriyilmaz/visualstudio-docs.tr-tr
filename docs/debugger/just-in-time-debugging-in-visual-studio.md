@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d6988c8e36bd3393f38c388504ade7b8b29fdf585d214c6af9296dc3d6207f3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b9d0c820877d30d0228c996538e320508dad2661
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453185"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080786"
 ---
 # <a name="disable-the-just-in-time-debugger"></a>Anında Hata Ayıklayıcı’yı devre dışı bırakma
 
@@ -27,9 +27,9 @@ ms.locfileid: "121453185"
 
 Tam Zamanında Hata Ayıklayıcı, hatada hata ayıklamak için Visual Studio başlatma seçeneği verir. Hata hakkında ayrıntılı Visual Studio görüntülemek veya hata ayıklamayı denemek için bir hata ayıklayıcısı veya seçili başka bir hata ayıklayıcı yüklü olması gerekir.
 
-Zaten bir kullanıcı Visual Studio hata ayıklamayı denemek için bkz. Tam Zamanında Hata [Ayıklayıcı'sını kullanarak hata ayıklama.](../debugger/debug-using-the-just-in-time-debugger.md) Hatayı düzelte biliyorsanız veya Tam Zamanında Hata Ayıklayıcı'nın açılmasını istemiyorsanız, Hata Ayıklama'dan Tam Zamanında hata ayıklamayı devre [dışı Visual Studio.](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)
+Zaten bir kullanıcı Visual Studio hata ayıklamayı denemek için bkz. Tam Zamanında Hata [Ayıklayıcı'sını kullanarak hata ayıklama.](../debugger/debug-using-the-just-in-time-debugger.md) Hatayı düzelte istemiyorsanız veya Tam Zamanında Hata Ayıklayıcı'nın açılmasını istemiyorsanız, hata ayıklamayı zaman içinde [Visual Studio.](debug-using-the-just-in-time-debugger.md#BKMK_Enabling)
 
-Yüklemesi Visual Studio ancak artık yüklenemediyse, kayıt defterinden Tam Zamanında hata ayıklamayı [devre dışı bırakmanız Windows olabilir.](debug-using-the-just-in-time-debugger.md#disable-just-in-time-debugging-from-the-windows-registry)
+Yüklemesi Visual Studio ancak artık yüklenemediyse, kayıt defterinden Tam Zamanında hata ayıklamayı [devre dışı Windows gerekir.](debug-using-the-just-in-time-debugger.md#disable-just-in-time-debugging-from-the-windows-registry)
 
 Henüz yüklü Visual Studio betik hata ayıklamayı veya sunucu tarafı hata ayıklamayı devre dışı bırakarak Tam Zamanında hata ayıklamayı önleyebilirsiniz.
 
@@ -41,7 +41,7 @@ Henüz yüklü Visual Studio betik hata ayıklamayı veya sunucu tarafı hata ay
 
 - IIS'de bir ASP.NET web uygulaması barındırıyorsanız sunucu tarafı hata ayıklamayı devre dışı bırakma:
 
-  1. IIS Yöneticisi **Özellikler Görünümü'nde,** **ASP.NET** bölümünde **.NET** Derlemesi'ne çift tıklayın  veya seçin ve ardından Eylemler bölmesinde Özelliği **Aç'ı** seçin.
+  1. IIS Yöneticisi **Özellikleri Görünümü'nde,** **ASP.NET** bölümünde **.NET** Derlemesi'ne çift tıklayın  veya seçin ve ardından Eylemler bölmesinde Özelliği **Aç'ı** seçin.
   1. Davranış **Hata**  >  **Ayıklama'nın altında** Yanlış'ı **seçin.** Adımlar, IIS'nin eski sürümlerinde farklıdır.
 
 Tam Zamanında hata ayıklamayı devre dışı bırakarak, uygulama hatayı işebilir ve normal şekilde çalıştırabilirsiniz.

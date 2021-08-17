@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c8a9b09ac8ad7391336816f4416a25ebd98484badb21ff81e1ec4604784eead
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d375672fa25949f85da7551a55c606d21e5c266e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414473"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028884"
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Hızlı Bilgiler
 IntelliSense Hızlı Bilgileri, kullanıcı tanımlayıcıya caret yerleştirerek **IntelliSense** menüsünden  Hızlı Bilgi'yi seçerek veya fare imlecini tanımlayıcının üzerinde tutarken kaynakta yer alan tanımlayıcıyla ilgili bilgileri gösterir. Bu, tanımlayıcı hakkında bilgilerle birlikte bir araç ipucu görünmesine neden olur. Bu bilgiler genellikle tanımlayıcı türünden oluşur. Hata ayıklama altyapısı etkin olduğunda, bu bilgiler geçerli değeri içerebilir. Dil hizmeti yalnızca tanımlayıcıları işlerken hata ayıklama altyapısı ifade değerleri sağlar.

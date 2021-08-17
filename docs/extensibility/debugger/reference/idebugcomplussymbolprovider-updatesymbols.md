@@ -1,6 +1,6 @@
 ---
-description: Bellekteki hata ayıklama sembollerini, belirtilen veri akışından gelen verilerle güncelleştirir.
-title: 'IDebugComPlusSymbolProvider:: UpdateSymbols | Microsoft Docs'
+description: Bellekte hata ayıklama sembollerini belirtilen veri akışından gelenlerle güncelleştirme.
+title: IDebugComPlusSymbolProvider::UpdateSymbols | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: d530f6f1-4af2-454b-bab0-02478a8fe81e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e7309c88cfb03dfcc523659c2a0aa4033000340d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 729e2c896fcf6ee4e5dad904afb04cc24604ddb1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058722"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079681"
 ---
 # <a name="idebugcomplussymbolproviderupdatesymbols"></a>IDebugComPlusSymbolProvider::UpdateSymbols
-Bellekteki hata ayıklama sembollerini, belirtilen veri akışından gelen verilerle güncelleştirir.
+Bellekte hata ayıklama sembollerini belirtilen veri akışından gelenlerle güncelleştirme.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +46,16 @@ int UpdateSymbols (
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-'ndaki Uygulama etki alanının tanımlayıcısı.
+[in] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-'ndaki Modülün benzersiz tanıtıcısı.
+[in] Modülün benzersiz tanımlayıcısı.
 
 `pUpdateStream`\
-'ndaki Güncelleştirilmiş hata ayıklama sembollerini içeren veri akışı.
+[in] Güncelleştirilmiş hata ayıklama sembollerini içeren veri akışı.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::UpdateSymbols(
@@ -93,7 +94,7 @@ Error:
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

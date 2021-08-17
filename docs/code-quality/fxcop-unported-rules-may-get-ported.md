@@ -1,5 +1,5 @@
 ---
-description: Aşağıdaki FxCop eski analiz kuralları henüz çözümleyici olarak uygulanmamıştır ancak yine de geçerli olabilir.
+description: Aşağıdaki FxCop eski analiz kuralları henüz çözümleyiciler olarak uygulanmadı, ancak yine de olabilir.
 title: Taşınabilir kaldırılmış kurallar
 ms.date: 05/21/2019
 ms.topic: reference
@@ -12,18 +12,18 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14772db869256b59deb765684fb2a8aa62d301a01719f062ad041b4aa6e3d63b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b16f089496721f0291c49c2c7e515b2b3c1ce211
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121348695"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045144"
 ---
 # <a name="unported-rules-that-may-be-ported"></a>Taşınabilir kaldırılmış kurallar
 
-Aşağıdaki FxCop eski analiz kuralları henüz çözümleyici olarak uygulanmamıştır ancak yine de geçerli olabilir. Bunun nedeni engelleyen teknik bir neden veya kuralın daha düşük öncelikli olması olabilir. Her kuralın bağlantı noktası durumu hakkında daha fazla bilgi için İzleme sorunu **sütunundaki bağlantıya** tıklayın.
+Aşağıdaki FxCop eski analiz kuralları henüz çözümleyiciler olarak uygulanmadı, ancak yine de olabilir. Bunun nedeni, bir engelleme teknik nedeni veya kuralın daha düşük öncelikli olması olabilir. Her kuralın taşıma durumu hakkında daha fazla bilgi için, **izleme sorunu** sütunundaki bağlantıya tıklayın.
 
-Kural Kimliği | İzleme sorunu
+Kural Kimliği | Sorun izleniyor
 --- | ---
 [CA1004](ca1004.md) | [https://github.com/dotnet/roslyn-analyzers/issues/370](https://github.com/dotnet/roslyn-analyzers/issues/370)
 [CA1007](ca1007.md) | [https://github.com/dotnet/roslyn-analyzers/issues/373](https://github.com/dotnet/roslyn-analyzers/issues/373)

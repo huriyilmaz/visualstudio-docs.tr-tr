@@ -9,14 +9,15 @@ ms.assetid: 4264742a-3d91-44b9-9d14-87adbc77f0f0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 331949c4b37c6e4f472bc2d1f5d805d7a9f7426a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 89597f27ee15014a8c2a5d7a999de297a3228a4e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147151"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081120"
 ---
 # <a name="idiasymbolget_stride"></a>IDiaSymbol::get_stride
 Matrisin ilerini alır veya bir dizi harcar.

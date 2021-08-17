@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 6f5ccf33e8b8262233282224eb01c9dc3c00f0c014e5b7cde35adb665b4384ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b589569d5675644deae2b7ecb47b1c992d4c76c7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385243"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093027"
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>nasıl yapılır: SharePoint komutu yürütme
   sunucu nesne modelini bir SharePoint araçları uzantısında kullanmak istiyorsanız, apı 'yi çağırmak için özel bir *SharePoint komutu* oluşturmanız gerekir. komutu tanımladıktan ve SharePoint araçları uzantınızı dağıttıktan sonra, uzantınız, SharePoint sunucusu nesne modeline çağrı yapmak için komutunu çalıştırabilir. Komutu yürütmek için, bir nesnenin ExecuteCommand yöntemlerinden birini kullanın <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> .

@@ -1,6 +1,6 @@
 ---
 title: Özel Galeriler | Microsoft Docs
-description: Visual Studio SDK 'da geliştirerek yönettiğiniz denetimleri, şablonları ve araçları özel bir galeri 'ye göndererek nasıl paylaşacağınızı öğrenin.
+description: Visual Studio SDK 'da geliştirerek yönettiğiniz denetimleri, şablonları ve araçları özel bir galeriye göndererek nasıl paylaşacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,14 +11,15 @@ ms.assetid: b6b3dee7-91c5-4556-9f69-0d56b675e83b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c64c5880fcdb1d6a1fb3d6fc7c71f55abf7cbbc1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b369996f59f91416cd0845e1b2b626e6dd1752d07935685a917589c382647c12
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069042"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121447856"
 ---
 # <a name="private-galleries"></a>Özel galeriler
 Yönettiğiniz denetimleri, şablonları ve araçları, kuruluşunuz için intranetteki *özel bir galeride* , aşağıdaki gibi paylaşabilirsiniz:
@@ -27,8 +28,8 @@ Yönettiğiniz denetimleri, şablonları ve araçları, kuruluşunuz için intra
 
 - Özel galeriyi açıklayan bir *. pkgdef* dosyası dağıtın. Özel bir galeri 'yi aynı anda birçok bilgisayara bağlamak isteyen yöneticiler için bu yapılandırmayı öneririz.
 
-## <a name="add-a-private-gallery-to-extensions-and-updates-in-visual-studio"></a>Visual Studio 'da uzantılara ve güncelleştirmelere özel galeri ekleme
- Özel Galeri kullanılabilir olduğunda, Visual Studio 'daki **uzantılara ve güncelleştirmelere** ekleyebilirsiniz.
+## <a name="add-a-private-gallery-to-extensions-and-updates-in-visual-studio"></a>Visual Studio içindeki uzantılara ve güncelleştirmelere özel galeri ekleme
+ Özel Galeri kullanılabilir olduğunda, Visual Studio içindeki **uzantılara ve güncelleştirmelere** ekleyebilirsiniz.
 
  ![Uzantı Yöneticisi Iletişim kutusu Ekle](../extensibility/media/em_adddialog.png "EM_AddDialog")
 
@@ -42,11 +43,11 @@ Yönettiğiniz denetimleri, şablonları ve araçları, kuruluşunuz için intra
 
 4. **Ad** alanına, Özel Galeri için bir ad girin, örneğin, `My Gallery` .
 
-5. **URL** alanına, Özel Galeri 'Yi barındıran Atom akışı veya SharePoint sitesinin URL 'sini girin.
+5. **url** alanına, Atom akışı veya özel galeri barındıran SharePoint sitesinin url 'sini girin.
 
     1. Ana bilgisayar özel galeriye bağlanan bir atom akışsudur, URL şuna benzer: `http://www.mywebsite/mygallery/atom.xml` .  Bu URL, bir dosyaya veya bir ağ yoluna başvurabilir.
 
-    2. Konak bir SharePoint sitesi ise, URL şuna benzer: `http://mysharepoint/sites/mygallery/forms/AllItems.aspx` .
+    2. ana bilgisayar bir SharePoint sitesi ise, URL şuna benzer: `http://mysharepoint/sites/mygallery/forms/AllItems.aspx` .
 
 ### <a name="manage-private-galleries"></a>Özel galerileri yönetme
  Yönetici, her bilgisayarda sistem kayıt defterini değiştirerek bir özel galeri 'yi aynı anda birçok bilgisayar için kullanılabilir hale getirir. Bunu gerçekleştirmek için, yeni kayıt defteri anahtarlarını ve bunların değerlerini açıklayan bir *. pkgdef* dosyası oluşturun.  Bu dosyanın biçimi aşağıdaki gibidir.
@@ -66,7 +67,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
  Daha fazla bilgi için bkz. [nasıl yapılır: özel galeri 'yi kayıt defteri ayarlarını kullanarak yönetme](../extensibility/how-to-manage-a-private-gallery-by-using-registry-settings.md).
 
 ## <a name="install-extensions-from-a-private-gallery"></a>Özel galerideki uzantıları yükler
- **Uzantılar ve güncelleştirmeler**' de özel bir galeriden Visual Studio uzantıları arayabilir ve yükleyebilirsiniz. Aşağıdaki adımlarda adlı özel bir galeri kullanılır `My Gallery` .
+ **uzantılar ve güncelleştirmeler**' de özel bir galeriden Visual Studio uzantıları arayabilir ve yükleyebilirsiniz. Aşağıdaki adımlarda adlı özel bir galeri kullanılır `My Gallery` .
 
  ![Uzantı Yöneticisi özel galeri yükleme](../extensibility/media/em_.png "EM_")
 

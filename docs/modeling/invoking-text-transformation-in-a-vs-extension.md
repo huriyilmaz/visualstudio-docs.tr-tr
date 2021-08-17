@@ -7,18 +7,19 @@ ms.topic: conceptual
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 71f376cbe0ffd6c2716802977f1570aa5036fcdb
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 844ccf7cf2984632e1ddf4d2c46db5e8103ad624
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386780"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061200"
 ---
 # <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>Visual Studio uzantısında metin dönüştürmeyi çağırma
 
-Bir menü komutu veya [etki alanına özgü dil](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)gibi bir Visual Studio uzantısı yazıyorsanız metin şablonlarını dönüştürmek için metin şablonu oluşturma hizmetini kullanabilirsiniz. [Stextşablon](/previous-versions/visualstudio/visual-studio-2012/bb932394(v=vs.110)) oluşturma hizmetini alın ve bunu [ıtextşablon](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))oluşturma 'ya dönüştürün.
+bir menü komutu veya [etki alanına özgü dil](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)gibi bir Visual Studio uzantısı yazıyorsanız metin şablonlarını dönüştürmek için metin şablonu oluşturma hizmetini kullanabilirsiniz. [Stextşablon](/previous-versions/visualstudio/visual-studio-2012/bb932394(v=vs.110)) oluşturma hizmetini alın ve bunu [ıtextşablon](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))oluşturma 'ya dönüştürün.
 
 ## <a name="get-the-text-templating-service"></a>Metin şablonu oluşturma hizmetini al
 
@@ -79,7 +80,7 @@ string result = t4.ProcessTemplate("",
 
 ## <a name="error-reporting-and-the-output-directive"></a>Hata raporlama ve çıkış yönergesi
 
-İşlem sırasında ortaya çıkan hatalar Visual Studio hata penceresinde görüntülenir. Ayrıca, [ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110))uygulayan bir geri çağırma belirterek hatalarla ilgili bildirim alabilirsiniz.
+işlem sırasında ortaya çıkan hatalar Visual Studio hata penceresinde görüntülenir. Ayrıca, [ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110))uygulayan bir geri çağırma belirterek hatalarla ilgili bildirim alabilirsiniz.
 
 Sonuç dizesini bir dosyaya yazmak istiyorsanız, şablondaki yönergede hangi dosya uzantısının ve kodlamasının belirtildiklerini bilmeniz gerekebilir `<#@output#>` . Bu bilgiler, geri çağırmanıza da geçirilir. Daha fazla bilgi için bkz. [T4 çıkış yönergesi](../modeling/t4-output-directive.md).
 
@@ -132,7 +133,7 @@ Kod, şuna benzer bir şablon dosyasıyla test edilebilir:
 Sample text.
 ```
 
-Derleyici Uyarısı, Visual Studio hata penceresinde görünür ve ayrıca öğesine bir çağrı oluşturur `ErrorCallback` .
+derleyici uyarısı Visual Studio hata penceresinde görünür ve aynı zamanda öğesine bir çağrı oluşturacaktır `ErrorCallback` .
 
 ## <a name="reference-parameters"></a>Başvuru parametreleri
 

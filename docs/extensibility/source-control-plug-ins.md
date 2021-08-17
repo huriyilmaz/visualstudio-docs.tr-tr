@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a16c639e069409bdb4004b1d8680a3361d65c3c04ca13c18c82e94ae1b52eab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: abc8c8f439fa104ae84de8ffdc6f8d96a0909998
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121259922"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028650"
 ---
 # <a name="source-control-plug-ins"></a>Kaynak Denetimi Eklentileri
 Kaynak Denetimi Eklentisi SDK'sı başvuru bölümü, kaynak denetim sistemlerinin ile tümleştirilemesi için tam arabirim belirtimi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] içerir. Kaynak denetimi eklentisinin tümleşik geliştirme ortamı (IDE) ile arabirim için uygulaması gereken çeşitli işlevlerin ve veri türlerinin söz dizimlerini ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] semantiklerini belirtir.

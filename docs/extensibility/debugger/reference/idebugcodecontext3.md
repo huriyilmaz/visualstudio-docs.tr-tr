@@ -9,17 +9,18 @@ ms.assetid: 524eb882-0ad5-4bfb-95eb-eb3abb3d0237
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4dd0ffb94f25ae8ac9566571a645d706fa224cd8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 502867256f90574c2a75791b447b76b56af3a638
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088321"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079793"
 ---
 # <a name="idebugcodecontext3"></a>IDebugCodeContext3
 Modül ve işlem arabirimlerinin alınmasını sağlamak için [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) arabirimini genişletir.

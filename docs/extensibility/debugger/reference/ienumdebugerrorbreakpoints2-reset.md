@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8fb797eb97a9d440893d23b9d00d883514cf58b32dec165cb5cd2ce3cdbfe79f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cad6ccd10f21466c8e1b5cd052f6b88333c2255c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415550"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029456"
 ---
 # <a name="ienumdebugerrorbreakpoints2reset"></a>IEnumDebugErrorBreakpoints2::Reset
 Numaralandırmayı ilk öğeye sıfırlar.

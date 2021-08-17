@@ -1,6 +1,6 @@
 ---
-description: Bu bağlı kesme noktası için geçerli isabet sayısını alır.
-title: IDebugBoundBreakpoint2::GetHitCount | Microsoft Docs
+description: Bu bağlantılı kesme noktası için geçerli isabet sayısını alır.
+title: 'IDebugBoundBreakpoint2:: GetHitCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 96c93e4a6006060849bab1daf2c0f2ec7d420590d719817a1acbe0b1d35402ba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8bc2fa014bb3ac8f58d61206c5bd828e0570c2ff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360670"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079928"
 ---
 # <a name="idebugboundbreakpoint2gethitcount"></a>IDebugBoundBreakpoint2::GetHitCount
-Bu bağlı kesme noktası için geçerli isabet sayısını alır.
+Bu bağlantılı kesme noktası için geçerli isabet sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,13 +44,13 @@ int GetHitCount(
 
 ## <a name="parameters"></a>Parametreler
 `pdwHitCount`\
-[out] Isabet sayısını döndürür.
+dışı İsabet sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Bağlı kesme noktası nesnesinin durumu olarak `E_BP_DELETED` ayarlanırsa `BPS_DELETED` (varsayılan değer BP_STATE [](../../../extensibility/debugger/reference/bp-state.md) döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. , `E_BP_DELETED` Bağlantılı kesme noktası nesnesinin durumunun `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesinin parçası) olarak ayarlanmış olup olmadığını döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Isabet sayısı, bu kesme noktası oturumun geçerli çalıştırması sırasında kaç kez çalıştırılacağıdır.
+ İsabet sayısı, bu kesme noktasının, oturumun geçerli çalıştırması sırasında kaç kez tetiklenme sayısıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

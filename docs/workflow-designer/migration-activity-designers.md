@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Geçiş Etkinliği Tasarımcıları
-description: Geçiş etkinliği tasarımcılarının 4 veya daha sonraki bir hedefi olan bir iş akışından iş akışı 3.0/3.5 etkinliklerini .NET Framework öğrenin.
+title: İş Akışı Tasarımcısı-geçiş etkinliği tasarımcıları
+description: .NET Framework 4 veya üstünü hedefleyen bir iş akışından iş akışı 3.0/3.5 etkinliklerini çağırmak için geçiş etkinlik tasarımcılarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,18 +11,18 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 663f6b743d02ea59f9615d4ce8314913c66b00506478b53d11fec6190703960b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2984ac045160a94d79e1399bea9b625e2267eb1c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121383761"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122092091"
 ---
 # <a name="migration-activity-designers"></a>Migration etkinlik tasarımcıları
 
-Geçiş etkinliği tasarımcıları, 4 veya sonraki bir hedefi hedef alan bir iş akışından iş akışı 3.0/3.5 .NET Framework için kullanılır.
+geçiş etkinliği tasarımcıları, .NET Framework 4 veya üstünü hedefleyen bir iş akışından iş akışı 3.0/3,5 etkinlikleri çağırmak için kullanılır.
 
-Bu bölümde yer alan konular, etkinlik tasarımcılarının nasıl İş Akışı Tasarımcısı sağlar.
+Bu bölümde yer alan konular İş Akışı Tasarımcısı etkinlik tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
@@ -44,4 +44,4 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
 - [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
-- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+- [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)

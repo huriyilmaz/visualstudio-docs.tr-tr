@@ -1,5 +1,5 @@
 ---
-description: Bekleyen bir kesme noktasının durumunu belirtir (henüz bağlanmamış bir kesme noktası).
+description: Bekleyen bir kesme noktası (henüz bağlı değil bir kesme noktası) durumunu belirtir.
 title: PENDING_BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: ac04ad72-fa92-4a15-ade2-0d0bbbadfc7f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d041042be92fe68dd6f0ea35bbdb4f6dd6d9ac7e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f6079a227be831f44476a233849b735fadfc9e82564ea39af52637343caaa28e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086384"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448591"
 ---
 # <a name="pending_bp_state"></a>PENDING_BP_STATE
-Bekleyen bir kesme noktasının durumunu belirtir (henüz bağlanmamış bir kesme noktası).
+Bekleyen bir kesme noktası (henüz bağlı değil bir kesme noktası) durumunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,26 +50,26 @@ public enum enum_PENDING_BP_STATE {
 
 ## <a name="fields"></a>Alanlar
  `PBPS_NONE`\
- Sıfır için yer tutucu. Bu değer hiçbir şekilde döndürülmez.
+ Sıfır için yer tutucu. Bu değer hiçbir zaman döndürülz.
 
  `PBPS_DELETED`\
- Bekleyen kesme noktasının silindiğini gösterir.
+ Bekleyen kesme noktası silindi gösterir.
 
  `PBPS_DISABLED`\
- Bekleyen kesme noktasının devre dışı olduğunu belirtir.
+ Bekleyen kesme noktası devre dışı olduğunu gösterir.
 
  `PBPS_ENABLED`\
- Bekleyen kesme noktasının etkin olduğunu gösterir.
+ Bekleyen kesme noktası etkin olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- `state` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapısının üyesi olarak kullanın.
+ Bu `state` yapının üyesi olarak [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

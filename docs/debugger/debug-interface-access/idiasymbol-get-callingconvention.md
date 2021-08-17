@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b9e4f010bede2e3c51369f4a31a30f6a1d18660ff30f7f867eee63cc2583c42d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2084a2cc135de453fd364b39512ca85455b6f128
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420793"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058805"
 ---
 # <a name="idiasymbolget_callingconvention"></a>IDiaSymbol::get_callingConvention
 Yöntem çağırma yöntemi göstergesini döndürür.

@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - azure
-ms.openlocfilehash: 7cb62fe0ac4725d035cb46e894ae10da70f0e541217254c81b2a649f4f571724
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 62ff5d26fe426055be88d8a3c28edbd06118f599
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121418303"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080409"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Linux üzerinde App Service kullanarak ASP.NET Core Visual Studio
 

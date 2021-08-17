@@ -11,17 +11,18 @@ ms.assetid: 60943782-aec7-4be2-b222-1984ed53a543
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0433f43f89fd3adf1495663149bc5d7bd6497409
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c21f2f69a8995d3b1467c4a77d1b782894b8f325947877bc1b34014770ab6074
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063519"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121451959"
 ---
 # <a name="idebugfunctionposition2getoffset"></a>IDebugFunctionPosition2::GetOffset
 Kaynak belgedeki işlevin konumunu alır.

@@ -1,6 +1,6 @@
 ---
-description: C++ AMP hızlandırıcı saplama işlevine karşılık gelen tüm hızlandırıcı işaretçisi etiketi değerlerini döndürür.
-title: 'IDiaSymbol:: get_acceleratorPointerTags | Microsoft Docs'
+description: Bir hızlandırıcı saplama işlevine karşılık gelen tüm hızlandırıcı işaretçisi C++ AMP değerlerini döndürür.
+title: IDiaSymbol::get_acceleratorPointerTags | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2620b47cdf732ea849d4e644e1fa621363c77a9ce4cfb77f0f97104c3233a710
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3bd2de4fe6599ec9dfc7d732a83dd4f88e04fabb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379985"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091063"
 ---
 # <a name="idiasymbolget_acceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
-C++ AMP hızlandırıcı saplama işlevine karşılık gelen tüm hızlandırıcı işaretçisi etiketi değerlerini döndürür.
+Bir hızlandırıcı saplama işlevine karşılık gelen tüm hızlandırıcı işaretçisi C++ AMP değerlerini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,21 +34,21 @@ HRESULT get_acceleratorPointerTags(
 #### <a name="parameters"></a>Parametreler
  `cnt`
 
-'ndaki Çıktı dizisinin boyutu `pPointerTags` .
+[in] Çıkış dizisinin `pPointerTags` boyutu.
 
  `pcnt`
 
-dışı C++ AMP hızlandırıcı saplama işlevindeki hızlandırıcı işaretçisi etiketlerinin sayısı.
+[out] C++ AMP hızlandırıcı saplama işlevinde hızlandırıcı işaretçisi etiketlerinin sayısı.
 
  `pPointerTags`
 
-dışı `DWORD`C++ AMP hızlandırıcı saplama işlevindeki hızlandırıcı işaretçisi etiket değerleriyle doldurulmuş bir dizi işaretçisi.
+[out] Hızlandırıcı `DWORD` saplama işlevinde hızlandırıcı işaretçisi etiket değerleriyle doldurulmuş C++ AMP işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- bu yöntem, `IDiaSymbol` C++ AMP hızlandırıcı saplama işlevine karşılık gelen bir arabirim üzerinde çağrılır.
+ Bu yöntem, bir C++ AMP `IDiaSymbol` hızlandırıcı saplama işlevine karşılık gelen bir arabirimde çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

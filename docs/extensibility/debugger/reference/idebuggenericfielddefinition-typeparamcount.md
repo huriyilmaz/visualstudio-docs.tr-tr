@@ -1,6 +1,6 @@
 ---
-description: Genel alanla ilişkili tür parametrelerinin sayısını alın.
-title: IDebugGenericFieldDefinition::TypeParamCount | Microsoft Docs
+description: Genel alanla ilişkili tür parametrelerinin sayısını alır.
+title: 'Idebuggenericfielddefinition:: TypeParamCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ca6e1fcdaa644ff1486d245ff0025077ed691ff48cdc2d2e6883c986553ab208
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d9c77cb9a29ba134c8cd7115c7f37b0bcb3cea1d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377593"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078927"
 ---
 # <a name="idebuggenericfielddefinitiontypeparamcount"></a>IDebugGenericFieldDefinition::TypeParamCount
-Genel alanla ilişkili tür parametrelerinin sayısını alın.
+Genel alanla ilişkili tür parametrelerinin sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,10 +45,10 @@ int TypeParamCount(
 [in, out] Tür parametrelerinin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Liste \<T> ise, bu yöntem 1 döndürür ve Liste ise \<T1,T2> bu yöntem 2 döndürür. Tür parametresi yoksa bu yöntem 0 döndürür.
+ Liste ise \<T> , bu yöntem 1 döndürür ve eğer liste ise \<T1,T2> , bu yöntem 2 değerini döndürür. Bu yöntem, hiçbir tür parametresi yoksa 0 döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

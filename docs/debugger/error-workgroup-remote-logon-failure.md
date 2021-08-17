@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b88700bf0e0b9a0b07e9806bdb1bb76ae99705801deeb23cc3f24605476b0f36
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c3784317df0b3fa46607f2055e29c7a9ccd62928
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391502"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080890"
 ---
 # <a name="error-workgroup-remote-logon-failure"></a>Hata: Çalışma Grubu Uzak Oturum Açma Başarısız
 Bu hata şunu okur:

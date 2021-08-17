@@ -10,17 +10,18 @@ ms.assetid: 06c66b87-db95-4400-ab26-5d33e743a439
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f66c8f460e284776f15e393a4adbc8bfd0ea9076
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5f00f5712591f1e526e053837a4a31b5dc950d88ec844f987ad8409c3595b43b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054146"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121377567"
 ---
 # <a name="idebugobjectisproxy"></a>IDebugObject::IsProxy
 Nesnenin saydam bir ara sunucu olup olmadığını belirler.

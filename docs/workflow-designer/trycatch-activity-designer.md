@@ -11,21 +11,22 @@ ms.assetid: 02a326c2-4009-442f-b7cb-e42121fd2992
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 23d9f1b0037600c6612a413cce7b089f6adbc7aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 662bea4838b06843bc529cd41adc3e2bf33425ca
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889310"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045768"
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch Etkinlik Tasarımcısı
 
 **TryCatch** etkinlik Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.TryCatch> .
 
 ## <a name="the-trycatch-activity"></a>TryCatch etkinliği
- <xref:System.Activities.Statements.TryCatch>Etkinlik <xref:System.Activities.Statements.TryCatch.Try%2A> , bir etkinlik, bir **Catch \<TException>** koleksiyonu ve bir etkinlik içerir <xref:System.Activities.Statements.TryCatch.Finally%2A> . <xref:System.Activities.Statements.Catch%601> **TException** türü bir <xref:System.Activities.Statements.Catch%601.ExceptionType%2A> ve içerir <xref:System.Activities.Statements.Catch%601.Action%2A> . Bunlar birlikte, tipik bir özel durum tabanlı hata işleme mekanizması uygulamak için kullanılır. <xref:System.Activities.Statements.TryCatch>Etkinlik, etkinliğini yürütmeye çalışır <xref:System.Activities.Statements.TryCatch.Try%2A> . <xref:System.Activities.Statements.TryCatch.Try%2A>Etkinlik herhangi bir özel durum oluşturursa, <xref:System.Activities.Statements.TryCatch> etkinlik özel durumu eşleştirmek için **catch<\> TException** koleksiyonunu kullanır. Bir eşleşme varsa, <xref:System.Activities.Statements.Catch%601.Action%2A> karşılık gelen **\<TException> catch** yürütülür ve özel durum için hata işleme mantığı görevi görür. <xref:System.Activities.Statements.TryCatch.Try%2A>Bölümdeki etkinlikler başarıyla tamamlandıysanız veya başarılı bir şekilde tamamlandıktan sonra etkinlik, <xref:System.Activities.Statements.TryCatch.Catches%2A> <xref:System.Activities.Statements.TryCatch> <xref:System.Activities.Statements.TryCatch.Finally%2A> etkinliğini yürütür. Daha fazla bilgi için bkz. [Windows iş akışı özel durumları](/dotnet/framework/windows-workflow-foundation/exceptions).
+ <xref:System.Activities.Statements.TryCatch>Etkinlik <xref:System.Activities.Statements.TryCatch.Try%2A> , bir etkinlik, bir **Catch \<TException>** koleksiyonu ve bir etkinlik içerir <xref:System.Activities.Statements.TryCatch.Finally%2A> . <xref:System.Activities.Statements.Catch%601> **TException** türü bir <xref:System.Activities.Statements.Catch%601.ExceptionType%2A> ve içerir <xref:System.Activities.Statements.Catch%601.Action%2A> . Bunlar birlikte, tipik bir özel durum tabanlı hata işleme mekanizması uygulamak için kullanılır. <xref:System.Activities.Statements.TryCatch>Etkinlik, etkinliğini yürütmeye çalışır <xref:System.Activities.Statements.TryCatch.Try%2A> . <xref:System.Activities.Statements.TryCatch.Try%2A>Etkinlik herhangi bir özel durum oluşturursa, <xref:System.Activities.Statements.TryCatch> etkinlik özel durumu eşleştirmek için **catch<\> TException** koleksiyonunu kullanır. Bir eşleşme varsa, <xref:System.Activities.Statements.Catch%601.Action%2A> karşılık gelen **\<TException> catch** yürütülür ve özel durum için hata işleme mantığı görevi görür. <xref:System.Activities.Statements.TryCatch.Try%2A>Bölümdeki etkinlikler başarıyla tamamlandıysanız veya başarılı bir şekilde tamamlandıktan sonra etkinlik, <xref:System.Activities.Statements.TryCatch.Catches%2A> <xref:System.Activities.Statements.TryCatch> <xref:System.Activities.Statements.TryCatch.Finally%2A> etkinliğini yürütür. daha fazla bilgi için bkz. [Windows iş akışı özel durumları](/dotnet/framework/windows-workflow-foundation/exceptions).
 
 ### <a name="using-the-trycatch-activity-designer"></a>TryCatch etkinlik tasarımcısını kullanma
 

@@ -17,12 +17,12 @@ ms.workload:
 author: kendrahavens
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6e5cd80c4523d74b2cf26887362e9bbffaa82d0f5369aa0f4666b02edc894a05
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6b14f78fa1e7e51cc2ea93f30eab8ee29e644949
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121352466"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060056"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Gezgini SSS
 

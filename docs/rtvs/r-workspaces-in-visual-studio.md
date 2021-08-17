@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: d6e5e7a8e12ec1b2d03b063c4c1378680081d5a4d68762aa6ba2327e5ce21d4b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ce6ab82bc2ea42a4b56ed6eb515343c9a9524101
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385542"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060602"
 ---
 # <a name="control-where-r-code-runs-with-workspaces"></a>Çalışma alanlarıyla R kodunun nerede çalıştırı olduğunu denetleme
 
@@ -134,4 +134,4 @@ Burada, **Çalıştırma sırasında dosyaları aktar özelliği** RTVS'nin proj
 
 ## <a name="copy-files-from-a-remote-workspace"></a>Uzak çalışma alanında yer alan dosyaları kopyalama
 
-R betiğiniz sunucuda dosya üretirse, işlevini kullanarak bu dosyaları istemciye geri `rtvs::fetch_file` kopyaabilirsiniz. Bu işlev, bilgisayarınıza kopyalamak istediğiniz dosyanın uzak yolunu ve isteğe bağlı olarak bilgisayarınızda hedef yolu kabul eder. Bir yol belirtmezseniz, dosya *%userprofile%\Downloads klasörünüze kopyalanır.*
+R betiğiniz sunucuda dosyalar oluşturursa, bu dosyaları işlevini kullanarak istemciye geri kopyalayabilirsiniz `rtvs::fetch_file` . Bu işlev, en azından, bilgisayarınıza kopyalamak istediğiniz dosyanın uzak yolunu ve isteğe bağlı olarak bilgisayarınızdaki hedef yolu kabul eder. Bir yol belirtmezseniz, dosya *%userprofile%\indirmeleri* klasörünüze kopyalanır.

@@ -7,18 +7,19 @@ ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 2bd4dd7f18ced67d1b6b1505859131d088709d2e
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: 03065c6cc2b7c9bf65bde4c4d55250b28fe9213c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114679718"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060524"
 ---
 # <a name="set-up-remote-workspaces"></a>Uzak çalışma alanlarını ayarlama
 
-Bu makalede SSL ve uygun bir R hizmeti ile uzak sunucu yapılandırma açıklanmıştır. Bu, Visual Studio için R Araçları (RTVS) sunucusunun uzak çalışma alanına bağlanmasına olanak sağlar.
+Bu makalede SSL ve uygun bir R hizmeti ile uzak sunucu yapılandırma açıklanmıştır. Bu, Visual Studio için R Araçları (RTVS) tarafından o sunucu üzerinde uzak çalışma alanına bağlanmaya olanak sağlar.
 
 ## <a name="remote-computer-requirements"></a>Uzak bilgisayar gereksinimleri
 
@@ -27,13 +28,13 @@ Bu makalede SSL ve uygun bir R hizmeti ile uzak sunucu yapılandırma açıklanm
 
 ## <a name="install-an-ssl-certificate"></a>SSL sertifikası yükleme
 
-RTVS, uzak sunucuyla yapılan tüm iletişimlerin HTTP üzerinden gerçekletir ve bunun için sunucuda SSL sertifikası gerekir. Güvenilen bir sertifika yetkilisi tarafından imzalanmış bir sertifika (önerilir) veya otomatik olarak imzalanan bir sertifika kullanabilirsiniz. (Otomatik olarak imzalanan bir sertifika, bağlıyken RTVS'nin uyarılara neden olur.) Bunlardan herhangi birini kullanarak, bunu bilgisayara yüklemeniz ve özel anahtarına erişime izin vermelisiniz.
+RTVS, uzak sunucuyla yapılan tüm iletişimlerin HTTP üzerinden gerçekletir ve bunun için sunucuda SSL sertifikası gerekir. Güvenilen bir sertifika yetkilisi tarafından imzalanmış bir sertifika (önerilir) veya otomatik olarak imzalanan bir sertifika kullanabilirsiniz. (Otomatik olarak imzalanan bir sertifika, bağlıyken RTVS'nin uyarılara neden olur.) Bunlardan herhangi birini kullanarak, bunu bilgisayara yüklemeniz ve özel anahtarına erişim izni vermelisiniz.
 
 ### <a name="obtain-a-trusted-certificate"></a>Güvenilen sertifika alma
 
 Güvenilen sertifika bir sertifika yetkilisi tarafından verildi (arka plan için [Wikipedia'da sertifika yetkililerine](https://en.wikipedia.org/wiki/Certificate_authority) bakın). Kamu kimlik kartı alma gibi, güvenilen bir sertifika verme işlemi de daha fazla işlem ve olası ücret gerektirir, ancak isteğin ve istekte bulunduranların orijinalliğini doğrular.
 
-Sertifikada olması gereken anahtar alanı, R sunucusu bilgisayarınızın tam etki alanı adıdır. Sertifika yetkilisi, sunucusunun ait olduğu etki alanı için yeni bir sunucu oluşturma yetkinizin kanıtını gerektirir.
+Sertifikada olması gereken anahtar alanı, R sunucu bilgisayarınızın tam etki alanı adıdır. Sertifika yetkilisi, sunucusunun ait olduğu etki alanı için yeni bir sunucu oluşturma yetkinizin kanıtını gerektirir.
 
 Daha fazla arka plan için [bkz. Wikipedia'da ortak](https://en.wikipedia.org/wiki/Public_key_certificate) anahtar sertifikaları.
 
@@ -43,9 +44,9 @@ SSL sertifikasının sunucuya el ile Windows. SSL sertifikası yüklemek için a
 
 ### <a name="obtain-a-self-signed-certificate-windows"></a>Otomatik olarak imzalanan sertifika alma (Windows)
 
-Güvenilen sertifikanız varsa bu bölümü atlayabilirsiniz. Güvenilir bir yetkiliden gelen sertifikayla karşılaştırıldığında, otomatik olarak imzalanan bir sertifika, kendiniz için bir kimlik kartı oluşturmaya benzer. Bu işlem elbette güvenilir bir yetkiliyle çalışmadan çok daha basittir, ancak güçlü kimlik doğrulamasına sahip değildir; başka bir ifadeyle saldırgan imzasız sertifika yerine kendi sertifikasını kullanabilir ve istemci ile sunucu arasındaki tüm trafiği yakalar. Bu *nedenle, otomatik olarak imzalanan sertifika yalnızca test senaryoları için, güvenilir* bir ağ üzerinde ve hiçbir zaman üretimde kullanılmadan kullanılmalıdır.
+Güvenilen sertifikanız varsa bu bölümü atlayabilirsiniz. Otomatik olarak imzalanan sertifika, güvenilen bir yetkilinin sertifikasıyla karşılaştırıldığında, kendiniz için bir kimlik kartı oluşturmaya benzer. Bu işlem elbette güvenilir bir yetkiliyle çalışmadan çok daha basittir, ancak güçlü kimlik doğrulamasına sahip değildir; başka bir ifadeyle saldırgan imzasız sertifika yerine kendi sertifikasını kullanabilir ve istemci ile sunucu arasındaki tüm trafiği yakalar. Bu *nedenle, otomatik olarak imzalanan sertifika yalnızca test senaryoları için, güvenilir* bir ağ üzerinde ve hiçbir zaman üretimde kullanılmadan kullanılmalıdır.
 
-Bu nedenle RTVS otomatik olarak imzalanan bir sertifika ile sunucuya bağlanırken her zaman aşağıdaki uyarıyı verir:
+Bu nedenle RTVS, otomatik olarak imzalanan bir sertifika ile sunucuya bağlanırken her zaman aşağıdaki uyarıyı verir:
 
 ![Otomatik olarak imzalanan sertifika uyarısı iletişim kutusu](media/workspaces-remote-self-signed-certificate-warning.png)
 
@@ -91,7 +92,7 @@ Paket, `rtvs-daemon` yüklemenin bir parçası olarak varsayılan olarak otomati
 
 ### <a name="obtain-a-self-signed-certificate-ubuntu"></a>Otomatik olarak imzalanan sertifika alma (Ubuntu)
 
-Otomatik olarak imzalanan sertifika kullanmanın avantajları ve riskleri için bkz. Windows bakın. Paket, `rtvs-daemon` yükleme sırasında otomatik olarak imzalanan sertifikayı üretir ve yapılandırıyor. Bunu yalnızca otomatik olarak oluşturulan otomatik olarak imzalanan sertifikayı değiştirmek isterseniz tamamlamanız gerekir.
+Otomatik olarak imzalanan sertifika kullanmanın avantajları ve riskleri için Windows bakın. Paket, `rtvs-daemon` yükleme sırasında otomatik olarak imzalanan sertifikayı üretir ve yapılandırıyor. Bunu yalnızca otomatik olarak oluşturulan otomatik olarak imzalanan sertifikayı değiştirmek isterseniz tamamlamanız gerekir.
 
 Otomatik olarak imzalanan bir sertifikayı kendiniz yapmak için:
 
@@ -116,7 +117,7 @@ Otomatik olarak imzalanan bir sertifikayı kendiniz yapmak için:
 
 ### <a name="configure-rtvs-daemon"></a>RTVS daemon'larını yapılandırma
 
-SSL sertifika dosyası yolu (PFX yolu) üzerinde */etc/rtvs/rtvsd.config.jsayar gerekir.* ve `X509CertificateFile` `X509CertificatePassword` dosyasını sırasıyla dosya yolu ve parola ile güncelleştirin.
+SSL sertifika dosyası yolu (PFX yolu) *üzerinde /etc/rtvs/rtvsd.config.jsayar gerekir.* ve `X509CertificateFile` `X509CertificatePassword` dosyasını sırasıyla dosya yolu ve parola ile güncelleştirin.
 
 ```json
 {
@@ -149,7 +150,7 @@ R kodunu çalıştırmak için uzak bilgisayarda aşağıdaki gibi bir R yorumla
     - *%PROGRAMFILES%\Visual Studio için R Araçları\1.0 \\* içinde bir klasör oluşturun ve gerekli tüm ikili dosyaları kopyalayın.
     - Otomatik `RHostBrokerService` olarak başlayacak şekilde yükleyin ve `RUserProfileService` yapılandırabilirsiniz.
     - Hizmeti otomatik `seclogon` olarak başlayacak şekilde yapılandırma.
-    - Varsayılan *Microsoft.R.Host.exe* *Microsoft.R.Host.Broker.exe* güvenlik duvarı gelen kurallarına varsayılan bağlantı noktası 5444'te güvenlik duvarı ekleme ve güvenlik duvarı ekleme.
+    - Varsayılan *Microsoft.R.Host.exe* *5444Microsoft.R.Host.Broker.exe* güvenlik duvarı gelen kurallarına güvenlik duvarı ekleme ve güvenlik duvarı ekleme.
 
 Bilgisayar yeniden başlatıldığında R hizmetleri otomatik olarak başlatılır:
 
@@ -179,11 +180,11 @@ Uzak bilgisayarda çalışan R hizmetleriyle kullanıcı hesapları oluşturman�
 
 1. Güvenlik duvarı kuralları: Varsayılan olarak, `R Host Broker` TCP bağlantı noktası 5444'te dinler. Bu nedenle, hem gelen Windows giden trafik için etkin güvenlik duvarı kuralları olduğundan emin olun (paketleri ve benzer senaryoları yüklemek için giden gereklidir).  R hizmetleri yükleyicisi, yerleşik güvenlik duvarı için bu kuralları Windows ayarlar. Ancak üçüncü taraf güvenlik duvarı kullanıyorsanız el ile 5444 bağlantı noktasını `R Host Broker` açın.
 
-1. Azure yapılandırması: Uzak bilgisayarınız Azure'da bir sanal makine ise, azure ağı içinde gelen trafik için de 5444 bağlantı noktasını açın. Bu bağlantı noktası, güvenlik duvarının Windows açar. Ayrıntılar için Azure [belgelerinde Ağ güvenlik grubu ile ağ](/azure/virtual-network/virtual-networks-nsg) trafiğini filtreleme'ye bakın.
+1. Azure yapılandırması: Uzak bilgisayarınız Azure'da bir sanal makine ise, Azure ağı içinde gelen trafik için de 5444 bağlantı noktasını açın. Bu bağlantı noktası, güvenlik duvarının Windows açar. Ayrıntılar için Azure [belgelerinde Ağ güvenlik grubu ile ağ](/azure/virtual-network/virtual-networks-nsg) trafiğini filtreleme'ye bakın.
 
 1. R Ana Bilgisayar Aracısı'nda hangi SSL sertifikasının yüklensin? Sertifikayı bir Intranet sunucusuna yüklüyorsanız, büyük olasılıkla sunucunuza tam etki alanı adı NETBIOS adıyla aynı olur. Bu durumda, yüklenen varsayılan sertifika olduğu için, hiçbir şey yapmak zorunda değildir.
 
-    Ancak sertifikanızı İnternet'e yönelik bir sunucuya (Azure VM gibi) yüklüyorsanız, İnternet'e yönelik sunucunun FQDN'si hiçbir zaman NETBIOS adıyla aynı olduğundan, tam etki alanı adını (FQDN) kullanın.
+    Ancak sertifikanızı İnternet'e yönelik bir sunucuya (Azure VM gibi) yüklüyorsanız, İnternet'e yönelik bir sunucunun FQDN'si hiçbir zaman NETBIOS adıyla aynı olduğundan, tam etki alanı adını (FQDN) kullanın.
 
     FQDN 'yi kullanmak için, R Services 'ın yüklü olduğu yere gidin (varsayılan olarak,*Visual Studio \ 1,0 için uzak hizmet* ), *Microsoft.R.Host.Broker.Config.js* dosyayı bir metin düzenleyicisinde açın ve içeriğini aşağıdaki gibi değiştirerek sunucunuzun FQDN 'sine her şeyi ekleyerek, örneğin `foo.westus.cloudapp.azure.com` :
 

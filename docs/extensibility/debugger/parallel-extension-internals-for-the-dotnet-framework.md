@@ -10,16 +10,17 @@ ms.assetid: 93e07cfa-91fa-464c-b866-8bf5570411df
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 858bf85e65cd761e7f881856286578495db6143a
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 12588d5c9fb3957ce83202afa856a08436facb48
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903014"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080266"
 ---
-# <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework için paralel uzantı iç .NET Framework
+# <a name="parallel-extension-internals-for-the-net-framework"></a>Ağ için paralel uzantı iç .NET Framework
 Bu bölümde, paralel uzantılar için özel bir hata ayıklayıcı uygulamanıza yardımcı olan sınıfların iç türleri, yöntemleri ve alanları .NET Framework.
 
 ## <a name="in-this-section"></a>Bu bölümde

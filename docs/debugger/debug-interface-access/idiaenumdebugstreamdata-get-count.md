@@ -11,14 +11,15 @@ ms.assetid: 74ff3a85-3cc2-4aa8-ad9a-7f335b795ed1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ba28ff7deff0135d7a6afddf15c44c92d107ad4
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f84306c1bf7527d6cf96389f012303d769097852
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158178"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044739"
 ---
 # <a name="idiaenumdebugstreamdataget_count"></a>IDiaEnumDebugStreamData::get_Count
 Hata ayıklama veri akışındaki sayı kayıtlarını alır.

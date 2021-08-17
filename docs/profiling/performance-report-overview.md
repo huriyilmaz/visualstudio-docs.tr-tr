@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 360055d8ee6b1c373313ed674f241f4c3262ddeddecc2a9ba823dae873487baf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a115c87e42f62244687038ab20302b26cbd2a7ee
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410443"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027467"
 ---
 # <a name="performance-report-overview"></a>Performans raporuna genel bakış
 Visual Studio Team System development Edition tümleşik geliştirme ortamının (ıde) **performans raporu** penceresinde bir performans oturumunun profil oluşturma verilerini görüntüleyebilirsiniz. Profil oluşturma verileri. vsp ve. vsps dosyalarına kaydedilir. Rapor görünümü pencereleri, uygulama performansı sorunlarını görüntülemenizi ve analiz etmenize olanak tanır.

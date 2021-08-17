@@ -6,12 +6,12 @@ ms.date: 03/23/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 831db131e8633a1e3c2f3257404f243d27b26e24
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: bd07fa561562a5bc92bafa114e3fe3be539c8a338966408421e347e7d0d82493
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115095214"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122028134"
 ---
 ## <a name="get-support"></a>Destek alın
 

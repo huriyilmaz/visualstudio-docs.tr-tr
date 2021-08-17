@@ -1,5 +1,5 @@
 ---
-title: Yük testine çalışma ayarları ekleme
+title: yük testine çalıştırma Ayarlar ekleme
 description: Testin süresi, sonuç koleksiyonu ayrıntısı düzeyi ve toplanan sayaç kümeleri dahil olmak üzere yük testi için ek ayarlar kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
@@ -11,12 +11,13 @@ ms.assetid: 257d2a24-d582-4cfe-8b2b-51f51ba9cc84
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 5a7077442b3b823423edc09284c59979cc98a6d2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: f52eb09c35d54c37303147ea9698ce5fd2b9b744
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908630"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122092637"
 ---
 # <a name="how-to-add-additional-run-settings-to-a-load-test"></a>Nasıl yapılır: yük testine ek çalışma ayarları ekleme
 
@@ -30,11 +31,11 @@ Yük testini farklı koşullarda çalıştırabilmeniz için, farklı özellik a
 
 1. Bir yük testi açın.
 
-2. Seçim **Çalışma ayarları** klasörünü genişletin.
+2. Seçim **çalıştır Ayarlar** klasörünü genişletin.
 
-3. **Çalışma ayarları** klasörüne sağ tıklayın ve **çalıştırma ayarları ekle**' yi seçin.
+3. **çalıştır Ayarlar** klasörüne sağ tıklayın ve **çalıştır Ayarlar ekle**' yi seçin.
 
-     **Çalışma ayarları** klasörüne yeni bir çalışma ayarı eklenir.
+     **run Ayarlar** klasörüne yeni bir çalışma ayarı eklenir.
 
 4. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
 

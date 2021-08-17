@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 7e09344c0a95586f63bf3eca45582b0836b576030b21199341367ca59fe738cb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e2045699cf0ce48edef3c9186cea3135c0a54dab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425721"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060342"
 ---
 # <a name="bdc-model-design-tools-overview"></a>IVB modeli tasarım araçlarına genel bakış
   IVB tasarımcısını, **IVB yöntemi ayrıntıları** penceresini ve **BDC Gezginini** kullanarak bir Iş verileri bağlantısı (BDC) modeli tasarlayabilirsiniz.

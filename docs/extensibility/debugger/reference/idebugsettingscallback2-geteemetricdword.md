@@ -9,17 +9,18 @@ ms.assetid: c5f8f417-0ef0-4fd0-a779-b0a8ead4effe
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc2c1d773bd2bbfcae2aad32a0992ab809ff96d6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2a08181747c347160b3393f8762b910f791ace0c506b136379ed3d4aea1e19b1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075633"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448968"
 ---
 # <a name="idebugsettingscallback2geteemetricdword"></a>IDebugSettingsCallback2::GetEEMetricDword
 İfade değerlendiricisi 'nin belirtilen ölçüsüne karşılık gelen bir değer alır.

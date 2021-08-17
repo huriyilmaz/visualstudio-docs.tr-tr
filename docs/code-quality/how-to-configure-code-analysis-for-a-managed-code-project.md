@@ -1,7 +1,7 @@
 ---
-title: Kod analizini yapılandırma
+title: Code Analysis Yapılandır
 ms.date: 04/04/2018
-description: Visual Studio eski kod analizinin kullandığı kural kümesini nasıl yapılandıracağınızı öğrenin. Bir çözümdeki bir veya birden çok projeye nasıl kural kümesi uygulanacağını öğrenin.
+description: eski kod analizinin kullandığı Visual Studio kural kümesini nasıl yapılandıracağınızı öğrenin. Bir çözümdeki bir veya birden çok projeye nasıl kural kümesi uygulanacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
@@ -18,41 +18,42 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8b76678b1e5c0f53502e24f8baee87ede3bd3ef6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 645441b8961ca84534bd9f4a503189ceb2cb5ab3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860184"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122122156"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için eski Analizi yapılandırma
 
-Visual Studio 'da, yönetilen bir kod projesine uygulamak üzere kod analizi [kural kümeleri](../code-quality/rule-set-reference.md) listesinden seçim yapabilirsiniz. Varsayılan olarak, **En düşük önerilen kurallar** kural kümesi seçilidir, ancak isterseniz farklı bir kural kümesi uygulayabilirsiniz. Kural kümeleri, bir çözümdeki bir veya birden çok projeye uygulanabilir.
+Visual Studio, yönetilen bir kod projesine uygulamak için kod analizi [kural kümeleri](../code-quality/rule-set-reference.md) listesinden seçim yapabilirsiniz. Varsayılan olarak, **En düşük önerilen kurallar** kural kümesi seçilidir, ancak isterseniz farklı bir kural kümesi uygulayabilirsiniz. Kural kümeleri, bir çözümdeki bir veya birden çok projeye uygulanabilir.
 
 > [!NOTE]
-> Bu makale, [.net Compiler platform tabanlı kod Çözümleyicileri](use-roslyn-analyzers.md)için değil, eski analizler için geçerlidir.
+> bu makale, [.NET Compiler Platform tabanlı kod çözümleyicileri](use-roslyn-analyzers.md)için değil, eski analizler için geçerlidir.
 
 ## <a name="configure-a-rule-set-for-a-net-framework-project"></a>.NET Framework projesi için bir kural kümesi yapılandırma
 
-1. Projenin özellik sayfalarındaki **Kod Analizi** sekmesini açın. Bunu aşağıdaki yöntemlerle yapabilirsiniz:
+1. projenin özellik sayfalarındaki **Code Analysis** sekmesini açın. Bunu aşağıdaki yöntemlerle yapabilirsiniz:
 
-   - **Çözüm Gezgini**, projeyi seçin. Menü çubuğunda **Çözümle**  >    >  **Kod analizini Yapılandır ' ı seçin. \<projectname>**
+   - **Çözüm Gezgini**, projeyi seçin. menü çubuğunda **analiz**  >  **Code Analysis**  >  **\<projectname>** yapılandır ' ı seçin.
 
-   - **Çözüm Gezgini** ' de projeye sağ tıklayın ve **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesini seçin.
+   - **Çözüm Gezgini** ' de projeye sağ tıklayın ve **özellikler**' i seçin ve ardından **Code Analysis** sekmesini seçin.
 
 2. **Yapılandırma** ve **Platform** listelerinde, derleme yapılandırması ve hedef platform ' u seçin.
 
 ::: moniker range="vs-2017"
 
-3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için **derlemede Kod analizini etkinleştir**' i seçin. Kod analizini, kod analizi çalıştırma kodu analizini **Çözümle**  >    >  **' \<projectname>** i seçerek el ile de çalıştırabilirsiniz.
+3. projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde kod analizini çalıştırmak için, **derlemede Code Analysis etkinleştir**' i seçin. kod analizini ayrıca,   >  **çalıştır Code Analysis** çalıştır '  >  **\<projectname>** i seçerek el ile de çalıştırabilirsiniz Code Analysis.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için, **ikili çözümleyiciler** bölümündeki **derlemede Çalıştır** ' ı seçin. Eski Kod analizini el ile de çalıştırabilirsiniz, daha fazla ayrıntı için bkz. [nasıl yapılır: yönetilen kod Için el Ile eski kod analizini çalıştırma](how-to-run-legacy-code-analysis-manually-for-managed-code.md) .
+3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için, **ikili çözümleyiciler** bölümündeki **derlemede Çalıştır** ' ı seçin. eski kod analizini el ile de çalıştırabilirsiniz, daha fazla ayrıntı için bkz. [nasıl yapılır: eski Code Analysis yönetilen kod için el ile çalıştırma](how-to-run-legacy-code-analysis-manually-for-managed-code.md) .
 
 ::: moniker-end
 
@@ -83,11 +84,11 @@ Visual Studio 'da, yönetilen bir kod projesine uygulamak üzere kod analizi [ku
 
 Varsayılan olarak, bir çözümün tüm yönetilen projelerine, *Microsoft 'un önerilen en düşük kural* kodu çözümleme kuralı kümesi atanır. Çözümün projelerine atanmış kural kümelerini çözüm için **Özellikler** iletişim kutusunda değiştirebilirsiniz.
 
-1. Visual Studio 'da çözümü açın.
+1. Çözümü Visual Studio açın.
 
-2. **Çözümle** menüsünde, **çözüm Için kod analizini Yapılandır**' ı seçin.
+2. **çözümle** menüsünde, **çözüm için Code Analysis yapılandır**' ı seçin.
 
-3. Gerekirse, **ortak özellikler**' i genişletin ve ardından **Kod Analizi ayarları**' nı seçin.
+3. gerekirse, **ortak özellikler**' i genişletin ve ardından **Code Analysis Ayarlar**' ni seçin.
 
 4. Bir veya daha fazla proje için bir kural kümesi belirtebilirsiniz:
 
