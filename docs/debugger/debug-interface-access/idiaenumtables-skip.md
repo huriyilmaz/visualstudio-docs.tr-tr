@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 54cddc5df34b4aa80dfba71326f61e85a7fab4fa194d7c1fe0a2dee0e93b79f3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c2a40bf5a68836f4c1baf4c19b9b417e71795e9a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345079"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091160"
 ---
 # <a name="idiaenumtablesskip"></a>IDiaEnumTables::Skip
 Sabit Listesi dizisinde belirtilen sayıda tabloyu atlar.

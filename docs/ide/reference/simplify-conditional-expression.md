@@ -7,16 +7,17 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc05aa1026560f91f9a31080ace0b2c9c9319357
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3784e6ac94440c433220432cd0b14c45254e8f14
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957575"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056218"
 ---
 # <a name="simplify-conditional-expression-refactoring"></a>Koşullu ifade yeniden düzenlemeyi basitleştirme
 

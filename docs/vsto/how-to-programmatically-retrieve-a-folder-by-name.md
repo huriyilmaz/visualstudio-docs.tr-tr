@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılanlar: Program aracılığıyla klasör adı ile alma'
-description: Program aracılığıyla bir klasörü Visual Studio ve ardından klasörün içeriğini görüntülemek için Visual Studio'ı nasıl kullanabileceğinizi öğrenin.
+description: Bir klasörü adıyla program Visual Studio ve ardından klasörün içeriğini görüntülemek için Visual Studio'i nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to

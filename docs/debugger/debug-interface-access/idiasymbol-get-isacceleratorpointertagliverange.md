@@ -1,6 +1,6 @@
 ---
-description: simgenin bir C++ AMP hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için açıklama aralığı simgesine karşılık geldiğini belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_isAcceleratorPointerTagLiveRange | Microsoft Docs'
+description: C++ AMP Accelerator için derlenmiş kodda işaretçi değişkeninin etiket bileşeninin tanım aralığı simgesine karşılık gelen sembolünü belirten bir bayrak C++ AMP alınır.
+title: IDiaSymbol::get_isAcceleratorPointerTagLiveRange | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b42f2837113596b133dae93569645503bea91f2facc3200f15f5751716b8998
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b65e31e2e6d86711b576023ff0f70877e29cdd03
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454746"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031213"
 ---
 # <a name="idiasymbolget_isacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
-simgenin bir C++ AMP hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.
+C++ AMP Accelerator için derlenmiş kodda işaretçi  değişkeninin etiket bileşeninin tanım aralığı simgesine karşılık gelen simgeyi belirten bir bayrak alınır. Tanım aralığı simgesi, bir adres aralığı için değişkenin konumudür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_isAcceleratorPointerTagLiveRange(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `BOOL` Simgenin, açıklama aralığı simgesine karşılık geldiğini gösteren bir işaretçisi.
+[out] Sembolün tanım `BOOL` aralığı simgesine karşılık gelen bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

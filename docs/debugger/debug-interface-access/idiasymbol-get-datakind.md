@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d5c5b1ea4388417fcec6c6961f7dffc6a9fe47751b673c41bbe1d64653d325
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 66230edb65f40eec20d59ad233fecd838bba057f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454794"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090999"
 ---
 # <a name="idiasymbolget_datakind"></a>IDiaSymbol::get_dataKind
 Bir veri simgesinin değişken sınıflandırmasını alan.

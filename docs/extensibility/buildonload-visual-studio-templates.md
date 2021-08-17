@@ -1,5 +1,5 @@
 ---
-title: BuildOnLoad özniteliği ve öğesi (Visual Studio şablonları)
+title: buildonload özniteliği ve öğesi (Visual Studio şablonları)
 titleSuffix: ''
 description: BuildOnLoad özniteliği ve öğesi hakkında bilgi edinin ve oluşturulduktan sonra projenin oluşturulup derlenmeyeceğini nasıl belirtir.
 ms.custom: SEO-VS-2020
@@ -17,12 +17,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8eb563e765c3d50950f61a0ca49e5349a0e7249a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 912616d180d732d987a2ff5aa16fbd522458cafc5b4250ca89fd53bd36867977
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068186"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452660"
 ---
 # <a name="buildonload-attribute-and-element"></a>BuildOnLoad özniteliği ve öğesi
 
@@ -46,7 +46,7 @@ Oluşturulduktan sonra projenin hemen oluşturulup derlenmeyeceğini belirtir. *
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
 
@@ -90,4 +90,4 @@ Aşağıdaki örnek, **Buildonload** bir öğe olarak kullanıldığında bir C#
 - [BuildProjectOnload öğesi](buildprojectonload-element-visual-studio-templates.md)
 - [TemplateContent öğesi](../extensibility/templatecontent-element-visual-studio-templates.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)

@@ -1,6 +1,6 @@
 ---
 title: ItemGroup öğesi (MSBuild) | Microsoft Docs
-description: Kullanıcı tanımlı öğe öğeleri kümesi içeren MSBuild ItemGroup öğesi hakkında bilgi edinin. Her öğe bir ItemGroup 'un alt öğesi olmalıdır.
+description: kullanıcı tanımlı öğe öğeleri kümesi içeren MSBuild ıtemgroup öğesi hakkında bilgi edinin. Her öğe bir ItemGroup 'un alt öğesi olmalıdır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: aac894e3-a9f1-4bbc-a796-6ef07001f35b
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: eff27467aeea5068f3ec086b490ca9c735861549
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 69fc6afd5a6dc7c5c9d51ae5c57afdbfd2c6847f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913848"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077263"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup öğesi (MSBuild)
 
-Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. Bir MSBuild projesinde kullanılan her öğe, bir öğesinin alt öğesi olarak belirtilmelidir `ItemGroup` .
+Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. bir MSBuild projesinde kullanılan her öğe, bir öğesinin alt öğesi olarak belirtilmelidir `ItemGroup` .
 
 \<Project>
 \<ItemGroup>
@@ -91,12 +92,12 @@ Aşağıdaki kod örneği, Kullanıcı tanımlı öğe koleksiyonlarını göste
 
 Basit bir proje dosyasında, normalde tek bir `ItemGroup` öğesi kullanırsınız, ancak birden çok öğe de kullanabilirsiniz `ItemGroup` . Birden çok `ItemGroup` öğe kullanıldığında, öğeler tek bir halinde birleştirilir `ItemGroup` . Örneğin, bazı öğeler `ItemGroup` içeri aktarılan bir dosyada tanımlanan ayrı bir öğe tarafından bulunabilir.
 
-ItemGroups özniteliği kullanılarak uygulanmış koşullara sahip olabilir `Condition` . Bu durumda, öğeler yalnızca koşul karşılandığında öğe listesine eklenir. Bkz. [MSBuild koşulları](msbuild-conditions.md)
+ItemGroups özniteliği kullanılarak uygulanmış koşullara sahip olabilir `Condition` . Bu durumda, öğeler yalnızca koşul karşılandığında öğe listesine eklenir. [MSBuild koşullara](msbuild-conditions.md) bakın
 
-`Label`Özniteliği, derleme davranışlarını denetlemek için bir yöntem olarak bazı yapı sistemlerinde kullanılır. Bu ayarı, daha fazla anlaşılır MSBuild betikleri oluşturmanın bir yolu olarak veya derleme eylemlerini etkileyen bir denetim ayarı olarak yalnızca bildirimlerde kullanabilirsiniz.
+`Label`Özniteliği, derleme davranışlarını denetlemek için bir yöntem olarak bazı yapı sistemlerinde kullanılır. bunu yalnızca bildirimlerinde, daha fazla anlaşılır MSBuild betikler oluşturmanın bir yolu olarak veya derleme eylemlerini etkilemek için bir denetim ayarı olarak kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Öğeler](../msbuild/msbuild-items.md)
 - [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)

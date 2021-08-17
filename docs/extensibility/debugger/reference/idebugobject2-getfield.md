@@ -1,6 +1,6 @@
 ---
 description: Bu nesnenin türünü alır.
-title: 'IDebugObject2:: GetField | Microsoft Docs'
+title: IDebugObject2::GetField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e3ad75a3bb1361d0b3f9625fa5fcaa989b75220ee8d8ed20892831fcb962e20c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0377f644a6d1eebdd03f5edd93a524320d7fad7e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307277"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043116"
 ---
 # <a name="idebugobject2getfield"></a>IDebugObject2::GetField
 Bu nesnenin türünü alır.
@@ -43,10 +43,10 @@ int GetField(
 
 ## <a name="parameters"></a>Parametreler
 `ppField`\
-dışı Null değer değilse bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
+[out] Null değer [yoksa bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Bir alan nesnenin türünü açıklar.

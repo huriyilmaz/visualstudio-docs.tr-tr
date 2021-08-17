@@ -1,6 +1,6 @@
 ---
 title: .mdf dosyalarını yükseltme
-description: Visual Studio 'nun daha yeni bir sürümünü yükledikten sonra bir veritabanı dosyasını (. mdf) yükseltme seçeneklerini gözden geçirin.
+description: Veritabanı dosyasının (.mdf) yeni bir sürümünü yükledikten sonra yükseltme seçeneklerini gözden Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,104 +14,105 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: cbea7761ed5f36265464f2afe9a64550ddc5e62a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8a84ef3c52092feab447dfb26110129f89b1a766
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866313"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031581"
 ---
 # <a name="upgrade-mdf-files"></a>.mdf dosyalarını yükseltme
 
-Bu konu, Visual Studio 'nun daha yeni bir sürümünü yükledikten sonra bir veritabanı dosyasını (*. mdf*) yükseltme seçeneklerini açıklamaktadır. Aşağıdaki görevler için yönergeler içerir:
+Bu konuda, yeni bir veritabanı dosyası yükledikten sonra veritabanı dosyasını (*.mdf*) yükseltme seçenekleri Visual Studio. Aşağıdaki görevler için yönergeler içerir:
 
-- Bir veritabanı dosyasını SQL Server Express LocalDB 'nin daha yeni bir sürümünü kullanacak şekilde yükseltin
+- LocalDB'nin daha yeni bir sürümünü kullanmak için veritabanı SQL Server Express yükseltme
 
-- SQL Server Express daha yeni bir sürümünü kullanmak için bir veritabanı dosyasını yükseltin
+- Veritabanı dosyasını daha yeni bir sürümü kullanmak için SQL Server Express
 
-- Visual Studio 'da bir veritabanı dosyası ile çalışın, ancak SQL Server Express veya LocalDB 'nin daha eski bir sürümüyle uyumluluğu koruyun
+- Visual Studio'de bir veritabanı dosyasıyla çalışma ama SQL Server Express veya LocalDB'nin eski bir sürümüyle uyumluluğu koruma
 
-- Varsayılan veritabanı altyapısını SQL Server Express yap
+- Varsayılan SQL Server Express altyapısını oluşturun
 
-SQL Server Express veya LocalDB 'nin eski bir sürümü kullanılarak oluşturulmuş bir veritabanı dosyasını (*. mdf*) içeren bir projeyi açmak Için Visual Studio 'yu kullanabilirsiniz. Ancak, projenizi Visual Studio 'da geliştirmeye devam etmek için, bu SQL Server Express veya LocalDB sürümünün Visual Studio ile aynı makineye yüklenmiş olması veya veritabanı dosyasını yükseltmeniz gerekir. Veritabanı dosyasını yükseltirseniz, SQL Server Express veya LocalDB 'nin eski sürümlerini kullanarak bu dosyaya erişemeyeceksiniz.
+Visual Studio veya LocalDB'nin eski bir sürümü kullanılarak oluşturulmuş bir veritabanı dosyası (*.mdf*) içeren bir projeyi açmak için SQL Server Express kullanabilirsiniz. Ancak projenizi Visual Studio'de geliştirmeye devam etmek için SQL Server Express veya LocalDB sürümünün Visual Studio makinede yüklü olması veya veritabanı dosyasını yükseltmeniz gerekir. Veritabanı dosyasını yükseltersiniz, eski SQL Server Express veya LocalDB sürümlerini kullanarak dosyaya erişesiniz.
 
-Ayrıca, dosyanın sürümü şu anda yüklü olan SQL Server Express veya LocalDB örneğiyle uyumlu değilse, SQL Server Express veya LocalDB 'nin önceki bir sürümüyle oluşturulmuş bir veritabanı dosyasını yükseltmeniz istenebilir. Bu sorunu çözmek için, Visual Studio dosyayı yükseltmenizi ister.
+Dosyanın sürümü şu anda yüklü olan SQL Server Express veya LocalDB örneğiyle uyumlu değilse, önceki bir SQL Server Express veya LocalDB sürümü aracılığıyla oluşturulmuş bir veritabanı dosyasını yükseltmeniz de istenebilirsiniz. Sorunu çözmek için Visual Studio dosyayı yükseltmeniz istenir.
 
 > [!IMPORTANT]
-> Yükseltmeden önce veritabanı dosyasını yedeklemenizi öneririz.
+> Yükseltmeden önce veritabanı dosyasını yeniden yüklemenizi öneririz.
 
 > [!WARNING]
-> LocalDB 2014 (V12) 32 bit içinde oluşturulan bir *. mdf* dosyasını localdb 2016 (v13) veya sonraki bir sürüme yükseltirseniz, dosyayı LocalDB 'nin 32 bit sürümünde yeniden açamazsınız.
+> LocalDB 2014 (V12) 32 bit'te oluşturulan *bir .mdf* dosyasını LocalDB 2016 (V13) veya sonraki bir sürümüne yükseltecek olursanız, dosyayı LocalDB'nin 32 bit sürümünde yeniden açasınız.
 
-Bir veritabanını yükseltmeden önce aşağıdaki ölçütleri göz önünde bulundurun:
+Veritabanını yükseltmeden önce aşağıdaki ölçütleri göz önünde oluşturun:
 
-- Daha eski bir sürümde ve Visual Studio 'nun daha yeni bir sürümünde projeniz üzerinde çalışmak istiyorsanız yükseltmeyin.
+- Projeniz üzerinde hem eski hem de daha yeni bir sürümde çalışmak için yükseltme Visual Studio.
 
-- Uygulamanız LocalDB yerine SQL Server Express kullanan ortamlarda kullanılacaksa, yükseltmeyin.
+- Uygulamanız LocalDB yerine SQL Server Express ortamlarda kullanılacaksa yükseltmeyin.
 
-- LocalDB bunları kabul etmediğinden, uygulamanız uzak bağlantılar kullanıyorsa yükseltmeyin.
+- LocalDB bunları kabul etmey olduğundan, uygulamanız uzak bağlantılar kullanıyorsa yükseltmeyin.
 
-- Uygulamanız Internet Information Services (IIS) kullanıyorsa yükseltmeyin.
+- Uygulamanız Internet Information Services (IIS) bağlı ise yükseltmeyin.
 
-- Veritabanı uygulamalarını bir korumalı alan ortamında test etmek istiyorsanız ancak veritabanını yönetmek istemiyorsanız yükseltmeyi düşünün.
+- Korumalı alan ortamında veritabanı uygulamalarını test etmek ancak veritabanını yönetmek istemiyorsanız yükseltmeyi göz önünde bulundurabilirsiniz.
 
-### <a name="to-upgrade-a-database-file-to-use-the-localdb-version"></a>Bir veritabanı dosyasını LocalDB sürümünü kullanacak şekilde yükseltmek için
+### <a name="to-upgrade-a-database-file-to-use-the-localdb-version"></a>Bir veritabanı dosyasını LocalDB sürümünü kullanmak üzere yükseltmek için
 
-1. **Sunucu Gezgini**, **veritabanına Bağlan** düğmesini seçin.
+1. Bu **Sunucu Gezgini** veritabanına **Bağlan düğmesini** seçin.
 
-2. **Bağlantı ekle** iletişim kutusunda, aşağıdaki bilgileri belirtin:
+2. Bağlantı **Ekle iletişim** kutusunda aşağıdaki bilgileri belirtin:
 
-    - **Veri kaynağı**: `Microsoft SQL Server (SqlClient)`
+    - **Veri Kaynağı:**`Microsoft SQL Server (SqlClient)`
 
-    - **Sunucu adı**:
+    - **Sunucu Adı:**
 
-        - Varsayılan sürümü kullanmak için: `(localdb)\MSSQLLocalDB` .  Bu, hangi Visual Studio sürümünün yüklü olduğuna ve ilk LocalDB örneğinin ne zaman oluşturulduğuna bağlı olarak ProjectV12 veya ProjectV13 belirtir. SQL Server Nesne Gezgini **Mssqllocaldb** düğümü,  işaret ettiği sürümü gösterir.
+        - Varsayılan sürümü kullanmak için: `(localdb)\MSSQLLocalDB` .  Bu, hangi sürümün yüklü olduğuna ve ilk LocalDB örneğinin ne zaman Visual Studio ProjectV12 veya ProjectV13'ü belirtir. SQL Server Nesne Gezgini **MSSQLLocalDB**  düğümü, hangi sürümü işaret ediyor olduğunu gösterir.
 
-        - Belirli bir sürümü kullanmak için: `(localdb)\ProjectsV12` veya `(localdb)\ProjectsV13` V12, localdb 2014 ve v13, localdb 2016 ' dir.
+        - Belirli bir sürümü kullanmak için veya `(localdb)\ProjectsV12` `(localdb)\ProjectsV13` burada V12 LocalDB 2014, V13 ise LocalDB 2016'dır.
 
-    - **Veritabanı dosyası Ekle**: birincil *. mdf* dosyasının fiziksel yolu.
+    - **Bir veritabanı dosyası ekleme:** Birincil *.mdf* dosyasının fiziksel yolu.
 
-    - **Mantıksal ad**: dosyayla birlikte kullanmak istediğiniz ad.
+    - **Mantıksal Ad:** Dosyayla birlikte kullanmak istediğiniz ad.
 
 3. **Tamam** düğmesini seçin.
 
-4. İstendiğinde, dosyayı yükseltmek için **Evet** düğmesini seçin.
+4. İstendiğinde, dosyayı yükseltmek **için** Evet düğmesini seçin.
 
-    Veritabanı yükseltilir, LocalDB veritabanı altyapısına iliştirilir ve artık LocalDB 'nin eski sürümüyle uyumlu değildir.
+    Veritabanı yükseltilir, LocalDB veritabanı altyapısına iliştirilir ve artık LocalDB'nin eski sürümüyle uyumlu değildir.
 
-Ayrıca, bağlantı için kısayol menüsünü açıp **Bağlantıyı Değiştir**' i seçerek LocalDB 'yi kullanmak için bir SQL Server Express bağlantısını değiştirebilirsiniz. **Bağlantıyı Değiştir** iletişim kutusunda sunucu adını olarak değiştirin `(LocalDB)\MSSQLLocalDB` . **Gelişmiş Özellikler** iletişim kutusunda, **Kullanıcı örneğinin** **false** olarak ayarlandığından emin olun.
+Ayrıca bağlantının kısayol menüsünü SQL Server Express sonra Bağlantıyı Değiştir'i seçerek yerel bir bağlantıyı LocalDB'yi kullanmak üzere **değiştirebilirsiniz.** Bağlantıyı **Değiştir iletişim** kutusunda sunucu adını olarak değiştirebilirsiniz. `(LocalDB)\MSSQLLocalDB` Gelişmiş Özellikler **iletişim kutusunda** Kullanıcı Örneği'nin False **olarak ayarlanmış** olduğundan emin **olun.**
 
-### <a name="to-upgrade-a-database-file-to-use-the-sql-server-express-version"></a>Bir veritabanı dosyasını SQL Server Express sürümünü kullanacak şekilde yükseltmek için
+### <a name="to-upgrade-a-database-file-to-use-the-sql-server-express-version"></a>Bir veritabanı dosyasını SQL Server Express yükseltmek için
 
-1. Veritabanı bağlantısının kısayol menüsünde **Bağlantıyı Değiştir**' i seçin.
+1. Veritabanı bağlantısının kısayol menüsünde Bağlantıyı **Değiştir'i seçin.**
 
-2. **Bağlantıyı Değiştir** Iletişim kutusunda **Gelişmiş** düğmesini seçin.
+2. Bağlantıyı **Değiştir iletişim** kutusunda Gelişmiş **düğmesini** seçin.
 
-3. **Gelişmiş Özellikler** iletişim kutusunda sunucu adını değiştirmeden **Tamam** düğmesini seçin.
+3. Gelişmiş **Özellikler iletişim** kutusunda, sunucu adını **değiştirmeden** Tamam düğmesini seçin.
 
-    Veritabanı dosyası, SQL Server Express geçerli sürümüyle eşleşecek şekilde yükseltilir.
+    Veritabanı dosyası, veritabanının geçerli sürümüyle eş SQL Server Express.
 
-### <a name="to-work-with-the-database-in-visual-studio-but-retain-compatibility-with-sql-server-express"></a>Visual Studio 'da veritabanıyla çalışmak, ancak SQL Server Express uyumluluklarını sürdürmek için
+### <a name="to-work-with-the-database-in-visual-studio-but-retain-compatibility-with-sql-server-express"></a>Veritabanında çalışmak ama Visual Studio uyumluluğunu korumak SQL Server Express
 
-- Visual Studio 'da projeyi yükseltmeden açın.
+- Bu Visual Studio yükseltmeden projeyi açın.
 
-  - Projeyi çalıştırmak için **F5** tuşunu seçin.
+  - Projeyi çalıştırmak için **F5 anahtarını** seçin.
 
-  - Veritabanını düzenlemek için **Çözüm Gezgini** *. mdf* dosyasını açın ve veritabanınıza çalışmak için **Sunucu Gezgini** düğümünü genişletin.
+  - Veritabanını düzenlemek için , *.mdf* dosyasını **Çözüm Gezgini** açın ve veritabanındaki **Sunucu Gezgini** ile çalışacak şekilde genişletin.
 
-### <a name="to-make-sql-server-express-the-default-database-engine"></a>Varsayılan veritabanı altyapısını SQL Server Express yapmak için
+### <a name="to-make-sql-server-express-the-default-database-engine"></a>Varsayılan SQL Server Express altyapısını oluşturmak için
 
-1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekler'i**  >  **seçin.**
 
-2. **Seçenekler** iletişim kutusunda, **veritabanı araçları** seçeneklerini genişletin ve ardından **veri bağlantıları**' nı seçin.
+2. Seçenekler iletişim **kutusunda** Veritabanı Araçları seçeneklerini **genişletin ve** Veri Bağlantıları'ı **seçin.**
 
-3. **Örnek adı SQL Server** metin kutusunda, kullanmak istediğiniz SQL Server Express veya LocalDB örneğinin adını belirtin. Örnek adlandırılmazsa, belirtin `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB` .
+3. SQL Server **Örnek Adı** metin kutusunda, kullanmak istediğiniz SQL Server Express veya LocalDB örneğinin adını belirtin. Örnek adlandırılmış değilse `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB` belirtin.
 
 4. **Tamam** düğmesini seçin.
 
-    SQL Server Express, uygulamalarınız için varsayılan veritabanı altyapısı olacaktır.
+    SQL Server Express, uygulamalarınız için varsayılan veritabanı altyapısı olacak.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

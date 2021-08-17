@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 761b6cf4f60dc09b6e4ef4274e5a61ebe636b4e7c07847c709dbd4c9afa6fd85
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5fd0e82aa4f66838025c5aa235a9ca9a6bfe6ec0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453938"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030795"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Kendi İşaretçilerimin Bellek Adresini Bozup Bozmadığını Nasıl Anlarım?
 ## <a name="problem-description"></a>Sorun Açıklaması

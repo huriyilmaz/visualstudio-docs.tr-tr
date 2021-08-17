@@ -1,6 +1,6 @@
 ---
-title: API işlevleri Windows hata ayıklama | Microsoft Docs
-description: NT sembolleri yüklü olan Windows API işlevi hata ayıklamayı öğrenin. 32 bit kodda kesme noktası ayarlamak için işlev adının dekore edilmiş formunu kullanırız.
+title: Windows apı işlevlerinde hata ayıkla | Microsoft Docs
+description: yüklü NT sembolleri olan bir Windows apı işlevinde hata ayıklamayı öğrenin. 32 bitlik kodda, kesme noktasını ayarlamak için işlev adının düzenlenmiş biçimini kullanırsınız.
 ms.custom: SEO-VS-2020
 ms.date: 06/03/2020
 ms.topic: how-to
@@ -24,34 +24,34 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0181b37f5977bc2a978e452358874b9a768221804825450fcf87b5eb7910461f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a9c42db8145b619f6806ee9c4505e09b684efb2d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453964"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044021"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>Windows API İşlevlerinde Nasıl Hata Ayıklayabilirim?
-NT sembolleri yüklü olan bir Windows API işlevinin hatasını ayıklamak için aşağıdaki adımları gerçekleştirin.
+yüklü NT sembolleri olan bir Windows apı işlevinde hata ayıklamak istiyorsanız, aşağıdakileri yapmanız gerekir.
 
-### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>NT sembolleri yüklenmiş bir api Windows kesme noktası ayarlamak için
+### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>NT sembolleri yüklü Windows apı işlevinde bir kesme noktası ayarlamak için
 
-- İşlev [kesme noktası içinde](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)işlevin bulunduğu DLL'nin adıyla birlikte işlev adını girin (bkz. [bağlam işleci).](../debugger/context-operator-cpp.md) 32 bit kodda işlev adının dekore edilmiş formunu kullanın. **MessageBeep** üzerinde bir kesme noktası ayarlamak için, örneğin, aşağıdakini girmeniz gerekir.
+- [İşlev kesme noktasında](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file), işlev adını IŞLEVIN bulunduğu dll adı ile birlikte girin ( [bağlam işlecine](../debugger/context-operator-cpp.md)bakın). 32 bitlik kodda, işlev adının düzenlenmiş formunu kullanın. Örneğin, **Messagebip** üzerinde bir kesme noktası ayarlamak için, şunu girmeniz gerekir.
 
     ```cpp
     {,,USER32.DLL}_MessageBeep@4
     ```
 
-     Dekore edilmiş adı almak için bkz. [Dekore Edilmiş Adları Görüntüleme.](/previous-versions/5x49w699(v=vs.140))
+     Düzenlenmiş adı almak için bkz. [düzenlenmiş adları görüntüleme](/previous-versions/5x49w699(v=vs.140)).
 
-     Dekore edilmiş adı test etmek ve farklı kodlarda görüntülemek için bu adı sınayabilirsiniz. Visual Studio hata ayıklayıcısındaki işlevde duraklatılmışken, kod düzenleyicisinde veya çağrı yığını penceresinde işlevine sağ tıklayın ve Ayıkla'ya **Git'i seçin.**
+     Düzenlenmiş adı test edebilir ve kodu ayrıştırılmış kodda görüntüleyebilirsiniz. Visual Studio hata ayıklayıcısındaki işlevde duraklalarken, kod düzenleyici veya çağrı yığını penceresinde işleve sağ tıklayın ve **ayrıştırılmış koda git**' i seçin.
 
-- 64 bit kodda, düzeltlanmamış adı kullanabilirsiniz.
+- 64 bitlik kodda, açıklanedilmemiş adı kullanabilirsiniz.
 
     ```cpp
     {,,USER32.DLL}MessageBeep
     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kodda Hata Ayıklama hakkında SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

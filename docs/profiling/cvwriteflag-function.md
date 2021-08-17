@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bfc1d43526eddfc20e0ec639559be9bc75370e19692fde8496a227ac3c9b4538
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4722a70c1a298ce16e801a902648f810bb559cd6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121301557"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076730"
 ---
 # <a name="cvwriteflag-function"></a>CvWriteFlag işlevi
 Eşzamanlılık Görselleştiricisi izleme dosyasına bir bayrak yazar.

@@ -1,5 +1,5 @@
 ---
-description: Veri kaynağında bulunan çeşitli çerçeve verisi öğelerini numaralandırır.
+description: Veri kaynağında bulunan çeşitli çerçeve veri öğelerini numaralar.
 title: IDiaEnumFrameData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 2ca7fd5a-b2fa-4b3a-9492-0263eafc435b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bd1ca95e2f7377c00548658634cbf1e2993e3d8
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 67715b3f0c1b7284c40a20f05cb48fd23a57e81c4044d9792a24e5847f0c6177
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158010"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455242"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
-Veri kaynağında bulunan çeşitli çerçeve verisi öğelerini numaralandırır.
+Veri kaynağında bulunan çeşitli çerçeve veri öğelerini numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,28 +30,28 @@ Veri kaynağında bulunan çeşitli çerçeve verisi öğelerini numaralandırı
 IDiaEnumFrameData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumFrameData` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaEnumFrameData` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|`IEnumVARIANT Interface`Bu Numaralandırıcı sürümünü alır.|
-|[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|Çerçeve verisi öğelerinin sayısını alır.|
-|[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|Bir kare veri öğesini bir dizin aracılığıyla alır.|
-|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|Sabit Listesi dizisinde belirtilen sayıda çerçeve verisi öğesini alır.|
-|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.|
-|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[IDiaEnumFrameData::Clone](../../debugger/debug-interface-access/idiaenumframedata-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
-|[IDiaEnumFrameData::frameByRVA](../../debugger/debug-interface-access/idiaenumframedata-framebyrva.md)|Göreli sanal adres (RVA) ile bir çerçeve döndürür.|
+|[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|Bu `IEnumVARIANT Interface` numaralayıcının sürümünü alın.|
+|[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|Çerçeve veri öğelerinin sayısını alın.|
+|[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|Bir dizin ile bir çerçeve veri öğesi alınır.|
+|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|Numaralama dizisinde belirtilen sayıda çerçeve verisi öğelerini alan.|
+|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|Bir numaralama dizisinde belirtilen sayıda çerçeve verisi öğelerini atlar.|
+|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[IDiaEnumFrameData::Clone](../../debugger/debug-interface-access/idiaenumframedata-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
+|[IDiaEnumFrameData::frameByRVA](../../debugger/debug-interface-access/idiaenumframedata-framebyrva.md)|Göreli sanal adrese (RVA) göre bir çerçeve döndürür.|
 |[IDiaEnumFrameData::frameByVA](../../debugger/debug-interface-access/idiaenumframedata-framebyva.md)|Sanal adrese (VA) göre bir çerçeve döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirimi [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) yönteminden alın. Ayrıntılar için örneğe bakın.
+Bu arabirimi [IDiaSession::getEnumTables yönteminden](../../debugger/debug-interface-access/idiasession-getenumtables.md) alın. Ayrıntılar için örneğine bakın.
 
 ## <a name="example"></a>Örnek
-Bu örnek, arabirimin nasıl alınacağını ( `GetEnumFrameData` işlevin) ve nasıl kullanılacağını ( `ShowFrameData` işlev) gösterir `IDiaEnumFrameData` . İşlevin bir örneği için bkz. [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) arabirimi `PrintFrameData` .
+Bu örnek, arabirimin nasıl alın `GetEnumFrameData` (işlev) ve `ShowFrameData` (işlev) kullanılageldir) olduğunu `IDiaEnumFrameData` gösterir. İşlev örneği [için bkz. IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) `PrintFrameData` arabirimi.
 
 ```C++
 
@@ -102,9 +103,9 @@ void ShowFrameData(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-**Üst bilgi:** Dia2. h
+**Üst bilgi:** Dia2.h
 
-**Kitaplık:** diaguid. lib
+**Kitaplık:** diaguids.lib
 
 **DLL:** msdia80.dll
 

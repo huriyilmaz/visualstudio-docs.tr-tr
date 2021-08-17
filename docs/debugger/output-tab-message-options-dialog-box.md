@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f634c02e11b45059c0753790229e520bdd3d04b2af59ead69dac5020c3adb2f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 41a6e5aef6654b06b21481328a6fdd50f672095b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404419"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030626"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>Çıktı Sekmesi, İleti Seçenekleri İletişim Kutusu
 her **iletiden** hangi verilerin İletiler Görünümü'ne listelen bir veri olduğunu belirtmek için [Çıktı sekmesini kullanın.](../debugger/messages-view.md) İleti Seçenekleri İletişim [Kutusunu görüntülemek için Spy](../debugger/message-options-dialog-box.md) **menüsünden Günlük** İletileri'ne tıklayın. 

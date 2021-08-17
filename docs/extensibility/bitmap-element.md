@@ -1,6 +1,6 @@
 ---
-title: Bitmap Öğesi | Microsoft Docs
-description: Bitmap öğesi bir bit eşlem tanımlar. Bit eşlem bir kaynaktan veya bir dosyadan yüklenir. Bu makale bir örnek içerir.
+title: Bit eşlem öğesi | Microsoft Docs
+description: Bit eşlem öğesi bir bit eşlemi tanımlar. Bit eşlem bir kaynaktan ya da bir dosyadan yüklenir. Bu makale bir örnek içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 260a771157b9463ad0b0484e8fc3464f1b23b84396c3a86d1cb693bf5ea22a74
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1fcf2b2eb60bfb99708d78424eaf4f084aca1c6d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121308450"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089777"
 ---
 # <a name="bitmap-element"></a>Bit eşlem öğesi
-Bit eşlem tanımlar. Bit eşlem bir kaynaktan veya bir dosyadan yüklenir.
+Bit eşlemi tanımlar. Bit eşlem bir kaynaktan ya da bir dosyadan yüklenir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,11 +37,11 @@ Bit eşlem tanımlar. Bit eşlem bir kaynaktan veya bir dosyadan yüklenir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID'si.<br /><br /> Bit eşlem için guid özniteliği herhangi bir VSPackage veya başka bir komut grubuyla ilişkili değildir.  Bit eşlem tanımına özel olmalı ve başka bir amaç için kullanılmamalı.|
-|Resid|GUID/ID komut tanımlayıcısının kimliği. resID veya href özniteliği gereklidir.<br /><br /> resID özniteliği, komut tablosu birleştirme sırasında yüklenecek bit eşlem şeridini belirleyen bir tamsayı kaynak kimliğidir.  Komut tablosu yüklendiğinde, kaynak kimliği tarafından belirtilen bit eşlemler aynı modülün kaynağından yüklenir.|
-|usedList|resID özniteliği varsa gereklidir. Bit eşlem şeridinde kullanılabilir görüntüleri seçer.|
-|Href|Bit eşlem yolu. resID veya href özniteliği gereklidir.<br /><br /> Dahil edilen yol, sonuçta elde edilen ikili dosyaya eklenmiş olan belirtilen görüntü dosyası için aranır.  Komut tablosu birleştirme sırasında görüntü kopyalanır ve ek kaynak araması veya yüklemesi gerekmez.  usedList özniteliği yoksa şeritte bulunan tüm görüntüler kullanılabilir. **Not:**  Görüntüler,.bmp *,*.png *ve* *.gif.*  Derleyicinin önceki sürümleri kısmi saydamlık için alfa bilgi içeren 32 bit bit eşlem görüntülerini desteklemedi. Bu sürümlerin geçici çözümü,.png *kullanmaktır.*|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.<br /><br /> Bit eşlemin GUID özniteliği herhangi bir VSPackage veya diğer komut grubuyla ilişkili değil.  Bit eşlem tanımının benzersiz olması ve herhangi bir amaçla kullanılmamalıdır.|
+|RESID|GUID/ID komut tanımlayıcısının KIMLIĞI. Resd ya da href özniteliği gereklidir.<br /><br /> Resd özniteliği, komut tablosu birleştirme sırasında yüklenecek bit eşlem şeridi belirleyen bir tamsayı kaynak KIMLIĞIDIR.  Komut tablosu yüklenirken, kaynak KIMLIĞI tarafından belirtilen bit eşlemler aynı modülün kaynağından yüklenir.|
+|usedList|Resd özniteliği mevcutsa gereklidir. Bit eşlem şeridinde kullanılabilir görüntüleri seçer.|
+|değerini|Bit eşlemin yolu. Resd ya da href özniteliği gereklidir.<br /><br /> Dahil edilen ikiliye gömülü olan belirtilen görüntü dosyası için ekleme yolu aranır.  Komut tablosu birleştirme sırasında görüntü kopyalanır ve ek kaynak araması veya yükleme gerekmez.  UsedList özniteliği yoksa, şerit 'teki tüm görüntüler kullanılabilir. **Note:**  Görüntüler, *.bmp*, *.png* ve *.gif* içeren birkaç biçimden birinde sağlanabilir.  Derleyicinin önceki sürümleri, kısmi saydamlık için alfa bilgilerine sahip 32 bit bit eşlem görüntülerini desteklemez. Bu sürümler için geçici çözüm *.png* biçimini kullanmaktır.|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -50,7 +50,7 @@ Bit eşlem tanımlar. Bit eşlem bir kaynaktan veya bir dosyadan yüklenir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Bitmaps öğesi](../extensibility/bitmaps-element.md)|Bit Eşlem öğelerini gruplar.|
+|[Bit eşlemler öğesi](../extensibility/bitmaps-element.md)|Bit eşlem öğelerini gruplandırır.|
 
 ## <a name="example"></a>Örnek
 
@@ -61,4 +61,4 @@ Bit eşlem tanımlar. Bit eşlem bir kaynaktan veya bir dosyadan yüklenir.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

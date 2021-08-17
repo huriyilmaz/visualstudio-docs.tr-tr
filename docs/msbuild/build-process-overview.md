@@ -1,6 +1,6 @@
 ---
 title: MSBuild nasıl proje oluşturur
-description: Visual Studio veya bir komut satırı ya da komut dosyasından çağrılıp çağrılmayacağı MSBuild proje dosyalarınızı nasıl işleyerek öğrenin.
+description: İster MSBuild ister komut satırı ya da betikten Visual Studio proje dosyalarınızı nasıl işleyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 05/18/2020
 ms.topic: conceptual
@@ -12,111 +12,111 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c5d8a602ffaaefb17480b9f64de9c49a992db500ed5a0cebc00098f6ac34c04
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ad648b114ffd067ef1ab5d9a0ea1671d03207396
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397962"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077718"
 ---
 # <a name="how-msbuild-builds-projects"></a>MSBuild nasıl proje oluşturur
 
-MSBuild aslında nasıl çalışır? bu makalede, MSBuild Visual Studio veya bir komut satırı ya da betikten sonra proje dosyalarınızı nasıl işleyeceği hakkında bilgi edineceksiniz. MSBuild nasıl çalıştığını bilmek, sorunları daha iyi tanılamanıza ve derleme işleminizi daha iyi özelleştirmenize yardımcı olabilir. Bu makalede, derleme süreci açıklanmakta ve büyük ölçüde tüm proje türleri için uygulanabilir.
+Bu MSBuild nasıl çalışır? Bu makalede, ister MSBuild ister komut Visual Studio betikten çağrılan proje dosyalarınızı nasıl işleyebilirsiniz? Bu MSBuild bilmek sorunları daha iyi tanılamanıza ve derleme sürecinizi daha iyi özelleştirmenize yardımcı olabilir. Bu makalede derleme işlemi açıklanmıştır ve büyük ölçüde tüm proje türleri için geçerlidir.
 
-Tüm derleme süreci, projeyi oluşturan hedeflerin ve görevlerin [ilk başlatma](#startup), [değerlendirme](#evaluation-phase)ve [yürütme](#execution-phase) bilgisinden oluşur. Bu girdilerin yanı sıra, dış içeri aktarmalar, çözüm veya proje düzeyinde *Microsoft. Common. targets* ve [Kullanıcı tarafından yapılandırılabilen içeri aktarmalar](#user-configurable-imports) gibi [Standart içeri aktarmalar](#standard-imports) da dahil olmak üzere yapı işleminin ayrıntılarını tanımlar.
+Tam derleme işlemi, projeyi [derlemek için ilk başlatma,](#startup) [değerlendirme](#execution-phase) ve hedef ve görevlerin yürütülmesini içerir. [](#evaluation-phase) Bu girişlere ek olarak, dış içeri aktarmalar hem *Microsoft.Common.targets* gibi standart içeri [](#user-configurable-imports) aktarmalar hem de çözüm veya proje düzeyinde kullanıcı tarafından yapılandırılabilir içeri aktarmalar da dahil olmak üzere derleme işleminin ayrıntılarını tanımlar. [](#standard-imports)
 
 ## <a name="startup"></a>Başlangıç
 
-MSBuild, *Microsoft.Build.dll* MSBuild nesne modeli aracılığıyla Visual Studio çağrılabilir veya yürütülebilir dosya doğrudan komut satırında veya cı sistemlerinde olduğu gibi bir betikte çağrılabilir. her iki durumda da, yapı işlemini etkileyen girişler proje dosyası (veya Visual Studio iç proje nesnesi), muhtemelen bir çözüm dosyası, ortam değişkenleri ve komut satırı anahtarları veya nesne modeli eşdeğerleri içerir. başlangıç aşamasında, komut satırı seçenekleri veya nesne modeli eşdeğerleri, günlüğe kaydetme cihazlarını yapılandırma gibi MSBuild ayarları yapılandırmak için kullanılır. Veya anahtarını kullanarak komut satırında ayarlanan özellikler `-property` `-p` Genel özellikler olarak ayarlanır ve proje dosyaları daha sonra okunsa bile proje dosyalarında ayarlanacak tüm değerleri geçersiz kılar.
+MSBuild Visual StudioMicrosoft.Build.dll'daki *MSBuild* nesne modeli aracılığıyla ya da yürütülebilir dosya doğrudan komut satırı veya CI sistemlerinde olduğu gibi bir betikte çağrılarak çağrılabilir. Her iki durumda da, derleme işlemini etkileyen girişler proje dosyasını (veya Visual Studio'a iç proje nesnesini), muhtemelen bir çözüm dosyasını, ortam değişkenlerini ve komut satırı anahtarlarını ya da nesne modeli eşdeğerlerini içerir. Başlatma aşamasında, günlükçileri yapılandırma gibi farklı ayarları yapılandırmak MSBuild komut satırı seçenekleri veya nesne modeli eşdeğerleri kullanılır. veya anahtarı kullanılarak komut satırına ayarlanmış özellikler genel özellikler olarak ayarlanır. Bu özellik, proje dosyaları daha sonra okunsa bile proje dosyalarında ayarlanmayacak `-property` `-p` değerleri geçersiz kılar.
 
-Sonraki bölümlerde, çözüm dosyaları veya proje dosyaları gibi giriş dosyaları hakkında bilgi verilmektedir.
+Sonraki bölümler çözüm dosyaları veya proje dosyaları gibi giriş dosyalarıyla ilgilidir.
 
 ### <a name="solutions-and-projects"></a>Çözümler ve projeler
 
-MSBuild örnekleri bir projeden veya bir çözümün parçası olarak birçok projeden oluşabilir. çözüm dosyası bir MSBuild XML dosyası değildir, ancak bu dosyayı verilen yapılandırma ve platform ayarları için oluşturulması gereken tüm projeleri bildirmek üzere yorumlar MSBuild. MSBuild bu XML girişini işlediğinde çözüm derlemesi olarak adlandırılır. Her çözüm derlemesinde bir şey çalıştırmanızı sağlayan bazı Genişletilebilir noktalara sahiptir, ancak bu derleme bireysel proje Derlemeleriyle ayrı bir çalıştırma olduğundan, çözüm derlemeden hiçbir özellik veya hedef tanım ayarı her proje derlemesi için uygun değildir.
+MSBuild örnekleri bir çözümün parçası olarak bir veya birden çok projeden oluşur. Çözüm dosyası bir MSBuild XML dosyası değildir ancak MSBuild, verilen yapılandırma ve platform ayarları için gerekli tüm projeleri bilmek için yorumlanır. Bu MSBuild xml girişini işleyene kadar çözüm derlemesi olarak adlandırılır. Her çözüm derlemesinde bir şey çalıştırmaya olanak sağlayan bazı genişletilebilir noktaları vardır, ancak bu derleme tek tek proje derlemelerinden ayrı bir çalıştırma olduğu için, çözüm derlemesinde yer alan özellik veya hedef tanımların ayarları her proje derlemesi için uygun değildir.
 
-Çözüm yapısını [Özelleştirme](customize-your-build.md#customize-the-solution-build)konusunda çözüm derlemesini nasıl genişletebileceğinizi öğrenebilirsiniz.
+Çözüm derlemeyi özelleştirme'de çözüm derlemenin nasıl [genişletebileceğinizi bulabilirsiniz.](customize-your-build.md#customize-the-solution-build)
 
-### <a name="visual-studio-builds-vs-msbuildexe-builds"></a>Visual Studio derlemeleri ve MSBuild.exe yapılarını karşılaştırma
+### <a name="visual-studio-builds-vs-msbuildexe-builds"></a>Visual Studio derlemeler ve MSBuild.exe karşılaştırması
 
-Visual Studio ' de projelerin ne zaman derlenmesi arasında bazı önemli farklılıklar vardır. MSBuild çalıştırılabiliri aracılığıyla ya da bir derlemeyi başlatmak için MSBuild nesne modelini kullanırken MSBuild doğrudan çağırdığınızda. Visual Studio, Visual Studio derlemeler için proje derleme sırasını yönetir; yalnızca tek bir proje düzeyinde MSBuild çağırır ve ne zaman, MSBuild ne olduğunu önemli ölçüde etkileyen birkaç boole özelliği ( `BuildingInsideVisualStudio` , `BuildProjectReferences` ) ayarlanır. her projenin içinde yürütme, MSBuild ile çağrıldığında aynı olur, ancak başvurulan projelerle aradaki fark oluşur. MSBuild, başvurulan projeler gerekli olduğunda, aslında bir yapı oluşur; diğer bir deyişle, görevleri ve araçları çalıştırır ve çıktıyı oluşturur. Visual Studio derlemesi başvurulan bir projeyi bulduğunda, MSBuild yalnızca başvurulan projeden beklenen çıktıları döndürür; Visual Studio diğer projelerin oluşturulmasını denetlemenize olanak tanır. Visual Studio, derleme sırasını belirler ve tamamen Visual Studio denetimi altında tamamen MSBuild olarak (gerektiğinde) çağırır.
+Projelerin Visual Studio'de derlemesi ile MSBuild yürütülebilir dosyası aracılığıyla MSBuild çağırmanız veya MSBuild derlemeyi başlatmak için MSBuild nesne modelini kullanma arasında bazı önemli farklar vardır. Visual Studio derlemeler için proje derleme Visual Studio yönetir; yalnızca MSBuild proje düzeyinde çağrı yapar ve çağıran bir dizi Boole özelliği ( , ) kümenin ne yaptığını önemli `BuildingInsideVisualStudio` `BuildProjectReferences` ölçüde etkileyen MSBuild ayarlanır. Her projenin içinde yürütme, MSBuild çağrıldığında olduğu gibi gerçekleşir, ancak başvurulan projelerde fark oluşur. Bu MSBuild, başvurulan projeler gerektiğinde aslında bir derleme gerçekleşir; diğer bir ifadeyle, görevleri ve araçları çalıştırır ve çıkışı oluşturur. Bir Visual Studio bir proje bulduğunda, MSBuild yalnızca başvurulan projeden beklenen çıkışları döndürür; bu Visual Studio diğer projelerin binalarını denetlemenizi sağlar. Visual Studio, derleme sırası belirler ve tamamen MSBuild denetimi altında ayrı olarak Visual Studio çağrılar.
 
-MSBuild bir çözüm dosyasıyla çağrıldığında MSBuild çözüm dosyasını ayrıştırır, standart bir XML giriş dosyası oluşturur, değerlendirir ve projeyi bir proje olarak yürütür. Çözüm derlemesi herhangi bir projeden önce yürütülür. Visual Studio oluşturulurken bu durum gerçekleşmediği halde, MSBuild çözüm dosyasını hiçbir şekilde görmez. Sonuç olarak, çözüm yapı özelleştirmesi (daha önce kullanarak) *. SolutionName. sln. targets* ve *After. solutionname. sln. targets*) yalnızca MSBuild.exe veya nesne modeli temelli, Visual Studio derlemeleri için geçerlidir.
+Çözüm dosyasıyla MSBuild, çözüm MSBuild dosyasını ayrıştırır, standart bir XML giriş dosyası oluşturur, değerlendirir ve proje olarak yürütür. Çözüm derlemesi herhangi bir projeden önce yürütülür. Bu Visual Studio, bunların hiçbiri olmaz; MSBuild hiçbir zaman çözüm dosyasını görmez. Sonuç olarak, çözüm derleme özelleştirmesi (daha önce *kullanarak). SolutionName.sln.targets ve* *sonrası. SolutionName.sln.targets*) yalnızca MSBuild.exe veya nesne modeli odaklı için geçerlidir, Visual Studio geçerlidir.
 
 ### <a name="project-sdks"></a>Proje SDK’leri
 
-MSBuild proje dosyaları için SDK özelliği nispeten yenidir. Bu değişiklikten önce proje dosyaları, belirli bir proje türü için yapı işlemini tanımlayan *. targets* ve *. props* dosyalarını açıkça içeri aktarmıştır.
+Proje dosyalarının MSBuild SDK özelliği görece yenidir. Bu değişiklik öncesinde, proje dosyaları belirli bir proje türü için derleme işlemini tanımlanan *.targets* ve *.props* dosyalarını açıkça içe aktardı.
 
-.NET Core projeleri, .NET SDK 'nın bunlara uygun sürümünü içeri aktarır. Bkz. genel bakış, [.NET Core proje SDK 'ları](/dotnet/core/project-sdk/overview)ve [özelliklere](/dotnet/core/project-sdk/msbuild-props)başvuru.
+.NET Core projeleri, .NET SDK'nın onlara uygun sürümünü içeri aktarın. Genel bakış, [.NET Core proje SDK'ları](/dotnet/core/project-sdk/overview)ve özellikleri başvurusuna [bakın.](/dotnet/core/project-sdk/msbuild-props)
 
 ## <a name="evaluation-phase"></a>Değerlendirme aşaması
 
-Bu bölümde, ne yapılacağını belirlemek için bellek içi nesneler oluşturmak üzere bu giriş dosyalarının nasıl işlendiği ve ayrıştırılabileceği açıklanmaktadır.
+Bu bölümde, bu giriş dosyalarının nelerin üretileceklerini belirleyen bellek içinde nesneler üretmek için nasıl işlenmeleri ve ayrıştırıldıkları ele alın almaktadır.
 
-Değerlendirme aşamasının amacı, giriş XML dosyalarına ve yerel ortama göre bellekte nesne yapıları oluşturmaktır. Değerlendirme aşaması, proje XML dosyaları veya gibi giriş dosyalarını ve genel olarak *. props* veya *. targets* dosyaları olarak adlandırılan, birincil olarak Özellikler ayarlayıp tanımlamadığınıza veya yapı hedeflerini tanımlamaya bağlı olarak, içeri aktarılan xml dosyalarını işleyen altı geçişinden oluşur. Her Pass, projeleri oluşturmak için yürütme aşamasında daha sonra kullanılan bellek içi nesnelerin bir parçasını oluşturur, ancak değerlendirme aşamasında gerçek derleme eylemleri gerçekleşmez. Her geçişte, öğeler göründükleri sırada işlenir.
+Değerlendirme aşamasının amacı, giriş XML dosyalarına ve yerel ortama göre bellekte nesne yapıları oluşturmaktır. Değerlendirme aşaması, proje XML dosyaları gibi giriş dosyalarını ve genellikle *.props* veya *.targets* dosyaları olarak adlandırılmış, içe aktarılan XML dosyaları gibi giriş dosyalarını işlemeye yönelik altı geçişden oluşur. Bunlar öncelikli olarak özellikleri ayarlayarak veya derleme hedeflerini tanımlar. Her geçiş, daha sonra projeleri derlemek için yürütme aşamasında kullanılan bellek içinde nesnelerin bir bölümünü oluşturur, ancak değerlendirme aşamasında gerçek derleme eylemi oluşmaz. Her geçişte öğeler, görünme sırasına göre işlenir.
 
 Değerlendirme aşamasındaki geçişler aşağıdaki gibidir:
 
-- Ortam değişkenlerini değerlendir
-- İçeri aktarmaları ve özellikleri değerlendir
-- Öğe tanımlarını değerlendir
-- Öğeleri değerlendir
-- [UsingTask](usingtask-element-msbuild.md) öğelerini değerlendir
-- Hedefleri değerlendir
+- Ortam değişkenlerini değerlendirme
+- İçeri aktarmaları ve özellikleri değerlendirme
+- Öğe tanımlarını değerlendirme
+- Öğeleri değerlendirme
+- [UsingTask öğelerini](usingtask-element-msbuild.md) değerlendirme
+- Hedefleri değerlendirme
 
-Bu geçişlerinin sırası önemli etkilere sahiptir ve proje dosyasını özelleştirirken bilmek önemlidir. Bkz. [özellik ve öğe değerlendirme sırası](comparing-properties-and-items.md#property-and-item-evaluation-order).
+Bu geçişlerin sırası önemli etkileri vardır ve proje dosyasını özelleştirerek bilmek önemlidir. Bkz. [Özellik ve öğe değerlendirme sırası.](comparing-properties-and-items.md#property-and-item-evaluation-order)
 
-### <a name="evaluate-environment-variables"></a>Ortam değişkenlerini değerlendir
+### <a name="evaluate-environment-variables"></a>Ortam değişkenlerini değerlendirme
 
-Bu aşamada, eşdeğer özellikleri ayarlamak için ortam değişkenleri kullanılır. Örneğin, PATH ortam değişkeni bir özellik olarak kullanılabilir hale getirilir `$(PATH)` . komut satırından veya bir betikten çalıştırıldığında, komut ortamı normal olarak kullanılır ve Visual Studio çalıştırıldığında, Visual Studio başlatıldığında geçerli olan ortam kullanılır.
+Bu aşamada, ortam değişkenleri eşdeğer özellikleri ayarlamak için kullanılır. Örneğin, PATH ortam değişkeni özelliği olarak kullanılabilir `$(PATH)` yapılır. Komut satırı veya betikten çalıştır olduğunda, komut ortamı normal olarak kullanılır ve Visual Studio çalıştırıla Visual Studio ortam kullanılır.
 
-### <a name="evaluate-imports-and-properties"></a>İçeri aktarmaları ve özellikleri değerlendir
+### <a name="evaluate-imports-and-properties"></a>İçeri aktarmaları ve özellikleri değerlendirme
 
-Bu aşamada, proje dosyaları ve tüm içeri aktarma zinciri dahil olmak üzere tüm giriş XML 'SI okundu. MSBuild, projenin ve tüm içeri aktarılan dosyaların xml 'sini temsil eden bellek içi bir xml yapısı oluşturur. Şu anda, hedeflerde olmayan özellikler değerlendirilir ve ayarlanır.
+Bu aşamada, proje dosyaları ve içeri aktarma zincirinin tamamı dahil olmak üzere tüm giriş XML'i okunur. MSBuild projenin XML'ini ve tüm içe aktarılan dosyaları temsil eden bir bellek içinde XML yapısı oluşturur. Şu anda hedeflerde olmayan özellikler değerlendirilir ve ayarlanır.
 
-tüm XML giriş dosyalarını kendi sürecinde erken okuma MSBuild bir sonucu olarak, derleme işlemi sırasında bu girdilerde yapılan değişiklikler geçerli derlemeyi etkilemez.
+Tüm XML MSBuild okuma işleminin bir sonucu olarak, derleme işlemi sırasında bu girişlerde yapılan değişiklikler geçerli derlemeyi etkilemez.
 
-Herhangi bir hedefin dışındaki özellikler, hedefler içindeki özelliklerden farklı şekilde işlenir. Bu aşamada, yalnızca herhangi bir hedefin dışında tanımlanan özellikler değerlendirilir.
+Herhangi bir hedefin dışındaki özellikler, hedeflerin içindeki özelliklerden farklı şekilde ele alınan özelliklerdir. Bu aşamada, yalnızca herhangi bir hedefin dışında tanımlanan özellikler değerlendirilir.
 
-Özellikler geçişte sırayla işlendiği için, girişte herhangi bir noktada bir özellik girişte daha önce görünen özellik değerlerine erişebilir, ancak daha sonra görünen özellikler değildir.
+Özellikler, geçişte sırayla işlendiğinden, girişteki herhangi bir noktadaki bir özellik, girişte daha önce görünen ancak daha sonra görünen özelliklere erişemeyecek olan özellik değerlerine erişebilirsiniz.
 
-Öğeler değerlendirilmeden önce Özellikler işlendiği için, Özellikler geçişinin herhangi bir parçası boyunca hiçbir öğenin değerine erişemezsiniz. 
+Özellikler öğeler değerlendirilmeden önce işlendiğinden, özelliklerin herhangi bir bölümü geçiş sırasında herhangi bir öğenin değerine erişesiniz. 
 
-### <a name="evaluate-item-definitions"></a>Öğe tanımlarını değerlendir
+### <a name="evaluate-item-definitions"></a>Öğe tanımlarını değerlendirme
 
-Bu aşamada, [öğe tanımları](item-definitions.md) yorumlanır ve bu tanımların bellek içi temsili oluşturulur.
+Bu aşamada öğe [tanımları](item-definitions.md) yorumlanır ve bu tanımların bellek içinde gösterimi oluşturulur.
 
-### <a name="evaluate-items"></a>Öğeleri değerlendir
+### <a name="evaluate-items"></a>Öğeleri değerlendirme
 
-Bir hedefin içinde tanımlanan öğeler, herhangi bir hedef dışındaki öğelerden farklı şekilde işlenir. Bu aşamada, herhangi bir hedefin dışındaki öğeler ve ilgili meta verileri işlenir.  Öğe tanımlarına göre ayarlanan meta veriler, öğelerdeki meta veri ayarı tarafından geçersiz kılınır. Öğeler göründükleri sırada işlendiği için, daha önce tanımlanmış olan ancak daha sonra görünmeyen öğelere başvurabilirsiniz. Öğeler, Özellikler başarılı olduktan sonra, özellik tanımının daha sonra görünüp başlatılmayacağını fark etmeksizin herhangi bir hedefin dışında tanımlanmışsa öğeler herhangi bir özelliğe erişebilir.
+Hedef içinde tanımlanan öğeler, herhangi bir hedef dışındaki öğelerden farklı şekilde işilir. Bu aşamada, herhangi bir hedefin dışındaki öğeler ve ilişkili meta verileri işlenir.  Öğe tanımları tarafından ayarlanmış meta veriler, öğelerdeki meta veri ayarı tarafından geçersiz kılınır. Öğeler, görünme sırasına göre işlendiğinden, daha önce tanımlanmış olan ancak daha sonra görünen öğelere başvuramayabilirsiniz. Öğeler, özelliklerin geçişinin ardından olduğundan, özellik tanımının daha sonra görüntülendiğinden bağımsız olarak, herhangi bir hedef dışında tanımlanmışsa öğeler herhangi bir özelce erişebilirsiniz.
 
-### <a name="evaluate-usingtask-elements"></a>`UsingTask`Öğeleri değerlendir
+### <a name="evaluate-usingtask-elements"></a>Öğeleri `UsingTask` değerlendirme
 
-Bu aşamada, [görev](usingtask-element-msbuild.md) öğeleri okunabilir ve görevler, yürütme aşamasında daha sonra kullanılmak üzere bildirilmiştir.
+Bu aşamada [UsingTask](usingtask-element-msbuild.md) öğeleri okunur ve görevler yürütme aşamasında daha sonra kullanmak üzere bildirildi.
 
-### <a name="evaluate-targets"></a>Hedefleri değerlendir
+### <a name="evaluate-targets"></a>Hedefleri değerlendirme
 
-Bu aşamada, yürütme hazırlığı sırasında, tüm hedef nesne yapıları bellekte oluşturulur. Gerçek yürütme gerçekleşmez. 
+Bu aşamada, yürütme hazırlığı için tüm hedef nesne yapıları bellekte oluşturulur. Gerçek bir yürütme gerçektir. 
 
 ## <a name="execution-phase"></a>Yürütme aşaması
 
-Yürütme aşamasında, hedefler sıralanır ve çalıştırılır ve tüm görevler yürütülür. Ancak ilki, hedefler içinde tanımlanan özellikler ve öğeler göründükleri sırada tek bir aşamada birlikte değerlendirilir. İşlem sırası, özellik ve bir hedefte olmayan öğelerin nasıl işlendiği konusunda özellikle farklıdır: önce tüm özellikler, sonra tüm öğeler ayrı geçişlerinde. Bir hedef içindeki özelliklerde ve öğelerde yapılan değişiklikler değiştirildikleri hedeften sonra gözlemlenebilir.
+Yürütme aşamasında hedefler sıralanmış ve çalıştırıldı ve tüm görevler yürütülür. Ancak ilk olarak, hedefler içinde tanımlanan özellikler ve öğeler, tek bir aşamada bunların görünme sırasıyla birlikte değerlendirilir. İşleme sırası, bir hedefte olmayan özelliklerin ve öğelerin işlenme düzeninden özellikle farklıdır: önce tüm özellikler, sonra da tüm öğeler ayrı geçişler halinde. Bir hedef içindeki özellikler ve öğelerde yapılan değişiklikler, değiştirildikleri hedef sonrasında gözlemlenebilir.
 
 ### <a name="target-build-order"></a>Hedef derleme sırası
 
-Tek bir projede, hedefler işlem temelli olarak yürütülür. Merkezi sorun, hedefleri doğru sırada oluşturmak için bağımlılıkların kullanılması amacıyla her şeyi hangi sırayla derleyeceğini belirleme ' dir.  
+Tek bir projede hedefler seri olarak yürütülür. Burada önemli olan, bağımlılıkların hedefleri doğru sırada oluşturmak için kullanılacak şekilde her şeyin hangi sırayla derlemek olduğunu belirlemedir.  
 
-Hedef derleme sırası `BeforeTargets` , her bir hedefte,, `DependsOnTargets` ve özniteliklerinin kullanımıyla belirlenir `AfterTargets` . Daha önceki hedef, bu özniteliklerde başvurulan bir özelliği değiştirirse, daha sonraki hedeflerin sırası daha önceki bir hedefin yürütülmesi sırasında etkilenebilir.
+Hedef derleme sırası, her hedefte `BeforeTargets` , `DependsOnTargets` ve `AfterTargets` özniteliklerinin kullanımına göre belirlenir. Sonraki hedeflerin sırası, önceki hedef bu özniteliklerde başvurulan bir özelliği değiştiren önceki bir hedefin yürütülmesi sırasında etki altına olabilir.
 
-Sıralama kuralları, [hedef derleme sırasını belirlemede](target-build-order.md#determine-the-target-build-order)açıklanmıştır. İşlem, Derlenecek hedefleri içeren bir yığın yapısına göre belirlenir. Bu görevin en üstündeki hedef yürütme başlar ve başka herhangi bir şeye bağımlıysa, bu hedefler yığının en üstüne itilir ve yürütülmeye başlarlar.  Hiçbir bağımlılığı olmayan bir hedef olduğunda, tamamlanma ve üst hedef özgeçmişler için yürütülür.
+Sıralama kuralları Hedef derleme siparişini [belirleme konusunda açıklanmıştır.](target-build-order.md#determine-the-target-build-order) İşlem, derleme hedeflerini içeren bir yığın yapısı tarafından belirlenir. Bu görevin en üstünde yer alan hedef yürütmeyi başlatır ve başka bir şeye bağlı ise, bu hedefler yığının en üstüne itilir ve yürütülmaya başlar.  Bağımlılıkları olmayan bir hedef olduğunda, tamamlandıktan sonra yürütülür ve üst hedefi devam eder.
 
 ### <a name="project-references"></a>Proje Başvuruları
 
-MSBuild iki kod yolu vardır. bu, normal bir, ve sonraki bölümde açıklanan graph seçeneğidir.
+Burada açıklanan normal yol MSBuild iki kod yolu ve sonraki bölümde açıklanan grafik seçeneği vardır.
 
-Bireysel projeler, diğer projelere öğeler aracılığıyla bağımlılığını belirler `ProjectReference` . Yığının en üstündeki bir proje oluşturmaya başladığında, `ResolveProjectReferences` ortak hedef dosyalarında tanımlanmış standart bir hedef olan hedefin çalıştırıldığı noktaya ulaşır.
+Tek tek projeler, öğeler aracılığıyla diğer projelere bağımlılığını `ProjectReference` belirtir. Yığının en üstünde yer alan bir proje, projenin yürütül olduğu noktaya ulaşır ve ortak hedef dosyalarda tanımlanan `ResolveProjectReferences` standart bir hedeftir.
 
-`ResolveProjectReferences`MSBuild görevini, `ProjectReference` çıkışları almak için öğelerin girişleri ile çağırır. `ProjectReference`Öğeler gibi yerel öğelere dönüştürülür `Reference` . geçerli proje için MSBuild yürütme aşaması, yürütme aşaması başvurulan projeyi işlemeye başladığında duraklatılır. (değerlendirme aşaması öncelikle gerektiği şekilde yapılır). Başvurulan proje yalnızca bağımlı projeyi oluşturmaya başladıktan sonra oluşturulur ve bu sayede proje oluşturan projeler ağacı oluşturulur.
+`ResolveProjectReferences`, MSBuild öğelerinin girişleriyle birlikte `ProjectReference` MSBuild görevi çağırır. Öğeler `ProjectReference` gibi yerel öğelere dönüştürüler. `Reference` Yürütme MSBuild (değerlendirme aşaması ilk olarak gerektiğinde yapılır) işlemeye başlarken geçerli proje için yürütme aşaması duraklatılır. Başvurulan proje yalnızca bağımlı projeyi derlemeye başladıktan sonra oluşturur ve bu nedenle bir proje ağacı oluşturur.
 
 Visual Studio çözüm (. sln) dosyalarında proje bağımlılıkları oluşturulmasına izin verir. Bağımlılıklar çözüm dosyasında belirtilir ve yalnızca bir çözüm oluşturulurken veya Visual Studio içinde oluşturulurken dikkate alınır. Tek bir proje oluşturuyorsanız, bu bağımlılık türü yok sayılır. çözüm başvuruları MSBuild tarafından `ProjectReference` öğelere dönüştürülür ve bundan sonra aynı şekilde işlenir.
 

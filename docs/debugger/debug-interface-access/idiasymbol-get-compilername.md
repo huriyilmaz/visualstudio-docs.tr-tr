@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a5360af94cc2c1612b2088dc548216785e1e810a2a9139189fad12d3b5d68e25
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c388e51ca6ded38d9db6fc64f244568d1660425b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312039"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090991"
 ---
 # <a name="idiasymbolget_compilername"></a>IDiaSymbol::get_compilerName
 Compiland oluşturmak için kullanılan [derleyicinin adını döndürür.](../../debugger/debug-interface-access/compiland.md)

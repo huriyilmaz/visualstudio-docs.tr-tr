@@ -1,6 +1,6 @@
 ---
 title: İş Akışı Tasarımcısı - Mesajlaşma Etkinliği Tasarımcıları
-description: Communication Foundation (WCF) iletileri göndererek ve alan mesajlaşma etkinliklerini oluşturmak ve yapılandırmak için Mesajlaşma etkinlik tasarımcılarının Windows kullanmayı öğrenin.
+description: Communication Foundation (WCF) iletileri göndererek ve alan mesajlaşma etkinliklerini oluşturmak ve yapılandırmak için Mesajlaşma etkinlik Windows tasarımcılarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "121383748"
 
 Mesajlaşma etkinliği tasarımcıları, Windows Workflow Foundation (WF) uygulamasından Windows Communication Foundation (WCF) iletileri gönderen ve alan mesajlaşma etkinlikleri oluşturmak ve yapılandırmak için kullanılır. 4. yılda beş mesajlaşma .NET Framework tanıtıldı. Bu İş Akışı Tasarımcısı, bir iş akışı içinde mesajlaşmayı yönetmenize olanak sağlayan iki şablon tasarımcısı sağlar.
 
-Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular, etkinlik ve şablon tasarımcıları için İş Akışı Tasarımcısı rehberlik sağlar.
+Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular, etkinlik ve şablon tasarımcılarının İş Akışı Tasarımcısı rehberlik sağlar.
 
 - <xref:System.Activities.Activity>
 

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 79f0d85af75bbac0f972be084420b843960182bc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5db28fea67e6457b8057833d9c76d3bfa09524f36ecbf91ce63b94556b360efb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89323639"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122031978"
 ---
 Project 2010

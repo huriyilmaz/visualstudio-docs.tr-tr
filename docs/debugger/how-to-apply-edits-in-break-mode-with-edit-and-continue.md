@@ -1,6 +1,6 @@
 ---
-title: Düzenle ve Devam Edin ile kesme modunda Düzenleme | Microsoft Docs
-description: Kesme modundayken düzenleme kodunuzu düzenlemek için Düzenle ve devam Visual Basic nasıl kullanabileceğinize bakın. Kesme moduna girmenin çeşitli yolları vardır.
+title: Düzenle ve devam et ile kesme modunda düzenlemeleri uygulama | Microsoft Docs
+description: kesme modundayken Visual Basic kodunuzu düzenlemek için düzenle ve devam et ' i kullanma bölümüne bakın. Kesme moduna girmek için çeşitli yollar vardır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -25,43 +25,43 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 46b444d7078fe3bfa103648d616128a5879a86dffe39213f494b67247222dd28
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4dfe838e4539b0d23ec20c087e548896195da104
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362399"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090778"
 ---
-# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Nasıl yapılır: Düzenle ve Devam Ile Kesme Modunda Düzenleme Uygulama (Visual Basic)
-Kodunuzu Kesme modunda düzenlemek ve yürütmeyi durdurmadan ve yeniden başlatmadan devam etmek için Düzenle ve Devam'ı kullanabilirsiniz.
+# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Nasıl yapılır: Düzenle ve devam et ile kesme modunda düzenleme uygulama (Visual Basic)
+Kodunuzu kesme modunda düzenlemek için Düzenle ve devam et ' i kullanabilir ve sonra yürütmeyi durdurup yeniden başlatmadan devam edebilirsiniz.
 
-Hata ayıklama sırasında Düzenle ve Devam Edin'i kullanmaya ilişkin sınırlamalar için bkz. Desteklenen [Kod Değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
+Hata ayıklama sırasında Düzenle ve devam et ile ilgili sınırlamalar için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
-### <a name="to-edit-code-in-break-mode"></a>Kodu Kesme modunda düzenlemek için
+### <a name="to-edit-code-in-break-mode"></a>Kodu kesme modunda düzenlemek için
 
-1. Aşağıdakilerden birini yaparak Kesme moduna girin:
+1. Aşağıdakilerden birini yaparak kesme moduna girin:
 
-    - Kodunda bir kesme noktası ayarlayın, sonra Hata  Ayıklama menüsünden Hata Ayıklamayı Başlat'ı seçin ve uygulamanın kesme noktasıyla birlikte isabetini bekleyin. 
-
-         -veya-
-
-    - Hata ayıklamayı başlat ve ardından Hata **Ayıkla menüsünden** Hepsini **Kır'ı** seçin.
+    - Kodunuzda bir kesme noktası ayarlayın, ardından **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin ve uygulamanın kesme noktasına gelmesini bekleyin.
 
          -veya-
 
-    - Bir özel durum oluştuğunda, Özel Durum **Yardımcısı'nda** Düzenlemeyi **Etkinleştir'i seçin.**
+    - Hata ayıklamayı başlatın ve **Hata Ayıkla** menüsünden **Tümünü kes** ' i seçin.
 
-2. İstenen ve desteklenen kod değişikliklerini yapın.
+         -veya-
 
-     Daha fazla bilgi için [bkz. Desteklenen Kod Değişiklikleri (C# ve Visual Basic).](../debugger/supported-code-changes-csharp.md)
+    - Bir özel durum oluştuğunda, **özel durum Yardımcısı** üzerinde **düzenlemesi etkinleştir** ' i seçin.
+
+2. İstediğiniz ve desteklenen kod değişikliklerini yapın.
+
+     Daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
     > [!NOTE]
-    > Düzenle ve Devam' tarafından izin verilmiyor bir kod değişikliği yapmaya çalışırken, düzenlemenizin altı mor dalgalı çizgiyle altı çizili olur ve düzenleme Görev Listesi. Geçersiz kod değişikliğini geri almadıkça kod yürütmeye devam etmek mümkün olmayacaktır.
+    > Düzenle ve devam et tarafından izin verilmeyen bir kod değişikliği yapmaya çalışırsanız, düzenlemeniz mor dalgalı bir çizgiyle altı çizili olur ve Görev Listesi bir görev görüntülenir. Geçersiz kod değişikliğini geri yüklemediğiniz takdirde kod yürütmeye devam edemeyeceksiniz.
 
-3. Hata **Ayıkla menüsünde Devam'a** **tıklar ve** yürütmeyi sürdürün.
+3. **Hata Ayıkla** menüsünde, yürütmeyi sürdürmek için **devam** ' a tıklayın.
 
-     Kodunuz artık projeye dahil edilmiş uygulanan düzenlemeleriniz ile yürütülür.
+     Kodunuz artık projeye eklenen ve uygulanan düzenlemelerinizle yürütülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Desteklenen Kod Değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md)
+- [Desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md)
 - [Düzenle ve Devam Et (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

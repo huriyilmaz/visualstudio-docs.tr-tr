@@ -1,28 +1,29 @@
 ---
 title: Bağlı hizmetleri kullanarak Redsıs için Azure önbelleği ekleme | Microsoft Docs
-description: Bir bağlı hizmet eklemek için Visual Studio 'Yu kullanarak uygulamanıza Redsıs desteği için Azure önbelleği ekleme
+description: bağlı bir hizmet eklemek için Visual Studio kullanarak uygulamanıza redsıs desteği için Azure önbelleği ekleme
 author: AngelosP
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: dd08cc9cc44b0866d718fe03392e99d5fa6467b7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 16d67b8436368bc4b32f20e714a5c397817a1847
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841188"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122075612"
 ---
-# <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetlerini kullanarak Redsıs için Azure önbelleği ekleme
+# <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak redsıs için Azure önbelleği ekleme
 
-Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak, Reda Için Azure önbelleğine aşağıdakilerden herhangi birini bağlayabilirsiniz:
+Visual Studio, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerin herhangi birini redsıs için Azure önbelleğine bağlayabilirsiniz:
 
 - .NET Framework konsol uygulaması
 - ASP.NET MVC (.NET Framework) 
 - ASP.NET Core
-- .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
+- .net Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
 - .NET Core çalışan rolü
 - Azure İşlevleri
 - Evrensel Windows Platformu uygulaması
@@ -32,13 +33,13 @@ Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak, Reda Için Azu
 Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodlarını projenize ekler ve yapılandırma dosyalarınızı uygun şekilde değiştirir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Azure iş yükü yüklü olan Visual Studio.
+- Azure iş yükü yüklü Visual Studio.
 - Desteklenen türlerden birinin projesi
 
-## <a name="connect-to-azure-cache-for-redis-using-connected-services"></a>Bağlı hizmetleri kullanarak Redsıs için Azure önbelleğine bağlanma
+## <a name="connect-to-azure-cache-for-redis-using-connected-services"></a>redsıs için Azure önbelleğine bağlı hizmetleri kullanarak Bağlan
 
 1. Projenizi Visual Studio’da açın.
 
@@ -58,7 +59,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
     Yeni bir bileşen oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde 7. adıma geçin.
 
-    ![Redsıs için mevcut Azure önbelleğine bağlanma](./media/azure-redis-cache-add-connected-service/created-azure-redis-cache.png)
+    ![redsıs için mevcut Azure önbelleğine Bağlan](./media/azure-redis-cache-add-connected-service/created-azure-redis-cache.png)
 
 1. Azure Redis Cache oluşturmak için:
 
@@ -86,4 +87,4 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 - [Redsıs ürün sayfası için Azure önbelleği](https://azure.microsoft.com/services/cache)
 - [Redsıs belgeleri için Azure önbelleği](/azure/azure-cache-for-redis/)
-- [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)
+- [bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

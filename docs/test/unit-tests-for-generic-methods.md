@@ -1,6 +1,6 @@
 ---
 title: Genel Yöntemler için birim testleri
-description: Genel metotlar için birim testleri oluşturmayı öğrenin ve bu bilgileri kullanarak genel metotlar için birim testleri oluşturma örnekleri.
+description: Genel yöntemler için birim testi oluşturma örnekleri ve hakkında bu bilgileri kullanarak genel yöntemler için birim testleri oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,32 +22,32 @@ ms.locfileid: "121384671"
 ---
 # <a name="unit-tests-for-generic-methods"></a>Genel metotlar için birim testleri
 
-Genel yöntemler için birim testlerini, diğer yöntemler için yaptığınız şekilde tam olarak oluşturabilirsiniz. Aşağıdaki bölümler, genel metotlar için birim testleri oluşturma hakkında bilgi ve örnekler sağlar.
+Genel yöntemler için diğer yöntemlerde olduğu gibi birim testleri de üretebilirsiniz. Aşağıdaki bölümlerde, genel yöntemler için birim testleri oluşturma hakkında bilgi ve örnekler verilmiştir.
 
 ## <a name="type-arguments-and-type-constraints"></a>Tür bağımsız değişkenleri ve tür kısıtlamaları
 
-Visual Studio, gibi genel bir sınıf için bir birim testi oluşturduğunda, `MyList<T>` iki yöntem oluşturur: genel yardımcı ve test yöntemi. `MyList<T>`Bir veya daha fazla tür kısıtlaması varsa, tür bağımsız değişkeninin tüm tür kısıtlamalarını karşılaması gerekir. Test edilen genel kodun tüm izin verilen girişler için beklendiği gibi çalıştığından emin olmak için test yöntemi, test etmek istediğiniz tüm kısıtlamalara sahip genel yardımcı yöntemini çağırır.
+Bir Visual Studio gibi bir genel sınıf için birim testi oluşturması iki yöntem üretir: genel yardımcı ve `MyList<T>` test yöntemi. Bir `MyList<T>` veya daha fazla tür kısıtlaması varsa, tür bağımsız değişkeninin tüm tür kısıtlamalarını karşılaması gerekir. Test altındaki genel kodun izin verilen tüm girişlerde beklendiği gibi çalışmasını sağlamak için test yöntemi, test etmek istediğiniz tüm kısıtlamalarla birlikte genel yardımcı yöntemini çağırabilir.
 
 ## <a name="examples"></a>Örnekler
-Aşağıdaki örneklerde, genel türler için birim testleri gösterilmektedir:
+Aşağıdaki örnekler genel türler için birim testlerini göstermektedir:
 
-- [Oluşturulan test kodunu düzenleyin](#EditingGeneratedTestCode). Bu örnekte, üretilen test kodu ve düzenlenmiş test kodu olmak üzere iki bölüm vardır. Genel bir yöntemden oluşturulan ham test kodunun yararlı bir test yöntemine nasıl düzenleneceğini gösterir.
+- [Oluşturulan test kodunu düzenleyin.](#EditingGeneratedTestCode) Bu örnekte, Oluşturulan Test Kodu ve Düzenlenen Test Kodu olmak için iki bölüm vardır. Genel bir yöntemden oluşturulan ham test kodunun yararlı bir test yönteminde nasıl düzenlenmemiş olduğunu gösterir.
 
-- [Bir tür kısıtlaması kullanın](#TypeConstraintNotSatisfied). Bu örnekte, bir tür kısıtlaması kullanan genel bir yöntem için birim testi gösterilmektedir. Bu örnekte tür kısıtlaması karşılanmaz.
+- [Tür kısıtlaması kullanın.](#TypeConstraintNotSatisfied) Bu örnek, tür kısıtlaması kullanan genel bir yöntem için birim testini gösterir. Bu örnekte tür kısıtlaması karşılanmaz.
 
-### <a name="example-1-editing-generated-test-code"></a><a name="EditingGeneratedTestCode"></a> Örnek 1: oluşturulan test kodunu Düzenle
-Bu bölümdeki test kodu adlı bir kod test yöntemini sınar `SizeOfLinkedList()` . Bu yöntem, bağlantılı listedeki düğüm sayısını belirten bir tamsayı döndürür.
+### <a name="example-1-editing-generated-test-code"></a><a name="EditingGeneratedTestCode"></a> Örnek 1: Oluşturulan test kodunu düzenleme
+Bu bölümdeki test kodu, adlı bir test altında kod yöntemini test `SizeOfLinkedList()` ediyor. Bu yöntem, bağlantılı listede düğüm sayısını belirten bir tamsayı döndürür.
 
-Oluşturulan test kodu bölümünde ilk kod örneği, Visual Studio Enterprise tarafından oluşturulduğu şekliyle düzenlenmemiş test kodunu gösterir. İkinci örnek, bir test kodu düzenlenmiş bölümünde, bu, iki farklı veri türü için SizeOfLinkedList yönteminin çalışmasını nasıl test etmek istediğinizi gösterir `int` `char` .
+İlk kod örneği, Oluşturulan Test Kodu bölümünde, örnek tarafından oluşturulan ve oluşturulmamış test kodunu Visual Studio Enterprise. İkinci örnek, Düzenlenen Test Kodu bölümünde iki farklı veri türü (ve) için SizeOfLinkedList yönteminin çalışmasını test etmek için nasıl test edekleyebilirsiniz? `int` `char`
 
-Bu kod iki yöntemi gösterir:
+Bu kod iki yöntemi göstermektedir:
 
-- test Yardımcısı yöntemi, `SizeOfLinkedListTestHelper<T>()` . Varsayılan olarak, bir test Yardımcısı yönteminin adında "TestHelper" vardır.
+- bir test yardımcı yöntemi, `SizeOfLinkedListTestHelper<T>()` . Varsayılan olarak, bir test yardımcı yönteminin adı "TestHelper" olur.
 
-- test yöntemi, `SizeOfLinkedListTest()` . Her test yöntemi TestMethod özniteliğiyle işaretlenir.
+- bir test yöntemi, `SizeOfLinkedListTest()` . Her test yöntemi TestMethod özniteliğiyle işaretlenir.
 
-#### <a name="generated-test-code"></a>Test kodu oluşturuldu
-Aşağıdaki test kodu `SizeOfLinkedList()` yönteminden üretildi. Bu, düzenlenmemiş bir test olduğundan, SizeOfLinkedList metodunu doğru bir şekilde test etmek için değiştirilmesi gerekir.
+#### <a name="generated-test-code"></a>Oluşturulan test kodu
+Aşağıdaki test kodu yönteminden `SizeOfLinkedList()` oluşturulmuş. Bu, oluşturulmamış test olduğundan, SizeOfLinkedList yöntemini doğru şekilde test etmek için değiştirilmelidir.
 
 ```csharp
 public void SizeOfLinkedListTestHelper<T>()
@@ -68,30 +68,30 @@ public void SizeOfLinkedListTest()
 }
 ```
 
-Yukarıdaki kodda, genel tür parametresi `GenericParameterHelper` . Bu şekilde, aşağıdaki örnekte gösterildiği gibi belirli veri türlerini sağlamak üzere düzenleyebilirsiniz, bu ifadeyi düzenlemeden testi çalıştırabilirsiniz.
+Yukarıdaki kodda, genel tür parametresi `GenericParameterHelper` olur. Aşağıdaki örnekte gösterildiği gibi belirli veri türlerini sağlamak için düzenleyebilirsiniz ancak bu deyimi düzenlemeden testi çalıştırabilirsiniz.
 
-#### <a name="edited-test-code"></a>Düzenlenmiş test kodu
-Aşağıdaki kodda, test yöntemi ve test Yardımcısı yöntemi, kodu test yönteminin altında başarıyla test etmek üzere düzenlendi `SizeOfLinkedList()` .
+#### <a name="edited-test-code"></a>Düzenlenen test kodu
+Aşağıdaki kodda test yöntemi ve test yardımcı yöntemi, test altındaki kodu başarıyla test etmek için `SizeOfLinkedList()` düzenlenmiştir.
 
-##### <a name="test-helper-method"></a>Test Yardımcısı yöntemi
-Test Yardımcısı yöntemi, 5. adımda 1. adım etiketini taşıyan koddaki satırlara karşılık gelen aşağıdaki adımları gerçekleştirir.
+##### <a name="test-helper-method"></a>Test yardımcı yöntemi
+Test yardımcı yöntemi, 1. adımdan 5. adıma kadar etiketlenmiş kod satırlarına karşılık gelen aşağıdaki adımları gerçekleştirir.
 
-1. Genel bağlantılı liste oluşturun.
+1. Genel bir bağlantılı liste oluşturun.
 
 2. Bağlantılı listeye dört düğüm ekleyin. Bu düğümlerin içeriğinin veri türü bilinmiyor.
 
-3. Bağlantılı listenin beklenen boyutunu değişkenine atayın `expected` .
+3. Bağlantılı listenin beklenen boyutunu değişkenine `expected` attayın.
 
-4. Bağlantılı listenin gerçek boyutunu hesaplayın ve değişkenine atayın `actual` .
+4. Bağlantılı listenin gerçek boyutunu hesaplar ve değişkenine `actual` atar.
 
-5. `actual` `expected` Bir onaylama ifadesinde ile karşılaştırın. Gerçek, beklenen değere eşit değilse, test başarısız olur.
+5. Assert `actual` `expected` deyiminde ile karşılaştırın. Gerçek değer beklenene eşit olmazsa test başarısız olur.
 
 ##### <a name="test-method"></a>Test yöntemi
-Test yöntemi, SizeOfLinkedListTest adlı testi çalıştırdığınızda çağrılan koda derlenir. 6. adım ve 7. adım etiketli koddaki satırlara karşılık gelen aşağıdaki adımları gerçekleştirir.
+Test yöntemi, SizeOfLinkedListTest adlı testi çalıştırarak çağrılan koda derlenmiş olur. 6. ve 7. adım etiketli kod satırlarına karşılık gelen aşağıdaki adımları gerçekleştirir.
 
-1. `<int>`Testin değişkenler için çalıştığını doğrulamak için test Yardımcısı yöntemini ne zaman çağırabileceğinizi belirtin `integer` .
+1. Testin `<int>` değişkenler için çalıştığını doğrulamak için test yardımcı yöntemini ne zaman çağırarak `integer` belirtebilirsiniz.
 
-2. `<char>`Testin değişkenler için çalıştığını doğrulamak için test Yardımcısı yöntemini ne zaman çağırabileceğinizi belirtin `char` .
+2. Testin `<char>` değişkenler için çalıştığını doğrulamak için test yardımcı yöntemini ne zaman çağırarak `char` belirtebilirsiniz.
 
 ```csharp
 public void SizeOfLinkedListTestHelper<T>()
@@ -118,14 +118,14 @@ public void SizeOfLinkedListTest()
 ```
 
 > [!NOTE]
-> SizeOfLinkedListTest testi çalıştığında, TestHelper yöntemi iki kez çağrılır. Onaylama bildiriminin her geçmesi için, her seferinde true olarak değerlendirilmelidir. Test başarısız olursa, belirtilen çağrının `<int>` veya belirtilen çağrının başarısız olmasına neden olup olmadığı temizlenmeyebilir `<char>` . Yanıtı bulmak için çağrı yığınını inceleyebilirsiniz veya test yönteminizin kesme noktaları ayarlayabilir ve testi çalıştırırken hata ayıklayabilirsiniz. daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET çözümünde test çalıştırırken hata ayıklama](/previous-versions/ms243172(v=vs.140)).
+> SizeOfLinkedListTest testi her çalıştır çalıştırıldık, TestHelper yöntemi iki kez çağrılır. Testin başarılı olması için assert deyiminin her zaman true olarak değerlendirmesi gerekir. Test başarısız olursa, belirtilen çağrının mı yoksa belirtilen çağrının başarısız olup `<int>` olmadığı net bir şekilde `<char>` belirlenemilebilir. Yanıtı bulmak için çağrı yığınını inceler veya test yönteminize kesme noktaları ayarp testi çalıştırırken hata ayıklarsanız. Daha fazla bilgi için, [bkz. How to: Debug while running a test in an ASP.NET solution](/previous-versions/ms243172(v=vs.140)).
 
-### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a> Örnek 2: tür kısıtlaması kullanma
-Bu örnek, karşılanmamış bir tür kısıtlaması kullanan genel bir yöntem için bir birim testi gösterir. İlk bölüm kodun altındaki test projesinden kodu gösterir. Tür kısıtlaması vurgulanır.
+### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a> Örnek 2: Tür kısıtlaması kullanma
+Bu örnekte, karşılanmaz bir tür kısıtlaması kullanan genel bir yöntem için birim testi gösterir. İlk bölümde test altındaki kod projesinden kodlar yer almaktadır. Tür kısıtlaması vurgulanır.
 
-İkinci bölüm, test projesinden kodu gösterir.
+İkinci bölümde test projesinden kodlar yer almaktadır.
 
-#### <a name="code-under-test-project"></a>Kod altındaki test projesi
+#### <a name="code-under-test-project"></a>Test kapsamında kod projesi
 
 ```csharp
 using System;
@@ -157,13 +157,13 @@ namespace ClassLibrary2
 }
 ```
 
-#### <a name="test-project"></a>Test projesi
+#### <a name="test-project"></a>Projeyi test etmek
 
-Tüm yeni oluşturulan birim testlerinde olduğu gibi, bu birim testine, yararlı sonuçlar döndürmesini sağlamak için sonuçsuz onay deyimleri eklemeniz gerekir. Bunları TestMethod özniteliği ile işaretlenen yönteme eklemeyin, ancak bu test için adlandırılmış olan "TestHelper" yöntemine eklemeyin `DataTestHelper<T>()` .
+Yeni oluşturulan tüm birim testlerinde olduğu gibi, yararlı sonuçlar elde etmek için bu birim testinde de kesin olmayan Assert deyimleri eklemeniz gerekir. Bunları TestMethod özniteliğiyle işaretlenmiş yönteme değil, bu test için olarak adlandırılmış olan "TestHelper" yöntemine `DataTestHelper<T>()` eklersiniz.
 
-Bu örnekte, genel tür parametresinin `T` kısıtlaması vardır `where T : Employee` . Bu kısıtlama test yönteminde karşılanmaz. Bu nedenle, `DataTest()` yöntemi, üzerine yerleştirilmiş tür kısıtlamasını sağlama gereksinimine sizi uyaran bir onay açıklaması içerir `T` . Bu onay bildiriminin iletisi aşağıdaki gibi okur: `("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
+Bu örnekte, genel tür parametresi `T` kısıtlamasına `where T : Employee` sahip. Bu kısıtlama test yönteminde karşılanmaz. Bu nedenle yöntemi, üzerinde yerleştirilen tür kısıtlamasını sağlamak için sizi uyaran `DataTest()` bir Assert deyimi `T` içerir. Bu Assert deyiminin iletisi şu şekilde okunur: `("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
 
-Diğer bir deyişle, `DataTestHelper<T>()` yöntemi test yönteminden çağırdığınızda, `DataTest()` türünde bir parametre `Employee` veya sınıfından türetilmiş bir sınıf geçirmeniz gerekir `Employee` .
+Başka bir deyişle, test yönteminden yöntemini çağırarak türünden veya sınıfından `DataTestHelper<T>()` `DataTest()` türetilen bir sınıf `Employee` parametresini geçmeniz `Employee` gerekir.
 
 ```csharp
 using ClassLibrary2;
@@ -199,4 +199,4 @@ namespace TestProject1
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Kodunuzu birim testi](../test/unit-test-your-code.md)

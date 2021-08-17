@@ -14,14 +14,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 68ddc86183eacd7f76e39bb06e47968c0129849c
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 6afe6cf9623cfb2594a1d7ce93f9fda890166612590c00662effdf55e8b03061
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824016"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440792"
 ---
 # <a name="how-to-programmatically-count-characters-in-documents"></a>Nasıl yapılır: belgelerde program aracılığıyla karakter sayma
   Belgedeki ilk karakter, ekleme noktasını temsil eden 0 karakter konumunda bulunur. Son karakter konumu belgedeki toplam karakter sayısına eşittir. Bir belgedeki karakter sayısını <xref:Microsoft.Office.Interop.Word.Characters.Count%2A> koleksiyonun özelliğini kullanarak belirleyebilirsiniz <xref:Microsoft.Office.Interop.Word.Characters> .
@@ -42,7 +43,7 @@ ms.locfileid: "107824016"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet99":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet99":::
 
-## <a name="to-display-the-number-of-characters-in-a-vsto-add-in"></a>VSTO eklentideki karakter sayısını görüntüleme
+## <a name="to-display-the-number-of-characters-in-a-vsto-add-in"></a>bir VSTO eklentisi içindeki karakter sayısını görüntüleme
 
 1. Belgenin tamamını seçin. Aşağıdaki örnek etkin belgeyi seçer.
 

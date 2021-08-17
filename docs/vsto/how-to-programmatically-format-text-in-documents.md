@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: belgelerde metni program aracılığıyla biçimlendirme'
-description: Bir Microsoft Word belgesinde programlı olarak metin biçimlendirmek için Range nesnesini nasıl kullanabileceğinizi öğrenin.
+description: Microsoft Word bir belgedeki metni programlı olarak biçimlendirmek için Range nesnesini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,21 +14,22 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b91486c193b7b3fdba3b4c5cbbe86f58ffa7f06c
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 130469ddd084a1a044e4af458164f15c82412eef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827883"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122122715"
 ---
 # <a name="how-to-programmatically-format-text-in-documents"></a>Nasıl yapılır: belgelerde metni program aracılığıyla biçimlendirme
-  <xref:Microsoft.Office.Interop.Word.Range>Bir Microsoft Office Word belgesinde metin biçimlendirmek için nesnesini kullanabilirsiniz.
+  <xref:Microsoft.Office.Interop.Word.Range>bir Microsoft Office Word belgesinde metin biçimlendirmek için nesnesini kullanabilirsiniz.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Aşağıdaki örnekte belgedeki ilk paragraf seçilir ve yazı tipi boyutu, yazı tipi adı ve hizalama değişir. Sonra aralığı seçer ve kodun sonraki bölümünü yürütmeden önce duraklatmak üzere bir ileti kutusu görüntüler. Sonraki bölümde, ana bilgisayar öğesinin geri alma yöntemi <xref:Microsoft.Office.Tools.Word.Document> (belge düzeyi özelleştirmesi için) veya <xref:Microsoft.Office.Interop.Word.Document> Sınıf (VSTO eklentisi için) üç kez çağrı yapılır. Normal girinti stilini uygular ve kodu duraklatmak için bir ileti kutusu görüntüler. Ardından kod <xref:Microsoft.Office.Tools.Word.Document.Undo%2A> yöntemi bir kez çağırır ve bir ileti kutusu görüntüler.
+ Aşağıdaki örnekte belgedeki ilk paragraf seçilir ve yazı tipi boyutu, yazı tipi adı ve hizalama değişir. Sonra aralığı seçer ve kodun sonraki bölümünü yürütmeden önce duraklatmak üzere bir ileti kutusu görüntüler. sonraki bölümde, ana bilgisayar öğesinin geri alma yöntemi <xref:Microsoft.Office.Tools.Word.Document> (belge düzeyi özelleştirmesi için) veya <xref:Microsoft.Office.Interop.Word.Document> sınıfı (VSTO eklenti için) üç kez çağrı yapılır. Normal girinti stilini uygular ve kodu duraklatmak için bir ileti kutusu görüntüler. Ardından kod <xref:Microsoft.Office.Tools.Word.Document.Undo%2A> yöntemi bir kez çağırır ve bir ileti kutusu görüntüler.
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
@@ -39,11 +40,11 @@ ms.locfileid: "107827883"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet62":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet62":::
 
-## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
+## <a name="vsto-add-in-example"></a>VSTO Eklenti örneği
 
-### <a name="to-format-text-using-a-vsto-add-in"></a>VSTO eklentisini kullanarak metin biçimlendirmek için
+### <a name="to-format-text-using-a-vsto-add-in"></a>VSTO eklentisi kullanarak metin biçimlendirmek için
 
-1. Aşağıdaki örnek bir VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
+1. aşağıdaki örnek, bir VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet62":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet62":::

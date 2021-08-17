@@ -1,6 +1,6 @@
 ---
-title: Spy + + başvurusu | Microsoft Docs
-description: Spy + + hata ayıklama aracında her bir menü komutunu ve iletişim kutusunu tanımlayan makalelere yönelik başvuru bağlantıları listesini gözden geçirin.
+title: Spy++ Başvuru | Microsoft Docs
+description: Spy++ hata ayıklama aracında her menü komutunu ve iletişim kutusunu açıklayan makalelerin başvuru bağlantılarının listesini gözden geçirme.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,38 +11,39 @@ ms.assetid: 2cf41bc9-55f3-4bb6-b28d-08c75215debd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 37692e752e96cb37a712ebcdfa61f5388131991d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 829c4eb8b9114baa2d553863d543b217908cb839
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99903458"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090310"
 ---
 # <a name="spy-reference"></a>Spy++ Başvurusu
-Her Spy + + menüsünün ve iletişim kutusunun açıklamaları için aşağıda listelenen bölümlere bakın:
+Her Spy++ menüsünün ve iletişim kutusunun açıklamaları için aşağıda listelenen bölümlere bakın:
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Menü komutları](../debugger/menu-commands.md) Her Spy + + menüsünde kullanılabilen komutları açıklar.
+ [Menü Komutları](../debugger/menu-commands.md) Her Spy++ menüsünde kullanılabilen komutları açıklar.
 
- [Yazı tipi Iletişim kutusu](../debugger/font-dialog-box-microsoft-spy-increment-help.md) Spy + + görünümleri penceresinde kullanılan karakter yazı tipini yapılandırmak için kullanılır.
+ [Yazı Tipi İletişim Kutusu](../debugger/font-dialog-box-microsoft-spy-increment-help.md) Spy++ Görünümler penceresinde kullanılan karakter yazı tipini yapılandırmak için kullanılır.
 
- [Spy + + görünümleri Için arama araçları](../debugger/search-tools-for-spy-increment-views.md) Spy + + görünümleri penceresinde belirli bir düğümü bulmak için kullanılan iletişim kutuları.
+ [Spy++ Görünümleri için Arama Araçları](../debugger/search-tools-for-spy-increment-views.md) Spy++ Görünümler penceresinde belirli bir düğümü bulmak için kullanılan iletişim kutuları.
 
- [Pencere özellikleri Iletişim kutusu](../debugger/window-properties-dialog-box.md) Windows görünümü 'nde seçilen pencerenin özelliklerini görüntülemek için kullanılır.
+ [Pencere Özellikleri İletişim Kutusu](../debugger/window-properties-dialog-box.md) Bu görünümde seçilen bir pencerenin özelliklerini görüntülemek Windows kullanılır.
 
- [Ileti seçenekleri Iletişim kutusu](../debugger/message-options-dialog-box.md) Ileti görünümünde hangi iletilerin listelendiğini seçmek için kullanılır.
+ [İleti Seçenekleri İletişim Kutusu](../debugger/message-options-dialog-box.md) İletiler görünümünde hangi iletilerin listelenmiş olduğunu seçmek için kullanılır.
 
- [Ileti özellikleri Iletişim kutusu](../debugger/message-properties-dialog-box.md) Iletiler görünümünde seçilen bir iletinin özelliklerini görüntülemek için kullanılır.
+ [İleti Özellikleri İletişim Kutusu](../debugger/message-properties-dialog-box.md) İletiler görünümünde seçilen iletinin özelliklerini görüntülemek için kullanılır.
 
- [Işlem özellikleri Iletişim kutusu](../debugger/process-properties-dialog-box.md) Işlemler görünümünde seçilen bir işlemin özelliklerini görüntülemek için kullanılır.
+ [İşlem Özellikleri İletişim Kutusu](../debugger/process-properties-dialog-box.md) İşlemler görünümünde seçilen bir sürecin özelliklerini görüntülemek için kullanılır.
 
- [Iş parçacığı özellikleri Iletişim kutusu](../debugger/thread-properties-dialog-box.md) Iş parçacıkları görünümünde seçilen bir iş parçacığının özelliklerini görüntülemek için kullanılır.
+ [İş Parçacığı Özellikleri İletişim Kutusu](../debugger/thread-properties-dialog-box.md) İş Parçacıkları görünümünde seçilen bir iş parçacığının özelliklerini görüntülemek için kullanılır.
 
- [Diğer Iletişim kutuları](../debugger/other-dialog-boxes.md) Spy + + programı hakkındaki bilgileri göstermek için kullanılır.
+ [Diğer İletişim Kutuları](../debugger/other-dialog-boxes.md) Spy++ programıyla ilgili bilgileri görüntülemek için kullanılır.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.
+ [Spy++ kullanma](../debugger/using-spy-increment.md) Spy++ aracını tanıtıyor ve nasıl kullanıLl olduğunu açıklar.
 
- [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
+ [Spy++ Görünümleri](../debugger/spy-increment-views.md) Pencerelerin, iletilerin, işlemlerin ve iş parçacıklarının Spy++ ağaç görünümlerini açıklar.

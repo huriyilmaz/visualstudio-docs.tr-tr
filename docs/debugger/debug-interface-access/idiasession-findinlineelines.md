@@ -1,6 +1,6 @@
 ---
-description: Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır içi tüm işlevlerin satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.
-title: 'IDiaSession:: findInlineeLines | Microsoft Docs'
+description: Bir istemcinin, belirtilen üst simgeyle satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak bir numaralandırır.
+title: IDiaSession::findInlineeLines | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,7 +20,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121454922"
 ---
 # <a name="idiasessionfindinlineelines"></a>IDiaSession::findInlineeLines
-Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır içi tüm işlevlerin satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.
+Bir istemcinin, belirtilen üst simgeyle satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak bir numaralandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,14 +34,14 @@ HRESULT findInlineeLines (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol` Üst öğeyi temsil eden nesne.
+[in] Üst `IDiaSymbol` öğeyi temsil eden nesne.
 
  `ppResult`
 
-dışı `IDiaEnumLineNumbers` Alınan satır numaralarının listesini içeren bir nesnesi tutar.
+[out] Alınan `IDiaEnumLineNumbers` satır numaralarının listesini içeren bir nesneyi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

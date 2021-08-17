@@ -1,6 +1,6 @@
 ---
-title: Görselleştiriciyi test etme ve hata ayıklama | Microsoft Docs
-description: bir test sürücüsünden (görselleştirici geliştirme ana bilgisayarı) çalıştırarak veya Visual Studio yükleyip hata ayıklayıcı penceresinden çağırarak bir görselleştirici test edin ve hatalarını ayıklayın.
+title: Görselleştiriciyi Test Ve Hata Ayıklama | Microsoft Docs
+description: Görselleştiriciyi test sürücüsünden (görselleştirici geliştirme ana bilgisayarı) çalıştırarak veya bir hata ayıklayıcısı penceresinden Visual Studio yükleyerek test ve hata ayıklama.
 ms.custom: SEO-VS-2020
 ms.date: 07/02/2021
 ms.topic: how-to
@@ -17,28 +17,29 @@ ms.assetid: 5cc12ce8-c819-48e4-b487-98d403001b28
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fa97453d08650b78a02eda873a01afe9e376caec
-ms.sourcegitcommit: 4cd3eb514e9fa48e586279e38fe7c2e111ebb304
+ms.openlocfilehash: 139c0c0b2cce08d211e3d318d8ab90d0dd5a368f08004133f1ef31b3f58a257a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "113298250"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453392"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Test Etme ve Hata Ayıklama
-Görselleştirici yazdıktan sonra hata ayıklaması yapmanız ve test etmeniz gerekir.
+Görselleştirici yazdıktan sonra hata ayıklamalı ve test etmek gerekir.
 
-görselleştirici test etmenin bir yolu, Visual Studio bir hata ayıklayıcı penceresinden yüklenerek bu uygulamayı test etmenin bir yoludur. (Bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).) bunu yaparsanız, hata ayıklayıcının ilk örneğinde çalışan görselleştiricisi eklemek ve hatalarını ayıklamak için Visual Studio ikinci bir örneğini kullanmanız gerekir.
+Görselleştiriciyi test etmek için bir yol, görselleştiriciyi Visual Studio hata ayıklayıcısı penceresinden çağırarak yapmaktır. [(Bkz. Nasıl: Görselleştirici Yükleme](../debugger/how-to-install-a-visualizer.md).) Bunu yaparsanız, hata ayıklayıcının ilk örneğinde çalışan görselleştiriciyi eklemek ve hata ayıklamak için Visual Studio'nin ikinci bir örneğini kullansanız gerekir.
 
-Görselleştirici hata ayıklamanın daha kolay bir yolu, Görselleştirici bir test sürücüsünden çalıştırılmaktır. Görselleştiricisi API 'Leri, *görselleştiricisi geliştirme Konağı* olarak adlandırılan böyle bir sürücü oluşturmayı kolaylaştırır.
+Görselleştiricide hata ayıklamanın daha kolay bir yolu, görselleştiriciyi bir test sürücüsünden çalıştırmaktır. Görselleştirici API'leri, görselleştirici geliştirme ana bilgisayarı olarak adlandırılan böyle bir *sürücü oluşturmanızı kolaylaştırır.*
 
 >[!NOTE]
-> şu anda, test sürücüsü yalnızca görselleştiricisi bir .NET Framework uygulamasından çağrılırken desteklenir.
+> Şu anda test sürücüsü yalnızca görselleştirici bir uygulamanın görselleştiricisi .NET Framework desteklemektedir.
 
-### <a name="to-create-a-visualizer-development-host"></a>Görselleştiricisi geliştirme konağı oluşturmak için
+### <a name="to-create-a-visualizer-development-host"></a>Görselleştirici geliştirme ana bilgisayarı oluşturmak için
 
-1. Hata ayıklayıcı tarafı sınıfınıza, bir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost> nesnesi oluşturan ve Show yöntemini çağıran statik bir yöntem ekleyin:
+1. Hata ayıklayıcı tarafı sınıfınıza bir nesnesi oluşturan ve show yöntemini <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost> çağıran statik bir yöntem dahil eder:
 
     ```csharp
     public static void TestShowVisualizer(object objectToVisualize)
@@ -48,17 +49,17 @@ Görselleştirici hata ayıklamanın daha kolay bir yolu, Görselleştirici bir 
     }
     ```
 
-    Konağı oluşturmak için kullanılan parametreler, Görselleştirici ( `objectToVisualize` ) ve hata ayıklayıcı tarafı sınıfının türü içinde gösterilecek veri nesnesidir.
+    Ana bilgisayarı oluşturmak için kullanılan parametreler görselleştiricide ( ) ve hata ayıklayıcı yan sınıfının türünde gösterilecek `objectToVisualize` veri nesnesidir.
 
-2. Çağırmak için aşağıdaki ifadeyi ekleyin `TestShowVisualizer` . Görselleştiriciyi bir sınıf kitaplığında oluşturduysanız, sınıf kitaplığını çağırmak için bir yürütülebilir dosya oluşturmanız ve bu ifadeyi çalıştırılabilirinize yerleştirmeniz gerekir:
+2. çağrısı için aşağıdaki deyimi `TestShowVisualizer` ekleyin. Görselleştiricinizi bir sınıf kitaplığında oluşturduysanız, sınıf kitaplığını çağıracak ve bu deyimi yürütülebilir dosyanıza yer alan bir yürütülebilir dosya oluşturmanız gerekir:
 
     ```csharp
     DebuggerSide.TestShowVisualizer(myString);
     ```
 
-    Daha kapsamlı bir örnek için bkz. [Izlenecek yol: C# dilinde Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md).
+    Daha eksiksiz bir örnek için bkz. [Kılavuz: C# ile Görselleştirici Yazma.](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek Yol: C# ile Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
-- [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)
+- [Nasıl kurulur: Görselleştirici Yükleme](../debugger/how-to-install-a-visualizer.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

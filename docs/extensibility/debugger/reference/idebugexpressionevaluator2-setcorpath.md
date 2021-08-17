@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklayıcıda yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.
-title: 'IDebugExpressionEvaluator2:: SetCorPath | Microsoft Docs'
+description: Hata ayıklayıcısında yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.
+title: IDebugExpressionEvaluator2::SetCorPath | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 27b614ff-7325-4f9b-8da4-61ee020c9410
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bd81d9dd5df086fcab3f401d4b3e14f65e9ce24c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f49cb103dd5737e92053a2097f320bf5c24d1dea
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077349"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138646"
 ---
 # <a name="idebugexpressionevaluator2setcorpath"></a>IDebugExpressionEvaluator2::SetCorPath
-Hata ayıklayıcıda yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.
+Hata ayıklayıcısında yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +42,13 @@ int SetCorPath(
 
 ## <a name="parameters"></a>Parametreler
 `pcstrCorPath`\
-'ndaki Hata ayıklayıcıda yüklenen CLR 'nin yolu.
+[in] Hata ayıklayıcıda yüklenen CLR'nin yolu.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) arabirimini kullanıma sunan bir **ExpressionEvaluatorPackage** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+ Aşağıdaki örnek, [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) arabirimini ortaya çıkaran **ExpressionEvaluatorPackage** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)

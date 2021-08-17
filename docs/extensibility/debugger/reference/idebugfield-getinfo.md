@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c41d00a8f8a42e3c92e88dec911b6d0fd638ecedd77665a240475b417da52072
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aa7d97c86c91a220b21c20a650a685d4c7b2fb73
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389858"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138451"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
 Bu yöntem alanı hakkında değiştirilebilir bilgiler alır.

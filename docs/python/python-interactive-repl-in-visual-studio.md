@@ -1,6 +1,6 @@
 ---
 title: Python etkileşimli penceresi (REPL)
-description: Hızlı Python kodu geliştirme için etkileşimli pencereyi (REPL) Visual Studio.
+description: Visual Studio ' de hızlı Python kod geliştirmesi için etkileşimli pencereyi (REPL) kullanın.
 ms.date: 02/11/2019
 ms.topic: how-to
 author: JoshuaPartlow
@@ -11,137 +11,137 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 36d9dfe9f7c986e46dad0708b2dad0ffd21c326ccaa466e8d90249bdc6d0941f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: db046648d78caeb1ec779ae556709806d72dc55c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367956"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076223"
 ---
-# <a name="work-with-the-python-interactive-window"></a>Python Etkileşimli penceresi
+# <a name="work-with-the-python-interactive-window"></a>Python etkileşimli penceresiyle çalışma
 
-Visual Studio Python ortamlarınızı her biri için etkileşimli bir okuma-değerlendirme-yazdırma döngüsü (REPL) penceresi sağlar.  Bu pencere, komutpython.exerepl ile elde edersiniz. Etkileşimli **pencere** (Diğer Öğeleri Görüntüle **ve** Windows ortam Etkileşimli menü komutlarıyla açılır), rastgele Python kodu girmenize ve anında  >    >  sonuçları görmenize olanak **&lt; &gt;** sağlar. Bu kodlama yolu, API'leri ve kitaplıkları öğrenmenize, denemenize ve projelerinize dahil etmek için etkileşimli olarak çalışma kodu geliştirmenize yardımcı olur.
+Visual Studio, Python ortamlarınızın her biri için etkileşimli bir okuma-değerlendirme-yazdırma döngüsü (repl) penceresi sağlar. bu, komut satırında *python.exe* sahip olduğunuz REPL üzerinde geliştirilir. **etkileşimli** pencere (   >  **diğer Windows**  >  **&lt; ortamı görüntüle &gt; etkileşimli** menü komutlarıyla açılır), rastgele Python kodu girmenizi ve anında sonuçları görmenizi sağlar. Bu kodlama yöntemi, API 'Leri ve kitaplıkları öğrenmenize ve denemenize ve etkileşimli olarak, projelerinize dahil etmek üzere çalışma kodu geliştirmenize yardımcı olur.
 
 ![Python etkileşimli penceresi](media/interactive-window.png)
 
-Visual Studio bir dizi Python REPL modu vardır:
+Visual Studio, aralarından seçim yapabileceğiniz bir dizi Python REPL moduna sahiptir:
 
-| Çoğaltma | Açıklama | Düzenleme | Hata Ayıklama | Görüntüler |
+| REPL | Açıklama | Düzenleme | Hata Ayıklama | Görüntüler |
 | --- | --- | --- | --- | --- |
-| Standart | Varsayılan REPL, Python ile doğrudan konuşma | Standart düzenleme (çok satırlı vb.). | Evet, aracılığıyla `$attach` | Hayır |
-| Hata Ayıklama | Varsayılan REPL, hata ayıklamalı Python işlemiyle konuşma | Standart düzenleme | Yalnızca hata ayıklama | Hayır |
-| IPython | REPL, IPython arka ucuyla sohbet ediyor | IPython komutları, Pylab kolaylıkları | Hayır | Evet, REPL'de satır içi |
-| Pylab ile IPython | REPL, IPython arka ucuyla sohbet ediyor | Standart IPython | Hayır | Evet, ayrı pencere |
+| Standart | Varsayılan REPL, Python 'a doğrudan konuşuyor | Standart Düzen (çok satırlı, vb.). | Evet, ile `$attach` | Hayır |
+| Hata Ayıklama | Varsayılan REPL, hata ayıklamanın Python işlemini | Standart Düzen | Yalnızca hata ayıklama | Hayır |
+| IPython | REPL, IPython arka ucu ile konuşuyor | IPython komutları, Pylab kolaylığı | Hayır | Evet, REPL içinde satır içi |
+| IPython w/o Pylab | REPL, IPython arka ucu ile konuşuyor | Standart IPython | Hayır | Evet, pencereyi ayır |
 
-Bu makalede Standart ve **HATA AYıKLAMA** **REPL** modları açıklanmıştır. IPython modları hakkında ayrıntılı bilgi için [bkz. IPython REPL'yi kullanma.](interactive-repl-ipython.md)
+Bu makalede, **Standart** ve **hata ayıklama** REPL modları açıklanır. IPython modlarında Ayrıntılar için bkz. [ıPYTHON REPL kullanma](interactive-repl-ipython.md).
 
-Ctrl Enter gibi düzenleyiciyle etkileşimler de dahil olmak üzere örneklerle ayrıntılı bir kılavuz için + bkz. [Öğretici 3. Adım: Etkileşimli REPL penceresini kullanma.](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
+Düzenleyiciyle ilgili, **CTRL tuşuna** da benzer yönergeler de dahil olmak üzere ayrıntılı bir + kılavuz için bkz. [Adım 3: etkileşimli REPL penceresini kullanma](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md).
 
-## <a name="open-an-interactive-window"></a>Bir Etkileşimli penceresi
+## <a name="open-an-interactive-window"></a>Etkileşimli pencere aç
 
-Bir ortam için Etkileşimli pencereyi **açmanın** birkaç yolu vardır.
+Bir ortamın **etkileşimli** penceresini açmak için birkaç yol vardır.
 
-İlk olarak Python Ortamları penceresine **(**  >  Python **Ortamlarını Windows**  >  **Veya** **Ctrl** + **K**  >  **Ctrl**) + **`**  ve seçili ortam için Etkileşimli Pencere Aç komutunu veya düğmesini seçin.
+ilk olarak, python ortamları penceresine geçiş yapın (  >  **diğer Windows**  >  **python ortamlarını** görüntüleyin veya **ctrl** tuşuna basın +   >   + **`** ) ve seçilen bir ortam için **etkileşimli pencere aç** komutunu veya düğmesini seçin.
 
-![Python Ortamları penceresindeki Etkileşimli Pencere bağlantısı](media/interactive-window-opening.png)
+![Python ortamları penceresinde etkileşimli pencere bağlantısı](media/interactive-window-opening.png)
 
-İkincisi, Diğer Öğeleri Görüntüle  >  **menüsünün Windows** yakın bir yerde varsayılan ortamınız için **bir Python Etkileşimli** Pencere komutu  ve Ortamlar penceresine geçiş komutu vardır:
+ikincisi, diğer Windows **görüntüle** menüsünün alt kısmına yakın bir şekilde,  >   varsayılan ortamınız için bir **Python etkileşimli pencere** komutu ve **ortamlar** penceresine geçiş yapmak için bir komut vardır:
 
-![Görünüm'de Etkileşimli Pencere menü öğeleri > Diğer Windows](media/interactive-window-menu.png)
+![Görünümdeki etkileşimli pencere menü öğeleri > diğer Windows](media/interactive-window-menu.png)
 
-Üçüncüsü, Projenizin  başlangıç dosyasında veya tek başına bir dosya   >  **\<Project | File> için, Python Etkileşimli'de** Yürüt'te Hata Ayıkla menü komutunu (**Shift** + **Alt** F5) seçerek etkileşimli bir pencere + **açabilirsiniz:**
+Üçüncü olarak, bir **etkileşimli** pencereyi projenizdeki başlangıç dosyasında ya da tek başına bir dosya için,   >  **\<Project | File> Python etkileşimli Çalıştır** menü komutunda hata ayıkla (**SHIFT** + **alt** + **F5**) seçerek açabilirsiniz:
 
-![Python Project menüsünde yürütme](media/interactive-execute-project.png)
+![Python etkileşimli menüsünde Project yürütme](media/interactive-execute-project.png)
 
-Son olarak, dosyada kod seçerek aşağıda açıklanan [ **Etkileşimliye Gönder komutunu**](#send-to-interactive-command) kullanabilirsiniz.
+Son olarak, dosyadaki kodu seçebilir ve aşağıda açıklanan [ **etkileşimli gönder** komutunu](#send-to-interactive-command) kullanabilirsiniz.
 
-## <a name="interactive-window-options"></a>Etkileşimli penceresi seçenekleri
+## <a name="interactive-window-options"></a>Etkileşimli pencere seçenekleri
 
-Araçlar Seçenekler  Python Interactive Windows aracılığıyla Etkileşimli pencerenin çeşitli yönlerini kontrol  >    >    >  **Windows** (bkz. [Seçenekler):](python-support-options-and-settings-in-visual-studio.md)
+**araç** seçenekleri Python etkileşimli Windows aracılığıyla **etkileşimli** pencerenin çeşitli yönlerini denetleyebilirsiniz  >    >    >   (bkz. [seçenekler](python-support-options-and-settings-in-visual-studio.md)):
 
 ![Python etkileşimli pencere seçenekleri](media/options-interactive-windows.png)
 
-## <a name="use-the-interactive-window"></a>Etkileşimli penceresi
+## <a name="use-the-interactive-window"></a>Etkileşimli pencereyi kullanma
 
-Etkileşimli **pencere** açıldıktan sonra, komut isteminde satır satır kod girmeye **\>\>\>** başlayabilirsiniz. Etkileşimli **pencere,** her satırı siz girerken yürütür. Bu satırda modülleri içeri aktarma, değişkenleri tanımlama gibi birçok işlem bulunur:
+**Etkileşimli** pencere açıldıktan sonra, istem satırına kod satırı satırı girmeye başlayabilirsiniz **\>\>\>** . **Etkileşimli** pencere, bunları girerken, modülleri içeri aktarma, değişkenleri tanımlama gibi her satırı yürütür:
 
 ![Python etkileşimli penceresi](media/interactive-window.png)
 
-Bunun istisnası, tam bir deyim yapmak için ek kod satırları gerektiğinde (örneğin, bir deyimin yukarıda gösterildiği gibi iki nokta `for` üst üste ile bitdiğinde) olduğudur. Bu durumlarda, yukarıdaki grafikte dördüncü ve beşinci satırlarda gösterildiği gibi satır istemi **...** olarak değişir ve bu da blok için ek satırlar girmeniz gerektiğini ifade ediyor. Boş bir **satırda Enter** tuşuna **basıyorsanız Etkileşimli** pencere bloğu kapatır ve yorumlayıcıda çalıştırır.
+Özel durum, bir `for` deyimin yukarıda gösterildiği gibi iki nokta üstüste de bittiği durumlar gibi, bir bütün bildiri oluşturmak için ek kod satırlarının gerekli olduğu durumdur. Bu durumlarda, satır istemi, yukarıdaki grafiğin dördüncü ve beşinci satırlarında gösterildiği gibi, blok için ek satırlar girmeniz gerektiğini belirten **..** . olarak değişir. Boş bir satırda **ENTER** tuşuna bastığınızda **etkileşimli** pencere engellemeyi kapatır ve yorumlayıcı içinde çalıştırır.
 
 > [!Tip]
-> Etkileşimli **pencere,** çevresindeki bir kapsama ait olan deyimleri otomatik olarak girintileerek normal Python komut satırı REPL deneyimini iyiler. Geçmişi (yukarı okla geri çağrılır) çok satırlı öğeler de sağlarken, komut satırı REPL yalnızca tek satır sağlar.
+> **Etkileşimli** pencere, kendisini çevreleyen bir kapsama ait deyimleri otomatik olarak girintileyerek olağan Python komut satırı REPL deneyiminden gelişir. Geçmişi (Yukarı oklu geri çekilir), çok satırlı öğeler de sağlar, ancak komut satırı REPL yalnızca tek satır sağlar.
 
-<a name="meta-commands"></a> Etkileşimli **pencere** çeşitli meta komutları da destekler. Tüm meta komutlar ile başlar ve yazarak meta komutların listesini ve belirli bir komutun kullanım `$` `$help` ayrıntılarını `$help <command>` edinebilirsiniz.
+<a name="meta-commands"></a>**Etkileşimli** pencere ayrıca çeşitli meta komutları destekler. Tüm meta komutları ile başlar `$` ve `$help` meta komutlarının bir listesini almak ve `$help <command>` belirli bir komutun kullanım ayrıntılarını almak için yazabilirsiniz.
 
 :::moniker range="<=vs-2017"
 
-| Meta komutu | Açıklama |
+| Meta-komut | Açıklama |
 | --- | --- |
-| `$$` | Oturum boyunca kod açıklaması yapmak için yararlı olan bir açıklama ekler. |
-| `$attach` | Hata ayıklamayı etkinleştirmek Visual Studio hata ayıklayıcısını REPL pencere sürecine iliştirer. |
-| `$cls`, `$clear` | Geçmiş ve yürütme bağlamını olduğu gibi bırakarak düzenleyici penceresinin içeriğini temizler. |
-| `$help` | Komutların listesini veya belirli bir komutla ilgili yardımı görüntüleme. |
-| `$load` | Dosyadan komutları yükler ve tamamlayana kadar yürütülür. |
-| `$mod` | Geçerli kapsamı belirtilen modül adına geçiştir. |
-| `$reset` | Yürütme ortamını başlangıç durumuna sıfırlar, ancak geçmişi tutar. |
+| `$$` | Oturumunuz genelinde kod yorumu için yararlı olan bir açıklama ekler. |
+| `$attach` | hata ayıklamayı etkinleştirmek için Visual Studio hata ayıklayıcısını REPL pencere işlemine iliştirir. |
+| `$cls`, `$clear` | , Geçmiş ve yürütme bağlamından ayrılmadan düzenleyici penceresinin içeriğini temizler. |
+| `$help` | Komutların bir listesini veya belirli bir komutla ilgili yardım 'ı görüntüler. |
+| `$load` | Komutları dosyadan yükler ve tamamlanana kadar yürütülür. |
+| `$mod` | Geçerli kapsamı belirtilen modül adına geçirir. |
+| `$reset` | Yürütme ortamını ilk durumuna sıfırlar, ancak geçmişi tutar. |
 | `$wait` | En az belirtilen milisaniye sayısını bekler. |
 
 :::moniker-end
 
 :::moniker range=">=vs-2019"
 
-| Meta komutu | Açıklama |
+| Meta-komut | Açıklama |
 | --- | --- |
-| `$$` | Oturum boyunca kod açıklaması yapmak için yararlı olan bir açıklama ekler. |
-| `$cls`, `$clear` | Geçmiş ve yürütme bağlamını olduğu gibi bırakarak düzenleyici penceresinin içeriğini temizler. |
-| `$help` | Komutların listesini veya belirli bir komutla ilgili yardımı görüntüleme. |
-| `$load` | Dosyadan komutları yükler ve tamamlayana kadar yürütülür. |
-| `$mod` | Geçerli kapsamı belirtilen modül adına geçiştir. |
-| `$reset` | Yürütme ortamını başlangıç durumuna sıfırlar, ancak geçmişi tutar. |
+| `$$` | Oturumunuz genelinde kod yorumu için yararlı olan bir açıklama ekler. |
+| `$cls`, `$clear` | , Geçmiş ve yürütme bağlamından ayrılmadan düzenleyici penceresinin içeriğini temizler. |
+| `$help` | Komutların bir listesini veya belirli bir komutla ilgili yardım 'ı görüntüler. |
+| `$load` | Komutları dosyadan yükler ve tamamlanana kadar yürütülür. |
+| `$mod` | Geçerli kapsamı belirtilen modül adına geçirir. |
+| `$reset` | Yürütme ortamını ilk durumuna sıfırlar, ancak geçmişi tutar. |
 | `$wait` | En az belirtilen milisaniye sayısını bekler. |
 
 :::moniker-end
 
-Komutlar, uygulama ve dışarı aktarma Visual Studio tarafından da genişletilebilir `IInteractiveWindowCommand` ([örneğin).](https://github.com/Microsoft/PTVS/blob/master/Python/Product/PythonTools/PythonTools/Repl/InteractiveWindowCommands.cs#L85)
+komutlar ayrıca, uygulama ve dışa aktarma `IInteractiveWindowCommand` ([örnek](https://github.com/Microsoft/PTVS/blob/master/Python/Product/PythonTools/PythonTools/Repl/InteractiveWindowCommands.cs#L85)) tarafından Visual Studio uzantılarına göre genişletilebilir.
 
-## <a name="switch-scopes"></a>Kapsamları değiştirme
+## <a name="switch-scopes"></a>Kapsamları Değiştir
 
-Varsayılan olarak, **bir** projenin Etkileşimli penceresinin kapsamı, komut isteminden çalıştırmış gibi projenin başlangıç dosyası olarak gösterilir. Tek başına bir dosya için bu dosyanın kapsamını belirtir. Ancak REPL oturumunuz sırasında herhangi bir zamanda Etkileşimli pencerenin üst kısmında yer alan açılan menü **kapsamı** değiştirmenizi sağlar:
+Varsayılan olarak, bir proje için **etkileşimli** pencere, komut isteminden çalıştırmanızdan sonra projenin başlangıç dosyası kapsamına alınır. Tek başına bir dosya için BT kapsamları bu dosyaya yöneliktir. Ancak, REPL oturumunuz sırasında dilediğiniz zaman, **etkileşimli** pencerenin üst kısmındaki açılan menü, kapsamı değiştirmenize izin verir:
 
-![Etkileşimli penceresi kapsamları](media/interactive-scopes.png)
+![Etkileşimli pencere kapsamları](media/interactive-scopes.png)
 
-Bir modülü (örneğin, yazarak) içeri aktardıktan sonra, bu modülde herhangi bir kapsama geçmek `import importlib` için açılan açılır liste seçenekleri görüntülenir. Etkileşimli pencereye **gelen** bir ileti yeni kapsamı da gösterir, böylece oturumunuz sırasında belirli bir durumuna nasıl varmanızı izleyebilirsiniz.
+Yazma gibi bir modülü içeri aktardıktan sonra, `import importlib` Bu modüldeki herhangi bir kapsama geçiş yapmak için seçenekler açılan kutuda görünür. **Etkileşimli** penceredeki bir ileti de yeni kapsamı gösterir, bu sayede oturumunuz sırasında belirli bir duruma nasıl geldiğinizi izleyebilirsiniz.
 
-Bir `dir()` kapsama girerek işlev adları, sınıflar ve değişkenler de dahil olmak üzere bu kapsamda geçerli tanımlayıcılar görüntülenir. Örneğin, ve `import importlib` ardından kullanılarak `dir()` aşağıdakiler gösterir:
+`dir()`Bir kapsama girildiğinde, bu kapsamdaki işlev adları, sınıflar ve değişkenler dahil geçerli tanımlayıcılar görüntülenir. Örneğin, `import importlib` aşağıdaki tarafından kullanılması `dir()` aşağıdakileri gösterir:
 
-![Etkileşimli penceresi kapsamına alma](media/interactive-importlib-scope.png)
+![Importlib kapsamındaki etkileşimli pencere](media/interactive-importlib-scope.png)
 
-## <a name="send-to-interactive-command"></a>Etkileşimli'ye gönder komutu
+## <a name="send-to-interactive-command"></a>Etkileşimli komuta gönder
 
-Doğrudan Etkileşimli pencere içinde çalışmaya **ek** olarak düzenleyicide kod seçebilir, sağ  tıklar ve Etkileşimliye Gönder'i seçebilir veya Ctrl Enter **tuşuna** + **basabilirsiniz.**
+**Etkileşimli** pencere içinde doğrudan çalışmaya ek olarak, düzenleyicide kod seçebilir, sağ tıklayıp **etkileşimli olarak gönder** ' i seçebilir veya **CTRL**+ + **ENTER** tuşuna basabilirsiniz.
 
-![Etkileşimli menüye gönder komutu](media/interactive-send-to.png)
+![Etkileşimli menü komutuna gönder](media/interactive-send-to.png)
 
-Bu komut, kodunuzu geliştirirken test etmek de dahil olmak üzere, iterative veya evrimsel kod geliştirme için yararlıdır. Örneğin Etkileşimli pencereye bir kod parçası göndererek çıkışını gördükte yukarı oka basarak kodu yeniden gösterebilir, değiştirebilir ve **Ctrl** Enter tuşlarına basarak kodu hızlıca  + **testebilirsiniz.** **(Girişin** sonunda Enter tuşuna basılarak yürütülür, ancak girişin **ortasındaki Enter** tuşuna basılarak bir yeni satır ekler.) Koda sahip olduktan sonra kolayca proje dosyanıza kopyalayabilirsiniz.
+Bu komut, siz kodunuzu geliştirirken test etme dahil olmak üzere yinelemeli veya evkor kod geliştirmesi için yararlıdır. Örneğin, **etkileşimli** pencereye bir kod parçası gönderdikten ve çıkışını gördüğünüze sonra, kodu yeniden göstermek için yukarı oka basabilir, değiştirebilir ve hızlı ENTER **tuşuna basarak hızlıca** test edebilirsiniz + . (Girişin sonunda **ENTER** tuşuna basmak bunu yürütür, ancak girişin ortasında **ENTER** tuşuna basıldığında yeni bir satır eklenir.) İstediğiniz koda sahip olduktan sonra proje dosyanıza tekrar kolayca kopyalayabilirsiniz.
 
 > [!Tip]
-> Varsayılan olarak, Visual Studio ve **>>>** **...** REPL, Etkileşimli penceresinden düzenleyiciye **kod yapıştırıyorken** istemler. Yapıştır rePL istemlerini kaldırır **seçeneğini** kullanarak Araçlar Seçenekler Metin Düzenleyici  >    >    >  **Python**  >   Gelişmiş sekmesinde bu **davranışı değiştirebilirsiniz.** Bkz. [Seçenekler - Çeşitli seçenekler.](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options)
+> varsayılan olarak, Visual Studio kaldırılır **>>>** ve **...** REPL **etkileşimli** pencereden düzenleyiciye kod yapıştırırken REPL istemleri. Bu davranışı **araç**  >  **seçenekleri**  >  **metin düzenleyici**  >  **Python**  >  **Gelişmiş** sekmesinde **Yapıştır REPL istemlerini kaldırır** seçeneğini kullanarak değiştirebilirsiniz. Bkz. [Seçenekler-çeşitli seçenekler](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
 
 <!-- After 15.3 is released, you can also press **Undo** after pasting to restore prompts. Press **Undo** a second time to remove the pasted code entirely. -->
 
-## <a name="work-with-code-cells"></a>Kod hücreleri ile çalışma
+## <a name="work-with-code-cells"></a>Kod hücreleriyle çalışma
 
-Kod hücreleri veri analizinde kullanılabilir ve çeşitli metin düzenleyicileri tarafından de destekler.
+Kod hücreleri, veri çözümlemede kullanılabilir ve çeşitli metin düzenleyicileri tarafından desteklenir.
 
-Örneğin, bir kod dosyasını karalama defteri olarak kullanırken genellikle aynı anda göndermek istediğiniz küçük bir kod bloğuna sahip olursunuz. Kodu birlikte gruplayarak kodu kod  hücresi olarak işaretlemek için hücrenin başına bir açıklama ekleyerek bir öncekini sona `#%%` erer. Kod hücreleri daraltılmış ve genişletilebilir ve bir kod hücresinde **Ctrl** Enter tuşlarıyla hücrenin tamamı Etkileşimli pencereye gönderilir ve bir +  sonrakine  taşınır.
+Örneğin, bir kod dosyasını karalama paneli olarak kullanırken, genellikle tümünü tek seferde göndermek istediğiniz küçük bir kod bloğuna sahip olursunuz. Kodu birlikte gruplamak için, hücrenin başlangıcına başlayarak bir açıklama ekleyerek kodu bir *kod hücresi* olarak işaretleyin `#%%` , bu da öncekini sonlandırır. Kod hücreleri daraltılabilse ve genişletilebilir ve  + bir kod hücresinin içinde CTRL **ENTER** kullanılması, tüm hücreyi **etkileşimli** pencereye gönderir ve bir sonrakine gider.
 
-Visual Studio, jupyter not defterini Python dosyası olarak dışarı aktararak elde edersiniz gibi açıklamalarla başlayan kod hücrelerini `# In[1]:` de algılar. Bu algılama, Python dosyası olarak indirerek [Azure Notebooks](https://notebooks.azure.com/) bir not defterini çalıştırmayı, Visual Studio açma ve her hücreyi çalıştırmak için **Ctrl** Enter tuşlarını +  kullanarak çalıştırmayı kolaylaştırır.
+Visual Studio ayrıca `# In[1]:` , bir jupyter not defterini Python dosyası olarak dışa aktarırken aldığınız biçim olan gibi açıklamalarla başlayan kod hücrelerini de algılar. bu algılama, Python dosyası olarak indirerek [Azure Notebooks](https://notebooks.azure.com/) bir not defterini çalıştırmayı, Visual Studio açmayı ve her hücreyi çalıştırmak için **Ctrl** + **Enter** tuşunu kullanmayı kolaylaştırır.
 
 ![Etkileşimli kod hücreleri](media/interactive-code-cells.png)
 
 ## <a name="intellisense-behavior"></a>IntelliSense davranışı
 
-Etkileşimli **pencere,** IntelliSense'in yalnızca kaynak kod analizini temel alan kod düzenleyicisinin aksine canlı nesneleri temel alan IntelliSense'i içerir. Bu öneriler, özellikle dinamik olarak **oluşturulan** kodlar için Etkileşimli pencerede daha doğrudur. Dezavantajı, yan etkilere sahip işlevlerin (günlüğe kaydetme iletileri gibi) geliştirme deneyiminizi etkileyemesidir.
+**Etkileşimli** pencere, IntelliSense 'in yalnızca kaynak kodu analizini temel alan kod düzenleyiciden farklı olarak, canlı nesneleri temel alan IntelliSense 'i içerir. Bu öneriler, özellikle dinamik olarak üretilen kodla **etkileşimli** pencerede daha doğrudur. Dezavantajı, yan etkileri olan işlevlerin (örneğin, günlük mesajları) geliştirme deneyiminizi etkileyebileceğini unutmayın.
 
-Bu davranış bir sorunsa, Seçenekler - Etkileşimli pencereler seçenekleri altında açıklandığı Windows Tamamlama Modu grubunda Araçlar Seçenekleri Python Interactive Windows altındaki  >    >    >   [ayarları değiştirin.](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options) 
+bu davranış bir sorun ise,   >    >    >  [seçenekler etkileşimli Windows seçenekleri](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options)bölümünde açıklandığı gibi, **tamamlama modu** grubundaki araçlar seçenekler Python **etkileşimli Windows** altındaki ayarları değiştirin.

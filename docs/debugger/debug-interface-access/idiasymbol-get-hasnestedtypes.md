@@ -1,6 +1,6 @@
 ---
-description: Kullanıcı tanımlı veri türünün iç içe geçmiş tür tanımları olup olmadığını belirten bir bayrak alınır.
-title: IDiaSymbol::get_hasNestedTypes | Microsoft Docs
+description: Kullanıcı tanımlı veri türünün iç içe geçmiş tür tanımlarına sahip olup olmadığını belirten bir bayrak alır.
+title: 'IDiaSymbol:: get_hasNestedTypes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f1dc89f7aee8c2943914a5616573041cae82a1ae15667c90f5177bfb1b97214e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ef1e8d77e177f7ec0163c7240642abec42c124b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379961"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031332"
 ---
 # <a name="idiasymbolget_hasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
-Kullanıcı tanımlı veri türünün iç içe geçmiş tür tanımları olup olmadığını belirten bir bayrak alınır.
+Kullanıcı tanımlı veri türünün iç içe geçmiş tür tanımlarına sahip olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_hasNestedTypes (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Kullanıcı `TRUE` tanımlı veri türünün iç içe tür tanımları varsa döndürür; aksi takdirde `FALSE` döndürür.
+dışı `TRUE` Kullanıcı tanımlı veri türünün iç içe geçmiş tür tanımlarına sahip olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

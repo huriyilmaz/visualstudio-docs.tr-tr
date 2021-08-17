@@ -164,7 +164,7 @@
           href: migration-activity-designers.md
         - name: Interop Etkinlik Tasarımcısı
           href: interop-activity-designer.md
-- name: Hata ayıklama
+- name: Hata Ayıklama
   items:
     - name: İş akışları hata ayıklama
       href: debugging-workflows-with-the-workflow-designer.md

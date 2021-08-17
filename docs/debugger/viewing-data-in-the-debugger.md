@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 58d63d95ed2aa24f1c78708cbcb701d68ad39be0c01c9d54f25172a0b43fb551
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cdce099df34fbf7937ed83d1adc70fe36c13176
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121418746"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043914"
 ---
 # <a name="create-custom-views-of-data-in-the-visual-studio-debugger-c-visual-basic-c"></a>Visual Studio hata ayıklayıcısında (C#, Visual Basic, C++) verilerin özel görünümlerini oluşturma
 

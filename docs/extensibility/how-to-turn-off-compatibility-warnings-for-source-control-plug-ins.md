@@ -1,6 +1,6 @@
 ---
 title: Kaynak denetimi eklentileri için uyarıları kapatma
-description: Bir Kullanıcı, Visual Studio 'da kaynak denetimi kullanırken çeşitli uyumluluk uyarıları görebilir. Bu uyarıları devre dışı bırakmayı öğrenin.
+description: Bir Kullanıcı Visual Studio içinde kaynak denetimi kullanırken çeşitli uyumluluk uyarıları görebilir. Bu uyarıları devre dışı bırakmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,14 +11,15 @@ ms.assetid: ba318e12-921b-4b7a-a8c2-12c712be1dbf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ced04b09f8d4442cf0769ef503ee52772eccc0f6
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 94ed8d8357ae9b95d538a5bef39c96e2e1662b9711b6da423183ee52f2113774
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905754"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448305"
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>Nasıl yapılır: kaynak denetimi eklentileri için uyumluluk uyarılarını kapatma
 

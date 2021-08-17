@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem kayıt defteri kökünü ayarlar.
-title: IDebugExpressionEvaluator::SetRegistryRoot | Microsoft Docs
+title: 'Idebugexpressiondeğerlendirici:: SetRegistryRoot | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 562965afecd65f2c5af5c26727f2e2c5c3a48139c34dbff9c53be466073b4902
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 42864fa7d4a1250f03a797adf768472db5ae2c02
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360462"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138711"
 ---
 # <a name="idebugexpressionevaluatorsetregistryroot"></a>IDebugExpressionEvaluator::SetRegistryRoot
 Bu yöntem kayıt defteri kökünü ayarlar. Yan yana hata ayıklama için kullanılır.
@@ -43,13 +43,13 @@ int SetRegistryRoot(
 
 ## <a name="parameters"></a>Parametreler
 `ustrRegistryRoot`\
-[in] Yeni kayıt defteri kökü.
+'ndaki Yeni kayıt defteri kökü.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Belirtilen kayıt defteri kökü genellikle ifade değerlendiricisi ilk kez örneği hali hazır olduğunda ayarlanır ve belirli bir Visual Studio \\ *(X.Y'nin* sürüm numarası olduğu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio *X.Y)* için kayıt defteri anahtarına başvurur.
+ belirtilen kayıt defteri kökü genellikle ifade değerlendirici ilk kez başlatıldığında ayarlanır ve belirli bir Visual Studio için kayıt defteri anahtarını işaret eder HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio(x \\  *. y* bir sürüm numarasıdır).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

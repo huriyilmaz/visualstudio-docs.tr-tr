@@ -11,14 +11,15 @@ ms.assetid: a338b767-aa7e-4536-9908-e19a50ab60ac
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 193e97880fbc543568636e1979a847877e42db14
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: c76a96c86a9c6e83ca6b787286ce22ed881161bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902013"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058091"
 ---
 # <a name="commandname-element"></a>CommandName öğesi
 `CommandName`Öğesi, **Seçenekler** iletişim kutusundaki klavye kategorisinde ve **Özelleştir** iletişim kutusundaki **Komutlar** listesinde görüntülenen metni belirtir.
@@ -45,4 +46,4 @@ ms.locfileid: "112902013"
 |[Dizeler öğesi](../extensibility/strings-element.md)|Ve gibi metin öğelerini gruplandırır `ButtonText` `CommandName` .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

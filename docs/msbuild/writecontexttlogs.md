@@ -1,6 +1,6 @@
 ---
 title: WriteContextTLogs | Microsoft Docs
-description: Geçerli bağlam için günlük dosyalarını yazan WriteContextTLogs için sözdizimi, gereksinimler ve dönüş değeri hakkında bilgi edinin.
+description: Geçerli bağlam için günlük dosyalarını yazan WriteContextTLogs için söz dizimi, gereksinimler ve dönüş değerini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,14 +15,15 @@ ms.assetid: ffc6c7be-3f22-4624-9ffc-0122fe72b6ec
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: b44777f41c4fac3d36cb79222d48a93c5c1cf0b7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 32f692012c5a60caf4988142b03b5610a0ebf717
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888010"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076977"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
 
@@ -36,21 +37,21 @@ HRESULT WINAPI WriteContextTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRoot
 
 #### <a name="parameters"></a>Parametreler
 
-'ndaki `intermediateDirectory`
+[in] `intermediateDirectory`
 
- İzleme günlüğünün depolayabileceği dizin.
+ İzleme günlüğünün depolan olduğu dizin.
 
-'ndaki `tlogRootName`
+[in] `tlogRootName`
 
  Günlük dosyası adının kök adı.
 
 ## <a name="return-value"></a>Döndürülen değer
 
- İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
+ İzleme bağlamı oluşturulduktan sonra **SUCCEEDED** bit kümesine sahip **bir HRESULT.**
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker. h*
+ **Üst bilgi:** *FileTracker.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

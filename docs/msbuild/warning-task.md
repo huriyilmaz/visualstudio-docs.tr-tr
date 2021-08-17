@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 63c99dd6df45aa1408ed6b4ce7721e0771e9a984e9785c591b7d405abcc0b2ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: faf53415b62550cb2091ffc9741ed2eeef60bbcc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427502"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076938"
 ---
 # <a name="warning-task"></a>Uyarı görevi
 

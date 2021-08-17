@@ -13,14 +13,15 @@ ms.assetid: 40b38559-b8de-4041-91f2-68986767c976
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ea63aac7bfa522c7a60492bf50b91be8a6bdd1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dd91c105f43eabeef48d7e29c2a0f67b4b3a9513
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962762"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056309"
 ---
 # <a name="how-to-display-line-numbers-in-the-editor"></a>Nasıl yapılır: düzenleyicide satır numaralarını görüntüleme
 

@@ -10,17 +10,18 @@ ms.assetid: 4452bc5d-0225-40e0-a467-c472a5c7c4ee
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3f4bcc8d92cc58a719e9b450ec79e8376de554ab
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d1654838576ef9270e6ad0c632db4c8528e8f1920791100d8b57ee3ac47d9f54
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077986"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452218"
 ---
 # <a name="idebugcomplussymbolprovider2gettypefromtoken"></a>IDebugComPlusSymbolProvider2::GetTypeFromToken
 Belirteci verilen bir tür alır.

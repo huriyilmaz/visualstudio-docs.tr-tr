@@ -9,14 +9,15 @@ ms.assetid: 0aa356a1-5c5c-4ee4-8b48-bae0a2610013
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d197810c61ca50a98cc47c5c3e2ecaca5be548d
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: bda3d9f66cf327e59f2bd18536d5eda884dd10faf44d4c3392668834b8ca7942
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156176"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436430"
 ---
 # <a name="idiasymbolget_ismultipleinheritance"></a>IDiaSymbol::get_isMultipleInheritance
 `this`İşaretçinin birden çok devralmayla bir veri üyesine işaret ettiğini belirtir.

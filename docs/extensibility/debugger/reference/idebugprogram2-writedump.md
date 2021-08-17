@@ -11,17 +11,18 @@ ms.assetid: 375afb8c-882d-44db-bfa7-e2c9eb555122
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8eca50eb6e828841a247ed51d7f73f61cb63e0e9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1cbe4f60032be54f3b76d1b9f98701b0a5e52c00
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084434"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030080"
 ---
 # <a name="idebugprogram2writedump"></a>IDebugProgram2::WriteDump
 Bir dosyaya döküm yazar.

@@ -1,5 +1,5 @@
 ---
-description: Bekleyen ve bağlantılı kesme noktaları için kesme noktası koşul stilini belirtir.
+description: Bekleyen ve bağlı kesme noktaları için kesme noktası koşul stilini belirtir.
 title: BP_COND_STYLE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: a93b1412-f447-48a1-af9d-38f3dbb3092f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 611df036ff876e10096013070cac097bc51a8986
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 66be01a2a6de30aa0a4b8d59cb0e3575890d0a8a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085422"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104683"
 ---
 # <a name="bp_cond_style"></a>BP_COND_STYLE
-Bekleyen ve bağlantılı kesme noktaları için kesme noktası koşul stilini belirtir.
+Bekleyen ve bağlı kesme noktaları için kesme noktası koşul stilini belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,23 +48,23 @@ public enum enum_BP_COND_STYLE {
 
 ## <a name="fields"></a>Alanlar
 `BP_COND_NONE`\
-Kesme noktasının konumuna ulaşıldığında kesme noktası ateşlenir. Kesme noktası koşulu belirtilmedi.
+Kesme noktası konumuna ulaşıldıklarda kesme noktası tarafından 2. Kesme noktası koşulu belirtilmedi.
 
 `BP_COND_WHEN_TRUE`\
-Kesme noktası yalnızca kesme noktasıyla ilişkili koşullu ifade olarak değerlendirildiğinde ateşlenir `true` .
+Kesme noktası yalnızca kesme noktasıyla ilişkilendirilmiş koşullu ifade olarak değerlendir olduğunda bunu `true` sağlar.
 
 `BP_COND_WHEN_CHANGED`\
-Kesme noktası yalnızca kesme noktasıyla ilişkili koşullu ifadenin değeri önceki değerlendirmeden değiştirildiğinde harekete geçirilir.
+Kesme noktası yalnızca kesme noktasıyla ilişkili koşullu ifadenin değeri önceki değerlendirmeden değiştiklerinde bu kesme noktası tarafından 2.
 
 ## <a name="remarks"></a>Açıklamalar
-`styleCondition` [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısının üyesi için kullanılır.
+Bu `styleCondition` yapının üyesi [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

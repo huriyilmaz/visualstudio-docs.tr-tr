@@ -1,6 +1,6 @@
 ---
-title: VSPackage ile uzantı oluşturma | Microsoft Docs
-description: Bir VSıX projesi oluşturmayı ve bir ileti kutusu göstermek için UI kabuğu hizmetini almak amacıyla VSPackage kullanarak VSPackage proje öğesi eklemeyi öğrenin.
+title: VSPackage Paketi ile Uzantı | Microsoft Docs
+description: İleti kutusu göstermek için UI Kabuğu hizmetini almak için VSPackage kullanarak VSIX projesi oluşturma ve VSPackage proje öğesi ekleme hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -11,38 +11,38 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 29b7dd4a3cd6da6a13d999419bfef5a7eafa839adc53df115860e0785d534f75
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5791dc2b8ac6714fa5595ba9e5336c4d0f99cc85
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121293527"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089686"
 ---
 # <a name="create-an-extension-with-a-vspackage"></a>VSPackage ile uzantı oluşturma
 
-Bu izlenecek yol, bir VSıX projesinin nasıl oluşturulduğunu ve bir VSPackage proje öğesi nasıl ekleneceğini gösterir. Bir ileti kutusu göstermek için UI kabuğu hizmetini almak üzere VSPackage kullanacağız.
+Bu kılavuzda vsIX projesi oluşturma ve VSPackage proje öğesi ekleme adımlarını gösterir. BIR ileti kutusu göstermek üzere UI Kabuğu hizmetini almak için VSPackage'i kullanacağız.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
+2015'Visual Studio başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Bu, kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
 ## <a name="create-a-vspackage"></a>VSPackage oluşturma
 
-1. **Firstpackage** ADLı bir VSIX projesi oluşturun. vsıx proje şablonunu, **yeni Project** iletişim kutusunda "vsıx" arayarak bulabilirsiniz.
+1. **FirstPackage** adlı bir VSIX projesi oluşturun. VSIX proje şablonunu **"vsix"** Project Yeni Uygulama iletişim kutusunda bulabilirsiniz.
 
-2. proje açıldığında, **firstpackage** adlı bir Visual Studio paket öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **yeni öğe ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *firstpackage. cs* olarak değiştirin.
+2. Proje açıldığında **FirstPackage** adlı Visual Studio bir paket öğesi şablonu ekleyin. Giriş **Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin.** Yeni Öğe **Ekle iletişim kutusunda** Visual **C#**  >  **Genişletilebilirliği'ne gidin ve** Paketle'Visual Studio **seçin.** Pencerenin **en** altındaki Ad alanında, komut dosyası adını *FirstPackage.cs olarak değiştirebilirsiniz.*
 
-3. Projeyi derleyin ve hata ayıklamayı başlatın.
+3. Projeyi derleme ve hata ayıklamayı başlatma.
 
-    Visual Studio deneysel örneği görüntülenir. Deneysel örnek hakkında daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md).
+    Deneysel örnek Visual Studio görünür. Deneysel örnek hakkında daha fazla bilgi için [bkz. Deneysel örnek.](../extensibility/the-experimental-instance.md)
 
-4. Deneysel örnekte, **Araçlar**  >  **Uzantılar ve güncelleştirmeler** penceresini açın. **Firstpackage** uzantısını burada görmeniz gerekir. (Visual Studio çalışma örneğinizde **uzantılar ve güncelleştirmeler** açarsanız, **firstpackage**' i görmezsiniz).
+4. Deneysel örnekte Araçlar Uzantıları **ve**  >  **Güncelleştirmeler penceresini** açın. **FirstPackage uzantısını burada** görüyorsanız. (Çalışma **örneğinizin Çalışma Örneği'Visual Studio** Uzantılar ve Güncelleştirmeler'i açarsanız **FirstPackage'i görmezsiniz).**
 
-## <a name="load-the-vspackage"></a>VSPackage yükleme
+## <a name="load-the-vspackage"></a>VSPackage'i yükleme
 
-Bu noktada, yüklenmesine neden olan hiçbir şey olmadığından uzantı yüklenmez. Genellikle bir uzantıyı, Kullanıcı arabirimiyle etkileşim kurarken (bir menü komutuna tıklayarak, bir araç penceresi açarak) veya VSPackage 'ın belirli bir kullanıcı arabirimi bağlamında yüklenmesi gerektiğini belirterek yükleyebilirsiniz. VSPackages ve UI bağlamlarını yükleme hakkında daha fazla bilgi için bkz. [VSPackages yükleme](../extensibility/loading-vspackages.md). Bu yordamda, bir çözüm açıkken VSPackage yükleme işlemini göstereceğiz.
+Bu noktada uzantı yüklenmez çünkü yüklemeye neden olan bir şey yoktur. Bir uzantıyı genellikle kullanıcı arabirimiyle etkileşim kurduğunda (bir menü komutuna tıklayarak, araç penceresini açarak) veya VSPackage'ın belirli bir kullanıcı arabirimi bağlamında yüklensin. VSPackage'ları ve UI bağlamlarını yükleme hakkında daha fazla bilgi için [bkz. VSPackage'ları Yükleme.](../extensibility/loading-vspackages.md) Bu yordamda, bir çözüm açık olduğunda VSPackage'ın nasıl yük dengelemesi olduğunu gösteriz.
 
-1. *Firstpackage. cs* dosyasını açın. Sınıfının bildirimini bulun `FirstPackage` . Mevcut öznitelikleri aşağıdaki özniteliklerle değiştirin:
+1. *FirstPackage.cs dosyasını* açın. sınıfının bildirimini `FirstPackage` bakın. Mevcut öznitelikleri aşağıdaki özniteliklerle değiştirin:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -52,7 +52,7 @@ Bu noktada, yüklenmesine neden olan hiçbir şey olmadığından uzantı yükle
     public sealed class FirstPackage : Package
     ```
 
-2. VSPackage 'un yüklendiğini bize bildirmek için bir ileti ekleyelim. `Initialize()`yalnızca vspackage oluşturulduktan sonra Visual Studio hizmetleri alabilmeniz için vspackage 'un yöntemini kullanacağız. (Hizmetleri alma hakkında daha fazla bilgi için bkz. [nasıl yapılır: hizmet alma](../extensibility/how-to-get-a-service.md).) `Initialize()` Yöntemini `FirstPackage` hizmeti alan kodla değiştirin <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> , <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> arabirimini alır ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> yöntemini çağırır.
+2. ŞIMDI VSPackage'ın yükleniyor olduğunu bize haber sağlayan bir ileti ekalım. Bunu yapmak için VSPackage'ın yöntemini kullanırız, çünkü Visual Studio hizmetleri `Initialize()` yalnızca VSPackage sited edildikten sonra edinebilirsiniz. (Hizmetleri alma hakkında daha fazla bilgi için [bkz. Nasıl: Hizmet alma.)](../extensibility/how-to-get-a-service.md) yöntemini, `Initialize()` `FirstPackage` hizmeti alan, arabirimini <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> alan ve yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> çağıran kodla <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowMessageBox%2A> değiştirin.
 
     ```csharp
     protected override void Initialize()
@@ -77,6 +77,6 @@ Bu noktada, yüklenmesine neden olan hiçbir şey olmadığından uzantı yükle
     }
     ```
 
-3. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.
+3. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örnek görünür.
 
-4. Deneysel örnekte bir çözüm açın. **Ilk paketin Initialize () içinde** olduğunu belirten bir ileti kutusu görmeniz gerekir.
+4. Deneysel örnekte bir çözüm açın. Initialize() İçinde İlk Paket olduğunu **söyleyen bir ileti kutusu görüyorsanız.**

@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bu nesnenin veya üst kapsayıcının düzenleme ve devam etme durumunun güncel olup olmadığını belirler.
-title: 'IDebugObject2:: ısencoutte | Microsoft Docs'
+description: Bu yöntem, bu nesnenin veya üst kapsayıcının Düzenle ve Devam Ettir durumunun güncel olup olmadığını belirler.
+title: IDebugObject2::IsEncOutdated | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0293ebb0d83d0201c669a2d7c8ce1ac7773ec40dffae53d1e2b274def4a75bb0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 12c7162f60b176fd73d2f173dddb01074f608388
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307186"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043082"
 ---
 # <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
-Bu yöntem, bu nesnenin veya üst kapsayıcının düzenleme ve devam etme durumunun güncel olup olmadığını belirler. Özel bir ifade değerlendirici bu yöntemi uygulamaz ve her zaman döndürülür `E_NOTIMPL` .
+Bu yöntem, bu nesnenin veya üst kapsayıcının Düzenle ve Devam Ettir durumunun güncel olup olmadığını belirler. Özel ifade değerlendiricisi bu yöntemi uygulamaz ve her zaman `E_NOTIMPL` döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int IsEncOutdated(
 
 ## <a name="parameters"></a>Parametreler
 `pfEncOutdated`\
-dışı `TRUE`Düzenle ve devam et durumu güncel değilse sıfır (), değilse sıfır () olur `FALSE` .
+[out] Düzenle ve Devam Ediyor durumu güncel değilse sıfır ( ) olarak `TRUE` `FALSE` ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 > [!NOTE]
-> Özel bir ifade değerlendirici her zaman döndürmelidir `E_NOTIMPL` .
+> Özel ifade değerlendiricisi her zaman `E_NOTIMPL` dönüşletir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

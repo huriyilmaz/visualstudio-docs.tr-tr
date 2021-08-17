@@ -21,14 +21,15 @@ ms.assetid: 1f1ae455-0e25-4e9d-b33f-53908f5bd6ce
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b2f747e2f92b7817530fe12e14f8f95a9bfbe791
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: ea7f361905fa87630c2db2a8371975c056d8211548262fb551f6d1129d278f0d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386923"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453951"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim?
 ## <a name="problem-description"></a>Sorun Açıklaması
@@ -44,7 +45,7 @@ ms.locfileid: "112386923"
 
 3. Kesme **Noktası Koşulu iletişim** kutusunda Koşul onay **kutusuna** tıklayın. Bkz. [Gelişmiş Kesme Noktaları.](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)
 
-4. Metin kutusuna gibi bir ifade girin; burada, hatalı değeri içeren parametrenin adıdır ve buna geçirilen `Var==3` `Var` hatalı `3` değerdir.
+4. Metin kutusuna gibi bir ifade girin; burada, hatalı değeri içeren parametrenin adıdır ve bu değere `Var==3` `Var` geçirilen hatalı `3` değerdir.
 
 5. True **radyo düğmesini** seçin ve Tamam **düğmesine** tıklayın.
 

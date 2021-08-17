@@ -1,6 +1,6 @@
 ---
-title: Tasarımcı kullanarak isteğe bağlı derlemeleri indirme (ClickOnce API)
-description: Tasarımcı kullanarak, ClickOnce uygulamanızda belirli derlemeleri isteğe bağlı olarak nasıl işaretleyeceğinizi ve ortak dil çalışma zamanı için gereken durumlarda bunları indirmeyi öğrenin.
+title: tasarımcı kullanarak isteğe bağlı derlemeleri indirme (ClickOnce apı)
+description: tasarımcı kullanarak ClickOnce uygulamanızdaki belirli derlemeleri isteğe bağlı olarak nasıl işaretleyeceğinizi ve ortak dil çalışma zamanı için gereken durumlarda onları indirmenin nasıl yapılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,29 +17,30 @@ ms.assetid: 59a0dd5f-1cab-4f2f-b780-0ab7399905d5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bb30b26e859708d295a31bd45b310897e4bcaac
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 1b55cb3ce52864d8649008cd5f4f187c170c5813
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217001"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104982"
 ---
-# <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>İzlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'SI ile isteğe bağlı derlemeleri Indirme
+# <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>izlenecek yol: tasarımcıyı kullanarak ClickOnce dağıtım apı 'si ile isteğe bağlı derlemeleri indirme
 Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil edilen tüm derlemeler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indirilir. Ancak, uygulamanızın küçük bir kullanıcı kümesi tarafından kullanılan bölümleri olabilir. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluştururken indirmek istersiniz. Aşağıdaki izlenecek yol, uygulamanızda belirli derlemelerin "isteğe bağlı" olarak nasıl işaretleneceğini ve <xref:System.Deployment.Application> ortak dil çalışma zamanı tarafından talep edildiğinde ad alanındaki sınıfları kullanarak nasıl indirileceğini gösterir.
 
 > [!NOTE]
 > Bu yordamı kullanmak için uygulamanızın tam güvende çalışması gerekir.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' na tıklayın. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. ayarlarınızı değiştirmek için **araçlar** menüsünden **içeri aktar ve dışarı aktar Ayarlar** ' a tıklayın. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
 ## <a name="create-the-projects"></a>Projeleri oluşturma
 
 ### <a name="to-create-a-project-that-uses-an-on-demand-assembly-with-visual-studio"></a>Visual Studio ile isteğe bağlı derleme kullanan bir proje oluşturmak için
 
-1. İçinde yeni bir Windows Forms projesi oluşturun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . **Dosya** menüsünde, **Ekle**' nin üzerine gelin ve ardından **Yeni proje**' ye tıklayın. İletişim kutusunda bir **sınıf kitaplığı** projesi seçin ve adlandırın `ClickOnceLibrary` .
+1. içinde yeni bir Windows Forms projesi oluşturun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . **Dosya** menüsünde, **Ekle**' nin üzerine gelin ve ardından **yeni Project**' ye tıklayın. İletişim kutusunda bir **sınıf kitaplığı** projesi seçin ve adlandırın `ClickOnceLibrary` .
 
    > [!NOTE]
    > Visual Basic, proje özelliklerini, bu proje için kök ad alanını `Microsoft.Samples.ClickOnceOnDemand` tercih ettiğiniz bir ad alanı olarak değiştirecek şekilde değiştirmenizi öneririz. Kolaylık olması için bu izlenecek yolda bulunan iki proje aynı ad alanında yer alan.
@@ -71,9 +72,9 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
 
 ## <a name="mark-assemblies-as-optional"></a>Derlemeleri isteğe bağlı olarak işaretle
 
-### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-visual-studio"></a>Visual Studio 'Yu kullanarak derlemeleri ClickOnce uygulamanızda isteğe bağlı olarak işaretlemek için
+### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-visual-studio"></a>Visual Studio kullanarak derlemeleri ClickOnce uygulamanızda isteğe bağlı olarak işaretlemek için
 
-1. **Çözüm Gezgini** Windows Forms projesine sağ tıklayın ve **Özellikler**' e tıklayın. **Yayımla** sekmesini seçin.
+1. **Çözüm Gezgini** Windows Forms projesine sağ tıklayın ve **özellikler**' e tıklayın. **Yayımla** sekmesini seçin.
 
 2. **Uygulama dosyaları** düğmesine tıklayın.
 
@@ -81,11 +82,11 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
 
 4. **Grup** açılan kutusunu genişletin ve **Yeni**' yi seçin. Adı `ClickOnceLibrary` Yeni grup adı olarak girin.
 
-5. Uygulamanızı [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)yayımlama bölümünde açıklandığı gibi yayımlamaya devam edin.
+5. uygulamanızı yayımlama [sihirbazı 'nı kullanarak nasıl yapılır: ClickOnce uygulama yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)bölümünde açıklandığı gibi yayımlamaya devam edin.
 
-### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-manifest-generation-and-editing-tool--graphical-client-mageuiexe"></a>Bildirim Oluşturma ve Düzenleme Aracı — grafik Istemcisi (MageUI.exe) kullanarak ClickOnce uygulamanızda derlemeleri isteğe bağlı olarak işaretlemek için
+### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-manifest-generation-and-editing-tool--graphical-client-mageuiexe"></a>ClickOnce uygulamanızda derlemeleri isteğe bağlı olarak işaretlemek için Bildirim Oluşturma ve Düzenleme Aracı — grafik istemcisi (MageUI.exe)
 
-1. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] [İzlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bildirimlerinizi oluşturun.
+1. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] [izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bildirimlerinizi oluşturun.
 
 2. MageUI.exe kapatmadan önce, dağıtımınızın uygulama bildirimini içeren sekmeyi seçin ve bu sekmenin içinde **dosyalar** sekmesini seçin.
 

@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, işlemin altında barındırılacak dili ayarlar.
-title: 'IDebugProcess3:: SetHostingProcessLanguage | Microsoft Docs'
+description: Bu yöntem, işlem altında barındıracak dili ayarlar.
+title: IDebugProcess3::SetHostingProcessLanguage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3de958589480821c4a0682c94a7f54333e2e473d80c9d718b6586792fddfe72d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5b8b5cb12d287e1f63ff4fa9a766a49de1ab9454
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338962"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030197"
 ---
 # <a name="idebugprocess3sethostingprocesslanguage"></a>IDebugProcess3::SetHostingProcessLanguage
-Bu yöntem, işlemin altında barındırılacak dili ayarlar. Bu dil, uygun ifade değerlendiricisi 'ni yüklemek için hata ayıklama altyapısı (DE) tarafından kullanılabilir.
+Bu yöntem, işlem altında barındıracak dili ayarlar. Bu dil daha sonra uygun ifade değerlendiriciyi yüklemek için hata ayıklama altyapısı (DE) tarafından kullanılabilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int SetHostingProcessLanguage(
 
 ## <a name="parameters"></a>Parametreler
 `guidLang`\
-[in] `GUID` öğesinin kullanması gereken dil. `GUID_NULL` `Guid.Empty` Varsayılan dili de kullanması için (C++) veya (C#) belirtin.
+[in] `GUID` de'nin kullanması gereken dil. `GUID_NULL`DE'nin varsayılan dili kullanması `Guid.Empty` için (C++) veya (C#) belirtin.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-- Geçerli dil ayarını almak için [Gethostingprocesslanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md) kullanılabilir.
+- [GetHostingProcessLanguage,](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md) geçerli dil ayarını almak için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

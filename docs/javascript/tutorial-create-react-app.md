@@ -8,17 +8,18 @@ ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-javascript
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 2dd56faf17c7982f7b18d0d83469b8e2c56feea6
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: 11d59ac05be469d19a10d68d1a0bc004460d2d385644687f0b58c49c9afd8d59
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115095088"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411410"
 ---
 # <a name="create-a-react-app"></a>React uygulaması oluşturma
 
@@ -28,6 +29,7 @@ bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (ıde) giriş 
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
+- Visual Studio 2022 Preview 2 veya üzeri. ücretsiz olarak yüklemek için [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
 - NPM ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
 - NPX ( [https://www.npmjs.com/package/npx](https://www.npmjs.com/package/npx) )
 

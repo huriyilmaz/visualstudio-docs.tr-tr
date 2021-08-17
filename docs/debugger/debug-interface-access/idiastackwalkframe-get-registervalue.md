@@ -1,6 +1,6 @@
 ---
-description: IDiaStackWalkFrame::get_registerValue yazmacın değerini verir.
-title: IDiaStackWalkFrame::get_registerValue | Microsoft Docs
+description: 'IDiaStackWalkFrame:: get_registerValue bir kaydın değerini alır.'
+title: 'IDiaStackWalkFrame:: get_registerValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a6b5c2a79f69d5d84f60e08145a470e974d38ea8c233c1a9b65e3964fc608a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 925efe875143a920188cd3d0cb4b387b45789475
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312087"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105460"
 ---
 # <a name="idiastackwalkframeget_registervalue"></a>IDiaStackWalkFrame::get_registerValue
-Bir yazmanın değerini verir.
+Bir kaydın değerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT get_registerValue (
 #### <a name="parameters"></a>Parametreler
  `index`
 
-[in] Enumeration [CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) değerinden değeri almak için yazmacı belirten bir değer.
+'ndaki Değerin alınacağı kaydı belirten [CV_HREG_e sabit listesi](../../debugger/debug-interface-access/cv-hreg-e.md) numaralandırmasından bir değer.
 
  `pRetVal`
 
-[out] Yazmanın geçerli değerini döndürür.
+dışı Kaydın geçerli değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

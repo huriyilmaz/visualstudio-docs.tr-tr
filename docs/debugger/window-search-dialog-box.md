@@ -10,17 +10,18 @@ ms.assetid: 9c30390d-dc3c-4c27-ae1a-9d92dc076d2b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 96936a2c60a1ea8ebb91417607061b74d538095a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c15385d232594c491288bef7cd0125aa4656b519
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896470"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090037"
 ---
 # <a name="window-search-dialog-box"></a>Pencere Arama İletişim Kutusu
-[Windows görünümünde](../debugger/windows-view.md)belirli bir pencerenin düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı Windows Görünümü penceresine taşıyın. Ardından **arama** menüsünden **pencereyi bul** ' u seçin.
+[Windows görünümünde](../debugger/windows-view.md)belirli bir pencerenin düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. bu iletişim kutusunu görüntülemek için odağı Windows görünümü penceresine taşıyın. Ardından **arama** menüsünden **pencereyi bul** ' u seçin.
 
  Bir pencere seçmek için **Bulucu aracını** kullanabilir veya pencere tanıtıcısını girebilir ya da pencereyi açıklamalı alt yazı ve sınıfa göre tanımlayabilirsiniz.
 
@@ -39,7 +40,7 @@ ms.locfileid: "99896470"
  **Arama yönü yukarı veya aşağı** Aramanın ilk yönü.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Windows görünümünde pencere arama](../debugger/how-to-search-for-a-window-in-windows-view.md) Windows görünümünde belirli bir pencerenin nasıl bulunacağını açıklar.
+ [Windows görünümünde pencere aranıyor](../debugger/how-to-search-for-a-window-in-windows-view.md) Windows görünümünde belirli bir pencerenin nasıl bulunacağını açıklar.
 
  [Windows görünümü](../debugger/windows-view.md) Kullanılabilir pencerelerin ve denetimlerin ağaç görünümünü görüntüler.
 
@@ -49,6 +50,6 @@ ms.locfileid: "99896470"
 
  [Pencere bul Iletişim kutusu](../debugger/find-window-dialog-box.md) Belirli bir penceredeki özellikleri veya iletileri görüntülemek için kullanılır.
 
- [Pencere özellikleri Iletişim kutusu](../debugger/window-properties-dialog-box.md) Windows görünümü 'nde seçilen pencerenin özelliklerini görüntülemek için kullanılır.
+ [Pencere özellikleri Iletişim kutusu](../debugger/window-properties-dialog-box.md) Windows görünümünde seçilen pencerenin özelliklerini görüntülemek için kullanılır.
 
  [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.

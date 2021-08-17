@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, kalıcı bağlantı noktalarının listesinin numaralandırılmasına izin veren bir nesnesi alır.
-title: 'IDebugPortSupplier3:: EnumPersistedPorts | Microsoft Docs'
+description: Bu yöntem, kalıcı bağlantı noktaları listesinin numaralarına izin veren bir nesnesi verir.
+title: IDebugPortSupplier3::EnumPersistedPorts | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 1c3dead3-5d6c-4067-8418-4015f0b0dd07
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b4fe55898f6dbc7713db6e013868b1c7f22a5faf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7a9b4d97f40b8ebfeefa59fb40f0c912461c9828
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071967"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030236"
 ---
 # <a name="idebugportsupplier3enumpersistedports"></a>IDebugPortSupplier3::EnumPersistedPorts
-Bu yöntem, kalıcı bağlantı noktalarının listesinin numaralandırılmasına izin veren bir nesnesi alır.
+Bu yöntem, kalıcı bağlantı noktaları listesinin numaralarına izin veren bir nesnesi verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int EnumPersistedPorts(
 
 ## <a name="parameters"></a>Parametreler
 `PortNames`\
-'ndaki Kalıcı bağlantı noktaları arasında bulunacak ve döndürülecek bağlantı noktası adlarının listesini içeren [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) yapısı. Yalnızca bu adlara sahip kalıcı bağlantı noktaları döndürülür.
+[in] Kalıcı [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) bulmak ve arasında dönmek için bağlantı noktası adlarının listesini içeren bir bağlantı noktası yapısı. Yalnızca bu adlara sahip kalıcı bağlantı noktaları döndürülür.
 
 `ppEnum`\
-dışı [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) arabirimini uygulayan bir nesne.
+[out] [IEnumDebugPorts2 arabirimini uygulayan nesne.](../../../extensibility/debugger/reference/ienumdebugports2.md)
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kalıcı bağlantı noktaları, bir bağlantı noktası sağlayıcısı oluşturulduğunda yüklenir ve bağlantı noktası sağlayıcısı yok edildiğinde kaydedilir.
+ Kalıcı bağlantı noktaları, bir bağlantı noktası sağlayıcı örneği yüklendiğinde yüklenir ve bağlantı noktası sağlayıcı yok edildiklerinden kaydedilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

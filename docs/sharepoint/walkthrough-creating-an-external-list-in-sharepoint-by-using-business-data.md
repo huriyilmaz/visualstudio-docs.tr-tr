@@ -1,6 +1,6 @@
 ---
-title: İş verileri kullanarak SharePoint 'te dış liste oluşturma
-description: Bir iş veritabanındaki kişiler hakkında bilgi döndüren BDC hizmeti için bir model oluşturun, ardından bu modeli kullanarak SharePoint 'te bir dış liste oluşturun.
+title: İş verilerini kullanarak SharePoint listesi oluşturma
+description: BDC hizmeti için bir iş veritabanındaki kişiler hakkında bilgi döndüren bir model oluşturun ve ardından bu modeli kullanarak SharePoint bir dış liste oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,175 +19,176 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 0811b029bf7e4705bc0c3689eff73f38280c3b3d
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: a265a80116da0d1d2ffac469f7193c737a65a93a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217690"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122075911"
 ---
-# <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>İzlenecek yol: iş verileri kullanarak SharePoint 'te dış liste oluşturma
+# <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Adım adım kılavuz: İş verilerini kullanarak SharePoint dış liste oluşturma
 
-Iş verileri bağlantısı (BDC) hizmeti, SharePoint 'in arka uç sunucu uygulamalarından, Web hizmetlerinden ve veritabanlarından iş verilerini görüntülemesini sağlar.
+İş Verileri Bağlantısı (BDC) hizmeti, SharePoint sunucu uygulamaları, Web hizmetleri ve veritabanlarından iş verilerini görüntülemesini sağlar.
 
-Bu izlenecek yol, bir örnek veritabanındaki kişiler hakkında bilgi döndüren BDC hizmeti için bir model oluşturmayı gösterir. Bu durumda, SharePoint 'te bu modeli kullanarak bir dış liste oluşturacaksınız.
+Bu kılavuzda, örnek veritabanındaki kişiler hakkında bilgi döndüren BDC hizmeti için bir model oluşturma adımlarını gösterir. Daha sonra bu modeli kullanarak SharePoint bir dış liste oluşturabilirsiniz.
 
 Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 - Proje oluşturma.
-- Modele bir varlık ekleniyor.
-- Bulucu yöntemi ekleme.
-- Belirli bir bulucu yöntemi ekleniyor.
+- Modele varlık ekleme.
+- Bulıcı yöntemi ekleme.
+- Belirli bir Bulıcı yöntemi ekleme.
 - Projeyi test etme.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Desteklenen Windows ve SharePoint sürümleri.
+- Desteklenen Windows ve SharePoint.
 
-- AdventureWorks örnek veritabanına erişim. AdventureWorks veritabanının nasıl yükleneceği hakkında daha fazla bilgi için bkz. [SQL Server örnek veritabanları](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).
+- AdventureWorks örnek veritabanına erişim. AdventureWorks veritabanını yükleme hakkında daha fazla bilgi için bkz. [SQL Server Veritabanları.](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
-## <a name="create-a-project-that-contains-a-bdc-model"></a>IVB modeli içeren bir proje oluşturma
+## <a name="create-a-project-that-contains-a-bdc-model"></a>BDC modeli içeren bir proje oluşturma
 
-1. Visual Studio 'daki menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
+1. dosya menüsündeki menü çubuğunda Dosya **Visual Studio'yi**  >  **seçin**  >  **Project.**
 
-     **Yeni proje** iletişim kutusu açılır.
+     Yeni **Project** iletişim kutusu açılır.
 
-2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** öğesini seçin.
+2. Visual **C# veya** **Visual Basic** altında, SharePoint **düğümünü** genişletin ve ardından **2010 öğesini** seçin.
 
-3. **Şablonlar** bölmesinde **SharePoint 2010 projesi**' ni seçin, projeyi **AdventureWorksTest** olarak adlandırın ve **Tamam** düğmesini seçin.
+3. Şablonlar **bölmesinde** **2010'SharePoint 2010'Project** seçin, projeye **AdventureWorksTest** adını ve ardından **Tamam düğmesini** seçin.
 
-     **SharePoint Özelleştirme Sihirbazı** görüntülenir. Bu sihirbazda, projede hata ayıklamak için kullanacağınız siteyi belirtebilir ve çözümün güven düzeyini ayarlayabilirsiniz.
+     SharePoint **Özelleştirme Sihirbazı** görüntülenir. Bu sihirbazda, projede hata ayıklamak ve çözümün güven düzeyini ayarlamak için kullanabileceğiniz siteyi belirtebilirsiniz.
 
-4. Güven düzeyini ayarlamak için **Grup çözümü olarak dağıt** seçenek düğmesini seçin.
+4. Güven düzeyini **ayarlamak için Grup çözümü** olarak dağıt seçeneğini belirleyin.
 
-5. Varsayılan yerel SharePoint sitesini kabul etmek için **son** düğmesini seçin.
+5. Varsayılan yerel **siteyi** kabul etmek için Son SharePoint seçin.
 
-6. **Çözüm Gezgini**, SharePoint proje düğümünü seçin.
+6. Bu **Çözüm Gezgini** proje düğümünü SharePoint seçin.
 
-7. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+7. Menü çubuğunda Yeni Öğe **Ekle'Project**  >  **seçin.**
 
-     **Yeni öğe Ekle** iletişim kutusu açılır.
+     Yeni **Öğe Ekle iletişim** kutusu açılır.
 
-8. **Şablonlar** bölmesinde, **Iş verileri bağlantı modeli (yalnızca Grup çözümü)** öğesini seçin, projeyi **AdventureWorksContacts** olarak adlandırın ve ardından **Ekle** düğmesini seçin.
+8. Şablonlar bölmesinde **İş** Verileri Bağlantı Modeli **(Yalnızca** Grup Çözümü) 'ni seçin, projeye **AdventureWorksContacts** adını ve ardından Ekle **düğmesini** seçin.
 
 ## <a name="add-data-access-classes-to-the-project"></a>Projeye veri erişim sınıfları ekleme
 
-1. Menü çubuğunda **Araçlar**  >  **veritabanına Bağlan**' ı seçin.
+1. Menü çubuğunda Araçlar ve **Veritabanı'Bağlan**  >  **seçin.**
 
-     **Bağlantı ekle** iletişim kutusu açılır.
+     Bağlantı **Ekle** iletişim kutusu açılır.
 
-2. SQL Server AdventureWorks örnek veritabanına bir bağlantı ekleyin.
+2. SQL Server AdventureWorks örnek veritabanına bağlantı ekleyin.
 
-     Daha fazla bilgi için bkz. [Bağlantı Ekle/Değiştir (Microsoft SQL Server)](/previous-versions/dxb6fxah(v=vs.140)).
+     Daha fazla bilgi için [bkz. Bağlantı Ekleme/Değiştirme (Microsoft SQL Server)](/previous-versions/dxb6fxah(v=vs.140)).
 
-3. **Çözüm Gezgini**, proje düğümünü seçin.
+3. Bu **Çözüm Gezgini** proje düğümünü seçin.
 
-4. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+4. Menü çubuğunda Yeni Öğe **Ekle'Project**  >  **seçin.**
 
-5. **Yüklü şablonlar** bölmesinde, **veri** düğümünü seçin.
+5. Yüklü **Şablonlar bölmesinde Veri** **düğümünü** seçin.
 
-6. **Şablonlar** bölmesinde **LINQ to SQL sınıfları**' nı seçin.
+6. Şablonlar **bölmesinde Sınıfları** seçin LINQ to SQL **seçin.**
 
-7. **Ad** kutusunda **AdventureWorks** belirtin ve sonra **Ekle** düğmesini seçin.
+7. Ad **kutusunda** **AdventureWorks'i belirtin** ve ardından Ekle **düğmesini** seçin.
 
-     Bir. dbml dosyası projeye eklenir ve Nesne İlişkisel Tasarımcısı (O/R Designer) açılır.
+     Projeye bir .dbml dosyası eklenir ve Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) açılır.
 
-8. Menü çubuğunda Sunucu Gezgini **görüntüle**' yi seçin  >  .
+8. Menü çubuğunda Görünüm'e tıklayın **ve Sunucu Gezgini.**  >  
 
-9. **Sunucu Gezgini**' de, AdventureWorks örnek veritabanını temsil eden düğümü genişletin ve **Tablolar** düğümünü genişletin.
+9. Bu **Sunucu Gezgini,** AdventureWorks örnek veritabanını temsil eden düğümü genişletin ve ardından Tablolar **düğümünü** genişletin.
 
-10. **Kişi (kişi)** tablosunu O/R tasarımcısına ekleyin.
+10. Kişi **(Kişi) tablosuna** O/R Tasarımcısı'na ekleyin.
 
-     Bir varlık sınıfı oluşturulur ve tasarım yüzeyinde görüntülenir. Varlık sınıfı, Iletişim (kişi) tablosundaki sütunlarla eşlenen özelliklere sahiptir.
+     Bir varlık sınıfı oluşturulur ve tasarım yüzeyinde görünür. Varlık sınıfı, Kişi (Kişi) tablosunda sütunlara eşlene özelliklere sahiptir.
 
-## <a name="remove-the-default-entity-from-the-bdc-model"></a>Varsayılan varlığı IVB modelinden kaldır
+## <a name="remove-the-default-entity-from-the-bdc-model"></a>Varsayılan varlığı BDC modelinden kaldırma
 
-**Iş verileri bağlantı modeli** projesi, modele Entity1 adlı bir varsayılan varlık ekler. Bu varlığı kaldırın. Daha sonra yeni bir varlık ekleyeceksiniz. Boş bir modelle başlamak, izlenecek yolu tamamlamak için gereken adımların sayısını azaltır.
+İş **Verileri Bağlantı Modeli projesi,** modele Entity1 adlı bir varsayılan varlık ekler. Bu varlığı kaldırın. Daha sonra yeni bir varlık eksersiniz. Boş bir modelle başlayarak izlenecek yolu tamamlamak için gereken adım sayısı azalır.
 
-1. **Çözüm Gezgini**' de, **BdcModel1** düğümünü genişletin ve ardından *BdcModel1. bdcm* dosyasını açın.
+1. Bu **Çözüm Gezgini** **BdcModel1 düğümünü** genişletin ve ardından *BdcModel1.bdcm dosyasını* açın.
 
-2. Iş verileri bağlantı modeli dosyası BDC Tasarımcısı 'nda açılır.
+2. İş Verileri Bağlantısı model dosyası BDC tasarımcısında açılır.
 
-3. Tasarımcıda **Entity1** için kısayol menüsünü açın ve **Sil**' i seçin.
+3. Tasarımcıda **Entity1** kısayol menüsünü açın ve Sil'i **seçin.**
 
-4. **Çözüm Gezgini**' de, *Entity1. vb* (Visual Basic) veya *Entity1. cs* (C# ' ta) için kısayol menüsünü açın ve **Sil**' i seçin.
+4. Bu **Çözüm Gezgini** *Entity1.vb* (Visual Basic) veya *Entity1.cs* (C# içinde) kısayol menüsünü açın ve Sil'i **seçin.**
 
-5. *Entity1Service. vb* (Visual Basic) veya *Entity1Service. cs* (C# ' de) için kısayol menüsünü açın ve **Sil**' i seçin.
+5. *Entity1Service.vb* (Visual Basic) veya *Entity1Service.cs* (C# içinde) kısayol menüsünü açın ve Sil'i **seçin.**
 
-## <a name="add-an-entity-to-the-model"></a>Modele bir varlık ekleyin
+## <a name="add-an-entity-to-the-model"></a>Modele varlık ekleme
 
-Modele bir varlık ekleyin. Visual Studio **araç kutusu** 'ndan bdc Tasarımcısı üzerine varlık ekleyebilirsiniz.
+Modele bir varlık ekleyin. Visual Studio **Toolbox'tan** BDC tasarımcısına varlıklar ekleme.
 
-1. Menü çubuğunda **Görünüm**  >  **araç kutusunu** seçin.
+1. Menü çubuğunda Görünüm Araç **Kutusu'nı**  >  **seçin.**
 
-2. **Araç kutusunun** **BUSINESSDATACONNECTIVITY** sekmesinde, İVB tasarımcısına bir **varlık** ekleyin.
+2. Araç Kutusunun **BusinessDataConnectivity** **sekmesinde,** BDC **tasarımcısına** bir Varlık ekleyin.
 
-     Yeni varlık tasarımcıda görünür. Visual Studio, projeye *EntityService. vb* (Visual Basic) veya *EntityService. cs* (C# ' de) adlı bir dosya ekler.
+     Yeni varlık tasarımcıda görünür. Visual Studio *EntityService.vb* (Visual Basic) veya *EntityService.cs* (C# içinde) adlı bir dosyayı projeye ekler.
 
-3. Menü çubuğunda   >  **Özellikler**  >  **penceresini** görüntüle ' yi seçin.
+3. Menü çubuğunda Özellikler Penceresini **Görüntüle'yi**  >    >  **seçin.**
 
-4. **Özellikler** penceresinde, **ad** özellik değerini **iletişim** olarak ayarlayın.
+4. Özellikler **penceresinde Ad** özellik değerini **Kişi** olarak **ayarlayın.**
 
-5. Tasarımcıda varlık için kısayol menüsünü açın, **Ekle**' yi seçin ve **tanımlayıcı**' yı seçin.
+5. Tasarımcıda varlığın kısayol menüsünü açın, Ekle'yi **ve ardından** Tanımlayıcı'yı **seçin.**
 
-     Varlıkta yeni bir tanımlayıcı belirir.
+     Varlığa yeni bir tanımlayıcı görünür.
 
-6. **Özellikler** penceresinde, tanımlayıcının adını, **kişi** kimliği olarak değiştirin.
+6. Özellikler **penceresinde** tanımlayıcının adını **ContactID olarak değiştirin.**
 
-7. **Tür adı** listesinde, **System. Int32**' yi seçin.
+7. Tür Adı listesinde **System.Int32'yi seçin.** 
 
-## <a name="add-a-specific-finder-method"></a>Belirli bir bulucu yöntemi ekleme
+## <a name="add-a-specific-finder-method"></a>Belirli bir Bulıcı yöntemi ekleme
 
-BDC hizmetinin belirli bir kişiyi göstermesini sağlamak için belirli bir bulucu yöntemi eklemeniz gerekir. Bir Kullanıcı listede bir öğe seçtiğinde ve sonra Şeritteki **öğeyi görüntüle** düğmesini SEÇTIĞINDE, BDC hizmeti belirli Bulucu yöntemini çağırır.
+BDC hizmetinin belirli bir kişi görüntülemesi için Belirli Bir Bulıcı yöntemi eklemeniz gerekir. BDC hizmeti, bir kullanıcı listede bir öğe seçtiklerde Ve şeritteki Öğeyi Görüntüle düğmesini seçerse Belirli **Bulıcı** yöntemini çağıran bir yöntemdir.
 
-**BDC Yöntem ayrıntıları** penceresini kullanarak ilgili kişi varlığına belirli bir bulucu yöntemi ekleyin. Belirli bir varlığı döndürmek için yöntemine kod ekleyin.
+BDC Yöntem Ayrıntıları penceresini kullanarak Kişi varlığa Belirli bir **Bulıcı yöntemi** ekleyin. Belirli bir varlığı geri dönmek için yöntemine kod ekleyin.
 
-1. IVB tasarımcısında, **iletişim** varlığını seçin.
+1. BDC tasarımcısında Kişi **varlığını** seçin.
 
-2. Menü çubuğunda,   >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını** görüntüle ' yi seçin.
+2. Menü çubuğunda BDC Yöntem **Ayrıntıları'Windows**  >    >  **Diğer Öğeleri Görüntüle'yi seçin.**
 
-     IVB yöntemi ayrıntıları penceresi açılır.
+     BDC Yöntem Ayrıntıları penceresi açılır.
 
-3. **Yöntem Ekle** listesinde, **belirli bulucu yöntemi oluştur**' u seçin.
+3. Yöntem **Ekle listesinde Belirli** Bulıcı **Yöntemi Oluştur'a tıklayın.**
 
-     Visual Studio, modele aşağıdaki öğeleri ekler. Bu öğeler **BDC Yöntem ayrıntıları** penceresinde görüntülenir.
+     Visual Studio aşağıdaki öğeleri modele ekler. Bu öğeler **BDC Yöntem Ayrıntıları penceresinde** görünür.
 
     - ReadItem adlı bir yöntem.
 
-    - Yöntemi için bir giriş parametresi.
+    - yöntemi için bir giriş parametresi.
 
-    - Yöntemi için bir dönüş parametresi.
+    - yöntemi için bir dönüş parametresi.
 
     - Her parametre için bir tür tanımlayıcısı.
 
-    - Yöntemi için bir yöntem örneği.
+    - yöntemi için bir yöntem örneği.
 
-4. **BDC Yöntem ayrıntıları** penceresinde, **kişi** türü tanımlayıcısı için görüntülenen listeyi açın ve ardından **Düzenle**' yi seçin.
+4. **BDC Yöntem Ayrıntıları penceresinde** Kişi türü tanımlayıcısı için görüntülenen listeyi açın **ve düzenle'yi** **seçin.**
 
-     **IVB Gezgini** açılır ve modelin hiyerarşik bir görünümünü sağlar.
+     **BDC Gezgini** açılır ve modelin hiyerarşik bir görünümünü sağlar.
 
-5. **Özellikler** penceresinde, **TypeName** özelliğinin yanındaki listeyi açın, **geçerli proje** sekmesini seçin ve ardından **iletişim** özelliğini seçin.
+5. Özellikler **penceresinde** **TypeName** özelliğinin yanındaki listeyi açın, Geçerli Project **sekmesini** ve ardından **Kişi özelliğini** seçin.
 
-6. **IVB Gezgini**' nde, **kişinin** kısayol menüsünü açın ve **tür tanımlayıcısı Ekle**' yi seçin.
+6. **BDC Gezgini'nde** Kişi kısayol menüsünü açın **ve Ardından** Tür Tanımlayıcısı **Ekle'yi seçin.**
 
-     **TypeDescriptor1** adlı yeni bir tür tanımlayıcısı **BDC Gezgini**'nde görünür.
+     BDC Gezgini'nde **TypeDescriptor1** adlı yeni bir **tür tanımlayıcısı görüntülenir.**
 
-7. **Özellikler** penceresinde, **ad** özelliği değerini, **bir.**
+7. Özellikler **penceresinde Name** özellik **değerini** **ContactID olarak ayarlayın.**
 
-8. **TypeName** özelliğinin yanındaki listeyi açın ve ardından **Int32** öğesini seçin.
+8. **TypeName** özelliğinin yanındaki listeyi açın ve **Ardından Int32'yi seçin.**
 
-9. **Tanımlayıcı** özelliğinin yanındaki listeyi açın ve ardından, Ilgili **kişi kimliği**' ni seçin.
+9. Tanımlayıcı özelliğinin yanındaki listeyi **açın ve** **ContactID'yi seçin.**
 
-10. Aşağıdaki alanların her biri için bir tür tanımlayıcısı oluşturmak üzere 6. adımı tekrarlayın.
+10. Aşağıdaki alanların her biri için bir tür tanımlayıcısı oluşturmak için 6. adımı tekrarlayın.
 
-    |Name|Tür adı|
+    |Name|Tür Adı|
     |----------|---------------|
-    |FirstName|System. String|
-    |LastName|System. String|
+    |FirstName|System|
+    |LastName|System|
     |Telefon|System. String|
     |EmailAddress|System. String|
     |Emailpromosyonu|System. Int32|
@@ -241,14 +242,14 @@ BDC hizmetinin kişileri bir listede görüntülemesini sağlamak için bir bulu
 
 ## <a name="test-the-project"></a>Projeyi test etme
 
-Projeyi çalıştırdığınızda, SharePoint sitesi açılır ve Visual Studio modelinizi Iş verileri bağlantı hizmetine ekler. SharePoint 'te kişi varlığına başvuran bir dış liste oluşturun. AdventureWorks veritabanındaki kişilerin verileri listede görüntülenir.
+projeyi çalıştırdığınızda, SharePoint site açılır ve Visual Studio modelinizi iş verileri bağlantı hizmetine ekler. SharePoint, iletişim varlığına başvuran bir dış liste oluşturun. AdventureWorks veritabanındaki kişilerin verileri listede görüntülenir.
 
 > [!NOTE]
-> Çözümünüzde Hata ayıklayabilmeniz için SharePoint 'teki güvenlik ayarlarınızı değiştirmeniz gerekebilir. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+> çözümünüzde hata ayıklayabilmeniz için SharePoint güvenlik ayarlarınızı değiştirmeniz gerekebilir. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 1. **F5** tuşunu seçin.
 
-     SharePoint sitesi açılır.
+     SharePoint site açılır.
 
 2. **Site eylemleri** menüsünde, **diğer seçenekler** komutunu seçin.
 
@@ -270,7 +271,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır ve Visual Studio 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-SharePoint 'te BDC hizmeti modellerini nasıl tasarlayacağınızı öğrenmek için aşağıdaki konulardan daha fazla bilgi edinebilirsiniz:
+aşağıdaki konulardan SharePoint BDC hizmeti için model tasarlama hakkında daha fazla bilgi edinebilirsiniz:
 
 - [Nasıl yapılır: bir Oluşturucu yöntemi ekleme](../sharepoint/how-to-add-a-creator-method.md).
 - [Nasıl yapılır: Güncelleştirici yöntemi ekleme](../sharepoint/how-to-add-an-updater-method.md).

@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c36723600d09adf622d7facf4e434bdea7714425
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 6c13ae5f4c895ebafddf883e7f3dd06416dd23f1903bfb70f0f993b4ce454f17
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122054892"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443769"
 ---
 # <a name="createitem-task"></a>CreateItem görevi
 
@@ -41,7 +41,7 @@ ms.locfileid: "122054892"
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`AdditionalMetadata`|İsteğe `String` bağlı dizi parametresi.<br /><br /> Çıkış öğelerine eklenecek ek meta verileri belirtir.  Öğenin meta veri adını ve değerini aşağıdaki söz dizimleriyle belirtin:<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> Birden çok meta veri adı/değer çifti noktalı virgülle ayrılabilir. Ad veya değer noktalı virgül veya başka özel karakterler içeriyorsa, bunlar kaçmalıdır. Daha fazla bilgi için, [bkz. How to: Escape special characters in MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md).|
+|`AdditionalMetadata`|İsteğe `String` bağlı dizi parametresi.<br /><br /> Çıkış öğelerine eklenecek ek meta verileri belirtir.  Öğenin meta veri adını ve değerini aşağıdaki söz dizimleriyle belirtin:<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> Birden çok meta veri adı/değer çifti noktalı virgülle ayrılabilir. Ad veya değer noktalı virgül veya başka özel karakterler içeriyorsa, bunlar kaçmalıdır. Daha fazla bilgi için, [bkz. How to: Escape special characters in MSBuild.](../msbuild/how-to-escape-special-characters-in-msbuild.md)|
 |`Exclude`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Çıkış öğesi koleksiyonundan hariç tutulacak öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir. Daha fazla bilgi için [bkz. Öğeler](../msbuild/msbuild-items.md) [ve Nasıl Kullanılır: Dosyaları derlemeden hariç tut.](../msbuild/how-to-exclude-files-from-the-build.md)|
 |`Include`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Çıkış öğesi koleksiyonuna eklenecek öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir.|
 |`PreserveExistingMetadata`|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `True` ek meta verileri yalnızca henüz yoksa uygulayabilirsiniz.|

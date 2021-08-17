@@ -1,6 +1,6 @@
 ---
-description: Sembol sağlayıcısının üye olduğu sembol grubu hakkındaki bilgileri alır.
-title: 'Idebugsymbolproviderdirect:: GetCurrentModulesState | Microsoft Docs'
+description: Sembol sağlayıcısının üye olduğu sembol grubuyla ilgili bilgileri alınır.
+title: IDebugSymbolProviderDirect::GetCurrentModulesState | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: beb8cb13f22e969c197eb59d73e317e2379d45d7f2962e82fbc0a63bc02d45cf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a3a02a8d2c45664b2afa2bb021cfbdf08895d9a6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402213"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137918"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
-Sembol sağlayıcısının üye olduğu sembol grubu hakkındaki bilgileri alır.
+Sembol sağlayıcısının üye olduğu sembol grubuyla ilgili bilgileri alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +44,16 @@ int GetCurrentModulesState(
 
 ## <a name="parameters"></a>Parametreler
 `pState`\
-dışı Sembol sağlayıcısı grubunun durumu.
+[out] Sembol sağlayıcı grubunun durumu.
 
 `count`\
-dışı Gruptaki modül sayısı.
+[out] Gruptaki modüllerin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Sembol grubuna bir modül eklendiğinde veya gruptan her kaldırıldığında durum değiştirilir. Bu nedenle, bu yöntem bir sembol grubunun değiştirilip değiştirilmediğini algılamak için kullanılabilir.
+ Sembol grubuna bir modül ekli veya sembol grubundan kaldırılan her durumda durum değiştirilir. Bu nedenle, bu yöntem bir sembol grubunun değiştirilmiş olup olduğunu algılamak için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

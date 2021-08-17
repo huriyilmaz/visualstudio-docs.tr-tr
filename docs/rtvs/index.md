@@ -7,14 +7,15 @@ ms.topic: overview
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 6dab4fafae0b3772cffd5d72ad0e53ce23be2aad
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: 33502f988ca8e0db61337d2272c467be85201f06
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114679934"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122075989"
 ---
 # <a name="work-with-r-in-visual-studio"></a>Visual Studio’da R ile çalışma
 

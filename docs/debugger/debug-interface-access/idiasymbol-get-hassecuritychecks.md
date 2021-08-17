@@ -1,6 +1,6 @@
 ---
-description: Compiland veya işlevin arabellek taşması güvenlik denetimleriyle derlenip derlenmediğini belirten bir bayrak alır (örneğin,/GS (arabellek güvenlik denetimi)) derleyici anahtarı).
-title: 'IDiaSymbol:: get_hasSecurityChecks | Microsoft Docs'
+description: Derlemenin veya işlevin arabellek taşma güvenlik denetimleriyle (örneğin, /GS (Arabellek Güvenlik Denetimi)) derleyici anahtarıyla derlenmiş olup olmadığını belirten bir bayrak alır.
+title: IDiaSymbol::get_hasSecurityChecks | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 4bb51f62-8645-41a4-bc44-1451010623fd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 56f337a84081aa8c0282efcf07b70f30d98da15e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e417293cec0cf25a1a288633e06b6eb05926ac71b7d39ed7d02e41123f0b5ad6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102162070"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436531"
 ---
 # <a name="idiasymbolget_hassecuritychecks"></a>IDiaSymbol::get_hasSecurityChecks
-Compiland veya işlevin arabellek taşması güvenlik denetimleriyle derlenip derlenmediğini belirten bir bayrak alır (örneğin, [/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) derleyici anahtarı).
+Derlemenin veya işlevin arabellek taşma güvenlik denetimleriyle (örneğin, [/GS (Arabellek](/cpp/build/reference/gs-buffer-security-check) Güvenlik Denetimi) derleyici anahtarıyla derlenmiş olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,21 +35,21 @@ HRESULT get_hasSecurityChecks(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` İşlevin herhangi bir güvenlik denetimi varsa döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] işlevi `TRUE` herhangi bir güvenlik denetimine sahipse döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-- [/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check)
+- [/GS (Arabellek Güvenlik Denetimi)](/cpp/build/reference/gs-buffer-security-check)

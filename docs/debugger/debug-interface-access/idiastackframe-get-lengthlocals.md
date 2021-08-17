@@ -1,6 +1,6 @@
 ---
-description: IDiaStackFrame::get_lengthLocals yığına gönderilen yerel değişkenlerin bayt sayısını alan.
-title: IDiaStackFrame::get_lengthLocals | Microsoft Docs
+description: 'IDiaStackFrame:: get_lengthLocals, yığında gönderilen yerel değişkenlerin bayt sayısını alır.'
+title: 'IDiaStackFrame:: get_lengthLocals | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121454874"
 ---
 # <a name="idiastackframeget_lengthlocals"></a>IDiaStackFrame::get_lengthLocals
-Yığına gönderilen yerel değişkenlerin bayt sayısını alın.
+Yığına gönderilen yerel değişkenlerin bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_lengthLocals (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Yerel değişkenlerin bayt sayısını döndürür.
+dışı Yerel değişkenlerin bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. `S_FALSE`özelliği desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

@@ -1,6 +1,6 @@
 ---
-title: Kesme noktası Isabet edildiğinde Iletişim kutusu | Microsoft Docs
-description: Kesme üzerine bir eylem belirtmek için kesme noktası Isabet edildiğinde kullanın. Bir iletinin yazdırılmasını belirtebilir ve bu yürütmenin daha sonra devam etmesi gerekir.
+title: Kesme NoktasıNa Geldiğinde İletişim Kutusu | Microsoft Docs
+description: Kesme Noktası Isabet Olduğunda'ı kullanarak hataya neden olan eylemi belirtin. Bir iletinin yazdırılacak ve yürütmenin daha sonra devam edeceğini belirtebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,25 +17,26 @@ ms.assetid: 476e3d98-cf35-4338-b124-cd0f3010d854
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bfb5099bd0fab17cd983af4e16a435fd192a1668
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 444b9c2860e3e79a5fea5b673b68881a1fec4294
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883876"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090115"
 ---
 # <a name="when-breakpoint-is-hit-dialog-box"></a>Kesme Noktası İsabet Edildiğinde İletişim Kutusu
 Bu iletişim kutusu ile bir kesme noktasına gelindiğinde gerçekleşen eylemi özelleştirebilirsiniz.
 
 ## <a name="uielement-list"></a>UIElement Listesi
- **Ileti Yazdır** DebuggerDisplay söz dizimini kullanarak bir ileti yazdırır. Daha fazla bilgi için bkz. [DebuggerDisplay özniteliğini kullanma](../debugger/using-the-debuggerdisplay-attribute.md).
+ **İleti Yazdırma** DebuggerDisplay söz dizimi kullanarak bir ileti yazdırır. Daha fazla bilgi için [bkz. DebuggerDisplay Özniteliğini Kullanma.](../debugger/using-the-debuggerdisplay-attribute.md)
 
  Bu metin kutusu, bir DebuggerDisplay ifadesinin küme ayraçları içinde veya tek başlarına kullanılabilecek özel anahtar sözcükleri (örneğin, $ADDRESS) de destekler. Kullanılabilir anahtar sözcükler, iletişim kutusunda listelenir.
 
- **Yürütmeye devam et** Bu denetim yalnızca **bir Ileti Yazdır** seçildiğinde etkindir. Bu denetim seçildiğinde, bir kesme noktasını, konuma ulaşıldığında kesmek yerine, program yürütmenizi izlemek üzere bir izleme noktası olarak kullanabilirsiniz.
+ **Yürütmeye Devam** Bu denetim yalnızca İleti Yazdır **seçildiğinde** etkinleştirilir. Bu denetim seçildiğinde, bir kesme noktasını, konuma ulaşıldığında kesmek yerine, program yürütmenizi izlemek üzere bir izleme noktası olarak kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kesme noktaları kullanma](../debugger/using-breakpoints.md)
+- [Kesme Noktaları Kullanma](../debugger/using-breakpoints.md)
 - [DebuggerDisplay Özniteliğini Kullanma](../debugger/using-the-debuggerdisplay-attribute.md)

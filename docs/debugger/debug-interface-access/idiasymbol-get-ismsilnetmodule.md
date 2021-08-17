@@ -1,6 +1,6 @@
 ---
-description: Modülün bir. netmodule olup olmadığını belirten bir bayrak alır (yalnızca meta veri içeren ve yerel semboller içermeyen bir Microsoft ara dili (MSIL) modülü).
-title: 'IDiaSymbol:: get_isMSILNetmodule | Microsoft Docs'
+description: Modülün yalnızca meta veriler içeren ve yerel simge içeren bir .netmodule (Microsoft Ara Dil (MSIL) modülü) olup olmadığını belirten bir bayrak alır.
+title: IDiaSymbol::get_isMSILNetmodule | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e55a1f6ab92d5d410438e7e8a1823bad85be8e8d0b905c26670619ea54b7b19
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6fb5d2490c7ffdcfcdb9ce40a2614beb4c972544
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404797"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121532"
 ---
 # <a name="idiasymbolget_ismsilnetmodule"></a>IDiaSymbol::get_isMSILNetmodule
-Modülün bir. netmodule olup olmadığını belirten bir bayrak alır (yalnızca meta veri içeren ve yerel semboller içermeyen bir Microsoft ara dili (MSIL) modülü).
+Modülün yalnızca meta veriler içeren ve yerel simge içeren bir .netmodule (Microsoft Ara Dil (MSIL) modülü) olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT get_isMSILNetmodule(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` Modül MSIL ise döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Modül `TRUE` MSIL ise döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik `SymTagCompilandDetails` sembol türünden kullanılabilir (bkz. [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).
+ Bu özellik sembol türünden `SymTagCompilandDetails` kullanılabilir (bkz. [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

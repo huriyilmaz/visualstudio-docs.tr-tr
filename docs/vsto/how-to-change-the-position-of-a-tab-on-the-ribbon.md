@@ -12,17 +12,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: dc0b4548ffa4e5efa75734b5528a7021cf122bfa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 93ce719b8db2280029ad4302adb2afc1e08140de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921916"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106347"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme
-  Bir Şeritteki özel sekmelerin sırasını **sekme koleksiyonu düzenleyicisini** kullanarak değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler yerleştirebilirsiniz. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel 'deki yerleşik bir sekmedir.
+  Bir Şeritteki özel sekmelerin sırasını **sekme koleksiyonu düzenleyicisini** kullanarak değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler yerleştirebilirsiniz. yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel yerleşik bir sekmedir.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -34,7 +35,7 @@ ms.locfileid: "99921916"
 
 3. Şerit Tasarımcısına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-4. **Özellikler** penceresinde, **Sekmeler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) tıklatın.
+4. **özellikler** penceresinde, **sekmeler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.NET mobile designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) tıklatın.
 
      **Sekme Koleksiyonu Düzenleyicisi** görünür.
 
@@ -56,7 +57,7 @@ ms.locfileid: "99921916"
 
 5. **OfficeId** özelliğini yerleşik bir SEKMENIN denetim kimliği olarak ayarlayın.
 
-     Denetim kimliklerinin bir listesi için bkz. [office 2010 Yardım dosyaları: ofis akıcı Kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
+     denetim kimliklerinin bir listesi için bkz. [Office 2010 yardım dosyaları: Office floent kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Şerite genel bakış](../vsto/ribbon-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Çok hedefli projeler
-description: Bu belgede, birden çok hedefli projelerin Mac için Visual Studio.
+title: Çoklu hedefleme projeleri
+description: bu belgede, Mac için Visual Studio içinde çok hedefli projelerin nasıl ayarlanacağı hakkında bir genel bakış sunulmaktadır.
 ms.topic: overview
 author: jmatthiesen
 ms.author: jomatthi
@@ -13,17 +13,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121438608"
 ---
-# <a name="projects-with-multiple-target-frameworks"></a>Birden çok hedef çerçeveye sahip projeler
-Bu Mac için Visual Studio, bir Xamarin veya .NET Core projesini, .NET Framework'nin çeşitli sürümlerinden herhangi biri üzerinde ve çeşitli sistem platformlarından herhangi biri üzerinde çalıştıracak şekilde yapılandırabiliyorsunuz. Örneğin, hem .NET Framework 4.6 hem de .NET Core 3.1'de çalıştıracak bir projeyi hedefleysiniz. 
+# <a name="projects-with-multiple-target-frameworks"></a>Birden çok hedef çerçeve içeren projeler
+Mac için Visual Studio, bir Xamarin veya .net Core projesini .NET Framework çeşitli sürümlerinden herhangi birinde ve çeşitli sistem platformlarından herhangi birinde çalışacak şekilde yapılandırabilirsiniz. örneğin, bir projeyi hem .NET Framework 4,6 hem de .net Core 3,1 üzerinde çalışacak şekilde hedefleyebilirsiniz. 
 
-Hedef çerçeveler hakkında daha fazla bilgi için [bkz. Hedef çerçeveler.](/dotnet/standard/frameworks)
+Hedef çerçeveler hakkında daha fazla bilgi için bkz. [hedef çerçeveler](/dotnet/standard/frameworks).
 
 > [!NOTE] 
-> Bu konu, Mac için Visual Studio. Visual Studio hakkında daha fazla Windows için bkz. [Çerçeve hedeflemeye genel bakış.](/visualstudio/ide/visual-studio-multi-targeting-overview)
+> bu konu Mac için Visual Studio için geçerlidir. Windows Visual Studio için bkz. [Framework hedefleme genel bakış](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
-## <a name="targeting-multiple-frameworks"></a>Birden çok çerçeveyi hedefleme
+## <a name="targeting-multiple-frameworks"></a>Çoklu çerçeveleri hedefleme
 
-Hedef çerçeveler proje dosyanız içinde belirtilir. Bu çerçeveleri projenize sağ tıklar ve Araçlar'ı > **komutuyla düzenleyebilirsiniz.** Tek bir hedef çerçeve belirtilirse TargetFramework öğesini kullanın. Aşağıdaki konsol uygulaması proje dosyası .NET Core 3.0'ın nasıl hedeflen olduğunu gösteriyor:
+Proje dosyanızda, projenize sağ tıklayıp **araçlar > dosya Düzenle** komutunu seçerek düzenleyebileceğiniz hedef çerçeveler belirtilir. Tek bir hedef çerçeve belirtildiğinde, TargetFramework öğesini kullanın. Aşağıdaki konsol uygulaması proje dosyası, .NET Core 3,0 ' nin nasıl hedefleyeceğinizi göstermektedir:
 
 ```XML
 <Project Sdk="Microsoft.NET.Sdk">
@@ -36,7 +36,7 @@ Hedef çerçeveler proje dosyanız içinde belirtilir. Bu çerçeveleri projeniz
 </Project>
 ```
 
-Birden çok hedef çerçeve ile çoğul TargetFrameworks öğesini kullanın:
+Birden çok hedef çerçeve ile çoğul Targetçerçeveler öğesini kullanın:
 
 ```XML
 <Project Sdk="Microsoft.NET.Sdk">
@@ -46,14 +46,14 @@ Birden çok hedef çerçeve ile çoğul TargetFrameworks öğesini kullanın:
   </PropertyGroup>
 ```
 
-Birden çok çerçeveyi hedefleme [hakkında daha fazla bilgi.](/dotnet/standard/frameworks#how-to-specify-target-frameworks)
+[Çoklu çerçeveleri hedefleme](/dotnet/standard/frameworks#how-to-specify-target-frameworks)hakkında daha fazla bilgi edinin.
 
-## <a name="working-with-code-in-a-multi-target-project"></a>Çok hedefli projede kodla çalışma
-Birden çok hedef çerçeveye sahip bir projede bir C# dosyasını düzenlerken, düzenleyici deneyiminize kılavuz olarak kullanmak istediğiniz hedef çerçeveyi belirtebilirsiniz (örneğin, bu çerçeve tarafından desteklenmiyor bir API kullanıyorsanız uyarıları gösterme). Düzenleyici penceresinin sol üst köşesindeki **Hedef** Çerçeve seçicisini kullanarak hedef çerçeveyi değiştirebilirsiniz.
+## <a name="working-with-code-in-a-multi-target-project"></a>Çoklu hedef projede kodla çalışma
+Birden çok hedef çerçeve içeren bir projede bir C# dosyasını düzenlediğinizde, düzenleyici deneyiminize kılavuzluk etmek için kullanmak istediğiniz hedef Framework 'ü belirtebilirsiniz (örneğin, bu Framework tarafından desteklenmeyen bir API kullanıyorsanız, uyarıları gösterir). Hedef çerçevesini, düzenleyici penceresinin sol üst köşesindeki **hedef Framework** seçicisini kullanarak değiştirebilirsiniz.
 
-![Düzenleyici penceresinin üst kısmında bulunan hedef çerçeveyi değiştirmek için hedef çerçeve seçiciyi kullanma](media/project-multitargeting-framework-selector.png)
+![Düzenleyici penceresinin en üstünde bulunan hedef Framework 'ü değiştirmek için hedef çerçeve seçicisini kullanma](media/project-multitargeting-framework-selector.png)
 
-Bazen, uygulamanın hedeflediğimiz platforma bağlı olarak farklı API'ler çağırmanız gerekir. Bunu yapmak için, belirli bir platform için kod derlemek için koşullu kod yazabilirsiniz:
+Bazen uygulamanızın hedeflediği platforma bağlı olarak farklı API 'Leri çağırmanız gerekir. Bunu yapmak için, belirli bir platform için kod derlemek üzere koşullu kod yazabilirsiniz:
 
 ```C#
 public class MyClass
@@ -71,11 +71,11 @@ public class MyClass
 }
 ```
 
-Kod yazarken, IntelliSense otomatik tamamlama önerilerinde, uygulamanın desteklediği hedef çerçevelerden herhangi biri için belirli API'ler eksikse bunu size haber vererek uyarılar görürsünüz.
+Kod yazarken, IntelliSense otomatik tamamlama önerilerinde uyarılar görürsünüz. Bu, uygulamanızın desteklediği hedef çerçevelerin hiçbirinde belirli API 'Lerin eksik olup olmadığını bilmenizi sağlar.
 
-![IntelliSense'te gösterilen bir uyarı iletisi, API belirtilen hedef çerçeve için çalışmaz. Örnek metin: namespace System.Buffers, SharedUtils (netstandard2.0) - Kullanılamıyor. Bağlam değiştirmek için gezinti çubuğunu kullanabilirsiniz.](media/project-multitargeting-intellisense-warnings.png)
+![IntelliSense 'de gösterilen bir uyarı iletisi, belirtilen hedef çerçeve için bir API çalışmayacak. Örnek metin: ad alanı System. buffers, SharedUtils (Netstandard 2.0)-kullanılamaz. Bağlam değiştirmek için gezinti çubuğunu kullanabilirsiniz.](media/project-multitargeting-intellisense-warnings.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve hedeflemeye genel bakış (Windows)](/visualstudio/ide/visual-studio-multi-targeting-overview)
-- [SDK stili projelerde hedef çerçeveler](/dotnet/standard/frameworks#how-to-specify-target-frameworks)
+- [Çerçeve hedefleme genel bakış (Windows)](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [SDK stilindeki projelerde hedef çerçeveler](/dotnet/standard/frameworks#how-to-specify-target-frameworks)

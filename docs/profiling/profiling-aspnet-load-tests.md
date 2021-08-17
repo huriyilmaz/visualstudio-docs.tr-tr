@@ -11,12 +11,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: fb9c41d6090e5a29cbbb42806c72c15a2d39a7b8acc45d71c43838a595dece5e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1bbd0b138687a8842c8e991f1a4bce8f9e8f234a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121315882"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076327"
 ---
 # <a name="profile-aspnet-load-tests"></a>yük testleri için profil ASP.NET
 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]ASP.NET web siteleri projelerinde çalıştırdığınız otomatikleştirilmiş web testlerinden profil oluşturma verileri toplayabilirsiniz. Örnekleme ve katman etkileşimi verilerini toplayabilirsiniz. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:

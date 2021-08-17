@@ -1,6 +1,6 @@
 ---
-description: Modülün/hotpatch (düzeltme eki uygulanmış görüntü oluşturma)) derleyici anahtarı ile derlendiğini belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_isHotpatchable | Microsoft Docs'
+description: Modülün /hotpatch (Hotpatchable Image Oluştur)) derleyici anahtarıyla derlenmiş olup olmadığını belirten bir bayrak alınır.
+title: IDiaSymbol::get_isHotpatchable | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd52cb661253326390b9d43f8f08c430a36deb2ce1eaeac469d9c90985555c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb51ab86da2ecca068eb2c2ff557ef7f1755ec0a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379849"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044129"
 ---
 # <a name="idiasymbolget_ishotpatchable"></a>IDiaSymbol::get_isHotpatchable
-Modülün [/hotpatch (düzeltme eki uygulanmış görüntü oluşturma)](/cpp/build/reference/hotpatch-create-hotpatchable-image) derleyici anahtarı ile derlendiğini belirten bir bayrak alır.
+Modülün [/hotpatch (Hotpatchable Image Oluştur)](/cpp/build/reference/hotpatch-create-hotpatchable-image) derleyici anahtarıyla derlenmiş olup olmadığını belirten bir bayrak alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT get_isHotpatchable(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` Modülün Hot-patchable olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Modül `TRUE` hot-patchable ise döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik `SymTagCompilandDetails` sembol türünden kullanılabilir (bkz. [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).
+ Bu özellik sembol türünden `SymTagCompilandDetails` kullanılabilir (bkz. [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)).
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

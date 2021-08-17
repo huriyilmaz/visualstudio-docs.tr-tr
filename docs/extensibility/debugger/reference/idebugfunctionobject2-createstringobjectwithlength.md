@@ -10,17 +10,18 @@ ms.assetid: 1f43ec66-1615-4a4c-8b9d-e933f549f96d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5314bf6d06f291ce7128b3b6ccebd520ef2eafca
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 813d223931339044cc0538f891a563857a6e3d76
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072838"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138204"
 ---
 # <a name="idebugfunctionobject2createstringobjectwithlength"></a>IDebugFunctionObject2::CreateStringObjectWithLength
 Belirtilen uzunluğa sahip bir dize nesnesi oluşturur.

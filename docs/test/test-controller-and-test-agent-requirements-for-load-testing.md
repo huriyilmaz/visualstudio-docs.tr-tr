@@ -1,6 +1,6 @@
 ---
 title: Test denetleyicisi/test aracısı gereksinimleri (yük testi)
-description: Yük testi için test denetleyicisi ve test aracısı gereksinimleri hakkında bilgi edinin. Visual Studio çeşitli test türlerini destekler.
+description: Yük testi için test denetleyicisi ve test aracısı gereksinimleri hakkında bilgi edinebilirsiniz. Visual Studio test türlerini destekler.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -12,55 +12,55 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: dfdc7e48c5d2b1c3064192340cf7729c4e9d728563296aeed03b0e9569595450
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 158f18a65c83f52dbe2fa846249da2300fad1508
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121424820"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106633"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>Yük testi için test denetleyicisi ve test aracısı gereksinimleri
 
-Birim, Web performansı, yük ve el ile testler de dahil olmak üzere çeşitli test türleri Visual Studio tümleşiktir. Visual Studio, Visual Studio uygulama yaşam döngüsü yönetimi kullanıcılarının bir test denetleyicisi ve bir veya daha fazla aracı kullanarak uzak bilgisayarlarda testler çalıştırmasına olanak sağlar. Bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).
+Birim, web performansı, yük ve el ile yapılan testler gibi çeşitli test türleri, Visual Studio. Visual Studio Uygulama Visual Studio Yönetimi kullanıcılarının bir test denetleyicisi ve bir veya daha fazla aracı kullanarak uzak bilgisayarlarda testleri çalıştırmasını sağlar. Bkz. [Test aracılarını yükleme ve yapılandırma.](../test/lab-management/install-configure-test-agents.md)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="hardware-and-software-requirements"></a>Donanım ve yazılım gereksinimleri
 
-Test denetleyicisi ve test aracısı bilgisayarlarının belirli donanım ve yazılım gereksinimleri vardır. Ayrıca, test denetleyicisi ve test aracısı bilgisayarlarını birden çok dilde dağıtmak istiyorsanız, bu dilleri nasıl destekleyecağınızı planlamanız gerekir.
+Hem test denetleyicisi hem de test aracısı bilgisayarları belirli donanım ve yazılım gereksinimlerine sahiptir. Ayrıca, test denetleyicisini ve test aracısı bilgisayarlarını birden çok dile dağıtmak için, bu dilleri nasıl destekleyebilirsiniz planlamanız gerekir.
 
 ### <a name="hardware-requirements"></a>Donanım gereksinimleri
 
-Aşağıdaki tabloda bir test denetleyicisi ve test aracıları dağıtmak için önerilen donanım gereksinimleri gösterilmektedir.
+Aşağıdaki tabloda, bir test denetleyicisi ve test aracıları dağıtmak için önerilen donanım gereksinimleri gösterir.
 
 |**Yapılandırma**|**Bileşen**|**CPU**|**HD**|**Bellek**|
 |-|-------------------|-|------------|-|
-|< 500 sanal kullanıcıları|Test Aracısı|2,6 GHz|10 GB|2 GB|
-|< 1000 sanal kullanıcıları|Test Aracısı|Çift işlemci 2,6 GHz|10 GB|2 GB|
-|N x 1000 Sanal Kullanıcı|Test Aracısı|Her biri Iki 2,6 GHz ile N aracıya ölçeklendirin|10 GB|2|
-|\< test ortamında 30 bilgisayar. Bu, test edilen aracıları ve sunucuları içerir.|Test denetleyicisi|2,6 GHz|||
-|Test ortamında N x 30 bilgisayar. Bu, test edilen aracıları ve sunucuları içerir.|Test denetleyicisi|N 2,6 GHz işlemcileri|||
+|< 500 sanal kullanıcı|Test aracısı|2,6 GHz|10 GB|2 GB|
+|< 1000 sanal kullanıcı|Test aracısı|Çift işlemci 2,6 GHz|10 GB|2 GB|
+|N x 1000 sanal kullanıcı|Test aracısı|Her biri İkili 2.6 Ghz ile N aracıya ölçeğini ölçeklendirin|10 GB|2 GB|
+|\< Test ortamında 30 bilgisayar. Bu, test altındaki aracıları ve sunucuları içerir.|Test Denetleyicisi|2,6 GHz|||
+|Test ortamında N x 30 bilgisayar. Bu, test altındaki aracıları ve sunucuları içerir.|Test Denetleyicisi|N 2,6 GHz işlemci|||
 
 > [!NOTE]
-> Sanal Kullanıcı sayısı testten test 'e göre farklılık gösterir. Bu farkın önemli bir nedeni, *düşünme süreleriyle* veya Kullanıcı gecikmelerinden sapmaktır. Daha fazla bilgi için bkz. [Web sitesi insan etkileşimi gecikmelerini benzetmek için düşünme zamanlarını düzenleme](../test/edit-think-times-in-load-test-scenarios.md). Bir yük testinde, Web testleri genellikle daha etkilidir ve birim testlerinden daha fazla yük oluşturur. Yukarıdaki tabloda yer alan sayılar, tipik bir Web uygulamasındaki 3-5 saniyelik düşünme süreleriyle Web testlerini çalıştırmak için geçerlidir.
+> Sanal kullanıcı sayısı testten teste kadar büyük ölçüde farklılık gösterir. Bu varyansın önemli bir nedeni, *düşünme sürelerinin veya kullanıcı* gecikmelerinin varyansıdır. Daha fazla bilgi için [bkz. Web sitesi insan etkileşimi gecikmelerinin benzetimini yapmak için düşünme sürelerini düzenleme.](../test/edit-think-times-in-load-test-scenarios.md) Yük testinde web testleri genellikle daha verimlidir ve birim testlerinden daha fazla yük üretir. Yukarıdaki tabloda yer alan sayılar, tipik bir web uygulamasında 3-5 saniyelik düşünme süreleriyle web testleri çalıştırma için geçerlidir.
 
-Burada sunulan yönergeler, donanım planlaması için genel kılavuz olarak sunulmaktadır. Test performansı, test verileri miktarına ve test aracılarının sayısına göre büyük ölçüde farklılık gösterir. Test aracıları için, CPU hızı ve kullanılabilir bellek, test yükünü sınırlayacaktır. Test denetleyicilerinin, test aracılarının sayısına ve testlerde yer alan veri miktarına bağlı olarak daha fazla kaynağı olması gerekir.
+Burada sunulan yönergeler, donanım planlaması için genel yönergeler olarak sağlanır. Test performansı, test verisi miktarına ve test aracılarının sayısına göre büyük ölçüde farklılık gösterir. Test aracıları için kullanılabilir CPU hızı ve bellek, test yükünü sınırlar. Test denetleyicilerinin test aracılarının sayısına ve testlere dahil olan veri miktarına bağlı olarak daha fazla kaynak gerekir.
 
-Visual Studio çalıştıran sunucu, en az 1 Mbps bant genişliğine ve en fazla 350ms gecikme süresine sahip güvenilir bir ağ bağlantısına sahip olmalıdır. Test aracıları ve test denetleyicisi arasında bir güvenlik duvarı olmaması gerekir. Sınama performanslarınız beklentilerinizi karşılamıyorsa, donanım yapılandırmanızı yükseltmeyi düşünün.
+Visual Studio çalıştıran sunucu, en az 1 Mb/sn bant genişliğine ve en fazla 350 m gecikme süresine sahip güvenilir bir ağ bağlantısına sahip olmalıdır. Test aracıları ile test denetleyicisi arasında güvenlik duvarı olması gerekir. Test performansınız beklentilerinizi karşılayamıyorsa donanım yapılandırmanızı yükseltmeyi göz önünde bulundurabilirsiniz.
 
-### <a name="additional-hardware-considerations"></a>Ek donanım konuları
+### <a name="additional-hardware-considerations"></a>Ek donanımla ilgili dikkat edilmesi gerekenler
 
-Test aracıları testin süresine ve test boyutuna bağlı olarak test denetleyicileri üzerinde büyük miktarda veri oluşturur. Genellikle, her 24 saat test verisi için 10 GB 'lık ek sabit disk depolaması planlamanız gerekir.
+Test aracıları, testin süresine ve testin boyutuna bağlı olarak test denetleyicilerinde büyük miktarda veri üretir. Genellikle her 24 saatlik test verileri için 10 GB ek sabit disk depolama alanı planlamanız gerekir.
 
-Burada önerilen donanıma ek olarak, yedekli güç kaynakları ve gereksiz fanlar gibi kritik sunucular için ek donanımlar göz önünde bulundurmanız gerekir.
+Burada önerilen donanıma ek olarak, yedekli güç kaynakları ve yedekli fanlar gibi kritik sunucular için ek donanımlar da göz önünde bulundurabilirsiniz.
 
 ### <a name="language-requirements"></a>Dil gereksinimleri
 
-Karışıklıkları önlemek ve işlemi basitleştirmek için, bir test denetleyicisi ve test aracısının bilgisayarın işletim sistemiyle aynı dili kullanacak şekilde yapılandırılması gerekir ve bu Team Foundation Server. Test Aracısı ve test denetleyicisi farklı bilgisayarlara yüklenirse, aynı dili kullanacak şekilde yapılandırılması gerekir. ancak, bu dilin Team Foundation Server dağıtımının eşleştiği sürece, ingilizce bir işletim sistemine Visual Studio başka bir dil sürümünü de yükleyebilirsiniz.
+Karışıklığı önlemek ve işlemi basitleştirmek için, bir test denetleyicisi ve test aracıları bilgisayarın işletim sistemiyle aynı dili ve bu dili kullanmak üzere Team Foundation Server. Test aracısı ve test denetleyicisi farklı bilgisayarlara yüklenmişse, aynı dili kullanmak üzere yapılandırıldıklarına emin olun. Ancak bu dil, dağıtım sırasında Visual Studio dille eş olduğu sürece İngilizce dil işletim sistemine başka bir dil Team Foundation Server yükleyebilirsiniz.
 
 ## <a name="monitor-agent-resources"></a>Aracı kaynaklarını izleme
 
-Testler sırasında yürütülen ve ölçeklendirilen *QTAgent \*.exe* süreçlerini gözlemleyerek, kaynak ihtiyaçlarını tespit etmek için aracı makinelerini izleyebilirsiniz. *QTAgent \*.exe* işlemlerinde en YAYGıN performans sorunu CPU kullanımdır. CPU kullanımı sürekli olarak yüksek bir şekilde yüksekse, aracının yoğun olarak yüklenmekte olduğunun bir göstergesidir. Sonraki yaygın performans sorunu, bellek kullanımından kaynaklanıyor. Yoğun sınamalar için, bu kaynakları izlemek makineler kaynaklarını artırmanız veya testlerinizi farklı şekilde dağıtmanız gerekip gerekmediğini belirlemenize yardımcı olabilir.
+Testler sırasında yürütülen ve ölçeklendirilen *QTAgent \** işlemlerini gözlemleyerek kaynak ihtiyaçlarını.exearacı makinelerini izleyebilirsiniz. *QTAgent \** ve işlemlerde en yaygın.exeCPU kullanımıdır. CPU kullanımı tutarlı olarak doksanlı doksanlı düzeylerde ise, bu, aracının yoğun olarak yükleniyor olduğunu gösteren bir göstergedir. Bir sonraki yaygın performans sorunu bellek kullanımıdır. Zorlu testler için, bu kaynakların izlenmesi makine kaynaklarını artırmanız veya testlerinizi farklı dağıtmanız gerektiğini belirlemenize yardımcı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

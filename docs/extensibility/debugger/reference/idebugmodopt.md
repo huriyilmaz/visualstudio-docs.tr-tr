@@ -1,6 +1,6 @@
 ---
-description: Bir hata ayıklama isteğe bağlı değiştiricisini temsil eder.
-title: Idebugmodopt | Microsoft Docs
+description: Hata ayıklama isteğe bağlı değiştiricisini temsil eder.
+title: IDebugModOpt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,17 +9,18 @@ ms.assetid: ebd525e3-d140-4071-9d8c-41871de4125e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ffb235d58c254d130636da0f4b97961c11f9a372
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5211ad750391c8f7f43eb5a7084c090ff26c8d45
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087905"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137905"
 ---
 # <a name="idebugmodopt"></a>IDebugModOpt
-Bir hata ayıklama isteğe bağlı değiştiricisini temsil eder.
+Hata ayıklama isteğe bağlı değiştiricisini temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,18 +29,18 @@ IDebugModOpt : IUnknown
 ```
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir sınıfı veya yöntemi temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden elde edilir.
+ Sınıf veya yöntemi temsil [eden bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden elde edilir.
 
 ## <a name="methods"></a>Yöntemler
- Bu arabirim aşağıdaki yöntemi uygular:
+ Bu arabirim aşağıdaki yöntemi kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|İsteğe bağlı değiştiricilerin bir listesini alır.|
+|[GetModOpts](../../../extensibility/debugger/reference/idebugmodopt-getmodopts.md)|İsteğe bağlı değiştiricilerin listesini alın.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst bilgi: Sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

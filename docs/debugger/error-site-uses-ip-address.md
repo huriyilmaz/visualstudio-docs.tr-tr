@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklayıcı bir IP adresi kullanan bir Web uygulamasına otomatik olarak iliştirmeye çalıştığında bu hata oluşur.
-title: Site, IP adresini kullanır | Microsoft Docs
+description: Hata ayıklayıcısı IP adresi kullanan bir Web uygulamasına otomatik olarak eklemeye çalıştığında bu hata oluşur.
+title: Site IP Adresi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -18,25 +18,25 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 07c7cfe629710a880f85a22c38eced5068edf7bad580be6fb44150f75e5c5aa4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f141cf050e41e5f2a30b66c47e68b1b3c35aeb5c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420137"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030912"
 ---
 # <a name="error-site-uses-ip-address"></a>Hata: Site IP Adresi Kullanıyor
-Hata ayıklayıcı bir IP adresi kullanan bir Web uygulamasına otomatik olarak iliştirmeye çalıştığında bu hata oluşur. Bu durum, **Web sitesi KIMLIĞINI** IIS 'de **belirli IP adresini kullanacak** şekilde değiştirirseniz oluşur.
+Hata ayıklayıcısı IP adresi kullanan bir Web uygulamasına otomatik olarak eklemeye çalıştığında bu hata oluşur. Bu durum, Web sitesi tanımlamayı **IIS'de belirli** **BIR IP adresi kullanmak üzere değiştirirsiniz.**
 
- Otomatik iliştirme 'nin çalışması için, projeyi yalnızca makine adı yerine belirli bir IP adresi ile oluşturmanız gerekir. Aksi takdirde, hata ayıklayıcı makine adını localhost olarak değiştirecek, bu da hata ayıklama fiilini IIS 'e gönderememesine neden olur.
+ Otomatik eklemenin çalışması için projeyi yalnızca makine adı yerine belirli bir IP adresiyle oluşturmanız gerekir. Aksi takdirde, hata ayıklayıcı makine adını localhost olarak değiştirir ve bu da hata ayıklama fiilinin IIS'ye gönderilebeğine neden olur.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. Yerine el ile iliştirme kullanın (hata ayıklama menüsünden **Işleme İliştir**' i seçin).
+1. Bunun yerine el ile ekleme kullanın (Hata Ayıklama menüsünde İşleme **Ekle'yi seçin).**
 
      —veya—
 
-2. **IIS Web sitesi kimlik** ayarını değiştirin.
+2. IIS **Web sitesi tanımlama ayarını** değiştirme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

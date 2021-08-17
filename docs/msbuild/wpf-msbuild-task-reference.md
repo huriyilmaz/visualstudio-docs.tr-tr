@@ -1,6 +1,6 @@
 ---
-title: WPF MSBuild görev başvurusu | Microsoft Docs
-description: MSBuild 'i ek görevlerle genişleten Windows Presentation Foundation (WPF) derleme işlemi için bir görev başvurusuna bakın.
+title: WPF MSBuild Görev Başvurusu | Microsoft Docs
+description: Windows Presentation Foundation (WPF) derleme işlemi için görev başvurusuna bakın. Bu işlem, MSBuild görevlerle genişletmektedir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,56 +18,57 @@ ms.assetid: 96df0370-e50f-4ffc-9771-b12fb8721143
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 94050565e6c5619781434c7a18307bfbf80b51f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 19a5fbd6da07648be784b155e3fb6b4dc4e78824
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933680"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076972"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild görev başvurusu
 
-Windows Presentation Foundation (WPF) derleme işlemi, Microsoft Build Engine 'i (MSBuild), biçimlendirme ve işlem kaynaklarını derlemeye yönelik görevler de dahil olmak üzere ek bir yapı görevi kümesiyle genişletir.
+Windows Presentation Foundation (WPF) derleme işlemi, işaretleme ve işlem kaynaklarını derleme görevleri de dahil olmak üzere Microsoft derleme altyapısını (MSBuild) ek bir derleme görevleri kümesiyle genişletmektedir.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 - [FileClassifier](../msbuild/fileclassifier-task.md)
 
- Bir kaynak kaynakları kümesini bir derlemeye katıştırılacak şekilde sınıflandırır. Bir kaynak yerelleştirilebilir değilse, ana uygulama derlemesine katıştırılır; Aksi halde, bir uydu derlemesine katıştırılır.
+ Bir kaynak kaynak kümesi, bir derlemeye katıştıracak olan kaynak kümelerini sınıflar. Bir kaynak yerelleştirilebilir durumda değilse, ana uygulama derlemesine katıştırılabilir; aksi takdirde, bir uydu derlemesine gömülür.
 
 - [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)
 
- Bir projede en az bir XAML sayfası bu projede yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturur. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya yapı işlemi başarısız olursa kaldırılır.
+ Bir projedeki en az bir XAML sayfası, bu projede yerel olarak bildirilen bir türe başvurursa bir derleme üretir. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya derleme işlemi başarısız olursa kaldırılır.
 
 - [GetWinFXPath](../msbuild/getwinfxpath-task.md)
 
- Geçerli .NET Framework çalışma zamanının dizinini döndürür.
+ Geçerli çalışma zamanının .NET Framework döndürür.
 
 - [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md)
 
- Yerelleştirilemeyen XAML proje dosyalarını derlenmiş ikili biçime dönüştürür.
+ Yerelleştirilebilir olmayan XAML proje dosyalarını derlenmiş ikili biçime dönüştürür.
 
 - [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)
 
- Aynı projedeki türlere başvuran XAML dosyalarında ikinci geçiş biçimlendirme derlemesini gerçekleştirir.
+ Aynı projedeki türlere başvuru yapan XAML dosyalarında ikinci geçiş işaretleme derlemesi gerçekleştirir.
 
 - [MergeLocalizationDirectives](../msbuild/mergelocalizationdirectives-task.md)
 
- Bir veya daha fazla XAML ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını tüm derleme için tek bir dosyada birleştirir.
+ Bir veya daha fazla XAML ikili biçim dosyasının yerelleştirme özniteliklerini ve açıklamalarını bütün derleme için tek bir dosyada birleştirilmesi.
 
 - [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)
 
- Bir veya daha fazla kaynağı (*. jpg*, *. ico*, *. bmp*, ikili biçimdeki XAML ve diğer uzantı türlerini) bir *. resources* dosyasına katıştırır.
+ Bir .resources dosyasına bir *veya daha fazla kaynak (.jpg*, *.ico*, *.bmp*, XAML ikili biçiminde ve diğer uzantı türleri) *katıştırır.*
 
 - [UidManager](../msbuild/uidmanager-task.md)
 
- Kaynak XAML dosyalarında yer alan tüm XAML öğelerini yerelleştirmek için, benzersiz tanımlayıcıları (UID 'ler) denetler, güncelleştirir veya kaldırır.
+ Kaynak XAML dosyalarına dahil edilen tüm XAML öğelerini yerelleştirmek için benzersiz tanımlayıcıları (UID) denetler, günceller veya kaldırır.
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- **\<hostInBrowser />** XAML tarayıcı uygulaması (XBAP) projesi yapılandırıldığında, öğesini uygulama bildirimine (*\<projectname> . exe. manifest*) ekler.
+ Bir XAML Tarayıcı Uygulaması (XBAP) projesi yerleşik olduğunda öğesini uygulama bildirimine **\<hostInBrowser />** (*\<projectname>.exe.manifest)* ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

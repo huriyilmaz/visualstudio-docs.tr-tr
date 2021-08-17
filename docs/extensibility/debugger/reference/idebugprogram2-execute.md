@@ -11,17 +11,18 @@ ms.assetid: f7205ce8-0ac6-4fcd-b6ec-b720b4fcaccf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6112dbf51664458bc2d592951dcc842d1352020b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e79fcde5a554abedc030861004b8117a54a2366a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075997"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057453"
 ---
 # <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
 Bu programı durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) temizlenir ve program yeniden yürütülmeye başlar.

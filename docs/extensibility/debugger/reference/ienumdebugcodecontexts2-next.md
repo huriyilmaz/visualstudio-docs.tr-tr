@@ -1,6 +1,6 @@
 ---
-description: Kod bağlamları numaralamadan sonraki öğe kümesi döndürür.
-title: IEnumDebugCodeContexts2::Next | Microsoft Docs
+description: Kod bağlamlarının numaralandırmasından sonraki öğe kümesini döndürür.
+title: 'IEnumDebugCodeContexts2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121389390"
 ---
 # <a name="ienumdebugcodecontexts2next"></a>IEnumDebugCodeContexts2::Next
-Numaralamadan sonraki öğe kümesi döndürür.
+Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
+'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
 
 `rgelt`\
-[in, out] Doldurulması [gereken IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) öğelerinin dizisi.
+[in, out] Doldurulacak [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) öğelerinin dizisi.
 
 `pceltFetched`\
-[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
+dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)
