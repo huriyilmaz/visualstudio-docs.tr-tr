@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Geometri Tabanlı Gradyan Gölgelendirici Oluşturma'
-description: gölgelendirici tasarımcısını ve yönlendirilen Graph gölgelendirici dilini kullanarak sabit bir RGB renk değerini ölçeklendirilen geometri tabanlı bir gradyan gölgelendiricisi oluşturma hakkında bilgi edinin.
+description: Sabit rgb renk değerini ölçeklendiren geometri tabanlı bir gradyan gölgelendirici oluşturmak için Gölgelendirici Tasarımcısı ve Graph Yönlendirilen Gölgelendirici Dili kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,61 +11,61 @@ manager: jmartens
 ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 4abfa5057c0b9f634f7524fd8421ae44e24fbe0896a520dd65902699881c0299
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 68d0c5af184fa22a41204f7d1937831b67c80244
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121263328"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104878"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>Nasıl yapılır: Geometri tabanlı gradyan gölgelendirici oluşturma
 
-bu makalede, geometri tabanlı bir gradyan gölgelendirici oluşturmak için gölgelendirici tasarımcısının ve yönlendirilmiş Graph gölgelendirici dilinin nasıl kullanılacağı gösterilmektedir. Bu gölgelendirici, bir sabit RGB renk değerini, dünya alanındaki bir nesne noktasının yüksekliğine göre ölçeklendirir.
+Bu makalede, geometri tabanlı bir gradyan gölgelendirici oluşturmak için Gölgelendirici Tasarımcısı ve Graph Gölgelendirici Dili'nin nasıl kullanımı açıklanmıştır. Bu gölgelendirici, dünya alanı içinde bir nesnenin her noktasının yüksekliğine göre sabit bir RGB renk değerini ölçeklendirer.
 
 ## <a name="create-a-geometry-based-gradient-shader"></a>Geometri tabanlı gradyan gölgelendirici oluşturma
 
-Pikselin konumunu gölgelendiricinize ekleyerek geometri temelli bir gölgelendirici uygulayabilirsiniz. Gölgeleme dillerinde, bir piksel, 2B ekranda yalnızca kendi renginden ve konumlarından daha fazla bilgi içerir. Bazı sistemlerde *parça* olarak bilinen bir piksel, bir piksele karşılık gelen yüzeyi tanımlayan bir değerler koleksiyonudur. Bu belgede açıklanan gölgelendirici, parçanın nihai çıkış rengini etkilemek için dünya alanındaki bir 3B nesnenin her bir pikselin yüksekliğini kullanır.
+Pikselin konumunu gölgelendiricinize dahil ederek geometri tabanlı gölgelendiriciler gerçekleştirebilirsiniz. Gölgelendirme dillerinde piksel, 2B ekranda yalnızca rengi ve konumuyla ilgili daha fazla bilgi içerir. Piksel (bazı *sistemlerde parça* olarak bilinir) piksele karşılık gelen yüzeyi tanımlayan değerler koleksiyonudur. Bu belgede açıklanan gölgelendirici, parçanın son çıkış rengini etkilemesi için dünya alanı içinde bir 3D nesnenin her pikselin yüksekliğini kullanır.
 
-Başlamadan önce, **Özellikler** penceresinin ve **araç kutusunun** görüntülendiğinden emin olun.
+Başlamadan önce Özellikler penceresinin ve **Araç** Kutusunun **görüntülendiğinden emin** olun.
 
-1. Çalışmak için bir DGSL gölgelendiricisi oluşturun. Projenize bir DGSL gölgelendiricisi ekleme hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md)Başlarken bölümü.
+1. Birlikte çalışacak bir DGSL gölgelendiricisi oluşturun. Projenize DGSL gölgelendiricisi ekleme hakkında bilgi için Gölgelendirici Tasarımcısı'Başlarken bölümüne [bakın.](../designers/shader-designer.md)
 
-2. **Son renk** düğümündeki **nokta rengi** düğümünün bağlantısını kesin. **Nokta rengi** düğümünün **RGB** terminalini seçin ve ardından **Bağlantıları Kes**' i seçin. Bu, bir sonraki adımda eklenen düğüm için yer açar.
+2. Nokta Rengi **düğümünün** Bağlantısını Son **Renk düğümünden** kesin. Nokta Rengi **düğümünün RGB** **terminalini ve** ardından Bağlantıları **Kesme'yi seçin.** Bu, sonraki adımda eklenen düğüme yer sağlar.
 
-3. Grafiğe **çarpma** düğümü ekleyin. **Araç kutusunda**, **matematik** altında **çarp** ' ı seçin ve tasarım yüzeyine taşıyın.
+3. **Grafiye** bir Çarpı düğümü ekleyin. Araç **Kutusunda, Matematik'in** **altında** **Çarp'ı** seçin ve tasarım yüzeyine taşıyın.
 
-4. Grafiğe bir **maske vektör** düğümü ekleyin. **Araç kutusu**' nda, **yardımcı program** altında **maske vektörü** ' nı seçin ve tasarım yüzeyine taşıyın.
+4. **Grafiye bir** Maske Vektörü düğümü ekleyin. Araç **Kutusunda, Yardımcı** **Program'ın altında** **Vektörü Maskele'yi** seçin ve tasarım yüzeyine taşıma.
 
-5. **Maske vektör** düğümü için maske değerlerini belirtin. **Seç** modunda, **maske vektörü** düğümünü seçin ve ardından **Özellikler** penceresinde **yeşil/Y** özelliğini **doğru** olarak ayarlayın ve ardından **kırmızı/X**, **mavi/Z** ve **Alfa/W** özelliklerini **yanlış** olarak ayarlayın. Bu örnekte, **kırmızı/X**, **yeşil/Y** ve **mavi/Z** özellikleri **Dünya konumu** düğümünün X, Y ve Z bileşenlerine karşılık gelir ve **Alfa/W** kullanılmıyor. Yalnızca **yeşil/Y** **doğru** olarak ayarlandığı için, yalnızca giriş vektörünün Y bileşeni maskelendikten sonra kalır.
+5. Maske Vektörü düğümü için **maske değerlerini** belirtin. Seçim **modunda,** Maske  Vektörü düğümünü seçin  ve özellikler penceresinde Yeşil **/ Y** özelliğini **True** olarak ayarlayın ve ardından Kırmızı / X , Mavi **/** **Z** ve Alfa **/ W** özelliklerini False olarak **ayarlayın.** Bu örnekte, Dünya Konumu düğümünün x, y ve z bileşenlerine karşılık gelen Kırmızı  **/ X**, Yeşil / **Y** ve Mavi **/ Z** özellikleri kullanılır ve Alfa **/ W** kullanılmaz. Yalnızca Yeşil **/Y** Değeri True olarak ayar **olduğundan,** giriş vektörü maskeledikten sonra yalnızca y bileşeni kalır.
 
-6. Grafiğe bir **Dünya konumu** düğümü ekleyin. **Araç kutusunda**, **sabitler** altında **Dünya konumu** ' nu seçin ve tasarım yüzeyine taşıyın.
+6. **Grafiye bir** Dünya Konumu düğümü ekleyin. Araç **Kutusunda,** **Sabitler'in altında** Dünya **Konumu'nı** seçin ve tasarım yüzeyine getirin.
 
-7. Parçanın dünya alanı konumunu maskeleyin. **Seç** modunda, **World Position** düğümünün **Çıkış** terminalini **maske vektör** düğümünün **vektör** terminaline taşıyın. Bu bağlantı, parçaların konumunu x ve z bileşenlerini yok saymak için maskeler.
+7. Parçanın dünya alanı konumunu maskeleme. Seç **modunda,** Dünya Konumu **düğümünün** Çıkış **terminali'ni** Vektör Düğümünü **Maskele** düğümünün **Vektör terminaline** getirin. Bu bağlantı, x ve z bileşenlerini yoksaymak için parçanın konumunu maskeler.
 
-8. RGB renk sabitini, maskelenmiş dünya alanı konumuna göre çarpın. **Nokta rengi** düğümünün **RGB** terminalini **çarp** düğümünün **Y** terminaline taşıyın ve ardından **maske vektörü** düğümünün **Çıkış** terminalini **çarpma** düğümünün **X** terminaline taşıyın. Bu bağlantı, renk değerini, dünya alanındaki pikselin yüksekliğine ölçeklendirir.
+8. RGB renk sabiti ile maskelenmiş dünya alanı konumuyla çarpın. Nokta Rengi düğümünün  **RGB** terminalini Çarpma düğümünün **Y** terminaline ve ardından  Maske Vektörü düğümünün Çıkış **terminalini** Çarpı düğümünün  **X** **terminaline** taşıma. Bu bağlantı renk değerini dünya boşluğunda pikselin yüksekliğine göre ölçeklendirer.
 
-9. ölçeklendirilmiş renk değerini son renge Bağlan. **Çarp** düğümünün **Çıkış** terminalini **son renk** düğümünün **RGB** terminaline taşıyın.
+9. Bağlan renk değerini son renge göre değiştirir. Çarpma **düğümünün** Çıkış **terminali'ni** Son Renk **düğümünün RGB** **terminaline** taşıma.
 
-Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir sphere öğesine uygulanan gölgelendirici önizlemesi gösterilmektedir.
+Aşağıdaki çizimde, tamamlanmış gölgelendirici grafiği ve bir küreye uygulanan gölgelendiricinin önizlemesi gösterilir.
 
 > [!NOTE]
-> Bu çizimde, gölgelendirici efektini daha iyi göstermek için turuncu bir renk belirtilmiştir, ancak önizleme şekli dünya alanında bir konum olmadığından, gölgelendirici, gölgelendirici tasarımcısında tam olarak önizlenemez. Tam efekti göstermek için gölgelendirici gerçek bir sahnede önizlenmelidir.
+> Bu çizimde gölgelendiricinin etkisini daha iyi göstermek için turuncu renk belirtilmiştir, ancak önizleme şekli dünya boşluğunda bir konuma sahip olduğundan gölgelendirici Gölgelendirici Tasarımcısı'nda tam olarak önizlemesi olamaz. Tam etkiyi göstermek için gölgelendiricinin gerçek bir sahnede önizlemesi gerekir.
 
-![Gölgelendirici Grafiği ve efektinin önizlemesi](../designers/media/digit-gradient-effect-graph.png)
+![Gölgelendirici grafiği ve etkisinin önizlemesi](../designers/media/digit-gradient-effect-graph.png)
 
-Bazı biçimler bazı gölgelendiriciler için daha iyi önizleme sağlayabilir. Gölgelendirici tasarımcısında gölgelendiricilerin önizlemesi hakkında daha fazla bilgi için bkz. [gölgelendirici tasarımcısında](../designers/shader-designer.md) **gölgelendiricilerin** önizlemesi.
+Bazı şekiller bazı gölgelendiriciler için daha iyi önizlemeler sağlar. Gölgelendirici Tasarımcısı'nda gölgelendiricileri önizleme hakkında bilgi için bkz. Gölgelendirici **Tasarımcısı'nda** [gölgelendiricileri önizleme.](../designers/shader-designer.md)
 
-Aşağıdaki çizim, bu belgede açıklanan gölgelendiriciyi, [nasıl yapılır: modellemenin nasıl yapıldığını](../designers/how-to-model-3-d-terrain.md)gösteren 3B sahneye uygulanacağını gösterir. Rengin yoğunluğu, dünyanın içindeki noktanın yüksekliğiyle artar.
+Aşağıdaki çizimde, Nasıl yapılır: 3D arazi modelleme konusunda gösterildiği gibi, bu belgede açıklanan [gölgelendirici 3D sahneye uygulanmıştır.](../designers/how-to-model-3-d-terrain.md) Rengin yoğunluğu, dünyanın her yanında noktanın yüksekliğiyle birlikte artar.
 
-![3&#45;D teryağma modeline uygulanan gradyan efekti](../designers/media/digit-gradient-effect-result.png)
+![3 D arazi modeline&#45;gradyan etkisi](../designers/media/digit-gradient-effect-result.png)
 
-3D modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir gölgelendiriciyi bir gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
+Bir 3D modele gölgelendirici uygulama hakkında daha fazla bilgi için bkz. Nasıl [yapılır: 3D](../designers/how-to-apply-a-shader-to-a-3-d-model.md)modele gölgelendirici uygulama.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır. 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)
-- [Nasıl yapılır: 3B terbotları modelleme](../designers/how-to-model-3-d-terrain.md)
-- [Nasıl yapılır: gri tonlamalı doku gölgelendiricisi oluşturma](../designers/how-to-create-a-grayscale-texture-shader.md)
+- [Nasıl: Gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)
+- [Nasıl yapılıyor: 3D arazi modelleme](../designers/how-to-model-3-d-terrain.md)
+- [Nasıl edilir: Gri tonlamalı doku gölgelendiricisi oluşturma](../designers/how-to-create-a-grayscale-texture-shader.md)
 - [Gölgelendirici Tasarımcısı](../designers/shader-designer.md)
 - [Gölgelendirici Tasarımcısı düğümleri](../designers/shader-designer-nodes.md)

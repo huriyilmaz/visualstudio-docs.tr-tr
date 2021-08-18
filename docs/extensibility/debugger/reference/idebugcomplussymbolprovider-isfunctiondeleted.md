@@ -1,6 +1,6 @@
 ---
-description: Belirtilen hata ayıklama adresindeki işlevin silindiğini belirler.
-title: 'IDebugComPlusSymbolProvider:: ısfunctiondeleted | Microsoft Docs'
+description: Belirtilen hata ayıklama adresine sahip işlevin silindi olduğunu belirler.
+title: IDebugComPlusSymbolProvider::IsFunctionDeleted | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 995043c40c9b091e1fa483628ba71695fcdf52013ec6bcd438a68ef62b1fb0c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4f5f6d764020f78823464d4d8e9784551411fcc2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434132"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145087"
 ---
 # <a name="idebugcomplussymbolproviderisfunctiondeleted"></a>IDebugComPlusSymbolProvider::IsFunctionDeleted
-Belirtilen hata ayıklama adresindeki işlevin silindiğini belirler.
+Belirtilen hata ayıklama adresine sahip işlevin silindi olduğunu belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int IsFunctionDeleted(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi. Bu adres bir METHOD_ADDRESS olmalıdır.
+[in] [IDebugAddress arabirimiyle temsil edilen hata ayıklama](../../../extensibility/debugger/reference/idebugaddress.md) adresi. Bu adres bir METHOD_ADDRESS.
 
 ## <a name="return-value"></a>Dönüş Değeri
-İşlev silinirse, döndürür `S_OK` . İşlev varsa, döndürür `S_FALSE` .
+İşlev silinirse `S_OK` döndürür. İşlev mevcutsa `S_FALSE` döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsFunctionDeleted(

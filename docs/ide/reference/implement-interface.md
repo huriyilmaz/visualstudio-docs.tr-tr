@@ -1,6 +1,6 @@
 ---
 title: Arabirim uygulama
-description: Hızlı Eylemler ve yeniden düzenlemeler menüsünü kullanarak bir arabirim uygulamak için gereken kodu hemen oluşturma hakkında bilgi edinin.
+description: Bir arabirimi uygulamak için gereken kodu hemen oluşturmak için Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: reference
@@ -10,72 +10,72 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f5e067021e13f0a59c3b45882b204de04167559e39977446aeb779f6b4bf7e8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ef769394bafd1727ac16f4dbaadf6e6ca27c7e77
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121447719"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101329"
 ---
-# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio bir arabirim uygulama
+# <a name="implement-an-interface-in-visual-studio"></a>Visual Studio'da arabirim uygulama
 
-Bu kod üretimi için geçerlidir:
+Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Bir arabirim uygulamak için gereken kodu hemen üretmenizi sağlar.
+**Ne:** Bir arabirimi uygulamak için gereken kodu hemen oluşturmana olanak sağlar.
 
-**Ne zaman:** Bir arabirimden devralması istiyorsunuz.
+**Ne zaman:** Bir arabirimden devralmak istediğiniz.
 
-**Neden:** Tüm arabirimi tek tek el ile uygulayabilirsiniz, ancak bu özellik tüm yöntem imzalarını otomatik olarak oluşturur.
+**Neden:** Tüm arabirimi tek tek el ile uygulayabilirsiniz, ancak bu özellik tüm yöntem imzalarını otomatik olarak üretir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi, bir arabirime başvurduğunu ancak gerekli tüm üyeleri uygulamadığını belirten kırmızı renkli bir dalgalı çizgi olan çizgiye yerleştirin.
+1. İmlecinizi bir arabirime başvurarak tüm gerekli üyeleri uygulamamış olduğunu belirten kırmızı bir geçişin bulunduğu satıra yerleştirebilirsiniz.
 
    - C#:
 
-       ![Vurgulanmış kod C #](media/interface-highlight-cs.png)
+       ![Vurgulanan kod C #](media/interface-highlight-cs.png)
 
    - Visual Basic:
 
        ![Vurgulanan kod VB](media/interface-highlight-vb.png)
 
-2. Sonra, aşağıdakilerden birini yapın:
+2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
-      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
-      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
-      - Sağ üst köşedeki ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
+      - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
+      - Kırmızı çizginin üzerine gelin ve ![hata ampulü](media/error-bulb.png) simgesi görüntülenir.
+      - Sağ üst köşedeki ![hata ampulü](media/error-bulb.png) simgesi, metin imleci kırmızı çizgiyle çizgi üzerinde zaten varsa sol kenar boşluğunda görünür.
 
-3. Açılan menüden **arabirimi Uygula** ' yı seçin.
+3. Açılan **menüden** Arabirimi uygulay'ı seçin.
 
-   ![Arabirim önizlemeyi Uygula](media/interface-preview-cs.png)
+   ![Arabirim önizlemesini uygulama](media/interface-preview-cs.png)
 
    > [!TIP]
-   > - Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
-   > - arabirimi uygulayan birden çok sınıfta doğru yöntem imzalarını oluşturmak için önizleme penceresinin altındaki **belge**, **Project** ve **çözüm** bağlantılarını kullanın.
+   > - Seçiminizi **yapmadan** önce yapılacak tüm değişiklikleri görmek için önizleme penceresinin [altındaki](../../ide/preview-changes.md) Değişiklikleri önizle bağlantısını kullanın.
+   > - Arabirimi **uygulayan** **birden çok** sınıfta  uygun yöntem imzalarını oluşturmak için önizleme penceresinin altındaki Belge , Project ve Çözüm bağlantılarını kullanın.
 
-   Arabirimin yöntem imzaları oluşturulur ve uygulanmaya hazırlanın.
+   Arabirimin yöntem imzaları oluşturulur ve uygulanmaya hazırdır.
 
    - C#:
 
-       ![Arabirim sonucu C Uygula #](media/interface-result-cs.png)
+       ![Arabirim sonucu uygulama C #](media/interface-result-cs.png)
 
    - Visual Basic:
 
-       ![Arabirim sonucunu Uygula VB](media/interface-result-vb.png)
+       ![Arabirim sonucu uygulama VB](media/interface-result-vb.png)
 
    > [!TIP]
-   > (Yalnızca C#) Ad çakışmalarını önlemek için arabirim adına sahip her bir yöntemi ön yüz olarak **Uygula** seçeneğini kullanın.
+   > (yalnızca C# ) Oluşturulan **her yöntemin önüne** ad çakışmalarını önlemek için Arabirimi açıkça uygulama seçeneğini kullanın.
    >
-   > ![Arabirime açıkça sonuç uygulama](media/interface-explicitresult-cs.png);
+   > ![Arabirimi açıkça uygulama sonucu](media/interface-explicitresult-cs.png);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod oluşturma](../code-generation-in-visual-studio.md)
+- [Kod Oluşturma](../code-generation-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

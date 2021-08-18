@@ -11,17 +11,18 @@ ms.assetid: 800cc77d-3c27-4763-a9df-552a9384bd49
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b85933896dfff38c2d346fd18144710e2e6fc127
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3172188d878d40d3957ea56ff3c6f57ca561a1be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091532"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125341"
 ---
 # <a name="messagetype"></a>MESSAGETYPE
 İleti türünü ve nedenini belirtir.

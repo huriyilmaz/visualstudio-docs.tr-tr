@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 1f755943b643d945f70f71707a01aacce2cf534574623e5b96e2e2543149243c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c10373f0c04a6c68faff795d08ff0e288ce02836
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121269203"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106932"
 ---
 # <a name="form-support-in-workflows"></a>İş akışlarında form desteği
   Dört tür form, bir iş akışında kullanılabilir: ilişkilendirme, başlatma, görev ve değişiklik. Bu form türleri bir ASPX formu veya InfoPath formu temel alabilir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Belirli bir form için sağlanan destek düzeyi, aşağıdaki tablolarda açıklanan çeşitli etkenlere bağlıdır. İş akışı form türleri hakkında daha fazla bilgi için bkz. [Iş akışı formlarına genel bakış](/previous-versions/office/developer/sharepoint-2010/ms457061(v=office.14)).

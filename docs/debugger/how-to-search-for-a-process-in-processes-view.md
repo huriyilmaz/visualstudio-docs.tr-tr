@@ -1,6 +1,6 @@
 ---
-title: İşlemler Görünümünde İşlem arama | Microsoft Docs
-description: Spy++ aracının İşlemler görünümünde, hata ayıklama sırasında işlem kimliğini veya modül dizesini arama ölçütü olarak kullanarak belirli bir işlemi Visual Studio.
+title: Işlemler görünümünde bir Işlem arayın | Microsoft Docs
+description: Visual Studio 'de hata ayıklarken işlem KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak, Spy + + aracının Işlemler görünümünde belirli bir işlemi arayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,33 +14,33 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 94e5ecb6f8828df8f52e00ba419ac162ded9cc25f64bc26da64809db4194a80c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9f5ff80257a3f3708d2de517e38fbc6abf6a77f9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453523"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128175"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>Nasıl Yapılır: İşlemler Görünümünde İşlem Arama
-İşlemler görünümünde işlem kimliğini veya modül dizesini arama ölçütü olarak kullanarak belirli bir işlemi arayabilirsiniz. Ayrıca aramanın başlangıç yönünü de belirtsiniz. İletişim kutusundaki alanlar, seçilen sürecin özniteliklerini işlem ağacında gösterir.
+İşlem KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak, Işlemler görünümündeki belirli bir işlemi arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, işlem ağacındaki seçili işlemin özniteliklerini gösterir.
 
-### <a name="to-search-for-a-process-in-processes-view"></a>İşlemler görünümünde işlem aramak için
+### <a name="to-search-for-a-process-in-processes-view"></a>Işlemler görünümünde bir işlem aramak için
 
-1. Spy++ ve etkin bir İşlemler Görünümü [penceresinin görünür olması için](../debugger/processes-view.md) pencerelerinizi düzenleme.
+1. Windows 'larınızı Spy + + ve etkin [süreçler görünümü](../debugger/processes-view.md) penceresi görünür olacak şekilde düzenleyin.
 
-2. Arama **menüsünden** İşlem **Bul'a tıklayın**
+2. **Arama** menüsünde **işlemi bul** ' u seçin.
 
-    İşlem [Arama İletişim Kutusu](../debugger/process-search-dialog-box.md) açılır.
+    [Işlem arama Iletişim kutusu](../debugger/process-search-dialog-box.md) açılır.
 
-3. Arama ölçütü olarak işlem kimliğini veya modül dizesini yazın.
+3. İşlem KIMLIĞINI veya bir modül dizesini arama ölçütü olarak yazın.
 
-4. Değerlerini belirtmek istemeyebilirsiniz.
+4. Değerlerini belirtmek istemediğiniz tüm alanları temizleyin.
 
    > [!TIP]
-   > Bir modülün sahip olduğu tüm işlemleri bulmak için İşlem kutusunu **temizleyin** ve Modül kutusuna modül **adını** yazın. Ardından, **işlemleri aramaya devam** etmek için Sonrakini Bul'ı kullanın.
+   > Bir modülün sahip olduğu tüm işlemleri bulmak için, **işlem** kutusunu temizleyin ve **Modül kutusuna Modül** adını yazın. Sonra, işlem aramaya devam etmek için **Sonrakini Bul** ' u kullanın.
 
-5. **Aramanın** ilk **yönü** için Yukarı veya Aşağı'ya seçin.
+5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
 6. **Tamam**'a tıklayın.
 
-   Eşleşen bir işlem bulunursa İşlem görünümü penceresinde **vurgulanır.**
+   Eşleşen bir işlem bulunursa, **işlem görünümü** penceresinde vurgulanır.

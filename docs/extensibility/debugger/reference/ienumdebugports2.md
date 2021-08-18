@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 243fcf1476f2f278ebed550805fcdfc9cf82d03300a1df70ad2c1c833ac3cdc8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c6d8a8f2156aca008303e65726a180ac84ae700f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121291694"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144879"
 ---
 # <a name="ienumdebugports2"></a>IEnumDebugPorts2
 Bu arabirim, bir makinenin veya bağlantı noktası sağlayıcının bağlantı noktalarını numaralar.

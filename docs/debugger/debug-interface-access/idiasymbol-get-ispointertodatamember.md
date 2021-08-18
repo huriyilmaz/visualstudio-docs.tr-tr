@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d1f2581178fb0c88dd35bb315245e377fd874b193b20f3a15379ac0bdc6af58f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9709d3b7e711015e16c241a64f601fadbb8e30d5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121311770"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128642"
 ---
 # <a name="idiasymbolget_ispointertodatamember"></a>IDiaSymbol::get_isPointerToDataMember
 Bu sembolün bir veri üyesinin işaretçisi olup olmadığını belirtir.

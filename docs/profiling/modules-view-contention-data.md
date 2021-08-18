@@ -9,15 +9,16 @@ ms.assetid: 1a9aa122-2d8f-4a09-b503-92975aa6b648
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b3a73cec5f05072f0a99940b82a362ccb8e1edde
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 556e7becfd87cd9ffd9a47737cee1330d93413b9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969276"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076418"
 ---
 # <a name="modules-view---contention-data"></a>Modüller görünümü-çakışma verileri
 Çekişme verilerinin Modüller görünümü, profil oluşturma verilerinde örneklendiği modüller tarafından gruplanmış eşzamanlılık verilerini görüntüler. Her modül hiyerarşik bir ağacın köküdür. Çekişme olaylarının oluştuğu modülün işlevleri modül düğümünün altında listelenir.

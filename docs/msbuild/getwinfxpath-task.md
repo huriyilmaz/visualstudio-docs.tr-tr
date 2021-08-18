@@ -1,6 +1,6 @@
 ---
-title: GetWinFXPath görevi | Microsoft Docs
-description: Geçerli .NET çalışma zamanının dizinini döndüren MSBuild GetWinFXPath görevini nasıl kullanacağınızı öğrenin.
+title: GetWinFXPath Görev | Microsoft Docs
+description: Geçerli .NET çalışma zamanının MSBuild döndüren GetWinFXPath görevini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,34 +18,35 @@ ms.assetid: b1dfb467-f3d3-47f3-83ef-af7b0e33a772
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 164f9f91eda1d81db00d25bb4e18a6cbb352e41e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5b94efabb17c0c88a962744e173efc155feca9d0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914628"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108882"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath görevi
 
-<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath>Görev, geçerli .NET çalışma zamanının dizinini döndürür.
+Görev, <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> geçerli .NET çalışma zamanının dizinini döndürür.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |-------------------| - |
-| `WinFXPath` | İsteğe bağlı **dize** çıkış parametresi.<br /><br /> .NET çalışma zamanının gerçek yolunu belirtir. |
-| `WinFXNativePath` | Gerekli **dize** parametresi.<br /><br /> Yerel .NET çalışma zamanının yolunu belirtir. |
-| `WinFXWowPath` | Gerekli **dize** parametresi.<br /><br /> 64 bit sistemlerde 32 bitlik **Windows** modülündeki .net derlemelerinin yolunu belirtir. |
+| `WinFXPath` | İsteğe **bağlı Dize** çıkış parametresi.<br /><br /> .NET çalışma zamanının gerçek yolunu belirtir. |
+| `WinFXNativePath` | Gerekli **Dize** parametresi.<br /><br /> Yerel .NET çalışma zamanının yolunu belirtir. |
+| `WinFXWowPath` | Gerekli **Dize** parametresi.<br /><br /> 64 bit sistemlerde bir modülde 32 bit **Windows .NET Windows** yolunu belirtir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- Görev, <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 64 bitlik bir işlemci üzerinde yürütülecede, **WinFXPath** parametresi **WinFXWowPath** parametresinde depolanan yola ayarlanır; Aksi takdirde **WinFXPath** parametresi **WinFXNativePath** parametresinde depolanan yola ayarlanır.
+ Görev <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 64 bit işlemcide yürütiliyorsa, **WinFXPath** parametresi **WinFXWowPath** parametresinde depolanan yola ayarlanır; aksi takdirde **WinFXPath** parametresi **WinFXNativePath** parametresinde depolanan yola ayarlanır.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnekte, .NET çalışma zamanına ait yerel yolu algılamak için **GetWinFXPath** görevinin nasıl kullanılacağı gösterilmektedir.
+ Aşağıdaki örnek, .NET çalışma zamanının yerel yolunu algılamak için **GetWinFXPath** görevinin nasıl kullanıla bir yolunu gösterir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

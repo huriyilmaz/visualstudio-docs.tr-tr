@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 779defd8be35f9c33093152520eac9feefb95b24b4ad48653ea9a9a848bbb5e3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 10cd978c2dd1979fef98e97668a5524b934ec3be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121261495"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152880"
 ---
 # <a name="ienumdebugerrorbreakpoints2next"></a>IEnumDebugErrorBreakpoints2::Next
 Numaralamadan sonraki öğe kümesi döndürür.

@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem, bu nesneyle ilişkili bağımsız değişken türlerinin sayısını döndürür.
-title: 'IDebugBinder3:: GetTypeArgumentCount | Microsoft Docs'
+title: IDebugBinder3::GetTypeArgumentCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5fb1d6e54252f2dd4caa05268aedac9e86da4d8276274782416772c85d39503f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e030b15e555785f2ca57c3dd91f55803e8665967
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434171"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072752"
 ---
 # <a name="idebugbinder3gettypeargumentcount"></a>IDebugBinder3::GetTypeArgumentCount
 Bu yöntem, bu nesneyle ilişkili bağımsız değişken türlerinin sayısını döndürür.
@@ -43,13 +43,13 @@ int GetTypeArgumentCount(
 
 ## <a name="parameters"></a>Parametreler
 `uCount`\
-dışı Bu nesneyle ilişkili bağımsız değişken türlerinin sayısı.
+[out] Bu nesneyle ilişkili bağımsız değişken türlerinin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen değer, [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) yöntemiyle kullanılmak üzere bir dizi ayırmak için kullanılabilir.
+ Bu yöntem tarafından döndürülen değer [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) yöntemiyle kullanılacak bir dizi ayırmak için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

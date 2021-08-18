@@ -7,17 +7,18 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
 monikerRange: vs-2019
-ms.openlocfilehash: d6578100bbdab9413fb70a561c146823ac77c914
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fb5fd401af95e9cbf3d2dbb320acfe51ed015713
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927969"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151281"
 ---
 # <a name="move-type-to-namespace"></a>Türü ad alanına taşı
 

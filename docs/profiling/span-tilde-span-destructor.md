@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 19c07e8b8b645313539a9f97f5f4e242d0c60d13e6fec5da9f0610ba51be6729
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 383a48256c7bb56c14892e10d92e3963ec533fd0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121354456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141512"
 ---
 # <a name="spanspan-destructor"></a>span::~span yıkıcısı
 

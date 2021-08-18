@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ae28719bdcf1fe3df23e08458265916bde1131cc7909ecbfdbe9dc3bca7505a4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b2702b092102cc0a918a1604c79b27885d1e002a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292708"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111274"
 ---
 # <a name="idebugdisassemblystream2getsize"></a>IDebugDisassemblyStream2::GetSize
 Bu ayırt derleme akışının yönergelerindeki boyutu alır.

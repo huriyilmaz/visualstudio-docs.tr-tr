@@ -11,14 +11,15 @@ ms.assetid: 34c1652e-f019-48ba-8b26-ace20f8a158c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 28d61260b1f92df82b365d7aa8464b084681500e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1409edc9270e7bd41295ef011a206e5fe1e96e9a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083628"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126082"
 ---
 # <a name="idebugthreadnamechangedevent2"></a>IDebugThreadNameChangedEvent2
 Bu arabirim, hata ayıklama altyapısı (DE) tarafından, hata ayıklama yapılmakta olan programdaki bir iş parçacığı adı değiştiğinde oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.

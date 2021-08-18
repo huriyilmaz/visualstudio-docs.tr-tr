@@ -1,6 +1,6 @@
 ---
-description: Yüklenen veya kaldırılan modülü alır.
-title: IDebugModuleLoadEvent2::GetModule | Microsoft Docs
+description: Yüklenmekte olan veya bellekten kaldırılan modülü alır.
+title: 'IDebugModuleLoadEvent2:: GetModule | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c632f0de62f931b68b56c321e846eca9265f50b9c19f0704da7fee2b7bd8a8ae
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d2bca5417403df2479d5de22aeaef4480feb9331
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417047"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126979"
 ---
 # <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
-Yüklenen veya kaldırılan modülü alır.
+Yüklenmekte olan veya bellekten kaldırılan modülü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int GetModule(
 
 ## <a name="parameters"></a>Parametreler
 `pModule`\
-[out] Yükleniyor veya kaldırılan modülü temsil eden bir [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) nesnesi döndürür.
+dışı Yükleme veya kaldırma işlemi olan modülü temsil eden bir [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) nesnesi döndürür.
 
 `pbstrDebugMessage`\
-[in, out] Bu olayı açıklayan isteğe bağlı bir ileti döndürür. Bu parametre null bir değerse ileti isteğinde yoktur.
+[in, out] Bu olayı açıklayan isteğe bağlı bir ileti döndürür. Bu parametre null bir değer ise, herhangi bir ileti istenmez.
 
 `pbLoad`\
-[in, out] Modül yükleniyorsa sıfır ( ) ve modül `TRUE` kaldırıyorsa sıfır ( ) olarak `FALSE` ayarlayın. Bu parametre null bir değerse durum isteği yoktur.
+[in, out] Modül `TRUE` yüklüyorsanız sıfır ( `FALSE` ) ve modül boşaltılıyor. Bu parametre null bir değer ise, herhangi bir durum istenmez.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)

@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 6fce0a1a6fbe4537e87d88120550bd7a1f7788c07ab84a02f70cb9514c3fac7e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5a24e2ca3942d2c122421151a3f9a96b640b2ebb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394595"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106191"
 ---
 # <a name="associate-a-web-page-with-an-outlook-folder"></a>Bir web sayfasını bir Outlook ilişkilendirme
 

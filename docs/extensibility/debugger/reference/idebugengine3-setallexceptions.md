@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5551d9fa9e5bb6f1510f912c131165998cbecef06da0f0f0a4e35f788ab70a69
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2662631a4c3b5ab4420fc5f14740138596435d77
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307797"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111092"
 ---
 # <a name="idebugengine3setallexceptions"></a>IDebugEngine3::SetAllExceptions
 Bu yöntem, tüm bekleyen özel durumların durumunu ayarlar.

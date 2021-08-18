@@ -1,5 +1,5 @@
 ---
-description: Bir makineyi tanımlamakta kullanılır.
+description: Bir makineyi tanımlamak için kullanılır.
 title: MACHINE_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e26f2bb00ed8a9f612db6643b4bed8d3e5db3d04910ea939f346fc388716a157
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c7c6f471a1b238f7773876cbf7fb28aaab8679c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276340"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152607"
 ---
 # <a name="machine_info_flags"></a>MACHINE_INFO_FLAGS
-Bir makineyi tanımlamakta kullanılır.
+Bir makineyi tanımlamak için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ public enum enum_MACHINE_INFO_FLAGS {
 
 ## <a name="fields"></a>Alanlar
  `MCIFLAG_TERMINAL_SERVICES_AVAILABLE`\
- Terminal Hizmetleri 'nin kullanılabilir olduğunu gösterir.
+ Terminal hizmetlerinin kullanılabilir olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- `Flags` [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapısının üyesi olarak kullanılır.
+ MACHINE_INFO `Flags` üyesi [olarak](../../../extensibility/debugger/reference/machine-info.md) kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

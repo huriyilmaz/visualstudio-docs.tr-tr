@@ -1,6 +1,6 @@
 ---
-title: VCMessage görevi | Microsoft Docs
-description: MSBuild, bir C++ projeleri için derleme sırasında uyarı ve hata iletilerini günlüğe kaydetmek için vcmessage görevini nasıl kullandığını öğrenin.
+title: VCMessage Görev | Microsoft Docs
+description: C++ MSBuild derleme sırasında uyarı ve hata iletilerini günlüğe göndermek için VCMessage görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: reference
@@ -22,30 +22,30 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: ad0be84534352316aabf0272074f7e8c2c41ff6f7d4c6b313933c3b23e9e7a5c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 705298bf73bceda32ca82a9dc85f96816794d8e9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397208"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108219"
 ---
 # <a name="vcmessage-task"></a>VCMessage görevi
 
-Bir derleme sırasında uyarı ve hata iletilerini günlüğe kaydeder.
+Derleme sırasında uyarı ve hata iletilerini günlüğe kaydeder.
 
 ## <a name="remarks"></a>Açıklamalar
 
- bu görev, C++ projeleri için MSBuild uygulamaya yardımcı olur ve kullanıcı tarafından çağrılması amaçlanmamıştır. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
+ Bu görev C++ MSBuild projelerinin uygulanmasına yardımcı olur ve kullanıcı tarafından çağrılma amacını oluşturmaz. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Utilities.TaskLoggingHelper>.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda **VCMessage** görevinin parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda VCMessage görevinin **parametreleri açık** almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**Bağımsız değişkenler**|İsteğe bağlı **dize** parametresi.<br /><br /> Görüntülenecek iletilerin noktalı virgülle ayrılmış listesi.|
-|**Kod**|Gerekli **dize** parametresi.<br /><br /> İletiyi niteleyen bir hata numarası.|
-|**Tür**|İsteğe bağlı **dize** parametresi.<br /><br /> Görüntülenecek ileti türünü belirtir. Bir uyarı iletisi oluşturmak için "uyarı" ya da bir hata iletisi oluşturmak için "hata" belirtin.|
+|**Bağımsız değişkenler**|İsteğe **bağlı Dize** parametresi.<br /><br /> Görüntülenmek için noktalı virgülle ayrılmış bir ileti listesi.|
+|**Kod**|Gerekli **Dize** parametresi.<br /><br /> İletiyi niteleyici bir hata numarası.|
+|**Tür**|İsteğe **bağlı Dize** parametresi.<br /><br /> Yayma ileti türlerini belirtir. Bir uyarı iletisi ya da bir hata iletisi ya da "Hata" ya da "Uyarı" belirtin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

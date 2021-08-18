@@ -1,6 +1,6 @@
 ---
-description: Bu işlev, işlevin satır içi (satır içi, _inline, __forceinline) özniteliklerinden birini kullanarak) olarak işaret __forceinline bayrağı alır.
-title: IDiaSymbol::get_InlSpec | Microsoft Docs
+description: Bu işlev, işlevin satır içi olarak işaretlenip işaretlenmediğini belirten bir bayrak alır (satır içi, _inline, __forceinline) özniteliklerinden birini kullanarak).
+title: 'IDiaSymbol:: get_InlSpec | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f566ad0c13e64eda7ea8d6278d75261536b299423ae77ba65da996b9cdeeec65
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6e3f82d716c4699cff05340716c9fca7383576e6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404829"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128658"
 ---
 # <a name="idiasymbolget_inlspec"></a>IDiaSymbol::get_InlSpec
-Bu işlev, işlevin satır içi olarak işaretlenmiş olup olmadığını belirten bir bayrak alır (satır [içi, __inline, \_ _forceinline](/cpp/cpp/inline-functions-cpp) kullanarak).
+Bu işlev, işlevin satır içi olarak işaretlenip işaretlenmediğini belirten bir bayrak alır ( [satır içi, __inline \_ _forceinline](/cpp/cpp/inline-functions-cpp) özniteliklerinden birini kullanarak).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_inlSpec(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] İşlev `TRUE` satır içi olarak işaretlenmişse döndürür; aksi takdirde `FALSE` döndürür.
+dışı `TRUE` İşlevin satır içi olarak işaretlenip işaretlenmediğini döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

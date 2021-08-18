@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, adres numaralandırmasında belirtilen sayıda öğeyi atlar.
-title: 'IEnumDebugAddresses:: Skip | Microsoft Docs'
+description: Bu yöntem, adresler numaralamada belirtilen sayıda öğenin üzerine atlar.
+title: IEnumDebugAddresses::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: ed9a8e71-30ef-414b-9da5-c9a2a251b84e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 082cba541b1074e75e44384cd8ac9e4879cc29c3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ec40927719775082f77704dc4994fadf4bece959
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083160"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125653"
 ---
 # <a name="ienumdebugaddressesskip"></a>IEnumDebugAddresses::Skip
-Bu yöntem, belirtilen sayıda öğeyi atlar.
+Bu yöntem, belirtilen sayıda öğenin üzerine atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int Skip(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Atlanacak öğe sayısı.
+[in] Atlana öğe sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE` `celt` Kalan öğelerin sayısından büyükse döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. kalan `S_FALSE` `celt` öğe sayısından büyükse döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `celt`Kalan öğelerin sayısından daha büyük bir değer belirtiyorsa, numaralandırma sonuna ayarlanır ve `S_FALSE` döndürülür.
+ Kalan öğe sayısından büyük bir değer belirtirse, en sona ayarlanır `celt` ve `S_FALSE` döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

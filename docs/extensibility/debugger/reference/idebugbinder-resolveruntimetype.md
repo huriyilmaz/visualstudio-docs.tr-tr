@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 62679b7a7f981ca2f45ef6c63ba61895b91471f93a01a1765ca8cef6c0fb1740
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c33ca7d66927f91c2f75b017a93e858fff215665
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360774"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072804"
 ---
 # <a name="idebugbinderresolveruntimetype"></a>IDebugBinder::ResolveRuntimeType
 Bu yöntem, bir nesnenin çalışma zamanı türünü belirler.

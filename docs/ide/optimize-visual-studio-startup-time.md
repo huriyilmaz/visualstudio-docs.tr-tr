@@ -17,12 +17,12 @@ f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: cc13571011e7d4d50cb8643d14afe559c11caacdf4b4bb67ea24354eae477bea
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b54bd7bbaf1bb187e145058f2b81a44c04e2b085
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412880"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124015"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Visual Studio başlangıç zamanını iyileştirin
 

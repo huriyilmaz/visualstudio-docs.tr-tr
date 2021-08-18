@@ -14,12 +14,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e3b2f25c1b8f16c151e697be9acb78b6012cbce6a0ac189422c491c9f83dcbaf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f016fb7498ec30bab30e58af4d3023be3986ab4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121302246"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076821"
 ---
 # <a name="collect-performance-statistics-by-using-sampling"></a>Örnekleme kullanarak performans istatistikleri toplama
 
@@ -45,7 +45,7 @@ Performans oturumunun Performans Oturumu _Özellik Sayfaları_**iletişim kutusu
 |Görev|İlgili İçerik|
 |----------|---------------------|
 |Genel sayfasında **.NET** bellek ayırma ve yaşam süresi veri toplama'ya ek olarak oluşturulan profil oluşturma verileri (.vsp) dosyası için adlandırma ayrıntılarını belirtin.|- [.NET Bellek Ayırma ve Yaşam Süresi Verilerini Toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [Nasıl yapabilirsiniz: Performans Veri Dosyası Adı Seçeneklerini Ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)|
-|Örnekleme sayfasında **örnekleme** oranını, örnekleme olaylarını işlemci saat döngülerinden başka bir işlemci performans sayacına veya her ikisini birden değiştirebilirsiniz.|- [Nasıl: Örnekleme Olaylarını Seçme](../profiling/how-to-choose-sampling-events.md)|
+|Örnekleme sayfasında **örnekleme** oranını, örnekleme olaylarını işlemci saat döngülerinden başka bir işlemci performans sayacına veya her ikisini de değiştirebilirsiniz.|- [Nasıl: Örnekleme Olaylarını Seçme](../profiling/how-to-choose-sampling-events.md)|
 |Başlat **sayfasında,** kod çözümde birden çok projeniz varsa başlatacak uygulamayı ve .exe sıralamayı belirtin.|- [Katman etkileşim verilerini toplama](../profiling/collecting-tier-interaction-data.md)|
 |Katman **Etkileşimi sayfasında** profil oluşturma ADO.NET verilerine çağrı bilgileri ekleyin.|- [Katman etkileşim verilerini toplama](../profiling/collecting-tier-interaction-data.md)|
 |Windows **Olayları sayfasında,** örnekleme verileriyle topilebilecek Windows (ETW) olayları için bir veya daha fazla Olay İzleme belirtin.|- [Nasıl kullanılır: Windows (ETW) Verileri için Olay İzleme Toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|

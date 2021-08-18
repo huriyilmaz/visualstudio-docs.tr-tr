@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 29b23ee50e4d5ee849f4b59cfea5819e333cab5fdc838861e0eeeb997d6b08f6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ff9790ab1178ecae056c4af0fcea673e8e94ead7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121333229"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142032"
 ---
 # <a name="disk-operations-report-threads-view"></a>Disk İşlemleri Raporu (İş Parçacıkları Görünümü)
 Disk İşlemleri Raporu, disk kanallarında disk I/O işlemlerini gösterir.

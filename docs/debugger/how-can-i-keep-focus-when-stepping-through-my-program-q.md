@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ed3e2ca51e2738b5018459c987970dce993ce8c2497a499c093bd9af4926a5f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0564abeb80f6a8733cfad058d652f93fca71aeca
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362438"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074143"
 ---
 # <a name="how-can-i-keep-focus-when-stepping-through-my-app"></a>Uygulamamda adımlarken odağı nasıl devam edebilirim?
 ## <a name="description"></a>Açıklama

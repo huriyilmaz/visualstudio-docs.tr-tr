@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: hizmetler sorunlarını giderme | Microsoft Docs'
-description: Visual Studio SDK 'da bir hizmet almaya çalıştığınızda oluşabilecek birkaç yaygın sorunun nasıl giderileceği hakkında bilgi edinin.
+title: 'Nasıl: Hizmet Sorunlarını | Microsoft Docs'
+description: Visual Studio SDK'sı'sinde bir hizmet almaya çalışabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -10,27 +10,28 @@ ms.assetid: 001551da-4847-4f59-a0b2-fcd327d7f5ca
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a105f38166ecea958bb0e5bbfe790170b020e354
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d84e178f8dd3c7006dd3213fdb60eea9b96dac24
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079221"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124860"
 ---
-# <a name="how-to-troubleshoot-services"></a>Nasıl yapılır: hizmetler sorunlarını giderme
-Bir hizmeti almaya çalıştığınızda oluşabilecek bazı yaygın sorunlar vardır:
+# <a name="how-to-troubleshoot-services"></a>Nasıl yapılanlar: Hizmet sorunlarını giderme
+Hizmet almaya çalışabilirsiniz bazı yaygın sorunlar vardır:
 
-- Hizmet hizmetine kayıtlı değil [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+- Hizmet ile kayıtlı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] değil.
 
-- Hizmet, hizmet türüne göre değil arabirim türü tarafından istenir.
+- Hizmet, hizmet türüne göre değil arabirim türüne göre istenmektedir.
 
-- Hizmeti isteyen VSPackage yok.
+- Hizmeti talep alan VSPackage sited değil.
 
 - Yanlış hizmet sağlayıcısı kullanılıyor.
 
-  İstenen hizmet alınamadığından, çağrısı <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> null değerini döndürür. Hizmeti isteyerek her zaman null için test etmelisiniz:
+  İstenen hizmet alınamazsa çağrısı <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> null döndürür. Hizmet isteği verdikten sonra her zaman null değerini test etmek gerekir:
 
 ```csharp
 IVsActivityLog log =
@@ -38,11 +39,11 @@ IVsActivityLog log =
 if (log == null) return;
 ```
 
-## <a name="to-troubleshoot-a-service"></a>Bir hizmette sorun gidermek için
+## <a name="to-troubleshoot-a-service"></a>Hizmet sorunlarını gidermek için
 
-1. Hizmetin doğru şekilde kaydedilip kaydedilmediğini görmek için sistem kayıt defterini inceleyin. Daha fazla bilgi için bkz. [nasıl yapılır: hizmet sağlama](../extensibility/how-to-provide-a-service.md).
+1. Hizmetin doğru şekilde kaydedilmiş olup olmadığını görmek için sistem kayıt defterini inceleme. Daha fazla bilgi için, [bkz. How to: Provide a service](../extensibility/how-to-provide-a-service.md).
 
-    Aşağıdaki *. reg* dosya parçasında SVsTextManager hizmetinin nasıl kaydedildiği gösterilmektedir:
+    Aşağıdaki *.reg dosya* parçası, SVsTextManager hizmetinin nasıl kaydedil olabileceğini gösterir:
 
    ```
    [HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\<version number>\Services\{F5E7E71D-1401-11d1-883B-0000F87579D2}]
@@ -50,26 +51,26 @@ if (log == null) return;
    "Name"="SVsTextManager"
    ```
 
-    Yukarıdaki örnekte, sürüm numarası 12,0 veya 14,0 gibi bir sürümüdür [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , {F5E7E71D-1401-11D1-883B-0000F87579D2} anahtarı hizmetin hizmet tanımlayıcısıdır (SID), SVsTextManager ve varsayılan değer olan {F5E7E720-1401-11D1-883B-0000F87579D2}, hizmet sağlayan VSPackage 'ın paket GUID 'sidir.
+    Yukarıdaki örnekte sürüm numarası sürümüdür; [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] örneğin, 12.0 veya 14.0, {F5E7E71D-1401-11d1-883B-0000F87579D2} anahtarı hizmetin hizmet tanımlayıcısıdır (SID), SVsTextManager ve varsayılan değer {F5E7E720-1401-11d1-883B-0000F87579D2} metin yöneticisi VSPackage'ın hizmet sağlayan paket GUID'idir.
 
-2. GetService 'i çağırdığınızda arabirim türünü değil hizmet türünü kullanın. İçinden bir hizmet istendiğinde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , <xref:Microsoft.VisualStudio.Shell.Package> GUID 'yi türden ayıklar. Aşağıdaki koşullar mevcutsa bir hizmet bulunamayacak:
+2. GetService çağrısında arabirim türünü değil hizmet türünü kullanın. 'den bir hizmet [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] isteğite <xref:Microsoft.VisualStudio.Shell.Package> bulundurarak TÜRÜNDEn GUID'i ayıklar. Aşağıdaki koşullar varsa bir hizmet bulunmayacak:
 
-   1. Bir arabirim türü, hizmet türü yerine GetService 'e geçirilir.
+   1. Arabirim türü, hizmet türü yerine GetService'e geçirildi.
 
-   2. Arabirime açıkça bir GUID atanmaz. Bu nedenle, sistem gerektiğinde bir nesne için varsayılan bir GUID oluşturur.
+   2. Arabirime açıkça bir GUID atanmamış. Bu nedenle, sistem gerektiğinde bir nesne için varsayılan bir GUID oluşturur.
 
-3. Hizmeti isteyen VSPackage 'ın kaldırılmış olduğundan emin olun. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] siteleri oluşturduktan sonra ve çağrılmadan önce bir VSPackage <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .
+3. Hizmeti talep alan VSPackage'ın siteli olduğundan emin olun. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir VSPackage'ı oluşturmadan ve çağırmadan önce sitelerine <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yerleştirmektedir.
 
-    Bir hizmet gerektiren VSPackage oluşturucusunda kodunuz varsa, bunu `Initialize` metoduna taşıyın.
+    VSPackage oluşturucus unda bir hizmete ihtiyaç olan kodunuz varsa, bunu yöntemine `Initialize` taşımanız gerekir.
 
-4. Doğru hizmet sağlayıcısını kullandığınızdan emin olun.
+4. Doğru hizmet sağlayıcısını kullanırkenn emin olun.
 
-    Hizmet sağlayıcılarının hepsi benzer değildir. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Bir araç penceresine geçen hizmet sağlayıcısı, VSPackage 'a geçen olandan farklıdır. Araç penceresi hizmet sağlayıcısı hakkında bilir <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> , ancak hakkında bilgi vermez <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> . Bir <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> araç penceresi Içinden VSPackage hizmeti sağlayıcısı almak için çağırabilirsiniz.
+    Tüm hizmet sağlayıcıları aynı değildir. Araç [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] penceresine geçen hizmet sağlayıcısı, VSPackage'a geçtiğinden farklıdır. Araç penceresi hizmet sağlayıcısı, <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> hakkında bilgi edindi ancak hakkında bilgisi <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> yok. <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>VsPackage hizmet sağlayıcısını bir araç penceresinden almak için çağrısı alabilirsiniz.
 
-    Bir araç penceresi bir kullanıcı denetimi veya başka bir denetim kapsayıcısı barındırıyorsa, kapsayıcı Windows bileşen modeli tarafından kaldırılır ve hiçbir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hizmete erişemez. <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>Bir denetim kapsayıcısının Içinden VSPackage hizmeti sağlayıcısı almak için çağırabilirsiniz.
+    Bir araç penceresi bir kullanıcı denetimi veya başka bir denetim kapsayıcısı barındırırsa, kapsayıcı, Windows bileşen modeli tarafından sitelir ve hiçbir hizmet erişimine sahip [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] olmaz. <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>VsPackage hizmet sağlayıcısını bir denetim kapsayıcısı içinde almak için çağrısı alabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kullanılabilir Hizmetler listesi](../extensibility/internals/list-of-available-services.md)
+- [Kullanılabilir hizmetlerin listesi](../extensibility/internals/list-of-available-services.md)
 - [Hizmetleri kullanma ve sağlama](../extensibility/using-and-providing-services.md)
-- [Service Essentials](../extensibility/internals/service-essentials.md)
-- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Hizmet temelleri](../extensibility/internals/service-essentials.md)
+- [Visual Studio giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

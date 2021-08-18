@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Yük Testi Sonuçlarında Özel Grafikler Oluşturma'
-description: Yük testi çalışırken veya çalıştırmayı bitirdikten sonra yük testi sonuçlarıyla ilgili belirli bilgileri görüntülemek için graflar tasarlamayı öğrenin.
+description: Yük testi ile ilgili belirli bilgileri görüntüleyen grafikleri nasıl tasarlayacağınızı, yük testinin çalışırken veya çalışmayı bitirdikten sonra öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -12,38 +12,38 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 313348a7face3e08c9b11cf3c970c208c1979dcc05ef96b0e9cd705bffbb2d39
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a9eb8ef1df65ceb20968ff9887d4750d3b629a84
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366675"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140004"
 ---
-# <a name="how-to-create-custom-graphs-in-load-test-results"></a>Nasıl gösterilir: Yük testi sonuçlarında özel graflar oluşturma
+# <a name="how-to-create-custom-graphs-in-load-test-results"></a>Nasıl yapılır: yük testi sonuçlarında özel grafikler oluşturma
 
-Yük testi sonuçlarıyla ilgili belirli bilgileri görüntülemek için graflar tasarabilirsiniz. Grafiğin görüntüley istediğiniz yük testi sayaçlarını belirterek özel bir grafik tasarlarsiniz.
+Yük testi sonuçlarıyla ilgili belirli bilgileri görüntüleyen grafikler tasarlayabilirsiniz. Grafiğin görüntüleyeceği yük testi sayaçlarını belirterek özel bir grafik tasarlayacaksınız.
 
-Bir yük testi çalışırken veya çalıştırmayı bitirdikten sonra aşağıdaki yordamı gerçekleştirin.
+Yük testi çalışırken veya çalışmayı bitirdikten sonra aşağıdaki yordamı gerçekleştirebilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-create-a-custom-load-test-results-graph"></a>Özel yük testi sonuçları grafiği oluşturmak için
+## <a name="to-create-a-custom-load-test-results-graph"></a>Özel bir yük testi sonuçları grafiği oluşturmak için
 
-1. Yük Testi **araç çubuğunda Yeni** Ekle'yi **Graph.**
+1. **Yük testi** araç çubuğunda **Yeni Graph Ekle**' yi seçin.
 
-     \- veya -
+     \- veya
 
-     Yük **Testi Çözümleyicisi'nin** Sayaçlar paneline veya grafa sağ tıklayın ve ardından Add **Graph**. 
+     **Yük Testi Çözümleyicisi**'Nde, **Sayaçlar** paneline veya bir grafiğe sağ tıklayın ve sonra **Graph Ekle**' yi seçin.
 
-     Bir **Graph Girin** iletişim kutusu görüntülenir.
+     **Graph adı girin** iletişim kutusu görüntülenir.
 
-2. Ad **Graph altında** graf için bir ad yazın ve Tamam'ı **seçin.**
+2. **Graph ad**' ın altında, grafik için bir ad yazın ve **tamam**' ı seçin.
 
-     Yeni grafik Yük Testi **Çözümleyicisi'ne görünür.** Seçili graf panelinde görünür; bu panelde görüntülenen grafı değiştirir.
+     Yeni grafik **Yük Testi Çözümleyicisi**'nde görünür. Şu anda seçili olan grafik panelinde görünür; Bu panelde görüntülenen grafiğin yerini alır.
 
-3. Sayaç ekleyerek yeni grafiği özelleştirin. Daha fazla bilgi için, [bkz. How to: Add and delete counters on graphs](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md).
+3. Sayaçlar ekleyerek yeni Grafiği özelleştirin. Daha fazla bilgi için bkz. [nasıl yapılır: grafiklerde sayaç ekleme ve silme](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Graflar görünümünde yük testi sonuçlarını analiz etme](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [Nasıl gösterilir: Graflara sayaç ekleme ve silme](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)
+- [Grafik görünümünde Yük testi sonuçlarını çözümleme](../test/analyze-load-test-results-in-the-graphs-view.md)
+- [Nasıl yapılır: grafiklerde sayaç ekleme ve silme](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)

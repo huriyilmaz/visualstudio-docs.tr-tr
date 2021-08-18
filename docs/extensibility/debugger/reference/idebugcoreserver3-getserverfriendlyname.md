@@ -1,6 +1,6 @@
 ---
-description: Sunucu için kolay bir ad alır.
-title: 'IDebugCoreServer3:: GetServerFriendlyName | Microsoft Docs'
+description: Sunucu için kolay bir ad verir.
+title: IDebugCoreServer3::GetServerFriendlyName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f4de4b0c30b697f96c65250b89002abdfccafa20a0cfe14f1267a537ad2b7841
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dc5bdfd6d019ccc9740ca00fbe3f70ae0a23419b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377781"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111457"
 ---
 # <a name="idebugcoreserver3getserverfriendlyname"></a>IDebugCoreServer3::GetServerFriendlyName
-Sunucu için kolay bir ad alır.
+Sunucu için kolay bir ad verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,18 +43,18 @@ int GetServerFriendlyName(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-dışı Sunucu için kolay bir ad döndürür.
+[out] Sunucu için kolay bir ad döndürür.
 
 > [!NOTE]
-> Çağıran, dizeyi boşaltmaktan sorumludur.
+> Çağıran, dizeyi serbest bırakarak sorumludur.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanıcı tarafından başlatılan sunucular için, bu yöntemin döndürdüğü ad sunucunun tam adıdır. Otomatik başlatılan sunucular için, ad sunucunun üzerinde çalıştığı makinenin adıdır.
+ Kullanıcı tarafından başlatılan sunucular için, bu yöntem tarafından döndürülen ad sunucunun tam adıdır. Otomatik başlatılan sunucular için ad, sunucunun üzerinde çalıştır olduğu makinenin adıdır.
 
- Makineye yönelik bir ad için [GetServerName](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md) metodunu çağırın.
+ Makine odaklı bir ad için [GetServerName yöntemini](../../../extensibility/debugger/reference/idebugcoreserver3-getservername.md) arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

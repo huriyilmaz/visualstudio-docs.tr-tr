@@ -15,12 +15,12 @@ ms.workload:
 - dotnet
 helpviewer_keywords:
 - add missing usings
-ms.openlocfilehash: b8be08a3d8440cec741ad9cf2e6dcaa10ccbad2d1dc230eeeda9b35a185c911a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3eaa7d035c95ba3ff2eeccf37968cb858ddcf02
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121303975"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123872"
 ---
 # <a name="add-missing-usings-in-visual-studio"></a>Visual Studio'de eksik kullanmalar ekleme
 
@@ -41,7 +41,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 1. Bir dosyadan kod kopyalayın ve gerekli yönergeleri dahil etmeden yenisine `using` yapıştırın. Sonuçta ortaya çıkan hataya eksik yönergeleri ekleyen bir kod `using` düzeltmesi eşlik ediyor.
 
     > [!NOTE]
-    > Bu öneriyi Araçlar > Seçenekler > C# > > Using Yönergeleri > **etkinleştirmeniz gerekir.**
+    > Bu öneriyi Araçlar > **Seçenekler > C# > C# > > Gelişmiş > Yönergeleri'nde etkinleştirmeniz gerekir.**
 
 2. Ctrl+'yi seçin. hızlı eylemler **ve yeniden düzenleme menüsünü** açın.
 

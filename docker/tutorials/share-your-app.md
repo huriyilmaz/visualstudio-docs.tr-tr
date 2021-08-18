@@ -1,19 +1,20 @@
 ---
-title: 'Docker öğreticisi - 3. Bölüm: Uygulamanızı paylaşma'
-description: Docker Hub kayıt defterini kullanarak Docker görüntülerinin nasıl paylaş Docker Hub açıklar.
-ms.date: 08/04/2020
+title: 'Docker öğreticisi - 2. Bölüm: Uygulamanızı paylaşma'
+description: Kayıt defterini kullanarak Docker görüntülerinin nasıl Docker Hub açıklar.
+ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-docker
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: d64d10c7abefc14f31c39c3b8397e95cec67e9f4
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 86c339693423369a35ebb039c3629a872ddbc702
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222792"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122067909"
 ---
 # <a name="share-your-app"></a>Uygulamalarınızı paylaşma
 
@@ -37,7 +38,7 @@ Sayfanın sağ tarafına bakarsanız Docker komutları adlı bir **bölüm göre
 
 ## <a name="push-the-image"></a>Görüntüyü gönderme
 
-1. Komut satırına, komutta gördüğünüz push komutunu çalıştırmayı Docker Hub. Komutunuz "docker" değil ad alanını kullanır.
+1. Komut satırına, komut satırına gördüğünüz push komutunu Docker Hub. Komutunuz "docker" değil ad alanını kullanır.
 
     ```plaintext
     $ docker push docker/getting-started
@@ -45,7 +46,7 @@ Sayfanın sağ tarafına bakarsanız Docker komutları adlı bir **bölüm göre
     An image does not exist locally with the tag: docker/getting-started
     ```
 
-    Neden başarısız oldu? Push komutu docker/getting-started adlı bir görüntü arıyor ancak bir görüntü bulamadı. 'i `docker image ls` çalıştırsanız da bir tane görmeyersiniz.
+    Neden başarısız oldu? Push komutu docker/getting-started adlı bir görüntü arıyor ama bulamadı. 'i `docker image ls` çalıştırsanız da bir tane görmeyersiniz.
 
     Bunu düzeltmek için, başka bir ad vermek için var olan görüntülerinizi "etiketlemeniz" gerekir.
 
@@ -57,7 +58,7 @@ Sayfanın sağ tarafına bakarsanız Docker komutları adlı bir **bölüm göre
     docker tag getting-started <username>/getting-started
     ```
 
-1. Şimdi push komutunu yeniden deneyin. Değeri bir Docker Hub kopya ediyorsanız, görüntü adına etiket eklemeden bölümünü `tagname` bırakın. Etiket belirtmezseniz Docker adlı bir etiket `latest` kullanır.
+1. Şimdi push komutunu yeniden deneyin. Değeri Docker Hub kopya ediyorsanız, görüntü adına etiket eklemeden bölümünü `tagname` bırakın. Etiket belirtmezseniz Docker, adlı bir etiket `latest` kullanır.
 
     ```bash
     docker push <username>/getting-started

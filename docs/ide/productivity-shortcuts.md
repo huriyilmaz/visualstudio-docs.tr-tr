@@ -1,6 +1,6 @@
 ---
 title: Klavye ve fare kısayolları
-description: Bu makale, daha üretken çalışmanıza yardımcı olacak Visual Studio klavye ve fare kısayollarına ipuçları içerir.
+description: Bu makale, daha üretken çalışmanıza yardımcı olmak için Visual Studio klavye ve fare kısayolları ipuçları içerir.
 ms.date: 11/02/2018
 ms.topic: reference
 author: TerryGLee
@@ -9,12 +9,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fa67ee2296b6a35081ccef389ccc6062096f08da39b71368f637a81e0f4a606
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1a945a3c8fe06fee411c5c19c84281540c2b2f85
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412588"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151931"
 ---
 # <a name="shortcut-tips-for-visual-studio"></a>Visual Studio için kısayol ipuçları
 
@@ -23,7 +23,7 @@ Bu makaledeki kısayolları Visual Studio daha kolay bir şekilde gezinti yapabi
 Komut kısayollarının tam listesi için bkz. [Varsayılan klavye kısayolları.](../ide/default-keyboard-shortcuts-in-visual-studio.md)
 
 > [!NOTE]
-> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Mac için Visual Studio.](/visualstudio/mac/keyboard-shortcuts)
+> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. genel klavye kısayolları Mac için Visual Studio.](/visualstudio/mac/keyboard-shortcuts)
 
 ## <a name="window-management"></a>Pencere yönetimi
 
@@ -57,7 +57,7 @@ Komut kısayollarının tam listesi için bkz. [Varsayılan klavye kısayolları
 |Hızlı Bul|**Ctrl tuşunu basılı tutarak** + **F**|
 |Sonraki Sonucu Hızlı Bul|**Enter**|
 |Önceki Sonucu Hızlı Bul|**Shift ile kaydırma** + **Enter tarak**|
-|Hızlı Bul Genişletme Açılan Liste|**Alt** + **Aşağı ok**|
+|Hızlı Bul Genişletme açılan listesinde|**Alt** + **Aşağı ok**|
 |Bul'ı çıkar|**Esc**|
 |Hızlı Değiştirme|**Ctrl tuşunu basılı tutarak** + **H**|
 |Hızlı Değiştirme - Sonrakini Değiştir|**Alt** + **R**|
@@ -77,7 +77,7 @@ Komut kısayollarının tam listesi için bkz. [Varsayılan klavye kısayolları
 |IntelliSense öneri modu|**Ctrl tuşunu basılı tutarak** + **Alt** + **Boşluk** (Geçiş)|
 |IntelliSense'i zorla gösterme|**Ctrl tuşunu basılı tutarak** + **J**|
 |Hızlı Eylemler|**Ctrl tuşunu basılı tutarak** + **.**|
-|Kod parçacığı seçici|**Ctrl tuşunu basılı tutarak** + **K**,**X** veya **?**,**Tab** (Visual Basic)|
+|Kod parçacığı seçici|**Ctrl tuşunu basılı tutarak** + **K**,**X** veya **?**,**Sekme** (Visual Basic)|
 |Çevrele|**Ctrl tuşunu basılı tutarak** + **K,****S**|
 |Hızlı Bilgileri Göster|**Ctrl tuşunu basılı tutarak** + **K,****I**|
 |Şu sayfaya gidin:|**Ctrl tuşunu basılı tutarak** + **,**|

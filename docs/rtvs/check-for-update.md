@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: df2c6d3b0f8a075df58afc2dce91ea6449654524dd5232d19d1c6412880ab30b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dfc7eb2bfd2e2ace86d97174377b35096f6279df
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385567"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140290"
 ---
 # <a name="rtvs-current-version"></a>RTVS geçerli sürümü
 

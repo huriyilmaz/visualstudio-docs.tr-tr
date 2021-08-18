@@ -1,6 +1,6 @@
 ---
 description: Geçerli kod bağlamlarının bir kopyasını ayrı bir nesne olarak döndürür.
-title: 'IEnumDebugCodeContexts2:: Clone | Microsoft Docs'
+title: IEnumDebugCodeContexts2::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2f6fb5f50ecdf3c8f3b7af1d5b7e8e9615024365a31217949c052e974fb3a596
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9d33c23585234bd72094bb666b85921a3ab4eae1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360293"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152958"
 ---
 # <a name="ienumdebugcodecontexts2clone"></a>IEnumDebugCodeContexts2::Clone
-Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
+Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
+[out] Bu numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın kopyası, bu yöntemin çağrılışında orijinal ile aynı duruma sahiptir. Bununla birlikte, kopyanın ve özgün durumlarının durumları ayrıdır ve tek tek değiştirilebilir.
+ Numaralamanın kopyası, bu yöntemin çağrıldı olduğu sırada özgün ile aynı durumla aynıdır. Ancak kopyaların ve özgünlerin durumları ayrıdır ve tek tek değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

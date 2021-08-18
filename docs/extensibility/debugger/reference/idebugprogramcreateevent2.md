@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bir program ekli olduğunda hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
+description: Bu arabirim, bir program öğesine eklendiğinde hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi (SDM) tarafından gönderilir.
 title: IDebugProgramCreateEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f6d4db4ed0b2a732fc216938c616cd64963d94cb2d4878e731fae1e89c8bb84
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b778bf5a3267bf95895825b5dd6cc09aa428e3a8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338819"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126472"
 ---
 # <a name="idebugprogramcreateevent2"></a>IDebugProgramCreateEvent2
-Bu arabirim, bir program ekli olduğunda hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
+Bu arabirim, bir program öğesine eklendiğinde hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi (SDM) tarafından gönderilir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,21 +30,21 @@ Bu arabirim, bir program ekli olduğunda hata ayıklama altyapısı (DE) tarafı
 IDebugProgramCreateEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE veya özel bağlantı noktası sağlayıcı, genellikle programın ekli olduğu sırada bir programın oluşturuldığını rapor etmek için bu arabirimi uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, `QueryInterface` arabirimine erişmek için yöntemini `IDebugEvent2` kullanır.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ DE veya özel bağlantı noktası sağlayıcısı bu arabirimi, genellikle programın eklendiği zaman bir programın oluşturulduğunu raporlamak için uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, `QueryInterface` arabirime erişmek için yöntemini kullanır `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE veya özel bağlantı noktası sağlayıcı bu olay nesnesini oluşturur ve bir programın oluşturulmasını rapor etmek üzere gönderir. DE, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevini kullanarak bu olayı gönderir. Özel bağlantı noktası sağlayıcı bu olayı [IDebugPortEvents2 arabirimini kullanarak](../../../extensibility/debugger/reference/idebugportevents2.md) gönderir.
+ DE veya özel bağlantı noktası sağlayıcısı, bir programın oluşturulmasını raporlamak için bu olay nesnesini oluşturur ve gönderir. Bu olayı, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevini kullanarak gönderir. Özel bağlantı noktası sağlayıcısı bu olayı [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) arabirimini kullanarak gönderir.
 
 ## <a name="remarks"></a>Açıklamalar
- DE veya özel bağlantı noktası sağlayıcı [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)çağırarak yeni [bir IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi yayımlar.
+ DE veya özel bağlantı noktası sağlayıcısı, [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)çağırarak yeni bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi yayımlar.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-description: Bir IDebugField nesnesinin türünün nasıl yorumlanacağını belirtir.
+description: IDebugField nesnesinin türünü yorumlamayı belirtir.
 title: dwTYPE_KIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 6ff56b0f-c502-4e6c-9829-bfa05361b783
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 25b7fd89de0af624425767f21b81780459068372
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 71579d77883246e4dd945276668eb2ca3ed26205
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095959"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127616"
 ---
 # <a name="dwtype_kind"></a>dwTYPE_KIND
-Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin türünün nasıl yorumlanacağını belirtir.
+[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin türünü yorumlamayı belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +49,23 @@ public enum enum_dwTYPE_KIND {
 
 ## <a name="fields"></a>Alanlar
 `TYPE_KIND_METADATA`\
-[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) UNION [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) yapısı olarak yorumlanmalıdır.
+Bu [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) bir yapı olarak [yorumlanması](../../../extensibility/debugger/reference/metadata-type.md) METADATA_TYPE gerekir.
 
 `TYPE_KIND_PDB`\
-`TYPE_INFO`Birleşim [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) yapısı olarak yorumlanmalıdır.
+Bu `TYPE_INFO` birliktelik, bir PDB_TYPE [yorumlanır.](../../../extensibility/debugger/reference/pdb-type.md)
 
 `TYPE_KIND_BUILT`\
-`TYPE_INFO`Birleşim [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) yapısı olarak yorumlanmalıdır.
+Bu `TYPE_INFO` birliktelik, bir BUILT_TYPE [yorumlanır.](../../../extensibility/debugger/reference/built-type.md)
 
 ## <a name="remarks"></a>Açıklamalar
-Bu sabit listesinin değerleri `dwKind` [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) yapısı alanında görünür ve UNION üyesini nasıl yorumlayacağınız tespit etmek için kullanılır `type` . `TYPE_INFO`Yapı, [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) yöntemi çağrısıyla döndürülür.
+Bu numaralama değerlerinin değeri, TYPE_INFO yapısının alanında görünür ve birliğin `dwKind` üyesinin nasıl [](../../../extensibility/debugger/reference/type-info.md) yorumlanmasına karar `type` verir. Yapı, `TYPE_INFO` [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) yöntemine yapılan bir çağrıyla döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

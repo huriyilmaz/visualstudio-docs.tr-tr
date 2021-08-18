@@ -13,23 +13,23 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3dfd9aa95b44fff288f13cf106366da94f73f845d9bb2ad4626830d8b6fe7b02
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8c652e67db103350a9e3fa92e08212422caae424
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375432"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152334"
 ---
 # <a name="wizards"></a>Sihirbazlar
-Bir sihirbaz oluşturduk sonra, bunu genellikle başkalarının kullanamı için tümleşik geliştirme ortamına [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (IDE) eklemek istersiniz. Eklenen sihirbaz daha sonra Yeni Öğe **Ekle veya Project** ekle iletişim **kutularında** görünür. Yeni Uygulama Ekle veya **Project**  Öğe Ekle iletişim kutularını görmek için, **Çözüm Gezgini'de** bir açık çözüme sağ tıklayın, Ekle'nin üzerine gelin ve ardından Yeni Project **veya** **Yeni Öğe'ye tıklayın.**
+Bir sihirbaz oluşturduk sonra, bunu genellikle başkalarının kullanamı için tümleşik geliştirme ortamına [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] (IDE) eklemek istersiniz. Eklenen sihirbaz daha sonra Yeni Öğe **Ekle veya Project** ekle iletişim **kutularında** görünür. Yeni Uygulama Ekle veya **Project**  Öğe Ekle iletişim kutularını görmek için, **Çözüm Gezgini'de** açık bir çözüme sağ tıklayın, Ekle'nin üzerine gelin ve ardından Yeni Project **veya** Yeni Öğe'ye **tıklayın.**
 
- Sihirbazlar, kullanıcıların Yeni Project Ekle iletişim kutusunu veya Yeni Öğe Ekle iletişim kutusunu açtıklarında veya Çözüm Gezgini'da bir öğeye sağ tıklarken kullanılabilir değerlerin ağaç görünümünden seçimlerini yapmak için 'de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **Çözüm Gezgini.**  
+ Sihirbazlar, kullanıcıların Yeni Project Ekle iletişim kutusunu veya Yeni Öğe Ekle iletişim kutusunu açtıklarında veya dosyada bir öğeye sağ tıklarken kullanılabilir değerlerin ağaç görünümünden seçimlerini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Çözüm Gezgini.   
 
- Sihirbazda, yeni bir projenin veya projenin adını yerelleştirme seçeneğini sebilirsiniz ve sihirbazı seçen kullanıcıların göreceği simgeyi belirleyebilirsiniz. Ayrıca, yeni öğelerin diğer kullanılabilir öğelere göre görünme sıralamalarını da kontrol etmek için; öğelerin alfabetik olarak düzenlenmiş olması gerek değildir.
+ Sihirbazda, yeni bir projenin veya projenin adını yerelleştirme seçeneğini sebilirsiniz ve sihirbazı seçen kullanıcıların göreceği simgeyi belirleyebilirsiniz. Ayrıca yeni öğelerin diğer kullanılabilir öğelere göre görünme sıralamalarını da kontrol etmek için kullanılabilir; öğelerin alfabetik olarak düzenlenmiş olması gerek değildir.
 
- Ayrıca, sihirbaz açıldığında sihirbaza geçirilen özel parametrelere bağlı olarak farklı şekilde başlayan bir sihirbaz da sebilirsiniz.
+ Ayrıca, sihirbaz açıldığında sihirbaza geçirilen özel parametrelere göre farklı şekilde başlayan bir sihirbaz da sebilirsiniz.
 
- Bu bölümdeki konular, kullanılabilir sihirbazlar ve şablonlar arasında sihirbazınızı listeleye yeni Project ve Yeni Öğe Ekle iletişim kutularının neden olduğu dosyaları ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]  sihirbazın IDE'de doğru şekilde çalışması için karşılaması gereken gereksinimleri tartışmaktadır. 
+ Bu bölümdeki konular, sihirbazınızı kullanılabilir sihirbazlar ve şablonlar arasında listeleye yenilerini eklemek için Yeni Project Ekle ve Yeni Öğe Ekle iletişim kutularının neden olduğu dosyaları ve [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]  sihirbazın IDE'de doğru şekilde çalışması için karşılaması gereken gereksinimleri tartışmaktadır. 
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Şablon Dizin Açıklaması (.Vsdir) Dosyaları](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

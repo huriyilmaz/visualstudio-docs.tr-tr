@@ -1,6 +1,6 @@
 ---
 title: Özel Yönerge İşlemcisi Dağıtma
-description: Visual Studio 'da veya herhangi bir bilgisayarda özel bir yönerge işlemcisi dağıtmaya yönelik yöntemler hakkında bilgi edinin.
+description: Visual Studio veya herhangi bir bilgisayarda özel bir yönerge işlemcisi dağıtmaya yönelik yöntemler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,18 +9,19 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 30233bf34f523ef53d95cef153fd604cef0b6447
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 7659d5ab851704e686bb7ed63bb4b10fccd57f46
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112384908"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150605"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>Özel Yönerge İşlemcisi Dağıtma
 
-Herhangi bir bilgisayarda Visual Studio 'da özel bir yönerge işlemcisi kullanmak için, bu konuda açıklanan yöntemlerden birini kullanarak kaydetmeniz gerekir.
+herhangi bir bilgisayarda Visual Studio özel bir yönerge işlemcisi kullanmak için, bu konu başlığı altında açıklanan yöntemlerden birini kullanarak kaydetmeniz gerekir.
 
 Diğer yöntemler şunlardır:
 
@@ -30,11 +31,11 @@ Diğer yöntemler şunlardır:
 
 - Bir kayıt defteri anahtarı ayarlayın. Bu yöntemde, yönerge işlemcisi için bir kayıt defteri girdisini ekleyin.
 
-Bu yöntemlerden birini yalnızca, Visual Studio veya MSBuild 'de metin şablonunuzu dönüştürmek istiyorsanız kullanmanız gerekir. Kendi uygulamanızda özel bir ana bilgisayar kullanıyorsanız, her yönerge için yönerge işlemcisi bulmak özel ana bilgisayarınızın sorumluluğundadır.
+bu yöntemlerden birini yalnızca Visual Studio veya MSBuild metin şablonunuzu dönüştürmek istiyorsanız kullanmanız gerekir. Kendi uygulamanızda özel bir ana bilgisayar kullanıyorsanız, her yönerge için yönerge işlemcisi bulmak özel ana bilgisayarınızın sorumluluğundadır.
 
 ## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX'te Yönerge İşlemcisini Dağıtma
 
-Bir [Visual Studio uzantısına (VSIX)](../extensibility/starting-to-develop-visual-studio-extensions.md)özel bir yönerge işlemcisi ekleyebilirsiniz.
+bir [Visual Studio uzantısına (vsıx)](../extensibility/starting-to-develop-visual-studio-extensions.md)özel bir yönerge işlemcisi ekleyebilirsiniz.
 
  Aşağıdaki iki öğenin .vsix dosyasında bulunduğundan emin olmanız gerekir:
 
@@ -48,7 +49,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 #### <a name="to-develop-a-custom-directive-processor-in-a-vsix-project"></a>Bir VSIX projesinde özel bir yönerge işlemcisi geliştirmek için
 
-1. Yeni bir **VSIX proje** projesi oluşturun.
+1. Yeni bir **vsıx Project** projesi oluşturun.
 
 2. **Source. Extension. valtmanifest** içinde, içerik türünü ve desteklenen sürümleri ayarlayın.
 
@@ -56,7 +57,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
          **Içerik türü**  =  **VSPackage**
 
-         **Kaynak proje** = \<*the current project*>
+         **Kaynak Project** = \<*the current project*>
 
     2. **Seçili sürümler** ' e tıklayın ve yönerge işlemcisinin kullanılabilir olmasını istediğiniz yükleme türlerini işaretleyin.
 
@@ -103,11 +104,11 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 #### <a name="to-install-the-custom-directive-processor"></a>Özel Yönerge İşlemcisini yüklemek için
 
-1. Windows Gezgini 'nde, derleme dizinini (genellikle bin\Debug veya bin\Release) açın.
+1. Windows gezgini ' nde, derleme dizinini (genellikle bin\Debug veya bin\release) açın.
 
 2. Yönerge işlemcisini başka bir bilgisayara yüklemek isterseniz .vsix dosyasını başka bir bilgisayara kopyalayın.
 
-3. .vsix dosyasına çift tıklatın. Visual Studio Uzantı Yükleyicisi görüntülenir.
+3. .vsix dosyasına çift tıklatın. Visual Studio uzantısı yükleyicisi görüntülenir.
 
 4. Visual Studio’yu yeniden başlatın. Artık, özel yönerge işlemcisine başvuran yönergeleri içeren metin şablonlarını çalıştırmak mümkün olacaktır. Her yönerge bu şekildedir:
 
@@ -115,7 +116,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
 #### <a name="to-uninstall-or-temporarily-disable-the-custom-directive-processor"></a>Özel yönerge işlemcisini kaldırmak veya kalıcı olarak devre dışı bırakmak için
 
-1. Visual Studio **araçları** menüsünde **Uzantı Yöneticisi**' ne tıklayın.
+1. Visual Studio **araçları** menüsünde **uzantı yöneticisi**' ne tıklayın.
 
 2. Yönerge işlemcisini içeren VSıX ' i seçin ve ardından **Kaldır** veya **devre dışı bırak**' a tıklayın.
 
@@ -168,7 +169,7 @@ Bir .vsix dosyası oluşturmanın birkaç yolu vardır. Aşağıdaki yordam bir 
 
     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ \* . 0 \ Texttemplating\directiveiþlemcileri**
 
-    Visual Studio 'nun deneysel sürümüne yönerge işlemcisini yüklemek isterseniz "11,0" sonrasına "exp" ekleyin.
+    yönerge işlemcisini Visual Studio deneysel sürümüne yüklemek isterseniz "11,0" sonrasına "Exp" ekleyin.
 
 3. Yönerge işlemcisi sınıfıyla aynı ada sahip bir kayıt defteri anahtarı ekleyin.
 

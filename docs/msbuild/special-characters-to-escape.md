@@ -1,6 +1,6 @@
 ---
-title: Kaçış için özel karakterler | Microsoft Docs
-description: Yalnızca kullanıldıkları bağlamda özel anlamlarsa kaçılması gereken özel karakterler hakkında bilgi edinin.
+title: Kaçış Karakteri için Özel Karakterler | Microsoft Docs
+description: Yalnızca kullanıldıkları bağlamda özel anlamları varsa, kaçacakları özel karakterler hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,38 +16,39 @@ ms.assetid: 5b5172c3-41e4-4f38-a16f-2aeac831a5fc
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e665c214ea75de67a6c339bb516dfb812936448
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d51afda7866fbf38642b47a99b970a6407ac4d19
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878155"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100588"
 ---
 # <a name="special-characters-to-escape"></a>Kaçış için özel karakterler
 
-Özel karakterler yalnızca kullanıldıkları bağlamda özel anlam içeriyorsa kaçışmalıdır. Örneğin, yıldız işareti (*) yalnızca bir öğe tanımının "Içerme" ve "hariç tutma" özniteliklerinde ya da öğesine yapılan çağrıda özel bir karakterdir <xref:Microsoft.Build.Tasks.CreateItem> . Diğer tüm durumlarda, yıldız işareti sabit bir yıldız işareti olarak değerlendirilir. Proje dosyalarında herhangi bir yerde yıldız işaretleri gerekmez, ancak bunu yapmak zarar vermez.
+Özel karakterler yalnızca kullanıldıkları bağlamda özel anlamlara sahipse kaçmalıdır. Örneğin, yıldız işareti (*) yalnızca bir öğe tanımının "Dahil" ve "Dışla" özniteliklerinde veya çağrısında özel bir <xref:Microsoft.Build.Tasks.CreateItem> karakterdir. Diğer tüm durumlarda, yıldız işareti değişmez yıldız olarak kabul edilir. Proje dosyalarında her yerde yıldız işareti kaçışı yapmak zorunda değil, ancak bunu yapmak bir zarar vermez.
 
- \<xx>Özel karakter yerine% gösterimini kullanın; burada \<xx> ASCII karakterinin onaltılı değeri temsil eder. Örneğin, bir yıldız işareti (*) sabit karakter olarak kullanmak için değerini kullanın `%2A` .
+ ASCII karakterinin onaltılık değerini temsil eden özel karakter yerine % \<xx> \<xx> değerini kullanın. Örneğin, değişmez karakter olarak yıldız (*) kullanmak için değerini `%2A` kullanın.
 
- Kaçış için özel karakterlerin tam listesi aşağıdadır:
+ Kaçış karakteri olarak özel karakterlerin tam listesi şu şekildedir:
 
-|Karakter|ASCII kodlama|Description|
+|Karakter|ASCII kodlaması|Açıklama|
 |---------|----------|-----------|
-|%|%25|Meta verilere başvurmak için kullanılan yüzde işareti.|
-|$|%24|Dolar işareti, özelliklere başvurmak için kullanılır.|
-|@|%40|Öğesinde, öğe listelerine başvurmak için kullanılır.|
-|(|%28|Listelerde kullanılan parantez açın.|
-|)|%29|Listelerde kullanılan parantez kapatma.|
-|;|% 3B|Noktalı virgül, liste ayırıcısı.|
-|?|% 3F|Soru işareti, bir öğenin Içerme/hariç tutma bölümünde bir dosya belirtimini açıklayan bir joker karakterdir.|
-|* |%2A|Bir öğenin Içerme/hariç tutma bölümünde bir dosya belirtimini açıklayan bir joker karakter olan yıldız işareti.|
+|%|%25|Meta verilere başvuru yapmak için kullanılan yüzde işareti.|
+|$|%24|Özelliklere başvuru yapmak için kullanılan dolar işareti.|
+|@|%40|İşarette, öğe listelerine başvuru yapmak için kullanılır.|
+|(|%28|Listelerde kullanılan parantezi açın.|
+|)|%29|Listelerde kullanılan parantezleri kapatın.|
+|;|%3B|Noktalı virgül, liste ayırıcısı.|
+|?|%3F|Soru işareti, bir öğenin Dahil Etme/Dışlama bölümünde dosya özellikleri açıklanmışken joker karakterdir.|
+|* |%2A|Yıldız işareti, bir öğenin Dahil Etme/Dışlama bölümünde dosya özellikleri açıklanmışken joker karakterdir.|
 
 > [!NOTE]
-> Bazı senaryolarda, bir görev içinde kullanırken olduğu gibi çift tırnak (") karakterlerini kaçış gerekebilir `Exec` .
+> Bazı senaryolarda, bir görev içinde kullanma gibi çift tırnak (") karakterlerinden kaçış karakterine ihtiyacınız `Exec` olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: MSBuild 'de özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md)
+- [Nasıllı: Özel karakterlerin kaçış karakteri MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

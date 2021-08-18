@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b11489a6233a016beb287930c9ca7d1082f646f46a7bf50179862866347233d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a74b9d65db028646a6aca28b2c3bbb738e51ae18
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429814"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151710"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Visual Studio'de oluşturucu oluşturma
 
@@ -27,7 +27,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 **Ne:** Bir sınıfta yeni bir oluşturucu için kodu hemen oluşturmana olanak sağlar.
 
-**Ne zaman:** Yeni bir oluşturucu tanıtabilirsiniz ve bunu otomatik olarak düzgün bir şekilde bildirebilirsiniz veya var olan bir oluşturucuda değişiklik yapılır.
+**Ne zaman:** Yeni bir oluşturucu tanıtmış ve bunu otomatik olarak düzgün bir şekilde bildirmiş veya var olan bir oluşturucuda değişiklik yapmak istiyorsanız.
 
 **Neden:** Oluşturucusu kullanmadan önce bildirebilirsiniz, ancak bu özellik bunu, uygun parametrelerle otomatik olarak oluşturur. Ayrıca, mevcut bir oluşturucuda değişiklik yapmak için, bu özelliği otomatik olarak güncelleştirmek için kullanmadıkça tüm çağrılarını güncelleştirmek gerekir.
 
@@ -49,7 +49,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
       - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
       - Metin :::image type="icon" source="media/screwdriver.png"::: imleci sınıftaki boş satırda zaten varsa sol kenar boşluğunda görünen simgeye tıklayın.
@@ -60,7 +60,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 
    Üye **seç** iletişim kutusu açılır.
 
-1. Oluşturucu parametreleri olarak eklemek istediğiniz üyeleri seçme. Yukarı ve aşağı okları kullanarak bunları sıralayebilirsiniz. **Tamam'ı seçin.**
+1. Oluşturucu parametreleri olarak eklemek istediğiniz üyeleri seçme. Yukarı ve aşağı okları kullanarak bunları sıraebilirsiniz. **Tamam'ı seçin.**
 
    ![Üye seç iletişim kutusu](media/constructor1-dialog-cs.png)
 
@@ -75,7 +75,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 1. İmlecinizi örneğin üzerine yerleştirin.
 
-2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
 
 3. içinde **Oluşturucu `<QualifiedName>` oluştur'a (özelliklerle) tıklayın.**
 
@@ -90,7 +90,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
       - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
       - Metin :::image type="icon" source="media/screwdriver.png"::: imleci seçimin olduğu satırda zaten varsa sol kenar boşluğunda görünen simgeye tıklayın.
@@ -118,7 +118,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
       - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
       - Kırmızı çizginin üzerine gelin ve görüntülenen :::image type="icon" source="media/error-bulb.png"::: simgeye tıklayın.
@@ -143,16 +143,16 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 ## <a name="add-parameter-to-existing-constructor-c-only"></a><a id="addparameter"></a> Mevcut oluşturucuya parametre ekleme (yalnızca C# )
 
-1. Var olan bir oluşturucu çağrısına parametre ekleyin.
+1. Mevcut oluşturucu çağrısına bir parametre ekleyin.
 
-2. İmlecinizi henüz mevcut olmayan bir oluşturucusu kullandığınızı belirten kırmızı bir geçişin bulunduğu satıra yerleştirebilirsiniz.
+2. İmlecinizi henüz mevcut olmayan bir oluşturucusu kullandığınızı gösteren kırmızı bir geçişin bulunduğu satıra yerleştirebilirsiniz.
 
     ![Kırmızı bir geçişin bulunduğu satırı gösteren ekran görüntüsü.](media/constructor4-highlight-cs.png)
 
 3. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
       - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
       - Kırmızı çizginin üzerine gelin ve görüntülenen :::image type="icon" source="media/error-bulb.png"::: simgeye tıklayın.
@@ -164,13 +164,13 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 
    parametresi oluşturucuya eklenir ve türü kullanımından gelir.
 
-   ![Parametresinin oluşturucuya eklenmiştir ve türü kullanımından alınarak gösterilen ekran görüntüsü.](media/constructor4-result-cs.png)
+   ![Parametresinin oluşturucuya eklenmiştir ve türü kullanımdan alınarak ekran görüntüsü.](media/constructor4-result-cs.png)
 
 Ayrıca var olan bir yönteme parametre eklemek de gerekir. Daha fazla bilgi için [bkz. Yöntemine parametre ekleme.](add-parameter.md)
 
 ## <a name="create-and-initialize-a-field-or-property-from-a-constructor-parameter-c-only"></a><a id="create"></a> Oluşturucu parametresinden bir alan veya özellik oluşturma ve başlatma (yalnızca C# )
 
-1. Mevcut bir oluşturucu bulun ve bir parametre ekleyin:
+1. Var olan bir oluşturucu bulun ve bir parametre ekleyin:
 
    ![Mevcut oluşturucusu gösteren ekran görüntüsü.](media/constructor5-highlight-cs.png)
 
@@ -179,7 +179,7 @@ Ayrıca var olan bir yönteme parametre eklemek de gerekir. Daha fazla bilgi iç
 1. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    - **Fare**
       - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
       - Metin :::image type="icon" source="media/screwdriver.png"::: imleci eklenen parametreyle satırda zaten varsa sol kenar boşluğunda görünen simgeye tıklayın.

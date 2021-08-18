@@ -1,6 +1,6 @@
 ---
-title: MSBuild özel karakterler | Microsoft Docs
-description: Belirli bağlamlarda özel kullanım için MSBuild ayrılmış karakterleri ve bu karakterlerin ne zaman ve nasıl kaçış hakkında bilgi edinin.
+title: MSBuild Özel Karakterler | Microsoft Docs
+description: Belirli bağlamlarda özel MSBuild için ayrılmış karakterler hakkında bilgi ve bu karakterlerin ne zaman ve nasıl kaçış karakteri olarak kaçacaklarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/12/2019
 ms.topic: conceptual
@@ -12,34 +12,35 @@ ms.assetid: 545e6a59-1093-4514-935e-78679a46fb3c
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c5db0b870e050a9235f719d83710747101b95c3c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ab12aef7ad75a3f5dd877015f2a0d5afb8451a4c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922527"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143111"
 ---
 # <a name="msbuild-special-characters"></a>MSBuild özel karakterleri
 
-MSBuild belirli bağlamlarda özel kullanım için bazı karakterleri ayırır. Bu karakterleri yalnızca ayrıldıkları bağlamda kullanmak istiyorsanız, bu karakterleri atlamanız gerekir. Örneğin, bir yıldız işareti yalnızca `Include` `Exclude` bir öğe tanımının ve özniteliklerinde, öğesine yapılan çağrılar için özel anlamı vardır `CreateItem` . Bir yıldız işareti bu bağlamların birinde bir yıldız işareti olarak görünmesini istiyorsanız, bunu atlamanız gerekir. Diğer her bağlamda, görünmesini istediğiniz yere yıldız işareti yazmanız yeterlidir.
+MSBuild belirli bağlamlarda özel kullanım için bazı karakterler yedekler. Bu tür karakterleri yalnızca ayrılmış olduğu bağlamda kullanmak istediğiniz durumlarda kaçış karakteri olarak kullanabilirsiniz. Örneğin, yıldız işareti yalnızca bir öğe tanımının ve özniteliklerinde ve çağrısında özel `Include` `Exclude` bir anlamı `CreateItem` vardır. Bir yıldız işaretinin bu bağlamlardan biri içinde yıldız işareti olarak görünmesini istemiyorsanız, yıldız işaretine kaçış karakteri uygulamanız gerekir. Diğer tüm bağlamlarda yıldız işaretlerini görünmesini istediğiniz yere yazmanız gerekir.
 
- Özel bir karakterden çıkmak için, \<xx> \<xx> karakterin ASCII onaltılık değerini temsil eden% sözdizimini kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: MSBuild 'teki özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md).
+ Özel bir karakterden kaçış karakteri için % sözdizimini kullanın; burada karakterin \<xx> \<xx> ASCII onaltılık değerini temsil eder. Daha fazla bilgi için, [bkz. How to: Escape special characters in MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md).
 
 ## <a name="special-characters"></a>Özel karakterler
 
- Aşağıdaki tabloda MSBuild özel karakterleri listelenmiştir:
+ Aşağıdaki tabloda özel MSBuild listele ve listele:
 
-|**Karakter**|**ASCII**|**Ayrılmış kullanım**|
+|**Karakter**|**Ascıı**|**Ayrılmış kullanım**|
 |-------------------|---------------|------------------------|
-|%|%25|Meta verilere başvuruluyor|
+|%|%25|Meta verilere başvuru|
 |$|%24|Başvuru özellikleri|
-|@|%40|Öğe listelerine başvurma|
+|@|%40|Öğe listelerine başvuru|
 |'|%27|Koşullar ve diğer ifadeler|
-|;|% 3B|Liste ayırıcı|
-|?|% 3F|`Include`Ve özniteliklerinde dosya adları için joker karakter `Exclude`|
-|*|%2A|`Include`Ve özniteliklerindeki dosya adlarında kullanılmak üzere joker karakter `Exclude`|
+|;|%3B|Liste ayırıcı|
+|?|%3F|ve özniteliklerinde dosya adları için `Include` joker `Exclude` karakter|
+|*|%2A|ve özniteliklerinde dosya adlarında kullanmak için `Include` joker `Exclude` karakter|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

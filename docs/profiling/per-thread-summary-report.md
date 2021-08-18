@@ -1,6 +1,6 @@
 ---
-title: İş Parçacığı Başına Özet Raporu | Microsoft Docs
-description: Bir çubuk grafiğini görüntüleme, her bir görünür iş parçacığının o anda görünür olan zaman aralığı boyunca her etkinlik kategorisinde harcadığı sürenin oranını gösterir.
+title: Her Iş parçacığı özet raporu | Microsoft Docs
+description: Bir çubuk grafiğinde, gizli olmayan her iş parçacığının her bir etkinlik kategorisinde, o anda görünür zaman aralığı boyunca harcadığı sürenin oranı gösterilir.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,22 +14,22 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d4c573dcd835d19299e14c92e714894a01c30e06a637a57f339c184dbcd80b9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 35c74faa492f7ce9899dc9be67f3af50d38bc511
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121316051"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107100"
 ---
-# <a name="per-thread-summary-report"></a>İş parçacığı başına özet raporu
-Bu çubuk grafik, her bir görünür iş parçacığının o anda görünür olan zaman aralığı boyunca her etkinlik kategorisinde harcadığı sürenin oranını gösterir. "Yürütme", iş parçacığının yürütülmektedir; diğer tüm kategoriler iş parçacığının bir şey beklediği anlamına geliyor.
+# <a name="per-thread-summary-report"></a>Her iş parçacığı özet raporu
+Bu çubuk grafiğinde, gizli olmayan her iş parçacığının her bir etkinlik kategorisinde, o anda görünür zaman aralığı boyunca harcadığı sürenin oranı gösterilmektedir. "Yürütme", iş parçacığının yürütüldüğü anlamına gelir; diğer tüm kategoriler, iş parçacığının bir şeyi beklediğini anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yürütme süresi (İş Parçacıkları Görünümü)](../profiling/execution-time-threads-view.md)
-- [I/O zamanı (İş Parçacıkları Görünümü)](../profiling/i-o-time-threads-view.md)
-- [Bellek yönetim süresi](../profiling/memory-management-time.md)
-- [Önk süre](../profiling/preemption-time.md)
+- [Yürütme süresi (Iş parçacıkları görünümü)](../profiling/execution-time-threads-view.md)
+- [G/ç zamanı (Iş parçacıkları görünümü)](../profiling/i-o-time-threads-view.md)
+- [Bellek yönetimi zamanı](../profiling/memory-management-time.md)
+- [Önalım zamanı](../profiling/preemption-time.md)
 - [Uyku süresi](../profiling/sleep-time.md)
-- [Eşitleme zamanı](../profiling/synchronization-time.md)
-- [UI işleme süresi](../profiling/ui-processing-time.md)
+- [Eşitleme saati](../profiling/synchronization-time.md)
+- [UI işlem süresi](../profiling/ui-processing-time.md)
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

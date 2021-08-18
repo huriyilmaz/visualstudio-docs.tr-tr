@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cd695f67e79fab7ac9f67c077fbf616f51d9f75a2be9f4269977c8293b1b43fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1658e837875e1688b2990b7cbf5f8f5b2e4d5de0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121369065"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093456"
 ---
 # <a name="blocking-time-profile-report"></a>Engelleme zamanı profil raporu
 Profil raporları, her engelleme kategorisine özgü çağrı yığınları için toplu engelleme zaman verileri sağlar (örneğin, "g/ç" veya "eşitleme"). Önalım raporu, önalım örneklerinin sayısıyla birlikte geçerli işlemi içeren işlemleri listeler. Engelleme profili raporunu oluşturmak için araç, API çağrılarını engellemeyi ve bunları bir çağrı yığını ağacına biriktirir. Bu raporlarda gösterilen veriler, geçerli zaman aralığına, gizli iş parçacıklarına ve uygulanabilecek aşağıdaki iki filtreye göre farklılık gösterir:

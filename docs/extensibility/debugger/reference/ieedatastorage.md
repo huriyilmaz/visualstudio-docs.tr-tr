@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a975190aebbb26ac77614e1fc0e0d7a358bda3440da0b5f8bcdb7562390902e2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1f8597a62f319247ca607d4b1f5221665f3de186
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415695"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152997"
 ---
 # <a name="ieedatastorage"></a>IEEDataStorage
 Bu arabirim bir bayt dizisini temsil eder.
@@ -31,7 +31,7 @@ IEEDataStorage : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- İfade değerlendiricisi (EE), bir bayt dizisini temsil etmek için bu arabirimi [(IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi aracılığıyla verileri almak ve değiştirmek için tür görselleştiriciler tarafından kullanılır) uygulamaya alır. Bu EE genellikle dış tür görselleştiricileri desteklemek için bu arabirimi uygulamaya almaktadır.
+ İfade değerlendirici (EE), bir bayt dizisini temsil etmek için bu arabirimi (tür görselleştiriciler tarafından [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimi aracılığıyla verileri almak ve değiştirmek için kullanılır) uygulamaya alır. Bu EE genellikle dış tür görselleştiricileri desteklemek için bu arabirimi uygulamaz.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Arabirimde yöntemlerin `IPropertyProxyEESide` hepsi bu arabirimi geri döner. [IPropertyProxyESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) arabirimini almak için [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) çağrısı. [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md) arabirimini almak için [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) çağrısı.

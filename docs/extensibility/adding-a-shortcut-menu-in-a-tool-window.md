@@ -16,19 +16,19 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d698b0e3ee5e2c629e7d9cc1c1415b40bfbe176208cb87e1f5ee14a2e9a8c3ae
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 872439cf9501fb649dcfde3723d3fbb21eab7ddb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435120"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127681"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>Araç penceresine kısayol menüsü ekleme
 Bu kılavuz bir araç penceresine kısayol menüsü koyar. Kısayol menüsü, kullanıcı bir düğmeye, metin kutusuna veya pencere arka planına sağ tıkladığında görüntülenen bir menüyü ifade eder. Kısayol menüsündeki komutlar, diğer menülerde veya araç çubuklarda yer alan komutlar ile aynı şekilde davranır. Kısayol menüsünü desteklemek için bunu *.vsct* dosyasında belirtin ve farenin sağ tıklaması üzerine yanıt olarak görüntüler.
 
 Araç penceresi, 'den devralan özel bir araç penceresi sınıfındaki WPF kullanıcı denetiminden <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> oluşur.
 
-Bu kılavuzda, *.vsct* dosyasında menü öğelerini bildirerek ve ardından Yönetilen Paket Çerçevesi'ni kullanarak bunları araç penceresini tanımlayan sınıfta uygulamak için bir kısayol menüsünün Visual Studio menüsü olarak nasıl oluşturulacakları gösterilir. Bu yaklaşım, kullanıcı arabirimi Visual Studio Otomasyon nesne modeline erişimi kolaylaştırır.
+Bu kılavuzda, *.vsct* dosyasındaki menü öğelerini bildirerek ve ardından Yönetilen Paket Çerçevesi'ni kullanarak bunları araç penceresini tanımlayan sınıfta uygulamak için bir kısayol menüsünün Visual Studio menüsü olarak nasıl oluşturulacakları gösterilir. Bu yaklaşım, kullanıcı arabirimi Visual Studio Otomasyon nesne modeline erişimi kolaylaştırır.
 
 Alternatif olarak, kısayol menüsünüz Visual Studio erişemayacaksa, kullanıcı denetiminde <xref:System.Windows.FrameworkElement.ContextMenu%2A> bir XAML öğesinin özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [ContextMenu](/dotnet/framework/wpf/controls/contextmenu).
 
@@ -130,7 +130,7 @@ Bu kılavuzda gösterilene gibi bir kısayol menüsü, kullanıcının araç pen
 ## <a name="implementing-the-shortcut-menu"></a>Kısayol menüsünü uygulama
  Bu bölümde kısayol menüsü ve komutları uygulanır.
 
-1. *ShortcutMenu.cs'de,* araç penceresi menü komut hizmetini edinebilirsiniz, ancak içerdiği denetim bunu eldeamaz. Aşağıdaki adımlarda, menü komut hizmetinin kullanıcı denetimi için nasıl kullanılabilir hale geldi?
+1. *ShortcutMenu.cs'de,* araç penceresi menü komut hizmetini edinebilirsiniz, ancak içerdiği denetim bunu eldeamaz. Aşağıdaki adımlarda, menü komut hizmetinin kullanıcı denetimi için nasıl kullanılabilir hale göster gösterebilirsiniz.
 
 2. *ShortcutMenu.cs içinde* aşağıdaki using yönergelerini ekleyin:
 
@@ -186,7 +186,7 @@ Bu kılavuzda gösterilene gibi bir kısayol menüsü, kullanıcının araç pen
     }
     ```
 
-6. *ShortcutMenuControl.xaml içinde,* üst <xref:System.Windows.UIElement.MouseRightButtonDown> düzey öğesine bir olay <xref:System.Windows.Controls.UserControl> ekleyin. XAML dosyası şimdi aşağıdaki gibi görünüyor:
+6. *ShortcutMenuControl.xaml içinde,* üst <xref:System.Windows.UIElement.MouseRightButtonDown> düzey öğesine bir olay <xref:System.Windows.Controls.UserControl> ekleyin. XAML dosyası şimdi şöyle görünüyor olmalı:
 
     ```vb
     <UserControl x:Class="TWShortcutMenu.ShortcutMenuControl"
@@ -273,7 +273,7 @@ Bu kılavuzda gösterilene gibi bir kısayol menüsü, kullanıcının araç pen
 
 1. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örnek görünür.
 
-2. Deneysel örnekte Görünüm / Diğer **Windows'a** ve ardından **ShortcutMenu'ya tıklayın.** Bunu yapmak araç pencerenizi görüntülemeli.
+2. Deneysel örnekte Görünüm **/** Diğer Windows ve ardından **ShortcutMenu 'ya tıklayın.** Bunu yapmak araç pencerenizi görüntülemeli.
 
 3. Araç penceresinin gövdesine sağ tıklayın. Renk listesi olan bir kısayol menüsü görüntüleniyor.
 

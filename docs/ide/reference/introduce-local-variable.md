@@ -6,16 +6,17 @@ ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35850293b1ef739506fe6848e000396f6bacf1d8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b6e6dabf79cdd3c1774f016991098a1bde337568
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852303"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151541"
 ---
-# <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio 'da yerel bir değişken tanıtma
+# <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio yerel bir değişken tanıtma
 
 Bu kod üretimi için geçerlidir:
 

@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b7dfed5affb1d1c0c58efc46f001e4f68ea6bacc7167edff1967d64aff656ed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f7f7256c806c0e7198569c2d323895d74f78ee03
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358655"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151996"
 ---
 # <a name="help-viewer-administrator-guide"></a>Yardım Görüntüleyicisi yönetici kılavuzu
 
@@ -88,7 +88,7 @@ Uyarılar:
 
 ### <a name="create-the-content-set"></a>İçerik kümesi oluşturma
 
-Temel içerik kümesi oluşturamadan önce hedef bilgisayarda tüm yerel Visual Studio kaldırmanız gerekir.
+Temel içerik kümesi oluşturamadan önce hedef bilgisayarda tüm yerel Visual Studio içeriğini kaldırmanız gerekir.
 
 #### <a name="to-uninstall-local-help"></a>Yerel yardımı kaldırmak için
 
@@ -100,9 +100,9 @@ Temel içerik kümesi oluşturamadan önce hedef bilgisayarda tüm yerel Visual 
 
 4. Kaldırmak için **Güncelleştir'i** seçin.
 
-5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* dizinine göz atarak klasörün yalnızca dosya dosyasını *içerdiğinicatalogType.xml.*
+5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* dizinine göz atarak klasörün yalnızca dosya *catalogType.xml.*
 
-   Daha önce yüklenmiş olan tüm yerel Visual Studio kaldırmış olduktan sonra, temel içerik kümesi indirmeye hazır oluruz.
+   Daha önce yüklenmiş olan tüm yerel Visual Studio yardım içeriğini kaldırmış olduktan sonra, temel içerik kümesi indirmeye hazır oluruz.
 
 #### <a name="to-download-the-content"></a>İçeriği indirmek için
 

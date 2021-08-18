@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Sınıf Tasarımcısı Kullanarak Tür Oluşturma'
-description: C# ve Visual Basic projeleri için bir sınıf diyagramında oluşturarak yeni türler tasarlamayı öğrenin.
+description: C# için yeni türler tasarlamayı ve Visual Basic diyagramda proje oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,48 +17,49 @@ ms.assetid: 94458c31-28bc-40e2-9737-85868788a0e5
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6102d5252564834f1de7c533e763d7b08a8f9fb0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 51379952830a518b6a5f57cfed75d632f3c3f0c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880547"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102031"
 ---
-# <a name="how-to-create-types-by-using-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı kullanarak tür oluşturma
+# <a name="how-to-create-types-by-using-class-designer"></a>Nasıl Sınıf Tasarımcısı kullanarak türler oluşturma
 
-C# ve Visual Basic projelerine yönelik yeni türler tasarlamak için bunları bir sınıf diyagramında oluşturun. Varolan türleri görmek için bkz. [nasıl yapılır: varolan türleri görüntüleme](how-to-view-existing-types.md).
+C# için yeni türler tasarlamak Visual Basic projelerini sınıf diyagramında oluşturun. Mevcut türleri görmek için [bkz. Nasıl 2.](how-to-view-existing-types.md)
 
-## <a name="create-a-new-type"></a><a name="CreateType"></a> Yeni bir tür oluştur
+## <a name="create-a-new-type"></a><a name="CreateType"></a> Yeni tür oluşturma
 
-1. **Araç kutusunda**, **Sınıf Tasarımcısı** altında, bunlardan birini bir sınıf diyagramına sürükleyin:
+1. Araç **Kutusunda,** Sınıf Tasarımcısı **altında,** bunlardan birini bir sınıf diyagramına sürükleyin:
 
-    - **Sınıf** veya **soyut sınıf**
+    - **Sınıf** veya **Soyut Sınıf**
 
     - **Sabit listesi**
 
     - **Arabirim**
 
-    - **Yapı** (vb) veya **Yapı** (C#)
+    - **Yapı** (VB) veya **Yapı** (C#)
 
     - **Temsilci**
 
-    - **Modül** (yalnızca vb)
+    - **Modül** (yalnızca VB)
 
 2. Türü adlandırın. Daha sonra erişim düzeyini seçin.
 
 3. Tür için başlangıç kodunu eklemek istediğiniz dosyayı seçin:
 
-    - Yeni bir dosya oluşturmak ve geçerli projeye eklemek için **yeni dosya oluştur** ' u seçin ve dosyayı adlandırın.
+    - Yeni bir dosya oluşturmak ve bunu geçerli projeye eklemek için Yeni dosya **oluştur'a tıklayın ve** dosyayı olarak ad girin.
 
-    - Varolan bir dosyaya kod eklemek için **varolan dosyaya ekle**' yi seçin.
+    - Mevcut bir dosyaya kod eklemek için Var olan dosyaya **ekle'yi seçin.**
 
-         Çözümünüz birden çok uygulama arasında kod paylaşan bir proje içeriyorsa, uygulama projesindeki sınıf diyagramına yeni bir tür ekleyebilirsiniz, ancak yalnızca karşılık gelen sınıf dosyası aynı uygulama projesinde ise veya paylaşılan projem ise.
+         Çözümünüz birden çok uygulama arasında kod paylaşan bir projeye sahipse, uygulama projesinde bir sınıf diyagramına yeni bir tür eklersiniz, ancak yalnızca karşılık gelen sınıf dosyası aynı uygulama projesinde veya paylaşılan projede ise.
 
 4. Şimdi, türü tanımlamak için diğer öğeleri ekleyin:
 
-    |**Bekleniyor**|**Ekle**|
+    |**Için**|**Ekle**|
     |-|-|
     |Sınıflar, soyut sınıflar, yapılar veya struct'lar|Yöntemler, özellikler, alanlar, olaylar, yapıcılar (yöntem), yıkıcılar (yöntem) ve türü tanımlayan sabitler|
     |Numaralandırmalar|Numaralandırmayı oluşturan alan değerleri|
@@ -66,23 +67,23 @@ C# ve Visual Basic projelerine yönelik yeni türler tasarlamak için bunları b
     |Temsilci|Temsilciyi tanımlayan parametreler|
     |Modül|Yöntemler, özellikler, alanlar, olaylar, yapıcılar (yöntem) ve modülü tanımlayan sabitler|
 
-     Bkz. [üyeleri oluşturma](creating-and-configuring-type-members.md#create-members).
+     Bkz. [Üye Oluşturma.](creating-and-configuring-type-members.md#create-members)
 
-## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a> Türe özel bir öznitelik uygulama
+## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a> Bir türe özel öznitelik uygulama
 
 1. Bir sınıf diyagramında türe ait şekle tıklayın.
 
-2. **Özellikler**' de, türün **özel öznitelikler** özelliğinin yanındaki üç nokta (...) düğmesine tıklayın.
+2. **Özellikler'de,** **türün Özel Öznitelikler** özelliğinin yanında üç nokta (...) düğmesine tıklayın.
 
 3. Satır başına bir olmak üzere, bir ya da daha fazla özel öznitelik ekleyin. Bunları ayraçlar içine almayın.
 
    Özel öznitelikler türe uygulanır.
 
-## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a> Bir tür üyesine özel bir öznitelik uygulama
+## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a> Tür üyesine özel öznitelik uygulama
 
 1. Bir sınıf diyagramında kendi türünün şeklinde üyenin adına veya Sınıf Ayrıntıları penceresinde satırına tıklayın.
 
-2. **Özellikler**' de üyenin **özel öznitelikler** özelliğini bulun.
+2. **Özellikler'de,** üyenin **Özel Öznitelikler özelliğini** bulun.
 
 3. Satır başına bir olmak üzere, bir ya da daha fazla özel öznitelik ekleyin. Bunları ayraçlar içine almayın.
 
@@ -90,7 +91,7 @@ C# ve Visual Basic projelerine yönelik yeni türler tasarlamak için bunları b
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: türler arasında devralma oluşturma](how-to-create-inheritance-between-types.md)
-- [Nasıl yapılır: türler arasında Ilişkilendirme oluşturma](how-to-create-associations-between-types.md)
+- [Nasıl: Türler Arasında Devralma Oluşturma](how-to-create-inheritance-between-types.md)
+- [Nasıl kurulur: Türler Arasında İlişki oluşturma](how-to-create-associations-between-types.md)
 - [Tür Üyeleri Oluşturma ve Yapılandırma](creating-and-configuring-type-members.md)
 - [Sınıfları ve Türleri Tasarlama](designing-and-viewing-classes-and-types.md)

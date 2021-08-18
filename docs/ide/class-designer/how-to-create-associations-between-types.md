@@ -16,14 +16,15 @@ ms.assetid: adccb9c8-2f8a-4086-9fa9-f70f99fb6e00
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e7cb4e344ca2ecde2f3644b57f0d26773b6294bb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cfd60aba37931d6200cd241a7f0863b3c2e52eb8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880534"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109532"
 ---
 # <a name="how-to-create-associations-between-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı türler arasında ilişkilendirme oluşturma
 

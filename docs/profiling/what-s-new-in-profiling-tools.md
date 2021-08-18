@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 2017'de Profil Oluşturma | Microsoft Docs
-description: Tanılama Araçları'nın, uygulamanıza düzeltmesi gereken sorunları tanımlamanıza yardımcı olacak yeni görselleştirmeler içerir.
+description: Tanılama Araçları'nın uygulamanıza düzeltmesi gereken sorunları tanımlamanıza yardımcı olacak yeni görselleştirmeler olduğunu öğrenin.
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 9021722e450bd16edbf16dfde019aa91a873664940172ca68055cd03a99bf565
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ae501119b74300dea4397ccaaadbf13da99bbf6e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121426227"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140628"
 ---
 # <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>'de profil oluşturma araçlarında yapılan yeniler [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 

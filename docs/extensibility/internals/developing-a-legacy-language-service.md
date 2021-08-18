@@ -1,6 +1,6 @@
 ---
 title: Eski dil hizmeti geliştirme | Microsoft Docs
-description: Eski dil hizmetini VSPackage 'un bir parçası olarak veya Managed Extensibility Framework (MEF) uzantılarını kullanarak uygulama hakkında bilgi edinin.
+description: eski dil hizmetini vspackage 'un bir parçası olarak veya Managed Extensibility Framework (MEF) uzantılarını kullanarak uygulama hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,14 +16,15 @@ ms.assetid: 6151ba88-c1c3-41de-a1cc-668f494d48d1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59c06c96d2a0263c9e76ed4359e0fac93ab2ab25
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4b300756334a84dd2e3d6ade83cc48caa10349bf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056733"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124626"
 ---
 # <a name="develop-a-legacy-language-service"></a>Eski dil hizmeti geliştirme
 Bu bölüm, eski dil hizmeti oluşturmanıza yardımcı olan konulara bağlantı sağlar.

@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e34e7e01d05b7f4a75e9332f40e6210f70405a08a9ffe826570e77836fa7e70
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fb96033f2fb3ce10a7bba553aa494fb1b8a50941
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121336739"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102096"
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Visual Studio İçin Değerlendirme Araçları
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio için craftsmansevkiyat denetim listesi

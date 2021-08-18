@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 897e4482d45c5f191df8e60b091782bce467e1ba10d6d2c595856d77ad8d470e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 91e2c10ca95004154bf91e11906d440b57e4ca72
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427593"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108388"
 ---
 # <a name="resolvekeysource-task"></a>ResolveKeySource görevi
 

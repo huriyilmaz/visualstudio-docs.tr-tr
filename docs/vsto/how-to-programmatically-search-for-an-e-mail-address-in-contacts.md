@@ -1,6 +1,6 @@
 ---
 title: Program aracılığıyla kişilerde e-posta adresi bulma
-description: Microsoft uygulama kişilerinizi kullanarak Visual Studio e-posta adresini program aracılığıyla bulmak için Outlook öğrenin.
+description: Program aracılığıyla Microsoft Visual Studio e-posta adresini bulmak için bu adresi nasıl kullanabileceğinizi Outlook öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: afd35041cc035bf5a03db0966cb30bafbcadfbd69fdc09f8f5a4c9219cdf8b89
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ace2fef3a40695ab1165a65dd4a88ae329075b77
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384190"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083108"
 ---
 # <a name="how-to-programmatically-search-for-an-email-address-in-contacts"></a>Nasıl olur: Kişilerde program aracılığıyla e-posta adresi arama
-  Bu örnek, e-posta adreslerinde etki alanı adına sahip **kişiler example.com** kişi klasöründe arama sağlar.
+  Bu örnek, e-posta adreslerinde etki  alanı adı example.com kişiler için bir kişi klasöründe arama sağlar.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "121384190"
 ## <a name="compile-the-code"></a>Kodu derleme
  Bu örnek şunları gerektirir:
 
-- Etki alanı adına sahip **kişiler example.com** e-posta adreslerinde (örneğin, ) ve `somebody@example.com` adlarıyla soyadına sahip kişilerdir.
+- Etki alanı adına sahip **kişiler example.com** e-posta adreslerinde (örneğin, ) ve ad `somebody@example.com` ve soyadına sahip kişilerdir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)

@@ -1,6 +1,6 @@
 ---
 title: Dosyalarda Bul Komutu
-description: Bul ve Değiştir penceresinin dosyalarda bul sekmesinde bulunan bazı seçenekleri kullanarak Bul komutu ve dosyaları nasıl arayacağını öğrenin.
+description: Bul komutunu ve Bul ve Değiştir penceresinin Dosyalarda Bul sekmesindeki bazı seçenekleri kullanarak dosyalarda nasıl arama yaptığı hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,15 +16,15 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4886cd6d62fc35cccb9a7a7df1b70c1006e135a678abe1f25bf7dfda5bbc948f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3ccc2bb3a6d324d64fb2332326ae083fc84a3db6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429452"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151684"
 ---
 # <a name="find-in-files-command"></a>Dosyalarda Bul Komutu
-**Bul ve Değiştir** penceresinin **dosyalarda bul** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak dosyaları arayın.
+Bul ve Değiştir penceresinin Dosyalarda Bul sekmesinde bulunan **seçeneklerin bir** alt **kümesini kullanarak dosyaları** ara.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -37,51 +37,51 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 ## <a name="arguments"></a>Bağımsız değişkenler
 
 `findwhat`\
-Gereklidir. Eşleştirilecek metin.
+Gereklidir. Eşleşmesi gereken metin.
 
 ## <a name="switches"></a>Anahtarlar
-/Case veya/C\
-İsteğe bağlı. Eşleşmeler yalnızca büyük ve küçük harfli karakterler bağımsız değişkende belirtilen olanlarla tam olarak eşleşiyorsa oluşur `findwhat` .
+/case veya /c\
+İsteğe bağlı. Eşleşmeler yalnızca büyük ve küçük harf karakterler bağımsız değişkende belirtilenlerle tam olarak eşiliyorsa `findwhat` oluşur.
 
-leri `extensions`\
-İsteğe bağlı. Aranacak dosyalar için dosya uzantılarını belirtir. Belirtilmemişse, önceki uzantı daha önce girilmişse kullanılır.
+/ext: `extensions`\
+İsteğe bağlı. Aranacak dosyaların dosya uzantılarını belirtir. Belirtilmezse, daha önce girilmemişse önceki uzantı kullanılır.
 
-aramakonumu `searchpath`\
-İsteğe bağlı. Aranacak dizin. Yol boşluk içeriyorsa, tüm yolu tırnak işaretleri içine alın.
+/lookin: `searchpath`\
+İsteğe bağlı. Aranan dizin. Yol boşluk içeriyorsa, yolun tamamını tırnak işaretleri içine alın.
 
-/Names veya/n\
-İsteğe bağlı. Eşleşmeler içeren dosya adlarının listesini görüntüler.
+/names veya /n\
+İsteğe bağlı. Eşleşmeleri içeren dosya adlarının listesini görüntüler.
 
-/Options veya/t \
-İsteğe bağlı. Geçerli bulma seçeneği ayarlarının listesini görüntüler ve arama yapmaz.
+/options veya /t\
+İsteğe bağlı. Geçerli bul seçeneği ayarlarının listesini görüntüler ve arama gerçekleştirmez.
 
-/Regex veya/r \
-İsteğe bağlı. Bağımsız değişkende önceden tanımlanmış özel karakterleri `findwhat` , değişmez karakterler yerine metin desenlerini temsil eden gösterimler olarak kullanır. Normal ifade karakterlerinin tüm listesi için bkz. [normal ifadeler](../../ide/using-regular-expressions-in-visual-studio.md).
+/regex veya /r\
+İsteğe bağlı. Bağımsız değişkende, değişmez karakter yerine metin desenlerini temsil eden `findwhat` notlarda önceden tanımlanmış özel karakterleri kullanır. Normal ifade karakterlerinin tam listesi için bkz. [Normal İfadeler.](../../ide/using-regular-expressions-in-visual-studio.md)
 
-/Reset süpürmeden veya/e\
-İsteğe bağlı. Bulma seçeneklerini varsayılan ayarlarına döndürür ve arama yapmaz.
+/reset veya /e\
+İsteğe bağlı. Varsayılan ayarlarına bulma seçeneklerini döndürür ve arama gerçekleştirmez.
 
-/Stop
-İsteğe bağlı. Devam eden bir işlem varsa geçerli arama işlemini durdurur. Arama, belirtildiğinde diğer tüm bağımsız değişkenleri yoksayar `/stop` . Örneğin, geçerli aramayı durdurmak için şunu girin:
+/stop\
+İsteğe bağlı. Devam eden bir arama işlemi varsa geçerli arama işlemi durdurulr. Arama, belirtilen diğer tüm bağımsız `/stop` değişkenleri yoksayıyor. Örneğin, geçerli aramayı durdurmak için şunları girersiniz:
 
 ```cmd
 >Edit.FindinFiles /stop
 ```
 
-/Sub seçeneklerini veya/s\
-İsteğe bağlı. /Lookin: bağımsız değişkeninde belirtilen dizin içindeki alt klasörleri arar `searchpath` .
+/sub veya /s\
+İsteğe bağlı. /lookin: bağımsız değişkensinde belirtilen dizin içindeki alt klasörleri `searchpath` arar.
 
-/text2 veya/2 \
-İsteğe bağlı. Arama sonuçlarını bul 2 penceresinde görüntüler.
+/text2 veya /2\
+İsteğe bağlı. Sonuçları Bul 2 penceresinde aramanın sonuçlarını görüntüler.
 
-/joker veya/L\
-İsteğe bağlı. `findwhat`Bağımsız değişkende, bir karakter veya karakter dizisini temsil etmek için önceden tanımlanmış özel karakterleri gösterimler olarak kullanır.
+/wild veya /l\
+İsteğe bağlı. Bir karakteri veya karakter dizisini temsil `findwhat` etmek için, bağımsız değişkende önceden tanımlanmış özel karakterleri not olarak kullanır.
 
-/Word veya/w\
+/word veya /w\
 İsteğe bağlı. Yalnızca tam sözcükleri arar.
 
 ## <a name="example"></a>Örnek
-bu örnek, "Visual Studio projelerim" klasöründe bulunan tüm. cls dosyalarında btncancel 'yi arar ve sonuçları bul 2 penceresinde eşleşme bilgilerini görüntüler.
+Bu örnek, "My Visual Studio Projects" klasöründe bulunan tüm .cls dosyalarında btnCancel'i arar ve Sonuçları Bul 2 Penceresinde eşleşme bilgilerini görüntüler.
 
 ```cmd
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
@@ -90,7 +90,7 @@ bu örnek, "Visual Studio projelerim" klasöründe bulunan tüm. cls dosyaların
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dosyalarda Bul](../../ide/find-in-files.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

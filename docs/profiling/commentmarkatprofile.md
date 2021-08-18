@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 17726150fc1fa963e54fe16baa244c392a691093a9afc5ce578fe7eba435ceb5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 59cdbe8bd3be23c2f356cb171449806cea5def87
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121257244"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107907"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
 `CommentMarkAtProfile`Yöntemi bir zaman damgası değeri, sayısal bir işaret ve *. vsp* dosyasına bir açıklama dizesi ekler. Zaman damgası değeri, dış olayları senkronize etmek için kullanılabilir. İşaret ve Açıklama eklenecek şekilde, CommentMarkAtProfile işlevini içeren iş parçacığının profil oluşturma açık olmalıdır.
