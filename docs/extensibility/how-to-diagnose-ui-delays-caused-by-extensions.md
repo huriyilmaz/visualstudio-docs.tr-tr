@@ -1,23 +1,24 @@
 ---
-title: Visual Studio 'da uzantı Kullanıcı arabirimi gecikmelerini tanılama | Microsoft Docs
-description: Visual Studio, Kullanıcı arabirimi gecikmelerini bir uzantının neden olup olmadığını bildirir. Uzantı kodunuzda ne tür bir kullanıcı arabirimi gecikmesine neden olduğunu nasıl tanıleyeceğinizi öğrenin.
+title: Visual Studio | Uzantı Kullanıcı arabirimi gecikmelerini tanılama Microsoft Docs
+description: Visual Studio, kullanıcı arabirimi gecikmelerini bir uzantının neden olup olmadığını bildirir. Uzantı kodunuzda ne tür bir kullanıcı arabirimi gecikmesine neden olduğunu nasıl tanıleyeceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: conceptual
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload: multiple
-ms.openlocfilehash: 7bc43d806595c7653421daec6efabb087cc1071c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6309d014e2ec2c520a7cba24c8642c27fbb6f339
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102171363"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125016"
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Nasıl yapılır: Uzantılardan kaynaklanan kullanıcı arabirimi gecikmelerini tanılama
 
-UI yanıt vermediğinde, Visual Studio, yaprak ile başlayıp temel doğru çalışarak UI iş parçacığının çağrı yığınını inceler. Eğer Visual Studio, bir çağrı yığını çerçevesinin yüklü ve etkin bir uzantının parçası olan bir modüle ait olduğunu belirlerse, bir bildirim gösterir.
+uı yanıt vermediğinde Visual Studio, yaprak ile başlayıp temel doğru çalışarak uı iş parçacığının çağrı yığınını inceler. Visual Studio, bir çağrı yığını çerçevesinin yüklü ve etkinleştirilmiş bir uzantının parçası olan bir modüle ait olduğunu belirlerse, bir bildirim gösterir.
 
 ![UI gecikmesi (yanıt verme) bildirimi](media/ui-delay-notification-in-vs.png)
 
@@ -26,7 +27,7 @@ Bildirim, kullanıcıya kullanıcı ARABIRIMI gecikmesi (yani, Kullanıcı arabi
 Bu belge, uzantı kodunuzda ne tür bir kullanıcı arabirimi gecikme bildirimlerine neden olduğunu nasıl tanılabileceğinizi açıklar.
 
 > [!NOTE]
-> UI gecikmelerini tanılamak için Visual Studio Deneysel örneğini kullanmayın. UI gecikmesi bildirimleri için gereken çağrı yığını analizinin bazı kısımları deneysel örnek kullanılırken devre dışı bırakılmak, yani UI gecikmesi bildirimleri gösterilmeyebilir.
+> uı gecikmelerini tanılamak için Visual Studio deneysel örneğini kullanmayın. UI gecikmesi bildirimleri için gereken çağrı yığını analizinin bazı kısımları deneysel örnek kullanılırken devre dışı bırakılmak, yani UI gecikmesi bildirimleri gösterilmeyebilir.
 
 Tanılama işlemine genel bakış aşağıdaki gibidir:
 1. Tetikleyici senaryosunu belirler.
@@ -41,17 +42,17 @@ Aşağıdaki bölümlerde, bu adımları daha ayrıntılı bir şekilde inceleye
 
 ## <a name="identify-the-trigger-scenario"></a>Tetikleyici senaryosunu tanımla
 
-UI gecikmesini tanılamak için, ilk olarak Visual Studio 'Nun bildirimi göstermesini ne yaptığını (eylem sırası) belirlemeniz gerekir. Bu, daha sonra oturum açma özelliği ile bildirimi tetikleyebilmek için kullanılır.
+uı gecikmesini tanılamak için, ilk olarak ne (eylem sırası) Visual Studio bildirimi göstermesini istediğinizi belirlemeniz gerekir. Bu, daha sonra oturum açma özelliği ile bildirimi tetikleyebilmek için kullanılır.
 
 ## <a name="restart-vs-with-activity-logging-on"></a>Etkinlik günlüğü ile VS 'yi yeniden Başlat
 
-Visual Studio, bir sorun ayıklanırken yararlı bilgiler sağlayan bir "etkinlik günlüğü" oluşturabilir. Visual Studio 'da etkinlik günlüğü 'nü açmak için, komut satırı seçeneğiyle birlikte Visual Studio 'Yu açın `/log` . Visual Studio başlatıldıktan sonra, etkinlik günlüğü şu konumda depolanır:
+Visual Studio, sorun ayıklanırken yararlı bilgiler sağlayan bir "etkinlik günlüğü" oluşturabilir. etkinlik günlüğünü Visual Studio açmak için `/log` komut satırı seçeneği ile Visual Studio açın. Visual Studio başladıktan sonra, etkinlik günlüğü şu konumda depolanır:
 
 ```DOS
 %APPDATA%\Microsoft\VisualStudio\<vs_instance_id>\ActivityLog.xml
 ```
 
-VS örnek KIMLIĞINIZI nasıl bulabileceğiniz hakkında daha fazla bilgi edinmek için bkz. [Visual Studio örnekleri algılama ve yönetme araçları](../install/tools-for-managing-visual-studio-instances.md). UI gecikmeleri ve ilgili bildirimler hakkında daha fazla bilgi edinmek için bu etkinlik günlüğünü daha sonra kullanacağız.
+VS örnek kimliğinizi nasıl bulabileceğiniz hakkında daha fazla bilgi edinmek için bkz. [Visual Studio örnekleri algılama ve yönetme araçları](../install/tools-for-managing-visual-studio-instances.md). UI gecikmeleri ve ilgili bildirimler hakkında daha fazla bilgi edinmek için bu etkinlik günlüğünü daha sonra kullanacağız.
 
 ## <a name="starting-etw-tracing"></a>ETW izleme başlatılıyor
 
@@ -61,7 +62,7 @@ Bir ETW izlemesi toplamak için [PerfView](https://github.com/Microsoft/perfview
 Perfview.exe collect C:\trace.etl /BufferSizeMB=1024 -CircularMB:2048 -Merge:true -Providers:*Microsoft-VisualStudio:@StacksEnabled=true -NoV2Rundown /kernelEvents=default+FileIOInit+ContextSwitch+Dispatcher
 ```
 
-Bu, Visual Studio 'nun UI gecikmesi bildirimleri ile ilgili olaylar için kullandığı "Microsoft-VisualStudio" sağlayıcısını sağlar. Ayrıca, PerfView 'un **Iş parçacığı zaman yığınları** görünümünü oluşturmak için kullanabileceği çekirdek sağlayıcının anahtar sözcüğünü belirtir.
+bu, sağlayıcının Visual Studio kullanıcı arabirimi gecikmesi bildirimleri ile ilgili olaylar için kullandığı "Microsoft-VisualStudio" sağlayıcısı 'nı sağlar. Ayrıca, PerfView 'un **Iş parçacığı zaman yığınları** görünümünü oluşturmak için kullanabileceği çekirdek sağlayıcının anahtar sözcüğünü belirtir.
 
 ## <a name="trigger-the-notification-to-appear-again"></a>Bildirimi tekrar görüntülenecek şekilde Tetikle
 
@@ -73,10 +74,10 @@ PerfView izleme toplamayı başlatduktan sonra, bildirimin tekrar görünmesi i�
 
 ## <a name="examine-the-activity-log-to-get-the-delay-id"></a>Gecikme KIMLIĞINI almak için etkinlik günlüğünü inceleyin
 
-Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visualstudio \<vs_instance_id>\ActivityLog.xml* adresinde bulabilirsiniz. Visual Studio Uzantı UI gecikmesini her algıladığında, kaynak olarak etkinlik günlüğüne bir düğüm yazar `UIDelayNotifications` . Bu düğüm, UI gecikmesi hakkında dört bilgi içerir:
+Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visualstudio \<vs_instance_id>\ActivityLog.xml* adresinde bulabilirsiniz. Visual Studio uzantı kullanıcı arabirimi gecikmesini her algıladığında, kaynak olarak etkinlik günlüğüne bir düğüm yazar `UIDelayNotifications` . Bu düğüm, UI gecikmesi hakkında dört bilgi içerir:
 
 - Bir VS oturumunda UI gecikmesini benzersiz bir şekilde tanımlayan ardışık bir sayı olan UI gecikme KIMLIĞI
-- Visual Studio oturumunuzu baştan kapatmaya benzersiz bir şekilde tanımlayan oturum KIMLIĞI
+- Visual Studio oturumunuzu baştan kapatmaya benzersiz şekilde tanımlayan oturum kimliği
 - UI gecikmesi için bir bildirimin gösterilip gösterilmediğini belirtir
 - Büyük olasılıkla UI gecikmesine neden olan uzantı
 
@@ -139,7 +140,7 @@ Zaman aralığına sahip olduktan sonra, **olay** görünümünü kapatabilir ve
 **Iş parçacığı zaman yığınları** görünümünde, sayfanın sol üst kısmında, zaman aralığını önceki adımda hesapladığımız değerlerle ayarlayabilirsiniz ve yığınların o zaman aralığına ayarlanabilmesi için **ENTER** tuşuna basın.
 
 > [!NOTE]
-> Visual Studio zaten açık olduktan sonra izleme koleksiyonu başlatılırsa, Kullanıcı arabirimi (başlangıç) iş parçacığının hangi iş parçacığı tarafından belirlenebileceği belirlenir. Ancak, Kullanıcı arabirimi (başlangıç) iş parçacığının yığındaki ilk öğe, en olası işletim sistemi dll 'lardır (*ntdll.dll* ve *kernel32.dll*) `devenv!?` ve ardından ve sonra `msenv!?` . Bu sıra, UI iş parçacığını belirlemenize yardımcı olabilir.
+> Visual Studio zaten açık olduktan sonra izleme koleksiyonu başlatılırsa, kullanıcı arabirimi (başlangıç) iş parçacığının hangi iş parçacığı tarafından belirlenebileceği belirlenir. Ancak, Kullanıcı arabirimi (başlangıç) iş parçacığının yığındaki ilk öğe, en olası işletim sistemi dll 'lardır (*ntdll.dll* ve *kernel32.dll*) `devenv!?` ve ardından ve sonra `msenv!?` . Bu sıra, UI iş parçacığını belirlemenize yardımcı olabilir.
 
  ![Başlangıç iş parçacığını tanımlama](media/ui-delay-startup-thread.png)
 
@@ -148,14 +149,14 @@ Ayrıca, bu görünümü yalnızca paketinizdeki modüller içeren yığınlar d
 * Varsayılan olarak eklenen tüm Gruplandırmayı kaldırmak için **Grouppats** 'leri boş metin olarak ayarlayın.
 * **Inpats** 'yi, var olan işlem filtresine ek olarak, derleme adınızın bir kısmını içerecek şekilde ayarlayın. Bu durumda, **devenv olmalıdır; UIDelayR2**.
 
-![Iş parçacığı zaman yığınları görünümünde GroupPath ve InPath ayarlama](media/perfview-tts-group-path-inc-path.png)
+![İş Parçacığı Zaman Yığınları görünümünde GroupPath ve IncPath'i ayarlama](media/perfview-tts-group-path-inc-path.png)
 
-PerfView, kodunuzda performans sorunlarını belirlemek için kullanabileceğiniz **Yardım** menüsü altında ayrıntılı rehberlik içerir. Ayrıca, aşağıdaki bağlantılar kodunuzu iyileştirmek için Visual Studio iş parçacığı API 'Lerinin nasıl kullanılacağı hakkında daha fazla bilgi sağlamaktadır:
+PerfView, Yardım **menüsünün** altında koddaki performans sorunlarını belirlemek için kullanabileceğiniz ayrıntılı kılavuza sahip. Ayrıca, aşağıdaki bağlantılar kodunuzu iyileştirmek için iş parçacığı api'Visual Studio kullanma hakkında daha fazla bilgi sağlar:
 
 * [https://github.com/Microsoft/vs-threading/blob/master/doc/index.md](https://github.com/Microsoft/vs-threading/blob/master/doc/index.md)
 * [https://github.com/Microsoft/vs-threading/blob/master/doc/cookbook_vs.md](https://github.com/Microsoft/vs-threading/blob/master/doc/cookbook_vs.md)
 
-Ayrıca, etkin uzantıları yazmak için en iyi uygulamalar hakkında rehberlik sağlayan uzantılar için yeni Visual Studio statik Çözümleyicileri ( [burada](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)NuGet paketi) kullanabilirsiniz. [Vs SDK Çözümleyicileri](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) ve [iş parçacığı Çözümleyicileri](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)listesini görüntüleyin.
+Ayrıca, etkili uzantılar yazmaya Visual Studio en iyi yöntemlerle ilgili rehberlik sağlayan uzantılar (burada NuGet [paketi)](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)için yeni statik çözümleyicileri de kullanabilirsiniz. VS SDK [çözümleyicilerinin ve iş parçacığı](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) [çözümleyicilerinin listesine bakın.](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)
 
 > [!NOTE]
-> Denetim sahibi olmayan bağımlılıklar nedeniyle yanıt verme süresini adreslemezseniz (örneğin, uzantınızın UI iş parçacığında zaman uyumlu VS hizmetlerini çağırması gerekiyorsa), bunun hakkında bilgi almak istiyoruz. Visual Studio Iş ortağı programımızın bir üyesiyseniz, bir geliştirici destek isteği göndererek bizimle iletişim kurun. Aksi takdirde, görüşlerinizi göndermek ve başlığa eklemek için ' bir sorun bildir ' aracını kullanın `"Extension UI Delay Notifications"` . Lütfen analizlerinizin ayrıntılı bir açıklamasını da ekleyin.
+> Üzerinde denetime sahip olmadığınız bağımlılıklar nedeniyle yanıt vermemeye devam ediyorsanız (örneğin, uzantınız kullanıcı arabirimi iş parçacığında zaman uyumlu VS hizmetlerini çağırıyorsa) bunu bilmek istiyoruz. İş Ortağı programımızın bir Visual Studio, geliştirici destek isteği göndererek bizimle iletişim kurabilirsiniz. Aksi takdirde, geri bildiriminizi göndermek ve başlığına eklemek için 'Sorun Bildir' `"Extension UI Delay Notifications"` aracını kullanın. Ayrıca analizinizin ayrıntılı açıklamasını da dahil edin.

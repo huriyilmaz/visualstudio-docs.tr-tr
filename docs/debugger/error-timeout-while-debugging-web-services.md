@@ -1,5 +1,5 @@
 ---
-description: Kodu çağıran bir XML Web hizmetine adımlarken, hata ayıklamaya devam etmek için devam edelamayabilirsiniz.
+description: Kodu çağıran bir XML Web hizmetine adımlarken, çağrı bazen zaman uzabilir ve sonuç olarak hata ayıklamaya devam amazsiniz.
 title: Web Hizmetleri hata ayıklama sırasında zaman aşımı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9270a36015c3227b27d3a921370255e7f15d0aa994f69cb7548f82832b1fb885
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f7b31ed5f408f8398cd29615c5848ff8b0153f23
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121419916"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154388"
 ---
 # <a name="error-timeout-while-debugging-web-services"></a>Hata: Web Hizmetlerinde Hata Ayıklarken Zaman Aşımı
-Kodu çağıran bir XML Web hizmetine adımlarken, hata ayıklamaya devam etmek için devam edelamayabilirsiniz. Bunun gibi bir hata iletisiyle karşınız olabilir.
+Kodu çağıran bir XML Web hizmetine adımlarken, çağrı bazen zaman uzabilir ve sonuç olarak hata ayıklamaya devam amazsiniz. Bunun gibi bir hata iletisiyle karşınız olabilir.
 
 ```cmd
 An unhandled exception of type 'System.Net.WebException' occurred in

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 995b197cd74612f324344c8fe9b74f9f96fc89449abfd83ba656f4102c9b52cf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4a9b61c9c77c015071e3661865b93575cb8bbb98
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378074"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145698"
 ---
 # <a name="canstop_reason"></a>CANSTOP_REASON
 Bir programın yürütmenin belirli bir noktaya ulaştıktan sonra yürütmeyi durdurup durdurmadığını tespit etmek için kullanılır.

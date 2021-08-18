@@ -3,37 +3,38 @@ title: Azure araçlarını kullanarak bir bulut hizmeti yayımlama | Microsoft D
 description: Visual Studio kullanarak Azure Cloud Service projelerini yayımlama hakkında bilgi edinin.
 author: ghogen
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 3a6bc08d3c293f67e10d79996968eeb483203095
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cd41925fb1b9078b108213870b95d328c81103a0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843988"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114452"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>Visual Studio kullanarak bulut hizmetini yayımlama
 
-Visual Studio, bir bulut hizmetinin hem hazırlık hem de üretim ortamları için destek sayesinde bir uygulamayı doğrudan Azure 'da yayımlayabilir. Yayımlarken, dağıtım paketini ve dağıtım paketi için geçici olarak kullanılan bir depolama hesabını seçersiniz.
+Visual Studio, bir uygulamayı bir bulut hizmetinin hem hazırlık hem de üretim ortamları için desteğiyle doğrudan Azure 'da yayımlayabilirsiniz. Yayımlarken, dağıtım paketini ve dağıtım paketi için geçici olarak kullanılan bir depolama hesabını seçersiniz.
 
 Bir Azure uygulaması geliştirirken ve sınadığınızda, değişiklikleri Web rolleriniz için artımlı olarak yayımlamak üzere Web Dağıtımı kullanabilirsiniz. Uygulamanızı bir dağıtım ortamında yayımladıktan sonra, Web Dağıtımı değişiklikleri doğrudan Web rolünü çalıştıran sanal makineye dağıtmanızı sağlar. Değişiklikleri test etmek için Web rolünüzü güncelleştirmek istediğiniz her seferinde tüm Azure uygulamanızı paketleyip yayımlamanız gerekmez. Bu yaklaşımla, uygulamanızın bir dağıtım ortamında yayımlanmasını beklemeden, test için Web rolünüzün değişikliklerinizin bulutta kullanılabilmesini sağlayabilirsiniz.
 
 Azure uygulamanızı yayımlamak ve Web Dağıtımı kullanarak bir Web rolünü güncelleştirmek için aşağıdaki yordamları kullanın:
 
-- Visual Studio 'dan bir Azure uygulaması yayımlama veya paketleme
+- Visual Studio bir Azure uygulaması yayımlama veya paketleme
 - Geliştirme ve test döngüsünün bir parçası olarak bir Web rolünü güncelleştirme
 
-## <a name="publish-or-package-an-azure-application-from-visual-studio"></a>Visual Studio 'dan bir Azure uygulaması yayımlama veya paketleme
+## <a name="publish-or-package-an-azure-application-from-visual-studio"></a>Visual Studio bir Azure uygulaması yayımlama veya paketleme
 
 Azure uygulamanızı yayımladığınızda, aşağıdaki görevlerden birini yapabilirsiniz:
 
 - Bir hizmet paketi oluşturun: uygulamanızı [Azure Portal](https://portal.azure.com)bir dağıtım ortamında yayımlamak için bu paketi ve hizmet yapılandırma dosyasını kullanabilirsiniz.
 
-- Azure projenizi Visual Studio 'dan yayımlayın: uygulamanızı doğrudan Azure 'da yayımlamak Için, Yayımlama Sihirbazı 'nı kullanın. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md).
+- azure projenizi Visual Studio yayımlama: uygulamanızı doğrudan Azure 'da yayımlamak için, yayımlama sihirbazı 'nı kullanın. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md).
 
-### <a name="to-create-a-service-package-from-visual-studio"></a>Visual Studio 'dan bir hizmet paketi oluşturmak için
+### <a name="to-create-a-service-package-from-visual-studio"></a>Visual Studio bir hizmet paketi oluşturmak için
 
 1. Uygulamanızı yayımlamaya hazırsanız Çözüm Gezgini açın, rollerinizi içeren Azure projesi için kısayol menüsünü açın ve Yayımla ' yı seçin.
 
@@ -43,7 +44,7 @@ Azure uygulamanızı yayımladığınızda, aşağıdaki görevlerden birini yap
 
    b. **Paket Azure uygulaması** iletişim kutusunda, paket oluşturmak istediğiniz hizmet yapılandırmasını seçin ve ardından yapı yapılandırmasını seçin.
 
-   c. Seçim Yayımladıktan sonra bulut hizmeti için Uzak Masaüstü 'Nü açmak üzere **tüm roller Için uzak masaüstünü etkinleştir**' i seçin ve ardından Uzak Masaüstü kimlik bilgilerini yapılandırmak için **Ayarlar** ' ı seçin. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. Seçim yayımladıktan sonra bulut hizmeti için uzak masaüstü 'nü açmak üzere **tüm roller için uzak masaüstünü etkinleştir**' i seçin ve ardından uzak masaüstü kimlik bilgilerini yapılandırmak için **Ayarlar** ' ı seçin. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
 
       Yayımladıktan sonra bulut hizmetinizde hata ayıklamak istiyorsanız, uzaktan hata ayıklamayı **tüm roller Için etkinleştir**' i seçerek açın.
 
@@ -55,7 +56,7 @@ Azure uygulamanızı yayımladığınızda, aşağıdaki görevlerden birini yap
 
 1. Seçim Dağıtım işlemini iptal etmek için, etkinlik günlüğündeki satır öğesi için kısayol menüsünde **iptal ve Kaldır**' ı seçin. Bu komut dağıtım sürecini durduruyor ve dağıtım ortamını Azure 'dan siler. Dağıtımı tamamladıktan sonra ortamı kaldırmak için Azure portal kullanın.
 
-1. Seçim Rol örneklerinizin başlatılmasından sonra, Visual Studio Sunucu Gezgini içindeki **Cloud Services** düğümünde dağıtım ortamını otomatik olarak gösterir. Buradan, tek tek rol örneklerinin durumunu görebilirsiniz. Bkz. [bulut Gezgini Ile Azure kaynaklarını yönetme](vs-azure-tools-resources-managing-with-cloud-explorer.md). Aşağıdaki çizimde, hala başlatma durumunda olan rol örnekleri gösterilmektedir:
+1. Seçim rol örneklerinizin başlatılmasından sonra Visual Studio, dağıtım ortamını Sunucu Gezgini **Cloud Services** düğümünde otomatik olarak gösterir. Buradan, tek tek rol örneklerinin durumunu görebilirsiniz. Bkz. [bulut Gezgini Ile Azure kaynaklarını yönetme](vs-azure-tools-resources-managing-with-cloud-explorer.md). Aşağıdaki çizimde, hala başlatma durumunda olan rol örnekleri gösterilmektedir:
 
     ![VST_DeployComputeNode](./media/vs-azure-tools-publishing-a-cloud-service/IC744134.png)
 
@@ -71,7 +72,7 @@ Uygulamanızın arka uç altyapısı kararlı ise, ancak Web rollerinin daha sı
 
 - **Bir Web rolünün yalnızca tek bir örneğini destekleyebilir**: dağıtım ortamınızda herhangi bir Web rolünün birden çok örneği olamaz. Ancak, her biri yalnızca bir örneğe sahip birden çok web rolü desteklenir.
 
-- **Uzak Masaüstü bağlantılarını etkinleştir**: Bu gereksinim, Web dağıtımı Internet INFORMATION SERVICES (IIS) çalıştıran sunucuya değişiklikleri dağıtmak üzere sanal makineye bağlanmak için Kullanıcı ve parolayı kullanmasına izin verir. Ayrıca, bu sanal makinede IIS 'ye güvenilir bir sertifika eklemek için sanal makineye bağlanmanız gerekebilir. (Bu sertifika, Web Dağıtımı tarafından kullanılan IIS için Uzak bağlantının güvende olmasını sağlar.)
+- **uzak masaüstü bağlantılarını etkinleştir**: bu gereksinim, Web Dağıtımı Internet Information Services (ııs) çalıştıran sunucuya değişiklikleri dağıtmak üzere sanal makineye bağlanmak için kullanıcı ve parolayı kullanmasına izin verir. Ayrıca, bu sanal makinede IIS 'ye güvenilir bir sertifika eklemek için sanal makineye bağlanmanız gerekebilir. (Bu sertifika, Web Dağıtımı tarafından kullanılan IIS için Uzak bağlantının güvende olmasını sağlar.)
 
 Aşağıdaki yordamda, **Azure uygulama yayımlama** Sihirbazı 'nı kullandığınız varsayılır.
 
@@ -92,7 +93,7 @@ Aşağıdaki yordamda, **Azure uygulama yayımlama** Sihirbazı 'nı kullandığ
 
 ### <a name="update-your-web-role-by-using-web-deploy"></a>Web rolünüzü Web Dağıtımı kullanarak güncelleştirin
 
-1. Web Dağıtımı kullanmak için, yayımlamak istediğiniz Visual Studio 'daki Web rollerinizin herhangi biri için projede kod değişiklikleri yapın ve ardından çözümünüzde bu proje düğümüne sağ tıklayıp **Yayımla**' yı işaret edin. **Web 'ı Yayımla** iletişim kutusu görüntülenir.
+1. Web Dağıtımı kullanmak için, yayımlamak istediğiniz Visual Studio Web rollerinizin herhangi biri için projede kod değişiklikleri yapın ve ardından çözümünüzde bu proje düğümüne sağ tıklayıp **yayımla**' yı işaret edin. **Web 'ı Yayımla** iletişim kutusu görüntülenir.
 
 1. Seçim IIS için uzak bağlantılar için kullanmak üzere güvenilen bir SSL sertifikası eklediyseniz, **Güvenilmeyen sertifikaya Izin ver** onay kutusunu temizleyebilirsiniz. Web Dağıtımı güvenli hale getirmek için bir sertifika ekleme hakkında daha fazla bilgi için, bu makalede daha sonra **Web dağıtımı güvenli hale getirmek için** bölümüne bakın.
 
@@ -116,41 +117,41 @@ Aşağıdaki yordamda, **Azure uygulama yayımlama** Sihirbazı 'nı kullandığ
 
 1. Uzaktan bağlantılar için kullanmak üzere IIS 'ye güvenilir bir SSL sertifikası eklemek için aşağıdaki adımları izleyin:
 
-   a. Web rolünü çalıştıran sanal makineye bağlanmak için, **Cloud Explorer** veya **Sunucu Gezgini** web rolü örneğini seçin ve ardından **Uzak Masaüstü kullanarak bağlan** komutunu seçin. Sanal makineye bağlanma hakkında ayrıntılı adımlar için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio). Tarayıcınız bir dosya indirmenizi ister `.rdp` .
+   a. web rolünü çalıştıran sanal makineye bağlanmak için, **Cloud Explorer** veya **Sunucu Gezgini** web rolü örneğini seçin ve ardından **uzak masaüstü komutunu kullanarak Bağlan** seçin. Sanal makineye bağlanma hakkında ayrıntılı adımlar için, bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio). Tarayıcınız bir dosya indirmenizi ister `.rdp` .
 
-   b. Bir SSL sertifikası eklemek için, Yönetim hizmetini IIS Yöneticisi ' nde açın. IIS Yöneticisi 'nde, **eylem** bölmesinde **bağlamalar** bağlantısını açarak SSL 'yi etkinleştirin. **Site Bağlaması Ekle** iletişim kutusu görüntülenir. **Ekle**' yi seçin ve ardından **tür** açılan listesinden HTTPS ' yi seçin. **SSL sertifikası** listesinde, bir CA tarafından imzaladığınız ve Azure Portal yüklediğiniz SSL sertifikasını seçin. Daha fazla bilgi için bkz. [Yönetim hizmeti Için bağlantı ayarlarını yapılandırma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)).
+   b. SSL sertifikası eklemek için IIS Yöneticisi'nde yönetim hizmetini açın. IIS Yöneticisi'nde, Eylem bölmesinde **Bağlamalar bağlantısını açarak** **SSL'yi** etkinleştirin. Site **Bağlaması Ekle** iletişim kutusu görüntülenir. **Ekle'yi** ve ardından Tür **açılan** listesinde HTTPS'yi seçin. SSL **sertifikası listesinde,** bir CA tarafından imzalayan ve sertifika yetkilisine yüklediğiniz SSL sertifikasını Azure portal. Daha fazla bilgi için, [bkz. Configure Connection Ayarlar for the Management Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)).
 
       > [!NOTE]
-      > Güvenilen bir SSL sertifikası eklerseniz, daha sonra, **Yayımlama sihirbazında** sarı uyarı üçgeni görünmez.
+      > Güvenilen bir SSL sertifikası eklersiniz, yayımla Sihirbazı'nda sarı uyarı **üçgeni artık görünür.**
 
-## <a name="include-files-in-the-service-package"></a>Hizmet paketine dosya ekleme
+## <a name="include-files-in-the-service-package"></a>Hizmet paketine dosya dahil etmek
 
-Bir rol için oluşturulan sanal makinede kullanılabilir olmaları için hizmet paketinizdeki belirli dosyaları eklemeniz gerekebilir. Örneğin, `.exe` `.msi` hizmet paketinize bir başlangıç betiği tarafından kullanılan bir veya bir dosya eklemek isteyebilirsiniz. Ya da bir Web rolü veya çalışan rolü projesinin gerektirdiği bir derleme eklemeniz gerekebilir. Dosyaları dahil etmek için, Azure uygulamanız için çözüme eklenmeleri gerekir.
+Bir rol için oluşturulan sanal makinede kullanılabilir olacak şekilde hizmet paketinize belirli dosyaları dahil etmek zorundayabilirsiniz. Örneğin, hizmet paketinize başlangıç betiği tarafından kullanılan bir `.exe` veya dosyası eklemek istiyor `.msi` olabilir. Veya bir web rolü veya çalışan rolü projesinin gerektirdiği bir derleme eklemeniz de gerekli olabilir. Dosyaları dahil etmek için Azure uygulamanıza uygun çözüme ekleniyor olması gerekir.
 
-1. Bir hizmet paketine bir derleme eklemek için aşağıdaki adımları kullanın:
+1. Bir hizmet paketine derleme eklemek için aşağıdaki adımları kullanın:
 
-   a. **Çözüm Gezgini**, başvurulan derlemenin eksik olduğu proje için proje düğümünü açın.
-   b. Derlemeyi projeye eklemek için, **Başvurular** klasörünün kısayol menüsünü açın ve ardından **Başvuru Ekle**' yi seçin. Başvuru Ekle iletişim kutusu görünür.
-   c. Eklemek istediğiniz başvuruyu seçin ve ardından **Tamam**' ı seçin. Başvuru, **Başvurular** klasörü altındaki listeye eklenir.
-   d. Eklediğiniz derlemenin kısayol menüsünü açın ve **Özellikler**' i seçin. **Özellikler** penceresi görüntülenir.
+   a. Bu **Çözüm Gezgini,** başvurulan derlemenin eksik olduğu projenin proje düğümünü açın.
+   b. Derlemeyi projeye eklemek için Başvurular klasörünün kısayol menüsünü açın **ve Başvuru** Ekle'yi **seçin.** Başvuru Ekle iletişim kutusu görüntülenir.
+   c. Eklemek istediğiniz başvuruya tıklayın ve ardından Tamam'ı **seçin.** Başvuru, Başvurular klasörünün altındaki **listeye** eklenir.
+   d. Ekley istediğiniz derlemenin kısayol menüsünü açın ve Özellikler'i **seçin.** Özellikler **penceresi** görüntülenir.
 
-      Bu derlemeyi hizmet paketine eklemek için, **Yerel Kopyala listesinde** **doğru** öğesini seçin.
-1. **Çözüm Gezgini** başvurulan derleme eksik olan proje için proje düğümünü açın.
+      Bu derlemeyi hizmet paketine dahil etmek için, Yereli **Kopyala listesinde True'yi** **seçin.**
+1. Bu **Çözüm Gezgini** başvurulan derlemenin eksik olduğu projenin proje düğümünü açın.
 
-1. Derlemeyi projeye eklemek için, **Başvurular** klasörünün kısayol menüsünü açın ve ardından **Başvuru Ekle**' yi seçin. **Başvuru Ekle** iletişim kutusu görünür.
+1. Derlemeyi projeye eklemek için Başvurular klasörünün kısayol menüsünü açın **ve Başvuru** Ekle'yi **seçin.** Başvuru **Ekle iletişim** kutusu görüntülenir.
 
-1. Eklemek istediğiniz başvuruyu seçin ve sonra **Tamam** düğmesini seçin.
+1. Eklemek istediğiniz başvuruya tıklayın ve ardından Tamam **düğmesini** seçin.
 
-    Başvuru, **Başvurular** klasörü altındaki listeye eklenir.
+    Başvuru, Başvurular klasörünün altındaki **listeye** eklenir.
 
-1. Eklediğiniz derlemenin kısayol menüsünü açın ve **Özellikler**' i seçin. Özellikler penceresi görüntülenir.
+1. Ekley istediğiniz derlemenin kısayol menüsünü açın ve Özellikler'i **seçin.** Özellikler penceresi görüntülenir.
 
-1. Bu derlemeyi hizmet paketine eklemek için, **Yerel Kopyala** listesinde, **doğru** öğesini seçin.
+1. Bu derlemeyi hizmet paketine dahil etmek için, Yereli **Kopyala listesinde** True'yi **seçin.**
 
-1. Web rolü projenize eklenmiş olan hizmet paketine dosyaları eklemek için, dosyanın kısayol menüsünü açın ve **Özellikler**' i seçin. **Özellikler** penceresinde, **Yapı eylemi** liste kutusunda **içerik** ' i seçin.
+1. Web rolü projenize eklenmiş olan dosyaları hizmet paketine eklemek için dosyanın kısayol menüsünü açın ve Özellikler'i **seçin.** Özellikler **penceresinde Derleme** Eylemi **liste kutusundan** **İçerik'i** seçin.
 
-1. Çalışan rolü projenize eklenmiş olan hizmet paketine dosyaları eklemek için, dosyanın kısayol menüsünü açın ve **Özellikler**' i seçin. **Özellikler** penceresinden, **Çıkış Dizinine Kopyala** liste kutusunda **daha yeniyse kopyala** ' yı seçin.
+1. Çalışan rolü projenize eklenmiş olan dosyaları hizmet paketine eklemek için dosyanın kısayol menüsünü açın ve Özellikler'i **seçin.** Özellikler penceresinde **Çıkış** dizinine **kopyala liste kutusundan** Daha yeni ise **kopyala'yi** seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio 'dan Azure 'da yayımlama hakkında daha fazla bilgi edinmek için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md).
+Azure'da yayımlama hakkında daha fazla bilgi Visual Studio bkz. [Azure Uygulama Yayımlama Sihirbazı.](vs-azure-tools-publish-azure-application-wizard.md)

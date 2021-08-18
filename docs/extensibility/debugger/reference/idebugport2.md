@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim bir makinedeki hata ayıklama bağlantı noktasını temsil eder.
+description: Bu arabirim, bir makinede hata ayıklama bağlantı noktasını temsil eder.
 title: IDebugPort2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 8fd87f05-a950-4d14-b925-98be29d4facc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d0b173f362418171def93ee92e3883b2910ad18
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca97bd3a89358f374e66a1c35693ca4f2801641c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087346"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133022"
 ---
 # <a name="idebugport2"></a>IDebugPort2
-Bu arabirim bir makinedeki hata ayıklama bağlantı noktasını temsil eder.
+Bu arabirim, bir makinede hata ayıklama bağlantı noktasını temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,35 +30,35 @@ Bu arabirim bir makinedeki hata ayıklama bağlantı noktasını temsil eder.
 IDebugPort2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Özel bir bağlantı noktası sağlayıcısı, bu arabirimi bir makinedeki hata ayıklama bağlantı noktasını göstermek için uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Özel bir bağlantı noktası sağlayıcı, makinede hata ayıklama bağlantı noktasını temsil etmek için bu arabirimi uygulamaya almaktadır.
 
- Bağlantı noktası bağlantı noktası olaylarının gönderilmesini destekliyorsa, ayrıca <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) arabirimini sağlayan bir arabirimi desteklemek için arabirimi de uygulamalıdır.
+ Bağlantı noktası bağlantı noktası olaylarını göndermeyi destekliyorsa, <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) arabirimini sağlayan bir arabirimi desteklemek için arabirimini de uygulaması gerekir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [Getport](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md) veya [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) çağrıları, istenen bağlantı noktasını temsil eden bu arabirimi döndürür.
+ [GetPort veya](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md) [AddPort çağrıları,](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) istenen bağlantı noktasını temsil eden bu arabirimi geri döner.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugPort2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugPort2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetPortName](../../../extensibility/debugger/reference/idebugport2-getportname.md)|Bağlantı noktası adını döndürür.|
 |[GetPortId](../../../extensibility/debugger/reference/idebugport2-getportid.md)|Bağlantı noktası tanımlayıcısını döndürür.|
-|[GetPortRequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md)|Bağlantı noktası (varsa) oluşturmak için kullanılan isteği döndürür.|
-|[GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)|Bu bağlantı noktası için bağlantı noktası tedarikçiyi döndürür.|
-|[GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)|İşlemin tanımlayıcısı verilen işleme bir arabirim döndürür.|
-|[EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md)|Bir bağlantı noktası üzerinde çalışan tüm işlemi numaralandırır.|
+|[GetPortRequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md)|Bağlantı noktası oluşturmak için kullanılan isteği döndürür (varsa).|
+|[GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)|Bu bağlantı noktası için bağlantı noktası sağlayıcıyı döndürür.|
+|[GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)|sürecin tanımlayıcısına göre işleme bir arabirim döndürür.|
+|[EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md)|Bir bağlantı noktası üzerinde çalışan tüm işlemleri numaralar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Yerel bağlantı noktası, yerel makinede çalışan tüm işlemlere ve programlara erişim sağlar. Diğer bağlantı noktaları Windows CE tabanlı bir cihaza seri kablo bağlantısını veya DCOM olmayan bir bilgisayara ağ bağlantısını temsil edebilir. `IDebugPort2`Arabirim, bir bağlantı noktasının adını ve tanımlayıcısını bulmak ve bağlantı noktasında çalışan tüm işlemlerin numaralandırılması için kullanılır. Bağlantı noktasında işlem başlatma ve sonlandırma olanakları, `IDebugPortEx2` arabirimde uygulanır.
+ Yerel bağlantı noktası, yerel makinede çalışan tüm işlemlere ve programlara erişim sağlar. Diğer bağlantı noktaları, Windows CE tabanlı bir cihaza seri kablo bağlantısını veya DCOM olmayan bir bilgisayara yapılan ağ bağlantısını temsil ediyor olabilir. Arabirim, bir bağlantı noktasının adını ve tanımlayıcısını bulmak ve bağlantı noktası üzerinde çalışan `IDebugPort2` tüm işlemlerin numarasını bulmak için kullanılır. Bağlantı noktası üzerinde işlemleri başlatma ve sonlandırma özellikleri arabirimde `IDebugPortEx2` uygulanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

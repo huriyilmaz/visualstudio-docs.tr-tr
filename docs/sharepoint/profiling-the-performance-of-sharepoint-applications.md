@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: fc01ef43e750ccbff5b85b85b550c1254447f44828e1e18edfc4a169b1682d5a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0d230bc3f5f99f03661ec8322fa6e478b39c4048
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121244296"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130942"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>SharePoint uygulamalarının performansını profil halinde
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 20b718be3bec6cac3ee6c0b0985fa6efca867189
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 04259cdb6f21254dba6c7769347403fbb6410f26
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826947"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148161"
 ---
 # <a name="how-to-programmatically-add-and-delete-worksheet-comments"></a>Nasıl yapılır: program aracılığıyla çalışma sayfası açıklamalarını ekleme ve silme
   Microsoft Office Excel çalışma sayfalarında program aracılığıyla açıklama ekleyip silebilirsiniz. Açıklamalar yalnızca tek hücrelere eklenebilir, çok hücreli aralıklar için kullanılamaz.
@@ -46,17 +47,17 @@ ms.locfileid: "107826947"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet29":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet29":::
 
-## <a name="add-and-delete-a-comment-in-a-vsto-add-in-project"></a>VSTO eklenti projesinde yorum ekleme ve silme
+## <a name="add-and-delete-a-comment-in-a-vsto-add-in-project"></a>VSTO eklenti projesinde açıklama ekleme ve silme
  Aşağıdaki örneklerde, <xref:Microsoft.Office.Interop.Excel.Range> etkin çalışma sayfasında adlı tek bir hücre olduğu varsayılır `dateComment` .
 
-### <a name="to-add-a-new-comment-to-an-excel-range"></a>Excel aralığına yeni bir açıklama eklemek için
+### <a name="to-add-a-new-comment-to-an-excel-range"></a>Excel aralığa yeni bir açıklama eklemek için
 
 1. Yöntemini çağırın <xref:Microsoft.Office.Interop.Excel.Range.AddComment%2A> <xref:Microsoft.Office.Interop.Excel.Range> ve açıklama metnini sağlayın.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet20":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet20":::
 
-### <a name="to-delete-a-comment-from-an-excel-range"></a>Bir Excel aralığından bir yorumu silmek için
+### <a name="to-delete-a-comment-from-an-excel-range"></a>Excel aralığından bir yorumu silmek için
 
 1. Aralıkta bir açıklamanın bulunduğunu doğrulayın ve silin.
 

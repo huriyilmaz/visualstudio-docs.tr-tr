@@ -7,14 +7,15 @@ ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: c2e5ffbc7dde0bd1274756d1721088b18ea6ec34
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 38c5979a73d73c7a183ec677efdba9605eec138a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389416"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150852"
 ---
 # <a name="customizing-copy-behavior"></a>Kopyalama Davranışını Özelleştirme
 Visual Studio Görselleştirme ve Modelleme SDK'sı ile oluşturulan etki alanına özgü bir dilde (DSL), kullanıcı öğeleri kopyalayıp yapıştırıyorsa ne olacağını değiştirebilirsiniz.
@@ -74,7 +75,7 @@ partial class MyDslClipboardCommandSet
 } }
 ```
 
- **Kullanıcı seçili bir hedefe yapıştırıyorken ek bağlantılar oluşturun.** Örneğin, bir öğeye bir açıklama kutusu yapıştırıldıkları zaman, aralarında bir bağlantı yapılır.
+ **Kullanıcı seçili bir hedefe yapıştırıyorken ek bağlantılar oluşturun.** Örneğin, bir öğeye bir açıklama kutusu yapıştırıldıklarına, aralarında bir bağlantı yapılır.
 Hedef etki alanı sınıfına bir Öğe Birleştirme Yönergesi ekleyin ve bağlantıları ekleyerek birleştirme işlemini işley için ayarlayın. Bu, sürükleme işlemleri üzerinde de aynı etkiye sahip olur. Daha fazla bilgi için [bkz. Öğe Oluşturma ve Taşımayı Özelleştirme.](../modeling/customizing-element-creation-and-movement.md)
 
  \- veya -
@@ -222,7 +223,7 @@ Bkz. [Nasıl: Sürükle ve Bırak İşleyicisi Ekleme.](../modeling/how-to-add-a
 
 - Kopyalamayı yayma
 
-- Kopyalamayı yalnızca bağlantıya yay - Grup yapıştırıldıksa, bu bağlantının yeni kopyası bağlantının diğer ucundaki mevcut öğeye başvurur.
+- Kopyalamayı yalnızca bağlantıya yay - Grup yapıştırıldı mı, bu bağlantının yeni kopyası bağlantının diğer ucundaki mevcut öğeye başvurur.
 
 - Bağlantıyı kopyalamayı ve karşıt rol oynatıcısını yay - kopyalanan grup, bağlantının diğer ucunda öğenin bir kopyasını içerir.
 
@@ -282,7 +283,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 ```
 
 ## <a name="receiving-items-dragged-from-other-models"></a>Diğer modellerden sürüklenen öğeleri alma
- ElementOperations kopyalama, taşıma, silme ve sürükleyip bırakma davranışını tanımlamak için de kullanılabilir. ElementOperations kullanımının bir gösterimi olarak, burada verilen örnek özel sürükle ve bırak davranışını tanımlar. Ancak bu amaçla, Daha genişletilebilir olan Sürükle [ve](../modeling/how-to-add-a-drag-and-drop-handler.md)Bırak İşleyicisi Ekleme konusunda açıklanan alternatif yaklaşımı göz önünde bulunduramazsınız.
+ ElementOperations kopyalama, taşıma, silme ve sürükleyip bırakma davranışını tanımlamak için de kullanılabilir. ElementOperations kullanımının bir gösterimi olarak, burada verilen örnek özel sürükle ve bırak davranışını tanımlar. Ancak bu amaçla, Daha genişletilebilir olan Nasıl [genişletilebilir:](../modeling/how-to-add-a-drag-and-drop-handler.md)Sürükle ve Bırak İşleyicisi Ekleme konusunda açıklanan alternatif yaklaşımı göz önünde bulunduramazsınız.
 
  ElementOperations sınıfınıza iki yöntem tanımlayın:
 
@@ -291,9 +292,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 - `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` , kaynak öğeyi hedefte birleştirir.
 
 ### <a name="canmerge"></a>CanMerge()
- `CanMerge()` , kullanıcıya fare diyagramda hareket etti olarak verilmesi gereken geri bildirimi belirlemek için çağrılır. yöntemine yönelik parametreler, farenin üzerine gelinen öğe ve sürükleme işlemi gerçekleştirilen kaynakla ilgili verilerdir. Kullanıcı, ekranın herhangi bir yerinden sürükleyebilirsiniz. Bu nedenle, kaynak nesne birçok farklı türde olabilir ve farklı biçimlerde seri hale getirilebilir. Kaynak bir DSL veya UML modeli ise veri parametresi bir <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> serileştirmedir. Sürükleme, kopyalama ve araç kutusu işlemleri, model parçalarını temsil etmek için ElementGroupPrototypes kullanır.
+ `CanMerge()` , kullanıcıya fare diyagramda hareket etti olarak verilmesi gereken geri bildirimi belirlemek için çağrılır. yöntemine yönelik parametreler, farenin üzerine gelinen öğe ve sürükleme işlemi gerçekleştirilen kaynakla ilgili verilerdir. Kullanıcı, ekranın herhangi bir yerinden sürükleyebilirsiniz. Bu nedenle, kaynak nesne birçok farklı türde olabilir ve farklı biçimlerde seri hale getirilebilir. Kaynak bir DSL veya UML modeli ise, veri parametresi bir <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> serileştirmedir. Sürükleme, kopyalama ve araç kutusu işlemleri, model parçalarını temsil etmek için ElementGroupPrototypes kullanır.
 
- Bir Öğe Grubu Prototipi herhangi bir sayıda öğe ve bağlantı içerebilir. Öğe türleri GUID'leri tarafından belirlenebilirsiniz. GUID, temel alınan model öğesi değil sürüklenen şekildedir. Aşağıdaki örnekte, `CanMerge()` UML diyagramından bir sınıf şekli bu diyagrama sürüklenmişse true döndürür.
+ Bir Öğe Grubu Prototipi herhangi bir sayıda öğe ve bağlantı içerebilir. Öğe türleri, GUID 'Leri ile tanımlanabilir. GUID, temeldeki model öğesi değil, sürüklenen şekildir. Aşağıdaki örnekte, `CanMerge()` UML diyagramından bir sınıf şekli bu diyagrama sürüklendiğinde true değeri döndürür.
 
 ```csharp
 public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDataObject data)
@@ -310,8 +311,8 @@ public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDa
  }
 ```
 
-## <a name="mergeelementgroupprototype"></a>MergeElementGroupPrototype()
- Kullanıcı bir öğeyi diyagrama, şekle veya bağlayıcıya düşürünca bu yöntem çağrılır. Sürüklenen içeriği hedef öğede birleştirmesi gerekir. Bu örnekte kod, hedef ve prototip türlerinin birleşimini tanıyıp tanımadığını belirler; öyleyse, yöntemi sürüklenen öğeleri modele eklenecek öğelerin bir prototipi içine dönüştürür. Temel yöntem, dönüştürülmüş veya dönüştürülemeyen öğelerden birini birleştirmeyi gerçekleştirmek için çağrılır.
+## <a name="mergeelementgroupprototype"></a>MergeElementGroupPrototype ()
+ Bu yöntem, Kullanıcı bir öğeyi diyagrama, şekle veya bağlayıcıya düştüğünde çağrılır. Sürüklenen içeriği hedef öğe içine birleştirmelidir. Bu örnekte kod, hedef ve prototip türlerinin birleşimini tanıyıp tanımadığını belirler; Bu durumda, yöntemi sürüklenen öğeleri modele eklenmesi gereken öğelerin prototipine dönüştürür. Taban yöntemi, dönüştürülmüş veya Dönüştürülmeyen öğelerden birini birleştirmek için çağırılır.
 
 ```csharp
 public override void MergeElementGroupPrototype(ModelElement targetShape, ElementGroupPrototype sourcePrototype)
@@ -327,7 +328,7 @@ public override void MergeElementGroupPrototype(ModelElement targetShape, Elemen
 }
 ```
 
- Bu örnek, UML sınıf diyagramından sürüklenen UML sınıf öğeleriyle ilgilidir. DSL, UML sınıflarını doğrudan depolamak için tasarlanmamıştır, ancak bunun yerine sürüklenen her UML sınıfı için bir DSL öğesi oluşturabilirsiniz. Bu, örneğin DSL bir örnek diyagramı ise yararlı olacaktır. Kullanıcı, bu sınıfların örneklerini oluşturmak için sınıfları diyagrama sürükleyebilirsiniz.
+ Bu örnek UML sınıf öğeleriyle bir UML sınıf diyagramından sürüklenen ile ilgilidir. DSL, UML sınıflarını doğrudan depolamak için tasarlanmamıştır, ancak bunun yerine, her sürüklenen UML sınıfı için bir DSL öğesi oluşturacağız. Bu, örneğin DSL bir örnek diyagramı ise yararlı olabilir. Kullanıcı bu sınıfların örneklerini oluşturmak için sınıfları diyagram üzerine sürükleyebilir.
 
 ```csharp
 
@@ -364,12 +365,12 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 }
 ```
 
-## <a name="standard-copy-behavior"></a>Standart Kopyalama Davranışı
- Bu bölümdeki kod, kopyalama davranışını değiştirmek için geçersiz kılabilirsiniz yöntemleri gösterir. Kendi özelleştirmelerinizi nasıl elde etmek istediğinize yardımcı olmak için bu bölümde kopyalamayla ilgili yöntemleri geçersiz k kullanılan ancak standart davranışı değiştirmeyen kodlar yer almaktadır.
+## <a name="standard-copy-behavior"></a>Standart kopyalama davranışı
+ Bu bölümdeki kodda kopyalama davranışını değiştirmek için geçersiz kılabileceğiniz Yöntemler gösterilmektedir. Kendi özelleştirmelerinizi nasıl elde etmek için bu bölümde, kopyalama işlemine dahil olan yöntemleri geçersiz kılan, ancak standart davranışı değiştirmediğinden oluşan kod gösterilmektedir.
 
- Kullanıcı CTRL+C tuşlarına bassa veya Kopyala menü komutunu kullandığında <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> yöntemi çağrılır. Bunun **DslPackage\Generated Code\CommandSet.cs** konumunda nasıl ayar olduğunu görüyorsunuz. Komutların nasıl ayar olduğu hakkında daha fazla bilgi için [bkz. Nasıl kullanılır: Kısayol Menüsüne Komut Ekleme.](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)
+ Kullanıcı CTRL + C tuşlarına bastığında veya Kopyala menü komutunu kullandığında, yöntemi <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> çağrılır. Bu, **Dslpackage\generated Code\CommandSet.cs**' de nasıl ayarlandığını görebilirsiniz. Komutların nasıl ayarlandığı hakkında daha fazla bilgi için bkz. [nasıl yapılır: kısayol menüsüne komut ekleme](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
- DslPackage projesine *MyDsl'nin* kısmi sınıf tanımını ekleyerek ProcessOnMenuCopyCommand'i `ClipboardCommandSet` geçersiz kılılabilir.
+ DslPackage projesine *MyDSL* kısmi sınıf tanımını ekleyerek Processonmenucopykomutunu geçersiz kılabilirsiniz `ClipboardCommandSet` .
 
 ```csharp
 using System.Collections.Generic;
@@ -434,7 +435,7 @@ protected override void CopyModelElementsIntoElementGroupPrototype(IDataObject d
 }
 ```
 
- Her diyagramda ElementOperations'ın tek bir örneği vardır. Kendi türevini de s tedariki de SSS'ye 2019'da da 2 DSL projesine yer açılabilir bu dosya, geçersiz kılabilir kodla aynı şekilde davranır:
+ Her diyagramda tek bir ElementOperations örneği bulunur. Kendi türelerinizi sağlayabilirsiniz. DSL projesine yerleştirilebilecek bu dosya, geçersiz kılacak kodla aynı şekilde davranır:
 
 ```csharp
 using System;
@@ -558,6 +559,6 @@ namespace Company.MyDsl
 
 - [Öğe Oluşturma ve Hareketini Özelleştirme](../modeling/customizing-element-creation-and-movement.md)
 - [Nasıl yapılır: Sürükle ve Bırak İşleyicisi Ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md)
-- [Örnek: VMSDK Bağlantı Hattı Diyagramları örneği](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [Örnek: VMSDK devre şemaları örneği](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

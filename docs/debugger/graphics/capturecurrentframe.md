@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 07bd89a925afd8b9a5b05692e1d5e01ba4accb8d8809b6929f635e206d9ccb96
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0271ccd7b1a9a90ae683e86a141d41d269cac773
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379431"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154271"
 ---
 # <a name="capturecurrentframe"></a>CaptureCurrentFrame
 Geçerli çerçevenin kalan kısmını grafik günlük dosyasına yakalar.

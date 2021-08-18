@@ -10,15 +10,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c251ee95d86431a64f3c5e7c1f103b98fba3abc632de3b0db2f00d0e95a7549
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 373e762c94a504ef553cda6f06b049bb5286cb2f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239876"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161382"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek yol: Grafik Bilgilerini Program Aracılığıyla Yakalama
-Direct3D Grafik Tanılama grafik bilgilerini program [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] aracılığıyla yakalamak için Grafik Tanılama'yi kullanabilirsiniz.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Direct3D Grafik Tanılama grafik bilgilerini program aracılığıyla yakalamak için Grafik Tanılama'yi kullanabilirsiniz.
 
 Programlı yakalama, şu senaryolarda yararlıdır:
 
@@ -26,10 +26,10 @@ Programlı yakalama, şu senaryolarda yararlıdır:
 
 - Örneğin, hesaplamaları gerçekleştirmek için DirectCompute'ı kullandığında, uygulama hiç iş işlemezse, yakalamayı program aracılığıyla başlatabilirsiniz.
 
-- El ile test için tahmin etmek ve yakalamak zor ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak program aracılığıyla tahmin edilebilen bir işleme `CaptureCurrentFrame` sorunu olduğunda çağrısı.
+- Bir işleme sorununu el ile test etmek ve yakalamak zor olduğunda, ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak program aracılığıyla tahmin edilebilir `CaptureCurrentFrame` olduğunda çağrısı.
 
 ## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a>Windows 10'de programlı yakalama
-Bu adım adım kılavuzda, sağlam yakalama yöntemini kullanan directX 11.2 API'sini Windows 10 uygulamalarda programlı yakalamayı gösterir.
+Bu adım adım kılavuz, Windows 10 üzerinde DirectX 11.2 API'sini kullanan uygulamalarda programlı yakalamayı gösterir.
 
 Bu bölümde, bu görevlerin nasıl gerçekleştirllleri gösterir:
 
@@ -40,7 +40,7 @@ Bu bölümde, bu görevlerin nasıl gerçekleştirllleri gösterir:
 - Graf bilgilerini yakalama
 
 > [!NOTE]
-> Programlı yakalamanın önceki uygulamaları, yakalama işlevi Visual Studio için Uzak Araçlar özelliklerine dayanıyordu.
+> Programlı yakalamanın önceki uygulamaları, yakalama Visual Studio için Uzak Araçlar sağlamak için bu uygulamalara dayanıyordu.
 
 ### <a name="preparing-your-app-to-use-programmatic-capture"></a>Programlı yakalama kullanmak için uygulama hazırlama
 Uygulamanıza programlı yakalama kullanmak için gerekli üst bilgileri içermesi gerekir. Bu üst bilgiler, Windows 10 SDK'sı kapsamındadır.
@@ -57,7 +57,7 @@ Uygulamanıza programlı yakalama kullanmak için gerekli üst bilgileri içerme
     ```
 
     > [!IMPORTANT]
-    > Windows 8.0 ve önceki sürümlerde programlı yakalamayı destekleyen vsgcapture.h üst bilgi dosyasını, Windows 10 uygulamalarınıza dahil edin. Bu üst bilgi DirectX 11.2 ile uyumsuz. D3d11_2.h üst bilgisi dahil edildikten sonra bu dosya dahil edilirse, derleyici bir uyarı gösterir. vsgcapture.h, d3d11_2.h'den önce dahil edilirse uygulama başlamaz.
+    > Windows 8.0 ve önceki sürümlerde programlı yakalamayı destekleyen vsgcapture.h üst bilgi dosyasını, Windows 10 uygulamalarınıza dahil edin. Bu üst bilgi DirectX 11.2 ile uyumsuz. Bu dosya d3d11_2.h üst bilgisi dahil edildikten sonra dahil edilirse, derleyici bir uyarı gösterir. vsgcapture.h, d3d11_2.h'den önce dahil edilirse uygulama başlamaz.
 
     > [!NOTE]
     > Makinenize Haziran 2010 DirectX SDK'sı yüklüyse ve projenizin dahil etme yolu içeriyorsa, bunu dahil etme `%DXSDK_DIR%includex86` yolunun sonuna taşımanız gerekir. Kitaplık yolunuz için de aynısını kullanın.
@@ -115,7 +115,7 @@ Geçerli bir arabirime sahip `IDXGraphicsAnalysis` olduğunuza göre, grafik bil
 ## <a name="next-steps"></a>Sonraki Adımlar
 Bu kılavuzda grafik bilgilerini program aracılığıyla nasıl yakalayabilirsiniz? Bir sonraki adım olarak şu seçeneği göz önünde önünde belirtin:
 
-- Yakalanan grafik bilgilerini analiz etmek için Grafik Tanılama öğrenin. Bkz. [Genel Bakış.](overview-of-visual-studio-graphics-diagnostics.md)
+- Grafik Tanılama araçlarını kullanarak yakalanan grafik bilgilerini analiz etmeyi öğrenin. Bkz. [Genel Bakış.](overview-of-visual-studio-graphics-diagnostics.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: Grafik Bilgilerini Yakalama](walkthrough-capturing-graphics-information.md)

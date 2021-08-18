@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 10de77f2ab2d23d1f63643cd7f37094d62402f26d9d57ca2d03df4db844a681f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e86ff6198def71423076b62a0da6206887903676
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366192"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115271"
 ---
 # <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Nasıl yapılır: gelen kutusundan program aracılığıyla okunmamış iletileri alma
   bu örnekte, Outlook **gelen kutusundan** okunmamış e-posta iletileri alınır ve öğe sayısı görüntülenir.

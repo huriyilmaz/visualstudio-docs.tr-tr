@@ -1,6 +1,6 @@
 ---
-title: Üst öğe | Microsoft Docs
-description: Üst öğe, bir öğenin bir düğme, Birleşik giriş kutusu, menü veya grubun üst öğesi olduğunu belirtir.
+title: Üst Öğe | Microsoft Docs
+description: Parent öğesi bir öğenin düğme, birleşik giriş kutusu, menü veya grubun üst öğesi olduğunu belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52f3f1986a6cba794d0a46f04668c1f40e787e11dc14da37d89e1a99c752bd0f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb2ce0ddcf779d5c6c9e0b880d99f169d762065d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414122"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152074"
 ---
 # <a name="parent-element"></a>Üst öğe
-Bir düğme veya Birleşik giriş kutusunun üst öğesi yalnızca bir grup olabilir. Bir menünün veya grubun üstü başka bir menü veya grup olabilir. [Commandyerleştirme öğesinde](../extensibility/commandplacement-element.md)bu öğe gereklidir; diğer tüm örneklerde, bu isteğe bağlıdır. Bu öğe atlanırsa, üst öğesi de `Group_Undefined:0` kapsanır.
+Bir düğmenin veya birleşik giriş kutusunun üst öğesi yalnızca bir grup olabilir. Bir menü veya grubun üst öğesi başka bir menü veya grup olabilir. Bir [CommandPlacement öğesinde](../extensibility/commandplacement-element.md)bu öğe gereklidir; diğer tüm örneklerde isteğe bağlıdır. Bu öğe atlanırsa üst öğesi `Group_Undefined:0` kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,8 +37,8 @@ Bir düğme veya Birleşik giriş kutusunun üst öğesi yalnızca bir grup olab
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|
-|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID'si.|
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının kimliği.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Hiçbiri
@@ -47,10 +47,10 @@ Bir düğme veya Birleşik giriş kutusunun üst öğesi yalnızca bir grup olab
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|Bir VSPackage 'ın tümleşik geliştirme ortamına (IDE) sağladığı komutları temsil eden tüm öğeleri tanımlar. Örneğin, menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları.|
-|[Düğmeler öğesi](../extensibility/buttons-element.md)|Gruplar [düğme öğesi](../extensibility/button-element.md) öğeleri.|
-|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage 'ın uyguladığı tüm menüleri tanımlar.|
-|[Groups öğesi](../extensibility/groups-element.md)|VSPackage 'un komut gruplarını tanımlayan girişleri içerir.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage'ın tümleşik geliştirme ortamına (IDE) sağladığı komutları temsil eden tüm öğeleri tanımlar. Örneğin menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları.|
+|[Düğmeler öğesi](../extensibility/buttons-element.md)|Gruplar [Düğmesi öğesi](../extensibility/button-element.md) öğeleri.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uygulayan tüm menüleri tanımlar.|
+|[Groups öğesi](../extensibility/groups-element.md)|VSPackage'ın komut gruplarını tanımlayan girdileri içerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

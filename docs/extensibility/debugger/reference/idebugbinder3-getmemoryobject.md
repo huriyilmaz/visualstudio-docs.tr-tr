@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bu nesnenin bağlandığı belleği temsil eden bir bellek nesnesi alır.
-title: 'IDebugBinder3:: GetMemoryObject | Microsoft Docs'
+description: Bu yöntem, bu nesnenin bağlı olduğu belleği temsil eden bir bellek nesnesi kullanır.
+title: IDebugBinder3::GetMemoryObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 71d959c7-45df-485f-b0ee-f1c0439d54fb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10518db1aca373d749858855730cee458649cb5f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: eeffc3d63afe3a950cff6da04c777b7a18357af0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067367"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145321"
 ---
 # <a name="idebugbinder3getmemoryobject"></a>IDebugBinder3::GetMemoryObject
-Bu yöntem, bu nesnenin bağlandığı belleği temsil eden bir bellek nesnesi alır.
+Bu yöntem, bu nesnenin bağlı olduğu belleği temsil eden bir bellek nesnesi kullanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +47,16 @@ int GetMemoryObject(
 
 ## <a name="parameters"></a>Parametreler
 `pField`\
-'ndaki Bellek nesnesinin hangi alana alınacağını belirtir.
+[in] Bellek nesnesinin hangi alana sahip olduğunu belirtir.
 
 `uConstant`\
-'ndaki Bir sabit değer için bir bellek adresi veya değeri temsil eder.
+[in] Sabit bir değer için bir bellek adresini veya değeri temsil eder.
 
 `ppObject`\
-dışı Bu nesnenin bağlandığı belleği temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) .
+[out] Bu nesnenin bağlı olduğu belleği temsil eden [bir IDebugObject.](../../../extensibility/debugger/reference/idebugobject.md)
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

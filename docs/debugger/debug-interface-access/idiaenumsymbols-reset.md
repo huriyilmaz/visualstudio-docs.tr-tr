@@ -11,14 +11,15 @@ ms.assetid: dd3c41a5-ebdf-4a9e-bc84-2fe985be0075
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 99fdf1ba50b0555b9eea4335f444e1ee6c6a1cad
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b201bcad3701f2ec5b1e3dc84a11ed416e591e74
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159106"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129306"
 ---
 # <a name="idiaenumsymbolsreset"></a>IDiaEnumSymbols::Reset
 Bir numaralandırma dizisini başlangıca sıfırlar.

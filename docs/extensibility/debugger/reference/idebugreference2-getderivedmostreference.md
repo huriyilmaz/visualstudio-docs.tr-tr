@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6b69df586154bdbaf242463a5292232e4ba137201d8b8e169015fed2ebf3fe9c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e2980792572a6ac9c2d833a0fef62350db968d00
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402265"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132593"
 ---
 # <a name="idebugreference2getderivedmostreference"></a>IDebugReference2::GetDerivedMostReference
 Bir başvurudan türetilmiş en çok başvuru alır. Daha sonraki kullanımlar için ayrılmıştır.
@@ -49,7 +49,7 @@ int GetDerivedMostReference(
  Her zaman `E_NOTIMPL` döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, bu özellik uygulayan ancak aslında 'den türetilen bir örneği olan bir nesneyi açıklarsa, bu yöntem nesneye bir başvuruyu temsil eden `ClassRoot` `ClassDerived` bir `ClassRoot` [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi `ClassDerived` döndürür.
+ Örneğin, bu özellik uygulayan ancak aslında 'den türetilen bir örneği olan bir nesneyi açıklarsa, bu yöntem nesnesine bir başvuruyu temsil eden `ClassRoot` `ClassDerived` bir `ClassRoot` [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi `ClassDerived` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

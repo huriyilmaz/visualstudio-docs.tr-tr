@@ -8,14 +8,15 @@ f1_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ba1e2e258a12c6548317b272365db67503dc3d16
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 680fc682c39ee919038da551a4d4cbbffbf6c168
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147009"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154501"
 ---
 # <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Hata: işlev &#39;işlevi değerlendirilirken hedef işleme kod &#39;kodla çıkıldı&#39;&#39;
 

@@ -11,14 +11,15 @@ ms.assetid: df33c52e-ded2-48a0-951d-1f36c8fc922e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8a48ffcb3c0409839ec9323679e396a7e23b8f3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2d734e6c1a88dea2533ef2fdca601ff8ff434d5d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088828"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145308"
 ---
 # <a name="idebugboundbreakpoint2"></a>IDebugBoundBreakpoint2
 Bu arabirim, bir kod konumuna bağlanan bir kesme noktasını temsil eder.

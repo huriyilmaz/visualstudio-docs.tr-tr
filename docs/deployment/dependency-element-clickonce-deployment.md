@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dependency &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;dependency &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 description: Dependency öğesi, yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -25,16 +25,17 @@ ms.assetid: 9b4d2082-0347-4922-ac70-85f11b913039
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 172f3ea546565554c5f0701b81a88b9ca99b4100
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 27da36d933a3505163c36623b9eac8b51d0bbe86
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881106"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160874"
 ---
-# <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;Dependency &gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;dependency &gt; öğesi (ClickOnce dağıtımı)
 Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımlar.
 
 ## <a name="syntax"></a>Syntax
@@ -96,7 +97,7 @@ Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımla
 |`Name`|Gereklidir. Uygulamanın adını tanımlar.|
 |`Version`|Gereklidir. Uygulamanın sürüm numarasını aşağıdaki biçimde belirtir: `major.minor.build.revision`|
 |`publicKeyToken`|Gereklidir. Uygulamanın veya derlemenin imzalandığı ortak anahtarın SHA-1 karmasının son 8 baytını temsil eden 16 karakterlik bir onaltılık dize belirtir. İmzalamak için kullanılan ortak anahtar 2048 bit veya daha büyük olmalıdır.|
-|`processorArchitecture`|Gereklidir. Mikroişlemciyi belirtir. Geçerli değerler `x86` 32 bitlik Windows ve `IA64` 64 bit Windows içindir.|
+|`processorArchitecture`|Gereklidir. Mikroişlemciyi belirtir. geçerli değerler `x86` 32 bitlik Windows ve `IA64` 64 bit Windows içindir.|
 |`Language`|İsteğe bağlı. Derlemenin iki bölüm dil kodunu tanımlar. Örneğin, EN-US, Ingilizce (ABD) anlamına gelir. Varsayılan değer: `neutral`. Bu öğe `asmv2` ad alanıdır.|
 |`type`|İsteğe bağlı. Windows yan yana yüklemesi teknolojisi ile geriye dönük uyumluluk için. İzin verilen tek değer `win32` .|
 

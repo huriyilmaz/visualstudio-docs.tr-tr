@@ -1,6 +1,6 @@
 ---
-description: İfade değerlendiricisi 'nin belirtilen ölçüsüne karşılık gelen bir değer alır.
-title: 'IDebugSettingsCallback2:: GetEEMetricDword | Microsoft Docs'
+description: İfade değerlendiricinin belirtilen ölçümüne karşılık gelen bir değer verir.
+title: IDebugSettingsCallback2::GetEEMetricDword | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2a08181747c347160b3393f8762b910f791ace0c506b136379ed3d4aea1e19b1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f90fef207241225dfdfecc649299cf1132bdd56e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448968"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118469"
 ---
 # <a name="idebugsettingscallback2geteemetricdword"></a>IDebugSettingsCallback2::GetEEMetricDword
-İfade değerlendiricisi 'nin belirtilen ölçüsüne karşılık gelen bir değer alır.
+İfade değerlendiricinin belirtilen ölçümüne karşılık gelen bir değer verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,19 +47,19 @@ private int GetEEMetricDword(
 
 ## <a name="parameters"></a>Parametreler
 `guidLang`\
-'ndaki Programlama dilinin benzersiz tanıtıcısı.
+[in] Programlama dilinin benzersiz tanımlayıcısı.
 
 `guidVendor`\
-'ndaki Satıcının benzersiz tanıtıcısı.
+[in] Satıcının benzersiz tanımlayıcısı.
 
 `pszMetric`\
-'ndaki Ölçümün adı.
+[in] Ölçümün adı.
 
 `pdwValue`\
-dışı Ölçüm dizesine karşılık gelen değeri döndürür.
+[out] Ölçüm dizesine karşılık gelen değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

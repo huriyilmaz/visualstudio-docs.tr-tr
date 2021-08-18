@@ -1,6 +1,6 @@
 ---
-description: Hata Ayıklama SDK'sı için aşağıdaki Visual Studio numaralamaları.
-title: Numaralamalar (Visual Studio Ayıklama) | Microsoft Docs
+description: Hata Ayıklama SDK'sı için Visual Studio aşağıda listeledik.
+title: Enumerations (Visual Studio Debugging) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f9592569b436808b5e8d713e1e11ce6b890e20e6a1e5f8d2972d8173cc97b77
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ee22e24dc2bb8047cec6e9fd96c4b978ed5eb3c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390352"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145581"
 ---
 # <a name="enumerations-visual-studio-debugging"></a>Sabit Listeler (Visual Studio Hata Ayıklama)
 Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] numaralamalar aşağıda velanmıştır.
@@ -41,7 +41,7 @@ Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vs
 
 - [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) Kesme noktası isteğinin konum türünü belirtir.
 
-- [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) Kesme noktası geçiş sayısıyla ilişkilendirilmiş olan ve kesme noktasıyla ilişkili olan koşulu belirtir.
+- [BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md) Kesme noktası geçiş sayısıyla ilişkilendirilmiş olan ve kesme noktası durumunun neden olduğu koşulu belirtir.
 
 - [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) Veri kesme noktası öykünülse veya donanımda uygulanıp uygulanmadığını belirtir.
 
@@ -53,9 +53,9 @@ Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vs
 
 - [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) Bir kesme noktası başarısız çözümlemesi hakkında hangi bilgilerin alınacak olduğunu belirtir.
 
-- [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Bir kesme noktası isteği hakkında hangi bilgilerin alınacak olduğunu belirtir.
+- [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Bir kesme noktası isteği hakkında hangi bilgilerin alınacaklarını belirtir.
 
-- [BPREQI_FIELDS90](../../../extensibility/debugger/reference/bpreqi-fields90.md) Bir kesme noktası isteği hakkında alınacak bilgileri belirten geçerli değerleri numaralar. Bu numaralama, tüm [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) genişlettir.
+- [BPREQI_FIELDS90](../../../extensibility/debugger/reference/bpreqi-fields90.md) Bir kesme noktası isteği hakkında alınacak bilgileri belirten geçerli değerleri numaralar. Bu numaralama, BPREQI_FIELDS [](../../../extensibility/debugger/reference/bpreqi-fields.md) genişlettir.
 
 - [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) Bir kesme noktası başarılı çözümlemesi hakkında hangi bilgilerin alınacak olduğunu belirtir.
 
@@ -73,7 +73,7 @@ Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vs
 
 - [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) İşlemin hata ayıklama için neden başlat olduğunu belirtir.
 
-- [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Bir hata ayıklama özelliği nesnesi hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
+- [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Bir hata ayıklama özelliği nesnesi hakkında hangi bilgilerin alın olduğunu belirtir.
 
 - [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) Bir hata ayıklama başvuru nesnesi hakkında hangi bilgilerin alın olduğunu belirtir.
 
@@ -95,7 +95,7 @@ Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vs
 
 - [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) İfade değerlendirmesini kontrol eden bayrakları belirtir.
 
-- [EVALFLAGS90](../../../extensibility/debugger/reference/evalflags90.md) İfade değerlendirmesini kontrol eden bayraklar için geçerli değerleri numaralar. Bu numaralama [EVALFLAGS numaralama](../../../extensibility/debugger/reference/evalflags.md) süresini genişleter.
+- [EVALFLAGS90](../../../extensibility/debugger/reference/evalflags90.md) İfade değerlendirmesini kontrol eden bayraklar için geçerli değerleri numaralar. Bu numaralama [EVALFLAGS numaralama](../../../extensibility/debugger/reference/evalflags.md) süresini genişlettir.
 
 - [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) Olay özniteliklerini belirtir.
 
@@ -105,7 +105,7 @@ Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vs
 
 - [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türü belirtir.
 
-- [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) [Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin içereb olduğu ek alan türleri numaralandır. Bu numaralama, tüm [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) genişlettir.
+- [FIELD_KIND_EX](../../../extensibility/debugger/reference/field-kind-ex.md) [Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinin içereb olduğu ek alan türleri numaralandır. Bu numaralama, FIELD_KIND [](../../../extensibility/debugger/reference/field-kind.md) genişlettir.
 
 - [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) Bir alan türü için değiştiricileri belirtir.
 
@@ -135,7 +135,7 @@ Hata Ayıklama SDK'sı için [!INCLUDE[vsprvs](../../../code-quality/includes/vs
 
 - [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) İfade değerlendiriciden bir nesnenin türünü belirtir.
 
-- [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) Bir ifadeyi ayrıştırmayı belirtir.
+- [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) Bir ifadenin nasıl ayrıştırılası olduğunu belirtir.
 
 - [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) Bekleyen bir kesme noktası (henüz bağlı değil bir kesme noktası) durumunu belirtir.
 

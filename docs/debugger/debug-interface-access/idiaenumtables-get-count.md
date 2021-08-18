@@ -1,6 +1,6 @@
 ---
-description: Tablo sayısını alır.
-title: 'IDiaEnumTables:: get_Count | Microsoft Docs'
+description: Tablo sayısını alın.
+title: IDiaEnumTables::get_Count | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 81687fad1bb60d418bb88a099ad39758cb0b7faf7eaf252a65ce33d92739bb2b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c2bcbe87119c349ed1108bd3264b2c6fa70d13ba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345127"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129242"
 ---
 # <a name="idiaenumtablesget_count"></a>IDiaEnumTables::get_Count
-Tablo sayısını alır.
+Tablo sayısını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_Count (    LONG* pRetVal
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Tablo sayısını döndürür.
+[out] Tablo sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

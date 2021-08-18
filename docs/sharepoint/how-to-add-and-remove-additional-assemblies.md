@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: aa1017ec2dd27ddb46281a6f8c047641f4117b9f39818ed091f5174d91e79240
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 113b881759f523d7b2f583fb33b25d4186ff30e8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121228720"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131072"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>Nasıl yapılır: ek derlemeler ekleme ve kaldırma
   bir SharePoint paketi işlevselliği veya verileri için diğer derlemelere bağımlıysa, derlemeleri çözüm paketinize (. wsp) ekleyebilirsiniz. bu şekilde, SharePoint sunucusu özel derlemelerin bir paket ile yüklendiğinden emin olmanızı sağlar.

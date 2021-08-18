@@ -1,6 +1,6 @@
 ---
 title: InitializeCorrelation Etkinlik Tasarımcısı
-description: Bu İş Akışı Tasarımcısı initializeCorrelation etkinlik tasarımcısını kullanarak initializeCorrelation etkinliği oluşturma ve yapılandırma hakkında bilgi edinmek için.
+description: İş Akışı Tasarımcısı, ınitialbağlı bir Ilişki etkinliği oluşturmak ve yapılandırmak için ınitialkayıt Ilişkisi etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,40 +13,40 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: aff2353f0ea681935ff576545f6eb14b957f2c1d58136e240917bd4f86653f75
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 71756f4ed01253607efae47193ea8ddaa6b52a75
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440506"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130448"
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation Etkinlik Tasarımcısı
 
-**InitializeCorrelation etkinlik** tasarımcısı, etkinlik oluşturmak ve yapılandırmak için <xref:System.ServiceModel.Activities.InitializeCorrelation> kullanılır. Etkinlik, <xref:System.ServiceModel.Activities.InitializeCorrelation> göndermeden veya almadan önce iletiler arasında bir bağıntı sağlar.
+**Initialkayıt ilişkisi** etkinlik Tasarımcısı bir etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.ServiceModel.Activities.InitializeCorrelation> . <xref:System.ServiceModel.Activities.InitializeCorrelation>Etkinlik, iletileri göndermeden veya almadan önce iletiler arasında bir bağıntı kurar.
 
-## <a name="the-initializecorrelation-activity"></a>InitializeCorrelation Etkinliği
+## <a name="the-initializecorrelation-activity"></a>Initialkaydedilmiş Ilişki etkinliği
 
-Etkinlik, <xref:System.ServiceModel.Activities.InitializeCorrelation> ileti göndermeden veya almadan bağıntıları başlatmak için kullanılır. Genellikle bir ileti göndererek veya alırken bağıntı başlatılır. İleti gönderilmeden veya alınmadan önce bağıntı kurulması gerekirse, <xref:System.ServiceModel.Activities.InitializeCorrelation> bağıntıyı başlatmak için kullanın.
+Bir <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinlik, bir ileti göndermeden veya almadan bağıntılar başlatmak için kullanılır. Genellikle bağıntı bir ileti gönderilirken veya alındığında başlatılır. Bir ileti gönderilmeden veya alınmadan önce bağıntı oluşturulmalıdır, <xref:System.ServiceModel.Activities.InitializeCorrelation> bağıntıyı başlatmak için kullanın.
 
-### <a name="using-the-initializecorrelation-activity-designer"></a>InitializeCorrelation Etkinlik Tasarımcısını Kullanma
+### <a name="using-the-initializecorrelation-activity-designer"></a>Initialkaydedilmiş Ilişki etkinlik tasarımcısını kullanma
 
-Araç Kutusunun **Mesajlaşma kategorisinde initializeCorrelation** **etkinlik** tasarımcısına **erişin.**
+**Araç kutusunun** **mesajlaşma** kategorisindeki **ınitialkaydedilmiş Relation** etkinlik tasarımcısına erişin.
 
-**InitializeCorrelation** etkinlik tasarımcısı Araç Kutusundan **sürüklenip** bir İş Akışı Tasarımcısı bırakılır. Etkinlik tasarımcısını bırakarak <xref:System.ServiceModel.Activities.InitializeCorrelation> <xref:System.Activities.Activity.DisplayName%2A> initializeCorrelation varsayılan değerine sahip bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **InitializeCorrelation** etkinlik tasarımcısının üst bilgisinde veya Özellikler penceresinin **DisplayName** kutusunda **düzenlenebilir.**
+**Initialgelsel ilişki** etkinlik Tasarımcısı **araç kutusundan** sürüklenip iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik Tasarımcısı ' nın atılması, <xref:System.ServiceModel.Activities.InitializeCorrelation> varsayılan <xref:System.Activities.Activity.DisplayName%2A> ınitialmada ilişkisine sahip bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **Initialkaydedilmiş ilişki** etkinlik tasarımcısının üst bilgisinde veya **Özellikler** penceresinin **DisplayName** kutusunda düzenlenebilir.
 
-<xref:System.ServiceModel.Activities.CorrelationHandle>, **InitializeCorrelation** **etkinlik** tasarımcısı **yüzeyinin Özellikler** penceresindeki Bağıntı alanında yer alan belirtir.
+, <xref:System.ServiceModel.Activities.CorrelationHandle> **Initialsel ilişki** etkinlik Tasarımcısı yüzeyi üzerindeki **Özellikler** penceresinde **bağıntı** alanında belirtilebilir.
 
-**Bağıntı tanıtıcıyı** ve bağıntıyı başlatmak için kullanılan anahtar-değer çiftlerini belirtebilirsiniz BağıntıYı Başlat iletişim kutusunu görüntülemek için Özellikler penceresinde **CorrelationData** alanı yanındaki üç nokta **düğmesini** seçin. Veya "Görünüm ..." **InitializeCorrelation etkinlik tasarımcısı yüzeyindeki** ipucu metni. Bu iletişim kutusunu kullanma hakkında daha fazla bilgi için Tür Koleksiyonu [Düzenleyicisi İletişim Kutusu makalesine](../workflow-designer/type-collection-editor-dialog-box.md) bakın.
+İlişki tanıtıcısını ve bunu başlatmak için kullanılan anahtar-değer çiftlerini belirtebileceğiniz **bağıntıyı Başlat** iletişim kutusunu göstermek için **Özellikler** penceresindeki **CorrelationData** alanının yanındaki üç nokta düğmesini seçin. Ya da "görünüm..." i seçin **ınitialsel ilişki** etkinlik Tasarımcısı yüzeyinde ipucu metni. Bu iletişim kutusunu kullanma hakkında daha fazla bilgi için bkz. [tür koleksiyonu Düzenleyicisi Iletişim kutusu](../workflow-designer/type-collection-editor-dialog-box.md) makalesi.
 
-### <a name="the-initializecorrelation-properties"></a>InitializeCorrelation Özellikleri
+### <a name="the-initializecorrelation-properties"></a>Initialbir Ilişki özellikleri
 
-Aşağıdaki tabloda özellikler <xref:System.ServiceModel.Activities.InitializeCorrelation> ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır. Bu özellikler Özellikler penceresinde veya **İş Akışı Tasarımcısı** düzenlenebilir.
+Aşağıdaki tabloda <xref:System.ServiceModel.Activities.InitializeCorrelation> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, **Özellikler** penceresinde veya iş akışı Tasarımcısı yüzeyinde düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.ServiceModel.Activities.InitializeCorrelation> adı. Varsayılan değer InitializeCorrelation'dır.<br /><br /> Kolay için varsayılan olmayan bir değerin kullanılması kesinlikle gerekli <xref:System.Activities.Activity.DisplayName%2A> değildir, ancak önerilir.|
-|<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|Yanlış|<xref:System.ServiceModel.Activities.CorrelationHandle>Bağıntıda iş akışı etkinliklerini ilişkilendirmek için kullanılan.|
-|<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|Yanlış|İletileri iş akışı örneğiyle ilişkili bağıntı verileri sözlüğü.<br /><br /> Yapılandırmak **için Bağıntı** Başlat iletişim kutusunu <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> kullanın. Bu iletişim kutusunu kullanma hakkında daha fazla bilgi için Tür Koleksiyonu Düzenleyicisi [İletişim Kutusu makalesine](../workflow-designer/type-collection-editor-dialog-box.md) bakın.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.ServiceModel.Activities.InitializeCorrelation> . Varsayılan değer, ınitialbir Ilişki olur.<br /><br /> Kolay için varsayılan olmayan bir değer kullanılması <xref:System.Activities.Activity.DisplayName%2A> kesinlikle gerekli değildir, ancak önerilir.|
+|<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|Yanlış|<xref:System.ServiceModel.Activities.CorrelationHandle>Bağıntı içindeki iş akışı etkinliklerini ilişkilendirmek için kullanılır.|
+|<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|Yanlış|İletileri iş akışı örneğiyle ilişkilendiren bir bağıntı verileri sözlüğü.<br /><br /> Yapılandırmak için **bağıntıyı Başlat** iletişim kutusunu kullanın <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> . Bu iletişim kutusunu kullan hakkında daha fazla bilgi için, [tür koleksiyonu Düzenleyicisi Iletişim kutusu](../workflow-designer/type-collection-editor-dialog-box.md) makalesine bakın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

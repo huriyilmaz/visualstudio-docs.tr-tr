@@ -12,17 +12,18 @@ ms.assetid: 1b4e3f73-c94d-4aa3-9aa8-0d8cb8a6c5ca
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7b68651fa100555fbc07065dedc5cff22b14b1a1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 94c2a5aac3c305a854aeb28ee0129f9e76d124eb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088958"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072739"
 ---
 # <a name="idebugboundbreakpoint2enable"></a>IDebugBoundBreakpoint2::Enable
 Kesme noktasını etkinleştirilir veya devre dışı bırakır.

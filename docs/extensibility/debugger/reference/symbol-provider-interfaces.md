@@ -1,6 +1,6 @@
 ---
 title: Sembol Sağlayıcısı Arabirimleri | Microsoft Docs
-description: Bu makale, kesme modu sırasında bir çağrı yığınında değişkenleri değerlendiren Visual Studio SDK'sı için Sembol İşleme Arabirimleri açıklamalarına bağlantı sağlar.
+description: Bu makale, kesme modu sırasında bir çağrı yığınında değişkenleri değerlendiren Visual Studio SDK'sı için Sembol İşleme Arabirimleri'nin açıklamalarına bağlantı sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14cb7be76bc941fd04eba217f0708ae94817821034b0dd1999ce194e090105a4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c686b87346487d452a166d41b94a4a8b17d3e82d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389013"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117975"
 ---
 # <a name="symbol-provider-interfaces"></a>Sembol Sağlayıcısı Arabirimleri
 Aşağıdakiler için Sembol İşleme Arabirimleri'dir. [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)]
@@ -31,7 +31,7 @@ Aşağıdakiler için Sembol İşleme Arabirimleri'dir. [!INCLUDE[vsipsdk](../..
 |Arabirim|Uygulama tarafından|Açıklama|
 |---------------|--------------------|-----------------|
 |[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)|Sp|Bir öğenin adresini temsil eder.|
-|[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|Sp|İşlem kimliğine erişim sağlayan bir öğenin adresini temsil eder.|
+|[IDebugAddress2](../../../extensibility/debugger/reference/idebugaddress2.md)|Sp|bir öğenin adresini temsil eder ve işlem kimliğine erişim sağlar.|
 |[IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)|Sp|Bir dizi sembolünü veya dizi türünü temsil eder.|
 |[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)|Sp|Bir sınıf sembolünü veya sınıf türünü temsil eder.|
 |[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)|Sp|Yönetilen koda özgü yöntemlerle bir COM+ sembol sağlayıcısını temsil eder.|

@@ -10,14 +10,15 @@ ms.assetid: 71eea623-f566-4feb-84cd-ca1ba71bc493
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 391bec513f1f6d32d7ff2f87d70abdbf491ab8be
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5cee92e4831b1639293064f6776430359eebefb0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091246"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152529"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>Özel düzenleyicilerde belge verileri ve belge görünümü
 Özel bir düzenleyici iki bölümden oluşur: bir belge veri nesnesi ve bir belge görünümü nesnesi. Adlar gösterildiğinde belge verileri nesnesi görüntülenecek metin verilerini temsil eder. Benzer şekilde, belge görünümü nesnesi (veya "Görünüm"), belge veri nesnesinin görüntüleneceği bir veya daha fazla pencere temsil eder.
@@ -25,7 +26,7 @@ ms.locfileid: "105091246"
 ## <a name="document-data-object"></a>Belge veri nesnesi
  Belge veri nesnesi, metin arabelleğindeki metnin veri gösterimidir. Belge metnini ve diğer bilgileri depolayan bir COM nesnesidir. Belge verileri nesnesi, belge kalıcılığını da işler ve verilerinin birden çok görünümünü sunar. Daha fazla bilgi için bkz.
 
- <xref:EnvDTE80.Window2.DocumentData%2A> ve [belge pencereleri](../extensibility/internals/document-windows.md).
+ <xref:EnvDTE80.Window2.DocumentData%2A>ve [belge Windows](../extensibility/internals/document-windows.md).
 
  Özel düzenleyiciler ve tasarımcılar, <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> nesneyi veya kendi özel arabelleğini kullanmayı tercih edebilir. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> Standart bir düzenleyici için Basitleştirilmiş ekleme modelini izler, birden fazla görünümü destekler ve birden çok görünümü yönetmek için kullanılan olay arabirimlerini sağlar.
 
@@ -36,7 +37,7 @@ ms.locfileid: "105091246"
 
  IDE, çalışan belge tablosundaki her girdinin bir öğe tanımlayıcısını (ItemId) eşleştirerek olayları (örneğin, bir belge içeren bir çözüm kapatıldığında) hakkında görünümler bildirir. Bu konuda daha fazla bilgi için bkz. [çalışma belge tablosu](../extensibility/internals/running-document-table.md).
 
- Özel bir düzenleyici için bir görünüm oluşturmak için iki seçenek vardır. Bunlardan biri, görünümün bir ActiveX denetimi veya belge veri nesnesi kullanılarak bir pencerede barındırıldığı yerinde etkinleştirme modelidir. İkincisi, görünümün tarafından barındırıldığı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> Pencere komutlarını işlemek için uygulandığı Basitleştirilmiş ekleme modelidir. Yerinde etkinleştirme modeli hakkında daha fazla bilgi için bkz. [yerinde etkinleştirme](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015). Basitleştirilmiş ekleme modeli hakkında daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md).
+ Özel bir düzenleyici için bir görünüm oluşturmak için iki seçenek vardır. bunlardan biri, görünümün bir ActiveX denetimi veya belge verileri nesnesi kullanılarak bir pencerede barındırıldığı yerinde etkinleştirme modelidir. İkincisi, görünümün tarafından barındırıldığı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> Pencere komutlarını işlemek için uygulandığı Basitleştirilmiş ekleme modelidir. Yerinde etkinleştirme modeli hakkında daha fazla bilgi için bkz. [yerinde etkinleştirme](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015). Basitleştirilmiş ekleme modeli hakkında daha fazla bilgi için bkz. [Basitleştirilmiş ekleme](../extensibility/simplified-embedding.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

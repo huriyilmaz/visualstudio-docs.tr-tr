@@ -13,19 +13,20 @@ ms.assetid: 47cf16a5-d78b-452e-86f6-b5893856dddf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4c7b058acdd634079d0ca60dddb9f80e0e26ff0
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 35cea63308ffaef653904f4c959164bd09b73df0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901880"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146101"
 ---
 # <a name="commands-element"></a>Commands öğesi
 VSPackage araç çubuğunda komut koleksiyonunu temsil eder. Koleksiyonda en fazla beş alt bölüm olabilir: menüler, gruplar, düğmeler, birleşik girişler ve bit eşlemler.
 
- Örneğin her alt bölüm alt öğesi, GUID ve sayısal tanımlayıcı \<Menu> çifti olan benzersiz bir komut kimliğiyle tanımlanır. GUID , "komut kümesi" tanımlar ve mantıksal olarak ilgili komutları gruplatır. VSPackage, diğer VSPackage'lar tarafından tanımlanan komut kimlikleriyle çakışmaları önlemek için kendi komut kümesi tanımlamalı.
+ Örneğin her alt bölüm alt öğesi, GUID ve sayısal tanımlayıcı \<Menu> çifti olan benzersiz bir komut kimliğiyle tanımlanır. GUID , "komut kümesi" tanımlar ve mantıksal olarak ilişkili komutları gruplatır. VSPackage, diğer VSPackage'lar tarafından tanımlanan komut kimlikleriyle çakışmaları önlemek için kendi komut kümesi tanımlamalı.
 
 ## <a name="syntax"></a>Syntax
 

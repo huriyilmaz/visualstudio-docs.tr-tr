@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl: Belirli bir Liste Örneği Örneği için Olay Alıcısı Oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: belirli bir liste örneği için olay alıcısı oluşturma | Microsoft Docs'
 titleSuffix: ''
-description: Belirli bir liste örneği için olay alıcısı oluşturun. Liste örneği olay alıcısı, liste tanımının herhangi bir örneğinde oluşan olaylara yanıt verir.
+description: Belirli bir liste örneği için olay alıcısı oluşturun. Liste örneği olay alıcısı, bir liste tanımının herhangi bir örneğinde oluşan olaylara yanıt verir.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,78 +17,78 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 815cb4a46141ddc5f6e85fefe4ff71a53cd473e958ffaa5c2779e99355aca6cf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cfc18bab08a141e5c7173d622e0bc55d1a2f0fbc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121228564"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131007"
 ---
-# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Nasıl ekleyebilirsiniz: Belirli bir liste örneği için olay alıcısı oluşturma
-  Liste örneği olay alıcısı, liste tanımının herhangi bir örneğinde oluşan olaylara yanıt verir. Olay alıcı şablonu belirli bir liste örneğinin hedefini etkinleştirmese de, belirli bir liste örneğinde olaylara yanıt vermek için bir liste tanımı kapsamına sahip olay alıcısını değiştirebilirsiniz.
+# <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>Nasıl yapılır: belirli bir liste örneği için olay alıcısı oluşturma
+  Liste örneği olay alıcısı, bir liste tanımının herhangi bir örneğinde oluşan olaylara yanıt verir. Olay alıcısı şablonu belirli bir liste örneğinin hedeflemesini etkinleştirmese de, belirli bir liste örneğindeki olaylara yanıt vermek için liste tanımı kapsamındaki bir olay alıcısını değiştirebilirsiniz.
 
- Belirli bir liste örneğini hedeflemek *için* Elements.xmlalıcısının url'sini ile değiştirin ve `ListTemplateId` liste `ListUrl` örneğinin URL'sini ekleyin.
+ Belirli bir liste örneğini hedeflemek için, olay alıcısı için *Elements.xml* `ListTemplateId` ile değiştirin `ListUrl` ve liste örneğinin URL 'sini ekleyin.
 
 ## <a name="create-a-list-instance-event-receiver"></a>Liste örneği olay alıcısı oluşturma
- Aşağıdaki adımlarda, bir liste öğesi olay alıcısının yalnızca özel bir duyurular-liste örneğinde oluşan olaylara yanıt vermek üzere nasıl değiştirnerek değiştirilebilecekleri açıktır.
+ Aşağıdaki adımlarda, bir liste öğesi olay alıcısının yalnızca özel Duyurular-liste örneğinde gerçekleşen olaylara yanıt verecek şekilde nasıl değiştirileceği gösterilmektedir.
 
-#### <a name="to-modify-an-event-receiver-to-respond-to-a-specific-list-instance"></a>Bir olay alıcısını belirli bir liste örneğine yanıt vermek için değiştirmek için
+#### <a name="to-modify-an-event-receiver-to-respond-to-a-specific-list-instance"></a>Bir olay alıcısını belirli bir liste örneğine yanıt verecek şekilde değiştirmek için
 
-1. Tarayıcıda SharePoint açın.
+1. bir tarayıcıda SharePoint sitesini açın.
 
-2. Gezinti bölmesinde Listeler **bağlantısı.**
+2. Gezinti bölmesinde, bağlantısını **listeler** .
 
-3. Tüm **Site İçeriği sayfasında** Oluştur **bağlantısını** seçin.
+3. **Tüm site içeriği** sayfasında **Oluştur** bağlantısını seçin.
 
-4. Oluştur **iletişim** kutusunda Duyurular türünü **seçin,** duyuruya **TestAnnouncements adını ve** ardından Oluştur **düğmesini** seçin.
+4. **Oluştur** Iletişim kutusunda **Duyurular** türünü seçin **, duyuruyu duyurun ve ardından** **Oluştur** düğmesini seçin.
 
-5. içinde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir olay alıcı projesi oluşturun.
+5. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir olay alıcısı projesi oluşturun.
 
-6. Ne tür **bir olay alıcısı istiyor musunuz? listesinde** Öğe Olaylarını **Listele'yi seçin.**
+6. **Ne tür bir olay alıcısı istiyorsunuz?** listesinde, **liste öğesi olayları**' nı seçin.
 
     > [!NOTE]
-    > Bir liste tanımına kapsamı olan başka bir olay alıcısı türü de seçebilirsiniz; örneğin, E-posta **Olaylarını Listele** veya İş **Akışı Olaylarını Listele.**
+    > Ayrıca, bir liste tanımına kapsamlar olan diğer tür bir olay alıcıyı seçebilirsiniz (örneğin, **e-posta olaylarını listeleme** veya **Iş akışı olaylarını listeleme**).
 
-7. Olay **kaynağı hangi öğe olmalı? listesinde Duyurular'ı** **seçin.**
+7. **Hangi öğe olay kaynağı olmalıdır?** listesinde, **Duyurular**' ı seçin.
 
-8. Aşağıdaki **olayları işle listesinde** Bir öğe **ekleniyor** onay kutusunu ve ardından Son **düğmesini** seçin.
+8. **Aşağıdaki olayları işle** listesinde, **bir öğe ekleniyor** onay kutusunu seçin ve ardından **son** düğmesini seçin.
 
-9. Bu **Çözüm Gezgini,** EventReceiver1 altında *Elements.xml.*
+9. **Çözüm Gezgini**' de, EventReceiver1 altında *Elements.xml* açın.
 
-     Olay alıcısı şu anda aşağıdaki satırı kullanarak Duyurular liste tanımına başvurur:
+     Olay alıcısı Şu anda aşağıdaki satırı kullanarak Duyurular listesi tanımına başvuruyor:
 
     ```xml
     <Receivers ListTemplateId="104">
     ```
 
-     Bu satırı aşağıdaki metinle değiştirebilirsiniz:
+     Bu satırı aşağıdaki metinle değiştirin:
 
     ```xml
     <Receivers ListUrl="Lists/TestAnnouncements">
     ```
 
-     Bu, olay alıcısını yalnızca az önce oluşturduğunuz **yeni TestAnnouncements** duyuruları listesinde oluşan olaylara yanıt vermeye yönlendirer. özniteliğini, `ListURL` SharePoint sunucusundaki herhangi bir liste örneğine başvurarak değiştirebilirsiniz.
+     Bu, olay alıcısının yalnızca yeni oluşturduğunuz **Testannounte** bildirimleri listesinde gerçekleşen olaylara yanıt vermesini sağlar. `ListURL`SharePoint sunucusundaki herhangi bir liste örneğine başvurmak için özniteliğini değiştirebilirsiniz.
 
-10. Olay alıcısının kod dosyasını açın ve ItemAdding yöntemine bir kesme noktası girin.
+10. Olay alıcısı için kod dosyasını açın ve ımadding yöntemine bir kesme noktası koyun.
 
-11. Çözümü **derlemek ve** çalıştırmak için F5 anahtarını seçin.
+11. Çözümü derlemek ve çalıştırmak için **F5** tuşunu seçin.
 
-12. Bu SharePoint gezinti bölmesinde **TestAnnouncements** bağlantısını seçin.
+12. SharePoint ' de, gezinti bölmesinde **testannounte** bağlantısı ' nı seçin.
 
-13. Yeni duyuru **ekle bağlantısını** seçin.
+13. **Yeni duyuru ekle** bağlantısını seçin.
 
-14. Duyuru için bir başlık girin ve kaydet **düğmesini** seçin.
+14. Duyuru için bir başlık girin ve **Kaydet** düğmesini seçin.
 
-     Özel duyurular listesine yeni öğe eklenmiştir.
+     Yeni öğe özel Duyurular listesine eklendiğinde kesme noktasının isabet ettiğini unutmayın.
 
-15. Devam etmek **için F5** tuşuna basın.
+15. Sürdürülecek **F5** tuşunu seçin.
 
-16. Gezinti bölmesinde Listeler bağlantısını **ve** ardından Duyurular **bağlantısını** seçin.
+16. Gezinti bölmesinde, **listeler** bağlantısını seçin ve ardından **Duyurular** bağlantısını seçin.
 
 17. Yeni bir duyuru ekleyin.
 
-     Alıcı yalnızca **TestAnnouncements** özel duyuru listesi örneğinde olaylara yanıt vermek üzere yapılandırıldığından, olay alıcısının yeni duyuruda tetiklenene bir şey olmadığını fark etmek.
+     Alıcı yalnızca özel duyuru listesi örneğindeki etkinliklere yanıt verecek şekilde yapılandırıldığı için, yeni **duyuruda olay** alıcısının tetiklemez olduğuna dikkat edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl: Olay alıcısı oluşturma](../sharepoint/how-to-create-an-event-receiver.md)
-- [Yeni SharePoint geliştirme](../sharepoint/developing-sharepoint-solutions.md)
+- [Nasıl yapılır: olay alıcısı oluşturma](../sharepoint/how-to-create-an-event-receiver.md)
+- [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)

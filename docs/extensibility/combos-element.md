@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3396a7c8587ea9a4d8a6da660df467c2d9baeaf686c42c68efbdcce754650195
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: de5beb57536a3683ec2096d118b661022175dca1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121278922"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146140"
 ---
 # <a name="combos-element"></a>Combos öğesi
 Gruplar [Birleşik öğe](../extensibility/combo-element.md) öğeleri.

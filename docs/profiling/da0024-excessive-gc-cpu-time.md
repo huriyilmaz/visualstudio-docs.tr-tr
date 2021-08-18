@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 30468f1a58cbaed6f231322b27651f17eafa2bb06a30e2ea4ee2470da80352d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 08f60c3c5e642c46394d44156d72548c1e35c98a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427177"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131748"
 ---
 # <a name="da0024-excessive-gc-cpu-time"></a>DA0024: Aşırı GC CPU süresi
 

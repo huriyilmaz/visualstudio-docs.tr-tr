@@ -1,17 +1,17 @@
 ---
 title: Visual Studio ASP.NET ile Kapsayıcı Araçları
 author: ghogen
-description: Visual Studio container tools and Docker for Windows
+description: Visual Studio Container Tools ve Docker for Windows
 ms.author: ghogen
 ms.date: 01/24/2020
 ms.technology: vs-container-tools
 ms.topic: quickstart
-ms.openlocfilehash: dccbcc815d24c708e7446d2417f7e0ad323a3ab28aab32d129c0e23b5968e7bf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c7209c71f754909e2ad5d15db7764973a992f2dc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121348095"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147387"
 ---
 # <a name="quickstart-docker-in-visual-studio"></a>Hızlı Başlangıç: Visual Studio'da Docker
 

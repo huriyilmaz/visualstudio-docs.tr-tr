@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e0d9b7a3f3dcd1f3641d65a26e9919621cff15f7fcfff5f9968dc692769d2b53
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e2c41830892b6199a5cd844b365898efa83c83fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121275976"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125081"
 ---
 # <a name="extend-the-solution-explorer-filter"></a>Çözüm Gezgini filtresini uzat
 Farklı dosyaları göstermek veya gizlemek için **Çözüm Gezgini** filtre işlevini genişletebilirsiniz. Örneğin, bu kılavuzda gösterdiği gibi yalnızca **Çözüm Gezgini** C# sınıf fabrikası dosyalarını gösteren bir filtre oluşturabilirsiniz.

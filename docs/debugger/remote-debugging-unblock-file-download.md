@@ -1,6 +1,6 @@
 ---
 title: Uzak Araçlar indirmenin engellemesini kaldır
-description: Windows Server 'da uzak araçların indirilmesini engellemeyi kaldır ve bu, varsayılan IE güvenlik ayarları nedeniyle zaman alıcı olabilir.
+description: Windows sunucuda uzak araçların indirilmesini engellemeyi kaldırın ve bu, varsayılan ıe güvenlik ayarları nedeniyle zaman alıcı olabilir.
 ms.custom: SEO-VS-2020
 ms.date: 07/19/2018
 ms.topic: troubleshooting
@@ -9,30 +9,31 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ffefa70c59658382073a10db8ae1832b0d9b03c7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ec0b81a6e97faf6a3dae42ea90a66cb62fb57c7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934565"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153803"
 ---
-# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>Nasıl yapılır: Windows Server 'da uzak araçların indirilmesini kaldırma
+# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>nasıl yapılır: Windows sunucuda uzak araçların indirilmesini kaldırma
 
-Windows Server 'da Internet Explorer 'daki varsayılan güvenlik ayarları, uzak Araçlar gibi bileşenlerin indirileceği zaman alıcı olabilir.
+Windows Server 'daki ınternet Explorer 'daki varsayılan güvenlik ayarları, uzak araçlar gibi bileşenlerin indirileceği zaman alıcı olabilir.
 
 * Gelişmiş güvenlik yapılandırması, Internet Explorer 'da etkinleştirilir ve bu da, kaynağı içeren etki alanına açıkça izin verilmediği (yani, güvenilen) Web sitelerini açmanızı ve Web kaynaklarına erişmenizi önler. Bu ayarı devre dışı bırakabilseniz de, bir güvenlik riski sunabileceğinden bunu önermiyoruz.
 
-* Windows Server 2016 ' de, **Internet seçenekleri**  >  **güvenliği**  >  **Internet**  >  **özel düzeyi**  >  **indirmelerinde** varsayılan ayar dosya indirmelerini devre dışı bırakır. Uzak araçları doğrudan Windows Server 'a indirmeyi seçerseniz, dosya indirmeyi etkinleştirmelisiniz.
+* Windows Server 2016, **ınternet seçenekleri**  >  **güvenliği**  >  **ınternet**  >  **özel düzeyi**  >  **indirmelerinde** varsayılan bir ayar de dosya indirmelerini devre dışı bırakır. uzak araçları doğrudan Windows sunucusuna indirmeyi seçerseniz, dosya indirmeyi etkinleştirmeniz gerekir.
 
-Araçları Windows Server 'a indirmek için aşağıdaki eylemlerden birini öneririz:
+araçları Windows sunucusuna indirmek için aşağıdaki eylemlerden birini öneririz:
 
-* Uzak araçları, Visual Studio çalıştıran bir bilgisayar gibi farklı bir bilgisayara indirin ve ardından *. exe* dosyasını Windows Server 'a kopyalayın.
+* uzak araçları Visual Studio çalıştıran farklı bir bilgisayara indirin ve *.exe* dosyasını Windows sunucusuna kopyalayın.
 
-* Uzaktan hata ayıklayıcıyı Visual Studio makinenizde [bir dosya paylaşımından](../debugger/remote-debugging.md#fileshare_msvsmon) çalıştırın.
+* uzaktan hata ayıklayıcıyı Visual Studio makinenizde [bir dosya paylaşımından](../debugger/remote-debugging.md#fileshare_msvsmon) çalıştırın.
 
-* Uzak araçları doğrudan Windows Server 'a indirin ve güvenilen siteler eklemek için istemleri kabul edin. Modern Web siteleri genellikle birçok üçüncü taraf kaynağı içerir ve bu da birçok istem oluşmasına neden olabilir. Ayrıca, yeniden yönlendirilen bağlantıların el ile eklenmesi gerekebilir. İndirilmeye başlamadan önce bazı güvenilen siteleri eklemeyi tercih edebilirsiniz. **Güvenlik > güvenilen siteler > siteleri > Internet seçenekleri** ' ne gidin ve aşağıdaki siteleri ekleyin.
+* uzak araçları doğrudan Windows sunucusuna indirin ve güvenilen siteler eklemek için istemleri kabul edin. Modern Web siteleri genellikle birçok üçüncü taraf kaynağı içerir ve bu da birçok istem oluşmasına neden olabilir. Ayrıca, yeniden yönlendirilen bağlantıların el ile eklenmesi gerekebilir. İndirilmeye başlamadan önce bazı güvenilen siteleri eklemeyi tercih edebilirsiniz. **Güvenlik > güvenilen siteler > siteleri > Internet seçenekleri** ' ne gidin ve aşağıdaki siteleri ekleyin.
 
   * visualstudio.microsoft.com
   * download.visualstudio.microsoft.com

@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7a98dee0c42188cfc684064744fde0c3e683d70c19d1909de98669edb46b1af
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 52492e48ed9b5e2150f31c18ac07f66e45486054
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359136"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102317"
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>Managed Extensibility Framework düzenleyicide
 Düzenleyici, Managed Extensibility Framework (MEF) bileşenleri kullanılarak oluşur. Düzenleyiciyi genişletmek için kendi MEF bileşenlerinizi de derlemeniz gerekir ve kodunuz düzenleyici bileşenlerini de tüketir.
@@ -37,9 +37,9 @@ Düzenleyici, Managed Extensibility Framework (MEF) bileşenleri kullanılarak o
 
 - Başka bir bileşen tarafından tüketilme
 
-  Örneğin, bir ambar envanter bileşeni tarafından sağlanan ürün kullanılabilirlik verilerine bağlı olan bir sipariş girişi bileşenine sahip olan bir alışveriş uygulamasını düşünün. MEF açısından, envanter bölümü ürün *kullanılabilirlik* verilerini dışarı aktarabilirsiniz ve sipariş girişi bölümü verileri *içeri* aktarabilirsiniz. Sipariş girişi bölümü ve stok bölümü birbirini bilmek zorunda değildir; bileşim *kapsayıcısı* (konak uygulama tarafından sağlanır) dışarı aktarma kümelerinin korunmasından ve dışarı aktarmaların ve içeri aktarmaların çözümden sorumludur.
+  Örneğin, bir ambar envanter bileşeni tarafından sağlanan ürün kullanılabilirlik verilerine bağlı olan bir sipariş girişi bileşenine sahip olan bir alışveriş uygulamasını düşünün. MEF açısından, envanter bölümü ürün *kullanılabilirlik* verilerini dışarı aktarabilirsiniz ve sipariş girişi bölümü verileri *içeri* aktarabilirsiniz. Sipariş girişi bölümü ve envanter bölümü birbirini bilmek zorunda değildir; bileşim *kapsayıcısı* (konak uygulama tarafından sağlanır) dışarı aktarma kümelerinin korunmasından ve dışarı aktarmaların ve içeri aktarmaların çözümden sorumludur.
 
-  Oluşturma <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> kapsayıcısı, genellikle ana bilgisayar tarafından aittir. Bileşim kapsayıcısı, dışarı *aktaran bileşen* parçalarının bir kataloğunu sağlar.
+  Oluşturma <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> kapsayıcısı, genellikle ana bilgisayar tarafından aittir. Bileşim kapsayıcısı, dışarı *aktaran bileşen* parçalarının kataloğunu sağlar.
 
 ### <a name="export-and-import-component-parts"></a>Bileşen parçalarını dışarı ve içeri aktarma
  Genel sınıf olarak veya bir sınıfın genel üyesi (özellik veya yöntem) olarak uygulanmış olduğu sürece, herhangi bir işlevi dışarı aktarabilirsiniz. bileşeni parçanızı 'den türetmek zorunda <xref:System.ComponentModel.Composition.Primitives.ComposablePart> değildir. Bunun yerine, dışarı <xref:System.ComponentModel.Composition.ExportAttribute> aktarmayı istediğiniz sınıf veya sınıf üyesine bir öznitelik eklemeniz gerekir. Bu öznitelik, başka *bir bileşen* parçasının işlevselliğinizi içeri aktarama sözleşmesini belirtir.
@@ -85,7 +85,7 @@ internal IClassificationTypeRegistryService ClassificationRegistry;
 
 #### <a name="to-consume-editor-functionality-from-a-mef-component-part"></a>Bir MEF bileşen parçasından düzenleyici işlevselliğini kullanmak için
 
-1. genel derleme *önbelleğinde*(GAC) olanSystem.Composition.ComponentModel.dllve düzenleyici derlemelerine başvurular ekleyin.
+1. genel derleme *önbelleğinde (GAC)* olanSystem.Composition.ComponentModel.dllve düzenleyici derlemelerine başvurular ekleyin.
 
 2. İlgili using yönergelerini ekleyin.
 

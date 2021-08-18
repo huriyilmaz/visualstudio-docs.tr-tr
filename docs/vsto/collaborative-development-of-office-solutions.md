@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: cbe0c1544cb2d99b8958385affe1d972d5dc71c5f7a8192adcd63257f1cacd71
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 27efa4a1191840cc312700c3361b7c35ea9d251b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121268436"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130708"
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Office çözümlerin işbirliğine dayalı geliştirmesi
   birden çok geliştirici, diğer Visual Studio projelerinde birlikte çalıştıkları şekilde bir Office projesi üzerinde çalışabilir. Visual Studio, Office farklı konumlara yüklense bile, her bilgisayarda Microsoft Office yüklemeyi doğru şekilde konumlandırır. Ancak farkında olmanız gereken bazı önemli noktalar vardır.

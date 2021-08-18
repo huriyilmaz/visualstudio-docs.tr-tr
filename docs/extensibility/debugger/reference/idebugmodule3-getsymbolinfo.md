@@ -12,17 +12,18 @@ ms.assetid: dda5e8e1-6878-4aa9-9ee4-e7d0dcc11210
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9cc4c8d7c88e4b973ad7055327da73472a6ed4d2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d187673c7f2a5f33ecdedd5fe88a3b62d518edc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065534"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133126"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 Simgeler için aranan yolların yanı sıra her bir yolu aramanın sonuçlarını alır.
@@ -59,9 +60,9 @@ Yöntem başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu d�
 ## <a name="remarks"></a>Açıklamalar
 `bstrVerboseSearchInfo` `MODULE_SYMBOL_SEARCH_INFO` Yapı alanı boş değilse, aranan yolların ve bu aramanın sonuçlarının bir listesini içerir. Liste, bir yol ile, ardından üç nokta ("...") ve ardından sonuç olarak biçimlendirilir. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/linefeed) çifti ile ayrılır. Bu model şöyle görünür:
 
-\<path>...\<result> \r\n \<path> ... \<result> \r\n \<path> ...\<result>
+\<path>...\<result>\r\n\<path> ... \<result>\r\n\<path> ...\<result>
 
-Son girişin bir \r\n dizisine sahip olmadığına unutmayın.
+Son girişin \r\n sırası olmadığına unutmayın.
 
 ## <a name="example"></a>Örnek
 Bu örnekte, bu yöntem üç farklı arama sonucu olan üç yol döndürür. Her satır, bir satır başı/satır besleme çifti ile sonlandırılır. Örnek çıktı yalnızca arama sonuçlarını tek bir dize olarak yazdırır.

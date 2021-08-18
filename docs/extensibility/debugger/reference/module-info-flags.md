@@ -1,5 +1,5 @@
 ---
-description: Bir modül için simgelerin durumunu belirtir.
+description: Bir modül için sembollerin durumunu belirtir.
 title: MODULE_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: e22d3723-b4d4-4524-8a2f-3adb55bbd273
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bfe1639ea187c6f03327a2278aaa9f849309a2af
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 812c4292e388ee1644023e9519d03c56038fd57e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079715"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118118"
 ---
 # <a name="module_info_flags"></a>MODULE_INFO_FLAGS
-Bir modül için simgelerin durumunu belirtir.
+Bir modül için sembollerin durumunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +44,17 @@ public enum enum_MODULE_INFO_FLAGS {
 
 ## <a name="fields"></a>Alanlar
  `MIF_SYMBOLS_LOADED`\
- Modül tarafından en az bir sembol kümesi yüklendi (Aksi halde hiçbir sembol yüklenmedi).
+ Modül tarafından en az bir sembol kümesi yüklendi (aksi takdirde hiçbir simge yüklenmedi).
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değer [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) yöntemi tarafından döndürülür.
+ Bu değer [GetSymbolSearchInfo yöntemi tarafından](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -1,6 +1,6 @@
 ---
 title: XSLT performansı
-description: xslt kodunuzun performansını en üst düzeye getirmenize yardımcı olmak üzere ayrıntılı xslt performans raporları oluşturan Visual Studio xslt Profiler hakkında bilgi edinin.
+description: XSLT kodunuzun performansını iyileştirmenize Visual Studio ayrıntılı XSLT performans raporları oluşturan XSLT Profiler hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/11/2020
 ms.topic: conceptual
@@ -12,104 +12,104 @@ ms.technology: vs-xml-tools
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 18c491f6ee0269e9bee7c111b4e09f1afd74f1fad8343e5667a3299e4b2a511f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4e4c15f9185a967f2c200a00ad2312343600c73e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121224938"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147498"
 ---
-# <a name="the-xslt-profiler"></a>XSLT Profiler
+# <a name="the-xslt-profiler"></a>XSLT Profil Oluşturma
 
-XSLT Profiler, XSLT kodundaki performansla ilgili sorunları ölçmenize, değerlendirmenize ve hedefleyecek ayrıntılı XSLT performans raporları oluşturur. XSLT Profiler, XSL ve XSLT stil sayfası iyileştirmeleri için yararlı ipuçları içerir. En yüksek performansı talep eden XSLT uygulamaları için bu araç gerekli olabilir.
+XSLT Profiler, XSLT kodundaki performansla ilgili sorunları ölçmeye, değerlendirmeye ve hedeflemeye yardımcı olan ayrıntılı XSLT performans raporları oluşturur. XSLT Profiler, XSL ve XSLT stil sayfası iyileştirmeleri için yararlı ipuçları içerir. En yüksek performansa talepte olan XSLT uygulamaları için bu araç temel olabilir.
 
-XSLT Profiler, Visual Studio bir parçasıdır ve **XML** menüsünde kullanılabilir.
+XSLT Profiler, Visual Studio xml menüsünde **kullanılabilir.**
 
-![XSLT Profiler](../xml-tools/media/profile-xslt-menu.png "Visual Studio 2017 ' deki XML menü öğelerinin ekran görüntüsü")
+![XSLT Profiler](../xml-tools/media/profile-xslt-menu.png "Visual Studio 2017'de XML menü öğelerinin ekran görüntüsü")
 
 > [!NOTE]
-> XSLT Profiler yalnızca Visual Studio 2017 'ın Enterprise sürümünde kullanılabilir.
+> XSLT Profiler yalnızca Enterprise 2017'nin Visual Studio kullanılabilir.
 
 ## <a name="create-a-performance-report"></a>Performans raporu oluşturma
 
-1. Visual Studio 2017 ' de bir XSLT belgesi açın.
+1. Visual Studio 2017'de bir XSLT belgesi açın.
 
-2. Menü çubuğunda, **XML**  >  **profili XSLT**' yi seçin.
+2. Menü çubuğunda **XML** Profili  >  **XSLT'yi seçin.**
 
-3. Bir giriş XML belgesi sağlayın. Bir XML belgesi zaten açık değilse sizden dosya istenir.
+3. Giriş XML belgesi sağlama. Bir XML belgesi henüz açık değilse, dosya istenir.
 
-   Analiz başlar ve ilerleme çubuğu düzenleyicide ilerleme durumunu görüntüler. XSLT çıktısı da görünür.
+   Analiz başlatılır ve ilerleme çubuğu düzenleyicide ilerlemeyi görüntüler. XSLT çıkışı da görünür durumdadır.
 
-4. Performans oturumu bittikten sonra XSLT performansını çözümlemek için performans raporunu kontrol edin.
+4. Performans oturumu sona erdikten sonra XSLT performansını analiz etmek için performans raporunu kontrol edin.
 
-## <a name="get-all-available-views"></a>Tüm kullanılabilir görünümleri Al
+## <a name="get-all-available-views"></a>Kullanılabilir tüm görünümleri al
 
-1. Tüm kullanılabilir görünümleri almak için **geçerli görünüm** aşağı açılan listesine tıklayın.
+1. Kullanılabilir tüm **görünümleri almak** için Geçerli Görünüm açılan listesine tıklayın.
 
-2. **Geçerli görünüm** açılır listesinden **Özet görünümü** seçeneğini belirleyin. Varsayılan olarak, **Özet görünümünde** bir performans raporu görüntülenir. Bu görünüm, XSLT belgeleriyle ilgili performans sorunlarını tespit eden bir başlangıç noktasıdır. **Özet görünümü** aşağıdaki veri noktalarını listeler:
+2. Geçerli **Görünüm açılan** listesinde **Özet Görünümü** seçeneğini belirleyin. Varsayılan olarak, Özet Görünümünde bir performans **raporu görüntülenir.** Bu görünüm, XSLT belgeleriyle ilgili performans sorunlarını belirlemek için başlangıç noktasıdır. Özet **Görünümü aşağıdaki** veri noktalarını listeler:
 
-   - En çok çağrılan işlevler
+   - En çok çağrı yapılan işlevler
 
-   - En bireysel iş olan işlevler
+   - En bireysel çalışmaya sahip işlevler
 
-   - En uzun yürütme zamanı alan işlevler
+   - Yürütmesi en uzun süren işlevler
 
-   Varsayılan olarak, her bir veri noktası için üç sütun vardır: işlevin adı, mutlak değer içindeki çağrı sayısı ve toplam işlev çağrılarının adlandırılmış işlevinin yüzde değeri. **Özet görünümündeki** her bir veri noktasından, işlev veri noktalarına sağ tıklayarak daha ayrıntılı görünümlere gidebilirsiniz.
+   Varsayılan olarak, her veri noktası için üç sütun vardır: işlevin adı, mutlak değerde çağrı sayısı ve adlandırılmış işlevin toplam işlev çağrılarının yüzdesi. Özet Görünümündeki her veri **noktasından,** işlev veri noktalarına sağ tıklayarak daha ayrıntılı görünümlere ulaşabilirsiniz.
 
-3. **Geçerli görünüm** açılır listesinden **işlev görünümü** seçeneğini belirleyin. **Işlev görünümü** profil oluşturma sırasında çağrılan işlevleri listeler. Bir sütun adına tıklayarak verileri sıralayabilirsiniz. Varsayılan olarak görüntülenen sütunlar şunlardır:
+3. Geçerli **Görünüm açılan** listesinde **İşlev Görünümü** seçeneğini belirleyin. İşlev **Görünümü,** profil oluşturma sırasında çağrılır işlevleri listeler. Bir sütun adına tıklayarak verileri sıraabilirsiniz. Varsayılan olarak görüntülenen sütunlar:
 
-    - **İşlev adı**
+    - **İşlev Adı**
 
-    - **Geçen kapsamlı süre**
+    - **Geçen Kapsayıcı Süre**
 
-    - **Geçen dışlamalı süre**
+    - **Geçen Özel Süre**
 
-    - **Uygulama kapsamlı süresi**
+    - **Uygulama Dahil Saati**
 
-    - **Dışlamalı uygulama süresi**
+    - **Uygulamaya Özel Zaman**
 
     - **Çağrı Sayısı**
 
-   Tüm zaman sütunları mutlak değerlerde ve yüzdede görüntülenir. **Dışlamalı** terim, bu işlevin yürütülmesi sırasında çağrılan diğer işlevler tarafından harcanan sürenin dışlayarak yürütülmesi için harcanan toplam süreyi ifade eder.
+   Tüm zaman sütunları hem mutlak değerlerde hem de yüzdelerde görüntülenir. Dışlama **terimi,** bir işlevin bu işlevin yürütülmesi sırasında çağrılduğu diğer işlevler tarafından harcanan zaman dışında harcanan toplam zamanı ifade eder.
 
-   **Dahil** edilen terim, çağrılan işlevlerin yürütme süresi ve diğer işlevleri olarak adlandırılan işlevlerden herhangi biri dahil olmak üzere yürütülen bir işlevin toplam süresini ifade eder.
+   Kapsayıcı **terimi,** çağrılduğu tüm işlevlerin yürütme süresi ve bu işlevlerden herhangi biri diğer işlevler olarak adlandırılan işlevlerden herhangi biri olup olmadığı da dahil olmak üzere bir işlevin yürütülmesi için harcanan toplam zamanı ifade eder.
 
-## <a name="select-callercallee-view"></a>Arayan/çağrılan görünümünü seçin
+## <a name="select-callercallee-view"></a>Çağıran/Çağrılı görünümünü seçin
 
-**Geçerli görünüm** aşağı açılan listesinden **arayan/çağrılan** görünümü ' nü seçin. **Arayan/çağrılan** görünümü aşağıdaki üç farklı kısma sahiptir:
+Geçerli **Görünüm açılan listesinde Çağıran/Çağrılı** görünümünü seçin.  **Çağıran/Çağrılı görünümü** aşağıdaki üç ayrı parçaya sahiptir:
 
-- **Çağrılan işlevler**: belirli bir işlevi çağıran tüm işlevler, görünümün en üst kısmında listelenir.
+- **adlı işlevler:** Belirli bir işlevi çağıran tüm işlevler görünümün üst kısmında listelenir.
 
-- **Geçerli işlev**: çağrılan belirli işlev, görünümün orta bölümünde listelenmiştir.
+- **Geçerli İşlev:** Çağrılan belirli işlev görünümün orta kısmında listelenir.
 
-- **Tarafından çağrılan işlevler**: belirli bir işlev tarafından çağrılan tüm işlevler, görünümün alt bölümünde listelenir.
+- **tarafından çağrılan işlevler:** Belirli bir işlev tarafından çağrılan tüm işlevler görünümün alt kısmında listelenir.
 
-Adında bir işlev, `SyncToNavigator` görünümün orta kısmında görünürse, işlevi çağıran tüm işlevler `SyncToNavigator` görünümün en üst kısmında görünür ve tarafından çağrılan tüm işlevler `SyncToNavigator` görünümün alt bölümünde görünür.
+adlı bir işlev görünümün orta kısmında görünürse, işlevi çağıran tüm işlevler görünümün üst kısmında ve tarafından çağrılan tüm işlevler görünümün alt `SyncToNavigator` `SyncToNavigator` kısmında `SyncToNavigator` görünür.
 
-- Görünümün orta bölümündeki işlevini, görünümün diğer iki bölümünde listelenen işlevlerden herhangi birine çift tıklayarak değiştirebilirsiniz. Daha sonra Görünüm, değişiklikleri otomatik olarak yansıtacak şekilde güncelleştirilir.
+- Görünümün diğer iki bölümünde listelenen işlevlerden herhangi birini çift tıklayarak görünümün orta kısmında işlevi değiştirebilirsiniz. Daha sonra görünüm, değişiklikleri otomatik olarak yansıtacak şekilde güncelleştirilir.
 
-- Ayrıca, sütun adları ' na tıklayarak verileri sıralayabilirsiniz.
+- Ayrıca sütun adlara tıklayarak verileri sıraabilirsiniz.
 
-## <a name="select-call-tree-view"></a>Çağrı ağacı görünümünü seçin
+## <a name="select-call-tree-view"></a>Çağrı Ağacı Görünümü'ne tıklayın
 
-- **Geçerli görünüm** açılan listesinde **çağrı ağacı görünümü** ' nü seçin. Bu görünüm program yürütmenin ağaç görünümüdür.
+- Geçerli **Görünüm açılan listesinde** Çağrı Ağacı **Görünümü'ne** tıklayın. Bu görünüm, program yürütmenin ağaç görünümü.
 
-   **Çağrı ağacı görünümü** , işlem adı olarak ağacın kökünü gösterir. İşlevler ağacın düğümleridir. Bu görünüm, belirli çağrı izlemelerinin detayına gitmeyi ve hangi izlemelerin en yüksek performans etkisi olduğunu analiz etmenizi sağlar. Görünüm, hata ayıklama sırasında kullanılabilen **çağrı yığını görünümüne** benzer. **Işlev görünümündeki** sütunlara ek olarak, **çağrı ağacı görünümünde**, **modül adını** görüntülemek için ek bir sütun vardır.
+   Çağrı **Ağacı Görünümü,** işlem adı olarak ağacın kökünü gösterir. İşlevler ağacın düğümleridir. Bu görünüm, belirli çağrı izlemeleri üzerinde detaya gitme ve en büyük performans etkisine sahip izlemeleri analiz etmenize olanak sağlar. Görünüm, hata ayıklama sırasında **kullanılabilen Çağrı Yığını Görünümüne** benzer. İşlev Görünümündeki sütunlara **ek olarak,** Çağrı Ağacı **Görünümünde** Modül Adını görüntülemek için ek bir **sütun vardır.**
 
-- **Geçerli görünüm** açılır listesinde **işaretler** ' i seçin.
+- Geçerli **Görünüm** açılan **listesinde İşaretler'i** seçin.
 
-   XSLT Profiler ile, ilişkili bir yoruma sahip veri toplama akışında görüntülenen işaretler vardır. İşaretler, sayaçların bulunduğu koda yer koyar. XSLT profil oluşturucuyu XSLT performans sayaçlarını toplayacak şekilde söylemeniz durumunda, bu işaretlerin her biri çalıştırıldığında sayaçlar toplanır. Veriler, **Işaret kimliği**, **işaret adı** (**Başlangıç programı**, **bitiş programı**) ve **zaman damgasını** içeren bir tabloda görüntülenir. İşaretler toplanmaz ve performans raporunun **Işaretler görünümünde** kronolojik sırada görünür.
+   XSLT Profiler ile, veri toplama akışında ilişkili bir açıklamayla birlikte ortaya çıktı işaretleri vardır. İşaretler, kodda sayaçları olan yerlerdir. XSLT Profiler'a XSLT performans sayaçlarını toplamasını söylerken, bu işaretlerden biri her yürütülürken sayaçlar toplanır. Veriler, Mark ID **,** Mark **Name** (**Start Program**, **End Program**) ve Time Stamp (Zaman Damgası) içeren bir **tabloda görüntülenir.** İşaretler toplanmaz ve performans raporunun İşaretler Görünümünde **kronolojik** sırada görünür.
 
-## <a name="select-modules-in-the-current-view"></a>Geçerli görünümdeki modülleri seçin
+## <a name="select-modules-in-the-current-view"></a>Geçerli Görünümde Modülleri Seçme
 
-- **Geçerli görünüm** açılan listesinde **modüller** ' i seçin.
+- Geçerli **Görünüm** açılan **listesinde Modüller'i** seçin.
 
-   Modüller görünümü, modül düzeyine toplanmış tüm işlevlerin düz bir listesidir. Modül performans verilerinin görünümünü görüntülemek veya kapatmak için modül adını genişletin veya daraltın. Bir sütun adına tıklayarak verileri sıralayabilirsiniz. Varsayılan olarak, **geçen kapsamlı süre**, **geçen dışlamalı** süre, **uygulama kapsamlı** süre, **uygulama dışlamalı zaman** ve **çağrı sayısı** için mutlak değerler ve yüzde numaraları vardır.
+   Modüller görünümü, modül düzeyinde toplanan tüm işlevlerin düz bir listesidir. Modül performans verilerini görüntülemek veya kapatmak için modül adını genişletin veya daraltabilirsiniz. Bir sütun adına tıklayarak verileri sıraabilirsiniz. Varsayılan olarak, Geçen Kapsayıcı Saat **,** Geçen Özel **Saat,** Uygulama Dahil **Saati,** Uygulama Özel Saati ve Çağrı Sayısı için hem mutlak değerler hem de yüzde **sayıları vardır.**
 
-- **Geçerli görünüm** açılır listesinden **işlem** ' i seçin.
+- Geçerli **Görünüm** açılan **listesinde İşlem'i** seçin.
 
-   İşlem görünümü, işlem **kimliği**, **işlem adı**, **Başlangıç zamanı** ve **bitiş saatini** içeren bir tablo görüntüler. Veriler, sütun adlarına tıklanarak sıralanabilir.
+   İşlem görünümünde İşlem Kimliği, **İşlem Adı,** Başlangıç **Zamanı** ve **Bitiş Saati'nin yer** alan bir tablo **görüntülenir.** Veriler sütun adları tıklarak sıralanmış olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: XSLT hiyerarşisini kullanma](../xml-tools/walkthrough-using-xslt-hierarchy.md)
+- [Adım adım kılavuz: XSLT hiyerarşisini kullanma](../xml-tools/walkthrough-using-xslt-hierarchy.md)

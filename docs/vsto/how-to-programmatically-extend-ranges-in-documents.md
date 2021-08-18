@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 2098265ec257ae11353577ea7145bbe85d52d374501220f0f8c79ceb7bf04eb6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7297a638b22ca031ae4c728675a054a3430a2cf8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408727"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148031"
 ---
 # <a name="how-to-programmatically-extend-ranges-in-documents"></a>Nasıl kullanılır: Belgelerde aralıkları Program Aracılığıyla Genişletme
   bir Word belgesinde bir Microsoft Office tanımlayarak, ve yöntemlerini kullanarak nesnenin <xref:Microsoft.Office.Interop.Word.Range> başlangıç ve bitiş noktalarını <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> değiştirirsiniz. ve <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> yöntemleri aynı iki bağımsız değişkeni <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> alır: *Unit* ve *Count*. Count *bağımsız* değişkeni taşınan birim sayısıdır ve *Unit* bağımsız değişkeni aşağıdaki değerlerden biri <xref:Microsoft.Office.Interop.Word.WdUnits> olabilir:
@@ -48,18 +48,18 @@ ms.locfileid: "121408727"
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-  Aşağıdaki örnek yedi karakterli bir aralık tanımlar. Ardından, aralığın başlangıç konumunu özgün başlangıç konumundan sonra yedi karakterden sonra taşır. Aralığın bitiş konumu da başlangıç konumundan yedi karakter sonra olduğundan, sonuç sıfır karakterden oluşan bir aralıktır. Kod daha sonra bitiş konumunu geçerli bitiş konumundan yedi karakter sonra taşır.
+  Aşağıdaki örnek yedi karakterlik bir aralık tanımlar. Ardından özgün başlangıç konumundan sonraki yedi karakterlik aralığın başlangıç konumunu taşır. Aralığın bitiş konumu da başlangıç konumundan yedi karakter sonra olduğundan, sonuç sıfır karakterden oluşan bir aralıktır. Kod daha sonra bitiş konumunu geçerli bitiş konumundan yedi karakter sonra taşır.
 
 ## <a name="to-extend-a-range"></a>Bir aralığı genişletmek için
 
 1. Bir karakter aralığı tanımlayın. Daha fazla bilgi için [bkz. Nasıl kullanılır: Belgelerde aralıkları program aracılığıyla tanımlama ve seçme.](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
 
-     Aşağıdaki kod örneği, belge düzeyinde özelleştirmede kullanılabilir.
+     Aşağıdaki kod örneği, belge düzeyi özelleştirmede kullanılabilir.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet39":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet39":::
 
-     Aşağıdaki kod örneği bir VSTO kullanılabilir. Bu örnek etkin belgeyi kullanır.
+     Aşağıdaki kod örneği bir eklentide VSTO kullanılabilir. Bu örnek etkin belgeyi kullanır.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet39":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet39":::
@@ -78,7 +78,7 @@ ms.locfileid: "121408727"
 
 ### <a name="to-extend-a-range-in-a-document-level-customization"></a>Belge düzeyinde özelleştirmede aralığı genişletmek için
 
-1. Aşağıdaki örnekte, belge düzeyinde özelleştirmenin tam kodu gösterir. Bu kodu kullanmak için projenizin `ThisDocument` sınıfından çalıştırın.
+1. Aşağıdaki örnek, belge düzeyinde özelleştirmenin tam kodunu gösterir. Bu kodu kullanmak için projenizin `ThisDocument` sınıfından çalıştırın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet38":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet38":::

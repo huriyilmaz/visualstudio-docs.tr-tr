@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: cdc63c26f8e2b1589e09ab46206e3703d9c8ad9faf2e8e125bd2682b3c6117a3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0bd8c7dd0154eb25289d3a9e44fe24097d817b24
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454754"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128690"
 ---
 # <a name="idiasymbolget_hasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
 Modülde yönetilen kod olup olmadığını belirten bir bayrak alınır.
@@ -35,7 +35,7 @@ HRESULT get_hasManagedCode(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Modül `TRUE` yönetilen kod içeriyorsa döndürür; aksi takdirde, kodu `FALSE` yönetilmiyor kodu döndürür.
+[out] Modül `TRUE` yönetilen kod içeriyorsa döndürür; aksi takdirde , `FALSE` kod yönetilmiyor kodudur döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.

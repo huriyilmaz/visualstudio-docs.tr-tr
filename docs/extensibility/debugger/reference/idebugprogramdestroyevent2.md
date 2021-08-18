@@ -11,14 +11,15 @@ ms.assetid: ddf127ca-c4a5-4071-90ca-68faf2f57dbd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49242ea2c0116ae57f1c063bf3d5fe5e1db2ce17
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: abe928021b966b64234370be515528fe920e5521
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084382"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132723"
 ---
 # <a name="idebugprogramdestroyevent2"></a>IDebugProgramDestroyEvent2
 Bu arabirim, bir program tamamlanmadan çalıştırıldığında, hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.

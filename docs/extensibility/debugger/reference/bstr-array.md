@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a84ec868a7bd2aaa6cd1326e08b0b8a869b7311672cbfeca47e584c723a95a68
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 43a4b68824b613cb0701ea5ccfb3ed334f715b69
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262691"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145737"
 ---
 # <a name="bstr_array"></a>BSTR_ARRAY
 Dize dizisini açıklayan bir yapı.

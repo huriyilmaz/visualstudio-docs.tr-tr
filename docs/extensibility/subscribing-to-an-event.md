@@ -1,5 +1,5 @@
 ---
-title: Bir Olay |'a abone | Microsoft Docs
+title: Bir Olay | Microsoft Docs
 description: Visual Studio SDK'sı içinde çalışan bir belge tablosunda olaylara yanıt veren bir araç penceresi Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 349db4c14c3ca4e65a74123ab8c39da039aae3ac0bb74cfd24644689f5bd7761
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f35da7cb7b4129af3aaf6a3289cd2bb0c8b7d10e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121290628"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117403"
 ---
 # <a name="subscribing-to-an-event"></a>Bir Olaya Abone Olma
 Bu kılavuzda, çalışan bir belge tablosunda (RDT) olaylara yanıt veren bir araç penceresi oluşturma açıklanır. Araç penceresi, uygulayan bir kullanıcı denetimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> barındırıyor. yöntemi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> arabirimini olaylara bağlar.

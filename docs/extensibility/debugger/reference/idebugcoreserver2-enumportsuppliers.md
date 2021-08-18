@@ -11,17 +11,18 @@ ms.assetid: ce0c90e4-8e02-4b08-b558-7677fb2c88f7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7e608bd2dd20de6ac8e519301e8502ee0dbec292
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a78646a09c1b420921db0bd2c96ce280967102c4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077921"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144970"
 ---
 # <a name="idebugcoreserver2enumportsuppliers"></a>IDebugCoreServer2::EnumPortSuppliers
 Tüm kullanılabilir bağlantı noktası sağlayıcılarının listesini alır.

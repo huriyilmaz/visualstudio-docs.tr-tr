@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: db68f38fc292ba5124d2a785a53bfcbd1cdf7ccf56d9cb3858083fa19a79eac4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 95e5437cc7eeeed2a43a3fdedd5dc829a8f66c42
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121313854"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130175"
 ---
 # <a name="search-the-schema-set"></a>Şema kümesini arama
 
@@ -32,7 +32,7 @@ XML Şema Gezgini araç çubuğunun Şema  Kümesi Ara metin kutusuna bir alt di
 
 ![XML Şema Gezgini Anahtar Sözcük Arama](../xml-tools/media/schemaexplorersearch.gif)
 
-**XML Şema Gezgini,** şema kümesinde aşağıdaki öznitelikleri arar:
+**XML Şema Gezgini** şema kümesinde aşağıdaki öznitelikleri arar:
 
 - Belirtilen `name` anahtar `ref` sözcükle eşan herhangi bir veya özniteliği. Öğeleri, öznitelikleri, türleri ve diğer öğeleri adıyla bulabilirsiniz.
 
