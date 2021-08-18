@@ -1,6 +1,6 @@
 ---
 title: Veri sınıfı devralma (O-R Tasarımcısı)
-description: Bir sınıf aracı olan Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) içinde veri LINQ to SQL devralma ile Visual Studio.
+description: Bir veri sınıfı aracı olan Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) içinde veri LINQ to SQL devralma ile Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9e0b8b1d0a3139370a4ae817d3ca6740ec3c469a07c4a60acc3e5f0883ae4ce9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 82c1c07ec9fb7e19a2d4e126358d124d88c79ff1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347408"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154920"
 ---
 # <a name="data-class-inheritance-or-designer"></a>Veri sınıfı devralma (O/R Tasarımcısı)
 
@@ -42,11 +42,11 @@ Devralma kullanan ve ilişkisel verilere karşılık gelen bir nesne modeli olu�
 |Konu|Açıklama|
 |-----------|-----------------|
 |[Nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)|O/R Tasarımcısı kullanılarak tek tablo devralma kullanan varlık sınıflarını **yapılandırmayı açıklar.**|
-|[Kılavuz: Tek LINQ to SQL (O/R Tasarımcısı) kullanarak yeni sınıf oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)|**O/R** Tasarımcısı kullanarak tek tablo devralma kullanan varlık sınıflarını yapılandırmaya ilişkin adım adım yönergeler sağlar.|
+|[adım adım kılavuz: LINQ to SQL devralma (O/R Tasarımcısı) kullanarak tek tablo sınıflarını oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)|**O/R** Tasarımcısı kullanarak tek tablo devralma kullanan varlık sınıflarını yapılandırmaya ilişkin adım adım yönergeler sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to SQL araçları Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [adım adım kılavuz: LINQ to SQL sınıfları oluşturma (O-R Tasarımcısı)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
-- [Kılavuz: Tek LINQ to SQL (O/R Tasarımcısı) kullanarak yeni sınıf oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)
+- [adım adım kılavuz: LINQ to SQL devralma (O/R Tasarımcısı) kullanarak tek tablo sınıflarını oluşturma](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)
 - [Başlarken](/dotnet/framework/data/adonet/sql/linq/getting-started)

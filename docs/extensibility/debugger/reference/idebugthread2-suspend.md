@@ -11,17 +11,18 @@ ms.assetid: 1e20be85-aa12-48de-bb83-0bf0976e99ae
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 902418aeb18c149b0732e972a34ed89b56bb22ce
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ac3cf9dcb8160b8b9241573331829acb3e20f628
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081145"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118404"
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
 Bir iş parçacığını askıya alır.

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: çalışma sayfası hücresinde program aracılığıyla bir dizeyi görüntüleme'
-description: NamedRange denetimi veya yerel bir Excel range nesnesi kullanarak Microsoft Excel çalışma sayfası hücresinde program aracılığıyla bir dizeyi nasıl kullanabileceğinizi öğrenin.
+title: 'Nasıl gösterilir: Çalışma sayfası hücresinde program aracılığıyla dize görüntüleme'
+description: NamedRange denetimi veya yerel bir Microsoft Excel aralığı nesnesi kullanarak bir dizeyi program aracılığıyla bir çalışma sayfası hücresinde Excel öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,41 +17,41 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 4e6e7b1159101319d41e86b8bc4a81c70c8e2035872166a2f739e31dde64268c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5058a41a40ed834dc715a09de3b28c0e28cf594a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121423871"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099808"
 ---
-# <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>Nasıl yapılır: çalışma sayfası hücresinde program aracılığıyla bir dizeyi görüntüleme
-  Bu örnek, bir hücredeki metnin programlı olarak nasıl görüntüleneceğini gösterir. hücrede metin göstermek için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim ya da yerel Excel range nesnesi kullanın.
+# <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>Nasıl gösterilir: Çalışma sayfası hücresinde program aracılığıyla dize görüntüleme
+  Bu örnekte, bir hücrede program aracılığıyla metin görüntüleme gösterilir. Hücrede metin görüntülemek için bir denetim veya <xref:Microsoft.Office.Tools.Excel.NamedRange> yerel bir Excel kullanın.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-a-namedrange-control"></a>NamedRange denetimi kullanma
- Bu örnek adlı bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim kullanır `message` . Denetim, tasarım zamanında belge düzeyinde bir özelleştirmeye eklenmelidir. Aşağıdaki kod, sınıfında değil, bir sayfa sınıfına yerleştirilmelidir `ThisWorkbook` .
+ Bu örnekte adlı bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim `message` 2. Denetim, tasarım zamanında belge düzeyi özelleştirmeye eklenmiştir. Aşağıdaki kod, sınıfında değil, bir sayfa sınıfına `ThisWorkbook` yerleştirilsin.
 
-### <a name="to-display-text-in-a-namedrange-control"></a>Bir NamedRange denetiminde metin göstermek için
+### <a name="to-display-text-in-a-namedrange-control"></a>NamedRange denetiminde metin görüntülemek için
 
-1. <xref:Microsoft.Office.Tools.Excel.NamedRange>Denetimin değerini **Merhaba Dünya** olarak ayarlayın.
+1. Denetimin değerini <xref:Microsoft.Office.Tools.Excel.NamedRange> Merhaba Dünya. 
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet68":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet68":::
 
-## <a name="use-a-native-excel-range"></a>yerel Excel aralığı kullan
- Aşağıdaki kod, programlı olarak yeni bir Aralık oluşturur ve buna bir değer atar.
+## <a name="use-a-native-excel-range"></a>Yerel bir Excel kullanma
+ Aşağıdaki kod, program aracılığıyla yeni bir aralık oluşturur ve ardından buna bir değer atar.
 
-### <a name="to-display-text-in-an-excel-range"></a>Excel aralıkta metin görüntüleme
+### <a name="to-display-text-in-an-excel-range"></a>Metinleri tek bir aralıkta Excel için
 
-1. **A1** hücresindeki aralığı alın `Sheet1` ve değeri **Merhaba Dünya** olarak ayarlayın.
+1. A1 on **hücresinde aralığı** alın `Sheet1` ve değeri Merhaba Dünya.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet69":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet69":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [izlenecek yol: Windows formu kullanarak veri toplama](../vsto/walkthrough-collecting-data-using-a-windows-form.md)
-- [Office çözümlerinde sorun giderme](../vsto/troubleshooting-office-solutions.md)
+- [Adım adım kılavuz: Bir form kullanarak Windows toplama](../vsto/walkthrough-collecting-data-using-a-windows-form.md)
+- [Office sorunlarını giderme](../vsto/troubleshooting-office-solutions.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Office projelerindeki nesnelere genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
+- [Office projelerinde nesnelere genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

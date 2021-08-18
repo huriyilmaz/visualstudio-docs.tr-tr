@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c5b8ff5fb176b05576abf89e1bfdf4f49a22ed069bae2e1b459bc9bcedf696b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 454f916a80cda1b2b485cc6385218bfc88fb0490
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121314621"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155245"
 ---
 # <a name="debug-workflows-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile iş akışlarını İş Akışı Tasarımcısı
 
@@ -31,12 +31,12 @@ Genel olarak, iş akışlarının hata ayıklaması, diğer programlama dillerin
 
 - İş **akışı örneğinin** çalışan **konak işlemini seçmek** için Hata Ayıklama menüsünde İşleme Ekle'yi seçin. Bu yordam, yönetilen kodda bir konak işlemi eklemekle aynıdır.
 
-- İş akışının bir örneğini çalıştırmaya başlamak veya bir kesme noktası olduktan sonra çalışmaya devam etmek için **F5** tuşuna basın.
+- İş akışının bir örneğini çalıştırmaya başlamak veya bir kesme noktası isabet olduktan sonra çalışmaya devam etmek için **F5** tuşuna basın.
 
 - Uzaktan hata ayıklamayı kullanın. Uzaktan hata ayıklama kullanma hakkında daha fazla bilgi için [bkz. Nasıl 2. Adım: Uzaktan hata ayıklamayı etkinleştirme.](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100))
 
    > [!NOTE]
-   > İş akışı uygulaması x86 mimarisini hedeflemektedir ve 64 bit işletim sistemi çalıştıran bir makinede barındırıyorsa, uzak makineye Visual Studio yüklenmediği veya iş akışı uygulamasının hedefi Herhangi bir CPU olarak değiştirilene kadar uzaktan hata ayıklama **çalışmaz.**
+   > İş akışı uygulaması x86 mimarisini hedeflese ve 64 bit işletim sistemi çalıştıran bir makinede barındırıldısa, uzak makineye Visual Studio yüklenmediği veya iş akışı uygulamasının hedefi Herhangi bir CPU olarak değiştirilene kadar uzaktan hata ayıklama **çalışmaz.**
 
 ## <a name="step-through-code"></a>Kodda adım adım ilerler
 
@@ -44,7 +44,7 @@ Genel olarak, iş akışlarının hata ayıklaması, diğer programlama dillerin
 
 - **Dışarı Adımla:** Shift F11 tuşuna basarak **bir** + **etkinliğin dışında adım at.** Bir etkinliğin dışında adımlama, geçerli etkinliği ve tüm onun tüm kardeleme etkinliklerini tamamlamaya çalıştırır. Ardından hata ayıklayıcısı geçerli etkinliğin üst öğesi üzerinde kesmeler. Kod işleyiciden çıkarılırken, hata ayıklayıcı işleyicinin ilişkilendiril olduğu etkinlikte hata ayıklayıcıyı kırar.
 
-- **Adım Adım:** F10 tuşuna basarak bir **etkinliğin üzerine adımla.** Bileşik etkinliğin üzerine adımlarken, hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt bilgisinde hata ayıklayıcıyı kırar. Bileşik olmayan bir etkinlik üzerinde adımlarken, hata ayıklayıcı etkinliği ve ilişkili işleyicilerini yürütür ve sonraki <xref:System.Activities.Statements.Assign> etkinlikte sonlar. Yürütülen etkinlik bileşik etkinlikte son alt etkinlikse, yürütmeden sonra hata ayıklayıcı üst etkinlikte son olur.
+- **Adım Adım:** F10 tuşuna basarak bir **etkinliğin üzerine adımla.** Bileşik etkinliğin üzerine adımlarken, hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt bilgisinde hata ayıklayıcıyı kırar. Bir etkinlik gibi bileşik olmayan bir adım atılırken, hata ayıklayıcı etkinliği ve ilişkili işleyicilerini yürütür ve <xref:System.Activities.Statements.Assign> sonraki etkinlikte sonlar. Yürütülen etkinlik bileşik etkinlikte son alt etkinlikse, yürütmeden sonra hata ayıklayıcı üst etkinlikte son olur.
 
 ## <a name="debug-with-f5"></a>F5 ile hata ayıklama
 

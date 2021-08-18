@@ -1,6 +1,6 @@
 ---
-description: Bu programın üzerinde çalıştığı işlemi alın.
-title: 'IDebugProgram2:: GetProcess | Microsoft Docs'
+description: Bu programın içinde çalıştır olduğu işlemi elde.
+title: IDebugProgram2::GetProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d0f7551b86bd6eb818b1e451d2cc65426cf7441d85da0812afe215dcfaa2feca
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 135d8e632b4cef71050db0ba326388170037e732
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307121"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126550"
 ---
 # <a name="idebugprogram2getprocess"></a>IDebugProgram2::GetProcess
-Bu programın üzerinde çalıştığı işlemi alın.
+Bu programın içinde çalıştır olduğu işlemi elde.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,15 +43,15 @@ int GetProcess(
 
 ## <a name="parameters"></a>Parametreler
 `ppProcess`\
-dışı İşlemi temsil eden [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) arabirimini döndürür.
+[out] Işlemi [temsil eden IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) arabirimini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir hata ayıklama altyapısı (DE) [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) arabirimini uygulamadıkça, bu yöntemin uygulamasının de uygulanması her zaman döndürmelidir, `E_NOTIMPL` çünkü bir de hangi işlemin üzerinde çalıştığını belirleyemez ve bu nedenle bu yöntemin bir uygulamasını karşılayamaz.
+ Bir hata ayıklama altyapısı (DE) [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) arabirimini uygulamadıkça, DE'nin bu yöntemi uygulaması her zaman dönmeli çünkü de hangi işlemde çalıştırdığını belirleyebildi ve bu nedenle bu yöntemin bir uygulamasını `E_NOTIMPL` karşılayamaz.
 
- Arabirimi uygulamak `IDebugEngineLaunch2` , de bir işlemin nasıl oluşturulduğunu bilmesi gerektiği anlamına gelir; bu nedenle, [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimi uygulamasının, içinde hangi işlemin çalıştığını biliyor olabilir.
+ Arabirimin uygulanması, DE'nin bir işlemi nasıl oluşturabileceklerini bilmek zorunda olduğu anlamına gelir; bu nedenle `IDebugEngineLaunch2` DE'nin [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimi uygulaması hangi işlemde çalıştırdığını bilmektedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

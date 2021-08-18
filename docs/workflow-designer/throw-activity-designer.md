@@ -10,14 +10,15 @@ ms.assetid: 5e97c947-be39-4a1f-af04-000e2e09528a
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: a1ffd0a9dda243e53431e419910b866853cd3932
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8517ac1cfc2a1a4ba0c3a1c28e17970bea6e1598
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969106"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098976"
 ---
 # <a name="throw-activity-designer"></a>Throw Etkinlik Tasarımcısı
 
@@ -40,7 +41,7 @@ Aşağıdaki tabloda <xref:System.Activities.Statements.Throw> Özellikler göst
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını belirtir <xref:System.Activities.Statements.Throw> . Varsayılan değer throw ' dir.|
-|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Throw özel durumu. Bu özel durumun türevi olması gerekir <xref:System.Exception> . Özel durumu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Throw özel durumu. Bu özel durumun türevi olması gerekir <xref:System.Exception> . özel durumu belirtmek için, özellik kılavuzuna bir Visual Basic ifadesi yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

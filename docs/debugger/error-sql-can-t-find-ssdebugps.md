@@ -1,5 +1,5 @@
 ---
-description: SSDEBUGPS.dll Hata Ayıklama SQL Server bileşenidir.
+description: SSDEBUGPS.dll, hata SQL Server bileşenidir.
 title: SQL &apos;SSDEBUGPS dosyası | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -17,16 +17,16 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fdb25a00294b5939e4b0b6782ab7cb80399b1b69ebf75da7010f2a0ecca9d60e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 75ab62def371ef1fa210b39a23dc62d33f98cd39
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420162"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154459"
 ---
 # <a name="error-sql-can39t-find-ssdebugps"></a>Hata: SQL SSDEBUGPS&#39;Bulamıyorum
 
-SSDEBUGPS.dll Hata Ayıklama SQL Server bileşenidir.
+SSDEBUGPS.dll, hata SQL Server bileşenidir.
 
 Hata ayıklamayı başlatmaya çalışırken bu hata oluşur ve belirtilen dosyanın makinede mevcut olmadığını [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] gösterir. Olası nedenler, Uzaktan Hata Ayıklama kurulumunun hiç çalışmamış veya bir şekilde bu dosyanın silinmesidir.
 

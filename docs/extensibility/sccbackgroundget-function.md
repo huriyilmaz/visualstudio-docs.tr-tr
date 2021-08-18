@@ -1,6 +1,6 @@
 ---
-description: Bu işlev, belirtilen dosyaların her birini Kullanıcı etkileşimi olmadan kaynak denetiminden alır.
-title: SccBackgroundGet Işlevi | Microsoft Docs
+description: Bu işlev, kullanıcı etkileşimi olmadan belirtilen dosyaların her biri kaynak denetiminden alınır.
+title: SccBackgroundGet İşlev | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a70e410ab292238ccf16fa810148b0f6f7d2069230638af8780e7c024b1fbcfe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f010aa2ba214004422048513cea92adf67d62c69
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121447785"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144632"
 ---
 # <a name="sccbackgroundget-function"></a>SccBackgroundGet işlevi
-Bu işlev, belirtilen dosyaların her birini Kullanıcı etkileşimi olmadan kaynak denetiminden alır.
+Bu işlev, kullanıcı etkileşimi olmadan belirtilen dosyaların her biri kaynak denetiminden alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,42 +37,42 @@ SCCRTN SccBackgroundGet(
 ```
 
 ### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.
+[in] Kaynak denetimi eklentisi bağlam işaretçisi.
 
- Nkarşıya
+ nFiles
 
-'ndaki Dizide belirtilen dosya sayısı `lpFileNames` .
+[in] Dizide belirtilen dosya `lpFileNames` sayısı.
 
- lpDosyaAdı
+ lpFileNames
 
-[in, out] Alınacak dosyaların adları dizisi.
+[in, out] Alınarak alınan dosyaların adları dizisi.
 
 > [!NOTE]
 > Adların tam yerel dosya adları olması gerekir.
 
- dwFlags
+ Dwflags
 
-'ndaki Komut bayrakları ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
+[in] Komut bayrakları ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
 
  dwBackgroundOperationID
 
-'ndaki Bu işlemle ilişkili benzersiz bir değer.
+[in] Bu işlemle ilişkili benzersiz bir değer.
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini geri dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|İşlem başarıyla tamamlandı.|
-|SCC_E_BACKGROUNDGETINPROGRESS|Bir arka plan alımı zaten devam ediyor (kaynak denetimi eklentisi bunu yalnızca eşzamanlı Batch işlemlerini desteklemiyorsa döndürmelidir).|
+|SCC_E_BACKGROUNDGETINPROGRESS|Bir arka plan alma işlemi zaten devam ediyor (kaynak denetimi eklentisi bunu yalnızca eşzamanlı toplu işlemleri desteklemezse bunu iade eder).|
 |SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev her zaman, kaynak denetimi eklentisini yükleyen bilgisayardan farklı bir iş parçacığında çağrılır. Bu işlevin, tamamlanana kadar dönmesi beklenmez; Ancak, hepsi aynı anda birden çok dosya listesiyle birden çok kez çağrılabilir.
+ Bu işlev her zaman kaynak denetimi eklentiyi yükten farklı bir iş parçacığında çağrılır. Bu işlevin, yapılana kadar geri dönmesi beklenmmektedir; ancak, hepsi aynı anda birden çok dosya listesiyle birden çok kez çağrılabilirsiniz.
 
- `dwFlags`Bağımsız değişkeninin kullanımı [SccGet](../extensibility/sccget-function.md)ile aynıdır.
+ bağımsız değişkeninin `dwFlags` kullanımı [SccGet ile aynıdır.](../extensibility/sccget-function.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)

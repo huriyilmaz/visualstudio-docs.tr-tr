@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7802d2dd19b5dfe8e4aed9acb56ef6bc7a3198d946d950ee99d8e6ba69e975a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c0817d0b1569557bad7ebc966c1dd23339a134ce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121326372"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154707"
 ---
 # <a name="idiaaddressmapput_imagealign"></a>IDiaAddressMap::put_imageAlign
 Görüntü hizalamasını ayarlar.

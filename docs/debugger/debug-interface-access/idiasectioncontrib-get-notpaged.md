@@ -1,6 +1,6 @@
 ---
-description: Bölümün belleğinin yetersiz olup olmadığını belirten bir bayrak alınır.
-title: IDiaSectionContrib::get_notPaged | Microsoft Docs
+description: Bölümün disk belleğine alınmış olup olmadığını gösteren bir bayrak alır.
+title: 'IDiaSectionContrib:: get_notPaged | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 80d698af4dfa6d93ccba001c9d9c4e299771abe313bb48a446ca21ddb2e72547
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e710a38faf44d326b733b96c00a590e495ae9a5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121281160"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066513"
 ---
 # <a name="idiasectioncontribget_notpaged"></a>IDiaSectionContrib::get_notPaged
-Bölümün belleğinin yetersiz olup olmadığını belirten bir bayrak alınır.
+Bölümün disk belleğine alınmış olup olmadığını gösteren bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +34,10 @@ HRESULT get_notPaged (
 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
-- [out, retval] Bölümü `TRUE` sayfalandırılamazsa döndürür; aksi takdirde `FALSE` döndürür.
+- [Out, retval] `TRUE` Bölümün disk belleğine alınamayan bir değer döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

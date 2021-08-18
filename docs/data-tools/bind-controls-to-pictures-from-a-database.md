@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e472eeeb961096a5e1cbeb01323121dc77353bc29ef33a8ab06f5c9e3f09a625
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f1f1db5a2d98b6e55b0da97e7550bc33698ff072
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240672"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154959"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Bir veritabanından resimlere denetim bağlama
 
@@ -37,12 +37,12 @@ Aşağıdaki yordam, Veri Kaynakları **penceresinin görüntünüze** bağlı b
 
 ## <a name="to-bind-a-picture-in-a-database-to-a-control"></a>Veritabanındaki bir resmi denetime bağlamak için
 
-1. Denetimi eklemek istediğiniz tasarım yüzeyinin WPF Tasarımcısı'nda veya Windows Forms Tasarımcısı'nda açık olduğundan emin olun.
+1. Denetimi eklemek istediğiniz tasarım yüzeyinin WPF Tasarımcısı'nda veya Windows Forms Designer'da açık olduğundan emin olun.
 
 2. Veri Kaynakları **penceresinde,** sütunlarını veya özelliklerini görüntülemek için istenen tabloyu veya nesneyi genişletin.
 
    > [!TIP]
-   > Veri **Kaynakları penceresi açık** değilse Diğer Veri Kaynaklarını Görüntüle'yi **seçerek**  >  **Windows**  >  **açın.**
+   > Veri **Kaynakları penceresi açık** değilse Diğer Veri Kaynaklarını Görüntüle'yi  >  **seçerek Windows**  >  **açın.**
 
 3. Görüntü verilerinizi içeren sütunu veya özelliği seçin ve açılan denetim listesinden aşağıdaki denetimlerden birini seçin:
 

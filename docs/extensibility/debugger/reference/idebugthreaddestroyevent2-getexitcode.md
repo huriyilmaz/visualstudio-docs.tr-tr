@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f0d6b9ab6c6329dde834664ab98ae5da4aab8ea7a5ba7202c30af6bf87dd451f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6df49770bf66d911934bc18311d4bfa2ebea3180
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402057"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153075"
 ---
 # <a name="idebugthreaddestroyevent2getexitcode"></a>IDebugThreadDestroyEvent2::GetExitCode
 Bir iş parçacığının çıkış kodunu alır.

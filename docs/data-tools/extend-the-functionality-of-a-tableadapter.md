@@ -15,14 +15,15 @@ ms.assetid: 418249c8-c7f3-47ef-a94c-744cb6fe6aaf
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f8cea8ec761bf50ddc0f928112975c366f62418b
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 29c7d9924d822cabdb28c9d3048e457cd7b88d64
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215844"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154881"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Bir TableAdapter’ın işlevselliğini genişletme
 
@@ -40,7 +41,7 @@ Aşağıdaki örnek, adlı bir TableAdapter `CustomersTableAdapter` 'ın ile bir
 
 ### <a name="to-create-a-partial-class-for-a-tableadapter"></a>TableAdapter için kısmi bir sınıf oluşturmak için
 
-1. **Proje** menüsüne gidip **Sınıf Ekle** öğesini seçerek projenize yeni bir sınıf ekleyin.
+1. **Project** menüsüne gidip **sınıf ekle** öğesini seçerek projenize yeni bir sınıf ekleyin.
 
 2. Sınıfı adlandırın `CustomersTableAdapterExtended` .
 

@@ -1,6 +1,6 @@
 ---
-description: İş parçacığı numaralamada belirtilen sayıda öğenin üzerine atlar.
-title: IEnumDebugThreads2::Skip | Microsoft Docs
+description: İş parçacıkları numaralandırmasında belirtilen sayıda öğeyi atlar.
+title: 'IEnumDebugThreads2:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 87e7ea20fe00b116f1dc6754fedc5de376330362c4c9dfdf9f832867930b8e21
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a1483bb2139cb5d2bdfa0a9a619d494bd52fa627
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415292"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125406"
 ---
 # <a name="ienumdebugthreads2skip"></a>IEnumDebugThreads2::Skip
-Belirtilen öğe sayısını atlar.
+Belirtilen sayıda öğeyi atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int Skip(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Atlana öğe sayısı.
+'ndaki Atlanacak öğe sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. kalan `S_FALSE` `celt` öğe sayısından büyükse döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE` `celt` Kalan öğelerin sayısından büyükse döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kalan öğe sayısından büyük bir değer belirtirse, en sona ayarlanır `celt` ve `S_FALSE` döndürülür.
+ `celt`Kalan öğelerin sayısından daha büyük bir değer belirtiyorsa, numaralandırma sonuna ayarlanır ve `S_FALSE` döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)

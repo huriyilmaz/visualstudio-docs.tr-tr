@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Şeriti özelleştirmeye başlama'
-description: Bir Microsoft Office uygulamasının şeritlerini özelleştirmeyi, bir şerit (görsel Tasarımcı) veya şerit (XML) öğesini bir Office projesine eklemeyi öğrenin.
+title: 'Nasıl Kullanmaya başlayın: şeridi özelleştirme'
+description: Bir uygulamanın Şeridini özelleştirmeyi, Microsoft Office projesine Şerit (Görsel Tasarımcı) veya Şerit (XML) Office öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,35 +15,36 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: d82d059166b9efbb80ed6ce4cffcbb973235b01b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f4042a8d68ac940df8e84ac62fb85b902879e1ff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953922"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083472"
 ---
-# <a name="how-to-get-started-customizing-the-ribbon"></a>Nasıl yapılır: Şeriti özelleştirmeye başlama
-  Bir Microsoft Office uygulamasının Şeridini özelleştirmek için bir Office projesine **Şerit (görsel Tasarımcı)** veya **Şerit (XML)** öğesi ekleyin.
+# <a name="how-to-get-started-customizing-the-ribbon"></a>Nasıl Kullanmaya başlayın: şeridi özelleştirme
+  Bir uygulamanın Şeridini özelleştirmek Microsoft Office bir Office projesine Şerit **(Görsel Tasarımcı)** veya Şerit **(XML)** öğesi ekleyin.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-### <a name="to-add-a-ribbon-to-a-project"></a>Bir projeye Şerit eklemek için
+### <a name="to-add-a-ribbon-to-a-project"></a>Projeye şerit eklemek için
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+1. Yeni **Project** **Ekle'ye tıklayın.**
 
-2. **Yeni öğe Ekle** Iletişim kutusunda **Şerit (görsel Tasarımcı)** veya **Şerit (XML)** öğesini seçin. Bu şablonlar hakkında daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md).
+2. Yeni Öğe **Ekle iletişim kutusunda** Şerit (Görsel Tasarımcı) veya Şerit **(XML)** **öğesini seçin.** Bu şablonlar hakkında daha fazla bilgi için bkz. [Şerit'e genel bakış.](../vsto/ribbon-overview.md)
 
-3. **Ad** kutusuna şerit öğesi için bir ad yazın.
+3. Ad **kutusuna** Şerit öğesi için bir ad yazın.
 
     Adlar aşağıdaki karakterleri içeremez:
 
-   - Sterlin (#)
+   - Pound (#)
 
    - Yüzde (%)
 
-   - Ve işareti (&)
+   - Ve (&)
 
    - Yıldız işareti (*)
 
@@ -55,7 +56,7 @@ ms.locfileid: "99953922"
 
    - Çift tırnak işareti (")
 
-   - Küçüktür ( \< )
+   - Küçük ( \< )
 
    - Büyüktür (>)
 
@@ -63,17 +64,17 @@ ms.locfileid: "99953922"
 
    - Eğik çizgi (/)
 
-   - Baştaki veya sondaki boşluklar (' ')
+   - Baştaki veya sonda boşluklar (' ')
 
-   - Windows veya DOS için ayrılan adlar ("nul", "AUX", "Con", "COM1", "lpt1" vb.)
+   - Windows veya DOS için ("nul", "aux", "con", "com1", "lpt1" gibi) ayrılmış adlar
 
 4. **Tamam**'a tıklayın.
 
-   Şerit öğesi **Çözüm Gezgini** görünür. Sonraki adımlar hakkında daha fazla bilgi için bkz. [Şerite genel bakış](../vsto/ribbon-overview.md).
+   Şerit öğesi, öğesinde **Çözüm Gezgini.** Sonraki adımlar hakkında bilgi için bkz. [Şerit'e genel bakış.](../vsto/ribbon-overview.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)
+- [Çalışma zamanında Şerit'e erişme](../vsto/accessing-the-ribbon-at-run-time.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
 - [Şerit XML](../vsto/ribbon-xml.md)
-- [İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
-- [İzlenecek yol: Şerit XML kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)
+- [Adım adım kılavuz: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
+- [Adım adım kılavuz: Şerit XML kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)

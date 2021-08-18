@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 570c37fd395d4768e7c583163dada744e16930644fabbabfa494063719234fd8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f48f0674ecfe11ac28c8db6ea635fdb4f86ca77d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121356094"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143397"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
 
@@ -25,7 +25,7 @@ DSL Tanımlarını düzenlemek için kullanabileceğiniz tasarımcıya uzantıla
 
 ## <a name="set-up-the-solution"></a>Çözümü Ayarlama
 
-Uzantının kodunu içeren bir proje ve projeyi dışarı aktaran bir VSIX projesi ayarlayın. Çözümünüz, aynı VSIX'e dahil olan diğer projeleri içerebilir.
+Uzantının kodunu içeren bir proje ve projeyi dışarı aktaran bir VSIX projesi ayarlayın. Çözümünüz aynı VSIX'e dahil olan diğer projeleri içerebilir.
 
 ### <a name="to-create-a-dsl-designer-extension-solution"></a>DSL Tasarımcısı Uzantısı Çözümü oluşturmak için
 
@@ -75,7 +75,7 @@ Uzantıları ana sunucuya ve Visual Studio bilgisayarlara dağıtmak için şu a
 
 2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Gezgini'nde (veya Dosya Gezgini) çift tıklayın.
 
-     Uzantının Visual Studio onaylamak için Uzantı Yöneticisi açılır.
+     uzantının Visual Studio onaylamak için Uzantı Yöneticisi açılır.
 
 Uzantıyı kaldırmak için şu adımları izleyin:
 
@@ -85,9 +85,9 @@ Uzantıyı kaldırmak için şu adımları izleyin:
 
 ## <a name="add-a-shortcut-menu-command"></a>Kısayol Menü Komutu Ekleme
 
-Kısayol menü komutunun DSL Tasarımcısı veya DSL Gezgini penceresinde görünmesini için aşağıdakine benzer bir sınıf yazın.
+Kısayol menü komutunun DSL Tasarımcısı veya DSL Gezgini penceresinde görünmesini yapmak için aşağıdakine benzer bir sınıf yazın.
 
-sınıfını uygulamalı `ICommandExtension` ve özniteliğine sahip olması `DslDefinitionModelCommandExtension` gerekir.
+sınıfı uygulamalı `ICommandExtension` ve özniteliğine sahip `DslDefinitionModelCommandExtension` olmalı.
 
 ```csharp
 using System.Collections.Generic;

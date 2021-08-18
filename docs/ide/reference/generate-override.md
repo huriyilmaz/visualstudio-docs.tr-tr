@@ -7,16 +7,17 @@ ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3640fe29a18ba1ec89ab2806810165a0ec509167
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0724500bf90e3e0253d936facf4be62f68533ba1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085903"
 ---
-# <a name="generate-an-override-in-visual-studio"></a>Visual Studio 'da bir geçersiz kılma oluştur
+# <a name="generate-an-override-in-visual-studio"></a>Visual Studio bir geçersiz kılma oluştur
 
 Bu kod üretimi için geçerlidir:
 
@@ -32,7 +33,7 @@ Bu kod üretimi için geçerlidir:
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. `override` `Overrides` Bir geçersiz kılma yöntemi eklemek istediğiniz C# ' ta veya Visual Basic, ardından bir boşluk ile yazın.
+1. `override` `Overrides` bir geçersiz kılma yöntemi eklemek istediğiniz C# ' ta veya Visual Basic, ardından bir boşluk ile yazın.
 
    - C#:
 

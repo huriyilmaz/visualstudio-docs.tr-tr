@@ -1,5 +1,5 @@
 ---
-description: Veri kaynağında bulunan çeşitli sembolleri ele alarak sıralar.
+description: Veri kaynağında bulunan çeşitli sembolleri adrese göre numaralar.
 title: IDiaEnumSymbolsByAddr | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d0750239248ac3afd1b95f8ae05a19707cf2fddbe966dd45a2d8dd1fb7d6775
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 274fecb6e87e221360c2f97086155237d30a7148
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380310"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129322"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
-Veri kaynağında bulunan çeşitli sembolleri ele alarak sıralar.
+Veri kaynağında bulunan çeşitli sembolleri adrese göre numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,26 +30,26 @@ Veri kaynağında bulunan çeşitli sembolleri ele alarak sıralar.
 IDiaEnumSymbolsByAddr : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumSymbolsByAddr` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaEnumSymbolsByAddr` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumSymbolsByAddr::symbolByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyaddr.md)|Bölüm ve uzaklığa göre arama gerçekleştirerek numaralandırıcıyı konumlandırır.|
-|[IDiaEnumSymbolsByAddr::symbolByRVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyrva.md)|Göreli sanal adres (RVA) ile bir arama gerçekleştirerek numaralandırıcısı konumlandırır.|
-|[IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)|Sanal adrese (VA) göre arama gerçekleştirerek numaralandırıcıyı konumlandırır.|
-|[IDiaEnumSymbolsByAddr::Next](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-next.md)|Sıradaki simgeleri adrese göre alır. Numaralandırıcı konumunu getirilen öğe sayısına göre güncelleştirir.|
-|[IDiaEnumSymbolsByAddr::Prev](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-prev.md)|Önceki sembolleri sırasıyla adrese göre alır. Numaralandırıcı konumunu getirilen öğe sayısına göre güncelleştirir.|
+|[IDiaEnumSymbolsByAddr::symbolByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyaddr.md)|Bölüme ve kaydırmaya göre arama yaparak numaralayıcıyı konumlar.|
+|[IDiaEnumSymbolsByAddr::symbolByRVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyrva.md)|Göreli sanal adrese (RVA) göre arama yaparak numaralayıcıyı konumlar.|
+|[IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)|Sanal adrese (VA) göre arama yaparak numaralayıcıyı konumlar.|
+|[IDiaEnumSymbolsByAddr::Next](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-next.md)|Sonraki sembolleri adrese göre sırasıyla alın. Numaralayıcı konumunu, alınan öğe sayısına göre günceller.|
+|[IDiaEnumSymbolsByAddr::Prev](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-prev.md)|Önceki sembolleri adrese göre sırasıyla alın. Numaralayıcı konumunu, alınan öğe sayısına göre günceller.|
 |[IDiaEnumSymbolsByAddr::Clone](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-clone.md)|Bir nesnenin kopyasını oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim, adrese göre gruplanmış simgeler sağlar. Türe göre gruplandırılan simgelerle çalışmak için (örneğin, `SymTagUDT` Kullanıcı tanımlı tür) veya `SymTagBaseClass` [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) arabirimini kullanın.
+Bu arabirim, adrese göre gruplara sahip semboller sağlar. Türe göre (kullanıcı tanımlı tür) veya gibi sembollerle çalışmak için `SymTagUDT` `SymTagBaseClass` [IDiaEnumSymbols arabirimini](../../debugger/debug-interface-access/idiaenumsymbols.md) kullanın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-[IDiaSession:: getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) metodunu çağırarak bu arabirimi elde edin.
+[IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) yöntemini çağırarak bu arabirimi alın.
 
 ## <a name="example"></a>Örnek
-Bu işlev, göreli sanal adrese göre sıralanan tüm simgelerin adını ve adresini görüntüler.
+Bu işlev, göreli sanal adrese göre sıra edilen tüm sembollerin adını ve adresini görüntüler.
 
 ```C++
 void ShowSymbolsByAddress(IDiaSession *pSession)
@@ -96,9 +96,9 @@ void ShowSymbolsByAddress(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

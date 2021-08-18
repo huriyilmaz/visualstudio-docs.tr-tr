@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0e6aa0f19c8ae8f19fb49a1322e12cae0aa65305217d5ff8a8361132e347a37
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f263a8748e68395b333d5f34fd00e326736afaf2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360059"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144775"
 ---
 # <a name="editor-imports"></a>Düzenleyici içeri aktarmaları
 Uzantınız için çekirdek düzenleyiciye farklı türlerde erişim sağlayan bir dizi Düzenleyici hizmeti, fabrikası ve aracıları içeri aktarabilirsiniz. Örneğin, <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> belirli bir içerik türü için size bir sağlamak üzere öğesini içeri aktarabilirsiniz <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> . (Bu gezgin, bir metin arabelleğinde farklı türlerde aramalar gerçekleştirmenize olanak tanır.)

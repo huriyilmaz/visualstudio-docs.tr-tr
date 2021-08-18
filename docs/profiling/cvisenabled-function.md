@@ -1,6 +1,6 @@
 ---
-title: CvIsEnabled Işlevi | Microsoft Docs
-description: Eşzamanlılık Görselleştiricisi SDK işlevi CvIsEnabled (C Kitaplığı) için başvuru bilgilerine bakın.
+title: CvIsEnabled İşlev | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK'sı cvIsEnabled (C kitaplığı) işlevi için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,17 +14,18 @@ ms.assetid: 2e4fea6d-758d-4150-8744-6102a1d58c1c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0be750f62e248b3d9f837c5baa561765e14bfba5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4bb2e5bf40c038456853a06b9b43a9ee03d8e051
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940949"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084525"
 ---
 # <a name="cvisenabled-function"></a>CvIsEnabled işlevi
-Belirtilen ETW sağlayıcısını herhangi bir oturumun etkinleştirilip etkinleştirilmediğini belirler.
+Herhangi bir oturumun belirtilen ETW sağlayıcısını etkinleştirip etkinleştirmemiş olduğunu belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,17 +41,17 @@ HRESULT CvIsEnabledEx(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `category` Alan.
+ `category` Kategori.
 
  `level` Önem düzeyi.
 
  `pProvider` Geçerli sağlayıcı nesnesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- Sağlayıcı Şu anda etkin ise S_OK. Sağlayıcı Şu anda devre dışıysa S_FALSE. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için başarısız makroyu kullanın ve ardından S_OK/S_FALSE kontrol edin.
+ S_OK etkinse bu soruna neden olabilir. S_FALSE devre dışı bırakılmıştır. Hata varsa hata kodu. Hata koşullarını kontrol etmek için BAŞARILI makroyu kullanın ve ardından S_OK/S_FALSE.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvişaretleyiciler. h*
+ **Üst bilgi:** *cvmarkers.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

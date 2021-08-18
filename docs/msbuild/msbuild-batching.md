@@ -1,6 +1,6 @@
 ---
-title: MSBuild Toplu Işleme | Microsoft Docs
-description: MSBuild 'in öğe listelerini öğe meta verilerine göre farklı kategorilere veya toplu işlerle nasıl böldüğünü ve her toplu işte bir kez hedef veya görev çalıştırmasını öğrenin.
+title: MSBuild Toplu işleme | Microsoft Docs
+description: öğe listelerini, öğe meta verilerine bağlı olarak farklı kategorilere veya toplu işlerle MSBuild ayırır ve her batch ile bir kez hedef veya görev çalıştırır.
 ms.custom: SEO-VS-2020
 ms.date: 06/09/2020
 ms.topic: conceptual
@@ -11,24 +11,25 @@ ms.assetid: d35c085b-27b8-49d7-b6f8-8f2f3a0eec38
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d14a979a166f7378c288453530b46b8ec6c98828
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9b018871c95cf87fbac226ed768b51bdc69398d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919202"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068965"
 ---
 # <a name="msbuild-batching"></a>MSBuild toplu işleme
 
-MSBuild öğe listelerini, öğe meta verilerine göre farklı kategorilere veya toplu işlerle böler ve her Batch ile bir kez bir hedef veya görev çalıştırır.
+MSBuild öğe listelerini, öğe meta verilerine göre farklı kategorilere veya toplu işlemlere böler ve her batch ile bir kez bir hedef veya görev çalıştırır.
 
 ## <a name="task-batching"></a>Görev toplu işleme
 
 Görev toplu işleme, öğe listelerini farklı toplu işlemlere bölmek ve bu toplu işlerin her birini ayrı bir göreve geçirmek için bir yol sağlayarak Proje dosyalarınızı basitleştirmenize olanak tanır. Bu, bir proje dosyasının, birkaç kez çalıştırılabilse de, yalnızca görevin ve özniteliklerinin bir kez bildirilmesine ihtiyaç duyacağı anlamına gelir.
 
-Görev özniteliklerinden birindeki gösterimi kullanarak, MSBuild 'i bir görevle toplu işleme gerçekleştirmesini istediğinizi belirtirsiniz `%(ItemMetaDataName)` . Aşağıdaki örnek, öğe `Example` listesini `Color` öğe meta veri değerine göre toplu işlemlere böler ve toplu işlerin her birini `MyTask` göreve ayrı geçirir.
+görev özniteliklerinden birindeki gösterimi kullanarak bir görevle toplu işleme gerçekleştirmesini MSBuild istediğinizi belirtirsiniz `%(ItemMetaDataName)` . Aşağıdaki örnek, öğe `Example` listesini `Color` öğe meta veri değerine göre toplu işlemlere böler ve toplu işlerin her birini `MyTask` göreve ayrı geçirir.
 
 > [!NOTE]
 > Görev özniteliklerinin başka bir yerinde öğe listesine başvurmayın veya meta veri adı belirsiz olabilir, toplu işleme için kullanılacak öğe meta verileri değerini tamamen nitelemek için%(<ItemCollection. ItemMetaDataName>) gösterimini kullanabilirsiniz.
@@ -59,9 +60,9 @@ Daha özel toplu işlem örnekleri için bkz. [görev toplu işleme Içindeki ö
 
 ## <a name="target-batching"></a>Hedef toplu işleme
 
-MSBuild, hedefin giriş ve çıkışları hedefi çalıştırmadan önce güncel olup olmadığını denetler. Hem giriş hem de çıkış güncel olursa hedef atlanır. Bir hedefin içindeki bir görev toplu işlem kullanıyorsa, MSBuild 'in her bir öğe için giriş ve çıkış tarihinin güncel olup olmadığını belirlemesi gerekir. Aksi takdirde, hedef her vurışında yürütülür.
+MSBuild, hedefin giriş ve çıkışları hedefi çalıştırmadan önce güncel olup olmadığını denetler. Hem giriş hem de çıkış güncel olursa hedef atlanır. bir hedefin içindeki bir görev toplu işlem kullanıyorsa, MSBuild her öğe için giriş ve çıktıların güncel olup olmadığını belirlemesi gerekir. Aksi takdirde, hedef her vurışında yürütülür.
 
-Aşağıdaki örnek, `Target` gösterimiyle bir özniteliği içeren bir öğesini gösterir `Outputs` `%(ItemMetadataName)` . MSBuild öğe `Example` listesini öğe meta verileri temelinde toplu işlemlere böler `Color` ve her toplu iş için çıkış dosyalarının zaman damgalarını analiz eder. Bir toplu işteki çıktılar güncel değilse, hedef çalıştırılır. Aksi takdirde, hedef atlanır.
+Aşağıdaki örnek, `Target` gösterimiyle bir özniteliği içeren bir öğesini gösterir `Outputs` `%(ItemMetadataName)` . MSBuild öğe listesini, `Example` öğe meta verileri temelinde toplu işlemlere böler `Color` ve her toplu iş için çıkış dosyalarının zaman damgalarını analiz eder. Bir toplu işteki çıktılar güncel değilse, hedef çalıştırılır. Aksi takdirde, hedef atlanır.
 
 ```xml
 <Project
@@ -93,7 +94,7 @@ Hedef toplu işleme bir örnek için bkz. [hedef toplu işleme Içindeki öğe m
 
 Bu bölümde, hedef toplu işleme veya görev toplu işi kullanılırken özellikleri ve/veya öğe meta verilerini değiştirmenin etkilerini anlamak açıklanmaktadır.
 
-Hedef toplu işleme ve görev toplu işi iki farklı MSBuild işlemi olduğundan, her durumda MSBuild 'in hangi şekilde kullandığını tam olarak anlamak önemlidir. Toplu işleme söz dizimi hedefteki bir `%(ItemMetadataName)` görevde göründüğünde, MSBuild görev toplu işlem kullanır. Hedef toplu işleme belirtmenin tek yolu, genellikle özniteliği bir hedef özniteliğinde toplu işleme söz dizimini kullanmaktır `Outputs` .
+hedef toplu işleme ve görev toplu işlemi iki farklı MSBuild işlem olduğundan, her durumda MSBuild tam olarak hangi türde toplu işlem kullandığını anlamak önemlidir. toplu işleme söz dizimi hedefteki bir `%(ItemMetadataName)` görevde göründüğünde, ancak hedefteki bir öznitelikte yer alırken MSBuild görev toplu işlem kullanır. Hedef toplu işleme belirtmenin tek yolu, genellikle özniteliği bir hedef özniteliğinde toplu işleme söz dizimini kullanmaktır `Outputs` .
 
 Hem hedef toplu işleme hem de görev toplu işleme ile, toplu işler bağımsız olarak çalışacak şekilde düşünülebilir. Tüm toplu işlemler, özellik ve öğe meta verileri değerlerinin başlangıç durumunun bir kopyasıyla başlar. Toplu yürütme sırasında özellik değerlerinin herhangi bir mutasyonları diğer toplu işler için görünür değildir. Aşağıdaki örneği inceleyin:
 

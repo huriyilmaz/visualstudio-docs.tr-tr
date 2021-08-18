@@ -1,6 +1,6 @@
 ---
-description: Simgenin yönetilen koda başvurduğunu belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_managed | Microsoft Docs'
+description: Sembolün yönetilen koda başvurup başvurul olmadığını belirten bir bayrak alınır.
+title: IDiaSymbol::get_managed | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: a69d00be-2a89-415c-b116-385c422e2fd5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e0948395876a0a52a3805e5d2059b293867a3ab
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 75b68bfc81cf2a305baa889baf726d6905b7afab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156001"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154546"
 ---
 # <a name="idiasymbolget_managed"></a>IDiaSymbol::get_managed
-Simgenin yönetilen koda başvurduğunu belirten bir bayrak alır.
+Sembolün yönetilen koda başvurup başvurul olmadığını belirten bir bayrak alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_managed (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Simgenin yönetilen kodu ifade eder; Aksi takdirde, döndürür `FALSE` .
+[out] Sembol `TRUE` yönetilen koda başvurursa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

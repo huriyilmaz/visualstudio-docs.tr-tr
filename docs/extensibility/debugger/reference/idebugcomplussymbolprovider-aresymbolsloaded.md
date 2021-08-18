@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ac784a7f6de528e773219a1aa65da333e8e09832044c25b2106ba72840fb037a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 77e28b608d5c0db1d26d83f2d9a5786877a3ba73
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342472"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145113"
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
 Uygulama etki alanı tanımlayıcısı verilmelidir, belirtilen modül için hata ayıklama sembollerinin yük olup olmadığını belirler.

@@ -1,6 +1,6 @@
 ---
-title: Kaynak denetimi VSPackage ne zaman uygulanır?
-description: Visual Studio kaynak denetimi çözümlerini genişletmek için kullanılabilen kaynak denetimi eklentilerinin ve kaynak denetimi vspackages seçeneklerinin seçimleri hakkında bilgi edinin.
+title: VSPackage kaynak denetimi ne zaman uygulanır?
+description: Kaynak denetimi çözümlerini genişletmek için kullanılabilen kaynak denetimi eklentileri ve kaynak denetimi VSPackage'ları Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,34 +13,34 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a833abb38b42ff136532159996b438bf7466a4d6fb3eec10dcdab14eda3e8c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5e16803a570c845e9283debcfb9e8d388b1cdd20
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359550"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124665"
 ---
-# <a name="determine-whether-to-implement-a-source-control-vspackage"></a>Kaynak denetimi VSPackage uygulanıp uygulanacağını belirleme
+# <a name="determine-whether-to-implement-a-source-control-vspackage"></a>VSPackage kaynak denetimi uygulamanın gerekip gerek olmadığını belirleme
 
-Bu bölüm, kaynak denetimi çözümlerini genişletmek için kaynak denetimi eklentilerinin ve kaynak denetimi VSPackages 'ın seçimlerini elaborates ve uygun bir tümleştirme yolu seçme hakkında geniş yönergeler sağlar.
+Bu bölümde, kaynak denetimi çözümlerini genişletmek için kaynak denetimi eklentileri ve kaynak denetimi VSPackage'ları seçenekleri ayrıntılı bir şekilde ele alındı ve uygun bir tümleştirme yolu seçme hakkında geniş yönergeler sağmaktadır.
 
-## <a name="small-source-control-solution-with-limited-resources"></a>Sınırlı kaynaklarla küçük kaynak denetimi çözümü
+## <a name="small-source-control-solution-with-limited-resources"></a>Sınırlı kaynaklara sahip küçük kaynak denetimi çözümü
 
- Sınırlı kaynaklarınız varsa ve kaynak denetim paketi yazma ek yüküne sahip değilseniz, kaynak denetimi eklentisi API tabanlı eklentiler oluşturabilirsiniz. Bunun yapılması, kaynak denetimi paketleriyle yan yana çalışmanıza olanak sağlar ve isteğe bağlı olarak kaynak denetimi eklentileri ve paketleri arasında geçiş yapabilirsiniz. Daha fazla bilgi için bkz. [kayıt ve seçim](../../extensibility/internals/registration-and-selection-source-control-vspackage.md).
+ Sınırlı kaynaklarınız varsa ve kaynak denetim paketi yazma yüküyle yük altında olamazsanız, Kaynak Denetimi Eklentisi API tabanlı eklentiler oluşturabilirsiniz. Bu sayede kaynak denetim paketleriyle yan yana çalışabilirsiniz ve isteğe bağlı olarak kaynak denetimi eklentileri ile paketler arasında geçiş sabilirsiniz. Daha fazla bilgi için [bkz. Kayıt ve seçimi.](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)
 
 ## <a name="large-source-control-solution-with-a-rich-feature-set"></a>Zengin özellik kümesine sahip büyük kaynak denetimi çözümü
 
- Kaynak denetimi eklentisi API 'SI kullanılarak yeterince yakalanmayan zengin kaynak denetimi modeli sağlayan bir kaynak denetimi çözümü uygulamak istiyorsanız, tümleştirme yolu olarak bir kaynak denetim paketi düşünebilirsiniz. Kaynak denetim olaylarını özel bir şekilde işleyebilmeniz için, bu durum özellikle kaynak denetim bağdaştırıcısı paketini (kaynak denetimi eklentileri ile iletişim kuran ve temel bir kaynak denetimi kullanıcı arabirimi sağlar) yerine yenilerini koymak istiyorsanız geçerlidir. Zaten tatmin edici bir kaynak denetimi kullanıcı arabirimine sahipseniz ve bu deneyimi ' de korumak istiyorsanız [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , kaynak denetimi paketi seçeneği yalnızca bunu yapmanızı sağlar. Kaynak denetim paketi genel değildir ve yalnızca IDE ile kullanılmak üzere tasarlanmıştır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+ Kaynak Denetimi Eklentisi API'si kullanılarak yeterince yakalanması gereken zengin bir kaynak denetim modeli sağlayan bir kaynak denetimi çözümü uygulamak için tümleştirme yolu olarak bir kaynak denetim paketi düşünebilirsiniz. Bu durum özellikle kaynak denetim olaylarını özel bir şekilde işlemek için Kaynak Denetim Bağdaştırıcısı Paketini (kaynak denetim eklentileriyle iletişim kurar ve temel bir kaynak denetimi kullanıcı arabirimi sağlar) kendi kaynak denetimi arabiriminiz ile değiştirirken geçerlidir. Zaten tatmin edici bir kaynak denetimi kullanıcı arabiriminiz varsa ve bu deneyimi içinde korumak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak denetim paketi seçeneği tam olarak bunu yapmanizi sağlar. Kaynak denetim paketi genel değildir ve yalnızca IDE ile kullanım [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] için tasarlanmıştır.
 
- Kaynak Denetim mantığı ve Kullanıcı arabirimi üzerinde esneklik ve daha zengin denetim sağlayan bir kaynak denetimi çözümü uygulamak istiyorsanız, kaynak denetimi paketi tümleştirme yolunu tercih edebilirsiniz. Seçenekleriniz şunlardır:
+ Kaynak denetimi mantığı ve kullanıcı arabirimi üzerinde esneklik ve daha zengin denetim sağlayan bir kaynak denetimi çözümü uygulamak isterseniz, kaynak denetim paketi tümleştirme yolunu tercih edersiniz. Seçenekleriniz şunlardır:
 
-1. Kendi kaynak denetimi VSPackage 'ı kaydedin (bkz. [kayıt ve seçim](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)).
+1. Kendi kaynak denetimi VSPackage'nızı kaydetme (bkz. [Kayıt ve seçim).](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)
 
-2. Varsayılan kaynak denetimi kullanıcı arabirimini özel Kullanıcı arabiriminiz ile değiştirin (bkz. [Özel Kullanıcı arabirimi](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)).
+2. Varsayılan kaynak denetimi kullanıcı arabirimini özel kullanıcı arabiriminiz ile değiştirin [(bkz. Özel kullanıcı arabirimi).](../../extensibility/internals/custom-user-interface-source-control-vspackage.md)
 
-3. Kullanılacak glifleri belirtin ve Çözüm Gezgini glif olaylarını işleyin (bkz. [glif denetimi](../../extensibility/internals/glyph-control-source-control-vspackage.md)).
+3. Kullanılacak glyph'leri belirtme ve Çözüm Gezgini işleme (bkz. [Glyph denetimi).](../../extensibility/internals/glyph-control-source-control-vspackage.md)
 
-4. Sorgu düzenleme ve sorgu kaydetme olaylarını işle (bkz. sorgu [düzenleme sorgusu kaydetme](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)).
+4. Sorgu Düzenleme ve Sorgu Kaydetme olaylarını işleme (bkz. [Sorgu Düzenleme Sorgu Kaydetme).](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

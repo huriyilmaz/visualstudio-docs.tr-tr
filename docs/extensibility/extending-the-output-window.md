@@ -1,6 +1,6 @@
 ---
-title: Çalışma Çıkış Penceresi | Microsoft Docs
-description: Visual Studio SDK'da Çıkış penceresini genişletmeyi ve kendi özel bölmelerinizi oluşturma ve yönetmeyi öğrenin.
+title: Çıkış Penceresi genişletiliyor | Microsoft Docs
+description: Visual Studio SDK 'sında çıkış penceresini genişletmeyi ve kendi özel bölmelerinizi oluşturma ve yönetme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,37 +13,37 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7b0ba71fa7f1c20d53a084580546d6e85bd0f03515b859589c664e11f0910dd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 32deced6349cf302a2a3da37a2df4c026a0feb84
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121305977"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125120"
 ---
 # <a name="extend-the-output-window"></a>Çıkış penceresini genişletme
-Çıkış **penceresi,** bir dizi okuma/yazma metin bölmesidir. Visual Studio bölmeleri **vardır:** Projelerin derlemeler hakkında ileti ilettleri Derleme ve IDE ile ilgili iletileri iletir genel [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bölmeleri. Projeler, arabirim yöntemleri **aracılığıyla** otomatik olarak Derleme bölmesine başvurur ve Visual Studio hizmet aracılığıyla Genel <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> bölmesine doğrudan erişim  <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> sunar. Yerleşik bölmelere ek olarak kendi özel bölmelerinizi oluşturabilir ve yönetebilirsiniz.
+**Çıkış** penceresi, okuma/yazma metin bölmeleri kümesidir. Visual Studio bu yerleşik bölmelere sahiptir: derleme, projelerin derlemeler hakkındaki iletileri ve **genel** olarak ıde hakkındaki iletileri iletişim kurmasını sağlayan **derleme** [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . projeler, arabirim yöntemleri aracılığıyla **derleme** bölmesine otomatik olarak bir başvuru alır <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ve Visual Studio hizmet aracılığıyla **genel** bölmeye doğrudan erişim sağlar <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> . Yerleşik bölmelere ek olarak kendi özel bölmelerinizi oluşturabilir ve yönetebilirsiniz.
 
- Çıkış penceresini doğrudan **ve** arabirimleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> aracılığıyla <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> kontrolebilirsiniz. Hizmet <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> tarafından sunulan <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> arabirimi, Çıkış penceresi bölmelerini oluşturma, alma ve  yok etme yöntemlerini tanımlar. arabirimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> bölmeleri gösterme, bölmeleri gizleme ve metinlerini değiştirme yöntemlerini tanımlar. Çıkış penceresini denetlemenin alternatif **bir** yolu, Otomasyon nesne modelinde ve <xref:EnvDTE.OutputWindow> Visual Studio <xref:EnvDTE.OutputWindowPane> aracılığıyladır. Bu nesneler ve arabirimlerinin neredeyse tüm işlevlerini <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> kapsüller. Ayrıca, ve nesneleri, Çıkış penceresi bölmelerini numaralara eklemeyi ve bölmelerden metinleri almayı kolaylaştırmak için bazı üst <xref:EnvDTE.OutputWindow> <xref:EnvDTE.OutputWindowPane> düzey işlevler ekler. 
+ **Çıkış** penceresini doğrudan <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> ve arabirimleri aracılığıyla denetleyebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow>Hizmet tarafından sunulan arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.SVsOutputWindow> **Çıkış** pencere bölmelerini oluşturma, alma ve yok etme yöntemlerini tanımlar. <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane>Arabirim bölmeleri gösterme, bölmeleri gizleme ve metinlerini düzenleme yöntemlerini tanımlar. **çıkış** penceresini denetlemenin alternatif bir yolu, <xref:EnvDTE.OutputWindow> <xref:EnvDTE.OutputWindowPane> Visual Studio Automation nesne modelindeki nesneler ve nesneler kullanmaktır. Bu nesneler, ve arabirimlerinin neredeyse tüm işlevlerini kapsülleyebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane> . Ayrıca, <xref:EnvDTE.OutputWindow> ve nesneleri, <xref:EnvDTE.OutputWindowPane> **Çıkış** pencere bölmelerini daha kolay bir şekilde numaralandırmak ve bölmelerden metin almak için bazı üst düzey işlevleri de ekler.
 
 ## <a name="create-an-extension-that-uses-the-output-pane"></a>Çıkış bölmesini kullanan bir uzantı oluşturma
- Çıkış bölmesinin farklı yönleriyle alıştırmalar yapacak bir uzantı yapabilirsiniz.
+ Çıkış bölmesinin farklı yönlerini uygulayan bir uzantı yapabilirsiniz.
 
-1. TestOutput adlı bir menü komutuyla adlı bir VSIX `TestOutput` **projesi oluşturun.** Daha fazla bilgi için [bkz. Menü komutuyla uzantı oluşturma.](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. `TestOutput` **TestOutput** adlı bir menü komutuyla adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 2. Aşağıdaki başvuruları ekleyin:
 
-    1. Envdte
+    1. EnvDTE
 
     2. EnvDTE80
 
-3. *TestOutput.cs içinde* aşağıdaki using deyimini ekleyin:
+3. *TestOutput. cs* dosyasında aşağıdaki using ifadesini ekleyin:
 
     ```f#
     using EnvDTE;
     using EnvDTE80;
     ```
 
-4. *TestOutput.cs içinde* yöntemini `ShowMessageBox` silin. Aşağıdaki yöntem saplama ekleyin:
+4. *TestOutput. cs* dosyasında, yöntemini silin `ShowMessageBox` . Aşağıdaki yöntem saplaması 'nı ekleyin:
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)
@@ -51,7 +51,7 @@ ms.locfileid: "121305977"
     }
     ```
 
-5. TestOutput oluşturucus unda, komut işleyicisini OutputCommandHandler olarak değiştirebilirsiniz. Komutları ekleyen bölüm şu şekildedir:
+5. TestOutput oluşturucusunda, komut işleyicisini OutputCommandHandler olarak değiştirin. Komutları ekleyen bölüm aşağıda verilmiştir:
 
     ```csharp
     OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
@@ -64,7 +64,7 @@ ms.locfileid: "121305977"
     }
     ```
 
-6. Aşağıdaki bölümlerde Çıkış bölmesiyle ilgilenmenin farklı yollarının yer alan farklı yöntemleri vardır. Bu yöntemleri yönteminin gövdesine `OutputCommandHandler()` çağırebilirsiniz. Örneğin, aşağıdaki kod sonraki `CreatePane()` bölümde verilen yöntemini ekler.
+6. Aşağıdaki bölümlerde, çıkış bölmesiyle ilgilenmenin farklı yollarını gösteren farklı yöntemler vardır. Yöntemi gövdesine bu yöntemleri çağırabilirsiniz `OutputCommandHandler()` . Örneğin, aşağıdaki kod, `CreatePane()` sonraki bölümde verilen yöntemi ekler.
 
     ```csharp
     private void OutputCommandHandler(object sender, EventArgs e)
@@ -73,8 +73,8 @@ ms.locfileid: "121305977"
     }
     ```
 
-## <a name="create-an-output-window-with-ivsoutputwindow"></a>IVsOutputWindow ile Çıkış penceresi oluşturma
- Bu örnekte, arabirimini kullanarak yeni **bir Çıkış** penceresi bölmesi oluşturma <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> gösterilir.
+## <a name="create-an-output-window-with-ivsoutputwindow"></a>Isoutputwindow ile çıkış penceresi oluşturma
+ Bu örnekte, arabirimi kullanılarak nasıl yeni bir **Çıkış** pencere bölmesi oluşturulacağı gösterilmektedir <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow> .
 
 ```csharp
 void CreatePane(Guid paneGuid, string title,
@@ -98,10 +98,10 @@ void CreatePane(Guid paneGuid, string title,
 }
 ```
 
- Önceki bölümde verilen uzantıya bu yöntemi eklersiniz, **TestOutput** Çağır komutuna tıklarsanız Çıkış penceresinin Çıkış penceresinin Şu çıkışta  olduğunu **görebilirsiniz: Çıktıyı göster: CreatedPane** ve bölmenin kendisinde Bu Oluşturuldu Bölmesidir. 
+ Önceki bölümde verilen uzantıya bu yöntemi eklerseniz, **Invoke TestOutput** komutuna tıkladığınızda **Çıkış** penceresini, **Çıkış penceresini göster: createdpane** ve bu, bölmenin kendisi tarafından **oluşturulan böleni** görürsünüz.
 
-## <a name="create-an-output-window-with-outputwindow"></a>OutputWindow ile Çıkış penceresi oluşturma
- Bu örnekte, nesnesini kullanarak **çıkış** penceresi bölmesi oluşturma <xref:EnvDTE.OutputWindow> gösterilir.
+## <a name="create-an-output-window-with-outputwindow"></a>OutputWindow ile çıkış penceresi oluşturma
+ Bu örnek, nesnesini kullanarak **Çıkış** pencere bölmesinin nasıl oluşturulacağını gösterir <xref:EnvDTE.OutputWindow> .
 
 ```csharp
 void CreatePane(string title)
@@ -123,12 +123,12 @@ void CreatePane(string title)
 }
 ```
 
- Koleksiyon <xref:EnvDTE.OutputWindowPanes> başlığına göre  bir Çıkış penceresi bölmesi alasınız ancak bölme başlıklarının benzersiz olması garanti edilemez. Bir başlığın benzersizliği konusunda şüpheniz varsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow.GetPane%2A> GUID'sini kullanarak doğru bölmeyi almak için yöntemini kullanın.
+ Koleksiyon, <xref:EnvDTE.OutputWindowPanes> bir **Çıkış** pencere bölmesini kendi başlığına göre almanıza izin verse de bölme başlıklarının benzersiz olması garanti edilmez. Bir başlığın benzersizliği olduğunu şüpheli yaptığınızda, <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindow.GetPane%2A> GUID 'sini kullanarak doğru bölmeyi almak için yöntemini kullanın.
 
- Önceki bölümde verilen uzantıya bu yöntemi eklersiniz, **TestOutput** Çağır komutuna tıklarsanız Çıkış penceresinin çıkışını **göster: DTEPane** ve bölmenin kendisinde **DTE** Bölmesi Eklendi sözcüklerinin yer alır.
+ Önceki bölümde verilen uzantıya bu yöntemi eklerseniz, **TestOutput komutunu çağır** ' a tıkladığınızda, çıkış penceresini, bölmenin bulunduğu bir üst bilgi ile birlikte görmeniz gerekir **: dtepane** ve başlık **eklenen DTE bölmesi** .
 
 ## <a name="delete-an-output-window"></a>Çıkış penceresini silme
- Bu örnekte çıkış penceresi bölmesinin **nasıl silinecekleri** gösterilir.
+ Bu örnek, bir **Çıkış** pencere bölmesinin nasıl silineceğini gösterir.
 
 ```csharp
 void DeletePane(Guid paneGuid)
@@ -150,10 +150,10 @@ void DeletePane(Guid paneGuid)
 }
 ```
 
- Önceki bölümde verilen uzantıya bu yöntemi eklersiniz, **TestOutput** Çağır komutuna tıklarsanız Çıkış penceresinin  çıkışını göster: Yeni  Bölme ve bölmenin kendisinde Oluşturulan Bölme eklendi sözcüklerinin yer alır. **TestOutput'u Çağır komutuna** yeniden tıklarsanız bölme silinir.
+ Önceki bölümde verilen uzantıya bu yöntemi eklerseniz, **TestOutput komutunu çağır** ' a tıkladığınızda çıkış penceresini, çıkış penceresine şu **çıktıyı göster: yeni bölmesi** ve bu bölme **eklenen** bir başlık ile birlikte görüntülenir. **TestOutput** komutunu yeniden çağır ' a tıklarsanız, bölmesi silinir.
 
 ## <a name="get-the-general-pane-of-the-output-window"></a>Çıkış penceresinin Genel bölmesini al
- Bu örnekte Çıkış penceresinin yerleşik Genel **bölmesinin** nasıl elde **edilecekleri gösterilir.**
+ Bu örnek, **Çıkış** penceresinin yerleşik **genel** bölmesinin nasıl alınacağını gösterir.
 
 ```csharp
 IVsOutputWindowPane GetGeneralPane()
@@ -163,10 +163,10 @@ IVsOutputWindowPane GetGeneralPane()
 }
 ```
 
- Önceki bölümde verilen uzantıya bu yöntemi eklersiniz, **TestOutput** Çağır komutuna tıklarsanız Çıkış penceresinde  bölmede Genel Bulundu bölmesi sözcüklerini görebilirsiniz. 
+ Önceki bölümde verilen uzantıya bu yöntemi eklerseniz, **TestOutput komutunu çağır** ' a tıkladığınızda **Çıkış** penceresinde, bölmedeki **genel bölme** sözcüklerini gösterdiğini görmeniz gerekir.
 
-## <a name="get-the-build-pane-of-the-output-window"></a>Çıkış penceresinin Derleme bölmesini al
- Bu örnekte Derleme bölmesinin nasıl **bulunarak** yaz olduğu gösterilir. Derleme **bölmesi** varsayılan olarak etkinleştirilmez, ayrıca etkinleştirir.
+## <a name="get-the-build-pane-of-the-output-window"></a>Çıkış penceresinin derleme bölmesini al
+ Bu örnek, **derleme** bölmesinin nasıl bulunacağını ve ona nasıl yazılacağını gösterir. **Yapı** bölmesi varsayılan olarak etkin olmadığından, onu da etkinleştirir.
 
 ```csharp
 void OutputTaskItemStringExExample(string buildMessage)

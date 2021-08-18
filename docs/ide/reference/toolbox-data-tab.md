@@ -1,6 +1,6 @@
 ---
 title: Araç Kutusu, Veri Sekmesi
-description: Araç kutusu penceresinin veri sekmesinde bulacağınız veri nesneleri hakkında bilgi edinin.
+description: Araç Kutusu penceresinin Veri sekmesinde, veri nesneleri hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,37 +15,37 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c51e4ba5e75df5107ed7edd0324e581e0fc7cb6165a35eb0cf5fbb6f87f17bd2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c9016f6cd77f750b2b1a03ef799652f1c3afbb1a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372016"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117065"
 ---
-# <a name="toolbox-data-tab"></a>Araç kutusu, veri sekmesi
+# <a name="toolbox-data-tab"></a>Araç Kutusu, Veri sekmesi
 
-Formlara ve bileşenlere ekleyebileceğiniz veri nesnelerini görüntüler. **Araç kutusunun** **veri** sekmesi, ilişkili tasarlayıcı içeren bir proje oluşturduğunuzda görüntülenir. **araç kutusu** , Visual Studio tümleşik geliştirme ortamında varsayılan olarak görüntülenir; **araç kutusunu** görüntülemeniz gerekiyorsa, **Görünüm** menüsünden **araç kutusu** ' nu seçin.
+Formlara ve bileşenlere ekleyebilirsiniz veri nesnelerini görüntüler. Araç **Kutusunun** Veri **sekmesi, ilişkili** bir tasarımcıya sahip bir proje oluşturmada görüntülenir. Araç **Kutusu,** tümleşik geliştirme Visual Studio varsayılan olarak görünür; Araç Kutusunu görüntülemeye **ihtiyacınız varsa Görünüm** **menüsünden Araç** Kutusu'nı seçin. 
 
 > [!TIP]
-> Veri kaynağı Yapılandırma Sihirbazı 'Nı çalıştırmak, çoğu veri öğesini otomatik olarak oluşturur ve yapılandırır. Daha fazla bilgi için bkz. [Yeni veri kaynakları ekleme](../../data-tools/add-new-data-sources.md).
+> Veri Kaynağı Yapılandırma Sihirbazı'nın çalıştırıldığında çoğu veri öğeleri otomatik olarak oluşturulur ve yapılandırılır. Daha fazla bilgi için [bkz. Yeni veri kaynakları ekleme.](../../data-tools/add-new-data-sources.md)
 
-## <a name="ui-element-list"></a>UI öğe listesi
+## <a name="ui-element-list"></a>UI Öğesi listesi
 
-Bir bileşen için doğrudan .NET başvuru sayfasına gitmek için, **araç kutusundaki** öğede veya tasarımcı tepsisindeki bileşen öğesinde **F1** ' e basın.
+Doğrudan bir bileşenin .NET başvuru sayfasına gitmek için Araç Kutusu'nda veya tasarımcı tepsisinde bileşen öğesinde **F1** tuşuna basın. 
 
 |Ad|Açıklama|
 |----------|-----------------|
-|<xref:System.Data.DataSet>|Form veya bileşene türü belirtilmiş veya türsüz veri kümesinin bir örneğini ekler. Bu nesneyi bir tasarımcıya sürüklediğinizde, var olan bir türü belirtilmiş veri kümesi sınıfını seçmenizi sağlayan bir iletişim kutusu görüntüler veya yeni, boş ve türsüz bir veri kümesi oluşturmak istediğinizi belirtebilirsiniz. **Note:**  <xref:System.Data.DataSet> Yeni bir türü belirtilmiş veri kümesi şeması ve sınıfı oluşturmak Için **araç kutusu** üzerinde nesnesini kullanmayın. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|
-|<xref:System.Windows.Forms.DataGridView>|Verileri tablolu biçimde görüntülemenin güçlü ve esnek bir yolunu sağlar.|
-|<xref:System.Windows.Forms.BindingSource>|Temel alınan bir veri kaynağına denetim bağlama sürecini basitleştirir.|
-|<xref:System.Windows.Forms.BindingNavigator>|Verilere bağlı bir formdaki denetimler için gezinti ve düzenleme kullanıcı arabirimini (UI) temsil eder.|
+|<xref:System.Data.DataSet>|Forma veya bileşene, türü yazlanmamış veya yazlanmamış bir veri kümesi örneği ekler. Bu nesneyi bir tasarımcıya sürüklerken, var olan bir türe sahip veri kümesi sınıfını seçmenize veya yeni, boş, yazılamaz bir veri kümesi oluşturmak istediğinize karar veren bir iletişim kutusu görüntülenir. **Not:**  Yeni türe sahip <xref:System.Data.DataSet> bir veri kümesi şeması **ve** sınıfı oluşturmak için Araç Kutusunda nesnesini kullanmazsınız. Daha fazla bilgi için [bkz. Veri kümeleri oluşturma ve yapılandırma.](../../data-tools/create-and-configure-datasets-in-visual-studio.md)|
+|<xref:System.Windows.Forms.DataGridView>|Verileri tablo biçiminde görüntülemek için güçlü ve esnek bir yol sağlar.|
+|<xref:System.Windows.Forms.BindingSource>|Denetimleri temel alınan bir veri kaynağına bağlama işlemini kolaylaştırır.|
+|<xref:System.Windows.Forms.BindingNavigator>|Verilere bağlı bir formda denetimler için gezinti ve düzenleme kullanıcı arabirimini (UI) temsil eder.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio verilere erişme](../../data-tools/accessing-data-in-visual-studio.md)
+- [Visual Studio'de Verilere Erişme](../../data-tools/accessing-data-in-visual-studio.md)
 - [.NET için Visual Studio veri araçları](../../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [Visual Studio'daki veri kümesi araçları](../../data-tools/dataset-tools-in-visual-studio.md)
 - [Visual Studio'da verilere denetimler bağlama](../../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
-- [Veri kümelerinde verileri düzenleme](../../data-tools/edit-data-in-datasets.md)
-- [Veri kümelerinde verileri doğrulama](../../data-tools/validate-data-in-datasets.md)
+- [Veri kümelerini düzenleme](../../data-tools/edit-data-in-datasets.md)
+- [Veri kümelerini doğrulama](../../data-tools/validate-data-in-datasets.md)

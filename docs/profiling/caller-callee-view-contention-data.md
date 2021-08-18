@@ -14,12 +14,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bc30fb2c842623441b219d0670d0dcb9f664e766f509c193ee05fb514f5419c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b0b110beed0c206c4e25bfcbdab4ce0c4a3afe3c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121302311"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084720"
 ---
 # <a name="callercallee-view----contention-data"></a>Arayan/çağrılan görünümü-çekişme verileri
 Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için çekişme bilgilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.

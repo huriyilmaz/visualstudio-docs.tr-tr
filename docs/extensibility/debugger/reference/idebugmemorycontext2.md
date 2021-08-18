@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, hata ayıklanan programı çalıştıran makinenin adres alanındaki konumu temsil eder.
+description: Bu arabirim, hata ayıklaması yapılan programı çalıştıran makinenin adres alanı konumundaki bir konumu temsil eder.
 title: IDebugMemoryContext2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e004939d27cbf579143716b1cc49968c1f520e7176492608706a5c0f283e6ded
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cf9d57eefbe69be131a5aa041606ba99dbce973
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433768"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153361"
 ---
 # <a name="idebugmemorycontext2"></a>IDebugMemoryContext2
-Bu arabirim, hata ayıklanan programı çalıştıran makinenin adres alanındaki konumu temsil eder.
+Bu arabirim, hata ayıklaması yapılan programı çalıştıran makinenin adres alanı konumundaki bir konumu temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,32 +30,32 @@ Bu arabirim, hata ayıklanan programı çalıştıran makinenin adres alanındak
 IDebugMemoryContext2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), belleğin bir adresini temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), bellekte bir adresi temsil etmek için bu arabirimi kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [Getmemorycontext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) veya [getmemorycontext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md) çağrısı bu arabirimi döndürür. Ayrıca, ilgili aritmetik işlem uygulandıktan sonra [Ekle](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md) ve [çıkar](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md) çağrıları bu arabirimin yeni kopyalarını döndürür.
+ [GetMemoryContext veya](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) [GetMemoryContext çağrısı bu](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md) arabirimi döndürür. Ayrıca, Ekle ve [Çıkar'a yapılan](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md) çağrılar, uygun aritmetik işlem uygulandıktan sonra bu arabirimin yeni kopyalarını da geri döner. [](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugMemoryContext2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugMemoryContext2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetName](../../../extensibility/debugger/reference/idebugmemorycontext2-getname.md)|Bu bağlam için Kullanıcı tarafından görüntülenebilen adı alır.|
+|[GetName](../../../extensibility/debugger/reference/idebugmemorycontext2-getname.md)|Bu bağlam için kullanıcı tarafından görüntülenebilir adı alır.|
 |[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)|Bu bağlamı açıklayan bilgileri alır.|
 |[Ekle](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)|Yeni bir bağlam oluşturmak için geçerli bağlamın adresine belirtilen bir değer ekler.|
-|[Çıkar](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|Yeni bir bağlam oluşturmak için, geçerli bağlamın adresinden belirtilen değeri çıkartır.|
-|[Karşılaştır](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|İki bağlamı karşılaştırma bayrakları tarafından belirtilen şekilde karşılaştırır.|
+|[Çıkar](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|Yeni bir bağlam oluşturmak için geçerli bağlamın adreslerinden belirtilen bir değeri çıkarır.|
+|[Karşılaştır](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|İki bağlamı, karşılaştırma bayrakları tarafından belirtilen şekilde karşılar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio **bellek** penceresi, bellek adresi için kullanılan değerlendirilen ifadeyi içeren arabirimi almak için [getmemorycontext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) yöntemini çağırır `IDebugMemoryContext2` . Bu bağlam daha sonra, okunacak veya yazılacak adresi belirtmek için [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) ve [WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md) 'a geçirilir.
+ Visual Studio penceresinde, **bellek** adresi için kullanılan değerlendirilen ifadeyi içeren arabirimi almak için [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) `IDebugMemoryContext2` çağrısında bulunabilirsiniz. Bu bağlam daha sonra okunacak veya yazacak adresi belirtmek için [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) ve [WriteAt'e](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md) geçirebilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

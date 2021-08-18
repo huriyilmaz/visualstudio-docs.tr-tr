@@ -15,24 +15,24 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e05358c2e8ba33048fbeec4af798e77b66755cb9b9a1c5c6867cc20e630f71fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a6d229919bf496822a7b5499881af5fd7957a623
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375604"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144723"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Yönetilen Paket Çerçevesini Kullanarak Proje Türü Uygulama (C#)
-Yönetilen Paket Çerçevesi (MPF), kendi proje türlerinizi uygulamak için kullanabileceğiniz veya 'den devralınabilir C# sınıfları sağlar. MPF, bir proje türünün Visual Studio beklediğiniz arabirimlerin birçoğuna sahiptir ve bu da proje türüne özel bilgileri uygulamaya odaklanmanızı sağlar.
+Yönetilen Paket Çerçevesi (MPF), kendi proje türlerinizi uygulamak için kullanabileceğiniz veya 'den devralınabilir C# sınıfları sağlar. MPF, bir proje türünün Visual Studio beklediğiniz arabirimlerin birçoğuna sahiptir ve bu da sizi proje türüne özel olarak odaklanmanızı sağlar.
 
 ## <a name="using-the-mpf-project-source-code"></a>MPF'yi Project Kodu Kullanma
- Projeler için Yönetilen Paket Çerçevesi (MPFProj), yeni proje sistemi oluşturmak ve yönetmek için yardımcı sınıflar sağlar. MPF'deki diğer sınıfların aksine, proje sınıfları proje sınıfları ile birlikte gönderilen derlemelere dahil Visual Studio. Bunun yerine, proje sınıfları Projeler [2013 için MPF'de kaynak kodu olarak sağlanır.](https://github.com/tunnelvisionlabs/MPFProj10)
+ Projeler için Yönetilen Paket Çerçevesi (MPFProj), yeni proje sistemi oluşturmak ve yönetmek için yardımcı sınıflar sağlar. MPF'deki diğer sınıfların aksine proje sınıfları, proje sınıfları ile birlikte gönderilen derlemelere dahil Visual Studio. Bunun yerine, proje sınıfları Projeler [2013 için MPF'de kaynak kodu olarak sağlanır.](https://github.com/tunnelvisionlabs/MPFProj10)
 
  Bu projeyi VSPackage çözümünüze eklemek için şunları yapın:
 
 1. MPFProj dosyalarını *MPFProjectDir'e indirin.*
 
-2. *MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file dosyasında aşağıdaki bloğu değiştirme:
+2. *MPFProjectDir*\Dev10\Src\CSharp\ProjectBase.file dosyasında aşağıdaki bloğu değiştir:
 
 ```
 <!-- Provide a default value for $(ProjectBasePath) -->

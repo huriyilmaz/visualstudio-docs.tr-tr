@@ -11,14 +11,15 @@ ms.assetid: ac84339f-70c6-48ed-85d0-6d7d1b5194e8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e78c9c72174ccd9a0320e8a3b60778583da5f51b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 98080b2c3758c8ba3f68b1c3f01bef7ec30083db
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157891"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113582"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyva"></a>IDiaEnumSymbolsByAddr::symbolByVA
 Sanal adrese (VA) göre arama gerçekleştirerek numaralandırıcıyı konumlandırır.

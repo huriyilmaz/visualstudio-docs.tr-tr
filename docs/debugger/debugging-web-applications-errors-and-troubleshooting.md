@@ -29,12 +29,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 20cb7583aabf36ddb0db0a4dd0dcedcb886569ab3016036e7078cdd0c70f51b4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6401be18025597b64d46824ee224ade232e9dbe2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121311589"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113019"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme
 Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
@@ -43,7 +43,7 @@ Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla kar�
 
 - [Hata: Site IP Adresi Kullanıyor](../debugger/error-site-uses-ip-address.md)
 
-- [Hata: IIS Yönetici Hizmeti Yanıt Vermeyiş nedeniyle güvenlik denetimi başarısız oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
+- [Hata: IIS Yönetici Hizmeti Yanıt Vermey olduğundan Bir Güvenlik Denetimi Başarısız Oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
 
 - [Hata: ASP.NET Yüklü Değil](../debugger/error-aspnet-not-installed.md)
 

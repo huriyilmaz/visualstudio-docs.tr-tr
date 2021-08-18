@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3bde7f2f80e64b04bdccc0c75006553f813b5763a352e1ecbae22d37781c70f0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d40acc8c70c34cecbd05506af57a9b784da08c91
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292019"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126081"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
 Bir iş parçacığının yürütülmesini sürdürür.

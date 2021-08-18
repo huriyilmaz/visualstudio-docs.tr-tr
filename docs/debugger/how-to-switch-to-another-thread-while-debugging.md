@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklarken başka bir iş parçacığına geçme
-description: Visual Studio çok iş parçacıklı bir uygulamada hata ayıklarken başka bir iş parçacığına geçiş yapmak için farklı yöntemleri gözden geçirin.
+description: İş parçacığında çok iş parçacıklı bir uygulamada hata ayıklarken başka bir iş parçacığına geçmek için Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 04/27/2017
 ms.topic: how-to
@@ -18,36 +18,36 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fd0c16266981fc46843f3aff37a07a30f5e8b981fb995aa645756e3af14c27a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7521218b895371127d4389ce2456a8c0f9274f6a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378768"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128110"
 ---
-# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>nasıl yapılır: Visual Studio hata ayıklarken başka bir iş parçacığına geçme (C#, Visual Basic, C++)
-Çok iş parçacıklı bir uygulamada hata ayıklarken, çalışmakta olduğunuz iş parçacığından başka bir iş parçacığına geçiş yapmak için birkaç yöntemden birini kullanabilirsiniz.
+# <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio-c-visual-basic-c"></a>Nasıl bilinir: Visual Studio'da Hata Ayıklama Sırasında Başka Bir İş Parçacığına Geçiş (C#, Visual Basic, C++)
+Çok iş parçacıklı bir uygulamada hata ayıklarken, üzerinde çalışmakta olduğu iş parçacığından başka bir iş parçacığına geçmek için çeşitli yöntemlerden herhangi birini kullanabilirsiniz.
 
 > [!NOTE]
-> İş parçacıklarının yürütme sırasını denetlemek isterseniz, [iş parçacıklarını dondurmanız ve bunları çözme](../debugger/get-started-debugging-multithreaded-apps.md)yapmanız gerekir.
+> İş parçacıklarının yürütülme sıralarını kontrol etmek için iş parçacıklarını dondurmanız [ve çözmeniz gerekir.](../debugger/get-started-debugging-multithreaded-apps.md)
 
-Kod düzenleyicisinde iş parçacıklarını ve farklı çok iş parçacıklı hata ayıklama pencerelerini incelediğinizde, sarı ok geçerli iş parçacığını gösterir. Küme kuyruklu yeşil ok, geçerli olmayan bir iş parçacığının geçerli hata ayıklayıcı bağlamına sahip olduğunu gösterir.
+Kod düzenleyicisinde iş parçacıklarını ve farklı çok iş parçacıklı hata ayıklama pencerelerini incelerken, sarı ok geçerli iş parçacığını gösterir. Kuyruklu yeşil ok, geçerli olmayan bir iş parçacığının geçerli hata ayıklayıcı bağlamına sahip olduğunu gösterir.
 
-### <a name="to-switch-to-any-thread-that-appears"></a>Görüntülenen herhangi bir iş parçacığına geçiş yapmak için
+### <a name="to-switch-to-any-thread-that-appears"></a>Görüntülenen herhangi bir iş parçacığına geçmek için
 
-- **Iş parçacıkları** veya **paralel izleme** penceresinde iş parçacığına çift tıklayın.
+- İş Parçacıkları **veya** **Paralel İzleme** penceresinde iş parçacığına çift tıklayın.
 
-### <a name="to-switch-to-a-thread-in-a-source-window"></a>Kaynak penceredeki bir iş parçacığına geçiş yapmak için
+### <a name="to-switch-to-a-thread-in-a-source-window"></a>Kaynak penceresinde iş parçacığına geçmek için
 
-- Sol cilt payındaki bir iş parçacığı işaretleyici simgesi ![Iş parçacığı işaretleyicisi](../debugger/media/dbg-thread-marker.png "Threadişaretleyici")' ne sağ tıklayın, **geçiş**' in üzerine gelin ve ardından değiştirmek istediğiniz iş parçacığının adına tıklayın. Kısayol menüsü yalnızca ilgili konumdaki iş parçacıklarını gösterir.
+- Sol oluk içinde bir iş parçacığı işaretçisi simgesine sağ ![tıklayın,](../debugger/media/dbg-thread-marker.png "ThreadMarker")İş Parçacığı İşaretçisi'nin üzerine gelin ve ardından geçiş yapmak istediğiniz iş parçacığının adına tıklayın. Kısayol menüsünde yalnızca ilgili konumdaki iş parçacıkları görüntülenir.
 
-     Hiçbir iş parçacığı işaretleyicisi görünmezse, **Iş parçacıkları** penceresinde sağ tıklayın ve **Iş parçacıklarını kaynakta göster** ' in seçili olduğunu doğrulayın.
+     İş parçacığı işaretçisi görünmüyorsa İş Parçacıkları penceresine sağ **tıklayın** ve Kaynakta İş **Parçacıklarını Göster'in seçili** olduğunu doğrulayın.
 
-### <a name="to-switch-to-a-thread-in-the-debug-location-toolbar"></a>Hata ayıklama konumu araç çubuğunda bir iş parçacığına geçiş yapmak için
+### <a name="to-switch-to-a-thread-in-the-debug-location-toolbar"></a>Hata Ayıklama Konumu araç çubuğunda bir iş parçacığına geçmek için
 
-1. **Hata ayıklama konumu** araç çubuğunda, **iş parçacığı** listesine tıklayın.
+1. Hata Ayıklama **Konumu araç çubuğunda** İş Parçacığı **listesine** tıklayın.
 
-2. Listede, değiştirmek istediğiniz iş parçacığına tıklayın.
+2. Listede, geçiş yapmak istediğiniz iş parçacığına tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok Iş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
