@@ -11,14 +11,15 @@ ms.assetid: 7d26fb23-5d49-4ba7-b7c5-3aed4d7be81e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6030e5962c0544a63b7b9658622447324a15792
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e147515a761bca80eaae06f367bf798aa63fe8cd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065365"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035039"
 ---
 # <a name="idebugmoduleloadevent2"></a>IDebugModuleLoadEvent2
 Bu arabirim, bir modül yüklendiğinde veya kaldırıldığında, hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
@@ -43,7 +44,7 @@ IDebugModuleLoadEvent2 : IUnknown
 |[GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md)|Yüklenmekte olan veya bellekten kaldırılan modülü alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, **modüller** penceresini güncel tutmak için bu olayı kullanır.
+ Visual Studio **modüller** penceresini güncel tutmak için bu olayı kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg. h

@@ -11,17 +11,18 @@ ms.assetid: 57c7e6e1-b84e-4e14-ad83-cbbb64e2f526
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9e3ee8b699fa73e6b8a8f4abc29624364f380add
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b541228a86f765044f84f72cead737ff7e688f4bfa9ef05bf16c444d002c47cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065144"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121449098"
 ---
 # <a name="idebugprogrampublisher2unpublishprogramnode"></a>IDebugProgramPublisher2::UnpublishProgramNode
 Belirtilen program düğümünü, hata ayıklama motorları (DEs) ve oturum hata ayıklama Yöneticisi (SDM) olarak kullanılabilir olarak kaldırır.

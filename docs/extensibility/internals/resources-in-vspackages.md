@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 069ceef0275ce802a9f6bc717baee48a82a5df30e08dba1122f75ea429c2cac8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 87ebfb777aed483fefbf5d4c3caeee8587c41b03
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121337818"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049668"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage’lardaki Kaynaklar
 Yerelleştirilmiş kaynakları yerel uydu kullanıcı arabirimi DLL'lerine, yönetilen uydu DLL'lerine veya yönetilen bir VSPackage'ın kendisine katıştırma.

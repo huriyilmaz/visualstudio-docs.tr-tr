@@ -27,7 +27,7 @@ ms.locfileid: "121447811"
 Öğe şablonuna dahil edilen bir dosyayı belirtir.
 
 > [!NOTE]
-> öğesi, `ProjectItem` şablonun bir proje mi yoksa bir öğe mi olduğuna bağlı olarak farklı öznitelikleri kabul eder. Bu konuda `ProjectItem` öğenin öğesi açıklanmıştır. Proje şablonları için `ProjectItem` öğesinin açıklaması için bkz. [ProjectItem öğesi (Visual Studio proje şablonları)](../extensibility/projectitem-element-visual-studio-project-templates.md).
+> öğesi, `ProjectItem` şablonun bir proje mi yoksa bir öğe mi olduğuna bağlı olarak farklı öznitelikleri kabul eder. Bu konuda `ProjectItem` öğenin öğesi açıklanmıştır. Proje şablonları için `ProjectItem` öğesinin açıklaması için bkz. [ProjectItem öğesi (Visual Studio şablonları)](../extensibility/projectitem-element-visual-studio-project-templates.md).
 
  \<VSTemplate> \<TemplateContent>
  \<ProjectItem>
@@ -75,7 +75,7 @@ ms.locfileid: "121447811"
 ## <a name="remarks"></a>Açıklamalar
  `ProjectItem` isteğe bağlı bir alt alt `TemplateContent` veridir.
 
- özniteliği, `TargetFileName` dosyaları parametrelerle yeniden adlandırmak için kullanılabilir. Örneğin, *MyFile.vb* dosyası şablon *.zip* dosyasının kök dizininde mevcutsa, ancak dosyanın Yeni Öğe Ekle iletişim kutusunda kullanıcı  tarafından sağlanan dosya adına göre adlandırılmış olması gerekirse, aşağıdaki XML'yi kullanırsınız:
+ özniteliği, `TargetFileName` dosyaları parametrelerle yeniden adlandırmak için kullanılabilir. Örneğin, *MyFile.vb* dosyası şablon *.zip* dosyasının kök dizininde mevcutsa, ancak dosyanın Yeni Öğe Ekle iletişim kutusunda kullanıcı tarafından  sağlanan dosya adına göre adlandırılmış olması gerekirse, aşağıdaki XML'yi kullanırsınız:
 
 ```xml
 <ProjectItem TargetFileName="$fileinputname$.vb">MyFile.vb</ProjectItem>

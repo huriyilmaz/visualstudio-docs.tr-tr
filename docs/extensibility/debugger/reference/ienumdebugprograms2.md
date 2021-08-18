@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, geçerli hata ayıklama oturumunda çalışan programları numaralandırır.
+description: Bu arabirim, geçerli hata ayıklama oturumunda çalışan programları numaralar.
 title: IEnumDebugPrograms2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 7fbb8fb7-db64-4546-a364-dc668430c8af
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d7f9a981146d5e024333f17557f4fdbc3d35bc05
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3ff57a503094e018e65bdf9913c48cb3abc9f9c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082939"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034817"
 ---
 # <a name="ienumdebugprograms2"></a>IEnumDebugPrograms2
-Bu arabirim, geçerli hata ayıklama oturumunda çalışan programları numaralandırır.
+Bu arabirim, geçerli hata ayıklama oturumunda çalışan programları numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,40 +30,40 @@ Bu arabirim, geçerli hata ayıklama oturumunda çalışan programları numarala
 IEnumDebugPrograms2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), bu arabirimi, ' DE hata ayıklamakta olan programların bir listesini sağlamak için uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), DE tarafından hata ayıklaması yapılan programların listesini sağlamak için bu arabirimi uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Visual Studio bu arabirimi edinmek için [Enumprograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) 'ı çağırır. [Enumprograms](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md) , Visual Studio tarafından kullanılmaz.
+ Visual Studio [arabirimi almak için EnumPrograms'a](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) çağrır. [EnumPrograms,](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md) bir Visual Studio.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IEnumDebugPrograms2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IEnumDebugPrograms2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Sonraki](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)|Bir numaralandırma dizisindeki belirtilen sayıda programı alır.|
-|[Atla](../../../extensibility/debugger/reference/ienumdebugprograms2-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda programı atlar.|
-|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugprograms2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Oluşturulacak](../../../extensibility/debugger/reference/ienumdebugprograms2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugprograms2-getcount.md)|Bir Numaralandırıcı içindeki program sayısını alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)|Bir numaralama dizisinde belirtilen sayıda programı alma.|
+|[Atla](../../../extensibility/debugger/reference/ienumdebugprograms2-skip.md)|Bir numaralama dizisinde belirtilen sayıda programı atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugprograms2-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugprograms2-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugprograms2-getcount.md)|Numaralayıcıda program sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio bu arabirimi şu amaçlarla kullanır:
+ Visual Studio aşağıdakiler için bu arabirimi kullanır:
 
-- **Modüller** penceresini doldurun ( [enumprograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) çağırarak ve ardından her programda [EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md) çağırarak).
+- Modüller **penceresini** (EnumPrograms'ı [çağırarak ve](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) ardından her programda [EnumModules'u](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md) çağırarak) doldurmak.
 
-- **Işleme İliştir** listesini doldurun ( `IDebugProcess2::EnumPrograms` bir [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md) arabirimi edinmek için her [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabiriminde [QueryInterface](/cpp/atl/queryinterface) 'i çağırarak ve sonra çağırarak).
+- İşleme Ekle **listesini** (IDebugEngineProgram2 arabirimini almak için her `IDebugProcess2::EnumPrograms` [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabiriminde [queryInterface](/cpp/atl/queryinterface) çağırarak) ekleyin. [](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 
-- İşlemdeki her programda hata ayıklayabilmesi gereken DEs listesini oluşturun ( [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md)kullanarak).
+- İşlemde her bir programda hata ayıklayabilen DE'ler listesi oluşturma [(GetEngineInfo kullanarak).](../../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md)
 
-- Her programa Düzenle ve devam et (ENC) güncelleştirmelerini Uygula (IDebugProcess2:: EnumPrograms çağırarak ve sonra [Getencupdate](../../../extensibility/debugger/reference/idebugprogram2-getencupdate.md)'i çağırarak).
+- Her programa Düzenle ve Devam (ENC) güncelleştirmelerini uygula (IDebugProcess2::EnumPrograms çağrısı ve [ardından GetENCUpdate çağırarak).](../../../extensibility/debugger/reference/idebugprogram2-getencupdate.md)
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

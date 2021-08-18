@@ -1,6 +1,6 @@
 ---
-description: Programı sonlandırır.
-title: 'IDebugProgram2:: Terminate | Microsoft Docs'
+description: Programı sonlandırılır.
+title: IDebugProgram2::Terminate | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 4d3127d3-b1e9-4b28-ac22-2f2eea255f86
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 404df2be6718ab691ec47081b6fd400a1ddc8891
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a78679b57f4d10679d9aa0bd36efe79d7d52970a3eb4dd919371934acfea9a98
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084473"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292344"
 ---
 # <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
-Programı sonlandırır.
+Programı sonlandırılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +40,12 @@ int Terminate();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Mümkünse, program sonlandırılır ve işlemden kaldırılır; Aksi takdirde, hata ayıklama altyapısı (DE) gerekli temizleme işlemlerini gerçekleştirir.
+ Mümkünse program sonlandırılır ve işlemden kaldırılacaktır; aksi takdirde, hata ayıklama altyapısı (DE) gerekli temizlemeyi gerçekleştirecek.
 
- Bu yöntem veya [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) yöntemi IDE tarafından, genellikle kullanıcıya yanıt olarak tüm hata ayıklamayı durdurma olarak çağrılır. Bu yöntemin uygulanması ideal olarak programı işlem içinde sonlandıracaktır. Bu mümkün değilse, DE programın bu işlemde daha fazla çalışma yapmasını (ve gerekli temizleme işlemlerini yapmasını) önlemesi gerekir. `IDebugProcess2::Terminate`YÖNTEMI IDE tarafından çağrıldıysa, Yöntem çağrıldıktan sonra işlemin tamamının sonlandırılması gerekir `IDebugProgram2::Terminate` .
+ Bu yöntem veya [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) yöntemi, genellikle kullanıcının tüm hata ayıklamalarını durdurması için IDE tarafından çağrılır. İdeal olarak bu yöntemin uygulanması, işlemi içinde programı sonlandırmalı. Bu mümkün yoksa, DE programın bu işlemde daha fazla çalışmasına engel olmalı (ve gerekli temizlemeleri yapılmalıdır). Yöntem IDE tarafından çağrılsa, yöntem çağrıldıktan bir süre `IDebugProcess2::Terminate` sonra tüm `IDebugProgram2::Terminate` işlem sonlandırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

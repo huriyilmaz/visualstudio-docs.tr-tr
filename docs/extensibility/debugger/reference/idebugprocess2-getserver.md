@@ -11,17 +11,18 @@ ms.assetid: 8f73c530-cceb-4f1f-8c63-1cc0ccd4a310
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a2bf0528526e20fc3eae7acf46dfc2b706be94eb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 801aca72d13510e0a6985167732c51f599dd28104e9680465b2617f885e2c3e1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081639"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121416280"
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
 Bu işlemin üzerinde çalıştığı sunucuyu alır.

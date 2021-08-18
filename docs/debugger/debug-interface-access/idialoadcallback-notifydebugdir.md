@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d7db4245a96ac77327e8251d1c3df312819a2423b05108e66610022f2c83065
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 48e87a968eea1ad35796a495d76584488bdac332
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121326020"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081544"
 ---
 # <a name="idialoadcallbacknotifydebugdir"></a>IDiaLoadCallback::NotifyDebugDir
 .exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.

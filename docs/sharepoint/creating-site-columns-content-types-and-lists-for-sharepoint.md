@@ -1,7 +1,7 @@
 ---
-title: SharePoint için site sütunları, Içerik türleri ve listeler oluşturma | Microsoft Docs
+title: SharePoint | için Site Sütunları, İçerik Türleri ve Listeleri Oluşturma Microsoft Docs
 titleSuffix: ''
-description: SharePoint için site sütunları, içerik türleri ve listeler oluşturun. Visual Studio bu SharePoint öğesi türleri için proje öğesi şablonları sağlar.
+description: Web siteniz için site sütunları, içerik türleri ve SharePoint. Visual Studio, bu tür öğeler için proje öğesi SharePoint sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -19,37 +19,38 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: dfdf94f58c0fa7ba40d7c08309f8ea57949310df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5af73031750a19fd3fe42ae78d44540ad347d2e7848e440d444b57721dc51022
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949031"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121332397"
 ---
-# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>SharePoint için site sütunları, içerik türleri ve listeler oluşturma
-  Visual Studio, her ikisi de site sütunları (veya *alanları*) içerebilen *listeler* ve *içerik türleri* de dahil olmak üzere birçok farklı temel SharePoint öğesi için proje öğesi şablonları sağlar. İçerik türleri ve listeleri için yeni tasarımcılar, bu öğelerin her zamankinden daha kolay oluşturulmasını sağlar.
+# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>Site sütunları, içerik türleri ve liste oluşturma SharePoint
+  Visual Studio, her ikisi de site sütunlarını (veya alanlarını)  dahil SharePoint içerik türleri dahil olmak üzere birçok farklı temel öğe öğesi için proje öğesi *şablonları sağlar.* İçerik türleri ve listeleri için yeni tasarımcılar, bu öğelerin oluşturulmasını hiç olmadığı kadar kolaylaştırır.
 
 ## <a name="site-columns"></a>Site sütunları
- Site sütunları, bir SharePoint projesine ekleyebileceğiniz en temel öğelerden biridir. Bir site sütunu, bir kişi listesindeki bir kişinin telefon numarası, yorum veya şehir adı gibi bir veri türünü temsil eder.
+ Site sütunları, bir SharePoint projesine ekleyebilirsiniz. Site sütunu telefon numarası, açıklama veya kişi listesinde bir kişinin şehir adı gibi bir veri türünü temsil eder.
 
- Yeni site sütunu proje öğesi şablonu, Visual Studio 'nun önceki sürümünden daha kolay site sütunları oluşturmayı kolaylaştırır. Yeni bir site sütunu oluşturduktan sonra, site sütununun *Elements.xml* dosyasındaki XML 'yi, görünen adı, veri türü ve site sütununun SharePoint 'te görünmesini istediğiniz grup gibi istediğiniz bilgileri içerecek şekilde değiştirebilirsiniz. Site sütunları hakkında daha fazla bilgi için bkz. [sütunlara giriş](/previous-versions/office/developer/sharepoint-2010/ms450825(v=office.14)).
+ Yeni site sütunu proje öğesi şablonu, site sütunlarının oluşturulmasını, site sütunlarının önceki sürümünden Visual Studio. Yeni bir site sütunu oluşturdukta, site sütununu *Elements.xml* dosyasındaki XML'i, görünen adı, veri türü ve site sütununu sütunda görünmesini istediğiniz grup gibi istediğiniz bilgileri içerecek şekilde SharePoint. Site sütunları hakkında daha fazla bilgi için [bkz. Sütunlara Giriş.](/previous-versions/office/developer/sharepoint-2010/ms450825(v=office.14))
 
-## <a name="content-types-and-lists"></a>İçerik türleri ve listeler
- İçerik türleri ve listeler, SharePoint 'teki en sık kullanılan öğeler arasındadır.
+## <a name="content-types-and-lists"></a>İçerik türleri ve listeleri
+ İçerik türleri ve listeleri, veri kaynaklarında en sık kullanılan SharePoint.
 
- Bir içerik türü, bir SharePoint listesi veya belge kitaplığındaki bir öğe kategorisi için meta verileri, iş akışını ve davranışı tanımlar. Örneğin, bir kişi listesinde veya bir görev listesinde bilgi için bir içerik türü oluşturabilirsiniz. Kişi içerik türü ad, e-posta, telefon numarası ve adres gibi sütunlar içerebilir. Site düzeyinde tanımladığınız bir içerik türü, sitedeki herhangi bir listeden veya belge kitaplığından bağımsızdır. SharePoint sitesindeki farklı listeler veya belge kitaplıkları ile aynı içerik türünü kullanabilirsiniz. Aynı liste veya belge kitaplığındaki çeşitli içerik türlerini de kullanabilirsiniz.
+ İçerik türü, bir içerik listesinde veya belge kitaplığında bir öğe kategorisine ait meta SharePoint ve davranışı tanımlar. Örneğin, bir kişi listesinde veya görev listesinde bilgi için bir içerik türü oluşturabilirsiniz. Kişi içerik türü Ad, E-posta, Telefon Numarası ve Adres gibi sütunlar içerebilir. Site düzeyinde tanımladığınız içerik türü, sitenin herhangi bir listesinden veya belge kitaplığından bağımsızdır. Aynı içerik türünü farklı listelerle veya belge kitaplıkları ile SharePoint kullanabilirsiniz. Aynı listede veya belge kitaplığında birden fazla içerik türü de kullanabilirsiniz.
 
- Liste, SharePoint 'te başkalarıyla paylaşabileceğiniz bir bilgi koleksiyonudur. Listeler, veri içeren sütun satırlarından oluşur. Listelerden bazı örnekler şunlardır: bir görev listesi, kişiler listesi ve Duyurular listesi.
+ Liste, diğerleriyle paylaşabilirsiniz SharePoint bilgi koleksiyonudur. Listeler, veri içeren sütun satırlarından oluşur. Listelerden bazıları şunlardır: görev listesi, kişi listesi ve duyurular listesi.
 
- Yeni Içerik türü ve liste tasarımcıları [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] site içerik türlerini oluşturma, Visual Studio 'nun önceki sürümünden çok daha kolay ve daha sezgisel hale getirir. Kullanıcı arabirimi, içerik türlerini ve listeleri tanıdık bir şekilde görsel olarak oluşturmanıza ve Listelerdeki verileri sıralayıp gruplandırmanıza ve grup başlıklarını kullanmanıza olanak sağlar. İçerik türleri hakkında daha fazla bilgi için bkz. [Içerik türleri](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14)). Listeler hakkında daha fazla bilgi için bkz. [liste formları](/previous-versions/office/developer/sharepoint-2010/aa543232(v=office.14)) ve [liste görünümleri](/previous-versions/office/developer/sharepoint-2010/ff604021(v=office.14)).
+ 'daki yeni İçerik Türü ve Liste tasarımcıları, site içerik türleri oluşturmayı ve listeleri önceki sürüme göre çok daha kolay ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sezgisel hale Visual Studio. Kullanıcı arabirimi, içerik türlerini ve listeleri tanıdık bir şekilde görsel olarak oluşturmanın, listelerde verileri sıralamanın ve grup başlıklarını kullanmanın olanaklı olduğunu gösterir. İçerik türleri hakkında daha fazla bilgi için bkz. [İçerik Türleri.](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14)) Listeler hakkında daha fazla bilgi için bkz. [Liste Formları](/previous-versions/office/developer/sharepoint-2010/aa543232(v=office.14)) ve [Liste Görünümleri.](/previous-versions/office/developer/sharepoint-2010/ff604021(v=office.14))
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[İzlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|Özel içerik türünde kullanılan site sütunlarının nasıl oluşturulacağını gösterir. İçerik türü daha sonra özel bir listede kullanılır.|
+|[Adım adım kılavuz: Site sütunu, içerik türü ve liste oluşturma SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|Özel içerik türünde kullanılan site sütunlarının nasıl oluşturul olduğunu gösterir. İçerik türü daha sonra özel bir listede kullanılır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint 2010 ' de geliştirmeye başlama](/sharepoint/dev/)
+- [Başlarken SharePoint 2010'da geliştirme](/sharepoint/dev/)

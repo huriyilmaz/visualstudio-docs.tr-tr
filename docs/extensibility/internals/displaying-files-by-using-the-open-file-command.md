@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0eef493d7a8a37a3d7c83fdaee746b59e09bfaa89cfdd7715971e4cffb3f8b9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b9ba1acd9a1a918e70bf8ac71fb6a1d9e40a2231
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448110"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050082"
 ---
 # <a name="display-files-by-using-the-open-file-command"></a>Dosya Aç komutunu kullanarak dosyaları görüntüleme
 Aşağıdaki adımlar, IDE'nin dosyasındaki Dosya menüsünde **bulunan** Dosya Aç komutunu nasıl **işley** olduğunu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] açıklar. Adımlarda ayrıca projelerin bu komuttan gelen çağrılara nasıl yanıt vermeleri gerektiği de anlatılacaktır.

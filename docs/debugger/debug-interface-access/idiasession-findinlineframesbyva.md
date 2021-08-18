@@ -1,6 +1,6 @@
 ---
-description: IDiaSession::findInlineFramesByVA, bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler arasında devamını sağlayan bir sabit adı alır.
-title: IDiaSession::findInlineFramesByVA | Microsoft Docs
+description: 'IDiaSession:: findInlineFramesByVA, bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.'
+title: 'IDiaSession:: findInlineFramesByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ea39013ba5825f3607c743c48c04b35a66547dceb1210106ba2244f99e646b8d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 56a4f01564bd6e8bcdb484fe06deceebb264b12b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380313"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081376"
 ---
 # <a name="idiasessionfindinlineframesbyva"></a>IDiaSession::findInlineFramesByVA
-Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler üzerinde devamını sağlayan bir sabit adı alır.
+Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,18 +34,18 @@ HRESULT findInlineFramesByVA (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Üst `IDiaSymbol` öğeyi temsil eden nesne.
+'ndaki `IDiaSymbol` Üst öğeyi temsil eden nesne.
 
  `va`
 
-[in] Adresi VA olarak belirtir.
+'ndaki Adresi bir VA olarak belirtir.
 
  `ppResult`
 
-[out] Alınan `IDiaEnumSymbols` çerçevelerin listesini içeren bir nesneyi tutar.
+dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

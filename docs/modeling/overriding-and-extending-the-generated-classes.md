@@ -1,6 +1,6 @@
 ---
 title: Üretilen Sınıfları Geçersiz Kılma ve Genişletme
-description: DSL Tanımınızı, etki alanına özgü bir dili temel alan güçlü bir araç kümesi oluşturmak için kullanılan bir platform olduğunu öğrenin.
+description: DSL tanımınızın, etki alanına özgü bir dili temel alan güçlü bir araç kümesi oluşturabileceğiniz bir platform olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,28 +9,29 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 07c44e7ff7a603f339ec268b06bd78cc84cd6be2
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 4217f4f5ebc15ce32e138419f10cc412a40692e7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390951"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034272"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>Oluşturulan sınıfları geçersiz kılma ve genişletme
 
-DSL Tanımınız, etki alanına özgü bir dili temel alan güçlü bir araç kümesi oluşturabilirsiniz. DSL Tanımından oluşturulan sınıfları geçersiz kılabilir ve genişleterek birçok uzantı ve uyarlama yapabilirsiniz. Bu sınıflar yalnızca DSL Tanım diyagramında açıkça tanımladığınız etki alanı sınıflarını değil araç kutusunu, gezgini, serileştirmeyi ve diğer sınıfları da içerir.
+DSL tanımınız, etki alanına özgü bir dili temel alan güçlü bir araç kümesi oluşturabileceğiniz bir platformdur. Birçok uzantı ve uyarlamalar, DSL tanımından oluşturulan sınıfları geçersiz kılarak ve genişleterek yapılabilir. Bu sınıflar yalnızca DSL tanım diyagramında açıkça tanımladığınız etki alanı sınıflarını değil, ayrıca araç kutusu, Gezgin, serileştirme vb. tanımlayan diğer sınıfları da içerir.
 
-## <a name="extensibility-mechanisms"></a>Genişletilebilirlik Mekanizmaları
+## <a name="extensibility-mechanisms"></a>Genişletilebilirlik mekanizmaları
 
-Oluşturulan kodu genişletmeye olanak sağlayan çeşitli mekanizmalar sağlanır.
+Oluşturulan kodu genişletmenize olanak tanımak için çeşitli mekanizmalar sağlanır.
 
-### <a name="override-methods-in-a-partial-class"></a>Kısmi sınıftaki yöntemleri geçersiz kılma
+### <a name="override-methods-in-a-partial-class"></a>Kısmi sınıftaki yöntemleri geçersiz kıl
 
-Kısmi sınıf tanımları, bir sınıfın birden fazla yerde tanımlandığına olanak sağlar. Bu, oluşturulan kodu kendi yazmakta olduğu koddan ayırmaya olanak sağlar. El ile yazılmış kodunda, oluşturulan kod tarafından devralınan sınıfları geçersiz kılabilirsiniz.
+Kısmi sınıf tanımları, bir sınıfın birden fazla yerde tanımlanmasını sağlar. Bu, oluşturduğunuz kodu kendi yazdığınız koddan ayırmanızı sağlar. El ile yazılmış kodunuzda, oluşturulan kod tarafından devralınan sınıfları geçersiz kılabilirsiniz.
 
-Örneğin DSL Tanımında adlı bir etki alanı sınıfı tanımlarsanız geçersiz kılma `Book` yöntemleri ekleyen özel kodlar yazabilirsiniz:
+Örneğin, DSL tanımınızda adlı bir etki alanı sınıfı tanımlarsanız `Book` , geçersiz kılma yöntemleri ekleyen özel kod yazabilirsiniz:
 
 ```csharp
 public partial class Book
@@ -44,54 +45,54 @@ public partial class Book
 ```
 
 > [!NOTE]
-> Oluşturulan bir sınıftaki yöntemleri geçersiz kılmak için kodunuzu her zaman oluşturulan dosyalardan ayrılmış bir dosyaya yazın. Dosya genellikle CustomCode adlı bir klasörde bulunur. Oluşturulan kodda değişiklik yaptısanız, DSL Tanımından kodu yeniden yeniden özel hale gelirsiniz.
+> Oluşturulan bir sınıftaki yöntemleri geçersiz kılmak için, her zaman kodunuzu oluşturulan dosyalardan ayrılmış bir dosyaya yazın. Genellikle, dosya CustomCode adlı bir klasörde yer alır. Oluşturulan kodda değişiklik yaparsanız, bu kod, DSL tanımından kodu yeniden oluşturduğunuzda kaybedilir.
 
-Geçersiz kılarak hangi yöntemlerin olduğunu bulmak için sınıfında **geçersiz kılma** yazın ve ardından bir boşluk yazın. IntelliSense araç ipucu hangi yöntemlerin geçersiz kılınabilir olduğunu söyler.
+Geçersiz kılabileceğiniz yöntemleri öğrenmek için, sınıfa **geçersiz kılma** yazın ve ardından bir boşluk girin. IntelliSense araç ipucu size hangi yöntemlerin geçersiz kılınabileceğini söyleyecektir.
 
-### <a name="double-derived-classes"></a>Double-Derived Sınıfları
+### <a name="double-derived-classes"></a>Double-Derived sınıfları
 
-Oluşturulan sınıflarda yöntemlerin çoğu Modelleme ad alanlarındaki sabit bir sınıf kümesinden devralınır. Ancak, bazı yöntemler oluşturulan kodda tanımlanır. Normalde bu, bunları geçersiz kılamaz; Bir kısmi sınıfta, aynı sınıfın başka bir kısmi tanımında tanımlanan yöntemleri geçersiz kamazsiniz.
+Oluşturulan sınıflarda yöntemlerin çoğu, modelleme ad alanlarındaki sabit bir sınıf kümesinden devralınır. Ancak, bazı yöntemler oluşturulan kodda tanımlanmıştır. Normalde bu, bunları geçersiz kılamazsınız demektir; aynı sınıfın başka bir kısmi tanımında tanımlanan yöntemlerin tek bir kısmi sınıfta geçersiz kılınamaz.
 
-Bununla birlikte, etki alanı sınıfı için Çift Türetilmiş Oluştur bayrağını **ayarerek** bu yöntemleri geçersiz kılabilirsiniz. Bu, biri diğerin soyut bir temel sınıfı olmak için iki sınıfın oluşturularak neden olur. Tüm yöntem ve özellik tanımları temel sınıftadır ve yalnızca oluşturucu türetilmiş sınıftadır.
+Bununla birlikte, etki alanı sınıfı için **Double türetilmiş** bayrağını ayarlayarak bu yöntemleri geçersiz kılabilirsiniz. Bu, biri diğerinin soyut taban sınıfı olmak üzere iki sınıfın oluşturulmasına neden olur. Tüm Yöntem ve özellik tanımları temel sınıfta bulunur ve yalnızca Oluşturucu türetilmiş sınıfta bulunur.
 
-Örneğin, örnek Library.dsl'de, `CirculationBook` etki alanı sınıfının özelliği olarak `Generates``Double Derived` `true` ayarlanmıştır. Bu etki alanı sınıfı için oluşturulan kod iki sınıf içerir:
+Örneğin, örnek Library. dsl ' de, `CirculationBook` etki alanı sınıfının `Generates``Double Derived` özelliği olarak ayarlanır `true` . Bu alan sınıfı için oluşturulan kod iki sınıf içerir:
 
-- `CirculationBookBase`, soyuttur ve tüm yöntemleri ve özellikleri içerir.
+- `CirculationBookBase`, bir soyut ve tüm yöntem ve özellikleri içerir.
 
-- `CirculationBook`, türetilen `CirculationBookBase` . Oluşturucuları dışında boştur.
+- `CirculationBook`, öğesinden türetilmiş `CirculationBookBase` . Oluşturucular dışında boştur.
 
-Herhangi bir yöntemi geçersiz kılmak için türetilmiş sınıfın gibi kısmi bir tanımını `CirculationBook` oluşturun. Hem oluşturulan yöntemleri hem de modelleme çerçevesinden devralınan yöntemleri geçersiz kılebilirsiniz.
+Herhangi bir yöntemi geçersiz kılmak için, gibi türetilmiş sınıfın kısmi bir tanımını oluşturursunuz `CirculationBook` . Oluşturulan yöntemleri ve modelleme çerçevesinden devralınan yöntemleri geçersiz kılabilirsiniz.
 
-Bu yöntemi model öğeleri, ilişkiler, şekiller, diyagramlar ve bağlayıcılar dahil olmak üzere tüm öğe türleriyle birlikte kullanabilirsiniz. Ayrıca, oluşturulan diğer sınıfların yöntemlerini geçersiz kılabilirsiniz. ToolboxHelper gibi oluşturulan bazı sınıflar her zaman iki kez türetilmiştir.
+Model öğeleri, ilişkiler, şekiller, diyagramlar ve bağlayıcılar dahil olmak üzere tüm öğe türleriyle bu yöntemi kullanabilirsiniz. Ayrıca, diğer oluşturulan sınıfların yöntemlerini geçersiz kılabilirsiniz. ToolboxHelper gibi bazı oluşturulan sınıflar her zaman çift türetilir.
 
-### <a name="custom-constructors"></a>Özel Oluşturucular
+### <a name="custom-constructors"></a>Özel oluşturucular
 
-Oluşturucu geçersiz kılınamaz. Çift türetilmiş sınıflarda bile, oluşturucu türetilmiş sınıfta yer amalıdır.
+Oluşturucuyu geçersiz kılamazsınız. Çift türetilmiş sınıflarda bile, Oluşturucu türetilmiş sınıfta olmalıdır.
 
-Kendi oluşturucularınızı sağlamak için DSL Tanımı'nın etki alanı sınıfı `Has Custom Constructor` ayarını kullanarak bunu yapabiliriz. Tüm Şablonları **Dönüştür'e tıklarsanız,** oluşturulan kod o sınıf için bir oluşturucu eklemez. Eksik oluşturucuya bir çağrı içerir. Bu, çözümü derleme sırasında bir hata raporuna neden olur. Oluşturulan kodda neleri sağlamanız gerektiğini açıklayan bir açıklama görmek için hata raporuna çift tıklayın.
+Kendi oluşturucuyu sağlamak istiyorsanız, `Has Custom Constructor` dsl tanımındaki etki alanı sınıfı için ayarı yaparak bunu yapabilirsiniz. **Tüm Şablonları Dönüştür**' e tıkladığınızda, oluşturulan kod bu sınıf için bir Oluşturucu içermez. Eksik oluşturucuya bir çağrı içerecektir. Bu, çözümü oluşturduğunuzda bir hata raporuna neden olur. Elde etmeniz gerekenleri açıklayan oluşturulan kodda bir açıklama görmek için hata raporuna çift tıklayın.
 
-Oluşturulan dosyalardan ayrı bir dosyada kısmi sınıf tanımı yazın ve oluşturucusu sağlar.
+Oluşturulan dosyalardan ayrı bir dosyaya kısmi bir sınıf tanımı yazın ve oluşturucuyu sağlayın.
 
-### <a name="flagged-extension-points"></a>Bayraklı Uzantı Noktaları
+### <a name="flagged-extension-points"></a>Bayrak eklenmiş uzantı noktaları
 
-Bayraklı uzantı noktası, DSL Tanımı'nın içinde özel bir yöntem belirtecek bir özellik veya onay kutusu ayaryabilirsiniz. Özel oluşturucular bir örnektir. Diğer örnekler arasında, bir etki alanı özelliğinin Hesaplanmış veya Özel Depolama olarak ayarlanması veya bağlantı `Kind` oluşturucuda **Özeldir** bayrağının ayarlanması yer almaktadır.
+Bayrak eklenmiş bir uzantı noktası, DSL tanımında bir özellik veya bir özel yöntem sağlayabileceğiniz bir onay kutusu ayarlayabileceğiniz yerdir. Özel oluşturucular bir örnektir. diğer örnekler, bir `Kind` etki alanı özelliğinin hesaplanmış veya özel Depolama ayarlanmasını ya da bir bağlantı oluşturucusunda **özel** bayrağını ayarlamayı içerir.
 
-Her durumda bayrağını ayarip kodu yeniden üretip derleme hatasıyla sonuçlandırabilirsiniz. Sağlamanız gerekenleri açıklayan bir açıklama görmek için hataya çift tıklayın.
+Her durumda, bayrağını ayarlayıp kodu yeniden oluşturduğunuzda bir yapı hatası olur. Sağlamanız gerekenleri açıklayan bir açıklama görmek için hataya çift tıklayın.
 
 ### <a name="rules"></a>Kurallar
 
-İşlem yöneticisi, bir özelliğinde değişiklik gibi belirlenmiş bir olayın meydana geldiği bir işlem sona ermeden önce çalıştıracak kuralları tanımlamanıza olanak sağlar. Kurallar genellikle depoda bulunan farklı öğeler arasında zaman uyumluluk sağlamak için kullanılır. Örneğin, diyagramda modelin geçerli durumunun görüntü olduğundan emin olmak için kurallar kullanılır.
+İşlem Yöneticisi, bir özellikte değişiklik gibi, belirtilen bir olayın gerçekleştiği bir işlemin sonundan önce çalışan kurallar tanımlamanızı sağlar. Kurallar genellikle depodaki farklı öğeler arasında eşitlemeyi sürdürmek için kullanılır. Örneğin, diyagramın modelin geçerli durumunu görüntülediğinden emin olmak için kurallar kullanılır.
 
-Kurallar, her nesne için kuralı kaydeden koda sahip olmak zorunda olmadığınız için sınıf bazında tanımlanır. Daha fazla bilgi için [bkz. Kurallar Modelde Değişiklikleri Yayma.](../modeling/rules-propagate-changes-within-the-model.md)
+Kurallar her bir nesne için bir kural kaydeden koda sahip olmanız gerekmez, her sınıf temelinde tanımlanır. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
-### <a name="store-events"></a>Olayları Depolama
+### <a name="store-events"></a>Olayları depola
 
-Modelleme deposu, öğe ekleme ve silme, özellik değerlerinde yapılan değişiklikler gibi depoda belirli değişiklik türlerini dinlemek için kullanabileceğiniz bir olay mekanizması sağlar. Olay işleyicileri, değişikliklerin olduğu işlem kapat edildikten sonra çağrılır. Bu olaylar genellikle depo dışındaki kaynakları güncelleştirmek için kullanılır.
+Modelleme deposu, depodaki belirli değişiklik türlerini dinlemek için kullanabileceğiniz, öğelerin eklenmesi ve silinmesi, özellik değerlerinde değişiklikler vb. gibi bir olay mekanizması sağlar. Olay işleyicileri, değişikliklerin gerçekleştirildiği işlemin kapandıktan sonra çağrılır. Genellikle, bu olaylar mağaza dışındaki kaynakları güncelleştirmek için kullanılır.
 
-### <a name="net-events"></a>.NET Olayları
+### <a name="net-events"></a>.NET etkinlikleri
 
-Şekiller üzerinde bazı olaylara abone olabilirsiniz. Örneğin, bir şekle fare tıklamalarını dinleyebilirsiniz. Her nesne için olayına abone olan kod yazmanız gerekir. Bu kod InitializeInstanceResources() geçersiz kılınarak yazabilir.
+Şekillerdeki bazı olaylara abone olabilirsiniz. Örneğin, fare tıklamalarını bir şekle dönüştürebilirsiniz. Her nesne için olaya abone olan bir kod yazmanız gerekir. Bu kod, ınitializeınstanceresobir geçersiz kılma () ile yazılabilir.
 
-Şekil Alanlarına bazı olaylar oluşturulur ve bu olaylar bir şekle dekoratör çizmek için kullanılır. Bir örnek için, [bkz. How to: Intercept a Click on a Shape or Decorator](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
+Bazı olaylar, bir şekle dekoratörler çizmek için kullanılan ShapeFields üzerinde oluşturulur. Bir örnek için bkz. [nasıl yapılır: bir şekle veya Dekorata tıklama](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
 
-Bu olaylar genellikle bir işlem içinde oluşmaz. Mağazada değişiklik yapmak için bir işlem oluşturmanız gerekir.
+Bu olaylar genellikle bir işlem içinde gerçekleşmez. Mağazada değişiklik yapmak istiyorsanız bir işlem oluşturmanız gerekir.

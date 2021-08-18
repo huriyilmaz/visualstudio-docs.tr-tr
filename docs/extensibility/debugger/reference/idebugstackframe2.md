@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 69bb2e2f58393311b0867a7ea684b99a8df51676
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: efd95513477fce009775e2fb56110e68f2717ae31843b983845e64a970314e40
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122029677"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448838"
 ---
 # <a name="idebugstackframe2"></a>IDebugStackFrame2
 Bu arabirim, belirli bir iş parçacığında bir çağrı yığınında tek bir yığın çerçevesini temsil eder.

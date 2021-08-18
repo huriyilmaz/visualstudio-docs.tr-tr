@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae3e4fd732b4a0a296701b137fa158eb5926162b11f1cdaf8988c2f4ed3a10bb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 262bc240ab9a73c500fcb59e2796c42c50a7479d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121401250"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049603"
 ---
 # <a name="saving-a-custom-document"></a>Özel Belge Kaydetme
 Ortam Save , **Save** **As** ve Save **All komutlarını** işlemektedir. Kullanıcı Dosya menüsünde **Kaydet,** **Farklı** **Kaydet** veya  Hepsini Kaydet'e tıkladığında ya da çözümü kapatarak Hepsini Kaydet'e tıkladığında, aşağıdaki işlem gerçekleşir.
@@ -29,11 +29,11 @@ Ortam Save , **Save** **As** ve Save **All komutlarını** işlemektedir. Kullan
 
  Bu işlem aşağıdaki adımlarda ayrıntılı olarak açıktır:
 
-1. Farklı **Kaydet** ve **Kaydet komutları** için ortam, etkin belge penceresini ve bu nedenle hangi öğelerin kaydedilebilir olduğunu belirlemek üzere <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> hizmeti kullanır. Etkin belge penceresi bilindiği zaman ortam, çalışan belge tablosunda belgenin hiyerarşi işaretçisini ve öğe tanımlayıcısını (itemID) bulur. Daha fazla bilgi için [bkz. Belge Tablosu Çalıştırma.](../../extensibility/internals/running-document-table.md)
+1. Farklı **Kaydet** ve **Farklı Kaydet** komutları için ortam, etkin belge penceresini ve bu nedenle hangi öğelerin kaydedilmiş olması gerektiğini belirlemek üzere <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> hizmeti kullanır. Etkin belge penceresi bilindiği zaman ortam, çalışan belge tablosunda belgenin hiyerarşi işaretçisini ve öğe tanımlayıcısını (itemID) bulur. Daha fazla bilgi için [bkz. Belge Tablosu Çalıştırma.](../../extensibility/internals/running-document-table.md)
 
      Tüm Öğeleri Kaydet komutu için ortam, kaydedilen tüm öğelerin listesini derlemek için çalışan belge tablosunda yer alan bilgileri kullanır.
 
-2. Çözüm bir çağrı aldığında, seçilen öğe kümesinde (yani hizmet tarafından ortaya çıkarıla birden çok <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> seçim) aynı şekilde <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> devam eder.
+2. Çözüm bir çağrı aldığında, seçilen öğe kümesinde (yani hizmet tarafından ortaya çıkarıla birden çok <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> seçim) boyunca devam <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> eder.
 
 3. Seçimde yer alan her öğede çözüm, Kaydet menü komutunun etkin olup olmadığını belirlemek üzere <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.IsItemDirty%2A> yöntemini çağıran hiyerarşi işaretçisini kullanır. Bir veya daha fazla öğe kirli ise Kaydet komutu etkinleştirilir. Hiyerarşi standart bir düzenleyici kullanıyorsa, hiyerarşi yöntemini çağırarak kirli durum sorgulamayı düzenleyiciye <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.IsDocDataDirty%2A> devreder.
 

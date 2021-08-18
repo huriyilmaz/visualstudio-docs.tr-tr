@@ -1,6 +1,6 @@
 ---
-title: Eski dil hizmeti Features2 | Microsoft Docs
-description: Visual Studio SDK 'sında Managed Extensibility Framework (MEF) uzantılarını kullanarak sağlayabileceğinizi eski dil hizmeti özelliklerinden bazıları hakkında bilgi edinin.
+title: Eski Dil Hizmeti Özellikleri2 | Microsoft Docs
+description: Visual Studio SDK'sı'daki Managed Extensibility Framework (MEF) uzantılarını kullanarak sağlayabilirsiniz eski dil hizmeti özelliklerinden Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,44 +13,44 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab3f467f9a3f247afc738a98ab824dd347f7c20a5d8f618b9684eb4ef1511b9f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 11305d2a63b2e461629302e4a9bf88ed6d7c21b9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375898"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049837"
 ---
 # <a name="legacy-language-service-features-2"></a>Eski dil hizmeti özellikleri 2
-Aşağıdaki konularda, sağlayabilmeniz için bazı eski dil hizmeti özellikleri listelenmektedir.
+Aşağıdaki konularda, sağyabilirsiniz bazı eski dil hizmeti özellikleri listelemektedir.
 
- Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Dil hizmeti uygulama hakkında daha fazla bilgi edinmek için bkz. [Düzenleyici ve dil hizmeti uzantıları](../../extensibility/editor-and-language-service-extensions.md).
+ Eski dil hizmetleri VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın daha yeni yolu MEF uzantılarını kullanmaktır. Dil hizmetini uygulamanın yeni yolu hakkında daha fazla bilgi için bkz. [Düzenleyici ve Dil Hizmeti Uzantıları.](../../extensibility/editor-and-language-service-extensions.md)
 
 > [!NOTE]
-> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni düzenleyici API'sini mümkün olan en kısa sürede kullanmaya başlamayı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Eski Dil Hizmetinde Söz Dizimi Renklendirmesi](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
 
- Sözdizimi renklendirmesinin nasıl uygulanacağını açıklar.
+ Söz dizimi renklendirmenin nasıl uygulandığını açıklar.
 
 - [Eski Dil Hizmetinde Otomatik Biçimlendirme](../../extensibility/internals/automatic-formatting-in-a-legacy-language-service.md)
 
- Otomatik biçimlendirmenin nasıl uygulanacağını açıklar.
+ Otomatik biçimlendirmenin nasıl uygulandığını açıklar.
 
 - [Eski Dil Hizmetinde Parametre Bilgileri](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)
 
- IntelliSense parametre bilgisi araç Ipucunun nasıl uygulanacağını açıklar.
+ IntelliSense Parametre Bilgisi Araç İpucu'nın nasıl uygulandığını açıklar.
 
 - [Eski Dil Hizmetinde Deyim Tamamlama](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)
 
- IntelliSense bildirim listesi ve üye Tamamlama listesinin nasıl uygulanacağını açıklar.
+ IntelliSense deyim listesinin ve üye tamamlama listesinin nasıl uygulandığını açıklar.
 
 - [Eski Dil Hizmetinde Ana Hat Oluşturma ve Gizli Metin](../../extensibility/internals/outlining-and-hidden-text-in-a-legacy-language-service.md)
 
- Ana hat veya gizli metnin nasıl uygulanacağını açıklar.
+ Satır içinde veya gizli metinde nasıl uygulamanın açık olduğunu açıklar.
 
 - [Nasıl yapılır: Eski Dil Hizmetinde Genişletilmiş Ana Hat Oluşturma Desteği Sağlama](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- Hata ayıklayıcı desteğini uygulama içindeki adımlardan bazılarını açıklar.
+ Hata ayıklayıcı desteği uygulama adımlarının bazıları açık.
 
 ## <a name="related-sections"></a>İlgili Bölümler

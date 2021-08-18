@@ -1,6 +1,6 @@
 ---
 title: Derleme Sürecinde Kod Oluşturma
-description: Metin dönüştürmenin bir çözüm oluşturma işleminin bir parçası olarak nasıl çağrıl Visual Studio öğrenin.
+description: Visual Studio çözümünün derleme sürecinin bir parçası olarak metin dönüşümünün nasıl çağrılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: how-to
@@ -16,51 +16,51 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bb628f967f9d56f954c2c639951f9317fa8efed9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 1cf6376ca9ef5442e4f71588a6de7d3a4a33886ba8520f18914f03d7522fa463
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122048069"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411327"
 ---
-# <a name="invoke-text-transformation-in-the-build-process"></a>Derleme sürecinde metin dönüştürmeyi çağırma
+# <a name="invoke-text-transformation-in-the-build-process"></a>Yapı işleminde metin dönüşümünü çağır
 
-[Metin dönüştürme,](../modeling/code-generation-and-t4-text-templates.md) bir çözüm oluşturma [işleminin bir parçası](/azure/devops/pipelines/index) olarak Visual Studio çağrılabilir. Metin dönüştürme için özelleştirilmiş yapı görevleri vardır. T4 yapı görevleri tasarım zamanı metin şablonlarını çalıştırır ve aynı zamanda çalışma zamanı (önişlenmiş) metin şablonlarını derler.
+[metin dönüşümü](../modeling/code-generation-and-t4-text-templates.md) , bir Visual Studio çözümünün [derleme sürecinin](/azure/devops/pipelines/index) bir parçası olarak çağrılabilir. Metin dönüştürme için özelleştirilmiş yapı görevleri vardır. T4 yapı görevleri tasarım zamanı metin şablonlarını çalıştırır ve aynı zamanda çalışma zamanı (önişlenmiş) metin şablonlarını derler.
 
-Kullandığınız oluşturma motoruna bağlı olarak, yapı görevleri farklı işlevleri yerine getirebilirler. Visual Studio'da çözümü derlemeniz, [hostspecific="true"](../modeling/t4-template-directive.md) özniteliği ayarlanırsa Visual Studio API'sini (EnvDTE) kullanabilir. Ancak bu, çözümü komut satırdan derlemek veya bir sunucu derlemesi başlatmak için Visual Studio. Bu durumlarda, yapı MSBuild tarafından oluşturulur ve farklı bir T4 ana bilgisayar kullanılır. Başka bir ifadeyle, proje dosya adları gibi şeylere bir metin şablonu derlemek için aynı şekilde erişe MSBuild. Ancak, derleme [parametrelerini kullanarak ortam bilgilerini metin şablonlarına ve yönerge işlemcilerine geçebilirsiniz.](#parameters)
+Kullandığınız oluşturma motoruna bağlı olarak, yapı görevleri farklı işlevleri yerine getirebilirler. Visual Studio içinde çözümü oluşturduğunuzda, [hostspecific = "true"](../modeling/t4-template-directive.md) özniteliği ayarlandıysa bir metin şablonu Visual Studio apı 'sine (EnvDTE) erişebilir. Bu, çözümü komut satırından oluşturduğunuzda ya da Visual Studio aracılığıyla bir sunucu oluşturma başlattığınızda doğru değildir. Bu durumlarda, yapı MSBuild tarafından oluşturulur ve farklı bir T4 ana bilgisayar kullanılır. Bu, MSBuild kullanarak bir metin şablonu oluşturduğunuzda, proje dosya adları gibi şeylere aynı şekilde erişemeyeceğiniz anlamına gelir. Ancak, [Yapı parametrelerini kullanarak ortam bilgilerini metin şablonlarına ve yönerge işlemcilere geçirebilirsiniz](#parameters).
 
 ## <a name="configure-your-machines"></a><a name="buildserver"></a> Makinelerinizi yapılandırma
 
-Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için Visual Studio için Modelleme SDK'Visual Studio.
+Geliştirme bilgisayarınızda yapı görevlerini etkinleştirmek için, Visual Studio için modelleme SDK 'sını yükler.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Derleme [sunucunuz yüklü](/azure/devops/pipelines/agents/agents) olmayan bir bilgisayarda Visual Studio aşağıdaki dosyaları geliştirme makinenizin derleme bilgisayarına kopyalayın:
+[yapı sunucunuz](/azure/devops/pipelines/agents/agents) Visual Studio yüklü olmayan bir bilgisayarda çalışıyorsa, aşağıdaki dosyaları geliştirme makinenizden yapı bilgisayarına kopyalayın:
 
-- %ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VisualStudio\v16.0\TextTemplating
+- % ProgramFiles (x86)% \ Microsoft Visual Studio \ 2019 \ Community \ MSBuild \microsoft\visualstudio\v16.0\textşablon oluşturma
 
   - Microsoft.VisualStudio.TextTemplating.Sdk.Host.15.0.dll
   - Microsoft.TextTemplating.Build.Tasks.dll
   - Microsoft.TextTemplating.targets
 
-- %ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
+- % ProgramFiles (x86)% \ Microsoft Visual Studio \ 2019 \ Community \VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
   - Microsoft.VisualStudio.TextTemplating.15.0.dll
   - Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll
   - Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll
 
-- %ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies
+- % ProgramFiles (x86)% \ Microsoft Visual Studio \ 2019 \ Community \Common7\IDE\PublicAssemblies
 
   - Microsoft.VisualStudio.TextTemplating.Modeling.15.0.dll
 
 > [!TIP]
-> Derleme sunucusunda TextTemplating derleme hedeflerini çalıştırmaya yönelik `MissingMethodException` bir Microsoft.CodeAnalysis yöntemi alırsanız, Roslyn derlemelerinin derleme yürütülebilir dosyasıyla aynı dizinde yer alan *Roslyn* adlı bir dizinde (örneğin,msbuild.exe) olduğundan *emin* olun.
+> `MissingMethodException`Bir yapı sunucusunda Textşablon oluşturma derleme hedeflerini çalıştırırken Microsoft. CodeAnalysis yöntemi için, Roslyn derlemelerinin derleme yürütülebiliriyle aynı dizinde olan *Roslyn* adlı bir dizinde olduğundan emin olun (örneğin, *msbuild.exe*).
 
 ## <a name="edit-the-project-file"></a>Proje dosyasını düzenleme
 
-Metin dönüştürme hedeflerini içeri aktarma gibi MSBuild bazı özellikleri yapılandırmak için proje dosyanızı düzenleyin.
+MSBuild içindeki özelliklerden bazılarını yapılandırmak için proje dosyanızı düzenleyin, örneğin, metin dönüştürme hedeflerini içeri aktarma.
 
-Bu **Çözüm Gezgini** projenizin **sağ** tıklama menüsünden Kaldır'ı seçin. Bu .csproj veya .vbproj dosyasını XML düzenleyicisinde düzenlemenize olanak tanır. Düzenlemeyi bitirdikten sonra Yeniden **Yükle'yi seçin.**
+**Çözüm Gezgini**, projenizin sağ tıklama menüsünden **Kaldır** ' ı seçin. Bu .csproj veya .vbproj dosyasını XML düzenleyicisinde düzenlemenize olanak tanır. Düzenlemeden sonra **yeniden yükle**' yi seçin.
 
 ## <a name="import-the-text-transformation-targets"></a>Metin dönüştürme hedeflerini içeri aktarma
 
@@ -68,7 +68,7 @@ Bu **Çözüm Gezgini** projenizin **sağ** tıklama menüsünden Kaldır'ı se�
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- veya -
+\- veya
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -90,7 +90,7 @@ Bu satırın ardından, Metin Şablon Oluşturma almayı ekleyin:
 
 ::: moniker-end
 
-## <a name="transform-templates-in-a-build"></a>Derlemede şablonları dönüştürme
+## <a name="transform-templates-in-a-build"></a>Yapı içindeki şablonları dönüştürme
 
 Dönüştürme görevini kontrol etmek için proje dosyanızın içine ekleyebileceğiniz bazı özellikler vardır:
 
@@ -102,7 +102,7 @@ Dönüştürme görevini kontrol etmek için proje dosyanızın içine ekleyebil
     </PropertyGroup>
     ```
 
-- Salt okunur dosyaların üzerine yaz( örneğin, kullanıma alınmış değil) :
+- Salt okunan dosyaların üzerine yazılır, örneğin, kullanıma alınmamış oldukları için:
 
     ```xml
     <PropertyGroup>
@@ -118,13 +118,13 @@ Dönüştürme görevini kontrol etmek için proje dosyanızın içine ekleyebil
     </PropertyGroup>
     ```
 
-     Varsayılan olarak, T4 MSBuild görev şundan eski ise bir çıkış dosyasını yeniden oluşturur:
+     varsayılan olarak, T4 MSBuild görevi şundan eskiyse bir çıkış dosyası oluşturur:
 
      - şablon dosyası
      - dahil edilen tüm dosyalar
-     - daha önce şablon veya kullandığı yönerge işlemcisi tarafından okunan tüm dosyalar
+     - daha önce şablon tarafından veya kullandığı bir yönerge işlemcisi tarafından okunmuş olan dosyalar
 
-     Bu, yalnızca şablon ve çıkış dosyasının  tarihlerini karşılaştıran Visual Studio Tüm Şablonları Dönüştür komutu tarafından kullanılandan daha güçlü bir bağımlılık testidir.
+     bu, yalnızca şablonun ve çıkış dosyasının tarihlerini karşılaştıran Visual Studio içindeki **tüm şablonları dönüştür** komutu tarafından kullanılandan daha güçlü bir bağımlılık sınamadır.
 
 Projenizde yalnızca metin dönüştürmeleri gerçekleştirmek için TransformAll görevini çağırın:
 
@@ -140,17 +140,17 @@ TransformFile içinde joker karakterler kullanabilirsiniz:
 
 ## <a name="source-control"></a>Kaynak denetimi
 
-Kaynak denetim sistemi ile yerleşik herhangi bir tümleştirme yoktur. Ancak, örneğin, oluşturulan bir dosyayı kontrol etmek ve iade etmek için kendi uzantılarınızı ekebilirsiniz. Varsayılan olarak, metin dönüştürme görevi salt okunur olarak işaretlenmiş bir dosyanın üzerine yazmaktan kaçınır. Böyle bir dosyayla karşılaşıldıysanız, Hata Listesi'ne Visual Studio hata kaydedilir ve görev başarısız olur.
+Kaynak denetim sistemi ile yerleşik herhangi bir tümleştirme yoktur. Bununla birlikte, örneğin, bir oluşturulan dosyayı kullanıma almak ve iade etmek için kendi uzantılarınızı ekleyebilirsiniz. Varsayılan olarak, metin dönüştürme görevi salt okunurdur olarak işaretlenen bir dosyanın üzerine yazılmasını önler. böyle bir dosya ile karşılaşıldığında Visual Studio Hata Listesi bir hata kaydedilir ve görev başarısız olur.
 
 Salt okunur dosyaların üzerine yazılması gerektiğini belirtmek için bu özelliği ekleyin:
 
 `<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOutputFiles>`
 
-Son işleme adımını özelleştirmedikçe, bir dosyanın üzerine yazıldığında Hata Listesi'ne bir uyarı kaydedilir.
+Özelleştirmediğiniz adımını özelleştirmediğiniz takdirde, bir dosyanın üzerine yazıldığında hata listesi bir uyarı kaydedilir.
 
-## <a name="customize-the-build-process"></a>Derleme işlemini özelleştirme
+## <a name="customize-the-build-process"></a>Yapı işlemini özelleştirme
 
-Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. ve özelliklerini ayarlayarak dönüştürmeden önce ve sonra çağrılan görevleri `$(BeforeTransform)` `$(AfterTransform)` tanımlayabilirsiniz:
+Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. Dönüşümden önce ve sonra çağrılan görevleri ve özelliklerini ayarlayarak tanımlayabilirsiniz `$(BeforeTransform)` `$(AfterTransform)` :
 
 ```xml
 <PropertyGroup>
@@ -165,9 +165,9 @@ Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleş
 </Target>
 ```
 
-içinde, `AfterTransform` dosya listelerine başvurabilirsiniz:
+`AfterTransform`' De, dosya listelerine başvurabilirsiniz:
 
-- GeneratedFiles - işlem tarafından yazılan dosyaların listesi. Mevcut salt okunur dosyaların üzerine yazan dosyalar `%(GeneratedFiles.ReadOnlyFileOverwritten)` için true olur. Bu dosyalar kaynak denetiminden denetlenebilir.
+- GeneratedFiles - işlem tarafından yazılan dosyaların listesi. Varolan salt okuma dosyalarını içeren dosyalar için `%(GeneratedFiles.ReadOnlyFileOverwritten)` doğru olacaktır. Bu dosyalar kaynak denetiminden denetlenebilir.
 
 - NonGeneratedFiles - üzerine yazılmamış, salt okunur dosyaların listesi.
 
@@ -187,9 +187,9 @@ Bu özellikler yalnızca MSBuild tarafından kullanılır. Visual Studio'da kod 
 </ItemGroup>
 ```
 
-yeniden yönlendirilmesi yararlı bir `$(IntermediateOutputPath)` klasördür.
+Yeniden yönlendirileceği yararlı bir klasör `$(IntermediateOutputPath)` .
 
-Bir çıkış dosya adı belirtirsiniz, şablonlarda çıkış yönergesinde belirtilen uzantıdan önceliklidir.
+Bir çıkış dosya adı belirtirseniz, şablonlarda çıkış yönergesinde belirtilen uzantıya göre öncelik kazanır.
 
 ```xml
 <ItemGroup>
@@ -201,9 +201,9 @@ Bir çıkış dosya adı belirtirsiniz, şablonlarda çıkış yönergesinde bel
 </ItemGroup>
 ```
 
-Bir OutputFileName veya OutputFilePath belirtmeniz önerilmez. Ayrıca, tüm şablonları Dönüştür'Visual Studio  kullanarak veya tek dosya oluşturucusünü çalıştırarak şablonları da dönüştürebilirsiniz. Dönüşümü nasıl tetiklenize bağlı olarak farklı dosya yollarıyla karşınıza çıktı. Bu konu kafa karıştırıcı olabilir.
+**tümünü dönüştür** veya tek dosya oluşturucu çalıştıran Visual Studio içindeki şablonları de dönüştürüyorsanız, bir outputfilename veya outputfilepath kullanılması önerilmez. Dönüştürmeyi nasıl tetiklediğinize bağlı olarak farklı dosya yolları ile karşılaşırsınız. Bu konu kafa karıştırıcı olabilir.
 
-## <a name="add-reference-and-include-paths"></a>Başvuru ekleme ve yolları ekleme
+## <a name="add-reference-and-include-paths"></a>Başvuru ve ekleme yolları Ekle
 
 Ana bilgisayar, şablonlarda başvurulan derlemeler için arama yaptığı varsayılan bir grup yola sahiptir. Bu gruba ekleme yapmak için:
 
@@ -223,9 +223,9 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a> Derleme bağlamı verilerini şablonlara iletir
+## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a> Yapı bağlamı verilerini şablonlara geçirme
 
-Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, derleme özelliklerini ve [ortam](../msbuild/msbuild-properties.md) [değişkenlerini geçebilirsiniz:](../msbuild/how-to-use-environment-variables-in-a-build.md)
+Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, [Yapı](../msbuild/msbuild-properties.md) özelliklerini ve [ortam değişkenlerini](../msbuild/how-to-use-environment-variables-in-a-build.md)geçirebilirsiniz:
 
 ```xml
 <ItemGroup>
@@ -236,7 +236,7 @@ Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, derleme 
 </ItemGroup>
 ```
 
-Bir metin şablonunda, şablon `hostspecific` yönergesinde ayarlayın. Değerleri almak [için parametre](../modeling/t4-parameter-directive.md) yönergesi kullanın:
+Bir metin şablonunda, `hostspecific` şablon yönergesinde öğesini ayarlayın. Değerleri almak için [Parameter](../modeling/t4-parameter-directive.md) yönergesini kullanın:
 
 ```
 <#@template language="c#" hostspecific="true"#>
@@ -244,7 +244,7 @@ Bir metin şablonunda, şablon `hostspecific` yönergesinde ayarlayın. Değerle
 The project folder is: <#= ProjectFolder #>
 ```
 
-Yönerge işlemcisinde [ITextTemplatingEngineHost.ResolveParameterValue çağrısında bulundurarak:](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\))
+Yönerge işlemcisinde [ITextTemplatingEngineHost. ResolveParameterValue](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\))öğesini çağırabilirsiniz:
 
 ```csharp
 string value = Host.ResolveParameterValue("-", "-", "parameterName");
@@ -255,13 +255,13 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> `ResolveParameterValue`yalnızca veri `T4ParameterValues` kaynağından veri MSBuild. Şablon dönüştürmeyi kullanarak Visual Studio parametrelerin varsayılan değerleri vardır.
+> `ResolveParameterValue``T4ParameterValues`yalnızca MSBuild kullandığınızda verileri alır. Visual Studio kullanarak şablonu dönüştürdüğünüzde, parametrelerin varsayılan değerleri vardır.
 
-## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a> Derleme ve include yönergelerinde proje özelliklerini kullanma
+## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a> Derleme ve ekleme yönergeleri içindeki proje özelliklerini kullanma
 
-Visual Studio **(SolutionDir) gibi** makrolar bir MSBuild. Bunun yerine, proje özelliklerini kullanabilirsiniz.
+**$ (solutiondir)** gibi Visual Studio makrolar MSBuild çalışmaz. Bunun yerine, proje özelliklerini kullanabilirsiniz.
 
-Proje özelliğini *tanımlamak için .csproj* *veya .vbproj* dosyanızı düzenleyin. Bu örnek **myLibFolder adlı bir özelliği tanımlar:**
+Bir proje özelliği tanımlamak için *. csproj* veya *. vbproj* dosyanızı düzenleyin. Bu örnek, **Mylibfolder** adlı bir özelliği tanımlar:
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -288,13 +288,13 @@ Bu yönergeler, hem MSBuild içinde hem de Visual Studio ana bilgisayarlarında 
 
 ## <a name="q--a"></a>Soru-Cevap
 
-**Neden derleme sunucusunda şablonları dönüştürmek istiyorum? Koduma giriş Visual Studio önce Visual Studio şablonları zaten dönüştürdüm.**
+**Neden yapı sunucusundaki şablonları dönüştürmek istiyorum? kodumu iade etmeden önce Visual Studio şablonlar zaten dönüştürüyorum.**
 
-Dahil edilen bir dosyayı veya şablon tarafından okunan başka bir dosyayı Visual Studio, dosyayı otomatik olarak dönüştürmez. Şablonları derlemenin bir parçası olarak dönüştürmek, her şeyin güncel olduğundan emin olun.
+dahil edilen bir dosyayı veya şablon tarafından okunan başka bir dosyayı güncelleştirirseniz Visual Studio dosyayı otomatik olarak dönüştürmez. Derleme kapsamında şablonların dönüştürülmesi, her şeyin güncel olduğundan emin olmanızı sağlar.
 
-**Metin şablonlarını dönüştürmek için başka hangi seçenekler vardır?**
+**Metin şablonlarını dönüştürmek için diğer seçenekler nelerdir?**
 
-- [TextTransform yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md) komut betikleri içinde kullanılabilir. Çoğu durumda MSBuild kullanmak daha kolaydır.
+- [TextTransform yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md) komut betiklerine uygulanabilir. Çoğu durumda MSBuild kullanmak daha kolaydır.
 
 - [Visual Studio uzantısında metin dönüştürmeyi çağır](../modeling/invoking-text-transformation-in-a-vs-extension.md).
 

@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bağlantı noktası üzerinde çalışan bir işlemi temsil eder.
+description: Bu arabirim, bir bağlantı noktası üzerinde çalışan bir işlemi temsil eder.
 title: IDebugProcess2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 99f6cd06-4076-45ee-b2ae-fa2ad627fd18
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d56687cb3559b5807b488fa44dfdfc4048e4c58
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: dede0cad4da45ccb5df4fe528214f4e0e22d2cdc9d5fe472a41be544e248c1cf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081613"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121416254"
 ---
 # <a name="idebugprocess2"></a>IDebugProcess2
-Bu arabirim, bağlantı noktası üzerinde çalışan bir işlemi temsil eder. Bağlantı noktası yerel bağlantı noktası ise, `IDebugProcess2` genellikle yerel makinedeki fiziksel bir işlemi temsil eder.
+Bu arabirim, bir bağlantı noktası üzerinde çalışan bir işlemi temsil eder. Bağlantı noktası yerel bağlantı noktası ise, genellikle `IDebugProcess2` yerel makinede fiziksel bir işlemi temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,45 +30,45 @@ Bu arabirim, bağlantı noktası üzerinde çalışan bir işlemi temsil eder. B
 IDebugProcess2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirim, programları bir grup olarak yönetmek için özel bir bağlantı noktası sağlayıcısı tarafından uygulanır. Bu arabirimin bağlantı noktası sağlayıcısı tarafından uygulanması gerekir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim, programları grup olarak yönetmek için özel bir bağlantı noktası sağlayıcı tarafından uygulanır. Bu arabirimin bağlantı noktası sağlayıcı tarafından uygulanması gerekir.
 
- Bir hata ayıklama altyapısı, [Launchaskıya alınmış](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)aracılığıyla bir programın başlatılmasını destekliyorsa bu arabirimi de uygular.
+ Bir hata ayıklama altyapısı, [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)aracılığıyla bir program başlatmayı destekliyorsa bu arabirimi de uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim öncelikle bu işlemde tanımlanan bir program grubuyla etkileşim kurmak için oturum hata ayıklama Yöneticisi (SDM) tarafından çağrılır.
+ Bu arabirim, bu işlemde tanımlanan bir program grubuyla etkileşim kurmak için öncelikle oturum hata ayıklama yöneticisi (SDM) tarafından çağrılır.
 
- Bu arabirimi almak için [GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md) veya [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md) çağrısı yapın. Bu arabirim, çağırarak da döndürülür `IDebugEngineLaunch2::LaunchSuspended` .
+ Bu [arabirimi almak için GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md) veya [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md) çağrısı. Bu arabirim çağrılarak da `IDebugEngineLaunch2::LaunchSuspended` döndürülür.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProcess2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugProcess2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|İşlemin açıklamasını alır.|
-|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|Bu işlemde bulunan programları numaralandırır.|
-|[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|İşlemin başlığını, kolay adını veya dosya adını alır.|
-|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|Bu işlemin üzerinde çalıştığı bir makine sunucusunun örneğini alır.|
-|[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|İşlemi sonlandırır.|
-|[İliştir](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|İşleme iliştirir.|
-|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|SDM 'nin işlemi ayırabileceğini belirler.|
+|[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|Sürecin açıklamasını alır.|
+|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|Bu işlemde yer alan programları numaralar.|
+|[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|Sürecin başlığını, kolay adını veya dosya adını alır.|
+|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|Bu işlem üzerinde çalışan bir makine sunucusunun örneğini alır.|
+|[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|işlemi sonlandırılır.|
+|[İliştir](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|İşleme iliştirer.|
+|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|SDM'nin işlemi ayırabilir olup olmadığını belirler.|
 |[Ayır](../../../extensibility/debugger/reference/idebugprocess2-detach.md)|Hata ayıklayıcıyı işlemden ayırır.|
 |[GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)|Sistem işlem tanımlayıcısını alır.|
 |[GetProcessId](../../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)|Bu işlem için genel olarak benzersiz bir tanımlayıcı alır.|
-|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> Kullanım DıŞı|İşlemde hata ayıklama yapan oturumun adını alır.<br /><br /> Kullanım dışı. HER zaman DÖNDÜRMELIDIR `E_NOTIMPL` .]|
-|[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)|İşlemde çalışan iş parçacıklarını numaralandırır.|
-|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|Bu işlemdeki kodu çalıştıran bir sonraki programın durdurulması ister.|
-|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|Bu işlemin üzerinde çalıştığı bağlantı noktasını alır.|
+|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> [KULLANıM DıŞı]|İşlemde hata ayıklayıcı olan oturumun adını alır.<br /><br /> [KULLANıM DıŞı. HER ZAMAN `E_NOTIMPL` .]|
+|[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)|İşlemde çalışan iş parçacıklarını numaralar.|
+|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|Bu işlemde kod çalıştıran bir sonraki programın durdurması isteğinde bulundu.|
+|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|Bu işlem üzerinde çalışan bağlantı noktasını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir `IDebugProcess2` veya daha fazla [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimi içerir.
+ , `IDebugProcess2` bir veya daha fazla [IDebugProgram2 arabirimi](../../../extensibility/debugger/reference/idebugprogram2.md) içerir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: Msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

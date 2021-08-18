@@ -1,6 +1,6 @@
 ---
 title: Yeni Öğe Ekle İletişim Kutularına Öğe Ekleme | Microsoft Docs
-description: Projelerde kullanmak üzere şablonları ve proje öğelerini görüntüley Visual Studio yeni öğe ekle iletişim kutusuna öğe ekleme hakkında bilgi.
+description: Projelerde kullanmak üzere şablonları ve proje öğelerini görüntüley Visual Studio için yeni öğe ekle iletişim kutusuna öğe ekleme hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to

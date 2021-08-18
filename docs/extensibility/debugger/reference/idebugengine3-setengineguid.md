@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ca8010c09a703ed42b84a6585800d899ad5abb64f4cabf2cfced1ce38eb01d1e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab13c75cb0860ccf0c54d7a7fdc42d4c03e8006e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096368"
 ---
 # <a name="idebugengine3setengineguid"></a>IDebugEngine3::SetEngineGuid
 Bu yöntem, hata ayıklama altyapısının (DE) ayarlar `GUID` .

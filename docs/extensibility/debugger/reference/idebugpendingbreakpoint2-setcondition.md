@@ -1,6 +1,6 @@
 ---
 description: Bekleyen kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
-title: 'IDebugPendingBreakpoint2:: SetCondition | Microsoft Docs'
+title: IDebugPendingBreakpoint2::SetCondition | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,17 +12,18 @@ ms.assetid: 0534224f-654f-4862-bc4d-a9a81a5f8899
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d3cf12bce424e523702da92b86e8894a54ce58b7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0de250930d9d810548d4e9a49384682d3c0336cd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076608"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034857"
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
 Bekleyen kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
@@ -43,13 +44,13 @@ int SetCondition(
 
 ## <a name="parameters"></a>Parametreler
 `bpCondition`\
-'ndaki Ayarlanacak koşulu belirten [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısı.
+[in] Ayar [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) belirten bir alt yapı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Daha önce bekleyen kesme noktasıyla ilişkili olan tüm koşullar kaybedilir. Bu bekleyen kesme noktasından bağlantılı tüm kesme noktaları, koşullarını parametresinde belirtilen değere ayarlamak için çağırılır `bpCondition` .
+ Daha önce bekleyen kesme noktasıyla ilişkili tüm koşullar kaybolur. Bu bekleyen kesme noktasıyla ilişkili tüm kesme noktaları, koşullarını parametresinde belirtilen değere ayarlamak için `bpCondition` çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

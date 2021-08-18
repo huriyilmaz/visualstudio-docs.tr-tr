@@ -11,14 +11,15 @@ ms.assetid: 458dc91c-b78b-4427-84f4-615d89e26760
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 850ecedbdacb8349dc8ff6450c79dee219b61418
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 90a1e73ad968875a12531ccb620543484c26333e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149139"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081769"
 ---
 # <a name="function-debug-interface-access-sdk"></a>İşlev (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Her işlev bir sembol tarafından tanımlanır `SymTagFunction` .

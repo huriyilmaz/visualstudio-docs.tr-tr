@@ -1,6 +1,6 @@
 ---
-title: "&lt;özelleştirmeler &gt; öğesi (Visual Studio 'Da Office geliştirme)"
-description: Vstov4 ad alanının özelleştirmeler öğesinin, her bir Office çözümünü yükleme ve yükleme ile ilgili tüm bilgileri nasıl içerdiğini öğrenin.
+title: '&lt;customizations &gt; öğesi (Office geliştirme Visual Studio)'
+description: vstov4 ad alanının özelleştirmeler öğesinin her bir çözümü yükleme ve yükleme hakkında tüm Office öğrenin.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
@@ -15,19 +15,20 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 27b20a13d96b8fc23fcde2dbb8f14d1f1f27ceea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e9548c0cb730f9386a8a167e403161850a082e4a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99849937"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026531"
 ---
-# <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;özelleştirmeler &gt; öğesi (Visual Studio 'Da Office geliştirme)
-  `customizations`Ad alanı öğesi, `vstov4` her bir Office çözümünü yükleme ve yükleme ile ilgili tüm bilgileri içerir.
+# <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;customizations &gt; öğesi (Office geliştirme Visual Studio)
+  Ad `customizations` alanının `vstov4` öğesi, her bir çözüm için yükleme ve yükleme Office içerir.
 
-## <a name="syntax-for-document-level-customizations"></a>Belge düzeyi özelleştirmeleri sözdizimi
+## <a name="syntax-for-document-level-customizations"></a>Belge düzeyi özelleştirmeler için söz dizimi
 
 ```xml
 <customizations>
@@ -40,7 +41,7 @@ ms.locfileid: "99849937"
 </customizations>
 ```
 
-## <a name="syntax-for-vsto-add-ins"></a>VSTO eklentileri sözdizimi
+## <a name="syntax-for-vsto-add-ins"></a>VSTO Eklentileri için Söz Dizimi
 
 ```xml
 <customizations>
@@ -58,22 +59,22 @@ ms.locfileid: "99849937"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `customizations`Öğesi, her Office çözümüyle ilgili belirli bilgileri içerir. Bu öğe şu ad alanında olmalıdır: `vstov4=urn:schemas-microsoft-com:vsto.v4` . Derlemenin alt öğeleri de bu ad alanında olmalıdır.
+ öğesi, `customizations` her bir çözümle ilgili Office içerir. Bu öğe aşağıdaki ad alanı içinde yer alalır: `vstov4=urn:schemas-microsoft-com:vsto.v4` . Derlemenin alt öğeleri de bu ad alanına sahip olması gerekir.
 
- `customizations`Öğesinde hiç öznitelik yok.
+ öğesinin `customizations` özniteliği yoktur.
 
- `customizations`Öğesi aşağıdaki alt öğeye sahiptir.
+ öğesi `customizations` aşağıdaki alt öğeye sahip.
 
 ### <a name="customization"></a>Özelleştirme
- Gereklidir. `customization` `vstov4` Ad alanındaki öğesi [&#60;özelleştirme&#62; öğesi Visual Studio 'da Office geliştirme&#41;&#40;](../vsto/customization-element-office-development-in-visual-studio.md)tanımlanmıştır.
+ Gereklidir. ad `customization` alanında `vstov4` öğesi, 'de geliştirme [&#60;için&#62; özelleştirme &#40;Office öğesinde Visual Studio&#41;. ](../vsto/customization-element-office-development-in-visual-studio.md)
 
-## <a name="example-of-a-document-level-customization"></a>Belge düzeyi özelleştirmesi örneği
+## <a name="example-of-a-document-level-customization"></a>Belge düzeyinde özelleştirme örneği
 
-### <a name="description"></a>Description
- Aşağıdaki kod örneği, `customizations` belge düzeyi özelleştirmesi için öğesini gösterir.
+### <a name="description"></a>Açıklama
+ Aşağıdaki kod örneği, belge `customizations` düzeyinde özelleştirme için öğesini gösterir.
 
 > [!NOTE]
-> Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+> Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -87,10 +88,10 @@ ms.locfileid: "99849937"
 </vstov4:customizations>
 ```
 
-## <a name="example-of-a-vsto-add-in"></a>VSTO eklentisi örneği
+## <a name="example-of-a-vsto-add-in"></a>VSTO Örneği
 
-### <a name="description"></a>Description
- Aşağıdaki kod örneği, `customizations` VSTO eklentisinin öğesini gösterir. Bu, form bölgelerini içeren bir Outlook VSTO eklentisi. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+### <a name="description"></a>Açıklama
+ Aşağıdaki kod örneği, bir `customizations` eklentinin VSTO göstermektedir. Bu, form Outlook VSTO içeren bir eklentidir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -124,6 +125,6 @@ ms.locfileid: "99849937"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
-- [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
+- [Uygulama çözümleri için Office bildirimleri](../vsto/application-manifests-for-office-solutions.md)
+- [Dağıtım çözümleri için Office bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
 - [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

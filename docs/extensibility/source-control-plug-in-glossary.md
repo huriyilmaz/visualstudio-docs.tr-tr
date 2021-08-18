@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45d4c946e78a611d7e4837366fbbf618f317c775d7d362f2807ccd40d084b1c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bf9753900bcccaf92cd1813103ad41173355c2c3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358954"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049473"
 ---
 # <a name="source-control-plug-in-glossary"></a>Kaynak Denetimi Eklentisi Sözlüğü
 Aşağıdaki yararlı terimler ve tanımlar Kaynak Denetimi Eklentisi SDK belgeleriyle ilgilidir.
@@ -29,7 +29,7 @@ Aşağıdaki yararlı terimler ve tanımlar Kaynak Denetimi Eklentisi SDK belgel
 
  Depodan çalışan bir kopya isteği oluşturma ve depoyu değiştirme amacınızı bildirme eylemini kontrol edin. Çalışma kopyası, kullanıma alınmış olan andan itibaren projenin durumunu yansıtıyor.
 
- İstemci Kaynak kodu denetim sistemini kullanan bir program. Bu belgelerin amacı, IDE'Visual Studio belgedir.
+ İstemci Kaynak kodu denetim sistemini kullanan bir program. Bu belgelerin amacı, Visual Studio IDE'dir.
 
  Açıklama: Kaynak denetimi işlemi gerçekleştirilecek bir kullanıcının düzeltmeye ek olarak ekley yaptığı değişiklikleri açıklayan bir ileti.
 
@@ -37,7 +37,7 @@ Aşağıdaki yararlı terimler ve tanımlar Kaynak Denetimi Eklentisi SDK belgel
 
  Dizin İstemci tarafı yerel klasörü, dizin olarak adlandırılır. Bu, kullanıcının gerçekten değişiklik yaptığınız kopyadır. Bir projenin çok sayıda çalışan kopyası olabilir; genellikle her geliştiricinin kendi kopyası vardır.
 
- Get A get işlemi, kullanıcının çalışma kopyasını depo kopyasıyla güncel olarak getirir. Kullanımdan farklı olarak, kullanıcı yalnızca en son kopyaya ihtiyaç olduğunda ancak değişiklik yapma amacında olduğunda bir alma işlemi gerçekleştirilir.
+ Get A get işlemi, kullanıcının çalışma kopyasını depo kopyasıyla güncel olarak getirir. Kullanımdan farklı olarak, kullanıcının yalnızca en son kopyaya ihtiyacı olduğunda ancak değişiklik yapma amacında olduğunda bir alma işlemi gerçekleştirilir.
 
  Geçmiş Genellikle kaynak denetim deposunda yapılan tüm iadelerin, iadelerin, güncelleştirmelerin, etiketlerin ve yayınların özetidir.
 
@@ -49,7 +49,7 @@ Aşağıdaki yararlı terimler ve tanımlar Kaynak Denetimi Eklentisi SDK belgel
 
  Eklenti Kaynak Denetimi Eklentisi API'sini kullanarak kaynak denetimi işlevselliği sağlayan bir DLL.
 
- Depo Kaynak denetim sisteminin projenin tam düzeltme geçmişini depolayıp depolaması gereken ana kopya. Her projenin tam olarak bir deposu var.
+ Depo Kaynak denetim sisteminin bir projenin tam düzeltme geçmişini depolayıp depolaması gereken ana kopya. Her projenin tam olarak bir deposu var.
 
  Düzeltme Bir dosya veya dosya kümesi geçmişinde kaydedilmiş bir değişiklik. Düzeltme, sürekli değişen bir projede yer alan anlık görüntülerdendir.
 

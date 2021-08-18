@@ -7,16 +7,17 @@ ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 597d17b69aa3f0feca520e6100439d934e5d9211
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.openlocfilehash: c89c5296ced84b887c7acc5d190030cb9710305b5f066dea7bee008e6f6245b9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607352"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121372627"
 ---
-# <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio 'da Equals ve GetHashCode metot geçersiz kılmaları oluşturma
+# <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio içinde Equals ve GetHashCode metot geçersiz kılmaları oluşturma
 
 Bu kod üretimi için geçerlidir:
 
@@ -59,7 +60,7 @@ Bu kod üretimi için geçerlidir:
 
    - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
 
-   - Sağ üst köşedeki ![Visual Studio 'da hızlı eylemler screwdriver simgesinin ekran görüntüsü](../media/screwdriver-icon.png) Sol kenar boşluğunda görünen simge.
+   - Sağ üst köşedeki ![Visual Studio hızlı eylemler screwdriver simgesinin ekran görüntüsü](../media/screwdriver-icon.png) Sol kenar boşluğunda görünen simge.
 
 1. Açılan menüde **eşittir (nesne) oluştur** veya **eşittir ve GetHashCode oluştur**' u seçin.
 

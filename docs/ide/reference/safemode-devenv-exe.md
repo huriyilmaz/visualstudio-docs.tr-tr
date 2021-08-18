@@ -1,6 +1,6 @@
 ---
 title: -SafeMode (devenv.exe)
-description: Visual Studio 'Yu güvenli modda başlatmak için SafeMode Devenv komut satırı anahtarını kullanarak yalnızca varsayılan ortam ve Hizmetleri yükleme hakkında bilgi edinin.
+description: SafeMode devenv komut satırı anahtarını kullanarak güvenli modda Visual Studio ortamı ve hizmetleri yükleme hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -12,18 +12,19 @@ ms.assetid: b191f6a5-8f12-47ec-bcc7-b68149a22aa8
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 1626776ec41bdbdfe5ad2b611516e62ada4f15a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b89fe1bd998b8bd74ebb9e80998eac53824bceddebd9d8a208a038746cfa2daf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957874"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121334256"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 
-Visual Studio 'Yu güvenli modda başlatır, yalnızca varsayılan ortam ve Hizmetleri yükleyerek.
+Güvenli Visual Studio, yalnızca varsayılan ortam ve hizmetleri yükleniyor olarak başlatılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,11 +34,11 @@ devenv /SafeMode
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu anahtar, Visual Studio başlatıldığında tüm üçüncü taraf VSPackages 'nin yüklenmesini engeller ve kararlı yürütmeye izin verir.
+Bu anahtar, uygulama başlatıldığında tüm üçüncü taraf VSPackage'ların yüklenmesini Visual Studio kararlı yürütmeye olanak sağlar.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, Visual Studio güvenli modda başlatılır.
+Aşağıdaki örnek, Visual Studio modunda çalışmaya başlar.
 
 ```shell
 devenv /safemode

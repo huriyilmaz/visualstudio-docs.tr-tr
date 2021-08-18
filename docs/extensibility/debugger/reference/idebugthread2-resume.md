@@ -11,17 +11,18 @@ ms.assetid: 36aad682-b0b9-40a2-b3fc-f0e61d41cdbc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93552bac60d16a21212bfa89816481cf7099d399
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3bde7f2f80e64b04bdccc0c75006553f813b5763a352e1ecbae22d37781c70f0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053028"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292019"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
 Bir iş parçacığının yürütülmesini sürdürür.

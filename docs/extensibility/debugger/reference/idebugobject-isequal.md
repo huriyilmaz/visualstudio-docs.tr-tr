@@ -11,17 +11,18 @@ ms.assetid: 4b76e663-ef2e-41ff-9be1-bf26d666a34a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cff388778ea584f589f92b5dc9dab11c060c953c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 22b5f3a98afa2be496295dd13e8ec1c2b5f08a1b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054094"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034987"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
 Bir nesneyi bu nesneyle karşılaştırır.

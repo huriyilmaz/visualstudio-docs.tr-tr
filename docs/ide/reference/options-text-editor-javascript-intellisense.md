@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 051711a9d6dfe861f37e741ae9ecabfbf741012e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ae69061c68d76c30dcc845f6aaa922496529f9bf61c29dac1d7200ec1406b6da
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932364"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121334425"
 ---
 # <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Seçenekler iletişim kutusu: metin düzenleyici \> JavaScript \> IntelliSense
 
@@ -52,7 +52,7 @@ Bu seçenek başvuru grubu türünü belirtir. Üç başvuru grubu desteklenir:
 
 Belirli IntelliSense .js dosyalarının farklı JavaScript projeleri için kapsamda olduğunu belirtmek için önceden tanımlı başvuru gruplarını kullanabilirsiniz. Dört başvuru grubu mevcuttur:
 
-- JavaScript kullanan uygulamalar için örtük (Windows *sürümü*) [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] . Bu gruba eklenen dosyalar, JavaScript kullanan uygulamalar için kod Düzenleyicisi 'nde açılan her. js dosyası için kapsamdadır [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] .
+- JavaScript kullanan uygulamalar için örtük (Windows *sürüm*) [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] . Bu gruba eklenen dosyalar, JavaScript kullanan uygulamalar için kod Düzenleyicisi 'nde açılan her bir .js dosyası için kapsamdadır [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] .
 
 - Örtük (Web); HTML5 projeleri için. Bu grupta yer alan dosyalar, bu proje türleri için Kod Düzenleyicisi'nde açılan her .js dosyası için kapsama girer.
 
@@ -73,7 +73,7 @@ Bu seçenek, uygun dosyaların bulunduğu yere giderek ek IntelliSense .js dosya
 
 **Çeşitli dosyalar projesindeki dosyalar için Uzak başvuruları (ör. http://) İndir**
 
-Bu onay kutusu seçildiğinde ve bir proje bağlamı dışında açılmış bir JavaScript dosyanız varsa, Visual Studio IntelliSense bilgilerini sağlamak amacıyla dosyada başvurulan uzak JavaScript dosyalarını indirir. Bu seçenek işaretliyse, JavaScript dosyanıza bir başvuru olarak dahil edildiğinde dosyalar indirilir.
+bu onay kutusu seçildiğinde ve bir proje bağlamı dışında açılmış bir JavaScript dosyanız varsa, Visual Studio ıntellisense bilgilerini sağlamak amacıyla dosyada başvurulan uzak javascript dosyalarını indirir. Bu seçenek işaretliyse, JavaScript dosyanıza bir başvuru olarak dahil edildiğinde dosyalar indirilir.
 
 > [!NOTE]
 > Web projeleri için, projenizde başvurulan uzak dosyalar varsayılan olarak indirilir.

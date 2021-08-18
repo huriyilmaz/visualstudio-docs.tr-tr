@@ -1,6 +1,6 @@
 ---
-description: Numaralandırmadaki DEBUG_REFERENCE_INFO öğelerinin bir sonraki kümesini döndürür.
-title: 'IEnumDebugReferenceInfo2:: Next | Microsoft Docs'
+description: Numaralamadan sonraki DEBUG_REFERENCE_INFO öğelerini döndürür.
+title: IEnumDebugReferenceInfo2::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 74f0aed65ae0fce7cf10fd068d9e31bb0b5792ccf50003777ee2c256d6f4a932
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1e863b8c4a10cbdc75b537c56a73693f75605bc1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121306536"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034818"
 ---
 # <a name="ienumdebugreferenceinfo2next"></a>IEnumDebugReferenceInfo2::Next
-Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
+Numaralamadan sonraki öğe kümesi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
+[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
 
 `rgelt`\
-[in, out] Doldurulacak [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) öğeleri dizisi.
+[in, out] Doldurulması [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) öğe dizisi.
 
 `pceltFetched`\
-dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
+[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür, aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

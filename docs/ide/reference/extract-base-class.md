@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15f6516b5114e7624babca567a65e7f041e4b56abe1090b4b98c1eb7d4d943d3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c3dec3fb8f00f763ea898b17e97c3714c75bfddb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429541"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034298"
 ---
 # <a name="extract-base-class"></a>Temel sınıfı ayıklama
 

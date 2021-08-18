@@ -1,6 +1,6 @@
 ---
 title: Araçları ve Araç Kutusunu Özelleştirme
-description: Kullanıcıların modellerine eklemesini sağlamak istediğiniz öğeler için araç kutusu öğelerini nasıl tanımlamanız gerektiğini öğrenin.
+description: Kullanıcıların modellerine eklemesini istediğiniz öğeler için araç kutusu öğelerini nasıl tanımlamanız gerektiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,21 +13,22 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 956955a9c2feb9982bee0101965336be2ca29ab7
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: cb444f1f3378f62061e4116967e4fc0f525860e92e44234e571c8fb3f2e51275
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385818"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121411151"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>Araçları ve Araç Kutusunu Özelleştirme
 
-Kullanıcıların modellerine eklemesini sağlamak istediğiniz öğeler için araç kutusu öğelerini tanımlamanız gerekir. İki tür araç vardır: öğe araçları ve bağlantı araçları. Oluşturulan tasarımcıda, Kullanıcı şekilleri diyagrama sürüklemek için bir öğe aracı seçebilir ve şekiller arasında bağlantı çizmek için bir bağlantı aracı seçebilir. Genel olarak, öğe araçları kullanıcıların, modellerine etki alanı sınıfı örnekleri eklemesine izin verir ve bağlantı araçları, etki alanı ilişkilerinin örneklerini eklemesini sağlar.
+Kullanıcıların modellerine eklemesini istediğiniz öğeler için araç kutusu öğeleri tanımlamanız gerekir. İki tür araç vardır: öğe araçları ve bağlantı araçları. Oluşturulan tasarımcıda, kullanıcı şekilleri diyagrama sürüklemek için bir öğe aracı ve şekiller arasında bağlantı çizmek için bir bağlantı aracı da seçerek bir öğe aracından seçim yapabilirsiniz. Genel olarak, öğe araçları kullanıcıların modellerine etki alanı sınıflarının örneklerini eklemesine, bağlantı araçları ise etki alanı ilişkilerinin örneklerini eklemesine izin verilmektedir.
 
-## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a> Araç kutusu nasıl tanımlanır
- DSL Gezgini 'nde, düzenleyici düğümünü ve altındaki düğümleri genişletin. Genellikle şuna benzer bir hiyerarşi görürsünüz:
+## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a> Araç kutusu nasıl tanımlanır?
+ DSL Gezgini'nde Düzenleyici düğümünü ve altındaki düğümleri genişletin. Genellikle aşağıdakine benzer bir hiyerarşi görünür:
 
 ```
 Editor
@@ -38,68 +39,68 @@ Editor
                ExampleRelationship // a connection tool
 ```
 
-DSL Gezgini 'nin bu bölümünde şunları yapabilirsiniz:
+DSL Gezgini'nin bu bölümünde şunları sekleyebilirsiniz:
 
-- Yeni sekmeler oluşturun. Sekmeler araç kutusunda bölüm başlıklarını tanımlar.
+- Yeni sekmeler oluşturun. Sekmeler, araç kutusunda bölüm başlıklarını tanımlar.
 
 - Yeni araçlar oluşturun.
 
-- Araç Kopyala ve Yapıştır.
+- Araçları kopyalayıp yapıştırın.
 
-- Araçları listede yukarı veya aşağı taşıyın.
+- Araçları listede yukarı veya aşağı taşıma.
 
 - Sekmeleri ve araçları silin.
 
 > [!IMPORTANT]
-> DSL Gezgininde öğe eklemek veya yapıştırmak için, yeni düğümün alt öğesine sağ tıklayın. Örneğin, bir araç eklemek için **Araçlar** düğümünü değil, sekmesine sağ tıklayın. Sekme eklemek için **Düzenleyici** düğümüne sağ tıklayın.
+> DSL Gezgini'ne öğe eklemek veya yapıştırmak için yeni düğümün yer alan öğesini sağ tıklatın. Örneğin, bir araç eklemek için Araçlar düğümüne değil sekmeye **sağ** tıklayın. Sekme eklemek için Düzenleyici düğümüne **sağ** tıklayın.
 
-Her aracın **araç kutusu simgesi** özelliği bir 16x16 bit eşlem dosyasına başvurur. Bu dosyalar genellikle **Dsl\resources** klasöründe tutulur.
+Her **aracın Araç** Kutusu Simgesi özelliği 16x16 bit eşlem dosyasına başvurur. Bu dosyalar genellikle **Dsl\Resources klasöründe** tutulur.
 
-Bir öğe aracının **Class** özelliği somut bir etki alanı sınıfına başvurur. Varsayılan olarak, araç bu sınıfın örneklerini oluşturur. Ancak, aracın öğe grupları veya farklı türlerde öğeler oluşturmasını sağlamak için kod yazabilirsiniz.
+Bir öğe aracının **Class** özelliği somut bir etki alanı sınıfına başvurur. Varsayılan olarak, araç bu sınıfın örneklerini oluşturacak. Ancak, aracın öğe grupları veya farklı türlerde öğeler oluşturması için kod yazabilirsiniz.
 
-Bir bağlantı aracının **bağlantı Oluşturucu** özelliği, aracın ne tür öğeleri bağlayabileceğini ve bunlar arasında hangi ilişkilerin oluşturduğunu tanımlayan bir bağlantı Oluşturucusu anlamına gelir. Bağlantı oluşturucular DSL Gezgininde düğüm olarak tanımlanır. Bağlantı oluşturucular, etki alanı ilişkileri tanımladığınızda otomatik olarak oluşturulur, ancak bunları özelleştirmek için kod yazabilirsiniz.
+Bir **bağlantı aracının Connection Builder** özelliği, aracın bağlanabilirsiniz öğe türlerini ve aralarında hangi ilişkileri oluşturduğu tanımlayan bir bağlantı oluşturucuya başvurur. Bağlantı oluşturucuları DSL Gezgini'nde düğüm olarak tanımlanır. Etki alanı ilişkilerini tanımladığınız zaman bağlantı oluşturucuları otomatik olarak oluşturulur, ancak bunları özelleştirmek için kod yazabilirsiniz.
 
 #### <a name="to-add-a-tool-to-the-toolbox"></a>Araç kutusuna araç eklemek için
 
-1. Genellikle bir şekil sınıfı oluşturduktan ve onu bir etki alanı sınıfıyla eşleştirdikten sonra bir öğe aracı oluşturursunuz.
+1. Bir şekil sınıfı oluşturduktan ve bir etki alanı sınıfına eşledikten sonra genellikle bir öğe aracı oluşturmanız gerekir.
 
-     Genellikle bir bağlayıcı sınıfı oluşturup bir başvuru ilişkisiyle eşleştirdikten sonra bir bağlayıcı aracı oluşturursunuz.
+     Bağlayıcı sınıfını oluşturduktan ve bir başvuru ilişkisiyle eşledikten sonra genellikle bir bağlayıcı aracı oluşturmanız gerekir.
 
-2. DSL Gezgini ' nde **Düzenleyici** düğümünü ve **araç kutusu sekmeleri** düğümünü genişletin.
+2. DSL Gezgini'nde Düzenleyici **düğümünü ve** Araç Kutusu **Sekmeleri düğümünü** genişletin.
 
-     Bir araç kutusu sekme düğümüne sağ tıklayın ve ardından **Yeni öğe Ekle aracı** veya **Yeni bağlantı ekle**' ye tıklayın.
+     Araç kutusu sekme düğümüne sağ tıklayın ve ardından Yeni Öğe Aracı **Ekle veya Yeni** Bağlantı Aracı **Ekle'ye tıklayın.**
 
-3. **Araç kutusu simgesi** özelliğini 16x16 bit eşlem 'e başvuracak şekilde ayarlayın.
+3. Araç Kutusu Simgesi özelliğini 16x16 bit eşlem değerine başvurmak için ayarlayın. 
 
-     Yeni bir simge tanımlamak istiyorsanız, **Dsl\resources** klasöründe Çözüm Gezgini bir bit eşlem dosyası oluşturun. Dosya şu özellik değerlerine sahip olmalıdır: **derleme eylemi**  =  **içeriği**; **Çıkış Dizinine Kopyala**  =  **Kopyalamayın**.
+     Yeni bir simge tanımlamak için **Dsl\Resources** klasöründeki Çözüm Gezgini bit eşlem dosyası oluşturun. Dosyanın şu özellik değerlerine sahip olması gerekir: **Derleme Eylemi**  =  **İçeriği**; **Çıkış Dizinine Kopyalama**  =  **kopyalamayın.**
 
-4. **Bir öğe aracı için:** Bir şekle eşlenen somut bir etki alanı sınıfına başvuracak şekilde aracın **sınıf** özelliğini ayarlayın.
+4. **Bir öğe aracı için:** Bir şekle eşlenmiş somut bir etki alanı sınıfına başvurmak için aracın **Class** özelliğini ayarlayın.
 
-     **Bağlayıcı aracı için:** Aracının **bağlantı Oluşturucu** özelliğini, açılan listede sunulan öğelerden birine ayarlayın. Bağlantı oluşturucular, bir bağlayıcıyı bir etki alanı ilişkisiyle eşleştirdiğinizde otomatik olarak oluşturulur. Yakın zamanda bir bağlayıcı oluşturduysanız, normalde ilişkili bağlantı oluşturucuyu seçersiniz.
+     **Bağlayıcı aracı için:** Aracın **Connection Builder** özelliğini açılan listede sunulan öğelerden biri olarak ayarlayın. Bir bağlayıcıyı bir etki alanı ilişkisiyle eşleyenin bağlantı oluşturucuları otomatik olarak oluşturulur. Yakın zamanda bir bağlayıcı oluşturduysanız normalde ilişkili bağlantı oluşturucusu'nu seçersiniz.
 
-5. DSL 'yi test etmek için F5 veya CTRL + F5 tuşlarına basın ve Visual Studio 'nun deneysel örneğinde örnek bir model dosyası açın. Yeni araç araç kutusunda görünmelidir. Yeni bir öğe oluşturduğunu doğrulamak için onu diyagrama sürükleyin.
+5. DSL'yi test etmek için F5 veya CTRL+F5 tuşlarına basın ve Visual Studio örnek model dosyasını açın. Yeni aracın araç kutusunda görünmesi gerekir. Yeni bir öğe oluşturduğundan emin olmak için diyagrama sürükleyin.
 
-     Araç görünmezse, deneysel Visual Studio 'Yu durdurun. Windows **Başlat** menüsünde **Microsoft Visual Studio 2010 Deneysel örneğini Sıfırla**' yı çalıştırın. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın. Ardından DSL 'yi yeniden test edin.
+     Araç görünmüyorsa deneysel aracı Visual Studio. Başlat menüsünde Windows  **2010 Deneysel Örneği'Microsoft Visual Studio sıfırla'yı çalıştırın.** Derleme menüsünde **Çözümü Yeniden** **Oluştur'a tıklayın.** Ardından DSL'i yeniden test etmek.
 
-## <a name="customizing-element-tools"></a><a name="customizing"></a> Öğe araçlarını özelleştirme
- Varsayılan olarak, araç belirtilen sınıfın tek bir örneğini oluşturur, ancak bunu iki şekilde değiştirebilirsiniz:
+## <a name="customizing-element-tools"></a><a name="customizing"></a> Öğe Araçlarını Özelleştirme
+ Varsayılan olarak, araç belirtilen sınıfın tek bir örneğini oluşturacak, ancak bunu iki şekilde değiştirebilirsiniz:
 
-- Diğer sınıflarda öğe birleştirme yönergeleri tanımlayın, bu sınıfın yeni örneklerini kabul etmelerini ve yeni öğe oluşturulduğunda ek bağlantılar oluşturmalarına olanak tanır. Örneğin, kullanıcının başka bir öğeye açıklama bırakmaya izin verebilir ve bu nedenle ikisi arasında bir başvuru bağlantısı oluşturabilirsiniz.
+- Diğer sınıflarda Öğe Birleştirme Yönergelerini tanımlayın, bu sınıfların yeni örneklerini kabul etmelerini ve yeni öğe oluşturulduğunda ek bağlantılar oluşturmalarını sağlar. Örneğin, kullanıcının bir Açıklamayı başka bir öğeye bırakmasına ve böylece ikisi arasında bir başvuru bağlantısı oluşturmasına izin veebilirsiniz.
 
-     Bu özelleştirmeler Ayrıca Kullanıcı bir öğeyi yapıştırdığınızda veya sürüklediğinde ne olacağını da etkiler.
+     Bu özelleştirmeler, kullanıcı bir öğeyi yapıştırarak veya sürükler ve bıraksa ne olacağını da etkiler.
 
-     Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
+     Daha fazla bilgi için [bkz. Öğe Oluşturma ve Taşımayı Özelleştirme.](../modeling/customizing-element-creation-and-movement.md)
 
-- Araç, öğe grupları oluşturabilmesi için özelleştirmek üzere kod yazın. Araç, geçersiz kılabileceğiniz ToolboxHelper. cs içindeki yöntemlerle başlatılır. Daha fazla bilgi için, bkz. [bir araçtan öğe grupları oluşturma](#groups).
+- Araç, öğe grupları oluşturacak şekilde özelleştirmek için kod yazın. Araç, Geçersiz kılabilirsiniz ToolboxHelper.cs'de yöntemlerle başlatılır. Daha fazla bilgi için [bkz. Bir Araçtan Öğe Grupları Oluşturma.](#groups)
 
-## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a> Bir araçtan öğe grupları oluşturma
- Her öğe aracında oluşturulması gereken öğelerin bir prototipi bulunur. Varsayılan olarak, her öğe aracı tek bir öğe oluşturur, ancak aynı zamanda bir araçla ilişkili nesneler grubu oluşturmak da mümkündür. Bunu yapmak için, aracı <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> ilgili öğeleri içeren bir ile başlatın.
+## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a> Araçtan Öğe Grupları Oluşturma
+ Her öğe aracı, oluşturması gereken öğelerin bir prototipini içerir. Varsayılan olarak, her öğe aracı tek bir öğe oluşturur, ancak tek bir araçla bir grup ilgili nesne oluşturmak da mümkündür. Bunu yapmak için, aracı ilgili öğeleri içeren <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> bir ile başlatabilirsiniz.
 
- Aşağıdaki örnek, bir tür dönüştürme işlemi olan bir DSL 'den alınmıştır. Her bir Transislatör üç adlı terminalde sahiptir. Transtemciler için öğe Aracı, dört model öğesi ve üç ilişki bağlantısı içeren bir prototipi depolar. Kullanıcı, aracı diyagram üzerine sürüklediğinde, prototip oluşturulur ve model köküne bağlanır.
+ Aşağıdaki örnek, transistor türünün olduğu bir DSL'den alınarak alınır. Her Transistor üç adlandırılmış Terminale sahip olur. Transistors için öğe aracı dört model öğesi ve üç ilişki bağlantısı içeren bir prototip depolar. Kullanıcı aracı diyagrama sürüklerse prototip örneği ve model köküne bağlıdır.
 
- Bu kod, **Dsl\GeneratedCode\ToolboxHelper.cs** içinde tanımlanan bir yöntemi geçersiz kılar.
+ Bu kod **Dsl\GeneratedCode\ToolboxHelper.cs içinde tanımlanan bir yöntemi geçersiz kılar.**
 
- Program kodunu kullanarak modeli özelleştirme hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
+ Program kodunu kullanarak modeli özelleştirme hakkında daha fazla bilgi için bkz. Program Kodunda [Modelde Gezinme ve Güncelleştirme.](../modeling/navigating-and-updating-a-model-in-program-code.md)
 
 ```
 using Microsoft.VisualStudio.Modeling;
@@ -141,27 +142,27 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 }  }    }
 ```
 
-## <a name="customizing-connection-tools"></a><a name="connections"></a> Bağlantı araçlarını özelleştirme
- Genellikle, yeni bir bağlayıcı sınıfı oluşturduğunuzda bir öğe aracı oluşturursunuz. Alternatif olarak, iki ucunun türlerin ilişki türünü belirlemesine izin vererek bir aracı aşırı yükleyebilirsiniz. Örneğin, Person-Person ilişkilerini ve Person-Town ilişkilerini oluşturabileceğiniz bir bağlantı aracı tanımlayabilirsiniz.
+## <a name="customizing-connection-tools"></a><a name="connections"></a> Bağlantı Araçlarını Özelleştirme
+ Genellikle, yeni bir bağlayıcı sınıfı oluşturmak için bir öğe aracı oluşturmanız gerekir. Alternatif olarak, iki uç türünün ilişkinin türünü belirlemesi için bir aracı aşırı yük devredebilirsiniz. Örneğin, hem ilişki oluşturma hem de ilişki oluşturma Person-Person bir bağlantı Person-Town tanımlayabilirsiniz.
 
- Bağlantı araçları bağlantı oluşturucularını çağırır. Kullanıcıların oluşturulan tasarımcıda öğeleri nasıl bağlayabilirler belirtmek için bağlantı oluşturucuları kullanın. Bağlantı oluşturucular, bağlanoluşturulabilecek öğeleri ve aralarında oluşturulan bağlantı türünü belirtir.
+ Bağlantı araçları bağlantı oluşturucularını çağırır. Kullanıcıların oluşturulan tasarımcıda öğeleri nasıl bağlaylarını belirtmek için bağlantı oluşturucuları kullanın. Bağlantı oluşturucuları bağlanacak öğeleri ve aralarında oluşturulan bağlantının türlerini belirtir.
 
- Etki alanı sınıfları arasında bir başvuru ilişkisi oluşturduğunuzda, bağlantı Oluşturucu otomatik olarak oluşturulur. Bağlantı aracını eşlediğinizde Bu bağlantı oluşturucusunu kullanabilirsiniz. Bağlantı araçları oluşturma hakkında daha fazla bilgi için bkz. [araç kutusunu yapılandırma](../modeling/customizing-tools-and-the-toolbox.md).
+ Etki alanı sınıfları arasında bir başvuru ilişkisi oluşturulduğunda, otomatik olarak bir bağlantı oluşturucu oluşturulur. Bir bağlantı aracını eşlerken bu bağlantı oluşturucusu'nu kullanabilirsiniz. Bağlantı araçları oluşturma hakkında daha fazla bilgi için [bkz. Araç Kutusunu Yapılandırma.](../modeling/customizing-tools-and-the-toolbox.md)
 
- Varsayılan bağlantı oluşturucuyu, farklı bir kaynak ve hedef türleri aralığıyla uğraşabilmesi ve farklı türde ilişkiler oluşturabilmeniz için değiştirebilirsiniz.
+ Varsayılan bağlantı oluşturucusu'nu farklı bir kaynak ve hedef türü aralığıyla ilgilenerek farklı ilişki türleri oluşturarak değiştirebilirsiniz.
 
- Bağlantı oluşturuculara yönelik kaynak ve hedef sınıfları belirtmek için Ayrıca bağlantı oluşturucuları için özel kod yazabilir, yapılacak bağlantı türünü tanımlayabilir ve bir bağlantının oluşturulmasıyla ilişkili diğer işlemleri gerçekleştirebilirsiniz.
+ Ayrıca bağlantının kaynak ve hedef sınıflarını belirtmek, yapılacak bağlantı türünü tanımlamak ve bağlantının oluşturulmasıyla ilişkili diğer eylemleri yapmak için bağlantı oluşturucuları için özel kod da yazabilirsiniz.
 
-### <a name="the-structure-of-connection-builders"></a>Bağlantı oluşturucuların yapısı
- Bağlantı oluşturucular, etki alanı ilişkisini ve kaynak ve hedef öğeleri belirten bir veya daha fazla bağlantı bağlama yönergesi içerir. Örneğin, görev akışı çözüm şablonunda, **DSL Gezgini**'Nde **CommentReferencesSubjectsBuilder** ' ı görebilirsiniz. Bu bağlantı Oluşturucusu, **commentreferencesilgilileri** adlı bir bağlantı bağlama yönergesi içerir ve bu ad alanı Ilişkisi **commentreferenceskonularıyla** eşlenir. Bu bağlantı bağlama yönergesi, etki alanı sınıfına işaret eden bir kaynak rol yönergesini `Comment` ve `FlowElement` etki alanı sınıfına işaret eden bir hedef rol yönergesini içerir.
+### <a name="the-structure-of-connection-builders"></a>Bağlantı Oluşturucularının Yapısı
+ Bağlantı oluşturucuları, etki alanı ilişkisini, kaynak ve hedef öğeleri belirten bir veya daha fazla bağlantı bağlantısı yönergesi içerir. Örneğin, Görev Yöneticisi Flow şablonunda DSL Gezgini'nde **CommentReferencesSubjectsBuilder'ı** **görebilir.** Bu bağlantı oluşturucu, **CommentReferencesSubjects** etki alanı ilişkisiyle eşlenen **CommentReferencesSubjects** adlı bir bağlantı bağlantı yönergesi içerir. Bu bağlantı bağlantısı yönergesi, etki alanı sınıfını ve etki alanı sınıfına yönelik bir hedef rol yönergesi ile birlikte bir `Comment` kaynak rol `FlowElement` yönergesi içerir.
 
-### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>Kaynak ve hedef rolleri kısıtlamak için bağlantı oluşturucuları kullanma
- Kaynak roldeki veya belirli bir etki alanı ilişkisinin hedef rolündeki belirli sınıfların oluşumunu kısıtlamak için bağlantı oluşturucularını kullanabilirsiniz. Örneğin, başka bir etki alanı sınıfıyla bir etki alanı ilişkisine sahip olan bir temel etki alanı sınıfınız olabilir, ancak taban sınıfın tüm türetilmiş sınıflarının bu ilişkide aynı rollere sahip olmasını istemeyebilirsiniz. Görev akışı çözümünde, doğrudan soyut etki alanı sınıfından (StartPoint, **uç nokta**, MergeBranch ve eşitleme **), bundan** dolaylı olarak miras alan iki somut etki alanı sınıfı **vardır (** **StartPoint**, Endpoint, **MergeBranch** ve **Synchronization**) **.** Ayrıca, hem kaynak rolünde hem de hedef rolde **aynı etki alanı** sınıflarını alan bir **akış** başvurusu ilişkisi vardır. Ancak, bir **uç nokta** etki alanı sınıfının bir örneği bir **akış** ilişkisi örneğinin kaynağı olmamalıdır, ya da bir **StartPoint** sınıfının örneği bir **akış** ilişkisi örneğinin hedefi olmalıdır. **FlowBuilder** bağlantı oluşturucusunun, kaynak rolünü (**görev**, **MergeBranch**, **StartPoint** ve **Synchronization**) çalabildiğini ve hedef rolünü (**MergeBranch**, **uç nokta** ve **eşitleme**) çalabildiğini belirten **Flow** adlı bir bağlantı bağlama yönergesi vardır.
+### <a name="using-connection-builders-to-restrict-source-and-target-roles"></a>Kaynak ve Hedef Rolleri Kısıtlamak için Bağlantı Oluşturucularını Kullanma
+ Belirli sınıfların kaynak rolde veya belirli bir etki alanı ilişkisinin hedef rolünde oluşumunu kısıtlamak için bağlantı oluşturucuları kullanabilirsiniz. Örneğin, başka bir etki alanı sınıfıyla etki alanı ilişkisi olan bir temel etki alanı sınıfına sahip olabilir, ancak temel sınıfın türetilmiş tüm sınıflarının bu ilişkide aynı rollere sahip olması istemeyebilirsiniz. Görev Flow çözümünde, doğrudan **FlowElement** soyut etki alanı sınıfından devralan dört somut etki alanı sınıfı **(StartPoint**, **EndPoint**, **MergeBranch** ve **Eşitleme)** ve bundan dolaylı olarak devralınan iki somut etki alanı sınıfı **(Task** **ve ObjectInState)** vardır. Ayrıca, hem **kaynak Flow** hem de hedef rolünde **FlowElement** etki alanı sınıflarını alan bir başvuru ilişkisi vardır. Ancak, **bir EndPoint** etki alanı sınıfının örneği **bir Flow** ilişkisinin örneğinin kaynağı veya **StartPoint** sınıfının örneği, bir Flow ilişkisinin **örneğinin hedefi** olmalıdır. **FlowBuilder** bağlantı oluşturucusu, **hangi** etki alanı sınıflarının kaynak rolü (**Görev**, **MergeBranch**, **StartPoint** ve **Eşitleme**) oynata ve hedef rolü (**MergeBranch,** **Uç** Nokta ve Eşitleme ) oynatanı belirten Flow adlı bir bağlantı bağlantısı yönergesine **sahip.**
 
-### <a name="connection-builders-with-multiple-link-connect-directives"></a>Birden çok bağlantı bağlama yönergesi olan bağlantı oluşturucular
- Bir bağlantı oluşturucusuna birden fazla bağlantı bağlama yönergesi ekleyebilirsiniz. Bu, etki alanı modelinin bazı karmaşıklıklarını gizlemenize ve **araç kutusunun** çok karışık olmasını sağlamanıza yardımcı olabilir. Tek bir bağlantı oluşturucusuna birkaç farklı etki alanı ilişkisi için bağlantı bağlama yönergeleri ekleyebilirsiniz. Ancak, etki alanı ilişkilerini yaklaşık olarak aynı işlevi gerçekleştirirken birleştirmeniz gerekir.
+### <a name="connection-builders-with-multiple-link-connect-directives"></a>Birden Çok Bağlantı Bağlama Yönergesi Bağlan Oluşturucular
+ Bir bağlantı oluşturucuya birden fazla bağlantı bağlantısı yönergesi ekleme. Bu, etki alanı modelinin bazı karmaşıklıklarını kullanıcılardan gizlemeye ve **Toolbox'ın** çok dağınık hale gelen durumlarını ortadan kaldırır. Tek bir bağlantı oluşturucuya birkaç farklı etki alanı ilişkisi için bağlantı bağlantısı yönergeleri ebilirsiniz. Ancak, yaklaşık olarak aynı işlevi gerçekleştirecekleri zaman etki alanı ilişkilerini birleştirmeniz gerekir.
 
- Görev akışı çözümünde **akış** bağlantısı aracı hem **Flow** hem de **objectflow** etki alanı ilişkilerinin örneklerini çizmek için kullanılır. **FlowBuilder** bağlantı Oluşturucu, daha önce açıklanan **Flow** bağlantı bağlama yönergesinin yanı sıra **objectflow** adlı iki bağlantı bağlama yönergesi içerir. Bu yönergeler, **objectinstate** etki alanı sınıfının örnekleri arasında ya **da bir** **ObjectInState** örneğinden bir görevin örneğine veya **bir görevin bir** örneğinden bir **Objectinstate** örneğine **değil, bir** **objectflow** ilişkisinin bir örneğinin çizildiğini belirtir. Ancak, bir **akış** ilişkisinin bir örneği bir **görevin** iki örneği arasında çizilebilir. Görev akışı çözümünü derleyip çalıştırırsanız, bir **Objectinstate** örneğinden bir **görevin** örneğine **akış** çizimi için bir **objectflow** örneği oluşturur, ancak bir **görevin** iki örneği arasında bir **akış** çizmek bir **akış** örneği oluşturur.
+ Task Flow çözümünde, **Flow** bağlantı aracı hem Flow hem de **ObjectFlow** **etki alanı** ilişkilerinin örneklerini çizmek için kullanılır. **FlowBuilder bağlantı** oluşturucusu, daha önce **açıklanan Flow** bağlantı bağlantısı yönergesine ek olarak ObjectFlow adlı iki bağlantı bağlantısı **yönergesine de sahip.** Bu **yönergeler, objectFlow** ilişkisinin bir örneğinin ObjectInState etki alanı sınıfının örnekleri arasında veya **bir ObjectInState** örneğinden bir Görevin örneğine çekilene, ancak bir  Görevin iki örneği arasında ya da bir Görev örneğinden **bir ObjectInState** örneğine çekilene kadar belirtmektedir.   Ancak, bir görev **Flow** bir görevin iki örneği arasında **çizilir.** Task Flow çözümünü derler ve çalıştırırsanız, **bir ObjectInState** örneğinden bir Görev örneğine **Flow** çiziminin  **ObjectFlow** örneği oluşturduğuna ancak bir Görevin iki örneği arasında bir  **Flow** çiziminin bir **Flow** örneği oluşturduğuna dikkat edersiniz.
 
 ### <a name="custom-code-for-connection-builders"></a>Bağlantı oluşturucuları için özel kod
  Kullanıcı arabiriminde, bağlantı oluşturucuların farklı tür özelleştirmesini tanımlayan dört onay kutusu vardır:
@@ -192,11 +193,11 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  Bu nedenle, bir bağlantının iç içe geçmiş bir bileşenden giden bağlantı noktasına gelebileceğini belirtmek isteyebilirsiniz. Böyle bir bağlantı belirtmek için, Aşağıdaki çizimlerde gösterildiği **gibi,** **InPort** türü Için kaynak rol ve **çıkış noktası** türü ' nde hedef rol olarak **özel kabul et** ' i ayarlayın:
 
- **DSL Gezgininde bağlantı bağlama yönergesi**
+ **DSL gezgininde bağlantı Bağlan yönergesi**
 
  ![Bağlantı Oluşturucu görüntüsü](../modeling/media/connectionbuilder_4a.png)
 
- **DSL ayrıntıları penceresinde bağlantı bağlama yönergesi**
+ **DSL ayrıntıları penceresinde bağlantı Bağlan yönergesi**
 
  ![DSL ayrıntıları penceresinde bağlantı bağlama yönergesi](../modeling/media/connectionbuilder_4b.png)
 

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a4d75583b2c936b82e167618356a9ae0547f337e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e769f4c960d49cb66f92a72f4a402c81c8f54b7f25f041251680138c84f4f07b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122089023"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292643"
 ---
 # <a name="idebugeventcallback2"></a>IDebugEventCallback2
 Bu arabirim hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisini (SDM) göndermek için kullanılır.

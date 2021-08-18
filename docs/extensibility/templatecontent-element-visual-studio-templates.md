@@ -1,6 +1,6 @@
 ---
-title: templatecontent öğesi (Visual Studio şablonları) | Microsoft Docs
-description: TemplateContent öğesi ve şablonun içeriğini nasıl belirttiği hakkında bilgi edinin.
+title: TemplateContent Öğesi (Visual Studio Şablonları) | Microsoft Docs
+description: TemplateContent öğesi hakkında bilgi ve şablonun içeriğini nasıl belirtir?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -48,7 +48,7 @@ ms.locfileid: "121447733"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|Şablondan bir proje oluşturulduğunda çözümün oluşturulup oluşturulmayacağını belirtir.|
+|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|Şablondan bir proje oluşturulduğunda çözümün oluşturulıp oluşturul olmadığını belirtir.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -57,7 +57,7 @@ ms.locfileid: "121447733"
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Birden fazla projeli şablonların içeriğini ve düzenini belirtir.|
 |[Project](../extensibility/project-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Projeye eklenecek dosyaları veya dizinleri belirtir.|
 |[Başvurular](../extensibility/references-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Bir öğe şablonu için gereken derleme başvurularını belirtir.|
-|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|İsteğe bağlı öğe.<br /><br /> Şablonda içerilen bir dosyayı belirtir.|
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|İsteğe bağlı öğe.<br /><br /> Şablonda yer alan bir dosyayı belirtir.|
 |[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|İsteğe bağlı öğe.<br /><br /> Şablondan bir proje veya öğe oluşturulduğunda kullanılacak özel parametreleri belirtir.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
@@ -70,7 +70,7 @@ ms.locfileid: "121447733"
  `TemplateContent` gerekli bir öğedir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir uygulama için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+ Aşağıdaki örnek, bir uygulama için proje şablonu meta verilerini [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] gösterir.
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"

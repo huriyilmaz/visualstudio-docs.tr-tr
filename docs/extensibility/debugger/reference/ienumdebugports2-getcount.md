@@ -11,17 +11,18 @@ ms.assetid: d714455c-e4fc-48dc-a6d4-7e8b5d7c1bce
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e6201b24c7134815c6958a50ff355dd7d2d406ec
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8b94e56c0a2a4c44139ac223b7368ee494e5aa567fd24662ce2e8814a55ae06a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052805"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121291746"
 ---
 # <a name="ienumdebugports2getcount"></a>IEnumDebugPorts2::GetCount
 Numaralandırmadaki öğe sayısını döndürür.

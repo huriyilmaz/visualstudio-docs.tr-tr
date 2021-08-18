@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e9f9772b808181a0049d335bc850faaecacdadf5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b9358d0e715ae66a774f3de58cde37f6e1feadaa3fe7b4aec2a0144d16cfc571
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122088997"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121292526"
 ---
 # <a name="idebugexpression2"></a>IDebugExpression2
 Bu arabirim, bağlama ve değerlendirme için bir ayrıştırılmış ifadeyi temsil eder.

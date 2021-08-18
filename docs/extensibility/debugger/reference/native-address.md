@@ -11,17 +11,18 @@ ms.assetid: 7a0cd085-bfc8-45cc-a3d4-4459070e207a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 799120bf3a068ccbc7eebad729b4312d6715af34
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 10cded1aca1dfca2a46677f851eacb4966103a5f00687b53e62bd9e78b0be125
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086475"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121388974"
 ---
 # <a name="native_address"></a>NATIVE_ADDRESS
 
@@ -44,19 +45,19 @@ public struct NATIVE_ADDRESS {
 ## <a name="members"></a>Üyeler
 
 `unknown`\
-Yerel adres (Bunun anlamı çalışma zamanına ve işletim sistemine bağlıdır).
+Yerel adres (bunun anlamı çalışma zamanı ve işletim sistemine bağlıdır).
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_NATIVE` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+Bu yapı, yapının alanı [(DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) enumerasyonundan bir değer) olarak ayarlanırken ADDRESS_KIND `dwKind` parçası `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_NATIVE` olur. [](../../../extensibility/debugger/reference/address-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

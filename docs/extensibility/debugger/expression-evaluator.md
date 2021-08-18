@@ -1,6 +1,6 @@
 ---
-title: İfade Değerlendirici | Microsoft Docs
-description: Çalışma zamanında kesme modunda değişkenleri ve ifadeleri ayrıştırmak ve değerlendirmek için bir dilin söz dizimini inceleyen ifade değerlendiricileri hakkında bilgi alın.
+title: İfade değerlendiricisi | Microsoft Docs
+description: Çalışma zamanında, kesme modunda değişkenleri ve ifadeleri ayrıştırmaya ve değerlendirmeye yönelik bir dilin sözdizimini inceleyerek ifade değerlendiricileri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,35 +12,36 @@ ms.assetid: f9381b2f-99aa-426c-aea0-d9c15f3c859b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 998f361d8008257cb8f4a888b4d4fbb985c9c977
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 3316252d5958e2e1a685e7b09a90eaee0fba07e9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900986"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096654"
 ---
 # <a name="expression-evaluator"></a>İfade değerlendirici
-İfade değerlendiricileri (EE), çalışma zamanında değişkenleri ve ifadeleri ayrıştırmak ve değerlendirmek için bir dilin söz dizimini inceler ve IDE kesme modundayken kullanıcı tarafından sınanmalarını sağlar.
+Expression değerlendiricileri (EE), çalışma zamanında değişkenleri ve ifadeleri ayrıştırmak ve değerlendirmek için bir dilin söz dizimini inceleyerek, ıde kesme modundayken kullanıcı tarafından görüntülenmesine izin verir.
 
-## <a name="use-expression-evaluators"></a>İfade değerlendiricileri kullanma
- İfadeler Aşağıdaki gibi [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemi kullanılarak oluşturulur:
+## <a name="use-expression-evaluators"></a>Expression değerlendiricileri kullanma
+ İfadeler, [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemi kullanılarak şu şekilde oluşturulur:
 
-1. Hata ayıklama altyapısı (DE), [IDebugExpressionContext2 arabirimini](../../extensibility/debugger/reference/idebugexpressioncontext2.md) uygulama.
+1. Hata ayıklama altyapısı (DE) [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimini uygular.
 
-2. Hata ayıklama paketi bir `IDebugExpressionContext2` [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabiriminden bir nesnesi alır ve ardından `IDebugStackFrame2::ParseText` bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) nesnesi almak için bu nesne üzerinde yöntemini arar.
+2. Hata ayıklama paketi bir `IDebugExpressionContext2` [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabiriminden bir nesne alır ve sonra `IDebugStackFrame2::ParseText` bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) nesnesi almak için bu yöntemi çağırır.
 
-3. Hata ayıklama paketi, [ifadenin değerini](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) almak için EvaluateSync yöntemini veya [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemini çağırarak. `IDebugExpression2::EvaluateAsync` Komut/Hemen penceresinden çağrılır. Diğer tüm kullanıcı arabirimi bileşenleri çağrısında `IDebugExpression2::EvaluateSync` bulundu.
+3. Hata ayıklama paketi, ifadenin değerini almak için [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) yöntemini veya [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemini çağırır. `IDebugExpression2::EvaluateAsync` Komut/komut penceresinden çağrılır. Tüm diğer kullanıcı arabirimi bileşenleri çağrısı `IDebugExpression2::EvaluateSync` .
 
-4. İfade değerlendirmesinin sonucu, ifade değerlendirmesinin sonucun adını, türünü ve değerini içeren [bir IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesidir.
+4. İfade değerlendirmesinin sonucu, ifade değerlendirmesi sonucunun adını, türünü ve değerini içeren bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesidir.
 
-   İfade değerlendirmesi sırasında EE, sembol sağlayıcısı bileşeninden bilgi gerektirir. Sembol sağlayıcısı ayrıştırilen ifadeyi tanımlamak ve anlamak için kullanılan sembolik bilgileri sağlar.
+   ifade değerlendirmesi sırasında, EE sembol sağlayıcısı bileşeninden bilgi gerektirir. Sembol sağlayıcısı, ayrıştırılmış ifadeyi tanımlamak ve anlamak için kullanılan sembolik bilgileri sağlar.
 
-   Zaman uyumsuz ifade değerlendirmesi tamamlandığında, IDE'ye ifade değerlendirmesinin tamam olduğunu bildirmek için oturum hata ayıklama yöneticisi (SDM) aracılığıyla DE tarafından zaman uyumsuz bir olay gönderilir. Ardından, değerlendirmenin sonucu yöntemine yapılan çağrıdan `IDebugExpression2::EvaluateSync` döndürülür.
+   Zaman uyumsuz ifade değerlendirmesi tamamlandığında, IDE 'ye ifade değerlendirmesi tamamlandığını bildirmek için, oturum hata ayıklama Yöneticisi (SDM) üzerinden DE zaman uyumsuz bir olay gönderilir. Ve sonra, değerlendirmenin sonucu `IDebugExpression2::EvaluateSync` yönteme döndürülür.
 
 ## <a name="implementation-notes"></a>Uygulama notları
- Hata ayıklama altyapıları, Common Language Runtime (CLR) arabirimlerini kullanarak ifade [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] değerlendiricisi ile konuşmayı bekler. Sonuç olarak, hata ayıklama altyapıları ile çalışan bir ifade değerlendirici CLR'i desteklemeli (tüm CLR hata ayıklama arabirimlerinin tam listesi debugref.doc içinde bulunabilir ve bu da 'nin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir parçası). [!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)]
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklama motorları, ortak dil çalışma zamanı (CLR) arabirimlerini kullanarak ifade değerlendiricisi ile iletişim kurmasını bekler. Sonuç olarak, hata ayıklama altyapılarıyla birlikte çalışarak bir ifade değerlendirici [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] clr 'yi desteklemelidir (tüm clr hata ayıklama arabirimlerinin bir listesi, ' nin parçası olan debugref.doc bulunabilir [!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)] ).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcısı bileşenleri](../../extensibility/debugger/debugger-components.md)
+- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md)

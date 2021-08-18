@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e927d95c7d6ea526fc1400ea22be8243809fba4591833eb442268180aa1b4847
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f760b56599d91ba5f8cdcadf9e2eb0f826dee664
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378260"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096615"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>olay kaynakları (Visual Studio SDK)
 İki olay kaynağı vardır: hata ayıklama altyapısı (DE) ve oturum hata ayıklama Yöneticisi (SDM). Sürümünden gönderilen olaylar NULL olmayan bir altyapıya sahip olsa da, SDM 'den gönderilen olayların NULL bir altyapısı vardır.

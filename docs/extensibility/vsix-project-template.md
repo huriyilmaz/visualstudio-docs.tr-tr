@@ -1,6 +1,6 @@
 ---
-title: VSıX proje şablonu | Microsoft Docs
-description: VSIX projesinde Visual Studio uzantılarını kaydırmak için VSıX proje şablonunu kullanmayı öğrenin ve sonra paketi Visual Studio Market yayımlayın.
+title: vsıx Project şablonu | Microsoft Docs
+description: vsıx projesindeki Visual Studio uzantıları kaydırmak için vsıx Project şablonunu nasıl kullanacağınızı öğrenin ve ardından paketi Visual Studio market 'te yayımlayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,30 +11,31 @@ ms.assetid: b6c82167-e2a5-4cff-8c8b-2d72e2a9092c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f8e5e9f9a5a21600aa894ee8b7f6c3730bc1fc7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 781ee248999510bf28323d34e6fe8025bd40f9c317656045b3c196f15499d029
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062271"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121335231"
 ---
 # <a name="vsix-project-template"></a>VSıX proje şablonu
 
-VSIX projesinde bir veya daha fazla Visual Studio uzantısını kaydırmak için VSıX proje şablonunu kullanabilir ve sonra paketi [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesinde yayımlayabilirsiniz.
+vsıx projesindeki bir veya daha fazla Visual Studio uzantısını kaydırmak için vsıx Project şablonunu kullanabilir ve sonra paketi [Visual Studio market](https://marketplace.visualstudio.com/) Web sitesinde yayımlayabilirsiniz.
 
  VSıX dağıtımı VSPackages, derlemeler, MEF Bileşenleri, proje şablonları, öğe şablonları, araç kutusu denetimleri ve özel uzantı türlerini destekler.
 
 > [!NOTE]
-> VSıX projelerini kullanmak için Visual Studio SDK 'sını yüklemelisiniz. Visual Studio SDK hakkında daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
+> vsıx projelerini kullanmak için Visual Studio SDK 'sını yüklemelisiniz. Visual Studio sdk hakkında daha fazla bilgi için bkz. [Visual Studio sdk](../extensibility/visual-studio-sdk.md).
 
 ## <a name="where-to-find-the-vsix-project-template"></a>VSıX proje şablonunun nerede bulunacağı
 
-VSıX proje şablonu, "VSIX" araması yaparak **Yeni proje** iletişim kutusunda kullanılabilir.  Hem C# hem de Visual Basic sürümü vardır.
+vsıx Project şablonu, **yeni Project** iletişim kutusunda "vsıx" araması yaparak kullanılabilir.  hem C# hem de Visual Basic sürümü vardır.
 
 > [!TIP]
-> **Yeni proje** iletişim kutusunun üst kısmındaki aşağı açılan liste kutusunda .NET Framework 4,5 veya üzeri bir sürümü belirtildiğinden emin olun.
+> **yeni Project** iletişim kutusunun üst kısmındaki aşağı açılan liste kutusunda .NET Framework 4,5 veya üzeri bir sürümü belirtildiğinden emin olmanız gerekir.
 
 ## <a name="uses-of-the-vsix-project-template"></a>VSıX proje şablonunun kullanımları
 
@@ -52,7 +53,7 @@ Mevcut bir uzantıyı veya VSıX desteği olmayan bir uzantıyı boş bir VSıX 
 
 1. Uzantınızı oluşturan projeleri oluşturun.
 
-2. **VSIX proje** şablonunu kullanarak bir VSIX projesi oluşturun.
+2. **vsıx Project** şablonunu kullanarak bir vsıx projesi oluşturun.
 
     *Source. Extension. valtmanifest* , **bildirim tasarımcısında** açılır.
 
@@ -66,7 +67,7 @@ Mevcut bir uzantıyı veya VSıX desteği olmayan bir uzantıyı boş bir VSıX 
 
    1. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
-   2. **Proje** listesinde, uzantının adını seçin.
+   2. **Project** listesinde, uzantının adını seçin.
 
    3. **Bu klasöre Ekle** kutusuna varlığın ekleneceği bir klasörün adını girin ve **Tamam** düğmesini seçin.
 
@@ -82,7 +83,7 @@ Mevcut bir uzantıyı veya VSıX desteği olmayan bir uzantıyı boş bir VSıX 
 
 8. Çözümü derleyin.
 
-    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSıX bildirim dosyası, bir [Content_Types]*. xml* dosyası ve projeye eklediğiniz tüm uzantı varlıklarını içeren bir *. vsix* dosyası oluşturur.
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSıX bildirim dosyası, bir [Content_Types]*.xml* dosyası ve projeye eklediğiniz tüm uzantı varlıklarını içeren bir *. vsix* dosyası oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

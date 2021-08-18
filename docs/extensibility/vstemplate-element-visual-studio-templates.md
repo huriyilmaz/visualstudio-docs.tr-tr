@@ -1,5 +1,5 @@
 ---
-title: VSTemplate öğesi (Visual Studio şablonları) | Microsoft Docs
+title: vstemplate öğesi (Visual Studio şablonları) | Microsoft Docs
 description: VSTemplate öğesi hakkında bilgi edinin ve proje şablonu, öğe şablonu veya Starter Kit hakkında tüm meta verileri nasıl içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -15,14 +15,14 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7509614613ac80bc4f697f7f93358819eb9ecde4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b57965d7b59ca921c0b3831c24413709f85f0ff5ee8a394f357629ea66992357
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062219"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121335218"
 ---
-# <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate öğesi (Visual Studio şablonları)
+# <a name="vstemplate-element-visual-studio-templates"></a>vstemplate öğesi (Visual Studio şablonları)
 Proje şablonu, öğe şablonu veya Starter Kit ile ilgili tüm meta verileri içerir.
 
 ## <a name="syntax"></a>Syntax
@@ -49,7 +49,7 @@ Proje şablonu, öğe şablonu veya Starter Kit ile ilgili tüm meta verileri i�
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> şablonu sınıflandırmakta olan verileri belirtir ve **yeni Project** veya **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonun içeriğini belirtir.|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|İsteğe bağlı öğe.|
 |[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|İsteğe bağlı öğe.|
@@ -88,5 +88,5 @@ Proje şablonu, öğe şablonu veya Starter Kit ile ilgili tüm meta verileri i�
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

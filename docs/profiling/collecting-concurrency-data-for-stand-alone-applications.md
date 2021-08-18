@@ -1,6 +1,6 @@
 ---
 title: Profil oluşturucu komut satırı-tek başına uygulama eşzamanlılık verilerini al
-description: Visual Studio 'da profil oluşturucu komut satırını kullanarak tek başına uygulamalar için eşzamanlılık verileri toplayın.
+description: Visual Studio profil oluşturucu komut satırını kullanarak tek başına uygulamalar için eşzamanlılık verileri toplayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,15 +11,16 @@ ms.assetid: 0a2c6d8a-50b3-48aa-b617-9137b049d21e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 24cd41210628bc507b3666e57f9cdc2abf609a6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4bd2c54864cdbfbfcf8aaea0b8f1c27db37222263b5f328591aa7e08671012a1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868445"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121333723"
 ---
 # <a name="collect-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak tek başına uygulamalar için eşzamanlılık verileri toplama
 Profil Oluşturma Araçları eşzamanlılık yöntemi, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CPU kullanımı, iş parçacığı çakışması, iş parçacığı geçişi, eşitleme gecikmeleri, ÇAKıŞAN GÇ ve diğer sistem olayları gösteren kaynak çekişmesi verilerini ve iş parçacığı etkinlik verilerini toplamanıza olanak sağlar.
@@ -28,9 +29,9 @@ Profil Oluşturma Araçları eşzamanlılık yöntemi, [!INCLUDE[vsprvs](../code
 
 |Görev|İlgili içerik|
 |----------|---------------------|
-|**.NET Framework bir uygulama başlatma ve eşzamanlılık verileri profili oluşturma**|-   [Nasıl yapılır: eşzamanlılık verileri toplamak için .NET Framework uygulaması başlatma](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md)|
+|**.NET Framework bir uygulama başlatma ve eşzamanlılık verileri profili oluşturma**|-   [nasıl yapılır: eşzamanlılık verileri toplamak için .NET Framework uygulaması başlatma](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md)|
 |**C/C++ uygulaması başlatma ve eşzamanlılık verileri profili oluşturma**|-   [Nasıl yapılır: eşzamanlılık verileri toplamak için yerel bir uygulama başlatma](../profiling/how-to-launch-a-stand-alone-native-application-to-collect-concurrency-data.md)|
-|**Profil oluşturucuyu çalışan bir .NET Framework uygulamasına iliştirme**|-   [Nasıl yapılır: eşzamanlılık verileri toplamak için profil oluşturucuyu bir .NET Framework uygulamasına Iliştirme](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md)|
+|**profil oluşturucuyu çalışan bir .NET Framework uygulamasına iliştirme**|-   [nasıl yapılır: eşzamanlılık verileri toplamak için profil oluşturucuyu bir .NET Framework uygulamasına iliştirme](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md)|
 |**Profil oluşturucuyu çalışan bir C/C++ uygulamasına iliştirme**|-   [Nasıl yapılır: yerel bir uygulamaya profil oluşturucu Iliştirme ve eşzamanlılık verileri toplama](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler
@@ -48,7 +49,7 @@ Profil Oluşturma Araçları eşzamanlılık yöntemi, [!INCLUDE[vsprvs](../code
 
 |Görev|İlgili içerik|
 |----------|---------------------|
-|**Profil ASP.NET uygulamaları**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
+|**ASP.NET uygulamalar profili**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|
 |**Profil hizmetleri**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|
 
 ### <a name="analyze-concurrency-data-views-and-reports"></a>Eşzamanlılık veri görünümlerini ve raporlarını çözümleme

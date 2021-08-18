@@ -1,6 +1,6 @@
 ---
 title: Diyagramların özellikleri
-description: Diyagramlar hakkında bilgi ve diyagramların oluşturulan tasarımcıda nasıl görüneceklerini belirten özellikleri nasıl ayarlayabilirsiniz?
+description: Diyagramlar hakkında bilgi edinin ve diyagramların oluşturulan tasarımcıda nasıl görüneceğini belirten özellikleri nasıl ayarlayabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/31/2018
 ms.topic: reference
@@ -14,40 +14,40 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 55479e0882532249b89b36920023c83634ac7c21122078fbe6063fcb32dc2c58
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5128befb2460a364758a692cfe5cac0a30732f1e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121288561"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034142"
 ---
 # <a name="properties-of-diagrams"></a>Diyagramların özellikleri
-Diyagramların oluşturulan tasarımcıda nasıl görüneceklerini belirten özellikler belirtebilirsiniz. Örneğin, diyagramda metin için varsayılan bir renk belirtebilirsiniz.
+Diyagramların oluşturulan tasarımcıda nasıl görüneceğini belirten özellikler ayarlayabilirsiniz. Örneğin, diyagramdaki metin için varsayılan bir renk belirtebilirsiniz.
 
- Daha fazla bilgi için [bkz. Etki alanına özgü bir dil tanımlama.](../modeling/how-to-define-a-domain-specific-language.md) Bu özellikleri kullanma hakkında daha fazla bilgi için [bkz. Etki alanına özgü bir dili özelleştirme ve genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
+ Daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [etki alanına özgü dili özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
- Aşağıdaki tabloda diyagramların özellikleri liste almaktadır.
+ Aşağıdaki tabloda, diyagramların özellikleri listelenmektedir.
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
-|Dolgu Rengi|Diyagram için dolgu rengi.|Beyaz|
-|Metin Rengi|Diyagramda görüntülenen metnin rengi.|Siyahi|
-|Erişim Değiştiricisi|Sınıfın erişim değiştiricisi (genel veya iç).|Genel|
+|Dolgu Rengi|Diyagram için doldur rengi.|Beyaz|
+|Metin rengi|Diyagramda görüntülenen metnin rengi.|Siyahi|
+|Erişim değiştiricisi|Sınıfın erişim değiştiricisi (genel veya iç).|Genel|
 |Özel Öznitelikler|Oluşturulan kod sınıfına öznitelik eklemek için kullanılır.|\<none>|
-|Çift Türetilen|ise, `True` hem temel bir sınıf hem de kısmi bir sınıf (geçersiz kılmalar aracılığıyla özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için [bkz. Oluşturulan sınıfları geçersiz kılma ve genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|Yanlış|
-|Özel Oluşturucuya Sahip|ise, `True` kaynak kodunda özel bir oluşturucu sağlanır. Daha fazla bilgi için [bkz. Oluşturulan sınıfları geçersiz kılma ve genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|Yanlış|
-|Devralma Değiştiricisi|Diyagramdan ( , veya ) oluşturulan kaynak kod sınıfının `none` `abstract` devralmanın nasıl olduğunu `sealed` açıklar.|Hiçbiri|
-|Temel Diyagram|Bu diyagramın temel sınıfı.|(yok)|
+|Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|Yanlış|
+|Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir Oluşturucu sağlanacaktır. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md)..|Yanlış|
+|Devralma değiştiricisi|Diyagramdan oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` , `abstract` , veya `sealed` ).|Hiçbiri|
+|Temel diyagram|Bu diyagramın temel sınıfı.|(yok)|
 |Name|Bu diyagramın adı.|Geçerli ad|
-|Ad Alanı|Bu diyagrama bağlı olan ad alanı.|Geçerli ad alanı|
-|Temsil Edilen Sınıf|Bu diyagramın temsil ettiği kök etki alanı sınıfı.|Varsa geçerli kök sınıfı|
+|Ad Alanı|Bu diyagramla ilişkili ad alanı.|Geçerli ad alanı|
+|Temsil edilen sınıf|Bu diyagramın temsil ettiği kök etki alanı sınıfı.|Geçerliyse geçerli kök sınıfı|
 |Notlar|Bu öğeyle ilişkili resmi olmayan notlar.|\<none>|
-|Dolgu Rengini Farklı Görüntüler Özelliği|ise, `True` kullanıcı oluşturulan tasarımcı diyagramının dolgu rengini ayarlayın. Bu özelliği ayarlamak için diyagram şekline sağ tıklayın ve Maruz **Ekle'ye tıklayın.**|Yanlış|
-|Metin Rengini Farklı Görüntüler Özelliği|ise, `True` kullanıcı, oluşturulan tasarımcıda diyagramın metin rengini ayarlayın. Bu özelliği ayarlamak için diyagram şekline sağ tıklayın ve Maruz **Ekle'ye tıklayın.**|Yanlış|
-|Açıklama|Oluşturulan tasarımcıyı belgeley etmek için kullanılan açıklama.|\<none>|
+|Dolgu rengini özellik olarak gösterir|İse `True` , Kullanıcı oluşturulan tasarımcının diyagramının Fill rengini ayarlayabilir. Bu özelliği ayarlamak için diyagram şekline sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|Yanlış|
+|Metin rengini özellik olarak gösterir|Eğer `True` Kullanıcı, oluşturulan tasarımcıda diyagramın metin rengini ayarlayabilir. Bu özelliği ayarlamak için diyagram şekline sağ tıklayıp **gösterilen Ekle**' ye tıklayın.|Yanlış|
+|Açıklama|Oluşturulan tasarımcıyı belgelemek için kullanılan açıklama.|\<none>|
 |Görünen Ad|Bu diyagram için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
-|Yardım Anahtar Sözcüğü|Bu diyagram için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|
+|Help anahtar sözcüğü|Bu diyagram için F1 yardımını dizine eklemek için kullanılan anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Etki alanına özgü dil araçları sözlüğü](/previous-versions/bb126564(v=vs.100))
+[Etki alanına özgü dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))

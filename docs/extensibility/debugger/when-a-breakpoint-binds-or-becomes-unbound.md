@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a2373497f56f1c689de12bdd72e55fba84f51cc5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 6ffceee9c4f4ae79548e9ed1622a03a2240d9fcaba35e35a7f2aae10446f2071
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122070482"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448448"
 ---
 # <a name="when-a-breakpoint-binds-or-becomes-unbound"></a>Bir kesme noktası bağlanıyor veya bağlantı dışı hale geliyorsa
 Bir kesme noktası [IDebugPendingBreakpoint2::CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md) yöntemine bir çağrı yapılırken bağlanama zamanı ve kesme noktası oluşturma zamanı farklıdır.

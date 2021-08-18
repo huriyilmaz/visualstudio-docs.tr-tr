@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3923976619af3d1b31836663e7137f85be38feefec1aa79271f094244d4d289b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dbde8bb527b29e2c303218236268a3730a0c8b68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378197"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096643"
 ---
 # <a name="execution-control-and-state-evaluation"></a>Yürütme denetimi ve durum değerlendirmesi
 Bir uygulamada hata ayıklamak, bu tür yürütme denetimi özelliklerinin işlevleri üzerinde Adımlama, kesme noktalarında durdurulması ve yürütmeye devam edilmesi için uygulanması gerekir. Visual Studio hata ayıklama, hata ayıklayıcı bileşenleri arasında gönderilen olaylar üzerinde yürütme denetimini temel alır.

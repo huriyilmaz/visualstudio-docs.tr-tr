@@ -1,6 +1,6 @@
 ---
 title: Denetimleri verilere bağlama
-description: Denetimleri Visual Studio 'daki verilere bağlayın. Veri kaynakları penceresinden öğeleri sürükleyerek veri bağlantılı denetimler oluşturun.
+description: Denetimleri Visual Studio verilere bağlayın. Veri kaynakları penceresinden öğeleri sürükleyerek veri bağlantılı denetimler oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,24 +13,25 @@ ms.assetid: be8b6623-86a6-493e-ab7a-050de4661fd6
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: a237d07af14cd6f31af300eff050c8952fd9840e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: adbe3262e1da3c0d28f16bf32d94952c6565e142
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859352"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081938"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere denetimler bağlama
 
-Verileri denetimlere bağlayarak uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. **Veri kaynakları** penceresinden öğeleri, Visual Studio 'daki bir yüzey üzerindeki bir tasarım yüzeyine veya denetimlerine sürükleyerek bu veriye bağlı denetimler oluşturabilirsiniz.
+Verileri denetimlere bağlayarak uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. **Veri kaynakları** penceresinden öğeleri Visual Studio bir yüzey üzerinde bir tasarım yüzeyine veya denetimlerine sürükleyerek, bu veriye bağlı denetimleri oluşturabilirsiniz.
 
-Bu konuda, veri bağlantılı denetimler oluşturmak için kullanabileceğiniz veri kaynakları açıklanmaktadır. Ayrıca, Veri bağlamada yer alan genel görevlerden bazılarını açıklar. Veriye bağlı denetimler oluşturma hakkında daha ayrıntılı bilgi için bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) ve [Visual STUDIO 'daki verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
+Bu konuda, veri bağlantılı denetimler oluşturmak için kullanabileceğiniz veri kaynakları açıklanmaktadır. Ayrıca, Veri bağlamada yer alan genel görevlerden bazılarını açıklar. veriye bağlı denetimler oluşturma hakkında daha ayrıntılı bilgi için bkz. [Visual Studio içindeki verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) ve [Visual Studio içindeki verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
 
 ## <a name="data-sources"></a>Veri kaynakları
 
-Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabilen bellekteki verileri temsil eder. Pratik koşullarda, bir veri kaynağı bir Entity Framework sınıfı, bir veri kümesi, bir .NET proxy nesnesinde veya bir LINQ to SQL sınıfında veya herhangi bir .NET nesne veya koleksiyonda kapsüllenmiş bir hizmet uç noktası olabilir. Bazı veri kaynakları, verileri **veri kaynakları** penceresinden sürükleyerek, diğer veri kaynakları olmasa da veri bağlantılı denetimler oluşturmanıza olanak sağlar. Aşağıdaki tabloda hangi veri kaynaklarının desteklendiği gösterilmektedir.
+Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabilen bellekteki verileri temsil eder. pratik koşullarda, bir veri kaynağı bir Entity Framework sınıfı, bir veri kümesi, bir .net proxy nesnesinde veya bir LINQ to SQL sınıfında veya herhangi bir .net nesne veya koleksiyonda kapsüllenmiş bir hizmet uç noktası olabilir. Bazı veri kaynakları, verileri **veri kaynakları** penceresinden sürükleyerek, diğer veri kaynakları olmasa da veri bağlantılı denetimler oluşturmanıza olanak sağlar. Aşağıdaki tabloda hangi veri kaynaklarının desteklendiği gösterilmektedir.
 
 | Veri kaynağı | **Windows Form Tasarımcısı için** sürükle ve bırak desteği | **WPF Tasarımcısında** sürükle ve bırak desteği | **Silverlight tasarımcısında** sürükle ve bırak desteği |
 | - | - | - | - |
@@ -43,11 +44,11 @@ Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabi
 
 1. **Varlık veri modeli** Sihirbazı 'nı kullanarak modeli oluşturun ve ardından bu nesneleri tasarımcıya sürükleyin.
 
-2. LINQ to SQL sınıfları **veri kaynakları** penceresinde görünmez. Ancak, LINQ to SQL sınıfları temel alan yeni bir nesne veri kaynağı ekleyebilirsiniz ve ardından bu nesneleri tasarımcıya sürükleyerek veriye bağlı denetimler oluşturabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
+2. LINQ to SQL sınıfları **veri kaynakları** penceresinde görünmez. ancak, LINQ to SQL sınıfları temel alan yeni bir nesne veri kaynağı ekleyebilirsiniz ve ardından bu nesneleri tasarımcıya sürükleyerek veriye bağlı denetimler oluşturabilirsiniz. daha fazla bilgi için bkz. [izlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
 
 ## <a name="data-sources-window"></a>Veri Kaynakları penceresi
 
-Veri kaynakları, projenizde **veri kaynakları** penceresinde öğeler olarak kullanılabilir. Bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek (proje açıkken) açabilirsiniz. Bu penceredeki öğeleri, temel alınan verilere bağlanan denetimler oluşturmak için sürükleyebilir ve sağ tıklayarak da veri kaynaklarını yapılandırabilirsiniz.
+Veri kaynakları, projenizde **veri kaynakları** penceresinde öğeler olarak kullanılabilir. bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek (proje açıkken) açabilirsiniz. Bu penceredeki öğeleri, temel alınan verilere bağlanan denetimler oluşturmak için sürükleyebilir ve sağ tıklayarak da veri kaynaklarını yapılandırabilirsiniz.
 
 ![Veri Kaynakları penceresi](../data-tools/media/raddata-data-sources-window.png)
 

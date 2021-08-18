@@ -1,6 +1,6 @@
 ---
-title: Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamına (IDE) dahil edilen araç çubuklarının ve içerdikleri grupların GUID ve KIMLIK değerlerinin listesini görüntüleyin.
+title: Visual Studio araç çubuklarının guıd 'leri ve kimlikleri | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamına (ıde) eklenen araç çubuklarının ve içerdikleri grupların guıd ve kimlik değerlerinin listesini görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,27 +16,28 @@ ms.assetid: c9cacd57-9225-450f-a9ac-cbf3168ea844
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d2ba6c92a2913ec63a59751a4181454aa67fa67
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 8ec564b6b4da3f9ee6cd706d1c6ab3796c03494f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898116"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050006"
 ---
-# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio araç çubuklarının GUID 'Leri ve kimlikleri
-Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri gruplarda bulunan araç çubuklarının GUID ve KIMLIK değerlerini numaralandırır. Bu değerler, Visual Studio SDK 'nin bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
+# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio araç çubuklarının guıd 'leri ve kimlikleri
+bu konu, Visual Studio tümleşik geliştirme ortamına (ıde) ve içerdikleri gruplara dahil olan araç çubuklarının guıd ve kimlik değerlerini numaralandırır. bu değerler, Visual Studio SDK 'nın bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
 
 > [!NOTE]
-> Visual Studio için kullanılabilen araç çubuklarının birçoğu Visual Studio tarafından tanımlanmamıştır ve GUID 'leri ve KIMLIK değerleri ortak değildir. Bu konu yalnızca Visual Studio SDK *. vsct* dosyalarında tanımlanmış olan araç çubuklarını listeler.
+> Visual Studio kullanılabilen araç çubuklarının birçoğu Visual Studio tarafından tanımlanmamıştır ve guıd 'leri ve kimlik değerleri ortak değildir. bu konuda yalnızca Visual Studio SDK *. vsct* dosyalarında tanımlanan araç çubukları listelenmektedir.
 
  *. Vsct* DOSYALARıNDA tanımlanan IDE nesneleriyle çalışma hakkında daha fazla bilgi için bkz. [menüleri ve komutları genişletme](../../extensibility/extending-menus-and-commands.md).
 
- Visual Studio IDE tarafından sunulan varsayılan araç çubukları GUID kullanır `guidSHLMainMenu` , aksi belirtilmedikçe `GUID:ID` söz dizimi kullanılarak belirtilir.
+ Visual Studio ıde tarafından sunulan varsayılan araç çubukları guıd kullanır `guidSHLMainMenu` , aksi belirtilmedikçe `GUID:ID` söz dizimi kullanılarak belirtilir.
 
 ## <a name="ide-toolbars"></a>IDE araç çubukları
- Aşağıdaki araç çubukları, Visual Studio IDE tarafından sağlanmaktadır. Araç çubukları, **Araçlar** menüsünün **araç çubukları** alt menüsünde seçilerek görüntülenebilir. Araç pencerelerindeki araç çubukları bu bölüme dahil değildir.
+ aşağıdaki araç çubukları Visual Studio ıde tarafından sağlanmaktadır. Araç çubukları, **Araçlar** menüsünün **araç çubukları** alt menüsünde seçilerek görüntülenebilir. Araç pencerelerindeki araç çubukları bu bölüme dahil değildir.
 
  Yalnızca gruplar doğrudan araç çubuklarından eklenebilir. Bir grup eklemek için, üst öğesini araç çubuğunun GUID 'SI ve KIMLIĞI olarak ayarlayın. Bir araç çubuğuna düğme eklemek için, üst öğesini araç çubuğunda bir grup olarak ayarlayın.
 
@@ -49,7 +50,7 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 |Hata ayıklama konumu|Gudvsdebuggroup: IDM_DEBUG_CONTEXT_TOOLBAR|
 
 ### <a name="special-toolbars"></a>Özel araç çubukları
- Bu araç çubukları, Visual Studio IDE tarafından tanımlanmıştır, ancak özel işlevlere ve komut grupları barındırmazlar.
+ bu araç çubukları Visual Studio ıde tarafından tanımlanmıştır, ancak özel işlevlere ve komut grupları barındırmazlar.
 
 |Araç Çubuğu|ID|
 |-------------|--------|
@@ -107,10 +108,10 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 |Hata ayıklama konumu|IDG_DEBUG_CONTEXT_TOOLBAR|
 
 ## <a name="tool-window-toolbars"></a>Araç penceresi araç çubukları
- Araç çubukları doğrudan IDE'de veya Çözüm Gezgini gibi **araç pencerelerde görünebilir.** Araç pencereleri *.vsct* dosyalarında tanımlanmamış olduğundan, araç penceresi araç çubuklarının tanımlı bir ailesi yok. Bunun yerine, bunlar koda yerleştirilir. Aşağıdaki tabloda, IDE'de araç pencerelerde görünen araç çubukları ve bunların içerdiği komut grupları yer alır.
+ Araç çubukları doğrudan IDE'de veya Çözüm Gezgini gibi **araç pencere Çözüm Gezgini.** Araç pencereleri *.vsct* dosyalarında tanımlanmamış olduğundan, araç penceresi araç çubuklarının tanımlı bir ailesi yok. Bunun yerine, bunlar koda yerleştirilir. Aşağıdaki tabloda, IDE'de araç pencerelerde görünen araç çubukları ve bunların içerdiği komut grupları yer alır.
 
 > [!NOTE]
-> Araç çubukları ve gruplar GUID:ID söz dizimi kullanılarak aksi `guidSHLMainMenu` belirtilmedikçe GUID kullanır. Bir araç çubuğu için GUID belirtilirse, bu araç çubuğundan azalan gruplar için de geçerlidir.
+> Araç çubukları ve gruplar GUID:ID söz dizimi kullanılarak aksi `guidSHLMainMenu` belirtilmedikçe GUID kullanır. Bir araç çubuğu için GUID belirtilirse, araç çubuğundan azalan gruplar için de geçerlidir.
 
 |Araç penceresi|Araç Çubuğu|Gruplar|
 |-----------------|-------------|------------|
@@ -139,4 +140,4 @@ Bu konu, Visual Studio tümleşik geliştirme ortamında (IDE) ve içerdikleri g
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Araç çubuğuna menü denetleyicisi ekleme](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)
 - [Araç penceresine araç çubuğu ekleme](../../extensibility/adding-a-toolbar-to-a-tool-window.md)
-- [Visual Studio menülerinin GUID 'Leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
+- [Visual Studio menülerinin guıd 'leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
