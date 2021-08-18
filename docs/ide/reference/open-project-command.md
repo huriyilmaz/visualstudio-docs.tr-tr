@@ -1,6 +1,6 @@
 ---
 title: Proje Aç komutu
-description: Açık proje komutu ve mevcut bir projeyi veya çözümü nasıl açtığı hakkında bilgi edinin.
+description: açık Project komutu ve bunun mevcut bir projeyi veya çözümü nasıl açtığı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,15 @@ ms.assetid: baa85f86-041b-49f4-9ced-0c397dc180e1
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4298c840094f7f1f75e58be1b25213cdf66a6674
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7e74880ec1dd038dd5bd50416bc97652cf1818c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881977"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041220"
 ---
 # <a name="open-project-command"></a>Proje Aç komutu
 
@@ -51,7 +52,7 @@ Hata ayıklanırken bu komut kullanılamaz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, Visual Basic projesi **test1** açar:
+aşağıdaki örnek, Visual Basic projesi **Test1** açar:
 
 ```cmd
 >File.OpenProject "C:\My Projects\Test1\Test1.vbproj"

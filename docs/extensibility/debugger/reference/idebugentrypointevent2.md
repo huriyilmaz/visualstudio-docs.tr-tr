@@ -1,5 +1,5 @@
 ---
-description: Program ilk kullanıcı kodu yönergesini yürütmekle ilgili olduğunda hata ayıklama altyapısı (DE) bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
+description: Hata ayıklama altyapısı (DE), program ilk kullanıcı kodu yönergesini yürütmekle ilgili olduğunda bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
 title: IDebugEntryPointEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: b41a6b95f0a7f0a842656e798f21aae1273cfc5a16869399de57d94604f180f0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 041d8f7d4237504ff0201bd0b5069293c0b59d63
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389962"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089140"
 ---
 # <a name="idebugentrypointevent2"></a>IDebugEntryPointEvent2
-Program ilk kullanıcı kodu yönergesini yürütmekle ilgili olduğunda hata ayıklama altyapısı (DE) bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
+Hata ayıklama altyapısı (DE), program ilk kullanıcı kodu yönergesini yürütmekle ilgili olduğunda bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
 
 ## <a name="syntax"></a>Syntax
 

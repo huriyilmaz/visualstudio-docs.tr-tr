@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama adresi verilen bir sembol türüne alır.
-title: 'IDebugComPlusSymbolProvider:: GetTypeFromAddress | Microsoft Docs'
+description: Hata ayıklama adresi verilen bir sembol türüne alınır.
+title: IDebugComPlusSymbolProvider::GetTypeFromAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 01f21ff9-e8a5-4e5f-9f7b-1b6de8b1432f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3cde5d445551b83cc5497d3310bd5660842e9ffe
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b5b0ce92634b5069ed04bae4fc514af6be563711
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095608"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103851"
 ---
 # <a name="idebugcomplussymbolprovidergettypefromaddress"></a>IDebugComPlusSymbolProvider::GetTypeFromAddress
-Hata ayıklama adresi verilen bir sembol türüne alır.
+Hata ayıklama adresi verilen bir sembol türüne alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +44,16 @@ int GetTypeFromAddress(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
+[in] [IDebugAddress arabirimiyle temsil edilen hata ayıklama](../../../extensibility/debugger/reference/idebugaddress.md) adresi.
 
 `ppField`\
-dışı Bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) arabirimi tarafından temsil edildiği sürece dizi türünü döndürür.
+[out] Bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) arabirimi tarafından temsil edilen dizi türünü döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetTypeFromAddress(

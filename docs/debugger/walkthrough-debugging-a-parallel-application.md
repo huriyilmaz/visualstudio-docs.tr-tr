@@ -1,6 +1,6 @@
 ---
-title: Paralel uygulama hata ayıklaması | Microsoft Docs
-description: Visual Studio'de Paralel Görevler ve Paralel Yığınlar pencerelerini kullanarak hata Visual Studio
+title: Paralel uygulamada hata ayıklama | Microsoft Docs
+description: Visual Studio içinde paralel görevler ve Paralel Yığınlar penceresi kullanarak hata ayıklayın
 ms.date: 02/14/2020
 ms.topic: conceptual
 dev_langs:
@@ -20,85 +20,86 @@ ms.assetid: 2820ac4c-c893-4d87-8c62-83981d561493
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e6adeb4a67272cac90a829069ffc3a65bb7f969
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: 4663892ef011841ed401331009c2d8f05b63814a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115094743"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133893"
 ---
-# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>Kılavuz: Visual Studio'da Paralel Uygulamada Hata Ayıklama (C#, Visual Basic, C++)
+# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>izlenecek yol: Visual Studio paralel uygulamada hata ayıklama (C#, Visual Basic, C++)
 
-Bu kılavuzda paralel bir uygulamada hata **ayıklamak için** Paralel Görevler ve **Paralel** Yığınlar pencerelerini kullanma hakkında bilgi verilmektedir. Bu pencereler, Görev Paralel Kitaplığı [(TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) veya Eşzamanlılık Çalışma Zamanı kullanan kodun çalışma zamanı davranışını anlamanıza ve [doğrulamanıza yardımcı Eşzamanlılık Çalışma Zamanı.](/cpp/parallel/concrt/concurrency-runtime) Bu kılavuz yerleşik kesme noktalarına sahip örnek kod sağlar. Kod bozulduktan sonra izlenecek yol,  Paralel Görevler ve Paralel Yığınlar **pencerelerini kullanarak** incelemeyi gösterir.
+Bu izlenecek yol, paralel bir uygulamada hata ayıklamak için paralel **Görevler** ve **Paralel Yığınlar** pencerelerinin nasıl kullanılacağını gösterir. Bu pencereler, [görev paralel kitaplığı (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) veya [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime)kullanan kodun çalışma zamanı davranışını anlamanıza ve doğrulamanıza yardımcı olur. Bu izlenecek yol, yerleşik kesme noktaları içeren örnek kod sağlar. Kod kesildikten sonra, izlenecek yol **paralel görevlerin** ve **Paralel Yığınlar** pencerelerinin nasıl kullanılacağını gösterir.
 
- Bu kılavuzda şu görevler öğretildi:
+ Bu izlenecek yol, şu görevleri öğretir:
 
 - Tüm iş parçacıklarının çağrı yığınlarını tek bir görünümde görüntüleme.
 
-- Uygulamanıza oluşturulan `System.Threading.Tasks.Task` örneklerin listesini görüntüleme.
+- `System.Threading.Tasks.Task`Uygulamanızda oluşturulan örneklerin listesini görüntüleme.
 
-- İş parçacıkları yerine gerçek görev çağrı yığınlarını görüntüleme.
+- İş parçacıkları yerine görevlerin gerçek çağrı yığınlarını görüntüleme.
 
-- Paralel Görevler ve Paralel **Yığınlar pencerelerinden** **koda** nasıl gidebilirsiniz?
+- **Paralel görevler** ve **Paralel Yığınlar** pencerelerinin koduna gitme.
 
-- Pencereler gruplama, yakınlaştırma ve diğer ilgili özellikler aracılığıyla ölçeklendirmeyle nasıl başa çıkabilir?
+- Windows Cope 'un gruplandırma, yakınlaştırma ve diğer ilgili özelliklerle nasıl ölçeklendirilmesi.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Bu kılavuzda, **Yalnızca kendi kodum** etkinleştirilmiştir (varsayılan olarak daha yeni sürümlerde varsayılan olarak etkindir) Visual Studio. Araçlar menüsünde **Seçenekler'e** **tıklayın,** Hata ayıklama düğümünü **genişletin,** Genel'i seçin ve ardından Yalnızca kendi kodum **etkinleştir (Yalnızca yönetilen) seçeneğini belirleyin.** Bu özelliği ayarlasanız bile bu izlenecek yolu kullanabilirsiniz, ancak sonuçlarınız çizimlerden farklı olabilir.
+ Bu izlenecek yol **yalnızca kendi kodum** etkinleştirildiğini varsayar (Visual Studio daha yeni sürümlerinde varsayılan olarak etkindir). **Araçlar** menüsünde **Seçenekler**' e tıklayın, **hata ayıklama** düğümünü genişletin, **genel**' i seçin ve ardından yalnızca kendi kodum etkinleştir ' i seçin **(yalnızca yönetilen)**. Bu özelliği görmüyorsanız, bu yönergeyi kullanmaya devam edebilirsiniz, ancak sonuçlarınız çizimlerden farklı olabilir.
 
-## <a name="c-sample"></a>C# Örneği
- C# örneğini kullanırsanız, bu kılavuzda Dış Kodun gizli olduğu da varsaylanır. Dış kodun görüntüleniyor olup olmadığını değiştirmek için Çağrı  Yığını penceresinin **Ad** tablosu üst bilgisini sağ tıklatın ve Dış Kodu Göster'i seçin **veya silin.** Bu özelliği ayarlasanız bile bu izlenecek yolu kullanabilirsiniz, ancak sonuçlarınız çizimlerden farklı olabilir.
+## <a name="c-sample"></a>C# örneği
+ C# örneğini kullanıyorsanız bu izlenecek yol, dış kodun gizli olduğunu de varsayar. Dış kodun görüntülenip görüntülenmediğini değiştirmek için **çağrı yığını** penceresinin **ad** tablo başlığına sağ tıklayın ve ardından **dış kodu göster**' i seçin veya temizleyin. Bu özelliği görmüyorsanız, bu yönergeyi kullanmaya devam edebilirsiniz, ancak sonuçlarınız çizimlerden farklı olabilir.
 
-## <a name="c-sample"></a>C++ Örneği
- C++ örneğini kullanıyorsanız, bu konudaki Dış Kod başvurularını yoksayabilirsiniz. Dış Kod yalnızca C# örneği için geçerlidir.
+## <a name="c-sample"></a>C++ örneği
+ C++ örneğini kullanırsanız, bu konudaki dış koda yönelik başvuruları yoksayabilirsiniz. Dış kod yalnızca C# örneği için geçerlidir.
 
 ## <a name="illustrations"></a>Çizimler
- Bu konudaki çizimler C# örneğini çalıştıran dört çekirdekli bir bilgisayara kaydedilmiştir. Bu izlenecek yolu tamamlamak için başka yapılandırmalar da kullanabilirsiniz, ancak çizimler bilgisayarınızda görüntülenenlerden farklı olabilir.
+ Bu konudaki çizimler, C# örneğini çalıştıran dört çekirdekli bir bilgisayara kaydedilir. Bu yönergeyi tamamlamak için diğer konfigürasyonları da kullanabilirsiniz, ancak çizimler bilgisayarınızda görüntülendiklerden farklı olabilir.
 
-## <a name="creating-the-sample-project"></a>Örnek Project
- Bu kılavuzda yer alan örnek kod, hiçbir şey yapacak bir uygulama değildir. Burada amaç, paralel uygulamada hata ayıklamak için araç pencerelerini kullanmayı anlamaktır.
+## <a name="creating-the-sample-project"></a>Örnek Project oluşturma
+ Bu izlenecek yolda örnek kod hiçbir şey olmayan bir uygulama içindir. Amaç, bir paralel uygulamada hata ayıklamak için araç pencerelerinin nasıl kullanılacağını öğrenmektir.
 
-#### <a name="to-create-the-sample-project"></a>Örnek projeyi oluşturmak için
+#### <a name="to-create-the-sample-project"></a>Örnek proje oluşturmak için
 
-1. Yeni Visual Studio ve yeni bir proje oluşturun.
+1. Visual Studio açın ve yeni bir proje oluşturun.
 
    ::: moniker range=">=vs-2019"
 
-   Başlangıç penceresi açık değilse Dosya Başlangıç **Penceresi'ne** > **tıklayın.**
+   Başlangıç penceresi açık değilse **Dosya** > **Başlangıç penceresi**' ni seçin.
 
-   Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
+   Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-   Yeni **proje oluştur penceresinde** arama kutusuna *konsol yazın* veya yazın. Ardından, **Dil listesinden C#**, **C++** **Visual Basic** seçin ve ardından Platform **listesinden Windows'yi** seçin.
+   **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. ardından, dil listesinden **C#**, **C++** veya **Visual Basic** seçin ve ardından Platform listesinden **Windows** öğesini seçin.
 
-   Dil ve platform filtrelerini uygulayan  .NET Core veya C++ için Konsol Uygulaması'na ve ardından Sonraki 'yi **seçin.**
+   Dil ve platform filtrelerini uyguladıktan sonra .NET Core veya C++ **konsol uygulamasını** seçin ve ardından **İleri**' yi seçin.
 
    > [!NOTE]
-   > Doğru şablonu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a  >  **gidin ve** bu işlem Visual Studio Yükleyicisi. **.NET Core platformlar arası geliştirme veya** **C++** ile masaüstü geliştirme iş yükünü ve ardından Değiştir'i **seçin.**
+   > doğru şablonu görmüyorsanız **araçlar**  >  **ve özellikler al..**. ' a giderek Visual Studio Yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** veya C++ iş yükü **ile masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
 
-   Yeni **projenizi yapılandır penceresine** bir ad yazın veya varsayılan adı Project **kullanın.** Ardından, **varsa,** **Sonraki'yi veya** Oluştur'ı seçin.
+   **yeni projeyi yapılandırın** penceresinde bir ad yazın veya **Project ad** kutusunda varsayılan adı kullanın. Sonra, **İleri** veya **Oluştur**' u seçin, hangisi kullanılabilir seçeneği vardır.
 
-   .NET Core için önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
+   .NET Core için, önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    ::: moniker-end
    ::: moniker range="vs-2017"
-   Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni proje iletişim kutusunun **sol** bölmesinde, aşağıdakini seçin:
+   üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin. **Yeni proje** iletişim kutusunun sol bölmesinde aşağıdakileri seçin:
 
-   - Bir C# uygulaması için **Visual C#** altında Windows **Desktop'ı** seçin ve orta bölmede Konsol Uygulaması **(.NET Framework) seçin.**
-   - Bir Visual Basic için, **Visual Basic** altında Windows **Desktop'ı seçin** ve orta bölmede Konsol Uygulaması **(.NET Framework) seçin.**
-   - Bir C++ uygulaması için, **Visual C++** altında Windows Masaüstü'Windows'ı **seçin.** 
+   - c# uygulaması için, **Visual C#** altında, **masaüstü Windows**' yi seçin ve ardından ortadaki bölmede **konsol uygulaması ' nı (.NET Framework)** seçin.
+   - Visual Basic bir uygulama için, **Visual Basic** altında **masaüstü Windows**' yı seçin ve ardından orta bölmedeki **konsol uygulaması (.NET Framework)** seçeneğini belirleyin.
+   - C++ uygulaması için, **Visual C++** altında masaüstü ' ne **Windows** ve ardından **Windows konsol uygulaması**' nı seçin.
 
-   Konsol Uygulaması **(.NET Core)** veya C++ için Konsol Uygulaması  proje şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. **.NET masaüstü geliştirme veya** **C++** ile masaüstü geliştirme iş yükünü ve ardından Değiştir'i **seçin.**
+   **konsol uygulamasını (.net Core)** görmüyorsanız veya C++ için **konsol uygulaması** proje şablonu ' na **gidin araçlar**  >  **ve özellikler al..**. ' a giderek Visual Studio Yükleyicisi açılır. C++ iş yüküyle **.net masaüstü geliştirme** veya **masaüstü geliştirme** seçeneklerini belirleyin ve ardından **Değiştir**' i seçin.
 
-   Ardından bir ad yazın veya varsayılan adı kullanın ve Tamam'a **tıklayın.**
+   Ardından, bir ad yazın veya varsayılan adı kullanın ve **Tamam**' a tıklayın.
 
    **Tamam**’ı seçin.
    ::: moniker-end
 
    Yeni bir konsol projesi görüntülenir. Proje oluşturulduktan sonra bir kaynak dosya görüntülenir.
 
-1. Projesinde .cpp, .cs veya .vb kod dosyasını açın. Boş bir kod dosyası oluşturmak için içeriğini silin.
+1. Projedeki. cpp,. cs veya. vb kod dosyasını açın. Boş bir kod dosyası oluşturmak için içeriğini silin.
 
 1. Seçtiğiniz dil için aşağıdaki kodu boş kod dosyasına yapıştırın.
 
@@ -108,52 +109,52 @@ Bu kılavuzda paralel bir uygulamada hata **ayıklamak için** Paralel Görevler
 
 1. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
-1. Derleme menüsünde **Çözümü Yeniden** **Oluştur'a tıklayın.**
+1. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın.
 
-    (C++ örneğinde) için dört çağrı olduğunu fark edersiniz. Bu nedenle kesme noktaları eklemek zorunda değildir; yalnızca uygulamayı çalıştırmanın hata ayıklayıcıda dört kez kesmeye neden `Debugger.Break` `DebugBreak` olur.
+    İçin dört çağrı olduğunu unutmayın `Debugger.Break` ( `DebugBreak` C++ örneğinde), bu nedenle kesme noktaları eklemeniz gerekmez; uygulamayı çalıştırmak, hata ayıklayıcıda en fazla dört kez kesintiye neden olur.
 
-## <a name="using-the-parallel-stacks-window-threads-view"></a>Paralel Yığınlar Penceresini Kullanma: İş Parçacıkları Görünümü
- **Hata ayıkla** menüsünde **Hata Ayıklamayı Başlat**’a tıklayın. İlk kesme noktası'nın isabetini bekleyin.
+## <a name="using-the-parallel-stacks-window-threads-view"></a>Paralel Yığınlar penceresini kullanma: Iş parçacıkları görünümü
+ **Hata ayıkla** menüsünde **Hata Ayıklamayı Başlat**’a tıklayın. İlk kesme noktasının isabet gelmesini bekleyin.
 
 #### <a name="to-view-the-call-stack-of-a-single-thread"></a>Tek bir iş parçacığının çağrı yığınını görüntülemek için
 
-1. Hata Ayıklama **menüsünde, Hata** Ayıkla'nın **üzerine Windows** ve ardından İş Parçacıkları'ya **tıklayın.** İş Parçacıkları **penceresini** iş parçacıklarının alt Visual Studio.
+1. **hata ayıkla** menüsünde, **Windows** ' nin üzerine gelin ve ardından **iş parçacıkları**' ne tıklayın. **Iş parçacıkları** penceresini Visual Studio altına yerleştirin.
 
-2. Hata **Ayıkla menüsünde,** Hata Ayıkla'Windows üzerine **gelin** ve ardından Çağrı **Yığını'Windows'a tıklayın.** Çağrı **Yığını penceresini alttaki** Visual Studio.
+2. **hata ayıkla** menüsünde, **Windows** ' nin üzerine gelin ve ardından **çağrı yığını**' na tıklayın. **Çağrı yığını** penceresini alt Visual Studio yerleştir.
 
-3. İş Parçacıkları penceresinde bir iş **parçacığına çift** tıklar ve bunu geçerli hale sürükleyin. Geçerli iş parçacıklarının sarı bir oku vardır. Geçerli iş parçacığını değiştirdiğimiz zaman, çağrı yığını Çağrı Yığını **penceresinde** görüntülenir.
+3. Geçerli hale getirmek için **Iş parçacıkları** penceresinde bir iş parçacığına çift tıklayın. Geçerli iş parçacıklarında sarı bir ok var. Geçerli iş parçacığını değiştirdiğinizde çağrı yığını **çağrı yığını** penceresinde görüntülenir.
 
 #### <a name="to-examine-the-parallel-stacks-window"></a>Paralel Yığınlar penceresini incelemek için
 
-1. Hata Ayıklama **menüsünde,** Hata Ayıkla'nın **üzerine Windows** Paralel **Yığınlar'a tıklayın.** Sol üst **köşedeki** kutuda İş Parçacıkları'nın seçili olduğundan emin olun.
+1. **hata ayıkla** menüsünde, **Windows** ' nin üzerine gelin ve **paralel yığınlar**' ı tıklatın. **Iş parçacıklarının** sol üst köşedeki kutuda seçili olduğundan emin olun.
 
-     Paralel **Yığınlar penceresini kullanarak** aynı anda birden çok çağrı yığınını tek bir görünümde görüntüebilirsiniz. Aşağıdaki çizimde Çağrı **Yığını penceresinin** üzerindeki Paralel **Yığınlar penceresi gösterilir.**
+     **Paralel Yığınlar** penceresini kullanarak, aynı anda birden fazla çağrı yığınını tek bir görünümde görüntüleyebilirsiniz. Aşağıdaki çizimde, **çağrı yığını** penceresinin üstündeki **Paralel Yığınlar** penceresi gösterilmektedir.
 
      ![Paralel Yığınlar penceresinde iş parçacıkları görünümü](../debugger/media/pdb_walkthrough_1.png "PDB_Walkthrough_1")
 
-     Ana iş parçacığının çağrı yığını bir kutuda görünür ve diğer dört iş parçacığı için çağrı yığınları başka bir kutuda gruplanır. Yığın çerçeveleri aynı yöntem bağlamlarını paylaştığı için dört iş parçacığı birlikte gruplanır; Başka bir ifadeyle, bunlar aynı yöntemlerdedir: `A` , `B` ve `C` . Aynı kutuyu paylaşırken iş parçacığı kimliklerini ve adlarını görüntülemek için üst bilgisi ( 4 İş Parçacığı) olan kutunun **üzerine gelin.** Geçerli iş parçacığı kalın olarak görüntülenir.
+     Ana iş parçacığının çağrı yığını bir kutu içinde görünür ve diğer dört iş parçacığı için çağrı yığınları başka bir kutu içinde gruplandırılır. Yığın çerçeveleri aynı yöntem bağlamlarını paylaştığı için dört iş parçacığı birlikte gruplandırılır; diğer bir deyişle, bu yöntemler aynı yöntemlerde: `A` , `B` ve `C` . Aynı kutuyu paylaşan iş parçacıklarının iş parçacığı kimliklerini ve adlarını görüntülemek için üst bilgiyle (**4 Iş parçacığı**) kutunun üzerine gelin. Geçerli iş parçacığı kalın olarak görüntülenir.
 
      ![İş parçacığı kimliklerini ve adlarını gösteren araç ipucu](../debugger/media/pdb_walkthrough_1a.png "PDB_Walkthrough_1A")
 
      Sarı ok, geçerli iş parçacığının etkin yığın çerçevesini gösterir.
 
-     Çağrı Yığını penceresine sağ tıklayarak yığınçerçeveleri (Modül **Adları,** Parametre **Türleri,** Parametre Adları, **Parametre** **Değerleri,** Satır  Numaraları ve **Byte Uzaklıkları)** için ne kadar ayrıntı göster gösterebilirsiniz.
+     **Çağrı yığını** penceresine sağ tıklayarak yığın çerçeveleri (**modül adları**, **parametre türleri**, **parametre adları**, **parametre değerleri**, **satır numaraları** ve **bayt uzaklıkları**) için ne kadar ayrıntı gösterileceğini belirleyebilirsiniz.
 
-     Bir kutunun çevresindeki mavi vurgu, geçerli iş parçacığının o kutunun bir parçası olduğunu gösterir. Geçerli iş parçacığı, araç ipucundaki kalın yığın çerçevesiyle de gösterilir. İş Parçacıkları penceresinde Ana iş parçacığına çift tıklarsanız, Paralel Yığınlar penceresindeki mavi vurgun uygun şekilde **hareket** ettiğinden görebilirsiniz.
+     Bir kutu etrafında mavi bir vurgu, geçerli iş parçacığının o kutunun bir parçası olduğunu gösterir. Geçerli iş parçacığı araç ipucunda kalın yığın çerçevesiyle da belirtilir. Iş parçacıkları penceresinde ana iş parçacığına çift tıklarsanız, **Paralel Yığınlar** penceresindeki mavi vurgunun uygun şekilde taşındığını gözlemleyebilirsiniz.
 
      ![Paralel Yığınlar penceresinde vurgulanan ana iş parçacığı](../debugger/media/pdb_walkthrough_1c.png "PDB_Walkthrough_1C")
 
-#### <a name="to-resume-execution-until-the-second-breakpoint"></a>Yürütmeyi ikinci kesme noktası kadar sürdürme
+#### <a name="to-resume-execution-until-the-second-breakpoint"></a>İkinci kesme noktasına kadar yürütmeyi sürdürmesini sağlamak için
 
-1. İkinci kesme noktası isabet edene kadar yürütmeyi devam ettirin, Hata **Ayıkla menüsünde** Devam'a **tıklayın.** Aşağıdaki çizimde ikinci kesme noktası için iş parçacığı ağacı gösterilmiştir.
+1. İkinci kesme noktasına isabet edene kadar yürütmeyi sürdürmek için, **Hata Ayıkla** menüsünde **devam**' a tıklayın. Aşağıdaki çizimde, ikinci kesme noktasında iş parçacığı ağacı gösterilmektedir.
 
      ![Birçok dalı gösteren Paralel Yığınlar penceresi](../debugger/media/pdb_walkthrough_2.png "PDB_Walkthrough_2")
 
-     İlk kesme noktası, dört iş parçacığının hepsi S.A'dan S.B'ye ve S.C yöntemlerine doğru ilerler. Bu bilgiler Paralel Yığınlar penceresinde **hala görünür** durumdadır, ancak dört iş parçacığı daha fazla ilerledi. Bunlardan biri S.D ve ardından S.E. Bir diğeri S.F, S.G ve S.H.'ye devam etti. Diğer ikisi S.I ve S.J ile devam etti ve bunlardan biri S.K'ye, diğeri de kullanıcı harici koda devam etti.
+     İlk kesme noktasında, hepsi S. A ile s. B-S. C yöntemlerine giden dört iş parçacığı. Bu bilgiler, **Paralel Yığınlar** penceresinde görünmeye devam eder, ancak dört iş parçacığının ilerlemedi daha fazla olması gerekir. Bunlardan biri, S. D ve sonra G.D. . F, S. G ve S.H. ile devam eden başka bir Diğer iki kişi de S. I ve S. J ile devam etti ve bunlardan biri, diğer kullanıcı harici kod ile devam etti.
 
-     İş parçacıklarının iş parçacığı kimliklerini görmek için kutu üst bilgisi **(örneğin, 1** İş Parçacığı veya **2** İş Parçacığı) üzerine gelin. İş parçacığı kimliklerini ve diğer çerçeve ayrıntılarını görmek için yığın çerçevelerinin üzerine gelin. Mavi vurgu geçerli iş parçacığını, sarı ok ise geçerli iş parçacığının etkin yığın çerçevesini gösterir.
+     İş parçacıklarının iş parçacığı kimliklerini görmek için, örneğin **1 Iş parçacığı** veya **2 iş** parçacığı üzerinde, Box üstbilgisinin üzerine gelin. İş parçacığı kimliklerini ve diğer çerçeve ayrıntılarını görmek için yığın çerçevelerinin üzerine gelin. Mavi vurgu geçerli iş parçacığını gösterir ve sarı ok geçerli iş parçacığının etkin yığın çerçevesini gösterir.
 
-     Belirteci iş parçacıkları simgesi (ara çizgiler), eşzamanlı olmayan iş parçacıklarının etkin yığın çerçevelerini gösterir. **Çağrı yığını** penceresinde, kareleri değiştirmek için S. B öğesine çift tıklayın. **Paralel Yığınlar** penceresi, bir yeşil eğri ok simgesi kullanarak geçerli iş parçacığının geçerli yığın çerçevesini gösterir.
+     Kumaş iş parçacıkları simgesi (birbirine bağlı çizgiler), geçerli olmayan iş parçacıklarının etkin yığın çerçevelerini gösterir. **Çağrı yığını** penceresinde, kareleri değiştirmek için S. B öğesine çift tıklayın. **Paralel Yığınlar** penceresi, bir yeşil eğri ok simgesi kullanarak geçerli iş parçacığının geçerli yığın çerçevesini gösterir.
 
      **Iş parçacıkları** penceresinde iş parçacıkları arasında geçiş yapın ve **Paralel Yığınlar** penceresindeki görünümün güncelleştirildiğini gözlemleyin.
 
@@ -270,66 +271,66 @@ Bu kılavuzda paralel bir uygulamada hata **ayıklamak için** Paralel Görevler
 
      ![Paralel Yığınlar penceresinde görevler görünümü](../debugger/media/pdb_walkthrough_8.png "PDB_Walkthrough_8")
 
-     Şu anda yürütülmekte olan iş parçacıkları, **Paralel Yığınlar** penceresinin görevler görünümünde gösterilmez. Ayrıca, görevleri yürüten iş parçacıkları için, görevlerle ilgili olan yığın çerçevelerinden bazıları yığının üst ve alt kısmından filtrelenmiş olur.
+     Şu anda yürütülmekte olan iş parçacıkları, **Paralel Yığınlar** penceresinin görevler görünümünde gösterilmez. Ayrıca, görevleri çalıştıran iş parçacıkları için, görevlerle ilgili olmayan yığın çerçevelerinden bazıları yığının üst ve alt kısmından filtrelenmiştir.
 
-     Görevler **penceresini** yeniden görüntüleme. Sütun için kısayol menüsünü görmek için herhangi bir sütun başlığına sağ tıklayın.
+     **Görevler** penceresini yeniden görüntüleyin. Sütunun kısayol menüsünü görmek için herhangi bir sütun başlığına sağ tıklayın.
 
-     Sütun eklemek veya kaldırmak için kısayol menüsünü kullanabilirsiniz. Örneğin, AppDomain sütunu seçilmez; bu nedenle listede görüntülenmez. **Üst'e tıklayın.** Üst **sütun,** dört görevden herhangi biri için değer olmadan görünür.
+     Sütun eklemek veya kaldırmak için kısayol menüsünü kullanabilirsiniz. Örneğin, AppDomain sütunu seçili değildir; Bu nedenle, listede gösterilmez. **Üst öğeye** tıklayın. **Üst** sütun dört görevlerden herhangi biri için değer olmadan görüntülenir.
 
-#### <a name="to-resume-execution-until-the-third-breakpoint"></a>Yürütmeyi üçüncü kesme noktası kadar sürdürme
+#### <a name="to-resume-execution-until-the-third-breakpoint"></a>Yürütmeyi üçüncü kesme noktasına kadar sürdürmeyi sağlamak için
 
-1. Yürütmeyi üçüncü kesme noktası isabet edene kadar devam etmek için Hata **Ayıklama menüsünde** Devam'a **tıklayın.**
+1. Üçüncü kesme noktasına isabet edene kadar yürütmeyi sürdürmek için, **Hata Ayıkla** menüsünde **devam**' a tıklayın.
 
-     5. görev olan yeni bir görev çalışıyor ve görev 4 artık bekliyor. Durum penceresinde bekleme görevinin üzerine gelerek bunun **neden** olduğunu görebilirsiniz. Üst **sütununda,** 4. görevin 5. görevin üst öğesi olduğunu fark vardır.
+     Yeni bir görev, görev 5, artık çalışıyor ve görev 4 artık bekliyor. **Durum** penceresindeki bekleme görevinin üzerine gelip gelmediğini görebilirsiniz. **Üst** sütunda, görev 4 ' ün görev 5 ' in üst öğesi olduğunu fark edersiniz.
 
-     Üst-alt ilişkisini daha iyi görselleştirmek için sütun üst bilgisi satırına sağ tıklayın ve ardından Üst Alt **Görünüm'e tıklayın.** Aşağıdaki çizimi görüyor gerekir.
+     Üst-alt ilişkisini daha iyi görselleştirmek için, sütun üst bilgisi satırına sağ tıklayın ve sonra **üst alt öğe görünümü**' ne tıklayın. Aşağıdaki çizimi görmeniz gerekir.
 
-     ![Görevler&#45;üst öğe alt görünümü](../debugger/media/pdb_walkthrough_9.png "PDB_Walkthrough_9")
+     ![Görevler penceresinde üst&#45;alt öğe görünümü](../debugger/media/pdb_walkthrough_9.png "PDB_Walkthrough_9")
 
-     4. görev ve 5. görevin aynı iş parçacığında (gizli ise İş Parçacığı **Ataması** sütununu göster) çalıştırıldıklara dikkat olun. Bu bilgiler İş Parçacıkları penceresinde **görüntülenmez;** Burada görmek, Görevler penceresinin bir diğer **avantajıdır.** Bunu onaylamak için Paralel **Yığınlar penceresini** açın. Görevler'i görüntüleyeniden **emin olun.** Görevler penceresinde bu görevlere çift tıklayarak 4. ve 5. **görevleri** bulun. Bunu yapmak için Paralel Yığınlar **penceresindeki mavi vurgu** güncelleştirilir. Paralel Yığınlar penceresindeki araç ipucunı tararsanız 4. ve 5. **görevleri de görebilirsiniz.**
+     Görev 4 ve görev 5 ' in aynı iş parçacığında çalıştığını (gizliyse **Iş parçacığı atama** sütununu göster) unutmayın. Bu bilgiler, **Iş parçacıkları** penceresinde gösterilmez; **Görevler** penceresinin başka bir avantajı burada görüntülenir. Bunu doğrulamak için, **Paralel Yığınlar** penceresini görüntüleyin. **Görevleri** görüntülemekte olduğunuzdan emin olun. **Görevler penceresinde bunlara** çift tıklayarak 4 ve 5. görevleri bulun. Bunu yaptığınızda, **Paralel Yığınlar** penceresinde mavi vurgu güncellenir. **Paralel Yığınlar** penceresinde araç ipuçlarını tarayarak 4 ve 5. görevleri de bulabilirsiniz.
 
-     ![Görev görünümü Yığınlar penceresindeki Görev görünümü'i seçin](../debugger/media/pdb_walkthrough_9a.png "PDB_Walkthrough_9A")
+     ![Paralel Yığınlar penceresinde görev görünümü](../debugger/media/pdb_walkthrough_9a.png "PDB_Walkthrough_9A")
 
-     Paralel **Yığınlar penceresinde** S.P'ye sağ tıklayın ve ardından İş Parçacığına **Git'e tıklayın.** Pencere İş Parçacıkları Görünümüne geçiş gösterir ve karşılık gelen çerçeve görünümdedir. Her iki görevi de aynı iş parçacığında görüyorsunuz.
+     **Paralel Yığınlar** penceresinde, S. P öğesine sağ tıklayın ve ardından **iş parçacığına git ' e** tıklayın. Pencere, Iş parçacıkları görünümüne geçer ve ilgili çerçeve görünümüdür. Aynı iş parçacığında her iki görevi de görebilirsiniz.
 
      ![İş parçacıkları görünümünde vurgulanan iş parçacığı](../debugger/media/pdb_walkthrough_9b.png "PDB_Walkthrough_9B")
 
-     Bu, İş Parçacıkları penceresine kıyasla **Paralel Yığınlar** penceresindeki Görevler Görünümü'nin bir diğer **avantajıdır.**
+     Bu, **Iş parçacıkları** penceresi Ile karşılaştırıldığında **Paralel Yığınlar** penceresindeki görevler görünümü ' ne ait başka bir avantajdır.
 
-#### <a name="to-resume-execution-until-the-fourth-breakpoint"></a>Yürütmeyi dördüncü kesme noktası kadar sürdürme
+#### <a name="to-resume-execution-until-the-fourth-breakpoint"></a>Yürütmenin dördüncü kesme noktasına kadar sürdürülmesi için
 
-1. Yürütmeyi üçüncü kesme noktası isabet edene kadar devam etmek için Hata **Ayıklama menüsünde** Devam'a **tıklayın.** Id sütunu **üst bilgisinde** id sütununa göre sıralamak için tıklayın. Aşağıdaki çizimi görüyor gerekir.
+1. Üçüncü kesme noktasına isabet edene kadar yürütmeyi sürdürmek için, **Hata Ayıkla** menüsünde **devam**' a tıklayın. Kimliğe göre sıralamak için **kimlik** sütun başlığına tıklayın. Aşağıdaki çizimi görmeniz gerekir.
 
-     ![Paralel Yığınlar penceresinde dört görev noktası](../debugger/media/pdb_walkthrough_10.png "PDB_Walkthrough_10")
+     ![Paralel Yığınlar penceresinde dört görev durumu](../debugger/media/pdb_walkthrough_10.png "PDB_Walkthrough_10")
 
-     5. görev tamamlandığından artık görüntülenmez. Bilgisayarınızda böyle bir durum yoksa ve kilitlenme gösterilmezse, F11 tuşuna basarak bir **kez adım atabilirsiniz.**
+     5. görev tamamlandığı için artık görüntülenmiyor. Bu durum bilgisayarınızda değilse ve kilitlenme gösterilmezse, **F11** tuşuna basarak bir kez adım adım.
 
-     Görev 3 ve görev 4 artık birbirini bekliyor ve engellendi. Ayrıca, görev 2'nin en küçükleri olan ve artık zamanlanmış olan 5 yeni görev vardır. Zamanlanmış görevler, kodda başlatmış ancak henüz çalıştırmış olan görevlerdir. Bu nedenle Konum **ve** İş **Parçacığı Ataması** sütunları boştur.
+     Görev 3 ve görev 4 artık birbirini bekliyor ve engelleniyor. 2. görevin alt öğesi olan ve şimdi zamanlanmış 5 yeni görev da vardır. Zamanlanan görevler, kodda başlatılmış ancak henüz çalıştırılmayan görevlerdir. Bu nedenle, **konum** ve **iş parçacığı atama** sütunları boştur.
 
-     Paralel **Yığınlar penceresini yeniden** görüntüleme. Her kutunun üst bilgisinde iş parçacığı kimliklerini ve adlarını gösteren bir araç ipucu vardır. Paralel Yığınlar penceresinde Görevler **Görünümüne** geçiş. Aşağıdaki çizimde gösterildiği gibi görev kimliğini ve adını ve görevin durumunu görmek için bir üst bilginin üzerine gelin.
+     **Paralel Yığınlar** penceresini yeniden görüntüleyin. Her kutunun üst bilgisinde, iş parçacığı kimliklerini ve adlarını gösteren bir araç ipucu vardır. **Paralel Yığınlar** penceresinde görevler görünümü ' ne geçin. Aşağıdaki çizimde gösterildiği gibi, görev KIMLIĞI ve adını ve görevin durumunu görmek için bir üstbilginin üzerine gelin.
 
-     ![Paralel Yığınlar penceresinde üst bilgi araç ipucu](../debugger/media/pdb_walkthrough_11.png "PDB_Walkthrough_11")
+     ![Paralel Yığınlar penceresindeki üstbilgi araç ipucu](../debugger/media/pdb_walkthrough_11.png "PDB_Walkthrough_11")
 
-     Görevleri sütuna göre grupabilirsiniz. Görevler **penceresinde Durum** sütunu üst bilgisinde sağ **tıklayın** ve ardından Durum'a göre **Grupla'ya tıklayın.** Aşağıdaki çizimde, **Duruma göre** gruplanmış Görevler penceresi gösterilir.
+     Görevleri sütuna göre gruplandırabilirsiniz. **Görevler** penceresinde, **durum** sütun başlığına sağ tıklayın ve ardından **duruma göre Gruplandır**' a tıklayın. Aşağıdaki çizim **Görevler** penceresini duruma göre gruplanmış olarak gösterir.
 
      ![Görevler penceresinde gruplanmış görevler](../debugger/media/pdb_walkthrough_12.png "PDB_Walkthrough_12")
 
-     Ayrıca başka bir sütuna göre de gruplandırebilirsiniz. Görevleri gruplamayla, görevlerin bir alt kümesine odaklanabilirsiniz. Daraltılabilir her grubun birlikte gruplara sahip öğelerin sayısı vardır.
+     Ayrıca, başka bir sütuna göre gruplandırabilirsiniz. Görevleri gruplandırarak, bir görev alt kümesine odaklanırsınız. Her daraltılabilir Grup, birlikte gruplanmış öğelerin sayısına sahiptir.
 
-     İncelenecek Görevler **penceresinin** son özelliği, bir göreve sağ tıklarken görüntülenen kısayol menüsüdir.
+     Görüntülenecek **Görevler** penceresinin son özelliği, bir göreve sağ tıkladığınızda görüntülenen kısayol menüsü olur.
 
-     Kısayol menüsünde görevin durumuna bağlı olarak farklı komutlar görüntülenir. Komutlar **Copy**, Select All , **Hexadecimal Display**, Switch to **Task**, **Freeze Assigned Thread**, Freeze All Threads But **This**, and **Thaw Assigned Thread**, ve Flag komutlarını **içerebilir.** 
+     Kısayol menüsü, görevin durumuna bağlı olarak farklı komutları görüntüler. Bu komutlar **kopyalama**, **Tümünü seçme**, **onaltılık görüntü**, **görev değiştirme**, **atanan Iş parçacığını** dondurma, **tüm iş parçacıklarını dondurma, ancak bu** atama ve **bayrağı** **çözme** içerebilir.
 
-     Bir görevin veya görevlerin temel iş parçacığını dondurabilir veya atanan iş parçacığı dışındaki tüm iş parçacıklarını dondurabilirsiniz. Donmuş iş parçacığı, İş **Parçacıkları** penceresinde olduğu gibi Görevler penceresinde **mavi** bir duraklatma *simgesiyle gösterilir.*
+     Bir görevin veya görevlerin temel alınan iş parçacığını dondurabilir veya atanmış olanı hariç tüm iş parçacıklarını dondurabilirsiniz. Dondurulmuş bir iş parçacığı, bir mavi *duraklatma* simgesiyle **iş parçacıkları** penceresinde olduğu gibi **Görevler** penceresinde temsil edilir.
 
 ## <a name="summary"></a>Özet
- Bu kılavuzda Paralel Görevler ve **Paralel Yığınlar** **hata ayıklayıcısı** pencereleri gösterildi. Çok iş parçacıklı kod kullanan gerçek projelerde bu pencereleri kullanın. C++, C# veya Visual Basic.
+ Bu izlenecek yol, **paralel görevler** ve **Paralel Yığınlar** hata ayıklayıcısı pencerelerini göstermiştir. Bu pencereleri, çok iş parçacıklı kod kullanan gerçek projeler üzerinde kullanın. C++, C# veya Visual Basic yazılmış paralel kodu inceleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok Iş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)
+- [Çoklu Iş parçacıklı uygulamalarda hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)
-- [Paralel Programlama](/dotnet/standard/parallel-programming/index)
+- [Paralel programlama](/dotnet/standard/parallel-programming/index)
 - [Eşzamanlılık Çalışma Zamanı](/cpp/parallel/concrt/concurrency-runtime)
 - [Paralel Yığınlar Penceresini Kullanma](../debugger/using-the-parallel-stacks-window.md)
 - [Görevleri Penceresini Kullanma](../debugger/using-the-tasks-window.md)

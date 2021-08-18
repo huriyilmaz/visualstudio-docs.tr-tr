@@ -1,6 +1,6 @@
 ---
-description: Belirtilen bir göreli sanal adresi (RVA) içeren belirtilen bir derlemede satırları alır.
-title: IDiaSession::findLinesByRVA | Microsoft Docs
+description: Belirtilen bir göreli sanal adres (RVA) içeren belirtilen bir compiland içindeki satırları alır.
+title: 'IDiaSession:: findLinesByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eeaed28e4e7cc6bc27bac5c7840586e80e547ed2f2d9a3adc1f9f013a36beb1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 89731647fa1de03d5ad3ae94b0357555d525de9c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380193"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134244"
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
-Belirtilen bir göreli sanal adresi (RVA) içeren belirtilen bir derlemede satırları alır.
+Belirtilen bir göreli sanal adres (RVA) içeren belirtilen bir compiland içindeki satırları alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,21 +37,21 @@ HRESULT findLinesByRVA (
 #### <a name="parameters"></a>Parametreler
 `rva`
 
-[in] Adresi RVA olarak belirtir.
+'ndaki Adresi RVA olarak belirtir.
 
 `length`
 
-[in] Bu sorguyla birlikte ele alınan adres aralığının bayt sayısını belirtir.
+'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığının bayt sayısını belirtir.
 
 `ppResult`
 
-[out] Belirtilen adres aralığını içeren tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
+dışı Belirtilen adres aralığını kapsayan tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Bu örnek, işlevin göreli sanal adresini ve uzunluğunu kullanarak belirtilen işlevde yer alan tüm satır numaralarını alan bir işlevi gösterir.
+Bu örnek, işlevin göreli sanal adresini ve uzunluğunu kullanarak belirtilen işlevde bulunan tüm satır numaralarını elde eden bir işlevi gösterir.
 
 ```C++
 IDiaEnumLineNumbers* GetLineNumbersByRVA(IDiaSymbol *pFunc, IDiaSession *pSession)

@@ -1,5 +1,5 @@
 ---
-description: Hata ayıklayıcının çalıştığı bilgisayarı tanımlar.
+description: Hata ayıklayıcının üzerinde çalıştır olduğu bilgisayarı açıklar.
 title: COMPUTER_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,20 +9,21 @@ ms.assetid: 943085b2-f165-462d-9a4e-2086f0cdfff4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c7ebcee7270eb187998ce7c6078277dd90897012
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 461ff8398617b75e54460288e40f82bcdcf4e0b4660c51ca514b078a47d7ef22
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096466"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452439"
 ---
 # <a name="computer_info"></a>COMPUTER_INFO
-Hata ayıklayıcının çalıştığı bilgisayarı tanımlar.
+Hata ayıklayıcının üzerinde çalıştır olduğu bilgisayarı açıklar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,14 +56,14 @@ Paket maskesini tanımlar.
 İşletim sistemi sürüm numarası.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) yöntemi tarafından döndürülür.
+Bu yapı [GetComputerInfo yöntemi tarafından](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: Msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

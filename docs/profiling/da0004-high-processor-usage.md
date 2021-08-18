@@ -1,6 +1,6 @@
 ---
-title: DA0004-yüksek işlemci kullanımı | Microsoft Docs
-description: İzleme yöntemi kullanılarak toplanmış olan profil oluşturma verilerinde yüksek işlemci (CPU) kullanımı yüksektir.
+title: DA0004 - Yüksek işlemci kullanımı | Microsoft Docs
+description: Ölçümleme yöntemi kullanılarak toplanan profil oluşturma verilerinde işlemci (CPU) kullanımı yüksekti.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,33 +12,34 @@ ms.assetid: 2c4fb569-929e-4f1d-8c50-b590ee371351
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e80f9161e435a3b2b615aed700714a0c3cd0efa4
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: f5f4dfccfdc8814992ecdac095408efabdd3f2d8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102469981"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076678"
 ---
 # <a name="da0004-high-processor-usage"></a>DA0004: Yüksek işlemci kullanımı
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0004|
-|Kategori|Profil Oluşturma Araçları kullanımı|
+|Kural Kimliği|DA0004|
+|Kategori|Profil Oluşturma Araçları Kullanımı|
 |Profil oluşturma yöntemleri|İzleme<br /><br /> Örnekleme|
-|İleti|İşlemci kullanımınız sürekli olarak %75 üzerinde. CPU 'ya dayalı uygulamalar için örnekleme modunu kullanmayı düşünün.|
+|İleti|İşlemci kullanımınız tutarlı olarak %75'in üzerinde. CPU'ya bağlı uygulamalar için Örnekleme modunu kullanmayı göz önünde bulundurabilirsiniz.|
 |Kural türü|Bilgi|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak musiki yöntemlerini kullanarak profil 10 örnek toplayan bu kuralı tetiklemeniz gerekir.
 
 ## <a name="cause"></a>Nedeni
- İzleme yöntemi kullanılarak toplanmış olan profil oluşturma verilerinde yüksek işlemci (CPU) kullanımı yüksektir. Bir CPU ile bağlantılı uygulamanın profilini oluştururken örnekleme profili oluşturma yöntemini kullanmayı düşünün.
+ Ölçümleme yöntemi kullanılarak toplanan profil oluşturma verilerinde işlemci (CPU) kullanımı yüksekti. CPU'ya bağlı bir uygulamanın profilini oluşturmada örnekleme profil oluşturma yöntemini kullanmayı göz önünde bulundurabilirsiniz.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Bu profil oluşturma çalışması sırasında işlemci (veya işlemciler) sürekli olarak meşgul. Yüksek CPU kullanımı, CPU 'ya dayalı bir uygulamayı gösterebilir. Belgelenmiş profiller, CPU kullanımı senaryolarını araştırmak için en etkili yol değildir. Örnekleme, zaman içinde işlemci üzerinde yönergeler yürüten uygulamalar için profil oluştururken daha etkilidir.
+ Bu profil oluşturma çalıştırması sırasında işlemci (veya işlemciler) sürekli olarak meşguldu. Yüksek CPU kullanımı, CPU'ya bağlı bir uygulama olduğunu gösteriyor olabilir. Cpu kullanımı senaryolarını araştırmanın en etkili yolu, takip edilen profiller değildir. Örnekleme, zamanlarının çoğunu işlemcide yönergeleri yürütmek için harcayan uygulamaların profilini oluşturma konusunda daha etkilidir.
 
-## <a name="how-to-fix-violations"></a>İhlalleri çözme
- İşlev zamanlamalarınız gerekmiyorsa veya giriş/çıkış işlemini işlemci performans sorunlarına göre anlamak için daha fazla bilgi edinmek istiyorsanız, izleme yöntemi yerine örnekleme yöntemini kullanarak uygulamanızın profilini oluşturmayı düşünün.
+## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
+ İşlev zamanlamalarına gerek yoksa veya giriş/çıkış sorunlarını işlemci performans sorunlarını anlamaktan daha çok ilgileniyorsanız, ölçüm yöntemi yerine örnekleme yöntemini kullanarak uygulamanın profilini oluşturmayı yeniden göz önünde bulundurabilirsiniz.

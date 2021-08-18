@@ -9,14 +9,15 @@ ms.assetid: 7e5a1907-c652-4046-b207-d2f1ef7b8029
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7676012e6cf140fb4a93d4735169d05de37f5de4
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 88e673be6736e7570a068e4c1d728063bdb39aa2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902390"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102902"
 ---
 # <a name="s_taskidcounter-field"></a>s_taskIdCounter Alanı
 Bir nesne için bir sonraki kullanılabilir <xref:System.Threading.Tasks.Task> tanımlayıcı.

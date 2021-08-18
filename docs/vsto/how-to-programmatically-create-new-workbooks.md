@@ -16,19 +16,19 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 4ed078859cd1f03fff89c5b1b2fe8d8554c345c908b223c44bf033a1b8686023
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dded73f4af9221b096adc7c0cfda8c70fb91a348
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384294"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046600"
 ---
 # <a name="how-to-programmatically-create-new-workbooks"></a>Nasıl musunuz: Program aracılığıyla yeni çalışma kitapları oluşturma
   Program aracılığıyla bir çalışma kitabı oluşturursanız, bu bir konak <xref:Microsoft.Office.Interop.Excel.Workbook> öğesi değil, yerel <xref:Microsoft.Office.Tools.Excel.Workbook> bir nesnedir.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Eklenti <xref:Microsoft.Office.Tools.Excel.Workbook> projesinde bir nesne için <xref:Microsoft.Office.Interop.Excel.Workbook> konak VSTO oluşturabilirsiniz. Daha fazla bilgi için bkz. Word belgelerini genişletme Excel çalışma VSTO çalışma [kitaplarını çalışma zamanında genişletme.](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+ Eklenti <xref:Microsoft.Office.Tools.Excel.Workbook> projesinde bir nesne için <xref:Microsoft.Office.Interop.Excel.Workbook> bir konak VSTO öğesi oluşturabilirsiniz. Daha fazla bilgi için bkz. Word belgelerini genişletme Excel çalışma VSTO çalışma [kitaplarını çalışma zamanında genişletme.](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 
 ## <a name="to-create-a-new-workbook"></a>Yeni çalışma kitabı oluşturmak için
 

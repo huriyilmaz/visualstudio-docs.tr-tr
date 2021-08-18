@@ -18,15 +18,16 @@ ms.assetid: ce7cb734-80ac-4930-a4ef-e24395e1cc07
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dd1ac2bbd111783b9e5730e9aab06b2a4268ff05
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 182acb852c70e723a96a014b8c9a04a6c8cef920
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876972"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033583"
 ---
 # <a name="how-to-choose-sampling-events"></a>Nasıl yapılır: örnekleme olaylarını seçme
 Profil Oluşturma Araçları, varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profili oluşturulmuş işlem tarafından kullanılan işlemci döngüsü sayısı olarak belirtilen bir aralıkta performans verilerini toplar. Bir aralıktaki varsayılan döngü sayısı 10.000.000 ' dir ve 1 GH bir bilgisayarda yaklaşık 0,01 saniyedir. Bir aralıktaki döngü sayısını değiştirebilir ve örnek olayı değiştirebilirsiniz. Aşağıdaki örnek olaylar mevcuttur:

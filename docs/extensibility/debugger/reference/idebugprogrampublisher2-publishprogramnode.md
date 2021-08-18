@@ -11,17 +11,18 @@ ms.assetid: d4b72e04-f726-46cf-8e56-5203ff205b12
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 62de2e91d9331d33e40e6364893850d40f8e8eca
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f68e6a3b874617608d0155294fa3928ac51d0b2585fe39bdc25edee67cfceded
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065157"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121449137"
 ---
 # <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
 Bir program düğümünü hata ayıklama motorları (DEs) ve oturum hata ayıklama Yöneticisi (SDM) tarafından kullanılabilir hale getirir.

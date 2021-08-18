@@ -1,6 +1,6 @@
 ---
-title: Office çözümü için yapılandırma bilgilerini ayarlama
-description: Microsoft Office çözümlerinize özgü ayarları yapılandırmak için yapılandırma dosyalarını nasıl kullanabileceğinizi öğrenin.
+title: Bir çözüm için yapılandırma bilgilerini Office ayarlama
+description: Uygulama çözümlerinize özgü ayarları yapılandırmak için yapılandırma dosyalarını nasıl kullanabileceğinizi Microsoft Office öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -14,39 +14,40 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: da3a08ad9b3f6c78a10891e7d8ef2093ab46305d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1fd59fb61cf1d84c35bbcbbe406030318b8f57c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99927710"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032712"
 ---
-# <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>Nasıl yapılır: bir Office çözümü için yapılandırma bilgilerini ayarlama
-  Yapılandırma dosyalarını, Office çözümlerinize özgü ayarları yapılandırmak için kullanabilirsiniz. Derleme bağlama ilkesi, uzaktan iletişim nesneleri, hata ayıklama ve izleme ayarları gibi ayarları belirtebilirsiniz.
+# <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>Nasıl Office: Bir Office ayarlama
+  Yapılandırma dosyalarını kullanarak uygulama çözümlerinize özgü ayarları Office. Derleme bağlama ilkesi, iletişim nesneleri, hata ayıklama ve izleme ayarları gibi ayarları belirtebilirsiniz.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-### <a name="to-add-a-configuration-file-to-your-office-project"></a>Office projenize bir yapılandırma dosyası eklemek için
+### <a name="to-add-a-configuration-file-to-your-office-project"></a>Office projenize yapılandırma dosyası eklemek için
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+1. Yeni **Project** Ekle'ye **tıklayın.**
 
-2. **Kategoriler** bölmesinde, **genel**' e tıklayın.
+2. Kategoriler bölmesinde **Genel'e** **tıklayın.**
 
-3. **Şablonlar** bölmesinde, **uygulama yapılandırma dosyası**' nı seçin.
+3. Şablonlar **bölmesinde Uygulama** Yapılandırma **Dosyası'ı seçin.**
 
-4. **Ad** kutusuna derleme ile aynı adı ve *. config* uzantısını yazın. Örneğin, *ExcelWorkbook1.dll* adlı bir Excel projesi derlemesinin yapılandırma dosyası *ExcelWorkbook1.dll.config* olarak adlandırılır.
+4. Ad **kutusuna** derlemeyle aynı adı ve uzantıyı *.config.* Örneğin,ExcelWorkbook1.dlladlı bir Excel proje *derlemesi için yapılandırmaExcelWorkbook1.dll.config.* **
 
 5. **Ekle**'ye tıklayın.
 
-6. Yapılandırma dosyanızı uygulama yapılandırma dosyası şemasına göre oluşturun. Daha fazla bilgi için bkz. [.NET Framework Için yapılandırma dosyası şeması](/dotnet/framework/configure-apps/file-schema/index).
+6. Yapılandırma dosyanızı uygulama yapılandırma dosyası şemasına göre oluşturun. Daha fazla bilgi için [bkz. Yapılandırma dosyası şeması .NET Framework.](/dotnet/framework/configure-apps/file-schema/index)
 
-   Office projeleriyle yapılandırma dosyalarını kullanmaya yönelik özel önemli noktalar yoktur.
+   Yapılandırma dosyalarını farklı projelerle kullanmanın özel bir Office yoktur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET Framework için yapılandırma dosyası şeması](/dotnet/framework/configure-apps/file-schema/index)
-- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
-- [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
+- [Yapılandırma dosyası şeması .NET Framework](/dotnet/framework/configure-apps/file-schema/index)
+- [Yeni çözümler tasarlama Office oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Bir Office dağıtma](../vsto/deploying-an-office-solution.md)

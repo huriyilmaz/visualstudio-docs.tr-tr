@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d658ac48d2481f414fdef07906275f25b35479c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5981bee624b8638aa2140eeaf073a42bb7c18126b3c02da2b07ca4c2bad393d3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122092026"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440351"
 ---
 # <a name="blend-for-visual-studio-overview"></a>Visual Studio için Blend genel bakış
 

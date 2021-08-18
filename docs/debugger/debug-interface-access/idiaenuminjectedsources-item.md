@@ -11,14 +11,15 @@ ms.assetid: 14846955-7270-451d-91d2-9cb34bb65187
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d1ab3a9ce19705a4d9ff22f33a1275efc0e8b02
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0b77564566d1f45ca860483867bc407de1e5040c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148999"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134468"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
 Eklenen kaynağı bir dizin aracılığıyla alır.

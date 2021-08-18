@@ -1,6 +1,6 @@
 ---
-title: Gelişmiş ayarlar Iletişim kutusu (eşzamanlılık görselleştiricisi) | Microsoft Docs
-description: İzleme içeriğini denetlemek için eşzamanlılık görselleştiricisi içindeki gelişmiş ayarları kullanın. Semboller, Yalnızca kendi kodum, arabelleğe alma ve daha fazlası için sekmeler vardır.
+title: gelişmiş Ayarlar iletişim kutusu (eşzamanlılık görselleştiricisi) | Microsoft Docs
+description: izleme içeriğini denetlemek için eşzamanlılık görselleştiricisi içinde gelişmiş Ayarlar kullanın. Semboller, Yalnızca kendi kodum, arabelleğe alma ve daha fazlası için sekmeler vardır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,28 +10,29 @@ ms.assetid: bb3d90aa-5f08-4953-9be0-be6cea11633d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a0b58dfec2d0dd04f146c3a473736fa6911f194c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c7abfac75a1df3ca2acd38013a552266bce4b6d5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901260"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039845"
 ---
-# <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>Gelişmiş ayarlar iletişim kutusu (eşzamanlılık görselleştiricisi)
-Eşzamanlılık Görselleştiricisinin **Gelişmiş ayarlar** iletişim kutusunu kullanarak, izlemelerin nasıl toplandığını kontrol edebilirsiniz.  İletişim kutusunda semboller, Yalnızca kendi kodum, arabelleğe alma, filtreleme, CLR olayları, işaretçiler, sağlayıcılar ve dosyalar için sekmeler bulunur.
+# <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>gelişmiş Ayarlar iletişim kutusu (eşzamanlılık görselleştiricisi)
+eşzamanlılık görselleştiricisinin **gelişmiş Ayarlar** iletişim kutusunu kullanarak, izlemelerin nasıl toplandığını kontrol edebilirsiniz.  İletişim kutusunda semboller, Yalnızca kendi kodum, arabelleğe alma, filtreleme, CLR olayları, işaretçiler, sağlayıcılar ve dosyalar için sekmeler bulunur.
 
 ## <a name="symbols"></a>Simgeleri
- Eşzamanlılık görselleştiricisi, Visual Studio hata ayıklayıcı ile aynı sembol ayarlarını kullanır. Eşzamanlılık görselleştiricisi, performans verileriyle ilişkili çağrı yığınlarını çözümlemek için ayarları kullanır.  İzleme işlerken eşzamanlılık görselleştiricisi, Ayarlar sayfasında belirtilen sembol sunucularına erişir.  Bu verilere bir ağ üzerinden erişildiğinde izleme işlemi yavaşlar.  Sembolleri çözümlemek için gereken süre miktarını azaltmak için sembolleri yerel olarak önbelleğe alabilirsiniz. Semboller indirildiyse, Visual Studio bu dosyaları yerel önbellekten yükler.
+ eşzamanlılık görselleştiricisi Visual Studio hata ayıklayıcı ile aynı sembol ayarlarını kullanır. Eşzamanlılık görselleştiricisi, performans verileriyle ilişkili çağrı yığınlarını çözümlemek için ayarları kullanır.  İzleme işlerken eşzamanlılık görselleştiricisi, Ayarlar sayfasında belirtilen sembol sunucularına erişir.  Bu verilere bir ağ üzerinden erişildiğinde izleme işlemi yavaşlar.  Sembolleri çözümlemek için gereken süre miktarını azaltmak için sembolleri yerel olarak önbelleğe alabilirsiniz. semboller indirildiyse, Visual Studio onları yerel önbellekten yükler.
 
 ## <a name="just-my-code"></a>Yalnızca Kendi Kodum
- Varsayılan olarak, Yalnızca kendi kodum kümesidir. *exe* ve. Visual Studio 'daki geçerli çözümle ilişkili *DLL* dosyaları. Eşzamanlılık görselleştiricisi, çağrı yığınlarını filtrelemek için Yalnızca kendi kodum özelliğini kullandığınızda bu dosya kümesini değerlendirir. Yalnızca kendi kodum sekmesinde, içeren dizinleri ekleyebilirsiniz. *exe* ve. Yalnızca kendi kodum için eşzamanlılık görselleştiricisi tarafından kullanılan konumlara *DLL* dosyaları.
+ Varsayılan olarak, Yalnızca kendi kodum kümesidir. *exe* ve. Visual Studio içindeki geçerli çözümle ilişkili *DLL* dosyaları. Eşzamanlılık görselleştiricisi, çağrı yığınlarını filtrelemek için Yalnızca kendi kodum özelliğini kullandığınızda bu dosya kümesini değerlendirir. Yalnızca kendi kodum sekmesinde, içeren dizinleri ekleyebilirsiniz. *exe* ve. Yalnızca kendi kodum için eşzamanlılık görselleştiricisi tarafından kullanılan konumlara *DLL* dosyaları.
 
  Öğesinin yolları. *exe* ve. izleme toplandığında *DLL* dosyaları izleme dosyasında depolanır.  Bu ayarın değiştirilmesi, daha önce toplanan izlemeleri etkilemez.
 
 ## <a name="buffering"></a>Ara
- Eşzamanlılık görselleştiricisi bir izleme toplarken Windows için olay Izleme (ETW) kullanır.  ETW, olayları depolayan gibi çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları her durumda en uygun olmayabilir ve bazı durumlarda kayıp olayları gibi sorunlara neden olabilir.  ETW arabelleği ayarlarını yapılandırmak için arabelleğe alma sekmesini kullanabilirsiniz. Daha fazla bilgi için bkz. [olay izleme](/windows/win32/etw/event-tracing-portal) ve  [EVENT_TRACE_PROPERTIES yapısı](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties).
+ eşzamanlılık görselleştiricisi bir izleme toplarken Windows (ETW) için olay izlemeyi kullanır.  ETW, olayları depolayan gibi çeşitli arabellekler kullanır.  Varsayılan ETW arabellek ayarları her durumda en uygun olmayabilir ve bazı durumlarda kayıp olayları gibi sorunlara neden olabilir.  ETW arabelleği ayarlarını yapılandırmak için arabelleğe alma sekmesini kullanabilirsiniz. Daha fazla bilgi için bkz. [olay izleme](/windows/win32/etw/event-tracing-portal) ve  [EVENT_TRACE_PROPERTIES yapısı](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties).
 
 ## <a name="filter"></a>Filtre
  Filtre sekmesinde, eşzamanlılık görselleştiricisi tarafından toplanan olay kümesini seçebilirsiniz. Olayların bir alt kümesini seçmek raporlarda görüntülenen veri türlerini sınırlar, her izlemenin boyutunu azaltır ve izlemeleri işlemek için gereken süreyi azaltır.

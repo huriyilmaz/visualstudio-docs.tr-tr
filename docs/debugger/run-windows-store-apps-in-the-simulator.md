@@ -1,6 +1,6 @@
 ---
 title: Simülatörde UWP uygulamaları çalıştırma | Microsoft Docs
-description: UWP uygulamasını taklit eden bir masaüstü uygulaması olan Visual Studio benzeticisinde Evrensel Windows Platformu (UWP) uygulamalarının nasıl çalıştırılacağını anlayın.
+description: uwp uygulamasını taklit eden bir masaüstü uygulaması olan Visual Studio benzeticisinde Evrensel Windows Platformu (UWP) uygulamalarının nasıl çalıştırılacağını anlayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,25 +13,26 @@ ms.assetid: 81b69bf8-ec87-4bb6-9ad4-1fa7b7802d16
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: b9a6c2ceeb9a3c384329f167ec158b213f3d15a8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a3695aa387e9bb51c7918b95d0092c41f1f894fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887594"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030639"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>Simülatörde UWP uygulamaları çalıştırma
 
-UWP uygulamaları için Visual Studio simülatör, UWP uygulamasını taklit eden bir masaüstü uygulamasıdır. Genellikle, yerel makinede, bağlı bir cihazda veya uzak makinede hata ayıklaması yapmanız gerekir. Ancak, bazı senaryolarda, farklı bir fiziksel ekran boyutu ve çözümüne öykünmek için Visual Studio simülatörü kullanmak isteyebilirsiniz. Ayrıca, ortak dokunma ve döndürme olaylarının benzetimini yapabilir ve ağ bağlantısı özelliklerinin benzetimini yapabilirsiniz.
+uwp uygulamaları için Visual Studio simülatör, uwp uygulamasını taklit eden bir masaüstü uygulamasıdır. Genellikle, yerel makinede, bağlı bir cihazda veya uzak makinede hata ayıklaması yapmanız gerekir. ancak bazı senaryolarda, farklı bir fiziksel ekran boyutu ve çözümüne benzemek için Visual Studio simülatörü kullanmak isteyebilirsiniz. Ayrıca, ortak dokunma ve döndürme olaylarının benzetimini yapabilir ve ağ bağlantısı özelliklerinin benzetimini yapabilirsiniz.
 
-Simülatör, UWP uygulamalarını tasarlamak, geliştirmek, hatalarını ayıklamak ve test etmek için kullanabileceğiniz bir ortam sağlar. Ancak, uygulamanızı Microsoft Store için yayımlamadan önce, uygulamanızı gerçek bir cihazda test etmelisiniz.
+Simülatör, UWP uygulamalarını tasarlamak, geliştirmek, hatalarını ayıklamak ve test etmek için kullanabileceğiniz bir ortam sağlar. ancak, uygulamanızı Microsoft Store için yayımlamadan önce, uygulamanızı gerçek bir cihazda test etmelisiniz.
 
-UWP uygulamaları için Visual Studio simülatörü, yerel makinenizde yalıtılmış bir ortamda çalışmaz. Bu nedenle, kurtarılamayan sistem genelinde bir hata gibi benzeticide oluşan hatalar makinenin tamamını de etkileyebilir.
+UWP uygulamalarına yönelik Visual Studio benzetici, yerel makinenizde yalıtılmış bir ortamda çalışmaz. Bu nedenle, kurtarılamayan sistem genelinde bir hata gibi benzeticide oluşan hatalar makinenin tamamını de etkileyebilir.
 
 > [!IMPORTANT]
-> Visual Studio 2015 simülatör, coğrafi konum düğmesini içermez. Bunun nedeni, Windows 10 simülatörü coğrafi konum simülasyonu içermez.
+> Visual Studio 2015 simülatör, coğrafi konum düğmesini içermez. bunun nedeni Windows 10 simülatör coğrafi konum simülasyonu içermez.
 
 ## <a name="set-the-simulator-as-the-target"></a><a name="BKMK_Set_the_simulator_as_the_target"></a> Simülatör 'ı hedef olarak ayarlayın
 
@@ -101,9 +102,9 @@ Etkileşim modunu iki parmağınızla bir Pinç ve yakınlaştırma hareketlerin
  Ekran boyutu ve çözümlemesi *, ekran genişliği inç, piksel genişliği X piksel yüksekliği* olarak listelenir. Hem ekran boyutunun hem de çözümlemenin benzetildiğini unutmayın. Simülatör üzerindeki konum koordinatları seçili cihaz boyutuna ve çözümüne çevrilir.
 
 > [!NOTE]
-> Uygulamanıza bit eşlem görüntülerinin ölçeklendirilen sürümlerini kaydedebilir ve Windows geçerli ölçek için doğru görüntüyü yükler. Daha fazla bilgi için bkz. [Tasarım ve UI girişi](/windows/uwp/layout/design-and-ui-intro). Ancak, Windows 'un çözünürlüğe uyacak şekilde farklı bir görüntü görebilmesi için simülatör çözünürlüğünü değiştirirseniz, yeni görüntüyü görüntülemek için hata ayıklama oturumunuzu durdurup yeniden başlatmanız gerekir.
+> uygulamanıza bit eşlem görüntülerinin ölçeklendirilen sürümlerini kaydedebilir ve Windows geçerli ölçek için doğru görüntüyü yükleyecek. Daha fazla bilgi için bkz. [Tasarım ve UI girişi](/windows/uwp/layout/design-and-ui-intro). bununla birlikte, Windows çözünürlüğü sığacak şekilde farklı bir görüntü görebilmesi için simülatör çözünürlüğünü değiştirirseniz, yeni görüntüyü görüntülemek için hata ayıklama oturumunuzu durdurup yeniden başlatmanız gerekir.
 
-## <a name="capture-a-screenshot-of-your-app-for-submission-to-microsoft-store"></a><a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Microsoft Store göndermek için uygulamanızın ekran görüntüsünü yakalayın
+## <a name="capture-a-screenshot-of-your-app-for-submission-to-microsoft-store"></a><a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a>Microsoft Store göndermek için uygulamanızın ekran görüntüsünü yakalayın
  Microsoft Store bir uygulama gönderdiğinizde, uygulamanın ekran görüntülerini dahil etmeniz gerekir.
 
 > [!NOTE]
@@ -117,7 +118,7 @@ Etkileşim modunu iki parmağınızla bir Pinç ve yakınlaştırma hareketlerin
 
 ## <a name="simulate-network-connection-properties"></a><a name="BKMK_Simulate_network_connection_properties"></a> Ağ bağlantısı özelliklerinin benzetimini yap
 
-Ağ bağlantısı maliyetinin veya veri planı durum değişikliklerinin farkında tutarak ve uygulamanızın bu bilgileri kullanarak dolaşım veya belirtilen bir veri aktarım limitini aşmaktan kaçınmak için bu bilgileri kullanmasını sağlayarak uygulamanızın kullanıcılarına tarifeli ağ bağlantısı maliyetini yönetmesine yardımcı olabilirsiniz. [Windows. Networking. Connectivity](/uwp/api/windows.networking.connectivity) API 'leri, oturum açmak Için [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) ve [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) olaylarına yanıt vermenizi sağlar. Bkz. [hızlı başlangıç: tarifeli ağ maliyeti kısıtlamalarını yönetme](/previous-versions/windows/apps/hh750310(v=win.10)).
+Ağ bağlantısı maliyetinin veya veri planı durum değişikliklerinin farkında tutarak ve uygulamanızın bu bilgileri kullanarak dolaşım veya belirtilen bir veri aktarım limitini aşmaktan kaçınmak için bu bilgileri kullanmasını sağlayarak uygulamanızın kullanıcılarına tarifeli ağ bağlantısı maliyetini yönetmesine yardımcı olabilirsiniz. [Windows. Ağ. bağlantı](/uwp/api/windows.networking.connectivity) API 'leri, oturum açmak Için [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) ve [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) olaylarına yanıt vermenizi sağlar. Bkz. [hızlı başlangıç: tarifeli ağ maliyeti kısıtlamalarını yönetme](/previous-versions/windows/apps/hh750310(v=win.10)).
 
 Ağ maliyetinizi algılayan kodunuzun hatalarını ayıklamak veya test etmek için simülatör, [GetInternetConnectionProfile](/uwp/api/windows.networking.connectivity.networkinformation)tarafından döndürülen [ConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) nesnesi aracılığıyla kullanıma sunulan bir ağın özelliklerini taklit edebilir.
 
@@ -149,7 +150,7 @@ Ağ bağlantılarını yönetme hakkında daha fazla bilgi için bkz.:
 [Enerji kullanımını çözümleme](../profiling/analyze-energy-use-in-store-apps.md)
 ::: moniker-end
 
-[Windows. Networking. Connectivity](/uwp/api/windows.networking.connectivity)
+[Windows. Ağ. bağlantı](/uwp/api/windows.networking.connectivity)
 
 [Arka plan görevleriyle sistem olaylarına yanıt verme](/previous-versions/windows/apps/hh977058(v=win.10))
 

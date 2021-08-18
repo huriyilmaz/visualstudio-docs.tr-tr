@@ -1,6 +1,6 @@
 ---
 title: Dekoratörlerin Özellikleri
-description: Dekoratörlerin diyagramda şekiller veya bağlayıcılar üzerinde görünen simgeler, metinler veya genişlet/daralt köşeli çift ayraçları olduğunu öğrenin.
+description: Dekoratların, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebilen simgeler, metin veya genişletme/daraltma köşeli çift ayraçları olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,57 +12,57 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: cc285e74acacc33cfb12fbbf3aade12b4bf156a69abaf5cf5ec27e3e3f3468e5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bfbec75b8190b56900a7a994ac12022af1133ac0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370521"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034207"
 ---
 # <a name="properties-of-decorators"></a>Dekoratörlerin Özellikleri
-Dekoratörler, diyagramda şekiller veya bağlayıcılarda görünen simgeler, metinler veya genişlet/daralt köşeli çift ayraçlarıdır. Aşağıdaki tablolarda üç tür dekoratörün özellikleri gösterildi. Özelliklerden bazıları yalnızca şekil dekoratörlerde veya yalnızca bağlayıcı dekoratörlerde görünür.
+Dekoratörler, diyagramdaki şekiller veya bağlayıcılar üzerinde görünebilen simgelerle, metin veya genişletme/daraltma köşeli ayraçlardır. Aşağıdaki tablolarda, üç dekoratörün çeşitinin özellikleri gösterilmektedir. Bazı özellikler yalnızca şekil dekoratlarını veya yalnızca bağlayıcı dekoratlarını üzerinde görünür.
 
- Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, bkz. Domain-Specific Dili [Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
+ Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
-## <a name="expandcollapse-decorator"></a>Dekoratörü Genişletme/Daraltma
+## <a name="expandcollapse-decorator"></a>Dekoratör Genişlet/Daralt
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
-|DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratörün adı.|Dekoratörü Daralt'i genişletin|
-|Name|Dekoratörün adı.|Expandcollapsedecorator|
-|Notlar|Bu dekoratörle ilişkili resmi olmayan notlar.|\<none>|
-|Horizontaloffset|Dekoratörün varsayılan konumuyla ilgili olarak inç olarak yatay uzaklık. (Yalnızca şekiller üzerinde.)|0|
-|Verticaloffset|Dekoratörün varsayılan konumuyla ilgili dikey uzaklık inç olarak. (Yalnızca şekiller üzerinde.)|0|
-|OffsetFromLine|Dekoratörün çizgiden, varsayılan konumuyla (inç) uzaklığı. (Yalnızca bağlayıcılarda.)|0|
-|OffsetFromShape|Dekoratörün, varsayılan konumundaki şekliyle inç olarak uzaklığı. (Yalnızca bağlayıcılarda.)|0|
+|DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratörün adı.|Daraltma dekoratörü Genişlet|
+|Name|Dekoratörün adı.|ExpandCollapseDecorator|
+|Notlar|Bu dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
+|Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
+|Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
+|OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
+|OffsetFromShape|Dekoratörün şekilden, varsayılan konumuna göre inç cinsinden değeri. (Yalnızca bağlayıcılar üzerinde.)|0|
 |Konum|Dekoratörün varsayılan konumu.|SourceTop|
 
-## <a name="icon-decorator"></a>Simge Dekoratör
+## <a name="icon-decorator"></a>Simge dekoratör
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
-|Defaultıcon|Görüntülenecek simgenin veya görüntü dosyasının yolu.|\<none>|
-|DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratörün adı.|Simge Dekoratör|
-|Name|Dekoratörün adı.|IconDecorator|
-|Notlar|Dekoratörle ilişkili resmi olmayan notlar.|\<none>|
-|Horizontaloffset|Dekoratörün varsayılan konumuyla ilgili olarak inç olarak yatay uzaklık. (Yalnızca şekiller üzerinde.)|0|
-|Verticaloffset|Dekoratörün varsayılan konumuyla ilgili dikey uzaklık inç olarak. (Yalnızca şekiller üzerinde.)|0|
-|OffsetFromLine|Dekoratörün çizgiden, varsayılan konumuyla (inç) uzaklığı. (Yalnızca bağlayıcılarda.)|0|
-|OffsetFromShape|Dekoratörün, varsayılan konumundaki şekliyle inç olarak uzaklığı. (Yalnızca bağlayıcılarda.)|0|
+|DefaultIcon|Görüntülenecek simgenin veya resim dosyasının yolu.|\<none>|
+|DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Simge dekoratör|
+|Name|Dekoratörün adı.|Şeklindeki IconDecorator|
+|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
+|Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
+|Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
+|OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
+|OffsetFromShape|Dekoratörün şekilden, varsayılan konumuna göre inç cinsinden değeri. (Yalnızca bağlayıcılar üzerinde.)|0|
 |Konum|Dekoratörün varsayılan konumu.|SourceTop|
 
-## <a name="textdecorator"></a>Textdecorator
+## <a name="textdecorator"></a>TextDecorator
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
-|Defaulttext|Görüntülenecek varsayılan metin.|Etiketle|
-|DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratörün adı.|Etiketle|
-|FontSize|Dekoratörde görüntülenen metnin yazı tipi boyutu.|8|
-|Fontstyle|Dekoratörde görüntülenen metnin yazı tipi stili.|Düzenli|
+|Ise DefaultText|Görüntülenecek varsayılan metin.|Etiketle|
+|DisplayName|Oluşturulan tasarımcıda görüntülenecek dekoratör adı.|Etiketle|
+|FontSize|Dekoratör içinde görüntülenen metnin yazı tipi boyutu.|8|
+|FontStyle|Dekoratör içinde görüntülenen metnin yazı tipi stili.|Düzenli|
 |Name|Dekoratörün adı.|Etiketle|
-|Notlar|Dekoratörle ilişkili resmi olmayan notlar.|\<none>|
-|Horizontaloffset|Dekoratörün varsayılan konumuyla ilgili olarak inç olarak yatay uzaklık. (Yalnızca şekiller üzerinde.)|0|
-|Verticaloffset|Dekoratörün varsayılan konumuyla ilgili dikey uzaklık inç olarak. (Yalnızca şekiller üzerinde.)|0|
+|Notlar|Dekoratör ile ilişkili resmi olmayan notlar.|\<none>|
+|Horizontalkayması|Dekoratörün varsayılan konumuna göre inç cinsinden yatay konum. (Yalnızca şekiller üzerinde.)|0|
+|Verticalsapmayı|Dekoratörün varsayılan konumuna göre inç cinsinden dikey konum. (Yalnızca şekiller üzerinde.)|0|
 |OffsetFromLine|Dekoratörün, varsayılan konumuna (inç olarak) göre, çizgi arasındaki fark. (Yalnızca bağlayıcılar üzerinde.)|0|
 |OffsetFromShape|Dekoratörün şekilden, varsayılan konumuna göre inç cinsinden değeri. (Yalnızca bağlayıcılar üzerinde.)|0|
 |Konum|Dekoratörün varsayılan konumu.|TargetBottom|

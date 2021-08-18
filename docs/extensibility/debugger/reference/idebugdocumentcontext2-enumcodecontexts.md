@@ -11,17 +11,18 @@ ms.assetid: 627af69c-5cce-4e1d-8233-5f4d8dbc62e5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 99f60cd99a694c6f2610982a2b85fe2dbce1282b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8711c14028301e4a9de60c919f161f4884e3a1bc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066704"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079239"
 ---
 # <a name="idebugdocumentcontext2enumcodecontexts"></a>IDebugDocumentContext2::EnumCodeContexts
 Bu belge içeriğiyle ilişkili tüm kod bağlamlarının bir listesini alır.

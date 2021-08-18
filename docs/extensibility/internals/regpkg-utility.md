@@ -14,18 +14,18 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed91788526177392901a6fd8aa03f139f9267827
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7911c31b6e7766d69e51b65abea8184f4d6fbbdc8d2518560b13d665c365e61f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062855"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121432234"
 ---
 # <a name="regpkg-utility"></a>RegPkg Yardımcı Programı
 > [!NOTE]
-> Paketleri uygulama içinde kaydetmenin tercih Visual Studio .pkgdef dosyalarını kullanmaktır. Bu, VSIX dağıtımı için bir gereksinim olan sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına olanak sağlar. Pkgdef dosyaları [CreatePkgDef Yardımcı Programı kullanılarak oluşturulur.](../../extensibility/internals/createpkgdef-utility.md) Paket dağıtımı hakkında daha fazla Visual Studio için bkz. [Shipping Visual Studio Extensions](../../extensibility/shipping-visual-studio-extensions.md).
+> Paketleri uygulama içinde kaydetmenin tercih Visual Studio .pkgdef dosyalarını kullanmaktır. Bu, VSIX dağıtımı için bir gereksinim olan sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına olanak sağlar. Pkgdef dosyaları, [CreatePkgDef Yardımcı Programı kullanılarak oluşturulur.](../../extensibility/internals/createpkgdef-utility.md) Paket dağıtımı hakkında daha Visual Studio için bkz. [Shipping Visual Studio Extensions](../../extensibility/shipping-visual-studio-extensions.md).
 
- RegPkg.exe yardımcı programı ile bir VSPackage'i [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaydeden ve dağıtım için hazırlar. Bu yardımcı program VSPackage geliştirmesi sırasında arka planı kullanılır. Deneysel hive'da VSPackage derlemek ve çalıştırmak için derleme işleminin bir parçası olarak çalışır.
+ RegPkg.exe yardımcı programı bir VSPackage'i ile [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaydeden ve dağıtım için hazırlar. Bu yardımcı program, VSPackage geliştirme sırasında arka planı kullanılır. Deneysel hive'da VSPackage derlemek ve çalıştırmak için derleme işleminin bir parçası olarak çalışır.
 
  RegPkg çeşitli biçimlerde sistem kayıt defteri betikleri oluşturabilirsiniz. Bu betikleri, .msi veya Windows YükleyiciSI XML Araç Seti dosyaları gibi dağıtım projelerine dahil edin.
 
@@ -43,7 +43,7 @@ RegPkg [/root:<root>] [/regfile:<regfile>] [/rgsfile:<rgsfile> [/rgm]] [/vrgfile
 
  /vrgfile:FileName Kayıt defterini güncelleştirmek yerine bir .vrg dosyası oluşturur.  /regfile, /rgsfile veya /wixfile ile kullanılamaz.
 
- /rgm rgs dosyasına ek olarak bir .rgm dosyası oluşturur.  /rgsfile ile birleştirilmiş olması gerekir.
+ /rgm rgs dosyasına ek olarak bir .rgm dosyası oluşturur.  /rgsfile ile birleştirildi.
 
  /wixfile:FileName Kayıt defterini güncelleştirmek Windows Yükleyici XML Araç Seti ile uyumlu bir dosya oluşturur.  /regfile, /rgsfile veya /vrgfile ile kullanılamaz.
 

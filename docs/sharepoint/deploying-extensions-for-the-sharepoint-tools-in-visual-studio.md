@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: ad4645a6c23d13642bf7e417ca552f1dc196dad1a0e379eafefa9f179a45c8ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 26c2b23be3708f3e55b5559f06d3ae869c49764e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121269229"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060264"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio SharePoint araçları için uzantıları dağıtma
 
@@ -191,7 +191,7 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
 8. **Kaynak** listesinde **dosya sistemi üzerinde dosya**' yı seçin.
 
-9. Yol **alanına** derlemenin tam yolunu girin *(örneğin,ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip* veya Gözat düğmesini  kullanarak derlemeyi bulup seçin ve ardından **Tamam düğmesini** seçin.
+9. Yol **alanına** derlemenin tam yolunu girin *(örneğin,ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip* veya Gözat  düğmesini kullanarak derlemeyi bulup seçin ve ardından **Tamam düğmesini** seçin.
 
 #### <a name="to-include-a-wizard-for-a-project-template-or-item-template"></a>Proje şablonuna veya öğe şablonuna sihirbaz eklemek için
 
@@ -203,7 +203,7 @@ Aşağıdaki yordamlar, bu öğelerin her biri için. valtmanifest dosyasına gi
 
      Yeni **Varlık Ekle iletişim** kutusu açılır.
 
-3. Tür **listesinde** **Microsoft.VisualStudio.Assembly'i seçin.**
+3. Tür listesinde **Microsoft.VisualStudio.Assembly'i seçin.** 
 
 4. Kaynak **listesinde** aşağıdaki adımlardan birini gerçekleştirin:
 
@@ -219,8 +219,8 @@ Aşağıdaki tabloda, bir VSIX projesinin farklı türlerde araç uzantıları d
 
 |Uzantı türü|İlgili kılavuzlar|
 |--------------------|--------------------------|
-|Yalnızca uzantı derlemesi içeren bir uzantı|[Adım adım kılavuz: SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)<br /><br /> [Adım adım kılavuz: SharePoint Project uzantısı oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)<br /><br /> [Adım adım kılavuz: SharePoint uzantısında istemci nesne modeline Sunucu Gezgini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|
-|SharePoint içeren bir uzantı|[Adım adım kılavuz: Proje oluşturmak için özel SharePoint oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)<br /><br /> [Adım adım kılavuz: Web Sunucu Gezgini görüntülemek için uygulamanın süresini genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)<br /><br /> [Adım adım kılavuz: Proje şablonuyla site sütunu proje öğesi oluşturma, Bölüm 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|
+|Yalnızca uzantı derlemesi içeren bir uzantı|[Adım adım kılavuz: SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)<br /><br /> [Adım adım kılavuz: SharePoint Project oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)<br /><br /> [Adım adım kılavuz: SharePoint uzantısında istemci nesne modeline Sunucu Gezgini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|
+|SharePoint içeren bir uzantı|[Adım adım kılavuz: Proje oluşturmak için özel SharePoint oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)<br /><br /> [Adım adım kılavuz: Sunucu Gezgini bölümlerini görüntülemek için uygulamanın süresini genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)<br /><br /> [Adım adım kılavuz: Proje şablonuyla site sütunu proje öğesi oluşturma, Bölüm 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|
 |Visual Studio şablonu içeren bir uzantı|[Adım adım kılavuz: Öğe şablonuyla özel eylem proje öğesi oluşturma, Bölüm 1](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)<br /><br /> [Adım adım kılavuz: Proje şablonuyla Site sütunu proje öğesi oluşturma, Bölüm 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)|
 |Şablon sihirbazı içeren bir uzantı|[Adım adım kılavuz: Öğe şablonuyla özel eylem proje öğesi oluşturma, Bölüm 2](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)<br /><br /> [Adım adım kılavuz: Proje şablonuyla Site sütunu proje öğesi oluşturma, Bölüm 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|
 
@@ -228,7 +228,7 @@ Aşağıdaki tabloda, bir VSIX projesinin farklı türlerde araç uzantıları d
 
 SharePoint araçları uzantınız için VSIX paketini el ile oluşturmak için aşağıdaki adımları gerçekleştirin:
 
-1. extension.vsixmanifest dosyasını ve [Content_Types].xml dosyasını yeni bir klasörde oluşturun. Daha fazla bilgi için [bkz. VSIX Paketinin Anatomisi.](../extensibility/anatomy-of-a-vsix-package.md)
+1. Extension.vsixmanifest dosyasını ve [Content_Types].xml dosyasını yeni bir klasörde oluşturun. Daha fazla bilgi için [bkz. VSIX Paketinin Anatomisi.](../extensibility/anatomy-of-a-vsix-package.md)
 
 2. Windows Gezgini'nde, iki XML dosyasını içeren klasöre sağ tıklayın, Gönder'e tıklayın ve ardından Sıkıştırılmış (sıkıştırılmış) Klasör'e tıklayın. Sonuçta elde edilen .zip Dosyaadı.vsix olarak yeniden adlandırır; burada Filename, paketinizi yüken yeniden dağıtılabilir dosyanın adıdır.
 

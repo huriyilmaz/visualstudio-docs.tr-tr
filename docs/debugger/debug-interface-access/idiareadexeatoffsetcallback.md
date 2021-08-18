@@ -1,5 +1,5 @@
 ---
-description: İstemci uygulamasının dosya konumuyla belirtilen bir yürütülebilir dosya bayt sağlaması için izin sağlar.
+description: bir istemci uygulamasının dosya konumu tarafından belirtilen yürütülebilir dosya baytlarını temin unu sağlar.
 title: IDiaReadExeAtOffsetCallback | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 3c961641-3ce3-4bc3-bd6e-a802fa3bec49
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ba2791319dcebb6187ed00c8a273680796e514a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9d8ca962425742304a215512abd10b7aed755feb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157365"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134300"
 ---
 # <a name="idiareadexeatoffsetcallback"></a>IDiaReadExeAtOffsetCallback
-İstemci uygulamasının dosya konumuyla belirtilen bir yürütülebilir dosya bayt sağlaması için izin sağlar.
+bir istemci uygulamasının dosya konumu tarafından belirtilen yürütülebilir dosya baytlarını temin unu sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,23 +30,23 @@ ms.locfileid: "102157365"
 IDiaReadExeAtOffsetCallback : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaReadExeAtOffsetCallback` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDiaReadExeAtOffsetCallback` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaReadExeAtOffsetCallback::ReadExecutableAt](../../debugger/debug-interface-access/idiareadexeatoffsetcallback-readexecutableat.md)|Bir yürütülebilir dosyadan belirtilen uzaklığa başlayarak belirtilen sayıda bayt okur.|
+|[IDiaReadExeAtOffsetCallback::ReadExecutableAt](../../debugger/debug-interface-access/idiareadexeatoffsetcallback-readexecutableat.md)|Yürütülebilir dosyadan belirtilen uzaklığından başlayarak belirtilen bayt sayısını okur.|
 
 ## <a name="remarks"></a>Açıklamalar
- İstemci uygulaması, yürütülebilir dosyanın dosya içine mutlak bir konum kullanarak çalıştırılabilir bayt sağlamak için bu arabirimi uygular. Göreli bir sanal adres kullanmak için [ıdiareadexeatrboş allback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimini uygulayın.
+ İstemci uygulaması, yürütülebilir dosyanın dosyasına mutlak bir uzaklık kullanarak yürütülebilir dosyanın baytlarını sağlamak için bu arabirimi uygulamaya almaktadır. Göreli bir sanal adres kullanmak için [IDiaReadExeAtRVACallback arabirimini](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) kullanın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu yöntem, istemci uygulaması tarafından uygulanır ve dosyayı okumak için alternatif bir yöntem olarak [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metoduna geçirilir.
+ Bu yöntem istemci uygulaması tarafından uygulanır ve dosyayı okumak için alternatif bir yöntem olarak [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) yöntemine geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia80.dll
 

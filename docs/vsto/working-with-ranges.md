@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c87e44834aacf8cc0857fffbcad9a7068f4f7415ea1af92b90ac8f1e3979bdea
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f341f2b2f9b7a9625097707d9f9e49de56b85836
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121383930"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046015"
 ---
 # <a name="work-with-ranges"></a>Aralıklar ile çalışma
   <xref:Microsoft.Office.Tools.Excel.NamedRange>Ve <xref:Microsoft.Office.Interop.Excel.Range> sınıfları, aralıkları olan görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerir.

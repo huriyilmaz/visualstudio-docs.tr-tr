@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: d431c750e807d1aa7fe43d9b8d2c556c96678cbdcb50c166425a377228dc9172
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1b40a03c63665be09ecea5c28fb8e82dcc69c7a7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411448"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077757"
 ---
 # <a name="create-an-angular-app"></a>Angular oluşturma
 
@@ -45,7 +45,7 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
 1. Projenize ve çözümünüze bir ad girin. 
 
-   Ek bilgiler penceresine bakarak Boş web **API'si** ASP.NET tümleştirmesi ekle seçeneğini Project olun. Bu seçenek, Angular bir proje eklenirse ASP.NET Core projeyle bağlanacak şekilde ASP.NET Core ekler.
+   Ek bilgiler penceresine bakarak **Web API'si** ASP.NET Api'si Project emin olun. Bu seçenek, Angular bir proje eklenirse ASP.NET Core projeyle bağlanacak şekilde ASP.NET Core ekler.
 
    :::image type="content" source="media/vs-2022/angular-additional-info.png" alt-text="Ek bilgi":::
 

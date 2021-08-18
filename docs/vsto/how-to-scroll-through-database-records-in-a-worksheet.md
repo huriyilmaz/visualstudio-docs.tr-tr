@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 94055cdc5bd95850e87d349e573ca3253ba84eba8b92a611730e827cd5a5da0e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: abe1ff62b651c8f8456eea0e3a5ca83e37b70d9d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366114"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032686"
 ---
 # <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>Nasıl yapılır: çalışma sayfasındaki veritabanı kayıtlarını kaydırma
   aşağıdaki yordamda, bir Microsoft Office Excel çalışma sayfasındaki veritabanı tablosundan tek bir alanı göstermek için tasarımcının nasıl kullanılacağı gösterilmektedir. bu, son kullanıcının tüm kayıtlarda kaymasını sağlayan denetimlerle birlikte.

@@ -1,6 +1,6 @@
 ---
 title: Şablon dizin açıklaması (. Vsdir) dosyaları | Microsoft Docs
-description: Bir şablon Dizin açıklama dosyasının, Visual Studio IDE 'nin, proje ile ilişkili klasörleri,. vsz dosyalarını ve şablonları görüntülemesini nasıl etkinleştirdiğinden öğrenin.
+description: şablon dizin açıklama dosyasının, Visual Studio ıde 'nin proje ile ilişkili klasörleri,. vsz dosyalarını ve şablonları görüntülemesini nasıl sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,19 +12,20 @@ ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdd21dfa9fe5aae11553bb0268017690aba46fe9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 70ee15328b6f89c5df5323951a11a0ce26d9d2393d25ced6b6434c098354a19e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080508"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431831"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Şablon Dizin Açıklaması (.Vsdir) Dosyaları
 Şablon dizin açıklama dosyası (. vsdir), tümleşik geliştirme ortamının (IDE), iletişim kutularındaki projenizle ilişkili klasörleri, sihirbaz. vsz dosyalarını ve şablon dosyalarını görüntülemesini sağlayan bir metin dosyasıdır. İçerikler dosya veya klasör başına bir kayıt içerir. Başvurulan bir konumdaki tüm. VSDir dosyaları birleştirilir, ancak birden çok klasörü, Sihirbazı veya şablon dosyasını anlatmak için genellikle yalnızca bir. vsdir dosyası sağlanır.
 
- Klasörler (alt dizinler),. vsdir dosyasında başvurulan dosyalar ve. vsdir dosyası aynı dizinde bulunur. IDE bir sihirbaz çalıştırdığında veya **Yeni proje** veya **Yeni öğe Ekle** iletişim kutularında bir klasör veya dosya görüntülediğinde, IDE, bir. vsdir dosyasının mevcut olup olmadığını anlamak için yürütülen dosyaları içeren dizini inceler. Bir. vsdir dosyası bulunursa, IDE onu yürütülen veya görüntülenmiş klasör ya da dosya için bir giriş içerip içermediğini anlamak üzere okur. Bir giriş bulunursa IDE, sihirbazın yürütüldüğü veya içeriğin görüntülendiği bilgileri kullanır.
+ Klasörler (alt dizinler),. vsdir dosyasında başvurulan dosyalar ve. vsdir dosyası aynı dizinde bulunur. ıde bir sihirbaz çalıştırdığında veya **yeni Project** veya **yeni öğe ekle** iletişim kutularında bir klasör veya dosya görüntülediğinde, ıde, bir. vsdir dosyasının mevcut olup olmadığını anlamak için yürütülen dosyaları içeren dizini inceler. Bir. vsdir dosyası bulunursa, IDE onu yürütülen veya görüntülenmiş klasör ya da dosya için bir giriş içerip içermediğini anlamak üzere okur. Bir giriş bulunursa IDE, sihirbazın yürütüldüğü veya içeriğin görüntülendiği bilgileri kullanır.
 
  Aşağıdaki kod örneği, \<EnvSDK> \Bscprj\bscprj\bscprjprojectıtems\ Source_Files kayıt defteri anahtarındaki SourceFiles. vsdir dosyasından verilmiştir:
 
@@ -44,8 +45,8 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 | {clsidPackage} | VSPackage 'in uydu dinamik bağlantı kitaplığı (DLL) kaynaklarında LocalizedName, Description, ıresourceıd ve SuggestedBaseName gibi yerelleştirilmiş dizelere erişim sağlayan VSPackage GUID 'SI. DLLPath sağlanmazsa, ıresourceıd geçerlidir. **Note:**  Önceki alanlardan biri veya daha fazlası kaynak tanımlayıcısı değilse bu alan isteğe bağlıdır. Bu alan, kendi metinlerini yerelleştirmez üçüncü taraf sihirbazlarıyla karşılık gelen. VSDir dosyaları için genellikle boştur. |
 | LocalizedName | Şablon dosyasının veya sihirbazının yerelleştirilmiş adı. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. Bu ad, **Yeni öğe Ekle** iletişim kutusunda görüntülenir. **Note:**  LocalizedName bir kaynak tanımsıdır, {clsidPackage} gerekir. |
 | SortPriority | Bu şablon dosyasının veya sihirbazının göreli önceliğini temsil eden bir tamsayı. Örneğin, bu öğenin değeri 1 ise bu öğe, 1 değerine sahip diğer öğelerin yanında görüntülenir ve 2 veya daha büyük bir sıralama değeri olan tüm öğelerin ilerisindedir.<br /><br /> Sıralama önceliği, aynı dizindeki öğelere göre belirlenir. Aynı dizinde birden fazla. vsdir dosyası olabilir. Bu durumda, tüm öğeleri <em>.</em> Bu dizindeki VSDir dosyaları birleştirilir. Aynı önceliğe sahip öğeler görüntülenen adının büyük/küçük harf duyarsız lexicographic sırasıyla listelenir. `_wcsicmp`İşlevi öğeleri sıralamak için kullanılır.<br /><br /> . Vsdir dosyalarında açıklanmayan öğeler,. vsdir dosyalarında listelenen en yüksek öncelik numarasından daha büyük bir öncelik numarası içerir. Sonuç, bu öğelerin, adından bağımsız olarak görüntülenen listenin sonunda olması olur. |
-| Description | Şablon dosyasının veya sihirbazının yerelleştirilmiş açıklaması. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. Bu dize, öğe seçildiğinde **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünür. |
-| DLLPath veya {clsidPackage} | Şablon dosyası veya sihirbazına yönelik bir simge yüklemek için kullanılır. Simge, ıresourceıd kullanılarak bir. dll veya. exe dosyasından kaynak olarak yüklenir. Bu. dll veya. exe dosyası, tam yol kullanılarak veya VSPackage 'un GUID 'SI kullanılarak belirlenebilir. VSPackage 'ın uygulama DLL 'SI, simgenin (uydu DLL değil) yüklenmesi için kullanılır. |
+| Açıklama | Şablon dosyasının veya sihirbazının yerelleştirilmiş açıklaması. Bu alan, "#ResID" biçiminde bir dize veya kaynak tanımlayıcısı olabilir. bu dize, öğe seçildiğinde **yeni Project** veya **yeni öğe ekle** iletişim kutusunda görünür. |
+| DLLPath veya {clsidPackage} | Şablon dosyası veya sihirbazına yönelik bir simge yüklemek için kullanılır. Simge, ıresourceıd kullanarak bir .dll veya .exe dosyasından kaynak olarak yüklenir. Bu .dll veya .exe dosyası, tam yol kullanılarak veya VSPackage 'un GUID 'SI kullanılarak belirlenebilir. VSPackage 'ın uygulama DLL 'SI, simgenin (uydu DLL değil) yüklenmesi için kullanılır. |
 | Iresourceıd | DLL veya VSPackage uygulama DLL dosyasında görüntülenecek simgeyi belirleyen kaynak tanımlayıcısı. |
 | Flags ( <xref:Microsoft.VisualStudio.Shell.Interop.__VSDIRFLAGS> ) | **Yeni öğe Ekle** Iletişim kutusundaki **ad** ve **konum** alanlarını devre dışı bırakmak veya etkinleştirmek için kullanılır. **Flags** alanının değeri, gerekli bit bayrakları birleşiminin ondalık eşdeğeridir.<br /><br /> Kullanıcı **Yeni** sekmede bir öğe seçtiğinde proje, **Yeni öğe Ekle** Iletişim kutusu ilk görüntülendiğinde ad alanının ve konum alanının gösterilip gösterilmeyeceğini belirler. Bir. vsdir dosyası aracılığıyla, öğe seçildiğinde yalnızca alanların etkin ve devre dışı olarak devre dışı bırakılıp bırakılmadığını kontrol edebilir. |
 | SuggestedBaseName | Dosya, sihirbaz veya şablon için varsayılan adı temsil eder. Bu alan, "#ResID" formunun bir dize veya kaynak tanımlayıcısıdır. IDE, öğe için varsayılan bir ad sağlamak üzere bu değeri kullanır. Bu taban değeri, MyFile21. asp gibi benzersiz bir tamsayı değeri olacak şekilde eklenir.<br /><br /> Önceki listede, Description, DLLPath, ıresourceıd, Flags ve Mülatedbasenumarası yalnızca şablon ve sihirbaz dosyaları için geçerlidir. Bu alanlar klasörler için geçerlidir. Bu olgu, \<EnvSDK> \BscPrj\BscPrj\BscPrjProjectItems kayıt defteri anahtarındaki BscPrjProjectItems dosyasındaki kodda gösterilmiştir. Bu dosya, her bir kayıt için dört alan içeren üç kayıt (her bir klasör için bir adet) içerir: RelPathName, {Clsıdpackage}, LocalizedName ve SortPriority.<br /><br /> `General&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#110&#124;100`<br /><br /> `Source_Files&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#111&#124;110`<br /><br /> `Env&#124;{E59935A1-6156-11d1-87A6-00A0C91E2A46}&#124;#112&#124;120` |
@@ -60,7 +61,7 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
 
 - Hiçbir simge tanımlanmamışsa, IDE bu uzantıya sahip bir dosya için varsayılan simgenin yerini alır.
 
-- Önerilen temel ad sağlanmazsa, ' proje ' kullanılır.
+- önerilen temel ad sağlanmazsa, ' Project ' kullanılır.
 
 - . Vsz dosyalarını, klasörlerini veya şablon dosyalarını silerseniz, ilişkili kayıtlarını. vsdir dosyasından de kaldırmanız gerekir.
 

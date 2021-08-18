@@ -1,31 +1,32 @@
 ---
-title: 'Docker öğreticisi - Bölüm 8: Görüntü katmanlama'
-description: Docker görüntülerde görüntü katmanlarını inceleme ve yönetme.
-ms.date: 08/04/2020
+title: 'Docker öğreticisi-Bölüm 9: resim katmanlama'
+description: Docker görüntülerinde görüntü katmanlarını İnceleme ve yönetme.
+ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-docker
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 8f669baf6f3275f54c7e4a6ff2b31f9c260b2bb9
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 7b8d3aeb6406b11a8bbfe2f49e39fcfa356db5f8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222675"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059691"
 ---
-# <a name="image-layering"></a>Görüntü katmanlama
+# <a name="image-layering"></a>Resim katmanlama
 
-Bir görüntüyü neyin yaptığını bakabilirsiniz, biliyor mmusunuz? komutunu `docker image history` kullanarak, bir görüntü içinde her katmanı oluşturmak için kullanılan komutu görüntüye bakabilirsiniz.
+Bir görüntü oluşturan neye bakabileceğinizi biliyoruz. Komutunu kullanarak `docker image history` , bir görüntü içindeki her bir katmanı oluşturmak için kullanılan komutu görebilirsiniz.
 
-1. Öğreticide `docker image history` daha önce oluşturduğunuz görüntüdeki katmanları görmek için komutunu `getting-started` kullanın.
+1. `docker image history` `getting-started` Öğreticide daha önce oluşturduğunuz görüntüdeki katmanları görmek için komutunu kullanın.
 
     ```bash
     docker image history getting-started
     ```
 
-    Aşağıdakine benzer bir çıkış alasınız (tarihler/kimlikler farklı olabilir).
+    Aşağıdakine benzer bir çıktı almalısınız (tarihler/kimlikler farklı olabilir).
 
     ```plaintext
     IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
@@ -44,9 +45,9 @@ Bir görüntüyü neyin yaptığını bakabilirsiniz, biliyor mmusunuz? komutunu
     <missing>           13 days ago         /bin/sh -c #(nop) ADD file:e69d441d729412d24…   5.59MB   
     ```
 
-    Satırların her biri görüntüde bir katmanı temsil eder. Buradaki görüntüde en alttaki temel, en üstte en yeni katman gösterilir. Bunu kullanarak her katmanın boyutunu hızla görebilir ve büyük görüntüleri tanılamaya yardımcı olursunuz.
+    Her satır görüntüdeki bir katmanı temsil eder. Burada görüntülenen ekran, en üstteki katman olan temeli altta gösterir. Bunu kullanarak, büyük görüntüleri tanılamanıza yardımcı olacak şekilde her katmanın boyutunu da hızla görebilirsiniz.
 
-1. Birkaç satırın kesiliyor olduğunu fark vardır. Bayrağı `--no-trunc` eklersiniz, tam çıkışı alırsınız (evet, kesilmemiş bayrağı kullanarak izinsiz çıkış alırsınız).
+1. Birçok satırı kesildiğine dikkat edin. `--no-trunc`Bayrağı eklerseniz, tam çıktıyı alırsınız (Evet, kesilen çıktıyı almak için kesilmiş bir bayrak kullanırsınız).
 
     ```bash
     docker image history --no-trunc getting-started
@@ -54,11 +55,11 @@ Bir görüntüyü neyin yaptığını bakabilirsiniz, biliyor mmusunuz? komutunu
 
 ## <a name="layer-caching"></a>Katman önbelleğe alma
 
-Katmanlamanın nasıl bir işlem olduğunu gördünüz. Kapsayıcı görüntüleriniz için derleme sürelerini azaltmaya yardımcı olmak için öğrenmeniz gereken önemli bir ders vardır.
+Katmanlanmayı işlem sırasında gördüğünüze göre, kapsayıcı görüntüleriniz için derleme sürelerini azaltmayı öğrenmek için önemli bir ders vardır.
 
-> Katman değiştiktan sonra tüm aşağı akış katmanlarının da yeniden oluşturulması gerekir
+> Bir katman değiştiğinde, tüm aşağı akış katmanlarının de yeniden oluşturulması gerekir
 
-Şimdi bir kez daha kullanmakta olduğu Dockerfile'a bakalım...
+Bir kez daha kullandığınız Dockerfile dosyasına bakalım...
 
 ```dockerfile
 FROM node:12-alpine
@@ -68,11 +69,11 @@ RUN yarn install --production
 CMD ["node", "/app/src/index.js"]
 ```
 
-Görüntü geçmişi çıkışına geri dönüp Dockerfile dosyasındaki her komutun görüntüde yeni bir katmana sahip olduğunu görüyorsunuz. Görüntüde değişiklik yaptıktan sonra yarn bağımlılıklarını yeniden yüklemek zorunda olduğunu hatırlayabilirsiniz. Bunu düzeltmenin bir yolu var mı? Her derlemede aynı bağımlılıkların etrafından gönderi yapmak pek anlamlı değildir, değil mi?
+Görüntü geçmişi çıktısına geri dönerek Dockerfile 'daki her komutun görüntüde yeni bir katman haline geldiğini görürsünüz. Görüntüde bir değişiklik yaptığınızda Yarn bağımlılıklarının yeniden yüklenmesi gerektiğini unutmayın. Bunu çözmek için bir yol var mı? Her derleme sırasında aynı bağımlılıklara, doğru bir şekilde gönderim yapmak çok mantıklı değil mi?
 
-Bunu düzeltmek için Bağımlılıkların önbelleğe alınmasını desteklemek üzere Dockerfile dosyanızı yeniden yapılandırırsiniz. Düğüm tabanlı uygulamalar için bu bağımlılıklar dosyasında `package.json` tanımlanır. Peki önce yalnızca bu dosyayı kopyalayıp bağımlılıkları yüklemiş  ve ardından diğer her şeyi kopyalarsanız ne olur? Ardından, yalnızca üzerinde bir değişiklik varsa yarn bağımlılıklarını yeniden `package.json` oluşturun. Mantıklı?
+Bunu gidermek için, Dockerfile ' ı yeniden yapılandırabilir ve bağımlılıkların önbelleğe alınmasını desteklemeye yardımcı olabilirsiniz. Düğüm tabanlı uygulamalar için bu bağımlılıklar `package.json` dosyada tanımlanmıştır. Bu nedenle, yalnızca bu dosyayı ilk olarak kopyaladıysanız, bağımlılıkları yükledikten *sonra* başka her şeye de kopyalayabilirsiniz. Daha sonra, ' de bir değişiklik olduysa Yarn bağımlılıklarını yeniden oluşturursunuz `package.json` . Anlamlı olsun?
 
-1. Dockerfile dosyasını ilk kopyada `package.json` kopyalamak, bağımlılıkları yüklemek ve ardından içinde diğer her şeyi kopyalamak için güncelleştirin.
+1. Dockerfile 'ı ilk kez kopyalamak için güncelleştirin `package.json` , bağımlılıkları yükler ve sonra ' de diğer her şeyi kopyalayın.
 
     ```dockerfile hl_lines="3 4 5"
     FROM node:12-alpine
@@ -83,13 +84,13 @@ Bunu düzeltmek için Bağımlılıkların önbelleğe alınmasını desteklemek
     CMD ["node", "/app/src/index.js"]
     ```
 
-1. kullanarak yeni bir görüntü `docker build` derleme.
+1. Kullanarak yeni bir görüntü oluşturun `docker build` .
 
     ```bash
     docker build -t getting-started .
     ```
 
-    Aşağıdaki gibi bir çıkış görüyor gerekir...
+    Aşağıdakine benzer bir çıktı görmeniz gerekir...
 
     ```plaintext
     Sending build context to Docker daemon  219.1kB
@@ -122,11 +123,11 @@ Bunu düzeltmek için Bağımlılıkların önbelleğe alınmasını desteklemek
     Successfully tagged getting-started:latest
     ```
 
-    Tüm katmanların yeniden oluşturulmuş olduğunu görüyorsunuz. Dockerfile'ı biraz değiştirdiğiniz için mükemmel bir sorun değil.
+    Tüm katmanların yeniden oluşturulmuş olduğunu görürsünüz. Dockerfile 'ı tam olarak bir bit olarak değiştirdiğiniz için mükemmel bir şekilde iyidir.
 
-1. Şimdi dosyada bir değişiklik `src/static/index.html` (örneğin , `<title>` "The Awesome Todo App" olarak değiştir) olarak değiştirebilirsiniz.
+1. Şimdi dosyada bir değişiklik yapın `src/static/index.html` ( `<title>` "başar ToDo uygulaması" olarak değiştirin).
 
-1. Docker görüntüsünü şimdi yeniden kullanarak `docker build` derleme. Bu kez çıkışınız biraz farklı görünüyor olabilir.
+1. Docker görüntüsünü şimdi yeniden kullanarak oluşturun `docker build` . Bu kez, çıktın biraz farklı görünmesi gerekir.
 
     ```plaintext hl_lines="5 8 11"
     Sending build context to Docker daemon  219.1kB
@@ -151,19 +152,19 @@ Bunu düzeltmek için Bağımlılıkların önbelleğe alınmasını desteklemek
     Successfully tagged getting-started:latest
     ```
 
-    İlk olarak, derlemenin çok daha hızlı olduğunu fark etmek gerekir! 1-4. adımların da olduğunu da `Using cache` göreceğiz. İşte bu kadar! Derleme önbelleğini kullanıyorsanız. Bu görüntüyü ve güncelleştirmeleri itip çekmek de çok daha hızlı olacaktır. Yaşasın!
+    İlk olarak, yapılandırmanın çok daha hızlı olduğunu fark etmelisiniz! Ayrıca, 1-4 adımların tümünün olduğunu görürsünüz `Using cache` . Bu nedenle Hooray! Yapı önbelleğini kullanıyorsunuz. Bu görüntü ve güncelleştirmelerin gönderilmesi ve çekmesi çok daha hızlı olacaktır. Yaşasın!
 
-## <a name="multi-stage-builds"></a>Çok aşamalı derlemeler
+## <a name="multi-stage-builds"></a>Çoklu aşamalı derlemeler
 
-Bu öğreticide çok fazla incelemeye gerek yok ancak çok aşamalı derlemeler, görüntü oluşturmak için birden çok aşamayı kullanmaya yardımcı olan inanılmaz güçlü bir araçtır. Bunlar için çeşitli avantajlar vardır:
+Bu öğreticide çok fazla bilgi veremedik. çok aşamalı derlemeler, bir görüntü oluşturmak için birden çok aşamanın kullanılmasına yardımcı olan inanılmaz güçlü bir araçtır. Bunların çeşitli avantajları vardır:
 
-- Derleme zamanı bağımlılıklarını çalışma zamanı bağımlılıklarından ayırma
-- Yalnızca uygulamanın çalışması için *gerekenleri göndererek* genel görüntü boyutunu azaltma
+- Çalışma zamanı bağımlılıklarından derleme zamanı bağımlılıklarını ayır
+- *Yalnızca* uygulamanızın çalışması için gereken öğeleri göndererek genel görüntü boyutunu küçültün
 
 ### <a name="maventomcat-example"></a>Maven/Tomcat örneği
 
-Java tabanlı uygulamalar derlerken, kaynak kodu Java bytecode'a derlemek için bir JDK gerekir. Ancak bu JDK üretimde gerekli değildir. Ayrıca, uygulamayı derlemeye yardımcı olmak için Maven veya Gradle gibi araçları kullanıyor da olabilirsiniz.
-Bunlar son görüntüde de gerekli değildir. Çok aşamalı derlemeler yardımcı olur.
+Java tabanlı uygulamalar derlerken, kaynak kodu Java bayt koduna derlemek için bir JDK gerekir. Ancak, bu JDK üretimde gerekli değildir. Ayrıca, uygulama oluşturmaya yardımcı olmak için Maven veya Gradle gibi araçlar da kullanabilirsiniz.
+Bunlar ayrıca son resimde gerekli değildir. Çoklu aşamalı derleme yardımı.
 
 ```dockerfile
 FROM maven AS build
@@ -175,11 +176,11 @@ FROM tomcat
 COPY --from=build /app/target/file.war /usr/local/tomcat/webapps 
 ```
 
-Bu örnekte, Maven kullanarak gerçek `build` Java derlemesi gerçekleştirmek için bir aşama (adlı) 2. aşama 2. İkinci aşama ('den `FROM tomcat` başlayarak), aşamanın dosyalarına `build` kopyalar. Son görüntü yalnızca oluşturulan son aşamadır (bayrağı kullanılarak geçersiz `--target` kılınabilir).
+Bu örnek `build` , Maven kullanarak gerçek Java derlemesini gerçekleştirmek için bir aşama (çağrıldı) kullanır. İkinci aşama (başlangıç), `FROM tomcat` aşamadaki dosyalardaki kopyalardır `build` . Son görüntü yalnızca oluşturulmakta olan son aşamadır (bayrak kullanılarak geçersiz kılınabilir `--target` ).
 
-### <a name="react-example"></a>React örnek
+### <a name="react-example"></a>React örneği
 
-Uygulama React, JS kodunu (genellikle JSX), SASS stil sayfaları ve daha fazlasını statik HTML, JS ve CSS'de derlemek için bir Node ortamına ihtiyacınız vardır. Sunucu tarafı işleme yapmıyorsanız üretim derlemesi için node ortamına bile ihtiyacınız yok. Statik kaynakları neden statik bir nginx kapsayıcısı içinde gönderm yok?
+React uygulamalar oluştururken, js kodunu (genellikle jsx), sass stil sayfalarını ve daha fazlasını statik HTML, JS ve CSS 'de derlemek için bir düğüm ortamına ihtiyacınız vardır. Sunucu tarafı işleme yapmadıysanız, üretim derlemesi için bir düğüm ortamına bile gerek kalmaz. Statik kaynaklar neden statik bir NGINX kapsayıcısına yollanmıyor?
 
 ```dockerfile
 FROM node:12 AS build
@@ -194,11 +195,11 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 ```
 
-Burada, derlemeyi gerçekleştirmek (katman önbelleğini en üst düzeye çıkarmak) ve çıkışı nginx kapsayıcısı içine kopyalamak için `node:12` bir görüntü kullanıyorsanız. Harika, değil mi?
+Burada, `node:12` derlemeyi gerçekleştirmek için bir görüntü kullanıyorsunuz (katman önbelleğini en üst düzeye çıkarır) ve sonra çıktıyı NGINX kapsayıcısına kopyalarsınız. Serin, kuh?
 
 ## <a name="recap"></a>Özet
 
-Görüntülerin nasıl yapılandırıldıklarının biraz anlaşılmasıyla, görüntüleri daha hızlı bir şekilde derlemek ve daha az değişiklik göndererek bunu yapabilirsiniz. Çok aşamalı derlemeler, derleme zamanı bağımlılıklarını çalışma zamanı bağımlılıklarından ayırarak genel görüntü boyutunu azaltmaya ve son kapsayıcı güvenliğini artırmaya da yardımcı olur.
+Görüntülerin nasıl yapılandırıldığı hakkında biraz anlamak için, görüntüleri daha hızlı oluşturup daha az değişiklik gönderebilirsiniz. Çok aşamalı derlemeler Ayrıca, çalışma zamanı bağımlılıklarından yapı süresi bağımlılıklarını ayırarak, genel görüntü boyutunu azaltmaya ve son kapsayıcı güvenliğini artırmaya yardımcı olur.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

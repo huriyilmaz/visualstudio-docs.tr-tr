@@ -15,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0d83ca6ffb7899d6a144dc823a5849a41c6188c7569256446ca3688771facfae
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 86139b29b08fde8141dc905e98047a29520e6362
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389806"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088620"
 ---
 # <a name="idebugfunctionobject2evaluate"></a>IDebugFunctionObject2::Evaluate
 işlevini çağırarak elde edilen değeri nesne olarak döndürür.

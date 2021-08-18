@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ba4051e6538b1739914f5cd75660b3045d7f5e7387464682db6df8031f57b1d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0a6781c93bd76f0eaee54f3d134b34a147b57182
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380033"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074591"
 ---
 # <a name="idiastackwalkframesearchforreturnaddress"></a>IDiaStackWalkFrame::searchForReturnAddress
 Belirtilen yığın çerçevesinde en yakın işlev dönüş adresini arar.

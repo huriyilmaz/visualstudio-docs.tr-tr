@@ -15,15 +15,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03538a95d430f14118b253bf6b9fa612e374a23c7213666bb3e7c32cbecfb0c8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 108e2bf16cd109f954752207cb966c472241730e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375617"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034597"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Visual Studio Birlikte Çalışma Bütünleştirilmiş Kodlarını Kullanma
-Visual Studio birlikte çalışma derlemeleri, yönetilen uygulamaların daha fazla genişletilebilirlik sağlayan COM arabirimlerine Visual Studio sağlar. Düz COM arabirimleri ile bunların birlikte çalışma sürümleri arasında bazı farklar vardır. Örneğin, HRESULT'ler genellikle int değerleri olarak temsil edilir ve özel durumlar ile aynı şekilde ele alınarak parametrelerin (özellikle de dışı parametreler) farklı şekilde ele alınarak ele alınları gerekir.
+Visual Studio birlikte çalışma derlemeleri, yönetilen uygulamaların genişletilebilirlik sağlayan COM arabirimlerine Visual Studio sağlar. Düz COM arabirimleri ile bunların birlikte çalışma sürümleri arasında bazı farklar vardır. Örneğin, HRESULT'ler genellikle int değerleri olarak temsil edilir ve özel durumlar ile aynı şekilde ele alınarak parametrelerin (özellikle de dışı parametreler) farklı şekilde ele alınarak ele alınları gerekir.
 
 ## <a name="handling-hresults-returned-to-managed-code-from-com"></a>COM'dan Yönetilen Koda Döndürülen HRESULT'ları İşleme
  Yönetilen koddan COM arabirimini çağırarak HRESULT değerini inceler ve gerekirse bir özel durum oluşturur. <xref:Microsoft.VisualStudio.ErrorHandler>sınıfı, geçirilen HRESULT değerine bağlı olarak bir COM özel durumu oluşturur <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> yöntemini içerir.

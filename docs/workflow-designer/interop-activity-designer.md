@@ -10,14 +10,15 @@ ms.assetid: 800a3403-ba86-41c4-8de1-c4fee9703eb1
 author: jillre
 ms.author: jillfra
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: edf4658743bb719c1c23f93b2d1d3cc33afdbaba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 785fa491d78c0286404918f01149752af2f0dc69
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99847394"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045859"
 ---
 # <a name="interop-activity-designer"></a>Interop Etkinlik Tasarımcısı
 
@@ -31,7 +32,7 @@ ms.locfileid: "99847394"
 
 **Birlikte çalışabilirlik** etkinlik Tasarımcısı, araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu** **geçiş** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-Etkinlik içeren [geçiş](../workflow-designer/migration-activity-designers.md) kategorisi yalnızca, <xref:System.Activities.Statements.Interop> projeniz .NET Framework 4 (tam) veya daha sonraki bir sürümü hedefliyorsa **araç kutusu** 'nda görüntülenir. Gerekirse, projenizin hedeflediği Framework sürümünü değiştirebilirsiniz.
+etkinlik içeren [geçiş](../workflow-designer/migration-activity-designers.md) kategorisi yalnızca, <xref:System.Activities.Statements.Interop> projeniz .NET Framework 4 (tam) veya daha sonraki bir sürümü hedefliyorsa **araç kutusu** 'nda görüntülenir. Gerekirse, projenizin hedeflediği Framework sürümünü değiştirebilirsiniz.
 
 **Birlikte çalışabilirlik** etkinlik Tasarımcısı, **araç kutusu** 'ndan sürüklenebilir ve etkinliklerin genellikle yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyi üzerinde bırakılabilir <xref:System.Activities.Statements.Sequence> . **Birlikte çalışma** etkinlik Tasarımcısı 'nın atılması, <xref:System.Activities.Statements.Interop> birlikte çalışma için varsayılan **DisplayName** olan bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>Öğesini **birlikte çalışma** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenleyebilirsiniz.
 

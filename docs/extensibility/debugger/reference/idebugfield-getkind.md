@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem alan türünü alır.
-title: 'IDebugField:: Getkinleştirilen d | Microsoft Docs'
+description: Bu yöntem, alan türlerini alır.
+title: IDebugField::GetKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: e7c9c60a-8e55-4ecc-aa63-0c814a1e92cc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5e26f6850f8d0cdd1a197ec88a93ee1069d065bf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f866d4564f912111d04dcd4d8c35e942e863193e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077050"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088815"
 ---
 # <a name="idebugfieldgetkind"></a>IDebugField::GetKind
-Bu yöntem alan türünü alır.
+Bu yöntem, alan türlerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,10 +43,10 @@ int GetKind(
 
 ## <a name="parameters"></a>Parametreler
 `pdwKind`\
-dışı [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) sabitlerin bir birleşimi olarak alan türünü döndürür.
+[out] Alan türlerini, veri sabitlerinin birleşimi [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

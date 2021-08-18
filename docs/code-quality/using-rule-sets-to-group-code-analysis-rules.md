@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cc9f399397dc9fee94c31a48aa8a868a73011b1
-ms.sourcegitcommit: 8d847400f5662461dcd5d866d0edab20f66cb375
+ms.openlocfilehash: b7bb97ec03ffbd596cf9f726ddb47ba2ca6f79501f15412dff0d60d2d83f68d6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114664525"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436714"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>Kod analizi kurallarını gruplandırmak için kural kümeleri kullanma
 
@@ -63,7 +64,7 @@ Bir *. RuleSet* dosyasının IÇERIĞI bu XML 'e benzer şekilde görünür:
 
 ## <a name="specify-a-rule-set-for-a-project"></a>Bir proje için kural kümesi belirtme
 
-bir projenin kural kümesi, Visual Studio proje dosyasındaki **codeanalysisruleset** özelliği tarafından belirtilir. Örneğin:
+bir projenin kural kümesi, Visual Studio proje dosyasındaki **codeanalysisruleset** özelliği tarafından belirtilir. Örnek:
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

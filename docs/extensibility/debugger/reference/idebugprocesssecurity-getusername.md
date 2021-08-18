@@ -1,6 +1,6 @@
 ---
-description: Bağlantı noktası tedarikçiden Kullanıcı adını alır.
-title: 'Idebugprocesssecurity:: GetUserName | Microsoft Docs'
+description: Bağlantı noktası sağlayıcıdan kullanıcı adını alır.
+title: IDebugProcessSecurity::GetUserName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a376a8d51d7b4d974bf0c7b609bbc53cc334cb33
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 025e6d4b707280ee00cd262cb917ab30c47298835e0d881faa000c049796a0fd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122057583"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121451776"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
-Bağlantı noktası tedarikçiden Kullanıcı adını alır.
+Bağlantı noktası sağlayıcıdan kullanıcı adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetUserName (
 
 ## <a name="parameters"></a>Parametreler
 `pbstrUserName`\
-dışı Kullanıcı adını içeren bir dize.
+[out] Kullanıcı adını içeren bir dize.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Yöntem başarılı olursa, döndürür `S_OK` . Aksi takdirde bir hata kodu döndürür.
+ Yöntem başarılı olursa `S_OK` döndürür. Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `GetUserName`**Işleme İliştir** Iletişim kutusunun **Kullanıcı adı** sütununda görüntülenen kullanıcı adını döndürür. **Işleme İliştir** iletişim kutusunu görüntülemek için tümleşik geliştirme ORTAMıNDAKI (IDE) **Araçlar** menüsünde **İşleme İliştir** ' e tıklayın [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
+ `GetUserName` , İşleme Ekle iletişim kutusunun **Kullanıcı Adı** sütununda görüntülenen kullanıcı **adını** döndürür. İşleme Ekle **iletişim kutusunu görüntülemek** için tümleşik geliştirme  ortamındaki (IDE) Araçlar menüsünde İşleme  [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] Ekle'ye tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

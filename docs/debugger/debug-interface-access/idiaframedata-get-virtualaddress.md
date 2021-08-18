@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cabe35e5fb210209b614d0fd87dc2a3a8ca8972558421705a6f8248fe51b3f67
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 003975e7eaf17783fc036da15c4653cf48d7c7ce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074855"
 ---
 # <a name="idiaframedataget_virtualaddress"></a>IDiaFrameData::get_virtualAddress
 Çerçeve için kodun sanal adresini (VA) alır.

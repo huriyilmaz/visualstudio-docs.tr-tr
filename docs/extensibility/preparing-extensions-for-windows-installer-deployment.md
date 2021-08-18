@@ -1,5 +1,5 @@
 ---
-title: Windows Installer dağıtımı için Uzantılar hazırlanıyor | Microsoft Docs
+title: Windows Installer dağıtımı için uzantılar hazırlanıyor | Microsoft Docs
 description: Varsayılan çıktısı bir kurulum projesine eklemek için VSıX paketi olan bir projeyi nasıl hazırlayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -10,17 +10,18 @@ ms.assetid: 5ee2d1ba-478a-4cb7-898f-c3b4b2ee834e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6436d05d3b15be1c1fe8d7c7bb9c8592dee091dc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ce2dce5735fa665ff127736db2df6d7dfb53b9f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090284"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041613"
 ---
 # <a name="prepare-extensions-for-windows-installer-deployment"></a>Windows Installer dağıtımı için uzantıları hazırlama
-Bir VSıX paketini dağıtmak için bir Windows Installer paketi (MSI) kullanamazsınız. Ancak, MSI dağıtımı için bir VSıX paketinin içeriğini ayıklayabilirsiniz. Bu belgede, varsayılan çıktısı bir kurulum projesine eklemek için VSıX paketi olan bir projenin nasıl hazırlanacağı gösterilir.
+bir vsıx paketini dağıtmak için bir Windows Installer paketi (msı) kullanamazsınız. Ancak, MSI dağıtımı için bir VSıX paketinin içeriğini ayıklayabilirsiniz. Bu belgede, varsayılan çıktısı bir kurulum projesine eklemek için VSıX paketi olan bir projenin nasıl hazırlanacağı gösterilir.
 
 ## <a name="prepare-an-extension-project-for-windows-installer-deployment"></a>Windows Installer dağıtımı için bir uzantı projesi hazırlama
  Bir kurulum projesine eklemeden önce bu adımları yeni uzantı projelerinde gerçekleştirin.
@@ -48,14 +49,14 @@ Bir VSıX paketini dağıtmak için bir Windows Installer paketi (MSI) kullanama
 
 1. Yeniden adlandırın *.* Dosya *adı. vsix* ' den *filename.zip* için uzantıyı içeren VSIX dosyası.
 
-2. *. Zip* dosyasının içeriğini bir dizine kopyalayın.
+2. *.zip* dosyanın içeriğini bir dizine kopyalayın.
 
-3. *[Content_Types]. xml* dosyasını dizinden silin.
+3. *[Content_Types] .xml* dosyasını dizinden silin.
 
 4. VSıX bildirimini, önceki yordamda gösterildiği gibi düzenleyin.
 
 5. Geri kalan dosyaları kurulum projenize ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio yükleyicisi dağıtımı](/previous-versions/2kt85ked(v=vs.120))
+- [Visual Studio yükleyici dağıtımı](/previous-versions/2kt85ked(v=vs.120))
 - [İzlenecek yol: özel eylem oluşturma](/previous-versions/visualstudio/visual-studio-2010/d9k65z2d(v=vs.100))

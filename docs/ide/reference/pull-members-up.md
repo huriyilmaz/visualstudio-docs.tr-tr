@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04bcc54702b81ebf4516598eca3dab9e1e258cd3efc9a5c52145ea6812119990
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9abfe9498d1b6bda0c9423566172395d0aca5096
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387198"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056244"
 ---
 # <a name="pull-members-up"></a>Üyeleri çekme
 

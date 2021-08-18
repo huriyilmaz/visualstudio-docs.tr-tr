@@ -10,14 +10,15 @@ ms.assetid: 14bfe312-9592-408e-92ce-e98585ad16e7
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 04de797b991b2c660b61ae401fb928561343b812
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cca5d41db47c2cc59bd36f7114395f86ccb057ee4c251419130763a30bfc91f7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875152"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440272"
 ---
 # <a name="workflow-designer-shell-features"></a>İş Akışı Tasarımcısı Kabuk Özellikleri
 
@@ -39,4 +40,4 @@ ms.locfileid: "99875152"
 
 ## <a name="fonts-and-colors"></a>Yazı Tipleri ve Renkler
 
-Visual Studio içinde İş Akışı Tasarımcısı kullanılan yazı tipleri, ortam yazı tipi tarafından denetlenir. İşletim sistemi temanız için yüksek karşıtlıklı bir renk düzeni kullanıyorsanız, İş Akışı Tasarımcısı içinde görüntülenen renkler değişir. İş Akışı Tasarımcısı değişiklikler yürürlüğe girmeden önce yazı tipinde veya renk ayarlarında değişiklik yaptıktan sonra Visual Studio 'Yu yeniden başlatmanız gerekir.
+Visual Studio içinde İş Akışı Tasarımcısı kullanılan yazı tipleri, ortam yazı tipi tarafından denetlenir. İşletim sistemi temanız için yüksek karşıtlıklı bir renk düzeni kullanıyorsanız, İş Akışı Tasarımcısı içinde görüntülenen renkler değişir. değişiklikler İş Akışı Tasarımcısı etkin hale gelmeden önce yazı tipi veya renk ayarlarında değişiklik yaptıktan sonra Visual Studio yeniden başlatmanız gerekir.

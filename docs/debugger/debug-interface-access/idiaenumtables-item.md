@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bddd0b00b5ad962424002f63302759349874de22e44db516ba244d523d16984f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 30e224b7edb621cb31d4124ac092e39e53f801fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392347"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134412"
 ---
 # <a name="idiaenumtablesitem"></a>IDiaEnumTables::Item
 Bir tabloyu dizin veya ad ile alır.

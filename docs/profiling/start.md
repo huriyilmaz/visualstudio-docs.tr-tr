@@ -1,24 +1,25 @@
 ---
-title: Başlat | Microsoft Docs
-description: Başlangıç seçeneğinin, profil oluşturucuyu belirtilen profil oluşturma yöntemine Başlatan bir VSPerfCmd.exe seçeneği olduğunu öğrenin.
+title: Başlangıç | Microsoft Docs
+description: Başlat seçeneğinin, profil VSPerfCmd.exe profil oluşturma yöntemine başlatan bir profil oluşturma seçeneği olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b85d0fe9-f67a-4b7c-8d48-7eecf3f2dfe9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 98c1fa8a5d95b9819c6b988282fe9fcdb6259bd5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1468b4e7931a0a4d6f39593c28f42563cacce7952a7ab853a362fb4240e11083
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960064"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121441715"
 ---
 # <a name="start"></a>Başlangıç
-**Başlat** seçeneği, profil oluşturucuyu belirtilen profil oluşturma yöntemine başlatan bir *VSPerfCmd.exe* seçenektir.
+Başlat **seçeneği,** *VSPerfCmd.exe* profil oluşturma yöntemine başlatan bir profil oluşturma seçeneğidir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,39 +28,39 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `Method` Aşağıdaki anahtar sözcüklerden biri olmalıdır:
+ `Method` Aşağıdaki anahtar sözcüklerden biri olması gerekir:
 
-- **Trace-izleme** yöntemini belirtir.
+- **TRACE** - İzleme yöntemini belirtir.
 
-- **Örnek** -örnekleme yöntemini belirtir.
+- **SAMPLE** - Örnekleme yöntemini belirtir.
 
-- **Kapsam** -kod kapsamını belirtir.
+- **KAPSAM** - Kod kapsamı belirtir.
 
-- **Eşzamanlılık** -kaynak çekişme yöntemini belirtir.
+- **CONCURRENCY** - Kaynak musiki yöntemini belirtir.
 
 ## <a name="required-options"></a>Gerekli seçenekler
- Komut satırında **Start** belirtildiğinde **output** seçeneğinin belirtilmesi gerekir.
+ Komut **satırda** Başlat **belirtilirken** Çıkış seçeneği belirtilmelidir.
 
- **Çıkış:** `filename` Çıkış dosyası adını belirtir.
+ **Çıktı:** `filename` Çıktı dosyasının adını belirtir.
 
-## <a name="exclusive-options"></a>Dışlamalı seçenekler
- Aşağıdaki seçenekler yalnızca bir komut satırındaki **Başlat** seçeneğiyle birlikte kullanılabilir.
+## <a name="exclusive-options"></a>Özel seçenekler
+ Aşağıdaki seçenekler yalnızca bir komut satırı **üzerinde Başlat** seçeneğiyle kullanılabilir.
 
- Çapraz **oturum**&#124;**CS** , çapraz işlem profili oluşturma imkanı sunar. **CrossSession** ve **CS** seçeneklerinin her ikisi de desteklenir.
+ **Çapraz Geçiş&#124;** **CS,** çapraz işlem profili oluşturmayı sağlar. **CrossSession ve** CS seçenek **adlarının** her ikisi de de kullanılabilir.
 
- **Kullanıcı:**[ `domain\` ] `username` belirtilen hesaptan izleyiciye istemci erişimini sağlar.
+ **Kullanıcı:**[ `domain\` ] `username` Belirtilen hesaptan izleyiciye istemci erişimini sağlar.
 
- **WinCounter:** `Path` [**Otomatik işaret**: `n` ] **WinCounter** , profil oluşturma veri dosyasına işaret olarak eklenecek bir Windows performans sayacı belirtir. **Otomatik işaret** , veri dosyası koleksiyonları arasındaki aralığı milisaniye olarak belirtir.
+ **WinCounter:** `Path` [**Otomatik İşareti**: `n` ] **WinCounter,** profil Windows dosyasına işaret olarak eklenecek bir performans sayacı belirtir. **AutoMark,** veri dosyasının koleksiyonları arasındaki aralığı milisaniye cinsinden belirtir.
 
 ## <a name="invalid-options"></a>Geçersiz seçenekler
- Aşağıdaki seçenekler, komut satırında **Start** seçeneğiyle birlikte kullanılamaz.
+ Aşağıdaki seçenekler bir komut satırı **üzerinde Başlat** seçeneğiyle kullanılamaz.
 
- **Durum** **durumu** profili oluşturulan süreçler için geçerlidir. İşlem ve iş parçacıklarını ve geçerli profil durumunu (açık/kapalı) listeler. Örneğin, bir işlem durdurulmuşsa **durum** raporda bunu göstermez. **Durum** , işlemin profili oluşturulmuş olduğunu gösterir.
+ **Durum** **Durumu,** profili yapılan işlemler için geçerlidir. İşlemleri ve iş parçacıklarını ve bunların geçerli profil durumunu (Açık/Kapalı) listeler. Örneğin, bir işlem durdurulursa, **Durum** raporda bunu gösterir. **Durum,** sürecin profilinin profilinin olduğunu veya profilin olmadığını gösterir.
 
- **Kapat**[**:** `Timeout` ] profil oluşturucuyu devre dışı bırakır.
+ **Kapatma**[**:** `Timeout` ] Profil oluşturma devre dışıdır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, profil oluşturucuyu başlatmak için *VSPerfCmd.exe* **Start** seçeneğinin nasıl kullanılacağını gösterir.
+ Aşağıdaki örnek, profilleyiciyi başlatmak için *VSPerfCmd.exe* **Başlat** seçeneğinin nasıl kullanılamadı 1.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -68,6 +69,6 @@ VSPerfCmd.exe /Launch:TestApp.exe
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [Web ASP.NET profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

@@ -1,6 +1,6 @@
 ---
-title: RegPkg paket kaydı sorunlarını giderme | Microsoft Docs
-description: Visual Studio 'de RegPkg paket kaydı sorunlarını gidermek için bu bilgileri kullanın. Paketinize uygun olan RegPkg sürümünü kullanın.
+title: RegPkg Paket Kaydı sorunlarını | Microsoft Docs
+description: Bu bilgileri kullanarak Visual Studio'de RegPkg paket kaydıyla ilgili sorunları Visual Studio. Paketiniz için uygun RegPkg sürümünü kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -22,12 +22,12 @@ ms.locfileid: "121431766"
 ---
 # <a name="troubleshooting-regpkg-package-registration"></a>RegPkg Paket Kaydı Sorunlarını Giderme
 > [!NOTE]
-> Visual Studio paketleri kaydetmek için tercih edilen yol. pkgdef dosyalarını kullanmaktır. Bu, sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına izin verir. Pkgdef dosyaları [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md)kullanılarak oluşturulur.
+> Paketleri uygulama içinde kaydetmenin tercih Visual Studio .pkgdef dosyalarını kullanmaktır. Bu, sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına olanak sağlar. Pkgdef dosyaları, [CreatePkgDef Yardımcı Programı kullanılarak oluşturulur.](../../extensibility/internals/createpkgdef-utility.md)
 
- İçinde RegPkg kullanarak bir paketi kaydetmek için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , paketinize uygun olan RegPkg sürümünü kullanmanız gerekir.
+ içinde RegPkg kullanarak bir paketi kaydetmek [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] için paketinize uygun RegPkg sürümünü kullanacaksınız.
 
-## <a name="regpkg-versions-related-to-package-versions"></a>Paket sürümleriyle Ilgili RegPkg sürümleri
- İki RegPkg sürümü vardır. Sürümüne bir sürüm dahildir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Aşağıdaki derlemelerden biri kullanılarak oluşturulmuş paketleri kaydetmek için bu sürümü kullanın:
+## <a name="regpkg-versions-related-to-package-versions"></a>Paket Sürümleriyle İlgili RegPkg Sürümleri
+ RegPkg'nin iki sürümü vardır. Bir sürüm içinde yer [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] almaktadır. Aşağıdaki derlemelerden biri kullanılarak yapılmış paketleri kaydetmek için bu sürümü kullanın:
 
 1. Microsoft.VisualStudioShell.9.0.dll
 
@@ -35,10 +35,10 @@ ms.locfileid: "121431766"
 
 3. Microsoft.VisualStudioShell.11.0.dll
 
-   Daha önceki Microsoft.VisualStudio.Shell.dll derlemesi kullanılarak oluşturulmuş paketleri kaydedemez.
+   Önceki derleme derlemesi kullanılarak Microsoft.VisualStudio.Shell.dll kaydedemektedir.
 
-   RegPkg 'in önceki sürümü, Microsoft.VisualStudio.Shell.dll derlemesi kullanılarak oluşturulmuş paketleri kaydedebilir. Ancak, bu derlemenin sonraki sürümleri kullanılarak oluşturulan paketleri kaydedemez.
+   RegPkg'nin önceki sürümü, Microsoft.VisualStudio.Shell.dll derlemesi kullanılarak Microsoft.VisualStudio.Shell.dll olabilir. Ancak, bu derlemenin sonraki sürümleri kullanılarak yapılan paketleri kaydedamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’lar](../../extensibility/internals/vspackages.md)
-- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Visual Studio giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

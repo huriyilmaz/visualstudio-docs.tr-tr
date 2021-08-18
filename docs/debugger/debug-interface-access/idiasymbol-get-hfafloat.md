@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f2947d49f351b21a2702049fcf97f363a9e3d301
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7bc255e1f655634dd7a061a73b209a904102df006195df14de66dff30cdbad0d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044232"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436454"
 ---
 # <a name="idiasymbolget_hfafloat"></a>IDiaSymbol::get_hfaFloat
 Kullanıcı tanımlı bir türün (UDT) float türünde homojen kayan nokta toplama (HFA) verisi içerip içermediğini belirten bir bayrak alır.

@@ -1,6 +1,6 @@
 ---
 title: 'İş Akışı Tasarımcısı: klavye kısayolları'
-description: Visual Studio 'da İş Akışı Tasarımcısı gezinmek için klavyede kullanabileceğiniz çeşitli komutları öğrenin.
+description: Visual Studio içinde İş Akışı Tasarımcısı gezinmek için klavyede kullanabileceğiniz çeşitli komutları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,14 +10,15 @@ ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d276711e07dfe08b0efda0142089b7807a5509c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4dcf52de12d2c6401a7715f36ad80ecfd6ed9f4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931233"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045846"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>İş Akışı Tasarımcısında Klavye Kısayolları
 
@@ -25,7 +26,7 @@ ms.locfileid: "99931233"
 
 ## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Klavyeyi kullanarak İş Akışı Tasarımcısı gezinme
 
-Visual Studio 'Nun içinde, genel kısayollar ve hata ayıklama kısayolları İş Akışı Tasarımcısı için geçerlidir. Ayrıca, bazı İş Akışı Tasarımcısı belirli klavye kısayolları oluşturulmuştur. Visual Studio 'da tüm klavye kısayolları yeniden eşlenir. Ancak, yeniden barındırılan bir uygulamada, bu klavye kısayolları sabit olarak kodlanmıştır.
+Visual Studio içinde, genel kısayollar ve hata ayıklama kısayolları İş Akışı Tasarımcısı için geçerlidir. Ayrıca, bazı İş Akışı Tasarımcısı belirli klavye kısayolları oluşturulmuştur. Visual Studio, tüm klavye kısayolları yeniden eşlenir. Ancak, yeniden barındırılan bir uygulamada, bu klavye kısayolları sabit olarak kodlanmıştır.
 
 ### <a name="workflow-designer-keyboard-shortcuts"></a>Klavye kısayollarını İş Akışı Tasarımcısı
 
@@ -49,7 +50,7 @@ Aşağıdaki tabloda İş Akışı Tasarımcısı komutlarına atanan varsayıla
 
 ### <a name="flowchart"></a>Akış Çizelgesi
 
-Aşağıdaki listede klavye tarafından akış çizelgesi oluşturmak için kullanılan hareketler gösterilmektedir. İş Akışı Tasarımcısı kalanında olduğu gibi, Etkinlikler, Visual Studio ile birlikte sunulan genel araç kutusu kısayollarını kullanarak tasarımcı yüzeyine eklenir.
+Aşağıdaki listede klavye tarafından akış çizelgesi oluşturmak için kullanılan hareketler gösterilmektedir. İş Akışı Tasarımcısı kalanında olduğu gibi, Etkinlikler, Visual Studio birlikte sunulan genel araç kutusu kısayollarını kullanarak tasarımcı yüzeyine eklenir.
 
 - Bir etkinliği taşımak için etkinliği seçin ve ok tuşlarını kullanarak yeniden konumlandırın.
 
@@ -77,7 +78,7 @@ Etkinlikleri klavyeye göre bağlama hakkında notlar:
 
 ### <a name="expression-editing"></a>İfade düzenlemesi
 
-Varsayılan olarak, Visual Basic metin düzenleme için varsayılan klavye kısayolları aşağıdaki sınırlamalarla birlikte İş Akışı Tasarımcısı ifade Düzenleyicisi içinde geçerlidir:
+varsayılan olarak, Visual Basic metin düzenleme için varsayılan klavye kısayolları aşağıdaki sınırlamalarla birlikte İş Akışı Tasarımcısı ifade düzenleyicisi içinde geçerlidir:
 
 - Aşağıdaki komutlar için klavye kısayollarının yeniden eşleştirbir etkisi yoktur. Bir ifadeyi düzenlediğinizde bu komutlara erişmek için yalnızca varsayılan klavye kısayollarını kullanabilirsiniz.
 
@@ -88,4 +89,4 @@ Varsayılan olarak, Visual Basic metin düzenleme için varsayılan klavye kısa
   - Geri Al
   - Yinele
 
-- Visual Studio 'da İş Akışı Tasarımcısı içindeki ifade düzenleme komutlarının klavye kısayollarını yeniden eşlemek için, İş Akışı Tasarımcısı kapsamındaki kısayolları düzenleyin. Metin düzenleyici kapsamında yapılan değişiklikler İş Akışı Tasarımcısı için otomatik olarak uygulanmaz. Her iki yerde de kısayolları yeniden eşlemek isterseniz, değişiklikleri iki kez uygulamanız gerekir (her kapsam için bir kez).
+- Visual Studio İş Akışı Tasarımcısı içindeki ifade düzenleme komutlarının klavye kısayollarını yeniden eşlemek için İş Akışı Tasarımcısı kapsamındaki kısayolları düzenleyin. Metin düzenleyici kapsamında yapılan değişiklikler İş Akışı Tasarımcısı için otomatik olarak uygulanmaz. Her iki yerde de kısayolları yeniden eşlemek isterseniz, değişiklikleri iki kez uygulamanız gerekir (her kapsam için bir kez).

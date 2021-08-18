@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual Studio hata ayıklayıcı (özel durum oluştu) Iletişim kutusu | Microsoft Docs
+title: Microsoft Visual Studio Hata ayıklayıcı (özel durum oluştu) Iletişim kutusu | Microsoft Docs
 titleSuffix: ''
 description: 'Programınızın işlenmesi gereken bir özel durum oluştuğunda ne yapılacağını öğrenin. Şunları yapabilirsiniz: 1) hata ayıklayıcıya kesme; 2) devam et; veya 3) yoksay.'
 ms.custom: SEO-VS-2020
@@ -21,14 +21,15 @@ ms.assetid: 1fe98d10-c8f9-4b39-a920-99169bfd542e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c7a4b92a3ec5c6876fae3054b692ff46f26e82cd
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: e5a45ef315d29c5b47684c93cbb9e74055fc9990
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387053"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030730"
 ---
 # <a name="microsoft-visual-studio-debugger-exception-thrown-dialog-box"></a>Microsoft Visual Studio Hata Ayıklayıcısı (Özel Durum Oluştu) İletişim Kutusu
 Programınızda bir özel durum oluştu. Bu iletişim kutusu oluşturulan özel durum türünü bildirir. Kodunuzun bu özel durumu işlemesi gerekiyor. Özel durumu işlemek için aşağıdaki seçenekler arasından seçim yapabilirsiniz:

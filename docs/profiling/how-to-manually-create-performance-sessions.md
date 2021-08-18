@@ -18,12 +18,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b1f67b1c817237a7bf79ae20009f949b0922fe4dbcf6380e184b009616307db
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d117494a021c34e35438b053eafedc1e7466861d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121368389"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076652"
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>Nasıl yapılır: El ile performans oturumları oluşturma
 El ile bir performans oturumu oluşturabilirsiniz. Bunu yapmak için içinde bir proje açmak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] zorunda değildir. Daha fazla bilgi için [bkz. Performans oturumlarını yapılandırma.](../profiling/configuring-performance-sessions.md)

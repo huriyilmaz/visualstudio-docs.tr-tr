@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: ee81f279f82ee4803a5ac188b5d647769f8a148bb6e7a73328f6c36236d6318c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6ea4f593bb0c6f54c32af6dae6ed860c8fb167f5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366542"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033193"
 ---
 # <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>Nasıl gösterilir: Yük testi sonuçlarında grafın bir bölgesinde yakınlaştırma
 
@@ -100,7 +100,7 @@ Birden çok grafik görüntülendiğinde, yük testi çalıştırması için ayn
 
 1. Yakınlaştırma alanının bir ucunda bulunan bir grafiği seçin.
 
-2. Fare işaretçisini yakınlaştırma alanına sürükleyin.
+2. Fare işaretçisini yakınlaştırma alanı'nın diğer sonuna sürükleyin.
 
 3. Fare düğmesini bırakın.
 

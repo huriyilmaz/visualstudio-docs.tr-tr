@@ -9,14 +9,15 @@ ms.assetid: 6d22fa94-21aa-46cb-b5b5-32a6399ebb20
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 518e5b089d0d34e2492297b27dd0829e5f00ef2f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a9b990df938a0f569fbaca238941ff5d3da83285
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066743"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089296"
 ---
 # <a name="idebugdocumentchecksum2"></a>IDebugDocumentChecksum2
 Bir hata ayıklama belgesi için bir sağlama toplamı temsil eder ve bileşenler arasında sağlama toplamı geçişine izin vermez.

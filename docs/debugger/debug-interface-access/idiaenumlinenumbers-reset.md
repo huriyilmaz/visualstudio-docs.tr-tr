@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b4c71da6d595ecd6f9b083579edad9f0eaa184f991383488d18d6c1688a4fb35
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4cb70ac9e9755a13bb8f31162bf8f8fc43fb415d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380449"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044681"
 ---
 # <a name="idiaenumlinenumbersreset"></a>IDiaEnumLineNumbers::Reset
 Bir numaralama dizisini en başta sıfırlar.

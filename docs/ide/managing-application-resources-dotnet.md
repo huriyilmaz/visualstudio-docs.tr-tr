@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 87f03dbbcf4e6c38d55d2a3c7deb5cbc9f0bb8b5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 16d60ac11edc8b75779c0d3bd57d1e9d0dfa369bbb59a8dd769b73da2648e845
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122048901"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357823"
 ---
 # <a name="manage-application-resources-net"></a>Uygulama kaynaklarını yönetme (.NET)
 

@@ -26,14 +26,15 @@ ms.assetid: cf6dc7a6-cd12-4283-b1b6-ea53915f7ed1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f98bfb3aca5be844018c4c7d9736ab2fa74ebb71
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6f248d29640f6d8e3cb629d083f6589ec1e173f3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870681"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030899"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>CRT kitaplığı ile bellek sızıntılarını bulma
 
@@ -158,7 +159,7 @@ void main() {
 }
 ```
 
-Bu kodu Visual Studio hata ayıklayıcıda çalıştırdığınızda, öğesine yapılan çağrı `_CrtDumpMemoryLeaks` **Çıkış** penceresinde şuna benzer bir rapor oluşturur:
+bu kodu Visual Studio hata ayıklayıcısında çalıştırdığınızda, öğesine yapılan çağrı `_CrtDumpMemoryLeaks` **çıkış** penceresinde şuna benzer bir rapor oluşturur:
 
 ```Output
 Detected memory leaks!
@@ -184,7 +185,7 @@ Ayırma numarasını, bellek ayırmada bir kesme noktası ayarlamak için kullan
 
 1. Uygulamanızın başlangıcına yakın bir kesme noktası ayarlayın ve hata ayıklamayı başlatın.
 
-1. Uygulama kesme noktasında durakladığında, **Hata Ayıkla** Windows izleme 1 ' i seçerek bir **izleme** penceresi açın  >    >   (veya **2**. **izleyin** veya **4**. izleyin).
+1. uygulama kesme noktasında durakladığında, **hata ayıkla** Windows izleme 1 ' i seçerek bir **izleme** penceresi açın  >    >   (veya **2**. **izleyin** veya **4**. izleyin).
 
 1. **Gözcü** penceresinde `_crtBreakAlloc` **ad** sütununu yazın.
 
@@ -260,7 +261,7 @@ Bellek sızıntılarını bulmak için bir teknik `_CrtMemCheckpoint` , uygulama
 
 ## <a name="false-positives"></a>Hatalı pozitif sonuçlar
 
- `_CrtDumpMemoryLeaks` bir kitaplık, iç ayırmaları CRT blokları veya istemci blokları yerine normal bloklar olarak işaretlerse, bellek sızıntılarına ilişkin hatalı göstergeler verebilir. Bu durumda, `_CrtDumpMemoryLeaks` Kullanıcı ayırmaları ve iç kitaplık ayırmaları arasındaki farkı söylemez. Kitaplık ayırmaları için genel Yıkıcılar, çağırdığınız noktadan sonra çalışıyorsa `_CrtDumpMemoryLeaks` , her iç kitaplık ayırması bir bellek sızıntısı olarak bildirilir. Visual Studio .NET ' den önceki standart Şablon Kitaplığı sürümleri, `_CrtDumpMemoryLeaks` Bu tür hatalı pozitif sonuçları raporlamayabilir.
+ `_CrtDumpMemoryLeaks` bir kitaplık, iç ayırmaları CRT blokları veya istemci blokları yerine normal bloklar olarak işaretlerse, bellek sızıntılarına ilişkin hatalı göstergeler verebilir. Bu durumda, `_CrtDumpMemoryLeaks` Kullanıcı ayırmaları ve iç kitaplık ayırmaları arasındaki farkı söylemez. Kitaplık ayırmaları için genel Yıkıcılar, çağırdığınız noktadan sonra çalışıyorsa `_CrtDumpMemoryLeaks` , her iç kitaplık ayırması bir bellek sızıntısı olarak bildirilir. standart şablon kitaplığının Visual Studio .net sürümünden önceki sürümleri, `_CrtDumpMemoryLeaks` bu tür hatalı pozitif durumları raporlamayabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,17 +11,18 @@ ms.assetid: 47fc3827-07a0-4eee-b7f4-fc1c62e6b25c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ac7cb401df9382aa3951e67bde0edf58bb905a3d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bda8c1fa28e66506e3c761f33b962300b167b0f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071421"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118508"
 ---
 # <a name="idebugreference2getmemorycontext"></a>IDebugReference2::GetMemoryContext
 Bir başvurunun bellek bağlamını alır. Daha sonraki kullanımlar için ayrılmıştır.

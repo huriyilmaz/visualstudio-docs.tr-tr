@@ -17,21 +17,22 @@ ms.assetid: 591bd1b7-ef10-4d10-817b-3f92ca4be006
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 375e1db598f925a193def159203ccb7e5c5fdf05
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4adb885ecf43e91c732ac2bf377027be4db58a88
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871864"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074383"
 ---
 # <a name="edit-and-continue-visual-c"></a>Düzenle ve Devam Et (Visual C#)
  C# için Düzenle ve devam et ile, hata ayıklama sırasında kodunuzda kesme modunda değişiklikler yapabilirsiniz. Değişiklikler hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan uygulanabilir. Çalışma modunda, kaynak Düzenleyici salt okunurdur.
 
  Düzenle ve devam et, hata ayıklama oturumu sırasında yapmak isteyebileceğiniz birçok değişikliği destekler, ancak bazı özel durumlar vardır. Daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
- Düzenle ve devam et, Windows 10 ' da UWP 'de, .NET Framework 4,6 masaüstü veya sonraki sürümlerini hedefleyen x86 ve x64 uygulamalarında desteklenir (.NET Framework yalnızca bir masaüstü sürümüdür).
+ Windows 10 ve .NET Framework 4,6 masaüstü veya sonraki sürümlerini hedefleyen x86 ve x64 uygulamalarında düzenle ve devam et desteklenir (.NET Framework yalnızca bir masaüstü sürümüdür).
 
  > [!NOTE]
  > Desteklenmeyen uygulamalar ve platformlar Silverlight 5 ve Windows 8.1.
@@ -43,4 +44,4 @@ ms.locfileid: "99871864"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)
 - [Desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md)
-- [Visual Studio 'da XAML etkin yeniden yüklemesine sahip XAML kodunu yazma ve hata ayıklama](../xaml-tools/xaml-hot-reload.md)
+- [Visual Studio xaml üzerinde çalışan XAML kodu yazma ve hata ayıklama](../xaml-tools/xaml-hot-reload.md)

@@ -1,6 +1,6 @@
 ---
-title: "Nasıl yapabilirsiniz: Word'de arama seçeneklerini program aracılığıyla ayarlama"
-description: Visual Studio kullanarak Visual Studio seçenekleri program aracılığıyla ayarlamayı Microsoft Word.
+title: "Nasıl yapılır: Word 'de program aracılığıyla arama seçeneklerini ayarlama"
+description: Microsoft Word seçimlere yönelik arama seçeneklerini programlı bir şekilde ayarlamak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,44 +18,44 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c96533e9b6adf6367a8980f8315f84cc1c3ffe24cc8177ba799983e03bd9852e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8916affc89cdf179cf3981e5900d155731ded6c8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394231"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046444"
 ---
-# <a name="how-to-programmatically-set-search-options-in-word"></a>Nasıl yapabilirsiniz: Word'de arama seçeneklerini program aracılığıyla ayarlama
-  Word belgelerde seçim arama seçeneklerini ayarlamanın iki Microsoft Office vardır:
+# <a name="how-to-programmatically-set-search-options-in-word"></a>Nasıl yapılır: Word 'de program aracılığıyla arama seçeneklerini ayarlama
+  Microsoft Office Word belgelerindeki seçimler için arama seçeneklerini kurmanın iki yolu vardır:
 
-- Bir nesnenin tek tek özelliklerini <xref:Microsoft.Office.Interop.Word.Find> ayarlayın.
+- Bir nesnenin tek tek özelliklerini ayarlayın <xref:Microsoft.Office.Interop.Word.Find> .
 
-- Bir nesnenin yönteminin <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> bağımsız değişkenlerini <xref:Microsoft.Office.Interop.Word.Find> kullanın.
+- <xref:Microsoft.Office.Interop.Word.Find.Execute%2A>Bir nesnenin yönteminin bağımsız değişkenlerini kullanın <xref:Microsoft.Office.Interop.Word.Find> .
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="use-properties-of-a-find-object"></a>Bul nesnesinin özelliklerini kullanma
- Aşağıdaki kod, geçerli seçim içinde <xref:Microsoft.Office.Interop.Word.Find> metin aramak için bir nesnenin özelliklerini ayarlar. İleriye arama, sarmalama ve aranan metin gibi arama ölçütlerinin nesnenin özellikleri olduğunu <xref:Microsoft.Office.Interop.Word.Find> fark edersiniz.
+## <a name="use-properties-of-a-find-object"></a>Find nesnesinin özelliklerini kullanma
+ Aşağıdaki kod, <xref:Microsoft.Office.Interop.Word.Find> geçerli seçim içinde metin aramak için bir nesnenin özelliklerini ayarlar. Aranan, kaydırma ve metin araması gibi arama ölçütlerinin nesnenin özellikleri olduğunu unutmayın <xref:Microsoft.Office.Interop.Word.Find> .
 
- yönteminde parametrelerle aynı özellikleri belirtmeniz gerekenden, C# kodu yazarken nesnenin özelliklerinin her <xref:Microsoft.Office.Interop.Word.Find> birini ayarlama yararlı <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> olmaz. Bu nedenle bu örnek yalnızca Visual Basic içerir.
+ Yöntemin özelliklerinin her birinin ayarlanması, <xref:Microsoft.Office.Interop.Word.Find> Yöntem içindeki parametrelerle aynı özellikleri belirtmeniz gerektiği Için C# kodu yazdığınızda yararlı değildir <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> . bu nedenle bu örnek yalnızca Visual Basic kodu içerir.
 
-### <a name="to-set-search-options-using-a-find-object"></a>Bul nesnesini kullanarak arama seçeneklerini ayarlamak için
+### <a name="to-set-search-options-using-a-find-object"></a>Find nesnesi kullanarak arama seçeneklerini ayarlamak için
 
-1. Metnin beni bulma <xref:Microsoft.Office.Interop.Word.Find> seçiminde ileri doğru arama yapmak için nesnesinin **özelliklerini ayarlayın.**
+1. Bir nesnenin özelliklerini, <xref:Microsoft.Office.Interop.Word.Find> **beni bul** metin için bir seçimi ileri doğru arayacak şekilde ayarlayın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet76":::
 
 ## <a name="use-execute-method-arguments"></a>Execute yöntemi bağımsız değişkenlerini kullanma
- Aşağıdaki kod, geçerli <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> seçim içindeki <xref:Microsoft.Office.Interop.Word.Find> metinleri aramak için nesnesinin yöntemini kullanır. İleriye arama, sarmalama ve aranma metni gibi arama ölçütlerinin yöntemin parametreleri olarak geçirildiklerini <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> fark etmek.
+ Aşağıdaki kod, <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> <xref:Microsoft.Office.Interop.Word.Find> geçerli seçim içinde metin aramak için bir nesnesinin yöntemini kullanır. Arama, kaydırma ve metin arama gibi arama ölçütlerinin yöntemin parametreleri olarak geçtiğini unutmayın <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> .
 
 ### <a name="to-set-search-options-using-execute-method-arguments"></a>Execute metodu bağımsız değişkenlerini kullanarak arama seçeneklerini ayarlamak için
 
-1. Arama ölçütlerini yönteminin parametreleri olarak ileterek metin seçiminde <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> arama yapmak için beni **bulun.**
+1. Arama ölçütünü, <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> **beni bul** metin için bir seçimi ileri doğru aramak üzere metodun parametreleri olarak geçirin.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet77":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet77":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl kullanılır: Belgelerde program aracılığıyla metin arama ve değiştirme](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
-- [Nasıl kullanılır: Belgelerde bulunan öğelerde program aracılığıyla döngü](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
-- [Nasıl kurulur: Arama sonrasındaki seçimleri program aracılığıyla geri yükleme](../vsto/how-to-programmatically-restore-selections-after-searches.md)
+- [Nasıl yapılır: belgelerde metni program aracılığıyla arama ve değiştirme](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
+- [Nasıl yapılır: belgelerdeki bulunan öğeler aracılığıyla program aracılığıyla döngü yapma](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
+- [Nasıl yapılır: aramadan sonra program aracılığıyla seçimleri geri yükleme](../vsto/how-to-programmatically-restore-selections-after-searches.md)

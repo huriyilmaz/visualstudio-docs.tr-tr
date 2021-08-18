@@ -10,12 +10,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1e45422b8b1f3dd98ec8c47c4788d935263f7f50
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: 034487e5af331d6724c26bfc09958b24be42ebcaf59cd654496097e5a2a15dee
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115094875"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121356562"
 ---
 # <a name="visual-studio-on-arm-powered-devices"></a>ARM destekli cihazlarda Visual Studio
 

@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: ae577364987be7fa4ed9a6be633b4fa0efd7c0ba301f434055730bdf15432248
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 068bb1cca204e2202f5ed231c07e81062beab44f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410677"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033453"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-memory-data-by-using-the-command-line"></a>Nasıl kullanılır: Komut satırı kullanarak .NET Framework veri toplamak için profil oluşturma ile tek başına bir uygulama başlatma
 Bu konuda, tek başına (Profil Oluşturma Araçları) bir uygulama başlatmak ve bellek verileri .NET Framework komut satırı araçlarının [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nasıl kullanımı açıklanmıştır.

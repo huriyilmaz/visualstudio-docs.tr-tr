@@ -1,6 +1,6 @@
 ---
-title: Uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core | Microsoft Docs
-description: Visual Studio uzaktan hata ayıklayıcı kullanılarak uzak bir Internet Information Services (IIS) bilgisayara dağıtılan ASP.NET Core bir uygulamada hata ayıklayın.
+title: Uzak IIS ASP.NET Core'da Uzaktan Hata Ayıklama | Microsoft Docs
+description: Uzak ASP.NET Core (IIS) bilgisayarına dağıtılmış bir uygulamanın Internet Information Services hata ayıklayıcısını Visual Studio ayıklar.
 ms.custom: remotedebugging, SEO-VS-2020
 ms.date: 05/06/2020
 ms.topic: conceptual
@@ -8,164 +8,165 @@ ms.assetid: 573a3fc5-6901-41f1-bc87-557aa45d8858
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: a364289ded27879c74767f03e89b9ea7b9f604fc
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: ba43954e5a85d4b47f182e6bf348c6e84a4e1690
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102249932"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058489"
 ---
-# <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Visual Studio 'da uzak IIS bilgisayarında uzaktan hata ayıklama ASP.NET Core
+# <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>Visual Studio'ASP.NET Core Uzak IIS Bilgisayarda Uzaktan Hata Ayıklama Visual Studio
 
-IIS 'ye dağıtılan ASP.NET Core bir uygulamada hata ayıklamak için, uzak araçları uygulamanızı dağıttığınız bilgisayara yükleyip çalıştırın ve ardından Visual Studio 'dan çalışan uygulamanıza bağlayın.
+IIS'ye ASP.NET Core bir uygulamanın hata ayıklaması için, uygulamanızı dağıtarak uzak araçları yükleyin ve çalıştırın ve ardından Visual Studio.
 
 ![Uzaktan hata ayıklayıcı bileşenleri](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
 
-Bu kılavuzda, Visual Studio ASP.NET Core ayarlama ve yapılandırma, IIS 'ye dağıtma ve Visual Studio 'dan uzaktan hata ayıklayıcı iliştirme açıklanır. Uzaktan hata ayıklama ASP.NET 4.5.2 için, bkz. [BIR IIS bilgisayarında uzaktan hata ayıklama ASP.net](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md). Ayrıca, Azure kullanarak IIS 'de dağıtabilir ve hata ayıklayabilirsiniz. Azure App Service için, önceden yapılandırılmış IIS ve uzaktan hata ayıklayıcı örneğini [Snapshot Debugger](../debugger/debug-live-azure-applications.md) kullanarak veya [Sunucu Gezgini hata ayıklayıcıyı ekleyerek](../debugger/remote-debugging-azure.md)kolayca dağıtabilir ve hata ayıklayabilirsiniz.
+Bu kılavuzda bir sanal ağ oluşturma ve yapılandırma Visual Studio ASP.NET Core IIS'ye dağıtma ve uzaktan hata ayıklayıcıyı Visual Studio. 4.5.2 ASP.NET uzaktan hata ayıklamak için bkz. [IIS ASP.NET Uzaktan Hata Ayıklama.](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) Azure'ı kullanarak IIS'de de dağıtım ve hata ayıklama da sabilirsiniz. Daha Azure App Service, önceden yapılandırılmış bir IIS örneğinde ve uzaktan hata ayıklayıcıda Snapshot Debugger kullanarak veya [hata](../debugger/debug-live-azure-applications.md) ayıklayıcıyı [Sunucu Gezgini.](../debugger/remote-debugging-azure.md)
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
-Visual Studio 2019, bu makalede gösterilen adımları izlemek için gereklidir.
+Visual Studio makalede gösterilen adımları takip etmek için Visual Studio 2019 gereklidir.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Visual Studio 2017, bu makalede gösterilen adımları izlemek için gereklidir.
+Visual Studio makalede gösterilen adımları takip etmek için Visual Studio 2017 gereklidir.
 ::: moniker-end
 
-Bu yordamlar, bu sunucu yapılandırmalarında test edilmiştir:
+Bu yordamlar şu sunucu yapılandırmalarında test edilmiştir:
 * Windows Server 2012 R2 ve IIS 8
 * Windows Server 2016 ve IIS 10
 * Windows Server 2019 ve IIS 10
 
 ## <a name="network-requirements"></a>Ağ gereksinimleri
 
-Proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmez. Yüksek gecikme veya düşük bant genişliğine sahip bir bağlantı (örneğin, Internet veya ülkeler arasında Internet üzerinden) için hata ayıklama önerilmez ve başarısız olabilir veya aşırı derecede yavaş olabilir. Gereksinimlerin tüm listesi için bkz. [gereksinimler](../debugger/remote-debugging.md#requirements_msvsmon).
+Ara sunucu üzerinden bağlanan iki bilgisayar arasında hata ayıklama desteklenmiyor. Çevirmeli İnternet gibi yüksek gecikmeli veya düşük bant genişliğine sahip bir bağlantı üzerinden veya ülkeler arasında İnternet üzerinden hata ayıklamak önerilmez ve başarısız olabilir veya kabul edilemez düzeyde yavaş olabilir. Gereksinimlerin tam listesi için bkz. [Gereksinimler.](../debugger/remote-debugging.md#requirements_msvsmon)
 
-## <a name="app-already-running-in-iis"></a>Uygulama IIS 'de zaten çalışıyor mu?
+## <a name="app-already-running-in-iis"></a>Uygulama zaten IIS'de mi çalışıyor?
 
-Bu makalede, Windows Server 'da IIS 'nin temel yapılandırmasını ayarlama ve uygulamayı Visual Studio 'dan dağıtma adımları yer alır. Bu adımlar, sunucuda gerekli bileşenlerin yüklü olduğundan, uygulamanın doğru şekilde çalıştırılabilmesi ve uzaktan hata ayıklama için hazırsanız emin olmak için eklenmiştir.
+Bu makale, Windows sunucusunda IIS'nin temel yapılandırmasını ayarlama ve uygulamayı Visual Studio. Sunucuda gerekli bileşenlerin yüklü olduğundan, uygulamanın doğru şekilde çalıştırılaya kadar ve uzaktan hata ayıklamaya hazır olduğundan emin olmak için bu adımlar dahil edilir.
 
-* Uygulamanız IIS 'de çalışıyorsa ve yalnızca uzaktan hata ayıklayıcıyı indirmek ve hata ayıklamayı başlatmak istiyorsanız, [Windows Server 'da uzak araçları indirme ve yükleme](#BKMK_msvsmon)bölümüne gidin.
+* Uygulamanız IIS'de çalışıyorsa ve yalnızca uzak hata ayıklayıcısını indirmek ve hata ayıklamayı başlatmak için Uzak araçları İndirme ve Yükleme 'ye gidin [Windows Server.](#BKMK_msvsmon)
 
-* Uygulamanızın Hata ayıklayabilmeniz, dağıtılması ve IIS 'de doğru şekilde çalıştığından emin olmak istiyorsanız, bu konudaki tüm adımları izleyin.
+* Hata ayıklamak için, uygulamanın IIS'de doğru şekilde ayarıldığından, dağıtıldığından ve çalıştırıldığından emin olmak için yardım almak için bu konudaki tüm adımları izleyin.
 
-## <a name="create-the-aspnet-core-application-on-the-visual-studio-computer"></a>Visual Studio bilgisayarında ASP.NET Core uygulamasını oluşturma
+## <a name="create-the-aspnet-core-application-on-the-visual-studio-computer"></a>Visual Studio bilgisayarda ASP.NET Core oluşturma
 
-1. Yeni bir ASP.NET Core Web uygulaması oluşturun.
+1. Yeni bir web ASP.NET Core oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ' de başlangıç penceresinde **Yeni proje oluştur** ' u seçin. Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. **Web** uygulaması yazın, dil olarak **C#** ' yi seçin, ardından **ASP.NET Core Web uygulaması (Model-View-Controller)** öğesini seçin ve ardından **İleri**' yi seçin. Sonraki ekranda, **Myaspapp** projesini adlandırın ve ardından **İleri**' yi seçin.
+    2019 Visual Studio da başlangıç **penceresinde Yeni proje oluştur'a** tıklayın. Başlangıç penceresi açık değilse Dosya Başlangıç **Penceresi'ne**  >  **tıklayın.** **Web uygulaması yazın,** dil **olarak C#** seçin, ardından ASP.NET Core Web Uygulaması **(Model-Görünüm-Denetleyici)** ve ardından Sonraki'yi **seçin.** Sonraki ekranda projeye **MyASPApp adını ve ardından** Sonraki'yi **seçin.**
 
-    Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
+    Önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017 ' de **dosya > yeni > proje**' yi seçin ve ardından **Visual C# > web > ASP.NET Core Web uygulaması**' nı seçin. ASP.NET Core Şablonları bölümünde **Web uygulaması (Model-View-Controller)** öğesini seçin. ASP.NET Core 2,1 ' nin seçildiğinden emin olun, **Docker desteğinin etkinleştirilmesi** ve **kimlik** doğrulamasının **kimlik doğrulaması yok** olarak ayarlandığından emin olun. Projeyi **Myaspapp** olarak adlandırın.
+    2017 Visual Studio de Dosya > **Yeni**> Project'ı ve ardından **Visual C# > Web Uygulaması'> ASP.NET Core seçin.** Şablonlar ASP.NET Core Web Uygulaması **(Model-View-Controller) öğesini seçin.** 2.1 ASP.NET Core, **Docker** Desteğini Etkinleştir'in seçili olduğundan ve Kimlik  Doğrulaması Yok olarak ayarlanmış olduğundan **emin olun.** Projeye **MyASPApp adını girin.**
     ::: moniker-end
 
-4. About.cshtml.cs dosyasını açın ve yöntemde bir kesme noktası ayarlayın `OnGet` (eski şablonlarda, bunun yerine HomeController.cs ' yi açın ve yöntemde kesme noktasını ayarlayın `About()` ).
+4. About.cshtml.cs dosyasını açın ve yönteminde bir kesme noktası ayarlayın (eski şablonlarda bunun yerine HomeController.cs dosyasını açın ve yönteminde `OnGet` kesme noktası `About()` ayarlayın).
 
-## <a name="install-and-configure-iis-on-windows-server"></a><a name="bkmk_configureIIS"></a> Windows Server 'da IIS 'yi yükleyip yapılandırma
+## <a name="install-and-configure-iis-on-windows-server"></a><a name="bkmk_configureIIS"></a>Windows Server'da IIS'yi Yükleme ve Yapılandırma
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
-## <a name="update-browser-security-settings-on-windows-server"></a>Windows Server 'da tarayıcı güvenlik ayarlarını güncelleştirme
+## <a name="update-browser-security-settings-on-windows-server"></a>Windows Server'da tarayıcı güvenlik ayarlarını güncelleştirme
 
-Internet Explorer 'da artırılmış güvenlik yapılandırması etkinse (varsayılan olarak etkindir), Web sunucusu bileşenlerinden bazılarını indirmeniz için bazı etki alanlarını güvenilen siteler olarak eklemeniz gerekebilir. Güvenilen siteleri, **güvenlik > güvenilen siteler > siteleri > Internet seçeneklerine** giderek ekleyin. Aşağıdaki etki alanlarını ekleyin.
+Internet Explorer'da Gelişmiş Güvenlik Yapılandırması etkinleştirildiyse (varsayılan olarak etkindir), bazı web sunucusu bileşenlerini indirmenizi sağlamak için bazı etki alanlarını güvenilen siteler olarak eklemeniz gerekir. güvenilen siteleri eklemek için İnternet Seçenekleri'ne **> Security > Siteleri'ne > ekleyin.** Aşağıdaki etki alanlarını ekleyin.
 
 - microsoft.com
 - go.microsoft.com
 - download.microsoft.com
 - iis.net
 
-Yazılımı indirdiğinizde, çeşitli web sitesi betikleri ve kaynakları yüklemek için izin verme istekleri alabilirsiniz. Bu kaynaklardan bazıları gerekli değildir, ancak işlemi basitleştirmek için istendiğinde **Ekle** ' ye tıklayın.
+Yazılımı indirirken, çeşitli web sitesi betiklerini ve kaynaklarını yükleme izni vermek için istekler edinebilirsiniz. Bu kaynakların bazıları gerekli değildir, ancak işlemi basitleştirmek için istendiğinde **Ekle'ye** tıklayın.
 
-## <a name="install-aspnet-core-on-windows-server"></a>Windows Server 'a ASP.NET Core yüklemesi
+## <a name="install-aspnet-core-on-windows-server"></a>Windows Server ASP.NET Core a ASP.NET Core yükleme
 
-1. .NET Core barındırma paketi 'ni barındırma sistemine yükler. Paket, .NET Core çalışma zamanı, .NET Core kitaplığı ve ASP.NET Core modülünü de yüklüyor. Daha ayrıntılı yönergeler için bkz. IIS 'de [Yayımlama](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration).
+1. .NET Core Barındırma Paketi'nin barındırma sistemine yükleyin. Paket .NET Core Çalışma Zamanı, .NET Core Kitaplığı ve ASP.NET Core Modülü'ASP.NET Core yüklenir. Daha ayrıntılı yönergeler için bkz. [IIS'de yayımlama.](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)
 
-    .NET Core 3 için [.NET Core barındırma paketi](https://dotnet.microsoft.com/permalink/dotnetcore-current-windows-runtime-bundle-installer)' ni yükler.
-    .NET Core 2 için [.NET Core Windows Server barındırmayı](https://aka.ms/dotnetcore-2-windowshosting)yükler.
+    .NET Core 3 için [.NET Core Barındırma Paketi'ne yükleyin.](https://dotnet.microsoft.com/permalink/dotnetcore-current-windows-runtime-bundle-installer)
+    .NET Core 2 için [.NET Core'Windows Sunucu Barındırma'ya yükleyin.](https://aka.ms/dotnetcore-2-windowshosting)
 
     > [!NOTE]
-    > Sistemin bir Internet bağlantısı yoksa, .NET Core Windows Server barındırma paketi 'ni yüklemeden önce *[Microsoft Visual C++ 2015 yeniden dağıtılabilir](https://www.microsoft.com/download/details.aspx?id=53840)* sürümünü edinin ve yükleme.
+    > Sistemin İnternet bağlantısı yoksa, .NET Core Windows Server Hosting paketi yüklemeden önce Microsoft Visual C++ *[2015](https://www.microsoft.com/download/details.aspx?id=53840)* Yeniden Dağıtılabilir'i alın ve yükleyin.
 
-2. Sistemi yeniden başlatın (veya **net stop was/y** ' i yürütün ve ardından sistem yolunda bir değişiklik yapmak için bir komut isteminden net **start w3svc** ' i çalıştırın).
+2. Sistemi yeniden başlatın (veya sistem YOLUNDA bir değişiklik almak için bir komut isteminden net start w3svc ve ardından **net start w3svc)** **net stop** komutunu yürütün.
 
-## <a name="choose-a-deployment-option"></a>Dağıtım seçeneği seçin
+## <a name="choose-a-deployment-option"></a>Dağıtım seçeneği belirtin
 
-Uygulamayı IIS 'ye dağıtmak için yardıma ihtiyacınız varsa, şu seçenekleri göz önünde bulundurun:
+Uygulamayı IIS'ye dağıtmak için yardıma ihtiyacınız varsa şu seçenekleri göz önünde bulun:
 
-* IIS 'de bir yayımlama ayarları dosyası oluşturarak ve ayarları Visual Studio 'da içeri aktararak dağıtın. Bazı senaryolarda bu, uygulamanızı dağıtmanın hızlı bir yoludur. Yayınlama ayarları dosyasını oluştururken, izinler IIS 'de otomatik olarak ayarlanır.
+* IIS'de yayımlama ayarları dosyası oluşturarak ve ayarları iis'te içeri aktararak Visual Studio. Bazı senaryolarda bu, uygulamanızı dağıtmanın hızlı bir yoludur. Yayımlama ayarları dosyasını sanız, izinler IIS'de otomatik olarak ayarlanır.
 
-* Yerel bir klasöre yayımlayarak ve çıktıyı tercih edilen bir yönteme IIS üzerindeki hazırlanmış bir uygulama klasörüne kopyalayarak dağıtın.
+* Dağıtımı yerel bir klasöre yayımlayıp tercih edilen bir yöntem tarafından IIS'de hazırlanmış bir uygulama klasörüne kopyalayıp dağıtın.
 
-## <a name="optional-deploy-using-a-publish-settings-file"></a>Seçim Yayımlama ayarları dosyası kullanarak dağıtma
+## <a name="optional-deploy-using-a-publish-settings-file"></a>(İsteğe bağlı) Yayımlama ayarları dosyası kullanarak dağıtma
 
-Bu seçeneği kullanarak bir yayımlama ayarları dosyası oluşturabilir ve Visual Studio 'ya aktarabilirsiniz.
+Bu seçeneği kullanarak bir yayımlama ayarları dosyası oluşturabilir ve dosyayı Visual Studio.
 
 > [!NOTE]
-> Bu dağıtım yöntemi, sunucuda yüklü olması gereken Web Dağıtımı kullanır. Ayarları içeri aktarmak yerine Web Dağıtımı el ile yapılandırmak istiyorsanız, barındırma sunucuları için Web Dağıtımı 3,6 yerine Web Dağıtımı 3,6 yükleyebilirsiniz. Ancak Web Dağıtımı el ile yapılandırırsanız, sunucudaki bir uygulama klasörünün doğru değerler ve izinlerle yapılandırıldığından emin olmanız gerekir (bkz. [configure ASP.NET Web site](#BKMK_deploy_asp_net)).
+> Bu dağıtım yöntemi Web Dağıtımı sunucuda yüklü olması gereken bir uygulama kullanır. Ayarları içeri aktarma Web Dağıtımı el ile yapılandırmak için, Barındırma Sunucuları için Web Dağıtımı 3.6 yerine Web Dağıtımı 3.6'Web Dağıtımı yükleyebilirsiniz. Ancak, sunucuyu Web Dağıtımı yapılandırdıysanız, sunucusundaki bir uygulama klasörünün doğru değer ve izinlerle yapılandırıldığından emin ASP.NET [gerekir.](#BKMK_deploy_asp_net)
 
-### <a name="configure-the-aspnet-core-web-site"></a>ASP.NET Core Web sitesini yapılandırma
+### <a name="configure-the-aspnet-core-web-site"></a>Web ASP.NET Core yapılandırma
 
-1. IIS Yöneticisi 'nde, sol bölmedeki **Bağlantılar** altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve **.NET CLR sürümünü** **yönetilen kod olmadan** ayarlayın. ASP.NET Core için bu gereklidir. Varsayılan Web sitesi, DefaultAppPool 'yi kullanır.
+1. IIS Yöneticisi'nde, sol bölmede **Bağlantılar'ın altında** Uygulama **Havuzları'nı seçin.** **DefaultAppPool'ı** açın ve **.NET CLR sürümünü Yönetilen** **Kod Yok olarak ayarlayın.** Bu, ASP.NET Core. Varsayılan Web Sitesi DefaultAppPool kullanır.
 
-2. DefaultAppPool öğesini durdurup yeniden başlatın.
+2. DefaultAppPool'u durdurun ve yeniden başlatın.
 
-### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>Windows Server 'da barındırma sunucuları için Web Dağıtımı yükleyip yapılandırın
+### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>Windows Server Web Dağıtımı barındırmak için Windows yapılandırma
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/install-web-deploy-with-hosting-server.md)]
 
-### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 'da IIS 'de yayımlama ayarları dosyası oluşturma
+### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server'da IIS'de yayımlama ayarları dosyasını oluşturma
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
 
-### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio 'da yayımlama ayarlarını içeri aktarın ve dağıtın
+### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Yayımlama ayarlarını Visual Studio dağıtma
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uygulama Visual Studio 'dan başlamazsa, düzgün çalıştığını doğrulamak için uygulamayı IIS 'de başlatın. ASP.NET Core için, **DefaultAppPool** için uygulama havuzu alanının **yönetilen kod yok** olarak ayarlandığından emin olmanız gerekir.
+Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlatılır. Uygulama bir uygulamanın çalışma Visual Studio doğru şekilde çalıştığını doğrulamak için IIS'de uygulamayı başlatabilirsiniz. Daha ASP.NET Core, **DefaultAppPool** için Uygulama havuzu alanı'nın Yönetilen Kod Yok olarak ayarlanmış olduğundan **da emin olun.**
 
-1. Hata ayıklama yapılandırmasına geçiş yapın.
+1. Hata ayıklama yapılandırmasına geçiş.
 
    ::: moniker range=">=vs-2019"
-   Profili düzenlemek için **Düzenle** ' yi seçin ve ardından **Ayarlar**' ı seçin. Bir **hata ayıklama** yapılandırması seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   Profili **düzenlemek** için Düzenle'yi seçin ve sonra da **Ayarlar.** Bir Hata **ayıklama yapılandırması** seçin ve ardından Dosya Yayımlama **seçeneklerinin altında Hedefte** ek dosyaları **kaldır'ı** seçin.
    ::: moniker-end
    ::: moniker range="vs-2017"
-   **Ayarlar** iletişim kutusunda, **İleri**' ye tıklayarak hata ayıklamayı etkinleştirin, **hata ayıklama** yapılandırması ' nı seçin ve ardından **dosya yayımlama** seçenekleri altında **Hedefteki ek dosyaları Kaldır** ' ı seçin.
+   Hata **Ayarlar** iletişim kutusunda, Sonraki'ne tıklayarak hata ayıklamayı **etkinleştirin,** bir  **Hata** ayıklama yapılandırması seçin ve ardından Dosya Yayımlama seçeneklerinin altında Hedefte ek dosyaları **kaldır'ı** seçin.
    ::: moniker-end
 
    > [!IMPORTANT]
-   > Bir yayın yapılandırması seçerseniz, ' ı yayımladığınızda *web.config* dosyasında hata ayıklamayı devre dışı bırakabilirsiniz.
+   > Yayın yapılandırması seçerseniz, yayımlarkenweb.configdosyasında *hata ayıklamayı* devre dışı bırakın.
 
-1. **Kaydet** ' e tıklayın ve uygulamayı yeniden yayımlayın.
+1. **Kaydet'e** tıklayın ve uygulamayı yeniden yayımlar.
 
-## <a name="optional-deploy-by-publishing-to-a-local-folder"></a>Seçim Yerel bir klasöre yayımlayarak dağıtma
+## <a name="optional-deploy-by-publishing-to-a-local-folder"></a>(İsteğe bağlı) Yerel bir klasöre yayımlaarak dağıtma
 
-Uygulamayı PowerShell, RoboCopy kullanarak IIS 'e kopyalamak istiyorsanız veya dosyaları el ile kopyalamak istiyorsanız uygulamanızı dağıtmak için bu seçeneği kullanabilirsiniz.
+Uygulamayı PowerShell veya RoboCopy kullanarak IIS'ye kopyalamak veya dosyaları el ile kopyalamak için bu seçeneği kullanarak uygulamanızı dağıtabilirsiniz.
 
-### <a name="configure-the-aspnet-core-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a> Windows Server bilgisayarında ASP.NET Core Web sitesini yapılandırma
+### <a name="configure-the-aspnet-core-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a>Windows Server ASP.NET Core web sitesini yapılandırma
 
-1. Windows Gezgini 'ni açın ve yeni bir klasör oluşturun **, burada** ASP.NET Core projeyi daha sonra dağıtacaksınız.
+1. Yeni Windows açın ve yeni bir klasör oluşturun: **C:\Publish**, burada daha sonra ASP.NET Core dağıtın.
 
-2. Zaten açık değilse, **Internet Information Services (IIS) Yöneticisi**' ni açın. (Sunucu Yöneticisi sol bölmesinde **IIS**' yi seçin. Sunucuya sağ tıklayın ve **Internet Information Services (IIS) Yöneticisi**' ni seçin.)
+2. Henüz açık değilse, Internet Information Services **(IIS) Yöneticisi'ni açın.** (Uygulamanın sol bölmesinde IIS Sunucu Yöneticisi'yi **seçin.** Sunucuya sağ tıklayın ve Internet Information Services **(IIS) Yöneticisi'ni** seçin.
 
-3. Sol bölmedeki **Bağlantılar** ' ın altında, **siteler**' e gidin.
+3. Sol **bölmede** Bağlantılar'ın altında Siteler'e **gidin.**
 
-4. **Varsayılan Web sitesini** seçin, **temel ayarlar**' ı seçin ve **fiziksel yolu** **C:\publish** olarak ayarlayın.
+4. Varsayılan **Web Sitesi'yi seçin,** Temel **Ayarlar'ı** seçin ve **Fiziksel** yolu **C:\Publish olarak ayarlayın.**
 
-5. **Varsayılan Web sitesi** düğümüne sağ tıklayın ve **Uygulama Ekle**' yi seçin.
+5. Varsayılan Web Sitesi **düğümüne sağ tıklayın ve** Uygulama **Ekle'yi seçin.**
 
-6. **Diğer ad** alanını **Myaspapp** olarak ayarlayın, varsayılan uygulama havuzunu (**DefaultAppPool**) kabul edin ve **fiziksel yolu** **C:\publish** olarak ayarlayın.
+6. Diğer Ad **alanını** **MyASPApp** olarak ayarlayın, varsayılan Uygulama Havuzunu (**DefaultAppPool**) kabul eder ve **Fiziksel** yolu **C:\Publish olarak ayarlayın.**
 
-7. **Bağlantılar** altında **uygulama havuzları**' nı seçin. **DefaultAppPool** ' i açın ve uygulama havuzu alanını **yönetilen kod olmadan** ayarlayın.
+7. **Bağlantılar'ın** altında Uygulama **Havuzları'ı seçin.** **DefaultAppPool'ı** açın ve Uygulama havuzu alanını Yönetilen **Kod Yok olarak ayarlayın.**
 
-8. IIS Yöneticisi 'nde yeni siteye sağ tıklayın, **Izinleri Düzenle**' yi seçin ve Web uygulamasına erişim için yapılandırılmış ıusr, IIS_IUSRS veya kullanıcının okuma & yürütme haklarına sahip yetkili bir kullanıcı olduğundan emin olun.
+8. IIS Yöneticisi'nde yeni siteye sağ tıklayın, İzinleri Düzenle'yi seçin ve web uygulamasına erişim için yapılandırılmış IUSR, IIS_IUSRS veya kullanıcının Okuma ve Yürütme haklarına sahip yetkili bir kullanıcı olduğundan emin & olun.
 
-    Erişim izni olan bu kullanıcılardan birini görmüyorsanız, okuma & yürütme hakları olan bir kullanıcı olarak ıUSR ekleme adımlarını izleyin.
+    Erişimi olan bu kullanıcılardan birini görmüyorsanız IUSR'yi Okuma ve Yürütme haklarına sahip bir kullanıcı & izleyin.
 
 ### <a name="publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>Visual Studio 'dan yerel bir klasöre yayımlayarak uygulamayı yayımlayın ve dağıtın
 

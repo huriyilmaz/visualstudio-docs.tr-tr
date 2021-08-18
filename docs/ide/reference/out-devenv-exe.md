@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 26985e93975f4f7918cedc3904537520780cc190ac4fc58f4d9f4091271e9084
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fbbb33f942bbfbafd2cc720ca436e9e951306249
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387102"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056192"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
 

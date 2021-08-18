@@ -1,6 +1,6 @@
 ---
-description: Verilen satır uzaklığını temsil eden bir işlev içindeki adresi verir.
-title: IDebugComPlusSymbolProvider::GetFunctionLineOffset | Microsoft Docs
+description: Verilen satır sapmasını temsil eden bir işlev içindeki adresi alır.
+title: 'IDebugComPlusSymbolProvider:: Getfunctionlinekayması | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: be46f165cdf487f109bec1a27cfec0368b0037bead2e6e377b10724ded18e01e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 677c5f64c8f2398c970d92a8701962ca35288720
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262171"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103917"
 ---
 # <a name="idebugcomplussymbolprovidergetfunctionlineoffset"></a>IDebugComPlusSymbolProvider::GetFunctionLineOffset
-Verilen satır uzaklığını temsil eden bir işlev içindeki adresi verir.
+Verilen satır sapmasını temsil eden bir işlev içindeki adresi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +46,19 @@ int GetFunctionLineOffset(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[in] İşlevi temsil eden adres.
+'ndaki İşlevi temsil eden adres.
 
 `dwLine`\
-[in] İşlevin başından satır uzaklığı.
+'ndaki İşlevin başından itibaren satır boşluğu.
 
 `ppNewAddress`\
-[out] İşlevin başından itibaren satır uzaklığını temsil eden yeni adres.
+dışı İşlevin başından başlayarak satır sapmasını temsil eden yeni adres.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetFunctionLineOffset(

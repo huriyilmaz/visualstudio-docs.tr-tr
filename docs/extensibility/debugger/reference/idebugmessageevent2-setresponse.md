@@ -18,12 +18,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0db4be02717712aa06997d980822e74456d78a7f34c9f1d0c9c207e4be104c6a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d71b782bd8704ef221985cf10e8ffa38d350b7d2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433742"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088490"
 ---
 # <a name="idebugmessageevent2setresponse"></a>IDebugMessageEvent2::SetResponse
 İleti kutusundan yanıtı (varsa) ayarlar.

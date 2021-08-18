@@ -1,6 +1,6 @@
 ---
-description: Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.
-title: 'IDiaEnumFrameData:: Skip | Microsoft Docs'
+description: Bir numaralama dizisinde belirtilen sayıda çerçeve verisi öğelerini atlar.
+title: IDiaEnumFrameData::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 97e179b781ea430ab30d3d93ff52cd65b66e013ad3163b7ab54095f23e0c205c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 50c7069e47533e65273ffd988eed676a59376a1e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380497"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134588"
 ---
 # <a name="idiaenumframedataskip"></a>IDiaEnumFrameData::Skip
-Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.
+Bir numaralama dizisinde belirtilen sayıda çerçeve verisi öğelerini atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,12 +33,12 @@ HRESULT Skip (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Atlanacak numaralandırma dizisindeki çerçeve verisi öğelerinin sayısı.
+[in] Atlama için numaralama dizisinde çerçeve veri öğelerinin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, öğesini döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak daha fazla kayıt yoksa döndürür.
+ Başarılı olursa; `S_OK` aksi takdirde, `S_FALSE` atlanabilecek başka kayıt yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

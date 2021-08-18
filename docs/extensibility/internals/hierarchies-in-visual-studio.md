@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 'da hiyerarşiler | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamında (IDE) proje öğeleri ve bunlarla ilişkili özellikler içeren proje hiyerarşileri hakkında bilgi edinin.
+title: Visual Studio |'da hiyerarşiler Microsoft Docs
+description: Proje öğelerini ve ilişkili özelliklerini içeren Visual Studio geliştirme ortamındaki (IDE) proje hiyerarşileri hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,30 +11,31 @@ ms.assetid: 0a029a7c-79fd-4b54-bd63-bd0f21aa8d30
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3fe1487e082907958c1cf8a36f1653efb97c9de
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3d8058091742f8e0f9ed3e51ebf0d046ee1524e5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056629"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042575"
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio’da Hiyerarşiler
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE) bir projeyi *hiyerarşi* olarak görüntüler. IDE 'de hiyerarşi, her düğümün ilişkili özellikler kümesi olduğu düğüm ağacıdır. *Proje hiyerarşisi* projenin öğelerini, öğelerin ilişkilerini ve öğelerin ilişkili özelliklerini ve komutlarını tutan bir kapsayıcıdır.
+Tümleşik [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geliştirme ortamı (IDE), bir projeyi hiyerarşi olarak *görüntüler.* IDE'de hiyerarşi, her düğümün ilişkili özellikler kümesine sahip olduğu bir düğüm ağacıdır. Proje *hiyerarşisi,* projenin öğelerini, öğelerin ilişkilerini ve öğelerin ilişkili özelliklerini ve komutlarını tutan bir kapsayıcıdır.
 
- İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , hiyerarşi arabirimini kullanarak proje hiyerarşilerini yönetirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>Arabirim, Proje öğelerinden çağırma komutlarını standart komut işleyicisi yerine uygun hiyerarşi penceresine yeniden yönlendirir.
+ içinde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] proje hiyerarşilerini hiyerarşi arabirimini kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> yönetirsiniz. Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> proje öğelerinden çağıran komutları standart komut işleyicisi yerine uygun hiyerarşi penceresine yeniden yönlendiriyor.
 
-## <a name="project-hierarchies"></a>Proje hiyerarşileri
- Her proje hiyerarşisi, görüntüleyebileceğiniz ve düzenleyebileceğiniz öğeleri içerir. Bu öğeler proje türüne göre farklılık gösterir. Örneğin, bir veritabanı projesi saklı yordamlar, veritabanı görünümleri ve veritabanı tabloları içerebilir. Diğer yandan bir programlama dili projesi, büyük olasılıkla bit eşlemler ve iletişim kutuları için kaynak dosyaları ve kaynak dosyaları içerir. Hiyerarşiler iç içe olabilir, bu da bir proje hiyerarşisi oluştururken bazı ek esneklik sağlar.
+## <a name="project-hierarchies"></a>Project hiyerarşileri
+ Her proje hiyerarşisi, görüntüleyemez ve düzenleyemezsiniz öğeleri içerir. Bu öğeler proje türüne göre değişiklik gösterir. Örneğin, bir veritabanı projesi saklı yordamlar, veritabanı görünümleri ve veritabanı tabloları içerebilir. Diğer taraftan bir programlama dili projesi büyük olasılıkla bit eşlemler ve iletişim kutuları için kaynak dosyaları ve kaynak dosyaları içerir. Hiyerarşiler iç içe geçmiş olabilir ve bu da proje hiyerarşisi oluşturma konusunda daha fazla esneklik sunar.
 
- Yeni bir proje türü oluşturduğunuzda proje türü, içinde düzenlenebilecek öğelerin tüm kümesini denetler. Ancak projeler, düzen desteği olmayan öğeler içerebilir. Örneğin, Visual C++, HTML dosya türü için özelleştirilmiş bir düzenleyici sağlamasa bile, Visual C++ projeler HTML dosyaları içerebilir.
+ Yeni bir proje türü oluşturma işlemi, proje türü içinde düzenlenemez tüm öğe kümelerini kontrol eder. Ancak projeler, düzenleme desteğine sahip olmadığınız öğeler içerebilir. Örneğin, Visual C++ projeleri HTML dosyaları içerebilir, ancak Visual C++ html dosya türü için özelleştirilmiş bir düzenleyici sağlamaz.
 
- Hiyerarşiler içerdikleri öğelerin kalıcılığını yönetir. Hiyerarşinin uygulanması, hiyerarşideki öğelerin kalıcılığını etkileyen özel özellikleri denetmelidir. Örneğin, öğeler dosyalar yerine bir depodaki nesneleri temsil ediyorsa, hiyerarşi uygulamasının bu nesnelerin kalıcılığını denetmesi gerekir. IDE, öğeleri Kullanıcı girişiyle uyumlu olarak kaydetmek için hiyerarşiyi yönlendirir, ancak IDE, bu öğeleri kaydetmek için gereken herhangi bir eylemi denetlemez. Bunun yerine, proje denetimde olur.
+ Hiyerarşiler, içerecekleri öğelerin kalıcılıklarını yönetir. Hiyerarşinin uygulanması, hiyerarşi içindeki öğelerin kalıcılıklarını etkileyen tüm özel özellikleri denetlemeli. Örneğin, öğeler dosyalar yerine bir depodaki nesneleri temsil ediyorsa, hiyerarşi uygulaması bu nesnelerin kalıcılık denetimine sahip olmalıdır. IDE, hiyerarşiyi öğeleri kullanıcı girişiyle uyumlu olarak kaydetmeye yönlendirmektedir, ancak IDE bu öğeleri kaydetmek için gereken eylemleri denetlemez. Bunun yerine, proje denetimdedir.
 
- Bir Kullanıcı düzenleyicide bir öğeyi açtığında, bu öğeyi denetleyen hiyerarşi seçilir ve etkin hiyerarşi haline gelir. Seçili hiyerarşi, öğede işlem yapması için kullanılabilen komut kümesini belirler. Kullanıcı odağı bu şekilde izlemek, hiyerarşinin kullanıcının geçerli içeriğini yansıtmasını sağlar.
+ Kullanıcı bir öğeyi düzenleyicide açtığında, bu öğeyi kontrol eden hiyerarşi seçilir ve etkin hiyerarşi olur. Seçilen hiyerarşi, öğe üzerinde eyleme geçilecek komutlar kümesi belirler. Kullanıcı odağında bu şekilde izleme, hiyerarşinin kullanıcının geçerli bağlamını yansıtması sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje türleri](../../extensibility/internals/project-types.md)
-- [IDE 'de seçim ve para birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)
+- [Project türleri](../../extensibility/internals/project-types.md)
+- [IDE'de seçim ve para birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)
 - [VSSDK örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples)

@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xaml-tools
 ms.workload:
 - uwp
-ms.openlocfilehash: 3764a71b63968c879e3347f0a5c130c2d95ba3d22e7dd8bd5cc8914ccfa50669
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5cd32b2eab82cd148bec4f21fa7a6f5e1f95c5b9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121365697"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135097"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 

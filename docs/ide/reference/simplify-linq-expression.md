@@ -1,6 +1,6 @@
 ---
 title: LINQ ifadesini basitleştirme
-description: Bu yeniden düzenleme, Where yöntemi için gereksiz yere gereksiz çağrıları kaldırmak için kullanılır.
+description: Bu yeniden düzenleme, Where yöntemi için Numaralanabilir'e yapılan gereksiz çağrıları kaldırmak için kullanılır.
 ms.date: 08/12/2020
 ms.topic: reference
 author: m-redding
@@ -11,30 +11,30 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 951f7bebe8e63139326081c70615d91cf0b958018a964ac1928651a0cb2ac0f6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dc52c81b8899d5b2d2ef3fb22581d3f7ef6c1a68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121446959"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041106"
 ---
 # <a name="simplify-linq-expression"></a>LINQ ifadesini basitleştirme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Ve için şunların `SomeEnumerableType.Where(<LambdaExpression>).Single()` örneklerinin `SomeEnumerable.Single(<LambdaExpression>)` `Enumerable.Single()` yanı sıra aşağıdaki sıralanabilir Yöntemler: `SingleOrDefault()` , `Last()` ,, `LastOrDefault()` `Any()` , `Count()` , `First()` ve `FirstOrDefault()` .
+**Ne:** için örneklerini ve aşağıdaki Numaralanabilir yöntemleri yeniden `SomeEnumerableType.Where(<LambdaExpression>).Single()` sıralar: , , , , , , `SomeEnumerable.Single(<LambdaExpression>)` ve `Enumerable.Single()` `SingleOrDefault()` `Last()` `LastOrDefault()` `Any()` `Count()` `First()` `FirstOrDefault()` .
 
-**Ne zaman:**  Yöntemin,, vb. çağırdığı tüm örnekler `Single()` `SingleOrDefault()` , hiçbir bağımsız değişkeni içermez ve önünde bir `Where()` ifade gelir. `Where()`İfadenin girişi bir ifade ağacı olarak oluşturulamıyor.
+**Ne zaman:**  yönteminin , ve gibi çağıran tüm örneklerin bağımsız değişkeni yok ve önünde `Single()` `SingleOrDefault()` bir ifade `Where()` var. İfadeye yapılan `Where()` giriş bir ifade ağacı olarak oluşturulur.
 
-**Neden:** Yöntemi için numaralandırılabilir çağrıya gereksiz çağrının kaldırılması `.Where()` performansı ve okunabilirliğini geliştirir.
+**Neden:** yöntemi için Numaralanabilir gereksiz çağrının kaldırılması `.Where()` performansı ve okunabilirliği artırır.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi `SomeEnumerableType.Where(<LambdaExpression>).Single()` Visual Studio 'daki örnek içine yerleştirin.
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
-3. Bir **LINQ Ifadesini Basitleştir** seçeneğini belirleyin
+1. İmlecinizi `SomeEnumerableType.Where(<LambdaExpression>).Single()` Visual Studio'daki örneğine yerleştirin.
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
+3. **LINQ ifadesini basitleştir'i seçin**
 
    ![typeof ifadesini nameof ifadesine dönüştürme](media/simplify-linq-expression.png)
 

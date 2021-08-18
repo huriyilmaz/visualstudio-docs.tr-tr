@@ -1,6 +1,6 @@
 ---
-description: IDiaSymbol::findInlineFramesByRVA, bir istemcinin belirtilen göreli sanal adresteki (RVA) tüm satır içi çerçeveler arasında yeniden işlemde bulunarak bir sabit adı alır.
-title: IDiaSymbol::findInlineFramesByRVA | Microsoft Docs
+description: 'IDiaSymbol:: findInlineFramesByRVA, bir istemcinin belirtilen göreli sanal adreste (RVA) tüm satır içi çerçeveler üzerinde yineleme yapmasına izin veren bir sabit listesi alır.'
+title: 'IDiaSymbol:: findInlineFramesByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 532de406a97bffd9f48671a585971e4fccb6d028648d053a1de4c823c33bfbfa
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ce4ae1bdafd5189f40d780fa17550d9113e33bb4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404885"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091071"
 ---
 # <a name="idiasymbolfindinlineframesbyrva"></a>IDiaSymbol::findInlineFramesByRVA
-Bir istemcinin belirtilen bir göreli sanal adresteki (RVA) tüm satır içi çerçeveler üzerinde devamsını sağlayan bir sabit değer alır.
+Bir istemcinin belirtilen göreli sanal adreste (RVA) bulunan tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,14 +33,14 @@ HRESULT findInlineFramesByRVA (    DWORD             rva,
 #### <a name="parameters"></a>Parametreler
  `rva`
 
-[in] Adresi RVA olarak belirtir.
+'ndaki Adresi RVA olarak belirtir.
 
  `ppResult`
 
-[out] Alınan `IDiaEnumSymbols` çerçevelerin listesini içeren bir nesneyi tutar.
+dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

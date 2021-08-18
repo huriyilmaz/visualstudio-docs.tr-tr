@@ -1,6 +1,6 @@
 ---
 title: ClickOnce ve Authenticode | Microsoft Docs
-description: Uygulamaların orijinalliğini doğrulamak için Authenticode 'un kullandığı sertifikalar hakkında bilgi edinin. Sertifikaların nasıl doğrulanacağını ve depolandığını öğrenin.
+description: Authenticode'ın uygulamaların orijinalliğini doğrulamak için kullandığı sertifikalar hakkında bilgi öğrenin. Sertifikaların nasıl doğrulandığı ve depolandığı hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,55 +18,56 @@ ms.assetid: ab5b6712-f32a-4e33-842f-e88ab4818ccf
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: e6541e99b23579713e77cf2bf1dc62152f02b4ce
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e10c5281222e7c53410502867faa16d567d0bf4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946104"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133659"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce ve Authenticode
-*Authenticode* , uygulama kodunu uygulama yayımcısının orijinalliğini doğrulayan dijital sertifikalarla imzalamak için sektör standardı şifrelemeyi kullanan bir Microsoft teknolojisidir. Uygulama dağıtımı için Authenticode kullanarak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir Truva atı riskini azaltır. Truva atı, kötü amaçlı üçüncü tarafın oluşturulmuş, güvenilir bir kaynaktan gelen yasal bir program olarak yanlış temsil ettiği bir virüs veya diğer zararlı programdır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dijital sertifikayla imzalama dağıtımları, derlemelerin ve dosyaların değiştirilmediğini doğrulamak için isteğe bağlı bir adımdır.
+*Authenticode,* uygulama kodunu uygulama yayımcılarının orijinalliğini doğru kullanan dijital sertifikalarla imzalamak için endüstri standardı şifreleme kullanan bir Microsoft teknolojisidir. Uygulama dağıtımı için Authenticode'ı kullanarak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Truva atı riskini azaltır. Truva atı, kötü amaçlı bir üçüncü taraf tarafından kurulan ve güvenilir bir kaynaktan gelen meşru bir program olarak yanlış beyanda bulunduran bir virüs veya diğer zararlı programdır. Dağıtımları dijital sertifikayla imzalamak, derlemelerin ve dosyaların kurcalanmadığını doğrulamak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] için isteğe bağlı bir adımdır.
 
- Aşağıdaki bölümler, Authenticode 'da kullanılan farklı dijital sertifika türlerini, sertifika yetkilileri (CA 'Lar) kullanarak sertifikaların nasıl doğrulanacağını, sertifikalarda zaman damgalaması rolünü ve sertifikalar için kullanılabilen depolama yöntemlerini açıklamaktadır.
+ Aşağıdaki bölümlerde Authenticode'da kullanılan farklı dijital sertifika türleri, sertifikaların Sertifika Yetkilileri (CA) kullanılarak nasıl doğrulanması, sertifikalarda zaman damgasının rolü ve sertifikalar için kullanılabilir depolama yöntemleri açıklanmaktadır.
 
-## <a name="authenticode-and-code-signing"></a>Authenticode ve kod imzalama
- *Dijital sertifika* , şifreli ortak/özel anahtar çifti içeren bir dosyadır ve sertifikanın verildiği yayımcıyı ve sertifikayı veren Kurumu tanımlayan meta verileri içerir.
+## <a name="authenticode-and-code-signing"></a>Kimlik doğrulama ve kod imzalama
+ Dijital *sertifika,* bir şifreleme ortak/özel anahtar çifti içeren bir dosyanın yanı sıra sertifikanın yayımını yaptığı yayımcıyı ve sertifikayı yayımya alan kuruluşu açıklayan meta verilerdir.
 
- Çeşitli Authenticode sertifikası türleri vardır. Her biri farklı imzalama türleri için yapılandırılır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulamalar için, kod imzalama için geçerli olan bir Authenticode sertifikasına sahip olmanız gerekir. Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı dijital e-posta sertifikası gibi başka bir sertifika türüyle imzalamayı denerseniz, bu işlem çalışmaz. Daha fazla bilgi için bkz. [kod Imzalamaya giriş](/windows/desktop/seccrypto/cryptography-tools).
+ Çeşitli Authenticode sertifikası türleri vardır. Her biri farklı imzalama türleri için yapılandırılır. Uygulamalar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] için, kod imzalama için geçerli bir Authenticode sertifikanız olmalıdır. Bir uygulamayı dijital e-posta sertifikası gibi başka bir sertifika türüyle imzalamaya [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] çalışırsanız uygulama çalışmayacaktır. Daha fazla bilgi için [bkz. Kod imzalamaya giriş.](/windows/desktop/seccrypto/cryptography-tools)
 
- Kod imzalama için üç şekilde bir sertifika edinebilirsiniz:
+ Kod imzalama için üç farklı şekilde sertifika edinebilirsiniz:
 
-- Bir sertifika satıcısından bir tane satın alın.
+- Sertifika satıcısından bir tane satın alın.
 
-- Kuruluşunuzda dijital sertifikalar oluşturmaktan sorumlu bir gruptan bir tane alın.
+- Dijital sertifika oluşturmaktan sorumlu kuruluşta bir gruptan bir tane alırsınız.
 
-- New-SelfSignedCertificate PowerShell cmdlet 'ini kullanarak veya ile birlikte bulunan *MakeCert.exe* kullanarak kendi sertifikanızı oluşturun [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] .
+- New-SelfSignedCertificate PowerShell cmdlet'ini kullanarak veya ile birlikte *MakeCert.exe* kullanarak kendi sertifikanızı [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] oluşturma.
 
-### <a name="how-using-certificate-authorities-helps-users"></a>Sertifika yetkililerini kullanma, kullanıcılara yardımcı olur
- New-SelfSignedCertificate veya *MakeCert.exe* yardımcı programı kullanılarak oluşturulan bir sertifika, genellikle *kendi kendine sertifika* veya *test sertifikası* olarak adlandırılır. Bu tür bir sertifika, bir *. snk* dosyası .NET Framework çalıştığı şekilde oldukça geçerlidir. Yalnızca ortak/özel bir şifreleme anahtarı çiftinin oluşur ve yayımcı hakkında doğrulanabilir bilgiler içermez. Self-cert kullanarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir intranette yüksek güvenle uygulama dağıtabilirsiniz. Ancak, bu uygulamalar bir istemci bilgisayarında çalıştırıldığında, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bunları bilinmeyen bir yayımcıdan geldiği şekilde tanımlayacaktır. Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] self-cert ile imzalanmış ve Internet üzerinden dağıtılan uygulamalar, güvenilir uygulama dağıtımını kullanamaz.
+### <a name="how-using-certificate-authorities-helps-users"></a>Sertifika yetkililerini kullanmanın kullanıcılara nasıl yardımcı olduğu
+ New-SelfSignedCertificate veyaMakeCert.exekullanılarak oluşturulan sertifika  genellikle kendi kendine sertifika veya  test sertifikası olarak *da adlandırılan bir sertifikadır.* Bu tür bir sertifika, bir *.snk* dosyasının dosya dosyasındaki çalışma .NET Framework. Yalnızca ortak/özel bir şifreleme anahtarı çifti içerir ve yayımcı hakkında doğrulanabilir bilgi içerir. İntranet üzerinde yüksek güvene sahip uygulamalar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtmak için kendi kendine sertifikalar kullanabilirsiniz. Ancak, bu uygulamalar bir istemci bilgisayarda çalıştır olduğunda, bilinmeyen bir bilgisayardan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] geliyor Publisher. Varsayılan olarak, kendi kendine sertifikalarla imzalanan ve İnternet üzerinden dağıtılan uygulamalar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Güvenilen Uygulama Dağıtımı'nın kullanılamayacak.
 
- Buna karşılık, sertifika satıcısı veya kuruluşunuzdaki bir departman gibi bir CA 'dan sertifika alırsanız, sertifika kullanıcılarınız için daha fazla güvenlik sağlar. Yalnızca imzalı yazılımın yayımcısını tanımlamaz, ancak onu imzalayan CA ile kontrol ederek kimliği doğrular. CA kök yetkili değilse, CA 'nın sertifika verme yetkisine sahip olduğunu doğrulamak için, Authenticode da kök yetkiliye geri gönderilir. Daha fazla güvenlik için, mümkün olduğunda CA tarafından verilen bir sertifika kullanmanız gerekir.
+ Buna karşılık, sertifika satıcısı gibi bir CA'dan veya kuruluş içindeki bir departmandan sertifika alırsanız, sertifika kullanıcılarınız için daha fazla güvenlik sunar. İmzalı yazılımın yayımcılarını tanımlamanın yanında, onu imzalayan CA'ya bakarak bu kimliği doğrular. CA kök yetkilisi yoksa Authenticode, CA'nın sertifikalar sağlamak için yetkili olduğunu doğrulamak için kök yetkiliye "zincirle" döner. Daha fazla güvenlik için, mümkün olduğunda bir CA tarafından verilen bir sertifika kullanılmalıdır.
 
- Self-cert oluşturma hakkında daha fazla bilgi için, bkz. [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) veya [MakeCert](/windows/desktop/SecCrypto/makecert).
+ Kendi kendine sertifika oluşturma hakkında daha fazla bilgi için bkz. [New-SelfSignedCertificate veya](/powershell/module/pkiclient/new-selfsignedcertificate) [MakeCert](/windows/desktop/SecCrypto/makecert).
 
 ### <a name="timestamps"></a>Zaman damgaları
- Uygulamaları imzalamak için kullanılan sertifikalar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , genellikle on iki ay boyunca belirli bir süre sonra sona erer. Uygulamaları yeni sertifikalarla sürekli olarak yeniden imzalama gereksinimini ortadan kaldırmak için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zaman damgasını destekler. Bir uygulama bir zaman damgasıyla imzalanmışsa, zaman damgası geçerli olduğundan, sertifikanın süresi dolduktan sonra bile kabul edilmesine devam edilir. Bu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , zaman aşımına uğradı, ancak geçerli zaman damgalarına sahip uygulamaların indirilip çalıştırılmasını sağlar. Ayrıca, güncelleştirmeleri indirmeye ve yüklemeye devam etmek için, süre dolma sertifikaları olan yüklü uygulamalara da izin verir.
+ Uygulamaları imzalamak için kullanılan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] sertifikaların süresi, genellikle on iki ay gibi belirli bir sürenin ardından dolar. Uygulamaları yeni sertifikalarla sürekli yeniden imzalama ihtiyacı ortadan kaldırmak için zaman [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] damgasını destekler. Bir uygulama bir zaman damgasıyla imzalanıyorsa, zaman damgası geçerli olması şartıyla, süresi dolsa bile sertifikası kabul edilmeye devam eder. Bu, süresi dolmuş sertifikalara ancak geçerli zaman damgasına sahip uygulamaların indirme [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ve çalıştırmasını sağlar. Ayrıca, süresi dolmuş sertifikalara sahip yüklü uygulamaların güncelleştirmeleri indirmeye ve yüklemeye devam eder.
 
- Bir uygulama sunucusuna bir zaman damgası eklemek için, kullanılabilir bir zaman damgası sunucusu olmalıdır. Zaman damgası sunucusu seçme hakkında daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini imzalama](../ide/how-to-sign-application-and-deployment-manifests.md).
+ Uygulama sunucusuna bir zaman damgası eklemek için zaman damgası sunucusunun kullanılabilir olması gerekir. Bir zaman damgası sunucusunu seçme hakkında bilgi için bkz. [Nasıl kullanılır: Uygulama ve Dağıtım Bildirimlerini İmzala.](../ide/how-to-sign-application-and-deployment-manifests.md)
 
-### <a name="update-expired-certificates"></a>Süre dolma sertifikalarını Güncelleştir
- .NET Framework önceki sürümlerinde, sertifikasının geçerliliği aşıldığı bir uygulamanın güncelleştirilmesi uygulamanın çalışmayı durdurmasına neden olabilir. Bu sorunu çözmek için aşağıdaki yöntemlerden birini kullanın:
+### <a name="update-expired-certificates"></a>Süresi dolan sertifikaları güncelleştirme
+ Uygulamanın önceki sürümlerinde.NET Framework süresi dolmuş bir uygulamanın güncelleştirilerek uygulamanın çalışmasının durdurmasına neden olabilir. Bu sorunu çözmek için aşağıdaki yöntemlerden birini kullanın:
 
-- Windows Vista 'da Windows XP veya sürüm 3,5 veya sonraki sürümlerde .NET Framework sürüm 2,0 SP1 veya sonraki bir sürüme güncelleştirin.
+- .NET Framework XP'de 2.0 SP1 veya sonraki bir sürüme veya Vista'da Windows 3.5 veya sonraki bir Windows güncelleştirin.
 
-- Uygulamayı kaldırın ve geçerli bir sertifikayla yeni bir sürümü yeniden yükleyin.
+- Uygulamayı kaldırın ve geçerli bir sertifika ile yeni bir sürümü yeniden yükleyin.
 
-### <a name="store-certificates"></a>Sertifikaları depola
+### <a name="store-certificates"></a>Sertifikaları depolama
 
-- Sertifikaları dosya sisteminizde bir *. pfx* dosyası olarak saklayabilir veya bunları bir anahtar kapsayıcısının içine kaydedebilirsiniz. Windows etki alanındaki bir kullanıcının birçok anahtar kapsayıcısı olabilir. *MakeCert.exe* , varsayılan olarak, bunun yerine bir *. pfx* ' e kaydedilmesini belirtmediğiniz müddetçe, sertifikaları Kişisel anahtar kapsayıcıınızda depolayacaktır. *Mage.exe* ve *MageUI.exe*, [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] dağıtım oluşturmaya yönelik araçlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , her iki şekilde depolanan sertifikaları kullanmanıza olanak sağlar.
+- Sertifikaları dosya sisteminize *bir .pfx* dosyası olarak depolar veya bunları bir anahtar kapsayıcının içinde depolar. Etki alanındaki Windows çok sayıda anahtar kapsayıcısı olabilir. Varsayılan *olarak,MakeCert.exe* kişisel anahtar kapsayıcınıza kaydetmesi gerektiğini belirtmedikçe sertifikalar kişisel anahtar kapsayıcınıza *depolar.* *Mage.exe* *veMageUI.exe,* dağıtım oluşturmaya yardımcı olan araçları kullanarak her iki [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] şekilde de depolanan sertifikaları [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)

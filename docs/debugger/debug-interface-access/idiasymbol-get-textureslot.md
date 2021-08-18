@@ -1,6 +1,6 @@
 ---
-description: Doku yuvasını alır.
-title: 'IDiaSymbol:: get_textureSlot | Microsoft Docs'
+description: Doku yuvasını alan.
+title: IDiaSymbol::get_textureSlot | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: da57c81881da82c03bfef6ea34369ff9848405772bea0baa486e4ee08e204de3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3aa44ec0b698c13e7e164649a389e647c9395e57
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362932"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031141"
 ---
 # <a name="idiasymbolget_textureslot"></a>IDiaSymbol::get_textureSlot
-Doku yuvasını alır.
+Doku yuvasını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_textureSlot(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `DWORD` Doku yuvasını tutan bir işaretçisi.
+[out] Doku yuvayı `DWORD` tutan bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

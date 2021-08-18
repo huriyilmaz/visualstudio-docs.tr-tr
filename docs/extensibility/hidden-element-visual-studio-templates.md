@@ -1,5 +1,5 @@
 ---
-title: Hidden öğesi (Visual Studio şablonları) | Microsoft Docs
+title: gizli öğe (Visual Studio şablonları) | Microsoft Docs
 description: Gizli öğe ve şablonun yeni proje veya yeni öğe Ekle iletişim kutularında görüntülenip görüntülenmeyeceğini nasıl belirttiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 04/17/2019
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4f673e7efe7f118f32056f02ef51bbbe7cf402a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 99923825e2faaba211921eefc45096e65c5ee1908f5a5c07032c1522d683906e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057399"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448318"
 ---
 # <a name="hidden-element-visual-studio-templates"></a>Hidden öğesi (Visual Studio şablonları)
 
@@ -55,13 +55,13 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
 
 Bir metin değeri gereklidir.
 
-Metnin `true` veya yeni `false` **Proje** veya **Yeni öğe Ekle** iletişim kutularında görüntülenip görüntülenmeyeceğini belirten metin olmalıdır.
+metnin `true` veya yeni `false` **Project** veya **yeni öğe ekle** iletişim kutularında görüntülenip görüntülenmeyeceğini belirten metin ya da olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
 

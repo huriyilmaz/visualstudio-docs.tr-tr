@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ff6f19139d8874d252bcaa540062c0d230ed2d10221bb5371c2180b23edfe75
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e65f2af8cd4c16f4daff629ef9dbcbaaaf1752f4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387245"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041093"
 ---
 # <a name="output-window"></a>Çıktı penceresi
 

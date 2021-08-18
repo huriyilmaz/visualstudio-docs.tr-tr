@@ -1,6 +1,6 @@
 ---
-title: Proje fabrikalarını kullanarak proje örnekleri oluşturma | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamında (IDE) proje fabrikaları kullanarak proje sınıfı örnekleri oluşturmayı öğrenin.
+title: Project fabrikaları kullanarak Project örnekleri oluşturma | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamında (ıde) proje fabrikaları kullanarak proje sınıfı örnekleri oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,17 +11,18 @@ ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 40b7c3fbe5b5b7fd59fe0e57376290181f3e9a20
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1fc9fa9d4f10c59d4e17f2314cdbed80da26c3b5e24b115fb755c1fce9645b24
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056811"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121448201"
 ---
 # <a name="create-project-instances-by-using-project-factories"></a>Proje fabrikalarını kullanarak proje örnekleri oluşturma
-İçindeki proje türleri proje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesneleri örnekleri oluşturmak için bir *proje fabrikası* kullanır. Proje fabrikası, cocreatable COM nesneleri için standart sınıf fabrikasına benzer. Ancak, proje nesneleri cocreatable değildir; Bunlar yalnızca bir proje fabrikası kullanılarak oluşturulabilirler.
+içindeki Project türler proje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nesneleri örnekleri oluşturmak için bir *proje fabrikası* kullanır. Proje fabrikası, cocreatable COM nesneleri için standart sınıf fabrikasına benzer. Ancak, proje nesneleri cocreatable değildir; Bunlar yalnızca bir proje fabrikası kullanılarak oluşturulabilirler.
 
  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE, bir kullanıcı var olan bir projeyi yüklediğinde veya içinde yeni bir proje oluşturduğunda VSPackage uygulamanızda uygulanan proje fabrikasını çağırır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Yeni proje nesnesi, IDE 'yi **Çözüm Gezgini** doldurmak için yeterli bilgi sağlar. Yeni proje nesnesi, IDE tarafından başlatılan ilgili tüm Kullanıcı Arabirimi eylemlerini desteklemek için gereken arabirimleri de sağlar.
 
@@ -36,9 +37,9 @@ ms.locfileid: "105056811"
 
 2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsOwnedProjectFactory.InitializeForOwner%2A>Yöntemini çağırarak. Sahip olunan proje, `IVsProjectFactory::CreateProject` sahip olmayan projeler için durum olduğu gibi çağırmak yerine bu yöntem çağrıldığında tüm örneklemeyi yapar. Giriş `VSOWNEDPROJECTOBJECT` numaralandırması genellikle toplanmış olan projem. Sahip proje, proje nesnesinin zaten oluşturulup oluşturulmadığını (tanımlama bilgisi NULL değere eşit değil) veya oluşturulması gerektiğini (tanımlama bilgisi eşittir NULL) belirleyebilmek için bu değişkeni kullanabilir.
 
-   Proje türleri, cocreatable COM nesnesinin CLSID 'sine benzer şekilde benzersiz bir proje GUID 'SI tarafından tanımlanır. Genellikle, bir proje fabrikası tek bir proje türünün örneklerini oluşturmayı işler, ancak bir proje fabrikası birden fazla proje türü GUID 'SI tutamamak mümkündür.
+   Project türler, cocreatable COM nesnesinin clsıd 'sine benzer şekilde benzersiz bir proje guıd 'si tarafından tanımlanır. Genellikle, bir proje fabrikası tek bir proje türünün örneklerini oluşturmayı işler, ancak bir proje fabrikası birden fazla proje türü GUID 'SI tutamamak mümkündür.
 
-   Proje türleri belirli bir dosya adı uzantısıyla ilişkilendirilir. Bir kullanıcı var olan bir proje dosyasını açmaya çalıştığında veya bir şablonu kopyalayarak yeni bir proje oluşturmaya çalışırsa, IDE ilgili proje GUID 'sini belirlemede dosyadaki uzantıyı kullanır.
+   Project türler, belirli bir dosya adı uzantısıyla ilişkilendirilir. Bir kullanıcı var olan bir proje dosyasını açmaya çalıştığında veya bir şablonu kopyalayarak yeni bir proje oluşturmaya çalışırsa, IDE ilgili proje GUID 'sini belirlemede dosyadaki uzantıyı kullanır.
 
    IDE, yeni bir proje oluşturmak mı yoksa belirli bir türdeki mevcut bir projeyi açmak mı gerektiğini belirlediğinde, IDE, gerekli proje fabrikasını uygulayan VSPackage 'ı bulmak için **[HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0\Projects]** altındaki sistem kayıt defterindeki bilgileri kullanır. IDE bu VSPackage 'ı yükler. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>Yönteminde, VSPackage, yöntemini çağırarak, onun proje fabrikasını IDE ile kaydetmesi gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterProjectTypes.RegisterProjectType%2A> .
 

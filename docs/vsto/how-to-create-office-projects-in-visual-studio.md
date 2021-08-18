@@ -1,6 +1,6 @@
 ---
-title: "Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma"
-description: Visual Studio 'Yu kullanarak Microsoft Office uygulamalar için VSTO eklentisi ve belge düzeyi özelleştirmeleri oluşturma hakkında bilgi edinin.
+title: 'nasıl yapılır: Visual Studio Office projeler oluşturma'
+description: Microsoft Office uygulamaları için VSTO eklenti ve belge düzeyi özelleştirmeleri oluşturmak üzere Visual Studio nasıl kullanabileceğinizi öğrenin.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
@@ -22,17 +22,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 1d0bd242f3a57031442cb0b39e62a28c01ad1a6b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 126f4c88dd13ff9204ce2e29c2a95cf14df5d473
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962398"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046925"
 ---
-# <a name="how-to-create-office-projects-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Microsoft Office uygulamalar IÇIN VSTO eklentisi ve belge düzeyi özelleştirmeler oluşturmak için kullanabilirsiniz. Bu proje türleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+# <a name="how-to-create-office-projects-in-visual-studio"></a>nasıl yapılır: Visual Studio Office projeler oluşturma
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Microsoft Office uygulamalar için VSTO eklentisi ve belge düzeyi özelleştirmeler oluşturmak için kullanabilirsiniz. bu proje türleri hakkında daha fazla bilgi için, bkz. [Office çözüm geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -40,21 +41,21 @@ ms.locfileid: "99962398"
 
 ### <a name="to-create-a-vsto-add-in-project"></a>VSTO eklentisi projesi oluşturmak için
 
-1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. Tümleşik geliştirme ortamınız (IDE) geliştirme ayarlarını kullanmak üzere ayarlandıysa [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] , **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. **dosya** menüsünde **yeni**  >  **Project**' yi seçin. tümleşik geliştirme ortamınız (ıde) geliştirme ayarlarını kullanacak şekilde ayarlandıysa [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] , **dosya** menüsünde **yeni**  >  **Project**' yi seçin.
 
     **Yeni Proje** iletişim kutusu görünür.
 
    > [!NOTE]
-   > Office projeleri varsayılan olarak ' i hedefleyin [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] . Daha fazla bilgi için bkz. [.NET Framework istemci profili](/dotnet/framework/deployment/client-profile).
+   > Office projeleri [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] varsayılan olarak hedefleyin. daha fazla bilgi için bkz. [.NET Framework istemci profili](/dotnet/framework/deployment/client-profile).
 
-2. Şablonlar bölmesinde, kullanmak istediğiniz dilin düğümü altında **Office/SharePoint**' i genişletin.
+2. şablonlar bölmesinde, kullanmak istediğiniz dilin düğümü altında **Office/SharePoint**' ı genişletin.
 
 3. **Office eklentileri** düğümünü seçin.
 
-4. Proje şablonları listesinde, bir VSTO eklentisi proje şablonu seçin. Kullanılabilir VSTO eklentisi proje şablonlarının listesi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
+4. proje şablonları listesinde bir VSTO eklentisi proje şablonu seçin. kullanılabilir VSTO eklentisi proje şablonlarının listesi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
 
    > [!NOTE]
-   > **Office eklentileri** düğümünü seçerken proje şablonları görünür değilse, iletişim kutusunun üst kısmındaki Birleşik giriş kutusunda **.NET Framework 4** veya sonraki bir sürümünün seçildiğinden emin olun. Office proje şablonları .NET Framework her iki sürümü için görülebilir.
+   > **Office eklentileri** düğümünü seçerken proje şablonları görünür değilse, iletişim kutusunun en üstündeki açılan kutuda **.NET Framework 4** veya sonraki bir sürümünün seçildiğinden emin olun. Office proje şablonları .NET Framework her iki sürümü için görülebilir.
 
 5. **Ad** kutusuna proje için bir ad yazın. Varsayılan olarak, proje adı çözüm adı olarak da kullanılır.
 
@@ -95,15 +96,15 @@ ms.locfileid: "99962398"
 
 ### <a name="to-create-a-document-level-customization-project"></a>Belge düzeyi özelleştirme projesi oluşturmak için
 
-1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin. IDE 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
+1. **dosya** menüsünde **yeni**  >  **Project**' yi seçin. ıde 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa, **dosya** menüsünde **yeni**  >  **Project**' yi seçin.
 
     **Yeni Proje** iletişim kutusu görünür.
 
-2. Şablonlar bölmesinde, kullanmak istediğiniz dilin düğümü altında **Office/SharePoint**' i genişletin.
+2. şablonlar bölmesinde, kullanmak istediğiniz dilin düğümü altında **Office/SharePoint**' ı genişletin.
 
 3. **Office eklentileri** düğümünü seçin.
 
-4. Proje şablonları listesinde bir belge düzeyi proje şablonu seçin. Kullanılabilir belge düzeyi proje şablonlarının bir listesi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
+4. Proje şablonları listesinde bir belge düzeyi proje şablonu seçin. kullanılabilir belge düzeyi proje şablonlarının listesi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
 
    > [!NOTE]
    > **Office eklentileri** düğümünü seçerken proje şablonları görünür değilse, **.NET Framework 4** veya sonraki bir sürümünün seçildiğinden emin olun.
@@ -115,7 +116,7 @@ ms.locfileid: "99962398"
 
 6. **Tamam** düğmesini seçin.
 
-    **Office proje sihirbazı Visual Studio Araçları** açılır.
+    **Office için Visual Studio Araçları Project sihirbazı** açılır.
 
 7. Çözüm için yeni bir belge oluşturmak istiyorsanız **Yeni belge oluştur** ' u seçin veya var olan bir belgeyi özelleştirmek istiyorsanız **mevcut bir belgeyi Kopyala** ' yı seçin.
 
@@ -154,14 +155,14 @@ ms.locfileid: "99962398"
 
 9. Proje klasörünü ve alt klasörlerini aşağıdaki durumlarda Word içindeki güven merkezinde güvenilir konumlar listesine ekleyin:
 
-   - *. Docm* dosyasını temel alan bir Word belgesi oluşturuyorsunuz ve belge, bir VBA projesi veya Windows Forms denetimleri barındırır. Proje klasörünü güvenilen konumlar listesine eklemek, belgenin tasarım zamanında beklendiği gibi çalıştığından emin olmanıza yardımcı olur.
+   - *. docm* dosyasını temel alan bir Word belgesi oluşturuyorsunuz ve belge, bir VBA projesi veya Windows Forms denetimleri barındırır. Proje klasörünü güvenilen konumlar listesine eklemek, belgenin tasarım zamanında beklendiği gibi çalıştığından emin olmanıza yardımcı olur.
 
    - *. Dotx* dosyasını temel alan bir Word şablonu projesi oluşturuyorsunuz. Projeyi çalıştırıp hatalarını ayıklayabilmeniz için, proje klasörünü güvenilir konumlar listesine eklemeniz gerekir.
 
-     Güvenilen konumlara bir belge ekleme hakkında daha fazla bilgi için bkz. çevrimiçi Web sitesi Microsoft Office [dosyalarınız için güvenilir bir konum oluşturma, kaldırma veya değiştirme](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
+     güvenilen konumlara bir belge ekleme hakkında daha fazla bilgi için bkz. çevrimiçi web sitesi Microsoft Office [dosyalarınız için güvenilir bir konum oluşturma, kaldırma veya değiştirme](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md)
-- [Office çözümlerinin işbirlikçi geliştirmesi](../vsto/collaborative-development-of-office-solutions.md)
+- [Office çözümlerin işbirliğine dayalı geliştirmesi](../vsto/collaborative-development-of-office-solutions.md)
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
-- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
+- [VSTO eklentileriyle çalışmaya başlama](../vsto/getting-started-programming-vsto-add-ins.md)

@@ -10,14 +10,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 455e617188a58090f3bd6229ab008847912b1f19
-ms.sourcegitcommit: 30c404655fb83ea28f96ab1edb1c09b4d8d7eec4
+ms.openlocfilehash: 2bccd0087c22072efd016fe43646cceb75cf8a18
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "108217252"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044249"
 ---
 # <a name="idiasymbolget_framepadoffset"></a>IDiaSymbol:: get_framePadOffset
 
@@ -46,7 +47,7 @@ dışı Yığın panelinin sapmasını döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yöntem, Visual Studio 2019 sürüm 16,10 Preview 2 ' den itibaren desteklenir.
+bu yöntem, Visual Studio 2019 sürüm 16,10 Preview 2 ' den itibaren desteklenir.
 
 ## <a name="requirements"></a>Gereksinimler
 
