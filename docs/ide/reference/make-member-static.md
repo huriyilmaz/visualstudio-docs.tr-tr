@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9456c81ff93eed6872bafbc7427e862a705c17072bcb3ae5a7e32c97d1685805
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 215004e6de9cad6988707c5584ba1ff33663396d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387347"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151320"
 ---
 # <a name="make-member-static"></a>Üyeyi statik yapma
 

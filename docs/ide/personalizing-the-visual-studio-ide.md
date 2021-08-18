@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 63da203761218063d1e500bfa180614999ad1eb7dd48597661feacfc46ec15cd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 58c1e114e8562e678adf3ab93aa548d1951c014e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412770"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041327"
 ---
 # <a name="personalize-the-visual-studio-ide"></a>IDE'Visual Studio kişiselleştirme
 

@@ -13,15 +13,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 5033580f253a5eb42cbc64656e8c4661a2e246c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1f51f1b5540eb3272998583a4ff7d86ce9c8e3d907f0ecabb73eff884575a84
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72912860"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122058301"
 ---
-Visual Studio bilgisayarında oluşturduğunuz simgelerle kodunuzda hata ayıklaması yapabiliyor olmanız gerekir. Yerel sembolleri kullandığınızda uzaktan hata ayıklayıcının performansı çok daha iyidir.  Uzak sembolleri kullanmanız gerekiyorsa, uzak makinede sembolleri aramak için uzaktan hata ayıklama izleyicisine söylemeniz gerekir.  
+Kodun hata ayıklaması, kod bilgisayarda oluşturulan sembollerle Visual Studio gerekir. Yerel semboller kullanıyorken uzak hata ayıklayıcının performansı çok daha iyidir.  Uzak semboller kullanmak zorundaysanız, uzaktan hata ayıklama izleyiciye uzak makinede sembollere bakmasını söylemeniz gerekir.  
 
-Visual Studio 2013 güncelleştirme 2 ' den başlayarak, yönetilen kod için uzak sembolleri kullanmak üzere aşağıdaki msvsmon komut satırı anahtarını kullanabilirsiniz: `Msvsmon /FallbackLoadRemoteManagedPdbs`  
+Güncelleştirme 2 Visual Studio 2013 den başlayarak, yönetilen kod için uzak sembolleri kullanmak üzere aşağıdaki msvsmon komut satırı anahtarını kullanabilirsiniz:`Msvsmon /FallbackLoadRemoteManagedPdbs`  
 
-Daha fazla bilgi için lütfen uzaktan hata ayıklama yardımına bakın (uzaktan hata ayıklayıcı penceresinde **F1** 'e basın veya **Yardım > kullanımı**' na tıklayın). [Visual Studio 2012 ve 2013 ' de daha fazla bilgi için .NET uzak sembol yükleme değişikliklerini](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/) bulabilirsiniz
+Daha fazla bilgi için lütfen uzaktan hata ayıklama yardımı 'ne bakın (uzaktan hata ayıklayıcı penceresinde **F1** tuşuna basın veya Kullanım için **Yardım'> tıklayın).** [2012 ve 2013'te .NET Uzak Sembol Yükleme Visual Studio daha fazla bilgi bulabilirsiniz](https://devblogs.microsoft.com/devops/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013/)

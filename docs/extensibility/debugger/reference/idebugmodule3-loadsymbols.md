@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2b332182574f9801f1a1ef6eb139d46958851d725191bc1355f800c8161b1183
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5ca735fe22c1bcb8aca5ae4150df7d4606c508e5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307303"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043290"
 ---
 # <a name="idebugmodule3loadsymbols"></a>IDebugModule3::LoadSymbols
 Geçerli modülün sembollerini yükler.

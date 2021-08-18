@@ -11,14 +11,15 @@ ms.assetid: c1e7885d-2d15-4529-9ac2-32dd22efe31c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 254ab98e8b1f1ec88fc946221bb2e15e2af76ffd
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0be4ee10e4f343b36b16e5406c9f6d23d16d816d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161161"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074543"
 ---
 # <a name="idiasymbolfindchildrenexbyaddr"></a>IDiaSymbol::findChildrenExByAddr
 Simgenin belirli bir adreste geçerli olan alt öğelerini alır.

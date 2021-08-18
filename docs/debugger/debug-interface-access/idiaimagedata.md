@@ -1,5 +1,5 @@
 ---
-description: Modülün veya görüntünün temel konumunun ve bellek uzaklarının ayrıntılarını gösterir.
+description: Modül veya görüntünün temel konumu ve bellek uzaklıklarının ayrıntılarını açığa çıkarır.
 title: IDiaImageData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d2a74f6cc8ffa1c79938ab061d59ed2273a3a9220864632a0e37f1d482e8e13
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: da217ac40830700bf48968a9ed29821f88f190ec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455018"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074823"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
-Modülün veya görüntünün temel konumunun ve bellek uzaklarının ayrıntılarını gösterir.
+Modül veya görüntünün temel konumu ve bellek uzaklıklarının ayrıntılarını açığa çıkarır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,23 +30,23 @@ Modülün veya görüntünün temel konumunun ve bellek uzaklarının ayrıntıl
 IDiaImageData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaImageData` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaImageData` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Modülün sanal belleğindeki konumunu uygulamaya göre alır.|
-|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Görüntünün sanal belleğindeki konumunu alır.|
-|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Görüntünün dayanmanız gereken bellek konumunu alır.|
+|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|Uygulamayla ilgili modülün sanal belleğinde konumu alan.|
+|[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|Görüntünün sanal belleğinde konumu alan.|
+|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Görüntünün temel alınarak bellek konumunu alınır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bazı hata ayıklama akışları (XDATA, PDATA) de görüntüde depolanan verilerin kopyalarını içerir. Bu akış veri nesneleri arabirim için sorgulanabilir `IDiaImageData` . Ayrıntılar için bu konudaki "çağıranlar için Notlar" bölümüne bakın.
+Bazı hata ayıklama akışları (XDATA, PDATA) görüntüde de depolanan verilerin kopyalarını içerir. Bu akış veri nesneleri arabirimi için sorgu `IDiaImageData` olabilir. Ayrıntılar için bu konudaki "Arayanlar için Notlar" bölümüne bakın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-`QueryInterface`Bir [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesini çağırarak bu arabirimi edinin. Tüm hata ayıklama akışlarının arabirimi desteklemediğini unutmayın `IDiaImageData` . Örneğin, şu anda yalnızca XDATA ve PDATA akışları `IDiaImageData` arabirimi destekler.
+`QueryInterface` [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesini çağırarak bu arabirimi alın. Tüm hata ayıklama akışlarını arabirimi `IDiaImageData` desteklemez. Örneğin, şu anda arabirimi yalnızca XDATA ve PDATA akışları `IDiaImageData` destekler.
 
 ## <a name="example"></a>Örnek
-Bu örnekte, arabirimi destekleyen tüm akışlar için hata ayıklama akışlarının hepsi aranır `IDiaImageData` . Böyle bir akış bulunursa, bu akış hakkında bazı bilgiler görüntülenir.
+Bu örnek, arabirimini destekleyen tüm akışlar için tüm hata ayıklama akışlarını `IDiaImageData` arar. Böyle bir akış bulunursa, bu akışla ilgili bazı bilgiler görüntülenir.
 
 ```C++
 void ShowImageData(IDiaSession *pSession)
@@ -113,9 +113,9 @@ void ShowImageData(IDiaSession *pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

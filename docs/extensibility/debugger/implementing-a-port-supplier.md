@@ -14,17 +14,17 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54960d2728fdf617db6c5e3d22f331a7e84c18fba9cf6d94e5140dab45e2916c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 383579e3d34213e4e5d5a4db6b4eeb8e554cb796
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121361138"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043537"
 ---
 # <a name="implement-a-port-supplier"></a>Bağlantı noktası sağlayıcı uygulama
-Bağlantı noktası sağlayıcı, oturum hata ayıklama yöneticisine (SDM) istek üzerine bağlantı noktaları sağlar. DCOM olmayan bir makinede hata ayıklarken veya yeni bir cihaz destek gerektirdiği zaman bir bağlantı noktası sağlayıcı uygulanıyor olması gerekir. Örneğin, bir cep telefonunda hata ayıklama sağlamak için, cep telefonuna (IR veya hücre bağlantısı üzerinden) bağlanan ve telefonda çalışan işlemleri ve programları numaralandıran bağlantı noktaları sağlayan bir bağlantı noktası tedarikçisi kurabilirsiniz.
+Bağlantı noktası sağlayıcı, oturum hata ayıklama yöneticisine (SDM) istek üzerine bağlantı noktaları sağlar. DCOM olmayan bir makinede hata ayıklarken veya yeni bir cihaz destek gerektirdiği zaman bir bağlantı noktası sağlayıcı uygulanıyor olması gerekir. Örneğin, bir cep telefonunda hata ayıklama sağlamak için, cep telefonuna (IR veya hücre bağlantısı üzerinden) bağlanan ve telefonda çalışan işlemleri ve programları numaralandıran bağlantı noktaları sağlayan bir bağlantı noktası sağlayıcı kurabilirsiniz.
 
- Windows tabanlı makinelerde (uzaktan hata ayıklama dahil) programlarda hata ayıklamak için Visual Studio yerel ve Ortak Dil Çalışma Zamanı (CLR) işlemleri için bağlantı noktası sağlayıcıları sağlar, bu nedenle bu durumlarda kendi bağlantı noktası tedarikçinizi ayarlamaya gerek yoktur.
+ Visual Studio, Windows tabanlı makinelerde (uzaktan hata ayıklama dahil) programlarda hata ayıklamak için yerel ve Ortak Dil Çalışma Zamanı (CLR) işlemleri için bağlantı noktası sağlayıcıları sağlar, bu nedenle bu durumlarda kendi bağlantı noktası tedarikçinizi ayarlamaya gerek yoktur.
 
 ## <a name="in-this-section"></a>Bu bölümde
  [Bağlantı noktası sağlayıcı uygulama ve kaydetme](../../extensibility/debugger/implementing-and-registering-a-port-supplier.md) SDM'nin bağlantı noktası tedarikçi ve bağlantı noktalarıyla nasıl etkileşim kurarak etkileşime geçmeyi ele almaktadır.

@@ -7,16 +7,17 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1c335c90183e4c5c97b1a2737a2edd8a1b86fb77
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad19096bf01fa53463ec28939ef4ea7f5cdafb5d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918333"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151697"
 ---
 # <a name="convert-between-regular-string-and-verbatim-string-literals-refactoring"></a>Normal dize ve tam dize değişmez değerlerini yeniden düzenleme arasında Dönüştür
 

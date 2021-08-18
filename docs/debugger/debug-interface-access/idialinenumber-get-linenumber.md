@@ -1,6 +1,6 @@
 ---
-description: Kaynak dosyadaki satır numarasını alır.
-title: 'IDiaLineNumber:: get_lineNumber | Microsoft Docs'
+description: Kaynak dosyada satır numarasını alan.
+title: IDiaLineNumber::get_lineNumber | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 2dff3fd9-097d-4645-bc1b-cb65ecbc42a6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: db9a07b0fd636df9cd09c5bd22dceee9144678a6
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 01e4d087b810cb4d21b2881a57bd594f4804e6fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157569"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074807"
 ---
 # <a name="idialinenumberget_linenumber"></a>IDiaLineNumber::get_lineNumber
-Kaynak dosyadaki satır numarasını alır.
+Kaynak dosyada satır numarasını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +35,10 @@ HRESULT get_lineNumber (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Kaynak dosyadaki satır numarasını döndürür.
+[out] Kaynak dosyada satır numarasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

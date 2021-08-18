@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a965658192224485587c949244d1bc8622702090c6141c20c3aa422555bf7423
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e8d9577bb9dc04dd8d226303ff149f2a40fe37c8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404917"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074519"
 ---
 # <a name="idiasymbolfindinlineframesbyaddr"></a>IDiaSymbol::findInlineFramesByAddr
 Bir istemcinin belirli bir adresteki tüm satır içi çerçeveler üzerinde yineleme yapmasına izin veren bir sabit listesi alır.

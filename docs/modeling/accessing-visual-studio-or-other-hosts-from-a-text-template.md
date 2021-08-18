@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 355ffad6f00929fe3413af64fe94c8eab5427e7c1d33191586d66dc2cdd42403
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5a812279046bf1b2eb987719762098697ddd8eb1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386049"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055724"
 ---
 # <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>Metin Visual Studio veya diğer konaklara erişme
 

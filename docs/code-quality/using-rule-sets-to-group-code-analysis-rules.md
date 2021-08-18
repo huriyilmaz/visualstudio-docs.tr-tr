@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: b7bb97ec03ffbd596cf9f726ddb47ba2ca6f79501f15412dff0d60d2d83f68d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 856fd236959b8335ded1ff2007bc5a5d1dd29a90
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121436714"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122122078"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>Kod analizi kurallarını gruplandırmak için kural kümeleri kullanma
 

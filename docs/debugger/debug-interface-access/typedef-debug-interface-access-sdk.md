@@ -11,14 +11,15 @@ ms.assetid: 9ab441b9-cc72-47fa-83e2-87b3c2b891b4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ef070e5efa1b50bc71b6e5a541d05c3374a29ad
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9777111bf9b1474b783a62cf6e65a7a224e865ff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161573"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058661"
 ---
 # <a name="typedef-debug-interface-access-sdk"></a>Typedef (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Etiketleri olan semboller `SymTagTypedef` diğer türler için ad sağlar.

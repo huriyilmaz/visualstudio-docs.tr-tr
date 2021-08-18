@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 7791e43ecb93d5a894626ea2c27699939362c59b6b031dc93548812d338bdb0e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1a6f9be548b725aa664cd6223ee2eb9891c77fdc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408051"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122037752"
 ---
 # <a name="how-to-switch-between-views-and-the-xml-editor"></a>Nasıl yapılır: Görünümler ve XML düzenleyicisi arasında geçiş
 

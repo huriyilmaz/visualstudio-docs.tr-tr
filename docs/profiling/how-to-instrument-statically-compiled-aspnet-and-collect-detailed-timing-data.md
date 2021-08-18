@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: dbdd37622a4895e1ab1884663426a6ceec5eef95526b42556294ede289c141b4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 599609d47840fcea44be0819650a3981ca9c3788
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121426917"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033492"
 ---
 # <a name="how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line"></a>Nasıl kullanılır: Web uygulamasında statik olarak derlenmiş ASP.NET ve komut satırı kullanarak profil oluşturma ile ayrıntılı zamanlama verileri toplama
 Bu makalede, önceden Profil Oluşturma Araçları bir web bileşenini veya web sitesini takip etmek ve ayrıntılı zamanlama verileri toplamak için komut satırı araçlarının nasıl [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] kullanımı açıklanmıştır.
@@ -66,7 +66,7 @@ Bu makalede, önceden Profil Oluşturma Araçları bir web bileşenini veya web 
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Çalışan işleminin sahibi olan hesabın etki alanını ve kullanıcı ASP.NET belirtir. İşlem oturum açmış kullanıcıdan farklı bir kullanıcı olarak çalışıyorsa bu seçenek gereklidir. İşlem sahibi, Görev **Yöneticisi'nin** İşlemler **sekmesindeki** Kullanıcı Adı Windows listelenir. |
    | [/crosssession](../profiling/crosssession.md) | Diğer oturum açma oturumlarında işlemlerin profil oluşturmasını sağlar. Uygulama farklı bir oturumda ASP.NET bu seçenek gereklidir. Oturum tanımlayıcısı, Görev Yöneticisi'nin İşlemler **sekmesindeki** Oturum Kimliği Windows listelenir. **/CS,** **/crosssession için bir kısaltma olarak belirtilebilir.** |
-   | [/wincounter:](../profiling/wincounter.md) `WinCounterPath` | Profil oluşturma Windows toplanacak bir performans sayacı belirtir. |
+   | [/wincounter:](../profiling/wincounter.md) `WinCounterPath` | Profil oluşturma Windows bir performans sayacı belirtir. |
    | [/automark:](../profiling/automark.md) `Interval` | Yalnızca **/wincounter ile** kullanın. Performans sayacı toplama olayları arasındaki milisaniye Windows sayısını belirtir. Varsayılan değer 500 ms'tir. |
    | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir Olay İzleme belirtir. ETW olayları ayrı bir () içinde toplanır.*etl*) dosyasını seçin. |
    | [/globaloff](../profiling/globalon-and-globaloff.md) | Profilleyiciyi veri koleksiyonu duraklatılmış olarak başlatmak için **/start komut** satırına **/globaloff** seçeneğini ekleyin. Profil **oluşturmayı devam ettiren /globalon** kullanın. |
@@ -87,7 +87,7 @@ Bu makalede, önceden Profil Oluşturma Araçları bir web bileşenini veya web 
     |[/threadon:](../profiling/threadon-and-threadoff.md)  `TID` [/threadoff:](../profiling/threadon-and-threadoff.md) `TID`|İş parçacığı kimliği ( ) tarafından belirtilen iş parçacığı için veri toplamayı (**/threadon**) veya durdurur ( `TID` ).|
 
 ## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu sona er
- Profil oluşturma oturumunu sona ererken Web uygulamasını kapatın ve [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Internet Information Services **(IIS) IISReset** komutunu kullanarak [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemini kapatın. Profilleyiciyi kapatmak ve profil oluşturma veri dosyasını kapatmak için **VSPerfCmd** [/shutdown](../profiling/shutdown.md) seçeneğini arayın.
+ Profil oluşturma oturumunu sona ererken Web uygulamasını kapatın ve [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Internet Information Services **(IIS) IISReset** komutunu kullanarak [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] çalışan işlemini kapatın. Profilleyiciyi kapatmak ve profil oluşturma veri dosyasını kapatmak için **VSPerfCmd** [/shutdown](../profiling/shutdown.md) seçeneğini çağırma.
 
  **VSPerfClrEnv /globaloff** komutu profil oluşturma ortam değişkenlerini temizler. Yeni ortam ayarlarının uygulanması için bilgisayarı yeniden başlatmanız gerekir.
 

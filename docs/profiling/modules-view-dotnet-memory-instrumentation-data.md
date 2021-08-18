@@ -13,12 +13,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f76990695b2ebbfb53bf6afda69870cd39e69f0b51681847424be3174672245
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4da8a05a9db7d10f149969ced9d1adcaf9a49c4e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107358"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>Modüller Görünümü - .NET bellek ölçüm verileri
 Ölçüm yöntemi kullanılarak toplanan .NET bellek ayırma verileri Modüller görünümü, profil oluşturma çalıştırması içinde yürütülen modüller tarafından bellek ve zamanlama verilerini gruplar. Modülün işlevleri için profil oluşturma verileri modül düğümünün altında listelenir.
@@ -78,29 +78,29 @@ ms.locfileid: "121410456"
 |**En Fazla Geçen Özel Süre**|- Bir işlev için, bu işleve yapılan bir çağrının geçen en uzun özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en uzun geçen süresi.|
 |**En Az Geçen Özel Süre**|- Bir işlev için, bu modüle veya işleve yapılan bir çağrının en az geçen özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en az geçen süresi.|
 
-## <a name="application-inclusive-values"></a>Uygulama kapsamlı değerler
- Uygulama kapsamlı değerleri bir işlevin çağrı yığınında olduğu süreyi belirtir. Bu süre, işletim sistemine yapılan çağrılarında bağlam anahtarları ve giriş/çıkış işlemleri gibi harcanan zamanı içermez, ancak alt işlevlerde harcanan zamanı içerir.
+## <a name="application-inclusive-values"></a>Uygulama dahil değerleri
+ Uygulama dahil değerleri, bir işlevin çağrı yığınında olduğu zamanı gösterir. Süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içermez, ancak alt işlevlerde harcanan zamanı içerir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Uygulama kapsamlı süresi**|-Bir işlev için, işlev çağrılarında harcanan zaman. Bu, alt işlevlerde harcanan zamanı içerir, ancak bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine çağrıları dışlar.<br />-Bir modül için, modüldeki en az bir işlevin çağrı yığınında olması, işletim sistemine yapılan çağrılarda harcanan zaman hariç olmak üzere zaman dilimi.|
-|**Uygulama kapsamlı süresi%**|Bu modülün veya işlevin uygulama kapsamlı sırasında harcanan, profil oluşturma çalıştırmasının toplam geçen iç süresinin yüzdesi.|
-|**Ortalama uygulama kapsamlı süresi**|-Bir işlev için, bu işleve yapılan çağrının ortalama uygulama kapsamlı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların ortalama uygulama kapsamlı süresi.|
-|**En fazla uygulama kapsamlı süresi**|-Bir işlev için, bu işleve yapılan çağrının en büyük uygulama kapsamlı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların en fazla uygulama kapsamlı süresi.|
-|**En az uygulama kapsamlı süre**|-Bir işlev için, bu modüle veya işleve yapılan çağrının en düşük uygulama kapsamlı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların en düşük uygulama kapsamlı süresi.|
+|**Uygulama Dahil Saati**|- bir işlev için, işleve yapılan çağrılarda harcanan süre. Bu, alt işlevlerde harcanan zamanı içerir, ancak bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları dışlar.<br />- Bir modül için, işletim sistemine yapılan çağrılarda harcanan süre hariç olmak üzere modülde en az bir işlevin çağrı yığınında olduğu süre.|
+|**Uygulama Dahil Saati %**|Profil oluşturma çalıştırması için bu modülün veya işlevin uygulama dahil süresi içinde harcanan toplam kapsayıcı sürenin yüzdesi.|
+|**Ortalama Uygulama Dahil Süresi**|- Bir işlev için bu işleve yapılan çağrının ortalama uygulama dahil süresi.<br />- Modül için, modülde işlevlere yapılan tüm çağrıların ortalama uygulama dahil süresi.|
+|**En Fazla Uygulama Dahil Süresi**|- Bir işlev için, bu işleve yapılan bir çağrının en uzun uygulama dahil süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en uzun uygulama dahil süresi.|
+|**En Az Uygulama Dahil Süresi**|- Bir işlev için bu modüle veya işleve yapılan çağrının en düşük uygulama dahil süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en düşük uygulama dahil süresi.|
 
-## <a name="application-exclusive-values"></a>Uygulamanın dışlamalı değerleri
- Uygulama dışlamalı değeri, alt işlevlerde harcanan zaman hariç olmak üzere, modülde veya işlevde harcanan süreyi belirtir. Belirtilen süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine çağrıları da dışlar.
+## <a name="application-exclusive-values"></a>Uygulamaya özel değerler
+ Uygulamaya özel değerler, alt işlevlerde harcanan süre hariç olmak üzere modülde veya işlevde harcanan zamanı gösterir. Belirtilen süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrıları da dışlar.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Dışlamalı uygulama süresi**|-Bir işlev için, bu işleve yapılan çağrıların Toplam uygulama dışlamalı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların Toplam uygulama dışlamalı süresi.|
-|**Uygulama dışlamalı süresi%**|Bu modülün veya işlevin uygulama dışlamalı sırasında harcanan, profil oluşturma çalıştırmasının toplam geçen dışlamalı sürenin yüzdesi.|
-|**Ortalama uygulama dışlamalı süresi**|-Bir işlev için, bu işleve yapılan çağrının ortalama uygulama dışlamalı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların ortalama uygulama dışlamalı süresi.|
-|**Maksimum uygulama dışlamalı süresi**|-Bir işlev için, bu işleve yapılan çağrının en büyük uygulama dışlamalı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrıların en fazla uygulama dışlamalı süresi.|
-|**En az uygulama dışlamalı süresi**|-Bir işlev için, bu modüle veya işleve yapılan çağrının en düşük uygulama dışlamalı süresi.<br />-Bir modül için, modüldeki işlevlere yapılan tüm çağrılar için en düşük uygulama dışlamalı süresi.|
+|**Uygulamaya Özel Zaman**|- Bir işlev için, bu işleve yapılan çağrıların toplam uygulama özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların toplam uygulama özel süresi.|
+|**Uygulamaya Özel Saat %**|Bu modülün veya işlevin uygulama özel zamanlarında harcanan profil oluşturma çalıştırması için geçen toplam özel sürenin yüzdesi.|
+|**Ortalama Uygulama Özel Süresi**|- Bir işlev için bu işleve yapılan çağrının ortalama uygulama özel süresi.<br />- Modül için, modülde işlevlere yapılan tüm çağrıların ortalama uygulama özel süresi.|
+|**En Fazla Uygulama Özel Süresi**|- Bir işlev için, bu işleve yapılan bir çağrının en uzun uygulama özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların uygulama için en uzun süresi.|
+|**En Az Uygulama Için Özel Süre**|- Bir işlev için bu modüle veya işleve yapılan çağrının en düşük uygulama özel süresi.<br />- Bir modül için, modülde işlevlere yapılan tüm çağrıların en düşük uygulama özel süresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Modüller görünümü-örnekleme](../profiling/modules-view-dotnet-memory-sampling-data.md)
+- [Modüller Görünümü - örnekleme](../profiling/modules-view-dotnet-memory-sampling-data.md)
 - [Modüller Görünümü](../profiling/modules-view-instrumentation-data.md)
 - [Modüller Görünümü](../profiling/modules-view-sampling-data.md)

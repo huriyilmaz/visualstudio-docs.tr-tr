@@ -13,12 +13,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d6f31d876516700307881135eca3b23eba26d687d6468142440078d98e48099
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 30bf4e72d4f8ce7ff431343b92dc29c081a51358
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358212"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056374"
 ---
 # <a name="code-style-preferences"></a>Kod stili tercihleri
 

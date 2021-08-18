@@ -11,14 +11,15 @@ ms.assetid: 94f791da-bfea-454f-8a14-da31e8e1596a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fb077c24c42af561e884384959149c9b1990d422
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 03c7325b66ff5e6e0d41564892379b86a2c84a92
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102151284"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121719"
 ---
 # <a name="dimension"></a>Boyut
 Her FORTRAN dizisinin bir sembol tarafından tanımlanan bir boyutu vardır `SymTagDimension` .

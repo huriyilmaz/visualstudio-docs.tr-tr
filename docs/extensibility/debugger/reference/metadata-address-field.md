@@ -11,17 +11,18 @@ ms.assetid: 15ab45fe-6b3b-4e09-880b-31b34f523607
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 32e5db3a4ad197d66d530487eb50dd1b47ac0199
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9757f42022cf5b590385151fc1346ad75ce8cdd3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091519"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152568"
 ---
 # <a name="metadata_address_field"></a>METADATA_ADDRESS_FIELD
 

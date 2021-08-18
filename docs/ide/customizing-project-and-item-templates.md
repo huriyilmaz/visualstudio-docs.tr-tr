@@ -11,12 +11,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
-ms.openlocfilehash: 5ee439e670a99c609b2d90c9c227ba8ceba5cdd23cd21107e781cdfa3dcff41d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4f007c5c8d00a3d1232bf3a611f1ad80946c92f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121233491"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109428"
 ---
 # <a name="customize-project-and-item-templates"></a>Proje ve öğe şablonlarını özelleştirme
 

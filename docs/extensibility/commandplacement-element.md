@@ -11,14 +11,15 @@ ms.assetid: 2cbd7ac8-c55a-43d8-a26d-713b3d790016
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 69be89fb2773be9de632b8059cf217303daaede7
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 95a690ce394e088e3e490aa7e279725ff69bbdd1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902000"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058038"
 ---
 # <a name="commandplacement-element"></a>CommandPlacement öğesi
 CommandPlacement öğesi, düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil ekleyebilirsiniz. CommandPlacement öğesini kullanarak, kullanıcı arabiriminin görünümlerini değiştirmek için bu öğeleri tamamen yeniden tanımlamaya gerek yoktur.

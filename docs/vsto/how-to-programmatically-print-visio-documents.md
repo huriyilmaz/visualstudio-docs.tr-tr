@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl Visio: Program aracılığıyla Visio yazdırma'
-description: Tam bir Microsoft belgeyi nasıl yazdırabilirsiniz Visio belgede yalnızca belirli bir sayfayı yazdırabilirsiniz.
+title: 'Nasıl kullanılır: Program aracılığıyla Visio yazdırma'
+description: Tam bir Microsoft belgeyi yazdırmayı Visio belgede yalnızca belirli bir sayfayı yazdırmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,19 +16,19 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f38f6afb5aa6d1735207a851de80bd57d6c4fa811c6d96abbea9ab78b14a0ebd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb428567c5b6e58ec3832917da92e45f7b3ec605
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121351817"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105905"
 ---
-# <a name="how-to-programmatically-print-visio-documents"></a>Nasıl Visio: Program aracılığıyla Visio yazdırma
+# <a name="how-to-programmatically-print-visio-documents"></a>Nasıl kullanılır: Program aracılığıyla Visio yazdırma
   Tam bir belgeyi veya Microsoft Office Visio bir sayfayı yazdırabilirsiniz.
 
- Yazdırma yöntemleri hakkında ayrıntılı bilgi için,Microsoft.Office.Interop.Visio.Document için [VBA başvuru belgelerine bakın. Print](/office/vba/api/Visio.Document.Print) metodu ve [Microsoft.Office. Birlikte çalış -abilir -lik. Visio. Page.Print](/office/vba/api/Visio.Page.Print) yöntemi.
+ Yazdırma yöntemleri hakkında ayrıntılı bilgi için, aşağıdaki belgelerde yer alan VBA [başvuruMicrosoft.Office.Interop.Visio.Docbakın. Print](/office/vba/api/Visio.Document.Print) metodu ve [Microsoft.Office. Birlikte çalış -abilir -lik. Visio. Page.Print](/office/vba/api/Visio.Page.Print) yöntemi.
 
-## <a name="print-a-visio-document"></a>Bir belgeyi Visio yazdırma
+## <a name="print-a-visio-document"></a>Belgeyi Visio yazdırma
 
 ### <a name="to-print-a-complete-document"></a>Eksiksiz bir belge yazdırmak için
 
@@ -56,4 +56,4 @@ ms.locfileid: "121351817"
 - [Nasıl kullanılır: Program aracılığıyla yeni Visio oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md)
 - [Nasıl Visio: Program aracılığıyla Visio açma](../vsto/how-to-programmatically-open-visio-documents.md)
 - [Nasıl Visio: Program aracılığıyla Visio kapatma](../vsto/how-to-programmatically-close-visio-documents.md)
-- [Nasıl kullanılır: Program aracılığıyla Visio kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)
+- [Nasıl Visio: Program aracılığıyla Visio kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)

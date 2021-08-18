@@ -1,6 +1,6 @@
 ---
 title: Takvim öğeleriyle çalışma
-description: Randevutmentıtem sınıfının, takvim öğeleriyle görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerdiğini öğrenin.
+description: AppointmentItem sınıfının, takvim öğeleriyle görevleri gerçekleştirmek için kullanabileceğiniz yöntemleri ve özellikleri içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,24 +21,24 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 30c7c92b1f29a0dc8c01f8d7d0bb27f4853a2f0a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 04425ec3b3ec39aa224dd25d878fa716b4ace1f4b7f849926e5f3915e24209ce
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135539"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440662"
 ---
 # <a name="work-with-calendar-items"></a>Takvim öğeleriyle çalışma
-  <xref:Microsoft.Office.Interop.Outlook.AppointmentItem>Sınıfı, takvim öğeleriyle görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerir.
+  sınıfı, <xref:Microsoft.Office.Interop.Outlook.AppointmentItem> takvim öğeleriyle görevleri gerçekleştirmek için kullanabileceğiniz yöntemleri ve özellikleri içerir.
 
 |Görev|Yordam|
 |----------|---------------|
-|Bir randevu oluşturun ve alıcı ekleyin.|[Nasıl yapılır: program aracılığıyla randevu oluşturma](../vsto/how-to-programmatically-create-appointments.md)|
-|Yinelenen bir randevunun örneğini silin.|[Nasıl yapılır: program aracılığıyla randevuları silme](../vsto/how-to-programmatically-delete-appointments.md)|
-|Takvim klasörü oluşturun ve bir randevu öğesi ekleyin.|[Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma](../vsto/how-to-programmatically-create-a-custom-calendar.md)|
-|Bir toplantı isteği oluşturun ve gönderin.|[Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)|
+|Bir randevu oluşturun ve alıcıları ekleyin.|[Nasıl olur: Program aracılığıyla randevular oluşturma](../vsto/how-to-programmatically-create-appointments.md)|
+|Yinelenen randevu örneğini silin.|[Nasıl olur: Randevuları program aracılığıyla silme](../vsto/how-to-programmatically-delete-appointments.md)|
+|Bir Takvim klasörü oluşturun ve bir Randevu öğesi ekleyin.|[Nasıl yapılanlar: Program aracılığıyla özel takvim oluşturma](../vsto/how-to-programmatically-create-a-custom-calendar.md)|
+|Bir toplantı isteği oluşturun ve gönderin.|[Nasıl kurulur: Program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)|
 
- Outlook görevler ve Outlook nesne modeli hakkında daha fazla bilgi için bkz. [Outlook nesne modeline genel bakış](../vsto/outlook-object-model-overview.md).
+ Görev ve nesne modeli Outlook hakkında daha fazla Outlook için [bkz. Outlook nesne modeline genel bakış.](../vsto/outlook-object-model-overview.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)

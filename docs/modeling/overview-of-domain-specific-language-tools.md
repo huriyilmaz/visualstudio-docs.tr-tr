@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: fa76c545019dd1b2faca45d25ba7dfdafc267fc74dcee0f7e3ba826b6ebab5e1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 697c3ee97562cff0a91984cbcfe467a82574a508
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410976"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040144"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Etki Alanına Özgü Dil Araçlarına Genel Bakış
 Domain-Specific'da barındırılan Visual Studio Dil Araçları (DSL Araçları), etki alanına özgü bir dil tasarlamanızı ve ardından kullanıcıların dile dayalı modeller oluşturmak için sahip olması gereken her şeyi oluşturmanızı sağlar.
@@ -73,9 +73,9 @@ Domain-Specific'da barındırılan Visual Studio Dil Araçları (DSL Araçları)
  Modelin davranışını geliştirmek ve dilinize göre kısıtlamalar tanımlamak için ek kod sebilirsiniz. Gerekirse, metin şablonlarını değiştirerek önemli değişiklikler yapabilirsiniz.
 
 ## <a name="distributing-your-dsl-solution"></a>DSL Çözümlerinizi Dağıtma
- DSL Araçları, içinde barındırılan bir paket Visual Studio. Paket, kullanıcıların etki alanına özgü dilinizi kullanarak model oluşturmasına olanak sağlarken bir araç kutusu, DSL gezgini ve diğer kullanıcı arabirimi öğelerini görüntüler.
+ DSL Araçları, içinde barındırılan bir paket Visual Studio. Paket, kullanıcıların etki alanına özgü dilinizi kullanarak model oluşturmasına izin vermenizi sağlarken bir araç kutusu, DSL gezgini ve diğer kullanıcı arabirimi öğelerini görüntüler.
 
- Visual Studio'da DSL Araçları çözümünü derlemek ve çalıştırmak için Visual Studio'nin ikinci bir örneği, etki alanına özgü dilinizin dilin kullanıcıya nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladikten sonra DslPackage projesinin derleme klasöründe bulursanız dosyayı `.vsix` dağıtabilirsiniz. Bu dosya DSL'i diğer bilgisayarlara bir Visual Studio olarak yüklemek için kullanılabilir.  Daha fazla bilgi için, [bkz. Deploying Domain-Specific Language Solutions](msi-and-vsix-deployment-of-a-dsl.md).
+ VISUAL STUDIO'de DSL Araçları çözümünü derlemek ve çalıştırmak için Visual Studio'nin ikinci bir örneği, etki alanına özgü dilinizin dilin kullanıcıya nasıl göründüğünü gösterir. Her şeyin düzgün çalıştığını doğruladikten sonra DslPackage projesinin derleme klasöründe bulursanız dosyayı `.vsix` dağıtabilirsiniz. Bu dosya DSL'i diğer bilgisayarlara bir Visual Studio olarak yüklemek için kullanılabilir.  Daha fazla bilgi için, [bkz. Deploying Domain-Specific Language Solutions](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

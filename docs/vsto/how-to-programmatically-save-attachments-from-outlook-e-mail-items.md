@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 0099f06210dc7164df28a3e3b3f3e3e3ef7cb54865a7ead0585fdccf21d1cf0d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e635d1ddba2d7032820fee6e5979b402b2d38360
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394270"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122092169"
 ---
 # <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>nasıl yapılır: Outlook e-posta öğelerinden program aracılığıyla ekleri kaydetme
 

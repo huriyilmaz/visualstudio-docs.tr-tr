@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 569ab6c839c9944550b351152abe86c0f7a6722dab3bd3b743adbaf87139d695
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0124fd30f1f4c3565e0019f2f5709726f7622126
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121259857"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078693"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio İçin UX Temel Bileşenleri
 
@@ -86,7 +86,7 @@ ms.locfileid: "121259857"
 
  Bu durumda, uyarı için kullanılan simgenin "" simgesi içerdiği için ek bir sorun vardır &times; , bu nedenle ortak kaldırma simgesi bunun yanında kullanılamaz. Sonuç olarak, Kullanıcı arabirimi daha fazla clunky denetimi olan bir Kaldır düğmesini kullanır.
 
- ![kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak Visual Studio bir anti-öründir.](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-model")<br />kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak Visual Studio bir anti-öründir.
+ ![kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak Visual Studio bir anti-öründir.](../../extensibility/ux-guidelines/media/manifestdesignererrordeclarationsanti-pattern.png "ManifestDesignererrordeclarationsanti-pattern")<br />kullanıcı arabirimini bir hata durumuna yerleştirme, varsayılan olarak Visual Studio bir anti-öründir.
 
 #### <a name="alternatives"></a>Alternatifler
 
@@ -109,27 +109,27 @@ Bu soruna yönelik daha iyi bir çözüm şunlardır:
 #### <a name="example-video-links-in-team-explorer"></a>Örnek: Takım Gezgini video bağlantıları
 Eksik Kullanıcı ARABIRIMINDEN önce açıklayıcı metin okumaya zorlamak, Visual Studio içinde bir anti-örünmedir. Doğru tasarlanmış, video bağlantıları, üzerine gelme hakkında ek bilgiler içeren bir araç ipucu görüntülemelidir ve " &times; " iletisinin daha fazla etkileşime gerek duymadan bu iletiyi kapatması gerekir.
 
- ![Açıklayıcı metin anti&#45;deseninin yanlış &#45;](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />Hatalı video bağlantısı kalıbı
+ ![Açıklayıcı metin anti&#45;deseninin yanlış &#45;](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Yanlışuseofmultipleclicks")<br />Hatalı video bağlantısı kalıbı
 
 Basit bir kapatma düğmesi (bir tıklama) yerine, Kullanıcı, video bağlantılarının göründüğü her yerde Kullanıcı ARABIRIMINI kapatmak için iki tıklama kullanmaya zorlanır.
 
 bu durumun doğru tasarımı, ınternet Explorer, Office ve Visual Studio yaygın olarak kullanılan kalıbı izleyebildir: üzerine gelindiğinde, kullanıcı araç ipucu açıklamasını görebilir ve bir tıklama kullanıcı arabirimini gizler.
 
- ![Açıklayıcı metin anti&#45;deseninin &#45; doğru](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti-model-doğru")<br />Doğru video bağlantısı kalıbı
+ ![Açıklayıcı metin anti&#45;deseninin &#45; doğru](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Açıklayıcıtextanti-pattern-correct")<br />Doğru video bağlantısı kalıbı
 
 ### <a name="using-command-bars-for-settings"></a>Ayarlar için komut çubuklarını kullanma
 
 **Şekil A** , bu kenar yumuşatmayı temsil eder: bir ayarı yalnızca komutu için geçerli olan bir komut düğmesinin altına koymak. Bu taslağa, hata ayıklamayı Başlat (tarayıcıda görüntüle, hata ayıklama olmadan Başlat ve adım adım) gibi komutlar vardır. Bu, seçilen ayara göre değişir.
 
-![Şekil A: komut çubuğu Anti-model](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-model-FigureA")<br />Şekil A: komut çubuğu Anti-model
+![Şekil A: komut çubuğu Anti-model](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurea.png "Commandbaranti-pattern-FigureA")<br />Şekil A: komut çubuğu Anti-model
 
 **Şekil B**' de gösterildiği gibi biraz daha iyidir, ancak yine de bu türün ayarlarını araç çubuklarına yerleştirmektedir. Bölünmüş düğmeler daha az alan kaplamakta ve bu nedenle açılan listede geliştirirken, her iki tasarım de gerçekten bir komut olmayan bir şeyi yükseltmek için araç çubuğu kullanmaya devam etmektedir.
 
-![Şekil B: daha Iyi, ancak yine de bir komut çubuğu Anti-model](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-model-FigureB")<br />Şekil B: daha Iyi, ancak yine de bir komut çubuğu Anti-model
+![Şekil B: daha Iyi, ancak yine de bir komut çubuğu Anti-model](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figureb.png "Commandbaranti-pattern-FigureB")<br />Şekil B: daha Iyi, ancak yine de bir komut çubuğu Anti-model
 
 **Şekil C**' de gösterilen doğru yaklaşımda, ayar bir dizi komuta bağlıdır. Ayarlanmış genel ayar yoktur ve yalnızca dört komut arasında geçiş yapıyoruz. Bu, araç çubuğundaki komutların kabul edilebilir olduğu tek durumdur.
 
-![şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-model-FigureC")<br />şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı
+![şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı](../../extensibility/ux-guidelines/media/commandbaranti-pattern-figurec.png "Commandbaranti-pattern-FigureC")<br />şekil C: Visual Studio komut çubuğu deseninin doğru kullanımı
 
 ### <a name="control-anti-patterns"></a>Denetim önleme desenleri
  Bazı koruma desenleri, bir denetimin veya denetim grubunun yalnızca yanlış kullanımı veya sunumudur.
@@ -155,17 +155,17 @@ bu durumun doğru tasarımı, ınternet Explorer, Office ve Visual Studio yaygı
 
 2. "Daha fazla bilgi", kavramsal konunun bağlantısı için uygun metin değildir. Kullanıcının amacı daha fazla bilgi almak için tercih ettikleri sonuçları anlamaktır.
 
-   ![renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanmak Visual Studio desenler için kullanılır.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />renk hizmeti yok sayılıyor ve köprüler için "daha fazla bilgi" kullanmak Visual Studio desenler için kullanılır.
+   ![Renk hizmetini yoksayma ve köprüler için "Daha fazla bilgi" Visual Studio desenlere karşı koruma sağlar.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Renk hizmetini yoksayma ve köprüler için "Daha fazla bilgi" Visual Studio desenlere karşı koruma sağlar.
 
-**Daha iyi çözüm:** Kullanıcının bağlantıya tıklayarak istediği soruyu ortaya çıkaran. Örnek:
+**Daha iyi çözüm:** Bağlantıya tıklayarak kullanıcının sorabilirsiniz. Örnek:
 
-- Windows Azure hizmetleri nasıl çalışır?
+- Azure Windows nasıl çalışır?
 
-- Windows Azure Mobile Services projesi ne zaman gerekir?
+- Azure Mobile Services projesi için Windows gerekir?
 
-#### <a name="using-click-here-for-links"></a>Bağlantılar için "buraya tıklayın" kullanma
- Köprüler kendine açıklayıcı olmalıdır. "Buraya tıklayın" veya benzer çeşitçlikleri kullanmak için bir kenar modelidir.
+#### <a name="using-click-here-for-links"></a>Bağlantılar için "Buraya tıklayın" seçeneğini kullanma
+ Köprüler kendi kendini açıklayıcı olmalıdır. "Buraya tıklayın" veya benzer bir varyasyonu kullanmak bir anti-desendir.
 
- **Hatalı:** "Yeni bir proje oluşturma hakkında yönergeler için buraya tıklayın."
+ **Hatalı:** "Yeni proje oluşturma yönergeleri için buraya tıklayın."
 
- **İyi:** "Yeni proje oluşturmak Nasıl yaparım? mı?"
+ **İyi:** "Nasıl yaparım? proje mi oluştur?"

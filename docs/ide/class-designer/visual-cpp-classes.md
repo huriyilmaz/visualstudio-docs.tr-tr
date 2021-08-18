@@ -1,6 +1,6 @@
 ---
-title: Sınıf Tasarımcısı C++ sınıfları
-description: C++ sınıfları ve bunların nasıl desteklendikleri ve Sınıf Tasarımcısı birden fazla devralma ilişkisine sahip olabileceğini öğrenin.
+title: Sınıf Tasarımcısı'de C++ Sınıfları
+description: C++ sınıfları ve bunların nasıl destekleneleri ve bu sınıflarda birden çok devralma ilişkisine sahip Sınıf Tasarımcısı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,36 +12,37 @@ ms.assetid: 75e56f8c-11ef-42a3-b7ec-3d2cf25c581b
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a1e075d2ac8d06320c46f8d2bb86992814ae24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bad6d017bfe58af9a514f632b4bf1fc3047cb054
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963373"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094496"
 ---
-# <a name="c-classes-in-class-designer"></a>Sınıf Tasarımcısı C++ sınıfları
+# <a name="c-classes-in-class-designer"></a>Sınıf Tasarımcısı'de C++ sınıfları
 
-**Sınıf Tasarımcısı** c++ sınıflarını destekler ve c++ sınıflarının birden fazla devralma ilişkisine sahip olması dışında, yerel c++ sınıflarını Visual Basic ve C# sınıf şekilleriyle aynı şekilde görselleştirir. Sınıfında daha fazla alan ve yöntem göstermek için sınıf şeklini genişletebilir veya alanı korumak için daraltabilirsiniz.
+**Sınıf Tasarımcısı** C++ sınıflarını destekler ve yerel C++ sınıflarını Visual Basic ve C# sınıf şekilleriyle aynı şekilde görselleştirin, ancak C++ sınıflarında birden çok devralma ilişkisi olabilir. Sınıf şeklini, sınıfta daha fazla alan ve yöntem gösterecek şekilde genişletebilirsiniz veya alandan tasarruf etmek için daraltabilirsiniz.
 
 > [!NOTE]
-> **Sınıf Tasarımcısı** birleşimleri desteklemez (ayrılan belleğin yalnızca birleşimin en büyük veri üyesi için gereken miktar olduğu özel bir sınıf türü).
+> **Sınıf Tasarımcısı** birliği desteklemez (bellek ayrılan özel bir sınıf türü, yalnızca birliğin en büyük veri üyesi için gereken miktardır).
 
 ## <a name="simple-inheritance"></a>Basit devralma
 
-Bir sınıf diyagramına birden fazla sınıf sürüklediğinizde ve sınıfların bir sınıf devralma ilişkisi varsa, bir ok bunları bağlar. Ok, taban sınıfının yönünde işaret eder. Örneğin, aşağıdaki sınıflar bir sınıf diyagramında görüntülendiğinde, bir ok, B 'den A 'ya işaret eden bir okla bağlantı kurar:
+Bir sınıf diyagramına birden fazla sınıf sürükler ve sınıfların bir sınıf devralma ilişkisi olduğunda, bir ok bunları bağlar. Ok, temel sınıfın yönüne doğru ilerler. Örneğin, aşağıdaki sınıflar bir sınıf diyagramında görüntülendiğinde, bunları B'den A'ya işaret eden bir ok bağlar:
 
 ```cpp
 class A {};
 class B : A {};
 ```
 
-Sınıf diyagramına yalnızca B sınıfını da sürükleyebilirsiniz, B için sınıf şekline sağ tıklayıp **temel sınıfları göster**' e tıklayabilirsiniz. Bu, kendi temel sınıfını görüntüler: A.
+Ayrıca yalnızca B sınıfını sınıf diyagramına sürükleyip B için sınıf şekline sağ tıklar ve ardından Temel Sınıfları **Göster'e tıklarsiniz.** Bu, temel sınıfını görüntüler: A.
 
 ## <a name="multiple-inheritance"></a>Çoklu devralma
 
-**Sınıf Tasarımcısı** birden çok sınıf devralma ilişkilerinin görselleştirmesini destekler. Türetilmiş bir sınıfın birden fazla temel sınıf özniteliği olduğunda *birden çok devralma* kullanılır. Birden çok devralım örneği aşağıda verilmiştir:
+**Sınıf Tasarımcısı** sınıf devralma ilişkilerinin görselleştirmesini destekler. *Türetilmiş bir* sınıfın birden fazla temel sınıf özniteliği olduğunda birden çok devralma kullanılır. Aşağıda, birden çok devralma örneği ve ardından ve bir örnek ve ardından yer alır:
 
 ```cpp
 class Bird {};
@@ -49,18 +50,18 @@ class Swimmer {};
 class Penguin : public Bird, public Swimmer {};
 ```
 
-Sınıf diyagramına birden fazla sınıf sürüklediğinizde ve sınıfların birden çok sınıf devralma ilişkisi varsa, bir ok bunları bağlar. Ok, temel sınıfların yönlerine işaret eder.
+Sınıf diyagramına birden fazla sınıf sürükler ve sınıflar çok sınıflı devralma ilişkisine sahip olduğunda, bunları bir ok bağlar. Ok, temel sınıfların yönüne doğru ilerler.
 
-Bir sınıf şekline sağ tıklayıp, **temel sınıfları göster** ' e tıkladığınızda seçili sınıf için temel sınıflar görüntülenir.
+Bir sınıf şekline sağ tık ardından Temel Sınıfları **Göster'e** tıklarsanız, seçilen sınıfın temel sınıfları görüntülenir.
 
 > [!NOTE]
-> **Türetilmiş sınıfları göster** komutu C++ kodu için desteklenmez. Türetilmiş sınıfları **sınıf görünümü** giderek, tür düğümünü genişleterek, **türetilmiş türler** alt klasörünü genişleterek ve ardından bu türleri sınıf diyagramına sürükleyerek görüntüleyebilirsiniz.
+> Türetilmiş **Sınıfları Göster** komutu C++ kodu için desteklenmiyor. Türetilmiş sınıfları görüntülemek için **Sınıf Görünümü,** tür düğümünü genişleterek,  Türetilmiş Türler alt klasörünü genişleterek ve ardından bu türleri sınıf diyagramına sürükleyerek görüntüebilirsiniz.
 
-Birden çok sınıf devralma hakkında daha fazla bilgi için bkz. [birden fazla devralma](/previous-versions/6td5yws2(v=vs.140)) ve [birden çok temel sınıf](/cpp/cpp/multiple-base-classes).
+Birden çok sınıf devralma hakkında daha fazla bilgi için bkz. [Birden Çok Devralma](/previous-versions/6td5yws2(v=vs.140)) ve Birden Çok Temel [Sınıf.](/cpp/cpp/multiple-base-classes)
 
 ## <a name="abstract-classes"></a>Soyut sınıflar
 
-**Sınıf Tasarımcısı** soyut sınıfları ("soyut temel sınıflar" olarak da adlandırılır) destekler. Bunlar hiçbir şekilde hiçbir şekilde örnekleyemezsiniz, ancak başka sınıflar türetilebilir. Bu belgede daha önce "çoklu devralma" işleminden bir örnek kullanıldığında, `Bird` sınıfı ayrı nesneler olarak aşağıdaki gibi oluşturabilirsiniz:
+**Sınıf Tasarımcısı** sınıfları ("soyut temel sınıflar" olarak da adlandırılır) destekler. Bunlar hiçbir zaman örneklenenem olarak değil, başka sınıflar türeten sınıflardır. Bu belgenin başlarındaki "Birden Çok Devralma" örneğinden bir örnek kullanarak, sınıfı aşağıdaki gibi `Bird` tek tek nesneler olarak örneği oluşturabilirsiniz:
 
 ```cpp
 int main()
@@ -71,9 +72,9 @@ int main()
 }
 ```
 
-Ancak, `Swimmer` sınıfı ayrı nesneler olarak örneğini oluşturmak istemeyebilirsiniz. Örneğin,, ve gibi diğer sınıf türleri türetebilirsiniz `Penguin` `Whale` `Fish` . Bu durumda, `Swimmer` sınıfı bir soyut temel sınıf olarak bildirirsiniz.
+Ancak, sınıfı tek tek nesneler olarak örneğini `Swimmer` oluşturma amacına sahip değildirsiniz. Yalnızca, ve gibi diğer hayvan sınıflarını türetmek için bu `Penguin` türemiş `Whale` `Fish` olabilir. Bu durumda, sınıfı soyut bir `Swimmer` temel sınıf olarak bildirersiniz.
 
-Bir sınıfı Özet olarak bildirmek için `abstract` anahtar sözcüğünü kullanabilirsiniz. Soyut olarak işaretlenen veya soyut bir sınıfa eklenen Üyeler sanal ve soyut sınıftan türetilmiş sınıflar tarafından uygulanmalıdır.
+Bir sınıfı soyut olarak bildirebilirsiniz, anahtar sözcüğünü `abstract` kullanabilirsiniz. Soyut olarak işaretlenen veya soyut bir sınıfa dahil edilen üyeler sanaldır ve soyut sınıftan türeten sınıflar tarafından uygulanmalıdır.
 
 ```cpp
 class Swimmer abstract
@@ -83,7 +84,7 @@ class Swimmer abstract
 };
 ```
 
-Ayrıca, en az bir saf sanal işlevi ekleyerek bir sınıfı soyut olarak bildirebilirsiniz:
+Ayrıca, en az bir saf sanal işlev dahil olmak üzere bir sınıfı soyut olarak bildiresiniz:
 
 ```cpp
 class Swimmer
@@ -93,9 +94,9 @@ class Swimmer
 };
 ```
 
-Bu bildirimleri bir sınıf diyagramında görüntülediğinizde, sınıf adı `Swimmer` ve saf sanal işlevi, `swim` gösterim **soyut sınıfıyla** birlikte bir soyut sınıf şeklinde italik olarak görüntülenir. Soyut sınıf türü şeklinin, kenarlığının noktalı bir çizgi olması dışında normal bir sınıftan aynı olduğuna dikkat edin.
+Bu bildirimleri Bir Sınıf Diyagramında görüntülendiğinde, sınıf adı ve saf sanal işlevi soyut sınıf şeklinde, Soyut Sınıf ile birlikte `Swimmer` `swim` italik **olarak görüntülenir.** Soyut sınıf türü şeklinin, kenarlığı noktalı çizgi olması dışında normal bir sınıfın şekliyle aynı olduğunu fark vardır.
 
-Soyut taban sınıftan türetilmiş bir sınıf, temel sınıftaki her bir saf sanal işlevi geçersiz kılmalıdır, aksi durumda türetilmiş sınıf başlatılamaz. Bu nedenle, örneğin sınıfından bir sınıf türetirsiniz `Fish` `Swimmer` , `Fish` yöntemi geçersiz kılmalıdır `swim` :
+Soyut bir temel sınıftan türetilen bir sınıfın temel sınıftaki her saf sanal işlevi geçersiz kılması gerekir, yoksa türetilmiş sınıf örneği olamaz. Bu nedenle, örneğin sınıfından bir sınıf `Fish` türetmiş `Swimmer` olursanız, `Fish` yöntemini geçersiz `swim` kılması gerekir:
 
 ```cpp
 class Fish : public Swimmer
@@ -109,11 +110,11 @@ int main()
 }
 ```
 
-Bu kodu bir sınıf diyagramında görüntülediğinizde **Sınıf Tasarımcısı** , öğesinden devralım çizgisi çizer `Fish` `Swimmer` .
+Bu kodu Bir Sınıf Diyagramında görüntüleye **Sınıf Tasarımcısı** için bir devralma çizgisi `Fish` `Swimmer` çizin.
 
 ## <a name="anonymous-classes"></a>Anonim sınıflar
 
-**Sınıf Tasarımcısı** anonim sınıfları destekler. *Anonim sınıf türleri* tanımlayıcı olmadan tanımlanmış sınıflardır. Bir Oluşturucu veya yıkıcı olamaz, işlevlere bağımsız değişken olarak geçirilemez ve işlevlerden dönüş değeri olarak döndürülemez. Bir sınıf adını aşağıdaki örnekte olduğu gibi bir typedef adı ile değiştirmek için anonim bir sınıf kullanabilirsiniz:
+**Sınıf Tasarımcısı** anonim sınıfları destekler. *Anonim sınıf türleri,* tanımlayıcı olmadan bildirilen sınıflardır. Oluşturucu veya yıkıcısı olamaz, işlevlere bağımsız değişken olarak geçirilemesi ve işlevlerden dönüş değerleri olarak döndürülmesi mümkün olamaz. Aşağıdaki örnekte olduğu gibi, bir sınıf adını typedef adıyla değiştirmek için anonim bir sınıf kullanabilirsiniz:
 
 ```cpp
 typedef struct
@@ -123,62 +124,62 @@ typedef struct
 } POINT;
 ```
 
-Yapılar da anonim olabilir. **Sınıf Tasarımcısı** , anonim sınıfları ve yapıları ilgili türü görüntülediği gibi görüntüler. Anonim sınıfları ve yapıları bildirebilmenize ve görüntüleyseniz de **Sınıf Tasarımcısı** belirttiğiniz etiket adını kullanmaz. Sınıf Görünümü oluşturduğu adı kullanacaktır. Sınıf veya yapı, Sınıf Görünümü ve **Sınıf Tasarımcısı** **__unnamed** adlı bir öğe olarak görünür.
+Yapılar anonim de olabilir. **Sınıf Tasarımcısı,** anonim sınıfları ve yapıları ilgili türü görüntüle aynı şekilde görüntüler. Anonim sınıfları ve yapıları bildirebilirsiniz ve **görüntüleye Sınıf Tasarımcısı,** belirttiğiniz etiket adını kullanmaz. Bu, oluşturulan Sınıf Görünümü kullanır. Sınıf veya yapı, Sınıf Görünümü ve **Sınıf Tasarımcısı** adlı bir öğe **olarak** __unnamed.
 
-Anonim sınıflar hakkında daha fazla bilgi için bkz. [anonim sınıf türleri](/cpp/cpp/anonymous-class-types).
+Anonim sınıflar hakkında daha fazla bilgi için bkz. [Anonim Sınıf Türleri.](/cpp/cpp/anonymous-class-types)
 
 ## <a name="template-classes"></a>Şablon sınıfları
 
-**Sınıf Tasarımcısı** , şablon sınıflarının görselleştirmesini destekler. İç içe geçmiş bildirimler desteklenir. Aşağıdaki tabloda bazı tipik bildirimler gösterilmektedir.
+**Sınıf Tasarımcısı,** şablon sınıflarının görselleştirmesini destekler. İç içe bildirim desteği vardır. Aşağıdaki tabloda bazı tipik bildirimler yer almaktadır.
 
 | Kod öğesi | Sınıf Tasarımcısı görünümü |
 | - | - |
-| `template <class T>`<br /><br /> `class A {};` | `A<T>`<br /><br /> Şablon sınıfı |
-| `template <class T, class U>`<br /><br /> `class A {};` | `A<T, U>`<br /><br /> Şablon sınıfı |
-| `template <class T, int i>`<br /><br /> `class A {};` | `A<T, i>`<br /><br /> Şablon sınıfı |
-| `template <class T, template <class K> class U>`<br /><br /> `class A {};` | `A<T, U>`<br /><br /> Şablon sınıfı |
+| `template <class T>`<br /><br /> `class A {};` | `A<T>`<br /><br /> Şablon Sınıfı |
+| `template <class T, class U>`<br /><br /> `class A {};` | `A<T, U>`<br /><br /> Şablon Sınıfı |
+| `template <class T, int i>`<br /><br /> `class A {};` | `A<T, i>`<br /><br /> Şablon Sınıfı |
+| `template <class T, template <class K> class U>`<br /><br /> `class A {};` | `A<T, U>`<br /><br /> Şablon Sınıfı |
 
-Aşağıdaki tabloda kısmi özelleşmenin bazı örnekleri gösterilmektedir.
-
-|Kod öğesi|Sınıf Tasarımcısı görünümü|
-|------------------| - |
-|`template<class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Şablon sınıfı|
-|`template<class T>`<br /><br /> `class A<T, T> {};`|`A<T, T>`<br /><br /> Şablon sınıfı|
-|`template <class T>`<br /><br /> `class A<T, int> {};`|`A<T, int>`<br /><br /> Şablon sınıfı|
-|`template <class T1, class T2>`<br /><br /> `class A<T1*, T2*> {};`|`A<T1*, T2*>`<br /><br /> Şablon sınıfı|
-
-Aşağıdaki tabloda kısmi özelleşmenin bazı devralma örnekleri gösterilmektedir.
+Aşağıdaki tabloda kısmi özelleştirmeye bazı örnekler verilmiştir.
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> Şablon sınıfı<br /><br /> `B`<br /><br /> Sınıf<br /><br /> (sınıf A 'ya işaret eder)<br /><br /> `C`<br /><br /> Sınıf<br /><br /> (sınıf A 'ya işaret eder)|
+|`template<class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> Şablon Sınıfı|
+|`template<class T>`<br /><br /> `class A<T, T> {};`|`A<T, T>`<br /><br /> Şablon Sınıfı|
+|`template <class T>`<br /><br /> `class A<T, int> {};`|`A<T, int>`<br /><br /> Şablon Sınıfı|
+|`template <class T1, class T2>`<br /><br /> `class A<T1*, T2*> {};`|`A<T1*, T2*>`<br /><br /> Şablon Sınıfı|
 
-Aşağıdaki tabloda kısmi özelleşme şablonu işlevlerinin bazı örnekleri gösterilmektedir.
-
-|Kod öğesi|Sınıf Tasarımcısı görünümü|
-|------------------| - |
-|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> Func \<T, U> (+ 1 aşırı yükleme)|
-|`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> Şablon sınıfı<br /><br /> `B<T2>`<br /><br /> Şablon sınıfı<br /><br /> (B sınıf içinde **Iç Içe geçmiş türler** altında bulunur)|
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> Sınıf<br /><br /> -> C\<int><br /><br /> `C<T>`<br /><br /> Şablon sınıfı|
-
-Aşağıdaki tabloda şablon devralmanın bazı örnekleri gösterilmektedir.
+Aşağıdaki tabloda kısmi özelleştirmede devralmaya bazı örnekler verilmiştir.
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> Sınıf<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> Sınıf<br /><br /> (B, **Iç Içe türler** altında C sınıfı içinde bulunur)<br /><br /> `C<T>`<br /><br /> Şablon sınıfı|
+|`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> Şablon Sınıfı<br /><br /> `B`<br /><br /> Sınıf<br /><br /> (Sınıf A'ya göre)<br /><br /> `C`<br /><br /> Sınıf<br /><br /> (Sınıf A'ya göre)|
 
-Aşağıdaki tabloda, kurallı özelleştirilmiş sınıf bağlantısının bazı örnekleri gösterilmektedir.
+Aşağıdaki tabloda kısmi özelleştirme şablonu işlevlerine bazı örnekler verilmiştir.
 
 |Kod öğesi|Sınıf Tasarımcısı görünümü|
 |------------------| - |
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> Sınıf<br /><br /> ->C\<int><br /><br /> `C<int>`<br /><br /> Sınıf<br /><br /> `C<T>`<br /><br /> Şablon sınıfı<br /><br /> `D`<br /><br /> Sınıf<br /><br /> ->C\<float>|
-|`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> Min \<T>|
+|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> func \<T, U> (+ 1 aşırı yüklemesi)|
+|`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> Şablon Sınıfı<br /><br /> `B<T2>`<br /><br /> Şablon Sınıfı<br /><br /> (B, A sınıfında İç İçe **Türler altında yer alan )**|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> Sınıf<br /><br /> -> C\<int><br /><br /> `C<T>`<br /><br /> Şablon Sınıfı|
+
+Aşağıdaki tabloda şablon devralmaya bazı örnekler verilmiştir.
+
+|Kod öğesi|Sınıf Tasarımcısı görünümü|
+|------------------| - |
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> Sınıf<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> Sınıf<br /><br /> (B, İç İçe Geçmiş Türler altında C **sınıfında yer alan )**<br /><br /> `C<T>`<br /><br /> Şablon Sınıfı|
+
+Aşağıdaki tabloda kurallı özelleştirilmiş sınıf bağlantısına bazı örnekler verilmiştir.
+
+|Kod öğesi|Sınıf Tasarımcısı görünümü|
+|------------------| - |
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> Sınıf<br /><br /> ->C\<int><br /><br /> `C<int>`<br /><br /> Sınıf<br /><br /> `C<T>`<br /><br /> Şablon Sınıfı<br /><br /> `D`<br /><br /> Sınıf<br /><br /> ->C\<float>|
+|`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> Dk \<T>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C++ kodu ile çalışma](working-with-visual-cpp-code.md)
+- [C++ Kodu ile Çalışma](working-with-visual-cpp-code.md)
 - [Sınıflar ve Yapılar](/cpp/cpp/classes-and-structs-cpp)
-- [Anonim sınıf türleri](/cpp/cpp/anonymous-class-types)
-- [Birden çok devralma](/previous-versions/6td5yws2(v=vs.140))
-- [Birden çok temel sınıf](/cpp/cpp/multiple-base-classes)
+- [Anonim Sınıf Türleri](/cpp/cpp/anonymous-class-types)
+- [Birden Çok Devralma](/previous-versions/6td5yws2(v=vs.140))
+- [Birden Çok Temel Sınıf](/cpp/cpp/multiple-base-classes)
 - [Şablonlar](/cpp/cpp/templates-cpp)

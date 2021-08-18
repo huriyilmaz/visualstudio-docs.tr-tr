@@ -12,14 +12,15 @@ ms.assetid: 645d9bd3-0a17-4a09-9b25-b37ae3ff484a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 23f5a3bd275ecd3666ce1a6642b5c3a27072ac60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: df4af35a1258d106b68d3105726b827e199a7db2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969366"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039455"
 ---
 # <a name="copy-selection"></a>Seçimi kopyala
 Tüm çağrı yığınını rapor sekmesinden kopyalamak için **Kopyala**' ya tıklayın. Daha sonra bu eylemi destekleyen herhangi bir programa çağrı yığınını yapıştırabilirsiniz.

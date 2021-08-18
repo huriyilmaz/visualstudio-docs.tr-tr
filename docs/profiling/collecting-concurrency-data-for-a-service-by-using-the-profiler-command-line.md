@@ -12,18 +12,18 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bb948b30de72212c10d85192b195615ab7c79729ca60bb3c2714038929a1cb3d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 53c44915ce1172b90a2896d3429f2866454f9820
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121355769"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076990"
 ---
 # <a name="collect-concurrency-data-for-a-service-by-using-the-profiler-command-line"></a>Profil oluşturma komut satırı kullanarak bir hizmet için eşzamanlılık verileri toplama
 Profil Oluşturma Araçları eşzamanlılık yöntemi; CPU kullanımı, iş parçacığı çakışması, iş parçacığı geçişi, eşitleme gecikmeleri, çakışan IO alanlarını ve diğer sistem olaylarını gösteren kaynak çakışma verilerini ve iş parçacığı etkinlik verilerini toplamaya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] olanak sağlar.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012 profil oluşturma Visual Studio bu platformlarda veri toplama şeklinde önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Bkz. [Uygulama ve Windows 8 performans Windows Server 2012.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
+> Windows 8 ve Windows Server 2012'daki gelişmiş güvenlik özellikleri, Visual Studio profil oluşturmanın bu platformlarda veri toplaması sırasında önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Bkz. [Uygulama ve Windows 8 performans Windows Server 2012.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
 
 ## <a name="common-tasks"></a>Genel görevler
 

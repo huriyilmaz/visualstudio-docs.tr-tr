@@ -1,6 +1,6 @@
 ---
 title: Vbc görevi | Microsoft Docs
-description: MSBuild 'in, yürütülebilir dosyalar, dinamik bağlantı kitaplıkları veya kod modülleri üreten vbc.exe kaydırmak için vbc görevini nasıl kullandığını öğrenin.
+description: MSBuild, yürütülebilir dosyalar, dinamik bağlantı kitaplıkları veya kod modülleri üreten vbc.exe kaydırmak için vbc görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 04/12/2018
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: 595278b1-2782-4577-b1ba-b4b5ab5625a3
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d6596dd0893d0ab302a738cb12856fc6758df039
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8328512fb7477c5771d888de4a10de7885f59976
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908862"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093703"
 ---
 # <a name="vbc-task"></a>Vbc görevi
 
-Yürütülebilir dosyalar (*. exe*), dinamik bağlantı kitaplıkları (*. dll*) veya kod modülleri (*. netmodule*) üreten *vbc.exe* kaydırır. *vbc.exe* hakkında daha fazla bilgi için bkz. [Visual Basic komut satırı derleyicisi](/dotnet/visual-basic/reference/command-line-compiler/index).
+Yürütülebilir dosyalar (*.exe*), dinamik bağlantı kitaplıkları (*.dll*) veya kod modülleri (*. netmodule*) üreten *vbc.exe* kaydırır. *vbc.exe* hakkında daha fazla bilgi için bkz. [Visual Basic komut satırı derleyicisi](/dotnet/visual-basic/reference/command-line-compiler/index).
 
 ## <a name="parameters"></a>Parametreler
 
@@ -55,7 +56,7 @@ Yürütülebilir dosyalar (*. exe*), dinamik bağlantı kitaplıkları (*. dll*)
 | `KeyContainer` | İsteğe bağlı `String` parametre.<br /><br /> Şifreleme anahtarı kapsayıcısının adını belirtir. Bu parametre *vbc.exe* derleyicisinin [-keycontainer](/dotnet/visual-basic/reference/command-line-compiler/keycontainer) anahtarına karşılık gelir. |
 | `KeyFile` | İsteğe bağlı `String` parametre.<br /><br /> Şifreleme anahtarını içeren dosya adını belirtir. Daha fazla bilgi için bkz. [-keyfile](/dotnet/visual-basic/reference/command-line-compiler/keyfile). |
 | `LangVersion` | İsteğe bağlı <xref:System.String?displayProperty=fullName> parametre.<br /><br /> "15,5" gibi [dil sürümünü](/dotnet/visual-basic/language-reference/configure-language-version)belirtir. |
-| `LinkResources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Çıkış dosyasında bir .NET Framework kaynağına bağlantı oluşturur; kaynak dosyası çıkış dosyasına yerleştirilmez. Bu parametre *vbc.exe* derleyicisinin [-linkresource](/dotnet/visual-basic/reference/command-line-compiler/linkresource) anahtarına karşılık gelir. |
+| `LinkResources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> çıkış dosyasında bir .NET Framework kaynağına bağlantı oluşturur; kaynak dosyası çıkış dosyasına yerleştirilmez. Bu parametre *vbc.exe* derleyicisinin [-linkresource](/dotnet/visual-basic/reference/command-line-compiler/linkresource) anahtarına karşılık gelir. |
 | `MainEntryPoint` | İsteğe bağlı `String` parametre.<br /><br /> Yordamı içeren sınıfı veya modülü belirtir `Sub Main` . Bu parametre *vbc.exe* derleyicisinin [-Main](/dotnet/visual-basic/reference/command-line-compiler/main) anahtarına karşılık gelir. |
 | `ModuleAssemblyName` | İsteğe bağlı `String` parametre.<br /><br /> Bu modülün bir parçası olduğu derlemeyi belirtir. |
 | `NoConfig` | İsteğe bağlı `Boolean` parametre.<br /><br /> Derleyicinin *Vbc. rsp* dosyasını kullanması gerektiğini belirtir. Bu parametre, *vbc.exe* derleyicisinin [-noconfig](/dotnet/visual-basic/reference/command-line-compiler/noconfig) parametresine karşılık gelir. |
@@ -73,15 +74,15 @@ Yürütülebilir dosyalar (*. exe*), dinamik bağlantı kitaplıkları (*. dll*)
 | `Platform` | İsteğe bağlı `String` parametre.<br /><br /> Çıkış dosyası tarafından hedeflenen işlemci platformunu belirtir. Bu parametre,,, veya değerine sahip olabilir `x86` `x64` `Itanium` `anycpu` . `anycpu` varsayılan değerdir. Bu parametre, *vbc.exe* derleyicisinin [Platform](/dotnet/visual-basic/reference/command-line-compiler/platform) anahtarına karşılık gelir. |
 | `References` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Görevin, belirtilen öğelerden ortak tür bilgilerini geçerli projeye almasına neden olur. Bu parametre *vbc.exe* derleyicisinin [-Reference](/dotnet/visual-basic/reference/command-line-compiler/reference) anahtarına karşılık gelir. |
 | `RemoveIntegerChecks` | İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , tamsayı taşma hata denetimlerini devre dışı bırakır. `false` varsayılan değerdir. Bu parametre *vbc.exe* derleyicisinin [-removeintdenetimleri](/dotnet/visual-basic/reference/command-line-compiler/removeintchecks) anahtarına karşılık gelir. |
-| `Resources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bir .NET Framework kaynağını çıkış dosyasına katıştırır. Bu parametre *vbc.exe* derleyicisinin [-Resource](/dotnet/visual-basic/reference/command-line-compiler/resource) anahtarına karşılık gelir. |
+| `Resources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> bir .NET Framework kaynağını çıkış dosyasına katıştırır. Bu parametre *vbc.exe* derleyicisinin [-Resource](/dotnet/visual-basic/reference/command-line-compiler/resource) anahtarına karşılık gelir. |
 | `ResponseFiles` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bu görev için komutları içeren yanıt dosyasını belirtir. Bu parametre, *vbc.exe* derleyicisinin [@ (yanıt dosyasını belirt)](/dotnet/visual-basic/reference/command-line-compiler/specify-response-file) seçeneğine karşılık gelir. |
 | `RootNamespace` | İsteğe bağlı `String` parametre.<br /><br /> Tüm tür bildirimlerinin kök ad alanını belirtir. Bu parametre, *vbc.exe* derleyicisinin [-RootNamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace) anahtarına karşılık gelir. |
 | `SdkPath` | İsteğe bağlı `String` parametre.<br /><br /> *mscorlib.dll* ve *microsoft.visualbasic.dll* konumunu belirtir. Bu parametre *vbc.exe* derleyicisinin [-SdkPath](/dotnet/visual-basic/reference/command-line-compiler/sdkpath) anahtarına karşılık gelir. |
-| `Sources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Bir veya daha fazla Visual Basic kaynak dosyasını belirtir. |
+| `Sources` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> bir veya daha fazla Visual Basic kaynak dosyasını belirtir. |
 | `TargetCompactFramework` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Görev, .NET Compact Framework hedefler. Bu anahtar *vbc.exe* derleyicisinin [-netcf](/dotnet/visual-basic/reference/command-line-compiler/netcf) anahtarına karşılık gelir. |
-| `TargetType` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasının dosya biçimini belirtir. Bu parametre, bir, bir `library` `exe` `module` Windows programı oluşturan veya bir modül oluşturan bir konsol uygulaması oluşturan bir ' ' değeri olabilir `winexe` . `library` varsayılan değerdir. Bu parametre *vbc.exe* derleyicisinin [-target](/dotnet/visual-basic/reference/command-line-compiler/target) anahtarına karşılık gelir. |
+| `TargetType` | İsteğe bağlı `String` parametre.<br /><br /> Çıktı dosyasının dosya biçimini belirtir. bu parametre, bir, bir `library` `exe` `module` modül oluşturan veya Windows bir program oluşturan bir konsol uygulaması oluşturan bir kod kitaplığı oluşturan, bir değerine sahip olabilir `winexe` . `library` varsayılan değerdir. Bu parametre *vbc.exe* derleyicisinin [-target](/dotnet/visual-basic/reference/command-line-compiler/target) anahtarına karşılık gelir. |
 | `Timeout` | İsteğe bağlı `Int32` parametre.<br /><br /> Görev yürütülebilir dosyasının sonlandırılacağı süre (milisaniye cinsinden) sayısını belirtir. Varsayılan değer `Int.MaxValue` , zaman aşımı süresi olmadığını gösterir. |
-| `ToolPath` | İsteğe bağlı `String` parametre.<br /><br /> Görevin temel alınan yürütülebilir dosyayı (*vbc.exe*) yükleyecek konumu belirtir. Bu parametre belirtilmezse, görev MSBuild çalıştıran Framework sürümüne karşılık gelen SDK yükleme yolunu kullanır. |
+| `ToolPath` | İsteğe bağlı `String` parametre.<br /><br /> Görevin temel alınan yürütülebilir dosyayı (*vbc.exe*) yükleyecek konumu belirtir. Bu parametre belirtilmezse, görev, MSBuild çalıştıran Framework sürümüne karşılık gelen SDK yükleme yolunu kullanır. |
 | `TreatWarningsAsErrors` | İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , tüm uyarılar hata olarak değerlendirilir. Daha fazla bilgi için bkz. [-warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror). |
 | `UseHostCompilerIfAvailable` | İsteğe bağlı `Boolean` parametre.<br /><br /> Görev, varsa, işlem içi derleyici nesnesini kullanmasını söyler. Yalnızca Visual Studio tarafından kullanılır. |
 | `Utf8Output` | İsteğe bağlı `Boolean` parametre.<br /><br /> Derleyici çıkışını UTF-8 kodlaması kullanarak günlüğe kaydeder. Bu parametre *vbc.exe* derleyicisinin [-utf8output](/dotnet/visual-basic/reference/command-line-compiler/utf8output) anahtarına karşılık gelir. |
@@ -95,7 +96,7 @@ Yürütülebilir dosyalar (*. exe*), dinamik bağlantı kitaplıkları (*. dll*)
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek bir Visual Basic projesi derler.
+ aşağıdaki örnek bir Visual Basic projesi derler.
 
 ```xml
 <VBC

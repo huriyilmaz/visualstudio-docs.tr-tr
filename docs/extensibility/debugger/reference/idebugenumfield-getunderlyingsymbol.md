@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 692f5cb3be55e76e1471836bbd422367d637d6b12b93ee5099fc5a70705821f7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f13e157b5967d0a5ba3438fd4ed8c02cc41a8b09
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342212"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079095"
 ---
 # <a name="idebugenumfieldgetunderlyingsymbol"></a>IDebugEnumField::GetUnderlyingSymbol
 Bu yöntem, numaralandırmanın adını temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.

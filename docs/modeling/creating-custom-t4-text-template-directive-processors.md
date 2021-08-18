@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: bad843cf2cf90cfc591f32c9c6bfda8e350bd4a6c17c67ac9a220b296f75ac58
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9441a0525a4e01b99f6b43ef696b97f7d1a9b6d3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386036"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040404"
 ---
 # <a name="create-custom-t4-text-template-directive-processors"></a>Özel T4 Metin Şablonu Yönerge İşlemcileri Oluşturma
 

@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: b5994d2629a49757980695ca99a6d12ae21160a6
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 3aff5311231069b2fa51feebd1124f2b20e8b707
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386533"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040131"
 ---
 # <a name="properties-of-port-shapes"></a>Bağlantı Noktası Şekillerinin Özellikleri
 Oluşturulan tasarımcıda etki alanı sınıflarını göstermek için bağlantı noktası şekillerini kullanabilirsiniz.

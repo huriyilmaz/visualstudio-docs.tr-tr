@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 202266e37be65486a7db0de33f0713842ff8e3c755fcd4c3cba6fe6c780a39da
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f307143c89f36c62e45a08a98c78a7c9ba03d1ae
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443509"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108739"
 ---
 # <a name="how-to-use-reserved-xml-characters-in-project-files"></a>Nasıl kullanılır: Proje dosyalarında ayrılmış XML karakterlerini kullanma
 

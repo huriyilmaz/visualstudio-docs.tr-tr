@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5468035fb8a367e2e4d437243d3fb8a4700a8214
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8e5348a73f3a7e99cd86d45d3d59bfe8d6ebed57164fb9468a4c298689f3973f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122039026"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121442573"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Yüksek oranda 2. nesil atık toplama
 

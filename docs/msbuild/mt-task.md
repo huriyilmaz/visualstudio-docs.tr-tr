@@ -27,12 +27,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 6463108b2cad5c015752e48c8c3616300479efb176288c2784e49a43901b839c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 71466d1b74d371d409a0be26bf56ce7c5824ce52
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397325"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108453"
 ---
 # <a name="mt-task"></a>MT görevi
 
@@ -66,12 +66,12 @@ Microsoft Bildirim Aracı'nı sarmalar ve *mt.exe.* Daha fazla bilgi için [bkz.
 |**ResourceOutputFileName**|İsteğe **bağlı Dize** parametresi.<br /><br /> Bildirimi proje çıkışına eklemek için kullanılan çıkış kaynakları dosyasını belirtir.|
 |**Kaynaklar**|İsteğe `ITaskItem[]` bağlı parametre.<br /><br /> Boşluklarla ayrılmış bildirim kaynak dosyalarının listesini belirtir.<br /><br /> Daha fazla bilgi için **bkz.** [Mt.exe.](/windows/desktop/SbsCs/mt-exe)|
 |**SuppressDependencyElement**|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` bağımlılık öğeleri olmadan bir bildirim üretir. Bu parametre `true` ise, **ManifestFromManagedAssemblyMT görev parametresini de** belirtin.<br /><br /> Daha fazla bilgi için, içinde **/nodependency** [seçeneğineMt.exe.](/windows/desktop/SbsCs/mt-exe)|
-|**SuppressStartupBanner**|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` görev başlatıldığında telif hakkı ve sürüm numarası iletinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için [Mt.exe](/windows/desktop/SbsCs/mt-exe) **/nologo** seçeneğine bakın.|
-|**TrackerLogDirectory**|İsteğe bağlı `String` parametre.<br /><br /> Bu görev için İzleme günlüklerinin depolandığı ara dizini belirtir.|
-|**TypeLibraryFile**|İsteğe bağlı **dize** parametresi.<br /><br /> Tür kitaplığı (*. tlb*) dosyasının adını belirtir. Bu parametreyi belirtirseniz, **ComponentFileNameMT** görev parametresini de belirtin.<br /><br /> Daha fazla bilgi için [Mt.exe](/windows/desktop/SbsCs/mt-exe)içindeki **/tlb** seçeneğine bakın.|
-|**Updatefilekarmaları**|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`, **UpdateFileHashesSearchPathMT** görev parametresi tarafından belirtilen yoldaki dosyaların karma değerini hesaplar ve ardından Hesaplanan değeri kullanarak bildirimin **Dosya** öğesinin **karma** özniteliğinin değerini güncelleştirir.<br /><br /> Daha fazla bilgi için [Mt.exe](/windows/desktop/SbsCs/mt-exe)içindeki **/hashupdate** seçeneğine bakın. Ayrıca bkz. bu tablodaki **UpdateFileHashesSearchPath** parametresi.|
-|**UpdateFileHashesSearchPath**|İsteğe bağlı `String` parametre.<br /><br /> Dosya karmaları güncelleştirilirken kullanılacak arama yolunu belirtir. **UpdateFileHashesMT** görev parametresiyle bu parametreyi kullanın.<br /><br /> Daha fazla bilgi için bu tablodaki **Updatefilekarmaları** parametresine bakın.|
-|**VerboseOutput**|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`, Ayrıntılı hata ayıklama bilgilerini görüntüler.<br /><br /> Daha fazla bilgi için, [Mt.exe](/windows/desktop/SbsCs/mt-exe)içindeki **/verbose** seçeneğine bakın.|
+|**SuppressStartupBanner**|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` görev başlatıldığında telif hakkı ve sürüm numarası iletinin görüntülenmesini önler.<br /><br /> Daha fazla bilgi için, içinde **/nologo** [seçeneğineMt.exe.](/windows/desktop/SbsCs/mt-exe)|
+|**TrackerLogDirectory**|İsteğe `String` bağlı parametre.<br /><br /> Bu görevin izleme günlüklerinin depolandığı ara dizini belirtir.|
+|**TypeLibraryFile**|İsteğe **bağlı Dize** parametresi.<br /><br /> Tür kitaplığı (*.tlb*) dosyasının adını belirtir. Bu parametreyi belirtirsiniz, **ComponentFileNameMT görev parametresini de** belirtin.<br /><br /> Daha fazla bilgi için bkz. [](/windows/desktop/SbsCs/mt-exe) **Mt.exe.**|
+|**UpdateFileHashes**|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` **UpdateFileHashesSearchPathMT**  görev parametresi tarafından belirtilen yolda dosyaların karma değerini hesaplar ve ardından hesaplanan değeri  kullanarak bildirimin dosya öğesinin karma özniteliğinin değerini güncelleştirer.<br /><br /> Daha fazla bilgi için,Mt.exe'de **/hashupdate** [seçeneğine bakın.](/windows/desktop/SbsCs/mt-exe) Ayrıca bu tabloda **UpdateFileHashesSearchPath** parametresine bakın.|
+|**UpdateFileHashesSearchPath**|İsteğe `String` bağlı parametre.<br /><br /> Dosya karmaları güncelleştirildiğinde kullanmak üzere arama yolunu belirtir. **UpdateFileHashesMT görev parametresiyle bu** parametreyi kullanın.<br /><br /> Daha fazla bilgi için bu **tablodaki UpdateFileHashes** parametresine bakın.|
+|**VerboseOutput**|İsteğe `Boolean` bağlı parametre.<br /><br /> ise `true` ayrıntılı hata ayıklama bilgilerini görüntüler.<br /><br /> Daha fazla bilgi için, içinde **/verbose** [seçeneğineMt.exe.](/windows/desktop/SbsCs/mt-exe)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

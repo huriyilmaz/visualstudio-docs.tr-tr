@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 829886c196e9d727250e9e1f7773c5cb93008cdc059799bfaa6c3feff0fa8784
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 62a55241bf74fd57e463faabe335bee5999ad698
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380153"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058901"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
 Belirtilen bir göreli sanal adres (RVA) ve sapmayı içeren veya en yakın olan belirtilen bir sembol türünü alır.

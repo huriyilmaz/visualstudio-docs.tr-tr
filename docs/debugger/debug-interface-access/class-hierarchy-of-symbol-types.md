@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 97817cec3ef4a36264b0f5e994509cc527bd2de44b64379ac921554d76b95ae8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7e46e0f5c9b8b4afc3757875996dfc74bb86df33
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345732"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121710"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Simge Türlerinin Sınıf Hiyerarşisi
 Aşağıdaki tablo, sınıf hiyerarşisindeki sembol türlerini açıklar.
