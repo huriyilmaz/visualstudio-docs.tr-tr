@@ -1,6 +1,6 @@
 ---
-description: Bekleyen kesme noktası durumunu alır.
-title: IDebugPendingBreakpoint2::GetState | Microsoft Docs
+description: Bekleyen kesme noktasının durumunu alır.
+title: 'IDebugPendingBreakpoint2:: GetState | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 46d8a67081c4f43fa13726b2f1f163c96e637d39931fea39928e5a89803d4b00
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b5d9623721f5ea32e5251164d79a43788c2d7c41
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121339131"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050890"
 ---
 # <a name="idebugpendingbreakpoint2getstate"></a>IDebugPendingBreakpoint2::GetState
-Bekleyen kesme noktası durumunu alır.
+Bekleyen kesme noktasının durumunu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,10 +44,10 @@ int GetState(
 
 ## <a name="parameters"></a>Parametreler
 `pState`\
-[in, out] Bu [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) kesme noktası açıklamasıyla doldurulan bir PENDING_BP_STATE_INFO yapısı.
+[in, out] Bu bekleyen kesme noktasının açıklamasıyla birlikte doldurulan bir [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

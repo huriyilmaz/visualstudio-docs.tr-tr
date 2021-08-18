@@ -1,6 +1,6 @@
 ---
-description: Belirtilen programın genellikle sonlandırıldığı ve aynı programın tüm başvurularını temizlemesi ve program yok etme olayı göndermesini gerektiren bir hata ayıklama altyapısına (DE) bildirir.
-title: IDebugEngine2::D estroyProgram | Microsoft Docs
+description: Bir hata ayıklama altyapısına (DE) belirtilen programın zaman içinde sonlandırılma durumu olduğunu ve DE'nin programa yapılan tüm başvuruları temizlemesi ve bir program yok etme olayı göndermesi gerektiğini bilgi verir.
+title: IDebugEngine2::D estprogram | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 0c9e2698-c70f-4770-a7bb-39650e9c3a1f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c0a58dd5893c3235ded9c7eeb5f5d47e3ddcb380
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 49256244f5839341c66f5a308505c18c0737eace
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105093853"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119145"
 ---
 # <a name="idebugengine2destroyprogram"></a>IDebugEngine2::DestroyProgram
-Belirtilen programın genellikle sonlandırıldığı ve aynı programın tüm başvurularını temizlemesi ve program yok etme olayı göndermesini gerektiren bir hata ayıklama altyapısına (DE) bildirir.
+Bir hata ayıklama altyapısına (DE) belirtilen programın zaman içinde sonlandırılma durumu olduğunu ve DE'nin programa yapılan tüm başvuruları temizlemesi ve bir program yok etme olayı göndermesi gerektiğini bilgi verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,15 +43,15 @@ int DestroyProgram(
 
 ## <a name="parameters"></a>Parametreler
 `pProgram`\
-'ndaki Atipik olarak sonlandırılan programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
+[in] Atipik olarak sonlandırılan programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra, daha sonra oturum hata ayıklama Yöneticisi 'ne (SDM) geri bir [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) olayı gönderir.
+ Bu yöntem çağrıldıktan sonra, DE daha sonra oturum hata ayıklama yöneticisine (SDM) [bir IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) olayı gönderir.
 
- Bu yöntem, `E_NOTIMPL` hata ayıklamakta olan programla aynı işlemde çalışıyorsa, uygulanmaz (döndürür). Bu yöntem yalnızca, SDM ile aynı işlemde çalıştırılıyorsa uygulanır.
+ DE, hata ayıklama yapılan programla aynı işlemde çalıştırıldısa bu yöntem uygulanmaz `E_NOTIMPL` (döndürür). Bu yöntem yalnızca DE SDM ile aynı işlemde çalıştırıldısa uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

@@ -11,17 +11,18 @@ ms.assetid: 4eb8c7c3-aadf-4187-abee-c0620308a3eb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d73b91a33128d663417e3579812b16a0e0800dd3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 356ddfc39085ac6bfcf6b72c866e390b47e02980
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082900"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137853"
 ---
 # <a name="ienumdebugpropertyinfo2next"></a>IEnumDebugPropertyInfo2::Next
 Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.

@@ -1,6 +1,6 @@
 ---
-title: Grafik piksel geçmişi | Microsoft Docs
-description: Belirli bir pikselin geçmişini görerek işleme sorunlarını giderin. Grafik piksel geçmişi, Direct3D olaylarının etkilerini gösterir.
+title: Grafik Piksel Geçmişi | Microsoft Docs
+description: Belirli bir pikselin geçmişini görerek işleme sorunlarını giderme. Grafik Piksel Geçmişi, Direct3D olaylarının etkilerini gösterir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,71 +10,72 @@ ms.assetid: 0a2cbde5-1ad9-487e-857c-a3664158c268
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 977d97bad864c27c164b6a7da0b14ad1a08128e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ed00f0616cc18ce9f2bc73ebbae0927e0c79e990
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888634"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058574"
 ---
 # <a name="graphics-pixel-history"></a>Grafik Piksel Geçmişi
-Visual Studio Grafik Çözümleyicisi grafik piksel geçmişi penceresi, belirli bir pikselin, oyununuzun veya uygulamanızın bir çerçevesinde gerçekleşen Direct3D olaylarından nasıl etkilendiğini anlamanıza yardımcı olur.
+Visual Studio Graphics Analyzer'daki Grafik Piksel Geçmişi penceresi, belirli bir pikselin, oyun veya uygulamanın bir çerçevesi sırasında oluşan Direct3D olaylarının nasıl etkilendiğini anlamanıza yardımcı olur.
 
- Bu, piksel geçmişi penceresidir:
+ Bu, Piksel Geçmişi penceresidir:
 
- ![Geçmişinde üç Direct3D olayına sahip bir piksel.](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")
+ ![Geçmişinde üç Direct3D olay olan bir piksel.](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")
 
 ## <a name="understanding-the-pixel-history-window"></a>Piksel Geçmişi penceresini anlama
- Piksel geçmişi 'ni kullanarak, oluşturma hedefinin belirli bir pikselin bir çerçeve sırasında Direct3D olaylarından nasıl etkileneceği analiz edebilirsiniz. Bir işleme sorununu, sonraki olaylar veya aynı olaydaki sonraki temel öğeler gibi belirli bir Direct3D olayına, pikselin son renk değerini değiştirmeye devam edebilirsiniz. Örneğin, bir piksel yanlış bir şekilde oluşturulabilir ve sonra renkleri framebuffer içinde karışarak başka bir yarı saydam piksel tarafından görünmeyebilir. Bu tür bir sorun, size rehberlik etmek için yalnızca oluşturma hedefinin son içeriğine sahip olup olmadığını tanılamak zor olabilir.
+ Piksel Geçmişi'ne bakarak, işleme hedefinin belirli bir pikselini bir çerçeve sırasında Direct3D olaylarının nasıl etkilendiğini analiz edersiniz. Sonraki olaylar (veya aynı olayda sonraki temel öğeler) pikselin son renk değerini değiştirmeye devam ediyor olsa bile, belirli bir Direct3D olayına işleme sorununu tespit edersiniz. Örneğin, bir piksel yanlış işlenecek ve ardından renkleri framebuffer içinde bir araya getirilecek şekilde başka bir yarı saydam piksel tarafından obscured olabilir. İşleme hedefinin size rehberlik etmek için yalnızca son içeriğine sahip olsaydık bu tür bir sorunu tanılamak zor olurdu.
 
- Piksel geçmişi penceresi, seçilen karenin kursu boyunca bir pikselin tamamlanma geçmişini görüntüler. Pencerenin üst kısmındaki **son çerçeve arabelleği** , çerçevenin sonundaki framebuffer ile birlikte gelen ve ekran koordinatları gibi piksel hakkındaki ek bilgilerle yazılmış olan rengi görüntüler. bu Bu alan ayrıca **Alfa Oluştur** onay kutusunu da içerir. Bu onay kutusu seçildiğinde, **son kare arabelleği** rengi ve ara renk değerleri bir dama tahtası deseninin üzerinde saydamlıkla görüntülenir. Onay kutusu silinirse, renk değerlerinin alfa kanalı yok sayılır.
+ Piksel Geçmişi penceresi, seçilen çerçevenin üzerinde bir pikselin tam geçmişini görüntüler. Pencerenin **üst kısmında** yer alan Son Çerçeve Arabelleği, çerçevenin sonundaki framebuffer'a yazılan rengi ve gelen çerçeve ve ekran koordinatları gibi piksel hakkında ek bilgiler görüntüler. Bu alan ayrıca İşleme **Alfası onay** kutusunu da içerir. Bu onay kutusu seçildiğinde, Son **Çerçeve** AraBelleği rengi ve ara renk değerleri, denetleyici panosu deseni üzerinde saydamlık ile görüntülenir. Onay kutusu temizse renk değerlerinin alfa kanalı yoksayılır.
 
- Pencerenin alt kısmında, framebuffer 'ın başlangıçtaki ve nihai renk değerlerini temsil eden **ilk** ve **son** sözde etkinliklerle birlikte piksel rengini etkileyen bir şansınız olan olaylar görüntülenir. İlk renk değeri, pikselin rengini değiştiren ilk olay tarafından belirlenir (genellikle bir `Clear` olay). Başka hiçbir olay etkilenmedikleri zaman bile, bir piksel geçmişinde bu iki sözde olaya her zaman sahiptir. Diğer olayların pikseli etkileme şansı varsa, bunlar **ilk** ve **son** olaylar arasında görüntülenir. Olayları, ayrıntılarını göstermek için genişletilebilir. Bir işleme hedefini temizleyecek olanlar gibi basit olaylar için, etkinliğin etkisi yalnızca bir renk değeridir. Çizim çağrıları gibi daha karmaşık olaylar, pikselin rengine katkıda bulunan bir veya daha fazla temel oluşturur.
+ Pencerenin alt kısmında pikselin rengini etkileme şansına sahip olan olaylar, framebuffer  içinde pikselin ilk ve son renk değerlerini temsil eden Başlangıç ve Son sahte olaylar ile birlikte görüntülenir.  İlk renk değeri, pikselin rengini değiştiren ilk olay (genellikle bir olay) tarafından `Clear` belirlenir. Bir pikselin geçmişinde bu iki sahte olay vardır ve bundan etkilenecek başka bir olay yoktur. Pikseli etkileme şansı olan diğer olaylar, İlk ve Son **olayları arasında** **görüntülenir.** Olaylar ayrıntılarını gösterecek şekilde genişletilebilir. İşleme hedefini temizleyeneler gibi basit olaylar için olayın etkisi yalnızca bir renk değeridir. Draw çağrıları gibi daha karmaşık olaylar pikselin rengine katkıda bulunarak bir veya daha fazla temel öğe üretir.
 
- Olay tarafından çizilen temel elemanlar, nesne için toplam temel sayı ile birlikte temel tür ve dizinleriyle tanımlanır. Örneğin, **üçgen (1456)/(6214)** gibi bir tanımlayıcı, ilkel öğenin, 6214 üçgenden oluşan bir nesne içindeki 1456th üçgene karşılık geldiği anlamına gelir. Her ilkel tanımlayıcının solunda, ilkel öğenin piksel üzerinde sahip olduğu etkiyi özetleyen bir simge bulunur. Piksel rengini etkileyen temel elemanlar, sonuç rengiyle doldurulmuş bir yuvarlatılmış dikdörtgen tarafından temsil edilir. Piksel rengi üzerinde bir etkiye sahip olmanın dışında bırakılan temel elemanlar, pikselin dışlanmasının neden olduğunu belirten simgelerle temsil edilir. Bu simgeler, bu makalenin ilerleyen kısımlarında bölüm [temel dışlama](#exclusion) bölümünde açıklanmaktadır.
+ Olay tarafından çizilen ilkeller, nesne için toplam ilkel sayısıyla birlikte ilkel tür ve dizinleriyle tanımlanır. Örneğin, **(6214) Üçgen (1456)** gibi bir tanımlayıcı, ilkelin 6214 üçgenden oluşan bir nesnede 1456. üçgene karşılık geldiğini gösterir. Her ilkel tanımlayıcının sol tarafta, ilkelin piksel üzerindeki etkisini özetleyen bir simge yer almaktadır. Piksel rengini etkileyen temel öğeler, sonuç rengiyle doldurulmuş yuvarlanmış bir dikdörtgenle temsil eder. Piksel renginin etkisinden dışlanan temel öğeler, pikselin dışlama nedenini belirten simgelerle temsil eder. Bu simgeler, bu makalenin sonraki [kısımlarında temel dışlama](#exclusion) bölümünde açıklanmıştır.
 
- Her bir temel genişleterek, piksel gölgelendirici çıkışının, sonuç rengini oluşturmak için mevcut piksel rengi ile nasıl birleştirildiğini inceleyebilirsiniz. Buradan, temel ile ilişkili piksel gölgelendirici kodunu inceleyebilir veya hata ayıklayın ve köşe gölgelendirici girişini incelemek için köşe gölgelendirici düğümünü daha da genişletebilirsiniz.
+ Piksel gölgelendiricisi çıktısını mevcut piksel rengiyle birleştirmiş ve sonuç rengini nasıl üreteceklerini incelemek için her bir temele genişletebilirsiniz. Buradan temel öğeyle ilişkili piksel gölgelendiricisi kodunu inceler veya hata ayıklar ve köşe gölgelendiricisi girişini incelemek için köşe gölgelendirici düğümünü daha da genişletebilirsiniz.
 
-### <a name="primitive-exclusion"></a><a name="exclusion"></a> Temel dışlama
- Bir temel değer piksel rengini etkilemeden dışlanmazsa, dışlama çeşitli nedenlerle meydana gelebilir. Her neden, bu tabloda açıklanan bir simgeyle temsil edilir:
+### <a name="primitive-exclusion"></a><a name="exclusion"></a> İlkel dışlama
+ Bir temel öğe piksel rengini etkilemeden dışlanmışsa, dışlama çeşitli nedenlerle oluşabilir. Her neden, bu tabloda açıklanan bir simgeyle gösterilir:
 
 |Simge|Dışlama nedeni|
 |----------|--------------------------|
-|![Derinlik testi hatası simgesi.](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|Derinlik testinde başarısız olduğu için piksel dışarıda bırakıldı.|
-|![Makas test hatası simgesi.](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|Makas testinde başarısız olduğu için piksel dışarıda bırakıldı.|
-|![Kalıp test hatası simgesi.](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|Kalıp testinde başarısız olduğu için piksel dışarıda bırakıldı.|
+|![Derinlik testi hatası simgesi.](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|Piksel, derinlik testinde başarısız olduğu için dışlandı.|
+|![Scissor test hatası simgesi.](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|Piksel, scissor testinde başarısız olduğu için dışlandı.|
+|![Kalıp testi hatası simgesi.](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|Piksel, şablon testinde başarısız olduğu için dışlandı.|
 
-### <a name="draw-call-exclusion"></a>Çağrı dışlamasını çiz
- Bir çizim çağrısındaki tüm temel elemanlar, test başarısız olduğu için işleme hedefini etkilediğinden dışlanmazsa, çizim çağrısı genişletilemiyor ve öğenin yanında dışlama nedenine karşılık gelen bir simge gösterilir. Beraberlik-Call dışlamanın nedenleri, temel dışlamanın nedenlerini ve bunların simgeleri benzerdir.
+### <a name="draw-call-exclusion"></a>Draw Çağrı Dışlama
+ Bir çizim çağrısında yer alan temel öğeler, bir testte başarısız olduğu için işleme hedefini etkilemeden hariç tutulacaksa, çizim çağrısı genişletilamaz ve dışlamanın nedenini karşılık gelen bir simge yanında görüntülenir. Draw-call dışlama nedenleri ilkel dışlama nedenlerine benzer ve simgeleri benzerdir.
 
 ### <a name="viewing-and-debugging-shader-code"></a>Gölgelendirici kodunu görüntüleme ve hata ayıklama
- Gölgelendirici ile ilişkili temel öğe altındaki denetimleri kullanarak köşe, Hull, etki alanı, geometri ve Piksel gölgelendiricileri için kodu inceleyebilir ve hata ayıklama yapabilirsiniz.
+ Gölgelendiriciyle ilişkili temel öğenin altındaki denetimleri kullanarak köşe, köşe, etki alanı, geometri ve piksel gölgelendiricileri için kodu inceleyebilirsiniz ve kodda hata ayıkabilirsiniz.
 
-##### <a name="to-view-a-shaders-source-code"></a>Gölgelendirici kaynak kodunu görüntülemek için
+##### <a name="to-view-a-shaders-source-code"></a>Gölgelendiricinin kaynak kodunu görüntülemek için
 
-1. **Grafik piksel geçmişi** penceresinde, incelemek istediğiniz gölgelendiriciye karşılık gelen çizim çağrısını bulun ve genişletin.
+1. Grafik **Piksel Geçmişi penceresinde,** incelemek ve genişletmek istediğiniz gölgelendiriciye karşılık gelen çizim çağrısını bulun.
 
-2. Yeni genişleteceğiniz çizim çağrısının altında ilgilendiğiniz sorunu gösteren bir temel seçin ve genişletin.
+2. Az önce genişletmiş olduğunuz draw çağrısının altında ilgilendiğimiz sorunu gösteren bir temel öğe seçin ve genişletin.
 
-3. İlgilendiğiniz temel öğe altında, gölgelendirici başlığı bağlantısını izleyin. Örneğin, köşe gölgelendirici kaynak kodunu görüntülemek için, bkz **: 30 bağlantı köşe** gölgelendiricisi.
+3. İlgilenilen temel öğenin altında gölgelendirici başlığı bağlantısını izleyin; örneğin köşe gölgelendiricisi kaynak kodunu görüntülemek için **Köşe Gölgelendiricisi obj:30** bağlantısını izleyin.
 
     > [!TIP]
-    > Nesne numarası, **obj: 30**, bu gölgelendiriciyi nesne tablosu ve ardışık düzen aşamaları penceresinde olduğu gibi grafik Çözümleyicisi arabirimi boyunca tanımlar.
+    > **obj:30** nesne numarası, nesne tablosu ve işlem hattı aşamaları penceresinde olduğu gibi Grafik Çözümleyicisi arabiriminde bu gölgelendiriciyi tanımlar.
 
 ##### <a name="to-debug-a-shader"></a>Gölgelendiricide hata ayıklamak için
 
-1. **Grafik piksel geçmişi** penceresinde, incelemek istediğiniz gölgelendiriciye karşılık gelen çizim çağrısını bulun ve genişletin.
+1. Grafik **Piksel Geçmişi penceresinde,** incelemek ve genişletmek istediğiniz gölgelendiriciye karşılık gelen çizim çağrısını bulun.
 
-2. Ardından, az önce genişleteceğiniz çizim çağrısının altında ilgilendiğiniz sorunu gösteren bir temel seçin ve genişletin.
+2. Ardından, az önce genişletmiş olduğunuz draw çağrısının altında ilgilendiğimiz sorunu gösteren bir temel öğe seçin ve genişletin.
 
-3. İlgilendiğiniz temel öğe altında, **hata ayıklamayı Başlat**' ı seçin. Bu giriş noktası, HLSL hata ayıklayıcısına karşılık gelen temel için gölgelendirici ilk çağrılma (yani, gölgelendirici tarafından işlenen ilk piksel veya köşe) için varsayılan olarak kullanılır. İlkel ile ilişkili yalnızca bir piksel vardır, ancak çizgiler ve üçgenler için birden fazla köşe gölgelendirici çağırmaları vardır.
+3. İlgilenin temel öğenin altında Hata Ayıklamayı **Başlat'ı seçin.** HLSL hata ayıklayıcısına bu giriş noktası, karşılık gelen ilkel için gölgelendiricinin ilk çağrılarak varsayılan olarak gölgelendirici tarafından işlenen ilk pikseli veya köşeyi kullanır. Temel öğeyle ilişkilendirilmiş yalnızca bir piksel vardır, ancak çizgiler ve üçgenler için birden fazla köşe gölgelendiricisi çağrıları vardır.
 
-     Belirli bir köşe için köşe gölgelendirici çağrısında hata ayıklamak için VertexShader title bağlantısını genişletin ve ilgilendiğiniz köşeyi bulun, sonra da bunun yanındaki **hata ayıklamayı Başlat** ' ı seçin.
+     Belirli bir köşe için köşe gölgelendiricisi çağırmada hata ayıklamak için, VertexShader başlık bağlantısını genişletin ve  ilgilendiğiniz köşeyi bulun ve yanındaki Hata Ayıklamayı Başlat'ı seçin.
 
 ### <a name="links-to-graphics-objects"></a>Grafik nesnelerine bağlantılar
- Piksel geçmişindeki grafik olaylarını anlamak için, olay sırasında veya olay tarafından başvurulan Direct3D nesneleri hakkında, cihaz durumu hakkında bilgilere ihtiyacınız bulunabilir. Piksel geçmişindeki her bir olay için **Grafik piksel geçmişi** , daha sonra geçerli cihaz durumuna ve ilgili nesnelere bağlantılar sağlar.
+ Piksel geçmişinde grafik olaylarını anlamak için, olay sırasında cihaz durumu veya olay tarafından başvurulan Direct3D nesneleri hakkında bilgilere ihtiyacınız olabilir. Piksel geçmişinde yer alan her olay için Grafik **Piksel Geçmişi,** o zaman geçerli olan cihaz durumuna ve ilgili nesnelere bağlantılar sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler](walkthrough-missing-objects-due-to-device-state.md)

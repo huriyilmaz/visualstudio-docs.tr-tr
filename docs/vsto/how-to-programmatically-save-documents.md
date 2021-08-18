@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 7571ca0d16bdd1fc8ebb9f8552d6b55618ffa746dc505bf8bdc81ee2e9452306
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2b1e00d60709d506ae0d3ee2d4bd6842be43be19
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121351724"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046470"
 ---
 # <a name="how-to-programmatically-save-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri kaydetme
 

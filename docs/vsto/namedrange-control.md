@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 002fa5135eb99c671cd00eef76299858a3c8cba4ae1ea80cec46335486fb3d69
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5abdc6fb0c3459052d11e8ac8e3c87b4dd8eb079
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366023"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032478"
 ---
 # <a name="namedrange-control"></a>NamedRange denetimi
   Denetim, <xref:Microsoft.Office.Tools.Excel.NamedRange> benzersiz bir adı olan, olayları ortaya çıkaran ve verilere bağlanan bir aralıktır. Daha fazla bilgi için [bkz. Excel modeline genel bakış.](../vsto/excel-object-model-overview.md)
@@ -35,7 +35,7 @@ ms.locfileid: "121366023"
 ## <a name="create-the-control"></a>Denetimi oluşturma
  Çalışma sayfasına <xref:Microsoft.Office.Tools.Excel.NamedRange> tasarım zamanında Microsoft Office Excel belge düzeyi projelerde çalışma zamanında denetimler ekleyebilirsiniz.
 
- Çalışma zamanında <xref:Microsoft.Office.Tools.Excel.NamedRange> çalışma sayfasına denetimler eklemek için VSTO ekleyebilirsiniz. Daha fazla bilgi için, [bkz. How to: Add NamedRange controls to worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md).
+ Çalışma sayfasına <xref:Microsoft.Office.Tools.Excel.NamedRange> çalışma zamanında bir çalışma sayfasına denetimler eklemek için VSTO ekleyebilirsiniz. Daha fazla bilgi için, [bkz. How to: Add NamedRange controls to worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md).
 
 > [!NOTE]
 > Varsayılan olarak, çalışma sayfası kapatıldığında dinamik olarak oluşturulan adlandırılmış aralıklar konak denetimleri olarak çalışma sayfasında kalıcı olmaz. Daha fazla bilgi için [bkz. Çalışma zamanında Office belgelerine denetim ekleme.](../vsto/adding-controls-to-office-documents-at-run-time.md)
@@ -43,7 +43,7 @@ ms.locfileid: "121366023"
  <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimler yalnızca belirli sayfalarda yer alan aralıklardan oluşur. <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimler tüm sayfalara uygulanabilecek göreli adlara sahip olamaz ve bir çalışma kitabındaki iki veya daha fazla çalışma sayfasına yayılan aralıklardan (3-B aralıklar) oluşan aralıklardan oluşan olamaz.
 
 ## <a name="bind-data-to-the-control"></a>Denetime veri bağlama
- Adlandırılmış aralık, birçok hücreye sahip olduğu için karmaşık veri bağlama için iyi bir aday gibi görünebilir; ancak, aralık yalnızca bir veri kümesinden belirli bir sütuna kolayca eşlenen bir hücre koleksiyonudur. Bu nedenle, <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimler yalnızca basit veri bağlamayı destekler. Denetim, <xref:Microsoft.Office.Tools.Excel.ListObject> karmaşık veri bağlama için kullanılabilir. Daha fazla bilgi için bkz. [ListObject denetimi.](../vsto/listobject-control.md)
+ Adlandırılmış aralık, birçok hücreye sahip olduğu için karmaşık veri bağlama için iyi bir aday gibi görünebilir; ancak, aralık yalnızca bir veri kümesinden belirli bir sütuna kolayca eşlenmemiş bir hücre koleksiyonudur. Bu nedenle, <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimler yalnızca basit veri bağlamayı destekler. Denetim, <xref:Microsoft.Office.Tools.Excel.ListObject> karmaşık veri bağlama için kullanılabilir. Daha fazla bilgi için bkz. [ListObject denetimi.](../vsto/listobject-control.md)
 
  Denetim, <xref:Microsoft.Office.Tools.Excel.NamedRange> özellikleri kullanılarak bir veri kaynağına bağlı <xref:System.Windows.Forms.Control.DataBindings%2A> olabilir. Denetimin varsayılan veri bağlama <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> özelliğidir.
 
@@ -53,7 +53,7 @@ ms.locfileid: "121366023"
  bir denetimine uygulanan <xref:Microsoft.Office.Interop.Excel.Range> biçimlendirme bir denetime <xref:Microsoft.Office.Tools.Excel.NamedRange> uygulanabilir. Buna kenarlıklar, yazı tipleri, sayı biçimleri ve stiller dahildir.
 
 ## <a name="rename-the-control"></a>Denetimi yeniden adlandırma
- Çalışma sayfanıza <xref:Microsoft.Office.Tools.Excel.NamedRange> Araç Kutusundan bir denetim **eklerken,** Visual Studio otomatik olarak bir ad üretir. Adı Özellikler penceresinde **değiştirebilirsiniz.**
+ Çalışma sayfanıza <xref:Microsoft.Office.Tools.Excel.NamedRange> Araç Kutusundan bir denetim **eklerken,** Visual Studio otomatik olarak bir ad üretir. Özellikler penceresinde adı **değiştirebilirsiniz.**
 
 ## <a name="events"></a>Ekinlikler
  Denetim için aşağıdaki olaylar <xref:Microsoft.Office.Tools.Excel.NamedRange> kullanılabilir:
@@ -76,7 +76,7 @@ ms.locfileid: "121366023"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Genişletilmiş Excel kullanarak otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
-- [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
+- [Office örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
 - [Veri çözümlerinin denetimlerini Office bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Çalışma zamanında Word Excel ve VSTO çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Belgelerde Office denetimler](../vsto/controls-on-office-documents.md)

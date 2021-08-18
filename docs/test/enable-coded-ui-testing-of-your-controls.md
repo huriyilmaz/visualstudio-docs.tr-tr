@@ -6,15 +6,16 @@ ms.date: 11/04/2016
 ms.topic: how-to
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 1b4cdc135e0fac7bfbcfb1a558f74195a0f1a191
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d75e6debf4fb50be2d144f0843e6c0be6a84a76c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926657"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140043"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Denetimlerinizin kodlanmış UI testlerini etkinleştirme
 
@@ -71,7 +72,7 @@ Aşağıdaki yordamda gösterildiği gibi denetiminiz için erişilebilirlik uyg
 4. <xref:System.Windows.Forms.AccessibleObject.Bounds%2A> <xref:System.Windows.Forms.AccessibleObject.Name%2A> <xref:System.Windows.Forms.AccessibleObject.Parent%2A> <xref:System.Windows.Forms.AccessibleObject.Role%2A> <xref:System.Windows.Forms.AccessibleObject.State%2A> <xref:System.Windows.Forms.AccessibleObject.Navigate%2A> <xref:System.Windows.Forms.AccessibleObject.Select%2A> Alt denetimin erişilebilirlik nesnesi için,,,,,, ve özelliklerini ve yöntemlerini geçersiz kılın.
 
 > [!NOTE]
-> Bu konu, içindeki erişilebilirlik örneğiyle başlar <xref:System.Windows.Forms.AccessibleObject> ve ardından kalan yordamlarda Bu örnekte oluşturulur. Erişilebilirlik örneğinin çalışan bir sürümünü oluşturmak istiyorsanız, bir konsol uygulaması oluşturun ve *program.cs* içindeki kodu örnek kodla değiştirin. Erişilebilirlik, System. Drawing ve System. Windows. Forms 'a başvurular ekleyin. Bir yapı uyarısını ortadan kaldırmak için erişilebilirlik için **birlikte çalışma türlerini** **yanlış** olarak değiştirin. Uygulamanın çıkış türünü **konsol** uygulamasından **Windows uygulamasına** değiştirerek, uygulamayı çalıştırdığınızda bir konsol penceresinin görünmesini sağlayabilirsiniz.
+> Bu konu, içindeki erişilebilirlik örneğiyle başlar <xref:System.Windows.Forms.AccessibleObject> ve ardından kalan yordamlarda Bu örnekte oluşturulur. Erişilebilirlik örneğinin çalışan bir sürümünü oluşturmak istiyorsanız, bir konsol uygulaması oluşturun ve ardından *program. cs* dosyasındaki kodu örnek kodla değiştirin. Erişilebilirlik, System. Drawing ve sistem 'e başvurular ekleyin. Windows. Formlarındaki. Bir yapı uyarısını ortadan kaldırmak için erişilebilirlik için **birlikte çalışma türlerini** **yanlış** olarak değiştirin. uygulamayı çalıştırdığınızda bir konsol penceresi görünmemesi için, projenin çıkış türünü **konsol uygulamasından** **Windows uygulamasına** dönüştürebilirsiniz.
 
 ## <a name="support-custom-property-validation-by-implementing-a-property-provider"></a>Özellik sağlayıcısı uygulayarak özel özellik doğrulamasını destekleme
 
@@ -184,7 +185,7 @@ Visual Studio bir testi kaydeder, her fare ve klavye olayını yakalar. Ancak ba
 
 ### <a name="to-debug-your-property-provider-or-action-filter"></a>Özellik sağlayıcınızdaki veya eylem filtreinizdeki hataları ayıklamak için
 
-1. Uzantı paketinizin hata ayıklama sürümünü oluşturun *. dll* ve *. pdb* dosyalarını *%ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages* klasörüne kopyalayın.
+1. Uzantı paketinizin hata ayıklama sürümünü oluşturun *.dll* ve *. pdb* dosyalarını *%ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages* klasörüne kopyalayın.
 
 2. Uygulamanızı çalıştırın (hata ayıklayıcıda değil).
 

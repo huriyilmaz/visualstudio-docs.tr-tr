@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1cc2c55399b81d026c1f5c7529bc68ea45c807938bbc27ef784842a8e230bd83
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cfdb54c98728ff0c1eca2c2e4d455fdafc1e9419
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338364"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137944"
 ---
 # <a name="ienumdebugaddresses"></a>IEnumDebugAddresses
 Bu arabirim, [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimini uygulayan bir nesne koleksiyonunu temsil eder.

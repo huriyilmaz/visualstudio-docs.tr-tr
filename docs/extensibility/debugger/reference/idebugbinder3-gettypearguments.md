@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bu nesneyle ilişkili bağımsız değişken türlerinin listesini alıyor.
-title: IDebugBinder3::GetTypeArguments | Microsoft Docs
+description: Bu yöntem, bu nesneyle ilişkili bağımsız değişken türlerinin bir listesini alır.
+title: 'IDebugBinder3:: GetTypeArguments | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4fa3de2f8fc505aa6baaffd5c4370ef407c09029a33f9d2c2c14d02b8174f8e6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5e09dc87423eef2327100385e5c1a823aea5f042
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262431"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119808"
 ---
 # <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
-Bu yöntem, bu nesneyle ilişkili bağımsız değişken türlerinin listesini alıyor.
+Bu yöntem, bu nesneyle ilişkili bağımsız değişken türlerinin bir listesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,22 +49,22 @@ int GetTypeArguments(
 
 ## <a name="parameters"></a>Parametreler
 `skip`\
-[in] Bağımsız değişken türlerini almadan önce atlana alan sayısı.
+'ndaki Bağımsız değişken türlerini almadan önce atlanacak alan sayısı.
 
 `count`\
-[in] İade etmek için bağımsız değişken alanlarının sayısı (ayrıca dizinin boyutunu `ppFields` belirtir).
+'ndaki Döndürülecek bağımsız değişken alanı sayısı (Ayrıca dizinin boyutunu belirtir `ppFields` ).
 
 `ppFields`\
-[in, out] Bu yöntemin dönüşünde doldurulacak alan dizisi.
+[in, out] Bu yöntemin döndürülme sonunda doldurulacak alanlar dizisi.
 
 `pFetched`\
-[out] \( isteğe bağlı) Aslında döndürülen bağımsız değişken türü alanlarının sayısı.
+[out] \( isteğe bağlı) aslında döndürülen bağımsız değişken türü alanlarının sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bağımsız değişken türlerinin sayısı [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)ile önceden elde edilir.
+ Bağımsız değişken türlerinin sayısı, önceden [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)ile alınabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

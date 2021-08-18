@@ -1,6 +1,6 @@
 ---
-title: Belgelerle Visio çalışma
-description: Microsoft Visio'nin nesne modelini kullanarak Office projelerinde belgelerle çalışmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi Office öğrenin.
+title: Visio belgeleriyle çalışma
+description: Office projelerindeki belgelerle çalışmak üzere Microsoft Visio nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,25 +17,25 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e72f7570171de0a9a2488c1e0fe8f3f6a494f6720617ef9ef976260dfb9a7464
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4f6420f8124a55eb7441d4989c376555a40a64fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121267175"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082640"
 ---
-# <a name="work-with-visio-documents"></a>Belgelerle Visio çalışma
-  Bu bölümdeki konular, Microsoft Office Visio projelerinde belgelerle çalışmak için uygulamanın nesne modelini kullanmaya yönelik adım adım yordamlar ve kod Office sağlar.
+# <a name="work-with-visio-documents"></a>Visio belgeleriyle çalışma
+  bu bölümdeki konularda, Office projelerindeki belgelerle çalışmak üzere Microsoft Office Visio nesne modelini kullanmak için adım adım yordamlar ve kod örnekleri sağlanmaktadır.
 
 |Görev|Yordam|
 |----------|---------------|
-|Boş bir Visio veya var olan bir şablon, şablon veya belgeyi Visio yeni bir belge oluşturun.|[Nasıl kullanılır: Program aracılığıyla yeni Visio oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md)|
-|Mevcut bir Visio açın ve okuma/yazma, salt okuma ve yerleştirme seçeneklerini belirtin.|[Nasıl Visio: Program aracılığıyla Visio açma](../vsto/how-to-programmatically-open-visio-documents.md)|
-|Etkin dosya Visio kapatın.|[Nasıl Visio: Program aracılığıyla Visio kapatma](../vsto/how-to-programmatically-close-visio-documents.md)|
-|Aynı adla veya yeni bir adla bir belgeyi kaydedin.|[Nasıl Visio: Program aracılığıyla Visio kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)|
-|Belgenin tamamını veya belirtilen bir sayfayı yazdırma.|[Nasıl kullanılır: Program aracılığıyla Visio yazdırma](../vsto/how-to-programmatically-print-visio-documents.md)|
+|boş bir Visio belgesi veya var olan bir Visio şablonu, kalıbı veya belgeyi temel alan yeni bir belge oluşturun.|[nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md)|
+|mevcut bir Visio belgesi açın ve okuma/yazma, salt okunurdur ve sabitlenmiş seçeneklerini belirtin.|[nasıl yapılır: program aracılığıyla Visio belgeleri açma](../vsto/how-to-programmatically-open-visio-documents.md)|
+|etkin Visio belgesini kapatın.|[nasıl yapılır: program aracılığıyla Visio belgeleri kapatma](../vsto/how-to-programmatically-close-visio-documents.md)|
+|Aynı ada veya yeni bir ada sahip bir belge kaydedin.|[nasıl yapılır: program aracılığıyla Visio belgeleri kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)|
+|Tüm belgeyi veya belirtilen sayfayı yazdır.|[nasıl yapılır: program aracılığıyla Visio belgeleri yazdırma](../vsto/how-to-programmatically-print-visio-documents.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)
-- [Visio modeline genel bakış](../vsto/visio-object-model-overview.md)
-- [Office çözümlerine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Visio nesne modeline genel bakış](../vsto/visio-object-model-overview.md)
+- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)

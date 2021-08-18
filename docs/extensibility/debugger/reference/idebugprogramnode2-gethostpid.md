@@ -1,6 +1,6 @@
 ---
 description: Programı barındıran işlem için sistem işlem tanımlayıcısını alır.
-title: 'IDebugProgramNode2:: GetHostPid | Microsoft Docs'
+title: IDebugProgramNode2::GetHostPid | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 710c148f3fa45c08d103653f0da29124a23c6b7b4f93d1aa5816ef86d336e04a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3458ab1f9e7e6049736c85189ca437406401575b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402655"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050591"
 ---
 # <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
 Programı barındıran işlem için sistem işlem tanımlayıcısını alır.
@@ -43,13 +43,13 @@ int GetHostPid (
 
 ## <a name="parameters"></a>Parametreler
 `pdwHostPid`\
-dışı Barındırma işlemi için sistem işlem tanımlayıcısını döndürür.
+[out] Barındırma işleminin sistem işlem tanımlayıcısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `CProgram` [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+ Aşağıdaki örnek, `CProgram` [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CProgram::GetHostPid(AD_PROCESS_ID* pdwHostPid) {

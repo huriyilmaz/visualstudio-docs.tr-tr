@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 72028bf039c3291a161cb1a6b4eab6895876d566605212c6f21eb6940a9ddcc5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 999c41f50bc1ded593fd529e45acd876665303ce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392724"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031659"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>Karışık Önerilen Kurallar kural kümesi
 
@@ -70,106 +70,106 @@ Bu kuralı, ortak dil çalışma zamanını destekleyen C++ projeleriniz için o
 |[C6278](/cpp/code-quality/c6278)|Array-New Scalar-Delete uyumsuzluğu|
 |[C6279](/cpp/code-quality/c6279)|Scalar-New Array-Delete uyumsuzluğu|
 |[C6280](/cpp/code-quality/c6280)|Bellek Allocation-Deallocation uyumsuzluğu|
-|[C6281](/cpp/code-quality/c6281)|BitSel İlişki Önceliği|
-|[C6282](/cpp/code-quality/c6282)|Atama Testin Yerini Aldı|
-|[C6283](/cpp/code-quality/c6283)|İlkel Array-New Scalar-Delete Eşleşmesi|
-|[C6284](/cpp/code-quality/c6284)|İşlevi Biçimlendirmek için Geçersiz Nesne Bağımsız Değişkeni|
-|[C6285](/cpp/code-quality/c6285)|Logical-Or Sabitler|
-|[C6286](/cpp/code-quality/c6286)|Sıfır Olmayan Logical-Or Etkileri Kaybetme|
-|[C6287](/cpp/code-quality/c6287)|Yedekli Test|
-|[C6288](/cpp/code-quality/c6288)|Logical-And Üzerine Karşılıklı Dahil Etme Yanlış|
-|[C6289](/cpp/code-quality/c6289)|Logical-Or Karşılıklı Dışlama Doğru|
-|[C6290](/cpp/code-quality/c6290)|Logical-Not Bitwise-And Önceliği|
-|[C6291](/cpp/code-quality/c6291)|Logical-Not Bitwise-Or Önceliği|
-|[C6292](/cpp/code-quality/c6292)|Döngü Sayısı En FazlaDan Yukarı|
-|[C6293](/cpp/code-quality/c6293)|Döngü Sayısı En DüşükTen Aşağı|
-|[C6294](/cpp/code-quality/c6294)|Döngü Gövdesi Hiçbir Zaman Yürütülmz|
-|[C6295](/cpp/code-quality/c6295)|Sonsuz Döngü|
-|[C6296](/cpp/code-quality/c6296)|Yalnızca Bir Kez Yürütülen Döngü|
-|[C6297](/cpp/code-quality/c6297)|Kaydırmanın daha büyük boyuta geçiş sonucu|
-|[C6299](/cpp/code-quality/c6299)|Bitfield'den Boole'a Karşılaştırma|
-|[C6302](/cpp/code-quality/c6302)|İşlevi Biçimlendirmek için Geçersiz Karakter Dizesi Bağımsız Değişkeni|
-|[C6303](/cpp/code-quality/c6303)|İşlevi Biçimlendirmek için Geçersiz Geniş Karakter Dizesi Bağımsız Değişkeni|
-|[C6305](/cpp/code-quality/c6305)|Eşleşmeyen Boyut ve Sayı Kullanımı|
-|[C6306](/cpp/code-quality/c6306)|Yanlış Değişken Bağımsız Değişken İşlev Çağrısı|
-|[C6308](/cpp/code-quality/c6308)|Realloc Sızıntısı|
-|[C6310](/cpp/code-quality/c6310)|Geçersiz Özel Durum Filtresi Sabiti|
-|[C6312](/cpp/code-quality/c6312)|Özel Durum Devam Yürütme Döngüsü|
-|[C6314](/cpp/code-quality/c6314)|Bitwise-Or Önceliği|
-|[C6317](/cpp/code-quality/c6317)|Tamamlayıcı Değil|
-|[C6318](/cpp/code-quality/c6318)|Özel Durum Devam Arama|
-|[C6319](/cpp/code-quality/c6319)|Virgülle Yoksayıldı|
-|[C6324](/cpp/code-quality/c6324)|Dize Karşılaştırması Yerine Dize Kopyalama|
-|[C6328](/cpp/code-quality/c6328)|Olası Bağımsız Değişken Türü Eşleşmemesi|
-|[C6331](/cpp/code-quality/c6331)|VirtualFree Geçersiz Bayraklar|
-|[C6332](/cpp/code-quality/c6332)|VirtualFree Geçersiz Parametresi|
-|[C6333](/cpp/code-quality/c6333)|VirtualFree Geçersiz Boyut|
-|[C6335](/cpp/code-quality/c6335)|İşlem Tanıtıcısı Sızdırıyor|
-|[C6381](/cpp/code-quality/c6381)|Kapatma Bilgileri Eksik|
-|[C6383](/cpp/code-quality/c6383)|Element-Count Byte-Count Arabellek Taşması|
-|[C6384](/cpp/code-quality/c6384)|İşaretçi Boyutu Bölümü|
-|[C6385](/cpp/code-quality/c6385)|Fazla Çalıştırmayı Okuma|
-|[C6386](/cpp/code-quality/c6386)|Yazma Taşması|
-|[C6387](/cpp/code-quality/c6387)|Geçersiz Parametre Değeri|
-|[C6388](/cpp/code-quality/c6388)|Geçersiz Parametre Değeri|
-|[C6500](/cpp/code-quality/c6500)|Geçersiz Öznitelik Özelliği|
-|[C6501](/cpp/code-quality/c6501)|Çakışan Öznitelik Özellik Değerleri|
-|[C6503](/cpp/code-quality/c6503)|Başvurular Null Olamaz|
-|[C6504](/cpp/code-quality/c6504)|İşaretçi OlmayanLarda Null|
-|[C6505](/cpp/code-quality/c6505)|MustCheck On Void|
-|[C6506](/cpp/code-quality/c6506)|İşaretçi olmayan veya dizide arabellek boyutu|
-|[C6508](/cpp/code-quality/c6508)|Sabitte Yazma Erişimi|
-|[C6509](/cpp/code-quality/c6509)|Önkoşulda Kullanılan Dönüş|
-|[C6510](/cpp/code-quality/c6510)|Işaretçili olmayan boş değer sonlandırıldı|
-|[C6511](/cpp/code-quality/c6511)|MustCheck Evet veya Hayır olmalıdır|
-|[C6513](/cpp/code-quality/c6513)|Arabellek boyutu olmadan öğe boyutu|
-|[C6514](/cpp/code-quality/c6514)|Arabellek boyutu, dizi boyutunu aşıyor|
-|[C6515](/cpp/code-quality/c6515)|Işaretçi olmayan ara bellek boyutu|
-|[C6516](/cpp/code-quality/c6516)|Öznitelikte özellik yok|
-|[C6517](/cpp/code-quality/c6517)|Okunabilir olmayan arabellekte geçerli boyut|
-|[C6518](/cpp/code-quality/c6518)|Yazılabilir olmayan arabellekte yazılabilir boyut|
-|[C6522](/cpp/code-quality/c6522)|Geçersiz boyut dize türü|
-|[C6525](/cpp/code-quality/c6525)|Geçersiz boyut dizesine ulaşılamıyor konumu|
-|[C6527](/cpp/code-quality/c6527)|Geçersiz ek açıklama: ' gereksiz Srelease ' özelliği void türünün değerleri üzerinde kullanılamaz|
-|[C6530](/cpp/code-quality/c6530)|Tanınmayan biçim dizesi stili|
-|[C6540](/cpp/code-quality/c6540)|Bu işlev üzerinde öznitelik ek açıklamaları kullanımı, var olan tüm __declspec ek açıklamalarını geçersiz kılar|
-|[C6551](/cpp/code-quality/c6551)|Geçersiz boyut belirtimi: ifade ayrıştırılamıyor|
-|[C6552](/cpp/code-quality/c6552)|Geçersiz Deref = veya Notref =: ifade ayrıştırılamıyor|
-|[C6701](/cpp/code-quality/c6701)|Değer geçerli bir Evet/Hayır/belki değeri değil|
+|[C6281](/cpp/code-quality/c6281)|Bit düzeyinde Ilişki önceliği|
+|[C6282](/cpp/code-quality/c6282)|Atama testin yerini alır|
+|[C6283](/cpp/code-quality/c6283)|Temel Array-New Scalar-Delete uyumsuzluğu|
+|[C6284](/cpp/code-quality/c6284)|Biçimlendirme Işlevine geçersiz nesne değişkeni|
+|[C6285](/cpp/code-quality/c6285)|Sabitler Logical-Or|
+|[C6286](/cpp/code-quality/c6286)|Sıfır olmayan Logical-Or yan etkileri kaybetme|
+|[C6287](/cpp/code-quality/c6287)|Gereksiz test|
+|[C6288](/cpp/code-quality/c6288)|Logical-And üzerinden karşılıklı ekleme false|
+|[C6289](/cpp/code-quality/c6289)|Logical-Or üzerinden karşılıklı dışlama doğru|
+|[C6290](/cpp/code-quality/c6290)|Logical-Not Bitwise-And önceliği|
+|[C6291](/cpp/code-quality/c6291)|Logical-Not Bitwise-Or önceliği|
+|[C6292](/cpp/code-quality/c6292)|Döngü en yüksek değerinden yukarı sayılır|
+|[C6293](/cpp/code-quality/c6293)|Döngü en küçük değerden aşağı doğru sayılır|
+|[C6294](/cpp/code-quality/c6294)|Döngü gövdesi hiç yürütülmedi|
+|[C6295](/cpp/code-quality/c6295)|Sonsuz döngü|
+|[C6296](/cpp/code-quality/c6296)|Döngü yalnızca bir kez yürütüldü|
+|[C6297](/cpp/code-quality/c6297)|SHIFT 'e daha büyük boyuta dönüştürme sonucu|
+|[C6299](/cpp/code-quality/c6299)|Bit alanını Boole karşılaştırmaya göre|
+|[C6302](/cpp/code-quality/c6302)|Biçimlendirme Işlevine geçersiz karakter dizesi değişkeni|
+|[C6303](/cpp/code-quality/c6303)|Biçimlendirme Işlevine geçersiz geniş karakter dizesi değişkeni|
+|[C6305](/cpp/code-quality/c6305)|Eşleşmeyen boyut ve sayı kullanımı|
+|[C6306](/cpp/code-quality/c6306)|Değişken bağımsız değişken Işlev çağrısı yanlış|
+|[C6308](/cpp/code-quality/c6308)|Realloc sızıntısı|
+|[C6310](/cpp/code-quality/c6310)|Geçersiz özel durum filtre sabiti|
+|[C6312](/cpp/code-quality/c6312)|Özel durum yürütme döngüsüne devam et|
+|[C6314](/cpp/code-quality/c6314)|Bitwise-Or önceliği|
+|[C6317](/cpp/code-quality/c6317)|Tamamlayıcı değil|
+|[C6318](/cpp/code-quality/c6318)|Özel durum aramaya devam et|
+|[C6319](/cpp/code-quality/c6319)|Virgülle yoksayıldı|
+|[C6324](/cpp/code-quality/c6324)|Dize karşılaştırma yerine dize kopyalama|
+|[C6328](/cpp/code-quality/c6328)|Olası bağımsız değişken türü uyumsuzluğu|
+|[C6331](/cpp/code-quality/c6331)|VirtualFree geçersiz bayrakları|
+|[C6332](/cpp/code-quality/c6332)|VirtualFree geçersiz parametresi|
+|[C6333](/cpp/code-quality/c6333)|VirtualFree geçersiz boyutu|
+|[C6335](/cpp/code-quality/c6335)|Sızan Işlem tanıtıcısı|
+|[C6381](/cpp/code-quality/c6381)|Kapatılmış bilgiler eksik|
+|[C6383](/cpp/code-quality/c6383)|Element-Count Byte-Count arabellek taşması|
+|[C6384](/cpp/code-quality/c6384)|İşaretçi boyutu bölümü|
+|[C6385](/cpp/code-quality/c6385)|Okuma taşması|
+|[C6386](/cpp/code-quality/c6386)|Yazma taşması|
+|[C6387](/cpp/code-quality/c6387)|Geçersiz parametre değeri|
+|[C6388](/cpp/code-quality/c6388)|Geçersiz parametre değeri|
+|[C6500](/cpp/code-quality/c6500)|Geçersiz öznitelik özelliği|
+|[C6501](/cpp/code-quality/c6501)|Çakışan öznitelik özellik değerleri|
+|[C6503](/cpp/code-quality/c6503)|Başvurular null olamaz|
+|[C6504](/cpp/code-quality/c6504)|Işaretçi olmayan üzerinde null|
+|[C6505](/cpp/code-quality/c6505)|Void üzerinde MustCheck|
+|[C6506](/cpp/code-quality/c6506)|Işaretçi olmayan veya dizide arabellek boyutu|
+|[C6508](/cpp/code-quality/c6508)|Sabit üzerinde yazma erişimi|
+|[C6509](/cpp/code-quality/c6509)|Ön koşul üzerinde kullanılan dönüş|
+|[C6510](/cpp/code-quality/c6510)|İşaretçi OlmayanDa Null Sonlandırıldı|
+|[C6511](/cpp/code-quality/c6511)|MustCheck Evet veya Hayır olmalı|
+|[C6513](/cpp/code-quality/c6513)|Arabellek Boyutu Olmadan Öğe Boyutu|
+|[C6514](/cpp/code-quality/c6514)|Arabellek Boyutu Dizi Boyutunu Aşıyor|
+|[C6515](/cpp/code-quality/c6515)|İşaretçi olmayanlarda arabellek boyutu|
+|[C6516](/cpp/code-quality/c6516)|Öznitelikte Özellik Yok|
+|[C6517](/cpp/code-quality/c6517)|Okunamaz arabellekte geçerli boyut|
+|[C6518](/cpp/code-quality/c6518)|Yazılamaz Arabellekte Yazılabilir Boyut|
+|[C6522](/cpp/code-quality/c6522)|Geçersiz Boyut Dize Türü|
+|[C6525](/cpp/code-quality/c6525)|Geçersiz Boyut DizesiNe Erişilemez Konumu|
+|[C6527](/cpp/code-quality/c6527)|Geçersiz ek açıklama: Geçersiz türdeki değerlerde 'NeedsRelease' özelliği kullanılamaz|
+|[C6530](/cpp/code-quality/c6530)|Tanınmayan Biçim Dizesi Stili|
+|[C6540](/cpp/code-quality/c6540)|Bu işlevde öznitelik ek açıklamalarının kullanımı, mevcut ek açıklamalarının __declspec geçersiz kılınacak|
+|[C6551](/cpp/code-quality/c6551)|Geçersiz boyut belirtimi: ifade ayrıştırılamaz|
+|[C6552](/cpp/code-quality/c6552)|Geçersiz Deref= veya Notref=: ifade ayrıştırılamaz|
+|[C6701](/cpp/code-quality/c6701)|Değer geçerli bir Evet/Hayır/Belki değeri değil|
 |[C6702](/cpp/code-quality/c6702)|Değer bir dize değeri değil|
 |[C6703](/cpp/code-quality/c6703)|Değer bir sayı değil|
-|[C6704](/cpp/code-quality/c6704)|Beklenmeyen ek açıklama Ifadesi hatası|
-|[C6705](/cpp/code-quality/c6705)|Ek açıklama için beklenen bağımsız değişken sayısı, ek açıklama için gerçek bağımsız değişken sayısıyla eşleşmiyor|
-|[C6706](/cpp/code-quality/c6706)|Ek açıklama için beklenmeyen ek açıklama hatası|
-|[C6995](/cpp/code-quality/c6995)|XML günlük dosyası kaydedilemedi|
+|[C6704](/cpp/code-quality/c6704)|Beklenmeyen Ek Açıklama İfadesi Hatası|
+|[C6705](/cpp/code-quality/c6705)|Ek açıklama için beklenen bağımsız değişken sayısı, ek açıklama için gerçek bağımsız değişken sayısıyla eşlenmiyor|
+|[C6706](/cpp/code-quality/c6706)|Ek açıklama için Beklenmeyen Ek Açıklama Hatası|
+|[C6995](/cpp/code-quality/c6995)|XML Günlük dosyası kaydedemedi|
 |[C26100](/cpp/code-quality/c26100)|Yarış durumu|
-|[C26101](/cpp/code-quality/c26101)|Kenetlenmiş işlem düzgün şekilde kullanılamıyor|
-|[C26110](/cpp/code-quality/c26110)|Çağıran kilidi tutamıyor|
-|[C26111](/cpp/code-quality/c26111)|Çağıran kilidi serbest bırakamıyor|
-|[C26112](/cpp/code-quality/c26112)|Çağıran herhangi bir kilit tutamaz|
-|[C26115](/cpp/code-quality/c26115)|Kilit bırakılamıyor|
-|[C26116](/cpp/code-quality/c26116)|Kilit alınamıyor veya beklet|
-|[C26117](/cpp/code-quality/c26117)|Tutulmayan kilit bırakılıyor|
+|[C26101](/cpp/code-quality/c26101)|Kilitli işlem düzgün bir şekilde kullanılamadı|
+|[C26110](/cpp/code-quality/c26110)|Çağıranın kilidi tutamama|
+|[C26111](/cpp/code-quality/c26111)|Çağıranın kilidi serbest bırakılamama|
+|[C26112](/cpp/code-quality/c26112)|Çağıran hiçbir kilidi tutamaz|
+|[C26115](/cpp/code-quality/c26115)|Kilit bırakılamadı|
+|[C26116](/cpp/code-quality/c26116)|Kilit alınama veya kilit alınamama|
+|[C26117](/cpp/code-quality/c26117)|Yardımsız kilidi serbest bırakma|
 |[C26140](/cpp/code-quality/c26140)|Eşzamanlılık SAL ek açıklaması hatası|
 |[C28020](/cpp/code-quality/c28020)|İfade bu çağrıda doğru değil|
-|[C28021](/cpp/code-quality/c28021)|Açıklama eklenen parametrenin bir işaretçi olması gerekir|
-|[C28022](/cpp/code-quality/c28022)|Bu işlevdeki işlev sınıfı (es), kendisini tanımlamak için kullanılan typedef üzerindeki işlev sınıfları ile eşleşmiyor.|
-|[C28023](/cpp/code-quality/c28023)|Atanan veya geçirilen işlev, \_ \_ \_ en az bir sınıf (es) için bir işlev sınıfı ek açıklamasına sahip olmalıdır|
-|[C28024](/cpp/code-quality/c28024)|Atanmakta olan işlev işaretçisine işlev sınıfı (es) listesinde bulunmayan işlev sınıfıyla açıklama eklenir.|
-|[C28039](/cpp/code-quality/c28039)|Gerçek parametre türü, türle tam olarak eşleşmelidir|
-|[C28112](/cpp/code-quality/c28112)|Birbirine kenetlenmiş bir işlev aracılığıyla erişilen bir değişkene, her zaman birbirine kenetlenmiş bir işlev aracılığıyla erişilmesi gerekir.|
-|[C28113](/cpp/code-quality/c28113)|Birbirine kenetlenmiş bir işlev aracılığıyla yerel bir değişkene erişme|
-|[C28125](/cpp/code-quality/c28125)|İşlev bir try/except bloğu içinden çağrılmalıdır|
-|[C28137](/cpp/code-quality/c28137)|Değişken bağımsız değişkeni bunun yerine bir (sabit değer) sabit olmalıdır|
-|[C28138](/cpp/code-quality/c28138)|Sabit bağımsız değişken bunun yerine değişken olmalıdır|
+|[C28021](/cpp/code-quality/c28021)|Açıklama ekli parametre bir işaretçi olmalıdır|
+|[C28022](/cpp/code-quality/c28022)|Bu işlevde işlev sınıfı, tanımlamak için kullanılan typedef'in işlev sınıflarını (es) eşleşmez.|
+|[C28023](/cpp/code-quality/c28023)|Atanan veya geçirilen işlev, sınıflardan en az biri için bir İşlev \_ \_ sınıfı ek \_ açıklamasına sahip olmalı|
+|[C28024](/cpp/code-quality/c28024)|Atanan işlev işaretçisine, işlev sınıfı (es) listesinde yer alan işlev sınıfıyla açıklama eklenir.|
+|[C28039](/cpp/code-quality/c28039)|Gerçek parametrenin türü tam olarak türle eşleşmeli|
+|[C28112](/cpp/code-quality/c28112)|Kilitli işlev aracılığıyla erişilen bir değişkene her zaman Interlocked işlevi aracılığıyla erişilir.|
+|[C28113](/cpp/code-quality/c28113)|Kilitli işlev aracılığıyla yerel değişkene erişme|
+|[C28125](/cpp/code-quality/c28125)|işlevi try/except bloğundan çağrılmış olmalı|
+|[C28137](/cpp/code-quality/c28137)|Değişken bağımsız değişkeni bunun yerine bir (değişmez değer) sabiti olmalı|
+|[C28138](/cpp/code-quality/c28138)|Sabit bağımsız değişken bunun yerine değişken olmalı|
 |[C28159](/cpp/code-quality/c28159)|Bunun yerine başka bir işlev kullanmayı düşünün.|
 |[C28160](/cpp/code-quality/c28160)|Hata ek açıklaması|
-|[C28163](/cpp/code-quality/c28163)|İşlev bir try/except bloğunun içinden asla çağrılmamalıdır|
-|[C28164](/cpp/code-quality/c28164)|Bağımsız değişken bir nesneye işaretçi bekleyen bir işleve geçiriliyor (bir işaretçiye işaretçi değil)|
-|[C28182](/cpp/code-quality/c28182)|NULL işaretçiyle başvuruluyor. İşaretçi, başka bir işaretçi ile aynı NULL değeri içeriyor.|
-|[C28183](/cpp/code-quality/c28183)|Bağımsız değişken bir değer olabilir ve İşaretçisinde bulunan değerin bir kopyasıdır|
-|[C28193](/cpp/code-quality/c28193)|Değişken incelenmesi gereken bir değer tutuyor|
-|[C28196](/cpp/code-quality/c28196)|Gereksinim karşılanmıyor. (İfade true olarak değerlendirilmez.)|
+|[C28163](/cpp/code-quality/c28163)|işlevi hiçbir zaman try/except bloğundan çağrılmamalı|
+|[C28164](/cpp/code-quality/c28164)|bağımsız değişkeni, bir nesnenin işaretçisini (işaretçi işaretçisi değil) beklediğiniz bir işleve geçirildi|
+|[C28182](/cpp/code-quality/c28182)|NULL işaretçisine başvurulma. İşaretçi, başka bir işaretçiyle aynı NULL değeri içerir.|
+|[C28183](/cpp/code-quality/c28183)|bağımsız değişkeni bir değer olabilir ve işaretçide bulunan değerin bir kopyasıdır|
+|[C28193](/cpp/code-quality/c28193)|değişkeni, incelenmesi gereken bir değeri tutar|
+|[C28196](/cpp/code-quality/c28196)|Gereksinim karşılanmaz. (İfade true olarak değerlendirilmez.)|
 |[C28202](/cpp/code-quality/c28202)|Statik olmayan üyeye geçersiz başvuru|
 |[C28203](/cpp/code-quality/c28203)|Sınıf üyesine belirsiz başvuru.|
 |[C28205](/cpp/code-quality/c28205)|\_Geçersiz \_ bağlamda kullanılan Başarılı veya \_ \_ \_ Başarısız|

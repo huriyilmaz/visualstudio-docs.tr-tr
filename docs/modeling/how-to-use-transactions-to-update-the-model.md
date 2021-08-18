@@ -7,19 +7,20 @@ ms.topic: conceptual
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: e91e569573076d1614a9fa946b67f3bda01e6fba
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 8b1d0914c83a8cc36a389006560401619fab1ef7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390548"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150644"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>Nasıl yapılır: Modeli Güncelleştirmek için İşlemleri Kullanma
 İşlemler, depoda yapılan değişikliklerin grup olarak değerlendirildiğinden emin olmanızı sağlar. Gruplanmış değişiklikler, tek bir birim olarak uygulanabilir veya geri alınabilir.
 
- Program kodunuz, Visual Studio görselleştirme ve modelleme SDK 'daki depodaki herhangi bir öğeyi değiştirdiğinde, eklediğinde ya da sildiği zaman bir işlemin içinde bunu yapması gerekir. <xref:Microsoft.VisualStudio.Modeling.Transaction>Değişiklik gerçekleştiğinde depolarla ilişkilendirilmiş etkin bir örnek olmalıdır. Bu, tüm model öğeleri, ilişkiler, şekiller, diyagramlar ve özellikleri için geçerlidir.
+ program kodunuz, Visual Studio görselleştirme ve modelleme SDK 'daki depodaki herhangi bir öğeyi değiştirdiğinde, eklediğinde ya da sildiği zaman bir işlemin içinde bunu yapması gerekir. <xref:Microsoft.VisualStudio.Modeling.Transaction>Değişiklik gerçekleştiğinde depolarla ilişkilendirilmiş etkin bir örnek olmalıdır. Bu, tüm model öğeleri, ilişkiler, şekiller, diyagramlar ve özellikleri için geçerlidir.
 
  İşlem mekanizması tutarsız durumlardan kaçınmanıza yardımcı olur. Bir işlem sırasında hata oluşursa, tüm değişiklikler geri alınır. Kullanıcı bir geri alma komutu gerçekleştiriyorsa, her son işlem tek bir adım olarak değerlendirilir. Kullanıcılar, ayrı işlemlere açıkça yerleştirmediğiniz takdirde son bir değişikliğin parçalarını geri alamaz.
 

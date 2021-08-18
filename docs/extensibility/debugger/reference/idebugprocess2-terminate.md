@@ -1,6 +1,6 @@
 ---
-description: İşlemi sonlandırır.
-title: 'IDebugProcess2:: Terminate | Microsoft Docs'
+description: İşlem sonlandırılır.
+title: IDebugProcess2::Terminate | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 5e6bf373-0fe9-4321-b04a-473a65f664d9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9e26a4486e9c97638d20f9c634b66183824c2b39
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2903c56a89a1f4fed260fbdeb86859fbf1c3ee6c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081652"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072021"
 ---
 # <a name="idebugprocess2terminate"></a>IDebugProcess2::Terminate
-İşlemi sonlandırır.
+İşlem sonlandırılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +40,10 @@ int Terminate();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir işlem sonlandırıldığında, bu işlemdeki tüm programlar sonlandırılır; hiçbir kodun daha fazla kod çalıştırmasına izin verilmez.
+ Bir işlem sonlandırıldı mı, bu işlem içindeki tüm programlar sonlandırılır; hiçbirinin daha fazla kod çalıştırmasına izin verilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

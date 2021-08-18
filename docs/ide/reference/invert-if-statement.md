@@ -7,17 +7,18 @@ ms.topic: reference
 author: kendrahavens
 ms.author: kehavens
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: cf4ad7c25030e4a331ee67f4957ddac59afdd966
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d1dfb73749774e5ae9409b7f00a78bd59008d271
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852238"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085877"
 ---
 # <a name="invert-if-statement"></a>if deyimini tersine çevirme
 
@@ -49,4 +50,4 @@ Bu yeniden düzenleme için geçerlidir:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
-- [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)
+- [.net geliştiricileri için İpuçları](../csharp-developer-productivity.md)

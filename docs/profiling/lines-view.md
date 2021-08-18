@@ -1,6 +1,6 @@
 ---
 title: Satırlar Görünümü | Microsoft Docs
-description: Satırlar görünümünün yalnızca örnekleme yöntemi kullanılarak toplanan profil oluşturucu verileri için nasıl kullanılabilir olduğunu öğrenin.
+description: Çizgiler görünümünün yalnızca örnekleme yöntemi kullanılarak toplanan profil oluşturma verileri için nasıl kullanılabilir olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,38 +13,39 @@ ms.assetid: 71ec0781-6031-4e17-af09-f50226018437
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f99431faaa7bfc77bd7cd9a14be03f7cc2238127
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 645bd910ec6213f9aef006f7e95e1f3fe7833250
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917834"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141811"
 ---
 # <a name="lines-view"></a>Satırlar Görünümü
-Satırlar görünümü yalnızca örnekleme yöntemi kullanılarak toplanan profil oluşturucu verileri için kullanılabilir. Görünüm, izleme kullanılarak toplanan veriler için kullanılamaz.
+Satırlar görünümü yalnızca örnekleme yöntemi kullanılarak toplanan profil oluşturma verileri için kullanılabilir. Görünüm, ölçümler kullanılarak toplanan veriler için kullanılamaz.
 
- Örnekleme profili verileri için satırlar görünümü, örnek toplandığında doğrudan yürütülen bir işlevde ifadeyi tanımlar. .NET bellek verileri için satırlar görünümü bellek ayıran deyimleri tanımlar.
+ Örnekleme profili verileri için Satırlar görünümü, örnek toplanmışken doğrudan yürütülen bir işlevde deyimini tanımlar. .NET bellek verileri için Satırlar görünümü bellek ayıran deyimleri tanımlar.
 
- Bir kaynak dosyasında, bir ifade kaynak dosyada bir satırı daha fazla yayılabilir ve tek bir satır birden fazla deyime dahil olabilir.
+ Kaynak dosyada bir deyim, bir kaynak dosyada bir satırdan daha fazlasını yayma ve tek bir satır birden fazla deyim içerebilir.
 
- Bir ifade aşağıdaki şekilde tanımlanır:
+ Deyimi aşağıdakiler tarafından tanımlanır:
 
-- Function ifadesini içeren kaynak dosya.
+- İşlev deyimini içeren kaynak dosya.
 
-- İfadesini içeren işlev.
+- deyimini içeren işlev.
 
-- Deyimin başladığı kaynak satır.
+- Deyimin başlat olduğu kaynak satır.
 
-- Deyimin başladığı kaynak satırdaki karakter.
+- Deyimin başlat olduğu kaynak satırda yer alan karakter.
 
-- Deyimin bittiği kaynak satır.
+- Deyimin bitiş yaptığı kaynak satır.
 
-- Deyimin bittiği kaynak satırdaki karakter.
+- Deyimin bitiş yaptığı kaynak satırda yer alan karakter.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Satırlar Görünümü](../profiling/lines-view-sampling-data.md)
-- [Satırlar Görünümü-Örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)
+- [Çizgi Görünümü - örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)
 - [Satırlar Görünümü](../profiling/lines-view-contention-data.md)

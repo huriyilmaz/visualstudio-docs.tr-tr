@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem, bir alanın boyutunu bayt cinsinden alır.
-title: 'IDebugField:: GetSize | Microsoft Docs'
+title: IDebugField::GetSize | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 705d597993c0d29ba66a9165c17c65c4ca475cc157c29252bafa27383f430798
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9eecf9c3f0797aad8f0431233c6adfb12dcac242
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360332"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138386"
 ---
 # <a name="idebugfieldgetsize"></a>IDebugField::GetSize
 Bu yöntem, bir alanın boyutunu bayt cinsinden alır.
@@ -43,13 +43,13 @@ int GetSize(
 
 ## <a name="parameters"></a>Parametreler
 `pdwSize`\
-dışı Boyutunu döndürür.
+[out] Boyutu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Tüm alanlar bir türe sahiptir ve tüm türlerin boyutu vardır. Örneğin, bayt türünde bir alan 1 baytlık bir boyuta sahiptir.
+ Tüm alanların türü ve tüm türlerin bir boyutu vardır. Örneğin, bir bayt türüne sahip bir alan 1 bayta sahip olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

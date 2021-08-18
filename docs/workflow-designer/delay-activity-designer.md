@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d59f0db70804049a0392350942000d4331715021fb30f7ab43183d7326d02f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 71618b2ebbd0abc6f089ad9838942a99d0897e7c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440545"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099236"
 ---
 # <a name="delay-activity-designer"></a>Delay Etkinlik Tasarımcısı
 
@@ -32,7 +32,7 @@ Etkinlik, <xref:System.Activities.Statements.Delay> iş akışının yürütülm
 
 Gecikme **etkinliği** tasarımcısı, araç  kutusunun Araç Kutusu sekmesine tıklayarak erişilen Araç Kutusunun **Temel** öğeler kategorisinde İş Akışı Tasarımcısı. Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
-Gecikme **etkinliği** tasarımcısı Araç Kutusundan **sürüklenip** bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra bu alan yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısını bırakarak, varsayılan <xref:System.Activities.Statements.Delay> Delay değerine sahip bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, Delay etkinlik tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+Gecikme **etkinliği** tasarımcısı Araç Kutusundan **sürüklenip** bir içinde olduğu gibi, İş Akışı Tasarımcısı yerleştirildikten sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısını bırakarak, varsayılan <xref:System.Activities.Statements.Delay> Delay değerine sahip bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, Delay etkinlik tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-delay-properties"></a>Gecikme özellikleri
 

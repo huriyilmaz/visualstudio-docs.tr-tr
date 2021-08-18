@@ -1,6 +1,6 @@
 ---
 title: Genel, Ortam, Seçenekler İletişim Kutusu
-description: IDE için renk temalarını, durum çubuğu ayarlarını, dosya uzantısı ilişkilendirmelerini ve daha fazlasını değiştirmek üzere ortam bölümündeki Genel sayfasını nasıl kullanacağınızı öğrenin.
+description: IDE için renk temalarını, durum çubuğu ayarlarını, dosya uzantısı ilişkilendirmelerini ve daha fazlasını değiştirmek için Ortam bölümündeki Genel sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
@@ -23,81 +23,81 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bc28e51942e8a1f52dbf573bdc477d081c74efb6aa714c07fc8eff351824fc1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7c65f9e40e1e3369d8187347404baf4502275f8e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121304235"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094015"
 ---
-# <a name="options-dialog-box-environment--general"></a>Seçenekler iletişim kutusu: ortam \> genel
+# <a name="options-dialog-box-environment--general"></a>Seçenekler iletişim kutusu: Ortam \> Genel
 
-Bu sayfayı, tümleşik geliştirme ortamı (IDE) için diğer seçenekler arasında renk temalarını, durum çubuğu ayarlarını ve dosya uzantısı ilişkilendirmelerini değiştirmek için kullanın. **Seçenekler** Iletişim kutusuna **Araçlar** menüsünü açıp **Seçenekler**' i seçip, **ortam** klasörünü açıp **genel** sayfasını seçerek erişebilirsiniz.
+Renk temalarını, durum çubuğu ayarlarını ve dosya uzantısı ilişkilendirmelerini, tümleşik geliştirme ortamı (IDE) için diğer seçenekleri değiştirmek için bu sayfayı kullanın. Seçenekler iletişim kutusuna **Araçlar menüsünü,** Seçenekler'i ve Ortam  klasörünü ve ardından Genel sayfasını seçerek  **erişebilirsiniz.**
 
-## <a name="visual-experience"></a>Görsel deneyim
+## <a name="visual-experience"></a>Görsel Deneyim
 
 **Renk Teması**
 
-IDE için **mavi**, **hafif**, **koyu** veya **mavi (ekstra kontrast)** renk temasını seçin.
+IDE **için** **Mavi, Açık,** **Koyu** veya Mavi (Ek Karşıtlık) renk temasını seçin. 
 
-[Visual Studio market](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)'ten **Visual Studio Color Theme düzenleyicisini** indirip yükleyerek, önceden tanımlanmış ek temalar yükleyebilir ve özel temalar oluşturabilirsiniz. Bu aracı yükledikten sonra, **renk teması** liste kutusunda ek renk temaları görüntülenir.
+Önceden tanımlanmış ek temaları yükleyebilir ve Visual Studio Market'te Visual Studio Tema  [Düzenleyicisi'ni indirip Visual Studio oluşturabilirsiniz.](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) Bu aracı yükledikten sonra, Renk Teması liste kutusunda **ek renk temaları** görünür.
 
-**Menü çubuğuna başlık durumu Stili Uygula**
+**Menü çubuğuna başlık durumu stili uygulama**
 
-Menüler, varsayılan olarak başlık durumu stili kullanır. Bunun yerine tüm büyük harf stillerini kullanmak için bu seçeneğin işaretini kaldırın.
+Menüler varsayılan olarak başlık büyük/harf stili kullanır. Bunun yerine tüm büyük harf stillerini kullanmak için bu seçeneğin işaretini kaldırın.
 
 ::: moniker range=">=vs-2019"
 
-**Farklı pikseller içeren ekranlar için işlemeyi iyileştirin (yeniden başlatma gerektirir)**
+**Farklı piksel yoğunluğuna sahip ekranlar için işlemeyi iyileştirme (yeniden başlatma gerektirir)**
 
-Bu seçenek, inç başına nokta (DPI) tanıma (veya *PMA*) için bir veya devre dışı bırakır. pma etkinleştirildiğinde, Visual Studio kullanıcı arabirimi, birden çok monitörde de olmak üzere herhangi bir izleyici görüntü ölçek faktörü ve dpı yapılandırmasında net görünür. pma 'yı etkinleştirmek için, Windows 10 nisan 2018 güncelleştirmesi veya üzeri ve .NET Framework 4,8 ya da sonraki bir sürümü gerekir. (Bu iki önkoşul karşılanmazsa Bu seçenek gri renkte görünür.)
+Bu seçenek, monitör başına nokta/inç (DPI) farkındalığını (veya PMA) etkinleştirir veya *devre dışı bıraktır.* PMA etkinleştirildiğinde, Visual Studio monitörler arasında da dahil olmak üzere tüm izleyicilerde görünen ölçek faktörü ve DPI yapılandırmasında PMA kullanıcı arabirimi görünür. PMA'yı etkinleştirmek için Nisan 2018 Güncelleştirmesi Windows 10 veya sonraki bir .NET Framework 4.8 veya sonraki bir sonraki bir güncelleştirmeyi etkinleştirmeniz gerekir. (Bu iki önkoşul karşılanmazsa bu seçenek gri görünür.)
 
 > [!TIP]
-> - Windows 10, **uygulamaların bulanık olmaması için Windows uygulamayı düzeltmesine izin** veren bir ayara sahiptir. bu Windows ayarının **açık** olması, **farklı piksel denikler seçeneği işaretli ekranlarda en iyileştirme için işlemeyi en uygun hale getirir** .
-> - Windows 10 ayrıca bir **Program uyumluluğu sorun gidericisini** içerir. bu sorun gidericiyi kullanarak Visual Studio görünümünü gidermeye çalışmamız önerilmez.
+> - Windows 10 bulanık olmayan uygulamaları düzeltmeye Windows Let **Windows (İzin ver)** ayarı vardır. Farklı piksel Windows **ekranlar** için işlemeyi en iyi duruma getirme seçeneğini işaretli hale getirme seçeneğiniz varsa, bu ayarın Windows ayarının **açması önemsiz bir etkiye** neden olur.
+> - Windows 10 Program Uyumluluğu Sorun **Gidericisi de içerir.** Sorun gidericiyi kullanarak uygulamanın görünümünü Visual Studio önerilmez.
 
 ::: moniker-end
 
-**İstemci performansına göre görsel deneyimi otomatik olarak ayarla**
+**Görsel deneyimi istemci performansına göre otomatik olarak ayarlama**
 
-Visual Studio ayarlamayı otomatik olarak ayarlayıp ayarlamadığını belirtir veya ayarlamayı açıkça ayarlayın. Bu ayarlama, renklerin degradeden düz renklere görüntüsünü değiştirebilir veya menülerde veya açılan pencerelerin animasyonların kullanımını kısıtlayabilir.
+Düzeltmeyi görsel Visual Studio otomatik olarak ayar mı yoksa ayarlamayı açıkça ayar mı ayarlaycazı belirtir. Bu ayarlama, renklerin gradyanlardan düz renklere görüntülenmesini değiştirebilir veya menülerde veya açılır pencerelerde animasyon kullanımını kısıtlar.
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> Windows 10, **uygulamaların bulanık olmaması için Windows uygulamayı düzeltmesine izin** veren bir ayara sahiptir. Visual Studio monitörünüzde bulanık **görünürse, bu ayarı açmak** önerilir. büyük ölçüde geliştirilmiş görüntüleme netliği olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' a yükselterek, her bir for-of-of-aware uygulaması
+> Windows 10 bulanık olmayan uygulamaları düzeltmeye Windows Let **Windows (İzin ver)** ayarı vardır. Bu **ayarın,** izleyiciniz üzerinde Visual Studio görünürse bu ayarın kullanılması önerilir. Ekran netliğini [önemli ölçüde artıran Visual Studio 2019](https://visualstudio.microsoft.com/downloads)sürümüne yükseltmeyi göz önünde bulundurabilirsiniz. Bu, monitör başına nokta/inç farkında olan bir uygulamadır.
 
 ::: moniker-end
 
-**Zengin istemci deneyimini etkinleştir**
+**Zengin istemci deneyimini etkinleştirme**
 
-degradeler ve animasyonlar dahil olmak üzere Visual Studio tam görsel deneyimini mümkün bir şekilde sunar. Uzak Masaüstü bağlantıları veya daha eski grafik bağdaştırıcılar kullanılırken bu seçeneği temizleyin çünkü bu özellikler bu durumlarda düşük performansa sahip olabilir. Bu seçenek yalnızca, **istemci seçeneğine göre görsel deneyimi otomatik olarak ayarla** seçeneğini belirlediğinizde kullanılabilir.
+Gradyanlar ve animasyonlar dahil olmak Visual Studio tam görsel deneyimi sağlar. Uzak Masaüstü bağlantıları veya eski grafik bağdaştırıcıları kullanılırken bu seçeneğin temizlenebilirsiniz çünkü bu özellikler bu durumlarda düşük performansa sahip olabilir. Bu seçenek yalnızca Görsel deneyimi istemciye göre **otomatik olarak ayarla seçeneğini temizleyseniz** kullanılabilir.
 
-**Kullanılabiliyorsa, donanım grafik hızlandırmasını kullanın**
+**Varsa donanım grafik hızlandırmasını kullanma**
 
-Yazılım hızlandırma yerine, varsa, donanım grafik hızlandırmasını kullanır.
+Varsa yazılım hızlandırma yerine donanım grafik hızlandırmasını kullanır.
 
 ## <a name="other"></a>Diğer
 
-**Pencere menüsünde gösterilecek Öğeler**
+**Pencere menüsünde gösterilen öğeler**
 
-**pencere** menüsünün Windows listesinde görünen pencere sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur.
+Pencere menüsünün Windows pencere sayısını **özeller.** 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur.
 
 **Son kullanılan listelerde gösterilen öğeler**
 
-**Dosya** menüsünde görünen en son kullanılan proje ve dosya sayısını özelleştirir. 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur. Bu, son kullanılan projeleri ve dosyaları almanın kolay bir yoludur.
+Dosya menüsünde en son kullanılan proje ve dosyaların sayısını **özeller.** 1 ile 24 arasında bir sayı girin. Varsayılan değer 10'dur. Bu, son kullanılan projeleri ve dosyaları almak için kolay bir yol sağlar.
 
 **Durum çubuğunu göster**
 
-Durum çubuğunu görüntüler. Durum çubuğu IDE penceresinin alt kısmında bulunur ve devam eden işlemlerin ilerleme durumuyla ilgili bilgileri görüntüler.
+Durum çubuğunu görüntüler. Durum çubuğu IDE penceresinin en altında bulunur ve devam eden işlemlerin ilerleme durumuyla ilgili bilgileri görüntüler.
 
 **Kapat düğmesi yalnızca etkin araç penceresini etkiler**
 
-**Kapat** düğmesine tıklandığında, yalnızca odağı olan araç penceresinin kapalı olduğunu ve yerleşik küme içindeki araç pencerelerinin tümünü değil ' i belirtir. Varsayılan olarak, bu seçenek seçilidir.
+Kapat düğmesine **tıkıldığında,** yerleştirme kümesinde tüm araç pencerelerinin değil, yalnızca odağı olan araç penceresinin kapatılacak olduğunu belirtir. Varsayılan olarak, bu seçenek seçilidir.
 
 **Otomatik Gizle düğmesi yalnızca etkin araç penceresini etkiler**
 
-**Otomatik Gizle** düğmesine tıklandığında, yalnızca odağı olan araç penceresinin, yerleşik küme içindeki araç pencerelerinin hepsi değil otomatik olarak gizlendiğini belirtir. Varsayılan olarak, bu seçenek seçili değildir.
+Otomatik Gizle düğmesine **tıkıldığında,** yerleştirme kümesinde tüm araç pencerelerinin değil, yalnızca odağı olan araç penceresinin otomatik olarak gizlenir. Varsayılan olarak, bu seçenek seçili değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

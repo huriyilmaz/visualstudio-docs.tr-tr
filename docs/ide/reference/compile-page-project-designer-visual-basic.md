@@ -1,6 +1,6 @@
 ---
 title: Derleme Sayfası, Proje Tasarımcısı (Visual Basic)
-description: Visual Studio 'da derleme yönergelerini belirtmeyi öğrenin. Ayrıca, bu sayfada gelişmiş derleyici seçeneklerini ve derleme öncesi veya derleme sonrası olayları da belirtebilirsiniz.
+description: Visual Studio ' de derleme yönergelerini belirtmeyi öğrenin. Ayrıca, bu sayfada gelişmiş derleyici seçeneklerini ve derleme öncesi veya derleme sonrası olayları da belirtebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -21,18 +21,18 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c822b6e8cbce1279a14c5a947d70208fc7f5480a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4142e958bcac56ea972cc271d8b3f9fa215f21ae80b99bc78c95f7109a4f85f8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958381"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121430583"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>Derleme Sayfası, Proje Tasarımcısı (Visual Basic)
 
-Derleme yönergelerini belirtmek için proje Tasarımcısı ' nın **derleme** sayfasını kullanın. Ayrıca, bu sayfada gelişmiş derleyici seçeneklerini ve derleme öncesi veya derleme sonrası olayları da belirtebilirsiniz.
+derleme yönergelerini belirtmek için Project tasarımcısının **derle** sayfasını kullanın. Ayrıca, bu sayfada gelişmiş derleyici seçeneklerini ve derleme öncesi veya derleme sonrası olayları da belirtebilirsiniz.
 
-**Derle** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından, menü çubuğunda **Proje**, **Özellikler** ' i seçin. Proje Tasarımcısı göründüğünde, **Derle** sekmesine tıklayın.
+**Derle** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. ardından, menü çubuğunda **Project**, **özellikler** ' i seçin. Project tasarımcı göründüğünde, **derle** sekmesine tıklayın.
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -87,7 +87,7 @@ Katı tür semantiğinin zorlanıp zorlanmayacağını belirtir. **Option Strict
 
 Bir nesne, tür olarak belirtilen bir özelliğin veya yöntemin bir özelliğine atandığında geç bağlanır `Object` . Daha fazla bilgi için bkz. [Option Strict deyimin](/dotnet/visual-basic/language-reference/statements/option-strict-statement) yanı sıra [erken ve geç bağlama](/dotnet/visual-basic/programming-guide/language-features/early-late-binding).
 
-Örtük nesne türü hataları, tanımlı bir değişken için uygun bir tür çıkarsanmadığında oluşur, bu nedenle bir türü `Object` algılanır. Bu öncelikle `Dim` , bir yan tümce kullanmadan bir değişkeni bildirmek için bir deyimi kullandığınızda oluşur `As` ve `Option Infer` kapalı olur. Daha fazla bilgi için bkz. [Option Strict deyimin](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [Option Infer deyimleri](/dotnet/visual-basic/language-reference/statements/option-infer-statement)ve [Visual Basic Language belirtimi](/dotnet/visual-basic/reference/language-specification).
+Örtük nesne türü hataları, tanımlı bir değişken için uygun bir tür çıkarsanmadığında oluşur, bu nedenle bir türü `Object` algılanır. Bu öncelikle `Dim` , bir yan tümce kullanmadan bir değişkeni bildirmek için bir deyimi kullandığınızda oluşur `As` ve `Option Infer` kapalı olur. daha fazla bilgi için bkz. [option Strict deyimin](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [option ınfer deyimleri](/dotnet/visual-basic/language-reference/statements/option-infer-statement)ve [Visual Basic Language belirtimi](/dotnet/visual-basic/reference/language-specification).
 
 **Katı ayarı seçeneği** , [/OptionStrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) derleyici seçeneğine karşılık gelir.
 
@@ -137,60 +137,60 @@ Daha fazla bilgi için bkz. [/Platform (Visual Basic)](/dotnet/visual-basic/refe
 
 **32 bit tercih et**
 
-**Prefer32 bit** onay kutusu işaretliyse, uygulama Windows 'un hem 32-bit hem de 64-bit sürümlerinde 32 bitlik bir uygulama olarak çalışır. Aksi takdirde, uygulama Windows 'un 32 bit sürümlerinde 32 bitlik bir uygulama olarak ve Windows 'un 64 bit sürümlerinde 64 bit uygulama olarak çalışır.
+**Prefer32-bit** onay kutusu seçiliyse, uygulama hem 32 bit hem de 64 bit uygulamanın 32 bitlik sürümlerinde 32 bitlik bir uygulama Windows. Aksi takdirde, uygulama Windows'nin 32 bit sürümlerinde 32 bit uygulama olarak ve Windows'nin 64 bit sürümlerinde 64 bit uygulama olarak Windows.
 
-64 bitlik bir uygulama olarak çalıştırmak işaretçi boyutunu iki katına çıkarır ve yalnızca 32 bit olan kitaplıklarda uyumluluk sorunlarına neden olabilir. Bir uygulamayı yalnızca önemli ölçüde daha hızlı çalışıyorsa veya 4 GB 'den fazla belleğe ihtiyaç duyduğunda, 64 bit olarak çalıştırmak mantıklı olur.
+64 bit uygulama olarak çalıştırarak işaretçi boyutu iki katına çıkar ve yalnızca 32 bit kitaplıklarla uyumluluk sorunlarına neden olabilir. Yalnızca önemli ölçüde daha hızlı çalışan veya 4 GB'den fazla belleğe ihtiyacı olan bir uygulamayı 64 bit olarak çalıştırmak mantıklıdır.
 
-Bu onay kutusu yalnızca aşağıdaki koşulların tümü doğru olduğunda kullanılabilir:
+Bu onay kutusu yalnızca aşağıdaki koşulların hepsi doğruysa kullanılabilir:
 
-- **Derle sayfasında**, **hedef CPU** listesi **herhangi bir CPU** olarak ayarlanır.
+- Derleme **Sayfasında Hedef** **CPU** listesi Herhangi bir **CPU olarak ayarlanır.**
 
-- Uygulama **sayfasında**, **uygulama türü** listesi projenin bir uygulama olduğunu belirtir.
+- Uygulama **Sayfasında,** Uygulama **türü listesi** projenin bir uygulama olduğunu belirtir.
 
-- **Uygulama sayfasında**, **hedef çerçeve** listesi 4,5 .NET Framework belirtir.
+- Uygulama **Sayfasında,** Hedef **çerçeve listesi** 4.5 .NET Framework belirtir.
 
-**Uyarı konfigürasyonları**
+**Uyarı yapılandırmaları**
 
-Bu tabloda, derleme koşulları ve ilgili bildirim düzeyi **yok**, **Uyarı** veya her biri için **hata** listelenmektedir.
+Bu tabloda derleme koşulları ve her biri için yok, **Uyarı** veya **Hata bildirim** **düzeyi** listelemektedir.
 
-Varsayılan olarak, derleme sırasında tüm derleyici uyarıları Görev Listesi eklenir. Derleyicinin uyarı veya hata vermesine yol açmamasını sağlamak için **tüm uyarıları devre dışı bırak** ' ı seçin. Derleyicinin uyarıları düzeltilmesi gereken hata olarak görmesini istiyorsanız, **tüm uyarıları hata olarak değerlendir** ' i seçin.
+Varsayılan olarak, derleme sırasında tüm derleyici uyarıları Görev Listesi eklenir. Derleyiciye **uyarı veya hata** çıkarmaması için Tüm uyarıları devre dışı bırak'ı seçin. Derleyicinin **uyarıları düzeltilecek hatalar** olarak davranması için Tüm uyarıları hata olarak davran'ı seçin.
 
 **Tüm uyarıları devre dışı bırak**
 
-Derleyicinin bu belgede daha önce açıklanan **koşul ve bildirim** tablosunda belirtilen bildirimleri vermesine izin verilip verilmeyeceğini belirtir. Varsayılan olarak bu onay kutusu işaretli değildir. Derleyicinin uyarı veya hata vermesine izin vermesini istemek için bu onay kutusunu seçin.
+Derleyicinin bu belgenin önceki sürümlerinde açıklanan Koşul ve Bildirim tablosunda belirtildiği gibi bildirim **vermesine** izin verip vermey kararlarını belirtir. Varsayılan olarak bu onay kutusu işaretli değildir. Derleyiciye uyarı veya hata açmaması talimatı için bu onay kutusunu seçin.
 
-Bu ayar, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) derleyici seçeneğine karşılık gelir.
+Bu ayar [/nowarn derleyici seçeneğine](/dotnet/visual-basic/reference/command-line-compiler/nowarn) karşılık gelen bir ayardır.
 
-**Tüm uyarıları hata olarak değerlendir**
+**Tüm uyarıları hata olarak davran**
 
-Uyarıların nasıl ele alınacağını belirtir. Varsayılan olarak, bu onay kutusu temizlenir, böylece tüm uyarı bildirimleri **Uyarı** olarak ayarlanır. Tüm uyarı bildirimlerini **hata** olarak değiştirmek için bu onay kutusunu işaretleyin.
+Uyarıların nasıl işlen olduğunu belirtir. Varsayılan olarak, bu onay kutusu temizdir, böylece tüm uyarı bildirimleri Uyarı olarak **kalır.** Tüm uyarı bildirimlerini Hata olarak değiştirmek için bu onay kutusunu **seçin.**
 
-Bu seçenek yalnızca **tüm uyarıları devre dışı bırak** silinirse kullanılabilir.
+Bu seçenek yalnızca Tüm uyarıları **devre dışı bırak seçeneği temizse** kullanılabilir.
 
-**XML belge dosyası oluştur**
+**XML belge dosyası oluşturma**
 
-Belge bilgilerinin oluşturulup oluşturulmayacağını belirtir. Varsayılan olarak, bu onay kutusu seçilidir ve derleyici belge bilgilerini oluşturup bir XML dosyasına dahil eder. Derleyicinin belge oluşturmamasını istemek için bu onay kutusunu temizleyin.
+Belge bilgileri oluşturulıp oluşturul olmadığını belirtir. Varsayılan olarak, bu onay kutusu seçilidir ve derleyiciye belge bilgileri oluşturması ve bir XML dosyasına dahil etmelerini sağlar. Derleyiciye belge oluşturmaması talimatı için bu onay kutusunu temizleyin.
 
-Bu ayar [/doc](/dotnet/visual-basic/reference/command-line-compiler/doc) derleyici seçeneğine karşılık gelir.
+Bu ayar /doc derleyici [seçeneğine](/dotnet/visual-basic/reference/command-line-compiler/doc) karşılık gelen bir ayardır.
 
-**COM birlikte çalışması için kaydolun**
+**COM birlikte çalışma için kaydolma**
 
-Yönetilen uygulamanızın, bir com nesnesinin uygulamayla etkileşime geçmesini sağlayan bir COM nesnesi (COM çağrılabilir sarmalayıcı) sergileip sunulmayacağını belirtir.
+Yönetilen uygulamanın bir COM nesnesinin uygulamayla etkileşim kurmasını sağlayan bir COM nesnesini (COM çağrılabilir sarmalayıcı) ortaya çıkarıp ortaya çıkarmayacaklarını belirtir.
 
-Varsayılan olarak, bu onay kutusu temizlenir ve uygulamanın COM birlikte çalışabilirliğine izin vermemesi gerektiğini belirtir. COM birlikte çalışabilirliğine izin vermek için bu onay kutusunu seçin.
+Varsayılan olarak, uygulamanın COM birlikte çalışmasına izin ver vermayacaklarını belirten bu onay kutusu temizdir. COM birlikte çalışmasına izin vermek için bu onay kutusunu seçin.
 
-Bu seçenek Windows uygulaması veya konsol uygulaması projeleri için kullanılamaz.
+Bu seçenek, uygulama Windows Konsol Uygulaması projelerinde kullanılamaz.
 
-**Derleme olayları**
+**Derleme Olayları**
 
-**Derleme olayları** iletişim kutusuna erişmek için bu düğmeye tıklayın. Proje için oluşturma öncesi ve derleme sonrası yapılandırma yönergelerini belirtmek için bu iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca Visual Basic projelerine yöneliktir. Daha fazla bilgi için bkz. [derleme olayları Iletişim kutusu (Visual Basic)](../../ide/reference/build-events-dialog-box-visual-basic.md).
+Derleme Olayları iletişim kutusuna erişmek **için bu düğmeye** tıklayın. Proje için derleme öncesi ve derleme sonrası yapılandırma yönergelerini belirtmek için bu iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca Visual Basic için geçerlidir. Daha fazla bilgi için [bkz. Derleme Olayları İletişim Kutusu (Visual Basic).](../../ide/reference/build-events-dialog-box-visual-basic.md)
 
-**Gelişmiş derleme seçenekleri**
+**Gelişmiş Derleme Seçenekleri**
 
-**Advancedderleyici ayarları** iletişim kutusuna erişmek için bu düğmeye tıklayın. Projenin Gelişmiş derleme yapılandırma özelliklerini belirtmek için **Advancedcompiler ayarları** iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca Visual Basic projelerine yöneliktir. Daha fazla bilgi için bkz. [Gelişmiş derleyici ayarları Iletişim kutusu (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).
+**AdvancedCompiler** Ayarlar iletişim kutusuna erişmek için bu düğmeye tıklayın. Bir projenin gelişmiş derleme Ayarlar belirtmek için **AdvancedCompiler** Ayarlar iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca Visual Basic için geçerlidir. Daha fazla bilgi için [bkz. Gelişmiş Derleyici Ayarlar İletişim Kutusu (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl Yapılır: Yapı Olaylarını Belirtme (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
-- [Visual Basic Command-Line derleyicisi](/dotnet/visual-basic/reference/command-line-compiler/index)
+- [Visual Basic Command-Line Derleyicisi](/dotnet/visual-basic/reference/command-line-compiler/index)
 - [Nasıl Yapılır: Yapılandırmaları Oluşturma ve Düzenleme](../../ide/how-to-create-and-edit-configurations.md)

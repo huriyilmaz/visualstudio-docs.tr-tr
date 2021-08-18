@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 77ef45eadadab661639b17c4e29fdf13986da9fd89bf51f7c7358252d64af932
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 38f804232dd633be82e328716312c9c8f1cf53e6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346667"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036790"
 ---
 # <a name="update-data-by-using-a-tableadapter"></a>TableAdapter kullanarak verileri güncelleştirme
 

@@ -14,20 +14,20 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - uwp
-ms.openlocfilehash: d63e1a0d7493b4d6f56f826db72c2c328defbaac970d2d6bc18ca8b42b339c92
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 298ccbb112d373255feadfad136255bf367df350
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430959"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094301"
 ---
 # <a name="application-property-page-uwp-projects"></a>Uygulama özellik sayfası (UWP projeleri)
 
 Evrensel **Platform** (UWP) projesinin derleme ve paket bilgilerini ve hedef Windows sürümünü belirtmek için Uygulama özellik Windows 10 kullanın.
 
-![Uygulama özelliği sayfası](media/application-page-uwp.png)
+![Uygulama özellik sayfası](media/application-page-uwp.png)
 
-Uygulama sayfasına **erişmek** için uygulama sayfasındaki proje **Çözüm Gezgini.** Ardından menü **Project**  >  **Özellikler'i** seçin. Özellik sayfaları Uygulama **sekmesinde** açılır.
+Uygulama sayfasına **erişmek** için uygulama sayfasındaki proje **Çözüm Gezgini.** Ardından **menü Project**  >  **Özellikler'i** seçin. Özellik sayfaları Uygulama **sekmesinde** açılır.
 
 ## <a name="general-section"></a>Genel bölümü
 
@@ -35,7 +35,7 @@ Uygulama sayfasına **erişmek** için uygulama sayfasındaki proje **Çözüm G
 
 Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.AssemblyName%2A> .
 
-**Varsayılan ad alanı** &mdash; Projeye eklenen dosyalar için temel ad alanını belirtir. Ad alanları hakkında daha fazla bilgi için bkz. Ad Alanları [(C# programlama kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), [Ad Alanları (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [Ad Alanları (C++)](/cpp/cpp/namespaces-cpp).
+**Varsayılan ad alanı** &mdash; Projeye eklenen dosyalar için temel ad alanını belirtir. Ad alanları hakkında daha fazla bilgi için bkz. [Ad Alanları (C# programlama kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), Ad Alanları [(Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [Ad Alanları (C++)](/cpp/cpp/namespaces-cpp).
 
 Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.RootNamespace%2A> .
 
@@ -45,7 +45,7 @@ Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.Project
 
 ## <a name="targeting-section"></a>Hedefleme bölümü
 
-Bu bölümdeki açılan listeleri kullanarak uygulamanıza yönelik Windows 10 sürümünü ve en düşük sürümünü ayarlayın. Windows 10'nin en son sürümünü hedeflemeniz ve bir kurumsal uygulama geliştiriyorsanız eski bir en düşük sürümü de desteklemeniz önerilir. Hangi sürümde hangi Windows 10 için bkz. [UWP sürümü seçme.](/windows/uwp/updates-and-versions/choose-a-uwp-version)
+Bu bölümdeki açılan listeleri kullanarak uygulamanıza yönelik Windows 10 sürümünü ve en düşük sürümünü ayarlayın. Windows 10'nin en son sürümünü hedeflemeniz ve bir kurumsal uygulama geliştiriyorsanız eski bir en düşük sürümü de desteklemeniz önerilir. Hangi sürümde hangi Windows 10 daha fazla bilgi için [bkz. UWP sürümü seçme.](/windows/uwp/updates-and-versions/choose-a-uwp-version)
 
 Platform hedefleme hakkında daha fazla bilgi Visual Studio bkz. [Platform hedefleme.](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting)
 

@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47352c8775f26dd8ef1355becd1c5fd2c12f727c0a97625e5ddd5554a47246bb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ea6f8b4355f702998a18a0b40911fd58fb1afb74
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402955"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079434"
 ---
 # <a name="idebugcustomattributequery"></a>IDebugCustomAttributeQuery
 Bir yöntem veya tür üzerinde özel öznitelikler için bir sorguyu temsil eder.

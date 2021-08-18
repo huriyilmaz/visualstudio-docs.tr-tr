@@ -11,30 +11,31 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 36a9f1651a4aef7742b6bf52f8691f6ae8f9c616
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.openlocfilehash: b99c219e3ca4da798b6e685f7ae5ae0ad2906ba8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "109973388"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122162142"
 ---
 # <a name="overview"></a>Genel Bakış
 
-Her Roslyn *çözümleyicisi* tanılaması veya kuralı, projeniz için üzerine yazılabilir ve özelleştirilebilir varsayılan bir önem derecesi ve gizleme durumuna sahip olur. Bu makale, çözümleyicinin önemliliklerini ayarlamayı ve çözümleyici ihlallerini gizlemeyi kapsar.
+Her Roslyn *çözümleyicisi* tanılaması veya kuralı, projeniz için üzerine yazılabilir ve özelleştirilebilir varsayılan önem derecesine ve gizleme durumuna sahip olur. Bu makale, çözümleyicinin önemliliklerini ayarlamayı ve çözümleyici ihlallerini gizlemeyi kapsar.
 
 ## <a name="configure-severity-levels"></a>Önem derecelerini yapılandırma
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 sürüm 16.3'te başlayarak, çözümleyici kurallarının veya tanılamanın önem derecelerini [editorConfig](#set-rule-severity-in-an-editorconfig-file)dosyasında, ampul menüsünden [ve](#set-rule-severity-from-the-light-bulb-menu)hata listesinden yapılandırabilirsiniz.
+Visual Studio 2019 sürüm 16.3'te başlayarak çözümleyici kurallarının veya tanılamanın önem derecelerini [editorConfig](#set-rule-severity-in-an-editorconfig-file)dosyasında, ampul menüsünden [ve](#set-rule-severity-from-the-light-bulb-menu)hata listesinden yapılandırabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Çözümleyicileri Bir NuGet paketi olarak yüklüyse *çözümleyici* [kurallarının](../code-quality/install-roslyn-analyzers.md) veya tanılamanın önem derecelerini yapılandırabilirsiniz. Bir kuralın önem derecesini bir kural [kümesi Çözüm Gezgini](#set-rule-severity-from-solution-explorer) [dosyasından değiştirebilirsiniz.](#set-rule-severity-in-the-rule-set-file)
+Çözümleyicileri bir çözümleyici paketi olarak yüklüyse *çözümleyici* kurallarının veya [tanılamanın](../code-quality/install-roslyn-analyzers.md) önem derece NuGet yapılandırabilirsiniz. Bir kuralın önem derecesini bir kural [kümesi Çözüm Gezgini](#set-rule-severity-from-solution-explorer) [dosyasından değiştirebilirsiniz.](#set-rule-severity-in-the-rule-set-file)
 
 ::: moniker-end
 
@@ -42,30 +43,30 @@ Aşağıdaki tabloda farklı önem derecesi seçenekleri yer alır:
 
 | Önem Derecesi (Çözüm Gezgini) | Önem Derecesi (EditorConfig dosyası) | Derleme zamanı davranışı | Düzenleyici davranışı |
 |-|-|-|
-| Hata | `error` | İhlaller *Hata* Listesinde ve komut satırı derleme çıkışında Hatalar olarak görünür ve derlemelerin başarısız olmasına neden olur.| Soruna neden olan kodun altı kırmızı bir çizgiyle çizili ve kaydırma çubuğunda küçük bir kırmızı kutuyla işaretlenmiştir. |
+| Hata | `error` | İhlaller *Hata* Listesinde ve komut satırı derleme çıkışında Hatalar olarak görünür ve derlemelerin başarısız olmasına neden olur.| Soruna neden olan kodun altı kırmızı bir çizgiyle çizili ve kaydırma çubuğunda küçük bir kırmızı kutu ile işaretlenmiştir. |
 | Uyarı | `warning` | İhlaller *Hata* Listesinde ve komut satırı derleme çıkışında Uyarılar olarak görünür, ancak derlemelerin başarısız olmasına neden olmaz. | Soruna neden olan kodun altı yeşil bir geçişle çizili ve kaydırma çubuğunda küçük bir yeşil kutuyla işaretlenmiştir. |
 | Bilgi | `suggestion` | İhlaller, komut satırı derleme çıkışında değil Hata Listesinde İletiler olarak görünür.  | Soruna neden olan kodun altı gri bir geçişle çizili ve kaydırma çubuğunda küçük bir gri kutuyla işaretlenir. |
-| Gizli | `silent` | Kullanıcıya görünür değil. | Kullanıcıya görünür değil. Ancak tanılama, IDE tanılama altyapısına bildirilir. |
+| Gizli | `silent` | Kullanıcı tarafından görülemeyebilir. | Kullanıcı tarafından görülemeyebilir. Ancak tanılama, IDE tanılama altyapısına raporlandı. |
 | Hiçbiri | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
-| Varsayılan | `default` | Kuralın varsayılan önem derecesine karşılık gelir. Bir kural için varsayılan değerin ne olduğunu belirlemek için Özellikler penceresi bakın. | Kuralın varsayılan önem derecesine karşılık gelir. |
+| Varsayılan | `default` | Kuralın varsayılan önem derecesine karşılık gelen. Bir kuralın varsayılan değerini belirlemek için aşağıdaki Özellikler penceresi. | Kuralın varsayılan önem derecesine karşılık gelen. |
 
-Kural ihlalleri bir çözümleyici tarafından bulunursa, bunlar kod düzenleyicisinde (sorunlu kod altında bir *dalgalı çizgi* olarak) ve hata listesi penceresinde raporlanır.
+Kural ihlalleri bir çözümleyici tarafından bulunursa, bunlar kod düzenleyicisinde (soruna neden olan kodun altında bir geçiş olarak) ve Hata Listesi penceresinde rapor edilir. 
 
-Hata listesinde bildirilen çözümleyici ihlalleri kuralın [önem derecesi düzeyi ayarıyla](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) eşleşir. Çözümleyici ihlalleri Ayrıca kod düzenleyicisinde, sorunlu kodun altında dalgalı çizgiler olarak görünür. Aşağıdaki görüntüde &mdash; bir hata (kırmızı dalgalı çizgi), bir uyarı (yeşil dalgalı çizgi) ve bir öneri (üç gri noktalı) olmak üzere üç ihlal gösterilmektedir:
+Hata listesinde bildirilen çözümleyici ihlalleri, [kuralın önem derecesi ayarıyla](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) eş görünür. Çözümleyici ihlalleri, kod düzenleyicisinde rahatsız eden kodun altında geçişler olarak da gösterilir. Aşağıdaki görüntüde bir hata (kırmızı geçiş), bir uyarı (yeşil geçiş) ve bir öneri (üç gri nokta) olmak için üç &mdash; ihlal gösterilir:
 
-![Visual Studio 'da kod düzenleyicisinde dalgalı çizgiler](media/diagnostics-severity-colors.png)
+![Visual Studio'de kod düzenleyicisinde Visual Studio](media/diagnostics-severity-colors.png)
 
-Aşağıdaki ekran görüntüsünde Hata Listesi göründükleri üç ihlal gösterilmektedir:
+Aşağıdaki ekran görüntüsünde, Hata Listesinde görünen üç ihlalin aynıları yer alır:
 
-![Hata Listesi hata, uyarı ve bilgi ihlali](media/diagnostics-severities-in-error-list.png)
+![Hata Listesinde hata, uyarı ve bilgi ihlali](media/diagnostics-severities-in-error-list.png)
 
-Birçok çözümleyici kuralı veya *tanılaması*, kural ihlalini düzeltmek için uygulayabileceğiniz bir veya daha fazla ilişkili *kod düzeltmesiyle* sahiptir. Kod düzeltmeleri, ampul simgesi menüsünde diğer [hızlı eylem](../ide/quick-actions.md)türleriyle birlikte gösterilir. Bu kod düzeltmeleri hakkında daha fazla bilgi için bkz. [Genel Hızlı Eylemler](../ide/quick-actions.md).
+Birçok çözümleyici kuralı *veya tanılama,* kural ihlallerini düzeltmek için uygulayabilecek *bir veya* daha fazla ilişkili kod düzeltmesi içerir. Kod düzeltmeleri, diğer Hızlı Eylemler türleriyle birlikte ampul simgesi menüsünde [gösterilir.](../ide/quick-actions.md) Bu kod düzeltmeleri hakkında bilgi için bkz. [Yaygın Hızlı Eylemler.](../ide/quick-actions.md)
 
-![Çözümleyici ihlali ve hızlı eylem kodu onarımı](../code-quality/media/built-in-analyzer-code-fix.png)
+![Çözümleyici ihlali ve Hızlı Eylem kod düzeltmesi](../code-quality/media/built-in-analyzer-code-fix.png)
 
-### <a name="hidden-severity-versus-none-severity"></a>' Hidden ' önem derecesine ve ' none ' önem derecesine karşı
+### <a name="hidden-severity-versus-none-severity"></a>'Gizli' önem derecesi ile 'Hiçbiri' önem derecesi karşılaştırması
 
-`Hidden` varsayılan olarak etkin önem derecesi kuralları, devre dışı veya önem derecesi `None` kurallarından birkaç farklı şekilde farklıdır.
+`Hidden` varsayılan olarak etkin önem derecesi kuralları, devre dışı veya önem `None` derecesi kurallarından birkaç farklı şekilde farklıdır.
 
 - Bir önem kuralı için herhangi bir kod düzeltmesi kaydedilmişse, gizli tanılama kullanıcıya görünmese bile düzeltme Visual Studio'de ampul kodu yeniden düzenleme `Hidden` eylemi olarak sunulur. Devre dışı önem derecesi kuralları için `None` bu durum geçerli değildir.
 - `Hidden`önem derecesi kuralları, editorConfig dosyasında aynı anda birden çok çözümleyici kuralının kural önem [derecesine ayar eden girişler tarafından toplu yalıtılmıştır.](#set-rule-severity-of-multiple-analyzer-rules-at-once-in-an-editorconfig-file) `None` önem derecesi kuralları bu şekilde yapılandıramaz. Bunun yerine, her kural kimliği için bir EditorConfig dosyasında [kural önem derecesine ayarlanacak girişler aracılığıyla yapılandırıldılar.](#set-rule-severity-in-an-editorconfig-file)
@@ -101,10 +102,10 @@ Belirli bir çözümleyici kuralları kategorisi veya EditorConfig dosyasında t
 
 Belirli bir kural kimliği için geçerli olan birden çok girdiniz varsa, ilgili girişi seçmek için öncelik sırası aşağıdaki şekildedir:
 
-- Tek bir kural için önem derecesi girişi, bir kategori için önem derecesine göre öncelik alır.
-- Bir kategori için önem derecesi, tüm çözümleyici kuralları için önem derecesine göre öncelik girişi alır.
+- Id'ye göre tek bir kuralın önem derecesi girişi, bir kategoriye ait önem derecesi girdisine göre önceliklidir.
+- Bir kategori için önem derecesi girişi, tüm çözümleyici kuralları için önem derecesi girdisine göre önceliklidir.
 
-Aşağıdaki EditorConfig örneğini göz önünde bulundurun, burada [CA1822](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) "Performance" kategorisine sahiptir:
+[CA1822'nin "Performans" kategorisine sahip](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) olduğu aşağıdaki EditorConfig örneğini düşünün:
 
    ```ini
    [*.cs]
@@ -113,13 +114,13 @@ Aşağıdaki EditorConfig örneğini göz önünde bulundurun, burada [CA1822](/
    dotnet_analyzer_diagnostic.severity = suggestion
    ```
 
-Yukarıdaki örnekte, üç girişin tümü CA1822 için geçerlidir. Bununla birlikte, belirtilen öncelik kurallarını kullanarak, sonraki girişler üzerinden WINS ilk kural KIMLIĞI tabanlı önem derecesi girişi. Bu örnekte, CA1822 "Error" etkili bir önem derecesine sahip olacaktır. "Performans" kategorisindeki tüm kalan kuralların önem derecesi "uyarı" olacaktır. "Performans" kategorisine sahip olmayan tüm geri kalan çözümleyici kurallarının önem derecesi "önerisi" olacaktır.
+Yukarıdaki örnekte üç giriş de CA1822 için geçerlidir. Ancak, belirtilen öncelik kuralları kullanılarak, ilk kural kimliği tabanlı önem derecesi girişi sonraki girişlere göre kazanır. Bu örnekte, CA1822 etkili bir "hata" önem derecesine sahip olur. "Performans" kategorisine sahip kalan tüm kuralların önem derecesi "uyarı" olur. "Performans" kategorisine sahip olan diğer tüm çözümleyici kuralları önem derecesine "öneri" sahip olur.
 
-#### <a name="manually-configure-rule-severity-in-an-editorconfig-file"></a>Bir EditorConfig dosyasında kural önem derecesini el ile yapılandırma
+#### <a name="manually-configure-rule-severity-in-an-editorconfig-file"></a>EditorConfig dosyasında kural önem derecelerini el ile yapılandırma
 
-1. Projeniz için zaten bir EditorConfig dosyanız yoksa, [bir tane ekleyin](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
+1. Projeniz için henüz bir EditorConfig dosyanız yoksa bir [ekleyin.](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)
 
-2. Karşılık gelen dosya uzantısı altında yapılandırmak istediğiniz her kural için bir giriş ekleyin. Örneğin, [CA1822](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) için önem derecesini C# dosyaları için ayarlamak üzere `error` , giriş aşağıdaki gibi görünür:
+2. Yapılandırmak istediğiniz her kural için ilgili dosya uzantısı altında bir giriş ekleyin. Örneğin, C# dosyaları için [CA1822](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) önem `error` derecesini olarak ayarlamak için giriş aşağıdaki gibi olacaktır:
 
    ```ini
    [*.cs]
@@ -127,17 +128,17 @@ Yukarıdaki örnekte, üç girişin tümü CA1822 için geçerlidir. Bununla bir
    ```
 
 > [!NOTE]
-> IDE kod stili Çözümleyicileri için, bunları bir EditorConfig dosyasında farklı bir sözdizimi kullanarak da yapılandırabilirsiniz, örneğin, `dotnet_style_qualification_for_field = false:suggestion` . Ancak, söz dizimini kullanarak önem derecesi ayarlarsanız `dotnet_diagnostic` , öncelik kazanır. Daha fazla bilgi için bkz. [EditorConfig Için dil kuralları](/dotnet/fundamentals/code-analysis/style-rules/language-rules).
+> IDE kod stili çözümleyiciler için, bunları bir EditorConfig dosyasında farklı bir söz dizimi kullanarak da yapılandırabilirsiniz, örneğin, `dotnet_style_qualification_for_field = false:suggestion` . Ancak, söz dizimi kullanarak bir önem `dotnet_diagnostic` derecesi ayarsanız öncelik alır. Daha fazla bilgi için [bkz. EditorConfig için dil kuralları.](/dotnet/fundamentals/code-analysis/style-rules/language-rules)
 
-### <a name="set-rule-severity-from-the-light-bulb-menu"></a>Ampul menüsünden Kural önem derecesini ayarlama
+### <a name="set-rule-severity-from-the-light-bulb-menu"></a>Ampul menüsünden kural önem derecelerini ayarlama
 
-Visual Studio, bir kuralın önem derecesini [hızlı eylemler](../ide/quick-actions.md) ampul menüsünden yapılandırmanın kolay bir yolunu sunar.
+Visual Studio, Hızlı Eylemler ampul menüsünden bir kuralın önem derecelerini yapılandırmak için [kullanışlı bir](../ide/quick-actions.md) yol sağlar.
 
-1. Bir ihlal oluştuktan sonra, düzenleyicide ihlalin üzerine gelin ve ampul menüsünü açın. Ya da imlecinizi satıra yerleştirip **CTRL** tuşuna basın + **.** (nokta).
+1. İhlal olduktan sonra düzenleyicide ihlal geçişlerinin üzerine gelin ve ampul menüsünü açın. Veya imlecinizi satıra yerleştirerek **Ctrl tuşuna** + **basın.** (dönem).
 
 2. Ampul menüsünden Sorunları yapılandır veya Bastır **Önem derecelerini** > **\<rule ID> yapılandır'ı seçin.**
 
-   ![Visual Studio'da ampul menüsünden kural önem derecelerini Visual Studio](media/configure-rule-severity.png)
+   ![Visual Studio'de ampul menüsünden kural önem derecelerini Visual Studio](media/configure-rule-severity.png)
 
 3. Buradan önem derecesi seçeneklerinden birini belirleyin.
 
@@ -146,7 +147,7 @@ Visual Studio, bir kuralın önem derecesini [hızlı eylemler](../ide/quick-act
    Visual Studio önizleme kutusunda gösterildiği gibi kuralı istenen düzeye yapılandırmak için EditorConfig dosyasına bir giriş ekler.
 
    > [!TIP]
-   > Projede henüz bir EditorConfig dosyanız yoksa, sizin Visual Studio bir tane oluşturur.
+   > Projede henüz bir EditorConfig dosyanız yoksa, Visual Studio bir tane oluşturur.
 
 ### <a name="set-rule-severity-from-the-error-list-window"></a>Hata Listesi penceresinden kural önem derecelerini ayarlama
 
@@ -163,41 +164,41 @@ Visual Studio, hata listesi bağlam menüsünden kuralın önem derecelerini yap
    Visual Studio, kuralı istenen düzeye yapılandırmak için EditorConfig dosyasına bir giriş ekler.
 
    > [!TIP]
-   > Projede henüz bir EditorConfig dosyanız yoksa, sizin Visual Studio bir tane oluşturur.
+   > Projede henüz bir EditorConfig dosyanız yoksa, Visual Studio bir tane oluşturur.
 
 ::: moniker-end
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Kural önem derecelerini Çözüm Gezgini
 
-Çözümleyici tanılamalarını özelleştirmenin büyük bir **Çözüm Gezgini.** Çözümleyicileri [nuGet](../code-quality/install-roslyn-analyzers.md) paketi olarak yüklürsanız, çözümleyiciler düğümünde, uygulamanın Başvurular veya **Bağımlılıklar** düğümü altında bir **Çözümleyiciler Çözüm Gezgini.**   **Çözümleyiciler'i** ve ardından çözümleyici derlemelerinden birini genişlettiklerinde, derlemede tüm tanılamaları görüyorsunuz.
+Çözümleyici tanılamalarını özelleştirmenin büyük bir **Çözüm Gezgini.** Çözümleyicileri [bir çözümleyici](../code-quality/install-roslyn-analyzers.md) paketi NuGet,  içinde yer alan  Başvurular veya Bağımlılıklar düğümü altında **bir** Çözümleyiciler **Çözüm Gezgini.** **Çözümleyiciler'i** ve ardından çözümleyici derlemelerinden birini genişlettiklerinde, derlemede tüm tanılamaları görüyorsunuz.
 
 ![Çözüm Gezgini'de çözümleyiciler düğümü](media/analyzers-expanded-in-solution-explorer.png)
 
-Özellikler penceresinde bir tanılamanın açıklamasını ve varsayılan önem derecesini de içeren özelliklerini **görüntüebilirsiniz.** Özellikleri görüntülemek için kurala sağ tıklayın ve **Özellikler**' i seçin veya kuralı seçin ve ardından **alt** + **ENTER** tuşuna basın.
+Özellikler penceresinde, bir tanılamanın açıklaması ve varsayılan önem derecesi de dahil olmak üzere özelliklerini **görüntüebilirsiniz.** Özellikleri görüntülemek için kurala sağ tıklayın ve Özellikler'i **seçin** veya kuralı seçin ve ardından Alt Enter **tuşuna** + **basın.**
 
-![Özellikler penceresi tanılama özellikleri](media/analyzer-diagnostic-properties.png)
+![Özellikler penceresi'daki tanılama özellikleri](media/analyzer-diagnostic-properties.png)
 
-Bir Tanılamanın çevrimiçi belgelerini görmek için, tanılamayı sağ tıklatın ve **Yardımı görüntüle**' yi seçin.
+Tanılamaya ilişkin çevrimiçi belgeleri görmek için tanılamaya sağ tıklayın ve Yardımı **Görüntüle'yi seçin.**
 
-**Çözüm Gezgini** içindeki her bir Tanılamanın yanındaki simgeler, düzenleyicide açtığınızda kural kümesinde gördüğünüz simgelere karşılık gelir:
+Her tanılamanın yanındaki **simgeler Çözüm Gezgini** düzenleyicide açarak kural kümesinde gördüğünüz simgelere karşılık gelecektir:
 
-- bir daire içindeki "x", **hatanın** [önem derecesini](#configure-severity-levels) gösterir
-- Bir üçgendeki "!", **uyarının** [önem derecesini](#configure-severity-levels) gösterir
-- bir daire içindeki "i", **bilgi** [önem derecesini](#configure-severity-levels) gösterir
-- açık renkli bir arka plandaki daire içindeki "i", **gizlenen** [önem derecesini](#configure-severity-levels) gösterir
-- bir daire içindeki aşağı açılan ok, Tanılamanın bastırılmadığını belirtir
+- Dairenin "x" değeri Hata [önem derecesine](#configure-severity-levels) **işaret**
+- Bir üçgende yer alan "!" işareti Uyarı [önem derecesine](#configure-severity-levels) **işaret eder**
+- Dairenin "i" değeri Bilgi [önem derecesine](#configure-severity-levels) **işaret**
+- Açık renkli arka plandaki dairenin "i" değeri, Gizli [önem derecesine](#configure-severity-levels) işaret **eder**
+- Dairenin aşağı dönük ok değeri tanılamanın gizleniyor olduğunu gösterir
 
-![Çözüm Gezgini tanılama simgeleri](media/diagnostics-icons-solution-explorer.png)
+![Çözüm Gezgini'de tanılama simgeleri](media/diagnostics-icons-solution-explorer.png)
 
 ::: moniker range=">=vs-2019"
 
-#### <a name="convert-an-existing-ruleset-file-to-editorconfig-file"></a>Varolan bir RuleSet dosyasını EditorConfig dosyasına Dönüştür
+#### <a name="convert-an-existing-ruleset-file-to-editorconfig-file"></a>Mevcut bir Kural Kümesi dosyasını EditorConfig dosyasına dönüştürme
 
-Visual Studio 2019 sürüm 16,5 ' den başlayarak, RuleSet dosyaları, yönetilen kodun çözümleyici yapılandırması için EditorConfig dosyasında kullanım dışı bırakılmıştır. Çözümleyici kuralı önem derecesi için Visual Studio Araçları önem derecesi yapılandırması, RuleSet dosyaları yerine EditorConfig dosyalarında çalışacak şekilde güncelleştirilmiştir. EditorConfig dosyaları, Visual Studio IDE kod stili seçenekleri de dahil olmak üzere hem çözümleyici kuralı, hem de Çözümleyici seçeneklerini yapılandırmanızı sağlar. Mevcut RuleSet dosyanızı bir EditorConfig dosyasına dönüştürmeniz önemle önerilir. Ayrıca, EditorConfig dosyasını deponuzdaki veya çözüm klasöründeki bir köke kaydetmeniz önerilir. Depo veya çözüm klasörünüzün kökünü kullanarak, bu dosyadaki önem derecesi ayarlarının, sırasıyla tüm depoya veya çözüme otomatik olarak uygulandığından emin olun.
+2019 Visual Studio 16.5 sürümünden başlayarak, kural kümesi dosyaları yönetilen kod için çözümleyici yapılandırması için EditorConfig dosyası için kullanım dışıdır. Çözümleyici kuralı Visual Studio yapılandırmaya yönelik en önemli araç, kural kümesi dosyaları yerine EditorConfig dosyalarında çalışacak şekilde güncelleştirildi. EditorConfig dosyaları, IDE kod stili seçenekleri dahil olmak üzere hem çözümleyici kuralı Visual Studio çözümleyici seçeneklerini yapılandırmaya olanak sağlar. Mevcut kural kümesi dosyanızı bir EditorConfig dosyasına dönüştürmeniz kesinlikle önerilir. Ayrıca, EditorConfig dosyasını, repo'nizin köküne veya çözüm klasörüne kaydetmeniz de önerilir. Repo veya çözüm klasörünün kökünü kullanarak, bu dosyanın önem derecesi ayarlarının sırasıyla tüm repo veya çözüme otomatik olarak uygulandığından emin olursanız.
 
-Varolan bir RuleSet dosyasını bir EditorConfig dosyasına dönüştürmenin birkaç yolu vardır:
+Mevcut bir kural kümesi dosyasını EditorConfig dosyasına dönüştürmenin birkaç yolu vardır:
 
-- Visual Studio 'daki RuleSet düzenleyicisinden (Visual Studio 2019 16,5 veya üstünü gerektirir). Projeniz zaten olarak belirli bir kural kümesi dosyası kullanıyorsa, projenizin içindeki Ruleset Editor'dan eşdeğer bir `CodeAnalysisRuleSet` EditorConfig dosyasına Visual Studio.
+- Visual Studio'daki Kural Kümesi Düzenleyicisi'Visual Studio (2019 16.5 veya sonraki bir Visual Studio gerektirir). Projeniz zaten olarak belirli bir kural kümesi dosyası kullanıyorsa, projenizin içindeki Kural Kümesi Düzenleyicisi'nde bunu eşdeğer bir `CodeAnalysisRuleSet` EditorConfig dosyasına Visual Studio.
 
     1. Dosyanın içinde kural kümesi dosyasına çift Çözüm Gezgini.
 
@@ -211,7 +212,7 @@ Varolan bir RuleSet dosyasını bir EditorConfig dosyasına dönüştürmenin bi
 
     3. EditorConfig **dosyasını** oluşturmak için Kaydet düğmesini seçin.
 
-       Oluşturulan EditorConfig'in düzenleyicide açılması gerekir. Buna ek olarak, MSBuild özelliği artık özgün kural kümesi dosyasına `CodeAnalysisRuleSet` başvurulmayacak şekilde proje dosyasında güncelleştirilir.
+       Oluşturulan EditorConfig'in düzenleyicide açılması gerekir. Ayrıca, MSBuild özelliği, artık özgün kural kümesi dosyasına başvurulmayacak `CodeAnalysisRuleSet` şekilde proje dosyasında güncelleştirilir.
 
 - Komut satırından:
 
@@ -268,45 +269,45 @@ dotnet_diagnostic.CA2231.severity = warning
 ::: moniker range=">=vs-2019"
 3. Kurala sağ tıklayın ve Önem derecelerini **ayarla'yı seçin.** Bağlam menüsünde önem derecelerinden birini seçin.
 
-   Visual Studio, kuralı istenen düzeye yapılandırmak için EditorConfig dosyasına bir giriş ekler. Projeniz bir EditorConfig dosyası yerine bir RuleSet dosyası kullanıyorsa, ' önem derecesi girişi RuleSet dosyasına eklenir.
+   Visual Studio, kuralı istenen düzeye yapılandırmak için EditorConfig dosyasına bir giriş ekler. Projeniz EditorConfig dosyası yerine bir kural kümesi dosyası kullanıyorsa, önem derecesi girişi kural kümesi dosyasına eklenir.
 
    > [!TIP]
-   > Projede zaten bir EditorConfig dosyanız veya RuleSet dosyanız yoksa, Visual Studio sizin için yeni bir EditorConfig dosyası oluşturur.
+   > Projede editorConfig dosyası veya kural kümesi dosyası yoksa, Visual Studio yeni bir EditorConfig dosyası oluşturur.
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-3. Kurala sağ tıklayın ve **kural kümesi önem derecesi ayarla**' yı seçin. Bağlam menüsünde önem derecesi seçeneklerinden birini seçin.
+3. Kurala sağ tıklayın ve Kural Kümesi **Önem Derecesine Ayarla'yı seçin.** Bağlam menüsünde önem derecelerinden birini seçin.
 
-   Kuralın önem derecesi, etkin kural kümesi dosyasına kaydedilir.
+   Kuralın önem derecesi etkin kural kümesi dosyasına kaydedilir.
 ::: moniker-end
 
-### <a name="set-rule-severity-in-the-rule-set-file"></a>Kural önem derecesini kural kümesi dosyasında ayarla
+### <a name="set-rule-severity-in-the-rule-set-file"></a>Kural kümesi dosyasında kural önem derecelerini ayarlama
 
-![Çözüm Gezgini kural kümesi dosyası](media/ruleset-in-solution-explorer.png)
+![Dosyanın kural kümesi Çözüm Gezgini](media/ruleset-in-solution-explorer.png)
 
-1. Etkin kural kümesi dosyasını aşağıdaki yollarla açın:
+1. Etkin kural kümesi dosyasını aşağıdaki yöntemlerden birini ile açın:
 
-- **Çözüm Gezgini**' de, dosyaya **çift tıklayın,** çözümleyiciler öğesine sağ tıklayın  >   ve **etkin kural kümesini aç**' ı seçin.
-- Projenin **Kod Analizi** Özellik sayfasında **Aç** ' ı seçin.
+- Bu **Çözüm Gezgini** dosyasına çift tıklayın, Başvurular Çözümleyicileri düğümüne sağ tıklayın ve Etkin Kural  >   Kümesi **Aç'ı seçin.**
+- Projenin **Code Analysis** sayfasında Aç'ı **seçin.**
 
-  Kural kümesini ilk kez düzenliyorsanız, Visual Studio varsayılan kural kümesi dosyasının bir kopyasını oluşturur, *\<projectname> . RuleSet* olarak adlandırır ve bunu projenize ekler. Bu özel kural kümesi, projeniz için etkin kural kümesi de olur.
+  Kural kümesi ilk kez düzen alıyorsanız Visual Studio varsayılan kural kümesi dosyasının bir kopyasını oluşturur, *\<projectname> .ruleset* olarak adlar ve projenize ekler. Bu özel kural kümesi ayrıca projeniz için etkin kural kümesi olur.
 
    > [!NOTE]
-   > .NET Core ve .NET Standard projeleri, **Çözüm Gezgini** kural kümeleri için menü komutlarını desteklemez, örneğin, **etkin kural kümesi açın**. .NET Core veya .NET Standard projesi için varsayılan olmayan bir kural kümesi belirtmek için, [ **CodeAnalysisRuleSet** özelliğini](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) proje dosyasına el ile ekleyin. Kuralları, Visual Studio kural kümesi Düzenleyicisi Kullanıcı arabirimindeki kural kümesi içinde yine yapılandırabilirsiniz.
+   > .NET Core ve .NET Standard projeleri, 'de kural kümeleri için menü **komutlarını desteklemez Çözüm Gezgini**, örneğin, **Etkin Kural Kümesi Aç.** Bir .NET Core veya .NET Standard için varsayılan olmayan bir kural kümesi belirtmek için [ **CodeAnalysisRuleSet**](using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) özelliğini proje dosyasına el ile ekleyin. Kural kümesi düzenleyicisi kullanıcı arabiriminde kural kümesi içinde Visual Studio yine de yapılandırabilirsiniz.
 
-1. İçeren derlemeyi genişleterek kurala gidin.
+1. İçeren derlemesini genişleterek kurala göz at.
 
-1. **Eylem** sütununda, bir açılan listeyi açmak için değeri seçin ve listeden istenen önem derecesini seçin.
+1. Eylem **sütununda,** açılan listeyi açmak için değeri seçin ve listeden istediğiniz önem derecesine tıklayın.
 
-   ![Düzenleyicide kural kümesi dosyası aç](media/ruleset-file-in-editor.png)
+   ![Kural kümesi dosyası düzenleyicide açılır](media/ruleset-file-in-editor.png)
 
 ::: moniker range=">=vs-2019"
 
-## <a name="configure-generated-code"></a>Oluşturulan kodu Yapılandır
+## <a name="configure-generated-code"></a>Oluşturulan kodu yapılandırma
 
-Çözümleyiciler bir projedeki tüm kaynak dosyalarında çalışır ve bunlar üzerinde ihlalleri bildirir. Ancak, bu ihlaller tasarımcı tarafından oluşturulan kod dosyaları, derleme sistemi tarafından oluşturulan geçici kaynak dosyalar gibi oluşturulan kod dosyalarında kullanışlı değildir. Kullanıcılar bu dosyaları el ile düzenleyemez ve/veya bu tür araç tarafından oluşturulan dosyalarda ihlalleri düzeltmekle kaygılanmaz.
+Çözümleyiciler bir proje içinde tüm kaynak dosyaları üzerinde çalışır ve bunlar üzerinde ihlaller raporlar. Ancak, bu ihlaller tasarımcı tarafından oluşturulan kod dosyaları, derleme sistemi tarafından oluşturulan geçici kaynak dosyalar gibi oluşturulan kod dosyalarında kullanışlı değildir. Kullanıcılar bu dosyaları el ile düzenleyemez ve/veya bu tür araç tarafından oluşturulan dosyalarda ihlalleri düzeltmekle ilgili endişesi yok.
 
-Varsayılan olarak, çözümleyicileri yürüten çözümleyici sürücüsü dosyaları belirli bir adla, dosya uzantısıyla veya otomatik olarak oluşturulan dosya üst bilgisinde oluşturulan kod dosyaları olarak kabul ediyor. Örneğin, veya ile biten bir dosya `.designer.cs` `.generated.cs` adı, oluşturulan kod olarak kabul edilir. Ancak, bu üristikler kullanıcının kaynak kodunda özel olarak oluşturulan tüm kod dosyalarını tanımlayamaz.
+Varsayılan olarak, çözümleyicileri yürüten çözümleyici sürücüsü dosyaları belirli bir adla, dosya uzantısıyla veya otomatik olarak oluşturulan dosya üst bilgisinde oluşturulan kod dosyaları olarak kabul ediyor. Örneğin, veya ile biten bir dosya `.designer.cs` `.generated.cs` adı, oluşturulan kod olarak kabul edilir. Ancak, bu üristikler kullanıcının kaynak kodunda özel olarak oluşturulan tüm kod dosyalarını tanımyamaz.
 
 2019 16.5 Visual Studio'den başlayarak, son kullanıcılar editorConfig dosyasında oluşturulan kod olarak kabul edilen belirli dosyaları ve/veya klasörleri [yapılandırabilir.](https://editorconfig.org/) Böyle bir yapılandırma eklemek için aşağıdaki adımları izleyin:
 
@@ -329,32 +330,32 @@ Varsayılan olarak, çözümleyicileri yürüten çözümleyici sürücüsü dos
 
 Projenizi komut satırına derlemeniz, aşağıdaki koşullar karşılanırsa derleme çıkışında kural ihlalleri görünür:
 
-- Çözümleyiciler VSIX uzantısı olarak değil.NET SDK ile veya NuGet paketi olarak yüklenir.
+- Çözümleyiciler VSIX uzantısı olarak değil, .NET SDK ile veya NuGet paketi olarak yüklenir.
 
-  .NET SDK kullanılarak yüklenmiş çözümleyiciler için çözümleyicileri [etkinleştirmeniz gerekebilir.](../code-quality/install-net-analyzers.md) Kod stilleri için, bir MSBuild [özelliği ayarerek kod stillerini](/dotnet/fundamentals/code-analysis/overview#code-style-analysis) derlemede de zorunlu kabilirsiniz.
+  .NET SDK kullanılarak yüklenmiş çözümleyiciler için çözümleyicileri [etkinleştirmeniz gerekebilir.](../code-quality/install-net-analyzers.md) Kod stilleri için, bir derleme [özelliği ayarerek kod](/dotnet/fundamentals/code-analysis/overview#code-style-analysis) stillerini MSBuild yapabilirsiniz.
 
 - Projenin kodunda bir veya daha fazla kural ihlal edildi.
 
 - İhlal edilmiş bir kuralın önem derecesi uyarı olarak ayarlanır; bu durumda ihlaller derlemenin başarısız olmasına veya hataya neden olmaz ve bu durumda ihlaller derlemenin başarısız olmasına neden olur. [](#configure-severity-levels)
 
-Derleme çıkışının ayrıntılılığı, kural ihlallerinin gösterilip gösterilmeyeceğini etkilemez. **Sessiz** ayrıntı düzeyine sahip olsa bile, yapı çıkışında kural ihlalleri görüntülenir.
+Derleme çıkışının ayrıntılılığı, kural ihlallerinin gösterilip gösterilmeyeceğini etkilemez. Sessiz **ayrıntılılık** olsa bile, derleme çıkışında kural ihlalleri görünür.
 
 > [!TIP]
-> Komut satırından, *FxCopCmd.exe* veya **RunCodeAnalysis** bayrağıyla MSBuild aracılığıyla eski analizler çalıştırmaya alışkın değilseniz, bunu kod Çözümleyicileri ile nasıl yapacağıdır.
+> *FxCopCmd.exe* veya **RunCodeAnalysis** bayrağıyla msbuild aracılığıyla komut satırı üzerinden eski analizi çalıştırmaya alışkınsanız, kod çözümleyicileri ile bunu nasıl yapabilirsiniz?
 
-MSBuild kullanarak projenizi oluştururken komut satırında çözümleyici ihlallerini görmek için şöyle bir komut çalıştırın:
+msbuild kullanarak projenizi derlemek için komut satırına çözümleyici ihlallerini görmek için aşağıdakine benzer bir komut çalıştırın:
 
 ```cmd
 msbuild myproject.csproj /target:rebuild /verbosity:minimal
 ```
 
-Aşağıdaki görüntüde, bir çözümleyici kuralı ihlali içeren bir proje derlemeden komut satırı derleme çıkışı gösterilmektedir:
+Aşağıdaki görüntüde çözümleyici kuralı ihlali içeren bir proje derlemenin komut satırı derleme çıktısı gösterilir:
 
-![Kural ihlali ile MSBuild çıkışı](media/command-line-build-analyzers.png)
+![MSBuild ihlali olan bir çıkış](media/command-line-build-analyzers.png)
 
 ## <a name="dependent-projects"></a>Bağımlı projeler
 
-Bir .NET Core projesinde, NuGet Çözümleyicileri olan bir projeye başvuru eklerseniz, bu çözümleyiciler otomatik olarak bağımlı projeye de eklenir. Bu davranışı devre dışı bırakmak için örneğin, bağımlı proje bir birim testi projem ise, **Privatevarlıkların** özniteliğini ayarlayarak, başvurulan projenin *. csproj* veya *. vbproj* dosyasında NuGet paketini özel olarak işaretleyin:
+Bir .NET Core projesinde, farklı çözümleyicileri olan bir projeye NuGet, bu çözümleyiciler de bağımlı projeye otomatik olarak eklenir. Bu davranışı devre dışı bırakmak için, örneğin bağımlı proje bir birim testi projesi ise **PrivateAssets** özniteliğini ayarerek NuGet paketini başvurulan projenin *.csproj* veya *.vbproj* dosyasında özel olarak işaretle:
 
 ```xml
 <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.0" PrivateAssets="all" />
@@ -362,8 +363,8 @@ Bir .NET Core projesinde, NuGet Çözümleyicileri olan bir projeye başvuru ekl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da kod Çözümleyicileri 'ne genel bakış](../code-quality/roslyn-analyzers-overview.md)
-- [Kod Çözümleyicisi hatası gönderme](https://github.com/dotnet/roslyn-analyzers/issues)
+- [Visual Studio'de kod çözümleyicilere genel bakış](../code-quality/roslyn-analyzers-overview.md)
+- [Kod çözümleyicisi hatası gönderme](https://github.com/dotnet/roslyn-analyzers/issues)
 - [Kural kümelerini kullanma](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
-- [Kod Analizi uyarılarını gösterme](../code-quality/in-source-suppression-overview.md)
+- [Kod analizi uyarılarını gizleme](../code-quality/in-source-suppression-overview.md)
 - [Kod analizi için yapılandırma seçenekleri (.NET)](/dotnet/fundamentals/code-analysis/configuration-options)

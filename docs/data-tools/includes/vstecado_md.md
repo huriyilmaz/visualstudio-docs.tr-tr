@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 6cd31e3f0ac0fffc4efae5fbdf531f922484340d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2565ee2f607d4d3afc789940b8321fb703240cc45b2165a468d881dbe15d0f5b
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89324699"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122107971"
 ---
 ADO.NET

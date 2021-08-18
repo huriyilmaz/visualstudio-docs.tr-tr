@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, alanlar numaralandırmasından sonraki öğe kümesini döndürür.
-title: 'IEnumDebugFields:: Next | Microsoft Docs'
+description: Bu yöntem, alan numaralamadan sonraki öğe kümesi döndürür.
+title: IEnumDebugFields::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 22c177a2-af81-4234-812b-f9b47be245a2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6b1705c1f07ce17df0d09c8b3036c639b6fe829a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f336279bd32a0c7cfea12c2a0951600699b98790
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073475"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103370"
 ---
 # <a name="ienumdebugfieldsnext"></a>IEnumDebugFields::Next
-Bu yöntem, Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
+Bu yöntem, numaralamadan sonraki öğe kümesi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
+[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
 
 `rgelt`\
-[in, out] Doldurulacak [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) öğelerinin dizisi.
+[in, out] Doldurulması [gereken IDebugField](../../../extensibility/debugger/reference/idebugfield.md) öğeleri dizisi.
 
 `pceltFetched`\
-dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
+[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür, aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

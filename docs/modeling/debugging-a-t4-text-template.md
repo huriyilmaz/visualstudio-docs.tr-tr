@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 360c007363e8e5b559e3c95481a014c4c453093fa1ecac804b42f986ad2f8988
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2d1b8c0bb6aa166ee31b9e6d8248e0bef6755f47
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398235"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150774"
 ---
 # <a name="debugging-a-t4-text-template"></a>Bir T4 Metin Şablonuna İlişkin Hata Ayıklama
 Metin şablonlarında kesme noktaları oluşturabilirsiniz. Tasarım zamanı metin şablonunda hata ayıklamak için, metin şablonu dosyasını kaydedin ve sonra dosyanın kısayol **menüsünden T4** Şablonunda Hata Ayıkla'yı Çözüm Gezgini. Çalışma zamanı metin şablonunda hata ayıklamak için, ait olduğu uygulamanın hata ayıklaması yapmanız gerekir.
@@ -57,7 +57,7 @@ Metin şablonlarında kesme noktaları oluşturabilirsiniz. Tasarım zamanı met
 |'' include dosyası {0} yükleniyor, null veya boş bir dize döndürdü.|Dahil edilen bir metin şablonu dosyası boşsa gerçekleşir. İleti, dahil edilen dosyanın dosya adını sağlar.|Include yönergesi kaldır veya dosyada bazı içerikler olduğundan emin olun.|
 |Dönüştürmeyi derleme:|Bu dizeyi, dönüştürmeyi derlerken derleyiciden kaynaklanan tüm hatalara veya uyarılara hazırlar. Bu dize, derleyicinin bir hata veya uyarı attığı anlamına gelir.|DLL'yi bulma konusunda bir sorun varsa, DLL GAC'de ise tam yolu veya tam bir güçlü adı sağlamanız gerekir.|
 |'' {0} parametresi yönergesinde zaten var. Yinelenen parametre yoksayılır.|Bir parametre bir yönergede birden çok kez belirtiliyorsa gerçekleşir. İleti parametrenin adını ve yönergenin satır numarasını sağlar.|Yinelenen parametre belirtimlerini kaldırın.|
-|'' dahil dosyası yüklenirken bir hata {0} oluştu. Include yönergesi yoksayılır.|Bir yönergede belirtilen bir dosyayı bulamasanız `include` gerçekleşir. İleti, dosyanın adını ve yönergenin satır numarasını sağlar.|Ekleme dosyasının özgün metin şablonu dosyasıyla aynı dizinde veya konakla kayıtlı ekleme dizinlerinden biri içinde mevcut olduğundan emin olun.|
+|'' dahil dosyası yüklenirken bir hata {0} oluştu. Include yönergesi yoksayılır.|Bir yönergede belirtilen bir dosyayı bulamazsanız `include` gerçekleşir. İleti, dosyanın adını ve yönergenin satır numarasını sağlar.|Ekleme dosyasının özgün metin şablonu dosyasıyla aynı dizinde veya konakla kayıtlı ekleme dizinlerinden biri içinde mevcut olduğundan emin olun.|
 |Dönüşüm sınıfı için geçersiz bir temel sınıf belirtildi. Temel sınıf Microsoft.VisualStudio.TextTemplating.TextTransformation'dan türetildi.|Şablon `inherits` yönergesinde parametresi, 'den devralmaz bir sınıf belirtirken `TextTransformation` gerçekleşir. İleti, şablon yönergesi için satır numarasını sağlar.|sınıfından türeten bir sınıf `TextTransformation` belirtin.|
 |'Template' yönergesinde geçersiz bir kültür belirtildi. Kültürün "xx-XX" biçiminde olması gerekir. Sabit kültür kullanılır.|Şablon yönergesinde kültür parametresi yanlış belirtiliyorsa gerçekleşir. İleti, şablon yönergesi için satır numarasını sağlar.|Culture parametresini "xx-XX" biçiminde geçerli bir kültür olarak değiştirme.|
 |Şablon yönergesinde geçersiz bir {0} hata ayıklama değeri ' ' belirtildi. Hata ayıklama değeri "true" veya "false" olabilir. Varsayılan "false" kullanılır.|Şablon `debug` yönergesinde parametresi yanlış belirtiliyorsa gerçekleşir. İleti, şablon yönergesi için satır numarasını sağlar.|Hata ayıklama parametresini "true" veya "false" olarak ayarlayın.|
@@ -77,6 +77,6 @@ Metin şablonlarında kesme noktaları oluşturabilirsiniz. Tasarım zamanı met
 |Kayıtlı yönerge işlemcisi {0} ' için Derleme ' içinde ' türü {1} {2} bulunamadı<br /><br /> {3}|Yönerge işlemcisi türü derlemeden yüklenemediklerinde oluşur. İleti türü, derleme ve yönerge işlemcisinin adını sağlar.|vshost, kayıt defterinde yönerge işlemci bilgilerini (ad, derleme ve tür) bulur. Yönerge işlemcisinin doğru şekilde kaydedildiklerini ve türün derlemede mevcut olduğundan emin olun.|
 |'' derlemesi yüklenirken bir sorun {0} oldu|Derleme yüklenirken sorun oluştuğunda oluşur. İleti derlemenin adını sağlar.|Yönergelerde yüklenecek derlemeleri ve yönerge \<@#assembly#> işlemcileri tarafından belirtsiniz. Bu dizeyi izleyen hata iletisi, derleme yükünün neden başarısız olduğuyla ilgili daha fazla veri sağla olmalıdır.|
 |'' adlı yönerge için işlemci oluşturma ve başlatma sırasında bir sorun {1} vardı. İşlemcinin türü {0} olur. Yönerge yoksayılır.|Sistem bir yönerge işlemcisi oluşturamadığında veya başlatamadığında gerçekleşir. İleti, yönergenin adını ve satır numarasını ve işlemci türünü sağlar.|Doğru yönerge işlemcisini kullanmaya ve yönerge işlemcisinin genel bir varsayılan oluşturucuya sahip olduğundan emin olun. Aksi takdirde, yönerge işlemcisinin Initialize() yönteminin neden başarısız olduğunu bulmak için hata ayıklama seçeneklerini kullanın. Daha fazla bilgi için [bkz. Metin Şablonları sorunlarını giderme.](../modeling/debugging-a-t4-text-template.md)|
-|'' adlı yönerge işlenmiştir. {0}|Yönerge işlemcisi bir yönergeyi işlerken özel durum oluştuğunda gerçekleşir.|Yönerge işlemcisi parametrelerinin doğru olduğundan emin olun.|
-|Konak, ' ' derleme başvurusunu çözümlemeye çalışırken bir özel durum oluşturdu {0} .|Ana bilgisayar bir derleme başvurusunu çözümlemeye çalıştığında bir özel durum oluşturduğunda gerçekleşir. İleti, derleme başvuru dizesi sağlar.|Derleme başvuruları \<@#assembly#> yönergelerden ve yönerge işlemcilerinde gelir. Derleme parametresinde belirtilen ' name ' parametresinin doğru olduğundan emin olun.|
-|{1}Yönergesi için desteklenmeyen ' ' değerini belirtme girişimi {0}{2}|RequiresProvidesDirectiveProcessor tarafından gerçekleşir (tüm oluşturulan yönerge işlemcileri bundan türetilir), ancak, desteklenmeyen bir gerektirir veya bağımsız değişken sağlar.|Ad = ' Value ' çiftindeki adların, gerektirdiğinden ve parametrelerinin sağlanması doğru olduğundan emin olun.|
+|'' adlı yönerge işlenmiştir. {0}|Yönerge işlemcisi bir yönergeyi işlerken özel durum oluştuğunda gerçekleşir.|Yönerge işlemcisinin parametrelerinin doğru olduğundan emin olun.|
+|Konak, '' derleme başvurusunuzu çözümlemeye çalışırken bir özel durum {0} oluşturdu.|Konak, derleme başvurularını çözümlemeye çalıştığında bir özel durum oluştuğunda gerçekleşir. İleti, derleme başvuru dizesini sağlar.|Derleme başvuruları yönergelerinden \<@#assembly#> ve yönerge işlemcilerinden gelir. Derleme parametresinde sağlanan 'name' parametresinin doğru olduğundan emin olun.|
+|yönergesi için desteklenmeyen {1} ' ' değerini {0} belirtmeye çalışma {2}|Desteklenmeyen bir gerektirir veya bağımsız değişken sağladığında RequiresProvidesDirectiveProcessor tarafından gerçekleşir (tüm oluşturulan yönerge işlemcilerimiz bundan türetmektedir).|requires ve provides parametrelerinde sağlanan name='value' çiftlerinin adlarının doğru olduğundan emin olun.|

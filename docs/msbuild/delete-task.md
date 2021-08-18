@@ -1,6 +1,6 @@
 ---
-title: Görevi Sil | Microsoft Docs
-description: belirtilen dosyaları silmek için MSBuild silme görevinin kullanılmasıyla ilgili parametreleri ve konuları öğrenin.
+title: Görev Yöneticisini | Microsoft Docs
+description: Belirtilen dosyaları silmek için MSBuild Sil görevini kullanmayla ilgili parametreler ve önemli noktalar hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 06/11/2020
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: 916bb2e3-3017-4828-ae27-c0b5c99bbb48
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 09945306a2260bed5b264d380dcea745ff3f7c07
-ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
+ms.openlocfilehash: 1a56c62a9696b881895d233bea89f8e04de78697
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2021
-ms.locfileid: "113280427"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077653"
 ---
 # <a name="delete-task"></a>Silme görevi
 
@@ -33,24 +34,24 @@ Belirtilen dosyaları siler.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tablo, görevin parametrelerini açıklar `Delete` .
+Aşağıdaki tabloda görevin parametreleri açık `Delete` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DeletedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Başarıyla silinen dosyaları belirtir.|
+|`DeletedFiles`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Başarıyla silinen dosyaları belirtir.|
 |`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Silinecek dosyaları belirtir.|
-|`TreatErrorsAsWarnings`|İsteğe bağlı `Boolean` parametre<br /><br /> Varsa `true` , hatalar uyarı olarak günlüğe kaydedilir. `false` varsayılan değerdir.|
+|`TreatErrorsAsWarnings`|İsteğe `Boolean` bağlı parametre<br /><br /> ise, `true` hatalar uyarı olarak günlüğe kaydedilir. `false` varsayılan değerdir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 > [!WARNING]
-> Görevle joker karakter kullanırken dikkatli olun `Delete` . Ya da gibi ifadelerle yanlış dosyaları kolayca silebilirsiniz, `$(SomeProperty)\**\*.*` özellikle de `$(SomeProperty)/**/*.*` özellik boş bir dize olarak değerlendirilir, bu durumda `Files` parametre sürücünüzün köküne değerlendirilemiyor ve silmek istediğiniz kadar fazlasını silebilirsiniz.
+> Görevle joker karakterler kullanırken dikkatli `Delete` olun. Veya gibi ifadeler içeren yanlış dosyaları, özellikle de özelliğin boş bir dize olarak değerlendirmesi durumunda kolayca silebilirsiniz. Bu durumda parametre, sürücü kökünü değerlendirebilir ve silmek istediğinizden çok daha `$(SomeProperty)\**\*.*` `$(SomeProperty)/**/*.*` fazlasını `Files` silebilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, hedefi oluştururken *ConsoleApp1. pdb* dosyasını siler `DeleteDebugSymbolFile` .
+Aşağıdaki örnek, hedefi *derlemek için ConsoleApp1.pdb* dosyasını `DeleteDebugSymbolFile` siler.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -73,7 +74,7 @@ Aşağıdaki örnek, hedefi oluştururken *ConsoleApp1. pdb* dosyasını siler `
 
 ```
 
-Silinen dosyaları izlemeniz gerekiyorsa, `TaskParameter` `DeletedFiles` öğe adı ile olarak öğesini aşağıdaki gibi ayarlayın:
+Silinen dosyaları izlemenizi gerekirse öğe adıyla `TaskParameter` `DeletedFiles` aşağıdaki şekilde ayarlayın:
 
 ```xml
       <Target Name="DeleteDebugSymbolFile">
@@ -84,11 +85,11 @@ Silinen dosyaları izlemeniz gerekiyorsa, `TaskParameter` `DeletedFiles` öğe a
     </Target>
 ```
 
-Görevde doğrudan joker karakter kullanmak yerine `Delete` , silinecek bir dosya oluşturun `ItemGroup` ve `Delete` Bu görevi çalıştırın. Ancak dikkatlice yerleştirdiğinizden emin olun `ItemGroup` . Bir `ItemGroup` proje dosyasına en üst düzeye yerleştirirseniz, derleme başlamadan önce, derleme işleminin bir parçası olarak oluşturulmuş herhangi bir dosya dahil değildir. Bu nedenle, `ItemGroup` bir hedef için göreve yakın bir şekilde silinecek öğelerin listesini oluşturan öğesini koyun `Delete` . Ayrıca, özelliğin boş olmadığını denetlemek için bir koşul belirtebilir ve bu sayede, sürücünün kökünde başlayan bir yol ile bir öğe listesi oluşturmayacağız.
+Görevde doğrudan joker karakterler kullanmak yerine, silmek ve bu görev üzerinde `Delete` çalıştırmak için bir dosya `ItemGroup` `Delete` oluşturun. Ancak, dikkatli bir şekilde yer `ItemGroup` edin. Bir proje dosyasına en üst düzeye bir koysanız, derleme başlamadan önce bu dosya erkenden değerlendirilir, bu nedenle derleme işleminin bir parçası olarak inşa edilen dosyaları `ItemGroup` içermez. Bu nedenle, `ItemGroup` silinecek öğe listesini oluşturan öğelerini göreve yakın bir hedefte `Delete` ekleyin. Ayrıca, özelliğin boş olup olmadığını kontrol etmek için bir koşul da belirtebilirsiniz; böylece sürücünün kökünde başlayan bir yol ile bir öğe listesi oluşturmaz.
 
-`Delete`Görev, dosyaları silmeye yöneliktir. Bir dizini silmek istiyorsanız [RemoveDir](removedir-task.md)öğesini kullanın.
+Görev, `Delete` dosyaları silmek için tasarlanmıştır. Bir dizini silmek için [RemoveDir kullanın.](removedir-task.md)
 
-`Delete`Görev salt okunurdur dosyaları silmeye yönelik bir seçenek sağlamaz. Salt okuma dosyalarını silmek için, bu `Exec` görevi, `del` salt okuma dosyalarını silmeyi etkinleştirmek üzere uygun seçenekle komutu veya eşdeğerini çalıştırmak için kullanabilirsiniz. Komut satırında bir uzunluk sınırlaması olduğundan ve bu örnekte olduğu gibi boşluklar içeren dosya adlarını işlediğinizden emin olmak için, giriş öğesi listesinin uzunluğuna dikkat etmeniz gerekir:
+Görev `Delete` salt okunur dosyaları silme seçeneği sağlamaz. Salt okunur dosyaları silmek için, salt okunur dosyaları silmeyi etkinleştirmek üzere uygun seçenekle komutunu veya `Exec` `del` eşdeğerini çalıştırmak üzere görevi kullanabilirsiniz. Komut satırı üzerinde bir uzunluk sınırlaması olduğundan ve bu örnekte olduğu gibi dosya adlarını boşluklarla işlemeyi unutmayın çünkü giriş öğesi listesinin uzunluğuna dikkat edin:
 
 ```xml
 <Target Name="DeleteReadOnly">
@@ -99,7 +100,7 @@ Görevde doğrudan joker karakter kullanmak yerine `Delete` , silinecek bir dosy
 </Target>
 ```
 
-Genel olarak, derleme betikleri yazarken, silmenin bir işlemin mantıksal olarak bir parçası olup olmadığını göz önünde bulundurun `Clean` . Bazı dosyaları normal bir işlemin bir parçası olarak temizlenecek şekilde ayarlamanız gerekiyorsa `Clean` , bunları `@(FileWrites)` listeye ekleyebilirsiniz ve bunlar bir sonraki adımda silinir `Clean` . Daha fazla özel işleme gerekliyse, bir hedef tanımlayın ve özniteliği `BeforeTargets="Clean"` ya da `AfterTargets="Clean"` ya da hedeflerinin özel sürümünüzü tanımlayarak çalıştırmak için belirtin `BeforeClean` `AfterClean` . Bkz. [yapınızı özelleştirme](customize-your-build.md).
+Genel olarak, derleme betikleri yazarken silme işleminin mantıksal olarak bir işlem parçası olup olmadığını göz önünde `Clean` bulundurabilirsiniz. Bazı dosyaların normal bir işlem kapsamında temizlenecek şekilde ayarlaması gerekirse, bunları listeye ekleyebilirsiniz ve sonraki 'de `Clean` `@(FileWrites)` `Clean` silinirler. Daha fazla özel işleme gerekirse, veya özniteliğini ayarlayarak bir hedef tanımlayın ve bunun çalışması için belirtin ya da ya da hedeflerinin özel `BeforeTargets="Clean"` `AfterTargets="Clean"` sürümünü `BeforeClean` `AfterClean` tanımlayın. Bkz. [Derlemenizi özelleştirme.](customize-your-build.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

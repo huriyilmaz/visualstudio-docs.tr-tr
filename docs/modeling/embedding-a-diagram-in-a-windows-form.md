@@ -1,6 +1,6 @@
 ---
 title: Windows Forms'a Diyagram Ekleme
-description: Visual Studio penceresinde görünen bir Windows DSL diyagramını nasıl Visual Studio öğrenin.
+description: Windows penceresinde görünen bir Windows DSL diyagramını nasıl Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 63a58dba9c6698b46786c665df0262c580b9048c3675a3715787459005405999
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f7c8abdb8b3eff82c7dc36ec9be8bb7e9c1be7d6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121271387"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150579"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Windows Formunda bir Diyagram ekleme
 
@@ -72,7 +72,7 @@ DSL diyagramını, Windows penceresinde görünen bir Visual Studio ebilirsiniz.
 
 1. Form tasarımcısında adlı bir **ListBox** `listBox1` ekleyin. Bu, modelde öğelerin listesini görüntüler. Mağaza olayları kullanılarak modelle *eşitlenir.* Daha fazla bilgi için [bkz. Olay İşleyicileri Değişiklikleri Modelin Dışına Yayma.](../modeling/event-handlers-propagate-changes-outside-the-model.md)
 
-2. Özel kod dosyasında DocView sınıfına diğer yöntemleri geçersiz kılın:
+2. Özel kod dosyasında DocView sınıfına başka yöntemleri geçersiz kılın:
 
     ```csharp
     partial class MyDSLDocView
@@ -140,7 +140,7 @@ DSL diyagramını, Windows penceresinde görünen bir Visual Studio ebilirsiniz.
     }
     ```
 
-4. DSL'yi test etmek için **F5 tuşuna** basın ve Visual Studio örnek model dosyasını açın.
+4. DSL'yi test etmek için **F5 tuşuna** basın ve Visual Studio örneğinde bir örnek model dosyası açın.
 
      Liste kutusunda modelde yer alan öğelerin listesinin yanı sıra ekleme veya silme işlemlerinin yanı sıra Geri Al ve Yinele'den sonra bunun doğru olduğunu fark edin.
 

@@ -1,5 +1,5 @@
 ---
-title: Universal Windows Projelerini Yönetme | Microsoft Docs
+title: Universal Windows Projelerini yönetme | Microsoft Docs
 description: Universal Windows uygulamalarını desteklemek Visual Studio, projeleri yöneten tüm uzantılar Evrensel uygulama Windows yapısına dikkat edin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,16 +11,16 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08c44675c2fcae1035f292a4b2247aef7aad285633b24c28fa2375ef14e4e1de
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d6e34a8cb8da8158eae9e6c245da45fa37d59b4e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121401082"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078745"
 ---
 # <a name="manage-universal-windows-projects"></a>Universal Windows yönetme
 
-Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef alan uygulamalardır ve geliştiricilerin her iki platformda da kod ve diğer varlıkları kullanmasına olanak sağlar. Paylaşılan kod ve kaynaklar paylaşılan bir projede tutulurken platforma özgü kod ve kaynaklar ayrı projelerde, biri Windows diğeri de Windows Phone. Evrensel uygulama uygulamaları hakkında daha fazla Windows için [bkz. Evrensel Windows uygulamaları.](/windows/uwp/get-started/create-uwp-apps) Visual Studio yöneten uzantılar, evrensel Windows uygulama projelerinin tek platform uygulamalardan farklı bir yapıya sahip olduğunun farkındadır. Bu izlenecek yol, paylaşılan projede gezinmeyi ve paylaşılan öğeleri yönetmeyi gösterir.
+Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef alan uygulamalardır ve geliştiricilerin her iki platformda da kod ve diğer varlıkları kullanmasına olanak sağlar. Paylaşılan kod ve kaynaklar paylaşılan projede tutulurken, platforma özgü kod ve kaynaklar ayrı projelerde, biri Windows diğeri de Windows Phone. Evrensel uygulama uygulamaları hakkında daha fazla Windows için [bkz. Evrensel Windows uygulamaları.](/windows/uwp/get-started/create-uwp-apps) Visual Studio yöneten uzantılar, evrensel Windows uygulama projelerinin tek platform uygulamalardan farklı bir yapıya sahip olduğunun farkındadır. Bu izlenecek yol, paylaşılan projede gezinmeyi ve paylaşılan öğeleri yönetmeyi gösterir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -28,9 +28,9 @@ Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef 
 
 ### <a name="navigate-the-shared-project"></a>Paylaşılan projede gezinme
 
-1. **TestUniversalProject** adlı bir C# VSIX projesi oluşturun. (**Dosya**  >  **Yeni**  >  **Project** ve **ardından C#**  >  **Genişletilebilirliği Visual Studio** Paketi  >  **).** Özel Komut **proje öğesi** şablonu ekleyin **(Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yeni Öğe Ekle'yi seçin, ardından Genişletilebilirlik'e  >   **gidin).** Dosyaya **TestUniversalProject adını girin.**
+1. **TestUniversalProject** adlı bir C# VSIX projesi oluşturun. (**Dosya**  >  **Yeni**  >  **Project** ve **ardından C#**  >  **Genişletilebilirliği Visual Studio**  >  **Paketi).** Özel Komut **proje öğesi** şablonu ekleyin **(Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yeni Öğe Ekle'yi seçin, ardından  >  Genişletilebilirlik'e **gidin).** Dosyaya **TestUniversalProject adını girin.**
 
-2. Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* *(Uzantılar* **bölümünde) ekleyin.**
+2. Microsoft.VisualStudio.Shell.Interop.12.1.DesignTime.dll *ve* *Microsoft.VisualStudio.Shell.Interop.14.0.DesignTime.dll* (Uzantılar **bölümünde) için bir başvuru** ekleyin.
 
 3. *TestUniversalProject.cs'yi* açın ve aşağıdaki `using` yönergeleri ekleyin:
 
@@ -347,7 +347,7 @@ Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef 
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, sharedItemIds, true, true);
     ```
 
-3. Paylaşılan öğeleri okuyun. Paylaşılan öğeler platform projesinde gizli bağlantılı dosyalar olarak görünür ve tüm özellikleri normal bağlantılı dosyalar olarak okuyabilirsiniz. Aşağıdaki kod, ilk paylaşılan öğenin tam yolunu okur.
+3. Paylaşılan öğeleri okuyun. Paylaşılan öğeler platform projesinde gizli bağlı dosyalar olarak görünür ve tüm özellikleri normal bağlantılı dosyalar olarak okuyabilirsiniz. Aşağıdaki kod, ilk paylaşılan öğenin tam yolunu okur.
 
     ```csharp
     var sharedItemId = sharedItemIds[0];
@@ -420,7 +420,7 @@ Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef 
 
    2. Proje dosyası, dosyanın yeni adını içerecek şekilde güncelleştirilir.
 
-      Hiyerarşi olayları (örneğin, ) genellikle kullanıcı arabiriminde görüntülenen değişiklikleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> Çözüm Gezgini.  Hiyerarşi olayları, bir dosya silme ve ardından dosya eklemeden oluşan bir dosya yeniden adlandırma işlemini dikkate alır. Ancak, görünmez öğeler değiştiriken, hiyerarşi olay sistemi bir olayı <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> değil, bir olayı <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> sağlar. Bu nedenle, bir platform projesinde bir dosyayı yeniden adlandırırsanız hem hem de elde olur, ancak paylaşılan bir projede bir dosyayı yeniden adlandırırsanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> yalnızca elde olur. <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>
+      Hiyerarşi olayları (örneğin, ) genellikle kullanıcı arabiriminde görüntülenen değişiklikleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> Çözüm Gezgini.  Hiyerarşi olayları, bir dosya silme ve ardından dosya eklemeden oluşan bir dosya yeniden adlandırma işlemini dikkate alır. Ancak, görünmez öğeler değiştiriken, hiyerarşi olay sistemi bir olayı <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> değil, bir olayı <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> sağlar. Bu nedenle, bir platform projesinde bir dosyayı yeniden adlandırırsanız hem hem de olur, ancak paylaşılan bir projede bir dosyayı yeniden adlandırırsanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> yalnızca elde olur. <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>
 
       Proje öğelerinde yapılan değişiklikleri izlemek için DTE proje öğesi olaylarını (içinde bulunanlar) <xref:EnvDTE.ProjectItemsEventsClass> işebilirsiniz. Ancak, çok sayıda olay işleseniz, içinde olayları işleme konusunda daha iyi performans <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> eldeebilirsiniz. Bu kılavuzda yalnızca hiyerarşi olayları ve DTE olayları göstereceğiz. Bu yordamda, paylaşılan bir projeye ve platform projesine olay dinleyicisi eklersiniz. Ardından, paylaşılan bir projede bir dosyayı ve bir platform projesinde başka bir dosyayı yeniden adlandırırsanız, her yeniden adlandırma işlemi için işten atılacak olayları görebilirsiniz.
 
@@ -486,7 +486,7 @@ Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef 
    }
    ```
 
-6. Aynı sınıfta, DTE olayı için bir proje öğesi yeniden <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> adlandırıldıklarında oluşan başka bir olay işleyicisi ekleyin.
+6. Aynı sınıfta, bir proje öğesi yeniden adlandırıldıklarında oluşan DTE olayı <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> için başka bir olay işleyicisi ekleyin.
 
    ```csharp
    public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)
@@ -542,7 +542,7 @@ Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef 
     }
     ```
 
-10. Paylaşılan projede öğenin dosya adını değiştirmek `ShowMessageBox` için içinde diğer tüm koddan sonra bu yöntemi çağırabilirsiniz. Paylaşılan projedeki öğenin tam yolunu alan koddan sonra bunu ekleyin.
+10. Paylaşılan projede öğenin dosya adını `ShowMessageBox` değiştirmek için içinde diğer tüm koddan sonra bu yöntemi çağırabilirsiniz. Paylaşılan projede öğenin tam yolunu alan koddan sonra bunu girin.
 
     ```csharp
     // change the file name of an item in a shared project
@@ -552,9 +552,9 @@ Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef 
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. Projeyi derleyin ve çalıştırın. Deneysel örnekte bir C# Universal Hub uygulaması oluşturun, **Araçlar** menüsüne gidin ve **Testuniversal Salproject komutunu çağır**' a tıklayın ve genel çıkış bölmesindeki metni denetleyin. Paylaşılan projedeki ilk öğenin adı ( *app. xaml* dosyası olması beklenir) değiştirilmelidir ve <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> olayın tetiklendiğini görmeniz gerekir. Bu durumda, *app. xaml* 'in yeniden adlandırılması için *app. xaml. cs* dosyasının da yeniden adlandırılmasına neden olur. bu da dört olay görmeniz gerekir (her platform projesi için iki adet). (DTE olayları Paylaşılan projedeki öğeleri izlemez.) İki olay görmeniz gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> (Platform projelerinin her biri için bir tane), ancak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay yok.
+11. Projeyi derleme ve çalıştırma. Deneysel örnekte bir C# evrensel hub uygulaması  oluşturun, Araçlar menüsüne gidin, **Test ÇağırUniversalProject**'e tıklayın ve genel çıkış bölmesindeki metni kontrol edin. Paylaşılan projede ilk öğenin adı *(App.xaml* dosyası olmasını bekliyoruz) değiştirilsin ve olayın başlatıldı <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> olduğunu görüyor olun. Bu durumda, *App.xaml'in* yeniden adlandırılması *App.xaml.cs'nin* de yeniden adlandırılmasına neden olduğu için dört olay (her platform projesi için iki olay) görüyor olun. (DTE olayları paylaşılan projedeki öğeleri izlemez.) İki olay <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> (platform projelerinden her biri için bir tane) görüyor ancak olay <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> görmüyorsanız.
 
-12. Şimdi bir platform projesindeki bir dosyayı yeniden adlandırmayı deneyin ve tetiklenen olaylardaki farkı görebilirsiniz. Çağrısından sonra içine aşağıdaki kodu ekleyin `ShowMessageBox` `ModifyFileName` .
+12. Şimdi bir platform projesinde bir dosyayı yeniden yeniden adı almaya çalışsanız da, işten çıkarlan olaylarda aradaki farkı anabilirsiniz. çağrısının sonrasını `ShowMessageBox` içinde aşağıdaki kodu `ModifyFileName` ekleyin.
 
     ```csharp
     // change the file name of an item in a platform project
@@ -569,4 +569,4 @@ Evrensel Windows uygulamaları hem Windows 8.1 hem de Windows Phone 8.1'i hedef 
     this.ModifyFileNameInProject(activePlatformHier, unsharedPath);
     ```
 
-13. Projeyi derleyin ve çalıştırın. deneysel örnekte bir C# Universal Project oluşturun, **araçlar** menüsüne gidin ve **testuniversal salproject komutunu çağır**' a tıklayın ve genel çıkış bölmesindeki metni denetleyin. Platform projesindeki dosya yeniden adlandırıldıktan sonra hem bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olay hem de bir olay görmeniz gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> . Dosyanın değiştirilmesi başka hiçbir dosyanın değiştirilmesine neden olduğundan ve bir platform projesindeki öğelerde yapılan değişiklikler her yerde yayılmadığı için, bu olayların yalnızca bir tane vardır.
+13. Projeyi derleme ve çalıştırma. Deneysel örnekte bir C# Universal Project oluşturun, Araçlar  menüsüne gidin ve **TestUniversalProject** Çağır'a tıklayın ve genel çıkış bölmesindeki metni kontrol edin. Platform projesinde dosya yeniden adlandırıldıktan sonra hem olayı hem de <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> olayı görüyor <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> olun. Dosyanın değiştirilmesi başka dosyanın değiştirilmesine neden olduğu için ve bir platform projesinin öğelerinde yapılan değişiklikler herhangi bir yere yayılmayarak bu olayların yalnızca biri vardır.

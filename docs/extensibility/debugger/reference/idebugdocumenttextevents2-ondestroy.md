@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ffa245972961ee26e740df47fe325447d75ca634170f384e308c79b9602bdba3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4ab0b9a7e0812bd4091d43057e47fd87f2b4daae
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377800"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119405"
 ---
 # <a name="idebugdocumenttextevents2ondestroy"></a>IDebugDocumentTextEvents2::onDestroy
 Belgenin tamamının yok edilmiş olduğunu gösterir.

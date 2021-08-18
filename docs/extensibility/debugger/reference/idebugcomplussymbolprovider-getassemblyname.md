@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d89172e7b95dd3dce4c0d124565eb0bb80ec6d231077831067b54619e69386b4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a8d814edee4d06bcb44cc34031a209252c172623
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342446"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104020"
 ---
 # <a name="idebugcomplussymbolprovidergetassemblyname"></a>IDebugComPlusSymbolProvider::GetAssemblyName
 Modülüne ve uygulama etki alanına göre derlemenin adını alın.

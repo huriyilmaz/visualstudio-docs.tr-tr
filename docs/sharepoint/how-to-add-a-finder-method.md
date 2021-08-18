@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 5c7bb3cf932c1e90c0540cd4c8ec378487563b0b5122818a2d2744fd5e2ebb66
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3df15148f2a42d0dea7a258d17097d515a1249e9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425368"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136124"
 ---
 # <a name="how-to-add-a-finder-method"></a>Nasıl yapılır: Bulucu yöntemi ekleme
   Iş verileri bağlantısı (BDC) hizmetini bir Web Bölümü veya listesindeki varlıkların listesini görüntüleyecek şekilde etkinleştirmek için bir *Bulucu* yöntemi oluşturmanız gerekir. Bir bulucu yöntemi, bir varlık örnekleri koleksiyonu döndüren özel bir yöntemdir. Daha fazla bilgi için bkz. [Iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).

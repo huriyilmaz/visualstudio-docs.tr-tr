@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3fa3c7485add8773a550aabff76501f08d585bc05ceed3cbcebe56f60a67c3a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a608f05cada958a56f3fb5403793c70f5ece5ba9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388168"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124431"
 ---
 # <a name="sccendbatch-function"></a>SccEndBatch işlevi
 Bu işlev, kaynak denetimi işlemlerinin bir toplu işlemini sonlanır. Bu toplu işlemler iç içe olamaz.

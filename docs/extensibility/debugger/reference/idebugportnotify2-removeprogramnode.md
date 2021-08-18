@@ -11,17 +11,18 @@ ms.assetid: 3668157b-66d2-416e-a359-fc04dcd18a48
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10208570237de10f9a6e682fc3a7478bd15ca24d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1478412537a222950016893a9b814c56a1ef4ca4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072422"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057674"
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
 Üzerinde çalıştığı bağlantı noktasından hata ayıklaabilecek bir programın kaydını siler.

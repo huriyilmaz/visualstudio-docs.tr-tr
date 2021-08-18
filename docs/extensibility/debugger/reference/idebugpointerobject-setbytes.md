@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 61152240fe28fbf2b5329bfc5aebd1fbf06dca4a235c3595379b3604621b8bc5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7c65ad63859daf50228de9b93b5f304a179e377b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121277198"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088295"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
 Ardışık bayt dizilerinden işaret eden değeri ayarlar.
@@ -49,7 +49,7 @@ int SetBytes(
 
 ## <a name="parameters"></a>Parametreler
 `dwStart`\
-[in] Nesnenin başlangıcına işaret eden bayt cinsinden uzaklık.
+[in] Işaret eden nesnenin başından bayt cinsinden uzaklık.
 
 `dwCount`\
 [in] Ayar için bayt sayısı.
@@ -64,7 +64,7 @@ int SetBytes(
  Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, [işaretçi bu IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen ilkel bir türü veya basit bir ilkel tür dizisini (basit bir bayt dizisiyle temsil edilen bir dizi) işaret ediyorsa kullanılır. Bu `IDebugPointerObject` nesne null başvuru olamaz (bellekte bir adrese işaret ediyor olmalıdır).
+ Bu yöntem, [işaretçi bu IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) tarafından temsil edilen ilkel bir türü veya basit bir temel tür dizisini (basit bir bayt dizisiyle temsil edilen bir dizi) işaret ediyorsa kullanılır. Bu `IDebugPointerObject` nesne null başvuru olamaz (bellekte bir adrese işaret ediyor olmalıdır).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)

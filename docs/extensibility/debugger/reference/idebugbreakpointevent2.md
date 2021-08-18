@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf70a3957dba4aa1ecdc29a904ba019363c8816b89b14bd4740363c078e29e41
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 62bf23491c8b3d3c8a2e0310f5b9e9f51281dbec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360618"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072580"
 ---
 # <a name="idebugbreakpointevent2"></a>IDebugBreakpointEvent2
 Hata ayıklama altyapısı (DE), bir program kesme noktasında durdurulduğunda bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.

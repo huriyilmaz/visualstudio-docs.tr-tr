@@ -25,9 +25,9 @@ ms.locfileid: "121429517"
 ---
 # <a name="debug-page-project-designer"></a>Hata Ayıklama Sayfası, Proje Tasarımcısı
 
-Project  Tasarımcısı'nın Hata Ayıklama **sayfasını kullanarak** bir Visual Basic veya C# projesinde hata ayıklama davranışının özelliklerini ayarlayın.
+Project  **Tasarımcısı'nın** Hata Ayıklama sayfasını kullanarak bir Visual Basic veya C# projesinde hata ayıklama davranışının özelliklerini ayarlayın.
 
-Hata Ayıklama sayfasına **erişmek** için, **Çözüm Gezgini.** Yeni **Project** Özellikler'i **\<ProjectName> seçin.** Project **Tasarımcısı** göründüğünde Hata Ayıkla **sekmesine** tıklayın.
+Hata Ayıklama sayfasına **erişmek** için, **Çözüm Gezgini.** Yeni **Project** Özellikler'i **\<ProjectName> seçin.** Project **Tasarımcısı göründüğünde** Hata Ayıkla **sekmesine** tıklayın.
 
 > [!NOTE]
 > Bu konu UWP uygulamaları için geçerli değildir. UWP uygulamaları için bkz. Hata ayıklama oturumu [başlatma (VB, C#, C++ ve XAML).](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)

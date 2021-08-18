@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5493cf39b781f8658b66e083bfe74cd29b0e192336d8a2d17f56ad770412870b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0deb4eecec8923d1974a5a1c6e694ce7e0dd3ed9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415268"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110845"
 ---
 # <a name="ienumdebugreferenceinfo2reset"></a>IEnumDebugReferenceInfo2::Reset
 Numaralama öğesini ilk öğeye sıfırlar.
@@ -43,7 +43,7 @@ int Reset();
  Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra Next yöntemine yapılan [sonraki](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md) çağrı, numaralamanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra Next yöntemine yapılan sonraki [çağrı,](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md) numaralamanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

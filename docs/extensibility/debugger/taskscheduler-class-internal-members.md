@@ -11,14 +11,15 @@ ms.assetid: 87f1c969-0217-4464-8907-7609c1bf61d3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58b370a6742387f7493e4c6357cffd05f2bd88a5
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 02897900a9117eee3d9a917b2e86580d21980345
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900154"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137671"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler sınıfı-Iç Üyeler
 Bu makale, <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> özel bir hata ayıklayıcı uygulamanıza yardımcı olan sınıfın iç üyelerini açıklar. Bu sınıf hakkında genel bilgi için <xref:System.Threading.Tasks.TaskScheduler> başvuru makalesine bakın.
@@ -27,7 +28,7 @@ Bu makale, <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> 
 
  **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyelere .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ bu iç üyelere .NET Framework erişemediği için, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 

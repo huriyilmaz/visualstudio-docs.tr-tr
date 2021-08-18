@@ -1,6 +1,6 @@
 ---
-description: Sembolün, C++ AMP Accelerator için derlenmiş kodda grup tarafından paylaşılan yerel değişkene karşılık gelen bir bayrağını alın.
-title: IDiaSymbol::get_isAcceleratorGroupSharedLocal | Microsoft Docs
+description: simgenin bir C++ AMP hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.
+title: 'IDiaSymbol:: get_isAcceleratorGroupSharedLocal | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e334766cb5659d4f94c7db2f5fbdc0e4ab68a2ebb79e64a877c77c6e0a125dad
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bc8da59465ce2aa20c37bf03c9b9fbcd4186c7c7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379873"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031229"
 ---
 # <a name="idiasymbolget_isacceleratorgroupsharedlocal"></a>IDiaSymbol::get_isAcceleratorGroupSharedLocal
-Sembolün, C++ AMP Accelerator için derlenmiş kodda grup tarafından paylaşılan yerel değişkene karşılık gelen bir bayrağını alın.
+simgenin bir C++ AMP hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_isAcceleratorGroupSharedLocal(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Sembolün, C++ AMP Accelerator için derlenmiş kodda grup paylaşılan yerel değişkenine `BOOL` karşılık gelen bir işaretçi. `TRUE`ise, `get_baseDataSlot` `get_baseDataOffset` değişkeninin depolama konumu bilgilerini almak için ve yöntemleri kullanılabilir.
+dışı `BOOL`simgenin bir C++ AMP hızlandırıcısı için derlenmiş kodda paylaşılan bir yerel değişkene karşılık geldiğini gösteren bir işaretçisi. İse `TRUE` , `get_baseDataSlot` ve `get_baseDataOffset` yöntemleri değişkeni için depolama konumu bilgilerini almak üzere kullanılabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

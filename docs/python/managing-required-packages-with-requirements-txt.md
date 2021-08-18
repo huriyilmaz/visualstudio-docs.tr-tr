@@ -6,22 +6,23 @@ ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f535f9d6ad4aa917cde493dfcfe089896634d706
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 46d687b0684472300511ca9d6ff17dcbf34c925e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948120"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054437"
 ---
 # <a name="manage-required-packages-with-requirementstxt"></a>Gerekli paketleri requirements.txt ile yönetme
 
 Bir projeyi başkalarıyla paylaşıyorsanız, bir yapı sistemi kullanıyorsanız veya projeyi geri yüklemeniz gereken başka bir konuma kopyalamayı planlıyorsanız, projenin gerektirdiği harici paketleri belirtmeniz gerekir. Önerilen yaklaşım, bağımlı paketlerin gerekli sürümlerini yükleyen PIP komutlarının bir listesini içeren bir [requirements.txt dosyası](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) (readthedocs.org) kullanmaktır. En yaygın komut, `pip freeze > requirements.txt` bir ortamın geçerli paket listesini *requirements.txt* olarak kaydeder.
 
-Teknik olarak, gereksinimleri izlemek için herhangi bir dosya adı kullanılabilir ( `-r <full path to file>` bir paket yüklenirken kullanılarak), ancak Visual Studio *requirements.txt* için özel destek sağlar:
+teknik olarak, her türlü dosya adı, gereksinimleri izlemek için kullanılabilir ( `-r <full path to file>` bir paket yüklenirken kullanılarak), ancak Visual Studio *requirements.txt* için özel destek sağlar:
 
 - *requirements.txt* içeren bir proje yüklediyseniz ve bu dosyada listelenen tüm paketleri yüklemek istiyorsanız, **Çözüm Gezgini**' de **Python ortamları** düğümünü genişletin, ardından bir ortam düğümüne sağ tıklayıp **requirements.txt'den Install**' u seçin:
 
@@ -68,7 +69,7 @@ Cleaning up...
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da Python ortamlarını yönetme](managing-python-environments-in-visual-studio.md)
+- [Visual Studio Python ortamlarını yönetme](managing-python-environments-in-visual-studio.md)
 - [Proje için yorumlayıcıyı seçme](selecting-a-python-environment-for-a-project.md)
 - [Arama yolları](search-paths.md)
 - [Python ortamları penceresi başvurusu](python-environments-window-tab-reference.md)

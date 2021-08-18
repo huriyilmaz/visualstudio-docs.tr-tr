@@ -1,6 +1,6 @@
 ---
-title: GuidSymbol Öğesi | Microsoft Docs
-description: GuidSymbol öğesi bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin GUID'lerini içerir.
+title: GuidSymbol öğesi | Microsoft Docs
+description: "GuidSymbol öğesi, bir menü, Grup veya komutu temsil eden GUID: ID çiftinin GUID 'sini içerir."
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 712cdad6ae3e7cdd360b53b67ace9ee804509129fb3edfa5da96fac517a2ec9e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b79b8d9399e4294a4e22cbc36f11bccbf703e215
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376501"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086982"
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol öğesi
-öğesi `GuidSymbol` bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin GUID'lerini içerir. Kimlik, öğesinde `IDSymbol` bir öğesinden `GuidSymbol` gelir. öğesi, `GuidSymbol` `name` özniteliğinde yer alan GUID için kolay bir ad sağlayan bir `value` özniteliğine sahip.
+`GuidSymbol`Öğesi, bir menü, Grup veya komutu temsil eden GUID: ID ÇIFTININ GUID 'sini içerir. KIMLIĞI `IDSymbol` , öğesindeki bir öğeden gelir `GuidSymbol` . `GuidSymbol`Öğesi, `name` özniteliğinde yer alan GUID için kolay bir ad sağlayan bir özniteliğe sahiptir `value` .
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ ms.locfileid: "121376501"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|name|Gereklidir. GUID simgesinin adı.|
-|değer|Gereklidir. GUID simgesinin GUID'i.|
+|name|Gereklidir. GUID sembolünün adı.|
+|değer|Gereklidir. GUID sembolünün GUID 'SI.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[IDSymbol öğesi](../extensibility/idsymbol-element.md)|Menü, grup veya komutu temsil eden GUID:ID çiftinin kimliğini içerir.|
+|[IDSymbol öğesi](../extensibility/idsymbol-element.md)|Bir menü, Grup veya komutu temsil eden GUID: ID çiftinin KIMLIĞINI içerir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Semboller öğesi](../extensibility/symbols-element.md)|Bir `GuidSymbol` *.vsct dosyasındaki öğeleri gruplar.*|
+|[Symbols öğesi](../extensibility/symbols-element.md)|`GuidSymbol` *. Vsct* dosyasındaki öğeleri gruplandırır.|
 
 ## <a name="remarks"></a>Açıklamalar
- *Genellikle, bir .vsct* dosyası kendi bölümünde, biri paketin kendisi için, biri komut kümesi için (paketin kullanılabilir olduğu menüler, gruplar ve komutlar koleksiyonu) ve biri düğmeler ve diğer görsel bileşenler için simgeler sağlayan bit eşlemler için üç öğe `GuidSymbol` `Symbols` içerir. Verilen `IDSymbol` bir öğedeki `GuidSymbol` her öğe benzersiz bir öğesine sahip `value` olmalıdır. Ancak, `IDSymbol` aynı değerlere sahip öğeler, farklı ebeveynleri olduğu sürece bir pakette yer alan öğeler olabilir.
+ Genellikle, bir *. vsct* dosyası kendi bölümünde, biri paketin kendisi için, biri `GuidSymbol` `Symbols` komut kümesi için (menülerin, grupların ve paketin kullanılabilir hale getiren komutlar koleksiyonu) ve düğmeler ve diğer görsel bileşenlere simgeler sağlayan bit eşlemler için olmak üzere üç öğesi içerir. `IDSymbol`Verilen bir öğe içindeki her öğenin `GuidSymbol` benzersiz olması gerekir `value` . Ancak, `IDSymbol` aynı değerlere sahip öğeler farklı üst öğeleri oldukları sürece bir pakette bulunabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

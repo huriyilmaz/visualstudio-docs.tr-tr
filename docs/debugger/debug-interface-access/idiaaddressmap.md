@@ -11,14 +11,15 @@ ms.assetid: e6467529-508c-4328-85d7-89444ae4d1c1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 085ba4e75eab1dd67585b3926b71edd5dce88d72
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f6e8d8a803f471d6e856da987ea70a1f121bfae5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159469"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036623"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 DIA SDK hata ayıklama nesneleri için sanal ve göreli sanal adresleri nasıl hesaplatığına ilişkin denetim sağlar.

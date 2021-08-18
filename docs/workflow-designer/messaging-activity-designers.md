@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Mesajlaşma Etkinliği Tasarımcıları
-description: Communication Foundation (WCF) iletileri göndererek ve alan mesajlaşma etkinliklerini oluşturmak ve yapılandırmak için Mesajlaşma etkinlik Windows tasarımcılarını kullanmayı öğrenin.
+title: İş Akışı Tasarımcısı-mesajlaşma etkinlik tasarımcıları
+description: Windows Communication Foundation (WCF) iletileri gönderen ve alan mesajlaşma etkinliklerini oluşturmak ve yapılandırmak için mesajlaşma etkinliği tasarımcılarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,18 +11,18 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b4866d0ad11aef18e2e8e2975908893d8e879966e9530a200d8a9a300fd62f3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 92228687c5158a4f0bd896090a1aa349686b7074
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121383748"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122037908"
 ---
 # <a name="messaging-activity-designers"></a>Messaging etkinlik tasarımcıları
 
-Mesajlaşma etkinliği tasarımcıları, Windows Workflow Foundation (WF) uygulamasından Windows Communication Foundation (WCF) iletileri gönderen ve alan mesajlaşma etkinlikleri oluşturmak ve yapılandırmak için kullanılır. 4. yılda beş mesajlaşma .NET Framework tanıtıldı. Bu İş Akışı Tasarımcısı, bir iş akışı içinde mesajlaşmayı yönetmenize olanak sağlayan iki şablon tasarımcısı sağlar.
+mesajlaşma etkinliği tasarımcıları, bir Windows Workflow Foundation (WF) uygulamasının içinden Windows Communication Foundation (WCF) iletileri gönderen ve alan mesajlaşma etkinlikleri oluşturmak ve yapılandırmak için kullanılır. .NET Framework 4 ' te beş mesajlaşma etkinliği tanıtılmıştı. İş Akışı Tasarımcısı, bir iş akışı içinde mesajlaşma yönetmenizi sağlayan iki şablon tasarımcıları sağlar.
 
-Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular, etkinlik ve şablon tasarımcılarının İş Akışı Tasarımcısı rehberlik sağlar.
+Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular İş Akışı Tasarımcısı etkinliğinin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 - <xref:System.Activities.Activity>
 
@@ -56,7 +56,7 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
 - [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
-- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+- [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="external-resources"></a>Dış kaynaklar
 

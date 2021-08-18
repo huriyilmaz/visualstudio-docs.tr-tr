@@ -1,5 +1,5 @@
 ---
-description: Bu yapı yerel bir değişkeni, parametreyi veya başka bir alanı açıklar.
+description: Bu yapı yerel bir değişken, parametre veya başka bir alan tanımlar.
 title: FIELD_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2a0d549ef0327b9894e50a7d849be4b6688df83c8e903e14778b3827f7e82f2d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a9b2a07611a3bae712f714c318cf5f3e4446235e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360800"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072934"
 ---
 # <a name="field_info"></a>FIELD_INFO
-Bu yapı yerel bir değişkeni, parametreyi veya başka bir alanı açıklar.
+Bu yapı yerel bir değişken, parametre veya başka bir alan tanımlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ public struct FIELD_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Hangi üyelerin [doldurulması FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) bir bayrak birleşimi.
+[FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) Numaralandırmadaki, hangi üyelerin doldurulacağını belirten bayrakların birleşimi.
 
 `bstrFullName`\
 Alanın tam adı.
@@ -63,17 +63,17 @@ Alanın kısa adı.
 Alanın türü.
 
 `dwModifiers`\
-Alanı açıklayan bir [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) bayrağı birleşimi.
+Alanı açıklayan [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) Numaralandırmadaki bayrakların birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, [doldurulan GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemine geçirildi.
+Bu yapı, doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: sh.h
+Üstbilgi: SH. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

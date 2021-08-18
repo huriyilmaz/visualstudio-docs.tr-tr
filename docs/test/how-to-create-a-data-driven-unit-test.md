@@ -17,12 +17,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 80ca16205a1e850ff170ee9c57987becd9b60447e579f2f627820810ee5ad9af
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d7bcea924cd571e24003bcb66373862fdd0c7ef1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384879"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139991"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Nasıl yapılır: veri temelli birim testi oluşturma
 

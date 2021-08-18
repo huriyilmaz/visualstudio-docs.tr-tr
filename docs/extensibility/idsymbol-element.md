@@ -11,17 +11,18 @@ ms.assetid: 760cfd20-3c06-422c-9103-98bfa1f387f8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e5158b16fb2d12a7d1a93c0296126e915a138269
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 513033b2db2cbf222c7835679ad36e00b91887b6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904952"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086904"
 ---
 # <a name="idsymbol-element"></a>IDSymbol öğesi
-öğesi `IDSymbol` bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin kimliğini içerir. GUID üst öğesinden `GuidSymbol` gelir. öğesi, özniteliğinde yer alan kimlik için kolay `IDSymbol` bir ad sağlayan bir `name` `value` özniteliğine sahip.
+öğesi `IDSymbol` bir menüyü, grubu veya komutu temsil eden GUID:ID çiftinin kimliğini içerir. GUID üst öğesinden `GuidSymbol` gelir. öğesi, özniteliğinde yer alan kimlik için kolay `IDSymbol` ad sağlayan bir `name` `value` özniteliğine sahip.
 
 ## <a name="syntax"></a>Syntax
 

@@ -1,24 +1,25 @@
 ---
 title: Anonim türü sınıfa Dönüştür
-description: Anonim bir türü Visual Studio 'daki bir sınıfa dönüştürmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+description: Anonim bir türü Visual Studio bir sınıfa dönüştürmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 19e755e4b56675265d85a416684f2b42bd7ccd13
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eedab2e2d826b44728b4f29569c9086b70eba4a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907650"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123937"
 ---
 # <a name="convert-anonymous-type-to-class"></a>Anonim türü sınıfa dönüştürme
 

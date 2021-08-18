@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ce84c7154824a00019cf54105a09a03b207e3ff06f0bc33d5dcd2012cfcf3fd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 17e2db139df6ffd09efb43edb2cdb4e358231a1c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121270360"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108401"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference görevi
 

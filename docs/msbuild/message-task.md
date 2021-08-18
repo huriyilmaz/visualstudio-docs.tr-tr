@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d4ceeb0b25b5f26746fa5307729a8716a82fab0de57a005848b463db2d7a8f26
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0b9ee3a2514d89c5b2d436666b2ff512feb8a1b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077211"
 ---
 # <a name="message-task"></a>İleti görevi
 

@@ -6,24 +6,24 @@ ms.date: 9/14/2020
 author: jureid
 ms.author: jureid
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CPP
 ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 ms.topic: reference
 ms.workload:
 - cplusplus
 monikerRange: vs-2019
-ms.openlocfilehash: 490a7b29d6e3d8a2dc63c27b9e9d7226b5d22662
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7554e2038f0be8d72b96e8b53280faca498e772
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970887"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124080"
 ---
 # <a name="c-editorconfig-formatting-conventions"></a>C++ EditorConfig biçimlendirme kuralları
 
-Visual Studio C++ biçimlendiricisi, genel olarak uygulanabilen, zengin bir yapılandırılabilir ayarlar kümesine sahiptir. Belirli bir çalışma alanının C++ biçimlendirme ayarlarını ayarlamak için [clangformat](https://clang.llvm.org/docs/ClangFormat.html) veya [editorconfig](https://editorconfig.org/)kullanın. Hem Visual Studio hem de Visual Studio Code, genel Visual Studio C++ biçimlendirme ayarlarının her biri için yerleşik EditorConfig desteğine sahiptir ve bu da EditorConfig ayarları önceliklidir. Bu, C++ biçimlendirmesini daha ayrıntılı bir düzeyde yapılandırmak ve projeye katkıda bulunan herkes için tutarlı kod stili uygulamak üzere çalışma alanınıza EditorConfig dosyaları ekleyebileceğiniz anlamına gelir.
+Visual Studio C++ biçimlendiricisi, genel olarak uygulanabilen, zengin bir yapılandırılabilir ayarlar kümesine sahiptir. Belirli bir çalışma alanının C++ biçimlendirme ayarlarını ayarlamak için [clangformat](https://clang.llvm.org/docs/ClangFormat.html) veya [editorconfig](https://editorconfig.org/)kullanın. hem Visual Studio hem de Visual Studio Code, genel Visual Studio C++ biçimlendirme ayarlarının her biri için yerleşik editorconfig desteğine sahiptir ve bu da editorconfig ayarları önceliklidir. Bu, C++ biçimlendirmesini daha ayrıntılı bir düzeyde yapılandırmak ve projeye katkıda bulunan herkes için tutarlı kod stili uygulamak üzere çalışma alanınıza EditorConfig dosyaları ekleyebileceğiniz anlamına gelir.
 
 ## <a name="c-formatting-conventions"></a>C++ biçimlendirme kuralları
 
@@ -36,7 +36,7 @@ cpp_indent_case_contents_when_block = true
 cpp_new_line_before_open_brace_namespace = same_line
 ```
 
-Bu belgenin geri kalanında, Visual Studio ve VS Code tarafından desteklenen tüm EditorConfig C++ biçimlendirme ayarları listelenir.
+bu belgenin geri kalanında Visual Studio ve VS Code tarafından desteklenen tüm editorconfig C++ biçimlendirme ayarları listelenir.
 
 ### <a name="indentation-settings"></a>Girintileme ayarları
 
@@ -341,47 +341,47 @@ Bu belgenin geri kalanında, Visual Studio ve VS Code tarafından desteklenen t�
 
 - Ad: `cpp_space_around_binary_operator`
 - Değerler:
-  - `insert` -İkili işleçlerden önce ve sonra boşluk ekleyin.
-  - `remove` -İkili operatörlerin çevresindeki boşlukları kaldırın.
-  - `ignore` -İkili operatörlerin çevresindeki boşlukları değiştirmeyin.
+  - `insert` - İkili işleçlerin önce ve sonra boşluklarını ekler.
+  - `remove` - İkili işleçlerin çevresindeki boşlukları kaldırır.
+  - `ignore` - İkili işleçlerin çevresindeki boşlukları değiştirme.
 
 **Atama işleçleri için boşluk**
 
 - Ad: `cpp_space_around_assignment_operator`
 - Değerler:
-  - `insert` -Atama işleçleri etrafına boşluk ekleyin.
-  - `remove` -Atama işleçleri etrafında boşlukları kaldırın.
-  - `ignore` -Atama işleçleri etrafında boşluk değiştirmeyin.
+  - `insert` - Atama işleçleri çevreye boşluklar ekler.
+  - `remove` - Atama işleçleri çevresindeki boşlukları kaldırır.
+  - `ignore` - Atama işleçleri çevresindeki alanları değiştirme.
 
 **İşaretçi/başvuru hizalaması**
 
 - Ad: `cpp_space_pointer_reference_alignment`
 - Değerler:
-  - `left` -Sola Hizala.
-  - `center` -Dikey Ortala.
-  - `right` -Sağa hizalayın.
-  - `ignore` -Değiştirilmeden bırakın.
+  - `left` - Sola hizala.
+  - `center` - Ortayı hizala.
+  - `right` - Sağa hizala.
+  - `ignore` - Değiştirmeden bırakın.
 
 **Koşullu işleçler için boşluk**
 
 - Ad: `cpp_space_around_ternary_operator`
 - Değerler:
-  - `insert` -Koşullu operatörlerin etrafına boşluk ekleyin.
-  - `remove` -Koşullu operatörlerin çevresindeki boşlukları kaldırın.
-  - `ignore` -Koşullu operatörlerin çevresindeki boşlukları değiştirmeyin.
+  - `insert` - Koşullu işleçlerin etrafına boşluklar ekler.
+  - `remove` - Koşullu işleçlerin çevresindeki boşlukları kaldırır.
+  - `ignore` - Koşullu işleçlerin çevresindeki boşlukları değiştirme.
 
-### <a name="wrapping-options"></a>Kaydırma seçenekleri
+### <a name="wrapping-options"></a>Sarmalama seçenekleri
 
-**Bloklar için kaydırma seçenekleri**
+**Bloklar için sarmalama seçenekleri**
 
 - Ad: `cpp_wrap_preserve_blocks`
 - Değerler:
-  - `one_liners` -Tek satırlık kod bloklarını sarmayın.
-  - `all_one_line_scopes` -Açılış ve kapanış ayraçları bir sonraki satırda olduğunda kod bloklarını sarmayın.
-  - `never` -Bloklar için her zaman yeni satır ayarları uygulayın.
+  - `one_liners` - Tek satırlı kod bloklarını sarmalayın.
+  - `all_one_line_scopes` - Sonraki satırda açma ve kapatma ayraçlarının bulunduğu kod bloklarını sarmalayın.
+  - `never` - Bloklar için her zaman Yeni Satırlar ayarlarını uygula.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [EditorConfig.org](https://editorconfig.org/)
-- [Dil hizmeti için EditorConfig destekleme](../extensibility/supporting-editorconfig.md)
+- [Dil hizmeti için EditorConfig'i destekleme](../extensibility/supporting-editorconfig.md)
 - [Kod düzenleyicisinin özellikleri](writing-code-in-the-code-and-text-editor.md)

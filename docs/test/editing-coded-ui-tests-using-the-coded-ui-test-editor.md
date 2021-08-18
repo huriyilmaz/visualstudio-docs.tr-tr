@@ -1,6 +1,6 @@
 ---
-title: Kodlanmış UI Testlerini Düzenleme
-description: Test yöntemlerinizi ve UI eylemlerinizi bulmak, görüntülemek ve düzenlemek için Kodlanmış UI Test Düzenleyicisi'ni kullanmayı öğrenin. İlgili denetimleri görüntülemek ve düzenlemek için kullanıcı arabirimi denetim eşlemesi kullanın.
+title: Kodlanmış UI testlerini düzenleniyor
+description: Test yöntemlerinizi ve UI eylemlerinizi bulmak, görüntülemek ve düzenlemek için kodlanmış UI test düzenleyicisini kullanmayı öğrenin. İlgili denetimleri görüntülemek ve düzenlemek için UI denetim haritasını kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,16 +14,16 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 6be42c91936da9a02c735ea8759e6ccba918b4f12f7dc52a3cfdd9036fa793ff
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3939debb9ee62a1bb5e621a9e1a99f1b6e99752
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121441485"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140082"
 ---
-# <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Kodlanmış UI Test Düzenleyicisi'ni kullanarak kodlanmış UI testlerini düzenleme
+# <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Kodlanmış UI Test Düzenleyicisi 'Ni kullanarak kodlanmış UI testlerini düzenleme
 
-Kodlanmış UI Test Düzenleyicisi, kodlanmış UI testlerinizi kolayca değiştirmenize olanak sağlar. Kodlanmış UI Test Düzenleyicisi'ni kullanarak test yöntemlerinizin ve UI eylemlerinizin özelliklerini bulup görüntüleyemez ve düzenleyebilirsiniz. Buna ek olarak, ilgili denetimleri görüntülemek ve düzenlemek için kullanıcı arabirimi denetim haritasını kullanabilirsiniz.
+Kodlanmış UI Testi Düzenleyicisi, kodlanmış UI testlerinizi kolayca değiştirmenize olanak sağlar. Kodlanmış UI test düzenleyicisini kullanarak, test yöntemlerinizin ve UI eylemlerinin özelliklerini bulabilir, görüntüleyebilir ve düzenleyebilirsiniz. Bunlara ek olarak, ilgili denetimlerini görüntülemek ve düzenlemek için UI denetim haritasını kullanabilirsiniz.
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
@@ -32,113 +32,113 @@ Kodlanmış UI Test Düzenleyicisi, kodlanmış UI testlerinizi kolayca değişt
 - Visual Studio Enterprise
 - Kodlanmış UI test bileşeni
 
-## <a name="features-of-the-coded-ui-test-editor"></a>Kodlanmış UI Test Düzenleyicisi'nin Özellikleri
+## <a name="features-of-the-coded-ui-test-editor"></a>Kodlanmış UI test düzenleyicisinin özellikleri
 
-Kodlanmış UI Test Düzenleyicisi'ni kullanmak, Kod Düzenleyicisi'ni kullanarak kodlanmış UI test yöntemlerinizin kodu düzenlemeye göre daha hızlı ve daha verimlidir. Kodlanmış UI Test Düzenleyicisi ile, kullanıcı arabirimi eylemleri ve denetimleriyle ilişkili özellik değerlerini hızla bulmak ve değiştirmek için araç çubuğunu ve kısayol menülerini kullanabilirsiniz. Örneğin, aşağıdaki komutları gerçekleştirmek için Kodlanmış UI Test Düzenleyicisi'nin araç çubuğunu kullanabilirsiniz:
+Kodlanmış UI Test Düzenleyicisi 'nin kullanılması daha hızlı ve kod düzenleyicisini kullanarak kodlanmış UI test yöntemlerinizin kodunu düzenlemekten daha etkilidir. Kodlanmış UI Testi Düzenleyicisi ile, Kullanıcı Arabirimi eylemleri ve denetimleriyle ilişkili özellik değerlerini hızlı bir şekilde bulmak ve değiştirmek için araç çubuğu ve kısayol menülerini kullanabilirsiniz. Örneğin, kodlanmış UI Test Düzenleyicisi 'nin araç çubuğunu aşağıdaki komutları gerçekleştirmek için kullanabilirsiniz:
 
 ![UI Test Düzenleyicisi](../test/media/uitesteditor.png)
 
-1. [Bul,](../ide/finding-and-replacing-text.md) kullanıcı arabirimi eylemlerini ve denetimlerini bulmanıza yardımcı olur.
+1. [Bul](../ide/finding-and-replacing-text.md) , Kullanıcı Arabirimi eylemlerini ve denetimleri bulmanıza yardımcı olur.
 
-2. **Silme,** istenmeyen kullanıcı arabirimi eylemlerini kaldırır.
+2. **Sil** , istenmeyen Kullanıcı Arabirimi eylemlerini kaldırır.
 
-3. **Yeniden** adlandırma, test yöntemleri ve denetimlerinin adlarını değiştirir.
+3. **Yeniden adlandırma** , test yöntemleri ve denetimlerinin adlarını değiştirir.
 
-4. **Özellikler,** **seçili öğenin** Özellikler penceresini açar.
+4. **Özellikler** seçili öğe için **Özellikler** penceresini açar.
 
-5. **Yeni bir yönteme bölmek,** kullanıcı arabirimi eylemlerini modüler hale geliştirmenizi sağlar.
+5. **Yeni bir yönteme bölmek** , UI eylemlerini modüle etmenizi sağlar.
 
-6. **Move Code,** test yöntemlerinize özel kod ekler.
+6. **Taşıma kodu** , test yöntemlerinize özel kod ekler.
 
-7. **Gecikme EklemeDen** Önce, milisaniye cinsinden belirtilen kullanıcı arabirimi eylemden önce bir duraklama ekler.
+7. Bir kullanıcı arabirimi eyleminden önce, milisaniye olarak belirtilen bir duraklama **eklemeden önce gecikme Ekle** .
 
-8. **KULLANıCı Arabirimi Denetimi'nin,** test altındaki uygulamanın kullanıcı arabiriminde denetimin konumunu belirlemesi.
+8. Test edilen uygulamanın kullanıcı arabiriminde denetimin konumunu tanımlayan **UI denetimini bulun** .
 
-9. **Tüm'leri** bul, denetim özelliğini ve uygulamanın denetimlerde yapılan önemli değişiklikleri doğrulamanıza yardımcı olur.
+9. **Tümünü Bul** özelliği, denetim özelliğini doğrulamanızı ve uygulamanın denetimlerinde önemli değişiklikler yapmanıza yardımcı olur.
 
-Kodlanmış UI testinize bağlı *UIMap.uitest* dosyasını açtığınız zaman, kodlanmış UI testi Kodlanmış **UI Test Düzenleyicisi'nde açılır.** Aşağıdaki yordamlarda, düzenleyicinin araç çubuğunu ve kısayol menülerini kullanarak test yöntemlerinizi ve kullanıcı arabirimi eylemlerine ilişkin özellikleri ve denetimleri nasıl bulup düzenleyebilirsiniz?
+Kodlanmış UI Testinizle bağlantılı *UIMap. UITest* dosyasını açtığınızda, kodlanmış UI testi kodlanmış UI testi **düzenleyicisinde** açılır. Aşağıdaki yordamlarda, test yöntemlerinizi bulma ve düzenleme, UI eylemlerinin özellikleri ve düzenleyicinin araç çubuğunu ve kısayol menülerini kullanarak denetimlerin nasıl yapılacağı açıklanır.
 
-## <a name="open-a-coded-ui-test"></a>Kodlanmış ui testini açma
+## <a name="open-a-coded-ui-test"></a>Kodlanmış UI testi açma
 
-Kodlanmış UI Test Düzenleyicisi'ni kullanarak Visual C# Visual Basic kodlanmış UI testini **görüntüleyemez ve düzenleyebilirsiniz.**
+**kodlanmış uı test düzenleyicisini** kullanarak, Visual C# ve Visual Basic tabanlı kodlanmış uı testinizi görüntüleyebilir ve düzenleyebilirsiniz.
 
-![Bağlam menüsü Kodlanmış UI Test Oluşturucusu ile Düzenle](../test/media/editcodeduitest.png)
+![Bağlam menüsü kodlanmış UI Test Oluşturucusu Ile Düzenle](../test/media/editcodeduitest.png)
 
-Bu **Çözüm Gezgini** *UIMap.uitest* kısayol menüsünü açın ve Aç'ı **seçin.** Kodlanmış UI testi, Kodlanmış UI **Test Düzenleyicisi'nde görüntülenir.** Artık kodlanmış UI testinde kayıtlı yöntemleri, eylemleri ve karşılık gelen denetimleri görüntüleyemez ve düzenleyebilirsiniz.
+**Çözüm Gezgini**' de *UIMap. UITest* için kısayol menüsünü açın ve **Aç**' ı seçin. Kodlanmış UI testi, **KODLANMıŞ UI testi düzenleyicisinde** görüntülenir. Artık, kodlanmış UI testinde kayıtlı yöntemleri, eylemleri ve ilgili denetimleri görüntüleyebilir ve düzenleyebilirsiniz.
 
 > [!TIP]
-> UI Eylemleri bölmesindeki bir yöntemde bulunan kullanıcı arabirimi **eylemlerini** seçerek ilgili denetim vurgulanır. Kullanıcı arabirimi eylemlerini veya denetim özelliklerini de değiştirebilirsiniz.
+> **UI eylemleri** bölmesindeki bir yöntemde bulunan bir UI eylemi seçtiğinizde, karşılık gelen denetim vurgulanır. UI eylemini veya denetim özelliklerini de değiştirebilirsiniz.
 
-## <a name="modify-ui-action-and-control-properties"></a>UI eylem ve denetim özelliklerini değiştirme
+## <a name="modify-ui-action-and-control-properties"></a>UI eylemini ve denetim özelliklerini değiştirme
 
-Kodlanmış UI Test Düzenleyicisi'ni kullanarak test yöntemlerinizin tüm UI eylemlerini hızla bulup görüntüebilirsiniz. Düzenleyicide kullanıcı arabirimi eylemlerini seçerek ilgili denetim otomatik olarak vurgulanır. Benzer şekilde, bir denetim seçersiniz, ilişkili kullanıcı arabirimi eylemleri vurgulanır. Kullanıcı arabirimi eylemlerini veya denetimlerini seçerek Özellikler penceresini  kullanarak buna karşılık gelen özellikleri kolayca değiştirebilirsiniz.
+Kodlanmış UI test düzenleyicisini kullanarak, test yöntemlerinizin tüm Kullanıcı Arabirimi eylemlerini hızlıca bulabilir ve görüntüleyebilirsiniz. Düzenleyicide Kullanıcı arabirimi eylemini seçtiğinizde, karşılık gelen denetim otomatik olarak vurgulanır. Benzer şekilde, bir denetimi seçerseniz, ilişkili Kullanıcı Arabirimi eylemleri vurgulanır. Bir UI eylemi veya bir denetim seçtiğinizde, bununla ilişkili özellikleri değiştirmek için **Özellikler** penceresini kullanmak kolaydır.
 
-![UI eylem özellikleri](../test/media/codeduiedituiaction.png)
+![UI eylemi özellikleri](../test/media/codeduiedituiaction.png)
 
-Bir UI eyleminin özelliklerini değiştirmek için, **UI** Eylemi bölmesinde, özelliklerini düzenlemek istediğiniz ui eylemini içeren test yöntemini genişletin, kullanıcı arabirimi eylemini seçin ve ardından kullanıcı arabirimini kullanarak Özellikler penceresi.
+Bir UI eyleminin özelliklerini değiştirmek için, **UI eylemi** bölmesinde, özelliklerini düzenlemek ISTEDIĞINIZ bir UI eylemi içeren test yöntemini genişletin, Kullanıcı arabirimi eylemini seçin ve ardından Özellikler penceresi kullanarak özellikleri değiştirin.
 
-Örneğin, bir sunucu kullanılamıyorsa ve web tarayıcınızla ilişkilendirilmiş **http: \/ /Contoso1/default.aspx Web** sayfasına git adlı bir kullanıcı arabirimi eyleminiz varsa URL'yi olarak değiştirebilirsiniz. `http://Contoso2/default.aspx`
+Örneğin, bir sunucu kullanılamaz durumdaysa ve Web tarayıcınızla ilişkili bir Kullanıcı Arabirimi eylemi varsa, **Web sayfasına git http: \/ /Contoso1/default.aspx**, URL 'yi olarak değiştirebilirsiniz `http://Contoso2/default.aspx` .
 
 ![Denetim özellikleri](../test/media/codeduitestcontrolprop.png)
 
-Bir denetimin özelliklerini değiştirmek ui eylemleriyle aynı şekilde yapılır. Kullanıcı **Arabirimi Denetim Eşlemesi** bölmesinde, Özellikler penceresini kullanarak özelliklerini düzenlemek ve değiştirmek istediğiniz **denetimi** seçin.
+Bir denetimin özelliklerini değiştirmek, UI eylemleriyle aynı şekilde yapılır. **UI denetim Haritası** bölmesinde, düzenlemek istediğiniz denetimi seçin ve **Özellikler penceresini kullanarak özelliklerini değiştirin** .
 
-Örneğin geliştirici, "idSubmit" olan test edilen uygulamanın kaynak kodundaki bir düğme denetiminde **(ID)** özelliğini "idLogin" olarak değiştirmiş olabilir. Uygulamada **(ID)** özelliği değiştirıldığında, kodlanmış UI testi düğme denetimi bulamaz ve başarısız olur. Bu durumda, test sahibi Arama  Özellikleri koleksiyonunu açabilir ve **Id** özelliğini geliştiricinin uygulamada kullandığı yeni değerle eşleyecek şekilde değiştirebilir. Test etmek için "Submit" olan **Kolay Ad** özellik değerini de "Login" olarak değiştirebilir. Bu değişiklik yapıldığında, Kodlanmış UI Test Düzenleyicisi'nde ilişkili kullanıcı arabirimi eylemi "'Gönder' düğmesini seç" seçeneğinden "Oturum Aç' düğmesini seç" olarak güncelleştirilir.
+Örneğin, bir geliştirici, "ıdlogin" olarak test edilen uygulamanın kaynak kodundaki düğme denetimindeki **(ID)** özelliğini "ıdlogin" olarak değiştirmiş olabilir. Uygulamada **(ID)** özelliği değiştirildiğinde, kodlanmış UI testi düğme denetimini bulamaz ve başarısız olur. Bu durumda, sınayıcı **arama özellikleri** koleksiyonunu açabilir ve **kimlik** özelliğini, geliştirici uygulamada kullanılan yeni değerle eşleşecek şekilde değiştirebilir. Sınayıcı Ayrıca **kolay ad** özellik değerini "Gönder" Iken "Login" olarak değiştirebilir. Bu değişiklik yapıldığında, kodlanmış UI test düzenleyicisinde ilişkili Kullanıcı Arabirimi eylemi "' Gönder ' düğmesine", "' Login' düğmesini seçin."
 
-Değişikliklerinizi tamamladıktan sonra, kullanıcı arabirimi araç çubuğunda Kaydet'i seçerek *DEĞIŞIKLIKLERI UIMap.Designer* Visual Studio kaydedin. 
+değişikliklerinizi tamamladıktan sonra, Visual Studio araç çubuğunda **kaydet** ' i seçerek *uımap. Designer* dosyasındaki değişiklikleri kaydedin.
 
 ### <a name="tips"></a>İpuçları
 
-- Özellikler penceresi **görüntülenmezse,** Enter tuşuna basırken **Alt** tuşuna basın ve **basılı** tutun veya **F4 tuşuna basın.**
+- **Özellikler** penceresi görüntülenmiyorsa, **ENTER** tuşuna basarak **alt** tuşunu basılı tutun veya **F4** tuşuna basın.
 
-- Yaptığınız özellik değişikliklerini geri almak için Düzenle **menüsünden Geri Al'ı** **seçin** veya **Ctrl** + **Z tuşlarına basın.**
+- Yaptığınız özellik değişikliklerini geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z** tuşuna basın.
 
-- Kodlanmış UI **Testi düzenleyicisi** araç çubuğundaki Bul düğmesini  kullanarak Bul ve Değiştir aracını Visual Studio. Daha sonra **Kodlanmış** UI Testi düzenleyicisinde bir UI eylemini bulmak için Bul denetimi kullanabilirsiniz. Örneğin, "'Oturum Aç' düğmesine tıklayın"ı bulmaya çalışabilirsiniz. Bu, büyük testlerde yararlı olabilir. Kodlanmış UI Test Düzenleyicisi'nde **Bul ve Değiştir aracında** değiştirme işlevini kullanılamaz. Daha fazla bilgi için Bkz. Metin bulma [ve değiştirme içinde denetimi bulma.](../ide/finding-and-replacing-text.md)
+- Visual Studio içinde **Bul ve Değiştir** aracını açmak IÇIN kodlanmış UI Test Düzenleyicisi araç çubuğundaki **bul** düğmesini kullanabilirsiniz. Daha sonra, kodlanmış UI test düzenleyicisinde bir kullanıcı arabirimi eylemini bulmak için **bul** denetimini kullanabilirsiniz. Örneğin, "Click ' Login' düğmesini bulmayı deneyebilirsiniz." Bu, büyük testlerde yararlı olabilir. Kodlanmış UI test düzenleyicisinde **Bul ve Değiştir** aracında değiştirme işlevini kullanamazsınız. Daha fazla bilgi için bkz. [bulma ve değiştirme metin](../ide/finding-and-replacing-text.md)Içinde denetimi bulma.
 
-- Bazen denetimlerin test altındaki uygulama kullanıcı arabiriminde bulunduğu yeri görselleştirmek zor olabilir. Kodlanmış UI Test Düzenleyicisi'nin özelliklerinden biri, kullanıcı arabirimi denetim haritasında listelenen bir denetimi seçerek uygulamanın test altındaki konumunu görüntüleyabilmektir. Daha fazla bilgi için bu [makalenin daha altında yer alan test altındaki uygulamada](#locate-a-ui-control-in-the-application-under-test) kullanıcı arabirimi denetimi bulma makalesine bakın.
+- Bazen denetimlerin test edilen uygulamanın kullanıcı arabiriminde nerede olduğunu görselleştirmek zor olabilir. Kodlanmış UI testi düzenleyicisinin özelliklerinden biri, UI denetim haritasında listelenen bir denetimi seçebileceğiniz ve test edilen uygulamada konumunu görüntüleyebilin. Daha fazla bilgi için, bu makalede daha sonra bulunan [test altındaki uygulamada BIR UI denetimini bulma](#locate-a-ui-control-in-the-application-under-test) bölümüne bakın.
 
-- Düzenlemek istediğiniz denetimi içeren kapsayıcı denetimi genişletmek gerekebilir. Daha fazla bilgi için bu [makalenin daha altında yer alan](#locate-a-control-and-its-descendants) Denetimi ve alt altlarını bulma makalesine bakın.
+- Düzenlemek istediğiniz denetimi içeren kapsayıcı denetimini genişletmek gerekli olabilir. Daha fazla bilgi için, bu makalede daha [sonra bulunan bir denetimi ve alt öğelerini bulma](#locate-a-control-and-its-descendants) bölümüne bakın.
 
-## <a name="delete-unwanted-ui-actions"></a>İstenmeyen kullanıcı arabirimi eylemlerini silme
+## <a name="delete-unwanted-ui-actions"></a>İstenmeyen UI eylemlerini silme
 
-Kodlanmış UI testinde istenmeyen UI eylemlerini kolayca kaldırabilirsiniz.
+Kodlanmış UI testinizde, istenmeyen UI eylemlerini kolayca kaldırabilirsiniz.
 
-![Kullanıcı arabirimini silme eylemi](../test/media/codeduideleteuiaction.png)
+![UI eylemini Sil](../test/media/codeduideleteuiaction.png)
 
-UI **Eylemi bölmesinde,** silmek istediğiniz ui eylemini içeren test yöntemini genişletin. Kullanıcı arabirimi eyleminin kısayol menüsünü açın ve Sil'i **seçin.**
+**UI eylemi** bölmesinde, silmek istediğiniz kullanıcı arabirimi eylemini içeren test yöntemini genişletin. UI eyleminin kısayol menüsünü açın ve **Sil**' i seçin.
 
 ## <a name="split-a-test-method-into-two-separate-methods"></a>Test yöntemini iki ayrı yönteme bölme
 
-Ui eylemlerini iyileştirmek veya modüler hale etmek için bir test yöntemini bölebilirsiniz. Örneğin, testinde iki kapsayıcı denetiminde kullanıcı arabirimi eylemleri olan tek bir test yöntemi olabilir. UI eylemleri, bir kapsayıcıya karşılık gelen iki yöntemde daha iyi modüler hale getirildi.
+UI eylemlerini daraltmak için bir test yöntemini bölebilir veya ayarlayabilirsiniz. Örneğin, testiniz iki kapsayıcı denetiminde UI eylemleriyle birlikte tek bir test yöntemine sahip olabilir. UI eylemleri, tek bir kapsayıcıya karşılık gelen iki yöntemde daha iyi modüler olabilir.
 
 ![Test yöntemini bölme](../test/media/codeduitestsplitmethod1.png)
 
 ![İki test yöntemi](../test/media/codeduitestsplitmethod2.png)
 
-UI **Eylemi bölmesinde,** iki ayrı yönteme bölmek istediğiniz test yöntemini genişletin ve yeni test yönteminin başlamalarını istediğiniz kullanıcı arabirimi eylemini seçin. Kullanıcı arabirimi eyleminin kısayol menüsünü açın ve ardından Yeni yönteme  bölün'ü seçin veya Kodlanmış UI Test Düzenleyicisi araç çubuğunda Yeni yönteme bölün düğmesini seçin. Yeni test yöntemi KULLANıCı Arabirimi Eylemleri **bölmesinde** görünür. Bölmeyi belirttiğiniz eylemden başlayarak kullanıcı arabirimi eylemlerini içerir.
+**UI eylemi** bölmesinde, iki ayrı yönteme bölmek istediğiniz test yöntemini genişletin ve yeni test yönteminin başlamasını istediğiniz kullanıcı arabirimi eylemini seçin. UI eylemi için kısayol menüsünü açın ve **Yeni bir yönteme Böl**' ü seçin veya kodlanmış UI Test Düzenleyicisi araç çubuğundaki **Yeni bir yönteme Böl** düğmesini seçin. Yeni test yöntemi, **UI eylemleri** bölmesinde görünür. Bölmeyi belirttiğiniz eylemden başlayarak Kullanıcı Arabirimi eylemlerini içerir.
 
-Yöntemi bölmeyi bitirdikten sonra, kullanıcı arabirimi araç çubuğunda Kaydet'i seçerek *UIMap.Designer* **dosyasına** Visual Studio kaydedin.
+yöntemi bölmeyi tamamladıktan sonra, Visual Studio araç çubuğunda **kaydet** ' i seçerek *uımap. Designer* dosyasındaki değişiklikleri kaydedin.
 
 > [!WARNING]
-> Bir yöntemi bölersiniz, mevcut yöntemi çağıran herhangi bir kodu değiştirerek bu ui eylemlerini yine de dahil etmek istediğiniz yeni yöntemi de çağırabilirsiniz. Bir yöntemi bölüşt Microsoft Visual Studio iletişim kutusu görüntülenir. Oluşturmakta olduğunu yeni yöntemi de çağıran mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerektiğini sizi uyarıyor. **Evet'i seçin.**
+> Bir yöntemi bölemeseniz, mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerekir, bu kullanıcı arabirimi eylemlerinin hala dahil edilmesini istiyorsanız oluşturmak üzere olduğunuz yeni yöntemi de çağırır. bir yöntemi böldüğünüz zaman bir Microsoft Visual Studio iletişim kutusu görüntülenir. Ayrıca, oluşturmak üzere olduğunuz yeni yöntemi çağırmak için mevcut yöntemi çağıran herhangi bir kodu değiştirmeniz gerektiğini uyarır. **Evet**' i seçin.
 
 ### <a name="tips"></a>İpuçları
 
-- Bölme işlemini geri almak için Düzenle **menüsünden** Geri **Al'ı** seçin veya **Ctrl** + **Z tuşlarına basın.**
+- Bölmeyi geri almak için, **Düzenle** menüsünden **geri al** ' ı seçin veya **CTRL** + **Z** tuşuna basın.
 
-- Yeni yöntemi yeniden adlandırebilirsiniz. Kullanıcı Arabirimi Eylemleri **bölmesinde bunu seçin** ve Kodlanmış UI Test Düzenleyicisi araç çubuğunda Yeniden Adlandır düğmesini seçin. 
+- Yeni yöntemi yeniden adlandırabilirsiniz. **UI eylemleri** bölmesinde seçin ve kodlanmış UI Test Düzenleyicisi araç çubuğundaki **Yeniden Adlandır** düğmesini seçin.
 
    -veya-
 
-   Yeni test yönteminin kısayol menüsünü açın ve Yeniden Adlandır'ı **seçin.**
+   Yeni test yönteminin kısayol menüsünü açın ve **Yeniden Adlandır**' ı seçin.
 
-   Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntemine başvurulan herhangi bir kodu değiştirmeniz gerektiğini belirtir. **Evet'i seçin.**
+   Microsoft Visual Studio iletişim kutusu görüntülenir. Yönteme başvuran tüm kodları değiştirmeniz gerektiğini uyarır. **Evet**' i seçin.
 
-## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a>Özelleştirmeyi kolaylaştırmak için test yöntemini UIMap dosyasına taşıma
+## <a name="move-a-test-method-to-the-uimap-file-to-facilitate-customization"></a>Özelleştirmeyi kolaylaştırmak için bir test yöntemini UIMap dosyasına taşıyın
 
-Kodlanmış UI testinde test yöntemlerinden birinin özel kod gerektirdiğini belirlerse, bunu *UIMap.cs* veya *UIMap.vb* dosyasına taşımanız gerekir. Aksi takdirde, kodlanmış UI testi her yeniden derlemede kodunuz üzerine yazılır. Yöntemi taşısanız, test her yeniden derlemede özel kodunuzun üzerine yazılır.
+Kodlanmış UI testinizde test yöntemlerinizin birinin özel kod gerektirdiğini belirlerseniz, onu *Umap. cs* veya *umap. vb* dosyasına taşımanız gerekir. Aksi takdirde, kodlanmış UI testi yeniden derlendiğinde kodunuzun üzerine yazılır. Yöntemi taşıyamazsınız, test her yeniden derlenilişinde özel kodunuzun üzerine yazılır.
 
-Ui **Eylemi** bölmesinde, test kodu yeniden derlemesi olduğunda üzerine yazılmayan özel kod işlevselliğini kolaylaştırmak için *UIMap.cs* veya *UIMap.vb* dosyasına taşımak istediğiniz test yöntemini seçin. Ardından, **Kodlanmış UI** Test Düzenleyicisi araç çubuğunda Kodu Taşı düğmesini seçin veya test yönteminin kısayol menüsünü açıp Kodu **Taşı'yı seçin.** Test yöntemi *UIMap. UITest* dosyasından kaldırılır ve artık **UI eylemleri** bölmesinde görüntülenmez. Taşıdığınız test dosyasını düzenlemek için, **Çözüm Gezgini**' den *UIMap. cs* veya *UIMap. vb* dosyasını açın.
+**UI eylemi** bölmesinde, test kodu yeniden derlenme sırasında üzerine yazılmayacak özel kod işlevlerini kolaylaştırmak Için *UIMap. cs* veya *UIMap. vb* dosyasına taşımak istediğiniz test yöntemini seçin. Sonra, kodlanmış UI Test Düzenleyicisi araç çubuğundaki **kodu taşı** düğmesini seçin veya test yönteminin kısayol menüsünü açın ve **kodu taşı**' yı seçin. Test yöntemi *UIMap. UITest* dosyasından kaldırılır ve artık **UI eylemleri** bölmesinde görüntülenmez. Taşıdığınız test dosyasını düzenlemek için, **Çözüm Gezgini**' den *UIMap. cs* veya *UIMap. vb* dosyasını açın.
 
 yöntemi taşımayı tamamladıktan sonra, Visual Studio araç çubuğunda **kaydet** ' i seçerek *uımap. Designer* dosyasındaki değişiklikleri kaydedin.
 

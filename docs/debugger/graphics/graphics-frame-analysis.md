@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a849af128e15c4f29155a84b55082eb0762e4e79c1922ad7c1cb7b6ace905803
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 320db3d923aeaf3e192715807c09de89bbf9faca
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240227"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121030"
 ---
 # <a name="graphics-frame-analysis"></a>Grafik Çerçeve Analizi
 Direct3D oyununuzun veya uygulamanızın işleme performansını analiz etmek ve iyileştirmek için Visual Studio grafik çözümleyicisi 'nde Grafik Çerçeve Çözümlemesi kullanın.

@@ -1,5 +1,5 @@
 ---
-description: Bir değişken için sayısal diğer adı temsil eder ve diğer ad için uygulama etki alanını almak üzere bir ifade değerlendirici (EE) sağlar.
+description: Bir değişkenin sayısal diğer adını temsil eder ve bir ifade değerlendiricinin (EE) diğer ad için uygulama etki alanını elde ettiğine olanak sağlar.
 title: IDebugAlias2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,20 +9,21 @@ ms.assetid: 5252dcbb-8bfe-4d8a-a8e5-b022b194df19
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6ca97fbe23e9b0c84c39e591c0fd9cfb997fca5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ae66d69153a539c42000914c9df1c275aa3a431c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059047"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072889"
 ---
 # <a name="idebugalias2"></a>IDebugAlias2
 > [!IMPORTANT]
-> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> 2015 Visual Studio de ifade değerlendiricilerini uygulamanın bu yolu kullanım dışıdır. CLR ifade değerlendiricilerini uygulama hakkında bilgi için bkz. [CLR İfade Değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
- Bir değişken için sayısal diğer adı temsil eder ve diğer ad için uygulama etki alanını almak üzere bir ifade değerlendirici (EE) sağlar.
+ Bir değişkenin sayısal diğer adını temsil eder ve bir ifade değerlendiricinin (EE) diğer ad için uygulama etki alanını elde ettiğine olanak sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,22 +31,22 @@ ms.locfileid: "105059047"
 IDebugAlias2 : IDebugAlias
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirim yönetilen hata ayıklama altyapısı (DE) tarafından uygulanır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim, yönetilen hata ayıklama altyapısı (DE) tarafından uygulanır.
 
 ## <a name="methods"></a>Yöntemler
- [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemi uygular:
+ [Bu arabirim, IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) arabiriminde yöntemlere ek olarak aşağıdaki yöntemi de kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetAppDomainId](../../../extensibility/debugger/reference/idebugalias2-getappdomainid.md)|Uygulama etki alanı için tanımlayıcıyı alır.|
+|[GetAppDomainId](../../../extensibility/debugger/reference/idebugalias2-getappdomainid.md)|Uygulama etki alanının tanımlayıcısını alın.|
 
 ## <a name="remarks"></a>Açıklamalar
- Diğer ad, dize formundaki ondalık bir sayıdır ve # karakteri, örneğin, 1001 # olur.
+ Diğer ad, dize biçimindeki bir ondalık sayıdır ve ardından # karakteri (örneğin, 1001#).
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: ee. h
+ Üst Bilgi: Ee.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

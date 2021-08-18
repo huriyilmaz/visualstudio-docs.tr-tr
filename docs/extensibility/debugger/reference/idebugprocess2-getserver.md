@@ -1,6 +1,6 @@
 ---
-description: Bu işlemin üzerinde çalıştığı sunucuyu alır.
-title: 'IDebugProcess2:: GetServer | Microsoft Docs'
+description: Bu işlem üzerinde çalışan sunucuyu alır.
+title: IDebugProcess2::GetServer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 801aca72d13510e0a6985167732c51f599dd28104e9680465b2617f885e2c3e1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5f89de8e1481f9a201d6d88d7301bdff01ac108a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121416280"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087931"
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
-Bu işlemin üzerinde çalıştığı sunucuyu alır.
+Bu işlem üzerinde çalışan sunucuyu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetServer(
 
 ## <a name="parameters"></a>Parametreler
 `ppServer`\
-dışı Bu işlemin üzerinde çalıştığı sunucuyu temsil eden bir [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) nesnesi döndürür.
+[out] Bu işlemi çalıştıran sunucuyu temsil eden bir [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Tek bir makinede birden fazla sunucu çalıştırılabilir.
+ Tek bir makinede birden fazla sunucu çalışıyor olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

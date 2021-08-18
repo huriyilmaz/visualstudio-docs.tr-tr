@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 28c8cc04bd3b6869bfde35ae5dcb7bc0a88f3ce5c7d5a3d9ab4c7d01268ea82f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 06ad9b4e11e81a337095b49a15411688e2974e1f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404685"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134143"
 ---
 # <a name="idiasymbolget_thunkordinal"></a>IDiaSymbol::get_thunkOrdinal
 Bir işlevin dönüştürücü türünü alır.

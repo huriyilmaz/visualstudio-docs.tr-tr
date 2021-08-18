@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 919762025b76cafea7f4db94f4ac6b2f7a2a00630b0a8d3df5fa117ea1de43ef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7d3b9084249d2a0ae78f1df05374cd1c021f8ff5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454770"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121516"
 ---
 # <a name="idiasymbolget_hasassignmentoperator"></a>IDiaSymbol::get_hasAssignmentOperator
 Kullanıcı tanımlı veri türünün tanımlanmış herhangi bir atama işleci olup olmadığını belirten bir bayrak alınır.

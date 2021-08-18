@@ -1,5 +1,5 @@
 ---
-title: 'Profil oluşturma komut satırı: Tek başına uygulama istatistikleri toplama'
+title: 'Profil oluşturma komut satırı: Tek başına uygulama istatistiklerini toplama'
 description: Profil oluşturma komut satırı kullanarak tek başına uygulamalar için uygulama istatistiklerini Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -15,18 +15,18 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dbc5e6dea90f60e5474d27c19a23fc0a10e348ba1ad3529d106555b885c195b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 425119d1793bef1ddac99c36f15b91664241a3bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397013"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136423"
 ---
 # <a name="collect-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak bağımsız uygulamalar için uygulama istatistikleri toplama
 Bu bölümde, komut satırı örnekleme yöntemini kullanarak bir istemci (tek başına) uygulaması için performans istatistikleri toplamaya ilişkin yordamlar ve seçenekler açıklanır.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'daki gelişmiş güvenlik özellikleri, Visual Studio profil oluşturmanın bu platformlarda veri toplaması sırasında önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Bkz. [Uygulama ve Windows 8 performans Windows Server 2012 araçları.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
+> Windows 8 ve Windows Server 2012'daki gelişmiş güvenlik özellikleri, Visual Studio profil oluşturmanın bu platformlarda veri toplaması sırasında önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Bkz. [Uygulama ve Windows 8 performans Windows Server 2012.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
 
 ## <a name="common-tasks"></a>Genel görevler
 
@@ -52,7 +52,7 @@ Bu bölümde, komut satırı örnekleme yöntemini kullanarak bir istemci (tek b
 |Görev|İlgili içerik|
 |----------|---------------------|
 |**Web ASP.NET profil oluşturma**|-   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|
-|**Profil hizmetleri**|-   [Örnekleme kullanarak uygulama istatistikleri toplama.](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md) Örnekleme yöntemini kullanarak hizmetlerden performans Windows toplamayı açıklar.|
+|**Profil hizmetleri**|-   [Örnekleme kullanarak uygulama istatistiklerini toplayın.](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md) Örnekleme yöntemini kullanarak hizmetlerden performans Windows toplamayı açıklar.|
 
 ### <a name="analyze-sampling-data-views-and-reports"></a>Örnekleme veri görünümlerini ve raporlarını analiz etme
 - [Örnekleme yöntemi veri görünümleri](../profiling/profiler-sampling-method-data-views.md)

@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d395a170a9daee3bfd4544b34fa1a203f6a9df9ba8d63d36266a7c588838548
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a87ca5252e51262cdc70835e910ca67f6fedcb10
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121399789"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150878"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio'de IntelliSense
 
@@ -51,7 +51,7 @@ Sadece yazdığınız metnin kodun içine eklendiği öneri moduna da geçebilir
 
 Parametre Bilgisi; bir yöntem, öznitelik genel tür parametresi (C#) veya şablon (C++) tarafından istenen parametrelerin sayısı, adları ve türleri hakkında bilgi verir.
 
-Kalın yazı tipli parametre, işlevi yazarken gerekli olan bir sonraki parametreyi gösterir. Aşırı yüklenmiş işlevlerde, işlev aşırı  yüklemeleri **için** alternatif parametre bilgilerini görüntülemek üzere Yukarı ve Aşağı ok tuşlarını kullanabilirsiniz.
+Kalın yazı tipli parametre, işlevi yazarken gerekli olan bir sonraki parametreyi gösterir. Aşırı yüklenmiş işlevlerde, işlev aşırı  **yüklemeleri için** alternatif parametre bilgilerini görüntülemek üzere Yukarı ve Aşağı ok tuşlarını kullanabilirsiniz.
 
 ![Parametre Bilgisi](../ide/media/vs2015_param_info.png)
 
@@ -81,10 +81,10 @@ Complete Word bir değişkenin, komutun veya işlev adının geri kalanını, te
 
 ## <a name="intellisense-options"></a>IntelliSense seçenekleri
 
-IntelliSense seçenekleri varsayılan olarak açıktır. Bunları kapatmak için Araçlar Seçenekler **Metin Düzenleyicisi'ni** seçin ve Üyeleri Listele özelliğini istemiyorsanız Parametre  >    >   bilgileri'nin veya Otomatik liste üyelerinin  seçimini kaldırın. 
+IntelliSense seçenekleri varsayılan olarak açıktır. Bunları kapatmak için Araçlar Seçenekler **Metin Düzenleyicisi'ni** seçin ve Üyeleri Listele özelliğini istemiyorsanız Parametre  >    >   bilgileri'nin veya Otomatik liste üyelerinin seçimini kaldırın.  
 
 ## <a name="intellisense-icons"></a>IntelliSense simgeleri
-IntelliSense'in simgeleri, simge değiştiricileriyle ek anlamlar ifade ediyor olabilir. Bunlar, nesne simgesinin üzerine, sırasıyla korumalı, iç veya özel olarak aktaran yıldız, kalp ve kilitlerdir.
+IntelliSense'in simgeleri, simge değiştiricileriyle ek anlamlar ifade ediyor olabilir. Bunlar, nesnenin simgesinin üzerine, sırasıyla korumalı, iç veya özel olarak aktaran katmanlı yıldızlar, kalpler ve kilitlerdir.
 
 |    Simge    |    Erişilebilirlik    |    Açıklama    |
 |------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -98,7 +98,7 @@ IntelliSense'in simgeleri, simge değiştiricileriyle ek anlamlar ifade ediyor o
 
 IntelliSense seçenekleri, belirli durumlarda beklediğiniz gibi çalışmayabilir.
 
-**İmleç bir kod hatasının altında.** IntelliSense kod öğelerini ayrıştıramayabilecek olabileceği için imlecin üzerindeki kodda eksik bir işlev veya başka bir hata varsa IntelliSense'i kullanamayabilirsiniz. Uygulanabilir kodu açıklama olarak ekleyerek bu sorunu çözebilirsiniz.
+**İmleç bir kod hatasının altında.** İmlecin üzerindeki kodda eksik bir işlev veya başka bir hata varsa IntelliSense'i kullanamayabilirsiniz çünkü IntelliSense kod öğelerini ayrıştıramayabiliyor olabilir. Uygulanabilir kodu açıklama olarak ekleyerek bu sorunu çözebilirsiniz.
 
 **İmleç bir kod açıklamasındadır.** İmleç, kaynak dosyanız içinde bir açıklama içinde yer alırsa IntelliSense'i kullanılamaz.
 

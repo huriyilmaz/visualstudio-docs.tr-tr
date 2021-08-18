@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e7800599529157c9bcd7466f5cad21b3a826c83e371adfed9496b8b6135eca32
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: da7e2e78013b76045c162c95f9bad9ee78b1790b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121337922"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110507"
 ---
 # <a name="implementing-a-legacy-language-service-1"></a>Eski dil hizmetini uygulama 1
 Söz dizimi vurgulama, küme ayracı eşleştirme ve IntelliSense tamamlama gibi çok çeşitli özellikleri destekleyen eski bir dil hizmetini uygulamak için yönetilen paket çerçevesi (MPF) sınıflarını kullanabilirsiniz.

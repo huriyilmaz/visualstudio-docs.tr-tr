@@ -1,6 +1,6 @@
 ---
-description: Bu arabirim, genellikle sembol sağlayıcısı tarafından döndürülen bir sembol alanını, simgenin geçerli değerini içeren bir bellek bağlamına veya nesnesine bağlar.
-title: Idebugciltçi | Microsoft Docs
+description: Bu arabirim, genellikle sembol sağlayıcısı tarafından döndürülen bir sembol alanını, sembolün geçerli değerini içeren bir bellek bağlamına veya nesnesine bağlar.
+title: IDebugBinder | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: d1f31e5b-c6e2-4e02-8959-b3e86041b29c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4fdfe0cffce209880d870cde7b70cc1e02252413
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 16b18bb8a1208d6f6a9c4a0c87a73f35b66dec1d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089088"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072843"
 ---
 # <a name="idebugbinder"></a>IDebugBinder
 > [!IMPORTANT]
-> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> 2015 Visual Studio de ifade değerlendiricilerini uygulamanın bu yolu kullanım dışıdır. CLR ifade değerlendiricilerini uygulama hakkında bilgi için bkz. [CLR İfade Değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
- Bu arabirim, genellikle sembol sağlayıcısı tarafından döndürülen bir sembol alanını, simgenin geçerli değerini içeren bir bellek bağlamına veya nesnesine bağlar.
+ Bu arabirim, genellikle sembol sağlayıcısı tarafından döndürülen bir sembol alanını, sembolün geçerli değerini içeren bir bellek bağlamına veya nesnesine bağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,32 +33,32 @@ ms.locfileid: "105089088"
 IDebugBinder : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirim, ifade değerlendirmesini destekler ve hata ayıklama altyapısı (DE) tarafından uygulanmalıdır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim ifade değerlendirmesini destekler ve hata ayıklama altyapısı (DE) tarafından uygulanması gerekir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim, ifade değerlendirmesi sürecinde kullanılır ve genellikle [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ve [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)uygulamalarında kullanılır.
+ Bu arabirim ifade değerlendirme sürecinde kullanılır ve genellikle [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ve [EvaluateAsync uygulamasında kullanılır.](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugBinder` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugBinder` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Bağladığınızda](../../../extensibility/debugger/reference/idebugbinder-bind.md)|Simgenin geçerli değerini içeren bellek bağlamını veya nesnesini alır.|
+|[Bağlamak](../../../extensibility/debugger/reference/idebugbinder-bind.md)|Sembolün geçerli değerini içeren bellek bağlamını veya nesnesini alır.|
 |[ResolveRuntimeType](../../../extensibility/debugger/reference/idebugbinder-resolveruntimetype.md)|Bir nesnenin çalışma zamanı türünü belirler.|
-|[GetMemoryContext](../../../extensibility/debugger/reference/idebugbinder-getmemorycontext.md)|Bir nesne konumunu veya bellek adresini bir bellek bağlamına dönüştürür.|
-|[GetFunctionObject](../../../extensibility/debugger/reference/idebugbinder-getfunctionobject.md)|İşlev parametreleri oluşturmak için kullanılan bir [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesi alır.|
+|[GetMemoryContext](../../../extensibility/debugger/reference/idebugbinder-getmemorycontext.md)|Nesne konumunu veya bellek adresini bir bellek bağlamına dönüştürür.|
+|[GetFunctionObject](../../../extensibility/debugger/reference/idebugbinder-getfunctionobject.md)|İşlev parametrelerini [oluşturmak için kullanılan IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesini alır.|
 |[ResolveDynamicType](../../../extensibility/debugger/reference/idebugbinder-resolvedynamictype.md)|Bir değişkenin tam türünü alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, ayrıştırma ağaçlarında ifade değerlendiricisi tarafından kullanılan nesneleri döndürür. İfade değerlendirici, ifadedeki sembolleri, her bir sembolü kaynak koddaki türü ve konumu bakımından açıklayan [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)örneklerine dönüştürmek için sembol sağlayıcısını kullanarak bir ifadeyi ayrıştırır. [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md) yöntemi nesneleri, `IDebugField` bir sembol türünü, bellekteki gerçek bir değere bağlayan veya bağlayan [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnelerine dönüştürür. `IDebugObject`Daha sonra bu nesneler daha sonra değerlendirme için bir ayrıştırma ağacında depolanır.
+ Bu arabirim, ayrıştırma ağaçlarında ifade değerlendiricisi tarafından kullanılan nesneleri döndürür. İfade değerlendiricisi, ifadede yer alan sembolleri, kaynak kodda türü ve konumu açısından her simgeyi açıklayan [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)örneklerine dönüştürmek için sembol sağlayıcısını kullanarak bir ifadeyi ayrıştırıyor. [Bind yöntemi](../../../extensibility/debugger/reference/idebugbinder-bind.md) nesneleri, bir sembol türüne bağlanıp bellekte gerçek bir değere bağlayan `IDebugField` [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnelerine dönüştürür. Bu `IDebugObject` nesneler daha sonra daha sonra değerlendirme için ayrıştırma ağacında depolanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: ee. h
+ Üst bilgi: ee.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Expression Evaluation Interfaces](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)

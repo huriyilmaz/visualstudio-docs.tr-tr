@@ -1,6 +1,6 @@
 ---
-description: Kullanılacak sağlama toplamı algoritmasının benzersiz tanımlayıcısı verilen kesme noktası isteği için belge sağlama toplamını alır.
-title: 'IDebugBreakpointChecksumRequest2:: GetChecksum | Microsoft Docs'
+description: Kullanmak üzere sağlama grubu algoritmasının benzersiz tanımlayıcısına göre bir kesme noktası isteği için belge sağlama listesi alınır.
+title: IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3b338cacbe3228aa48dc89b632eecaab6ce3fa02bfe90ac6af2a82b182a0071f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ad0c8a501b654bbe62c5fb86dc974b940e6d321d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342537"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072687"
 ---
 # <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
-Kullanılacak sağlama toplamı algoritmasının benzersiz tanımlayıcısı verilen kesme noktası isteği için belge sağlama toplamını alır.
+Kullanmak üzere sağlama grubu algoritmasının benzersiz tanımlayıcısına göre bir kesme noktası isteği için belge sağlama listesi alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ public int GetChecksum(
 
 ## <a name="parameters"></a>Parametreler
 `guidAlgorithm`\
-'ndaki Sağlama algoritmasının benzersiz tanıtıcısı.
+[in] Sağlama grubu algoritmasının benzersiz tanımlayıcısı.
 
 `pChecksumData`\
-dışı Kesme noktası isteği için belge sağlama toplamı.
+[out] Kesme noktası isteği için belge sağlama listesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bir belgenin, bağlanmak üzere olan, kullanıcı arabiriminden eşleşen sağlama toplamı olup olmadığını denetleyen bir işlevi gösterir.
+Aşağıdaki örnek, bağlanacak olan bir belgenin sağlamalarının kullanıcı arabiriminden bir belgeyle eş olup olmadığını kontrol eden bir işlev gösterir.
 
 ```cpp
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)
