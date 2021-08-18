@@ -1,6 +1,6 @@
 ---
-description: Yürütülebilir dosyadan belirtilen uzaklığından başlayarak belirtilen bayt sayısını okur.
-title: IDiaReadExeAtOffsetCallback::ReadExecutableAt | Microsoft Docs
+description: Bir yürütülebilir dosyadan belirtilen uzaklığa başlayarak belirtilen sayıda bayt okur.
+title: 'IDiaReadExeAtOffsetCallback:: ReadExecutableAt | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cd63d860c4235b7b746cc7d14cad0a58f1a565d3d7fb2d81740a3a0a3b6ab6d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 71948d51865e82f3dd0fa2fe7bb29fd200b59f30
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454954"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129058"
 ---
 # <a name="idiareadexeatoffsetcallbackreadexecutableat"></a>IDiaReadExeAtOffsetCallback::ReadExecutableAt
-Yürütülebilir dosyadan belirtilen uzaklığından başlayarak belirtilen bayt sayısını okur.
+Bir yürütülebilir dosyadan belirtilen uzaklığa başlayarak belirtilen sayıda bayt okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,24 +36,24 @@ HRESULT ReadExecutableAt (
 ```
 
 #### <a name="parameters"></a>Parametreler
- fileOffset
+ Dosya kayması
 
-[in] Okumaya başlamak için yürütülebilir dosyada uzaklık.
+'ndaki Okumaya başlamak için çalıştırılabilir dosyadaki fark.
 
- Cbdata
+ cbData
 
-[in] Okunan bayt sayısı.
+'ndaki Okunacak bayt sayısı.
 
- veri verisi
+ pcbData
 
-[out] Okunan bayt sayısını döndürür.
+dışı Okunan bayt sayısını döndürür.
 
- data[]
+ veri []
 
-[in, out] Dosyadan okunan baytlarla doldurulmuş bir dizi.
+[in, out] Dosyadan okunan bayt ile doldurulmuş bir dizi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, DIA destek kodu tarafından mutlak dosya uzaklığı kullanılarak yürütülebilir dosyadan veri baytlarını yüklemek için çağrılır. Bu yöntem, [IDiaDataSource::loadDataForExe yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) desteklemek için çağrılır.
+ Bu yöntem, tam bir dosya boşluğu kullanılarak yürütülebilir dosyadan veri baytları yüklemek için ÇYA destek kodu tarafından çağırılır. Bu yöntem, [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu desteklemek için çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)

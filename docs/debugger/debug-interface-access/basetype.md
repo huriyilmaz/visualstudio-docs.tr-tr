@@ -1,6 +1,6 @@
 ---
 title: BaseType | Microsoft Docs
-description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında BaseType sembol türü (SymTagBaseType) hakkında başvuru bilgileri bulun.
+description: hata ayıklama arabirimi erişim SDK Visual Studio BaseType sembol türü (symtagbasetype) hakkında başvuru bilgileri bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,14 +12,15 @@ ms.assetid: 2f9e22e6-8360-496a-ac6b-17a5a56b0c46
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 38ef0b8d8172bfba915da752526098144c2e40b2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6afb4b2bfd99a8f944ab0d5d3d2a27e2c521371f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857479"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129582"
 ---
 # <a name="basetype"></a>BaseType
 Temel türler semboller tarafından tanımlanır `SymTagBaseType` .

@@ -12,20 +12,21 @@ ms.assetid: deee6f53-ea87-4b88-a120-bea589822e03
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61197fcfe84c96eed2c46b662f93a06386bb9c1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0af48178d270bcce0a83b81aa54fface2b0b1e3b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931857"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084837"
 ---
 # <a name="register-extensions-of-the-net-framework"></a>.NET Framework uzantılarını Kaydet
 
-.NET Framework belirli bir sürümünü genişleten bir derleme geliştirebilirsiniz. Derlemenin Visual Studio **başvuruları Ekle** iletişim kutusunda görünmesini etkinleştirmek için, onu içeren klasörü sistem kayıt defterine eklemeniz gerekir.
+.NET Framework belirli bir sürümünü genişleten bir derleme geliştirebilirsiniz. derlemenin Visual Studio **başvuruları ekle** iletişim kutusunda görünmesini etkinleştirmek için, onu içeren klasörü sistem kayıt defterine eklemeniz gerekir.
 
- Örneğin, Trey Research şirketinin .NET Framework 4 ' ü genişleten bir kitaplık geliştirdiğini ve bir proje .NET Framework 4 ' ü hedeflediğinde **Başvuru Ekle** iletişim kutusunda kitaplık derlemelerinin görünmesini istediğini varsayalım. Ayrıca, derlemelerin 32 bit bilgisayarda çalışan 32 bitlik derlemeler veya bir 64 bit bilgisayarda çalışan 64 bit derlemeler olduğunu ve *C:\TreyResearch\Extensions4 \\* klasörüne yükleneceğini varsayın.
+ örneğin, trey Research şirketinin .NET Framework 4 ' ü genişleten bir kitaplık geliştirdiğini ve bir proje .NET Framework 4 ' ü hedeflediğinde **başvuru ekle** iletişim kutusunda kitaplık derlemelerinin görünmesini istediğini varsayalım. Ayrıca, derlemelerin 32 bit bilgisayarda çalışan 32 bitlik derlemeler veya bir 64 bit bilgisayarda çalışan 64 bit derlemeler olduğunu ve *C:\TreyResearch\Extensions4 \\* klasörüne yükleneceğini varsayın.
 
  Bu klasörü şu anahtarı kullanarak kaydedin: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\ . NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch \\**. Anahtara şu varsayılan değeri verin: **C:\TreyResearch\Extensions4**.
 

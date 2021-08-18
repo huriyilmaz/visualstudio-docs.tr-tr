@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d914b2a257d1b3996866d481ac999244a59af3c31859c0dd791d9c3e85d3ee7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 798b87e358af7217b9d1b376f256b860e8215e57
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378911"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154128"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Nasıl Yapılır: Hata Ayıklama Ayarlarını Belirtme
 'de, değişkenlerin nasıl görüntülendiğinden, belirli uyarıların sunup görüntülenmeyeceğini, kesme noktaların nasıl ayarlayıcısının ve hata ayıklamanın çalışan programları nasıl etkilediği gibi çeşitli hata ayıklayıcı davranışı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayarlarını belirtebilirsiniz. Seçenekler iletişim kutusunda hata ayıklayıcı **ayarlarını** belirtirsiniz.
@@ -36,7 +36,7 @@ ms.locfileid: "121378911"
 
 1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. Seçenekler **iletişim** kutusunda Hata Ayıklama **klasörünü** açın.
+2. Seçenekler **iletişim** kutusunda Hata ayıklama **klasörünü** açın.
 
 3. Hata **ayıklama klasöründe** istediğiniz seçeneklerin kategorisini seçin.
 

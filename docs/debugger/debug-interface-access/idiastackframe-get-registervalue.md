@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c5d23e1702ed9fa928ad0459255639c454af2da15e9ce169211c607757e487a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e58f03a45b1fe680644c1bbc320383d6e3ac44ef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454882"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128858"
 ---
 # <a name="idiastackframeget_registervalue"></a>IDiaStackFrame::get_registerValue
 Belirtilen kaydın değerini yığın çerçevesinde saklanan şekilde alır.

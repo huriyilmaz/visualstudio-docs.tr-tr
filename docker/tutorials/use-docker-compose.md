@@ -1,19 +1,21 @@
 ---
-title: 'Docker öğreticisi-Bölüm 7: Docker Compose kullanma'
+title: 'Docker öğreticisi-5. Bölüm: Docker Compose kullanma'
 description: Docker Compose yüklemeyi ve kullanmayı açıklar.
-ms.date: 08/04/2020
+ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 645d168aefe05040193d564d5c158acfb6688c11
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 1609081f364a2a20f983f8d8acd55181a71de42f
+ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222753"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122334323"
 ---
 # <a name="use-docker-compose"></a>Docker Compose kullanma
 
