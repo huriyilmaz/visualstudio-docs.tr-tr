@@ -1,6 +1,6 @@
 ---
 title: Web formunda hata ayıklama | Microsoft Docs
-description: Kesme noktalarını ayarlama ve değişkenleri inceleme dahil olmak üzere bir ASP.NET Web uygulamasında (Web formu) hata ayıklamanın nasıl yapılacağını görmek için bir yönergeyi izleyin.
+description: kesme noktalarını ayarlama ve değişkenleri inceleme dahil olmak üzere bir ASP.NET web uygulamasında (web formu) hata ayıklamanın nasıl yapılacağını görmek için bir yönergeyi izleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,14 +22,15 @@ ms.assetid: e2b4fa14-8f5b-444d-a903-54070b784bd4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 18347b7ba9ff52778b5acef685acd8f1ee400793
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: abec832764d133c411373ca9bcc11a7d48bd2ff8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385219"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161030"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>İzlenecek yol: Web Formunda Hata Ayıklama
 Bu izlenecek yolda bulunan adımlarda [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , Web formu olarak da bilinen bir Web uygulamasının hatalarını ayıklama işlemleri gösterilir. Yürütmeyi başlatma ve durdurma, kesme noktaları ayarlama ve **izleme** penceresinde değişkenleri inceleme işlemlerinin nasıl yapılacağını gösterir.
@@ -37,7 +38,7 @@ Bu izlenecek yolda bulunan adımlarda [!INCLUDE[vstecasp](../code-quality/includ
 > [!NOTE]
 > Bu yönergeyi tamamlamak için sunucu bilgisayarında yönetici ayrıcalıklarına sahip olmanız gerekir. Varsayılan olarak, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] işlem, aspnet_wp.exe veya w3wp.exe işlem olarak çalışır [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Hata ayıklamak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] , çalıştıran bilgisayarda yönetici ayrıcalıklarına sahip olmanız gerekir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Daha fazla bilgi için, bkz. [System Requirements](../debugger/aspnet-debugging-system-requirements.md).
 
-Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
+Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım bölümünde açıklananlardan farklı bir durum içerebilir. ayarlarınızı değiştirmek için **araçlar** menüsünden **içeri aktar ve dışarı aktar Ayarlar** seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
 ## <a name="to-create-the-web-form"></a>Web formu oluşturmak için
 
@@ -47,7 +48,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
     **Yeni Web sitesi** iletişim kutusu görüntülenir.
 
-3. **Şablonlar** bölmesinde **ASP.NET Web sitesi**' ne tıklayın.
+3. **şablonlar** bölmesinde, **ASP.NET Web sitesi**' ne tıklayın.
 
 4. **Konum** satırında, listeden **http** ' ye tıklayın ve metin kutusuna yazın **http://localhost/WebSite** .
 
@@ -111,7 +112,7 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' De, bu sizi, varsayılan. aspx. cs veya default. aspx. vb kod sayfasında kesme noktasını ayarladığınız satıra götürür. Bu satır, sarı ile vurgulanmış olmalıdır. Şimdi, uygulamanızda değişkenleri görüntüleyebilir ve yürütülmesini denetleyebilirsiniz. Uygulamanız yürütmeyi durduruyor ve bir komutun tamamlanmasını bekler.
 
-5. **Hata Ayıkla** menüsünde **Windows**' a ve ardından **Izle**' ye ve ardından **Watch1**' e tıklayın.
+5. **hata ayıkla** menüsünde **Windows**' a ve ardından **izle**' ye ve ardından **Watch1**' e tıklayın.
 
 6. **Gözcü** penceresinde **TextBox1. Text** yazın.
 
@@ -165,4 +166,4 @@ Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET uygulamalarında hata ayıklama](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
+- [ASP.NET uygulamalarda hata ayıkla](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

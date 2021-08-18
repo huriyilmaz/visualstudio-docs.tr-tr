@@ -16,12 +16,12 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: b2557242579a5307dc87cead8e348cfafb358f67b534cb5d6616341b8de027c5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 71c064a7da6f3d0e781b545c14adba96a4e1c674
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453212"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112613"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio JavaScript konsol komutları
 

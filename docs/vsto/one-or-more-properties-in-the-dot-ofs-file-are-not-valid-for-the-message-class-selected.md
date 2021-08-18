@@ -12,18 +12,19 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b22870cdb038adee84adc0fd7a56c269cb048626
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 603a0a8aaa25ac8ec203780f9b509613c33f6c3e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841931"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147836"
 ---
 # <a name="invalid-properties-in-the-ofs-file-for-the-message-class"></a>İleti sınıfı için. ofs dosyasında geçersiz özellikler
 
-  ". Ofs dosyasındaki bir veya daha fazla özellik seçilen ileti sınıfı için geçerli değil" hatası, Outlook 'ta tasarlanan bir form bölgesini içeri aktardığınızda görüntülenir, ancak form bölgesindeki bir veya daha fazla alan **Yeni form bölgesi** sihirbazının son sayfasında seçtiğiniz ileti sınıflarıyla uyumlu değildir.
+  ". ofs dosyasındaki bir veya daha fazla özellik seçilen ileti sınıfı için geçerli değil" hatası, Outlook olarak tasarlanan bir form bölgesini içeri aktardığınızda görüntülenir, ancak form bölgesindeki bir veya daha fazla alan **yeni form bölgesi** sihirbazının son sayfasında seçtiğiniz ileti sınıflarıyla uyumlu değildir.
 
 Örneğin, **görev (IPM) öğesini seçebilirsiniz. Görev)** **Yeni form bölgesi** sihirbazının son sayfasında. Form bölgesinin bir **Iş adresi** alanı varsa, bir görevin iş adresi olmadığı için bu hatayı alırsınız. Bu nedenle, **Iş adresi** alanı `IPM.Task` ileti sınıfıyla uyumlu değildir.
 
@@ -33,7 +34,7 @@ ms.locfileid: "99841931"
 
 - **Yeni form bölgesi** Sihirbazı ' nın son sayfasında, form bölgesindeki alanlarla uyumlu bir ileti sınıfı seçin.
 
-- Outlook 'taki form tasarımcısında, ileti sınıflarıyla uyumlu olmayan alanları kaldırın. **Yeni form bölgesi** sihirbazının son sayfasında seçimi planladığınız alanları kaldırın.
+- Outlook içindeki form tasarımcısında, ileti sınıflarıyla uyumlu olmayan alanları kaldırın. **Yeni form bölgesi** sihirbazının son sayfasında seçimi planladığınız alanları kaldırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Outlook 'ta tasarlanan form bölgesini Içeri aktarma](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)
+- [İzlenecek yol: Outlook ' de tasarlanan form bölgesini Içeri aktarma](../vsto/walkthrough-importing-a-form-region-that-is-designed-in-outlook.md)

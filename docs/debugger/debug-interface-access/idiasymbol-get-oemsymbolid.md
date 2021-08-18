@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 30f7a0138526e01e973a503b9ab2e1c0a9f091f39b43ab88de75bd0590c0cee0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a241d75b9a073b3ba4072e6d287ea64a5c2ad202
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379817"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113398"
 ---
 # <a name="idiasymbolget_oemsymbolid"></a>IDiaSymbol::get_oemSymbolId
 Özgün ekipman üreticisi (OEM) simgesinin kimlik değerini verir.

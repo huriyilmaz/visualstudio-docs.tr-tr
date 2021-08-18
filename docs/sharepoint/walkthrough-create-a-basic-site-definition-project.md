@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: temel bir site tanımı projesi oluşturma | Microsoft Docs'
-description: Bu SharePoint yönergede, bazı denetimlerle görsel bir Web Bölümü içeren temel bir site tanımı oluşturma bölümüne bakın.
+title: 'İzlenecek yol: temel bir site tanımı oluşturma Project | Microsoft Docs'
+description: bu SharePoint izlenecek yolda, bazı denetimlerle görsel bir Web bölümü içeren temel bir site tanımı oluşturma bölümüne bakın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,23 +13,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: a505ff059b347c6adbef15a8fe8bcfe7b274eaa4
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 2d8de9b5da1a9bff70b8332b9b6804295996af5e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106218028"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130812"
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>İzlenecek yol: temel bir site tanımı projesi oluşturma
-  Bu izlenecek yol, üzerinde bazı denetimlerle görsel bir Web Bölümü içeren temel bir site tanımı oluşturmayı gösterir. Daha fazla açıklık için, oluşturduğunuz görsel web bölümünün yalnızca birkaç denetimi vardır. Ancak, daha fazla işlevsellik içeren daha gelişmiş SharePoint site tanımları oluşturabilirsiniz.
+  Bu izlenecek yol, üzerinde bazı denetimlerle görsel bir Web Bölümü içeren temel bir site tanımı oluşturmayı gösterir. Daha fazla açıklık için, oluşturduğunuz görsel web bölümünün yalnızca birkaç denetimi vardır. ancak, daha fazla işlevsellik içeren daha karmaşık SharePoint site tanımları oluşturabilirsiniz.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 - Proje şablonunu kullanarak bir site tanımı oluşturma [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-- SharePoint 'te bir site tanımı kullanarak bir SharePoint sitesi oluşturma.
+- SharePoint bir site tanımı kullanarak SharePoint sitesi oluşturma.
 
 - Çözüme bir görsel Web Bölümü ekleme.
 
@@ -40,7 +41,7 @@ ms.locfileid: "106218028"
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Desteklenen Microsoft Windows ve SharePoint sürümleri. Daha fazla bilgi için bkz. SharePoint çözümleri geliştirmeye yönelik gereksinimler.
+- desteklenen Microsoft Windows sürümleri ve SharePoint. daha fazla bilgi için bkz. SharePoint çözümleri geliştirme gereksinimleri.
 
 - Visual Studio.
 
@@ -49,21 +50,21 @@ ms.locfileid: "106218028"
 
 #### <a name="to-create-a-site-definition-project"></a>Bir site tanımı projesi oluşturmak için
 
-1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. IDE 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa, menü çubuğunda **Dosya**  >  **Yeni proje**' yi seçin.
+1. menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin. ıde 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa, menü çubuğunda **dosya**  >  **yeni Project**' ni seçin.
 
     **Yeni Proje** iletişim kutusu görünür.
 
 2. **Visual C#** düğümünü veya **Visual Basic** düğümünü genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-3. **Şablonlar** listesinde, **SharePoint 2010 proje** şablonunu seçin.
+3. **şablonlar** listesinde **SharePoint 2010 Project** şablonunu seçin.
 
 4. **Ad** kutusuna **TestSiteDef** yazın ve **Tamam** düğmesini seçin.
 
-    **SharePoint Özelleştirme Sihirbazı** görüntülenir.
+    **SharePoint özelleştirme sihirbazı** görüntülenir.
 
-5. **Hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, site tanımında hata ayıklamak istediğiniz SharePoint sitesinin URL 'sini girin veya varsayılan konumu (http://<em>sistem adı</em>/) kullanın.
+5. **hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, site tanımında hata ayıklamak istediğiniz SharePoint sitesinin URL 'sini girin veya varsayılan konumu (http://<em>sistem adı</em>/) kullanın.
 
-6. **Bu SharePoint çözümünün güven düzeyi nedir?** bölümünde, **Grup çözümü olarak dağıt** seçenek düğmesini seçin.
+6. **bu SharePoint çözümü için güven düzeyi nedir?** bölümünde, **grup çözümü olarak dağıt** seçenek düğmesini seçin.
 
     Tüm site tanımı projelerinin Grup çözümleri olarak dağıtılması gerekir. Korumalı çözümler ve Grup çözümleri hakkında daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
 
@@ -71,7 +72,7 @@ ms.locfileid: "106218028"
 
     Proje **Çözüm Gezgini** görüntülenir.
 
-8. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
+8. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda, **Project**  >  **yeni öğe ekle**' yi seçin.
 
 9. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
@@ -84,7 +85,7 @@ ms.locfileid: "106218028"
 
 1. **Çözüm Gezgini**, **tüm dosyaları göster** düğmesini seçin.
 
-2. **SiteDefinition1** proje düğümünü seçin ve ardından menü çubuğunda **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+2. **SiteDefinition1** proje düğümünü seçin ve ardından menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
      **Yeni Öğe Ekle** iletişim kutusu görünür.
 
@@ -145,7 +146,7 @@ ms.locfileid: "106218028"
 3. **Çözüm Gezgini**' de, **SiteDefinition1** düğümünün kısayol menüsünü açın ve **Başlangıç öğesi olarak ayarla**' yı seçin.
 
 ## <a name="deploy-and-run-the-site-definition-solution"></a>Site tanımı çözümünü dağıtma ve çalıştırma
- Sonra, projeyi SharePoint 'e dağıtın ve ardından projeyi çalıştırın.
+ Sonra, projeyi SharePoint dağıtın ve ardından projeyi çalıştırın.
 
 #### <a name="to-deploy-and-run-the-site-definition"></a>Site tanımını dağıtmak ve çalıştırmak için
 
@@ -153,20 +154,20 @@ ms.locfileid: "106218028"
 
 - **F5** tuşunu seçin.
 
-     Visual Studio kodu derler, özelliklerini ekler, tüm dosyaları bir SharePoint çözümü (WSP) dosyasına paketler ve WSP dosyasını SharePoint sunucusuna dağıtır. Ardından, SharePoint dosyaları yüklenir ve ardından özellikleri etkinleştirir.
+     Visual Studio kodu derler, özelliklerini ekler, tüm dosyaları bir SharePoint çözümü (WSP) dosyasına paketler ve wsp dosyasını SharePoint sunucusuna dağıtır. SharePoint dosyaları yükleyip ardından özellikleri etkinleştirir.
 
 ## <a name="create-a-site-based-on-the-site-definition"></a>Site tanımına göre bir site oluşturun
  Sonra, yeni site tanımını kullanarak bir site oluşturun.
 
 #### <a name="to-create-a-site-by-using-the-site-definition"></a>Site tanımını kullanarak bir site oluşturmak için
 
-1. SharePoint sitesinde yeni SharePoint sitesi sayfası görüntülenir.
+1. SharePoint sitesinde, yeni SharePoint site sayfası görüntülenir.
 
 2. **Başlık ve açıklama** bölümünde, başlık ve sitenin açıklaması Için **Yeni Sitem** ' i girin.
 
 3. **Web sitesi adresi** bölümünde, **URL adı** kutusuna **yenbir site** girin.
 
-4. **Şablon** bölümünde **SharePoint özelleştirmeleri** sekmesini seçin.
+4. **şablon** bölümünde **SharePoint özelleştirmeler** sekmesini seçin.
 
 5. **Şablon seç** listesinde **SiteDefinition1**' yi seçin.
 

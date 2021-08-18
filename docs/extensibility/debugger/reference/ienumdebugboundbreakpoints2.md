@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bekleyen kesme noktası veya kesme noktası bağlantılı olayla ilişkili olan ilişkili kesme noktalarını numaralandırır.
+description: Bu arabirim, bekleyen bir kesme noktası veya kesme noktası bağlı olayı ile ilişkili sınır kesme noktaları numaralar.
 title: IEnumDebugBoundBreakpoints2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60a02bb50d51304cfef1be95ab375e7e0ef4c428e85820f78c2077e8752db508
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: efac05deb9d528b66f93d69cdd071113bb5d2b51
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389403"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118378"
 ---
 # <a name="ienumdebugboundbreakpoints2"></a>IEnumDebugBoundBreakpoints2
-Bu arabirim, bekleyen kesme noktası veya kesme noktası bağlantılı olayla ilişkili olan ilişkili kesme noktalarını numaralandırır.
+Bu arabirim, bekleyen bir kesme noktası veya kesme noktası bağlı olayı ile ilişkili sınır kesme noktaları numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,38 +30,38 @@ Bu arabirim, bekleyen kesme noktası veya kesme noktası bağlantılı olayla il
 IEnumDebugBoundBreakpoints2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), bu arabirimi kesme noktaları desteğinin bir parçası olarak uygular. Kesme noktaları destekleniyorsa bu arabirimin uygulanması gerekir.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), kesme noktası desteğinin bir parçası olarak bu arabirimi uygulamaya almaktadır. Kesme noktaları destekleniyorsa bu arabirimin uygulanması gerekir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Visual Studio çağrılar:
+ Visual Studio çağrıları:
 
-- Tetiklenen tüm kesme noktalarının listesini temsil eden bu arabirimi elde etmek için [reakal alındı](../../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md) .
+- Tetiklenen tüm kesme noktaları listesini temsil eden bu arabirimi elde etmek için [EnumBreakpoints.](../../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md)
 
-- Bu arabirimi, bağlanan tüm kesme noktalarının bir listesini temsil eden [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md) .
+- Bu arabirime bağlanılmış olan tüm kesme noktaları listesini temsil eden [enumBoundBreakpoints.](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)
 
-- Bu arabirimi, bekleyen kesme noktasına bağlanan tüm kesme noktalarının listesini temsil eden [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) .
+- Bekleyen kesme noktasıyla ilişkili tüm kesme noktaları listesini temsil eden bu arabirimi elde etmek için [EnumBoundBreakpoints.](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IEnumDebugBoundBreakpoints2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IEnumDebugBoundBreakpoints2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Sonraki](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-next.md)|Bir numaralandırma dizisinde belirtilen sayıda bağlantılı kesme noktası alır.|
-|[Atla](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda bağlantılı kesme noktası atlar.|
-|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-getcount.md)|Bir Numaralandırıcı içindeki bağlantılı kesme noktalarının sayısını alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-next.md)|Bir numaralama dizisinde belirtilen sayıda bağlı kesme noktası alma.|
+|[Atla](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-skip.md)|Bir numaralama dizisinde belirtilen sayıda sınır kesme noktası atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-getcount.md)|Bir numaralayıcıda bağlı kesme noktası sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio, ıde 'deki kesme noktalarının görüntülenmesini güncelleştirmek için bu arabirim tarafından temsil edilen bağlantılı kesme noktalarını kullanır.
+ Visual Studio, IDE'de kesme noktaları güncelleştirmeyi güncelleştirmek için bu arabirim tarafından temsil edilen bağlı kesme noktaları kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

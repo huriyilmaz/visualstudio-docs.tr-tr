@@ -1,6 +1,6 @@
 ---
-title: Outlook form bölgelerindeki özel eylemler
-description: Yanıtla ve Yanıtla gibi eylem görüntüleme düğmelerinin nasıl yapılacağını öğrenin, kullanıcıların Microsoft Office Outlook öğesine yanıt vermesini sağlar.
+title: Outlook form bölgelerinde özel eylemler
+description: yanıtla ve yanıtla gibi eylem görüntüleme düğmelerinin nasıl yapıldığını öğrenin, kullanıcıların bir Microsoft Office Outlook öğeye yanıt vermesini sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -13,24 +13,25 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 1f95c5bfcd0dda73b3cd3392c5a8b0bb7384bd9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75fcc83dc06a9503b5ab1571315dc95028734446
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947886"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130695"
 ---
-# <a name="custom-actions-in-outlook-form-regions"></a>Outlook form bölgelerindeki özel eylemler
-  Eylemler, kullanıcıların bir Microsoft Office Outlook öğesine yanıt vermesini sağlayan düğmeleri görüntüler. Örneğin, bir posta öğesine yanıt vermek için, kullanıcılar **Yanıtla**, **Tümünü Yanıtla** veya **İleri git** düğmelerine tıklayın. Bu eylemlerin her biri yeni bir posta öğesi oluşturur ve özgün öğeden alınan bilgileri kullanarak öğenin alanlarını doldurur.
+# <a name="custom-actions-in-outlook-form-regions"></a>Outlook form bölgelerinde özel eylemler
+  eylemler, kullanıcıların bir Microsoft Office Outlook öğeye yanıt vermesini sağlayan düğmeleri görüntüler. Örneğin, bir posta öğesine yanıt vermek için, kullanıcılar **Yanıtla**, **Tümünü Yanıtla** veya **İleri git** düğmelerine tıklayın. Bu eylemlerin her biri yeni bir posta öğesi oluşturur ve özgün öğeden alınan bilgileri kullanarak öğenin alanlarını doldurur.
 
- Herhangi bir tür Outlook öğesini açan özel bir eylem oluşturabilirsiniz. Örneğin, yeni bir randevu veya görev öğesi açan özel bir eylem ekleyebilirsiniz. Özel bir eylemin özelliklerini ayarlayın veya yeni öğenin alanlarını doldurmak için özel kod kullanın. Özel Eylemler, bir Outlook Inspector penceresinde açık olan bir öğenin **özel eylemler** açılan penceresinde görünür.
+ her türlü Outlook öğesi açan özel bir eylem oluşturabilirsiniz. Örneğin, yeni bir randevu veya görev öğesi açan özel bir eylem ekleyebilirsiniz. Özel bir eylemin özelliklerini ayarlayın veya yeni öğenin alanlarını doldurmak için özel kod kullanın. özel eylemler, bir Outlook denetçisi penceresinde açık olan bir öğenin **özel eylemler** açılan penceresinde görünür.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="add-custom-actions-to-a-form-region"></a>Form bölgesine özel eylemler ekleme
- Form bölgesine özel eylem eklemek için **özel eylemler** iletişim kutusunu kullanın. **Çözüm Gezgini** Içindeki form bölgesini seçip **Özellikler penceresinde** **bildirim** düğümünü genişleterek, **CustomActions** özelliğini seçerek ve ardından üç nokta düğmesine (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) tıklayarak **özel eylemler** iletişim kutusunu açabilirsiniz.
+ Form bölgesine özel eylem eklemek için **özel eylemler** iletişim kutusunu kullanın. **Çözüm Gezgini** içindeki Form bölgesini seçip **özellikler penceresinde** **bildirim** düğümünü genişleterek, **customactions** özelliğini seçerek ve ardından üç nokta düğmesine (![ASP.NET mobile designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) tıklayarak **özel eylemler** iletişim kutusunu açabilirsiniz.
 
  Bir *hedef form* belirtmek Için **özel eylemler** iletişim kutusunu kullanabilirsiniz. Hedef form, Kullanıcı özel eylemi çalıştırdığında görünen formdur.
 
@@ -55,5 +56,5 @@ ms.locfileid: "99947886"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md)
-- [İzlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md)
-- [Form bölgesini Outlook ileti sınıfıyla ilişkilendirme](../vsto/associating-a-form-region-with-an-outlook-message-class.md)
+- [izlenecek yol: Outlook form bölgesi tasarlama](../vsto/walkthrough-designing-an-outlook-form-region.md)
+- [form bölgesini Outlook ileti sınıfıyla ilişkilendirme](../vsto/associating-a-form-region-with-an-outlook-message-class.md)

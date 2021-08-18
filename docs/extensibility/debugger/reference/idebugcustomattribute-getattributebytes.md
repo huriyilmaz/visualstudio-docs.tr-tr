@@ -1,6 +1,6 @@
 ---
 description: Öznitelik bilgilerini bayt blobu olarak alır.
-title: 'IDebugCustomAttribute:: GetAttributeBytes | Microsoft Docs'
+title: IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: cf34583b-6530-4dcc-89f8-eb27e4e8d594
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 84d6e807e3be6d0fbdaa94834fbc8cad37f8e4d2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bbb962a31061c24fc9b51e56b0b5c63c25f2a27a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088087"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127317"
 ---
 # <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
 Öznitelik bilgilerini bayt blobu olarak alır.
@@ -47,15 +48,15 @@ int GetAttributeBytes(
 [in, out] Öznitelik baytları ile doldurulmuş bir dizi.
 
 `pdwLen`\
-[in, out] Dizide döndürülecek en fazla bayt sayısını belirtir `ppBlob` ve gerçekten diziye yazılan bayt sayısını döndürür.
+[in, out] Dizide döndüren en fazla bayt sayısını `ppBlob` belirtir ve aslında diziye yazılan bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `ppBlob`Kullanılabilir öznitelik baytları sayısını döndürmek için parametreyi null değere ayarlayın. Sonra bir dizi ayırın ve bu diziyi parametresi için geçirin `ppBlob` .
+ Kullanılabilir `ppBlob` öznitelik baytlarının sayısını döndüren parametreyi null değere ayarlayın. Ardından bir dizi ayırarak parametresi için bu diziyi `ppBlob` iletir.
 
- Öznitelik baytları özel özniteliğin ham verilerini temsil eder.
+ Öznitelik baytları, özel özniteliğin ham verilerini temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

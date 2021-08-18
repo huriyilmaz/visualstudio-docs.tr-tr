@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8760b07b84df3fd1ab763cd14a984a7b291b42cbdeefbbf3da70ecf2ff8998b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 315f3e70f0e848a43182eb88bf016b090c1b9650
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276665"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132801"
 ---
 # <a name="idebugprocesscreateevent2"></a>IDebugProcessCreateEvent2
 Bu arabirim, bir işlem başlatıldıkları zaman gönderilir.

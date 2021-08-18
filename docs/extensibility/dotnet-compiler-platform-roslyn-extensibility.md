@@ -1,6 +1,6 @@
 ---
-title: .NET Compiler Platform ( &quot; Roslyn &quot; ) Genişletilebilirlik | Microsoft Docs
-description: Araçların ve geliştiricilerin .NET Compiler Platform zengin bilgi derleyicileri ile paylaşmalarına olanak sağlayan uygulama hakkında bilgi edinebilirsiniz.
+title: .NET Compiler Platform ( &quot; roslyn &quot; ) genişletilebilirliği | Microsoft Docs
+description: araçlar ve geliştiricilerin zengin bilgi derleyicileri ' de paylaşmasına izin veren .NET Compiler Platform hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,17 +11,17 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b09aa03ae6af6789ddcc87dc60797af5eda3f19bcde6148dd7bfe1b568b7f0f2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d04383359133e64ec97fecc1ca0eb8082fcd42c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388935"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152490"
 ---
-# <a name="net-compiler-platform-quotroslynquot-extensibility"></a>.NET Compiler Platform ( &quot; Roslyn &quot; ) genişletilebilirliği
-.NET Compiler Platform("Roslyn") görevinin temel görevi, C# ve Visual Basic derleyicilerinin açılması ve araçların ve geliştiricilerin programlarla ilgili zengin bilgi derleyicilerinin sahip olduğu bilgileri paylaşmasına olanak vermektir. Kod analizi araçları kod kalitesini iyiler ve kod oluşturucular uygulamanın yapısına yardımcı olur. Araçlar daha akıllı hale geldi mi, yalnızca derleyicilerin sahip olduğu derin kod bilgisine erişmeleri gerekir. Roslyn derleyicileri, opak çevirmenler (içinde kaynak kodu ve nesne kodu dışarı) olmak yerine, araçlarınız ve uygulamalarınız için kodla ilgili görevler için kullanabileceğiniz API'ler sunar.
+# <a name="net-compiler-platform-quotroslynquot-extensibility"></a>.NET Compiler Platform ( &quot; roslyn &quot; ) genişletilebilirliği
+.NET Compiler Platform ana görevi ("roslyn"), C# ve Visual Basic derleyicilerini açıyor ve araçların ve geliştiricilerin zengin bilgi derleyicileri, programlarla paylaşmasına izin verir. Kod analizi araçları kod kalitesini geliştirir ve kod oluşturucuları uygulama oluşturma konusunda yardımcı olur. Araçların daha akıllı bir şekilde yararlanabileceği için, yalnızca derleyicilerin sahip olduğu derin kod bilgisine daha fazla ve daha fazlasına erişmesi gerekir. Sabit bir çevirmenin (ve nesne kodu içindeki kaynak kodu) değil, Roslyn derleyicileri, araçlarınızdaki ve uygulamalarınızda kod ile ilgili görevler için kullanabileceğiniz API 'Ler sunar.
 
- En iyi bölüm, Roslyn derleyicilerinin, API'lerinin, örneklerinin ve izlenecek yollarının yanı sıra bu API'ler üzerinde derlenmiş olan gerçek araçların [github.com/dotnet/roslyn.](https://github.com/dotnet/Roslyn) Daha fazla bilgi edinmek ve Roslyn ile çalışmaya başlamayı öğrenmek için lütfen OSS sitesine gidin. Son kullanıcı olarak kullanabileceğiniz en son C# ve Visual Basic özelliklerine ek olarak Roslyn API'lerini kullanan bir araç oluşturucu olarak çalışmaya başlama bağlantılarını da bulabilirsiniz.
+ En iyi bölüm, Roslyn derleyicilerinin, API 'Lerinin, örneklerin ve izlenecek yolların yanı sıra bu API 'lerin üzerine inşa edilen gerçek araçların, [GitHub.com/DotNet/Roslyn](https://github.com/dotnet/Roslyn)adresindeki tamamen açık kaynaktır. Daha fazla bilgi edinmek ve Roslyn 'yi kullanmaya başlamak için lütfen OSS sitesine gidin. son kullanıcı olarak kullanabileceğiniz en son C# ve Visual Basic özelliklerinin yanı sıra roslyn apı 'lerinden yararlanan bir araç oluşturucusu olarak kullanmaya başlamak için bağlantılar bulacaksınız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [roslyn Kullanmaya başlayın ile birlikte yükleme](../extensibility/getting-started-with-roslyn-analyzers.md)
+- [Roslyn Çözümleyicileri ile çalışmaya başlama](../extensibility/getting-started-with-roslyn-analyzers.md)

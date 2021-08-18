@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl SharePoint: Özel SharePoint Düğümü Sunucu Gezgini | Microsoft Docs'
+title: Nasıl Sunucu Gezgini |'a SharePoint Düğüm Ekleme Microsoft Docs
 titleSuffix: ''
 description: Uygulamanın içinde SharePoint bir Sunucu Gezgini düğüm Visual Studio. Varsayılan olarak SharePoint ek bileşenler Sunucu Gezgini görüntüler.
 ms.custom: SEO-VS-2020
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 7c1d9ad5133cc7314a834b665190460487e7bc5a0654fe939801c28ecca7370f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 73dac3ba52b31efd55a1c6621b0e32d098bdb997
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385334"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131163"
 ---
-# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Nasıl Sunucu Gezgini'a özel SharePoint düğümü ekleme
-  Sunucu Gezgini'daki SharePoint düğümü **altına** özel **düğümler Sunucu Gezgini.** Bu, varsayılan olarak bir SharePoint ek bileşen görüntülemek **Sunucu Gezgini** yararlıdır. Daha fazla bilgi için [bkz. SharePoint'de bağlantı düğümünü Sunucu Gezgini.](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Nasıl Sunucu Gezgini'a SharePoint özel bir Sunucu Gezgini
+  Sunucu Gezgini'daki SharePoint düğümü **altına** özel **düğümler Sunucu Gezgini.** Bu özellik, varsayılan olarak SharePoint olarak Sunucu Gezgini **görüntülemek** istediğiniz zaman kullanışlıdır. Daha fazla bilgi için [bkz. SharePoint'de bağlantı düğümünü Sunucu Gezgini.](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 
  Özel düğüm eklemek için önce yeni düğümü tanımlayan bir sınıf oluşturun. Ardından, düğümü mevcut bir düğümün alt düğümü olarak ekleyen bir uzantı oluşturun.
 
@@ -70,19 +70,19 @@ ms.locfileid: "121385334"
 
     - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: Site bağlantı düğümlerini (site URL'lerini görüntülemekte olan düğümler), site düğümlerini veya içindeki diğer tüm üst düğümleri belirtmek için **Sunucu Gezgini.**
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: Bir SharePoint sitesinde tek bir bileşeni temsil eden yerleşik düğümlerden birini (liste, alan veya içerik türünü temsil eden bir düğüm gibi) belirtmek için bu değerleri kullanın.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: Liste, alan veya içerik türünü temsil eden bir düğüm gibi bir SharePoint sitedeki tek bir bileşeni temsil eden yerleşik düğümlerden birini belirtmek için bu değerleri kullanın.
 
 4. yöntemi uygulamanıza <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize%2A> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested> parametresinin olayı <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType> işle.
 
 5. Olay işleyicisinde, yeni düğümü olay bağımsız değişkenleri parametresi tarafından ortaya çıkaran nesnenin alt <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested> <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.Node%2A> düğüm koleksiyonuna ekleyin.
 
-     Aşağıdaki kod örneği, yeni düğümün bir alt düğümü olarak SharePoint site düğümünün **bir** alt düğümü olarak Sunucu Gezgini.
+     Aşağıdaki kod örneğinde, yeni düğümün SharePoint site düğümünün alt düğümü olarak nasıl **Sunucu Gezgini.**
 
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet7":::
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet7":::
 
 ## <a name="complete-example"></a>Tam örnek
- Aşağıdaki kod örneği, basit bir düğüm tanımlamak ve bu düğümü uygulama içinde bir site SharePoint alt düğümü olarak eklemek için **tam Sunucu Gezgini.**
+ Aşağıdaki kod örneği, basit bir düğüm tanımlamak ve bunu bir site düğümünün alt düğümü olarak eklemek için SharePoint kodunu **Sunucu Gezgini.**
 
  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet5":::
  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet5":::
@@ -97,9 +97,9 @@ ms.locfileid: "121385334"
 - System.Drawing
 
 ## <a name="deploy-the-extension"></a>Uzantıyı dağıtma
- Uzantıyı **Sunucu Gezgini** için derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] diğer dosyaları oluşturun. Daha fazla bilgi için [bkz. Visual Studio'de SharePoint Araçları için uzantıları dağıtma.](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+ Uygulama **uzantısını Sunucu Gezgini,** derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] diğer dosyaları oluşturun. Daha fazla bilgi için [bkz. Visual Studio'de SharePoint Araçları için uzantıları dağıtma.](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kümedeki SharePoint düğümünü Sunucu Gezgini](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [Nasıl SharePoint: Sunucu Gezgini](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)
-- [Adım adım kılavuz: Sunucu Gezgini bölümlerini görüntülemek için uygulamanın süresini genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [Adım adım kılavuz: Web Sunucu Gezgini görüntülemek için uygulamanın süresini genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

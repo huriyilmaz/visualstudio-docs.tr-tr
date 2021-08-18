@@ -11,14 +11,15 @@ ms.assetid: 83bf6317-ff39-4c5c-8987-cba34e7a6983
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fdac59ba0998528cde8412a9fff9062edb56044
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a2b7e18417cead3100a879b2a9f2dcd19ed18f22
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148782"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129498"
 ---
 # <a name="idiaenumsourcefilesnext"></a>IDiaEnumSourceFiles::Next
 Sabit Listesi dizisinde belirtilen sayıda kaynak dosyası alır.

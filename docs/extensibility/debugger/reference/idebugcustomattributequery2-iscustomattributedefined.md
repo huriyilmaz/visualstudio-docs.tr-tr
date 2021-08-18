@@ -1,6 +1,6 @@
 ---
-description: Özel bir özniteliğin ada göre varolup olmadığını belirler.
-title: 'IDebugCustomAttributeQuery2:: IsCustomAttributeDefined | Microsoft Docs'
+description: Özel bir özniteliğin adıyla var olup olmadığını belirler.
+title: IDebugCustomAttributeQuery2::IsCustomAttributeDefined | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 5c07cc52-6d2d-42df-9d76-9f1f769641db
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 646fe46f9d83a320423136b8601ee56b3f4ac583
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d4e3fe35577c37d70413b0b4ad8a3bd17d76451c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077596"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111417"
 ---
 # <a name="idebugcustomattributequery2iscustomattributedefined"></a>IDebugCustomAttributeQuery2::IsCustomAttributeDefined
-Özel bir özniteliğin ada göre varolup olmadığını belirler.
+Özel bir özniteliğin adıyla var olup olmadığını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>Parametreler
 `pszCustomAttributeName`\
-'ndaki Bulunacak özel özniteliğin adını içeren bir dize.
+[in] Buluna özel özniteliğin adını içeren bir dize.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Özel öznitelik bu alanda tanımlanmışsa S_OK döndürür, aksi takdirde S_FALSE döndürür.
+ Özel S_OK bu alanda tanımlanmışsa, aksi takdirde bu değeri S_FALSE.
 
 ## <a name="remarks"></a>Açıklamalar
- Özel öznitelikle ilişkili öznitelik baytlarını almak için [GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md) metodunu çağırın.
+ Özel öznitelikle ilişkili öznitelik baytlarını almak için [GetCustomAttributeByName yöntemini](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md) arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

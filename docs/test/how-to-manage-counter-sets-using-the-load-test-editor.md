@@ -15,12 +15,13 @@ ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 684715ed8ac29a3c85d0ea46799a2e14fb9722bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: fd18acc2f5ca22cfa70c9a28042f460cb0e7f8bc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961449"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148551"
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>Nasıl yapılır: Yük Testi Düzenleyicisi kullanarak sayaç kümelerini yönetme
 
@@ -52,13 +53,13 @@ Sayaç kümelerini yönetmek, performans verilerini toplamak istediğiniz bilgis
     > [!NOTE]
     > Bu yalnızca yük testinizde birden fazla çalışma ayarınız varsa geçerlidir.
 
-4. Seçim İzlemek üzere yeni bir bilgisayar eklemek için **Bilgisayar Ekle** ' yi seçin. Sizden bir ad girmeniz istenir. Bilgisayarın adını yazın ve yeni girdinin altında düğümleri görürsünüz. Örneğin, **ASP.net**, **IIS**, **SQL** ve diğerleri. Seçmek istediğiniz düğümlerin önündeki onay kutularını seçin. Yeni sayaçlar **Önizleme seçimleri** bölmesinde görünür.
+4. Seçim İzlemek üzere yeni bir bilgisayar eklemek için **Bilgisayar Ekle** ' yi seçin. Sizden bir ad girmeniz istenir. Bilgisayarın adını yazın ve yeni girdinin altında düğümleri görürsünüz. örneğin **ASP.NET**, **ııs**, **SQL** ve diğerleri. Seçmek istediğiniz düğümlerin önündeki onay kutularını seçin. Yeni sayaçlar **Önizleme seçimleri** bölmesinde görünür.
 
 5. Seçim **Bilgisayar etiketleri** metin kutusuna bilgisayarla ilişkilendirilecek bir etiket yazın. Örneğin, "TestMachine12 in lab3".
 
      Bilgisayar etiketleri, kullanımı kolay bir ada sahip bir bilgisayarı tanımlamanızı sağlar.
 
-     Etiketler, Yük Testi Düzenleyicisi ağaçtaki **sayaç kümesi eşlemeleri** düğümünde görüntülenir. Daha önemli olan Etiketler, paydaşların bilgisayarın yük testinde hangi rolün olduğunu belirlemesine yardımcı olan Excel raporlarında görüntülenir. Örneğin, "Web 'de Sunucu1 lab2" veya "Phoenix ofisinde SQL Sunucu2". Daha fazla bilgi için bkz. [Test karşılaştırmaları veya eğilim analizi Için rapor yükleme testleri sonuçları](../test/compare-load-test-results.md).
+     Etiketler, Yük Testi Düzenleyicisi ağaçtaki **sayaç kümesi eşlemeleri** düğümünde görüntülenir. daha önemli olan etiketler, paydaşların bilgisayarın yük testinde hangi rolü olduğunu belirlemesine yardımcı olan Excel raporlarında görüntülenir. örneğin, "Web 'de sunucu1 lab2" veya "Phoenix ofisinde SQL sunucu2". Daha fazla bilgi için bkz. [Test karşılaştırmaları veya eğilim analizi Için rapor yükleme testleri sonuçları](../test/compare-load-test-results.md).
 
 6. **Tamam ' ı** seçin.
 

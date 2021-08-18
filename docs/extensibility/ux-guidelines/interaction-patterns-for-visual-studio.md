@@ -1,6 +1,6 @@
 ---
-title: Visual Studio | için Etkileşim Desenleri Microsoft Docs
-description: Daha fazla bilgi edinmek için yeni özellikler oluşturma konusunda kullanabileceğiniz ortak etkileşim Visual Studio.
+title: Visual Studio için etkileşim desenleri | Microsoft Docs
+description: Visual Studio için yeni özellikler oluştururken kullanabileceğiniz ortak etkileşim desenlerinin Kitaplığı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 05/13/2020
 ms.topic: reference
@@ -11,31 +11,31 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e47879db77ebe5888291e9c5b3b622ab66f85461d1993df670c5c2b22c567d3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5bc1d93d4b99b99a2a833d3301f32a5005d6dda3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375136"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152048"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio İçin Etkileşim Desenleri
 ## <a name="overview"></a>Genel Bakış
- Genel olarak tasarım deseni, benzer kısıtlama kümeleriyle ilgili sorunları çözmek için belirli durumlarda uygulanan bir tasarımın temkisidir. Özellik ve sistem tasarımcıları bu tasarım desenlerini başlangıç noktaları olarak kullanır ve bu da daha sonra kendi durumlarına uyarlanabilir.
+ Tasarım alanı, genel olarak, benzer kısıtlamalar kümeleriyle ilgili sorunları gidermek için belirli durumlarda uygulanabilen bir tasarımın çekirdeğidir. Özellik ve sistem tasarımcıları bu tasarım düzenlerini başlangıç noktaları olarak kullanır ve bu sayede belirli durumlarına uyarlayabilirler.
 
- Visual Studio, yeni özellikler oluşturmada dikkate alınacak ortak etkileşim desenlerinin bir kitaplığına sahiptir. Tasarım desenlerimiz için iki temel bağlam vardır: Visual Studio Client (devenv) ve GitHub Codespaces (eski adı Visual Studio Online). Bazı tasarım sorunlarında her durumda iyi çalışan bir desen vardır. Ancak çoğu durumda, bir tarayıcıda sunulan ve istemci uygulamasında barındırılan kullanıcı arabirimi için çözüm farklı olabilir.
+ Visual Studio, yeni özellikler oluşturulurken göz önünde bulundurmanız gereken yaygın bir etkileşim desenleri kitaplığı içerir. tasarım modellerimiz için iki temel bağlam vardır: Visual Studio Client (devenv) ve GitHub codespaces (eski Visual Studio adıyla çevrimiçi). Bazı tasarım sorunları için tüm durumlarda iyi bir şekilde çalışacak bir ubititous deseninin olması gerekir. Ancak çoğu durumda çözüm, bir tarayıcı içinde sunulan ve bir istemci uygulamasında barındırılan Kullanıcı arabirimi için farklı olabilir.
 
-### <a name="visual-studio-client-pattern-types"></a>Visual Studio İstemci deseni türleri
+### <a name="visual-studio-client-pattern-types"></a>Visual Studio İstemci model türleri
 
-|Desen türü|Açıklama|Örnekler|
+|Model türü|Açıklama|Örnekler|
 |------------------|-----------------|--------------|
-|**Uygulama düzeyinde desenler**|Uygulama için ortak üst düzey desenler, uygulama bağlamını belirleme veya görüntüleme ve bu bağlamların içinde bileşik ve denetim desenleri içeren|- Araç pencereleri<br />- Belge pencereleri|
-|**Bileşik desenler**|Uygulama desenlerini kapsayan yaygın desenler veya ayrı bir yapılandırmada çeşitli denetimlerden yapılmış tanınan bir desen|- Değiştirmeyi görüntüleme<br />- Oluşturucuları listele<br />- Verileri görüntüleme<br />- Bildirimler<br />- Doğrulama<br />- Seçim modelleri|
-|**Denetim desenleri**|Alt düzey denetimlerin nasıl davranması gerektiğine yönelik özeller|- Ağaç görünümleri<br />- Kılavuz denetimi içinde düzenleme|
+|**Uygulama düzeyi desenleri**|Uygulamada ortak olan üst düzey desenler, uygulama bağlamını belirleme veya görüntüleme, ve bunlar içinde bileşik ve Denetim desenleri içeren|-Araç pencereleri<br />-Belge pencereleri|
+|**Bileşik desenler**|Uygulama desenleri arasında yayılabilen ortak desenler veya ayrı bir yapılandırmadaki çeşitli denetimlerden oluşan tanınan bir desen|-Geçişi görüntüle<br />-Liste oluşturucular<br />-Verileri görüntüleme<br />-Bildirimler<br />-Doğrulama<br />-Seçim modelleri|
+|**Denetim desenleri**|Düşük düzey denetimlerin davranış tahmini hakkında bilgiler|-Ağaç görünümleri<br />-Kılavuz denetimi içinde düzenleniyor|
 
 ## <a name="application-patterns"></a>Uygulama desenleri
- Üst düzeyde, Visual Studio arabirimi tek bir IDE içinde birden çok pencere, iletişim kutusu, komut ve araç çubuğundan oluşur. Bu Visual Studio, bağlam ve sürücü menülerini belirler. IDE'nin kullanıcı arabiriminde önemli tümleştirme noktaları belge pencereleri, araç pencereleri, projeler, komut yapısı, metin düzenleyicisi, araç kutusu, Özellikler penceresi ve Araçlar > Seçenekleridir.
+ yüksek düzeyde Visual Studio arabirimi, tek bir ıde içindeki birden çok pencere, iletişim kutusu, komut ve araç çubuğu içerir. Visual Studio hiyerarşisi bağlam ve sürücü menülerini belirler. IDE Kullanıcı arabirimindeki önemli tümleştirme noktaları belge pencereleri, araç pencereleri, projeler, komut yapısı, metin düzenleyici, araç kutusu, Özellikler penceresi ve araçlar > seçenekleridir.
 
- IDE'nin kullanıcı arabiriminde anahtar tümleştirme noktalarının her biri için temel kullanım desenleri vardır:
+ IDE 'nin Kullanıcı arabirimindeki her anahtar tümleştirme noktası için temel kullanım düzenleri vardır:
 
 - [Visual Studio İçin Menüler ve Komutlar](../../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)
 
@@ -45,16 +45,16 @@ ms.locfileid: "121375136"
 
   - [Araç pencereleri](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_ToolWindows)
 
-  - [Belge düzenleyicisi kuralları](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_DocumentEditorConventions)
+  - [Belge Düzenleyicisi kuralları](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_DocumentEditorConventions)
 
   - [İletişim Kutuları](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Dialogs)
 
   - [Projeler](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Projects)
 
 ## <a name="common-control-patterns"></a>Ortak denetim desenleri
- Denetim düzenleri temelde tek tek denetimlerin nasıl davranması beklendiğiyle ilgilidir. Bu, tutarlılığı en kritik olan alandır.
+ Denetim desenleri, genellikle bireysel denetimlerin nasıl davranması beklendiğine ilişkin olarak yapılır. Bu, tutarlılığın en kritik olduğu bir alandır.
 
- En yaygın denetimler Visual Studio Desktop uygulaması yönergelerine Windows gerekir. Yönergelerimiz yalnızca ortak kuralları Visual Studio'a özgü etkileşimlerle artırmamız gereken alanları veya gelişmiş kullanıcılarımızın ihtiyaçlarını karşılamak üzere Visual Studio uyarlamak için yönergeleri tamamen yenilelarımızın yer alan alanlarını içerir.
+ Visual Studio en yaygın denetimleri masaüstü Windows yönergelerine uymalıdır. kılavuzlarımız yalnızca Visual Studio özgü etkileşimler ile ortak kuralları geliştirmemiz gereken ve yalnızca Visual Studio gelişmiş kullanıcılarımızın ihtiyaçlarını karşılayacak şekilde kuralları tamamen yerine getirdiğimiz yerlerden oluşan bölgeleri içerir.
 
 - [Visual Studio İçin Yaygın Denetim Desenleri](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md)
 
@@ -65,16 +65,16 @@ ms.locfileid: "121375136"
   - [Düğmeler ve köprüler](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_ButtonsAndHyperlinks)
 
 ## <a name="composite-patterns"></a>Bileşik desenler
- Kullanıcıların görevleri gerçekleştirmeyi beklemesi için çeşitli yollar vardır. Mümkün olan her yerde özellikler hem etkileşim hem de görsel tasarım için bu desenleri kullanmak üzere tasarlanmalı.
+ Kullanıcıların görevleri yerine getirmek için beklediği çeşitli yollar vardır. Mümkün olan yerlerde, Özellikler hem etkileşim hem de görsel tasarım için bu desenleri kullanacak şekilde tasarlanmalıdır.
 
- Verilerde birçok bileşik desen Visual Studio, ancak tutarlılık açısından en önemlilerinden bazıları:
+ Visual Studio içinde çok sayıda bileşik desen olsa da, tutarlılığın en önemlileri şunlardır:
 
 - [Visual Studio İçin Bileşik Desenler](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md)
 
-  - [Nesne kullanıcı arabirimi ve göz atma](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_OnObjectUI)
+  - [Nesne üzerinde kullanıcı arabirimi ve göz atma](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_OnObjectUI)
 
   - [Seçim modelleri](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_SelectionModels)
 
-  - [Kalıcılık ve ayarları kaydetme](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_PersistenceAndSavingSettings)
+  - [Kalıcılık ve kaydetme ayarları](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_PersistenceAndSavingSettings)
 
   - [Dokunma girişi](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)

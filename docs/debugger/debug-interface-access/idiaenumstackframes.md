@@ -1,5 +1,5 @@
 ---
-description: Kullanılabilir çeşitli yığın çerçevelerini numaralandırır.
+description: Kullanılabilir çeşitli yığın çerçevelerini numaralar.
 title: IDiaEnumStackFrames | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,30 +14,30 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e17f49808174b0b01b233dddfb54e079d6f0c257eefdc9bd14a2a402b4279424
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 53a9f0ff20ae1ac514d284871bf9ea6cc0e3417e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121281511"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129402"
 ---
 # <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
-Kullanılabilir çeşitli yığın çerçevelerini numaralandırır.
+Kullanılabilir çeşitli yığın çerçevelerini numaralar.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumStackFrames::Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)|Sabit Listesi dizisinden belirtilen sayıda yığın çerçevesi öğesi alır.|
-|[IDiaEnumStackFrames::Reset](../../debugger/debug-interface-access/idiaenumstackframes-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
+|[IDiaEnumStackFrames::Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)|Numaralama dizisinde belirtilen sayıda yığın çerçevesi öğelerini alan.|
+|[IDiaEnumStackFrames::Reset](../../debugger/debug-interface-access/idiaenumstackframes-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-[Idiastackdenetçisi:: getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) veya [ıdiastackdenetçisi:: getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) metotlarını çağırarak bu arabirimi elde edin.
+[IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) veya [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) yöntemlerini çağırarak bu arabirimi alın.
 
 ## <a name="example"></a>Örnek
-Bu örnekte, arabirimin nasıl edinileceği ve kullanılacağı gösterilmektedir `IDiaEnumStackFrames` . İşlevin uygulanması için [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) arabirimine bakın `PrintStackFrame` .
+Bu örnekte, arabirimin nasıl elde ve nasıl kullanılı olduğu `IDiaEnumStackFrames` gösterir. İşlevin [uygulanması için bkz. IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) `PrintStackFrame` arabirimi.
 
 ```C++
 void DumpStackFrames(IDiaStackWalker*     pStackWalker,
@@ -65,9 +65,9 @@ void DumpStackFrames(IDiaStackWalker*     pStackWalker,
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

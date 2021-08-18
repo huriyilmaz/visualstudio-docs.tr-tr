@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ac56fece4197aee23b4e7ac03f14df4b9da634f8ce82609fa71eae5a4f40be6b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c6d3c98f2b9675681aacbd84d9abd8f919eb69ee
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394192"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147940"
 ---
 # <a name="how-to-target-the-office-multilingual-user-interface"></a>Nasıl kullanılır: Çok Office kullanıcı arabirimini hedefleme
   Çok Dilde Kullanıcı Arabirimi (MUI), son kullanıcıya kullanıcı arabiriminin (UI) dilini değiştirme olanağı veren bir Microsoft Office özelliğidir. Örneğin, İngilizce kullanıcı arabirimiyle çalışan bir son kullanıcı, kullanıcı arabiriminin dilini İspanyolca olarak değiştirebilir.

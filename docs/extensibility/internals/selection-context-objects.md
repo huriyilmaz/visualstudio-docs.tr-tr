@@ -14,17 +14,17 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5eb966ef49d4de7533b9022c37113b05a46fa42b7e985a36086215a445e7b406
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6e6df11b81a48a95d9c401ff801be548923c6f52
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121238430"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132281"
 ---
 # <a name="selection-context-objects"></a>Seçim Bağlamı Nesneleri
 Tümleşik geliştirme ortamı (IDE), IDE'de görüntülenecekleri belirlemek [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] için genel seçim bağlamı nesnesini kullanır. IDE'de her pencere, genel seçim bağlamına kendi seçim bağlamı nesnesine sahip olabilir. IDE, genel seçim bağlamını bir pencere odağına sahip olduğunda bir pencerede yer alan değerlerle günceller. Daha fazla bilgi için [bkz. Kullanıcıya Geri Bildirim.](../../extensibility/internals/feedback-to-the-user.md)
 
- IDE'de her pencere çerçevesi veya sitenin adlı bir hizmeti <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> vardır. Pencere çerçevesinde siteli VSPackage tarafından oluşturulan nesne arabirimine bir işaretçi `QueryService` almak için yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> çağıracak.
+ IDE'de her pencere çerçevesi veya sitenin adlı bir hizmeti <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> vardır. Pencere çerçevesinde bulunan VSPackage'nız tarafından oluşturulan nesnenin arabirimine bir işaretçi `QueryService` almak için yöntemini çağırmış olması <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> gerekir.
 
  Çerçeve pencereleri, seçim bağlamı bilgilerini bölümlerinin, başlatıldıklarında genel seçim bağlamına yayılmasını sağlar. Bu özellik, boş bir seçimle başlaması gerektirilen araç pencereleri için kullanışlıdır.
 
@@ -40,7 +40,7 @@ Tümleşik geliştirme ortamı (IDE), IDE'de görüntülenecekleri belirlemek [!
 
 2. Bildirim olayları, istenen herhangi bir VSPackage'a yayın.
 
-3. VSPackage hiyerarşiyi güncelleştirme, bir aracı yeniden etkinleştirme veya diğer benzer görevleri gerçekleştirme gibi etkinlikleri gerçekleştirerek aldığı olaylara göre hareket eder.
+3. VSPackage, hiyerarşiyi güncelleştirme, bir aracı yeniden etkinleştirme veya diğer benzer görevleri gerçekleştirme gibi etkinlikleri gerçekleştirerek aldığı olaylara göre hareket eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>

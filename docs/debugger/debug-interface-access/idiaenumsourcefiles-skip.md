@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: eeb16e37dc7c1cebb42b30493e38ea9bcae1a525d60386f82366512d7fef6ef8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 884f47cfaaf5db679b1d49ce925fe5267c8f1513
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392451"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129458"
 ---
 # <a name="idiaenumsourcefilesskip"></a>IDiaEnumSourceFiles::Skip
 Sabit Listesi dizisinde belirtilen sayıda kaynak dosyasını atlar.

@@ -11,17 +11,18 @@ ms.assetid: 94bfce74-aa3d-45f0-8e04-5715faf85217
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5bcd11f3058de191a3b0a77f0316afb6140769fc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3569887190c36c2dd4d614aa8949914f6ae275d2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077648"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111508"
 ---
 # <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
 Bu alana eklenen tüm özel öznitelikler için bir Numaralandırıcı alır.

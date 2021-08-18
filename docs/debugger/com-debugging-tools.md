@@ -21,14 +21,15 @@ ms.assetid: 4296ad30-6952-46cb-b002-6b34eee1993a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f8ccdd59d523c771671abfd8511ecc6bcd34732b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d4f35cc78c94db0925d3682a06cc27d30770f68a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857759"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129720"
 ---
 # <a name="com-debugging-tools"></a>COM Hata Ayıklama Araçları
 
@@ -36,15 +37,15 @@ Bu konuda, COM programlarını test etmenize ve incelemenize yardımcı olabilec
 
 OLE/COM Nesne Görüntüleyicisi
 
-OLEVIEW, bilgisayarınızda yüklü olan ActiveX ve OLE nesnelerini ve destekledikleri arabirimleri görüntüler. Ayrıca, kayıt defterini düzenlemenizi ve tür kitaplıklarına bakeklemenizi sağlar.
+oleview, bilgisayarınızda yüklü olan ActiveX ve OLE nesnelerini ve destekledikleri arabirimleri görüntüler. Ayrıca, kayıt defterini düzenlemenizi ve tür kitaplıklarına bakeklemenizi sağlar.
 
 Microsoft Foundation Class örnekleri
 
-MFC ActiveX örnekleri OCLIENT ve SUPERPANEL, uygulamalarınızı karşı test etmek için de kullanılabilir. Bu örnekler için tam kaynak kodu dahildir.
+MFC ActiveX örnekleri oclient ve superpanel, uygulamalarınızı test etmek için de kullanılabilir. Bu örnekler için tam kaynak kodu dahildir.
 
 ### <a name="see-also"></a>Ayrıca bkz.
 
-- [COM ve ActiveX hata ayıklaması](../debugger/com-and-activex-debugging.md)
+- [COM ve ActiveX hata ayıklama](../debugger/com-and-activex-debugging.md)
 - [COM hata ayıklama araçları](../debugger/com-debugging-tools.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

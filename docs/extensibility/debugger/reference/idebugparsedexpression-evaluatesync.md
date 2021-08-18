@@ -11,17 +11,18 @@ ms.assetid: 0ea04cfa-de87-4b6c-897e-4572c1a28942
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 75f86506ea3cd29d09bf8c78a07eaabcf7a9a6f0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 192ad990d0f5ad3a12fddc0cc9a56a5c92700d5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084642"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153283"
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
 Bu yöntem ayrıştırılmış ifadeyi değerlendirir ve isteğe bağlı olarak sonucu başka bir veri türüne yayınlar.

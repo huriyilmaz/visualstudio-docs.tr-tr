@@ -11,17 +11,18 @@ ms.assetid: 02c2fa04-1424-4bca-9936-feaecd2afab6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5c4017e5a14619c2ab5e3f98de65d7d2295e8586
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 04572c9bedaaa24cbd8d6de95908a62d60742d24
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053483"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132515"
 ---
 # <a name="idebugstackframe2getdebugproperty"></a>IDebugStackFrame2::GetDebugProperty
 Yığın çerçevesinin özelliklerinin açıklamasını alır.

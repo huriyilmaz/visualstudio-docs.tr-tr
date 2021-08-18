@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 986f846278b92eefcc5fa72efb952a42cfd2d9fb723771f31ba5a67877a2dc7f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 66ad7581bb65e6601f831a55a8aeee77a0f42aa4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455010"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129170"
 ---
 # <a name="idiainjectedsourceget_filename"></a>IDiaInjectedSource::get_filename
 Kaynağın dosya adını alan.

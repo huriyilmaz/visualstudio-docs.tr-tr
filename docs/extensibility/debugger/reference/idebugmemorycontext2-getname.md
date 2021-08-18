@@ -18,12 +18,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6c2df9f2620f5742b6f84313a0961abf5d6797810ca5b58fa5a50d713224e6dd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 69596b635be5a878448316b61ed846ad8e116420
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417112"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127057"
 ---
 # <a name="idebugmemorycontext2getname"></a>IDebugMemoryContext2::GetName
 Bu bağlam için kullanıcı tarafından görüntülenebilir adı alın.

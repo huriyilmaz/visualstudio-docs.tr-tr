@@ -1,39 +1,40 @@
 ---
-title: API 'Leri Profil Oluşturma Araçları | Microsoft Docs
-description: Profil oluşturma çalıştırmasında veri toplamayı denetlemek için Visual Studio Profil Oluşturma Araçları API 'lerinin yönetilen veya yerel yöntemlerini nasıl ekleyebileceğiniz hakkında bilgi edinin.
+title: Profil Oluşturma Araçları API'leri | Microsoft Docs
+description: Profil oluşturma çalıştırması içinde veri toplamayı kontrol etmek için Visual Studio Profil Oluşturma Araçları api'lerinin yönetilen veya yerel yöntemlerini nasıl ekleyebilirsiniz?
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bd9ca972-e5bf-45a6-9a5d-ac30a4d9ee02
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 59d85b8d299c8417fecbcc7a24c3be25c3eaadd8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7ea450a9fa89cfb2de31a306faebe15bd4671887
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893340"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131254"
 ---
 # <a name="profiling-tools-apis"></a>Profil Araçları API'leri
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Bir profil oluşturma çalıştırmasında veri toplamayı denetlemek için profil oluşturma araçları API 'lerinin yönetilen veya yerel yöntemlerini ekleyebilirsiniz. Bu bölümde API 'lerin yöntemleri açıklanmakta ve bunların nasıl kullanılacağı açıklanmaktadır.
+Profil oluşturma çalıştırması içinde veri toplamayı kontrol etmek için Profil Oluşturma Araçları api'lerinin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yönetilen veya yerel yöntemlerini ekebilirsiniz. Bu bölümde API'lerin yöntemleri ve bu yöntemlerin nasıl kullanılaları açık bir şekilde anlatacağız.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+[Visual Studio Profil Oluşturma API'si Başvurusu (Yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
 
-C++ Profil Oluşturma Araçları yöntemlerini açıklar.
+C++ komut Profil Oluşturma Araçları açıklar.
 
 [Profil Oluşturucu](/previous-versions/ms242704(v=vs.140))
 
-.NET Profil Oluşturma Araçları yöntemlerini açıklar.
+.NET Profil Oluşturma Araçları açıklar.
 
-[İzlenecek yol: profil oluşturucu API 'Leri kullanma](../profiling/walkthrough-using-profiler-apis.md)
+[adım adım kılavuz: Profil Oluşturma API'lerini kullanma](../profiling/walkthrough-using-profiler-apis.md)
 
-.NET Profil Oluşturma Araçları yöntemlerini bu bütün örnekte kullanmayı öğrenin.
+Bu eksiksiz örnekte .NET Profil Oluşturma Araçları yöntemlerini kullanmayı öğrenin.
 
 ## <a name="related-sections"></a>İlgili bölümler
 

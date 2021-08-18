@@ -1,6 +1,6 @@
 ---
-title: CvInitProvider Işlevi | Microsoft Docs
-description: CvInitProvider (C Kitaplığı) Eşzamanlılık Görselleştiricisi SDK 'Sı işlevine yönelik başvuru bilgilerine bakın.
+title: CvInitProvider İşlev | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK'sı işlevi CvInitProvider (C kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,17 +12,18 @@ ms.assetid: ba1863ad-e35f-4d34-a2f2-5e68957d1915
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f23d3ceadf2ee8d1a0c6b53b395c379caf505179
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c0432a57deee0b88cd0b30d16cc741b391250b55
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941001"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131787"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider işlevi
-İşaretleyici sağlayıcısını başlatır. Diğer Eşzamanlılık Görselleştiricisi SDK işlevlerinden önce çağrılmalıdır.
+İşaretleyici sağlayıcısını başlatıyor. Diğer Eşzamanlılık GörselleştiriciSI SDK'sı işlevleri öncesinde çağrılları gerekir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,15 +35,15 @@ HRESULT CvInitProvider(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pGuid` Sağlayıcı GUID 'i. NULL olamaz.
+ `pGuid` Sağlayıcı guid'si. NULL olamaz.
 
- `ppProvider` Sağlayıcı bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.
+ `ppProvider` Sağlayıcı bağlamını depolar bir çıkış değişkeninin adresi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- Sağlayıcı başarıyla başlatıldığında S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
+ S_OK başarıyla başlatılamadı mı yoksa hata olması durumunda hata kodu mu? Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvişaretleyiciler. h*
+ **Üst bilgi:** *cvmarkers.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

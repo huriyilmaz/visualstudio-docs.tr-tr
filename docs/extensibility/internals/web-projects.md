@@ -1,6 +1,6 @@
 ---
 title: Web projeleri | Microsoft Docs
-description: Visual Studio 'Yu genişletmek isteyen geliştiriciler için Web projesi sisteminin Visual Studio 'da nasıl çalıştığı hakkında iç ayrıntıları öğrenin.
+description: Visual Studio genişletmek isteyen geliştiriciler için web projesi sisteminin Visual Studio ' de nasıl çalıştığı hakkında iç ayrıntıları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: d9c0329f-4b0b-4fda-8061-cce69f2f502d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a7cab5ad2572f775df8702f1d15d3bcf7db1ae8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: da99b9cbe43d51df0a010e618038240c148a207f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069172"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152360"
 ---
 # <a name="web-projects"></a>Web Projeleri
 Web proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri Web uygulamaları oluşturur. Bir Web sayfasını, veya gibi geleneksel programlama dilleri kullanarak, [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] bir kullanıcıdan bilgi toplamak ve işlemek, bir veritabanında depolamak ve benzeri bir şekilde programlayabilirsiniz. İlişkili koda sahip Web sayfalarına akıllı Web sayfaları denir.

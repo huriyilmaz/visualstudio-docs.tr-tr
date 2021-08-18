@@ -6,16 +6,17 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 889be18ab342f515bf5add266088a7ee69c087c1
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 2c1455d92501ee50bca84e655b83ca98435e2d47
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106218080"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061881"
 ---
 # <a name="use-new"></a>`new()` komutunu kullanma
 

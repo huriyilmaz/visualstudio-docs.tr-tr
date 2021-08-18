@@ -10,14 +10,15 @@ ms.assetid: 252c5221-2e64-461c-8dcf-b622e400e0be
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e2a8331dd308b348d29f2eb21d7dac09b13a183
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e2b1315e072ca9d6bff6734df5b6030bd19059a0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062999"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102551"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Ana Hat Oluşturma ve Gizli Metin
 Anahat oluşturma, bir metin satırı dizisini tek bir satıra daraltmanızı olanaklı kılar. Örneğin, C++ ' ta tüm yöntemler yalnızca yöntem imzasını gösteren tek bir satıra daraltılabilirler. Gizli metin, gösterilebilecek veya gizli olabilecek metin çizgilerinin sırasıdır.

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: dede0cad4da45ccb5df4fe528214f4e0e22d2cdc9d5fe472a41be544e248c1cf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 47acaa5d1776bd35fd6c418dab9abd3158b6ac8b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121416254"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132840"
 ---
 # <a name="idebugprocess2"></a>IDebugProcess2
 Bu arabirim, bir bağlantı noktası üzerinde çalışan bir işlemi temsil eder. Bağlantı noktası yerel bağlantı noktası ise, genellikle `IDebugProcess2` yerel makinede fiziksel bir işlemi temsil eder.
@@ -33,7 +33,7 @@ IDebugProcess2 : IUnknown
 ## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
  Bu arabirim, programları grup olarak yönetmek için özel bir bağlantı noktası sağlayıcı tarafından uygulanır. Bu arabirimin bağlantı noktası sağlayıcı tarafından uygulanması gerekir.
 
- Bir hata ayıklama altyapısı, [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)aracılığıyla bir program başlatmayı destekliyorsa bu arabirimi de uygulamaya almaktadır.
+ Bir hata ayıklama altyapısı, [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)aracılığıyla bir program başlatmayı destekliyorsa bu arabirimi de uygulamaya ekler.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Bu arabirim, bu işlemde tanımlanan bir program grubuyla etkileşim kurmak için öncelikle oturum hata ayıklama yöneticisi (SDM) tarafından çağrılır.
@@ -49,7 +49,7 @@ IDebugProcess2 : IUnknown
 |[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|Bu işlemde yer alan programları numaralar.|
 |[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|Sürecin başlığını, kolay adını veya dosya adını alır.|
 |[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|Bu işlem üzerinde çalışan bir makine sunucusunun örneğini alır.|
-|[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|işlemi sonlandırılır.|
+|[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|İşlem sonlandırılır.|
 |[İliştir](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|İşleme iliştirer.|
 |[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|SDM'nin işlemi ayırabilir olup olmadığını belirler.|
 |[Ayır](../../../extensibility/debugger/reference/idebugprocess2-detach.md)|Hata ayıklayıcıyı işlemden ayırır.|

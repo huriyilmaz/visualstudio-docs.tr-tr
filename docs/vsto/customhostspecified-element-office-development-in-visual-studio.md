@@ -1,5 +1,5 @@
 ---
-title: "&lt;Customhostbelirtilen &gt; öğesi (Visual Studio 'Da Office geliştirme)"
+title: '&lt;customhostbelirtilen &gt; öğesi (Visual Studio Office geliştirme)'
 description: Customhostbelirtilen öğesinin, bu çözümün tek başına bir uygulama olmadığını nasıl gösterir olduğunu öğrenin.
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
@@ -15,16 +15,17 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ba5ce54e862862c1e6750c78416fec4d5cf51cdd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c2e9595b3ff10c1769aa1546637fd6743b27358
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99849989"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148330"
 ---
-# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;Customhostbelirtilen &gt; öğesi (Visual Studio 'Da Office geliştirme)
+# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customhostbelirtilen &gt; öğesi (Visual Studio Office geliştirme)
   `customHostSpecified`Öğesi bu çözümün tek başına bir uygulama olmadığını gösterir. Office çözümleri, Microsoft Office uygulamalar içinde barındırılan bileşenleri içerir.
 
 ## <a name="syntax"></a>Syntax
@@ -41,7 +42,7 @@ ms.locfileid: "99849989"
  Bu öğenin hiç özniteliği yok ve alt öğesi yok.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, `customHostSpecified` bir Office çözümünün uygulama bildiriminde öğesini gösterir. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+ aşağıdaki kod örneği, `customHostSpecified` bir Office çözümü için uygulama bildiriminde bulunan öğeyi gösterir. bu kod örneği, [Office çözümleri için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ```xml
 <entryPoint>
@@ -53,4 +54,4 @@ ms.locfileid: "99849989"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [uygulama bildirimini ClickOnce](../deployment/clickonce-application-manifest.md)

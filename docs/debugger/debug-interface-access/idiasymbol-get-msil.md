@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f0b42a2937f49a79282025214d62c2541060b953e49270909ee1b8b3877960e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 68ae7c5ad745d80dd6f5462f08440088b4b930c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121311618"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113542"
 ---
 # <a name="idiasymbolget_msil"></a>IDiaSymbol::get_msil
 Sembolün Microsoft Ara Dil (MSIL) koduna başvurup başvurul olmadığını belirten bir bayrak alınır.

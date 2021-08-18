@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f224cae40faec38a3ebbf91da31ed2378d7943bc86823c59ef05cf1d29bbd725
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ad31fc4290daeec60f57c510c7a48cd41343d954
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121436390"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147097"
 ---
 # <a name="idiasymbolget_symtag"></a>IDiaSymbol::get_symTag
 Sembol türü sınıflandırıcısını alır.

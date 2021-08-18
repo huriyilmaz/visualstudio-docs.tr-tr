@@ -1,6 +1,6 @@
 ---
-description: Bir numaralandırma dizisini başlangıca sıfırlar.
-title: 'IDiaEnumSegments:: Reset | Microsoft Docs'
+description: Segmentlerin bir numaralama dizisini en başta sıfırlar.
+title: IDiaEnumSegments::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 91a73cbca06e5817311514930cd0c4d2ecdcd1a5efebf0ecd650fdfbafabb43a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 025876af30d77b8bc55570a39105453a0b9e155e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380337"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154650"
 ---
 # <a name="idiaenumsegmentsreset"></a>IDiaEnumSegments::Reset
-Bir numaralandırma dizisini başlangıca sıfırlar.
+Bir numaralama dizisini en başta sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 

@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 04/06/2021
 ms.technology: vs-container-tools
 ms.topic: reference
-ms.openlocfilehash: 25507de44d5bbf20fa04ea400b9eb9d8384f110adc980e9c552c57303ad3ecef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1d2e367f066fc683c1a29ce2dab1b692abe5fce9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392711"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147303"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -116,14 +116,14 @@ Yukarıdaki örnekte olduğu gibi, değerlerin etrafında çift tırnak işareti
 
 |Etiket adı|Açıklama|
 |----------|-----------|
-|com. Microsoft. VisualStudio. debugayıklanan. Arguments|Hata ayıklama başlatılırken programa geçirilen bağımsız değişkenler. .NET Core uygulamaları için bu bağımsız değişkenler genellikle NuGet paketleri için ek arama yolları ve ardından projenin çıkış derlemesi yoludur.|
-|com.microsoft.visualstudio.debuggee.program|Hata ayıklamayı başlatan program başlatıldı. .NET Core uygulamaları için bu ayar genellikle **dotnet'tir.**|
-|com.microsoft.visualstudio.debuggee.workingdirectory|Hata ayıklamayı başlatma sırasında başlangıç dizini olarak kullanılan dizin. Bu ayar genellikle *Linux kapsayıcıları için /app* veya kapsayıcılar için *C:\app* Windows olur.|
-|com.microsoft.visualstudio.debuggee.killprogram|Bu komut, kapsayıcının içinde çalışan hata ayıklama programını durdurmak için kullanılır (gerektiğinde).|
+|com. Microsoft. VisualStudio. debugayıklanan. Arguments|Hata ayıklama başlatılırken programa geçirilen bağımsız değişkenler. .net Core uygulamaları için bu bağımsız değişkenler genellikle NuGet paketlerine ait ek arama yollarıdır ve ardından projenin çıkış derlemesinin yoludur.|
+|com. Microsoft. VisualStudio. debugayıklanan. program|Hata ayıklama başlatılırken program başlatıldı. .NET Core uygulamaları için bu ayar genellikle **DotNet**' dir.|
+|com. Microsoft. VisualStudio. debugayıklanan. WorkingDirectory|Hata ayıklama başlatılırken başlangıç dizini olarak kullanılan dizin. bu ayar genellikle Linux kapsayıcıları için */app* veya Windows kapsayıcıları için *c:\app* ' dir.|
+|com. Microsoft. VisualStudio. debugayıklanan. killprogram|Bu komut, kapsayıcının içinde çalışan hata ayıklanan programı durdurmak için kullanılır (gerektiğinde).|
 
-### <a name="customize-the-docker-build-process"></a>Docker derleme işlemini özelleştirme
+### <a name="customize-the-docker-build-process"></a>Docker Build işlemini özelleştirme
 
-özelliğinde ayarını kullanarak Dockerfile içinde hangi aşamanın `target` derlemek için `build` bildirebilirsiniz. Bu geçersiz kılma yalnızca *docker-compose.vs.debug.yml* veya *docker-compose.vs.release.yml içinde kullanılabilir* 
+Özelliğindeki ayarı kullanarak Dockerfile içinde hangi aşamayı derlemek istediğinizi bildirebilirsiniz `target` `build` . Bu geçersiz kılma yalnızca *Docker-Compose. vs. Debug. yıml* veya *Docker-Compose. vs. Release. yıml* içinde kullanılabilir 
 
 ```yml
 services:
@@ -136,7 +136,7 @@ services:
 
 ### <a name="customize-the-app-startup-process"></a>Uygulama başlatma işlemini özelleştirme
 
-Bir komut veya özel betik çalıştırarak, ayarını kullanarak ve bu ayarına bağımlı `entrypoint` hale gelmeden önce uygulamayı başlatabilirsiniz. `DockerDevelopmentMode` Örneğin, çalıştıran ancak Normal modda olmayan  hızlı modda bir sertifikayı yalnızca hızlı modda ayarlamanız gerekirse, aşağıdaki kodu yalnızca `update-ca-certificates`  *docker-compose.vs.debug.yml* koduna eklersiniz: 
+Ayarını kullanarak uygulamanızı başlatmadan önce bir komut veya özel betik çalıştırabilir `entrypoint` ve bunu öğesine bağımlı hale getirebilirsiniz `DockerDevelopmentMode` . Örneğin, normal modda değil, yalnızca **hızlı** modda bir sertifika ayarlamanız gerekirse `update-ca-certificates` , aşağıdaki kodu **yalnızca** *Docker-Compose. vs. Debug. yml* içine ekleyebilirsiniz: 
 
 ```yml
 services:
@@ -148,14 +148,14 @@ services:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Özellikleri genel olarak MSBuild için bkz. [MSBuild .](../msbuild/msbuild-properties.md)
+MSBuild özellikler hakkında daha fazla bilgi için bkz. [MSBuild properties](../msbuild/msbuild-properties.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Kapsayıcı Araçları derleme özellikleri](container-msbuild-properties.md)
+[Kapsayıcı araçları derleme özellikleri](container-msbuild-properties.md)
 
-[Kapsayıcı Araçları başlatma ayarları](container-launch-settings.md)
+[Kapsayıcı araçları başlatma ayarları](container-launch-settings.md)
 
-[Docker Compose'de Docker Compose profillerini Visual Studio](launch-profiles.md)
+[Visual Studio Docker Compose için başlatma profillerini yönetme](launch-profiles.md)
 
 [MSBuild ayrılmış ve tanınmış özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)

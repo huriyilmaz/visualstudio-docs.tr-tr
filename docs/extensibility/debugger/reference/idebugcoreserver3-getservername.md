@@ -1,6 +1,6 @@
 ---
-description: Sunucunun adını alır.
-title: 'IDebugCoreServer3:: GetServerName | Microsoft Docs'
+description: Sunucunun adını verir.
+title: IDebugCoreServer3::GetServerName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 306dfa4a8c4948c99b2d388120a4ac4757e83aaeb3b813df17d3bb9a0cc0ea10
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: eddf2260b3b518fd411f649feba37d6b8e0830a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121323722"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111469"
 ---
 # <a name="idebugcoreserver3getservername"></a>IDebugCoreServer3::GetServerName
-Sunucunun adını alır.
+Sunucunun adını verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetServerName(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-dışı Sunucunun adını döndürür.
+[out] Sunucunun adını döndürür.
 
 > [!NOTE]
-> Çağıran, dizeyi boşaltmaktan sorumludur.
+> Çağıran, dizeyi serbest bırakarak sorumludur.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kolay bir sunucu adı için [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) metodunu çağırın.
+ Kolay bir sunucu adı için [GetServerFriendlyName yöntemini](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

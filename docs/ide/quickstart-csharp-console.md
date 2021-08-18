@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: b39277a6e7ff5ce98055cc5c5615360cead3c8b4fe892a2005b28949fe449af0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6711ae64261e3ca11de07bdbc72e86f604e11c5f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412731"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151957"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-c-console-app"></a>Hızlı Başlangıç: İlk C# Visual Studio oluşturmak için Visual Studio'yi kullanma
 

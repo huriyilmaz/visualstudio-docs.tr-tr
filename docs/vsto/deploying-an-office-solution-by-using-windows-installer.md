@@ -1,6 +1,6 @@
 ---
-title: Windows Installer kullanarak Office çözümünü dağıtma
-description: Windows Installer oluşturmak için Visual Studio kullanarak, son kullanıcının bilgisayarında yönetici erişimi gerektiren bir Office çözümü dağıtabileceğinizi öğrenin.
+title: Windows Yükleyicisi'Office bir Windows dağıtma
+description: Visual Studio yükleyicisi oluşturmak için Windows kullanarak, son kullanıcının bilgisayarına yönetici erişimi Office bir Office çözümü dağıtabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -21,172 +21,172 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 6d14564e2e3552bde0844bac02db6682def2d0ad95a3eb125b6d709ce34dd10e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fc9f2e41b317729234ec335c3d6733ebb0257f2f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366347"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130721"
 ---
-# <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows Installer kullanarak Office çözümünü dağıtma
+# <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows Yükleyicisi'Office bir Windows dağıtma
 
-kullanarak Office çözümünüz için Windows Installer oluşturma hakkında bilgi edinin [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] .
+kullanarak Office Windows yükleyicisi oluşturma hakkında [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] bilgi.
 
-bir Windows Installer oluşturmak için Visual Studio kullanarak, son kullanıcının bilgisayarında yönetici erişimi gerektiren bir Office çözümü dağıtabilirsiniz. Örneğin, bir bilgisayarın tüm kullanıcıları için bir çözümü yalnızca bir kez yüklemek üzere bu tür bir dosyayı kullanabilirsiniz. ayrıca, ClickOnce kullanarak bir Office çözümü dağıtabilirsiniz, ancak bu çözümün bilgisayarın her kullanıcısı için ayrı olarak yüklenmesi gerekir.
+Bir Visual Studio yükleyicisi oluşturmak Windows kullanarak, son kullanıcının bilgisayarına yönetici erişimi Office bir Office çözümü dağıtabilirsiniz. Örneğin, bir çözümü bir bilgisayarın tüm kullanıcıları için yalnızca bir kez yüklemek için böyle bir dosya kullanabilirsiniz. ClickOnce kullanarak Office bir çözüm de dağıtabilirsiniz, ancak bu çözümün bilgisayarın her kullanıcısı için ayrı olarak yüklenmiş olması gerekir.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
 ## <a name="in-this-topic"></a>Bu konuda
 
-- [VSTO eklentisi örneklerini indirin](#Download)
+- [Eklenti VSTO indirme](#Download)
 
-- [InstallShield Limited Edition 'ı al](#Obtain)
+- [InstallShield Limited Edition'ı alın](#Obtain)
 
-- [Çözüme nasıl güven verilileceğine karar verme](#ApplySecurity)
+- [Çözüme güven verme kararını verme](#ApplySecurity)
 
 - [Kurulum projesi oluşturma](#Create)
 
-- [Proje çıkışını ekleyin](#Add)
+- [Proje çıktısını ekleme](#Add)
 
 - [Dağıtım ve uygulama bildirimlerini ekleme](#AddD)
 
 - [Bağımlı bileşenleri önkoşul olarak yapılandırma](#Configure)
 
-- [Kullanıcının bilgisayarında çözümü nereye dağıtmak istediğinizi belirtin](#Location)
+- [Çözümü kullanıcının bilgisayarına dağıtmak istediğiniz yeri belirtin](#Location)
 
-- [VSTO eklentisini yapılandırma](#ConfigureRegistry)
+- [Bir VSTO Eklentiyi Yapılandırma](#ConfigureRegistry)
 
-- [Belge düzeyi özelleştirmesi yapılandırma](#ConfigureDocument)
+- [Belge düzeyinde özelleştirme yapılandırma](#ConfigureDocument)
 
-- [Kurulum projesi oluşturma](#Build)
+- [Kurulum projesini oluşturma](#Build)
 
-ClickOnce kullanarak Office çözümünün nasıl dağıtılacağı hakkında daha fazla bilgi için bkz. [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
+ClickOnce kullanarak bir Office çözümü dağıtma hakkında daha fazla bilgi için bkz. ClickOnce kullanarak Office [çözümü dağıtma.](../vsto/deploying-an-office-solution-by-using-clickonce.md)
 
-kullanarak bir Windows Installer dosyası oluşturma hakkında daha fazla bilgi için [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] , bkz. [Windows Installer kullanarak Office çözümü için Visual Studio 2010 araçlarını dağıtma](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10)).
+kullanarak bir Windows Yükleyicisi dosyası oluşturma hakkında bilgi için bkz. Windows Installer kullanarak Office çözümü için [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] [Visual Studio 2010 Araçları dağıtma.](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10))
 
 ## <a name="download-samples"></a><a name="Download"></a>Örnekleri indirme
-Bu konu, aşağıdaki indirilebilir örneklere başvurur.
+Bu konu aşağıdaki indirilebilir örneklere başvurur.
 
 |Örnek<br /><br />|Açıklama<br /><br />|
 |----------|---------------|
-|[ExcelAddIn](https://code.msdn.microsoft.com/VSTO-Deploy-an-Office-fbcc09ad)<br /><br />|Office 32 bit veya 64 bit sürümünü çalıştıran bir bilgisayara yükleyebileceğiniz bir Excel VSTO eklentisi.<br /><br />|
-|[EX](https://code.msdn.microsoft.com/VSTO-Deploy-a-Customization-f70fae33)<br /><br />|Office 32 bit veya 64 bit sürümünü çalıştıran bir bilgisayara yükleyebileceğiniz Excel belge düzeyi özelleştirmesi.<br /><br />|
+|[ExcelAddIn](https://code.msdn.microsoft.com/VSTO-Deploy-an-Office-fbcc09ad)<br /><br />|Uygulamanın Excel VSTO 32 bit veya 64 bit sürümünün çalıştır olduğu bir bilgisayara yük kurabilirsiniz Office.<br /><br />|
+|[ExcelWorkbook](https://code.msdn.microsoft.com/VSTO-Deploy-a-Customization-f70fae33)<br /><br />|Bir Excel 32 bit veya 64 bit sürümü çalışan bir bilgisayara yükleyebilirsiniz belge düzeyi özelleştirme Office.<br /><br />|
 
-## <a name="decide-how-to-grant-trust-to-the-solution"></a><a name="ApplySecurity"></a>Çözüme nasıl güven verilileceğine karar verme
-Bir çözümün kullanıcı bilgisayarlarında çalışması için, aşağıdaki yollarla güven sağlamanız gerekir, aksi durumda kullanıcılar çözümü yüklerken bir güven istemine yanıt vermelidir.
+## <a name="decide-how-to-grant-trust-to-the-solution"></a><a name="ApplySecurity"></a>Çözüme güven verme kararını verme
+Bir çözümün kullanıcı bilgisayarlarında çalıştırılamadan önce, aşağıdaki yöntemlerden herhangi birini güven izni vermeli veya kullanıcılar çözümü yüklediğinde bir güven istemine yanıt ver ver çalışmalı.
 
-- Bilinen ve güvenilen bir yayımcıyı tanımlayan bir sertifika kullanarak bildirimleri imzalayın. Daha fazla bilgi için bkz. [uygulama ve dağıtım bildirimlerini imzalayarak çözüme güvenin](../vsto/granting-trust-to-office-solutions.md#Signing).
+- Bilinen ve güvenilen bir yayımcıyı tanımlayan bir sertifika kullanarak bildirimleri imzalar. Daha fazla bilgi için [bkz. Uygulama ve dağıtım bildirimlerini imzalayarak çözüme güvenin.](../vsto/granting-trust-to-office-solutions.md#Signing)
 
-- Çözümü, kullanıcının bilgisayarındaki program files dizinine yükler.
+- Çözümü kullanıcının bilgisayarına Program Files dizinine yükleyin.
 
 > [!NOTE]
-> Belge düzeyi özelleştirmeleri için belge konumunun da güvenilir olması gerekir. Daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
+> Belge düzeyinde özelleştirmeler için belgenin konumunun da güvenilir olması gerekir. Daha fazla bilgi için [bkz. Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
 
-## <a name="get-installshield-limited-edition"></a><a name="Obtain"></a>InstallShield Limited Edition 'ı al
+## <a name="get-installshield-limited-edition"></a><a name="Obtain"></a>InstallShield Limited Edition'ı alın
 
-Visual Studio yüklediyseniz ücretsiz olan ınstallshield Limited Edition 'ı (işle) kullanarak bir Windows Installer dosyası oluşturabilirsiniz. işle, Visual Studio önceki sürümlerinin sunulacağı kurulum ve dağıtım için proje şablonlarının işlevselliğini değiştirir.
+InstallShield Limited Edition 'ı (ISLE) kullanarak bir Windows Yükleyicisi dosyası oluşturabilirsiniz. Bu dosyayı yüklemiş Visual Studio. ISLE, önceki sürümlerinin sunduğu kurulum ve dağıtım için proje şablonlarının Visual Studio değiştirir.
 
-### <a name="to-get-installshield-limited-edition"></a>InstallShield Limited Edition 'ı almak için
+### <a name="to-get-installshield-limited-edition"></a>InstallShield Limited Edition'ı almak için
 
-1. menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
+1. Menü çubuğunda Dosya Yeni **Dosya'Project.**  >    >  
 
-   **yeni Project** iletişim kutusu açılır.
+   Yeni **Project** iletişim kutusu açılır.
 
-2. şablonlar bölmesinde, **diğer Project türleri**' ni genişletin ve ardından **kurulum ve dağıtım** şablonu ' nu seçin.
+2. Şablonlar bölmesinde Diğer Project **Türleri'ni genişletin** ve ardından Kurulum ve Dağıtım **şablonunu** seçin.
 
-3. **Kurulum ve dağıtım** için proje türleri listesinde **InstallShield Limited Edition 'ı etkinleştir**' i seçin ve **Tamam** düğmesini seçin.
+3. Kurulum ve Dağıtım için proje türleri **listesinde,** **InstallShield Limited Edition'ı** Etkinleştir'i ve ardından Tamam **düğmesini** seçin.
 
-   InstallShield Limited Edition 'ın nasıl alınacağı hakkında bilgi sağlayan bir sayfa görüntülenir.
+   InstallShield Limited Edition'ın nasıl alınarak ilgili bilgi sağlayan bir sayfa görüntülenir.
 
-4. Bu sayfada, **Web sitesini indir bağlantısına gidin** .
+4. Bu sayfada İndirme **web sitesine git bağlantısını** seçin.
 
-5. InstallShield Limited Edition için indirme sayfasında, gerekli bilgileri uygun alanlara girin ve **Şimdi İndir** bağlantısını seçin.
+5. InstallShield Limited Edition indirme sayfasında, uygun alanlara gerekli bilgileri girin ve ardından Şimdi İndir **bağlantısını** seçin.
 
-   ürünü indirdikten, yükledikten ve etkinleştirdikten sonra, **ınstallshield Limited Edition Project** şablonu Visual Studio görüntülenir.
+   Ürünü indirdikten, yükledikten ve etkinleştirdikten sonra **InstallShield Limited Edition Project** şablonu Visual Studio.
 
 ## <a name="create-a-setup-project"></a><a name="Create"></a>Kurulum projesi oluşturma
 
-1. içinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , dağıtmak istediğiniz Office projeyi açın.
+1. içinde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dağıtmak Office projesini açın.
 
-   bu konuyla ilişkili VSTO eklenti örnekleri, **exceladdın** adlı bir proje içerir. Belge düzeyi özelleştirme örnekleri, **ExcelWorkbook** adlı bir proje içerir. bu konu, bu iki adlardan birini kullanarak çözümünüzdeki Office projesine başvuracaktır.
+   Bu VSTO ilişkili örneklerde **ExcelAddIn** adlı bir proje vardır. Belge düzeyi özelleştirme örnekleri **ExcelWorkbook** adlı bir proje içerir. Bu konu başlığında, Office bu adlardan birini kullanarak çözümünüzle ilgili projenize başvurabilirsiniz.
 
-2. menü çubuğunda **dosya**  >  **ekle**  >  **yeni Project**' yi seçin.
+2. Menü çubuğunda Dosya Yeni **Ekle'yi**  >  **seçin ve**  >  **Project.**
 
-   **yeni Project ekle** iletişim kutusu açılır.
+   Yeni **Veri Project** iletişim kutusu açılır.
 
-3. şablonlar bölmesinde, **diğer Project türleri**' ni genişletin ve ardından **kurulum ve dağıtım** şablonu ' nu seçin.
+3. Şablonlar bölmesinde Diğer Project **Türleri'ni genişletin** ve ardından Kurulum ve Dağıtım **şablonunu** seçin.
 
-4. **kurulum ve dağıtım** için proje türleri listesinde **ınstallshield Limited Edition Project** seçin, projeyi adlandırın ve **tamam** düğmesini seçin.
+4. Kurulum ve Dağıtım için proje **türleri** listesinde **YükleShield Limited Edition Project'ı** seçin, projeyi olarak kabul edin ve ardından Tamam **düğmesini** seçin.
 
-   Oluşturduğunuz InstallShield Kurulum projesi çözümünüzde görüntülenir.
+   Oluşturduğunuz InstallShield kurulum projesi çözümünüzde görünür.
 
-   Bu konunun örnekleri, **OfficeAddInSetup** adlı bir kurulum projesi içerir. Bu konu, çözümünüzde aynı adı kullanarak kurulum projesine başvuracaktır.
+   Bu konunun örnekleri **OfficeAddInSetup** adlı bir kurulum projesi içerir. Bu konu, aynı adı kullanarak çözümünüzde kurulum projesine başvurur.
 
-## <a name="add-the-project-output"></a><a name="Add"></a>Proje çıkışını ekleyin
+## <a name="add-the-project-output"></a><a name="Add"></a>Proje çıktısını ekleme
 
-**officeaddınsetup** projesini, Office projenizin çıkışını içerecek şekilde yapılandırırsınız. VSTO eklenti projeleri için proje çıktısı yalnızca çözüm derlemesidir. Belge düzeyi özelleştirme projeleri için proje çıktısı yalnızca çözüm derlemesini değil belgenin kendisini de içerir.
+**OfficeAddInSetup projesini,** projenizin çıkışını içerecek Office yapılandırmış oluruz. Eklenti VSTO için proje çıkışı yalnızca çözüm derlemesi olur. Belge düzeyinde özelleştirme projeleri için proje çıkışı yalnızca çözüm derlemesini değil, aynı zamanda belgenin kendisini de içerir.
 
 ### <a name="to-add-the-project-output"></a>Proje çıktısını eklemek için
 
-1. **Çözüm Gezgini**, **officeaddınsetup** proje düğümünü genişletin ve ardından aşağıdaki çizimin gösterdiği **Project yardımcısı** dosyasını seçin.
+1. Bu **Çözüm Gezgini** **OfficeAddInSetup** proje düğümünü genişletin ve ardından **aşağıdaki çizimde** gösterildiği Project Yardımcı dosyasını seçin.
 
-   ![Project Çözüm Gezgini yardımcı dosyası](../vsto/media/installshield-projectassistant.png "Project Çözüm Gezgini'de Yardımcı Dosya")
+   ![Project Çözüm Gezgini'de Yardımcı Dosya](../vsto/media/installshield-projectassistant.png "Project Çözüm Gezgini'de Yardımcı Dosya")
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
+2. Menü çubuğunda Aç'ı   >  **seçin.**
 
-3. **Project yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama dosyaları** düğmesini seçin.
+3. **Project yardımcı sayfasının** alt kısmında, aşağıdaki **çizimde gösterildiği** Uygulama Dosyaları düğmesini seçin.
 
-   ![Uygulama dosyaları düğmesi.](../vsto/media/installshield-applicationfiles.png "Uygulama Dosyaları düğmesi.")
+   ![Uygulama Dosyaları düğmesi.](../vsto/media/installshield-applicationfiles.png "Uygulama Dosyaları düğmesi.")
 
-4. **uygulama dosyaları** sayfasında **Project çıktıları ekle** düğmesini seçin.
+4. Uygulama **Dosyaları sayfasında,** Uygulama Dosyaları **ekle Project düğmesini** seçin.
 
-5. **Visual Studio çıkış seçicisi** iletişim kutusunda, **birincil çıkış** onay kutusunu seçin ve ardından **tamam** düğmesini seçin.
+5. Çıkış **Visual Studio iletişim kutusunda** Birincil Çıkış onay **kutusunu** ve ardından Tamam **düğmesini** seçin.
 
 ## <a name="add-the-deployment-and-application-manifests"></a><a name="AddD"></a>Dağıtım ve uygulama bildirimlerini ekleme
 
-1. **Uygulama dosyaları** sayfasında, **Dosya Ekle** düğmesini seçin.
+1. Uygulama **Dosyaları sayfasında** Dosya Ekle **düğmesini** seçin.
 
-2. **Aç** Iletişim kutusunda **ExcelAddIn** projesinin çıkış dizinine gidin.
+2. Aç **iletişim** kutusunda **ExcelAddIn** projesinin çıkış dizinine gidin.
 
-   Genellikle, çıkış dizini, seçtiğiniz yapı yapılandırmasına bağlı olarak, proje kök dizininin **bin\release** alt klasörüdür.
+   Çıkış dizini genellikle, seçtiğiniz derleme yapılandırmasına bağlı olarak proje kök dizininin **bin\release** alt klasörüdür.
 
-3. Çıktı dizininde, **ExcelAddIn. VSTO** ve **ExcelAddIn.dll. manifest** dosyalarını ve sonra **Aç** düğmesini seçin.
+3. Çıkış dizininde **ExcelAddIn.vsto** ve **ExcelAddIn.dll.manifest** dosyalarını seçin ve ardından Aç **düğmesini** seçin.
 
-   Aşağıdaki çizimde gösterildiği gibi, **uygulama dosyaları** sayfası artık proje çıktı dosyasını, dağıtım bildirimini ve uygulama bildirimini içerir.
+   Uygulama **Dosyaları** sayfası artık aşağıdaki çizimde gösterildiği gibi proje çıkış dosyasını, dağıtım bildirimini ve uygulama bildirimini içerir.
 
-   ![Kurulum projenizin çıktı dosyaları.](../vsto/media/installshield-outputfiles.png "Kurulum projenizin çıkış dosyaları.")
+   ![Kurulum projenizin çıkış dosyaları.](../vsto/media/installshield-outputfiles.png "Kurulum projenizin çıkış dosyaları.")
 
 ## <a name="configure-the-dependent-components-as-prerequisites"></a><a name="Configure"></a>Bağımlı bileşenleri önkoşul olarak yapılandırma
 
-Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümünüzün çalışması için gerekli tüm diğer bileşenleri de dahil etmeniz gerekir.
+Kurulum uygulamanıza yalnızca aşağıdaki bileşenleri değil, aynı zamanda çözümünüz için gereken diğer bileşenleri de dahil edin.
 
-- Office çözümünüzün hedeflediği .NET Framework sürümü.
+- Office çözüm .NET Framework sürümü.
 
-- Office çalışma zamanına yönelik Microsoft Visual Studio 2010 araçları.
+- Office Runtime için Microsoft Visual Studio 2010 Araçları.
 
-### <a name="add-the-net-framework-4-or-the-net-framework-45-as-a-prerequisite"></a>önkoşul olarak .NET Framework 4 veya .NET Framework 4,5 ekleyin
+### <a name="add-the-net-framework-4-or-the-net-framework-45-as-a-prerequisite"></a>Önkoşul olarak .NET Framework 4 veya .NET Framework 4.5'i ekleyin
 
-1. **Çözüm Gezgini**, **OfficeAddInSetup** proje düğümünü genişletin, **uygulama verilerini belirt** düğümünü genişletin ve ardından aşağıdaki çizimin gösterdiği **yeniden dağıtılabilir** dosyasını seçin.
+1. Bu **Çözüm Gezgini** **OfficeAddInSetup** proje düğümünü genişletin,  Uygulama Verilerini Belirtin düğümünü genişletin ve ardından aşağıdaki çizimde gösterildiği **Gibi Yeniden** Dağıtılabilirler dosyasını seçin.
 
-   ![Çözüm Gezgini içindeki yeniden dağıtılabilir dosyası](../vsto/media/installshield-redistributablesfile.png "Çözüm Gezgini'daki Redistributables dosyası")
+   ![Çözüm Gezgini'daki Redistributables dosyası](../vsto/media/installshield-redistributablesfile.png "Çözüm Gezgini'daki Redistributables dosyası")
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
+2. Menü çubuğunda Aç'ı   >  **seçin.**
 
-   **Yeniden dağıtılabilir** sayfası açılır.
+   **Yeniden Dağıtılabilirler sayfası** açılır.
 
-3. yeniden dağıtılabilir bileşenler listesinde, çözümünüzün hedeflediği .NET Framework sürümü için uygun onay kutusunu seçin.
+3. Yeniden dağıtılabilir bileşenler listesinde çözümün hedeflene .NET Framework onay kutusunu seçin.
 
-   örneğin, çözümünüz [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ' i hedefliyorsa, **Microsoft .NET Framework 4,5 tam** onay kutusunu seçin. Bir önkoşul olarak bileşen ekleyebilmeniz için önce InstallShield 'un gerektirdiği yeniden dağıtılabilir bileşeni yüklemek isteyip istemediğinizi soran bir iletişim kutusu görünür. Bu iletişim kutusu görüntülenmezse, bileşen bilgisayarınızda zaten bulunur.
+   Örneğin, çözümünüz hedefi ise, Microsoft .NET Framework [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] **4.5 Tam onay kutusunu** seçin. Bileşeni önkoşul olarak ekleymeden önce InstallShield'in gerektirdiği yeniden dağıtılabilir bileşeni yüklemek isteyip istemediklerini soran bir iletişim kutusu görünebilir. Bu iletişim kutusu görünmüyorsa bileşen bilgisayarınızda zaten var olur.
 
-4. Bu iletişim kutusu görüntülenirse **Hayır** düğmesini seçin.
+4. Bu iletişim kutusu görüntülenirse Hayır **düğmesini** seçin.
 
-### <a name="add-the-visual-studio-2010-tools-for-office-runtime"></a><a name="AddToolsForOffice"></a>Office çalışma zamanı için Visual Studio 2010 araçlarını ekleyin
+### <a name="add-the-visual-studio-2010-tools-for-office-runtime"></a><a name="AddToolsForOffice"></a>Office Runtime için Visual Studio 2010 Araçları'Office ekleme
 
-**yeniden dağıtılabilir** sayfası, **Microsoft VSTO 2010 çalışma zamanı** adında bir öğe içerir, ancak çalışma zamanının eski bir sürümüne başvurur. Bu nedenle, en son sürüme başvuran bir yapılandırma dosyası el ile oluşturabilirsiniz. Daha sonra bu dosyayı **yeniden dağıtılabilir** sayfasında görünen diğer tüm öğelerin yapılandırma dosyalarıyla aynı dizine koymanız gerekir.
+**Redistributables** **sayfası, Microsoft VSTO 2010 Runtime** adlı bir öğe içerir, ancak çalışma zamanının eski bir sürümüne başvurur. Bu nedenle, en son sürüme başvuran bir yapılandırma dosyasını el ile oluşturabilirsiniz. Ardından bu dosyayı Yeniden Dağıtılabilir Öğeler sayfasında görünen diğer tüm öğeler için yapılandırma dosyalarıyla **aynı dizine koyabilirsiniz.**
 
-#### <a name="to-add-the-visual-studio-2010-tools-for-office-runtime-as-a-prerequisite"></a>Office çalışma zamanına yönelik Visual Studio 2010 araçlarını bir önkoşul olarak eklemek için
+#### <a name="to-add-the-visual-studio-2010-tools-for-office-runtime-as-a-prerequisite"></a>Office için Visual Studio 2010 Araçları'Office önkoşul olarak eklemek için
 
-1. Not Defteri açın ve sonra aşağıdaki XML 'i bir metin dosyasına yapıştırın.
+1. Dosya Not Defteri açın ve aşağıdaki XML'yi bir metin dosyasına yapıştırın.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -206,180 +206,180 @@ Kurulum uygulamanızda, yalnızca aşağıdaki bileşenleri değil, çözümün�
    </SetupPrereq>
    ```
 
-2. Visual Studio bir GUID oluşturun. **Araçlar** menüsünde **GUID oluştur**' u seçin.
+2. Bir GUID'i Visual Studio. Araçlar menüsünde **GUID** **oluştur'a tıklayın.**
 
-3. **GUID Oluşturucu** programında, **kayıt defteri biçimi** seçenek düğmesini seçin, **Kopyala** düğmesini seçin ve ardından **Çıkış** düğmesini seçin.
+3. GUID **oluşturucu programında** Kayıt Defteri Biçimi **seçeneği düğmesini,** Kopyala düğmesini ve **ardından** Çıkış **düğmesini** seçin.
 
-4. Not Defteri ' de, guıd **'nizin** yerine, guid 'sini yapıştırarak yazın.
+4. Bu Not Defteri GUID'iniz **buraya gider metnini** yerine yapıştırarak değiştirin.
 
-   Dosyanızın **&lt; Özellikler &gt;** öğesi aşağıdakilere benzer.
+   Dosyanın properties öğesi aşağıdakine benzer. **&lt; &gt;**
 
    ```xml
    <properties Id="{87989B73-21DC-4403-8FD1-0C68A41A6D8C}" Description="This prerequisite installs the most recent version of the Microsoft Visual Studio 2010 Tools for Office Runtime." >
    </properties>
    ```
 
-5. Not Defteri menü çubuğunda **dosya**  >  **kaydet**' i seçin.
+5. DosyaNın menü çubuğunda dosya **Not Defteri'yi**  >  **seçin.**
 
-6. **Farklı kaydet** Iletişim kutusunda **Masaüstü** klasörünüze gidin.
+6. Farklı **Kaydet iletişim** kutusunda Masaüstü klasörünüze **gidin.**
 
-7. **Farklı kaydet türü** listesinde tüm dosyalar ' ı **(&#42;. &#42;)** seçin.
+7. Farklı kaydet **türü listesinde Tüm** Dosyalar **(&#42;.&#42;) seçin.**
 
-8. **dosya adı** kutusunda, **Office Runtime. prq için Visual Studio 2010 araçlar** girin ve **kaydet** düğmesini seçin.
+8. Dosya adı **kutusuna Office** **Runtime.prq için Visual Studio 2010** Araçları yazın ve kaydet **düğmesini** seçin.
 
    > [!NOTE]
-   > Bu dosyayı önkoşul dosyası olarak tanımlamak için dosya adının sonuna **. prq** eklediğinizden emin olun.
+   > Bu dosyayı bir önkoşul dosyası olarak tanımlamak için dosya adının sonuna **.prq'yi** ekleyin.
 
 9. Not Defteri’ni kapatın.
 
-10. **masaüstü** klasörünüzden, *Office Runtime. prq dosyası için Visual Studio 2010 araçlarını* bilgisayarınızdaki aşağıdaki dizinlerden birine kopyalayın.
+10. Desktop **klasörünüzdeki** *Visual Studio 2010 Tools for Office Runtime.prq* dosyasını bilgisayarınızda aşağıdaki dizinlerden birini kopyalayın.
 
    32 bit işletim sistemleri için: *%ProgramFiles%\InstallShield\2013LE\SetupPrerequisites \\*
 
-   64 bit işletim sistemleri için: *% ProgramFiles (x86)% \ 2013LE \ Setupönkoşullarını \\*
+   64 bit işletim sistemleri için: *%ProgramFiles(x86)%\2013LE\SetupPrerequisites \\*
 
-11. InstallShield projesinin **yeniden dağıtılabilir** sayfasında, aşağıdaki çizimde gösterildiği gibi yeniden dağıtılabilir bileşenlerin listesini yenilemek için **Yenile** düğmesini seçin.
+11. Aşağıdaki **çizimde gösterildiği gibi** InstallShield projesinin Yeniden  Dağıtılabilir sayfasında Yenile düğmesini seçerek yeniden dağıtılabilir bileşenler listesini yenileyin.
 
    ![Yenile düğmesi.](../vsto/media/installshield-refreshbutton.png "Yenile düğmesi.")
 
-12. yeniden dağıtılabilir bileşenler listesinde, **Office Runtime için Visual Studio 2010 araçlar** onay kutusunu seçin.
+12. Yeniden dağıtılabilir bileşenler listesinde Visual Studio Çalışma Zamanı **için Araçlar** onay kutusunu Office seçin.
 
-   Yeniden dağıtılabilir bileşeni yüklemek isteyip istemediğiniz soran bir iletişim kutusu görünebilir. Bu iletişim kutusu görüntülenmezse, bu konunun [kullanıcının bilgisayarında çözümü dağıtmak istediğiniz yeri belirtin](#Location) ..
+   Yeniden dağıtılabilir bileşeni yüklemek isteyip istemediklerini soran bir iletişim kutusu görünebilir. Bu iletişim kutusu görünmüyorsa, bu konunun Çözümü kullanıcının bilgisayarına dağıtmak istediğiniz yeri belirtin [bölümüne](#Location) atlayabilirsiniz.
 
-13. Bu iletişim kutusu görüntülenirse **Hayır** düğmesini seçin.
+13. Bu iletişim kutusu görüntülenirse Hayır **düğmesini** seçin.
 
-## <a name="specify-where-to-install-the-solution-on-the-users-computer"></a><a name="Location"></a>Kullanıcının bilgisayarında çözümün nereye yükleneceğini belirtin
+## <a name="specify-where-to-install-the-solution-on-the-users-computer"></a><a name="Location"></a>Çözümün kullanıcının bilgisayarına nereye yüklln olduğunu belirtme
 
-1. **Çözüm Gezgini**, **OfficeAddInSetup** düğümünü genişletin, **kurulumunuzu düzenleyin** düğümünü genişletin ve ardından **genel bilgi** dosyasını seçin.
+1. Bu **Çözüm Gezgini** **OfficeAddInSetup** düğümünü genişletin, Kurulum düğümünü düzenle'yi **genişletin** ve ardından Genel **Bilgi dosyasını** seçin.
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
+2. Menü çubuğunda Aç'ı   >  **seçin.**
 
-3. Özellikler listesinde, **InstallDir** özelliğinin yanındaki git **düğmesini seçin** .
+3. Özellikler listesinde **INSTALLDIR** **özelliğinin** yanındaki Gözat düğmesini seçin.
 
-4. **INSTALLDIR ayarla** iletişim kutusunda, çözümü yüklemek istediğiniz kullanıcının bilgisayarında bir klasör seçin.
+4. **INSTALLDIR Ayarla** iletişim kutusunda, çözümü yüklemek istediğiniz kullanıcının bilgisayarına bir klasör seçin.
 
    > [!NOTE]
-   > Ayrıca, listedeki herhangi bir klasörün kısayol menüsünü açarak **ıNSTALLDIR ayarla** iletişim kutusunda alt dizinler de oluşturabilirsiniz.
+   > Ayrıca, **INSTALLDIR** Ayarla iletişim kutusunda, listede herhangi bir klasörün kısayol menüsünü açarak alt dizinler oluşturabilirsiniz.
 
-## <a name="configure-a-vsto-add-in"></a><a name="ConfigureRegistry"></a>VSTO eklentisini yapılandırma
+## <a name="configure-a-vsto-add-in"></a><a name="ConfigureRegistry"></a>Bir VSTO Eklentiyi Yapılandırma
 
-VSTO eklentisinin bilgisayarın tüm kullanıcıları (bilgisayar başına) için mi yoksa yalnızca yüklemeyi gerçekleştiren kullanıcı için mi (kullanıcı başına) için mi yükleneceğini belirtebilirsiniz.
+VSTO Eklentinizin bilgisayarın tüm kullanıcıları (bilgisayar başına) için mi yoksa yalnızca yükleme yapan kullanıcı için mi (kullanıcı başına) yüklü olacağını belirtebilirsiniz.
 
-Bilgisayar başına yüklemeleri desteklemek istiyorsanız, iki ayrı yükleyici oluşturun. yükleyicileri Office sürüme (32 bit ve 64 bit) veya kullanıcının çalıştırdığı Windows sürümüne (32-bit ve 64-bit) göre ayırabilirsiniz.
+Bilgisayar başına yüklemeleri desteklemek için iki ayrı yükleyici oluşturun. Yükleyicileri, Office sürümüne (32 bit ve 64 bit) veya kullanıcının çalıştırmış olduğu Windows sürümüne (32 bit ve 64 bit) göre bölüştersiniz.
 
-kullanıcı başına yüklemeler Office veya Windows sürümden bağımsız olarak yalnızca bir yükleyici gerektirir.
+Kullanıcı başına yüklemeler, her sürümden bağımsız olarak yalnızca Office Windows gerektirir.
 
 > [!NOTE]
-> bu bölüm yalnızca bir VSTO eklentisi dağıtıyorsanız geçerlidir. Belge düzeyinde bir özelleştirme dağıtıyorsanız, [belge düzeyi özelleştirmesi yapılandırma](#ConfigureDocument) bölümüne hemen gidebilirsiniz.
+> Bu bölüm yalnızca bir eklenti VSTO geçerlidir. Belge düzeyinde özelleştirme dağıtıyorsanız, hemen Belge düzeyinde özelleştirme yapılandırma [bölümüne gidebilirsiniz.](#ConfigureDocument)
 
-### <a name="to-specify-whether-you-want-to-support-per-user-or-per-computer-installations"></a>Kullanıcı başına veya bilgisayar başına yüklemeleri desteklemek isteyip istemediğinizi belirtmek için
+### <a name="to-specify-whether-you-want-to-support-per-user-or-per-computer-installations"></a>Kullanıcı başına veya bilgisayar başına yüklemeleri desteklemek isteyip istemediklerini belirtmek için
 
-1. **Çözüm Gezgini**, **OfficeAddInSetup** proje düğümünü genişletin, **kurulumunuzu düzenleyin** düğümünü genişletin ve ardından **genel bilgi** dosyasını seçin.
+1. Bu **Çözüm Gezgini** **OfficeAddInSetup** proje düğümünü genişletin, Kurulumlarınızı Düzenle düğümünü **genişletin** ve ardından Genel Bilgi **dosyasını** seçin.
 
-2. Menü çubuğunda açık **görüntüle**' yi seçin  >  .
+2. Menü çubuğunda Aç'ı   >  **seçin.**
 
    Kurulum projesinin özellikleri görüntülenir.
 
-3. **ALLUSERS** özelliği listesinde, bu çözümün bilgisayarın tüm kullanıcıları veya yalnızca çözümü yükleyen kullanıcı için yüklenmesini isteyip istemediğinizi belirtin.
+3. **AllUSERS özelliğinin** listesinde, bu çözümün bilgisayarın tüm kullanıcıları için mi yoksa yalnızca çözümü yük eden kullanıcı için mi yüklü olacağını belirtin.
 
-   geçerli kullanıcı için VSTO eklentisini yüklemek için **allusers = "" (kullanıcı başına yükleme)** seçeneğini belirleyin. bilgisayarın tüm kullanıcıları için VSTO eklentisini yüklemek için **allusers = 1 (makine başına yükleme)** öğesini seçin.
+   Geçerli kullanıcıya VSTO yüklemek için **ALLUSERS="" (Kullanıcı başına yükleme) 'yi seçin.** Bilgisayarın tüm VSTO için Uygulama Ekle'yi yüklemek için **ALLUSERS=1 (Makine başına yükleme) 'yi seçin**
 
-   bir sonraki yordamda, Office uygulamasının VSTO eklentisini bulmasını ve yüklemesini sağlamak için kayıt defteri anahtarları oluşturacaksınız. [VSTO eklentileri için kayıt defteri girdilerine](../vsto/registry-entries-for-vsto-add-ins.md)bakın.
+   Sonraki yordamda, Office uygulamasının eklentiyi bulması ve yüklemesi için kayıt defteri VSTO oluşturabilirsiniz. Bkz. [Eklentilerini VSTO kayıt defteri girdileri.](../vsto/registry-entries-for-vsto-add-ins.md)
 
 ### <a name="to-create-registry-keys"></a>Kayıt defteri anahtarları oluşturmak için
 
-1. **Çözüm Gezgini** **Project yardımcısı** düğümünü seçin.
+1. Bu **Çözüm Gezgini,** Project **Yardımcısı düğümünü** seçin.
 
-   Menü çubuğunda açık **görüntüle**' yi seçin  >  .
+   Menü çubuğunda Aç'ı   >  **seçin.**
 
-2. **Project yardımcısı** sayfasının en altında, aşağıdaki çizimin gösterdiği **uygulama kayıt defteri** düğmesini seçin.
+2. **Project yardımcısı sayfasının en** altında, aşağıdaki **çizimde gösterildiği Application Registry** düğmesini seçin.
 
-   ![Uygulama kayıt defteri düğmesi.](../vsto/media/installshield-applicationregistry.gif "Uygulama Kayıt Defteri düğmesi.")
+   ![Uygulama Kayıt Defteri düğmesi.](../vsto/media/installshield-applicationregistry.gif "Uygulama Kayıt Defteri düğmesi.")
 
-   **Uygulama kayıt defteri** sayfası görüntülenir.
+   Uygulama **Kayıt Defteri** sayfası görüntülenir.
 
-3. **Uygulamanızın yükleneceği kayıt defteri verilerini yapılandırmak istiyor musunuz?** altında **Evet** seçenek düğmesini seçin.
+3. Uygulamanıza **yüklenecek kayıt defteri verilerini yapılandırmak istiyor musunuz?** altında Evet **seçeneği düğmesini** seçin.
 
-4. **Hedef bilgisayarın kayıt defteri görünümü** listesinde, oluşturmak istediğiniz yükleyicinin türünü sağlayan anahtar hiyerarşisini ekleyin.
+4. Hedef **bilgisayarın Kayıt Defteri görünüm listesinde,** oluşturmak istediğiniz yükleyici türünü sağlayan anahtar hiyerarşisini ekleyin.
 
-   Bu bölümde yapılandırdığınız yol, Kullanıcı başına yükleyici veya bilgisayar başına bir yükleyici oluşturup oluşturamayacağını gösterir.
+   Bu bölümde yapılandırılan yol, kullanıcı başına yükleyici veya bilgisayar başına yükleyici oluşturmanıza bağlıdır.
 
    **Kullanıcı başına yükleyici**
 
    **HKEY_CURRENT_USER\Software\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**
 
-   **Office sürümüne dayalı bilgisayar başına yükleyiciler**
+   **Office sürümüne göre bilgisayar başına yükleyiciler**
 
-| Office sürümü<br /><br /> | InstallShield yapılandırma yolu<br /><br /> |
+| Office sürümü<br /><br /> | InstallShield Yapılandırma Yolu<br /><br /> |
 |----------------------------| - |
 | 32 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 | 64 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
-   **Windows sürümüne dayalı bilgisayar başına yükleyiciler**
+   **Yeni sürümü temel alan bilgisayar başına Windows yükleyiciler**
 
-| Windows sürümü<br /><br /> | InstallShield yapılandırma yolu<br /><br /> |
+| Windows sürümü<br /><br /> | InstallShield Yapılandırma Yolu<br /><br /> |
 |-----------------------------| - |
 | 32 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 | 64 bit<br /><br /> | **HKEY_LOCAL_MACHINE\SOFTWARE(32-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br />**HKEY_LOCAL_MACHINE\SOFTWARE(64-Bit)\Microsoft\Office\Excel\Addins\SampleCompany.ExcelAddIn**<br /><br /> |
 
    > [!NOTE]
-   > 64 bit Windows yükleyicisi, kullanıcıların 64-bit Windows çalıştıran bir bilgisayarda 32-bit ve 64 bit Office sürümlerini çalıştırmasına olanak sağladığından, iki kayıt defteri yolu gerektirir.
+   > 64 bit Windows için bir yükleyici, kullanıcıların 64 bitlik Windows'i çalıştıran bir bilgisayarda Office'nin 32 bit ve 64 bit sürümlerini çalıştırması mümkün olduğundan iki kayıt defteri yolu Windows.
 
    > [!NOTE]
-   > en iyi uygulama olarak, VSTO eklentisinin adını şirketinizin adıyla başlatın. bu kural, anahtarın benzersiz olma olasılığını artırır ve başka bir tedarikçiden bir VSTO eklentisi ile çakışma olasılığını azaltır. Aynı ada sahip Eklentiler, örneğin, her birinin kayıt anahtarlarının üzerine yazabilir. Bu yaklaşım, anahtarın benzersiz olacağını ve olası ad çakışmalarını azaltabileceğinizi garanti edemez.
+   > En iyi uygulama olarak, şirket VSTO şirket adıyla Eklenti'yi başlatın. Bu kural, anahtarın benzersiz olma şansını artırır ve başka bir sağlayıcının eklentisinde VSTO çakışma ihtimalini azaltmaktadır. Örneğin, aynı adı alan eklentiler, birbirlerinin kayıt anahtarlarının üzerine yazarak üzerine yaz olabilir. Bu yaklaşım, anahtarın benzersiz olacağını garanti etmemektedir ancak olası ad çakışmalarını azaltan bir yaklaşımdır.
 
-5. Anahtarların hiyerarşisini oluşturduktan sonra **SampleCompany. ExcelAddIn** anahtarı için kısayol menüsünü açın, **Yeni**' yi ve ardından **dize değeri**' ni seçin.
+5. Anahtar hiyerarşisini oluşturduktan sonra **SampleCompany.ExcelAddIn** anahtarının kısayol menüsünü açın, Yeni 'yi ve ardından Dize Değeri'ni **seçin.** 
 
-   Yeni dize değeri, **hedef bilgisayarın kayıt defteri verileri** listesinde görünür. Dize değerinin adı, yeniden adlandırabilmeniz için vurgulanır.
+   Yeni dize değeri Hedef **bilgisayarın Kayıt defteri veri listesinde** görünür. Dize değerini yeniden adlandırmak için dize değerinin adı vurgulanır.
 
-6. Değeri **Açıklama** olarak yeniden adlandırın.
+6. Değeri Açıklama olarak yeniden **adlandır.**
 
 7. Aşağıdaki değerleri oluşturmak için bu işlemi tekrarlayın.
 
 |Değer Türü<br /><br />|Name<br /><br />|
 |--------------|--------|
-|Dize değeri<br /><br />|**FriendlyName**<br /><br />|
-|DWORD değeri<br /><br />|**LoadBehavior**<br /><br />|
-|Dize değeri<br /><br />|**Bildirim**<br /><br />|
+|Dize Değeri<br /><br />|**Friendlyname**<br /><br />|
+|DWORD Değeri<br /><br />|**Loadbehavior**<br /><br />|
+|Dize Değeri<br /><br />|**Bildirim**<br /><br />|
 
-8. **Açıklama** değeri için kısayol menüsünü açın ve ardından **Değiştir**' i seçin.
+8. Açıklama değerinin kısayol **menüsünü açın ve** Değiştir'i **seçin.**
 
-   **Verileri Düzenle** iletişim kutusu görüntülenir.
+   Verileri **Düzenle** iletişim kutusu görüntülenir.
 
-9. **değer verileri** metin kutusuna **Excel Demo eklentisi** girin ve **tamam** düğmesini seçin.
+9. Değer **verileri metin** kutusuna Excel **Demo Eklentisini girin** ve tamam **düğmesini** seçin.
 
-   bu açıklama kullanıcı Office uygulamayı açtığında görüntülenir, **seçenekler** iletişim kutusunu açar ve ardından **eklentiler** bölmesinde VSTO eklentisini seçer.
+   Bu açıklama, kullanıcı Office uygulamasını açtığında, Seçenekler  iletişim kutusunu açtığında görünür  ve ardından Eklentiler bölmesinde, VSTO Eklentiyi seçer.
 
-10. **FriendlyName** değeri için kısayol menüsünü açın ve ardından **Değiştir**' i seçin.
+10. **FriendlyName** değerinin kısayol menüsünü açın ve Değiştir'i **seçin.**
 
-   **Verileri Düzenle** iletişim kutusu görüntülenir.
+   Verileri **Düzenle** iletişim kutusu görüntülenir.
 
-11. **değer verileri** metin kutusuna **Excel Demo eklentisi** girin ve **tamam** düğmesini seçin.
+11. Değer **verileri metin** kutusuna Excel **Demo Eklentisini girin** ve tamam **düğmesini** seçin.
 
-   bu dize, Office uygulamasındaki **COM eklentileri** iletişim kutusunda görünür. varsayılan olarak, dizenin değeri VSTO eklenti kimliğidir.
+   Bu dize, **Office** uygulamasında COM Eklentileri iletişim kutusunda görünür. Varsayılan olarak, dizenin değeri VSTO kimliğidir.
 
-12. **LoadBehavior** değeri için kısayol menüsünü açın ve ardından **Değiştir**' i seçin.
+12. **LoadBehavior değerinin kısayol menüsünü açın ve** Değiştir'i **seçin.**
 
-   **Verileri Düzenle** iletişim kutusu görüntülenir.
+   Verileri **Düzenle** iletişim kutusu görüntülenir.
 
-13. **Değer verisi** metin kutusunda **3** girin ve **Tamam** düğmesini seçin.
+13. Değer **verileri metin** kutusuna **3 girin** ve ardından Tamam **düğmesini** seçin.
 
-   3 değeri, uygulama başladığında VSTO eklentisini yükler. LoadBehavior değerleri hakkında daha fazla bilgi için bkz. [VSTO eklentileri için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md).
+   3 değeri, uygulama VSTO eklentiyi yükler. LoadBehavior değerleri hakkında daha fazla bilgi için bkz. VSTO [için kayıt defteri girdileri.](../vsto/registry-entries-for-vsto-add-ins.md)
 
-14. **Bildirim** değeri için kısayol menüsünü açın ve ardından **Değiştir**' i seçin.
+14. Bildirim değerinin kısayol menüsünü **açın ve** Değiştir'i **seçin.**
 
    Verileri **Düzenle** iletişim kutusu görüntülenir.
 
 15. Değer **verileri metin** kutusuna **file:///[INSTALLDIR]ExcelAddIn.vsto|vstolocal** yazın ve tamam **düğmesini** seçin.
 
-   Office Runtime için Visual Studio 2010 Araçları dağıtım bildirimini bulmak için bu yolu kullanır. Bu **yolun [INSTALLDIR]** bölümü, InstallShield kurulum projenizin **Genel** Bilgiler özellik **sayfasındaki INSTALLDIR** özelliğine eşli bir makrodur. Bu özellik, eklentiyi yüklemek için hedef bilgisayarda VSTO belirtir. **|vstolocal** soneki, çözüm yükleme klasörünün yükleme klasöründen yüklendiğinden emin ClickOnce sağlar.
+   Office Runtime Visual Studio 2010 Araçları dağıtım bildirimini bulmak için bu yolu kullanır. Bu **yolun [INSTALLDIR]** bölümü, InstallShield kurulum projenizin **Genel** Bilgiler özellik **sayfasındaki INSTALLDIR** özelliğine eşli bir makrodur. Bu özellik, eklentiyi yüklemek için hedef bilgisayarda VSTO belirtir. **|vstolocal** soneki, çözüm yükleme klasöründen değil, ClickOnce sağlar.
 
 > [!IMPORTANT]
 > Outlook için VSTO Eklentisinde özel bir form bölgesi Outlook. Daha fazla bilgi için [bkz. Form bölgelerine Outlook girdileri.](../vsto/registry-entries-for-vsto-add-ins.md#OutlookEntries)
 
 ## <a name="configure-a-document-level-customization"></a><a name="ConfigureDocument"></a>Belge düzeyinde özelleştirme yapılandırma
 
-Bu bölüm yalnızca belge düzeyinde özelleştirme dağıtıyorsanız geçerlidir. VSTO Eklentisini dağıtıyorsanız Kurulum projesini derleme [bölümüne hemen gidebilirsiniz.](#Build)
+Bu bölüm yalnızca belge düzeyinde özelleştirme dağıtıyorsanız geçerlidir. Bir eklentiyi bir VSTO, Kurulum projesini derleme bölümüne hemen [gidebilirsiniz.](#Build)
 
 Belge düzeyinde özelleştirmeler kayıt defteri anahtarlarını kullanmaz. Bunun yerine, özel belge özellikleri dağıtım bildiriminin konumunu içerir.
 
@@ -393,7 +393,7 @@ Belge düzeyinde özelleştirmeler kayıt defteri anahtarlarını kullanmaz. Bun
 
 2. Şablonlar bölmesinde, kullanmak istediğiniz dilin düğümünün altında, Windows **seçin.**
 
-3. Uygulamanın proje türleri listesinde **Windows** Konsol Uygulaması **şablonunu** seçin.
+3. Uygulama için proje türleri listesinde **Windows** Konsol Uygulaması **şablonunu** seçin.
 
 4. Projeye **SetExcelDocumentProperties adını ve** ardından Tamam **düğmesini** seçin.
 
@@ -407,7 +407,7 @@ Belge düzeyinde özelleştirmeler kayıt defteri anahtarlarını kullanmaz. Bun
 
 7. Bu **Çözüm Gezgini** **Program.cs** dosyasını (C# uygulamaları için) veya **Module1.vb** dosyasını (Visual Basic seçin.
 
-8. Menü çubuğunda Aç'ı   >  **seçin.**
+8. Menü çubuğunda Aç'ı   >  seçin.
 
 9. Dosyanın tamamının içeriğini aşağıdaki kodla değiştirin.
 
@@ -418,17 +418,17 @@ Belge düzeyinde özelleştirmeler kayıt defteri anahtarlarını kullanmaz. Bun
 
 ### <a name="to-add-a-custom-action-that-runs-your-program"></a>Programınızı çalıştıran özel bir eylem eklemek için
 
-1. Bu **Çözüm Gezgini** **OfficeAddInSetup** proje düğümünü genişletin ve ardından **aşağıdaki çizimde** gösterildiği Project Yardımcı dosyasını seçin.
+1. Bu **Çözüm Gezgini** **OfficeAddInSetup** proje düğümünü genişletin ve ardından **aşağıdaki çizimde** Project Yardımcı dosyasını seçin.
 
    ![Project Çözüm Gezgini'de Yardımcı Dosya](../vsto/media/installshield-projectassistant.png "Project Çözüm Gezgini'de Yardımcı Dosya")
 
-2. Menü çubuğunda Aç'ı   >  **seçin.**
+2. Menü çubuğunda Aç'ı   >  seçin.
 
-3. **Project yardımcı sayfasının** alt kısmında, aşağıdaki **çizimde gösterildiği** Uygulama Dosyaları düğmesini seçin.
+3. **Project yardımcı sayfasının alt** kısmında, aşağıdaki **çizimde gösterildiği** Uygulama Dosyaları düğmesini seçin.
 
    ![Uygulama Dosyaları düğmesi.](../vsto/media/installshield-applicationfiles.png "Uygulama Dosyaları düğmesi.")
 
-4. Uygulama **Dosyaları sayfasında,** Uygulama Dosyaları **ekle Project düğmesini** seçin.
+4. Uygulama **Dosyaları sayfasında,** **Çıkışlar'Project ekle'yi** seçin.
 
    Visual Studio **Seçici iletişim** kutusu görüntülenir.
 
@@ -436,7 +436,7 @@ Belge düzeyinde özelleştirmeler kayıt defteri anahtarlarını kullanmaz. Bun
 
 6. Bu **Çözüm Gezgini** **OfficeAddInSetup** düğümünün altında Kurulum Gereksinimlerini ve **Eylemlerini** Tanımla düğümünü genişletin ve ardından Özel **Eylemler klasörünü** seçin.
 
-7. Menü çubuğunda Aç'ı   >  **seçin.**
+7. Menü çubuğunda Aç'ı   >  seçin.
 
    Ekranın yan tarafındaki bölmede olayların listesi görüntülenir.
 
@@ -485,7 +485,7 @@ Belge düzeyinde özelleştirmeler kayıt defteri anahtarlarını kullanmaz. Bun
 
 1. Bu **Çözüm Gezgini** Yayın için **Hazırla düğümünü** genişletin ve ardından Sürümler **dosyasını** seçin.
 
-2. Menü çubuğunda Aç'ı   >  **seçin.**
+2. Menü çubuğunda Aç'ı   >  seçin.
 
    **Derlemeler** gezgini, oluşturmak istediğiniz yayın türünü seçesiniz diye bir yan bölmede açılır.
 
@@ -513,4 +513,4 @@ Belge düzeyinde özelleştirmeler kayıt defteri anahtarlarını kullanmaz. Bun
 - [Özel belge özelliklerine genel bakış](../vsto/custom-document-properties-overview.md)
 - [Çözüme güven Office ver](../vsto/granting-trust-to-office-solutions.md)
 - [Belgelere güven izni ver](../vsto/granting-trust-to-documents.md)
-- [Visual Studio Office Installer'ı kullanarak Office için Windows 2010 Araçları dağıtma](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10))
+- [Windows Installer Visual Studio bir Office çözümü için Windows 2010 Araçları dağıtma](/previous-versions/visualstudio/visual-studio-2010/ff937654(v=msdn.10))

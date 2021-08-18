@@ -1,6 +1,6 @@
 ---
-description: Özel öznitelikler numaralandırma dizisini başlangıca sıfırlar.
-title: 'IEnumDebugCustomAttributes:: Reset | Microsoft Docs'
+description: Özel öznitelikler numaralama sırasını en baştan sıfırlar.
+title: IEnumDebugCustomAttributes::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6bf9e2d4562fe3c0245997f861dff2ed7ad319f4f4a6bdbe778d8d0def3e5f76
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 42fd433034469bfe813209e7eed011d3368a04c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415461"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152932"
 ---
 # <a name="ienumdebugcustomattributesreset"></a>IEnumDebugCustomAttributes::Reset
-Numaralandırma dizisini başlangıca sıfırlar.
+Enumeration dizisini en başta sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,10 +38,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra Next yöntemine yapılan sonraki [çağrı,](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) numaralamanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

@@ -1,6 +1,6 @@
 ---
-title: Kaynak İçerikleri Görünümü - İçerik Verileri | Microsoft Docs
-description: Kaynak İçeriği görünümünün, musiki olaylarının kaynağı olan kaynaklar için nasıl içerik verisi listele olduğunu öğrenin.
+title: Kaynak çekişmeleri görünümü-çekişme verileri | Microsoft Docs
+description: Kaynak çekişme görünümünün, çekişme olaylarının kaynağı olan kaynaklar için çekişmeyi nasıl listeleyeceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,48 +15,48 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7848e4580bf7c5acdeca7edcebb20923d370af01dfd053e4b17234635fefa182
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2dabd080bfbd2463ed13f1b0f12a5521ab26b647
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121442040"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131202"
 ---
 # <a name="resource-contentions-view---contention-data"></a>Kaynak Çakışmaları Görünümü - Çakışma Verileri
-Kaynak İhlali görünümü, musiki olaylarının kaynağı olan kaynaklar için içerikle ilgili verileri listeler. Başka bir iş parçacığında bir işlev kaynağa özel erişim elde etti olduğundan, bir iş parçacığında bir işlev kaynağa erişimi beklemek zorunda olduğunda bir sorun olayı oluşur. Her kaynak, bir çağrı ağacının, etkinlik olaylarının sonucunda ortaya çıkan işlev yürütme yollarını görüntüleyen kök düğümünü içerir.
+Kaynak Çekişmesi görünümü, çekişme olaylarının kaynağı olan kaynaklar için çekişme verilerini listeler. Başka bir iş parçacığında bir işlev kaynağa özel erişim elde ettiğinden, bir iş parçacığında bir işlev kaynağa erişim için beklemeye zorlandığında bir çekişme olayı oluşur. Her kaynak, çekişme olayları ile sonuçlanan işlev yürütme yollarını görüntüleyen bir çağrı ağacının kök düğümüdür.
 
-## <a name="data-values"></a>Veri Değerleri
+## <a name="data-values"></a>Veri değerleri
 
 ### <a name="resource-values"></a>Kaynak değerleri
- Kaynak satırdaki veriler, profil oluşturma verisinde kaynağa erişimin engellenmiş olduğu toplam zamanı ve bu kaynakla erişim çakışması nedeniyle meydana gelen çakışma olaylarının toplam sayısını görüntüler. Bir kaynak için kapsayıcı ve dış değerler her zaman aynıdır.
+ Bir kaynak satırındaki veriler, profil oluşturma verilerinde kaynak erişimi engellenmiş toplam süreyi ve bu kaynağa erişim çakışması nedeniyle oluşan toplam çekişme olayı sayısını görüntüler. Bir kaynağın dahil ve dışlamalı değerleri her zaman aynıdır.
 
 ### <a name="function-values"></a>İşlev değerleri
- İşlev değerleri, çağrı ağacında temsil edilen yürütme yolunda meydana gelen işlev örneklerini temel almaktadır.
+ İşlev değerleri, çağrı ağacında temsil edilen yürütme yolunda oluşan işlevin örneklerine dayanır.
 
-- Özel değerler, işlevin işlev gövdesinde deyimleri yürütürken meydana gelen olayları temel almaktadır. İşlev tarafından çağrılan işlevlerde meydana gelen olaylar özel değerlere dahil değildir.
+- Dışlamalı değerler, işlev gövdesinde deyimleri yürütürken oluşan olayları temel alır. İşlev tarafından çağrılan işlevlerde oluşan olaylar, Özel değerlere dahil edilmez.
 
-- Kapsayıcı değerler, işlev veya işlev tarafından çağrılan bir işlev yürütücü olduğunda meydana gelen olaylara dayalıdır.
+- Kapsamlı değerler, işlev veya işlev tarafından çağrılan bir işlev çalıştırıldığında oluşan olayları temel alır.
 
 ### <a name="percentage-values"></a>Yüzde değerleri
- Yüzde değerleri, profil oluşturma verisi içinde toplam zaman veya itiraz olaylarını temel alan değerlerdir. Profil oluşturma çalıştırması raporu veya görünümü filtrelenmişse, toplam değer olarak yalnızca filtrelenmiş verilerde engellenen süre ve içerikler kullanılır.
+ Yüzde değerleri, profil oluşturma verilerinde toplam süreyi veya çekişme olaylarını temel alır. Profil oluşturma çalıştırmasının raporuna veya görünümüne filtre uygulanmışsa, toplam değer olarak yalnızca filtrelenmiş verilerdeki engellenen süre ve çekişmeler kullanılır.
 
-## <a name="navigating-the-resource-allocation-view"></a>Kaynak Ayırma Görünümü'nde Gezinme
+## <a name="navigating-the-resource-allocation-view"></a>Kaynak ayırma görünümünde gezinme
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Ad**|Kaynağın veya işlevin adı.|
-|**Özel Engellenen Süre**|- Bir kaynak için kaynağa erişimin toplam süresi engellendi ve bir iş parçacığının beklemesi için neden oldu.<br />- bir işlev için işlev gövdesinde kod yürütürken işlevin bu örneklerinin üst kaynağa erişmesi engellenmiş olduğu zaman. İşlev tarafından çağrılan işlevlerde engellenen süre dahil değildir.|
-|**Özel Engellenen Saat %**|- Bir kaynak için, profil oluşturma verisinde bu kaynağın süresi engellenen tüm zamanların yüzdesi<br />- Bir işlev için profil oluşturma verisinde bu işlev örneklerinin yalnızca engellenen süresi olan tüm engellenen sürelerin yüzdesi.|
-|**Özel İçerikler**|- Bir kaynak için, kaynağa erişimin engellenmiş ve bir iş parçacığının beklemesi için neden olduğu toplam sayıdır.<br />- bir işlev için, işlev gövdesinde kod yürütürken işlevin bu örneklerinin üst kaynağa erişmesi engellenmiş sayısı. İşlev tarafından çağrılan işlevlerde engelleme olayları dahil değildir.|
-|**Özel İçerik %**|- Bir kaynak için, profil oluşturma verisinde yer alan ve bu kaynağa erişim için olan tüm itiraz olaylarının yüzdesi.<br />- Bir işlev için, profil oluşturma verisinde yer alan ve üst kaynak için bu işlev örneklerinin özel olarak uzlastırma olayları olan tüm etkinlik olaylarının yüzdesi.|
-|**Kapsayıcı Engellenen Süre**|- Bir kaynak için kaynağa erişimin toplam süresi engellendi ve bir iş parçacığının beklemesi için neden oldu.<br />- bir işlev için, işlev bu örneklerinin veya örnekler tarafından çağrılmış işlevlerin işlev gövdesinde kod yürütürken üst kaynağa erişmesi engellendi.|
-|**Kapsayıcı Engellenen Saat %**|- Bir kaynak için, profil oluşturma verisinde bu kaynağın süresi engellenen tüm zamanların yüzdesi<br />- Bir işlev için profil oluşturma çalıştırması içinde engellenen tüm zamanların yüzdesi, bu işlev örneklerinin kapsayıcı engellenen süresidir.|
-|**Kapsayıcı İçerikler**|- Bir kaynak için, kaynağa erişimin engellenmiş ve bir iş parçacığının beklemesi için neden olduğu toplam sayıdır.<br />- Bir işlev için, profil oluşturma çalışmalarında yer alan ve üst kaynak için bu işlev örneklerinin kapsayıcı muhtelemen olayları olan tüm etkinlik olaylarının yüzdesi.|
-|**Kapsayıcı İçerik %**|- Bir kaynak için, profil oluşturma çalıştırması içinde yer alan ve bu kaynağa erişim için olan tüm itiraz olaylarının yüzdesi.<br />- bir işlev için, işlev gövdesinde kod yürütürken işlevin bu örneklerinin üst kaynağa erişmesi engellenmiş sayısı. İşlev tarafından çağrılan işlevlerde engelleme olayları dahil değildir.|
-|**Düzey**|Bu işlevin çağrı ağacında derinliği. Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
-|**İşlev Satır Numarası**|Kaynak dosyada bu işlevin başlangıcının satır numarası.|
-|**Modül Adı**|İşlevi içeren modülün adı.|
-|**Modül Yolu**|İşlevi içeren modülün yolu.|
-|**İşlem Kimliği**|İşlevin yürütülmektedir işlem kimliği (PID).|
-|**İşlem Adı**|Sürecin adı.|
+|**Ad**|Kaynak veya işlevin adı.|
+|**Dışlamalı engellenme süresi**|-Bir kaynak için kaynağa erişen toplam süre engellenmiştir ve bir iş parçacığının beklenmesine neden oldu.<br />-Bir işlev için, işlevin işlev gövdesinde kod yürütürken, işlevin bu örneklerinin üst kaynağa erişmesi engellenmiş zaman. İşlev tarafından çağrılan işlevlerde engellenen süre dahil değildir.|
+|**Dışlamalı engellenme süresi yüzdesi**|-Bir kaynak için, bu kaynağın engellenme süresi olan profil oluşturma verilerinde tüm engellenen sürenin yüzdesi<br />-Bir işlev için, bu işlev örneklerinin özel olarak engellenme süresi olan profil oluşturma verilerinde tüm engellenen sürenin yüzdesi.|
+|**Dışlamalı çekişmeler**|-Bir kaynak için, kaynağa erişimin engellendiği ve bir iş parçacığının beklemesini neden olan toplam sayısı.<br />-Bir işlev için, işlevin işlev gövdesinde kod yürütürken, işlevin bu örneklerinin üst kaynağa erişmesi engellenecek olan sayı. İşlev tarafından çağrılan işlevlerde engelleme olayları dahil değildir.|
+|**Dışlamalı çekişmeler yüzdesi**|-Bir kaynak için, bu kaynağa erişim için çekişme olayları olan profil oluşturma verilerinde bulunan tüm çekişme olaylarının yüzdesi.<br />-Bir işlev için, üst kaynak için bu işlev örneklerinin özel çekişme olayları olan profil oluşturma verilerinde bulunan tüm çekişme olaylarının yüzdesi.|
+|**Kapsamlı engellenme süresi**|-Bir kaynak için kaynağa erişen toplam süre engellenmiştir ve bir iş parçacığının beklenmesine neden oldu.<br />-Bir işlev için, işlevin işlev gövdesinde kod yürütürken işlevin veya örneklerin tarafından çağrılan işlevlerin bu örneklerinin üst kaynağa erişmesi engellenir.|
+|**Kapsamlı engellenme süresi%**|-Bir kaynak için, bu kaynağın engellenme süresi olan profil oluşturma verilerinde tüm engellenen sürenin yüzdesi<br />-Bir işlev için, bu işlev örneklerinin dahil olduğu, profil oluşturma çalıştırmasında engellenme süresi yüzdesi.|
+|**Kapsamlı çekişmeler**|-Bir kaynak için, kaynağa erişimin engellendiği ve bir iş parçacığının beklemesini neden olan toplam sayısı.<br />-Bir işlev için, üst kaynak için bu işlev örneklerinin kapsamlı çekişme olayları olan profil oluşturma çalıştırmasında tüm çekişme olaylarının yüzdesi.|
+|**Kapsamlı çekişmeler yüzdesi**|-Bir kaynak için, bu kaynağa erişim için çekişme olayları olan profil oluşturma çalıştırmasında tüm çekişme olaylarının yüzdesi.<br />-Bir işlev için, işlevin işlev gövdesinde kod yürütürken, işlevin bu örneklerinin üst kaynağa erişmesi engellenecek olan sayı. İşlev tarafından çağrılan işlevlerde engelleme olayları dahil değildir.|
+|**Düzeyde**|Bu işlevin çağrı ağacındaki derinliği. Yalnızca [VSPerfReport](../profiling/vsperfreport.md) komut satırı raporlarında.|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
+|**Modül adı**|İşlevi içeren modülün adı.|
+|**Modül yolu**|İşlevi içeren modülün yolu.|
+|**İşlem Kimliği**|İşlevin yürütüldüğü işlemin işlem KIMLIĞI (PID).|
+|**İşlem adı**|Sürecin adı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|

@@ -1,5 +1,5 @@
 ---
-description: Hedef bilgisayar hakkında bilgi sorgulamak için izin verir.
+description: Hedef bilgisayar hakkında bilgi sorgulamaya izin verir.
 title: IDebugWindowsComputerPort2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,17 +9,18 @@ ms.assetid: 25f327b8-0303-4268-88d1-74df630436aa
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd2d499fad2e05a8f295e2c087289fcb9477f90f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4da6faf02b59ef8f004e2411d86b06f60c33020c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083485"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153023"
 ---
 # <a name="idebugwindowscomputerport2"></a>IDebugWindowsComputerPort2
-Hedef bilgisayar hakkında bilgi sorgulamak için izin verir.
+Hedef bilgisayar hakkında bilgi sorgulamaya izin verir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,19 +28,19 @@ Hedef bilgisayar hakkında bilgi sorgulamak için izin verir.
 IDebugWindowsComputerPort2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
  Bu arabirim, oturum hata ayıklama yöneticisinin bağlantı noktası nesneleri tarafından uygulanır.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugWindowsComputerPort2` .
+ Aşağıdaki tabloda yöntemlerini `IDebugWindowsComputerPort2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)|Üzerinde hata ayıklayıcının çalıştığı bilgisayar hakkındaki bilgileri alır.|
+|[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)|Hata ayıklayıcının üzerinde çalıştır olduğu bilgisayar hakkında bilgi verir.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: Msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

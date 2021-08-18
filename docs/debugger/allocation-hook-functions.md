@@ -1,6 +1,6 @@
 ---
-title: Ayırma kanca Işlevleri | Microsoft Docs
-description: Visual Studio ' de C çalışma zamanı (CRT) hata ayıklaması yapmanız gerektiğinde _CrtSetAllocHook kullanılarak yüklenen ayırma kanca işlevlerini nasıl kullanacağınızı öğrenin.
+title: Kanca İşlevlerini Ayırma | Microsoft Docs
+description: _CrtSetAllocHook'de C çalışma zamanı (CRT) hata ayıklaması yapmak zorundayken, _CrtSetAllocHook kullanılarak yüklenmiş ayırma kancası işlevlerinin nasıl Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -25,20 +25,20 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5406cf76eee3ae81ea629e2bc41b4d97cb7d68cdae5e4f9cb48a43b24547fc6e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: eada0362b399489bea9bae93863c44e8172abf3c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346381"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129863"
 ---
 # <a name="allocation-hook-functions"></a>Atama Kanca İşlevleri
-Bellek her ayrıldığı, yeniden ayrıldığı veya serbest bırakılmış her seferinde [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook)kullanılarak yüklenen bir ayırma kanca işlevi çağırılır. Bu tür bir kanca, birçok farklı amaçla kullanabilirsiniz. Uygulamanın, ayırma düzenlerini incelemek veya daha sonra analiz edilmek üzere günlük ayırma bilgileri gibi yetersiz bellek durumlarını nasıl işlediğini sınamak için kullanın.
+_CrtSetAllocHook kullanılarak yüklenmiş bir [ayırma](/cpp/c-runtime-library/reference/crtsetallochook)kancası işlevi, bellek her serbest bırakıldı, yeniden ayrılır veya serbest bırakıldı. Bu tür kancaları birçok farklı amaçla kullanabilirsiniz. Bir uygulamanın, ayırma desenlerini incelemek veya daha sonra analiz etmek üzere günlük ayırma bilgilerini incelemek gibi yetersiz bellek durumlarını nasıl işleyeni test etmek için bunu kullanın.
 
 > [!NOTE]
-> [Ayırma kancaları ve c Run-Time bellek ayırmaları](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)bölümünde açıklanan bir ayırma kanca işlevinde c çalışma zamanı kitaplık işlevleri kullanma kısıtlamasından haberdar olun.
+> Ayırma Kancaları ve C bellek ayırmaları konusunda açıklanan bir ayırma kancası işlevinde C çalışma zamanı kitaplık işlevlerini [kullanma Run-Time farkında olmak.](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)
 
- Bir ayırma kanca işlevinin aşağıdaki örnekte olduğu gibi bir prototipi olmalıdır:
+ Ayırma kancası işlevinin aşağıdaki örnekte olduğu gibi bir prototipi olması gerekir:
 
 ```cpp
 int YourAllocHook(int nAllocType, void *pvData,
@@ -46,16 +46,16 @@ int YourAllocHook(int nAllocType, void *pvData,
         const unsigned char * szFileName, int nLine )
 ```
 
- [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) için geçirdiğiniz işaretçi, CRTDBG içinde tanımlanan **_CRT_ALLOC_HOOK** türündedir. Olsun
+ CRTDBG'de [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook) **işaretçisi _CRT_ALLOC_HOOK** türüne sahip. H:
 
 ```cpp
 typedef int (__cdecl * _CRT_ALLOC_HOOK)
     (int, void *, size_t, int, long, const unsigned char *, int);
 ```
 
- Çalışma zamanı kitaplığı, kancasını çağırdığında, *nAllocType* bağımsız değişkeni hangi ayırma işleminin yapılması gerektiğini (**_HOOK_ALLOC**, **_HOOK_REALLOC** veya **_HOOK_FREE**) gösterir. Ücretsiz veya yeniden tahsisatın içinde, `pvData` bloonun serbest bırakmak için Kullanıcı makalesinin bir işaretçisi vardır. Ancak, ayırma gerçekleşmediği için bu işaretçi null olur. Kalan bağımsız değişkenler söz konusu ayırmanın boyutunu, blok türünü, onunla ilişkili ardışık istek numarasını ve dosya adı işaretçisini içerir. Varsa, bağımsız değişkenler ayırmanın yapıldığı satır numarasını da içerir. Kanca işlevi, yazarının istediği analiz ve diğer görevleri gerçekleştirdikten sonra, ayırma işleminin devam edebildiğini ya da işlemin başarısız olması gerektiğini belirten **false** **değerini döndürmelidir**. Bu tür bir basit kanca şimdiye kadar ayrılan bellek miktarını denetleyebilir ve bu miktar küçük bir sınırı aşarsa **false** döndürür. Daha sonra uygulama, normalde yalnızca kullanılabilir bellek çok düşük olduğunda oluşacak olan ayırma hatalarının türünü yaşar. Daha karmaşık kancalar, ayırma düzenlerini izleyebilir, bellek kullanımını analiz edebilir veya belirli durumlar gerçekleştiğinde rapor verebilir.
+ Çalışma zamanı kitaplığı kancanızı *çağırsa, nAllocType* bağımsız değişkeni hangi ayırma işlemi yapılacak olduğunu **(_HOOK_ALLOC**, **_HOOK_REALLOC** veya _HOOK_FREE **).** Ücretsiz veya yeniden konumlandırmada, `pvData` serbest bırakılana kadar bloğun kullanıcı makalesine bir işaretçisi vardır. Ancak ayırma söz dizimleri söz dizimli olduğundan bu işaretçi null olur. Kalan bağımsız değişkenler söz konusu ayırmanın boyutunu, blok türünü, ilişkili sıralı istek numarasını ve dosya adına yönelik bir işaretçiyi içerir. Varsa, bağımsız değişkenler ayırmanın yapılmış olduğu satır numarasını da içerir. Kanca işlevi, yazarının istediği herhangi bir analizi ve diğer görevleri gerçekleştirdikten sonra, ayırma işleminin devam edeceğini belirten **TRUE** veya **false**( işleminin başarısız olması gerektiğini gösterir) döndürür. Bu tür basit bir kanca, o ana kadar ayrılan bellek miktarını kontrol etmek ve bu miktar küçük bir sınırı aşarsa **FALSE** döndürür. Uygulama daha sonra normalde yalnızca kullanılabilir bellek çok düşük olduğunda oluşan ayırma hatalarının türüyle karşılarına çıkabilir. Daha karmaşık kancalar ayırma desenlerini izleyebilir, bellek kullanımını analiz eder veya belirli durumlar oluştuğunda rapor oluşturabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayırma kancaları ve C Run-Time bellek ayırmaları](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)
-- [Hata ayıklama kanca Işlevi yazma](../debugger/debug-hook-function-writing.md)
+- [Ayırma Kancaları ve C Run-Time Ayırmaları](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md)
+- [Kanca İşlevi Yazmada Hata Ayıklama](../debugger/debug-hook-function-writing.md)

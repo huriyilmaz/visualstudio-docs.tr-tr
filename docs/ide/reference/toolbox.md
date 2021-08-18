@@ -1,6 +1,6 @@
 ---
 title: Araç kutusu penceresi
-description: Araç Kutusu penceresi hakkında bilgi edinmek ve bu pencerenin projelerde ek olarak ek Visual Studio öğrenin.
+description: araç kutusu penceresi ve Visual Studio projelerine ekleyebileceğiniz denetimleri nasıl görüntülediği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 06/01/2020
 ms.topic: reference
@@ -15,68 +15,68 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 068cfa548f2421791e79e9a79f56eb530b9b06aa9cdb3a7951433c2cc3b36e89
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9f601c3245aaf61957f10c5adbd8f9a602256450
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121371911"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061894"
 ---
 # <a name="toolbox"></a>Araç Kutusu
 
-Araç **Kutusu penceresinde,** projelerinize ek olarak Visual Studio görüntülenir. Araç Kutusunu **açmak için** menü **çubuğundan Araç** Kutusunu  >  **Görüntüle'yi** seçin veya Ctrl Alt X  + **tuşlarına** + **basın.**
+**araç kutusu** penceresi Visual Studio projelerine ekleyebileceğiniz denetimleri görüntüler. **Araç kutusunu** açmak için menü çubuğundan **Görünüm**  >  **araç kutusunu** seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-![Kapsayıcılar bölümündeki seçenekleri gösteren Araç Kutusu penceresinin ekran görüntüsü.](media/vs-2019/toolbox.png "Araç Kutusu penceresinin ekran görüntüsü")
+![Kapsayıcılar bölümündeki seçenekleri gösteren araç kutusu penceresinin ekran görüntüsü.](media/vs-2019/toolbox.png "Araç kutusu penceresinin ekran görüntüsü")
 
-Farklı denetimleri kullanmakta olduğu tasarımcının yüzeyine sürükleyip bırakın ve denetimleri yeniden boyutlandırın ve konumlara getirin.
+Kullandığınız tasarımcı yüzeyine farklı denetimleri sürükleyip bırakabilir ve denetimleri yeniden boyutlandırabilir ve yerleştirebilirsiniz.
 
-Araç kutusu, XAML dosyasının tasarımcı görünümü veya Windows Forms Uygulaması projesi gibi tasarımcı görünümleriyle birlikte görünür. **Araç kutusu** yalnızca geçerli tasarımcıda kullanılan denetimleri görüntüler. Görünen öğeleri daha **fazla filtrelemek** için Araç Kutusu içinde arama edebilirsiniz.
+araç kutusu, bir XAML dosyasının tasarımcı görünümü veya Windows Forms bir uygulama projesi gibi tasarımcı görünümleriyle birlikte görüntülenir. **Araç kutusu** yalnızca geçerli tasarımcıda kullanılabilecek denetimleri görüntüler. Görüntülenen öğeleri daha fazla filtrelemek için **araç kutusu** içinde arama yapabilirsiniz.
 
 > [!NOTE]
-> Bazı proje türleri için **Araç Kutusu** herhangi bir öğe gösterebildi.
+> Bazı proje türleri için **araç kutusu** herhangi bir öğeyi gösteremeyebilir.
 
-Projenizin hedeflediği .NET sürümü, Araç Kutusu'nda görünen denetim kümelerini de etkiler. Gerekirse projenin özellik sayfalarından hedef çerçeve sürümünü değiştirebilirsiniz. proje adı **Özellikleri'Çözüm Gezgini** proje düğümünü seçin ve ardından menü **çubuğunda proje Project**  >  **seçin.** Uygulama **sekmesinde** Hedef çerçeve **açılan** listesinden seçim yapın.
+Projenizin hedeflediği .NET sürümü araç kutusu 'nda görünen denetim kümesini de etkiler. Gerekirse, projenin özellik sayfalarından hedef Framework sürümünü değiştirebilirsiniz. **Çözüm Gezgini**' de proje düğümünü seçin ve ardından menü çubuğunda **Project**  >  **projectname özellikler**' i seçin. **Uygulama** sekmesinde **hedef çerçeve** açılır öğesini kullanın.
 
 ::: moniker range=">=vs-2019"
 
-![Hedef çerçeve açılan listesinde seçenekleri gösteren Uygulama iletişim kutusunun ekran görüntüsü.](media/vs-2019/toolbox-change-dotnet-version.png ".NET sürümünü değiştirebilirsiniz iletişim kutusunun ekran görüntüsü")
+![Hedef çerçeve açılır penceresinde seçenekleri gösteren uygulama iletişim kutusunun ekran görüntüsü.](media/vs-2019/toolbox-change-dotnet-version.png ".NET sürümünü değiştirebileceğiniz iletişim kutusunun ekran görüntüsü")
 
 ::: moniker-end
 
-## <a name="manage-the-toolbox-window-and-its-controls"></a>Araç Kutusu penceresini ve denetimlerini yönetme
+## <a name="manage-the-toolbox-window-and-its-controls"></a>Araç kutusu penceresini ve denetimlerini yönetme
 
-Varsayılan olarak Araç **Kutusu,** IDE'nin sol Visual Studio daraltılmış ve imlecin üzerine taşındığında görünür. Araç Kutusunu **sabitleyebilirsiniz** (araç çubuğundaki Sabitle **simgesine** tıklayarak), imleci taşısanız açık kalması için. Ayrıca Araç Kutusu penceresini **çıkararak** ekran üzerinde herhangi bir yere sürükleyebilirsiniz. Araç çubuğuna sağ tıklar ve **seçeneklerden** birini seçerek Araç Kutusunu yerleştirebilirsiniz, çıkarabilirsiniz ve gizleyebilirsiniz.
+varsayılan olarak, **araç kutusu** Visual Studio ıde 'nin sol tarafında daraltılır ve imleç onun üzerine taşındığında görüntülenir. İmleci taşıdığınızda açık kalması için araç **kutusunu** sabitleyebilir (araç çubuğundaki **sabitleme** simgesine tıklayarak). Ayrıca **araç kutusu** penceresini çıkarabilir ve ekranınızdaki herhangi bir yere sürükleyebilirsiniz. Araç çubuğuna sağ tıklayıp seçeneklerden birini seçerek **araç kutusunu** sabitleyebilir, çıkarabilir ve gizleyebilirsiniz.
 
 > [!TIP]
-> Araç Kutusu artık IDE'nin sol tarafında daraltılmış Visual Studio, menü çubuğundan Pencere Sıfırlama Penceresi Düzeni'yi seçerek geri  >   ekleyebilirsiniz.
+> araç kutusu artık Visual Studio ıde 'nin sol tarafında daraltıldı, menü çubuğundan **pencere**  >  **sıfırlama pencere düzeni** ' ni seçerek geri ekleyebilirsiniz.
 
-Sağ tıklama bağlam menüsünde aşağıdaki **komutları kullanarak** Bir Araç Kutusu sekmesindeki öğeleri yeniden düzenleyebilir veya özel sekmeler ve öğeler ekleyebilirsiniz:
+Sağ tıklama bağlam menüsünde aşağıdaki komutları kullanarak bir **araç kutusu** sekmesindeki öğeleri yeniden düzenleyebilir veya özel sekmeler ve öğeler ekleyebilirsiniz:
 
-- **Öğeyi Yeniden Adlandır** - Seçili öğeyi yeniden adlandırın.
+- **Öğeyi yeniden adlandır** -seçili öğeyi yeniden adlandırır.
 
-- **Liste Görünümü** - Dikey bir listede denetimleri gösterir. Denetlenmeyen denetimler yatay olarak görünür.
+- **Liste görünümü** -denetimleri dikey bir listede gösterir. İşaretlenmezse, denetimler yatay olarak görüntülenir.
 
-- **Hepsini Göster** - Tüm olası denetimleri (yalnızca geçerli tasarımcı için geçerli olanları değil) gösterir.
+- **Tümünü göster** -tüm olası denetimleri gösterir (yalnızca geçerli Tasarımcı için geçerli olanları değil).
 
-- **Öğeleri Seç** - **Araç Kutusunda görünen öğeleri** belirtebilirsiniz. Araç Kutusu Öğelerini Seç iletişim kutusunu **açar.** Bir öğeyi onay kutusunu seçerek veya temizerek gösterebilir veya gizleyebilirsiniz.
+- **Öğeleri seç** - **araç** kutusunda görünen öğeleri belirleyebilmeniz Için **araç kutusu öğelerini Seç** iletişim kutusunu açar. Onay kutusunu seçerek veya temizleyerek bir öğeyi gösterebilir veya gizleyebilirsiniz.
 
-- **Öğeleri Alfabetik Olarak Sırala** - Öğeleri adlarına göre sıralar.
+- **Öğeleri alfabetik olarak Sırala** -öğeleri ada göre sıralar.
 
-- **Araç Çubuğunu** Sıfırla - Varsayılan Araç Kutusu **ayarlarını ve** öğelerini geri yükleme.
+- **Araç çubuğunu Sıfırla** -varsayılan **araç kutusu** ayarlarını ve öğelerini geri yükler.
 
-- **Sekme Ekle** - Yeni bir **Araç Kutusu sekmesi** ekler.
+- **Sekme Ekle** -yeni bir **araç kutusu** sekmesi ekler.
 
-- **Yukarı Taşı** - Seçili öğeyi yukarı taşır.
+- **Yukarı taşı** -seçili öğeyi yukarı taşır.
 
-- **Aşağı Taşı** - Seçili öğeyi aşağı taşır.
+- **Aşağı taşı** -seçili öğeyi aşağı taşır.
 
-## <a name="create-and-distribute-custom-toolbox-controls"></a>Özel Araç Kutusu denetimleri oluşturma ve dağıtma
+## <a name="create-and-distribute-custom-toolbox-controls"></a>Özel araç kutusu denetimleri oluşturma ve dağıtma
 
-Windows Presentation Foundation tabanlı **bir** proje şablonuyla başlayarak veya [Windows](../../extensibility/creating-a-wpf-toolbox-control.md) [Forms'da özel araç kutusu denetimleri oluşturabilirsiniz.](../../extensibility/creating-a-windows-forms-toolbox-control.md) Daha sonra özel denetiminizi ekip arkadaşlarınıza dağıtabilirsiniz veya Araç Kutusu Denetimleri Yükleyicisi'nı [kullanarak web'de yayımlayın.](https://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)
+[Windows Presentation Foundation](../../extensibility/creating-a-wpf-toolbox-control.md) veya [Windows Forms](../../extensibility/creating-a-windows-forms-toolbox-control.md)tabanlı bir proje şablonuyla başlayarak, özel **araç kutusu** denetimleri oluşturabilirsiniz. Daha sonra özel denetiminizi takım matları ' ne dağıtabilir veya [araç kutusu denetimleri yükleyicisini](https://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)kullanarak Web 'de yayımlayabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kullanılabilir Araç Kutusu sekmelerinin bazıları hakkında daha fazla bilgi edinmek için **aşağıdaki bağlantıları** kullanın:
+Per, kullanılabilir **araç kutusu** sekmeleri hakkında daha fazla bilgi edinmek için aşağıdaki bağlantıları kullanın:
 
 - [Araç Kutusu, Veri Sekmesi](../../ide/reference/toolbox-data-tab.md)
 - [Araç Kutusu, Bileşenler Sekmesi](../../ide/reference/toolbox-components-tab.md)

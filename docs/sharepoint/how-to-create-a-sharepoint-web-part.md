@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: SharePoint Web Bölümü oluşturma | Microsoft Docs'
-description: Bir tasarımcı kullanarak veya bir Web Bölümü öğesini bir SharePoint projesine ekleyerek ve sonra Web bölümü için kod dosyasını düzenleyerek bir Web bölümü oluşturun ve özelleştirin.
+title: 'nasıl yapılır: SharePoint Web bölümü oluşturma | Microsoft Docs'
+description: tasarımcı kullanarak bir web bölümü oluşturun ve özelleştirin veya bir web bölümü öğesini herhangi bir SharePoint projesine ekleyerek ve ardından web bölümü için kod dosyasını düzenleyerek.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,29 +13,30 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: f15cd788d19540bdea416b36ab0f8e8d8aa95e3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad3761012732f6191d40bfdf47da84221b78209e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925595"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130994"
 ---
-# <a name="how-to-create-a-sharepoint-web-part"></a>Nasıl yapılır: SharePoint Web Bölümü oluşturma
-  Herhangi bir SharePoint projesine **Web** bölümü öğesi ekleyerek ve sonra Web bölümü için veya Tasarımcı kullanarak bir Web bölümü oluşturup özelleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
+# <a name="how-to-create-a-sharepoint-web-part"></a>nasıl yapılır: SharePoint web bölümü oluşturma
+  herhangi bir SharePoint projesine bir **web bölümü** öğesi ekleyerek ve sonra web bölümü için veya tasarımcı kullanarak bir web bölümü oluşturup özelleştirebilirsiniz. daha fazla bilgi için bkz. [nasıl yapılır: tasarımcı kullanarak SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).
 
-### <a name="to-create-a-sharepoint-web-part"></a>SharePoint Web bölümü oluşturmak için
+### <a name="to-create-a-sharepoint-web-part"></a>SharePoint web bölümü oluşturmak için
 
-1. Bir SharePoint projesi oluşturun veya açın.
+1. bir SharePoint projesi oluşturun veya açın.
 
-     Daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
+     daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. **Çözüm Gezgini** ' de SharePoint projesi düğümünü seçin ve ardından **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+2. **Çözüm Gezgini** SharePoint proje düğümünü seçin ve **Project**  >  **yeni öğe ekle**' yi seçin.
 
-3. **Yeni öğe Ekle** iletişim kutusunda, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. **yeni öğe ekle** iletişim kutusunda **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-4. SharePoint şablonları listesinde, **Web Bölümü**' nu seçin.
+4. SharePoint şablonları listesinde, **Web bölümü**' nu seçin.
 
 5. **Ad** kutusunda, Web bölümü için bir ad belirtin ve sonra **Ekle** düğmesini seçin.
 
@@ -43,7 +44,7 @@ ms.locfileid: "99925595"
 
 6. **Çözüm Gezgini**' de, az önce oluşturduğunuz Web bölümü için kod dosyasını açın.
 
-     Örneğin, Web bölümünün adı *WebPart1* Ise, *WebPart1. vb* dosyasını açın (Visual Basic) veya *WebPart1.cs* (C# dilinde).
+     örneğin, web bölümünün adı *WebPart1* ise, *WebPart1. vb* dosyasını açın (Visual Basic) veya *WebPart1. cs* (C# dilinde).
 
 7. Kod dosyasında, yöntemine denetimler ekleyin <xref:System.Web.UI.Control.CreateChildControls%2A> .
 
@@ -51,6 +52,6 @@ ms.locfileid: "99925595"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [Nasıl yapılır: tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)
+- [nasıl yapılır: tasarımcı kullanarak SharePoint web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)
 - [İzlenecek yol: SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
-- [İzlenecek yol: tasarımcı kullanarak SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+- [izlenecek yol: tasarımcı kullanarak SharePoint için web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

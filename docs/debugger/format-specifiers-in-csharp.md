@@ -25,16 +25,17 @@ ms.assetid: 345c8589-5f36-4d34-a58c-e56271687dd6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: abc824cf5d0413f01ad5f3f4423b974aeca40b03
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c9f02973e40cea5fd821c94bd7931cf742f8a271
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870590"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154349"
 ---
-# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında C# içindeki biçim belirticileri
+# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcıda C# içindeki biçim belirticileri
 Biçim belirticilerini kullanarak, **izleme** penceresinde bir değerin görüntülendiği biçimi değiştirebilirsiniz. Biçim belirticilerini **hemen** penceresinde, **komut** penceresinde, [izlenenoktalarda](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)ve kaynak penceresinde de kullanabilirsiniz. Bu pencerelerin bir ifadesinde durakladıysanız, sonuç belirtilen biçim görüntüsüne göre bir  [veri ipucunda](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) görüntülenir.
 
 Biçim belirleyicisi kullanmak için, değişken ifadesini ve ardından virgül ve uygun belirticisi girin.
@@ -50,9 +51,9 @@ Aşağıdaki örnek kodu kullanacağız:
 }
 ```
 
-`my_var1`Hata ayıklama sırasında değişkeni **izleme** penceresine ekleyin, Windows Watch 'da **hata ayıklama**  >    >    >  **1**' i izleyin. Sonra, değişkene sağ tıklayıp **onaltılık görüntü**' i seçin. Şimdi **İzle** penceresinde 0x0065 değeri gösterilir. Bu değeri bir onaltılık tamsayı yerine ondalık tamsayı olarak görmek için, değişken adından sonra **ad** sütununa **d** ondalık biçim belirleyicisi ekleyin. **Değer** sütununda artık **101** gösterilmektedir.
+`my_var1`hata ayıklama sırasında değişkeni **izleme** penceresine ekleyin, **hata ayıkla**  >  **Windows**  >  **izle**  >  **izleyin 1**. Sonra, değişkene sağ tıklayıp **onaltılık görüntü**' i seçin. Şimdi **İzle** penceresinde 0x0065 değeri gösterilir. Bu değeri bir onaltılık tamsayı yerine ondalık tamsayı olarak görmek için, değişken adından sonra **ad** sütununa **d** ondalık biçim belirleyicisi ekleyin. **Değer** sütununda artık **101** gösterilmektedir.
 
-![Visual Studio izleme penceresi ekran görüntüsü, my_var1, d değerini 101 ve bir int türü içeren bir satırla görüntüler.](../debugger/media/watchformatcsharp.png)
+![101 değeriyle ve bir int türünde my_var1, d 'yi gösteren bir satırla Visual Studio izleme penceresi ekran görüntüsü.](../debugger/media/watchformatcsharp.png)
 
 ::: moniker range=">= vs-2019" 
 
@@ -63,7 +64,7 @@ Aşağıdaki örnek kodu kullanacağız:
 ::: moniker-end
 
 ## <a name="format-specifiers"></a>Biçim belirticileri
-Aşağıdaki tabloda, Visual Studio hata ayıklayıcısı için C# biçim belirticileri açıklanmaktadır.
+aşağıdaki tabloda Visual Studio hata ayıklayıcı için C# biçim belirticileri açıklanmaktadır.
 
 |Belirleyici|Biçimlendir|Özgün Izleme değeri|Görüntülenmektedir|
 |---------------|------------|--------------------------|--------------|

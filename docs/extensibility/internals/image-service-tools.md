@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: fdb503e7f9f35d7a5e0c3a1564f226b07b0a796fb9421000586a24a57792687d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 11e06a15ead0d73773c47d4948e189de0661f354
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388805"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102577"
 ---
 # <a name="image-service-tools"></a>Görüntü Hizmeti Araçları
 VS SDK, uzantı oluşturucuların Visual Studio görüntü hizmetini kullanmasına yardımcı olacak çeşitli araçlar içerir.

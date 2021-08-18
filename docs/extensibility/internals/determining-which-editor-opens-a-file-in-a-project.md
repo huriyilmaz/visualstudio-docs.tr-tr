@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 197b310c37ba3c9395cd5120d4e0e8fb4d066e0669b3e409b06af0b10475137d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6f8e5ba694e2a720291f55c969142c5e082ebc44
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376241"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124613"
 ---
 # <a name="determine-which-editor-opens-a-file-in-a-project"></a>Bir projede dosya açan düzenleyiciyi belirleme
 Bir Kullanıcı projedeki bir dosyayı açtığında, bu dosya için uygun düzenleyiciyi veya tasarımcıyı açan bir yoklama işleminden geçer. Ortam tarafından çalıştırılan ilk yordam, hem standart hem de özel düzenleyiciler için aynıdır. Ortam, bir dosyayı açmak için kullanılacak düzenleyiciyi yoklayarak ve bu işlem sırasında VSPackage 'ın ortamla birlikte koordine olması gereken çeşitli kriterleri kullanır.

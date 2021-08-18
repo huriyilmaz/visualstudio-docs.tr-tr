@@ -15,15 +15,16 @@ ms.assetid: b2dbc033-bf95-4d10-8e51-f9462979133e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ee8f09c502f6125c6ce2e67e504a689c035ffd5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1bf12a7a4925493fc6bb978bc75da963c0436938
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957354"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131852"
 ---
 # <a name="call-tree-view"></a>Çağrı Ağacı görünümü
 Çağrı ağacı görünümü, profili oluşturulmuş uygulamada geçen işlev yürütme yollarını görüntüler. Ağacın kökü, uygulamanın veya bileşenin giriş noktasıdır. Her işlev düğümü, çağırdığı tüm işlevleri ve bu işlev çağrıları hakkındaki performans verilerini listeler.

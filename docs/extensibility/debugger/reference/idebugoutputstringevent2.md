@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, bir dize çıkışı için hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
+description: Bu arabirim, hata ayıklama altyapısı (DE) tarafından bir dizeyi çıkarmak için oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
 title: IDebugOutputStringEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6480b1018726d37d4bd51af5d3c4d66b8b42a9a56f04aceb530518876bd078a4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 944d84b0d7c8e45690527dce1e3e8da2cfff27de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307147"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133061"
 ---
 # <a name="idebugoutputstringevent2"></a>IDebugOutputStringEvent2
-Bu arabirim, bir dize çıkışı için hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
+Bu arabirim, hata ayıklama altyapısı (DE) tarafından bir dizeyi çıkarmak için oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,32 +30,32 @@ Bu arabirim, bir dize çıkışı için hata ayıklama altyapısı (DE) tarafın
 IDebugOutputStringEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE, IDE'nin Çıkış penceresine bir dize **göndermek** için bu arabirimi uygulamaya alır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu, IDE 'nin **Çıkış** penceresine bir dize göndermek için de bu arayüzü uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` .
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE bu olay nesnesini oluşturur ve çıkış penceresine bir dize **göndermek için** gönderir. Olay, hata ayıklama yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
+ DE, **çıktı** penceresine bir dize göndermek için bu olay nesnesini oluşturur ve gönderir. Olay, ayıklanmakta olan programa eklendiği zaman SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
- Aşağıdaki tabloda yöntemini `IDebugOutputStringEvent2` gösterir.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemi gösterilmektedir `IDebugOutputStringEvent2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetString](../../../extensibility/debugger/reference/idebugoutputstringevent2-getstring.md)|Görüntülenebilir iletiyi alır.|
+|[GetString](../../../extensibility/debugger/reference/idebugoutputstringevent2-getstring.md)|Görüntülenebilen iletiyi alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, beklenemeyen kodda, hata ayıklandığı program Win32 işlevine bir dize gönderdiğinde çıkış olarak dizenin kaynağı `OutputDebugString` olabilir. Bu dize DE tarafından kesme noktası alır ve olay olarak SDM'ye `IDebugOutputStringEvent2` gönderilir.
+ Örneğin, yönetilmeyen kodda, hata ayıklanan programın Win32 işlevine bir dize göndermesi durumunda çıkış olacak dize bu olabilir `OutputDebugString` . Bu dize, DE tarafından yakalanarak olay olarak SDM 'ye gönderilir `IDebugOutputStringEvent2` .
 
- Kullanıcı [yanıtı gerektiren bir ileti göndermek için IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) kullanın.
+ Kullanıcı yanıtı gerektiren bir ileti göndermek için [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) kullanın.
 
  Yanıt gerektirmeyen bir hata iletisi göndermek için [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)

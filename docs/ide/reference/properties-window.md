@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ce71f30b6008de006ad2ab96c0388dc3e1ee507247d9c9a500304c94d5197846
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 364067fd5661d71ab97f6d30de7ea1db35598e8e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121447434"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151151"
 ---
 # <a name="properties-window"></a>Özellik penceresi
 

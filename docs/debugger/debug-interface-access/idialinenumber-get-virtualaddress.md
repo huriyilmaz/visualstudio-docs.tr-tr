@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 06c946daf178348b38c577aa9d8f50480b9001f610121320df16673bb7a52640
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7c0af3aec2c8ac413873ae0a0ff6dfc054e6f696
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392163"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129098"
 ---
 # <a name="idialinenumberget_virtualaddress"></a>IDiaLineNumber::get_virtualAddress
 Bloğun sanal adresini (VA) alır.

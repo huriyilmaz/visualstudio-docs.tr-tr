@@ -11,14 +11,15 @@ ms.assetid: ef640967-8adb-4793-994d-ae1736510891
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c5e3b3f05ae205e30cff7085b71c1690d02c73e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d3d18068b5ad9ef74a84a31366d7c90bdefc365c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084694"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153296"
 ---
 # <a name="idebugobject2"></a>IDebugObject2
 > [!IMPORTANT]

@@ -11,17 +11,18 @@ ms.assetid: 9cbc5db4-03ae-479f-a664-13cad66ad210
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: da5a94c17e3856a831e3d21fd22479b060a58fbd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 74b5a4361abe7d1be2a04de79fa3f662c83fe067
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052898"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118196"
 ---
 # <a name="ienumdebugobjectsgetcount"></a>IEnumDebugObjects::GetCount
 Bu yöntem, Numaralandırmadaki öğe sayısını döndürür.

@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e1a4439f5c1dab78ce32c553a4bee98db6fa7da4f072152c3a046ba819222128
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e880590846d30c01e8f3f1925445be6c8431c0f8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440870"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130552"
 ---
 # <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions &gt; öğesi (Office geliştirme Visual Studio)
   Ad `formRegions` alanının `vstov4` öğesi, Microsoft Office Outlook eklenti ile ilişkili form bölgelerini VSTO içerir.
@@ -47,12 +47,12 @@ ms.locfileid: "121440870"
  öğesi `formRegions` aşağıdaki öğeye sahip.
 
 ### <a name="formregion"></a>Formregion
- Form Outlook VSTO içeren eklentiler oluşturmak için gereklidir. öğesi `formRegion` [formRegion&#60;öğesinde&#62; geliştirme &#40;Office öğesinde Visual Studio&#41;. ](../vsto/formregion-element-office-development-in-visual-studio.md)
+ Form Outlook VSTO içeren eklentiler oluşturmak için gereklidir. öğesi `formRegion` [formRegion&#60;öğesinde tanımlanır&#62; geliştirme &#40;Office öğesi Visual Studio&#41;. ](../vsto/formregion-element-office-development-in-visual-studio.md)
 
 ## <a name="vsto-add-in-example"></a>VSTO Eklenti örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, kullanılarak `formRegions` dağıtılan bir uygulama düzeyi uygulama Office öğesi [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
+ Aşağıdaki kod örneği, kullanılarak `formRegions` dağıtılan bir uygulama düzeyi uygulama Office öğesi [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office içerir.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 

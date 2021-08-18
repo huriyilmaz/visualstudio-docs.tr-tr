@@ -1,6 +1,6 @@
 ---
-title: Çalışma kitabı yüklenemeyen ActiveX denetimleri içeriyor
-description: Bir çalışma kitabı yüklenemeyen ActiveX denetimleri içerdiğinde oluşan hatayı nasıl çözebileceğinizi öğrenin.
+title: çalışma kitabı yüklenemeyen ActiveX denetimleri içeriyor
+description: bir çalışma kitabı yüklenemeyen ActiveX denetimleri içerdiğinde oluşan hatayı nasıl çözebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -13,20 +13,21 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 4c8039fc2a5df197446873f0b2efef82d9a5f662
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e89484f9da4868ff04cbaeaa72247e39be147185
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940793"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147732"
 ---
-# <a name="the-workbook-contains-activex-controls-that-cannot-be-loaded"></a>Çalışma kitabı yüklenemeyen ActiveX denetimleri içeriyor
+# <a name="the-workbook-contains-activex-controls-that-cannot-be-loaded"></a>çalışma kitabı yüklenemeyen ActiveX denetimleri içeriyor
 
-  "Bu projeyi oluşturmak için kullanılan çalışma kitabı tasarımcının yükleyemeyeceği ActiveX denetimleri içeriyor" hatası, bir Word belgesine veya Excel çalışma sayfasına programlı bir şekilde denetim eklediğinizde, belgeyi veya çalışma kitabını kaydettiğinizde ve sonra belge veya çalışma kitabını temel alan yeni bir belge düzeyi çözüm oluşturacak şekilde görünür.
+  "bu projeyi oluşturmak için kullanılan çalışma kitabı tasarımcının yükleyemeyeceği ActiveX denetimleri içerir" bir Word belgesine veya bir Excel çalışma sayfasına program aracılığıyla bir denetim eklediğinizde, belgeyi veya çalışma kitabını kaydettiğinizde ve sonra belge veya çalışma kitabını temel alan yeni bir belge düzeyi çözüm oluşturduğunuzda, tasarımcı tarafından desteklenmeyen denetimler içeriyor.
 
- Denetimin yönetilen türünü açıklayan bilgiler belge veya çalışma kitabıyla birlikte kaydedilmez. Bu belgeye veya çalışma kitabına dayalı yeni bir çözüm oluşturduğunuzda, Visual Studio 'Nun denetimi konak öğesi tasarımcısında yüklemek için yeterli bilgi yok.
+ Denetimin yönetilen türünü açıklayan bilgiler belge veya çalışma kitabıyla birlikte kaydedilmez. bu belge veya çalışma kitabına dayalı yeni bir çözüm oluşturduğunuzda, Visual Studio konak öğesi tasarımcısında denetimi yüklemek için yeterli bilgiye sahip değildir.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
@@ -37,5 +38,5 @@ ms.locfileid: "99940793"
 3. Belge veya çalışma kitabı temelinde belge düzeyi çözümü oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [nasıl yapılır: Visual Studio Office projeler oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)

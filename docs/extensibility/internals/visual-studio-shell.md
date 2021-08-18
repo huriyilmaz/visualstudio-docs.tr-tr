@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d2d79a36acdc7c210b81b5215d242d95adb947e8dcf17aec23a62bf4e05708a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7f57defce4eb9b46185f0d266822b5f4a0d2e719
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375442"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117650"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Kabuğu
-kabuk, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] içinde tümleştirmenin birincil aracısıdır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kabuk, VSPackage'ların ortak hizmetleri paylaşması için gerekli işlevselliği sağlar. 'nin mimari hedefi VSPackage'larda birincil işlevselliğin en iyi şekilde çalışması olduğundan kabuk, temel işlevler sağlayan ve bileşeni VSPackage'ları arasında çapraz iletişimi destekleyen bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çerçevedir.
+Kabuk, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] içinde tümleştirmenin birincil aracısıdır. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kabuk, VSPackage'ların ortak hizmetleri paylaşması için gerekli işlevselliği sağlar. 'nin mimari hedefi VSPackage'larda birincil işlevselliği en iyi şekilde kullanmak olduğundan kabuk, temel işlevler sağlayan ve bileşeni VSPackage'ları arasında çapraz iletişimi destekleyen bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çerçevedir.
 
 ## <a name="shell-responsibilities"></a>Kabuk Sorumlulukları
  Kabuğun aşağıdaki temel sorumlulukları vardır:
@@ -37,7 +37,7 @@ kabuk, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] içinde tüm
 
 - Temel kabuk işlevselliği sağlayan ve temel pencere işlevselliği sağlayan gibi bazı paylaşılan <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell> <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> hizmetleri yönetme.
 
-- Çözüm (.sln) dosyalarını yönetme. Çözümler, 6.0'daki çalışma alanı (.dsw) dosyalarına benzer Visual C++ proje gruplarını içerir.
+- Çözüm (.sln) dosyalarını yönetme. Çözümler, 6.0'daki çalışma alanı (.dsw) dosyalarına benzer Visual C++ grupları içerir.
 
 - Kabuk genelinde seçimi, bağlamı ve para birimini izleme. Kabuk aşağıdaki öğe türlerini izler:
 

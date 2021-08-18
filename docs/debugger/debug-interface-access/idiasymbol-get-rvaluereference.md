@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 700754cad6329d16aba5e47b998a4da7810e8444d94532ce0f0ab4e1685d4cbe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e56ba5b21d1592a1368eddf361aa5a31ca17b3aa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264122"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147177"
 ---
 # <a name="idiasymbolget_rvaluereference"></a>IDiaSymbol::get_RValueReference
 İşaretçi türünün bir rvalue başvurusu olup olmadığını belirten bir bayrak alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) bir işaretçi türüne ayarlandığında kullanın.

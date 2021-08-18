@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f98ff6ff7899708ed7d0df089c5e375dd3c3a251662bd22ac528e8cc6783bb6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9ece735583ff93176206d85687f20637ee2b34b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386088"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061265"
 ---
 # <a name="define-shapes-and-connectors"></a>Şekilleri ve bağlayıcıları tanımlama
 

@@ -11,17 +11,18 @@ ms.assetid: 84673a89-3f6d-4668-919e-1c0f56182fe5
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: de87e78b6f7ea14643df1070faf731e92d7a5767
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7b87387ed7708b6737f2cab59b2fdce68c551ec5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850223"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102070"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı null yapılabilir bir tür oluşturma
 
@@ -39,7 +40,7 @@ Varsayılan olarak, bir değişkeni null yapılabilir bir tür olarak bildirdiğ
 
 Sınıf Tasarımcısı, temel alınan türünü gösterdiği gibi, null yapılabilir bir tür görüntüler.
 
-C# ' de Nullable türler hakkında daha fazla bilgi için bkz. [Nullable türler](/dotnet/csharp/programming-guide/nullable-types/index). Visual Basic null yapılabilir türler hakkında daha fazla bilgi için bkz. [Nullable değer türleri](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types).
+C# ' de Nullable türler hakkında daha fazla bilgi için bkz. [Nullable türler](/dotnet/csharp/programming-guide/nullable-types/index). Visual Basic null yapılabilir türler hakkında daha fazla bilgi için bkz. [nullable değer türleri](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types).
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -62,7 +63,7 @@ C# ' de Nullable türler hakkında daha fazla bilgi için bkz. [Nullable türler
 
 ## <a name="to-add-a-nullable-type-by-using-the-code-editor"></a>Kod düzenleyicisini kullanarak null yapılabilir bir tür eklemek için
 
-1. Projeye bir sınıf ekleyin. **Çözüm Gezgini**' de proje düğümünü seçin ve **Proje** menüsünde **Sınıf Ekle**' ye tıklayın.
+1. Projeye bir sınıf ekleyin. **Çözüm Gezgini**' de proje düğümünü seçin ve **Project** menüsünde **sınıf ekle**' ye tıklayın.
 
 2. Yeni sınıfa ait. cs veya. vb dosyasında, sınıf bildirimine yeni sınıfta bir veya daha fazla null yapılabilir tür ekleyin.
 

@@ -11,17 +11,18 @@ ms.assetid: 2d8b78f6-0aef-4d79-809a-cff9b2c24659
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5a76e051e146985338564d497323b6232b35a4a1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0042109e1d71506117f2e8029d8eef6065703f02
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079858"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125315"
 ---
 # <a name="metadata_type"></a>METADATA_TYPE
 Bu yapı, meta verilerden alınan bir alan türü hakkında bilgi belirtir.
@@ -59,7 +60,7 @@ public struct METADATA_TYPE {
 ## <a name="remarks"></a>Açıklamalar
  Bu yapı, [](../../../extensibility/debugger/reference/type-info.md) `dwKind` `TYPE_INFO` yapı alanı `TYPE_KIND_METADATA` ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından bir değer) olarak ayarlandığında TYPE_INFO yapısındaki birleşimin bir parçası olarak görüntülenir.
 
- `tokClass`Değer, bir türü benzersiz bir şekilde tanımlayan bir meta veri belirtecidir. Meta veri belirteci KIMLIĞININ üst bitlerini yorumlama hakkında daha fazla bilgi için `CorTokenType` .NET Framework SDK 'sindeki CorHdr. h dosyasındaki sabit listesine bakın.
+ `tokClass`Değer, bir türü benzersiz bir şekilde tanımlayan bir meta veri belirtecidir. meta veri belirteci kimliğinin üst bitlerini yorumlama hakkında daha fazla bilgi için `CorTokenType` .NET Framework SDK 'sindeki corhdr. h dosyasındaki sabit listesine bakın.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: SH. h

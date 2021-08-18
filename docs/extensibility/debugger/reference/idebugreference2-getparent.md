@@ -1,6 +1,6 @@
 ---
-description: Başvurunun üst başvurusunu alır.
-title: 'IDebugReference2:: GetParent | Microsoft Docs'
+description: Bir başvuru için üst başvuru alır.
+title: IDebugReference2::GetParent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: e3061665-ad3e-4c1b-b33f-82755fa21be3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9abb7c6f1d020244c930a4e884fcce5fdf23f5f9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b2978642aded9b729a4f21400ce32bcaa6024bcc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071420"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132567"
 ---
 # <a name="idebugreference2getparent"></a>IDebugReference2::GetParent
-Başvurunun üst başvurusunu alır. Daha sonraki kullanımlar için ayrılmıştır.
+Bir başvuru için üst başvuru alır. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,7 +43,7 @@ int GetParent (
 
 ## <a name="parameters"></a>Parametreler
 `ppParent`\
-dışı Bu özelliğin üst öğesini temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.
+[out] Bu [özelliğin üst nesnesini temsil eden bir IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

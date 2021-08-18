@@ -19,14 +19,15 @@ ms.assetid: f4f100f1-776d-46dc-b2fd-5b35b98d9561
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 045da0ade1ce60e2a8d21c24238c8e2b061e8612
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 0743bea71f972b5f5baa6909300c2ce669fc30a6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215831"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113945"
 ---
 # <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Bir Windows Forms uygulamasındaki verileri filtreleme ve sıralama
 

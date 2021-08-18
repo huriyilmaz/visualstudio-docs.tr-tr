@@ -11,14 +11,15 @@ ms.assetid: 577fdaae-4b2d-4112-9839-ab899535fa6f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6d8745207f1ab075aedd43815e7a97a4f0721bb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 01d5c04d8314bcf81f1a7d3e42ddf4d4517956d3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092299"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064234"
 ---
 # <a name="idebugexpressioncontext2"></a>IDebugExpressionContext2
 Bu arabirim, ifade değerlendirmesi için bir bağlamı temsil eder.

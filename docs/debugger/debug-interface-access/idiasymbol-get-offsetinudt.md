@@ -1,6 +1,6 @@
 ---
-description: UDT içindeki bir üyenin Kullanıcı tanımlı türünün (UDT) başlangıcına olan sapmayı alır.
-title: 'IDiaSymbol:: get_offsetInUdt | Microsoft Docs'
+description: UDT'de bir üyenin kullanıcı tanımlı türünün (UDT) başına uzaklığını alın.
+title: IDiaSymbol::get_offsetInUdt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 442f20d9-9d6a-44a1-83fb-c3f8c14b6c97
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f02c684ad4a21c64ca45aefa8a9da765e5549fe
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: beb8e93156063969b96165fc633f0dab67bbd154
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155896"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113374"
 ---
 # <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
-UDT içindeki bir üyenin Kullanıcı tanımlı türünün (UDT) başlangıcına olan sapmayı alır.
+UDT'de bir üyenin kullanıcı tanımlı türünün (UDT) başına uzaklığını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,21 +35,21 @@ HRESULT get_offsetInUdt(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Sembol konumunun bayt cinsinden sapmasını döndürür.
+[out] Uzaklığı sembol konumunun bayt cinsinden döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev, iyileştirilmiş bir derlemede yalnızca yerel kayıtlarda kullanılır.
+ Bu işlev yalnızca iyileştirilmiş bir derlemede yerel kayıtlarda kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia100.dll
 
