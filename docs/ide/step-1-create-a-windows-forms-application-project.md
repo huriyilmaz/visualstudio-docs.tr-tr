@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: b3e8ce4817b7f9040334137feb88a6cbac3b709aa73e2b0446d5fc51dea3795b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fdc64996386c4755017005e27beb0eba8bcfcc7d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121371677"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078199"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1. Adım: Windows Forms Uygulaması projesi oluşturma
 
@@ -82,7 +82,7 @@ Visual Studio için bir çözüm oluşturur. Çözüm, uygulamanıza gereken tü
 
     ::: moniker range="vs-2017"
 
-    * **Ana pencere** Bu pencerede, formlarla çalışma ve kod düzenleme gibi çoğu işi siz yapacaksınız. Pencerede Form Düzenleyicisi'nde bir **form gösterilir.** Pencerenin üst kısmında Başlangıç Sayfası **sekmesi ve** **Form1.cs [Tasarım]** sekmesi görüntülenir. (Visual Basic sekme adı .cs *yerine .vb* *ile biter.*
+    * **Ana pencere** Bu pencerede, formlarla çalışma ve kod düzenleme gibi çoğu işi siz yapacaksınız. Pencerede Form Düzenleyicisi'nde bir **form gösterilir.** Pencerenin üst kısmında Başlangıç Sayfası **sekmesi ve** **Form1.cs [Tasarım]** sekmesi görüntülenir. (Visual Basic içinde, sekme adı *.cs .)* yerine .vb *ile biter.*
 
     ::: moniker-end
 

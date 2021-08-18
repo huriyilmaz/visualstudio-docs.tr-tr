@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: edaa571a5b58411cfd004907414f389a10ab91733b01140324f4cf12d05e7b11
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e7f686e86f0bb4743e8cbb45e29d0ebcb2b22e5e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347122"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036933"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>Nasıl kullanılır: LINQ to SQL sınıfları (O/R Tasarımcısı) arasında ilişki oluşturma
 içinde varlık sınıfları arasındaki [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ilişkilendirmeler, veritabanındaki tablolar arasındaki ilişkilere benzer. İlişki Düzenleyici iletişim kutusunu kullanarak varlık sınıfları arasında **ilişki** oluşturabilirsiniz.
@@ -24,7 +24,7 @@ içinde varlık sınıfları arasındaki [!INCLUDE[vbtecdlinq](../data-tools/inc
 İlişki oluşturma için İlişki düzenleyici iletişim kutusunu kullanırken bir üst sınıf **ve** alt sınıf seçmeniz gerekir. Üst sınıf, birincil anahtarı içeren varlık sınıfıdır; alt sınıfı, yabancı anahtarı içeren varlık sınıfıdır. Örneğin, ve tablolarına eşlene varlık sınıfları oluşturulduktan sonra sınıf üst `Northwind Customers` `Orders` `Customer` sınıf, `Order` sınıf ise alt sınıf olur.
 
 > [!NOTE]
-> Tabloları Sunucu Gezgini **Veritabanı Gezgini** **(O/R Tasarımcısı)** **Nesne İlişkisel Tasarımcısı** üzerine sürüklerken, ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur. 
+> Tabloları Sunucu Gezgini **veya** **Veritabanı Gezgini** **(O/R Tasarımcısı)** **Nesne İlişkisel Tasarımcısı)** üzerine sürüklerken, ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur.
 
 ## <a name="association-properties"></a>İlişki özellikleri
 bir ilişkilendirme oluşturduk sonra, **O/R Tasarımcısı'nda ilişkilendirmeyi** seçerek Özellikler penceresinde bazı yapılandırılabilir **özellikler** vardır. (İlişkili sınıflar arasındaki çizgi ilişkilendirmedir.) Aşağıdaki tablo, bir ilişkilendirmenin özellikleri için açıklamalar sağlar.
@@ -52,7 +52,7 @@ bir ilişkilendirme oluşturduk sonra, **O/R Tasarımcısı'nda ilişkilendirmey
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to SQL araçları Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
-- [adım adım kılavuz: LINQ to SQL sınıfları oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
+- [Adım adım kılavuz: LINQ to SQL sınıfları oluşturma](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [DataContext yöntemleri (O/R Tasarımcısı)](../data-tools/datacontext-methods-o-r-designer.md)
 - [Nasıl: Birincil anahtarları temsil etme](/dotnet/framework/data/adonet/sql/linq/how-to-represent-primary-keys)

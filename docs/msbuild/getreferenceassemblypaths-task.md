@@ -1,6 +1,6 @@
 ---
-title: GetReferenceAssemblyPaths görevi | Microsoft Docs
-description: çeşitli çerçevelerin başvuru derleme yollarını döndürmek için MSBuild GetReferenceAssemblyPaths görevini kullanın.
+title: GetReferenceAssemblyPaths Görev | Microsoft Docs
+description: Çeşitli MSBuild başvuru derleme yollarını geri almak için GetReferenceAssemblyPaths görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d99a604635597f240f8180f6d67a72e9ae0f59698b7f8b816231a341f6160a4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0909253f87a6eb1e65463d84fb0ff07a2d9cb781
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443469"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077341"
 ---
 # <a name="getreferenceassemblypaths-task"></a>GetReferenceAssemblyPaths görevi
 
@@ -29,20 +29,20 @@ ms.locfileid: "121443469"
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `GetReferenceAssemblyPaths` .
+ Aşağıdaki tabloda görevin parametreleri açık `GetReferenceAssemblyPaths` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`ReferenceAssemblyPaths`|İsteğe bağlı `String[]` çıkış parametresi.<br /><br /> Parametreye göre yolu döndürür `TargetFrameworkMoniker` . `TargetFrameworkMoniker`Null veya boş ise, bu yol olur `String.Empty` .|
-|`FullFrameworkReferenceAssemblyPaths`|İsteğe bağlı `String[]` çıkış parametresi.<br /><br /> `TargetFrameworkMoniker`Adın profil bölümünü düşünmeksizin parametreye göre yolu döndürür. `TargetFrameworkMoniker`Null veya boş ise, bu yol olur `String.Empty` .|
-|`TargetFrameworkMoniker`|İsteğe bağlı `String` parametre.<br /><br /> Başvuru derleme yollarıyla ilişkili hedef Framework bilinen adını belirtir.|
-|`RootPath`|İsteğe bağlı `String` parametre.<br /><br /> Başvuru derleme yolunu oluşturmak için kullanılacak kök yolu belirtir.|
-|`BypassFrameworkInstallChecks`|İsteğe bağlı <xref:System.Boolean> parametre.<br /><br /> `true`, `GetReferenceAssemblyPaths` Hedef çerçeveye bağlı olarak, belirli çalışma zamanı çerçevelerinin yüklü olduğundan emin olmak için varsayılan olarak gerçekleştirilen temel denetimleri atlar.|
-|`TargetFrameworkMonikerDisplayName`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Hedef çerçeve adının görünen adını belirtir.|
+|`ReferenceAssemblyPaths`|İsteğe `String[]` bağlı çıkış parametresi.<br /><br /> parametresine göre yolu `TargetFrameworkMoniker` döndürür. null `TargetFrameworkMoniker` veya boşsa, bu yol `String.Empty` olur.|
+|`FullFrameworkReferenceAssemblyPaths`|İsteğe `String[]` bağlı çıkış parametresi.<br /><br /> Bilinen adın profil bölümünü `TargetFrameworkMoniker` dikkate almadan parametresine göre yolu döndürür. null `TargetFrameworkMoniker` veya boşsa, bu yol `String.Empty` olur.|
+|`TargetFrameworkMoniker`|İsteğe `String` bağlı parametre.<br /><br /> Başvuru derleme yolları ile ilişkili hedef çerçeve bilinen adı belirtir.|
+|`RootPath`|İsteğe `String` bağlı parametre.<br /><br /> Başvuru derleme yolunu oluşturmak için kullanmak üzere kök yolu belirtir.|
+|`BypassFrameworkInstallChecks`|İsteğe <xref:System.Boolean> bağlı parametre.<br /><br /> ise, hedef çerçeveye bağlı olarak belirli çalışma zamanı çerçevelerinin yüklü olduğundan emin olmak için varsayılan `true` `GetReferenceAssemblyPaths` olarak gerçekleştirdiği temel denetimleri atlar.|
+|`TargetFrameworkMonikerDisplayName`|İsteğe `String` bağlı çıkış parametresi.<br /><br /> Hedef çerçeve bilinen adı için görünen adı belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, tabloda listelenen parametrelerin yanı sıra sınıfından devralınan parametreleri de sınıfından <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

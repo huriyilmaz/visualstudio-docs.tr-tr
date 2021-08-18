@@ -1,7 +1,7 @@
 ---
 title: Yönetilen kod için Genişletilmiş Tasarım Yönerge Kuralları kural kümesi
 ms.date: 11/04/2016
-description: Visual Studio, kullanılabilirlik ve bakım açısından odaklanan genişletilmiş tasarım yönergeleri kuralları kuralı hakkında bilgi edinin. Bkz. kural açıklamaları.
+description: Visual Studio'de kullanılabilirlik ve bakıma odaklanan Genişletilmiş Tasarım Yönergeleri Kuralları kural kümesi hakkında bilgi edinin. Kural açıklamalarını görme.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: a338caf2-b75d-4f23-a0f9-3024fa0bceac
@@ -11,20 +11,20 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7a52421f9d2b98af34a67b796f95fa6babf00901eb56862f747019e9b0cd702f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d284dec49e0973f2781f00f178fa193b52797085
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405402"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122075339"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>Yönetilen kod için Genişletilmiş Tasarım Yönerge Kuralları kural kümesi
 
-Microsoft genişletilmiş tasarım kılavuzu kuralları kural kümesi, bildirilen kullanılabilirliği ve bakım sorunlarını en üst düzeye çıkarmak için temel tasarım kılavuzu kuralları ' nı genişletir. Ek vurgu, adlandırma yönergelerine göre yerleştirilir. Projeniz kitaplık kodu içeriyorsa veya bakımı kolay olan kod yazmak için en yüksek standartları zorlamak istiyorsanız bu kural kümesini dahil etmeyi göz önünde bulundurmanız gerekir.
+Microsoft Genişletilmiş Tasarım Kılavuz Kuralları kural kümesi, bildirilen kullanılabilirlik ve bakım sorunlarını en üst düzeye çıkarmak için temel tasarım kılavuzu kurallarını genişletmektedir. Adlandırma yönergelerine daha fazla vurgu yapıldı. Projeniz kitaplık koduna sahipse veya bakımı kolay kod yazmak için en yüksek standartları uygulamak istemiyorsanız bu kural kümesi dahil etmek düşünebilirsiniz.
 
-Genişletilmiş tasarım kılavuzu kuralları, [yönetilen önerilen kurallar](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md) kural kümesindeki kuralları Içeren, [temel tasarım kılavuz kuralları](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md) kural kümesindeki tüm kuralları içerir.
+Genişletilmiş Tasarım Kılavuz Kuralları, Temel Tasarım [](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md) Kılavuz Kuralları kural kümesinde yer alan ve Yönetilen Önerilen Kurallar kural kümesinde yer alan kuralları [içeren tüm kuralları](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md) içerir.
 
-Aşağıdaki tabloda, Microsoft genişletilmiş tasarım kılavuzu kuralları kural kümesindeki tüm kurallar açıklanmaktadır.
+Aşağıdaki tabloda, Microsoft Genişletilmiş Tasarım Kılavuz Kuralları kural kümesinde yer alan tüm kurallar açıkılmıştır.
 
 |Kural|Açıklama|
 |----------|-----------------|
@@ -68,7 +68,7 @@ Aşağıdaki tabloda, Microsoft genişletilmiş tasarım kılavuzu kuralları ku
 |[CA2137](../code-quality/ca2137.md)|Saydam metotlar yalnızca doğrulanabilir IL içermelidir|
 |[CA2138](../code-quality/ca2138.md)|Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır|
 |[CA2140](../code-quality/ca2140.md)|Saydam kod güvenlik kritik nesnelerine başvurmamalıdır|
-|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler bağlantı taleplerini karşılamamalıdır|
+|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'i karşılamamalı|
 |[CA2146](../code-quality/ca2146.md)|Türler en az kendi taban türleri ve arabirimleri kadar kritik olmalıdır|
 |[CA2147](../code-quality/ca2147.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149.md)|Saydam metotlar yerel kod içine çağırmamalıdır|

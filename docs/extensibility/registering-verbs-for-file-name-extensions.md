@@ -1,6 +1,6 @@
 ---
-title: Dosya Adı Uzantıları için Fiilleri Kaydetme | Microsoft Docs
-description: Kabuk anahtarı kullanarak bir dosya adı uzantısı için program tanımlayıcısıyla ilişkili bir fiil kaydetmeyi öğrenin.
+title: Dosya adı uzantıları için fiiller kaydetme | Microsoft Docs
+description: Bir kabuk anahtarı kullanarak bir dosya adı uzantısı için programlı tanımlayıcıyla ilişkili bir fiil kaydetmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,21 +10,22 @@ ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c223dea7e265d8d040d502c99ded09380e89690f
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 00359f3d7d367333af8796b8d1a6ece104287539
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901233"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124496"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>Dosya adı uzantıları için fiilleri kaydetme
-Dosya adı uzantısının bir uygulamayla ilişkilendirmesi genellikle kullanıcı bir dosyaya çift tıkladığında oluşan tercih edilen bir eyleme sahip olur. Tercih edilen bu eylem, eyleme karşılık gelen açık gibi bir fiille bağlantılıdır.
+Bir dosya adı uzantısının uygulamayla ilişkilendirilmesi genellikle Kullanıcı bir dosyayı çift tıkladığında oluşan tercih edilen bir eyleme sahiptir. Bu tercih edilen eylem, eyleme karşılık gelen, örneğin açık olan bir fiil ile bağlantılıdır.
 
- **\{ progid}\shell** konumunda bulunan Kabuk anahtarını kullanarak bir uzantı için program tanımlayıcısı (ProgID) ile ilişkili fiilleri HKEY_CLASSES_ROOT yapabilirsiniz. Daha fazla bilgi için bkz. [Dosya türleri.](/windows/desktop/shell/fa-file-types)
+ Bir uzantı için programlı tanımlayıcı (ProgID) ile ilişkili fiilleri **HKEY_CLASSES_ROOT \{ ProgID} \Shell** konumunda bulunan kabuk anahtarını kullanarak kaydedebilirsiniz. Daha fazla bilgi için bkz. [dosya türleri](/windows/desktop/shell/fa-file-types).
 
-## <a name="register-standard-verbs"></a>Standart fiilleri kaydetme
+## <a name="register-standard-verbs"></a>Standart fiilleri Kaydet
  İşletim sistemi aşağıdaki standart fiilleri tanır:
 
 - Aç
@@ -37,12 +38,12 @@ Dosya adı uzantısının bir uygulamayla ilişkilendirmesi genellikle kullanıc
 
 - Önizleme
 
-  Mümkün olduğunda standart bir fiil kaydedin. En yaygın seçenek Açık fiil'tir. Fiili düzenle'yi yalnızca dosyayı açmakla dosyayı düzenlemek arasında net bir fark varsa kullanın. Örneğin, bir *.htm* dosyası açılırken tarayıcıda görüntülenirken, *.htm* bir HTML düzenleyicisi başlatılır. Standart fiiller işletim sistemi yereli ile yerelleştirilmiştir.
+  Mümkün olduğunda, standart bir fiil kaydedin. En yaygın seçim açık fiildir. Dosyayı açma ve dosyayı düzenleme arasında net bir fark varsa, düzenleme fiilini kullanın. Örneğin, bir *.htm* dosyayı açmak tarayıcıda görüntülenir, ancak bir *.htm* dosyasını düzenlediğinizde bir HTML Düzenleyicisi başlatılır. Standart fiiller, işletim sistemi yerel ayarıyla yereldir.
 
 > [!NOTE]
-> Standart fiilleri kaydederek Aç anahtarı için varsayılan değeri ayarlayacaksınız. Varsayılan değer, menüde görünen dizeyi içerir. İşletim sistemi bu dizeyi standart fiiller için sağlar.
+> Standart fiilleri kaydederken, Open anahtarı için varsayılan değeri ayarlamayın. Varsayılan değer, menüdeki Görüntüleme dizesini içerir. İşletim sistemi bu dizeyi standart fiiller için sağlar.
 
- Kullanıcı dosyayı açtığında yeni bir örneği başlatmak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] için proje dosyalarının kayıtlı olması gerekir. Aşağıdaki örnek, bir proje için standart fiil kaydını [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] göstermektedir.
+ Project dosyalar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir kullanıcı dosyayı açtığında yeni bir örneğini başlatmak için kaydedilmelidir. Aşağıdaki örnekte, bir proje için standart bir fiil kaydı gösterilmektedir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 [HKEY_CLASSES_ROOT\.csproj]
@@ -73,7 +74,7 @@ Dosya adı uzantısının bir uygulamayla ilişkilendirmesi genellikle kullanıc
 @="\"C:\\Program Files\\Common Files\\Microsoft Shared\\MSEnv\\VSLauncher.exe\" \"%1\""
 ```
 
- Varolan bir örneğinde bir dosya açmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir DDEEXEC anahtarı kaydedin. Aşağıdaki örnek, bir .cs dosyası için standart fiil [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] *kaydını* göstermektedir.
+ Var olan bir örneğinde bir dosyayı açmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , BIR DDEEXEC anahtarı kaydedin. Aşağıdaki örnekte [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] *. cs* dosyası için standart bir fiil kaydı gösterilmektedir.
 
 ```
 [HKEY_CLASSES_ROOT\.cs]
@@ -107,11 +108,11 @@ Dosya adı uzantısının bir uygulamayla ilişkilendirmesi genellikle kullanıc
 @="system"
 ```
 
-## <a name="set-the-default-verb"></a>Varsayılan fiili ayarlama
- Varsayılan fiil, kullanıcı Windows Gezgini'nde bir dosyaya çift tıkladığında yürütülen eylemdir. Varsayılan fiil, **\\ *progid*\Shell** anahtarı için varsayılan HKEY_CLASSES_ROOT belirtilen fiildir. Değer belirtilmezse varsayılan fiil, **\\ *progid*\Shell** anahtar HKEY_CLASSES_ROOT belirtilen ilk fiildir.
+## <a name="set-the-default-verb"></a>Varsayılan fiili ayarla
+ varsayılan fiil, kullanıcı Windows Explorer 'da bir dosyayı çift tıkladığında yürütülen eylemdir. Varsayılan fiil, **HKEY_CLASSES_ROOT \\ *ProgID*\ Shell** anahtarı için varsayılan değer olarak belirtilen fiildir. Hiçbir değer belirtilmemişse, varsayılan fiil **HKEY_CLASSES_ROOT \\ *ProgID*\ Shell** anahtar listesinde belirtilen ilk fiildir.
 
 > [!NOTE]
-> Yan yana dağıtımda bir uzantının varsayılan fiilini değiştirmeyi planlıyorsanız, yükleme ve kaldırma üzerindeki etkiyi göz önünde bulundurabilirsiniz. Yükleme sırasında özgün varsayılan değerin üzerine yazılır.
+> Yan yana dağıtımda bir uzantının varsayılan fiilini değiştirmeyi planlıyorsanız, yükleme ve kaldırma üzerindeki etkiyi göz önünde bulundurun. Yükleme sırasında özgün varsayılan değerin üzerine yazılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yan yana dosya ilişkilendirmelerini yönetme](../extensibility/managing-side-by-side-file-associations.md)

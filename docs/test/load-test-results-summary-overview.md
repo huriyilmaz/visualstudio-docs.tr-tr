@@ -16,12 +16,13 @@ ms.assetid: 326b6c3c-5378-452b-8ca3-ba5a06ab3d41
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: ac7fa64b143127d8efe030a94242b237ff9e0d49
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 0d46f4254ae34adc32d3b92be96923373ba6ca45
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887724"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139939"
 ---
 # <a name="load-test-results-summary-overview"></a>Yük testi sonuçları özetine genel bakış
 
@@ -43,10 +44,10 @@ Yük Testi Özeti bölümlere ayrılmıştır. İlk bölümler özetin en üstü
 
 - Anahtar Istatistiği: en yavaş 5 test
 
-- Anahtar Istatistiği: en yavaş 5 SQL Işlemi
+- anahtar istatistiği: en yavaş 5 SQL işlem
 
     > [!NOTE]
-    > SQL Işlemleri bölümü yalnızca, yük testinde SQL izleme etkinse görüntülenir.
+    > SQL işlemler bölümü yalnızca, yük testinde SQL izleme etkinse görüntülenir.
 
 Kapanış bölümleri özetin sonunda görünür ve boş alan kazanmak için daraltılabilirler. Aşağıdaki öğeler yük testi özetinin sonunda görünür:
 
@@ -82,9 +83,9 @@ En yavaş testler bölümü, yük testinde en yavaş 5 testi içerir. Testin ad�
 
 **%95 test süresi (sn)** raporunun %95 ' i, testlerin% ' nin bu süreden daha az saniye içinde tamamlandığını belirten yüzdebirlik değeri.
 
-## <a name="key-statistic-top-5-slowest-sql-operations"></a>Anahtar istatistiği: en yavaş 5 SQL işlemi
+## <a name="key-statistic-top-5-slowest-sql-operations"></a>anahtar istatistiği: en yavaş 5 SQL işlem
 
-Yük testinde SQL izleme etkinse, en yavaş sorgular bölümü, yük testinde en yavaş 5 sorguyu içerir. İşlemin adı ve süre her test için görüntülenir. Süre mikrosaniye (SQL Server 2005) veya milisaniyelik (SQL Server 2000 ve önceki sürümler) olarak görüntülenir. Testler süreye göre azalan sırada listelenir. Bir işlemin adını seçerek **SQL izleme** tablosunu açabilir ve bu işlem için daha fazla ayrıntı inceleyebilirsiniz. Daha fazla bilgi için bkz. [SQL izleme verileri tablosu](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table).
+yük testinde SQL izleme etkinse, en yavaş sorgular bölümü, yük testinde en yavaş 5 sorguyu içerir. İşlemin adı ve süre her test için görüntülenir. süre mikrosaniye (SQL Server 2005) veya milisaniyelik (SQL Server 2000 ve önceki sürümler) olarak görüntülenir. Testler süreye göre azalan sırada listelenir. **SQL izleme** tablosunu açmak için bir işlem adı seçebilirsiniz ve bu işlem için daha fazla ayrıntı inceleyebilirsiniz. daha fazla bilgi için [SQL izleme verileri tablosuna](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table)bakın.
 
 ## <a name="test-results"></a>Test sonuçları
 
@@ -140,5 +141,5 @@ Hatalar bölümü, yük testi sırasında oluşan tüm hataların bir listesini 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eşik Kuralı İhlallerini Çözümleme](../test/analyze-threshold-rule-violations-in-load-tests.md)
-- [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Eşik kuralı ihlallerini analiz etme](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Yük testi sonuçlarını analiz etme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

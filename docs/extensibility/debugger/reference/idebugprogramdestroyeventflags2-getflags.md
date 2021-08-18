@@ -1,6 +1,6 @@
 ---
-description: Program yok etme bayraklarını alır.
-title: 'IDebugProgramDestroyEventFlags2:: GetFlags | Microsoft Docs'
+description: Program yok etme bayraklarını alın.
+title: IDebugProgramDestroyEventFlags2::GetFlags | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cc3a1854277552f1134f29907ec78a0dc1804c1aebaa0f8ce2afc2abe552f845
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2ec997bdc13c8981ae2d0aa1d419ebe61bd3a7a7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338767"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050630"
 ---
 # <a name="idebugprogramdestroyeventflags2getflags"></a>IDebugProgramDestroyEventFlags2::GetFlags
-Program yok etme bayraklarını alır.
+Program yok etme bayraklarını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,10 +42,10 @@ public int GetFlags(
 
 ## <a name="parameters"></a>Parametreler
 `pdwFlags`\
-dışı Program yok etme bayraklarını temsil eder.
+[out] Program yok etme bayraklarını temsil eder.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramDestroyEventFlags2](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2.md)

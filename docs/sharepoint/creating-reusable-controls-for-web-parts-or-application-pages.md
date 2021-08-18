@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 263396167ea99aab30c965ee5c5bee571ceccbd4dae09979e156374c3be554c0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a60b33e73991a1ce5ec75937e07d3f108b6abf61
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425563"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122149513"
 ---
 # <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma
   Bu Visual Studio, uygulama sayfaları tarafından tüketilen özel, yeniden kullanılabilir denetimler ve Web Bölümleri çalıştırılabilir denetimler SharePoint. Bu denetimler kullanıcı denetimleri olarak adlandırılan bir denetimdir. Kullanıcı denetimi, ASP.NET Web sayfasına çok benzer şekilde çalışan bir bileşik denetim t'tir. Bir kullanıcı denetimine mevcut Web sunucusu denetimlerini ve işaretlemesini ekleyebilir ve denetim için özellikler ve yöntemler tanımlayabilirsiniz. Daha sonra bunları bir ASP.NET gibi davranacakları web sayfalarına katıştırabilirsiniz.

@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, alanlar numaralandırmasındaki öğe sayısını döndürür.
-title: 'IEnumDebugFields:: GetCount | Microsoft Docs'
+description: Bu yöntem, alan numaralamada öğelerin sayısını döndürür.
+title: IEnumDebugFields::GetCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d1d6d2dcd626529582d0dab413fb47b4db5b789e83557fda68debf9cc0945729
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 531515008872ce2d03a7b95a4a84c14550f3b254
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415551"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095588"
 ---
 # <a name="ienumdebugfieldsgetcount"></a>IEnumDebugFields::GetCount
-Bu yöntem, Numaralandırmadaki öğe sayısını döndürür.
+Bu yöntem, numaralamada öğe sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-dışı Numaralandırmadaki öğe sayısını döndürür.
+[out] Numaralamada öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, yalnızca ileri, kopyalama, atlama ve sıfırlama 'nın uygulanması gerektiğini belirten normal com numaralandırma arabiriminin bir parçası değildir.
+ Bu yöntem yalnızca İleri, Kopyala, Atla ve Sıfırla'nın uygulanmasının gerekli olduğunu belirten özel COM numaralama arabiriminin bir parçası değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

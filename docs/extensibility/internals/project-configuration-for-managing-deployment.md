@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa66bd9e4760c060082c07d72a90f853bf47dbda3604016b8786fb105fbaac4d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fdd15349522c1bf49f379551825a773b676f6196
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375717"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094652"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Dağıtımı Yönetmek için Proje Yapılandırması
 Dağıtım, çıkış öğelerini derleme sürecinden hata ayıklama ve yükleme için beklenen konuma fiziksel olarak taşıma eylemidir. Örneğin, bir Web uygulaması yerel bir makine üzerinde ve ardından sunucuya yerleştirilmiş olabilir.

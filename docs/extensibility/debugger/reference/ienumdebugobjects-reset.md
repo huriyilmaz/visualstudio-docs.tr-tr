@@ -11,17 +11,18 @@ ms.assetid: 4a245e47-cc39-4177-b83d-083ea0e3190f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 193f0f2f793c1ca1ee1af208105be33754a1effa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b492171974f57ca99965fbf491591b351d3f5185
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083056"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152815"
 ---
 # <a name="ienumdebugobjectsreset"></a>IEnumDebugObjects::Reset
 Bu yöntem, numaralandırmayı ilk öğe olarak sıfırlar.

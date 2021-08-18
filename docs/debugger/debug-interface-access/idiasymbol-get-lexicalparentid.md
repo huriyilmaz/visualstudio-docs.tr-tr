@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bb24fba428635c9ad97b1cb947fd3802b42a5ec83b517e7d5ca32fe44fcad09b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fde19f77fe924fbbc8cb7ba7e6ae096ba0805151
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391699"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161410"
 ---
 # <a name="idiasymbolget_lexicalparentid"></a>IDiaSymbol::get_lexicalParentId
 Simgenin sözcük üst tanımlayıcısını alır.

@@ -10,14 +10,15 @@ ms.assetid: 6be80904-e66c-4cae-8891-1113b799fb01
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b2946309c72fbdddf2794c1da1e773e9a529368
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 6039cff32588296e861a83126fc3541bc49c43f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900725"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080188"
 ---
 # <a name="program-control"></a>Program denetimi
 Hata Visual Studio, aşağıdaki adımlama ve devam eden yordamların hepsi program düzeyinde gerçekleşir:

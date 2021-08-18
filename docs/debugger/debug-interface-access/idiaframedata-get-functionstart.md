@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: df9bc6ad880ea0ef52d30cec4781852eb4d63f0e6c1b2567ec0b9ac393ddf6c1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b33b08a00d62c89228346e5171219a801b0ad2a9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312175"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161757"
 ---
 # <a name="idiaframedataget_functionstart"></a>IDiaFrameData::get_functionStart
 Bloğun bir işlevin giriş noktasını içerip içermediğini gösteren bir bayrak alır.

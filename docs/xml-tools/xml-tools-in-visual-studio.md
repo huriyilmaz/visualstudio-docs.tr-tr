@@ -35,14 +35,14 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: ed82ee7f73f9d5dd871e333275c8564d849db5b737e795faa431eece12388e54
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4ff3edfedecc3598ba2571723f4757a60ffc8c45
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121350985"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098573"
 ---
-# <a name="overview-of-xml-tools-in-visual-studio"></a>Visual Studio'daki XML araçlarına genel bakış
+# <a name="overview-of-xml-tools-in-visual-studio"></a>Visual Studio'de XML araçlarına genel bakış
 
 *genişletilebilir biçimlendirme dili (XML),* verileri açıklamaya olanak sağlayan bir biçimlendirme dilidir. XML, Genişletilebilir Stil Sayfası Dili (XSL) ve basamaklı stil sayfaları (CSS) gibi ilişkili stil sayfalarını kullanarak verileri ve sunumunu birbirinden ayırıyor. Visual Studio XML, XSLT ve XML şemaları ile çalışmayı kolaylaştıran araçlar ve özellikler içerir.
 
@@ -66,11 +66,11 @@ Ek özellikler şunlardır:
 
 ## <a name="xml-schema-designer"></a>XML Şema Tasarımcısı
 
-[XML Şema Tasarımcısı,](xml-schema-designer.md) XML şema Visual Studio (XSD) şemaları ile çalışmana olanak sağlamak için xml düzenleyicisi ve xml düzenleyicisi ile tümleşiktir.
+[XML Şema Tasarımcısı,](xml-schema-designer.md) XML şema Visual Studio dil (XSD) şemaları ile çalışmana olanak sağlamak için xml düzenleyicisi ile tümleşiktir.
 
 ## <a name="xslt-debugging"></a>XSLT hata ayıklama
 
-Visual Studio [XSLT stil sayfalarında hata ayıklamayı destekler.](../xml-tools/debugging-xslt.md) Hata ayıklayıcıyı kullanarak bir XSLT stil sayfası içinde kesme noktaları ayarlayın, koddan XSLT stil sayfası içine adım atabilirsiniz ve bu şekilde devam edin.
+Visual Studio [XSLT stil sayfalarında hata ayıklamayı destekler.](../xml-tools/debugging-xslt.md) Hata ayıklayıcıyı kullanarak bir XSLT stil sayfası içinde kesme noktaları ayarlayın, koddan bir XSLT stil sayfası içine adım atabilirsiniz ve bu şekilde devam edin.
 
 > [!NOTE]
 > XSLT hata ayıklayıcısı yalnızca Enterprise'nin Visual Studio.

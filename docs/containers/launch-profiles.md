@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 9186eb2e7c440af4ff99c4633a7abbc5fc7dd3fd6ad567ef6e116917a608f640
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f1176a106abaad7a5806f91e0fbf8a515e6c20e4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312319"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105650"
 ---
 # <a name="manage-launch-profiles-for-docker-compose"></a>Docker Compose için başlatma profillerini yönetme
 

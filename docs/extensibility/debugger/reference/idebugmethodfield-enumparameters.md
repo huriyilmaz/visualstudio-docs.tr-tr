@@ -11,17 +11,18 @@ ms.assetid: d77b1197-deb6-4144-8d1b-8b09949ccfac
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0f2085b6a2aff6b41456f47a01c446b1c646f353
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6c1b00ee241f420d7c96fa27a5a02e17ab244009
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058397"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138087"
 ---
 # <a name="idebugmethodfieldenumparameters"></a>IDebugMethodField::EnumParameters
 Metodun parametreleri için bir Numaralandırıcı oluşturur.

@@ -1,6 +1,6 @@
 ---
 description: Bu genel parametreyle ilişkili kısıtlamaların sayısını döndürür.
-title: 'Idebuggenericparamfield:: ConstraintCount | Microsoft Docs'
+title: IDebugGenericParamField::ConstraintCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2f49b98fe463977790230201a146a79375f005321aa353d9a2a59e9ac6dd7296
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 66f559b6c4e4967fdf1e649b5116780728b01dbc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292448"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138126"
 ---
 # <a name="idebuggenericparamfieldconstraintcount"></a>IDebugGenericParamField::ConstraintCount
 Bu genel parametreyle ilişkili kısıtlamaların sayısını döndürür.
@@ -45,10 +45,10 @@ int ConstraintCount(
 [in, out] Bu alanla ilişkili kısıtlamaların sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugGenericParamField arabirimini ortaya çıkaran bir CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl [uygulandığını](../../../extensibility/debugger/reference/idebuggenericparamfield.md) gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::ConstraintCount(ULONG32* pcConst)

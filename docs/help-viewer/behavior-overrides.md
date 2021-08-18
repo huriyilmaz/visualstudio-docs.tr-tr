@@ -10,16 +10,16 @@ manager: jmartens
 ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d0838b648a08f430bbe917c9ec073b2760dfe0605f13a83a6ced5ef3e32040f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 16bd273925ec3fc01dddecf3b9d7d2f0a0dcf2d3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358668"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109727"
 ---
 # <a name="help-content-manager-overrides"></a>Help Content Manager geçersiz kılmaları
 
-IDE'de Yardım Görüntüleyicisi'nin ve yardımla ilgili özelliklerin varsayılan Visual Studio değiştirebilirsiniz. Bazı seçenekler, çeşitli kayıt defteri anahtar [değerlerini ayarlamak için bir .pkgdef](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/) dosyası oluşturarak belirtilir. Diğerleri doğrudan kayıt defterinde ayarlanır.
+Yardım Görüntüleyicisi'nin varsayılan davranışını ve yardımla ilgili özellikleri IDE'Visual Studio değiştirebilirsiniz. Bazı seçenekler, çeşitli kayıt defteri anahtar [değerlerini ayarlamak için bir .pkgdef](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/) dosyası oluşturarak belirtilir. Diğerleri doğrudan kayıt defterinde ayarlanır.
 
 ## <a name="how-to-control-help-viewer-behavior-by-using-a-pkgdef-file"></a>.pkgdef dosyası kullanarak Yardım Görüntüleyicisi davranışını denetleme
 
@@ -40,9 +40,9 @@ IDE'de Yardım Görüntüleyicisi'nin ve yardımla ilgili özelliklerin varsayı
 |OnlineBaseUrl|string|\<http URL for service endpoint\>|Benzersiz bir F1 uç noktası tanımlama|
 |OnlineHelpPreferenceDisabled|Dword|`0` çevrimiçi Yardım tercihi `1` seçeneğini etkinleştirmek veya devre dışı bırakmak için|Çevrimiçi Yardım tercihini devre dışı bırak seçeneği|
 |DisableManageContent|Dword|`0` Yardım Görüntüleyicisi'nde `1` İçeriği Yönet sekmesini etkinleştirmek **veya** devre dışı bırakmak için|İçeriği Yönet **sekmesini devre dışı** bırakma|
-|DisableFirstRunHelpSelection|Dword|`0`İlk kez yapılandırılan yardım özelliklerini etkinleştirmek veya devre dışı `1` bırakmak Visual Studio|İlk başlatma sırasında içeriğin yüklemesini devre dışı Visual Studio|
+|DisableFirstRunHelpSelection|Dword|`0`İlk kez `1` yapılandırılan yardım özelliklerini etkinleştirmek veya devre dışı bırakmak Visual Studio|İlk kez başlatan içerik yüklemesini devre dışı Visual Studio|
 
-### <a name="example-pkgdef-file-contents"></a>Örnek .pkgdef dosyası içeriği
+### <a name="example-pkgdef-file-contents"></a>Örnek .pkgdef dosya içeriği
 
 ```pkgdef
 [$RootKey$\Help]

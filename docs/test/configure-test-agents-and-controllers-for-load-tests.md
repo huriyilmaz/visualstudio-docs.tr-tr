@@ -1,6 +1,6 @@
 ---
 title: Yük testleri için test aracılarını/test denetleyicilerini yapılandırma
-description: Visual Studio, tek bir bilgisayardan yalnızca bir bilgisayarın oluşturabileceğinden daha fazla yük oluşturmak için fiziksel veya sanal makineler kullanarak nasıl sanal yük oluşturabileceğiniz hakkında bilgi edinin.
+description: Tek bir Visual Studio daha fazla yük oluşturmak için fiziksel veya sanal makineleri kullanarak sanal yük oluşturma hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,87 +10,87 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1f789b8e5816b072b815cb59bae6c1cd377e0d055db53b8a663f6b4d5c2f7266
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7c9a85e89e878076302796145c7669e8d5cdd83e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106672"
 ---
-# <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Yük testlerini çalıştırmak için Test aracılarına ve test denetleyicilerine genel bakış
+# <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Yük testlerini çalıştırmaya ilişkin test aracıları ve test denetleyicilerine genel bakış
 
-Visual Studio, fiziksel veya sanal makineler kullanarak uygulamanız için benzetilen yük oluşturabilir. Bu makinelerin tek bir test denetleyicisi ve bir veya daha fazla test aracısı olarak ayarlanması gerekir. Test denetleyicisini ve test aracılarını, tek bir bilgisayardan yalnızca bir bilgisayarın oluşturabileceğinden daha fazla yük oluşturmak için kullanabilirsiniz.
+Visual Studio fiziksel veya sanal makineler kullanarak uygulamanıza yönelik sanal yük oluşturabilirsiniz. Bu makinelerin tek bir test denetleyicisi ve bir veya daha fazla test aracısı olarak ayarlanmış olması gerekir. Tek bir bilgisayarın tek başına oluşturandan daha fazla yük oluşturmak için test denetleyicisini ve test aracılarını kullanabilirsiniz.
 
 > [!NOTE]
-> Ayrıca, Web sitenize aynı anda erişen birçok kullanıcının yükünü üreten sanal makineler sağlamak için bulut tabanlı yük testi de kullanabilirsiniz. Ancak, bulutta barındırılan sanal makinelerde test denetleyicisi/test Aracısı kurulumu kullanılması desteklenmez. [Azure test Plans kullanarak yük testlerini Çalıştır](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true)' da bulut tabanlı yük testi hakkında daha fazla bilgi edinin.
+> Aynı anda web sitenize erişen çok sayıda kullanıcının yükünü oluşturan sanal makineler sağlamak için bulut tabanlı yük testini de kullanabilirsiniz. Ancak, bulutta barındırılan sanal makinelerde test denetleyicisi/test aracısı kurulumunun kullanımı desteklenmiyor. Bulut tabanlı yük testi hakkında daha fazla bilgi için [Azure Test Plans.](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true)
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="load-simulation-architecture"></a>Yük Simülasyon mimarisi
+## <a name="load-simulation-architecture"></a>Yük benzetimi mimarisi
 
-yük simülasyon mimarisi, bir Visual Studio istemcisi, test denetleyicisi ve test aracılarından oluşur.
+Yük benzetimi mimarisi, Visual Studio, test denetleyicisi ve test aracılarından oluşur.
 
-- İstemci, testlerin geliştirilmesi, testlerin çalıştırılması ve test sonuçlarını görüntülemek için kullanılır.
+- İstemci testleri geliştirmek, testleri çalıştırmak ve test sonuçlarını görüntülemek için kullanılır.
 
-- Test denetleyicisi test aracılarını yönetmek ve test sonuçlarını toplamak için kullanılır.
+- Test denetleyicisi, test aracılarını yönetmek ve test sonuçlarını toplamak için kullanılır.
 
-- test aracıları, testleri çalıştırmak için kullanılır ve sistem bilgileri ve test ayarında tanımlanan profil oluşturma verileri ASP.NET dahil olmak üzere veri toplar.
+- Test aracıları testleri çalıştırmak ve sistem bilgileri ve test ayarında tanımlanan profil ASP.NET verileri toplamak için kullanılır.
 
 Bu mimari aşağıdaki avantajları sağlar:
 
-- Test denetleyicisine ek test aracıları ekleyerek yük oluşturmayı ölçeklendirebilme özelliği.
+- Bir test denetleyicisine ek test aracıları ekleyerek yük oluşturmanın ölçeğini ölçeklendirebilme.
 
-- Aynı veya farklı bilgisayarlara istemci, test denetleyicisi ve test Aracısı yazılımı yükleme esnekliği. Örnek:
+- İstemci, test denetleyicisi ve test aracısı yazılımını aynı veya farklı bilgisayarlara yükleme esnekliği. Örnek:
 
    **Yerel yapılandırma:**
 
   - Machine1: Visual Studio, denetleyici, aracı.
 
-    ![Denetleyiciyi ve aracıyı kullanan yerel makine](./media/load-test-configa.png)
+    ![Denetleyici ve aracı kullanan yerel makine](./media/load-test-configa.png)
 
     **Tipik uzak yapılandırma:**
 
-  - Machine1 ve 2: Visual Studio (aynı denetleyiciyi birden çok test ediciler kullanabilir).
+  - Makine1 ve 2: Visual Studio (birden çok testçi aynı denetleyiciyi kullanabilir).
 
-  - Machine3: denetleyici (aracıların yüklü olması de olabilir).
+  - Machine3: Denetleyici (aracılar da yüklü olabilir).
 
-  - Machine4-n: tüm aracı veya aracıları, Machine3 üzerinde denetleyicisiyle ilişkili.
+  - Machine4-n: Aracı veya aracıların hepsi Machine3'te denetleyiciyle ilişkilendirildi.
 
-    ![Denetleyiciyi ve aracıları kullanan uzak makineler](./media/load-test-configb.png)
+    ![Denetleyici ve aracıları kullanan uzak makineler](./media/load-test-configb.png)
 
-Bir test denetleyicisi genellikle birkaç test aracısını yönetse de bir aracı yalnızca tek bir denetleyiciyle ilişkilendirilebilir. Her test aracısı, bir geliştirici ekibi tarafından paylaşılabilir. Bu mimari, test aracılarının sayısını arttırmayı kolaylaştırır ve bu sayede daha büyük yüklemeler oluşturulmasını kolaylaştırır.
+Bir test denetleyicisi genellikle birkaç test aracısını yönetse de, bir aracı yalnızca tek bir denetleyiciyle ilişkilendiril olabilir. Her test aracısı bir geliştirici ekibi tarafından paylaşılır. Bu mimari, test aracılarının sayısını artırmayı ve böylece daha büyük yükler oluşturmayı kolaylaştırır.
 
-## <a name="test-agent-and-test-controller-interaction"></a>Test Aracısı ve test denetleyicisi etkileşimi
+## <a name="test-agent-and-test-controller-interaction"></a>Test aracısı ve test denetleyicisi etkileşimi
 
-Test denetleyicisi, testleri çalıştırmak için bir test aracıları kümesini yönetir. Test denetleyicisi, testleri başlatmak, testleri durdurmak, test Aracısı durumunu izlemek ve test sonuçlarını toplamak için test aracılarıyla iletişim kurar.
+Test denetleyicisi, testleri çalıştırmak için bir dizi test aracısını yönetir. Test denetleyicisi testleri başlatmak, testleri durdurmak, test aracısı durumunu izlemek ve test sonuçlarını toplamak için test aracıları ile iletişim kurar.
 
 ### <a name="test-controller"></a>Test denetleyicisi
 
-Test denetleyicisi, testleri çalıştırmak için genel bir mimari sağlar ve yük testlerini çalıştırmaya yönelik özel özellikler içerir. Test denetleyicisi, yük testini tüm test aracılarına gönderir ve tüm test aracıları testi başlattığını kadar bekler. Tüm test aracıları hazırsa, test denetleyicisi testi başlatmak için Test aracılarına bir ileti gönderir.
+Test denetleyicisi testleri çalıştırmaya genel bir mimari sağlar ve yük testlerini çalıştırmaya özel özellikler içerir. Test denetleyicisi yük testini tüm test aracısına gönderir ve tüm test aracıları testi başlatana kadar bekler. Tüm test aracıları hazır olduğunda, test denetleyicisi testi başlatmak için test aracısına bir ileti gönderir.
 
-### <a name="test-agent"></a>Test Aracısı
+### <a name="test-agent"></a>Test aracısı
 
-Test Aracısı, test denetleyicisinden yeni bir test başlatmak üzere istekleri dinleyen bir hizmet olarak çalışır. Test Aracısı bir istek aldığında, test Aracısı hizmeti testlerin çalıştırılacağı bir işlem başlatır. Her test Aracısı aynı yük testini çalıştırır.
+Test aracısı, yeni bir test başlatmak için test denetleyicisinden gelen istekleri dinleyen bir hizmet olarak çalışır. Test aracısı bir istek aldığında, test aracısı hizmeti testleri çalıştırmak için bir işlem başlatır. Her test aracısı aynı yük testini çalıştırır.
 
-Test aracılarına yönetici tarafından bir ağırlık atanır ve yükleme bir test aracısının ağırlığına göre dağıtılır. Örneğin, test aracısı 1, 30 ağırlığa sahipse ve test Aracısı 2 70 ağırlığa sahipse ve yük 1000 ' e ayarlanmışsa, test aracısı 1, 300 sanal kullanıcılarına benzeirken test Aracısı 2, 700 sanal kullanıcılarına benzetir. Bkz. [Visual Studio ile test denetleyicilerini ve test aracılarını yönetme](../test/manage-test-controllers-and-test-agents.md).
+Test aracılarının ağırlığı yönetici tarafından atanır ve yük, test aracılarının ağırlığına göre dağıtılır. Örneğin, test aracısı 1'in ağırlığı 30 ise ve test aracısı 2'nin ağırlığı 70 ise ve yük 1000 kullanıcıya ayarlanırsa, test aracısı 1 300 sanal kullanıcının benzetimini, test aracısı 2 ise 700 sanal kullanıcının benzetimini sağlar. Bkz. [Test denetleyicilerini ve test aracılarını Visual Studio.](../test/manage-test-controllers-and-test-agents.md)
 
-Test Aracısı bir dizi testi ve bir benzetim parametreleri kümesini giriş olarak alır. Önemli bir kavram, testlerin çalıştırıldığı bilgisayardan bağımsızdır.
+Test aracısı giriş olarak bir dizi test ve bir dizi simülasyon parametresi alır. Temel kavramlardan biri, testleri çalıştıracakları bilgisayardan bağımsızdır.
 
-## <a name="test-controller-and-test-agent-connection-points"></a>Test denetleyicisi ve test Aracısı bağlantı noktaları
+## <a name="test-controller-and-test-agent-connection-points"></a>Test denetleyicisi ve test aracısı bağlantı noktaları
 
-Aşağıdaki çizimde, test denetleyicisi, test aracısı ve istemci arasındaki bağlantı noktaları gösterilmektedir. Gelen ve giden bağlantılar için hangi bağlantı noktalarının kullanıldığını ve bu bağlantı noktalarında kullanılan güvenlik kısıtlamalarını özetler.
+Aşağıdaki çizimde test denetleyicisi, test aracısı ve istemci arasındaki bağlantı noktaları gösterilmiştir. Gelen ve giden bağlantılar için kullanılan bağlantı noktalarının yanı sıra bu bağlantı noktalarında kullanılan güvenlik kısıtlamalarını özetler.
 
-![Test denetleyicisi ve test Aracısı bağlantı noktaları ve güvenliği](./media/test-controller-agent-firewall.png)
+![Test denetleyicisi ve test aracısı bağlantı noktaları ve güvenlik](./media/test-controller-agent-firewall.png)
 
-Daha fazla bilgi için bkz. [Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma](../test/configure-ports-for-test-controllers-and-test-agents.md).
+Daha fazla bilgi için [bkz. Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma.](../test/configure-ports-for-test-controllers-and-test-agents.md)
 
 ## <a name="test-controller-and-agent-installation-information"></a>Test denetleyicisi ve aracı yükleme bilgileri
 
-Test denetleyicileri ve test aracıları için donanım ve yazılım gereksinimleri, bunları yükleme yordamları ve ortamınızı en iyi performansa göre yapılandırma hakkında önemli bilgiler için, bkz. [test aracılarını yükleme ve yapılandırma](../test/lab-management/install-configure-test-agents.md).
+Test denetleyicileri ve test aracıları için donanım ve yazılım gereksinimleri, bunları yükleme yordamları ve ortamınızı en iyi performans için yapılandırma hakkında önemli bilgiler için bkz. Test aracılarını yükleme [ve yapılandırma.](../test/lab-management/install-configure-test-agents.md)
 
 ## <a name="use-the-test-controller-and-test-agent-with-unit-tests"></a>Birim testleriyle test denetleyicisini ve test aracısını kullanma
 
-Bir test denetleyicisi ve bir ya da daha fazla aracı yükledikten sonra, yük testleriniz için test ayarında test denetleyicisi ile bir uzaktan yürütme kullanılıp kullanılmayacağını belirtebilirsiniz. Ayrıca, test ayarındaki aracılarla ilişkili rolüyle birlikte kullanılacak veri ve tanılama bağdaştırıcılarını de belirtebilirsiniz.
+Bir test denetleyicisi ve bir ya da daha fazla aracı yükledikten sonra, yük testleriniz için test ayarında test denetleyicisi ile bir uzaktan yürütme kullanılıp kullanılmayacağını belirtebilirsiniz. Ayrıca, test ayarında aracılarla ilişkili rol ile birlikte kullanmak üzere veri ve tanılama bağdaştırıcılarını belirtebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ff9af2c9bf9d1eb285056bbfebf16daefe1ac627377c537df502ab74812473c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7c7eb5e36b511448e891c2ae38a960815d9875cb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121333216"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142110"
 ---
 # <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505: Profili oluşturulan İşlem için ayırılmış Ortalama Özel Baytlar
 

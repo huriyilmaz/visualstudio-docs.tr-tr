@@ -10,14 +10,15 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 103df21549aee2f50570b9ed52e7b70f42efacbe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4bd454b71bf7f2b69fd9564e474c054ee413c99f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869030"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109025"
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>Nasıl yapılır: kod parçacıkları ile surround kullanma
 
@@ -25,7 +26,7 @@ Aşağıdaki yordamlar, kod parçacıkları ile surround kullanmayı açıklamak
 
 ## <a name="to-use-surround-with-code-snippets-through-keyboard-shortcut"></a>Klavye kısayolu ile surround ile kod parçacıklarını kullanmak için
 
-1. Visual Studio IDE 'de, düzenlemek istediğiniz dosyayı açın.
+1. Visual Studio ıde 'de, düzenlemek istediğiniz dosyayı açın.
 
 1. **Kod düzenleyicisinde**, çevrelemek için metin ' i seçin.
 
@@ -35,7 +36,7 @@ Aşağıdaki yordamlar, kod parçacıkları ile surround kullanmayı açıklamak
 
 ## <a name="to-use-surround-with-code-snippets-through-the-edit-menu"></a>Düzenleme menüsü ile surround ile kod parçacıklarını kullanmak için
 
-1. Visual Studio IDE 'de, düzenlemek istediğiniz dosyayı açın.
+1. Visual Studio ıde 'de, düzenlemek istediğiniz dosyayı açın.
 
 1. **Kod düzenleyicisinde**, çevrelemek için metin ' i seçin.
 
@@ -47,7 +48,7 @@ Aşağıdaki yordamlar, kod parçacıkları ile surround kullanmayı açıklamak
 
 ## <a name="to-use-surround-with-code-snippets-through-the-context-menu"></a>Bağlam menüsü ile surround ile kod parçacıklarını kullanmak için
 
-1. Visual Studio IDE 'de, düzenlemek istediğiniz dosyayı açın.
+1. Visual Studio ıde 'de, düzenlemek istediğiniz dosyayı açın.
 
 1. **Kod düzenleyicisinde**, çevrelemek için metin ' i seçin.
 

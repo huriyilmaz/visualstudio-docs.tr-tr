@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 90df39308965b8ac7fd9513a44f4c136dcfc14cd71abd8b5973f33851830d2fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 323756067e8c553eb13729e305cb76677ccf3a3b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121369703"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142721"
 ---
 # <a name="uidmanager-task"></a>UidManager görevi
 

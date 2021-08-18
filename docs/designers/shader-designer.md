@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: b3532444945b02f145262d099e41fe69d99b6926ef9aa64c4d780978463de7f3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 02b59924a2b2020d6c5855f5e91f41615601a19d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435145"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073662"
 ---
 # <a name="shader-designer"></a>Gölgelendirici Tasarımcısı
 
@@ -99,111 +99,111 @@ Bu tabloda Gölgelendirici Tasarımcısı  Modu araç çubuğundaki öğeler, so
 |**Düzlem ile önizleme**|Etkinleştirildiğinde gölgelendiricinin önizlemesini görmek için bir düzlem modeli kullanılır. Aynı anda yalnızca bir önizleme şekli etkinleştirilebilir.|
 |**Araç Kutusu**|Alternatif olarak Araç Kutusunu gösterir **veya gizler.**|
 |**Özellikler**|Alternatif olarak Özellikler penceresini gösterir veya **gizler.**|
-|**Gelişmiş**|Gelişmiş komutları ve seçenekleri içerir.<br /><br /> **Dışarı** Aktar: Gölgelendiricinin çeşitli biçimlerde dışarı aktarılabilir.<br /><br /> **Farklı Dışarı** Aktar: Gölgelendiriciyi HLSL kaynak kodu olarak veya derlenmiş gölgelendirici bytecode olarak dışarı aktarın. Gölgelendiricileri dışarı aktarma hakkında daha fazla bilgi için [bkz. Nasıl: Gölgelendiriciyi dışarı aktarma.](../designers/how-to-export-a-shader.md)<br /><br /> **Grafik Altyapıları:** Tasarım yüzeyini görüntülemek için kullanılan işleyicinin seçimini sağlar.<br /><br /> **D3D11 ile işleme:** Gölgelendirici Tasarımcısı tasarım yüzeyini işlemek için Direct3D 11 kullanır.<br /><br /> **D3D11WARP** ile işleme: Gölgelendirici Tasarımcısı tasarım yüzeyini işlemek için Direct3D 11 Windows Gelişmiş Tarama Platformu'na (RENDER) sahiptir.<br /><br /> **Görünüm**: Gölgelendirici Tasarımcısı hakkında ek bilgi seçimini sunar.<br /><br /> **Kare hızı**: etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesindeki geçerli kare hızını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. Bu seçenek, **gerçek zamanlı Işleme modu** seçeneğini etkinleştirdiğinizde yararlıdır.|
+|**Gelişmiş**|Gelişmiş komutları ve seçenekleri içerir.<br /><br /> **Dışarı** aktar: Bir gölgelendiricinin çeşitli biçimlerde dışarı aktarılabilir.<br /><br /> **Farklı Dışarı** Aktar: Gölgelendiriciyi HLSL kaynak kodu olarak veya derlenmiş gölgelendirici bytecode olarak dışarı aktarın. Gölgelendiricileri dışarı aktarma hakkında daha fazla bilgi için [bkz. Nasıl: Gölgelendiriciyi dışarı aktarma.](../designers/how-to-export-a-shader.md)<br /><br /> **Grafik Altyapıları:** Tasarım yüzeyini görüntülemek için kullanılan işleyicinin seçimini sağlar.<br /><br /> **D3D11 ile işleme:** Gölgelendirici Tasarımcısı tasarım yüzeyini işlemek için Direct3D 11 kullanır.<br /><br /> **D3D11WARP** ile işleme: Gölgelendirici Tasarımcısı tasarım yüzeyini işlemek için Direct3D 11 Windows Gelişmiş Tarama Platformu'na (RENDER) sahiptir.<br /><br /> **Görünüm:** Gölgelendirici Tasarımcısı hakkında ek bilgi seçimini sağlar.<br /><br /> **Çerçeve Hızı:** Etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesinde geçerli kare oranını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. Bu seçenek, Gerçek Zamanlı İşleme **Modu seçeneğini etkinleştirenler için** kullanışlıdır.|
 
 > [!TIP]
-> Son komutu yeniden çalıştırmak için **Gelişmiş** düğmesini seçebilirsiniz.
+> Son komutu yeniden **çalıştırmak** için Gelişmiş düğmesini seçebilirsiniz.
 
 ### <a name="work-with-nodes-and-connections"></a>Düğümler ve bağlantılarla çalışma
 
-Düğümleri eklemek, kaldırmak, yeniden konumlandırmak, bağlamak ve yapılandırmak için **seçim** modunu kullanın. Bu temel işlemleri gerçekleştirmek için aşağıdaki adımları izleyin:
+Düğümleri **eklemek,** kaldırmak, yeniden konumlandırmak, bağlamak ve yapılandırmak için Seçim modunu kullanın. Bu temel işlemleri şu şekilde gerçekleştirin:
 
-#### <a name="to-perform-basic-operations-in-select-mode"></a>Seçme modunda temel işlemleri gerçekleştirmek için
+#### <a name="to-perform-basic-operations-in-select-mode"></a>Seçim modunda temel işlemleri gerçekleştirmek için
 
 - Aşağıdaki adımları uygulayın:
 
-  - Grafiğe bir düğüm eklemek için **araç kutusunda** seçin ve tasarım yüzeyine taşıyın.
+  - Grafiye bir düğüm eklemek için, Araç Kutusundan düğümü **seçin** ve tasarım yüzeyine taşıyın.
 
-  - Grafikten bir düğüm kaldırmak için, seçin ve ardından **Delete** tuşuna basın.
+  - Bir düğümü grafikten kaldırmak için seçin ve Sil'e **basın.**
 
-  - Bir düğümü yeniden konumlandırmak için seçin ve sonra yeni bir konuma taşıyın.
+  - Bir düğümü yeniden konumlandırmak için düğümü seçin ve yeni bir konuma taşının.
 
-  - İki düğüm bağlamak için bir düğümün çıkış terminalini diğer düğümün giriş terminaline taşıyın. Yalnızca uyumlu türleri olan terminaller bağlanabilir. Terminallerde bir çizgi bağlantıyı gösterir.
+  - İki düğümü bağlamak için, bir düğümün çıkış terminali diğer düğümün giriş terminaline hareket ettirin. Yalnızca uyumlu türlere sahip terminaller bağlanabilir. Terminaller arasındaki bir satır, bağlantıyı gösterir.
 
-  - Bir bağlantıyı kaldırmak için, bağlı terminallerin her biri için kısayol menüsünde **Bağlantıları Kes**' i seçin.
+  - Bağlantıyı kaldırmak için, bağlı terminallerden birinin kısayol menüsünde Bağlantıları **Kesme'yi seçin.**
 
-  - Bir düğümün özelliklerini yapılandırmak için düğümü seçin ve ardından **Özellikler** penceresinde özellikler için yeni değerler belirtin.
+  - Bir düğümün özelliklerini yapılandırmak için düğümü seçin ve özellikler **penceresinde** özellikler için yeni değerler belirtin.
 
-### <a name="preview-shaders"></a>Gölgelendiriciler önizlemesi
+### <a name="preview-shaders"></a>Önizleme gölgelendiricileri
 
-Uygulamanızda bir gölgelendiricinin nasıl görüneceğini anlamanıza yardımcı olmak için, etkinizi nasıl önizlenbileceğinizi yapılandırabilirsiniz. Uygulamanızı yaklaşık olarak oluşturmak, dokular ve diğer malzeme parametrelerini yapılandırmak, zaman tabanlı efektlerin animasyonunu etkinleştirmek ve farklı açılardan önizlemeyi incelemek için çeşitli şekillerden birini seçebilirsiniz.
+Bir gölgelendiricinin uygulamanıza nasıl görüneceklerini anlamanıza yardımcı olmak için, etkinizin önizlemesini yapılandırabilirsiniz. Uygulamanıza yakınlık sağlamak için işlenecek çeşitli şekillerden birini seçebilir, dokuları ve diğer malzeme parametrelerini yapılandırabilirsiniz, zaman tabanlı etkilerin animasyonunu etkinleştirebilirsiniz ve önizlemeyi farklı açılardan inceebilirsiniz.
 
 #### <a name="shapes"></a>Şekiller
 
-Gölgelendirici Tasarımcısı, Gölgelendiricinizi önizlemek için kullanabileceğiniz altı şekil (bir Sphere, bir küp, silindir, koni, bir ekip ve bir düzlem) içerir. Gölgelendiriciye bağlı olarak, belirli şekiller size daha iyi bir önizleme sağlayabilir.
+Gölgelendirici Tasarımcısı gölgelendiricinizi önizlemek için kullanabileceğiniz altı şekil (bir küre, küp, silindir, külah, bir çaydanlık ve bir düzlem) içerir. Gölgelendiriciye bağlı olarak bazı şekiller daha iyi bir önizlemeye sahip olabilir.
 
-Bir önizleme şekli seçmek için, **gölgelendirici tasarımcı modları** araç çubuğunda istediğiniz şekli seçin.
+Önizleme şeklini seçmek için Gölgelendirici **Tasarımcısı** Modları araç çubuğunda istediğiniz şekli seçin.
 
 #### <a name="textures-and-material-parameters"></a>Dokular ve malzeme parametreleri
 
-Birçok gölgelendiriciler, uygulamanızdaki her bir nesne türü için benzersiz bir görünüm oluşturmak üzere dokuların ve malzeme özelliklerine güvenir. Gölgelendiricinizi uygulamanızda nasıl görüneceğine bakmak için, Önizleme oluşturmak üzere kullanılan dokuları ve malzeme özelliklerini uygulamanızda kullanabileceğiniz dokularla ve parametrelerle eşleşecek şekilde ayarlayabilirsiniz.
+Birçok gölgelendirici, uygulamanıza her tür nesne için benzersiz bir görünüm oluşturmak için dokulara ve malzeme özelliklerine güvenmektedir. Gölgelendiricinizin uygulamanıza nasıl bir şey göreceğini görmek için, önizlemeyi işlemek için kullanılan dokuları ve malzeme özelliklerini uygulamanıza ek olarak kullanabileceğiniz dokular ve parametrelerle eş hale gelecek şekilde ayarlayın.
 
-Farklı dokuyu bir doku kaydına bağlamak veya diğer malzeme parametrelerini değiştirmek için:
+Doku kaydına farklı bir doku bağlamak veya diğer malzeme parametrelerini değiştirmek için:
 
-1. **Seç** modunda tasarım yüzeyinde boş bir alan seçin. Bu, **Özellikler** penceresinin Genel gölgelendirici özelliklerini görüntülemesine neden olur.
+1. Seç **modunda** tasarım yüzeyinin boş bir alanı seçin. Bu, Özellikler **penceresinin** genel gölgelendirici özelliklerini görüntülemesine neden olur.
 
-2. **Özellikler** penceresinde, değiştirmek istediğiniz doku ve parametre özellikleri için yeni değerler belirtin.
+2. Özellikler **penceresinde,** değiştirmek istediğiniz doku ve parametre özellikleri için yeni değerler belirtin.
 
-Aşağıdaki tabloda, değiştirebileceğiniz Gölgelendirici parametreleri gösterilmektedir:
+Aşağıdaki tabloda değiştirerek değiştirerek gölgelendirici parametrelerine yer ve ardından ve ardından 2018'e kadar olan tüm gölgelendirici parametreleri ve daha sonra aşağıdaki tabloda değişiklik yapabilirsiniz:
 
 |Parametre|Özellikler|
 |---------------|----------------|
-|**Doku 1**  -  **Doku 8**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Dosya adı**: Bu doku kaydı ile ilişkili doku dosyasının tam yolu.|
-|**Malzeme çevresel**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: dolaylı veya çevresel aydınlatma nedeniyle geçerli pikselin dağıtma rengi.|
-|**Malzeme dağıtma**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: geçerli pikselin nasıl doğrudan aydınlatma kullandığını açıklayan bir renk.|
-|**Malzeme yanıltıcı**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                              **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: kendi kendine sunulan aydınlatma nedeniyle geçerli pikselin renk katkısı.|
-|**Malzeme yansımalı**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                              **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: geçerli pikselin doğrudan aydınlatmayı nasıl yansıttığını açıklayan bir renk.|
-|**Malzeme yansımalı güç**|**Erişim**: özelliğin model düzenleyicisinden ayarlaneklenmesine izin vermek için                             **genel** ' e gidin; Aksi takdirde, **özel**.<br /><br /> **Değer**: geçerli pikselde Yansımalı vurguların yoğunluğunu tanımlayan üs.|
+|**Doku 1**  -  **Doku 8**|**Erişim:**                             **Özelliğin** Model Düzenleyicisi'nde ayarlanmış olmasına izin vermek için Genel; aksi takdirde, **Özel**.<br /><br /> **Dosya adı:** Bu doku kaydıyla ilişkili doku dosyasının tam yolu.|
+|**Malzeme Ortamı**|**Erişim:**                             **Özelliğin** Model Düzenleyicisi'nde ayarlanmış olmasına izin vermek için Genel; aksi takdirde, **Özel**.<br /><br /> **Değer:** Dolaylı veya ortam - aydınlatma nedeniyle geçerli pikselin dağınık rengi.|
+|**Malzeme Yayma**|**Erişim:** **Özelliğin** Model Düzenleyicisi'nde ayarlanmış olmasına izin vermek için Genel; aksi takdirde, **Özel**.<br /><br /> **Değer:** Geçerli pikselin doğrudan aydınlatmayı nasıl yaymalarını açıklayan bir renk.|
+|**Malzeme Emissive**|**Erişim:**                              **Özelliğin** Model Düzenleyicisi'nde ayarlanmış olmasına izin vermek için Genel; aksi takdirde, **Özel**.<br /><br /> **Değer:** Otomatik olarak sağlanan aydınlatma nedeniyle geçerli pikselin renk katkısı.|
+|**Malzeme Özellikleri**|**Erişim:**                              **Özelliğin** Model Düzenleyicisi'nde ayarlanmış olmasına izin vermek için Genel; aksi takdirde, **Özel**.<br /><br /> **Değer:** Geçerli pikselin doğrudan aydınlatmayı nasıl yansıtdığını açıklayan bir renk.|
+|**Malzeme Specular Gücü**|**Erişim:**                             **Özelliğin** Model Düzenleyicisi'nde ayarlanmış olmasına izin vermek için Genel; aksi takdirde, **Özel**.<br /><br /> **Değer:** Geçerli pikselde belirli vurguların yoğunluğunu tanımlayan üs.|
 
-#### <a name="time-based-effects"></a>Zamana dayalı etkiler
+#### <a name="time-based-effects"></a>Zaman tabanlı etkiler
 
-Bazı gölgelendiriciler, etkiyi canlandıra zaman tabanlı bir bileşene sahiptir. Efektin işlem içinde nasıl göründüğünü göstermek için, önizlemenin saniyede birkaç kez güncellenmesi gerekir. Varsayılan olarak, Önizleme yalnızca gölgelendirici değiştirildiğinde güncelleştirilir; zamana dayalı etkileri görüntüleyebilmeniz için bu davranışı değiştirmek için gerçek zamanlı işlemeyi etkinleştirmeniz gerekir.
+Bazı gölgelendiriciler, etkiye animasyonu olan zaman tabanlı bir bileşene sahiptir. Etkinin nasıl göründüğünü göstermek için önizlemenin saniye başına birkaç kez güncelleştirilmiş olması gerekir. Varsayılan olarak önizleme yalnızca gölgelendirici değiştirdiğinde güncelleştirilir; Bu davranışı, zaman tabanlı etkileri görüntüley olanaklı olacak şekilde değiştirmek için gerçek zamanlı işlemeyi etkinleştirmeniz gerekir.
 
-Gerçek zamanlı işlemeyi etkinleştirmek için, gölgelendirici Tasarımcısı araç çubuğunda **gerçek zamanlı işleme**' yı seçin.
+Gerçek zamanlı işlemeyi etkinleştirmek için Gölgelendirici Tasarımcısı araç çubuğunda Gerçek Zamanlı **İşleme'yi seçin.**
 
-#### <a name="examine-the-effect"></a>Etkiyi inceleyin
+#### <a name="examine-the-effect"></a>Etkiyi inceleme
 
-Birçok gölgelendiriciler, açı veya yönlü aydınlatmayı görüntüleme gibi değişkenlerden etkilenir. Bu değişkenler değiştiğinde efektin nasıl yanıt verdiğini incelemek için önizleme şeklini serbestçe döndürebilir ve gölgelendiricisinin nasıl davranacağını gözlemleyebilirsiniz.
+Birçok gölgelendirici, açıyı veya yönlü aydınlatmayı görüntüleme gibi değişkenlerden etkilenir. Bu değişkenler değiştiklerinde etkinin nasıl yanıt verme şeklini incelemek için önizleme şeklini serbestçe döndürebilir ve gölgelendiricinin nasıl davrandığını gözlemleyebilirsiniz.
 
-Şekli döndürmek için **alt** tuşuna basın ve basılı tutun ve tasarım yüzeyinde herhangi bir noktayı seçin ve taşıyın.
+Şekli döndürmek için Alt tuşuna **basın** ve basılı tutun, ardından tasarım yüzeyinde herhangi bir nokta seçin ve hareket ettirin.
 
-### <a name="export-shaders"></a>Gölgelendiricileri dışarı aktar
+### <a name="export-shaders"></a>Gölgelendiricileri dışarı aktarma
 
-Uygulamanızda bir gölgelendirici kullanabilmeniz için, bunu DirectX 'in anladığı bir biçimde dışarı aktarmanız gerekir.
+Uygulamanıza gölgelendiriciyi kullanamadan önce DirectX'in anlayacaktır.
 
-Gölgelendiricileri HLSL kaynak kodu olarak veya derlenen gölgelendirici bayt olarak dışarı aktarabilirsiniz. HLSL kaynak kodu, *. HLSL* dosya adı uzantısına sahip bir metin dosyasına aktarılmıştır. Gölgelendirici bytecode 'u *. cso* dosya adı uzantısına sahip bir ham ikili dosyaya ya da gölgelendirici bayt kodunu bir diziye kodlayan bir C++ üst bilgi (*. h*) dosyasına aktarılabilir.
+Gölgelendiricileri HLSL kaynak kodu olarak veya derlenmiş gölgelendirici bytecode olarak dışarı aktarabilirsiniz. HLSL kaynak kodu, *.hlsl* dosya adı uzantısına sahip bir metin dosyasına dışarı aktarıldı. Gölgelendirici bytecode, *.cso* dosya adı uzantısına sahip bir ham ikili dosyaya veya gölgelendirici bytecode'unu bir diziye kodlayan bir C++ üst bilgisi (*.h*) dosyasına aktarabilirsiniz.
 
-Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md).
+Gölgelendiricileri dışarı aktarma hakkında daha fazla bilgi için [bkz. Nasıl: Gölgelendiriciyi dışarı aktarma.](../designers/how-to-export-a-shader.md)
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
 
 |Komut|Klavye kısayolları|
 |-------------| - |
-|**Seçme** moduna geçiş yap|**CTRL** + **G**, **CTRL** + **s**<br /><br /> **S**|
-|**Yakınlaştırma** moduna geç|**CTRL** + **G**, **CTRL** + **Z**<br /><br /> **Kadar**|
-|**Pan** moduna geç|**CTRL** + **G**, **CTRL** + **P**<br /><br /> **K**|
-|Tümünü seç|**CTRL** + **Bir**|
+|Seçim **moduna** geçme|**Ctrl tuşunu basılı tutarak** + **G,** **Ctrl** + **Q**<br /><br /> **S**|
+|Yakınlaştırma **moduna** geçme|**Ctrl tuşunu basılı tutarak** + **G,** **Ctrl** + **Z**<br /><br /> **Z**|
+|Kaydırma **moduna** geçme|**Ctrl tuşunu basılı tutarak** + **G,** **Ctrl** + **P**<br /><br /> **K**|
+|Tümünü seç|**Ctrl tuşunu basılı tutarak** + **A**|
 |Geçerli seçimi sil|**Silme**|
-|Geçerli seçimi iptal et|**Escape** (**ESC**)|
-|Yakınlaştır|**CTRL** + **Fare tekerleği ileri**<br /><br /> Artı Işareti ( **+** )|
-|Uzaklaştır|**CTRL** + **Fare tekerleği geriye doğru**<br /><br /> Eksi Işareti ( **-** )|
+|Geçerli seçimi iptal et|**Kaçış** (**Esc**)|
+|Yakınlaştır|**Ctrl tuşunu basılı tutarak** + **Fare tekerleği ileri**<br /><br /> Artı İşareti ( **+** )|
+|Uzaklaştır|**Ctrl tuşunu basılı tutarak** + **Fare tekerleği geriye doğru**<br /><br /> Eksi İşareti ( **-** )|
 |Tasarım yüzeyini yukarı kaydır|**Fare tekerleği geriye doğru**<br /><br /> **PageDown**|
 |Tasarım yüzeyini aşağı kaydır|**Fare tekerleği ileriye doğru**<br /><br /> **PageUp**|
-|Tasarım yüzeyini sola kaydır|**SHIFT** + **Fare tekerleği geriye doğru**<br /><br /> **Fare tekerleği sol**<br /><br /> **Shift ile kaydırma** + **PageDown**|
-|Tasarım yüzeyini sağa kaydır|**Shift ile kaydırma** + **Fare tekerleği ileri**<br /><br /> **Fare tekerleği sağ**<br /><br /> **Shift ile kaydırma** + **PageUp**|
-|Klavye odağını başka bir düğüme taşıma|Ok  tuşları|
-|Klavye odağı olan düğümü seçin (düğümü seçim grubuna ekler)|**Shift ile kaydırma** + **Ara Çubuğu**|
-|Klavye odağı olan düğümün seçimini iki durumlu olarak değiştir|**Ctrl tuşunu basılı tutarak** + **Ara Çubuğu**|
-|Geçerli seçimi değiştir (düğüm seçilmemişse klavye odağı olan düğümü seçin)|**Boşluk çubuğu**|
-|Geçerli seçimi yukarı taşıma|**Shift ile kaydırma** + **Yukarı Ok**|
-|Geçerli seçimi aşağı taşıma|**Shift ile kaydırma** + **Aşağı Ok**|
-|Geçerli seçimi sola taşıma|**Shift ile kaydırma** + **Sol Ok**|
-|Geçerli seçimi sağa taşıma|**Shift ile kaydırma** + **Sağ Ok.**|
+|Tasarım yüzeyini sola kaydır|**Shift ile kaydırma** + **Fare tekerleği geriye doğru**<br /><br /> **Fare tekerleği sol**<br /><br /> **SHIFT** + **Pageaşağı**|
+|Tasarım yüzeyini sağa kaydır|**SHIFT** + **Fare tekerleği ileri**<br /><br /> **Fare tekerleği sağ**<br /><br /> **SHIFT** + **PageUp**|
+|Klavye odağını başka bir düğüme taşı|**Ok** tuşları|
+|Klavye odağının bulunduğu düğümü seçin (düğümü seçim grubuna ekler)|**SHIFT** + **Boşluk çubuğu**|
+|Klavye odağına sahip olan düğüm seçimini değiştirme|**CTRL** + **Boşluk çubuğu**|
+|Geçerli seçimi değiştirin (hiçbir düğüm seçilmezse, klavye odağına sahip düğümü seçin)|**Boşluk çubuğu**|
+|Geçerli seçimi yukarı taşı|**SHIFT** + **Yukarı ok**|
+|Geçerli seçimi aşağı taşı|**SHIFT** + **Aşağı ok**|
+|Geçerli seçimi sola taşı|**SHIFT** + **Sol ok**|
+|Geçerli seçimi sağa taşı|**SHIFT** + **Sağ ok**.|
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Oyunlar ve uygulamalar için 3D varlıklarla çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|Dokular, görüntüler, 3B modeller ve gölgelendirici etkileriyle çalışmak için kullanabileceğiniz Visual Studio araçlarına genel bir bakış sağlar.|
-|[Görüntü Düzenleyicisi](../designers/image-editor.md)|Dokular ve görüntülerle çalışmak Visual Studio Görüntü Düzenleyicisi'nin nasıl kullanılabını açıklar.|
-|[Model Düzenleyicisi](../designers/model-editor.md)|3D modellerle çalışmak Visual Studio Model Düzenleyicisi'nin nasıl kullanılası açıklandı.|
+|[Oyunlar ve uygulamalar için 3B varlıklarla çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|dokular ve görüntüler, 3b modeller ve gölgelendirici efektleri ile çalışmak için kullanabileceğiniz Visual Studio araçlarına genel bir bakış sağlar.|
+|[Görüntü Düzenleyicisi](../designers/image-editor.md)|dokularla ve görüntülerle çalışmak için Visual Studio görüntü düzenleyicisi ' nin nasıl kullanılacağını açıklar.|
+|[Model Düzenleyicisi](../designers/model-editor.md)|3b modellerle çalışmak için Visual Studio Model düzenleyicisi ' nin nasıl kullanılacağını açıklar.|

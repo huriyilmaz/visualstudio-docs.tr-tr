@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: c487ef6550f5d790a3b4d81852adf22976f77827e092c2b62ed9262f3d2e329c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 44eca905c761fceae02f879f8891098f9d6932c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307043"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050526"
 ---
 # <a name="idebugprogramprovider2"></a>IDebugProgramProvider2
 Bu kayıtlı arabirim, oturum hata ayıklama yöneticisinin (SDM) [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md) arabirimi aracılığıyla "yayımlanmış" programlar hakkında bilgi edinmasına olanak sağlar.

@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: ee0da2a88953ac7701bde350794b689ee68864fb17ee04e46420693453e9b866
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0b527c3eb4f483f0e858c60d7d7e592ba8c2f51d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386085"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055685"
 ---
 # <a name="api-reference-for-t4-text-templates"></a>T4 Metin Şablonları için API Başvurusu
 

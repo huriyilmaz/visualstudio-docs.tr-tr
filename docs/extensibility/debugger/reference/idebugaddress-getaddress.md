@@ -1,6 +1,6 @@
 ---
-description: Bir nesneyi ve nesnesinin kapsamını veya kapsayıcısı içindeki konumunu açıklayan bir yapı döndürür.
-title: IDebugAddress::GetAddress | Microsoft Docs
+description: Bir nesneyi ve onun kapsam veya kapsayıcısı içindeki konumunu açıklayan bir yapı döndürür.
+title: 'IDebugAddress:: GetAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f7cfdadd5a2acb31525e0329f485ac289a8ecc4c888a1ff73ca7accaea736574
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0fe2245c39001f36fc763900c1c00a535663ceae
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239236"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064922"
 ---
 # <a name="idebugaddressgetaddress"></a>IDebugAddress::GetAddress
-Bir nesneyi ve nesnesinin kapsamını veya kapsayıcısı içindeki konumunu açıklayan bir yapı döndürür.
+Bir nesneyi ve onun kapsam veya kapsayıcısı içindeki konumunu açıklayan bir yapı döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetAddress(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[in, out] Bu [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) doldurulan bir yapıdır.
+[in, out] Bu yöntem tarafından doldurulan bir [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- DEBUG_ADDRESS [](../../../extensibility/debugger/reference/debug-address.md) yapısı bu yönteme geçirildi ve ardından uygun bilgilerle doldurulacak. Bu bilgilerin nasıl yorumlanması döndürülen bilgi türüne ve sembol işleyicinin kendisine bağlıdır. Diğer [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) için bkz.
+ [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısı bu yönteme geçirilir ve ardından bunu ilgili bilgilerle doldurur. Bu bilgilerin nasıl yorumlanacağı, döndürülen bilgi türüne ve sembol işleyicisine bağlıdır. Daha fazla bilgi için bkz. [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

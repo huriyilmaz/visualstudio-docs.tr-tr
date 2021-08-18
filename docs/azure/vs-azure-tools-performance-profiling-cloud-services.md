@@ -1,109 +1,110 @@
 ---
-title: Bulut hizmetinin performansını test etme | Microsoft Docs
-description: Visual Studio Profiler kullanarak bir bulut hizmetinin performansını test etme
+title: Bulut hizmeti performansını test | Microsoft Docs
+description: Visual Studio profilleyiciyi kullanarak bulut hizmetinin performansını test edin
 author: mikejo5000
 manager: jmartens
+ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
-ms.openlocfilehash: 83d7372fd6942f8f29e7244b1f57d40c2b64009b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 79fd599b58a951f67c4fb095528e8be00bcd2a17
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99844027"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059678"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>Bulut hizmetinin performansını test etme
 ## <a name="overview"></a>Genel Bakış
-Bir bulut hizmetinin performansını aşağıdaki yollarla test edebilirsiniz:
+Bulut hizmetinin performansını test etmek için aşağıdaki yöntemleri kullanabilirsiniz:
 
-* İstekler ve bağlantılarla ilgili bilgi toplamak ve hizmetin müşterinin perspektifinden nasıl gerçekleştiğini gösteren site istatistiklerini gözden geçirmek için Azure Tanılama kullanın. Kullanmaya başlamak için bkz. [Azure Cloud Services ve sanal makineler için tanılamayı yapılandırma](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
-* Hizmetin nasıl çalıştığı hesaplama yönlerinin derinlemesine bir analizini öğrenmek için Visual Studio Profiler 'ı kullanın. Bu konuda açıklandığı gibi, Azure 'da bir hizmet olarak performansı ölçmek için profil oluşturucuyu kullanabilirsiniz. Bir işlem öykünücüsünde yerel olarak çalışan bir hizmetin performansını ölçmek için profil oluşturucunun nasıl kullanılacağı hakkında bilgi için, bkz. [Visual Studio Profiler kullanarak Işlem öykünücüsünde Azure bulut hizmetinin performansını yerel olarak test etme](/azure/cloud-services/cloud-services-performance-testing-visual-studio-profiler).
+* İstekler Azure Tanılama bağlantılar hakkında bilgi toplamak ve hizmetin müşteri perspektifinden nasıl performans sergileyene site istatistiklerini gözden geçirmek için Azure Tanılama'i kullanın. ile çalışmaya başlama için, [bkz. Configuring diagnostics for Azure Cloud Services and Virtual Machines](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md).
+* Hizmetin Visual Studio hesaplama yönlerini ayrıntılı bir şekilde analiz etmek için Visual Studio profilleyiciyi kullanın. Bu konu başlığında da anlatıldı. Azure'da hizmet çalıştırıldıklarında performansı ölçmek için profil oluşturma hizmetini kullanabilirsiniz. Bir hizmet bir işlem öykünücüsünün içinde yerel olarak çalıştırıldı olarak performansı ölçmek için profil oluşturmanın nasıl kullanıla hakkında bilgi için bkz. İşlem Emulator Using the Visual Studio [Profiler](/azure/cloud-services/cloud-services-performance-testing-visual-studio-profiler).
 
 ## <a name="choosing-a-performance-testing-method"></a>Performans testi yöntemi seçme
-### <a name="use-azure-diagnostics-to-collect"></a>Toplamak için Azure Tanılama kullanın:
-* Web sayfaları veya hizmetleri için İstekler ve bağlantılar gibi istatistikler.
-* Rol hakkında, bir rolün ne sıklıkta yeniden başlatılma gibi istatistikler.
-* Çöp toplayıcısının aldığı sürenin yüzdesi veya çalışan bir rolün bellek kümesi gibi bellek kullanımı hakkındaki genel bilgiler.
+### <a name="use-azure-diagnostics-to-collect"></a>Şunları Azure Tanılama için Azure Tanılama kullanın:
+* İstekler ve bağlantılar gibi web sayfaları veya hizmetleriyle ilgili istatistikler.
+* Bir rolün ne sıklıkta yeniden başlat olduğu gibi rollerle ilgili istatistikler.
+* Atık toplayıcının zaman yüzdesi veya çalışan rolün bellek kümesi gibi bellek kullanımı hakkında genel bilgiler.
 
-### <a name="use-the-visual-studio-profiler-to"></a>Visual Studio Profiler 'ı kullanarak şunları yapın:
-* Hangi işlevlerin en iyi şekilde çalışacağını saptayın.
-* Yoğun bir şekilde yoğun bir programın her bir parçasının ne kadar zaman aldığını ölçün.
+### <a name="use-the-visual-studio-profiler-to"></a>Profil Visual Studio kullanarak:
+* En uzun zaman alan işlevleri belirleme.
+* Yoğun işlem gücü kullanımına sahip bir programın her parçasının ne kadar zaman alır ölçün.
 * Bir hizmetin iki sürümü için ayrıntılı performans raporlarını karşılaştırın.
-* Bellek ayırmayı, tek tek bellek ayırmaları düzeyinden daha ayrıntılı olarak analiz edin.
-* Çok iş parçacıklı koddaki eşzamanlılık sorunlarını analiz edin.
+* Bellek ayırmayı tek tek bellek ayırma düzeyinden daha ayrıntılı olarak analiz etme.
+* Çok iş parçacıklı kodda eşzamanlılık sorunlarını analiz etme.
 
-Profil oluşturucuyu kullandığınızda, bir bulut hizmeti yerel olarak veya Azure 'da çalıştığında verileri toplayabilirsiniz.
+Profilleyiciyi kullanarak, bir bulut hizmeti yerel olarak veya Azure'da çalıştır çalıştırıcıda veri toplayabilirsiniz.
 
-### <a name="collect-profiling-data-locally-to"></a>Profil oluşturma verilerini yerel olarak toplayın:
-* Belirli bir çalışan rolünün yürütülmesi gibi, gerçekçi bir sanal yük gerektirmeyen bir bulut hizmeti bölümünün performansını test edin.
-* Denetlenen koşullar altında, bulut hizmetinin performansını yalıtımda test edin.
-* Azure 'a dağıtmadan önce bir bulut hizmetinin performansını test edin.
-* Mevcut dağıtımları bozmadan bir bulut hizmetinin performansını özel olarak test edin.
-* Azure 'da çalışmaya yönelik ücretler ödemeden hizmetin performansını test edin.
+### <a name="collect-profiling-data-locally-to"></a>Profil oluşturma verilerini yerel olarak toparak:
+* Gerçekçi bir sanal yük gerektirmeyen belirli bir çalışan rolünün yürütülmesi gibi bir bulut hizmetinin bir parçasının performansını test edin.
+* Denetimli koşullar altında bir bulut hizmetinin performansını yalıtarak test edin.
+* Azure'a dağıtmadan önce bulut hizmetinin performansını test edin.
+* Mevcut dağıtımları bozmadan bulut hizmetinin performansını özel olarak test edin.
+* Azure'da çalıştırma için ücret ödemeden hizmetin performansını test edin.
 
-### <a name="collect-profiling-data-in-azure-to"></a>Azure 'da profil oluşturma verilerini şu şekilde toplayın:
-* Bir bulut hizmetinin sanal veya gerçek bir yük altında performansını test edin.
-* Bu konuda daha sonra açıklandığı gibi, profil oluşturma verilerini toplamak için izleme yöntemini kullanın.
-* Hizmetin, üretimde çalıştırıldığı hizmetin performansını aynı ortamda test edin.
+### <a name="collect-profiling-data-in-azure-to"></a>Azure'da profil oluşturma verilerini toparak:
+* Sanal veya gerçek yük altında bulut hizmetinin performansını test edin.
+* Bu konu başlığında daha sonra açıklanmıştır. Profil oluşturma verilerini toplamak için ölçüm yöntemini kullanın.
+* Hizmetin performansını üretim ortamında çalıştırarak aynı ortamda test etmek.
 
-Genellikle, normal veya stres koşullarında bulut hizmetlerini test etmek için bir yükün benzetimini yapabilirsiniz.
+Bulut hizmetlerini normal veya stres koşullarında test etmek için genellikle yükün benzetimini siz sağlarız.
 
-## <a name="profiling-a-cloud-service-in-azure"></a>Azure 'da bir bulut hizmetinin profilini oluşturma
-Bulut hizmetinizi Visual Studio 'dan yayımladığınızda, hizmeti profilin profilini oluşturup istediğiniz bilgileri sağlayan profil oluşturma ayarlarını belirtebilirsiniz. Bir rol örneği için profil oluşturma oturumu başlatılır. Hizmetinizi Visual Studio 'dan yayımlama hakkında daha fazla bilgi için bkz. [Visual Studio 'Dan Azure bulut hizmetinde yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
+## <a name="profiling-a-cloud-service-in-azure"></a>Azure'da bulut hizmetinin profilini oluşturma
+Buluttan bulut hizmetinizi Visual Studio, hizmetin profilini oluşturun ve size istediğiniz bilgileri verecek profil oluşturma ayarlarını belirtin. Bir rolün her örneği için profil oluşturma oturumu başlatıldı. Hizmetinizi Visual Studio'den yayımlama hakkında daha fazla bilgi için bkz. [Visual Studio.](vs-azure-tools-publishing-a-cloud-service.md)
 
-Visual Studio 'da performans profili oluşturma hakkında daha fazla bilgi edinmek için bkz. [Yeni başlayanlar kılavuzu, performans profili oluşturma](../profiling/beginners-guide-to-performance-profiling.md) ve [profil oluşturma araçları kullanarak uygulama performansını çözümleme](../profiling/performance-explorer.md).
+Visual Studio'da performans profili oluşturma hakkında daha [](../profiling/beginners-guide-to-performance-profiling.md) fazla bilgi için bkz. Profil Oluşturma Araçları Kullanarak Uygulama Performansını Analiz Etme ve [Performans Profili Oluşturma için Profil Oluşturma Araçları.](../profiling/performance-explorer.md)
 
 > [!NOTE]
-> Bulut hizmetinizi yayımladığınızda IntelliTrace veya profil oluşturma seçeneklerinden birini etkinleştirebilirsiniz. Her ikisini de etkinleştiremezsiniz.
+> Bulut hizmetinizi yayımlarken IntelliTrace'i veya profil oluşturmayı etkinleştirabilirsiniz. her ikisini de etkinleştire diyez.
 >
 >
 
-### <a name="profiler-collection-methods"></a>Profil Oluşturucu koleksiyon yöntemleri
-Profil oluşturma için performans sorunlarınızı temel alarak farklı koleksiyon yöntemleri kullanabilirsiniz:
+### <a name="profiler-collection-methods"></a>Profil oluşturma toplama yöntemleri
+Performans sorunlarınıza bağlı olarak profil oluşturma için farklı koleksiyon yöntemleri kullanabilirsiniz:
 
-* **CPU örnekleme** -bu yöntem, CPU kullanım sorunlarının ilk analizi için yararlı olan uygulama istatistiklerini toplar. CPU örnekleme, en fazla performans araştırmamının başlatılması için önerilen yöntemdir. CPU örnekleme verilerini toplarken profil oluşturduğunuz uygulamada düşük bir etkisi vardır.
-* **İzleme** -bu yöntem, odaklanmış analizler ve giriş/çıkış performans sorunlarını analiz etmek için yararlı olan ayrıntılı zamanlama verilerini toplar. İzleme yöntemi, bir profil oluşturma işlemi sırasında bir modüldeki işlevlerin her bir girdisini, çıkış ve işlev çağrısını kaydeder. Bu yöntem, kodunuzun bir bölümü hakkında ayrıntılı zamanlama bilgileri toplamak ve giriş ve çıkış işlemlerinin uygulama performansı üzerinde etkisini anlamak için yararlıdır. Bu yöntem, 32 bitlik bir işletim sistemi çalıştıran bir bilgisayar için devre dışıdır. Bu seçenek yalnızca, bulut hizmetini işlem öykünücüsünde yerel olarak değil, Azure 'da çalıştırdığınızda kullanılabilir.
-* **.Net bellek ayırma** -bu yöntem, örnekleme profil oluşturma yöntemini kullanarak .NET Framework bellek ayırma verileri toplar. Toplanan veriler, ayrılan nesnelerin sayısını ve boyutunu içerir.
-* **Eşzamanlılık** -bu yöntem, çok iş parçacıklı ve çok işlem yapan uygulamaları çözümlemede yararlı olan kaynak çekişmesini ve işlem ve iş parçacığı yürütme verilerini toplar. Eşzamanlılık yöntemi, kodunuzun yürütülmesini engelleyen her olay için veri toplar; Örneğin, bir iş parçacığı, bir uygulama kaynağına yönelik kilitli erişimin serbest gelmesini bekler. Bu yöntem, çok iş parçacıklı uygulamaların çözümlenmesi için yararlıdır.
-* Ayrıca, bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde zaman uyumlu ADO.NET çağrılarının yürütme zamanları hakkında ek bilgiler sağlayan **katman etkileşim profilini** de etkinleştirebilirsiniz. Herhangi bir profil oluşturma yönteminden katman etkileşim verileri toplayabilirsiniz. Katman etkileşimi profili oluşturma hakkında daha fazla bilgi için bkz. [Katman etkileşimleri görünümü](../profiling/tier-interactions-view.md).
+* **CPU örnekleme** - Bu yöntem, CPU kullanım sorunlarının ilk analizinde yararlı olan uygulama istatistiklerini toplar. CPU örnekleme, çoğu performans araştırmalarını başlatmaya ilişkin önerilen yöntemdir. CPU örnekleme verilerini toplayan uygulama üzerinde profil oluşturmanın etkisi düşüktür.
+* **Instrumentation** -Bu yöntem, odaklanmış analiz ve giriş/çıkış performans sorunlarını analiz etmek için yararlı olan ayrıntılı zamanlama verilerini toplar. Ölçüm yöntemi, profil oluşturma çalıştırması sırasında bir modülde işlevlerin giriş, çıkış ve işlev çağrılarını kaydediyor. Bu yöntem, kodunuzun bir bölümü hakkında ayrıntılı zamanlama bilgileri toplamak ve giriş ve çıkış işlemlerinin uygulama performansı üzerindeki etkisini anlamak için yararlıdır. Bu yöntem, 32 bit işletim sistemi çalıştıran bir bilgisayar için devre dışıdır. Bu seçenek yalnızca bulut hizmetini azure'da çalıştırarak kullanılabilir, işlem öykünücüsünü yerel olarak çalıştırmaz.
+* **.NET Bellek Ayırma** - Bu yöntem, .NET Framework profil oluşturma yöntemini kullanarak bellek ayırma verilerini toplar. Toplanan veriler, ayrılan nesnelerin sayısını ve boyutunu içerir.
+* **Eşzamanlılık** - Bu yöntem, çok iş parçacıklı ve çok işlemli uygulamaları analiz etmede yararlı olan kaynak ve iş parçacığı yürütme verilerini ve işleme ve iş parçacığı yürütme verilerini toplar. Eşzamanlılık yöntemi, bir iş parçacığının uygulama kaynağına kilitli erişimin serbest bıraklığını beklemesi gibi kodunuzun yürütülmesini engelleyen her olay için veri toplar. Bu yöntem, çok iş parçacıklı uygulamaları analiz etmek için kullanışlıdır.
+* Bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde zaman uyumlu ADO.NET yürütme süreleri hakkında ek bilgi sağlayan Katman Etkileşimi **Profili** Oluşturmayı da etkinleştirebilirsiniz. Profil oluşturma yöntemlerden herhangi biri ile katman etkileşim verileri toplayabilirsiniz. Katman etkileşimi profili oluşturma hakkında daha fazla bilgi için bkz. [Katman Etkileşimleri Görünümü.](../profiling/tier-interactions-view.md)
 
 ## <a name="configuring-profiling-settings"></a>Profil oluşturma ayarlarını yapılandırma
-Aşağıdaki çizimde, profil oluşturma ayarlarınızı Azure uygulaması yayımlama iletişim kutusundan yapılandırma gösterilmektedir.
+Aşağıdaki çizimde, Azure Uygulamasını Yayımla iletişim kutusundan profil oluşturma ayarlarınızı yapılandırma adımları gösterilmiştir.
 
-![Profil oluşturma ayarlarını yapılandır](./media/vs-azure-tools-performance-profiling-cloud-services/IC526984.png)
+![Profil Oluşturma Ayarlar](./media/vs-azure-tools-performance-profiling-cloud-services/IC526984.png)
 
 > [!NOTE]
-> **Profil oluşturmayı etkinleştir** onay kutusunu etkinleştirmek için, bulut hizmetinizi yayımlamak için kullandığınız yerel bilgisayarda profil oluşturucuyu yüklemiş olmanız gerekir. Varsayılan olarak, profil oluşturucu Visual Studio 'Yu yüklediğinizde yüklenir.
+> Profil oluşturmayı **etkinleştir onay** kutusunu etkinleştirmek için, profil oluşturmanın bulut hizmetinizi yayımlamak için kullanmakta olduğu yerel bilgisayarda yüklü olması gerekir. Varsayılan olarak, profil işleyiciyi Visual Studio.
 >
 >
 
 ### <a name="to-configure-profiling-settings"></a>Profil oluşturma ayarlarını yapılandırmak için
-1. Çözüm Gezgini ' de, Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin. Bulut hizmeti yayımlama hakkında ayrıntılı adımlar için bkz. [Azure araçlarını kullanarak bulut hizmeti yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
-2. **Azure uygulaması Yayımla** Iletişim kutusunda **Gelişmiş ayarlar** sekmesini seçin.
-3. Profil oluşturmayı etkinleştirmek için **profil oluşturmayı etkinleştir** onay kutusunu seçin.
-4. Profil oluşturma ayarlarınızı yapılandırmak için **Ayarlar** köprüsünü seçin. Profil oluşturma ayarları iletişim kutusu görüntülenir.
-5. **Profil oluşturma yönteminden seçenek düğmelerini kullanmak istediğinizde** , ihtiyacınız olan profil oluşturma türünü seçin.
-6. Katman etkileşimi profil oluşturma verilerini toplamak için **katman etkileşim profilini etkinleştir** onay kutusunu seçin.
-7. Ayarları kaydetmek için **Tamam** düğmesini seçin.
+1. Bu Çözüm Gezgini Azure projenizin kısayol menüsünü açın ve Yayımla'yı **seçin.** Bulut hizmetini yayımlama hakkında ayrıntılı adımlar için bkz. [Azure araçlarını kullanarak bulut hizmeti yayımlama.](vs-azure-tools-publishing-a-cloud-service.md)
+2. Azure **Uygulamasını Yayımla iletişim** kutusunda Gelişmiş Uygulama **sekmesini Ayarlar** seçin.
+3. Profil oluşturmayı etkinleştirmek için Profil oluşturmayı **etkinleştir onay** kutusunu seçin.
+4. Profil oluşturma ayarlarınızı yapılandırmak için profil oluşturma **Ayarlar** seçin. Profil Oluşturma Ayarlar iletişim kutusu görüntülenir.
+5. Seçenek **düğmelerini kullanmak istediğiniz profil** oluşturma yöntemi menüsünden ihtiyacınız olan profil oluşturma türünü seçin.
+6. Katman etkileşimi profil oluşturma verilerini toplamak için Katman Etkileşimi **Profili Oluşturmayı Etkinleştir onay** kutusunu seçin.
+7. Ayarları kaydetmek için Tamam **düğmesini** seçin.
 
-    Bu uygulamayı yayımladığınızda, bu ayarlar her bir rol için profil oluşturma oturumu oluşturmak için kullanılır.
+    Bu uygulamayı yayımlarken, her rol için profil oluşturma oturumunu oluşturmak için bu ayarlar kullanılır.
 
-## <a name="viewing-profiling-reports"></a>Profil oluşturma raporlarını görüntüleme
-Bulut hizmetinizde bir rolün her örneği için bir profil oluşturma oturumu oluşturulur. Visual Studio 'dan her bir oturumun profil oluşturma raporlarınızı görüntülemek için Sunucu Gezgini penceresini görüntüleyebilir ve ardından bir rolün örneğini seçmek üzere Azure Işlem düğümünü seçebilirsiniz. Daha sonra profil oluşturma raporunu aşağıdaki çizimde gösterildiği gibi görüntüleyebilirsiniz.
+## <a name="viewing-profiling-reports"></a>Profil Oluşturma Raporlarını Görüntüleme
+Bulut hizmetinize bir rolün her örneği için profil oluşturma oturumu oluşturulur. Her oturum için profil oluşturma raporlarınızı Visual Studio için Sunucu Gezgini penceresini görüntü Azure İşlem bir rol örneği seçmek için Azure İşlem düğümünü seçebilirsiniz. Daha sonra profil oluşturma raporunu aşağıdaki çizimde gösterildiği gibi görüntüebilirsiniz.
 
-![Azure 'dan profil oluşturma raporunu görüntüle](./media/vs-azure-tools-performance-profiling-cloud-services/IC748914.png)
+![Azure'dan Profil Oluşturma Raporunu Görüntüleme](./media/vs-azure-tools-performance-profiling-cloud-services/IC748914.png)
 
 ### <a name="to-view-profiling-reports"></a>Profil oluşturma raporlarını görüntülemek için
-1. Visual Studio 'da Sunucu Gezgini penceresini görüntülemek için, menü çubuğunda Görünüm, Sunucu Gezgini öğesini seçin.
-2. Azure Işlem düğümünü seçin ve ardından Visual Studio 'dan yayımlandığında profil için seçtiğiniz bulut hizmeti için Azure dağıtım düğümünü seçin.
-3. Bir örneğin profil oluşturma raporlarını görüntülemek için, hizmette rolü seçin, belirli bir örnek için kısayol menüsünü açın ve **profil oluşturma raporunu görüntüle**' yi seçin.
+1. Görünüm penceresinde Sunucu Gezgini görüntülemek Visual Studio menü çubuğunda Görünüm'e tıklayın ve Sunucu Gezgini.
+2. Azure İşlem düğümünü seçin ve ardından bu düğümden yayımlarken profil oluşturmak üzere seçtiğiniz bulut hizmeti için Azure dağıtım Visual Studio.
+3. Bir örneğin profil oluşturma raporlarını görüntülemek için hizmette rolü seçin, belirli bir örneğin kısayol menüsünü açın ve ardından Profil Oluşturma Raporunu **Görüntüle'yi seçin.**
 
-    Bu rapor, bir. vsp dosyası artık Azure 'dan indirilir ve indirme durumu Azure etkinlik günlüğünde görüntülenir. İndirme işlemi tamamlandığında, profil oluşturma raporu Visual Studio Düzenleyicisi 'nde <rol adı \> *<örnek numarası \>*<Identifier. vsp adlı bir sekmede görüntülenir \> . Raporun özet verileri görüntülenir.
-4. Raporun farklı görünümlerini görüntülemek için, geçerli görünüm listesinde istediğiniz görünüm türünü seçin. Daha fazla bilgi için bkz. [profil oluşturma araçları rapor görünümleri](../profiling/performance-report-views.md).
+    Bir .vsp dosyası olan rapor artık Azure'dan indirilir ve indirme durumu Azure Etkinlik Günlüğü'nden görüntülenir. İndirme işlemi tamamlandığında profil oluşturma raporu, \> *\>* .vsp Visual Studio Rol adı <Örnek Numarası<adlı<\> görünür. Raporun özet verileri görüntülenir.
+4. Raporun farklı görünümlerini görüntülemek için Geçerli Görünüm listesinde istediğiniz görünüm türünü seçin. Daha fazla bilgi için [bkz. Profil Oluşturma Araçları Görünümlerini Görüntüleme.](../profiling/performance-report-views.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [Hata ayıklama Cloud Services](vs-azure-tools-debug-cloud-services-virtual-machines.md)
 
-[Visual Studio 'dan bir Azure bulut hizmetinde yayımlama](vs-azure-tools-publishing-a-cloud-service.md)
+[Visual Studio'den Azure Bulut Hizmeti'ne yayımlama](vs-azure-tools-publishing-a-cloud-service.md)

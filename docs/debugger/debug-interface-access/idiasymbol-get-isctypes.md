@@ -1,6 +1,6 @@
 ---
-description: Sembol dosyasının C türlerini içerip içermediğini gösteren bir bayrak alır.
-title: 'IDiaSymbol:: get_isCTypes | Microsoft Docs'
+description: Sembol dosyasının C türleri içerdiğini belirten bir bayrak alınır.
+title: IDiaSymbol::get_isCTypes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 99c234b8ecafbc206dfa75cecf4402ae5007d9635982fbb4bad5fdd4958922ef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 85a75e87b759a84c70f8d4f92d455a6d9a4e8cc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121436438"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044145"
 ---
 # <a name="idiasymbolget_isctypes"></a>IDiaSymbol::get_isCTypes
-Sembol dosyasının C türlerini içerip içermediğini gösteren bir bayrak alır.
+Sembol dosyasının C türleri içerdiğini belirten bir bayrak alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT get_isCTypes(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` Sembol dosyası C türlerini içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Sembol `TRUE` dosyası C türleri içeriyorsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik `SymTagExe` sembol türünden (bkz. [exe](../../debugger/debug-interface-access/exe.md)) kullanılabilir.
+ Bu özellik sembol türünden `SymTagExe` kullanılabilir (bkz. [Exe).](../../debugger/debug-interface-access/exe.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

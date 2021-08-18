@@ -1,6 +1,6 @@
 ---
-title: Çözüm Gezgini araç penceresi hakkında bilgi edinin
-description: dosyalarınızı, projelerinizi ve çözümlerinizi oluşturmak & yönetmek için Visual Studio Çözüm Gezgini araç penceresini nasıl kullanabileceğinizi öğrenin.
+title: Çözüm Gezgini aracı penceresi hakkında bilgi
+description: Dosyalarınızı, projelerinizi ve Çözüm Gezgini yönetmek üzere Visual Studio için & araç penceresini nasıl kullanabileceğinizi öğrenin.
 ms.date: 06/29/2021
 ms.topic: conceptual
 f1_keywords:
@@ -13,65 +13,65 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f2334abf43a240b5c187e66b4c0f3a6cc469e14f92d58ba205a3d6a08de335a0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fe16aa384584c567e992a4d893a0bfbfac44b686
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121317104"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055893"
 ---
-# <a name="how-to-use-solution-explorer"></a>Çözüm Gezgini kullanma
+# <a name="how-to-use-solution-explorer"></a>Çözüm Gezgini
 
-Çözüm Gezgini araç penceresini kullanarak çözümünüzü ve projelerinizi yönetebilir & yönetebilir ve kodunuzla etkileşim & görüntüleyebilirsiniz. Bu makalede, bunu yapmanıza yardımcı olan kullanıcı arabirimi (UI) seçeneklerini ayrıntılarız.
+Çözüm Gezgini araç penceresini kullanarak çözümlerinizi & projelerinizi yönetmek ve kodunuzla etkileşim & görüntülemek için kullanabilirsiniz. Bu makalede, bunu yapmanıza yardımcı olacak kullanıcı arabirimi (UI) seçeneklerini ayrıntılı olarak ele aacağız.
 
 > [!NOTE]
-> bu konu yalnızca Windows Visual Studio için geçerlidir.
+> Bu konu yalnızca Visual Studio için Windows.
 
-## <a name="solution-explorer-tool-window"></a>Çözüm Gezgini araç penceresi
+## <a name="solution-explorer-tool-window"></a>Çözüm Gezgini aracı penceresi
 
-başlamak için, iki projenin bulunduğu açık bir C# konsol çözümüyle [Visual Studio ıde](../get-started/visual-studio-ide.md)'deki Çözüm Gezgini araç penceresine göz atalım.
+Başlamak için [IDE'de](../get-started/visual-studio-ide.md)Çözüm Gezgini araç penceresine göz atarak Visual Studio projeli açık bir C# konsol çözümüne göz atacağız.
 
-[![Visual Studio Çözüm Gezgini araç penceresi.](media/solution-explorer-tool-window.png)](media/solution-explorer-tool-window.png#lightbox)
+[![Çözüm Gezgini araç penceresi Visual Studio.](media/solution-explorer-tool-window.png)](media/solution-explorer-tool-window.png#lightbox)
 
-Araç penceresi aşağıdaki UI (Kullanıcı arabirimi) öğelerini içerir:
+Araç penceresi aşağıdaki kullanıcı arabirimi (kullanıcı arabirimi) öğelerini içerir:
 
-- Dosyalarınızın nasıl göründüğünü denetleyebileceğiniz **menü çubuğu**
-- Belirli dosya ve dosya türlerini arayabileceğiniz **arama çubuğu**
-- Dosyalarınızı, projelerinizi ve & çözümlerini görüntüleyebileceğiniz ve yönetebileceğiniz **ana pencere**
-- Çözümünüzü yönetebileceğiniz **Çözüm düğümü**
-- **Project**, projenizi yönetebileceğiniz bir düğüm
-- Çözüm & proje bağımlılıklarınızı yönetebileceğiniz **Bağımlılıklar düğümü**
-- Programınızı veya uygulamanızı görüntüleyebileceğiniz, düzenleyebileceğiniz ve yönetebileceğiniz **program düğümü**(uygulama)
-- ekip ile projelerde işbirliği yapmak için Visual Studio içinde git & GitHub kullanabileceğiniz **[git değişiklikleri sekmesi](../version-control/git-with-visual-studio.md?view=vs-2019&preserve-view=true#git-changes-window)**
+- **Menü çubuğunda,** dosyalarınızın nasıl görüntü görüntüleyebilirsiniz?
+- **Belirli dosyaları** ve dosya türlerini arayabilirsiniz arama çubuğu .
+- **Dosyalarınızı,** projelerinizi, projelerinizi ve çözümlerinizi görüntüp yönetebilirsiniz & penceresi
+- **Çözüm düğümünü**, burada çözümlerinizi yönetesiniz
+- **Project**, burada projelerinizi yönetesiniz
+- **Çözüm ve proje** bağımlılıkları için çözüm & bağımlılıklar düğümü
+- **Program düğümünü**, burada program veya uygulamanızı (uygulama) görüntüleyemez, düzenleyebilir ve yönetebilirsiniz
+- **[Git değişiklikleri sekmesi:](../version-control/git-with-visual-studio.md?view=vs-2019&preserve-view=true#git-changes-window)** Takımla projeler üzerinde işbirliği & GitHub için Visual Studio Git'i kullanabilirsiniz
 
 > [!TIP]
-> Çözüm Gezgini araç penceresini görmüyorsanız,   >  **Çözüm Gezgini** görünüm ' ü kullanarak veya **Ctrl** + **Alt** + **L** tuşlarına basarak Visual Studio menü çubuğundan açabilirsiniz.
+> Çözüm Gezgini araç penceresini görmüyorsanız, Görünüm Visual Studio 'ı kullanarak veya   >   **Ctrl** Alt L tuşlarına basarak Çözüm Gezgini menü çubuğundan +  + **açabilirsiniz.**
 
 ## <a name="solution-explorer-menu-bar"></a>Çözüm Gezgini menü çubuğu
 
-Devam etmek için Çözüm Gezgini menü çubuğuna daha yakından göz atalım.
+Devam etmek için, menü çubuğundaki Çözüm Gezgini bakalım.
 
-![Visual Studio Çözüm Gezgini menü çubuğu.](media/solution-explorer-menu-bar.png)
+![Çözüm Gezgini menü çubuğundaki Visual Studio.](media/solution-explorer-menu-bar.png)
 
-Menü çubuğu, soldan sağa aşağıdaki UI öğelerini içerir:
+Menü çubuğu, soldan sağa aşağıdaki kullanıcı arabirimi öğelerini içerir:
 
-- **Geri** düğmesi, arama sonuçları arasında geçiş yapmak için
+- **Arama** sonuçları arasında geçiş yapmak için geri düğmesi
 - **İleri** düğmesi, arama sonuçları arasında geçiş yapmak için
-- **Ana** düğme, varsayılan görünüme geri dönmek için
-- **Değiştir** düğmesi, çözümler ve kullanılabilir görünümler arasında geçiş yapmak için
-- Bekleyen değişiklikler içeren açık dosyaları veya dosyaları görüntülemek için, **bekleyen değişiklikler filtre** düğmesi & açılan menü
-- Kod düzenleyicisinden bir dosya bulmak için **etkin belge Ile Eşitle** düğmesi
-- Yalnızca bir işlev veya paket gibi bir bağımlılık seçtiğinizde görüntülenen **Yenile** düğmesi
-- Ana penceredeki dosya görünümünü daraltmak için **Tümünü Daralt** düğmesi
-- **Tüm dosyaları göster** düğmesi, [yüklenmeyen projeler](filtered-solutions.md#toggle-unloaded-project-visibility) dahil tüm dosyaları görüntülemek için
-- **Özellikler** düğmesi, belirli dosya ve bileşenlerin ayarlarını görüntülemek ve değiştirmek için
-- Seçili **öğeleri Önizle** düğmesi, seçilen bir dosyayı veya bileşeni kod düzenleyicisinde görüntülemek için
+- **Varsayılan** görünüme dönmek için Giriş düğmesi
+- **Çözümler** ve kullanılabilir görünümler arasında geçiş yapmak için düğmeyi değiştirme
+- **Bekleyen Değişiklikler Filtresi** düğmesi & açık dosyaları veya dosyaları görüntülemek için açılan menüyü açar
+- **Kod düzenleyicisinden bir** dosyayı bulmak için Etkin Belge ile eşitleme düğmesi
+- **Yenile** düğmesi; yalnızca işlev veya paket gibi bir bağımlılığı seçmenizde görüntülenir
+- **Ana pencerede** dosya görünümünü daraltan Tüm Daralt düğmesi
+- **Kaldırılan projeler** de dahil olmak üzere tüm dosyaları görüntülemek için [Tüm Dosyaları Göster düğmesi](filtered-solutions.md#toggle-unloaded-project-visibility)
+- **Belirli** dosya ve bileşenlerin ayarlarını görüntülemek ve değiştirmek için Özellikler düğmesi
+- **Kod düzenleyicisinde** seçili bir dosyayı veya bileşeni görüntülemek için Seçili Öğelerin Önizlemesini Görüntüle düğmesi
 
 ### <a name="solution-explorer-right-click-context-menu"></a>Çözüm Gezgini sağ tıklama bağlam menüsü
 
-Çözüm Gezgini ' de, sağ tıklama bağlam menüsünü kullanarak etkileşime girebilmeniz gereken birkaç dosya özelliği vardır. Sağ tıklama bağlam menüsü seçenekleri hakkında daha fazla bilgi için, [Proje ve çözüm özelliklerini yönetme](managing-project-and-solution-properties.md) sayfasına bakın.
+Bu Çözüm Gezgini, sağ tıklama bağlam menüsünü kullanarak etkileşim kurabilirsiniz çeşitli dosya özellikleri vardır. Sağ tıklama bağlam menüsü seçenekleri hakkında daha fazla bilgi için Proje ve [çözüm özelliklerini yönetme sayfasına](managing-project-and-solution-properties.md) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio çözüm ve projeler nelerdir?](solutions-and-projects-in-visual-studio.md)
-- [Visual Studio 'de pencere düzenlerini özelleştirme](customizing-window-layouts-in-visual-studio.md)
+- [Bu hizmette çözümler ve Visual Studio?](solutions-and-projects-in-visual-studio.md)
+- [Visual Studio'de pencere düzenlerini özelleştirme](customizing-window-layouts-in-visual-studio.md)

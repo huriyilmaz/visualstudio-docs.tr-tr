@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e87248314a97301fb49a8f4c4fef7db1a44f3e9d4eca7a84b58ea139ef12d188
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 72322527a2a5614061e4c30bc71654d8002f8f0f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389884"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138425"
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
 Bu yöntem bir alanın kapsayıcısı alır.
@@ -43,7 +43,7 @@ int GetContainer(
 
 ## <a name="parameters"></a>Parametreler
 `ppContainerField`\
-[out] [Kapsayıcıyı IDebugContainerField arabirimiyle temsil edilen şekilde](../../../extensibility/debugger/reference/idebugcontainerfield.md) döndürür.
+[out] [Kapsayıcıyı IDebugContainerField arabirimi tarafından temsil edilen şekilde](../../../extensibility/debugger/reference/idebugcontainerfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.

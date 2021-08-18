@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: b89fe1bd998b8bd74ebb9e80998eac53824bceddebd9d8a208a038746cfa2daf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: abc61c4a92bfab394fab783196ff2ca9fab831d4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334256"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122056179"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 
@@ -34,11 +34,11 @@ devenv /SafeMode
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu anahtar, uygulama başlatıldığında tüm üçüncü taraf VSPackage'ların yüklenmesini Visual Studio kararlı yürütmeye olanak sağlar.
+Bu anahtar, tüm üçüncü taraf VSPackage'ların Visual Studio ve kararlı yürütmeye olanak sağlar.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, Visual Studio modunda çalışmaya başlar.
+Aşağıdaki örnek, Visual Studio modunda başlatılır.
 
 ```shell
 devenv /safemode

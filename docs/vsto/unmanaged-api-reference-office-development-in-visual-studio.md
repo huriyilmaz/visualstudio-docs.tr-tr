@@ -1,6 +1,6 @@
 ---
-title: Unmanaged API başvurusu (Office geliştirme Visual Studio)
-description: Yönetilemeyen API başvurusu, eklentilerin yük yönetimine yardımcı VSTO kullanılır. Bu arabirimi kullanarak kendi VSTO yükleyici bileşeninizi de oluşturabilirsiniz.
+title: yönetilmeyen apı başvurusu (Visual Studio Office geliştirme)
+description: yönetilmeyen apı başvurusu, yük tarafından yönetilen VSTO eklentilere yardımcı olmak için kullanılır. ayrıca, bu arabirimi uygulayarak kendi VSTO eklenti yükleyici bileşenini de oluşturabilirsiniz.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
@@ -17,16 +17,16 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 05a8e1bef15e9299c16fccb39705f45f810e1d8bcfb0b16f99aab9b82ae29708
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 132c4ba7286ae04d7e9c64a1a6306fc14b2ea650
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121226121"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082744"
 ---
-# <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>Unmanaged API başvurusu (Office geliştirme Visual Studio)
+# <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>yönetilmeyen apı başvurusu (Visual Studio Office geliştirme)
 
-2007 Microsoft Office'den başlayarak, Office uygulamaları ile birlikte bulunan bir VSTO Eklenti yükleyici bileşenine çağrı yapmak için [IManagedAddin](../vsto/imanagedaddin-interface.md) arabirim arabirimini [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kullanır. Bu bileşen, eklentilerin yük yönetimine VSTO için kullanılır. Bu arabirimi kullanarak VSTO yükleyici bileşeninizi oluşturabilirsiniz.
+Office uygulamalar, 2007 Microsoft Office sisteminden başlayarak, içinde bulunan bir VSTO eklentisi yükleyici bileşeni çağırmak için [ımanagedaddin arabirimi](../vsto/imanagedaddin-interface.md) arabirimini kullanır [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . bu bileşen, yük tarafından yönetilen VSTO eklentilere yardımcı olmak için kullanılır. bu arabirimi uygulayarak kendi VSTO eklenti yükleyici bileşeninizi oluşturabilirsiniz.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -34,4 +34,4 @@ ms.locfileid: "121226121"
 
 [IManagedAddin arabirimi](../vsto/imanagedaddin-interface.md)
 
-Uygulama uygulamalarına yönetilen eklentileri yüklemek ve VSTO yüklemek ve Office com arabirimi.
+Office uygulamalarında yönetilen VSTO eklentilerini yüklemek ve kaldırmak için uygulayabileceğiniz bir COM arabirimi.

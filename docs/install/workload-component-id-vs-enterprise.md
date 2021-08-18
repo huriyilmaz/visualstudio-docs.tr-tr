@@ -1,12 +1,12 @@
 ---
 title: Visual Studio Enterprise iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Komut satırından Visual Studio 'Yu yüklemek veya VSıX bildiriminde bir bağımlılık belirtmek için Visual Studio Enterprise iş yükü ve bileşen kimlikleri kullanın.
+description: Komut Visual Studio Enterprise yüklerini yüklemek veya VSIX Visual Studio bağımlılık belirtmek için iş yükü ve bileşen kimliklerini kullanın.
 keywords: ''
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
-ms.date: 05/25/2021
+ms.date: 08/10/2021
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,14 +16,14 @@ ms.assetid: be73e3af-d87b-4d14-bd08-2e4bda074fb3
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: ad505ef8d57d5d681fd0b5b0af0ccba72f83780f
-ms.sourcegitcommit: 4a91c63683ba1c1832b1ba96657862a849320d81
+ms.openlocfilehash: 707d8effa4a1b0c87d2f3eea9fdb0069cacaaaa2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110565251"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077907"
 ---
-# <a name="visual-studio-enterprise-component-directory"></a>Visual Studio Enterprise bileşen dizini
+# <a name="visual-studio-enterprise-component-directory"></a>Visual Studio Enterprise bileşeni dizini
 
 [!INCLUDE[workloads-components-universal-header_md](includes/workloads-components-universal-header_md.md)]
 

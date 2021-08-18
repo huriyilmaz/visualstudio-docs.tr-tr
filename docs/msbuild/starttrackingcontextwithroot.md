@@ -1,6 +1,6 @@
 ---
 title: StartTrackingContextWithRoot | Microsoft Docs
-description: Kök işaretçisi MSBuild bir yanıt dosyası kullanarak bir izleme bağlamı başlatmak için StartTrackingContextWithRoot ile birlikte kullanmayı öğrenin.
+description: bir kök işaretleyici belirten yanıt dosyası kullanarak bir izleme bağlamı başlatmak için starttrackingcontextwithroot MSBuild kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,16 +18,16 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: ec1f9b55f0a77aa1b8397820a82c78cc15d73f870e2e9144873722530fbca975
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 62ecbb05d0fd129709345c23887aca1d9ed201be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121369780"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142981"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 
-Kök işaretçiyi belirten bir yanıt dosyası kullanarak bir izleme bağlamı başlatır.
+Bir kök işaretleyici belirten yanıt dosyası kullanarak izleme bağlamını başlatır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,25 +37,25 @@ HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTS
 
 #### <a name="parameters"></a>Parametreler
 
-[in] `intermediateDirectory`
+'ndaki `intermediateDirectory`
 
- İzleme günlüğünün depolan olduğu dizin.
+ İzleme günlüğünün depolayabileceği dizin.
 
-[in] `taskName`
+'ndaki `taskName`
 
  İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.
 
-[in] `rootMarkerResponseFile`
+'ndaki `rootMarkerResponseFile`
 
- Kök işaretçi içeren bir yanıt dosyasının yol adı. Kök ad, bir bağlamın tüm izlemelerini birlikte grup etmek için kullanılır.
+ Kök işaretleyici içeren bir yanıt dosyasının yol adı. Kök adı bir bağlam için tüm izlemeyi gruplamak üzere kullanılır.
 
 ## <a name="return-value"></a>Döndürülen değer
 
- İzleme bağlamı oluşturulduktan sonra **SUCCEEDED** bit kümesine sahip **bir HRESULT.**
+ İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üst bilgi:** *FileTracker.h*
+ **Üstbilgi:** *FileTracker. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -13,12 +13,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 02966c0a51db16e096165d4e6be5ae60b2ff857ba8a5915049e828fc4a041c6e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 824253d243a6eaa1b4172be92574a7e0c481c310
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121315765"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141499"
 ---
 # <a name="save-and-export-performance-tools-data"></a>Performans araçları verilerini kaydetme ve dışarı aktarma
 Bu makalede, performans veri dosyalarının nasıl kaydedileceği ve dışarı aktarılacağı açıklanır.

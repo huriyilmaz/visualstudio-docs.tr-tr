@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl: Uygulama Sayfası Oluşturma | Microsoft Docs'
-description: Bir ASP.NET veya daha fazla site için bir web Visual Studio (uygulama sayfası olarak da bilinir) SharePoint oluşturun.
+title: 'Nasıl yapılır: uygulama sayfası oluşturma | Microsoft Docs'
+description: bir veya daha fazla SharePoint sitesi için Visual Studio bir ASP.NET web sayfası (uygulama sayfası olarak da bilinir) oluşturun.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,40 +16,40 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: bbcd13bfb73f2b97d733b8a8f3d85038828edba30f3e1ea36588848405169390
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 211bba75c6acee1a820a2b8b4adaefb508818a04
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121332280"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060082"
 ---
-# <a name="how-to-create-an-application-page"></a>Nasıl: Uygulama sayfası oluşturma
-  Bir veya daha fazla ASP.NET için bir web sayfası SharePoint oluşturabilirsiniz. Bu SharePoint, uygulama sayfaları olarak da adlandırılan sayfalardır. Bir site sayfasından farklı olarak, uygulama sayfası sayfanın arkasında çalışan kod içerir. Daha fazla bilgi için [bkz. Uygulama sayfaları oluşturma SharePoint.](../sharepoint/creating-application-pages-for-sharepoint.md)
+# <a name="how-to-create-an-application-page"></a>Nasıl yapılır: uygulama sayfası oluşturma
+  bir veya daha fazla SharePoint sitesi için ASP.NET web sayfası oluşturabilirsiniz. SharePoint, bu sayfalara uygulama sayfaları denir. Bir site sayfasının aksine, bir uygulama sayfası sayfanın arkasında çalışan kodu içerir. Daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
 
 ### <a name="to-create-an-application-page"></a>Bir uygulama sayfası oluşturmak için
 
-1. Bu Visual Studio bir proje açın veya SharePoint oluşturun.
+1. Visual Studio, bir SharePoint projesi açın veya oluşturun.
 
-     Daha fazla bilgi için [bkz. SharePoint proje ve proje öğesi şablonları.](../sharepoint/sharepoint-project-and-project-item-templates.md)
+     daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. Bu **Çözüm Gezgini** proje düğümünü seçin.
+2. **Çözüm Gezgini**, proje düğümünü seçin.
 
-3. Menü çubuğunda Yeni Öğe **Ekle'Project**  >  **seçin.**
+3. menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
-4. Yeni Öğe **Ekle iletişim** kutusunda, SharePoint **düğümünü** genişletin ve **ardından 2010 öğesini** seçin.
+4. **yeni öğe ekle** iletişim kutusunda **SharePoint** düğümünü genişletin ve ardından **2010** öğesini seçin.
 
-5. Uygulama şablonları listesinde SharePoint Sayfası'ı **seçin.**
+5. SharePoint şablonları listesinde **uygulama sayfası**' nı seçin.
 
-6. Ad **kutusunda,** uygulama sayfası için bir ad belirtin ve ardından Ekle **düğmesini** seçin.
+6. **Ad** kutusunda, uygulama sayfası için bir ad belirtin ve sonra **Ekle** düğmesini seçin.
 
-     Visual Studio projenize birkaç klasör ve dosya ekler. Bu dosyalar hakkında daha fazla bilgi için [bkz. SharePoint.](../sharepoint/creating-application-pages-for-sharepoint.md)
+     Visual Studio projenize birkaç klasör ve dosya ekler. Bu dosyalar hakkında daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
 
-     Visual Web **Geliştirici** tasarımcısının Kaynak görünümünde, ASP.NET dosyası görüntülenir. Araç Kutusundan denetimler ekleyerek ve içerik yer **tutucularına** yerleştirerek sayfayı tasarleyebilirsiniz. Daha fazla bilgi için [bkz. Kaynak Görünümü, Web Sayfası Tasarımcısı.](/previous-versions/aspnet/ms178154\(v\=vs.100\))
+     Visual Web Developer designer 'ın **kaynak** görünümünde ASP.NET sayfa dosyası görüntülenir. **Araç kutusu** ' ndan denetimler ekleyerek ve içeriği içerik yeryerlerine yerleştirerek sayfayı tasarlayabilmeniz gerekir. Daha fazla bilgi için bkz. [kaynak görünümü, Web sayfası tasarımcısı](/previous-versions/aspnet/ms178154\(v\=vs.100\)).
 
-7. Denetim olaylarını işlemek için uygulama sayfasının kod dosyasına kod ekleyin.
+7. Denetim olaylarını işlemek istiyorsanız, uygulama sayfası için kod dosyasına kod ekleyin.
 
-     Kod dosyası, projenin diline bağlı olarak ASP.NET *dosyanın düğümünü* genişleterek .cs veya *.vb* uzantısına sahipse görünür. Uygulama sayfası oluşturmanın uz adım bir örneği için bkz. Adım adım kılavuz: Uygulama sayfası [SharePoint oluşturma.](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)
+     kod dosyası, ASP.NET sayfa dosyası için düğümünü genişletirseniz ve projenin diline bağlı olarak *. cs* veya *. vb* uzantısına sahipse görüntülenir. uygulama sayfasının nasıl oluşturulacağını gösteren uçtan uca bir örnek için bkz. [izlenecek yol: SharePoint uygulama oluşturma sayfası](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md)
-- [Adım adım kılavuz: SharePoint uygulama sayfası oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)
+- [izlenecek yol: SharePoint uygulama sayfası oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)

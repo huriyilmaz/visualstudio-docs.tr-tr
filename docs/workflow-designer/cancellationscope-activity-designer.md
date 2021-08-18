@@ -10,14 +10,15 @@ ms.assetid: 2c85d663-b219-4142-9866-7693ffd46379
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: ef415763a67232f79b269650abecfe6bcabe6bd2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 91eb31444a56d68f062f7909d9fb5de13d3f496d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937205"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082614"
 ---
 # <a name="cancellationscope-activity-designer"></a>CancellationScope Etkinlik Tasarımcısı
 

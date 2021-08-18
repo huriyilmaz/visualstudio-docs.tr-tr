@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: program aracılığıyla metin dosyalarını çalışma kitabı olarak açma'
-description: bir metin dosyasını program aracılığıyla Microsoft Excel çalışma kitabı olarak açmak için Visual Studio nasıl kullanabileceğinizi öğrenin.
+title: 'Nasıl kullanılır: Program aracılığıyla metin dosyalarını çalışma kitapları olarak açma'
+description: Bir metin dosyasını program Visual Studio çalışma kitabı olarak açmak için Microsoft Excel öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e132cf1f729a279b13c65e9c3da3305f832dc96cdebf8c4a053264792db0e2f1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 68ee509eca06d6785f47fc776ad42c9f010b5219
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121296872"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106048"
 ---
-# <a name="how-to-programmatically-open-text-files-as-workbooks"></a>Nasıl yapılır: program aracılığıyla metin dosyalarını çalışma kitabı olarak açma
-  Bir metin dosyasını çalışma kitabı olarak açabilirsiniz. Açmak istediğiniz metin dosyasının adını geçirmeniz gerekir. Ayrıştırmaya başlamak için kullanılacak satır numarası ve dosyadaki verilerin sütun biçimi gibi çeşitli isteğe bağlı parametreleri belirtebilirsiniz.
+# <a name="how-to-programmatically-open-text-files-as-workbooks"></a>Nasıl kullanılır: Program aracılığıyla metin dosyalarını çalışma kitapları olarak açma
+  Bir metin dosyasını çalışma kitabı olarak açabilirsiniz. Açmak istediğiniz metin dosyasının adını geçmelisiniz. Hangi satır numarasının ayrıştırmaya başlayacağı ve dosyadaki verilerin sütun biçimi gibi birkaç isteğe bağlı parametre belirtebilirsiniz.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -33,17 +33,17 @@ ms.locfileid: "121296872"
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet80":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet80":::
 
-## <a name="compile-the-code"></a>Kodu derle
+## <a name="compile-the-code"></a>Kodu derleme
  Bu örnek aşağıdaki bileşenleri gerektirir:
 
-- Adında `Test.txt` , en az üç satırlık metin içeren bir virgülle ayrılmış metin dosyası.
+- En az üç satır metin içeren adlı `Test.txt` virgülle ayrılmış bir metin dosyası.
 
-- `Test.txt`C sürücüsünde depolanacak metin dosyası.
+- `Test.txt`C sürücüsünde depolanmış metin dosyası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma kitaplarında çalışma](../vsto/working-with-workbooks.md)
-- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını açma](../vsto/how-to-programmatically-open-workbooks.md)
-- [Nasıl yapılır: program aracılığıyla yeni çalışma kitapları oluşturma](../vsto/how-to-programmatically-create-new-workbooks.md)
-- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını kaydetme](../vsto/how-to-programmatically-save-workbooks.md)
-- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını kapatma](../vsto/how-to-programmatically-close-workbooks.md)
+- [Çalışma kitaplarıyla çalışma](../vsto/working-with-workbooks.md)
+- [Nasıl yapılanlar: Program aracılığıyla çalışma kitaplarını açma](../vsto/how-to-programmatically-open-workbooks.md)
+- [Nasıl musunuz: Program aracılığıyla yeni çalışma kitapları oluşturma](../vsto/how-to-programmatically-create-new-workbooks.md)
+- [Nasıl yapılanlar: Program aracılığıyla çalışma kitaplarını kaydetme](../vsto/how-to-programmatically-save-workbooks.md)
+- [Nasıl yapılanlar: Program aracılığıyla çalışma kitaplarını kapatma](../vsto/how-to-programmatically-close-workbooks.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

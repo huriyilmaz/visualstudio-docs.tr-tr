@@ -11,17 +11,18 @@ ms.assetid: bf515a8f-dcee-4004-8f81-543d547ceaae
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d9499af30f9e9139d0ff64fcf17695b7a4ad69c9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 25fa2f9c4a36e292bf58c80cbfdb01c6ad021ce4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066340"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111261"
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
 Belgedeki bu konumdaki metnin boyutunu alır.

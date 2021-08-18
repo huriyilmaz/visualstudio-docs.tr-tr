@@ -5,12 +5,12 @@ ms.assetid: 41CB62FF-0F39-4CE8-8917-6A77F058719F
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 11/06/2018
-ms.openlocfilehash: a3fa3f9bfcbdf69e31d85a4b9b4e744ef3e9f5fbeac1a156bae47808179599a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b33b6d3f0865ca338512f744f5b924ae2992179a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121383653"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082549"
 ---
 # <a name="connected-services-walkthrough"></a>Bağlı hizmetler izlenecek yolu
 

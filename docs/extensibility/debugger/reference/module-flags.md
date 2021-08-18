@@ -1,5 +1,5 @@
 ---
-description: Bir modülü tanımlamakta kullanılır.
+description: Bir modülü açıklamak için kullanılır.
 title: MODULE_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 0e555b42-b846-4dbb-812e-8e3d11c85b2d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b78e0ec9f720307a60485283b98939dee954ff29
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 83aa45e4fdcac756dbd623abcb1203fa160c9820
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079793"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110793"
 ---
 # <a name="module_flags"></a>MODULE_FLAGS
-Bir modülü tanımlamakta kullanılır.
+Bir modülü açıklamak için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,34 +54,34 @@ public enum enum_MODULE_FLAGS {
 
 ## <a name="fields"></a>Alanlar
  `MODULE_FLAG_NONE`\
- Modül olmadığını belirtir.
+ Modül belirtir.
 
  `MODULE_FLAG_SYSTEM`\
- Bir sistem modülünü belirtir.
+ Sistem modülünü belirtir.
 
  `MODULE_FLAG_SYMBOLS`\
- Bir sembol modülünü belirtir.
+ Sembol modülünü belirtir.
 
  `MODULE_FLAG_64BIT`\
- 64 bitlik bir modül belirtir.
+ 64 bit modülü belirtir.
 
  `MODULE_FLAG_OPTIMIZED`\
- Modülün iyileştirildiğini belirtir. Bu durum **modüller** penceresinde yansıtılır.
+ Modülün iyileştirilmiş olduğunu belirtir. Bu durum Modüller **penceresine yansıtıldı.**
 
  `MODULE_FLAG_UNOPTIMIZED`\
- Modülün iyileştirilmediğini belirtir. Bu durum **modüller** penceresinde yansıtılır. Bu, varsayılan durumdur.
+ Modülün en iyi duruma getirilmiş olmadığını belirtir. Bu durum Modüller **penceresine yansıtıldı.** Bu varsayılan durum olur.
 
 ## <a name="remarks"></a>Açıklamalar
- `m_dwModuleFlags` [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısının üyesi için kullanılır.
+ Bu `m_dwModuleFlags` yapının üyesi [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) kullanılır.
 
- Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
+ Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

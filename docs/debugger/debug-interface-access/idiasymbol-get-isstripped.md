@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 245325d736cfb051fff4e4b3046ba84c79b48279b04b5291b8d6e379186cb181
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 58dd3f07fc3c706d82cdf5e4f2f8c2c99b5bbbad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379831"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066034"
 ---
 # <a name="idiasymbolget_isstripped"></a>IDiaSymbol::get_isStripped
 Özel simgelerin sembol dosyasından bırakılıp nakledilmediğini belirten bayrak alır.

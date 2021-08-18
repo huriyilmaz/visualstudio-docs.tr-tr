@@ -10,15 +10,16 @@ ms.assetid: 36f5b4de-5686-4f40-9e72-f4aee27d833c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 58236bbacfaa262c23400506cb32331719000b81
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e024bf05e2b49ff98ec8c6821d9303844296039
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967533"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108102"
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>Arayan/Aranan görünümü-.NET Bellek Örnekleme verileri
 Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için .NET bellek profili oluşturma verilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir.

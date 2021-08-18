@@ -1,6 +1,6 @@
 ---
-title: GetFrameworkSdkPath görevi | Microsoft Docs
-description: Windows SDK yolunu almak için MSBuild GetFrameworkSdkPath görevinin nasıl kullanılacağı hakkında bilgi edinin.
+title: GetFrameworkSdkPath Görev | Microsoft Docs
+description: MSBuild SDK'sı yolunu almak için GetFrameworkSdkPath görevinin nasıl Windows öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,37 +18,38 @@ ms.assetid: 2ef82b98-02b6-40cf-a9b5-f0e882fb5064
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: c0fe468f593d085c10f8d077246af6858d0571fe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c785e7d7e12a77650f607fc58798f6b80b73f0f0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914636"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093820"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath görevi
 
-Windows yazılım geliştirme seti (SDK) yolunu alır.
+Windows Software Development Kit(SDK) yolunu alır.
 ## <a name="task-parameters"></a>Görev parametreleri
 
-Aşağıdaki tablo, görevin parametrelerini açıklar `GetFrameworkSdkPath` .
-Aşağıdaki tablo, görevin parametrelerini açıklar `GetFrameworkSdkPath` .
+Aşağıdaki tabloda görevin parametreleri açık `GetFrameworkSdkPath` almaktadır.
+Aşağıdaki tabloda görevin parametreleri açık `GetFrameworkSdkPath` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`FrameworkSdkVersion20Path`|İsteğe bağlı `String` salt okunurdur çıkış parametresi.<br /><br /> Varsa .NET SDK sürüm 2,0 'nin yolunu döndürür. Aksi takdirde `String.Empty` döndürür.|
-|`FrameworkSdkVersion35Path`|İsteğe bağlı `String` salt okunurdur çıkış parametresi.<br /><br /> Varsa .NET SDK sürüm 3,5 'nin yolunu döndürür. Aksi takdirde `String.Empty` döndürür.|
-|`FrameworkSdkVersion40Path`|İsteğe bağlı `String` salt okunurdur çıkış parametresi.<br /><br /> Varsa .NET SDK sürüm 4,0 'nin yolunu döndürür. Aksi takdirde `String.Empty` döndürür.|
-|`Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Herhangi bir sürüm varsa, en son .NET SDK 'nın yolunu içerir. Aksi takdirde `String.Empty` döndürür.|
+|`FrameworkSdkVersion20Path`|İsteğe `String` bağlı salt okunur çıkış parametresi.<br /><br /> Varsa , .NET SDK sürüm 2.0'ın yolunu döndürür. Aksi takdirde `String.Empty` döndürür.|
+|`FrameworkSdkVersion35Path`|İsteğe `String` bağlı salt okunur çıkış parametresi.<br /><br /> Varsa , .NET SDK sürüm 3.5'in yolunu döndürür. Aksi takdirde `String.Empty` döndürür.|
+|`FrameworkSdkVersion40Path`|İsteğe `String` bağlı salt okunur çıkış parametresi.<br /><br /> Varsa , .NET SDK sürüm 4.0'ın yolunu döndürür. Aksi takdirde `String.Empty` döndürür.|
+|`Path`|İsteğe `String` bağlı çıkış parametresi.<br /><br /> Herhangi bir sürüm varsa, en son .NET SDK'sı yolunu içerir. Aksi takdirde `String.Empty` döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `GetFrameworkSdkPath` özelliğindeki Windows SDK yolu depolamak için görevini kullanır `SdkPath` .
+Aşağıdaki örnek, Windows `GetFrameworkSdkPath` SDK'sı yolunu özelliğinde depolamak için görevini `SdkPath` kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -11,14 +11,15 @@ ms.assetid: f2631820-c986-40ca-b61e-230d7a9c426c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d7e0fb0d3c6006a9ee2b83bae8e02d1150530f9
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e5f4f6d622497ee5ac149a74d3b35b0f7d0a6911
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156897"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161462"
 ---
 # <a name="idiastackframeget_cplusplusexceptionhandling"></a>IDiaStackFrame::get_cplusplusExceptionHandling
 C++ özel durum işlemenin etkin olup olmadığını gösteren bir bayrak alır.

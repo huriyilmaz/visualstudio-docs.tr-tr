@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 723a122d3cee53af6327c06ee4034164e7e66a4c21481639d5c5052e9f4abd0b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4aca0369b3720acaf43f39635ae0110d30f53524
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427827"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108765"
 ---
 # <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>Nasıl MSBuild.exe kullanarak çözümlerde belirli hedefler MSBuild.exe
 
@@ -42,7 +42,7 @@ msbuild SlnFolders.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Kullanabileceğiniz seçenekleri incelemek için uygulama tarafından sağlanan bir hata ayıklama seçeneğini MSBuild kullanabilirsiniz. Ortam değişkenini ayarlayın `MSBUILDEMITSOLUTION=1` ve çözümlerinizi derleme. Bu, derleme zamanında MSBuild çözümün iç görünümünü gösteren *\<SolutionName> .sln.metaproj* adlı MSBuild bir dosya üretir. Hangi hedeflerin derlemek için kullanılabilir olduğunu belirlemek için bu görünümü incelersiniz.
+Kullanabileceğiniz seçenekleri incelemek için, uygulama tarafından sağlanan bir hata ayıklama seçeneğini MSBuild kullanabilirsiniz. Ortam değişkenini ayarlayın `MSBUILDEMITSOLUTION=1` ve çözümlerinizi derleme. Bu, derleme zamanında MSBuild iç görünümünü gösteren *\<SolutionName> .sln.metaproj* adlı MSBuild bir dosya üretir. Hangi hedeflerin derlemek için kullanılabilir olduğunu belirlemek için bu görünümü incelersiniz.
 
 Bu iç görünüme ihtiyacınız yoksa, bu ortam değişkeni kümesiyle derlemeyin. Bu ayar, çözümünüzde projelerle ilgili sorunlara neden olabilir. Bunun yerine ikili [günlüğe](obtaining-build-logs-with-msbuild.md#save-a-binary-log) bakın.
 
