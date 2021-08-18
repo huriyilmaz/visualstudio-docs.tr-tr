@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c054aed3d9c4ac0b318558b1975d7401da6c13056b6c022edb37e6f3a69579f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8b2c06afa6391ea516d29e244ee869e21272bf0d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334971"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157936"
 ---
 # <a name="walkthrough-create-a-custom-editor"></a>Adım adım kılavuz: Özel düzenleyici oluşturma
 VSPackage proje şablonu C++ içinde basit bir özel düzenleyici oluşturabilir. VSPackage proje şablonu artık C# veya Visual Basic desteklemez. Daha fazla bilgi için [bkz. Visual Studio SDK.](../extensibility/visual-studio-sdk.md)
@@ -27,9 +27,9 @@ VSPackage proje şablonu C++ içinde basit bir özel düzenleyici oluşturabilir
  Bu izlenecek yolu takip etmek için Visual Studio SDK'sı yüklemeniz gerekir. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
 ## <a name="the-visual-studio-package-project-template"></a>Visual Studio Paketi proje şablonu
- Visual Studio Paketi proje şablonunu **C++** **Genişletilebilirlik Project** Yeni Uygulama iletişim kutusunda bulabilirsiniz.
+ Visual Studio Paketi proje şablonunu C++ **Genişletilebilirlik** Project Yeni Uygulama **iletişim kutusunda** bulabilirsiniz.
 
-### <a name="to-create-a-vspackage-using-the-visual-studio-package-template"></a>Visual Studio şablonu kullanarak VSPackage oluşturmak için
+### <a name="to-create-a-vspackage-using-the-visual-studio-package-template"></a>Visual Studio şablon kullanarak VSPackage oluşturmak için
 
 1. Visual Studio Paketi şablonuyla bir proje oluşturun.
 

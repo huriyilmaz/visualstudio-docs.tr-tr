@@ -1,50 +1,51 @@
 ---
-title: Kullanılmayan başvuruları kaldır
-description: Yeni kullanılmayan başvuruları kaldır komutuyla kullanımı olmayan proje başvurularını ve NuGet paketlerini temizlemeyi öğrenin.
+title: Kullanılmayan başvuruları kaldırma
+description: Yeni Kullanılmayan Başvuruları Kaldır komutuyla proje başvurularını temizlemeyi ve kullanımı NuGet paketleri kullanmayı öğrenin.
 ms.custom: SEO-VS-2021
 ms.date: 06/01/2021
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 707769229ad7bc1864a135bade1df918d4b27847
-ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
+ms.openlocfilehash: 19fe9badea98eafa040557d6d373ad72df588229
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "111352096"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143605"
 ---
-# <a name="remove-unused-references"></a>Kullanılmayan başvuruları kaldır
+# <a name="remove-unused-references"></a>Kullanılmayan Başvuruları Kaldırma
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 - Visual Basic
 
-**Ne:** Kullanılmayan başvuruları kaldırmanızı sağlar.
+**Ne:** Kullanılmayan başvuruları kaldırmanız için izin verir.
 
-**Ne zaman:** Kullanım içermeyen proje başvurularını ve NuGet paketlerini temizlemek istiyorsunuz. 
+**Ne zaman:** Proje başvurularını temizlemek ve kullanımı NuGet paketleri temizlemek istediğiniz. 
 
-**Neden:** Kullanım içermeyen proje başvurularını kaldırmak, her modülün yüklenmesi ve derleyicinin yükleme meta verilerinin hiç kullanılmayacağı zaman alacağından, alan tasarrufu ve uygulamanızın başlama süresini azaltmaya yardımcı olabilir.
+**Neden:** Kullanımız proje başvurularının kaldırılması, her modülün yüklemesi zaman alalı ve hiçbir zaman kullanılmayacak derleyici yükleme meta verilerine sahip olmaktan kaçınarak uygulamanıza yer tasarrufu ve başlatma süresinin azaltılmasına yardımcı olabilir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Çözüm Gezgini bir proje adına veya bağımlılıklar düğümüne sağ tıklayın.
+1. Proje adı veya bağımlılıklar düğümüne sağ tıklayın Çözüm Gezgini.
 
-2. **Kullanılmayan başvuruları kaldır**' ı seçin.
+2. Kullanılmayan **Başvuruları Kaldır'ı seçin.**
 
-    ![Kullanılmayan başvuruları Kaldır komutu](media/remove-unused-references-command.png)
+    ![Kullanılmayan Başvuruları Kaldır komutu](media/remove-unused-references-command.png)
 
-3. **Kullanılmayan başvuruları kaldır** iletişim kutusu, kaynak kodunda kullanımı olmayan başvuruları görüntüleyen açılır. Kullanılmayan başvurular `Keep` , eylem açılan listesinden seçerek başvuruları koruma seçeneği ile kaldırma için önceden seçilir.
+3. Kullanılmayan **Başvuruları Kaldır iletişim kutusu,** kaynak kodda hiç kullanımın olmadığını gösteren başvurular görüntülenir. Kullanılmayan başvurular, Eylem açılan listesinden seçerek başvuruları koruma seçeneğiyle birlikte kaldırma `Keep` için önceden seçilir.
 
-    ![Kullanılmayan başvuruları Kaldır iletişim kutusu](media/remove-unused-references-dialog.png)
+    ![Kullanılmayan Başvuruları Kaldır iletişim kutusu](media/remove-unused-references-dialog.png)
 
-5. `Apply`Seçili başvuruları kaldırmak için tıklayın. 
+5. Seçili `Apply` başvuruları kaldırmak için tıklayın. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

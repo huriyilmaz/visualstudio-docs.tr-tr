@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 85abab5d1e1955d645d73a1d753fec6c4f9a507f6653f0f727a9f39cfb17d7b2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 258a8c3309e695258c1599101e2b8fdc44e4f735
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402590"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126381"
 ---
 # <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
 Belirli bir işlemden çalışan programların bir listesini alır.

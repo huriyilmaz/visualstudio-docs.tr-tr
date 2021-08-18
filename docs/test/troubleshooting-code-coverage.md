@@ -10,16 +10,16 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 6c961772204909cdf23dab0fa0dde32fe409274699644d9b17ad86ff5cced309
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ea2976e01f8f02b0d6ea858afceb43ecad7ef1c7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121395062"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054125"
 ---
 # <a name="troubleshoot-code-coverage"></a>Kod kapsamı sorunlarını giderme
 
-Visual Studio'daki kod kapsamı analiz aracı, yerel ve yönetilen *derlemeler* (.dll *veya*.exetoplar). Ancak bazı durumlarda Kod Kapsamı **Sonuçları penceresinde** "Boş sonuçlar oluştu: ...." gibi bir hata görüntülenir. Boş sonuçlar alamanın birkaç nedeni vardır. Bu makale bu sorunları çözmenize yardımcı olur.
+Visual Studio'daki kod kapsamı analiz aracı, yerel ve yönetilen derlemeler *(.dll* *veya*.exetoplar). Ancak bazı durumlarda Kod Kapsamı **Sonuçları penceresinde** "Boş sonuçlar oluştu: ...." gibi bir hata görüntülenir. Boş sonuçlar alamanın birkaç nedeni vardır. Bu makale bu sorunları çözmenize yardımcı olur.
 
 ## <a name="what-you-should-see"></a>Görmeniz gereken
 
@@ -32,7 +32,7 @@ Visual Studio'daki kod kapsamı analiz aracı, yerel ve yönetilen *derlemeler* 
 ![Renklendirme ile kod kapsamı sonuçları](../test/media/codecoverage1.png)
 ::: moniker-end
 
-Daha fazla bilgi için [bkz. Ne kadar kodun test olduğunu belirlemek için kod kapsamı kullanma.](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+Daha fazla bilgi için [bkz. Test edilen koda ne kadar kod olduğunu belirlemek için kod kapsamı kullanma.](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 
 ## <a name="possible-reasons-for-seeing-no-results-or-old-results"></a>Sonuçları ya da eski sonuçları görmek için olası nedenler
 
@@ -58,21 +58,21 @@ Testlerinizi değiştirerek yeniden çalıştırarak eski çalıştırmanın kod
 
 ### <a name="pdb-symbol-files-are-unavailable"></a>.pdb (simge) dosyaları kullanılamaz
 
-Analiz &mdash; Derleme hedef klasörünü (genellikle *bin\debug)* açın ve her derleme için, derleme veya hata ayıklama dosyasıyla aynı dizinde *bir .pdb* *dosyası.dll* *.exe* doğrulayın.
+Analiz &mdash; Derleme hedef klasörünü açın (genellikle *bin\debug*) ve her derleme için,.dllveya.exe dosyasıyla aynı dizinde bir *.pdb* *dosyası olduğunu* doğrulayın.
 
 Açıklama Kod kapsamı altyapısı, her derlemenin test çalıştırması sırasında erişilebilen ilişkili &mdash; *.pdb* dosyasına sahip olmasını gerektirir. Belirli bir derleme için *.pdb* dosyası yoksa, derleme çözümlanmaz.
 
-*.pdb* dosyası, dosya dosyalarıyla aynı derlemeden *.dll* *.exe* gerekir.
+*.pdb* dosyası, dosya dosyalarıyla aynı derlemeden.dll *.exe* gerekir.
 
-Çözüm &mdash; Derleme ayarlarınızın *.pdb dosyasını oluşturması gerekir.* Proje *güncelleştirilirken .pdb* dosyaları güncelleştirilmezse, proje özelliklerini açın,  Derleme sayfasını seçin, Gelişmiş 'i seçin ve Hata Ayıklama **Bilgileri'ne bakın.**
+Çözüm &mdash; Derleme ayarlarınızın *.pdb dosyasını oluşturması gerekir.* Proje *güncelleştirilirken .pdb* dosyaları güncelleştirilmezse, proje özelliklerini açın,  Derleme sayfasını seçin, **Gelişmiş'i** seçin ve Hata Ayıklama **Bilgileri'ne bakın.**
 
-C++ projeleri için, oluşturulan .pdb dosyalarının tam hata ayıklama bilgilerine sahip olduğundan emin olur. Proje özelliklerini açın ve **Linker** Hata Ayıklama Oluşturma Hata Ayıklama Bilgisi Oluştur'un paylaşım ve yayımlama için iyileştirilmiş Hata Ayıklama Bilgileri Oluştur  >    >   **(/DEBUG:FULL)** olarak ayar olduğunu doğrulayın.
+C++ projeleri için, oluşturulan .pdb dosyalarının tam hata ayıklama bilgilerine sahip olduğundan emin olur. Proje özelliklerini açın ve BağlantıLayıcı **Hata** Ayıklama Oluşturma Hata Ayıklama Bilgisi Oluştur'un paylaşım ve yayımlama için en iyi duruma getirilmiş Hata Ayıklama Bilgileri Oluştur  >    >   **(/DEBUG:FULL)** olarak ayar olduğunu doğrulayın.
 
-*.pdb ve* *.dll* veya *.exe* farklı yerlerde ise, *.pdb* dosyasını aynı dizine kopyalayın. Başka bir konumda *.pdb* dosyalarını aramak için kod kapsamı altyapısını yapılandırmak da mümkündür. Daha fazla bilgi için [bkz. Kod kapsamı analizini özelleştirme.](../test/customizing-code-coverage-analysis.md)
+*.pdb ve* *.dll* *veya.exe* farklı yerlerde yer varsa, *.pdb* dosyasını aynı dizine kopyalayın. Başka bir konumda *.pdb* dosyalarını aramak için kod kapsamı altyapısını yapılandırmak da mümkündür. Daha fazla bilgi için [bkz. Kod kapsamı analizini özelleştirme.](../test/customizing-code-coverage-analysis.md)
 
 ### <a name="use-an-instrumented-or-optimized-binary"></a>Araçlı veya iyileştirilmiş ikili dosya kullanma
 
-Analiz İkili dosyanın Profil Destekli İyileştirme gibi herhangi bir gelişmiş iyileştirmeden olup olmadığını veya dosya veya profil oluşturma gibi bir profil oluşturma aracı &mdash; *tarafındanvsinstr.exe* vsperfmon.exe. **
+Analiz İkili dosyanın Profil Destekli İyileştirme gibi herhangi bir gelişmiş iyileştirmeden olup olmadığını veya dosya veya profil oluşturma gibi bir profil oluşturma aracı tarafından &mdash; *vsinstr.exevsperfmon.exe.* **
 
 Açıklama Bir derleme başka bir profil oluşturma aracı tarafından zaten araçsa veya iyileştirilmişse, derleme &mdash; kod kapsamı analizinden atlanır. Kod kapsamı analizi bu tür derlemelerde gerçekleştirilene bir işlemdir.
 

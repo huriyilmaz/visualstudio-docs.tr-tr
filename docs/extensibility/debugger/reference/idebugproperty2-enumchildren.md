@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89a377ea09822db6ac86ddd19c714021099df995733fcb1bd2e43fd0a1df4ec1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b38f7ca508edbd33feffe23fe8a09126cbdb7434
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121449072"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071346"
 ---
 # <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
 Özelliğin alt öğelerinin bir listesini alır.

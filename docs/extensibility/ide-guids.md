@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b7101f9e23bba9b44287a4cb8e01e8c61551b01e5c3fc3a9d82811214b87b0e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 535dfe4126bd1dbeeca69a89f1bd4df86df7ea98
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121275742"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086943"
 ---
 # <a name="ide-guids"></a>IDE GUID’leri
 

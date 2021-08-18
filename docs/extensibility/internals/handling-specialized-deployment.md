@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6de38ecefce3fe8b953523a61317af6fc808d92361ad0c89348269e4cacf679
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 88cb63133cbe3dbe8c41c64cdae1f0bdc64ff5f9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359538"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069919"
 ---
 # <a name="handle-specialized-deployment"></a>Özelleştirilmiş dağıtımı işleme
 Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin bir Web projesi, bir projenin Web sunucusunu güncelleştirmesine izin vermek için dağıtımı destekler. Benzer şekilde, **Akıllı Cihaz projesi** de, yerleşik bir uygulamayı hedef cihaza kopyalamak için dağıtımı destekler. Project alt türleri, arabirimini uygulayarak özel dağıtım davranışı <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> sağlar. Bu arabirim, dağıtım işlemlerinin eksiksiz bir kümesini tanımlar:

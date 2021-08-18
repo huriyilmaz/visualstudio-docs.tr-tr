@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, metin düzenleyici, XAML, çeşitli
-description: Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için XML bölümündeki Miscellaneous sayfasını nasıl kullanacağınızı öğrenin.
+title: Seçenekler, Metin Düzenleyici, XAML, Çeşitli
+description: XAML belgelerinize öğelerin ve özniteliklerin nasıl biçimlendiril olduğunu belirtmek için XML bölümündeki Çeşitli sayfayı kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
@@ -31,31 +31,31 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - uwp
-ms.openlocfilehash: 1a660f9b66f209b4ea04a921e82e7270782f7c6eb0deec9afb2b1a5b65dc524c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f3b3a3193eeaf9d05ceeb872e32eb6c972fe013a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372198"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143670"
 ---
-# <a name="options-text-editor-xaml-miscellaneous"></a>Seçenekler, metin düzenleyici, XAML, çeşitli
+# <a name="options-text-editor-xaml-miscellaneous"></a>Seçenekler, Metin Düzenleyici, XAML, Çeşitli
 
-Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için **çeşitli** Özellikler sayfasını kullanın. **Seçenekler** iletişim kutusunu açmak için **Araçlar** menüsüne ve ardından **Seçenekler**' e tıklayın. **Çeşitli** Özellik sayfasına erişmek için, **metin düzenleyici**  >  **xaml**  >  **çeşitli** düğümünü genişletin.
+XAML **belgelerinize öğelerin** ve özniteliklerin nasıl biçimlendiril olduğunu belirtmek için Çeşitli özellik sayfasını kullanın. Seçenekler iletişim **kutusunu açmak** için Araçlar menüsüne ve **ardından** Seçenekler'e **tıklayın.** Çeşitli özellik **sayfasına erişmek için** Metin Düzenleyici   >  **XAML**  >  **Çeşitli düğümünü** genişletin.
 
 ## <a name="auto-insert"></a>Otomatik Ekle
 
-Etiketlerin ve tekliflerin otomatik olarak ne zaman oluşturulduğunu denetlemek için bu ayarı kullanın.
+Etiketlerin ve tekliflerin otomatik olarak ne zaman oluşturularak oluşturulma zamanlarını kontrol etmek için bu ayarı kullanın.
 
 |Ad|Açıklama|
 |-|-|
-|**Kapatma etiketleri**|Açılış etiketini (>) karakterden daha uzun bir öğe kapatma etiketinin otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
-|**Öznitelik teklifleri**|Ekstre tamamlama açılan listesinden bir öznitelik değeri seçildiğinde kapsayan tekliflerin oluşturulup oluşturulmayacağını belirtir.|
-|**MarkupExtensions için kapatma ayraçları**|Açma küme ayracı (**{**) yazdığınızda bir işaretleme uzantısının kapanış ayracı (**}**) otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
-|**MarkupExtension parametrelerini ayırmak için virgüller**|Bir biçimlendirme uzantısına birden fazla parametre yazdığınızda virgüllerin oluşturulup oluşturulmayacağını belirtir.|
+|**Etiketleri kapatma**|Bir öğenin kapanış etiketinin, açma etiketini karakterden büyük (varsayılan değer) ile kapatarak otomatik olarak oluşturulıp oluşturulma >.|
+|**Öznitelik tırnakları**|Deyim tamamlama açılan listesinden bir öznitelik değeri seçildiğinde tırnak içine alan tırnakların oluşturulıp oluşturula olmadığını belirtir.|
+|**MarkupExtensions için kapanış ayraçları**|Bir işaretleme uzantısının kapanış ayracı (**}**) açılış ayracı karakterini ( { ) yazarak otomatik olarak oluşturulıp **oluşturula olmadığını** belirtir.|
+|**MarkupExtension parametrelerini ayırmak için virgül**|Bir işaretleme uzantısına birden fazla parametre yazarak virgül oluşturulıp oluşturulabileceğini belirtir.|
 
 ## <a name="errors-and-warnings"></a>Hatalar ve Uyarılar
 
-Hataların ve uyarıların otomatik olarak ne zaman oluşturulduğunu denetlemek için bu ayarı kullanın. Daha fazla bilgi için bkz. [XAML hataları ve uyarıları](../../xaml-tools/xaml-errors-warnings.md).
+Hataların ve uyarıların otomatik olarak ne zaman oluşturulalarını kontrol etmek için bu ayarı kullanın. Daha fazla bilgi için [bkz. XAML hataları ve uyarıları.](../../xaml-tools/xaml-errors-warnings.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

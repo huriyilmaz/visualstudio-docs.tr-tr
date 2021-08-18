@@ -17,12 +17,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bd8cd7516bf86bec039cd66aa183ac5a89108c63d2a69cd7c795e047ab42d4d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: accc9ab98ede9c691b8f81d75f80fdeb07546159
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121270009"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140641"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr uyarıları
 Aşağıdaki tabloda *VSInstr.exe* aracı tarafından verilen uyarılar listelenmektedir. Uyarının görünmesini engellemek için uyarı numaralarıyla birlikte NOWARN seçeneğini kullanabilirsiniz.

@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma'
-description: Visual Studio dışında metin şablonu dönüştürme işlevini kullanmak istiyorsanız nasıl özel bir ana bilgisayar yazabileceğinizi öğrenin.
+description: Visual Studio dışından metin şablonu dönüştürme işlevini kullanmak istiyorsanız nasıl özel bir ana bilgisayar yazabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,23 +10,24 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 4ef237bf3fc90708192a37014c15c0a15dea127e
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: f083ce6e5e5fa5fba24670fd6c148596d96524ea
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388262"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116532"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma
 
 *Metin şablonu ana bilgisayarı* , *metin şablonu dönüştürme altyapısının* çalışmasını sağlayan bir ortam sağlar. Ana bilgisayar, motorun dosya sistemiyle etkileşimini yönetmekten sorumludur. Bir dosya veya derlemeye ihtiyacı olan motor veya *yönerge işlemcisi* konaktan kaynak isteyebilir. Böylece, ana bilgisayar, istenen kaynağın yerini belirlemek amacıyla dizinlerde ve genel derleme önbelleğinde arama yapabilir. Daha fazla bilgi için bkz. [metin şablonu dönüştürme işlemi](../modeling/the-text-template-transformation-process.md).
 
-Visual Studio dışında *metin şablonu dönüştürme* işlevini kullanmak istiyorsanız veya bu işlevselliği özel araçlarla bütünleştirmek istiyorsanız, özel bir ana bilgisayar yazabilirsiniz. Özel bir ana bilgisayar oluşturmak için, [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))adresinden devralan bir sınıf oluşturmanız gerekir. Bireysel yöntemlerin belgeleri için bkz. [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)).
+Visual Studio dışından *metin şablonu dönüştürme* işlevini kullanmak istiyorsanız veya bu işlevselliği özel araçlarla birleştirmek istiyorsanız, özel bir ana bilgisayar yazabilirsiniz. Özel bir ana bilgisayar oluşturmak için, [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))adresinden devralan bir sınıf oluşturmanız gerekir. Bireysel yöntemlerin belgeleri için bkz. [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110)).
 
 > [!WARNING]
 > Visual Studio uzantısı veya paketi yazıyorsanız, kendi ana bilgisayarınızı oluşturmak yerine metin şablonu oluşturma hizmetini kullanmayı göz önünde bulundurun. Daha fazla bilgi için bkz. [BIR vs uzantısında metin dönüştürmeyi çağırma](../modeling/invoking-text-transformation-in-a-vs-extension.md).
@@ -716,7 +717,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
    End Namespace
    ```
 
-4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Yalnızca Için **Proje** menüsünü açın ve **CustomHost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
+4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]yalnızca için **Project** menüsünü açın ve **customhost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
 
 5. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
@@ -788,7 +789,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > Adresi yazmak yerine, **Windows Gezgini** 'nde dosyaya CustomHost.exe gidip dosyayı komut istemi penceresine sürükleyebilirsiniz.
+    > adresi yazmak yerine, **Windows Explorer** 'da CustomHost.exe dosyaya gidebilir ve sonra dosyayı komut istemi penceresine sürükleyebilirsiniz.
 
 3. Bir boşluk yazın.
 
@@ -799,11 +800,11 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
      `C:\<YOUR PATH>TestTemplate.tt`
 
     > [!NOTE]
-    > Adresi yazmak yerine **Windows Gezgini** 'nde TestTemplate.tt dosyasına gidip dosyayı komut istemi penceresine sürükleyebilirsiniz.
+    > adresi yazmak yerine, **Windows Explorer** 'da TestTemplate.tt dosyasına gidip dosyayı komut istemi penceresine sürükleyebilirsiniz.
 
      Özel ana bilgisayar uygulaması çalışır ve metin şablonu dönüştürme işlemini tamamlar.
 
-5. **Windows Gezgini**'nde, TestTemplate.tt dosyasını içeren klasöre gidin.
+5. **Windows gezgini**'nde, TestTemplate.tt dosyasını içeren klasöre gidin.
 
      Bu klasör, aynı zamanda TestTemplate1.txt dosyasını da içerir.
 

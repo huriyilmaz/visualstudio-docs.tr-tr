@@ -1,6 +1,6 @@
 ---
-title: MSBuild API | Microsoft Docs
-description: Program'ın derleme gerçekleştirerek MSBuild için sağladığı genel API yüzeyi hakkında bilgi edinin.
+title: MSBuild APı | Microsoft Docs
+description: programınızın derleme gerçekleştirebilmesi ve proje incelemesi için MSBuild ortak apı yüzeyi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,61 +10,61 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 54b1f78dacdc0d1bf18d722f00e2d1bfd665094e6ef154868cc54890cde313a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5ab75ae34fbea3b8423e074b3c5120459c681169
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427658"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115778"
 ---
-# <a name="use-the-msbuild-api"></a>MSBuild API'sini kullanma
+# <a name="use-the-msbuild-api"></a>MSBuild apı 'sini kullanma
 
-MSBuild programınız derlemeler gerçekleştirerek projeleri inceleyemesi için genel bir API yüzeyi sağlar. MSBuild API'lerinin son sürümleri aşağıdaki NuGet bulunabilir:
+MSBuild, programınızın derleme gerçekleştirmesini ve proje incelemenizi sağlamak için genel bir apı yüzeyi sağlar. MSBuild apı 'lerinin son sürümleri aşağıdaki NuGet paketlerinde bulunabilir:
 
 | Paket adı | Açıklama |
 | ------------ | ----------- |
-| [Microsoft.Build](https://www.nuget.org/packages/Microsoft.Build) | Proje oluşturmak, düzenlemek ve değerlendirmek için kullanılan Microsoft.Build derlemesini MSBuild içerir.|
-| [Microsoft.Build.Framework](https://www.nuget.org/packages/Microsoft.Build.Framework)| Diğer derlemeler tarafından MSBuild ortak çerçeve derlemesini MSBuild içerir. |
-| [Microsoft.Build.Runtime](https://www.nuget.org/packages/Microsoft.Build.Runtime) | Dosyanın tam bir yürütülebilir MSBuild. Bu pakete yalnızca, uygulamanın proje yüklemesi veya işlem sırasında derlemeleri, uygulama yüklemesi gerekmeden yürütmesi MSBuild. Projelerin bu paketi kullanarak başarıyla değerlendirilmesi için bir uygulama dizininde ek bileşenlerin (derleyiciler gibi) toplaması gerekir. |
-| [Microsoft.Build.Tasks.Core](https://www.nuget.org/packages/Microsoft.Build.Tasks.Core) | Uygulamanın yaygın olarak kullanılan görevlerini uygulayan Microsoft.Build.Tasks derleme MSBuild. |
-| [Microsoft.Build.Utilities.Core](https://www.nuget.org/packages/Microsoft.Build.Utilities.Core) | Özel dağıtım görevleri uygulamak için kullanılan Microsoft.Build.Utilities derleme MSBuild içerir. |
+| [Microsoft. Build](https://www.nuget.org/packages/Microsoft.Build) | MSBuild projeleri oluşturmak, düzenlemek ve değerlendirmek için kullanılan Microsoft. Build derlemesini içerir.|
+| [Microsoft. Build. Framework](https://www.nuget.org/packages/Microsoft.Build.Framework)| diğer MSBuild derlemeleri tarafından kullanılan ortak MSBuild framework derlemesini içerir. |
+| [Microsoft. Build. Runtime](https://www.nuget.org/packages/Microsoft.Build.Runtime) | MSBuild 'ın tamamen yürütülebilir bir kopyasını sunar. Bu pakete yalnızca uygulamanızın projeleri yüklemesi veya MSBuild yüklenmesi gerekmeden işlem içi derlemeler yürütmesi gerektiğinde başvurun. Bu paket kullanılarak projelerin başarıyla değerlendirilmesi, bir uygulama dizinine ek bileşenler (derleyiciler gibi) toplama gerektirir. |
+| [Microsoft. Build. Tasks. Core](https://www.nuget.org/packages/Microsoft.Build.Tasks.Core) | MSBuild yaygın olarak kullanılan görevleri uygulayan Microsoft. Build. Tasks derlemesini içerir. |
+| [Microsoft. Build. Utilities. Core](https://www.nuget.org/packages/Microsoft.Build.Utilities.Core) | özel MSBuild görevleri uygulamak için kullanılan Microsoft. Build. Utilities derlemesini içerir. |
 
-Ayrıca, NuGet kullanım dışı olan eski bir derleme olan [Microsoft.Build.Engine'i](https://www.nuget.org/packages/Microsoft.Build.Engine)de barındırmış olur.
+ayrıca NuGet, eski bir derlemeyi ( [Microsoft. Build. Engine](https://www.nuget.org/packages/Microsoft.Build.Engine), kullanım dışı) barındırır.
 
-MSBuild API'nin birkaç farklı sürümü vardır ve 15 ve 16 sürümleri için, derlemelerin NuGet paketlerinde biri .NET Framework ile derlenmiş, diğeri de .NET Framework API yüzeyinin bir alt kümesi olan .NET Core ile derlenmiş iki farklı biçim vardır.  MSBuild'nin .NET Core sürümü, komutu çağırarak Mac ve Linux sistemlerinde `dotnet` MSBuild kullanırken kullanılır.
+MSBuild apı 'nin birkaç farklı sürümü vardır ve 15 ve 16 sürümleri için, NuGet paketlerindeki derlemelerin iki farklı biçimi vardır, biri .NET Framework ile derlenir ve .NET Framework apı yüzeyinin bir alt kümesi olan .net Core ile derlenir.  MSBuild .net Core sürümü, `dotnet` komutu çağırdığınızda ve Mac ve Linux sistemlerinde MSBuild kullanırken kullanılır.
 
-MSBuild API'si [belgeleri.NET API Tarayıcısı](/dotnet/api)kullanılarak veya aşağıdaki listede ad alanlarına göz atarak bulunabilir.
+MSBuild apı 'si belgeleri [.net apı tarayıcısı](/dotnet/api)kullanılarak veya aşağıdaki listedeki ad alanlarına göz atarak bulunabilir.
 
 ::: moniker range="vs-2017"
 | Ad Alanı | Uygulanan Öğe | Açıklama |
 |-----------| -----------| ----------- |
-| [Microsoft.Build.Construction](/dotnet/api/Microsoft.Build.Construction?view=msbuild-15&preserve-view=true) | Tümü |  Örnek nesne modelinin MSBuild değerlerle proje kökleri oluşturmak için kullandığı türleri içerir. Her proje kökü bir projeye veya hedef dosyasına karşılık gelen bir dosyadır. |
-| [Microsoft.Build.Definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-15&preserve-view=true) | Tümü | Proje `ProjectOptions` projesini destekleyen sınıfını içerir. |
-| [Microsoft.Build.Evaluation](/dotnet/api/Microsoft.Build.Evaluation?view=msbuild-15&preserve-view=true) | Tümü | Nesne modelinin projeleri değerlendirmek MSBuild için kullandığı türleri içerir. Her proje bir veya daha fazla proje kökleriyle ilişkilendirildi. |
-| [Microsoft.Build.Evaluation.Context](/dotnet/api/Microsoft.Build.Evaluation.Context?view=msbuild-15&preserve-view=true) | Tümü | Değerlendirme durumunu `EvaluationContext` çağrılar arasında depolamak için kullanılan sınıfını içerir. |
-| [Microsoft.Build.Exceptions](/dotnet/api/Microsoft.Build.Exceptions?view=msbuild-15&preserve-view=true) | Tümü | Derleme işlemi sırasında atılan özel durum türlerini içerir. |
-| [Microsoft.Build.Exekesme](/dotnet/api/Microsoft.Build.Execution?view=msbuild-15&preserve-view=true) | Tümü | Nesne modelinin MSBuild için kullandığı türleri içerir. |
-| [Microsoft.Build.Framework](/dotnet/api/Microsoft.Build.Framework?view=msbuild-15&preserve-view=true) | Tümü | Görevlerin ve günlük kullanıcılarının veri altyapısıyla nasıl etkileşime MSBuild içerir.|
-| [Microsoft.Build.Framework.Profiler](/dotnet/api/Microsoft.Build.Framework.Profiler?view=msbuild-15&preserve-view=true) | Tümü | Performans profili oluşturmayı destekleyen türleri içerir. |
-| [Microsoft.Build.Framework.XamlTypes](/dotnet/api/Microsoft.Build.Framework.XamlTypes?view=msbuild-15&preserve-view=true) | .NET Framework yalnızca | Dosyalardan, kurallardan ve diğer kaynaklardan ayrıştıran XAML türlerini temsil etmek için kullanılan sınıfları içerir. |
-| [Microsoft.Build.Globbing](/dotnet/api/Microsoft.Build.Globbing?view=msbuild-15&preserve-view=true) | Tümü | Joker karakter işlemeyi destekleyen sınıflar içerir. |
-| [Microsoft.Build.Globbing.Extensions](/dotnet/api/Microsoft.Build.Globbing.Extensions?view=msbuild-15&preserve-view=true) | Tümü | Joker karakter işleme uzantılarını destekleyen türleri içerir. |
-| [Microsoft.Build. Graph](/dotnet/api/Microsoft.Build.Graph?view=msbuild-15&preserve-view=true) | Tümü | Geçiş anahtarını destekleyen `-graph` MSBuild içerir. |
-| [Microsoft.Build.Logging](/dotnet/api/Microsoft.Build.Logging?view=msbuild-15&preserve-view=true) | Tümü | Derlemenin ilerlemesini günlüğe kaydetme için kullanılan türleri içerir. |
-| [Microsoft.Build.ObjectModelRemoting](/dotnet/api/Microsoft.Build.ObjectModelRemoting?view=msbuild-15&preserve-view=true) | Tümü | Verilerdemoteyi destekleyen türleri MSBuild. |
-| [Microsoft.Build.Tasks](/dotnet/api/Microsoft.Build.Tasks?view=msbuild-15&preserve-view=true) | Tümü | Verilerle birlikte gönderim yapılan tüm görevlerin MSBuild. |
-| [Microsoft.Build.Tasks.Deployment.Bootstrapper](/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper?view=msbuild-15&preserve-view=true) | .NET Framework yalnızca | Uygulama tarafından dahili olarak kullanılan sınıfları MSBuild. |
-| [Microsoft.Build.Tasks.Deployment.ManifestUtilities](/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities?view=msbuild-15&preserve-view=true) | .NET Framework yalnızca | Uygulama tarafından MSBuild içerir.|
-| [Microsoft.Build.Tasks.Hosting](/dotnet/api/Microsoft.Build.Tasks.Hosting?view=msbuild-15&preserve-view=true) | Tümü | Uygulama tarafından dahili olarak kullanılan sınıfları MSBuild. |
-| [Microsoft.Build.Tasks.Xaml](/dotnet/api/Microsoft.Build.Tasks.Xaml?view=msbuild-15&preserve-view=true) | .NET Framework yalnızca | XAML derleme görevleriyle ilgili sınıfları içerir. |
-| [Microsoft.Build.Utilities](/dotnet/api/Microsoft.Build.Utilities?view=msbuild-15&preserve-view=true) | Tümü | Kendi günlüklerinizi ve görevlerinizi oluşturmak için kullanabileceğiniz MSBuild sınıflarını içerir.|
+| [Microsoft. Build. Inşaat](/dotnet/api/Microsoft.Build.Construction?view=msbuild-15&preserve-view=true) | Tümü |  MSBuild nesne modelinin değerlendirilmeyecek değerlerle proje kökleri oluşturmak için kullandığı türleri içerir. Her proje kökü bir proje veya hedef dosyasına karşılık gelir. |
+| [Microsoft. Build. Definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-15&preserve-view=true) | Tümü | `ProjectOptions`Proje oluşturmayı destekleyen sınıfını içerir. |
+| [Microsoft. Build. Evaluation](/dotnet/api/Microsoft.Build.Evaluation?view=msbuild-15&preserve-view=true) | Tümü | MSBuild nesne modelinin projeleri değerlendirmek için kullandığı türleri içerir. Her proje bir veya daha fazla proje kökü ile ilişkilendirilir. |
+| [Microsoft. Build. Evaluation. Context](/dotnet/api/Microsoft.Build.Evaluation.Context?view=msbuild-15&preserve-view=true) | Tümü | `EvaluationContext`Çağrılar genelinde değerlendirme durumunu depolamak için kullanılan sınıfını içerir. |
+| [Microsoft. Build. Exceptions](/dotnet/api/Microsoft.Build.Exceptions?view=msbuild-15&preserve-view=true) | Tümü | Yapı işlemi sırasında oluşturulabilecek özel durum türlerini içerir. |
+| [Microsoft.Build.Executıon](/dotnet/api/Microsoft.Build.Execution?view=msbuild-15&preserve-view=true) | Tümü | MSBuild nesne modelinin projeleri oluşturmak için kullandığı türleri içerir. |
+| [Microsoft. Build. Framework](/dotnet/api/Microsoft.Build.Framework?view=msbuild-15&preserve-view=true) | Tümü | görevlerin ve günlükçülerin MSBuild altyapısıyla nasıl etkileşime gireceğini tanımlayan türleri içerir.|
+| [Microsoft. Build. Framework. Profiler](/dotnet/api/Microsoft.Build.Framework.Profiler?view=msbuild-15&preserve-view=true) | Tümü | Performans profilini oluşturmayı destekleyen türleri içerir. |
+| [Microsoft. Build. Framework. XamlTypes](/dotnet/api/Microsoft.Build.Framework.XamlTypes?view=msbuild-15&preserve-view=true) | yalnızca .NET Framework | Dosyalar, kurallar ve diğer kaynaklardan Ayrıştırılan XAML türlerini temsil etmek için kullanılan sınıfları içerir. |
+| [Microsoft. Build. glob](/dotnet/api/Microsoft.Build.Globbing?view=msbuild-15&preserve-view=true) | Tümü | Joker karakter işlemeyi destekleyen sınıflar içerir. |
+| [Microsoft. Build. glob. Extensions](/dotnet/api/Microsoft.Build.Globbing.Extensions?view=msbuild-15&preserve-view=true) | Tümü | Joker karakter işlemeye yönelik uzantıları destekleyen türleri içerir. |
+| [Microsoft. Build. Graph](/dotnet/api/Microsoft.Build.Graph?view=msbuild-15&preserve-view=true) | Tümü | MSBuild anahtarını destekleyen türleri içerir `-graph` . |
+| [Microsoft. Build. Logging](/dotnet/api/Microsoft.Build.Logging?view=msbuild-15&preserve-view=true) | Tümü | Bir yapı ilerlemesini günlüğe kaydetmek için kullanılan türleri içerir. |
+| [Microsoft. Build. ObjectModelRemoting](/dotnet/api/Microsoft.Build.ObjectModelRemoting?view=msbuild-15&preserve-view=true) | Tümü | MSBuild 'da uzaktan iletişimi destekleyen türleri içerir. |
+| [Microsoft. Build. Tasks](/dotnet/api/Microsoft.Build.Tasks?view=msbuild-15&preserve-view=true) | Tümü | MSBuild tüm görevleri teslim etme uygulamasını içerir. |
+| [Microsoft. Build. Tasks. Deployment. Bootstrapper](/dotnet/api/Microsoft.Build.Tasks.Deployment.Bootstrapper?view=msbuild-15&preserve-view=true) | yalnızca .NET Framework | MSBuild tarafından dahili olarak kullanılan sınıfları içerir. |
+| [Microsoft. Build. Tasks. Deployment. bildirimli Estutilities](/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities?view=msbuild-15&preserve-view=true) | yalnızca .NET Framework | MSBuild tarafından kullanılan sınıfları içerir.|
+| [Microsoft. Build. Tasks. Hosting](/dotnet/api/Microsoft.Build.Tasks.Hosting?view=msbuild-15&preserve-view=true) | Tümü | MSBuild tarafından dahili olarak kullanılan sınıfları içerir. |
+| [Microsoft. Build. Tasks. xaml](/dotnet/api/Microsoft.Build.Tasks.Xaml?view=msbuild-15&preserve-view=true) | yalnızca .NET Framework | XAML derleme görevleriyle ilgili sınıfları içerir. |
+| [Microsoft. Build. Utilities](/dotnet/api/Microsoft.Build.Utilities?view=msbuild-15&preserve-view=true) | Tümü | kendi MSBuild günlükçüleri ve görevlerinizi oluşturmak için kullanabileceğiniz yardımcı sınıfları içerir.|
 :::moniker-end
 :::moniker range=">=vs-2019"
 | Ad Alanı | Uygulanan Öğe | Açıklama |
 |-----------| -----------| ----------- |
-| [Microsoft.Build.Construction](/dotnet/api/Microsoft.Build.Construction?view=msbuild-16&preserve-view=true) | Tümü |  Örnek nesne modelinin MSBuild değerlerle proje kökleri oluşturmak için kullandığı türleri içerir. Her proje kökü bir projeye veya hedef dosyasına karşılık gelen bir dosyadır. |
-| [Microsoft.Build.Definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-16&preserve-view=true) | Tümü | Proje `ProjectOptions` projesini destekleyen sınıfını içerir. |
-| [Microsoft.Build.Evaluation](/dotnet/api/Microsoft.Build.Evaluation?view=msbuild-16&preserve-view=true) | Tümü | MSBuild nesne modelinin projeleri değerlendirmek için kullandığı türleri içerir. Her proje bir veya daha fazla proje kökü ile ilişkilendirilir. |
+| [Microsoft. Build. Inşaat](/dotnet/api/Microsoft.Build.Construction?view=msbuild-16&preserve-view=true) | Tümü |  MSBuild nesne modelinin değerlendirilmeyecek değerlerle proje kökleri oluşturmak için kullandığı türleri içerir. Her proje kökü bir proje veya hedef dosyasına karşılık gelir. |
+| [Microsoft. Build. Definition](/dotnet/api/Microsoft.Build.Definition?view=msbuild-16&preserve-view=true) | Tümü | `ProjectOptions`Proje oluşturmayı destekleyen sınıfını içerir. |
+| [Microsoft. Build. Evaluation](/dotnet/api/Microsoft.Build.Evaluation?view=msbuild-16&preserve-view=true) | Tümü | MSBuild nesne modelinin projeleri değerlendirmek için kullandığı türleri içerir. Her proje bir veya daha fazla proje kökü ile ilişkilendirilir. |
 | [Microsoft. Build. Evaluation. Context](/dotnet/api/Microsoft.Build.Evaluation.Context?view=msbuild-16&preserve-view=true) | Tümü | `EvaluationContext`Çağrılar genelinde değerlendirme durumunu depolamak için kullanılan sınıfını içerir. |
 | [Microsoft. Build. Exceptions](/dotnet/api/Microsoft.Build.Exceptions?view=msbuild-16&preserve-view=true) | Tümü | Yapı işlemi sırasında oluşturulabilecek özel durum türlerini içerir. |
 | [Microsoft.Build.Executıon](/dotnet/api/Microsoft.Build.Execution?view=msbuild-16&preserve-view=true) | Tümü | MSBuild nesne modelinin projeleri oluşturmak için kullandığı türleri içerir. |

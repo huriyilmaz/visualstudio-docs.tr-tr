@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a8d0183db4bbe4baffac4fc689c18b815242202e178f8476f106cd9c60de6b0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 935e0ef2e8e8c104978e2551d7f46fbbe75cfe8e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429399"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143852"
 ---
 # <a name="go-to-line-dialog-box"></a>Satıra Git iletişim kutusu
 

@@ -1,6 +1,6 @@
 ---
-title: Dosya adı uzantıları hakkında | Microsoft Docs
-description: VSPackages için dosya adı uzantılarını kaydetmeyi ve bunları Visual Studio 'nun belirli bir sürümüyle ilişkilendirmeyi öğrenin.
+title: Dosya Adı Uzantıları hakkında | Microsoft Docs
+description: VSPackage'lar için dosya adı uzantılarını kaydetmeyi ve bunları uygulamanın belirli bir sürümüyle Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,21 +11,22 @@ ms.assetid: 99f4f9ff-fb84-4258-9787-6890f308a57f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f38bee1b62340f7d557ac2e5190fc5c48d9268fe
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 75629d0f559db2dac717d44eb3dc59b23c8af9e0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060152"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127798"
 ---
 # <a name="about-file-name-extensions"></a>Dosya adı uzantıları hakkında
-VSPackage 'un bir dosya uzantısını kaydettiğinizde, bunu bir sürümüyle ilişkilendirirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bir bilgisayarda birden fazla sürümü yüklüyse bu önemlidir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+VSPackage'ın bir dosya uzantısını kaydeden bir sürümüyle [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ilişkilendirmek. Bir bilgisayarda birden fazla sürümü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklüyse bu önemlidir.
 
- VSPackages için dosya uzantıları, ilişkili programlı tanımlayıcıyı (ProgID) gösteren varsayılan bir değer olan **HKEY_CLASSES_ROOT** anahtarı altına kaydedilir.
+ VSPackage'lar için dosya uzantıları, **HKEY_CLASSES_ROOT** program tanımlayıcısına (ProgID) yönelik varsayılan bir değere sahip bir anahtar altında kaydedilir.
 
- Aşağıdaki örnek, *. vcproj* dosya uzantısının kayıt bilgilerini gösterir:
+ Aşağıdaki örnekte *.vcproj* dosya uzantısı için kayıt bilgileri gösterir:
 
 ```
 HKEY_CLASSES_ROOT\
@@ -33,10 +34,10 @@ HKEY_CLASSES_ROOT\
       (default)=" VisualStudio.vcproj.8.0"
 ```
 
- İle ilişkili dosyalar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , gibi sürümlü bir ProgID 'ye sahip olmalıdır `VisualStudio.vcproj.8.0` . Sürümlü bir ProgID, ürün sürümleri arasında dosya uzantısı ilişkilendirmelerini sürdürmek için ürünün yan yana yüklemelerine izin verir. Sürüme özgü bir ProgID Ayrıca, diğer uygulamalar veya sürümleri için üzerine yazma veya üzerine yazma sorunu olmadan açık, düzenleme, vb. gibi standart yüklemleri kullanmanıza da olanak tanır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+ ile ilişkili [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dosyaların, gibi sürümüne sahip bir ProgID'ye sahip olması `VisualStudio.vcproj.8.0` gerekir. Sürüme sahip bir ProgID, ürün sürümleri arasındaki dosya uzantısı ilişkilendirmelerini korumak için ürünün yan yana yüklenmesine olanak sağlar. Sürüme özgü Bir ProgID, üzerine yazma veya diğer uygulamalar veya sürümleri tarafından üzerine yazılma endişesi olmadan açık, düzenleme gibi standart fiilleri de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanabilirsiniz.
 
- Belirli durumlarda, bir dosya uzantısıyla ilişkili ProgID değiştirilmemelidir. Örneğin, *. htm* dosya uzantısı (ProgID = htmlfile) için ProgID, işletim sistemindeki birkaç yerde sabit kodlanmış ve *. htm* ve *. html* dosyalarıyla ilişkilendirmede yaygın olarak bilinir ve kullanılır.
+ Bazı durumlarda, bir dosya uzantısıyla ilişkili ProgID değiştirilemez. Örneğin, *.htm* dosya uzantısı için ProgID (progid = htmlfile) işletim sistemi içinde bir dizi yerde sabit kodlanır ve yaygın olarak bilinir ve *.htm* ve.html *dosyalarıyla birlikte* kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yan yana dağıtımlar için dosya adı uzantılarını kaydetme](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)
-- [Dosya adı uzantıları için dosya işleyicileri belirtin](../extensibility/specifying-file-handlers-for-file-name-extensions.md)
+- [Dosya adı uzantıları için dosya işleyicileri belirtme](../extensibility/specifying-file-handlers-for-file-name-extensions.md)

@@ -11,17 +11,18 @@ ms.assetid: c6ce01a2-7da3-46ec-9837-855042fa7244
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 41bee16879e8c01cc71a6b0eb45f28fd34558a09
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f33ce74eb5fc71e518dd0d9e1f15b399f94db3b1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061738"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070639"
 ---
 # <a name="ienumdebugboundbreakpoints2clone"></a>IEnumDebugBoundBreakpoints2::Clone
 Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.

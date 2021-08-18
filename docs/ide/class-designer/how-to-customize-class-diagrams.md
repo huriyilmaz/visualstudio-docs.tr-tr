@@ -13,14 +13,15 @@ ms.assetid: e9030aea-c77d-4cc1-b8f6-b6ca469b692d
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 768c61ab525d03a7b9a1a80481b84b492d6bd0c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 47879d6ee3b28087925fbbbb15869869d1d7ab32
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919647"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041470"
 ---
 # <a name="how-to-customize-class-diagrams"></a>Nasıl yapılır: sınıf diyagramlarını özelleştirme
 

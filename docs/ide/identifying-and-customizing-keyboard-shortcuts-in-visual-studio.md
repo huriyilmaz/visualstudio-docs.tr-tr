@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9b38b27df28d551fc33e9a23bdad8276a422a4
-ms.sourcegitcommit: 15821c790d6498210f30b3268402ffad6bb70c7c
+ms.openlocfilehash: e69c2f43d4fdd306c556632aad2c271072987a9a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "113725553"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101732"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Klavye kısayollarını tanımlama ve Visual Studio
 
@@ -35,9 +36,9 @@ Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları öz
 
 - Kısayolu seçtiğiniz anda içinde bulunduğunuz bağlam. Örneğin, Ayarlar Designer kullanıyorsanız **F2** kısayolu komutu çağırır ve Takım Gezgini. `Edit.EditCell`  `File.Rename` 
 
-Ayarlar, özelleştirme ve bağlam ne olursa olsun, Seçenekler iletişim kutusunda her zaman bir klavye kısayolunu bulabilir **ve** değiştirebilirsiniz. Ayrıca Popüler klavye kısayolları içinde birkaç düzine komut için varsayılan klavye [kısayollarını da aramanız gerekir.](../ide/default-keyboard-shortcuts-in-visual-studio.md#popular) Tüm varsayılan kısayolların tam listesi için (Genel Geliştirme **ayarlarına** göre), bkz. [Tüm klavye kısayolları.](../ide/default-keyboard-shortcuts-in-visual-studio.md)
+Ayarlar, özelleştirme ve bağlam ne olursa olsun, Seçenekler iletişim kutusunda her zaman bir klavye kısayolunu bulabilir **ve** değiştirebilirsiniz. Ayrıca Popüler klavye kısayolları içinde birkaç düzine komut için varsayılan klavye [kısayollarını da aramanız gerekir.](../ide/default-keyboard-shortcuts-in-visual-studio.md#popular) Tüm varsayılan kısayolların tam listesi için (Genel Geliştirme **ayarlarına göre),** bkz. [Tüm klavye kısayolları.](../ide/default-keyboard-shortcuts-in-visual-studio.md)
 
-Genel bağlamdaki bir komuta bir  kısayol atanırsa ve başka bağlam yoksa, bu kısayol her zaman bu komutu çağırır. Ancak bir kısayol, Genel bağlamda bir komuta ve özel bağlamda farklı bir komuta atanabilir. Böyle bir komutu özel bağlamda kullanırsanız, özel bağlama ilişkin komutu çağırır (Genel bağlama ilişkin komutu çağırmaz).
+Genel bağlamdaki bir komuta bir  kısayol atanırsa ve başka bağlam atanmazsa, bu kısayol her zaman bu komutu çağırır. Ancak bir kısayol, Genel bağlamda bir komuta ve özel bağlamda farklı bir komuta atanabilir. Böyle bir komutu özel bağlamda kullanırsanız, özel bağlama ilişkin komutu çağırır (Genel bağlama ilişkin komutu çağırmaz).
 
 > [!NOTE]
 > Ayarlarınıza ve Visual Studio sürümünüze göre, menü komutlarının adları ve konumları ve iletişim kutularında görünen seçenekler değişik olabilir. Bu sayfa Genel Geliştirme **ayarları profilini** temel alan bir sayfadır.
@@ -82,7 +83,7 @@ Genel bağlamdaki bir komuta bir  kısayol atanırsa ve başka bağlam yoksa, bu
    > - Enter, Sekme, Caps Lock
    > - Scrn/Sys Rq Yazdırma, Kaydırma Kilidi, Duraklatma/Kesme
    > - Ekle, Giriş, Bitiş, Sayfa Yukarı, Sayfa Aşağı
-   > - Windows logo anahtarı, Uygulama anahtarı ve Ok anahtarlardan herhangi biri
+   > - Windows logo anahtarı, Uygulama anahtarı ve Ok anahtarlarının herhangi biri
    > - Sayısal tuş takımındaki Num Kilidi, Silme veya Temizleme
    > - Ctrl+Alt+Delete tuş bileşimi
 
@@ -110,7 +111,7 @@ Genel bağlamdaki bir komuta bir  kısayol atanırsa ve başka bağlam yoksa, bu
 
 2. Seçili **ortam ayarlarını dışarı aktar'ı** ve ardından Sonraki'yi **seçin.**
 
-3. Hangi **ayarları dışarı aktarın?** altında Tüm ayarlar onay kutusunun  **Ayarlar** ve ardından Ortam'ı **genişletin.**
+3. Hangi **ayarları dışarı aktarmayı istiyorsunuz?** altında Tüm ayarlar **onay Ayarlar** kutusunun işaretini kaldırın, Seçenekler'i **genişletin** ve ardından Ortam'ı **genişletin.**
 
 4. Klavye onay **kutusunu** ve ardından Sonraki'yi **seçin.**
 
@@ -138,11 +139,11 @@ Varsayılan olarak, kısayollarınız *%USERPROFILE%\Documents\Visual Studio 201
 
 3. Hayır, **yeni ayarları içeri aktar, geçerli ayarlarım** seçeneğinin üzerine yaz ve ardından Sonraki'yi **seçin.**
 
-4. My **Ayarlar** altında, içeri aktarmasını istediğiniz kısayolları içeren dosyayı seçin veya gözat **düğmesini** seçarak doğru dosyayı bulun.
+4. My **Ayarlar** altında, içeri aktarmasını istediğiniz kısayolları içeren dosyayı seçin veya doğru dosyayı **bulmak** için Gözat düğmesini seçin.
 
 5. **İleri**’yi seçin.
 
-6. Hangi **ayarları içeri aktarabilirsiniz?** altında Tüm ayarlar onay **kutusunu** Ayarlar ve ardından Ortam'ı **genişletin.**
+6. Hangi **ayarları içeri aktarmayı istiyorsunuz?** altında Tüm ayarlar onay Ayarlar kutusunun işaretini **kaldırın,** Seçenekler'i **genişletin** ve ardından Ortam'ı **genişletin.**
 
 7. Klavye onay **kutusunu** ve ardından Son'a **tıklayın.**
 

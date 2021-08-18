@@ -14,14 +14,14 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 63edc199e5c6386adc9c11dc3e893c4b093f994033b2f2b4c06043b92f38c011
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 67a84c3cb119c571f24a3f8a5a60dbafa89a8a4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121272427"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101771"
 ---
-# <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Nasıl yapabilirsiniz: Visual Studio'de yazı tiplerini, renkleri ve temaları değiştirme
+# <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Nasıl yapabilirsiniz: Visual Studio'da yazı tiplerini, renkleri ve temaları değiştirme
 
 Yazı tiplerini ve renkleri birçok Visual Studio değiştirebilirsiniz. Örneğin, varsayılan mavi renk temasını koyu temayla ("koyu mod" olarak da adlandırılır) değiştirebilirsiniz. İhtiyaçlarınızı en iyi şekilde karşılamak için ek karşıtlıklı bir tema da seçebilirsiniz. Ayrıca hem IDE hem de kod düzenleyicisinde varsayılan yazı tipi ve metin boyutunu değiştirebilirsiniz.
 
@@ -89,35 +89,35 @@ Tüm IDE çerçeve ve araç pencerelerinde veya yalnızca belirli pencereler vey
 
 1. Öğeleri görüntüle'de **uygun öğeyi seçin** ve ardından Öğe ön plan ve Öğe arka **plan** **seçeneklerini** değiştirebilirsiniz.
 
-Daha fazla bilgi için düzenleyicinin [yazı tiplerini ve renklerini değiştirme sayfasına](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) bakın.
+Daha fazla bilgi için [düzenleyicinin yazı tiplerini ve renklerini değiştirme sayfasına](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) bakın.
 
 ## <a name="accessibility-options"></a>Erişilebilirlik seçenekleri
 
-Görme güç bir deneyim yaşamanın renk teması seçenekleri vardır. Bir bilgisayarda tüm uygulamalar ve kullanıcı arabirimi için *yüksek* karşıtlıklı bir seçenek veya yalnızca diğer uygulamalar için fazladan bir karşıtlık Visual Studio kullanabilirsiniz.
+Görme güç bir deneyim yaşamanın renk teması seçenekleri vardır. Bir bilgisayarda tüm uygulamalar ve kullanıcı arabirimi için *yüksek* karşıtlıklı bir seçenek veya yalnızca diğer uygulamalar için ek karşıtlık Visual Studio kullanabilirsiniz.
 
 ### <a name="use-windows-high-contrast"></a>Yüksek karşıtlık Windows kullanın
 
 Yüksek karşıtlıklı seçeneğin iki durumlu seçeneğini Windows yordamlardan birini kullanın:
 
-- Bu Windows veya herhangi bir Microsoft uygulamasında, Sol **Alt Sol** + **Shift** + **PrtScn tuşlarına** basın.
+- Bu Windows veya herhangi bir Microsoft uygulamasında, Sol **Alt Sol** Shift +  + **PrtScn tuşlarına** basın.
 
-- Bu Windows Başlat'ı **seçin Ayarlar**  >    >  **Erişim Kolaylığı**  >  **karşıtlık.**
+- Bu Windows **Başlat'ı seçin Ayarlar**  >    >  **Erişim Kolaylığı**  >  **karşıtlığı.**
 
     > [!WARNING]
     > Yüksek Windows ayarı, bilgisayarda tüm uygulamaları ve kullanıcı arabirimini etkiler.
 
 ### <a name="use-visual-studio-extra-contrast"></a>Daha Visual Studio karşıtlığı kullanma
 
-Ek karşıtlık seçeneğinin iki durumlu Visual Studio yordamları kullanın:
+Ek karşıtlık seçeneğinin iki durumlu Visual Studio için aşağıdaki yordamları kullanın:
 
-1. Araç çubuğundaki menü Visual Studio Araçlar Seçenekleri'ne tıklayın  >  ve ardından, seçenekler listesinde Ortam **Genel'i**  >  **seçin.**
+1. Araç çubuğundaki menü Visual Studio Araçlar **Seçenekleri'ne** tıklayın ve  >  ardından, seçenekler listesinde Ortam **Genel'i**  >  **seçin.**
 
 1. Renk **teması açılan** listesinde Mavi (Ek Karşıtlık) **temasını** ve ardından Tamam'ı **seçin.**
 
-Size uygun diğer erişilebilirlik Visual Studio daha fazla bilgi edinmek için Visual Studio [sayfasına](../ide/reference/accessibility-features-of-visual-studio.md) bakın.
+Diğer erişilebilirlik seçenekleri hakkında Visual Studio fazla bilgi edinmek için Visual Studio [sayfasındaki Erişilebilirlik Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md) bakın.
 
 > [!TIP]
-> Yararlı olabileceğini düşünebilirsiniz ancak şu anda Visual Studio'da mevcut olmadığınız renkler veya yazı tipleri için erişilebilirlik  seçeneği varsa lütfen Visual Studio [Developer](https://aka.ms/feedback/suggest?space=8)Community . Bu forum ve nasıl çalıştığını görmek için Özellik [önerin sayfasına](../ide/suggest-a-feature.md) bakın.
+> Yararlı olabileceğini düşünebilirsiniz ancak şu anda Visual Studio'de mevcut olmayan renkler veya yazı tipleri için bir erişilebilirlik  seçeneği varsa lütfen [Visual Studio Developer](https://aka.ms/feedback/suggest?space=8)Community . Bu forum ve nasıl çalıştığını görmek için Özellik [önerin sayfasına](../ide/suggest-a-feature.md) bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -127,4 +127,4 @@ Yazı tipi ve renk düzenlerini değiştirebilirsiniz tüm kullanıcı arabirimi
 
 - [Nasıl yapabilirsiniz: Düzenleyicinin yazı tiplerini ve renklerini Visual Studio](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
 - [Visual Studio kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
-- [IDE'Visual Studio düzenleyiciyi kişiselleştirme](../ide/quickstart-personalize-the-ide.md)
+- [IDE Visual Studio düzenleyiciyi kişiselleştirme](../ide/quickstart-personalize-the-ide.md)

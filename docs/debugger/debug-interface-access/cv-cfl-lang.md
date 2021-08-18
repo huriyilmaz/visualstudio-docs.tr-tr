@@ -12,14 +12,15 @@ ms.assetid: 4e8e0613-ad02-4de9-9f46-e4753c5b0251
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 46c20fbe0c46a6c964a05b92ccd3a8bcf73cd1f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8bb3192316bf3dbdda7ee06f9bfa9a159ab8d982
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857372"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058938"
 ---
 # <a name="cv_cfl_lang"></a>CV_CFL_LANG
 Uygulamanın veya bağlı modülün kaynak kodu dilini belirtir.

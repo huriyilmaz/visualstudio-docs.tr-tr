@@ -8,15 +8,16 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ee3f09cd3df4b3aa3b733b0a715147758f54c61a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6d37edd40f05bc99909cd603445d87a186355362
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99963217"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157013"
 ---
 # <a name="tier-interaction-views"></a>Etkileşim Görünümleri
 

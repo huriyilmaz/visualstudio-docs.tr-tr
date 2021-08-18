@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: özel galeri için Atom akışı oluşturma | Microsoft Docs'
-description: Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabilir ve akışı uzantılara ve güncelleştirmelere özel galeri olarak ekleyebilirsiniz.
+title: 'Nasıl: Özel Galeri Hesabı için Atom Akışı | Microsoft Docs'
+description: Uzantılar içeren bir intranet konuma Atom (RSS) akışı oluşturabilir ve akışı Özel galeri olarak Uzantılar ve Güncelleştirmeler'e ebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,30 +14,30 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: eff01da3538e1a2d36b18031e7871c64461ed83f0340b0e0a177f7b080f505b3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8ff57a36930ebf1ad248480cd7ea15a50440529b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376475"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086956"
 ---
-# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl yapılır: özel galeri için Atom akışı oluşturma
-Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabilir ve akışı **uzantılara ve güncelleştirmelere** özel galeri olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).
+# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl yapılır: Özel galeri için Atom akışı oluşturma
+Uzantılar içeren bir intranet konuma Atom (RSS) akışı oluşturabilir ve  akışı Özel galeri olarak Uzantılar ve Güncelleştirmeler'e ebilirsiniz. Daha fazla bilgi için bkz. [Özel galeriler.](../extensibility/private-galleries.md)
 
 ## <a name="create-an-atom-feed"></a>Atom akışı oluşturma
- Özel Galeri olarak bir Atom akışı oluşturmak için, önce uzantılarınızı (*. vsix* Files) bir klasöre toplamanız gerekir. İsterseniz bunları alt klasörler halinde düzenleyebilirsiniz. Ayrıca aşağıdaki kaynaklara ihtiyacınız olacaktır:
+ Özel galeri olarak atom akışı oluşturmak için önce uzantılarınızı *(.vsix* dosyaları) bir klasöre toplayın. 8. alt klasörlere göre düzenleyebilirsiniz. Ayrıca aşağıdaki kaynaklara da ihtiyacınız vardır:
 
-- Uzantıları özel galeri olarak kullanılabilir hale getiren bir *atom.xml* dosyası. *atom.xml* dosyasını **uzantılara ve güncelleştirmelere** bağlama hakkında daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).
+- Uzantıları *atom.xml* galeri olarak kullanılabilir yapan bir dosya. Uzantılar ve Güncelleştirmeler'e *atom.xml* hakkında bilgi için **bkz.** [Özel galeriler.](../extensibility/private-galleries.md)
 
-- Uzantılardan ayıklanan görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). *atom.xml* dosyası, **Uzantılar ve güncelleştirmelerde** kullanılabilmesi için bu görüntülere yönelik göreli bağlantıları içerir.
+- Uzantılardan ayıklanan tüm görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). Bu *atom.xml,* Uzantılar ve Güncelleştirmeler'de kullanılabilir olacak şekilde bu **görüntülerin göreli bağlantılarını içerir.**
 
-  Örneğin, aşağıdaki iki uzantıyı bir klasöre topladığınızı varsayalım:
+  Örneğin, aşağıdaki iki uzantıyı bir klasöre toplanmış olduğunu varsayalım:
 
-- Boş bir VSıX proje şablonu olan *Template_Wizard_239. vsix*.
+- Template_Wizard_239 VSIX proje şablonu olan *Template_Wizard_239.vsix.*
 
-- *SelectionHighlight. vsix*, seçilen bir kelimenin tüm örneklerini vurgulamak için bir araçtır.
+- Seçili bir sözcüğün tüm örneklerini vurgulamaya yönelik bir araç olan *SelectionHighlight.vsix.*
 
-  *atom.xml* dosyanın içeriği aşağıdaki örneğe benzer:
+  atom.xml *dosyasının* içeriği aşağıdaki örnekteki gibi olabilir:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -73,7 +73,7 @@ Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabili
 </feed>
 ```
 
- İki bağlantı etiketlerinin görüntünün oluşturulan klasöründeki ekran görüntülerini ifade ettiğini unutmayın.
+ İki bağlantı etiketi, görüntülerin oluşturulan klasöründeki ekran görüntülerine başvurur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Özel galeriler](../extensibility/private-galleries.md)

@@ -7,17 +7,18 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 33e2be19e3a5a83d89e722aa0c1a1154c8196939
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6501aca83d0a98d15b9419f98a89f2221eb45c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968040"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143891"
 ---
 # <a name="generate-parameter"></a>Parametre oluşturma
 

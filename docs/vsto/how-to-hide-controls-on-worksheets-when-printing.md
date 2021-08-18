@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f0095510b45da5029173db590611255f83ca4e6edcc3fb0be695754064a39c6e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 621a33d8808b167bc17dd76b265ee0990bb11686
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394699"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100042"
 ---
 # <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Nasıl olur: Yazdırma sırasında çalışma sayfaları denetimlerini gizleme
   Formlar denetimlerini Microsoft Office Excel bir belgeyi Windows, denetimler yazdırılan çalışma sayfasında görünür. Çalışma sayfasını yazdırırken denetimleri gizleyebilirsiniz.
@@ -31,7 +31,7 @@ ms.locfileid: "121394699"
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
 > [!NOTE]
-> gibi veri görüntüleme denetimlerini gizlersanız, denetimde yer <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> alan veriler yazdırılan çalışma sayfasında görünmez.
+> gibi veri görüntüleme denetimlerini gizlersanız, denetimde yer alan <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> veriler yazdırılan çalışma sayfasında görünmez.
 
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [bkz. IDE'Visual Studio kişiselleştirme.](../ide/personalizing-the-visual-studio-ide.md)

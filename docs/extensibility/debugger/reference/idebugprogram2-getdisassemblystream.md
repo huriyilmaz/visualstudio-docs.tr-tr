@@ -11,17 +11,18 @@ ms.assetid: beda0da5-267e-4bf3-96c4-b659d29e2254
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c7016c003642b9ef2688390de7cdb39be412bded
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 562edd4bf17216a1baa6248966d61e33083341dc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075906"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126577"
 ---
 # <a name="idebugprogram2getdisassemblystream"></a>IDebugProgram2::GetDisassemblyStream
 Bu program veya bu programın bir parçası için ayrıştırma akışını alır.

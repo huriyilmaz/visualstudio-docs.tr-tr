@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: kod yerelleştirin | Microsoft Docs'
-description: sabit kodlanmış dizeleri, yerelleştirilmiş kaynaklara başvuran bir yöntem olan getglobalresourceobject çağrılarıyla değiştirerek SharePoint kodu yerelleştirmeye öğrenin.
+title: 'Nasıl |: Kod | Microsoft Docs'
+description: Yerelleştirilmiş kaynaklara başvuru SharePoint GetGlobalResourceObject çağrısıyla sabit kodlu dizeleri değiştirerek kodu yerelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,63 +16,63 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: a3cb812003543571bcd6fc2fea9307cc725247c8347aa4f108cdb7b494adb995
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c65edab726fb0def889364f37f2eed41778bcfe6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367518"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084239"
 ---
-# <a name="how-to-localize-code"></a>Nasıl yapılır: kod yerelleştirme
-  Yerelleştirilmemiş kod, sabit kodlanmış dize değerlerini kullanır. Kod dizelerini yerelleştirmek için, <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> yerelleştirilmiş kaynaklara başvuran bir yöntem olan çağrılarıyla değiştirin.
+# <a name="how-to-localize-code"></a>Nasıl olur: Kodu yerelleştirme
+  Yerel olmayan kod sabit kodlu dize değerlerini kullanır. Kod dizelerini yerelleştirmek için, yerelleştirilmiş kaynaklara <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> başvurulan bir yöntem olan çağrısıyla değiştirin.
 
-## <a name="localize-code"></a>Kodu yerelleştirin
+## <a name="localize-code"></a>Kodu yerelleştirme
 
 #### <a name="to-localize-code"></a>Kodu yerelleştirmek için
 
-1. **Çözüm Gezgini**, bir proje öğesi için kısayol menüsünü açın ve ardından modül **Ekle**' yi seçin  >  .
+1. Bu **Çözüm Gezgini** proje öğesinin kısayol menüsünü açın ve Modül **Ekle'yi**  >  **seçin.**
 
-     **Kaynak dosya** şablonunu seçin.
+     Kaynak Dosyası **şablonunu** seçin.
 
     > [!NOTE]
-    > dağıtım türü özelliğinin kullanılabilir olması için kaynak dosyasını SharePoint bir proje öğesine eklediğinizden emin olun. Bu özellik, bu yordamın ilerleyen kısımlarında gereklidir.
+    > Dağıtım Türü özelliğinin kullanılabilir olması için kaynak SharePoint bir proje öğesine ekleyin. Bu özellik bu yordamın devamlarında gereklidir.
 
-2. Varsayılan dil kaynak dosyasına, bir *. resx* uzantısıyla eklenen bir adı (örneğin, *MyAppResources. resx*) sağlayın.
+2. Varsayılan dil kaynak dosyasına, *MyAppResources.resx* gibi *bir .resx* uzantısıyla birlikte istediğiniz adı girin.
 
-3. SharePoint proje öğesine ayrı kaynak dosyaları eklemek için 1 ve 2. adımları yineleyin: her yerelleştirilmiş dil için bir tane.
+3. 1. ve 2. adımları tekrarlayın ve her yerelleştirilmiş dil için bir tane olmak SharePoint proje öğesine ayrı kaynak dosyaları ekleyin.
 
-     Her yerelleştirilmiş kaynak dosyası için aynı temel adı kullanın, ancak kültür KIMLIĞINI ekleyin. Örneğin, *MyAppResources.de-de. resx* adlı bir Almanya yerelleştirilmiş kaynağını adlandırın.
+     Yerelleştirilmiş her kaynak dosyası için aynı temel adı kullanın, ancak kültür kimliğini ekleyin. Örneğin, Almanca yerelleştirilmiş bir kaynağı *MyAppResources.de-DE.resx olarak anın.*
 
 4. Her kaynak dosyasını açın ve yerelleştirilmiş dizeler ekleyin. Her dosyada aynı dize kimliklerini kullanın.
 
-5. Her bir dosyanın sunucu App_GlobalResources klasörüne dağıtımına yol açmak için her bir kaynak dosyasının **dağıtım türü** özelliğinin değerini **AppGlobalResource** olarak değiştirin.
+5. Her bir dosyanın sunucunun App_GlobalResources klasörüne dağıtımına neden olmak için her bir kaynak dosyasının Dağıtım Türü özelliğinin değerini **AppGlobalResource** olarak App_GlobalResources. 
 
-6. Her bir dosyanın **derleme eylemi** özelliğinin değerini **katıştırılmış kaynak** olarak bırakın.
+6. Her dosyanın Derleme **Eylemi özelliğinin** değerini Katıştırılmış Kaynak **olarak bırakın.**
 
-     Gömülü kaynaklar projenin DLL 'sine derlenir.
+     Katıştırılmış kaynaklar projenin DLL'sine derlenmiş.
 
-7. Kaynak uydu dll 'Lerini oluşturmak için projeyi derleyin.
+7. Kaynak uydu URL'lerini oluşturmak için projeyi oluşturun.
 
-8. **Paket tasarımcısında**, **Gelişmiş** sekmesini seçin ve ardından uydu derlemesini ekleyin.
+8. Paket **Tasarımcısı'nda** Gelişmiş **sekmesini** seçin ve ardından uydu derlemesini ekleyin.
 
-9. **Konum** kutusunda, BIR kültür kimliği klasörünü konum yoluna ekleyin, örneğin, *de-de \\ \<Project Item Name>.resources.dll*.
+9. Konum **kutusunda,** *\\ \<Project Item Name> de-DE* gibi bir kültür kimliği klasörünü Konum yoluna.resources.dll.
 
-10. Çözümünüz System. Web derlemesine henüz başvurmadığından, buna bir başvuru ekleyin ve kodunuza bir yönerge ekleyin <xref:System.Web> .
+10. Çözümünüz System.Web derlemesine henüz başvurmsa, buna bir başvuru ekleyin ve kodunıza bir yönerge <xref:System.Web> ekleyin.
 
-11. Kodunuzda Kullanıcı tarafından görülebilen ve Kullanıcı arabirimi metni, hatalar ve ileti metni gibi sabit kodlanmış tüm dizeleri bulun. <xref:System.Web.HttpContext.GetGlobalResourceObject%2A>Aşağıdaki söz dizimini kullanarak bir yönteme çağrı ile değiştirin:
+11. Kodunuz içinde kullanıcı arabirimi metni, hatalar ve ileti metni gibi kullanıcılara görünür olan tüm sabit kodlanmış dizeleri bulun. Aşağıdaki sözdizimini kullanarak bunları <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> yöntemine yapılan bir çağrıyla değiştirin:
 
     ```csharp
     HttpContext.GetGlobalResourceObject("Resource File Name", "String ID")
     ```
 
-12. Uygulamayı derlemek ve çalıştırmak için **F5** tuşunu seçin.
+12. Uygulamayı **derlemek ve** çalıştırmak için F5 anahtarını seçin.
 
-13. SharePoint, varsayılan değer olan görüntüleme dilini değiştirin.
+13. Bu SharePoint varsayılandan görüntüleme dilini değiştirebilirsiniz.
 
-     Yerelleştirilmiş dizeler uygulamada görüntülenir. yerelleştirilmiş kaynakları göstermek için, SharePoint sunucuda kaynak dosyanın kültürüyle eşleşen bir dil paketi yüklü olmalıdır.
+     Yerelleştirilmiş dizeler uygulamada görünür. Yerelleştirilmiş kaynakları görüntülemek için SharePoint sunucusunda kaynak dosyasının kültürüyle eşleşen bir dil paketi yüklü olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerini yerelleştirin](../sharepoint/localizing-sharepoint-solutions.md)
-- [Nasıl yapılır: bir özelliği yerelleştirme](../sharepoint/how-to-localize-a-feature.md)
-- [Nasıl yapılır: ASPX işaretlemesini yerelleştirme](../sharepoint/how-to-localize-aspx-markup.md)
-- [Nasıl yapılır: kaynak dosyası ekleme](../sharepoint/how-to-add-a-resource-file.md)
+- [Yerelleştirme SharePoint yerelleştirme](../sharepoint/localizing-sharepoint-solutions.md)
+- [Nasıl: Bir özelliği yerelleştirme](../sharepoint/how-to-localize-a-feature.md)
+- [Nasıl yapabilirsiniz: ASPX işaretlemeyi yerelleştirme](../sharepoint/how-to-localize-aspx-markup.md)
+- [Nasıl: Kaynak dosyası ekleme](../sharepoint/how-to-add-a-resource-file.md)

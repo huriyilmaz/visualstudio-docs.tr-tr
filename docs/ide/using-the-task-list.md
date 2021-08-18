@@ -1,6 +1,6 @@
 ---
 title: Görev Listesini Kullanma
-description: Kod açıklamalarını Görev Listesi ve Visual Studio daha verimli bir şekilde kullanmanıza nasıl yardımcı olduğunu öğrenin.
+description: Kod açıklamalarını Görev Listesi ve Visual Studio daha verimli bir şekilde nasıl kullanabileceğinizi öğrenin.
 ms.date: 10/12/2020
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f326885e0a98c4dc5a71f3024530d176951883101f126b0b2d9fe9755e843478
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c20f0b6eb2a496455469f3bc7404839954add74d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121399489"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116805"
 ---
 # <a name="use-the-task-list"></a>Görev Listesini Kullanma
 
@@ -34,11 +34,11 @@ Ve **Görev Listesi** veya özel belirteçler kullanan kod açıklamalarını iz
 
 Görev Listesi  açık olduğunda, uygulama penceresinin alt kısmında görünür.
 
-Bir Görev Listesi açmak **için**   >  **Görünüm'Görev Listesi'ı** seçin veya klavyeden **Ctrl** + **\\** , T **tuşlarına basın.**
+Bir Görev Listesi açmak **için**   >  **Görünüm'Görev Listesi 'ı** seçin veya klavyeden **Ctrl**, + **\\** **T tuşlarına basın.**
 
 ![Görev Listesi penceresi](../ide/media/vs2015_task_list.png)
 
-Listenin sıralama sıralama sıralamalarını değiştirmek için herhangi bir sütunun üst bilgisini seçin. Arama sonuçlarınızı daha da geliştirmek için **Shift tuşuna basın** ve ikinci bir sütun başlığına tıklayın. Alternatif olarak kısayol menüsünde Sıralamaya **göre'yi ve** ardından bir üst bilgi seçin. Arama sonuçlarınızı daha da geliştirmek için **Shift tuşuna basın** ve ikinci bir üst bilgi seçin.
+Listenin sıralama sıralama sıralamalarını değiştirmek için herhangi bir sütunun üst bilgisini seçin. Arama sonuçlarınızı daha da geliştirmek için **Shift tuşuna basın** ve ikinci bir sütun başlığına tıklayın. Alternatif olarak, kısayol menüsünde Sıralamaya **göre'yi ve** ardından bir üst bilgi seçin. Arama sonuçlarınızı daha da geliştirmek için **Shift tuşuna basın** ve ikinci bir üst bilgi seçin.
 
 Sütunları göstermek veya gizlemek için kısayol menüsünde Sütunları **Göster'i seçin.** Göstermek veya gizlemek istediğiniz sütunları seçin.
 
@@ -48,11 +48,11 @@ Sütunların sıralamalarını değiştirmek için herhangi bir sütun üst bilg
 
 Kullanıcı görevi özelliği 2015'Visual Studio kaldırıldı. Visual Studio 2013 ve önceki sürümlerinden kullanıcı görev verilerine sahip bir çözüm asanız, *.suo* dosyanız içinde kullanıcı görev verileri etkilenmez, ancak kullanıcı görevleri görev listesinde görüntülenmez.
 
-Kullanıcı görev verilerinize erişmeye ve verileri güncelleştirmeye devam etmek isterseniz projeyi Visual Studio 2013'de açın ve tüm kullanıcı görevlerinin içeriğini tercih ettiğiniz proje yönetim aracına (örneğin, Team Foundation Server).
+Kullanıcı görev verilerinize erişmeye ve verileri güncelleştirmeye devam etmek isterseniz projeyi Visual Studio 2013'de açın ve tüm kullanıcı görevlerinin içeriğini tercih ettiğiniz proje yönetim aracına (örneğin Team Foundation Server).
 
 ## <a name="tokens-and-comments"></a>Belirteçler ve açıklamalar
 
-Kodunda önünde açıklama işaretçisi olan bir açıklama ve önceden tanımlanmış bir belirteç de içinde **Görev Listesi.** Örneğin, aşağıdaki C# açıklamasının üç ayrı bölümü vardır:
+Kodunda önünde açıklama işaretçisi olan bir açıklama ve önceden tanımlanmış bir belirteç de **Görev Listesi.** Örneğin, aşağıdaki C# açıklamasının üç ayrı bölümü vardır:
 
 - Açıklama işaretçisi ( `//` )
 
@@ -64,7 +64,7 @@ Kodunda önünde açıklama işaretçisi olan bir açıklama ve önceden tanıml
 // TODO: Load state from previously suspended application
 ```
 
-Önceden `TODO` tanımlanmış bir belirteç olduğundan, bu açıklama listede bir görev olarak `TODO` görünür.
+Önceden `TODO` tanımlanmış bir belirteç olduğundan, bu açıklama listede görev olarak `TODO` görünür.
 
 ### <a name="custom-tokens"></a>Özel belirteçler
 
@@ -77,7 +77,7 @@ Varsayılan olarak, Visual Studio belirteçleri içerir: `HACK` , `TODO` , ve `U
 
 1. Araçlar menüsünde **Seçenekler'i** **seçin.**
 
-2. Ortam klasörünü **açın** ve sonra **Görev Listesi.**
+2. Ortam klasörünü **açın** ve ardından **Görev Listesi.**
 
    Görev Listesi [seçenekleri](../ide/reference/task-list-environment-options-dialog-box.md) sayfası görüntülenir.
 
@@ -106,7 +106,7 @@ C++ TODO açıklamalarını kapatmak için  Araçlar menüsünde Seçenekler Met
 
 ### <a name="create-a-shortcut"></a>Kısayol oluşturma
 
-Kısayol oluşturmak için, işaretçiyi koda bir kısayolu eklemek istediğiniz yere girin. Yer   >  **İşaretlerini Düzenle**  >  **Kısayolu ekle'Görev Listesi veya** **Ctrl** + **K**, **Ctrl** + **H tuşlarına basın.**
+Kısayol oluşturmak için, işaretçiyi koda bir kısayol eklemek istediğiniz yere girin. Yer   >  **İşaretlerini Düzenle**  >  **Kısayolu ekle'Görev Listesi veya** **Ctrl** + **K**, **Ctrl** + **H tuşlarına basın.**
 
 Kodda kısayollar arasında gezinmek için, listeden bir kısayol  seçin ve ardından kısayol menüsünden Sonraki Görev **veya Önceki** Görev'i seçin.
 

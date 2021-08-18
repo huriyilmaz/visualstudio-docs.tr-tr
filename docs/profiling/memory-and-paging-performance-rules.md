@@ -11,12 +11,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 71697bcfd375217ca54be591ec18b334369853b0e1a71bccb5aa2bdb27a41058
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7e8606ea4d44d374a6d0c8b59905038b352aceaa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410481"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054632"
 ---
 # <a name="memory-and-paging-performance-rules"></a>Bellek ve disk belleği performans kuralları
 Bellek ve disk belleği kategorisindeki performans kuralları, profil oluşturma çalıştırması içinde uygulama performansını ve yanıt hızını etkileyebilirsiniz.

@@ -1,6 +1,6 @@
 ---
-title: Wpf. Hedef Dosyalar | Microsoft Docs
-description: Özel Windows Presentation Foundation .targets dosyasına (Microsoft.WinFX.targets MSBuild WPF'ye özgü görevler kümesi ekleyerek bu görevlerin (WPF) nasıl genişletici olduğunu öğrenin.
+title: WPF. Hedef dosyalar | Microsoft Docs
+description: Windows Presentation Foundation (wpf), özel bir. targets dosyasındaki Microsoft. WinFX. targets öğesine WPF 'e özgü bir görev kümesi ekleyerek MSBuild nasıl genişlettiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,19 +20,19 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9da54bb700b6d0b8e593616bdc7d7cb15a814775abfba3cb200c95d2024a0ef3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c1e7fde5440859f76cef6fe1ca0b41122f2e932b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121355795"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142435"
 ---
 # <a name="wpf-targets-files"></a>WPF .targets dosyaları
 
-Windows Presentation Foundation (WPF), özel bir *.targets* dosyasına *(Microsoft.WinFX.targets)* birlikte bir dizi WPF'ye özgü görev ekleyerek MSBuild'i genişlettir. Bu dosya, WPF'MSBuild bir proje oluşturmak için gereken MSBuild görev kümelerini birleştirir.
+Windows Presentation Foundation (wpf), özel bir *. targets* dosyası olan *Microsoft. WinFX. targets* içine birleştirilmiş bir WPF 'e özgü görevler kümesini ekleyerek MSBuild genişletir. bu dosya WPF içinde bir MSBuild projesi oluşturmak için gereken MSBuild görevleri kümesini birleştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild .targets dosyaları](../msbuild/msbuild-dot-targets-files.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
-- [WPF uygulaması (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+- [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

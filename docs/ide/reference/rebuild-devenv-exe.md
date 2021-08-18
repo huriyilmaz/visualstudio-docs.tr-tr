@@ -1,6 +1,6 @@
 ---
 title: -Rebuild (devenv.exe)
-description: Rebuild devenv komut satırı anahtarını kullanarak temizlemeyi ve ardından belirtilen çözüm yapılandırmasını derlemeyi öğrenin.
+description: Yeniden oluşturma Devenv komut satırı anahtarını kullanarak, belirtilen çözüm yapılandırmasını temizleyip oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -17,16 +17,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a3ef4a0394f62e214865e89f08d6d65771954e8724686db27a76ded978d7b46
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c787cb853ce259f9aec7cf932d0f9e59d0b595c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400120"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117169"
 ---
 # <a name="rebuild-devenvexe"></a>/Rebuild (devenv.exe)
 
-Temizlenir ve ardından belirtilen çözüm yapılandırmasını derlemek.
+Belirtilen çözüm yapılandırmasını temizler ve oluşturur.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -42,15 +42,15 @@ devenv SolutionName /Rebuild [SolnConfigName [/Project ProjName [/ProjectConfig 
 
 - *SolnConfigName*
 
-  İsteğe bağlı. SolutionName içinde adlı çözümü yeniden inşa etmek için kullanılacak çözüm yapılandırmasının adı `Debug` `Release` (veya *gibi).* Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize () `""` ise, araç çözümün etkin yapılandırmasını kullanır.
+  İsteğe bağlı. `Debug` `Release` *SolutionName* içinde adlı çözümü yeniden derlemek için kullanılacak Çözüm yapılandırmasının adı (veya gibi). Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize ( `""` ) ise, araç çözümün etkin yapılandırmasını kullanır.
 
 - `/Project` *ProjName*
 
-  İsteğe bağlı. Çözüm içindeki bir proje dosyasının yolu ve adı. *SolutionName* klasöründen projenin görünen adını veya göreli yolunu proje dosyasına girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
+  İsteğe bağlı. Çözüm içindeki bir proje dosyasının yolu ve adı. Projenin görünen adını veya *SolutionName* klasöründen proje dosyasına göreli bir yol girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
 
-- `/ProjectConfig`*ProjConfigName*
+- `/ProjectConfig`*Projconfigname*
 
-  İsteğe bağlı. Projenin derleme yapılandırması adı (veya gibi) yeniden `Debug` `Release` derlemek için `/Project` kullanılacak. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu anahtar belirtilirse *SolnConfigName bağımsız değişkenlerini geçersiz* kılar.
+  İsteğe bağlı. Adlandırılmış dosyanın yeniden derlenmesi sırasında kullanılacak projenin derleme yapılandırma adı ( `Debug` veya gibi `Release` ) `/Project` . Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu anahtar belirtilmişse, *Solnconfigname* bağımsız değişkenini geçersiz kılar.
 
 - `/Out`*OutputFilename*
 
@@ -58,15 +58,15 @@ devenv SolutionName /Rebuild [SolnConfigName [/Project ProjName [/ProjectConfig 
 
 ## <a name="remarks"></a>Açıklamalar
 
-- Bu anahtar, IDE içindeki Çözümü **Yeniden Oluştur** menü komutuyla aynı şeyi yapar.
+- Bu anahtar, IDE içindeki **çözümü yeniden derle** menü komutuyla aynı şeyi yapar.
 
-- Çift tırnak içinde boşluk içeren dizeleri içine alın.
+- Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
 
-- Hatalar da dahil olmak üzere temizleme ve binaya ilişkin özet bilgiler Komut penceresinde veya /Out anahtarıyla belirtilen herhangi bir [günlük dosyasında görüntülenebilir.](out-devenv-exe.md) 
+- Temizleme ve oluşturma için hatalar da dahil olmak üzere Özet bilgiler, **komut** penceresinde veya [/Out](out-devenv-exe.md) anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek içindeki proje derleme yapılandırmasını kullanarak `CSharpWinApp` projesini temizler `Debug` ve yeniden derlemesi `MySolution` sağlar.
+Bu örnek `CSharpWinApp` , `Debug` içindeki proje derleme yapılandırması kullanılarak projeyi temizler ve yeniden oluşturur `MySolution` .
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /rebuild Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug

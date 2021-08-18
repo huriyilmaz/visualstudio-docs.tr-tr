@@ -12,12 +12,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
-ms.openlocfilehash: 8ccc1c8570d5028a8fee84d12efb583a1a6ce8be23dd468a3b63dcc32696d15f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e1e4a31f0e82c262527da80fc85246de7d7c6c1a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121319341"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086137"
 ---
 # <a name="how-to-create-project-templates"></a>Nasıl yapılır: proje şablonları oluşturma
 

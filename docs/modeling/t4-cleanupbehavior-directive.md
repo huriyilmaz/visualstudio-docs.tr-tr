@@ -1,6 +1,6 @@
 ---
 title: T4 CleanUpBehavior yönergesi
-description: CleanUpBehavior yönergesi ve bir metin şablonunu işledikten sonra appDomain 'in nasıl silineceği hakkında bilgi edinin.
+description: CleanUpBehavior yönergesi hakkında bilgi edinmek ve metin şablonu işledikten sonra appDomain'i silmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 454522337d57f5f480aecdc30ef69efd39d6a11ab181f6a0324a84109e9c09db
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5c5d91e64f69b9f1075fa7bcfaa57db5bd843382
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370495"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116597"
 ---
 # <a name="t4-cleanupbehavior-directive"></a>T4 CleanUpBehavior yönergesi
 

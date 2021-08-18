@@ -10,14 +10,14 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8d82e1bab12c3393f6b5781c86219422727c0a2d163ab6aecdfdf86c6763599
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: abf1098b3c117cdc549eb530e2b9eac682ff55bd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121233530"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101888"
 ---
-# <a name="code-generation-features-in-visual-studio"></a>Visual Studio'de kod oluşturma özellikleri
+# <a name="code-generation-features-in-visual-studio"></a>Visual Studio'da kod oluşturma özellikleri
 
 Kod oluşturma, düzeltme ve Visual Studio yardımcı olmak için birçok farklı yol vardır.
 
@@ -27,7 +27,7 @@ Kod oluşturma, düzeltme ve Visual Studio yardımcı olmak için birçok farkl�
 
 - Hızlı [Eylemler'i sınıflar](../ide/quick-actions.md) ve özellikler gibi kod oluşturmak veya yerel bir değişken tanıtmak için kullanabilirsiniz. Ayrıca hızlı eylemleri kullanarak [](../ide/common-quick-actions.md)kodu geliştirebilirsiniz. Örneğin, gereksiz tür değiştirmeleri ve kullanılmayan değişkenleri kaldırmak veya değişkenlere erişmeden önce null denetimler eklemek için.
 
-- Bir değişkeni [yeniden adlandırmak,](../ide/refactoring-in-visual-studio.md) yöntem parametrelerini yeniden sıralamak veya bir türü dosya adıyla eşitlemek için kodu yeniden düzenlerini kullanabilirsiniz.
+- Bir değişkeni [yeniden adlandırmak,](../ide/refactoring-in-visual-studio.md) yöntem parametrelerini yeniden sıralamak veya bir türü dosya adıyla eşitlemek için kodu yeniden düzenlemeniz gerekir.
 
 > [!NOTE]
 > Visual Studio dil hizmeti kendi kod oluşturma özelliklerini sağladığı için bazı özellikler yalnızca C# dilinde, bazıları ise hem C# hem de Visual Basic.

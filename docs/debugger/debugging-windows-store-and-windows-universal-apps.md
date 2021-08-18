@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: dad30b6bbb212b40cf2dd1c2466ccc676825adb131a05b24eb010c95f76d102a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1adfcab578511c95595f24045e649e37a62765b2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344117"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112847"
 ---
 # <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Visual Studio'de Universal Windows Apps(UWP) hata ayıklaması Visual Studio
 

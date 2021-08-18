@@ -1,6 +1,6 @@
 ---
-description: İşlevin sanal olup olmadığını belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_virtual | Microsoft Docs'
+description: İşlevin sanal olup olmadığını belirten bir bayrak verir.
+title: IDiaSymbol::get_virtual | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: dfcae599ad96b5110b059046b04001c41aad29765007daef2573da5e85ded000
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5b459c5b6d7eff9151e648c6b9b7319de8dabd52
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121325632"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113246"
 ---
 # <a name="idiasymbolget_virtual"></a>IDiaSymbol::get_virtual
-İşlevin sanal olup olmadığını belirten bir bayrak alır.
+İşlevin sanal olup olmadığını belirten bir bayrak verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_virtual (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` İşlevin sanal olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] İşlev `TRUE` sanalsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

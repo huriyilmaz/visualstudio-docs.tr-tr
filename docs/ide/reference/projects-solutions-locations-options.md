@@ -9,14 +9,15 @@ f1_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 605198da53de13c50666aceb0eb5c5cb748936a2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 703e170ac176ada41b6a08a636a69f2edfc31327
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939766"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143709"
 ---
 # <a name="options-dialog-box-projects-and-solutions--locations"></a>Seçenekler iletişim kutusu: projeler ve çözüm \> konumları
 
@@ -26,7 +27,7 @@ Projeler, proje şablonları ve öğe şablonları için varsayılan konumları 
 
 ## <a name="projects-location"></a>Proje konumu
 
-Visual Studio 'Nun yeni projeler ve çözüm klasörleri oluşturduğu varsayılan konumu belirtir. Birçok iletişim kutusu ayrıca klasör başlangıç noktaları için bu seçenekte ayarlanan konumu kullanır. Örneğin, **Proje Aç** iletişim kutusu, **projem** kısayolu için bu konumu kullanır.
+Visual Studio yeni projeler ve çözüm klasörleri oluşturduğu varsayılan konumu belirtir. Birçok iletişim kutusu ayrıca klasör başlangıç noktaları için bu seçenekte ayarlanan konumu kullanır. örneğin, **aç Project** iletişim kutusu, **projelerim** kısayolu için bu konumu kullanır.
 
 ## <a name="user-project-templates-location"></a>Kullanıcı projesi şablonlarının konumu
 

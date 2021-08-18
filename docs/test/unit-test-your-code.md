@@ -14,12 +14,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 339df26d11d61dedb4894f20450206a12c6a27f00430195ab09d645c2e882b65
-ms.sourcegitcommit: 29a893fb8639ee1d64922e99bf424e10ecce30d5
+ms.openlocfilehash: bd506fe8c47050e936854c51f6e3c225210bcdff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121465046"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100406"
 ---
 # <a name="unit-test-tools-and-tasks"></a>Birim testi araçları ve görevleri
 

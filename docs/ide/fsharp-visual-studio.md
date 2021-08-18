@@ -13,20 +13,20 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: ff81b359c7bd9519deb6357065ad9f9e489a733ba188c70523fcb076e2b9e29c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 71b18226be9a9609269a6619f2524c3099610eb1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121272531"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086189"
 ---
-# <a name="develop-with-visual-f-in-visual-studio"></a>Visual F#'da Visual Studio
+# <a name="develop-with-visual-f-in-visual-studio"></a>Visual Studio'Visual F# Visual Studio
 
 Bu makale, F# Visual Studio özellikleri hakkında bilgi içerir.
 
 ## <a name="install-f-support"></a>F# desteğini yükleme
 
-Visual Studio'de F# ile geliştirmek için, önce henüz yüklemedıysanız **.NET** masaüstü geliştirme iş yükünü yükleyin. Araçları Visual Studio Özellikler'i Visual Studio Yükleyicisi seçerek açabilirsiniz.   >  
+Visual Studio'da F# ile geliştirmek için, önce **.NET masaüstü geliştirme** iş yükünü yükleyin (henüz yüklemediyebilirsiniz). Araçları Visual Studio Özellikler'i Visual Studio Yükleyicisi seçerek açabilirsiniz.   >  
 
 ![Visual Studio'de .NET masaüstü geliştirme iş Visual Studio](media/dotnet-desktop-development-workload.png)
 
@@ -34,11 +34,11 @@ Visual Studio'de F# ile geliştirmek için, önce henüz yüklemedıysanız **.N
 
 F# için farklı proje ve öğe şablonları Visual Studio. Aşağıdaki görüntüde .NET Core ve .NET Standard için F# proje şablonlarının bazıları .NET Standard:
 
-![Visual Studio'da F# proje şablonları](media/fsharp-project-templates.png)
+![Visual Studio'de F# proje şablonları](media/fsharp-project-templates.png)
 
 Aşağıdaki görüntüde F# öğesi şablonlarının bazıları yer almaktadır:
 
-![Visual Studio'de F# öğe şablonları](media/fsharp-item-templates.png)
+![Visual Studio'da F# öğe şablonları](media/fsharp-item-templates.png)
 
 Veri erişimine ilişkin öğe şablonları hakkında daha fazla bilgi için bkz. [F# tür sağlayıcıları.](/dotnet/fsharp/tutorials/type-providers/index)
 
@@ -59,15 +59,15 @@ Aşağıdaki tabloda F# için proje özellikleri özetlenmiştir:
 
 ## <a name="project-designer"></a>Proje Tasarımcısı
 
-**Project Designer,** ilgili işlevlere göre gruplu çeşitli proje özellik sayfalarından oluşur. F# projeleri için kullanılabilen sayfalar çoğunlukla diğer dillerde kullanılabilen sayfaların bir alt kümesidir ve aşağıdaki tabloda açıklanmıştır. Bağlantılar, ilgili C# Project **Sağlanır.**
+**Project Designer,** ilgili işlevlere göre gruplu çeşitli proje özellik sayfalarından oluşur. F# projeleri için kullanılabilen sayfalar çoğunlukla diğer dillerde kullanılabilenlerin bir alt kümesidir ve aşağıdaki tabloda açıklanmıştır. Bağlantılar, ilgili C# Project **Sağlanır.**
 
 |Project Tasarımcı sayfası|İlgili bağlantılar|Açıklama|
 | - |-------------|-----------|
-|Uygulama|[Uygulama Sayfası, Project Tasarımcısı](reference/application-page-project-designer-csharp.md)|Bir kitaplık mı yoksa yürütülebilir dosya mı oluşturuyorsanız, uygulamanın hangi sürümünü hedeflemektedir ve uygulamanın kullandığı kaynak dosyalarının nerede depolandığıyla ilgili bilgiler gibi uygulama düzeyinde ayarlar ve özellikler belirtmenize olanak sağlar.|
+|Uygulama|[Uygulama Sayfası, Project Tasarımcısı](reference/application-page-project-designer-csharp.md)|Bir kitaplık mı yoksa yürütülebilir dosya mı oluşturuyorsanız, uygulamanın hangi sürümünü hedeflemektedir ve uygulamanın kullandığı kaynak dosyalarının nerede depolandığı hakkında bilgiler gibi uygulama düzeyinde ayarlar ve özellikler belirtmenize olanak sağlar.|
 |Oluşturma|[Derleme Sayfası, Project Tasarımcısı](reference/build-page-project-designer-csharp.md)|Kodun nasıl derlenmiş olduğunu denetlemeyi sağlar.|
 |Derleme Olayları|[Derleme Olayları Sayfası, Project Tasarımcısı](reference/build-events-page-project-designer-csharp.md)|Derlemeden önce veya sonra çalıştıracak komutları belirtmenizi sağlar.|
 |Hata Ayıklama|[Hata Ayıklama Sayfası, Proje Tasarımcısı](reference/debug-page-project-designer.md)|Hata ayıklama sırasında uygulamanın nasıl çalıştırılır denetlemenizi sağlar. Bu, hangi komutların ve uygulamanın başlangıç dizininin ne olduğunu ve yerel kod ve yerel kod gibi etkinleştirmek istediğiniz özel hata ayıklama modlarını SQL.|
-|Paket (yalnızca .NET SDK)|Yok|Paket meta verilerini NuGet paket olarak yayımlarken tanımlama NuGet sağlar.|
+|Paket (yalnızca.NET SDK)|Yok|Paket meta verilerini NuGet paket olarak yayımlarken tanımlama NuGet sağlar.|
 |Başvuru Yolları|[Bir projedeki başvuruları yönetme](managing-references-in-a-project.md)|Kodun bağlı olduğu derlemelerin nerede aranabilir olduğunu belirtmenizi sağlar.|
 |Kaynaklar (yalnızca.NET SDK)|Yok|Varsayılan kaynaklar dosyası oluşturma ve yönetmenizi sağlar.|
 
@@ -125,7 +125,7 @@ Aşağıdaki tabloda, F# ile desteklenen ve desteklen IntelliSense özellikleri 
 |Açılmamış ad alanlarındaki semboller için teklif tamamlama|Otomatik tamamlama ile, açılmamış bir ad alanı içinde bulunan eşleşen bir simge önerilir ve seçildiğinde ilgili deyimle `open` tamamlanması önerilir.|Yes|
 |Kod öğeleri oluşturma|Çeşitli yapılar için saplama kodu oluşturmana olanak sağlar.|Hayır|
 |Üyeleri Listeleme|Üye erişim işleci (.) yazarak bir türün üyelerini gösterir.|Yes|
-|Kullanımı Düzenle/Aç|C# içinde deyimleri **veya** F# içinde **açık** yönergeler kullanılarak başvurulan ad alanlarını düzenleyebilir.|Hayır|
+|Kullanımı Düzenleme/Açma|C# içinde deyimleri **veya** F# içinde açık yönergeler **kullanılarak** başvurulan ad alanlarını düzenleyebilir.|Hayır|
 |Parametre Bilgisi|Bir işlev çağrısı yazarak parametreler hakkında yararlı bilgiler gösterir.|Yes|
 |Hızlı Bilgi|Kodundaki herhangi bir tanımlayıcının eksiksiz bildirimini görüntüler.|Yes|
 |Otomatik küme ayracı tamamlama|F# ayraç gibi söz dizimi yapılarını işlemsel bir şekilde otomatik olarak tamamlar.|Yes|
@@ -134,45 +134,45 @@ IntelliSense hakkında genel bilgi için [bkz. IntelliSense kullanma.](using-int
 
 ## <a name="debugging-features"></a>Hata ayıklama özellikleri
 
-Aşağıdaki tabloda, F # kodunda hata ayıklarken kullanılabilen özellikler özetlenmektedir:
+Aşağıdaki tabloda, F# kodunda hata ayıklarken kullanılabilen özellikler özetlenmiştir:
 
-|Özellik|Açıklama|F # içinde destekleniyor mu?|
+|Özellik|Açıklama|F# ile desteklensin mi?|
 |-------|-----------|----------------|
 |Otomatik değişkenler penceresi|Otomatik veya geçici değişkenleri gösterir.|Hayır|
-|Kesme noktaları|Hata ayıklama sırasında belirli noktalarda kod yürütmeyi duraklatmanızı sağlar.|Yes|
-|Koşullu kesme noktaları|Yürütmenin duraklatıp duraklatılmayacağını belirleyen bir koşulu test eden kesme noktalarını sunar.|Yes|
-|Düzenle ve Devam Et|Hata ayıklayıcıyı durdurup yeniden başlatmadan çalışan bir programda hata ayıkladığınızda kodun değiştirilmesini ve derlenmesine olanak sağlar.|Hayır|
-|İfade değerlendirici|Çalışma zamanında kodu değerlendirir ve yürütür.|Hayır, ancak C# sözdizimi kullanmak zorunda olsanız da C# ifade değerlendiricisi kullanılabilir.|
-|Geçmiş hata ayıklama|Daha önce yürütülen koda adım adım eklemenizi sağlar.|Yes|
+|Kesme noktaları|Hata ayıklama sırasında belirli noktalarda kod yürütmeyi duraklatmanizi sağlar.|Yes|
+|Koşullu kesme noktaları|Yürütmenin duraklatıp duraklatmayacaklarını belirleyen bir koşulu test etmek için kesme noktaları sağlar.|Yes|
+|Düzenle ve Devam Et|Hata ayıklayıcıyı durdurmadan ve yeniden başlatmadan çalışan bir programda hata ayıklarken kodun değiştirilmelerini ve derlerini sağlar.|Hayır|
+|İfade değerlendirici|Çalışma zamanında kodu değerlendirir ve yürütür.|Hayır, ancak C# ifade değerlendiricisi kullanılabilir, ancak C# söz dizimi kullan gerekir.|
+|Geçmiş hata ayıklama|Daha önce yürütülen koda adım adım çalışmana olanak sağlar.|Yes|
 |Yerel öğeler penceresi|Yerel olarak tanımlanan değerleri ve değişkenleri gösterir.|Yes|
-|Imlece kadar Çalıştır|İmleci içeren satıra ulaşılana kadar kodu çalıştırmanızı sağlar.|Yes|
-|Adımla|Yürütmeyi ilerletebilirsiniz ve herhangi bir işlev çağrısına geçiş yapmanızı sağlar.|Yes|
-|Adımla|Geçerli yığın çerçevesindeki yürütmeyi ilerlemenize ve herhangi bir işlev çağrısını taşımanızı sağlar.|Yes|
+|İmleçe Çalıştır|İmleci içeren satıra ulaşıncaya kadar kodu yürütmenizi sağlar.|Yes|
+|Adımla|Yürütmeyi ilerletin ve herhangi bir işlev çağrısına taşımayı sağlar.|Yes|
+|Adım At|Geçerli yığın çerçevesinde yürütmeyi ilerletin ve herhangi bir işlev çağrısının gerisini taşımayı sağlar.|Yes|
 
-Visual Studio hata ayıklayıcı hakkında genel bilgi için bkz. [Visual Studio hata ayıklama](../debugger/index.yml).
+Hata ayıklayıcısı hakkında genel Visual Studio için [bkz.](../debugger/index.yml)Visual Studio.
 
 ## <a name="additional-tools"></a>Ek araçlar
 
-aşağıdaki tabloda, Visual Studio araçları 'nda F # desteği özetlenmektedir.
+Aşağıdaki tabloda, Visual Studio araçları için F# desteği özetlenmiştir.
 
-|Araç|Açıklama|F # içinde destekleniyor mu?|
+|Araç|Açıklama|F# ile desteklensin mi?|
 |----|-----------|----------------|
-|Çağrı Hiyerarşisi|Kodunuzda işlev çağrılarının iç içe yapısını görüntüler.|Hayır|
-|Kod Ölçümleri|Kodunuz hakkında satır sayısı gibi bilgileri toplar.|Hayır|
-|Sınıf Görünümü|Projedeki kodun tür tabanlı görünümünü sağlar.|Hayır|
-|[Hata Listesi penceresi](reference/error-list-window.md)|Koddaki hataların bir listesini gösterir.|Yes|
-|[F# Etkileşimli](/dotnet/fsharp/tutorials/fsharp-interactive/)|, F # kodunu yazmanız (veya kopyalayıp yapıştırmanızı) ve bunu projenizin yapısından bağımsız olarak hemen çalıştırmanızı sağlar. F# Etkileşimli pencere bir okuma, değerlendirme, yazdırma döngüsü (REPL).|Yes|
-|Nesne Tarayıcısı|Bir derlemedeki türleri görüntülemenize olanak sağlar.|Derlenmiş derlemelerde göründükleri gibi F # türleri tam olarak yazar olarak görünmez. F # türlerinin derlenmiş gösterimine göz atabilirsiniz, ancak türleri F # ' dan göründükleri gibi görüntüleyemezsiniz.|
-|[Çıktı penceresi](reference/output-window.md)|Yapı çıkışını görüntüler.|Yes|
-|Performans Analizi|Kodunuzun performansını ölçmek için araçlar sağlar.|Yes|
-|Özellik penceresi|Odaklı geliştirme ortamındaki nesnenin özelliklerini görüntüler ve düzenlemenizi mümkün.|Yes|
-|Sunucu Gezgini|Çeşitli sunucu kaynaklarıyla etkileşimde bulunmak için yollar sağlar.|Yes|
-|Çözüm Gezgini|Projeleri ve dosyaları görüntülemenize ve yönetmenize olanak sağlar.|Yes|
+|Çağrı Hiyerarşisi|Kodundaki işlev çağrılarının iç içe geçmiş yapısını görüntüler.|Hayır|
+|Kod Ölçümleri|Kodunuz hakkında satır sayıları gibi bilgiler toplar.|Hayır|
+|Sınıf Görünümü|Bir proje içinde kodun tür tabanlı bir görünümünü sağlar.|Hayır|
+|[Hata Listesi penceresi](reference/error-list-window.md)|Kodda hataların listesini gösterir.|Yes|
+|[F# Etkileşimli](/dotnet/fsharp/tutorials/fsharp-interactive/)|F# kodu yazmanızı (veya kopyalayıp yapıştırmanızı) ve projenizin binadan bağımsız olarak hemen çalıştırmanızı sağlar. Bu F# Etkileşimli Okuma, Değerlendirme, Yazdırma Döngüsü (REPL) penceresidir.|Yes|
+|Nesne Tarayıcısı|Bir derlemede türleri görüntülemeye olanak sağlar.|Derlenmiş derlemelerde görünen F# türleri, tam olarak siz yazar gibi görünmez. F# türlerinin derlenmiş gösterimine göz atabilirsiniz, ancak türleri F# içinden görünen şekilde görüntü olamaz.|
+|[Çıktı penceresi](reference/output-window.md)|Derleme çıkışını görüntüler.|Yes|
+|Performans analizi|Kodunuzun performansını ölçmek için araçlar sağlar.|Yes|
+|Özellik penceresi|Odak noktası olan geliştirme ortamında nesnenin özelliklerini görüntüler ve düzenlemeyi sağlar.|Yes|
+|Sunucu Gezgini|Çeşitli sunucu kaynaklarıyla etkileşim kurmanın yollarını sağlar.|Yes|
+|Çözüm Gezgini|Projeleri ve dosyaları görüntülemenizi ve yönetmenizi sağlar.|Yes|
 |Görev Listesi|Kodunuzla ilgili iş öğelerini yönetmenizi sağlar.|Hayır|
-|Test projeleri|Kodunuzu test etmenize yardımcı olan özellikler sağlar.|Hayır|
-|Araç Kutusu|Metin veya kodun denetimleri ve bölümleri gibi sürüklenebilir nesneleri içeren sekmeleri görüntüler.|Yes|
+|Projeleri test etmek|Kodunuzu test etmeye yardımcı olan özellikler sağlar.|Hayır|
+|Araç Kutusu|Denetimler ve metin veya kod bölümleri gibi sürüklenebilir nesneler içeren sekmeleri görüntüler.|Yes|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F # Kılavuzu (.NET Framework)](/dotnet/fsharp/)
-- [Visual Studio F # ile çalışmaya başlama](/dotnet/fsharp/get-started/get-started-visual-studio)
+- [F# kılavuzu (.NET Framework)](/dotnet/fsharp/)
+- [Kullanmaya başlayın F# ile Visual Studio](/dotnet/fsharp/get-started/get-started-visual-studio)

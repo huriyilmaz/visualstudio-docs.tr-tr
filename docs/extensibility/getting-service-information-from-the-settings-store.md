@@ -1,6 +1,6 @@
 ---
-title: Ayarlar deposundan hizmet bilgileri alma | Microsoft Docs
-description: Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yüklenmediğini öğrenmek için ayarlar deposunu nasıl kullanacağınızı öğrenin.
+title: Ayarlar Store | Microsoft Docs
+description: Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklü olup olmadığını belirlemek için ayarlar depolarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,21 +11,21 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3765859ed2ae3896ef6659d3df4dcbfe65b35963e8058bc8011c94f43324b467
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 668dce1e6cec7c27c3f816cfeb2131231983f571
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121401758"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087190"
 ---
-# <a name="get-service-information-from-the-settings-store"></a>Ayarlar deposundan hizmet bilgilerini al
-Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yüklenmediğini öğrenmek için ayarlar deposunu kullanabilirsiniz. Hizmet sınıfının türünü bilmeniz gerekir.
+# <a name="get-service-information-from-the-settings-store"></a>Ayarlar mağazasından hizmet bilgilerini al
+Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklü olup olmadığını belirlemek için ayarlar depolarını kullanabilirsiniz. Hizmet sınıfının türünü biliyor olması gerekir.
 
-## <a name="to-list-the-available-services"></a>Kullanılabilir hizmetleri listelemek için
+## <a name="to-list-the-available-services"></a>Kullanılabilir hizmetleri listele
 
-1. Adlı bir VSıX projesi oluşturun `FindServicesExtension` ve ardından adlı özel bir komut ekleyin `FindServicesCommand` . Özel bir komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. adlı bir VSIX projesi oluşturun `FindServicesExtension` ve ardından adlı özel bir komut `FindServicesCommand` ekleyin. Özel komut oluşturma hakkında daha fazla bilgi için [bkz. Menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-2. *Findservicescommand. cs* dosyasında aşağıdaki yönergeleri kullanarak aşağıdakileri ekleyin:
+2. *FindServicesCommand.cs* içinde aşağıdaki using yönergelerini ekleyin:
 
     ```csharp
     using System.Collections.Generic;
@@ -34,7 +34,7 @@ Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yükl
     using System.Windows.Forms;
     ```
 
-3. Yapılandırma ayarları deposunu alın ve ardından hizmet adlı alt koleksiyonu bulun. Bu koleksiyon, kullanılabilir tüm hizmetleri içerir. `MenuItemCommand`Yönteminde, var olan kodu kaldırın ve aşağıdaki kodla değiştirin:
+3. Yapılandırma ayarları deposuna gidin, ardından Hizmetler adlı alt aleyi bulun. Bu koleksiyon tüm kullanılabilir hizmetleri içerir. `MenuItemCommand`yönteminde, mevcut kodu kaldırın ve aşağıdakiyle değiştirin:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -53,18 +53,18 @@ Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yükl
     }
     ```
 
-4. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.
+4. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örnek görünür.
 
-5. Deneysel örnekte, **Araçlar** menüsünde **Findservicescommand komutunu çağır**' a tıklayın.
+5. Deneysel örnekte, Araçlar  menüsünde **FindServices ÇağırKomand'a tıklayın.**
 
-     Tüm hizmetlerin listelendiği bir ileti kutusu görmeniz gerekir.
+     Tüm hizmetleri listeleen bir ileti kutusu görüyorsanız.
 
      Bu ayarları doğrulamak için kayıt defteri düzenleyicisini kullanabilirsiniz.
 
 ## <a name="find-a-specific-service"></a>Belirli bir hizmeti bulma
- Ayrıca, <xref:Microsoft.VisualStudio.Settings.SettingsStore.CollectionExists%2A> belirli bir hizmetin yüklenip yüklenmediğini anlamak için yöntemini de kullanabilirsiniz. Hizmet sınıfının türünü bilmeniz gerekir.
+ Belirli bir hizmetin yüklü <xref:Microsoft.VisualStudio.Settings.SettingsStore.CollectionExists%2A> olup olmadığını belirlemek için yöntemini de kullanabilirsiniz. Hizmet sınıfının türünü biliyor olması gerekir.
 
-1. Önceki yordamda oluşturduğunuz projenin MenuItemCallback öğesinde, `Services` hizmet GUID 'si tarafından adlandırılan alt koleksiyonun bulunduğu koleksiyon için yapılandırma ayarları deposunda arama yapın. Bu durumda, yardım hizmetine bakacağız.
+1. Önceki yordamda oluşturduğunuz projenin MenuItemCallback içinde, hizmetin GUID'si tarafından adlandırılmış alt koleksiyonun yapılandırma ayarları deposu için arama `Services` yapın. Bu durumda Yardım hizmetine bakacağız.
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -79,8 +79,8 @@ Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yükl
     }
     ```
 
-2. Projeyi derleyin ve hata ayıklamayı başlatın.
+2. Projeyi derleme ve hata ayıklamayı başlatma.
 
-3. Deneysel örnekte, **Araçlar** menüsünde **Findservicescommand komutunu çağır**' a tıklayın.
+3. Deneysel örnekte, Araçlar  menüsünde **FindServices ÇağırKomand'a tıklayın.**
 
-     Metin **yardım hizmeti kullanılabilir**  bir ileti görmeniz gerekir: **true** veya **false**. Bu ayarı doğrulamak için, önceki adımlarda gösterildiği gibi bir kayıt defteri düzenleyici kullanabilirsiniz.
+     Yardım Hizmeti Kullanılabilir: ve ardından True veya False **metninin** yer alan **bir ileti** **görüyorsanız.** Bu ayarı doğrulamak için, önceki adımlarda gösterildiği gibi bir kayıt defteri düzenleyicisi kullanabilirsiniz.

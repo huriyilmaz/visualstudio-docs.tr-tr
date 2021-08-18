@@ -1,6 +1,6 @@
 ---
-description: Çerçeve türünü alır.
-title: 'IDiaStackFrame:: get_type | Microsoft Docs'
+description: Çerçeve türünü alın.
+title: IDiaStackFrame::get_type | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d94fb848f9401f83fccebe1abcf122da2d55e8615dce80aefa5a847ff9c788fd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b40e449f784a065d20126916694da01c238680f0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454858"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066167"
 ---
 # <a name="idiastackframeget_type"></a>IDiaStackFrame::get_type
-Çerçeve türünü alır.
+Çerçeve türünü alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_type (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı [StackFrameTypeEnum numaralandırma](../../debugger/debug-interface-access/stackframetypeenum.md) numaralandırmasından bir değer döndürür.
+[out] [StackFrameTypeEnum Enum Numaralama enumerasyonundan](../../debugger/debug-interface-access/stackframetypeenum.md) bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. `S_FALSE`özelliği desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

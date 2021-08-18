@@ -16,12 +16,12 @@ ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 83d816d540ead51260f731a044eb6d764eafb79d3816aa48ba454512ba4e9e27
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 04b78fec04b2a8937aedd1487a810feb57f1a999
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403290"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127642"
 ---
 # <a name="bp_location_code_context"></a>BP_LOCATION_CODE_CONTEXT
 Hata ayıklanan programdaki bir adrese doğrudan bağlanan bir kesme noktasının konumunu açıklar.

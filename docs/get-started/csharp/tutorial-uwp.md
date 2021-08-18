@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: e2f70508f1272fb8fc6f7a33de7830925c038dae747f79b18ad93cb10009ce8d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aa0dda71a18b20f5b503aeb4c09c083a76bd664d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121374455"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157832"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>öğretici: XAML ve C&#35; ile Visual Studio ilk Evrensel Windows Platformu uygulamanızı oluşturma
 
@@ -190,21 +190,21 @@ kod, bir konuşma senıs nesnesi oluşturmak için bazı Windows apı 'leri kull
 
    (Alternatif olarak, **Hata Ayıkla** > ' yı seçebilirsiniz. Menü çubuğundan **hata ayıklamayı başlatın** veya F5 'e basarak uygulamanızı başlatın.)
 
-1. Giriş ekranı kaybolduktan sonra görüntülenen uygulamanızı görüntüleyin. Uygulama şuna benzer görünmelidir:
+1. Giriş ekranı görüntüden kaybolduktan kısa süre sonra görünen uygulamanızı görüntüleme. Uygulama şuna benzer şekilde görünüyor olmalı:
 
    ![UWP "Merhaba Dünya" uygulaması](media/vs-2019/uwp-hello-world-app.png)
 
-1. **Merhaba Dünya** düğmesine tıklayın.
+1. İlke **düğmesine Merhaba Dünya** tıklayın.
 
-   Windows 10 cihazınız, "merhaba, dünya!" olarak söylendirilir
+   Windows 10 cihazınız tam olarak "Hello, World!"
 
-1. Uygulamayı kapatmak için araç çubuğunda **hata ayıklamayı Durdur** düğmesine tıklayın. (Alternatif olarak, **Hata Ayıkla**  >  ' yı seçin Menü çubuğundan **hata ayıklamayı durdurun** veya SHIFT + F5 tuşlarına basın.)
+1. Uygulamayı kapatmak için araç **çubuğundaki Hata Ayıklamayı** Durdur düğmesine tıklayın. (Alternatif olarak Hata **Ayıkla'ya da**  >  **Menü çubuğundan hata** ayıklamayı durdurun veya Shift+F5 tuşlarına basın.)
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu öğreticiyi tamamlama! UWP ve Visual Studio ıde hakkında bazı temel bilgileri öğrendiklerinizi umuyoruz. Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
+Tebrikler, bu öğreticiyi tamamladıktan sonra! UWP ve IDE ile ilgili bazı temel bilgileri Visual Studio umuyoruz. Daha fazla bilgi edinmek için aşağıdaki öğreticiyle devam edin:
 
 > [!div class="nextstepaction"]
 > [Kullanıcı arabirimi oluşturma](/windows/uwp/design/basics/xaml-basics-ui)
@@ -212,4 +212,4 @@ Tebrikler, bu öğreticiyi tamamlama! UWP ve Visual Studio ıde hakkında bazı 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [UWP’ye genel bakış](/windows/uwp/get-started/universal-application-platform-guide)
-- [UWP uygulama örnekleri al](/windows/uwp/get-started/get-uwp-app-samples)
+- [UWP uygulama örneklerini alın](/windows/uwp/get-started/get-uwp-app-samples)

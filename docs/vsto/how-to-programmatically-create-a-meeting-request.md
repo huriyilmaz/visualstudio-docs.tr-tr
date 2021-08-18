@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: dfa0c7b8eb39a9bc8a64191784fab0d3788cf86d78f19a948310b6cbcf82e59d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3b439bb881ee626060bb5d88f378085f4b49894
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440779"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099847"
 ---
 # <a name="how-to-programmatically-create-a-meeting-request"></a>Nasıl kurulur: Program aracılığıyla toplantı isteği oluşturma
   Bu örnek, Microsoft Office Outlook bir toplantı isteği oluşturur ve isteği gerekli bir katılımcıya gönderir.

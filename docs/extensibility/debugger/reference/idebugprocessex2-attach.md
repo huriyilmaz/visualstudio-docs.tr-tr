@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bir oturumun işlemde hata ayıklama işlemi olduğunu bildirir.
-title: 'IDebugProcessEx2:: Attach | Microsoft Docs'
+description: Bu yöntem, bir oturumun artık işlemde hata ayıklarken işlem olduğunu bilgi sağlar.
+title: IDebugProcessEx2::Attach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: f3334ed7-39bf-4d02-a338-36f567b9b287
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: da538b5ba91a976e96f447ba63843f20ae0b6f62
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5687031d1b4cd0be439ef1953f54a609e19f6366
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076374"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071932"
 ---
 # <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
-Bu yöntem, bir oturumun işlemde hata ayıklama işlemi olduğunu bildirir.
+Bu yöntem, bir oturumun artık işlemde hata ayıklarken işlem olduğunu bilgi sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int Attach(
 
 ## <a name="parameters"></a>Parametreler
 `pSession`\
-'ndaki Bu işleme ekleme oturumunu benzersiz bir şekilde tanımlayan bir değer.
+[in] Bu işleme oturum ekleme işlemini benzersiz olarak tanımlayan bir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Geçirilen arabirim, `pSession` Bu işleme eklenen oturum hata ayıklama yöneticisini benzersiz bir şekilde tanımlayan bir değer olan tanımlama bilgisi olarak değerlendirilir. sağlanan arabirimdeki yöntemlerin hiçbiri işlevsel değildir.
+ Geçirilen arabirim yalnızca tanımlama bilgisi olarak kabul edilir. Bu işleme iliştirilen oturum hata ayıklama yöneticisini benzersiz olarak tanımlayan bir değerdir; sağlanan arabirimde kullanılan yöntemlerin `pSession` hiçbiri işlevsel değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

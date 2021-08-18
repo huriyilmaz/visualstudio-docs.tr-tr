@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0279d2c628570c67514e7405b3df63507ae20c33b3a03cfd2db7f5be19d49276
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bd3bb5bd5b9ac4864c9eb38f290d34d7cdd7fc1f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396301"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156623"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Öğretici: Visual Studio 'da Docgo Web çerçevesini kullanmaya başlama
 
@@ -143,7 +143,7 @@ Projeniz için kaynak denetimini yapılandırdığınıza göre, proje için ger
 
 1. istenirse, yönetici ayrıcalıklarına onay vermeniz gerekirse birkaç Visual Studio dakika bekleyin. bu, docgo için birkaç bin dosyanın çok sayıda alt klasörde genişletilmesi anlamına gelir. İlerlemeyi Çıkış penceresinde Visual Studio **görebilirsiniz.** Beklerken, aşağıdaki Soru bölümlerine daha fazla bakın.
 
-1. Git Visual Studio (durum çubuğunda) değişiklik göstergesini **(99**&#42;gösterir) seçin. Bu,  **Takım Gezgini.**
+1. Git Visual Studio (durum çubuğunda), değişiklikler sayfasını Takım Gezgini'da açan değişiklik göstergesini **(99**&#42;)  **seçin.**
 
     Sanal ortamı oluşturmak binlerce değişiklik getirse de, siz (veya projeyi başka herhangi biri) ortamı her zamanrequirements.txt'den yeniden ** oluşturasınız.
 
@@ -161,9 +161,9 @@ Cevap: Sanal ortam, uygulama bağımlılıklarınızı tam olarak yalıtmak içi
 
 ### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>Soru: Nasıl yaparım? denetimine zaten bağlı olan bir sanal ortamı kaldırmak mı gerekiyor?
 
-Cevap: İlk *olarak, .gitignore* dosyanızı düzenleyemez ve klasörü dışlamak için en sonundaki bölümünü açıklamayla bulun ve gibi sanal ortam klasörü için yeni `# Python Tools for Visual Studio (PTVS)` bir satır `/BasicProject/env` ekleyin. (Visual Studio dosya dosyada **Çözüm Gezgini,** dosyayı doğrudan Dosya kullanarak **açın**  >  **Aç**  >  **Dosya** menüsü komutu. Dosyayı Takım Gezgini sayfasından da açabilirsiniz: **Ayarlar** sayfasında Depo **Ayarlar'yi** seçin, **&** Öznitelik Dosyalarını Yoksay bölümüne gidin ve **.gitignore öğesinin** yanındaki Düzenle bağlantısını seçin.  
+Cevap: İlk *olarak, .gitignore* dosyanızı düzenleyemez ve klasörü dışlamak için en sonundaki bölümünü açıklamayla bulun ve gibi sanal ortam klasörü için yeni bir `# Python Tools for Visual Studio (PTVS)` satır `/BasicProject/env` ekleyin. (Visual Studio dosya dosyada **Çözüm Gezgini,** dosyayı doğrudan Dosya kullanarak **açın**  >  **Aç**  >  **Dosya** menüsü komutu. Dosyayı Takım Gezgini sayfasından da açabilirsiniz: **Ayarlar** sayfasında Depo **Ayarlar'ı** seçin, **&** Öznitelik Dosyalarını Yoksay bölümüne gidin ve **.gitignore öğesinin** yanındaki Düzenle bağlantısını seçin.  
 
-İkinci olarak, bir komut penceresi açın, *basicProject* gibi env gibi sanal ortam klasörünü içeren *klasöre* gidin ve komutunu `git rm -r env` çalıştırın. Ardından bu değişiklikleri komut satırı ( `git commit -m 'Remove venv'` )  veya Takım Gezgini'nin Değişiklikler **sayfasından işleyebilirsiniz.**
+İkinci olarak, bir komut penceresi açın, *basicProject* gibi env gibi sanal ortam klasörünü içeren *klasöre* gidin ve komutunu `git rm -r env` çalıştırın. Ardından, bu değişiklikleri komut satırı ( ) veya Takım Gezgini'nin `git commit -m 'Remove venv'` **Değişiklikler sayfasından işleyebilirsiniz.** 
 
 ## <a name="step-1-4-examine-the-boilerplate-code"></a>1-4. Adım: Ortak kodu inceleme
 
@@ -176,21 +176,21 @@ Proje oluşturma işlemi tamamlandıktan sonra, ortak Django proje kodunu (CLI k
 2. Projeniz, projeyle aynı adlı bir klasördür. Temel Django proje dosyalarını içerir:
 
    - *__init.py:* Python'a bu klasörün bir Python paketi olduğunu söyleyen boş bir dosya.
-   - *wsgi.py:* WSGI uyumlu web sunucularının projenize hizmet vermek için bir giriş noktası. Üretim web sunucularına kanca sağladığı için bu dosyayı genellikle olduğu gibi bırakırsanız.
+   - *wsgi.py:* WSGI uyumlu web sunucularının projenize hizmet vermek için giriş noktası. Üretim web sunucularına kanca sağladığı için bu dosyayı genellikle olduğu gibi bırakırsanız.
    - *settings.py:* Bir web uygulaması geliştirme kursunda değiştirerek Django projesinin ayarlarını içerir.
-   - *urls.py:* Django projesi için bir içindekiler tablosu içerir ve bu tabloyu geliştirme aşamasında da değiştirebilirsiniz.
+   - *urls.py:* Django projesi için geliştirme aşamasında da değiştirerek bir içindekiler tablosu içerir.
 
-     ![Çözüm Gezgini'daki Django proje dosyaları](media/django/step01-django-project-in-solution-explorer.png)
+     ![Çözüm Gezgini'daki Django proje Çözüm Gezgini](media/django/step01-django-project-in-solution-explorer.png)
 
 3. Daha önce belirtildiği gibi, Visual Studio şablonu projenize Django *paket bağımlılığını* belirten birrequirements.txtdosyası da ekler. Bu dosyanın varlığı, projeyi ilk kez oluştururken sizi sanal ortam oluşturmaya davet eder.
 
 ### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>Soru: Visual Studio paketleri yükledikten requirements.txt bir sanal ortamdan bir dosya oluşturamıyor musunuz?
 
-Yanıt: Evet. Python Ortamları **düğümünü** genişletin, sanal ortamınıza sağ tıklayın ve Oluştur komutunu **requirements.txt** seçin. Ortamı değiştirirken bu komutu düzenli aralıklarla kullanmak ve değişiklikleri  kaynak denetiminerequirements.txtortamdaki diğer kod değişiklikleriyle birlikte bu denetime işlemek iyi bir fikirdir. Derleme sunucusunda sürekli tümleştirmeyi ayar ediyorsanız, ortamı her değiştirerek dosyayı oluşturmalı ve değişiklikleri işlemelisiniz.
+Yanıt: Evet. Python Ortamları **düğümünü** genişletin, sanal ortamınıza sağ tıklayın ve Oluştur komutunu **requirements.txt** seçin. Ortamı değiştirirken bu komutu düzenli aralıklarla kullanmak ve değişiklikleri  kaynak denetiminerequirements.txtortamdaki diğer kod değişiklikleriyle birlikte işlemek iyi bir fikirdir. Derleme sunucusunda sürekli tümleştirmeyi ayar ediyorsanız, ortamı her değiştirerek dosyayı oluşturmalı ve değişiklikleri işlemelisiniz.
 
 ## <a name="step-1-5-run-the-empty-django-project"></a>1-5. Adım: Boş Django projesini çalıştırma
 
-1. Bu Visual Studio Hata AyıklamaYı Başlat ( F5 ) öğesini seçin veya araç çubuğundaki Web Sunucusu düğmesini kullanın  >  (gördüğünüz tarayıcı farklılık gösterebilir):  
+1. Bu Visual Studio **Hata** AyıklamaYı Başlat ( F5 ) öğesini seçin veya araç çubuğundaki Web Sunucusu düğmesini kullanın  >   (gördüğünüz tarayıcı farklılık gösterebilir): 
 
     ![Web sunucusu araç çubuğu düğmesini Visual Studio](media/django/run-web-server-toolbar-button.png)
 

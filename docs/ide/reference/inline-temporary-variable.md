@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0d9a498cb8c6b6f8a52b590e6f080ff9e0d0dbcd742b916abc035648d921ce65
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 018e3fd27753a33a763d716f17648e51b92dc52e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121357290"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101225"
 ---
 # <a name="inline-a-temporary-variable-refactoring"></a>Satır içi geçici değişken yeniden düzenlemesi
 

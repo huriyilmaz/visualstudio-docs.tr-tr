@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 90a4efea7d37b83d3d5ff7a085abcf3439d99263
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 286bc3b1eba71f3c875e3cdf519a01464b19c6aa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388730"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116623"
 ---
 # <a name="text-template-control-blocks"></a>Metin Şablonu Denetim Blokları
 Denetim blokları, çıkışı değiştirme amacıyla metin şablonunuz içinde kod yazmanıza izin verir. Açma köşeli ayraçlarıyla ayırt edilen üç tür denetim bloğu vardır:
@@ -119,7 +120,7 @@ Some text.
 > [!NOTE]
 > Bir sınıf özellik denetim bloğu, aynı şablon dosyasındaki standart denetim blokları tarafından izlensin. Ancak, bu kısıtlama kullanım yönergelerinin sonucu `<#@include#>` için geçerli değildir. Dahil edilen her dosyada standart bloklar ve ardından sınıf özellik blokları olabilir.
 
- Metin ve ifade bloklarını bir sınıf özellik denetim bloğu içine katıştırarak çıkış oluşturan bir işlev oluşturabilirsiniz. Örneğin:
+ Metin ve ifade bloklarını bir sınıf özellik denetim bloğu içine katıştırarak çıkış oluşturan bir işlev oluşturabilirsiniz. Örnek:
 
 ```
 <#+
@@ -147,17 +148,17 @@ Some text.
 
  Denetim bloklarını kullanırken aşağıdaki konuları göz önünde bulundurmalıdır:
 
-- **Dil.** Bir metin şablonunda C# Visual Basic kodu kullanabilirsiniz. Varsayılan dil C# dilidir, ancak yönergenin Visual Basic ile bu `language` dili `template` belirtesiniz. (yönergesi hakkında daha fazla `template` bilgi için bkz. [T4 Metin Şablonu Yönergeleri](../modeling/t4-text-template-directives.md).)
+- **Dil.** Bir metin şablonunda C# Visual Basic kodu kullanabilirsiniz. Varsayılan dil C# dilidir, ancak yönergenin Visual Basic ile bu `language` dili `template` belirtesiniz. (yönergesi hakkında daha fazla `template` bilgi için bkz. [T4 Metin Şablonu Yönergeleri.)](../modeling/t4-text-template-directives.md)
 
      Denetim bloklarında kullanmak istediğiniz dilin, metin şablonunda oluşturulan metnin diliyle veya biçimiyle hiçbir ilgisi yoktur. C# oluşturmak için kod Visual Basic veya tam tersi de yapabilirsiniz.
 
-     yönergesine dahil etmek istediğiniz tüm metin şablonları dahil olmak üzere, verilen metin şablonunda yalnızca bir dil `include` kullanabilirsiniz.
+     Yönergesine dahil etmek istediğiniz tüm metin şablonları dahil olmak üzere, verilen metin şablonunda yalnızca bir dil `include` kullanabilirsiniz.
 
 - **Yerel değişkenler.** Bir metin şablonundaki standart ve ifade denetim bloklarında yer alan tüm kodlar tek bir yöntem olarak oluşturulandan, yerel değişkenlerin adlarında çakışma olmadığını kesin olarak doğrulamalısınız. Diğer metin şablonlarını dahil ediyorsanız, değişken adlarının dahil edilen tüm şablonlar arasında benzersiz olduğundan emin olun. Bunun sağlanmasının bir yolu, içinde bildirilen metin şablonunu tanımlayan her yerel değişken adına bir dize eklemektir.
 
      Ayrıca, özellikle birden çok metin şablonu dahil ediyorsanız, yerel değişkenlerinizi, bunları bildirilen mantıklı değerlere başlatmak iyi bir fikirdir.
 
-- **Denetim bloklarının iç içe yerleştirmesi.** Denetim blokları iç içe geçmiş olabilir. Başka bir denetim bloğu açmadan önce her zaman bir denetim bloğu sonlandırılmalı. Örneğin, aşağıda, standart denetim bloğu kapsamında bir ifade bloğunda bazı metinlerin nasıl yazdırılmış olduğu gösterir.
+- **Denetim bloklarının iç içe yerleştirmesi.** Denetim blokları iç içe geçmiş olabilir. Başka bir denetim bloğu açmadan önce her zaman bir denetim bloğu sonlandırılmalı. Örneğin, aşağıda standart denetim bloğu kapsamında bir ifade bloğunda bazı metinlerin nasıl yazdırılır?
 
     ```
     <#
@@ -169,4 +170,4 @@ Some text.
     <# } #>
     ```
 
-- **Refactoring.** Metin şablonlarınızı kısa ve kolay anlaşılır bir şekilde tutmak için, yeniden kullanılabilir kodu sınıf özellik bloklarında yardımcı işlevler olarak çarpanlara dönüştürerek veya Microsoft.VisualStudio.TextTemplating.TextTransformation sınıfından devralınan kendi metin şablonu sınıfını oluşturarak tekrarlanan kodlardan kaçınmanız kesinlikle önerilir.
+- **Refactoring.** Metin şablonlarınızı kısa ve kolay anlaşılır bir şekilde tutmak için, yeniden kullanılabilir kodu sınıf özellik bloklarında yardımcı işlevler olarak çarpanlara dönüştürerek veya Microsoft.VisualStudio.TextTemplating.TextTransformation sınıfından devralınan kendi metin şablonu sınıfınızı oluşturarak tekrarlanan kodlardan kaçınmanız kesinlikle önerilir.

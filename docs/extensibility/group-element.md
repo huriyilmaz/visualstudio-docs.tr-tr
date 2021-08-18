@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 781004b69925e7c2cec1e1b7f9a4754e279832de78102d6d1ad85a54c6263b6e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f48fb0f27f4439b1a2d2e881a5040a15ddd565d0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376514"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087047"
 ---
 # <a name="group-element"></a>Group öğesi
 VSPackage komut grubunu tanımlar.

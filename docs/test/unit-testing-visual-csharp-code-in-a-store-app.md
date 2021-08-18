@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - uwp
-ms.openlocfilehash: 73120c008e8a98500e721099b14a648aadf7eefed0afd9f487e72d06129ae1c8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d618099687ea54326418814bfdebe938de13b6dd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384787"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115310"
 ---
 # <a name="unit-test-c-code"></a>C# birim testi sınıfı
 
@@ -23,7 +23,7 @@ Bu makalede UWP uygulamasında C# sınıfı için birim testleri oluşturmanın 
 
 Test kapsamındaki sınıf olan **Rooter** sınıfı, belirli bir sayanın karekökünün tahminini hesapan bir işlev kullanır.
 
-Bu makalede test *güdümlü geliştirmesi gösterildi.* Bu yaklaşımda önce test etmekte olduğunu sistemde belirli bir davranışı doğrular ve ardından testi geçen kodu yazarsiniz.
+Bu makalede *test güdümlü geliştirmesi gösterildi.* Bu yaklaşımda önce test etmekte olduğunu sistemde belirli bir davranışı doğrular ve ardından testi geçen kodu yazarsiniz.
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a>Çözümü ve birim testi projesini oluşturma
 
@@ -55,7 +55,7 @@ Bu makalede test *güdümlü geliştirmesi gösterildi.* Bu yaklaşımda önce t
 
 ::: moniker range="vs-2017"
 
-2. Test menüsünde **Tüm** Testleri **Çalıştır'ı** > **seçin.**
+2. Test menüsünde **Tüm** Testleri  > **Çalıştır'ı seçin.**
 
 ::: moniker-end
 
@@ -69,7 +69,7 @@ Bu makalede test *güdümlü geliştirmesi gösterildi.* Bu yaklaşımda önce t
 
 ## <a name="add-the-rooter-class-to-the-maths-project"></a>Maths projesine Rooter sınıfı ekleme
 
-1. Bu **Çözüm Gezgini** Matematik projesine sağ **tıklayın** ve Sınıf **Ekle'yi**  >  **seçin.**
+1. Bu **Çözüm Gezgini** Matematik projesine sağ **tıklayın ve** Sınıf Ekle'yi   >  **seçin.**
 
 2. Sınıf dosyasına *Rooter.cs adını girin.*
 
@@ -89,7 +89,7 @@ Bu makalede test *güdümlü geliştirmesi gösterildi.* Bu yaklaşımda önce t
 
    **Rooter sınıfı** bir oluşturucu ve **SquareRoot** tahmin yöntemi bildirer. **SquareRoot yöntemi,** test kurulumunun temel yapısını test etmeye yetecek kadar küçük bir uygulamadır.
 
-4. Test `public` kodunun buna **erişmesi için Rooter** sınıf bildirimine anahtar sözcüğünü ekleyin.
+4. Test `public` kodunun buna **erişmesi için Anahtar** sözcüğünü Rooter sınıf bildirimine ekleyin.
 
    ```csharp
    public class Rooter
@@ -101,7 +101,7 @@ Bu makalede test *güdümlü geliştirmesi gösterildi.* Bu yaklaşımda önce t
 
     1. Bu **Çözüm Gezgini** **RooterTests** projesine sağ tıklayın ve Başvuru **Ekle'yi**  >  **seçin.**
 
-    2. Başvuru Ekle **- RooterTests** iletişim kutusunda Çözüm'i genişletin **ve Projeler'i** **seçin.** Matematik **projesini** seçin.
+    2. Başvuru Ekle **- RooterTests** iletişim kutusunda Çözüm'i genişletin ve **Projeler'i** **seçin.** Matematik **projesini** seçin.
 
         ![Matematik projesine başvuru ekleme](../test/media/ute_cs_windows_addreference.png)
 
@@ -129,7 +129,7 @@ Bu makalede test *güdümlü geliştirmesi gösterildi.* Bu yaklaşımda önce t
    }
    ```
 
-   Yeni test Test **Gezgini'nde Testleri** **Çalıştırmadı düğümünde** görünür.
+   Yeni test Test **Gezgini'nde Testleri** **Çalıştırmama düğümünde** görünür.
 
 4. "Yük aynı hedef yola sahip iki veya daha fazla dosya içeriyor" hatasını  önlemek için  **Çözüm Gezgini'de** Matematik projesinin altındaki Özellikler düğümünü genişletin veDefault.rd.xml *silin.*
 
@@ -184,7 +184,7 @@ Test ve uygulama projelerini ayarladıktan sonra uygulama projesinde işlevleri 
    > [!TIP]
    > Bir test yazdıktan hemen sonra başarısız olduğunu doğrulamak için çalıştırın. Bu, hiçbir zaman başarısız olmayacak bir test yazma hatalarından kaçınmanıza yardımcı olur.
 
-3. Yeni testin başarılı olduğu şekilde test altındaki kodu geliştirin. *Rooter.cs'de* **SquareRoot** işlevini şu şekilde değiştirebilirsiniz:
+3. Yeni testin başarılı olacak şekilde test altındaki kodu geliştirin. *Rooter.cs'de* **SquareRoot** işlevini şu şekilde değiştirebilirsiniz:
 
    ```csharp
    public double SquareRoot(double x)
@@ -220,7 +220,7 @@ Test ve uygulama projelerini ayarladıktan sonra uygulama projesinde işlevleri 
 
 ## <a name="refactor-the-code"></a>Kodu yeniden düzenleme
 
-Bu bölümde hem uygulama hem de test kodunu yeniden düzenlemeye devam ediyor, sonra da hala başarılı olduğundan emin olmak için testleri yeniden çalıştırabilirsiniz.
+Bu bölümde, hem uygulama hem de test kodunu yeniden düzenlemeye devam ediyor ve hala başarılı olduğundan emin olmak için testleri yeniden çalıştırabilirsiniz.
 
 ### <a name="simplify-the-square-root-estimation"></a>Karekök tahminini basitleştirme
 

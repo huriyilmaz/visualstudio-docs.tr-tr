@@ -1,6 +1,6 @@
 ---
-description: Bu ileti, işlemin Şu anda ayırdığı en fazla sanal bellek miktarını bayt (özel bayt) olarak bildirir.
-title: DA0506-profili oluşturulan Işlem için ayrılan en fazla özel bayt sayısı | Microsoft Docs
+description: Bu ileti, işlem tarafından şu anda bayt cinsinden ayrılan en fazla sanal bellek miktarını (Özel bayt) raporlar.
+title: DA0506 - İşlem için ayrılan en fazla Özel Bayt profili | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,37 +15,37 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cb34ae103713df9867a633cdb2ac7e7c2985ef1c26e4c56057fdf673d13daade
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5daf5ad6b727014d63e77da848a94d31b36c3c4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121333190"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142097"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506: Profili oluşturulan İşlem için ayırılmış En Yüksek Sayıda Özel Bayt
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0506|
-|Kategori|Kaynak Izleme|
+|Kural Kimliği|DA0506|
+|Kategori|Kaynak İzleme|
 |Profil oluşturma yöntemi|Tümü|
-|İleti|Bu bilgiler yalnızca bilgi için toplanmıştı. Işlem özel baytları sayacı, profil oluşturduğunuz işlem tarafından ayrılan sanal belleği ölçer. Bildirilen değer tüm ölçüm aralıklarında gözlemlenen en yüksek değerdir.|
+|İleti|Bu bilgiler yalnızca bilgi için toplanmış. İşlem Özel Bayt sayacı, profil oluşturmakta olan işlem tarafından ayrılan sanal belleği ölçür. Bildirilen değer, tüm ölçüm aralıklarında gözlemlenen en yüksek değerdir.|
 |Kural türü|Bilgi|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak musiki yöntemlerini kullanarak profil 10 örnek toplayan bu kuralı tetiklemeniz gerekir.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Bu ileti, işlemin Şu anda ayırdığı en fazla sanal bellek miktarını bayt (özel bayt) olarak bildirir. Özel baytlar, işlem tarafından yalnızca işlem içinde çalışan iş parçacıklarının erişebileceği sanal bellek konumlarını temsil eder.
+ Bu ileti, işlem tarafından şu anda bayt cinsinden ayrılan en fazla sanal bellek miktarını (Özel bayt) raporlar. Özel baytlar, işlem tarafından yalnızca işlem içinde çalışan iş parçacıkları tarafından erişilebilen sanal bellek konumlarını temsil eder.
 
- 32 bit makinede çalışan 32 bitlik işlemler için, işlem adres alanının özel bölümünün üst sınırı 2 GB 'dir. 32 bit işlem, [/3 gb](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot.ini anahtarını kullanarak 3 GB 'a kadar sanal bellek alabilir. 64 bit makinede çalışan 32 bitlik bir işlem, 4 GB 'a kadar özel sanal bellek elde edebilir.
+ 32 bit makinede çalışan 32 bit işlemler için, işlem adres alanı özel bölümünün üst sınırı 2 GB'tır. [/3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot.ini anahtarı kullanılarak, 32 bit işlemler 3 GB'a kadar sanal bellek edinebiliyor. 64 bit makinede çalışan 32 bit işlem, 4 GB'a kadar özel sanal bellek edinebiliyor.
 
- 64 bit makinede çalışan 64 bitlik bir işlem, 8 TB 'a kadar özel sanal belleği elde edebilir.
+ 64 bit makinede çalışan 64 bit işlem, 8 TB'a kadar özel sanal bellek elde ediyor olabilir.
 
- Bildirilen değer, tüm ölçüm aralıklarının üzerinde profili oluşturulan işlemin etkin olduğu en fazla değerdir.
+ Bildirilen değer, profili yapılan sürecin etkin olduğu tüm ölçüm aralıklarında en yüksek değerdir.
 
- işlem adres alanları hakkında daha fazla bilgi için, Windows bellek yönetimi belgelerindeki [sanal adres alanı](/windows/win32/memory/virtual-address-space) ' na bakın.
+ İşlem adres alanları hakkında daha fazla bilgi için Bellek [Yönetimi belgelerinde](/windows/win32/memory/virtual-address-space) Windows Alanı'ne bakın.
 
 ## <a name="how-to-use-rule-data"></a>Kural verilerini kullanma
- Bildirilen değeri, programın farklı sürümlerinin veya derlemelerin performansını karşılaştırmak veya farklı profil oluşturma senaryolarında uygulamanın performansını anlamak için kullanın.
+ Programın farklı sürümlerinin veya derlemelerinin performansını karşılaştırmak veya farklı profil oluşturma senaryolarında uygulamanın performansını anlamak için bildirilen değeri kullanın.
 
- İşlem adres alanının büyük bir bölümünü büyümeye yönelik mimari sınırına yaklaştığı en yüksek işlem özel bayt değeri, bellek dışı özel durumlara neden olabilir. Daha fazla bilgi için bkz. MSDN Magazine 'te [bellek sorunlarını araştırma](/archive/msdn-magazine/2006/november/clr-inside-out-investigating-memory-issues) .
+ Bir işlem adres alanı büyüyebilirsiniz mimari sınırına yaklaşan işlem özel bayt maksimum değeri yetersiz bellek özel durumlarına yol açabilirsiniz. Daha fazla bilgi için MSDN [Dergisi'nin Bellek](/archive/msdn-magazine/2006/november/clr-inside-out-investigating-memory-issues) Sorunlarını Araştırma makalesine bakın.

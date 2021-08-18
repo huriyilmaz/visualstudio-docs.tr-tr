@@ -1,6 +1,6 @@
 ---
-description: Bir sınıf yöntemi için nesne işaretçisinin türünü alır.
-title: 'IDiaSymbol:: get_objectPointerType | Microsoft Docs'
+description: Bir sınıf yöntemi için nesne işaretçisinin türünü alın.
+title: IDiaSymbol::get_objectPointerType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: bce193b9-67b0-4c35-96e5-6a664937322e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0398ef594379436352089d6d54bb25fd6cae404e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0695ba8dbe0c5846f8c7495600e71d89fb0aa5c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102160696"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113406"
 ---
 # <a name="idiasymbolget_objectpointertype"></a>IDiaSymbol::get_objectPointerType
-Bir sınıf yöntemi için nesne işaretçisinin türünü alır.
+Bir sınıf yöntemi için nesne işaretçisinin türünü alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,16 +35,16 @@ HRESULT get_objectPointerType (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bir sınıf yöntemi için nesne işaretçisini temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+[out] Sınıf yönteminin nesne işaretçisini temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik yalnızca [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) türüne sahip semboller için geçerlidir `SymTagFunctionType` .
+ Bu özellik yalnızca [SymTagEnum Numaralama türüne sahip semboller](../../debugger/debug-interface-access/symtagenum.md) için `SymTagFunctionType` geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: Kod analizi kural kümesi başvurusu
 ms.date: 04/04/2018
-description: Visual Studio eski kod analizi 'nde yerleşik kural kümeleri hakkında bilgi edinin. Kural kümelerindeki kaynakları görün. Bu kümeleri özelleştirilmiş kural kümelerinde nasıl kullanacağınızı öğrenin.
+description: Eski kod analizinde yerleşik kural kümeleri Visual Studio öğrenin. Kural kümelerini kaynaklara bakın. Özelleştirilmiş kural kümelerini kullanarak bu kümeleri nasıl kullanabileceğinizi bulun.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
@@ -9,38 +9,39 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: cead2d51a13ce4ec137edcd55c7db91d84b04f7f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6f23dcc5646d4516f9e00e50f8bf742b94502a2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867782"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113971"
 ---
 # <a name="code-analysis-rule-set-reference"></a>Kod analizi kural kümesi başvurusu
 
-Visual Studio 'da yönetilen kod projeleri için eski analizler yapılandırdığınızda, yerleşik *kural kümeleri* listesinden seçim yapabilirsiniz. Bazı kurallar yerleşik kural kümelerinden birine dahildir. Örneğin, temel doğruluk kuralları kural kümesi, Yönetilen Önerilen Kurallar kural kümesindeki kuralları içerir.
+Visual Studio'da yönetilen kod projeleri için eski analizi yapılandırarak yerleşik kural kümeleri listesinden *birini seçebilirsiniz.* Bazı kurallar, yerleşik kural kümelerinden birden fazlasine dahil edilir; örneğin, Temel Doğruluk Kuralları kural kümesi Yönetilen Önerilen Kurallar kural kümesinde yer alan kuralları içerir.
 
 > [!NOTE]
-> Bu bölümdeki kural kümeleri eski Analize aittir. Kod Çözümleyicisi paketleri için kullanılabilen kural kümeleri hakkında daha fazla bilgi için bkz. [kural kümelerini kod Çözümleyicileri Ile kullanma](/dotnet/fundamentals/code-analysis/code-quality-rule-options).
+> Bu bölümdeki kural kümeleri eski analizle ilgili. Kod çözümleyicisi paketleri için kullanılabilen kural kümeleri hakkında bilgi için [bkz. Kod çözümleyicileri ile kural kümeleri kullanma.](/dotnet/fundamentals/code-analysis/code-quality-rule-options)
 
-Bu yerleşik kural kümelerinden birini kullanabilir ya da [bir kural kümesini](../code-quality/how-to-create-a-custom-rule-set.md) proje gereksinimlerinize uyacak şekilde özelleştirebilirsiniz. Özel bir kural kümesinde aynı kuralı içeren birden çok kural kümesi eklerseniz, bu kural özel kural kümesinde yalnızca bir kez görünür.
+Bu yerleşik kural kümelerinden birini kullanabilir veya bir kural kümesinizi proje [gereksinimlerinize](../code-quality/how-to-create-a-custom-rule-set.md) uyacak şekilde özelleştirebilirsiniz. Özel kural kümesine aynı kuralı içeren birden çok kural kümesi dahil ettiysanız, bu kural özel kural kümesinde yalnızca bir kez görünür.
 
-Bu bölümdeki konular, yerleşik kural kümelerini ve içerdikleri kuralları (veya uyarıları) anlatmaktadır.
+Bu bölümdeki konular yerleşik kural kümelerini ve içerecekleri kuralları (veya uyarıları) açıklar.
 
 | Kural kümesi | Dahil edilen kurallar |
 | - | - |
-| [Tüm Kurallar](all-rules-rule-set.md) | Tüm kullanılabilir yönetilen ve C++ kurallarını içerir |
-| [Temel Doğruluk Kuralları](basic-correctness-rules-rule-set-for-managed-code.md) | Mantık hataları ve çerçeve kullanımı için yönetilen önerilen kuralları ve kuralları içerir |
-| [Genişletilmiş Doğruluk Kuralları](extended-correctness-rules-rule-set-for-managed-code.md) | Temel doğruluk kurallarını (Yönetilen Önerilen kuralları içerir) ve mantık hataları ve çerçeve kullanımı için daha fazla kuralı içerir |
-| [Temel Tasarım Kılavuzu Kuralları](basic-design-guideline-rules-rule-set-for-managed-code.md) | , Kodun okunmasını, anlaşılmasını ve bakımını kolaylaştırmak için yönetilen önerilen kuralları ve kuralları içerir |
-| [Genişletilmiş Tasarım Kılavuzu Kuralları](extended-design-guidelines-rules-rule-set-for-managed-code.md) | Temel tasarım kılavuz kuralları (Yönetilen Önerilen kuralları içerir) ve adlandırmaya odaklanabilecek daha fazla bakım kuralı içerir |
-| [Genelleştirme kuralları](globalization-rules-rule-set-for-managed-code.md) | Genelleştirme sorunları için kuralları içerir |
+| [Tüm Kurallar](all-rules-rule-set.md) | Kullanılabilir tüm yönetilen ve C++ kurallarını içerir |
+| [Temel Doğruluk Kuralları](basic-correctness-rules-rule-set-for-managed-code.md) | Mantıksal hatalar ve çerçeve kullanımı için Yönetilen Önerilen Kurallara ek kurallar içerir |
+| [Genişletilmiş Doğruluk Kuralları](extended-correctness-rules-rule-set-for-managed-code.md) | Temel Doğruluk Kurallarını (Yönetilen Önerilen Kuralları içerir) ve mantıksal hatalar ve çerçeve kullanımı için daha fazla kural içerir |
+| [Temel Tasarım Kılavuzu Kuralları](basic-design-guideline-rules-rule-set-for-managed-code.md) | Kodun okunma, anlama ve bakımının kolay olmasını sağlamak için Yönetilen Önerilen Kurallara ek kurallar içerir |
+| [Genişletilmiş Tasarım Kılavuzu Kuralları](extended-design-guidelines-rules-rule-set-for-managed-code.md) | Temel Tasarım Kılavuz Kuralları (Yönetilen Önerilen Kuralları içerir) ve adlandırmaya odaklanan daha fazla bakım kuralı içerir |
+| [Genelleştirme Kuralları](globalization-rules-rule-set-for-managed-code.md) | Genelleştirme sorunları için kurallar içerir |
 | [Yönetilen Minimum Kurallar](managed-minimum-rules-rule-set-for-managed-code.md) | Kritik yönetilen kod sorunları için dört kural içerir |
-| [Yönetilen Önerilen Kurallar](managed-recommended-rules-rule-set-for-managed-code.md) | Yönetilen minimum kuralların yanı sıra kritik yönetilen kod sorunları için daha fazla kural içerir |
-| [Karışık Minimum Kurallar](mixed-minimum-rules-rule-set.md) | CLR için C++ kodunda kritik sorunlara yönelik kurallar içerir |
-| [Karışık Önerilen Kurallar](mixed-recommended-rules-rule-set.md) | CLR için C++ kodunda karışık minimum kuralların yanı sıra kritik sorunlar için daha fazla kural içerir |
-| [Yerel Minimum Kurallar](native-minimum-rules-rule-set.md) | Yerel koddaki kritik sorunlara yönelik kurallar içerir |
-| [Yerel Önerilen Kurallar](native-recommended-rules-rule-set.md) | Yerel en düşük kuralları ve yerel koddaki kritik sorunlar için daha fazla kuralı içerir |
-| [Güvenlik kuralları](security-rules-rule-set-for-managed-code.md) | Güvenlik açıklarını bulmaya yönelik kuralları içerir |
+| [Yönetilen Önerilen Kurallar](managed-recommended-rules-rule-set-for-managed-code.md) | Yönetilen Minimum Kuralları ve kritik yönetilen kod sorunları için daha fazla kural içerir |
+| [Karışık Minimum Kurallar](mixed-minimum-rules-rule-set.md) | CLR için C++ kodundaki kritik sorunlara ait kuralları içerir |
+| [Karışık Önerilen Kurallar](mixed-recommended-rules-rule-set.md) | CLR için C++ kodunda karışık minimum kurallara ek olarak kritik sorunlar için daha fazla kural içerir |
+| [Yerel Minimum Kurallar](native-minimum-rules-rule-set.md) | Yerel kodda kritik sorunlar için kurallar içerir |
+| [Yerel Önerilen Kurallar](native-recommended-rules-rule-set.md) | Yerel Minimum Kuralları ve yerel kodda kritik sorunlar için daha fazla kural içerir |
+| [Güvenlik Kuralları](security-rules-rule-set-for-managed-code.md) | Güvenlik açıklarını bulmaya yönelik kurallar içerir |

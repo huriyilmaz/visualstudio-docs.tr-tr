@@ -1,6 +1,6 @@
 ---
 title: Profil Oluşturma Araçları'den Command-Line | Microsoft Docs
-description: Uygulamaların profilini oluşturmak ve toplu Visual Studio Profil Oluşturma Araçları kullanarak profil oluşturmayı otomatikleştirmek için komut satırı araçlarını kullanın.
+description: Uygulamaların profilini oluşturmak ve toplu Visual Studio Profil Oluşturma Araçları betik oluşturma kullanarak profil oluşturmayı otomatikleştirmek için komut satırı araçlarını kullanın.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -17,15 +17,15 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 12c1a7b678983bce345d1c3af3a16852ea00be90000cc17d858d8be54a51c394
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e954fe8eb6bef735b90d73ac9384f321ae6c8320
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121270087"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140875"
 ---
 # <a name="use-the-profiling-tools-from-the-command-line"></a>Komut Profil Oluşturma Araçları komutunu kullanma
-Komut isteminde uygulamaların profilini oluşturmak ve toplu Profil Oluşturma Araçları betik kullanarak profil oluşturmayı otomatikleştirmek için komut satırı araçlarını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanabilirsiniz. Ayrıca, bir komut isteminde rapor dosyaları da oluşturabilirsiniz. Yüklü olmayan bilgisayarlarda veri toplamak için basit tek başına profilleyiciyi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanabilirsiniz.
+Komut isteminde uygulamaların profilini oluşturmak Profil Oluşturma Araçları toplu dosya ve betik kullanarak profil oluşturmayı otomatikleştirmek için komut satırı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] araçlarını kullanabilirsiniz. Ayrıca, bir komut isteminde rapor dosyaları da oluşturabilirsiniz. Yüklü olmayan bilgisayarlarda veri toplamak için basit tek başına profilleyiciyi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanabilirsiniz.
 
 > [!NOTE]
 > Windows 8 ve Windows Server 2012'daki gelişmiş güvenlik özellikleri, Visual Studio profil oluşturmanın bu platformlarda veri toplaması sırasında önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Uygulama [ve uygulama Windows 8 performans Windows Server 2012 bakın.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)

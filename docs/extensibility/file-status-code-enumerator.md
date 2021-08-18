@@ -1,6 +1,6 @@
 ---
-title: Dosya Durum Kodu Numaralayıcı | Microsoft Docs
-description: SccStatus numaralayıcı, kaynak denetim sisteminde bir dosyanın durumunu belirten ve SccQueryInfo ile POPLISTFUNC tarafından kullanılan sabit değerler içerir.
+title: Dosya durum kodu numaralandırıcısı | Microsoft Docs
+description: SccStatus numaralandırıcısı, kaynak denetim sistemindeki bir dosyanın durumunu belirten ve SccQueryInfo ve POPLISTFUNC tarafından kullanılan sabit değerleri içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,15 +16,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e5014f3ba96d11fc5a851e5255404fae50289322062786a6952bf4bec192cb9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e8036b4a5e8caf026da2e4da9e2347f595eaa12e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448331"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070255"
 ---
-# <a name="file-status-code-enumerator"></a>Dosya durumu kodu numaralayıcı
-`SccStatus`Numaralayıcı, kaynak denetim sisteminde bir dosyanın durumunu belirten adlandırılmış sabit değerler içerir. Bu numaralama [SccQueryInfo](../extensibility/sccqueryinfo-function.md) ve geri çağırma işlevi tarafından kullanılır (ayrıntılar için `POPLISTFUNC` bkz. [POPLISTFUNC).](../extensibility/poplistfunc.md)
+# <a name="file-status-code-enumerator"></a>Dosya durum kodu numaralandırıcısı
+`SccStatus`Numaralandırıcı, kaynak denetim sistemindeki bir dosyanın durumunu belirten adlandırılmış sabit değerler içeriyor. Bu numaralandırma, [SccQueryInfo](../extensibility/sccqueryinfo-function.md) ve callback işlevi tarafından kullanılır `POPLISTFUNC` (Ayrıntılar Için bkz. [poplistfunc](../extensibility/poplistfunc.md) ).
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,41 +52,41 @@ enum SccStatus {
 ```
 
 ## <a name="members"></a>Üyeler
- SCC_STATUS_INVALID Durumu alınamadı; buna güvenmez.
+ SCC_STATUS_INVALID durumu alınamadı; Bu uygulamayı kullanmayın.
 
- SCC_STATUS_NOTCONTROLLED Dosyası kaynak denetimi altında değil.
+ SCC_STATUS_NOTCONTROLLED dosya kaynak denetimi altında değil.
 
- SCC_STATUS_CONTROLLED Dosya kaynak denetimi altında.
+ SCC_STATUS_CONTROLLED dosya kaynak denetimi altında.
 
- SCC_STATUS_CHECKEDOUT yerel diskte geçerli kullanıcı tarafından kullanıma alınmış.
+ SCC_STATUS_CHECKEDOUT yerel diskteki geçerli kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_OUTOTHER Dosyası başka bir kullanıcı tarafından kullanıma alınmış.
+ SCC_STATUS_OUTOTHER dosya başka bir kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_OUTEXCLUSIVE dosyası özel olarak kullanıma alınmış.
+ SCC_STATUS_OUTEXCLUSIVE dosya özel olarak kullanıma alındı.
 
- SCC_STATUS_OUTMULTIPLE Dosya birden fazla kullanıcı tarafından kullanıma alınmış.
+ SCC_STATUS_OUTMULTIPLE dosya birden fazla kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_OUTOFDATE Dosya en son değildir.
+ SCC_STATUS_OUTOFDATE dosya en güncel değil.
 
- SCC_STATUS_DELETED Dosya projeden silindi.
+ SCC_STATUS_DELETED dosya projeden silindi.
 
- SCC_STATUS_LOCKED dosyası kilitli; daha fazla sürüme izin verilmez.
+ SCC_STATUS_LOCKED dosya kilitli; daha fazla sürüm izni yok.
 
- SCC_STATUS_MERGED dosya birleştirildi ama henüz düzeltildi/doğrulanmadı.
+ SCC_STATUS_MERGED dosya birleştirildi ancak henüz düzeltilmedi/doğrulanmadı.
 
  SCC_STATUS_SHARED dosya projeler arasında paylaşılır.
 
- SCC_STATUS_PINNED dosyası açık bir sürümle paylaşılır.
+ SCC_STATUS_PINNED dosya açık bir sürümle paylaşılıyor.
 
- SCC_STATUS_MODIFIED Dosya değiştirildi/bozuk/ihlal edildi.
+ SCC_STATUS_MODIFIED Dosya değiştirilmiş/bozuk/ihlal edildi.
 
- SCC_STATUS_OUTBYUSER dosyası geçerli kullanıcı tarafından kullanıma alınmış.
+ SCC_STATUS_OUTBYUSER dosya geçerli kullanıcı tarafından kullanıma alındı.
 
- SCC_STATUS_NOMERGE dosya hiçbir zaman ile birleştirilemez ve GET öncesinde kaydedilemez.
+ SCC_STATUS_NOMERGE dosya hiçbir şekilde birleştirilemez ve bir GET öncesinde kaydedilmemelidir.
 
- SCC_STATUS_RESERVED_1 kullanım için ayrılmıştır.
+ SCC_STATUS_RESERVED_1 iç kullanım için ayrılmıştır.
 
- SCC_STATUS_RESERVED_2 kullanım için ayrılmıştır.
+ SCC_STATUS_RESERVED_2 iç kullanım için ayrılmıştır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)

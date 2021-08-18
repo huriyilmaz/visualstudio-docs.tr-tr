@@ -11,14 +11,15 @@ ms.assetid: 28a17300-1626-422f-a17a-3a4d3872c37c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a5df5295143e9a6fb815ddc78d103b910ccfda7
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 1f22ad93668c617f687824c8825955fc63f537d9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158087"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113747"
 ---
 # <a name="idiaenumframedataclone"></a>IDiaEnumFrameData::Clone
 Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.

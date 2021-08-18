@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5385eb2813262d766e87063b7f7ddb961a06c7c0dbb043c028c91883d45cf4eb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 77e8a4639f15ce485c593f8bfa2fcf7f1187b890
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408018"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099288"
 ---
 # <a name="work-with-tables"></a>Tablolarla çalışma
   Bu bölümdeki konular, Microsoft Office Word'in nesne modelini kullanarak Office projelerinde tablolarla çalışmaya yönelik adım adım yordamlar ve kod örnekleri sağlar. Bazı durumlarda, eklentilerde bu görevleri VSTO yöntemler, bunları belge düzeyi özelleştirmelerde gerçekleştirme yollarından farklıdır.

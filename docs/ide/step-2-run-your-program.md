@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ed6a74c55cae8cecc3ec9c3293b80727a87bb95b77adf86640dcccc75f95c4ba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 808b5635764a49f67788825f5524662145ac5d77
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411924"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116896"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>2. Adım: Resim görüntüleyicisi uygulamanızı çalıştırma
 

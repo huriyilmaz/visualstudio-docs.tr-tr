@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a2410ddbeb365cb908c5718b3800f41f8eb28997ed3e22ccbf63589c601e0b0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bd9f175a9d17475bc0d1346ef0f0b5367e33a411
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121368597"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141905"
 ---
 # <a name="gpu-activity-graph"></a>GPU Etkinlik grafiği
 Eşzamanlılık Görselleştiricisi'nde GPU Etkinliği grafiği, zaman içinde kullanımda olan DirectX altyapılarının sayısıyla ölçülen sistem üzerinde DirectX etkinliği düzeyini görüntüler.  Grafikte hangi altyapıların kullanılmış olduğu göster değil.  Herhangi bir GPU işi iş alıyorsa altyapının kullanımda olduğu kabul edilir.

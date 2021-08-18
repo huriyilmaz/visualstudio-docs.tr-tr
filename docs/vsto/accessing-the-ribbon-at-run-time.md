@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 3636afa4eea04feaa8aaa58a00c8d1af6ffaf4a28e80e90c4a9ac4d5643a72e7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9f60e1b8c3245c299f9c251185b644b191968228
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121424638"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100319"
 ---
 # <a name="access-the-ribbon-at-run-time"></a>Çalışma zamanında Şerit'e erişme
   Şerit'i göstermek, gizlemek ve değiştirmek için kod yazabilir ve kullanıcıların kodu özel bir görev bölmesinde, eylemler bölmesinde veya form bölgesinde denetimlerden Outlook etkinleştirebilirsiniz.
@@ -41,16 +41,16 @@ ms.locfileid: "121424638"
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet4":::
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet4":::
 
-## <a name="access-a-collection-of-ribbons-that-appear-in-a-specific-outlook-inspector-window"></a>Belirli bir Denetçi penceresinde görünen Şeritler koleksiyonuna Outlook erişme
- Outlook Inspectors içinde görünen şeritler koleksiyonuna *erişin.* Denetçi, kullanıcılar e-posta Outlook gibi belirli görevleri gerçekleştirecekleri zaman verilerde açılan bir penceredir. Denetçi penceresinin Şeridine erişmek için sınıfının `Ribbons` özelliğini çağırın `Globals` ve Denetçi'yi temsil <xref:Microsoft.Office.Interop.Outlook.Inspector> eden bir nesnesi girin.
+## <a name="access-a-collection-of-ribbons-that-appear-in-a-specific-outlook-inspector-window"></a>Belirli bir Denetçi penceresinde görünen şerit koleksiyonuna Outlook erişme
+ Outlook Inspectors içinde görünen şeritler koleksiyonuna *erişin.* Denetçi, kullanıcılar e-posta Outlook gibi belirli görevleri gerçekleştirecekleri zaman bu pencerede açılan bir penceredir. Denetçi penceresinin Şeridine erişmek için sınıfının `Ribbons` özelliğini çağırın `Globals` ve Denetçi'yi temsil <xref:Microsoft.Office.Interop.Outlook.Inspector> eden bir nesnesi girin.
 
- Aşağıdaki örnek, şu anda odaklanan Denetçinin Şerit koleksiyonunu alır. Bu örnek daha sonra adlı bir Şerit'e `Ribbon1` erişerek Şerit'in birleşik giriş kutusunda görünen metni olarak `Hello World` ayarlar.
+ Aşağıdaki örnek, şu anda odağı olan Denetçinin Şerit koleksiyonunu alır. Bu örnek daha sonra adlı bir Şerit'e `Ribbon1` erişerek Şerit'in birleşik giriş kutusunda görünen metni olarak `Hello World` ayarlar.
 
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Access_O12/ThisAddIn.vb" id="Snippet5":::
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_FR_Access_O12/ThisAddIn.cs" id="Snippet5":::
 
-## <a name="access-a-collection-of-ribbons-that-appear-for-a-specific-outlook-explorer"></a>Gezgin'de belirli bir şerit için görünen şeritler koleksiyonuna Outlook erişin
- Outlook Explorer'da görünen şeritler koleksiyonuna *erişebilirsiniz.* Gezgin, bir örnek için ana uygulama kullanıcı arabirimidir (UI) Outlook. Gezgin penceresinin Şeridine erişmek için sınıfının `Ribbons` özelliğini `Globals` çağırın ve Gezgin'i temsil <xref:Microsoft.Office.Interop.Outlook.Explorer> eden bir nesnesine geçişin.
+## <a name="access-a-collection-of-ribbons-that-appear-for-a-specific-outlook-explorer"></a>Gezgin'de belirli bir şerit için görünen şerit Outlook erişme
+ Outlook Explorer'da görünen şeritlerden Outlook *erişebilirsiniz.* Gezgin, bir örnek için ana uygulama kullanıcı arabirimidir (UI) Outlook. Gezgin penceresinin Şeridine erişmek için sınıfının `Ribbons` özelliğini `Globals` çağırın ve Gezgin'i temsil <xref:Microsoft.Office.Interop.Outlook.Explorer> eden bir nesnesine geçişin.
 
  Aşağıdaki örnek, şu anda odaklanan Gezgin'in Şerit koleksiyonunu alır. Bu örnek daha sonra adlı bir Şerit'e `Ribbon1` erişerek Şerit'in birleşik giriş kutusunda görünen metni olarak `Hello World` ayarlar.
 

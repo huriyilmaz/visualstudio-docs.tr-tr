@@ -1,6 +1,6 @@
 ---
-title: Profil Oluşturucu performans toplama yöntemlerini anlama
-description: Visual Studio performans Profilcisi içindeki araçların kullandığı veri toplama yöntemleri hakkında bilgi edinin.
+title: Profil oluşturma performansı toplama yöntemlerini anlama
+description: Veri toplama yöntemleri hakkında bilgi edinmek için veri toplama Visual Studio Performans Profili Oluşturucu öğrenin.
 ms.date: 4/30/2020
 ms.topic: conceptual
 f1_keywords: ''
@@ -9,24 +9,25 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: '>= vs-2017'
 ms.workload:
 - multiple
-ms.openlocfilehash: f9128700f6ad54f3d92108d92e25e13b9ee4266c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8ca31215b5b9d27725f6feaa5ba65f91ebc119ad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99921872"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156961"
 ---
-# <a name="understand-profiler-performance-collection-methods"></a>Profil Oluşturucu performans toplama yöntemlerini anlama
+# <a name="understand-profiler-performance-collection-methods"></a>Profil oluşturma performansı toplama yöntemlerini anlama
 
-Bu belgede, Visual Studio performans Profilcisi içindeki araçların kullandığı veri toplama yöntemleri özetlenmektedir. 
+Bu belgede, veri toplama yöntemlerinin içindeki araçların Visual Studio Performans Profili Oluşturucu özetler. 
 
 ## <a name="sampling"></a>Örnekleme
 
-Profil oluşturma için örnekleme yöntemleri, profil oluşturma çalışması sırasında bir uygulama tarafından gerçekleştirilen iş hakkında istatistiksel verileri toplar. Veri toplama işlemi, uygulama üzerinde her milisaniyenin gibi düzenli bir aralıkta veya örnekleme sıklığındaki bilgiler toplanarak ve ardından bu verileri, uygulamada nerede harcandığına ilişkin bir model oluşturmak üzere çözümleyerek yapılır. Örnekleme yöntemi hafif ve profili oluşturulan uygulamanın yürütülmesi üzerinde çok daha etkilidir. Performans Profilcisi ' nde örnekleme yöntemiyle kullanılan araçlar, [CPU kullanımı](../profiling/cpu-usage.md) aracını içerir.
+Profil oluşturma için örnekleme yöntemleri, profil oluşturma çalıştırması sırasında bir uygulama tarafından gerçekleştirilen çalışma hakkında istatistiksel veriler toplar. Veri toplama, uygulamayla ilgili bilgileri düzenli aralıklarla veya her milisaniye gibi örnekleme sıklığında toplayarak ve ardından uygulamada zaman harcanarak bir model oluşturmak için bu verileri analiz ederek yapılır. Örnekleme yöntemi hafiftir ve profili yapılan uygulamanın yürütülmesi üzerinde çok az etkisi vardır. Örnek Performans Profili Oluşturucu kullanan araçlar CPU Kullanımı [aracını](../profiling/cpu-usage.md) içerir.
 
 ## <a name="instrumentation"></a>İzleme
 
-İzleme profili oluşturma, bir profil oluşturma işlemi sırasında bir uygulama tarafından gerçekleştirilen iş hakkında ayrıntılı bilgiler toplar. Veri toplama işlemi, bir uygulama çalışırken tam zamanlamayı ve çağrı sayısı bilgilerini toplamak ve yaymak için geri çağırma kancalarını kullanarak veya zamanlama bilgilerini yakalayan bir ikili dosyaya kod ekler. Örnekleme tabanlı yaklaşımlar ile karşılaştırıldığında, izleme yönteminin yüksek bir yükü vardır. Performans profili Oluşturucu kullanan araçlar, [.NET nesne ayırma](../profiling/dotnet-alloc-tool.md) aracı 'nı içerir.
+Ölçüm aracı profili oluşturma, profil oluşturma çalıştırması sırasında bir uygulama tarafından gerçekleştirilen iş hakkında ayrıntılı bilgi toplar. Veri toplama, zamanlama bilgilerini yakalayan bir ikili dosyaya kod eklayan araçlarla veya uygulama çalışırken tam zamanlama ve çağrı sayısı bilgilerini toplamak ve yalıtmak için geri çağırma kancaları kullanılarak yapılır. Ölçüm yöntemi, örnekleme tabanlı yaklaşımlara kıyasla yüksek ek yüke sahiptir. [.NET](../profiling/dotnet-alloc-tool.md) nesne Performans Profili Oluşturucu kullanan araçlar.

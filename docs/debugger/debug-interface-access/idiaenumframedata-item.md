@@ -1,6 +1,6 @@
 ---
-description: Bir kare veri öğesini bir dizin aracılığıyla alır.
-title: 'IDiaEnumFrameData:: Item | Microsoft Docs'
+description: Bir dizin ile bir çerçeve veri öğesi alınır.
+title: IDiaEnumFrameData::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 73817c23ae8c5dc36c5d0e818bcf0af310a63e3ba9b0435ad1e253954ccd70fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 943d67c89d3ec8334dce585575db63fbb7291a42
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380513"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113723"
 ---
 # <a name="idiaenumframedataitem"></a>IDiaEnumFrameData::Item
-Bir kare veri öğesini bir dizin aracılığıyla alır.
+Bir dizin ile bir çerçeve veri öğesi alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  dizin
 
-'ndaki Alınacak [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesinin dizini. Dizin, `count` `count` [IDiaEnumFrameData:: get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md) yöntemi tarafından döndürülen 0 ile-1 aralığındadır.
+[in] Alınan [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesinin dizini. Dizin 0 ile `count` -1 aralığındadır; burada `count` [IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md) yöntemi tarafından döndürülür.
 
  section
 
-dışı İstenen çerçeve verisi öğesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi döndürür.
+[out] İstenen çerçeve veri öğesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

@@ -16,12 +16,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e8637426cfec88ceecc5c60a2ab326957b29d9d57c0bb22ec71045b5996001
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e782ced3a2760af780f70f586fb79329da68394c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121368116"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140706"
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio profil oluşturma API başvurusu (yerel)
 Visual Studio profil oluşturma API'leri toplanan veri miktarını program aracılığıyla denetlemeye ve profil oluşturma sırasında hem zaman damgası hem de profil işareti eklemeye olanak sağlar. Yerel API'leri kullanmak için *VSPerf.h üst bilgi* dosyasını ekleyin ve *VSPerf.lib'i projenize* ekleyin.

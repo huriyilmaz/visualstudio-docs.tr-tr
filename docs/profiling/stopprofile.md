@@ -13,12 +13,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4887f5a86f63d4ee68e560b16bcd675959c9c85e1d6557186262e3b946ee8db9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aef913543c56c1a70f6f2b26db305f9342d734c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121354014"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141330"
 ---
 # <a name="stopprofile"></a>StopProfile
 `StopProfile`İşlevi, belirtilen profil oluşturma düzeyi için sayacı 0 (kapalı) olarak ayarlar.

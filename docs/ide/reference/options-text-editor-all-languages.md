@@ -45,19 +45,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a7caa9f6c547c8e06fbb76d4b3d2372b9662c5330aa08e96e9ce7eb24c7d2d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f581f48efb9fbba97aa65b9826f7114f7377e951
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400223"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101004"
 ---
 # <a name="options-dialog-box-text-editor--all-languages"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> Tüm Diller
 
 Bu iletişim kutusu, Kod Düzenleyicisi'nin varsayılan davranışını değiştirmenizi sağlar. Bu ayarlar, HTML Tasarımcısı'nın Kaynak görünümü gibi Kod Düzenleyicisi'ni temel alan diğer düzenleyiciler için de geçerlidir. Bu iletişim kutusunu açmak için Araçlar **menüsünden** **Seçenekler'i** seçin. Metin Düzenleyici **klasöründe** Tüm Diller alt **klasörünü genişletin** ve ardından Genel'i **seçin.**
 
 > [!CAUTION]
-> Bu sayfa tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Genel seçeneklerini burada seçili olan seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
+> Bu sayfa, tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Genel seçeneklerini burada seçili olan seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
 
 Bazı programlama dilleri için Genel seçenekler sayfalarında bir seçenek seçildiğinde gri bir onay işareti görüntülenir, ancak diğerleri için görüntülenmez.
 
@@ -112,7 +112,7 @@ Seçildiğinde, fare imleci düzenleyicide bir URL'den geçerken işaret eden el
 
 **Gezinti çubuğu**
 
-Seçildiğinde, kod **düzenleyicisinin** üst kısmında Gezinti çubuğunu görüntüler. Açılan Nesneler **ve** **Üyeler** listeleri, kodunda belirli bir nesneyi seçmenize, üyelerinden seçime ve Kod Düzenleyicisi'nde seçili üyenin bildirimine gezinmenize olanak sağlar.
+Seçildiğinde, kod **düzenleyicisinin** üst kısmında Gezinti çubuğunu görüntüler. Açılan Nesneler **ve** **Üyeler** listeleri, kodunuzdaki belirli bir nesneyi seçmenize, üyelerinden birini seçmenize ve Kod Düzenleyicisi'nde seçili üyenin bildirimine gezinmenize olanak sağlar.
 
 **Seçim yoksa Boş satırlara Kesme veya Kopyalama komutları uygulama**
 

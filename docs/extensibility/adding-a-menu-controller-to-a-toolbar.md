@@ -1,6 +1,6 @@
 ---
-title: Bir araç çubuğuna menü denetleyicisi ekleme | Microsoft Docs
-description: bir menü denetleyicisi oluşturmayı ve Visual Studio bir araç penceresi araç çubuğuna eklemeyi öğrenin, ardından menü denetleyicisi komutlarını uygulayıp test edin.
+title: Araç Çubuğu ÇubuğuNa Menü Denetleyicisi | Microsoft Docs
+description: Bir menü denetleyicisi oluşturma ve bunu araç penceresi araç çubuğuna ekleme hakkında Visual Studio, ardından menü denetleyicisi komutlarını uygulama ve test etmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,34 +15,34 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3028024f6c13c8d722a565a73d64d6ec8b3de16fae2dde227efc0114f403fedd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 439b9475c92eb78e7deed63c3718d73dd9f81a4d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239431"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112002"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>Araç çubuğuna menü denetleyicisi ekleme
-Bu izlenecek yol, araç [çubuğunda araç çubuğu ekleme](../extensibility/adding-a-toolbar-to-a-tool-window.md) izlenecek yol ve araç penceresi araç çubuğuna nasıl menü denetleyicisi ekleneceğini gösterir. Burada gösterilen adımlar [araç çubuğu ekle](../extensibility/adding-a-toolbar.md) gözden geçirmede oluşturulan araç çubuğuna da uygulanabilir.
+Bu izlenecek yol, Araç penceresine [araç çubuğu](../extensibility/adding-a-toolbar-to-a-tool-window.md) ekleme adım adım kılavuzda yer almaktadır ve araç penceresi araç çubuğuna menü denetleyicisi ekleme adımlarını gösterir. Burada gösterilen adımlar, Araç çubuğu ekleme adım adımlarında oluşturulan araç [çubuğuna da](../extensibility/adding-a-toolbar.md) uygulanabilir.
 
-Bir menü denetleyicisi bölünmüş bir denetimdir. Menü denetleyicisinin sol tarafında, son kullanılan komut gösterilir ve onu tıklayarak çalıştırabilirsiniz. Menü denetleyicisinin sağ tarafı, tıklandığı zaman ek komutların bir listesini açan bir oktur. Listede bir komuta tıkladığınızda, komut çalışır ve menü denetleyicisinin sol tarafındaki komutu değiştirir. Bu şekilde, menü denetleyicisi her zaman bir listeden son kullanılan komutu gösteren bir komut düğmesi gibi çalışır.
+Menü denetleyicisi bir bölme denetimidir. Menü denetleyicisinin sol tarafında son kullanılan komut görüntülenir ve buna tıklayarak çalıştırabilirsiniz. Menü denetleyicisinin sağ tarafında, tıklandıktan sonra ek komutların listesini açan bir ok yer alıyor. Listede bir komuta tıklarken komut çalışır ve menü denetleyicisinin sol tarafındaki komutun yerini alar. Bu şekilde, menü denetleyicisi her zaman bir listeden son kullanılan komutu gösteren bir komut düğmesi gibi çalışır.
 
-Menü denetleyicileri menülerde görünebilir, ancak en sık araç çubuklarında kullanılır.
+Menü denetleyicileri menülerde görünebilir ancak bunlar genellikle araç çubuklarında kullanılır.
 
 ## <a name="prerequisites"></a>Önkoşullar
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
+2015'Visual Studio başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Bu, kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
 ## <a name="create-a-menu-controller"></a>Menü denetleyicisi oluşturma
 
-1. Araç çubuğu içeren bir araç penceresi oluşturmak için araç [çubuğuna araç çubuğu ekleme](../extensibility/adding-a-toolbar-to-a-tool-window.md) bölümünde açıklanan yordamları izleyin.
+1. Araç çubuğu olan bir [araç penceresi oluşturmak için Araç çubuğu ekleme](../extensibility/adding-a-toolbar-to-a-tool-window.md) konusunda açıklanan yordamları izleyin.
 
-2. *TWTestCommandPackage. vsct* içinde semboller bölümüne gidin. **Guidtwtestcommandpackagecmdset** adlı GuidSymbol öğesinde menü denetleyicinizi, menü denetleyicisi grubunuzu ve üç menü öğesini bildirin.
+2. *TWTestCommandPackage.vsct* içinde Semboller bölümüne gidin. **guidTWTestCommandPackageCmdSet** adlı GuidSymbol öğesinde menü denetleyicinizi, menü denetleyici grubu ve üç menü öğesini bildirin.
 
     ```xml
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />
     ```
 
-3. Menüler bölümünde, son menü girişinden sonra menü denetleyicisini bir menü olarak tanımlayın.
+3. Menüler bölümünde, son menü girdikten sonra menü denetleyicisini bir menü olarak tanımlayın.
 
     ```xml
     <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">
@@ -57,9 +57,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi 
     </Menu>
     ```
 
-    `TextChanges` `TextIsAnchorCommand` Menü denetleyicinin son seçili komutu yansıtmasını sağlamak için ve bayrakları dahil olmalıdır.
+    Menü `TextChanges` `TextIsAnchorCommand` denetleyicisinin son seçilen komutu yansıtmasını sağlamak için ve bayrakları ekilmelidir.
 
-4. Gruplar bölümünde, son grup girişinden sonra, menü denetleyicisi grubunu ekleyin.
+4. Gruplar bölümünde, son grup girişinin ardından menü denetleyicisi grubunu ekleyin.
 
     ```xml
     <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">
@@ -67,9 +67,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi 
     </Group>
     ```
 
-    Menü denetleyicisi üst öğe olarak ayarlanarak, bu gruba yerleştirilmiş olan komutlar menü denetleyicisinde görüntülenir. `priority`Özniteliği, menü denetleyicisindeki tek grup olduğundan, varsayılan değer olan 0 değerine ayarlayan atlanır.
+    Menü denetleyicisi üst öğe olarak ayarlandırarak, bu gruba yerleştirilen tüm komutlar menü denetleyicisinde görünür. Öznitelik atlanır ve bu, menü denetleyicisinde tek grup olduğundan varsayılan `priority` 0 değerine ayarlar.
 
-5. Düğmeler bölümünde, son düğme girişinden sonra menü öğelerinizin her biri için bir Button öğesi ekleyin.
+5. Düğmeler bölümünde, son düğme girişinin ardından menü öğelerinizin her biri için bir Düğme öğesi ekleyin.
 
     ```xml
     <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">
@@ -101,19 +101,19 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi 
     </Button>
     ```
 
-6. Bu noktada, menü denetleyicisine bakabilirsiniz. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örneği görmeniz gerekir.
+6. Bu noktada menü denetleyicisine bakabilirsiniz. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örneği görüyor gerekir.
 
-   1. **görünüm/diğer Windows** menüsünde **Test ToolWindow** öğesini açın.
+   1. Görünüm **/ Diğer Windows** Test **AracıWindow'ı açın.**
 
-   2. Menü denetleyicisi araç penceresindeki araç çubuğunda görüntülenir.
+   2. Menü denetleyicisi araç penceresindeki araç çubuğunda görünür.
 
    3. Üç olası komutu görmek için menü denetleyicisinin sağ tarafındaki oka tıklayın.
 
-      Bir komuta tıkladığınızda, menü denetleyicisinin başlığı bu komutu gösterecek şekilde değişir. Sonraki bölümde, bu komutları etkinleştirmek için kodu ekleyeceğiz.
+      Bir komuta tıklarken menü denetleyicisinin başlığında bu komutun görüntüleniyor olduğunu fark edersiniz. Sonraki bölümde, bu komutları etkinleştirmek için kodu ekleyebiliyoruz.
 
 ## <a name="implement-the-menu-controller-commands"></a>Menü denetleyicisi komutlarını uygulama
 
-1. *Twtestcommandpackageguid. cs* dosyasında, mevcut komut kimliklerinden sonra üç menü öğesi Için komut kimliklerini ekleyin.
+1. *TWTestCommandPackageGuids.cs* içinde, mevcut komut kimliklerinden sonra üç menü öğeniz için komut kimlikleri ekleyin.
 
     ```csharp
     public const int cmdidMCItem1 = 0x130;
@@ -121,13 +121,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi 
     public const int cmdidMCItem3 = 0x132;
     ```
 
-2. *TWTestCommand. cs* dosyasında, sınıfının en üstüne aşağıdaki kodu ekleyin `TWTestCommand` .
+2. *TWTestCommand.cs* içinde sınıfının en üstüne aşağıdaki kodu `TWTestCommand` ekleyin.
 
     ```csharp
     private int currentMCCommand; // The currently selected menu controller command
     ```
 
-3. TWTestCommand oluşturucusunda, yönteme son çağrıdan sonra `AddCommand` , her komut için olayları aynı işleyiciler aracılığıyla yönlendirmek üzere kod ekleyin.
+3. TWTestCommand oluşturucus unda, yöntemine yapılan son çağrıdan sonra, her komutun olaylarını aynı işleyiciler aracılığıyla yönlendiren `AddCommand` kod ekleyin.
 
     ```csharp
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=
@@ -148,7 +148,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi 
     }
     ```
 
-4. Seçili komutu işaretlenmiş olarak işaretlemek için **TWTestCommand** sınıfına bir olay işleyicisi ekleyin.
+4. Seçilen komutu işaretli olarak işaretlemek **için TWTestCommand** sınıfına bir olay işleyicisi ekleyin.
 
     ```csharp
     private void OnMCItemQueryStatus(object sender, EventArgs e)
@@ -161,7 +161,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi 
     }
     ```
 
-5. Kullanıcı menü denetleyicisinde bir komut seçtiğinde MessageBox görüntüleyen bir olay işleyicisi ekleyin:
+5. Kullanıcı menü denetleyicisinde bir komut seçerken MessageBox görüntüleyen bir olay işleyicisi ekleyin:
 
     ```csharp
     private void OnMCItemClicked(object sender, EventArgs e)
@@ -213,17 +213,17 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi 
 
 ## <a name="testing-the-menu-controller"></a>Menü denetleyicisini test etme
 
-1. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örneği görmeniz gerekir.
+1. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örneği görüyor gerekir.
 
-2. **görünüm/diğer Windows** menüsünde **Test ToolWindow** açın.
+2. Görünüm / Diğer Menü menüsünde Test **AracıWindow'Windows** açın. 
 
-    Menü denetleyicisi araç penceresinde araç çubuğunda görünür ve **mc öğesi 1**' i görüntüler.
+    Menü denetleyicisi araç penceresinde araç çubuğunda görünür ve MC Öğesi **1'i görüntüler.**
 
-3. Okun solundaki menü denetleyicisi düğmesine tıklayın.
+3. Okun sol tarafından menü denetleyicisi düğmesine tıklayın.
 
-    İlki seçili olan ve simgesinin etrafında bir vurgulama kutusu olan üç öğe görmeniz gerekir. **Mc öğesi 3**' e tıklayın.
+    İlk öğe seçilmiş ve simgesinin etrafında bir vurgu kutusu bulunan üç öğe görüyorsanız. MC Öğe **3'e tıklayın.**
 
-    **Menü denetleyicisi öğesi 3 ' ü seçtiğiniz** iletiyle birlikte bir iletişim kutusu görüntülenir. İletinin menü denetleyicisi düğmesinde metne karşılık geldiğini unutmayın. Menü denetleyicisi düğmesi artık **mc öğesi 3 ' ü** görüntüler.
+    Menü denetleyicisi Öğe **3'ü seçtiniz iletisiyle bir iletişim kutusu görüntülenir.** İletinin menü denetleyicisi düğmesinde yer alan metne karşılık gelen bir ileti olduğunu fark edersiniz. Menü denetleyicisi düğmesi artık MC Öğe **3'ü görüntüler.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Araç penceresine araç çubuğu ekleme](../extensibility/adding-a-toolbar-to-a-tool-window.md)

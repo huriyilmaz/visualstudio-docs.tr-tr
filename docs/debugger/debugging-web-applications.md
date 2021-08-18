@@ -1,6 +1,6 @@
 ---
-title: Web uygulamalarında hata ayıklama | Microsoft Docs
-description: ASP.NET uygulamalar, JavaScript ve TypeScript uygulamaları veya AJAX betik uygulamaları gibi farklı türlerde web uygulamalarında hata ayıklamanıza yardımcı olacak bağlantılar bulabilirsiniz.
+title: Web Uygulamalarında Hata Ayıklama | Microsoft Docs
+description: ASP.NET uygulamaları, JavaScript ve TypeScript uygulamaları veya AJAX betik uygulamaları gibi farklı türlerde web uygulamalarında hata ayıklamanıza yardımcı olacak bağlantılar bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/05/2019
 ms.topic: conceptual
@@ -16,39 +16,39 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f171d008c3d1ffcc6cc1c9d2bd49a62ea4daf778f67b26919ee42599dafeb40e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9274b401d40f2b65682e60ed5bb7ccdc4126a540
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391555"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112873"
 ---
 # <a name="debugging-web-applications"></a>Web Uygulamalarında Hata Ayıklama
 
-Bu makalede, farklı türlerde Web uygulamalarında hata ayıklamanıza yardımcı olacak bağlantılar sunulmaktadır.
+Bu makale, farklı türlerde web uygulamalarında hata ayıklamanıza yardımcı olacak bağlantılar sağlar.
 
 - ASP.NET uygulamalarında hata ayıklama
 
-  uygulamalarda hata ayıklamayı etkinleştirmek için gereken adımlar için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] bkz. [ASP.NET uygulamalarda hata ayıklama](how-to-enable-debugging-for-aspnet-applications.md).
+  Uygulamalarda hata ayıklamayı etkinleştirmek için gereken adımlar için bkz. Uygulamalarda [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] [ASP.NET ayıklama.](how-to-enable-debugging-for-aspnet-applications.md)
 
-- ASP.NET istemci tarafı betikte hata ayıklama
+- ASP.NET'de istemci tarafı betiğinde hata ayıklama
 
-  gerekli adımlar için Microsoft Edge ve [Google Chrome için bu gönderisine yönelik](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)blog gönderisi [hata ayıklama JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) bölümüne bakın.
+  Gerekli adımlar için [JavaScript'te](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) hata ayıklama blog gönderisi Microsoft Edge Google [Chrome için bu gönderiye bakın.](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)
 
-- JavaScript ve TypeScript hatalarını ayıklama
+- JavaScript ve TypeScript'de hata ayıklama
 
-  Bkz. [JavaScript ve TypeScript hatalarını ayıklama](../javascript/debug-nodejs.md).
+  Bkz. [JavaScript ve TypeScript'de Hata Ayıklama.](../javascript/debug-nodejs.md)
 
 - Betik belgelerini görüntüleme
 
-  Görüntülenecek **Çözüm Gezgini** sunucu tarafı ve istemci tarafı komut dosyası belgelerinin listesini görebilirsiniz. **Çözüm Gezgini** herhangi bir betik belgesini açabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: betik belgelerini görüntüleme](../debugger/how-to-view-script-documents.md).
+  Sunucu tarafı ve istemci tarafı betik belgelerinin listelerini görüntülemek için **Çözüm Gezgini** görüntüebilirsiniz. herhangi bir betik belgesini **Çözüm Gezgini.** Daha fazla bilgi için, [bkz. How to: View Script Documents](../debugger/how-to-view-script-documents.md).
 
-- AJAX betik uygulamalarında hata ayıklama
+- AJAX Betik Uygulamalarında Hata Ayıklama
 
-  AJAX özellikli Web uygulamaları, komut dosyası kodunun yoğun bir şekilde kullanılmasını sağlar ve özel hata ayıklama zorluklarını yapar. AJAX hata ayıklama teknikleri hakkında bilgi için bkz. [hata ayıklama ve Izleme Ajax uygulamalarına genel bakış](/previous-versions/bb398817(v=vs.140)).
+  AJAX özellikli Web uygulamaları betik kodunu yoğun bir şekilde kullanır ve özel hata ayıklama zorluklarına neden olur. AJAX hata ayıklama teknikleri hakkında bilgi için bkz. [Hata Ayıklama ve Ajax Uygulamalarını İzlemeye Genel Bakış.](/previous-versions/bb398817(v=vs.140))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [hata ayıklayıcı Ayarlar ve hazırlığı](../debugger/debugger-settings-and-preparation.md)
+- [Hata ayıklayıcısı Ayarlar hazırlama](../debugger/debugger-settings-and-preparation.md)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)

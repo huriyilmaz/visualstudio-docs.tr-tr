@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: fa7305a34426faae6aa7f65c6860ab1e2cda57b196ace5ad1d287d6bfcfe382b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3ec311a051133ae2c01734f767caa77810860518
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430843"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101550"
 ---
 # <a name="code-analysis-project-designer"></a>Kod Çözümlemesi, Proje Tasarımcısı
 

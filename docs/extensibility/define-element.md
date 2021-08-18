@@ -11,14 +11,15 @@ ms.assetid: 5aee74e3-de41-4dc6-9618-93e158af56dd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 409621410db727f933e41bae894f125dc877b4c2
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 87823d3f3aa2e8927187f9395f6c02833b1076b8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898051"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087216"
 ---
 # <a name="define-element"></a>Define öğesi
 Bir sembol adı ve değer çifti tanımlar. Bu sembol koşullu öznitelikler tarafından değerlendir olabilir. Daha fazla bilgi için [bkz. Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md) Ayrıca [bkz. Semboller öğesi.](../extensibility/symbols-element.md)

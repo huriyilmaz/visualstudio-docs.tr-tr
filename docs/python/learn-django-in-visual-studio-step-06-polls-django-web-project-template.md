@@ -1,29 +1,30 @@
 ---
-title: Visual Studio adım 6 ' da Docgo öğreticisini öğrenin, proje şablonunu yoklar
+title: Visual Studio 6. adım, proje şablonunu yokladığı için docgo öğreticisini öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri bağlamında, özellikle de yönetim özelleştirmesi gibi Docgo Web projesi şablonunu Yoklakla ilgili temel bilgileri bildiren bir adım adım yönergeler.
+description: Visual Studio projeler bağlamında, özellikle de yönetim özelleştirmesi gibi docgo Web Project şablonunu yoklayan özellikler olan docgo hakkında bir adım adım yönergeler.
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 monikerRange: vs-2017
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b52cc9615eb4829aede06ae65c152e47b3ff3844
-ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
+ms.openlocfilehash: 69b675f19060cf57d8c9dca03414709de5545199
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104806036"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054489"
 ---
-# <a name="step-6-use-the-polls-django-web-project-template"></a>6. Adım: Docgo Web proje şablonunu yoklayan şekilde kullanın
+# <a name="step-6-use-the-polls-django-web-project-template"></a>6. adım: docgo Web Project şablonunu yoklayıp kullanın
 
 **Önceki adım: [Docgo 'da kullanıcıların kimliğini doğrulama](learn-django-in-visual-studio-step-05-django-authentication.md)**
 
-Visual Studio 'nun "Docgo Web projesi" şablonunu anlamış olursunuz, ancak aynı kod tabanında bulunan ve bir veritabanıyla çalışmayı gösteren "docgo Web projesini Yoklat" adlı üçüncü Docgo şablonuna bakabilirsiniz.
+Visual Studio "docgo web Project" şablonunu anlamış olursunuz, artık aynı kod tabanında bulunan ve bir veritabanıyla çalışmayı gösteren "docgo web Project ' i yoklar" adlı üçüncü docgo şablonuna bakabilirsiniz.
 
 Bu adımda şunları yapmayı öğreneceksiniz:
 
@@ -34,31 +35,31 @@ Bu adımda şunları yapmayı öğreneceksiniz:
 > - Proje şablonu tarafından oluşturulan görünümleri ve sayfa şablonlarını anlayın (adım 6-4)
 > - Özel bir yönetim arabirimi oluşturma (adım 6-5)
 
-Bu şablon kullanılarak oluşturulan bir proje, Docgo belgelerinden [Ilk Docgo uygulamanızı yazma](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) öğreticisini izleyerek aldığınız duruma benzer. Web uygulaması, kullanıcıların yoklamaları ve oylar görüntülemesini sağlayan bir genel siteden oluşur ve bu sayede yoklamaları yönetebileceğiniz özel bir yönetim arabirimidir. "Docgo Web projesi" şablonuyla aynı kimlik doğrulama sistemini kullanır ve aşağıdaki bölümlerde araştırılan Docgo modellerini uygulayarak veritabanını daha fazla kullanımını sağlar.
+Bu şablon kullanılarak oluşturulan bir proje, Docgo belgelerinden [Ilk Docgo uygulamanızı yazma](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) öğreticisini izleyerek aldığınız duruma benzer. Web uygulaması, kullanıcıların yoklamaları ve oylar görüntülemesini sağlayan bir genel siteden oluşur ve bu sayede yoklamaları yönetebileceğiniz özel bir yönetim arabirimidir. "docgo Web Project" şablonuyla aynı kimlik doğrulama sistemini kullanır ve aşağıdaki bölümlerde araştırılan docgo modellerini uygulayarak veritabanını daha fazla kullanımını sağlar.
 
 ## <a name="step-6-1-create-the-project-and-initialize-the-database"></a>Adım 6-1: projeyi oluşturma ve veritabanını başlatma
 
-1. Visual Studio 'da **Çözüm Gezgini** gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
+1. Visual Studio, **Çözüm Gezgini**' e gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve   >  **yeni Project** ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  bunun yerine **Project** .)
 
-1. Yeni proje iletişim kutusunda, **Docgo Web projesi şablonunu yoklayıp** seçin, "DjangoPolls" projesini çağırın ve **Tamam**' ı seçin.
+1. yeni proje iletişim kutusunda, **docgo Web Project şablonunu yoklayıp** seçin, "DjangoPolls" projesini çağırın ve **tamam**' ı seçin.
 
-1. Visual Studio 'daki diğer proje şablonları gibi, "Docgo Web projesini yoklamalar" şablonu bir *requirements.txt* dosyası Içeriyorsa, Visual Studio komut istemleri bu bağımlılıkların nereye yükleneceğini sorar. **Bir sanal ortama yükleyip**, sanal **ortam ekle** iletişim kutusunda Varsayılanları kabul etmek için **Oluştur** seçeneğini belirleyin.
+1. Visual Studio diğer proje şablonları gibi, "docgo Web Project yokladığı şablon bir *requirements.txt* dosyası içeriyorsa Visual Studio istemler bu bağımlılıkların nereye yükleneceğini sorar. **Bir sanal ortama yükleyip**, sanal **ortam ekle** iletişim kutusunda Varsayılanları kabul etmek için **Oluştur** seçeneğini belirleyin.
 
 1. Python sanal ortamı ayarlamayı tamamladıktan sonra, veritabanını başlatmak ve bir Docgo süper kullanıcısı (yani bir yönetici) oluşturmak için görüntülenen *readme.html* içindeki yönergeleri izleyin. Adımlar ilk olarak **Çözüm Gezgini**' de **DjangoPolls** projesine sağ tıklayıp **Python**  >  **docgo geçişi** komutunu seçin, ardından projeye tekrar sağ tıklayın, **Python**  >  **docgo süper kullanıcı oluştur** komutunu seçin ve istemleri izleyin. (Önce bir süper kullanıcı oluşturmaya çalışırsanız, veritabanı başlatılmadığından bir hata görürsünüz.)
 
-1. **Çözüm Gezgini** ' de projeye sağ tıklayıp **Başlangıç projesi olarak ayarla**' yı seçerek **DjangoPolls** projesini Visual Studio çözümü için varsayılan olacak şekilde ayarlayın. Kalın olarak gösterilen başlangıç projesi, hata ayıklayıcıyı başlattığınızda çalıştırılan şeydir.
+1. **DjangoPolls** projesini, **Çözüm Gezgini** ' de projeye sağ tıklayıp **başlangıç Project olarak ayarla**' yı seçerek Visual Studio çözüm için varsayılan olacak şekilde ayarlayın. Kalın olarak gösterilen başlangıç projesi, hata ayıklayıcıyı başlattığınızda çalıştırılan şeydir.
 
 1. Sunucuyu çalıştırmak için **hata ayıklama**  >  **başlatma hata ayıklamayı Başlat** (**F5**) veya araç çubuğundaki **Web sunucusu** düğmesini seçin:
 
-    ![Visual Studio 'da Web sunucusu araç çubuğu düğmesini Çalıştır](media/django/run-web-server-toolbar-button.png)
+    ![Visual Studio Web sunucusu araç çubuğu düğmesini Çalıştır](media/django/run-web-server-toolbar-button.png)
 
-1. Şablon tarafından oluşturulan uygulamanın, en üst gezinti çubuğunu kullanarak gittiğiniz üç sayfası, ev, bilgi ve Ilgili kişi vardır. Uygulamanın farklı kısımlarını incelemek için bir dakika veya iki dakikanızı alın (hakkında ve Ilgili sayfalar "Docgo web projesine çok benzer" ve daha fazla açıklanmazlar).
+1. Şablon tarafından oluşturulan uygulamanın, en üst gezinti çubuğunu kullanarak gittiğiniz üç sayfası, ev, bilgi ve Ilgili kişi vardır. uygulamanın farklı parçalarını incelemek için bir dakika veya iki dakikanızı alın (hakkında ve ilgili sayfalar "docgo Web Project" ile çok benzer ve daha fazla açıklanmıyor).
 
-    ![Docgo Web projesi uygulamasının yokladığı tam tarayıcı görünümü](media/django/step06-full-app-view.png)
+    ![docgo Web Project uygulamasındaki yoklamaları için tam tarayıcı görünümü](media/django/step06-full-app-view.png)
 
 1. Ayrıca, yönetim arabiriminin yalnızca kimliği doğrulanmış Yöneticiler için yetkilendirilmiş olduğunu göstermek için bir oturum açma ekranı görüntüleyen gezinti çubuğunda **Yönetim** bağlantısını seçin. Süper Kullanıcı kimlik bilgilerini kullanın ve bu proje şablonu kullanılırken varsayılan olarak etkinleştirilen "/admin" sayfasına yönlendirilmiştiniz.
 
-    ![Docgo Web projesi uygulamasındaki yoklamalar yönetim görünümü](media/django/step06-polls-administrative-interface.png)
+    ![docgo Web Project uygulamasını yoklayan yönetim görünümü](media/django/step06-polls-administrative-interface.png)
 
 1. Uygulamanın, izleyen bölümler için çalışır durumda kalmasını sağlayabilirsiniz.
 
@@ -66,7 +67,7 @@ Bu şablon kullanılarak oluşturulan bir proje, Docgo belgelerinden [Ilk Docgo 
 
 ### <a name="examine-the-project-contents"></a>Proje içeriğini inceleyin
 
-Daha önce belirtildiği gibi. Visual Studio 'daki diğer proje şablonlarını araştırdıysanız, "Docgo Web projesini Yokladır" şablonundan oluşturulan bir projede nelerin büyük bölümü tanıdık gelmelidir. Bu makaledeki ek adımlar, veri modelleri ve ek görünümler gibi daha önemli değişiklikler ve eklemeler özetler.
+Daha önce belirtildiği gibi. "docgo Web Project tarafından oluşturulan bir projede ne kadar çok), Visual Studio diğer proje şablonlarını araştırdıysanız, şablon tanıdık gelmelidir. Bu makaledeki ek adımlar, veri modelleri ve ek görünümler gibi daha önemli değişiklikler ve eklemeler özetler.
 
 ### <a name="question-what-does-the-django-migrate-command-do"></a>Soru: Docgo geçişi komutu ne yapar?
 
@@ -157,7 +158,7 @@ def seed(request):
 
 Etkiyi görmek için, hiçbir yokladığı henüz mevcut olmadığını görmek üzere uygulamayı çalıştırın. Ardından "/Seed" URL 'sini ziyaret edin ve uygulama ana sayfaya döndüğünde, yoklamaları kullanılabilir hale geldiğini görmeniz gerekir. Burada, ham *DB. SQLite3* dosyasını [SQLite tarayıcısı](https://sqlitebrowser.org/)gibi bir araçla inceleyebilirsiniz.
 
-![Çekirdek oluşturulmuş bir veritabanıyla Docgo Web projesi uygulamasını yoklar](media/django/step06-app-with-seeded-database.png)
+![çekirdek oluşturulmuş bir veritabanıyla docgo Web Project uygulamasını yoklar](media/django/step06-app-with-seeded-database.png)
 
 ### <a name="question-is-it-possible-to-initialize-the-database-using-the-django-administrative-utility"></a>Soru: Docgo yönetim yardımcı programını kullanarak veritabanını başlatmak mümkün mü?
 
@@ -165,12 +166,12 @@ Cevap: Evet, [docgo-admin LoadData komutunu](https://docs.djangoproject.com/en/2
 
 ## <a name="step-6-3-use-migrations"></a>Adım 6-3: geçişleri kullanma
 
-`manage.py makemigrations`Projeyi oluşturduktan sonra komutunu çalıştırdığınızda (Visual Studio 'daki bağlam menüsünü kullanarak), dosya *uygulaması/geçişleri/0001_initial. Kopyala* dosyasını oluşturdunuz. Bu dosya, ilk veritabanı tablolarını oluşturan bir komut dosyası içerir.
+`manage.py makemigrations`projeyi oluşturduktan sonra komutu çalıştırdığınızda (Visual Studio bağlam menüsünü kullanarak), dosya *uygulaması/geçişleri/0001_initial. kopyala* dosyasını oluşturdunuz. Bu dosya, ilk veritabanı tablolarını oluşturan bir komut dosyası içerir.
 
 Modellerinizde zaman içinde değişiklikler yapmanız gerektiği için, bu modellerle temel alınan veritabanı şemasını güncel tutmayı kolaylaştırır. Genel iş akışı aşağıdaki gibidir:
 
 1. *Models.py* dosyanızdaki modellerdeki değişiklikleri yapın.
-1. Visual Studio 'da **Çözüm Gezgini** projeye sağ tıklayın ve **Python**  >  **docgo geçişleri yap** komutunu seçin. Daha önce açıklandığı gibi, bu komut, veritabanını geçerli durumundan yeni duruma geçirmek için *uygulama/geçişlerde* betikler oluşturur.
+1. Visual Studio, **Çözüm Gezgini** projeye sağ tıklayın ve **Python**  >  **docgo geçişleri yap** komutunu seçin. Daha önce açıklandığı gibi, bu komut, veritabanını geçerli durumundan yeni duruma geçirmek için *uygulama/geçişlerde* betikler oluşturur.
 1. Betikleri gerçek veritabanına uygulamak için, projeye tekrar sağ tıklayın ve **Python**  >  **docgo geçişi**' ni seçin.
 
 Docgo, belirli bir veritabanına uygulanan geçişleri izler, örneğin, Migrate komutunu çalıştırdığınızda Docgo, hangi geçişlerin gerekli olduğunu uygular. Yeni, boş bir veritabanı oluşturursanız, geçiş komutunun çalıştırılması, her geçiş betiği uygulanarak geçerli modellerinizde güncel hale getirir. Benzer şekilde, birden çok model değişikliği yaparsanız ve bir geliştirme bilgisayarında geçişler oluşturursanız, üretim sunucunuzdaki Migrate komutunu çalıştırarak toplu geçişleri üretim veritabanınıza uygulayabilirsiniz. Docgo, yalnızca üretim veritabanının son geçişinden bu yana oluşturulmuş olan geçiş betiklerini uygular.
@@ -184,7 +185,7 @@ Bir modeli değiştirmenin etkisini görmek için aşağıdaki adımları deneyi
     ```
 
 1. Dosyayı kaydedin, sonra **Çözüm Gezgini** ' de **DjangoPolls** projesine sağ tıklayın ve **Python**  >  **docgo geçişleri yap** komutunu seçin.
-1.   >  Yeni oluşturulan betiği, **geçiş** klasörü **002_auto_** ile başlayan geçişler klasöründe görmek için proje **tüm dosyaları göster** komutunu seçin. Bu dosyaya sağ tıklayın ve **projeye dahil et**' i seçin. Sonra   >  orijinal görünümü geri yüklemek için proje **tüm dosyaları yeniden göster** ' i seçebilirsiniz. (Bu adımla ilgili ayrıntılar için aşağıdaki ikinci soruya bakın.)
+1. "   >  **tüm dosyaları göster** " komutunu Project seçerek, adı **002_auto_** ile başlayan **geçişler** klasöründe yeni oluşturulan betiği görüntüleyin. Bu dosyaya sağ tıklayın ve **Project dahil et**' i seçin. sonra   >  özgün görünümü geri yüklemek için Project **tüm dosyaları yeniden göster** ' i seçebilirsiniz. (Bu adımla ilgili ayrıntılar için aşağıdaki ikinci soruya bakın.)
 1. İsterseniz, Docgo 'nun önceki model durumundan yeni duruma nasıl değişiklik olduğunu incelemek için bu dosyayı açın.
 1. Visual Studio projesine tekrar sağ tıklayın ve   >  değişiklikleri veritabanına uygulamak için Python **docgo geçişi** ' ni seçin.
 1. İsterseniz, değişikliği onaylamak için veritabanını uygun bir görüntüleyicide açın.
@@ -199,9 +200,9 @@ Cevap: modeller veritabanındaki verilerle eşleşmezse, uygun özel durumlarla 
 
 ### <a name="question-why-doesnt-solution-explorer-show-newly-generated-scripts-after-running-django-make-migrations"></a>Soru: Docgo geçişi gerçekleştirildikten sonra yeni oluşturulan betikleri gösterme Çözüm Gezgini neden yapılamıyor?
 
-Cevap: yeni oluşturulan betikler *uygulama/geçiş* klasöründe bulunmasına rağmen **Docgo geçişi** komutu çalıştırılırken uygulandığından, Visual Studio projesine eklenmemiş olduklarından **Çözüm Gezgini** otomatik olarak görünmez. Bunları görünür yapmak için önce **Proje**  >  **tüm dosyaları göster** menü komutunu ya da aşağıdaki görüntüde özetlenen araç çubuğu düğmesini seçin. Bu komut, projenin kendine eklenmemiş öğeler için noktalı bir ana hat simgesi kullanarak proje klasöründeki tüm dosyaları göstermesini **Çözüm Gezgini** neden olur. Eklemek istediğiniz dosyalara sağ tıklayın ve **projeye dahil et**' i seçin. Bu, bir sonraki Yürütmeyle birlikte kaynak denetiminde de yer alır.
+cevap: yeni oluşturulan betikler *uygulama/geçiş* klasöründe bulunmasına rağmen **docgo geçişi** komutu çalıştırılırken uygulandığından, Visual Studio projesine eklenmemiş olduklarından **Çözüm Gezgini** otomatik olarak görünmez. bunları görünür yapmak için, önce   >  **tüm dosyaları göster** menü komutunu veya aşağıdaki görüntüde özetlenen araç çubuğu düğmesini Project seçin. Bu komut, projenin kendine eklenmemiş öğeler için noktalı bir ana hat simgesi kullanarak proje klasöründeki tüm dosyaları göstermesini **Çözüm Gezgini** neden olur. eklemek istediğiniz dosyalara sağ tıklayın ve **Project dahil et**' i seçin. bu, bir sonraki yürütmeyle birlikte kaynak denetiminde de yer alır.
 
-![Çözüm Gezgini içinde proje komutuna dahil et](media/django/step06-include-migrations-script-in-project.png)
+![Çözüm Gezgini Project komutuna dahil et](media/django/step06-include-migrations-script-in-project.png)
 
 ### <a name="question-can-i-see-what-migrations-would-be-applied-before-running-the-migrate-command"></a>Soru: geçirme komutunu çalıştırmadan önce hangi geçişlerin uygulanacağını görebilir miyim?
 
@@ -209,7 +210,7 @@ Cevap: Evet, [docgo-admin showgeçişleri komutunu](https://docs.djangoproject.c
 
 ## <a name="step-6-4-understand-the-views-and-page-templates-created-by-the-project-template"></a>Adım 6-4: proje şablonu tarafından oluşturulan görünümleri ve sayfa şablonlarını anlayın
 
-Bu öğreticide daha önce sizinle çalıştığınız "Docgo Web projesi" şablonu tarafından oluşturulan görünümlerin büyük bir çoğunluğu, yaklaşık olarak bu öğreticide daha önce çalıştık. Yoklamalar uygulamasındaki farklı özellikler, giriş sayfasının, oylama ve yoklama sonuçlarını görüntülemek için birkaç eklenen sayfa gibi modelleri kullanmasına olanak sağlar.
+"docgo web Project" şablonu tarafından oluşturulan görünümlerin çoğu, yaklaşık olarak bu öğreticide daha önce çalıştığınız "docgo web Project" şablonu tarafından oluşturulan görünümlere oldukça benzerdir. Yoklamalar uygulamasındaki farklı özellikler, giriş sayfasının, oylama ve yoklama sonuçlarını görüntülemek için birkaç eklenen sayfa gibi modelleri kullanmasına olanak sağlar.
 
 İle başlamak için, urls.py dosyasındaki Docgo projesi dizisinin ilk satırı `urlpatterns` yalnızca bir uygulama  görünümüne basit bir yönlendirmeden daha fazla. Bunun yerine, uygulamanın kendi *URLs.py* dosyasını çeker:
 
@@ -324,7 +325,7 @@ Burada, görünümün kendisine karşılık gelen şablonu diğer sayfalar gibi 
 
 ## <a name="step-6-5-create-a-custom-administration-interface"></a>Adım 6-5: özel bir yönetim arabirimi oluşturma
 
-"Docgo Web projesini Yoklat" şablonunun son parçaları, bu 6-1 makalenin önceki bölümlerinde gösterildiği gibi varsayılan Docgo yönetim arabirimine yönelik özel uzantılardır. Varsayılan arabirim, Kullanıcı ve Grup yönetimi için sağlar, ancak hiçbir şey değildir. Yoklamalar proje şablonu, yoklamaları da yönetmenizi sağlayan özellikler ekler.
+"docgo Web Project yokladığı son parçalar" şablonu, bu makalenin 6-1. adımında aşağıda gösterildiği gibi varsayılan docgo yönetim arabirimine yönelik özel uzantılardır. Varsayılan arabirim, Kullanıcı ve Grup yönetimi için sağlar, ancak hiçbir şey değildir. Yoklamalar proje şablonu, yoklamaları da yönetmenizi sağlayan özellikler ekler.
 
 İlki, Docgo projesi *URLs.py* içindeki URL desenleri `url(r'^admin/', include(admin.site.urls)),` Varsayılan olarak eklenmiştir; "Yönetici/belge" deseni de dahil edilir ancak açıklama eklenir.
 
@@ -358,14 +359,14 @@ Görebileceğiniz gibi, `PollAdmin` sınıfı `django.contrib.admin.ModelAdmin` 
 
 `admin.site.register`Sonra bu sınıfı modele ( `Poll` ) bağlar ve bunu yönetici arabirimine ekler. Genel sonuç aşağıda gösterilmektedir:
 
-![Docgo Web projesi uygulamasındaki yoklamalar yönetim görünümü](media/django/step06-polls-administrative-interface.png)
+![docgo Web Project uygulamasını yoklayan yönetim görünümü](media/django/step06-polls-administrative-interface.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!Note]
-> Visual Studio çözümünüzü Bu öğreticinin tamamında kaynak denetimine uyguladıysanız, başka bir işleme yapmak iyi bir zaman olabilir. Çözümünüz GitHub 'daki öğretici kaynak kodu ile eşleşmelidir: [Microsoft/Python-Sample-vs-Learning-docgo](https://github.com/Microsoft/python-sample-vs-learning-django).
+> bu öğreticinin tamamında Visual Studio çözümünüzü kaynak denetimine uyguladıysanız, başka bir işleme yapmak iyi bir zaman vardır. çözümünüz GitHub: [Microsoft/python-sample-vs-learning-docgo](https://github.com/Microsoft/python-sample-vs-learning-django)üzerindeki öğretici kaynak kodu ile eşleşmelidir.
 
-Artık, Visual Studio 'daki "boş Docgo Web projesinden", "Docgo Web Project" ve "Docgo Web projesini Yoklat" şablonlarını tamamen araştırdık. Görünümler ve Şablonlar kullanma gibi Docgo 'un tüm temel bilgilerini öğrendiniz ve veritabanı modellerini kullanarak, bir yönlendirme, kimlik doğrulama ve değişiklik yapabilirsiniz. Artık ihtiyacınız olan herhangi bir görünüm ve modelle kendinizinkini bir Web uygulaması oluşturabilmeniz gerekir.
+artık "boş docgo web Project", "docgo web Project" ve "docgo web Project" şablonlarını Visual Studio ' de incelediniz. Görünümler ve Şablonlar kullanma gibi Docgo 'un tüm temel bilgilerini öğrendiniz ve veritabanı modellerini kullanarak, bir yönlendirme, kimlik doğrulama ve değişiklik yapabilirsiniz. Artık ihtiyacınız olan herhangi bir görünüm ve modelle kendinizinkini bir Web uygulaması oluşturabilmeniz gerekir.
 
 Geliştirme bilgisayarınızda bir Web uygulaması çalıştırmak, uygulamayı müşterileriniz için kullanılabilir hale getirmek için yalnızca bir adımdır. Sonraki adımlarda aşağıdaki görevler bulunabilir:
 
@@ -373,8 +374,8 @@ Geliştirme bilgisayarınızda bir Web uygulaması çalıştırmak, uygulamayı 
 
 - *Şablonlar/404.html* adlı bir şablon oluşturarak 404 sayfasını özelleştirin. Mevcut olduğunda, Docgo, varsayılan değer yerine bu şablonu kullanır. Daha fazla bilgi için, bkz. Docgo belgelerindeki [hata görünümleri](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) .
 
-- Birim testlerini *Tests.py*'de yazın; Visual Studio proje şablonları bunlar için başlangıç noktaları sağlar ve dmongo belgelerinde dmongo 'da [Ilk Dmongo uygulamanızı yazma, 5. bölüm-test](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) ve [test etme](https://docs.djangoproject.com/en/2.0/topics/testing/) konusunda daha fazla bilgi bulabilirsiniz.
+- Birim testlerini *Tests.py*'de yazın; Visual Studio proje şablonları bunlar için başlangıç noktaları sağlar ve dmongo belgelerinde dmongo 'da [ilk dmongo uygulamanızı, 5. bölüm-test](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) ve [test](https://docs.djangoproject.com/en/2.0/topics/testing/) ' i yazarken daha fazla bilgi bulabilirsiniz.
 
-- Uygulamayı SQLite ' dan PostgreSQL, MySQL ve SQL Server (tümü Azure üzerinde barındırılabilen) gibi bir üretim düzeyi veri deposu olarak değiştirin. SQLite (sqlite.org) [ne zaman kullanılacağı](https://www.sqlite.org/whentouse.html) konusunda açıklandığı gibi, SQLite, 100 ' den az KB/gün içinde düşük ve orta ölçekli trafik siteleri için uygundur, ancak daha yüksek birimler için önerilmez. Aynı zamanda tek bir bilgisayarla sınırlandırılmıştır, bu nedenle yük dengeleme ve coğrafi çoğaltma gibi çok sunuculu bir senaryoda kullanılamaz. Docgo 'nun diğer veritabanları için desteği hakkında bilgi için bkz. [veritabanı kurulumu](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup). Ayrıca, [Python Için Azure SDK 'sını](/azure/python/) tablolar ve Bloblar gibi Azure depolama hizmetleriyle birlikte çalışmak için de kullanabilirsiniz.
+- uygulamayı SQLite ' dan postgresql, MySQL ve SQL Server (tümü Azure üzerinde barındırılabilen) gibi bir üretim düzeyi veri deposu olarak değiştirin. SQLite (sqlite.org) [ne zaman kullanılacağı](https://www.sqlite.org/whentouse.html) konusunda açıklandığı gibi, SQLite, 100 ' den az KB/gün içinde düşük ve orta ölçekli trafik siteleri için uygundur, ancak daha yüksek birimler için önerilmez. Aynı zamanda tek bir bilgisayarla sınırlandırılmıştır, bu nedenle yük dengeleme ve coğrafi çoğaltma gibi çok sunuculu bir senaryoda kullanılamaz. Docgo 'nun diğer veritabanları için desteği hakkında bilgi için bkz. [veritabanı kurulumu](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup). Ayrıca, [Python Için Azure SDK 'sını](/azure/python/) tablolar ve Bloblar gibi Azure depolama hizmetleriyle birlikte çalışmak için de kullanabilirsiniz.
 
-- Azure DevOps gibi bir hizmette sürekli tümleştirme/sürekli dağıtım işlem hattı ayarlayın. Kaynak denetimiyle (Azure Repos veya GitHub ya da başka bir yerde) çalışmaya ek olarak, bir Azure DevOps projesini, birim testlerinizi bir ön koşul olarak otomatik olarak çalıştıracak şekilde yapılandırabilir ve ayrıca işlem hattını üretime dağıtmadan önce ek testler için bir hazırlama sunucusuna dağıtılacak şekilde yapılandırabilirsiniz. Azure DevOps, Ayrıca, App Insights gibi izleme çözümleriyle tümleştirilir ve çevik planlama araçlarıyla tüm döngüyü kapatır. Daha fazla bilgi için bkz. [Azure DevOps projesiyle Python için BIR CI/CD işlem hattı oluşturma](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) ve ayrıca genel [Azure DevOps belgeleri](/azure/devops/?view=vsts&preserve-view=true).
+- Azure DevOps gibi bir hizmette sürekli tümleştirme/sürekli dağıtım işlem hattı ayarlayın. kaynak denetimi ile çalışmaya ek olarak (Azure Repos veya GitHub ya da başka bir yerde), birim testlerinizi bir ön koşul olarak otomatik olarak çalıştırmak için bir Azure DevOps Project yapılandırabilir ve ayrıca işlem hattını üretime dağıtmadan önce ek testler için bir hazırlama sunucusuna dağıtılacak şekilde yapılandırabilirsiniz. Azure DevOps, ayrıca, uygulama Analizler gibi izleme çözümleriyle tümleştirilir ve çevik planlama araçlarıyla tüm döngüyü kapatır. daha fazla bilgi için bkz. [Python için bir cı/CD işlem hattı oluşturma Azure DevOps projesi](/azure/devops-project/azure-devops-project-python?view=vsts&preserve-view=true) ve ayrıca genel [Azure DevOps belgeleri](/azure/devops/?view=vsts&preserve-view=true).

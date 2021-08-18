@@ -1,6 +1,6 @@
 ---
-title: Office Excel Klavyesi, ayarlar, Seçenekler iletişim kutusu
-description: Belge odaklanıldığında, dinamik klavye düzeni seçerek Microsoft Excel 'In kısayol tuşu komutlarını nasıl alacağını öğrenin.
+title: Office Excel klavye, Ayarlar, seçenekler iletişim kutusu
+description: belge odak edildiğinde dinamik klavye düzeni seçerek kısayol tuşu komutlarının nasıl Microsoft Excel alabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,26 +17,27 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 914b86e6e2b27d18e2089d44ce97810f82294c5e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d33811c8b5fc38359e59a1ff2708ba05d2f2f1d5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880352"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115089"
 ---
-# <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>Microsoft Office Excel Klavyesi, ayarlar, Seçenekler iletişim kutusu
-  Excel ve Visual Studio 'Nun her ikisi de kısayol tuşlarını işler. Microsoft Office Aynı kısayol tuşu birleşimi Excel ve Visual Studio 'daki farklı komutlar için de kullanılabilir. Excel, Visual Studio 'daki belge düzeyi bir projede açıldığında, kısayol tuşu komutlarını yalnızca bir seferde tek bir uygulama alır. Varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak belge odağa sahip olduğunda, **dinamik klavye düzeni** seçerek Excel 'in bunları almasını sağlayabilirsiniz.
+# <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>Microsoft Office Excel klavye, Ayarlar, seçenekler iletişim kutusu
+  Microsoft Office Excel ve Visual Studio her ikisi de kısayol tuşlarını işler. aynı kısayol tuşu birleşimi Excel ve Visual Studio farklı komutlar için de kullanılabilir. Excel belge düzeyindeki bir projede Visual Studio açıldığında, kısayol tuşu komutlarını yalnızca tek seferde bir uygulama alır. varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak belge odağa sahip olduğunda **dinamik klavye düzeni** seçerek Excel alabilir.
 
  Şu anda kısayol tuşlarını işleyen uygulamada bir komuta atanmamış bir kısayol tuşu kullanırsanız, kısayol tuşu diğer uygulamaya geçirilir.
 
- Seçtiğiniz seçenek, siz değiştirene kadar Excel projeleri için geçerli olmaya devam edecektir. Seçim Word projelerini Microsoft Office etkilemez; Word için Microsoft Office sözcük klavye seçeneklerini kullanarak herhangi bir değişiklik yapmanız gerekir.
+ seçtiğiniz seçenek, siz değiştirene kadar Excel projeler için geçerli olmaya devam edecektir. seçim Word projelerini Microsoft Office etkilemez; word için Microsoft Office sözcük klavye seçeneklerini kullanarak herhangi bir değişiklik yapmanız gerekir.
 
 ## <a name="uielement-list"></a>UIElement listesi
- **Visual Studio klavye düzeni** Excel odağa sahip olsa bile, Visual Studio tüm kısayol tuşu komutlarını alır. Örneğin, Excel odağa sahip olduğunda **F5** işlev tuşuna basarsanız, Visual Studio çözümünüzün hata ayıklamasını başlatır.
+ **Visual Studio klavye düzeni** Visual Studio, Excel odağa sahip olsa bile tüm kısayol tuşu komutlarını alır. örneğin, Excel odaklandığında **F5** işlev tuşuna basarsanız Visual Studio çözümünüzde hata ayıklamaya başlar.
 
- **Dinamik klavye düzeni** Visual Studio yalnızca odağa sahip olduğunda kısayol tuşu komutlarını alır. Excel odağa sahip olduğunda, Excel tüm kısayol tuşu komutlarını alır. Örneğin, Excel odağa sahip olduğunda **F5** işlev tuşuna basarsanız, Excel **şuraya git** iletişim kutusunu açar. Visual Studio odaklandığında **F5** tuşuna basarsanız, Visual Studio çözümünüzün hata ayıklamasını başlatır.
+ **dinamik klavye düzeni** Visual Studio, yalnızca odak olduğunda kısayol tuşu komutlarını alır. Excel odağa sahip olduğunda, Excel tüm kısayol tuşu komutlarını alır. örneğin, Excel odak olduğunda **F5** işlev tuşuna basarsanız, Excel **git** iletişim kutusunu açar. Visual Studio odaklandığında **F5** tuşuna basarsanız Visual Studio çözümünüzde hata ayıklamaya başlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Microsoft Office Word klavye, Microsoft Office Klavye ayarları, Seçenekler iletişim kutusu](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
+- [Microsoft Office Word klavye, Microsoft Office klavye Ayarlar, seçenekler iletişim kutusu](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)

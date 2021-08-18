@@ -8,15 +8,16 @@ ms.assetid: 20c35949-1f29-4282-ac75-4e6c237d71bc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 44e68822ebd444b8683b85b2df0c49b14d78bcaa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b91d00896b72f95b3340e8741867b58d4c2494b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901077"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142422"
 ---
 # <a name="args"></a>Bağımsız Değişkenler
 VSPerfCmd.exe **args** seçeneği, **Launch** alt komutunun hedef uygulamasına geçirilen bağımsız değişkenlerin bir listesini belirtir.
@@ -46,5 +47,5 @@ VSPerfCmd.exe /Launch:TestApp.exe /Args:"123, 'Hello World'"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [ASP.NET web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil oluşturma hizmetleri](../profiling/command-line-profiling-of-services.md)

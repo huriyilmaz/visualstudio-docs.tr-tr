@@ -1,6 +1,6 @@
 ---
 title: Komut Penceresi
-description: İfadeleri hata ayıklamak ve değerlendirmek, deyimleri yürütmek ve değişken değerlerini yazdırmak için hemen penceresini nasıl kullanacağınızı öğrenin.
+description: İfadelerde hata ayıklamak ve ifadeleri değerlendirmek, deyimleri yürütmek ve değişken değerlerini yazdırmak için Anında penceresini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/25/2019
 ms.topic: reference
@@ -16,49 +16,50 @@ ms.assetid: d33e7937-73f3-4c69-9df0-777a8713c6f2
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 73d3d2cc42e958c59ef058a1f69921145ea18475
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2dcc91c8f7b9fa5cc33d9368d377c2a002b55107
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852485"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157793"
 ---
 # <a name="immediate-window"></a>Komut penceresi
 
-İfadeleri hata ayıklamak ve değerlendirmek, deyimleri yürütmek ve değişken değerlerini yazdırmak için **hemen** penceresini kullanın. **Komut** penceresi, şu anda seçili olan projeyi oluşturup kullanarak ifadeleri değerlendirir.
+İfadelerde **hata** ayıklamak, ifadeleri değerlendirmek, deyimleri yürütmek ve değişken değerlerini yazdırmak için Hemen penceresini kullanın. Hemen **penceresi,** şu anda seçili olan projeyi kullanarak ve bu projeyi kullanarak ifadeleri değerlendirir.
 
-**Hemen** penceresini göstermek için, bir projeyi düzenlenmek üzere açın ve sonra Windows anında **Hata Ayıkla**' yı seçin  >    >   veya **CTRL**+ +  + **ı** tuşlarına basın. Ayrıca, **komut** penceresinde **hata ayıkla. hemen** girebilirsiniz.
+Hemen penceresini görüntülemek **için,** düzenlemek için bir proje açın ve Ardından Anında Hata Ayıkla'Windows'yi  >    >  **seçin veya** **Ctrl** Alt I +  + **tuşlarına basın.** Komut penceresine **Debug.Immediate** de **girebilirsiniz.**
 
-**Komut** penceresi IntelliSense 'i destekler.
+Anında **pencere** IntelliSense'i destekler.
 
 ## <a name="display-the-values-of-variables"></a>Değişkenlerin değerlerini görüntüleme
 
-Bir uygulamanın hatalarını ayıklarken, **komut** penceresi özellikle faydalıdır. Örneğin, bir değişkenin değerini denetlemek için `varA` [Print komutunu](../../ide/reference/print-command.md)kullanabilirsiniz:
+Hemen **penceresi,** özellikle bir uygulamada hata ayıklarken kullanışlıdır. Örneğin değişkeninin değerini kontrol etmek için `varA` Print komutunu [kullanabilirsiniz:](../../ide/reference/print-command.md)
 
 ```cmd
 >Debug.Print varA
 ```
 
-Soru işareti (?) için bir diğer addır `Debug.Print` , bu nedenle bu komut de yazılabilir:
+Soru işareti (?) için bir diğer `Debug.Print` addır, bu nedenle bu komut da yazabilirsiniz:
 
 ```cmd
 ? varA
 ```
 
-Bu komutun her iki sürümü de değişkenin değerini döndürür `varA` .
+Bu komutun her iki sürümü de değişkeninin değerini `varA` verir.
 
 > [!TIP]
-> **Hemen** penceresinde bir Visual Studio komutu vermek için, komutun işaretini büyüktür işareti (>) ile önceden başlatmalısınız. Birden çok komut girmek için [komut penceresi](command-window.md)geçin.
+> Hemen penceresinde Visual Studio komutu yapmak **için** komutun başında işaretinden büyük bir işareti (>). Birden çok komut girmek için komutuna [Komut penceresi.](command-window.md)
 
-## <a name="design-time-expression-evaluation"></a>Tasarım zamanı ifade değerlendirmesi
+## <a name="design-time-expression-evaluation"></a>Tasarım zamanı ifadesi değerlendirmesi
 
-Tasarım zamanında bir işlevi veya alt yordamı yürütmek için **hemen** penceresini kullanabilirsiniz.
+Tasarım zamanında bir **işlev** veya alt yol yürütmek için Hemen penceresini kullanabilirsiniz.
 
-### <a name="execute-a-function-at-design-time"></a>Tasarım zamanında işlev yürütme
+### <a name="execute-a-function-at-design-time"></a>İşlevi tasarım zamanında yürütme
 
-1. Aşağıdaki kodu bir Visual Basic konsol uygulamasına kopyalayın:
+1. Aşağıdaki kodu bir konsol Visual Basic kopyalayın:
 
    ```vb
    Module Module1
@@ -74,38 +75,38 @@ Tasarım zamanında bir işlevi veya alt yordamı yürütmek için **hemen** pen
    End Module
    ```
 
-2. **Hata Ayıkla** menüsünde **Windows**  >  **anında**' yı seçin.
+2. Hata **Ayıkla menüsünde** Anında seçeneğini **Windows**  >  **seçin.**
 
-3. `?MyFunction(2)` **Hemen** penceresine yazın ve **ENTER** tuşuna basın.
+3. Hemen `?MyFunction(2)` penceresine **yazın** ve Enter tuşuna **basın.**
 
-    **Komut** penceresi çalışır `MyFunction` ve görüntülenir `4` .
+    Hemen **penceresi** çalışır `MyFunction` ve `4` görüntülenir.
 
-İşlev veya alt yordam bir kesme noktası içeriyorsa, Visual Studio uygun noktada yürütmeyi keser. Daha sonra program durumlarınızı incelemek için hata ayıklayıcı pencerelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: tasarım zamanında hata ayıklama](../../debugger/walkthrough-debugging-at-design-time.md).
+İşlev veya alt yol bir kesme noktası içeriyorsa, Visual Studio noktada yürütmeyi sonlar. Ardından hata ayıklayıcı pencerelerini kullanarak program durumuna bakabilirsiniz. Daha fazla bilgi için [bkz. Adım adım kılavuz: Tasarım Zamanında Hata Ayıklama.](../../debugger/walkthrough-debugging-at-design-time.md)
 
-Office projeleri, Web projeleri, akıllı cihaz projeleri ve SQL projeleri için Visual Studio Araçları dahil olmak üzere bir yürütme ortamının başlatılması gereken proje türlerinde tasarım zamanı ifade değerlendirmesi kullanamazsınız.
+Tasarım zamanı ifadesi değerlendirmesini, Office için Visual Studio Araçları projeleri, web projeleri, Akıllı Cihaz projeleri ve SQL yürütme ortamı başlatmayı gerektiren proje türlerinde SQL kullanabilirsiniz.
 
-### <a name="design-time-expression-evaluation-in-multi-project-solutions"></a>Çoklu proje çözümlerinde tasarım zamanı ifade değerlendirmesi
+### <a name="design-time-expression-evaluation-in-multi-project-solutions"></a>Çok projeli çözümlerde tasarım zamanı ifadesi değerlendirmesi
 
-Tasarım zamanı ifade değerlendirmesi için bağlam oluştururken, Visual Studio Çözüm Gezgini Şu anda seçili olan projeye başvurur. Çözüm Gezgini bir proje seçilmezse, Visual Studio işlevi başlangıç projesine göre değerlendirmeye çalışır. İşlev geçerli bağlamda değerlendirilemez, bir hata iletisi alırsınız. Bir projede çözüm için başlangıç projesi olmayan bir işlevi değerlendirmeye çalışıyorsanız ve bir hata alırsanız, Çözüm Gezgini ' de projeyi seçip değerlendirmeyi yeniden deneyin.
+Tasarım zamanı ifadesi değerlendirmesi için bağlam kurulurken, Visual Studio içinde seçili olan projeye Çözüm Gezgini. Herhangi bir proje seçili Çözüm Gezgini, Visual Studio başlangıç projesine göre değerlendirmeye çalışır. İşlev geçerli bağlamda değerlendirilenene kadar bir hata iletisi alırsınız. Çözüm için başlangıç projesi değil bir proje içinde bir işlevi değerlendirmeye çalışıyorsanız ve bir hata alırsanız, Çözüm Gezgini projesinde projeyi seçmeyi deneyin ve değerlendirmeyi yeniden deneyin.
 
-## <a name="enter-commands"></a>Komutları girin
+## <a name="enter-commands"></a>Komutları girme
 
-Visual Studio komutlarını **komut** penceresinde verirken büyüktür işaretini (>) girin. Daha önce kullandığınız komutlarınız arasında gezinmek için **yukarı ok** ve **aşağı ok** tuşlarını kullanın.
+Hemen penceresinde komutlar > büyüktür (Visual Studio) **girin.** Daha önce **kullanılan komutlarda** **kaydırma yapmak** için Yukarı ok ve Aşağı ok tuşlarını kullanın.
 
 |Görev|Çözüm|Örnek|
 |----------|--------------|-------------|
-|Bir ifadeyi değerlendirin.|İfadeyi bir soru işaretiyle (?) önyüz.|`? a+b`|
-|Komut modunu anında modda (tek bir komut yürütmek için) geçici olarak girin.|Komutu, işareti daha büyük (>) ile önceden girerek girin.|`>alias`|
-|Komut penceresi geçin.|`cmd`Pencereye, daha büyüktür işareti (>) ile önceden girerek girin.|`>cmd`|
-|Anında pencereye geri dönün.|`immed`Büyüktür işareti (>) olmadan pencereye girin.|`immed`|
+|Bir ifadeyi değerlendirme.|İfadenin başında soru işareti (?).|`? a+b`|
+|Anlık moddayken Komut modunu geçici olarak girin (tek bir komut yürütmek için).|Komutunu girin ve büyüktür işaretiyle önceden yazın (>).|`>alias`|
+|Anahtara Komut penceresi.|Pencereye girin ve büyüktür işaretiyle önceden `cmd` >.|`>cmd`|
+|Hemen penceresine geri dönebilirsiniz.|Pencereye `immed` büyüktür işareti olmadan girin (>).|`immed`|
 
 ## <a name="mark-mode"></a>İşaret modu
 
-**Hemen** penceredeki herhangi bir önceki satıra tıkladığınızda, işaret moduna otomatik olarak kaydırma yapabilirsiniz. Bu, herhangi bir metin düzenleyicisinde yaptığınız gibi önceki komutların metnini seçmenizi, düzenlemenizi ve kopyalamanızı sağlar ve bunları geçerli satıra yapıştırabilirsiniz.
+Hemen penceresinde önceki satırlardan herhangi bir **satıra tıklarken** otomatik olarak İşaret moduna geçersiniz. Bu sayede herhangi bir metin düzenleyicisinde olduğu gibi önceki komutların metnini seçip düzenleyebilir ve kopyalayıp geçerli satıra yapıştırabilirsiniz.
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki örnek, bir Visual Basic projesi için en çok dört ifadeyi ve **Bu penceredeki sonuçları** gösterir.
+Aşağıdaki örnekte, bir proje için Anında penceresinde dört **ifade** ve bunların Visual Basic gösterilir.
 
 ```cmd
 j = 2
@@ -121,21 +122,21 @@ Expression has been evaluated and has no value
 26
 ```
 
-## <a name="first-chance-exception-notifications"></a>Birinci şans özel durum bildirimleri
+## <a name="first-chance-exception-notifications"></a>birinci şans özel durum bildirimleri
 
-Bazı ayar yapılandırmalarında, ilk şans özel durum bildirimleri **komut** penceresinde görüntülenir.
+Bazı ayar yapılandırmalarında, birinci şans özel durum bildirimleri Anında **penceresinde** görüntülenir.
 
-### <a name="toggle-first-chance-exception-notifications-in-the-immediate-window"></a>İlk şans özel durum bildirimlerini hemen pencerede aç
+### <a name="toggle-first-chance-exception-notifications-in-the-immediate-window"></a>İlk fırsat özel durum bildirimlerini Anında penceresinde açma/kapatın
 
-1. **Görünüm** menüsünde **diğer pencereler**' e tıklayın ve **Çıkış**' a tıklayın.
+1. Görünüm menüsünde **Diğer** **girişler'e ve Windows'a** **tıklayın.**
 
-2. **Çıkış** penceresinin metin alanına sağ tıklayın ve ardından **özel durum iletileri**' ni seçin veya seçimini kaldırın.
+2. Çıkış penceresinin metin alanına sağ tıklayın **ve ardından** Özel Durum İletileri'ne tıklayın veya **seçimini kaldırın.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklayıcısı ile Kodlarda gezinme](../../debugger/navigating-through-code-with-the-debugger.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
 - [Hata ayıklayıcıya ilk bakış](../../debugger/debugger-feature-tour.md)
-- [İzlenecek yol: tasarım zamanında hata ayıklama](../../debugger/walkthrough-debugging-at-design-time.md)
+- [Adım adım kılavuz: Tasarım Zamanında Hata Ayıklama](../../debugger/walkthrough-debugging-at-design-time.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)
 - [Visual Studio'da Normal İfadeler Kullanma](../../ide/using-regular-expressions-in-visual-studio.md)

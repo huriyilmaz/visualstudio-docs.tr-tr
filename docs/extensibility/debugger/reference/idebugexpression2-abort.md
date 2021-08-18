@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1c2647c262d4a5a2700f2293d5737fab533d680d5c0a74da1a9b542b9b4c4a31
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: be5637b350e9448b5c02ede5087fed6c2df26bb4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417294"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127136"
 ---
 # <a name="idebugexpression2abort"></a>IDebugExpression2::Abort
 Bu yöntem, [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemine yapılan bir çağrı tarafından başlatılan zaman uyumsuz ifade değerlendirmesini iptal eder.

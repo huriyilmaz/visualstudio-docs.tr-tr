@@ -11,14 +11,15 @@ ms.assetid: b1d17f63-7146-4076-a588-034cfc6858b9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: c51fac369ed91f00c91482dd7069362d758b7346
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2a3ba004fdce8b82fedf7dc2e2205b56ba52ff29
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065105"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126342"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
 Bu arabirim, hata ayıklama altyapısı (DE) veya özel bağlantı noktası sağlayıcılarının, programları hata ayıklama için kaydetmesini sağlar.
@@ -30,7 +31,7 @@ IDebugProgramPublisher2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları
-Visual Studio, birden çok işlemde hata ayıklama için görünür hale getirmek amacıyla hataları ayıklanan programları kaydetmek için bu arabirimi uygular.
+Visual Studio, bu arabirimi birden çok işlemde hata ayıklama için görünür hale getirmek amacıyla hataları ayıklanan programları kaydetmek için uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
 `CoCreateInstance` `CLSID_ProgramPublisher` Bu arabirimi edınmek için com 'un işlevini çağırın (örneğe bakın). Bir DE veya özel bağlantı noktası sağlayıcısı, hata ayıklamakta olan programları temsil eden program düğümlerini kaydetmek için bu arabirimi kullanır.
@@ -47,7 +48,7 @@ Bu arabirim aşağıdaki yöntemleri uygular:
 |[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|Bir hata ayıklayıcının mevcut olduğunu belirten bir bayrak ayarlar.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim, programlar ve program düğümlerinin kullanılabilir olmasını sağlar (yani "bunları" yayınlar) DEs ve oturum hata ayıklama Yöneticisi (SDM) tarafından kullanılmak üzere kullanır. Yayımlanmış programlar ve program düğümlerine erişmek için [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimini kullanın. Bu, Visual Studio 'Nun bir programın hata ayıklamakta olduğunu anlayabileceği tek yoldur.
+Bu arabirim, programlar ve program düğümlerinin kullanılabilir olmasını sağlar (yani "bunları" yayınlar) DEs ve oturum hata ayıklama Yöneticisi (SDM) tarafından kullanılmak üzere kullanır. Yayımlanmış programlar ve program düğümlerine erişmek için [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) arabirimini kullanın. bu, Visual Studio bir programın hata ayıklamakta olduğunu tanıyabileceği tek yoldur.
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: msdbg. h

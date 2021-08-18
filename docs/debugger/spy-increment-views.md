@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d3fea25adc17013510130ccacf565c39546ec264641c5966cc137938dd63871
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c670cbb34da33d4745a4480cce28934ceebd6e79
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121324515"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112327"
 ---
 # <a name="spy-views"></a>Spy++ Görünümleri
 Spy + + makinenizde bulunan pencerelerin, iletilerin, işlemlerin ve iş parçacıklarının ağaç görünümlerini görüntüler.

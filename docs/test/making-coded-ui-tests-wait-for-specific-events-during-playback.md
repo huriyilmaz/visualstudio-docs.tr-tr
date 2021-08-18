@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e06ad5eb97d6a4192e4f705f0a94fc67171827279df3f7402d6b3e4bd264e4f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 170af3a8677a271501727ae0f53e047a732830f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121299350"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054229"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>Kayıttan yürütme sırasında belirli olaylar için kodlanmış UI testlerinin beklemesini sağlama
 

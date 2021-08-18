@@ -1,6 +1,6 @@
 ---
-title: Önizleme özellikleri, ortam, Seçenekler iletişim kutusu
-description: Visual Studio önizleme özelliklerini etkinleştirmek veya devre dışı bırakmak için ortam bölümündeki önizleme özellikleri sayfasını nasıl kullanacağınızı öğrenin.
+title: Önizleme Özellikleri, Ortam, Seçenekler iletişim kutusu
+description: Ortam bölümündeki Önizleme Özellikleri sayfasını kullanarak önizleme özelliklerini etkinleştirmeyi veya devre dışı bırakmayı Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
@@ -14,17 +14,17 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3397532d1d27ed6f4bf51b844d9ac048ce4ef2490d4efc1bfe294eced8b5f14c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 57865bd4a762b497eed53450ca5fc6ed8a8f771a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387569"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144034"
 ---
-# <a name="options-dialog-box-environment--preview-features"></a>Seçenekler iletişim kutusu: ortam \> Önizleme özellikleri
+# <a name="options-dialog-box-environment--preview-features"></a>Seçenekler iletişim kutusu: Ortam \> Önizleme Özellikleri
 
-Visual Studio önizleme özelliklerini etkinleştirmek veya devre dışı bırakmak için **Seçenekler** iletişim kutusunun bu sayfasını kullanın. **Önizleme özellikleri** Seçenekler sayfası, Visual Studio farklı Önizleme özellikleri kullanıma sunulmuştur.
+Önizleme özelliklerini etkinleştiren veya **devre** dışı bırakmak için Seçenekler iletişim kutusunun bu sayfasını Visual Studio. Önizleme **Özellikleri seçenekleri** sayfası, farklı önizleme özellikleri Visual Studio.
 
-![Visual Studio 2019 ' de önizleme özellikleri seçenekler sayfası](media/environment-preview-features-page.png)
+![Visual Studio 2019'da Önizleme Özellikleri seçenekleri sayfası](media/environment-preview-features-page.png)
 
-Bu iletişim kutusuna, **Araçlar** menüsünden **Seçenekler** ' i ve ardından **ortam**  >  **Önizleme özellikleri** sayfasını seçerek erişebilirsiniz. ya da Visual Studio **arama** kutusuna **önizleme özellikleri** girin (  +  odağı **arama** kutusuna taşımak için Ctrl tuşuna basın).
+Araçlar menüsünde Seçenekler'e **tıklar**  ve ardından Ortam Önizleme Özellikleri sayfasını seçerek bu   >  **iletişim kutusuna erişebilirsiniz.** Ctrl Q **tuşlarına** basarak Visual Studio **ara** kutusuna önizleme özelliklerini +  **de girebilirsiniz.**
